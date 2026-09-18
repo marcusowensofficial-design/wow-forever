@@ -747,10 +747,10 @@ const WOW_FOREVER_DATA = {
         { name: "Warlock", isNew: false }
       ],
       racials: [
-        { name: "Will to Survive", type: "Active • 2m CD", effect: "Instantly removes all stun effects from your character." },
-        { name: "Perception", type: "Active • 3m CD", effect: "Dramatically enhances stealth detection for 20 seconds." },
-        { name: "Sword Specialization", type: "Passive", effect: "Increases spell and ability critical strike chance by +2% when wielding 1H or 2H Swords." },
-        { name: "The Human Spirit", type: "Passive", effect: "Increases total Spirit by 5% and boosts reputation gains by +10%." }
+        { name: "Will to Survive", type: "Active", effect: "Remove Stuns." },
+        { name: "Perception", type: "Active • 20s", effect: "Detect Stealthed enemies for 20 sec." },
+        { name: "Sword Specialization", type: "Passive", effect: "Swords increase spell and ability critical chance by 2%." },
+        { name: "The Human Spirit", type: "Passive", effect: "5% increased Spirit." }
       ]
     },
     {
@@ -770,10 +770,10 @@ const WOW_FOREVER_DATA = {
         { name: "Shaman", isNew: true, note: "✦ NEW IN FOREVER: Wildhammer shamans bringing Bloodlust and totems to Alliance" }
       ],
       racials: [
-        { name: "Stoneform", type: "Active • 2m CD", effect: "Removes bleed, poison, and disease effects, and grants flat 10% damage reduction for 8 seconds." },
-        { name: "Find Treasure", type: "Active • Toggle", effect: "Enables sensory tracking of nearby treasure chests on your minimap." },
-        { name: "Mace Specialization", type: "Passive", effect: "Increases spell and ability critical strike chance by +1% when wielding 1H or 2H Maces." },
-        { name: "Big Game Hunter", type: "Passive", effect: "Increases damage dealt to Beasts by +5% and grants +10 Frost Resistance." }
+        { name: "Stoneform", type: "Active • 8s", effect: "Immunity to Bleeds, Poisons, and Diseases and reduce Physical damage taken for 8 sec." },
+        { name: "Find Treasure", type: "Active", effect: "Track nearby treasure chests." },
+        { name: "Mace Specialization", type: "Passive", effect: "Maces increase spell and ability critical chance by 1%." },
+        { name: "Big Game Hunter", type: "Passive", effect: "Damage to Beasts increased by 5%." }
       ]
     },
     {
@@ -792,10 +792,10 @@ const WOW_FOREVER_DATA = {
         { name: "Druid", isNew: false }
       ],
       racials: [
-        { name: "Shadowmeld", type: "Active • 10s CD", effect: "Blend into shadows while stationary, breaking hostile combat tracking and stealthing." },
-        { name: "Elune's Light", type: "Active • 3m CD", effect: "Calls down celestial radiance, increasing physical and spell critical chance by +10% for 15 seconds." },
-        { name: "Quickness", type: "Passive", effect: "Grants +1% Dodge chance and +2% passive out-of-combat movement speed." },
-        { name: "Wisp Spirit", type: "Passive", effect: "Increases movement speed while dead by 50% and grants +10 Nature Resistance." }
+        { name: "Elune's Light", type: "Active • 15s", effect: "Increases critical chance by 10% for 15 sec." },
+        { name: "Shadowmeld", type: "Active", effect: "Gain Stealth while immobile." },
+        { name: "Quickness", type: "Passive", effect: "1% increased Dodge chance and 2% increased run speed." },
+        { name: "Wisp Spirit", type: "Passive", effect: "75% increased run speed while dead." }
       ]
     },
     {
@@ -814,10 +814,10 @@ const WOW_FOREVER_DATA = {
         { name: "Warlock", isNew: false }
       ],
       racials: [
-        { name: "Escape Artist", type: "Active • 1m CD", effect: "Instantly breaks all immobilizing and movement-impairing snares or roots." },
-        { name: "Eureka!", type: "Active • 2m CD", effect: "Reduces resource costs of your next 3 spells/abilities by 50% and boosts potency." },
-        { name: "Expansive Mind", type: "Passive", effect: "Increases total Intellect by +5% and increases max Energy/Rage resource pools by +5%." },
-        { name: "Engineering Specialist", type: "Passive", effect: "Increases Engineering skill by +15 and grants +10 Arcane Resistance." }
+        { name: "Escape Artist", type: "Active", effect: "Brief Immunity to Roots and Snares." },
+        { name: "Eureka!", type: "Active", effect: "Reduced cost and 10% increased damage or healing on next 3 spells or abilities." },
+        { name: "Expansive Mind", type: "Passive", effect: "Maximum Mana, Rage, or Energy increased by 5%." },
+        { name: "Engineering Specialization", type: "Passive", effect: "More reliable engineering devices." }
       ]
     },
     {
