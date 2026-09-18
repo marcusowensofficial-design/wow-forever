@@ -876,9 +876,9 @@ function initClassRacePlanner() {
                   <div style="display: flex; align-items: center; gap: 0.6rem;">
                     <span style="font-size: 1.8rem;">${raceData.icon}</span>
                     <div>
-                      <h3 style="color: #fff; font-size: 1.3rem; margin: 0;">${escapeHtml(raceData.name)}</h3>
-                      <span class="combo-badge ${raceData.faction.toLowerCase().includes('alliance') ? 'alliance' : (raceData.faction.toLowerCase().includes('horde') ? 'horde' : '')}" style="margin: 0.2rem 0 0; font-size: 0.7rem;">
-                        ${raceData.crest} ${escapeHtml(raceData.faction)}
+                      <h3 style="color: #fff; font-size: 1.3rem; margin: 0;">${escapeHtml(raceEntry.name || raceData.name)}</h3>
+                      <span class="combo-badge ${(raceEntry.faction || raceData.faction).toLowerCase().includes('alliance') ? 'alliance' : ((raceEntry.faction || raceData.faction).toLowerCase().includes('horde') ? 'horde' : '')}" style="margin: 0.2rem 0 0; font-size: 0.7rem;">
+                        ${raceData.crest} ${escapeHtml(raceEntry.faction || raceData.faction)}
                       </span>
                     </div>
                   </div>
@@ -988,6 +988,11 @@ function initClassRacePlanner() {
 
     // 3. Allowed Classes for this Race
     let classes = race.allowedClasses;
+    if (factionFilter === 'alliance') {
+      classes = classes.filter(c => !c.note || !c.note.includes('HORDE EXCLUSIVE'));
+    } else if (factionFilter === 'horde') {
+      classes = classes.filter(c => !c.note || !c.note.includes('ALLIANCE EXCLUSIVE'));
+    }
     if (factionFilter === 'new') {
       classes = classes.filter(c => c.isNew);
     }
@@ -1084,6 +1089,14 @@ function initClassRacePlanner() {
                   const match = race.allowedClasses.find(ac => ac.name.toLowerCase() === cls.name.toLowerCase());
                   if (match) {
                     if (match.isNew) {
+                      if (match.note && match.note.includes('ALLIANCE EXCLUSIVE')) {
+                        if (factionFilter === 'horde') return `<td><span class="cell-empty">—</span></td>`;
+                        return `<td><span class="cell-new-badge" style="background: rgba(59, 130, 246, 0.25); border-color: #3b82f6; color: #93c5fd;" title="${escapeHtml(match.note)}">✦ ALLIANCE</span></td>`;
+                      }
+                      if (match.note && match.note.includes('HORDE EXCLUSIVE')) {
+                        if (factionFilter === 'alliance') return `<td><span class="cell-empty">—</span></td>`;
+                        return `<td><span class="cell-new-badge" style="background: rgba(239, 68, 68, 0.25); border-color: #ef4444; color: #fca5a5;" title="${escapeHtml(match.note)}">✦ HORDE</span></td>`;
+                      }
                       return `<td><span class="cell-new-badge" title="${escapeHtml(match.note || 'New in Forever')}">✦ NEW</span></td>`;
                     } else {
                       if (factionFilter === 'new') {

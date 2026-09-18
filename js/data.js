@@ -632,7 +632,14 @@ const WOW_FOREVER_DATA = {
     factionOption: "Neutral (Aligns with Alliance or Horde at Level 10)",
     allianceTitle: "High Order Skyborne",
     hordeTitle: "Windshaper Skyborne",
-    classes: ["Warrior", "Hunter", "Rogue", "Druid"],
+    classes: [
+      "Warrior (Universal)",
+      "Hunter (Universal)",
+      "Rogue (Universal)",
+      "Druid (Universal)",
+      "Mage (Alliance High Order Exclusive)",
+      "Shaman (Horde Windshaper Exclusive)"
+    ],
     lore: "Descendants of high elves and elemental wind-weavers who took sanctuary on Zephras Isle during the Great Sundering. Their return to Azeroth marks the rekindling of ancient forgotten pacts.",
     racials: [
       {
@@ -822,10 +829,12 @@ const WOW_FOREVER_DATA = {
       mount: "Cloudrunner / Sky-Strider",
       lore: "A majestic neutral race of high elven wind-weavers who took refuge on Zephras Isle during the Great Sundering. Masters of aerodynamics and aerial combat.",
       allowedClasses: [
-        { name: "Warrior", isNew: true, note: "✦ NEW PLAYABLE RACE" },
-        { name: "Hunter", isNew: true, note: "✦ NEW PLAYABLE RACE" },
-        { name: "Rogue", isNew: true, note: "✦ NEW PLAYABLE RACE" },
-        { name: "Druid", isNew: true, note: "✦ NEW PLAYABLE RACE: Alliance & Horde get new Druid option!" }
+        { name: "Warrior", isNew: true, note: "✦ NEW PLAYABLE RACE: Aerial mobility & root-breaking charge (Both Factions)" },
+        { name: "Hunter", isNew: true, note: "✦ NEW PLAYABLE RACE: Wind-guided archery and cloud-falcon taming (Both Factions)" },
+        { name: "Rogue", isNew: true, note: "✦ NEW PLAYABLE RACE: Gliding backstabs and thermal shadow maneuvers (Both Factions)" },
+        { name: "Druid", isNew: true, note: "✦ NEW PLAYABLE RACE: Sky-eagle flight forms and wind-weave nature magic (Both Factions)" },
+        { name: "Mage", isNew: true, note: "✦ ALLIANCE EXCLUSIVE (High Order): Ley line scholars manipulating arcane thermals & pyroblasts" },
+        { name: "Shaman", isNew: true, note: "✦ HORDE EXCLUSIVE (Windshapers): Skywall wind pact elementals binding totems & lightning" }
       ],
       racials: [
         { name: "Gale Step", type: "Active • 2m CD", effect: "Harness a thermal updraft to dash forward 10 yards, instantly breaking all snare and immobilize effects." },
@@ -1038,6 +1047,7 @@ const WOW_FOREVER_DATA = {
       description: "Spiritual masters who commune with fire, earth, water, and air. Drop powerful totems and unleash chain lightning and healing rains.",
       allowedRaces: [
         { id: "dwarf", name: "Dwarf (Wildhammer)", faction: "Alliance", isNew: true, note: "✦ NEW IN FOREVER: Brings Bloodlust, Windfury, and totems to Alliance!" },
+        { id: "skyborne", name: "The Skyborne (Windshapers)", faction: "Horde", isNew: true, note: "✦ NEW IN FOREVER: Horde Windshapers channeling Skywall elementals, wind-infused totems & chain lightning" },
         { id: "orc", name: "Orc", faction: "Horde", isNew: false },
         { id: "tauren", name: "Tauren", faction: "Horde", isNew: false },
         { id: "troll", name: "Troll", faction: "Horde", isNew: false }
@@ -1056,6 +1066,7 @@ const WOW_FOREVER_DATA = {
       allowedRaces: [
         { id: "human", name: "Human", faction: "Alliance", isNew: false },
         { id: "gnome", name: "Gnome", faction: "Alliance", isNew: false },
+        { id: "skyborne", name: "The Skyborne (High Order)", faction: "Alliance", isNew: true, note: "✦ NEW IN FOREVER: Alliance High Order ley scholars manipulating arcane thermals & devastating pyroblasts" },
         { id: "orc", name: "Orc", faction: "Horde", isNew: true, note: "✦ NEW IN FOREVER: Ley line masters combining Blood Fury with devastating Pyroblasts" },
         { id: "undead", name: "Undead", faction: "Horde", isNew: false },
         { id: "troll", name: "Troll", faction: "Horde", isNew: false }
