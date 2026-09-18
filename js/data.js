@@ -837,10 +837,10 @@ const WOW_FOREVER_DATA = {
         { name: "Shaman", isNew: true, note: "✦ HORDE EXCLUSIVE (Windshapers): Skywall wind pact elementals binding totems & lightning" }
       ],
       racials: [
-        { name: "Gale Step", type: "Active • 2m CD", effect: "Harness a thermal updraft to dash forward 10 yards, instantly breaking all snare and immobilize effects." },
-        { name: "Zephyr Glide", type: "Active • 1m CD", effect: "Conjures updrafts that slow falling speed by 50% and increase forward jump distance." },
-        { name: "Windborne Grace", type: "Passive", effect: "Diminishes falling damage by 50% and grants +5% baseline out-of-combat regeneration." },
-        { name: "Zephyr Attunement", type: "Passive", effect: "Increases Nature and Arcane Resistance by +10 and grants +5 Tailoring/Leatherworking skill." }
+        { name: "Walk on Air", type: "Active • 10s", effect: "Glide downward through the air for 10 sec." },
+        { name: "Skysight", type: "Active", effect: "Receive an Elemental Blessing increasing run speed by 10%." },
+        { name: "Wind Blessed", type: "Passive", effect: "1% increased melee, ranged, and spellcasting Haste." },
+        { name: "Elemental Insight", type: "Passive", effect: "Damage to Elementals increased by 5%." }
       ]
     },
     {
@@ -860,10 +860,10 @@ const WOW_FOREVER_DATA = {
         { name: "Warlock", isNew: false }
       ],
       racials: [
-        { name: "Blood Fury", type: "Active • 2m CD", effect: "Increases both Attack Power and Spell Power based on character level for 15 sec with NO healing reduction!" },
-        { name: "Hardiness", type: "Passive / Break", effect: "Increases passive resistance to Stun effects by +15%." },
-        { name: "Command", type: "Passive", effect: "Increases damage dealt by combat pets and summoned minions by +5%." },
-        { name: "Axe Specialization", type: "Passive", effect: "Increases critical strike chance with 1H and 2H Axes by +1.5%." }
+        { name: "Blood Fury", type: "Active • 15s", effect: "Increases Attack Power and Spell Power by 10% for 15 sec." },
+        { name: "Shatter Curse", type: "Active • 8s", effect: "Immunity to Curses and Banes and reduce Magical damage taken for 8 sec." },
+        { name: "Axe Specialization", type: "Passive", effect: "Axes increase spell and ability critical chance by 1%." },
+        { name: "Hardiness", type: "Passive", effect: "Stun durations decreased by 20%." }
       ]
     },
     {
@@ -883,10 +883,10 @@ const WOW_FOREVER_DATA = {
         { name: "Warlock", isNew: false }
       ],
       racials: [
-        { name: "Cannibalize", type: "Active • 2m CD", effect: "Consume a nearby humanoid or undead corpse to regenerate 35% total Health and Mana over 10 seconds." },
-        { name: "Will of the Forsaken", type: "Active • 2m CD", effect: "Provides an active break against Charm, Fear, and Sleep effects." },
-        { name: "Touch of the Grave", type: "Passive", effect: "Damaging attacks have a chance to drain shadow energy, inflicting shadow damage and healing you for the same amount." },
-        { name: "Shadow Resistance", type: "Passive", effect: "Increases Shadow Resistance by +10 and grants unlimited underwater breathing." }
+        { name: "Will of the Forsaken", type: "Active", effect: "Removes Charm, Fear, and Sleep." },
+        { name: "Cannibalize", type: "Active", effect: "Consume corpses to regenerate 35% Health and Mana over time." },
+        { name: "Underwater Breathing", type: "Passive", effect: "Breathe 300% longer underwater." },
+        { name: "Touch of the Grave", type: "Passive", effect: "Sometimes drain health with your attacks." }
       ]
     },
     {
@@ -904,10 +904,10 @@ const WOW_FOREVER_DATA = {
         { name: "Druid", isNew: false }
       ],
       racials: [
-        { name: "War Stomp", type: "Active • 2m CD", effect: "Stuns up to 5 enemies within 8 yards for 2 seconds (0.5s cast)." },
-        { name: "Plains Running", type: "Active • Toggle", effect: "Engage ancestral running gait, increasing out-of-combat movement speed by +40% when dismounted." },
-        { name: "Endurance", type: "Passive", effect: "Increases total maximum Health by a flat +5%." },
-        { name: "Cultivation", type: "Passive", effect: "Increases Herbalism skill by +15 and grants +10 Nature Resistance." }
+        { name: "War Stomp", type: "Active • 2s Stun", effect: "Stuns nearby enemies for 2 sec." },
+        { name: "Cultivation", type: "Active / Perk", effect: "Grow bonus herbs that don't require herbalism to gather." },
+        { name: "Plainsrunning", type: "Passive", effect: "Gain increased movement speed the longer you stay moving." },
+        { name: "Endurance", type: "Passive", effect: "Total Health increased by 5% and Hit Chance increased by 1%." }
       ]
     },
     {
@@ -928,10 +928,10 @@ const WOW_FOREVER_DATA = {
         { name: "Warlock", isNew: true, note: "✦ NEW IN FOREVER: Voodoo witch doctors binding nether demons through Loa mojo" }
       ],
       racials: [
-        { name: "Berserking", type: "Active • 2m CD", effect: "Increases melee, ranged, and spell casting speed by a flat 15% for 10 seconds (no health penalty!)." },
-        { name: "Regeneration", type: "Passive", effect: "Increases total health regeneration rate by 10%, and allows 10% of health regen to continue during combat." },
-        { name: "Beast Slaying", type: "Passive", effect: "Increases damage dealt against Beasts by +5%." },
-        { name: "Bow & Thrown Specialization", type: "Passive", effect: "Increases Critical Strike chance with Bows and Thrown weapons by +1%." }
+        { name: "Berserking", type: "Active • 10s", effect: "Increases casting and attack speed by 10% for 10 sec." },
+        { name: "Rapid Regeneration", type: "Active", effect: "Regenerate 50% of maximum Health over time." },
+        { name: "Beast Slaying", type: "Passive", effect: "Damage to Beasts increased by 5%." },
+        { name: "Regeneration", type: "Passive", effect: "10% of Health regeneration continues during combat." }
       ]
     }
   ],
