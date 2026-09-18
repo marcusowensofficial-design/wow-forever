@@ -1,0 +1,1215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>World of Warcraft: Forever — Beta Hub, Classic+ Tracker & News Portal</title>
+  <meta name="description" content="Track World of Warcraft: Forever (Classic+) news, beta level 20 cap updates, Wowhead datamining, Method.gg analysis, the new Skyborne race, 9 new dungeons, and your personal progression.">
+  <meta name="theme-color" content="#07090e">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚔️</text></svg>">
+</head>
+<body>
+
+  <!-- Sticky Top Status Bar -->
+  <aside class="top-status-bar" aria-label="Game and Beta Status Bar">
+    <div class="status-pulse-badge">
+      <span class="pulse-dot"></span>
+      <span>Beta Phase 1: Live Now</span>
+    </div>
+    <div class="status-ticker">
+      <span><strong>Beta Duration:</strong> 35 Days (Sept 17 – Oct 21)</span>
+      <span><strong>Level Cap:</strong> 20 (Phase 1)</span>
+      <span class="status-badge-highlight">Classic+ Standalone</span>
+      <span><strong>Rulesets:</strong> PvP • PvE • RP • Hardcore</span>
+      <span><strong>Engine:</strong> Ray-Traced GI (DX12)</span>
+      <span><strong>Client Build:</strong> 1.15.8.61902</span>
+    </div>
+  </aside>
+
+  <div class="app-container">
+
+    <!-- Header & Hero -->
+    <header class="header-hero">
+      <div class="brand-crest">
+        <span style="font-size: 2rem;">⚡</span>
+        <span style="font-size: 1.1rem; letter-spacing: 0.3em; color: var(--text-gold); font-family: var(--font-heading);">BLIZZARD ENTERTAINMENT</span>
+        <span style="font-size: 2rem;">⚡</span>
+      </div>
+      <h1 class="site-title gradient-gold-text">WORLD OF WARCRAFT: FOREVER</h1>
+      <p class="site-subtitle">
+        The permanent, living <strong>Classic+</strong> adventure. Featuring horizontal progression at Level 60, the new <strong>Skyborne</strong> race, 9 new leveling dungeons, 3 raid tiers, and zero level scaling.
+      </p>
+
+      <!-- Quick Resource Links Bar -->
+      <nav class="quick-links-bar" aria-label="Official Guides and Tools">
+        <a href="https://www.wowhead.com/forever/news/everything-we-know-about-wow-forever-382827" target="_blank" rel="noopener" class="quick-link-chip">
+          <span>🌐</span> Wowhead: Everything We Know
+        </a>
+        <a href="https://www.icy-veins.com/wow-forever/talent-calculator" target="_blank" rel="noopener" class="quick-link-chip">
+          <span>⚡</span> Icy Veins Talent Calculator
+        </a>
+        <a href="https://www.wowhead.com/forever/legacy-calculator" target="_blank" rel="noopener" class="quick-link-chip">
+          <span>🏆</span> Wowhead Legacy Calculator
+        </a>
+        <a href="https://www.method.gg/wow-classic/itemization-updates-in-world-of-warcraft-forever-expertise-spell-damage-more" target="_blank" rel="noopener" class="quick-link-chip">
+          <span>⚔️</span> Method.gg Itemization Guide
+        </a>
+        <a href="https://www.method.gg/wow-classic/all-new-racial-abilities-in-world-of-warcraft-forever" target="_blank" rel="noopener" class="quick-link-chip">
+          <span>🦅</span> Method.gg Racials Breakdown
+        </a>
+        <a href="https://x.com/MrGMYT/status/2099139797524902295/video/1" target="_blank" rel="noopener" class="quick-link-chip">
+          <span>🎯</span> MrGM Ping System Demo
+        </a>
+        <button type="button" class="quick-link-chip" id="quick-link-race-planner" style="cursor: pointer; background: rgba(243, 192, 67, 0.15); border-color: var(--border-gold);">
+          <span>🧙</span> Class & Race Planner
+        </button>
+      </nav>
+
+      <!-- Main Navigation Tabs -->
+      <nav class="nav-tab-bar" aria-label="Main Navigation">
+        <button class="nav-tab-btn active" data-tab="overview">
+          <span>⚡</span> Operations Hub
+        </button>
+        <button class="nav-tab-btn" data-tab="news">
+          <span>📰</span> News & Dispatches
+        </button>
+        <button class="nav-tab-btn" data-tab="codex">
+          <span>📜</span> Content Codex
+        </button>
+        <button class="nav-tab-btn" data-tab="systems">
+          <span>⚙️</span> Systems & Engine
+        </button>
+        <button class="nav-tab-btn" data-tab="tracker">
+          <span>🛡️</span> My Forever & Squad
+        </button>
+      </nav>
+    </header>
+
+    <!-- TAB 1: OPERATIONS HUB & COUNTDOWNS -->
+    <main id="tab-overview" class="tab-content active">
+
+      <!-- Countdowns Section - 4 Milestones -->
+      <section class="countdown-section" aria-label="Release Countdowns">
+        
+        <!-- Beta Conclusion Countdown -->
+        <div class="countdown-card featured-beta-ends">
+          <div class="countdown-header">
+            <div>
+              <span class="countdown-label" style="color: #f87171;">Testing Closes</span>
+              <h2 class="countdown-title" style="color: #fca5a5;">Beta Ends</h2>
+            </div>
+            <span style="font-size: 1.5rem;">⏳</span>
+          </div>
+          <p style="font-size: 0.85rem; color: var(--text-muted);">Exact 35-day beta testing concludes. Server reset before launch.</p>
+          <div class="timer-digits-container">
+            <div class="timer-unit-box">
+              <span id="betaends-days" class="timer-number">00</span>
+              <span class="timer-unit-label">Days</span>
+            </div>
+            <div class="timer-unit-box">
+              <span id="betaends-hours" class="timer-number">00</span>
+              <span class="timer-unit-label">Hours</span>
+            </div>
+            <div class="timer-unit-box">
+              <span id="betaends-mins" class="timer-number">00</span>
+              <span class="timer-unit-label">Mins</span>
+            </div>
+            <div class="timer-unit-box">
+              <span id="betaends-secs" class="timer-number">00</span>
+              <span class="timer-unit-label">Secs</span>
+            </div>
+          </div>
+          <div class="countdown-footer">
+            <span>Target: <strong>Oct 21, 2026</strong></span>
+            <span style="color: #f87171;">5 Weeks Total Duration</span>
+          </div>
+        </div>
+
+        <!-- Beta Phase 2 Timer -->
+        <div class="countdown-card featured-beta">
+          <div class="countdown-header">
+            <div>
+              <span class="countdown-label" style="color: #34d399;">Beta Progression</span>
+              <h2 class="countdown-title" style="color: #6ee7b7;">Phase 2: Level 30 Cap</h2>
+            </div>
+            <span style="font-size: 1.5rem;">⚔️</span>
+          </div>
+          <p style="font-size: 0.85rem; color: var(--text-muted);">Unlocks Wetlands Excavation Site & Dalaran Dungeons.</p>
+          <div class="timer-digits-container">
+            <div class="timer-unit-box">
+              <span id="phase2-days" class="timer-number">00</span>
+              <span class="timer-unit-label">Days</span>
+            </div>
+            <div class="timer-unit-box">
+              <span id="phase2-hours" class="timer-number">00</span>
+              <span class="timer-unit-label">Hours</span>
+            </div>
+            <div class="timer-unit-box">
+              <span id="phase2-mins" class="timer-number">00</span>
+              <span class="timer-unit-label">Mins</span>
+            </div>
+            <div class="timer-unit-box">
+              <span id="phase2-secs" class="timer-number">00</span>
+              <span class="timer-unit-label">Secs</span>
+            </div>
+          </div>
+          <div class="countdown-footer">
+            <span>Target: <strong>Oct 8, 2026</strong></span>
+            <span style="color: #34d399;">Active Beta Wave 2</span>
+          </div>
+        </div>
+
+        <!-- Launch Timer -->
+        <div class="countdown-card featured-launch">
+          <div class="countdown-header">
+            <div>
+              <span class="countdown-label">Global Release</span>
+              <h2 class="countdown-title text-gold">Official Launch</h2>
+            </div>
+            <span style="font-size: 1.5rem;">🌍</span>
+          </div>
+          <p style="font-size: 0.85rem; color: var(--text-muted);">Global servers unlock simultaneously worldwide.</p>
+          <div class="timer-digits-container">
+            <div class="timer-unit-box">
+              <span id="launch-days" class="timer-number">00</span>
+              <span class="timer-unit-label">Days</span>
+            </div>
+            <div class="timer-unit-box">
+              <span id="launch-hours" class="timer-number">00</span>
+              <span class="timer-unit-label">Hours</span>
+            </div>
+            <div class="timer-unit-box">
+              <span id="launch-mins" class="timer-number">00</span>
+              <span class="timer-unit-label">Mins</span>
+            </div>
+            <div class="timer-unit-box">
+              <span id="launch-secs" class="timer-number">00</span>
+              <span class="timer-unit-label">Secs</span>
+            </div>
+          </div>
+          <div class="countdown-footer">
+            <span>Target: <strong>Nov 4, 2026</strong></span>
+            <span style="color: var(--text-gold);">Level 60 Unlocked</span>
+          </div>
+        </div>
+
+        <!-- Raids Unlock Timer -->
+        <div class="countdown-card featured-raids">
+          <div class="countdown-header">
+            <div>
+              <span class="countdown-label" style="color: var(--color-arcane);">Endgame Unlock</span>
+              <h2 class="countdown-title" style="color: #c084fc;">Tier 1 Raids</h2>
+            </div>
+            <span style="font-size: 1.5rem;">👑</span>
+          </div>
+          <p style="font-size: 0.85rem; color: var(--text-muted);">Barrow Deeps (10m), Hyjal Summit (20m), Onyxia (40m).</p>
+          <div class="timer-digits-container">
+            <div class="timer-unit-box">
+              <span id="raids-days" class="timer-number">00</span>
+              <span class="timer-unit-label">Days</span>
+            </div>
+            <div class="timer-unit-box">
+              <span id="raids-hours" class="timer-number">00</span>
+              <span class="timer-unit-label">Hours</span>
+            </div>
+            <div class="timer-unit-box">
+              <span id="raids-mins" class="timer-number">00</span>
+              <span class="timer-unit-label">Mins</span>
+            </div>
+            <div class="timer-unit-box">
+              <span id="raids-secs" class="timer-number">00</span>
+              <span class="timer-unit-label">Secs</span>
+            </div>
+          </div>
+          <div class="countdown-footer">
+            <span>Target: <strong>Dec 9, 2026</strong></span>
+            <span style="color: var(--color-arcane);">No Molten Core at Launch</span>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Beta Duration & Testing Roadmap Tracker -->
+      <section class="beta-duration-box" aria-label="Beta Testing Schedule & Duration Roadmap">
+        <div class="beta-duration-top-row">
+          <div>
+            <span class="countdown-label" style="color: #34d399;">Official 5-Week Testing Schedule</span>
+            <h2 style="font-size: 1.5rem; color: #fff; margin-top: 0.2rem;">
+              Beta Duration: Exactly 35 Days (Sept 17 – Oct 21, 2026)
+            </h2>
+            <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 0.25rem;">
+              Blizzard's phased closed beta testing window runs for exactly 5 weeks across two distinct milestone caps before character wipes.
+            </p>
+          </div>
+          <div style="display: flex; gap: 0.75rem; align-items: center;">
+            <span class="status-badge-highlight" style="font-size: 0.85rem; padding: 0.35rem 0.85rem;">
+              🗓️ 35 Days Total
+            </span>
+            <span id="beta-days-badge" class="status-pulse-badge" style="background: rgba(16, 185, 129, 0.2); border-color: #10b981; color: #6ee7b7; font-weight: 700;">
+              33 Days Left
+            </span>
+          </div>
+        </div>
+
+        <!-- Dynamic Duration Progress Bar -->
+        <div class="beta-progress-track">
+          <div id="beta-duration-progress-fill" class="beta-progress-fill" style="width: 3%;"></div>
+        </div>
+        <div class="beta-progress-meta">
+          <span id="beta-duration-progress-text">Day 2 of 35 Days (3% elapsed • 33 days remaining)</span>
+          <span>Start: Sept 17, 2026 • End: Oct 21, 2026 (23:59 PDT)</span>
+        </div>
+
+        <!-- 3-Step Phase Stepper Grid -->
+        <div class="beta-duration-stepper">
+          <div class="beta-step-card active-phase">
+            <span class="beta-step-badge current">Active Now • Phase 1</span>
+            <h3 class="beta-step-title">Level 20 Cap & Foundations</h3>
+            <div class="beta-step-dates">Sept 17 – Oct 8, 2026 • 21 Days (3 Weeks)</div>
+            <p class="beta-step-desc">
+              Extensive testing of starting zones, the Skyborne race, Hall of Thanes & Ruins of Lordaeron dungeons, 10–19 Warsong Gulch, and core dual-spec talent foundations.
+            </p>
+          </div>
+
+          <div class="beta-step-card">
+            <span class="beta-step-badge upcoming">Upcoming • Phase 2</span>
+            <h3 class="beta-step-title">Level 30 Cap & Mid-Game</h3>
+            <div class="beta-step-dates">Oct 8 – Oct 21, 2026 • 14 Days (2 Weeks)</div>
+            <p class="beta-step-desc">
+              Unlocks Excavation Site 4 in Wetlands, City of Dalaran dungeon wing, Ashenvale & Hillsbrad open-world PvP skirmishes, and 20–29 bracket battlegrounds.
+            </p>
+          </div>
+
+          <div class="beta-step-card">
+            <span class="beta-step-badge final">Final Phase • Pre-Launch</span>
+            <h3 class="beta-step-title">Server Wipe & Deployment</h3>
+            <div class="beta-step-dates">Oct 22 – Nov 3, 2026 • 14 Days (2 Weeks)</div>
+            <p class="beta-step-desc">
+              All beta progress is wiped on October 21. Blizzard deploys final client patch 1.0, finishes stress-testing, and preps global launch on November 4, 2026.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Beta Phase 1 Hub Banner -->
+      <section class="beta-hub-banner">
+        <div class="beta-banner-grid">
+          <div>
+            <span class="status-pulse-badge" style="margin-bottom: 0.75rem;">
+              <span class="pulse-dot"></span> Phase 1 Status: Active (Day 2)
+            </span>
+            <h2 class="beta-headline">Beta Testing Now Live: The Level 20 Milestone</h2>
+            <p class="beta-description">
+              Blizzard opened the servers on September 17, 2026. Players across normal, PvP, and RP rulesets can test starting zones, the new <strong>Zephras Isle</strong> sky realm, brand new dungeon wings, and revamped talent trees up to <strong>Level 20</strong>. Progress resets upon official launch on Nov 4.
+            </p>
+            <div class="beta-stat-pills">
+              <span class="beta-stat-pill"><strong>2</strong> New Dungeons Open (Hall of Thanes & Lordaeron)</span>
+              <span class="beta-stat-pill"><strong>1</strong> New Playable Race (Skyborne)</span>
+              <span class="beta-stat-pill"><strong>6</strong> New Race/Class Combos</span>
+              <span class="beta-stat-pill"><strong>10-19</strong> Warsong Gulch Active</span>
+              <span class="beta-stat-pill"><strong>🎯</strong> Retail Ping System Active</span>
+            </div>
+          </div>
+
+          <div class="beta-quickstart-card">
+            <h4>⚡ Week 1 Testing Objectives</h4>
+            <ul>
+              <li><span>⚔️</span> <span><strong>Hall of Thanes:</strong> Level 13–18 in Ironforge depths.</span></li>
+              <li><span>🏰</span> <span><strong>Ruins of Lordaeron:</strong> Level 15–20 in Tirisfal.</span></li>
+              <li><span>🏕️</span> <span><strong>Camping:</strong> Place a profession campfire station.</span></li>
+              <li><span>🛡️</span> <span><strong>Paladin Taunt:</strong> Unlock Hand of Reckoning quest.</span></li>
+              <li><span>🦅</span> <span><strong>Zephras Isle:</strong> Test Skyborne 'Gale Step' racial.</span></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Verified Rules & Quality of Life Section -->
+      <section>
+        <div class="section-heading-bar">
+          <div>
+            <h2><span>⚖️</span> Verified Game Rules & Quality of Life</h2>
+            <p class="section-subtext">Core design choices confirmed by Blizzard, Wowhead, and community reveals</p>
+          </div>
+        </div>
+
+        <div id="qol-features-container" class="qol-features-grid">
+          <!-- Rendered dynamically by js/app.js -->
+        </div>
+      </section>
+
+      <!-- Quick Feature Matrix -->
+      <section>
+        <div class="section-heading-bar">
+          <div>
+            <h2><span>🏛️</span> The Pillars of World of Warcraft: Forever</h2>
+            <p class="section-subtext">Why WoW: Forever is the definitive Classic+ experience</p>
+          </div>
+        </div>
+
+        <div class="systems-grid">
+          <div class="system-card">
+            <div class="system-card-top">
+              <div class="system-icon-box">⏳</div>
+              <div>
+                <h3 class="system-card-title">Permanent Level 60</h3>
+                <span class="system-summary">Horizontal Progression Philosophy</span>
+              </div>
+            </div>
+            <ul>
+              <li>No stat squishes or level inflation: Level 60 is forever.</li>
+              <li>New side-grades, tier variations, and challenging dungeons keep gear diverse.</li>
+              <li>Continuity branches right after Warcraft III: Reforged.</li>
+            </ul>
+          </div>
+
+          <div class="system-card">
+            <div class="system-card-top">
+              <div class="system-icon-box">🗺️</div>
+              <div>
+                <h3 class="system-card-title">9 New Dungeons & 3 Raids</h3>
+                <span class="system-summary">Expanded Leveling & Endgame</span>
+              </div>
+            </div>
+            <ul>
+              <li>Fills empty leveling brackets from Level 13 through Level 60.</li>
+              <li>Two 5-man dungeons playable in Beta Phase 1 right now.</li>
+              <li>New 10-man (Barrow Deeps) and 20-man (Hyjal Summit) raids at launch.</li>
+            </ul>
+          </div>
+
+          <div class="system-card">
+            <div class="system-card-top">
+              <div class="system-icon-box">🌌</div>
+              <div>
+                <h3 class="system-card-title">Realmless & Anti-Datamining</h3>
+                <span class="system-summary">Preserving Wonder and Community</span>
+              </div>
+            </div>
+            <ul>
+              <li>Pick your ruleset (Normal, PvP, RP, Hardcore) without dead servers.</li>
+              <li>Blizzard is actively encrypting raid secrets to restore true exploration.</li>
+              <li>Classic Purist toggle preserves original visual clarity for purists.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- TAB 2: NEWS & DISPATCHES WIRE -->
+    <section id="tab-news" class="tab-content" aria-label="News and Dispatches">
+      
+      <div class="section-heading-bar">
+        <div>
+          <h2><span>📰</span> Intel & Dispatches Wire</h2>
+          <p class="section-subtext">Curated reporting from Blizzard Official, Wowhead compendiums, Method.gg theorycrafting, and beta notes</p>
+        </div>
+      </div>
+
+      <!-- Filters & Search Toolbar -->
+      <div class="filter-controls-row">
+        <div class="tag-filter-group">
+          <button class="filter-chip active" data-source="all">All Dispatches</button>
+          <button class="filter-chip" data-source="blizzard">Blizzard Official</button>
+          <button class="filter-chip" data-source="wowhead">Wowhead Coverage</button>
+          <button class="filter-chip" data-source="method">Method.gg Analysis</button>
+          <button class="filter-chip" data-source="custom">Personal Logs</button>
+        </div>
+
+        <div class="search-box-wrapper">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="news-search-input" class="search-input" placeholder="Search news, hotfixes, racials...">
+        </div>
+      </div>
+
+      <!-- News Cards Grid -->
+      <div id="news-cards-container" class="news-cards-grid">
+        <!-- Rendered dynamically by js/app.js -->
+      </div>
+
+      <!-- User Custom Intel Logger Form -->
+      <section class="user-note-card">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
+          <div>
+            <h3 style="color: var(--text-gold); font-size: 1.25rem;">✍️ Log Intel / Personal Beta Discovery</h3>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">Add your own beta findings, leaks, or guild reminders (stored locally on your device).</p>
+          </div>
+        </div>
+
+        <form id="add-custom-intel-form" class="user-note-form-grid">
+          <div class="form-field">
+            <label for="custom-title" class="form-label">Headline / Title *</label>
+            <input type="text" id="custom-title" class="form-input" placeholder="e.g. Discovered secret chest in Hall of Thanes" required>
+          </div>
+          <div class="form-field">
+            <label for="custom-author" class="form-label">Reporter / Source</label>
+            <input type="text" id="custom-author" class="form-input" placeholder="e.g. My Beta Log, Guild Discord">
+          </div>
+          <div class="form-field">
+            <label for="custom-category" class="form-label">Category</label>
+            <select id="custom-category" class="form-select">
+              <option value="Beta Discovery">Beta Discovery</option>
+              <option value="Class Intel">Class Intel</option>
+              <option value="Loot & Drops">Loot & Drops</option>
+              <option value="Guild Strategy">Guild Strategy</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="custom-summary" class="form-label">Summary *</label>
+            <input type="text" id="custom-summary" class="form-input" placeholder="Brief summary of the discovery" required>
+          </div>
+          <div class="form-field span-2">
+            <label for="custom-content" class="form-label">Detailed Notes / Log Text</label>
+            <textarea id="custom-content" class="form-textarea" rows="3" placeholder="Full notes, coordinates, boss tactics, or drop rates..."></textarea>
+          </div>
+          <div class="form-field span-2" style="text-align: right;">
+            <button type="submit" class="btn-primary"><span>💾</span> Save Intel to Dispatch Wire</button>
+          </div>
+        </form>
+      </section>
+
+    </section>
+
+    <!-- TAB 3: CONTENT CODEX -->
+    <section id="tab-codex" class="tab-content" aria-label="Content Codex">
+      
+      <div class="section-heading-bar">
+        <div>
+          <h2><span>📜</span> The "Forever" Content Codex</h2>
+          <p class="section-subtext">The complete guide to new races, class combinations, dungeons, raids, and zones</p>
+        </div>
+      </div>
+
+      <!-- Sub Navigation -->
+      <div class="codex-subnav">
+        <button class="codex-nav-btn active" data-codex="skyborne">🦅 The Skyborne Race</button>
+        <button class="codex-nav-btn" data-codex="combos">⚔️ New Class Combinations</button>
+        <button class="codex-nav-btn" data-codex="matrix">📊 Race & Class Planner</button>
+        <button class="codex-nav-btn" data-codex="dungeons">🏰 9 Dungeons & 3 Raids</button>
+        <button class="codex-nav-btn" data-codex="curve">🗺️ Full 1–60 Dungeon Route</button>
+        <button class="codex-nav-btn" data-codex="zones">🌄 New & Renewed Zones</button>
+      </div>
+
+      <!-- Panel 1: Skyborne -->
+      <div id="codex-skyborne" class="codex-panel active">
+        <div class="skyborne-feature-card">
+          <div class="skyborne-grid">
+            <div>
+              <span class="skyborne-badge">✦ New Playable Race</span>
+              <h2 class="skyborne-title gradient-arcane-text">The Skyborne</h2>
+              <p class="skyborne-lore">
+                Descendants of high elves and elemental wind-weavers who took refuge on <strong>Zephras Isle</strong> during the Great Sundering. Masters of thermal updrafts and arcane currents, the Skyborne have descended back to Azeroth as a neutral race, forging alliances with both factions.
+              </p>
+
+              <div class="allegiance-toggle-box">
+                <h4>Faction Allegiance Choice (Unlocked at Level 10)</h4>
+                <div class="allegiance-pills">
+                  <div class="allegiance-pill alliance">
+                    <strong>High Order Skyborne</strong>
+                    <span>Alliance allegiance under Stormwind's sky-guards and Ironforge scholars.</span>
+                  </div>
+                  <div class="allegiance-pill horde">
+                    <strong>Windshaper Skyborne</strong>
+                    <span>Horde allegiance guided by Tauren shamanism and Thrall's elementals.</span>
+                  </div>
+                </div>
+              </div>
+
+              <div style="font-size: 0.9rem; color: #cbd5e1;">
+                <strong>Playable Classes:</strong> Warrior, Hunter, Rogue, Druid<br>
+                <strong>Starting Realm:</strong> Zephras Isle (Floating zone above western Kalimdor)
+              </div>
+            </div>
+
+            <div>
+              <h3 style="font-size: 1.2rem; color: var(--text-gold); margin-bottom: 1rem;">Racial Passives & Abilities</h3>
+              <div class="racial-abilities-list">
+                <div class="racial-item">
+                  <div class="racial-item-header">
+                    <span class="racial-item-name">Gale Step</span>
+                    <span class="racial-item-type">Active • 2m CD</span>
+                  </div>
+                  <p class="racial-item-effect">Harness a thermal updraft to dash forward 10 yards, instantly breaking all snare and immobilize effects.</p>
+                </div>
+                <div class="racial-item">
+                  <div class="racial-item-header">
+                    <span class="racial-item-name">Windborne Grace</span>
+                    <span class="racial-item-type">Passive</span>
+                  </div>
+                  <p class="racial-item-effect">Reduces falling velocity by 30% and diminishes falling damage by 50%.</p>
+                </div>
+                <div class="racial-item">
+                  <div class="racial-item-header">
+                    <span class="racial-item-name">Zephyr Attunement</span>
+                    <span class="racial-item-type">Passive</span>
+                  </div>
+                  <p class="racial-item-effect">Increases Nature and Arcane Resistance by +10; out-of-combat regeneration increased by 5%.</p>
+                </div>
+                <div class="racial-item">
+                  <div class="racial-item-header">
+                    <span class="racial-item-name">Feathercraft</span>
+                    <span class="racial-item-type">Passive</span>
+                  </div>
+                  <p class="racial-item-effect">Increases Tailoring and Leatherworking skill bonuses by +5.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Panel 2: New Class Combinations -->
+      <div id="codex-combos" class="codex-panel">
+        <div id="class-combos-container" class="combos-grid">
+          <!-- Rendered dynamically -->
+        </div>
+      </div>
+
+      <!-- Panel: Classes & Allowed Races Planner Matrix -->
+      <div id="codex-matrix" class="codex-panel">
+        <div class="matrix-planner-wrapper">
+          <div class="planner-controls-bar">
+            <div>
+              <span class="countdown-label" style="color: var(--text-gold);">Interactive Build Companion</span>
+              <h3 style="font-size: 1.3rem; color: #fff; margin-top: 0.15rem;">Classes & Allowed Races Planner</h3>
+            </div>
+            
+            <div class="mode-toggle-group">
+              <button class="planner-mode-btn active" data-planner-mode="class">⚔️ Browse by Class</button>
+              <button class="planner-mode-btn" data-planner-mode="race">👤 Browse by Race</button>
+              <button class="planner-mode-btn" data-planner-mode="table">📊 Full Matrix Table</button>
+            </div>
+
+            <div class="faction-filter-group">
+              <button class="planner-filter-btn active" data-faction-filter="all">All Combos</button>
+              <button class="planner-filter-btn" data-faction-filter="alliance">Alliance Only</button>
+              <button class="planner-filter-btn" data-faction-filter="horde">Horde Only</button>
+              <button class="planner-filter-btn" data-faction-filter="new">✦ Only New in Forever</button>
+            </div>
+          </div>
+
+          <!-- Selector Chips Bar (Classes or Races) -->
+          <div id="planner-selector-chips" class="selector-chips-row">
+            <!-- Dynamically populated buttons -->
+          </div>
+
+          <!-- Active Selection Hero Card -->
+          <div id="planner-hero-card" class="planner-hero-card">
+            <!-- Dynamically populated hero card -->
+          </div>
+
+          <!-- Allowed Races or Classes Results Grid -->
+          <div id="planner-allowed-results">
+            <!-- Dynamically populated allowed entities or matrix table -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Panel 3: Dungeons & Raids -->
+      <div id="codex-dungeons" class="codex-panel">
+        <div class="filter-controls-row">
+          <div class="tag-filter-group">
+            <button class="filter-chip dungeon-filter-btn active" data-dungeon-filter="all">All Encounters (12)</button>
+            <button class="filter-chip dungeon-filter-btn" data-dungeon-filter="beta1">⚡ Active in Beta Phase 1 (2)</button>
+            <button class="filter-chip dungeon-filter-btn" data-dungeon-filter="phase2">Phase 2 Unlocks (2)</button>
+            <button class="filter-chip dungeon-filter-btn" data-dungeon-filter="dungeons">5-Man Dungeons (9)</button>
+            <button class="filter-chip dungeon-filter-btn" data-dungeon-filter="raids">👑 Raids (3)</button>
+          </div>
+        </div>
+
+        <div id="dungeons-grid-container" class="dungeons-grid">
+          <!-- Rendered dynamically -->
+        </div>
+      </div>
+
+      <!-- Panel 4: Full 1-60 Dungeon Curve Roadmap -->
+      <div id="codex-curve" class="codex-panel">
+        <div class="dungeon-curve-box">
+          <div style="margin-bottom: 1.2rem;">
+            <h3 style="font-size: 1.3rem; color: #fff;">🗺️ The Complete Level 1–60 Dungeon Curve</h3>
+            <p style="font-size: 0.88rem; color: var(--text-muted);">
+              See how the 9 brand new dungeons seamlessly fill historic progression gaps alongside classic 2004 staples.
+            </p>
+          </div>
+          <div id="dungeon-curve-container">
+            <!-- Dynamically rendered -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Panel 5: New Zones -->
+      <div id="codex-zones" class="codex-panel">
+        <div id="new-zones-container" class="dungeons-grid">
+          <!-- Rendered dynamically -->
+        </div>
+      </div>
+
+    </section>
+
+    <!-- TAB 4: SYSTEMS & ENGINE -->
+    <section id="tab-systems" class="tab-content" aria-label="Game Systems & Engine Overhaul">
+      
+      <div class="section-heading-bar">
+        <div>
+          <h2><span>⚙️</span> Interactive 16-Point Legacy Calculator</h2>
+          <p class="section-subtext">Plan your account-wide progression perks across Tradeskills, World Explorer, and Resourcefulness</p>
+        </div>
+      </div>
+
+      <!-- Interactive Legacy Calculator Box -->
+      <div id="legacy-calc-container" class="legacy-calc-box">
+        <div class="legacy-calc-top-bar">
+          <div>
+            <h3 style="font-size: 1.3rem; color: #fff;">🏆 WoW Forever Legacy Tree Planner</h3>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">
+              Allocations are shared account-wide. Click <strong>+</strong> and <strong>−</strong> to experiment with your build for launch!
+            </p>
+          </div>
+          <div style="display: flex; align-items: center; gap: 1rem;">
+            <span id="legacy-points-remaining" style="font-family: var(--font-heading); font-size: 1.15rem; font-weight: 700; color: #10b981;">
+              16 / 16 Points Remaining
+            </span>
+            <button id="reset-legacy-calc-btn" class="btn-secondary" style="font-size: 0.8rem; padding: 0.35rem 0.8rem;">
+              Reset Points
+            </button>
+          </div>
+        </div>
+
+        <div id="legacy-trees-wrapper" class="legacy-trees-grid">
+          <!-- Dynamically populated by js/app.js -->
+        </div>
+      </div>
+
+      <!-- Engine & Graphics Technical Showcase -->
+      <div class="section-heading-bar" style="margin-top: 2.5rem;">
+        <div>
+          <h2><span>✨</span> Modern Engine Architecture & Technical Specs</h2>
+          <p class="section-subtext">Custom Ray-Tracing Global Illumination, visual toggles, and PC hardware targets</p>
+        </div>
+      </div>
+
+      <div class="legacy-calc-box">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.2rem;">
+          <div>
+            <h3 style="color: #fff; font-size: 1.25rem;">🖥️ Engine Visual Preset Simulator</h3>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">
+              Toggle between the proprietary Ray-Traced engine and the Classic 2004 performance profile:
+            </p>
+          </div>
+          <div class="toggle-switch-wrapper">
+            <span id="engine-preset-label" style="font-size: 0.88rem; font-weight: 700; color: #38bdf8;">
+              Ray-Traced Global Illumination: ACTIVE
+            </span>
+            <label class="toggle-switch" aria-label="Toggle Engine Preset">
+              <input type="checkbox" id="engine-preset-toggle" checked>
+              <span class="toggle-slider"></span>
+            </label>
+          </div>
+        </div>
+
+        <div id="engine-preset-details" style="margin-bottom: 1.5rem;">
+          <div style="border-left: 3px solid #38bdf8; padding-left: 1rem;">
+            <strong style="color: #38bdf8;">Forever Ray-Traced Engine Mode</strong>
+            <ul style="margin-top: 0.4rem; list-style: none; font-size: 0.85rem; color: #cbd5e1; display: flex; flex-direction: column; gap: 0.3rem;">
+              <li>✦ Real-time shifting mountain and tree shadows matching sun angle.</li>
+              <li>✦ Volumetric morning fog across Westfall, Elwynn, and Duskwood.</li>
+              <li>✦ Re-engineered river flow with foam collision physics along riverbanks.</li>
+              <li>✦ HD Character models with enhanced polygon meshes.</li>
+            </ul>
+          </div>
+        </div>
+
+        <h4 style="color: var(--text-gold); font-size: 1rem; margin-bottom: 0.5rem;">PC Hardware Requirements</h4>
+        <div id="engine-specs-container" class="engine-specs-grid">
+          <!-- Dynamically populated -->
+        </div>
+      </div>
+
+      <div class="section-heading-bar" style="margin-top: 2.5rem;">
+        <div>
+          <h2><span>🔥</span> Innovative Core Systems</h2>
+          <p class="section-subtext">Revitalized mechanics designed to nurture organic player cooperation and world immersion</p>
+        </div>
+      </div>
+
+      <div class="systems-grid">
+        
+        <!-- Camping System -->
+        <div class="system-card">
+          <div class="system-card-top">
+            <div class="system-icon-box">🔥</div>
+            <div>
+              <h3 class="system-card-title">The Camping System</h3>
+              <span class="system-summary">Cooperative Outdoor Buff Hubs</span>
+            </div>
+          </div>
+          <ul>
+            <li>Turns any open-world campfire into a resting, cooking, and trading encampment.</li>
+            <li>Players can place up to 3 crafted profession objects around the fire (1 per party member).</li>
+            <li><strong>Blacksmith's Anvil:</strong> +10% Attack Power for 1 hour.</li>
+            <li><strong>Weaver's Loom:</strong> +Spirit & MP5 mana regeneration.</li>
+            <li><strong>Alchemist's Still:</strong> +10% potion and elixir effectiveness.</li>
+            <li>Includes 600+ new trade blueprints dropping from dungeon bosses!</li>
+          </ul>
+        </div>
+
+        <!-- Realmless Architecture -->
+        <div class="system-card">
+          <div class="system-card-top">
+            <div class="system-icon-box">🌐</div>
+            <div>
+              <h3 class="system-card-title">Realmless Ruleset Engine</h3>
+              <span class="system-summary">No Server Lockouts or Ghost Towns</span>
+            </div>
+          </div>
+          <ul>
+            <li>Select your gameplay Ruleset (Normal, PvP, Roleplaying, or Hardcore in winter).</li>
+            <li>Dynamic seamless layering automatically balances zone populations.</li>
+            <li>Play with friends and guildmates across the entire regional pool without transfer fees.</li>
+            <li>Auction house economies are balanced across regional rulesets.</li>
+          </ul>
+        </div>
+
+        <!-- Addon Policy -->
+        <div class="system-card">
+          <div class="system-card-top">
+            <div class="system-icon-box">🛡️</div>
+            <div>
+              <h3 class="system-card-title">In-Combat Addon Disarmament</h3>
+              <span class="system-summary">Preserving Execution & Mystery</span>
+            </div>
+          </div>
+          <ul>
+            <li>Computational WeakAuras and solver scripts are disabled during encounter combat.</li>
+            <li>Prevents third-party automation of raid mechanics and positioning callouts.</li>
+            <li>Native UI replacements: built-in damage meter, ping wheel, and cooldown HUD.</li>
+            <li>Cosmetic, bag, and auction addons outside combat remain fully permitted.</li>
+          </ul>
+        </div>
+
+        <!-- Seasonal PvP -->
+        <div class="system-card">
+          <div class="system-card-top">
+            <div class="system-icon-box">⚔️</div>
+            <div>
+              <h3 class="system-card-title">Seasonal Rank 14 Track</h3>
+              <span class="system-summary">Healthy Milestone Honor Progression</span>
+            </div>
+          </div>
+          <ul>
+            <li>Toxic 18-hour-a-day bracket stacking and weekly rank decay abolished.</li>
+            <li>Seasonal milestone progression track aligned with raid tiers.</li>
+            <li>Rank 14 weapons and armor updated with modern Expertise ratings.</li>
+            <li>Strict faction-locking on PvP ruleset to fuel genuine server rivalries.</li>
+          </ul>
+        </div>
+
+        <!-- Hardcore Ruleset -->
+        <div class="system-card">
+          <div class="system-card-top">
+            <div class="system-icon-box">💀</div>
+            <div>
+              <h3 class="system-card-title">Hardcore & Mortal Safety Net</h3>
+              <span class="system-summary">Permadeath with Free Transfer</span>
+            </div>
+          </div>
+          <ul>
+            <li>Launches in the upcoming winter update with strict permanent character death.</li>
+            <li>Mak'gora (Duel to the Death) with ear trophy stacking visual buffs.</li>
+            <li><strong>Free Mortal Transfer:</strong> Fallen characters can be transferred free to PvE or PvP rulesets!</li>
+          </ul>
+        </div>
+
+        <!-- Combat & Itemization Rebalance -->
+        <div class="system-card">
+          <div class="system-card-top">
+            <div class="system-icon-box">⚖️</div>
+            <div>
+              <h3 class="system-card-title">Itemization & Stat Overhaul</h3>
+              <span class="system-summary">Ending the Human Sword Dominance</span>
+            </div>
+          </div>
+          <ul>
+            <li>Weapon skill bonuses replaced with modern <strong>Expertise</strong> rating.</li>
+            <li>Melee hit, ranged hit, and spell hit stats streamlined to reduce dead loot.</li>
+            <li>Protection Paladins receive an active taunt ability: <em>Hand of Reckoning</em>.</li>
+            <li>Shaman and Warlocks are NOT intended tanks at launch (unlike SoD), but have pinch talents.</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Transmog Purist Interactive Demo -->
+      <div class="transmog-interactive-showcase">
+        <div class="transmog-toggle-header">
+          <div>
+            <h3 style="font-size: 1.3rem; color: #fff;">🛡️ The "Classic Purist" Transmog Toggle Simulator</h3>
+            <p style="font-size: 0.9rem; color: var(--text-muted);">
+              In WoW: Forever, transmogrification is included, but classic purists who dislike flashy cosmetic overrides can toggle "Classic Purist Mode" in their options. Try the toggle below to see what your client displays!
+            </p>
+          </div>
+          <div class="toggle-switch-wrapper">
+            <span id="purist-status-label" style="font-size: 0.88rem; font-weight: 700; color: var(--text-gold);">
+              Modern Transmog: ACTIVE
+            </span>
+            <label class="toggle-switch" aria-label="Toggle Classic Purist Mode">
+              <input type="checkbox" id="purist-toggle-input">
+              <span class="toggle-slider"></span>
+            </label>
+          </div>
+        </div>
+
+        <div class="transmog-preview-display">
+          <div class="inspect-gear-card">
+            <h4>Character Overview</h4>
+            <p style="font-size: 0.85rem; color: #cbd5e1; margin-bottom: 0.5rem;">
+              <strong>Character:</strong> Aeridor (Level 20 Skyborne Warrior)<br>
+              <strong>Status:</strong> Active in Ironforge Bank
+            </p>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">
+              When Classic Purist Mode is turned on, the client bypasses all cosmetic illusions, ensuring that you only see the gritty, authentic gear players have actually found.
+            </p>
+          </div>
+
+          <div id="gear-inspect-view" class="inspect-gear-card">
+            <h4 style="color: var(--text-gold);">✨ Player Inspect View (Modern Transmog)</h4>
+            <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.8rem;">The player has transmogrified their set into a unified epic appearance:</p>
+            <div class="gear-slot-item"><span>Head</span><span style="color: #a78bfa;">Zephras Sky-Crown [Transmog]</span></div>
+            <div class="gear-slot-item"><span>Shoulders</span><span style="color: #a78bfa;">Skyborne Wind-Mantle [Transmog]</span></div>
+            <div class="gear-slot-item"><span>Chest</span><span style="color: #a78bfa;">Skyborne Cloud-Robe [Transmog]</span></div>
+            <div class="gear-slot-item"><span>Hands</span><span style="color: #a78bfa;">Zephyr Silken Grips [Transmog]</span></div>
+            <div class="gear-slot-item"><span>Legs</span><span style="color: #a78bfa;">Breezewalker Leggings [Transmog]</span></div>
+            <div class="gear-slot-item"><span>Main Hand</span><span style="color: #f59e0b;">Thunderfury, Blessed Blade [Transmog]</span></div>
+            <div class="gear-slot-item"><span>Off Hand</span><span style="color: #a78bfa;">Aegis of the Zephyr [Transmog]</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Profession Combat Passives Matrix -->
+      <div class="section-heading-bar" style="margin-top: 2.5rem;">
+        <div>
+          <h2><span>⚒️</span> The 9 Primary Profession Combat Passives</h2>
+          <p class="section-subtext">Every primary tradeskill provides permanent character power and exclusive camping station utility</p>
+        </div>
+      </div>
+
+      <div id="professions-matrix-grid" class="profession-matrix-grid">
+        <!-- Dynamically populated from WOW_FOREVER_DATA.professionPassives -->
+      </div>
+
+      <!-- Game Editions & Launch Pricing Section -->
+      <div class="section-heading-bar" style="margin-top: 2.5rem;">
+        <div>
+          <h2><span>💎</span> Editions & Access Model: Free with WoW Sub</h2>
+          <p class="section-subtext">Zero box price for active World of Warcraft subscribers, plus optional Skyborne Epic Pack</p>
+        </div>
+      </div>
+
+      <div id="game-editions-container" class="editions-comparison-grid" style="margin-bottom: 2rem;">
+        <!-- Dynamically populated from WOW_FOREVER_DATA.gameEditions -->
+      </div>
+
+    </section>
+
+    <!-- TAB 5: MY FOREVER TRACKER & SQUAD ROSTER -->
+    <section id="tab-tracker" class="tab-content" aria-label="My Forever Tracker & Squad Roster">
+      
+      <div class="section-heading-bar">
+        <div>
+          <h2><span>🛡️</span> My Forever Character & Beta Tracker</h2>
+          <p class="section-subtext">Plan your build and track your Level 20 Phase 1 milestone checklist (stored locally)</p>
+        </div>
+      </div>
+
+      <div class="tracker-layout-grid">
+        
+        <!-- Left: Character Planner -->
+        <div class="planner-card">
+          <h3>Build Planner</h3>
+          <p class="planner-sub">Configure your main character for the WoW Forever beta and launch.</p>
+
+          <form id="character-planner-form">
+            <div class="form-field" style="margin-bottom: 0.8rem;">
+              <label for="char-name-input" class="form-label">Character Name</label>
+              <input type="text" id="char-name-input" class="form-input" placeholder="e.g. Marcus">
+            </div>
+
+            <div class="user-note-form-grid" style="margin-top: 0; margin-bottom: 0.8rem;">
+              <div class="form-field">
+                <label for="char-faction-select" class="form-label">Faction</label>
+                <select id="char-faction-select" class="form-select">
+                  <option value="Horde">Horde</option>
+                  <option value="Alliance">Alliance</option>
+                  <option value="Neutral (Skyborne)">Neutral (Skyborne)</option>
+                </select>
+              </div>
+
+              <div class="form-field">
+                <label for="char-race-select" class="form-label">Race</label>
+                <select id="char-race-select" class="form-select">
+                  <option value="Undead (Forsaken)">Undead (Forsaken)</option>
+                  <option value="The Skyborne (New!)">The Skyborne (New!)</option>
+                  <option value="Dwarf">Dwarf</option>
+                  <option value="Human">Human</option>
+                  <option value="Orc">Orc</option>
+                  <option value="Night Elf">Night Elf</option>
+                  <option value="Tauren">Tauren</option>
+                  <option value="Gnome">Gnome</option>
+                  <option value="Troll">Troll</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="user-note-form-grid" style="margin-top: 0; margin-bottom: 0.8rem;">
+              <div class="form-field">
+                <label for="char-class-select" class="form-label">Class</label>
+                <select id="char-class-select" class="form-select">
+                  <option value="Paladin">Paladin (inc. Undead)</option>
+                  <option value="Shaman">Shaman (inc. Dwarf)</option>
+                  <option value="Warrior">Warrior (inc. Skyborne)</option>
+                  <option value="Priest">Priest (inc. Gnome)</option>
+                  <option value="Mage">Mage (inc. Orc)</option>
+                  <option value="Hunter">Hunter (inc. Human / Skyborne)</option>
+                  <option value="Rogue">Rogue (inc. Skyborne)</option>
+                  <option value="Warlock">Warlock (inc. Troll)</option>
+                  <option value="Druid">Druid (inc. Skyborne)</option>
+                </select>
+              </div>
+
+              <div class="form-field">
+                <label for="char-spec-select" class="form-label">Specialization</label>
+                <select id="char-spec-select" class="form-select">
+                  <option value="Protection (Tank)">Protection (Tank)</option>
+                  <option value="Holy (Healer)">Holy (Healer)</option>
+                  <option value="Retribution (Melee DPS)">Retribution (Melee DPS)</option>
+                  <option value="Enhancement (Melee DPS / Pinch Tank)">Enhancement (Melee DPS / Pinch Tank)</option>
+                  <option value="Elemental (Caster DPS)">Elemental (Caster DPS)</option>
+                  <option value="Restoration (Healer)">Restoration (Healer)</option>
+                  <option value="Arms / Fury (DPS)">Arms / Fury (DPS)</option>
+                  <option value="Shadow (DPS)">Shadow (DPS)</option>
+                  <option value="Arcane / Frost / Fire (DPS)">Arcane / Frost / Fire (DPS)</option>
+                  <option value="Marksmanship / Beast (DPS)">Marksmanship / Beast (DPS)</option>
+                  <option value="Assassination / Combat (DPS)">Assassination / Combat (DPS)</option>
+                  <option value="Affliction / Destruction (DPS)">Affliction / Destruction (DPS)</option>
+                  <option value="Feral / Balance (Hybrid)">Feral / Balance (Hybrid)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="user-note-form-grid" style="margin-top: 0; margin-bottom: 1rem;">
+              <div class="form-field">
+                <label for="char-prof1-select" class="form-label">Primary Profession 1</label>
+                <select id="char-prof1-select" class="form-select">
+                  <option value="Blacksmithing">Blacksmithing</option>
+                  <option value="Mining">Mining</option>
+                  <option value="Engineering">Engineering</option>
+                  <option value="Alchemy">Alchemy</option>
+                  <option value="Herbalism">Herbalism</option>
+                  <option value="Leatherworking">Leatherworking</option>
+                  <option value="Skinning">Skinning</option>
+                  <option value="Tailoring">Tailoring</option>
+                  <option value="Enchanting">Enchanting</option>
+                </select>
+              </div>
+
+              <div class="form-field">
+                <label for="char-prof2-select" class="form-label">Primary Profession 2</label>
+                <select id="char-prof2-select" class="form-select">
+                  <option value="Mining">Mining</option>
+                  <option value="Blacksmithing">Blacksmithing</option>
+                  <option value="Engineering">Engineering</option>
+                  <option value="Alchemy">Alchemy</option>
+                  <option value="Herbalism">Herbalism</option>
+                  <option value="Leatherworking">Leatherworking</option>
+                  <option value="Skinning">Skinning</option>
+                  <option value="Tailoring">Tailoring</option>
+                  <option value="Enchanting">Enchanting</option>
+                </select>
+              </div>
+            </div>
+          </form>
+
+          <div id="character-sheet-display" class="character-sheet-card">
+            <!-- Dynamically updated -->
+          </div>
+        </div>
+
+        <!-- Right: Beta Level 20 Checklist -->
+        <div class="checklist-card">
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <div>
+              <h3 style="font-size: 1.4rem;">Beta Phase 1 Milestones</h3>
+              <p style="font-size: 0.88rem; color: var(--text-muted);">Track your Level 1–20 Week 1 testing progression.</p>
+            </div>
+            <button id="reset-checklist-btn" class="btn-secondary" style="font-size: 0.78rem; padding: 0.35rem 0.8rem;">
+              Reset Marks
+            </button>
+          </div>
+
+          <div class="progress-bar-wrapper">
+            <div class="progress-label-row">
+              <span style="color: var(--text-gold);">Phase 1 Completion</span>
+              <span id="checklist-progress-text" style="color: #34d399;">0 of 10 Milestones (0%)</span>
+            </div>
+            <div class="progress-track">
+              <div id="checklist-progress-fill" class="progress-fill"></div>
+            </div>
+          </div>
+
+          <div id="checklist-items-container" class="checklist-items">
+            <!-- Dynamically rendered -->
+          </div>
+
+          <form id="add-task-form" style="margin-top: 1.5rem; display: flex; gap: 0.5rem;">
+            <input type="text" id="new-task-text" class="form-input" style="flex-grow: 1;" placeholder="Add custom goal (e.g. Farm Defias Leather Boots)..." required>
+            <button type="submit" class="btn-primary" style="padding: 0.6rem 1rem; white-space: nowrap;">+ Add Goal</button>
+          </form>
+        </div>
+
+      </div>
+
+      <!-- Squad / Guild Roster Tracker Section -->
+      <section class="squad-roster-section">
+        <div class="squad-roster-header">
+          <div>
+            <h3 style="font-size: 1.4rem; color: #fff;">👥 Squad & Guild Roster Tracker</h3>
+            <p style="font-size: 0.88rem; color: var(--text-muted);">
+              Track who is playing, their class, role, and ensure your 5-man dungeon & 10/20-man raid team is ready for launch!
+            </p>
+          </div>
+        </div>
+
+        <div id="squad-comp-summary" class="squad-comp-summary">
+          <!-- Rendered dynamically -->
+        </div>
+
+        <div class="squad-table-wrapper">
+          <table class="squad-table">
+            <thead>
+              <tr>
+                <th>Player / Friend</th>
+                <th>Faction</th>
+                <th>Race</th>
+                <th>Class</th>
+                <th>Role & Spec</th>
+                <th>Notes</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="squad-roster-body">
+              <!-- Rendered dynamically -->
+            </tbody>
+          </table>
+        </div>
+
+        <form id="add-squad-member-form" class="user-note-form-grid" style="margin-top: 1.5rem; background: rgba(0,0,0,0.35); padding: 1.25rem; border-radius: var(--radius-sm);">
+          <div class="form-field">
+            <label for="member-name-input" class="form-label">Player / Friend Name *</label>
+            <input type="text" id="member-name-input" class="form-input" placeholder="e.g. Scrype" required>
+          </div>
+          <div class="form-field">
+            <label for="member-faction-select" class="form-label">Faction</label>
+            <select id="member-faction-select" class="form-select">
+              <option value="Horde">Horde</option>
+              <option value="Alliance">Alliance</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="member-race-select" class="form-label">Race</label>
+            <select id="member-race-select" class="form-select">
+              <option value="Undead">Undead</option>
+              <option value="Orc">Orc</option>
+              <option value="Troll">Troll</option>
+              <option value="Tauren">Tauren</option>
+              <option value="Skyborne">Skyborne</option>
+              <option value="Human">Human</option>
+              <option value="Dwarf">Dwarf</option>
+              <option value="Night Elf">Night Elf</option>
+              <option value="Gnome">Gnome</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="member-class-select" class="form-label">Class</label>
+            <select id="member-class-select" class="form-select">
+              <option value="Paladin">Paladin</option>
+              <option value="Mage">Mage</option>
+              <option value="Warlock">Warlock</option>
+              <option value="Warrior">Warrior</option>
+              <option value="Priest">Priest</option>
+              <option value="Shaman">Shaman</option>
+              <option value="Hunter">Hunter</option>
+              <option value="Rogue">Rogue</option>
+              <option value="Druid">Druid</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="member-role-select" class="form-label">Role</label>
+            <select id="member-role-select" class="form-select">
+              <option value="Tank">Tank</option>
+              <option value="Healer">Healer</option>
+              <option value="Ranged DPS">Ranged DPS</option>
+              <option value="Melee DPS">Melee DPS</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="member-spec-input" class="form-label">Spec</label>
+            <input type="text" id="member-spec-input" class="form-input" placeholder="e.g. Holy, Arms, Frost">
+          </div>
+          <div class="form-field span-2">
+            <label for="member-notes-input" class="form-label">Notes / Availability</label>
+            <input type="text" id="member-notes-input" class="form-input" placeholder="e.g. Can craft bags, available weekday evenings">
+          </div>
+          <div class="form-field span-2" style="text-align: right;">
+            <button type="submit" class="btn-primary">+ Add to Squad Roster</button>
+          </div>
+        </form>
+      </section>
+
+    </section>
+
+  </div>
+
+  <!-- Read Full News Modal -->
+  <div id="news-modal-backdrop" class="modal-backdrop" role="dialog" aria-modal="true">
+    <div class="modal-container">
+      <button id="news-modal-close" class="modal-close-btn" aria-label="Close Modal">✕</button>
+      <div class="modal-header">
+        <div style="display: flex; gap: 0.8rem; align-items: center; margin-bottom: 0.5rem;">
+          <span id="modal-source" class="source-badge">Source</span>
+          <span id="modal-date" style="font-size: 0.8rem; color: var(--text-muted);">Date</span>
+        </div>
+        <h2 id="modal-title" style="font-size: 1.6rem; color: #fff; line-height: 1.3;">Article Title</h2>
+        <div id="modal-author" style="font-size: 0.85rem; color: var(--text-gold); margin-top: 0.4rem;">Author</div>
+      </div>
+      <div id="modal-body" class="modal-body">
+        <!-- Content inserted dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="app-container" style="padding-bottom: 0;">
+      <div class="footer-links">
+        <a href="https://news.blizzard.com" target="_blank" rel="noopener" class="footer-link">Blizzard Official News</a>
+        <a href="https://www.wowhead.com/forever" target="_blank" rel="noopener" class="footer-link">Wowhead Coverage</a>
+        <a href="https://www.method.gg" target="_blank" rel="noopener" class="footer-link">Method.gg Raiding & Guides</a>
+        <a href="https://www.icy-veins.com/wow-forever" target="_blank" rel="noopener" class="footer-link">Icy Veins Class Hub</a>
+        <a href="https://battle.net" target="_blank" rel="noopener" class="footer-link">Battle.net Launcher</a>
+      </div>
+      <p>World of Warcraft: Forever Personal News & Beta Progress Portal • Built for Classic+ Explorers</p>
+      <p style="font-size: 0.78rem; margin-top: 0.4rem; color: #64748b;">
+        Data grounded in official BlizzCon 2026 announcements, Wowhead compendiums, Method.gg itemization audits, and Beta Phase 1 community testing.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/tracker.js"></script>
+
+</body>
+</html>
