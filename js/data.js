@@ -1334,7 +1334,7 @@ const WOW_FOREVER_DATA = {
       ],
       racials: [
         { name: "War Stomp", type: "Active • 2s Stun", effect: "Stuns nearby enemies for 2 sec." },
-        { name: "Cultivation", type: "Active / Perk", effect: "Grow bonus herbs that don't require herbalism to gather." },
+        { name: "Cultivation", type: "Active • 1h CD", effect: "Activate near an herb node to sprout a bonus herb nearby that can be gathered without the Herbalism profession. (✦ Note: Picking standard wild herb nodes still requires learning Herbalism)." },
         { name: "Plainsrunning", type: "Passive", effect: "Gain increased movement speed the longer you stay moving." },
         { name: "Endurance", type: "Passive", effect: "Total Health increased by 5% and Hit Chance increased by 1%." }
       ]
