@@ -64,6 +64,33 @@
         <button type="button" class="quick-link-chip" id="quick-link-race-planner" style="cursor: pointer; background: rgba(243, 192, 67, 0.15); border-color: var(--border-gold);">
           <span>🧙</span> Class & Race Planner
         </button>
+        <button type="button" class="quick-link-chip" id="quick-link-deepdives" style="cursor: pointer; background: rgba(171, 212, 115, 0.15); border-color: #abd473; color: #d9f99d;">
+          <span>🏹</span> Hunter Deep Dive
+        </button>
+        <button type="button" class="quick-link-chip" id="quick-link-shaman-deepdive" style="cursor: pointer; background: rgba(0, 112, 222, 0.15); border-color: #0070de; color: #7dd3fc;">
+          <span>⚡</span> Shaman Deep Dive
+        </button>
+        <button type="button" class="quick-link-chip" id="quick-link-mage-deepdive" style="cursor: pointer; background: rgba(105, 204, 240, 0.15); border-color: #69ccf0; color: #bae6fd;">
+          <span>🔥</span> Mage Deep Dive
+        </button>
+        <button type="button" class="quick-link-chip" id="quick-link-paladin-deepdive" style="cursor: pointer; background: rgba(245, 140, 186, 0.15); border-color: #f58cba; color: #fbcfe8;">
+          <span>🛡️</span> Paladin Deep Dive
+        </button>
+        <button type="button" class="quick-link-chip" id="quick-link-warrior-deepdive" style="cursor: pointer; background: rgba(199, 156, 110, 0.15); border-color: #c79c6e; color: #fed7aa;">
+          <span>⚔️</span> Warrior Deep Dive
+        </button>
+        <button type="button" class="quick-link-chip" id="quick-link-warlock-deepdive" style="cursor: pointer; background: rgba(148, 130, 201, 0.15); border-color: #9482c9; color: #ddd6fe;">
+          <span>🔮</span> Warlock Deep Dive
+        </button>
+        <button type="button" class="quick-link-chip" id="quick-link-priest-deepdive" style="cursor: pointer; background: rgba(255, 255, 255, 0.15); border-color: #ffffff; color: #ffffff;">
+          <span>✨</span> Priest Deep Dive
+        </button>
+        <button type="button" class="quick-link-chip" id="quick-link-druid-deepdive" style="cursor: pointer; background: rgba(255, 125, 10, 0.15); border-color: #ff7d0a; color: #fed7aa;">
+          <span>🌿</span> Druid Deep Dive
+        </button>
+        <button type="button" class="quick-link-chip" id="quick-link-rogue-deepdive" style="cursor: pointer; background: rgba(255, 245, 105, 0.15); border-color: #fff569; color: #fef08a;">
+          <span>🗡️</span> Rogue Deep Dive
+        </button>
       </nav>
 
       <!-- Main Navigation Tabs -->
@@ -79,6 +106,9 @@
         </button>
         <button class="nav-tab-btn" data-tab="planner">
           <span>🧙</span> Class & Race Planner
+        </button>
+        <button class="nav-tab-btn" data-tab="deepdives">
+          <span>🎯</span> Class Deep Dives
         </button>
         <button class="nav-tab-btn" data-tab="professions">
           <span>🔨</span> Professions & Camping
@@ -895,6 +925,41 @@
       </div>
     </section>
 
+    <!-- TAB: CLASS DEEP DIVES & HANDS-ON FORENSICS -->
+    <section id="tab-deepdives" class="tab-content" aria-label="Class Deep Dives">
+      <div class="section-heading-bar">
+        <div>
+          <h2><span>🎯</span> Class Deep Dives & Hands-On Forensics</h2>
+          <p class="section-subtext">Forensic breakdowns of class revamps, abilities, and mechanics. Sourced directly from Sodapoppin's hands-on BlizzCon 2026 early access demo, closed beta datamining, and verified WoW Forever systems.</p>
+        </div>
+        <div class="deepdive-source-pill">
+          <span>🎙️ BlizzCon Early Access & Closed Beta</span>
+        </div>
+      </div>
+
+      <!-- Verification Status Legend -->
+      <div class="deepdive-legend-bar">
+        <span class="legend-title">Verification Protocol:</span>
+        <div class="legend-items">
+          <span class="deepdive-badge badge-verified"><span>✓</span> Verified in Closed Beta</span>
+          <span class="deepdive-badge badge-demo"><span>🎙️</span> Sodapoppin Hands-On Demo</span>
+          <span class="deepdive-badge badge-exclusive"><span>✦</span> WoW Forever Exclusive</span>
+        </div>
+      </div>
+
+      <!-- Class Selector Chips Bar -->
+      <div class="deepdive-class-selector-wrapper">
+        <div id="deepdive-class-chips" class="selector-chips-row">
+          <!-- Dynamically rendered by app.js -->
+        </div>
+      </div>
+
+      <!-- Main Deep Dive Content Area -->
+      <div id="deepdive-content-container" class="deepdive-content-container">
+        <!-- Dynamically populated by js/app.js -->
+      </div>
+    </section>
+
     <!-- TAB: PROFESSIONS & CAMPING HUB -->
     <section id="tab-professions" class="tab-content" aria-label="Professions and Camping Hub">
       <div class="section-heading-bar">
@@ -1551,7 +1616,32 @@
   </footer>
 
   <!-- Scripts -->
-  <script src="js/data.js"></script>
+  <!-- 0. Shared Utilities -->
+  <script src="js/utils.js"></script>
+
+  <!-- 1. Data Layer -->
+  <script src="js/data/core-data.js"></script>
+  <script src="js/data/races-classes.js"></script>
+  <script src="js/data/deepdives/hunter.js"></script>
+  <script src="js/data/deepdives/shaman.js"></script>
+  <script src="js/data/deepdives/mage.js"></script>
+  <script src="js/data/deepdives/paladin.js"></script>
+  <script src="js/data/deepdives/warrior.js"></script>
+  <script src="js/data/deepdives/warlock.js"></script>
+  <script src="js/data/deepdives/priest.js"></script>
+  <script src="js/data/deepdives/druid.js"></script>
+  <script src="js/data/deepdives/rogue.js"></script>
+  <script src="js/data/deepdives/pending.js"></script>
+
+  <!-- 2. Feature Modules -->
+  <script src="js/modules/navigation.js"></script>
+  <script src="js/modules/news.js"></script>
+  <script src="js/modules/codex.js"></script>
+  <script src="js/modules/camping.js"></script>
+  <script src="js/modules/planner.js"></script>
+  <script src="js/modules/deepdives.js"></script>
+
+  <!-- 3. Core App Orchestrator & Tracker -->
   <script src="js/app.js"></script>
   <script src="js/tracker.js"></script>
 
