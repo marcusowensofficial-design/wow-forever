@@ -69,6 +69,22 @@ const WOW_FOREVER_DATA = {
 
   newsFeed: [
     {
+      id: "news-15",
+      title: "Beta Day 2 Dispatch: Early Hotfixes, Bear Form Armor Stacking Bug & Legacy Turn-in Fixes",
+      source: "Warcraft Tavern / Blizzard Official",
+      sourceType: "blizzard",
+      author: "Community Dispatch",
+      date: "September 19, 2026",
+      tag: "Beta Patch Notes",
+      summary: "Blizzard and community trackers report early Beta Day 2 hotfixes targeting Druid Bear Form armor multiplication, On-Next-Attack queue latency, and Innkeeper Wiley milestone turn-ins.",
+      content: `Forty-eight hours into the World of Warcraft: Forever closed beta, Blizzard and community testing teams have logged the first round of live tuning and hotfixes:
+• Bear Form & Consumable Stacking: Investigating an unintended calculation where Druid Bear Form armor multipliers are exponentially multiplying flat consumable armor bonuses (such as Elixir of Superior Defense) rather than adding them after form calculation.
+• "On-Next-Attack" Queue Latency: Fixes in progress for queueing desyncs on abilities like Heroic Strike and Raptor Strike during global cooldown transitions.
+• Innkeeper Wiley Milestone Turn-In: Resolved an issue in Ratchet where players unlocking the 15-point Legacy tier were unable to purchase or receive the 'Holstered Replica Ironforge Air Rifle' toy.
+• Action Bar Cooldown Swipe: Client-side fix incoming for UI cooldown timers occasionally freezing or displaying incorrect decimal second values on the modern graphics renderer.`,
+      url: "https://www.warcrafttavern.com/forever/news/beta-day-2-hotfixes-known-issues"
+    },
+    {
       id: "news-12",
       title: "Inventory Quality of Life: Reagent-Free Spells & 50% Longer Raid Buffs Confirmed",
       source: "Blizzard Official",
