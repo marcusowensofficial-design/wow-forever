@@ -77,6 +77,9 @@
         <button class="nav-tab-btn" data-tab="codex">
           <span>📜</span> Content Codex
         </button>
+        <button class="nav-tab-btn" data-tab="planner">
+          <span>🧙</span> Class & Race Planner
+        </button>
         <button class="nav-tab-btn" data-tab="professions">
           <span>🔨</span> Professions & Camping
         </button>
@@ -597,7 +600,7 @@
           </div>
 
           <!-- Selector Chips Bar (Classes or Races) -->
-          <div id="planner-selector-chips" class="selector-chips-row">
+          <div id="planner-selector-chips" class="selector-chips-row planner-selector-chips">
             <!-- Dynamically populated buttons -->
           </div>
 
@@ -607,7 +610,7 @@
           </div>
 
           <!-- Allowed Races or Classes Results Grid -->
-          <div id="planner-allowed-results">
+          <div id="planner-allowed-results" class="planner-allowed-results">
             <!-- Dynamically populated allowed entities or matrix table -->
           </div>
         </div>
@@ -681,6 +684,53 @@
         </div>
       </div>
 
+    </section>
+ 
+    <!-- TAB 4: DEDICATED CLASS & RACE PLANNER -->
+    <section id="tab-planner" class="tab-content" aria-label="Class and Race Planner">
+      <div class="section-heading-bar">
+        <div>
+          <h2><span>🧙</span> Interactive Class & Race Planner</h2>
+          <p class="section-subtext">Comprehensive character planner: explore all 10 classes, 9 races, role specs, resource mechanics, Priest racials overhauls, and allowed race combinations</p>
+        </div>
+      </div>
+
+      <div class="matrix-planner-wrapper">
+        <div class="planner-controls-bar">
+          <div>
+            <span class="countdown-label" style="color: var(--text-gold);">Interactive Build Companion</span>
+            <h3 style="font-size: 1.3rem; color: #fff; margin-top: 0.15rem;">Classes & Allowed Races Planner</h3>
+          </div>
+          
+          <div class="mode-toggle-group">
+            <button class="planner-mode-btn active" data-planner-mode="class">⚔️ Browse by Class</button>
+            <button class="planner-mode-btn" data-planner-mode="race">👤 Browse by Race</button>
+            <button class="planner-mode-btn" data-planner-mode="table">📊 Full Matrix Table</button>
+          </div>
+
+          <div class="faction-filter-group">
+            <button class="planner-filter-btn active" data-faction-filter="all">All Combos</button>
+            <button class="planner-filter-btn" data-faction-filter="alliance">Alliance Only</button>
+            <button class="planner-filter-btn" data-faction-filter="horde">Horde Only</button>
+            <button class="planner-filter-btn" data-faction-filter="new">✦ Only New in Forever</button>
+          </div>
+        </div>
+
+        <!-- Selector Chips Bar (Classes or Races) -->
+        <div class="selector-chips-row planner-selector-chips">
+          <!-- Dynamically populated buttons -->
+        </div>
+
+        <!-- Active Selection Hero Card -->
+        <div class="planner-hero-card">
+          <!-- Dynamically populated hero card -->
+        </div>
+
+        <!-- Allowed Races or Classes Results Grid -->
+        <div class="planner-allowed-results">
+          <!-- Dynamically populated allowed entities or matrix table -->
+        </div>
+      </div>
     </section>
 
     <!-- TAB: PROFESSIONS & CAMPING HUB -->

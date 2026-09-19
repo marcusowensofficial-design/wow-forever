@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initNavigation();
   initNewsHub();
   initCodex();
+  initClassRacePlanner();
   initLegacyCalculator();
   initCampingHub();
   renderMountsGallery();
@@ -984,42 +985,51 @@ function initClassRacePlanner() {
   let selectedRaceId = 'skyborne'; // default to Skyborne
   let factionFilter = 'all'; // 'all' | 'alliance' | 'horde' | 'new'
 
-  const chipsContainer = document.getElementById('planner-selector-chips');
-  const heroContainer = document.getElementById('planner-hero-card');
-  const resultsContainer = document.getElementById('planner-allowed-results');
-  if (!chipsContainer || !heroContainer || !resultsContainer) return;
+  const chipsContainers = document.querySelectorAll('.planner-selector-chips');
+  const heroContainers = document.querySelectorAll('.planner-hero-card');
+  const resultsContainers = document.querySelectorAll('.planner-allowed-results');
+  if (chipsContainers.length === 0 || heroContainers.length === 0 || resultsContainers.length === 0) return;
 
-  // Mode buttons
+  // Mode buttons across all instances (both in Codex and in dedicated tab)
   const modeBtns = document.querySelectorAll('.planner-mode-btn');
   modeBtns.forEach(btn => {
     btn.addEventListener('click', () => {
-      modeBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      currentMode = btn.getAttribute('data-planner-mode');
+      const mode = btn.getAttribute('data-planner-mode');
+      currentMode = mode;
+      modeBtns.forEach(b => {
+        b.classList.toggle('active', b.getAttribute('data-planner-mode') === mode);
+      });
       renderPlannerView();
     });
   });
 
-  // Faction filter buttons
+  // Faction filter buttons across all instances
   const filterBtns = document.querySelectorAll('.planner-filter-btn');
   filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
-      filterBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      factionFilter = btn.getAttribute('data-faction-filter');
+      const filter = btn.getAttribute('data-faction-filter');
+      factionFilter = filter;
+      filterBtns.forEach(b => {
+        b.classList.toggle('active', b.getAttribute('data-faction-filter') === filter);
+      });
       renderPlannerView();
     });
   });
 
-  // Quick link button hook
+  // Quick link button hook in header
   const quickLinkBtn = document.getElementById('quick-link-race-planner');
   if (quickLinkBtn) {
     quickLinkBtn.addEventListener('click', () => {
-      const codexTabBtn = document.querySelector('.nav-tab-btn[data-tab="codex"]');
-      if (codexTabBtn) codexTabBtn.click();
-      const matrixCodexBtn = document.querySelector('.codex-nav-btn[data-codex="matrix"]');
-      if (matrixCodexBtn) matrixCodexBtn.click();
-      const target = document.getElementById('codex-matrix');
+      const plannerTabBtn = document.querySelector('.nav-tab-btn[data-tab="planner"]');
+      if (plannerTabBtn) {
+        plannerTabBtn.click();
+      } else {
+        const codexTabBtn = document.querySelector('.nav-tab-btn[data-tab="codex"]');
+        if (codexTabBtn) codexTabBtn.click();
+        const matrixCodexBtn = document.querySelector('.codex-nav-btn[data-codex="matrix"]');
+        if (matrixCodexBtn) matrixCodexBtn.click();
+      }
+      const target = document.getElementById('tab-planner') || document.getElementById('codex-matrix');
       if (target) {
         setTimeout(() => target.scrollIntoView({ behavior: 'smooth' }), 100);
       }
@@ -1038,26 +1048,27 @@ function initClassRacePlanner() {
 
   function renderClassMode() {
     // 1. Selector chips
-    chipsContainer.style.display = 'flex';
-    heroContainer.style.display = 'block';
-
-    chipsContainer.innerHTML = WOW_FOREVER_DATA.allClassesData.map(cls => `
+    const chipsHtml = WOW_FOREVER_DATA.allClassesData.map(cls => `
       <button class="selector-chip-btn ${cls.id === selectedClassId ? 'active' : ''}" data-class-id="${cls.id}" style="${cls.id === selectedClassId ? `border-color: ${cls.color}; box-shadow: 0 0 12px ${cls.color}40;` : ''}">
         <span>${cls.icon}</span>
         <span>${cls.name}</span>
       </button>
     `).join('');
 
-    chipsContainer.querySelectorAll('.selector-chip-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        selectedClassId = btn.getAttribute('data-class-id');
-        renderClassMode();
+    chipsContainers.forEach(c => {
+      c.style.display = 'flex';
+      c.innerHTML = chipsHtml;
+      c.querySelectorAll('.selector-chip-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          selectedClassId = btn.getAttribute('data-class-id');
+          renderClassMode();
+        });
       });
     });
 
     // 2. Hero Card for selected class
     const cls = WOW_FOREVER_DATA.allClassesData.find(c => c.id === selectedClassId) || WOW_FOREVER_DATA.allClassesData[0];
-    heroContainer.innerHTML = `
+    let heroHtml = `
       <div class="planner-hero-top">
         <div style="display: flex; align-items: center; gap: 0.8rem;">
           <span style="font-size: 2.2rem;">${cls.icon}</span>
@@ -1077,7 +1088,7 @@ function initClassRacePlanner() {
 
     if (cls.id === 'priest' && WOW_FOREVER_DATA.priestRacials) {
       const pData = WOW_FOREVER_DATA.priestRacials;
-      heroContainer.innerHTML += `
+      heroHtml += `
         <div class="priest-racials-feature-box" style="margin-top: 1.2rem; padding: 1rem 1.2rem; background: rgba(56, 189, 248, 0.08); border: 1px solid rgba(56, 189, 248, 0.35); border-radius: var(--radius-sm);">
           <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.4rem;">
             <div style="display: flex; align-items: center; gap: 0.5rem;">
@@ -1106,6 +1117,11 @@ function initClassRacePlanner() {
       `;
     }
 
+    heroContainers.forEach(h => {
+      h.style.display = 'block';
+      h.innerHTML = heroHtml;
+    });
+
     // 3. Allowed Races Cards
     let races = cls.allowedRaces;
     if (factionFilter === 'alliance') {
@@ -1116,83 +1132,83 @@ function initClassRacePlanner() {
       races = races.filter(r => r.isNew);
     }
 
+    let resultsHtml = '';
     if (races.length === 0) {
-      resultsContainer.innerHTML = `
+      resultsHtml = `
         <div style="text-align: center; padding: 3rem; color: var(--text-muted);">
           <p style="font-size: 1.1rem;">No races match the active faction filter for ${cls.name}. Try selecting "All Combos".</p>
         </div>
       `;
-      return;
+    } else {
+      resultsHtml = `
+        <div class="allowed-cards-grid">
+          ${races.map(raceEntry => {
+            const raceData = WOW_FOREVER_DATA.allRacesData.find(r => r.id === raceEntry.id);
+            if (!raceData) return '';
+
+            return `
+              <div class="allowed-entity-card ${raceEntry.isNew ? 'is-new-combo' : ''}">
+                <div>
+                  <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem;">
+                    <div style="display: flex; align-items: center; gap: 0.6rem;">
+                      <span style="font-size: 1.8rem;">${raceData.icon}</span>
+                      <div>
+                        <h3 style="color: #fff; font-size: 1.3rem; margin: 0;">${escapeHtml(raceEntry.name || raceData.name)}</h3>
+                        <span class="combo-badge ${(raceEntry.faction || raceData.faction).toLowerCase().includes('alliance') ? 'alliance' : ((raceEntry.faction || raceData.faction).toLowerCase().includes('horde') ? 'horde' : '')}" style="margin: 0.2rem 0 0; font-size: 0.7rem;">
+                          ${raceData.crest} ${escapeHtml(raceEntry.faction || raceData.faction)}
+                        </span>
+                      </div>
+                    </div>
+                    ${raceEntry.isNew ? `
+                      <span class="cell-new-badge">✦ NEW IN FOREVER</span>
+                    ` : `
+                      <span class="badge-classic-staple" style="font-size: 0.72rem;">Classic Staple</span>
+                    `}
+                  </div>
+
+                  ${raceEntry.note ? `
+                    <div style="background: rgba(16, 185, 129, 0.15); border: 1px solid #10b981; border-radius: var(--radius-sm); padding: 0.4rem 0.65rem; margin: 0.6rem 0; font-size: 0.8rem; color: #6ee7b7; font-weight: 600;">
+                      ${escapeHtml(raceEntry.note)}
+                    </div>
+                  ` : ''}
+
+                  <div style="font-size: 0.82rem; color: var(--text-gold); margin: 0.4rem 0 0.8rem;">
+                    🐎 <strong>Racial Mount:</strong> ${escapeHtml(raceData.mount)}
+                  </div>
+
+                  <div style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.75rem;">
+                    <strong>Racial Abilities (2 Active + 2 Passive):</strong>
+                  </div>
+
+                  <div class="racials-card-list">
+                    ${raceData.racials.map(racial => `
+                      <div class="racial-pill-item">
+                        <div class="racial-pill-head">
+                          <strong style="color: var(--color-sky); font-size: 0.88rem;">${escapeHtml(racial.name)}</strong>
+                          <span style="font-size: 0.68rem; text-transform: uppercase; color: var(--text-muted); font-weight: 700;">${escapeHtml(racial.type)}</span>
+                        </div>
+                        <p style="font-size: 0.8rem; color: #cbd5e1; margin: 0; line-height: 1.35;">${escapeHtml(racial.effect)}</p>
+                      </div>
+                    `).join('')}
+                  </div>
+                </div>
+
+                <div style="margin-top: 1rem; padding-top: 0.75rem; border-top: 1px solid var(--border-subtle); font-size: 0.82rem; color: var(--text-muted);">
+                  Lore: ${escapeHtml(raceData.lore)}
+                </div>
+              </div>
+            `;
+          }).join('')}
+        </div>
+      `;
     }
 
-    resultsContainer.innerHTML = `
-      <div class="allowed-cards-grid">
-        ${races.map(raceEntry => {
-          const raceData = WOW_FOREVER_DATA.allRacesData.find(r => r.id === raceEntry.id);
-          if (!raceData) return '';
-
-          return `
-            <div class="allowed-entity-card ${raceEntry.isNew ? 'is-new-combo' : ''}">
-              <div>
-                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem;">
-                  <div style="display: flex; align-items: center; gap: 0.6rem;">
-                    <span style="font-size: 1.8rem;">${raceData.icon}</span>
-                    <div>
-                      <h3 style="color: #fff; font-size: 1.3rem; margin: 0;">${escapeHtml(raceEntry.name || raceData.name)}</h3>
-                      <span class="combo-badge ${(raceEntry.faction || raceData.faction).toLowerCase().includes('alliance') ? 'alliance' : ((raceEntry.faction || raceData.faction).toLowerCase().includes('horde') ? 'horde' : '')}" style="margin: 0.2rem 0 0; font-size: 0.7rem;">
-                        ${raceData.crest} ${escapeHtml(raceEntry.faction || raceData.faction)}
-                      </span>
-                    </div>
-                  </div>
-                  ${raceEntry.isNew ? `
-                    <span class="cell-new-badge">✦ NEW IN FOREVER</span>
-                  ` : `
-                    <span class="badge-classic-staple" style="font-size: 0.72rem;">Classic Staple</span>
-                  `}
-                </div>
-
-                ${raceEntry.note ? `
-                  <div style="background: rgba(16, 185, 129, 0.15); border: 1px solid #10b981; border-radius: var(--radius-sm); padding: 0.4rem 0.65rem; margin: 0.6rem 0; font-size: 0.8rem; color: #6ee7b7; font-weight: 600;">
-                    ${escapeHtml(raceEntry.note)}
-                  </div>
-                ` : ''}
-
-                <div style="font-size: 0.82rem; color: var(--text-gold); margin: 0.4rem 0 0.8rem;">
-                  🐎 <strong>Racial Mount:</strong> ${escapeHtml(raceData.mount)}
-                </div>
-
-                <div style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.75rem;">
-                  <strong>Racial Abilities (2 Active + 2 Passive):</strong>
-                </div>
-
-                <div class="racials-card-list">
-                  ${raceData.racials.map(racial => `
-                    <div class="racial-pill-item">
-                      <div class="racial-pill-head">
-                        <strong style="color: var(--color-sky); font-size: 0.88rem;">${escapeHtml(racial.name)}</strong>
-                        <span style="font-size: 0.68rem; text-transform: uppercase; color: var(--text-muted); font-weight: 700;">${escapeHtml(racial.type)}</span>
-                      </div>
-                      <p style="font-size: 0.8rem; color: #cbd5e1; margin: 0; line-height: 1.35;">${escapeHtml(racial.effect)}</p>
-                    </div>
-                  `).join('')}
-                </div>
-              </div>
-
-              <div style="margin-top: 1rem; padding-top: 0.75rem; border-top: 1px solid var(--border-subtle); font-size: 0.82rem; color: var(--text-muted);">
-                Lore: ${escapeHtml(raceData.lore)}
-              </div>
-            </div>
-          `;
-        }).join('')}
-      </div>
-    `;
+    resultsContainers.forEach(r => {
+      r.innerHTML = resultsHtml;
+    });
   }
 
   function renderRaceMode() {
-    // 1. Selector chips for Races
-    chipsContainer.style.display = 'flex';
-    heroContainer.style.display = 'block';
-
     let racesList = WOW_FOREVER_DATA.allRacesData;
     if (factionFilter === 'alliance') {
       racesList = racesList.filter(r => r.faction.includes('Alliance') || r.faction.includes('Neutral'));
@@ -1200,24 +1216,27 @@ function initClassRacePlanner() {
       racesList = racesList.filter(r => r.faction.includes('Horde') || r.faction.includes('Neutral'));
     }
 
-    chipsContainer.innerHTML = racesList.map(r => `
+    const chipsHtml = racesList.map(r => `
       <button class="selector-chip-btn ${r.id === selectedRaceId ? 'active' : ''}" data-race-id="${r.id}">
         <span>${r.icon}</span>
         <span>${r.name}</span>
       </button>
     `).join('');
 
-    chipsContainer.querySelectorAll('.selector-chip-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        selectedRaceId = btn.getAttribute('data-race-id');
-        renderRaceMode();
+    chipsContainers.forEach(c => {
+      c.style.display = 'flex';
+      c.innerHTML = chipsHtml;
+      c.querySelectorAll('.selector-chip-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          selectedRaceId = btn.getAttribute('data-race-id');
+          renderRaceMode();
+        });
       });
     });
 
     const race = WOW_FOREVER_DATA.allRacesData.find(r => r.id === selectedRaceId) || WOW_FOREVER_DATA.allRacesData[0];
 
-    // 2. Hero card for selected race
-    heroContainer.innerHTML = `
+    let heroHtml = `
       <div class="planner-hero-top">
         <div style="display: flex; align-items: center; gap: 0.8rem;">
           <span style="font-size: 2.2rem;">${race.icon}</span>
@@ -1228,8 +1247,8 @@ function initClassRacePlanner() {
             </span>
           </div>
         </div>
-        <div>
-          <span class="status-badge-highlight" style="font-size: 0.85rem;">🐎 Mount: ${escapeHtml(race.mount)}</span>
+        <div style="display: flex; gap: 0.6rem; align-items: center; flex-wrap: wrap;">
+          <span style="color: var(--text-gold); font-size: 0.85rem;">🐎 Racial Mount: <strong>${escapeHtml(race.mount)}</strong></span>
         </div>
       </div>
       <p style="font-size: 0.95rem; color: #cbd5e1; line-height: 1.5; margin: 0.5rem 0 1rem;">${escapeHtml(race.lore)}</p>
@@ -1253,16 +1272,21 @@ function initClassRacePlanner() {
           <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 0.6rem; margin-top: 0.4rem;">
             <div style="background: rgba(0, 120, 255, 0.1); border-left: 2px solid #0078FF; padding: 0.4rem 0.6rem; border-radius: 3px;">
               <strong style="color: #60a5fa; font-size: 0.8rem;">High Order (Alliance):</strong>
-              <div style="font-size: 0.76rem; color: #e2e8f0; margin-top: 0.15rem;">Active: <strong>Read Ley Line</strong> (Boosts mana recovery & spell efficiency) + Walk on Air, Wind Blessed, Elemental Insight</div>
+              <div style="font-size: 0.76rem; color: #e2e8f0; margin-top: 0.15rem;">Active: <strong>Read Ley Line</strong> (Arcane mana restore & intellect) + Walk on Air, Wind Blessed, Elemental Insight</div>
             </div>
             <div style="background: rgba(196, 30, 58, 0.1); border-left: 2px solid #C41E3A; padding: 0.4rem 0.6rem; border-radius: 3px;">
-              <strong style="color: #f87171; font-size: 0.8rem;">Windshapers (Horde):</strong>
+              <strong style="color: #f87171; font-size: 0.8rem;">Windshaper (Horde):</strong>
               <div style="font-size: 0.76rem; color: #e2e8f0; margin-top: 0.15rem;">Active: <strong>Skysight</strong> (+10% run speed boost) + Walk on Air, Wind Blessed, Elemental Insight</div>
             </div>
           </div>
         </div>
       ` : ''}
     `;
+
+    heroContainers.forEach(h => {
+      h.style.display = 'block';
+      h.innerHTML = heroHtml;
+    });
 
     // 3. Allowed Classes for this Race
     let classes = race.allowedClasses;
@@ -1275,7 +1299,7 @@ function initClassRacePlanner() {
       classes = classes.filter(c => c.isNew);
     }
 
-    resultsContainer.innerHTML = `
+    const resultsHtml = `
       <div class="section-heading-bar" style="margin-top: 1rem;">
         <div>
           <h3 style="color: #fff; font-size: 1.25rem;">Allowed Classes for ${race.name} (${classes.length})</h3>
@@ -1324,11 +1348,15 @@ function initClassRacePlanner() {
         }).join('')}
       </div>
     `;
+
+    resultsContainers.forEach(r => {
+      r.innerHTML = resultsHtml;
+    });
   }
 
   function renderTableMode() {
-    chipsContainer.style.display = 'none';
-    heroContainer.style.display = 'none';
+    chipsContainers.forEach(c => c.style.display = 'none');
+    heroContainers.forEach(h => h.style.display = 'none');
 
     let races = WOW_FOREVER_DATA.allRacesData;
     if (factionFilter === 'alliance') {
@@ -1339,7 +1367,7 @@ function initClassRacePlanner() {
 
     const classes = WOW_FOREVER_DATA.allClassesData;
 
-    resultsContainer.innerHTML = `
+    const tableHtml = `
       <div class="matrix-table-wrap">
         <table class="matrix-table">
           <thead>
@@ -1397,6 +1425,10 @@ function initClassRacePlanner() {
         <span><span class="cell-empty">—</span> = Class Unavailable for this Race</span>
       </div>
     `;
+
+    resultsContainers.forEach(r => {
+      r.innerHTML = tableHtml;
+    });
   }
 
   // Initial render
