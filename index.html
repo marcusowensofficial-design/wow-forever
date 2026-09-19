@@ -77,6 +77,9 @@
         <button class="nav-tab-btn" data-tab="codex">
           <span>📜</span> Content Codex
         </button>
+        <button class="nav-tab-btn" data-tab="professions">
+          <span>🔨</span> Professions & Camping
+        </button>
         <button class="nav-tab-btn" data-tab="systems">
           <span>⚙️</span> Systems & Engine
         </button>
@@ -490,6 +493,8 @@
         <button class="codex-nav-btn" data-codex="dungeons">🏰 9 Dungeons & 3 Raids</button>
         <button class="codex-nav-btn" data-codex="curve">🗺️ Full 1–60 Dungeon Route</button>
         <button class="codex-nav-btn" data-codex="zones">🌄 New & Renewed Zones</button>
+        <button class="codex-nav-btn" data-codex="mounts">🐎 Datamined Mounts</button>
+        <button class="codex-nav-btn" data-codex="stats">📈 Stats & Raid Caps</button>
       </div>
 
       <!-- Panel 1: Skyborne -->
@@ -647,6 +652,95 @@
         </div>
       </div>
 
+      <!-- Panel 6: Datamined Mounts -->
+      <div id="codex-mounts" class="codex-panel">
+        <div class="section-heading-bar" style="margin-bottom: 1.5rem;">
+          <div>
+            <h3><span>🐎</span> Datamined Mounts & Collections</h3>
+            <p class="section-subtext">Verified mounts discovered in the WoW: Forever client, including Skyborne Galestriders, Paladin warhorses, and seasonal prestige mounts</p>
+          </div>
+        </div>
+        <div id="mounts-gallery-container" class="mounts-gallery-grid">
+          <!-- Rendered dynamically by js/app.js -->
+        </div>
+      </div>
+
+      <!-- Panel 7: Stats & Raid Caps -->
+      <div id="codex-stats" class="codex-panel">
+        <div class="section-heading-bar" style="margin-bottom: 1.5rem;">
+          <div>
+            <h3><span>📈</span> Endgame Stat Caps & Combat Formulas</h3>
+            <p class="section-subtext">The definitive theorycrafting reference for Level 63 raid bosses: Defense, Resistances, Hit Caps, and Downranking Rules</p>
+          </div>
+        </div>
+        <div id="stats-caps-container" class="stats-caps-grid">
+          <!-- Rendered dynamically by js/app.js -->
+        </div>
+        <div id="combat-rules-container" class="combat-rules-grid" style="margin-top: 1.5rem;">
+          <!-- Rendered dynamically by js/app.js -->
+        </div>
+      </div>
+
+    </section>
+
+    <!-- TAB: PROFESSIONS & CAMPING HUB -->
+    <section id="tab-professions" class="tab-content" aria-label="Professions and Camping Hub">
+      <div class="section-heading-bar">
+        <div>
+          <h2><span>🔨</span> Professions, Camping & Field Stations Hub</h2>
+          <p class="section-subtext">The complete guide to all 11 professions, cooperative camping stations, mirrored class buffs, and combat passives</p>
+        </div>
+      </div>
+
+      <!-- Camping Kits & Core Rules Hero Box -->
+      <div class="camping-overview-card">
+        <div class="camping-overview-grid">
+          <div>
+            <span class="status-badge-highlight">🔥 Cooperative Open World Utility</span>
+            <h3 style="color: #fff; font-size: 1.35rem; margin-top: 0.3rem;">The Campfire Station System</h3>
+            <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 0.4rem; line-height: 1.6;">
+              Any standard Basic Campfire can be evolved into an encampment. Party members can place crafted profession stations around the fire to provide on-site crafting and grant party-wide 1-hour buffs that mirror class blessings. Buffs do not stack with the class versions and provide approximately 80% of their power (e.g. 8% vs 10%).
+            </p>
+            <div style="margin-top: 1rem; display: flex; flex-wrap: wrap; gap: 0.5rem;" id="camping-kits-chips">
+              <!-- Dynamically populated from WOW_FOREVER_DATA.campingKits -->
+            </div>
+          </div>
+          <div class="camping-qol-box">
+            <h4 style="color: var(--text-gold); font-size: 1.05rem; margin-bottom: 0.6rem;">🎒 Profession QoL & Reagent Bags</h4>
+            <ul style="list-style: none; font-size: 0.85rem; color: #cbd5e1; display: flex; flex-direction: column; gap: 0.4rem;">
+              <li>✦ <strong>Dedicated Reagent Bag Slot:</strong> Equip an extra 6th bag purely for trade reagents.</li>
+              <li>✦ <strong>Modern Crafting UI:</strong> Built-in search, filtering, and recipe tracking in your quest objective frame.</li>
+              <li>✦ <strong>Optional Target Enchanting:</strong> Apply repetitive enchants without re-selecting target items.</li>
+              <li>✦ <strong>No Vendor Reagents:</strong> Reagent Economy legacy talent removes the need to buy vendor reagents.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Filter Controls for Stations -->
+      <div class="filter-controls-row" style="margin-top: 2rem;">
+        <div class="tag-filter-group" id="profession-filter-group">
+          <button class="filter-chip active" data-prof-filter="all">All Professions (11)</button>
+          <button class="filter-chip" data-prof-filter="Primary">Primary Crafting & Gathering (9)</button>
+          <button class="filter-chip" data-prof-filter="Secondary">Secondary Skills (2)</button>
+        </div>
+      </div>
+
+      <!-- Camping Stations Matrix Grid -->
+      <div id="camping-stations-container" class="camping-stations-grid">
+        <!-- Rendered dynamically by js/app.js -->
+      </div>
+
+      <!-- The 9 Primary Profession Combat Passives -->
+      <div class="section-heading-bar" style="margin-top: 2.5rem;">
+        <div>
+          <h2><span>⚡</span> All 9 Primary Profession Combat Passives</h2>
+          <p class="section-subtext">Every primary tradeskill provides permanent character power to reward craft dedication</p>
+        </div>
+      </div>
+      <div id="professions-passives-container" class="profession-matrix-grid">
+        <!-- Rendered dynamically by js/app.js -->
+      </div>
     </section>
 
     <!-- TAB 4: SYSTEMS & ENGINE -->
@@ -663,23 +757,49 @@
       <div id="legacy-calc-container" class="legacy-calc-box">
         <div class="legacy-calc-top-bar">
           <div>
+            <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.3rem; flex-wrap: wrap;">
+              <span class="status-badge-highlight">Season 1: 65 Points Total Cap</span>
+              <span class="status-badge-highlight" style="background: rgba(56, 189, 248, 0.15); border-color: #38bdf8; color: #7dd3fc;">16 Launch Points Available</span>
+            </div>
             <h3 style="font-size: 1.3rem; color: #fff;">🏆 WoW Forever Legacy Tree Planner</h3>
             <p style="font-size: 0.85rem; color: var(--text-muted);">
-              Allocations are shared account-wide. Click <strong>+</strong> and <strong>−</strong> to experiment with your build for launch!
+              Allocations are shared account-wide (25 pts max per tree). Spend your 16 launch points across 7 talents per tree, or simulate your full 65-point seasonal goal!
             </p>
           </div>
-          <div style="display: flex; align-items: center; gap: 1rem;">
+          <div style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;">
             <span id="legacy-points-remaining" style="font-family: var(--font-heading); font-size: 1.15rem; font-weight: 700; color: #10b981;">
               16 / 16 Points Remaining
             </span>
+            <button id="toggle-sim-cap-btn" class="btn-secondary" style="font-size: 0.8rem; padding: 0.35rem 0.8rem;" title="Toggle between 16 Launch Points and 65 Season 1 Cap">
+              Simulate 65 Cap
+            </button>
             <button id="reset-legacy-calc-btn" class="btn-secondary" style="font-size: 0.8rem; padding: 0.35rem 0.8rem;">
               Reset Points
             </button>
           </div>
         </div>
 
+        <!-- Milestone Rewards Progress Bar -->
+        <div class="milestone-rewards-container">
+          <div class="milestone-rewards-header">
+            <h4 style="color: var(--text-gold); font-size: 0.95rem;">🎁 Season 1 Legacy Milestone Unlocks (Claim at Innkeeper Wiley, Ratchet)</h4>
+            <span id="milestone-progress-text" style="font-size: 0.85rem; color: #38bdf8; font-weight: 600;">0 Points Allocated</span>
+          </div>
+          <div id="milestone-rewards-grid" class="milestone-rewards-grid">
+            <!-- Dynamically populated from WOW_FOREVER_DATA.legacyMilestoneRewards -->
+          </div>
+        </div>
+
         <div id="legacy-trees-wrapper" class="legacy-trees-grid">
           <!-- Dynamically populated by js/app.js -->
+        </div>
+
+        <!-- Legacy Challenges Guide -->
+        <div class="legacy-challenges-card" style="margin-top: 1.5rem;">
+          <h4 style="color: var(--text-gold); font-size: 1.05rem; margin-bottom: 0.6rem;">📋 Season 1 Legacy Point Sources & Challenges</h4>
+          <div id="legacy-challenges-grid" class="legacy-challenges-grid">
+            <!-- Dynamically populated from WOW_FOREVER_DATA.legacyChallenges -->
+          </div>
         </div>
       </div>
 

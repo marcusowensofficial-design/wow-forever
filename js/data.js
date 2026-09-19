@@ -582,17 +582,24 @@ const WOW_FOREVER_DATA = {
   ],
 
   legacyTreesData: {
-    totalPoints: 16,
+    seasonalCap: 65,
+    treeCap: 25,
+    totalPointsAtLaunch: 16,
     trees: [
       {
         id: "professions",
         name: "Tradeskill Mastery",
         icon: "⚒️",
         color: "#f59e0b",
+        description: "Enhance your crafting and gathering with rare recipe drops, extra yields, and vendor savings.",
         perks: [
-          { id: "prof-1", name: "Artisan's Eye", max: 3, desc: "+5% chance to discover rare crafting recipes and gathering books." },
-          { id: "prof-2", name: "Resourceful Forge", max: 3, desc: "10% chance to not consume primary metal or cloth when crafting." },
-          { id: "prof-3", name: "Campfire Crafting", max: 2, desc: "Crafting speed increased by 50% while resting at any campfire." }
+          { id: "prof-1", name: "Working Overtime", max: 5, desc: "Increases your chance to gain a skill increase from using any primary, secondary, or class-based tradeskill by 10% per rank." },
+          { id: "prof-2", name: "Bountiful Harvest", max: 5, desc: "You discover 100% more scarce materials from Mining, Herbalism, and Skinning per rank." },
+          { id: "prof-3", name: "Luremaster", max: 2, desc: "While fishing with a Lure active, you have a 50% chance per rank to catch an extra fish." },
+          { id: "prof-4", name: "Performance Bonus", max: 3, desc: "You have a 15% chance per rank to receive 100% increased Merchant's Favor when you turn in a crate to the ACA or Durotar Supply." },
+          { id: "prof-5", name: "Bartering", max: 2, desc: "Reduces the gold price of items from all vendors by 10% per rank." },
+          { id: "prof-6", name: "Master Chef", max: 5, desc: "Your cooking recipes have a 30% chance per rank to create an extra result." },
+          { id: "prof-7", name: "Dedicated Study", max: 1, desc: "Increases your skill by 1 in your lowest tradeskill among your Primary and Secondary tradeskills. If all 5 tradeskills are at 300, you will gain 3 of a random Elemental Essence." }
         ]
       },
       {
@@ -600,10 +607,15 @@ const WOW_FOREVER_DATA = {
         name: "World Explorer",
         icon: "🧭",
         color: "#38bdf8",
+        description: "Thrive in the open world with rested XP, faster travel, early talents, and survival perks.",
         perks: [
-          { id: "adv-1", name: "Deep Rest", max: 3, desc: "Rested experience accumulates 25% faster while logged out." },
-          { id: "adv-2", name: "Swift Wind", max: 3, desc: "Flight path travel velocity increased by +15% across all taxi routes." },
-          { id: "adv-3", name: "Pathfinder Instinct", max: 2, desc: "Unlocks subtle minimap tracking for rare creatures and treasure chests." }
+          { id: "adv-1", name: "Well Rested", max: 5, desc: "Your rested experience accumulates 4% faster and your rested experience cap is increased by 4% per rank." },
+          { id: "adv-2", name: "Thrill of Adventure", max: 5, desc: "You gain 5% of your maximum Health and Mana over 10 sec each time you deliver the killing blow to a non-trivial enemy (open world only)." },
+          { id: "adv-3", name: "Field Medicine", max: 2, desc: "Reduces the duration of the Recently Bandaged effect by 10 sec per rank when you use a bandage (open world only)." },
+          { id: "adv-4", name: "Field Guide", max: 3, desc: "Reduces your cooldown on adding Camp features by 25% per rank." },
+          { id: "adv-5", name: "Talented", max: 5, desc: "You gain talent points every level starting at level 5 instead of starting at level 10 (still capped at 51 total talent points)." },
+          { id: "adv-6", name: "High Alert", max: 2, desc: "Increases your ability to detect nearby targets with Stealth as if your level were increased by 2 per rank (open world only)." },
+          { id: "adv-7", name: "Frequent Flier", max: 1, desc: "You receive a 50% discount on all flight paths and your flight path mount flies 20% faster." }
         ]
       },
       {
@@ -611,14 +623,81 @@ const WOW_FOREVER_DATA = {
         name: "Resourcefulness & Economy",
         icon: "💰",
         color: "#10b981",
+        description: "Buff endurance, reagent elimination, reduced death penalties, and bonus Honor gains.",
         perks: [
-          { id: "res-1", name: "Merchant's Favor", max: 3, desc: "Reduces vendor purchase and repair costs by 5% per point." },
-          { id: "res-2", name: "Vault Expansion", max: 2, desc: "Grants +2 permanent bank bag storage slots." },
-          { id: "res-3", name: "Enduring Campfire", max: 3, desc: "Extends campfire and placed profession station duration by 30 mins." }
+          { id: "res-1", name: "Gourmand", max: 3, desc: "Increases the duration of beneficial Well Fed food effects by 100% per rank." },
+          { id: "res-2", name: "The Quick and the Dead", max: 2, desc: "Increases movement speed while dead by 10% per rank and your helpful spells/abilities cost no resources for 2 min after being resurrected or until entering combat." },
+          { id: "res-3", name: "Reinforce", max: 5, desc: "You take 20% less durability loss when you die per rank." },
+          { id: "res-4", name: "Diplomat", max: 5, desc: "Increases your Reputation gains by 10% per rank." },
+          { id: "res-5", name: "Permanence", max: 2, desc: "Class abilities granting long-duration raid buffs last 100% longer, and camp resting benefits last 50% longer per rank." },
+          { id: "res-6", name: "For Great Honor", max: 5, desc: "Increases Honor Points gained by 10% per rank." },
+          { id: "res-7", name: "Reagent Economy", max: 1, desc: "Class abilities no longer require vendor-purchased reagents, and Tier 1 camping features cost no reagents to craft." }
         ]
       }
     ]
   },
+
+  legacyMilestoneRewards: [
+    {
+      points: 15,
+      name: "Holstered Replica Ironforge Air Rifle",
+      type: "Toy",
+      icon: "🎯",
+      desc: "A fun toy that lets you stun other players and keeps score of your successful marksman shots.",
+      vendor: "Innkeeper Wiley (Ratchet)"
+    },
+    {
+      points: 25,
+      name: "Spectral Bear Cub",
+      type: "Companion Pet",
+      icon: "🐻",
+      desc: "A tiny ghostly bear cub companion that follows you on your adventures throughout Azeroth.",
+      vendor: "Innkeeper Wiley (Ratchet)"
+    },
+    {
+      points: 40,
+      name: "Spectral Bear Tabard",
+      type: "Cosmetic Tabard",
+      icon: "🥋",
+      desc: "An ornate tabard emblazoned with the glowing insignia of the celestial spectral bear.",
+      vendor: "Innkeeper Wiley (Ratchet)"
+    },
+    {
+      points: 55,
+      name: "Reins of the Spectral Bear",
+      type: "100% Speed Mount",
+      icon: "🐻‍❄️",
+      desc: "The ultimate Season 1 prestige mount: a translucent spectral bear charging at 100% ground speed.",
+      vendor: "Innkeeper Wiley (Ratchet)"
+    }
+  ],
+
+  legacyChallenges: [
+    {
+      category: "Classes (24 Points)",
+      desc: "Earn 1 Legacy Point at levels 25, 45, and 60 on all 8 classes (Druid, Hunter, Mage, Paladin, Priest, Rogue, Shaman, Warlock)."
+    },
+    {
+      category: "Tradeskills (18 Points)",
+      desc: "Earn 1 Legacy Point at 150, 225, and 300 skill across 6 professions: Alchemy, Blacksmithing, Enchanting, Engineering, Leatherworking, Tailoring."
+    },
+    {
+      category: "Player vs. Player (12 Points)",
+      desc: "Earn 1 point at PvP Ranks 3, 7, 10, 13, and 14; 1 point for Exalted with each BG faction (AV, AB, WSG, Darkspear Islands); 1 point for weeks 4, 7, 10 of Field of Honor."
+    },
+    {
+      category: "Adventure (2 Points)",
+      desc: "1 point for Explore Azeroth achievement; 1 point for the Tier 0.5 questline starting with 'An Earnest Proposition' and laying Lord Valthalak to rest."
+    },
+    {
+      category: "Dungeons (3 Points)",
+      desc: "Novice Spelunker (1 pt for low dungeons), Experienced Spelunker (1 pt for mid dungeons), Master Spelunker (1 pt for high-level dungeons)."
+    },
+    {
+      category: "Raids (3 Points)",
+      desc: "Conqueror of the Wilds (Hyjal Summit), Conqueror of the Deeps (Barrow Deeps), Conqueror of the Lair (Onyxia's Lair)."
+    }
+  ],
 
   squadRosterPresets: [
     { id: "roster-1", name: "Marcus", faction: "Horde", race: "Undead", className: "Paladin", role: "Tank", spec: "Protection", notes: "Main Tank with custom undead charger mount!" },
@@ -641,29 +720,363 @@ const WOW_FOREVER_DATA = {
       "Shaman (Horde Windshaper Exclusive)"
     ],
     lore: "Descendants of high elves and elemental wind-weavers who took sanctuary on Zephras Isle during the Great Sundering. Their return to Azeroth marks the rekindling of ancient forgotten pacts.",
+    racialsAlliance: [
+      { name: "Walk on Air", type: "Active • 10s", effect: "Glide downward through the air for 10 sec." },
+      { name: "Read Ley Line", type: "Active", effect: "Sense hidden ley conduits, boosting mana regeneration and spell efficiency." },
+      { name: "Wind Blessed", type: "Passive", effect: "1% increased melee, ranged, and spellcasting Haste." },
+      { name: "Elemental Insight", type: "Passive", effect: "Damage to Elementals increased by 5%." }
+    ],
+    racialsHorde: [
+      { name: "Walk on Air", type: "Active • 10s", effect: "Glide downward through the air for 10 sec." },
+      { name: "Skysight", type: "Active", effect: "Receive an Elemental Blessing increasing run speed by 10%." },
+      { name: "Wind Blessed", type: "Passive", effect: "1% increased melee, ranged, and spellcasting Haste." },
+      { name: "Elemental Insight", type: "Passive", effect: "Damage to Elementals increased by 5%." }
+    ],
     racials: [
+      { name: "Walk on Air", type: "Active • 10s", effect: "Glide downward through the air for 10 sec." },
+      { name: "Read Ley Line / Skysight", type: "Active (Faction Dependent)", effect: "Alliance: Read Ley Line (mana/spells) • Horde: Skysight (+10% run speed)." },
+      { name: "Wind Blessed", type: "Passive", effect: "1% increased melee, ranged, and spellcasting Haste." },
+      { name: "Elemental Insight", type: "Passive", effect: "Damage to Elementals increased by 5%." }
+    ]
+  },
+
+  priestRacials: {
+    baseline: {
+      name: "Fear Ward",
+      desc: "Wards the friendly target against Fear. The next Fear effect used against the target will fail, consuming the ward. Lasts 10 min. (✦ Baseline for ALL Priests in WoW: Forever!)"
+    },
+    races: [
       {
-        name: "Gale Step",
-        type: "Active (2 Min Cooldown)",
-        effect: "Harness a thermal updraft to dash forward 10 yards, instantly breaking all snare and immobilize effects."
+        race: "Dwarf",
+        faction: "Alliance",
+        icon: "⛏️",
+        spells: [
+          { name: "Chastise", type: "Active (Instant)", desc: "Chastise the target, dealing Holy damage and disorienting them for up to 3 sec." },
+          { name: "Desperate Prayer", type: "Active (Instant)", desc: "Instantly heals the caster for a large amount of health without consuming mana. 10 min cooldown." }
+        ]
       },
       {
-        name: "Windborne Grace",
-        type: "Passive",
-        effect: "Reduces falling velocity by 30% and diminishes falling damage by 50%."
+        race: "Gnome",
+        faction: "Alliance",
+        icon: "⚙️",
+        spells: [
+          { name: "Confounding Flash", type: "Active (Instant)", desc: "Flashes bright geometric prism-light, reducing the target's chance to hit and disorienting nearby foes." },
+          { name: "Contingency Plan", type: "Active / Reactive", desc: "Instantly restores 25% Mana and shields the Gnome when taking lethal damage or dropping below 20% Health." }
+        ]
       },
       {
-        name: "Zephyr Attunement",
-        type: "Passive",
-        effect: "Increases Nature and Arcane Resistance by 10, and enhances baseline out-of-combat regeneration by 5%."
+        race: "Human",
+        faction: "Alliance",
+        icon: "👤",
+        spells: [
+          { name: "Divine Grace", type: "Passive / Buff", desc: "Reduces the cast time and mana cost of your next Holy spell after casting a direct heal." },
+          { name: "Feedback", type: "Active Buff", desc: "The priest's weapon is imbued with divine resonance: physical attacks burn enemy mana and deal Shadow damage." }
+        ]
       },
       {
-        name: "Feathercraft",
-        type: "Passive",
-        effect: "Increases skill in Tailoring and Leatherworking by +5."
+        race: "Night Elf",
+        faction: "Alliance",
+        icon: "🌙",
+        spells: [
+          { name: "Elune's Grace", type: "Active (3 min CD)", desc: "Reduces ranged damage taken by 20% and increases Dodge chance by 20% for 15 sec." },
+          { name: "Starshards", type: "Channeled (6s)", desc: "Rains celestial starshards down upon the target, dealing heavy Arcane damage over 6 sec." }
+        ]
+      },
+      {
+        race: "Troll",
+        faction: "Horde",
+        icon: "🏹",
+        spells: [
+          { name: "Hex of Weakness", type: "Active Curse", desc: "Weakens the target, reducing physical attack damage and reducing healing received by 20% for 2 min." },
+          { name: "Shadowguard", type: "Active (Instant)", desc: "Surrounds the caster with 3 shadow globes. Melee, ranged, and spell attacks against the caster cause Shadow damage." }
+        ]
+      },
+      {
+        race: "Undead",
+        faction: "Horde",
+        icon: "💀",
+        spells: [
+          { name: "Dark Sacrifice", type: "Active", desc: "Sacrifices a portion of the priest's health to empower dark magic or restore mana to an ally through agonizing light." },
+          { name: "Touch of Weakness", type: "Active Buff", desc: "The next melee attack against the caster causes Shadow damage and reduces the attacker's attack power for 2 min." }
+        ]
       }
     ]
   },
+
+  campingKits: [
+    { name: "Basic Campfire Kit", desc: "Initial campfire kit usable by all adventurers to create basic campsites.", levelReq: 1, maxStations: 1 },
+    { name: "Journeyman Campfire Kit", desc: "Enhanced campfire kit allowing placement of 2 concurrent profession features.", levelReq: 20, maxStations: 2 },
+    { name: "Expert Campfire Kit", desc: "Master encampment kit supporting 3 concurrent profession features and longer rest buffs.", levelReq: 40, maxStations: 3 }
+  ],
+
+  campingObjects: [
+    {
+      profession: "Alchemy",
+      type: "Primary",
+      icon: "🧪",
+      mirroredBuff: "Blessing of Wisdom (~8% Mana Regen)",
+      mirroredClass: "Paladin",
+      objects: [
+        { name: "Mana Well", tier: 1, desc: "Restores mana over time to resting allies." },
+        { name: "Fermenter", tier: 2, desc: "Brew specialty camp concoctions and elixirs on-site." },
+        { name: "Alchemy Laboratory", tier: 3, desc: "Full field laboratory allowing flask and advanced potion brewing without Scholomance/BWL labs." }
+      ]
+    },
+    {
+      profession: "Blacksmithing",
+      type: "Primary",
+      icon: "🔨",
+      mirroredBuff: "Strength of Earth Totem (~8% Strength/AP)",
+      mirroredClass: "Shaman",
+      objects: [
+        { name: "Sharpening Wheel", tier: 1, desc: "Grants weapon sharpening bonus increasing attack power." },
+        { name: "Anvil", tier: 2, desc: "Portable anvil allowing blacksmiths to forge and repair gear on-site in the open world." },
+        { name: "Master Forge", tier: 3, desc: "High-heat forge granting party members +10% Attack Power for 1 hour." }
+      ]
+    },
+    {
+      profession: "Enchanting",
+      type: "Primary",
+      icon: "✨",
+      mirroredBuff: "Mark of the Wild (~8% Stats & Res)",
+      mirroredClass: "Druid",
+      objects: [
+        { name: "Enchanted Lute", tier: 1, desc: "Plays soothing magical chords, increasing stat recovery." },
+        { name: "Arcane Salvager", tier: 2, desc: "Disenchants items on-site with a bonus chance to yield rare essences." },
+        { name: "Arcane Forge", tier: 3, desc: "Grants party members +All Stats and Magic Resistances for 1 hour." }
+      ]
+    },
+    {
+      profession: "Engineering",
+      type: "Primary",
+      icon: "⚙️",
+      mirroredBuff: "Field Utility & Zero Gadget Malfunction",
+      mirroredClass: "General",
+      objects: [
+        { name: "Reagent Bot", tier: 1, desc: "Vendors common components and basic ammo/food." },
+        { name: "Repair Bot", tier: 2, desc: "Provides full field equipment repairs for party members." },
+        { name: "Anarchist's Workbench", tier: 3, desc: "Craft explosives on-site and grants 0% malfunction rate on engineering gadgets in raids." }
+      ]
+    },
+    {
+      profession: "First Aid",
+      type: "Secondary",
+      icon: "🩹",
+      mirroredBuff: "Power Word: Fortitude (~8% Stamina)",
+      mirroredClass: "Priest",
+      objects: [
+        { name: "First Aid Kit", tier: 1, desc: "Provides field bandages and minor health recovery." },
+        { name: "Toxin Study", tier: 2, desc: "Grants immunity to natural poisons encountered while resting." },
+        { name: "Plague Doctor's Laboratory", tier: 3, desc: "Increases party Stamina by +8% and provides disease cleansing." }
+      ]
+    },
+    {
+      profession: "Fishing",
+      type: "Secondary",
+      icon: "🎣",
+      mirroredBuff: "Blessing of Kings (~8% All Attributes)",
+      mirroredClass: "Paladin",
+      objects: [
+        { name: "Fish Bowl", tier: 1, desc: "Stores live bait and increases fishing skill by +5." },
+        { name: "Fishing Rack", tier: 2, desc: "Dries catches into stamina-boosting rations." },
+        { name: "Fishing Hut", tier: 3, desc: "Grants party members an 8% increase to all primary attributes for 1 hour." }
+      ]
+    },
+    {
+      profession: "Herbalism",
+      type: "Primary",
+      icon: "🌿",
+      mirroredBuff: "Arcane Intellect (~8% Intellect)",
+      mirroredClass: "Mage",
+      objects: [
+        { name: "Incense Candle", tier: 1, desc: "Burns calming herbal aroma, boosting spirit." },
+        { name: "Greenhouse", tier: 2, desc: "Cultivates rare herbs while resting in the campsite." },
+        { name: "Seed Hybridizer", tier: 3, desc: "Grants party members +8% Intellect and +10 Magic Resistances for 1 hour." }
+      ]
+    },
+    {
+      profession: "Leatherworking",
+      type: "Primary",
+      icon: "🛡️",
+      mirroredBuff: "Physical Damage Reduction & Armor",
+      mirroredClass: "General",
+      objects: [
+        { name: "Camp Tent", tier: 1, desc: "Provides shelter, accelerating rested XP generation." },
+        { name: "Tanning Rack", tier: 2, desc: "Allows processing heavy leathers and hides on-site." },
+        { name: "Sewing Machine", tier: 3, desc: "Reinforces party armor, providing +8% physical damage reduction for 1 hour." }
+      ]
+    },
+    {
+      profession: "Mining",
+      type: "Primary",
+      icon: "⛏️",
+      mirroredBuff: "Blessing of Might (~8% Attack Power)",
+      mirroredClass: "Paladin",
+      objects: [
+        { name: "Lodestone", tier: 1, desc: "Tracks nearby metal veins and increases mining yield." },
+        { name: "Rock Garden", tier: 2, desc: "Excavates rough stones and gems while resting." },
+        { name: "Molten Foundry", tier: 3, desc: "Smelts ores in the field and grants party members +Attack Power for 1 hour." }
+      ]
+    },
+    {
+      profession: "Skinning",
+      type: "Primary",
+      icon: "🔪",
+      mirroredBuff: "Moonkin Aura (~2% Crit Chance)",
+      mirroredClass: "Druid",
+      objects: [
+        { name: "Camp Chair", tier: 1, desc: "A cozy hide chair granting resting comfort." },
+        { name: "Field Guide", tier: 2, desc: "Documents beast weaknesses, granting +5% beast damage." },
+        { name: "Trapper's Workbench", tier: 3, desc: "Grants party members +2% Critical Strike chance for 1 hour." }
+      ]
+    },
+    {
+      profession: "Tailoring",
+      type: "Primary",
+      icon: "🧵",
+      mirroredBuff: "Divine Spirit (~8% Spirit & Mana)",
+      mirroredClass: "Priest",
+      objects: [
+        { name: "Faction Banner", tier: 1, desc: "Inspires resting party members with faction pride." },
+        { name: "Spinning Wheel", tier: 2, desc: "Spins thread and bolts in the field without needing a loom." },
+        { name: "Loom", tier: 3, desc: "Grants party members +8% Spirit and bonus mana regeneration for 1 hour." }
+      ]
+    }
+  ],
+
+  statCapsAndMechanics: {
+    title: "Endgame Stat Caps & Combat Formulas",
+    subtitle: "Verified raid boss caps and formula coefficients for Level 60 content",
+    caps: [
+      {
+        name: "Defense Cap",
+        value: "440 Defense",
+        target: "Bosses (L63)",
+        desc: "Renders tanks completely uncrittable by Level 63 raid bosses (eliminates deadly 200% damage spikes).",
+        icon: "🛡️"
+      },
+      {
+        name: "Magic Resistance Cap",
+        value: "315 Resistance",
+        target: "75% Reduction",
+        desc: "Achieves maximum 75% magic damage reduction against Level 63 raid bosses across Fire, Frost, Nature, Shadow, Arcane.",
+        icon: "✨"
+      },
+      {
+        name: "Armor Cap",
+        value: "17,265 Armor",
+        target: "75% Mitigation",
+        desc: "Achieves maximum 75% physical damage reduction against Level 63 raid bosses.",
+        icon: "🦺"
+      },
+      {
+        name: "Melee Hit Cap",
+        value: "9% Hit (Bosses)",
+        target: "Zero Miss",
+        desc: "5% required vs equal-level targets; 9% required to eliminate all misses on special yellow attacks against Level 63 raid bosses.",
+        icon: "🎯"
+      },
+      {
+        name: "Spell Hit Cap",
+        value: "16% Spell Hit",
+        target: "Zero Miss",
+        desc: "3% required vs equal-level targets; 16% required against Level 63 raid bosses (note: 1% innate miss chance may remain).",
+        icon: "🔮"
+      },
+      {
+        name: "Attack Power Ratio",
+        value: "14 AP = 1 DPS",
+        target: "Melee & Ranged",
+        desc: "Unified across melee and ranged weapons. Derived from Strength and Agility depending on class proficiencies.",
+        icon: "⚔️"
+      }
+    ],
+    rules: [
+      {
+        title: "Unified Critical Strike",
+        desc: "Critical strike on gear is no longer split between melee and spell crit. Items grant unified 'Critical Strike Chance' that enhances both physical hits (100% bonus damage) and spell hits (50% bonus damage)."
+      },
+      {
+        title: "Spell Downranking Threshold",
+        desc: "Spell coefficients plateau after the spell rank learned at Level 20. Downranking spells learned at or after Level 20 retains high spell power scaling, but ranks learned prior to Level 20 suffer heavy coefficient penalties."
+      },
+      {
+        title: "Guaranteed Boss Loot & Automatic Transmog",
+        desc: "Every dungeon and raid boss drops a guaranteed Rare (Blue) item. Any item looted automatically unlocks its appearance in your account transmog collection if you are an eligible wearer."
+      }
+    ]
+  },
+
+  dataminedMounts: [
+    {
+      category: "Skyborne Racial Mounts (Galestriders)",
+      icon: "🦅",
+      badge: "Skyborne Race",
+      mounts: [
+        "Empyrean Galestrider (Level 40)",
+        "Regal Galestrider (Level 40)",
+        "Stormy Galestrider (Level 40)",
+        "Umber Galestrider (Level 40)",
+        "Swift Empyrean Galestrider (Level 60)",
+        "Swift Regal Galestrider (Level 60)",
+        "Swift Stormy Galestrider (Level 60)",
+        "Swift Umber Galestrider (Level 60)"
+      ]
+    },
+    {
+      category: "Paladin & Shaman Class Mounts",
+      icon: "🛡️",
+      badge: "Class Identity",
+      mounts: [
+        "Summon Forsaken Charger (Undead Paladin unique skeletal warhorse)",
+        "Armored War Ram of the Storm (Wildhammer Dwarf Shaman)"
+      ]
+    },
+    {
+      category: "Legacy & Seasonal Rewards",
+      icon: "🏆",
+      badge: "Account Progression",
+      mounts: [
+        "Reins of the Spectral Bear (55 Legacy Points seasonal milestone)",
+        "Swift Hyjal Stag (Mount Hyjal open world explorer)",
+        "Veteran Adventurer's Loyal Companion (Skyborne Epic Pack hound)"
+      ]
+    },
+    {
+      category: "Warden Sabers & Prideclaws",
+      icon: "🐆",
+      badge: "Reputation & Drops",
+      mounts: [
+        "Cerulean Prideclaw",
+        "Black Warden Saber",
+        "Brown Warden Saber",
+        "Gray Warden Saber",
+        "White Warden Saber"
+      ]
+    },
+    {
+      category: "Devilsaurs & Druid Moose Mounts",
+      icon: "🦖",
+      badge: "Endgame Beasts",
+      mounts: [
+        "Devilsaur Mounts (Black, Blue, Green, Purple, White)",
+        "Druid Moose Mounts (Black, White, Green, Gray)"
+      ]
+    },
+    {
+      category: "Classic Faction Recolors",
+      icon: "🐎",
+      badge: "Faction Mounts",
+      mounts: [
+        "Ochre Skeletal Warhorse",
+        "Black Skeletal Horse",
+        "Caravan Kodo",
+        "Lavender Kodo",
+        "Pack Kodo",
+        "White Kodo"
+      ]
+    }
+  ],
 
   newClassCombos: [
     {
@@ -1153,9 +1566,11 @@ const WOW_FOREVER_DATA = {
       zone: "Alterac Mountains",
       status: "Unlocks in Beta Phase 2 (Oct 8)",
       playableNow: false,
-      description: "Before the violet dome was erected, remnants of Kirin Tor sorcerers repel Syndicate mercenaries and rogue elementals.",
-      bosses: ["Syndicate Enforcer Raven", "Rogue Sorcerer Malick", "Unstable Mana Conduit", "Archmage Danielle"],
-      lootHighlights: ["Kirin Tor Robe of Sparks", "Syndicate Dagger of Shadows"]
+      entrance: "Enter via sewers into the Underbelly, fight through Kirin Tor necromancers, then break out into the open streets of Dalaran.",
+      description: "Before the violet dome was erected, Dalaran is plagued by Arcane Anomalies and rogue Kirin Tor Necromancers ravaging the streets with undead minions.",
+      bosses: ["Arcane Anomaly", "Unstable Sentinel", "Shade of the Archmage"],
+      mobPacks: ["Skeleton Variants", "Kirin Tor Necromancers", "Fragmented Sentries", "Mana Fiends", "Arcane Elementals"],
+      lootHighlights: ["Kirin Tor Robe of Sparks", "Syndicate Dagger of Shadows", "Arcane Core Band"]
     },
     {
       id: "dungeon-05",
@@ -1165,9 +1580,11 @@ const WOW_FOREVER_DATA = {
       zone: "Stranglethorn Vale (Sunken Coast)",
       status: "Launch Day Content",
       playableNow: false,
-      description: "An ancient Gurubashi coastal city reclaimed by the tide and infested by Bloodscalp sirens and abyssal sea beasts.",
-      bosses: ["Tidestalker Kraash", "Priestess Hethriss", "Abyssal Leviathan"],
-      lootHighlights: ["Tidecaller Trinket", "Trident of the Gurubashi Depths"]
+      entrance: "Sunken Gurubashi coastal city with non-linear layout; players can dive underwater immediately to fight Zin'aka or delve deep into inner ruins.",
+      description: "An ancient Gurubashi coastal city reclaimed by the tide and infested by Makrura, Risen Sentries, and sea monstrosities. Bosses possess deadly enrage mechanics.",
+      bosses: ["Zul'Alai (Near-Death Enrage)", "Zin'aka (Aquatic Depths)", "Deathless Marrow", "Min'loth the Serpent"],
+      mobPacks: ["Makrura", "Risen Sentry", "Brinescale Explorer", "Deathless Sorcerer", "Deathless Guardian"],
+      lootHighlights: ["Tidecaller Trinket", "Trident of the Gurubashi Depths", "Whitemane's Chapeau (Upgraded Rare)"]
     },
     {
       id: "dungeon-06",

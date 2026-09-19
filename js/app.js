@@ -11,6 +11,9 @@ document.addEventListener('DOMContentLoaded', () => {
   initNewsHub();
   initCodex();
   initLegacyCalculator();
+  initCampingHub();
+  renderMountsGallery();
+  renderStatsAndCaps();
   initTransmogDemo();
   initEngineVisualDemo();
   initBetaDurationTracker();
@@ -468,9 +471,10 @@ function renderEngineSpecs() {
 }
 
 /* ==========================================================================
-   7. INTERACTIVE 16-POINT LEGACY CALCULATOR
+   7. INTERACTIVE LEGACY (PARAGON) CALCULATOR & MILESTONES
    ========================================================================== */
 let legacyAllocations = JSON.parse(localStorage.getItem('wow_forever_legacy_allocations') || '{}');
+let simCapActive = false;
 
 function initLegacyCalculator() {
   const container = document.getElementById('legacy-calc-container');
@@ -486,54 +490,115 @@ function initLegacyCalculator() {
       renderLegacyCalculator();
     });
   }
+
+  const simBtn = document.getElementById('toggle-sim-cap-btn');
+  if (simBtn) {
+    simBtn.addEventListener('click', () => {
+      simCapActive = !simCapActive;
+      simBtn.textContent = simCapActive ? 'Switch to 16 Launch Points' : 'Simulate 65 Cap';
+      renderLegacyCalculator();
+    });
+  }
 }
 
 function renderLegacyCalculator() {
   const container = document.getElementById('legacy-trees-wrapper');
   const pointsCounter = document.getElementById('legacy-points-remaining');
+  const milestoneGrid = document.getElementById('milestone-rewards-grid');
+  const milestoneText = document.getElementById('milestone-progress-text');
+  const challengesGrid = document.getElementById('legacy-challenges-grid');
   if (!container) return;
 
-  const totalAllowed = WOW_FOREVER_DATA.legacyTreesData.totalPoints;
+  const totalAllowed = simCapActive 
+    ? (WOW_FOREVER_DATA.legacyTreesData.seasonalCap || 65)
+    : (WOW_FOREVER_DATA.legacyTreesData.totalPointsAtLaunch || 16);
+
   const spentPoints = Object.values(legacyAllocations).reduce((a, b) => a + b, 0);
   const remaining = Math.max(0, totalAllowed - spentPoints);
 
   if (pointsCounter) {
-    pointsCounter.textContent = `${remaining} / ${totalAllowed} Points Remaining`;
+    pointsCounter.textContent = `${remaining} / ${totalAllowed} Points Remaining ${simCapActive ? '(Sim 65 Cap)' : '(16 Launch)'}`;
     pointsCounter.style.color = remaining === 0 ? '#ef4444' : '#10b981';
   }
 
-  container.innerHTML = WOW_FOREVER_DATA.legacyTreesData.trees.map(tree => `
-    <div class="legacy-tree-col" style="border-top: 3px solid ${tree.color};">
-      <div class="legacy-tree-header">
-        <span style="font-size: 1.5rem;">${tree.icon}</span>
-        <div>
-          <h4 style="color: #fff; font-size: 1.1rem;">${tree.name}</h4>
-          <span style="font-size: 0.75rem; color: var(--text-muted);">
-            ${getTreeSpent(tree)} Points Allocated
-          </span>
+  if (milestoneText) {
+    milestoneText.textContent = `${spentPoints} Points Allocated across Trees`;
+  }
+
+  // Render Milestone Rewards
+  if (milestoneGrid && WOW_FOREVER_DATA.legacyMilestoneRewards) {
+    milestoneGrid.innerHTML = WOW_FOREVER_DATA.legacyMilestoneRewards.map(m => {
+      const unlocked = spentPoints >= m.points;
+      return `
+        <div class="milestone-reward-card ${unlocked ? 'unlocked' : ''}">
+          <div class="milestone-points-badge ${unlocked ? 'unlocked' : ''}">
+            ${unlocked ? '✓ UNLOCKED' : `${m.points} Points`}
+          </div>
+          <div class="milestone-card-body">
+            <span style="font-size: 1.8rem;">${m.icon}</span>
+            <div>
+              <strong style="color: ${unlocked ? '#34d399' : '#fff'}; font-size: 0.95rem;">${escapeHtml(m.name)}</strong>
+              <div style="font-size: 0.72rem; color: var(--text-gold);">${escapeHtml(m.type)} • ${escapeHtml(m.vendor)}</div>
+              <p style="font-size: 0.78rem; color: var(--text-muted); margin-top: 0.2rem;">${escapeHtml(m.desc)}</p>
+            </div>
+          </div>
+        </div>
+      `;
+    }).join('');
+  }
+
+  // Render Challenges
+  if (challengesGrid && WOW_FOREVER_DATA.legacyChallenges) {
+    challengesGrid.innerHTML = WOW_FOREVER_DATA.legacyChallenges.map(c => `
+      <div class="challenge-item-card">
+        <strong style="color: var(--color-sky); font-size: 0.9rem;">${escapeHtml(c.category)}</strong>
+        <p style="font-size: 0.8rem; color: #cbd5e1; margin-top: 0.2rem;">${escapeHtml(c.desc)}</p>
+      </div>
+    `).join('');
+  }
+
+  // Render Trees
+  container.innerHTML = WOW_FOREVER_DATA.legacyTreesData.trees.map(tree => {
+    const treeSpent = getTreeSpent(tree);
+    const treeCap = WOW_FOREVER_DATA.legacyTreesData.treeCap || 25;
+
+    return `
+      <div class="legacy-tree-col" style="border-top: 3px solid ${tree.color};">
+        <div class="legacy-tree-header">
+          <span style="font-size: 1.5rem;">${tree.icon}</span>
+          <div>
+            <h4 style="color: #fff; font-size: 1.1rem;">${tree.name}</h4>
+            <span style="font-size: 0.75rem; color: var(--text-gold);">
+              ${treeSpent} / ${treeCap} Points (Max)
+            </span>
+          </div>
+        </div>
+        <p style="font-size: 0.78rem; color: var(--text-muted); margin-bottom: 0.8rem;">${escapeHtml(tree.description || '')}</p>
+
+        <div class="legacy-perks-list">
+          ${tree.perks.map(perk => {
+            const current = legacyAllocations[perk.id] || 0;
+            const canAdd = current < perk.max && remaining > 0 && treeSpent < treeCap;
+            const canSub = current > 0;
+
+            return `
+              <div class="legacy-perk-box">
+                <div class="perk-info-row">
+                  <span class="perk-name">${escapeHtml(perk.name)}</span>
+                  <span class="perk-rank ${current > 0 ? 'active' : ''}">${current}/${perk.max}</span>
+                </div>
+                <p class="perk-desc">${escapeHtml(perk.desc)}</p>
+                <div class="perk-btn-group">
+                  <button class="perk-step-btn" onclick="adjustLegacyPerk('${perk.id}', -1)" ${!canSub ? 'disabled' : ''}>−</button>
+                  <button class="perk-step-btn add" onclick="adjustLegacyPerk('${perk.id}', 1)" ${!canAdd ? 'disabled' : ''}>+</button>
+                </div>
+              </div>
+            `;
+          }).join('')}
         </div>
       </div>
-
-      <div class="legacy-perks-list">
-        ${tree.perks.map(perk => {
-          const current = legacyAllocations[perk.id] || 0;
-          return `
-            <div class="legacy-perk-box">
-              <div class="perk-info-row">
-                <span class="perk-name">${perk.name}</span>
-                <span class="perk-rank ${current > 0 ? 'active' : ''}">${current}/${perk.max}</span>
-              </div>
-              <p class="perk-desc">${perk.desc}</p>
-              <div class="perk-btn-group">
-                <button class="perk-step-btn" onclick="adjustLegacyPerk('${perk.id}', -1)" ${current === 0 ? 'disabled' : ''}>−</button>
-                <button class="perk-step-btn add" onclick="adjustLegacyPerk('${perk.id}', 1)" ${current >= perk.max || remaining === 0 ? 'disabled' : ''}>+</button>
-              </div>
-            </div>
-          `;
-        }).join('')}
-      </div>
-    </div>
-  `).join('');
+    `;
+  }).join('');
 }
 
 function getTreeSpent(tree) {
@@ -542,17 +607,24 @@ function getTreeSpent(tree) {
 
 window.adjustLegacyPerk = function(perkId, delta) {
   let targetPerk = null;
+  let targetTree = null;
   for (const tree of WOW_FOREVER_DATA.legacyTreesData.trees) {
     const found = tree.perks.find(p => p.id === perkId);
-    if (found) { targetPerk = found; break; }
+    if (found) { targetPerk = found; targetTree = tree; break; }
   }
-  if (!targetPerk) return;
+  if (!targetPerk || !targetTree) return;
 
   const current = legacyAllocations[perkId] || 0;
   const spentPoints = Object.values(legacyAllocations).reduce((a, b) => a + b, 0);
+  const totalAllowed = simCapActive 
+    ? (WOW_FOREVER_DATA.legacyTreesData.seasonalCap || 65)
+    : (WOW_FOREVER_DATA.legacyTreesData.totalPointsAtLaunch || 16);
+  const treeSpent = getTreeSpent(targetTree);
+  const treeCap = WOW_FOREVER_DATA.legacyTreesData.treeCap || 25;
 
   if (delta > 0) {
-    if (spentPoints >= WOW_FOREVER_DATA.legacyTreesData.totalPoints) return;
+    if (spentPoints >= totalAllowed) return;
+    if (treeSpent >= treeCap) return;
     if (current >= targetPerk.max) return;
     legacyAllocations[perkId] = current + 1;
   } else if (delta < 0) {
@@ -563,6 +635,165 @@ window.adjustLegacyPerk = function(perkId, delta) {
   localStorage.setItem('wow_forever_legacy_allocations', JSON.stringify(legacyAllocations));
   renderLegacyCalculator();
 };
+
+/* ==========================================================================
+   CAMPING & PROFESSIONS HUB CONTROLLER
+   ========================================================================== */
+function initCampingHub() {
+  const kitsContainer = document.getElementById('camping-kits-chips');
+  if (kitsContainer && WOW_FOREVER_DATA.campingKits) {
+    kitsContainer.innerHTML = WOW_FOREVER_DATA.campingKits.map(kit => `
+      <div class="camping-kit-chip">
+        <strong style="color: var(--text-gold); font-size: 0.85rem;">⛺ ${escapeHtml(kit.name)}</strong>
+        <span style="font-size: 0.75rem; color: #cbd5e1;">(Level ${kit.levelReq}+ • Up to ${kit.maxStations} station${kit.maxStations > 1 ? 's' : ''})</span>
+      </div>
+    `).join('');
+  }
+
+  renderCampingStations('all');
+
+  const filterBtns = document.querySelectorAll('#profession-filter-group .filter-chip');
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.getAttribute('data-prof-filter');
+      renderCampingStations(filter);
+    });
+  });
+
+  const passivesContainer = document.getElementById('professions-passives-container');
+  if (passivesContainer && WOW_FOREVER_DATA.professionPassives) {
+    passivesContainer.innerHTML = WOW_FOREVER_DATA.professionPassives.map(prof => `
+      <div class="profession-passive-card">
+        <div class="profession-header">
+          <div style="display: flex; align-items: center; gap: 0.6rem;">
+            <span style="font-size: 1.6rem;">${prof.icon}</span>
+            <div>
+              <h4 style="color: #fff; font-size: 1.1rem; margin: 0;">${escapeHtml(prof.name)}</h4>
+              <span style="font-size: 0.72rem; text-transform: uppercase; color: var(--text-gold); font-weight: 700;">${escapeHtml(prof.type)}</span>
+            </div>
+          </div>
+          <span class="status-badge-highlight" style="font-size: 0.7rem;">Combat Power</span>
+        </div>
+        <div style="margin: 0.75rem 0;">
+          <strong style="color: #34d399; font-size: 0.88rem;">✨ ${escapeHtml(prof.passiveName)}</strong>
+          <p style="font-size: 0.84rem; color: #cbd5e1; margin-top: 0.2rem; line-height: 1.4;">${escapeHtml(prof.passiveEffect)}</p>
+        </div>
+        <div style="background: rgba(0,0,0,0.3); border-radius: var(--radius-sm); padding: 0.5rem 0.75rem; border-left: 2px solid var(--border-gold);">
+          <strong style="font-size: 0.78rem; color: var(--text-gold);">🔥 Camping Hub Synergy:</strong>
+          <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.15rem;">${escapeHtml(prof.campBonus)}</p>
+        </div>
+      </div>
+    `).join('');
+  }
+}
+
+function renderCampingStations(filter) {
+  const container = document.getElementById('camping-stations-container');
+  if (!container || !WOW_FOREVER_DATA.campingObjects) return;
+
+  let list = WOW_FOREVER_DATA.campingObjects;
+  if (filter === 'Primary') {
+    list = list.filter(p => p.type === 'Primary');
+  } else if (filter === 'Secondary') {
+    list = list.filter(p => p.type === 'Secondary');
+  }
+
+  container.innerHTML = list.map(p => `
+    <div class="camping-station-card">
+      <div class="station-card-header">
+        <div style="display: flex; align-items: center; gap: 0.6rem;">
+          <span style="font-size: 1.8rem;">${p.icon}</span>
+          <div>
+            <h4 style="color: #fff; font-size: 1.15rem; margin: 0;">${escapeHtml(p.profession)}</h4>
+            <span style="font-size: 0.72rem; text-transform: uppercase; color: var(--text-gold); font-weight: 700;">${escapeHtml(p.type)} Profession</span>
+          </div>
+        </div>
+        <div class="mirrored-buff-badge">
+          <span>Mirrored Buff:</span>
+          <strong>${escapeHtml(p.mirroredBuff)}</strong>
+        </div>
+      </div>
+
+      <div class="station-tiers-list">
+        ${p.objects.map(obj => `
+          <div class="station-tier-row">
+            <span class="tier-pill">Tier ${obj.tier}</span>
+            <div class="tier-info">
+              <strong style="color: #e2e8f0; font-size: 0.88rem;">${escapeHtml(obj.name)}</strong>
+              <p style="font-size: 0.78rem; color: var(--text-muted); margin: 0.15rem 0 0;">${escapeHtml(obj.desc)}</p>
+            </div>
+          </div>
+        `).join('')}
+      </div>
+    </div>
+  `).join('');
+}
+
+/* ==========================================================================
+   MOUNTS GALLERY & STATS CAPS CONTROLLER
+   ========================================================================== */
+function renderMountsGallery() {
+  const container = document.getElementById('mounts-gallery-container');
+  if (!container || !WOW_FOREVER_DATA.dataminedMounts) return;
+
+  container.innerHTML = WOW_FOREVER_DATA.dataminedMounts.map(cat => `
+    <div class="mount-category-card">
+      <div class="mount-cat-header">
+        <div style="display: flex; align-items: center; gap: 0.6rem;">
+          <span style="font-size: 1.8rem;">${cat.icon}</span>
+          <div>
+            <h4 style="color: #fff; font-size: 1.15rem; margin: 0;">${escapeHtml(cat.category)}</h4>
+            <span class="status-badge-highlight" style="font-size: 0.7rem; margin-top: 0.2rem;">${escapeHtml(cat.badge)}</span>
+          </div>
+        </div>
+      </div>
+      <ul class="mount-items-list">
+        ${cat.mounts.map(m => `
+          <li class="mount-item">
+            <span style="color: var(--text-gold); font-size: 0.9rem;">🐎</span>
+            <span>${escapeHtml(m)}</span>
+          </li>
+        `).join('')}
+      </ul>
+    </div>
+  `).join('');
+}
+
+function renderStatsAndCaps() {
+  const capsContainer = document.getElementById('stats-caps-container');
+  const rulesContainer = document.getElementById('combat-rules-container');
+  if (!WOW_FOREVER_DATA.statCapsAndMechanics) return;
+
+  const { caps, rules } = WOW_FOREVER_DATA.statCapsAndMechanics;
+
+  if (capsContainer) {
+    capsContainer.innerHTML = caps.map(cap => `
+      <div class="stat-cap-card">
+        <div class="stat-cap-top">
+          <span style="font-size: 1.8rem;">${cap.icon}</span>
+          <span class="cap-target-badge">${escapeHtml(cap.target)}</span>
+        </div>
+        <div class="stat-cap-value">${escapeHtml(cap.value)}</div>
+        <h4 class="stat-cap-name">${escapeHtml(cap.name)}</h4>
+        <p class="stat-cap-desc">${escapeHtml(cap.desc)}</p>
+      </div>
+    `).join('');
+  }
+
+  if (rulesContainer) {
+    rulesContainer.innerHTML = rules.map(rule => `
+      <div class="combat-rule-card">
+        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.4rem;">
+          <span style="color: var(--text-gold); font-size: 1.1rem;">⚖️</span>
+          <h4 style="color: #fff; font-size: 1.05rem; margin: 0;">${escapeHtml(rule.title)}</h4>
+        </div>
+        <p style="font-size: 0.85rem; color: #cbd5e1; line-height: 1.5; margin: 0;">${escapeHtml(rule.desc)}</p>
+      </div>
+    `).join('');
+  }
+}
 
 /* ==========================================================================
    8. TRANSMOG & ENGINE VISUAL DEMO TOGGLES
@@ -844,6 +1075,37 @@ function initClassRacePlanner() {
       <p style="font-size: 0.95rem; color: #cbd5e1; line-height: 1.5; margin: 0.5rem 0 0;">${escapeHtml(cls.description)}</p>
     `;
 
+    if (cls.id === 'priest' && WOW_FOREVER_DATA.priestRacials) {
+      const pData = WOW_FOREVER_DATA.priestRacials;
+      heroContainer.innerHTML += `
+        <div class="priest-racials-feature-box" style="margin-top: 1.2rem; padding: 1rem 1.2rem; background: rgba(56, 189, 248, 0.08); border: 1px solid rgba(56, 189, 248, 0.35); border-radius: var(--radius-sm);">
+          <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.4rem;">
+            <div style="display: flex; align-items: center; gap: 0.5rem;">
+              <span style="font-size: 1.4rem;">✨</span>
+              <strong style="color: #38bdf8; font-size: 1.05rem;">Priest Racials Overhaul: ${escapeHtml(pData.baseline.name)} is Baseline!</strong>
+            </div>
+            <span class="status-badge-highlight" style="font-size: 0.72rem;">All Races Get Fear Ward</span>
+          </div>
+          <p style="font-size: 0.85rem; color: #cbd5e1; margin: 0 0 0.8rem; line-height: 1.4;">${escapeHtml(pData.baseline.desc)} In addition, each eligible race receives 2 unique Priest spells:</p>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 0.75rem;">
+            ${pData.races.map(r => `
+              <div style="background: rgba(0,0,0,0.35); padding: 0.65rem 0.85rem; border-radius: 4px; border-left: 3px solid ${r.faction === 'Alliance' ? '#0078FF' : '#C41E3A'};">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.3rem;">
+                  <strong style="color: #fff; font-size: 0.9rem;">${r.icon} ${escapeHtml(r.race)} Priest</strong>
+                  <span style="font-size: 0.68rem; text-transform: uppercase; color: ${r.faction === 'Alliance' ? '#60a5fa' : '#f87171'}; font-weight: 700;">${escapeHtml(r.faction)}</span>
+                </div>
+                ${r.spells.map(s => `
+                  <div style="font-size: 0.78rem; color: #cbd5e1; margin-top: 0.25rem;">
+                    <strong style="color: var(--text-gold);">${escapeHtml(s.name)}</strong> <span style="color: var(--text-muted); font-size: 0.7rem;">(${escapeHtml(s.type)})</span>: ${escapeHtml(s.desc)}
+                  </div>
+                `).join('')}
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      `;
+    }
+
     // 3. Allowed Races Cards
     let races = cls.allowedRaces;
     if (factionFilter === 'alliance') {
@@ -984,6 +1246,22 @@ function initClassRacePlanner() {
           </div>
         `).join('')}
       </div>
+
+      ${race.id === 'skyborne' ? `
+        <div style="margin-top: 1rem; padding: 0.75rem 1rem; background: rgba(56, 189, 248, 0.08); border: 1px solid rgba(56, 189, 248, 0.25); border-radius: var(--radius-sm);">
+          <strong style="color: #38bdf8; font-size: 0.88rem;">✦ Faction Racials Difference:</strong>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 0.6rem; margin-top: 0.4rem;">
+            <div style="background: rgba(0, 120, 255, 0.1); border-left: 2px solid #0078FF; padding: 0.4rem 0.6rem; border-radius: 3px;">
+              <strong style="color: #60a5fa; font-size: 0.8rem;">High Order (Alliance):</strong>
+              <div style="font-size: 0.76rem; color: #e2e8f0; margin-top: 0.15rem;">Active: <strong>Read Ley Line</strong> (Boosts mana recovery & spell efficiency) + Walk on Air, Wind Blessed, Elemental Insight</div>
+            </div>
+            <div style="background: rgba(196, 30, 58, 0.1); border-left: 2px solid #C41E3A; padding: 0.4rem 0.6rem; border-radius: 3px;">
+              <strong style="color: #f87171; font-size: 0.8rem;">Windshapers (Horde):</strong>
+              <div style="font-size: 0.76rem; color: #e2e8f0; margin-top: 0.15rem;">Active: <strong>Skysight</strong> (+10% run speed boost) + Walk on Air, Wind Blessed, Elemental Insight</div>
+            </div>
+          </div>
+        </div>
+      ` : ''}
     `;
 
     // 3. Allowed Classes for this Race

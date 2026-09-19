@@ -2516,3 +2516,319 @@ input:checked + .toggle-slider:before {
   color: #fff;
   text-decoration: underline;
 }
+
+/* ==========================================================================
+   WARCRAFT TAVERN EXPANSIONS: LEGACY MILESTONES & CHALLENGES
+   ========================================================================== */
+.milestone-rewards-container {
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 1.2rem;
+  margin: 1.2rem 0 1.5rem;
+}
+
+.milestone-rewards-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.milestone-rewards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 0.8rem;
+}
+
+.milestone-reward-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 0.85rem;
+  position: relative;
+  transition: var(--transition);
+}
+
+.milestone-reward-card.unlocked {
+  border-color: #10b981;
+  background: linear-gradient(180deg, rgba(16, 185, 129, 0.12) 0%, var(--bg-card) 60%);
+  box-shadow: 0 0 15px rgba(16, 185, 129, 0.2);
+}
+
+.milestone-points-badge {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.milestone-points-badge.unlocked {
+  background: rgba(16, 185, 129, 0.25);
+  color: #6ee7b7;
+  border: 1px solid #10b981;
+}
+
+.milestone-card-body {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+}
+
+.legacy-challenges-card {
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 1.2rem;
+}
+
+.legacy-challenges-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 0.8rem;
+}
+
+.challenge-item-card {
+  background: var(--bg-card);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius-sm);
+  padding: 0.75rem 0.9rem;
+  border-left: 3px solid var(--color-sky);
+}
+
+/* ==========================================================================
+   CAMPING & FIELD STATIONS HUB
+   ========================================================================== */
+.camping-overview-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-md);
+  padding: 1.6rem;
+  box-shadow: var(--shadow-card);
+  margin-bottom: 2rem;
+}
+
+.camping-overview-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 1.8rem;
+}
+
+@media (max-width: 900px) {
+  .camping-overview-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.camping-qol-box {
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 1rem 1.2rem;
+}
+
+.camping-kit-chip {
+  background: rgba(243, 192, 67, 0.1);
+  border: 1px solid rgba(243, 192, 67, 0.3);
+  border-radius: var(--radius-sm);
+  padding: 0.4rem 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.camping-stations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1.4rem;
+  margin-bottom: 2.5rem;
+}
+
+.camping-station-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 1.3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: var(--transition);
+}
+
+.camping-station-card:hover {
+  border-color: var(--border-gold);
+  transform: translateY(-2px);
+}
+
+.station-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.mirrored-buff-badge {
+  background: rgba(139, 92, 246, 0.15);
+  border: 1px solid rgba(139, 92, 246, 0.4);
+  color: #c084fc;
+  font-size: 0.75rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: var(--radius-sm);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.station-tiers-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.station-tier-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  background: rgba(0, 0, 0, 0.25);
+  padding: 0.55rem 0.75rem;
+  border-radius: var(--radius-sm);
+}
+
+.tier-pill {
+  background: rgba(255, 255, 255, 0.1);
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-gold);
+  padding: 0.15rem 0.45rem;
+  border-radius: 3px;
+  white-space: nowrap;
+}
+
+/* ==========================================================================
+   DATAMINED MOUNTS & STAT CAPS
+   ========================================================================== */
+.mounts-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 1.4rem;
+  margin-bottom: 2rem;
+}
+
+.mount-category-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 1.3rem;
+  transition: var(--transition);
+}
+
+.mount-category-card:hover {
+  border-color: var(--border-gold);
+}
+
+.mount-cat-header {
+  margin-bottom: 1rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.mount-items-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.mount-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.86rem;
+  color: #e2e8f0;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 0.45rem 0.65rem;
+  border-radius: var(--radius-sm);
+}
+
+.stats-caps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.2rem;
+}
+
+.stat-cap-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 1.3rem;
+  position: relative;
+  transition: var(--transition);
+}
+
+.stat-cap-card:hover {
+  border-color: var(--color-sky);
+  transform: translateY(-2px);
+}
+
+.stat-cap-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.6rem;
+}
+
+.cap-target-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  background: rgba(56, 189, 248, 0.15);
+  border: 1px solid #38bdf8;
+  color: #7dd3fc;
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px;
+}
+
+.stat-cap-value {
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: var(--text-gold);
+  font-family: var(--font-heading);
+  letter-spacing: 0.02em;
+}
+
+.stat-cap-name {
+  font-size: 1.05rem;
+  color: #fff;
+  margin: 0.2rem 0 0.4rem;
+}
+
+.stat-cap-desc {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+  margin: 0;
+}
+
+.combat-rules-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1rem;
+}
+
+.combat-rule-card {
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 1rem 1.2rem;
+  border-top: 2px solid var(--border-gold);
+}
