@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
   renderEngineSpecs();
   renderProfessionPassives();
   renderGameEditions();
+  renderMegarealms();
 });
 
 /* ==========================================================================
@@ -974,6 +975,28 @@ function renderGameEditions() {
       </div>
     </div>
   `;
+}
+
+function renderMegarealms() {
+  const container = document.getElementById('megarealms-container');
+  if (!container || !WOW_FOREVER_DATA.megarealmsAndRulesets) return;
+
+  container.innerHTML = WOW_FOREVER_DATA.megarealmsAndRulesets.map(realm => `
+    <div class="megarealm-card">
+      <div>
+        <div class="megarealm-header">
+          <div>
+            <span class="status-badge-highlight" style="font-size: 0.72rem;">${escapeHtml(realm.badge)}</span>
+            <h3 class="megarealm-title">${realm.icon} ${escapeHtml(realm.name)}</h3>
+          </div>
+        </div>
+        <span class="megarealm-status">${escapeHtml(realm.status)}</span>
+        <ul class="megarealm-rules-list">
+          ${realm.rules.map(rule => `<li>${escapeHtml(rule)}</li>`).join('')}
+        </ul>
+      </div>
+    </div>
+  `).join('');
 }
 
 /* ==========================================================================

@@ -2832,3 +2832,156 @@ input:checked + .toggle-slider:before {
   padding: 1rem 1.2rem;
   border-top: 2px solid var(--border-gold);
 }
+
+/* Class Talent Milestones & Global Reworks Banner */
+.class-milestones-banner {
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(30, 41, 59, 0.8) 100%);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.milestones-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.milestone-step-card {
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.milestone-step-card.featured-step {
+  border-color: rgba(56, 189, 248, 0.6);
+  background: linear-gradient(180deg, rgba(56, 189, 248, 0.12) 0%, rgba(0, 0, 0, 0.45) 100%);
+}
+
+.milestone-step-pts {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--text-gold);
+}
+
+.milestone-step-card p {
+  font-size: 0.8rem;
+  color: #cbd5e1;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.baseline-buffs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 0.75rem;
+}
+
+.baseline-buff-item {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius-sm);
+  padding: 0.75rem 1rem;
+}
+
+.baseline-buff-item span {
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+
+.baseline-buff-item strong {
+  display: block;
+  font-size: 0.88rem;
+  color: #fff;
+  margin-bottom: 0.2rem;
+}
+
+.baseline-buff-item p {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  line-height: 1.35;
+  margin: 0;
+}
+
+/* Megarealms Grid */
+.megarealms-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 2.5rem;
+}
+
+.megarealm-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: var(--transition);
+}
+
+.megarealm-card:hover {
+  border-color: var(--border-gold);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+}
+
+.megarealm-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.75rem;
+}
+
+.megarealm-title {
+  font-size: 1.25rem;
+  color: #fff;
+  margin: 0.2rem 0;
+}
+
+.megarealm-status {
+  font-size: 0.75rem;
+  color: #38bdf8;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.megarealm-rules-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  font-size: 0.82rem;
+  color: #cbd5e1;
+  padding: 0;
+  margin: 0;
+}
+
+.megarealm-rules-list li {
+  position: relative;
+  padding-left: 1.1rem;
+  line-height: 1.4;
+}
+
+.megarealm-rules-list li::before {
+  content: "✦";
+  position: absolute;
+  left: 0;
+  color: var(--text-gold);
+  font-size: 0.75rem;
+}

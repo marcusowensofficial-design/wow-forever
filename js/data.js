@@ -1009,8 +1009,16 @@ const WOW_FOREVER_DATA = {
     ],
     rules: [
       {
+        title: "Healing-to-Spell Damage Conversion (+33.3%)",
+        desc: "All equipment granting Bonus Healing automatically converts +33.3% (+1/3) of that value into Bonus Spell Damage. Healers wearing healing gear automatically deal viable offensive spell damage for solo leveling and open-world farming without carrying a secondary DPS gear set."
+      },
+      {
         title: "Unified Critical Strike",
         desc: "Critical strike on gear is no longer split between melee and spell crit. Items grant unified 'Critical Strike Chance' that enhances both physical hits (100% bonus damage) and spell hits (50% bonus damage)."
+      },
+      {
+        title: "Unified Hit & Spell Hit Scaling",
+        desc: "Hit chance (melee, ranged, and spell) is consolidated on itemization. Gear granting +Hit applies uniformly across physical attacks (9% cap vs L63 raid bosses) and spell attacks (16% cap vs L63 raid bosses)."
       },
       {
         title: "Spell Downranking Threshold",
@@ -1782,6 +1790,80 @@ const WOW_FOREVER_DATA = {
       ]
     }
   ],
+
+  megarealmsAndRulesets: [
+    {
+      id: "normal",
+      name: "Normal (PvE) Megarealm",
+      badge: "Standard Adventuring",
+      icon: "🌍",
+      status: "Available at Launch (Nov 4, 2026)",
+      rules: [
+        "Unrestricted open-world questing and exploration without forced faction PvP flags.",
+        "Opt-in PvP enabled via /pvp flag or entering enemy capitals/territories.",
+        "Full access to Warsong Gulch, Arathi Basin, and Alterac Valley battlegrounds.",
+        "Guaranteed persistent server population through seamless megarealm sharding."
+      ]
+    },
+    {
+      id: "pvp",
+      name: "PvP Megarealm",
+      badge: "Faction Warfare",
+      icon: "⚔️",
+      status: "Available at Launch (Nov 4, 2026)",
+      rules: [
+        "Contested zones are permanently PvP-flagged for authentic open-world warfare.",
+        "Reworked Rank 14 Honor System: No weekly decay, predictable milestone progression.",
+        "World PvP objectives in Hillsbrad, Silithus, and Eastern Plaguelands award honor tokens.",
+        "Faction balance enforced through dynamic login queues and layering."
+      ]
+    },
+    {
+      id: "rp",
+      name: "Roleplay (RP) Megarealm",
+      badge: "Immersive Lore",
+      icon: "📜",
+      status: "Available at Launch (Nov 4, 2026)",
+      rules: [
+        "Strict character naming rules and immersive community guidelines enforced.",
+        "Dedicated tavern and campsite gathering zones with spatial roleplay chat layers.",
+        "Open-world adventuring with opt-in PvP rules similar to Normal megarealms.",
+        "Enhanced emotes, camping interactions, and community storytelling support."
+      ]
+    },
+    {
+      id: "hardcore",
+      name: "Hardcore Megarealm",
+      badge: "Permadeath",
+      icon: "💀",
+      status: "Arriving Winter 2026",
+      rules: [
+        "Permanent death: Dying means your character cannot resurrect on the Hardcore megarealm.",
+        "Free character transfer upon death to the Normal (PvE) Megarealm to keep your progress.",
+        "Mak'gora: Official duels to the death supported with cosmetic ear trophy bounties.",
+        "Dungeon lockout restrictions: 24-hour dungeon lockout per dungeon while leveling under 60."
+      ]
+    }
+  ],
+
+  classTalentOverhauls: {
+    title: "Class Talent Milestones & Global Reworks",
+    milestones: [
+      { pts: 11, label: "11-Point Tier", desc: "Classic utility or signature early-spec active ability." },
+      { pts: 16, label: "16-Point Tier (✦ New in Forever)", desc: "Build-defining hybrid milestone talent. Unlocks major spec mechanics without deep 21+ point investment, enabling 31/16/4 or 16/16/19 hybrid configurations at Level 60." },
+      { pts: 21, label: "21-Point Tier", desc: "Mid-tree core power spike (e.g. Consecration was moved baseline, freeing 21-pt holy slot)." },
+      { pts: 31, label: "31-Point Capstone", desc: "Ultimate specialization capstone defining deep-tree mastery." }
+    ],
+    baselineAbilities: [
+      { cls: "Priest", name: "Divine Spirit", desc: "Grants party-wide Spirit buff without requiring 31 points in Discipline." },
+      { cls: "Priest", name: "Fear Ward", desc: "Baseline for ALL Priests across all races." },
+      { cls: "Paladin", name: "Blessing of Kings", desc: "10% all-stat blessing is baseline, no longer requiring 31 Retribution/Prot." },
+      { cls: "Paladin", name: "Blessing of Might", desc: "Baseline attack power blessing available to all specs." },
+      { cls: "Paladin", name: "Consecration", desc: "Baseline Holy AoE damage ability for all Paladins, no longer an 11-point Holy talent." },
+      { cls: "Paladin", name: "Seal of Fury & Judgement Taunt", desc: "Seal of Fury generates high Holy threat, and Judgement serves as a 10-yard ranged taunt when used with tanking seals." },
+      { cls: "Druid", name: "Improved Mark of the Wild", desc: "Baseline maximum stat and resistance buff scaling without talent point taxes." }
+    ]
+  },
 
   betaLevel20Checklist: [
     { id: "step-1", text: "Create your first WoW: Forever character (Try Skyborne or new class combo)", cat: "Character" },
