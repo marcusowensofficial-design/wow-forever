@@ -1,0 +1,2756 @@
+--[[
+    ForeverPlates
+    Sleek, modern, high-performance enemy nameplates for WoW Forever.
+    Compatible with 12.0 / Camelot / Classic Beta & Modern WoW.
+    
+    Zero-Taint Architecture:
+    - No overrides of shared Blizzard methods or global functions
+    - No OnValueChanged hooks on Blizzard status bars
+    - All addon textures/fontstrings stored in external addon table (plates[unitFrame])
+    - Strict issecretvalue() gating on all unit combat data
+--]]
+
+local ADDON_NAME, FP = ...
+
+-- 1. Font Registry (12 Fonts Total)
+local FONTS = {
+    expressway = "Interface\\AddOns\\ForeverPlates\\media\\Expressway.TTF",
+    forced     = "Interface\\AddOns\\ForeverPlates\\media\\ForcedSquare.ttf",
+    carlito    = "Interface\\AddOns\\ForeverPlates\\media\\Carlito.ttf",
+    accidental = "Interface\\AddOns\\ForeverPlates\\media\\Accidental.ttf",
+    oswald     = "Interface\\AddOns\\ForeverPlates\\media\\Oswald.ttf",
+    nueva      = "Interface\\AddOns\\ForeverPlates\\media\\Nueva.ttf",
+    trashhand  = "Interface\\AddOns\\ForeverPlates\\media\\TrashHand.ttf",
+    magic      = "Interface\\AddOns\\ForeverPlates\\media\\Magic.ttf",
+    blizzard   = "Fonts\\FRIZQT__.TTF",
+    arial      = "Fonts\\ARIALN.TTF",
+    morpheus   = "Fonts\\MORPHEUS.TTF",
+    skurri     = "Fonts\\SKURRI.TTF",
+}
+FP.FONTS = FONTS
+
+-- 2. Arrow Texture Registry (9 Arrow Styles)
+local ARROWS = {
+    neongreen  = { path = "Interface\\AddOns\\ForeverPlates\\media\\arrows\\NeonGreenArrow.tga",  name = "Neon Green",  w = 26, h = 34 },
+    neonred    = { path = "Interface\\AddOns\\ForeverPlates\\media\\arrows\\NeonRedArrow.tga",    name = "Neon Red",    w = 26, h = 34 },
+    neoncyan   = { path = "Interface\\AddOns\\ForeverPlates\\media\\arrows\\NeonCyanArrow.tga",   name = "Neon Cyan",   w = 26, h = 34 },
+    neonyellow = { path = "Interface\\AddOns\\ForeverPlates\\media\\arrows\\NeonYellowArrow.tga", name = "Neon Yellow", w = 26, h = 34 },
+    neonpurple = { path = "Interface\\AddOns\\ForeverPlates\\media\\arrows\\NeonPurpleArrow.tga", name = "Neon Purple", w = 26, h = 34 },
+    reticule   = { path = "Interface\\AddOns\\ForeverPlates\\media\\arrows\\NeonReticule.tga",    name = "Reticule",    w = 30, h = 30 },
+    cyanchev   = { path = "Interface\\AddOns\\ForeverPlates\\media\\arrows\\CyanChevronArrow.tga",name = "Cyan Chev",  w = 24, h = 24 },
+    redchev    = { path = "Interface\\AddOns\\ForeverPlates\\media\\arrows\\RedChevronArrow.tga", name = "Red Chev",   w = 24, h = 24 },
+    standard   = { path = "Interface\\AddOns\\ForeverPlates\\media\\arrow.tga",                   name = "Classic Red", w = 22, h = 22 },
+}
+FP.ARROWS = ARROWS
+
+-- 3. Target Health Bar Color Registry
+local TARGET_BAR_COLORS = {
+    REACTION = nil, -- Uses default reaction/class color
+    CYAN     = { r = 0.00, g = 0.85, b = 1.00, name = "Neon Cyan" },
+    GOLD     = { r = 1.00, g = 0.82, b = 0.00, name = "Sun Gold" },
+    PINK     = { r = 1.00, g = 0.25, b = 0.70, name = "Neon Pink" },
+    LIME     = { r = 0.25, g = 1.00, b = 0.25, name = "Neon Lime" },
+    PURPLE   = { r = 0.75, g = 0.30, b = 1.00, name = "Neon Purple" },
+    RED      = { r = 1.00, g = 0.15, b = 0.15, name = "Blood Red" },
+    WHITE    = { r = 0.95, g = 0.95, b = 0.95, name = "Pure White" },
+}
+FP.TARGET_BAR_COLORS = TARGET_BAR_COLORS
+
+-- 4. Name Font Color Registry
+local NAME_FONT_COLORS = {
+    WHITE    = { r = 1.00, g = 1.00, b = 1.00, name = "White" },
+    CLASS    = { r = 0.90, g = 0.90, b = 0.90, name = "Class Color" }, -- dynamic
+    REACTION = { r = 1.00, g = 0.80, b = 0.20, name = "Reaction" },   -- dynamic
+    GOLD     = { r = 1.00, g = 0.84, b = 0.00, name = "Gold" },
+    CYAN     = { r = 0.30, g = 0.90, b = 1.00, name = "Cyan" },
+    YELLOW   = { r = 1.00, g = 1.00, b = 0.30, name = "Yellow" },
+}
+FP.NAME_FONT_COLORS = NAME_FONT_COLORS
+
+-- 5. Health Bar Outline Color Registry (Applied to all mobs)
+local OUTLINE_COLORS = {
+    WHITE = { r = 1.00, g = 1.00, b = 1.00, a = 1.0, name = "Pure White" },
+    CYAN  = { r = 0.00, g = 0.85, b = 1.00, a = 1.0, name = "Neon Cyan" },
+    GOLD  = { r = 1.00, g = 0.82, b = 0.00, a = 1.0, name = "Sun Gold" },
+    LIME  = { r = 0.25, g = 1.00, b = 0.25, a = 1.0, name = "Neon Lime" },
+    RED   = { r = 1.00, g = 0.15, b = 0.15, a = 1.0, name = "Blood Red" },
+    DARK  = { r = 0.12, g = 0.12, b = 0.14, a = 1.0, name = "Slate Dark" },
+    NONE  = { r = 0.00, g = 0.00, b = 0.00, a = 0.0, name = "Hidden" },
+}
+FP.OUTLINE_COLORS = OUTLINE_COLORS
+
+local BAR_TEXTURE   = "Interface\\AddOns\\ForeverPlates\\media\\statusbar.tga"
+local FLAT_TEXTURE  = "Interface\\Buttons\\WHITE8X8"
+local ARROW_TEXTURE = "Interface\\AddOns\\ForeverPlates\\media\\arrow.tga"
+
+-- Internal registry for all addon elements (prevents adding fields to Blizzard frames)
+local plates = {}
+
+-- SavedVariables defaults
+local defaults = {
+    font = "forced",
+    targetArrowStyle = "neonred",
+    targetArrowSize = 32,
+    barWidth = 142,
+    barHeight = 18,
+    castBarHeight = 13,
+    nameFontSize = 16,
+    namePosition = "CENTER", -- "LEFT", "CENTER", "RIGHT"
+    targetBarColor = "LIME",
+    colorAllEnemyBars = true,
+    lockHealthBarColor = true,
+    alwaysShowSelectionHighlight = true,
+    outlineColor = "WHITE", -- "WHITE", "CYAN", "GOLD", "LIME", "RED", "DARK", "NONE"
+    outlineThickness = 3,
+    nameFontColor = "REACTION",
+    nonTargetAlpha = 1.0,
+    targetScale = 1.06,
+    showHealthText = true,
+    healthPosition = "CENTER", -- "CENTER", "RIGHT", "LEFT"
+    healthFormat = "CURRENT_MAX_PERCENT", -- "PERCENT", "CURRENT", "CURRENT_MAX", "BOTH", "CURRENT_MAX_PERCENT", "NONE"
+    healthFontSize = 17,
+    healthFontColor = "WHITE", -- "WHITE", "CYAN", "GOLD", "YELLOW"
+    showTargetGlow = false,
+    showTargetBrackets = false,
+    showTargetArrow = true,
+    showExecuteGlow = true,
+    executeThreshold = 20,
+    colorByThreat = true,
+    threatOnlyInGroup = true,
+    showEliteBadges = true,
+    showCastBarTimer = true,
+    classColorPlayers = true,
+    grayTappedMobs = true,
+    showTappedBadge = true,
+}
+FP.defaults = defaults
+
+-- Helper: Recursive copy of defaults without clobbering existing settings
+local function CopyDefaults(destination, source)
+    for key, defaultValue in pairs(source) do
+        if type(defaultValue) == "table" then
+            if type(destination[key]) ~= "table" then
+                destination[key] = {}
+            end
+            CopyDefaults(destination[key], defaultValue)
+        elseif destination[key] == nil then
+            destination[key] = defaultValue
+        end
+    end
+end
+FP.CopyDefaults = CopyDefaults
+
+-- Diagnostic DB logger to verify SavedVariables vs Beta Snapshot loading
+local function DebugDB(stage)
+    if not FP.verboseDebug then return end
+    local function FP_Print(msg)
+        if DEFAULT_CHAT_FRAME and DEFAULT_CHAT_FRAME.AddMessage then
+            DEFAULT_CHAT_FRAME:AddMessage(msg)
+        elseif print then
+            print(msg)
+        end
+    end
+
+    if type(ForeverPlatesDB) ~= "table" then
+        FP_Print("|cffff4444[ForeverPlates Debug]|r DB missing at: " .. tostring(stage))
+        return
+    end
+    local count = 0
+    for _ in pairs(ForeverPlatesDB) do
+        count = count + 1
+    end
+    local isSnapshot = ForeverPlatesDB._isBetaSnapshot and " |cff00c0ff(Beta Snapshot Restored)|r" or " |cff00ff00(SavedVariables Restored)|r"
+    FP_Print(string.format(
+        "|cff55ff55[ForeverPlates]|r %s | keys=%d | font=%s | barColor=%s | arrow=%s%s",
+        tostring(stage),
+        count,
+        tostring(ForeverPlatesDB.font),
+        tostring(ForeverPlatesDB.targetBarColor),
+        tostring(ForeverPlatesDB.targetArrowStyle),
+        isSnapshot
+    ))
+end
+FP.DebugDB = DebugDB
+
+-- Dedicated Database Initializer (merges defaults without overwriting saved user settings)
+local function InitializeDatabase()
+    if type(ForeverPlatesDB) ~= "table" then
+        ForeverPlatesDB = {}
+    end
+    CopyDefaults(ForeverPlatesDB, defaults)
+    if ForeverPlatesDB.healthFontSize == nil or ForeverPlatesDB.healthFontSize == 10 then
+        ForeverPlatesDB.healthFontSize = 17
+    end
+    if ForeverPlatesDB.outlineThickness == nil or ForeverPlatesDB.outlineThickness < 3 then
+        ForeverPlatesDB.outlineThickness = 3
+    end
+    if ForeverPlatesDB.grayTappedMobs == nil then
+        ForeverPlatesDB.grayTappedMobs = true
+    end
+    if ForeverPlatesDB.showTappedBadge == nil then
+        ForeverPlatesDB.showTappedBadge = true
+    end
+    if ForeverPlatesDB.colorByThreat == nil then
+        ForeverPlatesDB.colorByThreat = true
+    end
+    if ForeverPlatesDB.threatOnlyInGroup == nil then
+        ForeverPlatesDB.threatOnlyInGroup = true
+    end
+    if ForeverPlatesDB.executeThreshold == nil then
+        ForeverPlatesDB.executeThreshold = 20
+    end
+    pcall(function()
+        if SetCVar then
+            SetCVar("nameplateMotion", "1")
+            SetCVar("nameplateOverlapH", "0.8")
+            SetCVar("nameplateOverlapV", "1.1")
+            SetCVar("nameplateSelectedScale", "1.15")
+            -- ForeverPlates renders its own custom health text directly on the health bar.
+            -- Keep Blizzard's native statusText disabled so it never renders rogue text
+            -- above the health bar or over the unit name.
+            SetCVar("statusTextDisplay", "NONE")
+            SetCVar("statusText", "0")
+        end
+        if SetCVar and GetCVar and GetCVar("nameplateDebuffPadding") ~= nil then
+            local currentPadding = tonumber(GetCVar("nameplateDebuffPadding")) or 4
+            if currentPadding < 6 then
+                SetCVar("nameplateDebuffPadding", "6")
+            end
+        end
+    end)
+    return ForeverPlatesDB
+end
+FP.InitializeDatabase = InitializeDatabase
+
+local function GetCurrentFont()
+    local db = ForeverPlatesDB or defaults
+    local key = (db.font or "expressway"):lower()
+    return FONTS[key] or FONTS.expressway
+end
+FP.GetCurrentFont = GetCurrentFont
+
+local function GetCurrentArrow()
+    local db = ForeverPlatesDB or defaults
+    local key = (db.targetArrowStyle or "neongreen"):lower()
+    return ARROWS[key] or ARROWS.neongreen
+end
+FP.GetCurrentArrow = GetCurrentArrow
+
+-- High-Contrast Modern Color Palette
+local COLOR_HOSTILE        = { r = 0.90, g = 0.22, b = 0.27 } -- Modern Crimson
+local COLOR_NEUTRAL        = { r = 1.00, g = 0.72, b = 0.01 } -- Warm Amber
+local COLOR_FRIENDLY       = { r = 0.16, g = 0.75, b = 0.40 } -- Soft Emerald
+local COLOR_TAPPED         = { r = 0.50, g = 0.50, b = 0.50 } -- Slate Grey
+local COLOR_TARGET_CYAN    = { r = 0.00, g = 0.85, b = 1.00, a = 0.95 } -- Glowing Cyan
+local COLOR_EXECUTE        = { r = 1.00, g = 0.30, b = 0.05, a = 0.95 } -- Fiery Orange/Red
+local COLOR_THREAT_WARNING = { r = 1.00, g = 0.60, b = 0.00 } -- Warm Amber/Orange (Losing aggro or high threat)
+local COLOR_THREAT_LOST    = { r = 0.95, g = 0.15, b = 0.15 } -- Blood Red (Lost aggro / mob on party member)
+-------------------------------------------------------------------------------
+-- Runtime Health Text Capability State (WoW Forever Beta Safe)
+-------------------------------------------------------------------------------
+FP.healthTextCapability = "BLIZZARD_TEXT_AVAILABLE"
+
+local function GetBlizzardHealthFontStrings(unitFrame)
+    if not unitFrame then return {} end
+    local hb = unitFrame.healthBar or (unitFrame.HealthBarsContainer and unitFrame.HealthBarsContainer.healthBar)
+    local list = {}
+    local seen = {}
+
+    local function addFS(fs)
+        if fs and fs.IsObjectType and fs:IsObjectType("FontString") and not seen[fs] then
+            seen[fs] = true
+            table.insert(list, fs)
+        end
+    end
+
+    if hb then
+        addFS(hb.TextString)
+        addFS(hb.Text)
+        addFS(hb.LeftText)
+        addFS(hb.RightText)
+        addFS(hb.HealthText)
+    end
+    if unitFrame.HealthBarsContainer then
+        addFS(unitFrame.HealthBarsContainer.TextString)
+        addFS(unitFrame.HealthBarsContainer.HealthBarText)
+        addFS(unitFrame.HealthBarsContainer.LeftText)
+        addFS(unitFrame.HealthBarsContainer.RightText)
+    end
+    addFS(unitFrame.healthText)
+
+    return list
+end
+FP.GetBlizzardHealthFontStrings = GetBlizzardHealthFontStrings
+
+local function FindBlizzardHealthText(unitFrame)
+    local list = GetBlizzardHealthFontStrings(unitFrame)
+    return list[1]
+end
+FP.FindBlizzardHealthText = FindBlizzardHealthText
+
+local function DetectHealthTextCapability()
+    FP.healthTextCapability = "BLIZZARD_TEXT_AVAILABLE"
+    FP.healthTextCapabilityChecked = true
+    return FP.healthTextCapability
+end
+FP.DetectHealthTextCapability = DetectHealthTextCapability
+
+local ApplyMatchingOutline, GetLevelFrame, GetLevelFontString, GetSelectedBorder, AdjustAuraFrames
+
+
+-------------------------------------------------------------------------------
+-- Helper: Number Abbreviation (12.5k, 1.4m)
+-------------------------------------------------------------------------------
+local function Abbreviate(val)
+    if not val or (issecretvalue and issecretvalue(val)) then return "0" end
+    if val >= 1000000 then
+        return string.format("%.1fm", val / 1000000)
+    elseif val >= 10000 then
+        return string.format("%.1fk", val / 1000)
+    else
+        return tostring(math.floor(val))
+    end
+end
+
+-------------------------------------------------------------------------------
+-- Helper: Get Reaction Color
+-------------------------------------------------------------------------------
+local function GetReactionColor(unit)
+    if not unit then return COLOR_HOSTILE.r, COLOR_HOSTILE.g, COLOR_HOSTILE.b end
+    local reaction = UnitReaction(unit, "player")
+    if reaction then
+        if reaction <= 3 then
+            return COLOR_HOSTILE.r, COLOR_HOSTILE.g, COLOR_HOSTILE.b
+        elseif reaction == 4 then
+            return COLOR_NEUTRAL.r, COLOR_NEUTRAL.g, COLOR_NEUTRAL.b
+        else
+            return COLOR_FRIENDLY.r, COLOR_FRIENDLY.g, COLOR_FRIENDLY.b
+        end
+    end
+    return COLOR_HOSTILE.r, COLOR_HOSTILE.g, COLOR_HOSTILE.b
+end
+
+-------------------------------------------------------------------------------
+-- Helper: Check if Unit is Tapped/Tagged by Another Player (Missed Tag)
+-------------------------------------------------------------------------------
+local function IsUnitTappedByOther(unit)
+    if not unit or not UnitExists(unit) then return false end
+    if UnitIsDead and UnitIsDead(unit) then return false end
+    if UnitIsPlayer and UnitIsPlayer(unit) then return false end
+
+    -- Modern & Classic Beta Tap-Denied API: true if mob is tapped and player cannot loot/XP
+    if UnitIsTapDenied and UnitIsTapDenied(unit) then
+        return true
+    end
+
+    -- Universal Classic Fallback Check
+    if UnitIsTapped and UnitIsTapped(unit) then
+        local byPlayer = UnitIsTappedByPlayer and UnitIsTappedByPlayer(unit)
+        local byGroup = UnitIsTappedByAllThreatList and UnitIsTappedByAllThreatList(unit)
+        if not byPlayer and not byGroup then
+            return true
+        end
+    end
+
+    return false
+end
+FP.IsUnitTappedByOther = IsUnitTappedByOther
+
+-------------------------------------------------------------------------------
+-- Helper: Safe Health Percent Query (12.0 Secret-Value Guarded)
+-------------------------------------------------------------------------------
+local function GetSafeHealthPercent(unit, unitFrame)
+    if not unit or not UnitExists(unit) then return nil end
+
+    -- Source 1: Direct arithmetic via pcall
+    local hp = UnitHealth(unit)
+    local maxHp = UnitHealthMax(unit)
+    if hp and maxHp then
+        local ok, pct = pcall(function()
+            if maxHp > 0 then
+                return (hp / maxHp) * 100
+            end
+        end)
+        if ok and type(pct) == "number" and pct >= 0 then
+            return pct
+        end
+    end
+
+    -- Source 2: UnitHealthPercent API (12.0+)
+    if UnitHealthPercent and type(UnitHealthPercent) == "function" then
+        local ok, p = pcall(function()
+            local val = UnitHealthPercent(unit)
+            if val and (not issecretvalue or not issecretvalue(val)) then
+                return val <= 1.0 and (val * 100) or val
+            end
+        end)
+        if ok and type(p) == "number" and p >= 0 then
+            return p
+        end
+    end
+
+    -- Source 3: StatusBar values (zero-taint read from UI widget)
+    if unitFrame then
+        local hb = unitFrame.healthBar or (unitFrame.HealthBarsContainer and unitFrame.HealthBarsContainer.healthBar)
+        if hb and hb.GetValue and hb.GetMinMaxValues then
+            local ok, pct = pcall(function()
+                local val = hb:GetValue()
+                local minV, maxV = hb:GetMinMaxValues()
+                if maxV and maxV > 0 then
+                    return (val / maxV) * 100
+                end
+            end)
+            if ok and type(pct) == "number" and pct >= 0 then
+                return pct
+            end
+        end
+    end
+
+    return nil
+end
+FP.GetSafeHealthPercent = GetSafeHealthPercent
+
+-------------------------------------------------------------------------------
+-- Helper: Player Role & Threat Queries (Plater-Style Group/Raid Aware)
+-------------------------------------------------------------------------------
+local function IsPlayerTank()
+    if UnitGroupRolesAssigned then
+        local ok, role = pcall(UnitGroupRolesAssigned, "player")
+        if ok and role == "TANK" then return true end
+    end
+    if GetShapeshiftFormID then
+        local ok, form = pcall(GetShapeshiftFormID)
+        if ok and form == 5 then return true end -- Bear Form (Druid)
+    end
+    if GetShapeshiftForm then
+        local ok, form = pcall(GetShapeshiftForm)
+        if ok then
+            local _, englishClass = UnitClass("player")
+            if englishClass == "WARRIOR" and form == 2 then return true end -- Defensive Stance
+        end
+    end
+    return false
+end
+FP.IsPlayerTank = IsPlayerTank
+
+local function GetSafeThreatStatus(unit)
+    if not unit or not UnitExists(unit) or not UnitCanAttack("player", unit) then
+        return nil, nil
+    end
+    -- If restricted to group/raid, verify group status
+    if ForeverPlatesDB.threatOnlyInGroup and not IsInGroup() and not IsInRaid() then
+        return nil, nil
+    end
+    local ok, isTanking, threatStatus = pcall(UnitDetailedThreatSituation, "player", unit)
+    if not ok or threatStatus == nil then return nil, nil end
+    if issecretvalue and issecretvalue(threatStatus) then return nil, nil end
+    return isTanking, threatStatus
+end
+FP.GetSafeThreatStatus = GetSafeThreatStatus
+
+-------------------------------------------------------------------------------
+-- Helper: Create Pixel Border Lines (Dynamic Thickness Support)
+-------------------------------------------------------------------------------
+local function CreatePixelBorder(parent, inset, layer, sublevel)
+    inset = inset or 0
+    layer = layer or "OVERLAY"
+    sublevel = sublevel or 5
+    local border = {}
+
+    local top = parent:CreateTexture(nil, layer, nil, sublevel)
+    top:SetTexture(FLAT_TEXTURE)
+    top:SetVertexColor(1.0, 1.0, 1.0, 1.0)
+    border.top = top
+
+    local bottom = parent:CreateTexture(nil, layer, nil, sublevel)
+    bottom:SetTexture(FLAT_TEXTURE)
+    bottom:SetVertexColor(1.0, 1.0, 1.0, 1.0)
+    border.bottom = bottom
+
+    local left = parent:CreateTexture(nil, layer, nil, sublevel)
+    left:SetTexture(FLAT_TEXTURE)
+    left:SetVertexColor(1.0, 1.0, 1.0, 1.0)
+    border.left = left
+
+    local right = parent:CreateTexture(nil, layer, nil, sublevel)
+    right:SetTexture(FLAT_TEXTURE)
+    right:SetVertexColor(1.0, 1.0, 1.0, 1.0)
+    border.right = right
+
+    function border:SetThickness(t)
+        t = math.max(1, t or 1)
+        top:ClearAllPoints()
+        top:SetPoint("TOPLEFT", parent, "TOPLEFT", -t, t)
+        top:SetPoint("BOTTOMRIGHT", parent, "TOPRIGHT", t, 0)
+
+        bottom:ClearAllPoints()
+        bottom:SetPoint("TOPLEFT", parent, "BOTTOMLEFT", -t, 0)
+        bottom:SetPoint("BOTTOMRIGHT", parent, "BOTTOMRIGHT", t, -t)
+
+        left:ClearAllPoints()
+        left:SetPoint("TOPLEFT", parent, "TOPLEFT", -t, t)
+        left:SetPoint("BOTTOMRIGHT", parent, "BOTTOMLEFT", 0, -t)
+
+        right:ClearAllPoints()
+        right:SetPoint("TOPLEFT", parent, "TOPRIGHT", 0, t)
+        right:SetPoint("BOTTOMRIGHT", parent, "BOTTOMRIGHT", t, -t)
+    end
+
+    border:SetThickness(inset > 0 and inset or 1)
+
+    function border:SetColor(r, g, b, a)
+        a = a or 1.0
+        top:SetVertexColor(r, g, b, a)
+        bottom:SetVertexColor(r, g, b, a)
+        left:SetVertexColor(r, g, b, a)
+        right:SetVertexColor(r, g, b, a)
+    end
+
+    function border:SetShown(show)
+        top:SetShown(show)
+        bottom:SetShown(show)
+        left:SetShown(show)
+        right:SetShown(show)
+    end
+
+    return border
+end
+
+-------------------------------------------------------------------------------
+-- Helper: Resolve Unit for a UnitFrame
+-------------------------------------------------------------------------------
+local function GetUnitForFrame(unitFrame)
+    if not unitFrame then return nil end
+    local d = plates[unitFrame]
+    local unit = (d and d.unit) or unitFrame.unit or unitFrame.displayedUnit or (unitFrame:GetParent() and unitFrame:GetParent().namePlateUnitToken)
+    return unit
+end
+FP.GetUnitForFrame = GetUnitForFrame
+
+-------------------------------------------------------------------------------
+-- Update Health Text & Positioning (Zero-Taint / 12.0 Composite Display)
+-------------------------------------------------------------------------------
+local function UpdateHealthText(unitFrame, passedUnit)
+    if not unitFrame or (unitFrame.IsForbidden and unitFrame:IsForbidden()) then return end
+    local data = plates[unitFrame]
+    local hb = unitFrame.healthBar or (unitFrame.HealthBarsContainer and unitFrame.HealthBarsContainer.healthBar)
+    if not hb or not data then return end
+
+    -- Manage Blizzard native health text strings (hide safely with zero taint)
+    local fmt = ForeverPlatesDB.healthFormat or "CURRENT_MAX"
+    local blizzTexts = GetBlizzardHealthFontStrings(unitFrame)
+    if blizzTexts then
+        for _, fs in ipairs(blizzTexts) do
+            pcall(fs.SetAlpha, fs, 0)
+        end
+    end
+
+    -- Ensure custom fontstrings exist
+    if not data.hpCurrent then
+        data.hpCurrent = hb:CreateFontString(nil, "OVERLAY", nil, 7)
+    end
+    if not data.hpDivider then
+        data.hpDivider = hb:CreateFontString(nil, "OVERLAY", nil, 7)
+    end
+    if not data.hpMax then
+        data.hpMax = hb:CreateFontString(nil, "OVERLAY", nil, 7)
+    end
+    if not data.hpPercent then
+        data.hpPercent = hb:CreateFontString(nil, "OVERLAY", nil, 7)
+    end
+
+    -- If disabled, hide our composite fontstrings and return
+    if not ForeverPlatesDB.showHealthText or fmt == "NONE" then
+        if data.hpCurrent then data.hpCurrent:Hide() end
+        if data.hpDivider then data.hpDivider:Hide() end
+        if data.hpMax then data.hpMax:Hide() end
+        if data.hpPercent then data.hpPercent:Hide() end
+        return
+    end
+
+    -- Typography & Styling
+    local font = GetCurrentFont()
+    local size = ForeverPlatesDB.healthFontSize or 17
+    local colorKey = tostring(ForeverPlatesDB.healthFontColor or "WHITE"):upper()
+    local r, g, b = 1.0, 1.0, 1.0
+    if colorKey == "CYAN" then
+        r, g, b = 0.30, 0.90, 1.00
+    elseif colorKey == "GOLD" then
+        r, g, b = 1.00, 0.84, 0.00
+    elseif colorKey == "YELLOW" then
+        r, g, b = 1.00, 1.00, 0.30
+    elseif colorKey == "LIME" or colorKey == "GREEN" then
+        r, g, b = 0.25, 1.00, 0.25
+    end
+
+    for _, fs in ipairs({ data.hpCurrent, data.hpDivider, data.hpMax, data.hpPercent }) do
+        if fs then
+            fs:SetFont(font, size, "OUTLINE")
+            fs:SetShadowOffset(1, -1)
+            fs:SetShadowColor(0, 0, 0, 0.95)
+            fs:SetTextColor(r, g, b, 1)
+            fs:SetDrawLayer("OVERLAY", 7)
+        end
+    end
+
+    -- Query Unit Health
+    local unit = passedUnit or GetUnitForFrame(unitFrame)
+    if not unit or not UnitExists(unit) then
+        if data.hpCurrent then data.hpCurrent:Hide() end
+        if data.hpDivider then data.hpDivider:Hide() end
+        if data.hpMax then data.hpMax:Hide() end
+        if data.hpPercent then data.hpPercent:Hide() end
+        return
+    end
+
+    if UnitIsDead and (UnitIsDead(unit) or UnitIsGhost(unit)) then
+        if data.hpCurrent then
+            data.hpCurrent:ClearAllPoints()
+            data.hpCurrent:SetPoint("CENTER", hb, "CENTER", 0, 0)
+            data.hpCurrent:SetJustifyH("CENTER")
+            data.hpCurrent:SetText("Dead")
+            data.hpCurrent:Show()
+        end
+        if data.hpDivider then data.hpDivider:Hide() end
+        if data.hpMax then data.hpMax:Hide() end
+        if data.hpPercent then data.hpPercent:Hide() end
+        return
+    end
+
+    local hp = UnitHealth(unit)
+    local maxHp = UnitHealthMax(unit)
+
+    if not hp or not maxHp then
+        if data.hpCurrent then data.hpCurrent:Hide() end
+        if data.hpDivider then data.hpDivider:Hide() end
+        if data.hpMax then data.hpMax:Hide() end
+        if data.hpPercent then data.hpPercent:Hide() end
+        return
+    end
+
+    -- Robust secret value detection
+    local isSecret = false
+    if issecretvalue then
+        isSecret = issecretvalue(hp) or issecretvalue(maxHp)
+    else
+        local okTest = pcall(function() return maxHp > 0 end)
+        if not okTest then
+            isSecret = true
+        end
+    end
+
+    local pos = ForeverPlatesDB.healthPosition or "CENTER"
+
+    -- Calculate percent string safely across all sources
+    local pctStr = nil
+
+    -- Source 1: Direct math via pcall (if not secret)
+    if not isSecret then
+        local ok, pct = pcall(function()
+            if maxHp > 0 then
+                return math.floor((hp / maxHp) * 100 + 0.5)
+            end
+        end)
+        if ok and type(pct) == "number" and pct >= 0 then
+            pctStr = pct .. "%"
+        end
+    end
+
+    -- Source 2: StatusBar values (read from Blizzard status bar widget)
+    if not pctStr and hb and hb.GetValue and hb.GetMinMaxValues then
+        local ok, pct = pcall(function()
+            local val = hb:GetValue()
+            local _, maxV = hb:GetMinMaxValues()
+            if maxV and maxV > 0 then
+                return math.floor((val / maxV) * 100 + 0.5)
+            end
+        end)
+        if ok and type(pct) == "number" and pct >= 0 then
+            pctStr = pct .. "%"
+        end
+    end
+
+    -- Source 3: Visual StatusBar fill ratio (immune to secret values!)
+    if not pctStr and hb and hb.GetStatusBarTexture and hb.GetWidth then
+        local ok, pct = pcall(function()
+            local tex = hb:GetStatusBarTexture()
+            local w = hb:GetWidth()
+            if tex and tex.GetWidth and w and w > 0 then
+                local tw = tex:GetWidth()
+                if tw and type(tw) == "number" then
+                    local p = math.floor((tw / w) * 100 + 0.5)
+                    if p > 100 then p = 100 end
+                    if p < 0 then p = 0 end
+                    return p
+                end
+            end
+        end)
+        if ok and type(pct) == "number" then
+            pctStr = pct .. "%"
+        end
+    end
+
+    -- Source 4: Fallback
+    if not pctStr then
+        pctStr = "100%"
+    end
+
+    -- Layout & Text Assignment
+    if fmt == "CURRENT" then
+        if isSecret then
+            data.hpCurrent:SetText(hp)
+        else
+            data.hpCurrent:SetText(Abbreviate(hp))
+        end
+        if data.hpDivider then data.hpDivider:Hide() end
+        if data.hpMax then data.hpMax:Hide() end
+        if data.hpPercent then data.hpPercent:Hide() end
+
+        data.hpCurrent:ClearAllPoints()
+        if pos == "LEFT" then
+            data.hpCurrent:SetPoint("LEFT", hb, "LEFT", 4, 0)
+            data.hpCurrent:SetJustifyH("LEFT")
+        elseif pos == "RIGHT" then
+            data.hpCurrent:SetPoint("RIGHT", hb, "RIGHT", -4, 0)
+            data.hpCurrent:SetJustifyH("RIGHT")
+        else
+            data.hpCurrent:SetPoint("CENTER", hb, "CENTER", 0, 0)
+            data.hpCurrent:SetJustifyH("CENTER")
+        end
+        data.hpCurrent:Show()
+
+    elseif fmt == "PERCENT" then
+        data.hpCurrent:SetText(pctStr)
+        if data.hpDivider then data.hpDivider:Hide() end
+        if data.hpMax then data.hpMax:Hide() end
+        if data.hpPercent then data.hpPercent:Hide() end
+
+        data.hpCurrent:ClearAllPoints()
+        if pos == "LEFT" then
+            data.hpCurrent:SetPoint("LEFT", hb, "LEFT", 4, 0)
+            data.hpCurrent:SetJustifyH("LEFT")
+        elseif pos == "RIGHT" then
+            data.hpCurrent:SetPoint("RIGHT", hb, "RIGHT", -4, 0)
+            data.hpCurrent:SetJustifyH("RIGHT")
+        else
+            data.hpCurrent:SetPoint("CENTER", hb, "CENTER", 0, 0)
+            data.hpCurrent:SetJustifyH("CENTER")
+        end
+        data.hpCurrent:Show()
+
+    elseif fmt == "BOTH" then
+        -- "120 (100%)"
+        if isSecret then
+            data.hpCurrent:SetText(hp)
+            data.hpDivider:SetText(" (")
+            data.hpMax:SetText(pctStr)
+            data.hpPercent:SetText(")")
+
+            data.hpDivider:ClearAllPoints()
+            data.hpCurrent:ClearAllPoints()
+            data.hpMax:ClearAllPoints()
+            data.hpPercent:ClearAllPoints()
+
+            if pos == "LEFT" then
+                data.hpCurrent:SetPoint("LEFT", hb, "LEFT", 4, 0)
+                data.hpCurrent:SetJustifyH("LEFT")
+                data.hpDivider:SetPoint("LEFT", data.hpCurrent, "RIGHT", 0, 0)
+                data.hpDivider:SetJustifyH("LEFT")
+                data.hpMax:SetPoint("LEFT", data.hpDivider, "RIGHT", 0, 0)
+                data.hpMax:SetJustifyH("LEFT")
+                data.hpPercent:SetPoint("LEFT", data.hpMax, "RIGHT", 0, 0)
+                data.hpPercent:SetJustifyH("LEFT")
+            elseif pos == "RIGHT" then
+                data.hpPercent:SetPoint("RIGHT", hb, "RIGHT", -4, 0)
+                data.hpPercent:SetJustifyH("RIGHT")
+                data.hpMax:SetPoint("RIGHT", data.hpPercent, "LEFT", 0, 0)
+                data.hpMax:SetJustifyH("RIGHT")
+                data.hpDivider:SetPoint("RIGHT", data.hpMax, "LEFT", 0, 0)
+                data.hpDivider:SetJustifyH("RIGHT")
+                data.hpCurrent:SetPoint("RIGHT", data.hpDivider, "LEFT", 0, 0)
+                data.hpCurrent:SetJustifyH("RIGHT")
+            else
+                data.hpDivider:SetPoint("CENTER", hb, "CENTER", -10, 0)
+                data.hpDivider:SetJustifyH("CENTER")
+                data.hpCurrent:SetPoint("RIGHT", data.hpDivider, "LEFT", 0, 0)
+                data.hpCurrent:SetJustifyH("RIGHT")
+                data.hpMax:SetPoint("LEFT", data.hpDivider, "RIGHT", 0, 0)
+                data.hpMax:SetJustifyH("LEFT")
+                data.hpPercent:SetPoint("LEFT", data.hpMax, "RIGHT", 0, 0)
+                data.hpPercent:SetJustifyH("LEFT")
+            end
+            data.hpCurrent:Show()
+            data.hpDivider:Show()
+            data.hpMax:Show()
+            data.hpPercent:Show()
+        else
+            data.hpCurrent:SetText(Abbreviate(hp) .. " (" .. pctStr .. ")")
+            if data.hpDivider then data.hpDivider:Hide() end
+            if data.hpMax then data.hpMax:Hide() end
+            if data.hpPercent then data.hpPercent:Hide() end
+
+            data.hpCurrent:ClearAllPoints()
+            if pos == "LEFT" then
+                data.hpCurrent:SetPoint("LEFT", hb, "LEFT", 4, 0)
+                data.hpCurrent:SetJustifyH("LEFT")
+            elseif pos == "RIGHT" then
+                data.hpCurrent:SetPoint("RIGHT", hb, "RIGHT", -4, 0)
+                data.hpCurrent:SetJustifyH("RIGHT")
+            else
+                data.hpCurrent:SetPoint("CENTER", hb, "CENTER", 0, 0)
+                data.hpCurrent:SetJustifyH("CENTER")
+            end
+            data.hpCurrent:Show()
+        end
+
+    elseif fmt == "CURRENT_MAX_PERCENT" then
+        -- "180/180 100%" (Zero gap around slash, clean percentage to the right)
+        if isSecret then
+            data.hpCurrent:SetText(hp)
+            data.hpDivider:SetText("/")
+            data.hpMax:SetText(maxHp)
+            data.hpPercent:SetText(pctStr)
+
+            data.hpDivider:ClearAllPoints()
+            data.hpCurrent:ClearAllPoints()
+            data.hpMax:ClearAllPoints()
+            data.hpPercent:ClearAllPoints()
+
+            if pos == "LEFT" then
+                data.hpCurrent:SetPoint("LEFT", hb, "LEFT", 4, 0)
+                data.hpCurrent:SetJustifyH("LEFT")
+                data.hpDivider:SetPoint("LEFT", data.hpCurrent, "RIGHT", 0, 0)
+                data.hpDivider:SetJustifyH("LEFT")
+                data.hpMax:SetPoint("LEFT", data.hpDivider, "RIGHT", 0, 0)
+                data.hpMax:SetJustifyH("LEFT")
+                data.hpPercent:SetPoint("LEFT", data.hpMax, "RIGHT", 4, 0)
+                data.hpPercent:SetJustifyH("LEFT")
+            elseif pos == "RIGHT" then
+                data.hpPercent:SetPoint("RIGHT", hb, "RIGHT", -4, 0)
+                data.hpPercent:SetJustifyH("RIGHT")
+                data.hpMax:SetPoint("RIGHT", data.hpPercent, "LEFT", -4, 0)
+                data.hpMax:SetJustifyH("RIGHT")
+                data.hpDivider:SetPoint("RIGHT", data.hpMax, "LEFT", 0, 0)
+                data.hpDivider:SetJustifyH("RIGHT")
+                data.hpCurrent:SetPoint("RIGHT", data.hpDivider, "LEFT", 0, 0)
+                data.hpCurrent:SetJustifyH("RIGHT")
+            else
+                -- CENTER: Center the composite block horizontally on the health bar
+                data.hpDivider:SetPoint("CENTER", hb, "CENTER", -16, 0)
+                data.hpDivider:SetJustifyH("CENTER")
+                data.hpCurrent:SetPoint("RIGHT", data.hpDivider, "LEFT", 0, 0)
+                data.hpCurrent:SetJustifyH("RIGHT")
+                data.hpMax:SetPoint("LEFT", data.hpDivider, "RIGHT", 0, 0)
+                data.hpMax:SetJustifyH("LEFT")
+                data.hpPercent:SetPoint("LEFT", data.hpMax, "RIGHT", 4, 0)
+                data.hpPercent:SetJustifyH("LEFT")
+            end
+
+            data.hpCurrent:Show()
+            data.hpDivider:Show()
+            data.hpMax:Show()
+            data.hpPercent:Show()
+        else
+            data.hpCurrent:SetText(Abbreviate(hp) .. "/" .. Abbreviate(maxHp) .. " " .. pctStr)
+            if data.hpDivider then data.hpDivider:Hide() end
+            if data.hpMax then data.hpMax:Hide() end
+            if data.hpPercent then data.hpPercent:Hide() end
+
+            data.hpCurrent:ClearAllPoints()
+            if pos == "LEFT" then
+                data.hpCurrent:SetPoint("LEFT", hb, "LEFT", 4, 0)
+                data.hpCurrent:SetJustifyH("LEFT")
+            elseif pos == "RIGHT" then
+                data.hpCurrent:SetPoint("RIGHT", hb, "RIGHT", -4, 0)
+                data.hpCurrent:SetJustifyH("RIGHT")
+            else
+                data.hpCurrent:SetPoint("CENTER", hb, "CENTER", 0, 0)
+                data.hpCurrent:SetJustifyH("CENTER")
+            end
+            data.hpCurrent:Show()
+        end
+
+    else
+        -- "CURRENT_MAX" ("120/120") - Zero gap around slash
+        if isSecret then
+            data.hpCurrent:SetText(hp)
+            data.hpDivider:SetText("/")
+            data.hpMax:SetText(maxHp)
+            if data.hpPercent then data.hpPercent:Hide() end
+
+            data.hpDivider:ClearAllPoints()
+            data.hpCurrent:ClearAllPoints()
+            data.hpMax:ClearAllPoints()
+
+            if pos == "LEFT" then
+                data.hpCurrent:SetPoint("LEFT", hb, "LEFT", 4, 0)
+                data.hpCurrent:SetJustifyH("LEFT")
+                data.hpDivider:SetPoint("LEFT", data.hpCurrent, "RIGHT", 0, 0)
+                data.hpDivider:SetJustifyH("LEFT")
+                data.hpMax:SetPoint("LEFT", data.hpDivider, "RIGHT", 0, 0)
+                data.hpMax:SetJustifyH("LEFT")
+            elseif pos == "RIGHT" then
+                data.hpMax:SetPoint("RIGHT", hb, "RIGHT", -4, 0)
+                data.hpMax:SetJustifyH("RIGHT")
+                data.hpDivider:SetPoint("RIGHT", data.hpMax, "LEFT", 0, 0)
+                data.hpDivider:SetJustifyH("RIGHT")
+                data.hpCurrent:SetPoint("RIGHT", data.hpDivider, "LEFT", 0, 0)
+                data.hpCurrent:SetJustifyH("RIGHT")
+            else
+                data.hpDivider:SetPoint("CENTER", hb, "CENTER", 0, 0)
+                data.hpDivider:SetJustifyH("CENTER")
+                data.hpCurrent:SetPoint("RIGHT", data.hpDivider, "LEFT", 0, 0)
+                data.hpCurrent:SetJustifyH("RIGHT")
+                data.hpMax:SetPoint("LEFT", data.hpDivider, "RIGHT", 0, 0)
+                data.hpMax:SetJustifyH("LEFT")
+            end
+
+            data.hpCurrent:Show()
+            data.hpDivider:Show()
+            data.hpMax:Show()
+        else
+            data.hpCurrent:SetText(Abbreviate(hp) .. "/" .. Abbreviate(maxHp))
+            if data.hpDivider then data.hpDivider:Hide() end
+            if data.hpMax then data.hpMax:Hide() end
+            if data.hpPercent then data.hpPercent:Hide() end
+
+            data.hpCurrent:ClearAllPoints()
+            if pos == "LEFT" then
+                data.hpCurrent:SetPoint("LEFT", hb, "LEFT", 4, 0)
+                data.hpCurrent:SetJustifyH("LEFT")
+            elseif pos == "RIGHT" then
+                data.hpCurrent:SetPoint("RIGHT", hb, "RIGHT", -4, 0)
+                data.hpCurrent:SetJustifyH("RIGHT")
+            else
+                data.hpCurrent:SetPoint("CENTER", hb, "CENTER", 0, 0)
+                data.hpCurrent:SetJustifyH("CENTER")
+            end
+            data.hpCurrent:Show()
+        end
+    end
+end
+
+
+-------------------------------------------------------------------------------
+-- Helper: Apply Bar Dimensions (Width & Height)
+-------------------------------------------------------------------------------
+local function ApplyBarDimensions(unitFrame)
+    if not unitFrame then return end
+    local w = ForeverPlatesDB.barWidth or 142
+    local h = ForeverPlatesDB.barHeight or 15
+
+    if not InCombatLockdown() then
+        pcall(unitFrame.SetSize, unitFrame, w, h)
+    end
+
+    if unitFrame.HealthBarsContainer then
+        unitFrame.HealthBarsContainer:ClearAllPoints()
+        unitFrame.HealthBarsContainer:SetPoint("CENTER", unitFrame, "CENTER", 0, 0)
+        unitFrame.HealthBarsContainer:SetSize(w, h)
+    end
+
+    local hb = unitFrame.healthBar
+    if hb then
+        hb:ClearAllPoints()
+        hb:SetPoint("CENTER", unitFrame, "CENTER", 0, 0)
+        hb:SetSize(w, h)
+        local data = plates[unitFrame]
+        if data and data.backdrop then
+            data.backdrop:SetAllPoints(hb)
+        end
+    end
+
+    local d = plates[unitFrame]
+    if hb and d and d.levelBox then
+        local boxW = math.max(22, math.floor(h * 1.45 + 0.5))
+        d.levelBox:ClearAllPoints()
+        d.levelBox:SetPoint("LEFT", hb, "RIGHT", 4, 0)
+        d.levelBox:SetSize(boxW, h)
+
+        if d.levelBackdrop then
+            d.levelBackdrop:SetAllPoints(d.levelBox)
+        end
+
+        local levelFrame = GetLevelFrame and GetLevelFrame(unitFrame)
+        if levelFrame then
+            levelFrame:ClearAllPoints()
+            levelFrame:SetPoint("CENTER", d.levelBox, "CENTER", 0, 0)
+            levelFrame:SetSize(boxW, h)
+            local levelText = GetLevelFontString and GetLevelFontString(unitFrame)
+            if levelText then
+                levelText:ClearAllPoints()
+                levelText:SetPoint("CENTER", d.levelBox, "CENTER", 0, 0)
+                levelText:SetSize(boxW, h)
+                levelText:SetJustifyH("CENTER")
+                levelText:SetJustifyV("MIDDLE")
+                levelText:SetDrawLayer("OVERLAY", 7)
+            end
+            local hlTex = levelFrame.HighLevelTexture or levelFrame.highLevelTexture
+            if hlTex then
+                hlTex:ClearAllPoints()
+                hlTex:SetPoint("CENTER", d.levelBox, "CENTER", 0, 0)
+                hlTex:SetSize(math.max(10, h - 2), math.max(10, h - 2))
+                hlTex:SetDrawLayer("OVERLAY", 7)
+            end
+        end
+    end
+
+    local cb = unitFrame.castBar
+    if cb then
+        cb:ClearAllPoints()
+        if hb then
+            cb:SetPoint("TOP", hb, "BOTTOM", 0, -4)
+        else
+            cb:SetPoint("TOP", unitFrame, "BOTTOM", 0, -4)
+        end
+        local cbH = ForeverPlatesDB.castBarHeight or 13
+        cb:SetSize(w, cbH)
+        local data = plates[unitFrame]
+        if data and data.castBackdrop then
+            data.castBackdrop:SetAllPoints(cb)
+        end
+        if data and data.castSpark then
+            data.castSpark:SetSize(2, cbH)
+        end
+    end
+
+    if ApplyMatchingOutline then
+        ApplyMatchingOutline(unitFrame)
+    end
+    if AdjustAuraFrames then
+        AdjustAuraFrames(unitFrame)
+    end
+end
+FP.ApplyBarDimensions = ApplyBarDimensions
+
+-------------------------------------------------------------------------------
+-- Helper: Shift Nameplate Auras / Debuffs +2px North (Prevents Name Clipping)
+-------------------------------------------------------------------------------
+local AURA_Y_OFFSET = 2
+
+local function ShiftFrameAnchorNorth(f, unitFrame)
+    if not f or not f.GetPoint or not f.SetPoint then return end
+    if f.FPReanchoring then return end
+
+    -- Avoid double-shifting if parent container was already shifted
+    local p = f:GetParent()
+    if p and p.FPAdjustedAuraOffset then
+        return
+    end
+
+    local d = plates[unitFrame]
+    local nPoints = f:GetNumPoints()
+    if nPoints and nPoints > 0 then
+        local pt, relTo, relPt, x, y = f:GetPoint(1)
+        local isRoot = (relTo == nil or relTo == unitFrame or relTo == unitFrame.healthBar or relTo == unitFrame.name or (d and relTo == d.backdrop))
+        if isRoot and not f.FPAdjustedAuraOffset then
+            f.FPAdjustedAuraOffset = true
+            f.FPReanchoring = true
+            f:ClearAllPoints()
+            f:SetPoint(pt, relTo or unitFrame, relPt, x or 0, (y or 0) + AURA_Y_OFFSET)
+            f.FPReanchoring = nil
+        end
+    end
+
+    if not f.FPHookedAuraSetPoint then
+        f.FPHookedAuraSetPoint = true
+        hooksecurefunc(f, "SetPoint", function(self, pt, relTo, relPt, x, y)
+            if self.FPReanchoring then return end
+            local par = self:GetParent()
+            if par and par.FPAdjustedAuraOffset then return end
+
+            local curD = plates[unitFrame]
+            local isRoot = (relTo == nil or relTo == unitFrame or relTo == unitFrame.healthBar or relTo == unitFrame.name or (curD and relTo == curD.backdrop))
+            if isRoot then
+                self.FPReanchoring = true
+                self:ClearAllPoints()
+                self:SetPoint(pt, relTo or unitFrame, relPt, x or 0, (y or 0) + AURA_Y_OFFSET)
+                self.FPReanchoring = nil
+            end
+        end)
+    end
+end
+
+AdjustAuraFrames = function(unitFrame)
+    if not unitFrame then return end
+
+    local containers = {
+        unitFrame.BuffFrame,
+        unitFrame.DebuffFrame,
+        unitFrame.AurasFrame,
+        unitFrame.AurasContainer,
+        unitFrame.buffList,
+        unitFrame.debuffList,
+    }
+
+    for _, c in ipairs(containers) do
+        if c then
+            ShiftFrameAnchorNorth(c, unitFrame)
+        end
+    end
+
+    if unitFrame.buffFrames then
+        for _, bf in ipairs(unitFrame.buffFrames) do
+            if bf then ShiftFrameAnchorNorth(bf, unitFrame) end
+        end
+    end
+
+    if unitFrame.debuffFrames then
+        for _, df in ipairs(unitFrame.debuffFrames) do
+            if df then ShiftFrameAnchorNorth(df, unitFrame) end
+        end
+    end
+
+    if unitFrame.GetChildren then
+        for _, child in ipairs({unitFrame:GetChildren()}) do
+            if child.auraInstanceID ~= nil
+                or child.spellID ~= nil
+                or child.useAuraDisplayTime
+                or child.isBuff ~= nil
+                or (child.IsObjectType and child:IsObjectType("Cooldown")) then
+                ShiftFrameAnchorNorth(child, unitFrame)
+            end
+        end
+    end
+end
+FP.AdjustAuraFrames = AdjustAuraFrames
+
+-------------------------------------------------------------------------------
+-- Helper: Update Name Typography, Badges & Color
+-------------------------------------------------------------------------------
+local function UpdateNameTypography(unitFrame, passedUnit)
+    if not unitFrame then return end
+    local d = plates[unitFrame]
+    local nameText = d and d.nameText
+    if not nameText then return end
+
+    -- Keep Blizzard's default name invisible so combat cannot overwrite text color
+    if unitFrame.name and unitFrame.name:GetAlpha() > 0 then
+        unitFrame.name:SetAlpha(0)
+    end
+
+    local font = GetCurrentFont()
+    local size = ForeverPlatesDB.nameFontSize or 11
+
+    nameText:SetFont(font, size, "OUTLINE")
+    nameText:SetShadowOffset(1, -1)
+    nameText:SetShadowColor(0, 0, 0, 0.85)
+
+    local levelText = GetLevelFontString and GetLevelFontString(unitFrame)
+    if levelText then
+        local h = ForeverPlatesDB.barHeight or 15
+        local fontSize = math.max(10, h - 2)
+        levelText.FPSettingFont = true
+        levelText:SetFont(font, fontSize, "THICKOUTLINE")
+        levelText:SetShadowOffset(1, -1)
+        levelText:SetShadowColor(0, 0, 0, 0.95)
+        levelText:SetJustifyH("CENTER")
+        levelText:SetJustifyV("MIDDLE")
+        levelText:SetDrawLayer("OVERLAY", 7)
+        levelText.FPSettingFont = nil
+        if d and d.levelBox then
+            local boxW = (d.levelBox.GetWidth and d.levelBox:GetWidth()) or 22
+            levelText:SetSize(boxW, h)
+            levelText:ClearAllPoints()
+            levelText:SetPoint("CENTER", d.levelBox, "CENTER", 0, 0)
+        end
+    end
+
+    -- Name Position (LEFT, CENTER, RIGHT)
+    local hb = unitFrame.healthBar
+    if hb then
+        nameText:ClearAllPoints()
+        local pos = ForeverPlatesDB.namePosition or "CENTER"
+        if pos == "LEFT" then
+            nameText:SetPoint("BOTTOMLEFT", hb, "TOPLEFT", 2, 6)
+            nameText:SetJustifyH("LEFT")
+        elseif pos == "RIGHT" then
+            if d and d.levelBox and d.levelBox:IsShown() then
+                nameText:SetPoint("BOTTOMRIGHT", d.levelBox, "TOPRIGHT", -2, 6)
+            else
+                nameText:SetPoint("BOTTOMRIGHT", hb, "TOPRIGHT", -2, 6)
+            end
+            nameText:SetJustifyH("RIGHT")
+        else
+            local xOffset = 0
+            if d and d.levelBox and d.levelBox:IsShown() then
+                local boxW = (d.levelBox.GetWidth and d.levelBox:GetWidth()) or 22
+                if boxW == 0 then boxW = 22 end
+                xOffset = math.floor((boxW + 4) / 2 + 0.5)
+            end
+            nameText:SetPoint("BOTTOM", hb, "TOP", xOffset, 6)
+            nameText:SetJustifyH("CENTER")
+            if d and d.targetArrow then
+                d.targetArrow:ClearAllPoints()
+                d.targetArrow:SetPoint("BOTTOM", hb, "TOP", xOffset, 18)
+            end
+        end
+    end
+
+    local unit = passedUnit or GetUnitForFrame(unitFrame)
+    local isTapped = unit and IsUnitTappedByOther(unit)
+    local baseName = (unit and UnitExists(unit) and UnitName(unit)) or (unitFrame.name and unitFrame.name:GetText())
+    if baseName then
+        local displayName = baseName
+        local isSecretName = (issecretvalue and issecretvalue(baseName))
+        if not isSecretName then
+            if isTapped and (ForeverPlatesDB.grayTappedMobs ~= false) then
+                if ForeverPlatesDB.showTappedBadge ~= false then
+                    displayName = baseName .. " |cff888888[Tagged]|r"
+                end
+            elseif unit and UnitExists(unit) and baseName ~= "" and ForeverPlatesDB.showEliteBadges then
+                local ok, cType = pcall(UnitClassification, unit)
+                if ok and cType and not (issecretvalue and issecretvalue(cType)) then
+                    if cType == "worldboss" or cType == "boss" then
+                        displayName = baseName .. " |cffff2020[☠ Boss]|r"
+                    elseif cType == "rareelite" then
+                        displayName = baseName .. " |cff00ffff[♦★]|r"
+                    elseif cType == "elite" then
+                        displayName = baseName .. " |cffffcc00[★]|r"
+                    elseif cType == "rare" then
+                        displayName = baseName .. " |cff00ffff[♦]|r"
+                    end
+                end
+            end
+        end
+        nameText:SetText(displayName)
+    end
+
+    -- Name Font Color (Protected: Blizzard combat updates cannot reset our FontString)
+    if isTapped and (ForeverPlatesDB.grayTappedMobs ~= false) then
+        nameText:SetTextColor(0.55, 0.55, 0.55, 1)
+        return
+    end
+
+    local colorCfg = ForeverPlatesDB.nameFontColor or "WHITE"
+    if colorCfg == "WHITE" then
+        nameText:SetTextColor(1, 1, 1, 1)
+    elseif colorCfg == "GOLD" then
+        nameText:SetTextColor(1.00, 0.84, 0.00, 1)
+    elseif colorCfg == "CYAN" then
+        nameText:SetTextColor(0.30, 0.90, 1.00, 1)
+    elseif colorCfg == "YELLOW" then
+        nameText:SetTextColor(1.00, 1.00, 0.30, 1)
+    elseif colorCfg == "CLASS" then
+        if unit and UnitIsPlayer(unit) then
+            local _, class = UnitClass(unit)
+            if class and RAID_CLASS_COLORS and RAID_CLASS_COLORS[class] then
+                local c = RAID_CLASS_COLORS[class]
+                nameText:SetTextColor(c.r, c.g, c.b, 1)
+                return
+            end
+        end
+        local r, g, b = GetReactionColor(unit)
+        nameText:SetTextColor(r, g, b, 1)
+    elseif colorCfg == "REACTION" then
+        local r, g, b = GetReactionColor(unit)
+        nameText:SetTextColor(r, g, b, 1)
+    else
+        nameText:SetTextColor(1, 1, 1, 1)
+    end
+
+    if AdjustAuraFrames then
+        AdjustAuraFrames(unitFrame)
+    end
+end
+
+-------------------------------------------------------------------------------
+-- Helper: Calculate Desired Health Bar Color
+-------------------------------------------------------------------------------
+local function GetDesiredHealthBarColor(unitFrame, passedUnit)
+    if not unitFrame or (unitFrame.IsForbidden and unitFrame:IsForbidden()) then return nil, nil, nil end
+    local unit = passedUnit or GetUnitForFrame(unitFrame)
+    local healthBar = unitFrame.healthBar
+    if not healthBar then return nil, nil, nil end
+
+    -- 1. Check if mob is tapped by another player outside party/raid (Missed Tag)
+    local isTapped = unit and IsUnitTappedByOther(unit)
+    if isTapped and (ForeverPlatesDB.grayTappedMobs ~= false) then
+        return COLOR_TAPPED.r, COLOR_TAPPED.g, COLOR_TAPPED.b
+    end
+
+    -- 2. Dead unit
+    if unit and UnitIsDead and UnitIsDead(unit) then
+        return COLOR_TAPPED.r, COLOR_TAPPED.g, COLOR_TAPPED.b
+    end
+
+    -- 3. Base color from Player Class or Reaction
+    local r, g, b = COLOR_HOSTILE.r, COLOR_HOSTILE.g, COLOR_HOSTILE.b
+    if unit and UnitIsPlayer(unit) and ForeverPlatesDB.classColorPlayers then
+        local _, class = UnitClass(unit)
+        if class and RAID_CLASS_COLORS and RAID_CLASS_COLORS[class] then
+            r = RAID_CLASS_COLORS[class].r
+            g = RAID_CLASS_COLORS[class].g
+            b = RAID_CLASS_COLORS[class].b
+        end
+    elseif unit then
+        r, g, b = GetReactionColor(unit)
+    end
+
+    -- 4. Target / All Enemy Custom Health Bar Color Override (Untapped units only)
+    local isTarget = (unit and UnitIsUnit(unit, "target")) or (UnitExists("target") and unitFrame:GetParent() == C_NamePlate.GetNamePlateForUnit("target"))
+    local isEnemy = unit and not UnitIsFriend("player", unit)
+    local shouldColor = isTarget or (ForeverPlatesDB.colorAllEnemyBars and isEnemy)
+
+    if shouldColor and ForeverPlatesDB.targetBarColor and ForeverPlatesDB.targetBarColor ~= "REACTION" then
+        local customColor = TARGET_BAR_COLORS[ForeverPlatesDB.targetBarColor]
+        if customColor then
+            r, g, b = customColor.r, customColor.g, customColor.b
+        end
+    end
+
+    -- 5. Threat & Aggro System (Plater logic: Group/Raid aware)
+    if ForeverPlatesDB.colorByThreat and isEnemy and unit and UnitExists(unit) and not UnitIsDead(unit) then
+        local isTanking, threatStatus = GetSafeThreatStatus(unit)
+        if threatStatus ~= nil then
+            local isTank = IsPlayerTank()
+            if isTank then
+                if threatStatus == 3 then
+                    -- Tank securely holding aggro: keep custom chosen color (e.g. Lime green)
+                elseif threatStatus == 2 or threatStatus == 1 then
+                    -- Tank losing aggro: turn Yellow / Orange
+                    r, g, b = COLOR_THREAT_WARNING.r, COLOR_THREAT_WARNING.g, COLOR_THREAT_WARNING.b
+                elseif threatStatus == 0 then
+                    -- Tank lost aggro completely: turn Blood Red
+                    r, g, b = COLOR_THREAT_LOST.r, COLOR_THREAT_LOST.g, COLOR_THREAT_LOST.b
+                end
+            else
+                -- DPS / Healer role
+                if threatStatus == 3 or isTanking then
+                    -- DPS/Healer has pulled aggro (danger!): turn Blood Red
+                    r, g, b = COLOR_THREAT_LOST.r, COLOR_THREAT_LOST.g, COLOR_THREAT_LOST.b
+                elseif threatStatus == 2 or threatStatus == 1 then
+                    -- High threat, about to pull: turn Yellow / Orange
+                    r, g, b = COLOR_THREAT_WARNING.r, COLOR_THREAT_WARNING.g, COLOR_THREAT_WARNING.b
+                else
+                    -- Normal threat (safe): keep custom chosen color
+                end
+            end
+        elseif isEnemy and IsPlayerTank() and UnitAffectingCombat and UnitAffectingCombat(unit) and (IsInGroup() or IsInRaid()) then
+            -- Mob in combat with group but tank has 0 threat / hasn't hit yet: turn Red
+            r, g, b = COLOR_THREAT_LOST.r, COLOR_THREAT_LOST.g, COLOR_THREAT_LOST.b
+        end
+    end
+
+    return r, g, b
+end
+FP.GetDesiredHealthBarColor = GetDesiredHealthBarColor
+
+-- Hook logging and diagnostic tracker (silenced by default; toggleable with /fp debug)
+FP.debugColorHooks = false
+local lastLogTime = 0
+local hookCallCount = 0
+
+local function LogHookCall(unitFrame, hookType, inR, inG, inB, outR, outG, outB)
+    hookCallCount = hookCallCount + 1
+    if not FP.debugColorHooks then return end
+
+    local now = (GetTime and GetTime()) or 0
+    if now - lastLogTime >= 0.5 then
+        lastLogTime = now
+        local unit = unitFrame and (unitFrame.unit or (plates[unitFrame] and plates[unitFrame].unit)) or "target"
+        local unitName = (unit and UnitName and UnitName(unit)) or "Enemy"
+        local msg = string.format(
+            "|cff00c0ff[FP Color Hook #%d]|r %s on '%s' (Blizz: %.2f, %.2f, %.2f -> Reasserted: %.2f, %.2f, %.2f)",
+            hookCallCount,
+            tostring(hookType),
+            tostring(unitName),
+            inR or 0, inG or 0, inB or 0,
+            outR or 0, outG or 0, outB or 0
+        )
+        if DEFAULT_CHAT_FRAME and DEFAULT_CHAT_FRAME.AddMessage then
+            DEFAULT_CHAT_FRAME:AddMessage(msg)
+        elseif print then
+            print(msg)
+        end
+    end
+end
+
+-------------------------------------------------------------------------------
+-- Hook Health Bar Color Changes (Zero-Flicker / Zero-Taint Combat Override)
+-------------------------------------------------------------------------------
+local function HookHealthBar(unitFrame)
+    if not unitFrame then return end
+    local healthBar = unitFrame.healthBar
+    if not healthBar or healthBar.ForeverPlatesHooked then return end
+    healthBar.ForeverPlatesHooked = true
+
+    -- Hook 1: StatusBar SetStatusBarColor
+    hooksecurefunc(healthBar, "SetStatusBarColor", function(self, r, g, b)
+        if self.ForeverPlatesApplyingColor then return end
+        if not (ForeverPlatesDB and ForeverPlatesDB.lockHealthBarColor) then return end
+
+        local desR, desG, desB = GetDesiredHealthBarColor(unitFrame)
+        if desR and desG and desB then
+            if math.abs((r or 0) - desR) > 0.01 or math.abs((g or 0) - desG) > 0.01 or math.abs((b or 0) - desB) > 0.01 then
+                self.ForeverPlatesApplyingColor = true
+                self:SetStatusBarColor(desR, desG, desB)
+                self.ForeverPlatesApplyingColor = nil
+                LogHookCall(unitFrame, "SetStatusBarColor", r, g, b, desR, desG, desB)
+            end
+        end
+    end)
+
+    -- Hook 2: Fallback for direct texture SetVertexColor calls (combat damage flash)
+    local barTexture = healthBar:GetStatusBarTexture()
+    if barTexture and not barTexture.ForeverPlatesHooked then
+        barTexture.ForeverPlatesHooked = true
+        hooksecurefunc(barTexture, "SetVertexColor", function(self, r, g, b)
+            if healthBar.ForeverPlatesApplyingColor then return end
+            if not (ForeverPlatesDB and ForeverPlatesDB.lockHealthBarColor) then return end
+
+            local desR, desG, desB = GetDesiredHealthBarColor(unitFrame)
+            if desR and desG and desB then
+                if math.abs((r or 0) - desR) > 0.01 or math.abs((g or 0) - desG) > 0.01 or math.abs((b or 0) - desB) > 0.01 then
+                    healthBar.ForeverPlatesApplyingColor = true
+                    self:SetVertexColor(desR, desG, desB)
+                    healthBar.ForeverPlatesApplyingColor = nil
+                    LogHookCall(unitFrame, "SetVertexColor", r, g, b, desR, desG, desB)
+                end
+            end
+        end)
+    end
+end
+FP.HookHealthBar = HookHealthBar
+
+-------------------------------------------------------------------------------
+-- Helper: Get Selection Highlight Object & Suppress Milky Glass Overlay
+-------------------------------------------------------------------------------
+local function GetSelectionHighlight(unitFrame)
+    if not unitFrame then return nil end
+    return unitFrame.selectionHighlight
+        or unitFrame.SelectionHighlight
+        or (unitFrame.healthBar and (unitFrame.healthBar.selectionHighlight or unitFrame.healthBar.SelectionHighlight))
+        or (unitFrame:GetParent() and (unitFrame:GetParent().selectionHighlight or unitFrame:GetParent().SelectionHighlight))
+end
+FP.GetSelectionHighlight = GetSelectionHighlight
+
+local function SuppressSelectionHighlight(unitFrame)
+    if not unitFrame then return end
+    local sel = GetSelectionHighlight(unitFrame)
+    if not sel or sel.FPSuppressed then return end
+    sel.FPSuppressed = true
+
+    sel:Hide()
+    sel:SetAlpha(0)
+    hooksecurefunc(sel, "Show", function(self)
+        self:Hide()
+        self:SetAlpha(0)
+    end)
+end
+FP.SuppressSelectionHighlight = SuppressSelectionHighlight
+FP.HookSelectionHighlight = SuppressSelectionHighlight
+local HookSelectionHighlight = SuppressSelectionHighlight
+
+-------------------------------------------------------------------------------
+-- Helper: Selected Border Object (White Target Capsule Border Around HealthBar & Level)
+-------------------------------------------------------------------------------
+GetLevelFrame = function(unitFrame)
+    if not unitFrame then return nil end
+
+    -- Guard against aura button frames, cooldown frames, or frames with secret aura data
+    if unitFrame.auraInstanceID ~= nil
+        or unitFrame.spellID ~= nil
+        or unitFrame.useAuraDisplayTime
+        or unitFrame.isBuff ~= nil
+        or (unitFrame.IsObjectType and unitFrame:IsObjectType("Cooldown")) then
+        return nil
+    end
+
+    local named = unitFrame.LevelFrame
+        or (unitFrame.healthBar and unitFrame.healthBar.LevelFrame)
+        or (unitFrame:GetParent() and unitFrame:GetParent().LevelFrame)
+        or (unitFrame.HealthBarsContainer and unitFrame.HealthBarsContainer.LevelFrame)
+        or unitFrame.PlayerLevelDiffFrame
+        or unitFrame.levelFrame
+        or unitFrame.Level
+        or unitFrame.level
+        or unitFrame.LevelDisplay
+        or unitFrame.levelDisplay
+    if named then return named end
+
+    -- Deep search children for any frame containing a FontString with level text
+    if unitFrame.GetChildren then
+        for _, child in ipairs({unitFrame:GetChildren()}) do
+            local isAuraChild = child.auraInstanceID ~= nil
+                or child.spellID ~= nil
+                or child.useAuraDisplayTime
+                or child.isBuff ~= nil
+                or (child.IsObjectType and child:IsObjectType("Cooldown"))
+            if not isAuraChild then
+                if child.LevelText or child.levelText then
+                    return child
+                end
+                if child.GetRegions then
+                    for _, reg in ipairs({child:GetRegions()}) do
+                        if reg:IsObjectType("FontString") then
+                            local txt = reg:GetText()
+                            if txt and not (issecretvalue and issecretvalue(txt)) then
+                                local ok, match = pcall(function()
+                                    return (tonumber(txt) ~= nil) or (txt == "??") or (txt == "-1")
+                                end)
+                                if ok and match then
+                                    return child
+                                end
+                            end
+                        end
+                    end
+                end
+            end
+        end
+    end
+
+    if unitFrame.healthBar and unitFrame.healthBar.GetChildren then
+        for _, child in ipairs({unitFrame.healthBar:GetChildren()}) do
+            local isAuraChild = child.auraInstanceID ~= nil
+                or child.spellID ~= nil
+                or child.useAuraDisplayTime
+                or child.isBuff ~= nil
+                or (child.IsObjectType and child:IsObjectType("Cooldown"))
+            if not isAuraChild then
+                if child.LevelText or child.levelText then
+                    return child
+                end
+                if child.GetRegions then
+                    for _, reg in ipairs({child:GetRegions()}) do
+                        if reg:IsObjectType("FontString") then
+                            local txt = reg:GetText()
+                            if txt and not (issecretvalue and issecretvalue(txt)) then
+                                local ok, match = pcall(function()
+                                    return (tonumber(txt) ~= nil) or (txt == "??") or (txt == "-1")
+                                end)
+                                if ok and match then
+                                    return child
+                                end
+                            end
+                        end
+                    end
+                end
+            end
+        end
+    end
+
+    return nil
+end
+FP.GetLevelFrame = GetLevelFrame
+
+GetLevelFontString = function(unitFrame)
+    if not unitFrame then return nil end
+
+    local lf = GetLevelFrame and GetLevelFrame(unitFrame)
+    if lf then
+        if lf.IsObjectType and lf:IsObjectType("FontString") then
+            return lf
+        end
+        if lf.LevelText and lf.LevelText.IsObjectType and lf.LevelText:IsObjectType("FontString") then
+            return lf.LevelText
+        end
+        if lf.levelText and lf.levelText.IsObjectType and lf.levelText:IsObjectType("FontString") then
+            return lf.levelText
+        end
+        if lf.Text and lf.Text.IsObjectType and lf.Text:IsObjectType("FontString") then
+            return lf.Text
+        end
+        if lf.text and lf.text.IsObjectType and lf.text:IsObjectType("FontString") then
+            return lf.text
+        end
+        if lf.GetRegions then
+            for _, reg in ipairs({lf:GetRegions()}) do
+                if reg:IsObjectType("FontString") then
+                    return reg
+                end
+            end
+        end
+    end
+
+    if unitFrame.LevelText and unitFrame.LevelText.IsObjectType and unitFrame.LevelText:IsObjectType("FontString") then
+        return unitFrame.LevelText
+    end
+    if unitFrame.levelText and unitFrame.levelText.IsObjectType and unitFrame.levelText:IsObjectType("FontString") then
+        return unitFrame.levelText
+    end
+    if unitFrame.level and unitFrame.level.IsObjectType and unitFrame.level:IsObjectType("FontString") then
+        return unitFrame.level
+    end
+
+    return nil
+end
+FP.GetLevelFontString = GetLevelFontString
+
+GetSelectedBorder = function(unitFrame)
+    if not unitFrame then return nil end
+    return (unitFrame.healthBar and unitFrame.healthBar.selectedBorder)
+        or unitFrame.selectedBorder
+        or (unitFrame.healthBar and unitFrame.healthBar.SelectedBorder)
+        or unitFrame.SelectedBorder
+        or (unitFrame.LevelFrame and (unitFrame.LevelFrame.selectedBorder or unitFrame.LevelFrame.SelectedBorder))
+end
+FP.GetSelectedBorder = GetSelectedBorder
+
+-------------------------------------------------------------------------------
+-- Helper: Suppress Blizzard Native Borders, Backdrops & Classic Gold Level Box
+-------------------------------------------------------------------------------
+local function SuppressTexture(tex)
+    if not tex or not tex.IsObjectType or not tex:IsObjectType("Texture") then return end
+    tex:Hide()
+    tex:SetAlpha(0)
+    pcall(tex.SetTexture, tex, nil)
+    if not tex.FPHookedHide then
+        tex.FPHookedHide = true
+        hooksecurefunc(tex, "Show", function(self)
+            if not self.FPHiding then
+                self.FPHiding = true
+                self:Hide()
+                self:SetAlpha(0)
+                pcall(self.SetTexture, self, nil)
+                self.FPHiding = nil
+            end
+        end)
+        hooksecurefunc(tex, "SetAlpha", function(self, a)
+            if not self.FPHiding then
+                local shouldHide = false
+                if a and not (issecretvalue and issecretvalue(a)) then
+                    local ok, res = pcall(function() return a > 0 end)
+                    if ok and res then shouldHide = true end
+                else
+                    shouldHide = true
+                end
+                if shouldHide then
+                    self.FPHiding = true
+                    self:SetAlpha(0)
+                    self:Hide()
+                    pcall(self.SetTexture, self, nil)
+                    self.FPHiding = nil
+                end
+            end
+        end)
+    end
+end
+
+local function StripFrameVisuals(frame)
+    if not frame then return end
+    if frame.ClearBackdrop then
+        pcall(frame.ClearBackdrop, frame)
+    elseif frame.SetBackdrop then
+        pcall(frame.SetBackdrop, frame, nil)
+    end
+    if frame.SetBackdropBorderColor then
+        pcall(frame.SetBackdropBorderColor, frame, 0, 0, 0, 0)
+    end
+    if frame.SetBackdropColor then
+        pcall(frame.SetBackdropColor, frame, 0, 0, 0, 0)
+    end
+    if not frame.FPHookedBackdrop then
+        frame.FPHookedBackdrop = true
+        if frame.SetBackdrop then
+            hooksecurefunc(frame, "SetBackdrop", function(self)
+                if not self.FPClearingBackdrop then
+                    self.FPClearingBackdrop = true
+                    if self.ClearBackdrop then self:ClearBackdrop() else self:SetBackdrop(nil) end
+                    if self.SetBackdropBorderColor then self:SetBackdropBorderColor(0, 0, 0, 0) end
+                    if self.SetBackdropColor then self:SetBackdropColor(0, 0, 0, 0) end
+                    self.FPClearingBackdrop = nil
+                end
+            end)
+        end
+        if frame.SetBackdropBorderColor then
+            hooksecurefunc(frame, "SetBackdropBorderColor", function(self, r, g, b, a)
+                if not self.FPClearingBackdrop then
+                    local shouldClear = false
+                    if a and not (issecretvalue and issecretvalue(a)) then
+                        local ok, res = pcall(function() return (a or 1) > 0 end)
+                        if ok and res then shouldClear = true end
+                    else
+                        shouldClear = true
+                    end
+                    if shouldClear then
+                        self.FPClearingBackdrop = true
+                        self:SetBackdropBorderColor(0, 0, 0, 0)
+                        self.FPClearingBackdrop = nil
+                    end
+                end
+            end)
+        end
+    end
+    if frame.NineSlice then
+        frame.NineSlice:Hide()
+        frame.NineSlice:SetAlpha(0)
+        if frame.NineSlice.GetRegions then
+            for _, nsReg in ipairs({frame.NineSlice:GetRegions()}) do
+                if nsReg:IsObjectType("Texture") then
+                    SuppressTexture(nsReg)
+                end
+            end
+        end
+    end
+end
+
+local function PurgeFrameTexturesAndBackdrops(frame, d, depth, levelFrame)
+    if not frame or (depth and depth > 4) then return end
+    depth = depth or 0
+
+    StripFrameVisuals(frame)
+
+    local sbTex = frame.GetStatusBarTexture and frame:GetStatusBarTexture()
+    if frame.GetRegions then
+        for _, reg in ipairs({frame:GetRegions()}) do
+            if reg:IsObjectType("Texture") then
+                local isAddonTex = d and (
+                    reg == d.backdrop or
+                    reg == d.levelBackdrop or
+                    reg == d.targetArrow or
+                    reg == d.bracketLeft or
+                    reg == d.bracketRight or
+                    reg == d.castBackdrop or
+                    reg == d.castSpark or
+                    (d.border and (reg == d.border.top or reg == d.border.bottom or reg == d.border.left or reg == d.border.right)) or
+                    (d.levelBorder and (reg == d.levelBorder.top or reg == d.levelBorder.bottom or reg == d.levelBorder.left or reg == d.levelBorder.right)) or
+                    (d.targetGlow and (reg == d.targetGlow.top or reg == d.targetGlow.bottom or reg == d.targetGlow.left or reg == d.targetGlow.right)) or
+                    (d.executeGlow and (reg == d.executeGlow.top or reg == d.executeGlow.bottom or reg == d.executeGlow.left or reg == d.executeGlow.right)) or
+                    (d.castBorder and (reg == d.castBorder.top or reg == d.castBorder.bottom or reg == d.castBorder.left or reg == d.castBorder.right))
+                )
+                local isHighLevel = (levelFrame and (reg == levelFrame.HighLevelTexture or reg == levelFrame.highLevelTexture))
+                local texPath = reg.GetTexture and reg:GetTexture()
+                local isRaidIcon = texPath and type(texPath) == "string" and string.find(texPath, "UI%-RaidTargetingIcons")
+
+                if not isAddonTex and reg ~= sbTex and not isHighLevel and not isRaidIcon then
+                    SuppressTexture(reg)
+                end
+            end
+        end
+    end
+
+    if frame.GetChildren then
+        for _, child in ipairs({frame:GetChildren()}) do
+            local isIgnored = (d and (child == d.levelBox or child == d.castBar))
+                or child == frame.WidgetContainer
+                or child == frame.BuffFrame
+                or child == frame.DebuffFrame
+                or child == frame.AurasFrame
+                or child == frame.AurasContainer
+                or child.auraInstanceID ~= nil
+                or child.spellID ~= nil
+                or child.useAuraDisplayTime
+                or child.isBuff ~= nil
+                or (child.IsObjectType and child:IsObjectType("Cooldown"))
+            if not isIgnored then
+                PurgeFrameTexturesAndBackdrops(child, d, depth + 1, levelFrame)
+            end
+        end
+    end
+end
+
+local function SuppressBlizzardBorders(unitFrame)
+    if not unitFrame then return end
+    local d = plates[unitFrame]
+    local levelFrame = GetLevelFrame and GetLevelFrame(unitFrame)
+    PurgeFrameTexturesAndBackdrops(unitFrame, d, 0, levelFrame)
+
+    if levelFrame and levelFrame ~= unitFrame then
+        PurgeFrameTexturesAndBackdrops(levelFrame, d, 0, levelFrame)
+    end
+end
+FP.SuppressBlizzardBorders = SuppressBlizzardBorders
+
+-------------------------------------------------------------------------------
+-- Helper: Apply Matching Outline to Health Bar and Level Box
+-------------------------------------------------------------------------------
+ApplyMatchingOutline = function(unitFrame)
+    if not unitFrame then return end
+    local d = plates[unitFrame]
+    if not d then return end
+
+    local healthBar = unitFrame.healthBar
+    if not healthBar then return end
+
+    -- Suppress Blizzard's classic background border texture that contains the original gold level box
+    SuppressBlizzardBorders(unitFrame)
+
+    local thickness = ForeverPlatesDB and ForeverPlatesDB.outlineThickness or 3
+    local olKey = ForeverPlatesDB and ForeverPlatesDB.outlineColor or "WHITE"
+    local c = OUTLINE_COLORS[olKey] or OUTLINE_COLORS.WHITE
+    local showBorder = (olKey ~= "NONE")
+    local alwaysShow = not ForeverPlatesDB or ForeverPlatesDB.alwaysShowSelectionHighlight ~= false
+
+    -- 1. Main Health Bar Pixel Border
+    if d.border then
+        d.border:SetThickness(thickness)
+        if showBorder then
+            d.border:SetColor(c.r, c.g, c.b, c.a or 1.0)
+            d.border:SetShown(true)
+        else
+            d.border:SetShown(false)
+        end
+    end
+
+    -- 3. Level Box Pixel Border
+    -- Keep level-box outline synchronized with health-bar outline in target and non-target states.
+    if d.levelBorder then
+        d.levelBorder:SetThickness(thickness)
+        if showBorder then
+            d.levelBorder:SetColor(c.r, c.g, c.b, c.a or 1.0)
+            d.levelBorder:SetShown(true)
+        else
+            d.levelBorder:SetShown(false)
+        end
+    end
+
+    -- Ensure level box is visible whenever unit frame is visible
+    if d.levelBox then
+        local levelFrame = GetLevelFrame(unitFrame)
+        local hasLevel = false
+        local uLevel = unitFrame.unit and UnitLevel(unitFrame.unit)
+        if uLevel and not (issecretvalue and issecretvalue(uLevel)) then
+            local ok, lvl = pcall(function() return uLevel > 0 end)
+            if ok and lvl then
+                hasLevel = true
+            end
+        end
+        if levelFrame and not levelFrame:IsShown() and not hasLevel then
+            d.levelBox:Hide()
+        else
+            d.levelBox:Show()
+        end
+    end
+end
+FP.ApplyMatchingOutline = ApplyMatchingOutline
+
+local function HookSelectedBorder(unitFrame)
+    if not unitFrame then return end
+
+    local healthBar = unitFrame.healthBar
+    if healthBar and healthBar.UpdateSelectionBorder and not healthBar.FPHookedSelectionBorder then
+        healthBar.FPHookedSelectionBorder = true
+        hooksecurefunc(healthBar, "UpdateSelectionBorder", function(self)
+            SuppressBlizzardBorders(unitFrame)
+            if ApplyMatchingOutline then
+                ApplyMatchingOutline(unitFrame)
+            end
+        end)
+    end
+
+    local sb = GetSelectedBorder(unitFrame)
+    if sb and not sb.FPHookedHide then
+        sb.FPHookedHide = true
+        sb:Hide()
+        sb:SetAlpha(0)
+        hooksecurefunc(sb, "Show", function(self)
+            if not self.FPHiding then
+                self.FPHiding = true
+                self:Hide()
+                self:SetAlpha(0)
+                self.FPHiding = nil
+            end
+        end)
+    end
+end
+FP.HookSelectedBorder = HookSelectedBorder
+
+-------------------------------------------------------------------------------
+-- Style a UnitFrame (Zero-Taint Design)
+-------------------------------------------------------------------------------
+local function StyleNamePlate(unitFrame)
+    if not unitFrame then return end
+
+    local healthBar = unitFrame.healthBar
+    if not healthBar then return end
+
+    HookHealthBar(unitFrame)
+    SuppressSelectionHighlight(unitFrame)
+    HookSelectedBorder(unitFrame)
+    SuppressBlizzardBorders(unitFrame)
+
+    if plates[unitFrame] then
+        ApplyBarDimensions(unitFrame)
+        ApplyMatchingOutline(unitFrame)
+        return
+    end
+
+    local font = GetCurrentFont()
+    local arrowCfg = GetCurrentArrow()
+    local arrowSize = ForeverPlatesDB.targetArrowSize or 28
+
+    local data = {}
+    plates[unitFrame] = data
+
+    -- 1. Dimensions & Status Bar Texture
+    healthBar:SetStatusBarTexture(BAR_TEXTURE)
+
+    if healthBar.border then healthBar.border:Hide() end
+    if healthBar.Border then healthBar.Border:Hide() end
+
+    -- 2. Dark OLED Backdrop for Missing Health
+    local bg = healthBar:CreateTexture(nil, "BACKGROUND", nil, -7)
+    bg:SetAllPoints(healthBar)
+    bg:SetTexture(BAR_TEXTURE)
+    bg:SetVertexColor(0.10, 0.10, 0.10, 0.88)
+    data.backdrop = bg
+
+    -- 3. Pixel Border (Outline) for Health Bar - Layer OVERLAY 5 so it is always crisp and visible
+    data.border = CreatePixelBorder(healthBar, 1, "OVERLAY", 5)
+
+    -- 3b. Dedicated Level Box Frame & Matching Pixel Border
+    local levelBox = CreateFrame("Frame", nil, unitFrame)
+    levelBox:SetFrameStrata(unitFrame:GetFrameStrata())
+    levelBox:SetFrameLevel(unitFrame:GetFrameLevel() + 5)
+    data.levelBox = levelBox
+
+    local lbg = levelBox:CreateTexture(nil, "BACKGROUND", nil, -7)
+    lbg:SetAllPoints(levelBox)
+    lbg:SetTexture(FLAT_TEXTURE)
+    lbg:SetVertexColor(0.08, 0.08, 0.09, 0.95)
+    data.levelBackdrop = lbg
+
+    data.levelBorder = CreatePixelBorder(levelBox, 1, "OVERLAY", 6)
+
+    -- Hook LevelFrame and LevelText so Blizzard cannot misplace or reset them
+    local levelFrame = GetLevelFrame(unitFrame)
+    if levelFrame then
+        if levelFrame.SetFrameStrata then
+            pcall(levelFrame.SetFrameStrata, levelFrame, unitFrame:GetFrameStrata())
+        end
+        if levelFrame.SetFrameLevel then
+            pcall(levelFrame.SetFrameLevel, levelFrame, unitFrame:GetFrameLevel() + 6)
+        end
+
+        local levelText = GetLevelFontString(unitFrame)
+        if levelText then
+            levelText:SetDrawLayer("OVERLAY", 7)
+            levelText:SetJustifyH("CENTER")
+            levelText:SetJustifyV("MIDDLE")
+
+            local h = ForeverPlatesDB.barHeight or 15
+            local fontSize = math.max(10, h - 2)
+            levelText.FPSettingFont = true
+            levelText:SetFont(font, fontSize, "THICKOUTLINE")
+            levelText:SetShadowOffset(1, -1)
+            levelText:SetShadowColor(0, 0, 0, 0.95)
+            levelText.FPSettingFont = nil
+
+            if not levelText.FPHookedPoint then
+                levelText.FPHookedPoint = true
+                hooksecurefunc(levelText, "SetPoint", function(self, point, relTo, relPoint, x, y)
+                    if self.FPReanchoring then return end
+                    local curData = plates[unitFrame]
+                    if curData and curData.levelBox and (relTo ~= curData.levelBox or x ~= 0 or y ~= 0) then
+                        self.FPReanchoring = true
+                        self:ClearAllPoints()
+                        self:SetPoint("CENTER", curData.levelBox, "CENTER", 0, 0)
+                        self:SetJustifyH("CENTER")
+                        self:SetJustifyV("MIDDLE")
+                        self.FPReanchoring = nil
+                    end
+                end)
+            end
+
+            if not levelText.FPHookedFont then
+                levelText.FPHookedFont = true
+                if levelText.SetFontObject then
+                    hooksecurefunc(levelText, "SetFontObject", function(self)
+                        if self.FPSettingFont then return end
+                        self.FPSettingFont = true
+                        local curFont = GetCurrentFont()
+                        local curH = ForeverPlatesDB and ForeverPlatesDB.barHeight or 15
+                        self:SetFont(curFont, math.max(10, curH - 2), "THICKOUTLINE")
+                        self:SetShadowOffset(1, -1)
+                        self:SetShadowColor(0, 0, 0, 0.95)
+                        self.FPSettingFont = nil
+                    end)
+                end
+                if levelText.SetText then
+                    hooksecurefunc(levelText, "SetText", function(self)
+                        if self.FPSettingFont then return end
+                        self.FPSettingFont = true
+                        local curFont = GetCurrentFont()
+                        local curH = ForeverPlatesDB and ForeverPlatesDB.barHeight or 15
+                        self:SetFont(curFont, math.max(10, curH - 2), "THICKOUTLINE")
+                        self:SetShadowOffset(1, -1)
+                        self:SetShadowColor(0, 0, 0, 0.95)
+                        self.FPSettingFont = nil
+                    end)
+                end
+            end
+        end
+
+        local hlTex = levelFrame.HighLevelTexture or levelFrame.highLevelTexture
+        if hlTex and hlTex.SetDrawLayer then
+            hlTex:SetDrawLayer("OVERLAY", 7)
+        end
+        if not levelFrame.FPHookedPoint and levelFrame.SetPoint then
+            levelFrame.FPHookedPoint = true
+            hooksecurefunc(levelFrame, "SetPoint", function(self, point, relTo)
+                if self.FPReanchoring then return end
+                local curData = plates[unitFrame]
+                if curData and curData.levelBox and relTo ~= curData.levelBox then
+                    self.FPReanchoring = true
+                    self:ClearAllPoints()
+                    self:SetPoint("CENTER", curData.levelBox, "CENTER", 0, 0)
+                    self.FPReanchoring = nil
+                end
+            end)
+        end
+    end
+
+    -- Apply Bar & Level Box Dimensions
+    ApplyBarDimensions(unitFrame)
+
+    -- Apply Synchronized Matching Outline
+    ApplyMatchingOutline(unitFrame)
+
+    -- Shift Auras & Debuffs +2px North
+    if AdjustAuraFrames then
+        AdjustAuraFrames(unitFrame)
+    end
+
+    -- 4. Target Glow Highlight (2px outer border)
+    local glow = CreatePixelBorder(healthBar, 2)
+    glow:SetColor(COLOR_TARGET_CYAN.r, COLOR_TARGET_CYAN.g, COLOR_TARGET_CYAN.b, COLOR_TARGET_CYAN.a)
+    glow:SetShown(false)
+    data.targetGlow = glow
+
+    -- 5. Execute Range Glow (Fiery Orange/Red 2px outer border)
+    local exGlow = CreatePixelBorder(healthBar, 2)
+    exGlow:SetColor(COLOR_EXECUTE.r, COLOR_EXECUTE.g, COLOR_EXECUTE.b, COLOR_EXECUTE.a)
+    exGlow:SetShown(false)
+    data.executeGlow = exGlow
+
+    -- 6. Target Brackets (Texture Arrows pointing at the bar)
+    local leftBracket = healthBar:CreateTexture(nil, "OVERLAY", nil, 7)
+    leftBracket:SetTexture(ARROW_TEXTURE)
+    leftBracket:SetSize(14, 14)
+    leftBracket:SetVertexColor(COLOR_TARGET_CYAN.r, COLOR_TARGET_CYAN.g, COLOR_TARGET_CYAN.b, 1)
+    leftBracket:SetPoint("RIGHT", healthBar, "LEFT", -2, 0)
+    leftBracket:Hide()
+    data.bracketLeft = leftBracket
+
+    local rightBracket = healthBar:CreateTexture(nil, "OVERLAY", nil, 7)
+    rightBracket:SetTexture(ARROW_TEXTURE)
+    rightBracket:SetSize(14, 14)
+    rightBracket:SetTexCoord(1, 0, 0, 1)
+    rightBracket:SetVertexColor(COLOR_TARGET_CYAN.r, COLOR_TARGET_CYAN.g, COLOR_TARGET_CYAN.b, 1)
+    rightBracket:SetPoint("LEFT", data.levelBox or healthBar, "RIGHT", 4, 0)
+    rightBracket:Hide()
+    data.bracketRight = rightBracket
+
+    local arrow = healthBar:CreateTexture(nil, "OVERLAY", nil, 7)
+    arrow:SetTexture(arrowCfg.path)
+    local aspect = arrowCfg.h / arrowCfg.w
+    arrow:SetSize(arrowSize, math.floor(arrowSize * aspect + 0.5))
+    local arrowXOffset = 0
+    if data.levelBox then
+        local boxW = (data.levelBox.GetWidth and data.levelBox:GetWidth()) or 22
+        if boxW == 0 then boxW = 22 end
+        arrowXOffset = math.floor((boxW + 4) / 2 + 0.5)
+    end
+    arrow:SetPoint("BOTTOM", healthBar, "TOP", arrowXOffset, 18)
+    arrow:Hide()
+    data.targetArrow = arrow
+
+    -- 8. Name Typography (Addon-owned FontString to prevent combat white-reset taint)
+    if unitFrame.name then
+        unitFrame.name:SetAlpha(0)
+    end
+    local nameText = healthBar:CreateFontString(nil, "OVERLAY")
+    nameText:SetDrawLayer("OVERLAY", 6)
+    nameText:SetFont(font, ForeverPlatesDB.nameFontSize or 11, "OUTLINE")
+    nameText:SetShadowOffset(1, -1)
+    nameText:SetShadowColor(0, 0, 0, 0.85)
+    data.nameText = nameText
+    UpdateNameTypography(unitFrame, unitFrame.unit)
+
+    -- 9. Composite Health Text (Current / Max - 12.0 Secret-Value Safe)
+    local hpSize = ForeverPlatesDB.healthFontSize or 17
+
+    local hpDivider = healthBar:CreateFontString(nil, "OVERLAY")
+    hpDivider:SetDrawLayer("OVERLAY", 7)
+    hpDivider:SetFont(font, hpSize, "OUTLINE")
+    hpDivider:SetShadowOffset(1, -1)
+    hpDivider:SetShadowColor(0, 0, 0, 0.95)
+    hpDivider:SetTextColor(1, 1, 1, 1)
+    hpDivider:SetText("/")
+    data.hpDivider = hpDivider
+
+    local hpCurrent = healthBar:CreateFontString(nil, "OVERLAY")
+    hpCurrent:SetDrawLayer("OVERLAY", 7)
+    hpCurrent:SetFont(font, hpSize, "OUTLINE")
+    hpCurrent:SetShadowOffset(1, -1)
+    hpCurrent:SetShadowColor(0, 0, 0, 0.95)
+    hpCurrent:SetTextColor(1, 1, 1, 1)
+    data.hpCurrent = hpCurrent
+
+    local hpMax = healthBar:CreateFontString(nil, "OVERLAY")
+    hpMax:SetDrawLayer("OVERLAY", 7)
+    hpMax:SetFont(font, hpSize, "OUTLINE")
+    hpMax:SetShadowOffset(1, -1)
+    hpMax:SetShadowColor(0, 0, 0, 0.95)
+    hpMax:SetTextColor(1, 1, 1, 1)
+    data.hpMax = hpMax
+
+    local hpPercent = healthBar:CreateFontString(nil, "OVERLAY")
+    hpPercent:SetDrawLayer("OVERLAY", 7)
+    hpPercent:SetFont(font, hpSize, "OUTLINE")
+    hpPercent:SetShadowOffset(1, -1)
+    hpPercent:SetShadowColor(0, 0, 0, 0.95)
+    hpPercent:SetTextColor(1, 1, 1, 1)
+    data.hpPercent = hpPercent
+
+    -- 10. Cast Bar Styling with Spark & Countdown
+    local castBar = unitFrame.castBar
+    if castBar then
+        castBar:SetSize(ForeverPlatesDB.barWidth, ForeverPlatesDB.castBarHeight)
+        castBar:SetStatusBarTexture(BAR_TEXTURE)
+
+        data.castBorder = CreatePixelBorder(castBar, 1)
+
+        local castBg = castBar:CreateTexture(nil, "BACKGROUND", nil, -7)
+        castBg:SetAllPoints(castBar)
+        castBg:SetTexture(BAR_TEXTURE)
+        castBg:SetVertexColor(0.12, 0.12, 0.12, 0.85)
+        data.castBackdrop = castBg
+
+        local spark = castBar:CreateTexture(nil, "OVERLAY", nil, 7)
+        spark:SetTexture(FLAT_TEXTURE)
+        spark:SetVertexColor(1, 1, 1, 0.9)
+        spark:SetSize(2, ForeverPlatesDB.castBarHeight)
+        spark:SetPoint("CENTER", castBar:GetStatusBarTexture(), "RIGHT", 0, 0)
+        data.castSpark = spark
+
+        local timeText = castBar:CreateFontString(nil, "OVERLAY", nil, 7)
+        timeText:SetFont(font, 9, "OUTLINE")
+        timeText:SetShadowOffset(1, -1)
+        timeText:SetShadowColor(0, 0, 0, 0.85)
+        timeText:SetPoint("RIGHT", castBar, "RIGHT", -3, 0)
+        data.castTimeText = timeText
+
+        if castBar.Text then
+            castBar.Text:SetFont(font, 9, "OUTLINE")
+            castBar.Text:SetShadowOffset(1, -1)
+            castBar.Text:SetShadowColor(0, 0, 0, 0.85)
+            castBar.Text:ClearAllPoints()
+            castBar.Text:SetPoint("LEFT", castBar, "LEFT", 4, 0)
+        end
+
+        if castBar.Icon then
+            castBar.Icon:SetSize(ForeverPlatesDB.castBarHeight + 2, ForeverPlatesDB.castBarHeight + 2)
+            castBar.Icon:ClearAllPoints()
+            castBar.Icon:SetPoint("RIGHT", castBar, "LEFT", -3, 0)
+            if castBar.Icon.SetTexCoord then
+                castBar.Icon:SetTexCoord(0.08, 0.92, 0.08, 0.92)
+            end
+        end
+
+        castBar:HookScript("OnUpdate", function(self)
+            pcall(function()
+                if not self:IsShown() then return end
+                local minVal, maxVal = self:GetMinMaxValues()
+                local currVal = self:GetValue()
+
+                if not (issecretvalue and (issecretvalue(currVal) or issecretvalue(maxVal))) and maxVal and maxVal > 0 then
+                    local d = plates[unitFrame]
+                    if d and d.castTimeText and ForeverPlatesDB.showCastBarTimer then
+                        local remaining = math.max(0, maxVal - currVal)
+                        d.castTimeText:SetText(string.format("%.1fs", remaining))
+                    end
+
+                    -- Check interruptible state from C-API or frame flag
+                    local notInterruptible = self.notInterruptible
+                    local u = unitFrame and (unitFrame.unit or (d and d.unit))
+                    if u and UnitExists(u) then
+                        local _, _, _, _, _, _, _, notIntC = UnitCastingInfo(u)
+                        if notIntC ~= nil then
+                            notInterruptible = notIntC
+                        else
+                            local _, _, _, _, _, _, notIntCh = UnitChannelInfo(u)
+                            if notIntCh ~= nil then
+                                notInterruptible = notIntCh
+                            end
+                        end
+                    end
+
+                    if notInterruptible then
+                        self:SetStatusBarColor(0.65, 0.65, 0.70) -- Steel Silver (Shielded / Unkickable)
+                        if d and d.castBorder then
+                            d.castBorder:SetColor(0.80, 0.80, 0.85, 1.0)
+                        end
+                    else
+                        self:SetStatusBarColor(1.00, 0.62, 0.00) -- Warm Gold (Kickable)
+                        if d and d.castBorder then
+                            d.castBorder:SetColor(0.20, 0.22, 0.26, 1.0)
+                        end
+                    end
+                end
+            end)
+        end)
+    end
+end
+
+if CompactUnitFrame_UpdateStatusText then
+    hooksecurefunc("CompactUnitFrame_UpdateStatusText", function(frame)
+        if frame and plates[frame] then
+            UpdateHealthText(frame)
+        end
+    end)
+end
+if TextStatusBar_UpdateTextString then
+    hooksecurefunc("TextStatusBar_UpdateTextString", function(statusBar)
+        local parent = statusBar and statusBar:GetParent()
+        if statusBar and plates[statusBar] then
+            UpdateHealthText(statusBar)
+        elseif parent and plates[parent] then
+            UpdateHealthText(parent)
+        end
+    end)
+end
+
+-------------------------------------------------------------------------------
+-- Refresh Functions
+-------------------------------------------------------------------------------
+local function RefreshAllFonts()
+    local font = GetCurrentFont()
+    local nameplates = C_NamePlate.GetNamePlates()
+    if not nameplates then return end
+
+    for _, np in ipairs(nameplates) do
+        local unitFrame = np.UnitFrame
+        if unitFrame then
+            UpdateNameTypography(unitFrame, unitFrame.unit)
+            UpdateHealthText(unitFrame, unitFrame.unit)
+            local cb = unitFrame.castBar
+            if cb then
+                if cb.Text then cb.Text:SetFont(font, 9, "OUTLINE") end
+                if d and d.castTimeText then d.castTimeText:SetFont(font, 9, "OUTLINE") end
+            end
+        end
+    end
+end
+FP.RefreshAllFonts = RefreshAllFonts
+
+local function RefreshAllArrows()
+    local arrowCfg = GetCurrentArrow()
+    local arrowSize = ForeverPlatesDB.targetArrowSize or 28
+    local aspect = arrowCfg.h / arrowCfg.w
+    local nameplates = C_NamePlate.GetNamePlates()
+    if not nameplates then return end
+
+    for _, np in ipairs(nameplates) do
+        local unitFrame = np.UnitFrame
+        local d = plates[unitFrame]
+        if d and d.targetArrow then
+            d.targetArrow:SetTexture(arrowCfg.path)
+            d.targetArrow:SetSize(arrowSize, math.floor(arrowSize * aspect + 0.5))
+        end
+    end
+end
+FP.RefreshAllArrows = RefreshAllArrows
+
+local function RefreshAllDimensions()
+    local nameplates = C_NamePlate.GetNamePlates()
+    if not nameplates then return end
+
+    for _, np in ipairs(nameplates) do
+        local unitFrame = np.UnitFrame
+        if unitFrame then
+            ApplyBarDimensions(unitFrame)
+        end
+    end
+end
+FP.RefreshAllDimensions = RefreshAllDimensions
+
+local function UpdateUnitHealthAndColors(unitFrame, passedUnit)
+    if not unitFrame or (unitFrame.IsForbidden and unitFrame:IsForbidden()) then return end
+    local unit = passedUnit or GetUnitForFrame(unitFrame)
+    local healthBar = unitFrame.healthBar
+    if not healthBar then return end
+
+    local r, g, b = GetDesiredHealthBarColor(unitFrame, unit)
+    if r and g and b then
+        healthBar.ForeverPlatesApplyingColor = true
+        healthBar:SetStatusBarColor(r, g, b)
+        healthBar.ForeverPlatesApplyingColor = nil
+    end
+
+    UpdateHealthText(unitFrame, unit)
+    UpdateNameTypography(unitFrame, unit)
+
+    local d = plates[unitFrame]
+    -- Apply Outline Border Color & Thickness (All mobs)
+    if d and d.border then
+        d.border:SetThickness(ForeverPlatesDB.outlineThickness or 3)
+        local olKey = ForeverPlatesDB.outlineColor or "WHITE"
+        if olKey == "NONE" then
+            d.border:SetShown(false)
+        else
+            local c = OUTLINE_COLORS[olKey] or OUTLINE_COLORS.WHITE
+            d.border:SetColor(c.r, c.g, c.b, c.a or 1.0)
+            d.border:SetShown(true)
+        end
+    end
+
+    -- Keep level-box border perfectly synchronized
+    if d and d.levelBorder then
+        d.levelBorder:SetThickness(ForeverPlatesDB.outlineThickness or 3)
+        local olKey = ForeverPlatesDB.outlineColor or "WHITE"
+        if olKey == "NONE" then
+            d.levelBorder:SetShown(false)
+        else
+            local c = OUTLINE_COLORS[olKey] or OUTLINE_COLORS.WHITE
+            d.levelBorder:SetColor(c.r, c.g, c.b, c.a or 1.0)
+            d.levelBorder:SetShown(true)
+        end
+    end
+
+    -- Execute Glow Check (Safe 12.0 Secret-Value Guarded)
+    if d and d.executeGlow then
+        local shouldGlow = false
+        if ForeverPlatesDB.showExecuteGlow and unit and UnitExists(unit) and not UnitIsDead(unit) and not UnitIsFriend("player", unit) then
+            local pct = GetSafeHealthPercent(unit)
+            if pct and pct <= (ForeverPlatesDB.executeThreshold or 20) then
+                shouldGlow = true
+            end
+        end
+        d.executeGlow:SetShown(shouldGlow)
+    end
+end
+
+local function RefreshAllOutlines()
+    local nameplates = C_NamePlate.GetNamePlates()
+    if not nameplates then return end
+
+    for _, np in ipairs(nameplates) do
+        local unitFrame = np.UnitFrame
+        if unitFrame then
+            ApplyMatchingOutline(unitFrame)
+        end
+    end
+end
+FP.RefreshAllOutlines = RefreshAllOutlines
+
+local function UpdateTargetState(unitFrame, passedUnit)
+    if not unitFrame then return end
+    local unit = passedUnit or GetUnitForFrame(unitFrame)
+    local healthBar = unitFrame.healthBar
+    if not healthBar then return end
+    local d = plates[unitFrame]
+
+    local isTarget = (unit and UnitIsUnit(unit, "target")) or (UnitExists("target") and unitFrame:GetParent() == C_NamePlate.GetNamePlateForUnit("target"))
+    local hasTarget = UnitExists("target")
+
+    if isTarget then
+        if d and d.targetGlow then
+            d.targetGlow:SetShown(ForeverPlatesDB.showTargetGlow == true)
+        end
+        if d and d.bracketLeft and d.bracketRight then
+            if ForeverPlatesDB.showTargetBrackets == true then
+                d.bracketLeft:Show()
+                d.bracketRight:Show()
+            else
+                d.bracketLeft:Hide()
+                d.bracketRight:Hide()
+            end
+        end
+        if d and d.targetArrow then
+            if ForeverPlatesDB.showTargetArrow == true then
+                local arrowCfg = GetCurrentArrow()
+                local arrowSize = ForeverPlatesDB.targetArrowSize or 28
+                local aspect = arrowCfg.h / arrowCfg.w
+                d.targetArrow:SetTexture(arrowCfg.path)
+                d.targetArrow:SetSize(arrowSize, math.floor(arrowSize * aspect + 0.5))
+                local arrowXOffset = 0
+                if d.levelBox and d.levelBox:IsShown() then
+                    local boxW = (d.levelBox.GetWidth and d.levelBox:GetWidth()) or 22
+                    if boxW == 0 then boxW = 22 end
+                    arrowXOffset = math.floor((boxW + 4) / 2 + 0.5)
+                end
+                d.targetArrow:ClearAllPoints()
+                d.targetArrow:SetPoint("BOTTOM", healthBar, "TOP", arrowXOffset, 18)
+                d.targetArrow:Show()
+            else
+                d.targetArrow:Hide()
+            end
+        end
+
+        local isTapped = unit and IsUnitTappedByOther(unit)
+        if isTapped and (ForeverPlatesDB.grayTappedMobs ~= false) then
+            if d and d.targetArrow then
+                d.targetArrow:SetVertexColor(0.60, 0.60, 0.60, 0.85)
+            end
+            if d and d.bracketLeft and d.bracketRight then
+                d.bracketLeft:SetVertexColor(0.55, 0.55, 0.55, 0.8)
+                d.bracketRight:SetVertexColor(0.55, 0.55, 0.55, 0.8)
+            end
+        else
+            if d and d.targetArrow then
+                d.targetArrow:SetVertexColor(1, 1, 1, 1)
+            end
+            if d and d.bracketLeft and d.bracketRight then
+                d.bracketLeft:SetVertexColor(COLOR_TARGET_CYAN.r, COLOR_TARGET_CYAN.g, COLOR_TARGET_CYAN.b, 1)
+                d.bracketRight:SetVertexColor(COLOR_TARGET_CYAN.r, COLOR_TARGET_CYAN.g, COLOR_TARGET_CYAN.b, 1)
+            end
+        end
+        unitFrame:SetAlpha(1.0)
+        unitFrame:SetScale(ForeverPlatesDB.targetScale or 1.06)
+    else
+        if d and d.targetGlow then d.targetGlow:SetShown(false) end
+        if d and d.bracketLeft then d.bracketLeft:Hide() end
+        if d and d.bracketRight then d.bracketRight:Hide() end
+        if d and d.targetArrow then d.targetArrow:Hide() end
+
+        unitFrame:SetScale(1.0)
+        if hasTarget then
+            unitFrame:SetAlpha(ForeverPlatesDB.nonTargetAlpha or 1.0)
+        else
+            unitFrame:SetAlpha(1.0)
+        end
+    end
+
+    -- Keep health bar and level box outlines perfectly synchronized in all target states
+    ApplyMatchingOutline(unitFrame)
+
+    -- Suppress Blizzard's milky selection highlight fill over health bar (eliminates glassmorphism)
+    local sel = GetSelectionHighlight(unitFrame)
+    if sel then
+        sel:Hide()
+        sel:SetAlpha(0)
+    end
+
+    -- Re-evaluate health bar color (target color override vs normal color)
+    UpdateUnitHealthAndColors(unitFrame, unit)
+end
+
+local function RefreshAllPlates()
+    local nameplates = C_NamePlate.GetNamePlates()
+    if not nameplates then return end
+
+    for _, np in ipairs(nameplates) do
+        local unitFrame = np.UnitFrame
+        if unitFrame then
+            ApplyBarDimensions(unitFrame)
+            UpdateUnitHealthAndColors(unitFrame)
+            UpdateTargetState(unitFrame)
+            ApplyMatchingOutline(unitFrame)
+        end
+    end
+end
+FP.RefreshAllPlates = RefreshAllPlates
+
+-------------------------------------------------------------------------------
+-- Event Dispatcher
+-------------------------------------------------------------------------------
+local eventFrame = CreateFrame("Frame")
+eventFrame:RegisterEvent("ADDON_LOADED")
+eventFrame:RegisterEvent("PLAYER_LOGIN")
+eventFrame:RegisterEvent("PLAYER_ENTERING_WORLD")
+eventFrame:RegisterEvent("PLAYER_LOGOUT")
+eventFrame:RegisterEvent("NAME_PLATE_CREATED")
+eventFrame:RegisterEvent("NAME_PLATE_UNIT_ADDED")
+eventFrame:RegisterEvent("NAME_PLATE_UNIT_REMOVED")
+eventFrame:RegisterEvent("PLAYER_TARGET_CHANGED")
+eventFrame:RegisterEvent("UNIT_HEALTH")
+eventFrame:RegisterEvent("UNIT_MAXHEALTH")
+eventFrame:RegisterEvent("UNIT_FACTION")
+eventFrame:RegisterEvent("UNIT_FLAGS")
+eventFrame:RegisterEvent("UNIT_NAME_UPDATE")
+eventFrame:RegisterEvent("UNIT_THREAT_SITUATION_UPDATE")
+eventFrame:RegisterEvent("UNIT_THREAT_LIST_UPDATE")
+eventFrame:RegisterEvent("PLAYER_REGEN_DISABLED")
+eventFrame:RegisterEvent("PLAYER_REGEN_ENABLED")
+eventFrame:RegisterEvent("UNIT_AURA")
+
+eventFrame:SetScript("OnEvent", function(self, event, ...)
+    if event == "ADDON_LOADED" then
+        local loadedAddon = ...
+        if loadedAddon and (loadedAddon == "ForeverPlates" or loadedAddon == "ForeverPlates_Camelot" or loadedAddon:lower():find("foreverplate") or loadedAddon == ADDON_NAME) then
+            DebugDB("ADDON_LOADED before defaults")
+            InitializeDatabase()
+            DebugDB("ADDON_LOADED after defaults")
+            RefreshAllDimensions()
+            RefreshAllPlates()
+            RefreshAllFonts()
+            RefreshAllArrows()
+        end
+    elseif event == "PLAYER_LOGIN" then
+        DebugDB("PLAYER_LOGIN before defaults")
+        InitializeDatabase()
+        DetectHealthTextCapability()
+        DebugDB("PLAYER_LOGIN after defaults")
+        RefreshAllDimensions()
+        RefreshAllPlates()
+        RefreshAllFonts()
+        RefreshAllArrows()
+        DEFAULT_CHAT_FRAME:AddMessage("|cff00c0ffForeverPlates|r v2.1 loaded! Type |cff00c0ff/fp|r to open settings.")
+        local nameplates = C_NamePlate.GetNamePlates()
+        if nameplates then
+            for _, np in ipairs(nameplates) do
+                if np.UnitFrame then
+                    StyleNamePlate(np.UnitFrame)
+                    ApplyBarDimensions(np.UnitFrame)
+                    UpdateUnitHealthAndColors(np.UnitFrame)
+                    UpdateTargetState(np.UnitFrame)
+                    UpdateNameTypography(np.UnitFrame)
+                    if AdjustAuraFrames then AdjustAuraFrames(np.UnitFrame) end
+                end
+            end
+        end
+    elseif event == "PLAYER_ENTERING_WORLD" then
+        InitializeDatabase()
+        DetectHealthTextCapability()
+        local nameplates = C_NamePlate.GetNamePlates()
+        if nameplates then
+            for _, np in ipairs(nameplates) do
+                if np.UnitFrame then
+                    StyleNamePlate(np.UnitFrame)
+                    ApplyBarDimensions(np.UnitFrame)
+                    UpdateUnitHealthAndColors(np.UnitFrame)
+                    UpdateTargetState(np.UnitFrame)
+                    UpdateNameTypography(np.UnitFrame)
+                    if AdjustAuraFrames then AdjustAuraFrames(np.UnitFrame) end
+                end
+            end
+        end
+    elseif event == "PLAYER_LOGOUT" then
+        InitializeDatabase()
+    elseif event == "NAME_PLATE_CREATED" then
+        local namePlate = ...
+        if namePlate and namePlate.UnitFrame then
+            StyleNamePlate(namePlate.UnitFrame)
+        end
+    elseif event == "NAME_PLATE_UNIT_ADDED" then
+        local unit = ...
+        local namePlate = C_NamePlate.GetNamePlateForUnit(unit)
+        if namePlate and namePlate.UnitFrame then
+            local uf = namePlate.UnitFrame
+            StyleNamePlate(uf)
+            if plates[uf] then
+                plates[uf].unit = unit
+            end
+            if uf.name and uf.name:GetAlpha() > 0 then
+                uf.name:SetAlpha(0)
+            end
+            ApplyBarDimensions(uf)
+            UpdateUnitHealthAndColors(uf, unit)
+            UpdateTargetState(uf, unit)
+            UpdateNameTypography(uf, unit)
+            ApplyMatchingOutline(uf)
+            if AdjustAuraFrames then AdjustAuraFrames(uf) end
+        end
+    elseif event == "NAME_PLATE_UNIT_REMOVED" then
+        local unit = ...
+        local namePlate = C_NamePlate.GetNamePlateForUnit(unit)
+        if namePlate and namePlate.UnitFrame and plates[namePlate.UnitFrame] then
+            plates[namePlate.UnitFrame].unit = nil
+        end
+    elseif event == "PLAYER_TARGET_CHANGED" then
+        local nameplates = C_NamePlate.GetNamePlates()
+        if nameplates then
+            for _, np in ipairs(nameplates) do
+                if np.UnitFrame then
+                    UpdateTargetState(np.UnitFrame)
+                end
+            end
+        end
+    elseif event == "UNIT_HEALTH" or event == "UNIT_MAXHEALTH" or event == "UNIT_FACTION" or event == "UNIT_FLAGS" or event == "UNIT_THREAT_SITUATION_UPDATE" or event == "UNIT_THREAT_LIST_UPDATE" then
+        local unit = ...
+        if unit == "target" then
+            local np = C_NamePlate.GetNamePlateForUnit("target")
+            if np and np.UnitFrame then
+                UpdateUnitHealthAndColors(np.UnitFrame, "target")
+                UpdateTargetState(np.UnitFrame, "target")
+                UpdateNameTypography(np.UnitFrame, "target")
+                if AdjustAuraFrames then AdjustAuraFrames(np.UnitFrame) end
+            end
+        elseif unit and unit:find("nameplate") then
+            local namePlate = C_NamePlate.GetNamePlateForUnit(unit)
+            if namePlate and namePlate.UnitFrame then
+                UpdateUnitHealthAndColors(namePlate.UnitFrame, unit)
+                UpdateNameTypography(namePlate.UnitFrame, unit)
+                if AdjustAuraFrames then AdjustAuraFrames(namePlate.UnitFrame) end
+            end
+        elseif unit == "player" or event == "UNIT_THREAT_LIST_UPDATE" then
+            local nameplates = C_NamePlate.GetNamePlates()
+            if nameplates then
+                for _, np in ipairs(nameplates) do
+                    if np.UnitFrame then
+                        UpdateUnitHealthAndColors(np.UnitFrame, np.UnitFrame.unit)
+                        if AdjustAuraFrames then AdjustAuraFrames(np.UnitFrame) end
+                    end
+                end
+            end
+        end
+    elseif event == "UNIT_AURA" then
+        local unit = ...
+        if unit then
+            if unit == "target" then
+                local np = C_NamePlate.GetNamePlateForUnit("target")
+                if np and np.UnitFrame and AdjustAuraFrames then
+                    AdjustAuraFrames(np.UnitFrame)
+                end
+            elseif unit:find("nameplate") then
+                local np = C_NamePlate.GetNamePlateForUnit(unit)
+                if np and np.UnitFrame and AdjustAuraFrames then
+                    AdjustAuraFrames(np.UnitFrame)
+                end
+            end
+        end
+    elseif event == "UNIT_NAME_UPDATE" then
+        local unit = ...
+        if unit and unit:find("nameplate") then
+            local namePlate = C_NamePlate.GetNamePlateForUnit(unit)
+            if namePlate and namePlate.UnitFrame then
+                UpdateNameTypography(namePlate.UnitFrame, unit)
+            end
+        end
+    elseif event == "PLAYER_REGEN_DISABLED" or event == "PLAYER_REGEN_ENABLED" then
+        local nameplates = C_NamePlate.GetNamePlates()
+        if nameplates then
+            for _, np in ipairs(nameplates) do
+                local uf = np.UnitFrame
+                if uf then
+                    if uf.name and uf.name:GetAlpha() > 0 then
+                        uf.name:SetAlpha(0)
+                    end
+                    UpdateNameTypography(uf, uf.unit)
+                    UpdateUnitHealthAndColors(uf, uf.unit)
+                    UpdateTargetState(uf, uf.unit)
+                end
+            end
+        end
+    end
+end)
+
+-------------------------------------------------------------------------------
+-- Slash Command (/fp or /foreverplates)
+-------------------------------------------------------------------------------
+SLASH_FOREVERPLATES1 = "/fp"
+SLASH_FOREVERPLATES2 = "/foreverplates"
+SlashCmdList["FOREVERPLATES"] = function(msg)
+    local args = {}
+    for word in (msg or ""):gmatch("%S+") do
+        table.insert(args, word:lower())
+    end
+
+    local cmd = args[1] or ""
+    local param = args[2] or ""
+
+    if cmd == "" or cmd == "gui" or cmd == "config" or cmd == "options" or cmd == "menu" then
+        if FP.ToggleGUI then
+            FP.ToggleGUI()
+        end
+    elseif cmd == "debug" or cmd == "hookdebug" or cmd == "colorhook" then
+        FP.debugColorHooks = not FP.debugColorHooks
+        DEFAULT_CHAT_FRAME:AddMessage(string.format(
+            "|cff00c0ff[FP Debug]|r Color Hook: Lock=%s | DebugLog=%s | Total Intercepted Calls=%d",
+            tostring(ForeverPlatesDB.lockHealthBarColor),
+            FP.debugColorHooks and "|cff00ff00ENABLED|r" or "|cffff0000DISABLED|r",
+            hookCallCount
+        ))
+        local targetName = UnitName("target") or "None"
+        local np = C_NamePlate.GetNamePlateForUnit("target")
+        local npUnit = np and (np.namePlateUnitToken or (np.UnitFrame and plates[np.UnitFrame] and plates[np.UnitFrame].unit))
+        DEFAULT_CHAT_FRAME:AddMessage(string.format("|cff00c0ff[FP Debug]|r Target: %s, npToken: %s", tostring(targetName), tostring(npUnit)))
+        DEFAULT_CHAT_FRAME:AddMessage(string.format("|cff00c0ff[FP Debug]|r HealthText Capability: %s", tostring(FP.healthTextCapability)))
+    elseif cmd == "healthdebug" or cmd == "textdebug" then
+        if InCombatLockdown() then
+            DEFAULT_CHAT_FRAME:AddMessage("|cff00c0ffForeverPlates:|r Diagnostics cannot be run in combat.")
+            return
+        end
+        local foundBlizzText = false
+        local checkedPlates = 0
+        local nameplates = C_NamePlate.GetNamePlates and C_NamePlate.GetNamePlates()
+        if nameplates then
+            checkedPlates = #nameplates
+            for _, np in ipairs(nameplates) do
+                local uf = np.UnitFrame
+                if FindBlizzardHealthText(uf) then
+                    foundBlizzText = true
+                    break
+                end
+            end
+        end
+        DEFAULT_CHAT_FRAME:AddMessage(string.format(
+            "|cff00c0ff[FP Health Diagnostic]|r Plates Checked: %d | Blizz Native FontString Found: %s | Capability: %s",
+            checkedPlates,
+            foundBlizzText and "|cff00ff00YES|r" or "|cffff0000NO|r",
+            tostring(FP.healthTextCapability)
+        ))
+    elseif cmd == "size" or cmd == "textsize" or cmd == "healthsize" then
+        local val = tonumber(param)
+        if val and val >= 8 and val <= 28 then
+            ForeverPlatesDB.healthFontSize = val
+            RefreshAllPlates()
+            DEFAULT_CHAT_FRAME:AddMessage(string.format("|cff00c0ffForeverPlates:|r Health text font size set to |cff00ff00%dpx|r!", val))
+        else
+            DEFAULT_CHAT_FRAME:AddMessage(string.format("|cff00c0ffForeverPlates:|r Current health text font size: %dpx. Usage: /fp size <8-28>", ForeverPlatesDB.healthFontSize or 17))
+        end
+    elseif cmd == "lock" or cmd == "colorlock" then
+        ForeverPlatesDB.lockHealthBarColor = not ForeverPlatesDB.lockHealthBarColor
+        RefreshAllPlates()
+        DEFAULT_CHAT_FRAME:AddMessage("|cff00c0ffForeverPlates:|r Health bar color lock is now " .. (ForeverPlatesDB.lockHealthBarColor and "|cff00ff00ENABLED (Blizzard damage flash suppressed)|r" or "|cffff0000DISABLED (Blizzard native colors restored)|r"))
+    elseif cmd == "font" then
+        if FONTS[param] then
+            ForeverPlatesDB.font = param
+            RefreshAllFonts()
+            DEFAULT_CHAT_FRAME:AddMessage("|cff00c0ffForeverPlates:|r Font set to |cff00ff00" .. param:upper() .. "|r!")
+        else
+            DEFAULT_CHAT_FRAME:AddMessage("|cff00c0ffForeverPlates Fonts:|r expressway, forced, carlito, accidental, oswald, nueva, trashhand, magic, blizzard, arial, morpheus, skurri")
+            DEFAULT_CHAT_FRAME:AddMessage("Usage: |cff00c0ff/fp font <name>|r")
+        end
+    elseif cmd == "arrow" then
+        if ARROWS[param] then
+            ForeverPlatesDB.targetArrowStyle = param
+            RefreshAllArrows()
+            DEFAULT_CHAT_FRAME:AddMessage("|cff00c0ffForeverPlates:|r Arrow style set to |cff00ff00" .. ARROWS[param].name .. "|r!")
+        else
+            ForeverPlatesDB.showTargetArrow = not ForeverPlatesDB.showTargetArrow
+            RefreshAllPlates()
+            DEFAULT_CHAT_FRAME:AddMessage("|cff00c0ffForeverPlates:|r Floating target arrow " .. (ForeverPlatesDB.showTargetArrow and "|cff00ff00enabled|r" or "|cffff0000disabled|r"))
+        end
+    elseif cmd == "execute" then
+        ForeverPlatesDB.showExecuteGlow = not ForeverPlatesDB.showExecuteGlow
+        RefreshAllPlates()
+        DEFAULT_CHAT_FRAME:AddMessage("|cff00c0ffForeverPlates:|r Execute range glow " .. (ForeverPlatesDB.showExecuteGlow and "|cff00ff00enabled|r" or "|cffff0000disabled|r"))
+    elseif cmd == "glow" then
+        ForeverPlatesDB.showTargetGlow = not ForeverPlatesDB.showTargetGlow
+        RefreshAllPlates()
+        DEFAULT_CHAT_FRAME:AddMessage("|cff00c0ffForeverPlates:|r Target glow " .. (ForeverPlatesDB.showTargetGlow and "|cff00ff00enabled|r" or "|cffff0000disabled|r"))
+    elseif cmd == "brackets" then
+        ForeverPlatesDB.showTargetBrackets = not ForeverPlatesDB.showTargetBrackets
+        RefreshAllPlates()
+        DEFAULT_CHAT_FRAME:AddMessage("|cff00c0ffForeverPlates:|r Target brackets " .. (ForeverPlatesDB.showTargetBrackets and "|cff00ff00enabled|r" or "|cffff0000disabled|r"))
+    elseif cmd == "health" then
+        ForeverPlatesDB.showHealthText = not ForeverPlatesDB.showHealthText
+        RefreshAllPlates()
+        DEFAULT_CHAT_FRAME:AddMessage("|cff00c0ffForeverPlates:|r Health display " .. (ForeverPlatesDB.showHealthText and "|cff00ff00enabled|r" or "|cffff0000disabled|r"))
+    elseif cmd == "border" or cmd == "highlight" then
+        ForeverPlatesDB.alwaysShowSelectionHighlight = not ForeverPlatesDB.alwaysShowSelectionHighlight
+        RefreshAllPlates()
+        DEFAULT_CHAT_FRAME:AddMessage("|cff00c0ffForeverPlates:|r White target border on ALL mobs is now " .. (ForeverPlatesDB.alwaysShowSelectionHighlight and "|cff00ff00ENABLED|r" or "|cffff0000DISABLED|r"))
+    elseif cmd == "thickness" or cmd == "thick" or cmd == "outline" then
+        local val = tonumber(param)
+        if val and val >= 1 and val <= 6 then
+            ForeverPlatesDB.outlineThickness = val
+            RefreshAllOutlines()
+            RefreshAllPlates()
+            DEFAULT_CHAT_FRAME:AddMessage(string.format("|cff00c0ffForeverPlates:|r Outline thickness set to |cff00ff00%dpx|r!", val))
+        else
+            DEFAULT_CHAT_FRAME:AddMessage("Usage: |cff00c0ff/fp thickness <1-6>|r")
+        end
+    elseif cmd == "threat" or cmd == "aggro" then
+        ForeverPlatesDB.colorByThreat = not ForeverPlatesDB.colorByThreat
+        RefreshAllPlates()
+        DEFAULT_CHAT_FRAME:AddMessage("|cff00c0ffForeverPlates:|r Threat / aggro coloring is now " .. (ForeverPlatesDB.colorByThreat and "|cff00ff00ENABLED|r" or "|cffff0000DISABLED|r"))
+    elseif cmd == "threatgroup" or cmd == "groupthreat" then
+        ForeverPlatesDB.threatOnlyInGroup = not ForeverPlatesDB.threatOnlyInGroup
+        RefreshAllPlates()
+        DEFAULT_CHAT_FRAME:AddMessage("|cff00c0ffForeverPlates:|r Threat coloring restricted to group/raid is now " .. (ForeverPlatesDB.threatOnlyInGroup and "|cff00ff00ENABLED (Solo: off)|r" or "|cffff0000DISABLED (Always active)|r"))
+    else
+        DEFAULT_CHAT_FRAME:AddMessage("|cff00c0ff=== ForeverPlates Commands ===|r")
+        DEFAULT_CHAT_FRAME:AddMessage("  |cff00c0ff/fp|r - Open interactive GUI settings window")
+        DEFAULT_CHAT_FRAME:AddMessage("  |cff00c0ff/fp border|r - Toggle white target border on ALL mobs")
+        DEFAULT_CHAT_FRAME:AddMessage("  |cff00c0ff/fp thickness <1-6>|r - Set outline border thickness")
+        DEFAULT_CHAT_FRAME:AddMessage("  |cff00c0ff/fp threat|r - Toggle threat / aggro coloring")
+        DEFAULT_CHAT_FRAME:AddMessage("  |cff00c0ff/fp threatgroup|r - Toggle threat colors restricted to group/raid")
+        DEFAULT_CHAT_FRAME:AddMessage("  |cff00c0ff/fp lock|r - Toggle health bar color lock (override damage flash)")
+        DEFAULT_CHAT_FRAME:AddMessage("  |cff00c0ff/fp debug|r - Toggle color hook debug logging & print target status")
+        DEFAULT_CHAT_FRAME:AddMessage("  |cff00c0ff/reload|r - Reload UI")
+    end
+end

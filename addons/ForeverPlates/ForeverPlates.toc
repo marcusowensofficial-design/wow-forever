@@ -1,0 +1,11 @@
+## Interface: 16001
+## Title: Forever|cff00c0ffPlates|r
+## Notes: Sleek, modern, high-performance enemy nameplates for WoW Forever.
+## Author: Marcus & Antigravity
+## Version: 2.1.0
+## SavedVariables: ForeverPlatesDB
+## OptionalDeps: Blizzard_NamePlates
+
+ForeverPlates_Restore.lua
+core.lua
+gui.lua
