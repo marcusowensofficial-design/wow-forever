@@ -86,6 +86,42 @@ const WOW_FOREVER_DATA = {
   ],
   "newsFeed": [
     {
+      "id": "news-16",
+      "title": "Beta Weekend Surge: Aggrend Reports Record Turnout as Rolling Megarealm Restarts & EU Routing Deploy",
+      "source": "Blizzard Official / Twitter",
+      "sourceType": "blizzard",
+      "author": "Lead Designer Josh \"Aggrend\" Greenfield",
+      "date": "September 21, 2026",
+      "tag": "Beta Operations",
+      "summary": "Aggrend reports player turnout has been the \"craziest in 17 years at Blizzard\" as engineering teams deploy rolling restarts to stabilize megarealms and release EU cross-region latency routing.",
+      "content": "Following the first weekend of the World of Warcraft: Forever closed beta, lead producer and designer Josh \"Aggrend\" Greenfield addressed the community regarding unprecedented participation numbers:\n• \"Craziest Turnout in 17 Years\": Aggrend confirmed that player concurrency and login volume shattered all internal forecasts, creating heavy demand on the realmless megarealm infrastructure.\n• Rolling Server Restarts: Blizzard operations deployed rolling server restarts on September 21 (including quick 15-minute maintenance windows) to recalibrate dynamic sharding boundaries, flush memory caches, and relieve congestion in starting hubs.\n• EU Routing Optimization: A dedicated blue post confirmed European routing enhancements, optimizing network packet flow for EU players connecting to North American beta megarealms with reduced latency and packet drop.\n• Test Window Progression: Phase 1 continues with the Level 20 cap through October 8, when Phase 2 unlocks the Level 30 cap and the City of Dalaran.",
+      "url": "https://news.blizzard.com/en-us/world-of-warcraft/beta-operations-turnout-eu-routing"
+    },
+    {
+      "id": "news-17",
+      "title": "Field Testing Dispatch: 60-Minute Camp Benefits, +8% All-Stat Fish Bowl & +5% Kill XP Cooking Buffs Verified",
+      "source": "Method.gg / Beta Playtest",
+      "sourceType": "method",
+      "author": "Beta Theorycrafting Team",
+      "date": "September 20, 2026",
+      "tag": "Professions & Systems",
+      "summary": "Live in-game testing verifies full 'Camp Benefits' buff behavior: 60-minute duration, 1-hour Tent rested cooldown, Tier 1 Fish Bowl +8% All Stats, and +5% monster kill EXP on Well Fed meals.",
+      "content": "In-depth open-world playtesting in Durotar and The Barrens has verified exact numbers and mechanics for the new Camping & Campfire integration:\n• \"Camp Benefits\" 60-Minute Aura: Resting near an upgraded campfire applies the unified 'Camp Benefits' buff that persists for a full 60 minutes across outdoor zones.\n• The Tent (Rested XP Mechanics): Entering a crafted Camp Tent grants immediate rest experience in the field with a strict 1-hour cooldown: \"You received a small amount of rest experience. You can only receive this effect once per 1 hour.\"\n• Fishing Tier 1 Fish Bowl: Confirmed to grant all resting party members a flat +8% increase to all primary attributes (Strength, Agility, Stamina, Intellect, Spirit) for 60 minutes right at Tier 1!\n• Blacksmithing Sharpening Wheel: Confirmed to grant +6 Strength directly to equipped weapons for 60 minutes.\n• Cooking +5% Kill XP: Food recipes in the revised Cooking panel (such as 'Herb Baked Egg' under Stamina Food) now grant 15-minute Well Fed buffs that feature: \"Additionally, experience gained from kills is increased by 5%.\"\n• Intro Questlines: Discovered 'Camping 101: Skinning' in Razor Hill alongside new regional quests including 'Forgotten Loa Idols' and 'Practical Prey'.",
+      "url": "https://www.method.gg/wow-classic/camping-system-verified-numbers-buffs"
+    },
+    {
+      "id": "news-18",
+      "title": "Beta Known Issues Tracker: Addon Persistence Bug, Capital City FPS & Alt Mail Delivery Slated for Next Build",
+      "source": "Blizzard Official / Wowhead",
+      "sourceType": "blizzard",
+      "author": "Blizzard Quality Assurance",
+      "date": "September 20, 2026",
+      "tag": "Bug Tracker",
+      "summary": "Blizzard QA updates the Known Issues tracker for Build 1.60.1.69913, detailing pending fixes for SavedVariables disk flushing, Orgrimmar/Stormwind FPS drops, and cross-character mail.",
+      "content": "Blizzard Quality Assurance has updated the public bug tracker for WoW Forever Beta (Build 1.60.1.69913) with roughly eight core technical issues slated for resolution in the next iterative client build:\n• Addon SavedVariables Not Persisting: The client currently fails to flush addon configuration tables to disk upon /reload or normal game exit, requiring addon developers to implement snapshot restoration workarounds. A client-side C++ file I/O fix is queued for the next patch.\n• Capital City Frame Drops: Heavy stuttering and frame dips in Orgrimmar Valley of Strength and Stormwind Trade District are tied to modern DX12 shadow rendering on high-density NPC and player crowds.\n• Character-to-Character Alt Mail: Players have reported being unable to send mail to other characters on the same account under specific megarealm routing conditions.\n• macOS Client Visual Anomalies: Texture flickering on Apple Silicon hardware in coastal zones is currently being patched.\n• Next Build Window: A new beta build is scheduled to deploy early this week to push these engine and interface stability updates.",
+      "url": "https://news.blizzard.com/en-us/world-of-warcraft/beta-known-issues-tracker-sep20"
+    },
+    {
       "id": "news-15",
       "title": "Beta Day 2 Dispatch: Early Hotfixes, Bear Form Armor Stacking Bug & Legacy Turn-in Fixes",
       "source": "Warcraft Tavern / Blizzard Official",
@@ -1205,7 +1241,7 @@ const WOW_FOREVER_DATA = {
         {
           "name": "Sharpening Wheel",
           "tier": 1,
-          "desc": "Grants weapon sharpening bonus increasing attack power."
+          "desc": "Field sharpening wheel granting +6 Strength (or scaling with weapon tier) for 60 minutes."
         },
         {
           "name": "Anvil",
@@ -1301,7 +1337,7 @@ const WOW_FOREVER_DATA = {
         {
           "name": "Fish Bowl",
           "tier": 1,
-          "desc": "Stores live bait and increases fishing skill by +5."
+          "desc": "Stores live bait and grants party members +8% to all primary stats for 60 minutes."
         },
         {
           "name": "Fishing Rack",
@@ -1349,7 +1385,7 @@ const WOW_FOREVER_DATA = {
         {
           "name": "Camp Tent",
           "tier": 1,
-          "desc": "Provides shelter, accelerating rested XP generation."
+          "desc": "Provides canvas shelter granting a burst of rested experience (can only be received once per 1 hour)."
         },
         {
           "name": "Tanning Rack",
@@ -1432,6 +1468,30 @@ const WOW_FOREVER_DATA = {
           "name": "Loom",
           "tier": 3,
           "desc": "Grants party members +8% Spirit and bonus mana regeneration for 1 hour."
+        }
+      ]
+    },
+    {
+      "profession": "Cooking",
+      "type": "Secondary",
+      "icon": "🍳",
+      "mirroredBuff": "Well Fed (+Stats & +5% Kill XP)",
+      "mirroredClass": "General",
+      "objects": [
+        {
+          "name": "Basic Campfire & Spit",
+          "tier": 1,
+          "desc": "Field cook everyday and stamina meals; Well Fed meals grant +5% bonus experience from monster kills."
+        },
+        {
+          "name": "Iron Cauldron",
+          "tier": 2,
+          "desc": "Prepares hearty banquets restoring party health and mana rapidly."
+        },
+        {
+          "name": "Master Encampment Feast Table",
+          "tier": 3,
+          "desc": "Provides high-tier raid feasts granting +Stamina and primary stats to all raid members."
         }
       ]
     }
