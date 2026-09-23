@@ -120,10 +120,10 @@ function FP.CreateGUI()
     closeBtn:SetScript("OnClick", function() f:Hide() end)
 
     ---------------------------------------------------------------------------
-    -- Navigation Tabs: [ ⚔️ Enemy Plates ] and [ 🛡️ Friendly Plates ]
+    -- Navigation Tabs: [ ⚔️ Enemy Plates ] [ 🛡️ Friendly Plates ] [ ⚡ Cast Bar ]
     ---------------------------------------------------------------------------
     local tabEnemy = CreateFrame("Button", nil, f)
-    tabEnemy:SetSize(160, 26)
+    tabEnemy:SetSize(162, 26)
     tabEnemy:SetPoint("TOPLEFT", f, "TOPLEFT", 16, -46)
     local tabEnemyBg = tabEnemy:CreateTexture(nil, "BACKGROUND")
     tabEnemyBg:SetAllPoints(tabEnemy)
@@ -137,7 +137,7 @@ function FP.CreateGUI()
     tabEnemy.text = tabEnemyText
 
     local tabFriendly = CreateFrame("Button", nil, f)
-    tabFriendly:SetSize(160, 26)
+    tabFriendly:SetSize(162, 26)
     tabFriendly:SetPoint("LEFT", tabEnemy, "RIGHT", 8, 0)
     local tabFriendlyBg = tabFriendly:CreateTexture(nil, "BACKGROUND")
     tabFriendlyBg:SetAllPoints(tabFriendly)
@@ -149,6 +149,20 @@ function FP.CreateGUI()
     tabFriendlyText:SetPoint("CENTER", tabFriendly, "CENTER", 0, 0)
     tabFriendlyText:SetText("🛡️  FRIENDLY PLATES")
     tabFriendly.text = tabFriendlyText
+
+    local tabCast = CreateFrame("Button", nil, f)
+    tabCast:SetSize(162, 26)
+    tabCast:SetPoint("LEFT", tabFriendly, "RIGHT", 8, 0)
+    local tabCastBg = tabCast:CreateTexture(nil, "BACKGROUND")
+    tabCastBg:SetAllPoints(tabCast)
+    tabCastBg:SetTexture(FLAT_TEXTURE)
+    tabCast.bg = tabCastBg
+    tabCast.border = CreatePixelBorder(tabCast, 1, 0.22, 0.25, 0.30, 1.0)
+    local tabCastText = tabCast:CreateFontString(nil, "OVERLAY")
+    tabCastText:SetFont(DEFAULT_FONT, 11, "OUTLINE")
+    tabCastText:SetPoint("CENTER", tabCast, "CENTER", 0, 0)
+    tabCastText:SetText("⚡  CAST BAR")
+    tabCast.text = tabCastText
 
     local tabLine = f:CreateTexture(nil, "ARTWORK")
     tabLine:SetTexture(FLAT_TEXTURE)
@@ -181,14 +195,14 @@ function FP.CreateGUI()
     end
 
     ---------------------------------------------------------------------------
-    -- ScrollFrame Containers (Tab 1: Enemy, Tab 2: Friendly)
+    -- ScrollFrame Containers (Tab 1: Enemy, Tab 2: Friendly, Tab 3: Cast Bar)
     ---------------------------------------------------------------------------
     local scrollFrameEnemy = CreateFrame("ScrollFrame", "ForeverPlatesScrollFrameEnemy", f, "UIPanelScrollFrameTemplate")
     scrollFrameEnemy:SetPoint("TOPLEFT", f, "TOPLEFT", 12, -78)
     scrollFrameEnemy:SetPoint("BOTTOMRIGHT", f, "BOTTOMRIGHT", -32, 96)
 
     local contentEnemy = CreateFrame("Frame", "ForeverPlatesScrollChildEnemy", scrollFrameEnemy)
-    contentEnemy:SetSize(490, 1420)
+    contentEnemy:SetSize(490, 1160)
     scrollFrameEnemy:SetScrollChild(contentEnemy)
 
     local scrollFrameFriendly = CreateFrame("ScrollFrame", "ForeverPlatesScrollFrameFriendly", f, "UIPanelScrollFrameTemplate")
@@ -199,37 +213,52 @@ function FP.CreateGUI()
     contentFriendly:SetSize(490, 920)
     scrollFrameFriendly:SetScrollChild(contentFriendly)
 
+    local scrollFrameCast = CreateFrame("ScrollFrame", "ForeverPlatesScrollFrameCast", f, "UIPanelScrollFrameTemplate")
+    scrollFrameCast:SetPoint("TOPLEFT", f, "TOPLEFT", 12, -78)
+    scrollFrameCast:SetPoint("BOTTOMRIGHT", f, "BOTTOMRIGHT", -32, 96)
+
+    local contentCast = CreateFrame("Frame", "ForeverPlatesScrollChildCast", scrollFrameCast)
+    contentCast:SetSize(490, 750)
+    scrollFrameCast:SetScrollChild(contentCast)
+
     -- Tab Switching Logic
     local currentTab = "ENEMY"
     local function SelectTab(tabName)
         currentTab = tabName
+
+        local function Inactivate(tab)
+            tab.bg:SetVertexColor(0.10, 0.12, 0.15, 0.70)
+            tab.border:SetColor(0.20, 0.23, 0.28, 0.8)
+            tab.text:SetTextColor(0.65, 0.70, 0.75, 1.0)
+        end
+        local function Activate(tab)
+            tab.bg:SetVertexColor(0.10, 0.20, 0.28, 0.95)
+            tab.border:SetColor(0.00, 0.85, 1.00, 1.0)
+            tab.text:SetTextColor(1.0, 1.0, 1.0, 1.0)
+        end
+
+        Inactivate(tabEnemy)
+        Inactivate(tabFriendly)
+        Inactivate(tabCast)
+        scrollFrameEnemy:Hide()
+        scrollFrameFriendly:Hide()
+        scrollFrameCast:Hide()
+
         if tabName == "ENEMY" then
-            tabEnemy.bg:SetVertexColor(0.10, 0.20, 0.28, 0.95)
-            tabEnemy.border:SetColor(0.00, 0.85, 1.00, 1.0)
-            tabEnemy.text:SetTextColor(1.0, 1.0, 1.0, 1.0)
-
-            tabFriendly.bg:SetVertexColor(0.10, 0.12, 0.15, 0.70)
-            tabFriendly.border:SetColor(0.20, 0.23, 0.28, 0.8)
-            tabFriendly.text:SetTextColor(0.65, 0.70, 0.75, 1.0)
-
+            Activate(tabEnemy)
             scrollFrameEnemy:Show()
-            scrollFrameFriendly:Hide()
-        else
-            tabFriendly.bg:SetVertexColor(0.10, 0.20, 0.28, 0.95)
-            tabFriendly.border:SetColor(0.00, 0.85, 1.00, 1.0)
-            tabFriendly.text:SetTextColor(1.0, 1.0, 1.0, 1.0)
-
-            tabEnemy.bg:SetVertexColor(0.10, 0.12, 0.15, 0.70)
-            tabEnemy.border:SetColor(0.20, 0.23, 0.28, 0.8)
-            tabEnemy.text:SetTextColor(0.65, 0.70, 0.75, 1.0)
-
-            scrollFrameEnemy:Hide()
+        elseif tabName == "FRIENDLY" then
+            Activate(tabFriendly)
             scrollFrameFriendly:Show()
+        elseif tabName == "CASTBAR" then
+            Activate(tabCast)
+            scrollFrameCast:Show()
         end
     end
 
     tabEnemy:SetScript("OnClick", function() SelectTab("ENEMY") end)
     tabFriendly:SetScript("OnClick", function() SelectTab("FRIENDLY") end)
+    tabCast:SetScript("OnClick", function() SelectTab("CASTBAR") end)
 
     local registeredSliders = {}
     local registeredCheckboxes = {}
@@ -344,6 +373,7 @@ function FP.CreateGUI()
         end
 
         slider:SetValue(val)
+        UpdateThumbVisual(val)
 
         slider:SetScript("OnValueChanged", function(self, newVal)
             if not isSyncingControls then
@@ -372,6 +402,7 @@ function FP.CreateGUI()
             maxVal = maxVal,
             step = step,
             UpdateLabel = UpdateLabel,
+            UpdateThumbVisual = UpdateThumbVisual,
         }
         table.insert(registeredSliders, reg)
         return slider
@@ -391,7 +422,9 @@ function FP.CreateGUI()
         lbl:SetPoint("LEFT", cb, "RIGHT", 6, 0)
         lbl:SetText(labelText)
 
-        local isChecked = (ForeverPlatesDB[dbKey] == true or ForeverPlatesDB[dbKey] == 1)
+        local val = ForeverPlatesDB[dbKey]
+        if val == nil and FP.defaults then val = FP.defaults[dbKey] end
+        local isChecked = (val == true or val == 1)
         cb:SetChecked(isChecked)
         cb:SetScript("OnClick", function(self)
             local checked = not not self:GetChecked()
@@ -719,7 +752,7 @@ function FP.CreateGUI()
     }
 
     local function UpdateOutlineHighlights()
-        local cur = ForeverPlatesDB.outlineColor or "WHITE"
+        local cur = ForeverPlatesDB.outlineColor or "DARK"
         for _, b in ipairs(outlineButtons) do
             if b.olKey == cur then
                 b.border:SetColor(0.00, 0.85, 1.00, 1.0)
@@ -773,6 +806,7 @@ function FP.CreateGUI()
 
         table.insert(outlineButtons, btn)
     end
+    UpdateOutlineHighlights()
 
     -- Section 5: Name Font Color
     local nameColorHeader = contentEnemy:CreateFontString(nil, "OVERLAY")
@@ -846,88 +880,11 @@ function FP.CreateGUI()
         table.insert(nameColorButtons, btn)
     end
 
-    -- Section 6: Cast Bar Color (Kickable Spells)
-    local castColorHeader = contentEnemy:CreateFontString(nil, "OVERLAY")
-    castColorHeader:SetFont(DEFAULT_FONT, 11, "OUTLINE")
-    castColorHeader:SetTextColor(0.00, 0.82, 1.00, 1)
-    castColorHeader:SetPoint("TOPLEFT", contentEnemy, "TOPLEFT", 10, -450)
-    castColorHeader:SetText("CAST BAR COLOR (KICKABLE SPELLS)")
-
-    local castColorButtons = {}
-    local castColors = {
-        { key = "GOLD",   name = "Sun Gold",        r = 1.00, g = 0.72, b = 0.00 },
-        { key = "ORANGE", name = "Blazing Orange",  r = 1.00, g = 0.45, b = 0.00 },
-        { key = "CYAN",   name = "Neon Cyan",       r = 0.00, g = 0.85, b = 1.00 },
-        { key = "LIME",   name = "Neon Lime",       r = 0.25, g = 1.00, b = 0.25 },
-        { key = "PINK",   name = "Neon Pink",       r = 1.00, g = 0.25, b = 0.70 },
-        { key = "PURPLE", name = "Neon Purple",     r = 0.75, g = 0.30, b = 1.00 },
-        { key = "RED",    name = "Blood Red",       r = 1.00, g = 0.15, b = 0.15 },
-        { key = "WHITE",  name = "Pure White",      r = 0.95, g = 0.95, b = 0.95 },
-    }
-
-    local function UpdateCastColorHighlights()
-        local cur = ForeverPlatesDB.castBarColor or "GOLD"
-        for _, b in ipairs(castColorButtons) do
-            if b.castColorKey == cur then
-                b.border:SetColor(0.00, 0.85, 1.00, 1.0)
-                b.bg:SetVertexColor(0.12, 0.25, 0.35, 0.95)
-                b.label:SetTextColor(0.00, 0.85, 1.00, 1)
-            else
-                b.border:SetColor(0.18, 0.20, 0.24, 0.8)
-                b.bg:SetVertexColor(0.10, 0.11, 0.14, 0.85)
-                b.label:SetTextColor(0.75, 0.75, 0.75, 1)
-            end
-        end
-    end
-
-    local cbBtnW = 114
-    local cbBtnH = 24
-    for i, item in ipairs(castColors) do
-        local col = (i - 1) % 4
-        local row = math.floor((i - 1) / 4)
-        local posX = 10 + (col * (cbBtnW + 8))
-        local posY = -470 - (row * (cbBtnH + 6))
-
-        local btn = CreateFrame("Button", nil, contentEnemy)
-        btn:SetSize(cbBtnW, cbBtnH)
-        btn:SetPoint("TOPLEFT", contentEnemy, "TOPLEFT", posX, posY)
-
-        local bbg = btn:CreateTexture(nil, "BACKGROUND")
-        bbg:SetAllPoints(btn)
-        bbg:SetTexture(FLAT_TEXTURE)
-        btn.bg = bbg
-
-        local border = CreatePixelBorder(btn, 1, 0.18, 0.20, 0.24, 0.8)
-        btn.border = border
-
-        local swatch = btn:CreateTexture(nil, "OVERLAY")
-        swatch:SetSize(12, 12)
-        swatch:SetPoint("LEFT", btn, "LEFT", 6, 0)
-        swatch:SetTexture(FLAT_TEXTURE)
-        swatch:SetVertexColor(item.r, item.g, item.b, 1)
-
-        local lbl = btn:CreateFontString(nil, "OVERLAY")
-        lbl:SetFont(DEFAULT_FONT, 10, "OUTLINE")
-        lbl:SetPoint("LEFT", swatch, "RIGHT", 4, 0)
-        lbl:SetText(item.name)
-        btn.label = lbl
-        btn.castColorKey = item.key
-
-        btn:SetScript("OnClick", function()
-            ForeverPlatesDB.castBarColor = item.key
-            UpdateCastColorHighlights()
-            FP.RefreshAllPlates()
-            UpdateStatusText()
-        end)
-
-        table.insert(castColorButtons, btn)
-    end
-
-    -- Section 7: Health Text Position & Format
+    -- Section 6: Health Text Position & Format
     local posHeader = contentEnemy:CreateFontString(nil, "OVERLAY")
     posHeader:SetFont(DEFAULT_FONT, 11, "OUTLINE")
     posHeader:SetTextColor(0.00, 0.82, 1.00, 1)
-    posHeader:SetPoint("TOPLEFT", contentEnemy, "TOPLEFT", 10, -534)
+    posHeader:SetPoint("TOPLEFT", contentEnemy, "TOPLEFT", 10, -450)
     posHeader:SetText("HEALTH TEXT POSITION & FORMAT")
 
     local posButtons = {}
@@ -955,7 +912,7 @@ function FP.CreateGUI()
     local pBtnW = 153
     for i, item in ipairs(positions) do
         local posX = 10 + ((i - 1) * (pBtnW + 9))
-        local posY = -554
+        local posY = -470
 
         local btn = CreateFrame("Button", nil, contentEnemy)
         btn:SetSize(pBtnW, 24)
@@ -1013,7 +970,7 @@ function FP.CreateGUI()
     local fBtnW = 91
     for i, item in ipairs(formats) do
         local posX = 10 + ((i - 1) * (fBtnW + 5))
-        local posY = -586
+        local posY = -502
 
         local btn = CreateFrame("Button", nil, contentEnemy)
         btn:SetSize(fBtnW, 24)
@@ -1044,14 +1001,14 @@ function FP.CreateGUI()
         table.insert(fmtButtons, btn)
     end
 
-    -- Section 8: Visual Features & Combat Toggles
+    -- Section 7: Visual Features & Combat Toggles
     local toggleHeader = contentEnemy:CreateFontString(nil, "OVERLAY")
     toggleHeader:SetFont(DEFAULT_FONT, 11, "OUTLINE")
     toggleHeader:SetTextColor(0.00, 0.82, 1.00, 1)
-    toggleHeader:SetPoint("TOPLEFT", contentEnemy, "TOPLEFT", 10, -620)
+    toggleHeader:SetPoint("TOPLEFT", contentEnemy, "TOPLEFT", 10, -540)
     toggleHeader:SetText("VISUAL FEATURES & COMBAT FEEDBACK")
 
-    local cbStartY = -642
+    local cbStartY = -562
     local cbSpacing = 24
 
     CreateCheckbox(contentEnemy, "Cyan Target Glow (Outer Border Highlight)", "showTargetGlow", cbStartY)
@@ -1067,70 +1024,59 @@ function FP.CreateGUI()
         FP.RefreshAllPlates()
     end)
     CreateCheckbox(contentEnemy, "Elite & Boss Badges ([★], [♦], [☠ Boss])", "showEliteBadges", cbStartY - (cbSpacing * 6))
-    CreateCheckbox(contentEnemy, "Cast Bar Live Countdown Timer & Spark", "showCastBarTimer", cbStartY - (cbSpacing * 7))
-    CreateCheckbox(contentEnemy, "Class Color Enemy Players in PvP", "classColorPlayers", cbStartY - (cbSpacing * 8))
-    CreateCheckbox(contentEnemy, "Apply Target Bar Color to ALL Enemy Mobs", "colorAllEnemyBars", cbStartY - (cbSpacing * 9))
-    CreateCheckbox(contentEnemy, "Lock Health Bar Color (Override Blizzard Damage Flash)", "lockHealthBarColor", cbStartY - (cbSpacing * 10))
-    CreateCheckbox(contentEnemy, "Always Show White Target Border on ALL Mobs", "alwaysShowSelectionHighlight", cbStartY - (cbSpacing * 11))
-    CreateCheckbox(contentEnemy, "Gray Out Tapped / Already Claimed Mobs", "grayTappedMobs", cbStartY - (cbSpacing * 12), function()
+    CreateCheckbox(contentEnemy, "Class Color Enemy Players in PvP", "classColorPlayers", cbStartY - (cbSpacing * 7))
+    CreateCheckbox(contentEnemy, "Apply Target Bar Color to ALL Enemy Mobs", "colorAllEnemyBars", cbStartY - (cbSpacing * 8))
+    CreateCheckbox(contentEnemy, "Lock Health Bar Color (Override Blizzard Damage Flash)", "lockHealthBarColor", cbStartY - (cbSpacing * 9))
+    CreateCheckbox(contentEnemy, "Always Show White Target Border on ALL Mobs", "alwaysShowSelectionHighlight", cbStartY - (cbSpacing * 10))
+    CreateCheckbox(contentEnemy, "Gray Out Tapped / Already Claimed Mobs", "grayTappedMobs", cbStartY - (cbSpacing * 11), function()
         FP.RefreshAllPlates()
     end)
-    CreateCheckbox(contentEnemy, "Show [Tagged] Indicator on Claimed Mobs", "showTappedBadge", cbStartY - (cbSpacing * 13), function()
+    CreateCheckbox(contentEnemy, "Show [Tagged] Indicator on Claimed Mobs", "showTappedBadge", cbStartY - (cbSpacing * 12), function()
         FP.RefreshAllPlates()
     end)
 
-    -- Section 9: Sliders (Enemy Dimensions, Scaling, Depth)
+    -- Section 8: Sliders (Enemy Dimensions, Scaling, Depth)
     local sliderHeader = contentEnemy:CreateFontString(nil, "OVERLAY")
     sliderHeader:SetFont(DEFAULT_FONT, 11, "OUTLINE")
     sliderHeader:SetTextColor(0.00, 0.82, 1.00, 1)
-    sliderHeader:SetPoint("TOPLEFT", contentEnemy, "TOPLEFT", 10, -990)
+    sliderHeader:SetPoint("TOPLEFT", contentEnemy, "TOPLEFT", 10, -894)
     sliderHeader:SetText("ENEMY DIMENSIONS, SCALING & DEPTH")
 
     -- Row 1: Health Bar Dimensions
-    CreateSlider(contentEnemy, "Bar Width", "barWidth", 80, 240, 2, "%s: %dpx", 10, -1014, function()
+    CreateSlider(contentEnemy, "Bar Width", "barWidth", 80, 240, 2, "%s: %dpx", 10, -918, function()
         FP.RefreshAllDimensions()
         FP.RefreshAllPlates()
     end)
-    CreateSlider(contentEnemy, "Bar Height", "barHeight", 8, 36, 1, "%s: %dpx", 256, -1014, function()
-        FP.RefreshAllDimensions()
-        FP.RefreshAllPlates()
-    end)
-
-    -- Row 2: Cast Bar Dimensions
-    CreateSlider(contentEnemy, "Cast Bar Width", "castBarWidth", 60, 220, 2, "%s: %dpx", 10, -1064, function()
-        FP.RefreshAllDimensions()
-        FP.RefreshAllPlates()
-    end)
-    CreateSlider(contentEnemy, "Cast Bar Height", "castBarHeight", 8, 30, 1, "%s: %dpx", 256, -1064, function()
+    CreateSlider(contentEnemy, "Bar Height", "barHeight", 8, 36, 1, "%s: %dpx", 256, -918, function()
         FP.RefreshAllDimensions()
         FP.RefreshAllPlates()
     end)
 
-    -- Row 3: Target Arrow Sizing & Thickness
-    CreateSlider(contentEnemy, "Target Arrow Size", "targetArrowSize", 18, 48, 2, "%s: %dpx", 10, -1114, function()
+    -- Row 2: Target Arrow Sizing & Thickness
+    CreateSlider(contentEnemy, "Target Arrow Size", "targetArrowSize", 18, 48, 2, "%s: %dpx", 10, -968, function()
         FP.RefreshAllArrows()
         FP.RefreshAllPlates()
     end)
-    CreateSlider(contentEnemy, "Target Arrow Thickness", "targetArrowThickness", 0.50, 2.50, 0.05, "%s: %.0f%%", 256, -1114, function()
+    CreateSlider(contentEnemy, "Target Arrow Thickness", "targetArrowThickness", 0.50, 2.50, 0.05, "%s: %.0f%%", 256, -968, function()
         FP.RefreshAllArrows()
         FP.RefreshAllPlates()
     end)
 
-    -- Row 4: Typography
-    CreateSlider(contentEnemy, "Name Font Size", "nameFontSize", 8, 20, 1, "%s: %dpt", 10, -1164, function()
+    -- Row 3: Typography
+    CreateSlider(contentEnemy, "Name Font Size", "nameFontSize", 8, 20, 1, "%s: %dpt", 10, -1018, function()
         FP.RefreshAllFonts()
         FP.RefreshAllPlates()
     end)
-    CreateSlider(contentEnemy, "Health Text Font Size", "healthFontSize", 8, 28, 1, "%s: %dpx", 256, -1164, function()
+    CreateSlider(contentEnemy, "Health Text Font Size", "healthFontSize", 8, 28, 1, "%s: %dpx", 256, -1018, function()
         FP.RefreshAllPlates()
     end)
 
-    -- Row 5: Opacity & Target Scale
-    CreateSlider(contentEnemy, "Non-Target Opacity", "nonTargetAlpha", 0.30, 1.00, 0.05, "%s: %.0f%%", 10, -1214)
-    CreateSlider(contentEnemy, "Target Scale", "targetScale", 1.00, 1.30, 0.02, "%s: %.2fx", 256, -1214)
+    -- Row 4: Opacity & Target Scale
+    CreateSlider(contentEnemy, "Non-Target Opacity", "nonTargetAlpha", 0.30, 1.00, 0.05, "%s: %.0f%%", 10, -1068)
+    CreateSlider(contentEnemy, "Target Scale", "targetScale", 1.00, 1.30, 0.02, "%s: %.2fx", 256, -1068)
 
-    -- Row 6: Outline Thickness
-    CreateSlider(contentEnemy, "Outline Thickness", "outlineThickness", 1, 6, 1, "%s: %dpx", 10, -1264, function()
+    -- Row 5: Outline Thickness
+    CreateSlider(contentEnemy, "Outline Thickness", "outlineThickness", 1, 6, 1, "%s: %dpx", 10, -1118, function()
         FP.RefreshAllOutlines()
         FP.RefreshAllPlates()
     end)
@@ -1458,6 +1404,544 @@ function FP.CreateGUI()
     end)
 
     ---------------------------------------------------------------------------
+    -- TAB 3: CAST BAR (Blizzard Built-In Nameplate Castbar Customization)
+    ---------------------------------------------------------------------------
+
+    -- Diagnostics & Quick Simulated Test Header
+    local castHeader = contentCast:CreateFontString(nil, "OVERLAY")
+    castHeader:SetFont(DEFAULT_FONT, 11, "OUTLINE")
+    castHeader:SetTextColor(0.00, 0.85, 1.00, 1)
+    castHeader:SetPoint("TOPLEFT", contentCast, "TOPLEFT", 10, -10)
+    castHeader:SetText("CAST BAR LIVE PREVIEW & DIAGNOSTICS")
+
+    local castSub = contentCast:CreateFontString(nil, "OVERLAY")
+    castSub:SetFont(DEFAULT_FONT, 10, "")
+    castSub:SetTextColor(0.65, 0.70, 0.75, 1)
+    castSub:SetPoint("TOPLEFT", contentCast, "TOPLEFT", 10, -28)
+    castSub:SetText("Target an enemy to preview your cast bar styling without waiting for combat:")
+
+    local function CreateActionButton(parent, labelText, posX, posY, width, height, onClick)
+        local btn = CreateFrame("Button", nil, parent)
+        btn:SetSize(width, height)
+        btn:SetPoint("TOPLEFT", parent, "TOPLEFT", posX, posY)
+        local bbg = btn:CreateTexture(nil, "BACKGROUND")
+        bbg:SetAllPoints(btn)
+        bbg:SetTexture(FLAT_TEXTURE)
+        bbg:SetVertexColor(0.12, 0.16, 0.22, 0.95)
+        btn.bg = bbg
+        local border = CreatePixelBorder(btn, 1, 0.22, 0.26, 0.32, 1.0)
+        btn.border = border
+        local lbl = btn:CreateFontString(nil, "OVERLAY")
+        lbl:SetFont(DEFAULT_FONT, 9, "OUTLINE")
+        lbl:SetPoint("CENTER", btn, "CENTER", 0, 0)
+        lbl:SetText(labelText)
+        lbl:SetTextColor(0.95, 0.95, 0.95, 1)
+        btn.label = lbl
+        btn:SetScript("OnEnter", function()
+            bbg:SetVertexColor(0.18, 0.24, 0.32, 1.0)
+            border:SetColor(0.00, 0.85, 1.00, 1.0)
+            lbl:SetTextColor(0.00, 0.85, 1.00, 1)
+        end)
+        btn:SetScript("OnLeave", function()
+            bbg:SetVertexColor(0.12, 0.16, 0.22, 0.95)
+            border:SetColor(0.22, 0.26, 0.32, 1.0)
+            lbl:SetTextColor(0.95, 0.95, 0.95, 1)
+        end)
+        btn:SetScript("OnClick", onClick)
+        return btn
+    end
+
+    CreateActionButton(contentCast, "⚡ Test Kickable (4s)", 10, -48, 152, 24, function()
+        if FP.SimulateCast then FP.SimulateCast(false) end
+    end)
+    CreateActionButton(contentCast, "🛡️ Test Shielded (4s)", 170, -48, 152, 24, function()
+        if FP.SimulateCast then FP.SimulateCast(true) end
+    end)
+    CreateActionButton(contentCast, "🔍 Run Diagnostic", 330, -48, 145, 24, function()
+        if FP.CastDebug then FP.CastDebug() end
+    end)
+
+    -- Cast Section 1: Kickable Cast Bar Color
+    local castColorHeader = contentCast:CreateFontString(nil, "OVERLAY")
+    castColorHeader:SetFont(DEFAULT_FONT, 11, "OUTLINE")
+    castColorHeader:SetTextColor(0.00, 0.82, 1.00, 1)
+    castColorHeader:SetPoint("TOPLEFT", contentCast, "TOPLEFT", 10, -84)
+    castColorHeader:SetText("KICKABLE CAST BAR COLOR (INTERRUPTIBLE)")
+
+    local castColorButtons = {}
+    local castColors = {
+        { key = "GOLD",   name = "Sun Gold",        r = 1.00, g = 0.72, b = 0.00 },
+        { key = "ORANGE", name = "Blazing Orange",  r = 1.00, g = 0.45, b = 0.00 },
+        { key = "CYAN",   name = "Neon Cyan",       r = 0.00, g = 0.85, b = 1.00 },
+        { key = "LIME",   name = "Neon Lime",       r = 0.25, g = 1.00, b = 0.25 },
+        { key = "PINK",   name = "Neon Pink",       r = 1.00, g = 0.25, b = 0.70 },
+        { key = "PURPLE", name = "Neon Purple",     r = 0.75, g = 0.30, b = 1.00 },
+        { key = "RED",    name = "Blood Red",       r = 1.00, g = 0.15, b = 0.15 },
+        { key = "WHITE",  name = "Pure White",      r = 0.95, g = 0.95, b = 0.95 },
+    }
+
+    local function UpdateCastColorHighlights()
+        local cur = ForeverPlatesDB.castBarColor or "GOLD"
+        for _, b in ipairs(castColorButtons) do
+            if b.castColorKey == cur then
+                b.border:SetColor(0.00, 0.85, 1.00, 1.0)
+                b.bg:SetVertexColor(0.12, 0.25, 0.35, 0.95)
+                b.label:SetTextColor(0.00, 0.85, 1.00, 1)
+            else
+                b.border:SetColor(0.18, 0.20, 0.24, 0.8)
+                b.bg:SetVertexColor(0.10, 0.11, 0.14, 0.85)
+                b.label:SetTextColor(0.75, 0.75, 0.75, 1)
+            end
+        end
+    end
+
+    local cbBtnW = 114
+    local cbBtnH = 24
+    for i, item in ipairs(castColors) do
+        local col = (i - 1) % 4
+        local row = math.floor((i - 1) / 4)
+        local posX = 10 + (col * (cbBtnW + 8))
+        local posY = -104 - (row * (cbBtnH + 6))
+
+        local btn = CreateFrame("Button", nil, contentCast)
+        btn:SetSize(cbBtnW, cbBtnH)
+        btn:SetPoint("TOPLEFT", contentCast, "TOPLEFT", posX, posY)
+
+        local bbg = btn:CreateTexture(nil, "BACKGROUND")
+        bbg:SetAllPoints(btn)
+        bbg:SetTexture(FLAT_TEXTURE)
+        btn.bg = bbg
+
+        local border = CreatePixelBorder(btn, 1, 0.18, 0.20, 0.24, 0.8)
+        btn.border = border
+
+        local swatch = btn:CreateTexture(nil, "OVERLAY")
+        swatch:SetSize(12, 12)
+        swatch:SetPoint("LEFT", btn, "LEFT", 6, 0)
+        swatch:SetTexture(FLAT_TEXTURE)
+        swatch:SetVertexColor(item.r, item.g, item.b, 1)
+
+        local lbl = btn:CreateFontString(nil, "OVERLAY")
+        lbl:SetFont(DEFAULT_FONT, 10, "OUTLINE")
+        lbl:SetPoint("LEFT", swatch, "RIGHT", 4, 0)
+        lbl:SetText(item.name)
+        btn.label = lbl
+        btn.castColorKey = item.key
+
+        btn:SetScript("OnClick", function()
+            ForeverPlatesDB.castBarColor = item.key
+            UpdateCastColorHighlights()
+            if FP.RefreshAllCastBars then FP.RefreshAllCastBars() else FP.RefreshAllDimensions() end
+            FP.RefreshAllPlates()
+            UpdateStatusText()
+        end)
+
+        table.insert(castColorButtons, btn)
+    end
+
+    -- Cast Section 2: Shielded (Unkickable) Bar Color
+    local castUnkHeader = contentCast:CreateFontString(nil, "OVERLAY")
+    castUnkHeader:SetFont(DEFAULT_FONT, 11, "OUTLINE")
+    castUnkHeader:SetTextColor(0.00, 0.82, 1.00, 1)
+    castUnkHeader:SetPoint("TOPLEFT", contentCast, "TOPLEFT", 10, -170)
+    castUnkHeader:SetText("SHIELDED CAST BAR COLOR (NON-INTERRUPTIBLE)")
+
+    local castUnkButtons = {}
+    local castUnkColors = {
+        { key = "SILVER", name = "Steel Silver",   r = 0.70, g = 0.74, b = 0.82 },
+        { key = "DARK",   name = "Dark Slate",     r = 0.32, g = 0.35, b = 0.40 },
+        { key = "RED",    name = "Blood Red",      r = 1.00, g = 0.15, b = 0.15 },
+        { key = "ORANGE", name = "Blazing Orange", r = 1.00, g = 0.45, b = 0.00 },
+    }
+
+    local function UpdateCastUnkColorHighlights()
+        local cur = ForeverPlatesDB.castBarUnkickableColor or "SILVER"
+        for _, b in ipairs(castUnkButtons) do
+            if b.unkKey == cur then
+                b.border:SetColor(0.00, 0.85, 1.00, 1.0)
+                b.bg:SetVertexColor(0.12, 0.25, 0.35, 0.95)
+                b.label:SetTextColor(0.00, 0.85, 1.00, 1)
+            else
+                b.border:SetColor(0.18, 0.20, 0.24, 0.8)
+                b.bg:SetVertexColor(0.10, 0.11, 0.14, 0.85)
+                b.label:SetTextColor(0.75, 0.75, 0.75, 1)
+            end
+        end
+    end
+
+    for i, item in ipairs(castUnkColors) do
+        local posX = 10 + ((i - 1) * (cbBtnW + 8))
+        local posY = -190
+
+        local btn = CreateFrame("Button", nil, contentCast)
+        btn:SetSize(cbBtnW, cbBtnH)
+        btn:SetPoint("TOPLEFT", contentCast, "TOPLEFT", posX, posY)
+
+        local bbg = btn:CreateTexture(nil, "BACKGROUND")
+        bbg:SetAllPoints(btn)
+        bbg:SetTexture(FLAT_TEXTURE)
+        btn.bg = bbg
+
+        local border = CreatePixelBorder(btn, 1, 0.18, 0.20, 0.24, 0.8)
+        btn.border = border
+
+        local swatch = btn:CreateTexture(nil, "OVERLAY")
+        swatch:SetSize(12, 12)
+        swatch:SetPoint("LEFT", btn, "LEFT", 6, 0)
+        swatch:SetTexture(FLAT_TEXTURE)
+        swatch:SetVertexColor(item.r, item.g, item.b, 1)
+
+        local lbl = btn:CreateFontString(nil, "OVERLAY")
+        lbl:SetFont(DEFAULT_FONT, 10, "OUTLINE")
+        lbl:SetPoint("LEFT", swatch, "RIGHT", 4, 0)
+        lbl:SetText(item.name)
+        btn.label = lbl
+        btn.unkKey = item.key
+
+        btn:SetScript("OnClick", function()
+            ForeverPlatesDB.castBarUnkickableColor = item.key
+            UpdateCastUnkColorHighlights()
+            if FP.RefreshAllCastBars then FP.RefreshAllCastBars() else FP.RefreshAllDimensions() end
+            FP.RefreshAllPlates()
+            UpdateStatusText()
+        end)
+
+        table.insert(castUnkButtons, btn)
+    end
+
+    -- Cast Section 3: Shield Outline Color
+    local castShieldHeader = contentCast:CreateFontString(nil, "OVERLAY")
+    castShieldHeader:SetFont(DEFAULT_FONT, 11, "OUTLINE")
+    castShieldHeader:SetTextColor(0.00, 0.82, 1.00, 1)
+    castShieldHeader:SetPoint("TOPLEFT", contentCast, "TOPLEFT", 10, -226)
+    castShieldHeader:SetText("SHIELD OUTLINE / BORDER COLOR")
+
+    local castShieldButtons = {}
+    local castShieldColors = {
+        { key = "SILVER", name = "Steel Silver",   r = 0.85, g = 0.88, b = 0.95 },
+        { key = "RED",    name = "Blood Red",      r = 1.00, g = 0.20, b = 0.20 },
+        { key = "ORANGE", name = "Blazing Orange", r = 1.00, g = 0.50, b = 0.00 },
+        { key = "GOLD",   name = "Sun Gold",       r = 1.00, g = 0.80, b = 0.10 },
+        { key = "CYAN",   name = "Neon Cyan",      r = 0.00, g = 0.85, b = 1.00 },
+        { key = "WHITE",  name = "Pure White",     r = 0.95, g = 0.95, b = 0.95 },
+    }
+
+    local function UpdateCastShieldHighlights()
+        local cur = ForeverPlatesDB.castBarUnkickableBorderColor or "SILVER"
+        for _, b in ipairs(castShieldButtons) do
+            if b.shieldKey == cur then
+                b.border:SetColor(0.00, 0.85, 1.00, 1.0)
+                b.bg:SetVertexColor(0.12, 0.25, 0.35, 0.95)
+                b.label:SetTextColor(0.00, 0.85, 1.00, 1)
+            else
+                b.border:SetColor(0.18, 0.20, 0.24, 0.8)
+                b.bg:SetVertexColor(0.10, 0.11, 0.14, 0.85)
+                b.label:SetTextColor(0.75, 0.75, 0.75, 1)
+            end
+        end
+    end
+
+    local sBtnW = 76
+    for i, item in ipairs(castShieldColors) do
+        local posX = 10 + ((i - 1) * (sBtnW + 5))
+        local posY = -246
+
+        local btn = CreateFrame("Button", nil, contentCast)
+        btn:SetSize(sBtnW, cbBtnH)
+        btn:SetPoint("TOPLEFT", contentCast, "TOPLEFT", posX, posY)
+
+        local bbg = btn:CreateTexture(nil, "BACKGROUND")
+        bbg:SetAllPoints(btn)
+        bbg:SetTexture(FLAT_TEXTURE)
+        btn.bg = bbg
+
+        local border = CreatePixelBorder(btn, 1, 0.18, 0.20, 0.24, 0.8)
+        btn.border = border
+
+        local swatch = btn:CreateTexture(nil, "OVERLAY")
+        swatch:SetSize(8, 8)
+        swatch:SetPoint("LEFT", btn, "LEFT", 4, 0)
+        swatch:SetTexture(FLAT_TEXTURE)
+        swatch:SetVertexColor(item.r, item.g, item.b, 1)
+
+        local lbl = btn:CreateFontString(nil, "OVERLAY")
+        lbl:SetFont(DEFAULT_FONT, 9, "OUTLINE")
+        lbl:SetPoint("LEFT", swatch, "RIGHT", 3, 0)
+        lbl:SetText(item.name)
+        btn.label = lbl
+        btn.shieldKey = item.key
+
+        btn:SetScript("OnClick", function()
+            ForeverPlatesDB.castBarUnkickableBorderColor = item.key
+            UpdateCastShieldHighlights()
+            if FP.RefreshAllCastBars then FP.RefreshAllCastBars() else FP.RefreshAllDimensions() end
+            FP.RefreshAllPlates()
+            UpdateStatusText()
+        end)
+
+        table.insert(castShieldButtons, btn)
+    end
+
+    -- Cast Section 4: Cast Bar Outline Color (Kickable Spells)
+    local castOlHeader = contentCast:CreateFontString(nil, "OVERLAY")
+    castOlHeader:SetFont(DEFAULT_FONT, 11, "OUTLINE")
+    castOlHeader:SetTextColor(0.00, 0.82, 1.00, 1)
+    castOlHeader:SetPoint("TOPLEFT", contentCast, "TOPLEFT", 10, -282)
+    castOlHeader:SetText("CAST BAR OUTLINE COLOR (KICKABLE)")
+
+    local castOlButtons = {}
+    local castOlColors = {
+        { key = "DARK",  name = "Dark Slate",  r = 0.22, g = 0.25, b = 0.30 },
+        { key = "BLACK", name = "Black",       r = 0.05, g = 0.05, b = 0.05 },
+        { key = "WHITE", name = "Pure White",  r = 0.95, g = 0.95, b = 0.95 },
+        { key = "CYAN",  name = "Neon Cyan",   r = 0.00, g = 0.85, b = 1.00 },
+        { key = "GOLD",  name = "Sun Gold",    r = 1.00, g = 0.72, b = 0.00 },
+        { key = "LIME",  name = "Neon Lime",   r = 0.25, g = 1.00, b = 0.25 },
+    }
+
+    local function UpdateCastOutlineColorHighlights()
+        local cur = ForeverPlatesDB.castBarOutlineColor or "DARK"
+        for _, b in ipairs(castOlButtons) do
+            if b.olKey == cur then
+                b.border:SetColor(0.00, 0.85, 1.00, 1.0)
+                b.bg:SetVertexColor(0.12, 0.25, 0.35, 0.95)
+                b.label:SetTextColor(0.00, 0.85, 1.00, 1)
+            else
+                b.border:SetColor(0.18, 0.20, 0.24, 0.8)
+                b.bg:SetVertexColor(0.10, 0.11, 0.14, 0.85)
+                b.label:SetTextColor(0.75, 0.75, 0.75, 1)
+            end
+        end
+    end
+
+    for i, item in ipairs(castOlColors) do
+        local posX = 10 + ((i - 1) * (sBtnW + 5))
+        local posY = -302
+
+        local btn = CreateFrame("Button", nil, contentCast)
+        btn:SetSize(sBtnW, cbBtnH)
+        btn:SetPoint("TOPLEFT", contentCast, "TOPLEFT", posX, posY)
+
+        local bbg = btn:CreateTexture(nil, "BACKGROUND")
+        bbg:SetAllPoints(btn)
+        bbg:SetTexture(FLAT_TEXTURE)
+        btn.bg = bbg
+
+        local border = CreatePixelBorder(btn, 1, 0.18, 0.20, 0.24, 0.8)
+        btn.border = border
+
+        local swatch = btn:CreateTexture(nil, "OVERLAY")
+        swatch:SetSize(8, 8)
+        swatch:SetPoint("LEFT", btn, "LEFT", 4, 0)
+        swatch:SetTexture(FLAT_TEXTURE)
+        swatch:SetVertexColor(item.r, item.g, item.b, 1)
+
+        local lbl = btn:CreateFontString(nil, "OVERLAY")
+        lbl:SetFont(DEFAULT_FONT, 9, "OUTLINE")
+        lbl:SetPoint("LEFT", swatch, "RIGHT", 3, 0)
+        lbl:SetText(item.name)
+        btn.label = lbl
+        btn.olKey = item.key
+
+        btn:SetScript("OnClick", function()
+            ForeverPlatesDB.castBarOutlineColor = item.key
+            UpdateCastOutlineColorHighlights()
+            if FP.RefreshAllCastBars then FP.RefreshAllCastBars() else FP.RefreshAllDimensions() end
+            FP.RefreshAllPlates()
+            UpdateStatusText()
+        end)
+
+        table.insert(castOlButtons, btn)
+    end
+
+    CreateSlider(contentCast, "Cast Bar Outline", "castBarOutlineThickness", 1, 4, 1, "%s: %dpx", 10, -336, function()
+        FP.RefreshAllDimensions()
+        FP.RefreshAllPlates()
+    end)
+    CreateSlider(contentCast, "Cast Bar Gap (Y-Offset)", "castBarYOffset", -16, -1, 1, "%s: %dpx", 256, -336, function()
+        FP.RefreshAllDimensions()
+        FP.RefreshAllPlates()
+    end)
+
+    -- Cast Section 5: Typography & Outline Style
+    local castTypoHeader = contentCast:CreateFontString(nil, "OVERLAY")
+    castTypoHeader:SetFont(DEFAULT_FONT, 11, "OUTLINE")
+    castTypoHeader:SetTextColor(0.00, 0.82, 1.00, 1)
+    castTypoHeader:SetPoint("TOPLEFT", contentCast, "TOPLEFT", 10, -386)
+    castTypoHeader:SetText("CAST BAR TYPOGRAPHY & FONT STYLING")
+
+    CreateSlider(contentCast, "Cast Bar Font Size", "castBarFontSize", 8, 22, 1, "%s: %dpt", 10, -406, function()
+        FP.RefreshAllDimensions()
+        FP.RefreshAllPlates()
+    end)
+
+    local fontOlLabel = contentCast:CreateFontString(nil, "OVERLAY")
+    fontOlLabel:SetFont(DEFAULT_FONT, 10, "OUTLINE")
+    fontOlLabel:SetTextColor(0.85, 0.85, 0.85, 1)
+    fontOlLabel:SetPoint("TOPLEFT", contentCast, "TOPLEFT", 256, -406)
+    fontOlLabel:SetText("Font Outline Style:")
+
+    local castFontOlButtons = {}
+    local castFontOutlines = {
+        { key = "NONE",          name = "None" },
+        { key = "OUTLINE",       name = "Outline" },
+        { key = "THICKOUTLINE",  name = "Thick" },
+    }
+
+    local function UpdateCastFontOutlineHighlights()
+        local cur = ForeverPlatesDB.castBarFontOutline or "OUTLINE"
+        for _, b in ipairs(castFontOlButtons) do
+            if b.folKey == cur then
+                b.border:SetColor(0.00, 0.85, 1.00, 1.0)
+                b.bg:SetVertexColor(0.12, 0.25, 0.35, 0.95)
+                b.label:SetTextColor(0.00, 0.85, 1.00, 1)
+            else
+                b.border:SetColor(0.18, 0.20, 0.24, 0.8)
+                b.bg:SetVertexColor(0.10, 0.11, 0.14, 0.85)
+                b.label:SetTextColor(0.75, 0.75, 0.75, 1)
+            end
+        end
+    end
+
+    local folBtnW = 74
+    for i, item in ipairs(castFontOutlines) do
+        local posX = 256 + ((i - 1) * (folBtnW + 5))
+        local posY = -422
+
+        local btn = CreateFrame("Button", nil, contentCast)
+        btn:SetSize(folBtnW, 20)
+        btn:SetPoint("TOPLEFT", contentCast, "TOPLEFT", posX, posY)
+
+        local bbg = btn:CreateTexture(nil, "BACKGROUND")
+        bbg:SetAllPoints(btn)
+        bbg:SetTexture(FLAT_TEXTURE)
+        btn.bg = bbg
+
+        local border = CreatePixelBorder(btn, 1, 0.18, 0.20, 0.24, 0.8)
+        btn.border = border
+
+        local lbl = btn:CreateFontString(nil, "OVERLAY")
+        lbl:SetFont(DEFAULT_FONT, 9, "OUTLINE")
+        lbl:SetPoint("CENTER", btn, "CENTER", 0, 0)
+        lbl:SetText(item.name)
+        btn.label = lbl
+        btn.folKey = item.key
+
+        btn:SetScript("OnClick", function()
+            ForeverPlatesDB.castBarFontOutline = item.key
+            UpdateCastFontOutlineHighlights()
+            if FP.RefreshAllCastBars then FP.RefreshAllCastBars() else FP.RefreshAllDimensions() end
+            FP.RefreshAllPlates()
+            UpdateStatusText()
+        end)
+
+        table.insert(castFontOlButtons, btn)
+    end
+
+    -- Cast Section 6: Spell Name Text Position
+    local castTextPosHeader = contentCast:CreateFontString(nil, "OVERLAY")
+    castTextPosHeader:SetFont(DEFAULT_FONT, 11, "OUTLINE")
+    castTextPosHeader:SetTextColor(0.00, 0.82, 1.00, 1)
+    castTextPosHeader:SetPoint("TOPLEFT", contentCast, "TOPLEFT", 10, -454)
+    castTextPosHeader:SetText("SPELL NAME TEXT POSITION")
+
+    local castTextPosButtons = {}
+    local castTextPositions = {
+        { key = "ON_BAR_LEFT",   name = "Bar (Left)" },
+        { key = "ON_BAR_CENTER", name = "Bar (Center)" },
+        { key = "ON_BAR_RIGHT",  name = "Bar (Right)" },
+        { key = "ABOVE_BAR",     name = "Above Bar" },
+        { key = "BELOW_BAR",     name = "Below Bar" },
+    }
+
+    local function UpdateCastTextPosHighlights()
+        local cur = ForeverPlatesDB.castBarTextPosition or "ON_BAR_LEFT"
+        for _, b in ipairs(castTextPosButtons) do
+            if b.textPosKey == cur then
+                b.border:SetColor(0.00, 0.85, 1.00, 1.0)
+                b.bg:SetVertexColor(0.12, 0.25, 0.35, 0.95)
+                b.label:SetTextColor(0.00, 0.85, 1.00, 1)
+            else
+                b.border:SetColor(0.18, 0.20, 0.24, 0.8)
+                b.bg:SetVertexColor(0.10, 0.11, 0.14, 0.85)
+                b.label:SetTextColor(0.75, 0.75, 0.75, 1)
+            end
+        end
+    end
+
+    local ctpBtnW = 91
+    for i, item in ipairs(castTextPositions) do
+        local posX = 10 + ((i - 1) * (ctpBtnW + 5))
+        local posY = -474
+
+        local btn = CreateFrame("Button", nil, contentCast)
+        btn:SetSize(ctpBtnW, 24)
+        btn:SetPoint("TOPLEFT", contentCast, "TOPLEFT", posX, posY)
+
+        local bbg = btn:CreateTexture(nil, "BACKGROUND")
+        bbg:SetAllPoints(btn)
+        bbg:SetTexture(FLAT_TEXTURE)
+        btn.bg = bbg
+
+        local border = CreatePixelBorder(btn, 1, 0.18, 0.20, 0.24, 0.8)
+        btn.border = border
+
+        local lbl = btn:CreateFontString(nil, "OVERLAY")
+        lbl:SetFont(DEFAULT_FONT, 9, "OUTLINE")
+        lbl:SetPoint("CENTER", btn, "CENTER", 0, 0)
+        lbl:SetText(item.name)
+        btn.label = lbl
+        btn.textPosKey = item.key
+
+        btn:SetScript("OnClick", function()
+            ForeverPlatesDB.castBarTextPosition = item.key
+            UpdateCastTextPosHighlights()
+            if FP.RefreshAllCastBars then FP.RefreshAllCastBars() else FP.RefreshAllDimensions() end
+            FP.RefreshAllPlates()
+            UpdateStatusText()
+        end)
+
+        table.insert(castTextPosButtons, btn)
+    end
+
+    -- Cast Section 7: Sizing, Dimensions & Width Matching
+    local castSizeHeader = contentCast:CreateFontString(nil, "OVERLAY")
+    castSizeHeader:SetFont(DEFAULT_FONT, 11, "OUTLINE")
+    castSizeHeader:SetTextColor(0.00, 0.82, 1.00, 1)
+    castSizeHeader:SetPoint("TOPLEFT", contentCast, "TOPLEFT", 10, -512)
+    castSizeHeader:SetText("CAST BAR SIZING & PROPORTIONS")
+
+    CreateCheckbox(contentCast, "Match Health Bar Width (Flush Left-to-Right)", "castBarMatchHealthWidth", -532, function()
+        FP.RefreshAllDimensions()
+        FP.RefreshAllPlates()
+    end)
+
+    CreateSlider(contentCast, "Cast Bar Height", "castBarHeight", 8, 32, 1, "%s: %dpx", 10, -562, function()
+        FP.RefreshAllDimensions()
+        FP.RefreshAllPlates()
+    end)
+    CreateSlider(contentCast, "Manual Bar Width", "castBarWidth", 60, 240, 2, "%s: %dpx", 256, -562, function()
+        FP.RefreshAllDimensions()
+        FP.RefreshAllPlates()
+    end)
+
+    -- Cast Section 8: Visual Features & Feedback
+    local castVisualHeader = contentCast:CreateFontString(nil, "OVERLAY")
+    castVisualHeader:SetFont(DEFAULT_FONT, 11, "OUTLINE")
+    castVisualHeader:SetTextColor(0.00, 0.82, 1.00, 1)
+    castVisualHeader:SetPoint("TOPLEFT", contentCast, "TOPLEFT", 10, -612)
+    castVisualHeader:SetText("VISUAL FEATURES & FEEDBACK")
+
+    CreateCheckbox(contentCast, "Show Spell Icon (On Left Edge of Cast Bar)", "showCastBarIcon", -634, function()
+        FP.RefreshAllDimensions()
+        FP.RefreshAllPlates()
+    end)
+    CreateCheckbox(contentCast, "Live Countdown Timer & Spark", "showCastBarTimer", -660, function()
+        FP.RefreshAllDimensions()
+        FP.RefreshAllPlates()
+    end)
+
+    ---------------------------------------------------------------------------
     -- Section 10: Footer Utility & Save Buttons (Pinned to bottom of window)
     ---------------------------------------------------------------------------
     local function CreateFooterButton(parent, labelText, posX, posY, width, height, onClick)
@@ -1522,6 +2006,11 @@ function FP.CreateGUI()
         UpdateOutlineHighlights()
         UpdateNameColorHighlights()
         UpdateCastColorHighlights()
+        UpdateCastUnkColorHighlights()
+        UpdateCastShieldHighlights()
+        UpdateCastOutlineColorHighlights()
+        UpdateCastFontOutlineHighlights()
+        UpdateCastTextPosHighlights()
         UpdatePosHighlights()
         UpdateFmtHighlights()
         UpdatePinHighlights()
@@ -1533,9 +2022,14 @@ function FP.CreateGUI()
             local val = ForeverPlatesDB[reg.dbKey] or reg.minVal
             reg.slider:SetValue(val)
             reg.UpdateLabel(val)
+            if reg.UpdateThumbVisual then
+                reg.UpdateThumbVisual(val)
+            end
         end
         for _, reg in ipairs(registeredCheckboxes) do
-            reg.cb:SetChecked(ForeverPlatesDB[reg.dbKey] == true)
+            local val = ForeverPlatesDB[reg.dbKey]
+            if val == nil and FP.defaults then val = FP.defaults[reg.dbKey] end
+            reg.cb:SetChecked(val == true or val == 1)
         end
         isSyncingControls = false
         UpdateStatusText()
@@ -1544,10 +2038,9 @@ function FP.CreateGUI()
 
     -- 3. Save & Close Button
     local saveBtn = CreateFooterButton(f, "Save & Close", 238, 44, 130, 26, function()
-        if FP.SaveSettingsToSnapshot then
-            FP.SaveSettingsToSnapshot()
-        end
-        DEFAULT_CHAT_FRAME:AddMessage("|cff00c0ffForeverPlates:|r Settings saved to disk! Persists across all sessions.")
+        if FP.RefreshAllPlates then FP.RefreshAllPlates() end
+        if FP.RefreshAllOutlines then FP.RefreshAllOutlines() end
+        DEFAULT_CHAT_FRAME:AddMessage("|cff00c0ffForeverPlates:|r Settings applied! Saved to disk on /reload or exit.")
         f:Hide()
     end)
     saveBtn.bg:SetVertexColor(0.08, 0.28, 0.38, 0.95)
@@ -1556,9 +2049,6 @@ function FP.CreateGUI()
 
     -- 4. Reload UI Button
     CreateFooterButton(f, "Reload UI", 374, 44, 150, 26, function()
-        if FP.SaveSettingsToSnapshot then
-            FP.SaveSettingsToSnapshot()
-        end
         ReloadUI()
     end)
 
@@ -1579,6 +2069,11 @@ function FP.CreateGUI()
         UpdateOutlineHighlights()
         UpdateNameColorHighlights()
         UpdateCastColorHighlights()
+        UpdateCastUnkColorHighlights()
+        UpdateCastShieldHighlights()
+        UpdateCastOutlineColorHighlights()
+        UpdateCastFontOutlineHighlights()
+        UpdateCastTextPosHighlights()
         UpdatePosHighlights()
         UpdateFmtHighlights()
         UpdatePinHighlights()
@@ -1592,9 +2087,14 @@ function FP.CreateGUI()
             if val == nil then val = reg.minVal end
             reg.slider:SetValue(val)
             reg.UpdateLabel(val)
+            if reg.UpdateThumbVisual then
+                reg.UpdateThumbVisual(val)
+            end
         end
         for _, reg in ipairs(registeredCheckboxes) do
-            local checked = (ForeverPlatesDB[reg.dbKey] == true or ForeverPlatesDB[reg.dbKey] == 1)
+            local val = ForeverPlatesDB[reg.dbKey]
+            if val == nil and FP.defaults then val = FP.defaults[reg.dbKey] end
+            local checked = (val == true or val == 1)
             reg.cb:SetChecked(checked)
         end
         isSyncingControls = false

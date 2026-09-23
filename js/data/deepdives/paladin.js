@@ -22,6 +22,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
     subTabs: [
       { id: "overview", label: "Full Dossier", icon: "📑" },
       { id: "core", label: "Core Rules & QoL", icon: "📜" },
+      { id: "betaBuilds", label: "⚡ Beta L20 Builds", icon: "⚡" },
       { id: "holy", label: "Holy Healer & AoE", icon: "✨" },
       { id: "protection", label: "Protection Tank & Taunt", icon: "🛡️" },
       { id: "retribution", label: "Retribution & Twist of Light", icon: "⚔️" },
@@ -501,6 +502,109 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo"
       }
-    ]
+    ],
+    betaBuilds: {
+      season: "Closed Beta Phase 1",
+      levelCap: 20,
+      talentPointsTotal: 11,
+      legacyPointsNotice: "Legacy Milestones allow up to +2 to +5 additional points at Level 20.",
+      specs: [
+        {
+          specId: "retribution",
+          name: "Retribution (Command & Holy Strike)",
+          icon: "⚔️",
+          role: "2-Handed Holy Melee DPS",
+          wowheadCalcUrl: "https://www.wowhead.com/forever/talent-calc/paladin/--502301",
+          tagline: "Burst physical and Holy damage with baseline Holy Strike, Seal of Command, and non-expiring Judgement.",
+          statPriority: "Strength > Agility > Attack Power > Intellect",
+          bestWeapon: "Slow Two-Handed Mace (Verigan's Fist / Smite's Mighty Hammer / Wolfsbane)",
+          talents: [
+            { name: "Benediction", points: "5/5", tree: "Retribution (Tier 1)", desc: "Reduces the Mana cost of your Judgement and Seal spells by 15%." },
+            { name: "Improved Judgement", points: "2/2", tree: "Retribution (Tier 2)", desc: "Decreases the cooldown of your Judgement spell by 2 sec (down to 8 sec)." },
+            { name: "Deflection", points: "3/5", tree: "Retribution (Tier 2)", desc: "Increases your Parry chance by 3%, aiding melee trades." },
+            { name: "Seal of Command", points: "1/1", tree: "Retribution (Tier 3)", desc: "Gives the Paladin a chance to deal additional Holy damage equal to 70% of weapon damage." }
+          ],
+          legacyNotes: "Extra points obtained through Legacy Discovery unlock 2/2 Pursuit of Justice (8% movement speed) and Conviction (5% melee crit).",
+          rotation: [
+            { label: "Buff & Seal", desc: "Cast Blessing of Might (60m duration) -> Seal of Command." },
+            { label: "Rotational Strike", desc: "Holy Strike (baseline instant physical hit dealing Holy dmg) -> Judgement on cooldown." },
+            { label: "Stun Burst", desc: "Hammer of Justice stun -> Holy Strike -> Seal of Command proc execute." },
+            { label: "Seal Integrity", desc: "Judgement no longer consumes active seals in Forever; keep swinging without re-sealing every 8 seconds!" }
+          ],
+          bisGear: [
+            { slot: "Two-Hand (Alliance)", item: "Verigan's Fist", source: "Level 20 Class Quest", stats: "+12 Sta, +6 Int, +6 Spi, 23.4 DPS" },
+            { slot: "Two-Hand (Horde)", item: "Wolfsbane Greatsword", source: "Bandarion Keep Class Quest", stats: "+12 Sta, +6 Str, 23.4 DPS" },
+            { slot: "Two-Hand (Alt)", item: "Smite's Mighty Hammer", source: "Deadmines (Mr. Smite)", stats: "+11 Str, 19.8 DPS" },
+            { slot: "Legs", item: "Runed Thane Greaves", source: "Hall of Thanes (Dungeon)", stats: "+7 Str, +5 Sta, 120 Armor" },
+            { slot: "Shield (Off-spec)", item: "Silverlaine's Shield", source: "Shadowfang Keep", stats: "420 Armor, 12 Block, +5 Sta" }
+          ],
+          campingPerk: {
+            name: "Crusader's Vow (+5% Total Strength)",
+            desc: "Setting camp with a Cozy Sleeping Bag provides 200% rested XP rate and grants the 'Holy Fervor' 2-hour +5% Strength buff."
+          },
+          classQuestNote: "Level 20 class quest awards Verigan's Fist (Alliance) or Wolfsbane (Horde Undead) and the Warhorse summon spell."
+        },
+        {
+          specId: "protection",
+          name: "Protection (Redoubt & Righteous Fury)",
+          icon: "🛡️",
+          role: "Holy Dungeon Tank",
+          wowheadCalcUrl: "https://www.wowhead.com/forever/talent-calc/paladin/-05330",
+          tagline: "Holy threat tanking with Righteous Fury, Judgement ranged taunt, and Redoubt block sustain.",
+          statPriority: "Stamina > Armor > Strength > Intellect",
+          bestWeapon: "One-Hand + Shield (Cruel Barb / Commander's Crest)",
+          talents: [
+            { name: "Redoubt", points: "5/5", tree: "Protection (Tier 1)", desc: "Increases your chance to block attacks with a shield by 30% after being struck by a melee or ranged critical strike." },
+            { name: "Precision", points: "3/3", tree: "Protection (Tier 2)", desc: "Increases your chance to hit with melee weapons and spells by 3%." },
+            { name: "Toughness", points: "3/5", tree: "Protection (Tier 2)", desc: "Increases your armor value from items by 6%." }
+          ],
+          legacyNotes: "Extra Legacy points unlock 5/5 Toughness (+10% armor) and Blessing of Sanctuary (flat damage reduction on hit).",
+          rotation: [
+            { label: "Pull & Threat", desc: "Righteous Fury -> Judgement of Fury (10-yard ranged taunt) -> Holy Strike on pull." },
+            { label: "AoE Hold", desc: "Drop Consecration rank 1 (baseline in Forever) for sticky AoE threat on dungeon packs." },
+            { label: "Block Mana Engine", desc: "Blocking attacks triggers mana return, allowing sustained dungeon chain-pulling." }
+          ],
+          bisGear: [
+            { slot: "Shield", item: "Commander's Crest", source: "Shadowfang Keep (Springvale)", stats: "542 Armor, 16 Block, +6 Str, +3 Sta" },
+            { slot: "Relic / Libram", item: "Silver Hand Relic", source: "Ruins of Lordaeron", stats: "+8 Holy Strike Damage" },
+            { slot: "Chest", item: "Ironspine's Ribcage", source: "Ruins of Lordaeron (Crypt)", stats: "+8 Str, +6 Sta" }
+          ],
+          campingPerk: {
+            name: "Bastion of Light (+10% Shield Block Value)",
+            desc: "Camp rest bonus increases Shield Block Value by 10% and armor contribution by 8% for 2 hours."
+          },
+          classQuestNote: "Undead Paladins receive the custom 'Forsaken Charger' skeletal warhorse mount spell at level 20."
+        },
+        {
+          specId: "holy",
+          name: "Holy (Spiritual Focus & Divine Intellect)",
+          icon: "✨",
+          role: "Single-Target & Tank Healer",
+          wowheadCalcUrl: "https://www.wowhead.com/forever/talent-calc/paladin/505001",
+          tagline: "Uninterruptible healing with 70% pushback resistance on Flash of Light and high Intellect efficiency.",
+          statPriority: "Intellect > Healing Power > Spirit",
+          bestWeapon: "One-Hand Mace + Off-Hand Tome / Shield",
+          talents: [
+            { name: "Divine Intellect", points: "5/5", tree: "Holy (Tier 1)", desc: "Increases your total Intellect by 10%." },
+            { name: "Spiritual Focus", points: "5/5", tree: "Holy (Tier 1)", desc: "Gives your Flash of Light and Holy Light spells a 70% chance to not lose casting time when you take damage." },
+            { name: "Healing Light", points: "1/3", tree: "Holy (Tier 2)", desc: "Increases the amount healed by your Holy Light and Flash of Light spells by 4%." }
+          ],
+          legacyNotes: "Extra Legacy points unlock Illumination (100% mana refund on heal crits!) and Light's Vigil (AoE party heal).",
+          rotation: [
+            { label: "Blessing", desc: "Blessing of Wisdom on self; Blessing of Might/Kings on group." },
+            { label: "Heal Cycle", desc: "Flash of Light spam (Spiritual Focus prevents pushback even while taking aggro)." }
+          ],
+          bisGear: [
+            { slot: "Staff / Mace", item: "Emberstone Staff", source: "Deadmines", stats: "+5 Int, +5 Spi, +5 Sta" },
+            { slot: "Ring", item: "Thane's Healing Band", source: "Hall of Thanes", stats: "+6 Healing, +4 Spirit" }
+          ],
+          campingPerk: {
+            name: "Aura of Purity (+15% Mana Pool)",
+            desc: "Camp resting grants a sustained 15% maximum mana boost and 10% reduced pushback for 2 hours."
+          },
+          classQuestNote: "Level 20 Holy Paladin unlocks Sense Undead and Redemption rank 2."
+        }
+      ]
+    }
   };
 }

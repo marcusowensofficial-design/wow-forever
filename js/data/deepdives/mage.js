@@ -29,6 +29,11 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       "icon": "📜"
     },
     {
+      "id": "betaBuilds",
+      "label": "⚡ Beta L20 Builds",
+      "icon": "⚡"
+    },
+    {
       "id": "arcane",
       "label": "Arcane Specialization",
       "icon": "✨"
@@ -488,6 +493,110 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       "statusType": "verified",
       "source": "Sodapoppin Hands-On Demo"
     }
-  ]
+  ],
+  "betaBuilds": {
+    "season": "Closed Beta Phase 1",
+    "levelCap": 20,
+    "talentPointsTotal": 11,
+    "legacyPointsNotice": "Legacy Milestones allow up to +2 to +5 additional points at Level 20.",
+    "specs": [
+      {
+        "specId": "frost",
+        "name": "Frost (Shatter & Ice Lance)",
+        "icon": "❄️",
+        "role": "Ranged DPS & AoE Control",
+        "wowheadCalcUrl": "https://www.wowhead.com/forever/talent-calc/mage/--50500101",
+        "tagline": "Unmatched solo kiting, instant Ice Lance shatter combos, and dungeon AoE slow dominance.",
+        "statPriority": "Spell Power > Spell Hit (to 3%) > Intellect > Spirit > Stamina",
+        "bestWeapon": "Staff / Wand (Wands scale with 30% Spell Power)",
+        "talents": [
+          { "name": "Improved Frostbolt", "points": "5/5", "tree": "Frost (Tier 1)", "desc": "Reduces cast time of Frostbolt by 0.5 sec. Fundamental for weaving casts before mobs reach melee range." },
+          { "name": "Frostbite", "points": "3/3", "tree": "Frost (Tier 2)", "desc": "Gives Chill effects a 15% chance to freeze targets for 5 sec. Triggers high-damage Shatter combos." },
+          { "name": "Permafrost", "points": "2/2", "tree": "Frost (Tier 2)", "desc": "Increases slow duration by 3 sec and slows target movement speed by an additional 10%." },
+          { "name": "Ice Shards", "points": "1/5", "tree": "Frost (Tier 2)", "desc": "Increases critical strike damage bonus of Frost spells by 20%. First point into exponential shatter damage." }
+        ],
+        "legacyNotes": "Extra points obtained through Legacy Discovery should be placed directly into 5/5 Ice Shards and Cold Snap (Tier 3 unlock at lvl 20+2).",
+        "rotation": [
+          { "label": "Pull / Opener", "desc": "Max range Frostbolt rank 3 -> cast second Frostbolt while projectile travels." },
+          { "label": "Freeze Shatter Loop", "desc": "When Frostbite or Frost Nova procs Freeze, immediately weave instant Ice Lance for triple damage crit multiplier." },
+          { "label": "Close Quarters", "desc": "If target closes distance: Frost Nova -> strafe 15 yards -> Frostbolt -> Ice Lance finisher." },
+          { "label": "Mana Efficient Finish", "desc": "At <15% enemy HP, switch to Wand attacks to activate Spirit regeneration rules (5-second rule)." },
+          { "label": "Dungeon AoE", "desc": "Coordinate Blizzard rank 1 downranking for slows, letting tanks group mobs before casting max-rank Blizzard." }
+        ],
+        "bisGear": [
+          { "slot": "Two-Hand / Staff", "item": "Emberstone Staff", "source": "Deadmines (Captain Greenskin)", "stats": "+5 Int, +5 Spi, +5 Sta" },
+          { "slot": "Chest", "item": "Robe of Arugal", "source": "Shadowfang Keep (Arugal)", "stats": "+10 Int, +5 Spi, +3 Agi" },
+          { "slot": "Chest (New)", "item": "Thane's Rune-Carved Robes", "source": "Hall of Thanes (Ironforge)", "stats": "+7 Frost SP, +6 Int" },
+          { "slot": "Ranged / Wand", "item": "Necromantic Wand", "source": "Ruins of Lordaeron (Crypt)", "stats": "Shadow Wand, +3 Shadow/Frost SP" },
+          { "slot": "Shoulders", "item": "Feline Mantle", "source": "Shadowfang Keep (Shadowfang)", "stats": "+10 Int, +3 Spi" }
+        ],
+        "campingPerk": {
+          "name": "Cozy Rested Intellect (+5% Total Int)",
+          "desc": "Setting camp with a Cozy Sleeping Bag provides 200% rested XP rate and grants the 'Mind Cleared' 2-hour +5% Intellect buff."
+        },
+        "classQuestNote": "Level 20 Mage quest unlocks Comprehend Language and Mage Robe questline, awarding Robes of Arcane Might."
+      },
+      {
+        "specId": "fire",
+        "name": "Fire (Hot Streak Burst)",
+        "icon": "🔥",
+        "role": "Burst Ranged DPS",
+        "wowheadCalcUrl": "https://www.wowhead.com/forever/talent-calc/mage/-505001",
+        "tagline": "Explosive single-target burst fueled by Ignite rolling DoTs and Hot Streak reduced-cast Pyroblasts.",
+        "statPriority": "Spell Power > Spell Crit > Intellect > Stamina",
+        "bestWeapon": "Staff / Wand with Fire Spell Damage",
+        "talents": [
+          { "name": "Improved Fireball", "points": "5/5", "tree": "Fire (Tier 1)", "desc": "Reduces Fireball cast time by 0.5 sec, bringing it to a crisp 3.0 sec cast." },
+          { "name": "Ignite", "points": "5/5", "tree": "Fire (Tier 2)", "desc": "Critical strikes with Fire damage spells cause the target to burn for an additional 40% damage over 4 sec." },
+          { "name": "Flame Throwing", "points": "1/2", "tree": "Fire (Tier 2)", "desc": "Increases the range of your Fire spells by 3 yards, allowing safe 38-yard openers." }
+        ],
+        "legacyNotes": "Extra Legacy points unlock Pyroblast and 5/5 Impact (giving Fire spells a 10% stun chance).",
+        "rotation": [
+          { "label": "Opener", "desc": "Max range Fireball -> Fire Blast on approach -> Fireball." },
+          { "label": "Hot Streak Burn", "desc": "On back-to-back crits, consume Hot Streak for a 1.5s cast Pyroblast or instant Scorch." },
+          { "label": "Execute", "desc": "Fire Blast -> Wand attacks to maintain ignite while restoring mana." }
+        ],
+        "bisGear": [
+          { "slot": "Staff", "item": "Emberstone Staff", "source": "Deadmines (Greenskin)", "stats": "+5 Int, +5 Spi, +5 Sta" },
+          { "slot": "Finger", "item": "Lavishly Jeweled Ring", "source": "Deadmines (Gilnid)", "stats": "+6 Agi, +2 Int" },
+          { "slot": "Chest", "item": "Robes of Arcane Might", "source": "Level 20 Mage Class Quest", "stats": "+7 Fire/Frost SP, +5 Int" }
+        ],
+        "campingPerk": {
+          "name": "Warmth of the Hearth (+4% Fire Crit)",
+          "desc": "Resting beside an active Campfire grants +4% spell critical strike chance with Fire spells for 1 hour."
+        },
+        "classQuestNote": "Level 20 Mage unlocks the Mage Armor preview quest and Evocation mana recovery."
+      },
+      {
+        "specId": "arcane",
+        "name": "Arcane (Missile Barrage)",
+        "icon": "✨",
+        "role": "Ranged DPS & Threat Control",
+        "wowheadCalcUrl": "https://www.wowhead.com/forever/talent-calc/mage/505001",
+        "tagline": "Controlled threat and high-efficiency Arcane Missiles with Arcane Concentration Clearcasting loops.",
+        "statPriority": "Intellect > Spirit > Spell Power",
+        "bestWeapon": "High-Spirit Staff (Living Root / Staff of Westfall)",
+        "talents": [
+          { "name": "Arcane Subtlety", "points": "5/5", "tree": "Arcane (Tier 1)", "desc": "Reduces target magic resistance by 10 and reduces threat caused by Arcane spells by 40%." },
+          { "name": "Arcane Focus", "points": "5/5", "tree": "Arcane (Tier 1)", "desc": "Reduces the chance that the opponent can resist or dodge your Arcane spells by 10%." },
+          { "name": "Arcane Concentration", "points": "1/5", "tree": "Arcane (Tier 2)", "desc": "Gives you a 2% chance per point of entering a Clearcasting state after any damage spell." }
+        ],
+        "legacyNotes": "Extra Legacy points max 5/5 Arcane Concentration (10% Clearcasting) and unlock Arcane Impact (+6% crit).",
+        "rotation": [
+          { "label": "Single Target", "desc": "Arcane Missiles -> Fire Blast -> Arcane Missiles. On Clearcasting proc, cast highest rank spell free." },
+          { "label": "Dungeon Clear", "desc": "Arcane Subtlety enables high burst without ripping threat from early tanks." }
+        ],
+        "bisGear": [
+          { "slot": "Two-Hand", "item": "Staff of Westfall", "source": "Deadmines (Defias Quest)", "stats": "+11 Int, +5 Spi" },
+          { "slot": "Chest", "item": "Robe of Arugal", "source": "Shadowfang Keep", "stats": "+10 Int, +5 Spi" }
+        ],
+        "campingPerk": {
+          "name": "Arcane Meditation (+15% Spirit Regen in Combat)",
+          "desc": "Camp rest aura allows 15% of mana regeneration to continue while casting for 2 hours."
+        },
+        "classQuestNote": "Comprehend Language unlocks from trainer at level 20, letting Mages translate enemy faction whispers."
+      }
+    ]
+  }
 };
 }

@@ -22,6 +22,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
     subTabs: [
       { id: "overview", label: "Full Dossier", icon: "📑" },
       { id: "core", label: "Core Rules & Shifting", icon: "📜" },
+      { id: "betaBuilds", label: "⚡ Beta L20 Builds", icon: "⚡" },
       { id: "balance", label: "Balance & Eclipse", icon: "🌙" },
       { id: "feral", label: "Feral Cat & Bear Tank", icon: "🐾" },
       { id: "restoration", label: "Restoration & Wild Growth", icon: "🌱" },
@@ -484,6 +485,106 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo"
       }
-    ]
+    ],
+    betaBuilds: {
+      season: "Closed Beta Phase 1",
+      levelCap: 20,
+      talentPointsTotal: 11,
+      legacyPointsNotice: "Legacy Milestones allow up to +2 to +5 additional points at Level 20.",
+      specs: [
+        {
+          specId: "feral_cat",
+          name: "Feral DPS (Cat Form Agility)",
+          icon: "🐾",
+          role: "Melee Bleed & Burst DPS",
+          wowheadCalcUrl: "https://www.wowhead.com/forever/talent-calc/druid/-505001",
+          tagline: "Weapon DPS scaling, energy efficiency, and Ferocious Bite crits inside the new level-20 Cat Form.",
+          statPriority: "Weapon DPS > Agility > Strength > Hit",
+          bestWeapon: "Two-Handed Mace / Staff with High Top-End (Smite's Mighty Hammer / Manual Crowd Pummeler prep)",
+          talents: [
+            { name: "Ferocity", points: "5/5", tree: "Feral (Tier 1)", desc: "Reduces the cost of your Maul, Swipe, Claw, and Rake abilities by 5 Rage or Energy." },
+            { name: "Feral Aggression", points: "5/5", tree: "Feral (Tier 1)", desc: "Increases damage dealt by Ferocious Bite by 15% and Demoralizing Roar attack power reduction by 40%." },
+            { name: "Feral Instinct", points: "1/5", tree: "Feral (Tier 2)", desc: "Increases threat in Bear Form by 3% and reduces chance for enemies to detect you while Prowling." }
+          ],
+          legacyNotes: "Extra points obtained through Legacy Discovery unlock Sharpened Claws (+6% crit) and Blood Frenzy (combo point generation).",
+          rotation: [
+            { label: "Prowl Opener", desc: "Prowl -> Ravage or Shred from behind (Sap no longer breaks stealth in party play)." },
+            { label: "Bleed & Build", desc: "Rake bleed upkeep -> Claw (now only 40 Energy with Ferocity) to 4-5 combo points." },
+            { label: "Execute", desc: "Ferocious Bite finisher; weapon damage scaling directly enhances Bite output in Forever." },
+            { label: "Viper Form Bonus", desc: "Wearing the complete 5-piece Embrace of the Viper set from WC unlocks cosmetic serpent shifting!" }
+          ],
+          bisGear: [
+            { slot: "Two-Hand Weapon", item: "Smite's Mighty Hammer", source: "Deadmines (Mr. Smite)", stats: "+11 Strength, 19.8 DPS" },
+            { slot: "Armor Set", item: "Embrace of the Viper (5-Piece)", source: "Wailing Caverns Leaders", stats: "+10 Agility, +5 Intellect, Serpent Form" },
+            { slot: "Staff (Alt)", item: "Wild Thane Staff", source: "Hall of Thanes (Dungeon Boss)", stats: "+6 Agi, +6 Str, 18.0 DPS" },
+            { slot: "Ring", item: "Lavishly Jeweled Ring", source: "Deadmines (Gilnid)", stats: "+6 Agi, +2 Int" }
+          ],
+          campingPerk: {
+            name: "Primal Instinct (+5% Agility & Strength)",
+            desc: "Setting camp with a Cozy Sleeping Bag provides 200% rested XP rate and grants the 'Wild Senses' 2-hour +5% Agi/Str buff."
+          },
+          classQuestNote: "Cat Form is granted at level 20 via dedicated trial quest; Aquatic Form unlocked at level 16 in Moonglade."
+        },
+        {
+          specId: "feral_bear",
+          name: "Feral Tank (Bear Form Meatshield)",
+          icon: "🐻",
+          role: "Dungeon Main Tank",
+          wowheadCalcUrl: "https://www.wowhead.com/forever/talent-calc/druid/-500501",
+          tagline: "Unbreakable armor scaling (+10% items armor) and massive health pool holding dungeon trash effortlessly.",
+          statPriority: "Stamina > Armor > Strength > Agility",
+          bestWeapon: "Two-Handed Mace / Staff with High Stamina",
+          talents: [
+            { name: "Ferocity", points: "5/5", tree: "Feral (Tier 1)", desc: "Reduces the Rage cost of Maul and Swipe by 5, enabling smooth threat on every swing." },
+            { name: "Thick Hide", points: "5/5", tree: "Feral (Tier 1)", desc: "Increases your Armor rating from items by 10% (amplified to over +28% total armor in Bear Form!)." },
+            { name: "Brutal Impact", points: "1/2", tree: "Feral (Tier 2)", desc: "Increases the stun duration of your Bash and Pounce abilities by 0.5 sec." }
+          ],
+          legacyNotes: "Extra Legacy points unlock Feral Charge (interrupt/root in Bear Form) and Heart of the Wild (+20% Stamina).",
+          rotation: [
+            { label: "Pull & Group", desc: "Enrage -> Bear Form Charge -> Demoralizing Roar to lower enemy physical damage." },
+            { label: "Threat Cycle", desc: "Maul on primary target -> Swipe on multiple dungeon adds -> Bash caster mobs." }
+          ],
+          bisGear: [
+            { slot: "Two-Hand", item: "Living Root", source: "Wailing Caverns (Verdan)", stats: "+6 Spi, +5 Sta, 14.8 DPS" },
+            { slot: "Chest", item: "Mutant Scale Breastplate", source: "Wailing Caverns", stats: "+9 Agi, +4 Sta" },
+            { slot: "Back", item: "Kresh's Back", source: "Wailing Caverns (Kresh)", stats: "450 Armor, 13 Block, +7 Sta" }
+          ],
+          campingPerk: {
+            name: "Hearth of Iron (+12% Armor in Bear Form)",
+            desc: "Camp rest bonus increases Bear Form armor contribution by an extra 12% for 2 hours."
+          },
+          classQuestNote: "Bear Form quest grants the level-10 Bear Form; level 20 unlocks Frenzied Regeneration."
+        },
+        {
+          specId: "balance",
+          name: "Balance (Starlight Wrath Caster)",
+          icon: "🌙",
+          role: "Ranged Nature & Arcane DPS",
+          wowheadCalcUrl: "https://www.wowhead.com/forever/talent-calc/druid/505001",
+          tagline: "Rapid Wrath casting (-0.5s cast) and empowered Moonfire critical DoTs.",
+          statPriority: "Spell Power > Nature Damage > Intellect > Spirit",
+          bestWeapon: "Two-Handed Staff (Emberstone Staff / Staff of Westfall)",
+          talents: [
+            { name: "Starlight Wrath", points: "5/5", tree: "Balance (Tier 1)", desc: "Reduces the cast time of your Wrath and Starfire spells by 0.5 sec." },
+            { name: "Improved Moonfire", points: "5/5", tree: "Balance (Tier 1)", desc: "Increases the damage and critical strike chance of Moonfire by 10%." },
+            { name: "Nature's Reach", points: "1/2", tree: "Balance (Tier 2)", desc: "Increases the range of your Wrath, Entangling Roots, Faerie Fire, and Moonfire by 10%." }
+          ],
+          legacyNotes: "Extra Legacy points unlock 2/2 Nature's Grace (-0.5s cast after spell crit) and Moonkin Form.",
+          rotation: [
+            { label: "Rotation", desc: "Faerie Fire (decreases enemy armor) -> Moonfire -> Wrath spam." },
+            { label: "Outdoor Kite", desc: "Entangling Roots rank 1 to root melee mobs while casting Wrath at 33 yards." }
+          ],
+          bisGear: [
+            { slot: "Staff", item: "Staff of Westfall", source: "Deadmines Quest", stats: "+11 Int, +5 Spi" },
+            { slot: "Robe", item: "Robe of Arugal", source: "Shadowfang Keep", stats: "+10 Int, +5 Spi, +3 Agi" }
+          ],
+          campingPerk: {
+            name: "Lunar Guidance (+5% Spell Power)",
+            desc: "Camp resting grants +5% bonus Spell Power and 10% Nature damage increase for 2 hours."
+          },
+          classQuestNote: "Level 20 unlocks Teleport: Moonglade rank 2 and herbalism synergy perks."
+        }
+      ]
+    }
   };
 }

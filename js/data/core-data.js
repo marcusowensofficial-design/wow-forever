@@ -86,6 +86,42 @@ const WOW_FOREVER_DATA = {
   ],
   "newsFeed": [
     {
+      "id": "news-19",
+      "title": "Tuesday Maintenance & Beta Build 1.60.2: Addon Persistence C++ Fix, Druid Bear Form Armor & Ray-Tracing Passes",
+      "source": "Blizzard Official / Patch Notes",
+      "sourceType": "blizzard",
+      "author": "Blizzard Quality Assurance",
+      "date": "September 22, 2026",
+      "tag": "Beta Patch Notes",
+      "summary": "Weekly maintenance deploys client build 1.60.2.70114, resolving the C++ SavedVariables disk flush bug, fixing Druid Bear Form armor multiplication, and smoothing DX12 ray-tracing stutters in major cities.",
+      "content": "Blizzard Entertainment has deployed the first scheduled Tuesday weekly maintenance build (1.60.2.70114) for the World of Warcraft: Forever closed beta:\n• Addon SavedVariables Restored: Fixed a client-side C++ file I/O bug where addon SavedVariables tables failed to flush to disk upon /reload or game exit. Addon developers no longer require emergency snapshot restoration workarounds.\n• 12.0 Lua Security & Secret Values: Blizzard engineers reiterated that WoW Forever operates on the Retail 12.0 (Camelot) engine. In-combat protective boundaries (<secret number> and <secret string>) are fully active; addon developers must utilize C++ SetFormattedText methods and isolated data registries to avoid fatal UI taint.\n• Bear Form Armor Multiplier Fix: Addressed an unintended calculation where Druid Bear Form armor multipliers were exponentially compounding flat consumable bonuses (like Elixir of Superior Defense) rather than adding them post-multiplier.\n• Capital City DX12 Shadow Optimization: Performance optimization pass for ray-traced shadows in Orgrimmar (Valley of Strength) and Stormwind (Trade District), eliminating stuttering in high player density areas.\n• Phase 1 Testing On Schedule: Phase 1 Level 20 cap testing enters Day 6 with smooth server concurrency.",
+      "url": "https://news.blizzard.com/en-us/world-of-warcraft/beta-build-1602-patch-notes-sep22"
+    },
+    {
+      "id": "news-20",
+      "title": "Brewfest 2026 Hits Classic+ Beta: Festival Camps, Ram Racing & Level 20 Festivities Live",
+      "source": "Wowhead / Community Playtest",
+      "sourceType": "wowhead",
+      "author": "Wowhead News Team",
+      "date": "September 22, 2026",
+      "tag": "World Events",
+      "summary": "Brewfest officially opens outside Ironforge and Orgrimmar, featuring keg delivery runs, Ram Racing, Wolpertinger pets, and festival grounds adapted for Level 20 beta characters.",
+      "content": "Following the conclusion of Pirates' Day on September 20, the annual Brewfest celebration is now fully active across all WoW Forever beta megarealms from September 20 through October 6:\n• Festival Grounds: Alliance players can visit the festival grounds outside the gates of Ironforge, while Horde players celebrate outside Orgrimmar in Durotar.\n• Ram Racing & Barking: Daily quests for Barking for Brewfest and keg courier runs with rental rams are fully testable, rewarding Brewfest Prize Tokens.\n• Collectibles & Toys: Beta testers are farming tokens for the Wolpertinger pet, Brewfest Steins, and seasonal holiday clothing.\n• Level 20 Scaling Discussions: Blizzard is monitoring whether special holiday encounter scaling will be enabled for Coren Direbrew or if high-level boss drops will remain locked until Phase 2/3.",
+      "url": "https://www.wowhead.com/forever/news/brewfest-2026-event-guide-beta-level-20"
+    },
+    {
+      "id": "news-21",
+      "title": "Phase 1 Theorycrafting Surge: Level 20 Warsong Gulch Skirmishes & Pre-BiS Dungeon Routes",
+      "source": "Method.gg / Beta Theorycrafting",
+      "sourceType": "method",
+      "author": "Method Theorycrafting Team",
+      "date": "September 22, 2026",
+      "tag": "PvP & Systems",
+      "summary": "Over 65% of closed beta testers have reached the Level 20 cap, sparking intense Warsong Gulch battleground skirmishes, 16-point Legacy talent builds, and dungeon pre-BiS optimization.",
+      "content": "As Beta Phase 1 enters Day 6, the community meta has rapidly coalesced around max-level 20 optimization:\n• Level 20 Warsong Gulch (10–19 / 20 Bracket): Intense faction skirmishes highlight the impact of classic racials alongside modern class mechanics. Beast Mastery Hunters, Discipline Priests, and Arms Warriors are emerging as early front-runners.\n• 16-Point Legacy Milestones: Testers are heavily validating utility bonuses in the Legacy talent system, confirming that movement speed, mount speed, and camping perks drastically accelerate world navigation.\n• Dungeon Pre-BiS Farming: Deadmines (Defias set, Smite's Mighty Hammer, Cruel Barb), Wailing Caverns (Armor of the Fang), and Shadowfang Keep (Silverlaine's Family Seal, Shadowfang) are running continuously as players prepare for Phase 2's Level 30 cap unlock on October 8.",
+      "url": "https://www.method.gg/wow-classic/beta-phase-1-level-20-meta-dungeon-routes"
+    },
+    {
       "id": "news-16",
       "title": "Beta Weekend Surge: Aggrend Reports Record Turnout as Rolling Megarealm Restarts & EU Routing Deploy",
       "source": "Blizzard Official / Twitter",
@@ -1563,6 +1599,331 @@ const WOW_FOREVER_DATA = {
       {
         "title": "Guaranteed Boss Loot & Automatic Transmog",
         "desc": "Every dungeon and raid boss drops a guaranteed Rare (Blue) item. Any item looted automatically unlocks its appearance in your account transmog collection if you are an eligible wearer."
+      }
+    ]
+  },
+  "classStatConversions": {
+    "warrior": {
+      "name": "Warrior",
+      "icon": "⚔️",
+      "color": "#c79c6e",
+      "role": "Tank / Melee DPS",
+      "strength": "1 Str = 2 Melee AP • 20 Str = 1 Block Value",
+      "agility": "20 Agi = 1% Crit • 20 Agi = 1% Dodge • 1 Agi = 1 Ranged AP • 1 Agi = 2 Armor",
+      "intellect": "Increases weapon skill acquisition rate",
+      "stamina": "1 Sta = 10 Health",
+      "spirit": "Out-of-combat Health regen",
+      "highlights": [
+        "2 Melee Attack Power per 1 Strength",
+        "20 Strength = 1 Shield Block Value",
+        "20 Agility = 1% Critical Strike chance",
+        "20 Agility = 1% Dodge chance"
+      ],
+      "summary": "Strength is the primary DPS and Threat engine (2 AP per point). Agility provides efficient 20:1 Crit and Dodge scaling, while 20 Strength adds 1 Block Value to shields."
+    },
+    "paladin": {
+      "name": "Paladin",
+      "icon": "🛡️",
+      "color": "#f58cba",
+      "role": "Tank / Healer / Melee DPS",
+      "strength": "1 Str = 2 Melee AP • 20 Str = 1 Block Value",
+      "agility": "20 Agi = 1% Melee Crit • 20 Agi = 1% Dodge • 1 Agi = 2 Armor",
+      "intellect": "1 Int = 15 Mana • ~54 Int = 1% Spell Crit (Lowest threshold of all casters!)",
+      "stamina": "1 Sta = 10 Health",
+      "spirit": "In-combat Mana regen enabled via Holy talent tree; out-of-combat HP/Mana recovery",
+      "highlights": [
+        "2 Melee Attack Power per 1 Strength",
+        "~54 Intellect = 1% Spell Critical Strike (Easiest Spell Crit in game!)",
+        "20 Strength = 1 Shield Block Value",
+        "20 Agility = 1% Critical Strike & Dodge"
+      ],
+      "summary": "Gets maximum Melee AP from Strength (2:1) and the most efficient Spell Crit from Intellect (~54:1). Shield blocks scale with Strength (20:1)."
+    },
+    "hunter": {
+      "name": "Hunter",
+      "icon": "🏹",
+      "color": "#abd473",
+      "role": "Ranged Physical DPS",
+      "strength": "1 Str = 1 Melee AP",
+      "agility": "1 Agi = 2 Ranged AP • 1 Agi = 1 Melee AP • 53 Agi = 1% Crit • 26 Agi = 1% Dodge • 1 Agi = 2 Armor",
+      "intellect": "1 Int = 15 Mana",
+      "stamina": "1 Sta = 10 Health (and scales pet Health pool)",
+      "spirit": "Out-of-combat Health & Mana regen",
+      "highlights": [
+        "2 Ranged Attack Power + 1 Melee AP per 1 Agility",
+        "53 Agility = 1% Critical Strike chance",
+        "26 Agility = 1% Dodge chance",
+        "Stamina scales both Hunter and Pet max health"
+      ],
+      "summary": "Agility is king: grants 2 Ranged AP + 1 Melee AP + 2 Armor per point! Requires 53 Agility per 1% Crit and 26 Agility per 1% Dodge."
+    },
+    "rogue": {
+      "name": "Rogue",
+      "icon": "🗡️",
+      "color": "#fff569",
+      "role": "Melee Physical DPS",
+      "strength": "1 Str = 1 Melee AP",
+      "agility": "1 Agi = 1 Melee AP • 1 Agi = 1 Ranged AP • 29 Agi = 1% Crit • 14.5 Agi = 1% Dodge (Best Dodge in game!) • 1 Agi = 2 Armor",
+      "intellect": "Increases weapon skill acquisition rate",
+      "stamina": "1 Sta = 10 Health",
+      "spirit": "Out-of-combat Health regen",
+      "highlights": [
+        "14.5 Agility = 1% Dodge (Highest Dodge yield of any class)",
+        "29 Agility = 1% Critical Strike chance",
+        "1 Melee Attack Power & 1 Ranged AP per 1 Agility",
+        "1 Agility = 2 Armor"
+      ],
+      "summary": "Best Dodge return in the entire game (14.5 Agi = 1% Dodge!) and rapid Critical Strike conversion (29 Agi = 1% Crit). 1 Agility provides 1 Melee AP and 2 Armor."
+    },
+    "priest": {
+      "name": "Priest",
+      "icon": "✨",
+      "color": "#ffffff",
+      "role": "Healer / Ranged Magic DPS",
+      "strength": "1 Str = 1 Melee AP",
+      "agility": "20 Agi = 1% Crit • 20 Agi = 1% Dodge • 1 Agi = 2 Armor",
+      "intellect": "1 Int = 15 Mana • ~59.5 Int = 1% Spell Crit",
+      "stamina": "1 Sta = 10 Health",
+      "spirit": "Tier 1 Stat: Meditation talents enable 100% in-combat Mana Regen; Spiritual Guidance converts Spirit into Bonus Spell Damage & Healing!",
+      "highlights": [
+        "Spirit fuels in-combat Mana regeneration & bonus Spell Power",
+        "15 Mana per 1 Intellect",
+        "~59.5 Intellect = 1% Spell Critical Strike",
+        "+33.3% Healing converted directly to offensive Spell Damage"
+      ],
+      "summary": "Spirit is premier: fuels in-combat mana regeneration and spell power conversion. Intellect provides base mana pool and spell crit (~59.5 Int per 1% Spell Crit)."
+    },
+    "shaman": {
+      "name": "Shaman",
+      "icon": "⚡",
+      "color": "#0070de",
+      "role": "Healer / Ranged & Melee DPS / Off-Tank",
+      "strength": "1 Str = 2 Melee AP • 20 Str = 1 Block Value",
+      "agility": "20 Agi = 1% Melee Crit • 20 Agi = 1% Dodge • 1 Agi = 2 Armor",
+      "intellect": "1 Int = 15 Mana • ~59.5 Int = 1% Spell Crit",
+      "stamina": "1 Sta = 10 Health",
+      "spirit": "In-combat Mana regen enabled via Restoration talents; rapid out-of-combat recovery",
+      "highlights": [
+        "2 Melee Attack Power per 1 Strength (Enhancement)",
+        "20 Strength = 1 Shield Block Value (Shield tanking/off-hand)",
+        "15 Mana per 1 Intellect & ~59.5 Int = 1% Spell Crit",
+        "Spirit scales in-combat Mana regeneration"
+      ],
+      "summary": "Dual hybrid scaling: Strength yields 2 Melee AP and shield Block Value (Enhancement/Tanking), while Intellect yields 15 Mana and Spell Crit (Elemental/Restoration)."
+    },
+    "mage": {
+      "name": "Mage",
+      "icon": "🔥",
+      "color": "#69ccf0",
+      "role": "Ranged Magic DPS",
+      "strength": "1 Str = 1 Melee AP",
+      "agility": "20 Agi = 1% Crit • 20 Agi = 1% Dodge • 1 Agi = 2 Armor",
+      "intellect": "1 Int = 15 Mana • ~59.5 Int = 1% Spell Crit",
+      "stamina": "1 Sta = 10 Health",
+      "spirit": "In-combat Mana regen boosted by Mage Armor and Arcane Meditation",
+      "highlights": [
+        "15 Mana per 1 Intellect",
+        "~59.5 Intellect = 1% Spell Critical Strike",
+        "Spirit synergizes with Mage Armor & Arcane Meditation",
+        "Unified Critical Strike applies to all spell schools"
+      ],
+      "summary": "Intellect expands mana pool and spell critical chance. Spirit is enhanced by Mage Armor and Arcane Meditation to maintain casting endurance in long raid encounters."
+    },
+    "warlock": {
+      "name": "Warlock",
+      "icon": "🔮",
+      "color": "#9482c9",
+      "role": "Ranged Magic DPS",
+      "strength": "1 Str = 1 Melee AP",
+      "agility": "20 Agi = 1% Crit • 20 Agi = 1% Dodge • 1 Agi = 2 Armor",
+      "intellect": "1 Int = 15 Mana (and scales pet Mana) • ~60.6 Int = 1% Spell Crit",
+      "stamina": "1 Sta = 10 Health (and scales pet Health; fuels Life Tap)",
+      "spirit": "Out-of-combat Health/Mana regen; Fel Armor synergy",
+      "highlights": [
+        "Stamina fuels unlimited Mana via Life Tap conversion",
+        "Intellect grants 15 Mana to both Warlock & summoned demon",
+        "~60.6 Intellect = 1% Spell Critical Strike",
+        "DoTs gain full Spell Damage scaling over their duration"
+      ],
+      "summary": "Stamina is directly convertible into Mana via Life Tap! Intellect grants 15 Mana to both the Warlock and summoned demons, requiring ~60.6 Int per 1% Spell Crit."
+    },
+    "druid": {
+      "name": "Druid",
+      "icon": "🌿",
+      "color": "#ff7d0a",
+      "role": "Tank / Healer / Melee & Ranged DPS",
+      "strength": "1 Str = 2 Melee AP (All Forms)",
+      "agility": "1 Agi = 1 Melee AP (Cat Form) • 20 Agi = 1% Crit • 20 Agi = 1% Dodge • 1 Agi = 2 Armor",
+      "intellect": "1 Int = 15 Mana • ~60 Int = 1% Spell Crit",
+      "stamina": "1 Sta = 10 Health (drastically multiplied by Bear Form modifiers)",
+      "spirit": "In-combat Mana regen via Reflection/Restoration; Innervate pooling",
+      "highlights": [
+        "2 Melee Attack Power per 1 Strength across ALL forms",
+        "+1 Melee Attack Power per 1 Agility in Cat Form",
+        "20 Agility = 1% Critical Strike & Dodge",
+        "Bear Form multiplies flat Armor & Stamina bonuses"
+      ],
+      "summary": "Unmatched shapeshifting flexibility: Strength gives 2 Melee AP across all forms, Cat Form gains +1 Melee AP per Agility, and Bear Form drastically multiplies Armor and Stamina."
+    }
+  },
+  "statsOverviewGuide": {
+    "primaryStats": [
+      {
+        "name": "Strength",
+        "icon": "💪",
+        "role": "Primary Stat",
+        "bullets": [
+          "<strong>Melee Attack Power:</strong> Melee DPS classes (Warriors, Paladins, Shamans, and Druids) gain <strong>2 Attack Power</strong> per point of Strength. All other classes gain 1 Attack Power per point.",
+          "<strong>Shield Block Value:</strong> Warriors, Paladins, and Shamans gain <strong>1 Block Value per 20 points</strong> of Strength, directly increasing the physical damage absorbed by equipped shields.",
+          "Found heavily on Mail and Plate armor, two-handed weapons, and melee accessories."
+        ]
+      },
+      {
+        "name": "Agility",
+        "icon": "🏃",
+        "role": "Primary Stat",
+        "bullets": [
+          "<strong>Attack Power:</strong> Hunters gain <strong>2 Ranged AP</strong> per point. Rogues and Warriors gain 1 Ranged AP per point. Hunters, Rogues, and Cat Form Druids gain <strong>1 Melee AP</strong> per point.",
+          "<strong>Armor:</strong> All classes gain a flat <strong>2 Armor per point</strong> of Agility.",
+          "<strong>Critical Strike:</strong> Rogues gain 1% Crit per <strong>29 Agility</strong>; Hunters gain 1% Crit per <strong>53 Agility</strong>; Warriors, Paladins, Shamans, and Druids gain 1% Crit per <strong>20 Agility</strong>.",
+          "<strong>Dodge Chance:</strong> Rogues gain 1% Dodge per <strong>14.5 Agility</strong> (highest in game!); Hunters gain 1% Dodge per <strong>26 Agility</strong>; all other classes gain 1% Dodge per <strong>20 Agility</strong>."
+        ]
+      },
+      {
+        "name": "Intellect",
+        "icon": "🧠",
+        "role": "Primary Stat",
+        "bullets": [
+          "<strong>Maximum Mana:</strong> Each point of Intellect grants <strong>15 additional Mana</strong>. Summoned Warlock pets also receive this bonus.",
+          "<strong>Spell Critical Strike:</strong> Caster classes gain 1% Spell Crit per <strong>54–60 Intellect</strong>. Paladins require the least (~54), while Warlocks require the most (~60.6).",
+          "<strong>Weapon Skill:</strong> Intellect slightly accelerates your chance to improve weapon skills during melee and ranged combat."
+        ]
+      },
+      {
+        "name": "Stamina",
+        "icon": "❤️",
+        "role": "Primary Stat",
+        "bullets": [
+          "<strong>Maximum Health:</strong> All classes gain a flat <strong>10 Health per point</strong> of Stamina.",
+          "<strong>Pet Scaling:</strong> Hunter beasts and Warlock demons receive scaled health bonuses based on their master's Stamina.",
+          "Vital for all classes, especially tanks pushing raid survival and PvP resilience."
+        ]
+      },
+      {
+        "name": "Spirit",
+        "icon": "✨",
+        "role": "Primary Stat",
+        "bullets": [
+          "<strong>Health & Mana Regeneration:</strong> Governs out-of-combat regeneration and regeneration outside the 5-second casting rule.",
+          "<strong>Universal Healer In-Combat Regen:</strong> In WoW Forever, <strong>all healer specs</strong> have in-combat Mana Regeneration talents available (Meditation-style), making Spirit a premium healer stat!",
+          "Priests gain direct Bonus Spell Damage & Healing from Spirit via Spiritual Guidance."
+        ]
+      }
+    ],
+    "secondaryStats": [
+      {
+        "name": "Critical Strike Chance",
+        "icon": "🎯",
+        "bullets": [
+          "<strong>Unified on Gear:</strong> Critical Strike is no longer strictly separated into melee vs. spell crit on items. Gear grants unified 'Critical Strike Chance'.",
+          "<strong>Bonus Damage Multipliers:</strong> By default, melee Critical Strikes deal <strong>100% bonus damage</strong> (2x), and spell Critical Strikes deal <strong>50% bonus damage</strong> (1.5x).",
+          "<strong>Talent Overrides:</strong> Talents such as Druid <em>Vengeance</em>, Priest <em>Shadowform</em>, and Paladin <em>Conviction / Holy Power</em> modify and amplify critical strike damage."
+        ]
+      },
+      {
+        "name": "Hit Chance",
+        "icon": "🏹",
+        "bullets": [
+          "<strong>Melee Hit Caps:</strong> Base miss rate is <strong>5%</strong> against equal-level targets and <strong>9%</strong> against Level 63 raid bosses (special yellow attacks). Dual-wielding white auto-attacks suffer a higher 27% miss penalty.",
+          "<strong>Spell Hit Caps:</strong> Base spell miss is <strong>3%</strong> against equal-level targets and <strong>16%</strong> against Level 63 raid bosses.",
+          "Consolidated Hit on gear applies uniformly to eliminate misses and resists."
+        ]
+      },
+      {
+        "name": "Haste",
+        "icon": "⚡",
+        "bullets": [
+          "<strong>Beta Phase 1 Availability:</strong> Haste is not currently itemized on Level 20 gear acquired in Phase 1.",
+          "<strong>Racial & Passive Sources:</strong> Present on the Skyborne passive <em>Wind Blessed</em> and Troll racial <em>Berserking</em>, boosting attack and spellcasting speed.",
+          "Further itemization testing will occur when Phase 2 unlocks the Level 30 cap."
+        ]
+      }
+    ],
+    "defensiveStats": [
+      {
+        "name": "Armor & Mitigation",
+        "icon": "🦺",
+        "bullets": [
+          "<strong>Physical Damage Reduction:</strong> Reduces physical damage taken based on attacker level and armor value. Increased by Agility (2 Armor per point).",
+          "<strong>75% Hard Mitigation Cap:</strong> Physical damage reduction caps at <strong>75%</strong>, requiring approximately <strong>17,265 Armor</strong> against Level 63 raid bosses."
+        ]
+      },
+      {
+        "name": "Defense (The 440 Cap)",
+        "icon": "🛡️",
+        "bullets": [
+          "<strong>Smoothed Damage Profile:</strong> Defense increases Dodge, Block, and Parry while decreasing the enemy's chance to hit or critically strike you.",
+          "<strong>Uncrittable at 440:</strong> Reaching <strong>440 Defense</strong> eliminates critical strikes from Level 63 raid bosses, preventing fatal 200% spike damage on tanks."
+        ]
+      },
+      {
+        "name": "Shield Block & Block Value",
+        "icon": "🧱",
+        "bullets": [
+          "<strong>Shield Requirement:</strong> Exclusive to Warriors, Paladins, and Shamans with a shield equipped.",
+          "<strong>Flat Mitigation:</strong> Blocks mitigate damage equal to your <strong>Block Value</strong> (increased by Strength at 20:1 and gear). Can block both melee and ranged physical hits."
+        ]
+      },
+      {
+        "name": "Dodge, Parry & Parry Haste",
+        "icon": "⚔️",
+        "bullets": [
+          "<strong>Frontal Nullification:</strong> Dodge and Parry grant a chance to completely negate incoming frontal attacks (cannot dodge or parry from behind!).",
+          "<strong>⚠️ Parry Haste Warning:</strong> When a combatant parries an attack, their next swing occurs <strong>40% faster</strong>! If a raid boss parries, it can trigger sudden, lethal double-hit bursts on the tank."
+        ]
+      },
+      {
+        "name": "Magic Resistances",
+        "icon": "🔮",
+        "bullets": [
+          "<strong>Five Magic Schools:</strong> Arcane, Fire, Frost, Nature, and Shadow (Holy damage cannot be resisted).",
+          "<strong>75% Damage Cap:</strong> Mitigates up to <strong>75% magic damage</strong>, reached at <strong>315 Resistance</strong> against Level 63 raid bosses."
+        ]
+      }
+    ],
+    "modifiersAndRules": [
+      {
+        "name": "Spell Damage & Spell Healing Coefficients",
+        "icon": "✨",
+        "bullets": [
+          "Each spell has an internal coefficient deciding what percentage of your bonus Spell Power it receives.",
+          "<strong>Long Cast Spells:</strong> Direct spells like <em>Frostbolt</em> and <em>Fireball</em> have high coefficients (~80%–100%).",
+          "<strong>Instant & AoE Spells:</strong> Spells like <em>Arcane Explosion</em> receive ~15% per hit, while DoTs (like <em>Shadow Word: Pain</em>) spread high coefficients across their full duration."
+        ]
+      },
+      {
+        "name": "Level 20 Downranking Threshold",
+        "icon": "📉",
+        "bullets": [
+          "Spell coefficients plateau for ranks learned at or after <strong>Level 20</strong>.",
+          "<strong>Downranking Warning:</strong> Avoid downranking to spell ranks learned prior to Level 20, as they suffer severe sub-20 coefficient penalties that gut bonus spell power scaling."
+        ]
+      },
+      {
+        "name": "Attack Power Ratio (14 AP = 1 DPS)",
+        "icon": "🗡️",
+        "bullets": [
+          "Every <strong>14 points of Attack Power</strong> grants exactly <strong>1 weapon Damage Per Second (DPS)</strong>.",
+          "Unified Attack Power on gear increases both melee and ranged weapon damage equally."
+        ]
+      },
+      {
+        "name": "Healing-to-Spell Damage (+33.3%)",
+        "icon": "☀️",
+        "bullets": [
+          "In WoW Forever, all gear granting Bonus Healing automatically converts <strong>+33.3% (+1/3)</strong> of its value into Bonus Spell Damage.",
+          "Enables healers to farm and level outdoors effectively without carrying a dedicated DPS gear set."
+        ]
       }
     ]
   },

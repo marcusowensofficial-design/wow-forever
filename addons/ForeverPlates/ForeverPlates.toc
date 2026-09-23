@@ -4,8 +4,8 @@
 ## Author: Marcus & Antigravity
 ## Version: 2.1.0
 ## SavedVariables: ForeverPlatesDB
+## LoadSavedVariablesFirst: true
 ## OptionalDeps: Blizzard_NamePlates
 
-ForeverPlates_Restore.lua
 core.lua
 gui.lua

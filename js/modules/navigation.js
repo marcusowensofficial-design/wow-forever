@@ -106,5 +106,17 @@ function initNavigation() {
       }
     });
   });
+
+  const quickLinkAddon = document.getElementById('quick-link-addon-foreverplates');
+  if (quickLinkAddon) {
+    quickLinkAddon.addEventListener('click', () => {
+      const systemsTabBtn = document.querySelector('.nav-tab-btn[data-tab="systems"]');
+      if (systemsTabBtn) systemsTabBtn.click();
+      const target = document.getElementById('foreverplates-spotlight');
+      if (target) {
+        setTimeout(() => target.scrollIntoView({ behavior: 'smooth' }), 100);
+      }
+    });
+  }
 }
 

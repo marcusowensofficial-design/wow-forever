@@ -12,6 +12,9 @@
 
 local ADDON_NAME, FP = ...
 
+-- Ensure global DB reference exists immediately
+_G.ForeverPlatesDB = _G.ForeverPlatesDB or {}
+
 -- 1. Font Registry (12 Fonts Total)
 local FONTS = {
     expressway = "Interface\\AddOns\\ForeverPlates\\media\\Expressway.TTF",
@@ -89,6 +92,8 @@ local CAST_BAR_COLORS = {
     PURPLE = { r = 0.75, g = 0.30, b = 1.00, name = "Neon Purple" },
     RED    = { r = 1.00, g = 0.15, b = 0.15, name = "Blood Red" },
     WHITE  = { r = 0.95, g = 0.95, b = 0.95, name = "Pure White" },
+    SILVER = { r = 0.70, g = 0.74, b = 0.82, name = "Steel Silver" },
+    DARK   = { r = 0.32, g = 0.35, b = 0.40, name = "Dark Slate" },
 }
 FP.CAST_BAR_COLORS = CAST_BAR_COLORS
 
@@ -99,6 +104,31 @@ local ARROW_TEXTURE = "Interface\\AddOns\\ForeverPlates\\media\\arrow.tga"
 
 -- Internal registry for all addon elements (prevents adding fields to Blizzard frames)
 local plates = {}
+
+-- External Weak-Key Registries (Guarantees zero mutation/taint on Blizzard frames & textures)
+local hookedBackdrops = setmetatable({}, { __mode = "k" })
+local isClearingBackdrop = setmetatable({}, { __mode = "k" })
+local hookedHealthBars = setmetatable({}, { __mode = "k" })
+local hookedBarTextures = setmetatable({}, { __mode = "k" })
+local isApplyingColor = setmetatable({}, { __mode = "k" })
+local hookedSelectionBorders = setmetatable({}, { __mode = "k" })
+local hookedSuppressedTextures = setmetatable({}, { __mode = "k" })
+local isHidingTexture = setmetatable({}, { __mode = "k" })
+local hookedCastBars = setmetatable({}, { __mode = "k" })
+local isCastBarReanchoring = setmetatable({}, { __mode = "k" })
+local isCastBarRecoloring = setmetatable({}, { __mode = "k" })
+local isCastBarSettingTexture = setmetatable({}, { __mode = "k" })
+local hookedAuras = setmetatable({}, { __mode = "k" })
+local isAuraReanchoring = setmetatable({}, { __mode = "k" })
+local auraAdjustedOffsets = setmetatable({}, { __mode = "k" })
+local hookedLevelTexts = setmetatable({}, { __mode = "k" })
+local hookedLevelFrames = setmetatable({}, { __mode = "k" })
+local isLevelReanchoring = setmetatable({}, { __mode = "k" })
+local isLevelSettingFont = setmetatable({}, { __mode = "k" })
+local hookedArts = setmetatable({}, { __mode = "k" })
+local isArtSettingAlpha = setmetatable({}, { __mode = "k" })
+local testCastBarState = setmetatable({}, { __mode = "k" })
+local pendingDimensions = setmetatable({}, { __mode = "k" })
 
 -- SavedVariables defaults
 local defaults = {
@@ -119,16 +149,26 @@ local defaults = {
     showFriendlyRoleIcon = true,
     barWidth = 142,
     barHeight = 18,
-    castBarHeight = 13,
+    castBarMatchHealthWidth = true,
     castBarWidth = 115,
+    castBarHeight = 13,
+    castBarYOffset = -4,
     castBarColor = "GOLD",
+    castBarUnkickableColor = "SILVER",
+    castBarUnkickableBorderColor = "SILVER",
+    castBarOutlineColor = "DARK",
+    castBarOutlineThickness = 1,
+    castBarTextPosition = "ON_BAR_LEFT", -- "ON_BAR_LEFT", "ON_BAR_CENTER", "ON_BAR_RIGHT", "ABOVE_BAR", "BELOW_BAR"
+    castBarFontSize = 10,
+    castBarFontOutline = "OUTLINE",
+    showCastBarIcon = true,
     nameFontSize = 16,
     namePosition = "CENTER", -- "LEFT", "CENTER", "RIGHT"
     targetBarColor = "LIME",
     colorAllEnemyBars = true,
     lockHealthBarColor = true,
     alwaysShowSelectionHighlight = true,
-    outlineColor = "WHITE", -- "WHITE", "CYAN", "GOLD", "LIME", "RED", "DARK", "NONE"
+    outlineColor = "DARK", -- Slate Dark by default
     outlineThickness = 3,
     nameFontColor = "REACTION",
     nonTargetAlpha = 1.0,
@@ -149,9 +189,16 @@ local defaults = {
     showCastBarTimer = true,
     classColorPlayers = true,
     grayTappedMobs = true,
-    showTappedBadge = true,
+    showTappedBadge = false,
 }
 FP.defaults = defaults
+
+-- Ensure all defaults are populated into ForeverPlatesDB immediately
+for k, v in pairs(defaults) do
+    if ForeverPlatesDB[k] == nil then
+        ForeverPlatesDB[k] = v
+    end
+end
 
 -- Helper: Recursive copy of defaults without clobbering existing settings
 local function CopyDefaults(destination, source)
@@ -206,54 +253,6 @@ local function InitializeDatabase()
         ForeverPlatesDB = {}
     end
     CopyDefaults(ForeverPlatesDB, defaults)
-    if ForeverPlatesDB.healthFontSize == nil or ForeverPlatesDB.healthFontSize == 10 then
-        ForeverPlatesDB.healthFontSize = 17
-    end
-    if ForeverPlatesDB.outlineThickness == nil or ForeverPlatesDB.outlineThickness < 3 then
-        ForeverPlatesDB.outlineThickness = 3
-    end
-    if ForeverPlatesDB.grayTappedMobs == nil then
-        ForeverPlatesDB.grayTappedMobs = true
-    end
-    if ForeverPlatesDB.showTappedBadge == nil then
-        ForeverPlatesDB.showTappedBadge = true
-    end
-    if ForeverPlatesDB.colorByThreat == nil then
-        ForeverPlatesDB.colorByThreat = true
-    end
-    if ForeverPlatesDB.threatOnlyInGroup == nil then
-        ForeverPlatesDB.threatOnlyInGroup = true
-    end
-    if ForeverPlatesDB.executeThreshold == nil then
-        ForeverPlatesDB.executeThreshold = 20
-    end
-    if ForeverPlatesDB.friendlyBarWidth == nil then
-        ForeverPlatesDB.friendlyBarWidth = 120
-    end
-    if ForeverPlatesDB.friendlyBarHeight == nil then
-        ForeverPlatesDB.friendlyBarHeight = 12
-    end
-    if ForeverPlatesDB.friendlyHealthFontSize == nil then
-        ForeverPlatesDB.friendlyHealthFontSize = 14
-    end
-    if ForeverPlatesDB.friendlyColorMode == nil then
-        ForeverPlatesDB.friendlyColorMode = "CLASS"
-    end
-    if ForeverPlatesDB.partyPinTarget == nil then
-        ForeverPlatesDB.partyPinTarget = "NONE"
-    end
-    if ForeverPlatesDB.partyPinArrowStyle == nil then
-        ForeverPlatesDB.partyPinArrowStyle = "neoncyan"
-    end
-    if ForeverPlatesDB.partyPinArrowSize == nil then
-        ForeverPlatesDB.partyPinArrowSize = 28
-    end
-    if ForeverPlatesDB.partyPinArrowThickness == nil then
-        ForeverPlatesDB.partyPinArrowThickness = 1.0
-    end
-    if ForeverPlatesDB.showFriendlyRoleIcon == nil then
-        ForeverPlatesDB.showFriendlyRoleIcon = true
-    end
     pcall(function()
         if SetCVar then
             SetCVar("nameplateMotion", "1")
@@ -269,6 +268,9 @@ local function InitializeDatabase()
             SetCVar("nameplateShowFriendlyNPCs", "0")
             SetCVar("UnitNameNPCName", "1")
             SetCVar("UnitNameFriendlySpecialNPCName", "1")
+            -- Ensure Blizzard native enemy nameplate castbars are enabled in C++ engine
+            SetCVar("ShowVKeyCastbar", "1")
+            SetCVar("showVKeyCastbarOnlyOnTarget", "0")
         end
         if SetCVar and GetCVar and GetCVar("nameplateDebuffPadding") ~= nil then
             local currentPadding = tonumber(GetCVar("nameplateDebuffPadding")) or 4
@@ -283,15 +285,15 @@ FP.InitializeDatabase = InitializeDatabase
 
 local function GetCurrentFont()
     local db = ForeverPlatesDB or defaults
-    local key = (db.font or "expressway"):lower()
-    return FONTS[key] or FONTS.expressway
+    local key = (db.font or defaults.font or "forced"):lower()
+    return FONTS[key] or FONTS.forced
 end
 FP.GetCurrentFont = GetCurrentFont
 
 local function GetCurrentArrow()
     local db = ForeverPlatesDB or defaults
-    local key = (db.targetArrowStyle or "neongreen"):lower()
-    return ARROWS[key] or ARROWS.neongreen
+    local key = (db.targetArrowStyle or defaults.targetArrowStyle or "neonred"):lower()
+    return ARROWS[key] or ARROWS.neonred
 end
 FP.GetCurrentArrow = GetCurrentArrow
 
@@ -456,7 +458,7 @@ local function GetSafeHealthPercent(unit, unitFrame)
             local ok, pct = pcall(function()
                 local val = hb:GetValue()
                 local minV, maxV = hb:GetMinMaxValues()
-                if maxV and maxV > 0 then
+                if not (issecretvalue and (issecretvalue(val) or issecretvalue(maxV))) and maxV and maxV > 0 and val then
                     return (val / maxV) * 100
                 end
             end)
@@ -534,24 +536,27 @@ local function CreatePixelBorder(parent, inset, layer, sublevel)
     sublevel = sublevel or 5
     local border = {}
 
+    local olKey = ForeverPlatesDB and ForeverPlatesDB.outlineColor or "DARK"
+    local c = (OUTLINE_COLORS and OUTLINE_COLORS[olKey]) or OUTLINE_COLORS.DARK or { r = 0.12, g = 0.12, b = 0.14, a = 1.0 }
+
     local top = parent:CreateTexture(nil, layer, nil, sublevel)
     top:SetTexture(FLAT_TEXTURE)
-    top:SetVertexColor(1.0, 1.0, 1.0, 1.0)
+    top:SetVertexColor(c.r, c.g, c.b, c.a or 1.0)
     border.top = top
 
     local bottom = parent:CreateTexture(nil, layer, nil, sublevel)
     bottom:SetTexture(FLAT_TEXTURE)
-    bottom:SetVertexColor(1.0, 1.0, 1.0, 1.0)
+    bottom:SetVertexColor(c.r, c.g, c.b, c.a or 1.0)
     border.bottom = bottom
 
     local left = parent:CreateTexture(nil, layer, nil, sublevel)
     left:SetTexture(FLAT_TEXTURE)
-    left:SetVertexColor(1.0, 1.0, 1.0, 1.0)
+    left:SetVertexColor(c.r, c.g, c.b, c.a or 1.0)
     border.left = left
 
     local right = parent:CreateTexture(nil, layer, nil, sublevel)
     right:SetTexture(FLAT_TEXTURE)
-    right:SetVertexColor(1.0, 1.0, 1.0, 1.0)
+    right:SetVertexColor(c.r, c.g, c.b, c.a or 1.0)
     border.right = right
 
     function border:SetThickness(t)
@@ -603,6 +608,29 @@ local function GetUnitForFrame(unitFrame)
     return unit
 end
 FP.GetUnitForFrame = GetUnitForFrame
+
+-------------------------------------------------------------------------------
+-- Helper: Safely Resolve NamePlate for a Unit Token
+-- (Guards against Blizzard C++ engine error with targettarget and chained unit tokens)
+-------------------------------------------------------------------------------
+local function GetSafeNamePlateForUnit(unit)
+    if not unit or type(unit) ~= "string" then return nil end
+    if not C_NamePlate or not C_NamePlate.GetNamePlateForUnit then return nil end
+    -- Blizzard C_NamePlate API strictly disallows target-of-target and chained unit tokens
+    -- e.g. "targettarget", "focustarget", "party1target", "boss1target", etc.
+    if unit:find("target") and unit ~= "target" then
+        return nil
+    end
+    -- Only evaluate primary unit tokens or nameplate unit tokens that can have an active nameplate
+    if unit:find("^nameplate%d+$") or unit == "target" or unit == "focus" or unit == "mouseover" or unit == "player" then
+        local ok, np = pcall(C_NamePlate.GetNamePlateForUnit, unit)
+        if ok and np and not (np.IsForbidden and np:IsForbidden()) then
+            return np
+        end
+    end
+    return nil
+end
+FP.GetSafeNamePlateForUnit = GetSafeNamePlateForUnit
 
 local function GetCVarSafe(cvar)
     if C_CVar and C_CVar.GetCVarBool then
@@ -742,13 +770,17 @@ local function HideFriendlyPlate(unitFrame, passedUnit)
         if unitFrame.name then
             pcall(unitFrame.name.SetAlpha, unitFrame.name, 0)
         end
-        pcall(unitFrame.SetAlpha, unitFrame, 0)
+        if not InCombatLockdown() then
+            pcall(unitFrame.SetAlpha, unitFrame, 0)
+        end
     else
         -- Friendly NPC: Leave Blizzard's normal NPC name visible, never show level or bar
         if unitFrame.name then
             pcall(unitFrame.name.SetAlpha, unitFrame.name, 1)
         end
-        pcall(unitFrame.SetAlpha, unitFrame, 1)
+        if not InCombatLockdown() then
+            pcall(unitFrame.SetAlpha, unitFrame, 1)
+        end
     end
 end
 FP.HideFriendlyPlate = HideFriendlyPlate
@@ -774,7 +806,9 @@ local function ShowFriendlyPlate(unitFrame)
     if levelFs then
         pcall(levelFs.SetAlpha, levelFs, 1)
     end
-    pcall(unitFrame.SetAlpha, unitFrame, 1)
+    if not InCombatLockdown() then
+        pcall(unitFrame.SetAlpha, unitFrame, 1)
+    end
 end
 FP.ShowFriendlyPlate = ShowFriendlyPlate
 
@@ -956,7 +990,7 @@ local function UpdateHealthText(unitFrame, passedUnit)
         pcall(function()
             local val = hb:GetValue()
             local _, maxV = hb:GetMinMaxValues()
-            if val and maxV and maxV > 0 and (not issecretvalue or (not issecretvalue(val) and not issecretvalue(maxV))) then
+            if not (issecretvalue and (issecretvalue(val) or issecretvalue(maxV))) and val and maxV and maxV > 0 then
                 pctStr = math.floor((val / maxV) * 100 + 0.5) .. "%"
             end
         end)
@@ -1236,6 +1270,531 @@ FP.UpdateHealthText = UpdateHealthText
 
 
 -------------------------------------------------------------------------------
+-- Blizzard Built-In Enemy Cast Bar Skinning & Zero-Taint Architecture
+-------------------------------------------------------------------------------
+local function GetUnitFrameCastBar(unitFrame)
+    if not unitFrame then return nil end
+    local uf = unitFrame.UnitFrame or unitFrame.unitFrame or unitFrame
+    local parent = (uf.GetParent and uf:GetParent()) or (unitFrame.GetParent and unitFrame:GetParent())
+
+    -- 1. Direct properties on unitFrame / UnitFrame
+    local cb = uf.castBar or uf.CastBar or uf.castingBar or uf.CastingBar or uf.CastingBarFrame or uf.castbar
+    if cb and (cb.GetStatusBarTexture or (cb.IsObjectType and cb:IsObjectType("StatusBar"))) then
+        return cb
+    end
+
+    -- 2. Direct properties on parent (NamePlate)
+    if parent then
+        cb = parent.castBar or parent.CastBar or parent.castingBar or parent.CastingBar or parent.CastingBarFrame or parent.castbar
+        if cb and (cb.GetStatusBarTexture or (cb.IsObjectType and cb:IsObjectType("StatusBar"))) then
+            return cb
+        end
+    end
+
+    -- 3. Cached reference in plates[uf] or plates[unitFrame]
+    local data = plates[uf] or plates[unitFrame]
+    if data and data.blizzCastBar and (data.blizzCastBar.GetStatusBarTexture or (data.blizzCastBar.IsObjectType and data.blizzCastBar:IsObjectType("StatusBar"))) then
+        return data.blizzCastBar
+    end
+
+    -- 4. Deep search in children of uf
+    local hb = uf.healthBar or (data and data.healthBar)
+    if uf.GetChildren then
+        for _, child in ipairs({uf:GetChildren()}) do
+            if child and child ~= hb and (child.GetStatusBarTexture or (child.IsObjectType and child:IsObjectType("StatusBar"))) then
+                local name = child.GetName and child:GetName()
+                local isCast = child.BorderShield or child.borderShield or child.Spark or child.spark or child.Text or child.text or child.Icon or child.icon or (name and name:lower():find("cast"))
+                if isCast then
+                    if data then data.blizzCastBar = child end
+                    return child
+                end
+            end
+        end
+    end
+
+    -- 5. Deep search in children of parent (NamePlate)
+    if parent and parent.GetChildren then
+        for _, child in ipairs({parent:GetChildren()}) do
+            if child and child ~= uf and child ~= hb and (child.GetStatusBarTexture or (child.IsObjectType and child:IsObjectType("StatusBar"))) then
+                local name = child.GetName and child:GetName()
+                local isCast = child.BorderShield or child.borderShield or child.Spark or child.spark or child.Text or child.text or child.Icon or child.icon or (name and name:lower():find("cast"))
+                if isCast then
+                    if data then data.blizzCastBar = child end
+                    return child
+                end
+            end
+        end
+    end
+
+    return nil
+end
+FP.GetUnitFrameCastBar = GetUnitFrameCastBar
+
+local function SuppressBlizzardCastBarArt(castBar)
+    if not castBar then return end
+    local artList = {
+        castBar.Border, castBar.border,
+        castBar.BorderShield, castBar.borderShield,
+        castBar.Flash, castBar.flash,
+        castBar.TextBorder, castBar.textBorder,
+        castBar.Background, castBar.background
+    }
+    for _, art in ipairs(artList) do
+        if art then
+            pcall(art.SetAlpha, art, 0)
+            pcall(art.Hide, art)
+            if not hookedArts[art] then
+                hookedArts[art] = true
+                hooksecurefunc(art, "Show", function(self)
+                    pcall(self.SetAlpha, self, 0)
+                    pcall(self.Hide, self)
+                end)
+                hooksecurefunc(art, "SetAlpha", function(self, a)
+                    if a > 0 and not isArtSettingAlpha[self] then
+                        isArtSettingAlpha[self] = true
+                        pcall(self.SetAlpha, self, 0)
+                        isArtSettingAlpha[self] = nil
+                    end
+                end)
+            end
+        end
+    end
+end
+
+local function GetSafeInterruptibleState(unitFrame, castBar)
+    if not castBar then return true end
+    if testCastBarState[castBar] and testCastBarState[castBar].isShielded ~= nil then
+        return testCastBarState[castBar].isShielded
+    end
+    local notInterruptible = castBar.notInterruptible
+    local data = plates[unitFrame]
+    local u = unitFrame and (unitFrame.unit or (data and data.unit))
+    if u and UnitExists(u) then
+        local ok, _, _, _, _, _, _, notIntC = pcall(UnitCastingInfo, u)
+        if ok and notIntC ~= nil then
+            notInterruptible = notIntC
+        else
+            local okCh, _, _, _, _, _, notIntCh = pcall(UnitChannelInfo, u)
+            if okCh and notIntCh ~= nil then
+                notInterruptible = notIntCh
+            end
+        end
+    end
+    -- Fallback: If Blizzard's native BorderShield is currently shown, it's non-interruptible
+    local shield = castBar.BorderShield or castBar.borderShield
+    if notInterruptible == nil and shield and shield.IsShown and shield:IsShown() then
+        notInterruptible = true
+    end
+    return notInterruptible
+end
+
+local function UpdateCastBarColor(unitFrame)
+    if not unitFrame or (unitFrame.IsForbidden and unitFrame:IsForbidden()) then return end
+    local castBar = GetUnitFrameCastBar(unitFrame)
+    if not castBar or (castBar.IsForbidden and castBar:IsForbidden()) then return end
+
+    local data = plates[unitFrame]
+    local db = ForeverPlatesDB or defaults
+    local notInterruptible = GetSafeInterruptibleState(unitFrame, castBar)
+    local outlineThick = db.castBarOutlineThickness or 1
+
+    isCastBarRecoloring[castBar] = true
+    if notInterruptible then
+        -- Unkickable / Shielded Cast Bar
+        local unkColorKey = tostring(db.castBarUnkickableColor or "SILVER"):upper()
+        local uc = CAST_BAR_COLORS[unkColorKey] or { r = 0.65, g = 0.68, b = 0.75 }
+        castBar:SetStatusBarColor(uc.r, uc.g, uc.b)
+        castBar:SetStatusBarTexture(BAR_TEXTURE)
+
+        local unkBorderKey = tostring(db.castBarUnkickableBorderColor or "SILVER"):upper()
+        local sR, sG, sB = 0.85, 0.88, 0.95
+        if unkBorderKey == "RED" then
+            sR, sG, sB = 1.00, 0.20, 0.20
+        elseif unkBorderKey == "ORANGE" then
+            sR, sG, sB = 1.00, 0.50, 0.00
+        elseif unkBorderKey == "GOLD" then
+            sR, sG, sB = 1.00, 0.80, 0.10
+        elseif unkBorderKey == "CYAN" then
+            sR, sG, sB = 0.00, 0.85, 1.00
+        elseif unkBorderKey == "WHITE" then
+            sR, sG, sB = 0.95, 0.95, 0.95
+        end
+
+        if data and data.castBorder then
+            data.castBorder:SetColor(sR, sG, sB, 1.0)
+            data.castBorder:SetThickness(math.max(1, outlineThick))
+            data.castBorder:SetShown(castBar:IsShown())
+        end
+
+        if data and data.castIconBorder then
+            data.castIconBorder:SetColor(sR, sG, sB, 1.0)
+            data.castIconBorder:SetThickness(math.max(1, outlineThick))
+        end
+    else
+        -- Kickable Cast Bar
+        local cbColorKey = tostring(db.castBarColor or "GOLD"):upper()
+        local c = CAST_BAR_COLORS[cbColorKey] or CAST_BAR_COLORS.GOLD
+        castBar:SetStatusBarColor(c.r, c.g, c.b)
+        castBar:SetStatusBarTexture(BAR_TEXTURE)
+
+        local olKey = tostring(db.castBarOutlineColor or "DARK"):upper()
+        local olR, olG, olB = 0.12, 0.14, 0.18
+        if olKey == "BLACK" then
+            olR, olG, olB = 0.00, 0.00, 0.00
+        elseif olKey == "WHITE" then
+            olR, olG, olB = 0.95, 0.95, 0.95
+        elseif olKey == "CYAN" then
+            olR, olG, olB = 0.00, 0.85, 1.00
+        elseif olKey == "GOLD" then
+            olR, olG, olB = 1.00, 0.72, 0.00
+        elseif olKey == "LIME" then
+            olR, olG, olB = 0.25, 1.00, 0.25
+        end
+
+        if data and data.castBorder then
+            data.castBorder:SetColor(olR, olG, olB, 1.0)
+            data.castBorder:SetThickness(math.max(1, outlineThick))
+            data.castBorder:SetShown(castBar:IsShown())
+        end
+
+        if data and data.castIconBorder then
+            data.castIconBorder:SetColor(olR, olG, olB, 1.0)
+            data.castIconBorder:SetThickness(math.max(1, outlineThick))
+        end
+    end
+    isCastBarRecoloring[castBar] = nil
+end
+FP.UpdateCastBarColor = UpdateCastBarColor
+
+local function ApplyCastBarLayout(unitFrame)
+    if not unitFrame or (unitFrame.IsForbidden and unitFrame:IsForbidden()) then return end
+    local castBar = GetUnitFrameCastBar(unitFrame)
+    if not castBar or (castBar.IsForbidden and castBar:IsForbidden()) then return end
+
+    local data = plates[unitFrame]
+    local hb = unitFrame.healthBar or (data and data.healthBar)
+    local db = ForeverPlatesDB or defaults
+
+    local cbH = db.castBarHeight or 13
+    local yOffset = db.castBarYOffset or -4
+    local matchWidth = (db.castBarMatchHealthWidth ~= false)
+    local outlineThick = db.castBarOutlineThickness or 1
+
+    if not InCombatLockdown() then
+        isCastBarReanchoring[castBar] = true
+        castBar:ClearAllPoints()
+        if matchWidth and hb then
+            local hbW = hb:GetWidth()
+            if not hbW or (issecretvalue and issecretvalue(hbW)) or hbW <= 0 then
+                hbW = db.barWidth or 142
+            end
+            castBar:SetPoint("TOPLEFT", hb, "BOTTOMLEFT", 0, yOffset)
+            castBar:SetSize(hbW, cbH)
+        else
+            local cbW = db.castBarWidth or 115
+            if hb then
+                castBar:SetPoint("TOP", hb, "BOTTOM", 0, yOffset)
+            else
+                castBar:SetPoint("TOP", unitFrame, "BOTTOM", 0, yOffset)
+            end
+            castBar:SetSize(cbW, cbH)
+        end
+        isCastBarReanchoring[castBar] = nil
+    end
+
+    castBar:SetStatusBarTexture(BAR_TEXTURE)
+
+    -- Pixel outline border
+    if data and not data.castBorder then
+        data.castBorder = CreatePixelBorder(castBar, outlineThick, "OVERLAY", 5)
+    end
+    if data and data.castBorder then
+        data.castBorder:SetThickness(outlineThick)
+        data.castBorder:SetShown(castBar:IsShown())
+    end
+
+    -- Backdrop
+    if data and not data.castBackdrop then
+        local castBg = castBar:CreateTexture(nil, "BACKGROUND", nil, -7)
+        castBg:SetTexture(BAR_TEXTURE)
+        castBg:SetVertexColor(0.10, 0.10, 0.10, 0.90)
+        data.castBackdrop = castBg
+    end
+    if data and data.castBackdrop then
+        data.castBackdrop:ClearAllPoints()
+        data.castBackdrop:SetAllPoints(castBar)
+    end
+
+    -- Spark
+    local spark = castBar.Spark or castBar.spark
+    if data and not data.castSpark then
+        local sp = castBar:CreateTexture(nil, "OVERLAY", nil, 7)
+        sp:SetTexture(FLAT_TEXTURE)
+        sp:SetVertexColor(1, 1, 1, 0.9)
+        sp:SetPoint("CENTER", castBar:GetStatusBarTexture(), "RIGHT", 0, 0)
+        data.castSpark = sp
+    end
+    if data and data.castSpark then
+        if db.showCastBarTimer then
+            data.castSpark:SetSize(2, cbH)
+            data.castSpark:Show()
+        else
+            data.castSpark:Hide()
+        end
+    end
+    if spark and spark ~= data.castSpark then
+        spark:SetAlpha(0)
+    end
+
+    -- Icon
+    local icon = castBar.Icon or castBar.icon
+    if icon then
+        if db.showCastBarIcon ~= false then
+            local iconSize = math.max(12, cbH + 2)
+            icon:Show()
+            icon:SetSize(iconSize, iconSize)
+            icon:ClearAllPoints()
+            icon:SetPoint("RIGHT", castBar, "LEFT", -4, 0)
+            if icon.SetTexCoord then
+                icon:SetTexCoord(0.08, 0.92, 0.08, 0.92)
+            end
+            if icon.SetDrawLayer then
+                icon:SetDrawLayer("OVERLAY", 6)
+            end
+
+            if data and not data.castIconFrame then
+                local iconFrame = CreateFrame("Frame", nil, castBar)
+                iconFrame:SetFrameLevel(castBar:GetFrameLevel() + 2)
+                data.castIconFrame = iconFrame
+                data.castIconBorder = CreatePixelBorder(iconFrame, outlineThick, "OVERLAY", 7)
+            end
+            if data and data.castIconFrame then
+                data.castIconFrame:Show()
+                data.castIconFrame:ClearAllPoints()
+                data.castIconFrame:SetAllPoints(icon)
+                if data.castIconBorder then
+                    data.castIconBorder:SetThickness(outlineThick)
+                end
+            end
+        else
+            icon:Hide()
+            if data and data.castIconFrame then
+                data.castIconFrame:Hide()
+            end
+        end
+    end
+
+    -- Typography & Text positioning
+    local curFont = GetCurrentFont()
+    local fontSize = db.castBarFontSize or math.max(9, cbH - 3)
+    local fontOutline = db.castBarFontOutline or "OUTLINE"
+    local textPos = db.castBarTextPosition or "ON_BAR_LEFT"
+
+    if data and not data.castTimeText then
+        local timeText = castBar:CreateFontString(nil, "OVERLAY", nil, 7)
+        timeText:SetShadowOffset(1, -1)
+        timeText:SetShadowColor(0, 0, 0, 0.95)
+        timeText:SetTextColor(1, 1, 1, 1)
+        data.castTimeText = timeText
+    end
+
+    if data and data.castTimeText then
+        if db.showCastBarTimer then
+            data.castTimeText:Show()
+            data.castTimeText:SetFont(curFont, fontSize, fontOutline)
+            data.castTimeText:ClearAllPoints()
+            if textPos == "ON_BAR_RIGHT" then
+                data.castTimeText:SetPoint("LEFT", castBar, "LEFT", 4, 0)
+                data.castTimeText:SetJustifyH("LEFT")
+            else
+                data.castTimeText:SetPoint("RIGHT", castBar, "RIGHT", -4, 0)
+                data.castTimeText:SetJustifyH("RIGHT")
+            end
+        else
+            data.castTimeText:Hide()
+        end
+    end
+
+    local spellText = castBar.Text or castBar.text
+    if spellText then
+        spellText:SetFont(curFont, fontSize, fontOutline)
+        spellText:SetShadowOffset(1, -1)
+        spellText:SetShadowColor(0, 0, 0, 0.95)
+        spellText:SetTextColor(1, 1, 1, 1)
+        spellText:SetDrawLayer("OVERLAY", 7)
+        spellText:ClearAllPoints()
+
+        if textPos == "ON_BAR_LEFT" then
+            spellText:SetPoint("LEFT", castBar, "LEFT", 5, 0)
+            if data and data.castTimeText and db.showCastBarTimer then
+                spellText:SetPoint("RIGHT", data.castTimeText, "LEFT", -4, 0)
+            else
+                spellText:SetPoint("RIGHT", castBar, "RIGHT", -5, 0)
+            end
+            spellText:SetJustifyH("LEFT")
+            spellText:SetJustifyV("MIDDLE")
+        elseif textPos == "ON_BAR_CENTER" then
+            spellText:SetPoint("CENTER", castBar, "CENTER", 0, 0)
+            spellText:SetJustifyH("CENTER")
+            spellText:SetJustifyV("MIDDLE")
+        elseif textPos == "ON_BAR_RIGHT" then
+            spellText:SetPoint("RIGHT", castBar, "RIGHT", -5, 0)
+            if data and data.castTimeText and db.showCastBarTimer then
+                spellText:SetPoint("LEFT", data.castTimeText, "RIGHT", 4, 0)
+            else
+                spellText:SetPoint("LEFT", castBar, "LEFT", 5, 0)
+            end
+            spellText:SetJustifyH("RIGHT")
+            spellText:SetJustifyV("MIDDLE")
+        elseif textPos == "ABOVE_BAR" then
+            spellText:SetPoint("BOTTOMLEFT", castBar, "TOPLEFT", 0, 2)
+            spellText:SetPoint("BOTTOMRIGHT", castBar, "TOPRIGHT", 0, 2)
+            spellText:SetJustifyH("LEFT")
+            spellText:SetJustifyV("BOTTOM")
+        elseif textPos == "BELOW_BAR" then
+            spellText:SetPoint("TOPLEFT", castBar, "BOTTOMLEFT", 0, -2)
+            spellText:SetPoint("TOPRIGHT", castBar, "BOTTOMRIGHT", 0, -2)
+            spellText:SetJustifyH("LEFT")
+            spellText:SetJustifyV("TOP")
+        end
+    end
+end
+FP.ApplyCastBarLayout = ApplyCastBarLayout
+
+local function HookCastBar(unitFrame, castBar)
+    if not castBar or hookedCastBars[castBar] then return end
+    hookedCastBars[castBar] = true
+
+    SuppressBlizzardCastBarArt(castBar)
+
+    hooksecurefunc(castBar, "SetPoint", function(self)
+        if InCombatLockdown() then return end
+        if isCastBarReanchoring[self] then return end
+        ApplyCastBarLayout(unitFrame)
+    end)
+
+    hooksecurefunc(castBar, "SetSize", function(self)
+        if InCombatLockdown() then return end
+        if isCastBarReanchoring[self] then return end
+        ApplyCastBarLayout(unitFrame)
+    end)
+
+    if castBar.SetWidth then
+        hooksecurefunc(castBar, "SetWidth", function(self)
+            if InCombatLockdown() then return end
+            if isCastBarReanchoring[self] then return end
+            ApplyCastBarLayout(unitFrame)
+        end)
+    end
+
+    if castBar.SetHeight then
+        hooksecurefunc(castBar, "SetHeight", function(self)
+            if InCombatLockdown() then return end
+            if isCastBarReanchoring[self] then return end
+            ApplyCastBarLayout(unitFrame)
+        end)
+    end
+
+    hooksecurefunc(castBar, "SetStatusBarColor", function(self)
+        if isCastBarRecoloring[self] then return end
+        UpdateCastBarColor(unitFrame)
+    end)
+
+    hooksecurefunc(castBar, "SetStatusBarTexture", function(self, tex)
+        if isCastBarSettingTexture[self] then return end
+        if tex ~= BAR_TEXTURE then
+            isCastBarSettingTexture[self] = true
+            self:SetStatusBarTexture(BAR_TEXTURE)
+            isCastBarSettingTexture[self] = nil
+        end
+    end)
+
+    castBar:HookScript("OnShow", function(self)
+        SuppressBlizzardCastBarArt(self)
+        if not InCombatLockdown() then
+            ApplyCastBarLayout(unitFrame)
+        end
+        UpdateCastBarColor(unitFrame)
+    end)
+
+    local spellText = castBar.Text or castBar.text
+    if spellText then
+        hooksecurefunc(spellText, "SetPoint", function(self)
+            if InCombatLockdown() then return end
+            if isCastBarReanchoring[castBar] then return end
+            ApplyCastBarLayout(unitFrame)
+        end)
+    end
+
+    local icon = castBar.Icon or castBar.icon
+    if icon then
+        hooksecurefunc(icon, "SetPoint", function(self)
+            if InCombatLockdown() then return end
+            if isCastBarReanchoring[castBar] then return end
+            isCastBarReanchoring[castBar] = true
+            local db = ForeverPlatesDB or defaults
+            if db.showCastBarIcon ~= false then
+                self:ClearAllPoints()
+                self:SetPoint("RIGHT", castBar, "LEFT", -4, 0)
+                local curD = plates[unitFrame]
+                if curD and curD.castIconFrame then
+                    curD.castIconFrame:ClearAllPoints()
+                    curD.castIconFrame:SetAllPoints(self)
+                end
+            end
+            isCastBarReanchoring[castBar] = nil
+        end)
+    end
+
+    castBar:HookScript("OnUpdate", function(self)
+        pcall(function()
+            if not self:IsShown() then return end
+            local d = plates[unitFrame]
+            local db = ForeverPlatesDB or defaults
+            if db.showCastBarTimer then
+                local minVal, maxVal = self:GetMinMaxValues()
+                local currVal = self:GetValue()
+
+                local isSecret = issecretvalue and (issecretvalue(currVal) or issecretvalue(maxVal))
+                if not isSecret and maxVal and maxVal > 0 and currVal then
+                    if d and d.castTimeText then
+                        local remaining = math.max(0, maxVal - currVal)
+                        d.castTimeText:SetText(string.format("%.1fs", remaining))
+                    end
+                end
+            end
+        end)
+    end)
+end
+FP.HookCastBar = HookCastBar
+
+-- Global hooks for Blizzard engine cast bar updates
+if CastingBarFrame_SetStartCastColor then
+    hooksecurefunc("CastingBarFrame_SetStartCastColor", function(bar)
+        if not bar or (bar.IsForbidden and bar:IsForbidden()) then return end
+        local parent = bar.GetParent and bar:GetParent()
+        local uf = (parent and (parent.UnitFrame or parent)) or bar
+        if uf and plates[uf] then
+            ApplyCastBarLayout(uf)
+            UpdateCastBarColor(uf)
+        end
+    end)
+end
+
+if CastingBarFrameMixin and CastingBarFrameMixin.SetStartCastColor then
+    hooksecurefunc(CastingBarFrameMixin, "SetStartCastColor", function(bar)
+        if not bar or (bar.IsForbidden and bar:IsForbidden()) then return end
+        local parent = bar.GetParent and bar:GetParent()
+        local uf = (parent and (parent.UnitFrame or parent)) or bar
+        if uf and plates[uf] then
+            ApplyCastBarLayout(uf)
+            UpdateCastBarColor(uf)
+        end
+    end)
+end
+
+
+-------------------------------------------------------------------------------
 -- Helper: Apply Bar Dimensions (Width & Height)
 -------------------------------------------------------------------------------
 local function ApplyBarDimensions(unitFrame)
@@ -1245,13 +1804,20 @@ local function ApplyBarDimensions(unitFrame)
         HideFriendlyPlate(unitFrame, unit)
         return
     end
+
+    if InCombatLockdown() then
+        pendingDimensions[unitFrame] = true
+        if ApplyMatchingOutline then
+            ApplyMatchingOutline(unitFrame)
+        end
+        return
+    end
+
     local isFriendlyPlayer = unit and UnitIsPlayer and UnitIsPlayer(unit) and IsFriendlyUnit(unit)
     local w = isFriendlyPlayer and (ForeverPlatesDB.friendlyBarWidth or 120) or (ForeverPlatesDB.barWidth or 142)
     local h = isFriendlyPlayer and (ForeverPlatesDB.friendlyBarHeight or 12) or (ForeverPlatesDB.barHeight or 15)
 
-    if not InCombatLockdown() then
-        pcall(unitFrame.SetSize, unitFrame, w, h)
-    end
+    pcall(unitFrame.SetSize, unitFrame, w, h)
 
     if unitFrame.HealthBarsContainer then
         unitFrame.HealthBarsContainer:ClearAllPoints()
@@ -1305,68 +1871,10 @@ local function ApplyBarDimensions(unitFrame)
         end
     end
 
-    local cb = unitFrame.castBar
+    local cb = GetUnitFrameCastBar(unitFrame)
     if cb then
-        cb:ClearAllPoints()
-        local cbW = ForeverPlatesDB.castBarWidth or 115
-        local cbH = ForeverPlatesDB.castBarHeight or 13
-
-        -- Center the cast bar relative to the whole composite nameplate (health bar + level box)
-        local xOffset = 0
-        if d and d.levelBox and (not d.levelBox.IsShown or d.levelBox:IsShown()) then
-            local boxW = (d.levelBox.GetWidth and d.levelBox:GetWidth()) or 22
-            if boxW == 0 then boxW = math.max(22, math.floor(h * 1.45 + 0.5)) end
-            xOffset = math.floor((boxW + 4) / 2 + 0.5)
-        end
-
-        if hb then
-            cb:SetPoint("TOP", hb, "BOTTOM", xOffset, -5)
-        else
-            cb:SetPoint("TOP", unitFrame, "BOTTOM", xOffset, -5)
-        end
-        cb:SetSize(cbW, cbH)
-
-        local data = plates[unitFrame]
-        if data and data.castBackdrop then
-            data.castBackdrop:SetAllPoints(cb)
-        end
-        if data and data.castSpark then
-            data.castSpark:SetSize(2, cbH)
-        end
-        if data and data.castBorder then
-            data.castBorder:SetThickness(1)
-        end
-        if cb.Icon then
-            local iconSize = math.max(12, cbH + 4)
-            cb.Icon:SetSize(iconSize, iconSize)
-            cb.Icon:ClearAllPoints()
-            cb.Icon:SetPoint("RIGHT", cb, "LEFT", -4, 0)
-            if data and data.castIconFrame then
-                data.castIconFrame:ClearAllPoints()
-                data.castIconFrame:SetAllPoints(cb.Icon)
-            end
-        end
-        if cb.Text then
-            local curFont = GetCurrentFont()
-            local fontSize = math.max(9, cbH - 3)
-            cb.Text:SetFont(curFont, fontSize, "OUTLINE")
-            cb.Text:ClearAllPoints()
-            cb.Text:SetPoint("LEFT", cb, "LEFT", 5, 0)
-            if data and data.castTimeText then
-                cb.Text:SetPoint("RIGHT", data.castTimeText, "LEFT", -4, 0)
-            else
-                cb.Text:SetPoint("RIGHT", cb, "RIGHT", -5, 0)
-            end
-            cb.Text:SetJustifyH("LEFT")
-        end
-        if data and data.castTimeText then
-            local curFont = GetCurrentFont()
-            local fontSize = math.max(9, cbH - 3)
-            data.castTimeText:SetFont(curFont, fontSize, "OUTLINE")
-            data.castTimeText:ClearAllPoints()
-            data.castTimeText:SetPoint("RIGHT", cb, "RIGHT", -4, 0)
-            data.castTimeText:SetJustifyH("RIGHT")
-        end
+        HookCastBar(unitFrame, cb)
+        ApplyCastBarLayout(unitFrame)
     end
 
     if ApplyMatchingOutline then
@@ -1385,11 +1893,12 @@ local AURA_Y_OFFSET = 2
 
 local function ShiftFrameAnchorNorth(f, unitFrame)
     if not f or not f.GetPoint or not f.SetPoint then return end
-    if f.FPReanchoring then return end
+    if InCombatLockdown() then return end
+    if isAuraReanchoring[f] then return end
 
     -- Avoid double-shifting if parent container was already shifted
     local p = f:GetParent()
-    if p and p.FPAdjustedAuraOffset then
+    if p and auraAdjustedOffsets[p] then
         return
     end
 
@@ -1398,29 +1907,30 @@ local function ShiftFrameAnchorNorth(f, unitFrame)
     if nPoints and nPoints > 0 then
         local pt, relTo, relPt, x, y = f:GetPoint(1)
         local isRoot = (relTo == nil or relTo == unitFrame or relTo == unitFrame.healthBar or relTo == unitFrame.name or (d and relTo == d.backdrop))
-        if isRoot and not f.FPAdjustedAuraOffset then
-            f.FPAdjustedAuraOffset = true
-            f.FPReanchoring = true
+        if isRoot and not auraAdjustedOffsets[f] then
+            auraAdjustedOffsets[f] = true
+            isAuraReanchoring[f] = true
             f:ClearAllPoints()
             f:SetPoint(pt, relTo or unitFrame, relPt, x or 0, (y or 0) + AURA_Y_OFFSET)
-            f.FPReanchoring = nil
+            isAuraReanchoring[f] = nil
         end
     end
 
-    if not f.FPHookedAuraSetPoint then
-        f.FPHookedAuraSetPoint = true
+    if not hookedAuras[f] then
+        hookedAuras[f] = true
         hooksecurefunc(f, "SetPoint", function(self, pt, relTo, relPt, x, y)
-            if self.FPReanchoring then return end
+            if InCombatLockdown() then return end
+            if isAuraReanchoring[self] then return end
             local par = self:GetParent()
-            if par and par.FPAdjustedAuraOffset then return end
+            if par and auraAdjustedOffsets[par] then return end
 
             local curD = plates[unitFrame]
             local isRoot = (relTo == nil or relTo == unitFrame or relTo == unitFrame.healthBar or relTo == unitFrame.name or (curD and relTo == curD.backdrop))
             if isRoot then
-                self.FPReanchoring = true
+                isAuraReanchoring[self] = true
                 self:ClearAllPoints()
                 self:SetPoint(pt, relTo or unitFrame, relPt, x or 0, (y or 0) + AURA_Y_OFFSET)
-                self.FPReanchoring = nil
+                isAuraReanchoring[self] = nil
             end
         end)
     end
@@ -1481,8 +1991,8 @@ local function UpdateNameTypography(unitFrame, passedUnit)
     if d and d.titleText then d.titleText:Hide() end
 
     -- Keep Blizzard's default name invisible so combat cannot overwrite text color
-    if unitFrame.name and unitFrame.name:GetAlpha() > 0 then
-        unitFrame.name:SetAlpha(0)
+    if unitFrame.name then
+        pcall(unitFrame.name.SetAlpha, unitFrame.name, 0)
     end
 
     local font = GetCurrentFont()
@@ -1496,14 +2006,14 @@ local function UpdateNameTypography(unitFrame, passedUnit)
     if levelText then
         local h = ForeverPlatesDB.barHeight or 15
         local fontSize = math.max(10, h - 2)
-        levelText.FPSettingFont = true
+        isLevelSettingFont[levelText] = true
         levelText:SetFont(font, fontSize, "THICKOUTLINE")
         levelText:SetShadowOffset(1, -1)
         levelText:SetShadowColor(0, 0, 0, 0.95)
         levelText:SetJustifyH("CENTER")
         levelText:SetJustifyV("MIDDLE")
         levelText:SetDrawLayer("OVERLAY", 7)
-        levelText.FPSettingFont = nil
+        isLevelSettingFont[levelText] = nil
         if d and d.levelBox then
             local boxW = (d.levelBox.GetWidth and d.levelBox:GetWidth()) or 22
             levelText:SetSize(boxW, h)
@@ -1691,7 +2201,7 @@ local function GetDesiredHealthBarColor(unitFrame, passedUnit)
     end
 
     -- 4. Target / All Enemy Custom Health Bar Color Override (Untapped units only)
-    local isTarget = (unit and UnitIsUnit(unit, "target")) or (UnitExists("target") and unitFrame:GetParent() == C_NamePlate.GetNamePlateForUnit("target"))
+    local isTarget = (unit and UnitIsUnit(unit, "target")) or (UnitExists("target") and unitFrame:GetParent() == GetSafeNamePlateForUnit("target"))
     local isEnemy = unit and not UnitIsFriend("player", unit)
     local shouldColor = isTarget or (ForeverPlatesDB.colorAllEnemyBars and isEnemy)
 
@@ -1775,12 +2285,11 @@ end
 local function HookHealthBar(unitFrame)
     if not unitFrame then return end
     local healthBar = unitFrame.healthBar
-    if not healthBar or healthBar.ForeverPlatesHooked then return end
-    healthBar.ForeverPlatesHooked = true
+    if not healthBar or hookedHealthBars[healthBar] then return end
+    hookedHealthBars[healthBar] = true
 
     -- Hook 0: Real-time OnValueChanged and OnMinMaxChanged for instant health text updates
-    if not healthBar.FPHookedValueChanged and healthBar.HookScript then
-        healthBar.FPHookedValueChanged = true
+    if healthBar.HookScript then
         healthBar:HookScript("OnValueChanged", function(self)
             UpdateHealthText(unitFrame)
         end)
@@ -1791,15 +2300,25 @@ local function HookHealthBar(unitFrame)
 
     -- Hook 1: StatusBar SetStatusBarColor
     hooksecurefunc(healthBar, "SetStatusBarColor", function(self, r, g, b)
-        if self.ForeverPlatesApplyingColor then return end
+        if isApplyingColor[self] then return end
         if not (ForeverPlatesDB and ForeverPlatesDB.lockHealthBarColor) then return end
 
         local desR, desG, desB = GetDesiredHealthBarColor(unitFrame)
         if desR and desG and desB then
             if math.abs((r or 0) - desR) > 0.01 or math.abs((g or 0) - desG) > 0.01 or math.abs((b or 0) - desB) > 0.01 then
-                self.ForeverPlatesApplyingColor = true
-                self:SetStatusBarColor(desR, desG, desB)
-                self.ForeverPlatesApplyingColor = nil
+                if InCombatLockdown() then
+                    C_Timer.After(0, function()
+                        if self and not (self.IsForbidden and self:IsForbidden()) then
+                            isApplyingColor[self] = true
+                            self:SetStatusBarColor(desR, desG, desB)
+                            isApplyingColor[self] = nil
+                        end
+                    end)
+                else
+                    isApplyingColor[self] = true
+                    self:SetStatusBarColor(desR, desG, desB)
+                    isApplyingColor[self] = nil
+                end
                 LogHookCall(unitFrame, "SetStatusBarColor", r, g, b, desR, desG, desB)
             end
         end
@@ -1807,18 +2326,28 @@ local function HookHealthBar(unitFrame)
 
     -- Hook 2: Fallback for direct texture SetVertexColor calls (combat damage flash)
     local barTexture = healthBar:GetStatusBarTexture()
-    if barTexture and not barTexture.ForeverPlatesHooked then
-        barTexture.ForeverPlatesHooked = true
+    if barTexture and not hookedBarTextures[barTexture] then
+        hookedBarTextures[barTexture] = true
         hooksecurefunc(barTexture, "SetVertexColor", function(self, r, g, b)
-            if healthBar.ForeverPlatesApplyingColor then return end
+            if isApplyingColor[healthBar] then return end
             if not (ForeverPlatesDB and ForeverPlatesDB.lockHealthBarColor) then return end
 
             local desR, desG, desB = GetDesiredHealthBarColor(unitFrame)
             if desR and desG and desB then
                 if math.abs((r or 0) - desR) > 0.01 or math.abs((g or 0) - desG) > 0.01 or math.abs((b or 0) - desB) > 0.01 then
-                    healthBar.ForeverPlatesApplyingColor = true
-                    self:SetVertexColor(desR, desG, desB)
-                    healthBar.ForeverPlatesApplyingColor = nil
+                    if InCombatLockdown() then
+                        C_Timer.After(0, function()
+                            if self and not (self.IsForbidden and self:IsForbidden()) then
+                                isApplyingColor[healthBar] = true
+                                self:SetVertexColor(desR, desG, desB)
+                                isApplyingColor[healthBar] = nil
+                            end
+                        end)
+                    else
+                        isApplyingColor[healthBar] = true
+                        self:SetVertexColor(desR, desG, desB)
+                        isApplyingColor[healthBar] = nil
+                    end
                     LogHookCall(unitFrame, "SetVertexColor", r, g, b, desR, desG, desB)
                 end
             end
@@ -1842,8 +2371,8 @@ FP.GetSelectionHighlight = GetSelectionHighlight
 local function SuppressSelectionHighlight(unitFrame)
     if not unitFrame then return end
     local sel = GetSelectionHighlight(unitFrame)
-    if not sel or sel.FPSuppressed then return end
-    sel.FPSuppressed = true
+    if not sel or hookedSuppressedTextures[sel] then return end
+    hookedSuppressedTextures[sel] = true
 
     sel:Hide()
     sel:SetAlpha(0)
@@ -2009,19 +2538,19 @@ local function SuppressTexture(tex)
     tex:Hide()
     tex:SetAlpha(0)
     pcall(tex.SetTexture, tex, nil)
-    if not tex.FPHookedHide then
-        tex.FPHookedHide = true
+    if not hookedSuppressedTextures[tex] then
+        hookedSuppressedTextures[tex] = true
         hooksecurefunc(tex, "Show", function(self)
-            if not self.FPHiding then
-                self.FPHiding = true
+            if not isHidingTexture[self] then
+                isHidingTexture[self] = true
                 self:Hide()
                 self:SetAlpha(0)
                 pcall(self.SetTexture, self, nil)
-                self.FPHiding = nil
+                isHidingTexture[self] = nil
             end
         end)
         hooksecurefunc(tex, "SetAlpha", function(self, a)
-            if not self.FPHiding then
+            if not isHidingTexture[self] then
                 local shouldHide = false
                 if a and not (issecretvalue and issecretvalue(a)) then
                     local ok, res = pcall(function() return a > 0 end)
@@ -2030,11 +2559,11 @@ local function SuppressTexture(tex)
                     shouldHide = true
                 end
                 if shouldHide then
-                    self.FPHiding = true
+                    isHidingTexture[self] = true
                     self:SetAlpha(0)
                     self:Hide()
                     pcall(self.SetTexture, self, nil)
-                    self.FPHiding = nil
+                    isHidingTexture[self] = nil
                 end
             end
         end)
@@ -2054,22 +2583,22 @@ local function StripFrameVisuals(frame)
     if frame.SetBackdropColor then
         pcall(frame.SetBackdropColor, frame, 0, 0, 0, 0)
     end
-    if not frame.FPHookedBackdrop then
-        frame.FPHookedBackdrop = true
+    if not hookedBackdrops[frame] then
+        hookedBackdrops[frame] = true
         if frame.SetBackdrop then
             hooksecurefunc(frame, "SetBackdrop", function(self)
-                if not self.FPClearingBackdrop then
-                    self.FPClearingBackdrop = true
+                if not isClearingBackdrop[self] then
+                    isClearingBackdrop[self] = true
                     if self.ClearBackdrop then self:ClearBackdrop() else self:SetBackdrop(nil) end
                     if self.SetBackdropBorderColor then self:SetBackdropBorderColor(0, 0, 0, 0) end
                     if self.SetBackdropColor then self:SetBackdropColor(0, 0, 0, 0) end
-                    self.FPClearingBackdrop = nil
+                    isClearingBackdrop[self] = nil
                 end
             end)
         end
         if frame.SetBackdropBorderColor then
             hooksecurefunc(frame, "SetBackdropBorderColor", function(self, r, g, b, a)
-                if not self.FPClearingBackdrop then
+                if not isClearingBackdrop[self] then
                     local shouldClear = false
                     if a and not (issecretvalue and issecretvalue(a)) then
                         local ok, res = pcall(function() return (a or 1) > 0 end)
@@ -2078,9 +2607,9 @@ local function StripFrameVisuals(frame)
                         shouldClear = true
                     end
                     if shouldClear then
-                        self.FPClearingBackdrop = true
+                        isClearingBackdrop[self] = true
                         self:SetBackdropBorderColor(0, 0, 0, 0)
-                        self.FPClearingBackdrop = nil
+                        isClearingBackdrop[self] = nil
                     end
                 end
             end)
@@ -2136,7 +2665,8 @@ local function PurgeFrameTexturesAndBackdrops(frame, d, depth, levelFrame)
 
     if frame.GetChildren then
         for _, child in ipairs({frame:GetChildren()}) do
-            local isIgnored = (d and (child == d.levelBox or child == d.castBar))
+            local isIgnored = (d and (child == d.levelBox or child == d.castBar or child == d.blizzCastBar))
+                or (child.GetStatusBarTexture and child ~= frame.healthBar)
                 or child == frame.WidgetContainer
                 or child == frame.BuffFrame
                 or child == frame.DebuffFrame
@@ -2163,6 +2693,38 @@ local function SuppressBlizzardBorders(unitFrame)
     if levelFrame and levelFrame ~= unitFrame then
         PurgeFrameTexturesAndBackdrops(levelFrame, d, 0, levelFrame)
     end
+
+    -- Suppress Blizzard's HealthBarsContainer border (NamePlateFullBorderTemplate)
+    local hbc = unitFrame.HealthBarsContainer
+    if hbc and hbc.border then
+        hbc.border:Hide()
+        hbc.border:SetAlpha(0)
+        if hbc.border.SetVertexColor then
+            pcall(hbc.border.SetVertexColor, hbc.border, 0, 0, 0, 0)
+        end
+        if hbc.border.Textures then
+            for _, tex in ipairs(hbc.border.Textures) do
+                SuppressTexture(tex)
+            end
+        end
+    end
+
+    -- 3. Suppress Blizzard's selectedBorder and deselectedOverlay on all health bars
+    local hb = unitFrame.healthBar or (hbc and hbc.healthBar)
+    if hb then
+        if hb.selectedBorder then
+            SuppressTexture(hb.selectedBorder)
+        end
+        if hb.deselectedOverlay then
+            SuppressTexture(hb.deselectedOverlay)
+        end
+        if hb.border then
+            SuppressTexture(hb.border)
+        end
+        if hb.Border then
+            SuppressTexture(hb.Border)
+        end
+    end
 end
 FP.SuppressBlizzardBorders = SuppressBlizzardBorders
 
@@ -2181,8 +2743,8 @@ ApplyMatchingOutline = function(unitFrame)
     SuppressBlizzardBorders(unitFrame)
 
     local thickness = ForeverPlatesDB and ForeverPlatesDB.outlineThickness or 3
-    local olKey = ForeverPlatesDB and ForeverPlatesDB.outlineColor or "WHITE"
-    local c = OUTLINE_COLORS[olKey] or OUTLINE_COLORS.WHITE
+    local olKey = ForeverPlatesDB and ForeverPlatesDB.outlineColor or "DARK"
+    local c = OUTLINE_COLORS[olKey] or OUTLINE_COLORS.DARK
     local showBorder = (olKey ~= "NONE")
     local alwaysShow = not ForeverPlatesDB or ForeverPlatesDB.alwaysShowSelectionHighlight ~= false
 
@@ -2233,8 +2795,8 @@ local function HookSelectedBorder(unitFrame)
     if not unitFrame then return end
 
     local healthBar = unitFrame.healthBar
-    if healthBar and healthBar.UpdateSelectionBorder and not healthBar.FPHookedSelectionBorder then
-        healthBar.FPHookedSelectionBorder = true
+    if healthBar and healthBar.UpdateSelectionBorder and not hookedSelectionBorders[healthBar] then
+        hookedSelectionBorders[healthBar] = true
         hooksecurefunc(healthBar, "UpdateSelectionBorder", function(self)
             SuppressBlizzardBorders(unitFrame)
             if ApplyMatchingOutline then
@@ -2244,16 +2806,16 @@ local function HookSelectedBorder(unitFrame)
     end
 
     local sb = GetSelectedBorder(unitFrame)
-    if sb and not sb.FPHookedHide then
-        sb.FPHookedHide = true
+    if sb and not hookedSuppressedTextures[sb] then
+        hookedSuppressedTextures[sb] = true
         sb:Hide()
         sb:SetAlpha(0)
         hooksecurefunc(sb, "Show", function(self)
-            if not self.FPHiding then
-                self.FPHiding = true
+            if not isHidingTexture[self] then
+                isHidingTexture[self] = true
                 self:Hide()
                 self:SetAlpha(0)
-                self.FPHiding = nil
+                isHidingTexture[self] = nil
             end
         end)
     end
@@ -2341,52 +2903,49 @@ local function StyleNamePlate(unitFrame)
 
             local h = ForeverPlatesDB.barHeight or 15
             local fontSize = math.max(10, h - 2)
-            levelText.FPSettingFont = true
+            isLevelSettingFont[levelText] = true
             levelText:SetFont(font, fontSize, "THICKOUTLINE")
             levelText:SetShadowOffset(1, -1)
             levelText:SetShadowColor(0, 0, 0, 0.95)
-            levelText.FPSettingFont = nil
+            isLevelSettingFont[levelText] = nil
 
-            if not levelText.FPHookedPoint then
-                levelText.FPHookedPoint = true
+            if not hookedLevelTexts[levelText] then
+                hookedLevelTexts[levelText] = true
                 hooksecurefunc(levelText, "SetPoint", function(self, point, relTo, relPoint, x, y)
-                    if self.FPReanchoring then return end
+                    if InCombatLockdown() then return end
+                    if isLevelReanchoring[self] then return end
                     local curData = plates[unitFrame]
                     if curData and curData.levelBox and (relTo ~= curData.levelBox or x ~= 0 or y ~= 0) then
-                        self.FPReanchoring = true
+                        isLevelReanchoring[self] = true
                         self:ClearAllPoints()
                         self:SetPoint("CENTER", curData.levelBox, "CENTER", 0, 0)
                         self:SetJustifyH("CENTER")
                         self:SetJustifyV("MIDDLE")
-                        self.FPReanchoring = nil
+                        isLevelReanchoring[self] = nil
                     end
                 end)
-            end
-
-            if not levelText.FPHookedFont then
-                levelText.FPHookedFont = true
                 if levelText.SetFontObject then
                     hooksecurefunc(levelText, "SetFontObject", function(self)
-                        if self.FPSettingFont then return end
-                        self.FPSettingFont = true
+                        if isLevelSettingFont[self] then return end
+                        isLevelSettingFont[self] = true
                         local curFont = GetCurrentFont()
                         local curH = ForeverPlatesDB and ForeverPlatesDB.barHeight or 15
                         self:SetFont(curFont, math.max(10, curH - 2), "THICKOUTLINE")
                         self:SetShadowOffset(1, -1)
                         self:SetShadowColor(0, 0, 0, 0.95)
-                        self.FPSettingFont = nil
+                        isLevelSettingFont[self] = nil
                     end)
                 end
                 if levelText.SetText then
                     hooksecurefunc(levelText, "SetText", function(self)
-                        if self.FPSettingFont then return end
-                        self.FPSettingFont = true
+                        if isLevelSettingFont[self] then return end
+                        isLevelSettingFont[self] = true
                         local curFont = GetCurrentFont()
                         local curH = ForeverPlatesDB and ForeverPlatesDB.barHeight or 15
                         self:SetFont(curFont, math.max(10, curH - 2), "THICKOUTLINE")
                         self:SetShadowOffset(1, -1)
                         self:SetShadowColor(0, 0, 0, 0.95)
-                        self.FPSettingFont = nil
+                        isLevelSettingFont[self] = nil
                     end)
                 end
             end
@@ -2396,16 +2955,17 @@ local function StyleNamePlate(unitFrame)
         if hlTex and hlTex.SetDrawLayer then
             hlTex:SetDrawLayer("OVERLAY", 7)
         end
-        if not levelFrame.FPHookedPoint and levelFrame.SetPoint then
-            levelFrame.FPHookedPoint = true
+        if not hookedLevelFrames[levelFrame] and levelFrame.SetPoint then
+            hookedLevelFrames[levelFrame] = true
             hooksecurefunc(levelFrame, "SetPoint", function(self, point, relTo)
-                if self.FPReanchoring then return end
+                if InCombatLockdown() then return end
+                if isLevelReanchoring[self] then return end
                 local curData = plates[unitFrame]
                 if curData and curData.levelBox and relTo ~= curData.levelBox then
-                    self.FPReanchoring = true
+                    isLevelReanchoring[self] = true
                     self:ClearAllPoints()
                     self:SetPoint("CENTER", curData.levelBox, "CENTER", 0, 0)
-                    self.FPReanchoring = nil
+                    isLevelReanchoring[self] = nil
                 end
             end)
         end
@@ -2517,163 +3077,16 @@ local function StyleNamePlate(unitFrame)
     hpPercent:SetTextColor(1, 1, 1, 1)
     data.hpPercent = hpPercent
 
-    -- 10. Cast Bar Styling with Spark & Countdown (Sleek OLED Inside-Bar Layout)
-    local castBar = unitFrame.castBar
+    -- 10. Cast Bar Styling & Zero-Taint Blizzard Skinning
+    local castBar = GetUnitFrameCastBar(unitFrame)
     if castBar then
-        local cbW = ForeverPlatesDB.castBarWidth or 115
-        local cbH = ForeverPlatesDB.castBarHeight or 13
-
-        castBar:SetSize(cbW, cbH)
-        castBar:SetStatusBarTexture(BAR_TEXTURE)
-
-        data.castBorder = CreatePixelBorder(castBar, 1, "OVERLAY", 5)
-
-        local castBg = castBar:CreateTexture(nil, "BACKGROUND", nil, -7)
-        castBg:SetAllPoints(castBar)
-        castBg:SetTexture(BAR_TEXTURE)
-        castBg:SetVertexColor(0.10, 0.10, 0.10, 0.90)
-        data.castBackdrop = castBg
-
-        local spark = castBar:CreateTexture(nil, "OVERLAY", nil, 7)
-        spark:SetTexture(FLAT_TEXTURE)
-        spark:SetVertexColor(1, 1, 1, 0.9)
-        spark:SetSize(2, cbH)
-        spark:SetPoint("CENTER", castBar:GetStatusBarTexture(), "RIGHT", 0, 0)
-        data.castSpark = spark
-
-        local fontSize = math.max(9, cbH - 3)
-
-        local timeText = castBar:CreateFontString(nil, "OVERLAY", nil, 7)
-        timeText:SetFont(font, fontSize, "OUTLINE")
-        timeText:SetShadowOffset(1, -1)
-        timeText:SetShadowColor(0, 0, 0, 0.95)
-        timeText:SetTextColor(1, 1, 1, 1)
-        timeText:ClearAllPoints()
-        timeText:SetPoint("RIGHT", castBar, "RIGHT", -4, 0)
-        timeText:SetJustifyH("RIGHT")
-        data.castTimeText = timeText
-
-        if castBar.Text then
-            castBar.Text:SetFont(font, fontSize, "OUTLINE")
-            castBar.Text:SetShadowOffset(1, -1)
-            castBar.Text:SetShadowColor(0, 0, 0, 0.95)
-            castBar.Text:SetTextColor(1, 1, 1, 1)
-            castBar.Text:SetDrawLayer("OVERLAY", 7)
-            castBar.Text:ClearAllPoints()
-            castBar.Text:SetPoint("LEFT", castBar, "LEFT", 5, 0)
-            castBar.Text:SetPoint("RIGHT", timeText, "LEFT", -4, 0)
-            castBar.Text:SetJustifyH("LEFT")
-
-            if not castBar.Text.FPHookedPoint then
-                castBar.Text.FPHookedPoint = true
-                hooksecurefunc(castBar.Text, "SetPoint", function(self)
-                    if self.FPReanchoring then return end
-                    self.FPReanchoring = true
-                    self:ClearAllPoints()
-                    self:SetPoint("LEFT", castBar, "LEFT", 5, 0)
-                    local curD = plates[unitFrame]
-                    if curD and curD.castTimeText then
-                        self:SetPoint("RIGHT", curD.castTimeText, "LEFT", -4, 0)
-                    else
-                        self:SetPoint("RIGHT", castBar, "RIGHT", -5, 0)
-                    end
-                    self:SetJustifyH("LEFT")
-                    self.FPReanchoring = nil
-                end)
-            end
-        end
-
-        if castBar.Icon then
-            local iconSize = math.max(12, cbH + 4)
-            castBar.Icon:SetSize(iconSize, iconSize)
-            castBar.Icon:ClearAllPoints()
-            castBar.Icon:SetPoint("RIGHT", castBar, "LEFT", -4, 0)
-            if castBar.Icon.SetTexCoord then
-                castBar.Icon:SetTexCoord(0.08, 0.92, 0.08, 0.92)
-            end
-            if castBar.Icon.SetDrawLayer then
-                castBar.Icon:SetDrawLayer("OVERLAY", 6)
-            end
-
-            if not data.castIconFrame then
-                local iconFrame = CreateFrame("Frame", nil, castBar)
-                iconFrame:SetFrameLevel(castBar:GetFrameLevel() + 2)
-                data.castIconFrame = iconFrame
-                data.castIconBorder = CreatePixelBorder(iconFrame, 1, "OVERLAY", 7)
-                data.castIconBorder:SetColor(0.20, 0.22, 0.26, 1.0)
-            end
-            data.castIconFrame:ClearAllPoints()
-            data.castIconFrame:SetAllPoints(castBar.Icon)
-
-            if not castBar.Icon.FPHookedPoint then
-                castBar.Icon.FPHookedPoint = true
-                hooksecurefunc(castBar.Icon, "SetPoint", function(self)
-                    if self.FPReanchoring then return end
-                    self.FPReanchoring = true
-                    self:ClearAllPoints()
-                    self:SetPoint("RIGHT", castBar, "LEFT", -4, 0)
-                    local curD = plates[unitFrame]
-                    if curD and curD.castIconFrame then
-                        curD.castIconFrame:ClearAllPoints()
-                        curD.castIconFrame:SetAllPoints(self)
-                    end
-                    self.FPReanchoring = nil
-                end)
-            end
-        end
-
-        castBar:HookScript("OnUpdate", function(self)
-            pcall(function()
-                if not self:IsShown() then return end
-                local minVal, maxVal = self:GetMinMaxValues()
-                local currVal = self:GetValue()
-
-                if not (issecretvalue and (issecretvalue(currVal) or issecretvalue(maxVal))) and maxVal and maxVal > 0 then
-                    local d = plates[unitFrame]
-                    if d and d.castTimeText and ForeverPlatesDB.showCastBarTimer then
-                        local remaining = math.max(0, maxVal - currVal)
-                        d.castTimeText:SetText(string.format("%.1fs", remaining))
-                    end
-
-                    -- Check interruptible state from C-API or frame flag
-                    local notInterruptible = self.notInterruptible
-                    local u = unitFrame and (unitFrame.unit or (d and d.unit))
-                    if u and UnitExists(u) then
-                        local _, _, _, _, _, _, _, notIntC = UnitCastingInfo(u)
-                        if notIntC ~= nil then
-                            notInterruptible = notIntC
-                        else
-                            local _, _, _, _, _, _, notIntCh = UnitChannelInfo(u)
-                            if notIntCh ~= nil then
-                                notInterruptible = notIntCh
-                            end
-                        end
-                    end
-
-                    local cbColorKey = tostring(ForeverPlatesDB.castBarColor or "GOLD"):upper()
-                    local c = CAST_BAR_COLORS[cbColorKey] or CAST_BAR_COLORS.GOLD
-
-                    if notInterruptible then
-                        self:SetStatusBarColor(0.65, 0.65, 0.70) -- Steel Silver (Shielded / Unkickable)
-                        if d and d.castBorder then
-                            d.castBorder:SetColor(0.85, 0.85, 0.90, 1.0)
-                        end
-                        if d and d.castIconBorder then
-                            d.castIconBorder:SetColor(0.85, 0.85, 0.90, 1.0)
-                        end
-                    else
-                        self:SetStatusBarColor(c.r, c.g, c.b) -- Kickable Cast Bar Color (Customizable)
-                        if d and d.castBorder then
-                            d.castBorder:SetColor(0.20, 0.22, 0.26, 1.0)
-                        end
-                        if d and d.castIconBorder then
-                            d.castIconBorder:SetColor(0.20, 0.22, 0.26, 1.0)
-                        end
-                    end
-                end
-            end)
-        end)
+        HookCastBar(unitFrame, castBar)
+        ApplyCastBarLayout(unitFrame)
+        UpdateCastBarColor(unitFrame)
     end
+
+    -- Apply synchronized matching outline at end of construction
+    ApplyMatchingOutline(unitFrame)
 end
 
 if CompactUnitFrame_UpdateStatusText then
@@ -2704,14 +3117,11 @@ local function RefreshAllFonts()
 
     for _, np in ipairs(nameplates) do
         local unitFrame = np.UnitFrame
-        if unitFrame then
-            UpdateNameTypography(unitFrame, unitFrame.unit)
-            UpdateHealthText(unitFrame, unitFrame.unit)
-            local cb = unitFrame.castBar
-            if cb then
-                if cb.Text then cb.Text:SetFont(font, 9, "OUTLINE") end
-                if d and d.castTimeText then d.castTimeText:SetFont(font, 9, "OUTLINE") end
-            end
+        if unitFrame and not (unitFrame.IsForbidden and unitFrame:IsForbidden()) then
+            local unit = GetUnitForFrame(unitFrame) or np.namePlateUnitToken
+            UpdateNameTypography(unitFrame, unit)
+            UpdateHealthText(unitFrame, unit)
+            ApplyCastBarLayout(unitFrame)
         end
     end
 end
@@ -2744,12 +3154,99 @@ local function RefreshAllDimensions()
 
     for _, np in ipairs(nameplates) do
         local unitFrame = np.UnitFrame
-        if unitFrame then
+        if unitFrame and not (unitFrame.IsForbidden and unitFrame:IsForbidden()) then
             ApplyBarDimensions(unitFrame)
+            ApplyCastBarLayout(unitFrame)
+            UpdateCastBarColor(unitFrame)
         end
     end
 end
 FP.RefreshAllDimensions = RefreshAllDimensions
+
+local function RefreshAllCastBars()
+    local nameplates = C_NamePlate.GetNamePlates()
+    if not nameplates then return end
+    for _, np in ipairs(nameplates) do
+        local unitFrame = np.UnitFrame
+        if unitFrame and not (unitFrame.IsForbidden and unitFrame:IsForbidden()) then
+            ApplyCastBarLayout(unitFrame)
+            UpdateCastBarColor(unitFrame)
+        end
+    end
+end
+FP.RefreshAllCastBars = RefreshAllCastBars
+
+local function SimulateCast(isShielded)
+    local np = GetSafeNamePlateForUnit("target")
+    if not np then
+        DEFAULT_CHAT_FRAME:AddMessage("|cff00c0ffForeverPlates:|r Please target an enemy mob to preview cast bar modifications.")
+        return
+    end
+    local uf = np.UnitFrame or np
+    local cb = GetUnitFrameCastBar(uf)
+    if not cb then
+        DEFAULT_CHAT_FRAME:AddMessage("|cffff4444ForeverPlates:|r No cast bar found on current target's nameplate.")
+        return
+    end
+
+    if not cb.FPHookedAll then
+        HookCastBar(uf, cb)
+    end
+
+    local spellName = isShielded and "Incinerate [Shielded]" or "Pyroblast [Kickable]"
+    local spellIcon = 135812
+
+    if cb.Text then cb.Text:SetText(spellName) end
+    if cb.text then cb.text:SetText(spellName) end
+    if cb.Icon then
+        cb.Icon:SetTexture(spellIcon)
+        cb.Icon:Show()
+    end
+
+    cb:SetMinMaxValues(0, 4)
+    cb:SetValue(2.4)
+    testCastBarState[cb] = { isShielded = isShielded, active = true }
+
+    ApplyCastBarLayout(uf)
+    UpdateCastBarColor(uf)
+    cb:Show()
+
+    local data = plates[uf]
+    if data and data.castBorder then
+        data.castBorder:SetShown(true)
+    end
+
+    if data and data.castTimeText and (ForeverPlatesDB.showCastBarTimer ~= false) then
+        data.castTimeText:SetText("2.4s / 4.0s")
+        data.castTimeText:Show()
+    end
+
+    DEFAULT_CHAT_FRAME:AddMessage(string.format(
+        "|cff00c0ffForeverPlates:|r Showing %s cast bar preview on target for 4 seconds.",
+        isShielded and "|cffff4444SHIELDED|r" or "|cff00ff00KICKABLE|r"
+    ))
+
+    C_Timer.After(4.0, function()
+        if cb and testCastBarState[cb] and testCastBarState[cb].active then
+            testCastBarState[cb] = nil
+            cb.notInterruptible = nil
+            local isRealCast = false
+            pcall(function()
+                if UnitCastingInfo("target") or UnitChannelInfo("target") then
+                    isRealCast = true
+                end
+            end)
+            if not isRealCast then
+                cb:Hide()
+                if data and data.castBorder then data.castBorder:SetShown(false) end
+                if data and data.castTimeText then data.castTimeText:Hide() end
+            else
+                UpdateCastBarColor(uf)
+            end
+        end
+    end)
+end
+FP.SimulateCast = SimulateCast
 
 local function UpdateUnitHealthAndColors(unitFrame, passedUnit)
     if not unitFrame or (unitFrame.IsForbidden and unitFrame:IsForbidden()) then return end
@@ -2763,9 +3260,9 @@ local function UpdateUnitHealthAndColors(unitFrame, passedUnit)
 
     local r, g, b = GetDesiredHealthBarColor(unitFrame, unit)
     if r and g and b then
-        healthBar.ForeverPlatesApplyingColor = true
+        isApplyingColor[healthBar] = true
         healthBar:SetStatusBarColor(r, g, b)
-        healthBar.ForeverPlatesApplyingColor = nil
+        isApplyingColor[healthBar] = nil
     end
 
     UpdateHealthText(unitFrame, unit)
@@ -2775,11 +3272,11 @@ local function UpdateUnitHealthAndColors(unitFrame, passedUnit)
     -- Apply Outline Border Color & Thickness (All mobs)
     if d and d.border then
         d.border:SetThickness(ForeverPlatesDB.outlineThickness or 3)
-        local olKey = ForeverPlatesDB.outlineColor or "WHITE"
+        local olKey = ForeverPlatesDB.outlineColor or "DARK"
         if olKey == "NONE" then
             d.border:SetShown(false)
         else
-            local c = OUTLINE_COLORS[olKey] or OUTLINE_COLORS.WHITE
+            local c = OUTLINE_COLORS[olKey] or OUTLINE_COLORS.DARK
             d.border:SetColor(c.r, c.g, c.b, c.a or 1.0)
             d.border:SetShown(true)
         end
@@ -2788,11 +3285,11 @@ local function UpdateUnitHealthAndColors(unitFrame, passedUnit)
     -- Keep level-box border perfectly synchronized
     if d and d.levelBorder then
         d.levelBorder:SetThickness(ForeverPlatesDB.outlineThickness or 3)
-        local olKey = ForeverPlatesDB.outlineColor or "WHITE"
+        local olKey = ForeverPlatesDB.outlineColor or "DARK"
         if olKey == "NONE" then
             d.levelBorder:SetShown(false)
         else
-            local c = OUTLINE_COLORS[olKey] or OUTLINE_COLORS.WHITE
+            local c = OUTLINE_COLORS[olKey] or OUTLINE_COLORS.DARK
             d.levelBorder:SetColor(c.r, c.g, c.b, c.a or 1.0)
             d.levelBorder:SetShown(true)
         end
@@ -2908,7 +3405,7 @@ local function UpdateTargetState(unitFrame, passedUnit)
     if not healthBar then return end
     local d = plates[unitFrame]
 
-    local isTarget = (unit and UnitIsUnit(unit, "target")) or (UnitExists("target") and unitFrame:GetParent() == C_NamePlate.GetNamePlateForUnit("target"))
+    local isTarget = (unit and UnitIsUnit(unit, "target")) or (UnitExists("target") and unitFrame:GetParent() == GetSafeNamePlateForUnit("target"))
     local hasTarget = UnitExists("target")
 
     if isTarget then
@@ -2966,19 +3463,21 @@ local function UpdateTargetState(unitFrame, passedUnit)
                 d.bracketRight:SetVertexColor(COLOR_TARGET_CYAN.r, COLOR_TARGET_CYAN.g, COLOR_TARGET_CYAN.b, 1)
             end
         end
-        unitFrame:SetAlpha(1.0)
-        unitFrame:SetScale(ForeverPlatesDB.targetScale or 1.06)
+        if not InCombatLockdown() then
+            unitFrame:SetAlpha(1.0)
+        end
     else
         if d and d.targetGlow then d.targetGlow:SetShown(false) end
         if d and d.bracketLeft then d.bracketLeft:Hide() end
         if d and d.bracketRight then d.bracketRight:Hide() end
         if d and d.targetArrow then d.targetArrow:Hide() end
 
-        unitFrame:SetScale(1.0)
-        if hasTarget then
-            unitFrame:SetAlpha(ForeverPlatesDB.nonTargetAlpha or 1.0)
-        else
-            unitFrame:SetAlpha(1.0)
+        if not InCombatLockdown() then
+            if hasTarget then
+                unitFrame:SetAlpha(ForeverPlatesDB.nonTargetAlpha or 1.0)
+            else
+                unitFrame:SetAlpha(1.0)
+            end
         end
     end
 
@@ -3011,8 +3510,8 @@ local function RefreshAllPlates()
                 else
                     ShowFriendlyPlate(unitFrame)
                     StyleNamePlate(unitFrame)
-                    if unitFrame.name and unitFrame.name:GetAlpha() > 0 then
-                        unitFrame.name:SetAlpha(0)
+                    if unitFrame.name then
+                        pcall(unitFrame.name.SetAlpha, unitFrame.name, 0)
                     end
                     ApplyBarDimensions(unitFrame)
                     UpdateUnitHealthAndColors(unitFrame, unit)
@@ -3052,6 +3551,14 @@ eventFrame:RegisterEvent("PLAYER_REGEN_DISABLED")
 eventFrame:RegisterEvent("PLAYER_REGEN_ENABLED")
 eventFrame:RegisterEvent("UNIT_AURA")
 eventFrame:RegisterEvent("CVAR_UPDATE")
+eventFrame:RegisterEvent("UNIT_SPELLCAST_START")
+eventFrame:RegisterEvent("UNIT_SPELLCAST_STOP")
+eventFrame:RegisterEvent("UNIT_SPELLCAST_FAILED")
+eventFrame:RegisterEvent("UNIT_SPELLCAST_INTERRUPTED")
+eventFrame:RegisterEvent("UNIT_SPELLCAST_CHANNEL_START")
+eventFrame:RegisterEvent("UNIT_SPELLCAST_CHANNEL_STOP")
+eventFrame:RegisterEvent("UNIT_SPELLCAST_INTERRUPTIBLE")
+eventFrame:RegisterEvent("UNIT_SPELLCAST_NOT_INTERRUPTIBLE")
 
 local HEALTH_TEXT_REFRESH_INTERVAL = 0.10
 local healthTextRefreshElapsed = 0
@@ -3079,6 +3586,18 @@ eventFrame:SetScript("OnUpdate", function(_, elapsed)
                         UpdateHealthText(uf, unit)
                     end
                 end
+
+                -- Ensure native castbar is discovered, hooked, and maintained
+                local cb = GetUnitFrameCastBar(uf)
+                if cb then
+                    if not hookedCastBars[cb] then
+                        HookCastBar(uf, cb)
+                    end
+                    if cb:IsShown() then
+                        ApplyCastBarLayout(uf)
+                        UpdateCastBarColor(uf)
+                    end
+                end
             end
         end
     end
@@ -3095,6 +3614,8 @@ eventFrame:SetScript("OnEvent", function(self, event, ...)
             RefreshAllPlates()
             RefreshAllFonts()
             RefreshAllArrows()
+            RefreshAllOutlines()
+            if RefreshAllCastBars then RefreshAllCastBars() end
         end
     elseif event == "PLAYER_LOGIN" then
         DebugDB("PLAYER_LOGIN before defaults")
@@ -3105,7 +3626,9 @@ eventFrame:SetScript("OnEvent", function(self, event, ...)
         RefreshAllPlates()
         RefreshAllFonts()
         RefreshAllArrows()
-        DEFAULT_CHAT_FRAME:AddMessage("|cff00c0ffForeverPlates|r v2.1 loaded! Type |cff00c0ff/fp|r to open settings.")
+        RefreshAllOutlines()
+        if RefreshAllCastBars then RefreshAllCastBars() end
+        DEFAULT_CHAT_FRAME:AddMessage(string.format("|cff00c0ffForeverPlates|r v2.1 loaded! Saved outline: |cff00ff00%s|r (Thick: %s). Type |cff00c0ff/fp|r to open settings.", tostring(ForeverPlatesDB and ForeverPlatesDB.outlineColor), tostring(ForeverPlatesDB and ForeverPlatesDB.outlineThickness)))
         local nameplates = C_NamePlate.GetNamePlates()
         if nameplates then
             for _, np in ipairs(nameplates) do
@@ -3115,6 +3638,7 @@ eventFrame:SetScript("OnEvent", function(self, event, ...)
                     UpdateUnitHealthAndColors(np.UnitFrame)
                     UpdateTargetState(np.UnitFrame)
                     UpdateNameTypography(np.UnitFrame)
+                    ApplyMatchingOutline(np.UnitFrame)
                     if AdjustAuraFrames then AdjustAuraFrames(np.UnitFrame) end
                 end
             end
@@ -3131,6 +3655,7 @@ eventFrame:SetScript("OnEvent", function(self, event, ...)
                     UpdateUnitHealthAndColors(np.UnitFrame)
                     UpdateTargetState(np.UnitFrame)
                     UpdateNameTypography(np.UnitFrame)
+                    ApplyMatchingOutline(np.UnitFrame)
                     if AdjustAuraFrames then AdjustAuraFrames(np.UnitFrame) end
                 end
             end
@@ -3141,10 +3666,11 @@ eventFrame:SetScript("OnEvent", function(self, event, ...)
         local namePlate = ...
         if namePlate and namePlate.UnitFrame then
             StyleNamePlate(namePlate.UnitFrame)
+            ApplyMatchingOutline(namePlate.UnitFrame)
         end
     elseif event == "NAME_PLATE_UNIT_ADDED" then
         local unit = ...
-        local namePlate = C_NamePlate.GetNamePlateForUnit(unit)
+        local namePlate = GetSafeNamePlateForUnit(unit)
         if namePlate and namePlate.UnitFrame then
             local uf = namePlate.UnitFrame
             if plates[uf] then
@@ -3156,8 +3682,8 @@ eventFrame:SetScript("OnEvent", function(self, event, ...)
             end
             ShowFriendlyPlate(uf)
             StyleNamePlate(uf)
-            if uf.name and uf.name:GetAlpha() > 0 then
-                uf.name:SetAlpha(0)
+            if uf.name then
+                pcall(uf.name.SetAlpha, uf.name, 0)
             end
             ApplyBarDimensions(uf)
             UpdateUnitHealthAndColors(uf, unit)
@@ -3168,7 +3694,7 @@ eventFrame:SetScript("OnEvent", function(self, event, ...)
         end
     elseif event == "NAME_PLATE_UNIT_REMOVED" then
         local unit = ...
-        local namePlate = C_NamePlate.GetNamePlateForUnit(unit)
+        local namePlate = GetSafeNamePlateForUnit(unit)
         if namePlate and namePlate.UnitFrame and plates[namePlate.UnitFrame] then
             plates[namePlate.UnitFrame].unit = nil
         end
@@ -3191,7 +3717,7 @@ eventFrame:SetScript("OnEvent", function(self, event, ...)
     elseif event == "UNIT_HEALTH" or event == "UNIT_MAXHEALTH" or event == "UNIT_FACTION" or event == "UNIT_FLAGS" or event == "UNIT_THREAT_SITUATION_UPDATE" or event == "UNIT_THREAT_LIST_UPDATE" then
         local unit = ...
         if unit == "target" then
-            local np = C_NamePlate.GetNamePlateForUnit("target")
+            local np = GetSafeNamePlateForUnit("target")
             if np and np.UnitFrame then
                 UpdateUnitHealthAndColors(np.UnitFrame, "target")
                 UpdateTargetState(np.UnitFrame, "target")
@@ -3199,7 +3725,7 @@ eventFrame:SetScript("OnEvent", function(self, event, ...)
                 if AdjustAuraFrames then AdjustAuraFrames(np.UnitFrame) end
             end
         elseif unit and unit:find("nameplate") then
-            local namePlate = C_NamePlate.GetNamePlateForUnit(unit)
+            local namePlate = GetSafeNamePlateForUnit(unit)
             if namePlate and namePlate.UnitFrame then
                 UpdateUnitHealthAndColors(namePlate.UnitFrame, unit)
                 UpdateNameTypography(namePlate.UnitFrame, unit)
@@ -3220,12 +3746,12 @@ eventFrame:SetScript("OnEvent", function(self, event, ...)
         local unit = ...
         if unit then
             if unit == "target" then
-                local np = C_NamePlate.GetNamePlateForUnit("target")
+                local np = GetSafeNamePlateForUnit("target")
                 if np and np.UnitFrame and AdjustAuraFrames then
                     AdjustAuraFrames(np.UnitFrame)
                 end
             elseif unit:find("nameplate") then
-                local np = C_NamePlate.GetNamePlateForUnit(unit)
+                local np = GetSafeNamePlateForUnit(unit)
                 if np and np.UnitFrame and AdjustAuraFrames then
                     AdjustAuraFrames(np.UnitFrame)
                 end
@@ -3234,9 +3760,27 @@ eventFrame:SetScript("OnEvent", function(self, event, ...)
     elseif event == "UNIT_NAME_UPDATE" then
         local unit = ...
         if unit and unit:find("nameplate") then
-            local namePlate = C_NamePlate.GetNamePlateForUnit(unit)
+            local namePlate = GetSafeNamePlateForUnit(unit)
             if namePlate and namePlate.UnitFrame then
                 UpdateNameTypography(namePlate.UnitFrame, unit)
+            end
+        end
+    elseif event:find("UNIT_SPELLCAST") then
+        local unit = ...
+        if unit then
+            local np = GetSafeNamePlateForUnit(unit)
+            if np and not (np.IsForbidden and np:IsForbidden()) then
+                local uf = np.UnitFrame or np
+                if uf and not (uf.IsForbidden and uf:IsForbidden()) then
+                    local cb = GetUnitFrameCastBar(uf)
+                    if cb then
+                        if not hookedCastBars[cb] then
+                            HookCastBar(uf, cb)
+                        end
+                        ApplyCastBarLayout(uf)
+                        UpdateCastBarColor(uf)
+                    end
+                end
             end
         end
     elseif event == "CVAR_UPDATE" then
@@ -3251,7 +3795,14 @@ eventFrame:SetScript("OnEvent", function(self, event, ...)
                 RefreshAllPlates()
             end
         end
-    elseif event == "PLAYER_REGEN_DISABLED" or event == "PLAYER_REGEN_ENABLED" then
+    elseif event == "PLAYER_REGEN_ENABLED" then
+        for uf in pairs(pendingDimensions) do
+            if uf and not (uf.IsForbidden and uf:IsForbidden()) then
+                ApplyBarDimensions(uf)
+            end
+        end
+        wipe(pendingDimensions)
+
         local nameplates = C_NamePlate.GetNamePlates()
         if nameplates then
             for _, np in ipairs(nameplates) do
@@ -3261,8 +3812,28 @@ eventFrame:SetScript("OnEvent", function(self, event, ...)
                     if unit and not ShouldShowFriendlyNameplate(unit) then
                         HideFriendlyPlate(uf, unit)
                     else
-                        if uf.name and uf.name:GetAlpha() > 0 then
-                            uf.name:SetAlpha(0)
+                        if uf.name then
+                            pcall(uf.name.SetAlpha, uf.name, 0)
+                        end
+                        UpdateNameTypography(uf, unit)
+                        UpdateUnitHealthAndColors(uf, unit)
+                        UpdateTargetState(uf, unit)
+                    end
+                end
+            end
+        end
+    elseif event == "PLAYER_REGEN_DISABLED" then
+        local nameplates = C_NamePlate.GetNamePlates()
+        if nameplates then
+            for _, np in ipairs(nameplates) do
+                local uf = np.UnitFrame
+                if uf and not (uf.IsForbidden and uf:IsForbidden()) then
+                    local unit = GetUnitForFrame(uf) or uf.unit
+                    if unit and not ShouldShowFriendlyNameplate(unit) then
+                        HideFriendlyPlate(uf, unit)
+                    else
+                        if uf.name then
+                            pcall(uf.name.SetAlpha, uf.name, 0)
                         end
                         UpdateNameTypography(uf, unit)
                         UpdateUnitHealthAndColors(uf, unit)
@@ -3273,6 +3844,39 @@ eventFrame:SetScript("OnEvent", function(self, event, ...)
         end
     end
 end)
+
+local function PerformCastDebug()
+    local np = GetSafeNamePlateForUnit("target")
+    if not np then
+        DEFAULT_CHAT_FRAME:AddMessage("|cff00c0ff[FP CastDebug]|r No active nameplate for target. Please target a mob.")
+        return
+    end
+    local uf = np.UnitFrame or np
+    local cb = GetUnitFrameCastBar(uf)
+    DEFAULT_CHAT_FRAME:AddMessage(string.format("|cff00c0ff[FP CastDebug]|r Target: %s", tostring(UnitName("target"))))
+    if cb then
+        local w, h = cb:GetSize()
+        local shown = cb:IsShown() and "|cff00ff00SHOWN|r" or "|cffff4444HIDDEN|r"
+        local r, g, b = cb:GetStatusBarColor()
+        local rStr = (r and not (issecretvalue and issecretvalue(r))) and string.format("%.2f, %.2f, %.2f", r, g, b) or "secret/nil"
+        DEFAULT_CHAT_FRAME:AddMessage(string.format("  CastBar: Found! Name=%s, Size=%.0fx%.0f, Status=%s", tostring(cb:GetName() or "Anonymous"), w or 0, h or 0, shown))
+        DEFAULT_CHAT_FRAME:AddMessage(string.format("  Color: (%s), FPHookedAll=%s", rStr, tostring(hookedCastBars[cb])))
+        if cb:GetNumPoints() and cb:GetNumPoints() > 0 then
+            local pt, relTo, relPt, x, y = cb:GetPoint(1)
+            DEFAULT_CHAT_FRAME:AddMessage(string.format("  Point 1: %s -> %s:%s (x=%.1f, y=%.1f)", tostring(pt), tostring(relTo and (relTo.GetName and relTo:GetName() or "Frame") or "nil"), tostring(relPt), x or 0, y or 0))
+        end
+    else
+        DEFAULT_CHAT_FRAME:AddMessage("  |cffff0000CastBar NOT found on target UnitFrame!|r Scanning children...")
+        local foundList = {}
+        if uf.GetChildren then
+            for _, ch in ipairs({uf:GetChildren()}) do
+                table.insert(foundList, (ch.GetName and ch:GetName()) or (ch.GetObjectType and ch:GetObjectType()) or "Unknown")
+            end
+        end
+        DEFAULT_CHAT_FRAME:AddMessage(string.format("  uf children (%d): %s", #foundList, table.concat(foundList, ", ")))
+    end
+end
+FP.CastDebug = PerformCastDebug
 
 -------------------------------------------------------------------------------
 -- Slash Command (/fp or /foreverplates)
@@ -3325,7 +3929,7 @@ SlashCmdList["FOREVERPLATES"] = function(msg)
             hookCallCount
         ))
         local targetName = UnitName("target") or "None"
-        local np = C_NamePlate.GetNamePlateForUnit("target")
+        local np = GetSafeNamePlateForUnit("target")
         local npUnit = np and (np.namePlateUnitToken or (np.UnitFrame and plates[np.UnitFrame] and plates[np.UnitFrame].unit))
         DEFAULT_CHAT_FRAME:AddMessage(string.format("|cff00c0ff[FP Debug]|r Target: %s, npToken: %s", tostring(targetName), tostring(npUnit)))
         DEFAULT_CHAT_FRAME:AddMessage(string.format("|cff00c0ff[FP Debug]|r HealthText Capability: %s", tostring(FP.healthTextCapability)))
@@ -3353,6 +3957,8 @@ SlashCmdList["FOREVERPLATES"] = function(msg)
             foundBlizzText and "|cff00ff00YES|r" or "|cffff0000NO|r",
             tostring(FP.healthTextCapability)
         ))
+    elseif cmd == "castdebug" then
+        PerformCastDebug()
     elseif cmd == "size" or cmd == "textsize" or cmd == "healthsize" then
         local val = tonumber(param)
         if val and val >= 8 and val <= 28 then
@@ -3411,11 +4017,42 @@ SlashCmdList["FOREVERPLATES"] = function(msg)
         local val = tonumber(param)
         if val and val >= 60 and val <= 240 then
             ForeverPlatesDB.castBarWidth = val
+            ForeverPlatesDB.castBarMatchHealthWidth = false
             RefreshAllDimensions()
             RefreshAllPlates()
-            DEFAULT_CHAT_FRAME:AddMessage(string.format("|cff00c0ffForeverPlates:|r Cast bar width set to |cff00ff00%dpx|r!", val))
+            DEFAULT_CHAT_FRAME:AddMessage(string.format("|cff00c0ffForeverPlates:|r Cast bar width set to |cff00ff00%dpx|r (Match Health Bar Width disabled)!", val))
         else
             DEFAULT_CHAT_FRAME:AddMessage("Usage: |cff00c0ff/fp castwidth <60-240>|r")
+        end
+    elseif cmd == "castmatch" then
+        ForeverPlatesDB.castBarMatchHealthWidth = not ForeverPlatesDB.castBarMatchHealthWidth
+        RefreshAllDimensions()
+        RefreshAllPlates()
+        DEFAULT_CHAT_FRAME:AddMessage("|cff00c0ffForeverPlates:|r Match health bar width is now " .. (ForeverPlatesDB.castBarMatchHealthWidth and "|cff00ff00ENABLED|r" or "|cffff0000DISABLED|r"))
+    elseif cmd == "castheight" then
+        local val = tonumber(param)
+        if val and val >= 6 and val <= 36 then
+            ForeverPlatesDB.castBarHeight = val
+            RefreshAllDimensions()
+            RefreshAllPlates()
+            DEFAULT_CHAT_FRAME:AddMessage(string.format("|cff00c0ffForeverPlates:|r Cast bar height set to |cff00ff00%dpx|r!", val))
+        else
+            DEFAULT_CHAT_FRAME:AddMessage("Usage: |cff00c0ff/fp castheight <6-36>|r")
+        end
+    elseif cmd == "casttext" then
+        local pos = (param or ""):upper()
+        if pos == "LEFT" or pos == "CENTER" or pos == "RIGHT" or pos == "ABOVE" or pos == "BELOW" then
+            if pos == "LEFT" then ForeverPlatesDB.castBarTextPosition = "ON_BAR_LEFT"
+            elseif pos == "CENTER" then ForeverPlatesDB.castBarTextPosition = "ON_BAR_CENTER"
+            elseif pos == "RIGHT" then ForeverPlatesDB.castBarTextPosition = "ON_BAR_RIGHT"
+            elseif pos == "ABOVE" then ForeverPlatesDB.castBarTextPosition = "ABOVE_BAR"
+            elseif pos == "BELOW" then ForeverPlatesDB.castBarTextPosition = "BELOW_BAR"
+            end
+            RefreshAllDimensions()
+            RefreshAllPlates()
+            DEFAULT_CHAT_FRAME:AddMessage("|cff00c0ffForeverPlates:|r Spell text placement set to |cff00ff00" .. ForeverPlatesDB.castBarTextPosition .. "|r!")
+        else
+            DEFAULT_CHAT_FRAME:AddMessage("Usage: |cff00c0ff/fp casttext <left|center|right|above|below>|r")
         end
     elseif cmd == "execute" then
         ForeverPlatesDB.showExecuteGlow = not ForeverPlatesDB.showExecuteGlow

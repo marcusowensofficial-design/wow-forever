@@ -21,10 +21,10 @@
       <span><strong>Beta Duration:</strong> 35 Days (Sept 17 – Oct 21)</span>
       <span><strong>Level Cap:</strong> 20 (Phase 1)</span>
       <span class="status-badge-highlight">Classic+ Standalone</span>
-      <span class="status-badge-highlight" style="background: rgba(234, 179, 8, 0.2); border-color: #eab308; color: #fef08a;">🎃 Events: Pirates' Day & Harvest Festival Active</span>
+      <span class="status-badge-highlight" style="background: rgba(234, 179, 8, 0.2); border-color: #eab308; color: #fef08a;">🍺 Events: Brewfest (Sept 20 – Oct 6) & Harvest Festival Active</span>
       <span><strong>Rulesets:</strong> PvP • PvE • RP • Hardcore</span>
       <span><strong>Engine:</strong> Ray-Traced GI (DX12)</span>
-      <span><strong>Client Build:</strong> 1.60.1.69913</span>
+      <span><strong>Client Build:</strong> 1.60.2.70114</span>
     </div>
   </aside>
 
@@ -62,6 +62,9 @@
         <a href="https://x.com/MrGMYT/status/2099139797524902295/video/1" target="_blank" rel="noopener" class="quick-link-chip">
           <span>🎯</span> MrGM Ping System Demo
         </a>
+        <button type="button" class="quick-link-chip" id="quick-link-addon-foreverplates" style="cursor: pointer; background: rgba(0, 192, 255, 0.15); border-color: #00c0ff; color: #7dd3fc;">
+          <span>🛡️</span> Companion Addon: ForeverPlates
+        </button>
         <button type="button" class="quick-link-chip" id="quick-link-race-planner" style="cursor: pointer; background: rgba(243, 192, 67, 0.15); border-color: var(--border-gold);">
           <span>🧙</span> Class & Race Planner
         </button>
@@ -284,17 +287,17 @@
               🗓️ 35 Days Total
             </span>
             <span id="beta-days-badge" class="status-pulse-badge" style="background: rgba(16, 185, 129, 0.2); border-color: #10b981; color: #6ee7b7; font-weight: 700;">
-              33 Days Left
+              29 Days Left
             </span>
           </div>
         </div>
 
         <!-- Dynamic Duration Progress Bar -->
         <div class="beta-progress-track">
-          <div id="beta-duration-progress-fill" class="beta-progress-fill" style="width: 3%;"></div>
+          <div id="beta-duration-progress-fill" class="beta-progress-fill" style="width: 17%;"></div>
         </div>
         <div class="beta-progress-meta">
-          <span id="beta-duration-progress-text">Day 2 of 35 Days (3% elapsed • 33 days remaining)</span>
+          <span id="beta-duration-progress-text">Day 6 of 35 Days (17% elapsed • 29 days remaining)</span>
           <span>Start: Sept 17, 2026 • End: Oct 21, 2026 (23:59 PDT)</span>
         </div>
 
@@ -528,7 +531,7 @@
         <button class="codex-nav-btn" data-codex="curve">🗺️ Full 1–60 Dungeon Route</button>
         <button class="codex-nav-btn" data-codex="zones">🌄 New & Renewed Zones</button>
         <button class="codex-nav-btn" data-codex="mounts">🐎 Datamined Mounts</button>
-        <button class="codex-nav-btn" data-codex="stats">📈 Stats & Raid Caps</button>
+        <button class="codex-nav-btn" data-codex="stats">📊 Stats & Attributes Guide</button>
       </div>
 
       <!-- Panel 1: Skyborne -->
@@ -780,20 +783,111 @@
         </div>
       </div>
 
-      <!-- Panel 7: Stats & Raid Caps -->
+      <!-- Panel 7: Stats & Attributes Master Guide -->
       <div id="codex-stats" class="codex-panel">
         <div class="section-heading-bar" style="margin-bottom: 1.5rem;">
           <div>
-            <h3><span>📈</span> Endgame Stat Caps & Combat Formulas</h3>
-            <p class="section-subtext">The definitive theorycrafting reference for Level 63 raid bosses: Defense, Resistances, Hit Caps, and Downranking Rules</p>
+            <h3><span>📊</span> Stats & Attributes Master Handbook</h3>
+            <p class="section-subtext">Comprehensive mechanics reference: per-class stat conversions, unified critical strike, defensive mitigation caps, downranking rules, and raid boss formulas</p>
           </div>
         </div>
-        <div id="stats-caps-container" class="stats-caps-grid">
-          <!-- Rendered dynamically by js/app.js -->
+
+        <!-- Guide Notice Banner -->
+        <div class="stat-guide-notice-box" style="margin-bottom: 2rem; background: linear-gradient(135deg, rgba(16, 24, 38, 0.95), rgba(7, 10, 16, 0.95)); border: 1px solid rgba(56, 189, 248, 0.35); border-radius: var(--radius-md); padding: 1.25rem 1.5rem; display: flex; gap: 1rem; align-items: flex-start;">
+          <span style="font-size: 1.8rem; line-height: 1;">💡</span>
+          <div>
+            <h4 style="color: #fff; font-size: 1.05rem; margin: 0 0 0.35rem;">How Stats Function in World of Warcraft: Forever</h4>
+            <p style="font-size: 0.88rem; color: #cbd5e1; line-height: 1.5; margin: 0;">
+              WoW Forever utilizes the traditional Classic stat foundation with several pivotal modern enhancements. While hovering over stats in your character window displays standard tooltips, many underlying formulas—such as class-specific Agility critical strike ratios, shield block value, spell coefficient scaling, and in-combat Spirit regeneration—aren't immediately obvious. Use this guide to optimize your gear and raid preparations.
+            </p>
+          </div>
         </div>
-        <div id="combat-rules-container" class="combat-rules-grid" style="margin-top: 1.5rem;">
-          <!-- Rendered dynamically by js/app.js -->
+
+        <!-- Section 1: Interactive Class Stat Conversion Explorer -->
+        <div class="stat-category-wrapper" style="margin-bottom: 2.5rem;">
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem;">
+            <div>
+              <span class="countdown-label" style="color: var(--text-gold);">Interactive Tool</span>
+              <h3 style="color: #fff; font-size: 1.35rem; margin: 0.2rem 0 0;">🧙 Class Stat Conversion Matrix</h3>
+              <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.2rem;">Select any class to inspect their exact Attack Power, Crit, Dodge, Armor, and Mana conversions</p>
+            </div>
+            <button type="button" id="toggle-all-class-table-btn" class="quick-link-chip" style="cursor: pointer; background: rgba(243, 192, 67, 0.15); border-color: var(--border-gold); color: var(--text-gold); font-size: 0.8rem; padding: 0.4rem 0.9rem;">
+              <span>📋</span> View Full 9-Class Comparison Table
+            </button>
+          </div>
+
+          <div id="class-stat-matrix-container">
+            <!-- Rendered dynamically by js/modules/camping.js -->
+          </div>
+
+          <!-- Collapsible All-Class Comparison Table -->
+          <div id="all-class-table-collapsible" style="display: none; margin-top: 1.5rem;">
+            <div id="all-class-stat-table-container">
+              <!-- Rendered dynamically by js/modules/camping.js -->
+            </div>
+          </div>
         </div>
+
+        <!-- Section 2: Primary Stats Deep Dive -->
+        <div class="stat-category-wrapper" style="margin-bottom: 2.5rem;">
+          <div style="margin-bottom: 1rem;">
+            <span class="countdown-label" style="color: #38bdf8;">Base Attributes</span>
+            <h3 style="color: #fff; font-size: 1.35rem; margin: 0.2rem 0 0;">💪 Primary Stats Deep Dive</h3>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.2rem;">Found on Uncommon and above gear; baseline starting values determined by character race</p>
+          </div>
+          <div id="primary-stats-container" class="stats-overview-grid">
+            <!-- Rendered dynamically by js/modules/camping.js -->
+          </div>
+        </div>
+
+        <!-- Section 3: Secondary Stats & Combat Rates -->
+        <div class="stat-category-wrapper" style="margin-bottom: 2.5rem;">
+          <div style="margin-bottom: 1rem;">
+            <span class="countdown-label" style="color: #f59e0b;">Percentages & Ratings</span>
+            <h3 style="color: #fff; font-size: 1.35rem; margin: 0.2rem 0 0;">🎯 Secondary Stats & Combat Ratings</h3>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.2rem;">Linear percentage improvements on equipment: Unified Critical Strike, Hit caps, and Haste status</p>
+          </div>
+          <div id="secondary-stats-container" class="stats-overview-grid">
+            <!-- Rendered dynamically by js/modules/camping.js -->
+          </div>
+        </div>
+
+        <!-- Section 4: Defensive Stats & Mitigation Caps -->
+        <div class="stat-category-wrapper" style="margin-bottom: 2.5rem;">
+          <div style="margin-bottom: 1rem;">
+            <span class="countdown-label" style="color: #10b981;">Tanking & Survival</span>
+            <h3 style="color: #fff; font-size: 1.35rem; margin: 0.2rem 0 0;">🛡️ Defensive Stats & Parry Haste Mechanics</h3>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.2rem;">Mitigation ceilings against Level 63 raid bosses, shield blocking formulas, and lethal Parry Haste risks</p>
+          </div>
+          <div id="defensive-stats-container" class="stats-overview-grid">
+            <!-- Rendered dynamically by js/modules/camping.js -->
+          </div>
+        </div>
+
+        <!-- Section 5: Modifiers, Coefficients & Downranking -->
+        <div class="stat-category-wrapper" style="margin-bottom: 2.5rem;">
+          <div style="margin-bottom: 1rem;">
+            <span class="countdown-label" style="color: #c084fc;">Formulas & Coefficients</span>
+            <h3 style="color: #fff; font-size: 1.35rem; margin: 0.2rem 0 0;">🔮 Spell Coefficients, Downranking & Attack Power</h3>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.2rem;">Cast time coefficients, the crucial Level 20 downranking threshold, and unified Attack Power scaling</p>
+          </div>
+          <div id="modifiers-rules-container" class="stats-overview-grid">
+            <!-- Rendered dynamically by js/modules/camping.js -->
+          </div>
+        </div>
+
+        <!-- Section 6: Verified Raid Boss Hard Caps -->
+        <div class="stat-category-wrapper">
+          <div style="margin-bottom: 1rem;">
+            <span class="countdown-label" style="color: var(--text-gold);">Raid Boss Targets (Level 63)</span>
+            <h3 style="color: #fff; font-size: 1.35rem; margin: 0.2rem 0 0;">🏆 Quick-Reference Stat Caps</h3>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.2rem;">Key milestone thresholds required for Level 60 endgame raiding</p>
+          </div>
+          <div id="stats-caps-container" class="stats-caps-grid">
+            <!-- Rendered dynamically by js/app.js -->
+          </div>
+        </div>
+
       </div>
 
     </section>
@@ -1186,6 +1280,87 @@
             <li>Native UI replacements: built-in damage meter, ping wheel, and cooldown HUD.</li>
             <li>Cosmetic, bag, and auction addons outside combat remain fully permitted.</li>
           </ul>
+        </div>
+
+        <!-- Dedicated Companion Addon Showcase: ForeverPlates -->
+        <div class="addon-spotlight-card" id="foreverplates-spotlight" style="grid-column: 1 / -1; margin: 1rem 0; background: linear-gradient(135deg, rgba(7, 24, 38, 0.95), rgba(13, 17, 23, 0.95)); border: 1px solid rgba(0, 192, 255, 0.4); border-radius: 12px; padding: 1.75rem; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);">
+          <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 1rem; margin-bottom: 1.25rem;">
+            <div style="display: flex; gap: 1rem; align-items: center;">
+              <div style="width: 52px; height: 52px; border-radius: 10px; background: rgba(0, 192, 255, 0.15); border: 1px solid #00c0ff; display: flex; align-items: center; justify-content: center; font-size: 1.75rem;">
+                🛡️
+              </div>
+              <div>
+                <div style="display: flex; gap: 0.5rem; align-items: center;">
+                  <h3 style="font-size: 1.4rem; color: #fff; margin: 0; font-family: var(--font-heading); letter-spacing: 0.05em;">
+                    ForeverPlates <span style="color: #00c0ff; font-size: 0.9rem; border: 1px solid rgba(0, 192, 255, 0.5); padding: 0.15rem 0.5rem; border-radius: 4px; vertical-align: middle;">v1.2.0 • WoW Forever Companion Addon</span>
+                  </h3>
+                </div>
+                <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 0.25rem;">
+                  The premier zero-taint pixel nameplate suite built specifically for the <strong>Camelot / Retail 12.0 engine</strong> and Classic+ combat mechanics.
+                </p>
+              </div>
+            </div>
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+              <span class="status-badge-highlight" style="background: rgba(16, 185, 129, 0.15); border-color: #10b981; color: #6ee7b7;">
+                ✓ 12.0 Secret-Value Compliant
+              </span>
+              <span class="status-badge-highlight" style="background: rgba(0, 192, 255, 0.15); border-color: #00c0ff; color: #7dd3fc;">
+                ✓ In-Game GUI (/fp)
+              </span>
+              <span class="status-badge-highlight" style="background: rgba(234, 179, 8, 0.15); border-color: #eab308; color: #fef08a;">
+                ✓ Pixel Borders & Custom Cast Bars
+              </span>
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; margin-bottom: 1.5rem;">
+            <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 8px; padding: 1rem;">
+              <h4 style="color: #00c0ff; font-size: 0.95rem; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.4rem;">
+                <span>🎯</span> Zero-Taint Architecture
+              </h4>
+              <p style="font-size: 0.82rem; color: var(--text-muted); line-height: 1.4;">
+                Isolated external frame registry and C-side <code>FontString:SetFormattedText</code> formatting. Never triggers fatal Lua errors on restricted <code>&lt;secret number&gt;</code> combat health values.
+              </p>
+            </div>
+            <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 8px; padding: 1rem;">
+              <h4 style="color: #f59e0b; font-size: 0.95rem; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.4rem;">
+                <span>⚡</span> Cast Bars & Live Spell Timers
+              </h4>
+              <p style="font-size: 0.82rem; color: var(--text-muted); line-height: 1.4;">
+                Integrated enemy and friendly cast bars with spell icons, live decimal timers, interrupt shield indicators, text positioning, and health-width matching.
+              </p>
+            </div>
+            <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 8px; padding: 1rem;">
+              <h4 style="color: #ec4899; font-size: 0.95rem; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.4rem;">
+                <span>🎨</span> Friendly & Hostile Styling
+              </h4>
+              <p style="font-size: 0.82rem; color: var(--text-muted); line-height: 1.4;">
+                Independent toggles for friendly player health bars vs. name-only mode, custom threat colors, class coloring, level badges, and 1px crisp borders.
+              </p>
+            </div>
+            <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 8px; padding: 1rem;">
+              <h4 style="color: #10b981; font-size: 0.95rem; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.4rem;">
+                <span>🛠️</span> Live In-Game Test Mode
+              </h4>
+              <p style="font-size: 0.82rem; color: var(--text-muted); line-height: 1.4;">
+                Type <code>/fp</code> to open the tabbed settings panel. Spawn hostile, elite, and friendly test nameplates anywhere in the world to preview styling live without entering combat.
+              </p>
+            </div>
+          </div>
+
+          <div style="background: rgba(0, 0, 0, 0.35); border: 1px dashed rgba(0, 192, 255, 0.4); border-radius: 8px; padding: 1rem; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem;">
+            <div>
+              <span style="font-size: 0.85rem; font-weight: 700; color: #fff;">Beta Client Installation Path:</span>
+              <code style="display: block; font-family: monospace; font-size: 0.82rem; color: #7dd3fc; margin-top: 0.25rem;">
+                World of Warcraft\_classic_beta_\Interface\AddOns\ForeverPlates\
+              </code>
+            </div>
+            <div style="display: flex; gap: 0.75rem;">
+              <span class="status-badge-highlight" style="background: rgba(0, 192, 255, 0.2); border-color: #00c0ff; color: #7dd3fc; font-weight: 700; padding: 0.5rem 1rem;">
+                Included in Local Workspace: <code>addons/ForeverPlates</code>
+              </span>
+            </div>
+          </div>
         </div>
 
         <!-- Seasonal PvP -->

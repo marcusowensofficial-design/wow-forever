@@ -22,6 +22,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
     subTabs: [
       { id: "overview", label: "Full Dossier", icon: "📑" },
       { id: "core", label: "Core Rules & Control", icon: "📜" },
+      { id: "betaBuilds", label: "⚡ Beta L20 Builds", icon: "⚡" },
       { id: "assassination", label: "Assassination & Mutilate", icon: "🩸" },
       { id: "combat", label: "Combat & Restless Blades", icon: "⚔️" },
       { id: "subtlety", label: "Subtlety & Rupture Engine", icon: "👤" },
@@ -512,6 +513,108 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         statusType: "verified",
         source: "Sodapoppin Hands-On Demo"
       }
-    ]
+    ],
+    betaBuilds: {
+      season: "Closed Beta Phase 1",
+      levelCap: 20,
+      talentPointsTotal: 11,
+      legacyPointsNotice: "Legacy Milestones allow up to +2 to +5 additional points at Level 20.",
+      specs: [
+        {
+          specId: "combat_swords",
+          name: "Combat Swords (Precision & Slice)",
+          icon: "⚔️",
+          role: "Sustained Melee DPS",
+          wowheadCalcUrl: "https://www.wowhead.com/forever/talent-calc/rogue/-0230501",
+          tagline: "Top leveling and dungeon DPS through 40-energy Sinister Strike, +5% hit, and high-speed sword attacks.",
+          statPriority: "Agility > Melee Hit (to 5%) > Strength > Stamina",
+          bestWeapon: "Slow Main-Hand Sword (Cruel Barb) + Fast Off-Hand (Thief's Blade)",
+          talents: [
+            { name: "Improved Sinister Strike", points: "2/2", tree: "Combat (Tier 1)", desc: "Reduces Energy cost of Sinister Strike by 5, allowing attacks at a baseline 40 Energy cost." },
+            { name: "Lightning Reflexes", points: "3/5", tree: "Combat (Tier 1)", desc: "Increases your Dodge chance by 3%, aiding solo survivability against dungeon elites." },
+            { name: "Precision", points: "5/5", tree: "Combat (Tier 2)", desc: "Increases your chance to hit with melee weapons by 5%, neutralizing miss penalties against +3 level mobs." },
+            { name: "Deflection", points: "1/5", tree: "Combat (Tier 2)", desc: "Increases your Parry chance by 1%, triggering Riposte counters if unlocked." }
+          ],
+          legacyNotes: "Extra points obtained through Legacy Discovery unlock Riposte (10 Energy disarm + burst strike) and 5/5 Dual Wield Specialization.",
+          rotation: [
+            { label: "Opener", desc: "Stealth -> Cheap Shot for 4-second stun or Garrote against high-armor targets (Sap no longer breaks stealth!)." },
+            { label: "Slice and Dice Upkeep", desc: "Sinister Strike x2 -> Slice and Dice (1-2 combo points) to boost auto-attack speed by 30%." },
+            { label: "Finisher", desc: "Sinister Strike to 4-5 combo points -> Eviscerate finisher; drink Thistle Tea for an instant 100 Energy surge." },
+            { label: "Defensive Reset", desc: "Evasion when tanking multiple mobs -> Gouge into bandage if health drops." }
+          ],
+          bisGear: [
+            { slot: "Main Hand", item: "Cruel Barb", source: "Deadmines (Edwin VanCleef)", stats: "+12 Attack Power, 18.2 DPS" },
+            { slot: "Off Hand", item: "Thief's Blade", source: "Deadmines (Mr. Smite)", stats: "+6 Agility, 15.6 DPS" },
+            { slot: "Off Hand (Alt)", item: "Wingblade", source: "Wailing Caverns (Leaders Quest)", stats: "+5 Agi, +2 Sta, 14.1 DPS" },
+            { slot: "Dagger (New)", item: "Thane's Swift Stiletto", source: "Hall of Thanes (Ironforge)", stats: "+5 Agi, 1.4 Speed, 16.5 DPS" },
+            { slot: "Armor Set", item: "Defias Leather (Chest/Legs/Gloves)", source: "Deadmines Defias Bosses", stats: "+10 Attack Power bonus" }
+          ],
+          campingPerk: {
+            name: "Shadowed Agility (+5% Agility)",
+            desc: "Setting camp with a Cozy Sleeping Bag provides 200% rested XP rate and grants the 'Shadow Stalker' 2-hour +5% Agility buff."
+          },
+          classQuestNote: "Level 20 Rogue unlocks the Poisons questline (Instant & Crippling Poison) and Thistle Tea recipe (100 Energy restore)."
+        },
+        {
+          specId: "combat_daggers",
+          name: "Combat Daggers (Backstab Burst)",
+          icon: "🗡️",
+          role: "Positional Melee Burst DPS",
+          wowheadCalcUrl: "https://www.wowhead.com/forever/talent-calc/rogue/005-02301",
+          tagline: "Devastating burst damage with 41-energy Backstabs and +20% Ambush critical strikes.",
+          statPriority: "Agility > Attack Power > Crit",
+          bestWeapon: "Slow High-End Damage Dagger (Meteor Shard / Shadowfang)",
+          talents: [
+            { name: "Opportunity", points: "5/5", tree: "Subtlety (Tier 1)", desc: "Increases damage dealt with Backstab, Garrote, and Ambush by 20%." },
+            { name: "Improved Sinister Strike", points: "2/2", tree: "Combat (Tier 1)", desc: "Reduces Sinister Strike Energy cost to 40 for when you cannot get behind targets." },
+            { name: "Puncturing Wounds", points: "3/3", tree: "Combat (Tier 2)", desc: "Reduces the Energy cost of Backstab to 41, matching Sinister Strike efficiency!" },
+            { name: "Remorseless Attacks", points: "1/2", tree: "Assassination (Tier 1)", desc: "After killing an opponent, your next Sinister Strike, Backstab, or Ambush has +20% crit chance." }
+          ],
+          legacyNotes: "Extra Legacy points unlock 5/5 Lethality (+30% crit damage bonus) and Cold Blood (guaranteed 100% crit).",
+          rotation: [
+            { label: "Opener", desc: "Stealth -> Ambush from behind for massive physical hit." },
+            { label: "Gouge-Backstab Loop", desc: "Gouge enemy -> walk behind during incapacitate -> Backstab -> Eviscerate." }
+          ],
+          bisGear: [
+            { slot: "Main Hand", item: "Meteor Shard", source: "Shadowfang Keep (Arugal)", stats: "Chance on Hit: 35 Fire Dmg, 18.5 DPS" },
+            { slot: "Off Hand", item: "Tail Spike", source: "Wailing Caverns (Skum)", stats: "+4 Agi, 13.9 DPS" }
+          ],
+          campingPerk: {
+            name: "Lethal Edge (+5% Melee Crit)",
+            desc: "Resting beside an active Campfire grants +5% melee critical strike chance for 1 hour."
+          },
+          classQuestNote: "Level 20 unlocks Crippling Poison to prevent fleeing dungeon runners."
+        },
+        {
+          specId: "subtlety",
+          name: "Subtlety (Stealth Master & Ambush)",
+          icon: "👤",
+          role: "PvP Ambush & Control",
+          wowheadCalcUrl: "https://www.wowhead.com/forever/talent-calc/rogue/--502202",
+          tagline: "Undetectable stealth speed, +40% critical strikes from Remorseless Attacks, and sprint cooldown resets.",
+          statPriority: "Agility > Stamina > Attack Power",
+          bestWeapon: "Slow Dagger / Sword with High Top-End",
+          talents: [
+            { name: "Master of Deception", points: "5/5", tree: "Subtlety (Tier 1)", desc: "Reduces the chance enemies have to detect you while in Stealth, letting you pass inches from elites." },
+            { name: "Camouflage", points: "2/2", tree: "Subtlety (Tier 2)", desc: "Increases your movement speed while stealthed by 15% and reduces Stealth cooldown by 2 sec." },
+            { name: "Remorseless Attacks", points: "2/2", tree: "Assassination (Tier 1)", desc: "After killing an opponent, grants +40% critical strike chance on your next strike." },
+            { name: "Elusiveness", points: "2/2", tree: "Subtlety (Tier 2)", desc: "Reduces the cooldown of Evasion and Vanish by 45 sec." }
+          ],
+          legacyNotes: "Extra Legacy points unlock Ghostly Strike (15% dodge + strike) and Preparation (instant cooldown reset).",
+          rotation: [
+            { label: "Chain Kill Loop", desc: "Kill mob -> Remorseless Attacks (+40% crit) active -> Ambush next target with ~60% crit chance -> Eviscerate -> Repeat." }
+          ],
+          bisGear: [
+            { slot: "Boots", item: "Footpads of the Fang", source: "Wailing Caverns", stats: "+4 Agi, +4 Sta, +4 Int" },
+            { slot: "Chest", item: "Tunic of Westfall", source: "Deadmines Quest", stats: "+11 Agi, +5 Sta" }
+          ],
+          campingPerk: {
+            name: "Silent Camouflage (+20% Stealth Speed)",
+            desc: "Camp rest bonus increases stealth movement speed by an additional 20% for 2 hours."
+          },
+          classQuestNote: "Vanish and Pickpocket quests grant valuable lockboxes and poison ingredients."
+        }
+      ]
+    }
   };
 }

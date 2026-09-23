@@ -29,6 +29,11 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       "icon": "📜"
     },
     {
+      "id": "betaBuilds",
+      "label": "⚡ Beta L20 Builds",
+      "icon": "⚡"
+    },
+    {
       "id": "enhancement",
       "label": "Enhancement Melee",
       "icon": "⚡"
@@ -499,6 +504,105 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       "statusType": "verified",
       "source": "Sodapoppin Hands-On Demo"
     }
-  ]
+  ],
+  "betaBuilds": {
+    "season": "Closed Beta Phase 1",
+    "levelCap": 20,
+    "talentPointsTotal": 11,
+    "legacyPointsNotice": "Legacy Milestones allow up to +2 to +5 additional points at Level 20.",
+    "specs": [
+      {
+        "specId": "enhancement",
+        "name": "Enhancement (Rockbiter & Thundering)",
+        "icon": "⚡",
+        "role": "Melee Physical & Spell DPS",
+        "wowheadCalcUrl": "https://www.wowhead.com/forever/talent-calc/shaman/-500501",
+        "tagline": "Thunderous melee power with flat Rockbiter Attack Power, +5% melee crit, and shock burst.",
+        "statPriority": "Strength > Agility > Attack Power > Intellect",
+        "bestWeapon": "Slow Two-Handed Mace / Axe (Smite's Mighty Hammer / Axe of Orgrimmar)",
+        "talents": [
+          { "name": "Ancestral Knowledge", "points": "5/5", "tree": "Enhancement (Tier 1)", "desc": "Increases your maximum Mana by 5%." },
+          { "name": "Thundering Strikes", "points": "5/5", "tree": "Enhancement (Tier 2)", "desc": "Improves your chance to get a critical strike with melee weapons by 5%." },
+          { "name": "Enhancing Totems", "points": "1/2", "tree": "Enhancement (Tier 2)", "desc": "Increases the effect of your Strength of Earth and Grace of Air Totems by 8%." }
+        ],
+        "legacyNotes": "Extra points obtained through Legacy Discovery unlock Flurry (+30% attack speed on crits) and 8-second Stormstrike.",
+        "rotation": [
+          { "label": "Imbue & Totem", desc: "Imbue weapon with Rockbiter Weapon (60-minute duration) -> drop Strength of Earth and Searing Totem." },
+          { "label": "Rotational Strike", desc: "Melee auto-attack swing -> Earth Shock on cooldown -> Lightning Shield refresh." },
+          { "label": "Interrupt", desc: "Earth Shock rank 1 downranked to interrupt enemy casts at minimal mana cost." }
+        ],
+        "bisGear": [
+          { "slot": "Two-Hand Weapon", item: "Smite's Mighty Hammer", source: "Deadmines (Mr. Smite)", stats: "+11 Strength, 19.8 DPS" },
+          { "slot": "Two-Hand (Horde)", item: "Axe of Orgrimmar (Rare)", source: "Leaders of the Fang Quest", stats: "+9 Str, +3 Sta, 21.4 DPS" },
+          { "slot": "Boots", item: "Thane's Mail Boots", source: "Hall of Thanes (Ironforge)", stats: "+6 Str, +5 Sta" },
+          { "slot": "Gloves", item: "Cobrahn's Grasp", source: "Wailing Caverns", stats: "+6 Agi, +3 Sta" }
+        ],
+        "campingPerk": {
+          "name": "Totemic Guidance (+5% Strength & Intellect)",
+          "desc": "Setting camp with a Cozy Sleeping Bag provides 200% rested XP rate and grants the 'Ancestral Blessing' 2-hour +5% Str/Int buff."
+        },
+        "classQuestNote": "Level 20 Shaman unlocks the Water Totem questline and Ghost Wolf indoor shifting."
+      },
+      {
+        "specId": "shaman_tank",
+        "name": "Shaman Tank (Rockbiter & Shield)",
+        "icon": "🛡️",
+        "role": "Dungeon Off-Tank / Main Tank",
+        "wowheadCalcUrl": "https://www.wowhead.com/forever/talent-calc/shaman/-050501",
+        "tagline": "Dungeon-viable tanking via Rockbiter threat multiplier, Earth Shock aggro, and 5/5 Shield Specialization.",
+        "statPriority: ": "Stamina > Armor > Strength > Agility",
+        "bestWeapon": "One-Hand Mace/Axe + Shield (Commander's Crest / Kresh's Back)",
+        "talents": [
+          { "name": "Shield Specialization", "points": "5/5", "tree": "Enhancement (Tier 1)", "desc": "Increases your chance to block attacks with a shield by 5% and increases block value by 25%." },
+          { "name": "Ancestral Knowledge", "points": "5/5", "tree": "Enhancement (Tier 1)", "desc": "Increases maximum mana pool by 5% to fuel high-threat shocks." },
+          { "name": "Guardian Totems", "points": "1/2", "tree": "Enhancement (Tier 2)", "desc": "Increases armor provided by Stoneskin Totem and reduces Grounding Totem cooldown." }
+        ],
+        "legacyNotes": "Extra Legacy points unlock Spirit Weapons (parry chance and 20% threat bonus on Rockbiter).",
+        "rotation": [
+          { "label": "Pull & Hold", desc: "Rockbiter Weapon -> Earth Shock max rank (massive threat multiplier) -> Stoneskin Totem drop." },
+          { "label": "Mitigation", desc: "Shield Block on physical hits; use Stoneform (Dwarf) or War Stomp (Tauren) for pack control." }
+        ],
+        "bisGear": [
+          { "slot": "Shield", item: "Commander's Crest", source: "Shadowfang Keep (Springvale)", stats: "542 Armor, 16 Block, +6 Str, +3 Sta" },
+          { "slot": "One-Hand", item: "Thief's Blade", source: "Deadmines (Mr. Smite)", stats: "+6 Agility, 15.6 DPS" },
+          { "slot": "Chest", item: "Totemic Vestments", source: "Ruins of Lordaeron", stats: "+7 Str, +6 Sta" }
+        ],
+        "campingPerk": {
+          "name": "Earthen Wall (+10% Shield Block Value)",
+          "desc": "Camp rest bonus increases Shield Block Value by 10% and Stoneskin Totem armor by 15% for 2 hours."
+        },
+        "classQuestNote": "Water Totem questline grants Healing Stream Totem and Mana Spring Totem."
+      },
+      {
+        "specId": "elemental",
+        "name": "Elemental (Storm & Flame Shocks)",
+        "icon": "🌋",
+        "role": "Ranged Nature & Fire DPS",
+        "wowheadCalcUrl": "https://www.wowhead.com/forever/talent-calc/shaman/505001",
+        "tagline": "Long-range Lightning Bolts combined with low-cost shocks via Convection and Conduction.",
+        "statPriority": "Spell Power > Nature Damage > Intellect > Spirit",
+        "bestWeapon": "Two-Handed Staff (Staff of Westfall / Emberstone Staff)",
+        "talents": [
+          { "name": "Convection", "points": "5/5", "tree": "Elemental (Tier 1)", desc: "Reduces the Mana cost of your Shock, Lightning Bolt, and Chain Lightning spells by 10%." },
+          { "name": "Conduction", "points": "5/5", tree: "Elemental (Tier 2)", desc: "Increases the damage done by your Lightning Bolt, Chain Lightning, and Shock spells by 5%." },
+          { "name": "Earth's Grasp", "points": "1/2", tree: "Elemental (Tier 2)", desc: "Increases the health of your Stoneclaw Totem and the radius of your Earthbind Totem by 25%." }
+        ],
+        "legacyNotes": "Extra Legacy points unlock Call of Thunder (+6% Lightning crit) and Elemental Focus (Clearcasting).",
+        "rotation": [
+          { "label": "Opener", desc: "Max range Lightning Bolt -> Flame Shock DoT -> Earthbind Totem kiting." },
+          { "label": "Burst", desc: "Lightning Bolt -> Earth Shock finisher on closing targets." }
+        ],
+        "bisGear": [
+          { "slot": "Staff", item: "Staff of Westfall", source: "Deadmines Quest", stats: "+11 Int, +5 Spi" },
+          { "slot": "Chest", item: "Robe of Arugal", source: "Shadowfang Keep", stats: "+10 Int, +5 Spi, +3 Agi" }
+        ],
+        "campingPerk": {
+          "name": "Fury of the Elements (+5% Spell Crit)",
+          "desc": "Resting beside an active Campfire grants +5% spell critical strike chance with Nature and Fire spells for 1 hour."
+        },
+        "classQuestNote": "Level 20 unlocks Fire Nova Totem and Water Totem mastery."
+      }
+    ]
+  }
 };
 }

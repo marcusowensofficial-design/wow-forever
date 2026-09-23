@@ -265,10 +265,23 @@ function initClassDeepDives() {
         renderDeepDiveContent();
       });
     });
+
+    // Attach beta spec tab event listeners
+    contentContainer.querySelectorAll('.beta-spec-tab-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const specIdx = parseInt(btn.getAttribute('data-spec-index'), 10);
+        window.selectedBetaBuildSpecIndex = window.selectedBetaBuildSpecIndex || {};
+        window.selectedBetaBuildSpecIndex[cData.id] = specIdx;
+        renderDeepDiveContent();
+      });
+    });
   }
 
   function renderDeepDiveSubTabBody(cData, subtab) {
-    if (subtab === 'core') {
+    if (subtab === 'betaBuilds' && cData.betaBuilds) {
+      return renderBetaBuildsSection(cData);
+    } else if (subtab === 'core') {
       return renderCoreRulesSection(cData);
     } else if (subtab === 'matrix') {
       return renderForensicMatrixSection(cData);
@@ -2325,6 +2338,218 @@ function initClassDeepDives() {
                 <p class="rule-card-desc">${escapeHtml(r.desc)}</p>
               </div>
             `).join('')}
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+  function renderBetaBuildsSection(cData) {
+    if (!cData.betaBuilds || !cData.betaBuilds.specs || cData.betaBuilds.specs.length === 0) {
+      return `
+        <div class="beta-builds-wrapper">
+          <div class="beta-builds-header-callout">
+            <h3 style="color: #fff; font-size: 1.3rem;">⚡ Level 20 Closed Beta Spec Builds</h3>
+            <p style="color: #cbd5e1; font-size: 0.95rem; margin-top: 0.4rem;">
+              Theorycrafted talent builds and dungeon rotations for this class are currently being compiled from closed beta testing.
+            </p>
+          </div>
+        </div>
+      `;
+    }
+
+    window.selectedBetaBuildSpecIndex = window.selectedBetaBuildSpecIndex || {};
+    let currentSpecIdx = window.selectedBetaBuildSpecIndex[cData.id] || 0;
+    if (currentSpecIdx >= cData.betaBuilds.specs.length) currentSpecIdx = 0;
+    const currentSpec = cData.betaBuilds.specs[currentSpecIdx];
+
+    return `
+      <div class="beta-builds-wrapper">
+        <!-- Beta Phase 1 Header Callout -->
+        <div class="beta-builds-header-callout">
+          <div class="beta-callout-top">
+            <div style="display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap;">
+              <h3 style="font-size: 1.35rem; color: #fff; margin: 0;">⚡ Level 20 Closed Beta Theorycraft & Spec Builds</h3>
+              <span class="beta-disclaimer-badge">Closed Beta Phase 1 • Level 20 Cap</span>
+              <span class="deepdive-badge badge-verified"><span>✓</span> 11 Talent Points Max</span>
+            </div>
+            <div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap;">
+              <a href="https://www.wowhead.com/forever/guides" target="_blank" rel="noopener" class="talent-calc-link-btn" style="padding: 0.35rem 0.75rem; font-size: 0.78rem;">
+                <span>📚</span> Wowhead Guides ↗
+              </a>
+              <a href="https://www.warcrafttavern.com/forever/" target="_blank" rel="noopener" class="talent-calc-link-btn" style="padding: 0.35rem 0.75rem; font-size: 0.78rem; background: linear-gradient(135deg, #854d0e, #ca8a04);">
+                <span>🍺</span> Warcraft Tavern ↗
+              </a>
+            </div>
+          </div>
+          <p style="font-size: 0.9rem; color: #cbd5e1; margin: 0.5rem 0 0.8rem; line-height: 1.55;">
+            In <strong>WoW: Forever Closed Beta Phase 1</strong>, players are capped at <strong>Level 20</strong>, granting exactly <strong>11 talent points</strong> (levels 10–20). Additional talent points (+2 to +5) can be unlocked early via <strong>Legacy Discovery Milestones</strong>. Below are the optimal leveling, dungeon speed-clearing, and PvP specs datamined and verified from beta testers.
+          </p>
+          <div style="font-size: 0.78rem; color: #94a3b8; display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+            <span>⚠️ <em>Beta Notice: Talent tree positions, spell values, and weapon scaling are actively tuned weekly before the official November 4th launch.</em></span>
+          </div>
+        </div>
+
+        <!-- Spec Switcher Bar -->
+        <div class="beta-spec-tabs-bar">
+          <span style="font-size: 0.82rem; font-weight: 700; color: var(--text-gold); text-transform: uppercase; letter-spacing: 0.05em; margin-right: 0.4rem;">Select Spec:</span>
+          ${cData.betaBuilds.specs.map((spec, idx) => `
+            <button class="beta-spec-tab-btn ${idx === currentSpecIdx ? 'active' : ''}" data-spec-index="${idx}">
+              <span>${spec.icon}</span> ${escapeHtml(spec.name)}
+              <span style="font-size: 0.72rem; opacity: 0.75; font-weight: normal;">• ${escapeHtml(spec.role)}</span>
+            </button>
+          `).join('')}
+        </div>
+
+        <!-- Active Spec Detail Panel -->
+        <div class="beta-spec-detail-panel">
+          <!-- Hero Banner -->
+          <div class="spec-hero-banner" style="border-left: 4px solid ${cData.color || '#eab308'};">
+            <div>
+              <div style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 0.35rem;">
+                <span style="font-size: 2rem;">${currentSpec.icon}</span>
+                <div>
+                  <h3 style="font-size: 1.5rem; color: #fff; margin: 0;">${escapeHtml(currentSpec.name)}</h3>
+                  <span style="font-size: 0.85rem; color: var(--text-gold); font-weight: 600;">${escapeHtml(currentSpec.role)}</span>
+                </div>
+              </div>
+              <p style="font-size: 0.95rem; color: #cbd5e1; margin: 0.4rem 0 0; max-width: 650px;">
+                ${escapeHtml(currentSpec.tagline)}
+              </p>
+            </div>
+
+            <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 0.6rem;">
+              <div class="spec-hero-meta">
+                <span class="role-pill" style="font-size: 0.8rem;">Stat: ${escapeHtml(currentSpec.statPriority || 'Intellect / Spirit')}</span>
+                <span class="role-pill" style="font-size: 0.8rem; background: rgba(59, 130, 246, 0.2); border-color: #3b82f6; color: #93c5fd;">Weapon: ${escapeHtml(currentSpec.bestWeapon || 'Two-Hand')}</span>
+              </div>
+              ${currentSpec.wowheadCalcUrl ? `
+                <a href="${currentSpec.wowheadCalcUrl}" target="_blank" rel="noopener" class="talent-calc-link-btn">
+                  <span>🔗</span> Open in Wowhead Talent Calculator ↗
+                </a>
+              ` : ''}
+            </div>
+          </div>
+
+          <!-- 2-Column Grid: Talents & Rotation -->
+          <div class="beta-build-grid-2col">
+            <!-- Talents Column -->
+            <div class="build-feature-box">
+              <h4>
+                <span>🧬</span> 11-Point Talent Tree Allocation (Level 20 Cap)
+              </h4>
+              <div class="talent-point-pill-list">
+                ${(currentSpec.talents || []).map(t => `
+                  <div class="talent-point-pill">
+                    <div style="display: flex; flex-direction: column; gap: 0.15rem;">
+                      <div style="display: flex; align-items: center; gap: 0.5rem;">
+                        <strong>${escapeHtml(t.name)}</strong>
+                        <span class="role-pill" style="font-size: 0.7rem; padding: 0.1rem 0.4rem;">${escapeHtml(t.tree)}</span>
+                      </div>
+                      <span style="font-size: 0.78rem; color: #94a3b8; line-height: 1.35;">${escapeHtml(t.desc)}</span>
+                    </div>
+                    <span style="font-size: 0.95rem; font-weight: 800; color: #fef08a; background: rgba(234, 179, 8, 0.2); padding: 0.25rem 0.55rem; border-radius: 4px; border: 1px solid #eab308; margin-left: 0.75rem; white-space: nowrap;">
+                      ${escapeHtml(t.points)}
+                    </span>
+                  </div>
+                `).join('')}
+              </div>
+
+              ${currentSpec.legacyNotes ? `
+                <div style="background: rgba(56, 189, 248, 0.1); border: 1px solid rgba(56, 189, 248, 0.3); border-radius: var(--radius-sm); padding: 0.75rem 0.9rem; margin-top: 0.75rem; font-size: 0.82rem; color: #bae6fd;">
+                  <strong style="color: #38bdf8; display: block; margin-bottom: 0.2rem;">✨ Legacy Discovery Extra Points (+2 to +5):</strong>
+                  ${escapeHtml(currentSpec.legacyNotes)}
+                </div>
+              ` : ''}
+            </div>
+
+            <!-- Rotation Column -->
+            <div class="build-feature-box">
+              <h4>
+                <span>⚔️</span> Level 20 Combat Priority & Rotational Loop
+              </h4>
+              <ol class="rotation-step-list">
+                ${(currentSpec.rotation || []).map(r => `
+                  <li class="rotation-step-item">
+                    <div>
+                      <strong style="color: #fff; font-size: 0.88rem; display: block; margin-bottom: 0.15rem;">${escapeHtml(r.label)}</strong>
+                      <span>${escapeHtml(r.desc)}</span>
+                    </div>
+                  </li>
+                `).join('')}
+              </ol>
+            </div>
+          </div>
+
+          <!-- Bottom Row: Dungeon BiS & Camping / Class Quests -->
+          <div class="beta-build-grid-2col">
+            <!-- Dungeon BiS Gear -->
+            <div class="build-feature-box">
+              <h4>
+                <span>🛡️</span> Level 15–20 Dungeon Pre-BiS Targets
+              </h4>
+              <div class="dungeon-bis-table-wrap">
+                <table class="dungeon-bis-table">
+                  <thead>
+                    <tr>
+                      <th>Slot</th>
+                      <th>Item Name</th>
+                      <th>Source Dungeon / Boss</th>
+                      <th>Key Stats & Value</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    ${(currentSpec.bisGear || []).map(g => `
+                      <tr>
+                        <td style="font-weight: 600; color: #fff;">${escapeHtml(g.slot)}</td>
+                        <td><span class="${g.item.includes('Thane') || g.item.includes('Necromantic') || g.item.includes('Arugal') || g.item.includes('Smite') || g.item.includes('Cruel') || g.item.includes('Barb') || g.item.includes('Venomstrike') ? 'item-quality-blue' : 'item-quality-green'}">${escapeHtml(g.item)}</span></td>
+                        <td style="color: var(--text-gold); font-size: 0.82rem;">${escapeHtml(g.source)}</td>
+                        <td style="font-size: 0.8rem; color: #94a3b8;">${escapeHtml(g.stats)}</td>
+                      </tr>
+                    `).join('')}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- Camping Perk & Class Quests -->
+            <div class="build-feature-box">
+              <h4>
+                <span>⛺</span> Camping Perks & Level 20 Class Quests
+              </h4>
+              <div style="display: flex; flex-direction: column; gap: 1rem;">
+                ${currentSpec.campingPerk ? `
+                  <div style="background: rgba(0, 0, 0, 0.35); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: var(--radius-sm); padding: 0.85rem;">
+                    <div style="margin-bottom: 0.4rem;">
+                      <span class="camping-perk-badge">⛺ ${escapeHtml(currentSpec.campingPerk.name)}</span>
+                    </div>
+                    <p style="font-size: 0.84rem; color: #cbd5e1; margin: 0; line-height: 1.45;">
+                      ${escapeHtml(currentSpec.campingPerk.desc)}
+                    </p>
+                  </div>
+                ` : ''}
+
+                ${currentSpec.classQuestNote ? `
+                  <div style="background: rgba(234, 179, 8, 0.08); border: 1px solid rgba(234, 179, 8, 0.25); border-radius: var(--radius-sm); padding: 0.85rem;">
+                    <strong style="color: var(--text-gold); font-size: 0.88rem; display: flex; align-items: center; gap: 0.4rem; margin-bottom: 0.3rem;">
+                      <span>📜</span> Level 20 Milestone Class Quest
+                    </strong>
+                    <p style="font-size: 0.84rem; color: #cbd5e1; margin: 0; line-height: 1.45;">
+                      ${escapeHtml(currentSpec.classQuestNote)}
+                    </p>
+                  </div>
+                ` : ''}
+
+                <div style="background: rgba(16, 185, 129, 0.08); border: 1px solid rgba(16, 185, 129, 0.25); border-radius: var(--radius-sm); padding: 0.85rem;">
+                  <strong style="color: #6ee7b7; font-size: 0.88rem; display: flex; align-items: center; gap: 0.4rem; margin-bottom: 0.3rem;">
+                    <span>🏰</span> Dungeon XP & Quest Policy in WoW Forever
+                  </strong>
+                  <p style="font-size: 0.82rem; color: #94a3b8; margin: 0; line-height: 1.45;">
+                    Raw trash mob experience inside dungeons is reduced to prevent repetitive dungeon boosting. However, completed <strong>Dungeon Quests grant massive bonus XP (up to 40% of a level per quest) and upgraded Rare (Blue) gear</strong>. Always collect every dungeon quest before entering!
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

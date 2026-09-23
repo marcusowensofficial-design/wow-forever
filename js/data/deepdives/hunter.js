@@ -462,6 +462,11 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       "icon": "📜"
     },
     {
+      "id": "betaBuilds",
+      "label": "⚡ Beta L20 Builds",
+      "icon": "⚡"
+    },
+    {
       "id": "survival",
       "label": "Survival Melee",
       "icon": "⚔️"
@@ -486,6 +491,110 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       "label": "Verification Matrix",
       "icon": "🔬"
     }
-  ]
+  ],
+  "betaBuilds": {
+    "season": "Closed Beta Phase 1",
+    "levelCap": 20,
+    "talentPointsTotal": 11,
+    "legacyPointsNotice": "Legacy Milestones allow up to +2 to +5 additional points at Level 20.",
+    "specs": [
+      {
+        "specId": "survival",
+        "name": "Survival (Melee Vanguard)",
+        "icon": "⚔️",
+        "role": "Melee DPS & Trapper",
+        "wowheadCalcUrl": "https://www.wowhead.com/forever/talent-calc/hunter/--500501",
+        "tagline": "High-sustain melee brawler exploiting Strider Kick, Mongoose Bite bleed stacking, and in-combat traps.",
+        "statPriority": "Agility > Melee Attack Power > Stamina > Hit",
+        "bestWeapon": "Two-Handed Axe/Mace or Dual-Wield (Smite's Mighty Hammer / Cruel Barb)",
+        "talents": [
+          { "name": "Monster Slaying", "points": "3/3", "tree": "Survival (Tier 1)", "desc": "Increases all damage taken by and critical strike chance against Beasts by 3%." },
+          { "name": "Humanoid Slaying", "points": "2/2", "tree": "Survival (Tier 1)", "desc": "Increases all damage taken by and critical strike chance against Humanoids by 3%." },
+          { "name": "Savage Strikes", "points": "5/5", "tree": "Survival (Tier 2)", "desc": "Increases critical strike chance of Raptor Strike and Mongoose Bite by 20%." },
+          { "name": "Deflection", "points": "1/5", "tree": "Survival (Tier 2)", "desc": "Increases parry chance by 1%, setting up Mongoose Bite and Counterattack procs." }
+        ],
+        "legacyNotes": "Use Legacy Discovery bonus points to max 5/5 Deflection and unlock Counterattack (5-sec root & physical burst).",
+        "rotation": [
+          { "label": "Opener", "desc": "Drop Freezing Trap in-combat directly beneath target -> Wing Clip to establish melee supremacy." },
+          { "label": "Core Melee Loop", "desc": "Raptor Strike on cooldown -> Strider Kick (instant 100% weapon dmg) -> Mongoose Bite immediately on parry." },
+          { "label": "Bleed Upkeep", "desc": "Mongoose Bite applies a 21-second bleed equal to 40% damage dealt; maintain bleed on elites." },
+          { "label": "AoE Engagements", "desc": "Explosive Trap into Immolation Trap weave while cleaving with Carve/Raptor." }
+        ],
+        "bisGear": [
+          { "slot": "Two-Hand Weapon", "item": "Smite's Mighty Hammer", "source": "Deadmines (Mr. Smite)", "stats": "+11 Strength, 19.8 DPS" },
+          { "slot": "Main Hand (Dual-Wield)", "item": "Cruel Barb", "source": "Deadmines (Edwin VanCleef)", "stats": "+12 Attack Power, 18.2 DPS" },
+          { "slot": "Off Hand", "item": "Wingblade", "source": "Wailing Caverns (Leaders Quest)", "stats": "+5 Agi, +2 Sta, 14.1 DPS" },
+          { "slot": "Chest", "item": "Mutant Scale Breastplate", "source": "Wailing Caverns (Deviate Faerie)", "stats": "+9 Agility, +4 Stamina" },
+          { "slot": "Ranged", "item": "Venomstrike", "source": "Wailing Caverns (Lord Cobrahn)", "stats": "12.3 DPS, Chance on Hit: 31-45 Poison" }
+        ],
+        "campingPerk": {
+          "name": "Trapper's Focus (+5% Agility)",
+          "desc": "Resting inside a Camping Tent or Cozy Sleeping Bag grants a 2-hour +5% Agility buff and 10% faster trap arming."
+        },
+        "classQuestNote": "Level 20 Hunter unlocks Aspect of the Cheetah and Dual-Wielding trainer quest, enabling double 1-handed weapons."
+      },
+      {
+        "specId": "marksmanship",
+        "name": "Marksmanship (Sniper)",
+        "icon": "🏹",
+        "role": "Ranged Physical DPS",
+        "wowheadCalcUrl": "https://www.wowhead.com/forever/talent-calc/hunter/-505001",
+        "tagline": "Devastating single-target ranged burst opening with baseline Aimed Shot and tight auto-shot clipping.",
+        "statPriority": "Agility > Ranged AP > Intellect > Stamina",
+        "bestWeapon": "Bow or Gun (Venomstrike / Dwarven Blunderbuss)",
+        "talents": [
+          { "name": "Efficiency", "points": "5/5", "tree": "Marksmanship (Tier 1)", "desc": "Reduces the mana cost of all Shots and Stings by 10%, sustaining boss DPS." },
+          { "name": "Lethal Shots", "points": "5/5", "tree": "Marksmanship (Tier 2)", "desc": "Increases your ranged critical strike chance by 5%." },
+          { "name": "Concussive Barrage", "points": "1/5", "tree": "Marksmanship (Tier 3)", "desc": "Gives Chimera/Auto shots a 4% chance to daze the target for 4 seconds." }
+        ],
+        "legacyNotes": "Extra Legacy points unlock 5/5 Improved Arcane Shot and Mortal Shots (+30% ranged crit damage).",
+        "rotation": [
+          { "label": "Opener", "desc": "Hunter's Mark -> baseline Aimed Shot cast from 35 yards -> Serpent Sting." },
+          { "label": "Rotational Cycle", "desc": "Auto Shot swing timer clipping -> Arcane Shot -> Multi-Shot on cooldown." },
+          { "label": "Dead-Zone Management", "desc": "Concussive Shot to snare approaching enemies; drop Frost Trap if breached." }
+        ],
+        "bisGear": [
+          { "slot": "Ranged Weapon", "item": "Venomstrike", "source": "Wailing Caverns (Lord Cobrahn)", "stats": "12.3 DPS, Nature Proc" },
+          { "slot": "Ranged (Alt)", "item": "Dwarven Mountaineer Blunderbuss", "source": "Hall of Thanes (Ironforge)", "stats": "+4 Agility, 13.0 DPS" },
+          { "slot": "Gloves", "item": "Cobrahn's Grasp", "source": "Wailing Caverns (Lord Cobrahn)", "stats": "+6 Agility, +3 Stamina" },
+          { "slot": "Legs", "item": "Chausses of Westfall", "source": "Deadmines (Defias Quest)", "stats": "+11 Agility, +5 Stamina" }
+        ],
+        "campingPerk": {
+          "name": "Eagle Sight (+5% Ranged Crit)",
+          "desc": "Camp rest bonus increases maximum shot range by 3 yards and grants +5% Ranged Critical Strike chance."
+        },
+        "classQuestNote": "Level 20 Hunter unlocks Tranquilizing Shot preview and upgraded Heavy Quivers (+12% Ranged Attack Speed)."
+      },
+      {
+        "specId": "beastmastery",
+        "name": "Beast Mastery (Pet Commander)",
+        "icon": "🐾",
+        "role": "Ranged DPS / Solo Tanking",
+        "wowheadCalcUrl": "https://www.wowhead.com/forever/talent-calc/hunter/500501",
+        "tagline": "Unbreakable solo survivability through hardened pets with direct ground-placement command.",
+        "statPriority": "Agility > Stamina > Spirit",
+        "bestWeapon": "Bow / Polearm with Pet Support Stats",
+        "talents": [
+          { "name": "Endurance Training", "points": "5/5", "tree": "Beast Mastery (Tier 1)", "desc": "Increases the health of your pets by 15% and your health by 5%." },
+          { "name": "Thick Hide", "points": "5/5", "tree": "Beast Mastery (Tier 2)", "desc": "Increases the armor rating of your pets by 30%, holding dungeon trash effortlessly." },
+          { "name": "Bestial Swiftness", "points": "1/1", "tree": "Beast Mastery (Tier 3)", "desc": "Increases outdoor movement speed of your pets by 30%." }
+        ],
+        "legacyNotes": "Extra Legacy points push towards Unleashed Fury (+20% pet damage) and Ferocity (+15% pet crit).",
+        "rotation": [
+          { "label": "Pull", "desc": "Direct pet ground-click command into pack -> Hunter's Mark -> Growl." },
+          { "label": "Sustained DPS", "desc": "Auto Shot -> Serpent Sting -> keep Mend Pet rolling to sustain pet tanking." }
+        ],
+        "bisGear": [
+          { "slot": "Chest", "item": "Armor of the Fang (3-Piece)", "source": "Wailing Caverns (Fang Bosses)", "stats": "+20 Attack Power bonus" },
+          { "slot": "Boots", "item": "Footpads of the Fang", "source": "Wailing Caverns (Lord Pythas)", "stats": "+4 Agi, +4 Sta, +4 Int" }
+        ],
+        "campingPerk": {
+          "name": "Bond of the Pack (+10% Pet Damage)",
+          "desc": "Camping grants a bonded aura that raises Pet Attack Power and health regeneration by 15%."
+        },
+        "classQuestNote": "Level 20 Beast Mastery quest unlocks Summon Hawk (aerial scout & blind utility) and Call Pet slot 2."
+      }
+    ]
+  }
 };
 }

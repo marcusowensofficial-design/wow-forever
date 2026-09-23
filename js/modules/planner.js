@@ -144,6 +144,31 @@ function initClassRacePlanner() {
       `;
     }
 
+    // Stat Conversion Highlights for selected class
+    if (WOW_FOREVER_DATA.classStatConversions && WOW_FOREVER_DATA.classStatConversions[cls.id]) {
+      const sc = WOW_FOREVER_DATA.classStatConversions[cls.id];
+      heroHtml += `
+        <div class="class-stat-mini-bar" style="margin-top: 1rem; padding: 0.85rem 1.1rem; background: rgba(0,0,0,0.35); border: 1px solid rgba(255,255,255,0.08); border-left: 3px solid ${cls.color}; border-radius: var(--radius-sm); display: flex; flex-direction: column; gap: 0.5rem;">
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
+            <div style="display: flex; align-items: center; gap: 0.4rem;">
+              <span style="font-size: 1rem;">📊</span>
+              <strong style="color: #fff; font-size: 0.88rem; text-transform: uppercase; letter-spacing: 0.05em;">${escapeHtml(cls.name)} Stat Scaling Formulas:</strong>
+            </div>
+            <button type="button" class="btn-goto-stat-guide" style="background: none; border: none; color: var(--text-gold); font-size: 0.78rem; cursor: pointer; text-decoration: underline; padding: 0;">
+              View Full Stats & Attributes Guide →
+            </button>
+          </div>
+          <div style="display: flex; gap: 0.4rem; flex-wrap: wrap;">
+            ${sc.highlights.map(h => `
+              <span class="status-badge-highlight" style="font-size: 0.72rem; background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.12); color: #cbd5e1;">
+                ✦ ${escapeHtml(h)}
+              </span>
+            `).join('')}
+          </div>
+        </div>
+      `;
+    }
+
     // Deep Dive CTA banner if available
     const deepDiveData = WOW_FOREVER_DATA.classDeepDives && WOW_FOREVER_DATA.classDeepDives[cls.id];
     if (deepDiveData && deepDiveData.hasData) {
@@ -169,6 +194,18 @@ function initClassRacePlanner() {
     heroContainers.forEach(h => {
       h.style.display = 'block';
       h.innerHTML = heroHtml;
+      h.querySelectorAll('.btn-goto-stat-guide').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const codexTabBtn = document.querySelector('.nav-tab-btn[data-tab="codex"]');
+          if (codexTabBtn) codexTabBtn.click();
+          const statsCodexBtn = document.querySelector('.codex-nav-btn[data-codex="stats"]');
+          if (statsCodexBtn) statsCodexBtn.click();
+          const target = document.getElementById('codex-stats');
+          if (target) {
+            setTimeout(() => target.scrollIntoView({ behavior: 'smooth' }), 100);
+          }
+        });
+      });
       h.querySelectorAll('.jump-to-deepdive-btn').forEach(btn => {
         btn.addEventListener('click', () => {
           const classId = btn.getAttribute('data-class-id');

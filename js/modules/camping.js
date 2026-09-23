@@ -131,34 +131,218 @@ function renderMountsGallery() {
 function renderStatsAndCaps() {
   const capsContainer = document.getElementById('stats-caps-container');
   const rulesContainer = document.getElementById('combat-rules-container');
-  if (!WOW_FOREVER_DATA.statCapsAndMechanics) return;
+  const matrixContainer = document.getElementById('class-stat-matrix-container');
+  const tableContainer = document.getElementById('all-class-stat-table-container');
+  const toggleTableBtn = document.getElementById('toggle-all-class-table-btn');
+  const tableCollapsible = document.getElementById('all-class-table-collapsible');
+  const primaryContainer = document.getElementById('primary-stats-container');
+  const secondaryContainer = document.getElementById('secondary-stats-container');
+  const defensiveContainer = document.getElementById('defensive-stats-container');
+  const modifiersContainer = document.getElementById('modifiers-rules-container');
 
-  const { caps, rules } = WOW_FOREVER_DATA.statCapsAndMechanics;
+  // 1. Interactive Class Stat Conversion Matrix
+  if (matrixContainer && WOW_FOREVER_DATA.classStatConversions) {
+    const classes = Object.keys(WOW_FOREVER_DATA.classStatConversions);
+    let selectedClassKey = 'warrior';
 
-  if (capsContainer) {
-    capsContainer.innerHTML = caps.map(cap => `
-      <div class="stat-cap-card">
-        <div class="stat-cap-top">
-          <span style="font-size: 1.8rem;">${cap.icon}</span>
-          <span class="cap-target-badge">${escapeHtml(cap.target)}</span>
+    function renderClassStatExplorer() {
+      const cls = WOW_FOREVER_DATA.classStatConversions[selectedClassKey] || WOW_FOREVER_DATA.classStatConversions.warrior;
+
+      matrixContainer.innerHTML = `
+        <div class="stat-matrix-selector-bar">
+          ${classes.map(k => {
+            const c = WOW_FOREVER_DATA.classStatConversions[k];
+            const isActive = k === selectedClassKey;
+            return `
+              <button type="button" class="stat-class-btn ${isActive ? 'active' : ''}" data-stat-class="${k}" style="${isActive ? `border-color: ${c.color}; color: #fff;` : ''}">
+                <span>${c.icon}</span>
+                <span>${escapeHtml(c.name)}</span>
+              </button>
+            `;
+          }).join('')}
         </div>
-        <div class="stat-cap-value">${escapeHtml(cap.value)}</div>
-        <h4 class="stat-cap-name">${escapeHtml(cap.name)}</h4>
-        <p class="stat-cap-desc">${escapeHtml(cap.desc)}</p>
-      </div>
-    `).join('');
+
+        <div class="class-stat-display-card" style="border-left: 4px solid ${cls.color};">
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 1rem;">
+            <div style="display: flex; align-items: center; gap: 0.75rem;">
+              <span style="font-size: 2rem;">${cls.icon}</span>
+              <div>
+                <h4 style="color: ${cls.color}; font-size: 1.4rem; margin: 0; font-family: var(--font-heading);">${escapeHtml(cls.name)} Stat Scaling</h4>
+                <span class="role-pill" style="font-size: 0.75rem;">${escapeHtml(cls.role)}</span>
+              </div>
+            </div>
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+              ${cls.highlights.map(h => `
+                <span class="status-badge-highlight" style="font-size: 0.75rem; background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.15); color: #e2e8f0;">
+                  ✦ ${escapeHtml(h)}
+                </span>
+              `).join('')}
+            </div>
+          </div>
+
+          <div class="class-stat-grid-5">
+            <div class="class-stat-cell">
+              <div class="class-stat-cell-title" style="color: #ef4444;">
+                <span>💪</span> Strength
+              </div>
+              <div class="class-stat-cell-value">${escapeHtml(cls.strength)}</div>
+            </div>
+            <div class="class-stat-cell">
+              <div class="class-stat-cell-title" style="color: #10b981;">
+                <span>🏃</span> Agility
+              </div>
+              <div class="class-stat-cell-value">${escapeHtml(cls.agility)}</div>
+            </div>
+            <div class="class-stat-cell">
+              <div class="class-stat-cell-title" style="color: #38bdf8;">
+                <span>🧠</span> Intellect
+              </div>
+              <div class="class-stat-cell-value">${escapeHtml(cls.intellect)}</div>
+            </div>
+            <div class="class-stat-cell">
+              <div class="class-stat-cell-title" style="color: #f59e0b;">
+                <span>❤️</span> Stamina
+              </div>
+              <div class="class-stat-cell-value">${escapeHtml(cls.stamina)}</div>
+            </div>
+            <div class="class-stat-cell">
+              <div class="class-stat-cell-title" style="color: #c084fc;">
+                <span>✨</span> Spirit
+              </div>
+              <div class="class-stat-cell-value">${escapeHtml(cls.spirit)}</div>
+            </div>
+          </div>
+
+          <div style="background: rgba(0,0,0,0.3); border: 1px dashed rgba(255,255,255,0.15); border-radius: 6px; padding: 0.85rem 1.1rem; margin-top: 1rem;">
+            <p style="font-size: 0.88rem; color: #cbd5e1; line-height: 1.5; margin: 0;">
+              <strong style="color: var(--text-gold);">Tactical Summary:</strong> ${escapeHtml(cls.summary)}
+            </p>
+          </div>
+        </div>
+      `;
+
+      matrixContainer.querySelectorAll('.stat-class-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          selectedClassKey = btn.getAttribute('data-stat-class');
+          renderClassStatExplorer();
+        });
+      });
+    }
+
+    renderClassStatExplorer();
+
+    // 2. Full 9-Class Comparison Table
+    if (tableContainer) {
+      tableContainer.innerHTML = `
+        <div class="stat-comparison-table-wrapper">
+          <table class="stat-comparison-table">
+            <thead>
+              <tr>
+                <th>Class</th>
+                <th>Strength → Melee AP / Block</th>
+                <th>Agility → AP / Armor</th>
+                <th>Agility → 1% Crit</th>
+                <th>Agility → 1% Dodge</th>
+                <th>Intellect → 1% Spell Crit</th>
+                <th>Stamina & Spirit Notes</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${classes.map(k => {
+                const c = WOW_FOREVER_DATA.classStatConversions[k];
+                return `
+                  <tr>
+                    <td>
+                      <strong style="color: ${c.color}; display: flex; align-items: center; gap: 0.35rem;">
+                        <span>${c.icon}</span> ${escapeHtml(c.name)}
+                      </strong>
+                    </td>
+                    <td>${escapeHtml(c.strength)}</td>
+                    <td>${escapeHtml(c.agility.split('•')[0] || c.agility)}</td>
+                    <td><strong style="color: var(--text-gold);">${escapeHtml(c.agility.includes('Crit') ? c.agility.match(/[0-9.]+ Agi = 1% [A-Za-z ]*Crit/)?.[0] || '20 Agi = 1% Crit' : '20 Agi = 1% Crit')}</strong></td>
+                    <td><strong style="color: #6ee7b7;">${escapeHtml(c.agility.includes('Dodge') ? c.agility.match(/[0-9.]+ Agi = 1% Dodge/)?.[0] || '20 Agi = 1% Dodge' : '20 Agi = 1% Dodge')}</strong></td>
+                    <td><strong style="color: #7dd3fc;">${escapeHtml(c.intellect.includes('Spell Crit') ? c.intellect.match(/~?[0-9.]+ Int = 1% Spell Crit/)?.[0] || 'N/A' : 'N/A')}</strong></td>
+                    <td style="font-size: 0.8rem; color: #94a3b8;">${escapeHtml(c.spirit)}</td>
+                  </tr>
+                `;
+              }).join('')}
+            </tbody>
+          </table>
+        </div>
+      `;
+    }
+
+    // Toggle button for all-class table
+    if (toggleTableBtn && tableCollapsible) {
+      toggleTableBtn.addEventListener('click', () => {
+        const isHidden = tableCollapsible.style.display === 'none';
+        tableCollapsible.style.display = isHidden ? 'block' : 'none';
+        toggleTableBtn.innerHTML = isHidden 
+          ? `<span>✕</span> Hide Comparison Table` 
+          : `<span>📋</span> View Full 9-Class Comparison Table`;
+      });
+    }
   }
 
-  if (rulesContainer) {
-    rulesContainer.innerHTML = rules.map(rule => `
-      <div class="combat-rule-card">
-        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.4rem;">
-          <span style="color: var(--text-gold); font-size: 1.1rem;">⚖️</span>
-          <h4 style="color: #fff; font-size: 1.05rem; margin: 0;">${escapeHtml(rule.title)}</h4>
+  // 3. Render Stats Guide Sections
+  const guide = WOW_FOREVER_DATA.statsOverviewGuide;
+
+  if (guide) {
+    function renderCards(container, list) {
+      if (!container || !list) return;
+      container.innerHTML = list.map(item => `
+        <div class="stat-detail-card">
+          <div class="stat-detail-top">
+            <div class="stat-detail-header">
+              <span class="stat-detail-icon">${item.icon}</span>
+              <div>
+                <h4 class="stat-detail-name">${escapeHtml(item.name)}</h4>
+                ${item.role ? `<span style="font-size: 0.72rem; text-transform: uppercase; color: var(--text-gold); font-weight: 700;">${escapeHtml(item.role)}</span>` : ''}
+              </div>
+            </div>
+          </div>
+          <ul class="stat-bullet-list">
+            ${item.bullets.map(b => `<li>${b}</li>`).join('')}
+          </ul>
         </div>
-        <p style="font-size: 0.85rem; color: #cbd5e1; line-height: 1.5; margin: 0;">${escapeHtml(rule.desc)}</p>
-      </div>
-    `).join('');
+      `).join('');
+    }
+
+    renderCards(primaryContainer, guide.primaryStats);
+    renderCards(secondaryContainer, guide.secondaryStats);
+    renderCards(defensiveContainer, guide.defensiveStats);
+    renderCards(modifiersContainer, guide.modifiersAndRules);
+  }
+
+  // 4. Endgame Stat Caps Cards
+  if (WOW_FOREVER_DATA.statCapsAndMechanics) {
+    const { caps, rules } = WOW_FOREVER_DATA.statCapsAndMechanics;
+
+    if (capsContainer) {
+      capsContainer.innerHTML = caps.map(cap => `
+        <div class="stat-cap-card">
+          <div class="stat-cap-top">
+            <span style="font-size: 1.8rem;">${cap.icon}</span>
+            <span class="cap-target-badge">${escapeHtml(cap.target)}</span>
+          </div>
+          <div class="stat-cap-value">${escapeHtml(cap.value)}</div>
+          <h4 class="stat-cap-name">${escapeHtml(cap.name)}</h4>
+          <p class="stat-cap-desc">${escapeHtml(cap.desc)}</p>
+        </div>
+      `).join('');
+    }
+
+    if (rulesContainer) {
+      rulesContainer.innerHTML = rules.map(rule => `
+        <div class="combat-rule-card">
+          <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.4rem;">
+            <span style="color: var(--text-gold); font-size: 1.1rem;">⚖️</span>
+            <h4 style="color: #fff; font-size: 1.05rem; margin: 0;">${escapeHtml(rule.title)}</h4>
+          </div>
+          <p style="font-size: 0.85rem; color: #cbd5e1; line-height: 1.5; margin: 0;">${escapeHtml(rule.desc)}</p>
+        </div>
+      `).join('');
+    }
   }
 }
 
