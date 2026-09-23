@@ -2067,14 +2067,23 @@ local function UpdateNameTypography(unitFrame, passedUnit)
             elseif unit and UnitExists(unit) and baseName ~= "" and ForeverPlatesDB.showEliteBadges then
                 local ok, cType = pcall(UnitClassification, unit)
                 if ok and cType and not (issecretvalue and issecretvalue(cType)) then
-                    if cType == "worldboss" or cType == "boss" then
-                        displayName = baseName .. " |cffff2020[☠ Boss]|r"
+                    local isBoss = (cType == "worldboss" or cType == "boss")
+                    if not isBoss and UnitLevel then
+                        local okLvl, lvl = pcall(UnitLevel, unit)
+                        if okLvl and lvl and not (issecretvalue and issecretvalue(lvl)) and lvl == -1 then
+                            isBoss = true
+                        end
+                    end
+
+                    local isLong = (ForeverPlatesDB.eliteBadgeStyle == "LONG")
+                    if isBoss then
+                        displayName = baseName .. " |cffff2020[Boss]|r"
                     elseif cType == "rareelite" then
-                        displayName = baseName .. " |cff00ffff[♦★]|r"
+                        displayName = baseName .. (isLong and " |cff00ffff[Rare Elite]|r" or " |cff00ffff[Rare+]|r")
                     elseif cType == "elite" then
-                        displayName = baseName .. " |cffffcc00[★]|r"
+                        displayName = baseName .. (isLong and " |cffffcc00[Elite]|r" or " |cffffcc00[+]|r")
                     elseif cType == "rare" then
-                        displayName = baseName .. " |cff00ffff[♦]|r"
+                        displayName = baseName .. " |cff00ffff[Rare]|r"
                     end
                 end
             end

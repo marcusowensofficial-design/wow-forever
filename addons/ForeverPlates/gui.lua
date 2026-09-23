@@ -1,9 +1,10 @@
 --[[
     ForeverPlates - GUI Configuration Window (v2.2)
     Sleek, OLED-inspired, zero-taint configuration panel.
-    Now featuring a modern 2-Tab Architecture:
-      - [ ⚔️ Enemy Plates ] : Complete enemy combat customization
-      - [ 🛡️ Friendly Plates ] : Dedicated friendly player suite with Party Pin Arrow (Tank/Healer beacon)
+    Now featuring a modern 3-Tab Architecture:
+      - [ Enemy Plates ] : Complete enemy combat customization
+      - [ Friendly Plates ] : Dedicated friendly player suite with Party Pin Arrow (Tank/Healer beacon)
+      - [ Cast Bar ] : Cast bar styling, kickable vs shielded coloring, and live test frames
 --]]
 
 local ADDON_NAME, FP = ...
@@ -120,7 +121,7 @@ function FP.CreateGUI()
     closeBtn:SetScript("OnClick", function() f:Hide() end)
 
     ---------------------------------------------------------------------------
-    -- Navigation Tabs: [ ⚔️ Enemy Plates ] [ 🛡️ Friendly Plates ] [ ⚡ Cast Bar ]
+    -- Navigation Tabs: [ Enemy Plates ] [ Friendly Plates ] [ Cast Bar ]
     ---------------------------------------------------------------------------
     local tabEnemy = CreateFrame("Button", nil, f)
     tabEnemy:SetSize(162, 26)
@@ -133,7 +134,7 @@ function FP.CreateGUI()
     local tabEnemyText = tabEnemy:CreateFontString(nil, "OVERLAY")
     tabEnemyText:SetFont(DEFAULT_FONT, 11, "OUTLINE")
     tabEnemyText:SetPoint("CENTER", tabEnemy, "CENTER", 0, 0)
-    tabEnemyText:SetText("⚔️  ENEMY PLATES")
+    tabEnemyText:SetText("ENEMY PLATES")
     tabEnemy.text = tabEnemyText
 
     local tabFriendly = CreateFrame("Button", nil, f)
@@ -147,7 +148,7 @@ function FP.CreateGUI()
     local tabFriendlyText = tabFriendly:CreateFontString(nil, "OVERLAY")
     tabFriendlyText:SetFont(DEFAULT_FONT, 11, "OUTLINE")
     tabFriendlyText:SetPoint("CENTER", tabFriendly, "CENTER", 0, 0)
-    tabFriendlyText:SetText("🛡️  FRIENDLY PLATES")
+    tabFriendlyText:SetText("FRIENDLY PLATES")
     tabFriendly.text = tabFriendlyText
 
     local tabCast = CreateFrame("Button", nil, f)
@@ -161,7 +162,7 @@ function FP.CreateGUI()
     local tabCastText = tabCast:CreateFontString(nil, "OVERLAY")
     tabCastText:SetFont(DEFAULT_FONT, 11, "OUTLINE")
     tabCastText:SetPoint("CENTER", tabCast, "CENTER", 0, 0)
-    tabCastText:SetText("⚡  CAST BAR")
+    tabCastText:SetText("CAST BAR")
     tabCast.text = tabCastText
 
     local tabLine = f:CreateTexture(nil, "ARTWORK")
@@ -1023,7 +1024,9 @@ function FP.CreateGUI()
     CreateCheckbox(contentEnemy, "Threat Colors Only in Group / Raid", "threatOnlyInGroup", cbStartY - (cbSpacing * 5), function()
         FP.RefreshAllPlates()
     end)
-    CreateCheckbox(contentEnemy, "Elite & Boss Badges ([★], [♦], [☠ Boss])", "showEliteBadges", cbStartY - (cbSpacing * 6))
+    CreateCheckbox(contentEnemy, "Elite & Boss Badges ([+], [Rare], [Boss])", "showEliteBadges", cbStartY - (cbSpacing * 6), function()
+        FP.RefreshAllPlates()
+    end)
     CreateCheckbox(contentEnemy, "Class Color Enemy Players in PvP", "classColorPlayers", cbStartY - (cbSpacing * 7))
     CreateCheckbox(contentEnemy, "Apply Target Bar Color to ALL Enemy Mobs", "colorAllEnemyBars", cbStartY - (cbSpacing * 8))
     CreateCheckbox(contentEnemy, "Lock Health Bar Color (Override Blizzard Damage Flash)", "lockHealthBarColor", cbStartY - (cbSpacing * 9))
@@ -1124,8 +1127,8 @@ function FP.CreateGUI()
     local pinButtons = {}
     local pinTargets = {
         { key = "NONE",   name = "None (Off)" },
-        { key = "TANK",   name = "🛡️ Auto-Tank" },
-        { key = "HEALER", name = "✚ Auto-Healer" },
+        { key = "TANK",   name = "Auto-Tank" },
+        { key = "HEALER", name = "Auto-Healer" },
         { key = "PARTY1", name = "Party 1" },
         { key = "PARTY2", name = "Party 2" },
         { key = "PARTY3", name = "Party 3" },
@@ -1451,13 +1454,13 @@ function FP.CreateGUI()
         return btn
     end
 
-    CreateActionButton(contentCast, "⚡ Test Kickable (4s)", 10, -48, 152, 24, function()
+    CreateActionButton(contentCast, "Test Kickable (4s)", 10, -48, 152, 24, function()
         if FP.SimulateCast then FP.SimulateCast(false) end
     end)
-    CreateActionButton(contentCast, "🛡️ Test Shielded (4s)", 170, -48, 152, 24, function()
+    CreateActionButton(contentCast, "Test Shielded (4s)", 170, -48, 152, 24, function()
         if FP.SimulateCast then FP.SimulateCast(true) end
     end)
-    CreateActionButton(contentCast, "🔍 Run Diagnostic", 330, -48, 145, 24, function()
+    CreateActionButton(contentCast, "Run Diagnostic", 330, -48, 145, 24, function()
         if FP.CastDebug then FP.CastDebug() end
     end)
 
