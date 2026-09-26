@@ -1,0 +1,12 @@
+## Interface: 120005, 120007, 120100, 16001, 11500, 11501
+## Title: ForeverPlates Cast Bars
+## IconTexture: Interface\AddOns\Foreverplatescastbars\BCB_Icon
+## Notes: Cast bar display — enemy nameplates below plates, player, target, focus with latency, borders, and OLED configuration
+## Author: Marcus Owens / GI-Ka
+## Version: 2.2.0
+## SavedVariables: ForeverPlatesCastBarsDB, BetterCastBarsDB
+## LoadSavedVariablesFirst: true
+## Category-enUS: Combat
+
+core.lua
+gui.lua

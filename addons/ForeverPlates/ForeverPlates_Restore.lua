@@ -1,5 +1,91 @@
 --[[
     ForeverPlates_Restore.lua
-    DEPRECATED & DISABLED.
-    SavedVariables are now loaded natively by the WoW engine via ## LoadSavedVariablesFirst: true.
+    Forever Beta Compatibility Persistence Layer
+
+    Automatically synced from SavedVariables:
+    Source: C:\Program Files (x86)\World of Warcraft\_classic_beta_\WTF\Account\54273602#1\SavedVariables\ForeverPlates.lua
+    Synced: 2026-09-25 19:11:21
+
+    This file restores the user's snapshot before core.lua or gui.lua load,
+    bypassing the WoW Forever Beta SavedVariables loading bug.
 --]]
+
+if type(ForeverPlatesDB) ~= "table" or not next(ForeverPlatesDB) then
+	ForeverPlatesDB = {
+["castBarWidth"] = 115,
+["castBarOutlineColor"] = "DARK",
+["friendlyBuffSize"] = 21,
+["barHeight"] = 25,
+["partyPinArrowThickness"] = 1,
+["debuffYOffset"] = 1,
+["friendlyBuffYOffset"] = 1,
+["classColorPlayers"] = true,
+["castBarHeight"] = 13,
+["partyPinTarget"] = "NONE",
+["castBarOutlineThickness"] = 1,
+["nameFontSize"] = 16,
+["friendlyHealthFontSize"] = 15,
+["targetArrowThickness"] = 1.35,
+["friendlyBarWidth"] = 130,
+["partyPinArrowSize"] = 28,
+["castBarUnkickableColor"] = "SILVER",
+["alwaysShowSelectionHighlight"] = true,
+["outlineThickness"] = 3,
+["grayTappedMobs"] = true,
+["castBarYOffset"] = -4,
+["colorAllEnemyBars"] = true,
+["targetArrowSize"] = 32,
+["targetBarColor"] = "RED",
+["showEliteBadges"] = true,
+["healthFormat"] = "CURRENT_MAX_PERCENT",
+["showTappedBadge"] = false,
+["showExecuteGlow"] = true,
+["threatOnlyInGroup"] = true,
+["nonTargetAlpha"] = 1,
+["debuffWrap"] = true,
+["castBarFontSize"] = 10,
+["castBarColor"] = "GOLD",
+["healthPosition"] = "CENTER",
+["nameFontColor"] = "REACTION",
+["showHealthText"] = true,
+["debuffXOffset"] = 0,
+["castBarTextPosition"] = "ON_BAR_LEFT",
+["executeThreshold"] = 20,
+["friendlyHealthFormat"] = "CURRENT_MAX_PERCENT",
+["showTargetArrow"] = true,
+["friendlyColorMode"] = "CLASS",
+["levelTextXOffset"] = -2,
+["debuffSpacing"] = 2,
+["targetArrowStyle"] = "neongreen",
+["debuffOutlineThickness"] = 3,
+["friendlyBuffSpacing"] = 2,
+["debuffSize"] = 23,
+["lockHealthBarColor"] = true,
+["namePosition"] = "CENTER",
+["healthFontColor"] = "WHITE",
+["outlineColor"] = "DARK",
+["friendlyBuffOutlineThickness"] = 3,
+["showFriendlyNameplates"] = false,
+["castBarUnkickableBorderColor"] = "SILVER",
+["showTargetBrackets"] = false,
+["friendlyLevelTextXOffset"] = 11,
+["healthFontSize"] = 17,
+["font"] = "forced",
+["showTargetGlow"] = false,
+["friendlyBuffWrap"] = true,
+["showCastBarTimer"] = true,
+["showFriendlyRoleIcon"] = true,
+["targetScale"] = 1.06,
+["friendlyBarHeight"] = 21,
+["castBarFontOutline"] = "OUTLINE",
+["showCastBarIcon"] = true,
+["friendlyBuffPosition"] = "BELOW",
+["partyPinArrowStyle"] = "neoncyan",
+["colorByThreat"] = true,
+["castBarMatchHealthWidth"] = true,
+["levelTextYOffset"] = 0,
+["friendlyLevelTextYOffset"] = -8,
+["barWidth"] = 144,
+	["_isBetaSnapshot"] = true,
+	}
+end
