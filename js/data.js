@@ -1,9 +1,9 @@
 /**
  * World of Warcraft: Forever - Master Dataset
- * Up-to-date as of September 18, 2026
- * Enhanced with verified community data, Wowhead guides, Method articles, BlizzCon reveals,
- * Engine/Graphics specs, In-Combat Addon Disarmament, PvP Rank 14 Seasonality, Hardcore rules,
- * and exact 35-Day Beta Duration schedule (Sept 17 - Oct 21, 2026).
+ * Up-to-date as of September 28, 2026 (Beta Build 1.60.3.70420)
+ * Enhanced with verified community data, Warcraft Tavern guides, Mobalytics meta telemetry,
+ * Wowhead datamining, Method articles, BlizzCon reveals, Engine/Graphics specs,
+ * In-Combat Addon Disarmament, and exact 35-Day Beta Duration schedule (Sept 17 - Oct 21, 2026).
  */
 
 const WOW_FOREVER_DATA = {

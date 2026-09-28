@@ -1,5 +1,6 @@
 /**
  * World of Warcraft: Forever - Core Dataset
+ * Up-to-date as of September 28, 2026 (Beta Build 1.60.3.70420)
  * Includes beta schedule, countdowns, news, zones, dungeons, camping, stats, and milestones.
  */
 
