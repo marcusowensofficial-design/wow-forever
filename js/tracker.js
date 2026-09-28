@@ -75,6 +75,7 @@ function renderCharacterSheet(char) {
   if (!sheet) return;
 
   const factionClass = char.faction.toLowerCase().includes('alliance') ? 'alliance' : 'horde';
+  const classInfo = getWowClassInfo(char.className);
 
   sheet.innerHTML = `
     <div class="char-header">
@@ -83,7 +84,7 @@ function renderCharacterSheet(char) {
     </div>
     <div class="char-meta-grid">
       <div class="char-meta-item"><strong>Race:</strong> ${escapeHtml(char.race)}</div>
-      <div class="char-meta-item"><strong>Class:</strong> ${escapeHtml(char.className)}</div>
+      <div class="char-meta-item"><strong>Class:</strong> <span style="color: ${classInfo.color}; font-weight: 700; text-shadow: 0 0 8px ${classInfo.color}40;">${classInfo.icon} ${escapeHtml(char.className)}</span></div>
       <div class="char-meta-item"><strong>Specialization:</strong> ${escapeHtml(char.spec)}</div>
       <div class="char-meta-item"><strong>Target Bracket:</strong> Beta Phase 1 (Cap 20)</div>
       <div class="char-meta-item"><strong>Primary Prof 1:</strong> ${escapeHtml(char.prof1)}</div>
@@ -196,14 +197,42 @@ function initBetaChecklist() {
 }
 
 /* ==========================================================================
-   3. SQUAD / GUILD ROSTER TRACKER
+   3. SQUAD / GUILD ROSTER TRACKER & CLASS COLOR REGISTRY
    ========================================================================== */
+const WOW_CLASS_METADATA = {
+  paladin: { color: '#F58CBA', icon: '🛡️', name: 'Paladin', label: 'Paladin (Pink)' },
+  warlock: { color: '#9482C9', icon: '🔮', name: 'Warlock', label: 'Warlock (Purple)' },
+  rogue: { color: '#FFF569', icon: '🗡️', name: 'Rogue', label: 'Rogue (Yellow)' },
+  warrior: { color: '#C79C6E', icon: '⚔️', name: 'Warrior', label: 'Warrior (Brown)' },
+  hunter: { color: '#ABD473', icon: '🏹', name: 'Hunter', label: 'Hunter (Pea Green)' },
+  mage: { color: '#69CCF0', icon: '🔥', name: 'Mage', label: 'Mage (Cyan)' },
+  priest: { color: '#FFFFFF', icon: '✨', name: 'Priest', label: 'Priest (White)' },
+  shaman: { color: '#0070DE', icon: '⚡', name: 'Shaman', label: 'Shaman (Blue)' },
+  druid: { color: '#FF7D0A', icon: '🌿', name: 'Druid', label: 'Druid (Orange)' },
+  deathknight: { color: '#C41E3A', icon: '💀', name: 'Death Knight', label: 'Death Knight (Red)' },
+  monk: { color: '#00FF96', icon: '🥋', name: 'Monk', label: 'Monk (Green)' },
+  demonhunter: { color: '#A330C9', icon: '👁️', name: 'Demon Hunter', label: 'Demon Hunter (Purple)' },
+  evoker: { color: '#33937F', icon: '🐲', name: 'Evoker', label: 'Evoker (Emerald)' }
+};
+
+function getWowClassInfo(className) {
+  if (!className) return { color: '#fbbf24', icon: '⚔️', name: 'Unknown' };
+  const key = className.toLowerCase().replace(/[^a-z]/g, '');
+  return WOW_CLASS_METADATA[key] || { color: '#fbbf24', icon: '⚔️', name: className };
+}
+
 function initSquadRoster() {
   const rosterTableBody = document.getElementById('squad-roster-body');
   if (!rosterTableBody) return;
 
-  // Load roster from localStorage or prefill with Marcus, Young Hermit Crab, Andrewm
-  let squad = JSON.parse(localStorage.getItem('wow_forever_squad_roster') || 'null') || WOW_FOREVER_DATA.squadRosterPresets;
+  const SQUAD_STORAGE_KEY = 'wow_forever_squad_roster_v2';
+
+  // Load roster from localStorage or prefill with the 8 friends roster presets
+  let squad = JSON.parse(localStorage.getItem(SQUAD_STORAGE_KEY) || 'null');
+  if (!squad || !Array.isArray(squad) || squad.length === 0) {
+    squad = JSON.parse(JSON.stringify(WOW_FOREVER_DATA.squadRosterPresets || []));
+    localStorage.setItem(SQUAD_STORAGE_KEY, JSON.stringify(squad));
+  }
 
   function renderRoster() {
     // Composition summary
@@ -221,26 +250,48 @@ function initSquadRoster() {
       `;
     }
 
-    rosterTableBody.innerHTML = squad.map(player => `
+    rosterTableBody.innerHTML = squad.map(player => {
+      const classInfo = getWowClassInfo(player.className);
+      const classKey = (player.className || '').toLowerCase().replace(/[^a-z]/g, '');
+      const specText = player.spec ? ` (${escapeHtml(player.spec)})` : '';
+      return `
       <tr>
         <td><strong>${escapeHtml(player.name)}</strong></td>
         <td><span class="source-badge ${player.faction.toLowerCase() === 'alliance' ? 'source-blizzard' : 'source-wowhead'}">${player.faction}</span></td>
         <td>${escapeHtml(player.race)}</td>
-        <td><span style="color: var(--text-gold); font-weight: 600;">${escapeHtml(player.className)}</span></td>
-        <td><span class="role-pill role-${player.role.toLowerCase().replace(/[^a-z]/g, '')}">${player.role} (${escapeHtml(player.spec)})</span></td>
+        <td>
+          <span class="roster-class-pill class-${classKey}" style="--class-accent: ${classInfo.color}; --class-border: ${classInfo.color}40; background: ${classInfo.color}14;">
+            <span class="roster-class-icon">${classInfo.icon}</span>
+            <span class="roster-class-name" style="color: ${classInfo.color}; text-shadow: 0 0 10px ${classInfo.color}66;">
+              ${escapeHtml(player.className)}
+            </span>
+          </span>
+        </td>
+        <td><span class="role-pill role-${player.role.toLowerCase().replace(/[^a-z]/g, '')}">${player.role}${specText}</span></td>
         <td style="font-size: 0.82rem; color: var(--text-muted);">${escapeHtml(player.notes || '—')}</td>
         <td>
-          <button onclick="removeSquadMember('${player.id}')" style="background:none;border:none;color:#ef4444;cursor:pointer;font-size:1rem;">✕</button>
+          <button onclick="removeSquadMember('${player.id}')" title="Remove Member" style="background:none;border:none;color:#ef4444;cursor:pointer;font-size:1.1rem;padding:0.2rem 0.5rem;border-radius:4px;transition:background 0.2s;">✕</button>
         </td>
       </tr>
-    `).join('');
+    `}).join('');
   }
 
   window.removeSquadMember = function(id) {
     squad = squad.filter(p => p.id !== id);
-    localStorage.setItem('wow_forever_squad_roster', JSON.stringify(squad));
+    localStorage.setItem(SQUAD_STORAGE_KEY, JSON.stringify(squad));
     renderRoster();
   };
+
+  const resetBtn = document.getElementById('reset-squad-btn');
+  if (resetBtn) {
+    resetBtn.addEventListener('click', () => {
+      if (confirm('Reset Squad Roster back to the default roster presets (Thadd, Marcus, BigRed, Andrewm, Brody, Con, Burk)?')) {
+        squad = JSON.parse(JSON.stringify(WOW_FOREVER_DATA.squadRosterPresets || []));
+        localStorage.setItem(SQUAD_STORAGE_KEY, JSON.stringify(squad));
+        renderRoster();
+      }
+    });
+  }
 
   const addMemberForm = document.getElementById('add-squad-member-form');
   if (addMemberForm) {
@@ -268,7 +319,7 @@ function initSquadRoster() {
       };
 
       squad.push(newMember);
-      localStorage.setItem('wow_forever_squad_roster', JSON.stringify(squad));
+      localStorage.setItem(SQUAD_STORAGE_KEY, JSON.stringify(squad));
       addMemberForm.reset();
       renderRoster();
     });

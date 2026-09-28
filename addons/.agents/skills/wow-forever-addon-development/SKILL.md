@@ -98,9 +98,12 @@ init.lua
   - The authoritative community repository tracking active client and FrameXML bugs, directly monitored by addon authors and Blizzard UI engineers.
 - **WoW Forever Discord #bugs Channel**:
   - Live discussion on beta build updates (e.g. frequent build drops during active beta testing cycles).
-- **Recent Notable Forever Beta Bugs (Build 1.60.1.69977 / Interface 16001)**:
-  - **Issue #887 (`cancelaura` on target-slot)**: In `Blizzard_FrameXML/SecureTemplates.lua`, `CANCELABLE_ITEMS` was replaced with `IsCancellableSlotValid`, but `cancelaura` still indexes `CANCELABLE_ITEMS[slot]`, causing fatal nil-indexing errors when cancelling temporary weapon enchants via `SecureActionButtonTemplate`.
-  - **Issue #886 (Shaman Weapon Imbues)**: Shaman weapon imbues (`Enum.ItemEnchantType.Imbue`) are invisible to `C_PaperDollInfo.GetTemporaryEnchantmentInfo(16)` and `CustomAuraContainerTemplate`. Addons must query `C_Item.GetWeaponEnchantInfo(slot)` directly to detect imbues like Rockbiter, Flametongue, or Windfury.
+- **Recent Notable Forever Beta Builds & Engine Iterations**:
+  - **Build 1.60.3.70420 (Interface 16001 - Sept 27, 2026)**: Blizzard added dedicated C++ helper utilities (`issecure()`, `C_AddOns` API, and font string formatters) to resolve in-combat UI taint on custom nameplates and castbars, allowing clean target aura and castbar decoupling.
+  - **Build 1.60.2.70114 (Sept 22, 2026)**: Resolved SavedVariables C++ disk flush bug and Druid Bear Form armor multiplier compounding bug.
+  - **Build 1.60.1.69977**:
+    - **Issue #887 (`cancelaura` on target-slot)**: In `Blizzard_FrameXML/SecureTemplates.lua`, `CANCELABLE_ITEMS` was replaced with `IsCancellableSlotValid`, but `cancelaura` still indexes `CANCELABLE_ITEMS[slot]`, causing fatal nil-indexing errors when cancelling temporary weapon enchants via `SecureActionButtonTemplate`.
+    - **Issue #886 (Shaman Weapon Imbues)**: Shaman weapon imbues (`Enum.ItemEnchantType.Imbue`) are invisible to `C_PaperDollInfo.GetTemporaryEnchantmentInfo(16)` and `CustomAuraContainerTemplate`. Addons must query `C_Item.GetWeaponEnchantInfo(slot)` directly to detect imbues like Rockbiter, Flametongue, or Windfury.
 
 ### 2.4 RestrictedExecution & `loadstring_untainted` Beta Defect
 - **The Issue**: In the current WoW Forever Beta engine, `loadstring_untainted` is absent or non-functional inside the secure execution environment.

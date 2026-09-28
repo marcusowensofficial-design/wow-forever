@@ -33,6 +33,21 @@
   --color-emerald: #10b981;
   --color-amber: #f59e0b;
 
+  /* World of Warcraft Authentic In-Game Class Colors */
+  --class-paladin: #f58cba;
+  --class-warlock: #9482c9;
+  --class-rogue: #fff569;
+  --class-warrior: #c79c6e;
+  --class-hunter: #abd473;
+  --class-mage: #69ccf0;
+  --class-priest: #ffffff;
+  --class-shaman: #0070de;
+  --class-druid: #ff7d0a;
+  --class-deathknight: #c41e3a;
+  --class-monk: #00ff96;
+  --class-demonhunter: #a330c9;
+  --class-evoker: #33937f;
+
   --font-display: 'Cinzel Decorative', 'Cinzel', serif;
   --font-heading: 'Cinzel', serif;
   --font-body: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -2199,6 +2214,52 @@ input:checked + .toggle-slider:before {
 .role-pill.role-tank { background: rgba(59, 130, 246, 0.2); color: #60a5fa; }
 .role-pill.role-healer { background: rgba(16, 185, 129, 0.2); color: #34d399; }
 .role-pill.role-dps, .role-pill.role-rangeddps, .role-pill.role-meleedps { background: rgba(239, 68, 68, 0.2); color: #f87171; }
+
+/* Squad Roster Class Badges & Colors */
+.roster-class-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.25rem 0.7rem;
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--class-border, rgba(255, 255, 255, 0.12));
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  transition: var(--transition);
+  white-space: nowrap;
+}
+
+.roster-class-pill:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--class-accent, rgba(255, 255, 255, 0.3));
+  transform: translateY(-1px);
+}
+
+.roster-class-icon {
+  font-size: 0.95rem;
+  line-height: 1;
+}
+
+.roster-class-name {
+  font-weight: 700;
+  font-size: 0.88rem;
+  letter-spacing: 0.02em;
+}
+
+/* Class Color Specific Text & Shadow Utilities */
+.class-text-paladin { color: var(--class-paladin) !important; text-shadow: 0 0 10px rgba(245, 140, 186, 0.4); }
+.class-text-warlock { color: var(--class-warlock) !important; text-shadow: 0 0 10px rgba(148, 130, 201, 0.4); }
+.class-text-rogue { color: var(--class-rogue) !important; text-shadow: 0 0 10px rgba(255, 245, 105, 0.4); }
+.class-text-warrior { color: var(--class-warrior) !important; text-shadow: 0 0 10px rgba(199, 156, 110, 0.4); }
+.class-text-hunter { color: var(--class-hunter) !important; text-shadow: 0 0 10px rgba(171, 212, 115, 0.4); }
+.class-text-mage { color: var(--class-mage) !important; text-shadow: 0 0 10px rgba(105, 204, 240, 0.4); }
+.class-text-priest { color: var(--class-priest) !important; text-shadow: 0 0 10px rgba(255, 255, 255, 0.4); }
+.class-text-shaman { color: var(--class-shaman) !important; text-shadow: 0 0 10px rgba(0, 112, 222, 0.4); }
+.class-text-druid { color: var(--class-druid) !important; text-shadow: 0 0 10px rgba(255, 125, 10, 0.4); }
+.class-text-deathknight { color: var(--class-deathknight) !important; text-shadow: 0 0 10px rgba(196, 30, 58, 0.4); }
+.class-text-monk { color: var(--class-monk) !important; text-shadow: 0 0 10px rgba(0, 255, 150, 0.4); }
+.class-text-demonhunter { color: var(--class-demonhunter) !important; text-shadow: 0 0 10px rgba(163, 48, 201, 0.4); }
+.class-text-evoker { color: var(--class-evoker) !important; text-shadow: 0 0 10px rgba(51, 147, 127, 0.4); }
 
 /* Modal */
 .modal-backdrop {
