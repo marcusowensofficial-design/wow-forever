@@ -1103,6 +1103,8 @@ const WOW_FOREVER_DATA = {
       "className": "Shaman",
       "role": "Melee DPS",
       "spec": "Enhancement",
+      "prof1": "",
+      "prof2": "",
       "notes": "Thadd is a rascal"
     },
     {
@@ -1113,6 +1115,8 @@ const WOW_FOREVER_DATA = {
       "className": "Mage",
       "role": "Ranged DPS",
       "spec": "Frost mage unless arcane is better",
+      "prof1": "Tailoring",
+      "prof2": "",
       "notes": "I'm on a lot, I will def go tailor at least."
     },
     {
@@ -1123,6 +1127,8 @@ const WOW_FOREVER_DATA = {
       "className": "Paladin",
       "role": "Tank",
       "spec": "Protection spec? lol",
+      "prof1": "",
+      "prof2": "",
       "notes": "A bad ass."
     },
     {
@@ -1133,6 +1139,8 @@ const WOW_FOREVER_DATA = {
       "className": "Druid",
       "role": "Healer",
       "spec": "Restoration",
+      "prof1": "",
+      "prof2": "",
       "notes": "Played with us in SOD, great guy, very elite."
     },
     {
@@ -1143,6 +1151,8 @@ const WOW_FOREVER_DATA = {
       "className": "Druid",
       "role": "Melee DPS",
       "spec": "Feral",
+      "prof1": "",
+      "prof2": "",
       "notes": "Noted Shaman or Druid in disc when we last spoke -- will update accordingly :)"
     },
     {
@@ -1153,6 +1163,8 @@ const WOW_FOREVER_DATA = {
       "className": "Hunter",
       "role": "Ranged DPS",
       "spec": "Marksmanship",
+      "prof1": "",
+      "prof2": "",
       "notes": "Brodyyyyyyyyy"
     },
     {
@@ -1163,6 +1175,8 @@ const WOW_FOREVER_DATA = {
       "className": "Shaman",
       "role": "Melee DPS",
       "spec": "enh sham towards the end, but early/mid levels gonna util. tank/heals/dps",
+      "prof1": "",
+      "prof2": "",
       "notes": "ITS MF CON"
     },
     {
@@ -1173,6 +1187,8 @@ const WOW_FOREVER_DATA = {
       "className": "Warrior",
       "role": "Melee DPS",
       "spec": "Arms",
+      "prof1": "",
+      "prof2": "",
       "notes": "ITS MF BURK"
     }
   ],

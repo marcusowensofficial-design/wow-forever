@@ -197,7 +197,7 @@ function initBetaChecklist() {
 }
 
 /* ==========================================================================
-   3. SQUAD / GUILD ROSTER TRACKER & CLASS COLOR REGISTRY
+   3. SQUAD / GUILD ROSTER TRACKER & CLASS / PROFESSION REGISTRY
    ========================================================================== */
 const WOW_CLASS_METADATA = {
   paladin: { color: '#F58CBA', icon: '🛡️', name: 'Paladin', label: 'Paladin (Pink)' },
@@ -215,17 +215,38 @@ const WOW_CLASS_METADATA = {
   evoker: { color: '#33937F', icon: '🐲', name: 'Evoker', label: 'Evoker (Emerald)' }
 };
 
+const WOW_PROFESSION_METADATA = {
+  tailoring: { name: 'Tailoring', icon: '✂️' },
+  blacksmithing: { name: 'Blacksmithing', icon: '🔨' },
+  engineering: { name: 'Engineering', icon: '⚙️' },
+  leatherworking: { name: 'Leatherworking', icon: '🥋' },
+  alchemy: { name: 'Alchemy', icon: '🧪' },
+  enchanting: { name: 'Enchanting', icon: '✨' },
+  mining: { name: 'Mining', icon: '⛏️' },
+  herbalism: { name: 'Herbalism', icon: '🌿' },
+  skinning: { name: 'Skinning', icon: '🪓' }
+};
+
 function getWowClassInfo(className) {
   if (!className) return { color: '#fbbf24', icon: '⚔️', name: 'Unknown' };
   const key = className.toLowerCase().replace(/[^a-z]/g, '');
   return WOW_CLASS_METADATA[key] || { color: '#fbbf24', icon: '⚔️', name: className };
 }
 
+function getProfBadgeHtml(profName) {
+  if (!profName || profName.trim() === '' || profName.toLowerCase() === 'none' || profName.toLowerCase() === 'tbd') {
+    return '';
+  }
+  const key = profName.toLowerCase().replace(/[^a-z]/g, '');
+  const info = WOW_PROFESSION_METADATA[key] || { name: profName, icon: '🔨' };
+  return `<span class="prof-badge">${info.icon} ${escapeHtml(info.name)}</span>`;
+}
+
 function initSquadRoster() {
   const rosterTableBody = document.getElementById('squad-roster-body');
   if (!rosterTableBody) return;
 
-  const SQUAD_STORAGE_KEY = 'wow_forever_squad_roster_v2';
+  const SQUAD_STORAGE_KEY = 'wow_forever_squad_roster_v3';
 
   // Load roster from localStorage or prefill with the 8 friends roster presets
   let squad = JSON.parse(localStorage.getItem(SQUAD_STORAGE_KEY) || 'null');
@@ -254,6 +275,21 @@ function initSquadRoster() {
       const classInfo = getWowClassInfo(player.className);
       const classKey = (player.className || '').toLowerCase().replace(/[^a-z]/g, '');
       const specText = player.spec ? ` (${escapeHtml(player.spec)})` : '';
+      
+      const prof1Html = getProfBadgeHtml(player.prof1);
+      const prof2Html = getProfBadgeHtml(player.prof2);
+      const hasProfs = prof1Html || prof2Html;
+
+      const professionsHtml = hasProfs 
+        ? `<div class="prof-badges-wrap" onclick="openProfessionModal('${player.id}')" title="Click to update professions">
+            ${prof1Html}
+            ${prof2Html}
+            <span class="prof-edit-icon" title="Edit professions">✏️</span>
+           </div>`
+        : `<div class="prof-badges-wrap" onclick="openProfessionModal('${player.id}')" title="Click to set professions">
+            <span class="prof-badge prof-tbd">➕ Set Professions</span>
+           </div>`;
+
       return `
       <tr>
         <td><strong>${escapeHtml(player.name)}</strong></td>
@@ -268,9 +304,11 @@ function initSquadRoster() {
           </span>
         </td>
         <td><span class="role-pill role-${player.role.toLowerCase().replace(/[^a-z]/g, '')}">${player.role}${specText}</span></td>
+        <td>${professionsHtml}</td>
         <td style="font-size: 0.82rem; color: var(--text-muted);">${escapeHtml(player.notes || '—')}</td>
-        <td>
-          <button onclick="removeSquadMember('${player.id}')" title="Remove Member" style="background:none;border:none;color:#ef4444;cursor:pointer;font-size:1.1rem;padding:0.2rem 0.5rem;border-radius:4px;transition:background 0.2s;">✕</button>
+        <td style="white-space: nowrap;">
+          <button onclick="openProfessionModal('${player.id}')" title="Update Professions & Notes" class="btn-icon-action" style="color: var(--text-gold); font-size: 1rem; margin-right: 0.25rem;">✏️</button>
+          <button onclick="removeSquadMember('${player.id}')" title="Remove Member" class="btn-icon-action" style="color: #ef4444; font-size: 1.1rem;">✕</button>
         </td>
       </tr>
     `}).join('');
@@ -281,6 +319,69 @@ function initSquadRoster() {
     localStorage.setItem(SQUAD_STORAGE_KEY, JSON.stringify(squad));
     renderRoster();
   };
+
+  // Professions Modal controls
+  const profModal = document.getElementById('professions-modal-backdrop');
+  const profModalClose = document.getElementById('professions-modal-close');
+  const profModalCancel = document.getElementById('professions-modal-cancel');
+  const editProfForm = document.getElementById('edit-professions-form');
+  const editMemberId = document.getElementById('edit-member-id');
+  const editProf1Select = document.getElementById('edit-prof1-select');
+  const editProf2Select = document.getElementById('edit-prof2-select');
+  const editMemberNotes = document.getElementById('edit-member-notes');
+  const profModalTitle = document.getElementById('prof-modal-title');
+  const profModalSubtitle = document.getElementById('prof-modal-subtitle');
+
+  window.openProfessionModal = function(id) {
+    const player = squad.find(p => p.id === id);
+    if (!player || !profModal) return;
+
+    if (editMemberId) editMemberId.value = player.id;
+    if (profModalTitle) {
+      profModalTitle.innerHTML = `<span>🔨</span> Update Professions: ${escapeHtml(player.name)}`;
+    }
+    if (profModalSubtitle) {
+      profModalSubtitle.textContent = `Assign primary professions and update notes for ${player.name} (${player.className}).`;
+    }
+    if (editProf1Select) editProf1Select.value = player.prof1 || '';
+    if (editProf2Select) editProf2Select.value = player.prof2 || '';
+    if (editMemberNotes) editMemberNotes.value = player.notes || '';
+
+    profModal.classList.add('open');
+  };
+
+  function closeProfModal() {
+    if (profModal) profModal.classList.remove('open');
+  }
+
+  if (profModalClose) profModalClose.addEventListener('click', closeProfModal);
+  if (profModalCancel) profModalCancel.addEventListener('click', closeProfModal);
+  if (profModal) {
+    profModal.addEventListener('click', (e) => {
+      if (e.target === profModal) closeProfModal();
+    });
+  }
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && profModal && profModal.classList.contains('open')) {
+      closeProfModal();
+    }
+  });
+
+  if (editProfForm) {
+    editProfForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const id = editMemberId.value;
+      const player = squad.find(p => p.id === id);
+      if (player) {
+        player.prof1 = editProf1Select.value;
+        player.prof2 = editProf2Select.value;
+        player.notes = editMemberNotes.value.trim();
+        localStorage.setItem(SQUAD_STORAGE_KEY, JSON.stringify(squad));
+        renderRoster();
+      }
+      closeProfModal();
+    });
+  }
 
   const resetBtn = document.getElementById('reset-squad-btn');
   if (resetBtn) {
@@ -303,6 +404,8 @@ function initSquadRoster() {
       const className = document.getElementById('member-class-select').value;
       const role = document.getElementById('member-role-select').value;
       const spec = document.getElementById('member-spec-input').value.trim() || 'General';
+      const prof1 = document.getElementById('member-prof1-select') ? document.getElementById('member-prof1-select').value : '';
+      const prof2 = document.getElementById('member-prof2-select') ? document.getElementById('member-prof2-select').value : '';
       const notes = document.getElementById('member-notes-input').value.trim();
 
       if (!name) return;
@@ -315,6 +418,8 @@ function initSquadRoster() {
         className,
         role,
         spec,
+        prof1,
+        prof2,
         notes
       };
 

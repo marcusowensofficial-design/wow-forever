@@ -1692,6 +1692,7 @@
                 <th>Race</th>
                 <th>Class</th>
                 <th>Role & Spec</th>
+                <th>Professions</th>
                 <th>Notes</th>
                 <th>Action</th>
               </tr>
@@ -1755,6 +1756,36 @@
             <label for="member-spec-input" class="form-label">Spec</label>
             <input type="text" id="member-spec-input" class="form-input" placeholder="e.g. Holy, Arms, Frost">
           </div>
+          <div class="form-field">
+            <label for="member-prof1-select" class="form-label">Primary Profession 1</label>
+            <select id="member-prof1-select" class="form-select">
+              <option value="">-- None / TBD --</option>
+              <option value="Tailoring">✂️ Tailoring</option>
+              <option value="Blacksmithing">🔨 Blacksmithing</option>
+              <option value="Engineering">⚙️ Engineering</option>
+              <option value="Leatherworking">🥋 Leatherworking</option>
+              <option value="Alchemy">🧪 Alchemy</option>
+              <option value="Enchanting">✨ Enchanting</option>
+              <option value="Mining">⛏️ Mining</option>
+              <option value="Herbalism">🌿 Herbalism</option>
+              <option value="Skinning">🪓 Skinning</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="member-prof2-select" class="form-label">Primary Profession 2</label>
+            <select id="member-prof2-select" class="form-select">
+              <option value="">-- None / TBD --</option>
+              <option value="Tailoring">✂️ Tailoring</option>
+              <option value="Blacksmithing">🔨 Blacksmithing</option>
+              <option value="Engineering">⚙️ Engineering</option>
+              <option value="Leatherworking">🥋 Leatherworking</option>
+              <option value="Alchemy">🧪 Alchemy</option>
+              <option value="Enchanting">✨ Enchanting</option>
+              <option value="Mining">⛏️ Mining</option>
+              <option value="Herbalism">🌿 Herbalism</option>
+              <option value="Skinning">🪓 Skinning</option>
+            </select>
+          </div>
           <div class="form-field span-2">
             <label for="member-notes-input" class="form-label">Notes / Availability</label>
             <input type="text" id="member-notes-input" class="form-input" placeholder="e.g. Can craft bags, available weekday evenings">
@@ -1767,6 +1798,67 @@
 
     </section>
 
+  </div>
+
+  <!-- Update Squad Member Professions Modal -->
+  <div id="professions-modal-backdrop" class="modal-backdrop" role="dialog" aria-modal="true">
+    <div class="modal-container" style="max-width: 520px; padding: 2rem;">
+      <button id="professions-modal-close" class="modal-close-btn" aria-label="Close Modal">✕</button>
+      <div class="modal-header" style="margin-bottom: 1.25rem;">
+        <h3 id="prof-modal-title" style="font-size: 1.35rem; color: #fff; display: flex; align-items: center; gap: 0.5rem;">
+          <span>🔨</span> Update Professions
+        </h3>
+        <p id="prof-modal-subtitle" style="font-size: 0.88rem; color: var(--text-muted); margin-top: 0.35rem;">
+          Assign or update primary tradeskills for this squad member.
+        </p>
+      </div>
+
+      <form id="edit-professions-form">
+        <input type="hidden" id="edit-member-id">
+
+        <div class="form-field" style="margin-bottom: 1rem;">
+          <label for="edit-prof1-select" class="form-label">Primary Profession 1</label>
+          <select id="edit-prof1-select" class="form-select">
+            <option value="">-- None / Undecided --</option>
+            <option value="Tailoring">✂️ Tailoring (Spirit Weaving)</option>
+            <option value="Blacksmithing">🔨 Blacksmithing (Weapon Honing)</option>
+            <option value="Engineering">⚙️ Engineering (Tinkers & Gizmos)</option>
+            <option value="Leatherworking">🥋 Leatherworking (Fur Lining)</option>
+            <option value="Alchemy">🧪 Alchemy (Mixology 2x Flasks)</option>
+            <option value="Enchanting">✨ Enchanting (Ring Enchants)</option>
+            <option value="Mining">⛏️ Mining (Toughness +5% HP)</option>
+            <option value="Herbalism">🌿 Herbalism (Nature's Ward)</option>
+            <option value="Skinning">🪓 Skinning (Master of Anatomy +Crit)</option>
+          </select>
+        </div>
+
+        <div class="form-field" style="margin-bottom: 1rem;">
+          <label for="edit-prof2-select" class="form-label">Primary Profession 2</label>
+          <select id="edit-prof2-select" class="form-select">
+            <option value="">-- None / Undecided --</option>
+            <option value="Tailoring">✂️ Tailoring (Spirit Weaving)</option>
+            <option value="Blacksmithing">🔨 Blacksmithing (Weapon Honing)</option>
+            <option value="Engineering">⚙️ Engineering (Tinkers & Gizmos)</option>
+            <option value="Leatherworking">🥋 Leatherworking (Fur Lining)</option>
+            <option value="Alchemy">🧪 Alchemy (Mixology 2x Flasks)</option>
+            <option value="Enchanting">✨ Enchanting (Ring Enchants)</option>
+            <option value="Mining">⛏️ Mining (Toughness +5% HP)</option>
+            <option value="Herbalism">🌿 Herbalism (Nature's Ward)</option>
+            <option value="Skinning">🪓 Skinning (Master of Anatomy +Crit)</option>
+          </select>
+        </div>
+
+        <div class="form-field" style="margin-bottom: 1.5rem;">
+          <label for="edit-member-notes" class="form-label">Notes / Availability (Optional update)</label>
+          <input type="text" id="edit-member-notes" class="form-input" placeholder="e.g. Can craft bags, available weekday evenings">
+        </div>
+
+        <div style="display: flex; gap: 0.8rem; justify-content: flex-end;">
+          <button type="button" id="professions-modal-cancel" class="btn-secondary" style="padding: 0.6rem 1.2rem;">Cancel</button>
+          <button type="submit" class="btn-primary" style="padding: 0.6rem 1.5rem;">Save Professions</button>
+        </div>
+      </form>
+    </div>
   </div>
 
   <!-- Read Full News Modal -->
