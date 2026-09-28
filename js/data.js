@@ -17,7 +17,8 @@ const WOW_FOREVER_DATA = {
     betaTotalWeeks: 5,
     launchDate: "November 4, 2026",
     raidsDate: "December 9, 2026",
-    currentBetaPhase: "Phase 1: Week 1–3 (Level 20 Cap)",
+    currentBetaPhase: "Phase 1: Week 2 (Level 20 Cap — 10 Days to Phase 2)",
+    clientBuild: "1.60.3.70420",
     engineInfo: "Custom Ray-Traced Engine (Post-Warcraft III: Reforged Continuity)",
     maxLevel: 60,
     currentBetaCap: 20,
@@ -60,6 +61,8 @@ const WOW_FOREVER_DATA = {
 
   quickLinks: [
     { name: "Wowhead: Everything We Know", url: "https://www.wowhead.com/forever/news/everything-we-know-about-wow-forever-382827", icon: "🌐" },
+    { name: "Warcraft Tavern: Phase 2 Prep & Pre-BiS", url: "https://www.warcrafttavern.com/forever/", icon: "🍺" },
+    { name: "Mobalytics: Level 20 Meta & Tier Lists", url: "https://mobalytics.gg/wow-forever", icon: "📊" },
     { name: "Icy Veins Talent Calculator", url: "https://www.icy-veins.com/wow-forever/talent-calculator", icon: "⚡" },
     { name: "Wowhead Legacy Calculator", url: "https://www.wowhead.com/forever/legacy-calculator", icon: "🏆" },
     { name: "Method.gg Itemization Guide", url: "https://www.method.gg/wow-classic/itemization-updates-in-world-of-warcraft-forever-expertise-spell-damage-more", icon: "⚔️" },
@@ -68,6 +71,141 @@ const WOW_FOREVER_DATA = {
   ],
 
   newsFeed: [
+    {
+      id: "news-28",
+      title: "Developer Update: +15% Open-World Elite Quest EXP Buff & Anti-Dungeon Boosting Clarification",
+      source: "Blizzard Official / Blue Post",
+      sourceType: "blizzard",
+      author: "Lead Designer Josh \"Aggrend\" Greenfield",
+      date: "September 28, 2026",
+      tag: "Game Rules & Balancing",
+      summary: "Blizzard introduces a permanent +15% experience boost to all outdoor elite quest chains to encourage open-world exploration over repetitive dungeon spamming, while reaffirming strict anti-boosting XP penalties.",
+      content: `In a detailed developer dispatch posted on September 28, Lead Designer Josh "Aggrend" Greenfield addressed player leveling patterns observed across the first 12 days of closed beta:
+• +15% Outdoor Elite Quest EXP: To incentivize venturing into high-danger open-world zones rather than grinding Deadmines or Hall of Thanes exclusively, all outdoor elite quest objectives across both continents (including Redridge elite chains, Darrow Hill, Loch Modan Trogg strongholds, and Stonetalon peak quests) now grant +15% more base experience.
+• Anti-Dungeon Boosting Diminishing Returns: Blizzard reiterated that characters grouped with party members significantly higher in level receive virtually zero XP from mob kills. The team is committed to preserving the organic group-finding and outdoor world experience of Classic+.
+• Open-World Group Dynamics: Field reports indicate open-world party formations for elite quests have surged across Westfall, Darkshore, Silverpine, and The Barrens as a result of these adjustments.`,
+      url: "https://news.blizzard.com/en-us/world-of-warcraft/beta-dev-update-open-world-exp-tuning-sep28"
+    },
+    {
+      id: "news-27",
+      title: "Mobalytics Beta Census: 68% Reach Level 20 Cap; Skyborne & Undead Paladins Surge",
+      source: "Mobalytics / Meta Analytics",
+      sourceType: "mobalytics",
+      author: "Mobalytics Analytics Team",
+      date: "September 28, 2026",
+      tag: "Census & Demographics",
+      summary: "Mobalytics analytics reveal that 68% of active beta testers have reached the Level 20 cap. Warriors and Paladins dominate class choices, while the new Skyborne race represents 22.4% of all characters created.",
+      content: `Mobalytics telemetry gathered from over 250,000 player hours across the WoW Forever closed beta highlights the evolving character demographic breakdown as of September 28:
+• 68% Level 20 Completion: More than two-thirds of active beta accounts have reached the Level 20 Phase 1 cap, focusing their gameplay on dungeon pre-BiS farming, Warsong Gulch skirmishes, and profession grinding.
+• Class Popularity Census:
+  - Warrior: 18.2% (Top overall class, driven by Arms scaling and strong tank viability)
+  - Paladin: 15.4% (Massive surge driven by the debut of Undead Paladins on Horde and Forsaken Charger mounts)
+  - Hunter: 14.0% (Dominated by Beast Mastery levelers and Skyborne archers)
+  - Mage: 11.8% (High AoE clear speed in Hall of Thanes)
+  - Rogue: 11.2% (Strong PvP burst and stealth utility)
+  - Priest: 10.1% (Undisputed king of Level 20 dungeon and Warsong Gulch healing)
+  - Warlock: 7.6% (Consistent pet-based leveling with zero reagent requirements)
+  - Druid: 6.8% (Popular among Skyborne Druid testers)
+  - Shaman: 4.9% (Wildhammer Dwarf Shamans gaining momentum)
+• Skyborne Phenomenon: The new Skyborne race alone accounts for 22.4% of all newly created characters, marking the highest initial adoption rate of any allied or standalone race in WoW history.`,
+      url: "https://mobalytics.gg/wow-forever/beta-census-demographics-sep28"
+    },
+    {
+      id: "news-26",
+      title: "Warcraft Tavern Phase 2 Preview: Level 20–30 Route, Wetlands Excavation Site 4 & Dalaran Guide",
+      source: "Warcraft Tavern",
+      sourceType: "tavern",
+      author: "Warcraft Tavern Leveling Team",
+      date: "September 27, 2026",
+      tag: "Leveling & Dungeons",
+      summary: "Warcraft Tavern publishes its strategic guide for Phase 2's Level 30 cap unlock on October 8, detailing pre-quest turn-in routes, Excavation Site 4 dungeon mechanics, and Tier 2 Camping upgrades.",
+      content: `With only 10 days remaining until Beta Phase 2 unlocks the Level 30 cap on October 8, Warcraft Tavern has released a comprehensive roadmap for players preparing their leveling trajectories:
+• Pre-Quest Turn-In Stacking: Detailed routes for banking 20 completed quests across Redridge Mountains, Duskwood, Stonetalon Mountains, and Ashenvale to immediately jump from Level 20 toward Level 22 upon Phase 2 launch.
+• Excavation Site 4 (Level 24–30): Preview of the Wetlands titan dig site dungeon. Players will battle corrupted Ironband miners, earthen constructs, and a shadowy titan relic boss ('Archon Kaelen') dropping mail, leather, and two-handed polearms with unique proc effects.
+• City of Dalaran (Alterac Mountains): Deep dive into the violet barrier perimeter and the subterranean Kirin Tor archives dungeon, featuring arcane anomalies and anti-magic elite mechanics.
+• Tier 2 Camping Upgrades: Survivalists can collect Ironwood Campfire frames and Silk Tents starting at Level 20 (with 75 profession skill), unlocking +10% stat fish bowls and 90-minute campfire auras.`,
+      url: "https://www.warcrafttavern.com/forever/guides/phase-2-leveling-route-excavation-site-4/"
+    },
+    {
+      id: "news-25",
+      title: "Wowhead Beta Build 1.60.3 Datamining: Level 30 Spells, Secret Value Addon Protections & Dual Spec",
+      source: "Wowhead",
+      sourceType: "wowhead",
+      author: "Wowhead Datamining Team",
+      date: "September 27, 2026",
+      tag: "Datamining & Patch Notes",
+      summary: "Datamining of client build 1.60.3.70420 reveals datamined Level 30 class abilities, refined 12.0 secret value Lua APIs for addon authors, and full UI string confirmations for Level 40 Dual Spec.",
+      content: `Wowhead datamining of the latest WoW Forever beta build (1.60.3.70420) has uncovered crucial upcoming features and systems code:
+• Secret Value Addon Protections: Blizzard engineers added dedicated C++ helper utilities (\`issecure()\`, \`C_AddOns\` API namespace, and secure text formatters) to resolve in-combat UI taint for custom nameplates and castbars. Addon developers can now safely display decoupled castbars and friendly target auras without triggering fatal Lua execution halts.
+• Datamined Level 30 Class Abilities:
+  - Warriors: Berserker Stance questline ('The Island of Fray') and Whirlwind weapon rewards datamined with updated Classic+ weapon stats.
+  - Paladins: Blessing of Kings confirmed baseline at Level 20/30 rather than deep Retribution/Protection.
+  - Druids: Travel Form (40% outdoor movement speed) questline unlocked in Moonglade.
+  - Mages: Ice Block baseline and Teleport spell additions.
+  - Shamans: Windfury Weapon imbue ranks tuned for 2H maces and axes.
+• Dual Talent Specialization: Client strings confirm Dual Spec unlocks at Level 40 for a one-time fee of 50 gold, storing talent distribution, action bar button placements, and keybind profiles.`,
+      url: "https://www.wowhead.com/forever/news/beta-build-1603-datamining-level-30-spells-dual-spec-addon-apis"
+    },
+    {
+      id: "news-24",
+      title: "Mobalytics Phase 1 Meta Tier List: Level 20 Speedrun Comps & Warsong Gulch Rankings",
+      source: "Mobalytics / Meta Analytics",
+      sourceType: "mobalytics",
+      author: "Mobalytics Theorycrafting",
+      date: "September 26, 2026",
+      tag: "PvP & Systems",
+      summary: "Mobalytics releases its first comprehensive meta tier list for Phase 1 Level 20 cap, ranking top dungeon speedrun compositions, single-target DPS, and 10-19 / 20 bracket Warsong Gulch performers.",
+      content: `Analyzing performance metrics across 120,000 dungeon encounters and 15,000 battleground matches, Mobalytics has published the official Beta Phase 1 Meta Tier List:
+• Dungeon Speedrun & DPS Tier List:
+  - S-Tier (DPS): Arms Warrior (dominant Cleave/Sweeping Strikes with Smite's Mighty Hammer or Cruel Barb), Beast Mastery Hunter (pet scaling + Aspect of the Hawk burst), Fire Mage (Ignite AoE cleave in Hall of Thanes trash pulls).
+  - A-Tier (DPS): Combat Rogue (consistent Sinister Strike energy cycling), Destruction Warlock (Shadowburn burst), Enhancement Shaman (Flametongue/Rockbiter burst).
+  - S-Tier (Tanks): Protection Paladin (Consecration AoE threat leads all clear speeds) and Protection Warrior (reliable single-target taunt and Shield Slam mitigation).
+  - S-Tier (Healers): Discipline Priest (Power Word: Shield + Penance) and Holy Paladin (unmatched mana efficiency with Flash of Light).
+• Warsong Gulch (10–19 / 20 Bracket) Tier List:
+  - S-Tier: Discipline Priest (flag runner survival), Affliction Warlock (multi-dot attrition), Subtlety Rogue (flag disruption & Sprint resets).
+  - A-Tier: Arms Warrior, Beast Mastery Hunter, Frost Mage.`,
+      url: "https://mobalytics.gg/wow-forever/tier-lists/beta-phase-1-level-20-meta"
+    },
+    {
+      id: "news-23",
+      title: "Blizzard Operations: Phase 2 Level 30 Cap Locked for Oct 8; Wave 3 Beta Invites Dispatched",
+      source: "Blizzard Official",
+      sourceType: "blizzard",
+      author: "Community Manager Kaivax",
+      date: "September 25, 2026",
+      tag: "Beta Schedule",
+      summary: "Blizzard confirms Beta Phase 2 launches on Thursday, October 8 at 10:00 AM PDT, unlocking Level 30 cap, Excavation Site 4, City of Dalaran, and sending out Wave 3 beta invitations.",
+      content: `In a community update on the official forums, Community Manager Kaivax provided operational timelines for the next milestone of the closed beta test:
+• Phase 2 Unlock Date Confirmed: Phase 2 will officially commence on Thursday, October 8, 2026 at 10:00 AM PDT (19:00 CEST). The level cap will increase from 20 to 30 immediately without requiring character resets.
+• Phase 2 Content Scope:
+  - Level 24–30 Dungeon: Excavation Site 4 (Wetlands).
+  - Level 26–32 Dungeon: City of Dalaran (Subterranean Kirin Tor Vaults in Alterac Mountains).
+  - Warsong Gulch 20–29 Bracket unlocked.
+  - Ashenvale and Hillsbrad Foothills open-world PvP hot spots.
+• Wave 3 Beta Invitations: To prepare servers for increased player concurrency, Blizzard has dispatched a third massive wave of beta invites to opted-in Battle.net accounts and Skyborne Epic Pack holders.`,
+      url: "https://news.blizzard.com/en-us/world-of-warcraft/beta-phase-2-announcement-wave-3-invites"
+    },
+    {
+      id: "news-22",
+      title: "Warcraft Tavern Pre-BiS Compendium: Top Level 20 Gear Drops for Hall of Thanes & Ruins of Lordaeron",
+      source: "Warcraft Tavern",
+      sourceType: "tavern",
+      author: "Warcraft Tavern Gear Team",
+      date: "September 24, 2026",
+      tag: "Loot & Drops",
+      summary: "Complete loot tables and pre-BiS itemization lists for Level 20 characters, spotlighting new Classic+ weapons and armor from Hall of Thanes and Ruins of Lordaeron alongside classic dungeon staples.",
+      content: `Warcraft Tavern has assembled the definitive Level 20 pre-BiS gear compendium for all 9 classes in Beta Phase 1:
+• Hall of Thanes Highlights (Level 13–18):
+  - Thane's Runic Ring: +4 Strength, +3 Stamina (Best-in-slot melee DPS and tank finger item).
+  - Ironforge Sentry Shield: High armor shield with block value and +5 Stamina.
+  - Molten Core Fragment (Trinket): On-use +12 Fire spell damage for 20 seconds.
+• Ruins of Lordaeron Highlights (Level 15–20):
+  - Blighted Dagger: Fast 1.40 attack speed with chance on hit to inflict plague damage (BiS offhand for Rogues and Hunters).
+  - Gravekeeper's Robes: +6 Intellect, +5 Spirit, +4 Spell Power (Top caster chestpiece).
+  - Pauldrons of the Fallen Order: Rare Level 20 mail shoulders with +5 Strength, +4 Agility.
+• Classic Dungeon Staples: Deadmines (Cruel Barb, Smite's Mighty Hammer, Blackened Defias armor), Shadowfang Keep (Shadowfang, Silverlaine's Family Seal, Commander's Crest), and Wailing Caverns (Armor of the Fang set).`,
+      url: "https://www.warcrafttavern.com/forever/guides/level-20-pre-bis-gear-compendium/"
+    },
     {
       id: "news-19",
       title: "Tuesday Maintenance & Beta Build 1.60.2: Addon Persistence C++ Fix, Druid Bear Form Armor & Ray-Tracing Passes",

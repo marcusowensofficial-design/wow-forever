@@ -41,6 +41,17 @@ local COLOR_PALETTES = {
 }
 FP_CB.COLOR_PALETTES = COLOR_PALETTES
 
+-- Dedicated Outline Border Palettes (matches ForeverPlates OUTLINE_COLORS)
+local OUTLINE_PALETTES = {
+    DARK  = { r = 0.12, g = 0.12, b = 0.14, name = "Slate Dark" },
+    BLACK = { r = 0.05, g = 0.05, b = 0.05, name = "Pitch Black" },
+    WHITE = { r = 1.00, g = 1.00, b = 1.00, name = "Pure White" },
+    CYAN  = { r = 0.00, g = 0.85, b = 1.00, name = "Neon Cyan" },
+    GOLD  = { r = 1.00, g = 0.72, b = 0.00, name = "Sun Gold" },
+    LIME  = { r = 0.25, g = 1.00, b = 0.25, name = "Neon Lime" },
+}
+FP_CB.OUTLINE_PALETTES = OUTLINE_PALETTES
+
 -- Font Registry with fallback support
 local FONTS = {
     forced     = "Interface\\AddOns\\ForeverPlates\\media\\ForcedSquare.ttf",
@@ -158,7 +169,7 @@ local DEFAULTS = {
     
     showBorder            = true,
     outlineColorKey       = "DARK",
-    outlineColor          = {0.08, 0.10, 0.12, 1},
+    outlineColor          = {0.12, 0.12, 0.14, 1},
     outlineThickness      = 1,
     shieldBorderColorKey  = "SILVER",
     shieldBorderColor     = {0.85, 0.88, 0.95, 1},
@@ -256,6 +267,24 @@ local function LoadConfig()
         ForeverPlatesCastBarsDB._configVersion = 4
     end
 
+    -- Automatic migration v5: Sync enemy cast bar outline with ForeverPlates dark charcoal outline (0.12, 0.12, 0.14)
+    if ForeverPlatesCastBarsDB._configVersion == nil or ForeverPlatesCastBarsDB._configVersion < 5 then
+        if ForeverPlatesCastBarsDB.enemyBorderColorKey == "BLACK" or ForeverPlatesCastBarsDB.enemyBorderColorKey == nil then
+            ForeverPlatesCastBarsDB.enemyBorderColorKey = "DARK"
+        end
+        if ForeverPlatesCastBarsDB.outlineColorKey == "BLACK" or ForeverPlatesCastBarsDB.outlineColorKey == nil then
+            ForeverPlatesCastBarsDB.outlineColorKey = "DARK"
+        end
+        ForeverPlatesCastBarsDB.outlineColor = { 0.12, 0.12, 0.14, 1.0 }
+        ForeverPlatesCastBarsDB._configVersion = 5
+        if type(BetterCastBarsDB) == "table" then
+            BetterCastBarsDB.enemyBorderColorKey = ForeverPlatesCastBarsDB.enemyBorderColorKey
+            BetterCastBarsDB.outlineColorKey = ForeverPlatesCastBarsDB.outlineColorKey
+            BetterCastBarsDB.outlineColor = ForeverPlatesCastBarsDB.outlineColor
+            BetterCastBarsDB._configVersion = 5
+        end
+    end
+
     if ForeverPlatesCastBarsDB.hideBlizzardBars == nil then
         ForeverPlatesCastBarsDB.hideBlizzardBars = true
     end
@@ -285,7 +314,7 @@ FP_CB.Save = Save
 -------------------------------------------------------------------------------
 local function CreatePixelBorder(parent, inset, r, g, b, a)
     inset = inset or 0
-    r, g, b, a = r or 0.08, g or 0.10, b or 0.12, a or 1.0
+    r, g, b, a = r or 0.12, g or 0.12, b or 0.14, a or 1.0
     local border = {}
 
     local top = parent:CreateTexture(nil, "OVERLAY", nil, 6)
@@ -456,13 +485,11 @@ local function SuppressBlizzardBar(f)
             end
         end
 
-        -- 5. Physical relocation offscreen & collapse dimensions
+        -- 5. Collapse dimensions & hide
         pcall(f.SetAlpha, f, 0)
         pcall(f.SetSize, f, 0.0001, 0.0001)
         if not (f.IsProtected and f:IsProtected()) then
             pcall(f.Hide, f)
-            pcall(f.ClearAllPoints, f)
-            pcall(f.SetPoint, f, "TOPLEFT", UIParent, "BOTTOMRIGHT", 9999, -9999)
         end
     else
         -- Clean Restoration when unchecked
@@ -484,7 +511,7 @@ local function SuppressBlizzardBar(f)
         end
     end
 
-    -- 6. Hook Show, SetAlpha, and SetPoint (protected-safe with recursion guard)
+    -- 6. Hook Show and SetAlpha (protected-safe with recursion guard)
     if not hookedBlizzBars[f] then
         hookedBlizzBars[f] = true
 
@@ -497,8 +524,6 @@ local function SuppressBlizzardBar(f)
             if tex then pcall(tex.SetAlpha, tex, 0) end
             if not (self.IsProtected and self:IsProtected()) then
                 pcall(self.Hide, self)
-                pcall(self.ClearAllPoints, self)
-                pcall(self.SetPoint, self, "TOPLEFT", UIParent, "BOTTOMRIGHT", 9999, -9999)
             end
             self._fpSuppressing = false
         end)
@@ -508,16 +533,6 @@ local function SuppressBlizzardBar(f)
             if alpha ~= 0 then
                 self._fpSuppressing = true
                 pcall(self.SetAlpha, self, 0)
-                self._fpSuppressing = false
-            end
-        end)
-
-        hooksecurefunc(f, "SetPoint", function(self)
-            if not CFG.hideBlizzardBars or self._fpSuppressing then return end
-            if not (self.IsProtected and self:IsProtected()) then
-                self._fpSuppressing = true
-                pcall(self.ClearAllPoints, self)
-                pcall(self.SetPoint, self, "TOPLEFT", UIParent, "BOTTOMRIGHT", 9999, -9999)
                 self._fpSuppressing = false
             end
         end)
@@ -579,10 +594,17 @@ local function SuppressPlateCastBar(plateOrUnit)
 
     local blizzBars = {}
 
-    -- Direct candidate references
+    -- Direct candidate references (including Dragonflight / 12.0 CastBarsContainer)
     local candidates = {
         uf.castBar, uf.CastBar, uf.CastingBarFrame, uf.castbar,
+        uf.CastBarsContainer,
+        uf.CastBarsContainer and uf.CastBarsContainer.castBar,
+        uf.CastBarsContainer and uf.CastBarsContainer.CastBar,
         plate.castBar, plate.CastBar, plate.CastingBarFrame, plate.castbar,
+        plate.CastBarsContainer,
+        plate.CastBarsContainer and plate.CastBarsContainer.castBar,
+        plate.CastBarsContainer and plate.CastBarsContainer.CastBar,
+        uf.spellBar, uf.SpellBar, plate.spellBar, plate.SpellBar,
     }
     for _, b in ipairs(candidates) do
         if b and not b.FPOwned then
@@ -590,9 +612,10 @@ local function SuppressPlateCastBar(plateOrUnit)
         end
     end
 
-    -- Thorough child scan on BOTH uf and plate
-    local function ScanForStatusBars(parentFrame)
-        if not parentFrame or not parentFrame.GetChildren then return end
+    -- Thorough recursive child scan on BOTH uf and plate
+    local function ScanForStatusBars(parentFrame, depth)
+        if not parentFrame or not parentFrame.GetChildren or (depth and depth > 3) then return end
+        depth = (depth or 0) + 1
         local hb = parentFrame.healthBar or parentFrame.HealthBar or (uf and (uf.healthBar or uf.HealthBar))
         local pb = parentFrame.powerBar or parentFrame.PowerBar or (uf and (uf.powerBar or uf.PowerBar))
         for _, ch in ipairs({ parentFrame:GetChildren() }) do
@@ -604,6 +627,9 @@ local function SuppressPlateCastBar(plateOrUnit)
                 
                 if isStatusBar or hasTimer or nameMatch then
                     table.insert(blizzBars, ch)
+                end
+                if ch.GetChildren then
+                    ScanForStatusBars(ch, depth)
                 end
             end
         end
@@ -660,10 +686,7 @@ if CompactUnitFrame_UpdateCastBar then
     hooksecurefunc("CompactUnitFrame_UpdateCastBar", function(frame)
         if not frame or (frame.IsForbidden and frame:IsForbidden()) then return end
         if not CFG.hideBlizzardBars then return end
-        local cb = frame.castBar or frame.CastBar
-        if cb and not cb.FPOwned then
-            SuppressBlizzardBar(cb)
-        end
+        SuppressPlateCastBar(frame)
     end)
 end
 
@@ -672,19 +695,13 @@ if NamePlateUnitFrameMixin then
     if NamePlateUnitFrameMixin.UpdateNameClassColor then
         hooksecurefunc(NamePlateUnitFrameMixin, "UpdateNameClassColor", function(self)
             if not CFG.hideBlizzardBars then return end
-            local cb = self.castBar or self.CastBar
-            if cb and not cb.FPOwned then
-                SuppressBlizzardBar(cb)
-            end
+            SuppressPlateCastBar(self)
         end)
     end
     if NamePlateUnitFrameMixin.OnUnitSet then
         hooksecurefunc(NamePlateUnitFrameMixin, "OnUnitSet", function(self)
             if not CFG.hideBlizzardBars then return end
-            local cb = self.castBar or self.CastBar
-            if cb and not cb.FPOwned then
-                SuppressBlizzardBar(cb)
-            end
+            SuppressPlateCastBar(self)
         end)
     end
 end
@@ -872,11 +889,19 @@ FP_CB.GetEnemyBarColor = GetEnemyBarColor
 local function GetEnemyBorderColor(isShielded)
     if isShielded then
         local cKey = CFG.enemyShieldBorderColorKey or CFG.shieldBorderColorKey or "SILVER"
-        local c = COLOR_PALETTES[cKey] or { r = 0.85, g = 0.88, b = 0.95 }
+        local c = OUTLINE_PALETTES[cKey] or COLOR_PALETTES[cKey] or { r = 0.85, g = 0.88, b = 0.95 }
         return c.r, c.g, c.b
     else
         local cKey = CFG.enemyBorderColorKey or CFG.outlineColorKey or "DARK"
-        local c = COLOR_PALETTES[cKey] or { r = 0.08, g = 0.10, b = 0.12 }
+        -- Dynamic synchronization with ForeverPlates outline color (Slate Dark: 0.12, 0.12, 0.14)
+        if (cKey == "DARK" or cKey == nil) and _G.ForeverPlates and _G.ForeverPlates.OUTLINE_COLORS then
+            local fpOlKey = (_G.ForeverPlatesDB and _G.ForeverPlatesDB.outlineColor) or "DARK"
+            local fpDark = _G.ForeverPlates.OUTLINE_COLORS[fpOlKey] or _G.ForeverPlates.OUTLINE_COLORS.DARK
+            if fpDark then
+                return fpDark.r, fpDark.g, fpDark.b
+            end
+        end
+        local c = OUTLINE_PALETTES[cKey] or COLOR_PALETTES[cKey] or { r = 0.12, g = 0.12, b = 0.14 }
         return c.r, c.g, c.b
     end
 end
@@ -911,7 +936,15 @@ FP_CB.GetUnitBarColor = GetUnitBarColor
 
 local function GetUnitBorderColor(unit)
     local cKey = CFG[unit .. "BorderColorKey"] or CFG.outlineColorKey or "DARK"
-    local c = COLOR_PALETTES[cKey] or { r = 0.08, g = 0.10, b = 0.12 }
+    -- Dynamic synchronization with ForeverPlates outline color (Slate Dark: 0.12, 0.12, 0.14)
+    if (cKey == "DARK" or cKey == nil) and _G.ForeverPlates and _G.ForeverPlates.OUTLINE_COLORS then
+        local fpOlKey = (_G.ForeverPlatesDB and _G.ForeverPlatesDB.outlineColor) or "DARK"
+        local fpDark = _G.ForeverPlates.OUTLINE_COLORS[fpOlKey] or _G.ForeverPlates.OUTLINE_COLORS.DARK
+        if fpDark then
+            return fpDark.r, fpDark.g, fpDark.b
+        end
+    end
+    local c = OUTLINE_PALETTES[cKey] or COLOR_PALETTES[cKey] or { r = 0.12, g = 0.12, b = 0.14 }
     return c.r, c.g, c.b
 end
 FP_CB.GetUnitBorderColor = GetUnitBorderColor
@@ -958,6 +991,7 @@ local function ApplyEnemyCastBarLayout(unitFrame, obj)
     if not obj then return end
 
     local bar = obj.bar
+    local ih = obj.iconHolder
     local h = CFG.enemyCastHeight or 14
     local w = CFG.enemyCastWidth or 140
     local xOff = CFG.enemyCastXOffset or 0
@@ -982,37 +1016,53 @@ local function ApplyEnemyCastBarLayout(unitFrame, obj)
     local showIcon = (CFG.showEnemyCastIcon ~= false)
 
     bar:ClearAllPoints()
-    obj.iconHolder:ClearAllPoints()
+    if ih then ih:ClearAllPoints() end
 
-    if showIcon then
+    if showIcon and ih then
         local iconSize = h
-        local barW = math.max(20, w - iconSize - gap)
-        local startX = xOff - (w / 2)
-        obj.iconHolder:SetPoint("TOPLEFT", anchorTarget, "BOTTOM", startX, yOff)
-        obj.iconHolder:SetSize(iconSize, iconSize)
-        obj.iconHolder:Show()
+        ih:SetPoint("TOPLEFT", anchorTarget, "BOTTOMLEFT", xOff, yOff)
+        ih:SetSize(iconSize, iconSize)
 
-        bar:SetPoint("LEFT", obj.iconHolder, "RIGHT", gap, 0)
-        bar:SetSize(barW, h)
+        bar:SetPoint("TOPLEFT", anchorTarget, "BOTTOMLEFT", xOff + iconSize + gap, yOff)
+        bar:SetPoint("TOPRIGHT", anchorTarget, "BOTTOMRIGHT", xOff, yOff)
+        bar:SetHeight(h)
     else
-        obj.iconHolder:Hide()
-        bar:SetPoint("TOP", anchorTarget, "BOTTOM", xOff, yOff)
-        bar:SetSize(w, h)
+        if ih then ih:Hide() end
+        bar:SetPoint("TOPLEFT", anchorTarget, "BOTTOMLEFT", xOff, yOff)
+        bar:SetPoint("TOPRIGHT", anchorTarget, "BOTTOMRIGHT", xOff, yOff)
+        bar:SetHeight(h)
     end
 
     bar:SetStatusBarTexture(BAR_TEXTURE)
 
     -- Background
     local bc = CFG.barBgColor or {0, 0, 0, 0.95}
-    obj.bg:SetVertexColor(bc[1] or 0, bc[2] or 0, bc[3] or 0, bc[4] or 0.95)
+    if not (obj.bg and type(obj.bg) == "table" and obj.bg.SetVertexColor) then
+        if bar and bar.CreateTexture then
+            local newBg = bar:CreateTexture(nil, "BACKGROUND", nil, -7)
+            newBg.FPOwned = true
+            newBg:SetAllPoints(bar)
+            newBg:SetTexture(FLAT_TEXTURE)
+            obj.bg = newBg
+        end
+    end
+    if obj.bg and obj.bg.SetVertexColor then
+        obj.bg:SetVertexColor(bc[1] or 0, bc[2] or 0, bc[3] or 0, bc[4] or 0.95)
+    end
 
     -- Pixel Border
     obj.border:SetThickness(thick)
     obj.border:SetShown(showB)
+    local isShielded = obj.activeCast and obj.activeCast.isShielded
+    local b_r, b_g, b_b = GetEnemyBorderColor(isShielded)
+    obj.border:SetColor(b_r, b_g, b_b, 1.0)
 
     -- Icon Holder & Border
-    obj.iconBorder:SetThickness(thick)
-    obj.iconBorder:SetShown(showB and showIcon)
+    if ih and obj.iconBorder then
+        obj.iconBorder:SetThickness(thick)
+        obj.iconBorder:SetShown(showB and showIcon)
+        obj.iconBorder:SetColor(b_r, b_g, b_b, 1.0)
+    end
 
     -- Shield
     obj.shield:ClearAllPoints()
@@ -1036,6 +1086,27 @@ local function ApplyEnemyCastBarLayout(unitFrame, obj)
 end
 FP_CB.ApplyEnemyCastBarLayout = ApplyEnemyCastBarLayout
 
+local function GetEnemyCastBarBottomOffset(unitFrame)
+    if not unitFrame then return nil end
+    local obj = plateCastBars[unitFrame]
+    if not obj or not obj.bar or not obj.bar:IsShown() then
+        return nil
+    end
+    local h = CFG.enemyCastHeight or 14
+    local yOff = CFG.enemyCastYOffset or -4
+    local showB = (CFG.enemyShowBorder ~= false) and (CFG.showBorder ~= false)
+    local thick = showB and (CFG.enemyBorderThickness or CFG.outlineThickness or 1) or 0
+    return math.abs(yOff) + h + thick
+end
+FP_CB.GetEnemyCastBarBottomOffset = GetEnemyCastBarBottomOffset
+
+local function IsEnemyCastBarShown(unitFrame)
+    if not unitFrame then return false end
+    local obj = plateCastBars[unitFrame]
+    return (obj and obj.bar and obj.bar.IsShown and obj.bar:IsShown()) and true or false
+end
+FP_CB.IsEnemyCastBarShown = IsEnemyCastBarShown
+
 local function GetOrCreatePlateCastBar(unitFrame, plate, unit)
     if not unitFrame and not plate then return nil end
     local uf = unitFrame or (plate and (plate.UnitFrame or plate.unitFrame or plate))
@@ -1056,6 +1127,11 @@ local function GetOrCreatePlateCastBar(unitFrame, plate, unit)
     bar:SetValue(0)
     bar:EnableMouse(false)
 
+    uf.fpCastBar = bar
+    if plate and plate ~= uf then
+        plate.fpCastBar = bar
+    end
+
     -- Background texture
     local bg = bar:CreateTexture(nil, "BACKGROUND", nil, -7)
     bg.FPOwned = true
@@ -1066,12 +1142,14 @@ local function GetOrCreatePlateCastBar(unitFrame, plate, unit)
 
     -- Pixel Border
     local thick = CFG.enemyBorderThickness or CFG.outlineThickness or 1
-    local border = CreatePixelBorder(bar, thick, 0.08, 0.10, 0.12, 1.0)
+    local b_r, b_g, b_b = GetEnemyBorderColor(false)
+    local border = CreatePixelBorder(bar, thick, b_r, b_g, b_b, 1.0)
 
-    -- Icon Holder
-    local ih = CreateFrame("Frame", nil, bar)
+    -- Icon Holder: MUST be child of uf (sibling of bar), never child of bar
+    local ih = CreateFrame("Frame", nil, uf)
     ih.FPOwned = true
-    ih:SetFrameLevel(bar:GetFrameLevel() + 1)
+    ih:SetFrameStrata(bar:GetFrameStrata())
+    ih:SetFrameLevel(bar:GetFrameLevel() + 2)
     ih:EnableMouse(false)
 
     local icon = ih:CreateTexture(nil, "ARTWORK")
@@ -1081,7 +1159,7 @@ local function GetOrCreatePlateCastBar(unitFrame, plate, unit)
         icon:SetTexCoord(0.08, 0.92, 0.08, 0.92)
     end
 
-    local iconBorder = CreatePixelBorder(ih, thick, 0.08, 0.10, 0.12, 1.0)
+    local iconBorder = CreatePixelBorder(ih, thick, b_r, b_g, b_b, 1.0)
 
     -- Shield Icon
     local shield = bar:CreateTexture(nil, "OVERLAY", nil, 6)
@@ -1131,6 +1209,7 @@ local function GetOrCreatePlateCastBar(unitFrame, plate, unit)
         local cast = obj.activeCast
         if not cast then
             self:Hide()
+            ih:Hide()
             return
         end
 
@@ -1148,6 +1227,7 @@ local function GetOrCreatePlateCastBar(unitFrame, plate, unit)
                     end)
                     if not still then
                         self:Hide()
+                        ih:Hide()
                         obj.activeCast = nil
                         return
                     end
@@ -1160,6 +1240,7 @@ local function GetOrCreatePlateCastBar(unitFrame, plate, unit)
         if now >= cast.endTime then
             if not obj.isTest then
                 self:Hide()
+                ih:Hide()
                 obj.activeCast = nil
             end
             return
@@ -1190,8 +1271,31 @@ local function GetOrCreatePlateCastBar(unitFrame, plate, unit)
         end
     end)
 
+    bar:HookScript("OnShow", function()
+        if CFG.showEnemyCastIcon ~= false and obj.activeCast and obj.activeCast.texture then
+            ih:Show()
+        else
+            ih:Hide()
+        end
+        if _G.ForeverPlates and _G.ForeverPlates.AdjustAuraFrames then
+            _G.ForeverPlates.AdjustAuraFrames(uf)
+        elseif _G.ForeverPlates and _G.ForeverPlates.LayoutNameplateAuras then
+            _G.ForeverPlates.LayoutNameplateAuras(uf)
+        end
+    end)
+    bar:HookScript("OnHide", function()
+        ih:Hide()
+        if _G.ForeverPlates and _G.ForeverPlates.AdjustAuraFrames then
+            _G.ForeverPlates.AdjustAuraFrames(uf)
+        elseif _G.ForeverPlates and _G.ForeverPlates.LayoutNameplateAuras then
+            _G.ForeverPlates.LayoutNameplateAuras(uf)
+        end
+    end)
+
     bar:Hide()
+    ih:Hide()
     plateCastBars[uf] = obj
+    ApplyEnemyCastBarLayout(uf, obj)
     return obj
 end
 FP_CB.GetOrCreatePlateCastBar = GetOrCreatePlateCastBar
@@ -1209,7 +1313,10 @@ local function UpdatePlateCast(unit)
     SuppressPlateCastBar(plate)
 
     if CFG.onlyHostileEnemyPlateCast and not UnitCanAttack("player", unit) then
-        if plateCastBars[uf] then plateCastBars[uf].bar:Hide() end
+        if plateCastBars[uf] then
+            plateCastBars[uf].bar:Hide()
+            if plateCastBars[uf].iconHolder then plateCastBars[uf].iconHolder:Hide() end
+        end
         return
     end
 
@@ -1217,6 +1324,7 @@ local function UpdatePlateCast(unit)
     if not castData then
         if plateCastBars[uf] then
             plateCastBars[uf].bar:Hide()
+            if plateCastBars[uf].iconHolder then plateCastBars[uf].iconHolder:Hide() end
             plateCastBars[uf].activeCast = nil
         end
         return
@@ -1241,7 +1349,11 @@ local function UpdatePlateCast(unit)
     -- Icon
     if castData.texture then
         obj.icon:SetTexture(castData.texture)
-        obj.iconHolder:SetShown(CFG.showEnemyCastIcon ~= false)
+        if CFG.showEnemyCastIcon ~= false then
+            obj.iconHolder:Show()
+        else
+            obj.iconHolder:Hide()
+        end
     else
         obj.iconHolder:Hide()
     end
@@ -1253,9 +1365,9 @@ local function UpdatePlateCast(unit)
     local r, g, b = GetEnemyBarColor(castData.isShielded, castData.isChannel)
     obj.bar:SetStatusBarColor(r, g, b, 1)
 
-    local br, bg, bb = GetEnemyBorderColor(castData.isShielded)
-    obj.border:SetColor(br, bg, bb, 1.0)
-    obj.iconBorder:SetColor(br, bg, bb, 1.0)
+    local b_r, b_g, b_b = GetEnemyBorderColor(castData.isShielded)
+    obj.border:SetColor(b_r, b_g, b_b, 1.0)
+    obj.iconBorder:SetColor(b_r, b_g, b_b, 1.0)
 
     if castData.isShielded then
         obj.shield:Show()
@@ -1264,6 +1376,9 @@ local function UpdatePlateCast(unit)
     end
 
     obj.bar:Show()
+    if _G.ForeverPlates and _G.ForeverPlates.AdjustAuraFrames then
+        _G.ForeverPlates.AdjustAuraFrames(uf)
+    end
 end
 FP_CB.UpdatePlateCast = UpdatePlateCast
 
@@ -1277,9 +1392,9 @@ local function SetPlateCastShielded(unit, isShielded)
         obj.activeCast.isShielded = isShielded
         local r, g, b = GetEnemyBarColor(isShielded, obj.activeCast.isChannel)
         obj.bar:SetStatusBarColor(r, g, b, 1)
-        local br, bg, bb = GetEnemyBorderColor(isShielded)
-        obj.border:SetColor(br, bg, bb, 1.0)
-        obj.iconBorder:SetColor(br, bg, bb, 1.0)
+        local b_r, b_g, b_b = GetEnemyBorderColor(isShielded)
+        obj.border:SetColor(b_r, b_g, b_b, 1.0)
+        obj.iconBorder:SetColor(b_r, b_g, b_b, 1.0)
         if isShielded then
             obj.shield:Show()
         else
@@ -1303,13 +1418,21 @@ local function HidePlateCast(unit, isInterrupted)
         C_Timer.After(0.4, function()
             if obj.activeCast == nil or obj.activeCast.interrupted then
                 obj.bar:Hide()
+                if obj.iconHolder then obj.iconHolder:Hide() end
                 obj.activeCast = nil
+                if _G.ForeverPlates and _G.ForeverPlates.AdjustAuraFrames then
+                    _G.ForeverPlates.AdjustAuraFrames(uf)
+                end
             end
         end)
         if obj.activeCast then obj.activeCast.interrupted = true end
     else
         obj.bar:Hide()
+        if obj.iconHolder then obj.iconHolder:Hide() end
         obj.activeCast = nil
+        if _G.ForeverPlates and _G.ForeverPlates.AdjustAuraFrames then
+            _G.ForeverPlates.AdjustAuraFrames(uf)
+        end
     end
 end
 FP_CB.HidePlateCast = HidePlateCast
@@ -1322,6 +1445,9 @@ local function RefreshAllEnemyCastBars()
             local obj = plateCastBars[uf]
             if obj then
                 ApplyEnemyCastBarLayout(uf, obj)
+                if obj.bar and obj.bar:IsShown() and _G.ForeverPlates and _G.ForeverPlates.AdjustAuraFrames then
+                    _G.ForeverPlates.AdjustAuraFrames(uf)
+                end
             end
         end
     end
@@ -1338,7 +1464,14 @@ FP_CB.HookCastBar = function() end
 FP_CB.SuppressBlizzardCastBarArt = function(cb) if cb then SuppressFrame(cb) end end
 local function SetupNameplateCastBar(unit)
     if not unit then return end
-    SuppressPlateCastBar(unit)
+    local plate = GetSafeNamePlate(unit)
+    if plate then
+        SuppressPlateCastBar(plate)
+        local uf = plate.UnitFrame or plate.unitFrame or plate
+        if uf and not (uf.IsForbidden and uf:IsForbidden()) then
+            GetOrCreatePlateCastBar(uf, plate, unit)
+        end
+    end
     UpdatePlateCast(unit)
 end
 FP_CB.SetupNameplateCastBar = SetupNameplateCastBar
@@ -1403,7 +1536,8 @@ local function CreateSingleCastBar(unit)
     spark:Hide()
 
     -- Border
-    local border = CreatePixelBorder(statusBar, CFG[unit .. "BorderThickness"] or CFG.outlineThickness or 1, 0.08, 0.10, 0.12, 1.0)
+    local ubr, ubg, ubb = GetUnitBorderColor(unit)
+    local border = CreatePixelBorder(statusBar, CFG[unit .. "BorderThickness"] or CFG.outlineThickness or 1, ubr, ubg, ubb, 1.0)
 
     -- Icon (Flush with statusBar)
     local iconHolder = CreateFrame("Frame", nil, anchor)
@@ -1415,10 +1549,11 @@ local function CreateSingleCastBar(unit)
     iconBg:SetVertexColor(0.04, 0.05, 0.06, 0.90)
 
     local icon = iconHolder:CreateTexture(nil, "ARTWORK")
-    icon:SetAllPoints()
+    icon.FPOwned = true
+    icon:SetAllPoints(iconHolder)
     if icon.SetTexCoord then icon:SetTexCoord(0.08, 0.92, 0.08, 0.92) end
 
-    local iconBorder = CreatePixelBorder(iconHolder, CFG[unit .. "BorderThickness"] or CFG.outlineThickness or 1, 0.08, 0.10, 0.12, 1.0)
+    local iconBorder = CreatePixelBorder(iconHolder, CFG[unit .. "BorderThickness"] or CFG.outlineThickness or 1, ubr, ubg, ubb, 1.0)
 
     -- Texts
     local spellText = statusBar:CreateFontString(nil, "OVERLAY", nil, 6)
@@ -1534,9 +1669,9 @@ local function CreateSingleCastBar(unit)
         border:SetShown(showB)
         iconBorder:SetShown(showB and showIcon)
 
-        local br, bg, bb = GetUnitBorderColor(unit)
-        border:SetColor(br, bg, bb, 1.0)
-        iconBorder:SetColor(br, bg, bb, 1.0)
+        local ubr, ubg, ubb = GetUnitBorderColor(unit)
+        border:SetColor(ubr, ubg, ubb, 1.0)
+        iconBorder:SetColor(ubr, ubg, ubb, 1.0)
 
         if obj.isTest then
             local r, g, b = GetUnitBarColor(unit, false, false)
@@ -1659,9 +1794,9 @@ local function UpdateSingleCast(unit)
     local r, g, b = GetUnitBarColor(unit, castData.isShielded, castData.isChannel)
     obj.statusBar:SetStatusBarColor(r, g, b, 1)
 
-    local br, bg, bb = GetUnitBorderColor(unit)
-    obj.border:SetColor(br, bg, bb, 1.0)
-    obj.iconBorder:SetColor(br, bg, bb, 1.0)
+    local ubr, ubg, ubb = GetUnitBorderColor(unit)
+    obj.border:SetColor(ubr, ubg, ubb, 1.0)
+    obj.iconBorder:SetColor(ubr, ubg, ubb, 1.0)
 
     -- Latency Bar (Player only)
     if unit == "player" and obj.latencyBar then
@@ -1814,9 +1949,9 @@ local function ShowTestAll()
                 obj.timerText:SetShown(CFG["show" .. U .. "Timer"] ~= false)
                 local r, g, b = GetUnitBarColor(unit, data.isShielded, false)
                 obj.statusBar:SetStatusBarColor(r, g, b, 1)
-                local br, bg, bb = GetUnitBorderColor(unit)
-                obj.border:SetColor(br, bg, bb, 1.0)
-                obj.iconBorder:SetColor(br, bg, bb, 1.0)
+                local ubr, ubg, ubb = GetUnitBorderColor(unit)
+                obj.border:SetColor(ubr, ubg, ubb, 1.0)
+                obj.iconBorder:SetColor(ubr, ubg, ubb, 1.0)
                 obj.anchor:Show()
             else
                 obj.isTest = false
@@ -1857,11 +1992,14 @@ local function ShowTestAll()
                         obj.iconHolder:SetShown(CFG.showEnemyCastIcon ~= false)
                         local r, g, b = GetEnemyBarColor(false, false)
                         obj.bar:SetStatusBarColor(r, g, b, 1)
-                        local br, bg, bb = GetEnemyBorderColor(false)
-                        obj.border:SetColor(br, bg, bb, 1.0)
-                        obj.iconBorder:SetColor(br, bg, bb, 1.0)
+                        local b_r, b_g, b_b = GetEnemyBorderColor(false)
+                        obj.border:SetColor(b_r, b_g, b_b, 1.0)
+                        obj.iconBorder:SetColor(b_r, b_g, b_b, 1.0)
                         obj.shield:Hide()
                         obj.bar:Show()
+                        if _G.ForeverPlates and _G.ForeverPlates.AdjustAuraFrames then
+                            _G.ForeverPlates.AdjustAuraFrames(uf)
+                        end
                     end
                 end
             end
@@ -1911,7 +2049,8 @@ local function ShowTestAll()
         hbg:SetTexture(FLAT_TEXTURE)
         hbg:SetVertexColor(0.12, 0.05, 0.05, 0.95)
 
-        testMockPlate.border = CreatePixelBorder(testMockPlate, 1, 0.08, 0.10, 0.12, 1.0)
+        local tbr, tbg, tbb = GetEnemyBorderColor(false)
+        testMockPlate.border = CreatePixelBorder(testMockPlate, 1, tbr, tbg, tbb, 1.0)
 
         local hpText = hb:CreateFontString(nil, "OVERLAY")
         hpText:SetFont(GetFontPath(CFG.font), 9, "OUTLINE")
@@ -1946,16 +2085,17 @@ local function ShowTestAll()
         sbg:SetTexture(FLAT_TEXTURE)
         testFloatingBar.sbg = sbg
 
-        testFloatingBar.border = CreatePixelBorder(testFloatingBar, 1, 0.08, 0.10, 0.12, 1.0)
+        local tbr, tbg, tbb = GetEnemyBorderColor(false)
+        testFloatingBar.border = CreatePixelBorder(testFloatingBar, 1, tbr, tbg, tbb, 1.0)
 
-        local ih = CreateFrame("Frame", nil, testFloatingBar)
+        local ih = CreateFrame("Frame", nil, testMockPlate)
         local icon = ih:CreateTexture(nil, "ARTWORK")
         icon:SetAllPoints()
         icon:SetTexture("Interface\\Icons\\Spell_Shadow_ShadowBolt")
         if icon.SetTexCoord then icon:SetTexCoord(0.08, 0.92, 0.08, 0.92) end
         testFloatingBar.iconHolder = ih
         testFloatingBar.icon = icon
-        testFloatingBar.iconBorder = CreatePixelBorder(ih, 1, 0.08, 0.10, 0.12, 1.0)
+        testFloatingBar.iconBorder = CreatePixelBorder(ih, 1, tbr, tbg, tbb, 1.0)
 
         local txt = sb:CreateFontString(nil, "OVERLAY")
         txt:SetPoint("LEFT", sb, "LEFT", 4, 0)
@@ -1992,18 +2132,18 @@ local function ShowTestAll()
 
     if showIcon then
         local iconSize = h
-        local barW = math.max(20, w - iconSize - gap)
-        local startX = xOff - (w / 2)
-        testFloatingBar.iconHolder:SetPoint("TOPLEFT", testMockPlate, "BOTTOM", startX, yOff)
+        testFloatingBar.iconHolder:SetPoint("TOPLEFT", testMockPlate, "BOTTOMLEFT", xOff, yOff)
         testFloatingBar.iconHolder:SetSize(iconSize, iconSize)
         testFloatingBar.iconHolder:Show()
 
-        testFloatingBar:SetPoint("LEFT", testFloatingBar.iconHolder, "RIGHT", gap, 0)
-        testFloatingBar:SetSize(barW, h)
+        testFloatingBar:SetPoint("TOPLEFT", testMockPlate, "BOTTOMLEFT", xOff + iconSize + gap, yOff)
+        testFloatingBar:SetPoint("TOPRIGHT", testMockPlate, "BOTTOMRIGHT", xOff, yOff)
+        testFloatingBar:SetHeight(h)
     else
         testFloatingBar.iconHolder:Hide()
-        testFloatingBar:SetPoint("TOP", testMockPlate, "BOTTOM", xOff, yOff)
-        testFloatingBar:SetSize(w, h)
+        testFloatingBar:SetPoint("TOPLEFT", testMockPlate, "BOTTOMLEFT", xOff, yOff)
+        testFloatingBar:SetPoint("TOPRIGHT", testMockPlate, "BOTTOMRIGHT", xOff, yOff)
+        testFloatingBar:SetHeight(h)
     end
 
     local bc = CFG.barBgColor or {0, 0, 0, 0.95}
@@ -2012,11 +2152,11 @@ local function ShowTestAll()
     local r, g, b = GetEnemyBarColor(false, false)
     testFloatingBar.sb:SetStatusBarColor(r, g, b, 1)
 
-    local br, bg, bb = GetEnemyBorderColor(false)
+    local b_r, b_g, b_b = GetEnemyBorderColor(false)
     testFloatingBar.border:SetThickness(thick)
     testFloatingBar.iconBorder:SetThickness(thick)
-    testFloatingBar.border:SetColor(br, bg, bb, 1.0)
-    testFloatingBar.iconBorder:SetColor(br, bg, bb, 1.0)
+    testFloatingBar.border:SetColor(b_r, b_g, b_b, 1.0)
+    testFloatingBar.iconBorder:SetColor(b_r, b_g, b_b, 1.0)
     testFloatingBar.border:SetShown(showB)
     testFloatingBar.iconBorder:SetShown(showB and showIcon)
 
@@ -2057,6 +2197,9 @@ local function HideTestAll()
             obj.isTest = false
             obj.activeCast = nil
             obj.bar:Hide()
+            if _G.ForeverPlates and _G.ForeverPlates.AdjustAuraFrames then
+                _G.ForeverPlates.AdjustAuraFrames(uf)
+            end
         end
     end
 end
@@ -2129,9 +2272,9 @@ local function SimulateCast(isShielded, unit)
     obj.spellText:SetText(obj.activeCast.name)
     local r, g, b = GetUnitBarColor(unit, isShielded, false)
     obj.statusBar:SetStatusBarColor(r, g, b, 1)
-    local br, bg, bb = GetUnitBorderColor(unit)
-    obj.border:SetColor(br, bg, bb, 1.0)
-    obj.iconBorder:SetColor(br, bg, bb, 1.0)
+    local ubr, ubg, ubb = GetUnitBorderColor(unit)
+    obj.border:SetColor(ubr, ubg, ubb, 1.0)
+    obj.iconBorder:SetColor(ubr, ubg, ubb, 1.0)
     obj.anchor:Show()
 end
 FP_CB.SimulateCast = SimulateCast
@@ -2157,6 +2300,9 @@ events:RegisterEvent("UNIT_SPELLCAST_CHANNEL_UPDATE")
 events:RegisterEvent("UNIT_SPELLCAST_CHANNEL_STOP")
 events:RegisterEvent("UNIT_SPELLCAST_INTERRUPTIBLE")
 events:RegisterEvent("UNIT_SPELLCAST_NOT_INTERRUPTIBLE")
+events:RegisterEvent("UNIT_SPELLCAST_EMPOWER_START")
+events:RegisterEvent("UNIT_SPELLCAST_EMPOWER_UPDATE")
+events:RegisterEvent("UNIT_SPELLCAST_EMPOWER_STOP")
 events:RegisterEvent("SPELL_UPDATE_COOLDOWN")
 
 events:SetScript("OnEvent", function(self, event, unit, ...)
@@ -2268,7 +2414,13 @@ events:SetScript("OnEvent", function(self, event, unit, ...)
                 SetPlateCastShielded(unit, false)
             elseif event == "UNIT_SPELLCAST_STOP" or event == "UNIT_SPELLCAST_CHANNEL_STOP"
             or event == "UNIT_SPELLCAST_SUCCEEDED" or event == "UNIT_SPELLCAST_EMPOWER_STOP" then
-                HidePlateCast(unit, false)
+                -- Check if an immediate next cast is already ongoing
+                local nextCast = GetSafeCastData(unit)
+                if nextCast then
+                    UpdatePlateCast(unit)
+                else
+                    HidePlateCast(unit, false)
+                end
             elseif event == "UNIT_SPELLCAST_FAILED" or event == "UNIT_SPELLCAST_INTERRUPTED" then
                 HidePlateCast(unit, true)
             end
@@ -2290,8 +2442,6 @@ events:SetScript("OnUpdate", function(self, elapsed)
                     pcall(f.SetSize, f, 0.0001, 0.0001)
                     if not (f.IsProtected and f:IsProtected()) then
                         pcall(f.Hide, f)
-                        pcall(f.ClearAllPoints, f)
-                        pcall(f.SetPoint, f, "TOPLEFT", UIParent, "BOTTOMRIGHT", 9999, -9999)
                     end
                 end
             end

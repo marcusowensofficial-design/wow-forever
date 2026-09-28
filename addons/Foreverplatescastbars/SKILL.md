@@ -2,10 +2,10 @@
 name: wow-forever-addon-development
 description: |
   Comprehensive guide and rules for creating and editing World of Warcraft addons specifically for WoW Forever (Camelot / 12.0 engine) and modern WoW clients.
-  Covers 16001 TOC standards, Single-TOC architecture, AllowLoadGameType filters, XML and Lua frame design, secret values / UI taint, ruleset realm substitution, SavedVariables beta workarounds, and nameplate/unit frame mechanics.
+  Covers 16001 TOC standards, Single-TOC architecture, AllowLoadGameType filters, XML and Lua frame design, secret values / UI taint, ruleset realm substitution, SavedVariables persistence & profile management, and nameplate/unit frame mechanics.
 license: Apache-2.0
 metadata:
-  version: v3
+  version: v5
   publisher: user
 ---
 
@@ -71,13 +71,11 @@ init.lua
 
 ## 2. Beta Engine Known Bugs & Workarounds
 
-### 2.1 SavedVariables Disk Persistence Bug (CRITICAL)
-- **The Issue**: In the current WoW Forever (1.60 / Camelot) Beta engine, Blizzard has a client-level I/O bug where **`SavedVariables` are NOT flushed or persisted to disk on `/reload`, logout, or client exit across ALL addons**.
-- **Impact**: Any addon settings changed in-game (via GUI options panels, slash commands, or SavedVariables tables) **will be lost upon UI reload or restart**.
-- **Development Workaround**:
-  - Do **not** rely on in-game configuration staying saved between sessions.
-  - All styling, color palettes, scale/size values, offsets, and feature toggles must be configured directly inside the addon's default settings table in Lua (e.g. `addonDBDefaults` in `core.lua`).
-  - Always merge defaults defensively inside `ADDON_LOADED`.
+### 2.1 SavedVariables Disk Persistence (FIXED)
+- **Status: FIXED**: In earlier WoW Forever (1.60 / Camelot) Beta builds, Blizzard had a client-level I/O bug where `SavedVariables` were not flushed to disk. **This issue has been resolved by Blizzard, and `SavedVariables` now persist normally across `/reload`, logout, and client restarts.**
+- **SavedVariables in Action**:
+  - Addon settings, positioning, toggles, and user profiles configured via GUI options panels, slash commands, or SavedVariables tables are now properly written to disk (`WTF\Account\<AccountName>\SavedVariables\<AddonName>.lua`) and load reliably upon subsequent sessions.
+  - While hardcoding defaults directly into Lua tables is no longer necessary as a disk-persistence workaround, **defensive default merging** inside `ADDON_LOADED` (or via AceDB-3.0) remains standard architectural best practice to safely handle new settings or schema migrations without clobbering existing player configurations.
 
 ### 2.2 `UnitName("player")` vs `UnitName("target")` Discrepancy
 - **The Issue**:
@@ -103,6 +101,22 @@ init.lua
 - **Recent Notable Forever Beta Bugs (Build 1.60.1.69977 / Interface 16001)**:
   - **Issue #887 (`cancelaura` on target-slot)**: In `Blizzard_FrameXML/SecureTemplates.lua`, `CANCELABLE_ITEMS` was replaced with `IsCancellableSlotValid`, but `cancelaura` still indexes `CANCELABLE_ITEMS[slot]`, causing fatal nil-indexing errors when cancelling temporary weapon enchants via `SecureActionButtonTemplate`.
   - **Issue #886 (Shaman Weapon Imbues)**: Shaman weapon imbues (`Enum.ItemEnchantType.Imbue`) are invisible to `C_PaperDollInfo.GetTemporaryEnchantmentInfo(16)` and `CustomAuraContainerTemplate`. Addons must query `C_Item.GetWeaponEnchantInfo(slot)` directly to detect imbues like Rockbiter, Flametongue, or Windfury.
+
+### 2.4 RestrictedExecution & `loadstring_untainted` Beta Defect
+- **The Issue**: In the current WoW Forever Beta engine, `loadstring_untainted` is absent or non-functional inside the secure execution environment.
+- **Impact**: Any addon relying on `RegisterAttributeDriver` or secure state snippet compilation for dynamic frame paging/visibility (`[vehicleui]`, `[combat]`, `[group]`, `[form]`, etc.) will fail or cause immediate execution taint on secure frames.
+- **Workaround**: Use standard out-of-combat event-driven Lua visibility handlers (`frame:Show()`, `frame:Hide()`) instead of secure snippet state drivers wherever possible during beta.
+
+### 2.5 Missing Classic Spell IDs in 12.0 Database & Table Sentinel Pattern
+- **The Issue**: Because WoW Forever runs on the modern 12.0 Retail engine with Classic gameplay, `GetSpellInfo` is deprecated in favor of `C_Spell.GetSpellInfo`. Furthermore, several Classic spell IDs are missing from the retail spell database.
+- **The Fatal Crash**: If an addon builds lookup tables at file-load time like `local t = { [GetSpellInfo(12345)] = true }`, a missing spell returns `nil`. In Lua, initializing a table with `[nil] = true` throws `table index is nil`, immediately aborting the entire Lua file and failing addon initialization!
+- **Defensive Sentinel Pattern**:
+  ```lua
+  local function SafeSpellName(spellID)
+      local info = C_Spell and C_Spell.GetSpellInfo and C_Spell.GetSpellInfo(spellID)
+      return (info and info.name) or ("NoSpell_" .. tostring(spellID))
+  end
+  ```
 
 ---
 
@@ -240,6 +254,7 @@ Starting in 12.0 (Camelot / WoW Forever), Blizzard introduced strict UI taint an
 - `issecretvalue(value)`: Returns `true` if `value` is a secret value.
 - `issecrettable(tbl)`: Returns `true` if a table contains secret values.
 - `issecurevalue(value)`: Returns `true` if a value is secure.
+- `C_Secrets.ShouldAurasBeSecret()`: Returns `true` if the engine is currently enforcing secret aura data (e.g. in restricted combat instances). Useful for pre-flight branch checks before querying auras.
 
 ### 5.3 The `<secret string>` Trap with `fs:GetText()`
 - On 12.0 clients, reading text from Blizzard native widgets via `fs:GetText()` returns a `<secret string>` when tainted.
@@ -306,6 +321,39 @@ if val and val > 0 then
     -- Safe to perform standard math
 end
 ```
+
+### 5.9 The Blizzard FrameXML Execution Taint Cascade (The BuffFrame Trap)
+- **The Core Rule**: **NEVER** attempt to manage, re-register events on, or manually execute scripts on native Blizzard secure frames (`BuffFrame`, `PlayerFrame`, `TargetFrame`, `TemporaryEnchantFrame`, etc.).
+- **Taint Vectors**:
+  ```lua
+  -- FATAL IN 12.0: PERMANENTLY TAINTS THE BLIZZARD FRAME
+  BuffFrame:RegisterEvent("UNIT_AURA")
+  BuffFrame:RegisterUnitEvent("UNIT_AURA", "player")
+  BuffFrame:Update()
+  RegisterAttributeDriver(BuffFrame, "state-visibility", "hide")
+  local onEvent = BuffFrame:GetScript("OnEvent")
+  onEvent(BuffFrame, "UNIT_AURA", "player")
+  ```
+- **The Cascade Mechanism**:
+  1. An addon calls `RegisterEvent`, `RegisterAttributeDriver`, or directly executes `Update`/`OnEvent` on a native Blizzard FrameXML frame.
+  2. Blizzard's frame becomes permanently tainted by that addon.
+  3. When combat begins or aura updates fire, internal engine queries (`C_UnitAuras`, health) return `<secret number>` or `<secret string>` values to Blizzard's code.
+  4. Blizzard's FrameXML was written assuming secure execution and performs raw math (`if duration < 31 then` at `BuffFrame.lua:70`, `if buttonInfo.count > 1 then` at `BuffFrame.lua:1304`).
+  5. Because animation loops (e.g. `WarningFader`) run on every frame tick (~60 FPS), the unshielded math crashes at over **4,000+ errors per minute**!
+  6. The error dialog itself (`Blizzard_ScriptErrorsFrame`) inherits the execution taint, throwing secondary crashes when measuring strings (`prevText`, `cursorOffset`).
+- **Remedy**: Leave native Blizzard frames completely untouched. If suppressing them, do so cleanly without registering state drivers, or keep them untainted so they run securely without secret value collisions.
+
+### 5.10 Safe C-Side Aura Displays Under Secret State
+When player auras are secret during combat, Lua arithmetic and string comparisons fail. Blizzard provides C-side engine hooks that accept secret values directly:
+1. **Cooldown Wheel Swipe Animation**:
+   - Never compute `expirationTime - duration` in Lua when secret.
+   - Use Blizzard's C-side helper: `CooldownFrame_SetAura(cooldownFrame, unit, auraInstanceID)`.
+2. **Stack Application Count**:
+   - Never compare `count > 1` or format `fs:SetText(count)` when secret.
+   - Use: `fs:SetText(C_UnitAuras.GetAuraApplicationDisplayCount(unit, auraInstanceID, maxDisplay))`.
+3. **Dispel Type & Border Color**:
+   - Never compare `dispelName == "Magic"` when secret.
+   - Resolve color via C-side curve: `local c = C_UnitAuras.GetAuraDispelTypeColor(unit, auraInstanceID, dispelColorCurve)`.
 
 ---
 
@@ -404,6 +452,9 @@ end
      ```lua
      SetCVar("nameplateDebuffPadding", "6")
      ```
+4. **Unit Frame Auras (`SecureAuraHeaderTemplate` vs `CustomAuraContainerTemplate`)**:
+   - In modern Retail / 12.0 engine, `SecureAuraHeaderTemplate` was removed in 10.0 in favor of `EditModeBuffFrameSystemTemplate` / `CustomAuraContainerTemplate`.
+   - On Forever, unit frame addons should check `C_XMLUtil.GetTemplateInfo("SecureAuraHeaderTemplate")`. If missing, fall back to `CustomAuraContainerTemplate` or addon-owned by-index icons, guarding queries with `C_Secrets.ShouldAurasBeSecret()` and `issecretvalue()`.
 
 ---
 
@@ -492,7 +543,7 @@ end
          return dest
      end
      ```
-3. **Beta Workaround Reminder**: Because disk persistence is currently broken in the Forever beta client, default tables are the **source of truth**. Hardcode configuration updates into defaults during development.
+3. **SavedVariables Disk Persistence (Working)**: The earlier beta client bug where `SavedVariables` were not written to disk on reload or exit has been resolved. In-game changes are now saved properly to disk and persist between sessions. Defensive default merging continues to ensure that existing user customizations are preserved while new configuration keys or default schema updates are seamlessly merged.
 
 ---
 

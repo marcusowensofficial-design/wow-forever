@@ -18,7 +18,7 @@ local guiFrame = nil
 -------------------------------------------------------------------------------
 local function CreatePixelBorder(parent, inset, r, g, b, a)
     inset = inset or 0
-    r, g, b, a = r or 0.08, g or 0.10, b or 0.12, a or 1.0
+    r, g, b, a = r or 0.12, g or 0.12, b or 0.14, a or 1.0
     local border = {}
 
     local top = parent:CreateTexture(nil, "BORDER", nil, 1)
@@ -675,7 +675,11 @@ function FP_CB.CreateGUI()
             btn.bg = bbg
             btn.border = CreatePixelBorder(btn, 1, 0.18, 0.20, 0.24, 0.8)
 
-            local pal = FP_CB.COLOR_PALETTES[cKey] or { r = 1, g = 1, b = 1, name = cKey }
+            local isOutline = (FP_CB.OUTLINE_PALETTES and FP_CB.OUTLINE_PALETTES[cKey]) and (dbKey:find("Border") or dbKey:find("outline") or dbKey:find("Outline"))
+            local pal = (isOutline and FP_CB.OUTLINE_PALETTES[cKey]) or FP_CB.COLOR_PALETTES[cKey] or { r = 1, g = 1, b = 1, name = cKey }
+            if isOutline and cKey == "DARK" and _G.ForeverPlates and _G.ForeverPlates.OUTLINE_COLORS and _G.ForeverPlates.OUTLINE_COLORS.DARK then
+                pal = _G.ForeverPlates.OUTLINE_COLORS.DARK
+            end
             local swatch = btn:CreateTexture(nil, "OVERLAY")
             swatch:SetSize(10, 10)
             swatch:SetPoint("LEFT", btn, "LEFT", 4, 0)

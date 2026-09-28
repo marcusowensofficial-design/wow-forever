@@ -203,7 +203,7 @@ function FP.CreateGUI()
     scrollFrameEnemy:SetPoint("BOTTOMRIGHT", f, "BOTTOMRIGHT", -32, 96)
 
     local contentEnemy = CreateFrame("Frame", "ForeverPlatesScrollChildEnemy", scrollFrameEnemy)
-    contentEnemy:SetSize(490, 1520)
+    contentEnemy:SetSize(490, 1560)
     scrollFrameEnemy:SetScrollChild(contentEnemy)
 
     local scrollFrameFriendly = CreateFrame("ScrollFrame", "ForeverPlatesScrollFrameFriendly", f, "UIPanelScrollFrameTemplate")
@@ -211,7 +211,7 @@ function FP.CreateGUI()
     scrollFrameFriendly:SetPoint("BOTTOMRIGHT", f, "BOTTOMRIGHT", -32, 96)
 
     local contentFriendly = CreateFrame("Frame", "ForeverPlatesScrollChildFriendly", scrollFrameFriendly)
-    contentFriendly:SetSize(490, 1050)
+    contentFriendly:SetSize(490, 1160)
     scrollFrameFriendly:SetScrollChild(contentFriendly)
 
     local scrollFrameCast = CreateFrame("ScrollFrame", "ForeverPlatesScrollFrameCast", f, "UIPanelScrollFrameTemplate")
@@ -1153,14 +1153,28 @@ function FP.CreateGUI()
         if FP.UpdateTestPlate then FP.UpdateTestPlate() end
     end)
 
-    -- Row 3: Spacing
+    -- Row 3: Spacing & Timer Font Size
     CreateSlider(contentEnemy, "Debuff Spacing", "debuffSpacing", 0, 12, 1, "%s: %dpx", 10, -1396, function()
+        FP.RefreshAllPlates()
+        if FP.UpdateTestPlate then FP.UpdateTestPlate() end
+    end)
+    CreateSlider(contentEnemy, "Debuff Timer Font Size", "debuffDurationFontSize", 6, 24, 1, "%s: %dpx", 256, -1396, function()
+        FP.RefreshAllPlates()
+        if FP.UpdateTestPlate then FP.UpdateTestPlate() end
+    end)
+
+    -- Row 4: Timer X & Y Offsets
+    CreateSlider(contentEnemy, "Debuff Timer X Offset", "debuffDurationXOffset", -30, 30, 1, "%s: %+dpx", 10, -1446, function()
+        FP.RefreshAllPlates()
+        if FP.UpdateTestPlate then FP.UpdateTestPlate() end
+    end)
+    CreateSlider(contentEnemy, "Debuff Timer Y Offset", "debuffDurationYOffset", -30, 30, 1, "%s: %+dpx", 256, -1446, function()
         FP.RefreshAllPlates()
         if FP.UpdateTestPlate then FP.UpdateTestPlate() end
     end)
 
     -- Wrap Checkbox
-    CreateCheckbox(contentEnemy, "Wrap Debuffs to Second Row (Underneath Bar)", "debuffWrap", -1440, function()
+    CreateCheckbox(contentEnemy, "Wrap Debuffs to Second Row (Underneath Bar)", "debuffWrap", -1490, function()
         FP.RefreshAllPlates()
         if FP.UpdateTestPlate then FP.UpdateTestPlate() end
     end)
@@ -1625,19 +1639,40 @@ function FP.CreateGUI()
         table.insert(buffPosButtons, btn)
     end
 
+    -- Row 1: Size & Outline Thickness
     CreateSlider(contentFriendly, "Friendly Buff Icon Size", "friendlyBuffSize", 10, 40, 1, "%s: %dpx", 10, -754, function()
         FP.RefreshAllPlates()
     end)
-
-    CreateSlider(contentFriendly, "Buff Outline Thickness", "friendlyBuffOutlineThickness", 1, 5, 1, "%s: %dpx", 10, -796, function()
+    CreateSlider(contentFriendly, "Buff Outline Thickness", "friendlyBuffOutlineThickness", 1, 5, 1, "%s: %dpx", 256, -754, function()
         FP.RefreshAllPlates()
     end)
 
-    CreateSlider(contentFriendly, "Buff Vertical Gap (Underneath Bar)", "friendlyBuffYOffset", 0, 8, 1, "%s: %dpx", 256, -796, function()
+    -- Row 2: X Offset & Y Offset
+    CreateSlider(contentFriendly, "Buff X Offset (Nudge Left/Right)", "friendlyBuffXOffset", -40, 40, 1, "%s: %+dpx", 10, -804, function()
+        FP.RefreshAllPlates()
+    end)
+    CreateSlider(contentFriendly, "Buff Y Offset (Nudge Up/Down)", "friendlyBuffYOffset", -30, 30, 1, "%s: %+dpx", 256, -804, function()
         FP.RefreshAllPlates()
     end)
 
-    CreateCheckbox(contentFriendly, "Wrap Buffs to Second Row (Underneath Bar)", "friendlyBuffWrap", -838, function()
+    -- Row 3: Spacing & Timer Font Size
+    CreateSlider(contentFriendly, "Buff Spacing", "friendlyBuffSpacing", 0, 12, 1, "%s: %dpx", 10, -854, function()
+        FP.RefreshAllPlates()
+    end)
+    CreateSlider(contentFriendly, "Buff Timer Font Size", "friendlyBuffDurationFontSize", 6, 20, 1, "%s: %dpx", 256, -854, function()
+        FP.RefreshAllPlates()
+    end)
+
+    -- Row 4: Timer X & Y Offsets
+    CreateSlider(contentFriendly, "Buff Timer X Offset", "friendlyBuffDurationXOffset", -30, 30, 1, "%s: %+dpx", 10, -904, function()
+        FP.RefreshAllPlates()
+    end)
+    CreateSlider(contentFriendly, "Buff Timer Y Offset", "friendlyBuffDurationYOffset", -30, 30, 1, "%s: %+dpx", 256, -904, function()
+        FP.RefreshAllPlates()
+    end)
+
+    -- Row 5: Wrap Checkbox
+    CreateCheckbox(contentFriendly, "Wrap Buffs to Second Row (Underneath Bar)", "friendlyBuffWrap", -948, function()
         FP.RefreshAllPlates()
     end)
 
@@ -1645,21 +1680,21 @@ function FP.CreateGUI()
     local fLevelHeader = contentFriendly:CreateFontString(nil, "OVERLAY")
     fLevelHeader:SetFont(DEFAULT_FONT, 11, "OUTLINE")
     fLevelHeader:SetTextColor(0.00, 0.82, 1.00, 1)
-    fLevelHeader:SetPoint("TOPLEFT", contentFriendly, "TOPLEFT", 10, -876)
+    fLevelHeader:SetPoint("TOPLEFT", contentFriendly, "TOPLEFT", 10, -992)
     fLevelHeader:SetText("LEVEL TEXT POSITIONING")
 
     local fLevelSub = contentFriendly:CreateFontString(nil, "OVERLAY")
     fLevelSub:SetFont(DEFAULT_FONT, 10, "")
     fLevelSub:SetTextColor(0.65, 0.70, 0.75, 1)
-    fLevelSub:SetPoint("TOPLEFT", contentFriendly, "TOPLEFT", 10, -894)
+    fLevelSub:SetPoint("TOPLEFT", contentFriendly, "TOPLEFT", 10, -1010)
     fLevelSub:SetText("Nudge the level numbers inside the unified level box horizontally or vertically.")
 
     -- Row 1: Friendly Level Text Offsets
-    CreateSlider(contentFriendly, "Level Text X Offset", "friendlyLevelTextXOffset", -15, 15, 1, "%s: %+dpx", 10, -916, function()
+    CreateSlider(contentFriendly, "Level Text X Offset", "friendlyLevelTextXOffset", -15, 15, 1, "%s: %+dpx", 10, -1032, function()
         FP.RefreshAllDimensions()
         FP.RefreshAllPlates()
     end)
-    CreateSlider(contentFriendly, "Level Text Y Offset", "friendlyLevelTextYOffset", -15, 15, 1, "%s: %+dpx", 256, -916, function()
+    CreateSlider(contentFriendly, "Level Text Y Offset", "friendlyLevelTextYOffset", -15, 15, 1, "%s: %+dpx", 256, -1032, function()
         FP.RefreshAllDimensions()
         FP.RefreshAllPlates()
     end)

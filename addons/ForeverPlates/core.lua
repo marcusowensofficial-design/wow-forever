@@ -11,6 +11,8 @@
 --]]
 
 local ADDON_NAME, FP = ...
+_G.ForeverPlates = FP
+_G.FP = FP
 
 -- Ensure global DB reference exists immediately
 _G.ForeverPlatesDB = _G.ForeverPlatesDB or {}
@@ -153,6 +155,10 @@ local isLevelSettingSize = setmetatable({}, { __mode = "k" })
 local hookedArts = setmetatable({}, { __mode = "k" })
 local isArtSettingAlpha = setmetatable({}, { __mode = "k" })
 local pendingDimensions = setmetatable({}, { __mode = "k" })
+local hookedDurationFontStrings = setmetatable({}, { __mode = "k" })
+local isSettingDurFont = setmetatable({}, { __mode = "k" })
+local hookedDurationFontStringPoints = setmetatable({}, { __mode = "k" })
+local isSettingDurPoint = setmetatable({}, { __mode = "k" })
 
 -- SavedVariables defaults
 local defaults = {
@@ -170,14 +176,21 @@ local defaults = {
     friendlyBuffSize = 18,
     friendlyBuffWrap = true,
     friendlyBuffSpacing = 2,
-    friendlyBuffYOffset = 1,
+    friendlyBuffXOffset = 0,
+    friendlyBuffYOffset = 0,
     friendlyBuffOutlineThickness = 3,
+    friendlyBuffDurationFontSize = 10,
+    friendlyBuffDurationXOffset = 0,
+    friendlyBuffDurationYOffset = 0,
     debuffSize = 18,
     debuffSpacing = 2,
     debuffXOffset = 0,
     debuffYOffset = 0,
     debuffOutlineThickness = 3,
     debuffWrap = true,
+    debuffDurationFontSize = 12,
+    debuffDurationXOffset = 0,
+    debuffDurationYOffset = 0,
     levelTextXOffset = -2,
     levelTextYOffset = 0,
     friendlyLevelTextXOffset = -2,
@@ -293,11 +306,32 @@ local function InitializeDatabase()
         ForeverPlatesDB = {}
     end
     CopyDefaults(ForeverPlatesDB, defaults)
-    if ForeverPlatesDB.friendlyBuffYOffset == 4 then
-        ForeverPlatesDB.friendlyBuffYOffset = 1
+    if ForeverPlatesDB.friendlyBuffXOffset == nil then
+        ForeverPlatesDB.friendlyBuffXOffset = 0
+    end
+    if ForeverPlatesDB.friendlyBuffYOffset == nil or ForeverPlatesDB.friendlyBuffYOffset == 4 or ForeverPlatesDB.friendlyBuffYOffset == 1 then
+        ForeverPlatesDB.friendlyBuffYOffset = 0
     end
     if ForeverPlatesDB.friendlyBuffOutlineThickness == nil then
         ForeverPlatesDB.friendlyBuffOutlineThickness = ForeverPlatesDB.outlineThickness or 3
+    end
+    if ForeverPlatesDB.friendlyBuffDurationFontSize == nil then
+        ForeverPlatesDB.friendlyBuffDurationFontSize = 10
+    end
+    if ForeverPlatesDB.friendlyBuffDurationXOffset == nil then
+        ForeverPlatesDB.friendlyBuffDurationXOffset = 0
+    end
+    if ForeverPlatesDB.friendlyBuffDurationYOffset == nil then
+        ForeverPlatesDB.friendlyBuffDurationYOffset = 0
+    end
+    if ForeverPlatesDB.debuffDurationFontSize == nil then
+        ForeverPlatesDB.debuffDurationFontSize = 12
+    end
+    if ForeverPlatesDB.debuffDurationXOffset == nil then
+        ForeverPlatesDB.debuffDurationXOffset = 0
+    end
+    if ForeverPlatesDB.debuffDurationYOffset == nil then
+        ForeverPlatesDB.debuffDurationYOffset = 0
     end
     -- Scrub obsolete detached-box settings and reset any temporary test offsets
     ForeverPlatesDB.levelBoxXOffset = nil
@@ -446,14 +480,26 @@ local function SafeIsFalse(val)
     return ok and (res == true)
 end
 
-local function IsAuraFrame(ch)
-    if not ch then return false end
+local function IsBlacklistedAuraFrame(ch)
+    if not ch then return true end
     if ch.GetName then
         local name = ch:GetName()
-        if name and (name:find("ExtraIcon") or name:find("CastBar") or name:find("castBar")) then
-            return false
+        if name then
+            local nl = name:lower()
+            if nl:find("extraicon") or nl:find("cast") or nl:find("spell")
+               or nl:find("health") or nl:find("power") or nl:find("widget")
+               or nl:find("level") or nl:find("raidtarget") then
+                return true
+            end
         end
     end
+    return false
+end
+
+local function IsAuraFrame(ch)
+    if not ch or (ch.IsForbidden and ch:IsForbidden()) then return false end
+    if IsBlacklistedAuraFrame(ch) then return false end
+
     if IsSecret(ch.auraInstanceID) or IsSecret(ch.spellID) or IsSecret(ch.isBuff) or IsSecret(ch.isHarmful) or IsSecret(ch.isDebuff) or IsSecret(ch.useAuraDisplayTime) then
         return true
     end
@@ -463,25 +509,16 @@ local function IsAuraFrame(ch)
     if ch.isBuff ~= nil or ch.isHarmful ~= nil or ch.isDebuff ~= nil then
         return true
     end
-    if ch.DebuffBorder and ch.DebuffBorder.IsShown and ch.DebuffBorder:IsShown() then
+    if (ch.DebuffBorder and ch.DebuffBorder.IsShown and ch.DebuffBorder:IsShown()) or (ch.debuffBorder and ch.debuffBorder.IsShown and ch.debuffBorder:IsShown()) then
         return true
     end
 
-    local iconTex = ch.Icon or ch.icon or ch.texture
-    if not iconTex then return false end
-    if iconTex.IsShown and not iconTex:IsShown() then return false end
-
-    if iconTex.GetTexture then
-        local tex = iconTex:GetTexture()
-        if IsSecret(tex) then return true end
-        if not tex or tex == "" or tex == 0 then
-            return false
+    local iconTex = ch.Icon or ch.icon
+    if iconTex then
+        if iconTex.IsShown and not iconTex:IsShown() then return false end
+        if ch.Cooldown or ch.cooldown or ch.Count or ch.count or ch.Duration or ch.duration or SafeIsTrue(ch.useAuraDisplayTime) then
+            return true
         end
-        return true
-    end
-
-    if ch.Cooldown or ch.cooldown or SafeIsTrue(ch.useAuraDisplayTime) then
-        return true
     end
 
     return false
@@ -1455,22 +1492,53 @@ FP.UpdateHealthText = UpdateHealthText
 -- addon to prevent frame fighting, layout race conditions, and UI taint.
 local function SuppressNativeCastBar(unitFrame)
     if not unitFrame or (unitFrame.IsForbidden and unitFrame:IsForbidden()) then return end
-    local blizzBars = { unitFrame.castBar, unitFrame.CastBar }
     local p = unitFrame:GetParent()
-    if p then
-        table.insert(blizzBars, p.castBar)
-        table.insert(blizzBars, p.CastBar)
-    end
+    local blizzBars = {
+        unitFrame.castBar, unitFrame.CastBar,
+        unitFrame.CastBarsContainer,
+        unitFrame.CastBarsContainer and unitFrame.CastBarsContainer.castBar,
+        unitFrame.CastBarsContainer and unitFrame.CastBarsContainer.CastBar,
+        unitFrame.spellBar, unitFrame.SpellBar,
+        p and p.castBar, p and p.CastBar,
+        p and p.CastBarsContainer,
+        p and p.CastBarsContainer and p.CastBarsContainer.castBar,
+        p and p.CastBarsContainer and p.CastBarsContainer.CastBar,
+        p and p.spellBar, p and p.SpellBar,
+    }
     if unitFrame.optionTable then
         unitFrame.optionTable.hideCastbar = true
         unitFrame.optionTable.showCastbar = false
     end
+    if p and p.optionTable then
+        p.optionTable.hideCastbar = true
+        p.optionTable.showCastbar = false
+    end
+
+    local function ScanAndSuppress(f, depth)
+        if not f or not f.GetChildren or (depth and depth > 3) then return end
+        depth = (depth or 0) + 1
+        for _, ch in ipairs({ f:GetChildren() }) do
+            if ch and not ch.FPOwned and ch ~= unitFrame.healthBar and ch ~= unitFrame.HealthBarsContainer then
+                local isStatusBar = (ch.GetStatusBarTexture or (ch.IsObjectType and ch:IsObjectType("StatusBar")))
+                local hasTimer = ch.SetTimerDuration or ch.BorderShield or ch.borderShield or ch.Spark or ch.spark
+                local name = ch.GetName and ch:GetName()
+                local nameMatch = name and (name:lower():find("cast") or name:lower():find("spell"))
+                if isStatusBar or hasTimer or nameMatch then
+                    table.insert(blizzBars, ch)
+                end
+                if ch.GetChildren then
+                    ScanAndSuppress(ch, depth)
+                end
+            end
+        end
+    end
+    if unitFrame.CastBarsContainer then ScanAndSuppress(unitFrame.CastBarsContainer) end
+    if p and p.CastBarsContainer then ScanAndSuppress(p.CastBarsContainer) end
+
     for _, cb in ipairs(blizzBars) do
         if cb and not cb.FPOwned then
             pcall(cb.SetAlpha, cb, 0)
             pcall(cb.Hide, cb)
-            pcall(cb.ClearAllPoints, cb)
-            pcall(cb.SetPoint, cb, "TOPLEFT", UIParent, "BOTTOMRIGHT", 9999, -9999)
             pcall(cb.SetSize, cb, 0.0001, 0.0001)
             if cb.UnregisterAllEvents then pcall(cb.UnregisterAllEvents, cb) end
             if CastingBarFrame_SetUnit then pcall(CastingBarFrame_SetUnit, cb, nil) end
@@ -1489,13 +1557,6 @@ local function SuppressNativeCastBar(unitFrame)
 
             if not cb._fpHooked then
                 cb._fpHooked = true
-                hooksecurefunc(cb, "SetPoint", function(self)
-                    if self._inRepoint then return end
-                    self._inRepoint = true
-                    pcall(self.ClearAllPoints, self)
-                    pcall(self.SetPoint, self, "TOPLEFT", UIParent, "BOTTOMRIGHT", 9999, -9999)
-                    self._inRepoint = false
-                end)
                 hooksecurefunc(cb, "SetAlpha", function(self, a)
                     if self._inAlpha then return end
                     if a > 0 then
@@ -1507,6 +1568,8 @@ local function SuppressNativeCastBar(unitFrame)
                 hooksecurefunc(cb, "Show", function(self)
                     if self._inShow then return end
                     self._inShow = true
+                    pcall(self.SetAlpha, self, 0)
+                    pcall(self.SetSize, self, 0.0001, 0.0001)
                     pcall(self.Hide, self)
                     self._inShow = false
                 end)
@@ -1524,13 +1587,17 @@ local function SuppressNativeCastBar(unitFrame)
         end
     end
 end
-local function GetUnitFrameCastBar() return nil end
+local function GetUnitFrameCastBar(unitFrame)
+    if not unitFrame then return nil end
+    local d = plates[unitFrame]
+    return unitFrame.fpCastBar
+        or (d and d.fpCastBar)
+        or (_G.ForeverPlatesCastBars and _G.ForeverPlatesCastBars.GetUnitFrameCastBar and _G.ForeverPlatesCastBars.GetUnitFrameCastBar(unitFrame))
+end
 local function SuppressBlizzardCastBarArt(cb)
     if not cb or (cb.IsForbidden and cb:IsForbidden()) or cb.FPOwned then return end
     pcall(cb.SetAlpha, cb, 0)
     pcall(cb.Hide, cb)
-    pcall(cb.ClearAllPoints, cb)
-    pcall(cb.SetPoint, cb, "TOPLEFT", UIParent, "BOTTOMRIGHT", 9999, -9999)
     pcall(cb.SetSize, cb, 0.0001, 0.0001)
     if cb.UnregisterAllEvents then pcall(cb.UnregisterAllEvents, cb) end
     if CastingBarFrame_SetUnit then pcall(CastingBarFrame_SetUnit, cb, nil) end
@@ -1656,8 +1723,31 @@ local function CollectAuraButtons(unitFrame, isFriendly)
     local unit = GetUnitForFrame(unitFrame)
     local np = unitFrame:GetParent()
 
+    local function ShouldIgnoreScan(frame)
+        if not frame then return true end
+        if frame == unitFrame.HealthBarsContainer or frame == unitFrame.healthBar
+            or frame == unitFrame.CastBarsContainer or frame == unitFrame.castBar
+            or frame == unitFrame.WidgetContainer or frame == unitFrame.RaidTargetFrame
+            or frame == unitFrame.LevelFrame or frame == unitFrame.ClassificationFrame
+            or frame == unitFrame.SoftTargetFrame or frame == unitFrame.PlayerLevelDiffFrame
+            or frame == unitFrame.fpCastBar or (np and frame == np.fpCastBar)
+            or frame == unitFrame.ExtraIconFrame or (np and frame == np.ExtraIconFrame) then
+            return true
+        end
+        if frame.GetName then
+            local n = frame:GetName()
+            if n then
+                local nl = n:lower()
+                if nl:find("health") or nl:find("cast") or nl:find("power") or nl:find("widget") or nl:find("raidtarget") or nl:find("level") or nl:find("extraicon") then
+                    return true
+                end
+            end
+        end
+        return false
+    end
+
     local function AddBtn(b)
-        if not b or seen[b] then return end
+        if not b or seen[b] or ShouldIgnoreScan(b) then return end
         if b.IsShown and not b:IsShown() then
             if b.fpBorder then b.fpBorder:SetShown(false) end
             if b.fpBackdrop then b.fpBackdrop:Hide() end
@@ -1853,13 +1943,13 @@ local function CollectAuraButtons(unitFrame, isFriendly)
 
     -- 4. Deep Visual Tree Scan: Recursively check all children of unitFrame to ensure no aura icons are missed
     local function DeepScan(parentFrame, currentDepth)
-        if not parentFrame or currentDepth > 4 then return end
+        if not parentFrame or currentDepth > 4 or ShouldIgnoreScan(parentFrame) then return end
         if parentFrame.GetChildren then
             local ok, children = pcall(function() return { parentFrame:GetChildren() } end)
             if ok and children then
                 for _, ch in ipairs(children) do
-                    if ch and not seen[ch] then
-                        local hasIcon = ch.Icon or ch.icon or ch.texture
+                    if ch and not seen[ch] and not ShouldIgnoreScan(ch) then
+                        local hasIcon = ch.Icon or ch.icon
                         if hasIcon and IsAuraFrame(ch) then
                             AddBtn(ch)
                         end
@@ -1872,6 +1962,66 @@ local function CollectAuraButtons(unitFrame, isFriendly)
     DeepScan(unitFrame, 1)
 
     return list
+end
+
+-------------------------------------------------------------------------------
+-- Helper: Strip Aura Masks & Overlays (Ensures Square, Flush, Zero-Gap Icons)
+-------------------------------------------------------------------------------
+local function StripAuraMasksAndOverlays(btn, iconTex)
+    if not btn then return end
+
+    -- 1. Remove all masks attached to iconTex via Texture API
+    if iconTex and iconTex.GetNumMaskTextures and iconTex.RemoveMaskTexture then
+        local ok, numMasks = pcall(iconTex.GetNumMaskTextures, iconTex)
+        if ok and numMasks and numMasks > 0 then
+            for m = numMasks, 1, -1 do
+                local okMask, mask = pcall(iconTex.GetMaskTexture, iconTex, m)
+                if okMask and mask then
+                    pcall(iconTex.RemoveMaskTexture, iconTex, mask)
+                end
+            end
+        end
+    end
+
+    -- 2. Strip any MaskTextures or Blizzard CoolDownManager / IconOverlay regions on btn
+    if btn.GetRegions then
+        local ok, regions = pcall(function() return { btn:GetRegions() } end)
+        if ok and regions then
+            for _, reg in ipairs(regions) do
+                if reg then
+                    local isMask = false
+                    if reg.IsObjectType and reg:IsObjectType("MaskTexture") then
+                        isMask = true
+                    end
+                    if isMask then
+                        pcall(reg.Hide, reg)
+                        if iconTex and iconTex.RemoveMaskTexture then
+                            pcall(iconTex.RemoveMaskTexture, iconTex, reg)
+                        end
+                    else
+                        local atlas = reg.GetAtlas and reg:GetAtlas()
+                        local tex = reg.GetTexture and reg:GetTexture()
+                        if atlas and type(atlas) == "string" and (atlas:find("CoolDownManager") or atlas:find("IconOverlay") or atlas:find("Mask")) then
+                            pcall(reg.Hide, reg)
+                            pcall(reg.SetAlpha, reg, 0)
+                        elseif tex and type(tex) == "string" and (tex:find("CoolDownManager") or tex:find("IconOverlay")) then
+                            pcall(reg.Hide, reg)
+                            pcall(reg.SetAlpha, reg, 0)
+                        end
+                    end
+                end
+            end
+        end
+    end
+
+    -- 3. Also check btn.IconMask / btn.iconMask
+    local iconMask = btn.IconMask or btn.iconMask
+    if iconMask then
+        pcall(iconMask.Hide, iconMask)
+        if iconTex and iconTex.RemoveMaskTexture then
+            pcall(iconTex.RemoveMaskTexture, iconTex, iconMask)
+        end
+    end
 end
 
 local function LayoutNameplateAuras(unitFrame)
@@ -1895,12 +2045,15 @@ local function LayoutNameplateAuras(unitFrame)
     local spacing = isFriendly and ((ForeverPlatesDB and ForeverPlatesDB.friendlyBuffSpacing) or 2) or ((ForeverPlatesDB and (ForeverPlatesDB.debuffSpacing or ForeverPlatesDB.friendlyBuffSpacing)) or 2)
     local wrap = isFriendly and ((ForeverPlatesDB and ForeverPlatesDB.friendlyBuffWrap) ~= false) or ((ForeverPlatesDB and (ForeverPlatesDB.debuffWrap ~= nil and ForeverPlatesDB.debuffWrap or ForeverPlatesDB.friendlyBuffWrap)) ~= false)
     
-    local dX = not isFriendly and ((ForeverPlatesDB and ForeverPlatesDB.debuffXOffset) or 0) or 0
-    local dY = not isFriendly and ((ForeverPlatesDB and ForeverPlatesDB.debuffYOffset) or 0) or ((ForeverPlatesDB and ForeverPlatesDB.friendlyBuffYOffset) or 0)
+    local dX = isFriendly and ((ForeverPlatesDB and ForeverPlatesDB.friendlyBuffXOffset) or 0) or ((ForeverPlatesDB and ForeverPlatesDB.debuffXOffset) or 0)
+    local dY = isFriendly and ((ForeverPlatesDB and ForeverPlatesDB.friendlyBuffYOffset) or 0) or ((ForeverPlatesDB and ForeverPlatesDB.debuffYOffset) or 0)
 
-    -- Cast bar detection: If cast bar exists and is shown, auras sit directly below the cast bar!
+    -- Cast bar detection: If our custom cast bar exists and is shown, debuffs sit directly below the cast bar!
     local d = plates[unitFrame]
-    local cb = (d and d.castBar) or unitFrame.castBar or unitFrame.CastBar or (d and d.blizzCastBar) or unitFrame.spellBar or unitFrame.SpellBar
+    local cb = unitFrame.fpCastBar
+        or (d and d.fpCastBar)
+        or (_G.ForeverPlatesCastBars and _G.ForeverPlatesCastBars.GetUnitFrameCastBar and _G.ForeverPlatesCastBars.GetUnitFrameCastBar(unitFrame))
+
     if cb and not hookedCastBarAuraAnchors[cb] then
         hookedCastBarAuraAnchors[cb] = true
         if cb.HookScript then
@@ -1913,18 +2066,42 @@ local function LayoutNameplateAuras(unitFrame)
         end
     end
 
+    local cbIsShown = false
+    if not isFriendly then
+        if cb and cb.IsShown and cb:IsShown() and (not cb.GetAlpha or cb:GetAlpha() > 0) then
+            cbIsShown = true
+        elseif _G.ForeverPlatesCastBars and _G.ForeverPlatesCastBars.IsEnemyCastBarShown and _G.ForeverPlatesCastBars.IsEnemyCastBarShown(unitFrame) then
+            cbIsShown = true
+        end
+    end
+
     local anchorFrame = hb
     local basePadY = t
-    if cb and cb.IsShown and cb:IsShown() then
-        anchorFrame = cb
-        basePadY = 1
+    local finalY
+
+    if cbIsShown then
+        local cbDepth = nil
+        if _G.ForeverPlatesCastBars and _G.ForeverPlatesCastBars.GetEnemyCastBarBottomOffset then
+            cbDepth = _G.ForeverPlatesCastBars.GetEnemyCastBarBottomOffset(unitFrame)
+        end
+        if not cbDepth and cb and cb.GetHeight then
+            local h = cb:GetHeight() or 14
+            if h > 0 then
+                local yPt = select(5, cb:GetPoint())
+                cbDepth = math.abs(yPt or -4) + h + 1
+            end
+        end
+        if not cbDepth then
+            cbDepth = 19
+        end
+        -- Position debuffs immediately below the enemy cast bar with 2px padding
+        finalY = -(cbDepth + 2 + bt + dY)
+    else
+        finalY = -(basePadY + bt + dY)
     end
 
     -- Flush horizontal alignment: outer border of aura aligns exactly with healthBar_left - t + dX
     local xOffset = -(t - bt) + dX
-
-    -- Flush vertical alignment: top of aura border aligns immediately under health bar border + dY
-    local finalY = -(basePadY + bt + dY)
 
     local barW = isFriendly and ((ForeverPlatesDB and ForeverPlatesDB.friendlyBarWidth) or (hb.GetWidth and hb:GetWidth()) or 120) or ((ForeverPlatesDB and ForeverPlatesDB.barWidth) or (hb.GetWidth and hb:GetWidth()) or 120)
     if barW <= 0 then barW = 120 end
@@ -1981,8 +2158,48 @@ local function LayoutNameplateAuras(unitFrame)
         np and np.BuffFrame,
     }
 
+    local function IsDependentOrAncestor(c, relFrame)
+        if not c or not relFrame then return true end
+        if c == relFrame then return true end
+        local cur = relFrame
+        while cur do
+            if cur == c then return true end
+            cur = cur.GetParent and cur:GetParent()
+        end
+        local curC = c
+        while curC do
+            if curC == relFrame then return true end
+            curC = curC.GetParent and curC:GetParent()
+        end
+        return false
+    end
+
+    local function IsValidAuraContainer(c)
+        if not c or (c.IsForbidden and c:IsForbidden()) then return false end
+        if c == unitFrame or c == np or c == UIParent then return false end
+        if c == unitFrame.HealthBarsContainer or c == unitFrame.CastBarsContainer
+            or c == unitFrame.healthBar or c == unitFrame.castBar or c == unitFrame.fpCastBar
+            or c == unitFrame.WidgetContainer or c == unitFrame.RaidTargetFrame
+            or c == unitFrame.LevelFrame then
+            return false
+        end
+        if IsDependentOrAncestor(c, anchorFrame) or IsDependentOrAncestor(c, hb) then
+            return false
+        end
+        if c.GetName then
+            local n = c:GetName()
+            if n then
+                local nl = n:lower()
+                if nl:find("health") or nl:find("cast") or nl:find("power") or nl:find("widget") or nl:find("raidtarget") or nl:find("level") or nl:find("extraicon") then
+                    return false
+                end
+            end
+        end
+        return true
+    end
+
     local function ReanchorContainer(c)
-        if not c or isAuraReanchoring[c] then return end
+        if not c or isAuraReanchoring[c] or not IsValidAuraContainer(c) then return end
         if c == unitFrame.ExtraIconFrame or (np and c == np.ExtraIconFrame) or (c.GetName and c:GetName() and c:GetName():find("ExtraIcon")) then
             pcall(c.Hide, c)
             return
@@ -2004,15 +2221,17 @@ local function LayoutNameplateAuras(unitFrame)
         if c.fpBackdrop then c.fpBackdrop:Hide() end
 
         isAuraReanchoring[c] = true
-        c:ClearAllPoints()
-        if isFriendly and pos == "LEFT" then
-            c:SetPoint("RIGHT", hb, "LEFT", -4, 0)
-        else
-            c:SetPoint("TOPLEFT", anchorFrame, "BOTTOMLEFT", xOffset, finalY)
-        end
-        if c.SetClipsChildren then
-            pcall(c.SetClipsChildren, c, false)
-        end
+        pcall(function()
+            c:ClearAllPoints()
+            if isFriendly and pos == "LEFT" then
+                c:SetPoint("RIGHT", hb, "LEFT", -4, 0)
+            else
+                c:SetPoint("TOPLEFT", anchorFrame, "BOTTOMLEFT", xOffset, finalY)
+            end
+            if c.SetClipsChildren then
+                pcall(c.SetClipsChildren, c, false)
+            end
+        end)
         isAuraReanchoring[c] = nil
 
         if not hookedAuras[c] then
@@ -2105,7 +2324,7 @@ local function LayoutNameplateAuras(unitFrame)
     for i, btn in ipairs(auraButtons) do
         -- Also re-anchor the button's parent container if it's an aura container
         local p = btn:GetParent()
-        if p and p ~= unitFrame and p ~= np and p ~= UIParent then
+        if p and IsValidAuraContainer(p) then
             ReanchorContainer(p)
         end
 
@@ -2122,7 +2341,8 @@ local function LayoutNameplateAuras(unitFrame)
             end
             hooksecurefunc(btn, "SetSize", function(self, w, h)
                 if isAuraReanchoring[self] then return end
-                local targetSize = buffSize
+                local db = ForeverPlatesDB or {}
+                local targetSize = isFriendly and (db.friendlyBuffSize or 18) or (db.debuffSize or db.friendlyBuffSize or 18)
                 if w ~= targetSize or h ~= targetSize then
                     isAuraReanchoring[self] = true
                     pcall(self.SetSize, self, targetSize, targetSize)
@@ -2131,7 +2351,8 @@ local function LayoutNameplateAuras(unitFrame)
             end)
             hooksecurefunc(btn, "SetWidth", function(self, w)
                 if isAuraReanchoring[self] then return end
-                local targetSize = buffSize
+                local db = ForeverPlatesDB or {}
+                local targetSize = isFriendly and (db.friendlyBuffSize or 18) or (db.debuffSize or db.friendlyBuffSize or 18)
                 if w ~= targetSize then
                     isAuraReanchoring[self] = true
                     pcall(self.SetSize, self, targetSize, targetSize)
@@ -2140,7 +2361,8 @@ local function LayoutNameplateAuras(unitFrame)
             end)
             hooksecurefunc(btn, "SetHeight", function(self, h)
                 if isAuraReanchoring[self] then return end
-                local targetSize = buffSize
+                local db = ForeverPlatesDB or {}
+                local targetSize = isFriendly and (db.friendlyBuffSize or 18) or (db.debuffSize or db.friendlyBuffSize or 18)
                 if h ~= targetSize then
                     isAuraReanchoring[self] = true
                     pcall(self.SetSize, self, targetSize, targetSize)
@@ -2157,6 +2379,10 @@ local function LayoutNameplateAuras(unitFrame)
             end)
         end
 
+        -- Strip any rounded-corner mask textures or Blizzard overlay bezels (e.g. UI-HUD-CoolDownManager)
+        local iconTex = btn.Icon or btn.icon or btn.texture
+        StripAuraMasksAndOverlays(btn, iconTex)
+
         if not isAuraReanchoring[btn] then
             isAuraReanchoring[btn] = true
 
@@ -2167,8 +2393,7 @@ local function LayoutNameplateAuras(unitFrame)
                 pcall(btn.SetFrameLevel, btn, math.max(1, anchorFrame:GetFrameLevel() + 10))
             end
 
-            -- Format icon texture
-            local iconTex = btn.Icon or btn.icon or btn.texture
+            -- Format icon texture: scale 100% flush into the border with zero gaps or transparency
             if iconTex then
                 if not iconTex.FPReanchored then
                     iconTex.FPReanchored = true
@@ -2176,47 +2401,47 @@ local function LayoutNameplateAuras(unitFrame)
                         if self.FPReanchoring then return end
                         self.FPReanchoring = true
                         self:ClearAllPoints()
-                        self:SetAllPoints(btn)
+                        self:SetPoint("TOPLEFT", btn, "TOPLEFT", -1, 1)
+                        self:SetPoint("BOTTOMRIGHT", btn, "BOTTOMRIGHT", 1, -1)
                         self.FPReanchoring = nil
                     end)
-                    hooksecurefunc(iconTex, "SetSize", function(self, w, h)
+                    hooksecurefunc(iconTex, "SetSize", function(self)
                         if self.FPReanchoring then return end
-                        local targetSize = buffSize
-                        if w ~= targetSize or h ~= targetSize then
-                            self.FPReanchoring = true
-                            pcall(self.SetSize, self, targetSize, targetSize)
-                            self.FPReanchoring = nil
-                        end
+                        self.FPReanchoring = true
+                        self:ClearAllPoints()
+                        self:SetPoint("TOPLEFT", btn, "TOPLEFT", -1, 1)
+                        self:SetPoint("BOTTOMRIGHT", btn, "BOTTOMRIGHT", 1, -1)
+                        self.FPReanchoring = nil
                     end)
+                    if iconTex.AddMaskTexture then
+                        hooksecurefunc(iconTex, "AddMaskTexture", function(self, mask)
+                            if mask and self.RemoveMaskTexture then
+                                pcall(self.RemoveMaskTexture, self, mask)
+                            end
+                        end)
+                    end
+                    if iconTex.SetTexture then
+                        hooksecurefunc(iconTex, "SetTexture", function(self)
+                            if self.FPSettingTexCoord then return end
+                            self.FPSettingTexCoord = true
+                            pcall(self.SetTexCoord, self, 0.08, 0.92, 0.08, 0.92)
+                            self.FPSettingTexCoord = nil
+                        end)
+                    end
                 end
                 iconTex.FPReanchoring = true
                 iconTex:ClearAllPoints()
-                iconTex:SetAllPoints(btn)
-                if iconTex.SetSize then
-                    pcall(iconTex.SetSize, iconTex, buffSize, buffSize)
-                end
-                -- Zoom slightly (0.08..0.92) to trim Blizzard's default 1px border so icon color extends 100% to outline edge
-                if iconTex.SetTexCoord then
-                    pcall(iconTex.SetTexCoord, iconTex, 0.08, 0.92, 0.08, 0.92)
-                end
+                iconTex:SetPoint("TOPLEFT", btn, "TOPLEFT", -1, 1)
+                iconTex:SetPoint("BOTTOMRIGHT", btn, "BOTTOMRIGHT", 1, -1)
+                if iconTex.SetTexelSnappingBias then pcall(iconTex.SetTexelSnappingBias, iconTex, 0.0) end
+                if iconTex.SetSnapToPixelGrid then pcall(iconTex.SetSnapToPixelGrid, iconTex, false) end
+                pcall(iconTex.SetTexCoord, iconTex, 0.08, 0.92, 0.08, 0.92)
                 iconTex.FPReanchoring = nil
             end
 
-            -- Remove any icon mask that might clip/round the corners
-            if btn.IconMask then
-                pcall(btn.IconMask.Hide, btn.IconMask)
-                if iconTex and iconTex.RemoveMaskTexture then
-                    pcall(iconTex.RemoveMaskTexture, iconTex, btn.IconMask)
-                end
-            end
-
-            -- Ensure dark backdrop sits behind icon
-            if not btn.fpBackdrop then
-                local bg = btn:CreateTexture(nil, "BACKGROUND", nil, -8)
-                bg:SetAllPoints(btn)
-                bg:SetTexture(FLAT_TEXTURE)
-                bg:SetVertexColor(0.08, 0.08, 0.09, 1.0)
-                btn.fpBackdrop = bg
+            -- Ensure dark backdrop behind icon is hidden so no black margin shows through
+            if btn.fpBackdrop then
+                btn.fpBackdrop:Hide()
             end
 
             local cd = btn.Cooldown or btn.cooldown
@@ -2225,10 +2450,21 @@ local function LayoutNameplateAuras(unitFrame)
                 if cd.SetHideCountdownNumbers then pcall(cd.SetHideCountdownNumbers, cd, false) end
                 if cd.SetDrawEdge then pcall(cd.SetDrawEdge, cd, false) end
                 if cd.SetDrawSwipe then pcall(cd.SetDrawSwipe, cd, true) end
+                if not hookedAuras[cd] then
+                    hookedAuras[cd] = true
+                    if cd.HookScript then
+                        cd:HookScript("OnShow", function(self)
+                            local p = self:GetParent()
+                            if p and p._fpIsFriendly and unitFrame then
+                                LayoutNameplateAuras(unitFrame)
+                            end
+                        end)
+                    end
+                end
             end
 
             -- Stack count display (clean outline font)
-            local countText = btn.Count or btn.count
+            local countText = btn.Count or btn.count or (btn.CountFrame and btn.CountFrame.Count)
             if countText then
                 if countText.ClearAllPoints and countText.SetPoint then
                     countText:ClearAllPoints()
@@ -2241,12 +2477,142 @@ local function LayoutNameplateAuras(unitFrame)
                     end
                 end
             end
+            if btn.CountFrame and btn.CountFrame.SetFrameLevel and btn.GetFrameLevel then
+                pcall(btn.CountFrame.SetFrameLevel, btn.CountFrame, btn:GetFrameLevel() + 5)
+            end
 
-            -- Duration text display
-            local durText = btn.Duration or btn.duration
-            if durText then
-                durText:SetShown(true)
-                durText:SetAlpha(1)
+            -- Duration / Cooldown countdown text display (both Friendly buffs and Enemy debuffs)
+            btn._fpIsFriendly = isFriendly
+
+            local durFontSize = isFriendly
+                and ((ForeverPlatesDB and ForeverPlatesDB.friendlyBuffDurationFontSize) or 10)
+                or ((ForeverPlatesDB and ForeverPlatesDB.debuffDurationFontSize) or 12)
+            local durX = isFriendly
+                and ((ForeverPlatesDB and ForeverPlatesDB.friendlyBuffDurationXOffset) or 0)
+                or ((ForeverPlatesDB and ForeverPlatesDB.debuffDurationXOffset) or 0)
+            local durY = isFriendly
+                and ((ForeverPlatesDB and ForeverPlatesDB.friendlyBuffDurationYOffset) or 0)
+                or ((ForeverPlatesDB and ForeverPlatesDB.debuffDurationYOffset) or 0)
+            local fallbackFont = (FP.GetCurrentFont and FP.GetCurrentFont()) or "Fonts\\FRIZQT__.TTF"
+
+            local function StyleAuraDurFontString(fs)
+                if not fs or not fs.IsObjectType or not fs:IsObjectType("FontString") then return end
+                if fs == countText then return end
+
+                fs._fpOwnerBtn = btn
+
+                local fPath = fallbackFont
+                if fs.GetFont then
+                    local existingFont = fs:GetFont()
+                    if existingFont and existingFont ~= "" then
+                        fPath = existingFont
+                    end
+                end
+
+                isSettingDurFont[fs] = true
+                pcall(fs.SetFont, fs, fPath, durFontSize, "OUTLINE")
+                if fs.SetShadowOffset then pcall(fs.SetShadowOffset, fs, 1, -1) end
+                if fs.SetShadowColor then pcall(fs.SetShadowColor, fs, 0, 0, 0, 0.95) end
+                if fs.SetDrawLayer then pcall(fs.SetDrawLayer, fs, "OVERLAY", 7) end
+                if fs.SetSnapToPixelGrid then pcall(fs.SetSnapToPixelGrid, fs, true) end
+                if fs.SetTexelSnappingBias then pcall(fs.SetTexelSnappingBias, fs, 0.0) end
+                if fs.SetWordWrap then pcall(fs.SetWordWrap, fs, false) end
+                if fs.SetShown then pcall(fs.SetShown, fs, true) end
+                if fs.SetAlpha then pcall(fs.SetAlpha, fs, 1) end
+                isSettingDurFont[fs] = nil
+
+                if fs.ClearAllPoints and fs.SetPoint then
+                    isSettingDurPoint[fs] = true
+                    pcall(fs.ClearAllPoints, fs)
+                    pcall(fs.SetPoint, fs, "CENTER", btn, "CENTER", durX, durY)
+                    isSettingDurPoint[fs] = nil
+                end
+
+                if not hookedDurationFontStrings[fs] then
+                    hookedDurationFontStrings[fs] = true
+                    if fs.SetFont then
+                        hooksecurefunc(fs, "SetFont", function(self, font, size, flags)
+                            if isSettingDurFont[self] then return end
+                            local ownerBtn = self._fpOwnerBtn
+                            if ownerBtn then
+                                local db = ForeverPlatesDB or {}
+                                local targetSize = ownerBtn._fpIsFriendly and (db.friendlyBuffDurationFontSize or 10) or (db.debuffDurationFontSize or 12)
+                                if size ~= targetSize then
+                                    isSettingDurFont[self] = true
+                                    local curF = font or fPath
+                                    pcall(self.SetFont, self, curF, targetSize, "OUTLINE")
+                                    if self.SetShadowOffset then pcall(self.SetShadowOffset, self, 1, -1) end
+                                    if self.SetShadowColor then pcall(self.SetShadowColor, self, 0, 0, 0, 0.95) end
+                                    if self.SetDrawLayer then pcall(self.SetDrawLayer, self, "OVERLAY", 7) end
+                                    isSettingDurFont[self] = nil
+                                end
+                            end
+                        end)
+                    end
+                    if fs.SetPoint then
+                        hooksecurefunc(fs, "SetPoint", function(self)
+                            if isSettingDurPoint[self] then return end
+                            local ownerBtn = self._fpOwnerBtn
+                            if ownerBtn then
+                                local db = ForeverPlatesDB or {}
+                                local curX = ownerBtn._fpIsFriendly and (db.friendlyBuffDurationXOffset or 0) or (db.debuffDurationXOffset or 0)
+                                local curY = ownerBtn._fpIsFriendly and (db.friendlyBuffDurationYOffset or 0) or (db.debuffDurationYOffset or 0)
+                                isSettingDurPoint[self] = true
+                                pcall(self.ClearAllPoints, self)
+                                pcall(self.SetPoint, self, "CENTER", ownerBtn, "CENTER", curX, curY)
+                                isSettingDurPoint[self] = nil
+                            end
+                        end)
+                    end
+                end
+            end
+
+            -- 1. Direct duration FontString references
+            local directDurCandidates = {
+                btn.Duration, btn.duration,
+                btn.DurationText, btn.durationText,
+                btn.Time, btn.time,
+                btn.Timer, btn.timer,
+                btn.DurationString, btn.durationString,
+            }
+            for _, dfs in ipairs(directDurCandidates) do
+                StyleAuraDurFontString(dfs)
+            end
+
+            -- 2. Cooldown frame regions & children
+            if cd then
+                if cd.GetRegions then
+                    for _, reg in ipairs({ cd:GetRegions() }) do
+                        StyleAuraDurFontString(reg)
+                    end
+                end
+                if cd.GetChildren then
+                    for _, child in ipairs({ cd:GetChildren() }) do
+                        if child and child.GetRegions then
+                            for _, reg in ipairs({ child:GetRegions() }) do
+                                StyleAuraDurFontString(reg)
+                            end
+                        end
+                    end
+                end
+            end
+
+            -- 3. Button other regions (excluding countText)
+            if btn.GetRegions then
+                for _, reg in ipairs({ btn:GetRegions() }) do
+                    StyleAuraDurFontString(reg)
+                end
+            end
+
+            -- 4. Button child frames (excluding CountFrame and cd)
+            if btn.GetChildren then
+                for _, child in ipairs({ btn:GetChildren() }) do
+                    if child ~= btn.CountFrame and child ~= cd and child.GetRegions then
+                        for _, reg in ipairs({ child:GetRegions() }) do
+                            StyleAuraDurFontString(reg)
+                        end
+                    end
+                end
             end
 
             -- Suppress Blizzard default milky/rounded borders and overlays
@@ -2256,6 +2622,8 @@ local function LayoutNameplateAuras(unitFrame)
                 btn.Stealable, btn.stealable,
                 btn.DebuffBorder, btn.debuffBorder,
                 btn.TempEnchantBorder, btn.tempEnchantBorder,
+                btn.IconOverlay, btn.iconOverlay,
+                btn.Overlay, btn.overlay,
             }
             local debuffColor = nil
             if not isFriendly then
@@ -2310,27 +2678,29 @@ local function LayoutNameplateAuras(unitFrame)
             local colSpacing = spacing + math.max(0, bt - 1)
             local rowSpacing = spacing + math.max(0, bt - 1)
 
-            btn:ClearAllPoints()
-            if isFriendly and pos == "LEFT" then
-                if i == 1 then
-                    btn:SetPoint("RIGHT", hb, "LEFT", -4, 0)
+            pcall(function()
+                btn:ClearAllPoints()
+                if isFriendly and pos == "LEFT" then
+                    if i == 1 then
+                        btn:SetPoint("RIGHT", hb, "LEFT", -4 + dX, dY)
+                    else
+                        local prev = auraButtons[i - 1]
+                        btn:SetPoint("RIGHT", prev, "LEFT", -spacing, 0)
+                    end
                 else
-                    local prev = auraButtons[i - 1]
-                    btn:SetPoint("RIGHT", prev, "LEFT", -spacing, 0)
+                    -- BELOW (flush with outline of healthbar / castbar + dX, dY)
+                    if i == 1 then
+                        btn:SetPoint("TOPLEFT", anchorFrame, "BOTTOMLEFT", xOffset, finalY)
+                    elseif wrap and ((i - 1) % maxPerRow == 0) then
+                        local anchorIndex = i - maxPerRow
+                        local anchorBtn = auraButtons[anchorIndex] or auraButtons[1]
+                        btn:SetPoint("TOPLEFT", anchorBtn, "BOTTOMLEFT", 0, -rowSpacing)
+                    else
+                        local prev = auraButtons[i - 1]
+                        btn:SetPoint("LEFT", prev, "RIGHT", colSpacing, 0)
+                    end
                 end
-            else
-                -- BELOW (flush with outline of healthbar / castbar + dX, dY)
-                if i == 1 then
-                    btn:SetPoint("TOPLEFT", anchorFrame, "BOTTOMLEFT", xOffset, finalY)
-                elseif wrap and ((i - 1) % maxPerRow == 0) then
-                    local anchorIndex = i - maxPerRow
-                    local anchorBtn = auraButtons[anchorIndex] or auraButtons[1]
-                    btn:SetPoint("TOPLEFT", anchorBtn, "BOTTOMLEFT", 0, -rowSpacing)
-                else
-                    local prev = auraButtons[i - 1]
-                    btn:SetPoint("LEFT", prev, "RIGHT", colSpacing, 0)
-                end
-            end
+            end)
             isAuraReanchoring[btn] = nil
         end
     end
@@ -3686,7 +4056,8 @@ local function CreateTestPlate()
         btn:SetSize(18, 18)
 
         local tex = btn:CreateTexture(nil, "ARTWORK")
-        tex:SetAllPoints(btn)
+        tex:SetPoint("TOPLEFT", btn, "TOPLEFT", -1, 1)
+        tex:SetPoint("BOTTOMRIGHT", btn, "BOTTOMRIGHT", 1, -1)
         tex:SetTexture(d.icon)
         tex:SetTexCoord(0.08, 0.92, 0.08, 0.92)
         btn.icon = tex
@@ -3695,6 +4066,7 @@ local function CreateTestPlate()
         bbg:SetAllPoints(btn)
         bbg:SetTexture(FLAT_TEXTURE)
         bbg:SetVertexColor(0.08, 0.08, 0.09, 1.0)
+        bbg:Hide()
         btn.bg = bbg
 
         local bBorder = CreatePixelBorder(btn, 3, "OVERLAY", 5)
@@ -3821,11 +4193,25 @@ local function UpdateTestPlate()
     for i, btn in ipairs(testDebuffIcons) do
         btn:SetSize(dSize, dSize)
         btn.border:SetThickness(bt)
+        if btn.icon then
+            btn.icon:ClearAllPoints()
+            btn.icon:SetPoint("TOPLEFT", btn, "TOPLEFT", -1, 1)
+            btn.icon:SetPoint("BOTTOMRIGHT", btn, "BOTTOMRIGHT", 1, -1)
+            pcall(btn.icon.SetTexCoord, btn.icon, 0.08, 0.92, 0.08, 0.92)
+        end
+        if btn.bg then
+            btn.bg:Hide()
+        end
 
         local dc = DebuffTypeColor and DebuffTypeColor[btn.dispel] or { r = 0.8, g = 0, b = 0 }
         btn.border:SetColor(dc.r, dc.g, dc.b, 1.0)
 
-        btn.cdText:SetFont(font, math.max(8, math.floor(dSize * 0.65)), "OUTLINE")
+        local durFontSize = db.debuffDurationFontSize or 12
+        local durX = db.debuffDurationXOffset or 0
+        local durY = db.debuffDurationYOffset or 0
+        btn.cdText:SetFont(font, durFontSize, "OUTLINE")
+        btn.cdText:ClearAllPoints()
+        btn.cdText:SetPoint("CENTER", btn, "CENTER", durX, durY)
         if btn.cntText:GetText() ~= "" then
             btn.cntText:SetFont(font, math.max(8, math.floor(dSize * 0.55)), "OUTLINE")
         end
@@ -4659,14 +5045,23 @@ SlashCmdList["FOREVERPLATES"] = function(msg)
         else
             DEFAULT_CHAT_FRAME:AddMessage("Usage: |cff00c0ff/fp buffsize <10-40>|r")
         end
-    elseif cmd == "buffoffset" or cmd == "buffgap" or cmd == "buffpad" then
+    elseif cmd == "buffx" or cmd == "buffxoffset" then
         local val = tonumber(param)
-        if val and val >= 0 and val <= 10 then
+        if val and val >= -40 and val <= 40 then
+            ForeverPlatesDB.friendlyBuffXOffset = val
+            RefreshAllPlates()
+            DEFAULT_CHAT_FRAME:AddMessage(string.format("|cff00c0ffForeverPlates:|r Friendly buff X offset set to |cff00ff00%+dpx|r!", val))
+        else
+            DEFAULT_CHAT_FRAME:AddMessage("Usage: |cff00c0ff/fp buffx <-40 to 40>|r")
+        end
+    elseif cmd == "buffy" or cmd == "buffyoffset" or cmd == "buffoffset" or cmd == "buffgap" or cmd == "buffpad" then
+        local val = tonumber(param)
+        if val and val >= -30 and val <= 30 then
             ForeverPlatesDB.friendlyBuffYOffset = val
             RefreshAllPlates()
-            DEFAULT_CHAT_FRAME:AddMessage(string.format("|cff00c0ffForeverPlates:|r Friendly buff gap set to |cff00ff00%dpx|r!", val))
+            DEFAULT_CHAT_FRAME:AddMessage(string.format("|cff00c0ffForeverPlates:|r Friendly buff Y offset set to |cff00ff00%+dpx|r!", val))
         else
-            DEFAULT_CHAT_FRAME:AddMessage("Usage: |cff00c0ff/fp buffoffset <0-10>|r")
+            DEFAULT_CHAT_FRAME:AddMessage("Usage: |cff00c0ff/fp buffy <-30 to 30>|r")
         end
     elseif cmd == "buffoutline" or cmd == "buffthick" or cmd == "buffborder" then
         local val = tonumber(param)
@@ -4676,6 +5071,33 @@ SlashCmdList["FOREVERPLATES"] = function(msg)
             DEFAULT_CHAT_FRAME:AddMessage(string.format("|cff00c0ffForeverPlates:|r Friendly buff outline thickness set to |cff00ff00%dpx|r!", val))
         else
             DEFAULT_CHAT_FRAME:AddMessage("Usage: |cff00c0ff/fp buffoutline <1-5>|r")
+        end
+    elseif cmd == "bufftimer" or cmd == "bufffontsize" or cmd == "buffdur" or cmd == "bufftime" then
+        local val = tonumber(param)
+        if val and val >= 6 and val <= 20 then
+            ForeverPlatesDB.friendlyBuffDurationFontSize = val
+            RefreshAllPlates()
+            DEFAULT_CHAT_FRAME:AddMessage(string.format("|cff00c0ffForeverPlates:|r Friendly buff timer font size set to |cff00ff00%dpx|r!", val))
+        else
+            DEFAULT_CHAT_FRAME:AddMessage("Usage: |cff00c0ff/fp bufftimer <6-20>|r")
+        end
+    elseif cmd == "bufftimerx" or cmd == "buffdurx" or cmd == "bufftimerxoffset" then
+        local val = tonumber(param)
+        if val and val >= -30 and val <= 30 then
+            ForeverPlatesDB.friendlyBuffDurationXOffset = val
+            RefreshAllPlates()
+            DEFAULT_CHAT_FRAME:AddMessage(string.format("|cff00c0ffForeverPlates:|r Friendly buff timer X offset set to |cff00ff00%+dpx|r!", val))
+        else
+            DEFAULT_CHAT_FRAME:AddMessage("Usage: |cff00c0ff/fp bufftimerx <-30 to 30>|r")
+        end
+    elseif cmd == "bufftimery" or cmd == "buffdury" or cmd == "bufftimeryoffset" then
+        local val = tonumber(param)
+        if val and val >= -30 and val <= 30 then
+            ForeverPlatesDB.friendlyBuffDurationYOffset = val
+            RefreshAllPlates()
+            DEFAULT_CHAT_FRAME:AddMessage(string.format("|cff00c0ffForeverPlates:|r Friendly buff timer Y offset set to |cff00ff00%+dpx|r!", val))
+        else
+            DEFAULT_CHAT_FRAME:AddMessage("Usage: |cff00c0ff/fp bufftimery <-30 to 30>|r")
         end
     elseif cmd == "debuffsize" or cmd == "debuffscale" then
         local val = tonumber(param)
@@ -4705,6 +5127,36 @@ SlashCmdList["FOREVERPLATES"] = function(msg)
             DEFAULT_CHAT_FRAME:AddMessage(string.format("|cff00c0ffForeverPlates:|r Enemy debuff Y offset set to |cff00ff00%+dpx|r!", val))
         else
             DEFAULT_CHAT_FRAME:AddMessage("Usage: |cff00c0ff/fp debuffy <-30 to 30>|r")
+        end
+    elseif cmd == "debufftimer" or cmd == "debufffontsize" or cmd == "debuffdur" or cmd == "debufftime" then
+        local val = tonumber(param)
+        if val and val >= 6 and val <= 24 then
+            ForeverPlatesDB.debuffDurationFontSize = val
+            RefreshAllPlates()
+            if FP.UpdateTestPlate then FP.UpdateTestPlate() end
+            DEFAULT_CHAT_FRAME:AddMessage(string.format("|cff00c0ffForeverPlates:|r Enemy debuff timer font size set to |cff00ff00%dpx|r!", val))
+        else
+            DEFAULT_CHAT_FRAME:AddMessage("Usage: |cff00c0ff/fp debufftimer <6-24>|r")
+        end
+    elseif cmd == "debufftimerx" or cmd == "debuffdurx" or cmd == "debufftimerxoffset" then
+        local val = tonumber(param)
+        if val and val >= -30 and val <= 30 then
+            ForeverPlatesDB.debuffDurationXOffset = val
+            RefreshAllPlates()
+            if FP.UpdateTestPlate then FP.UpdateTestPlate() end
+            DEFAULT_CHAT_FRAME:AddMessage(string.format("|cff00c0ffForeverPlates:|r Enemy debuff timer X offset set to |cff00ff00%+dpx|r!", val))
+        else
+            DEFAULT_CHAT_FRAME:AddMessage("Usage: |cff00c0ff/fp debufftimerx <-30 to 30>|r")
+        end
+    elseif cmd == "debufftimery" or cmd == "debuffdury" or cmd == "debufftimeryoffset" then
+        local val = tonumber(param)
+        if val and val >= -30 and val <= 30 then
+            ForeverPlatesDB.debuffDurationYOffset = val
+            RefreshAllPlates()
+            if FP.UpdateTestPlate then FP.UpdateTestPlate() end
+            DEFAULT_CHAT_FRAME:AddMessage(string.format("|cff00c0ffForeverPlates:|r Enemy debuff timer Y offset set to |cff00ff00%+dpx|r!", val))
+        else
+            DEFAULT_CHAT_FRAME:AddMessage("Usage: |cff00c0ff/fp debufftimery <-30 to 30>|r")
         end
     elseif cmd == "test" or cmd == "testplate" then
         ToggleTestPlate()
@@ -4804,6 +5256,9 @@ SlashCmdList["FOREVERPLATES"] = function(msg)
         DEFAULT_CHAT_FRAME:AddMessage("  |cff00c0ff/fp flevely <-15 to 15>|r - Nudge friendly level text Y offset")
         DEFAULT_CHAT_FRAME:AddMessage("  |cff00c0ff/fp fbarw <80 to 220>|r - Set friendly health bar width")
         DEFAULT_CHAT_FRAME:AddMessage("  |cff00c0ff/fp fbarh <8 to 28>|r - Set friendly health bar height")
+        DEFAULT_CHAT_FRAME:AddMessage("  |cff00c0ff/fp bufftimer <6-20>|r - Set friendly buff cooldown timer font size")
+        DEFAULT_CHAT_FRAME:AddMessage("  |cff00c0ff/fp bufftimerx <-30 to 30>|r - Nudge friendly buff timer X offset")
+        DEFAULT_CHAT_FRAME:AddMessage("  |cff00c0ff/fp bufftimery <-30 to 30>|r - Nudge friendly buff timer Y offset")
         DEFAULT_CHAT_FRAME:AddMessage("  |cff00c0ff/fp border|r - Toggle white target border on ALL mobs")
         DEFAULT_CHAT_FRAME:AddMessage("  |cff00c0ff/fp thickness <1-6>|r - Set outline border thickness")
         DEFAULT_CHAT_FRAME:AddMessage("  |cff00c0ff/fp threat|r - Toggle threat / aggro coloring")

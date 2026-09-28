@@ -1023,6 +1023,18 @@ h1, h2, h3, h4, .font-heading {
   color: #c084fc;
 }
 
+.source-badge.source-tavern {
+  background: rgba(202, 138, 4, 0.18);
+  border: 1px solid #ca8a04;
+  color: #fef08a;
+}
+
+.source-badge.source-mobalytics {
+  background: rgba(168, 85, 247, 0.18);
+  border: 1px solid #a855f7;
+  color: #e9d5ff;
+}
+
 .news-date {
   font-size: 0.78rem;
   color: var(--text-muted);
