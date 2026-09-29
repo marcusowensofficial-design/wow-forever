@@ -264,16 +264,23 @@ function initSquadRoster() {
 
   function renderRoster() {
     // Composition summary
-    const tanks = squad.filter(p => p.role.toLowerCase().includes('tank')).length;
-    const healers = squad.filter(p => p.role.toLowerCase().includes('heal')).length;
-    const dps = squad.filter(p => p.role.toLowerCase().includes('dps')).length;
+    const tanks = squad.filter(p => (p.role || '').toLowerCase().includes('tank')).length;
+    const healers = squad.filter(p => (p.role || '').toLowerCase().includes('heal')).length;
+    const melee = squad.filter(p => (p.role || '').toLowerCase().includes('melee')).length;
+    const ranged = squad.filter(p => (p.role || '').toLowerCase().includes('ranged')).length;
+    const genericDps = squad.filter(p => {
+      const r = (p.role || '').toLowerCase();
+      return r.includes('dps') && !r.includes('melee') && !r.includes('ranged');
+    }).length;
 
     const summaryElem = document.getElementById('squad-comp-summary');
     if (summaryElem) {
       summaryElem.innerHTML = `
         <span class="comp-badge tank">🛡️ ${tanks} Tank</span>
         <span class="comp-badge healer">💚 ${healers} Healer${healers === 0 ? ' (Needed!)' : ''}</span>
-        <span class="comp-badge dps">⚔️ ${dps} DPS</span>
+        <span class="comp-badge melee">⚔️ ${melee} Melee</span>
+        <span class="comp-badge ranged">🏹 ${ranged} Ranged</span>
+        ${genericDps > 0 ? `<span class="comp-badge dps">💥 ${genericDps} DPS</span>` : ''}
         <span style="color: var(--text-muted); font-size: 0.85rem; margin-left: auto;">Total Squad: ${squad.length} Players</span>
       `;
     }

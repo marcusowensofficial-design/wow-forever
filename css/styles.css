@@ -2174,7 +2174,8 @@ input:checked + .toggle-slider:before {
 
 .comp-badge.tank { background: rgba(59, 130, 246, 0.2); border: 1px solid #3b82f6; color: #93c5fd; }
 .comp-badge.healer { background: rgba(16, 185, 129, 0.2); border: 1px solid #10b981; color: #6ee7b7; }
-.comp-badge.dps { background: rgba(239, 68, 68, 0.2); border: 1px solid #ef4444; color: #fca5a5; }
+.comp-badge.dps, .comp-badge.melee { background: rgba(239, 68, 68, 0.2); border: 1px solid #ef4444; color: #fca5a5; }
+.comp-badge.ranged { background: rgba(168, 85, 247, 0.2); border: 1px solid #a855f7; color: #e9d5ff; }
 
 .squad-table-wrapper {
   overflow-x: auto;
@@ -2205,15 +2206,17 @@ input:checked + .toggle-slider:before {
 .role-pill {
   font-size: 0.75rem;
   font-weight: 600;
-  padding: 0.2rem 0.5rem;
+  padding: 0.2rem 0.55rem;
   border-radius: var(--radius-sm);
   display: inline-block;
   background: rgba(255, 255, 255, 0.08);
+  border: 1px solid transparent;
 }
 
-.role-pill.role-tank { background: rgba(59, 130, 246, 0.2); color: #60a5fa; }
-.role-pill.role-healer { background: rgba(16, 185, 129, 0.2); color: #34d399; }
-.role-pill.role-dps, .role-pill.role-rangeddps, .role-pill.role-meleedps { background: rgba(239, 68, 68, 0.2); color: #f87171; }
+.role-pill.role-tank { background: rgba(59, 130, 246, 0.18); border-color: rgba(59, 130, 246, 0.3); color: #60a5fa; }
+.role-pill.role-healer { background: rgba(16, 185, 129, 0.18); border-color: rgba(16, 185, 129, 0.3); color: #34d399; }
+.role-pill.role-dps, .role-pill.role-meleedps { background: rgba(239, 68, 68, 0.18); border-color: rgba(239, 68, 68, 0.3); color: #f87171; }
+.role-pill.role-rangeddps { background: rgba(168, 85, 247, 0.18); border-color: rgba(168, 85, 247, 0.3); color: #c084fc; }
 
 /* Squad Roster Class Badges & Colors */
 .roster-class-pill {
