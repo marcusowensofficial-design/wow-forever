@@ -957,10 +957,11 @@ const WOW_FOREVER_DATA = {
     { id: "roster-2", name: "Kaboomson aka Marcus", faction: "Horde", race: "Orc", className: "Mage", role: "Ranged DPS", spec: "Frost mage unless arcane is better", prof1: "Tailoring", prof2: "", notes: "I'm on a lot, I will def go tailor at least." },
     { id: "roster-3", name: "BigRed", faction: "Horde", race: "Undead", className: "Paladin", role: "Tank", spec: "Protection spec? lol", prof1: "", prof2: "", notes: "A bad ass." },
     { id: "roster-4", name: "Bigred", faction: "Horde", race: "Tauren", className: "Druid", role: "Healer", spec: "Restoration", prof1: "", prof2: "", notes: "Played with us in SOD, great guy, very elite." },
-    { id: "roster-5", name: "Andrewm", faction: "Horde", race: "Tauren", className: "Druid", role: "Melee DPS", spec: "Feral", prof1: "", prof2: "", notes: "Noted Shaman or Druid in disc when we last spoke -- will update accordingly :)" },
-    { id: "roster-6", name: "Brody - Futtsnbarts on disc", faction: "Horde", race: "Troll", className: "Hunter", role: "Ranged DPS", spec: "Marksmanship", prof1: "", prof2: "", notes: "Brodyyyyyyyyy" },
-    { id: "roster-7", name: "Con aka Congirl on disc", faction: "Horde", race: "Tauren", className: "Shaman", role: "Melee DPS", spec: "enh sham towards the end, but early/mid levels gonna util. tank/heals/dps", prof1: "", prof2: "", notes: "ITS MF CON" },
-    { id: "roster-8", name: "Burk", faction: "Horde", race: "Undead", className: "Warrior", role: "Melee DPS", spec: "Arms", prof1: "", prof2: "", notes: "ITS MF BURK" }
+    { id: "roster-5", name: "AndrewM", faction: "Horde", race: "Undead", className: "Paladin", role: "Melee DPS", spec: "Retribution", prof1: "", prof2: "", notes: "He will main two chars." },
+    { id: "roster-6", name: "AndrewM", faction: "Horde", race: "Troll", className: "Mage", role: "Ranged DPS", spec: "Frost", prof1: "", prof2: "", notes: "He will main two chars." },
+    { id: "roster-7", name: "Brody - Futtsnbarts on disc", faction: "Horde", race: "Troll", className: "Hunter", role: "Ranged DPS", spec: "Marksmanship", prof1: "", prof2: "", notes: "Brodyyyyyyyyy" },
+    { id: "roster-8", name: "Con aka Congirl on disc", faction: "Horde", race: "Tauren", className: "Shaman", role: "Melee DPS", spec: "enh sham towards the end, but early/mid levels gonna util. tank/heals/dps", prof1: "", prof2: "", notes: "ITS MF CON" },
+    { id: "roster-9", name: "Burk", faction: "Horde", race: "Undead", className: "Warrior", role: "Melee DPS", spec: "Arms", prof1: "", prof2: "", notes: "ITS MF BURK" }
   ],
 
   skyborneRace: {

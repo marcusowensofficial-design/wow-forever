@@ -1145,18 +1145,30 @@ const WOW_FOREVER_DATA = {
     },
     {
       "id": "roster-5",
-      "name": "Andrewm",
+      "name": "AndrewM",
       "faction": "Horde",
-      "race": "Tauren",
-      "className": "Druid",
+      "race": "Undead",
+      "className": "Paladin",
       "role": "Melee DPS",
-      "spec": "Feral",
+      "spec": "Retribution",
       "prof1": "",
       "prof2": "",
-      "notes": "Noted Shaman or Druid in disc when we last spoke -- will update accordingly :)"
+      "notes": "He will main two chars."
     },
     {
       "id": "roster-6",
+      "name": "AndrewM",
+      "faction": "Horde",
+      "race": "Troll",
+      "className": "Mage",
+      "role": "Ranged DPS",
+      "spec": "Frost",
+      "prof1": "",
+      "prof2": "",
+      "notes": "He will main two chars."
+    },
+    {
+      "id": "roster-7",
       "name": "Brody - Futtsnbarts on disc",
       "faction": "Horde",
       "race": "Troll",
@@ -1168,7 +1180,7 @@ const WOW_FOREVER_DATA = {
       "notes": "Brodyyyyyyyyy"
     },
     {
-      "id": "roster-7",
+      "id": "roster-8",
       "name": "Con aka Congirl on disc",
       "faction": "Horde",
       "race": "Tauren",
@@ -1180,7 +1192,7 @@ const WOW_FOREVER_DATA = {
       "notes": "ITS MF CON"
     },
     {
-      "id": "roster-8",
+      "id": "roster-9",
       "name": "Burk",
       "faction": "Horde",
       "race": "Undead",

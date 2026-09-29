@@ -246,12 +246,19 @@ function initSquadRoster() {
   const rosterTableBody = document.getElementById('squad-roster-body');
   if (!rosterTableBody) return;
 
-  const SQUAD_STORAGE_KEY = 'wow_forever_squad_roster_v3';
+  const SQUAD_STORAGE_KEY = 'wow_forever_squad_roster_v4';
 
-  // Load roster from localStorage or prefill with the 8 friends roster presets
+  // Load roster from localStorage or prefill with the default roster presets
   let squad = JSON.parse(localStorage.getItem(SQUAD_STORAGE_KEY) || 'null');
   if (!squad || !Array.isArray(squad) || squad.length === 0) {
+    const prevSquad = JSON.parse(localStorage.getItem('wow_forever_squad_roster_v3') || 'null');
     squad = JSON.parse(JSON.stringify(WOW_FOREVER_DATA.squadRosterPresets || []));
+    if (Array.isArray(prevSquad)) {
+      const customMembers = prevSquad.filter(p => p.id && p.id.startsWith('squad-'));
+      if (customMembers.length > 0) {
+        squad.push(...customMembers);
+      }
+    }
     localStorage.setItem(SQUAD_STORAGE_KEY, JSON.stringify(squad));
   }
 
@@ -386,7 +393,7 @@ function initSquadRoster() {
   const resetBtn = document.getElementById('reset-squad-btn');
   if (resetBtn) {
     resetBtn.addEventListener('click', () => {
-      if (confirm('Reset Squad Roster back to the default roster presets (Thadd, Marcus, BigRed, Andrewm, Brody, Con, Burk)?')) {
+      if (confirm('Reset Squad Roster back to the default roster presets (Thadd, Marcus, BigRed, AndrewM, Brody, Con, Burk)?')) {
         squad = JSON.parse(JSON.stringify(WOW_FOREVER_DATA.squadRosterPresets || []));
         localStorage.setItem(SQUAD_STORAGE_KEY, JSON.stringify(squad));
         renderRoster();
