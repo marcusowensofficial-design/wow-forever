@@ -1,6 +1,6 @@
 /**
  * World of Warcraft: Forever - Master Dataset
- * Up-to-date as of September 28, 2026 (Beta Build 1.60.3.70420)
+ * Up-to-date as of September 29, 2026 (Beta Build 1.60.4.70615)
  * Enhanced with verified community data, Warcraft Tavern guides, Mobalytics meta telemetry,
  * Wowhead datamining, Method articles, BlizzCon reveals, Engine/Graphics specs,
  * In-Combat Addon Disarmament, and exact 35-Day Beta Duration schedule (Sept 17 - Oct 21, 2026).
@@ -17,8 +17,8 @@ const WOW_FOREVER_DATA = {
     betaTotalWeeks: 5,
     launchDate: "November 4, 2026",
     raidsDate: "December 9, 2026",
-    currentBetaPhase: "Phase 1: Week 2 (Level 20 Cap — 10 Days to Phase 2)",
-    clientBuild: "1.60.3.70420",
+    currentBetaPhase: "Phase 1: Week 2 (Level 20 Cap — 9 Days to Phase 2)",
+    clientBuild: "1.60.4.70615",
     engineInfo: "Custom Ray-Traced Engine (Post-Warcraft III: Reforged Continuity)",
     maxLevel: 60,
     currentBetaCap: 20,
@@ -71,6 +71,40 @@ const WOW_FOREVER_DATA = {
   ],
 
   newsFeed: [
+    {
+      id: "news-30",
+      title: "Tuesday Maintenance & Build 1.60.4 Hotfixes: Hall of Thanes Tuning, Warsong Honor Rollover & Shard Consolidation",
+      source: "Blizzard Official / Blue Post",
+      sourceType: "blizzard",
+      author: "Community Manager Kaivax",
+      date: "September 29, 2026",
+      tag: "Maintenance & Patch Notes",
+      summary: "Blizzard completes Tuesday weekly maintenance and rolls out Build 1.60.4 hotfixes: Hall of Thanes boss ability adjustments, the first Phase 1 Warsong Gulch honor rollover, dynamic shard layering optimizations, and Harvest Festival conclusion notices.",
+      content: `Blizzard operations completed scheduled Tuesday weekly maintenance across all North American and European WoW Forever beta megarealms, deploying client hotfix Build 1.60.4.70615:
+• Hall of Thanes Encounter Tuning: High Thane Thauris' 'Shattering Stomp' physical vulnerability debuff duration was reduced from 45 seconds down to 30 seconds to ease spike damage taken by Level 20 tanks. In addition, Ironforge Sentry patrol speed was reduced by 15% to prevent accidental multi-pulls during hallway clearing.
+• Phase 1 Warsong Gulch Honor Rollover: The beta realms processed their first weekly honor calculations for the Level 10–19 Warsong Gulch bracket. Active skirmishers can now inspect their initial rank standings (Private / Scout) and purchase rank-appropriate PvP insignias from faction vendors.
+• Dynamic Shard Consolidation: Starting zones (Zephras Isle, Tirisfal Glades, Elwynn Forest, and Dun Morogh) received enhanced clustering logic to automatically group party members and guildmates onto matching shards upon zone transitions.
+• Harvest Festival Notice: Festive food offerings and honorific quests outside Ironforge and Orgrimmar conclude at 23:59 realm time tonight (September 29). Brewfest activities remain active through October 6.`,
+      url: "https://news.blizzard.com/en-us/world-of-warcraft/beta-weekly-maintenance-hotfixes-sep29"
+    },
+    {
+      id: "news-29",
+      title: "Warcraft Tavern Phase 2 Economy Guide: Essential Reagents & Materials to Stockpile Before October 8",
+      source: "Warcraft Tavern",
+      sourceType: "tavern",
+      author: "Warcraft Tavern Trade Team",
+      date: "September 29, 2026",
+      tag: "Economy & Gathering",
+      summary: "With 9 days remaining until the Level 30 cap unlock, Warcraft Tavern outlines top trade goods, gathering routes, and profession bottlenecks to farm during Phase 1 for maximum launch efficiency.",
+      content: `With the Phase 2 countdown ticking down to 9 days remaining, Warcraft Tavern published its economy and material stockpiling handbook for players preparing for the October 8 Level 30 cap expansion:
+• Key Trade Goods to Hoard:
+  - Heavy Leather & Medium Leather: Leatherworkers and Survivalists capping skill at 75 will require significant quantities of Heavy Leather to immediately craft Tier 2 Silk Tents and medium combat armor upon Level 20+ trainer availability.
+  - Iron Ore & Heavy Stone: Wetlands (The Green Belt) and Stonetalon Mountains offer rich Iron nodes. Blacksmiths require iron bars for introductory Level 25 weapons and Excavation Site 4 key components.
+  - Silk Cloth: Primary bottleneck for 100–150 Tailoring and the Robes of Arcana quest chains across Duskwood and Darkshore.
+• Tier 2 Camping Preparation: Survivalists are advised to stockpile Hardened Timber and Wild Camping Supplies to immediately craft Tier 2 Ironwood Campfires (granting +10% primary stat fish buffs and 90-minute campfire auras).
+• Dungeon Attunements: Blizzard confirmed introductory investigation quests for Excavation Site 4 will start in Menethil Harbor (Alliance) and Hammerfall (Horde) at Level 24.`,
+      url: "https://www.warcrafttavern.com/forever/guides/phase-2-economy-stockpile-guide/"
+    },
     {
       id: "news-28",
       title: "Developer Update: +15% Open-World Elite Quest EXP Buff & Anti-Dungeon Boosting Clarification",
