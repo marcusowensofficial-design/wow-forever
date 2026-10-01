@@ -2223,6 +2223,7 @@ input:checked + .toggle-slider:before {
 .role-pill.role-healer { background: rgba(16, 185, 129, 0.18); border-color: rgba(16, 185, 129, 0.3); color: #34d399; }
 .role-pill.role-dps, .role-pill.role-meleedps { background: rgba(239, 68, 68, 0.18); border-color: rgba(239, 68, 68, 0.3); color: #f87171; }
 .role-pill.role-rangeddps { background: rgba(168, 85, 247, 0.18); border-color: rgba(168, 85, 247, 0.3); color: #c084fc; }
+.role-pill.role-tankdps { background: linear-gradient(135deg, rgba(59, 130, 246, 0.22), rgba(239, 68, 68, 0.22)); border-color: rgba(147, 197, 253, 0.35); color: #93c5fd; }
 
 /* Squad Roster Class Badges & Colors */
 .roster-class-pill {

@@ -246,18 +246,42 @@ function initSquadRoster() {
   const rosterTableBody = document.getElementById('squad-roster-body');
   if (!rosterTableBody) return;
 
-  const SQUAD_STORAGE_KEY = 'wow_forever_squad_roster_v4';
+  const SQUAD_STORAGE_KEY = 'wow_forever_squad_roster_v5';
 
   // Load roster from localStorage or prefill with the default roster presets
   let squad = JSON.parse(localStorage.getItem(SQUAD_STORAGE_KEY) || 'null');
   if (!squad || !Array.isArray(squad) || squad.length === 0) {
-    const prevSquad = JSON.parse(localStorage.getItem('wow_forever_squad_roster_v3') || 'null');
+    const prevSquad = JSON.parse(localStorage.getItem('wow_forever_squad_roster_v4') || localStorage.getItem('wow_forever_squad_roster_v3') || 'null');
     squad = JSON.parse(JSON.stringify(WOW_FOREVER_DATA.squadRosterPresets || []));
     if (Array.isArray(prevSquad)) {
       const customMembers = prevSquad.filter(p => p.id && p.id.startsWith('squad-'));
       if (customMembers.length > 0) {
         squad.push(...customMembers);
       }
+      // Migrate custom professions/notes from previous presets (excluding old Brody spec)
+      prevSquad.forEach(prevP => {
+        if (prevP.id && prevP.id.startsWith('roster-') && prevP.id !== 'roster-7') {
+          const match = squad.find(p => p.id === prevP.id);
+          if (match) {
+            if (prevP.prof1) match.prof1 = prevP.prof1;
+            if (prevP.prof2) match.prof2 = prevP.prof2;
+            if (prevP.notes && !prevP.notes.startsWith('ITS MF')) match.notes = prevP.notes;
+          }
+        }
+      });
+    }
+    localStorage.setItem(SQUAD_STORAGE_KEY, JSON.stringify(squad));
+  }
+
+  // Ensure Brody (roster-7) is always synced to Paladin with Tank / DPS role
+  const brodyEntry = squad.find(p => p.id === 'roster-7' || (p.name && p.name.toLowerCase().includes('brody')));
+  if (brodyEntry && (brodyEntry.className !== 'Paladin' || !brodyEntry.role.includes('Tank'))) {
+    brodyEntry.className = 'Paladin';
+    brodyEntry.race = 'Undead';
+    brodyEntry.role = 'Tank / DPS';
+    brodyEntry.spec = 'Protection / Retribution';
+    if (!brodyEntry.notes || brodyEntry.notes === 'Brodyyyyyyyyy') {
+      brodyEntry.notes = 'Brodyyyyyyyyy - Tank & DPS Paladin';
     }
     localStorage.setItem(SQUAD_STORAGE_KEY, JSON.stringify(squad));
   }

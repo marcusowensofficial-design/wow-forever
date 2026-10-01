@@ -1219,13 +1219,13 @@ const WOW_FOREVER_DATA = {
       "id": "roster-7",
       "name": "Brody - Futtsnbarts on disc",
       "faction": "Horde",
-      "race": "Troll",
-      "className": "Hunter",
-      "role": "Ranged DPS",
-      "spec": "Marksmanship",
+      "race": "Undead",
+      "className": "Paladin",
+      "role": "Tank / DPS",
+      "spec": "Protection / Retribution",
       "prof1": "",
       "prof2": "",
-      "notes": "Brodyyyyyyyyy"
+      "notes": "Brodyyyyyyyyy - Tank & DPS Paladin"
     },
     {
       "id": "roster-8",

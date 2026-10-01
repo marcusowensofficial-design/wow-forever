@@ -1034,7 +1034,7 @@ const WOW_FOREVER_DATA = {
     { id: "roster-4", name: "Bigred", faction: "Horde", race: "Tauren", className: "Druid", role: "Healer", spec: "Restoration", prof1: "", prof2: "", notes: "Played with us in SOD, great guy, very elite." },
     { id: "roster-5", name: "AndrewM", faction: "Horde", race: "Undead", className: "Paladin", role: "Melee DPS", spec: "Retribution", prof1: "", prof2: "", notes: "He will main two chars." },
     { id: "roster-6", name: "AndrewM", faction: "Horde", race: "Troll", className: "Mage", role: "Ranged DPS", spec: "Frost", prof1: "", prof2: "", notes: "He will main two chars." },
-    { id: "roster-7", name: "Brody - Futtsnbarts on disc", faction: "Horde", race: "Troll", className: "Hunter", role: "Ranged DPS", spec: "Marksmanship", prof1: "", prof2: "", notes: "Brodyyyyyyyyy" },
+    { id: "roster-7", name: "Brody - Futtsnbarts on disc", faction: "Horde", race: "Undead", className: "Paladin", role: "Tank / DPS", spec: "Protection / Retribution", prof1: "", prof2: "", notes: "Brodyyyyyyyyy - Tank & DPS Paladin" },
     { id: "roster-8", name: "Con aka Congirl on disc", faction: "Horde", race: "Tauren", className: "Shaman", role: "Melee DPS", spec: "enh sham towards the end, but early/mid levels gonna util. tank/heals/dps", prof1: "", prof2: "", notes: "ITS MF CON" },
     { id: "roster-9", name: "Burk", faction: "Horde", race: "Undead", className: "Warrior", role: "Melee DPS", spec: "Arms", prof1: "", prof2: "", notes: "ITS MF BURK" }
   ],
