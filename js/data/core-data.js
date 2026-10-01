@@ -1,6 +1,6 @@
 /**
  * World of Warcraft: Forever - Core Dataset
- * Up-to-date as of September 29, 2026 (Beta Build 1.60.4.70615)
+ * Up-to-date as of October 1, 2026 (Beta Build 1.60.5.71180)
  * Includes beta schedule, countdowns, news, zones, dungeons, camping, stats, and milestones.
  */
 
@@ -15,11 +15,11 @@ const WOW_FOREVER_DATA = {
     "betaTotalWeeks": 5,
     "launchDate": "November 4, 2026",
     "raidsDate": "December 9, 2026",
-    "currentBetaPhase": "Phase 1: Week 2 (Level 20 Cap — 9 Days to Phase 2)",
-    "clientBuild": "1.60.4.70615",
+    "currentBetaPhase": "Phase 2: Level 30 Cap (Patch Deploys Today, October 1)",
+    "clientBuild": "1.60.5.71180",
     "engineInfo": "Custom Ray-Traced Engine (Post-Warcraft III: Reforged Continuity)",
     "maxLevel": 60,
-    "currentBetaCap": 20,
+    "currentBetaCap": 30,
     "legacyPointsAtLaunch": 16
   },
   "betaSchedule": {
@@ -29,17 +29,17 @@ const WOW_FOREVER_DATA = {
     "endDate": "October 21, 2026",
     "phase1": {
       "title": "Phase 1: Foundations & Level 20 Cap",
-      "dates": "September 17 – October 8, 2026",
-      "duration": "21 Days (3 Weeks)",
+      "dates": "September 17 – October 1, 2026",
+      "duration": "14 Days (2 Weeks)",
       "cap": 20,
       "highlights": "Hall of Thanes & Ruins of Lordaeron dungeons, 10-19 Warsong Gulch, Zephras Isle, starting zones, talent tree foundation."
     },
     "phase2": {
       "title": "Phase 2: Mid-Game & Level 30 Cap",
-      "dates": "October 8 – October 21, 2026",
-      "duration": "14 Days (2 Weeks)",
+      "dates": "October 1 – October 21, 2026",
+      "duration": "21 Days (3 Weeks)",
       "cap": 30,
-      "highlights": "Excavation Site 4 (Wetlands), City of Dalaran, Ashenvale & Hillsbrad open world PvP, mid-level profession blueprints."
+      "highlights": "Level cap increased to 30! Excavation Site 4 (Wetlands), City of Dalaran (Alterac), Ashenvale & Hillsbrad open world PvP, Warsong Gulch 20–29 bracket, Tier 2 Camping (Ironwood & Silk Tents)."
     },
     "wipeAndLaunch": {
       "title": "Server Reset & Launch Preparation",
@@ -49,7 +49,7 @@ const WOW_FOREVER_DATA = {
     }
   },
   "countdownTargets": {
-    "betaPhase2": "2026-10-08T10:00:00-07:00",
+    "betaPhase2": "2026-10-01T15:00:00-07:00",
     "betaEnds": "2026-10-21T23:59:59-07:00",
     "globalLaunch": "2026-11-04T15:00:00-08:00",
     "raidUnlock": "2026-12-09T10:00:00-08:00"
@@ -97,6 +97,30 @@ const WOW_FOREVER_DATA = {
     }
   ],
   "newsFeed": [
+    {
+      "id": "news-32",
+      "title": "Phase 2 Deploys Today: Level Cap Raised to 30, Patch 1.60.5 Maintenance & Content Unlock",
+      "source": "Blizzard Official / Blue Post",
+      "sourceType": "blizzard",
+      "author": "Lead Designer Josh \"Aggrend\" Greenfield",
+      "date": "October 1, 2026",
+      "tag": "Maintenance & Patch Notes",
+      "summary": "Blizzard announces Beta Phase 2 goes live today, October 1, 2026! Realm maintenance later today deploys Build 1.60.5.71180, raising the level cap to 30, opening Excavation Site 4 and City of Dalaran, and activating the 20–29 Warsong Gulch bracket.",
+      "content": "Blizzard operations announced that Beta Phase 2 is launching today, October 1, 2026, following a brief scheduled maintenance window scheduled for 14:00–16:00 PDT:\n• Level Cap Raised to 30: The level cap immediately increases from 20 to 30 across all beta megarealms upon realm startup. Existing Level 20 characters will begin accumulating experience immediately toward Level 30 without requiring character resets.\n• Client Build 1.60.5.71180: Deploys performance optimizations for ray-traced lighting, memory handling during multi-zone shard transfers, and upgraded 12.0 Lua API bindings for addon authors.\n• Two New Leveling Dungeons:\n  - Excavation Site 4 (Level 24–30): Located deep in the Wetlands marshes, featuring Dark Iron saboteurs, Titan constructs, and Sentinel Archeus.\n  - City of Dalaran - Under Siege (Level 28–34): Located in Alterac Mountains, delving into the Kirin Tor subterranean vaults and arcane anomalies before the violet bubble was constructed.\n• Warsong Gulch 20–29 Bracket: The 20–29 battleground queue is now live, featuring updated Phase 2 PvP insignias and honor calculations.\n• Tier 2 Camping Blueprints: Survivalists can now acquire Ironwood Campfires (+10% stat boost bowls, 90-minute aura) and Silk Tents from profession trainers starting at Level 20 with 75 skill.\n• Wave 4 Beta Invitations: Another batch of beta invitations has been dispatched to accommodate the higher level zones and dungeon testing concurrency.",
+      "url": "https://news.blizzard.com/en-us/world-of-warcraft/beta-phase-2-level-30-cap-patch-1605-oct1"
+    },
+    {
+      "id": "news-31",
+      "title": "Wowhead Patch 1.60.5 Datamining: Excavation Site 4 Loot Tables, Level 30 Talent Builds & Dalaran Mechanics",
+      "source": "Wowhead",
+      "sourceType": "wowhead",
+      "author": "Wowhead Datamining Team",
+      "date": "October 1, 2026",
+      "tag": "Datamining & Patch Notes",
+      "summary": "Full datamining breakdown of today's Phase 2 client patch: Titan-forged weapon procs in Excavation Site 4, Kirin Tor vault encounters in Dalaran, Level 21–30 talent allocations, and 150 profession caps.",
+      "content": "Datamining of client build 1.60.5.71180 deployed for today's Phase 2 level cap unlock reveals critical itemization and class mechanics:\n• Excavation Site 4 Loot Tables:\n  - Archeus Core Talisman: Rare caster trinket granting +14 Arcane/Nature spell damage and mana restoration on spell cast.\n  - Titan-Forged Greaves: Heavy plate boots with +7 Strength, +6 Stamina, and +1% Hit.\n  - Relic Smasher: 2H Mace with high top-end damage and a 2% chance on hit to trigger an Earth Ward.\n• City of Dalaran (Alterac Mountains) Boss Abilities:\n  - Arcane Anomaly: Casts Mana Singularity, draining mana from ranged casters and empowering nearby constructs.\n  - Shade of the Archmage: Channels Blizzard and Mass Invisibility, requiring precise positioning and group crowd control.\n• Level 21–30 Talent Expansion: Players now have access to 21 total talent points (up from 11), unlocking pivotal 21-point capstones like Mortal Strike (Warrior), Preparation (Rogue), Consecration/Holy Shock (Paladin), and Shadowform (Priest).\n• Profession Cap 150 (Expert): Trainers across Ironforge, Stormwind, Orgrimmar, and Undercity now train Expert recipes (75–150), enabling Iron weapons, Silk bandages, and Greater Healing Potions.",
+      "url": "https://www.wowhead.com/forever/news/patch-1605-datamining-excavation-site-4-loot-level-30-talents"
+    },
     {
       "id": "news-30",
       "title": "Tuesday Maintenance & Build 1.60.4 Hotfixes: Hall of Thanes Tuning, Warsong Honor Rollover & Shard Consolidation",
@@ -741,42 +765,42 @@ const WOW_FOREVER_DATA = {
       "name": "Excavation Site 4",
       "zone": "Wetlands",
       "isNew": true,
-      "betaActive": false
+      "betaActive": true
     },
     {
       "level": "24 – 32",
       "name": "Blackfathom Deeps",
       "zone": "Ashenvale",
       "isNew": false,
-      "betaActive": false
+      "betaActive": true
     },
     {
       "level": "24 – 32",
       "name": "The Stockade",
       "zone": "Stormwind City",
       "isNew": false,
-      "betaActive": false
+      "betaActive": true
     },
     {
       "level": "28 – 34",
       "name": "City of Dalaran (Under Siege)",
       "zone": "Alterac Mountains",
       "isNew": true,
-      "betaActive": false
+      "betaActive": true
     },
     {
       "level": "29 – 38",
       "name": "Gnomeregan",
       "zone": "Dun Morogh",
       "isNew": false,
-      "betaActive": false
+      "betaActive": true
     },
     {
       "level": "29 – 38",
       "name": "Razorfen Kraul",
       "zone": "The Barrens",
       "isNew": false,
-      "betaActive": false
+      "betaActive": true
     },
     {
       "level": "34 – 45",
@@ -2244,8 +2268,8 @@ const WOW_FOREVER_DATA = {
       "type": "5-Man Dungeon",
       "levelRange": "24 – 29",
       "zone": "Wetlands (Eastern Kingdoms)",
-      "status": "Unlocks in Beta Phase 2 (Oct 8)",
-      "playableNow": false,
+      "status": "Active in Beta Phase 2 (Unlocking Today)",
+      "playableNow": true,
       "description": "A Titan archaeological dig site in the Wetlands marshes overrun by Dark Iron saboteurs and awakened Titan sentinels.",
       "bosses": [
         "Dark Iron Surveyor Brand",
@@ -2255,7 +2279,8 @@ const WOW_FOREVER_DATA = {
       ],
       "lootHighlights": [
         "Archeus Core Talisman",
-        "Titan-Forged Greaves"
+        "Titan-Forged Greaves",
+        "Relic Smasher 2H Mace"
       ]
     },
     {
@@ -2264,8 +2289,8 @@ const WOW_FOREVER_DATA = {
       "type": "5-Man Dungeon",
       "levelRange": "28 – 34",
       "zone": "Alterac Mountains",
-      "status": "Unlocks in Beta Phase 2 (Oct 8)",
-      "playableNow": false,
+      "status": "Active in Beta Phase 2 (Unlocking Today)",
+      "playableNow": true,
       "entrance": "Enter via sewers into the Underbelly, fight through Kirin Tor necromancers, then break out into the open streets of Dalaran.",
       "description": "Before the violet dome was erected, Dalaran is plagued by Arcane Anomalies and rogue Kirin Tor Necromancers ravaging the streets with undead minions.",
       "bosses": [
@@ -2707,8 +2732,43 @@ const WOW_FOREVER_DATA = {
     },
     {
       "id": "step-10",
-      "text": "Hit the Phase 1 Cap: Level 20! Secure pre-BiS weapons for Phase 2",
+      "text": "Hit the Phase 1 Cap: Level 20! Complete class weapon and ability questlines",
       "cat": "Milestone"
+    },
+    {
+      "id": "step-11",
+      "text": "Level up in Phase 2: Enter Wetlands and conquer Level 24–30 Dungeon: Excavation Site 4",
+      "cat": "Phase 2 Dungeon"
+    },
+    {
+      "id": "step-12",
+      "text": "Infiltrate Alterac Mountains and defeat Kirin Tor rogues in Level 28–34 Dungeon: City of Dalaran",
+      "cat": "Phase 2 Dungeon"
+    },
+    {
+      "id": "step-13",
+      "text": "Unlock Tier 2 Camping: Craft an Ironwood Campfire (+10% stat boost) and Silk Tent",
+      "cat": "Camping"
+    },
+    {
+      "id": "step-14",
+      "text": "Queue for the newly unlocked Level 20–29 Warsong Gulch battleground bracket",
+      "cat": "Phase 2 PvP"
+    },
+    {
+      "id": "step-15",
+      "text": "Participate in contested open-world PvP skirmishes across Hillsbrad Foothills & Ashenvale",
+      "cat": "World PvP"
+    },
+    {
+      "id": "step-16",
+      "text": "Advance primary professions to 150 Expert cap & craft Level 25+ weapons/armor",
+      "cat": "Professions"
+    },
+    {
+      "id": "step-17",
+      "text": "Hit the Phase 2 Cap: Level 30! Unlock key 21-point talent capstones",
+      "cat": "Phase 2 Milestone"
     }
   ],
   "classDeepDives": {}

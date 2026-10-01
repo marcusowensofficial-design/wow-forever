@@ -2,10 +2,10 @@
 name: wow-forever-addon-development
 description: |
   Comprehensive guide and rules for creating and editing World of Warcraft addons specifically for WoW Forever (Camelot / 12.0 engine) and modern WoW clients.
-  Covers 16001 TOC standards, Single-TOC architecture, AllowLoadGameType filters, XML and Lua frame design, secret values / UI taint, ruleset realm substitution, SavedVariables persistence & profile management, and nameplate/unit frame mechanics.
+  Covers 16001 TOC standards, Single-TOC architecture, AllowLoadGameType filters, XML and Lua frame design, secret values / UI taint, ruleset realm substitution, SavedVariables persistence, nameplate/unit frame mechanics, Dungeon Journal architecture, map inpainting, and sub-pixel pin calibration.
 license: Apache-2.0
 metadata:
-  version: v5
+  version: v6
   publisher: user
 ---
 
@@ -574,3 +574,165 @@ When player auras are secret during combat, Lua arithmetic and string comparison
    - Meta rankings, leveling build tier lists, dungeon speedrun telemetry, PvP battleground performance.
 5. **WoW Forever Discord #bugs Channel**:
    - Live community and developer telemetry for active beta build drops and engine patches.
+
+---
+
+## 17. Dungeon Journal Architecture & Loot Pipeline (Forever Standards)
+
+Building a responsive, high-performance Dungeon Journal on the 12.0 Camelot engine requires decoupling data declarations from UI presentation and handling beta-specific item cache behaviors.
+
+### 17.1 Decoupled Data Architecture
+Avoid monolithic files. Partition data by concern:
+- `Data/Dungeons.lua`: Core dungeon registry (`FDJ.DB[dungeonName]`), dungeon level, entrance coordinates, quest lists, and boss arrays with loot tables.
+- `Data/Bosses.lua`: Boss levels and 3D creature display IDs (`STATIC_DISPLAY_IDS[npcID] = displayID`).
+- `Data/BossTactics.lua`: Encounter overviews, role-specific tips (`tank`, `healer`, `dps`), and ability tables (`id`, `name`, `icon`, `desc`).
+- `Data/DungeonMaps.lua`: Interior map texture paths, canvas aspect ratio, boss pin coordinates (`bosses`), and non-boss points of interest (`pois`).
+- `Core/Journal.lua`: The UI engine handling frame rendering, tab switching, event registration, and user interactions.
+
+### 17.2 WoW Forever Custom Item IDs (`270xxx` / `273xxx`)
+WoW Forever introduces custom item IDs (e.g. `270227`, `273804`) that do not exist on standard Classic or Retail databases:
+1. **Pre-fetching Item Data**:
+   Whenever displaying a boss's loot, always notify the client to query item data asynchronously:
+   ```lua
+   if C_Item and C_Item.RequestLoadItemDataByID then
+       pcall(C_Item.RequestLoadItemDataByID, itemID)
+   end
+   ```
+2. **Instant Icon & Basic Info Retrieval**:
+   Use `C_Item.GetItemInfoInstant(itemID)` or `C_Item.GetItemIconByID(itemID)` to prevent waiting for server round-trips:
+   ```lua
+   local function ItemIcon(id)
+       if C_Item and C_Item.GetItemInfoInstant then
+           local _, _, _, _, icon = C_Item.GetItemInfoInstant(id)
+           if icon then return icon end
+       end
+       if C_Item and C_Item.GetItemIconByID then
+           local icon = C_Item.GetItemIconByID(id)
+           if icon then return icon end
+       end
+       return "Interface\\Icons\\INV_Misc_QuestionMark"
+   end
+   ```
+
+### 17.3 Authoritative Quality Resolution via `C_TooltipInfo`
+- **The Issue**: On Forever beta, querying `GetItemQualityColor` or `select(3, C_Item.GetItemInfo(id))` can lag or return outdated/grey qualities before the server cache populates.
+- **The Solution**: Use Blizzard's C-side tooltip pipeline (`C_TooltipInfo.GetItemByID`) to extract the exact rendered color line:
+  ```lua
+  local function GetAuthoritativeItemQuality(itemID, fallbackQuality)
+      if C_TooltipInfo and type(C_TooltipInfo.GetItemByID) == "function" then
+          local ok, data = pcall(C_TooltipInfo.GetItemByID, itemID)
+          if ok and type(data) == "table" and type(data.lines) == "table" and data.lines[1] then
+              local color = data.lines[1].leftColor or data.lines[1].color
+              if color and color.r then
+                  return color.r, color.g, color.b
+              end
+          end
+      end
+      -- Fallback to standard quality palette
+      local r, g, b = GetItemQualityColor(fallbackQuality or 3)
+      return r or 0.0, g or 0.44, b or 0.87
+  end
+  ```
+
+### 17.4 Clean Teardown of Draft / TBD States
+- When working on new dungeons, authors frequently add placeholder banners (e.g. `Items Data TBD`).
+- **Rule**: When completing a dungeon's loot tables, **completely eradicate** any draft labels (`stockadeItemsTBD`, `stockadeLootTBD`, etc.) and remove special-case scroll/title anchor offsets.
+- Every dungeon must adhere to the universal encounter layout:
+  - Subtab 1: **Loot** (active by default, displaying item rows with icons, quality colors, slot names, and tooltips).
+  - Subtab 2: **Tactics & Abilities** (overview, role tip cards, ability badges).
+  - Filters: **All Classes** toggle and **All Slots** dropdown.
+
+---
+
+## 18. High-Precision Dungeon Map & Pin Calibration Pipeline
+
+Adding interior maps and boss markers requires clean background art, valid texture formats, and accurate coordinate mapping.
+
+### 18.1 The "Black Screen" Map Texture Trap (Power-of-Two Rule)
+- **The Bug**: Custom map textures set via `texture:SetTexture("path\\to\\map.tga")` render as a completely black box in the WoW client if dimensions or compression are incorrect.
+- **Engine Rules**:
+  1. **Dimensions MUST be Power-of-Two (POT)**: e.g. 512×512, 1024×1024, or 1024×512.
+  2. **Format**: Uncompressed 32-bit (RGBA) or 24-bit (RGB) Truevision TGA.
+  3. **No Non-POT Textures**: Never save 770×370 or 800×600 directly to `.tga`. Instead, scale or pad the texture to 1024×1024 (or 1024×512) and map texture coordinates via `SetTexCoord(0, 1, 0, 1)` or custom UV bounds.
+
+### 18.2 Atlas Map Inpainting Recipe (Automated Number/Letter Removal)
+To convert legacy numbered Atlas maps into clean background textures suitable for dynamic interactive pins:
+```python
+import cv2
+import numpy as np
+
+# Load source map
+img = cv2.imread('raw_atlas_map.png')
+
+# 1. Create a binary mask of white/bright baked numbers (e.g., text numbers 1-12)
+# White numbers usually have high luminance across RGB:
+gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+_, mask = cv2.threshold(gray, 235, 255, cv2.THRESH_BINARY)
+
+# Dilate mask by 2-3 pixels to capture anti-aliasing edges and dark drop shadows
+kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (5, 5))
+dilated_mask = cv2.dilate(mask, kernel, iterations=1)
+
+# 2. Inpaint using Telea or Navier-Stokes
+cleaned = cv2.inpaint(img, dilated_mask, inpaintRadius=3, flags=cv2.INPAINT_TELEA)
+
+# 3. Apply subtle bilateral filter to preserve dungeon walls while smoothing background
+final_map = cv2.bilateralFilter(cleaned, d=5, sigmaColor=35, sigmaSpace=35)
+cv2.imwrite('Cleaned_Map.png', final_map)
+```
+
+### 18.3 Sub-Pixel Landmark Calibration Shortcut (Zero Guesswork)
+When a user provides a screenshot containing marker locations (or requests moving a pin to match an image):
+**NEVER guess coordinates by eye or iterate with trial-and-error.**
+
+Use linear regression on $\ge 3$ known reference landmarks already defined in `DungeonMaps.lua` (e.g. Boss #1, Boss #6, Boss #12):
+```python
+import numpy as np
+
+# Reference landmarks: (lua_x, lua_y) from DungeonMaps.lua and (pixel_x, pixel_y) measured from screenshot
+data = [
+    (0.770, 0.068, 600.63, 27.50),   # Boss A
+    (0.465, 0.665, 363.90, 250.90),  # Boss B
+    (0.355, 0.825, 278.15, 311.01),  # Boss C
+]
+
+lua_x = np.array([d[0] for d in data])
+lua_y = np.array([d[1] for d in data])
+pix_x = np.array([d[2] for d in data])
+pix_y = np.array([d[3] for d in data])
+
+# Fit affine mapping: pix = slope * lua + intercept
+slope_x, int_x = np.polyfit(lua_x, pix_x, 1)
+slope_y, int_y = np.polyfit(lua_y, pix_y, 1)
+
+# Given target pin pixel measured from screenshot (target_px, target_py):
+target_px, target_py = 407.73, 237.91
+new_lua_x = (target_px - int_x) / slope_x
+new_lua_y = (target_py - int_y) / slope_y
+
+print(f"Target Lua Coords: x = {new_lua_x:.3f}, y = {new_lua_y:.3f}")
+# Yields < 1.5px residual error across all landmarks!
+```
+
+### 18.4 Pin Hierarchy & Interactive Click-to-Loot Wiring
+In `Core/Journal.lua`, map pins are structured into two distinct layers:
+
+1. **Boss Pins (`mapData.bosses`)**:
+   - **Visuals**: 24×24 circular icon masked with `Interface\CharacterFrame\TempPortraitAlphaMask`, overlaid with a 30×30 gold border (`BossBorderGold.tga`), and an `orderText` numeric badge (`x = -3, y = 0`).
+   - **Click Action**: Directly hooks into the encounter viewer:
+     ```lua
+     marker:SetScript("OnClick", function(self)
+         if self.bossIndex then
+             SetMode("bosses")
+             SelectBoss(self.bossIndex)
+         end
+     end)
+     ```
+   - Hovering over a boss pin displays the boss name, encounter detail, and `"Click to view encounter & loot in journal"`.
+
+2. **Atlas POI Pins (`mapData.pois`)**:
+   - For non-boss quest objects, rare spawn event locations (e.g. Fel Steed), or chests.
+   - Display a solid dark circle with a gold ring and centered number.
+   - Tooltip displays the POI number, name, and quest detail line.
+   - Clicking opens or toggles the Map Legend drawer (`frame.dungeonMapLegendPanel`).
+

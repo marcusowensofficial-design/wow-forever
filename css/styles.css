@@ -542,6 +542,12 @@ h1, h2, h3, h4, .font-heading {
   margin-bottom: 0.5rem;
 }
 
+.beta-step-badge.completed {
+  background: rgba(100, 116, 139, 0.2);
+  border: 1px solid #64748b;
+  color: #94a3b8;
+}
+
 .beta-step-badge.current {
   background: rgba(16, 185, 129, 0.2);
   border: 1px solid #10b981;

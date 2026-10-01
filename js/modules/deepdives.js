@@ -2365,13 +2365,13 @@ function initClassDeepDives() {
 
     return `
       <div class="beta-builds-wrapper">
-        <!-- Beta Phase 1 Header Callout -->
+        <!-- Beta Phase 2 Header Callout -->
         <div class="beta-builds-header-callout">
           <div class="beta-callout-top">
             <div style="display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap;">
-              <h3 style="font-size: 1.35rem; color: #fff; margin: 0;">⚡ Level 20 Closed Beta Theorycraft & Spec Builds</h3>
-              <span class="beta-disclaimer-badge">Closed Beta Phase 1 • Level 20 Cap</span>
-              <span class="deepdive-badge badge-verified"><span>✓</span> 11 Talent Points Max</span>
+              <h3 style="font-size: 1.35rem; color: #fff; margin: 0;">⚡ Level 20–30 Closed Beta Theorycraft & Spec Builds</h3>
+              <span class="beta-disclaimer-badge">Closed Beta Phase 2 • Level 30 Cap (Live Today!)</span>
+              <span class="deepdive-badge badge-verified"><span>✓</span> Up to 21 Talent Points</span>
             </div>
             <div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap;">
               <a href="https://www.wowhead.com/forever/guides" target="_blank" rel="noopener" class="talent-calc-link-btn" style="padding: 0.35rem 0.75rem; font-size: 0.78rem;">
@@ -2383,7 +2383,7 @@ function initClassDeepDives() {
             </div>
           </div>
           <p style="font-size: 0.9rem; color: #cbd5e1; margin: 0.5rem 0 0.8rem; line-height: 1.55;">
-            In <strong>WoW: Forever Closed Beta Phase 1</strong>, players are capped at <strong>Level 20</strong>, granting exactly <strong>11 talent points</strong> (levels 10–20). Additional talent points (+2 to +5) can be unlocked early via <strong>Legacy Discovery Milestones</strong>. Below are the optimal leveling, dungeon speed-clearing, and PvP specs datamined and verified from beta testers.
+            In <strong>WoW: Forever Closed Beta Phase 2</strong>, the level cap expands to <strong>Level 30</strong> with today's patch, unlocking up to <strong>21 talent points</strong> (levels 10–30). Additional talent points (+2 to +5) can also be unlocked early via <strong>Legacy Discovery Milestones</strong>. Below are the optimal leveling, dungeon speed-clearing, and PvP specs datamined and verified from beta testers.
           </p>
           <div style="font-size: 0.78rem; color: #94a3b8; display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
             <span>⚠️ <em>Beta Notice: Talent tree positions, spell values, and weapon scaling are actively tuned weekly before the official November 4th launch.</em></span>

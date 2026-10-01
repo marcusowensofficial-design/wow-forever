@@ -25,7 +25,7 @@ function initCountdowns() {
     const diffLaunch = Math.max(0, targets.launch - now);
     renderTimerDigits('launch', diffLaunch);
 
-    // 3. Beta Phase 2 Countdown (Oct 8, 2026)
+    // 3. Beta Phase 2 Countdown (Oct 1, 2026 - Deploying Today!)
     const diffPhase2 = Math.max(0, targets.phase2 - now);
     renderTimerDigits('phase2', diffPhase2);
 

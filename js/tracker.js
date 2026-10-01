@@ -86,7 +86,7 @@ function renderCharacterSheet(char) {
       <div class="char-meta-item"><strong>Race:</strong> ${escapeHtml(char.race)}</div>
       <div class="char-meta-item"><strong>Class:</strong> <span style="color: ${classInfo.color}; font-weight: 700; text-shadow: 0 0 8px ${classInfo.color}40;">${classInfo.icon} ${escapeHtml(char.className)}</span></div>
       <div class="char-meta-item"><strong>Specialization:</strong> ${escapeHtml(char.spec)}</div>
-      <div class="char-meta-item"><strong>Target Bracket:</strong> Beta Phase 1 (Cap 20)</div>
+      <div class="char-meta-item"><strong>Target Bracket:</strong> Beta Phase 2 (Cap 30 — Live Today!)</div>
       <div class="char-meta-item"><strong>Primary Prof 1:</strong> ${escapeHtml(char.prof1)}</div>
       <div class="char-meta-item"><strong>Primary Prof 2:</strong> ${escapeHtml(char.prof2)}</div>
     </div>
@@ -94,7 +94,7 @@ function renderCharacterSheet(char) {
 }
 
 /* ==========================================================================
-   2. BETA PHASE 1 CHECKLIST (LEVEL 20)
+   2. BETA PHASE 2 CHECKLIST (LEVEL 20–30)
    ========================================================================== */
 function initBetaChecklist() {
   const checklistContainer = document.getElementById('checklist-items-container');
@@ -185,7 +185,7 @@ function initBetaChecklist() {
   const resetBtn = document.getElementById('reset-checklist-btn');
   if (resetBtn) {
     resetBtn.addEventListener('click', () => {
-      if (confirm('Reset all milestone completion marks for the Beta Phase 1 checklist?')) {
+      if (confirm('Reset all milestone completion marks for the Beta Phase 2 checklist?')) {
         completedSet.clear();
         localStorage.setItem('wow_forever_checklist_completed', JSON.stringify([]));
         renderChecklist();

@@ -16,11 +16,11 @@ A comprehensive, responsive tracking hub, news portal, and character planner for
 
 ### 2. ⏱️ Operations Hub & Real-Time Countdowns
 - Live countdown clocks for:
+  - **Beta Phase 2 (L30 Cap)**: October 1, 2026 (Patch 1.60.5 Deploys Today!).
   - **Beta Ends**: October 21, 2026 (35-Day Closed Beta concludes).
-  - **Beta Phase 2 (L30 Cap)**: October 8, 2026.
   - **Global Official Launch**: November 4, 2026.
   - **Tier 1 Raids Unlock**: December 9, 2026 (*Barrow Deeps 10m, Hyjal Summit 20m, Onyxia 40m* — No Molten Core at launch).
-- **35-Day Beta Duration & Testing Roadmap**: Phase 1 (L20), Phase 2 (L30), and Pre-Launch polish tracking.
+- **35-Day Beta Duration & Testing Roadmap**: Phase 1 (L20 Cap, Sept 17 – Oct 1), Phase 2 (L30 Cap, Oct 1 – Oct 21), and Pre-Launch polish tracking.
 
 ### 3. 🛡️ Verified Classic+ Rules & Quality of Life Grid
 - 16 core gameplay pillars including:
@@ -42,7 +42,7 @@ A comprehensive, responsive tracking hub, news portal, and character planner for
 
 ### 6. 📋 Legacy Calculator & Roster Tracker
 - Interactive 16-point Legacy Talent Calculator.
-- Beta Phase 1 (Level 20) milestone checklist with percentage tracker.
+- Beta Phase 2 (Level 30) milestone checklist with percentage tracker.
 - Squad and Guild roster planner with role breakdown.
 
 ---
