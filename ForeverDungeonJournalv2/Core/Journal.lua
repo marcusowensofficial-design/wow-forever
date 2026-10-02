@@ -2753,7 +2753,7 @@ local function ScrollToAbility(abilityIndex, abilityID, sourceRole, sourceCard)
         frame.tacticsReturnButton:SetPoint("BOTTOMRIGHT", targetRow, "TOPRIGHT", 0, 3)
         frame.tacticsReturnButton:SetFrameLevel(targetRow:GetFrameLevel() + 10)
         local roleLabel = sourceRole or (sourceCard and sourceCard.title and sourceCard.title:GetText()) or L("ROLE_TIPS") or "Tips"
-        frame.tacticsReturnButton.text:SetText("▲ " .. L("RETURN_TO_TIPS", roleLabel))
+        frame.tacticsReturnButton.text:SetText(L("RETURN_TO_TIPS", roleLabel) or ("Back to " .. tostring(roleLabel)))
         frame.tacticsReturnButton:Show()
     end
 end
@@ -2776,7 +2776,7 @@ local function MakeRoleTipCard(parent, title, iconPath, titleColor)
     -- Permanently visible, clearly styled Announce Button
     local announceBtn = CreateFrame("Button", nil, card, "BackdropTemplate")
     card.announceBtn = announceBtn
-    announceBtn:SetSize(74, 20)
+    announceBtn:SetSize(126, 20)
     announceBtn:SetPoint("TOPRIGHT", -8, -6)
     FDJ.SetBackdrop(announceBtn, "Interface\\Buttons\\WHITE8X8", "Interface\\Tooltips\\UI-Tooltip-Border", 8, 2)
     announceBtn:SetBackdropColor(0.18, 0.13, 0.07, 0.95)
@@ -2785,15 +2785,15 @@ local function MakeRoleTipCard(parent, title, iconPath, titleColor)
 
     announceBtn.icon = announceBtn:CreateTexture(nil, "ARTWORK")
     announceBtn.icon:SetSize(13, 13)
-    announceBtn.icon:SetPoint("LEFT", 5, 0)
+    announceBtn.icon:SetPoint("LEFT", 6, 0)
     announceBtn.icon:SetTexture("Interface\\Buttons\\UI-GuildSwipe-Up")
     announceBtn.icon:SetVertexColor(1.0, 0.85, 0.35)
 
     announceBtn.text = announceBtn:CreateFontString(nil, "OVERLAY", "GameFontHighlightSmall")
-    announceBtn.text:SetPoint("LEFT", announceBtn.icon, "RIGHT", 3, 0)
-    announceBtn.text:SetPoint("RIGHT", -4, 0)
-    announceBtn.text:SetJustifyH("LEFT")
-    announceBtn.text:SetText(L("ANNOUNCE"))
+    announceBtn.text:SetPoint("LEFT", announceBtn.icon, "RIGHT", 4, 0)
+    announceBtn.text:SetPoint("RIGHT", -5, 0)
+    announceBtn.text:SetJustifyH("CENTER")
+    announceBtn.text:SetText(L("ANNOUNCE_TACTICS") or "Announce Tactics")
     announceBtn.text:SetTextColor(1.0, 0.85, 0.35)
 
     announceBtn:SetScript("OnEnter", function(self)
@@ -3452,7 +3452,7 @@ local function UpdateDungeonHeaderTabs()
     if frame.mapTab then
         if FDJ.DUNGEON_MAPS[selectedDungeon] then
             frame.mapTab:ClearAllPoints()
-            frame.mapTab:SetSize(124, 30)
+            frame.mapTab:SetSize(134, 30)
             frame.mapTab:SetPoint("TOPRIGHT", -234, -14)
             frame.mapTab:SetText(L("DUNGEON_MAP") or "Dungeon Map")
             frame.mapTab:Show()
@@ -3517,21 +3517,23 @@ local function UpdateDungeonHeaderTabs()
         frame.questsTab.text:SetPoint("CENTER", frame.questsTab, "CENTER", 7, 0)
     end
 
-    -- Map icon: use the supplied parchment-map icon in the same oversized
-    -- left-side style as the Bosses skull and Quests exclamation mark.
+    -- Map icon: cleanly sized icon anchored on the left with dedicated text spacing
     if frame.mapTab then
         if not frame.mapTab.fdjIcon then
             frame.mapTab.fdjIcon = frame.mapTab:CreateTexture(nil, "OVERLAY")
         end
-        frame.mapTab.fdjIcon:SetSize(30, 30)
+        frame.mapTab.fdjIcon:SetSize(22, 22)
         frame.mapTab.fdjIcon:ClearAllPoints()
-        frame.mapTab.fdjIcon:SetPoint("LEFT", 3, 0)
+        frame.mapTab.fdjIcon:SetPoint("LEFT", 6, 0)
         frame.mapTab.fdjIcon:SetTexture("Interface\\AddOns\\ForeverDungeonJournal\\Media\\MapTabIcon")
         frame.mapTab.fdjIcon:SetTexCoord(0, 1, 0, 1)
         frame.mapTab.fdjIcon:Show()
+        frame.mapTab.text = frame.mapTab:GetFontString()
         if frame.mapTab.text then
             frame.mapTab.text:ClearAllPoints()
-            frame.mapTab.text:SetPoint("CENTER", frame.mapTab, "CENTER", 7, 0)
+            frame.mapTab.text:SetPoint("LEFT", frame.mapTab.fdjIcon, "RIGHT", 4, 0)
+            frame.mapTab.text:SetPoint("RIGHT", frame.mapTab, "RIGHT", -4, 0)
+            frame.mapTab.text:SetJustifyH("CENTER")
         end
     end
 end
@@ -6308,7 +6310,7 @@ RefreshLoot = function()
     frame.lootTitle:SetText("")
     frame.lootTitle:Hide()
     frame.lootScroll:ClearAllPoints()
-    frame.lootScroll:SetPoint("TOPLEFT", 12, isStockade and -124 or -114)
+    frame.lootScroll:SetPoint("TOPLEFT", 12, isStockade and -138 or -128)
     frame.lootScroll:SetPoint("BOTTOMRIGHT", -29, 11)
 
     local filteredLoot = {}
@@ -6713,7 +6715,16 @@ ApplyLocalization = function()
     end
     if frame.bossesTab then frame.bossesTab:SetText(L("BOSSES")) end
     if frame.questsTab then frame.questsTab:SetText(L("QUESTS")) end
-    if frame.mapTab then frame.mapTab:SetText(L("DUNGEON_MAP") or "Dungeon Map") end
+    if frame.mapTab then
+        frame.mapTab:SetText(L("DUNGEON_MAP") or "Dungeon Map")
+        local mText = frame.mapTab:GetFontString()
+        if mText and frame.mapTab.fdjIcon then
+            mText:ClearAllPoints()
+            mText:SetPoint("LEFT", frame.mapTab.fdjIcon, "RIGHT", 4, 0)
+            mText:SetPoint("RIGHT", frame.mapTab, "RIGHT", -4, 0)
+            mText:SetJustifyH("CENTER")
+        end
+    end
     if frame.bossListTitle then frame.bossListTitle:SetText(L("BOSSES")) end
     if frame.questListTitle then frame.questListTitle:SetText(L("QUESTS")) end
     if frame.questObjectiveHeader then frame.questObjectiveHeader:SetText(L("OBJECTIVE")) end
@@ -6790,6 +6801,14 @@ RefreshAll = function()
         frame.dungeonLocationButton:ClearAllPoints()
         frame.dungeonLocationButton:SetPoint("LEFT", frame.dungeonMeta, "RIGHT", 14, 0)
         frame.dungeonLocationButton:SetText(L("SHOW_ENTRANCE_ON_MAP") or "Show Entrance on Map")
+        local btnText = frame.dungeonLocationButton:GetFontString()
+        if btnText and frame.dungeonLocationButton.icon then
+            btnText:ClearAllPoints()
+            btnText:SetPoint("LEFT", frame.dungeonLocationButton.icon, "RIGHT", 5, 0)
+            btnText:SetPoint("RIGHT", frame.dungeonLocationButton, "RIGHT", -6, 0)
+            btnText:SetJustifyH("CENTER")
+            btnText:SetTextColor(1.00, 0.82, 0.27)
+        end
     end
 
     if frame.dungeonRouteButton then
@@ -8140,22 +8159,24 @@ local function CreateMainFrame()
     frame.dungeonMeta:SetTextColor(0.88, 0.80, 0.66)
 
     frame.dungeonLocationButton = CreateFrame("Button", nil, header, "UIPanelButtonTemplate")
-    frame.dungeonLocationButton:SetSize(164, 22)
+    frame.dungeonLocationButton:SetSize(176, 22)
     frame.dungeonLocationButton:SetPoint("LEFT", frame.dungeonMeta, "RIGHT", 14, 0)
     frame.dungeonLocationButton:SetFrameLevel(header:GetFrameLevel() + 4)
+    frame.dungeonLocationButton.icon = frame.dungeonLocationButton:CreateTexture(nil, "OVERLAY")
+    frame.dungeonLocationButton.icon:SetSize(18, 18)
+    frame.dungeonLocationButton.icon:SetPoint("LEFT", 6, 0)
+    frame.dungeonLocationButton.icon:SetTexture("Interface\\AddOns\\ForeverDungeonJournal\\Media\\MapTabIcon")
+    frame.dungeonLocationButton.icon:SetTexCoord(0.08, 0.92, 0.08, 0.92)
     frame.dungeonLocationButton:SetText(L("SHOW_ENTRANCE_ON_MAP") or "Show Entrance on Map")
     frame.dungeonLocationButton.text = frame.dungeonLocationButton:GetFontString()
     if frame.dungeonLocationButton.text then
         frame.dungeonLocationButton.text:ClearAllPoints()
-        frame.dungeonLocationButton.text:SetPoint("CENTER", 9, 0)
+        frame.dungeonLocationButton.text:SetPoint("LEFT", frame.dungeonLocationButton.icon, "RIGHT", 5, 0)
+        frame.dungeonLocationButton.text:SetPoint("RIGHT", frame.dungeonLocationButton, "RIGHT", -6, 0)
+        frame.dungeonLocationButton.text:SetJustifyH("CENTER")
         frame.dungeonLocationButton.text:SetTextColor(1.00, 0.82, 0.27)
         frame.dungeonLocationButton.text:SetFontObject("GameFontHighlightSmall")
     end
-    frame.dungeonLocationButton.icon = frame.dungeonLocationButton:CreateTexture(nil, "OVERLAY")
-    frame.dungeonLocationButton.icon:SetSize(16, 16)
-    frame.dungeonLocationButton.icon:SetPoint("LEFT", 6, 0)
-    frame.dungeonLocationButton.icon:SetTexture("Interface\\AddOns\\ForeverDungeonJournal\\Media\\MapTabIcon")
-    frame.dungeonLocationButton.icon:SetTexCoord(0.08, 0.92, 0.08, 0.92)
     frame.dungeonLocationButton:SetScript("OnEnter", function(self)
         GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
         GameTooltip:SetText(L("SHOW_ENTRANCE_ON_MAP") or "Show Entrance on Map", 1, 0.82, 0)
@@ -8328,7 +8349,7 @@ local function CreateMainFrame()
 
     frame.selectedBossLevelBadge = right:CreateTexture(nil, "OVERLAY", nil, 6)
     frame.selectedBossLevelBadge:SetSize(36, 36)
-    frame.selectedBossLevelBadge:SetPoint("CENTER", frame.selectedBossPortrait, "BOTTOMLEFT", 8, 3)
+    frame.selectedBossLevelBadge:SetPoint("CENTER", frame.selectedBossPortrait, "BOTTOMLEFT", 9, 6)
     frame.selectedBossLevelBadge:SetTexture("Interface\\AddOns\\ForeverDungeonJournal\\Media\\BossLevelBadge.tga")
     frame.selectedBossLevelBadge:Hide()
 
@@ -8388,7 +8409,7 @@ local function CreateMainFrame()
     local bossSubTabOverview = CreateFrame("Button", nil, right, "BackdropTemplate")
     frame.bossSubTabOverview = bossSubTabOverview
     bossSubTabOverview:SetSize(110, 22)
-    bossSubTabOverview:SetPoint("TOPLEFT", 14, -86)
+    bossSubTabOverview:SetPoint("TOPLEFT", 14, -100)
     FDJ.SetBackdrop(bossSubTabOverview, "Interface\\Buttons\\WHITE8X8", "Interface\\Tooltips\\UI-Tooltip-Border", 8, 2)
     bossSubTabOverview:SetBackdropColor(0.12, 0.08, 0.04, 0.80)
     bossSubTabOverview:SetBackdropBorderColor(0.48, 0.36, 0.18, 1)
@@ -8425,7 +8446,7 @@ local function CreateMainFrame()
     local lootClassFilterButton = CreateFrame("Button", nil, right, "BackdropTemplate")
     frame.lootClassFilterButton = lootClassFilterButton
     lootClassFilterButton:SetSize(92, 22)
-    lootClassFilterButton:SetPoint("TOPRIGHT", right, "TOPRIGHT", -14, -86)
+    lootClassFilterButton:SetPoint("TOPRIGHT", right, "TOPRIGHT", -14, -100)
     FDJ.SetBackdrop(lootClassFilterButton, "Interface\\Buttons\\WHITE8X8", "Interface\\Tooltips\\UI-Tooltip-Border", 10, 2)
     lootClassFilterButton:SetBackdropColor(0.12, 0.09, 0.05, 0.95)
     lootClassFilterButton:SetBackdropBorderColor(0.48, 0.36, 0.18, 1)
@@ -8545,7 +8566,7 @@ local function CreateMainFrame()
     end)
 
     frame.lootTitle = right:CreateFontString(nil, "OVERLAY", "GameFontNormal")
-    frame.lootTitle:SetPoint("TOPLEFT", 14, -114)
+    frame.lootTitle:SetPoint("TOPLEFT", 14, -128)
     frame.lootTitle:SetTextColor(0.27, 0.13, 0.04)
     frame.lootTitle:Hide()
 
@@ -8556,7 +8577,7 @@ local function CreateMainFrame()
         "UIPanelScrollFrameTemplate"
     )
     frame.lootScroll = lootScroll
-    lootScroll:SetPoint("TOPLEFT", 12, -114)
+    lootScroll:SetPoint("TOPLEFT", 12, -128)
     lootScroll:SetPoint("BOTTOMRIGHT", -29, 11)
 
     frame.lootContent = CreateFrame("Frame", nil, lootScroll)
@@ -8571,7 +8592,7 @@ local function CreateMainFrame()
         "UIPanelScrollFrameTemplate"
     )
     frame.bossTacticsScroll = tacticsScroll
-    tacticsScroll:SetPoint("TOPLEFT", 12, -114)
+    tacticsScroll:SetPoint("TOPLEFT", 12, -128)
     tacticsScroll:SetPoint("BOTTOMRIGHT", -29, 11)
 
     frame.bossTacticsContent = CreateFrame("Frame", nil, tacticsScroll)
@@ -8724,19 +8745,19 @@ local function CreateMainFrame()
     -- Floating "Back to Tips" Return Button
     local returnBtn = CreateFrame("Button", nil, frame.bossTacticsContent, "BackdropTemplate")
     frame.tacticsReturnButton = returnBtn
-    returnBtn:SetSize(130, 22)
+    returnBtn:SetSize(136, 22)
     FDJ.SetBackdrop(returnBtn, "Interface\\Buttons\\WHITE8X8", "Interface\\Tooltips\\UI-Tooltip-Border", 8, 2)
     returnBtn:SetBackdropColor(0.12, 0.09, 0.05, 0.95)
     returnBtn:SetBackdropBorderColor(0.85, 0.68, 0.28, 1)
     returnBtn:SetHighlightTexture("Interface\\QuestFrame\\UI-QuestTitleHighlight", "ADD")
     local returnIcon = returnBtn:CreateTexture(nil, "ARTWORK")
     returnIcon:SetSize(14, 14)
-    returnIcon:SetPoint("LEFT", 5, 0)
+    returnIcon:SetPoint("LEFT", 6, 0)
     returnIcon:SetTexture("Interface\\AddOns\\ForeverDungeonJournal\\Media\\ReturnUpArrow.tga")
     returnIcon:SetVertexColor(1.0, 0.85, 0.35)
     local returnTxt = returnBtn:CreateFontString(nil, "OVERLAY", "GameFontHighlightSmall")
-    returnTxt:SetPoint("LEFT", returnIcon, "RIGHT", 4, 0)
-    returnTxt:SetPoint("RIGHT", -4, 0)
+    returnTxt:SetPoint("LEFT", returnIcon, "RIGHT", 5, 0)
+    returnTxt:SetPoint("RIGHT", -5, 0)
     returnTxt:SetJustifyH("LEFT")
     returnTxt:SetTextColor(1.0, 0.85, 0.35)
     returnTxt:SetText("Back to Tips")
