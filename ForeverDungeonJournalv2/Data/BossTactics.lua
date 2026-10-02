@@ -677,4 +677,403 @@ FDJ.BOSS_TACTICS = {
             },
         },
     },
+
+    ["Excavation Site: Wetlands"] = {
+        ["Saltspine"] = {
+            overview = "A colossal prehistoric crocolisk awakened by the dwarven excavators deep in the flooded dig site. Saltspine lunges with bone-crushing bites and unleashes a violent tail sweep.",
+            roleTips = {
+                tank = "Engage Saltspine with your back to the cavern rocks to prevent knockback repositioning. Keep him turned away from all party members.",
+                healer = "Be ready for immediate burst healing on the tank after Crushing Bite reduces maximum health and armor.",
+                dps = "Stand strictly at Saltspine's flank. Never stand behind him due to Tail Sweep, nor in front due to Triple Bite.",
+            },
+            abilities = {
+                { id = 3130, name = "Crushing Bite", icon = "Interface\\Icons\\Ability_Druid_Rake", desc = "Viciously bites the target, dealing physical damage and reducing armor by 30% for 10 sec." },
+                { id = 15847, name = "Tail Sweep", icon = "Interface\\Icons\\INV_Misc_MonsterTail_03", desc = "Whips his armored tail in a rear arc, dealing damage and knocking back anyone behind the crocolisk." },
+                { id = 8269, name = "Frenzy", icon = "Interface\\Icons\\Spell_Shadow_UnholyFrenzy", desc = "Increases attack speed by 40% and physical damage by 25% when reaching 30% health." },
+            },
+        },
+        ["Shadetooth"] = {
+            overview = "An ancient subterranean trogg warlord wielding cursed earthen relics. Shadetooth commands savage trogg berserkers and periodically sends shockwaves reverberating through the excavation tunnel.",
+            roleTips = {
+                tank = "Pick up Shadetooth and immediately establish threat on the Excavation Trogg adds that rush from the mine shafts.",
+                healer = "Anticipate heavy group-wide damage during Quake. Dispel the Skull Crack stun from the tank.",
+                dps = "Focus down the Trogg Berserkers immediately before burning Shadetooth. Interrupt Shadow Ward casts.",
+            },
+            abilities = {
+                { id = 11972, name = "Earthquake", icon = "Interface\\Icons\\Spell_Nature_Earthquake", desc = "Channels a subterranean tremor, dealing Nature damage every 2 sec and knocking players down." },
+                { id = 15618, name = "Skull Crack", icon = "Interface\\Icons\\Ability_MaceRagDoll", desc = "Bashes the primary target with a blunt stone mace, stunning them for 3 sec." },
+                { id = 8269, name = "Call of the Dig", icon = "Interface\\Icons\\INV_Misc_Horn_01", desc = "Summons 2 Excavation Trogg miners to swarm the party." },
+            },
+        },
+        ["Relic Guardian"] = {
+            overview = "An animated titan-forged defense construct safeguarding the prime vault chamber. It emits arcane pulse barriers, electrifies the wet cavern floor, and overloads when critically damaged.",
+            roleTips = {
+                tank = "Keep the Relic Guardian centered in the chamber. Move the boss out of Static Fields quickly so melee can continue DPS.",
+                healer = "Use heavy group heals when Arcane Overload pulses every 15 seconds. Dispel Static Charge.",
+                dps = "Quickly switch to Arcane Power Cells when they deploy around the room to remove the Guardian's damage immunity shield.",
+            },
+            abilities = {
+                { id = 15245, name = "Static Field", icon = "Interface\\Icons\\Spell_Nature_LightningOverload", desc = "Electrifies a 10-yard pool of water on the chamber floor, dealing Nature damage to anyone standing inside." },
+                { id = 15588, name = "Arcane Pulse", icon = "Interface\\Icons\\Spell_Holy_MagicalSentry", desc = "Emits an expanding wave of arcane energy, knocking players back and dealing Arcane damage." },
+                { id = 11989, name = "Overload Barrier", icon = "Interface\\Icons\\Spell_Holy_PowerWordShield", desc = "Surrounds itself with a titan energy shield, absorbing damage and reflecting 20% back to attackers until power cells are destroyed." },
+            },
+        },
+    },
+
+    ["City of Dalaran"] = {
+        ["Atrexis the Grave Knight"] = {
+            overview = "A fallen Kirin Tor battle-mage turned death knight, guarding the breached gates of Violet Citadel. He strikes with frost-imbued runeblades and summons unholy chains to drag distant casters.",
+            roleTips = {
+                tank = "Hold Atrexis facing away from the staircase. Rotate active mitigation when he begins casting Obliterating Strike.",
+                healer = "Cleanse Frost Fever instantly to prevent severe attack and casting speed slows on party members.",
+                dps = "If gripped by Death's Grasp, immediately reposition away from his frontal Frost Cleave.",
+            },
+            abilities = {
+                { id = 49909, name = "Frost Cleave", icon = "Interface\\Icons\\Spell_Frost_FrostNova", desc = "Cleaves enemies in front of the caster for Frost damage, slowing movement speed by 40%." },
+                { id = 49576, name = "Death's Grasp", icon = "Interface\\Icons\\Spell_DeathKnight_Strangulate", desc = "Hurls unholy chains at the furthest ranged player, pulling them into melee range." },
+                { id = 50842, name = "Blood Boil", icon = "Interface\\Icons\\Spell_DeathKnight_BloodBoil", desc = "Boils the blood of all nearby enemies, dealing heavy Shadow damage." },
+            },
+        },
+        ["Arcane Anomaly"] = {
+            overview = "A swirling nexus of raw unstable ley-line magic unleashed during the Kirin Tor's containment experiments. It pulses wild arcane storms and teleports across the laboratory terrace.",
+            roleTips = {
+                tank = "Taunt and reposition the Anomaly immediately after each Blink. Pick up wild Mana Remnants as they spawn.",
+                healer = "Keep raid health topped above 70% before Arcane Explosion detonates.",
+                dps = "Save mobility tools to close the distance when the Anomaly teleports. Prioritize burning volatile mana sparks before they detonate.",
+            },
+            abilities = {
+                { id = 14515, name = "Arcane Explosion", icon = "Interface\\Icons\\Spell_Nature_WispSplode", desc = "Releases a violent burst of raw mana, dealing Arcane damage to all enemies within 15 yards." },
+                { id = 1953, name = "Ley Blink", icon = "Interface\\Icons\\Spell_Arcane_Blink", desc = "Teleports to an alternate vantage point on the terrace, dropping threat." },
+                { id = 15284, name = "Mana Flare", icon = "Interface\\Icons\\Spell_Holy_SilencingShot", desc = "Burns the mana of all spellcasters in line of sight, dealing damage equal to mana drained." },
+            },
+        },
+        ["Fel Ancient"] = {
+            overview = "A colossal treant corrupted by demonic shadowflame in Dalaran's botanical conservatory. The Ancient tramples players and ignites ground foliage with Fel Immolation.",
+            roleTips = {
+                tank = "Tank the Fel Ancient on the stone pathway to avoid burning grass patches. Taunt Corrupted Treant adds.",
+                healer = "Dispel Fel Toxin immediately from healers and tanks to prevent rapid health loss.",
+                dps = "AoE down Fel Seedlings before they mature into Corrupted Treants. Do not stand in green fire patches.",
+            },
+            abilities = {
+                { id = 11989, name = "Fel Immolation", icon = "Interface\\Icons\\Spell_Fire_Immolation", desc = "Ignites nearby soil, causing emerald flames that tick for Fire and Chaos damage." },
+                { id = 11972, name = "Trample", icon = "Interface\\Icons\\Ability_WarStomp", desc = "Stomps the ground violently, dealing Physical damage and knocking down all melee players for 2 sec." },
+                { id = 7668, name = "Corrupting Spores", icon = "Interface\\Icons\\Spell_Nature_CorrosiveBreath", desc = "Releases a cloud of diseased spores, dealing Nature damage and reducing armor." },
+            },
+        },
+        ["Unstable Sentinel"] = {
+            overview = "An enchanted arcane automaton patrolling the Violet Hold security corridors. It projects impenetrable directional barriers and spins in a barrage of concentrated laser bursts.",
+            roleTips = {
+                tank = "Turn the Sentinel perpendicular to the party so party members can attack its vulnerable unshielded back.",
+                healer = "Stay out of the Sentinel's tracking beam. Heal through the ticking Arcane Radiance.",
+                dps = "Never strike the Sentinel from the front while its Aegis Barrier is active; flank to the rear to bypass deflection.",
+            },
+            abilities = {
+                { id = 15589, name = "Spinning Arcane Cannon", icon = "Interface\\Icons\\Spell_Arcane_Blast", desc = "Spins in a circle firing beams of arcane energy, dealing heavy damage to anyone caught in the beam." },
+                { id = 11989, name = "Aegis Projection", icon = "Interface\\Icons\\Spell_Holy_PowerWordShield", desc = "Deploys a front-facing energy shield that reflects all frontal spell and physical attacks." },
+            },
+        },
+        ["Mana Wraith"] = {
+            overview = "An ethereal apparition formed from vaporized Kirin Tor scholars. It feeds on magical energy, drains player mana pools, and casts devastating Shadow Word curses.",
+            roleTips = {
+                tank = "Hold the Wraith in place and interrupt Siphon Essence whenever it begins channeling.",
+                healer = "Keep mana pots ready or request innervates/mana springs; Mana Wraith rapidly siphons caster pools.",
+                dps = "Kick and counterspell Siphon Essence as top priority. Magic damage is resisted; prioritize Physical burst.",
+            },
+            abilities = {
+                { id = 15245, name = "Siphon Essence", icon = "Interface\\Icons\\Spell_Shadow_LifeDrain02", desc = "Drains health and mana from the target, healing the Mana Wraith for double the amount drained." },
+                { id = 12542, name = "Curse of Torment", icon = "Interface\\Icons\\Spell_Shadow_CurseOfSargeras", desc = "Curses the party with debilitating pain, increasing mana costs by 50% for 15 sec." },
+            },
+        },
+        ["Mana Devourer"] = {
+            overview = "A ravenous void creature escaped from Dalaran's deepest prisons. It gorged on ambient leylines and periodically purges all magic buffs from the entire party.",
+            roleTips = {
+                tank = "Aggro the Devourer quickly after each Nullification pulse. Tank active mitigation is critical.",
+                healer = "Do not waste mana re-buffing during combat; the Devourer consumes active buffs to heal itself.",
+                dps = "Burst with pure damage. When Devourer enters Mana Satiation, it takes 50% increased damage for 10 sec.",
+            },
+            abilities = {
+                { id = 15284, name = "Nullification Burst", icon = "Interface\\Icons\\Spell_Holy_DispelMagic", desc = "Purges all magical beneficial effects from players and deals damage proportional to buffs removed." },
+                { id = 13338, name = "Mana Bomb", icon = "Interface\\Icons\\Spell_Fire_SelfDestruct", desc = "Launches an explosive orb of volatile arcane power at a ranged player's location." },
+            },
+        },
+        ["Mana Elemental"] = {
+            overview = "A condensed core of pure enchanted water and arcane flux, guarding the Violet Citadel fountain. Splinters into smaller unstable droplets upon defeat.",
+            roleTips = {
+                tank = "Gather all Splintered Mana Droplets together when the elemental divides at 50% health.",
+                healer = "Group AoE damage ramps up when droplets explode upon death. Stagger your cooldowns.",
+                dps = "Focus down one droplet at a time or coordinate AoE burst so they don't detonate simultaneously.",
+            },
+            abilities = {
+                { id = 116, name = "Water Bolt Volley", icon = "Interface\\Icons\\Spell_Frost_FrostBolt02", desc = "Fires pressurized water bolts at all party members, dealing Frost damage and slowing movement." },
+                { id = 11989, name = "Fission", icon = "Interface\\Icons\\Spell_Arcane_PrismaticCloak", desc = "Splits into four unstable Mana Droplets upon reaching 50% health." },
+            },
+        },
+        ["Lyn the Ignored"] = {
+            overview = "A bitter, overlooked Dalaran apprentice who tapped into forbidden chronomancy and dark mirror magic. She creates holographic duplicates that confuse and strike from stealth.",
+            roleTips = {
+                tank = "Watch for mirror images. Keep Lyn tagged with Rend or Faerie Fire to distinguish the real boss from illusions.",
+                healer = "Dispel polymorph effects from party members immediately.",
+                dps = "Identify the real Lyn by checking her debuff icons; kill illusions with quick single-target strikes.",
+            },
+            abilities = {
+                { id = 118, name = "Polymorph: Sheep", icon = "Interface\\Icons\\Spell_Nature_Polymorph", desc = "Transforms an enemy party member into a sheep for up to 8 sec, disabling them completely." },
+                { id = 1953, name = "Mirror Image", icon = "Interface\\Icons\\Spell_Magic_LesserInvisibilty", desc = "Creates three holographic duplicates that cast Frostbolt and Fireball at random targets." },
+                { id = 13338, name = "Time Warp Stutter", icon = "Interface\\Icons\\Spell_Arcane_PortalDalaran", desc = "Hastens her own spellcasting by 50% while slowing all player actions by 20% for 6 sec." },
+            },
+        },
+        ["Shade of the Archmage"] = {
+            overview = "The echo of Archmage Antonidas himself, testing worthy champions in the Violet Council Chamber. He casts tri-school magic: Blizzard, Flamestrike, and Arcane Missiles.",
+            roleTips = {
+                tank = "Center Antonidas in the chamber. Interrupt Pyroblast on cooldown to avoid tank one-shots.",
+                healer = "Move constantly to avoid Blizzard storms. Heal through heavy tri-school magical damage.",
+                dps = "Kick Flamestrike and Arcane Missiles. Spread out so Blizzard and Flamestrike do not overlap multiple players.",
+            },
+            abilities = {
+                { id = 10, name = "Blizzard", icon = "Interface\\Icons\\Spell_Frost_IceStorm", desc = "Calls down shards of ice on a targeted area, dealing Frost damage and slowing movement speed by 60%." },
+                { id = 2120, name = "Flamestrike", icon = "Interface\\Icons\\Spell_Fire_SelfDestruct", desc = "Summons a pillar of fire, dealing initial Fire damage and leaving burning ground for 8 sec." },
+                { id = 5143, name = "Arcane Missiles", icon = "Interface\\Icons\\Spell_Nature_StarFall", desc = "Channels high-velocity magical bolts into the primary target over 3 sec." },
+            },
+        },
+    },
+
+    ["Gnomeregan"] = {
+        ["Grubbis"] = {
+            overview = "A mutant trogg chieftain who dug through the deepest ventilation tunnels beneath the Workshop. Accompanied by his loyal basilisk pet, Chomper.",
+            roleTips = {
+                tank = "Hold Grubbis and Chomper together. Have DPS kill Chomper first or off-tank to avoid Petrifying Gaze.",
+                healer = "Dispel Basilisk Stun from party members. Watch for sudden tank spikes when Grubbis enrages.",
+                dps = "Burn Chomper down first to remove Petrifying Gaze, then focus Grubbis. Don't pull extra troggs from the side vents.",
+            },
+            abilities = {
+                { id = 11972, name = "Petrifying Gaze", icon = "Interface\\Icons\\Spell_Nature_Sleep", desc = "Chomper glares at a target, turning them to stone and stunning them for 4 sec." },
+                { id = 8269, name = "Trogg Smash", icon = "Interface\\Icons\\Ability_MaceRagDoll", desc = "Grubbis strikes with brute force, dealing heavy Physical damage to his primary target." },
+            },
+        },
+        ["Viscous Fallout"] = {
+            overview = "A toxic sentient radioactive slime coalesced from irradiated coolant leaks inside the dormitory halls. Emits heavy radiating nature auras.",
+            roleTips = {
+                tank = "Keep Viscous Fallout away from the party. Drag the boss backward as toxic puddles form underfoot.",
+                healer = "Cleanse Radioactive Poison quickly. Use Nature Resistance Totem or Aspect of the Wild if available.",
+                dps = "Quickly eliminate Irradiated Slime adds before they reach the boss and heal it.",
+            },
+            abilities = {
+                { id = 7668, name = "Radioactive Aura", icon = "Interface\\Icons\\Spell_Shadow_CreepingPlague", desc = "Deals periodic Nature damage to all players within 20 yards and reduces healing received." },
+                { id = 11989, name = "Toxic Cloud", icon = "Interface\\Icons\\Spell_Nature_AbolishPoison", desc = "Expels a venomous green haze that damages anyone standing inside." },
+            },
+        },
+        ["Electrocutioner 6000"] = {
+            overview = "A lethal high-voltage defense robot patrolling the cogwheel platforms. Fires chain lightning that arcs lethally between grouped allies.",
+            roleTips = {
+                tank = "Position the Electrocutioner on the rim of the platform. Face him away so Megavolt doesn't blast the party.",
+                healer = "Heavy burst healing required during Megavolt. Keep yourself at least 10 yards away from all DPS.",
+                dps = "SPREAD OUT AT LEAST 10 YARDS APART. Grouping up will cause Chain Lightning to arc and wipe the group.",
+            },
+            abilities = {
+                { id = 15284, name = "Megavolt", icon = "Interface\\Icons\\Spell_Nature_ChainLightning", desc = "Fires a devastating arc of electricity that jumps to all players standing within 8 yards of each other." },
+                { id = 11988, name = "Shock Shield", icon = "Interface\\Icons\\Spell_Nature_LightningShield", desc = "Surrounds itself with lightning, damaging attackers when struck by melee weapons." },
+            },
+        },
+        ["Crowd Pummeler 9-60"] = {
+            overview = "A berserk crowd-control automaton in the engineering launch bay. It knocks players high into the air and spins violently in an unstoppable whirlwind.",
+            roleTips = {
+                tank = "Tank with your back against the pillar so Knockback doesn't send you flying off the platform edges.",
+                healer = "Watch for massive falling damage after players are punted into the air.",
+                dps = "RUN OUT OF MELEE when Crowd Pummeler casts Arcing Smash / Whirlwind. Ranged DPS have free uptime.",
+            },
+            abilities = {
+                { id = 15589, name = "Pummel Whirlwind", icon = "Interface\\Icons\\Ability_Whirlwind", desc = "Spins its massive bronze fists in a 360-degree whirlwind, dealing lethal physical damage to melee." },
+                { id = 11972, name = "Crowd Punt", icon = "Interface\\Icons\\Ability_WarStomp", desc = "Punts the primary target into the air, causing high physical damage and threat drop." },
+            },
+        },
+        ["Mekgineer Thermaplugg"] = {
+            overview = "The mad betrayer of Gnomeregan piloting his heavily mechanized walking fortress. Thermaplugg activates bomb dispensers around the room that must be clicked to disarm.",
+            roleTips = {
+                tank = "Hold Thermaplugg in the center of the hex room. Turn him away from the active bomb consoles.",
+                healer = "Conserve mana for the final 20% phase. Heal bomb runners who take incidental blast damage.",
+                dps = "DESIGNATE BOMB CLICKERS. When warning horns sound, immediately run to the green-flashing wall buttons to shut off Walking Bomb dispensers.",
+            },
+            abilities = {
+                { id = 13338, name = "Deploy Walking Bombs", icon = "Interface\\Icons\\Spell_Fire_SelfDestruct", desc = "Opens ventilation chutes, releasing walking mechanical bombs that detonate on contact with players." },
+                { id = 15588, name = "Knock Away", icon = "Interface\\Icons\\Ability_Kick", desc = "Knocks the tank away, reducing threat and temporarily switching targets." },
+                { id = 11989, name = "Toxic Vent Discharge", icon = "Interface\\Icons\\Spell_Nature_CorrosiveBreath", desc = "Emits clouds of irradiating gas from floor grates around the perimeter." },
+            },
+        },
+        ["Dark Iron Ambassador"] = {
+            overview = "A covert Dark Iron envoy brokering an alliance with Thermaplugg. Accompanied by elite Dark Iron bodyguards and armed with incendiary firearms.",
+            roleTips = {
+                tank = "Pick up the Ambassador and his two Dark Iron bodyguards. Group them together for cleave.",
+                healer = "Cleanse Flame Shock and maintain high health on the tank to survive burst rifle shots.",
+                dps = "Kill the Dark Iron bodyguards first. Interrupt Incendiary Grenade casts.",
+            },
+            abilities = {
+                { id = 8269, name = "Incendiary Shot", icon = "Interface\\Icons\\Spell_Fire_Fireball02", desc = "Fires an explosive rifle round, dealing Fire damage and burning the target over 8 sec." },
+                { id = 13338, name = "Explosive Trap", icon = "Interface\\Icons\\Spell_Fire_SelfDestruct", desc = "Places a hidden incendiary trap that detonates when stepped on, knocking back nearby players." },
+            },
+        },
+    },
+
+    ["Razorfen Kraul"] = {
+        ["Roogug"] = {
+            overview = "A quillboar earth-caller guarding the Bramble maze. Channels geomantic powers to erect thorn barriers and impale trespassers.",
+            roleTips = {
+                tank = "Face Roogug away from party members. Taunt quickly after Spiked Brambles knockback.",
+                healer = "Dispel Root and Bleed effects. Keep the tank above 60% health before Earth Spike casts.",
+                dps = "Interrupt Earth Spike. Move out of thorny entanglements on the ground immediately.",
+            },
+            abilities = {
+                { id = 11972, name = "Earth Spike", icon = "Interface\\Icons\\Spell_Nature_Earthquake", desc = "Erupts sharp rock spikes beneath a player, dealing physical damage and launching them airborne." },
+                { id = 15284, name = "Bramble Entanglement", icon = "Interface\\Icons\\Spell_Nature_StrangleVines", desc = "Roots all players in a 10-yard radius in razor-sharp thorns, dealing bleeding damage over 6 sec." },
+            },
+        },
+        ["Aggem Thorncurse"] = {
+            overview = "A ruthless Death's Head necromancer who commands rotting quilboar corpses and inflicts debilitating blood curses.",
+            roleTips = {
+                tank = "Grab Aggem and pick up the Risen Boar thralls as soon as they crawl from the bone piles.",
+                healer = "Decurse Curse of Weakness and Curse of Thorns from melee and tank.",
+                dps = "Focus down the skeletal adds with AoE cleave. Interrupt Shadow Bolt casts.",
+            },
+            abilities = {
+                { id = 15245, name = "Shadow Bolt Volley", icon = "Interface\\Icons\\Spell_Shadow_ShadowBolt", desc = "Fires shadowy skull missiles at all players, dealing Shadow damage." },
+                { id = 12542, name = "Curse of Thorns", icon = "Interface\\Icons\\Spell_Shadow_AntiShadow", desc = "Reflects physical damage back to attackers whenever they strike in melee." },
+            },
+        },
+        ["Death Speaker Jargba"] = {
+            overview = "The high priest of the Death's Head quillboar cult. Channels dark mind control magic and raises bone shields to deflect incoming spells.",
+            roleTips = {
+                tank = "Keep Jargba positioned near the center. Be ready to retake aggro when Mind Control fades from party members.",
+                healer = "Dispel Magic to remove Bone Shield. Prepare heavy healing when Shadow Nova detonates.",
+                dps = "Crowd control (polymorph, trap, stun) charmed allies without killing them. Interrupt Dominate Mind.",
+            },
+            abilities = {
+                { id = 14515, name = "Dominate Mind", icon = "Interface\\Icons\\Spell_Shadow_ShadowWordDominate", desc = "Chontrolls the mind of a party member for up to 10 sec, forcing them to attack their allies." },
+                { id = 11989, name = "Bone Shield", icon = "Interface\\Icons\\Spell_Shadow_GrimWard", desc = "Surrounds the caster with spinning bone fragments, absorbing physical and magical damage." },
+            },
+        },
+        ["Overlord Ramtusk"] = {
+            overview = "The hulking military leader of the Razorfen clan, accompanied by two elite boar champions and armed with massive stone cleavers.",
+            roleTips = {
+                tank = "Tank Ramtusk and his two boars. Pop defensive cooldowns when Ramtusk begins his Berserker Enrage.",
+                healer = "Massive physical spike damage on the tank. Keep active HoTs and shields applied continuously.",
+                dps = "Burn the boar adds first with focused single-target damage, then switch to Ramtusk. Melee beware of Cleave.",
+            },
+            abilities = {
+                { id = 8269, name = "Cleave", icon = "Interface\\Icons\\Ability_Warrior_Cleave", desc = "Sweeping cleave striking the tank and up to 2 adjacent players." },
+                { id = 8269, name = "Enrage", icon = "Interface\\Icons\\Spell_Shadow_UnholyFrenzy", desc = "Enrages at 30% health, increasing attack speed by 50% and physical damage dealt by 35%." },
+            },
+        },
+        ["Agathelos the Raging"] = {
+            overview = "A colossal ancient spirit boar sacred to Agamaggan. Roams the deep ravine, stomping the earth and charging ranged party members.",
+            roleTips = {
+                tank = "Pull Agathelos against the canyon wall. Intercept him quickly after he charges ranged players.",
+                healer = "Group-wide physical damage after Earth Stomp. Keep all party members above 50% health.",
+                dps = "Do not stand between Agathelos and the ranged group. Move away from the head to avoid Trample.",
+            },
+            abilities = {
+                { id = 11972, name = "Earth Stomp", icon = "Interface\\Icons\\Ability_WarStomp", desc = "Stomps the cavern floor, dealing physical damage and stunning nearby players for 2 sec." },
+                { id = 100, name = "Raging Charge", icon = "Interface\\Icons\\Ability_Warrior_Charge", desc = "Charges the furthest target, dealing heavy damage and knocking them backward." },
+            },
+        },
+        ["Charlga Razorflank"] = {
+            overview = "The venerable Crone of the Kraul and leader of all Razorfen quillboar. She wields supreme geomancy, encases enemies in stone, and drains life continuously.",
+            roleTips = {
+                tank = "Keep Charlga near the center of her elevated dais. Interrupt Chain Lightning on cooldown.",
+                healer = "Dispel Crystalline Sleep immediately. Heal through the ticking life drain of Mana/Life Spike.",
+                dps = "INTERRUPT CHAIN LIGHTNING. Spread out around her platform so lightning does not arc across multiple players.",
+            },
+            abilities = {
+                { id = 15284, name = "Chain Lightning", icon = "Interface\\Icons\\Spell_Nature_ChainLightning", desc = "Strikes an enemy with a bolt of lightning that arcs to up to 3 nearby allies for heavy Nature damage." },
+                { id = 23382, name = "Crystalline Slumber", icon = "Interface\\Icons\\Spell_Nature_Sleep", desc = "Encases an enemy player in crystalline stone, incapacitating them for up to 8 sec." },
+                { id = 15245, name = "Drain Life", icon = "Interface\\Icons\\Spell_Shadow_LifeDrain02", desc = "Channels dark geomantic energy, draining health from a player to heal Charlga." },
+            },
+        },
+        ["Blind Hunter"] = {
+            overview = "A rare mutated subterranean bat roosting in the dark canyon ceilings. Uses echolocation to silence spellcasters and dives with venomous claws.",
+            roleTips = {
+                tank = "Grab Blind Hunter when he dives from the ceiling. Position him away from casters.",
+                healer = "Stay at maximum range to avoid Sonic Screech silence. Dispel Bat Poison.",
+                dps = "Casters must stop channeling when Sonic Screech begins casting to avoid school lockouts.",
+            },
+            abilities = {
+                { id = 15284, name = "Sonic Screech", icon = "Interface\\Icons\\Ability_Hunter_Pet_Bat", desc = "Emits an ear-piercing shriek that silences all spellcasters within 15 yards for 4 sec." },
+                { id = 7668, name = "Corrosive Bat Venom", icon = "Interface\\Icons\\Spell_Nature_CorrosiveBreath", desc = "Infects the target with virulent bat poison, dealing Nature damage over 12 sec." },
+            },
+        },
+        ["Earthcaller Halmgar"] = {
+            overview = "A rare hermit shaman hidden in the overgrown side tunnels. Drops multiple totems that buff his physical strikes and shock enemies with frost.",
+            roleTips = {
+                tank = "Pull Halmgar away from his Earthbind and Strength of Earth totems immediately.",
+                healer = "Frost Resistance helps absorb Frost Shock burst. Cleanse slows.",
+                dps = "Kill totems on sight, especially Earthbind Totem and Healing Totem.",
+            },
+            abilities = {
+                { id = 11988, name = "Frost Shock", icon = "Interface\\Icons\\Spell_Frost_FrostShock", desc = "Blasts the target with frost, dealing damage and reducing movement speed by 50% for 6 sec." },
+                { id = 11989, name = "Strength of Earth Totem", icon = "Interface\\Icons\\Spell_Nature_EarthBindTotem", desc = "Plants a totem that increases Halmgar's melee damage by 30%." },
+            },
+        },
+    },
+
+    ["Scarlet Monastery: Graveyard"] = {
+        ["Interrogator Vishas"] = {
+            overview = "The sadistic chief torturer of the Scarlet Crusade, conducting horrific interrogations in the dungeon vaults below the monastery.",
+            roleTips = {
+                tank = "Face Vishas away from the cells. Watch out for sudden aggro spikes when he uses Word of Pain.",
+                healer = "Dispel Shadow Word: Pain and heal through the burning fire poker strikes.",
+                dps = "Burn Vishas down quickly. He has low health and can be stunned and interrupted freely.",
+            },
+            abilities = {
+                { id = 15245, name = "Shadow Word: Pain", icon = "Interface\\Icons\\Spell_Shadow_ShadowWordPain", desc = "Inflicts pure shadow pain on a target, dealing periodic Shadow damage over 18 sec." },
+                { id = 11989, name = "Naughty Secret", icon = "Interface\\Icons\\Spell_Fire_Immolation", desc = "Strikes the target with a red-hot iron, dealing Fire damage and causing a burn over 6 sec." },
+            },
+        },
+        ["Azshir the Sleepless"] = {
+            overview = "A rare restless crypt ghoul haunting the sealed mausoleum vaults. Emits soul-draining shrieks and summons undead crypt fiends.",
+            roleTips = {
+                tank = "Establish aggro on Azshir and hold him near the mausoleum entrance. Pick up summoned ghouls.",
+                healer = "Heavy shadow damage during Terrifying Shriek. Dispel sleep/fear effects.",
+                dps = "AoE down the Crypt Crawler adds quickly, then resume single-target focus on Azshir.",
+            },
+            abilities = {
+                { id = 13704, name = "Terrifying Shriek", icon = "Interface\\Icons\\Spell_Shadow_PsychicScream", desc = "Lets out a horrifying scream, causing all players within 10 yards to flee in terror for 4 sec." },
+                { id = 15245, name = "Call Crypt Ghouls", icon = "Interface\\Icons\\Spell_Shadow_RaiseDead", desc = "Summons 2 skeletal fiends from surrounding sarcophagi to attack the party." },
+            },
+        },
+        ["Fallen Champion"] = {
+            overview = "The reanimated spirit of a decorated Scarlet Crusade paladin who succumbed to the scourge plague. Uses unholy seals and strikes with heavy desecrated polearms.",
+            roleTips = {
+                tank = "Tank the Champion away from the crypt steps. Use defensive mitigation when he casts Desecrated Strike.",
+                healer = "Be prepared for sudden physical spike damage on the tank. Cleanse disease debuffs.",
+                dps = "Stay behind the Champion. Interrupt Holy/Unholy spellcasts.",
+            },
+            abilities = {
+                { id = 8269, name = "Desecrated Strike", icon = "Interface\\Icons\\Ability_Warrior_Cleave", desc = "Strikes the target with unholy fury, dealing physical damage and applying a stacking disease." },
+                { id = 15588, name = "Unholy Aura", icon = "Interface\\Icons\\Spell_Shadow_UnholyFrenzy", desc = "Deals pulsing Shadow damage to all enemies within 8 yards every 3 sec." },
+            },
+        },
+        ["Ironspine"] = {
+            overview = "A rare skeletal monstrosity reinforced with steel plates, guarding the bone-littered catacombs. Slams the ground with immense kinetic force.",
+            roleTips = {
+                tank = "Keep Ironspine centered in the crypt chamber. Mitigate high physical crushing blows.",
+                healer = "Keep the tank at high health; Ironspine deals high baseline physical auto-attack damage.",
+                dps = "Burn Ironspine down with maximum burst. Melee players watch for bone cleaves.",
+            },
+            abilities = {
+                { id = 11972, name = "Bone Slam", icon = "Interface\\Icons\\Ability_WarStomp", desc = "Slams a massive skeletal fist onto the ground, stunning the tank for 2 sec." },
+                { id = 8269, name = "Cleave", icon = "Interface\\Icons\\Ability_Warrior_Cleave", desc = "Strikes up to 3 players in front of the caster for physical damage." },
+            },
+        },
+        ["Bloodmage Thalnos"] = {
+            overview = "The master necromancer and final boss of the Graveyard, consumed by vampiric blood magic. Summons skeletal minions and rains down shadow bolts.",
+            roleTips = {
+                tank = "Tank Thalnos near the sacrificial altar. Taunt summoned skeletons immediately so they do not overwhelm casters.",
+                healer = "Keep party health topped against Shadow Bolt Volley. Cleanse Flame Shock immediately.",
+                dps = "AoE down the summoned skeletons as top priority. Kick Shadow Bolt and Flame Shock casts.",
+            },
+            abilities = {
+                { id = 15245, name = "Shadow Bolt Volley", icon = "Interface\\Icons\\Spell_Shadow_ShadowBolt", desc = "Hurls dark shadow bolts at all party members, dealing heavy Shadow damage." },
+                { id = 11988, name = "Flame Shock", icon = "Interface\\Icons\\Spell_Fire_Immolation", desc = "Scorches an enemy target for Fire damage and burns them over 12 sec." },
+                { id = 15284, name = "Raise Fallen Crusaders", icon = "Interface\\Icons\\Spell_Shadow_RaiseDead", desc = "Raises fallen Scarlet crusaders as skeletal minions to swarm the highest threat target." },
+            },
+        },
+    },
+
 }

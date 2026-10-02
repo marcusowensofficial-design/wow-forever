@@ -1,5 +1,6 @@
 local ADDON_NAME, FDJ = ...
 FDJ = FDJ or _G.ForeverDungeonJournal_NS
+FDJ.WISHLIST_STAR_TEXTURE = FDJ.WISHLIST_STAR_TEXTURE or "|TInterface\\AddOns\\ForeverDungeonJournal\\Media\\Star_Gold.tga:13:13:0:-1|t "
 
 local function L(key, ...)
     if FDJ and FDJ.L then return FDJ.L(key, ...) end
@@ -30,11 +31,11 @@ local function FreeText(text)
     return FDJ.LocalizeFreeText and FDJ.LocalizeFreeText(text) or text
 end
 
-local DB = FDJ.DB
+-- FDJ.DB
 -- FDJ.ORDER
 -- FDJ.BOSS_LEVELS
 -- FDJ.QUEST_START_MAPS
-local THEMES = FDJ.THEMES
+-- FDJ.THEMES
 -- FDJ.FOREVER_QUEST_XP_FALLBACK
 -- FDJ.FOREVER_QUEST_BASE_XP
 -- FDJ.QUEST_PREREQ_CHAINS
@@ -51,6 +52,7 @@ local THEMES = FDJ.THEMES
 -- FDJ.DUNGEON_PAGE_TEXCOORD
 
 -- FDJ.MapMarkers.ShowRecordedLocationOnMap in FDJ.MapMarkers
+local ShowRouteOnMap = FDJ.MapMarkers.ShowRouteOnMap
 -- FDJ.MapMarkers.ShowQuestStartOnMap in FDJ.MapMarkers
 
 -- Deadmines: beta cache quests and observed loot; see SOURCES.txt.
@@ -64,7 +66,7 @@ local THEMES = FDJ.THEMES
 -- creature data (the Forever beta currently retains those boss levels).
 -- Forever-exclusive values are only included where current beta reporting or
 -- an in-game sighting confirms them. Durgen is confirmed level 16 from an in-game screenshot.
-local function BossLevelText(dungeonName, boss)
+function FDJ.BossLevelText(dungeonName, boss)
     local byDungeon = FDJ.BOSS_LEVELS[dungeonName]
     if not byDungeon or not boss then return nil end
     return byDungeon[boss.name]
@@ -72,7 +74,7 @@ end
 
 -- Fit multi-level ranges (for example 24-25) cleanly inside the circular
 -- medallion without shrinking normal two-digit boss levels.
-local function FitBossLevelText(fontString, text)
+function FDJ.FitBossLevelText(fontString, text)
     if not fontString or not text then return end
 
     if not fontString.fdjBaseFontPath then
@@ -96,63 +98,6 @@ local function FitBossLevelText(fontString, text)
 end
 
 
-local function GetCharacterKey()
-    if UnitName then
-        local name = UnitName("player")
-        if name and name ~= "" then
-            return Ambiguate and Ambiguate(name, "none") or name
-        end
-    end
-    return nil
-end
-
-local function DetectPlayerFaction()
-    if UnitFactionGroup then
-        local faction = UnitFactionGroup("player")
-        if type(faction) == "string" then
-            local upper = faction:upper()
-            if upper == "HORDE" then return "Horde" end
-            if upper == "ALLIANCE" then return "Alliance" end
-        end
-    end
-
-    if UnitRace then
-        local _, raceFile = UnitRace("player")
-        if raceFile then
-            local upperRace = raceFile:upper()
-            if upperRace == "ORC" or upperRace == "SCOURGE" or upperRace == "TAUREN" or upperRace == "TROLL"
-                or upperRace == "BLOODELF" or upperRace == "GOBLIN" or upperRace == "NIGHTBORNE"
-                or upperRace == "HIGHMOUNTAINTAUREN" or upperRace == "MAGHARORC" or upperRace == "ZANDALARITROLL"
-                or upperRace == "VULPERA" or upperRace == "UNDEAD" then
-                return "Horde"
-            elseif upperRace == "HUMAN" or upperRace == "DWARF" or upperRace == "NIGHTELF" or upperRace == "GNOME"
-                or upperRace == "DRAENEI" or upperRace == "WORGEN" or upperRace == "VOIDELF"
-                or upperRace == "LIGHTFORGEDDRAENEI" or upperRace == "DARKIRONDWARF" or upperRace == "KULTIRAN"
-                or upperRace == "MECHAGNOME" then
-                return "Alliance"
-            end
-        end
-    end
-
-    return nil
-end
-
-local function GetEffectiveFaction()
-    local charKey = GetCharacterKey()
-    if charKey and ForeverDungeonJournalDB and ForeverDungeonJournalDB.charFaction and ForeverDungeonJournalDB.charFaction[charKey] then
-        return ForeverDungeonJournalDB.charFaction[charKey]
-    end
-    if ForeverDungeonJournalDB and ForeverDungeonJournalDB.userSetFaction and (ForeverDungeonJournalDB.questFaction == "Horde" or ForeverDungeonJournalDB.questFaction == "Alliance") then
-        return ForeverDungeonJournalDB.questFaction
-    end
-    local detected = DetectPlayerFaction()
-    if detected then return detected end
-    if ForeverDungeonJournalDB and (ForeverDungeonJournalDB.questFaction == "Horde" or ForeverDungeonJournalDB.questFaction == "Alliance") then
-        return ForeverDungeonJournalDB.questFaction
-    end
-    return "Alliance"
-end
-
 -- Known quest-start coordinates. Coordinates are normalized (0-1) for the
 -- Classic/Forever world-map canvas. Forever uses the Classic UIMapIDs here
 -- (Westfall 1436, Stormwind City 1453), not the Retail IDs 52 / 84.
@@ -160,7 +105,7 @@ local selectedDungeon = ForeverDungeonJournalDB.lastDungeon or FDJ.ORDER[1]
 local selectedBoss = ForeverDungeonJournalDB.lastBoss or 1
 local selectedQuest = ForeverDungeonJournalDB.lastQuest or 1
 local selectedMode = ForeverDungeonJournalDB.lastMode or "bosses"
-local selectedQuestFaction = GetEffectiveFaction()
+local selectedQuestFaction = ForeverDungeonJournalDB.questFaction or "Alliance"
 local selectedPrereqStep = nil
 local selectedPrereqParentQuestName = nil
 local selectedPrereqParentQuestID = nil
@@ -195,6 +140,9 @@ FDJ.LANGUAGE_CHOICES = {
     { code = "it", locale = "itIT", label = "Italiano" },
     { code = "pt", locale = "ptBR", label = "Português" },
     { code = "ru", locale = "ruRU", label = "Русский" },
+    { code = "ko", locale = "koKR", label = "한국어" },
+    { code = "zh", locale = "zhCN", label = "简体中文" },
+    { code = "zhtw", locale = "zhTW", label = "繁體中文" },
 }
 
 FDJ.RAGEFIRE_MAP = {
@@ -208,6 +156,240 @@ FDJ.RAGEFIRE_MAP = {
         { name = "Taragaman the Hungerer", x = 0.435, y = 0.515 },
         { name = "Jergosh the Invoker", x = 0.350, y = 0.825 },
         { name = "Bazzalan", x = 0.485, y = 0.885 },
+    },
+}
+
+-- Custom dungeon map pages. Only dungeons listed here get the "Map" tab.
+-- texture: power-of-two TGA in Media; the art occupies texCoord (right/bottom)
+-- of it; aspect is the art's width/height. Boss x/y are normalized to the art.
+-- (Stored on FDJ, not as a file local: Journal.lua is at Lua 5.1's
+-- 200-locals-per-chunk limit.)
+FDJ.DUNGEON_MAPS = {
+    -- Custom parchments shipped in Media (art sits in the top part of a
+    -- 1024x1024 TGA). Classic dungeons use the client's own map tiles
+    -- (Interface\WorldMap\<Name>\<Name><floor>_1..12, a 4x3 grid of 256px
+    -- tiles whose visible part is 1002x668).
+    -- entrance.angle: direction (degrees, 0 = right, 90 = up) from the
+    -- entrance to where the arrow and its "Entrance" label sit.
+    ["Hall of Thanes"] = {
+        floors = { { texture = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\HallOfThanesMap", texBottom = 683 / 1024 } },
+        entrance = { floor = 1, x = 0.510, y = 0.944, angle = 0 },
+        bosses = {
+            { name = "Faldrim Anvilmar",   x = 0.509, y = 0.668 },
+            { name = "Magmatus",           x = 0.748, y = 0.478 },
+            { name = "Plunder",            x = 0.510, y = 0.515 },
+            { name = "Durgen Dirgehammer", x = 0.509, y = 0.170 },
+        },
+    },
+    ["Ruins of Lordaeron"] = {
+        floors = { { texture = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\RuinsOfLordaeronMap", texBottom = 683 / 1024 } },
+        entrance = { floor = 1, x = 0.612, y = 0.214, angle = 180 },
+        -- Positions follow the published run order: Witherfang in the long
+        -- hallway east of the entrance (King's Alley), The Baron in the
+        -- indoor courtyard after it, then the U-shaped path, The Abandoned's
+        -- statue event, Bjork in the foggy area below Market Street and
+        -- Rath'mael on the purple rune in the south-west.
+        bosses = {
+            { name = "Witherfang",        x = 0.668, y = 0.360 },
+            { name = "The Baron",         x = 0.640, y = 0.555 },
+            { name = "Viktor the Vile",   x = 0.600, y = 0.730 },
+            { name = "The Abandoned",     x = 0.520, y = 0.600 },
+            { name = "Bjork",             x = 0.345, y = 0.560 },
+            { name = "Rath'mael",         x = 0.395, y = 0.665 },
+            { name = "Lordaeron Captain", x = 0.500, y = 0.300 },
+        },
+    },
+
+    ["City of Dalaran"] = {
+        floors = {
+            { texture = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\DalaranCityMap", texBottom = 1365 / 2048 },
+            { texture = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\DalaranUnderbellyMap", texBottom = 1365 / 2048 },
+        },
+        -- The dungeon starts at the portal at the end of the Underbelly pipe.
+        entrance = { floor = 2, x = 0.190, y = 0.838, angle = 0 },
+        transitions = {
+            { floor = 1, to = 2, x = 0.610, y = 0.560 },
+            { floor = 2, to = 1, x = 0.642, y = 0.593 },
+        },
+        -- Only bosses whose spot is known (BlizzCon demo) are placed.
+        bosses = {
+            { name = "Atrexis the Grave Knight", floor = 2, x = 0.535, y = 0.505 },
+            { name = "Arcane Anomaly",           floor = 1, x = 0.545, y = 0.705 },
+            { name = "Shade of the Archmage",    floor = 1, x = 0.520, y = 0.240 },
+        },
+    },
+
+    ["Gnomeregan"] = {
+        -- Cataclysm-era client art; its skulls are patched out and our own
+        -- portraits mark the Classic/Forever boss rooms instead.
+        floors = {
+            { tiles = "Interface\\WorldMap\\Gnomeregan\\Gnomeregan1_", patches = { { tex = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\MapPatches\\Gnomeregan1_s1", x0 = 0.7595, y0 = 0.6452, x1 = 0.7934, y1 = 0.6961 } } },
+            { tiles = "Interface\\WorldMap\\Gnomeregan\\Gnomeregan2_", patches = { { tex = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\MapPatches\\Gnomeregan2_s1", x0 = 0.7435, y0 = 0.4431, x1 = 0.7774, y1 = 0.4940 }, { tex = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\MapPatches\\Gnomeregan2_s2", x0 = 0.2275, y0 = 0.6587, x1 = 0.2615, y1 = 0.7096 } } },
+            { tiles = "Interface\\WorldMap\\Gnomeregan\\Gnomeregan3_", patches = { { tex = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\MapPatches\\Gnomeregan3_s1", x0 = 0.4172, y0 = 0.8578, x1 = 0.4511, y1 = 0.9087 } } },
+            { tiles = "Interface\\WorldMap\\Gnomeregan\\Gnomeregan4_", patches = { { tex = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\MapPatches\\Gnomeregan4_s1", x0 = 0.2984, y0 = 0.2740, x1 = 0.3323, y1 = 0.3249 } } },
+        },
+        entrance = { floor = 1, x = 0.642, y = 0.278, angle = 0 },
+        -- Ladders: where each level continues (shared rooms between maps).
+        transitions = {
+            { floor = 1, to = 2, x = 0.545, y = 0.409, labelKey = "MAP_JUMP_LEVEL" }, -- Hall of Gears: jump down
+            { floor = 1, to = 2, x = 0.487, y = 0.877 }, -- The Dormitory
+            { floor = 2, to = 3, x = 0.245, y = 0.500 }, -- Launch Bay
+            { floor = 3, to = 4, x = 0.370, y = 0.720 }, -- Engineering Labs
+        },
+        bosses = {
+            { name = "Grubbis",               floor = 1, x = 0.776, y = 0.671 },
+            { name = "Viscous Fallout",       floor = 2, x = 0.760, y = 0.469 },
+            { name = "Electrocutioner 6000",  floor = 2, x = 0.245, y = 0.684 },
+            { name = "Crowd Pummeler 9-60",   floor = 3, x = 0.434, y = 0.883 },
+            { name = "Mekgineer Thermaplugg", floor = 4, x = 0.315, y = 0.299 },
+        },
+    },
+    ["Razorfen Kraul"] = {
+        floors = { { tiles = "Interface\\WorldMap\\RazorfenKraul\\RazorfenKraul1_", patches = { { tex = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\MapPatches\\RazorfenKraul1_s1", x0 = 0.2036, y0 = 0.2874, x1 = 0.2375, y1 = 0.3383 }, { tex = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\MapPatches\\RazorfenKraul1_s2", x0 = 0.5589, y0 = 0.2874, x1 = 0.5928, y1 = 0.3383 }, { tex = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\MapPatches\\RazorfenKraul1_s3", x0 = 0.8593, y0 = 0.3937, x1 = 0.8932, y1 = 0.4446 }, { tex = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\MapPatches\\RazorfenKraul1_s4", x0 = 0.7914, y0 = 0.4955, x1 = 0.8253, y1 = 0.5464 }, { tex = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\MapPatches\\RazorfenKraul1_s5", x0 = 0.0649, y0 = 0.6602, x1 = 0.0988, y1 = 0.7111 } } } },
+        entrance = { floor = 1, x = 0.714, y = 0.840, angle = 180 },
+        bosses = {
+            { name = "Aggem Thorncurse",       x = 0.808, y = 0.521 },
+            { name = "Death Speaker Jargba",   x = 0.876, y = 0.419 },
+            { name = "Overlord Ramtusk",       x = 0.576, y = 0.313 },
+            { name = "Charlga Razorflank",     x = 0.221, y = 0.313 },
+            { name = "Agathelos the Raging",  x = 0.082, y = 0.686 },
+        },
+    },
+    ["Scarlet Monastery: Graveyard"] = {
+        floors = { { tiles = "Interface\\WorldMap\\ScarletMonastery\\ScarletMonastery1_", patches = { { tex = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\MapPatches\\ScarletMonastery1_s1", x0 = 0.2285, y0 = 0.5404, x1 = 0.2625, y1 = 0.5913 }, { tex = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\MapPatches\\ScarletMonastery1_s2", x0 = 0.7066, y0 = 0.5749, x1 = 0.7405, y1 = 0.6257 } } } },
+        entrance = { floor = 1, x = 0.841, y = 0.831, angle = 180 },
+        bosses = {
+            { name = "Interrogator Vishas", x = 0.724, y = 0.600 },
+            { name = "Bloodmage Thalnos",   x = 0.246, y = 0.566 },
+        },
+    },
+    ["Excavation Site: Wetlands"] = {
+        floors = { { texture = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\ExcavationSiteMap", texBottom = 683 / 1024 } },
+        entrance = { floor = 1, x = 0.078, y = 0.620, angle = 0, labelPos = "top" },
+        -- Boss spots follow the area order (Lost Marsh, Stalker's Thicket,
+        -- bog, Lost Dig Site); adjust once the dungeon is open.
+        bosses = {
+            { name = "Saltspine",       x = 0.370, y = 0.580 },
+            { name = "Shadetooth",      x = 0.705, y = 0.510 },
+            { name = "Relic Guardian",  x = 0.610, y = 0.270 },
+        },
+    },
+    ["Ragefire Chasm"] = {
+        floors = { { tiles = "Interface\\WorldMap\\Ragefire\\Ragefire1_", patches = { { tex = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\MapPatches\\Ragefire1_s1", x0 = 0.5259, y0 = 0.2725, x1 = 0.5599, y1 = 0.3234 }, { tex = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\MapPatches\\Ragefire1_s2", x0 = 0.3752, y0 = 0.5584, x1 = 0.4092, y1 = 0.6093 }, { tex = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\MapPatches\\Ragefire1_s3", x0 = 0.6806, y0 = 0.6213, x1 = 0.7146, y1 = 0.6722 }, { tex = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\MapPatches\\Ragefire1_s4", x0 = 0.3253, y0 = 0.7904, x1 = 0.3593, y1 = 0.8413 }, { tex = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\MapPatches\\Ragefire1_1", x0 = 0.0150, y0 = 0.0120, x1 = 0.5948, y1 = 0.1497 } } } },
+        entrance = { floor = 1, x = 0.610, y = 0.075, angle = 200 },
+        bosses = {
+            { name = "Oggleflint",             x = 0.561, y = 0.378 },
+            { name = "Taragaman the Hungerer", x = 0.405, y = 0.570 },
+            { name = "Jergosh the Invoker",    x = 0.340, y = 0.815 },
+            { name = "Bazzalan",               x = 0.422, y = 0.842 },
+        },
+    },
+    ["The Deadmines"] = {
+        -- Green "go to next level" arrows: where each level continues.
+        transitions = {
+            { floor = 1, to = 2, x = 0.615, y = 0.610 },
+        },
+        floors = {
+            { tiles = "Interface\\WorldMap\\TheDeadmines\\TheDeadmines1_", patches = { { tex = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\MapPatches\\TheDeadmines1_s1", x0 = 0.3313, y0 = 0.5898, x1 = 0.3653, y1 = 0.6407 }, { tex = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\MapPatches\\TheDeadmines1_s2", x0 = 0.4721, y0 = 0.8413, x1 = 0.5060, y1 = 0.8922 }, { tex = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\MapPatches\\TheDeadmines1_1", x0 = 0.3194, y0 = 0.0150, x1 = 0.6996, y1 = 0.1347 } } },
+            { tiles = "Interface\\WorldMap\\TheDeadmines\\TheDeadmines2_", patches = { { tex = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\MapPatches\\TheDeadmines2_s1", x0 = 0.1088, y0 = 0.7365, x1 = 0.1427, y1 = 0.7874 }, { tex = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\MapPatches\\TheDeadmines2_s2", x0 = 0.5908, y0 = 0.3428, x1 = 0.6248, y1 = 0.3937 }, { tex = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\MapPatches\\TheDeadmines2_s3", x0 = 0.5650, y0 = 0.4160, x1 = 0.6110, y1 = 0.4840, alpha = 1.0 } } },
+        },
+        entrance = { floor = 1, x = 0.295, y = 0.135, angle = -15 },
+        bosses = {
+            { name = "Rhahk'Zor",         floor = 1, x = 0.365, y = 0.610 },
+            { name = "Miner Johnson",     floor = 1, x = 0.535, y = 0.520 },
+            { name = "Sneed's Shredder",  floor = 1, x = 0.475, y = 0.865 },
+            { name = "Sneed",             floor = 1, x = 0.535, y = 0.865 },
+            { name = "Gilnid",            floor = 2, x = 0.122, y = 0.755 },
+            { name = "Mr. Smite",         floor = 2, x = 0.515, y = 0.170 },
+            { name = "Captain Greenskin", floor = 2, x = 0.575, y = 0.350 },
+            { name = "Edwin VanCleef",    floor = 2, x = 0.605, y = 0.452 },
+            { name = "Cookie",            floor = 2, x = 0.665, y = 0.430 },
+        },
+    },
+    ["Wailing Caverns"] = {
+        floors = { { tiles = "Interface\\WorldMap\\WailingCaverns\\WailingCaverns1_", patches = { { tex = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\MapPatches\\WailingCaverns1_s1", x0 = 0.3244, y0 = 0.0898, x1 = 0.3583, y1 = 0.1407 }, { tex = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\MapPatches\\WailingCaverns1_s2", x0 = 0.1756, y0 = 0.3862, x1 = 0.2096, y1 = 0.4371 }, { tex = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\MapPatches\\WailingCaverns1_s3", x0 = 0.2924, y0 = 0.4102, x1 = 0.3263, y1 = 0.4611 }, { tex = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\MapPatches\\WailingCaverns1_s4", x0 = 0.3713, y0 = 0.3308, x1 = 0.4052, y1 = 0.3817 }, { tex = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\MapPatches\\WailingCaverns1_s5", x0 = 0.1267, y0 = 0.5434, x1 = 0.1607, y1 = 0.5943 }, { tex = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\MapPatches\\WailingCaverns1_s6", x0 = 0.5180, y0 = 0.4401, x1 = 0.5519, y1 = 0.4910 }, { tex = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\MapPatches\\WailingCaverns1_s7", x0 = 0.6008, y0 = 0.5105, x1 = 0.6347, y1 = 0.5614 }, { tex = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\MapPatches\\WailingCaverns1_s8", x0 = 0.5878, y0 = 0.7156, x1 = 0.6218, y1 = 0.7665 }, { tex = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\MapPatches\\WailingCaverns1_1", x0 = 0.4291, y0 = 0.0195, x1 = 0.9940, y1 = 0.1647 } } } },
+        entrance = { floor = 1, x = 0.465, y = 0.590, angle = 200 },
+        -- Route: Anacondra on the west side of the first big chamber, drop
+        -- into the ravine west to Cobrahn, back through the river (Kresh),
+        -- then east: Pythas, Skum, the Faerie Dragon's caves and the Crag of
+        -- the Everliving where Serpentis stands right before Verdan. Mutanus
+        -- appears at Naralex after the escort.
+        bosses = {
+            { name = "Lady Anacondra",        x = 0.310, y = 0.430 },
+            { name = "Kresh",                 x = 0.385, y = 0.350 },
+            { name = "Lord Cobrahn",          x = 0.155, y = 0.570 },
+            { name = "Lord Pythas",           x = 0.545, y = 0.460 },
+            { name = "Skum",                  x = 0.615, y = 0.530 },
+            { name = "Deviate Faerie Dragon", x = 0.580, y = 0.600 },
+            { name = "Lord Serpentis",        x = 0.600, y = 0.660 },
+            { name = "Verdan the Everliving", x = 0.615, y = 0.745 },
+            { name = "Mutanus the Devourer",  x = 0.345, y = 0.130 },
+        },
+    },
+    ["Shadowfang Keep"] = {
+        transitions = {
+            { floor = 1, to = 2, x = 0.280, y = 0.520, dir = "up" },
+            { floor = 2, to = 3, x = 0.600, y = 0.110, dir = "up" },
+            { floor = 3, to = 4, x = 0.470, y = 0.860, dir = "up" },
+            { floor = 4, to = 5, x = 0.530, y = 0.880, dir = "up" }, -- tower spiral up to the Fenrus/Nandos level
+            { floor = 5, to = 6, x = 0.430, y = 0.920, dir = "up" },
+        },
+        floors = {
+            { tiles = "Interface\\WorldMap\\ShadowfangKeep\\ShadowfangKeep1_", patches = { { tex = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\MapPatches\\ShadowfangKeep1_s1", x0 = 0.2525, y0 = 0.5554, x1 = 0.2864, y1 = 0.6063 }, { tex = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\MapPatches\\ShadowfangKeep1_s2", x0 = 0.6497, y0 = 0.6961, x1 = 0.6836, y1 = 0.7470 } } },
+            { tiles = "Interface\\WorldMap\\ShadowfangKeep\\ShadowfangKeep2_", patches = { { tex = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\MapPatches\\ShadowfangKeep2_s1", x0 = 0.2884, y0 = 0.7425, x1 = 0.3224, y1 = 0.7934 } } },
+            { tiles = "Interface\\WorldMap\\ShadowfangKeep\\ShadowfangKeep3_" },
+            { tiles = "Interface\\WorldMap\\ShadowfangKeep\\ShadowfangKeep4_", patches = { { tex = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\MapPatches\\ShadowfangKeep4_s1", x0 = 0.5120, y0 = 0.5120, x1 = 0.5459, y1 = 0.5629 } } },
+            { tiles = "Interface\\WorldMap\\ShadowfangKeep\\ShadowfangKeep6_", patches = { { tex = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\MapPatches\\ShadowfangKeep6_s1", x0 = 0.6677, y0 = 0.3084, x1 = 0.7016, y1 = 0.3593 }, { tex = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\MapPatches\\ShadowfangKeep6_s2", x0 = 0.5289, y0 = 0.6018, x1 = 0.5629, y1 = 0.6527 } } },
+            { tiles = "Interface\\WorldMap\\ShadowfangKeep\\ShadowfangKeep7_", patches = { { tex = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\MapPatches\\ShadowfangKeep7_s1", x0 = 0.5659, y0 = 0.8024, x1 = 0.5998, y1 = 0.8533 } } },
+        },
+        entrance = { floor = 1, x = 0.705, y = 0.605, angle = 0 },
+        bosses = {
+            { name = "Rethilgore",                 floor = 1, x = 0.670, y = 0.715 },
+            { name = "Fel Steed / Shadow Charger", floor = 1, x = 0.450, y = 0.560 },
+            { name = "Razorclaw the Butcher",      floor = 1, x = 0.275, y = 0.600 },
+            { name = "Baron Silverlaine",          floor = 2, x = 0.305, y = 0.755 },
+            { name = "Commander Springvale",       floor = 3, x = 0.520, y = 0.300 },
+            { name = "Deathsworn Captain",         floor = 3, x = 0.480, y = 0.600 },
+            { name = "Odo the Blindwatcher",       floor = 4, x = 0.540, y = 0.530 },
+            { name = "Fenrus the Devourer",        floor = 5, x = 0.680, y = 0.320 },
+            { name = "Wolf Master Nandos",         floor = 5, x = 0.560, y = 0.620 },
+            { name = "Arugal's Voidwalker",        floor = 6, x = 0.520, y = 0.600 },
+            { name = "Archmage Arugal",            floor = 6, x = 0.595, y = 0.825 },
+        },
+    },
+    ["The Stockade"] = {
+        floors = { { tiles = "Interface\\WorldMap\\TheStockade\\TheStockade1_", patches = { { tex = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\MapPatches\\TheStockade1_s1", x0 = 0.7685, y0 = 0.4311, x1 = 0.8024, y1 = 0.4820 } } } },
+        entrance = { floor = 1, x = 0.500, y = 0.815, angle = 0 },
+        bosses = {
+            { name = "Targorr the Dread",   x = 0.440, y = 0.445 },
+            { name = "Kam Deepfury",        x = 0.320, y = 0.380 },
+            { name = "Hamhock",             x = 0.780, y = 0.455 },
+            { name = "Bazil Thredd",        x = 0.215, y = 0.255 },
+            { name = "Dextren Ward",        x = 0.735, y = 0.575 },
+            { name = "Bruegal Ironknuckle", x = 0.500, y = 0.190 },
+        },
+    },
+    ["Blackfathom Deeps"] = {
+        transitions = {
+            { floor = 1, to = 2, x = 0.615, y = 0.700 },
+            { floor = 2, to = 3, x = 0.470, y = 0.700, labelKey = "MAP_SWIM_LEVEL" },
+        },
+        floors = {
+            { tiles = "Interface\\WorldMap\\BlackFathomDeeps\\BlackFathomDeeps1_", patches = { { tex = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\MapPatches\\BlackFathomDeeps1_s1", x0 = 0.0818, y0 = 0.3728, x1 = 0.1158, y1 = 0.4237 }, { tex = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\MapPatches\\BlackFathomDeeps1_s2", x0 = 0.3114, y0 = 0.5793, x1 = 0.3453, y1 = 0.6302 }, { tex = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\MapPatches\\BlackFathomDeeps1_s3", x0 = 0.5289, y0 = 0.5479, x1 = 0.5629, y1 = 0.5988 }, { tex = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\MapPatches\\BlackFathomDeeps1_1", x0 = 0.2146, y0 = 0.0075, x1 = 0.4391, y1 = 0.1093 }, { tex = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\MapPatches\\BlackFathomDeeps1_2", x0 = 0.4691, y0 = 0.0075, x1 = 0.8044, y1 = 0.1093 }, { tex = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\MapPatches\\BlackFathomDeeps1_3", x0 = 0.4242, y0 = 0.0075, x1 = 0.4890, y1 = 0.0719 } } },
+            { tiles = "Interface\\WorldMap\\BlackFathomDeeps\\BlackFathomDeeps2_", patches = { { tex = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\MapPatches\\BlackFathomDeeps2_s1", x0 = 0.5090, y0 = 0.7934, x1 = 0.5429, y1 = 0.8443 }, { tex = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\MapPatches\\BlackFathomDeeps2_s2", x0 = 0.8263, y0 = 0.8398, x1 = 0.8603, y1 = 0.8907 } } },
+            { tiles = "Interface\\WorldMap\\BlackFathomDeeps\\BlackFathomDeeps3_", patches = { { tex = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\MapPatches\\BlackFathomDeeps3_s1", x0 = 0.5569, y0 = 0.2799, x1 = 0.5908, y1 = 0.3308 } } },
+        },
+        entrance = { floor = 1, x = 0.455, y = 0.085, angle = -20 },
+        bosses = {
+            { name = "Ghamoo-ra",            floor = 1, x = 0.325, y = 0.605 },
+            { name = "Lady Sarevess",        floor = 1, x = 0.110, y = 0.385 },
+            { name = "Gelihast",             floor = 1, x = 0.540, y = 0.575 },
+            { name = "Lorgus Jett",          floor = 2, x = 0.325, y = 0.700 },
+            { name = "Baron Aquanis",        floor = 2, x = 0.420, y = 0.720 },
+            { name = "Twilight Lord Kelris", floor = 2, x = 0.525, y = 0.810 },
+            { name = "Aku'mai",              floor = 2, x = 0.855, y = 0.860 },
+            { name = "Old Serra'kis",        floor = 3, x = 0.585, y = 0.290 },
+        },
     },
 }
 
@@ -289,20 +471,20 @@ if ForeverDungeonJournalDB.portraitCacheVersion ~= 2 then
 end
 ForeverDungeonJournalDB.displayIDs = ForeverDungeonJournalDB.displayIDs or {}
 
-local displayIDCache = ForeverDungeonJournalDB.displayIDs
+FDJ.displayIDCache = ForeverDungeonJournalDB.displayIDs
 
 -- Exact 2D unit portraits captured from the client, keyed ONLY by numeric NPC ID.
 -- This avoids comparing UnitName() values (which can be secret strings in Forever)
 -- and cannot accidentally assign one boss portrait to another boss by name.
 ForeverDungeonJournalDB.portraitTexturesByNpcID = ForeverDungeonJournalDB.portraitTexturesByNpcID or {}
-local portraitTexturesByNpcID = ForeverDungeonJournalDB.portraitTexturesByNpcID
+FDJ.portraitTexturesByNpcID = ForeverDungeonJournalDB.portraitTexturesByNpcID
 -- v1.0.21 removes live target/mouseover boss learning entirely.
 -- Clear the two stale learning tables so an old bad portrait (notably Lordaeron Captain)
 -- can never override the deterministic bundled portrait again.
 ForeverDungeonJournalDB.learnedNpcIDs = nil
 ForeverDungeonJournalDB.portraitFileIDs = nil
 
-local function BossNpcID(boss)
+function FDJ.BossNpcID(boss)
     if not boss then return nil end
     -- Boss identity is deterministic: only IDs bundled in the addon are used.
     -- We no longer learn NPC IDs from target/mouseover/nameplates.
@@ -329,7 +511,7 @@ FDJ.portraitResolveBlockedUntil = 0
 -- BASIC HELPERS
 -- ============================================================
 
-local function SetBackdrop(f, bg, border, edge, inset)
+function FDJ.SetBackdrop(f, bg, border, edge, inset)
     f:SetBackdrop({
         bgFile = bg,
         edgeFile = border,
@@ -345,7 +527,7 @@ local function SetBackdrop(f, bg, border, edge, inset)
     })
 end
 
-local function AddClassicParchment(frameObj, alpha, r, g, b)
+function FDJ.AddClassicParchment(frameObj, alpha, r, g, b)
     local tex = frameObj:CreateTexture(nil, "BACKGROUND", nil, -2)
     tex:SetPoint("TOPLEFT", 3, -3)
     tex:SetPoint("BOTTOMRIGHT", -3, 3)
@@ -356,13 +538,13 @@ local function AddClassicParchment(frameObj, alpha, r, g, b)
     return tex
 end
 
-local function ItemInfo(id)
+function FDJ.ItemInfo(id)
     if C_Item and C_Item.GetItemInfo then
         return C_Item.GetItemInfo(id)
     end
 end
 
-local function ItemIcon(id)
+function FDJ.ItemIcon(id)
     if C_Item and C_Item.GetItemInfoInstant then
         local _, _, _, _, icon = C_Item.GetItemInfoInstant(id)
         if icon then return icon end
@@ -376,7 +558,7 @@ local function ItemIcon(id)
     return "Interface\\Icons\\INV_Misc_QuestionMark"
 end
 
-local function QualityColor(q)
+function FDJ.QualityColor(q)
     if GetItemQualityColor then
         local r, g, b = GetItemQualityColor(q or 3)
         if r then return r, g, b end
@@ -384,7 +566,20 @@ local function QualityColor(q)
     return 0, 0.44, 0.87
 end
 
-local function ItemLinkColor(link)
+FDJ.StartsInsideDungeon = function(pickupText)
+    if type(pickupText) ~= "string" then return false end
+    local text = string.lower(pickupText)
+    return text:find("inside ", 1, true) ~= nil
+end
+
+FDJ.PositionInDungeonIcon = function()
+    if not frame or not frame.questStartDungeonIcon or not frame.questStartsHeader then return end
+    frame.questStartDungeonIcon:ClearAllPoints()
+    frame.questStartDungeonIcon:SetPoint("LEFT", frame.questStartsHeader, "RIGHT", 6, 0)
+    frame.questStartDungeonIcon:Show()
+end
+
+function FDJ.ItemLinkColor(link)
     if type(link) ~= "string" then return nil end
     local hex = link:match("|cff(%x%x%x%x%x%x)")
     if not hex then return nil end
@@ -398,7 +593,7 @@ end
 FDJ.itemTooltipQualityCache = {}
 -- FDJ.qualityScanTooltip
 
-local function ExtractRGB(color)
+function FDJ.ExtractRGB(color)
     if not color then return nil end
     if type(color) == "table" then
         if type(color.GetRGB) == "function" then
@@ -426,7 +621,7 @@ local function GetTooltipRenderedItemColor(itemID)
         local ok, data = pcall(C_TooltipInfo.GetItemByID, itemID)
         if ok and type(data) == "table" and type(data.lines) == "table" and data.lines[1] then
             local line = data.lines[1]
-            local r, g, b = ExtractRGB(line.leftColor or line.color)
+            local r, g, b = FDJ.ExtractRGB(line.leftColor or line.color)
             if r then
                 FDJ.itemTooltipQualityCache[itemID] = {r, g, b}
                 return r, g, b
@@ -510,20 +705,20 @@ local function GetAuthoritativeItemQuality(itemID, link, apiQuality, fallbackQua
     -- Forever beta item links can carry stale Classic/TBC color codes, so the
     -- link color must not override the numeric quality.
     if type(apiQuality) == "number" then
-        return QualityColor(apiQuality)
+        return FDJ.QualityColor(apiQuality)
     end
 
     if C_Item and type(C_Item.GetItemQualityByID) == "function" then
         local ok, value = pcall(C_Item.GetItemQualityByID, itemID)
         if ok and type(value) == "number" then
-            return QualityColor(value)
+            return FDJ.QualityColor(value)
         end
     end
 
-    local lr, lg, lb = ItemLinkColor(link)
+    local lr, lg, lb = FDJ.ItemLinkColor(link)
     if lr then return lr, lg, lb end
 
-    return QualityColor(fallbackQuality or 1)
+    return FDJ.QualityColor(fallbackQuality or 1)
 end
 
 local function NormalizeDungeonName(name)
@@ -551,15 +746,54 @@ local function NormalizeDungeonName(name)
     if n:find("blackfathom deeps", 1, true) or n:find("blackfathom depths", 1, true) then
         return "Blackfathom Deeps"
     end
+    if n:find("stockade", 1, true) then
+        return "The Stockade"
+    end
+    if n:find("excavation site", 1, true) and n:find("wetlands", 1, true) then
+        return "Excavation Site: Wetlands"
+    end
+    if n:find("city of dalaran", 1, true) then
+        return "City of Dalaran"
+    end
+    if n:find("gnomeregan", 1, true) then
+        return "Gnomeregan"
+    end
+    if n:find("razorfen kraul", 1, true) then
+        return "Razorfen Kraul"
+    end
+    if n:find("scarlet monastery", 1, true) and n:find("graveyard", 1, true) then
+        return "Scarlet Monastery: Graveyard"
+    end
 end
 
 local function CurrentDungeon()
+    -- Only auto-select a dungeon while the player is actually inside an
+    -- instance. This prevents similarly named outdoor zones from hijacking the
+    -- journal when it opens.
+    if type(IsInInstance) == "function" then
+        local inInstance = IsInInstance()
+        if not inInstance then return nil end
+    end
+
     local instanceName = GetInstanceInfo and GetInstanceInfo()
     local n = NormalizeDungeonName(instanceName)
     if n then return n end
 
     local zone = GetRealZoneText and GetRealZoneText()
-    return NormalizeDungeonName(zone)
+    n = NormalizeDungeonName(zone)
+    if n then return n end
+
+    -- Scarlet Monastery may report the shared instance name rather than the
+    -- wing name. Use the subzone only to disambiguate Graveyard; never assume
+    -- another Scarlet wing is Graveyard.
+    local subZone = GetSubZoneText and GetSubZoneText()
+    if type(instanceName) == "string" and instanceName:lower():find("scarlet monastery", 1, true)
+        and type(subZone) == "string" and subZone:lower():find("graveyard", 1, true)
+    then
+        return "Scarlet Monastery: Graveyard"
+    end
+
+    return NormalizeDungeonName(subZone)
 end
 
 local function QuestMatchesFaction(quest, faction)
@@ -569,11 +803,11 @@ local function QuestMatchesFaction(quest, faction)
         or quest.faction == faction
 end
 
-local function IsSecret(v)
+function FDJ.IsSecret(v)
     return type(issecretvalue) == "function" and issecretvalue(v)
 end
 
-local function FormatNumber(value)
+function FDJ.FormatNumber(value)
     if type(value) ~= "number" then return nil end
 
     if type(BreakUpLargeNumbers) == "function" then
@@ -617,12 +851,14 @@ end
 -- Static beta quest-cache XP. Some Forever dungeon quests are multiplied server-side
 -- at turn-in; if the API only echoes this base value, use the observed tuned fallback.
 local function GetLiveQuestXP(quest)
-    if not quest or not quest.id then return nil end
+    if not quest then return nil end
+    -- New Forever quests may have no quest ID yet: use their observed XP.
+    if not quest.id then return quest.liveXPFallback end
 
     -- Rendering only reads data; requests happen when opening/selecting quests.
     if type(GetQuestLogRewardXP) == "function" then
         local ok, xp = pcall(GetQuestLogRewardXP, quest.id)
-        if ok and not IsSecret(xp) and type(xp) == "number" and xp > 0 then
+        if ok and not FDJ.IsSecret(xp) and type(xp) == "number" and xp > 0 then
             local tuned = FDJ.FOREVER_QUEST_XP_FALLBACK[quest.id] or quest.liveXPFallback
             local base = FDJ.FOREVER_QUEST_BASE_XP[quest.id]
 
@@ -721,7 +957,7 @@ local function BuildQuestRewardSummary(quest, includeXP)
     local summary = ParseQuestRewardExtras(quest)
     local xp = GetLiveQuestXP(quest)
     if includeXP ~= false and xp and xp > 0 then
-        local xpText = FormatNumber(xp) .. " XP"
+        local xpText = FDJ.FormatNumber(xp) .. " XP"
         if summary ~= "" then
             return xpText .. "  •  " .. summary
         end
@@ -808,6 +1044,141 @@ local function IsQuestInLog(questID)
     return false
 end
 
+FDJ.IsQuestShareable = function(questID)
+    -- This answers whether the quest itself is designed to be shareable.
+    -- Prefer our audited dungeon data so browsing an unaccepted quest gives
+    -- stable information. Unknown/new beta quests still use Forever's native
+    -- predicate rather than being guessed.
+    if type(questID) ~= "number" then
+        return false
+    end
+
+    local audited = FDJ.QUEST_SHAREABILITY_AUDIT and FDJ.QUEST_SHAREABILITY_AUDIT[questID]
+    if audited ~= nil then
+        return audited == true
+    end
+
+    if C_QuestLog and type(C_QuestLog.IsPushableQuest) == "function" then
+        local ok, value = pcall(C_QuestLog.IsPushableQuest, questID)
+        return ok and value == true
+    end
+    return false
+end
+
+FDJ.IsQuestShareableNow = function(questID)
+    -- Actually pushing a quest still requires it to be in our quest log.
+    return IsQuestInLog(questID) and FDJ.IsQuestShareable(questID)
+end
+
+FDJ.ShareQuestByID = function(questID)
+    if not FDJ.IsQuestShareableNow(questID) then return end
+
+    -- Forever uses the modern quest predicate but still exposes the standard
+    -- quest-share action on supported builds. Select the journal quest first
+    -- when that API is available, then invoke the share action from this click.
+    if C_QuestLog and type(C_QuestLog.SetSelectedQuest) == "function" then
+        pcall(C_QuestLog.SetSelectedQuest, questID)
+    elseif type(SelectQuestLogEntry) == "function" then
+        local logIndex
+        if C_QuestLog and type(C_QuestLog.GetLogIndexForQuestID) == "function" then
+            local ok, index = pcall(C_QuestLog.GetLogIndexForQuestID, questID)
+            if ok and type(index) == "number" and index > 0 then logIndex = index end
+        elseif type(GetQuestLogIndexByID) == "function" then
+            local ok, index = pcall(GetQuestLogIndexByID, questID)
+            if ok and type(index) == "number" and index > 0 then logIndex = index end
+        end
+        if logIndex then pcall(SelectQuestLogEntry, logIndex) end
+    end
+
+    if type(QuestLogPushQuest) == "function" then
+        pcall(QuestLogPushQuest)
+    elseif QuestFramePushQuestButton and type(QuestFramePushQuestButton.Click) == "function" then
+        pcall(QuestFramePushQuestButton.Click, QuestFramePushQuestButton)
+    end
+end
+
+FDJ.SetQuestShareButtonVisual = function(button, shareable, canShareNow)
+    if not button then return end
+    button._fdjShareableQuest = shareable == true
+    button._fdjShareEnabled = canShareNow == true
+
+    -- Match the compact gold-bordered selector style used elsewhere in the
+    -- journal. Shareable quests use a green fill. Quests that cannot be
+    -- shared are visually greyed out but remain mouse-enabled so their
+    -- explanatory tooltip still works.
+    if button._fdjShareableQuest then
+        button:SetBackdropColor(0.10, 0.34, 0.16, 0.98)
+        button:SetBackdropBorderColor(0.48, 0.40, 0.27, 1.00)
+        if button.text then button.text:SetTextColor(1.00, 0.82, 0.27) end
+    else
+        button:SetBackdropColor(0.18, 0.18, 0.18, 0.96)
+        button:SetBackdropBorderColor(0.34, 0.34, 0.34, 1.00)
+        if button.text then button.text:SetTextColor(0.55, 0.55, 0.55) end
+    end
+end
+
+local function QuestNeedsSameStepShareNote(questID)
+    if type(questID) ~= "number" then return false end
+
+    -- The dungeon/final quest itself is a gated chain step.
+    if FDJ.QUEST_PREREQ_CHAINS[questID] ~= nil then
+        return true
+    end
+
+    -- The first prerequisite can be picked up normally. Every later step is
+    -- only useful to players who have progressed to that same point in the
+    -- chain, so flag steps 2+ for the more precise share tooltip.
+    for _, chain in pairs(FDJ.QUEST_PREREQ_CHAINS) do
+        if type(chain) == "table" then
+            for index, step in ipairs(chain) do
+                if step and step.id == questID then
+                    return index > 1
+                end
+            end
+        end
+    end
+
+    return false
+end
+
+FDJ.UpdateQuestShareButton = function(questID, classLabel)
+    if not frame or not frame.questShareButton then return 48 end
+    local button = frame.questShareButton
+
+    if type(questID) ~= "number" then
+        button.questID = nil
+        button:Hide()
+        return 48
+    end
+
+    button.questID = questID
+    button._fdjClassLabel = classLabel
+    button.text:SetText(L("SHARE"))
+    local textWidth = button.text:GetStringWidth() or 0
+    local width = math.max(70, math.min(104, math.ceil(textWidth + 24)))
+    button:SetWidth(width)
+    local shareable = FDJ.IsQuestShareable(questID)
+    local canShareNow = IsQuestInLog(questID) and shareable
+    -- Final dungeon chain quests and every prerequisite step after step 1
+    -- should tell the reader that sharing only helps players on that step.
+    button._fdjSameStepOnly = QuestNeedsSameStepShareNote(questID)
+    FDJ.SetQuestShareButtonVisual(button, shareable, canShareNow)
+
+    button:ClearAllPoints()
+    if classLabel then
+        -- Class restriction text occupies the far-right header area. Keep the
+        -- share control to its left and leave the completion tick unobstructed.
+        button:SetPoint("TOPRIGHT", frame.questTextInset, "TOPRIGHT", -174, -10)
+        button:Show()
+        return 182 + width
+    end
+
+    -- Leave room at the far right for the green completion tick.
+    button:SetPoint("TOPRIGHT", frame.questTextInset, "TOPRIGHT", -48, -10)
+    button:Show()
+    return 56 + width
+end
+
 
 -- Prerequisite quests shown by the expandable chain control in the quest list.
 -- Only verified prerequisite relationships are included here.
@@ -817,7 +1188,7 @@ end
 -- local quest cache.
 
 
-local expandedQuestChains = {}
+FDJ.expandedQuestChains = {}
 
 local function GetQuestPrereqChain(quest)
     if not quest or not quest.id then return nil end
@@ -845,7 +1216,7 @@ local function GetQuestClassRestriction(quest)
     return L("CLASS_ONLY", string.upper(className)), r, g, b, token
 end
 
-local function GetScrollBar(scrollFrame)
+function FDJ.GetScrollBar(scrollFrame)
     if not scrollFrame then return nil end
     if scrollFrame.ScrollBar then return scrollFrame.ScrollBar end
 
@@ -855,7 +1226,7 @@ local function GetScrollBar(scrollFrame)
     end
 end
 
-local function SetFrameShownSafe(obj, shown)
+function FDJ.SetFrameShownSafe(obj, shown)
     if obj and obj.SetShown then
         obj:SetShown(shown)
     elseif obj then
@@ -867,27 +1238,27 @@ local function SetFrameShownSafe(obj, shown)
     end
 end
 
-local function UpdateScrollBarVisibility(scrollFrame, contentHeight)
+function FDJ.UpdateScrollBarVisibility(scrollFrame, contentHeight)
     if not scrollFrame then return end
 
     local viewportHeight = scrollFrame:GetHeight() or 0
     local needsScroll = viewportHeight > 0 and contentHeight > viewportHeight + 4
-    local scrollBar = GetScrollBar(scrollFrame)
+    local scrollBar = FDJ.GetScrollBar(scrollFrame)
 
-    SetFrameShownSafe(scrollBar, needsScroll)
+    FDJ.SetFrameShownSafe(scrollBar, needsScroll)
 
     if scrollBar then
-        SetFrameShownSafe(scrollBar.ScrollUpButton, needsScroll)
-        SetFrameShownSafe(scrollBar.ScrollDownButton, needsScroll)
-        SetFrameShownSafe(scrollBar.ThumbTexture, needsScroll)
+        FDJ.SetFrameShownSafe(scrollBar.ScrollUpButton, needsScroll)
+        FDJ.SetFrameShownSafe(scrollBar.ScrollDownButton, needsScroll)
+        FDJ.SetFrameShownSafe(scrollBar.ThumbTexture, needsScroll)
     end
 
     local name = scrollFrame.GetName and scrollFrame:GetName()
     if name then
-        SetFrameShownSafe(_G[name .. "ScrollBar"], needsScroll)
-        SetFrameShownSafe(_G[name .. "ScrollBarScrollUpButton"], needsScroll)
-        SetFrameShownSafe(_G[name .. "ScrollBarScrollDownButton"], needsScroll)
-        SetFrameShownSafe(_G[name .. "ScrollBarThumbTexture"], needsScroll)
+        FDJ.SetFrameShownSafe(_G[name .. "ScrollBar"], needsScroll)
+        FDJ.SetFrameShownSafe(_G[name .. "ScrollBarScrollUpButton"], needsScroll)
+        FDJ.SetFrameShownSafe(_G[name .. "ScrollBarScrollDownButton"], needsScroll)
+        FDJ.SetFrameShownSafe(_G[name .. "ScrollBarThumbTexture"], needsScroll)
     end
 
     if not needsScroll then
@@ -899,8 +1270,6 @@ local RefreshAll
 local ApplyLocalization
 local RefreshHomeDungeonCards
 local RefreshBossList
-local RefreshBossTactics
-local UpdateSelectedBossHeader
 local RefreshLoot
 local RefreshQuestList
 local RefreshQuestDetail
@@ -910,18 +1279,31 @@ local SelectQuest
 local SelectQuestByID
 local SetQuestFaction
 local ShowDungeonMap
-local ShowDungeonInteriorMap
 local HideDungeonMap
 local SelectDungeon
 local ShowHomePage
 local ShowDungeonPage
 local ShowRouteGuide
+-- FDJ.UpdateHomeWishlistButton
+-- FDJ.RefreshWishlistPanel
+-- FDJ.RefreshBossTactics
+-- FDJ.SetBossSubTab
+-- FDJ.UpdateSelectedBossHeader
+
+FDJ.UpdateHomeWishlistButton = function(...) if FDJ.UpdateHomeWishlistButton then return FDJ.UpdateHomeWishlistButton(...) end end
+FDJ.RefreshWishlistPanel = function(...) if FDJ.RefreshWishlistPanel then return FDJ.RefreshWishlistPanel(...) end end
+FDJ.RefreshBossTactics = function(...) if FDJ.RefreshBossTactics then return FDJ.RefreshBossTactics(...) end end
+FDJ.SetBossSubTab = function(...) if FDJ.SetBossSubTab then return FDJ.SetBossSubTab(...) end end
+FDJ.UpdateSelectedBossHeader = function(...) if FDJ.UpdateSelectedBossHeader then return FDJ.UpdateSelectedBossHeader(...) end end
 
 local function ApplySelectedLanguage(code)
     local wasRouteOpen = frame and frame.routePanel and frame.routePanel:IsShown()
     if FDJ.SetLanguage then FDJ.SetLanguage(code) end
     UpdateLanguageControl()
     if ApplyLocalization then ApplyLocalization() end
+    if frame and frame.RefreshSearchResults and frame.searchEditBox then
+        frame.RefreshSearchResults(frame.searchEditBox:GetText() or "")
+    end
     if frame then
         if frame.currentView == "home" then
             RefreshHomeDungeonCards()
@@ -987,7 +1369,7 @@ local function ScanEncounterJournal()
 
             local dungeonName = NormalizeDungeonName(instanceName)
 
-            if dungeonName and DB[dungeonName] then
+            if dungeonName and FDJ.DB[dungeonName] then
                 pcall(EJ_SelectInstance, instanceID)
 
                 local cache = FDJ.journalCache[dungeonName] or {
@@ -1085,10 +1467,11 @@ local function FinishPortraitResolve(request, displayID)
     if FDJ.portraitResolveCurrent ~= request or request.serial ~= FDJ.portraitResolveSerial then return end
 
     if type(displayID) == "number" and displayID > 0 then
-        displayIDCache[request.npcID] = displayID
+        FDJ.displayIDCache[request.npcID] = displayID
         FDJ.portraitRetryAt[request.npcID] = nil
     else
-        FDJ.portraitRetryAt[request.npcID] = (GetTime and GetTime() or 0) + 30
+        -- Uncached creatures often need a second request: retry soon.
+        FDJ.portraitRetryAt[request.npcID] = (GetTime and GetTime() or 0) + 2
     end
 
     request.model:SetScript("OnModelLoaded", nil)
@@ -1104,7 +1487,7 @@ end
 
 local function StartNextPortraitResolve()
     if FDJ.portraitResolveCurrent or not FDJ.portraitResolver then return end
-    if not frame or not frame:IsShown() or selectedMode ~= "bosses" then return end
+    if not frame or not frame:IsShown() then return end
 
     local now = GetTime and GetTime() or 0
     if now < (FDJ.portraitResolveBlockedUntil or 0) then return end
@@ -1148,8 +1531,8 @@ local function StartNextPortraitResolve()
 end
 
 local function QueuePortraitResolve(npcID)
-    if not npcID or displayIDCache[npcID] or FDJ.portraitResolveQueued[npcID] then return end
-    if not frame or not frame:IsShown() or selectedMode ~= "bosses" then return end
+    if not npcID or FDJ.displayIDCache[npcID] or FDJ.portraitResolveQueued[npcID] then return end
+    if not frame or not frame:IsShown() then return end
 
     local now = GetTime and GetTime() or 0
     if now < (FDJ.portraitResolveBlockedUntil or 0) then return end
@@ -1190,7 +1573,7 @@ local function CreatePortraitResolver()
             end
         end
 
-        if request.elapsed >= 1.5 then
+        if request.elapsed >= 3.0 then
             FinishPortraitResolve(request, nil)
         end
     end)
@@ -1246,7 +1629,7 @@ local function SetBossPortrait(texture, dungeonName, boss)
         return true
     end
 
-    local npcID = BossNpcID(boss)
+    local npcID = FDJ.BossNpcID(boss)
     local data = GetBossJournalData(dungeonName, boss)
 
     -- Forever-only records may not have a hand-entered NPC ID yet. The
@@ -1255,8 +1638,10 @@ local function SetBossPortrait(texture, dungeonName, boss)
         npcID = data.creatureID
     end
 
-    -- 1) Explicit bundled portrait art from ForeverDungeonJournal media (e.g. Lordaeron Captain).
-    if boss.customIcon and string.find(boss.customIcon, "ForeverDungeonJournal") then
+    -- 1) Explicit bundled portrait art. Used only when we have a verified clean
+    -- asset (currently Lordaeron Captain). Put this before journal/model lookup so
+    -- a bad or missing Forever display never overrides the intended portrait.
+    if boss.customIcon then
         texture:SetTexture(boss.customIcon)
         texture:SetTexCoord(0, 1, 0, 1)
         return true
@@ -1267,42 +1652,35 @@ local function SetBossPortrait(texture, dungeonName, boss)
         return true
     end
 
-    -- 3) Blizzard's current Encounter Journal display is the cleanest source
+    -- 2) Blizzard's current Encounter Journal display is the cleanest source
     -- for Forever bosses and updates automatically when the beta model changes.
     if data and TrySetDisplayPortrait(texture, data.displayInfo) then
         return true
     end
 
-    -- 4) Exact 2D portrait captured from the live unit, keyed by numeric NPC ID.
+    -- 3) Exact 2D portrait captured from the live unit, keyed by numeric NPC ID.
     -- No UnitName comparisons are involved, so this is safe with secret strings.
-    local livePortrait = npcID and portraitTexturesByNpcID[npcID]
+    local livePortrait = npcID and FDJ.portraitTexturesByNpcID[npcID]
     if livePortrait then
         texture:SetTexture(livePortrait)
         texture:SetTexCoord(0.04, 0.96, 0.04, 0.96)
         return true
     end
 
-    -- 5) Verified bundled Classic display IDs. Prefer these to any saved
+    -- 4) Verified bundled Classic display IDs. Prefer these to any saved
     -- derived cache so an old bad cache entry can never override known data.
     if npcID and TrySetDisplayPortrait(texture, FDJ.STATIC_DISPLAY_IDS[npcID]) then
         return true
     end
 
-    -- 6) Reuse a display ID resolved by earlier addon versions for bosses that
+    -- 5) Reuse a display ID resolved by earlier addon versions for bosses that
     -- do not have a verified bundled Classic display ID.
     if npcID and not FDJ.STATIC_DISPLAY_IDS[npcID]
-        and TrySetDisplayPortrait(texture, displayIDCache[npcID]) then
+        and TrySetDisplayPortrait(texture, FDJ.displayIDCache[npcID]) then
         return true
     end
 
-    -- 7) Fallback to custom icon if available before queueing resolve
-    if boss.customIcon then
-        texture:SetTexture(boss.customIcon)
-        texture:SetTexCoord(0.08, 0.92, 0.08, 0.92)
-        return true
-    end
-
-    -- 8) Forever bosses often have a numeric NPC ID but no journal portrait.
+    -- 6) Forever bosses often have a numeric NPC ID but no journal portrait.
     -- Resolve the CreatureDisplayID directly from that numeric ID with a tiny
     -- hidden PlayerModel. This never touches UnitGUID(), UnitName(), or any
     -- secret-string value, so it is safe on the Forever client. Once resolved,
@@ -1311,6 +1689,7 @@ local function SetBossPortrait(texture, dungeonName, boss)
         QueuePortraitResolve(npcID)
     end
 
+
     if data and data.iconImage and data.iconImage ~= 0 then
         texture:SetTexture(data.iconImage)
         return true
@@ -1318,6 +1697,70 @@ local function SetBossPortrait(texture, dungeonName, boss)
 
     texture:SetTexture(nil)
     return false
+end
+
+-- Right-click on any empty part of the journal goes back one page:
+-- route guide / map -> the tab it was opened from, quests <-> bosses back to
+-- the previously used tab, dungeon page -> dungeon list.
+FDJ.GoBackPage = function()
+    if not frame or not frame:IsShown() then return end
+    if frame.routePanel and frame.routePanel:IsShown() then
+        SetMode(selectedMode); return
+    end
+    if frame.dungeonMapPanel and frame.dungeonMapPanel:IsShown() then
+        SetMode(selectedMode); return
+    end
+    if frame.currentView == "dungeon" then
+        local prev = frame.fdjPrevMode
+        frame.fdjPrevMode = nil
+        if prev and prev ~= selectedMode then
+            SetMode(prev)
+        else
+            ShowHomePage()
+        end
+    end
+end
+
+FDJ.InstallRightClickBack = function()
+    if not frame or frame.fdjRightClickBack then return end
+    frame.fdjRightClickBack = true
+    local skip = { Button = true, CheckButton = true, EditBox = true, Slider = true }
+    local function onUp(_, button)
+        if button == "RightButton" then FDJ.GoBackPage() end
+    end
+    local function walk(f)
+        local t = f.GetObjectType and f:GetObjectType()
+        if not skip[t] then
+            if f.IsMouseEnabled and f:IsMouseEnabled() and f.HookScript then
+                f:HookScript("OnMouseUp", onUp)
+            end
+            for _, child in ipairs({ f:GetChildren() }) do walk(child) end
+        end
+    end
+    frame:EnableMouse(true)
+    walk(frame)
+end
+
+-- Resolve every boss portrait in the background while the journal is open.
+-- Bosses that already have a 2D source return immediately; the rest are
+-- queued once, resolved one by one and saved, then visible panels refresh.
+local prewarmTexture
+FDJ.PrewarmBossPortraits = function()
+    if not frame then return end
+    if not prewarmTexture then
+        prewarmTexture = frame:CreateTexture(nil, "BACKGROUND")
+        prewarmTexture:SetSize(1, 1)
+        prewarmTexture:Hide()
+    end
+    for _, dungeonName in ipairs(FDJ.ORDER or {}) do
+        local dungeon = FDJ.DB[dungeonName]
+        for _, boss in ipairs((dungeon and dungeon.bosses) or {}) do
+            if not boss.trash then
+                pcall(SetBossPortrait, prewarmTexture, dungeonName, boss)
+            end
+        end
+    end
+    if FDJ.portraitResolver and #FDJ.portraitResolveQueue > 0 then FDJ.portraitResolver:Show() end
 end
 
 -- v1.0.23: live unit portrait capture intentionally removed.
@@ -1408,7 +1851,7 @@ local function PositionPrimaryItemTooltip(owner)
 end
 
 local function GetItemEquipLocation(itemID)
-    local _, _, _, _, _, _, _, _, equipLoc = ItemInfo(itemID)
+    local _, _, _, _, _, _, _, _, equipLoc = FDJ.ItemInfo(itemID)
     if type(equipLoc) == "string" and equipLoc ~= "" then
         return equipLoc
     end
@@ -1506,9 +1949,9 @@ local function PositionTooltipGroup(owner, comparisons)
     end
 end
 
-local STAT_DELTA_ORDER_INDEX = {}
+FDJ.STAT_DELTA_ORDER_INDEX = {}
 for index, key in ipairs(FDJ.STAT_DELTA_ORDER) do
-    STAT_DELTA_ORDER_INDEX[key] = index
+    FDJ.STAT_DELTA_ORDER_INDEX[key] = index
 end
 
 local function IsUsableStatLabel(text)
@@ -1573,6 +2016,190 @@ local function FormatStatDeltaValue(key, value)
     return string.format("%+d", rounded)
 end
 
+FDJ.itemStatsSummaryCache = {}
+
+local function GetItemStatsSummary(itemID, link)
+    if not itemID then return nil, nil end
+    itemID = tonumber(itemID)
+    if not itemID then return nil, nil end
+
+    local cached = FDJ.itemStatsSummaryCache[itemID]
+    if cached then
+        return cached.summary, cached.reqLevel
+    end
+
+    link = link or ("item:" .. tostring(itemID))
+
+    local stats = nil
+    if C_Item and type(C_Item.GetItemStats) == "function" then
+        local ok, s = pcall(C_Item.GetItemStats, link)
+        if ok and type(s) == "table" and next(s) then stats = s end
+    end
+    if not stats and type(GetItemStats) == "function" then
+        local ok, s = pcall(GetItemStats, link)
+        if ok and type(s) == "table" and next(s) then stats = s end
+    end
+
+    local dpsText = nil
+    local armorText = nil
+    local primaryStats = {}
+    local otherStats = {}
+
+    if stats then
+        for k, v in pairs(stats) do
+            if type(v) == "number" and math.abs(v) > 0.001 then
+                local label = StatDeltaLabel(k)
+                if k == "ITEM_MOD_DAMAGE_PER_SECOND_SHORT" then
+                    dpsText = string.format("%.1f DPS", v)
+                elseif k == "ITEM_MOD_ARMOR_SHORT" or k == "RESISTANCE0_NAME" then
+                    armorText = string.format("%d Armor", math.floor(v + 0.5))
+                elseif k == "ITEM_MOD_STRENGTH_SHORT"
+                    or k == "ITEM_MOD_AGILITY_SHORT"
+                    or k == "ITEM_MOD_STAMINA_SHORT"
+                    or k == "ITEM_MOD_INTELLECT_SHORT"
+                    or k == "ITEM_MOD_SPIRIT_SHORT" then
+                    table.insert(primaryStats, {
+                        order = FDJ.STAT_DELTA_ORDER_INDEX[k] or 10,
+                        text = string.format("%+d %s", math.floor(v + 0.5), label),
+                    })
+                else
+                    table.insert(otherStats, {
+                        order = FDJ.STAT_DELTA_ORDER_INDEX[k] or 50,
+                        text = string.format("%+d %s", math.floor(v + 0.5), label),
+                    })
+                end
+            end
+        end
+    end
+
+    local tooltipLines = {}
+    local scannedReqLevel = nil
+    local equipEffect = nil
+
+    if C_TooltipInfo and type(C_TooltipInfo.GetItemByID) == "function" then
+        local ok, data = pcall(C_TooltipInfo.GetItemByID, itemID)
+        if ok and type(data) == "table" and type(data.lines) == "table" then
+            for idx = 2, #data.lines do
+                local line = data.lines[idx]
+                local text = line and line.leftText
+                if type(text) == "string" and text ~= "" then
+                    table.insert(tooltipLines, text)
+                end
+            end
+        end
+    end
+
+    if #tooltipLines == 0 and FDJ.qualityScanTooltip then
+        FDJ.qualityScanTooltip:Hide()
+        FDJ.qualityScanTooltip:SetOwner(UIParent, "ANCHOR_NONE")
+        if FDJ.qualityScanTooltip.ClearLines then FDJ.qualityScanTooltip:ClearLines() end
+        local ok = pcall(FDJ.qualityScanTooltip.SetHyperlink, FDJ.qualityScanTooltip, link)
+        if ok then
+            for idx = 2, 12 do
+                local line = _G["ForeverDungeonJournalQualityScanTooltipTextLeft" .. idx]
+                local text = line and line.GetText and line:GetText()
+                if type(text) == "string" and text ~= "" then
+                    table.insert(tooltipLines, text)
+                end
+            end
+        end
+        FDJ.qualityScanTooltip:Hide()
+    end
+
+    for _, text in ipairs(tooltipLines) do
+        local req = string.match(text, "[Rr]equires%s+[Ll]evel%s+(%d+)")
+            or string.match(text, "[Bb]enötigt%s+[Ss]tufe%s+(%d+)")
+            or string.match(text, "[Nn]iveau%s+requis%s*:?%s*(%d+)")
+            or string.match(text, "[Rr]equiere%s+nivel%s+(%d+)")
+            or string.match(text, "уровень%s+(%d+)")
+            or string.match(text, "[Rr]equer%s+nível%s+(%d+)")
+            or string.match(text, "[Rr]ichiede%s+livello%s+(%d+)")
+        if req and not scannedReqLevel then
+            scannedReqLevel = tonumber(req)
+        end
+
+        if not armorText then
+            local armorVal = string.match(text, "(%d+)%s+[Aa]rmor")
+                or string.match(text, "(%d+)%s+[Rr]üstung")
+                or string.match(text, "(%d+)%s+[Aa]rmure")
+                or string.match(text, "(%d+)%s+[Aa]rmadura")
+                or string.match(text, "(%d+)%s+броня")
+            if armorVal then
+                armorText = armorVal .. " Armor"
+            end
+        end
+
+        if not dpsText then
+            local dpsVal = string.match(text, "%((%d+%.?%d*)%s+damage per second%)")
+                or string.match(text, "(%d+%.?%d*)%s+DPS")
+            if dpsVal then
+                dpsText = dpsVal .. " DPS"
+            end
+        end
+
+        if not stats or not next(stats) then
+            local sign, val, statName = string.match(text, "^([%+%-]?)(%d+)%s+([%a%s]+)$")
+            if val and statName then
+                statName = string.gsub(statName, "^%s+", "")
+                statName = string.gsub(statName, "%s+$", "")
+                if statName == "Stamina" or statName == "Intellect" or statName == "Strength"
+                    or statName == "Agility" or statName == "Spirit" then
+                    local sVal = tonumber(val) or 0
+                    if sign == "-" then sVal = -sVal end
+                    table.insert(primaryStats, {
+                        order = (statName == "Strength" and 3) or (statName == "Agility" and 4)
+                            or (statName == "Stamina" and 5) or (statName == "Intellect" and 6)
+                            or (statName == "Spirit" and 7) or 10,
+                        text = string.format("%+d %s", sVal, statName),
+                    })
+                end
+            end
+        end
+
+        if not equipEffect and string.find(text, "^Equip:") then
+            equipEffect = text
+        end
+    end
+
+    table.sort(primaryStats, function(a, b) return a.order < b.order end)
+    table.sort(otherStats, function(a, b) return a.order < b.order end)
+
+    local parts = {}
+    if dpsText then
+        table.insert(parts, "|cffffffaa" .. dpsText .. "|r")
+    end
+
+    local statParts = {}
+    for _, s in ipairs(primaryStats) do
+        table.insert(statParts, "|cff40ff40" .. s.text .. "|r")
+    end
+    for _, s in ipairs(otherStats) do
+        table.insert(statParts, "|cff80ff80" .. s.text .. "|r")
+    end
+    if #statParts > 0 then
+        table.insert(parts, table.concat(statParts, ", "))
+    end
+
+    if armorText then
+        table.insert(parts, "|cffcccccc" .. armorText .. "|r")
+    end
+
+    if #parts == 0 and equipEffect then
+        local shortEquip = equipEffect
+        if #shortEquip > 52 then
+            shortEquip = string.sub(shortEquip, 1, 49) .. "..."
+        end
+        table.insert(parts, "|cff66ccff" .. shortEquip .. "|r")
+    end
+
+    local summaryText = table.concat(parts, "  |cff666666•|r  ")
+    if summaryText ~= "" or scannedReqLevel then
+        FDJ.itemStatsSummaryCache[itemID] = { summary = summaryText, reqLevel = scannedReqLevel }
+    end
+    return summaryText, scannedReqLevel
+end
+FDJ.GetItemStatsSummary = GetItemStatsSummary
+
 local function AddStatDeltaBlock(tooltip, equippedLink, newLink)
     if not tooltip or not equippedLink or not newLink then return end
     if not C_Item or type(C_Item.GetItemStatDelta) ~= "function" then return end
@@ -1586,7 +2213,7 @@ local function AddStatDeltaBlock(tooltip, equippedLink, newLink)
             table.insert(entries, {
                 key = key,
                 value = value,
-                order = STAT_DELTA_ORDER_INDEX[key] or 10000,
+                order = FDJ.STAT_DELTA_ORDER_INDEX[key] or 10000,
                 label = StatDeltaLabel(key),
             })
         end
@@ -1672,7 +2299,7 @@ local function ShowComparisonTooltips(owner)
         return
     end
 
-    local _, newLink = ItemInfo(owner.item[1])
+    local _, newLink = FDJ.ItemInfo(owner.item[1])
     newLink = newLink or ("item:" .. owner.item[1])
 
     local shown = {}
@@ -1713,7 +2340,14 @@ local function ShowItemTooltip(row)
     itemTooltip:Hide()
     itemTooltip:SetOwner(row, "ANCHOR_NONE")
     if itemTooltip.ClearLines then itemTooltip:ClearLines() end
-    local _, liveLink = ItemInfo(row.item[1])
+    if not row.item[1] or row.item[1] <= 0 then
+        local r, g, b = FDJ.QualityColor(row.item[3] or 1)
+        itemTooltip:AddLine(row.item[2] or L("ITEM"), r, g, b)
+        itemTooltip:Show()
+        PositionPrimaryItemTooltip(row)
+        return
+    end
+    local _, liveLink = FDJ.ItemInfo(row.item[1])
     itemTooltip:SetHyperlink(liveLink or ("item:" .. row.item[1]))
     if row.fdjSourceText and row.fdjSourceText ~= "" then
         itemTooltip:AddLine(" ")
@@ -1727,38 +2361,80 @@ local function ShowItemTooltip(row)
 end
 
 -- ============================================================
--- QUEST DIFFICULTY & LOOT FILTERING & SEARCH HELPERS
+-- UI CREATION
 -- ============================================================
 
-local function GetQuestDifficultyColorSafe(level)
-    if not level then return 1, 1, 1 end
-    if type(GetQuestDifficultyColor) == "function" then
-        local col = GetQuestDifficultyColor(level)
-        if type(col) == "table" and col.r then
-            return col.r, col.g, col.b
-        elseif type(col) == "number" then
-            return GetQuestDifficultyColor(level)
-        end
+-- Temporary emphasis used only when an item was opened from the global search.
+-- It deliberately disappears as soon as the player hovers the item, and normal
+-- page refreshes clear it as well.
+local function HideSearchItemHighlight(button)
+    if button and button.fdjSearchGlow then
+        button.fdjSearchGlow:Hide()
     end
-    local pLevel = (type(UnitLevel) == "function" and UnitLevel("player")) or 20
-    local diff = level - pLevel
-    if diff >= 5 then return 1.0, 0.12, 0.12 end
-    if diff >= 3 then return 1.0, 0.55, 0.20 end
-    if diff >= -2 then return 1.0, 0.82, 0.20 end
-    if diff >= -7 then return 0.25, 0.85, 0.25 end
-    return 0.55, 0.55, 0.55
+end
+
+local function ShowSearchItemHighlight(button)
+    if not button then return end
+    if not button.fdjSearchGlow then
+        local glow = CreateFrame("Frame", nil, button, "BackdropTemplate")
+        glow:SetPoint("TOPLEFT", button, "TOPLEFT", -3, 3)
+        glow:SetPoint("BOTTOMRIGHT", button, "BOTTOMRIGHT", 3, -3)
+        glow:SetFrameLevel(button:GetFrameLevel() + 6)
+        glow:EnableMouse(false)
+        FDJ.SetBackdrop(glow, "Interface\\Buttons\\WHITE8X8", "Interface\\Tooltips\\UI-Tooltip-Border", 9, 2)
+        glow:SetBackdropColor(1.00, 0.78, 0.08, 0.12)
+        glow:SetBackdropBorderColor(1.00, 0.82, 0.12, 1.00)
+
+        glow.flash = glow:CreateTexture(nil, "OVERLAY")
+        glow.flash:SetAllPoints()
+        glow.flash:SetTexture("Interface\\QuestFrame\\UI-QuestTitleHighlight")
+        glow.flash:SetBlendMode("ADD")
+        glow.flash:SetAlpha(0.28)
+        glow:Hide()
+        button.fdjSearchGlow = glow
+    end
+    button.fdjSearchGlow:Show()
 end
 
 FDJ.selectedClassFilter = "ALL"
 FDJ.selectedSlotFilter = "ALL"
 FDJ.selectedBossSubTab = "loot"
 
-local function GetPlayerClassToken()
+function FDJ.GetPlayerClassToken()
     if type(UnitClass) == "function" then
         local _, token = UnitClass("player")
-        if token then return token end
+        if token and token ~= "" then return string.upper(token) end
     end
     return "WARRIOR"
+end
+
+FDJ.CLASS_DISPLAY_INFO = {
+    WARRIOR = { name = "Warrior", r = 0.78, g = 0.61, b = 0.43 },
+    PALADIN = { name = "Paladin", r = 0.96, g = 0.55, b = 0.73 },
+    HUNTER  = { name = "Hunter",  r = 0.67, g = 0.83, b = 0.45 },
+    ROGUE   = { name = "Rogue",   r = 1.00, g = 0.96, b = 0.41 },
+    PRIEST  = { name = "Priest",  r = 1.00, g = 1.00, b = 1.00 },
+    SHAMAN  = { name = "Shaman",  r = 0.00, g = 0.44, b = 0.87 },
+    MAGE    = { name = "Mage",    r = 0.41, g = 0.80, b = 0.94 },
+    WARLOCK = { name = "Warlock", r = 0.58, g = 0.51, b = 0.79 },
+    DRUID   = { name = "Druid",   r = 1.00, g = 0.49, b = 0.04 },
+}
+
+function FDJ.GetClassDisplay(token)
+    if not token or token == "ALL" then
+        local locAll = (L and L("ALL_CLASSES")) or "All Classes"
+        return locAll, 1.0, 0.82, 0.27
+    end
+    local info = FDJ.CLASS_DISPLAY_INFO[token]
+    if info then
+        local locName = info.name
+        if RAID_CLASS_COLORS and RAID_CLASS_COLORS[token] then
+            local c = RAID_CLASS_COLORS[token]
+            return locName, c.r, c.g, c.b
+        end
+        return locName, info.r, info.g, info.b
+    end
+    return token, 0.95, 0.85, 0.65
 end
 
 local function ItemMatchesClass(item, classToken)
@@ -1766,6 +2442,7 @@ local function ItemMatchesClass(item, classToken)
     local slot = item[3] or ""
     local slotLower = string.lower(slot)
 
+    -- Armor type proficiency filters (Classic rules)
     if string.find(slotLower, "plate", 1, true) then
         return classToken == "WARRIOR" or classToken == "PALADIN"
     elseif string.find(slotLower, "mail", 1, true) then
@@ -1776,6 +2453,7 @@ local function ItemMatchesClass(item, classToken)
         return classToken == "WARRIOR" or classToken == "PALADIN" or classToken == "SHAMAN"
     end
 
+    -- Weapon proficiency filters
     if string.find(slotLower, "two-hand", 1, true) or string.find(slotLower, "polearm", 1, true) then
         return classToken == "WARRIOR" or classToken == "PALADIN" or classToken == "HUNTER" or classToken == "SHAMAN" or classToken == "DRUID"
     elseif string.find(slotLower, "bow", 1, true) or string.find(slotLower, "gun", 1, true) or string.find(slotLower, "crossbow", 1, true) then
@@ -1792,7 +2470,9 @@ local function ItemMatchesSlot(item, slotFilter)
     local slot = item[3] or ""
     local slotLower = string.lower(slot)
 
-    if slotFilter == "WEAPONS" then
+    if slotFilter == "WISHLIST" then
+        return FDJ.IsWishlisted and FDJ.IsWishlisted(item[1])
+    elseif slotFilter == "WEAPONS" then
         return string.find(slotLower, "hand", 1, true)
             or string.find(slotLower, "staff", 1, true)
             or string.find(slotLower, "bow", 1, true)
@@ -1827,89 +2507,34 @@ local function ItemMatchesSlot(item, slotFilter)
     return true
 end
 
-FDJ.searchIndex = nil
-
-local function BuildSearchIndex()
-    if FDJ.searchIndex then return FDJ.searchIndex end
-    FDJ.searchIndex = { items = {}, bosses = {}, quests = {} }
-
-    for dungeonName, dungeon in pairs(DB) do
-        for bIndex, boss in ipairs(dungeon.bosses or {}) do
-            table.insert(FDJ.searchIndex.bosses, {
-                type = "boss",
-                name = boss.name,
-                dungeon = dungeonName,
-                bossIndex = bIndex,
-                icon = boss.customIcon or "Interface\\TargetingFrame\\UI-RaidTargetingIcon_8",
-            })
-
-            for _, item in ipairs(boss.loot or {}) do
-                table.insert(FDJ.searchIndex.items, {
-                    type = "item",
-                    id = item[1],
-                    name = item[2],
-                    slot = item[3],
-                    quality = item[4] or 3,
-                    bossName = boss.name,
-                    bossIndex = bIndex,
-                    dungeon = dungeonName,
-                })
+FDJ.GetTacticsAbility = function(idxNum, idNum)
+    if FDJ.tacticsAbilityRows and idxNum and FDJ.tacticsAbilityRows[idxNum] and FDJ.tacticsAbilityRows[idxNum].ability then
+        return FDJ.tacticsAbilityRows[idxNum].ability
+    end
+    if selectedDungeon and selectedBoss and FDJ.DB and FDJ.DB[selectedDungeon] then
+        local dungeon = FDJ.DB[selectedDungeon]
+        local boss = dungeon and dungeon.bosses and dungeon.bosses[selectedBoss]
+        if boss and FDJ.BOSS_TACTICS and FDJ.BOSS_TACTICS[selectedDungeon] then
+            local tactics = FDJ.BOSS_TACTICS[selectedDungeon][boss.name]
+            if tactics and tactics.abilities then
+                if idxNum and tactics.abilities[idxNum] then
+                    return tactics.abilities[idxNum]
+                end
+                if idNum and idNum > 0 then
+                    for _, ab in ipairs(tactics.abilities) do
+                        if ab.id == idNum then return ab end
+                    end
+                end
             end
         end
-
-        for qIndex, quest in ipairs(dungeon.quests or {}) do
-            table.insert(FDJ.searchIndex.quests, {
-                type = "quest",
-                id = quest.id,
-                name = quest.name,
-                level = quest.level or 15,
-                requires = quest.requires or 10,
-                faction = quest.faction or "Both",
-                dungeon = dungeonName,
-                questIndex = qIndex,
-            })
-        end
     end
-
-    return FDJ.searchIndex
+    return nil
 end
-
-local function PerformSearch(query)
-    if not query or #query < 2 then return {} end
-    local index = BuildSearchIndex()
-    local lowerQuery = string.lower(query)
-    local results = {}
-
-    for _, b in ipairs(index.bosses) do
-        if string.find(string.lower(b.name), lowerQuery, 1, true) then
-            results[#results + 1] = b
-            if #results >= 8 then return results end
-        end
-    end
-
-    for _, item in ipairs(index.items) do
-        if string.find(string.lower(item.name), lowerQuery, 1, true) then
-            results[#results + 1] = item
-            if #results >= 8 then return results end
-        end
-    end
-
-    for _, q in ipairs(index.quests) do
-        if string.find(string.lower(q.name), lowerQuery, 1, true) then
-            results[#results + 1] = q
-            if #results >= 8 then return results end
-        end
-    end
-
-    return results
-end
-
-FDJ.tacticsAbilityRows = {}
 
 local function MakeTacticsAbilityRow(parent)
     local row = CreateFrame("Frame", nil, parent, "BackdropTemplate")
     row:SetSize(376, 48)
-    SetBackdrop(row, "Interface\\Buttons\\WHITE8X8", "Interface\\Tooltips\\UI-Tooltip-Border", 8, 2)
+    FDJ.SetBackdrop(row, "Interface\\Buttons\\WHITE8X8", "Interface\\Tooltips\\UI-Tooltip-Border", 8, 2)
     row:SetBackdropColor(0.18, 0.13, 0.07, 0.85)
     row:SetBackdropBorderColor(0.40, 0.28, 0.12, 0.9)
 
@@ -1948,48 +2573,353 @@ local function MakeTacticsAbilityRow(parent)
         end
     end)
     row:SetScript("OnLeave", function() GameTooltip:Hide() end)
+    row:SetScript("OnMouseWheel", function(self, delta)
+        if frame and frame.bossTacticsScroll then
+            ScrollFrameTemplate_OnMouseWheel(frame.bossTacticsScroll, delta)
+        end
+    end)
+
+    function row:HighlightRow()
+        if not self.pulseTex then
+            self.pulseTex = self:CreateTexture(nil, "OVERLAY")
+            self.pulseTex:SetAllPoints()
+            self.pulseTex:SetColorTexture(1.0, 0.82, 0.20, 0.35)
+        end
+        self.pulseTex:Show()
+        local elapsed = 0
+        self:SetScript("OnUpdate", function(f, dt)
+            elapsed = elapsed + dt
+            if elapsed > 1.5 then
+                f.pulseTex:Hide()
+                f:SetScript("OnUpdate", nil)
+            else
+                f.pulseTex:SetAlpha((1.5 - elapsed) / 1.5 * 0.35)
+            end
+        end)
+    end
 
     return row
 end
 
+local function FormatTacticsAbilityLinks(tipText, abilities)
+    if not tipText or tipText == "" or not abilities or #abilities == 0 then
+        return tipText, tipText, {}
+    end
+
+    local sortedAbilities = {}
+    for idx, ab in ipairs(abilities) do
+        if ab.name and ab.name ~= "" then
+            table.insert(sortedAbilities, {
+                index = idx,
+                id = ab.id or 0,
+                name = ab.name,
+                len = #ab.name,
+            })
+        end
+    end
+    table.sort(sortedAbilities, function(a, b) return a.len > b.len end)
+
+    local result = tipText
+    local matched = {}
+
+    for _, ab in ipairs(sortedAbilities) do
+        local rawName = ab.name
+        local lowerName = rawName:lower()
+        local pos = 1
+
+        while pos <= #result do
+            local lowerRes = result:lower()
+            local s, e = lowerRes:find(lowerName, pos, true)
+            if not s then break end
+
+            local valid = true
+            if s > 1 then
+                local charBefore = result:sub(s - 1, s - 1)
+                if charBefore:match("%a") then
+                    valid = false
+                elseif charBefore == "[" or (s > 2 and result:sub(s - 2, s - 1) == "|h") then
+                    valid = false
+                end
+            end
+
+            if valid then
+                local nextE = e
+                local resLen = #result
+                if e < resLen then
+                    local charAfter = result:sub(e + 1, e + 1)
+                    if charAfter == "]" then
+                        valid = false
+                    elseif charAfter:match("%a") then
+                        local sub2 = lowerRes:sub(e + 1, e + 2)
+                        local sub1 = lowerRes:sub(e + 1, e + 1)
+                        if sub2 == "ed" and (e + 2 == resLen or not lowerRes:sub(e + 3, e + 3):match("%a")) then
+                            nextE = e + 2
+                        elseif sub2 == "es" and (e + 2 == resLen or not lowerRes:sub(e + 3, e + 3):match("%a")) then
+                            nextE = e + 2
+                        elseif (sub1 == "d" or sub1 == "s") and (e + 1 == resLen or not lowerRes:sub(e + 2, e + 2):match("%a")) then
+                            nextE = e + 1
+                        else
+                            valid = false
+                        end
+                    end
+                end
+
+                if valid then
+                    local origText = result:sub(s, nextE)
+                    local replacement = "|cffffd200|Hability:" .. ab.index .. ":" .. ab.id .. "|h[" .. origText .. "]|h|r"
+                    table.insert(matched, ab)
+                    result = result:sub(1, s - 1) .. replacement .. result:sub(nextE + 1)
+                    pos = s + #replacement
+                else
+                    pos = e + 1
+                end
+            else
+                pos = e + 1
+            end
+        end
+    end
+
+    return result, result, matched
+end
+FDJ.FormatTacticsAbilityLinks = FormatTacticsAbilityLinks
+
+local function ScrollToAbility(abilityIndex, abilityID, sourceRole, sourceCard)
+    if not frame or not frame.bossTacticsScroll or not frame.bossTacticsContent then return end
+
+    if FDJ.selectedBossSubTab ~= "tactics" and FDJ.SetBossSubTab then
+        FDJ.SetBossSubTab("tactics")
+    end
+
+    local targetRow = FDJ.tacticsAbilityRows and FDJ.tacticsAbilityRows[abilityIndex]
+    if not targetRow or (abilityID and abilityID > 0 and targetRow.ability and targetRow.ability.id ~= abilityID) then
+        for idx, r in ipairs(FDJ.tacticsAbilityRows or {}) do
+            if r.ability and (r.ability.id == abilityID or r.ability.index == abilityIndex) then
+                targetRow = r
+                abilityIndex = idx
+                break
+            end
+        end
+    end
+    if not targetRow then return end
+    if not targetRow:IsShown() then targetRow:Show() end
+
+    -- Store return position and originating card
+    FDJ.lastTacticsScrollPos = frame.bossTacticsScroll:GetVerticalScroll() or 0
+    FDJ.lastTacticsSourceCard = sourceCard
+
+    -- Calculate scroll position to precisely CENTER the target ability in the viewport
+    local scrollHeight = frame.bossTacticsScroll:GetHeight() or 380
+    if scrollHeight <= 0 then
+        scrollHeight = 380
+    end
+    local rowHeight = targetRow:GetHeight() or 50
+    local rowOffset = targetRow.contentOffsetY
+    if not rowOffset then
+        local contentTop = frame.bossTacticsContent:GetTop() or 0
+        local rowTop = targetRow:GetTop() or 0
+        local curScroll = frame.bossTacticsScroll:GetVerticalScroll() or 0
+        rowOffset = math.max(0, (contentTop - rowTop) + curScroll)
+    end
+
+    local rowCenter = rowOffset + (rowHeight / 2)
+    local targetScroll = rowCenter - (scrollHeight / 2)
+
+    local contentHeight = frame.bossTacticsContent:GetHeight() or 0
+    local maxScroll = frame.bossTacticsScroll:GetVerticalScrollRange() or 0
+    if maxScroll <= 0 and contentHeight > scrollHeight then
+        maxScroll = contentHeight - scrollHeight
+    end
+
+    if maxScroll > 0 then
+        targetScroll = math.max(0, math.min(targetScroll, maxScroll))
+    else
+        targetScroll = math.max(0, targetScroll)
+    end
+
+    frame.bossTacticsScroll:SetVerticalScroll(targetScroll)
+    local scrollBar = FDJ.GetScrollBar(frame.bossTacticsScroll)
+    if scrollBar and scrollBar.SetValue then
+        scrollBar:SetValue(targetScroll)
+    end
+
+    -- Trigger golden pulse highlight on row
+    if targetRow.HighlightRow then
+        targetRow:HighlightRow()
+    end
+
+    -- Anchor and show "Return to Tips" button directly above the target row
+    if frame.tacticsReturnButton then
+        frame.tacticsReturnButton:ClearAllPoints()
+        frame.tacticsReturnButton:SetPoint("BOTTOMRIGHT", targetRow, "TOPRIGHT", 0, 3)
+        frame.tacticsReturnButton:SetFrameLevel(targetRow:GetFrameLevel() + 10)
+        local roleLabel = sourceRole or (sourceCard and sourceCard.title and sourceCard.title:GetText()) or L("ROLE_TIPS") or "Tips"
+        frame.tacticsReturnButton.text:SetText("▲ " .. L("RETURN_TO_TIPS", roleLabel))
+        frame.tacticsReturnButton:Show()
+    end
+end
+FDJ.ScrollToAbility = ScrollToAbility
+
 local function MakeRoleTipCard(parent, title, iconPath, titleColor)
     local card = CreateFrame("Frame", nil, parent, "BackdropTemplate")
     card:SetSize(376, 44)
-    SetBackdrop(card, "Interface\\Buttons\\WHITE8X8", "Interface\\Tooltips\\UI-Tooltip-Border", 8, 2)
+    FDJ.SetBackdrop(card, "Interface\\Buttons\\WHITE8X8", "Interface\\Tooltips\\UI-Tooltip-Border", 8, 2)
     card:SetBackdropColor(0.14, 0.10, 0.06, 0.90)
     card:SetBackdropBorderColor(0.38, 0.26, 0.12, 0.9)
+    card.roleTitle = title
 
     card.icon = card:CreateTexture(nil, "ARTWORK")
     card.icon:SetSize(28, 28)
-    card.icon:SetPoint("LEFT", 8, 0)
+    card.icon:SetPoint("TOPLEFT", 8, -8)
     card.icon:SetTexture(iconPath)
     card.icon:SetTexCoord(0.08, 0.92, 0.08, 0.92)
 
+    -- Permanently visible, clearly styled Announce Button
+    local announceBtn = CreateFrame("Button", nil, card, "BackdropTemplate")
+    card.announceBtn = announceBtn
+    announceBtn:SetSize(74, 20)
+    announceBtn:SetPoint("TOPRIGHT", -8, -6)
+    FDJ.SetBackdrop(announceBtn, "Interface\\Buttons\\WHITE8X8", "Interface\\Tooltips\\UI-Tooltip-Border", 8, 2)
+    announceBtn:SetBackdropColor(0.18, 0.13, 0.07, 0.95)
+    announceBtn:SetBackdropBorderColor(0.55, 0.40, 0.18, 1.0)
+    announceBtn:SetHighlightTexture("Interface\\QuestFrame\\UI-QuestTitleHighlight", "ADD")
+
+    announceBtn.icon = announceBtn:CreateTexture(nil, "ARTWORK")
+    announceBtn.icon:SetSize(13, 13)
+    announceBtn.icon:SetPoint("LEFT", 5, 0)
+    announceBtn.icon:SetTexture("Interface\\Buttons\\UI-GuildSwipe-Up")
+    announceBtn.icon:SetVertexColor(1.0, 0.85, 0.35)
+
+    announceBtn.text = announceBtn:CreateFontString(nil, "OVERLAY", "GameFontHighlightSmall")
+    announceBtn.text:SetPoint("LEFT", announceBtn.icon, "RIGHT", 3, 0)
+    announceBtn.text:SetPoint("RIGHT", -4, 0)
+    announceBtn.text:SetJustifyH("LEFT")
+    announceBtn.text:SetText(L("ANNOUNCE"))
+    announceBtn.text:SetTextColor(1.0, 0.85, 0.35)
+
+    announceBtn:SetScript("OnEnter", function(self)
+        GameTooltip:SetOwner(self, "ANCHOR_TOP")
+        local roleName = card.title and card.title:GetText() or "Role"
+        GameTooltip:SetText(L("ANNOUNCE_TACTICS") .. " (" .. roleName .. ")", 1, 0.85, 0.35)
+        GameTooltip:AddLine("Broadcast this " .. roleName .. " tactical tip to /party or /raid.", 0.9, 0.9, 0.9, true)
+        GameTooltip:Show()
+        self.text:SetTextColor(1.0, 1.0, 0.6)
+    end)
+    announceBtn:SetScript("OnLeave", function(self)
+        GameTooltip:Hide()
+        self.text:SetTextColor(1.0, 0.85, 0.35)
+    end)
+    announceBtn:SetScript("OnClick", function(self)
+        local now = GetTime and GetTime() or 0
+        if FDJ.lastTacticsAnnounce and (now - FDJ.lastTacticsAnnounce < 2) then return end
+        FDJ.lastTacticsAnnounce = now
+
+        local dungeon = FDJ.DB and FDJ.DB[selectedDungeon]
+        local boss = dungeon and dungeon.bosses and dungeon.bosses[selectedBoss]
+        local bossName = boss and boss.name or "Boss"
+        local roleTitle = card.title and card.title:GetText() or "Role"
+        local tipText = card.rawTipText or (card.desc and card.desc:GetText()) or ""
+        if tipText == "" then return end
+
+        tipText = tipText:gsub("|c%x%x%x%x%x%x%x%x", ""):gsub("|r", ""):gsub("|H.-|h(%[.-%])|h", "%1")
+
+        local inRaid = IsInRaid and IsInRaid()
+        local inParty = IsInGroup and IsInGroup()
+        local channel = inRaid and "RAID" or (inParty and "PARTY" or nil)
+        local msg = "[Forever DJ] " .. bossName .. " (" .. roleTitle .. "): " .. tipText
+        if #msg > 250 then msg = msg:sub(1, 247) .. "..." end
+
+        if channel then
+            SendChatMessage(msg, channel)
+        else
+            print("|cffffd100[Forever DJ]|r " .. L("ANNOUNCE_PREVIEW"))
+            print("  |cffffffff" .. msg .. "|r")
+        end
+    end)
+
     card.title = card:CreateFontString(nil, "OVERLAY", "GameFontNormal")
-    card.title:SetPoint("TOPLEFT", card.icon, "TOPRIGHT", 10, -2)
+    card.title:SetPoint("TOPLEFT", card.icon, "TOPRIGHT", 10, -1)
+    card.title:SetPoint("RIGHT", announceBtn, "LEFT", -6, 0)
+    card.title:SetJustifyH("LEFT")
     card.title:SetText(title)
     card.title:SetTextColor(unpack(titleColor))
 
     card.desc = card:CreateFontString(nil, "OVERLAY", "GameFontHighlightSmall")
-    card.desc:SetPoint("TOPLEFT", card.title, "BOTTOMLEFT", 0, -2)
-    card.desc:SetPoint("RIGHT", -8, 0)
+    card.desc:SetPoint("TOPLEFT", card.title, "BOTTOMLEFT", 0, -5)
+    card.desc:SetPoint("RIGHT", card, "RIGHT", -10, 0)
     card.desc:SetJustifyH("LEFT")
     card.desc:SetJustifyV("TOP")
     card.desc:SetWordWrap(true)
     card.desc:SetTextColor(0.92, 0.88, 0.80)
 
+    card:SetHyperlinksEnabled(true)
+    if card.desc.SetHyperlinksEnabled then
+        pcall(card.desc.SetHyperlinksEnabled, card.desc, true)
+    end
+
+    card:SetScript("OnHyperlinkEnter", function(self, link, text)
+        local abIndex, abID = link:match("ability:(%d+):(%d+)")
+        local idNum = tonumber(abID)
+        local idxNum = tonumber(abIndex)
+        GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
+        if idNum and idNum > 0 and GameTooltip.SetSpellByID then
+            pcall(GameTooltip.SetSpellByID, GameTooltip, idNum)
+        end
+        if not GameTooltip:IsShown() or GameTooltip:NumLines() == 0 then
+            GameTooltip:ClearLines()
+            local row = FDJ.tacticsAbilityRows and FDJ.tacticsAbilityRows[idxNum]
+            local ab = row and row.ability
+            GameTooltip:AddLine(ab and ab.name or "Ability", 1, 0.85, 0.35)
+            if ab and ab.desc then
+                GameTooltip:AddLine(ab.desc, 1, 1, 1, true)
+            end
+        end
+        GameTooltip:Show()
+    end)
+    card:SetScript("OnHyperlinkLeave", function(self)
+        GameTooltip:Hide()
+    end)
+    card:SetScript("OnHyperlinkClick", function(self, link, text, button)
+        local abIndex, abID = link:match("ability:(%d+):(%d+)")
+        if abIndex then
+            FDJ.ScrollToAbility(tonumber(abIndex), tonumber(abID), card.title and card.title:GetText(), card)
+        end
+    end)
+    card:SetScript("OnMouseWheel", function(self, delta)
+        if frame and frame.bossTacticsScroll then
+            ScrollFrameTemplate_OnMouseWheel(frame.bossTacticsScroll, delta)
+        end
+    end)
+
+    function card:Flash()
+        local flashTex = card:CreateTexture(nil, "OVERLAY")
+        flashTex:SetAllPoints()
+        flashTex:SetColorTexture(1.0, 0.85, 0.30, 0.18)
+        flashTex:Show()
+        local elapsed = 0
+        card:SetScript("OnUpdate", function(self, dt)
+            elapsed = elapsed + dt
+            if elapsed > 1.8 then
+                flashTex:Hide()
+                flashTex:SetParent(nil)
+                card:SetScript("OnUpdate", nil)
+            else
+                flashTex:SetAlpha((1.8 - elapsed) / 1.8 * 0.18)
+            end
+        end)
+    end
+
     return card
 end
 
--- ============================================================
--- UI CREATION
--- ============================================================
+FDJ.FormatTacticsAbilityLinks = FormatTacticsAbilityLinks
+FDJ.ScrollToAbility = ScrollToAbility
+FDJ.MakeTacticsAbilityRow = MakeTacticsAbilityRow
 
 local function MakeLootRow(parent)
     local row = CreateFrame("Button", nil, parent, "BackdropTemplate")
     row:SetSize(388, 52)
 
-    SetBackdrop(
+    FDJ.SetBackdrop(
         row,
         "Interface\\Buttons\\WHITE8X8",
         "Interface\\Tooltips\\UI-Tooltip-Border",
@@ -2004,31 +2934,80 @@ local function MakeLootRow(parent)
     row.icon:SetPoint("LEFT", 10, 0)
     row.icon:SetTexCoord(0.08, 0.92, 0.08, 0.92)
 
+    row.starButton = CreateFrame("Button", nil, row)
+    row.starButton:SetSize(22, 22)
+    row.starButton:SetPoint("RIGHT", -8, 0)
+    row.starButton.icon = row.starButton:CreateTexture(nil, "ARTWORK")
+    row.starButton.icon:SetAllPoints()
+    row.starButton.icon:SetTexture("Interface\\AddOns\\ForeverDungeonJournal\\Media\\Star_Empty.tga")
+    row.starButton:SetHighlightTexture("Interface\\Buttons\\UI-Common-MouseHilight", "ADD")
+
+    row.starButton:SetScript("OnClick", function(self)
+        local parentRow = self:GetParent()
+        if not parentRow or not parentRow.item then return end
+        local itemID = parentRow.item[1]
+        local dungeon = FDJ.DB and FDJ.DB[selectedDungeon]
+        local boss = dungeon and dungeon.bosses and dungeon.bosses[selectedBoss]
+        local bossName = boss and boss.name or ""
+        local isWish = FDJ.ToggleWishlist(itemID, parentRow.item[2], parentRow.item[4], parentRow.item[3], selectedDungeon, bossName)
+        if PlaySound and SOUNDKIT and SOUNDKIT.IG_MAINMENU_OPTION_CHECKBOX_ON then
+            PlaySound(SOUNDKIT.IG_MAINMENU_OPTION_CHECKBOX_ON)
+        end
+        if isWish then
+            self.icon:SetTexture("Interface\\AddOns\\ForeverDungeonJournal\\Media\\Star_Gold.tga")
+            self.icon:SetVertexColor(1.0, 0.82, 0.0, 1.0)
+        else
+            self.icon:SetTexture("Interface\\AddOns\\ForeverDungeonJournal\\Media\\Star_Empty.tga")
+            self.icon:SetVertexColor(0.40, 0.35, 0.25, 0.50)
+        end
+        if FDJ.selectedSlotFilter == "WISHLIST" then
+            RefreshLoot()
+        end
+        if FDJ.UpdateHomeWishlistButton then
+            FDJ.UpdateHomeWishlistButton()
+        end
+    end)
+    row.starButton:SetScript("OnEnter", function(self)
+        if GameTooltip then
+            GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
+            local parentRow = self:GetParent()
+            local itemID = parentRow and parentRow.item and parentRow.item[1]
+            local isWish = itemID and FDJ.IsWishlisted and FDJ.IsWishlisted(itemID)
+            GameTooltip:SetText(isWish and "Remove from Wishlist" or "Add to Wishlist", 1, 0.82, 0)
+            GameTooltip:AddLine("Track this item and receive in-game alerts when it drops.", 0.9, 0.9, 0.9, true)
+            GameTooltip:Show()
+        end
+    end)
+    row.starButton:SetScript("OnLeave", function()
+        if GameTooltip then GameTooltip:Hide() end
+    end)
+
     row.name = row:CreateFontString(nil, "OVERLAY", "GameFontNormal")
     row.name:SetPoint("TOPLEFT", row.icon, "TOPRIGHT", 10, -4)
-    row.name:SetPoint("RIGHT", -10, 0)
+    row.name:SetPoint("RIGHT", row.starButton, "LEFT", -10, 0)
     row.name:SetJustifyH("LEFT")
 
     row.slot = row:CreateFontString(nil, "OVERLAY", "GameFontHighlightSmall")
     row.slot:SetPoint("TOPLEFT", row.name, "BOTTOMLEFT", 0, -5)
-    row.slot:SetPoint("RIGHT", -10, 0)
+    row.slot:SetPoint("RIGHT", row.starButton, "LEFT", -10, 0)
     row.slot:SetJustifyH("LEFT")
     row.slot:SetTextColor(0.27, 0.18, 0.08)
 
     row.ownedBadge = row:CreateFontString(nil, "OVERLAY", "GameFontHighlightSmall")
-    row.ownedBadge:SetPoint("RIGHT", -12, 0)
+    row.ownedBadge:SetPoint("RIGHT", row.starButton, "LEFT", -6, 0)
     row.ownedBadge:SetTextColor(0.35, 1.0, 0.35)
     row.ownedBadge:Hide()
 
     row:SetScript("OnEnter", function(self)
-        local theme = THEMES[selectedDungeon] or THEMES["Hall of Thanes"]
+        HideSearchItemHighlight(self)
+        local theme = FDJ.THEMES[selectedDungeon] or FDJ.THEMES["Hall of Thanes"]
         local c = theme.rowSelected
         self:SetBackdropColor(c[1], c[2], c[3], 1)
         ShowItemTooltip(self)
     end)
 
     row:SetScript("OnLeave", function(self)
-        local theme = THEMES[selectedDungeon] or THEMES["Hall of Thanes"]
+        local theme = FDJ.THEMES[selectedDungeon] or FDJ.THEMES["Hall of Thanes"]
         self:SetBackdropColor(unpack(theme.lootRow))
         self.fdjComparing = nil
         if itemTooltip then itemTooltip:Hide() end
@@ -2044,7 +3023,7 @@ local function MakeLootRow(parent)
     row:SetScript("OnClick", function(self)
         if not self.item then return end
 
-        local _, link = ItemInfo(self.item[1])
+        local _, link = FDJ.ItemInfo(self.item[1])
 
         if link
             and IsModifiedClick
@@ -2072,7 +3051,7 @@ local function MakeBossButton(parent)
     local button = CreateFrame("Button", nil, parent, "BackdropTemplate")
     button:SetSize(315, 55)
 
-    SetBackdrop(
+    FDJ.SetBackdrop(
         button,
         "Interface\\Buttons\\WHITE8X8",
         "Interface\\Tooltips\\UI-Tooltip-Border",
@@ -2118,6 +3097,12 @@ local function MakeBossButton(parent)
     button.name:SetPoint("RIGHT", -10, 0)
     button.name:SetJustifyH("LEFT")
 
+    button.defeatCheck = button:CreateTexture(nil, "OVERLAY", nil, 7)
+    button.defeatCheck:SetSize(18, 18)
+    button.defeatCheck:SetPoint("LEFT", button.portrait, "RIGHT", 4, 1)
+    button.defeatCheck:SetTexture("Interface\\RaidFrame\\ReadyCheck-Ready")
+    button.defeatCheck:Hide()
+
     button.rare = button:CreateFontString(nil, "OVERLAY", "GameFontNormalSmall")
     button.rare:SetPoint("RIGHT", button, "RIGHT", -20, 1)
     button.rare:SetText(L("RARE"))
@@ -2132,7 +3117,7 @@ local function MakeBossButton(parent)
 end
 
 
-local function FactionColor(faction)
+function FDJ.FactionColor(faction)
     if faction == "Alliance" then
         return "|cff5b8ff9"
     elseif faction == "Horde" then
@@ -2141,12 +3126,12 @@ local function FactionColor(faction)
     return "|cffffd34e"
 end
 
-local ALLIANCE_ICON = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\Alliance.tga"
-local HORDE_ICON = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\Horde.tga"
+FDJ.ALLIANCE_ICON = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\Alliance.tga"
+FDJ.HORDE_ICON = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\Horde.tga"
 
-local function FactionLabel(faction)
-    local alliance = "|T" .. ALLIANCE_ICON .. ":24:24:0:0|t"
-    local horde = "|T" .. HORDE_ICON .. ":24:24:0:0|t"
+function FDJ.FactionLabel(faction)
+    local alliance = "|T" .. FDJ.ALLIANCE_ICON .. ":24:24:0:0|t"
+    local horde = "|T" .. FDJ.HORDE_ICON .. ":24:24:0:0|t"
 
     if faction == "Both" or faction == "Neutral" then
         return alliance .. " " .. horde
@@ -2184,30 +3169,11 @@ local function ApplyRewardSummaryFont(fontString)
     end
 end
 
-FDJ.IsInsideDungeonQuest = function(quest)
-    if not quest then return false end
-    if quest.insideDungeon ~= nil then return quest.insideDungeon end
-    local pickup = quest.pickup or ""
-    local lowerPickup = pickup:lower()
-    if lowerPickup:find("inside") then
-        if not lowerPickup:find("inn") and not lowerPickup:find("house") and not lowerPickup:find("shop") then
-            return true
-        end
-    end
-    if lowerPickup:find("item start") or lowerPickup:find("dropped by") or lowerPickup:find("looted from") or lowerPickup:find("stone tablet") then
-        return true
-    end
-    if quest.startItem ~= nil then
-        return true
-    end
-    return false
-end
-
 local function MakeQuestButton(parent)
     local button = CreateFrame("Button", nil, parent, "BackdropTemplate")
     button:SetSize(296, 48)
 
-    SetBackdrop(
+    FDJ.SetBackdrop(
         button,
         "Interface\\Buttons\\WHITE8X8",
         "Interface\\Tooltips\\UI-Tooltip-Border",
@@ -2215,14 +3181,10 @@ local function MakeQuestButton(parent)
         2
     )
 
-    button:SetHighlightTexture("Interface\\QuestFrame\\UI-QuestTitleHighlight", "ADD")
-    local hl = button:GetHighlightTexture()
-    if hl then hl:SetAlpha(0.22) end
-
     button.completeGlow = CreateFrame("Frame", nil, button, "BackdropTemplate")
     button.completeGlow:SetPoint("TOPLEFT", -2, 2)
     button.completeGlow:SetPoint("BOTTOMRIGHT", 2, -2)
-    SetBackdrop(
+    FDJ.SetBackdrop(
         button.completeGlow,
         "Interface\\Buttons\\WHITE8X8",
         "Interface\\Tooltips\\UI-Tooltip-Border",
@@ -2239,19 +3201,6 @@ local function MakeQuestButton(parent)
     button.icon:SetPoint("TOPLEFT", 9, -8)
     button.icon:SetTexture("Interface\\GossipFrame\\AvailableQuestIcon")
 
-    button.dungeonBadge = button:CreateTexture(nil, "OVERLAY", nil, 6)
-    button.dungeonBadge:SetSize(14, 14)
-    button.dungeonBadge:SetPoint("BOTTOMRIGHT", button.icon, "BOTTOMRIGHT", 3, -3)
-    local badgeAtlasOK = false
-    if button.dungeonBadge.SetAtlas then
-        badgeAtlasOK = pcall(button.dungeonBadge.SetAtlas, button.dungeonBadge, "Dungeon", false)
-    end
-    if not badgeAtlasOK then
-        button.dungeonBadge:SetTexture("Interface\\Icons\\INV_Misc_Rune_01")
-        button.dungeonBadge:SetTexCoord(0.08, 0.92, 0.08, 0.92)
-    end
-    button.dungeonBadge:Hide()
-
     button.check = button:CreateTexture(nil, "OVERLAY")
     button.check:SetTexture("Interface\\RaidFrame\\ReadyCheck-Ready")
     button.check:SetSize(22, 22)
@@ -2265,14 +3214,14 @@ local function MakeQuestButton(parent)
     button.allianceIcon = button:CreateTexture(nil, "OVERLAY")
     button.allianceIcon:SetSize(20, 20)
     button.allianceIcon:SetPoint("TOPRIGHT", button, "TOPRIGHT", -50, -8)
-    button.allianceIcon:SetTexture(ALLIANCE_ICON)
+    button.allianceIcon:SetTexture(FDJ.ALLIANCE_ICON)
     button.allianceIcon:SetTexCoord(0.06, 0.94, 0.06, 0.94)
     button.allianceIcon:Hide()
 
     button.hordeIcon = button:CreateTexture(nil, "OVERLAY")
     button.hordeIcon:SetSize(20, 20)
     button.hordeIcon:SetPoint("TOPRIGHT", button, "TOPRIGHT", -28, -8)
-    button.hordeIcon:SetTexture(HORDE_ICON)
+    button.hordeIcon:SetTexture(FDJ.HORDE_ICON)
     button.hordeIcon:SetTexCoord(0.06, 0.94, 0.06, 0.94)
     button.hordeIcon:Hide()
 
@@ -2318,20 +3267,16 @@ local function MakeQuestButton(parent)
     button.name = button:CreateFontString(nil, "OVERLAY")
     ApplyQuestFont(button.name, "QuestFont", "GameFontNormal")
     button.name:SetPoint("TOPLEFT", button, "TOPLEFT", 42, -9)
-    button.name:SetWidth(200)
+    button.name:SetWidth(182)
     button.name:SetWordWrap(true)
     button.name:SetJustifyH("LEFT")
-    button.name:SetShadowColor(0, 0, 0, 0.85)
-    button.name:SetShadowOffset(1, -1)
 
     button.meta = button:CreateFontString(nil, "OVERLAY")
-    ApplyQuestFont(button.meta, "GameFontHighlightSmall", "GameFontHighlightSmall")
-    button.meta:SetPoint("TOPLEFT", button.name, "BOTTOMLEFT", 0, -4)
-    button.meta:SetWidth(200)
+    ApplyQuestFont(button.meta, "QuestFontNormalSmall", "GameFontHighlightSmall")
+    button.meta:SetPoint("TOPLEFT", button.name, "BOTTOMLEFT", 0, -5)
+    button.meta:SetWidth(182)
     button.meta:SetWordWrap(true)
     button.meta:SetJustifyH("LEFT")
-    button.meta:SetShadowColor(0, 0, 0, 0.85)
-    button.meta:SetShadowOffset(1, -1)
 
     button.chainToggle = CreateFrame("Button", nil, button)
     button.chainToggle:SetSize(16, 16)
@@ -2360,14 +3305,14 @@ local function MakeQuestButton(parent)
     button.chainToggle:SetScript("OnClick", function(self)
         local owner = self:GetParent()
         if not owner or not owner.questID then return end
-        expandedQuestChains[owner.questID] = not expandedQuestChains[owner.questID]
+        FDJ.expandedQuestChains[owner.questID] = not FDJ.expandedQuestChains[owner.questID]
         RefreshQuestList()
     end)
 
     button.chainPanel = CreateFrame("Frame", nil, button, "BackdropTemplate")
     button.chainPanel:SetPoint("TOPLEFT", button, "TOPLEFT", 39, -50)
     button.chainPanel:SetPoint("RIGHT", button, "RIGHT", -8, 0)
-    SetBackdrop(
+    FDJ.SetBackdrop(
         button.chainPanel,
         "Interface\\Buttons\\WHITE8X8",
         "Interface\\Tooltips\\UI-Tooltip-Border",
@@ -2383,37 +3328,6 @@ local function MakeQuestButton(parent)
         SelectQuest(self.questIndex)
     end)
 
-    button:SetScript("OnEnter", function(self)
-        if not self.questIndex then return end
-        local dungeon = DB[selectedDungeon]
-        local quest = dungeon and dungeon.quests and dungeon.quests[self.questIndex]
-        if not quest then return end
-        if quest.startQuestLink then
-            local prevName = QuestField(quest.startQuestLink.id, "name", quest.startQuestLink.name or L("PREVIOUS_QUEST"))
-            GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
-            GameTooltip:AddLine(QuestField(quest.id, "name", quest.name), 1, 0.82, 0.25)
-            GameTooltip:AddLine(L("PART_TWO_QUEST"), 0.95, 0.78, 0.25)
-            GameTooltip:AddLine(string.format(L("PART_TWO_TIP"), prevName), 0.90, 0.90, 0.90, true)
-            GameTooltip:AddLine(string.format(L("QUICK_LINK_TOOLTIP"), prevName), 0.45, 0.75, 1.00, true)
-            GameTooltip:Show()
-        elseif quest.leadsToQuestLink then
-            local nextName = QuestField(quest.leadsToQuestLink.id, "name", quest.leadsToQuestLink.name or L("NEXT_QUEST"))
-            GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
-            GameTooltip:AddLine(QuestField(quest.id, "name", quest.name), 1, 0.82, 0.25)
-            GameTooltip:AddLine(L("PART_ONE_QUEST"), 0.95, 0.78, 0.25)
-            GameTooltip:AddLine(string.format(L("PART_ONE_TIP"), nextName), 0.90, 0.90, 0.90, true)
-            GameTooltip:AddLine(string.format(L("QUICK_LINK_TOOLTIP"), nextName), 0.45, 0.75, 1.00, true)
-            GameTooltip:Show()
-        elseif FDJ.IsInsideDungeonQuest(quest) then
-            GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
-            GameTooltip:AddLine(QuestField(quest.id, "name", quest.name), 1, 0.82, 0.25)
-            GameTooltip:AddLine(L("INSIDE_DUNGEON_QUEST"), 0.35, 0.85, 1.00)
-            GameTooltip:AddLine(L("INSIDE_DUNGEON_TIP"), 0.85, 0.85, 0.85, true)
-            GameTooltip:Show()
-        end
-    end)
-    button:SetScript("OnLeave", function() GameTooltip:Hide() end)
-
     return button
 end
 
@@ -2421,7 +3335,7 @@ local function MakeQuestRewardButton(parent)
     local button = CreateFrame("Button", nil, parent, "BackdropTemplate")
     button:SetSize(176, 46)
 
-    SetBackdrop(
+    FDJ.SetBackdrop(
         button,
         "Interface\\Buttons\\WHITE8X8",
         "Interface\\Tooltips\\UI-Tooltip-Border",
@@ -2441,13 +3355,14 @@ local function MakeQuestRewardButton(parent)
     button.name:SetWordWrap(true)
 
     button:SetScript("OnEnter", function(self)
+        HideSearchItemHighlight(self)
         if not self.item then return end
         self:SetBackdropColor(0.30, 0.22, 0.10, 1)
         ShowItemTooltip(self)
     end)
 
     button:SetScript("OnLeave", function(self)
-        local theme = THEMES[selectedDungeon] or THEMES["Hall of Thanes"]
+        local theme = FDJ.THEMES[selectedDungeon] or FDJ.THEMES["Hall of Thanes"]
         self:SetBackdropColor(unpack(theme.lootRow))
         self.fdjComparing = nil
         if itemTooltip then itemTooltip:Hide() end
@@ -2460,7 +3375,8 @@ local function MakeQuestRewardButton(parent)
 
     button:SetScript("OnClick", function(self)
         if not self.item then return end
-        local _, link = ItemInfo(self.item[1])
+        if not self.item[1] or self.item[1] <= 0 then return end
+        local _, link = FDJ.ItemInfo(self.item[1])
         if link and IsModifiedClick and IsModifiedClick("CHATLINK") and ChatEdit_InsertLink then
             local used = ChatEdit_InsertLink(link)
             if used then return end
@@ -2496,9 +3412,8 @@ end
 
 local function UpdateModeTabs()
     if not frame or not frame.bossesTab or not frame.questsTab then return end
-    local theme = THEMES[selectedDungeon] or THEMES["Hall of Thanes"]
-    local isInteriorMap = (selectedMode == "dungeon_map") and (frame.dungeonMapPanel and frame.dungeonMapPanel:IsShown())
-    local isLocationMap = (selectedMode == "map") and (frame.dungeonMapPanel and frame.dungeonMapPanel:IsShown())
+    local theme = FDJ.THEMES[selectedDungeon] or FDJ.THEMES["Hall of Thanes"]
+    local mapActive = frame.dungeonMapPanel and frame.dungeonMapPanel:IsShown() or false
     local routeActive = frame.routePanel and frame.routePanel:IsShown() or false
     local function style(tab, active)
         if not tab then return end
@@ -2512,17 +3427,9 @@ local function UpdateModeTabs()
             if tab.text then tab.text:SetTextColor(1.00, 0.82, 0.27) end
         end
     end
-    style(frame.bossesTab, (not isInteriorMap) and (not isLocationMap) and (not routeActive) and selectedMode == "bosses")
-    style(frame.questsTab, (not isInteriorMap) and (not isLocationMap) and (not routeActive) and selectedMode == "quests")
-    if frame.mapTab and frame.mapTab:IsShown() then style(frame.mapTab, isLocationMap) end
-    if frame.dungeonMapButton and frame.dungeonMapButton:IsShown() then
-        style(frame.dungeonMapButton, isInteriorMap)
-        if isInteriorMap then
-            frame.dungeonMapButton:SetBackdropBorderColor(1.00, 0.82, 0.27, 1)
-        else
-            frame.dungeonMapButton:SetBackdropBorderColor(0.48, 0.34, 0.16, 1)
-        end
-    end
+    style(frame.bossesTab, (not mapActive) and (not routeActive) and selectedMode == "bosses")
+    style(frame.questsTab, (not mapActive) and (not routeActive) and selectedMode == "quests")
+    if frame.mapTab and frame.mapTab:IsShown() then style(frame.mapTab, mapActive) end
     if frame.dungeonRouteButton and frame.dungeonRouteButton:IsShown() then
         style(frame.dungeonRouteButton, routeActive)
     end
@@ -2531,82 +3438,70 @@ end
 local function UpdateDungeonHeaderTabs()
     if not frame or not frame.bossesTab or not frame.questsTab then return end
 
-    if frame.mapTab then
-        frame.mapTab:SetText(L("SHOW_DUNGEON_LOCATION"))
-        local fs = frame.mapTab.text or (frame.mapTab.GetFontString and frame.mapTab:GetFontString())
-        local textWidth = fs and fs:GetStringWidth() or 0
-        local mapWidth = math.max(184, math.min(220, math.ceil(textWidth + 38)))
-        frame.mapTab:ClearAllPoints()
-        frame.mapTab:SetSize(mapWidth, 30)
-        frame.mapTab:SetPoint("TOPRIGHT", -13, -14)
-        frame.mapTab:Show()
-    end
-
-    local tabSpacing = 4
-    if frame.mapTab and frame.mapTab:IsShown() then
-        frame.questsTab:ClearAllPoints()
-        frame.questsTab:SetSize(92, 30)
-        frame.questsTab:SetPoint("RIGHT", frame.mapTab, "LEFT", -tabSpacing, 0)
-    else
-        frame.questsTab:ClearAllPoints()
-        frame.questsTab:SetSize(92, 30)
-        frame.questsTab:SetPoint("TOPRIGHT", -13, -14)
-    end
+    -- All dungeons now use the same larger two-tab layout.  The experimental
+    -- dungeon-map tab is disabled for now until the map presentation is ready.
+    frame.questsTab:ClearAllPoints()
+    frame.questsTab:SetSize(104, 30)
+    frame.questsTab:SetPoint("TOPRIGHT", -14, -14)
 
     frame.bossesTab:ClearAllPoints()
-    frame.bossesTab:SetSize(92, 30)
-    frame.bossesTab:SetPoint("RIGHT", frame.questsTab, "LEFT", -tabSpacing, 0)
+    frame.bossesTab:SetSize(104, 30)
+    frame.bossesTab:SetPoint("TOPRIGHT", -124, -14)
 
-    if frame.dungeonRouteButton then
-        frame.dungeonRouteButton:ClearAllPoints()
-        frame.dungeonRouteButton:SetSize(152, 30)
-        frame.dungeonRouteButton:SetPoint("RIGHT", frame.bossesTab, "LEFT", -6, 0)
-    end
-
-    if frame.dungeonMapButton then
-        local mapDef = FDJ.DUNGEON_MAPS and FDJ.DUNGEON_MAPS[selectedDungeon]
-        if mapDef then
-            frame.dungeonMapButton:SetText(L("DUNGEON_MAP"))
-            local fs = frame.dungeonMapButton.text or (frame.dungeonMapButton.GetFontString and frame.dungeonMapButton:GetFontString())
-            local textWidth = fs and fs:GetStringWidth() or 0
-            local btnWidth = math.max(136, math.min(176, math.ceil(textWidth + 36)))
-            frame.dungeonMapButton:ClearAllPoints()
-            frame.dungeonMapButton:SetSize(btnWidth, 26)
-            local rightAnchor = (frame.mapTab and frame.mapTab:IsShown()) and frame.mapTab or frame.questsTab
-            frame.dungeonMapButton:SetPoint("TOPRIGHT", rightAnchor, "BOTTOMRIGHT", 0, -4)
-            frame.dungeonMapButton:Show()
+    if frame.dungeonMapPanel then frame.dungeonMapPanel:Hide() end
+    if frame.mapTab then
+        if FDJ.DUNGEON_MAPS[selectedDungeon] then
+            frame.mapTab:ClearAllPoints()
+            frame.mapTab:SetSize(124, 30)
+            frame.mapTab:SetPoint("TOPRIGHT", -234, -14)
+            frame.mapTab:SetText(L("DUNGEON_MAP") or "Dungeon Map")
+            frame.mapTab:Show()
         else
-            frame.dungeonMapButton:Hide()
+            frame.mapTab:Hide()
+        end
+    end
+    -- Keep "Items Data TBD" just left of the leftmost visible header button,
+    -- clear of the title and its Show Location icon.
+    if frame.stockadeItemsTBD then
+        -- Sits on the level line under the title ("LV 30-38   Items Data TBD"),
+        -- which is always free, so long dungeon names never collide with it.
+        frame.stockadeItemsTBD:ClearAllPoints()
+        if frame.dungeonMeta then
+            frame.stockadeItemsTBD:SetPoint("LEFT", frame.dungeonMeta, "RIGHT", 14, 0)
+        else
+            frame.stockadeItemsTBD:SetPoint("RIGHT", frame.bossesTab, "LEFT", -12, 0)
         end
     end
 
-
-    local tabs = { frame.bossesTab, frame.questsTab }
-    if frame.mapTab then table.insert(tabs, frame.mapTab) end
-    for _, tab in ipairs(tabs) do
+    -- UIPanelButtonTemplate normally swaps font objects on hover/disabled.
+    -- Force the same object in every state so the labels never resize.
+    for _, tab in ipairs({ frame.bossesTab, frame.questsTab, frame.mapTab }) do
         if tab.SetNormalFontObject then tab:SetNormalFontObject("GameFontNormal") end
         if tab.SetHighlightFontObject then tab:SetHighlightFontObject("GameFontNormal") end
         if tab.SetDisabledFontObject then tab:SetDisabledFontObject("GameFontNormal") end
         if tab.text then tab.text:SetFontObject("GameFontNormal") end
     end
 
+    -- Boss icon: oversized skull that slightly overflows the button, matching
+    -- the Forever quest-tab treatment.
     if not frame.bossesTab.fdjIcon then
         frame.bossesTab.fdjIcon = frame.bossesTab:CreateTexture(nil, "OVERLAY")
     end
-    frame.bossesTab.fdjIcon:SetSize(24, 24)
+    frame.bossesTab.fdjIcon:SetSize(26, 26)
     frame.bossesTab.fdjIcon:ClearAllPoints()
     frame.bossesTab.fdjIcon:SetPoint("LEFT", 3, 0)
     frame.bossesTab.fdjIcon:SetTexture("Interface\\TargetingFrame\\UI-RaidTargetingIcon_8")
     frame.bossesTab.fdjIcon:Show()
     if frame.bossesTab.text then
         frame.bossesTab.text:ClearAllPoints()
-        frame.bossesTab.text:SetPoint("CENTER", frame.bossesTab, "CENTER", 6, 0)
+        frame.bossesTab.text:SetPoint("CENTER", frame.bossesTab, "CENTER", 7, 0)
     end
 
+    -- Quest icon: use the current Forever/Blizzard quest atlas when available.
     if not frame.questsTab.fdjIcon then
         frame.questsTab.fdjIcon = frame.questsTab:CreateTexture(nil, "OVERLAY")
     end
-    frame.questsTab.fdjIcon:SetSize(24, 24)
+    frame.questsTab.fdjIcon:SetSize(27, 27)
     frame.questsTab.fdjIcon:ClearAllPoints()
     frame.questsTab.fdjIcon:SetPoint("LEFT", 3, 0)
     local atlasOK = false
@@ -2619,74 +3514,55 @@ local function UpdateDungeonHeaderTabs()
     frame.questsTab.fdjIcon:Show()
     if frame.questsTab.text then
         frame.questsTab.text:ClearAllPoints()
-        frame.questsTab.text:SetPoint("CENTER", frame.questsTab, "CENTER", 6, 0)
+        frame.questsTab.text:SetPoint("CENTER", frame.questsTab, "CENTER", 7, 0)
     end
 
+    -- Map icon: use the supplied parchment-map icon in the same oversized
+    -- left-side style as the Bosses skull and Quests exclamation mark.
     if frame.mapTab then
         if not frame.mapTab.fdjIcon then
             frame.mapTab.fdjIcon = frame.mapTab:CreateTexture(nil, "OVERLAY")
         end
-        frame.mapTab.fdjIcon:SetSize(22, 22)
+        frame.mapTab.fdjIcon:SetSize(30, 30)
         frame.mapTab.fdjIcon:ClearAllPoints()
-        frame.mapTab.fdjIcon:SetPoint("LEFT", 4, 0)
-        frame.mapTab.fdjIcon:SetTexture("Interface\\Icons\\INV_Misc_Map02")
-        frame.mapTab.fdjIcon:SetTexCoord(0.08, 0.92, 0.08, 0.92)
+        frame.mapTab.fdjIcon:SetPoint("LEFT", 3, 0)
+        frame.mapTab.fdjIcon:SetTexture("Interface\\AddOns\\ForeverDungeonJournal\\Media\\MapTabIcon")
+        frame.mapTab.fdjIcon:SetTexCoord(0, 1, 0, 1)
         frame.mapTab.fdjIcon:Show()
         if frame.mapTab.text then
             frame.mapTab.text:ClearAllPoints()
-            frame.mapTab.text:SetPoint("CENTER", frame.mapTab, "CENTER", 12, 0)
+            frame.mapTab.text:SetPoint("CENTER", frame.mapTab, "CENTER", 7, 0)
         end
     end
 end
 
 local function UpdateFactionButtons()
-    if not frame then return end
-
-    local theme = THEMES[selectedDungeon] or THEMES["Hall of Thanes"]
-
-    if frame.allianceQuestButton and frame.hordeQuestButton then
-        local function Style(button, active)
-            if active then
-                button:SetBackdropColor(unpack(theme.rowSelected))
-                button:SetBackdropBorderColor(unpack(theme.title))
-                button.icon:SetAlpha(1)
-                if button.icon.SetDesaturated then button.icon:SetDesaturated(false) end
-            else
-                button:SetBackdropColor(unpack(theme.row))
-                button:SetBackdropBorderColor(unpack(theme.border))
-                button.icon:SetAlpha(0.55)
-                if button.icon.SetDesaturated then button.icon:SetDesaturated(true) end
-            end
-        end
-
-        Style(frame.allianceQuestButton, selectedQuestFaction == "Alliance")
-        Style(frame.hordeQuestButton, selectedQuestFaction == "Horde")
+    if not frame or not frame.allianceQuestButton or not frame.hordeQuestButton then
+        return
     end
 
-    if frame.homeAllianceButton and frame.homeHordeButton then
-        local function StyleHome(button, active)
-            if active then
-                button:SetBackdropColor(0.24, 0.18, 0.10, 0.98)
-                button:SetBackdropBorderColor(1.00, 0.82, 0.27, 1)
-                button.icon:SetAlpha(1)
-                if button.icon.SetDesaturated then button.icon:SetDesaturated(false) end
-            else
-                button:SetBackdropColor(0.12, 0.115, 0.105, 0.85)
-                button:SetBackdropBorderColor(0.38, 0.32, 0.24, 0.80)
-                button.icon:SetAlpha(0.40)
-                if button.icon.SetDesaturated then button.icon:SetDesaturated(true) end
-            end
-        end
+    local theme = FDJ.THEMES[selectedDungeon] or FDJ.THEMES["Hall of Thanes"]
 
-        StyleHome(frame.homeAllianceButton, selectedQuestFaction == "Alliance")
-        StyleHome(frame.homeHordeButton, selectedQuestFaction == "Horde")
+    local function Style(button, active, faction)
+        if active then
+            button:SetBackdropColor(unpack(theme.rowSelected))
+            button:SetBackdropBorderColor(unpack(theme.title))
+            button.icon:SetAlpha(1)
+        else
+            button:SetBackdropColor(unpack(theme.row))
+            button:SetBackdropBorderColor(unpack(theme.border))
+            button.icon:SetAlpha(0.55)
+        end
     end
+
+    Style(frame.allianceQuestButton, selectedQuestFaction == "Alliance", "Alliance")
+    Style(frame.hordeQuestButton, selectedQuestFaction == "Horde", "Horde")
 end
 
 local function BuildVisibleQuestIndexes()
     wipe(FDJ.visibleQuestIndexes)
 
-    local dungeon = DB[selectedDungeon]
+    local dungeon = FDJ.DB[selectedDungeon]
     local quests = dungeon.quests or {}
 
     for index, quest in ipairs(quests) do
@@ -2712,9 +3588,9 @@ end
 RefreshQuestList = function()
     if not frame or not frame.questContent then return end
 
-    local dungeon = DB[selectedDungeon]
+    local dungeon = FDJ.DB[selectedDungeon]
     local quests = dungeon.quests or {}
-    local theme = THEMES[selectedDungeon] or THEMES["Hall of Thanes"]
+    local theme = FDJ.THEMES[selectedDungeon] or FDJ.THEMES["Hall of Thanes"]
 
     BuildVisibleQuestIndexes()
     UpdateFactionButtons()
@@ -2744,22 +3620,7 @@ RefreshQuestList = function()
 
             button.questIndex = questIndex
             button.name:SetText(QuestField(quest.id, "name", quest.name))
-            local diffR, diffG, diffB = GetQuestDifficultyColorSafe(quest.level or quest.requires)
-            local isInside = FDJ.IsInsideDungeonQuest(quest)
-            local diffHex = string.format("%02x%02x%02x", diffR * 255, diffG * 255, diffB * 255)
-            local levelTag = "|cff" .. diffHex .. "[Lv " .. (quest.level or quest.requires) .. "]|r"
-            local metaText = L("REQ_LEVEL", quest.requires) .. " " .. levelTag
-            if quest.startQuestLink then
-                metaText = metaText .. "  |cffd4af37• " .. L("PART_TWO") .. "|r"
-            elseif quest.leadsToQuestLink then
-                metaText = metaText .. "  |cffd4af37• " .. L("PART_ONE") .. "|r"
-            elseif isInside then
-                metaText = metaText .. "  |cff5ce1e6• " .. L("INSIDE_DUNGEON") .. "|r"
-            end
-            button.meta:SetText(metaText)
-            if button.dungeonBadge then
-                button.dungeonBadge:SetShown(isInside and not quest.startQuestLink and not quest.leadsToQuestLink)
-            end
+            button.meta:SetText(L("AVAILABLE_FROM_LEVEL", quest.requires))
             local titleHeight = math.max(14, button.name:GetStringHeight() or 14)
             local metaHeight = math.max(12, button.meta:GetStringHeight() or 12)
             local baseRowHeight = math.max(48, 9 + titleHeight + 5 + metaHeight + 10)
@@ -2767,32 +3628,9 @@ RefreshQuestList = function()
 
             button.questID = quest.id
             local rawChain = GetQuestPrereqChain(quest)
-            local chain = nil
+            local chain = rawChain
 
-            -- Do not duplicate prerequisite quests that are already displayed as
-            -- full main entries in this dungeon's quest list. For example,
-            -- "Searching for the Lost Satchel" is already visible directly above
-            -- "Returning the Lost Satchel", so repeating it in an expanded child
-            -- panel adds no useful information.
-            if rawChain then
-                local mainQuestIDs = {}
-                for _, mainQuest in ipairs(quests) do
-                    if mainQuest.id and not mainQuest.hideFromMainList then
-                        mainQuestIDs[mainQuest.id] = true
-                    end
-                end
-
-                local filtered = {}
-                for _, step in ipairs(rawChain) do
-                    if not (step.id and mainQuestIDs[step.id]) then
-                        filtered[#filtered + 1] = step
-                    end
-                end
-
-                if #filtered > 0 then chain = filtered end
-            end
-
-            local chainExpanded = chain and expandedQuestChains[quest.id] == true
+            local chainExpanded = chain and FDJ.expandedQuestChains[quest.id] == true
 
             if button.chainToggle then
                 button.chainToggle:SetShown(chain ~= nil)
@@ -2977,27 +3815,17 @@ RefreshQuestList = function()
                 end
             end
 
-            local diffR, diffG, diffB = GetQuestDifficultyColorSafe(quest.level or quest.requires)
             if selectedQuest == questIndex then
                 button:SetBackdropColor(unpack(theme.rowSelected))
-                button:SetBackdropBorderColor(1.00, 0.82, 0.25, 0.95)
-                if complete then
-                    button.name:SetTextColor(0.30, 1.00, 0.36)
-                else
-                    button.name:SetTextColor(diffR, diffG, diffB)
-                end
-                button.meta:SetTextColor(0.95, 0.88, 0.72)
+                button:SetBackdropBorderColor(unpack(theme.border))
+                button.name:SetTextColor(unpack(theme.title))
             else
                 button:SetBackdropColor(unpack(theme.row))
                 button:SetBackdropBorderColor(unpack(theme.border))
-                if complete then
-                    button.name:SetTextColor(0.30, 1.00, 0.36)
-                else
-                    button.name:SetTextColor(diffR, diffG, diffB)
-                end
-                button.meta:SetTextColor(0.80, 0.72, 0.58)
+                button.name:SetTextColor(unpack(theme.muted))
             end
 
+            button.meta:SetTextColor(unpack(theme.muted))
             button.completeGlow:SetShown(complete)
             button.check:SetShown(complete)
             if button.UpdateHaveItLabel then button:UpdateHaveItLabel() end
@@ -3015,7 +3843,7 @@ RefreshQuestList = function()
 
     contentHeight = math.max(1, contentHeight - 3)
     frame.questContent:SetHeight(contentHeight)
-    UpdateScrollBarVisibility(frame.questListScroll, contentHeight)
+    FDJ.UpdateScrollBarVisibility(frame.questListScroll, contentHeight)
 end
 
 local function GetQuestLogIndexForQuestIDSafe(questID)
@@ -3038,7 +3866,7 @@ local function GetLoadedQuestTitle(questID, fallback)
         local getter = C_QuestLog.GetTitleForQuestID or C_QuestLog.GetQuestInfo
         if type(getter) == "function" then
             local ok, title = pcall(getter, questID)
-            if ok and not IsSecret(title) and type(title) == "string" and title ~= "" then
+            if ok and not FDJ.IsSecret(title) and type(title) == "string" and title ~= "" then
                 return title
             end
         end
@@ -3087,7 +3915,7 @@ local function GetPrerequisiteRewardXP(questID)
     end
     if type(GetQuestLogRewardXP) ~= "function" then return nil end
     local ok, value = pcall(GetQuestLogRewardXP, questID)
-    if ok and not IsSecret(value) and type(value) == "number" and value > 0 then
+    if ok and not FDJ.IsSecret(value) and type(value) == "number" and value > 0 then
         return value
     end
     return nil
@@ -3100,7 +3928,7 @@ local function GetPrerequisiteRewardMoney(questID)
     end
     if type(GetQuestLogRewardMoney) ~= "function" then return 0 end
     local ok, value = pcall(GetQuestLogRewardMoney, questID)
-    if ok and not IsSecret(value) and type(value) == "number" and value > 0 then
+    if ok and not FDJ.IsSecret(value) and type(value) == "number" and value > 0 then
         return value
     end
     return 0
@@ -3148,12 +3976,15 @@ local function RefreshPrerequisiteQuestDetail(step)
     if not frame or not step then return false end
 
     local questID = step.id
-    if questID then RequestQuestRewardData(questID) end
+    -- Item steps (e.g. the Data Rescue punch cards) are not real quests:
+    -- never query the quest API for their placeholder IDs.
+    local isItemStep = step.itemStep
+    if questID and not isItemStep then RequestQuestRewardData(questID) end
 
-    local title = GetLoadedQuestTitle(questID, step.name)
-    local complete = questID and IsQuestFinished(questID) or false
-    local inLog = questID and IsQuestInLog(questID) or false
-    local logIndex = questID and GetQuestLogIndexForQuestIDSafe(questID) or nil
+    local title = isItemStep and QuestField(questID, "name", step.name) or GetLoadedQuestTitle(questID, step.name)
+    local complete = (questID and not isItemStep and IsQuestFinished(questID)) or false
+    local inLog = (questID and not isItemStep and IsQuestInLog(questID)) or false
+    local logIndex = (questID and not isItemStep and GetQuestLogIndexForQuestIDSafe(questID)) or nil
     local details = (questID and FDJ.QUEST_PREREQ_DETAILS[questID]) or {}
     local level = step.level or details.level
     local requiredLevel = step.requires or details.requires
@@ -3171,8 +4002,8 @@ local function RefreshPrerequisiteQuestDetail(step)
         if type(GetQuestLogQuestText) == "function" then
             local ok, desc, obj = pcall(GetQuestLogQuestText, logIndex)
             if ok then
-                if not IsSecret(desc) and type(desc) == "string" and desc ~= "" then description = desc end
-                if not IsSecret(obj) and type(obj) == "string" and obj ~= "" then objectiveText = obj end
+                if not FDJ.IsSecret(desc) and type(desc) == "string" and desc ~= "" then description = desc end
+                if not FDJ.IsSecret(obj) and type(obj) == "string" and obj ~= "" then objectiveText = obj end
             end
         end
     end
@@ -3182,7 +4013,7 @@ local function RefreshPrerequisiteQuestDetail(step)
         if ok and type(objectives) == "table" and #objectives > 0 then
             local parts = {}
             for _, objective in ipairs(objectives) do
-                if type(objective) == "table" and not IsSecret(objective.text)
+                if type(objective) == "table" and not FDJ.IsSecret(objective.text)
                     and type(objective.text) == "string" and objective.text ~= "" then
                     parts[#parts + 1] = objective.text
                 end
@@ -3212,6 +4043,25 @@ local function RefreshPrerequisiteQuestDetail(step)
     frame.selectedQuestComplete:SetShown(complete)
     UpdatePrerequisiteNavButtons()
 
+    -- Prerequisite/quest-chain steps use the same shareability control as
+    -- normal dungeon quests. Keep it to the left of the chain navigation
+    -- arrows so neither control overlaps the other.
+    local prereqShareInset = 92
+    if questID and frame.questShareButton then
+        FDJ.UpdateQuestShareButton(questID, nil)
+        local shareWidth = frame.questShareButton:GetWidth() or 76
+        frame.questShareButton:ClearAllPoints()
+        frame.questShareButton:SetPoint("TOPRIGHT", frame.questTextInset, "TOPRIGHT", -82, -10)
+        prereqShareInset = 94 + shareWidth
+    elseif frame.questShareButton then
+        frame.questShareButton.questID = nil
+        frame.questShareButton:Hide()
+    end
+
+    frame.selectedQuestName:ClearAllPoints()
+    frame.selectedQuestName:SetPoint("TOPLEFT", frame.questTextInset, "TOPLEFT", 16, -15)
+    frame.selectedQuestName:SetPoint("RIGHT", frame.questTextInset, "RIGHT", -prereqShareInset, 0)
+
     local detailWidth = math.max(260, (frame.questDetailScroll:GetWidth() or 350) - 4)
     frame.questDetailContent:SetWidth(detailWidth)
     frame.questDetailText:SetWidth(detailWidth)
@@ -3238,34 +4088,18 @@ local function RefreshPrerequisiteQuestDetail(step)
         frame.questLeadsToButton:Hide()
     end
     if frame.questStartItemButton then frame.questStartItemButton.item = nil; frame.questStartItemButton:Hide() end
+    if frame.questRequiredItemsHeader then frame.questRequiredItemsHeader:Hide() end
+    if frame.questRequiredItemButton then frame.questRequiredItemButton.item = nil; frame.questRequiredItemButton:Hide() end
     if frame.questNoteItemButton then frame.questNoteItemButton.item = nil; frame.questNoteItemButton:Hide() end
     if frame.questStartsText then frame.questStartsText:SetText(""); frame.questStartsText:Hide() end
+    if frame.questStartDungeonIcon then frame.questStartDungeonIcon:Hide() end
     if frame.questTurninText then frame.questTurninText:SetText(""); frame.questTurninText:Hide() end
-
-    local prereqInLog = details and details.id and IsQuestInLog(details.id)
-    if frame.questShareButton then
-        frame.questShareButton.quest = details
-        frame.questShareButton:SetShown(prereqInLog)
-    end
-    if frame.questTrackButton then
-        frame.questTrackButton.quest = details
-        frame.questTrackButton:SetShown(prereqInLog)
-        if prereqInLog then
-            local isWatched = false
-            if C_QuestLog and type(C_QuestLog.GetQuestWatchType) == "function" then
-                isWatched = (C_QuestLog.GetQuestWatchType(details.id) ~= nil)
-            else
-                local logIdx = GetQuestLogIndexForQuestIDSafe(details.id)
-                if logIdx and type(IsQuestWatched) == "function" then
-                    isWatched = IsQuestWatched(logIdx)
-                end
-            end
-            frame.questTrackButton:SetText(isWatched and L("UNTRACK_QUEST") or L("TRACK_QUEST"))
-        end
-    end
 
     for _, button in ipairs(FDJ.questRewardButtons) do button.item = nil; button:Hide() end
     for _, button in ipairs(FDJ.questNoteRewardButtons) do button.item = nil; button:Hide() end
+    if frame.questAdditionalRewardButtons then
+        for _, button in ipairs(frame.questAdditionalRewardButtons) do button.item = nil; button:Hide() end
+    end
     if frame.questXPReward then frame.questXPReward:Hide() end
     if frame.questMoneyReward then frame.questMoneyReward:Hide() end
     frame.questRewardHeader:SetText("")
@@ -3309,11 +4143,11 @@ local function RefreshPrerequisiteQuestDetail(step)
 
             frame.questStartItemButton.item = startItem
             frame.questStartItemButton.fdjSourceText = FreeText(startItem[4])
-            frame.questStartItemButton.icon:SetTexture(ItemIcon(startItem[1]))
-            local itemName = ItemInfo(startItem[1])
+            frame.questStartItemButton.icon:SetTexture(FDJ.ItemIcon(startItem[1]))
+            local itemName = FDJ.ItemInfo(startItem[1])
             frame.questStartItemButton.name:SetText(itemName or startItem[2])
             frame.questStartItemButton.name:SetTextColor(1, 1, 1)
-            local itemTheme = THEMES[selectedDungeon] or THEMES["Hall of Thanes"]
+            local itemTheme = FDJ.THEMES[selectedDungeon] or FDJ.THEMES["Hall of Thanes"]
             frame.questStartItemButton:SetBackdropColor(unpack(itemTheme.lootRow))
             frame.questStartItemButton:SetBackdropBorderColor(unpack(itemTheme.border))
             frame.questStartItemButton:SetPoint("TOPLEFT", frame.questDetailContent, "TOPLEFT", 0, -cursorY)
@@ -3322,9 +4156,16 @@ local function RefreshPrerequisiteQuestDetail(step)
         else
             frame.questStartsText:ClearAllPoints()
             frame.questStartsText:SetPoint("TOPLEFT", frame.questDetailContent, "TOPLEFT", 0, -cursorY)
-            frame.questStartsText:SetText(QuestField(questID, "pickup", details.pickup))
+            local pickupText = QuestField(questID, "pickup", details.pickup)
+            frame.questStartsText:SetText(pickupText)
             frame.questStartsText:SetTextColor(0.10, 0.065, 0.025)
             frame.questStartsText:Show()
+            if frame.questStartDungeonIcon then
+                frame.questStartDungeonIcon:Hide()
+                if FDJ.StartsInsideDungeon(pickupText) then
+                    FDJ.PositionInDungeonIcon()
+                end
+            end
             cursorY = cursorY + (frame.questStartsText:GetStringHeight() or 24) + 7
         end
 
@@ -3332,6 +4173,9 @@ local function RefreshPrerequisiteQuestDetail(step)
             frame.questMapButton:ClearAllPoints()
             frame.questMapButton.quest = nil
             frame.questMapButton.prereqLocation = (FDJ.LocalizeMapLocation and FDJ.LocalizeMapLocation(details.map)) or details.map
+            if FDJ.MapMarkers and FDJ.MapMarkers.ConfigureTargetAndMarkAction then
+                FDJ.MapMarkers.ConfigureTargetAndMarkAction(frame.questMapButton, frame.questMapButton.prereqLocation, true)
+            end
             frame.questMapButton:SetPoint("TOPLEFT", frame.questDetailContent, "TOPLEFT", 0, -cursorY)
             frame.questMapButton:Show()
             cursorY = cursorY + 31
@@ -3400,16 +4244,16 @@ local function RefreshPrerequisiteQuestDetail(step)
                 button:SetWidth(rewardWidth)
                 local item = prereqRewardItems[i]
                 button.item = item
-                button.icon:SetTexture(ItemIcon(item[1]))
+                button.icon:SetTexture(FDJ.ItemIcon(item[1]))
                 if C_Item and type(C_Item.RequestLoadItemDataByID) == "function" then
                     pcall(C_Item.RequestLoadItemDataByID, item[1])
                 end
 
-                local itemName, itemLink, quality = ItemInfo(item[1])
+                local itemName, itemLink, quality = FDJ.ItemInfo(item[1])
                 local r, g, b = GetAuthoritativeItemQuality(item[1], itemLink, quality, item[3] or 1)
                 button.name:SetText(itemName or item[2])
                 button.name:SetTextColor(r, g, b)
-                local theme = THEMES[selectedDungeon] or THEMES["Hall of Thanes"]
+                local theme = FDJ.THEMES[selectedDungeon] or FDJ.THEMES["Hall of Thanes"]
                 button:SetBackdropColor(unpack(theme.lootRow))
                 button:SetBackdropBorderColor(unpack(theme.border))
 
@@ -3431,7 +4275,7 @@ local function RefreshPrerequisiteQuestDetail(step)
         if frame.questXPReward and prereqXP and prereqXP > 0 then
             frame.questXPReward:ClearAllPoints()
             frame.questXPReward:SetPoint("TOPLEFT", frame.questDetailContent, "TOPLEFT", 0, -cursorY)
-            frame.questXPReward.text:SetText(FormatNumber(prereqXP) .. " XP")
+            frame.questXPReward.text:SetText(FDJ.FormatNumber(prereqXP) .. " XP")
             frame.questXPReward:Show()
             hasBar = true
         elseif frame.questXPReward then
@@ -3463,11 +4307,14 @@ local function RefreshPrerequisiteQuestDetail(step)
 
     frame.questDetailContent:SetHeight(math.max(1, cursorY))
     frame.questDetailScroll:SetVerticalScroll(0)
-    UpdateScrollBarVisibility(frame.questDetailScroll, cursorY)
+    FDJ.UpdateScrollBarVisibility(frame.questDetailScroll, cursorY)
     return true
 end
 
 RefreshQuestDetail = function()
+    for _, button in ipairs(FDJ.questRewardButtons) do HideSearchItemHighlight(button) end
+    for _, button in ipairs(FDJ.questNoteRewardButtons) do HideSearchItemHighlight(button) end
+    if frame and frame.questNoteItemButton then HideSearchItemHighlight(frame.questNoteItemButton) end
     if not frame or not frame.questDetailText then return end
 
     if selectedPrereqStep then
@@ -3476,7 +4323,7 @@ RefreshQuestDetail = function()
     if frame.questPrevStepButton then frame.questPrevStepButton:Hide() end
     if frame.questNextStepButton then frame.questNextStepButton:Hide() end
 
-    local dungeon = DB[selectedDungeon]
+    local dungeon = FDJ.DB[selectedDungeon]
     local quest = dungeon.quests and dungeon.quests[selectedQuest]
     if not quest or not QuestMatchesFaction(quest, selectedQuestFaction) then
         BuildVisibleQuestIndexes()
@@ -3489,6 +4336,7 @@ RefreshQuestDetail = function()
         if frame.selectedQuestClassIcon then frame.selectedQuestClassIcon:Hide() end
         if frame.selectedQuestMetaClassIcon then frame.selectedQuestMetaClassIcon:Hide() end
         frame.selectedQuestComplete:Hide()
+        if frame.questShareButton then frame.questShareButton.questID = nil; frame.questShareButton:Hide() end
         if frame.questDetailScroll then frame.questDetailScroll:Hide() end
         if frame.noQuestMessage then
             frame.noQuestMessage:SetText(L("NO_FACTION_QUESTS", selectedQuestFaction))
@@ -3505,7 +4353,10 @@ RefreshQuestDetail = function()
         if frame.questStartLinkButton then frame.questStartLinkButton.questID = nil; frame.questStartLinkButton:Hide() end
         if frame.questLeadsToButton then frame.questLeadsToButton.questID = nil; frame.questLeadsToButton:Hide() end
         if frame.questStartItemButton then frame.questStartItemButton.item = nil; frame.questStartItemButton:Hide() end
+        if frame.questRequiredItemsHeader then frame.questRequiredItemsHeader:Hide() end
+        if frame.questRequiredItemButton then frame.questRequiredItemButton.item = nil; frame.questRequiredItemButton:Hide() end
         if frame.questNoteItemButton then frame.questNoteItemButton.item = nil; frame.questNoteItemButton:Hide() end
+        if frame.questStartDungeonIcon then frame.questStartDungeonIcon:Hide() end
         if frame.questTurninText then frame.questTurninText:SetText("") end
         frame.questRewardHeader:SetText("")
         if frame.questXPReward then frame.questXPReward:Hide() end
@@ -3513,15 +4364,16 @@ RefreshQuestDetail = function()
         frame.questRewardSummary:SetText("")
         for _, button in ipairs(FDJ.questRewardButtons) do button.item = nil; button:Hide() end
         for _, button in ipairs(FDJ.questNoteRewardButtons) do button.item = nil; button:Hide() end
-        if frame.questLiveObjectives then for _, line in ipairs(frame.questLiveObjectives) do line:Hide() end end
-        if frame.questShareButton then frame.questShareButton.quest = nil; frame.questShareButton:Hide() end
-        if frame.questTrackButton then frame.questTrackButton.quest = nil; frame.questTrackButton:Hide() end
+        if frame.questAdditionalRewardButtons then
+            for _, button in ipairs(frame.questAdditionalRewardButtons) do button.item = nil; button:Hide() end
+        end
         frame.questDetailContent:SetHeight(1)
         return
     end
 
     if frame.questDetailScroll then frame.questDetailScroll:Show() end
     if frame.noQuestMessage then frame.noQuestMessage:Hide() end
+    if frame.questStartDungeonIcon then frame.questStartDungeonIcon:Hide() end
 
     local detailWidth = math.max(260, (frame.questDetailScroll:GetWidth() or 350) - 4)
     frame.questDetailContent:SetWidth(detailWidth)
@@ -3530,40 +4382,13 @@ RefreshQuestDetail = function()
     if frame.questTurninText then frame.questTurninText:SetWidth(detailWidth) end
     if frame.questNotesText then frame.questNotesText:SetWidth(detailWidth) end
     local rewardWidth = math.floor((detailWidth - 10) / 2)
-    local theme = THEMES[selectedDungeon] or THEMES["Hall of Thanes"]
+    local theme = FDJ.THEMES[selectedDungeon] or FDJ.THEMES["Hall of Thanes"]
     local complete = IsQuestFinished(quest.id)
 
     frame.selectedQuestName:SetText(QuestField(quest.id, "name", quest.name))
-    local qr, qg, qb = GetQuestDifficultyColorSafe(quest.level or quest.requires)
-    if complete then
-        frame.selectedQuestName:SetTextColor(0.30, 1.00, 0.36)
-    else
-        frame.selectedQuestName:SetTextColor(qr, qg, qb)
-    end
+    frame.selectedQuestName:SetTextColor(1.00, 0.78, 0.16)
     frame.selectedQuestName:SetShadowColor(0, 0, 0, 1)
     frame.selectedQuestName:SetShadowOffset(1, -1)
-
-    local inLog = IsQuestInLog(quest.id)
-    if frame.questShareButton then
-        frame.questShareButton.quest = quest
-        frame.questShareButton:SetShown(inLog)
-    end
-    if frame.questTrackButton then
-        frame.questTrackButton.quest = quest
-        frame.questTrackButton:SetShown(inLog)
-        if inLog then
-            local isWatched = false
-            if C_QuestLog and type(C_QuestLog.GetQuestWatchType) == "function" then
-                isWatched = (C_QuestLog.GetQuestWatchType(quest.id) ~= nil)
-            else
-                local logIdx = GetQuestLogIndexForQuestIDSafe(quest.id)
-                if logIdx and type(IsQuestWatched) == "function" then
-                    isWatched = IsQuestWatched(logIdx)
-                end
-            end
-            frame.questTrackButton:SetText(isWatched and L("UNTRACK_QUEST") or L("TRACK_QUEST"))
-        end
-    end
 
     local classLabel, classR, classG, classB, classToken = GetQuestClassRestriction(quest)
     if classLabel and frame.selectedQuestClass then
@@ -3582,40 +4407,32 @@ RefreshQuestDetail = function()
             frame.selectedQuestClassIcon:Show()
         end
 
-        frame.selectedQuestName:ClearAllPoints()
-        frame.selectedQuestName:SetPoint("TOPLEFT", frame.questTextInset, "TOPLEFT", 16, -15)
-        frame.selectedQuestName:SetPoint("RIGHT", frame.questTextInset, "RIGHT", -150, 0)
         frame.selectedQuestComplete:ClearAllPoints()
         frame.selectedQuestComplete:SetPoint("RIGHT", frame.selectedQuestClass, "LEFT", -6, 0)
     else
         if frame.selectedQuestClass then frame.selectedQuestClass:Hide() end
         if frame.selectedQuestClassIcon then frame.selectedQuestClassIcon:Hide() end
-        frame.selectedQuestName:ClearAllPoints()
-        frame.selectedQuestName:SetPoint("TOPLEFT", frame.questTextInset, "TOPLEFT", 16, -15)
-        frame.selectedQuestName:SetPoint("RIGHT", frame.questTextInset, "RIGHT", -150, 0)
         frame.selectedQuestComplete:ClearAllPoints()
         frame.selectedQuestComplete:SetPoint("TOPRIGHT", frame.questTextInset, "TOPRIGHT", -16, -11)
     end
 
-    local isInside = FDJ.IsInsideDungeonQuest(quest)
-    local diffHex = string.format("%02x%02x%02x", qr * 255, qg * 255, qb * 255)
-    local metaText = L("REQ_LEVEL", quest.requires)
-        .. "  |cff" .. diffHex .. "[Lv " .. (quest.level or quest.requires) .. "]|r"
-        .. "     " .. FactionLabel(quest.faction)
-    if quest.startQuestLink then
-        metaText = metaText .. "     |cffd4af37[" .. L("PART_TWO") .. "]|r"
-    elseif quest.leadsToQuestLink then
-        metaText = metaText .. "     |cffd4af37[" .. L("PART_ONE") .. "]|r"
-    elseif isInside then
-        metaText = metaText .. "     |cff1a557a[" .. L("INSIDE_DUNGEON") .. "]|r"
-    end
-    frame.selectedQuestMeta:SetText(metaText)
+    local shareTitleInset = FDJ.UpdateQuestShareButton(quest.id, classLabel)
+    frame.selectedQuestName:ClearAllPoints()
+    frame.selectedQuestName:SetPoint("TOPLEFT", frame.questTextInset, "TOPLEFT", 16, -15)
+    frame.selectedQuestName:SetPoint("RIGHT", frame.questTextInset, "RIGHT", -shareTitleInset, 0)
+
+    frame.selectedQuestMeta:SetText(
+        L("AVAILABLE_FROM_LEVEL", quest.requires)
+        .. "     " .. FDJ.FactionLabel(quest.faction)
+
+    )
     frame.selectedQuestMeta:SetTextColor(0.25, 0.16, 0.08)
 
     if frame.selectedQuestMetaClassIcon then
         frame.selectedQuestMetaClassIcon:Hide()
     end
 
+    -- Keep multi-line quest titles and faction icons above the body separator.
     local headerHeight = math.max(classLabel and 78 or 58, 15 + frame.selectedQuestName:GetStringHeight()
         + 5 + math.max(24, frame.selectedQuestMeta:GetStringHeight()) + 8)
     frame.questHeaderSeparator:ClearAllPoints()
@@ -3623,12 +4440,14 @@ RefreshQuestDetail = function()
     frame.questHeaderSeparator:SetPoint("TOPRIGHT", -14, -headerHeight)
     frame.questDetailScroll:ClearAllPoints()
     frame.questDetailScroll:SetPoint("TOPLEFT", 16, -(headerHeight + 14))
-    frame.questDetailScroll:SetPoint("BOTTOMRIGHT", -31, inLog and 36 or 16)
+    frame.questDetailScroll:SetPoint("BOTTOMRIGHT", -31, 16)
 
     if frame.selectedQuestComplete then
         frame.selectedQuestComplete:SetShown(complete)
     end
 
+    -- Keep the body text identical to Blizzard's parchment quest text. Only
+    -- the section labels use white outlined text for visibility.
     local cursorY = 0
 
     local function PlaceHeader(header, y)
@@ -3643,86 +4462,47 @@ RefreshQuestDetail = function()
     frame.questDetailText:SetPoint("TOPLEFT", frame.questDetailContent, "TOPLEFT", 0, -cursorY)
     frame.questDetailText:SetText(QuestField(quest.id, "objective", quest.objective))
     frame.questDetailText:SetTextColor(0.10, 0.065, 0.025)
-    cursorY = cursorY + (frame.questDetailText:GetStringHeight() or 30) + 8
+    cursorY = cursorY + (frame.questDetailText:GetStringHeight() or 30) + 13
 
-    -- Live Quest Objectives Progress
-    if inLog then
-        local liveObjectives = nil
-        if C_QuestLog and type(C_QuestLog.GetQuestObjectives) == "function" then
-            local ok, objs = pcall(C_QuestLog.GetQuestObjectives, quest.id)
-            if ok and type(objs) == "table" and #objs > 0 then
-                liveObjectives = objs
-            end
+    if quest.requiredItem and frame.questRequiredItemButton then
+        cursorY = PlaceHeader(frame.questRequiredItemsHeader, cursorY)
+        frame.questRequiredItemButton.item = quest.requiredItem
+        frame.questRequiredItemButton:SetWidth(math.min(260, rewardWidth))
+        frame.questRequiredItemButton.icon:SetTexture(FDJ.ItemIcon(quest.requiredItem[1]))
+        if C_Item and type(C_Item.RequestLoadItemDataByID) == "function" then
+            pcall(C_Item.RequestLoadItemDataByID, quest.requiredItem[1])
         end
-        if not liveObjectives then
-            local logIndex = GetQuestLogIndexForQuestIDSafe(quest.id)
-            if logIndex and type(GetNumQuestLeaderBoards) == "function" then
-                local num = GetNumQuestLeaderBoards(logIndex)
-                if num and num > 0 then
-                    liveObjectives = {}
-                    for i = 1, num do
-                        local text, objType, finished = GetQuestLogLeaderBoard(i, logIndex)
-                        if text then
-                            table.insert(liveObjectives, { text = text, finished = finished })
-                        end
-                    end
-                end
-            end
+        do
+            local itemName, itemLink, quality = FDJ.ItemInfo(quest.requiredItem[1])
+            local r, g, b = GetAuthoritativeItemQuality(quest.requiredItem[1], itemLink, quality, quest.requiredItem[3] or 1)
+            local countText = quest.requiredItem[4] and quest.requiredItem[4] > 1 and (" ×" .. tostring(quest.requiredItem[4])) or ""
+            frame.questRequiredItemButton.name:SetText((itemName or quest.requiredItem[2] or L("ITEM")) .. countText)
+            frame.questRequiredItemButton.name:SetTextColor(r, g, b)
         end
-
-        if liveObjectives and #liveObjectives > 0 then
-            for objIdx, obj in ipairs(liveObjectives) do
-                local objLine = frame.questLiveObjectives and frame.questLiveObjectives[objIdx]
-                if not objLine then
-                    frame.questLiveObjectives = frame.questLiveObjectives or {}
-                    objLine = frame.questDetailContent:CreateFontString(nil, "OVERLAY", "GameFontHighlightSmall")
-                    objLine:SetJustifyH("LEFT")
-                    objLine:SetWordWrap(true)
-                    frame.questLiveObjectives[objIdx] = objLine
-                end
-                objLine:ClearAllPoints()
-                objLine:SetPoint("TOPLEFT", frame.questDetailContent, "TOPLEFT", 10, -cursorY)
-                objLine:SetWidth(detailWidth - 20)
-                if obj.finished then
-                    objLine:SetText("|cff40ff40• " .. (obj.text or "") .. " (" .. L("DONE") .. ")|r")
-                else
-                    objLine:SetText("|cffffd100• " .. (obj.text or "") .. "|r")
-                end
-                objLine:Show()
-                cursorY = cursorY + (objLine:GetStringHeight() or 14) + 4
-            end
-            if frame.questLiveObjectives then
-                for i = #liveObjectives + 1, #frame.questLiveObjectives do
-                    frame.questLiveObjectives[i]:Hide()
-                end
-            end
-            cursorY = cursorY + 6
-        elseif frame.questLiveObjectives then
-            for _, line in ipairs(frame.questLiveObjectives) do line:Hide() end
-        end
-    elseif frame.questLiveObjectives then
-        for _, line in ipairs(frame.questLiveObjectives) do line:Hide() end
+        frame.questRequiredItemButton:SetBackdropColor(unpack(theme.lootRow))
+        frame.questRequiredItemButton:SetBackdropBorderColor(unpack(theme.border))
+        frame.questRequiredItemButton:ClearAllPoints()
+        frame.questRequiredItemButton:SetPoint("TOPLEFT", frame.questDetailContent, "TOPLEFT", 0, -cursorY)
+        frame.questRequiredItemButton:Show()
+        cursorY = cursorY + 54
+    else
+        if frame.questRequiredItemsHeader then frame.questRequiredItemsHeader:Hide() end
+        if frame.questRequiredItemButton then frame.questRequiredItemButton.item = nil; frame.questRequiredItemButton:Hide() end
     end
-    cursorY = cursorY + 6
 
     cursorY = PlaceHeader(frame.questStartsHeader, cursorY)
     frame.questStartsText:ClearAllPoints()
     frame.questStartItemButton:ClearAllPoints()
 
     if quest.startItem then
-        local startItem = quest.startItem
-        local isDrop = (startItem[4] and startItem[4]:lower():find("drop")) or false
-        local noteText = isDrop and L("ITEM_DROP_INSIDE") or L("OBJECT_FOUND_INSIDE")
-        frame.questStartsText:ClearAllPoints()
-        frame.questStartsText:SetPoint("TOPLEFT", frame.questDetailContent, "TOPLEFT", 0, -cursorY)
-        frame.questStartsText:SetText("|cff1a557a• " .. noteText .. "|r")
-        frame.questStartsText:Show()
-        cursorY = cursorY + (frame.questStartsText:GetStringHeight() or 14) + 5
+        frame.questStartsText:SetText("")
+        frame.questStartsText:Hide()
 
+        local startItem = quest.startItem
         frame.questStartItemButton.item = startItem
         frame.questStartItemButton.fdjSourceText = FreeText(startItem[4])
-        frame.questStartItemButton.icon:SetTexture(ItemIcon(startItem[1]))
-        local itemName = ItemInfo(startItem[1])
+        frame.questStartItemButton.icon:SetTexture(FDJ.ItemIcon(startItem[1]))
+        local itemName = FDJ.ItemInfo(startItem[1])
         frame.questStartItemButton.name:SetText(itemName or startItem[2])
         -- Quest-start items use white text in the journal regardless of item quality.
         frame.questStartItemButton.name:SetTextColor(1.00, 1.00, 1.00)
@@ -3735,27 +4515,25 @@ RefreshQuestDetail = function()
         frame.questStartItemButton.item = nil
         frame.questStartItemButton.fdjSourceText = nil
         frame.questStartItemButton:Hide()
-        frame.questStartsText:ClearAllPoints()
         frame.questStartsText:SetPoint("TOPLEFT", frame.questDetailContent, "TOPLEFT", 0, -cursorY)
-        local pickupStr = QuestField(quest.id, "pickup", quest.pickup)
-        if quest.startQuestLink then
-            local prevName = QuestField(quest.startQuestLink.id, "name", quest.startQuestLink.name or L("PREVIOUS_QUEST"))
-            pickupStr = pickupStr .. "\n|cffd4af37• " .. string.format(L("PART_TWO_REQUIRES"), prevName) .. "|r"
-            pickupStr = pickupStr .. "\n|cff1a557a• " .. L("OFFERED_INSIDE_AFTER_PART_ONE") .. "|r"
-        elseif isInside then
-            pickupStr = pickupStr .. "\n|cff1a557a• " .. L("STARTS_INSIDE_DUNGEON") .. "|r"
-        end
-        frame.questStartsText:SetText(pickupStr)
+        local pickupText = QuestField(quest.id, "pickup", quest.pickup)
+        frame.questStartsText:SetText(pickupText)
         frame.questStartsText:SetTextColor(0.10, 0.065, 0.025)
         frame.questStartsText:Show()
+        if frame.questStartDungeonIcon then
+            frame.questStartDungeonIcon:Hide()
+            if FDJ.StartsInsideDungeon(pickupText) then
+                FDJ.PositionInDungeonIcon()
+            end
+        end
         cursorY = cursorY + (frame.questStartsText:GetStringHeight() or 30) + 8
     end
 
-    local loc = FDJ.QUEST_START_MAPS[quest.id]
+    local loc = quest.startMap or FDJ.QUEST_START_MAPS[quest.id]
     local hasChain = FDJ.QUEST_PREREQ_CHAINS[quest.id] ~= nil
 
     frame.questMapButton:ClearAllPoints()
-    frame.questMapButton.prereqLocation = nil
+    frame.questMapButton.prereqLocation = quest.startMap
     frame.questMapButton.quest = quest
 
     if frame.questStartLinkButton then
@@ -3771,10 +4549,7 @@ RefreshQuestDetail = function()
     if quest.startQuestLink and frame.questStartLinkButton then
         frame.questStartLinkButton:ClearAllPoints()
         frame.questStartLinkButton.questID = quest.startQuestLink.id
-        local targetName = QuestField(quest.startQuestLink.id, "name", quest.startQuestLink.name or L("PREVIOUS_QUEST"))
-        frame.questStartLinkButton.targetQuestName = targetName
-        frame.questStartLinkButton:SetText("◄ " .. string.format(L("VIEW_PART_ONE"), targetName))
-        frame.questStartLinkButton:SetWidth(math.min(340, (frame.questDetailContent:GetWidth() or 380) - 20))
+        frame.questStartLinkButton:SetText(QuestField(quest.startQuestLink.id, "name", quest.startQuestLink.name or L("PREVIOUS_QUEST")))
         frame.questStartLinkButton:SetPoint("TOPLEFT", frame.questDetailContent, "TOPLEFT", 0, -cursorY)
         frame.questStartLinkButton:Show()
         cursorY = cursorY + 31
@@ -3790,9 +4565,15 @@ RefreshQuestDetail = function()
 
     local showMap = loc and not quest.startItem
     if showMap then
+        if FDJ.MapMarkers and FDJ.MapMarkers.ConfigureTargetAndMarkAction then
+            FDJ.MapMarkers.ConfigureTargetAndMarkAction(frame.questMapButton, loc, true)
+        end
         frame.questMapButton:SetPoint("TOPLEFT", frame.questDetailContent, "TOPLEFT", 0, -cursorY)
         frame.questMapButton:Show()
     else
+        if FDJ.MapMarkers and FDJ.MapMarkers.ConfigureTargetAndMarkAction then
+            FDJ.MapMarkers.ConfigureTargetAndMarkAction(frame.questMapButton, nil, true)
+        end
         frame.questMapButton:Hide()
     end
 
@@ -3843,16 +4624,12 @@ RefreshQuestDetail = function()
             if quest.note and quest.note ~= "" then cursorY = cursorY + 7 end
             frame.questLeadsToButton:ClearAllPoints()
             frame.questLeadsToButton.questID = quest.leadsToQuestLink.id
-            local targetName = QuestField(quest.leadsToQuestLink.id, "name", quest.leadsToQuestLink.name or L("NEXT_QUEST"))
-            frame.questLeadsToButton.targetQuestName = targetName
-            frame.questLeadsToButton:SetText(string.format(L("VIEW_PART_TWO"), targetName) .. " ►")
-            frame.questLeadsToButton:SetWidth(math.min(340, (frame.questDetailContent:GetWidth() or 380) - 20))
+            frame.questLeadsToButton:SetText(L("LEADS_TO", QuestField(quest.leadsToQuestLink.id, "name", quest.leadsToQuestLink.name or L("NEXT_QUEST"))))
             frame.questLeadsToButton:SetPoint("TOPLEFT", frame.questDetailContent, "TOPLEFT", 0, -cursorY)
             frame.questLeadsToButton:Show()
             cursorY = cursorY + 31
         elseif frame.questLeadsToButton then
             frame.questLeadsToButton.questID = nil
-            frame.questLeadsToButton.targetQuestName = nil
             frame.questLeadsToButton:Hide()
         end
 
@@ -3862,8 +4639,8 @@ RefreshQuestDetail = function()
             frame.questNoteItemButton.item = noteItem
             frame.questNoteItemButton.fdjSourceText = FreeText(noteItem[4])
             frame.questNoteItemButton.mapLocation = quest.noteItemMap
-            frame.questNoteItemButton.icon:SetTexture(ItemIcon(noteItem[1]))
-            local itemName = ItemInfo(noteItem[1])
+            frame.questNoteItemButton.icon:SetTexture(FDJ.ItemIcon(noteItem[1]))
+            local itemName = FDJ.ItemInfo(noteItem[1])
             frame.questNoteItemButton.name:SetText(itemName or noteItem[2])
             -- Quest-related note items use white text in the journal.
             frame.questNoteItemButton.name:SetTextColor(1.00, 1.00, 1.00)
@@ -3894,12 +4671,12 @@ RefreshQuestDetail = function()
 
                 button:SetWidth(noteRewardWidth)
                 button.item = noteRewardItem
-                button.icon:SetTexture(ItemIcon(noteRewardItem[1]))
+                button.icon:SetTexture(FDJ.ItemIcon(noteRewardItem[1]))
                 if C_Item and type(C_Item.RequestLoadItemDataByID) == "function" then
                     pcall(C_Item.RequestLoadItemDataByID, noteRewardItem[1])
                 end
 
-                local itemName, itemLink, quality = ItemInfo(noteRewardItem[1])
+                local itemName, itemLink, quality = FDJ.ItemInfo(noteRewardItem[1])
                 local r, g, b = GetAuthoritativeItemQuality(
                     noteRewardItem[1],
                     itemLink,
@@ -3936,6 +4713,14 @@ RefreshQuestDetail = function()
         frame.questNoteItemButton:Hide()
     end
 
+    if frame.questAdditionalRewardButtons then
+        for _, button in ipairs(frame.questAdditionalRewardButtons) do
+            button.item = nil
+            button:Hide()
+        end
+    end
+    if frame.questAlsoReceiveHeader then frame.questAlsoReceiveHeader:Hide() end
+
     local rewardY = cursorY + 22
     local rewardItems = quest.rewardItems or {}
 
@@ -3969,13 +4754,19 @@ RefreshQuestDetail = function()
             button:SetWidth(rewardWidth)
             local item = rewardItems[i]
             button.item = item
-            button.icon:SetTexture(ItemIcon(item[1]))
-            if C_Item and type(C_Item.RequestLoadItemDataByID) == "function" then
+            button.icon:SetTexture(item[5] or FDJ.ItemIcon(item[1]))
+            if item[1] and item[1] > 0 and C_Item and type(C_Item.RequestLoadItemDataByID) == "function" then
                 pcall(C_Item.RequestLoadItemDataByID, item[1])
             end
 
-            local itemName, itemLink, quality = ItemInfo(item[1])
-            local r, g, b = GetAuthoritativeItemQuality(item[1], itemLink, quality, item[3] or 3)
+            local itemName, itemLink, quality
+            if item[1] and item[1] > 0 then itemName, itemLink, quality = FDJ.ItemInfo(item[1]) end
+            local r, g, b
+            if item[1] and item[1] > 0 then
+                r, g, b = GetAuthoritativeItemQuality(item[1], itemLink, quality, item[3] or 3)
+            else
+                r, g, b = FDJ.QualityColor(item[3] or 3)
+            end
             button.name:SetText(itemName or item[2])
             button.name:SetTextColor(r, g, b)
             button:SetBackdropColor(unpack(theme.lootRow))
@@ -4008,11 +4799,28 @@ RefreshQuestDetail = function()
     local money = GetQuestRewardMoneyCopper(quest)
     local hasRewardBar = false
 
+    -- Same layout as the in-game quest window: "Choose one of these rewards"
+    -- for the choice items, then "You will also receive:" above the XP,
+    -- money and any items everyone gets.
+    local hasExtras = (xp and xp > 0) or (money and money > 0)
+        or (quest.additionalRewardItems and #quest.additionalRewardItems > 0)
+    if quest.rewardChoice and #rewardItems > 1 and hasExtras then
+        if not frame.questAlsoReceiveHeader then
+            frame.questAlsoReceiveHeader = frame.questDetailContent:CreateFontString(nil, "OVERLAY", "GameFontBlack")
+            frame.questAlsoReceiveHeader:SetJustifyH("LEFT")
+        end
+        frame.questAlsoReceiveHeader:SetText(L("ALSO_RECEIVE"))
+        frame.questAlsoReceiveHeader:ClearAllPoints()
+        frame.questAlsoReceiveHeader:SetPoint("TOPLEFT", frame.questDetailContent, "TOPLEFT", 0, -summaryY)
+        frame.questAlsoReceiveHeader:Show()
+        summaryY = summaryY + 20
+    end
+
     local showXP = xp and (xp > 0 or (xp == 0 and quest.showZeroXP))
     if frame.questXPReward and showXP then
         frame.questXPReward:ClearAllPoints()
         frame.questXPReward:SetPoint("TOPLEFT", frame.questDetailContent, "TOPLEFT", 0, -summaryY)
-        frame.questXPReward.text:SetText(FormatNumber(xp) .. " XP")
+        frame.questXPReward.text:SetText(FDJ.FormatNumber(xp) .. " XP")
         frame.questXPReward:Show()
         hasRewardBar = true
     elseif frame.questXPReward then
@@ -4039,6 +4847,41 @@ RefreshQuestDetail = function()
         summaryY = summaryY + 34
     end
 
+    if quest.additionalRewardItems and #quest.additionalRewardItems > 0 then
+        frame.questAdditionalRewardButtons = frame.questAdditionalRewardButtons or {}
+        for i, item in ipairs(quest.additionalRewardItems) do
+            if not frame.questAdditionalRewardButtons[i] then
+                frame.questAdditionalRewardButtons[i] = MakeQuestRewardButton(frame.questDetailContent)
+            end
+            frame.questAdditionalRewardButtons[i]:SetWidth(rewardWidth)
+            frame.questAdditionalRewardButtons[i].item = item
+            frame.questAdditionalRewardButtons[i].icon:SetTexture(item[5] or FDJ.ItemIcon(item[1]))
+            if item[1] and item[1] > 0 and C_Item and type(C_Item.RequestLoadItemDataByID) == "function" then
+                pcall(C_Item.RequestLoadItemDataByID, item[1])
+            end
+            do
+                local itemName, itemLink, quality
+                if item[1] and item[1] > 0 then itemName, itemLink, quality = FDJ.ItemInfo(item[1]) end
+                local r, g, b = GetAuthoritativeItemQuality(item[1], itemLink, quality, item[3] or 1)
+                local countText = item[4] and item[4] > 1 and (" ×" .. tostring(item[4])) or ""
+                frame.questAdditionalRewardButtons[i].name:SetText((itemName or item[2]) .. countText)
+                frame.questAdditionalRewardButtons[i].name:SetTextColor(r, g, b)
+            end
+            frame.questAdditionalRewardButtons[i]:SetBackdropColor(unpack(theme.lootRow))
+            frame.questAdditionalRewardButtons[i]:SetBackdropBorderColor(unpack(theme.border))
+            frame.questAdditionalRewardButtons[i]:ClearAllPoints()
+            frame.questAdditionalRewardButtons[i]:SetPoint(
+                "TOPLEFT",
+                frame.questDetailContent,
+                "TOPLEFT",
+                ((i - 1) % 2) * (rewardWidth + 10),
+                -(summaryY + math.floor((i - 1) / 2) * 54)
+            )
+            frame.questAdditionalRewardButtons[i]:Show()
+        end
+        summaryY = summaryY + (math.floor((#quest.additionalRewardItems - 1) / 2) + 1) * 54 + 4
+    end
+
     frame.questRewardSummary:ClearAllPoints()
     frame.questRewardSummary:SetPoint("TOPLEFT", frame.questDetailContent, "TOPLEFT", 0, -summaryY)
     frame.questRewardSummary:SetPoint("RIGHT", frame.questDetailContent, "RIGHT", -8, 0)
@@ -4055,10 +4898,10 @@ RefreshQuestDetail = function()
 
     frame.questDetailContent:SetHeight(math.max(1, totalHeight))
     frame.questDetailScroll:SetVerticalScroll(0)
-    UpdateScrollBarVisibility(frame.questDetailScroll, totalHeight)
+    FDJ.UpdateScrollBarVisibility(frame.questDetailScroll, totalHeight)
 end
 
-SetQuestFaction = function(faction, isUserAction)
+SetQuestFaction = function(faction)
     if faction ~= "Alliance" and faction ~= "Horde" then return end
 
     selectedQuestFaction = faction
@@ -4066,25 +4909,11 @@ SetQuestFaction = function(faction, isUserAction)
     selectedPrereqParentQuestName = nil
     selectedPrereqParentQuestID = nil
     ForeverDungeonJournalDB.questFaction = faction
-    if isUserAction then
-        ForeverDungeonJournalDB.userSetFaction = true
-        local charKey = GetCharacterKey()
-        if charKey then
-            ForeverDungeonJournalDB.charFaction = ForeverDungeonJournalDB.charFaction or {}
-            ForeverDungeonJournalDB.charFaction[charKey] = faction
-        end
-    end
-    if frame and frame.questListScroll then
-        frame.questListScroll:SetVerticalScroll(0)
-    end
+    frame.questListScroll:SetVerticalScroll(0)
 
     BuildVisibleQuestIndexes()
     RefreshQuestList()
     RefreshQuestDetail()
-    UpdateFactionButtons()
-    if frame and frame.homePanel and frame.homePanel:IsShown() then
-        RefreshHomeDungeonCards()
-    end
 end
 
 
@@ -4095,21 +4924,43 @@ end
 
 ShowRouteGuide = function()
     if not frame then return end
-    local dungeon = DB[selectedDungeon]
+    local dungeon = FDJ.DB[selectedDungeon]
     local route = dungeon and dungeon.routeGuide
     if not route or not frame.routePanel then return end
 
     local lang = FDJ.GetLanguage and FDJ.GetLanguage() or "enUS"
     local localizedRoute = route.locales and (route.locales[lang] or route.locales.enUS) or route
 
-    frame.leftPanel:Hide()
-    frame.rightPanel:Hide()
-    frame.questLeftPanel:Hide()
-    frame.questRightPanel:Hide()
-    if HideDungeonMap then HideDungeonMap() end
+    if frame.leftPanel then frame.leftPanel:Hide() end
+    if frame.rightPanel then frame.rightPanel:Hide() end
+    if frame.questLeftPanel then frame.questLeftPanel:Hide() end
+    if frame.questRightPanel then frame.questRightPanel:Hide() end
 
+    if frame.routeFactionIcon then
+        frame.routeFactionIcon:SetTexture(route.faction == "Horde" and FDJ.HORDE_ICON or FDJ.ALLIANCE_ICON)
+    end
+    local hasRouteMap = route.mapRoute and ShowRouteOnMap
+    -- A step flagged `showRoute = true` carries the route button itself (e.g.
+    -- "2. Follow the road from Southshore"), so the header button is hidden.
+    local routeOnStep = false
+    for _, step in ipairs(localizedRoute.steps or route.steps or {}) do
+        if step.showRoute then routeOnStep = true break end
+    end
+    if routeOnStep then hasRouteMap = false end
+    if frame.routeMapButton then
+        frame.routeMapButton:SetShown(hasRouteMap and true or false)
+        frame.routeMapButton:SetText(L("SHOW_ON_MAP"))
+        frame.routeMapButton:ClearAllPoints()
+    end
+    frame.routeTitle:ClearAllPoints()
+    frame.routeTitle:SetPoint("TOPLEFT", frame.routeFactionIcon, "TOPRIGHT", 10, -1)
     frame.routeTitle:SetText(localizedRoute.title or L("HOW_TO_GET_THERE"))
-    frame.routeSubtitle:SetText(localizedRoute.subtitle or L("ALLIANCE_ROUTE"))
+    if hasRouteMap and frame.routeMapButton then
+        frame.routeMapButton:SetPoint("LEFT", frame.routeTitle, "RIGHT", 10, 0)
+    elseif frame.routeMapButton then
+        frame.routeMapButton:SetPoint("TOPRIGHT", -34, -20)
+    end
+    frame.routeSubtitle:SetText(localizedRoute.subtitle or (route.faction == "Horde" and "Horde route" or L("ALLIANCE_ROUTE")))
 
     frame.routeSteps:SetText("")
     frame.routeShortcutTitle:SetText("")
@@ -4122,6 +4973,7 @@ ShowRouteGuide = function()
         end
 
         local y = 0
+        local stepNumber = 0
         for i, step in ipairs(localizedRoute.steps or route.steps or {}) do
             local row = frame.routeStepRows[i]
             if not row then
@@ -4142,7 +4994,11 @@ ShowRouteGuide = function()
                 row.mapButton:SetSize(112, 22)
                 row.mapButton:SetText(L("SHOW_ON_MAP"))
                 row.mapButton:SetScript("OnClick", function(self)
-                    if self.mapLocation then
+                    if self.showsRoute then
+                        local d = FDJ.DB[selectedDungeon]
+                        local r = d and d.routeGuide
+                        if r and r.mapRoute and ShowRouteOnMap then ShowRouteOnMap(r.mapRoute) end
+                    elseif self.mapLocation then
                         FDJ.MapMarkers.ShowRecordedLocationOnMap(self.mapLocation, self.mapLocation.label)
                     end
                 end)
@@ -4163,11 +5019,21 @@ ShowRouteGuide = function()
             row.body:ClearAllPoints()
             row.body:SetPoint("TOPLEFT", row.title, "BOTTOMLEFT", 0, -5)
 
-            row.title:SetText(tostring(i) .. ". " .. (step.title or ""))
+            -- Optional route notes (such as the Orgrimmar zeppelin tip) are
+            -- intentionally unnumbered so the numbered travel steps still begin at 1.
+            if step.unnumbered then
+                row.title:SetText(step.title or "")
+                row.title:SetTextColor(0.55, 0.85, 1.00)
+            else
+                stepNumber = stepNumber + 1
+                row.title:SetText(tostring(stepNumber) .. ". " .. (step.title or ""))
+                row.title:SetTextColor(1.00, 0.82, 0.27)
+            end
             row.body:SetText(step.text or "")
 
             row.mapButton.mapLocation = step.map
-            if step.map then
+            row.mapButton.showsRoute = (step.showRoute and route.mapRoute and ShowRouteOnMap) and true or false
+            if step.map or row.mapButton.showsRoute then
                 row.mapButton:ClearAllPoints()
                 local titleWidth = math.ceil(row.title:GetStringWidth() or 0)
                 row.mapButton:SetPoint("TOPLEFT", row, "TOPLEFT", titleWidth + 10, 2)
@@ -4182,8 +5048,13 @@ ShowRouteGuide = function()
             row:Show()
 
             local titleH = math.max(18, row.title:GetStringHeight() or 18)
-            local bodyH = math.max(20, row.body:GetStringHeight() or 20)
-            local rowH = titleH + 7 + bodyH
+            local rowH
+            if (step.text or "") == "" then
+                rowH = titleH
+            else
+                local bodyH = math.max(20, row.body:GetStringHeight() or 20)
+                rowH = titleH + 7 + bodyH
+            end
             row:SetHeight(rowH)
             y = y + rowH + 18
         end
@@ -4191,7 +5062,7 @@ ShowRouteGuide = function()
         frame.routeStepContent:SetHeight(math.max(y, 1))
         frame.routeStepScroll:SetVerticalScroll(0)
         if frame.routeStepScroll.ScrollBar then frame.routeStepScroll.ScrollBar:SetValue(0) end
-        UpdateScrollBarVisibility(frame.routeStepScroll, y)
+        FDJ.UpdateScrollBarVisibility(frame.routeStepScroll, y)
     end
 
     frame.routePanel:Show()
@@ -4201,430 +5072,371 @@ end
 function FDJ.ClearDungeonMapArt()
     if not frame then return end
     for _, tex in ipairs(frame.dungeonMapArtTiles or {}) do tex:Hide() end
-    for _, marker in ipairs(frame.dungeonMapBossMarkers or {}) do
-        if marker.orderText then marker.orderText:Hide() end
-        marker:Hide()
-    end
-    for _, marker in ipairs(frame.dungeonMapLandmarkMarkers or {}) do marker:Hide() end
-    for _, marker in ipairs(frame.dungeonMapPOIMarkers or {}) do marker:Hide() end
-    if frame.dungeonMapSingleArt then frame.dungeonMapSingleArt:Hide() end
-    if frame.genericMapBg then frame.genericMapBg:Hide() end
-    if frame.genericMapTitle then frame.genericMapTitle:Hide() end
-    if frame.genericMapDesc then frame.genericMapDesc:Hide() end
-    if frame.genericMapEntranceButton then frame.genericMapEntranceButton:Hide() end
-    if frame.genericMapCoords then frame.genericMapCoords:Hide() end
-    if frame.dungeonMapCloseButton then frame.dungeonMapCloseButton:Hide() end
-    if frame.dungeonMapLandmarksToggle then frame.dungeonMapLandmarksToggle:Hide() end
-    if frame.dungeonMapLegendButton then frame.dungeonMapLegendButton:Hide() end
-    if frame.dungeonMapLegendPanel then frame.dungeonMapLegendPanel:Hide() end
+    for _, marker in ipairs(frame.dungeonMapBossMarkers or {}) do marker:Hide() end
 end
 
-function FDJ.RenderGenericDungeonMap()
+function FDJ.RenderRagefireMap()
     if not frame or not frame.dungeonMapArtHolder then return end
     FDJ.ClearDungeonMapArt()
 
-    local dungeon = DB[selectedDungeon]
+    local data = FDJ.RAGEFIRE_MAP
     local holder = frame.dungeonMapArtHolder
-    local artW, artH = 540, 360
+
+    -- Ragefire Chasm's Classic map art is present in the client under the
+    -- historical "Ragefire" WorldMap folder. Unlike newer C_Map-backed maps,
+    -- this Classic dungeon uses 12 fixed 256x256 tiles named Ragefire1_1 ...
+    -- Ragefire1_12. Loading those files directly is reliable even while the
+    -- player is outside the instance.
+    -- The visible client parchment is 3:2.  Previous builds forced the 4x3
+    -- texture tile grid into a 2:1 rectangle, visibly stretching the map and
+    -- making normalized boss coordinates look wrong.  Keep the actual visible
+    -- parchment aspect ratio and use almost the entire map page.
+    local artW, artH = 480, 320
+    local scaleX, scaleY = artW / 1024, artH / 768
     holder:ClearAllPoints()
     holder:SetSize(artW, artH)
     holder:SetPoint("CENTER", frame.dungeonMapPanel, "CENTER", 0, 0)
-
     if frame.dungeonMapCanvas then
         frame.dungeonMapCanvas:ClearAllPoints()
         frame.dungeonMapCanvas:SetSize(artW, artH)
         frame.dungeonMapCanvas:SetPoint("CENTER", frame.dungeonMapPanel, "CENTER", 0, 0)
-        frame.dungeonMapCanvas:SetBackdropColor(0.08, 0.05, 0.03, 0.95)
-        frame.dungeonMapCanvas:SetBackdropBorderColor(0.48, 0.34, 0.16, 1)
+        frame.dungeonMapCanvas:SetBackdropColor(0, 0, 0, 0)
+        frame.dungeonMapCanvas:SetBackdropBorderColor(0, 0, 0, 0)
     end
 
-    if not frame.genericMapBg then
-        frame.genericMapBg = holder:CreateTexture(nil, "BACKGROUND")
-        frame.genericMapBg:SetAllPoints()
-    end
-    local pageArt = FDJ.DUNGEON_PAGE_ART and FDJ.DUNGEON_PAGE_ART[selectedDungeon]
-    if pageArt then
-        frame.genericMapBg:SetTexture(pageArt)
-        local tc = FDJ.DUNGEON_PAGE_TEXCOORD and FDJ.DUNGEON_PAGE_TEXCOORD[selectedDungeon]
-        if tc then
-            frame.genericMapBg:SetTexCoord(tc[1], tc[2], tc[3], tc[4])
-        else
-            frame.genericMapBg:SetTexCoord(0.05, 0.95, 0.05, 0.95)
-        end
-        frame.genericMapBg:SetAlpha(0.28)
-    else
-        frame.genericMapBg:SetTexture("Interface\\Buttons\\WHITE8X8")
-        frame.genericMapBg:SetColorTexture(0.12, 0.08, 0.04, 0.85)
-        frame.genericMapBg:SetAlpha(1.0)
-    end
-    frame.genericMapBg:Show()
-
-    if not frame.genericMapTitle then
-        frame.genericMapTitle = holder:CreateFontString(nil, "OVERLAY", "GameFontNormalHuge")
-        frame.genericMapTitle:SetPoint("TOP", 0, -30)
-        frame.genericMapTitle:SetTextColor(1.00, 0.82, 0.27)
-    end
-    frame.genericMapTitle:SetText(DungeonName(selectedDungeon))
-    frame.genericMapTitle:Show()
-
-    if not frame.genericMapDesc then
-        frame.genericMapDesc = holder:CreateFontString(nil, "OVERLAY", "GameFontHighlight")
-        frame.genericMapDesc:SetPoint("TOP", frame.genericMapTitle, "BOTTOM", 0, -14)
-        frame.genericMapDesc:SetWidth(460)
-        frame.genericMapDesc:SetJustifyH("CENTER")
-        frame.genericMapDesc:SetWordWrap(true)
-        frame.genericMapDesc:SetTextColor(0.92, 0.88, 0.80)
-    end
-    local descText = DungeonField(selectedDungeon, "description", (dungeon and dungeon.description or ""))
-    local locText = DungeonField(selectedDungeon, "location", (dungeon and dungeon.location or ""))
-    if locText ~= "" then
-        descText = descText .. "\n\n|cffffd200" .. L("LOCATION") .. ":|r " .. locText
-    end
-    frame.genericMapDesc:SetText(descText)
-    frame.genericMapDesc:Show()
-
-    if not frame.genericMapEntranceButton then
-        frame.genericMapEntranceButton = CreateFrame("Button", nil, holder, "UIPanelButtonTemplate")
-        frame.genericMapEntranceButton:SetSize(220, 32)
-        frame.genericMapEntranceButton:SetPoint("TOP", frame.genericMapDesc, "BOTTOM", 0, -20)
-        frame.genericMapEntranceButton:SetText(L("SHOW_ON_MAP"))
-        frame.genericMapEntranceButton:SetScript("OnClick", function()
-            local d = DB[selectedDungeon]
-            if d and d.entrance then
-                FDJ.MapMarkers.ShowRecordedLocationOnMap(d.entrance, d.entrance.label or (DungeonName(selectedDungeon) .. " Entrance"))
+    local index = 1
+    for row = 1, 3 do
+        for col = 1, 4 do
+            local tex = frame.dungeonMapArtTiles[index]
+            if not tex then
+                tex = holder:CreateTexture(nil, "ARTWORK")
+                frame.dungeonMapArtTiles[index] = tex
             end
-        end)
-    end
-    frame.genericMapEntranceButton:SetText(L("SHOW_ON_MAP"))
-    frame.genericMapEntranceButton:Show()
-
-    if not frame.genericMapCoords then
-        frame.genericMapCoords = holder:CreateFontString(nil, "OVERLAY", "GameFontHighlightSmall")
-        frame.genericMapCoords:SetPoint("TOP", frame.genericMapEntranceButton, "BOTTOM", 0, -10)
-        frame.genericMapCoords:SetTextColor(0.65, 0.85, 1.0)
-    end
-    if dungeon and dungeon.entrance then
-        local cStr = FDJ.MapMarkers.FormatCoordString(dungeon.entrance.x, dungeon.entrance.y)
-        local zStr = dungeon.entrance.zone or ""
-        if zStr ~= "" then
-            frame.genericMapCoords:SetText(zStr .. " " .. cStr)
-        else
-            frame.genericMapCoords:SetText("Coordinates: " .. cStr)
-        end
-        frame.genericMapCoords:Show()
-    else
-        frame.genericMapCoords:Hide()
-    end
-end
-
-function FDJ.RenderDungeonInteriorMap()
-    if not frame or not frame.dungeonMapArtHolder then return end
-    FDJ.ClearDungeonMapArt()
-
-    local mapData = FDJ.DUNGEON_MAPS and FDJ.DUNGEON_MAPS[selectedDungeon]
-    if not mapData then
-        FDJ.RenderGenericDungeonMap()
-        return
-    end
-
-    local holder = frame.dungeonMapArtHolder
-    local canvas = frame.dungeonMapCanvas
-
-    -- Anchor canvas flush inside dungeonMapPanel so map spans full edge-to-edge
-    if canvas then
-        canvas:ClearAllPoints()
-        canvas:SetPoint("TOPLEFT", frame.dungeonMapPanel, "TOPLEFT", 5, -5)
-        canvas:SetPoint("BOTTOMRIGHT", frame.dungeonMapPanel, "BOTTOMRIGHT", -5, 5)
-        canvas:SetBackdrop(nil)
-    end
-
-    local canvasW = canvas and canvas:GetWidth() or 0
-    local canvasH = canvas and canvas:GetHeight() or 0
-    if not canvasW or canvasW <= 0 then canvasW = frame.dungeonMapPanel and (frame.dungeonMapPanel:GetWidth() - 10) or 770 end
-    if not canvasH or canvasH <= 0 then canvasH = frame.dungeonMapPanel and (frame.dungeonMapPanel:GetHeight() - 10) or 370 end
-    if not canvasW or canvasW <= 0 then canvasW = 770 end
-    if not canvasH or canvasH <= 0 then canvasH = 370 end
-
-    local artW = math.floor(canvasW + 0.5)
-    local artH = math.floor(canvasH + 0.5)
-
-    holder:ClearAllPoints()
-    holder:SetAllPoints(canvas)
-    holder:SetFrameLevel(canvas:GetFrameLevel() + 1)
-
-    -- Background Art: Single texture vs Multi-tile grid
-    if mapData.texture then
-        if not frame.dungeonMapSingleArt then
-            frame.dungeonMapSingleArt = holder:CreateTexture(nil, "BACKGROUND")
-        end
-        frame.dungeonMapSingleArt:ClearAllPoints()
-        frame.dungeonMapSingleArt:SetAllPoints(holder)
-        frame.dungeonMapSingleArt:SetTexture(mapData.texture)
-        frame.dungeonMapSingleArt:SetTexCoord(0, 1, 0, 1)
-        frame.dungeonMapSingleArt:SetAlpha(1.0)
-        frame.dungeonMapSingleArt:Show()
-    else
-        -- Check dynamic C_Map art layers first for authoritative client textures
-        local cMapTextures = nil
-        if C_Map and C_Map.GetMapArtLayers and C_Map.GetMapArtLayerTextures and mapData.uiMapID then
-            local ok, layers = pcall(C_Map.GetMapArtLayers, mapData.uiMapID)
-            if ok and layers and layers[1] then
-                local layerIdx = layers[1].layerIndex or 1
-                local ok2, textures = pcall(C_Map.GetMapArtLayerTextures, mapData.uiMapID, layerIdx)
-                if ok2 and type(textures) == "table" and #textures > 0 then
-                    cMapTextures = textures
-                end
-            end
-        end
-
-        local numRows = mapData.rows or 3
-        local numCols = mapData.cols or 4
-        local tileW = artW / numCols
-        local tileH = artH / numRows
-        local index = 1
-
-        local prefixCandidates = {}
-        if mapData.tilePrefix then
-            table.insert(prefixCandidates, mapData.tilePrefix)
-        end
-        if mapData.tilePrefixes then
-            for _, p in ipairs(mapData.tilePrefixes) do
-                table.insert(prefixCandidates, p)
-            end
-        end
-
-        for row = 1, numRows do
-            for col = 1, numCols do
-                local tex = frame.dungeonMapArtTiles[index]
-                if not tex then
-                    tex = holder:CreateTexture(nil, "BACKGROUND")
-                    frame.dungeonMapArtTiles[index] = tex
-                end
-                tex:ClearAllPoints()
-                tex:SetSize(math.ceil(tileW), math.ceil(tileH))
-                tex:SetPoint("TOPLEFT", holder, "TOPLEFT", (col - 1) * tileW, -((row - 1) * tileH))
-                tex:SetTexCoord(0, 1, 0, 1)
-                tex:SetAlpha(1.0)
-
-                local applied = false
-                if cMapTextures and cMapTextures[index] then
-                    tex:SetTexture(cMapTextures[index])
-                    applied = true
-                else
-                    for _, prefix in ipairs(prefixCandidates) do
-                        tex:SetTexture(prefix .. index)
-                        if tex:GetTexture() then
-                            applied = true
-                            break
-                        end
-                    end
-                    if not applied and mapData.tilePrefix then
-                        tex:SetTexture(mapData.tilePrefix .. index)
-                    end
-                end
-
-                tex:Show()
-                index = index + 1
-            end
+            tex:ClearAllPoints()
+            tex:SetSize(256 * scaleX, 256 * scaleY)
+            tex:SetPoint("TOPLEFT", holder, "TOPLEFT", (col - 1) * 256 * scaleX, -((row - 1) * 256 * scaleY))
+            tex:SetTexture("Interface\\Worldmap\\Ragefire\\Ragefire1_" .. index)
+            tex:SetTexCoord(0, 1, 0, 1)
+            tex:Show()
+            index = index + 1
         end
     end
 
-    -- Boss Markers
-    local dungeon = DB[selectedDungeon]
-    for i, mapBoss in ipairs(mapData.bosses or {}) do
+    local dungeon = FDJ.DB[selectedDungeon]
+    for i, mapBoss in ipairs(data.bosses) do
         local marker = frame.dungeonMapBossMarkers[i]
         if not marker then
             marker = CreateFrame("Button", nil, holder)
-            marker:SetSize(24, 24)
+            marker:SetSize(22, 22)
             marker.portrait = marker:CreateTexture(nil, "ARTWORK")
             marker.portrait:SetAllPoints()
             marker.portrait:SetTexCoord(0.12, 0.88, 0.12, 0.88)
             marker.border = marker:CreateTexture(nil, "OVERLAY")
-            marker.border:SetSize(30, 30)
+            marker.border:SetSize(26, 26)
             marker.border:SetPoint("CENTER")
-            marker.border:SetTexture("Interface\\AddOns\\ForeverDungeonJournal\\Media\\BossBorderGold.tga")
-            marker:SetHighlightTexture("Interface\\Buttons\\ButtonHilight-Square", "ADD")
-            if marker.portrait.AddMaskTexture and not marker.mask then
-                marker.mask = marker:CreateMaskTexture()
-                marker.mask:SetAllPoints(marker.portrait)
-                marker.mask:SetTexture("Interface\\CharacterFrame\\TempPortraitAlphaMask", "CLAMPTOBLACKADDITIVE", "CLAMPTOBLACKADDITIVE")
-                marker.portrait:AddMaskTexture(marker.mask)
-            end
+            marker.border:SetTexture("Interface\\Minimap\\MiniMap-TrackingBorder")
+            marker:SetScript("OnEnter", function(self)
+                GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
+                GameTooltip:SetText(self.bossName or "")
+                GameTooltip:Show()
+            end)
+            marker:SetScript("OnLeave", function() GameTooltip:Hide() end)
             frame.dungeonMapBossMarkers[i] = marker
         end
-
-        marker.border:SetTexture("Interface\\AddOns\\ForeverDungeonJournal\\Media\\BossBorderGold.tga")
-        marker.border:SetSize(30, 30)
-        marker.border:SetPoint("CENTER")
-
-        if not marker.orderText then
-            marker.orderText = marker:CreateFontString(nil, "OVERLAY", "GameFontNormalSmall")
-            marker.orderText:SetPoint("RIGHT", marker, "LEFT", -3, 0)
-            marker.orderText:SetJustifyH("RIGHT")
-            local fontFile, fontSize = marker.orderText:GetFont()
-            if fontFile then
-                marker.orderText:SetFont(fontFile, math.max((fontSize or 10) + 1, 11), "OUTLINE")
-            end
-            marker.orderText:SetTextColor(1.00, 0.82, 0.20, 1.0)
-            marker.orderText:SetShadowOffset(1, -1)
-            marker.orderText:SetShadowColor(0, 0, 0, 1)
+        local bossRecord
+        for _, candidate in ipairs((dungeon and dungeon.bosses) or {}) do
+            if candidate.name == mapBoss.name then bossRecord = candidate break end
         end
-
-        marker:SetFrameLevel(holder:GetFrameLevel() + 10)
-
-        local bossRecord = nil
-        local bossIndex = nil
-        for bIdx, candidate in ipairs((dungeon and dungeon.bosses) or {}) do
-            if candidate.name == mapBoss.name then
-                bossRecord = candidate
-                bossIndex = bIdx
-                break
-            end
-            if candidate.aliases then
-                for _, alias in ipairs(candidate.aliases) do
-                    if alias == mapBoss.name then
-                        bossRecord = candidate
-                        bossIndex = bIdx
-                        break
-                    end
-                end
-                if bossRecord then break end
-            end
-        end
-
-        marker.bossIndex = bossIndex
         if bossRecord then
             local hasPortrait = SetBossPortrait(marker.portrait, selectedDungeon, bossRecord)
             if not hasPortrait then
-                if bossRecord.customIcon then
-                    marker.portrait:SetTexture(bossRecord.customIcon)
-                    marker.portrait:SetTexCoord(0.08, 0.92, 0.08, 0.92)
-                else
-                    marker.portrait:SetTexture("Interface\\Icons\\INV_Misc_QuestionMark")
-                    marker.portrait:SetTexCoord(0.08, 0.92, 0.08, 0.92)
-                end
+                marker.portrait:SetTexture("Interface\\Icons\\INV_Misc_QuestionMark")
+                marker.portrait:SetTexCoord(0.08, 0.92, 0.08, 0.92)
             end
             marker.bossName = BossName(bossRecord.name)
+        else
+            marker.portrait:SetTexture("Interface\\Icons\\INV_Misc_QuestionMark")
+            marker.portrait:SetTexCoord(0.08, 0.92, 0.08, 0.92)
+            marker.bossName = mapBoss.name
+        end
+        marker:ClearAllPoints()
+        marker:SetPoint("CENTER", holder, "TOPLEFT", mapBoss.x * artW, -(mapBoss.y * artH))
+        marker:Show()
+    end
+end
+
+-- Zoom (mouse wheel) and pan (left-drag) for the dungeon map page.
+FDJ.ResetDungeonMapView = function()
+    if not frame then return end
+    frame.dungeonMapZoom = 1
+    frame.dungeonMapPanX, frame.dungeonMapPanY = 0, 0
+end
+
+FDJ.PositionDungeonMapHolder = function()
+    local holder, panel = frame and frame.dungeonMapArtHolder, frame and frame.dungeonMapPanel
+    if not holder or not panel then return end
+    local pw, ph = panel:GetWidth() or 0, panel:GetHeight() or 0
+    local hw, hh = holder:GetWidth() or 0, holder:GetHeight() or 0
+    -- Keep the map covering the page once it is bigger than it.
+    local maxX, maxY = math.max(0, (hw - pw) / 2 + 8), math.max(0, (hh - ph) / 2 + 8)
+    frame.dungeonMapPanX = math.max(-maxX, math.min(maxX, frame.dungeonMapPanX or 0))
+    frame.dungeonMapPanY = math.max(-maxY, math.min(maxY, frame.dungeonMapPanY or 0))
+    holder:ClearAllPoints()
+    holder:SetPoint("CENTER", panel, "CENTER", frame.dungeonMapPanX, frame.dungeonMapPanY)
+end
+
+FDJ.SetupDungeonMapZoom = function()
+    local panel = frame and frame.dungeonMapPanel
+    if not panel or panel.fdjZoomReady then return end
+    panel.fdjZoomReady = true
+    panel:EnableMouse(true)
+    panel:EnableMouseWheel(true)
+    panel:SetScript("OnMouseWheel", function(self, delta)
+        local data = FDJ.DUNGEON_MAPS[selectedDungeon]
+        if not data then return end
+        local old = frame.dungeonMapZoom or 1
+        local new = math.max(1, math.min(4, old * (delta > 0 and 1.25 or 0.8)))
+        if math.abs(new - old) < 0.001 then return end
+        -- Zoom around the cursor: keep the map point under it in place.
+        local scale = self:GetEffectiveScale()
+        local cx, cy = GetCursorPosition()
+        local left, bottom = self:GetLeft() or 0, self:GetBottom() or 0
+        local mx = cx / scale - left - (self:GetWidth() or 0) / 2
+        local my = cy / scale - bottom - (self:GetHeight() or 0) / 2
+        local k = new / old
+        frame.dungeonMapPanX = mx - (mx - (frame.dungeonMapPanX or 0)) * k
+        frame.dungeonMapPanY = my - (my - (frame.dungeonMapPanY or 0)) * k
+        if new <= 1.001 then frame.dungeonMapPanX, frame.dungeonMapPanY = 0, 0 end
+        frame.dungeonMapZoom = new
+        FDJ.RenderCustomDungeonMap(data, frame.dungeonMapFloor)
+    end)
+    panel:SetScript("OnMouseDown", function(self, button)
+        if button ~= "LeftButton" or (frame.dungeonMapZoom or 1) <= 1 then return end
+        local scale = self:GetEffectiveScale()
+        local cx, cy = GetCursorPosition()
+        self.fdjDrag = { x = cx / scale, y = cy / scale, px = frame.dungeonMapPanX or 0, py = frame.dungeonMapPanY or 0 }
+    end)
+    panel:SetScript("OnMouseUp", function(self) self.fdjDrag = nil end)
+    panel:SetScript("OnHide", function(self) self.fdjDrag = nil end)
+    panel:SetScript("OnUpdate", function(self)
+        local d = self.fdjDrag
+        if not d then return end
+        if not IsMouseButtonDown("LeftButton") then self.fdjDrag = nil return end
+        local scale = self:GetEffectiveScale()
+        local cx, cy = GetCursorPosition()
+        frame.dungeonMapPanX = d.px + (cx / scale - d.x)
+        frame.dungeonMapPanY = d.py + (cy / scale - d.y)
+        FDJ.PositionDungeonMapHolder()
+    end)
+end
+
+FDJ.RenderCustomDungeonMap = function(data, floorIndex)
+    if not frame or not frame.dungeonMapArtHolder or not data then return end
+    FDJ.ClearDungeonMapArt()
+    local holder = frame.dungeonMapArtHolder
+    local panel = frame.dungeonMapPanel
+    local floors = data.floors or {}
+    floorIndex = math.max(1, math.min(#floors, floorIndex or (data.entrance and data.entrance.floor) or 1))
+    frame.dungeonMapFloor = floorIndex
+    local floorData = floors[floorIndex]
+    if not floorData then return end
+
+    -- Fit the 3:2 map art into the page without stretching (centred), then
+    -- apply the current zoom (mouse wheel) and pan (drag).
+    local aspect = 3 / 2
+    local availW = math.max(200, (panel:GetWidth() or 760) - 16)
+    local availH = math.max(140, (panel:GetHeight() or 380) - 16)
+    local baseW, baseH = availW, availW / aspect
+    if baseH > availH then baseH = availH; baseW = availH * aspect end
+    baseW, baseH = math.floor(baseW), math.floor(baseH)
+    local zoom = frame.dungeonMapZoom or 1
+    local artW, artH = math.floor(baseW * zoom), math.floor(baseH * zoom)
+    frame.dungeonMapBaseW, frame.dungeonMapBaseH = baseW, baseH
+
+    holder:SetSize(artW, artH)
+    FDJ.PositionDungeonMapHolder()
+    if holder.SetClipsChildren then holder:SetClipsChildren(true) end
+    if frame.dungeonMapCanvas then
+        frame.dungeonMapCanvas:ClearAllPoints()
+        frame.dungeonMapCanvas:SetAllPoints(panel)
+        frame.dungeonMapCanvas:SetBackdropColor(0, 0, 0, 0)
+        frame.dungeonMapCanvas:SetBackdropBorderColor(0, 0, 0, 0)
+    end
+
+    local tiles = frame.dungeonMapArtTiles
+    local function Tile(i)
+        local t = tiles[i]
+        if not t then t = holder:CreateTexture(nil, "ARTWORK"); tiles[i] = t end
+        t:ClearAllPoints()
+        return t
+    end
+    if floorData.texture then
+        local t = Tile(1)
+        t:SetAllPoints(holder)
+        t:SetTexture(floorData.texture)
+        t:SetTexCoord(0, floorData.texRight or 1, 0, floorData.texBottom or 1)
+        t:Show()
+    else
+        -- 4x3 client tiles; 1002x668 of the 1024x768 grid is the visible map.
+        local scale = artW / 1002
+        for i = 1, 12 do
+            local col, row = (i - 1) % 4, math.floor((i - 1) / 4)
+            local t = Tile(i)
+            t:SetSize(256 * scale, 256 * scale)
+            t:SetPoint("TOPLEFT", holder, "TOPLEFT", col * 256 * scale, -row * 256 * scale)
+            t:SetTexture(floorData.tiles .. i)
+            t:SetTexCoord(0, 1, 0, 1)
+            t:SetDrawLayer("ARTWORK", 0)
+            t:Show()
+        end
+        -- Parchment patches that cover the map's printed title banner.
+        for p, patch in ipairs(floorData.patches or {}) do
+            local t = Tile(12 + p)
+            t:SetDrawLayer("ARTWORK", 1)
+            t:SetPoint("TOPLEFT", holder, "TOPLEFT", patch.x0 * artW, -patch.y0 * artH)
+            t:SetPoint("BOTTOMRIGHT", holder, "TOPLEFT", patch.x1 * artW, -patch.y1 * artH)
+            t:SetTexture(patch.tex)
+            t:SetTexCoord(0, 1, 0, 1)
+            t:SetAlpha(patch.alpha or 1)
+            t:Show()
+        end
+    end
+
+    -- Floor selector (only for multi-level dungeons).
+    frame.dungeonMapFloorButtons = frame.dungeonMapFloorButtons or {}
+    for i = 1, math.max(#floors, #frame.dungeonMapFloorButtons) do
+        local btn = frame.dungeonMapFloorButtons[i]
+        if i <= #floors and #floors > 1 then
+            if not btn then
+                btn = CreateFrame("Button", nil, panel, "UIPanelButtonTemplate")
+                btn:SetScript("OnClick", function(self)
+                    FDJ.ResetDungeonMapView()
+                    FDJ.RenderCustomDungeonMap(FDJ.DUNGEON_MAPS[selectedDungeon], self.floorIndex)
+                end)
+                frame.dungeonMapFloorButtons[i] = btn
+            end
+            btn.floorIndex = i
+            btn:SetText(L("MAP_FLOOR", i))
+            local fs = btn:GetFontString()
+            btn:SetSize(math.max(70, math.ceil((fs and fs:GetStringWidth() or 50) + 20)), 22)
+            btn:ClearAllPoints()
+            btn:SetPoint("TOPLEFT", panel, "TOPLEFT", 10, -10 - (i - 1) * 24)
+            btn:SetFrameLevel(holder:GetFrameLevel() + 30)
+            if i == floorIndex then btn:Disable() else btn:Enable() end
+            btn:Show()
+        elseif btn then
+            btn:Hide()
+        end
+    end
+
+    local dungeon = FDJ.DB[selectedDungeon]
+    local size = math.max(26, math.floor(baseH * 0.095))
+    local shown = 0
+    for _, mapBoss in ipairs(data.bosses or {}) do
+        if (mapBoss.floor or 1) == floorIndex then
+            shown = shown + 1
+            local marker = frame.dungeonMapBossMarkers[shown]
+            if not marker then
+                marker = CreateFrame("Button", nil, holder)
+                marker.portrait = marker:CreateTexture(nil, "ARTWORK")
+                marker.portrait:SetAllPoints()
+                marker.border = marker:CreateTexture(nil, "OVERLAY")
+                marker.border:SetPoint("CENTER")
+                marker.border:SetTexture("Interface\\Minimap\\MiniMap-TrackingBorder")
+                marker.border:SetTexCoord(0, 0.6, 0, 0.6)
+                marker:SetScript("OnEnter", function(self)
+                    GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
+                    GameTooltip:SetText(self.bossName or "")
+                    GameTooltip:Show()
+                end)
+                marker:SetScript("OnLeave", function() GameTooltip:Hide() end)
+                frame.dungeonMapBossMarkers[shown] = marker
+            end
+            if marker:GetParent() ~= holder then marker:SetParent(holder) end
+            marker:SetSize(size, size)
+            marker.border:SetSize(size * 1.55, size * 1.55)
+            marker:SetFrameLevel(holder:GetFrameLevel() + 10)
+
+            local bossRecord, bossIndex
+            for idx, candidate in ipairs((dungeon and dungeon.bosses) or {}) do
+                if candidate.name == mapBoss.name then bossRecord, bossIndex = candidate, idx break end
+            end
+            marker.portrait:SetTexCoord(0, 1, 0, 1)
+            if not (bossRecord and SetBossPortrait(marker.portrait, selectedDungeon, bossRecord)) then
+                marker.portrait:SetTexture("Interface\\Icons\\INV_Misc_QuestionMark")
+                marker.portrait:SetTexCoord(0.08, 0.92, 0.08, 0.92)
+            end
+            marker.bossName = bossRecord and BossName(bossRecord.name) or mapBoss.name
+
+            if not marker.orderText then
+                marker.orderText = marker:CreateFontString(nil, "OVERLAY", "GameFontNormalSmall")
+                marker.orderText:SetPoint("RIGHT", marker, "LEFT", -3, 0)
+                marker.orderText:SetJustifyH("RIGHT")
+                local fontFile, fontSize = marker.orderText:GetFont()
+                if fontFile then
+                    marker.orderText:SetFont(fontFile, math.max((fontSize or 10) + 1, 11), "OUTLINE")
+                end
+                marker.orderText:SetTextColor(1.00, 0.82, 0.20, 1.0)
+                marker.orderText:SetShadowOffset(1, -1)
+                marker.orderText:SetShadowColor(0, 0, 0, 1)
+            end
+            if mapBoss.order then
+                marker.orderText:SetText(tostring(mapBoss.order))
+                marker.orderText:Show()
+            else
+                marker.orderText:Hide()
+            end
+
+            if not marker.defeatCheck then
+                marker.defeatCheck = marker:CreateTexture(nil, "OVERLAY", nil, 7)
+                marker.defeatCheck:SetSize(18, 18)
+                marker.defeatCheck:SetPoint("BOTTOMRIGHT", marker, "BOTTOMRIGHT", 6, -6)
+                marker.defeatCheck:SetTexture("Interface\\RaidFrame\\ReadyCheck-Ready")
+                marker.defeatCheck:Hide()
+            end
+
+            local isDefeated = bossRecord and FDJ.IsBossDefeated and FDJ.IsBossDefeated(selectedDungeon, bossRecord.name)
+            if isDefeated then
+                marker.portrait:SetDesaturated(true)
+                if marker.defeatCheck then marker.defeatCheck:Show() end
+            else
+                marker.portrait:SetDesaturated(false)
+                if marker.defeatCheck then marker.defeatCheck:Hide() end
+            end
+
             marker.detail = mapBoss.detail
             marker:SetScript("OnEnter", function(self)
                 GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
                 GameTooltip:SetText(self.bossName or "", 1, 0.82, 0.20)
+                if isDefeated then
+                    GameTooltip:AddLine("|cff00ff00[Defeated in this run]|r", 0.2, 1.0, 0.2)
+                end
                 if self.detail and self.detail ~= "" then
                     GameTooltip:AddLine(self.detail, 0.90, 0.90, 0.90, true)
                 end
                 GameTooltip:AddLine("Click to view encounter & loot in journal", 0.75, 0.75, 0.75, true)
                 GameTooltip:Show()
             end)
-            marker:SetScript("OnLeave", function() GameTooltip:Hide() end)
-            marker:SetScript("OnClick", function(self)
-                if self.bossIndex then
-                    SetMode("bosses")
-                    SelectBoss(self.bossIndex)
-                end
-            end)
-        elseif mapBoss.isEntrance then
-            marker.portrait:SetTexture("Interface\\Icons\\INV_Misc_Rune_01")
-            marker.portrait:SetTexCoord(0.08, 0.92, 0.08, 0.92)
-            marker.bossName = L("ENTRANCE") or "Entrance"
-            marker:SetScript("OnEnter", function(self)
-                GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
-                GameTooltip:SetText(self.bossName, 1, 0.82, 0.20)
-                local d = DB[selectedDungeon]
-                if d and d.entrance then
-                    GameTooltip:AddLine(L("CLICK_TO_SHOW_LOCATION") or "Click to show entrance on world map", 0.75, 0.75, 0.75, true)
-                end
-                GameTooltip:Show()
-            end)
-            marker:SetScript("OnLeave", function() GameTooltip:Hide() end)
+
             marker:SetScript("OnClick", function()
-                local d = DB[selectedDungeon]
-                if d and d.entrance and FDJ.MapMarkers and FDJ.MapMarkers.ShowRecordedLocationOnMap then
-                    FDJ.MapMarkers.ShowRecordedLocationOnMap(d.entrance, DungeonName(selectedDungeon) .. " Entrance")
+                if bossIndex and SetMode and SelectBoss then
+                    SetMode("bosses")
+                    SelectBoss(bossIndex)
                 end
             end)
-        else
-            if mapBoss.isNPC then
-                marker.portrait:SetTexture("Interface\\Icons\\Spell_Holy_PrayerOfHealing")
-            else
-                marker.portrait:SetTexture("Interface\\Icons\\INV_Misc_QuestionMark")
-            end
-            marker.portrait:SetTexCoord(0.08, 0.92, 0.08, 0.92)
-            marker.bossName = mapBoss.name
-            marker.detail = mapBoss.detail
-            marker:SetScript("OnEnter", function(self)
-                GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
-                GameTooltip:SetText(self.bossName, 1, 0.82, 0.20)
-                if self.detail and self.detail ~= "" then
-                    GameTooltip:AddLine(self.detail, 0.90, 0.90, 0.90, true)
-                elseif mapBoss.isNPC then
-                    GameTooltip:AddLine("Quest NPC / Investigation target", 0.75, 0.75, 0.75, true)
-                end
-                GameTooltip:Show()
-            end)
-            marker:SetScript("OnLeave", function() GameTooltip:Hide() end)
-            marker:SetScript("OnClick", nil)
+            marker:ClearAllPoints()
+            marker:SetPoint("CENTER", holder, "TOPLEFT", mapBoss.x * artW, -(mapBoss.y * artH))
+            marker:Show()
         end
-
-        if mapBoss.isEntrance or mapBoss.isNPC then
-            marker.orderText:Hide()
-        else
-            local num = mapBoss.mapNumber or i
-            marker.orderText:SetText(tostring(num))
-            marker.orderText:Show()
-        end
-
-        marker:ClearAllPoints()
-        marker:SetPoint("CENTER", holder, "TOPLEFT", mapBoss.x * artW, -(mapBoss.y * artH))
-        marker:Show()
     end
-
-    -- Landmarks (Crest Spawns in Ruins of Lordaeron)
-    frame.dungeonMapLandmarkMarkers = frame.dungeonMapLandmarkMarkers or {}
-    if mapData.landmarks and FDJ.showLandmarks ~= false then
-        for j, lm in ipairs(mapData.landmarks) do
-            local lMarker = frame.dungeonMapLandmarkMarkers[j]
-            if not lMarker then
-                lMarker = CreateFrame("Button", nil, holder)
-                lMarker:SetSize(22, 22)
-                lMarker.icon = lMarker:CreateTexture(nil, "ARTWORK")
-                lMarker.icon:SetAllPoints()
-                lMarker.icon:SetTexture("Interface\\Icons\\INV_Shield_04")
-                lMarker.icon:SetTexCoord(0.10, 0.90, 0.10, 0.90)
-                lMarker.border = lMarker:CreateTexture(nil, "OVERLAY")
-                lMarker.border:SetSize(28, 28)
-                lMarker.border:SetPoint("CENTER")
-                lMarker.border:SetTexture("Interface\\AddOns\\ForeverDungeonJournal\\Media\\BossBorderGold.tga")
-                lMarker:SetHighlightTexture("Interface\\Buttons\\ButtonHilight-Square", "ADD")
-                if lMarker.icon.AddMaskTexture and not lMarker.mask then
-                    lMarker.mask = lMarker:CreateMaskTexture()
-                    lMarker.mask:SetAllPoints(lMarker.icon)
-                    lMarker.mask:SetTexture("Interface\\CharacterFrame\\TempPortraitAlphaMask", "CLAMPTOBLACKADDITIVE", "CLAMPTOBLACKADDITIVE")
-                    lMarker.icon:AddMaskTexture(lMarker.mask)
-                end
-                frame.dungeonMapLandmarkMarkers[j] = lMarker
-            end
-            lMarker.border:SetTexture("Interface\\AddOns\\ForeverDungeonJournal\\Media\\BossBorderGold.tga")
-            lMarker.border:SetSize(28, 28)
-            lMarker.border:SetPoint("CENTER")
-            lMarker:SetFrameLevel(holder:GetFrameLevel() + 10)
-            lMarker.landmarkName = lm.name
-            lMarker:SetScript("OnEnter", function(self)
-                GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
-                GameTooltip:SetText(self.landmarkName or "", 1, 0.82, 0.20)
-                GameTooltip:AddLine("Reported Crest of Lordaeron spawn point", 0.85, 0.85, 0.85, true)
-                GameTooltip:Show()
-            end)
-            lMarker:SetScript("OnLeave", function() GameTooltip:Hide() end)
-            lMarker:ClearAllPoints()
-            lMarker:SetPoint("CENTER", holder, "TOPLEFT", lm.x * artW, -(lm.y * artH))
-            lMarker:Show()
-        end
+    for i = shown + 1, #frame.dungeonMapBossMarkers do
+        frame.dungeonMapBossMarkers[i]:Hide()
     end
 
     -- Non-Boss Atlas Points of Interest (POIs)
     frame.dungeonMapPOIMarkers = frame.dungeonMapPOIMarkers or {}
-    if mapData.pois then
-        for k, poi in ipairs(mapData.pois) do
+    if data.pois then
+        for k, poi in ipairs(data.pois) do
             local pMarker = frame.dungeonMapPOIMarkers[k]
             if not pMarker then
                 pMarker = CreateFrame("Button", nil, holder)
@@ -4638,7 +5450,7 @@ function FDJ.RenderDungeonInteriorMap()
                 pMarker.border = pMarker:CreateTexture(nil, "ARTWORK")
                 pMarker.border:SetSize(26, 26)
                 pMarker.border:SetPoint("CENTER")
-                pMarker.border:SetTexture("Interface\\AddOns\\ForeverDungeonJournal\\Media\\BossBorderGold.tga")
+                pMarker.border:SetTexture("Interface\\Minimap\\MiniMap-TrackingBorder")
 
                 pMarker.numText = pMarker:CreateFontString(nil, "OVERLAY", "GameFontNormalSmall")
                 pMarker.numText:SetPoint("CENTER", 0, 0)
@@ -4690,77 +5502,18 @@ function FDJ.RenderDungeonInteriorMap()
             pMarker:Show()
         end
     end
-
-    -- Close Map Button on Canvas (Floats cleanly over top of map)
-    if not frame.dungeonMapCloseButton then
-        frame.dungeonMapCloseButton = CreateFrame("Button", nil, canvas, "BackdropTemplate")
-        frame.dungeonMapCloseButton:SetSize(96, 24)
-        SetBackdrop(frame.dungeonMapCloseButton, "Interface\\Buttons\\WHITE8X8", "Interface\\Tooltips\\UI-Tooltip-Border", 8, 2)
-        frame.dungeonMapCloseButton:SetBackdropColor(0.10, 0.07, 0.04, 0.94)
-        frame.dungeonMapCloseButton:SetBackdropBorderColor(0.58, 0.42, 0.18, 1)
-        frame.dungeonMapCloseButton:SetHighlightTexture("Interface\\QuestFrame\\UI-QuestTitleHighlight", "ADD")
-        frame.dungeonMapCloseButton.text = frame.dungeonMapCloseButton:CreateFontString(nil, "OVERLAY", "GameFontHighlightSmall")
-        frame.dungeonMapCloseButton.text:SetPoint("CENTER", 0, 0)
-        frame.dungeonMapCloseButton.text:SetTextColor(1.00, 0.82, 0.27)
-        frame.dungeonMapCloseButton:SetScript("OnClick", function()
-            SetMode("bosses")
-        end)
-        frame.dungeonMapCloseButton:SetScript("OnEnter", function(self)
-            self:SetBackdropBorderColor(0.85, 0.68, 0.28, 1)
-            self.text:SetTextColor(1, 1, 1)
-        end)
-        frame.dungeonMapCloseButton:SetScript("OnLeave", function(self)
-            self:SetBackdropBorderColor(0.58, 0.42, 0.18, 1)
-            self.text:SetTextColor(1.00, 0.82, 0.27)
-        end)
-    end
-    frame.dungeonMapCloseButton:ClearAllPoints()
-    frame.dungeonMapCloseButton:SetPoint("TOPRIGHT", canvas, "TOPRIGHT", -10, -10)
-    frame.dungeonMapCloseButton:SetFrameLevel(holder:GetFrameLevel() + 25)
-    frame.dungeonMapCloseButton.text:SetText(L("CLOSE_MAP"))
-    frame.dungeonMapCloseButton:Show()
-
-    -- Landmark Toggle Button (if dungeon has landmarks, floats over top of map)
-    if mapData.landmarks then
-        if not frame.dungeonMapLandmarksToggle then
-            frame.dungeonMapLandmarksToggle = CreateFrame("Button", nil, canvas, "BackdropTemplate")
-            frame.dungeonMapLandmarksToggle:SetSize(136, 24)
-            SetBackdrop(frame.dungeonMapLandmarksToggle, "Interface\\Buttons\\WHITE8X8", "Interface\\Tooltips\\UI-Tooltip-Border", 8, 2)
-            frame.dungeonMapLandmarksToggle:SetBackdropColor(0.10, 0.07, 0.04, 0.94)
-            frame.dungeonMapLandmarksToggle:SetBackdropBorderColor(0.58, 0.42, 0.18, 1)
-            frame.dungeonMapLandmarksToggle:SetHighlightTexture("Interface\\QuestFrame\\UI-QuestTitleHighlight", "ADD")
-            frame.dungeonMapLandmarksToggle.text = frame.dungeonMapLandmarksToggle:CreateFontString(nil, "OVERLAY", "GameFontHighlightSmall")
-            frame.dungeonMapLandmarksToggle.text:SetPoint("CENTER", 0, 0)
-            frame.dungeonMapLandmarksToggle.text:SetTextColor(1.00, 0.82, 0.27)
-            frame.dungeonMapLandmarksToggle:SetScript("OnClick", function()
-                FDJ.showLandmarks = not (FDJ.showLandmarks ~= false)
-                FDJ.RenderDungeonInteriorMap()
-            end)
-            frame.dungeonMapLandmarksToggle:SetScript("OnEnter", function(self)
-                self:SetBackdropBorderColor(0.85, 0.68, 0.28, 1)
-                self.text:SetTextColor(1, 1, 1)
-            end)
-            frame.dungeonMapLandmarksToggle:SetScript("OnLeave", function(self)
-                self:SetBackdropBorderColor(0.58, 0.42, 0.18, 1)
-                self.text:SetTextColor(1.00, 0.82, 0.27)
-            end)
-        end
-        frame.dungeonMapLandmarksToggle:ClearAllPoints()
-        frame.dungeonMapLandmarksToggle:SetPoint("TOPLEFT", canvas, "TOPLEFT", 10, -10)
-        frame.dungeonMapLandmarksToggle:SetFrameLevel(holder:GetFrameLevel() + 25)
-        frame.dungeonMapLandmarksToggle.text:SetText(FDJ.showLandmarks ~= false and L("HIDE_LANDMARKS") or L("SHOW_LANDMARKS"))
-        frame.dungeonMapLandmarksToggle:Show()
-    elseif frame.dungeonMapLandmarksToggle then
-        frame.dungeonMapLandmarksToggle:Hide()
+    for i = (data.pois and #data.pois or 0) + 1, #frame.dungeonMapPOIMarkers do
+        frame.dungeonMapPOIMarkers[i]:Hide()
     end
 
-    -- Map Legend Button & Drawer Panel (non-boss Atlas points of interest)
-    local hasPOIs = mapData.pois and #mapData.pois > 0
+    -- Map Legend Button & Drawer Panel
+    local hasPOIs = data.pois and #data.pois > 0
     if hasPOIs then
         if not frame.dungeonMapLegendButton then
+            local canvas = panel
             frame.dungeonMapLegendButton = CreateFrame("Button", nil, canvas, "BackdropTemplate")
             frame.dungeonMapLegendButton:SetSize(104, 24)
-            SetBackdrop(frame.dungeonMapLegendButton, "Interface\\Buttons\\WHITE8X8", "Interface\\Tooltips\\UI-Tooltip-Border", 8, 2)
+            FDJ.SetBackdrop(frame.dungeonMapLegendButton, "Interface\\Buttons\\WHITE8X8", "Interface\\Tooltips\\UI-Tooltip-Border", 8, 2)
             frame.dungeonMapLegendButton:SetBackdropColor(0.10, 0.07, 0.04, 0.94)
             frame.dungeonMapLegendButton:SetBackdropBorderColor(0.58, 0.42, 0.18, 1)
             frame.dungeonMapLegendButton:SetHighlightTexture("Interface\\QuestFrame\\UI-QuestTitleHighlight", "ADD")
@@ -4778,33 +5531,25 @@ function FDJ.RenderDungeonInteriorMap()
                     end
                 end
             end)
-            frame.dungeonMapLegendButton:SetScript("OnEnter", function(self)
-                self:SetBackdropBorderColor(0.85, 0.68, 0.28, 1)
-                self.text:SetTextColor(1, 1, 1)
-            end)
-            frame.dungeonMapLegendButton:SetScript("OnLeave", function(self)
-                self:SetBackdropBorderColor(0.58, 0.42, 0.18, 1)
-                self.text:SetTextColor(1.00, 0.82, 0.27)
-            end)
         end
         frame.dungeonMapLegendButton:ClearAllPoints()
-        frame.dungeonMapLegendButton:SetPoint("BOTTOMLEFT", canvas, "BOTTOMLEFT", 10, 10)
+        frame.dungeonMapLegendButton:SetPoint("BOTTOMLEFT", panel, "BOTTOMLEFT", 10, 10)
         frame.dungeonMapLegendButton:SetFrameLevel(holder:GetFrameLevel() + 25)
         frame.dungeonMapLegendButton.text:SetText(L("MAP_LEGEND"))
         frame.dungeonMapLegendButton:Show()
 
-        -- Legend Panel Drawer
         if not frame.dungeonMapLegendPanel then
+            local canvas = panel
             frame.dungeonMapLegendPanel = CreateFrame("Frame", nil, canvas, "BackdropTemplate")
             frame.dungeonMapLegendPanel:SetWidth(260)
-            SetBackdrop(frame.dungeonMapLegendPanel, "Interface\\Buttons\\WHITE8X8", "Interface\\Tooltips\\UI-Tooltip-Border", 10, 2)
+            FDJ.SetBackdrop(frame.dungeonMapLegendPanel, "Interface\\Buttons\\WHITE8X8", "Interface\\Tooltips\\UI-Tooltip-Border", 10, 2)
             frame.dungeonMapLegendPanel:SetBackdropColor(0.08, 0.05, 0.03, 0.95)
             frame.dungeonMapLegendPanel:SetBackdropBorderColor(0.58, 0.42, 0.18, 1)
 
             frame.dungeonMapLegendPanel.title = frame.dungeonMapLegendPanel:CreateFontString(nil, "OVERLAY", "GameFontNormal")
             frame.dungeonMapLegendPanel.title:SetPoint("TOPLEFT", frame.dungeonMapLegendPanel, "TOPLEFT", 12, -10)
             frame.dungeonMapLegendPanel.title:SetTextColor(1.00, 0.82, 0.20)
-            frame.dungeonMapLegendPanel.title:SetText(L("MAP_LEGEND_TITLE"))
+            frame.dungeonMapLegendPanel.title:SetText(L("MAP_LEGEND_TITLE") or "Dungeon Landmarks")
 
             local closeBtn = CreateFrame("Button", nil, frame.dungeonMapLegendPanel, "UIPanelCloseButton")
             closeBtn:SetSize(20, 20)
@@ -4820,16 +5565,15 @@ function FDJ.RenderDungeonInteriorMap()
         end
 
         frame.dungeonMapLegendPanel:ClearAllPoints()
-        frame.dungeonMapLegendPanel:SetPoint("BOTTOMLEFT", canvas, "BOTTOMLEFT", 10, 38)
+        frame.dungeonMapLegendPanel:SetPoint("BOTTOMLEFT", panel, "BOTTOMLEFT", 10, 38)
         frame.dungeonMapLegendPanel:SetFrameLevel(holder:GetFrameLevel() + 30)
 
-        -- Populate Legend POI rows
-        local panel = frame.dungeonMapLegendPanel
+        local legPanel = frame.dungeonMapLegendPanel
         local panelY = -30
-        for rIdx, poi in ipairs(mapData.pois) do
-            local row = panel.rows[rIdx]
+        for rIdx, poi in ipairs(data.pois) do
+            local row = legPanel.rows[rIdx]
             if not row then
-                row = CreateFrame("Frame", nil, panel)
+                row = CreateFrame("Frame", nil, legPanel)
                 row:SetWidth(236)
                 row.title = row:CreateFontString(nil, "OVERLAY", "GameFontHighlightSmall")
                 row.title:SetPoint("TOPLEFT", row, "TOPLEFT", 0, 0)
@@ -4843,87 +5587,151 @@ function FDJ.RenderDungeonInteriorMap()
                 row.detail:SetWordWrap(true)
                 row.detail:SetTextColor(0.75, 0.75, 0.75)
 
-                panel.rows[rIdx] = row
+                legPanel.rows[rIdx] = row
             end
 
             row:ClearAllPoints()
-            row:SetPoint("TOPLEFT", panel, "TOPLEFT", 12, panelY)
-
+            row:SetPoint("TOPLEFT", legPanel, "TOPLEFT", 12, panelY)
             row.title:SetText(string.format("|cffffd200[%d]|r  %s", poi.number, poi.name))
-            row.detail:SetText(poi.detail or "")
+            if poi.detail and poi.detail ~= "" then
+                row.detail:SetText(poi.detail)
+                row.detail:Show()
+                local dH = row.detail:GetStringHeight() or 12
+                row:SetHeight(16 + dH)
+                panelY = panelY - (20 + dH)
+            else
+                row.detail:SetText("")
+                row.detail:Hide()
+                row:SetHeight(16)
+                panelY = panelY - 18
+            end
             row:Show()
-
-            local detailH = row.detail:GetStringHeight() or 12
-            if not poi.detail or poi.detail == "" then detailH = 0 end
-            local rowH = 14 + (detailH > 0 and (detailH + 2) or 0)
-            row:SetHeight(rowH)
-            panelY = panelY - rowH - 6
         end
-
-        for rIdx = #mapData.pois + 1, #panel.rows do
-            panel.rows[rIdx]:Hide()
+        for rIdx = #data.pois + 1, #legPanel.rows do
+            legPanel.rows[rIdx]:Hide()
         end
-
-        local totalPanelHeight = math.abs(panelY) + 8
-        panel:SetHeight(totalPanelHeight)
-        panel:Hide()
-    else
-        if frame.dungeonMapLegendButton then frame.dungeonMapLegendButton:Hide() end
+        legPanel:SetHeight(math.min(320, math.abs(panelY) + 12))
+        legPanel:Hide()
+    elseif frame.dungeonMapLegendButton then
+        frame.dungeonMapLegendButton:Hide()
         if frame.dungeonMapLegendPanel then frame.dungeonMapLegendPanel:Hide() end
+    end
+
+    -- Entrance: the usual instance-portal icon with a yellow, black-outlined
+    -- "Entrance" label next to it.
+    local ent = data.entrance
+    if not frame.dungeonMapEntrance then
+        local e = CreateFrame("Frame", nil, holder)
+        e.icon = e:CreateTexture(nil, "OVERLAY")
+        e.icon:SetAllPoints()
+        local ok = e.icon.SetAtlas and pcall(e.icon.SetAtlas, e.icon, "Dungeon", false)
+        if not ok then
+            e.icon:SetTexture("Interface\\Icons\\INV_Misc_Rune_01")
+            e.icon:SetTexCoord(0.08, 0.92, 0.08, 0.92)
+        end
+        -- Font objects only (never SetFont with a raw file): Blizzard's font
+        -- families carry the Korean/Cyrillic glyph fallbacks.
+        e.label = e:CreateFontString(nil, "OVERLAY", _G.SystemFont_Shadow_Large_Outline and "SystemFont_Shadow_Large_Outline" or "GameFontNormalLarge")
+        e.label:SetTextColor(1.00, 0.82, 0.00)
+        e.label:SetShadowColor(0, 0, 0, 1)
+        e.label:SetShadowOffset(1, -1)
+        frame.dungeonMapEntrance = e
+    end
+    local e = frame.dungeonMapEntrance
+    if e:GetParent() ~= holder then e:SetParent(holder) end
+    if ent and (ent.floor or 1) == floorIndex then
+        local iconSize = math.max(22, math.floor(baseH * 0.075))
+        e:SetSize(iconSize, iconSize)
+        e:SetFrameLevel(holder:GetFrameLevel() + 15)
+        e:ClearAllPoints()
+        e:SetPoint("CENTER", holder, "TOPLEFT", ent.x * artW, -(ent.y * artH))
+        -- Label goes on the side given by the old arrow angle (default right).
+        local rad = math.rad(ent.angle or 0)
+        e.label:SetText(L("MAP_ENTRANCE"))
+        e.label:ClearAllPoints()
+        if ent.labelPos == "top" then
+            e.label:SetPoint("BOTTOM", e, "TOP", 0, 1)
+        elseif math.cos(rad) < -0.3 then
+            e.label:SetPoint("RIGHT", e, "LEFT", -3, 0)
+        else
+            e.label:SetPoint("LEFT", e, "RIGHT", 3, 0)
+        end
+        e:Show()
+    else
+        e:Hide()
+    end
+
+    -- Green arrows showing where to go down/up to the next level. Clicking
+    -- one switches the map to that level.
+    frame.dungeonMapTransitions = frame.dungeonMapTransitions or {}
+    local used = 0
+    for _, tr in ipairs(data.transitions or {}) do
+        if tr.floor == floorIndex and floors[tr.to] then
+            used = used + 1
+            local t = frame.dungeonMapTransitions[used]
+            if not t then
+                t = CreateFrame("Button", nil, holder)
+                -- Ladder icon marking where to change level.
+                t.arrow = t:CreateTexture(nil, "OVERLAY")
+                t.arrow:SetTexture("Interface\\AddOns\\ForeverDungeonJournal\\Media\\LevelLadder")
+                t.arrow:SetTexCoord(0, 1, 0, 1)
+                t.arrow:SetAllPoints()
+                t.label = t:CreateFontString(nil, "OVERLAY", _G.SystemFont_Outline and "SystemFont_Outline" or "GameFontNormal")
+                t.label:SetShadowColor(0, 0, 0, 1)
+                t.label:SetShadowOffset(1, -1)
+                t.label:SetTextColor(0.35, 1.00, 0.35)
+                t.label:SetPoint("BOTTOM", t, "TOP", 0, 1)
+                t:SetScript("OnClick", function(self)
+                    FDJ.ResetDungeonMapView()
+                    FDJ.RenderCustomDungeonMap(FDJ.DUNGEON_MAPS[selectedDungeon], self.toFloor)
+                end)
+                t:SetScript("OnEnter", function(self)
+                    GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
+                    GameTooltip:SetText(L("MAP_FLOOR", self.toFloor), 0.35, 1, 0.35)
+                    GameTooltip:Show()
+                end)
+                t:SetScript("OnLeave", function() GameTooltip:Hide() end)
+                frame.dungeonMapTransitions[used] = t
+            end
+            if t:GetParent() ~= holder then t:SetParent(holder) end
+            t.toFloor = tr.to
+            local len = math.max(28, math.floor(baseH * 0.10))
+            t:SetSize(len, len)
+            t:SetFrameLevel(holder:GetFrameLevel() + 14)
+            t:ClearAllPoints()
+            t:SetPoint("CENTER", holder, "TOPLEFT", tr.x * artW, -(tr.y * artH))
+            t.label:SetText(L(tr.labelKey or "MAP_FLOOR", tr.to))
+            t:Show()
+        end
+    end
+    for i = used + 1, #frame.dungeonMapTransitions do
+        frame.dungeonMapTransitions[i]:Hide()
     end
 end
 
 HideDungeonMap = function()
     if frame and frame.dungeonMapPanel then frame.dungeonMapPanel:Hide() end
-    FDJ.ClearDungeonMapArt()
 end
 
 ShowDungeonMap = function()
-    if not frame then return end
+    if not frame or not FDJ.DUNGEON_MAPS[selectedDungeon] then return end
     FDJ.HideRouteGuide()
-    frame.leftPanel:Hide()
-    frame.rightPanel:Hide()
-    frame.questLeftPanel:Hide()
-    frame.questRightPanel:Hide()
+    if frame.leftPanel then frame.leftPanel:Hide() end
+    if frame.rightPanel then frame.rightPanel:Hide() end
+    if frame.questLeftPanel then frame.questLeftPanel:Hide() end
+    if frame.questRightPanel then frame.questRightPanel:Hide() end
     frame.dungeonMapTitle:SetText("")
     frame.dungeonMapPanel:Show()
-    FDJ.RenderGenericDungeonMap()
-    UpdateModeTabs()
-end
-
-ShowDungeonInteriorMap = function()
-    if not frame then return end
-    FDJ.HideRouteGuide()
-    frame.leftPanel:Hide()
-    frame.rightPanel:Hide()
-    frame.questLeftPanel:Hide()
-    frame.questRightPanel:Hide()
-    frame.dungeonMapTitle:SetText("")
-    frame.dungeonMapPanel:Show()
-    FDJ.RenderDungeonInteriorMap()
+    local mapData = FDJ.DUNGEON_MAPS[selectedDungeon]
+    FDJ.SetupDungeonMapZoom()
+    FDJ.ResetDungeonMapView()
+    FDJ.RenderCustomDungeonMap(mapData, mapData.entrance and mapData.entrance.floor or 1)
     UpdateModeTabs()
 end
 
 SetMode = function(mode)
-    if mode ~= "bosses" and mode ~= "quests" and mode ~= "map" and mode ~= "dungeon_map" then return end
+    if mode ~= "bosses" and mode ~= "quests" then return end
     FDJ.HideRouteGuide()
-
-    if mode == "dungeon_map" then
-        if ResetPortraitResolver then ResetPortraitResolver() end
-        selectedMode = "dungeon_map"
-        ForeverDungeonJournalDB.lastMode = "dungeon_map"
-        ShowDungeonInteriorMap()
-        return
-    end
-
-    if mode == "map" then
-        if ResetPortraitResolver then ResetPortraitResolver() end
-        selectedMode = "map"
-        ForeverDungeonJournalDB.lastMode = "map"
-        ShowDungeonMap()
-        return
-    end
-
     if HideDungeonMap then HideDungeonMap() end
 
     if mode ~= "bosses" and ResetPortraitResolver then
@@ -4933,11 +5741,16 @@ SetMode = function(mode)
     selectedMode = mode
     ForeverDungeonJournalDB.lastMode = mode
 
-    if mode == "quests" then
-        if not selectedQuestFaction then
-            selectedQuestFaction = GetEffectiveFaction()
-            ForeverDungeonJournalDB.questFaction = selectedQuestFaction
+    -- Every time the quest tab is opened, start on the player's own faction.
+    -- The faction buttons can still be used manually afterwards.
+    if mode == "quests" and UnitFactionGroup then
+        local playerFaction = UnitFactionGroup("player")
+        if playerFaction == "Horde" then
+            selectedQuestFaction = "Horde"
+        elseif playerFaction == "Alliance" then
+            selectedQuestFaction = "Alliance"
         end
+        ForeverDungeonJournalDB.questFaction = selectedQuestFaction
         selectedPrereqStep = nil
         selectedPrereqParentQuestName = nil
         selectedPrereqParentQuestID = nil
@@ -4948,22 +5761,20 @@ SetMode = function(mode)
     end
 
     local bosses = mode == "bosses"
-    frame.leftPanel:SetShown(bosses)
-    frame.rightPanel:SetShown(bosses)
-    frame.questLeftPanel:SetShown(not bosses)
-    frame.questRightPanel:SetShown(not bosses)
+    if frame then
+        if frame.leftPanel then frame.leftPanel:SetShown(bosses) end
+        if frame.rightPanel then frame.rightPanel:SetShown(bosses) end
+        if frame.questLeftPanel then frame.questLeftPanel:SetShown(not bosses) end
+        if frame.questRightPanel then frame.questRightPanel:SetShown(not bosses) end
+    end
 
     UpdateModeTabs()
 
     if bosses then
         RefreshBossList()
-        if FDJ.selectedBossSubTab == "tactics" then
-            RefreshBossTactics()
-        else
-            RefreshLoot()
-        end
+        RefreshLoot()
     else
-        local quests = DB[selectedDungeon].quests or {}
+        local quests = FDJ.DB[selectedDungeon].quests or {}
         if selectedQuest > #quests then selectedQuest = 1 end
 
         for _, quest in ipairs(quests) do
@@ -4975,46 +5786,8 @@ SetMode = function(mode)
     end
 end
 
-FDJ.ScrollToSelectedQuest = function()
-    if not frame or not frame.questListScroll or not frame.questContent then return end
-    local targetIndex = nil
-    for displayIndex = 1, #FDJ.visibleQuestIndexes do
-        if FDJ.visibleQuestIndexes[displayIndex] == selectedQuest then
-            targetIndex = displayIndex
-            break
-        end
-    end
-    if not targetIndex then return end
-
-    local scrollFrame = frame.questListScroll
-    local currentScroll = scrollFrame:GetVerticalScroll() or 0
-    local viewHeight = scrollFrame:GetHeight() or 400
-    local targetButton = FDJ.questButtons[targetIndex]
-
-    local contentTop = frame.questContent:GetTop()
-    local btnTop = targetButton and targetButton:GetTop()
-    local btnBottom = targetButton and targetButton:GetBottom()
-
-    if contentTop and btnTop and btnBottom then
-        local topDiff = contentTop - btnTop
-        local bottomDiff = contentTop - btnBottom
-        if topDiff < currentScroll then
-            scrollFrame:SetVerticalScroll(math.max(0, topDiff - 8))
-        elseif bottomDiff > (currentScroll + viewHeight) then
-            scrollFrame:SetVerticalScroll(bottomDiff - viewHeight + 8)
-        end
-    else
-        local approxTop = (targetIndex - 1) * 51
-        if approxTop < currentScroll then
-            scrollFrame:SetVerticalScroll(math.max(0, approxTop - 8))
-        elseif (approxTop + 51) > (currentScroll + viewHeight) then
-            scrollFrame:SetVerticalScroll((approxTop + 51) - viewHeight + 8)
-        end
-    end
-end
-
 SelectQuest = function(index)
-    local quests = DB[selectedDungeon].quests or {}
+    local quests = FDJ.DB[selectedDungeon].quests or {}
     if not quests[index] then return end
 
     selectedPrereqStep = nil
@@ -5024,25 +5797,15 @@ SelectQuest = function(index)
 
     selectedQuest = index
     ForeverDungeonJournalDB.lastQuest = index
-    if frame and frame.questDetailScroll then
-        frame.questDetailScroll:SetVerticalScroll(0)
-    end
     RefreshQuestList()
     RefreshQuestDetail()
-    FDJ.ScrollToSelectedQuest()
 end
 
 SelectQuestByID = function(questID)
     if not questID then return end
-    if selectedMode ~= "quests" then
-        SetMode("quests")
-    end
-    local quests = DB[selectedDungeon].quests or {}
+    local quests = FDJ.DB[selectedDungeon].quests or {}
     for index, quest in ipairs(quests) do
         if quest.id == questID then
-            if quest.faction and quest.faction ~= "Both" and quest.faction ~= selectedQuestFaction then
-                SetQuestFaction(quest.faction)
-            end
             SelectQuest(index)
             return
         end
@@ -5054,7 +5817,7 @@ local function MakeDungeonTab(parent, dungeonName, x)
     button:SetSize(180, 31)
     button:SetPoint("TOPLEFT", x, -50)
 
-    SetBackdrop(
+    FDJ.SetBackdrop(
         button,
         "Interface\\Buttons\\WHITE8X8",
         "Interface\\Tooltips\\UI-Tooltip-Border",
@@ -5067,7 +5830,7 @@ local function MakeDungeonTab(parent, dungeonName, x)
     button.text:SetText(DungeonName(dungeonName))
 
     button:SetScript("OnClick", function()
-        local dungeon = DB[dungeonName]
+        local dungeon = FDJ.DB[dungeonName]
         if dungeon and dungeon.previewOnly then return end
         SelectDungeon(dungeonName)
     end)
@@ -5090,7 +5853,7 @@ end
 
 -- Loading screens have the World of Warcraft logo baked into the upper area.
 -- Crop Deadmines/BFD lower so the home cards show only dungeon artwork.
-local function HomeLevelText(level)
+FDJ.HomeLevelText = function(level)
     local value = tostring(level or "")
     value = value:gsub("%++$", "+")
     return "LV " .. value
@@ -5106,7 +5869,7 @@ local function MakeHomeDungeonCard(parent, dungeonName)
     button.dungeonName = dungeonName
     button:SetSize(352, 126)
 
-    SetBackdrop(
+    FDJ.SetBackdrop(
         button,
         "Interface\\Buttons\\WHITE8X8",
         "Interface\\Tooltips\\UI-Tooltip-Border",
@@ -5224,7 +5987,7 @@ local function MakeHomeDungeonCard(parent, dungeonName)
         GameTooltip:SetOwner(self, "ANCHOR_TOP")
         local activeDungeonName = self.dungeonName
         GameTooltip:SetText(DungeonName(activeDungeonName))
-        local dungeon = DB[activeDungeonName]
+        local dungeon = FDJ.DB[activeDungeonName]
         if FDJ.homeEditMode then
             if ForeverDungeonJournalDB.hiddenDungeons[activeDungeonName] then
                 GameTooltip:AddLine(L("CLICK_RESTORE_DUNGEON"), 1, 1, 1)
@@ -5286,10 +6049,9 @@ RefreshHomeDungeonCards = function()
     local gap = 12
     local cardWidth = math.floor((contentWidth - gap) / 2)
     frame.homeCardsContent:SetWidth(contentWidth)
-    local activeFaction = selectedQuestFaction or GetEffectiveFaction()
 
     for i, dungeonName in ipairs(shownDungeons) do
-        local dungeon = DB[dungeonName]
+        local dungeon = FDJ.DB[dungeonName]
         local card = FDJ.homeDungeonCards[i]
 
         if not card then
@@ -5308,16 +6070,21 @@ RefreshHomeDungeonCards = function()
         card:SetPoint("TOPLEFT", frame.homeCardsContent, "TOPLEFT", col * (cardWidth + gap), -row * rowStep)
 
         card.title:SetText(DungeonName(dungeonName))
-        card.meta:SetText(HomeLevelText(dungeon.level))
+        card.meta:SetText(FDJ.HomeLevelText(dungeon.level))
+        local playerFaction = "Alliance"
+        if UnitFactionGroup then
+            local detectedFaction = UnitFactionGroup("player")
+            if detectedFaction == "Horde" then playerFaction = "Horde" end
+        end
 
         local factionQuestCount = 0
         for _, quest in ipairs(dungeon.quests or {}) do
-            if QuestMatchesFaction(quest, activeFaction) and not quest.hideFromMainList then
+            if QuestMatchesFaction(quest, playerFaction) and not quest.hideFromMainList then
                 factionQuestCount = factionQuestCount + 1
             end
         end
 
-        local factionIcon = (activeFaction == "Horde") and HORDE_ICON or ALLIANCE_ICON
+        local factionIcon = playerFaction == "Horde" and FDJ.HORDE_ICON or FDJ.ALLIANCE_ICON
         card.counts:SetText(
             "|T" .. factionIcon .. ":22:22:0:0|t "
             .. tostring(factionQuestCount)
@@ -5368,11 +6135,11 @@ RefreshHomeDungeonCards = function()
     end
 
     frame.homeCardsContent:SetHeight(contentHeight)
-    UpdateScrollBarVisibility(frame.homeScroll, contentHeight)
+    FDJ.UpdateScrollBarVisibility(frame.homeScroll, contentHeight)
 end
 
 RefreshBossList = function()
-    local dungeon = DB[selectedDungeon]
+    local dungeon = FDJ.DB[selectedDungeon]
 
     for i = 1, math.max(#FDJ.bossButtons, #dungeon.bosses) do
         local button = FDJ.bossButtons[i]
@@ -5401,12 +6168,19 @@ RefreshBossList = function()
 
             local isRare = boss.rare == true
             button.rare:SetShown(isRare)
-            -- v1.0.29: rares use a dedicated silver-dragon portrait overlay.
-            -- Bosses with a fully bundled custom portrait (currently Lordaeron Captain)
-            -- already include the dragon frame in the art, so do not overlay a second one.
             button.rareBorder:SetShown(isRare)
+
+            local isDefeated = FDJ.IsBossDefeated and FDJ.IsBossDefeated(selectedDungeon, boss.name)
+            if button.defeatCheck then
+                button.defeatCheck:SetShown(isDefeated)
+            end
+            button.portrait:SetDesaturated(isDefeated)
             button.name:ClearAllPoints()
-            button.name:SetPoint("LEFT", button.portrait, "RIGHT", 11, 1)
+            if isDefeated then
+                button.name:SetPoint("LEFT", button.defeatCheck, "RIGHT", 4, 0)
+            else
+                button.name:SetPoint("LEFT", button.portrait, "RIGHT", 11, 1)
+            end
             if isRare then
                 button.name:SetPoint("RIGHT", button.rare, "LEFT", -8, 0)
             else
@@ -5420,10 +6194,10 @@ RefreshBossList = function()
             )
             button.question:SetShown(not hasPortrait)
 
-            local bossLevel = BossLevelText(selectedDungeon, boss)
+            local bossLevel = FDJ.BossLevelText(selectedDungeon, boss)
             if bossLevel then
                 button.levelText:SetText(bossLevel)
-                FitBossLevelText(button.levelText, bossLevel)
+                FDJ.FitBossLevelText(button.levelText, bossLevel)
                 button.levelBadge:Show()
                 button.levelText:Show()
             else
@@ -5431,7 +6205,7 @@ RefreshBossList = function()
                 button.levelText:Hide()
             end
 
-            local theme = THEMES[selectedDungeon] or THEMES["Hall of Thanes"]
+            local theme = FDJ.THEMES[selectedDungeon] or FDJ.THEMES["Hall of Thanes"]
 
             if selectedBoss == i then
                 button:SetBackdropColor(unpack(theme.rowSelected))
@@ -5452,18 +6226,49 @@ RefreshBossList = function()
 
     local contentHeight = math.max(1, #dungeon.bosses * 61)
     frame.bossContent:SetHeight(contentHeight)
-    UpdateScrollBarVisibility(frame.bossListScroll, contentHeight)
+    FDJ.UpdateScrollBarVisibility(frame.bossListScroll, contentHeight)
 end
 
-UpdateSelectedBossHeader = function()
-    if not frame or not frame.selectedBossName then return end
-    local dungeon = DB[selectedDungeon]
+-- "Items Data TBD": the Stockade plus every dungeon that has no loot entered
+-- yet (the new level-30 dungeons). Stored on FDJ to stay under Lua's
+-- 200-locals limit for this file.
+FDJ.ShowsItemsTBD = function(name)
+    if name == "The Stockade" then return false end
+    local d = FDJ.DB[name]
+    if not d then return false end
+    if d.itemsTBD or d.fullItemsTBD then return true end -- loot only partly known
+    for _, boss in ipairs(d.bosses or {}) do
+        if boss.loot and #boss.loot > 0 then return false end
+    end
+    return true
+end
+
+FDJ.ItemsTBDText = function(name)
+    local d = FDJ.DB[name]
+    if d and d.fullItemsTBD then return "Full Items Data TBD" end
+    return "Items Data TBD"
+end
+
+RefreshLoot = function()
+    for _, row in ipairs(FDJ.lootRows) do HideSearchItemHighlight(row) end
+    local dungeon = FDJ.DB[selectedDungeon]
     local boss = dungeon and dungeon.bosses and dungeon.bosses[selectedBoss]
     if not boss then return end
 
+    local isStockade = FDJ.ShowsItemsTBD(selectedDungeon)
+    if frame.stockadeItemsTBD then
+        frame.stockadeItemsTBD:SetText(FDJ.ItemsTBDText(selectedDungeon))
+        frame.stockadeItemsTBD:SetShown(isStockade)
+    end
+    if frame.stockadeLootTBD then
+        frame.stockadeLootTBD:SetText(FDJ.ItemsTBDText(selectedDungeon))
+        frame.stockadeLootTBD:SetShown(isStockade)
+    end
 
     frame.selectedBossName:SetText(BossName(boss.name))
-    frame.selectedBossName:SetTextColor(0.29, 0.13, 0.035)
+    frame.selectedBossName:SetTextColor(1.0, 1.0, 1.0)
+    frame.selectedBossName:SetShadowColor(0, 0, 0, 1.0)
+    frame.selectedBossName:SetShadowOffset(1.5, -1.5)
 
     if frame.selectedBossRareBorder then
         frame.selectedBossRareBorder:SetShown(boss.rare == true)
@@ -5485,11 +6290,11 @@ UpdateSelectedBossHeader = function()
     )
     frame.selectedBossQuestion:SetShown(not hasPortrait)
 
-    local bossLevel = BossLevelText(selectedDungeon, boss)
+    local bossLevel = FDJ.BossLevelText(selectedDungeon, boss)
     if frame.selectedBossLevelBadge and frame.selectedBossLevelText then
         if bossLevel then
             frame.selectedBossLevelText:SetText(bossLevel)
-            FitBossLevelText(frame.selectedBossLevelText, bossLevel)
+            FDJ.FitBossLevelText(frame.selectedBossLevelText, bossLevel)
             frame.selectedBossLevelBadge:Show()
             frame.selectedBossLevelText:Show()
         else
@@ -5497,34 +6302,21 @@ UpdateSelectedBossHeader = function()
             frame.selectedBossLevelText:Hide()
         end
     end
-end
-FDJ.UpdateSelectedBossHeader = UpdateSelectedBossHeader
-
-RefreshLoot = function()
-    UpdateSelectedBossHeader()
-    local dungeon = DB[selectedDungeon]
-    local boss = dungeon and dungeon.bosses and dungeon.bosses[selectedBoss]
-    if not boss then return end
 
     frame.selectedBossDescription:SetText("")
     frame.selectedBossDescription:Hide()
     frame.lootTitle:SetText("")
     frame.lootTitle:Hide()
     frame.lootScroll:ClearAllPoints()
-    frame.lootScroll:SetPoint("TOPLEFT", 12, -114)
+    frame.lootScroll:SetPoint("TOPLEFT", 12, isStockade and -124 or -114)
     frame.lootScroll:SetPoint("BOTTOMRIGHT", -29, 11)
 
     local filteredLoot = {}
     for _, item in ipairs(boss.loot or {}) do
-        local keep = true
-        if FDJ.selectedClassFilter ~= "ALL" and not ItemMatchesClass(item, FDJ.selectedClassFilter) then
-            keep = false
-        end
-        if keep and FDJ.selectedSlotFilter ~= "ALL" and not ItemMatchesSlot(item, FDJ.selectedSlotFilter) then
-            keep = false
-        end
-        if keep then
-            filteredLoot[#filteredLoot + 1] = item
+        local classMatch = (FDJ.selectedClassFilter == "ALL") or ItemMatchesClass(item, FDJ.selectedClassFilter)
+        local slotMatch = (FDJ.selectedSlotFilter == "ALL") or ItemMatchesSlot(item, FDJ.selectedSlotFilter)
+        if classMatch and slotMatch then
+            table.insert(filteredLoot, item)
         end
     end
 
@@ -5545,12 +6337,12 @@ RefreshLoot = function()
 
             local item = filteredLoot[i]
             row.item = item
-            row.icon:SetTexture(ItemIcon(item[1]))
+            row.icon:SetTexture(FDJ.ItemIcon(item[1]))
             if C_Item and type(C_Item.RequestLoadItemDataByID) == "function" then
                 pcall(C_Item.RequestLoadItemDataByID, item[1])
             end
 
-            local itemName, itemLink, quality = ItemInfo(item[1])
+            local itemName, itemLink, quality = FDJ.ItemInfo(item[1])
 
             local r, g, b
             if item[3] == "Quest Item" or item[4] == 1 then
@@ -5561,6 +6353,17 @@ RefreshLoot = function()
 
             row.name:SetText(itemName or item[2])
             row.name:SetTextColor(r, g, b)
+
+            local isWish = FDJ.IsWishlisted and FDJ.IsWishlisted(item[1])
+            if row.starButton then
+                if isWish then
+                    row.starButton.icon:SetTexture("Interface\\AddOns\\ForeverDungeonJournal\\Media\\Star_Gold.tga")
+                    row.starButton.icon:SetVertexColor(1.0, 0.82, 0.0, 1.0)
+                else
+                    row.starButton.icon:SetTexture("Interface\\AddOns\\ForeverDungeonJournal\\Media\\Star_Empty.tga")
+                    row.starButton.icon:SetVertexColor(0.40, 0.35, 0.25, 0.50)
+                end
+            end
 
             local trashSource = boss.trash and item[5]
             local showTrashSource = false
@@ -5574,244 +6377,204 @@ RefreshLoot = function()
             end
 
             if showTrashSource then
-                row.slot:SetText(ItemSlot(item[3]) .. "  |  " .. FreeText(trashSource))
-                row.fdjSourceText = L("DROPS_FROM", FreeText(trashSource))
+                row.slot:SetText(trashSource)
+                row.slot:SetTextColor(0.55, 0.45, 0.30)
             else
-                row.slot:SetText(ItemSlot(item[3]))
-                row.fdjSourceText = nil
+                row.slot:SetText(item[3] or "")
+                row.slot:SetTextColor(0.45, 0.35, 0.20)
             end
 
-            local ownedCount = 0
-            if C_Item and type(C_Item.GetItemCount) == "function" then
-                local ok, c = pcall(C_Item.GetItemCount, item[1], true)
-                if ok and type(c) == "number" then ownedCount = c end
-            elseif type(GetItemCount) == "function" then
-                local ok, c = pcall(GetItemCount, item[1], true)
-                if ok and type(c) == "number" then ownedCount = c end
-            end
-            if row.ownedBadge then
-                if ownedCount and ownedCount > 0 then
-                    row.ownedBadge:SetText("|cff40ff40✓ " .. L("ALREADY_OWNED") .. "|r")
-                    row.ownedBadge:Show()
-                else
-                    row.ownedBadge:Hide()
-                end
-            end
-
-            local theme = THEMES[selectedDungeon] or THEMES["Hall of Thanes"]
+            local theme = FDJ.THEMES[selectedDungeon] or FDJ.THEMES["Hall of Thanes"]
             row:SetBackdropColor(unpack(theme.lootRow))
             row:SetBackdropBorderColor(unpack(theme.border))
-            row.slot:SetTextColor(unpack(theme.muted))
+
             row:Show()
         elseif row then
-            row.item = nil
-            row.fdjSourceText = nil
-            if row.ownedBadge then row.ownedBadge:Hide() end
             row:Hide()
         end
     end
 
-    local contentHeight = math.max(1, #filteredLoot * 59)
-    frame.lootContent:SetHeight(contentHeight)
-    local viewportHeight = frame.lootScroll:GetHeight() or 0
-    local needsScroll = viewportHeight > 0 and contentHeight > viewportHeight + 4
-    if needsScroll then
-        frame.lootTitle:SetText(tostring(#filteredLoot) .. " " .. L("ITEMS"))
-        frame.lootTitle:ClearAllPoints()
-        frame.lootTitle:SetPoint("TOPLEFT", 14, -114)
-        frame.lootTitle:Show()
-        frame.lootScroll:ClearAllPoints()
-        frame.lootScroll:SetPoint("TOPLEFT", 12, -136)
-        frame.lootScroll:SetPoint("BOTTOMRIGHT", -29, 11)
-    else
-        frame.lootTitle:SetText("")
-        frame.lootTitle:ClearAllPoints()
-        frame.lootTitle:SetPoint("TOPLEFT", 14, -114)
-        frame.lootTitle:Hide()
-    end
-    UpdateScrollBarVisibility(frame.lootScroll, contentHeight)
+    local totalH = #filteredLoot * 59
+    frame.lootContent:SetHeight(math.max(1, totalH))
+    FDJ.UpdateScrollBarVisibility(frame.lootScroll, totalH)
+
     if frame.noLootMessage then
-        if #filteredLoot == 0 then
-            frame.noLootMessage:SetText("No loot matches current filters.")
+        if #filteredLoot == 0 and boss.loot and #boss.loot > 0 then
+            frame.noLootMessage:SetText(L("NO_LOOT_MATCHES_FILTER") or "No loot matches current filters.")
+            frame.noLootMessage:Show()
+        elseif (not boss.loot or #boss.loot == 0) and not isStockade then
+            frame.noLootMessage:SetText(L("NO_LOOT_RECORDED") or "No loot recorded.")
             frame.noLootMessage:Show()
         else
             frame.noLootMessage:Hide()
         end
     end
-
-    ApplyLocaleFontTree(frame.lootContent)
 end
 
-RefreshBossTactics = function()
-    if not frame or not frame.bossTacticsContent then return end
-    UpdateSelectedBossHeader()
-    local dungeon = DB[selectedDungeon]
+FDJ.RefreshBossTactics = function()
+    local dungeon = FDJ.DB[selectedDungeon]
     local boss = dungeon and dungeon.bosses and dungeon.bosses[selectedBoss]
     if not boss then return end
 
     local tactics = FDJ.BOSS_TACTICS and FDJ.BOSS_TACTICS[selectedDungeon] and FDJ.BOSS_TACTICS[selectedDungeon][boss.name]
-    local theme = THEMES[selectedDungeon] or THEMES["Hall of Thanes"]
+    local theme = FDJ.THEMES[selectedDungeon] or FDJ.THEMES["Hall of Thanes"]
 
-    local cursorY = 4
-    if tactics and tactics.overview then
-        frame.tacticsOverviewHeader:SetTextColor(unpack(theme.title))
-        frame.tacticsOverviewHeader:ClearAllPoints()
-        frame.tacticsOverviewHeader:SetPoint("TOPLEFT", frame.bossTacticsContent, "TOPLEFT", 6, -cursorY)
-        frame.tacticsOverviewHeader:Show()
-        cursorY = cursorY + 20
+    if frame.tacticsReturnButton then
+        frame.tacticsReturnButton:Hide()
+    end
 
-        frame.tacticsOverviewText:ClearAllPoints()
-        frame.tacticsOverviewText:SetPoint("TOPLEFT", frame.bossTacticsContent, "TOPLEFT", 8, -cursorY)
-        frame.tacticsOverviewText:SetText(tactics.overview)
+    if not tactics then
+        frame.tacticsOverviewHeader:Hide()
+        if frame.tacticsOverviewFrame then frame.tacticsOverviewFrame:Hide() end
+        frame.tacticsOverviewText:Hide()
+        frame.tacticsRoleHeader:Hide()
+        if frame.tacticsTankCard then frame.tacticsTankCard:Hide() end
+        if frame.tacticsHealerCard then frame.tacticsHealerCard:Hide() end
+        if frame.tacticsDpsCard then frame.tacticsDpsCard:Hide() end
+        frame.tacticsAbilitiesHeader:Hide()
+        if frame.tacticsAnnounceButton then frame.tacticsAnnounceButton:Hide() end
+        for _, r in ipairs(FDJ.tacticsAbilityRows or {}) do r:Hide() end
+        if frame.noLootMessage then
+            frame.noLootMessage:SetText(L("NO_TACTICS_AVAILABLE") or "No tactical briefing available for this encounter.")
+            frame.noLootMessage:Show()
+        end
+        frame.bossTacticsContent:SetHeight(1)
+        FDJ.UpdateScrollBarVisibility(frame.bossTacticsScroll, 1)
+        return
+    end
+
+    if frame.noLootMessage then frame.noLootMessage:Hide() end
+    if frame.tacticsAnnounceButton then frame.tacticsAnnounceButton:Show() end
+
+    frame.tacticsOverviewHeader:SetTextColor(unpack(theme.title))
+    frame.tacticsOverviewHeader:ClearAllPoints()
+    frame.tacticsOverviewHeader:SetPoint("TOPLEFT", frame.bossTacticsContent, "TOPLEFT", 8, -8)
+    frame.tacticsOverviewHeader:Show()
+
+    local cursorY = 32
+
+    if tactics.overview and tactics.overview ~= "" then
+        local ovDisplay = FDJ.FormatTacticsAbilityLinks(tactics.overview, tactics.abilities)
+        frame.tacticsOverviewText:SetText(ovDisplay or tactics.overview)
+        local textH = math.max(16, frame.tacticsOverviewText:GetStringHeight() or 30)
+
+        if frame.tacticsOverviewFrame then
+            frame.tacticsOverviewFrame:ClearAllPoints()
+            frame.tacticsOverviewFrame:SetPoint("TOPLEFT", frame.bossTacticsContent, "TOPLEFT", 8, -cursorY)
+            frame.tacticsOverviewFrame:SetPoint("RIGHT", frame.bossTacticsContent, "RIGHT", -8, 0)
+            frame.tacticsOverviewFrame:SetHeight(textH)
+            frame.tacticsOverviewFrame:Show()
+
+            frame.tacticsOverviewText:ClearAllPoints()
+            frame.tacticsOverviewText:SetPoint("TOPLEFT", frame.tacticsOverviewFrame, "TOPLEFT", 0, 0)
+            frame.tacticsOverviewText:SetPoint("RIGHT", frame.tacticsOverviewFrame, "RIGHT", 0, 0)
+        else
+            frame.tacticsOverviewText:ClearAllPoints()
+            frame.tacticsOverviewText:SetPoint("TOPLEFT", frame.bossTacticsContent, "TOPLEFT", 8, -cursorY)
+            frame.tacticsOverviewText:SetPoint("RIGHT", frame.bossTacticsContent, "RIGHT", -8, 0)
+        end
         frame.tacticsOverviewText:Show()
-        cursorY = cursorY + (frame.tacticsOverviewText:GetStringHeight() or 30) + 14
+        cursorY = cursorY + textH + 14
+    else
+        if frame.tacticsOverviewFrame then frame.tacticsOverviewFrame:Hide() end
+        frame.tacticsOverviewText:Hide()
+    end
 
-        frame.tacticsRoleHeader:SetTextColor(unpack(theme.title))
-        frame.tacticsRoleHeader:ClearAllPoints()
-        frame.tacticsRoleHeader:SetPoint("TOPLEFT", frame.bossTacticsContent, "TOPLEFT", 6, -cursorY)
-        frame.tacticsRoleHeader:Show()
+    frame.tacticsRoleHeader:SetTextColor(unpack(theme.title))
+    frame.tacticsRoleHeader:ClearAllPoints()
+    frame.tacticsRoleHeader:SetPoint("TOPLEFT", frame.bossTacticsContent, "TOPLEFT", 6, -cursorY)
+    frame.tacticsRoleHeader:Show()
+    cursorY = cursorY + 22
+
+    local cards = {
+        { frame.tacticsTankCard, tactics.roleTips and tactics.roleTips.tank, L("TANK") },
+        { frame.tacticsHealerCard, tactics.roleTips and tactics.roleTips.healer, L("HEALER") },
+        { frame.tacticsDpsCard, tactics.roleTips and tactics.roleTips.dps, L("DPS") },
+    }
+    for _, cInfo in ipairs(cards) do
+        local card, tipText, roleLabel = cInfo[1], cInfo[2], cInfo[3]
+        if card and tipText then
+            card.rawTipText = tipText
+            card.roleTitle = roleLabel
+            local formattedText = FDJ.FormatTacticsAbilityLinks(tipText, tactics.abilities)
+            card:ClearAllPoints()
+            card:SetPoint("TOPLEFT", frame.bossTacticsContent, "TOPLEFT", 6, -cursorY)
+            card:SetPoint("RIGHT", frame.bossTacticsContent, "RIGHT", -6, 0)
+            card.desc:SetText(formattedText)
+
+            local dHeight = math.max(16, card.desc:GetStringHeight() or 16)
+            local cHeight = math.max(48, 28 + dHeight + 8)
+            card:SetHeight(cHeight)
+            card:Show()
+            cursorY = cursorY + cHeight + 6
+        elseif card then
+            card:Hide()
+        end
+    end
+
+    cursorY = cursorY + 8
+
+    FDJ.tacticsAbilityRows = FDJ.tacticsAbilityRows or {}
+    if tactics.abilities and #tactics.abilities > 0 then
+        frame.tacticsAbilitiesHeader:SetTextColor(unpack(theme.title))
+        frame.tacticsAbilitiesHeader:ClearAllPoints()
+        frame.tacticsAbilitiesHeader:SetPoint("TOPLEFT", frame.bossTacticsContent, "TOPLEFT", 6, -cursorY)
+        frame.tacticsAbilitiesHeader:Show()
         cursorY = cursorY + 22
 
-        local cards = {
-            { frame.tacticsTankCard, tactics.roleTips and tactics.roleTips.tank },
-            { frame.tacticsHealerCard, tactics.roleTips and tactics.roleTips.healer },
-            { frame.tacticsDpsCard, tactics.roleTips and tactics.roleTips.dps },
-        }
-        for _, cInfo in ipairs(cards) do
-            local card, tipText = cInfo[1], cInfo[2]
-            if card and tipText then
-                card:ClearAllPoints()
-                card:SetPoint("TOPLEFT", frame.bossTacticsContent, "TOPLEFT", 6, -cursorY)
-                card.desc:SetText(tipText)
-                local dHeight = math.max(16, card.desc:GetStringHeight() or 16)
-                local cHeight = 22 + dHeight + 6
-                card:SetHeight(cHeight)
-                card:Show()
-                cursorY = cursorY + cHeight + 6
-            elseif card then
-                card:Hide()
+        for i, ability in ipairs(tactics.abilities) do
+            local row = FDJ.tacticsAbilityRows[i]
+            if not row then
+                row = MakeTacticsAbilityRow(frame.bossTacticsContent)
+                FDJ.tacticsAbilityRows[i] = row
             end
+            row.ability = ability
+            row.abilityIndex = i
+            row.contentOffsetY = cursorY
+            local iconTex = ability.icon
+            if not iconTex or iconTex == "" then
+                iconTex = "Interface\\Icons\\INV_Misc_QuestionMark"
+            end
+            row.icon:SetTexture(iconTex)
+            if not row.icon:GetTexture() then
+                row.icon:SetTexture("Interface\\Icons\\INV_Misc_QuestionMark")
+            end
+            row.name:SetText(ability.name or "Ability")
+            row.desc:SetText(ability.desc or "")
+            local dHeight = math.max(14, row.desc:GetStringHeight() or 14)
+            local rHeight = math.max(48, 20 + dHeight + 6)
+            row:SetHeight(rHeight)
+            row:ClearAllPoints()
+            row:SetPoint("TOPLEFT", frame.bossTacticsContent, "TOPLEFT", 6, -cursorY)
+            row:SetPoint("RIGHT", frame.bossTacticsContent, "RIGHT", -6, 0)
+            row:Show()
+            cursorY = cursorY + rHeight + 6
         end
-
-        cursorY = cursorY + 8
-
-        if tactics.abilities and #tactics.abilities > 0 then
-            frame.tacticsAbilitiesHeader:SetTextColor(unpack(theme.title))
-            frame.tacticsAbilitiesHeader:ClearAllPoints()
-            frame.tacticsAbilitiesHeader:SetPoint("TOPLEFT", frame.bossTacticsContent, "TOPLEFT", 6, -cursorY)
-            frame.tacticsAbilitiesHeader:Show()
-            cursorY = cursorY + 22
-
-            for i, ability in ipairs(tactics.abilities) do
-                local row = FDJ.tacticsAbilityRows[i]
-                if not row then
-                    row = MakeTacticsAbilityRow(frame.bossTacticsContent)
-                    FDJ.tacticsAbilityRows[i] = row
-                end
-                row.ability = ability
-                local iconTex = ability.icon
-                if not iconTex or iconTex == "" then
-                    iconTex = "Interface\\Icons\\INV_Misc_QuestionMark"
-                end
-                row.icon:SetTexture(iconTex)
-                if not row.icon:GetTexture() then
-                    row.icon:SetTexture("Interface\\Icons\\INV_Misc_QuestionMark")
-                end
-                row.name:SetText(ability.name or "Ability")
-                row.desc:SetText(ability.desc or "")
-                local dHeight = math.max(14, row.desc:GetStringHeight() or 14)
-                local rHeight = math.max(48, 20 + dHeight + 6)
-                row:SetHeight(rHeight)
-                row:ClearAllPoints()
-                row:SetPoint("TOPLEFT", frame.bossTacticsContent, "TOPLEFT", 6, -cursorY)
-                row:Show()
-                cursorY = cursorY + rHeight + 6
-            end
-            for i = #tactics.abilities + 1, #FDJ.tacticsAbilityRows do
-                FDJ.tacticsAbilityRows[i]:Hide()
-            end
-        else
-            frame.tacticsAbilitiesHeader:Hide()
-            for _, r in ipairs(FDJ.tacticsAbilityRows) do r:Hide() end
+        for i = #tactics.abilities + 1, #FDJ.tacticsAbilityRows do
+            FDJ.tacticsAbilityRows[i]:Hide()
         end
     else
-        frame.tacticsOverviewHeader:SetText(L("OVERVIEW"))
-        frame.tacticsOverviewHeader:SetTextColor(unpack(theme.title))
-        frame.tacticsOverviewHeader:ClearAllPoints()
-        frame.tacticsOverviewHeader:SetPoint("TOPLEFT", frame.bossTacticsContent, "TOPLEFT", 6, -cursorY)
-        frame.tacticsOverviewHeader:Show()
-        cursorY = cursorY + 20
-
-        frame.tacticsOverviewText:ClearAllPoints()
-        frame.tacticsOverviewText:SetPoint("TOPLEFT", frame.bossTacticsContent, "TOPLEFT", 8, -cursorY)
-        frame.tacticsOverviewText:SetText("No specific tactics recorded yet for this encounter.")
-        frame.tacticsOverviewText:Show()
-        cursorY = cursorY + 30
-
-        frame.tacticsRoleHeader:Hide()
-        frame.tacticsTankCard:Hide()
-        frame.tacticsHealerCard:Hide()
-        frame.tacticsDpsCard:Hide()
         frame.tacticsAbilitiesHeader:Hide()
         for _, r in ipairs(FDJ.tacticsAbilityRows) do r:Hide() end
     end
 
-    frame.bossTacticsContent:SetHeight(math.max(1, cursorY + 10))
-    UpdateScrollBarVisibility(frame.bossTacticsScroll, cursorY + 10)
-end
-
-local function SetBossSubTab(subTab)
-    FDJ.selectedBossSubTab = subTab
-    local isLoot = subTab == "loot"
-    local theme = THEMES[selectedDungeon] or THEMES["Hall of Thanes"]
-
-    if frame.bossSubTabLoot then
-        if isLoot then
-            frame.bossSubTabLoot:Disable()
-            frame.bossSubTabLoot:SetAlpha(1.0)
-            if frame.bossSubTabLoot.text then frame.bossSubTabLoot.text:SetTextColor(unpack(theme.title)) end
-        else
-            frame.bossSubTabLoot:Enable()
-            frame.bossSubTabLoot:SetAlpha(0.85)
-            if frame.bossSubTabLoot.text then frame.bossSubTabLoot.text:SetTextColor(1.00, 0.82, 0.27) end
-        end
-    end
-    if frame.bossSubTabTactics then
-        if not isLoot then
-            frame.bossSubTabTactics:Disable()
-            frame.bossSubTabTactics:SetAlpha(1.0)
-            if frame.bossSubTabTactics.text then frame.bossSubTabTactics.text:SetTextColor(unpack(theme.title)) end
-        else
-            frame.bossSubTabTactics:Enable()
-            frame.bossSubTabTactics:SetAlpha(0.85)
-            if frame.bossSubTabTactics.text then frame.bossSubTabTactics.text:SetTextColor(1.00, 0.82, 0.27) end
-        end
-    end
-
-    if frame.lootScroll then frame.lootScroll:SetShown(isLoot) end
-    if frame.lootClassFilterButton then frame.lootClassFilterButton:SetShown(isLoot) end
-    if frame.lootSlotFilterButton then frame.lootSlotFilterButton:SetShown(isLoot) end
-    if frame.bossTacticsScroll then frame.bossTacticsScroll:SetShown(not isLoot) end
-    if not isLoot and frame.noLootMessage then frame.noLootMessage:Hide() end
-
-    if isLoot then
-        RefreshLoot()
-    else
-        RefreshBossTactics()
-    end
+    frame.bossTacticsContent:SetHeight(cursorY + 20)
+    FDJ.UpdateScrollBarVisibility(frame.bossTacticsScroll, cursorY + 20)
 end
 
 local function ApplyTheme()
     if not frame then return end
 
-    local theme = THEMES[selectedDungeon] or THEMES["Hall of Thanes"]
+    local theme = FDJ.THEMES[selectedDungeon] or FDJ.THEMES["Hall of Thanes"]
 
     frame:SetBackdropColor(unpack(theme.frame))
-    frame.contentPanel:SetBackdropColor(unpack(theme.content))
-    frame.contentPanel:SetBackdropBorderColor(unpack(theme.border))
-    frame.headerPanel:SetBackdropColor(unpack(theme.header))
-    frame.leftPanel:SetBackdropColor(unpack(theme.left))
-    frame.rightPanel:SetBackdropColor(unpack(theme.right))
+    if frame.contentPanel then
+        frame.contentPanel:SetBackdropColor(unpack(theme.content))
+        frame.contentPanel:SetBackdropBorderColor(unpack(theme.border))
+    end
+    if frame.headerPanel then frame.headerPanel:SetBackdropColor(unpack(theme.header)) end
+    if frame.leftPanel then frame.leftPanel:SetBackdropColor(unpack(theme.left)) end
+    if frame.rightPanel then frame.rightPanel:SetBackdropColor(unpack(theme.right)) end
 
     if frame.homePanel then
         frame.homePanel:SetBackdropColor(0.16, 0.12, 0.07, 0.96)
@@ -5840,12 +6603,18 @@ local function ApplyTheme()
         frame.questRightPanel:SetBackdropBorderColor(unpack(theme.border))
     end
 
-    frame.dungeonTitle:SetTextColor(unpack(theme.title))
-    frame.dungeonMeta:SetTextColor(unpack(theme.muted))
+    if frame.dungeonTitle then frame.dungeonTitle:SetTextColor(unpack(theme.title)) end
+    if frame.dungeonMeta then frame.dungeonMeta:SetTextColor(unpack(theme.muted)) end
 
-    frame.selectedBossName:SetTextColor(unpack(theme.text))
-    frame.selectedBossDescription:SetTextColor(unpack(theme.text))
-    frame.lootTitle:SetTextColor(unpack(theme.text))
+    if frame.selectedBossName then
+        frame.selectedBossName:SetTextColor(1.0, 1.0, 1.0)
+        frame.selectedBossName:SetShadowColor(0, 0, 0, 1.0)
+        frame.selectedBossName:SetShadowOffset(1.5, -1.5)
+    end
+    if frame.selectedBossDescription then
+        frame.selectedBossDescription:SetTextColor(unpack(theme.text))
+    end
+    if frame.lootTitle then frame.lootTitle:SetTextColor(unpack(theme.text)) end
     if frame.bossListTitle then frame.bossListTitle:SetTextColor(unpack(theme.text)) end
     if frame.questListTitle then frame.questListTitle:SetTextColor(unpack(theme.text)) end
 
@@ -5917,13 +6686,17 @@ ApplyLocalization = function()
 
     UpdateLanguageControl()
     if frame.mainTitle then frame.mainTitle:SetText(L("DUNGEON_JOURNAL")) end
+    if frame.UpdateSearchPlaceholder then frame.UpdateSearchPlaceholder() end
+    if frame.RefreshSearchResults and frame.searchEditBox and (frame.searchEditBox:GetText() or "") ~= "" then
+        frame.RefreshSearchResults(frame.searchEditBox:GetText())
+    end
     if frame.backButton then frame.backButton:SetText(L("DUNGEONS")) end
     if frame.sourceLabel then frame.sourceLabel:SetText(L("FOREVER_BETA_DATA")) end
-    if frame.dungeonRouteButton then frame.dungeonRouteButton:SetText(L("HOW_TO_GET_THERE")) end
+    if frame.dungeonRouteButton then frame.dungeonRouteButton:SetText(L("ROUTE")) end
     if frame.routeBackButton then frame.routeBackButton:SetText(L("BACK_TO_DUNGEON")) end
+    if frame.routeMapButton then frame.routeMapButton:SetText(L("SHOW_ON_MAP")) end
     if frame.homeTitle then frame.homeTitle:SetText(L("BROWSE_DUNGEONS")) end
     if frame.homeSubtitle then frame.homeSubtitle:SetText(L("HOME_SUBTITLE")) end
-    if frame.homeFactionLabel then frame.homeFactionLabel:SetText(L("QUESTS") .. ":") end
     if frame.hideDungeonsButton and frame.hideDungeonsButtonText then
         local label = FDJ.homeEditMode and L("DONE") or L("HIDE_DUNGEONS")
         frame.hideDungeonsButtonText:SetText(label)
@@ -5940,18 +6713,18 @@ ApplyLocalization = function()
     end
     if frame.bossesTab then frame.bossesTab:SetText(L("BOSSES")) end
     if frame.questsTab then frame.questsTab:SetText(L("QUESTS")) end
-    if frame.mapTab then frame.mapTab:SetText(L("SHOW_DUNGEON_LOCATION")) end
-    if frame.dungeonMapButton and frame.dungeonMapButton.text then frame.dungeonMapButton.text:SetText(L("DUNGEON_MAP")) end
-    if frame.dungeonMapCloseButton and frame.dungeonMapCloseButton.text then frame.dungeonMapCloseButton.text:SetText(L("CLOSE_MAP")) end
-    if frame.genericMapEntranceButton then frame.genericMapEntranceButton:SetText(L("SHOW_ON_MAP")) end
+    if frame.mapTab then frame.mapTab:SetText(L("DUNGEON_MAP") or "Dungeon Map") end
     if frame.bossListTitle then frame.bossListTitle:SetText(L("BOSSES")) end
     if frame.questListTitle then frame.questListTitle:SetText(L("QUESTS")) end
     if frame.questObjectiveHeader then frame.questObjectiveHeader:SetText(L("OBJECTIVE")) end
+    if frame.questRequiredItemsHeader then frame.questRequiredItemsHeader:SetText(L("REQUIRED_ITEMS")) end
     if frame.questStartsHeader then frame.questStartsHeader:SetText(L("STARTS_AT")) end
     if frame.questTurninHeader then frame.questTurninHeader:SetText(L("TURN_IN")) end
     if frame.questNotesHeader then frame.questNotesHeader:SetText(L("NOTES")) end
+    if frame.questShareButton and frame.questShareButton.questID then
+        FDJ.UpdateQuestShareButton(frame.questShareButton.questID, frame.questShareButton._fdjClassLabel)
+    end
     UpdateQuestActionButtonSizes()
-    UpdateDungeonHeaderTabs()
     if frame.questRewardSummary then ApplyRewardSummaryFont(frame.questRewardSummary) end
     if frame.questRewardHeader and frame.questRewardHeader:GetText() ~= "" then
         frame.questRewardHeader:SetText(L("REWARDS"):upper())
@@ -5973,6 +6746,7 @@ end
 
 ShowDungeonPage = function()
     if not frame then return end
+    if frame.homeWishlistPanel then frame.homeWishlistPanel:Hide() end
     if frame.homePanel then frame.homePanel:Hide() end
     if frame.contentPanel then frame.contentPanel:Show() end
     if frame.backButton then frame.backButton:Show() end
@@ -5983,37 +6757,74 @@ end
 ShowHomePage = function()
     if not frame then return end
     if frame.contentPanel then frame.contentPanel:Hide() end
+    if frame.homeWishlistPanel then frame.homeWishlistPanel:Hide() end
     if frame.homePanel then frame.homePanel:Show() end
     if frame.backButton then frame.backButton:Hide() end
     frame.currentView = "home"
     ForeverDungeonJournalDB.lastView = "home"
-    UpdateFactionButtons()
+    if FDJ.UpdateHomeWishlistButton then FDJ.UpdateHomeWishlistButton() end
     RefreshHomeDungeonCards()
 end
 
 RefreshAll = function()
+    if not frame then return end
     ApplyLocalization()
-    local dungeon = DB[selectedDungeon]
+    local dungeon = FDJ.DB[selectedDungeon]
 
     ApplyTheme()
 
-    frame.dungeonTitle:SetText(DungeonName(selectedDungeon))
-    frame.dungeonMeta:SetText(HomeLevelText(dungeon.level))
-    if frame.dungeonLocationButton then
-        frame.dungeonLocationButton:SetShown(dungeon.entrance ~= nil)
+    if frame.dungeonTitle then
+        frame.dungeonTitle:ClearAllPoints()
+        frame.dungeonTitle:SetPoint("TOPLEFT", frame.headerPanel or frame, "TOPLEFT", 16, -11)
+        frame.dungeonTitle:SetText(DungeonName(selectedDungeon))
     end
+    if frame.dungeonMeta then
+        frame.dungeonMeta:ClearAllPoints()
+        frame.dungeonMeta:SetPoint("TOPLEFT", frame.headerPanel or frame, "TOPLEFT", 16, -37)
+        frame.dungeonMeta:SetText(FDJ.HomeLevelText(dungeon.level))
+    end
+
+    local hasEntrance = dungeon.entrance ~= nil
+    if frame.dungeonLocationButton then
+        frame.dungeonLocationButton:SetShown(hasEntrance)
+        frame.dungeonLocationButton:ClearAllPoints()
+        frame.dungeonLocationButton:SetPoint("LEFT", frame.dungeonMeta, "RIGHT", 14, 0)
+        frame.dungeonLocationButton:SetText(L("SHOW_ENTRANCE_ON_MAP") or "Show Entrance on Map")
+    end
+
     if frame.dungeonRouteButton then
         local route = dungeon.routeGuide
-        local playerFaction = DetectPlayerFaction() or (UnitFactionGroup and UnitFactionGroup("player")) or nil
+        local playerFaction = UnitFactionGroup and UnitFactionGroup("player") or nil
         local allowed = route and (not route.faction or route.faction == playerFaction)
         frame.dungeonRouteButton:SetShown(allowed and true or false)
+        if frame.dungeonRouteButton.icon then
+            local routeIcon = (route and route.faction == "Horde") and FDJ.HORDE_ICON or FDJ.ALLIANCE_ICON
+            frame.dungeonRouteButton.icon:SetTexture(routeIcon)
+        end
         if allowed then
-            frame.dungeonRouteButton:SetText(L("HOW_TO_GET_THERE"))
-            local factionIcon = (route.faction == "Horde") and HORDE_ICON or ALLIANCE_ICON
-            if frame.dungeonRouteButton.icon then
-                frame.dungeonRouteButton.icon:SetTexture(factionIcon)
+            frame.dungeonRouteButton:SetText(L("ROUTE") or "Route")
+            frame.dungeonRouteButton:ClearAllPoints()
+            if hasEntrance and frame.dungeonLocationButton and frame.dungeonLocationButton:IsShown() then
+                frame.dungeonRouteButton:SetPoint("LEFT", frame.dungeonLocationButton, "RIGHT", 8, 0)
+            else
+                frame.dungeonRouteButton:SetPoint("LEFT", frame.dungeonMeta, "RIGHT", 14, 0)
             end
         end
+    end
+
+    if frame.resetRunButton then
+        frame.resetRunButton:ClearAllPoints()
+        if frame.dungeonRouteButton and frame.dungeonRouteButton:IsShown() then
+            frame.resetRunButton:SetPoint("LEFT", frame.dungeonRouteButton, "RIGHT", 8, 0)
+        elseif frame.dungeonLocationButton and frame.dungeonLocationButton:IsShown() then
+            frame.resetRunButton:SetPoint("LEFT", frame.dungeonLocationButton, "RIGHT", 8, 0)
+        else
+            frame.resetRunButton:SetPoint("LEFT", frame.dungeonMeta, "RIGHT", 14, 0)
+        end
+    end
+
+    if frame.stockadeItemsTBD then
+        frame.stockadeItemsTBD:Hide()
     end
 
     UpdateDungeonHeaderTabs()
@@ -6026,30 +6837,104 @@ RefreshAll = function()
     SetMode(selectedMode)
 end
 
+FDJ.UpdateSelectedBossHeader = function()
+    if not frame or not frame.selectedBossName then return end
+    local dungeon = FDJ.DB and FDJ.DB[selectedDungeon]
+    local boss = dungeon and dungeon.bosses and dungeon.bosses[selectedBoss]
+    if not boss then return end
+
+    frame.selectedBossName:SetText(BossName(boss.name))
+    frame.selectedBossName:SetTextColor(1.0, 1.0, 1.0)
+    frame.selectedBossName:SetShadowColor(0, 0, 0, 1.0)
+    frame.selectedBossName:SetShadowOffset(1.5, -1.5)
+
+    SetBossPortrait(frame.selectedBossPortrait, selectedDungeon, boss)
+
+    local isDefeated = FDJ.IsBossDefeated and FDJ.IsBossDefeated(selectedDungeon, boss.name)
+    if frame.selectedBossDefeatCheck then
+        frame.selectedBossDefeatCheck:SetShown(isDefeated)
+    end
+end
+
+FDJ.SetBossSubTab = function(subTab)
+    FDJ.selectedBossSubTab = subTab or "loot"
+    if frame.bossSubTabOverview then
+        if FDJ.selectedBossSubTab == "tactics" then
+            frame.bossSubTabOverview:SetBackdropColor(0.26, 0.18, 0.09, 0.95)
+            frame.bossSubTabOverview.text:SetTextColor(1.00, 0.85, 0.35)
+        else
+            frame.bossSubTabOverview:SetBackdropColor(0.12, 0.08, 0.04, 0.80)
+            frame.bossSubTabOverview.text:SetTextColor(0.65, 0.58, 0.45)
+        end
+    end
+    if frame.bossSubTabLoot then
+        if FDJ.selectedBossSubTab == "loot" then
+            frame.bossSubTabLoot:SetBackdropColor(0.26, 0.18, 0.09, 0.95)
+            frame.bossSubTabLoot.text:SetTextColor(1.00, 0.85, 0.35)
+        else
+            frame.bossSubTabLoot:SetBackdropColor(0.12, 0.08, 0.04, 0.80)
+            frame.bossSubTabLoot.text:SetTextColor(0.65, 0.58, 0.45)
+        end
+    end
+
+    local isLoot = (FDJ.selectedBossSubTab == "loot")
+    if frame.lootScroll then frame.lootScroll:SetShown(isLoot) end
+    if frame.lootClassFilterButton then frame.lootClassFilterButton:SetShown(isLoot) end
+    if frame.lootSlotFilterButton then frame.lootSlotFilterButton:SetShown(isLoot) end
+    if not isLoot then
+        if frame.classMenu then frame.classMenu:Hide() end
+        if frame.slotMenu then frame.slotMenu:Hide() end
+    end
+    if frame.bossTacticsScroll then frame.bossTacticsScroll:SetShown(not isLoot) end
+    if frame.tacticsReturnButton then frame.tacticsReturnButton:Hide() end
+
+    if isLoot then
+        RefreshLoot()
+    else
+        FDJ.RefreshBossTactics()
+    end
+end
+
 SelectBoss = function(index)
-    local dungeon = DB[selectedDungeon]
+    local dungeon = FDJ.DB[selectedDungeon]
     if not dungeon or not dungeon.bosses[index] then return end
 
     selectedBoss = index
     ForeverDungeonJournalDB.lastBoss = index
 
     RefreshBossList()
-    UpdateSelectedBossHeader()
+    FDJ.UpdateSelectedBossHeader()
     if FDJ.selectedBossSubTab == "tactics" then
-        RefreshBossTactics()
+        FDJ.RefreshBossTactics()
     else
         RefreshLoot()
     end
 end
 
 SelectDungeon = function(name)
-    if not DB[name] then return end
+    if not FDJ.DB[name] then return end
+    if FDJ.DB[name].previewOnly then return end
 
     ShowDungeonPage()
     selectedDungeon = name
     selectedBoss = 1
     selectedQuest = 1
 
+    local hasCurrentFaction = false
+    local fallbackFaction = nil
+    for _, q in ipairs(FDJ.DB[name].quests or {}) do
+        if QuestMatchesFaction(q, selectedQuestFaction) then
+            hasCurrentFaction = true
+            break
+        end
+        if q.faction == "Alliance" or q.faction == "Horde" then
+            fallbackFaction = fallbackFaction or q.faction
+        end
+    end
+    if not hasCurrentFaction and fallbackFaction then
+        selectedQuestFaction = fallbackFaction
+        ForeverDungeonJournalDB.questFaction = selectedQuestFaction
+    end
     ForeverDungeonJournalDB.lastDungeon = name
     ForeverDungeonJournalDB.lastBoss = 1
     ForeverDungeonJournalDB.lastQuest = 1
@@ -6057,6 +6942,538 @@ SelectDungeon = function(name)
     frame.bossListScroll:SetVerticalScroll(0)
 
     RefreshAll()
+
+    if FDJ.DUNGEON_MAPS[name] and #(FDJ.DB[name].bosses or {}) == 0 and #(FDJ.DB[name].quests or {}) == 0 then
+        ShowDungeonMap()
+    end
+end
+
+
+local function CreateGlobalSearchUI()
+    -- ============================================================
+    -- GLOBAL SEARCH
+    -- ============================================================
+    -- Search is deliberately available from every journal page. Results include
+    -- dungeons and every item already recorded in boss loot or quest data.
+    local searchBox = CreateFrame("EditBox", nil, frame, "BackdropTemplate")
+    frame.searchEditBox = searchBox
+    searchBox:SetSize(265, 26)
+    searchBox:SetPoint("TOPLEFT", frame, "TOPLEFT", 18, -14)
+    searchBox:SetAutoFocus(false)
+    searchBox:SetMaxLetters(80)
+    searchBox:SetFontObject("GameFontHighlightLarge")
+    searchBox:SetTextInsets(27, 22, 0, 0)
+    searchBox:SetJustifyH("LEFT")
+    FDJ.SetBackdrop(searchBox, "Interface\\Buttons\\WHITE8X8", "Interface\\Tooltips\\UI-Tooltip-Border", 10, 3)
+    searchBox:SetBackdropColor(0.045, 0.043, 0.040, 0.98)
+    searchBox:SetBackdropBorderColor(0.34, 0.31, 0.27, 1)
+
+    local searchIcon = searchBox:CreateTexture(nil, "ARTWORK")
+    searchIcon:SetSize(14, 14)
+    searchIcon:SetPoint("LEFT", 7, 0)
+    searchIcon:SetTexture("Interface\\Common\\UI-Searchbox-Icon")
+    searchIcon:SetVertexColor(0.72, 0.70, 0.66)
+
+    local searchPlaceholder = searchBox:CreateFontString(nil, "OVERLAY", "GameFontHighlight")
+    frame.searchPlaceholder = searchPlaceholder
+    searchPlaceholder:SetPoint("LEFT", 28, 0)
+    searchPlaceholder:SetTextColor(0.48, 0.47, 0.44)
+
+    local searchClear = CreateFrame("Button", nil, searchBox)
+    frame.searchClearButton = searchClear
+    searchClear:SetSize(16, 16)
+    searchClear:SetPoint("RIGHT", -5, 0)
+    searchClear:SetNormalTexture("Interface\\Buttons\\UI-StopButton")
+    searchClear:SetHighlightTexture("Interface\\Buttons\\UI-Common-MouseHilight", "ADD")
+    searchClear:Hide()
+
+    local searchResults = CreateFrame("Frame", nil, frame, "BackdropTemplate")
+    frame.searchResultsFrame = searchResults
+    searchResults:SetPoint("TOPLEFT", searchBox, "BOTTOMLEFT", 0, -3)
+    searchResults:SetSize(340, 40)
+    searchResults:SetFrameStrata("TOOLTIP")
+    searchResults:SetFrameLevel(frame:GetFrameLevel() + 60)
+    FDJ.SetBackdrop(searchResults, "Interface\\Buttons\\WHITE8X8", "Interface\\Tooltips\\UI-Tooltip-Border", 10, 3)
+    searchResults:SetBackdropColor(0.045, 0.042, 0.037, 0.995)
+    searchResults:SetBackdropBorderColor(0.48, 0.40, 0.27, 1)
+    searchResults:Hide()
+
+    local searchRows = {}
+    local currentSearchResults = {}
+    local searchResultOffset = 0
+    local MAX_VISIBLE_SEARCH_RESULTS = 6
+    local MAX_SEARCH_RESULTS = 80
+
+    -- Common Classic dungeon shorthand plus aliases for the two Forever dungeons.
+    -- Deadmines is commonly called both DM and VC; Stockade is commonly "Stocks".
+    -- RoL is already in use for Ruins of Lordaeron. Hall of Thanes is new, so
+    -- support both natural initialisms players are likely to type (HoT / HT).
+    local DUNGEON_SEARCH_ALIASES = {
+        ["Hall of Thanes"] = { "hot", "ht", "halls of thanes", "halls" },
+        ["Ragefire Chasm"] = { "rfc" },
+        ["Ruins of Lordaeron"] = { "rol", "rl" },
+        ["The Deadmines"] = { "dm", "vc", "deadmines" },
+        ["Wailing Caverns"] = { "wc" },
+        ["Shadowfang Keep"] = { "sfk" },
+        ["The Stockade"] = { "stocks", "stockades", "stockade", "sw stocks" },
+        ["Blackfathom Deeps"] = { "bfd" },
+    }
+
+    local function SearchText(value)
+        local s = tostring(value or "")
+        s = s:gsub("|c%x%x%x%x%x%x%x%x", ""):gsub("|r", "")
+        return string.lower(s)
+    end
+
+    local function SearchMatchScore(query, ...)
+        local best
+        for i = 1, select("#", ...) do
+            local value = select(i, ...)
+            if value and value ~= "" then
+                local raw = tostring(value)
+                local lowered = SearchText(raw)
+                local pos = string.find(lowered, query, 1, true)
+                -- string.lower is ASCII-only on this client. Also try the raw
+                -- UTF-8 string so localized names remain searchable when typed
+                -- with their displayed capitalization.
+                if not pos then
+                    pos = string.find(raw, query, 1, true)
+                end
+                if pos then
+                    local score = (pos == 1 and 0 or (20 + pos)) + math.min(#raw, 80) * 0.001
+                    if not best or score < best then best = score end
+                end
+            end
+        end
+        return best
+    end
+
+    local function SearchItemDisplayName(item)
+        if not item then return "" end
+        local id, fallback = item[1], item[2]
+        local liveName = id and FDJ.ItemInfo(id)
+        if liveName and liveName ~= "" then return liveName end
+        return FreeText(fallback or "")
+    end
+
+    local function AddSearchCandidate(results, candidate, query, baseScore, ...)
+        local score = SearchMatchScore(query, ...)
+        if not score then return end
+        candidate.score = score + (baseScore or 0)
+        results[#results + 1] = candidate
+    end
+
+    local function BuildSearchResults(queryText)
+        local query = SearchText(queryText):gsub("^%s+", ""):gsub("%s+$", "")
+        local results = {}
+
+        -- Clicking an empty search box acts as a dungeon browser. Keep the
+        -- journal's normal dungeon order and let the dropdown scroll if needed.
+        if query == "" then
+            for _, dungeonName in ipairs(FDJ.ORDER or {}) do
+                local dungeon = FDJ.DB[dungeonName]
+                if dungeon then
+                    results[#results + 1] = {
+                        kind = "dungeon",
+                        dungeonName = dungeonName,
+                        displayName = DungeonName(dungeonName),
+                        subText = DungeonField(dungeonName, "location", dungeon.location or ""),
+                        icon = FDJ.DUNGEON_HOME_ART[dungeonName] or dungeon.icon,
+                        texCoord = FDJ.DUNGEON_HOME_TEXCOORD[dungeonName],
+                        score = 0,
+                    }
+                end
+            end
+            return results
+        end
+
+        for _, dungeonName in ipairs(FDJ.ORDER or {}) do
+            local dungeon = FDJ.DB[dungeonName]
+            if dungeon then
+                local localizedDungeon = DungeonName(dungeonName)
+                local aliases = DUNGEON_SEARCH_ALIASES[dungeonName]
+                local aliasText = aliases and table.concat(aliases, " ") or ""
+                AddSearchCandidate(results, {
+                    kind = "dungeon",
+                    dungeonName = dungeonName,
+                    displayName = localizedDungeon,
+                    subText = DungeonField(dungeonName, "location", dungeon.location or ""),
+                    icon = FDJ.DUNGEON_HOME_ART[dungeonName] or dungeon.icon,
+                    texCoord = FDJ.DUNGEON_HOME_TEXCOORD[dungeonName],
+                }, query, -30, localizedDungeon, dungeonName, aliasText)
+
+                for bossIndex, boss in ipairs(dungeon.bosses or {}) do
+                    for _, item in ipairs(boss.loot or {}) do
+                        local itemName = SearchItemDisplayName(item)
+                        AddSearchCandidate(results, {
+                            kind = "item",
+                            mode = "bosses",
+                            dungeonName = dungeonName,
+                            bossIndex = bossIndex,
+                            itemID = item[1],
+                            displayName = itemName,
+                            subText = localizedDungeon .. "  -  " .. BossName(boss.name),
+                            icon = item[5] or FDJ.ItemIcon(item[1]),
+                        }, query, 0, itemName, item[2])
+                    end
+                end
+
+                for questIndex, quest in ipairs(dungeon.quests or {}) do
+                    local questName = QuestField(quest.id, "name", quest.name or "")
+
+                    local questItems = {}
+                    local function AddQuestSearchItem(item)
+                        if item and item[1] and item[1] > 0 then questItems[#questItems + 1] = item end
+                    end
+                    for _, item in ipairs(quest.rewardItems or {}) do AddQuestSearchItem(item) end
+                    for _, item in ipairs(quest.additionalRewardItems or {}) do AddQuestSearchItem(item) end
+                    for _, item in ipairs(quest.noteRewardItems or {}) do AddQuestSearchItem(item) end
+                    AddQuestSearchItem(quest.requiredItem)
+                    AddQuestSearchItem(quest.startItem)
+                    AddQuestSearchItem(quest.noteItem)
+
+                    for _, item in ipairs(questItems) do
+                        local itemName = SearchItemDisplayName(item)
+                        AddSearchCandidate(results, {
+                            kind = "item",
+                            mode = "quests",
+                            dungeonName = dungeonName,
+                            questIndex = questIndex,
+                            questFaction = quest.faction,
+                            faction = quest.faction,
+                            itemID = item[1],
+                            displayName = itemName,
+                            subText = localizedDungeon .. "  -  " .. questName,
+                            icon = FDJ.ItemIcon(item[1]),
+                        }, query, 4, itemName, item[2])
+                    end
+                end
+            end
+        end
+
+        table.sort(results, function(a, b)
+            if a.score ~= b.score then return a.score < b.score end
+            return tostring(a.displayName or "") < tostring(b.displayName or "")
+        end)
+
+        -- The same static item can be referenced more than once by a quest/data
+        -- entry. Keep one result per actual source location so the dropdown never
+        -- shows duplicate rows such as Gravestone Scepter twice for one quest.
+        local unique, seen = {}, {}
+        for _, result in ipairs(results) do
+            local sourceIndex = result.mode == "bosses" and result.bossIndex or result.questIndex
+            local key
+            if result.kind == "dungeon" then
+                key = "d|" .. tostring(result.dungeonName)
+            elseif result.kind == "quest" then
+                key = "q|" .. tostring(result.dungeonName) .. "|" .. tostring(result.questIndex or "")
+            else
+                key = table.concat({
+                    "i",
+                    tostring(result.itemID or ""),
+                    tostring(result.dungeonName or ""),
+                    tostring(result.mode or ""),
+                    tostring(sourceIndex or ""),
+                }, "|")
+            end
+            if not seen[key] then
+                seen[key] = true
+                unique[#unique + 1] = result
+                if #unique >= MAX_SEARCH_RESULTS then break end
+            end
+        end
+        return unique
+    end
+
+    local function FindVisibleSearchItemButton(result)
+        if not result or not result.itemID then return nil end
+        if result.mode == "bosses" then
+            for _, row in ipairs(FDJ.lootRows) do
+                if row:IsShown() and row.item and tonumber(row.item[1]) == tonumber(result.itemID) then
+                    return row, frame.lootScroll, frame.lootContent
+                end
+            end
+        elseif result.mode == "quests" then
+            for _, button in ipairs(FDJ.questRewardButtons) do
+                if button:IsShown() and button.item and tonumber(button.item[1]) == tonumber(result.itemID) then
+                    return button, frame.questDetailScroll, frame.questDetailContent
+                end
+            end
+            for _, button in ipairs(FDJ.questNoteRewardButtons) do
+                if button:IsShown() and button.item and tonumber(button.item[1]) == tonumber(result.itemID) then
+                    return button, frame.questDetailScroll, frame.questDetailContent
+                end
+            end
+            local noteButton = frame.questNoteItemButton
+            if noteButton and noteButton:IsShown() and noteButton.item
+                and tonumber(noteButton.item[1]) == tonumber(result.itemID) then
+                return noteButton, frame.questDetailScroll, frame.questDetailContent
+            end
+        end
+        return nil
+    end
+
+    local function FocusSearchItem(result)
+        local function ApplyFocus()
+            local button, scroll, content = FindVisibleSearchItemButton(result)
+            if not button then return end
+
+            if scroll and content then
+                local contentTop = content:GetTop()
+                local buttonTop = button:GetTop()
+                local viewportHeight = scroll:GetHeight() or 0
+                local contentHeight = content:GetHeight() or 0
+                if contentTop and buttonTop and viewportHeight > 0 then
+                    local itemOffset = math.max(0, contentTop - buttonTop)
+                    local maxScroll = math.max(0, contentHeight - viewportHeight)
+                    -- Put the searched item near the upper third of the visible
+                    -- page so the surrounding Reward/Boss context remains clear.
+                    local desired = itemOffset - math.max(12, viewportHeight * 0.28)
+                    desired = math.max(0, math.min(maxScroll, desired))
+                    scroll:SetVerticalScroll(desired)
+                    if scroll.ScrollBar then scroll.ScrollBar:SetValue(desired) end
+                end
+            end
+            ShowSearchItemHighlight(button)
+        end
+
+        if C_Timer and type(C_Timer.After) == "function" then
+            C_Timer.After(0.03, ApplyFocus)
+        else
+            ApplyFocus()
+        end
+    end
+
+    local function OpenSearchResult(result)
+        if not result or not result.dungeonName then return end
+        searchBox:ClearFocus()
+        searchBox:SetText("")
+        searchResults:Hide()
+        SelectDungeon(result.dungeonName)
+        if result.kind == "item" and result.mode == "bosses" then
+            SetMode("bosses")
+            if result.bossIndex then SelectBoss(result.bossIndex) end
+            FocusSearchItem(result)
+        elseif (result.kind == "item" or result.kind == "quest") and result.mode == "quests" then
+            SetMode("quests")
+            if (result.questFaction == "Alliance" or result.questFaction == "Horde") and SetQuestFaction then
+                SetQuestFaction(result.questFaction)
+            end
+            if result.questIndex then SelectQuest(result.questIndex) end
+            if result.kind == "item" then FocusSearchItem(result) end
+        end
+    end
+
+    local function EnsureSearchRow(index)
+        local row = searchRows[index]
+        if row then return row end
+
+        row = CreateFrame("Button", nil, searchResults)
+        row:SetHeight(39)
+        row:SetPoint("LEFT", 5, 0)
+        row:SetPoint("RIGHT", -5, 0)
+        row:SetHighlightTexture("Interface\\QuestFrame\\UI-QuestTitleHighlight", "ADD")
+
+        row.factionIcon = row:CreateTexture(nil, "OVERLAY")
+        row.factionIcon:SetSize(18, 18)
+        row.factionIcon:SetPoint("RIGHT", -5, 0)
+        row.factionIcon:Hide()
+
+        row.icon = row:CreateTexture(nil, "ARTWORK")
+        row.icon:SetSize(28, 28)
+        row.icon:SetPoint("LEFT", 7, 0)
+        row.icon:SetTexCoord(0.08, 0.92, 0.08, 0.92)
+
+        row.name = row:CreateFontString(nil, "OVERLAY", "GameFontHighlight")
+        row.name:SetPoint("TOPLEFT", row.icon, "TOPRIGHT", 9, -3)
+        row.name:SetPoint("RIGHT", row, "RIGHT", -9, 0)
+        row.name:SetJustifyH("LEFT")
+        row.name:SetTextColor(1.00, 0.82, 0.27)
+
+        row.source = row:CreateFontString(nil, "OVERLAY", "GameFontHighlightSmall")
+        row.source:SetPoint("TOPLEFT", row.name, "BOTTOMLEFT", 0, -2)
+        row.source:SetPoint("RIGHT", row, "RIGHT", -9, 0)
+        row.source:SetJustifyH("LEFT")
+        row.source:SetTextColor(0.68, 0.66, 0.61)
+
+        row:SetScript("OnClick", function(self)
+            FDJ.PlayJournalOptionSound()
+            OpenSearchResult(self.searchResult)
+        end)
+
+        -- Item tooltip on hover, placed to the RIGHT of the results list so it
+        -- never covers the other results.
+        row:SetScript("OnEnter", function(self)
+            local result = self.searchResult
+            if not result or result.kind ~= "item" or not result.itemID or not itemTooltip then return end
+            itemTooltip:Hide()
+            itemTooltip:SetOwner(self, "ANCHOR_NONE")
+            if itemTooltip.ClearLines then itemTooltip:ClearLines() end
+            local _, liveLink = FDJ.ItemInfo(result.itemID)
+            itemTooltip:SetHyperlink(liveLink or ("item:" .. result.itemID))
+            itemTooltip:Show()
+            itemTooltip:ClearAllPoints()
+            itemTooltip:SetPoint("TOPLEFT", searchResults, "TOPRIGHT", 4, 0)
+        end)
+        row:SetScript("OnLeave", function()
+            if itemTooltip then itemTooltip:Hide() end
+        end)
+
+        searchRows[index] = row
+        return row
+    end
+
+    local function RefreshSearchResults(queryText, preserveOffset)
+        currentSearchResults = BuildSearchResults(queryText or "")
+        local hasQuery = SearchText(queryText or ""):match("%S") ~= nil
+        local browsingDungeons = not hasQuery and searchBox:HasFocus()
+        searchClear:SetShown(hasQuery)
+
+        if not preserveOffset then searchResultOffset = 0 end
+        local maxOffset = math.max(0, #currentSearchResults - MAX_VISIBLE_SEARCH_RESULTS)
+        searchResultOffset = math.max(0, math.min(maxOffset, searchResultOffset))
+
+        for _, row in ipairs(searchRows) do row:Hide() end
+        if not hasQuery and not browsingDungeons then
+            searchResults:Hide()
+            return
+        end
+
+        if #currentSearchResults == 0 then
+            local row = EnsureSearchRow(1)
+            row.factionIcon:Hide()
+            row.icon:ClearAllPoints()
+            row.icon:SetPoint("LEFT", 7, 0)
+            row.icon:SetTexture("Interface\\Icons\\INV_Misc_QuestionMark")
+            row.icon:SetSize(28, 28)
+            row.icon:SetTexCoord(0.08, 0.92, 0.08, 0.92)
+            row.name:SetText(L("SEARCH_NO_RESULTS"))
+            row.source:SetText("")
+            row.searchResult = nil
+            row:EnableMouse(false)
+            row:ClearAllPoints()
+            row:SetPoint("TOPLEFT", searchResults, "TOPLEFT", 5, -5)
+            row:SetPoint("TOPRIGHT", searchResults, "TOPRIGHT", -5, -5)
+            row:Show()
+            searchResults:SetHeight(49)
+            searchResults:Show()
+            return
+        end
+
+        local visibleCount = math.min(MAX_VISIBLE_SEARCH_RESULTS, #currentSearchResults - searchResultOffset)
+        for visibleIndex = 1, visibleCount do
+            local result = currentSearchResults[searchResultOffset + visibleIndex]
+            local row = EnsureSearchRow(visibleIndex)
+            row:EnableMouse(true)
+            row.searchResult = result
+
+            row.factionIcon:Hide()
+            row.icon:ClearAllPoints()
+            row.icon:SetPoint("LEFT", 7, 0)
+            local hasFactionIcon = false
+            if result.kind == "item" and result.faction == "Alliance" then
+                row.factionIcon:SetTexture(FDJ.ALLIANCE_ICON)
+                row.factionIcon:Show()
+                hasFactionIcon = true
+            elseif result.kind == "item" and result.faction == "Horde" then
+                row.factionIcon:SetTexture(FDJ.HORDE_ICON)
+                row.factionIcon:Show()
+                hasFactionIcon = true
+            end
+
+            row.name:ClearAllPoints()
+            row.name:SetPoint("TOPLEFT", row.icon, "TOPRIGHT", 9, -3)
+            row.name:SetPoint("RIGHT", row, "RIGHT", hasFactionIcon and -30 or -9, 0)
+            row.source:ClearAllPoints()
+            row.source:SetPoint("TOPLEFT", row.name, "BOTTOMLEFT", 0, -2)
+            row.source:SetPoint("RIGHT", row, "RIGHT", hasFactionIcon and -30 or -9, 0)
+
+            row.icon:SetTexture(result.icon or "Interface\\Icons\\INV_Misc_QuestionMark")
+            if result.kind == "dungeon" then
+                row.icon:SetSize(44, 28)
+                local tc = result.texCoord
+                if tc then
+                    row.icon:SetTexCoord(tc[1], tc[2], tc[3], tc[4])
+                else
+                    row.icon:SetTexCoord(0.08, 0.92, 0.18, 0.82)
+                end
+            else
+                row.icon:SetSize(28, 28)
+                row.icon:SetTexCoord(0.08, 0.92, 0.08, 0.92)
+            end
+            row.name:SetText(result.displayName or "")
+            row.source:SetText(result.subText or "")
+            row:ClearAllPoints()
+            local rowY = -5 - ((visibleIndex - 1) * 39)
+            row:SetPoint("TOPLEFT", searchResults, "TOPLEFT", 5, rowY)
+            row:SetPoint("TOPRIGHT", searchResults, "TOPRIGHT", -5, rowY)
+            row:Show()
+        end
+        searchResults:SetHeight(10 + (visibleCount * 39))
+        searchResults:Show()
+        ApplyLocaleFontTree(searchResults)
+    end
+
+    frame.RefreshSearchResults = RefreshSearchResults
+    frame.UpdateSearchPlaceholder = function()
+        searchPlaceholder:SetText(L("SEARCH"))
+        searchPlaceholder:SetShown((searchBox:GetText() or "") == "" and not searchBox:HasFocus())
+    end
+
+    searchBox:SetScript("OnTextChanged", function(self)
+        searchPlaceholder:SetShown((self:GetText() or "") == "" and not self:HasFocus())
+        RefreshSearchResults(self:GetText() or "")
+    end)
+    searchBox:SetScript("OnEditFocusGained", function(self)
+        searchPlaceholder:Hide()
+        RefreshSearchResults(self:GetText() or "")
+    end)
+    searchBox:SetScript("OnEditFocusLost", function(self)
+        local function ResetIfClickedAway()
+            if searchResults:IsMouseOver() or searchBox:IsMouseOver() then
+                searchPlaceholder:SetShown((self:GetText() or "") == "")
+                return
+            end
+            self:SetText("")
+            searchResultOffset = 0
+            searchResults:Hide()
+            searchClear:Hide()
+            searchPlaceholder:Show()
+        end
+        if C_Timer and type(C_Timer.After) == "function" then
+            C_Timer.After(0, ResetIfClickedAway)
+        else
+            ResetIfClickedAway()
+        end
+    end)
+    searchResults:EnableMouseWheel(true)
+    searchResults:SetScript("OnMouseWheel", function(_, delta)
+        local maxOffset = math.max(0, #currentSearchResults - MAX_VISIBLE_SEARCH_RESULTS)
+        if maxOffset <= 0 then return end
+        if delta < 0 then
+            searchResultOffset = math.min(maxOffset, searchResultOffset + 1)
+        elseif delta > 0 then
+            searchResultOffset = math.max(0, searchResultOffset - 1)
+        end
+        RefreshSearchResults(searchBox:GetText() or "", true)
+    end)
+    searchBox:SetScript("OnEscapePressed", function(self)
+        self:ClearFocus()
+        searchResults:Hide()
+    end)
+    searchBox:SetScript("OnEnterPressed", function(self)
+        if currentSearchResults[1] then
+            FDJ.PlayJournalOptionSound()
+            OpenSearchResult(currentSearchResults[1])
+        else
+            self:ClearFocus()
+        end
+    end)
+    searchClear:SetScript("OnClick", function()
+        searchBox:SetText("")
+        searchBox:SetFocus()
+    end)
+    frame.UpdateSearchPlaceholder()
 end
 
 local function CreateMainFrame()
@@ -6072,12 +7489,10 @@ local function CreateMainFrame()
     frame:SetFrameStrata("DIALOG")
     frame:SetClampedToScreen(true)
     frame:SetMovable(true)
+    frame:EnableMouse(true)
     frame:RegisterForDrag("LeftButton")
-    if _G.UISpecialFrames and not tContains(_G.UISpecialFrames, "ForeverDungeonJournalFrame") then
-        tinsert(_G.UISpecialFrames, "ForeverDungeonJournalFrame")
-    end
 
-    SetBackdrop(
+    FDJ.SetBackdrop(
         frame,
         "Interface\\FrameGeneral\\UI-Background-Rock",
         "Interface\\DialogFrame\\UI-DialogBox-Border",
@@ -6120,15 +7535,9 @@ local function CreateMainFrame()
     title:SetText(L("DUNGEON_JOURNAL"))
     title:SetTextColor(0.96, 0.79, 0.25)
 
-    -- Header language selector, now closer to the status/faction style control:
-    -- a plain gold label on the left, arrow buttons on both sides and a centered
-    -- value box that opens the full dropdown when clicked.
-    local languageLabelText = frame:CreateFontString(nil, "OVERLAY", "GameFontNormalLarge")
-    frame.languageLabelText = languageLabelText
-    languageLabelText:SetPoint("TOPLEFT", 18, -17)
-    languageLabelText:SetText("Languages")
-    languageLabelText:SetTextColor(1.00, 0.82, 0.27)
-
+    -- Compact language selector beside the journal title. The selected language
+    -- and the familiar page arrows make the control self-explanatory, so the
+    -- old "Languages" label is intentionally omitted.
     local function StyleLanguageArrowButton(button, direction)
         local isLeft = direction == "LEFT"
         -- Use Blizzard's native spellbook page buttons. These are the same
@@ -6153,22 +7562,22 @@ local function CreateMainFrame()
 
     local languageSelector = CreateFrame("Button", nil, frame, "BackdropTemplate")
     frame.languageSelectorButton = languageSelector
-    languageSelector:SetSize(122, 28)
-    languageSelector:SetPoint("TOPLEFT", frame, "TOPLEFT", 144, -14)
-    SetBackdrop(languageSelector, "Interface\\Buttons\\WHITE8X8", "Interface\\Tooltips\\UI-Tooltip-Border", 12, 4)
+    languageSelector:SetSize(96, 24)
+    languageSelector:SetPoint("TOPRIGHT", frame, "TOPRIGHT", -75, -15)
+    FDJ.SetBackdrop(languageSelector, "Interface\\Buttons\\WHITE8X8", "Interface\\Tooltips\\UI-Tooltip-Border", 12, 4)
     languageSelector:SetBackdropColor(0.12, 0.115, 0.105, 0.98)
     languageSelector:SetBackdropBorderColor(0.48, 0.40, 0.27, 1)
     languageSelector:SetHighlightTexture("Interface\\QuestFrame\\UI-QuestTitleHighlight", "ADD")
 
     local leftArrow = CreateFrame("Button", nil, frame)
     frame.languageLeftButton = leftArrow
-    leftArrow:SetSize(28, 28)
+    leftArrow:SetSize(22, 22)
     leftArrow:SetPoint("RIGHT", languageSelector, "LEFT", -4, 0)
     StyleLanguageArrowButton(leftArrow, "LEFT")
 
     local rightArrow = CreateFrame("Button", nil, frame)
     frame.languageRightButton = rightArrow
-    rightArrow:SetSize(28, 28)
+    rightArrow:SetSize(22, 22)
     rightArrow:SetPoint("LEFT", languageSelector, "RIGHT", 4, 0)
     StyleLanguageArrowButton(rightArrow, "RIGHT")
 
@@ -6185,7 +7594,7 @@ local function CreateMainFrame()
     languageMenu:SetPoint("TOPLEFT", languageSelector, "BOTTOMLEFT", -4, -4)
     languageMenu:SetFrameStrata("TOOLTIP")
     languageMenu:SetFrameLevel(frame:GetFrameLevel() + 30)
-    SetBackdrop(languageMenu, "Interface\\Buttons\\WHITE8X8", "Interface\\Tooltips\\UI-Tooltip-Border", 12, 4)
+    FDJ.SetBackdrop(languageMenu, "Interface\\Buttons\\WHITE8X8", "Interface\\Tooltips\\UI-Tooltip-Border", 12, 4)
     languageMenu:SetBackdropColor(0.055, 0.05, 0.043, 0.99)
     languageMenu:SetBackdropBorderColor(0.57, 0.43, 0.20, 1)
     languageMenu:Hide()
@@ -6231,6 +7640,9 @@ local function CreateMainFrame()
     rightArrow:SetScript("OnClick", function() CycleLanguage(1) end)
     languageSelector:SetScript("OnClick", ToggleLanguageMenu)
     UpdateLanguageControl()
+
+    CreateGlobalSearchUI()
+
     ApplyLocaleFontTree(frame)
 
     local close = CreateFrame("Button", nil, frame, "UIPanelCloseButton")
@@ -6249,164 +7661,13 @@ local function CreateMainFrame()
     end)
     frame.backButton:Hide()
 
-    local searchBox = CreateFrame("EditBox", "ForeverDungeonJournalSearchBox", frame, "BackdropTemplate")
-    frame.searchBox = searchBox
-    searchBox:SetSize(185, 24)
-    searchBox:SetPoint("TOPRIGHT", frame, "TOPRIGHT", -40, -14)
-    searchBox:SetAutoFocus(false)
-    searchBox:SetFontObject("GameFontHighlightSmall")
-    searchBox:SetTextInsets(22, 20, 0, 0)
-    SetBackdrop(searchBox, "Interface\\Buttons\\WHITE8X8", "Interface\\Tooltips\\UI-Tooltip-Border", 10, 2)
-    searchBox:SetBackdropColor(0.08, 0.06, 0.04, 0.95)
-    searchBox:SetBackdropBorderColor(0.48, 0.36, 0.18, 1)
-
-    local searchIcon = searchBox:CreateTexture(nil, "ARTWORK")
-    searchIcon:SetSize(14, 14)
-    searchIcon:SetPoint("LEFT", 5, 0)
-    searchIcon:SetTexture("Interface\\Common\\UI-Searchbox-Icon")
-    searchIcon:SetVertexColor(0.85, 0.78, 0.65)
-
-    local searchClear = CreateFrame("Button", nil, searchBox)
-    frame.searchClear = searchClear
-    searchClear:SetSize(14, 14)
-    searchClear:SetPoint("RIGHT", -5, 0)
-    searchClear:SetNormalTexture("Interface\\Buttons\\UI-GroupLoot-Pass-Up")
-    searchClear:SetHighlightTexture("Interface\\Buttons\\UI-GroupLoot-Pass-Highlight")
-    searchClear:Hide()
-
-    local searchPlaceholder = searchBox:CreateFontString(nil, "OVERLAY", "GameFontDisableSmall")
-    frame.searchPlaceholder = searchPlaceholder
-    searchPlaceholder:SetPoint("LEFT", 22, 0)
-    searchPlaceholder:SetText(L("SEARCH_PLACEHOLDER"))
-    searchPlaceholder:SetTextColor(0.55, 0.50, 0.42)
-
-    local searchPopup = CreateFrame("Frame", nil, frame, "BackdropTemplate")
-    frame.searchResultsPopup = searchPopup
-    searchPopup:SetSize(310, 200)
-    searchPopup:SetPoint("TOPRIGHT", searchBox, "BOTTOMRIGHT", 0, -4)
-    searchPopup:SetFrameStrata("TOOLTIP")
-    searchPopup:SetFrameLevel(frame:GetFrameLevel() + 50)
-    SetBackdrop(searchPopup, "Interface\\Buttons\\WHITE8X8", "Interface\\Tooltips\\UI-Tooltip-Border", 12, 3)
-    searchPopup:SetBackdropColor(0.06, 0.05, 0.04, 0.98)
-    searchPopup:SetBackdropBorderColor(0.55, 0.40, 0.18, 1)
-    searchPopup:Hide()
-
-    local searchResultButtons = {}
-    for i = 1, 8 do
-        local btn = CreateFrame("Button", nil, searchPopup)
-        btn:SetSize(298, 26)
-        btn:SetPoint("TOPLEFT", 6, -6 - ((i - 1) * 27))
-        btn:SetHighlightTexture("Interface\\QuestFrame\\UI-QuestTitleHighlight", "ADD")
-
-        btn.icon = btn:CreateTexture(nil, "ARTWORK")
-        btn.icon:SetSize(20, 20)
-        btn.icon:SetPoint("LEFT", 4, 0)
-        btn.icon:SetTexCoord(0.08, 0.92, 0.08, 0.92)
-
-        btn.title = btn:CreateFontString(nil, "OVERLAY", "GameFontHighlightSmall")
-        btn.title:SetPoint("LEFT", btn.icon, "RIGHT", 6, 0)
-        btn.title:SetPoint("RIGHT", -6, 0)
-        btn.title:SetJustifyH("LEFT")
-
-        btn:SetScript("OnClick", function(self)
-            if not self.data then return end
-            FDJ.PlayJournalOptionSound()
-            searchPopup:Hide()
-            searchBox:SetText("")
-            searchBox:ClearFocus()
-
-            local d = self.data
-            if d.type == "boss" then
-                SelectDungeon(d.dungeon)
-                SetMode("bosses")
-                SelectBoss(d.bossIndex)
-            elseif d.type == "item" then
-                SelectDungeon(d.dungeon)
-                SetMode("bosses")
-                SelectBoss(d.bossIndex)
-                SetBossSubTab("loot")
-            elseif d.type == "quest" then
-                SelectDungeon(d.dungeon)
-                SetMode("quests")
-                SelectQuest(d.questIndex)
-            end
-        end)
-        searchResultButtons[i] = btn
-    end
-
-    local function ShowSearchResults(results)
-        if not results or #results == 0 then
-            searchPopup:Hide()
-            return
-        end
-        local count = math.min(#results, 8)
-        searchPopup:SetHeight((count * 27) + 12)
-        for i = 1, 8 do
-            local btn = searchResultButtons[i]
-            if i <= count then
-                local res = results[i]
-                btn.data = res
-                if res.type == "boss" then
-                    btn.icon:SetTexture(res.icon or "Interface\\TargetingFrame\\UI-RaidTargetingIcon_8")
-                    btn.title:SetText("|cffffd100" .. res.name .. "|r  |cffaaaaaa(" .. res.dungeon .. ")|r")
-                elseif res.type == "item" then
-                    btn.icon:SetTexture(ItemIcon(res.id))
-                    local r, g, b = GetAuthoritativeItemQuality(res.id, nil, nil, res.quality)
-                    local hex = string.format("%02x%02x%02x", r * 255, g * 255, b * 255)
-                    btn.title:SetText("|cff" .. hex .. res.name .. "|r  |cff888888[" .. (res.slot or "Item") .. "]|r")
-                elseif res.type == "quest" then
-                    btn.icon:SetTexture("Interface\\GossipFrame\\AvailableQuestIcon")
-                    local qr, qg, qb = GetQuestDifficultyColorSafe(res.level)
-                    local hex = string.format("%02x%02x%02x", qr * 255, qg * 255, qb * 255)
-                    btn.title:SetText("|cff" .. hex .. res.name .. "|r  |cffaaaaaa(" .. res.dungeon .. ")|r")
-                end
-                btn:Show()
-            else
-                btn.data = nil
-                btn:Hide()
-            end
-        end
-        searchPopup:Show()
-    end
-
-    searchBox:SetScript("OnTextChanged", function(self)
-        local query = self:GetText() or ""
-        searchClear:SetShown(query ~= "")
-        searchPlaceholder:SetShown(query == "" and not self:HasFocus())
-        if #query >= 2 then
-            local results = PerformSearch(query)
-            ShowSearchResults(results)
-        else
-            searchPopup:Hide()
-        end
-    end)
-    searchBox:SetScript("OnEditFocusGained", function(self)
-        searchPlaceholder:Hide()
-        local query = self:GetText() or ""
-        if #query >= 2 then
-            local results = PerformSearch(query)
-            ShowSearchResults(results)
-        end
-    end)
-    searchBox:SetScript("OnEditFocusLost", function(self)
-        if (self:GetText() or "") == "" then searchPlaceholder:Show() end
-    end)
-    searchBox:SetScript("OnEscapePressed", function(self)
-        self:SetText("")
-        self:ClearFocus()
-        searchPopup:Hide()
-    end)
-    searchClear:SetScript("OnClick", function()
-        searchBox:SetText("")
-        searchBox:ClearFocus()
-        searchPopup:Hide()
-    end)
+    frame.sourceLabel = nil
 
     local home = CreateFrame("Frame", nil, frame, "BackdropTemplate")
     frame.homePanel = home
     home:SetPoint("TOPLEFT", 18, -52)
     home:SetPoint("BOTTOMRIGHT", -18, 18)
-    SetBackdrop(
+    FDJ.SetBackdrop(
         home,
         "Interface\\Buttons\\WHITE8X8",
         "Interface\\Tooltips\\UI-Tooltip-Border",
@@ -6415,7 +7676,7 @@ local function CreateMainFrame()
     )
     home:SetBackdropColor(0.16, 0.12, 0.07, 0.96)
     home:SetBackdropBorderColor(0.47, 0.34, 0.16, 1)
-    frame.homeParchment = AddClassicParchment(home, 0.18, 1.00, 0.95, 0.84)
+    frame.homeParchment = FDJ.AddClassicParchment(home, 0.18, 1.00, 0.95, 0.84)
 
     local homeTitle = home:CreateFontString(nil, "OVERLAY", "GameFontNormalHuge")
     frame.homeTitle = homeTitle
@@ -6432,8 +7693,8 @@ local function CreateMainFrame()
     local hideDungeonsButton = CreateFrame("Button", nil, home, "BackdropTemplate")
     frame.hideDungeonsButton = hideDungeonsButton
     hideDungeonsButton:SetSize(142, 28)
-    hideDungeonsButton:SetPoint("TOPRIGHT", home, "TOPRIGHT", -31, -13)
-    SetBackdrop(hideDungeonsButton, "Interface\\Buttons\\WHITE8X8", "Interface\\Tooltips\\UI-Tooltip-Border", 12, 4)
+    hideDungeonsButton:SetPoint("TOP", frame.languageSelectorButton, "BOTTOM", 0, -26)
+    FDJ.SetBackdrop(hideDungeonsButton, "Interface\\Buttons\\WHITE8X8", "Interface\\Tooltips\\UI-Tooltip-Border", 12, 4)
     hideDungeonsButton:SetBackdropColor(0.12, 0.115, 0.105, 0.98)
     hideDungeonsButton:SetBackdropBorderColor(0.48, 0.40, 0.27, 1)
     hideDungeonsButton:SetHighlightTexture("Interface\\QuestFrame\\UI-QuestTitleHighlight", "ADD")
@@ -6473,55 +7734,318 @@ local function CreateMainFrame()
         RefreshHomeDungeonCards()
     end)
 
-    local function CreateHomeFactionButton(faction, texturePath)
-        local b = CreateFrame("Button", nil, home, "BackdropTemplate")
-        b:SetSize(36, 28)
-        SetBackdrop(
-            b,
-            "Interface\\Buttons\\WHITE8X8",
-            "Interface\\Tooltips\\UI-Tooltip-Border",
-            10,
-            2
-        )
-        b:SetHighlightTexture("Interface\\QuestFrame\\UI-QuestTitleHighlight", "ADD")
+    local homeWishlistButton = CreateFrame("Button", nil, home, "BackdropTemplate")
+    frame.homeWishlistButton = homeWishlistButton
+    homeWishlistButton:SetSize(136, 28)
+    homeWishlistButton:SetPoint("RIGHT", hideDungeonsButton, "LEFT", -10, 0)
+    FDJ.SetBackdrop(homeWishlistButton, "Interface\\Buttons\\WHITE8X8", "Interface\\Tooltips\\UI-Tooltip-Border", 12, 4)
+    homeWishlistButton:SetBackdropColor(0.12, 0.09, 0.05, 0.95)
+    homeWishlistButton:SetBackdropBorderColor(0.65, 0.48, 0.22, 1)
+    homeWishlistButton:SetHighlightTexture("Interface\\QuestFrame\\UI-QuestTitleHighlight", "ADD")
+    local homeWishlistButtonText = homeWishlistButton:CreateFontString(nil, "OVERLAY", "GameFontHighlight")
+    homeWishlistButtonText:SetPoint("CENTER", 0, 0)
+    homeWishlistButtonText:SetTextColor(1.0, 0.82, 0.25)
+    frame.homeWishlistButtonText = homeWishlistButtonText
+    homeWishlistButton:SetScript("OnClick", function()
+        FDJ.PlayJournalOptionSound()
+        if frame.homeWishlistPanel and frame.homeWishlistPanel:IsShown() then
+            frame.homeWishlistPanel:Hide()
+        else
+            FDJ.RefreshWishlistPanel()
+            if frame.homeWishlistPanel then frame.homeWishlistPanel:Show() end
+        end
+    end)
+    homeWishlistButton:SetScript("OnEnter", function(self)
+        GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
+        GameTooltip:SetText(L("MY_WISHLIST") or "My Wishlist", 1, 0.82, 0)
+        GameTooltip:AddLine("View all your star-marked wishlist items across all dungeons.", 0.9, 0.9, 0.9, true)
+        GameTooltip:Show()
+    end)
+    homeWishlistButton:SetScript("OnLeave", function() GameTooltip:Hide() end)
 
-        b.icon = b:CreateTexture(nil, "ARTWORK")
-        b.icon:SetSize(22, 22)
-        b.icon:SetPoint("CENTER")
-        b.icon:SetTexture(texturePath)
-        b.icon:SetTexCoord(0.06, 0.94, 0.06, 0.94)
+    FDJ.RefreshWishlistPanel = function()
+        if not frame.homeWishlistPanel or not frame.homeWishlistContent then return end
+        local items = FDJ.GetWishlistItems and FDJ.GetWishlistItems() or {}
+        local rows = frame.wishlistRows or {}
+        frame.wishlistRows = rows
 
-        b:SetScript("OnClick", function()
-            FDJ.PlayJournalOptionSound()
-            SetQuestFaction(faction, true)
-        end)
+        for i = 1, math.max(#rows, #items) do
+            local row = rows[i]
+            if i <= #items then
+                if not row then
+                    row = CreateFrame("Button", nil, frame.homeWishlistContent, "BackdropTemplate")
+                    row:SetSize(640, 50)
+                    FDJ.SetBackdrop(row, "Interface\Buttons\WHITE8X8", "Interface\Tooltips\UI-Tooltip-Border", 10, 2)
+                    row:SetBackdropColor(0.16, 0.12, 0.07, 0.92)
+                    row:SetBackdropBorderColor(0.42, 0.30, 0.15, 1)
+                    row:SetHighlightTexture("Interface\QuestFrame\UI-QuestTitleHighlight", "ADD")
 
-        b:SetScript("OnEnter", function(self)
-            GameTooltip:SetOwner(self, "ANCHOR_TOP")
-            local factionName = (faction == "Horde") and (_G.FACTION_HORDE or "Horde") or (_G.FACTION_ALLIANCE or "Alliance")
-            GameTooltip:SetText(L("FACTION_QUESTS", factionName))
-            GameTooltip:Show()
-        end)
-        b:SetScript("OnLeave", function()
-            GameTooltip:Hide()
-        end)
+                    row.icon = row:CreateTexture(nil, "ARTWORK")
+                    row.icon:SetSize(36, 36)
+                    row.icon:SetPoint("LEFT", 7, 0)
+                    row.icon:SetTexCoord(0.08, 0.92, 0.08, 0.92)
 
-        return b
+                    row.iconBorder = row:CreateTexture(nil, "OVERLAY")
+                    row.iconBorder:SetSize(40, 40)
+                    row.iconBorder:SetPoint("CENTER", row.icon, "CENTER", 0, 0)
+                    row.iconBorder:SetTexture("Interface\Common\WhiteIconFrame")
+
+                    -- Column 1: Item Name (top) and Item Stats (bottom)
+                    row.name = row:CreateFontString(nil, "OVERLAY", "GameFontNormal")
+                    row.name:SetPoint("TOPLEFT", row.icon, "TOPRIGHT", 10, -6)
+                    row.name:SetWidth(235)
+                    row.name:SetJustifyH("LEFT")
+                    row.name:SetWordWrap(false)
+
+                    row.stats = row:CreateFontString(nil, "OVERLAY", "GameFontHighlightSmall")
+                    row.stats:SetPoint("BOTTOMLEFT", row.icon, "BOTTOMRIGHT", 10, 6)
+                    row.stats:SetWidth(240)
+                    row.stats:SetJustifyH("LEFT")
+                    row.stats:SetWordWrap(false)
+
+                    -- Column 2: Slot/Type (top) and Req Level (bottom)
+                    row.slotType = row:CreateFontString(nil, "OVERLAY", "GameFontHighlightSmall")
+                    row.slotType:SetPoint("TOPLEFT", row.icon, "TOPRIGHT", 255, -6)
+                    row.slotType:SetWidth(140)
+                    row.slotType:SetJustifyH("LEFT")
+                    row.slotType:SetWordWrap(false)
+
+                    row.reqLevel = row:CreateFontString(nil, "OVERLAY", "GameFontHighlightSmall")
+                    row.reqLevel:SetPoint("BOTTOMLEFT", row.icon, "BOTTOMRIGHT", 255, 6)
+                    row.reqLevel:SetWidth(140)
+                    row.reqLevel:SetJustifyH("LEFT")
+                    row.reqLevel:SetWordWrap(false)
+
+                    -- Column 3: Dungeon Name (top) and Boss Name (bottom)
+                    row.dungeon = row:CreateFontString(nil, "OVERLAY", "GameFontNormalSmall")
+                    row.dungeon:SetPoint("TOPRIGHT", -36, -6)
+                    row.dungeon:SetWidth(160)
+                    row.dungeon:SetJustifyH("RIGHT")
+                    row.dungeon:SetWordWrap(false)
+
+                    row.boss = row:CreateFontString(nil, "OVERLAY", "GameFontDisableSmall")
+                    row.boss:SetPoint("BOTTOMRIGHT", -36, 6)
+                    row.boss:SetWidth(160)
+                    row.boss:SetJustifyH("RIGHT")
+                    row.boss:SetWordWrap(false)
+
+                    -- Column 4: Star button
+                    row.starBtn = CreateFrame("Button", nil, row)
+                    row.starBtn:SetSize(22, 22)
+                    row.starBtn:SetPoint("RIGHT", -8, 0)
+                    row.starBtn.icon = row.starBtn:CreateTexture(nil, "ARTWORK")
+                    row.starBtn.icon:SetAllPoints()
+                    row.starBtn.icon:SetTexture("Interface\AddOns\ForeverDungeonJournal\Media\Star_Gold.tga")
+                    row.starBtn.icon:SetVertexColor(1.0, 1.0, 1.0, 1.0)
+                    row.starBtn:SetHighlightTexture("Interface\Buttons\UI-Common-MouseHilight", "ADD")
+
+                    row.starBtn:SetScript("OnClick", function(self)
+                        local parentR = self:GetParent()
+                        if parentR and parentR.itemData then
+                            FDJ.ToggleWishlist(parentR.itemData.itemID)
+                            FDJ.RefreshWishlistPanel()
+                            FDJ.UpdateHomeWishlistButton()
+                            if selectedMode == "bosses" then FDJ.RefreshLoot() end
+                        end
+                    end)
+                    row.starBtn:SetScript("OnEnter", function(self)
+                        GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
+                        GameTooltip:SetText(L("WISHLIST") or "Favorites", 1, 0.85, 0.35)
+                        GameTooltip:AddLine("Click to remove this item from your Wishlist.", 0.9, 0.9, 0.9, true)
+                        GameTooltip:Show()
+                    end)
+                    row.starBtn:SetScript("OnLeave", function() GameTooltip:Hide() end)
+
+                    row:SetScript("OnEnter", function(self)
+                        self:SetBackdropColor(0.24, 0.17, 0.09, 0.98)
+                        self:SetBackdropBorderColor(0.85, 0.68, 0.28, 1.0)
+                        if self.itemData and self.itemData.itemID then
+                            local _, liveLink = FDJ.ItemInfo(self.itemData.itemID)
+                            GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
+                            GameTooltip:SetHyperlink(liveLink or ("item:" .. tostring(self.itemData.itemID)))
+                            GameTooltip:Show()
+                        end
+                    end)
+                    row:SetScript("OnLeave", function(self)
+                        self:SetBackdropColor(0.16, 0.12, 0.07, 0.92)
+                        self:SetBackdropBorderColor(0.42, 0.30, 0.15, 1)
+                        GameTooltip:Hide()
+                    end)
+
+                    row:SetScript("OnClick", function(self)
+                        if not self.itemData then return end
+                        local itemID = self.itemData.itemID
+                        local _, link = FDJ.ItemInfo(itemID)
+                        link = link or ("item:" .. tostring(itemID))
+
+                        if link and IsModifiedClick and IsModifiedClick("CHATLINK") and ChatEdit_InsertLink then
+                            local used = ChatEdit_InsertLink(link)
+                            if used then return end
+                        end
+
+                        if link and IsModifiedClick and IsModifiedClick("DRESSUP") and DressUpItemLink then
+                            DressUpItemLink(link)
+                            return
+                        end
+
+                        frame.homeWishlistPanel:Hide()
+                        FDJ.SelectDungeon(self.itemData.dungeon)
+                        FDJ.SetMode("bosses")
+                        FDJ.SelectBoss(self.itemData.bossIndex)
+                        FDJ.SetBossSubTab("loot")
+                    end)
+
+                    if i == 1 then
+                        row:SetPoint("TOPLEFT", frame.homeWishlistContent, "TOPLEFT", 0, 0)
+                    else
+                        row:SetPoint("TOPLEFT", rows[i - 1], "BOTTOMLEFT", 0, -5)
+                    end
+                    rows[i] = row
+                end
+
+                local data = items[i]
+                row.itemData = data
+                local itemID = data.itemID
+
+                if C_Item and type(C_Item.RequestLoadItemDataByID) == "function" then
+                    pcall(C_Item.RequestLoadItemDataByID, itemID)
+                end
+
+                local itemName, itemLink, apiQuality, _, apiReqLevel = FDJ.ItemInfo(itemID)
+                local liveLink = itemLink or ("item:" .. tostring(itemID))
+
+                local r, g, b = FDJ.GetAuthoritativeItemQuality(itemID, itemLink, apiQuality, data.quality)
+                row.icon:SetTexture(FDJ.ItemIcon(itemID))
+                if row.iconBorder then
+                    row.iconBorder:SetVertexColor(r, g, b, 0.9)
+                end
+
+                row.name:SetTextColor(r, g, b)
+                row.name:SetText(itemName or data.name or ("Item #" .. itemID))
+
+                local statsSummary, scannedReqLevel = FDJ.GetItemStatsSummary(itemID, liveLink)
+                if statsSummary and statsSummary ~= "" then
+                    row.stats:SetText(statsSummary)
+                else
+                    row.stats:SetText("|cff666666" .. (L("NO_STATS_AVAILABLE") or "No combat stats") .. "|r")
+                end
+
+                local rawSlot = data.slot or ""
+                if type(rawSlot) == "number" then rawSlot = tostring(rawSlot) end
+                local formattedSlot = FDJ.ItemSlot(rawSlot)
+                if formattedSlot and string.find(formattedSlot, ",", 1, true) then
+                    formattedSlot = string.gsub(formattedSlot, ",%s*", " • ")
+                end
+                row.slotType:SetText("|cffc8a870" .. (formattedSlot or "") .. "|r")
+
+                local effectiveReq = (type(apiReqLevel) == "number" and apiReqLevel > 1 and apiReqLevel)
+                    or (type(scannedReqLevel) == "number" and scannedReqLevel > 1 and scannedReqLevel)
+
+                if effectiveReq then
+                    row.reqLevel:SetText("|cffffd100Req Level " .. effectiveReq .. "|r")
+                else
+                    row.reqLevel:SetText("|cff777777No Level Req|r")
+                end
+
+                row.dungeon:SetText("|cffffd100" .. FDJ.DungeonName(data.dungeon) .. "|r")
+                row.boss:SetText("|cffaaaaaa" .. FDJ.BossName(data.boss) .. "|r")
+
+                row:Show()
+            elseif row then
+                row:Hide()
+            end
+        end
+
+        local count = #items
+        local contentH = math.max(1, count * 55)
+        frame.homeWishlistContent:SetHeight(contentH)
+        frame.homeWishlistEmptyText:SetShown(count == 0)
+        if frame.homeWishlistHeaderBar then
+            frame.homeWishlistHeaderBar:SetShown(count > 0)
+        end
+        FDJ.UpdateScrollBarVisibility(frame.homeWishlistScroll, contentH)
     end
+    FDJ.RefreshWishlistPanel = FDJ.RefreshWishlistPanel
 
-    local homeHordeButton = CreateHomeFactionButton("Horde", HORDE_ICON)
-    frame.homeHordeButton = homeHordeButton
-    homeHordeButton:SetPoint("TOPRIGHT", hideDungeonsButton, "TOPLEFT", -10, 0)
+    FDJ.UpdateHomeWishlistButton = function()
+        if not frame or not frame.homeWishlistButton or not frame.homeWishlistButtonText then return end
+        local items = FDJ.GetWishlistItems and FDJ.GetWishlistItems() or {}
+        local count = #items
+        local starTex = FDJ.WISHLIST_STAR_TEXTURE or "★ "
+        local txt = starTex .. (L("MY_WISHLIST") or "My Wishlist")
+        if count > 0 then
+            txt = txt .. " (" .. count .. ")"
+        end
+        frame.homeWishlistButtonText:SetText(txt)
+        local width = math.max(136, math.ceil((frame.homeWishlistButtonText:GetStringWidth() or 100) + 24))
+        frame.homeWishlistButton:SetWidth(width)
+    end
+    FDJ.UpdateHomeWishlistButton = FDJ.UpdateHomeWishlistButton
 
-    local homeAllianceButton = CreateHomeFactionButton("Alliance", ALLIANCE_ICON)
-    frame.homeAllianceButton = homeAllianceButton
-    homeAllianceButton:SetPoint("TOPRIGHT", homeHordeButton, "TOPLEFT", -5, 0)
+    local wPanel = CreateFrame("Frame", nil, home, "BackdropTemplate")
+    frame.homeWishlistPanel = wPanel
+    wPanel:SetSize(700, 460)
+    wPanel:SetPoint("CENTER", home, "CENTER", 0, -10)
+    wPanel:SetFrameLevel(home:GetFrameLevel() + 50)
+    FDJ.SetBackdrop(wPanel, "Interface\\Buttons\\WHITE8X8", "Interface\\DialogFrame\\UI-DialogBox-Border", 20, 4)
+    wPanel:SetBackdropColor(0.08, 0.06, 0.04, 0.98)
+    wPanel:SetBackdropBorderColor(0.65, 0.48, 0.22, 1)
+    wPanel:Hide()
 
-    local homeFactionLabel = home:CreateFontString(nil, "OVERLAY", "GameFontHighlightSmall")
-    frame.homeFactionLabel = homeFactionLabel
-    homeFactionLabel:SetPoint("RIGHT", homeAllianceButton, "LEFT", -8, 0)
-    homeFactionLabel:SetText(L("QUESTS") .. ":")
-    homeFactionLabel:SetTextColor(0.85, 0.76, 0.58)
+    local wTitle = wPanel:CreateFontString(nil, "OVERLAY", "GameFontNormalLarge")
+    wTitle:SetPoint("TOPLEFT", 22, -16)
+    local starTex = FDJ.WISHLIST_STAR_TEXTURE or "★ "
+    wTitle:SetText(starTex .. (L("MY_WISHLIST") or "My Wishlist"))
+    wTitle:SetTextColor(1.0, 0.82, 0.25)
+
+    local wSub = wPanel:CreateFontString(nil, "OVERLAY", "GameFontHighlightSmall")
+    wSub:SetPoint("TOPLEFT", wTitle, "BOTTOMLEFT", 0, -3)
+    wSub:SetText("Click an item to open its boss encounter. Tracked items trigger in-game chat drop alerts.")
+    wSub:SetTextColor(0.70, 0.65, 0.55)
+
+    local wClose = CreateFrame("Button", nil, wPanel, "UIPanelCloseButton")
+    wClose:SetPoint("TOPRIGHT", -4, -4)
+    wClose:SetScript("OnClick", function() wPanel:Hide() end)
+
+    -- Column Headers Bar
+    local wHeaderBar = CreateFrame("Frame", nil, wPanel)
+    frame.homeWishlistHeaderBar = wHeaderBar
+    wHeaderBar:SetSize(640, 18)
+    wHeaderBar:SetPoint("TOPLEFT", 26, -58)
+
+    local hItem = wHeaderBar:CreateFontString(nil, "OVERLAY", "GameFontDisableSmall")
+    hItem:SetPoint("LEFT", 0, 0)
+    hItem:SetText("ITEM & STATS")
+    hItem:SetTextColor(0.70, 0.60, 0.40)
+
+    local hSlot = wHeaderBar:CreateFontString(nil, "OVERLAY", "GameFontDisableSmall")
+    hSlot:SetPoint("LEFT", 290, 0)
+    hSlot:SetText("SLOT & REQUIREMENTS")
+    hSlot:SetTextColor(0.70, 0.60, 0.40)
+
+    local hSource = wHeaderBar:CreateFontString(nil, "OVERLAY", "GameFontDisableSmall")
+    hSource:SetPoint("RIGHT", -44, 0)
+    hSource:SetText("ENCOUNTER SOURCE")
+    hSource:SetTextColor(0.70, 0.60, 0.40)
+
+    local wScroll = CreateFrame("ScrollFrame", "ForeverDungeonJournalWishlistScroll", wPanel, "UIPanelScrollFrameTemplate")
+    frame.homeWishlistScroll = wScroll
+    wScroll:SetPoint("TOPLEFT", 18, -78)
+    wScroll:SetPoint("BOTTOMRIGHT", -34, 16)
+
+    local wContent = CreateFrame("Frame", nil, wScroll)
+    wContent:SetSize(640, 1)
+    wScroll:SetScrollChild(wContent)
+    frame.homeWishlistContent = wContent
+
+    local wEmpty = wPanel:CreateFontString(nil, "OVERLAY", "GameFontHighlight")
+    frame.homeWishlistEmptyText = wEmpty
+    wEmpty:SetPoint("CENTER", wPanel, "CENTER", 0, -20)
+    wEmpty:SetWidth(450)
+    wEmpty:SetJustifyH("CENTER")
+    wEmpty:SetText(L("NO_WISHLIST_ITEMS"))
+    wEmpty:SetTextColor(0.65, 0.60, 0.50)
+    wEmpty:Hide()
 
     local homeEmptyText = home:CreateFontString(nil, "OVERLAY", "GameFontHighlightLarge")
     frame.homeEmptyText = homeEmptyText
@@ -6556,7 +8080,7 @@ local function CreateMainFrame()
     content:SetPoint("TOPLEFT", 18, -90)
     content:SetPoint("BOTTOMRIGHT", -18, 18)
 
-    SetBackdrop(
+    FDJ.SetBackdrop(
         content,
         "Interface\\Buttons\\WHITE8X8",
         "Interface\\Tooltips\\UI-Tooltip-Border",
@@ -6565,7 +8089,7 @@ local function CreateMainFrame()
     )
     content:SetBackdropColor(0.17, 0.12, 0.07, 0.96)
     content:SetBackdropBorderColor(0.47, 0.34, 0.16, 1)
-    frame.contentParchment = AddClassicParchment(content, 0.18, 1.00, 0.95, 0.84)
+    frame.contentParchment = FDJ.AddClassicParchment(content, 0.18, 1.00, 0.95, 0.84)
 
     frame.dungeonBackgroundArt = content:CreateTexture(nil, "BACKGROUND", nil, -4)
     frame.dungeonBackgroundArt:SetAllPoints(content)
@@ -6596,7 +8120,7 @@ local function CreateMainFrame()
     header:SetPoint("TOPRIGHT", -14, -12)
     header:SetHeight(62)
 
-    SetBackdrop(
+    FDJ.SetBackdrop(
         header,
         "Interface\\Buttons\\WHITE8X8",
         "Interface\\Tooltips\\UI-Tooltip-Border",
@@ -6605,108 +8129,119 @@ local function CreateMainFrame()
     )
     header:SetBackdropColor(0.24, 0.17, 0.09, 0.94)
     header:SetBackdropBorderColor(0.52, 0.33, 0.11, 1)
-    frame.headerParchment = AddClassicParchment(header, 0.16, 1.00, 0.94, 0.82)
+    frame.headerParchment = FDJ.AddClassicParchment(header, 0.16, 1.00, 0.94, 0.82)
 
     frame.dungeonTitle = header:CreateFontString(nil, "OVERLAY", "GameFontNormalHuge")
     frame.dungeonTitle:SetPoint("TOPLEFT", 15, -10)
     frame.dungeonTitle:SetTextColor(1, 0.82, 0.27)
 
-    frame.dungeonLocationButton = CreateFrame("Button", nil, header)
-    frame.dungeonLocationButton:SetSize(38, 38)
-    frame.dungeonLocationButton:SetPoint("LEFT", frame.dungeonTitle, "RIGHT", 5, 1)
+    frame.dungeonMeta = header:CreateFontString(nil, "OVERLAY", "GameFontHighlightSmall")
+    frame.dungeonMeta:SetPoint("TOPLEFT", frame.dungeonTitle, "BOTTOMLEFT", 0, -4)
+    frame.dungeonMeta:SetTextColor(0.88, 0.80, 0.66)
+
+    frame.dungeonLocationButton = CreateFrame("Button", nil, header, "UIPanelButtonTemplate")
+    frame.dungeonLocationButton:SetSize(164, 22)
+    frame.dungeonLocationButton:SetPoint("LEFT", frame.dungeonMeta, "RIGHT", 14, 0)
     frame.dungeonLocationButton:SetFrameLevel(header:GetFrameLevel() + 4)
-    frame.dungeonLocationButton.icon = frame.dungeonLocationButton:CreateTexture(nil, "ARTWORK")
-    frame.dungeonLocationButton.icon:SetPoint("CENTER")
-    frame.dungeonLocationButton.icon:SetSize(36, 36)
-    local dungeonAtlasOK = false
-    if frame.dungeonLocationButton.icon.SetAtlas then
-        dungeonAtlasOK = pcall(frame.dungeonLocationButton.icon.SetAtlas, frame.dungeonLocationButton.icon, "Dungeon", false)
+    frame.dungeonLocationButton:SetText(L("SHOW_ENTRANCE_ON_MAP") or "Show Entrance on Map")
+    frame.dungeonLocationButton.text = frame.dungeonLocationButton:GetFontString()
+    if frame.dungeonLocationButton.text then
+        frame.dungeonLocationButton.text:ClearAllPoints()
+        frame.dungeonLocationButton.text:SetPoint("CENTER", 9, 0)
+        frame.dungeonLocationButton.text:SetTextColor(1.00, 0.82, 0.27)
+        frame.dungeonLocationButton.text:SetFontObject("GameFontHighlightSmall")
     end
-    if not dungeonAtlasOK then
-        frame.dungeonLocationButton.icon:SetTexture("Interface\Icons\INV_Misc_Rune_01")
-        frame.dungeonLocationButton.icon:SetTexCoord(0.08, 0.92, 0.08, 0.92)
-    end
-    frame.dungeonLocationButton:SetHighlightTexture("Interface\Buttons\ButtonHilight-Square", "ADD")
+    frame.dungeonLocationButton.icon = frame.dungeonLocationButton:CreateTexture(nil, "OVERLAY")
+    frame.dungeonLocationButton.icon:SetSize(16, 16)
+    frame.dungeonLocationButton.icon:SetPoint("LEFT", 6, 0)
+    frame.dungeonLocationButton.icon:SetTexture("Interface\\AddOns\\ForeverDungeonJournal\\Media\\MapTabIcon")
+    frame.dungeonLocationButton.icon:SetTexCoord(0.08, 0.92, 0.08, 0.92)
     frame.dungeonLocationButton:SetScript("OnEnter", function(self)
         GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
-        GameTooltip:SetText(L("SHOW_LOCATION"))
-        local dungeon = DB[selectedDungeon]
-        local entrance = dungeon and dungeon.entrance
-        if entrance and entrance.x and entrance.y and FDJ.MapMarkers and FDJ.MapMarkers.FormatCoordString then
-            local coordStr = FDJ.MapMarkers.FormatCoordString(entrance.x, entrance.y)
-            local zone = entrance.zone or (entrance.label and entrance.label:match("^(.-)%s*%("))
-            if zone and zone ~= "" then
-                GameTooltip:AddLine(zone .. " " .. coordStr, 1, 0.82, 0.20)
-            else
-                GameTooltip:AddLine(coordStr, 1, 0.82, 0.20)
-            end
-        end
-        GameTooltip:AddLine(L("MAP_TOOLTIP"), 1, 1, 1, true)
+        GameTooltip:SetText(L("SHOW_ENTRANCE_ON_MAP") or "Show Entrance on Map", 1, 0.82, 0)
+        GameTooltip:AddLine(L("ENTRANCE_TOOLTIP_DESC") or "Marks the physical dungeon entrance portal on your world map.", 0.9, 0.9, 0.9, true)
         GameTooltip:Show()
     end)
     frame.dungeonLocationButton:SetScript("OnLeave", function() GameTooltip:Hide() end)
     frame.dungeonLocationButton:SetScript("OnClick", function()
-        local dungeon = DB[selectedDungeon]
+        local dungeon = FDJ.DB[selectedDungeon]
         local entrance = dungeon and dungeon.entrance
         if entrance and FDJ.MapMarkers and FDJ.MapMarkers.ShowRecordedLocationOnMap then
             FDJ.MapMarkers.ShowRecordedLocationOnMap(entrance, DungeonName(selectedDungeon))
         end
     end)
 
-    -- Sub-tabs live inside the dungeon header, to the right of the dungeon name.
-    frame.questsTab = CreateModeButton(header, L("QUESTS"), -13)
-    frame.bossesTab = CreateModeButton(header, L("BOSSES"), -127)
-    frame.mapTab = CreateModeButton(header, L("SHOW_DUNGEON_LOCATION"), -241)
-    frame.mapTab:Hide()
-    frame.bossesTab:SetScript("OnClick", function() SetMode("bosses") end)
-    frame.questsTab:SetScript("OnClick", function() SetMode("quests") end)
-    frame.mapTab:SetScript("OnClick", function() SetMode("map") end)
-
     frame.dungeonRouteButton = CreateFrame("Button", nil, header, "UIPanelButtonTemplate")
-    frame.dungeonRouteButton:SetSize(160, 30)
-    frame.dungeonRouteButton:SetPoint("RIGHT", frame.bossesTab, "LEFT", -8, 0)
-    frame.dungeonRouteButton:SetText(L("HOW_TO_GET_THERE"))
+    frame.dungeonRouteButton:SetSize(82, 22)
+    frame.dungeonRouteButton:SetPoint("LEFT", frame.dungeonLocationButton, "RIGHT", 8, 0)
+    frame.dungeonRouteButton:SetText(L("ROUTE") or "Route")
     frame.dungeonRouteButton.text = frame.dungeonRouteButton:GetFontString()
     if frame.dungeonRouteButton.text then
         frame.dungeonRouteButton.text:ClearAllPoints()
-        frame.dungeonRouteButton.text:SetPoint("CENTER", 11, 0)
+        frame.dungeonRouteButton.text:SetPoint("CENTER", 8, 0)
         frame.dungeonRouteButton.text:SetTextColor(1.00, 0.82, 0.27)
+        frame.dungeonRouteButton.text:SetFontObject("GameFontHighlightSmall")
     end
     frame.dungeonRouteButton.icon = frame.dungeonRouteButton:CreateTexture(nil, "OVERLAY")
-    frame.dungeonRouteButton.icon:SetSize(22, 22)
-    frame.dungeonRouteButton.icon:SetPoint("LEFT", 6, 0)
-    frame.dungeonRouteButton.icon:SetTexture(ALLIANCE_ICON)
+    frame.dungeonRouteButton.icon:SetSize(16, 16)
+    frame.dungeonRouteButton.icon:SetPoint("LEFT", 5, 0)
+    frame.dungeonRouteButton.icon:SetTexture(FDJ.ALLIANCE_ICON)
     frame.dungeonRouteButton:SetScript("OnClick", ShowRouteGuide)
     frame.dungeonRouteButton:Hide()
 
-    frame.dungeonMapButton = CreateFrame("Button", nil, header, "BackdropTemplate")
-    frame.dungeonMapButton:SetSize(142, 26)
-    SetBackdrop(frame.dungeonMapButton, "Interface\\Buttons\\WHITE8X8", "Interface\\Tooltips\\UI-Tooltip-Border", 10, 2)
-    frame.dungeonMapButton:SetBackdropColor(0.12, 0.08, 0.04, 0.95)
-    frame.dungeonMapButton:SetBackdropBorderColor(0.48, 0.34, 0.16, 1)
-    frame.dungeonMapButton:SetHighlightTexture("Interface\\QuestFrame\\UI-QuestTitleHighlight", "ADD")
-    frame.dungeonMapButton.text = frame.dungeonMapButton:CreateFontString(nil, "OVERLAY", "GameFontHighlightSmall")
-    frame.dungeonMapButton.text:SetPoint("CENTER", 10, 0)
-    frame.dungeonMapButton.text:SetTextColor(1.00, 0.82, 0.27)
-    frame.dungeonMapButton.text:SetText(L("DUNGEON_MAP"))
-    frame.dungeonMapButton.icon = frame.dungeonMapButton:CreateTexture(nil, "OVERLAY")
-    frame.dungeonMapButton.icon:SetSize(16, 16)
-    frame.dungeonMapButton.icon:SetPoint("LEFT", 8, 0)
-    frame.dungeonMapButton.icon:SetTexture("Interface\\Icons\\INV_Misc_Map_01")
-    frame.dungeonMapButton.icon:SetTexCoord(0.08, 0.92, 0.08, 0.92)
-    frame.dungeonMapButton:SetScript("OnClick", function()
-        if selectedMode == "dungeon_map" then
-            SetMode("bosses")
-        else
-            SetMode("dungeon_map")
+    local resetRunButton = CreateFrame("Button", nil, header, "BackdropTemplate")
+    frame.resetRunButton = resetRunButton
+    resetRunButton:SetSize(82, 20)
+    resetRunButton:SetPoint("LEFT", frame.dungeonRouteButton, "RIGHT", 8, 0)
+    FDJ.SetBackdrop(resetRunButton, "Interface\\Buttons\\WHITE8X8", "Interface\\Tooltips\\UI-Tooltip-Border", 8, 2)
+    resetRunButton:SetBackdropColor(0.12, 0.115, 0.105, 0.95)
+    resetRunButton:SetBackdropBorderColor(0.48, 0.40, 0.27, 1)
+    resetRunButton:SetHighlightTexture("Interface\\QuestFrame\\UI-QuestTitleHighlight", "ADD")
+    local resetText = resetRunButton:CreateFontString(nil, "OVERLAY", "GameFontHighlightSmall")
+    resetText:SetPoint("CENTER", 0, 0)
+    resetText:SetText(L("RESET_RUN") or "Reset Run")
+    resetText:SetTextColor(0.95, 0.82, 0.35)
+    resetRunButton.text = resetText
+
+    resetRunButton:SetScript("OnClick", function()
+        FDJ.PlayJournalOptionSound()
+        FDJ.ResetDefeatedBosses(selectedDungeon)
+        RefreshBossList()
+        if frame.dungeonMapPanel and frame.dungeonMapPanel:IsShown() and FDJ.DUNGEON_MAPS and FDJ.DUNGEON_MAPS[selectedDungeon] then
+            FDJ.RenderCustomDungeonMap(FDJ.DUNGEON_MAPS[selectedDungeon], frame.dungeonMapFloor)
         end
+        print("|cffd8a83cForever Dungeon Journal|r: Defeated boss progress reset for " .. selectedDungeon .. ".")
     end)
-    frame.dungeonMapButton:Hide()
+    resetRunButton:SetScript("OnEnter", function(self)
+        GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
+        GameTooltip:SetText(L("RESET_RUN") or "Reset Run", 1, 0.82, 0)
+        GameTooltip:AddLine("Clears the green defeat checkmarks for this dungeon run.", 0.9, 0.9, 0.9, true)
+        GameTooltip:Show()
+    end)
+    resetRunButton:SetScript("OnLeave", function() GameTooltip:Hide() end)
 
-    frame.dungeonMeta = header:CreateFontString(nil, "OVERLAY", "GameFontHighlightSmall")
-    frame.dungeonMeta:SetPoint("TOPLEFT", frame.dungeonTitle, "BOTTOMLEFT", 0, -4)
-    frame.dungeonMeta:SetTextColor(0.88, 0.80, 0.66)
+    -- Stockade loot data is still being verified. Keep this notice in the
+    -- dungeon header so it clearly applies to both the Bosses and Quests tabs.
+    frame.stockadeItemsTBD = header:CreateFontString(nil, "OVERLAY", "GameFontNormalLarge")
+    frame.stockadeItemsTBD:SetText("Items Data TBD")
+    frame.stockadeItemsTBD:SetTextColor(1.00, 0.10, 0.10)
+    frame.stockadeItemsTBD:SetShadowColor(0, 0, 0, 1)
+    frame.stockadeItemsTBD:SetShadowOffset(1, -1)
+    frame.stockadeItemsTBD:Hide()
 
+    -- Sub-tabs live inside the dungeon header, to the right of the dungeon name.
+    frame.questsTab = CreateModeButton(header, L("QUESTS"), -13)
+    frame.bossesTab = CreateModeButton(header, L("BOSSES"), -127)
+    frame.mapTab = CreateModeButton(header, L("MAP"), -241)
+    frame.mapTab:Hide()
+    -- Keep the Stockade "Items Data TBD" note left of the Map button so it
+    -- never overlaps the header buttons.
+    frame.stockadeItemsTBD:SetPoint("RIGHT", frame.bossesTab, "LEFT", -12, 0)
+    frame.stockadeItemsTBD:SetFontObject("GameFontNormal")
+    frame.stockadeItemsTBD:SetTextColor(1.00, 0.10, 0.10)
+    frame.bossesTab:SetScript("OnClick", function() SetMode("bosses") end)
+    frame.questsTab:SetScript("OnClick", function() SetMode("quests") end)
+    frame.mapTab:SetScript("OnClick", function() if ShowDungeonMap then ShowDungeonMap() end end)
 
     -- LEFT: boss list remains visible at all times.
     local left = CreateFrame("Frame", nil, content, "BackdropTemplate")
@@ -6715,7 +8250,7 @@ local function CreateMainFrame()
     left:SetPoint("BOTTOMLEFT", 14, 14)
     left:SetWidth(344)
 
-    SetBackdrop(
+    FDJ.SetBackdrop(
         left,
         "Interface\\Buttons\\WHITE8X8",
         "Interface\\Tooltips\\UI-Tooltip-Border",
@@ -6724,7 +8259,7 @@ local function CreateMainFrame()
     )
     left:SetBackdropColor(0.19, 0.13, 0.07, 0.94)
     left:SetBackdropBorderColor(0.39, 0.24, 0.08, 1)
-    frame.leftParchment = AddClassicParchment(left, 0.13, 1.00, 0.94, 0.82)
+    frame.leftParchment = FDJ.AddClassicParchment(left, 0.13, 1.00, 0.94, 0.82)
 
     local encounters = left:CreateFontString(nil, "OVERLAY", "GameFontNormalLarge")
     frame.bossListTitle = encounters
@@ -6752,7 +8287,7 @@ local function CreateMainFrame()
     right:SetPoint("TOPLEFT", left, "TOPRIGHT", 12, 0)
     right:SetPoint("BOTTOMRIGHT", -14, 14)
 
-    SetBackdrop(
+    FDJ.SetBackdrop(
         right,
         "Interface\\Buttons\\WHITE8X8",
         "Interface\\Tooltips\\UI-Tooltip-Border",
@@ -6761,7 +8296,7 @@ local function CreateMainFrame()
     )
     right:SetBackdropColor(0.21, 0.15, 0.08, 0.94)
     right:SetBackdropBorderColor(0.42, 0.27, 0.10, 1)
-    frame.rightParchment = AddClassicParchment(right, 0.13, 1.00, 0.94, 0.82)
+    frame.rightParchment = FDJ.AddClassicParchment(right, 0.13, 1.00, 0.94, 0.82)
 
     frame.selectedBossPortrait = right:CreateTexture(nil, "ARTWORK")
     frame.selectedBossPortrait:SetSize(68, 68)
@@ -6815,7 +8350,9 @@ local function CreateMainFrame()
     )
     frame.selectedBossName:SetPoint("RIGHT", -14, 0)
     frame.selectedBossName:SetJustifyH("LEFT")
-    frame.selectedBossName:SetTextColor(0.29, 0.13, 0.035)
+    frame.selectedBossName:SetTextColor(1.0, 1.0, 1.0)
+    frame.selectedBossName:SetShadowColor(0, 0, 0, 1.0)
+    frame.selectedBossName:SetShadowOffset(1.5, -1.5)
 
     frame.selectedBossType = right:CreateFontString(nil, "OVERLAY", "GameFontNormal")
     frame.selectedBossType:SetPoint(
@@ -6844,57 +8381,110 @@ local function CreateMainFrame()
     frame.selectedBossDescription:SetJustifyH("LEFT")
     frame.selectedBossDescription:SetJustifyV("TOP")
     frame.selectedBossDescription:SetWordWrap(true)
-    frame.selectedBossDescription:SetTextColor(0.22, 0.13, 0.06)
+    frame.selectedBossDescription:SetTextColor(0.90, 0.86, 0.78)
     frame.selectedBossDescription:Hide()
 
-    -- Sub-tabs: "Loot" vs "Tactics & Abilities"
-    local bossSubTabLoot = CreateFrame("Button", nil, right, "UIPanelButtonTemplate")
-    frame.bossSubTabLoot = bossSubTabLoot
-    bossSubTabLoot:SetSize(72, 22)
-    bossSubTabLoot:SetPoint("TOPLEFT", 14, -86)
-    bossSubTabLoot:SetText(L("LOOT"))
-    bossSubTabLoot.text = bossSubTabLoot.GetFontString and bossSubTabLoot:GetFontString() or nil
-    bossSubTabLoot:SetScript("OnClick", function()
+    -- Boss Sub-Tabs (Overview / Loot)
+    local bossSubTabOverview = CreateFrame("Button", nil, right, "BackdropTemplate")
+    frame.bossSubTabOverview = bossSubTabOverview
+    bossSubTabOverview:SetSize(110, 22)
+    bossSubTabOverview:SetPoint("TOPLEFT", 14, -86)
+    FDJ.SetBackdrop(bossSubTabOverview, "Interface\\Buttons\\WHITE8X8", "Interface\\Tooltips\\UI-Tooltip-Border", 8, 2)
+    bossSubTabOverview:SetBackdropColor(0.12, 0.08, 0.04, 0.80)
+    bossSubTabOverview:SetBackdropBorderColor(0.48, 0.36, 0.18, 1)
+    bossSubTabOverview:SetHighlightTexture("Interface\\QuestFrame\\UI-QuestTitleHighlight", "ADD")
+    local overviewText = bossSubTabOverview:CreateFontString(nil, "OVERLAY", "GameFontHighlightSmall")
+    overviewText:SetPoint("CENTER")
+    overviewText:SetText(L("OVERVIEW") or "Overview")
+    overviewText:SetTextColor(0.65, 0.58, 0.45)
+    bossSubTabOverview.text = overviewText
+    bossSubTabOverview:SetScript("OnClick", function()
         FDJ.PlayJournalOptionSound()
-        SetBossSubTab("loot")
+        FDJ.SetBossSubTab("tactics")
     end)
 
-    local bossSubTabTactics = CreateFrame("Button", nil, right, "UIPanelButtonTemplate")
-    frame.bossSubTabTactics = bossSubTabTactics
-    bossSubTabTactics:SetSize(126, 22)
-    bossSubTabTactics:SetPoint("LEFT", bossSubTabLoot, "RIGHT", 6, 0)
-    bossSubTabTactics:SetText(L("TACTICS"))
-    bossSubTabTactics.text = bossSubTabTactics.GetFontString and bossSubTabTactics:GetFontString() or nil
-    bossSubTabTactics:SetScript("OnClick", function()
+    local bossSubTabLoot = CreateFrame("Button", nil, right, "BackdropTemplate")
+    frame.bossSubTabLoot = bossSubTabLoot
+    bossSubTabLoot:SetSize(80, 22)
+    bossSubTabLoot:SetPoint("LEFT", bossSubTabOverview, "RIGHT", 6, 0)
+    FDJ.SetBackdrop(bossSubTabLoot, "Interface\\Buttons\\WHITE8X8", "Interface\\Tooltips\\UI-Tooltip-Border", 8, 2)
+    bossSubTabLoot:SetBackdropColor(0.26, 0.18, 0.09, 0.95)
+    bossSubTabLoot:SetBackdropBorderColor(0.48, 0.36, 0.18, 1)
+    bossSubTabLoot:SetHighlightTexture("Interface\\QuestFrame\\UI-QuestTitleHighlight", "ADD")
+    local lootText = bossSubTabLoot:CreateFontString(nil, "OVERLAY", "GameFontHighlightSmall")
+    lootText:SetPoint("CENTER")
+    lootText:SetText(L("LOOT") or "Loot")
+    lootText:SetTextColor(1.00, 0.85, 0.35)
+    bossSubTabLoot.text = lootText
+    bossSubTabLoot:SetScript("OnClick", function()
         FDJ.PlayJournalOptionSound()
-        SetBossSubTab("tactics")
+        FDJ.SetBossSubTab("loot")
     end)
 
     -- Loot Filter: Class Filter Button
     local lootClassFilterButton = CreateFrame("Button", nil, right, "BackdropTemplate")
     frame.lootClassFilterButton = lootClassFilterButton
-    lootClassFilterButton:SetSize(86, 22)
+    lootClassFilterButton:SetSize(92, 22)
     lootClassFilterButton:SetPoint("TOPRIGHT", right, "TOPRIGHT", -14, -86)
-    SetBackdrop(lootClassFilterButton, "Interface\\Buttons\\WHITE8X8", "Interface\\Tooltips\\UI-Tooltip-Border", 10, 2)
+    FDJ.SetBackdrop(lootClassFilterButton, "Interface\\Buttons\\WHITE8X8", "Interface\\Tooltips\\UI-Tooltip-Border", 10, 2)
     lootClassFilterButton:SetBackdropColor(0.12, 0.09, 0.05, 0.95)
     lootClassFilterButton:SetBackdropBorderColor(0.48, 0.36, 0.18, 1)
     lootClassFilterButton:SetHighlightTexture("Interface\\QuestFrame\\UI-QuestTitleHighlight", "ADD")
     local classFilterText = lootClassFilterButton:CreateFontString(nil, "OVERLAY", "GameFontHighlightSmall")
     classFilterText:SetPoint("CENTER")
-    classFilterText:SetText(L("ALL_CLASSES"))
-    classFilterText:SetTextColor(1.0, 0.82, 0.27)
+    local initClassName, initR, initG, initB = FDJ.GetClassDisplay(FDJ.selectedClassFilter)
+    classFilterText:SetText(initClassName)
+    classFilterText:SetTextColor(initR, initG, initB)
     lootClassFilterButton.text = classFilterText
-    lootClassFilterButton:SetScript("OnClick", function(self)
+
+    -- Class Dropdown Menu
+    local classMenu = CreateFrame("Frame", nil, right, "BackdropTemplate")
+    frame.classMenu = classMenu
+    classMenu:SetSize(115, 10 * 22 + 8)
+    classMenu:SetPoint("TOPRIGHT", lootClassFilterButton, "BOTTOMRIGHT", 0, -2)
+    classMenu:SetFrameStrata("TOOLTIP")
+    classMenu:SetFrameLevel(right:GetFrameLevel() + 40)
+    FDJ.SetBackdrop(classMenu, "Interface\\Buttons\\WHITE8X8", "Interface\\Tooltips\\UI-Tooltip-Border", 10, 2)
+    classMenu:SetBackdropColor(0.08, 0.06, 0.04, 0.98)
+    classMenu:SetBackdropBorderColor(0.48, 0.36, 0.18, 1)
+    classMenu:Hide()
+
+    local classChoices = {
+        { id = "ALL" },
+        { id = "WARRIOR" },
+        { id = "PALADIN" },
+        { id = "HUNTER" },
+        { id = "ROGUE" },
+        { id = "PRIEST" },
+        { id = "SHAMAN" },
+        { id = "MAGE" },
+        { id = "WARLOCK" },
+        { id = "DRUID" },
+    }
+    for cIdx, cChoice in ipairs(classChoices) do
+        local cBtn = CreateFrame("Button", nil, classMenu)
+        cBtn:SetSize(105, 20)
+        cBtn:SetPoint("TOPLEFT", 5, -4 - ((cIdx - 1) * 22))
+        cBtn:SetHighlightTexture("Interface\\QuestFrame\\UI-QuestTitleHighlight", "ADD")
+        local cTxt = cBtn:CreateFontString(nil, "OVERLAY", "GameFontHighlightSmall")
+        cTxt:SetPoint("LEFT", 6, 0)
+        local optName, optR, optG, optB = FDJ.GetClassDisplay(cChoice.id)
+        cTxt:SetText(optName)
+        cTxt:SetTextColor(optR, optG, optB)
+        cBtn:SetScript("OnClick", function()
+            FDJ.PlayJournalOptionSound()
+            classMenu:Hide()
+            FDJ.selectedClassFilter = cChoice.id
+            local name, r, g, b = FDJ.GetClassDisplay(cChoice.id)
+            lootClassFilterButton.text:SetText(name)
+            lootClassFilterButton.text:SetTextColor(r, g, b)
+            RefreshLoot()
+        end)
+    end
+    lootClassFilterButton:SetScript("OnClick", function()
         FDJ.PlayJournalOptionSound()
-        local playerClass = GetPlayerClassToken()
-        if FDJ.selectedClassFilter == "ALL" then
-            FDJ.selectedClassFilter = playerClass
-            self.text:SetText(L("MY_CLASS"))
-        else
-            FDJ.selectedClassFilter = "ALL"
-            self.text:SetText(L("ALL_CLASSES"))
-        end
-        RefreshLoot()
+        if frame.slotMenu then frame.slotMenu:Hide() end
+        classMenu:SetShown(not classMenu:IsShown())
     end)
 
     -- Loot Filter: Slot Filter Button
@@ -6902,33 +8492,34 @@ local function CreateMainFrame()
     frame.lootSlotFilterButton = lootSlotFilterButton
     lootSlotFilterButton:SetSize(82, 22)
     lootSlotFilterButton:SetPoint("RIGHT", lootClassFilterButton, "LEFT", -6, 0)
-    SetBackdrop(lootSlotFilterButton, "Interface\\Buttons\\WHITE8X8", "Interface\\Tooltips\\UI-Tooltip-Border", 10, 2)
+    FDJ.SetBackdrop(lootSlotFilterButton, "Interface\\Buttons\\WHITE8X8", "Interface\\Tooltips\\UI-Tooltip-Border", 10, 2)
     lootSlotFilterButton:SetBackdropColor(0.12, 0.09, 0.05, 0.95)
     lootSlotFilterButton:SetBackdropBorderColor(0.48, 0.36, 0.18, 1)
     lootSlotFilterButton:SetHighlightTexture("Interface\\QuestFrame\\UI-QuestTitleHighlight", "ADD")
     local slotFilterText = lootSlotFilterButton:CreateFontString(nil, "OVERLAY", "GameFontHighlightSmall")
     slotFilterText:SetPoint("CENTER")
-    slotFilterText:SetText(L("ALL_SLOTS"))
+    slotFilterText:SetText(L("ALL_SLOTS") or "All Slots")
     slotFilterText:SetTextColor(1.0, 0.82, 0.27)
     lootSlotFilterButton.text = slotFilterText
 
     local slotMenu = CreateFrame("Frame", nil, right, "BackdropTemplate")
     frame.slotMenu = slotMenu
-    slotMenu:SetSize(110, 5 * 22 + 8)
+    slotMenu:SetSize(110, 6 * 22 + 8)
     slotMenu:SetPoint("TOPLEFT", lootSlotFilterButton, "BOTTOMLEFT", 0, -2)
     slotMenu:SetFrameStrata("TOOLTIP")
     slotMenu:SetFrameLevel(right:GetFrameLevel() + 40)
-    SetBackdrop(slotMenu, "Interface\\Buttons\\WHITE8X8", "Interface\\Tooltips\\UI-Tooltip-Border", 10, 2)
+    FDJ.SetBackdrop(slotMenu, "Interface\\Buttons\\WHITE8X8", "Interface\\Tooltips\\UI-Tooltip-Border", 10, 2)
     slotMenu:SetBackdropColor(0.08, 0.06, 0.04, 0.98)
     slotMenu:SetBackdropBorderColor(0.48, 0.36, 0.18, 1)
     slotMenu:Hide()
 
     local slotChoices = {
-        { id = "ALL", label = L("ALL_SLOTS") },
-        { id = "WEAPONS", label = L("WEAPONS") },
-        { id = "ARMOR", label = L("ARMOR") },
-        { id = "ACCESSORIES", label = L("ACCESSORIES") },
-        { id = "QUEST", label = L("QUEST_ITEMS") },
+        { id = "ALL", label = L("ALL_SLOTS") or "All Slots" },
+        { id = "WISHLIST", label = "|cffffd100★|r " .. (L("WISHLIST") or "Wishlist") },
+        { id = "WEAPONS", label = L("WEAPONS") or "Weapons" },
+        { id = "ARMOR", label = L("ARMOR") or "Armor" },
+        { id = "ACCESSORIES", label = L("ACCESSORIES") or "Accessories" },
+        { id = "QUEST", label = L("QUEST_ITEMS") or "Quest Items" },
     }
     for sIdx, sChoice in ipairs(slotChoices) do
         local sBtn = CreateFrame("Button", nil, slotMenu)
@@ -6949,6 +8540,7 @@ local function CreateMainFrame()
     end
     lootSlotFilterButton:SetScript("OnClick", function()
         FDJ.PlayJournalOptionSound()
+        if frame.classMenu then frame.classMenu:Hide() end
         slotMenu:SetShown(not slotMenu:IsShown())
     end)
 
@@ -6956,7 +8548,6 @@ local function CreateMainFrame()
     frame.lootTitle:SetPoint("TOPLEFT", 14, -114)
     frame.lootTitle:SetTextColor(0.27, 0.13, 0.04)
     frame.lootTitle:Hide()
-
 
     local lootScroll = CreateFrame(
         "ScrollFrame",
@@ -6971,11 +8562,6 @@ local function CreateMainFrame()
     frame.lootContent = CreateFrame("Frame", nil, lootScroll)
     frame.lootContent:SetSize(388, 1)
     lootScroll:SetScrollChild(frame.lootContent)
-
-    frame.noLootMessage = right:CreateFontString(nil, "OVERLAY", "GameFontHighlight")
-    frame.noLootMessage:SetPoint("CENTER", lootScroll, "CENTER", 0, 20)
-    frame.noLootMessage:SetTextColor(0.65, 0.55, 0.40)
-    frame.noLootMessage:Hide()
 
     -- Tactics scroll view
     local tacticsScroll = CreateFrame(
@@ -6994,24 +8580,189 @@ local function CreateMainFrame()
     tacticsScroll:Hide()
 
     frame.tacticsOverviewHeader = frame.bossTacticsContent:CreateFontString(nil, "OVERLAY", "GameFontNormalLarge")
-    frame.tacticsOverviewHeader:SetText(L("OVERVIEW"))
+    frame.tacticsOverviewHeader:SetText(L("OVERVIEW") or "Overview")
 
-    frame.tacticsOverviewText = frame.bossTacticsContent:CreateFontString(nil, "OVERLAY", "GameFontHighlight")
+    local tacticsAnnounce = CreateFrame("Button", nil, frame.bossTacticsContent, "BackdropTemplate")
+    frame.tacticsAnnounceButton = tacticsAnnounce
+    tacticsAnnounce:SetSize(130, 22)
+    tacticsAnnounce:SetPoint("TOPRIGHT", frame.bossTacticsContent, "TOPRIGHT", -8, -4)
+    FDJ.SetBackdrop(tacticsAnnounce, "Interface\\Buttons\\WHITE8X8", "Interface\\Tooltips\\UI-Tooltip-Border", 10, 2)
+    tacticsAnnounce:SetBackdropColor(0.18, 0.13, 0.07, 0.95)
+    tacticsAnnounce:SetBackdropBorderColor(0.60, 0.44, 0.20, 1.0)
+    tacticsAnnounce:SetHighlightTexture("Interface\\QuestFrame\\UI-QuestTitleHighlight", "ADD")
+    local tAnnounceIcon = tacticsAnnounce:CreateTexture(nil, "ARTWORK")
+    tAnnounceIcon:SetSize(14, 14)
+    tAnnounceIcon:SetPoint("LEFT", 6, 0)
+    tAnnounceIcon:SetTexture("Interface\\Buttons\\UI-GuildSwipe-Up")
+    tAnnounceIcon:SetVertexColor(1.0, 0.85, 0.35)
+    local tAnnounceText = tacticsAnnounce:CreateFontString(nil, "OVERLAY", "GameFontHighlightSmall")
+    tAnnounceText:SetPoint("LEFT", tAnnounceIcon, "RIGHT", 4, 0)
+    tAnnounceText:SetPoint("RIGHT", -6, 0)
+    tAnnounceText:SetText(L("ANNOUNCE_TACTICS") or "Announce Tactics")
+    tAnnounceText:SetTextColor(1.0, 0.85, 0.35)
+    tacticsAnnounce.text = tAnnounceText
+
+    tacticsAnnounce:SetScript("OnEnter", function(self)
+        GameTooltip:SetOwner(self, "ANCHOR_TOP")
+        GameTooltip:SetText(L("ANNOUNCE_TACTICS") or "Announce Tactics", 1, 0.85, 0.35)
+        GameTooltip:AddLine("Broadcasts all overview and role tips to /party or /raid.", 0.9, 0.9, 0.9, true)
+        GameTooltip:Show()
+        self.text:SetTextColor(1.0, 1.0, 0.6)
+    end)
+    tacticsAnnounce:SetScript("OnLeave", function(self)
+        GameTooltip:Hide()
+        self.text:SetTextColor(1.0, 0.85, 0.35)
+    end)
+    tacticsAnnounce:SetScript("OnClick", function(self)
+        local now = GetTime and GetTime() or 0
+        if FDJ.lastTacticsAnnounce and (now - FDJ.lastTacticsAnnounce < 3) then return end
+        FDJ.lastTacticsAnnounce = now
+
+        local dungeon = FDJ.DB and FDJ.DB[selectedDungeon]
+        local boss = dungeon and dungeon.bosses and dungeon.bosses[selectedBoss]
+        local bossName = boss and boss.name or "Boss"
+        local tactics = FDJ.BOSS_TACTICS and FDJ.BOSS_TACTICS[selectedDungeon] and FDJ.BOSS_TACTICS[selectedDungeon][bossName]
+        if not tactics then return end
+
+        local inRaid = IsInRaid and IsInRaid()
+        local inParty = IsInGroup and IsInGroup()
+        local channel = inRaid and "RAID" or (inParty and "PARTY" or nil)
+
+        local lines = {}
+        table.insert(lines, "[Forever DJ] Tactics: " .. bossName)
+        if tactics.overview and tactics.overview ~= "" then
+            local cleanOv = tactics.overview:gsub("|c%x%x%x%x%x%x%x%x", ""):gsub("|r", ""):gsub("|H.-|h(%[.-%])|h", "%1")
+            if #cleanOv > 240 then cleanOv = cleanOv:sub(1, 237) .. "..." end
+            table.insert(lines, cleanOv)
+        end
+        if tactics.roleTips then
+            local roleParts = {}
+            if tactics.roleTips.tank then table.insert(roleParts, "T: " .. tactics.roleTips.tank) end
+            if tactics.roleTips.healer then table.insert(roleParts, "H: " .. tactics.roleTips.healer) end
+            if tactics.roleTips.dps then table.insert(roleParts, "DPS: " .. tactics.roleTips.dps) end
+            local roleLine = table.concat(roleParts, " | ")
+            roleLine = roleLine:gsub("|c%x%x%x%x%x%x%x%x", ""):gsub("|r", ""):gsub("|H.-|h(%[.-%])|h", "%1")
+            if #roleLine > 240 then roleLine = roleLine:sub(1, 237) .. "..." end
+            table.insert(lines, roleLine)
+        end
+
+        for _, msg in ipairs(lines) do
+            if channel then
+                SendChatMessage(msg, channel)
+            else
+                print("|cffffd100[Forever DJ]|r " .. msg)
+            end
+        end
+    end)
+
+    local ovFrame = CreateFrame("Frame", nil, frame.bossTacticsContent)
+    frame.tacticsOverviewFrame = ovFrame
+    ovFrame:SetWidth(376)
+    ovFrame:SetHeight(20)
+    ovFrame:SetHyperlinksEnabled(true)
+    ovFrame:SetScript("OnHyperlinkEnter", function(self, link, text)
+        local abIndex, abID = link:match("ability:(%d+):(%d+)")
+        local idNum = tonumber(abID)
+        local idxNum = tonumber(abIndex)
+        GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
+        if idNum and idNum > 0 and GameTooltip.SetSpellByID then
+            pcall(GameTooltip.SetSpellByID, GameTooltip, idNum)
+        end
+        if not GameTooltip:IsShown() or GameTooltip:NumLines() == 0 then
+            GameTooltip:ClearLines()
+            local ab = FDJ.GetTacticsAbility and FDJ.GetTacticsAbility(idxNum, idNum)
+            GameTooltip:AddLine(ab and ab.name or "Ability", 1, 0.85, 0.35)
+            if ab and ab.desc then GameTooltip:AddLine(ab.desc, 1, 1, 1, true) end
+        end
+        GameTooltip:Show()
+    end)
+    ovFrame:SetScript("OnHyperlinkLeave", function(self) GameTooltip:Hide() end)
+    ovFrame:SetScript("OnHyperlinkClick", function(self, link, text, button)
+        local abIndex, abID = link:match("ability:(%d+):(%d+)")
+        if abIndex then
+            FDJ.ScrollToAbility(tonumber(abIndex), tonumber(abID), "Overview", ovFrame)
+        end
+    end)
+    function ovFrame:Flash()
+        local flashTex = ovFrame:CreateTexture(nil, "OVERLAY")
+        flashTex:SetAllPoints()
+        flashTex:SetColorTexture(1.0, 0.85, 0.30, 0.18)
+        flashTex:Show()
+        local elapsed = 0
+        ovFrame:SetScript("OnUpdate", function(self, dt)
+            elapsed = elapsed + dt
+            if elapsed > 1.8 then
+                flashTex:Hide()
+                flashTex:SetParent(nil)
+                ovFrame:SetScript("OnUpdate", nil)
+            else
+                flashTex:SetAlpha((1.8 - elapsed) / 1.8 * 0.18)
+            end
+        end)
+    end
+
+    frame.tacticsOverviewText = ovFrame:CreateFontString(nil, "OVERLAY", "GameFontHighlight")
     frame.tacticsOverviewText:SetWidth(376)
     frame.tacticsOverviewText:SetJustifyH("LEFT")
     frame.tacticsOverviewText:SetJustifyV("TOP")
     frame.tacticsOverviewText:SetWordWrap(true)
     frame.tacticsOverviewText:SetTextColor(0.92, 0.88, 0.82)
+    if frame.tacticsOverviewText.SetHyperlinksEnabled then
+        pcall(frame.tacticsOverviewText.SetHyperlinksEnabled, frame.tacticsOverviewText, true)
+    end
 
     frame.tacticsRoleHeader = frame.bossTacticsContent:CreateFontString(nil, "OVERLAY", "GameFontNormalLarge")
-    frame.tacticsRoleHeader:SetText(L("ROLE_TIPS"))
+    frame.tacticsRoleHeader:SetText(L("ROLE_TIPS") or "Role Tips")
 
-    frame.tacticsTankCard = MakeRoleTipCard(frame.bossTacticsContent, L("TANK"), "Interface\\Icons\\INV_Shield_04", {0.35, 0.68, 1.0})
-    frame.tacticsHealerCard = MakeRoleTipCard(frame.bossTacticsContent, L("HEALER"), "Interface\\Icons\\Spell_Holy_Renew", {0.35, 1.0, 0.45})
-    frame.tacticsDpsCard = MakeRoleTipCard(frame.bossTacticsContent, L("DPS"), "Interface\\Icons\\INV_Sword_27", {1.0, 0.38, 0.38})
+    frame.tacticsTankCard = MakeRoleTipCard(frame.bossTacticsContent, L("TANK") or "Tank", "Interface\\Icons\\INV_Shield_04", {0.35, 0.68, 1.0})
+    frame.tacticsHealerCard = MakeRoleTipCard(frame.bossTacticsContent, L("HEALER") or "Healer", "Interface\\Icons\\Spell_Holy_Renew", {0.35, 1.0, 0.45})
+    frame.tacticsDpsCard = MakeRoleTipCard(frame.bossTacticsContent, L("DPS") or "DPS", "Interface\\Icons\\INV_Sword_27", {1.0, 0.38, 0.38})
 
     frame.tacticsAbilitiesHeader = frame.bossTacticsContent:CreateFontString(nil, "OVERLAY", "GameFontNormalLarge")
-    frame.tacticsAbilitiesHeader:SetText(L("ABILITIES"))
+    frame.tacticsAbilitiesHeader:SetText(L("ABILITIES") or "Abilities")
+
+    -- Floating "Back to Tips" Return Button
+    local returnBtn = CreateFrame("Button", nil, frame.bossTacticsContent, "BackdropTemplate")
+    frame.tacticsReturnButton = returnBtn
+    returnBtn:SetSize(130, 22)
+    FDJ.SetBackdrop(returnBtn, "Interface\\Buttons\\WHITE8X8", "Interface\\Tooltips\\UI-Tooltip-Border", 8, 2)
+    returnBtn:SetBackdropColor(0.12, 0.09, 0.05, 0.95)
+    returnBtn:SetBackdropBorderColor(0.85, 0.68, 0.28, 1)
+    returnBtn:SetHighlightTexture("Interface\\QuestFrame\\UI-QuestTitleHighlight", "ADD")
+    local returnIcon = returnBtn:CreateTexture(nil, "ARTWORK")
+    returnIcon:SetSize(14, 14)
+    returnIcon:SetPoint("LEFT", 5, 0)
+    returnIcon:SetTexture("Interface\\AddOns\\ForeverDungeonJournal\\Media\\ReturnUpArrow.tga")
+    returnIcon:SetVertexColor(1.0, 0.85, 0.35)
+    local returnTxt = returnBtn:CreateFontString(nil, "OVERLAY", "GameFontHighlightSmall")
+    returnTxt:SetPoint("LEFT", returnIcon, "RIGHT", 4, 0)
+    returnTxt:SetPoint("RIGHT", -4, 0)
+    returnTxt:SetJustifyH("LEFT")
+    returnTxt:SetTextColor(1.0, 0.85, 0.35)
+    returnTxt:SetText("Back to Tips")
+    returnBtn.text = returnTxt
+
+    returnBtn:SetScript("OnClick", function(self)
+        self:Hide()
+        if frame.bossTacticsScroll then
+            local pos = FDJ.lastTacticsScrollPos or 0
+            frame.bossTacticsScroll:SetVerticalScroll(pos)
+            local sb = FDJ.GetScrollBar(frame.bossTacticsScroll)
+            if sb and sb.SetValue then sb:SetValue(pos) end
+        end
+        if FDJ.lastTacticsSourceCard and FDJ.lastTacticsSourceCard.Flash then
+            FDJ.lastTacticsSourceCard:Flash()
+        end
+    end)
+    returnBtn:SetScript("OnEnter", function(self)
+        self:SetBackdropBorderColor(1.0, 0.85, 0.35, 1)
+        self.text:SetTextColor(1.0, 1.0, 0.6)
+    end)
+    returnBtn:SetScript("OnLeave", function(self)
+        self:SetBackdropBorderColor(0.85, 0.68, 0.28, 1)
+        self.text:SetTextColor(1.0, 0.85, 0.35)
+    end)
+    returnBtn:Hide()
 
     -- QUEST MODE: mirrors the fast boss workflow. All quests remain visible on
     -- the left; clicking one updates the details on the right with no extra page.
@@ -7020,14 +8771,14 @@ local function CreateMainFrame()
     questLeft:SetPoint("TOPLEFT", 14, -84)
     questLeft:SetPoint("BOTTOMLEFT", 14, 14)
     questLeft:SetWidth(344)
-    SetBackdrop(
+    FDJ.SetBackdrop(
         questLeft,
         "Interface\\Buttons\\WHITE8X8",
         "Interface\\Tooltips\\UI-Tooltip-Border",
         12,
         3
     )
-    frame.questLeftParchment = AddClassicParchment(questLeft, 0.13, 1.00, 0.94, 0.82)
+    frame.questLeftParchment = FDJ.AddClassicParchment(questLeft, 0.13, 1.00, 0.94, 0.82)
 
     frame.questListTitle = questLeft:CreateFontString(nil, "OVERLAY", "GameFontNormalLarge")
     frame.questListTitle:SetPoint("TOPLEFT", 12, -10)
@@ -7037,7 +8788,7 @@ local function CreateMainFrame()
         local b = CreateFrame("Button", nil, questLeft, "BackdropTemplate")
         b:SetSize(50, 38)
         b:SetPoint("TOPRIGHT", x, -7)
-        SetBackdrop(
+        FDJ.SetBackdrop(
             b,
             "Interface\\Buttons\\WHITE8X8",
             "Interface\\Tooltips\\UI-Tooltip-Border",
@@ -7053,7 +8804,7 @@ local function CreateMainFrame()
         b.icon:SetTexCoord(0.06, 0.94, 0.06, 0.94)
 
         b:SetScript("OnClick", function()
-            SetQuestFaction(faction, true)
+            SetQuestFaction(faction)
         end)
 
         b:SetScript("OnEnter", function(self)
@@ -7068,8 +8819,8 @@ local function CreateMainFrame()
         return b
     end
 
-    frame.hordeQuestButton = CreateFactionButton("Horde", -10, HORDE_ICON)
-    frame.allianceQuestButton = CreateFactionButton("Alliance", -66, ALLIANCE_ICON)
+    frame.hordeQuestButton = CreateFactionButton("Horde", -10, FDJ.HORDE_ICON)
+    frame.allianceQuestButton = CreateFactionButton("Alliance", -66, FDJ.ALLIANCE_ICON)
 
     local questScroll = CreateFrame(
         "ScrollFrame",
@@ -7089,20 +8840,20 @@ local function CreateMainFrame()
     frame.questRightPanel = questRight
     questRight:SetPoint("TOPLEFT", questLeft, "TOPRIGHT", 12, 0)
     questRight:SetPoint("BOTTOMRIGHT", -14, 14)
-    SetBackdrop(
+    FDJ.SetBackdrop(
         questRight,
         "Interface\\Buttons\\WHITE8X8",
         "Interface\\Tooltips\\UI-Tooltip-Border",
         12,
         3
     )
-    frame.questRightParchment = AddClassicParchment(questRight, 0.10, 1.00, 0.94, 0.82)
+    frame.questRightParchment = FDJ.AddClassicParchment(questRight, 0.10, 1.00, 0.94, 0.82)
 
     local questInset = CreateFrame("Frame", nil, questRight, "BackdropTemplate")
     frame.questTextInset = questInset
     questInset:SetPoint("TOPLEFT", 8, -8)
     questInset:SetPoint("BOTTOMRIGHT", -14, 8)
-    SetBackdrop(
+    FDJ.SetBackdrop(
         questInset,
         "Interface\\Buttons\\WHITE8X8",
         "Interface\\Tooltips\\UI-Tooltip-Border",
@@ -7164,6 +8915,51 @@ local function CreateMainFrame()
     frame.selectedQuestComplete:SetSize(24, 24)
     frame.selectedQuestComplete:SetPoint("TOPRIGHT", -16, -11)
     frame.selectedQuestComplete:Hide()
+
+    frame.questShareButton = CreateFrame("Button", nil, questInset, "BackdropTemplate")
+    frame.questShareButton:SetSize(76, 24)
+    FDJ.SetBackdrop(frame.questShareButton, "Interface\\Buttons\\WHITE8X8", "Interface\\Tooltips\\UI-Tooltip-Border", 12, 4)
+    frame.questShareButton:SetHighlightTexture("Interface\\QuestFrame\\UI-QuestTitleHighlight", "ADD")
+    frame.questShareButton.text = frame.questShareButton:CreateFontString(nil, "OVERLAY", "GameFontNormalSmall")
+    frame.questShareButton.text:SetPoint("CENTER", 0, 0)
+    frame.questShareButton.text:SetText(L("SHARE"))
+    frame.questShareButton:SetScript("OnClick", function(self)
+        if self._fdjShareEnabled and self.questID then
+            FDJ.ShareQuestByID(self.questID)
+        end
+    end)
+    frame.questShareButton:SetScript("OnEnter", function(self)
+        if not self._fdjShareableQuest then
+            -- Keep this button mouse-enabled instead of calling :Disable();
+            -- disabled WoW buttons do not reliably receive OnEnter, so the
+            -- grey state is visual while the red tooltip remains available.
+            self:SetBackdropColor(0.22, 0.22, 0.22, 1.00)
+            GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
+            GameTooltip:SetText(L("NOT_SHAREABLE"), 1.00, 0.15, 0.15)
+            GameTooltip:Show()
+            return
+        end
+
+        self:SetBackdropColor(0.13, 0.40, 0.19, 1.00)
+        GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
+        GameTooltip:SetText(L("SHAREABLE_QUEST"), 0.25, 1.00, 0.25)
+
+        -- Chain-step restrictions describe who can receive the quest, so the
+        -- note must remain visible even after the player accepts the quest.
+        -- For ordinary shareable quests, only show the pickup reminder while
+        -- the quest is not yet in the player's log.
+        if self._fdjSameStepOnly then
+            GameTooltip:AddLine(L("SHAREABLE_SAME_STEP"), 1.00, 1.00, 1.00, true)
+        elseif not self._fdjShareEnabled then
+            GameTooltip:AddLine(L("ACCEPT_TO_SHARE"), 1.00, 1.00, 1.00, true)
+        end
+        GameTooltip:Show()
+    end)
+    frame.questShareButton:SetScript("OnLeave", function(self)
+        GameTooltip:Hide()
+        FDJ.SetQuestShareButtonVisual(self, self._fdjShareableQuest, self._fdjShareEnabled)
+    end)
+    frame.questShareButton:Hide()
 
     frame.selectedQuestClass = questInset:CreateFontString(nil, "OVERLAY", "GameFontNormalSmall")
     frame.selectedQuestClass:SetPoint("TOPRIGHT", -16, -18)
@@ -7227,6 +9023,13 @@ local function CreateMainFrame()
 
     local function MakeQuestSectionHeader(label)
         local fs = frame.questDetailContent:CreateFontString(nil, "OVERLAY")
+
+        -- Keep the Blizzard FontObject intact. Converting QuestFont to its raw
+        -- font file with GetFont()/SetFont() strips Blizzard's locale glyph
+        -- fallback on non-Russian clients, which turns Cyrillic section labels
+        -- such as Цель / Начинается у / Сдать into square boxes. The normal
+        -- black shadow keeps the header readable on parchment without breaking
+        -- Russian (and remains safe when switching languages at runtime).
         ApplyQuestFont(fs, "QuestFont", "GameFontNormal")
         fs:SetText(label)
         fs:SetTextColor(1, 1, 1)
@@ -7237,6 +9040,7 @@ local function CreateMainFrame()
     end
 
     frame.questObjectiveHeader = MakeQuestSectionHeader(L("OBJECTIVE"))
+    frame.questRequiredItemsHeader = MakeQuestSectionHeader(L("REQUIRED_ITEMS"))
     frame.questStartsHeader = MakeQuestSectionHeader(L("STARTS_AT"))
     frame.questTurninHeader = MakeQuestSectionHeader(L("TURN_IN"))
     frame.questNotesHeader = MakeQuestSectionHeader(L("NOTES"))
@@ -7252,7 +9056,7 @@ local function CreateMainFrame()
     -- button. Hovering it gives the item tooltip plus the recorded drop source.
     frame.questStartItemButton = CreateFrame("Button", nil, frame.questDetailContent, "BackdropTemplate")
     frame.questStartItemButton:SetSize(230, 38)
-    SetBackdrop(frame.questStartItemButton, "Interface\\Buttons\\WHITE8X8", "Interface\\Tooltips\\UI-Tooltip-Border", 9, 2)
+    FDJ.SetBackdrop(frame.questStartItemButton, "Interface\\Buttons\\WHITE8X8", "Interface\\Tooltips\\UI-Tooltip-Border", 9, 2)
     frame.questStartItemButton.icon = frame.questStartItemButton:CreateTexture(nil, "ARTWORK")
     frame.questStartItemButton.icon:SetSize(28, 28)
     frame.questStartItemButton.icon:SetPoint("LEFT", 6, 0)
@@ -7272,7 +9076,7 @@ local function CreateMainFrame()
     frame.questStartItemButton:SetScript("OnClick", function(self)
         if not self.item then return end
 
-        local _, link = ItemInfo(self.item[1])
+        local _, link = FDJ.ItemInfo(self.item[1])
         if link and IsModifiedClick and IsModifiedClick("CHATLINK") and ChatEdit_InsertLink then
             ChatEdit_InsertLink(link)
             return
@@ -7284,6 +9088,32 @@ local function CreateMainFrame()
     end)
     frame.questStartItemButton:Hide()
 
+    frame.questRequiredItemButton = MakeQuestRewardButton(frame.questDetailContent)
+    frame.questRequiredItemButton:SetSize(230, 46)
+    frame.questRequiredItemButton:Hide()
+    frame.questRequiredItemsHeader:Hide()
+
+    frame.questStartDungeonIcon = CreateFrame("Button", nil, frame.questDetailContent)
+    frame.questStartDungeonIcon:SetSize(26, 26)
+    frame.questStartDungeonIcon.icon = frame.questStartDungeonIcon:CreateTexture(nil, "ARTWORK")
+    frame.questStartDungeonIcon.icon:SetAllPoints()
+    local questDungeonAtlasOK = false
+    if frame.questStartDungeonIcon.icon.SetAtlas then
+        questDungeonAtlasOK = pcall(frame.questStartDungeonIcon.icon.SetAtlas, frame.questStartDungeonIcon.icon, "Dungeon", false)
+    end
+    if not questDungeonAtlasOK then
+        frame.questStartDungeonIcon.icon:SetTexture("Interface\\Icons\\INV_Misc_Rune_01")
+        frame.questStartDungeonIcon.icon:SetTexCoord(0.08, 0.92, 0.08, 0.92)
+    end
+    frame.questStartDungeonIcon:SetHighlightTexture("Interface\\Buttons\\ButtonHilight-Square", "ADD")
+    frame.questStartDungeonIcon:SetScript("OnEnter", function(self)
+        GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
+        GameTooltip:SetText(L("IN_DUNGEON"))
+        GameTooltip:Show()
+    end)
+    frame.questStartDungeonIcon:SetScript("OnLeave", function() GameTooltip:Hide() end)
+    frame.questStartDungeonIcon:Hide()
+
     frame.questNotesText = frame.questDetailContent:CreateFontString(nil, "OVERLAY")
     frame.questNotesText:SetWidth(365)
     frame.questNotesText:SetJustifyH("LEFT")
@@ -7293,7 +9123,7 @@ local function CreateMainFrame()
 
     frame.questNoteItemButton = CreateFrame("Button", nil, frame.questDetailContent, "BackdropTemplate")
     frame.questNoteItemButton:SetSize(210, 34)
-    SetBackdrop(frame.questNoteItemButton, "Interface\\Buttons\\WHITE8X8", "Interface\\Tooltips\\UI-Tooltip-Border", 9, 2)
+    FDJ.SetBackdrop(frame.questNoteItemButton, "Interface\\Buttons\\WHITE8X8", "Interface\\Tooltips\\UI-Tooltip-Border", 9, 2)
     frame.questNoteItemButton.icon = frame.questNoteItemButton:CreateTexture(nil, "ARTWORK")
     frame.questNoteItemButton.icon:SetSize(26, 26)
     frame.questNoteItemButton.icon:SetPoint("LEFT", 5, 0)
@@ -7303,6 +9133,7 @@ local function CreateMainFrame()
     frame.questNoteItemButton.name:SetPoint("RIGHT", -6, 0)
     frame.questNoteItemButton.name:SetJustifyH("LEFT")
     frame.questNoteItemButton:SetScript("OnEnter", function(self)
+        HideSearchItemHighlight(self)
         if self.item then ShowItemTooltip(self) end
     end)
     frame.questNoteItemButton:SetScript("OnLeave", function(self)
@@ -7330,33 +9161,47 @@ local function CreateMainFrame()
     frame.noQuestMessage:SetTextColor(0.10, 0.065, 0.025)
     frame.noQuestMessage:Hide()
 
-    frame.questMapButton = CreateFrame("Button", nil, frame.questDetailContent, "UIPanelButtonTemplate")
+    do
+        local ok, button = pcall(CreateFrame, "Button", nil, frame.questDetailContent, "UIPanelButtonTemplate,InsecureActionButtonTemplate")
+        if ok and button then
+            frame.questMapButton = button
+            frame.questMapButton._fdjCanTarget = true
+        else
+            frame.questMapButton = CreateFrame("Button", nil, frame.questDetailContent, "UIPanelButtonTemplate")
+            frame.questMapButton._fdjCanTarget = false
+        end
+    end
     frame.questMapButton:SetSize(104, 24)
     frame.questMapButton:SetText(L("SHOW_ON_MAP"))
-    frame.questMapButton:SetScript("OnClick", function(self)
+    frame.questMapButton:RegisterForClicks("LeftButtonUp")
+    if frame.questMapButton._fdjCanTarget then
+        frame.questMapButton:SetAttribute("useOnKeyDown", false)
+    end
+    local function QuestMapButtonOpenMap(self)
+        local loc = self.prereqLocation or (self.quest and FDJ.QUEST_START_MAPS[self.quest.id])
+        -- Targeting and raid marking, when the quest giver is nearby, are handled
+        -- by the secure hardware-click macro configured for this button.
         if self.prereqLocation then
             FDJ.MapMarkers.ShowRecordedLocationOnMap(self.prereqLocation, self.prereqLocation.label)
         else
             FDJ.MapMarkers.ShowQuestStartOnMap(self.quest)
         end
-    end)
+    end
+    -- Keep the protected target/mark action intact, then open the map afterwards.
+    if frame.questMapButton._fdjCanTarget then
+        frame.questMapButton:SetScript("PostClick", QuestMapButtonOpenMap)
+    else
+        frame.questMapButton:SetScript("OnClick", QuestMapButtonOpenMap)
+    end
     frame.questMapButton:SetScript("OnEnter", function(self)
+        local loc = self.prereqLocation or (self.quest and FDJ.QUEST_START_MAPS[self.quest.id])
+        if FDJ.MapMarkers and FDJ.MapMarkers.ConfigureTargetAndMarkAction then
+            -- Only auto-target/mark from Show on Map when the player is actually
+            -- close to the recorded NPC. This avoids clearing a distant target.
+            FDJ.MapMarkers.ConfigureTargetAndMarkAction(self, loc, true)
+        end
         GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
         GameTooltip:SetText(L("SHOW_GIVER_ON_MAP"))
-        local loc = self.prereqLocation
-        if not loc and self.quest then
-            local qsm = FDJ.QUEST_START_MAPS or {}
-            loc = qsm[self.quest.id]
-        end
-        if loc and loc.x and loc.y and FDJ.MapMarkers and FDJ.MapMarkers.FormatCoordString then
-            local coordStr = FDJ.MapMarkers.FormatCoordString(loc.x, loc.y)
-            local zone = loc.zone or (loc.label and loc.label:match("^(.-)%s*%(")) or loc.label
-            if zone and zone ~= "" then
-                GameTooltip:AddLine(zone .. " " .. coordStr, 1, 0.82, 0.20)
-            else
-                GameTooltip:AddLine(coordStr, 1, 0.82, 0.20)
-            end
-        end
         GameTooltip:AddLine(L("MAP_TOOLTIP"), 1, 1, 1, true)
         GameTooltip:Show()
     end)
@@ -7386,7 +9231,7 @@ local function CreateMainFrame()
         -- The detail-panel "Show Quest Chain" button is OPEN/NAVIGATE only.
         -- It must never collapse an already-open chain. Collapsing is reserved
         -- exclusively for the small chain icon beside the quest in the left list.
-        expandedQuestChains[questID] = true
+        FDJ.expandedQuestChains[questID] = true
 
         -- Open the step the player is currently on when possible. Otherwise
         -- open the first incomplete prerequisite; if every step is complete,
@@ -7430,102 +9275,18 @@ local function CreateMainFrame()
     UpdateQuestActionButtonSizes()
 
     frame.questStartLinkButton = CreateFrame("Button", nil, frame.questDetailContent, "UIPanelButtonTemplate")
-    frame.questStartLinkButton:SetSize(280, 24)
+    frame.questStartLinkButton:SetSize(232, 24)
     frame.questStartLinkButton:SetScript("OnClick", function(self)
         if self.questID then SelectQuestByID(self.questID) end
     end)
-    frame.questStartLinkButton:SetScript("OnEnter", function(self)
-        if self.targetQuestName then
-            GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
-            GameTooltip:AddLine(L("PART_ONE_QUEST"), 1.0, 0.82, 0.25)
-            GameTooltip:AddLine(string.format(L("QUICK_LINK_TOOLTIP"), self.targetQuestName), 0.9, 0.9, 0.9, true)
-            GameTooltip:Show()
-        end
-    end)
-    frame.questStartLinkButton:SetScript("OnLeave", function() GameTooltip:Hide() end)
     frame.questStartLinkButton:Hide()
 
     frame.questLeadsToButton = CreateFrame("Button", nil, frame.questDetailContent, "UIPanelButtonTemplate")
-    frame.questLeadsToButton:SetSize(280, 24)
+    frame.questLeadsToButton:SetSize(270, 24)
     frame.questLeadsToButton:SetScript("OnClick", function(self)
         if self.questID then SelectQuestByID(self.questID) end
     end)
-    frame.questLeadsToButton:SetScript("OnEnter", function(self)
-        if self.targetQuestName then
-            GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
-            GameTooltip:AddLine(L("PART_TWO_QUEST"), 1.0, 0.82, 0.25)
-            GameTooltip:AddLine(string.format(L("QUICK_LINK_TOOLTIP"), self.targetQuestName), 0.9, 0.9, 0.9, true)
-            GameTooltip:Show()
-        end
-    end)
-    frame.questLeadsToButton:SetScript("OnLeave", function() GameTooltip:Hide() end)
     frame.questLeadsToButton:Hide()
-
-    frame.questTrackButton = CreateFrame("Button", nil, questInset, "UIPanelButtonTemplate")
-    frame.questTrackButton:SetSize(72, 22)
-    frame.questTrackButton:SetPoint("BOTTOMRIGHT", questInset, "BOTTOMRIGHT", -18, 10)
-    frame.questTrackButton:SetText(L("TRACK_QUEST"))
-    frame.questTrackButton:SetScript("OnClick", function(self)
-        local quest = self.quest
-        if not quest then return end
-        local logIdx = GetQuestLogIndexForQuestIDSafe(quest.id)
-        if C_QuestLog and type(C_QuestLog.AddQuestWatch) == "function" and type(C_QuestLog.RemoveQuestWatch) == "function" then
-            local isWatched = (C_QuestLog.GetQuestWatchType and C_QuestLog.GetQuestWatchType(quest.id) ~= nil)
-            if isWatched then
-                pcall(C_QuestLog.RemoveQuestWatch, quest.id)
-            else
-                pcall(C_QuestLog.AddQuestWatch, quest.id)
-            end
-        elseif logIdx and type(IsQuestWatched) == "function" and type(AddQuestWatch) == "function" and type(RemoveQuestWatch) == "function" then
-            if IsQuestWatched(logIdx) then
-                pcall(RemoveQuestWatch, logIdx)
-            else
-                pcall(AddQuestWatch, logIdx)
-            end
-        end
-        RefreshQuestDetail()
-    end)
-    frame.questTrackButton:SetScript("OnEnter", function(self)
-        GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
-        GameTooltip:SetText(L("TRACK_QUEST"))
-        GameTooltip:AddLine("Toggle tracking this quest on your objective tracker.", 1, 1, 1, true)
-        GameTooltip:Show()
-    end)
-    frame.questTrackButton:SetScript("OnLeave", function() GameTooltip:Hide() end)
-    frame.questTrackButton:Hide()
-
-    frame.questShareButton = CreateFrame("Button", nil, questInset, "UIPanelButtonTemplate")
-    frame.questShareButton:SetSize(72, 22)
-    frame.questShareButton:SetPoint("RIGHT", frame.questTrackButton, "LEFT", -6, 0)
-    frame.questShareButton:SetText(L("SHARE_QUEST"))
-    frame.questShareButton:SetScript("OnClick", function(self)
-        local quest = self.quest
-        if not quest then return end
-        local logIdx = GetQuestLogIndexForQuestIDSafe(quest.id)
-        if logIdx then
-            if C_QuestLog and type(C_QuestLog.SetSelectedQuest) == "function" then
-                pcall(C_QuestLog.SetSelectedQuest, quest.id)
-            elseif type(SelectQuestLogEntry) == "function" then
-                pcall(SelectQuestLogEntry, logIdx)
-            end
-            local shared = false
-            if C_QuestLog and type(C_QuestLog.PushQuestToParty) == "function" then
-                local ok = pcall(C_QuestLog.PushQuestToParty, quest.id)
-                shared = ok
-            end
-            if not shared and type(QuestLogPushQuest) == "function" then
-                pcall(QuestLogPushQuest, logIdx)
-            end
-        end
-    end)
-    frame.questShareButton:SetScript("OnEnter", function(self)
-        GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
-        GameTooltip:SetText(L("SHARE_QUEST"))
-        GameTooltip:AddLine("Share this quest with your group.", 1, 1, 1, true)
-        GameTooltip:Show()
-    end)
-    frame.questShareButton:SetScript("OnLeave", function() GameTooltip:Hide() end)
-    frame.questShareButton:Hide()
 
     local function StyleQuestNavArrow(button, direction)
         local isLeft = direction == "LEFT"
@@ -7584,7 +9345,7 @@ local function CreateMainFrame()
 
     frame.questXPReward = CreateFrame("Frame", nil, frame.questDetailContent, "BackdropTemplate")
     frame.questXPReward:SetSize(116, 28)
-    SetBackdrop(
+    FDJ.SetBackdrop(
         frame.questXPReward,
         "Interface\\Buttons\\WHITE8X8",
         "Interface\\Tooltips\\UI-Tooltip-Border",
@@ -7612,7 +9373,7 @@ local function CreateMainFrame()
     -- Money reward, laid out beside XP like Blizzard's quest log.
     frame.questMoneyReward = CreateFrame("Frame", nil, frame.questDetailContent, "BackdropTemplate")
     frame.questMoneyReward:SetSize(72, 26)
-    SetBackdrop(
+    FDJ.SetBackdrop(
         frame.questMoneyReward,
         "Interface\\Buttons\\WHITE8X8",
         "Interface\\Tooltips\\UI-Tooltip-Border",
@@ -7642,7 +9403,7 @@ local function CreateMainFrame()
     frame.dungeonMapPanel = CreateFrame("Frame", nil, content, "BackdropTemplate")
     frame.dungeonMapPanel:SetPoint("TOPLEFT", 14, -84)
     frame.dungeonMapPanel:SetPoint("BOTTOMRIGHT", -14, 14)
-    SetBackdrop(frame.dungeonMapPanel, "Interface\\Buttons\\WHITE8X8", "Interface\\Tooltips\\UI-Tooltip-Border", 12, 3)
+    FDJ.SetBackdrop(frame.dungeonMapPanel, "Interface\\Buttons\\WHITE8X8", "Interface\\Tooltips\\UI-Tooltip-Border", 12, 3)
     frame.dungeonMapPanel:SetBackdropColor(0.055, 0.04, 0.025, 0.98)
     frame.dungeonMapPanel:SetBackdropBorderColor(0.52, 0.34, 0.13, 1)
     if frame.dungeonMapPanel.SetClipsChildren then frame.dungeonMapPanel:SetClipsChildren(true) end
@@ -7653,39 +9414,35 @@ local function CreateMainFrame()
     frame.dungeonMapTitle:Hide()
 
     frame.dungeonMapCanvas = CreateFrame("Frame", nil, frame.dungeonMapPanel, "BackdropTemplate")
-    frame.dungeonMapCanvas:SetPoint("TOPLEFT", 5, -5)
-    frame.dungeonMapCanvas:SetPoint("BOTTOMRIGHT", -5, 5)
+    frame.dungeonMapCanvas:SetPoint("TOPLEFT", 12, -12)
+    frame.dungeonMapCanvas:SetPoint("BOTTOMRIGHT", -12, 12)
+    FDJ.SetBackdrop(frame.dungeonMapCanvas, "Interface\\Buttons\\WHITE8X8", "Interface\\Tooltips\\UI-Tooltip-Border", 10, 2)
+    frame.dungeonMapCanvas:SetBackdropColor(0.035, 0.025, 0.018, 0.96)
+    frame.dungeonMapCanvas:SetBackdropBorderColor(0.43, 0.30, 0.14, 1)
     if frame.dungeonMapCanvas.SetClipsChildren then frame.dungeonMapCanvas:SetClipsChildren(true) end
 
     frame.dungeonMapArtHolder = CreateFrame("Frame", nil, frame.dungeonMapCanvas)
-    frame.dungeonMapArtHolder:SetAllPoints(frame.dungeonMapCanvas)
+    frame.dungeonMapArtHolder:SetPoint("CENTER")
     frame.dungeonMapArtTiles = {}
     frame.dungeonMapBossMarkers = {}
-    frame.dungeonMapLandmarkMarkers = {}
-    frame.dungeonMapPOIMarkers = {}
-    frame.dungeonMapCanvas:SetScript("OnSizeChanged", function(self)
-        if selectedMode == "dungeon_map" and FDJ.RenderDungeonInteriorMap then
-            FDJ.RenderDungeonInteriorMap()
-        end
-    end)
     frame.dungeonMapPanel:Hide()
 
     -- Full-width travel guide page for faction-specific approaches.
     frame.routePanel = CreateFrame("Frame", nil, content, "BackdropTemplate")
     frame.routePanel:SetPoint("TOPLEFT", 14, -84)
     frame.routePanel:SetPoint("BOTTOMRIGHT", -14, 14)
-    SetBackdrop(frame.routePanel, "Interface\\Buttons\\WHITE8X8", "Interface\\Tooltips\\UI-Tooltip-Border", 12, 3)
+    FDJ.SetBackdrop(frame.routePanel, "Interface\\Buttons\\WHITE8X8", "Interface\\Tooltips\\UI-Tooltip-Border", 12, 3)
     frame.routePanel:SetBackdropColor(0.18, 0.13, 0.075, 0.98)
     frame.routePanel:SetBackdropBorderColor(0.52, 0.34, 0.13, 1)
-    AddClassicParchment(frame.routePanel, 0.18, 1.00, 0.94, 0.82)
+    FDJ.AddClassicParchment(frame.routePanel, 0.18, 1.00, 0.94, 0.82)
 
-    local routeAlliance = frame.routePanel:CreateTexture(nil, "ARTWORK")
-    routeAlliance:SetSize(34, 34)
-    routeAlliance:SetPoint("TOPLEFT", 20, -18)
-    routeAlliance:SetTexture(ALLIANCE_ICON)
+    frame.routeFactionIcon = frame.routePanel:CreateTexture(nil, "ARTWORK")
+    frame.routeFactionIcon:SetSize(34, 34)
+    frame.routeFactionIcon:SetPoint("TOPLEFT", 20, -18)
+    frame.routeFactionIcon:SetTexture(FDJ.ALLIANCE_ICON)
 
     frame.routeTitle = frame.routePanel:CreateFontString(nil, "OVERLAY", "GameFontNormalHuge")
-    frame.routeTitle:SetPoint("TOPLEFT", routeAlliance, "TOPRIGHT", 10, -1)
+    frame.routeTitle:SetPoint("TOPLEFT", frame.routeFactionIcon, "TOPRIGHT", 10, -1)
     frame.routeTitle:SetPoint("RIGHT", -24, 0)
     frame.routeTitle:SetJustifyH("LEFT")
     frame.routeTitle:SetTextColor(1.00, 0.82, 0.27)
@@ -7697,6 +9454,19 @@ local function CreateMainFrame()
     frame.routeBackButton = CreateFrame("Button", nil, frame.routePanel, "UIPanelButtonTemplate")
     frame.routeBackButton:SetSize(1, 1)
     frame.routeBackButton:Hide()
+
+    frame.routeMapButton = CreateFrame("Button", nil, frame.routePanel, "UIPanelButtonTemplate")
+    frame.routeMapButton:SetSize(142, 24)
+    frame.routeMapButton:SetPoint("TOPRIGHT", -118, -20)
+    frame.routeMapButton:SetText(L("SHOW_ON_MAP"))
+    frame.routeMapButton:SetScript("OnClick", function()
+        local dungeon = FDJ.DB[selectedDungeon]
+        local route = dungeon and dungeon.routeGuide
+        if route and route.mapRoute and ShowRouteOnMap then
+            ShowRouteOnMap(route.mapRoute)
+        end
+    end)
+    frame.routeMapButton:Hide()
 
     local divider = frame.routePanel:CreateTexture(nil, "ARTWORK")
     divider:SetTexture("Interface\\Buttons\\WHITE8X8")
@@ -7748,13 +9518,22 @@ local function CreateMainFrame()
 
     tinsert(UISpecialFrames, frame:GetName())
 
-    frame:SetScript("OnShow", function()
-        FDJ.PlayJournalPaperSound()
+    -- Remember the tab the player came from so right-click can return to it.
+    frame.bossesTab:SetScript("PreClick", function() frame.fdjPrevMode = selectedMode end)
+    frame.questsTab:SetScript("PreClick", function() frame.fdjPrevMode = selectedMode end)
 
-        -- Remember the last page only for this UI session. After /reload or a
-        -- fresh login, always start on the dungeon browser instead of reopening
-        -- a persisted dungeon/boss page from SavedVariables.
-        if sessionLastView == "dungeon" and DB[selectedDungeon] then
+    frame:SetScript("OnShow", function()
+        if FDJ.InstallRightClickBack then FDJ.InstallRightClickBack() end
+        FDJ.PlayJournalPaperSound()
+        if FDJ.PrewarmBossPortraits then FDJ.PrewarmBossPortraits() end
+
+        -- If the player opens the journal while physically inside a dungeon,
+        -- always jump straight to that dungeon's page. Outside an instance, keep
+        -- the normal session behavior (last open dungeon, otherwise Home).
+        local currentDungeon = CurrentDungeon()
+        if currentDungeon and FDJ.DB[currentDungeon] and not FDJ.DB[currentDungeon].previewOnly then
+            SelectDungeon(currentDungeon)
+        elseif sessionLastView == "dungeon" and FDJ.DB[selectedDungeon] then
             ShowDungeonPage()
             RefreshAll()
         else
@@ -7787,12 +9566,12 @@ end
 -- MINIMAP
 -- ============================================================
 
-FDJ.minimapUsingLibDBIcon = false
--- FDJ.minimapIconLib
--- FDJ.minimapDataObject
+FDJ._minimapUsingLibDBIcon = FDJ._minimapUsingLibDBIcon or false
+FDJ._minimapIconLib = FDJ._minimapIconLib or nil
+FDJ._minimapDataObject = FDJ._minimapDataObject or nil
 
 function FDJ.PositionMinimap()
-    if not minimapButton or not Minimap or FDJ.minimapUsingLibDBIcon then return end
+    if not minimapButton or not Minimap or FDJ._minimapUsingLibDBIcon then return end
 
     local angle = math.rad(ForeverDungeonJournalDB.minimapAngle or 225)
     local radius = (
@@ -7829,8 +9608,8 @@ function FDJ.HideMinimapButton()
     ForeverDungeonJournalDB.minimap = ForeverDungeonJournalDB.minimap or {}
     ForeverDungeonJournalDB.minimap.hide = true
 
-    if FDJ.minimapUsingLibDBIcon and FDJ.minimapIconLib then
-        FDJ.minimapIconLib:Hide("ForeverDungeonJournal")
+    if FDJ._minimapUsingLibDBIcon and FDJ._minimapIconLib then
+        FDJ._minimapIconLib:Hide("ForeverDungeonJournal")
     elseif minimapButton then
         minimapButton:Hide()
     end
@@ -7843,8 +9622,8 @@ function FDJ.ShowMinimapButton()
     ForeverDungeonJournalDB.minimap = ForeverDungeonJournalDB.minimap or {}
     ForeverDungeonJournalDB.minimap.hide = false
 
-    if FDJ.minimapUsingLibDBIcon and FDJ.minimapIconLib then
-        FDJ.minimapIconLib:Show("ForeverDungeonJournal")
+    if FDJ._minimapUsingLibDBIcon and FDJ._minimapIconLib then
+        FDJ._minimapIconLib:Show("ForeverDungeonJournal")
         minimapButton = _G["LibDBIcon10_ForeverDungeonJournal"] or minimapButton
     elseif minimapButton then
         minimapButton:Show()
@@ -7891,8 +9670,8 @@ function FDJ.SetupLibDBIconMinimap()
         })
     end
 
-    FDJ.minimapDataObject = object
-    FDJ.minimapIconLib = iconLib
+    FDJ._minimapDataObject = object
+    FDJ._minimapIconLib = iconLib
 
     if not iconLib:IsRegistered("ForeverDungeonJournal") then
         iconLib:Register("ForeverDungeonJournal", object, db)
@@ -7906,7 +9685,7 @@ function FDJ.SetupLibDBIconMinimap()
         minimapButton.db = db
     end
 
-    FDJ.minimapUsingLibDBIcon = true
+    FDJ._minimapUsingLibDBIcon = true
 
     if db.hide then
         iconLib:Hide("ForeverDungeonJournal")
@@ -7918,7 +9697,7 @@ function FDJ.SetupLibDBIconMinimap()
 end
 
 function FDJ.CreateFallbackMinimap()
-    FDJ.minimapUsingLibDBIcon = false
+    FDJ._minimapUsingLibDBIcon = false
 
     minimapButton = _G["LibDBIcon10_ForeverDungeonJournal"]
         or CreateFrame("Button", "LibDBIcon10_ForeverDungeonJournal", Minimap)
@@ -8036,6 +9815,12 @@ SLASH_FOREVERDUNGEONJOURNAL2 = "/fdj"
 SlashCmdList.FOREVERDUNGEONJOURNAL = function(msg)
     msg = strtrim(msg or ""):lower()
 
+    -- Secret dev command: re-show the one-time update notice.
+    if msg == "devnotice" then
+        if FDJ.ShowUpdateNotice then FDJ.ShowUpdateNotice(true) end
+        return
+    end
+
     if msg == "lang" or msg == "language" then
         local active = FDJ.GetLanguage and FDJ.GetLanguage() or "enUS"
         local saved = ForeverDungeonJournalDB.language or "auto"
@@ -8085,15 +9870,15 @@ SlashCmdList.FOREVERDUNGEONJOURNAL = function(msg)
         print("|cffd8a83cForever Dungeon Journal|r resolved boss display IDs:")
 
         for _, dungeonName in ipairs(FDJ.ORDER) do
-            for _, boss in ipairs(DB[dungeonName].bosses) do
-                local npcID = BossNpcID(boss)
+            for _, boss in ipairs(FDJ.DB[dungeonName].bosses) do
+                local npcID = FDJ.BossNpcID(boss)
                 if npcID then
                     print(
                         boss.name
                         .. " NPC "
                         .. npcID
                         .. " -> "
-                        .. tostring(displayIDCache[npcID] or FDJ.STATIC_DISPLAY_IDS[npcID] or "journal/fallback")
+                        .. tostring(FDJ.displayIDCache[npcID] or FDJ.STATIC_DISPLAY_IDS[npcID] or "journal/fallback")
                     )
                 elseif boss.name == "Lordaeron Captain" then
                     local data = GetBossJournalData(dungeonName, boss)
@@ -8141,25 +9926,9 @@ SlashCmdList.FOREVERDUNGEONJOURNAL = function(msg)
         return
     end
 
-    if msg == "help" or msg == "?" then
-        print("|cffd8a83cForever Dungeon Journal Commands:|r")
-        print("  |cffffffff/fj|r or |cffffffff/fdj|r — Toggle Dungeon Journal")
-        print("  |cffffffff/fj help|r — Show this command help list")
-        print("  |cffffffff/fj minimap|r — Restore the minimap icon")
-        print("  |cffffffff/fj lang [de|fr|es|ru|it|pt|en|auto]|r — Switch language")
-        print("  |cffffffff/fj [rfc|hall|ruins|dm|wc|sfk|stocks|bfd]|r — Open specific dungeon directly")
-        return
-    end
-
     if msg == "bfd" or msg == "blackfathom" or msg == "blackfathomdeeps" or msg == "blackfathomdepths" then
         frame:Show()
         SelectDungeon("Blackfathom Deeps")
-        return
-    end
-
-    if msg == "stockade" or msg == "stocks" or msg == "stockades" then
-        frame:Show()
-        SelectDungeon("The Stockade")
         return
     end
 
@@ -8178,6 +9947,11 @@ FDJ.events:RegisterEvent("QUEST_REMOVED")
 FDJ.events:RegisterEvent("QUEST_DATA_LOAD_RESULT")
 FDJ.events:RegisterEvent("PLAYER_LEVEL_UP")
 FDJ.events:RegisterEvent("GET_ITEM_INFO_RECEIVED")
+FDJ.events:RegisterEvent("BOSS_KILL")
+if not issecretvalue and C_EventUtils and C_EventUtils.IsEventValid and C_EventUtils.IsEventValid("COMBAT_LOG_EVENT_UNFILTERED") then
+    FDJ.events:RegisterEvent("COMBAT_LOG_EVENT_UNFILTERED")
+end
+FDJ.events:RegisterEvent("CHAT_MSG_LOOT")
 
 -- Coalesce event bursts and refresh on the next frame, outside API callbacks.
 FDJ.questRefreshPending = false
@@ -8190,9 +9964,13 @@ function FDJ.ScheduleQuestRefresh()
         self:SetScript("OnUpdate", nil)
         self:Hide()
         FDJ.questRefreshPending = false
-        if frame and frame:IsShown() and selectedMode == "quests" then
-            RefreshQuestList()
-            RefreshQuestDetail()
+        if frame and frame:IsShown() then
+            if frame.currentView == "home" then
+                RefreshHomeDungeonCards()
+            elseif selectedMode == "quests" then
+                RefreshQuestList()
+                RefreshQuestDetail()
+            end
         end
     end)
     FDJ.questRefreshWorker:Show()
@@ -8201,8 +9979,19 @@ end
 FDJ.events:SetScript("OnEvent", function(_, event, arg1, arg2)
     local questID, success = arg1, arg2
     if event == "PLAYER_LOGIN" then
-        selectedQuestFaction = GetEffectiveFaction()
-        ForeverDungeonJournalDB.questFaction = selectedQuestFaction
+        if UnitFactionGroup then
+            local playerFaction = UnitFactionGroup("player")
+            if playerFaction == "Horde" then
+                selectedQuestFaction = "Horde"
+            elseif playerFaction == "Alliance" then
+                selectedQuestFaction = "Alliance"
+            end
+            ForeverDungeonJournalDB.questFaction = selectedQuestFaction
+        end
+
+        if FDJ.BuildBossLookups then
+            FDJ.BuildBossLookups()
+        end
 
         ScanEncounterJournal()
         CreateItemTooltip()
@@ -8213,7 +10002,14 @@ FDJ.events:SetScript("OnEvent", function(_, event, arg1, arg2)
 
         RefreshAll()
 
-        print("|cffd8a83cForever Dungeon Journal|r v1.3.1 loaded. Type |cffffffff/fj|r.  " .. L("LANGUAGE_HELP"))
+        local addonVersion
+        if C_AddOns and C_AddOns.GetAddOnMetadata then
+            addonVersion = C_AddOns.GetAddOnMetadata("ForeverDungeonJournal", "Version")
+        elseif GetAddOnMetadata then
+            addonVersion = GetAddOnMetadata("ForeverDungeonJournal", "Version")
+        end
+        addonVersion = (addonVersion and tostring(addonVersion)) or "1.5.0"
+        print("|cffd8a83cForever Dungeon Journal|r |cffffffffv" .. addonVersion .. "|r loaded. Type |cffffffff/fj|r.")
         return
     end
 
@@ -8235,7 +10031,13 @@ FDJ.events:SetScript("OnEvent", function(_, event, arg1, arg2)
         if FDJ.itemTooltipQualityCache and questID then
             FDJ.itemTooltipQualityCache[questID] = nil
         end
+        if FDJ.itemStatsSummaryCache and questID then
+            FDJ.itemStatsSummaryCache[questID] = nil
+        end
         if frame and frame:IsShown() then
+            if frame.homeWishlistPanel and frame.homeWishlistPanel:IsShown() and FDJ.RefreshWishlistPanel then
+                FDJ.RefreshWishlistPanel()
+            end
             if selectedMode == "bosses" then
                 RefreshLoot()
             elseif selectedMode == "quests" then
@@ -8257,24 +10059,27 @@ FDJ.events:SetScript("OnEvent", function(_, event, arg1, arg2)
     end
 
     if event == "PLAYER_ENTERING_WORLD" then
-        if not (ForeverDungeonJournalDB and ForeverDungeonJournalDB.userSetFaction) then
-            local eff = GetEffectiveFaction()
-            if eff and eff ~= selectedQuestFaction then
-                selectedQuestFaction = eff
-                ForeverDungeonJournalDB.questFaction = eff
-                UpdateFactionButtons()
+        local inInstance, instanceType = IsInInstance and IsInInstance()
+        local currentMapID = C_Map and C_Map.GetBestMapForUnit and C_Map.GetBestMapForUnit("player")
+        if not inInstance or instanceType == "none" then
+            if FDJ.ResetDefeatedBosses then
+                FDJ.ResetDefeatedBosses()
             end
+            FDJ.lastInstanceMapID = nil
+        else
+            if FDJ.lastInstanceMapID and currentMapID and FDJ.lastInstanceMapID ~= currentMapID then
+                if FDJ.ResetDefeatedBosses then
+                    FDJ.ResetDefeatedBosses()
+                end
+            end
+            FDJ.lastInstanceMapID = currentMapID
         end
 
-        -- Keep the loading transition clean: no hidden tooltip scans and no
-        -- model work synchronously on PLAYER_ENTERING_WORLD. Select the
-        -- current dungeon immediately, but refresh visible UI only after the
-        -- world has settled.
         local current = CurrentDungeon()
-        if current and DB[current] then
+        if current and FDJ.DB[current] then
             selectedDungeon = current
             ForeverDungeonJournalDB.lastDungeon = current
-            if selectedBoss > #DB[current].bosses then
+            if selectedBoss > #FDJ.DB[current].bosses then
                 selectedBoss = 1
                 ForeverDungeonJournalDB.lastBoss = 1
             end
@@ -8290,13 +10095,91 @@ FDJ.events:SetScript("OnEvent", function(_, event, arg1, arg2)
         return
     end
 
+    if event == "BOSS_KILL" then
+        local encounterID, encounterName = arg1, arg2
+        local matched = false
+        if encounterName and FDJ.bossByName and FDJ.bossByName[encounterName:lower()] then
+            local info = FDJ.bossByName[encounterName:lower()]
+            FDJ.SetBossDefeated(info.dungeon, info.bossIndex, true)
+            matched = true
+        end
+        if not matched and encounterID and FDJ.bossByNpcID and FDJ.bossByNpcID[encounterID] then
+            local info = FDJ.bossByNpcID[encounterID]
+            FDJ.SetBossDefeated(info.dungeon, info.bossIndex, true)
+            matched = true
+        end
+        if matched and frame and frame:IsShown() then
+            if selectedMode == "bosses" then
+                RefreshBossList()
+            elseif selectedMode == "map" or selectedMode == "dungeon_map" then
+                if frame.dungeonMapPanel and frame.dungeonMapPanel:IsShown() and FDJ.DUNGEON_MAPS and FDJ.DUNGEON_MAPS[selectedDungeon] then
+                    FDJ.RenderCustomDungeonMap(FDJ.DUNGEON_MAPS[selectedDungeon], frame.dungeonMapFloor)
+                end
+            end
+        end
+        return
+    end
+
+    if event == "COMBAT_LOG_EVENT_UNFILTERED" then
+        if CombatLogGetCurrentEventInfo then
+            local _, subevent, _, _, _, _, _, destGUID, destName = CombatLogGetCurrentEventInfo()
+            if subevent == "UNIT_DIED" and destGUID then
+                local npcID = tonumber(destGUID:match("Creature%-%d+%-%d+%-%d+%-%d+%-(%d+)"))
+                local matched = false
+                if npcID and FDJ.bossByNpcID and FDJ.bossByNpcID[npcID] then
+                    local info = FDJ.bossByNpcID[npcID]
+                    FDJ.SetBossDefeated(info.dungeon, info.bossIndex, true)
+                    matched = true
+                elseif destName and FDJ.bossByName and FDJ.bossByName[destName:lower()] then
+                    local info = FDJ.bossByName[destName:lower()]
+                    FDJ.SetBossDefeated(info.dungeon, info.bossIndex, true)
+                    matched = true
+                end
+                if matched and frame and frame:IsShown() then
+                    if selectedMode == "bosses" then
+                        RefreshBossList()
+                    elseif selectedMode == "map" or selectedMode == "dungeon_map" then
+                        if frame.dungeonMapPanel and frame.dungeonMapPanel:IsShown() and FDJ.DUNGEON_MAPS and FDJ.DUNGEON_MAPS[selectedDungeon] then
+                            FDJ.RenderCustomDungeonMap(FDJ.DUNGEON_MAPS[selectedDungeon], frame.dungeonMapFloor)
+                        end
+                    end
+                end
+            end
+        end
+        return
+    end
+
+    if event == "CHAT_MSG_LOOT" then
+        local message = arg1
+        if message and type(message) == "string" then
+            local itemIDStr = message:match("item:(%d+)")
+            local itemID = tonumber(itemIDStr)
+            if itemID and FDJ.IsWishlisted and FDJ.IsWishlisted(itemID) then
+                local itemLink = message:match("(|c%x+|Hitem:%d+.-|h%[.-%]|h|r)")
+                local linkToDisplay = itemLink or ("item:" .. itemID)
+                local alertMsg = "|cffd8a83c[Forever DJ]|r |cff00ff00★ " .. (L("WISHLIST_DROP") or "Wishlist item acquired:") .. " |r" .. linkToDisplay .. " !"
+                if DEFAULT_CHAT_FRAME and DEFAULT_CHAT_FRAME.AddMessage then
+                    DEFAULT_CHAT_FRAME:AddMessage(alertMsg)
+                else
+                    print(alertMsg)
+                end
+                if SOUNDKIT and SOUNDKIT.RAID_WARNING and PlaySound then
+                    PlaySound(SOUNDKIT.RAID_WARNING, "Master")
+                elseif PlaySound then
+                    pcall(PlaySound, 8959)
+                end
+            end
+        end
+        return
+    end
+
     local current = CurrentDungeon()
 
-    if current and DB[current] then
+    if current and FDJ.DB[current] then
         selectedDungeon = current
         ForeverDungeonJournalDB.lastDungeon = current
 
-        if selectedBoss > #DB[current].bosses then
+        if selectedBoss > #FDJ.DB[current].bosses then
             selectedBoss = 1
             ForeverDungeonJournalDB.lastBoss = 1
         end

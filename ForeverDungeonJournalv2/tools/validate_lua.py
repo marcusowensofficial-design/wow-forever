@@ -209,6 +209,7 @@ if __name__ == "__main__":
         "Data/QuestMaps.lua",
         "Systems/MapMarkers.lua",
         "Localization/Localization.lua",
+        "Data/DungeonRoutes.lua",
         "UI/ThemeData.lua"
     ]
     all_ok = True
