@@ -1,0 +1,10 @@
+package-as: ForeverDungeonJournal
+
+ignore:
+  - .git
+  - .gitignore
+  - tools
+  - scratch
+  - "*.py"
+  - "*.html"
+  - __pycache__

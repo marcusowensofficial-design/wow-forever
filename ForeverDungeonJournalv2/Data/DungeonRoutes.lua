@@ -1268,6 +1268,97 @@ local routes = {
         },
     },
 
+    ["Wailing Caverns"] = {
+        faction = "Alliance",
+        guide = {
+            en = {
+                title = "Alliance Route to Wailing Caverns",
+                subtitle = "Alliance travel guide through the Barrens",
+                steps = {
+                    {
+                        title = "Take the Boat from Booty Bay to Ratchet",
+                        text = "From Stranglethorn Vale, board the neutral goblin vessel at Booty Bay to sail directly into Ratchet in the Barrens. Pick up the neutral Ratchet flight path at the docks.",
+                        map = { markerType = "location", mapID = 1413, x = 0.625, y = 0.385, label = "Ratchet Docks, The Barrens", detail = "Neutral goblin port town connecting Kalimdor and the Eastern Kingdoms." },
+                    },
+                    {
+                        title = "Travel West past the Crossroads",
+                        text = "Head west along the main road toward the center of the Barrens. Stay strictly south of the road to steer clear of aggressive level 40 Horde guards patrolling the Crossroads.",
+                    },
+                    {
+                        title = "Approach the Lushwater Oasis",
+                        text = "Turn southwest toward the Lushwater Oasis. Watch out for Deviate crocolisks and raptors patrolling the water's edge.",
+                        map = { markerType = "location", mapID = 1413, x = 0.460, y = 0.360, label = "Lushwater Oasis, The Barrens", detail = "Large natural oasis housing the entrance cavern skull of Wailing Caverns." },
+                    },
+                    {
+                        title = "Enter the Cavern Skull",
+                        text = "Ascend the rock path into the eye-socket opening of the massive stone skull cavern. Follow the winding passages down through the Disciple of Naralex chamber to find the instance portal.",
+                        map = { markerType = "location", mapID = 1413, x = 0.422, y = 0.366, label = "Wailing Caverns Portal", detail = "Instance portal inside the winding cavern skull tunnels." },
+                    },
+                },
+            },
+        },
+    },
+
+    ["Excavation Site: Wetlands"] = {
+        faction = "Horde",
+        guide = {
+            en = {
+                title = "Horde Route to Excavation Site: Wetlands",
+                subtitle = "Horde overland route from Arathi Basin to the dig site",
+                steps = {
+                    {
+                        title = "Fly to Hammerfall in Arathi Highlands",
+                        text = "Take the Zeppelin from Undercity or Orgrimmar to the Eastern Kingdoms and fly to the Horde outpost of Hammerfall in northeastern Arathi Highlands.",
+                        map = { markerType = "location", mapID = 1417, x = 0.730, y = 0.340, label = "Hammerfall, Arathi Highlands", detail = "Primary Horde outpost with flight master, inn, and supplies." },
+                    },
+                    {
+                        title = "Cross the Thandol Span into Wetlands",
+                        text = "Follow the main cobblestone highway south through Arathi Highlands across the ruined Thandol Span into northern Wetlands.",
+                        map = { markerType = "location", mapID = 1437, x = 0.500, y = 0.120, label = "Thandol Span Bridge", detail = "Massive stone bridge connecting Arathi Highlands and Wetlands." },
+                    },
+                    {
+                        title = "Traverse the Wetlands Highway",
+                        text = "Travel south along the road past the Greenwarden's Grove. Avoid straying off-road into deep marsh pools containing aggressive Mottled Crocolisks.",
+                    },
+                    {
+                        title = "Path to Whelgar's Excavation",
+                        text = "Turn northeast toward Whelgar's Excavation. Follow the uphill path near the spider cliffs at coordinates (53.2, 65.8) to discover the newly unearthed Titan portal.",
+                        map = { markerType = "location", mapID = 1437, x = 0.532, y = 0.658, label = "Excavation Site Entrance", detail = "New Titan portal discovered directly above Whelgar's Excavation." },
+                    },
+                },
+            },
+        },
+    },
+
+    ["City of Dalaran"] = {
+        faction = "Both",
+        guide = {
+            en = {
+                title = "Travel Guide to City of Dalaran",
+                subtitle = "Entering the Alterac Mountains Sewers and Underbelly",
+                steps = {
+                    {
+                        title = "Travel to Alterac Mountains",
+                        text = "Alliance players can ride north from Southshore; Horde players can travel northwest from Tarren Mill up into the snowy plateaus of Alterac Mountains.",
+                        map = { markerType = "location", mapID = 1416, x = 0.200, y = 0.700, label = "Dalaran Dome Perimeter, Alterac", detail = "Surrounding perimeter hills outside the fallen magical bubble of Dalaran." },
+                    },
+                    {
+                        title = "Locate Cantrips & Crows / The Sewer Drainage Pipe",
+                        text = "Alliance players follow the sunken canyon beside Cantrips & Crows and swim inside the open iron runoff pipe to enter the Dalaran Sewers.",
+                        map = { markerType = "location", mapID = 1416, x = 0.190, y = 0.838, label = "Dalaran Sewer Pipe Inflow", detail = "Outer runoff drainage pipe leading into the Underbelly." },
+                    },
+                    {
+                        title = "Horde Access: Dalaran Sewer Key",
+                        text = "Horde players must acquire the Dalaran Sewer Key to unlock the security grating leading into the Underbelly. Once unlocked, the grate allows passage for your entire party.",
+                    },
+                    {
+                        title = "Proceed through the Underbelly to the Violet Citadel",
+                        text = "Defeat Atrexis the Grave Knight in the ritual circle, then ascend the subterranean stairways into the Dalaran streets toward the Violet Citadel.",
+                    },
+                },
+            },
+        },
+    },
 }
 
 for dungeonName, route in pairs(routes) do

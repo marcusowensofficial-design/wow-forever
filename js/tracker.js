@@ -86,7 +86,7 @@ function renderCharacterSheet(char) {
       <div class="char-meta-item"><strong>Race:</strong> ${escapeHtml(char.race)}</div>
       <div class="char-meta-item"><strong>Class:</strong> <span style="color: ${classInfo.color}; font-weight: 700; text-shadow: 0 0 8px ${classInfo.color}40;">${classInfo.icon} ${escapeHtml(char.className)}</span></div>
       <div class="char-meta-item"><strong>Specialization:</strong> ${escapeHtml(char.spec)}</div>
-      <div class="char-meta-item"><strong>Target Bracket:</strong> Beta Phase 2 (Cap 30 — Live Today!)</div>
+      <div class="char-meta-item"><strong>Target Bracket:</strong> Beta Phase 2 (Cap 30 — Live Now!)</div>
       <div class="char-meta-item"><strong>Primary Prof 1:</strong> ${escapeHtml(char.prof1)}</div>
       <div class="char-meta-item"><strong>Primary Prof 2:</strong> ${escapeHtml(char.prof2)}</div>
     </div>

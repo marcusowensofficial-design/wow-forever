@@ -1,0 +1,14 @@
+## Interface: 16001
+## Title: |cff00ff7fForever|r|cffffffffLiquid|r [AllowLoadGameType camelot]
+## Title: ForeverLiquid (Retail) [AllowLoadGameType standard]
+## Notes: Ultra-sleek, high-tech neon liquid XP, Reputation, Gold, Bag & Loot session tracker for WoW Forever.
+## Author: Marco & Antigravity
+## Version: 1.3.0
+## SavedVariables: ForeverLiquidDB
+## LoadSavedVariablesFirst: true
+## IconTexture: Interface\Icons\INV_Potion_93
+## Category-enUS: Information
+
+core.lua
+ui.lua
+config.lua

@@ -17,8 +17,8 @@ const WOW_FOREVER_DATA = {
     betaTotalWeeks: 5,
     launchDate: "November 4, 2026",
     raidsDate: "December 9, 2026",
-    currentBetaPhase: "Phase 2: Level 30 Cap (Patch Deploys Today, October 1)",
-    clientBuild: "1.60.5.71180",
+    currentBetaPhase: "Phase 2: Level 30 Cap (LIVE NOW • Day 19 of 35)",
+    clientBuild: "1.60.5.71210",
     engineInfo: "Custom Ray-Traced Engine (Post-Warcraft III: Reforged Continuity)",
     maxLevel: 60,
     currentBetaCap: 30,
@@ -71,6 +71,55 @@ const WOW_FOREVER_DATA = {
   ],
 
   newsFeed: [
+    {
+      id: "news-35",
+      title: "Companion Addon Suite Expansion: ForeverLiquid (Liquid XP/Rep/Ledger HUD) & ForeverDungeonJournal v1.0.7 Released for Beta",
+      source: "WoW Forever Addon Engineering / Community Spotlight",
+      sourceType: "blizzard",
+      author: "Lead UI Architect Exehn & Marcus",
+      date: "October 5, 2026",
+      tag: "Addon Development & UI Tools",
+      summary: "Official release of ForeverLiquid v1.3.0 featuring a 20-bubble Classic liquid reservoir HUD, 6 selectable cyberpunk themes, real-time gold cashflow ledger, mount savings fund countdown, and Blizzard 5/hr lockout monitor alongside the modular ForeverDungeonJournal v1.0.7 with 5 dungeon routes & boss tactics.",
+      content: `A major companion addon expansion has arrived for WoW Forever Beta Phase 2 players with the release of ForeverLiquid v1.3.0 and the modular ForeverDungeonJournal v1.0.7:
+• ForeverLiquid (v1.3.0): The ultimate cyberpunk liquid HUD engineered specifically for WoW Forever (Camelot 12.0 engine, TOC 16001). Features include:
+  - Classic 20-Bubble (5%) Liquid Reservoir: Fluid status bar with animated wave shimmer, rested XP overlay, and glowing 5% divider ticks.
+  - 6 Selectable Cyberpunk Themes: Matrix (Emerald), Cyber Void (Violet), Sunwell Core (Gold), Blood Knight (Crimson), Glacial Frost (Cyan), Carbon Minimal (Titanium).
+  - Obsidian Drawer (4 Tabs): Live Leveling/Rep Velocity, Mount Savings Fund Tracker (100g/1000g goals with live ETA countdown), Cashflow Ledger (Gross Income vs Repairs/Flight/Vendor expenses), Recent Loot Feed, Blizzard 5-Instance/Hour Lockout Monitor, and Alt Roster 2.0 with dynamic offline rested XP prediction.
+  - Camelot 12.0 Engine Guard: Completely eliminates the 12.0 FrameXML <secret number> comparison bug in TextStatusBar.lua:110 via recursive tree guarding and CharacterMicroButton delegation.
+• ForeverDungeonJournal (v1.0.7 / v1.3.0 Architecture): Fully modularized into specialized runtime components, adding full boss tactics, spell IDs, role-specific guidance (Tank/Healer/DPS), announcement macros, and cross-faction travel routes for all 5 leveling dungeons (Deadmines, Wailing Caverns, Shadowfang Keep, Blackfathom Deeps, The Stockade) alongside Excavation Site 4, City of Dalaran, Hall of Thanes, and Ruins of Lordaeron.`,
+      url: "https://news.blizzard.com/en-us/world-of-warcraft/companion-addons-foreverliquid-foreverjournal-oct5"
+    },
+    {
+      id: "news-34",
+      title: "Beta Phase 2 First Weekend Telemetry: Excavation Site 4 Saboteur Encounters, Dalaran Violet Vaults & Level 30 Pre-BiS Meta",
+      source: "Wowhead & Warcraft Tavern",
+      sourceType: "wowhead",
+      author: "Wowhead Theorycrafting Team",
+      date: "October 3, 2026",
+      tag: "Dungeons & Theorycrafting",
+      summary: "Following the first 48 hours of Level 30 cap progression, players uncover powerful Excavation Site 4 Titan relics, Kirin Tor vault secrets under Dalaran, and the dominance of 21-point capstones in the Warsong Gulch 20–29 bracket.",
+      content: `Telemetry analysis from the first weekend of Phase 2 testing reveals significant progression milestones and meta shifts across beta megarealms:
+• Excavation Site 4 (Wetlands): Sentinel Archeus has emerged as a premier gear check. The rare caster trinket 'Archeus Core Talisman' (+14 Arcane/Nature spell damage + mana on cast) is currently ranked best-in-slot for Balance Druids and Arcane Mages. Dark Iron Saboteurs require focused crowd control due to high-damage explosive dynamite volleys.
+• City of Dalaran - Under Siege (Alterac Mountains): The Kirin Tor subterranean vaults present complex encounter mechanics: Shade of the Archmage's channeled Blizzard demands rapid positional rotation, while the Arcane Anomaly's 'Mana Singularity' forces mana users to spread beyond 15 yards to avoid group-wide detonation.
+• 21-Point Talent Spike: The expansion to 21 talent points has radically altered class dynamics. Arms Warriors wielding Mortal Strike, Rogues with Preparation resets, and Paladins utilizing Consecration / Holy Shock are dominating the active 20–29 Warsong Gulch battleground bracket.
+• Tier 2 Camping in High Demand: Groups entering Excavation Site 4 and Dalaran are actively seeking Survivalists with Ironwood Campfires for the +10% primary stat feast buff and 90-minute campfire aura.`,
+      url: "https://www.wowhead.com/forever/news/phase-2-first-weekend-telemetry-excavation-site-4-dalaran"
+    },
+    {
+      id: "news-33",
+      title: "Hotfix Build 1.60.5.71210: Dark Iron Saboteur Respawn Tuning & Brewfest Final Weekend Alert",
+      source: "Blizzard Official / Blue Post",
+      sourceType: "blizzard",
+      author: "Community Manager Kaivax",
+      date: "October 2, 2026",
+      tag: "Maintenance & Hotfixes",
+      summary: "Blizzard deploys server hotfixes adjusting Saboteur density in Excavation Site 4, smoothing Alterac Mountain terrain collisions, and issuing a reminder that Brewfest activities conclude on Tuesday, October 6.",
+      content: `Blizzard deployed client hotfix Build 1.60.5.71210 following player feedback during Phase 2 opening hours:
+• Excavation Site 4 Saboteur Tuning: The respawn interval for Dark Iron Saboteur patrols inside the excavation trenches has been lengthened from 90 seconds to 180 seconds, ensuring wiping groups have adequate time to recover without being cornered at the entrance.
+• City of Dalaran Geometry Polish: Resolved terrain collision snags along the southern Kirin Tor gate in Alterac Mountains where players could become stuck while navigating toward the dungeon portal.
+• Brewfest Final Notice: Brewfest celebration grounds outside Ironforge and Orgrimmar will officially pack up at 23:59 realm time on Tuesday, October 6. Players are advised to turn in outstanding Brewfest Prize Tokens for commemorative steins and trinkets before maintenance.`,
+      url: "https://news.blizzard.com/en-us/world-of-warcraft/beta-hotfixes-build-71210-oct2"
+    },
     {
       id: "news-32",
       title: "Phase 2 Deploys Today: Level Cap Raised to 30, Patch 1.60.5 Maintenance & Content Unlock",
@@ -3948,7 +3997,10 @@ const WOW_FOREVER_DATA = {
     { id: "step-14", text: "Queue for the newly unlocked Level 20–29 Warsong Gulch battleground bracket", cat: "Phase 2 PvP" },
     { id: "step-15", text: "Participate in contested open-world PvP skirmishes across Hillsbrad Foothills & Ashenvale", cat: "World PvP" },
     { id: "step-16", text: "Advance primary professions to 150 Expert cap & craft Level 25+ weapons/armor", cat: "Professions" },
-    { id: "step-17", text: "Hit the Phase 2 Cap: Level 30! Unlock key 21-point talent capstones", cat: "Phase 2 Milestone" }
+    { id: "step-17", text: "Hit the Phase 2 Cap: Level 30! Unlock key 21-point talent capstones", cat: "Phase 2 Milestone" },
+    { id: "step-18", text: "Equip & configure ForeverLiquid (v1.3.0) HUD to track XP velocity, Mount Fund ETA & 5/hr lockouts", cat: "Addons & Tools" },
+    { id: "step-19", text: "Open ForeverDungeonJournal (v1.0.7) to review cross-faction routes & boss tactics for your next run", cat: "Addons & Tools" },
+    { id: "step-20", text: "Complete daily Brewfest ram runs & acquire festive souvenir steins before the event ends on Oct 6", cat: "World Events" }
   ]
 };
 

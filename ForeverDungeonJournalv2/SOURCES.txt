@@ -296,3 +296,32 @@ Forever item/source cross-checks:
 - Wowhead Forever Ruins of Lordaeron overview (updated 2026-09-26): Alliance route via Stormwind -> Auberdine -> Menethil/Southshore boat, then north past Dalaran and through Lordamere Lake to Tirisfal.
 - Blizzard Forever Found Photos recap: confirms the new Stormwind Harbor <-> Auberdine route and the Menethil / Southshore / Auberdine travel connection.
 - Wowhead Three New Ship Routes Debuting in Forever: confirms the Menethil -> Southshore -> Auberdine stop order.
+
+2026-10-02 Excavation Site: Wetlands quest & ability icon audit
+==============================================================
+- Added Earthen Echo (98823) follow-up quest for Horde, completing the Elder Knowledge (95664) chain leading to Muln Earthfury in Mulgore.
+  Source: https://www.wowhead.com/forever/quest=98823/earthen-echo
+- Verified full quest checklist from Zockify Excavation Site Wetlands guide:
+  Source: https://www.zockify.com/forever/dungeons/excavation-site-wetlands/
+  - Added follow-up quest Fallen in the Fen (leads to Dorin Songblade with Daewyn's Girdle and Songblade Stabilizer rewards).
+  - Added follow-up quest Prehistoric Prism (leads to High Explorer Magellas in Ironforge).
+  - Updated Highland Hides with confirmed objective (8 Thicket Raptor Hides) and James Halloran turn-in.
+- Wired 4-part prerequisite chain for Horrors in the Highland (95646) from First Mate Fitzsimmons in Menethil Harbor:
+  1. The Greenwarden (463)
+  2. Tramping Paws (276)
+  3. Fire Taboo (277)
+  4. Blisters on The Land (275)
+  Sources: https://www.wowhead.com/classic/quest=463/the-greenwarden
+           https://www.wowhead.com/classic/quest=276/tramping-paws
+           https://www.wowhead.com/classic/quest=277/fire-taboo
+           https://www.wowhead.com/classic/quest=275/blisters-on-the-land
+- Corrected boss ability icons for Excavation Site: Wetlands:
+  - Shadetooth: Skull Crack icon corrected from invalid Ability_MaceRagDoll to Spell_Frost_Stun (spell ID 3551).
+  - Highland Horror: Fungal Spores icon corrected from Spell_Nature_AbolishPoison to Spell_Shadow_CreepingPlague.
+  - Verified icons for all encounter abilities across Saltspine, Shadetooth, Highland Horror, and Relic Guardian.
+- Completed full 14-quest verification for Excavation Site: Wetlands (5 Horde, 9 Alliance) per Zockify and Wowhead Forever:
+  - Added Horde pre-quest Dragonmaw Rumors (Zaruk in Hammerfall -> Deathstalker Agent outside instance portal).
+  - Added Alliance pre-quest Seeking Caitlin (Llana in Ashenvale -> Caitlin Grassman in Menethil Harbor).
+  - Added Alliance dungeon quest Lost in the Thicket Things (95647) connecting Seeking Caitlin to Heartwoven (95809).
+  - Wired bidirectional quest links (leadsToQuestLink and startQuestLink) with name-based fallback navigation in SelectQuestByID.
+  - Enhanced ShowQuestStartOnMap and questMapButton to support quest.startMap directly for all new dig site quests.

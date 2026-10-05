@@ -200,22 +200,46 @@ def validate_syntax(filepath):
     return True
 
 if __name__ == "__main__":
-    files = [
-        "Core/Journal.lua",
-        "Data/BossTactics.lua",
-        "Data/Dungeons.lua",
-        "Data/Bosses.lua",
-        "Data/QuestMaps.lua",
-        "Systems/MapMarkers.lua",
-        "Localization/Localization.lua",
-        "UI/ThemeData.lua"
-    ]
+    import sys
+    if len(sys.argv) > 1:
+        files = sys.argv[1:]
+    else:
+        files = [
+            "Core/Bootstrap.lua",
+            "Core/Journal.lua",
+            "Data/BossTactics.lua",
+            "Data/Dungeons.lua",
+            "Data/DungeonMaps.lua",
+            "Data/Bosses.lua",
+            "Data/QuestMaps.lua",
+            "Systems/MapMarkers.lua",
+            "Localization/Localization.lua",
+            "Data/DungeonRoutes.lua",
+            "UI/ThemeData.lua",
+            "UI/Utilities.lua",
+            "UI/Minimap.lua",
+            "UI/Portraits.lua",
+            "UI/Tooltips.lua",
+            "UI/DungeonMapsTab.lua",
+            "UI/SearchWishlist.lua",
+            "UI/LootExplorer.lua",
+            "UI/HomeTab.lua",
+            "UI/BossTab.lua",
+            "UI/QuestsTab.lua",
+            "UI/MainFrame.lua",
+            "Data/DungeonPreparation.lua",
+            "UI/DungeonPrep.lua",
+        ]
     all_ok = True
     for f in files:
-        if not validate_syntax(f):
-            all_ok = False
+        if os.path.exists(f):
+            if not validate_syntax(f):
+                all_ok = False
+        else:
+            print(f"Skipping missing file: {f}")
             
     if all_ok:
         print("\nAll files passed syntax and structure validation successfully!")
     else:
         print("\nSome files failed validation.")
+

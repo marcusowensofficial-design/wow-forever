@@ -5,6 +5,30 @@ local DB = FDJ.DB or {}
 -- Exterior / approach locations used by the journal's dungeon-location button.
 -- Coordinates are normalized map coordinates for the Classic/Forever map IDs.
 local entrances = {
+    ["City of Dalaran"] = {
+        mapID = 1416, x = 0.150, y = 0.660,
+        label = "City of Dalaran Entrance",
+        detail = "Enter through the city's sewers: drop through a grate in the streets and follow the Underbelly pipe to the portal",
+        markerType = "dungeon",
+    },
+    ["Gnomeregan"] = {
+        mapID = 1426, x = 0.243, y = 0.393,
+        label = "Gnomeregan Entrance",
+        detail = "Take the elevator down in north-west Dun Morogh, then keep left through the tunnels to the portal",
+        markerType = "dungeon",
+    },
+    ["Razorfen Kraul"] = {
+        mapID = 1413, x = 0.427, y = 0.900,
+        label = "Razorfen Kraul Entrance",
+        detail = "Southern Barrens, at the end of the thorny corridor",
+        markerType = "dungeon",
+    },
+    ["Scarlet Monastery: Graveyard"] = {
+        mapID = 1420, x = 0.833, y = 0.335,
+        label = "Scarlet Monastery Entrance",
+        detail = "Inside the Scarlet Monastery courtyard; the Graveyard is the portal on the right",
+        markerType = "dungeon",
+    },
     ["Hall of Thanes"] = {
         mapID = 1455, x = 0.435, y = 0.520,
         label = "Hall of Thanes Entrance",
@@ -17,8 +41,14 @@ local entrances = {
         detail = "Cave entrance at Lushwater Oasis",
         markerType = "dungeon",
     },
+    ["Excavation Site: Wetlands"] = {
+        mapID = 1437, x = 0.478, y = 0.563,
+        label = "Excavation Site: Wetlands Entrance",
+        detail = "Blue mist portal under a large tree, in the hills southeast of Whelgar's Excavation, reached from Thelgen Rock",
+        markerType = "dungeon",
+    },
     ["Ruins of Lordaeron"] = {
-        mapID = 1420, x = 0.612, y = 0.674,
+        mapID = 1420, x = 0.644, y = 0.675,
         label = "Ruins of Lordaeron Entrance",
         detail = "Dungeon entrance in the Ruins of Lordaeron",
         markerType = "dungeon",
@@ -54,6 +84,8 @@ local entrances = {
         markerType = "dungeon",
     },
 }
+
+FDJ.DUNGEON_ENTRANCES = entrances
 
 for dungeonName, entrance in pairs(entrances) do
     if DB[dungeonName] then

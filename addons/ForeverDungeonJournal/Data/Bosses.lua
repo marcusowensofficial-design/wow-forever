@@ -2,6 +2,48 @@ local ADDON_NAME, FDJ = ...
 FDJ = FDJ or _G.ForeverDungeonJournal_NS
 
 FDJ.BOSS_LEVELS = {
+    ["Excavation Site: Wetlands"] = {
+        ["Saltspine"] = "28",
+        ["Shadetooth"] = "29",
+        ["Highland Horror"] = "30",
+        ["Relic Guardian"] = "31",
+    },
+    ["City of Dalaran"] = {
+        ["Atrexis the Grave Knight"] = "29",
+        ["Arcane Anomaly"] = "30",
+        ["Unstable Sentinel"] = "31",
+        ["Fel Ancient"] = "32",
+        ["Mana Wraith"] = "31",
+        ["Mana Devourer"] = "31",
+        ["Mana Elemental"] = "32",
+        ["Lyn the Ignored"] = "33",
+        ["Shade of the Archmage"] = "33",
+    },
+    ["Gnomeregan"] = {
+        ["Grubbis"] = "32",
+        ["Viscous Fallout"] = "30",
+        ["Electrocutioner 6000"] = "32",
+        ["Crowd Pummeler 9-60"] = "32",
+        ["Mekgineer Thermaplugg"] = "35",
+        ["Dark Iron Ambassador"] = "33",
+    },
+    ["Razorfen Kraul"] = {
+        ["Roogug"] = "28",
+        ["Aggem Thorncurse"] = "30",
+        ["Death Speaker Jargba"] = "30",
+        ["Overlord Ramtusk"] = "32",
+        ["Agathelos the Raging"] = "33",
+        ["Charlga Razorflank"] = "33",
+        ["Blind Hunter"] = "32",
+        ["Earthcaller Halmgar"] = "32",
+    },
+    ["Scarlet Monastery: Graveyard"] = {
+        ["Interrogator Vishas"] = "32",
+        ["Azshir the Sleepless"] = "33",
+        ["Fallen Champion"] = "33",
+        ["Ironspine"] = "33",
+        ["Bloodmage Thalnos"] = "34",
+    },
     ["Hall of Thanes"] = {
         ["Faldrim Anvilmar"] = "16",
         ["Magmatus"] = "16",
@@ -133,8 +175,26 @@ FDJ.STATIC_DISPLAY_IDS = {
     -- The Stockade
     [1696] = 2362,  -- Targorr the Dread
     [1666] = 2364,  -- Kam Deepfury
-    [1716] = 2363,  -- Hamhock
+    [1717] = 2363,  -- Hamhock
+    [1716] = 7118,  -- Bazil Thredd
+    [1665] = 7118,  -- Bazil Thredd (legacy ID)
     [1663] = 2365,  -- Dextren Ward
-    [1665] = 7118,  -- Bazil Thredd
     [1720] = 2366,  -- Bruegal Ironknuckle
+
+    -- Hall of Thanes
+    [247076] = 142826, -- Faldrim Anvilmar
+    [261306] = 142826, -- Faldrim Anvilmar (active beta NPC ID)
+    [255294] = 142840, -- Plunder
+    [261311] = 142840, -- Plunder (active beta NPC ID)
+    [255146] = 142837, -- Durgen Dirgehammer
+    [261319] = 142837, -- Durgen Dirgehammer (active beta NPC ID)
+    [255301] = 8243,   -- Magmatus
+
+    -- Ruins of Lordaeron
+    [250660] = 144188, -- The Baron
+    [250483] = 144189, -- Witherfang
+    [250631] = 138667, -- The Abandoned
+    [256097] = 144170, -- Bjork
+    [250657] = 144175, -- Rath'mael
+    [256035] = 139455, -- Viktor the Vile
 }

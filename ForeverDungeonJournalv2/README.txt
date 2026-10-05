@@ -1,4 +1,4 @@
-Forever Dungeon Journal v1.0.7 by Exehn
+Forever Dungeon Journal v1.5.0 by Exehn
 ======================================
 
 INSTALL
@@ -6,6 +6,15 @@ Extract the ForeverDungeonJournal folder into the Forever beta client's
 Interface/AddOns folder, replacing the previous addon files. Then /reload.
 Keep your WTF folder / SavedVariables: no settings reset is required.
 Open with /fj or /fdj. Open Deadmines directly with /fj dm.
+
+CHANGES IN 1.5.0
+- Added authoritative Boss Loot Drop Rates across Classic & Forever beta dungeons.
+- Added native UI Window Scaling: presets dropdown (85% to 130%) and /fj scale <val>.
+- Added native 12.0 Minimap Addon Compartment integration (left-click journal, right-click wishlist).
+- Fixed combat log (CLEU) registration in 12.0 Camelot engine for reliable mob & rare death tracking.
+- Defeated boss progress now persists across /reload during active dungeon lockouts.
+- Added ## AllowLoadGameType: camelot directive to prevent inappropriate loading on Retail.
+- Added .pkgmeta release rules for clean, bloat-free distribution.
 
 CHANGES IN 1.0.3
 - Fixed the blank item-tooltip regression introduced in 1.0.2.

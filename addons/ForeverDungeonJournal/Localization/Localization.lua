@@ -6,10 +6,25 @@ FDJ = FDJ or _G.ForeverDungeonJournal_NS
 FDJ.Locales = FDJ.Locales or {}
 
 FDJ.Locales.enUS = {
+    ALSO_RECEIVE = "You will also receive:",
+    MAP_JUMP_LEVEL = "Jump down to Level %d",
+    NOTICE_LV30_DATA = "New loot and quests for dungeons up to lv 30 are still being discovered. I will update as new data comes out. gl hf",
+    MAP_SWIM_LEVEL = "Swim underwater for level %d",
+    MAP_ENTRANCE = "Entrance",
+    MAP_FLOOR = "Level %d",
+    MAP_FIT_VIEW = "Fit View",
+    MAP_FILL_VIEW = "Fill View",
+    MAP_VIEW_MODE = "Map View Mode",
+    MAP_VIEW_FIT_DESC = "Switch to Fit View (fit full map in window).",
+    MAP_VIEW_FILL_DESC = "Switch to Fill View (fill window width with sharp detail).",
+    MAP_LEVEL_TOOLTIP = "Click to view Level %d map.",
     DUNGEON_JOURNAL = "Dungeon Journal",
+    SEARCH = "Search for Dungeons, Items...",
+    SEARCH_NO_RESULTS = "No results",
     DUNGEONS = "Dungeons",
     MAP = "Map",
     BROWSE_DUNGEONS = "Browse Dungeons",
+    LOOT_EXPLORER = "Loot Explorer",
     HOME_SUBTITLE = "Select a dungeon cover to view bosses, loot and quests",
     FOREVER_BETA_DATA = "Forever beta data",
     BOSSES = "Bosses",
@@ -22,44 +37,37 @@ FDJ.Locales.enUS = {
     RARE = "RARE",
     YOU_HAVE_IT = "YOU HAVE IT",
     AVAILABLE_FROM_LEVEL = "Available from Level %s",
-    REQ_LEVEL = "Req Lv %s",
-    INSIDE_DUNGEON = "Inside Dungeon",
-    INSIDE_DUNGEON_QUEST = "Inside Dungeon Quest",
-    INSIDE_DUNGEON_TIP = "Starts and finishes inside the dungeon. No exterior pickup required.",
-    STARTS_INSIDE_DUNGEON = "Starts inside the dungeon (no exterior pickup required)",
-    ITEM_DROP_INSIDE = "Item drop inside the dungeon (no exterior pickup required)",
-    OBJECT_FOUND_INSIDE = "Found inside the dungeon (no exterior pickup required)",
-    PART_ONE = "Part 1 of 2",
-    PART_TWO = "Part 2 of 2",
-    PART_ONE_QUEST = "Part 1 of 2",
-    PART_TWO_QUEST = "Part 2 of 2 (Follow-up)",
-    PART_ONE_TIP = "Continues inside the dungeon as '%s' upon completion.",
-    PART_TWO_TIP = "Offered inside the dungeon after completing '%s' (Part 1).",
-    VIEW_PART_ONE = "View Part 1: %s",
-    VIEW_PART_TWO = "View Part 2: %s",
-    PART_TWO_REQUIRES = "Part 2 of 2 — Requires completing: %s",
-    OFFERED_INSIDE_AFTER_PART_ONE = "Offered inside the dungeon upon completing Part 1",
-    QUICK_LINK_TOOLTIP = "Quick Link: Click to view '%s' in the journal.",
     REQUIRED_PREREQUISITE = "Required prerequisite",
     OBJECTIVE = "Objective",
     STARTS_AT = "Starts at",
     TURN_IN = "Turn in",
     NOTES = "Notes",
+    SHARE = "Share",
+    NOT_SHAREABLE = "Not Shareable",
+    SHAREABLE_QUEST = "Shareable Quest",
+    ACCEPT_TO_SHARE = "Accept this quest to share it with your group.",
+    SHAREABLE_SAME_STEP = "Shareable to players on the same step.",
     REWARD = "Reward",
     REWARDS = "Rewards",
     CHOOSE_ONE_REWARD = "Choose one reward",
     SHOW_ON_MAP = "Show on Map",
+    ROUTE_FP_TARREN_MILL_TEXT = "The route detours here so you can pick up the flight path. Afterwards, head back down the road and continue east toward Arathi.",
+    ROUTE_FP_TARREN_MILL = "Tarren Mill Flight Path",
+    ROUTE_REMOVE_HINT = "Right click to remove route",
     SHOW_LOCATION = "Show Location",
     DUNGEON_ENTRANCE = "Dungeon entrance",
     HOW_TO_GET_THERE = "How to get there",
+    ROUTE = "Route",
     BACK_TO_DUNGEON = "Back to Dungeon",
     ALLIANCE_ROUTE = "Alliance route",
     SHOW_QUEST_CHAIN = "Show Quest Chain",
     REQUIRED_QUESTS = "Required Quests",
+    REQUIRED_ITEMS = "Required Items",
     SHOW_WHOLE_CHAIN = "Click to show the whole quest chain",
     OPEN_REQUIRED_CHAIN = "Open the required quest chain.",
     SHOW_GIVER_ON_MAP = "Show quest giver on map",
     MAP_TOOLTIP = "Opens the correct zone and marks the recorded quest-start location.",
+    IN_DUNGEON = "In Dungeon",
     NO_QUESTS = "No quests",
     NO_FACTION_QUESTS = "No %s quests recorded for this dungeon.",
     UNIQUE_TRASH = "Unique dungeon trash drops",
@@ -83,39 +91,62 @@ FDJ.Locales.enUS = {
     LANGUAGE_CURRENT = "Language: %s",
     LANGUAGE_SET = "Language set to %s.",
     LANGUAGE_AUTO = "Auto (%s)",
-    LANGUAGE_HELP = "Language test: /fj lang de, fr, es, ru, it, pt, en, /fj lang auto",
+    LANGUAGE_HELP = "Language test: /fj lang de, fr, es, ru, it, pt, ko, zh, zhtw, en, /fj lang auto",
     PREVIOUS_QUEST = "Previous quest",
     NEXT_QUEST = "Next quest",
     LEADS_TO = "Leads to: %s",
     MAP_MARKER_REMOVED = "map marker removed.",
+    MAP_LEFT_TARGET = "Left Click to target and mark quest giver if nearby",
     MAP_RIGHT_REMOVE = "Right Click to remove marker",
     MAP_MARKED = "marked %s on the map.",
     MAP_OPEN_FAILED = "could not open the recorded map location.",
     QUEST_GIVER = "Quest giver",
     QUEST_STARTS_HERE = "Quest starts here",
-    TACTICS = "Tactics",
-    ABILITIES = "Abilities",
-    ROLE_TIPS = "Role Tips",
     OVERVIEW = "Overview",
-    TANK = "Tank",
-    HEALER = "Healer",
-    DPS = "DPS",
-    SEARCH_PLACEHOLDER = "Search items, bosses, quests...",
-    ALL_CLASSES = "All Classes",
-    MY_CLASS = "My Class",
+    ROLE_TIPS = "Role Tips",
+    ABILITIES = "Abilities",
+    ANNOUNCE = "Announce",
+    ANNOUNCE_TACTICS = "Announce Tactics",
+    RETURN_TO_TIPS = "Back to %s",
+    NO_TACTICS_AVAILABLE = "No tactical briefing available for this encounter.",
+    DUNGEON_MAP = "Dungeon Map",
+    SHOW_ENTRANCE_ON_MAP = "Show Entrance on Map",
+    ENTRANCE_TOOLTIP_DESC = "Marks the physical dungeon entrance portal on your world map.",
+    RESET_RUN = "Reset Run",
+    RESET_RUN_DESC = "Clears the green defeat checkmarks for this dungeon run.",
     ALL_SLOTS = "All Slots",
-    WEAPONS = "Weapons",
-    ARMOR = "Armor",
-    ACCESSORIES = "Accessories",
-    QUEST_ITEMS = "Quest Items",
-    ALREADY_OWNED = "Already Owned",
-    SHARE_QUEST = "Share",
-    TRACK_QUEST = "Track",
-    UNTRACK_QUEST = "Untrack",
+    ALL_CLASSES = "All Classes",
+    MY_WISHLIST = "My Wishlist",
+    WISHLIST = "Wishlist",
+    ENTRANCE = "Entrance",
+    PREPARATION = "Keys & Prep",
+    DUNGEON_PREPARATION = "Dungeon Preparation & Checklist",
+    PREPARATION_TITLE = "Keys & Preparation",
+    PREPARATION_DESC = "View required keys, attunements, party dispels audit, and recommended consumables.",
+    PREPARATION_SUBTITLE = "Keys & attunements, party dispels audit, and recommended consumables.",
+    PREP_KEYS_TITLE = "Keys, Attunements & Tools",
+    PREP_CONSUMABLES_TITLE = "Essential Potions & Reagents",
+    PREP_DISPELS_TITLE = "Party Roles & Critical Dispels",
+    PREP_TIPS_TITLE = "Tactical Advisory & Wipe Prevention",
+    NO_KEYS_REQUIRED = "No keys or attunements required for this dungeon.",
 }
 
 FDJ.Locales.deDE = {
+    ALSO_RECEIVE = "Ihr bekommt außerdem:",
+    MAP_JUMP_LEVEL = "Auf Ebene %d hinunterspringen",
+    NOTICE_LV30_DATA = "Neue Beute und Quests für Dungeons bis Stufe 30 werden noch entdeckt. Ich aktualisiere, sobald neue Daten erscheinen. gl hf",
+    MAP_SWIM_LEVEL = "Unter Wasser tauchen für Ebene %d",
+    MAP_ENTRANCE = "Eingang",
+    MAP_FLOOR = "Ebene %d",
+    MAP_FIT_VIEW = "Passend",
+    MAP_FILL_VIEW = "Ausfüllen",
+    MAP_VIEW_MODE = "Kartenansicht",
+    MAP_VIEW_FIT_DESC = "Vollständige Karte im Fenster anzeigen.",
+    MAP_VIEW_FILL_DESC = "Fensterbreite mit scharfen Details ausfüllen.",
+    MAP_LEVEL_TOOLTIP = "Klicken, um die Karte von Ebene %d anzuzeigen.",
     DUNGEON_JOURNAL = "Dungeon-Journal",
+    SEARCH = "Dungeons, Gegenstände suchen...",
+    SEARCH_NO_RESULTS = "Keine Ergebnisse",
     DUNGEONS = "Dungeons",
     MAP = "Karte",
     BROWSE_DUNGEONS = "Dungeons durchsuchen",
@@ -131,29 +162,16 @@ FDJ.Locales.deDE = {
     RARE = "RARE",
     YOU_HAVE_IT = "ANGENOMMEN",
     AVAILABLE_FROM_LEVEL = "Verfügbar ab Stufe %s",
-    REQ_LEVEL = "Benötigt St. %s",
-    INSIDE_DUNGEON = "In der Instanz",
-    INSIDE_DUNGEON_QUEST = "Dungeon-Quest",
-    INSIDE_DUNGEON_TIP = "Startet und endet in der Instanz. Keine externe Vorquest/Annahme nötig.",
-    STARTS_INSIDE_DUNGEON = "Startet in der Instanz (keine externe Annahme nötig)",
-    ITEM_DROP_INSIDE = "Gegenstandsbeute in der Instanz (keine externe Annahme nötig)",
-    OBJECT_FOUND_INSIDE = "In der Instanz zu finden (keine externe Annahme nötig)",
-    PART_ONE = "Teil 1 von 2",
-    PART_TWO = "Teil 2 von 2",
-    PART_ONE_QUEST = "Teil 1 von 2",
-    PART_TWO_QUEST = "Teil 2 von 2 (Fortsetzung)",
-    PART_ONE_TIP = "Geht nach Abschluss in der Instanz mit '%s' weiter.",
-    PART_TWO_TIP = "Wird nach Abschluss von '%s' (Teil 1) in der Instanz angeboten.",
-    VIEW_PART_ONE = "Teil 1 ansehen: %s",
-    VIEW_PART_TWO = "Teil 2 ansehen: %s",
-    PART_TWO_REQUIRES = "Teil 2 von 2 — Erfordert: %s",
-    OFFERED_INSIDE_AFTER_PART_ONE = "Wird nach Abschluss von Teil 1 in der Instanz angeboten",
-    QUICK_LINK_TOOLTIP = "Direktlink: Klicken, um '%s' im Tagebuch anzuzeigen.",
     REQUIRED_PREREQUISITE = "Benötigte Vorquest",
     OBJECTIVE = "Ziel",
     STARTS_AT = "Startet bei",
     TURN_IN = "Abgeben bei",
     NOTES = "Hinweise",
+    SHARE = "Teilen",
+    NOT_SHAREABLE = "Nicht teilbar",
+    SHAREABLE_QUEST = "Teilbare Quest",
+    ACCEPT_TO_SHARE = "Nimm diese Quest an, um sie mit deiner Gruppe zu teilen.",
+    SHAREABLE_SAME_STEP = "Mit Spielern teilbar, die beim selben Schritt sind.",
     REWARD = "Belohnung",
     REWARDS = "Belohnungen",
     CHOOSE_ONE_REWARD = "Wähle eine Belohnung",
@@ -161,14 +179,17 @@ FDJ.Locales.deDE = {
     SHOW_LOCATION = "Ort anzeigen",
     DUNGEON_ENTRANCE = "Dungeoneingang",
     HOW_TO_GET_THERE = "Anreise",
+    ROUTE = "Route",
     BACK_TO_DUNGEON = "Zurück zum Dungeon",
     ALLIANCE_ROUTE = "Allianz-Route",
     SHOW_QUEST_CHAIN = "Questreihe anzeigen",
     REQUIRED_QUESTS = "Benötigte Quests",
+    REQUIRED_ITEMS = "Benötigte Gegenstände",
     SHOW_WHOLE_CHAIN = "Klicken, um die gesamte Questreihe anzuzeigen",
     OPEN_REQUIRED_CHAIN = "Benötigte Questreihe öffnen.",
     SHOW_GIVER_ON_MAP = "Queststart auf Karte anzeigen",
     MAP_TOOLTIP = "Öffnet das passende Gebiet und markiert den Startpunkt dieser Quest. Rechtsklick auf die Markierung entfernt sie.",
+    IN_DUNGEON = "Im Dungeon",
     NO_QUESTS = "Keine Quests",
     NO_FACTION_QUESTS = "Keine %s-Quests für diesen Dungeon erfasst.",
     UNIQUE_TRASH = "Einzigartige Beute von Trashmobs",
@@ -197,11 +218,27 @@ FDJ.Locales.deDE = {
     NEXT_QUEST = "Nächste Quest",
     LEADS_TO = "Führt zu: %s",
     MAP_MARKER_REMOVED = "Kartenmarkierung entfernt.",
+    MAP_LEFT_TARGET = "Linksklick, um den Questgeber in der Nähe anzuvisieren und zu markieren",
     MAP_RIGHT_REMOVE = "Rechtsklick zum Entfernen der Markierung",
     MAP_MARKED = "%s auf der Karte markiert.",
     MAP_OPEN_FAILED = "Der gespeicherte Kartenort konnte nicht geöffnet werden.",
     QUEST_GIVER = "Questgeber",
     QUEST_STARTS_HERE = "Quest startet hier",
+    ALL_SLOTS = "Alle Plätze",
+    ALL_CLASSES = "Alle Klassen",
+    MY_WISHLIST = "Meine Wunschliste",
+    WISHLIST = "Wunschliste",
+    ENTRANCE = "Eingang",
+    PREPARATION = "Schlüssel & Vorbereitung",
+    DUNGEON_PREPARATION = "Dungeon-Vorbereitung & Checkliste",
+    PREPARATION_TITLE = "Schlüssel & Vorbereitung",
+    PREPARATION_DESC = "Erforderliche Schlüssel, Gruppenbannungen und empfohlene Verbrauchsgüter anzeigen.",
+    PREPARATION_SUBTITLE = "Schlüssel, Einstimmungen, Gruppenbannungen und Verbrauchsgüter.",
+    PREP_KEYS_TITLE = "Schlüssel, Einstimmungen & Werkzeuge",
+    PREP_CONSUMABLES_TITLE = "Wichtige Tränke & Reagenzien",
+    PREP_DISPELS_TITLE = "Rollen & Kritische Bannungen",
+    PREP_TIPS_TITLE = "Taktische Hinweise & Vorbeugung",
+    NO_KEYS_REQUIRED = "Keine Schlüssel oder Einstimmungen für diesen Dungeon erforderlich.",
 }
 
 local function NormalizeLanguage(value)
@@ -211,6 +248,9 @@ local function NormalizeLanguage(value)
     if value == "es" or value == "eses" or value == "esmx" or value == "spanish" or value == "español" or value == "espanol" then return "esES" end
     if value == "ru" or value == "ruru" or value == "russian" or value == "русский" then return "ruRU" end
     if value == "it" or value == "itit" or value == "italian" or value == "italiano" then return "itIT" end
+    if value == "zhtw" or value == "tw" or value == "繁體中文" or value == "繁体中文" then return "zhTW" end
+    if value == "zh" or value == "zhcn" or value == "chinese" or value == "中文" or value == "简体中文" then return "zhCN" end
+    if value == "ko" or value == "kokr" or value == "korean" or value == "한국어" then return "koKR" end
     if value == "pt" or value == "ptbr" or value == "portuguese" or value == "portugues" or value == "português" then return "ptBR" end
     if value == "en" or value == "enus" or value == "engb" or value == "english" then return "enUS" end
     return "auto"
@@ -227,6 +267,9 @@ function FDJ.GetLanguage()
     if client == "ruRU" then return "ruRU" end
     if client == "itIT" then return "itIT" end
     if client == "ptBR" then return "ptBR" end
+    if client == "koKR" then return "koKR" end
+    if client == "zhCN" then return "zhCN" end
+    if client == "zhTW" then return "zhTW" end
     return "enUS"
 end
 
@@ -256,6 +299,9 @@ function FDJ.GetClientLanguage()
     if client == "ruRU" then return "ruRU" end
     if client == "itIT" then return "itIT" end
     if client == "ptBR" then return "ptBR" end
+    if client == "koKR" then return "koKR" end
+    if client == "zhCN" then return "zhCN" end
+    if client == "zhTW" then return "zhTW" end
     return "enUS"
 end
 
@@ -271,15 +317,67 @@ local function ContentTable()
     return all[FDJ.GetLanguage()]
 end
 
+-- Free text is only ever translated as a WHOLE string or as whole
+-- comma-separated parts ("Tinkmaster Overspark, Ironforge" -> the place part).
+-- Words are never swapped inside a sentence: a sentence without a full
+-- translation stays in English instead of becoming a half-translated mix.
+local plainMapCache = {}
+local function PlainText(pattern)
+    return (pattern:gsub("%%(%p)", "%1"))
+end
+local function FreeTextMap(content, lang)
+    local cached = plainMapCache[lang]
+    if cached and cached.source == content then return cached.map end
+    local map = {}
+    for key, value in pairs(content.places or {}) do map[key] = value end
+    for _, pair in ipairs(content.replacements or {}) do
+        local key = PlainText(pair[1])
+        if map[key] == nil then map[key] = (pair[2]:gsub("%%%%", "%%")) end
+    end
+    plainMapCache[lang] = { source = content, map = map }
+    return map
+end
+
 function FDJ.LocalizeFreeText(value)
     if type(value) ~= "string" or value == "" then return value end
     local content = ContentTable()
-    if not content or not content.replacements then return value end
-    local result = value
-    for _, pair in ipairs(content.replacements) do
-        result = result:gsub(pair[1], pair[2])
+    if not content then return value end
+    local map = FreeTextMap(content, FDJ.GetLanguage())
+    if map[value] then return map[value] end
+
+    -- Whole parts separated by " — " (label lines) or commas (NPC, place).
+    local function TranslateCommaList(text)
+        if map[text] then return map[text], true end
+        if not text:find(",", 1, true) then return text, false end
+        local parts, changed = {}, false
+        for part in text:gmatch("([^,]+)") do
+            local clean = part:gsub("^%s+", ""):gsub("%s+$", "")
+            local translated = map[clean]
+            if translated then changed = true end
+            parts[#parts + 1] = translated or clean
+        end
+        return table.concat(parts, ", "), changed
     end
-    return result
+
+    local dash = " \226\128\148 " -- " — "
+    if value:find(dash, 1, true) then
+        local out, changed, rest = {}, false, value
+        while true do
+            local i = rest:find(dash, 1, true)
+            local piece = i and rest:sub(1, i - 1) or rest
+            local t, c = TranslateCommaList(piece)
+            out[#out + 1] = t
+            changed = changed or c
+            if not i then break end
+            rest = rest:sub(i + #dash)
+        end
+        if changed then return table.concat(out, dash) end
+        return value
+    end
+
+    local t, changed = TranslateCommaList(value)
+    if changed then return t end
+    return value
 end
 
 function FDJ.LocalizeDungeonName(internalName)

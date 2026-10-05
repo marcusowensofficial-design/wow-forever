@@ -92,6 +92,31 @@ FDJ.QUEST_PREREQ_CHAINS = {
         { id = 5727, name = "Hidden Enemies" },
     },
 
+
+
+    -- Gnomeregan. Optional breadcrumb quests are intentionally excluded.
+    -- Tinkmaster Overspark -> Save Techbot's Brain!, The Day After -> Gnogaine,
+    -- and Castpipe's Task -> Data Rescue are storyline/breadcrumb links, not
+    -- hard requirements in Forever. Gnogaine itself IS required before
+    -- The Only Cure is More Green Glow.
+    [2962] = {
+        { id = 2926, name = "Gnogaine" },
+    },
+    -- Rig Wars only needs to be accepted/in progress to make Chief Engineer
+    -- Scooty available; it does not need to be completed first.
+    [2843] = {
+        { id = 2841, name = "Rig Wars" },
+        { id = 2842, name = "Chief Engineer Scooty" },
+    },
+
+    -- Razorfen Kraul / Scarlet Monastery: Graveyard.
+    [1101] = {
+        { id = 1100, name = "Lonebrow's Journal" },
+    },
+    [1113] = {
+        { id = 1109, name = "Going, Going, Guano!" },
+    },
+
     -- Blackfathom Deeps.
     [1275] = {
         { id = 3765, name = "The Corruption Abroad" },
@@ -99,12 +124,68 @@ FDJ.QUEST_PREREQ_CHAINS = {
     -- The Essence of Aku'Mai intentionally has NO prerequisite entry here.
     -- Trouble in the Deeps is a breadcrumb and is not required to accept it.
 
+    -- Gnomeregan: Data Rescue needs the Prismatic Punch Card, built up card
+    -- by card through four Matrix Punchograph terminals. These are item
+    -- steps (placeholder IDs), shown so players know the whole route.
+    [2930] = {
+        { id = 2930001, name = "White Punch Card", itemStep = true },
+        { id = 2930002, name = "Yellow Punch Card (Punchograph 3005-A)", itemStep = true },
+        { id = 2930003, name = "Blue Punch Card (Punchograph 3005-B)", itemStep = true },
+        { id = 2930004, name = "Red Punch Card (Punchograph 3005-C)", itemStep = true },
+        { id = 2930005, name = "Prismatic Punch Card (Punchograph 3005-D)", itemStep = true },
+    },
+
     [6565] = {
         { id = 6564, name = "Allegiance to the Old Gods" },
+    },
+
+    -- Excavation Site: Wetlands (Alliance): Heartwoven follows
+    -- Lost in the Thicket Things.
+    [95809] = {
+        { id = 95647, name = "Lost in the Thicket Things" },
+    },
+
+    -- Excavation Site: Wetlands (Alliance): Horrors in the Highland
+    -- requires a 4-part prerequisite chain starting with First Mate Fitzsimmons in Menethil Harbor.
+    [95646] = {
+        { id = 463, name = "The Greenwarden" },
+        { id = 276, name = "Tramping Paws" },
+        { id = 277, name = "Fire Taboo" },
+        { id = 275, name = "Blisters on The Land" },
+    },
+
+    -- Excavation Site: Wetlands (Horde): Earthen Echo follows Elder Knowledge.
+    [98823] = {
+        { id = 95664, name = "Elder Knowledge" },
+    },
+
+    -- Excavation Site: Wetlands (Alliance): Heartwoven follows Lost in the Thicket Things.
+    [95809] = {
+        { id = 95647, name = "Lost in the Thicket Things" },
     },
 }
 
 FDJ.QUEST_PREREQ_DETAILS = {
+    [95647] = { level = 31, requires = 24, objective = "Find Ardin Grassman in the Excavation Sites. Learn what happened to Ardin Grassman.", pickup = "Caitlin Grassman, Menethil Harbor, Wetlands", turnin = "Ardin Grassman, inside Excavation Site: Wetlands", description = "Required before Heartwoven.", map = { mapID = 1437, x = 0.105, y = 0.575, label = "Caitlin Grassman — Menethil Harbor", detail = "Start Lost in the Thicket Things here" } },
+
+    -- Horrors in the Highland prerequisite chain steps.
+    [463] = { level = 25, requires = 20, objective = "Speak with Rethiel the Greenwarden in the Wetlands.", pickup = "First Mate Fitzsimmons, Menethil Harbor, Wetlands", turnin = "Rethiel the Greenwarden, Wetlands", description = "First step of the 4-part prerequisite chain leading to Horrors in the Highland.", map = { mapID = 1437, x = 0.108, y = 0.605, label = "First Mate Fitzsimmons — Menethil Harbor", detail = "Start The Greenwarden here" } },
+    [276] = { level = 25, requires = 20, objective = "Kill 15 Mosshide Gnolls and 10 Mosshide Mongrels, then return to Rethiel the Greenwarden.", pickup = "Rethiel the Greenwarden, Wetlands", turnin = "Rethiel the Greenwarden, Wetlands", description = "Second step of the Greenwarden chain; kill gnolls in Mosshide Fen.", map = { mapID = 1437, x = 0.564, y = 0.404, label = "Rethiel the Greenwarden — Wetlands", detail = "Turn in and accept Tramping Paws" } },
+    [277] = { level = 26, requires = 20, objective = "Collect 9 Crude Flints from Mosshide gnolls and bring them to Rethiel the Greenwarden.", pickup = "Rethiel the Greenwarden, Wetlands", turnin = "Rethiel the Greenwarden, Wetlands", description = "Third step of the Greenwarden chain; flints drop from gnolls across western Wetlands.", map = { mapID = 1437, x = 0.564, y = 0.404, label = "Rethiel the Greenwarden — Wetlands", detail = "Turn in and accept Fire Taboo" } },
+    [275] = { level = 28, requires = 20, objective = "Slay 12 Fen Creepers and return to Rethiel the Greenwarden in the Wetlands.", pickup = "Rethiel the Greenwarden, Wetlands", turnin = "Rethiel the Greenwarden, Wetlands", description = "Final prerequisite before Horrors in the Highland becomes available; Fen Creepers roam the northern wetlands waterways.", map = { mapID = 1437, x = 0.564, y = 0.404, label = "Rethiel the Greenwarden — Wetlands", detail = "Turn in Blisters on The Land to unlock Horrors in the Highland" } },
+
+    -- Excavation Site: Wetlands (Horde) Elder Knowledge prerequisite step for Earthen Echo.
+    [95664] = { level = 31, requires = 24, objective = "Take the Titan Relic to the Elder Rise in Thunder Bluff and look for someone who can tell you more about it.", pickup = "Titan Relic (dropped by Relic Guardian)", turnin = "Bashana Runetotem, Elder Rise, Thunder Bluff", description = "Required before Earthen Echo.", startItem = {270866, "Titan Relic", 1, "Dropped by: Relic Guardian"}, map = { mapID = 1437, x = 0.478, y = 0.563, label = "Excavation Site: Wetlands Entrance", detail = "Looted from Relic Guardian inside the dungeon" } },
+
+
+    -- Gnomeregan prerequisite steps.
+    [2926] = { level = 27, requires = 20, objective = "Use the Empty Leaden Collection Phial on a living Irradiated Invader or Irradiated Pillager, then return the full phial to Ozzie Togglevolt.", pickup = "Ozzie Togglevolt, Kharanos, Dun Morogh", turnin = "Ozzie Togglevolt, Kharanos, Dun Morogh", description = "Required before The Only Cure is More Green Glow.", map = { mapID = 1426, x = 0.450, y = 0.490, label = "Ozzie Togglevolt — Kharanos", detail = "Start Gnogaine here" } },
+    [2841] = { level = 35, requires = 25, objective = "Accept Rig Wars from Nogg. You do not need to complete it before continuing to Chief Engineer Scooty.", pickup = "Nogg, Valley of Honor, Orgrimmar", turnin = "Nogg, Orgrimmar", description = "Rig Wars must be in progress to unlock the transporter chain in Forever.", note = "Accept Rig Wars first; completion is not required for Chief Engineer Scooty.", map = { mapID = 1454, x = 0.760, y = 0.250, label = "Nogg — Valley of Honor, Orgrimmar", detail = "Accept Rig Wars here" } },
+    [2842] = { level = 35, requires = 20, objective = "Speak with Scooty in Booty Bay.", pickup = "Sovik, Valley of Honor, Orgrimmar", turnin = "Scooty, Booty Bay, Stranglethorn Vale", description = "Required before Gnomer-gooooone!", map = { mapID = 1454, x = 0.756, y = 0.252, label = "Sovik — Valley of Honor, Orgrimmar", detail = "Start Chief Engineer Scooty here" } },
+
+    -- Razorfen Kraul / Scarlet Monastery prerequisite steps.
+    [1100] = { level = 27, requires = 23, objective = "Read Henrig Lonebrow's Journal and take it to Falfindel Waywarder in Thalanaar.", pickup = "Henrig Lonebrow's Journal beside his corpse at the bottom of the Great Lift", turnin = "Falfindel Waywarder, Thalanaar, Feralas", description = "Required before The Crone of the Kraul.", map = { mapID = 1441, x = 0.300, y = 0.240, label = "Henrig Lonebrow — bottom of the Great Lift", detail = "Loot Lonebrow's Journal here" } },
+    [1109] = { level = 33, requires = 30, objective = "Bring 1 pile of Kraul Guano to Master Apothecary Faranell in the Undercity.", pickup = "Master Apothecary Faranell, Apothecarium, Undercity", turnin = "Master Apothecary Faranell, Apothecarium, Undercity", description = "Required before Hearts of Zeal.", map = { mapID = 1458, x = 0.480, y = 0.690, label = "Master Apothecary Faranell — Apothecarium", detail = "Start Going, Going, Guano! here" } },
     [96391] = { level = 15, requires = 9, objective = "Deliver the Dark Iron Map to Earthseer Farsen in Dun Morogh.", pickup = "Dark Iron Map, dropped by Dark Iron Spies at Ironband's Compound, Dun Morogh", turnin = "Earthseer Farsen, Dun Morogh", description = "The Dark Iron Map starts this quest and leads directly into Old Ironforge Incursion.", map = { mapID = 1426, x = 0.770, y = 0.600, label = "Dark Iron Spies — Ironband's Compound", detail = "Farm Dark Iron Spies here for the Dark Iron Map" } },
 
     [865]  = { level = 18, requires = 13, objective = "Gather 5 Intact Raptor Horns from Sunscale Scytheclaws and bring them to Mebok Mizzyrix.", pickup = "Mebok Mizzyrix, Ratchet, The Barrens", turnin = "Mebok Mizzyrix, Ratchet, The Barrens", description = "Required before Smart Drinks becomes available.", map = { mapID = 1413, x = 0.6280, y = 0.3670, label = "Mebok Mizzyrix — Ratchet", detail = "Start Raptor Horns here" } },
@@ -148,4 +229,11 @@ FDJ.QUEST_PREREQ_DETAILS = {
     [3765] = { level = 24, requires = 18, objective = "Travel to Gershala Nightwhisper in Auberdine, Darkshore.", pickup = "Argos Nightwhisper, The Park, Stormwind", turnin = "Gershala Nightwhisper, Auberdine, Darkshore", description = "Alliance breadcrumb required before Researching the Corruption.", map = { mapID = 1453, x = 0.363, y = 0.674, label = "Argos Nightwhisper — The Park", detail = "Argos Nightwhisper is in The Park, beside the moonwell area." } },
     [1198] = { level = 24, requires = 18, objective = "Seek out Argent Guard Thaelrid inside Blackfathom Deeps.", pickup = "Dawnwatcher Shaedlass, Darnassus", turnin = "Argent Guard Thaelrid, inside Blackfathom Deeps", description = "Required before the Alliance version of Blackfathom Villainy.", map = { mapID = 1457, x = 0.550, y = 0.240, label = "Dawnwatcher Shaedlass — Darnassus", detail = "Start In Search of Thaelrid here" } },
     [6564] = { level = 22, requires = 17, objective = "Bring the Damp Note to Je'neu Sancrea in Ashenvale.", pickup = "Damp Note", startItem = {16790, "Damp Note", 1, "Drops from Blackfathom Tide Priestess in the entrance tunnels leading to Blackfathom Deeps."}, turnin = "Je'neu Sancrea, Zoram'gar Outpost, Ashenvale" },
+    -- Data Rescue punch card steps (item steps, not quests).
+    [2930001] = { level = 30, requires = 25, objective = "Kill mobs in the outer Gnomeregan area until a White Punch Card drops.", pickup = "Caverndeep Pillagers, Caverndeep Invaders, Irradiated Invaders and Addled Lepers, outside the instance", turnin = "Keep the card for Matrix Punchograph 3005-A", description = "Random drop; you usually get it during your first clear of the outer area.", startItem = {9279, "White Punch Card", 1, "Random drop from mobs outside the Gnomeregan instance"}, map = { mapID = 1426, x = 0.243, y = 0.393, label = "Gnomeregan — outer area", detail = "White Punch Cards drop from the mobs here" } },
+    [2930002] = { level = 30, requires = 25, objective = "Use Matrix Punchograph 3005-A with the White Punch Card to get a Yellow Punch Card.", pickup = "Matrix Punchograph 3005-A, Workshop area of the Train Depot, outside the instance", turnin = "You receive a Yellow Punch Card", description = "The only punchographs outside the instance: on the raised platform in the Train Depot and by the Workshop (back door) entrance.", startItem = {9280, "Yellow Punch Card", 1, "From Matrix Punchograph 3005-A"} },
+    [2930003] = { level = 30, requires = 25, objective = "Use Matrix Punchograph 3005-B with the Yellow Punch Card to get a Blue Punch Card.", pickup = "Matrix Punchograph 3005-B, The Dormitory (just past the Clean Zone), inside the instance", turnin = "You receive a Blue Punch Card", description = "Inside the instance, in the Dormitory.", startItem = {9282, "Blue Punch Card", 1, "From Matrix Punchograph 3005-B"} },
+    [2930004] = { level = 30, requires = 25, objective = "Use Matrix Punchograph 3005-C with the Blue Punch Card to get a Red Punch Card.", pickup = "Matrix Punchograph 3005-C, upper platform of the Launch Bay with Electrocutioner 6000", turnin = "You receive a Red Punch Card", description = "On Electrocutioner 6000's platform.", startItem = {9281, "Red Punch Card", 1, "From Matrix Punchograph 3005-C"} },
+    [2930005] = { level = 30, requires = 25, objective = "Use Matrix Punchograph 3005-D with the Red Punch Card to get the Prismatic Punch Card, then bring it to Master Mechanic Castpipe in Ironforge.", pickup = "Matrix Punchograph 3005-D, west side of the lower level of the Engineering Labs", turnin = "Master Mechanic Castpipe, Tinker Town, Ironforge", description = "Take the elevator down; the terminal is in the first passage on the right.", startItem = {9316, "Prismatic Punch Card", 1, "From Matrix Punchograph 3005-D"} },
+
 }

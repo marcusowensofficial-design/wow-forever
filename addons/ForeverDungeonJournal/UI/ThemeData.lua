@@ -62,6 +62,54 @@ FDJ.THEMES = {
         muted = {0.82, 0.74, 0.60},
     },
 
+    -- Black / grey prison stone.
+    ["The Stockade"] = {
+        frame = {0.018, 0.018, 0.020, 0.99},
+        content = {0.13, 0.13, 0.14, 0.90},
+        border = {0.42, 0.42, 0.44, 1},
+        header = {0.15, 0.15, 0.16, 0.94},
+        left = {0.10, 0.10, 0.11, 0.94},
+        right = {0.11, 0.11, 0.12, 0.94},
+        row = {0.08, 0.08, 0.085, 0.92},
+        rowSelected = {0.25, 0.25, 0.27, 0.95},
+        lootRow = {0.10, 0.10, 0.105, 0.94},
+        title = {0.92, 0.92, 0.94},
+        text = {0.86, 0.86, 0.88},
+        muted = {0.66, 0.66, 0.69},
+    },
+
+    -- Arcane violet of the Dalaran loading screen.
+    ["City of Dalaran"] = {
+        frame = {0.024, 0.016, 0.040, 0.99},
+        content = {0.17, 0.10, 0.27, 0.90},
+        border = {0.58, 0.40, 0.86, 1},
+        header = {0.20, 0.11, 0.32, 0.94},
+        left = {0.12, 0.07, 0.20, 0.94},
+        right = {0.14, 0.08, 0.22, 0.94},
+        row = {0.10, 0.055, 0.16, 0.92},
+        rowSelected = {0.34, 0.17, 0.52, 0.95},
+        lootRow = {0.12, 0.07, 0.19, 0.94},
+        title = {0.90, 0.78, 1.00},
+        text = {0.91, 0.87, 0.97},
+        muted = {0.74, 0.67, 0.84},
+    },
+
+    -- Sickly leper-gnome green.
+    ["Gnomeregan"] = {
+        frame = {0.016, 0.026, 0.018, 0.99},
+        content = {0.11, 0.19, 0.12, 0.90},
+        border = {0.42, 0.62, 0.32, 1},
+        header = {0.12, 0.21, 0.12, 0.94},
+        left = {0.08, 0.14, 0.085, 0.94},
+        right = {0.09, 0.155, 0.095, 0.94},
+        row = {0.065, 0.11, 0.07, 0.92},
+        rowSelected = {0.20, 0.34, 0.15, 0.95},
+        lootRow = {0.08, 0.13, 0.085, 0.94},
+        title = {0.74, 1.00, 0.52},
+        text = {0.84, 0.94, 0.80},
+        muted = {0.64, 0.76, 0.62},
+    },
+
     ["Ruins of Lordaeron"] = {
         frame = {0.028, 0.029, 0.023, 0.99},
         content = {0.20, 0.18, 0.13, 0.90},
@@ -91,37 +139,10 @@ FDJ.THEMES = {
         text = {0.86, 0.91, 0.91},
         muted = {0.67, 0.77, 0.77},
     },
-
-    ["The Deadmines"] = {
-        frame = {0.028, 0.022, 0.018, 0.99},
-        content = {0.22, 0.14, 0.10, 0.90},
-        border = {0.52, 0.32, 0.18, 1},
-        header = {0.24, 0.15, 0.10, 0.94},
-        left = {0.16, 0.10, 0.07, 0.94},
-        right = {0.18, 0.11, 0.08, 0.94},
-        row = {0.13, 0.08, 0.05, 0.92},
-        rowSelected = {0.35, 0.18, 0.09, 0.95},
-        lootRow = {0.15, 0.09, 0.06, 0.94},
-        title = {1.00, 0.78, 0.30},
-        text = {0.94, 0.88, 0.72},
-        muted = {0.78, 0.70, 0.58},
-    },
-
-    ["The Stockade"] = {
-        frame = {0.020, 0.022, 0.026, 0.99},
-        content = {0.14, 0.16, 0.20, 0.90},
-        border = {0.32, 0.38, 0.46, 1},
-        header = {0.16, 0.18, 0.22, 0.94},
-        left = {0.10, 0.12, 0.15, 0.94},
-        right = {0.11, 0.13, 0.17, 0.94},
-        row = {0.08, 0.095, 0.12, 0.92},
-        rowSelected = {0.18, 0.25, 0.34, 0.95},
-        lootRow = {0.10, 0.12, 0.15, 0.94},
-        title = {0.80, 0.88, 1.00},
-        text = {0.88, 0.90, 0.94},
-        muted = {0.68, 0.72, 0.78},
-    },
 }
+
+-- Scarlet Monastery: Graveyard shares the Ruins of Lordaeron palette.
+FDJ.THEMES["Scarlet Monastery: Graveyard"] = FDJ.THEMES["Ruins of Lordaeron"]
 
 FDJ.DUNGEON_HOME_ART = {
     ["Ragefire Chasm"] = "Interface\\Glues\\LoadingScreens\\LoadScreenRagefireChasm",
@@ -132,6 +153,11 @@ FDJ.DUNGEON_HOME_ART = {
     ["The Deadmines"] = "Interface\\Glues\\LoadingScreens\\LoadScreenDeadmines",
     ["Blackfathom Deeps"] = "Interface\\Glues\\LoadingScreens\\LoadScreenBlackFathomDeeps",
     ["The Stockade"] = 131870, -- Classic Stormwind Stockade loading screen
+    ["Gnomeregan"] = "Interface\\Glues\\LoadingScreens\\LoadScreenGnomeregan",
+    ["Razorfen Kraul"] = 131865, -- Classic Razorfen Kraul loading screen
+    ["Excavation Site: Wetlands"] = 7963777, -- Forever beta loading screen
+    ["City of Dalaran"] = 7963775, -- Forever beta loading screen
+    ["Scarlet Monastery: Graveyard"] = "Interface\\Glues\\LoadingScreens\\LoadScreenScarletMonastery2",
 }
 
 FDJ.DUNGEON_HOME_TEXCOORD = {
@@ -143,6 +169,11 @@ FDJ.DUNGEON_HOME_TEXCOORD = {
     ["The Deadmines"] = { 0.02, 0.98, 0.25, 0.82 },
     ["Blackfathom Deeps"] = { 0.02, 0.98, 0.25, 0.82 },
     ["The Stockade"] = { 0.02, 0.98, 0.24, 0.82 },
+    ["Gnomeregan"] = { 0.02, 0.98, 0.24, 0.82 },
+    ["Razorfen Kraul"] = { 0.02, 0.98, 0.24, 0.82 },
+    ["Excavation Site: Wetlands"] = { 0.00, 1.00, 0.12, 0.88 },
+    ["City of Dalaran"] = { 0.00, 1.00, 0.12, 0.88 },
+    ["Scarlet Monastery: Graveyard"] = { 0.02, 0.98, 0.24, 0.82 },
 }
 
 FDJ.DUNGEON_PAGE_ART = {
@@ -153,7 +184,6 @@ FDJ.DUNGEON_PAGE_ART = {
     ["Shadowfang Keep"] = "Interface\\Glues\\LoadingScreens\\LoadScreenShadowFangKeep",
     ["The Deadmines"] = "Interface\\Glues\\LoadingScreens\\LoadScreenDeadmines",
     ["Blackfathom Deeps"] = "Interface\\Glues\\LoadingScreens\\LoadScreenBlackFathomDeeps",
-    ["The Stockade"] = 131870,
 }
 
 FDJ.DUNGEON_PAGE_TEXCOORD = {
@@ -164,5 +194,4 @@ FDJ.DUNGEON_PAGE_TEXCOORD = {
     ["Shadowfang Keep"] = { 0.02, 0.98, 0.24, 0.82 },
     ["The Deadmines"] = { 0.02, 0.98, 0.25, 0.82 },
     ["Blackfathom Deeps"] = { 0.02, 0.98, 0.25, 0.82 },
-    ["The Stockade"] = { 0.02, 0.98, 0.24, 0.82 },
 }

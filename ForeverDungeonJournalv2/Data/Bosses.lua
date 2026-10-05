@@ -2,6 +2,48 @@ local ADDON_NAME, FDJ = ...
 FDJ = FDJ or _G.ForeverDungeonJournal_NS
 
 FDJ.BOSS_LEVELS = {
+    ["Excavation Site: Wetlands"] = {
+        ["Saltspine"] = "28",
+        ["Shadetooth"] = "29",
+        ["Highland Horror"] = "30",
+        ["Relic Guardian"] = "31",
+    },
+    ["City of Dalaran"] = {
+        ["Atrexis the Grave Knight"] = "29",
+        ["Arcane Anomaly"] = "30",
+        ["Unstable Sentinel"] = "31",
+        ["Fel Ancient"] = "32",
+        ["Mana Wraith"] = "31",
+        ["Mana Devourer"] = "31",
+        ["Mana Elemental"] = "32",
+        ["Lyn the Ignored"] = "33",
+        ["Shade of the Archmage"] = "33",
+    },
+    ["Gnomeregan"] = {
+        ["Grubbis"] = "32",
+        ["Viscous Fallout"] = "30",
+        ["Electrocutioner 6000"] = "32",
+        ["Crowd Pummeler 9-60"] = "32",
+        ["Mekgineer Thermaplugg"] = "35",
+        ["Dark Iron Ambassador"] = "33",
+    },
+    ["Razorfen Kraul"] = {
+        ["Roogug"] = "28",
+        ["Aggem Thorncurse"] = "30",
+        ["Death Speaker Jargba"] = "30",
+        ["Overlord Ramtusk"] = "32",
+        ["Agathelos the Raging"] = "33",
+        ["Charlga Razorflank"] = "33",
+        ["Blind Hunter"] = "32",
+        ["Earthcaller Halmgar"] = "32",
+    },
+    ["Scarlet Monastery: Graveyard"] = {
+        ["Interrogator Vishas"] = "32",
+        ["Azshir the Sleepless"] = "33",
+        ["Fallen Champion"] = "33",
+        ["Ironspine"] = "33",
+        ["Bloodmage Thalnos"] = "34",
+    },
     ["Hall of Thanes"] = {
         ["Faldrim Anvilmar"] = "16",
         ["Magmatus"] = "16",
