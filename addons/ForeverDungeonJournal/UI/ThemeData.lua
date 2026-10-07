@@ -195,3 +195,18 @@ FDJ.DUNGEON_PAGE_TEXCOORD = {
     ["The Deadmines"] = { 0.02, 0.98, 0.25, 0.82 },
     ["Blackfathom Deeps"] = { 0.02, 0.98, 0.25, 0.82 },
 }
+
+-- The Library keeps the stock loading-screen art; the Graveyard uses its own bundled image.
+FDJ.DUNGEON_HOME_ART["Scarlet Monastery: Library"] = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\ScarletMonasteryLibraryHome"
+FDJ.DUNGEON_HOME_TEXCOORD["Scarlet Monastery: Library"] = { 0, 1, 0.06, 0.94 }
+FDJ.DUNGEON_HOME_ART["Scarlet Monastery: Graveyard"] = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\ScarletMonasteryGraveyardHome"
+FDJ.DUNGEON_HOME_TEXCOORD["Scarlet Monastery: Graveyard"] = { 0, 1, 0.06, 0.94 }
+
+-- Scarlet Monastery: Library reuses the Graveyard look.
+for _, tableName in ipairs({ "THEMES", "DUNGEON_HOME_ART", "DUNGEON_HOME_TEXCOORD", "DUNGEON_PAGE_ART", "DUNGEON_PAGE_TEXCOORD" }) do
+    local t = FDJ[tableName]
+    if type(t) == "table" and t["Scarlet Monastery: Graveyard"] ~= nil and t["Scarlet Monastery: Library"] == nil then
+        t["Scarlet Monastery: Library"] = t["Scarlet Monastery: Graveyard"]
+    end
+end
+

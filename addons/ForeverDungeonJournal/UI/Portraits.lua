@@ -280,6 +280,10 @@ end
 
 local function TrySetDisplayPortrait(texture, displayID)
     if type(displayID) ~= "number" or displayID <= 0 then return false end
+    if FDJ.AcquirePortrait then
+        local ok, shown = pcall(FDJ.AcquirePortrait, texture, displayID)
+        return ok and shown == true
+    end
     if type(SetPortraitTextureFromCreatureDisplayID) ~= "function" then return false end
 
     texture:SetTexture(nil)
@@ -292,13 +296,22 @@ end
 
 function FDJ.SetBossPortrait(texture, dungeonName, boss)
     if not texture then return false end
+    if boss and boss.fdjDungeon then dungeonName = boss.fdjDungeon end
 
+    if FDJ.ReleasePortrait then pcall(FDJ.ReleasePortrait, texture) end
     texture:SetTexture(nil)
+    texture:SetAlpha(1)
     texture:SetTexCoord(0, 1, 0, 1)
 
+    if boss and boss.recipeTab then
+        texture:SetTexture("Interface\\Icons\\INV_Scroll_05")
+        texture:SetTexCoord(0, 1, 0, 1)
+        return true
+    end
+
     if boss and boss.trash then
-        texture:SetTexture("Interface\\Icons\\INV_Misc_Bag_10")
-        texture:SetTexCoord(0.08, 0.92, 0.08, 0.92)
+        texture:SetTexture("Interface\\AddOns\\ForeverDungeonJournal\\Media\\TrashDropsIcon")
+        texture:SetTexCoord(0, 1, 0, 1)
         return true
     end
 

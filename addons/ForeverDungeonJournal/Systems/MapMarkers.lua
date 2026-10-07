@@ -237,6 +237,42 @@ local function CreateMapMarker(key)
     marker:EnableMouse(true)
     marker._fdjKey = key
 
+    -- Dark disc behind the X so it reads on pale parts of the map.
+    marker.backing = marker:CreateTexture(nil, "BACKGROUND", nil, -2)
+    marker.backing:SetTexture("Interface\\CHARACTERFRAME\\TempPortraitAlphaMask")
+    marker.backing:SetVertexColor(0, 0, 0, 0.62)
+    marker.backing:SetSize(32, 32)
+    marker.backing:SetPoint("CENTER")
+
+    -- Soft ring that ripples outwards, so the pin catches the eye.
+    marker.pulse = marker:CreateTexture(nil, "BACKGROUND", nil, -3)
+    marker.pulse:SetTexture("Interface\\CHARACTERFRAME\\TempPortraitAlphaMask")
+    marker.pulse:SetVertexColor(1.00, 0.30, 0.10, 0.55)
+    marker.pulse:SetBlendMode("ADD")
+    marker.pulse:SetSize(32, 32)
+    marker.pulse:SetPoint("CENTER")
+    marker.pulse:SetAlpha(0)
+    pcall(function()
+        local group = marker.pulse:CreateAnimationGroup()
+        group:SetLooping("REPEAT")
+        local grow = group:CreateAnimation("Scale")
+        grow:SetDuration(1.8)
+        if grow.SetScaleFrom then grow:SetScaleFrom(0.9, 0.9); grow:SetScaleTo(2.0, 2.0) else grow:SetScale(2.0, 2.0) end
+        grow:SetOrigin("CENTER", 0, 0)
+        grow:SetEndDelay(0.7)
+        local fadeIn = group:CreateAnimation("Alpha")
+        fadeIn:SetDuration(0.45)
+        fadeIn:SetFromAlpha(0)
+        fadeIn:SetToAlpha(0.55)
+        local fadeOut = group:CreateAnimation("Alpha")
+        fadeOut:SetStartDelay(0.45)
+        fadeOut:SetDuration(1.35)
+        fadeOut:SetFromAlpha(0.55)
+        fadeOut:SetToAlpha(0)
+        fadeOut:SetEndDelay(0.7)
+        marker.pulseAnim = group
+    end)
+
     marker.glow = marker:CreateFontString(nil, "BACKGROUND", "GameFontNormalLarge")
     marker.glow:SetPoint("CENTER", marker, "CENTER", 0, 0)
     marker.glow:SetText("X")
@@ -316,9 +352,34 @@ local function CreateMapMarker(key)
         -- newly assigned symbol after other quest pins have been added/removed.
         ConfigureMarkerTargetAction(self, target)
         GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
-        GameTooltip:SetText(FreeText(target.label) or (target.markerType == "dungeon" and L("DUNGEON_ENTRANCE") or L("QUEST_GIVER")))
+        local labelText = FreeText(target.label)
+        local detailText = FreeText(target.detail)
+        -- Dungeon entrance markers: when the label has no translation of its own,
+        -- build it from the translated dungeon name.
+        if target.markerType == "dungeon" and type(target.label) == "string" and labelText == target.label then
+            local dungeonName = target.label:gsub(" Entrance$", "")
+            if FDJ.DB and not FDJ.DB[dungeonName] and FDJ.DB[dungeonName .. ": Graveyard"] then
+                dungeonName = dungeonName .. ": Graveyard"
+            end
+            local localName = FDJ.LocalizeDungeonName and FDJ.LocalizeDungeonName(dungeonName) or dungeonName
+            if FDJ.DB and FDJ.DB[dungeonName] and localName and localName ~= dungeonName then
+                labelText = localName
+                if detailText == target.detail then
+                    local place = FDJ.LocalizeDungeonField and FDJ.LocalizeDungeonField(dungeonName, "location", nil)
+                    detailText = L("DUNGEON_ENTRANCE")
+                    if type(place) == "string" and place ~= "" then detailText = detailText .. ": " .. place end
+                end
+            end
+        end
+        if target.questTitle and target.markerType ~= "dungeon" and type(labelText) == "string" then
+            local dash = " \226\128\148 "
+            local cut = labelText:find(dash, 1, true)
+            local npc = cut and labelText:sub(1, cut - 1) or labelText
+            labelText = npc .. dash .. target.questTitle
+        end
+        GameTooltip:SetText(labelText or (target.markerType == "dungeon" and L("DUNGEON_ENTRANCE") or L("QUEST_GIVER")))
         local fallbackDetail = target.markerType == "dungeon" and L("DUNGEON_ENTRANCE") or L("QUEST_STARTS_HERE")
-        GameTooltip:AddLine(FreeText(target.detail) or fallbackDetail, 1, 0.82, 0.05)
+        GameTooltip:AddLine(detailText or fallbackDetail, 1, 0.82, 0.05)
         if IsTargetableNPCMarker(target) and self._fdjCanTarget then
             GameTooltip:AddLine(L("MAP_LEFT_TARGET"), 0.35, 1.00, 0.35)
         end
@@ -377,6 +438,13 @@ local function PositionMarker(marker, target, parent)
     marker.glow:SetShown(not isDungeon)
     marker.x:SetShown(not isDungeon)
     for _, shadow in ipairs(marker.outline) do shadow:SetShown(not isDungeon) end
+    if marker.backing then marker.backing:SetShown(not isDungeon) end
+    if marker.pulse then
+        marker.pulse:SetShown(not isDungeon)
+        if marker.pulseAnim then
+            if isDungeon then marker.pulseAnim:Stop() elseif not marker.pulseAnim:IsPlaying() then marker.pulseAnim:Play() end
+        end
+    end
     marker:Show()
 end
 
@@ -1133,6 +1201,8 @@ local function ShowRecordedLocationOnMap(loc, fallbackText)
     local target = {}
     for k, v in pairs(loc) do target[k] = v end
     target._fdjKey = key
+    target.questTitle = FDJ.pendingMarkerQuestTitle
+    FDJ.pendingMarkerQuestTitle = nil
     local existing = mapTargets[key]
     if existing and existing.raidMarkIndex then
         target.raidMarkIndex = existing.raidMarkIndex

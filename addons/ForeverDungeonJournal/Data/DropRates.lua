@@ -146,6 +146,35 @@ FDJ.DROP_RATES = {
     [7691]  = "25%",  -- Bloodstained Greaves
 
     -- --------------------------------------------------------
+    -- SCARLET MONASTERY: LIBRARY
+    -- --------------------------------------------------------
+    [7756]   = "33%", -- Dog Training Gloves
+    [3456]   = "33%", -- Dog Whistle
+    [7710]   = "34%", -- Loksey's Training Stick
+    [7714]   = "25%", -- Hypnotic Blade
+    [7713]   = "25%", -- Illusionary Rod
+    [274293] = "20%", -- Spellsever Crossbow
+    [7712]   = "30%", -- Mantle of Doan
+    [7711]   = "30%", -- Robe of Doan
+    [7146]   = "100%", -- The Scarlet Key
+
+    -- --------------------------------------------------------
+    -- RECENT BETA ENCOUNTER DROPS
+    -- --------------------------------------------------------
+    [273807] = "28%", -- Demolition Girdle (Kam Deepfury)
+    [273811] = "25%", -- Repurposed Rack (Hamhock)
+    [273817] = "22%", -- Graverobber's Shovel (Dextren Ward)
+    [273819] = "22%", -- Boneslicer (Dextren Ward)
+    [274043] = "25%", -- Irradiated Shield (Grubbis)
+    [274042] = "25%", -- Skullduggery Belt (Grubbis)
+    [274068] = "20%", -- Thermaplugg Medal of Honor (Crowd Pummeler)
+    [273026] = "22%", -- Garb of Florid Feathers (Shadetooth)
+    [274159] = "25%", -- Thorncursed Grips (Aggem Thorncurse)
+    [274149] = "30%", -- Thornweaver Drape (Roogug)
+    [273647] = "25%", -- Worgpelt Leggings (Wolf Master Nandos)
+    [6341]   = "20%", -- Eerie Stable Lantern (Commander Springvale)
+
+    -- --------------------------------------------------------
     -- RUINS OF LORDAERON (Beta 12.0)
     -- --------------------------------------------------------
     [270263] = "33%", -- Mantle of the Fallen Council

@@ -1359,6 +1359,39 @@ local routes = {
             },
         },
     },
+
+    ["Scarlet Monastery: Library"] = {
+        faction = "Both",
+        guide = {
+            en = {
+                title = "Dungeon Walkthrough: Scarlet Monastery Library",
+                subtitle = "Infiltrating the Athenaeum and Retrieving the Scarlet Key",
+                steps = {
+                    {
+                        title = "Arrive in Tirisfal Glades & Enter the Monastery",
+                        text = "Fly or ride to Tirisfal Glades and ascend the steps into the Scarlet Monastery courtyard. Enter the Library through the northeastern door (right side corridor).",
+                        map = { markerType = "location", mapID = 1420, x = 0.826, y = 0.338, label = "Scarlet Monastery Entrance", detail = "Monastery courtyard in northeast Tirisfal Glades." },
+                    },
+                    {
+                        title = "Clear the Huntsman's Cloister & Defeat Houndmaster Loksey",
+                        text = "Fight through the Hound Training Grounds. Pull Loksey and immediately kill his pack of Scarlet Tracking Hounds before they enrage under Bloodlust.",
+                    },
+                    {
+                        title = "Advance through the Gallery of Treasures",
+                        text = "Clear the Scarlet Chaplains and Sorcerers along the hallways. Mind patrol timings to avoid multiple packs pulling together.",
+                    },
+                    {
+                        title = "Defeat Arcanist Doan in the Athenaeum",
+                        text = "Engage Doan in the circular library. When he starts casting Detonation, immediately break line of sight behind the large pillars! Interrupt Arcane Explosion.",
+                    },
+                    {
+                        title = "Loot The Scarlet Key from Doan's Strongbox",
+                        text = "After defeating Arcanist Doan, open Doan's Strongbox on the desk behind him to claim The Scarlet Key, unlocking the Armory and Cathedral wings.",
+                    },
+                },
+            },
+        },
+    },
 }
 
 for dungeonName, route in pairs(routes) do

@@ -737,6 +737,9 @@ function FDJ.MakeLootRow(parent)
         local boss = dungeon and dungeon.bosses and dungeon.bosses[selectedBoss]
         local bossName = boss and boss.name or ""
         local isWish = FDJ.ToggleWishlist and FDJ.ToggleWishlist(itemID, parentRow.item[2], parentRow.item[4], parentRow.item[3], selectedDungeon, bossName)
+        if FDJ.UpdateFavouriteIndicator then
+            FDJ.UpdateFavouriteIndicator(parentRow, itemID)
+        end
         if PlaySound and SOUNDKIT and SOUNDKIT.IG_MAINMENU_OPTION_CHECKBOX_ON then
             PlaySound(SOUNDKIT.IG_MAINMENU_OPTION_CHECKBOX_ON)
         end
@@ -839,7 +842,19 @@ function FDJ.MakeLootRow(parent)
         if FDJ.UpdateItemComparison then FDJ.UpdateItemComparison(self) end
     end)
 
-    row:SetScript("OnClick", function(self)
+    row:RegisterForClicks("LeftButtonUp", "RightButtonUp")
+    row:SetScript("OnClick", function(self, button)
+        if button == "RightButton" then
+            if FDJ.ShowItemFavouriteMenu and self.item then
+                local selectedDungeon = FDJ.selectedDungeon or (ForeverDungeonJournalDB and ForeverDungeonJournalDB.lastDungeon)
+                local selectedBoss = FDJ.selectedBoss or (ForeverDungeonJournalDB and ForeverDungeonJournalDB.lastBoss) or 1
+                local dungeon = FDJ.DB and FDJ.DB[selectedDungeon]
+                local boss = dungeon and dungeon.bosses and dungeon.bosses[selectedBoss]
+                local bossName = boss and boss.name or ""
+                FDJ.ShowItemFavouriteMenu(self, self.item, selectedDungeon, bossName)
+                return
+            end
+        end
         if not self.item then return end
         local _, link = FDJ.ItemInfo(self.item[1])
 
@@ -1167,7 +1182,7 @@ function FDJ.RefreshLoot()
             row.name:SetText(itemName or item[2])
             row.name:SetTextColor(r, g, b)
 
-            local isWish = FDJ.IsWishlisted and FDJ.IsWishlisted(item[1])
+            local isWish = (FDJ.IsWishlisted and FDJ.IsWishlisted(item[1])) or (FDJ.IsFavouriteItem and FDJ.IsFavouriteItem(item[1]))
             if row.starButton then
                 if isWish then
                     row.starButton.icon:SetTexture("Interface\\AddOns\\ForeverDungeonJournal\\Media\\Star_Gold.tga")
@@ -1176,6 +1191,9 @@ function FDJ.RefreshLoot()
                     row.starButton.icon:SetTexture("Interface\\AddOns\\ForeverDungeonJournal\\Media\\Star_Empty.tga")
                     row.starButton.icon:SetVertexColor(0.40, 0.35, 0.25, 0.50)
                 end
+            end
+            if FDJ.UpdateFavouriteIndicator then
+                FDJ.UpdateFavouriteIndicator(row, item[1])
             end
 
             local isOwned = false

@@ -24,7 +24,7 @@ FDJ.BOSS_LEVELS = {
         ["Viscous Fallout"] = "30",
         ["Electrocutioner 6000"] = "32",
         ["Crowd Pummeler 9-60"] = "32",
-        ["Mekgineer Thermaplugg"] = "35",
+        ["Mekgineer Thermaplugg"] = "34",
         ["Dark Iron Ambassador"] = "33",
     },
     ["Razorfen Kraul"] = {
@@ -44,6 +44,10 @@ FDJ.BOSS_LEVELS = {
         ["Ironspine"] = "33",
         ["Bloodmage Thalnos"] = "34",
     },
+    ["Scarlet Monastery: Library"] = {
+        ["Houndmaster Loksey"] = "34",
+        ["Arcanist Doan"] = "37",
+    },
     ["Hall of Thanes"] = {
         ["Faldrim Anvilmar"] = "16",
         ["Magmatus"] = "16",
@@ -60,7 +64,7 @@ FDJ.BOSS_LEVELS = {
         ["Lordaeron Captain"] = "19",
     },
     ["Ragefire Chasm"] = {
-        ["Oggleflint"] = "16",
+        ["Oggleflint"] = "15",
         ["Taragaman the Hungerer"] = "16",
         ["Jergosh the Invoker"] = "16",
         ["Bazzalan"] = "16",
@@ -72,7 +76,7 @@ FDJ.BOSS_LEVELS = {
         ["Sneed"] = "20",
         ["Gilnid"] = "20",
         ["Mr. Smite"] = "20",
-        ["Captain Greenskin"] = "20",
+        ["Captain Greenskin"] = "21",
         ["Edwin VanCleef"] = "21",
         ["Cookie"] = "20",
     },
@@ -89,7 +93,7 @@ FDJ.BOSS_LEVELS = {
     },
     ["Shadowfang Keep"] = {
         ["Rethilgore"] = "20",
-        ["Fel Steed / Shadow Charger"] = "20-21",
+        ["Fel Steed / Shadow Charger"] = "19-21",
         ["Razorclaw the Butcher"] = "22",
         ["Baron Silverlaine"] = "24",
         ["Commander Springvale"] = "24",
@@ -98,7 +102,7 @@ FDJ.BOSS_LEVELS = {
         ["Arugal's Voidwalker"] = "24-25",
         ["Fenrus the Devourer"] = "25",
         ["Wolf Master Nandos"] = "25",
-        ["Archmage Arugal"] = "26",
+        ["Archmage Arugal"] = "24",
     },
     ["The Stockade"] = {
         ["Targorr the Dread"] = "24",
@@ -172,29 +176,100 @@ FDJ.STATIC_DISPLAY_IDS = {
     [3927] = 11179, -- Wolf Master Nandos
     [4275] = 2353,  -- Archmage Arugal
 
-    -- The Stockade
-    [1696] = 2362,  -- Targorr the Dread
-    [1666] = 2364,  -- Kam Deepfury
-    [1717] = 2363,  -- Hamhock
-    [1716] = 7118,  -- Bazil Thredd
-    [1665] = 7118,  -- Bazil Thredd (legacy ID)
-    [1663] = 2365,  -- Dextren Ward
-    [1720] = 2366,  -- Bruegal Ironknuckle
+    -- Resolved by the Forever client (build 70170) and bundled so these
+    -- portraits render immediately instead of waiting on the model resolver.
 
     -- Hall of Thanes
-    [247076] = 142826, -- Faldrim Anvilmar
-    [261306] = 142826, -- Faldrim Anvilmar (active beta NPC ID)
-    [255294] = 142840, -- Plunder
-    [261311] = 142840, -- Plunder (active beta NPC ID)
-    [255146] = 142837, -- Durgen Dirgehammer
-    [261319] = 142837, -- Durgen Dirgehammer (active beta NPC ID)
-    [255301] = 8243,   -- Magmatus
+    [247076] = 142826,  -- Faldrim Anvilmar
+    [261306] = 142826,  -- Faldrim Anvilmar (active beta NPC ID)
+    [255294] = 142840,  -- Plunder
+    [261311] = 142840,  -- Plunder (active beta NPC ID)
+    [255146] = 142837,  -- Durgen Dirgehammer
+    [261319] = 142837,  -- Durgen Dirgehammer (active beta NPC ID)
+    [255301] = 8243,    -- Magmatus
 
     -- Ruins of Lordaeron
-    [250660] = 144188, -- The Baron
-    [250483] = 144189, -- Witherfang
-    [250631] = 138667, -- The Abandoned
-    [256097] = 144170, -- Bjork
-    [250657] = 144175, -- Rath'mael
-    [256035] = 139455, -- Viktor the Vile
+    [250660] = 144188,  -- The Baron
+    [250483] = 144189,  -- Witherfang
+    [250631] = 138667,  -- The Abandoned
+    [256097] = 144170,  -- Bjork
+    [250657] = 144175,  -- Rath'mael
+    [256035] = 139455,  -- Viktor the Vile
+
+    -- The Stockade
+    [1696] = 517,       -- Targorr the Dread
+    [1666] = 825,       -- Kam Deepfury
+    [1717] = 3250,      -- Hamhock
+    [1663] = 2149,      -- Dextren Ward
+    [1716] = 1621,      -- Bazil Thredd
+    [1665] = 1621,      -- Bazil Thredd (legacy ID)
+    [1720] = 2142,      -- Bruegal Ironknuckle
+
+    -- Excavation Site: Wetlands
+    [260322] = 144209,  -- Saltspine
+    [260325] = 144210,  -- Shadetooth
+    [260326] = 144224,  -- Relic Guardian
+
+    -- City of Dalaran
+    [247126] = 145787,  -- Atrexis the Grave Knight
+    [245999] = 129891,  -- Arcane Anomaly
+    [246003] = 129894,  -- Fel Ancient
+    [246017] = 129954,  -- Unstable Sentinel
+    [246931] = 130220,  -- Mana Wraith
+    [246008] = 129895,  -- Mana Devourer
+    [247032] = 130235,  -- Lyn the Ignored
+    [246020] = 130061,  -- Shade of the Archmage
+
+    -- Gnomeregan
+    [7361] = 144378,    -- Grubbis
+    [7079] = 5497,      -- Viscous Fallout
+    [6235] = 6915,      -- Electrocutioner 6000
+    [6229] = 6774,      -- Crowd Pummeler 9-60
+    [7800] = 6980,      -- Mekgineer Thermaplugg
+    [6228] = 6669,      -- Dark Iron Ambassador
+
+    -- Razorfen Kraul
+    [6168] = 6110,      -- Roogug
+    [4424] = 6097,      -- Aggem Thorncurse
+    [4428] = 4644,      -- Death Speaker Jargba
+    [4420] = 4652,      -- Overlord Ramtusk
+    [4422] = 2450,      -- Agathelos the Raging
+    [4421] = 4642,      -- Charlga Razorflank
+    [4425] = 4735,      -- Blind Hunter
+    [4842] = 6102,      -- Earthcaller Halmgar
+
+    -- Scarlet Monastery: Graveyard
+    [3983] = 2044,      -- Interrogator Vishas
+    [6490] = 5534,      -- Azshir the Sleepless
+    [6488] = 5230,      -- Fallen Champion
+    [6489] = 5231,      -- Ironspine
+    [4543] = 11396,     -- Bloodmage Thalnos
+
+    -- Scarlet Monastery: Library
+    [3974] = 2040,      -- Houndmaster Loksey
+    [6487] = 5266,      -- Arcanist Doan
+}
+
+-- Trash mobs named as the source of a trash drop: name -> creature display ID
+-- (Wowhead Forever NPC pages). Used to draw their portraits on the loot row.
+FDJ.TRASH_MOB_DISPLAY_IDS = {
+    ["Druid of the Fang"] = 4211, -- npc 3840
+    ["Skeleton"] = 9786, -- npc 250618
+    ["Shrieking Banshee"] = 10728, -- npc 250620
+    ["Ragged Ghoul"] = 414, -- npc 250622
+    ["Skeletal Mage"] = 7550, -- npc 250624
+    ["Skeletal Soldier"] = 7848, -- npc 250626
+    ["Ghoul"] = 1065, -- npc 250627
+    ["Plague Ghoul"] = 559, -- npc 250630
+    ["Flesh Golem"] = 1693, -- npc 255109
+    ["Fallen Necromancer"] = 9785, -- npc 255964
+    ["Goblin Engineer"] = 7109, -- npc 622
+    ["Defias Overseer"] = 2316, -- npc 634
+    ["Defias Blackguard"] = 2314, -- npc 636
+    ["Defias Pirate"] = 2347, -- npc 657
+    ["Defias Evoker"] = 2318, -- npc 1729
+    ["Defias Squallshaper"] = 2349, -- npc 1732
+    ["Defias Strip Miner"] = 2438, -- npc 4416
+    ["Defias Taskmaster"] = 2440, -- npc 4417
+    ["Defias Wizard"] = 2447, -- npc 4418
 }

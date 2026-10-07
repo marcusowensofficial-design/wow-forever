@@ -419,7 +419,7 @@ end
 
 function FDJ.CreateHomeFactionButton(parent, faction, texturePath)
     local b = CreateFrame("Button", nil, parent, "BackdropTemplate")
-    b:SetSize(34, 26)
+    b:SetSize(28, 22)
     FDJ.SetBackdrop(
         b,
         "Interface\\Buttons\\WHITE8X8",
@@ -429,7 +429,7 @@ function FDJ.CreateHomeFactionButton(parent, faction, texturePath)
     )
     b.faction = faction
     b.icon = b:CreateTexture(nil, "ARTWORK")
-    b.icon:SetSize(22, 22)
+    b.icon:SetSize(18, 18)
     b.icon:SetPoint("CENTER")
     b.icon:SetTexture(texturePath)
     b.icon:SetTexCoord(0.06, 0.94, 0.06, 0.94)
@@ -459,9 +459,13 @@ function FDJ.PositionHomeFactionButtons()
     local frame = FDJ.frame or _G["ForeverDungeonJournalFrame"]
     if not frame or not frame.homeAllianceButton or not frame.homeHordeButton or not frame.homeTitle then return end
     frame.homeAllianceButton:ClearAllPoints()
-    frame.homeAllianceButton:SetPoint("LEFT", frame.homeTitle, "RIGHT", 14, 0)
+    frame.homeAllianceButton:SetPoint("TOPLEFT", frame.homeTitle, "BOTTOMLEFT", 0, -8)
     frame.homeHordeButton:ClearAllPoints()
     frame.homeHordeButton:SetPoint("LEFT", frame.homeAllianceButton, "RIGHT", 6, 0)
+    if frame.homeSubtitle then
+        frame.homeSubtitle:ClearAllPoints()
+        frame.homeSubtitle:SetPoint("LEFT", frame.homeHordeButton, "RIGHT", 10, 0)
+    end
 end
 
 function FDJ.UpdateHomeFactionButtons()
