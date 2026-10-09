@@ -9,12 +9,14 @@ A comprehensive, responsive tracking hub, news portal, and character planner for
 ## 🌟 Features & Highlights
 
 ### 1. 🧙 Interactive Class & Race Directory & Compatibility Matrix
+
 - **Browse by Class**: Complete role profiles, resource mechanics, armor proficiencies, and all eligible races.
 - **Browse by Race**: Full lore, faction allegiance, racial mounts, and the standardized **2 Active + 2 Passive** racial toolkit.
 - **Full Compatibility Matrix Table**: 9×9 responsive cross-comparison table with instant faction filters (`All Combos`, `Alliance Only`, `Horde Only`, `✦ Only New in Forever`).
 - **All 7 New Combinations**: Undead Paladin (*Forsaken Charger* mount), Dwarf Shaman (Wildhammer), Human Hunter, Gnome Priest, Orc Mage, Troll Warlock, and The Skyborne (*Warrior, Hunter, Rogue, Druid*).
 
 ### 2. ⏱️ Operations Hub & Real-Time Countdowns
+
 - Live countdown clocks for:
   - **Beta Phase 2 (L30 Cap)**: October 1, 2026 (Patch 1.60.5 Deploys Today!).
   - **Beta Ends**: October 21, 2026 (35-Day Closed Beta concludes).
@@ -23,6 +25,7 @@ A comprehensive, responsive tracking hub, news portal, and character planner for
 - **35-Day Beta Duration & Testing Roadmap**: Phase 1 (L20 Cap, Sept 17 – Oct 1), Phase 2 (L30 Cap, Oct 1 – Oct 21), and Pre-Launch polish tracking.
 
 ### 3. 🛡️ Verified Classic+ Rules & Quality of Life Grid
+
 - 16 core gameplay pillars including:
   - No World Buffs in Raids (anti-Chronoboon meta)
   - Zero WoW Tokens / Paid Boosts
@@ -33,20 +36,25 @@ A comprehensive, responsive tracking hub, news portal, and character planner for
   - Ray-Traced Global Illumination & Classic 2004 visual toggle
 
 ### 4. 🔨 The 9 Primary Profession Combat Passives & Camping Hub
+
 - Permanent character perks for all 9 primary professions (*Toughness, Lifeblood, Master of Anatomy, Weapon Honing, Mixology, Spirit Weaving, Fur Lining, Ring Enchants, Engineering Tinkers*).
 - Cooperative Camping System bonuses.
 
 ### 5. 📰 Intel & Dispatches Wire
+
 - Integrated updates from Wowhead, Method.gg, MrGM, and Blizzard Official.
 - Search, filter by source, and local storage personal intel logger.
 
 ### 6. 📋 Legacy Calculator & Roster Tracker
+
 - Interactive 16-point Legacy Talent Calculator.
 - Beta Phase 2 (Level 30) milestone checklist with percentage tracker.
 - Squad and Guild roster planner with role breakdown.
 
 ### 7. 🛡️ Official In-House Addon Suite (Camelot 12.0 Engine / TOC 16001)
+
 Developed and maintained in `addons/` by Marcus Owens & the WoW Forever Addon Team:
+
 - **`ForeverPlates`**: Minimalist zero-taint pixel nameplates, dynamic threat coloring, and C-side text.
 - **`Forever Nameplates Castbars` (`Foreverplatescastbars`)**: Sub-pixel enemy nameplate castbars, latency queue markers, and uninterruptible spell shields.
 - **`ForeverLiquid`**: Cyberpunk neon fluid XP/Rep reservoir, real-time gold cashflow ledger, and 5-instance/hr lockout radar.
@@ -60,6 +68,7 @@ Developed and maintained in `addons/` by Marcus Owens & the WoW Forever Addon Te
 ## 🚀 Deployment
 
 ### Deploy on Render (Static Site)
+
 This project is 100% static (HTML, CSS, and Vanilla JavaScript) with zero build dependencies.
 
 1. Log in to your [Render Dashboard](https://dashboard.render.com).
@@ -77,6 +86,7 @@ A `render.yaml` Blueprint is included in this repository for automatic deploymen
 ---
 
 ## 💻 Local Development
+
 Simply open `index.html` in any modern web browser or serve it with any local web server:
 
 ```bash
@@ -90,4 +100,5 @@ npx serve .
 ---
 
 ## 📜 License
+
 Created for community theorycrafting and tracking World of Warcraft: Forever. World of Warcraft and Warcraft are registered trademarks of Blizzard Entertainment, Inc.
