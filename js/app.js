@@ -34,4 +34,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 6. Class Deep Dives
   if (typeof initClassDeepDives === 'function') initClassDeepDives();
+
+  // 7. Interactive Beta Tools & Reverse-Engineered Features
+  if (typeof initBiSLists === 'function') initBiSLists();
+  if (typeof initTierListMaker === 'function') initTierListMaker();
+  if (typeof initDownrankCalculator === 'function') initDownrankCalculator();
+  if (typeof initHiddenItemsTracker === 'function') initHiddenItemsTracker();
+  if (typeof initUniversalSearch === 'function') initUniversalSearch();
+  if (typeof initGuidesHub === 'function') initGuidesHub();
+  if (typeof initMurlocCounter === 'function') initMurlocCounter();
 });

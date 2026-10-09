@@ -7,6 +7,7 @@
   <meta name="description" content="Track World of Warcraft: Forever (Classic+) news, Beta Phase 2 Level 30 cap unlock, Wowhead datamining, Excavation Site 4, City of Dalaran, the Skyborne race, and your progression.">
   <meta name="theme-color" content="#07090e">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/tools.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚔️</text></svg>">
 </head>
 <body>
@@ -29,6 +30,29 @@
   </aside>
 
   <div class="app-container">
+
+    <!-- Masthead Top Utility Bar -->
+    <div class="top-utility-bar">
+      <div class="utility-left">
+        <div class="beta-status-pill">
+          <span class="beta-pulse-dot"></span>
+          <span>Beta Build 1.60.6.71890 • Realms Online</span>
+        </div>
+        <button type="button" class="murloc-counter-btn" id="murloc-camp-btn" title="Pull the murloc camp!">
+          <span class="murloc-icon">🐟</span>
+          <span id="murloc-count">3,842</span>
+          <span class="murloc-label">murlocs online</span>
+        </button>
+      </div>
+      <div class="utility-right">
+        <button type="button" class="header-search-btn" id="btn-open-search" aria-label="Search Forever">
+          <span class="search-icon">🔍</span> Search Forever <kbd>/</kbd>
+        </button>
+        <button type="button" class="header-guides-btn" id="btn-open-guides" aria-label="Classic+ Guides">
+          <span class="guides-icon">📖</span> Classic+ Guides
+        </button>
+      </div>
+    </div>
 
     <!-- Header & Hero -->
     <header class="header-hero">
@@ -72,11 +96,20 @@
         <button class="nav-tab-btn active" data-tab="overview">
           <span>⚡</span> Operations Hub
         </button>
+        <button class="nav-tab-btn" data-tab="bis">
+          <span>🛡️</span> Level 30 BiS
+        </button>
         <button class="nav-tab-btn" data-tab="news">
           <span>📰</span> News & Dispatches
         </button>
         <button class="nav-tab-btn" data-tab="codex">
           <span>📜</span> Content Codex
+        </button>
+        <button class="nav-tab-btn" data-tab="tierlist">
+          <span>📊</span> Tier List Maker
+        </button>
+        <button class="nav-tab-btn" data-tab="downrank">
+          <span>🧪</span> Downrank Calc
         </button>
         <button class="nav-tab-btn" data-tab="planner">
           <span>🧙</span> Class & Race Planner
@@ -2268,6 +2301,21 @@
 
     </section>
 
+    <!-- TAB 9: LEVEL 30 BETA BIS LISTS -->
+    <section id="tab-bis" class="tab-content" aria-label="Beta Level 30 BiS Lists">
+      <div id="bis-container"></div>
+    </section>
+
+    <!-- TAB 10: INTERACTIVE TIER LIST MAKER -->
+    <section id="tab-tierlist" class="tab-content" aria-label="Interactive Tier List Maker">
+      <div id="tierlist-container"></div>
+    </section>
+
+    <!-- TAB 11: SPELL DOWNRANKING CALCULATOR -->
+    <section id="tab-downrank" class="tab-content" aria-label="Spell Downranking Calculator">
+      <div id="downranking-container"></div>
+    </section>
+
   </div>
 
   <!-- Update Squad Member Professions Modal -->
@@ -2349,6 +2397,44 @@
     </div>
   </div>
 
+  <!-- Universal Search Command Palette Modal -->
+  <div id="universal-search-modal" class="search-modal-backdrop" hidden role="dialog" aria-modal="true">
+    <div class="search-modal-container">
+      <div class="search-modal-header">
+        <span style="margin-right: 0.75rem; font-size: 1.2rem;">🔍</span>
+        <input type="text" id="universal-search-input" class="search-input-field" placeholder="Search spells, talents, dungeons, items, classes, guides... (Press Esc to close)" autocomplete="off">
+        <button type="button" id="universal-search-close" style="background:none;border:none;color:#94a3b8;font-size:1.2rem;cursor:pointer;">✕</button>
+      </div>
+      <div id="universal-search-results" class="search-modal-results">
+        <!-- Results populated dynamically -->
+      </div>
+      <div class="search-modal-footer">
+        <span>Use <kbd>↑</kbd> <kbd>↓</kbd> to navigate, <kbd>Enter</kbd> to select</span>
+        <span>Press <kbd>Esc</kbd> to close</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Boss Loot & Encounter Atlas Modal -->
+  <div id="boss-loot-modal" class="modal-backdrop" hidden role="dialog" aria-modal="true">
+    <div class="modal-container" style="max-width: 840px;">
+      <button id="boss-loot-close" class="modal-close-btn" aria-label="Close Modal">✕</button>
+      <div id="boss-loot-modal-content">
+        <!-- Injected dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Curated Guides Modal -->
+  <div id="guides-hub-modal" class="modal-backdrop" hidden role="dialog" aria-modal="true">
+    <div class="modal-container" style="max-width: 880px;">
+      <button id="guides-hub-close" class="modal-close-btn" aria-label="Close Modal">✕</button>
+      <div id="guides-hub-modal-content">
+        <!-- Injected dynamically -->
+      </div>
+    </div>
+  </div>
+
   <!-- Footer -->
   <footer class="site-footer">
     <div class="app-container" style="padding-bottom: 0;">
@@ -2375,6 +2461,8 @@
   <!-- 1. Data Layer -->
   <script src="js/data/core-data.js"></script>
   <script src="js/data/races-classes.js"></script>
+  <script src="js/data/tools-data.js"></script>
+  <script src="js/data/bis-data.js"></script>
   <script src="js/data/deepdives/hunter.js"></script>
   <script src="js/data/deepdives/shaman.js"></script>
   <script src="js/data/deepdives/mage.js"></script>
@@ -2393,6 +2481,12 @@
   <script src="js/modules/camping.js"></script>
   <script src="js/modules/planner.js"></script>
   <script src="js/modules/deepdives.js"></script>
+  <script src="js/modules/tierlist.js"></script>
+  <script src="js/modules/downranking.js"></script>
+  <script src="js/modules/bis.js"></script>
+  <script src="js/modules/hiddenitems.js"></script>
+  <script src="js/modules/guides.js"></script>
+  <script src="js/modules/search.js"></script>
 
   <!-- 3. Core App Orchestrator & Tracker -->
   <script src="js/app.js"></script>

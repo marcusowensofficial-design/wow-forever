@@ -919,12 +919,10 @@ function FL:InitializeUI()
 
     durGauge:SetScript("OnMouseUp", function(self, button)
         if button == "LeftButton" then
-            if FL.ProtectTextStatusBar then
-                FL.ProtectTextStatusBar()
+            if InCombatLockdown and InCombatLockdown() then
+                return
             end
-            if CharacterMicroButton and CharacterMicroButton.Click then
-                pcall(CharacterMicroButton.Click, CharacterMicroButton)
-            elseif ToggleCharacter then
+            if ToggleCharacter then
                 pcall(ToggleCharacter, "PaperDollFrame")
             elseif CharacterFrame then
                 if CharacterFrame:IsShown() then
@@ -2142,16 +2140,22 @@ function FL:UpdateHUD()
             local barWidth = hud.xpBar:GetWidth()
             if hud.bubbleTicks then
                 local showBubbles = ForeverLiquidDB.profile.showXPBubbles ~= false
+                local scale = hud.xpBar:GetEffectiveScale()
+                if not scale or scale <= 0 then scale = 1 end
+                local pixel = 1 / scale
+                -- Perfectly calibrated 2-pixel physical width to eliminate anti-aliasing blur
+                local tickWidth = 2 * pixel
+                
                 for i = 1, 19 do
                     local tick = hud.bubbleTicks[i]
                     if showBubbles and barWidth and barWidth > 0 then
-                        local x = math.floor(barWidth * (i * 0.05))
-                        local isHalfway = (i == 10)
-                        local tickW = isHalfway and 2 or 1.5
+                        -- Snap to exact physical monitor pixel coordinates
+                        local screenX = math.floor((barWidth * (i * 0.05)) * scale + 0.5)
+                        local startX = (screenX - 1) * pixel
                         tick:ClearAllPoints()
-                        tick:SetPoint("TOPLEFT", hud.xpBar, "TOPLEFT", x - 1, 0)
-                        tick:SetPoint("BOTTOMLEFT", hud.xpBar, "BOTTOMLEFT", x - 1, 0)
-                        tick:SetWidth(tickW)
+                        tick:SetPoint("TOPLEFT", hud.xpBar, "TOPLEFT", startX, 0)
+                        tick:SetPoint("BOTTOMLEFT", hud.xpBar, "BOTTOMLEFT", startX, 0)
+                        tick:SetWidth(tickWidth)
                         tick:SetVertexColor(0.01, 0.02, 0.03, 1.0)
                         tick:Show()
                     else

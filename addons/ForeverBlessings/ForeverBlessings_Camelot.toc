@@ -1,12 +1,13 @@
 ## Interface: 16001
-## Title: Forever|cffffd700Blessings|r
-## Notes: 60-minute Paladin blessing management, raid assignment matrix & auto-buff coordinator for WoW Forever (Camelot 12.0).
-## Author: Marcus Owens & WoW Forever Addon Team
-## Version: 1.0.0
+## Title: |cffffcc00Forever|r|cffffffffBlessings|r
+## Notes: Sleek 1-Hour Blessing coordinator, smart buff matrix, and Symbol of Kings tracker for WoW Forever.
+## Author: Marco & Antigravity
+## Version: 1.1.0
 ## SavedVariables: ForeverBlessingsDB
 ## LoadSavedVariablesFirst: true
-## IconTexture: Interface\Icons\Spell_Holy_MagicalSentry
-## Category-enUS: Paladin
+## IconTexture: Interface\Icons\Spell_Holy_GreaterBlessingofKings
+## Category-enUS: Buffs
 
-core.lua
-gui.lua
+Constants.lua
+Core.lua
+UI.lua

@@ -17,104 +17,13 @@ _G.FL = FL
 _G.ForeverLiquidDB = _G.ForeverLiquidDB or {}
 
 -------------------------------------------------------------------------------
--- 0. Secret Value Taint Protection (Camelot / 12.0 TextStatusBar Safeguard)
+-- 0. Secret Value Taint Protection (No-Op Reference)
 -------------------------------------------------------------------------------
--- In WoW Forever (12.0 / Camelot), querying status bar metrics during tainted
--- execution returns <secret number> values. Blizzard's TextStatusBar.lua:110
--- attempts raw comparisons (valueMax > 0), causing fatal Lua errors whenever
--- CharacterFrame or other panels are opened/closed while execution is tainted.
-local function ProtectTextStatusBar()
-    local function IsSecret(v)
-        if v == nil then return false end
-        if issecretvalue and issecretvalue(v) then
-            return true
-        end
-        local ok = pcall(function() return v and v > 0 end)
-        return not ok
-    end
-
-    local function GuardBar(bar)
-        if not bar or type(bar) ~= "table" then return end
-        
-        -- Guard UpdateTextStringWithValues on the bar
-        if type(bar.UpdateTextStringWithValues) == "function" and not bar._FLGuarded then
-            bar._FLGuarded = true
-            local orig = bar.UpdateTextStringWithValues
-            bar.UpdateTextStringWithValues = function(self, textString, value, valueMin, valueMax)
-                if IsSecret(value) or IsSecret(valueMax) or IsSecret(valueMin) then
-                    return
-                end
-                return orig(self, textString, value, valueMin, valueMax)
-            end
-        end
-
-        -- Guard UpdateTextString on the bar
-        if type(bar.UpdateTextString) == "function" and not bar._FLGuardedUTS then
-            bar._FLGuardedUTS = true
-            local origUTS = bar.UpdateTextString
-            bar.UpdateTextString = function(self)
-                local textString = self.TextString
-                if textString then
-                    local value = self.GetValue and self:GetValue()
-                    local valueMin, valueMax = (self.GetMinMaxValues and self:GetMinMaxValues()) or 0, 0
-                    if IsSecret(value) or IsSecret(valueMax) or IsSecret(valueMin) then
-                        return
-                    end
-                    return self:UpdateTextStringWithValues(textString, value, valueMin, valueMax)
-                end
-            end
-        end
-
-        -- Guard ShowStatusBarText on the bar
-        if type(bar.ShowStatusBarText) == "function" and not bar._FLGuardedSST then
-            bar._FLGuardedSST = true
-            local origSST = bar.ShowStatusBarText
-            bar.ShowStatusBarText = function(self)
-                local ok = pcall(origSST, self)
-                if not ok and self and self.TextString and not self.forceHideText then
-                    pcall(self.TextString.Show, self.TextString)
-                end
-            end
-        end
-    end
-
-    local function GuardTree(frame, depth)
-        if not frame or (depth and depth > 6) then return end
-        GuardBar(frame)
-        if frame.GetChildren then
-            local children = { frame:GetChildren() }
-            for _, child in ipairs(children) do
-                GuardTree(child, (depth or 0) + 1)
-            end
-        end
-    end
-
-    -- 1. Guard TextStatusBarMixin table (for any newly created frames)
-    if TextStatusBarMixin then
-        GuardBar(TextStatusBarMixin)
-    end
-
-    -- 2. Guard global TextStatusBar functions if present
-    if type(_G.TextStatusBar_UpdateTextStringWithValues) == "function" and not _G.TextStatusBar_UpdateTextStringWithValues_FLGuarded then
-        _G.TextStatusBar_UpdateTextStringWithValues_FLGuarded = true
-        local origGlobal = _G.TextStatusBar_UpdateTextStringWithValues
-        _G.TextStatusBar_UpdateTextStringWithValues = function(statusFrame, textString, value, valueMin, valueMax)
-            if IsSecret(value) or IsSecret(valueMax) or IsSecret(valueMin) then
-                return
-            end
-            return origGlobal(statusFrame, textString, value, valueMin, valueMax)
-        end
-    end
-
-    -- 3. Guard CharacterFrame, PaperDollFrame, and known UI frames
-    if CharacterFrame then GuardTree(CharacterFrame) end
-    if PaperDollFrame then GuardTree(PaperDollFrame) end
-    if PlayerFrame then GuardTree(PlayerFrame) end
-    if PetFrame then GuardTree(PetFrame) end
-    if TargetFrame then GuardTree(TargetFrame) end
-end
-ProtectTextStatusBar()
-FL.ProtectTextStatusBar = ProtectTextStatusBar
+-- In WoW Forever (12.0 / Camelot), hooking or replacing methods on native Blizzard
+-- unit frames (PlayerFrame, TargetFrame, PetFrame) or TextStatusBarMixin directly
+-- taints execution, triggering fatal 'attempt to perform arithmetic on local currValue'
+-- errors in UnitFrameManaBar_Update. We leave native Blizzard frames completely untainted.
+FL.ProtectTextStatusBar = function() end
 
 -------------------------------------------------------------------------------
 -- 1. Ruleset-as-Realm Detection (WoW Forever Standard)
@@ -2638,7 +2547,6 @@ eventFrame:RegisterEvent("UNIT_SPELLCAST_SUCCEEDED")
 
 eventFrame:SetScript("OnEvent", function(self, event, ...)
     if event == "ADDON_LOADED" then
-        ProtectTextStatusBar()
         local loadedAddon = ...
         if loadedAddon == ADDON_NAME then
             _G.ForeverLiquidDB = MergeDefaults(DEFAULT_SETTINGS, _G.ForeverLiquidDB)
@@ -2689,7 +2597,6 @@ eventFrame:SetScript("OnEvent", function(self, event, ...)
         end
         
     elseif event == "PLAYER_LOGIN" then
-        ProtectTextStatusBar()
         local restored = false
         if ForeverLiquidDB.profile and ForeverLiquidDB.profile.autoResumeSession then
             restored = FL:RestoreSession(false)

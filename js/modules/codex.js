@@ -1,6 +1,7 @@
 /**
  * World of Warcraft: Forever - Content Codex & Legacy Calculator Module
- * Handles Codex Sub-Panels, Dungeons Explorer, Zones, Level Curve, and Legacy Calculator.
+ * Handles Codex Sub-Panels, Dungeons Explorer, Interactive Level Timeline Slider,
+ * Boss Encounters & Loot Atlas Modal, Zones, and Legacy Calculator.
  */
 
 /* ==========================================================================
@@ -24,6 +25,8 @@ function initCodex() {
 
   renderClassCombos();
   renderDungeons(WOW_FOREVER_DATA.dungeonsAndRaids);
+  renderDungeonTimelineSlider();
+  setupDungeonModalEvents();
 
   const dungeonFilters = document.querySelectorAll('.dungeon-filter-btn');
   dungeonFilters.forEach(btn => {
@@ -71,7 +74,8 @@ function renderDungeons(items) {
   if (!container) return;
 
   container.innerHTML = items.map(d => `
-    <div class="dungeon-card ${d.playableNow ? 'active-beta' : ''} ${d.type.includes('Raid') ? 'is-raid' : ''}">
+    <div class="dungeon-card ${d.playableNow ? 'active-beta' : ''} ${d.type.includes('Raid') ? 'is-raid' : ''}"
+         onclick="openDungeonLootModal('${d.id}')">
       <div>
         <div class="dungeon-card-header">
           <span class="dungeon-level-badge">${d.levelRange}</span>
@@ -90,10 +94,219 @@ function renderDungeons(items) {
         <div class="loot-tags">
           ${d.lootHighlights.map(loot => `<span class="loot-tag">✦ ${escapeHtml(loot)}</span>`).join('')}
         </div>
+        <div style="margin-top: 0.8rem; text-align: right;">
+          <span class="dg-inspect-btn">Inspect Boss Loot Tables ➔</span>
+        </div>
       </div>
     </div>
   `).join('');
 }
+
+/**
+ * Interactive Dungeons Timeline Slider (13-60)
+ */
+function renderDungeonTimelineSlider() {
+  const container = document.getElementById('dungeon-timeline-slider-container');
+  if (!container) return;
+
+  const newForeverDungeons = [
+    { id: "dungeon-01", name: "Hall of Thanes", min: 13, max: 18, zone: "Ironforge", isNew: true },
+    { id: "dungeon-02", name: "Ruins of Lordaeron", min: 15, max: 20, zone: "Tirisfal", isNew: true },
+    { id: "dungeon-03", name: "Excavation Site 4", min: 26, max: 31, zone: "Wetlands", isNew: true },
+    { id: "dungeon-04", name: "City of Dalaran", min: 28, max: 33, zone: "Alterac", isNew: true },
+    { id: "dungeon-05", name: "The Drowned City", min: 35, max: 40, zone: "Stranglethorn", isNew: true },
+    { id: "dungeon-06", name: "Krol'dok Stronghold", min: 40, max: 45, zone: "Riverglades", isNew: true },
+    { id: "dungeon-07", name: "Alcaz Island Prison", min: 48, max: 53, zone: "Dustwallow", isNew: true },
+    { id: "dungeon-08", name: "Blackmaw Hold", min: 55, max: 60, zone: "Azshara", isNew: true },
+    { id: "dungeon-09", name: "Shaper's Terrace", min: 58, max: 60, zone: "Un'Goro", isNew: true }
+  ];
+
+  const classicDungeons = [
+    { id: "c-rfc", name: "Ragefire Chasm", min: 13, max: 18, zone: "Orgrimmar" },
+    { id: "c-dm", name: "The Deadmines", min: 17, max: 26, zone: "Westfall" },
+    { id: "c-wc", name: "Wailing Caverns", min: 17, max: 24, zone: "The Barrens" },
+    { id: "c-sfk", name: "Shadowfang Keep", min: 22, max: 30, zone: "Silverpine" },
+    { id: "c-bfd", name: "Blackfathom Deeps", min: 24, max: 32, zone: "Ashenvale" },
+    { id: "c-stocks", name: "The Stockade", min: 24, max: 32, zone: "Stormwind" },
+    { id: "c-gnomer", name: "Gnomeregan", min: 29, max: 38, zone: "Dun Morogh" },
+    { id: "c-rfk", name: "Razorfen Kraul", min: 29, max: 38, zone: "The Barrens" },
+    { id: "c-sm", name: "Scarlet Monastery (All Wings)", min: 30, max: 45, zone: "Tirisfal" },
+    { id: "c-rfd", name: "Razorfen Downs", min: 37, max: 46, zone: "The Barrens" },
+    { id: "c-ulda", name: "Uldaman", min: 41, max: 51, zone: "Badlands" },
+    { id: "c-zf", name: "Zul'Farrak", min: 44, max: 54, zone: "Tanaris" },
+    { id: "c-mara", name: "Maraudon", min: 46, max: 55, zone: "Desolace" },
+    { id: "c-st", name: "Sunken Temple", min: 50, max: 60, zone: "Swamp of Sorrows" },
+    { id: "c-brd", name: "Blackrock Depths", min: 52, max: 60, zone: "Blackrock Mountain" },
+    { id: "c-lbrs", name: "Lower Blackrock Spire", min: 55, max: 60, zone: "Blackrock Mountain" },
+    { id: "c-scholo", name: "Scholomance", min: 58, max: 60, zone: "WPL" },
+    { id: "c-strat", name: "Stratholme", min: 58, max: 60, zone: "EPL" },
+    { id: "c-dm-all", name: "Dire Maul (E, N, W)", min: 58, max: 60, zone: "Feralas" }
+  ];
+
+  let currentLevel = 30;
+
+  const renderTimeline = (lvl) => {
+    container.innerHTML = `
+      <div class="timeline-control-bar">
+        <div class="timeline-slider-label">
+          <span>Filter by Player Level:</span>
+          <strong class="timeline-level-val">Level ${lvl}</strong>
+        </div>
+        <input type="range" min="13" max="60" value="${lvl}" class="timeline-slider-input" id="dg-timeline-range" />
+      </div>
+
+      <!-- LANE 1: NEW IN FOREVER -->
+      <div class="timeline-lane-block">
+        <h4 class="timeline-lane-title">
+          <span class="badge-forever-new">✦ 9 New in Forever</span>
+          <small>Original dungeons built for Classic+</small>
+        </h4>
+        <div class="timeline-bars-track">
+          ${newForeverDungeons.map(d => {
+            const inRange = lvl >= d.min && lvl <= d.max;
+            const leftPct = ((d.min - 13) / (60 - 13)) * 100;
+            const widthPct = Math.max(8, ((d.max - d.min) / (60 - 13)) * 100);
+
+            return `
+              <div class="timeline-bar-pill new-forever ${inRange ? 'is-active-range' : ''}"
+                   style="left: ${leftPct}%; width: ${widthPct}%;"
+                   title="${d.name} (${d.min}–${d.max}) • ${d.zone}"
+                   onclick="openDungeonLootModal('${d.id}')">
+                <span class="timeline-bar-text">${d.name} (${d.min}–${d.max})</span>
+              </div>
+            `;
+          }).join('')}
+        </div>
+      </div>
+
+      <!-- LANE 2: FROM CLASSIC -->
+      <div class="timeline-lane-block">
+        <h4 class="timeline-lane-title">
+          <span class="badge-classic-staple">Classic Staples (26 Wings)</span>
+          <small>Preserved and retuned for Classic+</small>
+        </h4>
+        <div class="timeline-bars-track classic-track">
+          ${classicDungeons.map(d => {
+            const inRange = lvl >= d.min && lvl <= d.max;
+            const leftPct = ((d.min - 13) / (60 - 13)) * 100;
+            const widthPct = Math.max(6, ((d.max - d.min) / (60 - 13)) * 100);
+
+            return `
+              <div class="timeline-bar-pill classic ${inRange ? 'is-active-range' : ''}"
+                   style="left: ${leftPct}%; width: ${widthPct}%;"
+                   title="${d.name} (${d.min}–${d.max}) • ${d.zone}"
+                   onclick="openDungeonLootModal('${d.id}')">
+                <span class="timeline-bar-text">${d.name} (${d.min}–${d.max})</span>
+              </div>
+            `;
+          }).join('')}
+        </div>
+      </div>
+    `;
+
+    const slider = document.getElementById('dg-timeline-range');
+    if (slider) {
+      slider.addEventListener('input', (e) => {
+        currentLevel = parseInt(e.target.value, 10);
+        renderTimeline(currentLevel);
+      });
+    }
+  };
+
+  renderTimeline(currentLevel);
+}
+
+function setupDungeonModalEvents() {
+  const modal = document.getElementById('dungeon-loot-modal');
+  const closeBtn = document.getElementById('dungeon-loot-modal-close');
+  if (!modal) return;
+
+  if (closeBtn) {
+    closeBtn.addEventListener('click', () => modal.classList.remove('is-open'));
+  }
+
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) modal.classList.remove('is-open');
+  });
+}
+
+window.openDungeonLootModal = function(dungeonId) {
+  const modal = document.getElementById('dungeon-loot-modal');
+  const body = document.getElementById('dungeon-loot-modal-body');
+  if (!modal || !body) return;
+
+  const detailed = window.WOW_TOOLS_DATA?.detailedDungeonLoot?.[dungeonId];
+  const general = WOW_FOREVER_DATA?.dungeonsAndRaids?.find(d => d.id === dungeonId);
+
+  if (!detailed && !general) {
+    // Fallback for classic dungeons
+    body.innerHTML = `
+      <div style="padding: 1.5rem; text-align: center;">
+        <h3>Classic Dungeon Encounter</h3>
+        <p style="color: var(--text-muted);">Standard Classic Era loot tables apply with normalized itemization in Build 1.60.6.</p>
+      </div>
+    `;
+    modal.classList.add('is-open');
+    return;
+  }
+
+  const name = detailed?.name || general?.name;
+  const levelRange = detailed?.levelRange || general?.levelRange;
+  const zone = detailed?.zone || general?.zone;
+  const entrance = detailed?.entrance || general?.entrance || 'Main zone entrance.';
+  const bosses = detailed?.bosses || [];
+
+  body.innerHTML = `
+    <div class="dg-modal-header">
+      <span class="dungeon-level-badge">${levelRange}</span>
+      <h2 class="dg-modal-title">${escapeHtml(name)}</h2>
+      <p class="dg-modal-zone">📍 ${escapeHtml(zone)}</p>
+      <div class="dg-modal-entrance">
+        <strong>Entrance Route:</strong> <span>${escapeHtml(entrance)}</span>
+      </div>
+      ${detailed ? `
+        <div class="dg-modal-meta-row">
+          <span>Bosses: <strong>${detailed.bossCount}</strong></span>
+          <span>Drops Recorded: <strong>${detailed.dropsSeen} / ${detailed.dropsCount} (Beta Confirmed)</strong></span>
+          <span style="color: #34d399;">✓ Build 1.60.6 Verified</span>
+        </div>
+      ` : ''}
+    </div>
+
+    <div class="dg-modal-boss-list">
+      ${bosses.length > 0 ? bosses.map(boss => `
+        <div class="dg-boss-block">
+          <div class="dg-boss-name-row">
+            <h4>${escapeHtml(boss.name)}</h4>
+            <span class="dg-boss-title">${escapeHtml(boss.title || 'Boss')}</span>
+          </div>
+          <div class="dg-loot-table-grid">
+            ${boss.drops.map(item => `
+              <div class="dg-loot-item-card">
+                <div class="dg-loot-item-top">
+                  <strong class="dg-loot-name ${item.quality}">${escapeHtml(item.name)}</strong>
+                  <span class="dg-loot-ilvl">iLvl ${item.iLvl}</span>
+                </div>
+                <div class="dg-loot-slot">${escapeHtml(item.slot)}</div>
+                <p class="dg-loot-stats">${escapeHtml(item.stats)}</p>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      `).join('') : `
+        <div class="dg-boss-block">
+          <h4>Key Boss Encounters</h4>
+          <p>${general?.bosses ? general.bosses.join(', ') : 'Encounter telemetry loading...'}</p>
+          <div class="loot-tags" style="margin-top: 1rem;">
+            ${general?.lootHighlights ? general.lootHighlights.map(l => `<span class="loot-tag">✦ ${escapeHtml(l)}</span>`).join('') : ''}
+          </div>
+        </div>
+      `}
+    </div>
+  `;
+
+  modal.classList.add('is-open');
+};
 
 function renderZones() {
   const container = document.getElementById('new-zones-container');
@@ -351,4 +564,3 @@ window.adjustLegacyPerk = function(perkId, delta) {
   localStorage.setItem('wow_forever_legacy_allocations', JSON.stringify(legacyAllocations));
   renderLegacyCalculator();
 };
-

@@ -106,6 +106,57 @@ function initNavigation() {
       }
     });
   });
+
+  // Support URL hash routing to tabs (e.g. #bis, #tierlist, #codex)
+  function checkUrlHashTab() {
+    const hash = window.location.hash.toLowerCase().replace('#', '');
+    if (!hash) return;
+    const tabName = hash.split('/')[0];
+    const targetBtn = document.querySelector(`.nav-tab-btn[data-tab="${tabName}"]`);
+    if (targetBtn && !targetBtn.classList.contains('active')) {
+      targetBtn.click();
+    }
+  }
+
+  checkUrlHashTab();
+  window.addEventListener('hashchange', checkUrlHashTab);
 }
+
+/* ==========================================================================
+   4. MURLOC ONLINE COUNTER & AUDIO-VISUAL MICRO-INTERACTION
+   ========================================================================== */
+function initMurlocCounter() {
+  const btn = document.getElementById("murloc-camp-btn");
+  const countEl = document.getElementById("murloc-count");
+  if (!btn || !countEl) return;
+
+  const murlocQuotes = [
+    "Mrrrgggll!",
+    "Aaaaaughibbrgubugbugrguburgle!",
+    "Rwrlwrlwrl!",
+    "You pulled 3 more murlocs!",
+    "Flglrgl glrgl!",
+    "Tidehunter approaches!"
+  ];
+
+  let currentCount = 3840 + Math.floor(Math.random() * 320);
+  countEl.textContent = currentCount.toLocaleString();
+
+  btn.addEventListener("click", () => {
+    currentCount += Math.floor(Math.random() * 4) + 1;
+    countEl.textContent = currentCount.toLocaleString();
+
+    const quote = murlocQuotes[Math.floor(Math.random() * murlocQuotes.length)];
+    const bubble = document.createElement("span");
+    bubble.className = "murloc-speech-bubble";
+    bubble.textContent = quote;
+    btn.appendChild(bubble);
+
+    setTimeout(() => {
+      bubble.remove();
+    }, 1800);
+  });
+}
+
 
 

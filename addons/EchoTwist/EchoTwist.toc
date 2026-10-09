@@ -1,13 +1,13 @@
 ## Interface: 16001
-## Title: Echo|cff00e5ffTwist|r [AllowLoadGameType camelot]
-## Title: EchoTwist (Retail) [AllowLoadGameType standard]
-## Notes: High-precision Windfury weapon, Seal Twisting, swing cadence & proc audio-visual engine for WoW Forever (Camelot 12.0).
-## Author: Marcus Owens & WoW Forever Addon Team
+## Title: |cffffcc00Echo|r|cffffffffTwist|r
+## Notes: Modern Seal duration, Echo proc (Twist of Light), Holy Strike & Judgement HUD for WoW Forever Paladins.
+## Author: Marco & Antigravity
 ## Version: 1.0.0
 ## SavedVariables: EchoTwistDB
 ## LoadSavedVariablesFirst: true
-## IconTexture: Interface\Icons\Spell_Nature_Windfury
+## IconTexture: Interface\Icons\Spell_Holy_SealOfCommand
 ## Category-enUS: Combat
 
-core.lua
-config.lua
+Constants.lua
+Core.lua
+UI.lua
