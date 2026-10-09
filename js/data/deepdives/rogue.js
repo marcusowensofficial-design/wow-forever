@@ -79,6 +79,13 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         statusLabel: "Verified in Beta",
         badge: "Defensive Synergy",
         desc: "Grants a combo point whenever the Rogue dodges an incoming physical attack or fully resists an enemy spell."
+      },
+      {
+        title: "Native Cooldown Manager: Rogue Essentials",
+        status: "verified",
+        statusLabel: "Verified in Beta (Oct 8)",
+        badge: "Native UI & Edit Mode",
+        desc: "Expanded in Beta Build 1.60.6.71890 directly in default HUD Edit Mode. Rotational Spells Tracked: Sinister Strike / Daggerless Mutilate, Ghostly Strike (20s), Riposte (6s parry proc), Kidney Shot (20s), Gouge (10s), and Kick (10s). Major Defensives & Bursts: Vanish (5m), Blind (3m), Sprint (5m), Evasion (3m), Preparation (10m), Adrenaline Rush (5m), Blade Flurry (2m), and Cold Blood (3m). Active Procs & Buffs: Slice and Dice duration timer, Blade Flurry uptime, Remorseless Attacks (+40% crit), and Restless Blades cooldown refund cycling tracker."
       }
     ],
 

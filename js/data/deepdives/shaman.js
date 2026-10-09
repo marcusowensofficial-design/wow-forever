@@ -120,6 +120,13 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       "statusLabel": "✦ Forever Exclusive",
       "badge": "Hybrid Stat",
       "desc": "Consolidated combat stats allow Enhancement and Elemental Shamans to scale both physical weapon strikes and nature spells simultaneously without conflicting itemization."
+    },
+    {
+      "title": "Native Cooldown Manager: Shaman Essentials",
+      "status": "verified",
+      "statusLabel": "Verified in Beta (Oct 8)",
+      "badge": "Native UI & Edit Mode",
+      "desc": "Expanded in Beta Build 1.60.6.71890 directly in default HUD Edit Mode. Rotational Spells Tracked: Stormstrike (snappy 8s CD with dodge/parry reset flash), Lava Burst (8s), shared Shock spells (5-6s), Riptide (6s), and Chain Lightning (6s). Major Defensives & Bursts: Bloodlust / Heroism (5m), Elemental Mastery (3m), Nature's Swiftness (3m), Shamanistic Rage (2m), and Grounding Totem (15s). Active Procs & Buffs: Maelstrom Weapon charges (1–5 with screen edge glow at 5 stacks), Clearcasting/Elemental Focus, Flurry charges (1–3), and Lightning/Water Shield charges."
     }
   ],
   "enhancement": {

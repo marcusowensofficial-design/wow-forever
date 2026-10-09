@@ -86,6 +86,13 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         statusLabel: "Verified in Beta",
         badge: "Core CC",
         desc: "Hammer of Justice functions as a 4-second single-target stun on a 1-minute cooldown, retaining classic PvP interrupt and lockdown utility."
+      },
+      {
+        title: "Native Cooldown Manager: Paladin Essentials",
+        status: "verified",
+        statusLabel: "Verified in Beta (Oct 8)",
+        badge: "Native UI & Edit Mode",
+        desc: "Expanded in Beta Build 1.60.6.71890 directly in default HUD Edit Mode. Rotational Spells Tracked: Holy Strike (6s), Judgment (8-10s), Consecration (8s), Holy Shock (10s), Hammer of Wrath (6s), and Cleanse. Major Defensives & Bursts: Divine Shield (5m), Lay on Hands (20m), Blessing of Protection (3m), Divine Protection (5m), Hand of Freedom (20s), and Hammer of Justice (1m). Active Procs & Buffs: The Art of War (instant cast procs with visual glow), Forbearance timer, active Seal auras, Holy Shield charges (4 charges remaining), and Vengeance stacks."
       }
     ],
 

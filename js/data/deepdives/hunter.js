@@ -73,6 +73,13 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       "statusLabel": "✦ Forever Exclusive",
       "badge": "Baseline Rework",
       "desc": "Aimed Shot is granted as a baseline hunter ability rather than locking up talent points, while the Marksmanship tree provides deep damage multipliers and cast enhancements."
+    },
+    {
+      "title": "Native Cooldown Manager: Hunter Essentials",
+      "status": "verified",
+      "statusLabel": "Verified in Beta (Oct 8)",
+      "badge": "Native UI & Edit Mode",
+      "desc": "Expanded in Beta Build 1.60.6.71890 directly in default HUD Edit Mode. Rotational Spells Tracked: Aimed Shot (6s), Arcane Shot (6s), Multi-Shot (10s), Strider Kick (8s melee strike), Mongoose Bite (5s dodge proc), and Concussive Shot (12s). Major Defensives & Bursts: Bestial Wrath (2m), Rapid Fire (3m), Deterrence (5m), Feign Death (30s), Intimidation (1m), Scatter Shot (30s), and shared Trap cooldowns (30s). Active Procs & Buffs: Lock and Load procs, Pet Frenzy stacks (1–5), Improved Aspect of the Hawk haste buff, and Aspect state monitoring."
     }
   ],
   "survival": {

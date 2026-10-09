@@ -1,9 +1,9 @@
 /**
  * World of Warcraft: Forever - Master Dataset
- * Up-to-date as of October 1, 2026 (Beta Build 1.60.5.71180)
+ * Up-to-date as of October 8, 2026 (Beta Build 1.60.6.71890)
  * Enhanced with verified community data, Warcraft Tavern guides, Mobalytics meta telemetry,
  * Wowhead datamining, Method articles, BlizzCon reveals, Engine/Graphics specs,
- * In-Combat Addon Disarmament, and exact 35-Day Beta Duration schedule (Sept 17 - Oct 21, 2026).
+ * In-Combat Addon Disarmament, Native Cooldown Manager, and exact 35-Day Beta Duration schedule (Sept 17 - Oct 21, 2026).
  */
 
 const WOW_FOREVER_DATA = {
@@ -17,12 +17,13 @@ const WOW_FOREVER_DATA = {
     betaTotalWeeks: 5,
     launchDate: "November 4, 2026",
     raidsDate: "December 9, 2026",
-    currentBetaPhase: "Phase 2: Level 30 Cap (LIVE NOW • Day 19 of 35)",
-    clientBuild: "1.60.5.71210",
+    currentBetaPhase: "Phase 2: Level 30 Cap (LIVE NOW • Day 22 of 35)",
+    clientBuild: "1.60.6.71890",
     engineInfo: "Custom Ray-Traced Engine (Post-Warcraft III: Reforged Continuity)",
     maxLevel: 60,
     currentBetaCap: 30,
-    legacyPointsAtLaunch: 16
+    legacyPointsAtLaunch: 16,
+    lastUpdated: "October 8, 2026"
   },
 
   betaSchedule: {
@@ -66,11 +67,50 @@ const WOW_FOREVER_DATA = {
     { name: "Icy Veins Talent Calculator", url: "https://www.icy-veins.com/wow-forever/talent-calculator", icon: "⚡" },
     { name: "Wowhead Legacy Calculator", url: "https://www.wowhead.com/forever/legacy-calculator", icon: "🏆" },
     { name: "Method.gg Itemization Guide", url: "https://www.method.gg/wow-classic/itemization-updates-in-world-of-warcraft-forever-expertise-spell-damage-more", icon: "⚔️" },
-    { name: "Method.gg Racials Breakdown", url: "https://www.method.gg/wow-classic/all-new-racial-abilities-in-world-of-warcraft-forever", icon: "🦅" },
-    { name: "MrGM Ping System Demo", url: "https://x.com/MrGMYT/status/2099139797524902295/video/1", icon: "🎯" }
+    { name: "Method.gg Racials Breakdown", url: "https://www.method.gg/wow-classic/all-new-racial-abilities-in-world-of-warcraft-forever", icon: "🦅" }
   ],
 
   newsFeed: [
+    {
+      id: "news-36",
+      title: "Beta Build 1.60.6 Deployed: Blizzard Expands Native Cooldown Manager Across All Classes, Elevating Essential Cooldown & Buff Tracking Without UI Taint",
+      source: "Blizzard Official / Patch Notes",
+      sourceType: "blizzard",
+      author: "Lead Systems Designer & UI Team",
+      date: "October 8, 2026",
+      tag: "Major Engine & UI Patch",
+      summary: "Beta Build 1.60.6.71890 rolls out across megarealms today, delivering the highly anticipated expansion of Blizzard's native Cooldown Manager to all 9 classes with Edit Mode customization, proc tracking, and zero in-combat UI taint.",
+      content: `Blizzard Entertainment has deployed client Build 1.60.6.71890 for World of Warcraft: Forever closed beta, bringing a monumental expansion to the game's native combat user interface:
+• Native Cooldown Manager Expanded Across All Classes: Originally tested in prototype builds for select classes, Blizzard's built-in 'Essential Cooldowns & Buffs Manager' is now fully active across all 9 classes (Warrior, Paladin, Hunter, Rogue, Priest, Shaman, Mage, Warlock, and Druid).
+• Built Directly into Default UI & HUD Edit Mode: Players can freely reposition, rescale, snap, and customize their Essential Cooldown dock above action bars or beneath the Personal Resource Display.
+• Comprehensive Rotational & Defensive Tracking:
+  - Rotational Abilities: Tracks key rotational cooldowns (such as Mortal Strike, Bloodthirst, Shield Slam, Holy Strike, Consecration, Aimed Shot, Strider Kick, Mutilate, Penance, Mind Blast, Stormstrike 8s CD, Lava Burst, Fire Blast, Shadowburn, and Swiftmend).
+  - Signature Defensives & Bursts: Monitors major survival cooldowns (Shield Wall, Retaliation, Divine Shield, Lay on Hands, Bestial Wrath, Deterrence, Vanish, Preparation, Pain Suppression, Power Infusion, Bloodlust, Ice Block, and Innervate).
+  - Procs & Buff Uptimes: Displays active buff states with stacks and glowing visual highlights (Overpower ready procs, Flurry charges, The Art of War, Lock and Load, Slice and Dice timers, Surge of Light, Maelstrom Weapon 1–5 stacks, Fingers of Frost, Hot Streak, Nightfall/Shadow Trance, and Eclipse transitions).
+• Immune to 12.0 <secret value> Taint: Because the Cooldown Manager executes within Blizzard's secure C++ FrameXML engine core, it formats text and renders cooldown swipes natively (via FontString:SetFormattedText and CooldownFrame_SetAura). It completely avoids the fatal Lua arithmetic errors that break third-party WeakAuras during combat encounters!`,
+      url: "https://news.blizzard.com/en-us/world-of-warcraft/beta-build-1606-patch-notes-cooldown-manager-oct8"
+    },
+    {
+      id: "news-37",
+      title: "Systems Theorycrafting: How Blizzard's Native Cooldown Manager Complements Companion Addons & Bypasses 12.0 Secret Value Constraints",
+      source: "Method.gg / Addon Engineering Wire",
+      sourceType: "method",
+      author: "Method Addon & Systems Lab",
+      date: "October 8, 2026",
+      tag: "Addon Architecture & Theorycrafting",
+      summary: "Technical deep dive into why addon authors should embrace Blizzard's internal Cooldown Manager for combat rotation clarity instead of rebuilding complex Lua aura frameworks, and how secret values protect against automation.",
+      content: `Following today's release of Beta Build 1.60.6, the addon development and theorycrafting community has conducted an architectural audit of the new Cooldown Manager:
+• Symbiotic Addon Architecture: Addon developers are advised not to build redundant combat cooldown timers or complex aura-math engines. With In-Combat Addon Disarmament active, attempts to calculate combat aura durations in Lua crash due to 12.0 <secret value> restrictions. Leaving rotational combat widgets to Blizzard's native manager guarantees zero-taint stability.
+• Specialization of Companion Addons: Custom in-house addons thrive by focusing on their core strengths:
+  - ForeverPlates & Forever Nameplates Castbars: High-visibility pixel nameplates, latency tolerance markers, and dynamic threat coloring.
+  - ForeverLiquid: Immersion 20-bubble liquid reservoir, leveling/rep velocity, mount savings countdown, and 5-instance/hour lockout monitor.
+  - ForeverDungeonJournal: Comprehensive encounter guides, loot tables, sub-pixel calibrated maps, and boss tactics.
+  - ForeverBlessings: 60-minute Paladin blessing coordinator, class assignment matrix, and live missing buff alerts.
+  - EchoTwist: High-precision Windfury proc alerts, 0.4s golden Seal Twisting cadence indicator, and sub-pixel melee swing timer.
+• Non-Intrusive Cosmetic Skinning: Addons can safely skin Blizzard's Cooldown Manager frames (adding crisp 1px borders via WHITE8X8 or Cyberpunk palette tints via BackdropTemplate and hooksecurefunc) without modifying combat logic or incurring execution taint.
+• AI & Automation Boundary: Blizzard's secret value system intentionally locks out AI combat rotation bots and automated priority solvers. Cooldown numbers and aura durations are rendered purely via C-side formatting, making them human visual aids rather than queryable Lua APIs.`,
+      url: "https://www.method.gg/wow-classic/native-cooldown-manager-architecture-wow-forever"
+    },
     {
       id: "news-35",
       title: "Companion Addon Suite Expansion: ForeverLiquid (Liquid XP/Rep/Ledger HUD) & ForeverDungeonJournal v1.0.7 Released for Beta",
@@ -530,7 +570,7 @@ const WOW_FOREVER_DATA = {
       content: `Here is the master summary of everything Blizzard has confirmed for WoW: Forever:
 • Launch: November 4, 2026. Permanent level 60 cap with horizontal progression and 1,000+ new quests.
 • No Server Barriers: Choose a Ruleset (PvE, PvP, Roleplay, or Hardcore in late winter). No dead servers.
-• Quality of Life: Dual Talent Specialization at Level 40, Barbershop (hair, beard, skin color), In-game Damage Meter, Retail Ping System, and Native Controller Support right out of the gate.
+• Quality of Life: Dual Talent Specialization at Level 40, Barbershop (hair, beard, skin color), In-game Damage Meter, and Native Controller Support right out of the gate.
 • Economy & Integrity: NO WoW Tokens. NO character level boosts. Guild banks ready on Day 1.
 • World Buff Overhaul: World buffs function out in the open world, but are disabled inside raids. No Chronoboons or 2-hour pre-buff routes required!
 • Dungeon XP vs Open World: Dungeon mob XP is drastically lowered to kill dungeon spamming. First-time dungeon quests yield massive rewards, with repeatable weekly boss 'chase drops' to keep dungeons exciting.
@@ -564,7 +604,7 @@ const WOW_FOREVER_DATA = {
       summary: "Blizzard confirms computational combat-solver addons and automated WeakAuras scripts will be disabled during boss fights to preserve player execution.",
       content: `Blizzard has taken a firm stance on addon bloat in WoW: Forever:
 • In-Combat Disarmament: Addons that perform complex combat calculations, auto-assign raid markers, decipher encrypted boss telegraphs, or auto-cleanse debuffs will have their Lua APIs restricted during encounter combat.
-• Built-In Replacements: To ensure a clean experience, Blizzard built native tools directly into the UI: an in-game Damage/Healing meter, cooldown trackers, modern raid frames, and the retail Ping wheel.
+• Built-In Replacements: To ensure a clean experience, Blizzard built native tools directly into the UI: an in-game Damage/Healing meter, cooldown trackers, and modern raid frames.
 • Permitted Addons: Standard UI skinning, bag reorganizers, auction house helpers, and chat mods continue to function normally outside and inside combat.`,
       url: "https://www.method.gg/news/addon-disarmament-wow-forever"
     },
@@ -718,10 +758,10 @@ const WOW_FOREVER_DATA = {
     },
     {
       id: "in-combat-disarmament",
-      title: "In-Combat Addon Disarmament",
+      title: "In-Combat Addon Disarmament & Native UI Suite",
       icon: "🛡️",
       badge: "Skill & Execution",
-      desc: "Computational WeakAuras and solver addons are disabled in combat. Built-in damage meter, ping wheel, and cooldown timers provided natively."
+      desc: "Computational WeakAuras and solver addons are disabled in combat due to 12.0 secret value restrictions. Blizzard provides native replacements directly in the UI & Edit Mode: an in-game Damage/Healing meter, modern raid frames, and the newly expanded Native Cooldown Manager for tracking rotational spells, defensives, and buff procs with zero UI taint."
     },
     {
       id: "rank14-seasonal",

@@ -86,6 +86,13 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         statusLabel: "🎙️ Sodapoppin Demo Finding",
         badge: "Skill Progression",
         desc: "The level-38 character did not yet have Recklessness; the presenter confirmed it is trained at level 40 from class trainers alongside other major capstones."
+      },
+      {
+        title: "Native Cooldown Manager: Warrior Essentials",
+        status: "verified",
+        statusLabel: "Verified in Beta (Oct 8)",
+        badge: "Native UI & Edit Mode",
+        desc: "Expanded in Beta Build 1.60.6.71890 directly in default HUD Edit Mode. Rotational Spells Tracked: Mortal Strike (6s), Bloodthirst (6s), Shield Slam (6s), Revenge (5s), Overpower (active 5s proc window), Whirlwind (10s), and Spearing Strike (15s). Major Defensives: Shield Wall (15m), Retaliation (15m), Last Stand (8m), Berserker Rage (30s), and Pummel (10s). Active Procs & Buffs: Enrage (+25% damage), Flurry charges (1-3 with glow), Overpower Ready indicator, and Stance aura states—rendered with zero 12.0 UI taint."
       }
     ],
 

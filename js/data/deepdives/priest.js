@@ -79,6 +79,13 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         statusLabel: "🎙️ Sodapoppin Demo Finding",
         badge: "AoE Audit",
         desc: "The level-38 build does not feature Mind Sear or a dedicated Shadow AoE channel; Shadow Priests rely on multi-dotting and Holy Nova for area damage."
+      },
+      {
+        title: "Native Cooldown Manager: Priest Essentials",
+        status: "verified",
+        statusLabel: "Verified in Beta (Oct 8)",
+        badge: "Native UI & Edit Mode",
+        desc: "Expanded in Beta Build 1.60.6.71890 directly in default HUD Edit Mode. Rotational Spells Tracked: Penance (10s), Mind Blast (8s/5.5s), Power Word: Shield (monitored alongside Weakened Soul duration), Prayer of Mending (10s), and Circle of Healing (6s). Major Defensives & Bursts: Power Infusion (3m), Pain Suppression (2m), Psychic Scream (30s), Silence (45s), Inner Focus (3m), and Desperate Prayer (10m). Active Procs & Buffs: Surge of Light (instant Flash Heal / Smite procs with highlight), Spirit Tap active regen window, Shadow Weaving stacks (1–5), and Inner Fire charges."
       }
     ],
 

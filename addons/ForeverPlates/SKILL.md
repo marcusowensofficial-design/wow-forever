@@ -15,6 +15,22 @@ This skill provides critical domain knowledge, architectural standards, and debu
 
 ---
 
+## 0. Official In-House Addon Suite (Marcus Owens & Team)
+
+When referencing **our addon projects**, the following in-house addons located in `addons/` belong to our suite:
+
+| Project Folder | Official Project Name | Core Function & Highlights |
+| :--- | :--- | :--- |
+| `ForeverPlates/` | **ForeverPlates** | Premier zero-taint pixel nameplate engine. Dynamic threat coloring, execute range indicators, C-side text formatting, and test mode (`/fp`). |
+| `Foreverplatescastbars/` | **Forever Nameplates Castbars** | Sub-pixel enemy nameplate castbars positioned cleanly below plates, player/target/focus castbars, latency queue tolerance markers, uninterruptible spell shields, and OLED dark palettes (`/bcb`, `/bettercastbars`, `/fpc`). |
+| `ForeverLiquid/` | **ForeverLiquid** | Cyberpunk neon liquid XP/Rep reservoir HUD (20 classic 5% bubbles), real-time gold cashflow ledger, mount savings fund (100g/1000g) with live ETA countdown, 5-instance/hr lockout radar, and 12.0 secret-guard engine protection (`/fl`). |
+| `ForeverDungeonJournal/` | **Forever Dungeon Journal** | Full in-game Classic+ dungeon atlas, 3D boss model viewer, sub-pixel calibrated map pins, encounter tactics chat broadcast, and shift-hover item comparison engine (`/fj`). |
+| `ForeverBlessings/` | **ForeverBlessings** | 60-minute Paladin blessing management, interactive class assignment matrix (Kings, Might, Wisdom, Salvation, Light, Sanctuary), zero-taint out-of-combat roster scanning, and missing buff chat broadcast (`/fb`, `/foreverblessings`). |
+| `EchoTwist/` | **EchoTwist** | High-precision Windfury Weapon extra attack audio-visual echo alerts, 0.4s golden Seal Twisting cadence indicator window, and sub-pixel melee swing timer HUD (`/et`, `/echotwist`). |
+| `BetterBlizzFrames_MarcusCustom_Backup/` | **BetterBlizzFrames (Marcus Custom)** | Curated baseline UI frame layout, dark frames, customized action bars, unit frame positions, and micro-menu refinements backup. |
+
+---
+
 ## 1. Engine Identity, Versioning & TOC Architecture
 
 ### 1.1 Key Engine Facts
@@ -735,4 +751,41 @@ In `Core/Journal.lua`, map pins are structured into two distinct layers:
    - Display a solid dark circle with a gold ring and centered number.
    - Tooltip displays the POI number, name, and quest detail line.
    - Clicking opens or toggles the Map Legend drawer (`frame.dungeonMapLegendPanel`).
+
+---
+
+## 19. Blizzard Native Cooldown Manager & Zero-Taint Addon Integration
+
+Starting in Beta Build 1.60.6.71890 (October 8, 2026), Blizzard expanded the native "Essential Cooldowns & Buffs Manager" across all 9 classes in the default UI and HUD Edit Mode.
+
+### 19.1 Engine Architecture & C-Side Rendering
+- **FrameXML Components**: Implemented in `Blizzard_CooldownManager`, `EssentialCooldownsFrame`, and `EditModeCooldownManagerSystemTemplate`.
+- **C++ Engine Integration**: Driven internally by `CooldownFrame_SetAura` and `FontString:SetFormattedText`.
+- **Secret Value Immunity**: Because it executes inside the engine's secure C-side boundary, it formats text and renders cooldown swipes natively without exposing raw `<secret number>` values to Lua math, completely avoiding the fatal errors that break third-party WeakAuras in combat.
+
+### 19.2 Architectural Strategy: Symbiosis vs. Custom Addons
+- **Leave Combat Cooldowns to Blizzard**: Never attempt to build custom Lua combat WeakAuras or rotational solvers in WoW Forever. The engine's In-Combat Addon Disarmament will inevitably trigger execution taint cascades on secret values.
+- **Specialization of Companion Addons**: Companion addons thrive by focusing on their specialized non-intrusive domains:
+  - `ForeverPlates`: Zero-taint combat nameplates, interrupt shields, and threat coloring.
+  - `Foreverplatescastbars` (Forever Nameplates Castbars): Sub-pixel enemy nameplate castbars, player/target/focus castbars, latency queue markers, and uninterruptible shields.
+  - `ForeverLiquid`: Neon liquid XP/Rep HUD, gold cashflow ledger, mount savings countdown, and 5-instance/hour lockout monitor.
+  - `ForeverDungeonJournal`: Encounter tactics, 3D model viewer, sub-pixel maps, and loot tables.
+  - `ForeverBlessings`: 60-minute Paladin blessing management, raid class assignment matrix, and missing buff alert engine.
+  - `EchoTwist`: High-precision Windfury proc alerts, 0.4s Seal Twisting cadence indicator, and sub-pixel melee swing timer.
+  - `BetterBlizzFrames_MarcusCustom_Backup`: Curated baseline UI frame layout, dark frames, and micro-menu refinements.
+
+### 19.3 Safe Cosmetic Skinning
+Companion addons can safely style Blizzard's Cooldown Manager via non-intrusive secure hooks:
+```lua
+if EssentialCooldownsFrame and not EssentialCooldownsFrame.FPSkinned then
+    EssentialCooldownsFrame.FPSkinned = true
+    -- Apply crisp 1px borders or custom backdrop templates without modifying secure scripts
+    hooksecurefunc(EssentialCooldownsFrame, "SetPoint", function(self)
+        -- Non-tainting re-anchor or border synchronization
+    end)
+end
+```
+
+### 19.4 AI & Combat Automation Boundary
+Under 12.0 Camelot engine rules, Blizzard's secret values deliberately prevent external AI agents and automation bots from programmatically reading combat cooldowns, charges, or aura durations. The Cooldown Manager operates as a human visual aid in Edit Mode rather than a queryable Lua API.
 

@@ -106,41 +106,6 @@ function initNavigation() {
       }
     });
   });
-
-  const quickLinkLiquid = document.getElementById('quick-link-addon-foreverliquid');
-  if (quickLinkLiquid) {
-    quickLinkLiquid.addEventListener('click', () => {
-      const systemsTabBtn = document.querySelector('.nav-tab-btn[data-tab="systems"]');
-      if (systemsTabBtn) systemsTabBtn.click();
-      const target = document.getElementById('foreverliquid-spotlight');
-      if (target) {
-        setTimeout(() => target.scrollIntoView({ behavior: 'smooth' }), 100);
-      }
-    });
-  }
-
-  const quickLinkJournal = document.getElementById('quick-link-addon-foreverjournal');
-  if (quickLinkJournal) {
-    quickLinkJournal.addEventListener('click', () => {
-      const systemsTabBtn = document.querySelector('.nav-tab-btn[data-tab="systems"]');
-      if (systemsTabBtn) systemsTabBtn.click();
-      const target = document.getElementById('foreverjournal-spotlight');
-      if (target) {
-        setTimeout(() => target.scrollIntoView({ behavior: 'smooth' }), 100);
-      }
-    });
-  }
-
-  const quickLinkAddon = document.getElementById('quick-link-addon-foreverplates');
-  if (quickLinkAddon) {
-    quickLinkAddon.addEventListener('click', () => {
-      const systemsTabBtn = document.querySelector('.nav-tab-btn[data-tab="systems"]');
-      if (systemsTabBtn) systemsTabBtn.click();
-      const target = document.getElementById('foreverplates-spotlight');
-      if (target) {
-        setTimeout(() => target.scrollIntoView({ behavior: 'smooth' }), 100);
-      }
-    });
-  }
 }
+
 

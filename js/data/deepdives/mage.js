@@ -101,6 +101,13 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       "statusLabel": "Verified in Beta",
       "badge": "Inventory QoL",
       "desc": "An additional 6th bag slot is dedicated to trade goods and consumables, ensuring Mage bags have room for conjured water, food, mana gems, and dungeon drops."
+    },
+    {
+      "title": "Native Cooldown Manager: Mage Essentials",
+      "status": "verified",
+      "statusLabel": "Verified in Beta (Oct 8)",
+      "badge": "Native UI & Edit Mode",
+      "desc": "Expanded in Beta Build 1.60.6.71890 directly in default HUD Edit Mode. Rotational Spells Tracked: Fire Blast (8s/6.5s), Cone of Cold (10s), Blast Wave (30s), Frost Nova (25s/21s), and Counterspell (24s). Major Defensives & Bursts: Combustion (3m), Icy Veins (3m), Ice Block (5m), Arcane Power (3m), Evocation (8m), Cold Snap (8m), Presence of Mind (3m), and Blink (15s). Active Procs & Buffs: Fingers of Frost charges (1–2 with active shatter indicator), Brain Freeze / Firestarter instant Pyroblast procs, Clearcasting/Arcane Concentration, and Arcane Blast stacking debuffs."
     }
   ],
   "arcane": {

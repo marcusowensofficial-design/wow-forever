@@ -28,7 +28,7 @@ A comprehensive, responsive tracking hub, news portal, and character planner for
   - Zero WoW Tokens / Paid Boosts
   - Dual Talent Specialization (L40)
   - Anti-Dungeon Spam XP Curve & Full 29-Dungeon Leveling Route
-  - In-Combat Addon Disarmament
+  - In-Combat Addon Disarmament & Native Cooldown Manager (Build 1.60.6)
   - Restored Stormwind Harbor to Auberdine Ferry
   - Ray-Traced Global Illumination & Classic 2004 visual toggle
 
@@ -44,6 +44,16 @@ A comprehensive, responsive tracking hub, news portal, and character planner for
 - Interactive 16-point Legacy Talent Calculator.
 - Beta Phase 2 (Level 30) milestone checklist with percentage tracker.
 - Squad and Guild roster planner with role breakdown.
+
+### 7. 🛡️ Official In-House Addon Suite (Camelot 12.0 Engine / TOC 16001)
+Developed and maintained in `addons/` by Marcus Owens & the WoW Forever Addon Team:
+- **`ForeverPlates`**: Minimalist zero-taint pixel nameplates, dynamic threat coloring, and C-side text.
+- **`Forever Nameplates Castbars` (`Foreverplatescastbars`)**: Sub-pixel enemy nameplate castbars, latency queue markers, and uninterruptible spell shields.
+- **`ForeverLiquid`**: Cyberpunk neon fluid XP/Rep reservoir, real-time gold cashflow ledger, and 5-instance/hr lockout radar.
+- **`Forever Dungeon Journal` (`ForeverDungeonJournal`)**: In-game Classic+ encounter atlas, 3D boss viewer, sub-pixel maps, and loot tables.
+- **`ForeverBlessings`**: 60-minute Paladin blessing coordinator, interactive class assignment matrix, and missing buff detector.
+- **`EchoTwist`**: Windfury extra attack audio-visual alerts, 0.4s golden Seal Twisting cadence indicator, and swing timer.
+- **`BetterBlizzFrames (Marcus Custom)`**: Curated baseline UI frame layout, dark frames, and micro-menu refinements backup.
 
 ---
 

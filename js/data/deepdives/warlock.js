@@ -72,6 +72,13 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         statusLabel: "🎙️ Sodapoppin Demo Finding",
         badge: "Major Mystery",
         desc: "Viewers noted an entry/icon for Metamorphosis in Demonology interface clips; however, it was locked and inaccessible on the level-38 character, leaving its exact mechanics and availability unconfirmed."
+      },
+      {
+        title: "Native Cooldown Manager: Warlock Essentials",
+        status: "verified",
+        statusLabel: "Verified in Beta (Oct 8)",
+        badge: "Native UI & Edit Mode",
+        desc: "Expanded in Beta Build 1.60.6.71890 directly in default HUD Edit Mode. Rotational Spells Tracked: Shadowburn (15s), Conflagrate (10s), Chaos Bolt (12s), Death Coil (2m), Haunt (8s), and Shadowfury (20s). Major Defensives & Bursts: Amplify Curse (3m), Howl of Terror (40s), Fel Domination (15m/5m), and Soulstone timer. Active Procs & Buffs: Nightfall / Shadow Trance (instant Shadow Bolt procs with glow), Backlash, Molten Core, and target Shadow Vulnerability / Bane timers."
       }
     ],
 
