@@ -91,13 +91,14 @@
   /**
    * Calculate points allocated in a specific tree (0, 1, or 2)
    */
-  function getTreePoints(treeIndex) {
-    const classData = getClassData(state.classId);
+  function getTreePoints(treeIndex, customPoints = null, customClassId = null) {
+    const classData = getClassData(customClassId || state.classId);
     if (!classData) return 0;
+    const ptsMap = customPoints || state.points;
     let sum = 0;
     classData.talents.forEach(t => {
       if (t.tree === treeIndex) {
-        sum += (state.points[t.id] || 0);
+        sum += (ptsMap[t.id] || 0);
       }
     });
     return sum;
@@ -106,10 +107,11 @@
   /**
    * Calculate total points allocated across all trees
    */
-  function getTotalPoints() {
+  function getTotalPoints(customPoints = null) {
+    const ptsMap = customPoints || state.points;
     let sum = 0;
-    for (const id in state.points) {
-      sum += (state.points[id] || 0);
+    for (const id in ptsMap) {
+      sum += (ptsMap[id] || 0);
     }
     return sum;
   }
@@ -117,22 +119,24 @@
   /**
    * Check if a talent can have an additional point added
    */
-  function canAddPoint(talent) {
-    const currentRank = state.points[talent.id] || 0;
+  function canAddPoint(talent, customPoints = null, customMaxPoints = null, customClassId = null) {
+    const ptsMap = customPoints || state.points;
+    const currentRank = ptsMap[talent.id] || 0;
     if (currentRank >= talent.maxRank) return false;
-    if (getTotalPoints() >= state.maxPoints) return false;
+    const maxPts = (customMaxPoints !== null && customMaxPoints !== undefined) ? customMaxPoints : state.maxPoints;
+    if (getTotalPoints(ptsMap) >= maxPts) return false;
 
     // 1. Tier Gate: (row - 1) * 5 points required in this tree
     const requiredTreePoints = (talent.row - 1) * 5;
-    const currentTreePoints = getTreePoints(talent.tree);
+    const currentTreePoints = getTreePoints(talent.tree, ptsMap, customClassId);
     if (currentTreePoints < requiredTreePoints) return false;
 
     // 2. Prerequisite Talent: must be maxed
     if (talent.req) {
-      const classData = getClassData(state.classId);
+      const classData = getClassData(customClassId || state.classId);
       const reqTalent = classData ? classData.talents.find(t => t.id === talent.req) : null;
       if (reqTalent) {
-        const reqRank = state.points[reqTalent.id] || 0;
+        const reqRank = ptsMap[reqTalent.id] || 0;
         if (reqRank < reqTalent.maxRank) return false;
       }
     }
@@ -292,7 +296,7 @@
   /**
    * Render rich floating tooltip content for a talent
    */
-  function showTalentTooltip(talent, event) {
+  function showTalentTooltip(talent, event, customPoints = null, customClassId = null) {
     let tooltip = document.getElementById('wow-item-tooltip');
     if (!tooltip) {
       tooltip = document.createElement('div');
@@ -301,13 +305,15 @@
       document.body.appendChild(tooltip);
     }
 
-    const classData = getClassData(state.classId);
+    const activeClassId = customClassId || state.classId;
+    const classData = getClassData(activeClassId);
     const tree = classData ? classData.trees[talent.tree] : { name: 'Specialization' };
-    const pts = state.points[talent.id] || 0;
+    const ptsMap = customPoints || state.points;
+    const pts = ptsMap[talent.id] || 0;
     const isMaxed = pts >= talent.maxRank;
     const hasPoints = pts > 0;
     const requiredTreePoints = (talent.row - 1) * 5;
-    const currentTreePoints = getTreePoints(talent.tree);
+    const currentTreePoints = getTreePoints(talent.tree, ptsMap, activeClassId);
     const meetsTreeReq = currentTreePoints >= requiredTreePoints;
 
     let reqTalent = null;
@@ -315,7 +321,7 @@
     if (talent.req && classData) {
       reqTalent = classData.talents.find(t => t.id === talent.req);
       if (reqTalent) {
-        meetsPrereq = (state.points[reqTalent.id] || 0) >= reqTalent.maxRank;
+        meetsPrereq = (ptsMap[reqTalent.id] || 0) >= reqTalent.maxRank;
       }
     }
 
@@ -449,10 +455,11 @@
   /**
    * Render SVG connection lines/arrows for prerequisite talent dependencies
    */
-  function renderTreeDependencyArrows(classData, treeIndex) {
+  function renderTreeDependencyArrows(classData, treeIndex, customPoints = null) {
     const treeTalents = classData.talents.filter(t => t.tree === treeIndex);
     const dependentTalents = treeTalents.filter(t => t.req);
     if (dependentTalents.length === 0) return '';
+    const ptsMap = customPoints || state.points;
 
     // Cell geometry: each slot is roughly 52px width/height + gap in grid
     // We compute positions normalized in percentage or coordinate space
@@ -467,7 +474,7 @@
       const x2 = ((target.col - 0.5) / 4) * 100;
       const y2 = ((target.row - 0.5) / 7) * 100;
 
-      const sourcePoints = state.points[source.id] || 0;
+      const sourcePoints = ptsMap[source.id] || 0;
       const isFulfilled = sourcePoints >= source.maxRank;
       const strokeColor = isFulfilled ? '#facc15' : 'rgba(255, 255, 255, 0.22)';
       const markerId = isFulfilled ? 'arrowhead-active' : 'arrowhead-locked';
@@ -498,9 +505,10 @@
   /**
    * Render 4x7 Visual Grid Matrix for a tree
    */
-  function renderTreeVisualMatrix(classData, treeIndex) {
+  function renderTreeVisualMatrix(classData, treeIndex, customPoints = null) {
     const tree = classData.trees[treeIndex];
     const treeTalents = classData.talents.filter(t => t.tree === treeIndex);
+    const ptsMap = customPoints || state.points;
 
     // Map by "row-col" for instant coordinate lookup
     const slotMap = {};
@@ -517,10 +525,10 @@
           continue;
         }
 
-        const pts = state.points[talent.id] || 0;
+        const pts = ptsMap[talent.id] || 0;
         const isMaxed = pts >= talent.maxRank;
         const hasPoints = pts > 0;
-        const available = canAddPoint(talent);
+        const available = canAddPoint(talent, ptsMap, null, classData.id);
 
         let statusClass = 'is-locked';
         if (isMaxed) {
@@ -551,7 +559,7 @@
 
     return `
       <div class="bis-tree-matrix-container">
-        ${renderTreeDependencyArrows(classData, treeIndex)}
+        ${renderTreeDependencyArrows(classData, treeIndex, ptsMap)}
         <div class="bis-tree-visual-matrix">
           ${cellsHtml.join('')}
         </div>
@@ -562,8 +570,9 @@
   /**
    * Render Detailed Cards View with descriptions & quick filters
    */
-  function renderDetailedCardsView(classData) {
-    const query = (state.cardSearchQuery || '').toLowerCase().trim();
+  function renderDetailedCardsView(classData, customPoints = null, customQuery = null) {
+    const ptsMap = customPoints || state.points;
+    const query = (customQuery !== null && customQuery !== undefined ? customQuery : (state.cardSearchQuery || '')).toLowerCase().trim();
 
     return `
       <div class="bis-talent-cards-container">
@@ -571,7 +580,7 @@
         <div class="bis-cards-filter-bar">
           <input type="search" class="bis-cards-search-input" 
                  placeholder="Search abilities by name or description..." 
-                 value="${escapeHtml(state.cardSearchQuery)}"
+                 value="${escapeHtml(query)}"
                  id="bis-talent-search-input" />
           <span style="font-size: 0.8rem; color: #94a3b8;">
             Showing abilities across all 3 specialization trees
@@ -590,7 +599,7 @@
               })
               .sort((a, b) => a.row - b.row || a.col - b.col);
 
-            const treePts = getTreePoints(treeIdx);
+            const treePts = getTreePoints(treeIdx, ptsMap, classData.id);
 
             return `
               <div class="bis-cards-tree-group">
@@ -608,7 +617,7 @@
                       No talents match your search in this tree.
                     </div>
                   ` : treeTalents.map(talent => {
-                    const pts = state.points[talent.id] || 0;
+                    const pts = ptsMap[talent.id] || 0;
                     const isMaxed = pts >= talent.maxRank;
                     const hasPoints = pts > 0;
                     const currentDesc = pts > 0 ? (talent.descriptions[pts - 1] || talent.descriptions[0]) : talent.descriptions[0];
@@ -629,7 +638,7 @@
                             <div class="bis-card-actions">
                               <button type="button" class="bis-card-step-btn" data-action="minus" data-talent-id="${talent.id}" title="Refund point" ${pts <= 0 ? 'disabled' : ''}>-</button>
                               <span class="bis-talent-card-rank">${pts} / ${talent.maxRank}</span>
-                              <button type="button" class="bis-card-step-btn" data-action="plus" data-talent-id="${talent.id}" title="Add point" ${!canAddPoint(talent) ? 'disabled' : ''}>+</button>
+                              <button type="button" class="bis-card-step-btn" data-action="plus" data-talent-id="${talent.id}" title="Add point" ${!canAddPoint(talent, ptsMap, null, classData.id) ? 'disabled' : ''}>+</button>
                             </div>
                           </div>
                           <div class="bis-node-desc">${escapeHtml(currentDesc)}</div>
@@ -1280,15 +1289,123 @@
     }
   });
 
+  /**
+   * Helper: Parse spec talent list format (e.g. [{ name: "Deflection", points: "5/5" }])
+   * into points dictionary { [talentId]: number }
+   */
+  function parseSpecTalents(classId, talentsArray) {
+    const points = {};
+    const classData = getClassData(classId);
+    if (!classData || !Array.isArray(talentsArray)) return points;
+
+    talentsArray.forEach(t => {
+      if (!t || !t.name) return;
+      const cleanName = t.name.toLowerCase().trim();
+      const matched = classData.talents.find(item => item.name.toLowerCase().trim() === cleanName);
+      if (matched) {
+        const ptsParts = String(t.points || t.rank || '1/1').split('/');
+        const pts = parseInt(ptsParts[0], 10) || 1;
+        points[matched.id] = Math.min(pts, matched.maxRank);
+      }
+    });
+
+    return points;
+  }
+
+  /**
+   * Render complete 3-tree HTML structure for inline display in Deep Dives
+   */
+  function renderSpecTreesHtml({ classId, points = {}, viewMode = 'grid', cardSearchQuery = '' } = {}) {
+    const classData = getClassData(classId);
+    if (!classData) {
+      return '<div class="bis-talent-empty-state">Talent data unavailable for this class.</div>';
+    }
+
+    if (viewMode === 'cards') {
+      return renderDetailedCardsView(classData, points, cardSearchQuery);
+    }
+
+    return `
+      <div class="bis-talent-tree-grid">
+        ${classData.trees.map((tree, treeIdx) => {
+          const treePts = getTreePoints(treeIdx, points, classId);
+          return `
+            <div class="bis-tree-col">
+              <div class="bis-tree-head">
+                <div class="bis-tree-title-group">
+                  <img src="${tree.icon}" alt="${escapeHtml(tree.name)}" class="bis-tree-icon" />
+                  <span class="bis-tree-name">${escapeHtml(tree.name)}</span>
+                </div>
+                <span class="bis-tree-points-badge">${treePts} pts</span>
+              </div>
+
+              ${renderTreeVisualMatrix(classData, treeIdx, points)}
+            </div>
+          `;
+        }).join('')}
+      </div>
+    `;
+  }
+
+  /**
+   * Bind hover tooltips and interactive events for inline talent tree displays
+   */
+  function bindInlineTreeEvents(container, { classId, getPoints } = {}) {
+    if (!container) return;
+    const classData = getClassData(classId);
+    if (!classData) return;
+
+    const resolvePoints = () => (typeof getPoints === 'function' ? getPoints() : (getPoints || {}));
+
+    container.querySelectorAll('.bis-talent-slot').forEach(slot => {
+      const talentId = parseInt(slot.getAttribute('data-talent-id'), 10);
+      const talent = classData.talents.find(t => t.id === talentId);
+      if (!talent) return;
+
+      slot.addEventListener('mouseenter', (e) => {
+        showTalentTooltip(talent, e, resolvePoints(), classId);
+      });
+      slot.addEventListener('mousemove', (e) => {
+        const tooltip = document.getElementById('wow-item-tooltip');
+        if (tooltip && !tooltip.hasAttribute('hidden')) {
+          positionTooltip(e, tooltip);
+        }
+      });
+      slot.addEventListener('mouseleave', () => {
+        hideTalentTooltip();
+      });
+    });
+
+    container.querySelectorAll('.bis-tree-node-visual').forEach(card => {
+      const talentId = parseInt(card.getAttribute('data-talent-id'), 10);
+      const talent = classData.talents.find(t => t.id === talentId);
+      if (!talent) return;
+
+      card.addEventListener('mouseenter', (e) => {
+        showTalentTooltip(talent, e, resolvePoints(), classId);
+      });
+      card.addEventListener('mouseleave', () => {
+        hideTalentTooltip();
+      });
+    });
+  }
+
   // Expose module globally
   window.TalentTreeModule = {
     openModal,
     openFromHash,
     parseBuildUrl,
+    parseSpecTalents,
+    renderSpecTreesHtml,
+    bindInlineTreeEvents,
     generateBuildUrl,
     generateBuildCode,
     canAddPoint,
     canRefundPoint,
+    getTreePoints,
+    getTotalPoints,
+    showTalentTooltip,
+    hideTalentTooltip,
     getState: () => state
   };
 

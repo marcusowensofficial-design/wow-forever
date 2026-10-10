@@ -330,37 +330,34 @@ function initClassDeepDives() {
       });
     });
 
-    // Attach click and tooltip handlers on visual talent slots
-    const tooltip = document.getElementById('wow-item-tooltip');
-    contentContainer.querySelectorAll('.deepdive-talent-slot, .deepdive-talent-card').forEach(slot => {
-      slot.addEventListener('click', () => {
-        const activeBuildContainer = (window.selectedBuildLevel === '30' && cData.betaBuilds && cData.betaBuilds.level30) 
-          ? cData.betaBuilds.level30 
-          : ((cData.betaBuilds && cData.betaBuilds.level20) || cData.betaBuilds);
-        const activeSpecs = (activeBuildContainer && activeBuildContainer.specs) || (cData.betaBuilds && cData.betaBuilds.specs) || [];
-        const currentSpecIdx = (window.selectedBetaBuildSpecIndex && window.selectedBetaBuildSpecIndex[cData.id]) || 0;
-        const currentSpec = activeSpecs[currentSpecIdx] || {};
-        
-        openDeepDiveTalentModal(
-          cData.id,
-          currentSpec.specId || currentSpec.id || 'custom',
-          `${cData.name} - ${currentSpec.name || 'Build'}`,
-          currentSpec.buildUrl || currentSpec.wowheadCalcUrl || ''
-        );
+    // Attach inline talent tree events & tooltips via TalentTreeModule
+    if (window.TalentTreeModule && typeof window.TalentTreeModule.bindInlineTreeEvents === 'function') {
+      window.TalentTreeModule.bindInlineTreeEvents(contentContainer, {
+        classId: cData.id,
+        getPoints: () => (window.currentDeepDivePointsMap || {})
       });
+    }
 
-      if (tooltip) {
-        slot.addEventListener('mouseenter', (e) => {
-          renderDeepDiveTalentTooltip(slot, e, tooltip);
-        });
-        slot.addEventListener('mousemove', (e) => {
-          updateDeepDiveTooltipPos(e, tooltip);
-        });
-        slot.addEventListener('mouseleave', () => {
-          hideDeepDiveTalentTooltip(tooltip);
-        });
-      }
-    });
+    // Attach search filter listener in Cards mode
+    const searchInput = contentContainer.querySelector('#bis-talent-search-input');
+    if (searchInput) {
+      searchInput.addEventListener('input', (e) => {
+        window.deepDiveCardSearchQuery = e.target.value;
+        const container = contentContainer.querySelector('#deepdive-inline-talents-container');
+        if (container && window.TalentTreeModule) {
+          container.innerHTML = window.TalentTreeModule.renderSpecTreesHtml({
+            classId: cData.id,
+            points: window.currentDeepDivePointsMap || {},
+            viewMode: 'cards',
+            cardSearchQuery: window.deepDiveCardSearchQuery
+          });
+          window.TalentTreeModule.bindInlineTreeEvents(container, {
+            classId: cData.id,
+            getPoints: () => (window.currentDeepDivePointsMap || {})
+          });
+        }
+      });
+    }
   }
 
   function renderDeepDiveSubTabBody(cData, subtab) {
@@ -2663,11 +2660,37 @@ function initClassDeepDives() {
     if (currentSpecIdx >= activeSpecs.length) currentSpecIdx = 0;
     const currentSpec = activeSpecs[currentSpecIdx] || {};
 
-    const specTrees = getDeepDiveSpecTrees(cData.id, currentSpec);
-    const totalAllocatedPoints = specTrees.reduce((sum, tr) => sum + tr.points, 0);
-    const treePointsSummary = specTrees.map(tr => tr.points).join(' / ');
+    // 1. Resolve authentic points map for this spec
+    let pointsMap = {};
+    if (window.TalentTreeModule) {
+      if (currentSpec.buildUrl) {
+        pointsMap = window.TalentTreeModule.parseBuildUrl(cData.id, currentSpec.buildUrl);
+      } else if (currentSpec.wowheadCalcUrl) {
+        pointsMap = window.TalentTreeModule.parseBuildUrl(cData.id, currentSpec.wowheadCalcUrl);
+      }
+      if ((!pointsMap || Object.keys(pointsMap).length === 0) && currentSpec.talents) {
+        pointsMap = window.TalentTreeModule.parseSpecTalents(cData.id, currentSpec.talents);
+      }
+    }
+    window.currentDeepDivePointsMap = pointsMap;
+
+    const classTalentsData = (window.WOW_TALENTS_DATA && window.WOW_TALENTS_DATA[cData.id]) ? window.WOW_TALENTS_DATA[cData.id] : null;
+    const treePointCounts = classTalentsData ? classTalentsData.trees.map((_, idx) => {
+      return window.TalentTreeModule ? window.TalentTreeModule.getTreePoints(idx, pointsMap, cData.id) : 0;
+    }) : [0, 0, 0];
+    const totalAllocatedPoints = treePointCounts.reduce((sum, p) => sum + p, 0);
+    const treePointsSummary = treePointCounts.join(' / ');
     window.deepDiveTalentViewMode = window.deepDiveTalentViewMode || 'tree';
     const currentViewMode = window.deepDiveTalentViewMode;
+
+    const inlineTreesHtml = window.TalentTreeModule 
+      ? window.TalentTreeModule.renderSpecTreesHtml({
+          classId: cData.id,
+          points: pointsMap,
+          viewMode: currentViewMode === 'cards' ? 'cards' : 'grid',
+          cardSearchQuery: window.deepDiveCardSearchQuery || ''
+        })
+      : '<div class="bis-talent-empty-state">Talent tree module loading...</div>';
 
     return `
       <div class="beta-builds-wrapper">
@@ -2744,7 +2767,7 @@ function initClassDeepDives() {
               </div>
               <div style="display: flex; gap: 0.4rem; flex-wrap: wrap;">
                 <button type="button" class="talent-calc-link-btn deepdive-open-calc-btn" data-class="${cData.id}" data-spec="${currentSpec.specId || currentSpec.id}" style="padding: 0.35rem 0.75rem; font-size: 0.78rem;">
-                  <span>🌟</span> In-House Calculator
+                  <span>🌟</span> Full Calculator
                 </button>
                 ${currentSpec.wowheadCalcUrl ? `
                   <a href="${currentSpec.wowheadCalcUrl}" target="_blank" rel="noopener" class="talent-calc-link-btn" style="padding: 0.35rem 0.75rem; font-size: 0.78rem;">
@@ -2755,140 +2778,68 @@ function initClassDeepDives() {
             </div>
           </div>
 
-          <!-- 2-Column Grid: Talents & Rotation -->
-          <div class="beta-build-grid-2col">
-            <!-- Talents Column -->
-            <div class="build-feature-box deepdive-talent-box">
-              <div class="deepdive-talent-head-row">
-                <div class="deepdive-talent-title-wrap">
-                  <h4>
-                    <span>🧬</span> ${(activeBuildContainer.talentPointsTotal || (activeLevel === '30' ? 21 : 11))}-Point Talent Allocation
-                  </h4>
-                  <span class="bis-points-badge" style="font-size: 0.78rem; padding: 0.2rem 0.5rem; background: rgba(234, 179, 8, 0.15); border: 1px solid #eab308; color: #fef08a; border-radius: 4px; font-weight: 700;">
-                    ${treePointsSummary} (${totalAllocatedPoints} Pts)
-                  </span>
-                </div>
-
-                <div class="deepdive-talent-header-controls">
-                  <!-- View Mode Toggle -->
-                  <div style="display: flex; gap: 0.25rem;">
-                    <button type="button" class="deepdive-view-toggle-btn ${currentViewMode === 'tree' ? 'active' : ''}" data-view="tree" title="View 3-Tree Visual Matrix">
-                      <span>🔲</span> Visual Trees
-                    </button>
-                    <button type="button" class="deepdive-view-toggle-btn ${currentViewMode === 'cards' ? 'active' : ''}" data-view="cards" title="View Detailed Talent Cards">
-                      <span>📜</span> Cards
-                    </button>
-                  </div>
-
-                  <!-- Open Interactive Calculator Modals -->
-                  <div style="display: flex; gap: 0.4rem; flex-wrap: wrap;">
-                    <button type="button" class="deepdive-open-calc-btn" data-class="${cData.id}" data-spec="${currentSpec.specId || currentSpec.id}" title="Open full 4x7 interactive calculator with this build">
-                      <span>🌟</span> Interactive Tree
-                    </button>
-                    <button type="button" class="deepdive-blank-calc-btn" data-class="${cData.id}" title="Customize your own talent build from scratch">
-                      <span>⚡</span> Blank Slate
-                    </button>
-                  </div>
-                </div>
+          <!-- Full-Width Talent Tree Box -->
+          <div class="build-feature-box deepdive-talent-box" id="deepdive-talent-tree-section">
+            <div class="deepdive-talent-head-row">
+              <div class="deepdive-talent-title-wrap">
+                <h4>
+                  <span>🧬</span> ${(activeBuildContainer.talentPointsTotal || (activeLevel === '30' ? 21 : 11))}-Point Talent Allocation
+                </h4>
+                <span class="bis-points-badge" style="font-size: 0.78rem; padding: 0.2rem 0.5rem; background: rgba(234, 179, 8, 0.15); border: 1px solid #eab308; color: #fef08a; border-radius: 4px; font-weight: 700;">
+                  ${treePointsSummary} (${totalAllocatedPoints} Pts)
+                </span>
               </div>
 
-              <!-- Main Talent Tree View: Visual Matrix vs Detailed Cards -->
-              ${currentViewMode === 'tree' ? `
-                <div class="deepdive-talent-tree-grid">
-                  ${specTrees.map(tree => `
-                    <div class="deepdive-tree-col">
-                      <div class="bis-tree-head">
-                        <div class="bis-tree-title-group">
-                          <img src="${tree.icon}" alt="${tree.name}" class="bis-tree-icon" />
-                          <span class="bis-tree-name">${tree.name}</span>
-                        </div>
-                        <span class="bis-tree-points-badge">${tree.points} pts</span>
-                      </div>
+              <div class="deepdive-talent-header-controls">
+                <!-- View Mode Toggle -->
+                <div style="display: flex; gap: 0.25rem;">
+                  <button type="button" class="deepdive-view-toggle-btn ${currentViewMode === 'tree' ? 'active' : ''}" data-view="tree" title="View 3-Tree Visual Matrix">
+                    <span>🔲</span> Visual Trees
+                  </button>
+                  <button type="button" class="deepdive-view-toggle-btn ${currentViewMode === 'cards' ? 'active' : ''}" data-view="cards" title="View Detailed Talent Cards">
+                    <span>📜</span> Cards
+                  </button>
+                </div>
 
-                      ${tree.talents.length > 0 ? `
-                        <div class="deepdive-tree-visual-matrix">
-                          ${tree.talents.map(t => `
-                            <div class="bis-talent-slot deepdive-talent-slot ${t.isMaxed ? 'is-maxed' : (t.hasPoints ? 'is-active' : 'is-unallocated')}"
-                                 data-talent-name="${escapeHtml(t.name)}"
-                                 data-talent-rank="${escapeHtml(t.points)}"
-                                 data-talent-desc="${escapeHtml(t.desc)}"
-                                 data-talent-tree="${escapeHtml(tree.name)}"
-                                 data-class-id="${cData.id}"
-                                 data-spec-id="${currentSpec.specId || currentSpec.id}"
-                                 tabindex="0"
-                                 role="button"
-                                 title="${escapeHtml(t.name)} (${t.points}) • Click to open in Interactive Calculator"
-                                 aria-label="${escapeHtml(t.name)} ${t.points}">
-                              <img src="${t.icon}" alt="${escapeHtml(t.name)}" class="bis-talent-slot-icon" loading="lazy" />
-                              <span class="bis-talent-rank-overlay ${t.isMaxed ? 'rank-maxed' : 'rank-active'}">${t.points}</span>
-                            </div>
-                          `).join('')}
-                        </div>
-                      ` : `
-                        <div class="deepdive-tree-empty-state">
-                          0 points in ${tree.name}
-                        </div>
-                      `}
-                    </div>
-                  `).join('')}
+                <!-- Open Interactive Calculator Modals -->
+                <div style="display: flex; gap: 0.4rem; flex-wrap: wrap;">
+                  <button type="button" class="deepdive-open-calc-btn talent-calc-link-btn" data-class="${cData.id}" data-spec="${currentSpec.specId || currentSpec.id}" style="padding: 0.35rem 0.75rem; font-size: 0.78rem;" title="Open full 4x7 interactive calculator in dedicated modal">
+                    <span>🌟</span> Full Calculator
+                  </button>
+                  <button type="button" class="deepdive-blank-calc-btn talent-calc-link-btn" data-class="${cData.id}" style="padding: 0.35rem 0.75rem; font-size: 0.78rem; background: rgba(255, 255, 255, 0.08); border-color: rgba(255, 255, 255, 0.2);" title="Customize your own talent build from scratch">
+                    <span>⚡</span> Blank Slate
+                  </button>
                 </div>
-              ` : `
-                <!-- Detailed Cards View -->
-                <div class="deepdive-talent-card-grid">
-                  ${(currentSpec.talents || []).map(t => {
-                    const iconUrl = getDeepDiveTalentIcon(cData.id, t.name, t.tree);
-                    const ptsParts = (t.points || '1/1').split('/');
-                    const pts = parseInt(ptsParts[0], 10) || 1;
-                    const maxPts = parseInt(ptsParts[1], 10) || pts;
-                    const isMaxed = pts >= maxPts;
-                    return `
-                      <div class="deepdive-talent-card ${isMaxed ? 'is-maxed' : 'is-active'}"
-                           data-talent-name="${escapeHtml(t.name)}"
-                           data-talent-rank="${escapeHtml(t.points)}"
-                           data-talent-desc="${escapeHtml(t.desc)}"
-                           data-talent-tree="${escapeHtml(t.tree)}"
-                           data-class-id="${cData.id}">
-                        <div class="deepdive-talent-card-icon-wrap">
-                          <img src="${iconUrl}" alt="${escapeHtml(t.name)}" loading="lazy" />
-                          <span class="bis-talent-rank-overlay ${isMaxed ? 'rank-maxed' : 'rank-active'}">${escapeHtml(t.points)}</span>
-                        </div>
-                        <div class="deepdive-talent-card-body">
-                          <div class="deepdive-talent-card-top">
-                            <span class="deepdive-talent-card-name">
-                              ${escapeHtml(t.name)}
-                              <span class="role-pill" style="font-size: 0.68rem; padding: 0.05rem 0.35rem; font-weight: normal;">${escapeHtml(t.tree)}</span>
-                            </span>
-                            <span class="deepdive-talent-card-rank-badge">${escapeHtml(t.points)}</span>
-                          </div>
-                          <div class="deepdive-talent-card-desc">${escapeHtml(t.desc)}</div>
-                        </div>
-                      </div>
-                    `;
-                  }).join('')}
-                </div>
-              `}
-
-              ${currentSpec.legacyNotes ? `
-                <div style="background: rgba(56, 189, 248, 0.1); border: 1px solid rgba(56, 189, 248, 0.3); border-radius: var(--radius-sm); padding: 0.75rem 0.9rem; margin-top: 0.75rem; font-size: 0.82rem; color: #bae6fd;">
-                  <strong style="color: #38bdf8; display: flex; align-items: center; gap: 0.4rem; margin-bottom: 0.2rem;">
-                    <span>✨</span> Legacy Discovery Extra Points (+2 to +5):
-                  </strong>
-                  ${escapeHtml(currentSpec.legacyNotes)}
-                </div>
-              ` : ''}
+              </div>
             </div>
 
-            <!-- Rotation Column -->
-            <div class="build-feature-box">
-              <h4>
-                <span>⚔️</span> Level ${activeBuildContainer.levelCap || activeLevel} Combat Priority & Rotational Loop
-              </h4>
-              <ol class="rotation-step-list">
+            <!-- Full 3-Tree Grid Container -->
+            <div id="deepdive-inline-talents-container" class="deepdive-inline-talents-wrapper">
+              ${inlineTreesHtml}
+            </div>
+
+            ${currentSpec.legacyNotes ? `
+              <div style="background: rgba(56, 189, 248, 0.1); border: 1px solid rgba(56, 189, 248, 0.3); border-radius: var(--radius-sm); padding: 0.75rem 0.9rem; margin-top: 1rem; font-size: 0.82rem; color: #bae6fd;">
+                <strong style="color: #38bdf8; display: flex; align-items: center; gap: 0.4rem; margin-bottom: 0.2rem;">
+                  <span>✨</span> Legacy Discovery Extra Points (+2 to +5):
+                </strong>
+                ${escapeHtml(currentSpec.legacyNotes)}
+              </div>
+            ` : ''}
+          </div>
+
+          <!-- Combat Priority & Rotational Loop (Pushed Down Below Talents, Full Width!) -->
+          <div class="build-feature-box deepdive-rotation-box">
+            <h4>
+              <span>⚔️</span> Level ${activeBuildContainer.levelCap || activeLevel} Combat Priority & Rotational Loop
+            </h4>
+            <div class="deepdive-rotation-wrap">
+              <ol class="rotation-step-list deepdive-rotation-step-list">
                 ${(currentSpec.rotation || []).map(r => `
                   <li class="rotation-step-item">
                     <div>
-                      <strong style="color: #fff; font-size: 0.88rem; display: block; margin-bottom: 0.15rem;">${escapeHtml(r.label)}</strong>
-                      <span>${escapeHtml(r.desc)}</span>
+                      <strong style="color: #fff; font-size: 0.92rem; display: block; margin-bottom: 0.2rem;">${escapeHtml(r.label)}</strong>
+                      <span style="font-size: 0.88rem; line-height: 1.5; color: #cbd5e1;">${escapeHtml(r.desc)}</span>
                     </div>
                   </li>
                 `).join('')}
