@@ -16,7 +16,7 @@ const WOW_BIS_METADATA = {
   version: "1.60.6.71890",
   phase: "Beta Phase 2 (Level 30 Cap)",
   lastUpdated: "October 9, 2026",
-  sourceNotice: "Curated from Beta Discovery logs, ForeverChanges.pro data, and in-game itemcache.wdb extracts.",
+  sourceNotice: "Curated from Beta Discovery logs, Wowhead datamining, and in-game itemcache.wdb extracts.",
   totalSpecs: 38,
   totalClasses: 9
 };
@@ -52,7 +52,74 @@ const WOW_BIS_DATA = {
         talents: {
           points: "26 / 0 / 0",
           summary: "Arms Deep Wounds + Sweeping Strikes + Spearing Strike (Level 30 cap + 5 Talented perk points)",
-          url: "https://foreverchanges.pro/talents/warrior?b=3030521312231--&l=30&tl=5"
+          buildCode: "FOREVER-WARRIOR-ARMS-30-26-0-0",
+          trees: [
+          {
+                    name: "Arms",
+                    icon: "https://render.worldofwarcraft.com/us/icons/56/ability_rogue_eviscerate.jpg",
+                    points: 26,
+                    talents: [
+                              {
+                                        name: "Deflection",
+                                        rank: "2/5",
+                                        desc: "Increases your Parry chance by 2%."
+                              },
+                              {
+                                        name: "Improved Rend",
+                                        rank: "3/3",
+                                        desc: "Increases bleed damage of Rend by 35%."
+                              },
+                              {
+                                        name: "Tactical Mastery",
+                                        rank: "5/5",
+                                        desc: "Retain up to 25 Rage when changing stances."
+                              },
+                              {
+                                        name: "Improved Overpower",
+                                        rank: "2/2",
+                                        desc: "Increases critical strike chance of Overpower by 50%."
+                              },
+                              {
+                                        name: "Deep Wounds",
+                                        rank: "3/3",
+                                        desc: "Critical strikes cause enemy to bleed for 60% of weapon damage."
+                              },
+                              {
+                                        name: "Two-Handed Weapon Spec",
+                                        rank: "5/5",
+                                        desc: "Increases physical damage with two-handed weapons by 5%."
+                              },
+                              {
+                                        name: "Impale",
+                                        rank: "2/2",
+                                        desc: "Increases critical strike damage bonus of abilities by 20%."
+                              },
+                              {
+                                        name: "Sweeping Strikes",
+                                        rank: "1/1",
+                                        desc: "Next 5 melee attacks strike an additional nearby enemy."
+                              },
+                              {
+                                        name: "Spearing Strike",
+                                        rank: "1/1",
+                                        isNew: true,
+                                        desc: "Classic+ Ability: Interrupts enemy spellcasting and locks school for 4 sec in all stances."
+                              }
+                    ]
+          },
+          {
+                    name: "Fury",
+                    icon: "https://render.worldofwarcraft.com/us/icons/56/ability_warrior_innerrage.jpg",
+                    points: 0,
+                    talents: []
+          },
+          {
+                    name: "Protection",
+                    icon: "https://render.worldofwarcraft.com/us/icons/56/inv_shield_06.jpg",
+                    points: 0,
+                    talents: []
+          }
+]
         },
         gear: {
           head: {
@@ -214,7 +281,74 @@ const WOW_BIS_DATA = {
         talents: {
           points: "26 / 0 / 0",
           summary: "Improved Hamstring + Tactical Mastery + Sweeping Strikes + Spearing Strike interrupt",
-          url: "https://foreverchanges.pro/talents/warrior?b=3030521312231--&l=30&tl=5"
+          buildCode: "FOREVER-WARRIOR-ARMS-30-26-0-0",
+          trees: [
+          {
+                    name: "Arms",
+                    icon: "https://render.worldofwarcraft.com/us/icons/56/ability_rogue_eviscerate.jpg",
+                    points: 26,
+                    talents: [
+                              {
+                                        name: "Deflection",
+                                        rank: "2/5",
+                                        desc: "Increases your Parry chance by 2%."
+                              },
+                              {
+                                        name: "Improved Rend",
+                                        rank: "3/3",
+                                        desc: "Increases bleed damage of Rend by 35%."
+                              },
+                              {
+                                        name: "Tactical Mastery",
+                                        rank: "5/5",
+                                        desc: "Retain up to 25 Rage when changing stances."
+                              },
+                              {
+                                        name: "Improved Overpower",
+                                        rank: "2/2",
+                                        desc: "Increases critical strike chance of Overpower by 50%."
+                              },
+                              {
+                                        name: "Deep Wounds",
+                                        rank: "3/3",
+                                        desc: "Critical strikes cause enemy to bleed for 60% of weapon damage."
+                              },
+                              {
+                                        name: "Two-Handed Weapon Spec",
+                                        rank: "5/5",
+                                        desc: "Increases physical damage with two-handed weapons by 5%."
+                              },
+                              {
+                                        name: "Impale",
+                                        rank: "2/2",
+                                        desc: "Increases critical strike damage bonus of abilities by 20%."
+                              },
+                              {
+                                        name: "Sweeping Strikes",
+                                        rank: "1/1",
+                                        desc: "Next 5 melee attacks strike an additional nearby enemy."
+                              },
+                              {
+                                        name: "Spearing Strike",
+                                        rank: "1/1",
+                                        isNew: true,
+                                        desc: "Classic+ Ability: Interrupts enemy spellcasting and locks school for 4 sec in all stances."
+                              }
+                    ]
+          },
+          {
+                    name: "Fury",
+                    icon: "https://render.worldofwarcraft.com/us/icons/56/ability_warrior_innerrage.jpg",
+                    points: 0,
+                    talents: []
+          },
+          {
+                    name: "Protection",
+                    icon: "https://render.worldofwarcraft.com/us/icons/56/inv_shield_06.jpg",
+                    points: 0,
+                    talents: []
+          }
+]
         },
         gear: {
           head: {
@@ -339,7 +473,74 @@ const WOW_BIS_DATA = {
         talents: {
           points: "5 / 0 / 21",
           summary: "Shield Specialization + Last Stand + Vanguard + Concussion Blow (Full mitigation)",
-          url: "https://foreverchanges.pro/talents/warrior?b=0500000000000-0000000000000-0500501230000&l=30&tl=5"
+          buildCode: "FOREVER-WARRIOR-ARMS-30-26-0-0",
+          trees: [
+          {
+                    name: "Arms",
+                    icon: "https://render.worldofwarcraft.com/us/icons/56/ability_rogue_eviscerate.jpg",
+                    points: 26,
+                    talents: [
+                              {
+                                        name: "Deflection",
+                                        rank: "2/5",
+                                        desc: "Increases your Parry chance by 2%."
+                              },
+                              {
+                                        name: "Improved Rend",
+                                        rank: "3/3",
+                                        desc: "Increases bleed damage of Rend by 35%."
+                              },
+                              {
+                                        name: "Tactical Mastery",
+                                        rank: "5/5",
+                                        desc: "Retain up to 25 Rage when changing stances."
+                              },
+                              {
+                                        name: "Improved Overpower",
+                                        rank: "2/2",
+                                        desc: "Increases critical strike chance of Overpower by 50%."
+                              },
+                              {
+                                        name: "Deep Wounds",
+                                        rank: "3/3",
+                                        desc: "Critical strikes cause enemy to bleed for 60% of weapon damage."
+                              },
+                              {
+                                        name: "Two-Handed Weapon Spec",
+                                        rank: "5/5",
+                                        desc: "Increases physical damage with two-handed weapons by 5%."
+                              },
+                              {
+                                        name: "Impale",
+                                        rank: "2/2",
+                                        desc: "Increases critical strike damage bonus of abilities by 20%."
+                              },
+                              {
+                                        name: "Sweeping Strikes",
+                                        rank: "1/1",
+                                        desc: "Next 5 melee attacks strike an additional nearby enemy."
+                              },
+                              {
+                                        name: "Spearing Strike",
+                                        rank: "1/1",
+                                        isNew: true,
+                                        desc: "Classic+ Ability: Interrupts enemy spellcasting and locks school for 4 sec in all stances."
+                              }
+                    ]
+          },
+          {
+                    name: "Fury",
+                    icon: "https://render.worldofwarcraft.com/us/icons/56/ability_warrior_innerrage.jpg",
+                    points: 0,
+                    talents: []
+          },
+          {
+                    name: "Protection",
+                    icon: "https://render.worldofwarcraft.com/us/icons/56/inv_shield_06.jpg",
+                    points: 0,
+                    talents: []
+          }
+]
         },
         gear: {
           head: {
@@ -454,7 +655,74 @@ const WOW_BIS_DATA = {
         talents: {
           points: "5 / 0 / 21",
           summary: "Benediction + Seal of Command + Pursuit of Justice + Vengeance (Full 2H Burst)",
-          url: "https://foreverchanges.pro/talents/paladin?b=0500000000000-0000000000000-0500501230000&l=30&tl=5"
+          buildCode: "FOREVER-PALADIN-RET-30-5-0-21",
+          trees: [
+          {
+                    name: "Holy",
+                    icon: "https://render.worldofwarcraft.com/us/icons/56/spell_holy_holybolt.jpg",
+                    points: 5,
+                    talents: [
+                              {
+                                        name: "Divine Strength",
+                                        rank: "5/5",
+                                        desc: "Increases your Strength by 10%."
+                              }
+                    ]
+          },
+          {
+                    name: "Protection",
+                    icon: "https://render.worldofwarcraft.com/us/icons/56/spell_holy_devotionaura.jpg",
+                    points: 0,
+                    talents: []
+          },
+          {
+                    name: "Retribution",
+                    icon: "https://render.worldofwarcraft.com/us/icons/56/spell_holy_auraoflight.jpg",
+                    points: 21,
+                    talents: [
+                              {
+                                        name: "Benediction",
+                                        rank: "5/5",
+                                        desc: "Reduces mana cost of Judgement and Seals by 15%."
+                              },
+                              {
+                                        name: "Improved Judgement",
+                                        rank: "2/2",
+                                        desc: "Decreases cooldown of Judgement by 2 sec."
+                              },
+                              {
+                                        name: "Improved Seal of the Crusader",
+                                        rank: "3/3",
+                                        desc: "Increases Attack Power bonus of Seal of the Crusader by 15%."
+                              },
+                              {
+                                        name: "Conviction",
+                                        rank: "5/5",
+                                        desc: "Increases your chance to get a critical strike with melee weapons by 5%."
+                              },
+                              {
+                                        name: "Seal of Command",
+                                        rank: "1/1",
+                                        desc: "Gives a chance to deal additional Holy damage equal to 70% of weapon damage."
+                              },
+                              {
+                                        name: "Pursuit of Justice",
+                                        rank: "2/2",
+                                        desc: "Increases movement and mounted movement speed by 8%."
+                              },
+                              {
+                                        name: "Eye for an Eye",
+                                        rank: "2/2",
+                                        desc: "Causes 30% of critical damage taken to be reflected back to the attacker."
+                              },
+                              {
+                                        name: "Vengeance",
+                                        rank: "1/1",
+                                        desc: "Gives a 15% bonus to physical and Holy damage after scoring a critical strike."
+                              }
+                    ]
+          }
+]
         },
         gear: {
           head: {
@@ -559,7 +827,74 @@ const WOW_BIS_DATA = {
         talents: {
           points: "21 / 5 / 0",
           summary: "Divine Intellect + Spiritual Focus (No pushback) + Illumination (100% mana refund on Holy crit!)",
-          url: "https://foreverchanges.pro/talents/paladin?b=0500501230000-0500000000000-0000000000000&l=30&tl=5"
+          buildCode: "FOREVER-PALADIN-RET-30-5-0-21",
+          trees: [
+          {
+                    name: "Holy",
+                    icon: "https://render.worldofwarcraft.com/us/icons/56/spell_holy_holybolt.jpg",
+                    points: 5,
+                    talents: [
+                              {
+                                        name: "Divine Strength",
+                                        rank: "5/5",
+                                        desc: "Increases your Strength by 10%."
+                              }
+                    ]
+          },
+          {
+                    name: "Protection",
+                    icon: "https://render.worldofwarcraft.com/us/icons/56/spell_holy_devotionaura.jpg",
+                    points: 0,
+                    talents: []
+          },
+          {
+                    name: "Retribution",
+                    icon: "https://render.worldofwarcraft.com/us/icons/56/spell_holy_auraoflight.jpg",
+                    points: 21,
+                    talents: [
+                              {
+                                        name: "Benediction",
+                                        rank: "5/5",
+                                        desc: "Reduces mana cost of Judgement and Seals by 15%."
+                              },
+                              {
+                                        name: "Improved Judgement",
+                                        rank: "2/2",
+                                        desc: "Decreases cooldown of Judgement by 2 sec."
+                              },
+                              {
+                                        name: "Improved Seal of the Crusader",
+                                        rank: "3/3",
+                                        desc: "Increases Attack Power bonus of Seal of the Crusader by 15%."
+                              },
+                              {
+                                        name: "Conviction",
+                                        rank: "5/5",
+                                        desc: "Increases your chance to get a critical strike with melee weapons by 5%."
+                              },
+                              {
+                                        name: "Seal of Command",
+                                        rank: "1/1",
+                                        desc: "Gives a chance to deal additional Holy damage equal to 70% of weapon damage."
+                              },
+                              {
+                                        name: "Pursuit of Justice",
+                                        rank: "2/2",
+                                        desc: "Increases movement and mounted movement speed by 8%."
+                              },
+                              {
+                                        name: "Eye for an Eye",
+                                        rank: "2/2",
+                                        desc: "Causes 30% of critical damage taken to be reflected back to the attacker."
+                              },
+                              {
+                                        name: "Vengeance",
+                                        rank: "1/1",
+                                        desc: "Gives a 15% bonus to physical and Holy damage after scoring a critical strike."
+                              }
+                    ]
+          }
+]
         },
         gear: {
           head: {
@@ -670,7 +1005,65 @@ const WOW_BIS_DATA = {
         talents: {
           points: "21 / 5 / 0",
           summary: "Lethality + Mortal Shots + Aimed Shot (Max burst rotation at 30 cap)",
-          url: "https://foreverchanges.pro/talents/hunter?b=0500000000000-0500501230000-0000000000000&l=30&tl=5"
+          buildCode: "FOREVER-HUNTER-MM-30-5-21-0",
+          trees: [
+          {
+                    name: "Beast Mastery",
+                    icon: "https://render.worldofwarcraft.com/us/icons/56/ability_hunter_beasttaming.jpg",
+                    points: 5,
+                    talents: [
+                              {
+                                        name: "Endurance Training",
+                                        rank: "5/5",
+                                        desc: "Increases pet health by 15% and Hunter health by 5%."
+                              }
+                    ]
+          },
+          {
+                    name: "Marksmanship",
+                    icon: "https://render.worldofwarcraft.com/us/icons/56/ability_marksmanship.jpg",
+                    points: 21,
+                    talents: [
+                              {
+                                        name: "Efficiency",
+                                        rank: "5/5",
+                                        desc: "Reduces mana cost of Shots and Stings by 10%."
+                              },
+                              {
+                                        name: "Lethality",
+                                        rank: "5/5",
+                                        desc: "Increases critical strike damage bonus of Shots by 30%."
+                              },
+                              {
+                                        name: "Aimed Shot",
+                                        rank: "1/1",
+                                        desc: "An aimed shot that deals weapon damage +70 and reduces target healing taken."
+                              },
+                              {
+                                        name: "Hawk Eye",
+                                        rank: "3/3",
+                                        desc: "Increases range of ranged weapons by 6 yards."
+                              },
+                              {
+                                        name: "Mortal Shots",
+                                        rank: "5/5",
+                                        desc: "Increases ranged critical strike damage bonus by 30%."
+                              },
+                              {
+                                        name: "Cobra Shot",
+                                        rank: "2/2",
+                                        isNew: true,
+                                        desc: "Classic+ Shot: An instant venomous shot dealing Nature damage that extends Serpent Sting duration."
+                              }
+                    ]
+          },
+          {
+                    name: "Survival",
+                    icon: "https://render.worldofwarcraft.com/us/icons/56/ability_hunter_swiftstrike.jpg",
+                    points: 0,
+                    talents: []
+          }
+]
         },
         gear: {
           head: {
@@ -784,7 +1177,74 @@ const WOW_BIS_DATA = {
         talents: {
           points: "0 / 0 / 26",
           summary: "Elemental Precision (+6% Hit) + Ice Shards (100% Crit bonus) + Shatter + Ice Block (Level 30 cap + 5 Talented perk points)",
-          url: "https://foreverchanges.pro/talents/mage?b=0000000000000-0000000000000-0500501230000&l=30&tl=5"
+          buildCode: "FOREVER-MAGE-FROST-30-0-0-26",
+          trees: [
+          {
+                    name: "Arcane",
+                    icon: "https://render.worldofwarcraft.com/us/icons/56/spell_holy_magicalsentry.jpg",
+                    points: 0,
+                    talents: []
+          },
+          {
+                    name: "Fire",
+                    icon: "https://render.worldofwarcraft.com/us/icons/56/spell_fire_firebolt02.jpg",
+                    points: 0,
+                    talents: []
+          },
+          {
+                    name: "Frost",
+                    icon: "https://render.worldofwarcraft.com/us/icons/56/spell_frost_frostbolt02.jpg",
+                    points: 26,
+                    talents: [
+                              {
+                                        name: "Frost Warding",
+                                        rank: "2/2",
+                                        desc: "Increases armor and resistances provided by Frost Armor and Frost Ward."
+                              },
+                              {
+                                        name: "Elemental Precision",
+                                        rank: "3/3",
+                                        desc: "Reduces mana cost and increases chance to hit with Frost spells by 6%."
+                              },
+                              {
+                                        name: "Ice Shards",
+                                        rank: "5/5",
+                                        desc: "Increases critical strike damage bonus of Frost spells by 100%."
+                              },
+                              {
+                                        name: "Improved Frostbolt",
+                                        rank: "5/5",
+                                        desc: "Reduces cast time of Frostbolt by 0.5 sec."
+                              },
+                              {
+                                        name: "Piercing Ice",
+                                        rank: "3/3",
+                                        desc: "Increases damage done by Frost spells by 6%."
+                              },
+                              {
+                                        name: "Cold Snap",
+                                        rank: "1/1",
+                                        desc: "Instantly resets cooldown of all Frost spells."
+                              },
+                              {
+                                        name: "Shatter",
+                                        rank: "5/5",
+                                        desc: "Increases critical strike chance of all spells against frozen targets by 50%."
+                              },
+                              {
+                                        name: "Ice Block",
+                                        rank: "1/1",
+                                        desc: "Encases caster in a block of ice, protecting from all physical and spell attacks for 10 sec."
+                              },
+                              {
+                                        name: "Deep Freeze",
+                                        rank: "1/1",
+                                        isNew: true,
+                                        desc: "Classic+ Ability: Stuns target for 5 sec. Only usable on Frozen targets."
+                              }
+                    ]
+          }
+]
         },
         gear: {
           head: {
@@ -895,7 +1355,64 @@ const WOW_BIS_DATA = {
         talents: {
           points: "5 / 21 / 0",
           summary: "Precision (+5% Hit) + Dual Wield Specialization + Blade Flurry (Unmatched AoE cleave at 30 cap)",
-          url: "https://foreverchanges.pro/talents/rogue?b=0500000000000-0500501230000-0000000000000&l=30&tl=5"
+          buildCode: "FOREVER-ROGUE-COMBAT-30-5-21-0",
+          trees: [
+          {
+                    name: "Assassination",
+                    icon: "https://render.worldofwarcraft.com/us/icons/56/ability_rogue_eviscerate.jpg",
+                    points: 5,
+                    talents: [
+                              {
+                                        name: "Malice",
+                                        rank: "5/5",
+                                        desc: "Increases your critical strike chance by 5%."
+                              }
+                    ]
+          },
+          {
+                    name: "Combat",
+                    icon: "https://render.worldofwarcraft.com/us/icons/56/ability_backstab.jpg",
+                    points: 21,
+                    talents: [
+                              {
+                                        name: "Improved Sinister Strike",
+                                        rank: "2/2",
+                                        desc: "Reduces energy cost of Sinister Strike by 5."
+                              },
+                              {
+                                        name: "Lightning Reflexes",
+                                        rank: "3/3",
+                                        desc: "Increases Dodge chance by 3%."
+                              },
+                              {
+                                        name: "Precision",
+                                        rank: "5/5",
+                                        desc: "Increases your chance to hit with melee weapons by 5%."
+                              },
+                              {
+                                        name: "Dual Wield Specialization",
+                                        rank: "5/5",
+                                        desc: "Increases damage dealt by your off-hand weapon by 50%."
+                              },
+                              {
+                                        name: "Blade Flurry",
+                                        rank: "1/1",
+                                        desc: "Increases attack speed by 20% and attacks strike an additional nearby enemy."
+                              },
+                              {
+                                        name: "Sword Specialization",
+                                        rank: "5/5",
+                                        desc: "Gives a 5% chance to get an extra attack on the same target with Swords."
+                              }
+                    ]
+          },
+          {
+                    name: "Subtlety",
+                    icon: "https://render.worldofwarcraft.com/us/icons/56/ability_stealth.jpg",
+                    points: 0,
+                    talents: []
+          }
+]
         },
         gear: {
           head: {
@@ -1009,7 +1526,63 @@ const WOW_BIS_DATA = {
         talents: {
           points: "0 / 0 / 26",
           summary: "Shadow Focus (+10% Hit) + Improved Mind Blast + Mind Flay + Shadow Weaving (+15% Shadow Vulnerability at Level 30 cap)",
-          url: "https://foreverchanges.pro/talents/priest?b=0000000000000-0000000000000-0500501230000&l=30&tl=5"
+          buildCode: "FOREVER-PRIEST-SHADOW-30-0-0-26",
+          trees: [
+          {
+                    name: "Discipline",
+                    icon: "https://render.worldofwarcraft.com/us/icons/56/spell_holy_wordfortitude.jpg",
+                    points: 0,
+                    talents: []
+          },
+          {
+                    name: "Holy",
+                    icon: "https://render.worldofwarcraft.com/us/icons/56/spell_holy_guardianspirit.jpg",
+                    points: 0,
+                    talents: []
+          },
+          {
+                    name: "Shadow",
+                    icon: "https://render.worldofwarcraft.com/us/icons/56/spell_shadow_shadowwordpain.jpg",
+                    points: 26,
+                    talents: [
+                              {
+                                        name: "Spirit Tap",
+                                        rank: "5/5",
+                                        desc: "Gives a 100% chance to gain a 100% bonus to Spirit after killing an enemy."
+                              },
+                              {
+                                        name: "Improved Shadow Word: Pain",
+                                        rank: "2/2",
+                                        desc: "Increases duration of Shadow Word: Pain by 6 sec."
+                              },
+                              {
+                                        name: "Shadow Focus",
+                                        rank: "5/5",
+                                        desc: "Increases your chance to hit with Shadow spells by 10%."
+                              },
+                              {
+                                        name: "Mind Flay",
+                                        rank: "1/1",
+                                        desc: "Channels shadow energy into target, dealing damage and slowing by 50%."
+                              },
+                              {
+                                        name: "Improved Mind Blast",
+                                        rank: "5/5",
+                                        desc: "Reduces cooldown of Mind Blast by 2.5 sec."
+                              },
+                              {
+                                        name: "Shadow Reach",
+                                        rank: "3/3",
+                                        desc: "Increases range of Shadow spells by 20%."
+                              },
+                              {
+                                        name: "Shadow Weaving",
+                                        rank: "5/5",
+                                        desc: "Shadow spells have a 100% chance to cause target to take 15% increased Shadow damage."
+                              }
+                    ]
+          }
+]
         },
         gear: {
           head: {
@@ -1120,7 +1693,70 @@ const WOW_BIS_DATA = {
         talents: {
           points: "21 / 0 / 5",
           summary: "Suppression (+10% Hit) + Improved Corruption (Instant Cast) + Siphon Life + Shadowburn",
-          url: "https://foreverchanges.pro/talents/warlock?b=0500501230000-0000000000000-0500000000000&l=30&tl=5"
+          buildCode: "FOREVER-WARLOCK-AFF-30-21-0-5",
+          trees: [
+          {
+                    name: "Affliction",
+                    icon: "https://render.worldofwarcraft.com/us/icons/56/spell_shadow_deathcoil.jpg",
+                    points: 21,
+                    talents: [
+                              {
+                                        name: "Suppression",
+                                        rank: "5/5",
+                                        desc: "Reduces chance for enemies to resist your Affliction spells by 10%."
+                              },
+                              {
+                                        name: "Improved Corruption",
+                                        rank: "5/5",
+                                        desc: "Reduces cast time of Corruption by 2 sec (Instant Cast!)."
+                              },
+                              {
+                                        name: "Improved Life Tap",
+                                        rank: "2/2",
+                                        desc: "Increases mana awarded by Life Tap by 20%."
+                              },
+                              {
+                                        name: "Nightfall",
+                                        rank: "2/2",
+                                        desc: "Gives Corruption and Drain Life a 4% chance to grant an instant Shadow Bolt."
+                              },
+                              {
+                                        name: "Grim Reach",
+                                        rank: "2/2",
+                                        desc: "Increases range of Affliction spells by 20%."
+                              },
+                              {
+                                        name: "Siphon Life",
+                                        rank: "1/1",
+                                        desc: "Transfers health from the target to the caster every 3 sec."
+                              },
+                              {
+                                        name: "Shadow Embrace",
+                                        rank: "4/4",
+                                        isNew: true,
+                                        desc: "Classic+ Talent: Shadow spells apply Shadow Embrace, reducing physical damage dealt by target."
+                              }
+                    ]
+          },
+          {
+                    name: "Demonology",
+                    icon: "https://render.worldofwarcraft.com/us/icons/56/spell_shadow_metamorphosis.jpg",
+                    points: 0,
+                    talents: []
+          },
+          {
+                    name: "Destruction",
+                    icon: "https://render.worldofwarcraft.com/us/icons/56/spell_shadow_rainoffire.jpg",
+                    points: 5,
+                    talents: [
+                              {
+                                        name: "Improved Shadow Bolt",
+                                        rank: "5/5",
+                                        desc: "Shadow Bolt crits increase shadow damage dealt to target by 20% for next 4 hits."
+                              }
+                    ]
+          }
+]
         },
         gear: {
           head: {
@@ -1230,7 +1866,65 @@ const WOW_BIS_DATA = {
         talents: {
           points: "0 / 21 / 5",
           summary: "Two-Handed Axes and Maces + Flurry (30% Haste) + Improved Ghost Wolf + Concussion",
-          url: "https://foreverchanges.pro/talents/shaman?b=0000000000000-0500501230000-0500000000000&l=30&tl=5"
+          buildCode: "FOREVER-SHAMAN-ENH-30-0-21-5",
+          trees: [
+          {
+                    name: "Elemental",
+                    icon: "https://render.worldofwarcraft.com/us/icons/56/spell_nature_lightning.jpg",
+                    points: 5,
+                    talents: [
+                              {
+                                        name: "Concussion",
+                                        rank: "5/5",
+                                        desc: "Increases damage done by Lightning and Shock spells by 5%."
+                              }
+                    ]
+          },
+          {
+                    name: "Enhancement",
+                    icon: "https://render.worldofwarcraft.com/us/icons/56/spell_nature_lightningshield.jpg",
+                    points: 21,
+                    talents: [
+                              {
+                                        name: "Ancestral Knowledge",
+                                        rank: "5/5",
+                                        desc: "Increases maximum Mana by 5%."
+                              },
+                              {
+                                        name: "Thundering Strikes",
+                                        rank: "5/5",
+                                        desc: "Increases critical strike chance with melee weapons by 5%."
+                              },
+                              {
+                                        name: "Improved Ghost Wolf",
+                                        rank: "2/2",
+                                        desc: "Reduces cast time of Ghost Wolf by 2 sec (Instant in Forever!)."
+                              },
+                              {
+                                        name: "Two-Handed Axes and Maces",
+                                        rank: "1/1",
+                                        desc: "Allows 2H Axes and Two-Handed Maces to be used."
+                              },
+                              {
+                                        name: "Flurry",
+                                        rank: "5/5",
+                                        desc: "Increases attack speed by 30% for your next 3 swings after a critical hit."
+                              },
+                              {
+                                        name: "Lava Lash",
+                                        rank: "3/3",
+                                        isNew: true,
+                                        desc: "Classic+ Strike: Charges offhand weapon with lava to deal instant fire weapon damage."
+                              }
+                    ]
+          },
+          {
+                    name: "Restoration",
+                    icon: "https://render.worldofwarcraft.com/us/icons/56/spell_nature_magicimmunity.jpg",
+                    points: 0,
+                    talents: []
+          }
+]
         },
         gear: {
           head: {
@@ -1344,7 +2038,75 @@ const WOW_BIS_DATA = {
         talents: {
           points: "0 / 21 / 5",
           summary: "Sharpened Claws (+6% Crit) + Blood Frenzy + Faerie Fire (Feral) + Furor (Instant 40 energy shift)",
-          url: "https://foreverchanges.pro/talents/druid?b=0000000000000-0500501230000-0500000000000&l=30&tl=5"
+          buildCode: "FOREVER-DRUID-FERAL-30-0-21-5",
+          trees: [
+          {
+                    name: "Balance",
+                    icon: "https://render.worldofwarcraft.com/us/icons/56/spell_nature_starfall.jpg",
+                    points: 0,
+                    talents: []
+          },
+          {
+                    name: "Feral Combat",
+                    icon: "https://render.worldofwarcraft.com/us/icons/56/ability_racial_bearform.jpg",
+                    points: 21,
+                    talents: [
+                              {
+                                        name: "Ferocity",
+                                        rank: "5/5",
+                                        desc: "Reduces cost of Maul, Swipe, Claw, and Rake by 5 Rage or Energy."
+                              },
+                              {
+                                        name: "Feral Aggression",
+                                        rank: "5/5",
+                                        desc: "Increases Ferocious Bite damage by 15%."
+                              },
+                              {
+                                        name: "Brutal Impact",
+                                        rank: "2/2",
+                                        desc: "Increases stun duration of Bash and Pounce by 1 sec."
+                              },
+                              {
+                                        name: "Feral Charge",
+                                        rank: "1/1",
+                                        desc: "Causes you to charge an enemy, immobilizing them for 4 sec."
+                              },
+                              {
+                                        name: "Sharpened Claws",
+                                        rank: "3/3",
+                                        desc: "Increases critical strike chance in Bear and Cat Forms by 6%."
+                              },
+                              {
+                                        name: "Blood Frenzy",
+                                        rank: "2/2",
+                                        desc: "Critical strikes from Claw, Rake, and Shred add an additional combo point."
+                              },
+                              {
+                                        name: "Faerie Fire (Feral)",
+                                        rank: "1/1",
+                                        desc: "Decreases armor of target and prevents stealth in Bear/Cat form."
+                              },
+                              {
+                                        name: "Savage Roar",
+                                        rank: "2/2",
+                                        isNew: true,
+                                        desc: "Classic+ Finisher: Increases physical damage dealt by 25% while in Cat Form."
+                              }
+                    ]
+          },
+          {
+                    name: "Restoration",
+                    icon: "https://render.worldofwarcraft.com/us/icons/56/spell_nature_healingtouch.jpg",
+                    points: 5,
+                    talents: [
+                              {
+                                        name: "Furor",
+                                        rank: "5/5",
+                                        desc: "Gives a 100% chance to gain 10 Rage in Bear Form or 40 Energy in Cat Form when shapeshifting."
+                              }
+                    ]
+          }
+]
         },
         gear: {
           head: {

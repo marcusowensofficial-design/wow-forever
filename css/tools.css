@@ -502,6 +502,115 @@
   color: var(--text-gold);
 }
 
+/* BiS Search and Source Filter Bar */
+.bis-filter-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding: 0.85rem 1.25rem;
+  background: rgba(13, 17, 26, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-md);
+}
+
+.bis-search-box {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex: 1;
+  min-width: 280px;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-sm);
+  padding: 0.45rem 0.85rem;
+}
+
+.bis-search-box:focus-within {
+  border-color: var(--border-gold);
+  box-shadow: 0 0 10px rgba(243, 192, 67, 0.2);
+}
+
+.bis-search-icon {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+.bis-gear-filter-input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 0.85rem;
+  width: 100%;
+}
+
+.bis-gear-filter-input::placeholder {
+  color: #64748b;
+}
+
+.bis-filter-clear-btn {
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  font-size: 0.85rem;
+  cursor: pointer;
+  padding: 0 0.2rem;
+}
+
+.bis-source-chips {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  flex-wrap: wrap;
+}
+
+.bis-source-chip {
+  padding: 0.35rem 0.75rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-full);
+  color: #cbd5e1;
+  font-size: 0.78rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.bis-source-chip:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+}
+
+.bis-source-chip.active {
+  background: rgba(243, 192, 67, 0.2);
+  border-color: var(--border-gold);
+  color: var(--text-gold);
+  font-weight: 700;
+}
+
+.bis-slot-card.highlighted {
+  border-color: #facc15 !important;
+  box-shadow: 0 0 15px rgba(250, 204, 21, 0.4);
+  transform: translateY(-2px);
+}
+
+.bis-slot-card.dimmed {
+  opacity: 0.35;
+  filter: grayscale(40%);
+}
+
+.bis-alt-row.dimmed {
+  display: none !important;
+}
+
+.bis-alt-row.highlighted {
+  background: rgba(243, 192, 67, 0.12) !important;
+  border-color: var(--border-gold) !important;
+}
+
 /* Stage Layout */
 .bis-stage-layout {
   display: grid;
