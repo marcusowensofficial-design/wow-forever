@@ -1,0 +1,348 @@
+- generic [ref=e1]:
+  - complementary "Game and Beta Status Bar" [ref=e2]:
+    - generic [ref=e3]: "Beta Phase 2: LIVE NOW • Level 30 Cap Active"
+    - generic [ref=e6]:
+      - generic [ref=e7]:
+        - strong [ref=e8]: "Beta Duration:"
+        - text: 35 Days (Sept 17 – Oct 21) •
+        - generic [ref=e9]: Day 24 of 35
+      - generic [ref=e10]:
+        - strong [ref=e11]: "Level Cap:"
+        - text: 30 Active (Excavation Site 4 & Dalaran Live)
+      - generic [ref=e12]: Classic+ Standalone
+      - generic [ref=e13]: "🍺 Events: Brewfest & Harvest Concluded • Hallow's End Arrives Oct 18"
+      - generic [ref=e14]:
+        - strong [ref=e15]: "Rulesets:"
+        - text: PvP • PvE • RP • Hardcore
+      - generic [ref=e16]:
+        - strong [ref=e17]: "Engine:"
+        - text: Ray-Traced GI (DX12)
+      - generic [ref=e18]:
+        - strong [ref=e19]: "Client Build:"
+        - text: 1.60.6.71890 (Phase 2 Cooldown Manager & UI Overhaul)
+  - generic [ref=e20]:
+    - generic [ref=e21]:
+      - generic [ref=e22]:
+        - generic [ref=e23]: Beta Build 1.60.6.71890 • Realms Online
+        - button "🐟 3,921 murlocs online" [ref=e26] [cursor=pointer]:
+          - generic [ref=e27]: 🐟
+          - generic [ref=e28]: 3,921
+          - generic [ref=e29]: murlocs online
+      - generic [ref=e30]:
+        - button "Search Forever" [ref=e31] [cursor=pointer]:
+          - generic: 🔍
+          - text: Search Forever
+          - generic [ref=e32]: /
+        - button "Classic+ Guides" [ref=e33] [cursor=pointer]:
+          - generic [ref=e34]: 📖
+          - text: Classic+ Guides
+    - banner [ref=e35]:
+      - generic [ref=e36]:
+        - generic [ref=e37]: ⚡
+        - generic [ref=e38]: BLIZZARD ENTERTAINMENT
+        - generic [ref=e39]: ⚡
+      - 'heading "WORLD OF WARCRAFT: FOREVER" [level=1] [ref=e40]'
+      - paragraph [ref=e41]:
+        - text: The permanent, living
+        - strong [ref=e42]: Classic+
+        - text: adventure. Featuring horizontal progression at Level 60, the new
+        - strong [ref=e43]: Skyborne
+        - text: race, 9 new leveling dungeons, 3 raid tiers, and zero level scaling.
+      - navigation "Official Guides and Tools" [ref=e44]:
+        - 'link "🌐 Wowhead: Everything We Know" [ref=e45] [cursor=pointer]':
+          - /url: https://www.wowhead.com/forever/news/everything-we-know-about-wow-forever-382827
+          - generic [ref=e46]: 🌐
+          - text: "Wowhead: Everything We Know"
+        - 'link "🍺 Warcraft Tavern: Phase 2 Level 30 & Pre-BiS" [ref=e47] [cursor=pointer]':
+          - /url: https://www.warcrafttavern.com/forever/
+          - generic [ref=e48]: 🍺
+          - text: "Warcraft Tavern: Phase 2 Level 30 & Pre-BiS"
+        - 'link "📊 Mobalytics: Level 30 Meta & Tier Lists" [ref=e49] [cursor=pointer]':
+          - /url: https://mobalytics.gg/wow-forever
+          - generic [ref=e50]: 📊
+          - text: "Mobalytics: Level 30 Meta & Tier Lists"
+        - button "⚡ Interactive Talent Calculator" [ref=e51] [cursor=pointer]:
+          - generic [ref=e52]: ⚡
+          - text: Interactive Talent Calculator
+        - link "🏆 Wowhead Legacy Calculator" [ref=e53] [cursor=pointer]:
+          - /url: https://www.wowhead.com/forever/legacy-calculator
+          - generic [ref=e54]: 🏆
+          - text: Wowhead Legacy Calculator
+        - link "⚔️ Method.gg Itemization Guide" [ref=e55] [cursor=pointer]:
+          - /url: https://www.method.gg/wow-classic/itemization-updates-in-world-of-warcraft-forever-expertise-spell-damage-more
+          - generic [ref=e56]: ⚔️
+          - text: Method.gg Itemization Guide
+        - link "🦅 Method.gg Racials Breakdown" [ref=e57] [cursor=pointer]:
+          - /url: https://www.method.gg/wow-classic/all-new-racial-abilities-in-world-of-warcraft-forever
+          - generic [ref=e58]: 🦅
+          - text: Method.gg Racials Breakdown
+      - navigation "Main Navigation" [ref=e59]:
+        - button "⚡ Operations Hub" [ref=e60] [cursor=pointer]:
+          - generic [ref=e61]: ⚡
+          - text: Operations Hub
+        - button "🛡️ Level 30 BiS" [ref=e62] [cursor=pointer]:
+          - generic [ref=e63]: 🛡️
+          - text: Level 30 BiS
+        - button "📰 News & Dispatches" [ref=e64] [cursor=pointer]:
+          - generic [ref=e65]: 📰
+          - text: News & Dispatches
+        - button "📜 Content Codex" [ref=e66] [cursor=pointer]:
+          - generic [ref=e67]: 📜
+          - text: Content Codex
+        - button "🗺️ World Atlas & Rares" [ref=e68] [cursor=pointer]:
+          - generic [ref=e69]: 🗺️
+          - text: World Atlas & Rares
+        - button "📊 Tier List Maker" [ref=e70] [cursor=pointer]:
+          - generic [ref=e71]: 📊
+          - text: Tier List Maker
+        - button "🧪 Downrank Calc" [ref=e72] [cursor=pointer]:
+          - generic [ref=e73]: 🧪
+          - text: Downrank Calc
+        - button "🧙 Class & Race Planner" [ref=e74] [cursor=pointer]:
+          - generic [ref=e75]: 🧙
+          - text: Class & Race Planner
+        - button "🎯 Class Deep Dives" [ref=e76] [cursor=pointer]:
+          - generic [ref=e77]: 🎯
+          - text: Class Deep Dives
+        - button "🔨 Professions & Camping" [ref=e78] [cursor=pointer]:
+          - generic [ref=e79]: 🔨
+          - text: Professions & Camping
+        - button "⚙️ Systems & Engine" [ref=e80] [cursor=pointer]:
+          - generic [ref=e81]: ⚙️
+          - text: Systems & Engine
+        - button "🛡️ My Forever & Squad" [ref=e82] [cursor=pointer]:
+          - generic [ref=e83]: 🛡️
+          - text: My Forever & Squad
+    - text: ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸
+    - region "Content Codex" [ref=e2865]:
+      - generic [ref=e2867]:
+        - heading "📜 The \"Forever\" Content Codex" [level=2] [ref=e2868]:
+          - generic [ref=e2869]: 📜
+          - text: The "Forever" Content Codex
+        - paragraph [ref=e2870]: The complete guide to new races, class combinations, dungeons, raids, and zones
+      - generic [ref=e2871]:
+        - button "🦅 The Skyborne Race" [ref=e2872] [cursor=pointer]
+        - button "⚔️ New Class Combinations" [ref=e2873] [cursor=pointer]
+        - button "📊 Race & Class Planner" [ref=e2874] [cursor=pointer]
+        - button "🏰 9 Dungeons & 3 Raids" [ref=e2875] [cursor=pointer]
+        - button "🗺️ Full 1–60 Dungeon Route" [ref=e2876] [cursor=pointer]
+        - button "🌄 New & Renewed Zones" [ref=e2877] [cursor=pointer]
+        - button "🐎 Datamined Mounts" [ref=e2878] [cursor=pointer]
+        - button "📊 Stats & Attributes Guide" [ref=e2879] [cursor=pointer]
+        - button "📖 Curated Guides" [ref=e2880] [cursor=pointer]
+        - button "🪙 Merchant's Favor & Crates" [active] [ref=e2881] [cursor=pointer]
+      - text: • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • •
+      - generic [ref=e2930]:
+        - generic [ref=e2932]:
+          - heading "🪙 Merchant's Favor Currency & Supply Crates Ledger" [level=3] [ref=e2933]
+          - paragraph [ref=e2934]: The complete guide to the Azeroth Commerce Authority, Durotar Supply and Logistics, Waylaid Crates, and 317 exclusive recipes
+        - generic [ref=e2935]:
+          - generic [ref=e2936]:
+            - generic [ref=e2937]:
+              - generic [ref=e2938]:
+                - generic [ref=e2939]: 🦁
+                - strong [ref=e2940]: Azeroth Commerce Authority
+              - generic [ref=e2941]: Alliance Camp
+            - generic [ref=e2942]:
+              - generic [ref=e2943]:
+                - strong [ref=e2944]: "Location:"
+                - text: Three Corners, Redridge Mountains
+              - generic [ref=e2945]:
+                - strong [ref=e2946]: "Coordinates:"
+                - text: 10.5, 72.7 (Meeting of Elwynn, Duskwood & Lakeshire roads)
+              - generic [ref=e2947]:
+                - strong [ref=e2948]: "Turn-in Officer:"
+                - text: Marcy Baker (9.5, 71.1)
+              - generic [ref=e2949]: "⚠️ Contested Territory: Watch for Horde on PvP realms."
+          - generic [ref=e2950]:
+            - generic [ref=e2951]:
+              - generic [ref=e2952]:
+                - generic [ref=e2953]: 🦅
+                - strong [ref=e2954]: Durotar Supply and Logistics
+              - generic [ref=e2955]: Horde Camp
+            - generic [ref=e2956]:
+              - generic [ref=e2957]:
+                - strong [ref=e2958]: "Location:"
+                - text: West of Crossroads, The Barrens
+              - generic [ref=e2959]:
+                - strong [ref=e2960]: "Coordinates:"
+                - text: 49.7, 29.4 (On the road to Stonetalon Mountains)
+              - generic [ref=e2961]:
+                - strong [ref=e2962]: "Turn-in Officer:"
+                - text: Dokimi (50.0, 29.2)
+              - generic [ref=e2963]: "🛡️ Safe Horde Territory: Protected by Crossroads guards."
+        - generic [ref=e2964]:
+          - generic [ref=e2965]: 🏷️
+          - generic [ref=e2966]:
+            - strong [ref=e2967]: "First Turn-In Discovery: Shipping Label (+50 Bonus Favor)"
+            - paragraph [ref=e2968]:
+              - text: Filling your very first Waylaid Crate awards a
+              - strong [ref=e2969]: Shipping Label
+              - text: . This starts a one-time quest leading to your faction's trade camp, granting an instant
+              - strong [ref=e2970]: 50 Merchant's Favor
+              - text: boost!
+        - generic [ref=e2971]:
+          - generic [ref=e2973]:
+            - heading "📦 Waylaid Supply Crates Ledger" [level=4] [ref=e2974]
+            - text: White crates take raw gathered materials; Green crates take crafted goods and pay double Favor!
+          - table [ref=e2976]:
+            - rowgroup [ref=e2977]:
+              - row [ref=e2978]:
+                - columnheader "Crate Tier & Quality" [ref=e2979]
+                - columnheader "Req. Level" [ref=e2980]
+                - columnheader "Merchant's Favor" [ref=e2981]
+                - columnheader "Money Reward" [ref=e2982]
+                - columnheader "Accepted Materials (Choose One)" [ref=e2983]
+            - rowgroup [ref=e2984]:
+              - row [ref=e2985]:
+                - cell [ref=e2986]:
+                  - strong [ref=e2987]: Apprentice (White)
+                - cell "Level 10+" [ref=e2988]
+                - cell "🪙 5 Favor" [ref=e2989]
+                - cell "💰 2s 50c" [ref=e2990]
+                - cell "Raw Gathered Materials (20 Peacebloom, 20 Copper Ore, 40 Linen)" [ref=e2991]
+              - row [ref=e2992]:
+                - cell [ref=e2993]:
+                  - strong [ref=e2994]: Apprentice (Green)
+                - cell "Level 10+" [ref=e2995]
+                - cell "🪙 10 Favor" [ref=e2996]
+                - cell "💰 5s 00c" [ref=e2997]
+                - cell "Crafted Components (2 Cured Light Hide, 20 Bolt of Linen, 20 Copper Bar, 16 Copper Bolts)" [ref=e2998]
+              - row [ref=e2999]:
+                - cell [ref=e3000]:
+                  - strong [ref=e3001]: Journeyman (White)
+                - cell "Level 10+" [ref=e3002]
+                - cell "🪙 10 Favor" [ref=e3003]
+                - cell "💰 5s 00c" [ref=e3004]
+                - cell "Intermediate Raw Materials (10 Stranglekelp, 20 Iron Ore, 20 Wool Cloth, 20 Soul Dust)" [ref=e3005]
+              - row [ref=e3006]:
+                - cell [ref=e3007]:
+                  - strong [ref=e3008]: Journeyman (Green)
+                - cell "Level 10+" [ref=e3009]
+                - cell "🪙 20 Favor" [ref=e3010]
+                - cell "💰 10s 00c" [ref=e3011]
+                - cell "Intermediate Crafted Goods (6 Bolt of Woolen Cloth, 20 Iron Bar, 8 Bronze Tube)" [ref=e3012]
+              - row [ref=e3013]:
+                - cell [ref=e3014]:
+                  - strong [ref=e3015]: Expert (White/Green)
+                - cell "Level 20+" [ref=e3016]
+                - cell "🪙 25–35 (Est.) Favor" [ref=e3017]
+                - cell "💰 15s–25s" [ref=e3018]
+                - cell "Mithril Ore, Mageweave, Vision Dust, Mithril Bars, Steel Struts" [ref=e3019]
+              - row [ref=e3020]:
+                - cell [ref=e3021]:
+                  - strong [ref=e3022]: Artisan (White/Green)
+                - cell "Level 35+" [ref=e3023]
+                - cell "🪙 45–60 (Est.) Favor" [ref=e3024]
+                - cell "💰 35s–50s" [ref=e3025]
+                - cell "Thorium Ore, Runecloth, Dream Dust, Truesilver Bars, Thorium Widgets" [ref=e3026]
+          - generic [ref=e3027]:
+            - generic [ref=e3028]:
+              - generic [ref=e3029]: "Crate Calculator:"
+              - combobox [ref=e3030]:
+                - option "Apprentice White (5 Favor / 2s 50c)"
+                - option "Apprentice Green (10 Favor / 5s 00c)"
+                - option "Journeyman White (10 Favor / 5s 00c)"
+                - option "Journeyman Green (20 Favor / 10s 00c)" [selected]
+              - generic [ref=e3031]:
+                - generic [ref=e3032]: "Count:"
+                - spinbutton [ref=e3033]: "5"
+            - generic [ref=e3035]:
+              - generic [ref=e3036]: "Total Earned:"
+              - strong [ref=e3037]: 100 Favor • 50s 00c
+        - generic [ref=e3038]:
+          - generic [ref=e3039]:
+            - generic [ref=e3040]:
+              - heading "📜 150 Craftsman's Writs (Reputation)" [level=4] [ref=e3041]:
+                - generic [ref=e3042]: 📜
+                - text: 150 Craftsman's Writs (Reputation)
+              - generic [ref=e3043]: Daily Orders
+            - paragraph [ref=e3044]:
+              - text: Monsters drop sealed envelopes (
+              - strong [ref=e3045]: Sealed Craftsman's Writ
+              - text: ). Right-click to accept a crafting commission. Deliver the item to the client for Camp Reputation and a
+              - strong [ref=e3046]: Coin Pouch (22–45 silver)
+              - text: .
+            - generic [ref=e3047]:
+              - generic [ref=e3048]:
+                - generic [ref=e3049]:
+                  - strong [ref=e3050]: Journeyman Writs (45 total)
+                  - generic [ref=e3051]: Skill 100–170
+                - generic [ref=e3052]: +75 Rep
+              - generic [ref=e3053]:
+                - generic [ref=e3054]:
+                  - strong [ref=e3055]: Expert Writs (60 total)
+                  - generic [ref=e3056]: Skill 180–225
+                - generic [ref=e3057]: +125 Rep
+              - generic [ref=e3058]:
+                - generic [ref=e3059]:
+                  - strong [ref=e3060]: Artisan Writs (45 total)
+                  - generic [ref=e3061]: Skill 230–310
+                - generic [ref=e3062]: +200 Rep
+            - generic [ref=e3063]:
+              - text: 💡
+              - strong [ref=e3064]: "Forger's Quill:"
+              - text: Uncertified Scribe (south of Three Corners) sells a quill to reroll any writ you cannot craft!
+          - generic [ref=e3065]:
+            - generic [ref=e3066]:
+              - heading "⭐ High-Priority Vendor Purchases" [level=4] [ref=e3067]:
+                - generic [ref=e3068]: ⭐
+                - text: High-Priority Vendor Purchases
+              - generic [ref=e3069]: Best Value
+            - generic [ref=e3070]:
+              - generic [ref=e3071]:
+                - generic [ref=e3072]:
+                  - strong [ref=e3073]: Level 20 Crafted Armor Sets
+                  - generic [ref=e3074]: 30 Favor each
+                - generic [ref=e3075]: Tailoring / LW / BS
+                - paragraph [ref=e3076]: Head pieces (Lvl 20), Boots (17), Gloves (15), Belts (12). BiS pre-dungeon gear.
+              - generic [ref=e3077]:
+                - generic [ref=e3078]:
+                  - strong [ref=e3079]: Level 20 Class Relics
+                  - generic [ref=e3080]: 45 Favor each
+                - generic [ref=e3081]: Enchanting 130
+                - paragraph [ref=e3082]: Tenets of the Silver Hand (Paladin), Polished Driftwood Icon (Shaman), Mystic Mushroom (Druid).
+              - generic [ref=e3083]:
+                - generic [ref=e3084]:
+                  - strong [ref=e3085]: Enchant Weapon - Revelation
+                  - generic [ref=e3086]: 45 Favor
+                - generic [ref=e3087]: Enchanting 135
+                - paragraph [ref=e3088]: Featured in 17 of 31 Phase 2 BiS gear lists; provides strong spell and attack procs.
+              - generic [ref=e3089]:
+                - generic [ref=e3090]:
+                  - strong [ref=e3091]: Reins of the Pack Kodo
+                  - generic [ref=e3092]: 6,000 Favor
+                - generic [ref=e3093]: Any (Level 60)
+                - paragraph [ref=e3094]: Account-wide riding kodo accessible to Alliance characters too!
+              - generic [ref=e3095]:
+                - generic [ref=e3096]:
+                  - strong [ref=e3097]: Minimule Pet & Signpost Toy
+                  - generic [ref=e3098]: 1,500 / 1,200 Favor
+                - generic [ref=e3099]: Any
+                - paragraph [ref=e3100]: Minimule vanity companion and interactive Tradeskill Signpost toy.
+              - generic [ref=e3101]:
+                - generic [ref=e3102]:
+                  - strong [ref=e3103]: Profession Master Titles
+                  - generic [ref=e3104]: 1,000 Favor
+                - generic [ref=e3105]: 300 Skill Req
+                - paragraph [ref=e3106]: "Unlocks account titles: 'The Alchemist', 'The Blacksmith', 'The Enchanter', etc."
+    - text: ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦
+  - contentinfo [ref=e489]:
+    - generic [ref=e490]:
+      - generic [ref=e491]:
+        - link "Blizzard Official News" [ref=e492] [cursor=pointer]:
+          - /url: https://news.blizzard.com
+        - link "Wowhead Coverage" [ref=e493] [cursor=pointer]:
+          - /url: https://www.wowhead.com/forever
+        - link "Warcraft Tavern Hub" [ref=e494] [cursor=pointer]:
+          - /url: https://www.warcrafttavern.com/forever/
+        - link "Mobalytics Meta & Tier Lists" [ref=e495] [cursor=pointer]:
+          - /url: https://mobalytics.gg/wow-forever
+        - link "Method.gg Raiding & Guides" [ref=e496] [cursor=pointer]:
+          - /url: https://www.method.gg
+        - link "Icy Veins Class Hub" [ref=e497] [cursor=pointer]:
+          - /url: https://www.icy-veins.com/wow-forever
+        - link "Battle.net Launcher" [ref=e498] [cursor=pointer]:
+          - /url: https://battle.net
+      - paragraph [ref=e499]: "World of Warcraft: Forever Personal News & Beta Progress Portal • Built for Classic+ Explorers"
+      - paragraph [ref=e500]: Data grounded in official BlizzCon 2026 announcements, Wowhead compendiums, Method.gg itemization audits, and Beta Phase 1 & 2 community testing.

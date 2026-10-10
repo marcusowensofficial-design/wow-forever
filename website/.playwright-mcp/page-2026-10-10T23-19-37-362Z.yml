@@ -1,0 +1,207 @@
+- generic [ref=e1]:
+  - complementary "Game and Beta Status Bar" [ref=e2]:
+    - generic [ref=e3]: "Beta Phase 2: LIVE NOW • Level 30 Cap Active"
+    - generic [ref=e6]:
+      - generic [ref=e7]:
+        - strong [ref=e8]: "Beta Duration:"
+        - text: 35 Days (Sept 17 – Oct 21) •
+        - generic [ref=e9]: Day 24 of 35
+      - generic [ref=e10]:
+        - strong [ref=e11]: "Level Cap:"
+        - text: 30 Active (Excavation Site 4 & Dalaran Live)
+      - generic [ref=e12]: Classic+ Standalone
+      - generic [ref=e13]: "🍺 Events: Brewfest & Harvest Concluded • Hallow's End Arrives Oct 18"
+      - generic [ref=e14]:
+        - strong [ref=e15]: "Rulesets:"
+        - text: PvP • PvE • RP • Hardcore
+      - generic [ref=e16]:
+        - strong [ref=e17]: "Engine:"
+        - text: Ray-Traced GI (DX12)
+      - generic [ref=e18]:
+        - strong [ref=e19]: "Client Build:"
+        - text: 1.60.6.71890 (Phase 2 Cooldown Manager & UI Overhaul)
+  - generic [ref=e20]:
+    - generic [ref=e21]:
+      - generic [ref=e22]:
+        - generic [ref=e23]: Beta Build 1.60.6.71890 • Realms Online
+        - button "🐟 3,921 murlocs online" [ref=e26] [cursor=pointer]:
+          - generic [ref=e27]: 🐟
+          - generic [ref=e28]: 3,921
+          - generic [ref=e29]: murlocs online
+      - generic [ref=e30]:
+        - button "Search Forever" [ref=e31] [cursor=pointer]:
+          - generic: 🔍
+          - text: Search Forever
+          - generic [ref=e32]: /
+        - button "Classic+ Guides" [ref=e33] [cursor=pointer]:
+          - generic [ref=e34]: 📖
+          - text: Classic+ Guides
+    - banner [ref=e35]:
+      - generic [ref=e36]:
+        - generic [ref=e37]: ⚡
+        - generic [ref=e38]: BLIZZARD ENTERTAINMENT
+        - generic [ref=e39]: ⚡
+      - 'heading "WORLD OF WARCRAFT: FOREVER" [level=1] [ref=e40]'
+      - paragraph [ref=e41]:
+        - text: The permanent, living
+        - strong [ref=e42]: Classic+
+        - text: adventure. Featuring horizontal progression at Level 60, the new
+        - strong [ref=e43]: Skyborne
+        - text: race, 9 new leveling dungeons, 3 raid tiers, and zero level scaling.
+      - navigation "Official Guides and Tools" [ref=e44]:
+        - 'link "🌐 Wowhead: Everything We Know" [ref=e45] [cursor=pointer]':
+          - /url: https://www.wowhead.com/forever/news/everything-we-know-about-wow-forever-382827
+          - generic [ref=e46]: 🌐
+          - text: "Wowhead: Everything We Know"
+        - 'link "🍺 Warcraft Tavern: Phase 2 Level 30 & Pre-BiS" [ref=e47] [cursor=pointer]':
+          - /url: https://www.warcrafttavern.com/forever/
+          - generic [ref=e48]: 🍺
+          - text: "Warcraft Tavern: Phase 2 Level 30 & Pre-BiS"
+        - 'link "📊 Mobalytics: Level 30 Meta & Tier Lists" [ref=e49] [cursor=pointer]':
+          - /url: https://mobalytics.gg/wow-forever
+          - generic [ref=e50]: 📊
+          - text: "Mobalytics: Level 30 Meta & Tier Lists"
+        - button "⚡ Interactive Talent Calculator" [ref=e51] [cursor=pointer]:
+          - generic [ref=e52]: ⚡
+          - text: Interactive Talent Calculator
+        - link "🏆 Wowhead Legacy Calculator" [ref=e53] [cursor=pointer]:
+          - /url: https://www.wowhead.com/forever/legacy-calculator
+          - generic [ref=e54]: 🏆
+          - text: Wowhead Legacy Calculator
+        - link "⚔️ Method.gg Itemization Guide" [ref=e55] [cursor=pointer]:
+          - /url: https://www.method.gg/wow-classic/itemization-updates-in-world-of-warcraft-forever-expertise-spell-damage-more
+          - generic [ref=e56]: ⚔️
+          - text: Method.gg Itemization Guide
+        - link "🦅 Method.gg Racials Breakdown" [ref=e57] [cursor=pointer]:
+          - /url: https://www.method.gg/wow-classic/all-new-racial-abilities-in-world-of-warcraft-forever
+          - generic [ref=e58]: 🦅
+          - text: Method.gg Racials Breakdown
+      - navigation "Main Navigation" [ref=e59]:
+        - button "⚡ Operations Hub" [ref=e60] [cursor=pointer]:
+          - generic [ref=e61]: ⚡
+          - text: Operations Hub
+        - button "🛡️ Level 30 BiS" [ref=e62] [cursor=pointer]:
+          - generic [ref=e63]: 🛡️
+          - text: Level 30 BiS
+        - button "📰 News & Dispatches" [ref=e64] [cursor=pointer]:
+          - generic [ref=e65]: 📰
+          - text: News & Dispatches
+        - button "📜 Content Codex" [active] [ref=e66] [cursor=pointer]:
+          - generic [ref=e67]: 📜
+          - text: Content Codex
+        - button "🗺️ World Atlas & Rares" [ref=e68] [cursor=pointer]:
+          - generic [ref=e69]: 🗺️
+          - text: World Atlas & Rares
+        - button "📊 Tier List Maker" [ref=e70] [cursor=pointer]:
+          - generic [ref=e71]: 📊
+          - text: Tier List Maker
+        - button "🧪 Downrank Calc" [ref=e72] [cursor=pointer]:
+          - generic [ref=e73]: 🧪
+          - text: Downrank Calc
+        - button "🧙 Class & Race Planner" [ref=e74] [cursor=pointer]:
+          - generic [ref=e75]: 🧙
+          - text: Class & Race Planner
+        - button "🎯 Class Deep Dives" [ref=e76] [cursor=pointer]:
+          - generic [ref=e77]: 🎯
+          - text: Class Deep Dives
+        - button "🔨 Professions & Camping" [ref=e78] [cursor=pointer]:
+          - generic [ref=e79]: 🔨
+          - text: Professions & Camping
+        - button "⚙️ Systems & Engine" [ref=e80] [cursor=pointer]:
+          - generic [ref=e81]: ⚙️
+          - text: Systems & Engine
+        - button "🛡️ My Forever & Squad" [ref=e82] [cursor=pointer]:
+          - generic [ref=e83]: 🛡️
+          - text: My Forever & Squad
+    - text: ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸
+    - region "Content Codex" [ref=e2865]:
+      - generic [ref=e2867]:
+        - heading "📜 The \"Forever\" Content Codex" [level=2] [ref=e2868]:
+          - generic [ref=e2869]: 📜
+          - text: The "Forever" Content Codex
+        - paragraph [ref=e2870]: The complete guide to new races, class combinations, dungeons, raids, and zones
+      - generic [ref=e2871]:
+        - button "🦅 The Skyborne Race" [ref=e2872] [cursor=pointer]
+        - button "⚔️ New Class Combinations" [ref=e2873] [cursor=pointer]
+        - button "📊 Race & Class Planner" [ref=e2874] [cursor=pointer]
+        - button "🏰 9 Dungeons & 3 Raids" [ref=e2875] [cursor=pointer]
+        - button "🗺️ Full 1–60 Dungeon Route" [ref=e2876] [cursor=pointer]
+        - button "🌄 New & Renewed Zones" [ref=e2877] [cursor=pointer]
+        - button "🐎 Datamined Mounts" [ref=e2878] [cursor=pointer]
+        - button "📊 Stats & Attributes Guide" [ref=e2879] [cursor=pointer]
+        - button "📖 Curated Guides" [ref=e2880] [cursor=pointer]
+        - button "🪙 Merchant's Favor & Crates" [ref=e2881] [cursor=pointer]
+      - generic [ref=e2884]:
+        - generic [ref=e2885]:
+          - generic [ref=e2886]: ✦ New Playable Race
+          - heading "The Skyborne" [level=2] [ref=e2887]
+          - paragraph [ref=e2888]:
+            - text: Descendants of high elves and elemental wind-weavers who took refuge on
+            - strong [ref=e2889]: Zephras Isle
+            - text: during the Great Sundering. Masters of thermal updrafts and arcane currents, the Skyborne have descended back to Azeroth as a neutral race, forging alliances with both factions.
+          - generic [ref=e2890]:
+            - heading "Faction Allegiance Choice (Determines 5th Class Option)" [level=4] [ref=e2891]
+            - generic [ref=e2892]:
+              - generic [ref=e2893]:
+                - strong [ref=e2894]: High Order Skyborne (Alliance)
+                - generic [ref=e2895]:
+                  - text: Alliance allegiance under Ironforge scholars. Unlocks exclusive
+                  - strong [ref=e2896]: Mage
+                  - text: class (arcane & fire thermals).
+              - generic [ref=e2897]:
+                - strong [ref=e2898]: Windshaper Skyborne (Horde)
+                - generic [ref=e2899]:
+                  - text: Horde allegiance guided by Tauren shamanism & Skywall pacts. Unlocks exclusive
+                  - strong [ref=e2900]: Shaman
+                  - text: class (totems & lightning).
+          - generic [ref=e2901]:
+            - strong [ref=e2902]: "Universal Classes (Both Factions):"
+            - text: Warrior, Hunter, Rogue, Druid
+            - strong [ref=e2903]: "Faction-Exclusive Classes:"
+            - text: Mage (Alliance High Order) • Shaman (Horde Windshapers)
+            - strong [ref=e2904]: "Starting Realm:"
+            - text: Zephras Isle (Floating zone above western Kalimdor)
+        - generic [ref=e2905]:
+          - heading "Racial Passives & Abilities" [level=3] [ref=e2906]
+          - generic [ref=e2907]:
+            - generic [ref=e2908]:
+              - generic [ref=e2909]:
+                - generic [ref=e2910]: Walk on Air
+                - generic [ref=e2911]: Active • 10s
+              - paragraph [ref=e2912]: Glide downward through the air for 10 seconds.
+            - generic [ref=e2913]:
+              - generic [ref=e2914]:
+                - generic [ref=e2915]: Skysight
+                - generic [ref=e2916]: Active
+              - paragraph [ref=e2917]: Receive an Elemental Blessing increasing run speed by 10%.
+            - generic [ref=e2918]:
+              - generic [ref=e2919]:
+                - generic [ref=e2920]: Wind Blessed
+                - generic [ref=e2921]: Passive
+              - paragraph [ref=e2922]: 1% increased melee, ranged, and spellcasting Haste.
+            - generic [ref=e2923]:
+              - generic [ref=e2924]:
+                - generic [ref=e2925]: Elemental Insight
+                - generic [ref=e2926]: Passive
+              - paragraph [ref=e2927]: Damage to Elementals increased by 5%.
+      - text: • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • •
+    - text: ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦
+  - contentinfo [ref=e489]:
+    - generic [ref=e490]:
+      - generic [ref=e491]:
+        - link "Blizzard Official News" [ref=e492] [cursor=pointer]:
+          - /url: https://news.blizzard.com
+        - link "Wowhead Coverage" [ref=e493] [cursor=pointer]:
+          - /url: https://www.wowhead.com/forever
+        - link "Warcraft Tavern Hub" [ref=e494] [cursor=pointer]:
+          - /url: https://www.warcrafttavern.com/forever/
+        - link "Mobalytics Meta & Tier Lists" [ref=e495] [cursor=pointer]:
+          - /url: https://mobalytics.gg/wow-forever
+        - link "Method.gg Raiding & Guides" [ref=e496] [cursor=pointer]:
+          - /url: https://www.method.gg
+        - link "Icy Veins Class Hub" [ref=e497] [cursor=pointer]:
+          - /url: https://www.icy-veins.com/wow-forever
+        - link "Battle.net Launcher" [ref=e498] [cursor=pointer]:
+          - /url: https://battle.net
+      - paragraph [ref=e499]: "World of Warcraft: Forever Personal News & Beta Progress Portal • Built for Classic+ Explorers"
+      - paragraph [ref=e500]: Data grounded in official BlizzCon 2026 announcements, Wowhead compendiums, Method.gg itemization audits, and Beta Phase 1 & 2 community testing.

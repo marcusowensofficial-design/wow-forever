@@ -1,0 +1,755 @@
+- generic [ref=e1]:
+  - complementary "Game and Beta Status Bar" [ref=e2]:
+    - generic [ref=e3]: "Beta Phase 2: LIVE NOW • Level 30 Cap Active"
+    - generic [ref=e6]:
+      - generic [ref=e7]:
+        - strong [ref=e8]: "Beta Duration:"
+        - text: 35 Days (Sept 17 – Oct 21) •
+        - generic [ref=e9]: Day 24 of 35
+      - generic [ref=e10]:
+        - strong [ref=e11]: "Level Cap:"
+        - text: 30 Active (Excavation Site 4 & Dalaran Live)
+      - generic [ref=e12]: Classic+ Standalone
+      - generic [ref=e13]: "🍺 Events: Brewfest & Harvest Concluded • Hallow's End Arrives Oct 18"
+      - generic [ref=e14]:
+        - strong [ref=e15]: "Rulesets:"
+        - text: PvP • PvE • RP • Hardcore
+      - generic [ref=e16]:
+        - strong [ref=e17]: "Engine:"
+        - text: Ray-Traced GI (DX12)
+      - generic [ref=e18]:
+        - strong [ref=e19]: "Client Build:"
+        - text: 1.60.6.71890 (Phase 2 Cooldown Manager & UI Overhaul)
+  - generic [ref=e20]:
+    - generic [ref=e21]:
+      - generic [ref=e22]:
+        - generic [ref=e23]: Beta Build 1.60.6.71890 • Realms Online
+        - button "🐟 3,921 murlocs online" [ref=e26] [cursor=pointer]:
+          - generic [ref=e27]: 🐟
+          - generic [ref=e28]: 3,921
+          - generic [ref=e29]: murlocs online
+      - generic [ref=e30]:
+        - button "Search Forever" [ref=e31] [cursor=pointer]:
+          - generic: 🔍
+          - text: Search Forever
+          - generic [ref=e32]: /
+        - button "Classic+ Guides" [ref=e33] [cursor=pointer]:
+          - generic [ref=e34]: 📖
+          - text: Classic+ Guides
+    - banner [ref=e35]:
+      - generic [ref=e36]:
+        - generic [ref=e37]: ⚡
+        - generic [ref=e38]: BLIZZARD ENTERTAINMENT
+        - generic [ref=e39]: ⚡
+      - 'heading "WORLD OF WARCRAFT: FOREVER" [level=1] [ref=e40]'
+      - paragraph [ref=e41]:
+        - text: The permanent, living
+        - strong [ref=e42]: Classic+
+        - text: adventure. Featuring horizontal progression at Level 60, the new
+        - strong [ref=e43]: Skyborne
+        - text: race, 9 new leveling dungeons, 3 raid tiers, and zero level scaling.
+      - navigation "Official Guides and Tools" [ref=e44]:
+        - 'link "🌐 Wowhead: Everything We Know" [ref=e45] [cursor=pointer]':
+          - /url: https://www.wowhead.com/forever/news/everything-we-know-about-wow-forever-382827
+          - generic [ref=e46]: 🌐
+          - text: "Wowhead: Everything We Know"
+        - 'link "🍺 Warcraft Tavern: Phase 2 Level 30 & Pre-BiS" [ref=e47] [cursor=pointer]':
+          - /url: https://www.warcrafttavern.com/forever/
+          - generic [ref=e48]: 🍺
+          - text: "Warcraft Tavern: Phase 2 Level 30 & Pre-BiS"
+        - 'link "📊 Mobalytics: Level 30 Meta & Tier Lists" [ref=e49] [cursor=pointer]':
+          - /url: https://mobalytics.gg/wow-forever
+          - generic [ref=e50]: 📊
+          - text: "Mobalytics: Level 30 Meta & Tier Lists"
+        - button "⚡ Interactive Talent Calculator" [ref=e51] [cursor=pointer]:
+          - generic [ref=e52]: ⚡
+          - text: Interactive Talent Calculator
+        - link "🏆 Wowhead Legacy Calculator" [ref=e53] [cursor=pointer]:
+          - /url: https://www.wowhead.com/forever/legacy-calculator
+          - generic [ref=e54]: 🏆
+          - text: Wowhead Legacy Calculator
+        - link "⚔️ Method.gg Itemization Guide" [ref=e55] [cursor=pointer]:
+          - /url: https://www.method.gg/wow-classic/itemization-updates-in-world-of-warcraft-forever-expertise-spell-damage-more
+          - generic [ref=e56]: ⚔️
+          - text: Method.gg Itemization Guide
+        - link "🦅 Method.gg Racials Breakdown" [ref=e57] [cursor=pointer]:
+          - /url: https://www.method.gg/wow-classic/all-new-racial-abilities-in-world-of-warcraft-forever
+          - generic [ref=e58]: 🦅
+          - text: Method.gg Racials Breakdown
+      - navigation "Main Navigation" [ref=e59]:
+        - button "⚡ Operations Hub" [ref=e60] [cursor=pointer]:
+          - generic [ref=e61]: ⚡
+          - text: Operations Hub
+        - button "🛡️ Level 30 BiS" [ref=e62] [cursor=pointer]:
+          - generic [ref=e63]: 🛡️
+          - text: Level 30 BiS
+        - button "📰 News & Dispatches" [ref=e64] [cursor=pointer]:
+          - generic [ref=e65]: 📰
+          - text: News & Dispatches
+        - button "📜 Content Codex" [ref=e66] [cursor=pointer]:
+          - generic [ref=e67]: 📜
+          - text: Content Codex
+        - button "🗺️ World Atlas & Rares" [ref=e68] [cursor=pointer]:
+          - generic [ref=e69]: 🗺️
+          - text: World Atlas & Rares
+        - button "📊 Tier List Maker" [ref=e70] [cursor=pointer]:
+          - generic [ref=e71]: 📊
+          - text: Tier List Maker
+        - button "🧪 Downrank Calc" [ref=e72] [cursor=pointer]:
+          - generic [ref=e73]: 🧪
+          - text: Downrank Calc
+        - button "🧙 Class & Race Planner" [ref=e74] [cursor=pointer]:
+          - generic [ref=e75]: 🧙
+          - text: Class & Race Planner
+        - button "🎯 Class Deep Dives" [ref=e76] [cursor=pointer]:
+          - generic [ref=e77]: 🎯
+          - text: Class Deep Dives
+        - button "🔨 Professions & Camping" [ref=e78] [cursor=pointer]:
+          - generic [ref=e79]: 🔨
+          - text: Professions & Camping
+        - button "⚙️ Systems & Engine" [ref=e80] [cursor=pointer]:
+          - generic [ref=e81]: ⚙️
+          - text: Systems & Engine
+        - button "🛡️ My Forever & Squad" [ref=e82] [cursor=pointer]:
+          - generic [ref=e83]: 🛡️
+          - text: My Forever & Squad
+    - text: ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • •
+    - region "Professions and Camping Hub" [ref=e2293]:
+      - generic [ref=e2295]:
+        - heading "🔨 Professions, Camping & Field Stations Hub" [level=2] [ref=e2296]:
+          - generic [ref=e2297]: 🔨
+          - text: Professions, Camping & Field Stations Hub
+        - paragraph [ref=e2298]: The complete guide to all 11 professions, cooperative camping stations, mirrored class buffs, and combat passives
+      - generic [ref=e2299]:
+        - generic [ref=e2300]:
+          - generic [ref=e2301]:
+            - text: 🔥 Cooperative Open World Utility
+            - heading "The Campfire Station System" [level=3] [ref=e2302]
+            - paragraph [ref=e2303]: Any standard Basic Campfire can be evolved into an encampment. Party members can place crafted profession stations around the fire to provide on-site crafting and grant party-wide 1-hour buffs that mirror class blessings. Buffs do not stack with the class versions and provide approximately 80% of their power (e.g. 8% vs 10%).
+            - generic [ref=e2304]:
+              - generic [ref=e2305]:
+                - strong [ref=e2306]: ⛺ Basic Campfire Kit
+                - generic [ref=e2307]: (Level 1+ • Up to 1 station)
+              - generic [ref=e2308]:
+                - strong [ref=e2309]: ⛺ Journeyman Campfire Kit
+                - generic [ref=e2310]: (Level 20+ • Up to 2 stations)
+              - generic [ref=e2311]:
+                - strong [ref=e2312]: ⛺ Ironwood Campfire Blueprint
+                - generic [ref=e2313]: (Level 25+ • Up to 2 stations)
+              - generic [ref=e2314]:
+                - strong [ref=e2315]: ⛺ Silk Encampment Tent
+                - generic [ref=e2316]: (Level 25+ • Up to 1 station)
+              - generic [ref=e2317]:
+                - strong [ref=e2318]: ⛺ Expert Campfire Kit
+                - generic [ref=e2319]: (Level 40+ • Up to 3 stations)
+          - generic [ref=e2320]:
+            - heading "🎒 Verified Phase 2 Beta Camp Mechanics" [level=4] [ref=e2321]
+            - list [ref=e2322]:
+              - listitem [ref=e2323]:
+                - text: ✦
+                - strong [ref=e2324]: "Ironwood Campfire (Level 25+):"
+                - text: 60-min campfire with 25-yd aura, supporting 2 stations at +15% enhanced buff potency.
+              - listitem [ref=e2325]:
+                - text: ✦
+                - strong [ref=e2326]: "Silk Encampment Tent:"
+                - text: Tailoring 125 shelter accelerating Rested XP generation to 200% of standard inn velocity.
+              - listitem [ref=e2327]:
+                - text: ✦
+                - strong [ref=e2328]: "Cozy Sleeping Bag Synergy:"
+                - text: Resting in a tent with a sleeping bag grants +5% bonus monster kill EXP for 2 hours.
+              - listitem [ref=e2329]:
+                - text: ✦
+                - strong [ref=e2330]: "Camp Cooking Feasts (+5% Kill XP):"
+                - text: Well Fed meals provide primary stats plus +6 MP5 (Sagefish) and +5% bonus EXP.
+              - listitem [ref=e2331]:
+                - text: ✦
+                - strong [ref=e2332]: "Dedicated Reagent Bag Slot:"
+                - text: Trade materials pull directly into on-site camp stations without inventory clutter.
+        - generic [ref=e2334]:
+          - generic [ref=e2336]:
+            - generic [ref=e2337]: ⛺
+            - generic [ref=e2338]:
+              - generic [ref=e2339]:
+                - heading "Cozy Sleeping Bag & Leveling Efficiency Engine" [level=3] [ref=e2340]
+                - generic [ref=e2341]:
+                  - generic [ref=e2342]: ✦
+                  - text: Level 14+ Essential
+              - paragraph [ref=e2343]:
+                - text: "Deploy anywhere outdoors or inside camp: rest for 3 minutes to gain"
+                - strong [ref=e2344]: +3% Experience from all sources (Monsters & Quests) for 2 hours
+                - text: .
+          - generic [ref=e2345]:
+            - generic [ref=e2346]:
+              - generic [ref=e2347]:
+                - generic [ref=e2348]:
+                  - strong [ref=e2349]: Cozy Sleeping Bag
+                  - generic [ref=e2350]: Item Level 40
+                - generic [ref=e2351]: Binds when picked up
+                - generic [ref=e2352]: Unique
+                - paragraph [ref=e2353]: "Use: Unfurl a sleeping bag. Resting inside for at least one minute will provide a bonus to experience earned, stacking up to 3 times. (60 Min Cooldown)"
+                - generic [ref=e2354]: "\"Old, but still good\""
+              - generic [ref=e2355]:
+                - generic [ref=e2356]:
+                  - strong [ref=e2357]: Interactive Rest Simulator
+                  - generic [ref=e2358]: Well-Rested (+3% XP)
+                - generic [ref=e2360]:
+                  - generic [ref=e2361]: "0m: +0% XP"
+                  - generic [ref=e2362]: "1m: +1% XP"
+                  - generic [ref=e2363]: "2m: +2% XP"
+                  - generic [ref=e2364]: "3m: +3% (2h)"
+                - generic [ref=e2365]:
+                  - button "⛺ Rest (+1 Minute)" [active] [ref=e2366] [cursor=pointer]:
+                    - generic [ref=e2367]: ⛺
+                    - text: Rest (+1 Minute)
+                  - button "Reset" [ref=e2368] [cursor=pointer]
+                - generic [ref=e2369]:
+                  - strong [ref=e2864]: Max Bonus Active!
+                  - text: +3% XP from all sources for 2 hours (7,200s).
+              - generic [ref=e2370]:
+                - generic [ref=e2371]:
+                  - generic [ref=e2372]: 🥜
+                  - generic [ref=e2373]:
+                    - strong [ref=e2374]: Student Fodder (New Forever Rework)
+                    - generic [ref=e2375]: Trail food, not rested XP
+                - paragraph [ref=e2376]:
+                  - text: Heals
+                  - strong [ref=e2377]: 500 HP
+                  - text: immediately +
+                  - strong [ref=e2378]: 1,050 over 12s
+                  - text: ", and restores"
+                  - strong [ref=e2379]: 900 mana / 50 rage / 100 energy
+                  - text: on a 5-minute cooldown. You earn 12 free bags across the questline!
+            - generic [ref=e2380]:
+              - generic [ref=e2381]:
+                - heading "🗺️ 5-Step Scavenger Questline Roadmap" [level=4] [ref=e2382]:
+                  - generic [ref=e2383]: 🗺️
+                  - text: 5-Step Scavenger Questline Roadmap
+                - generic [ref=e2384]: Alliance & Horde (Lvl 14+)
+              - generic [ref=e2385]:
+                - generic [ref=e2386]:
+                  - generic [ref=e2387]:
+                    - generic [ref=e2388]:
+                      - text: Step 1
+                      - strong [ref=e2389]: ...and that note you found
+                    - generic [ref=e2390]: Cross-Continent
+                  - generic [ref=e2391]:
+                    - generic [ref=e2392]:
+                      - strong [ref=e2393]: "Alliance:"
+                      - text: Alexston Farmstead, Westfall (37.4, 50.6) - Burned-Out Remains in scorched field
+                    - generic [ref=e2394]:
+                      - strong [ref=e2395]: "Horde:"
+                      - text: Field of Giants, The Barrens (46.4, 73.9) - Burned-Out Remains by ruined tower
+                  - generic [ref=e2396]:
+                    - strong [ref=e2397]: "🎁 Rewards:"
+                    - text: Swiftness Potion (+50% speed for 15s) + Lesser Troll's Blood Elixir
+                - generic [ref=e2398]:
+                  - generic [ref=e2399]:
+                    - generic [ref=e2400]:
+                      - text: Step 2
+                      - strong [ref=e2401]: Stepping Stones
+                    - generic [ref=e2402]: Opposite Continent's Burned Remains (Barrens for Alliance / Westfall for Horde)
+                  - generic [ref=e2403]: Journey to the enemy continent and turn in the note at the Nailed Plank.
+                  - generic [ref=e2404]:
+                    - strong [ref=e2405]: "🎁 Rewards:"
+                    - text: 2x 12-Slot Bags (Sturdy Lunchbox & Old Toolbox) + Farmer's Shovel / Mining Pick + Simple Wood & Flint
+                - generic [ref=e2406]:
+                  - generic [ref=e2407]:
+                    - generic [ref=e2408]:
+                      - text: Step 3
+                      - strong [ref=e2409]: Scramble & Wet Job
+                    - generic [ref=e2410]: Webwinder Path, Stonetalon Mountains (Path at 50.9, 52.3 -> Camp at 40.7, 52.4 -> Dirt Mound at 39.6, 49.9)
+                  - generic [ref=e2411]: Climb the mountain path north of Sun Rock Retreat, click Pocket Litter at abandoned tent, and jump the ravine to the Mound of Dirt.
+                  - generic [ref=e2412]:
+                    - strong [ref=e2413]: "🎁 Rewards:"
+                    - text: Choice of Thrown/Ranged Weapon (Silver Star / Moonsight Rifle / Precision Bow) + 4x Student Fodder
+                - generic [ref=e2414]:
+                  - generic [ref=e2415]:
+                    - generic [ref=e2416]:
+                      - text: Step 4
+                      - strong [ref=e2417]: Eagle's Fist
+                    - generic [ref=e2418]: Stonewrought Dam, Loch Modan (49.4, 12.9)
+                  - generic [ref=e2419]: Walk onto the dam crest and drop down onto the giant dwarf stone carvings facing the Wetlands to retrieve the Carved Figurine.
+                  - generic [ref=e2420]:
+                    - strong [ref=e2421]: "🎁 Rewards:"
+                    - text: Hickory Pipe + Rumsey Rum Light (+5 Stamina)
+                - generic [ref=e2422]:
+                  - generic [ref=e2423]:
+                    - generic [ref=e2424]:
+                      - text: Step 5
+                      - strong [ref=e2425]: This Must Be The Place
+                    - generic [ref=e2426]: Thoradin's Wall, Hillsbrad / Arathi (87.4, 49.7 Cart -> 22.4, 24.2 Messenger Bag)
+                  - generic [ref=e2427]: Climb the abandoned supply cart south of Durnholde, scale the ramparts, reach the interior room, and click the Hastily Rolled-Up Satchel.
+                  - generic [ref=e2428]:
+                    - strong [ref=e2429]: "🎁 Rewards:"
+                    - text: Cozy Sleeping Bag (+3% XP for 2 hours) + 8x Student Fodder
+        - generic [ref=e2431]:
+          - button "All Professions (12)" [ref=e2432] [cursor=pointer]
+          - button "Primary Crafting & Gathering (9)" [ref=e2433] [cursor=pointer]
+          - button "Secondary Skills (3)" [ref=e2434] [cursor=pointer]
+        - generic [ref=e2435]:
+          - generic [ref=e2436]:
+            - generic [ref=e2437]:
+              - generic [ref=e2438]:
+                - generic [ref=e2439]: 🧪
+                - generic [ref=e2440]:
+                  - heading "Alchemy" [level=4] [ref=e2441]
+                  - text: Primary Profession
+              - generic [ref=e2442]:
+                - generic [ref=e2443]: "Mirrored Buff:"
+                - strong [ref=e2444]: Blessing of Wisdom (~8% Mana Regen)
+            - generic [ref=e2445]:
+              - generic [ref=e2446]:
+                - generic [ref=e2447]: Tier 1
+                - generic [ref=e2448]:
+                  - strong [ref=e2449]: Mana Well
+                  - paragraph [ref=e2450]: Restores mana over time to resting allies.
+              - generic [ref=e2451]:
+                - generic [ref=e2452]: Tier 2
+                - generic [ref=e2453]:
+                  - strong [ref=e2454]: Fermenter
+                  - paragraph [ref=e2455]: Brew specialty camp concoctions and elixirs on-site.
+              - generic [ref=e2456]:
+                - generic [ref=e2457]: Tier 3
+                - generic [ref=e2458]:
+                  - strong [ref=e2459]: Alchemy Laboratory
+                  - paragraph [ref=e2460]: Full field laboratory allowing flask and advanced potion brewing without Scholomance/BWL labs.
+          - generic [ref=e2461]:
+            - generic [ref=e2462]:
+              - generic [ref=e2463]:
+                - generic [ref=e2464]: 🔨
+                - generic [ref=e2465]:
+                  - heading "Blacksmithing" [level=4] [ref=e2466]
+                  - text: Primary Profession
+              - generic [ref=e2467]:
+                - generic [ref=e2468]: "Mirrored Buff:"
+                - strong [ref=e2469]: Strength of Earth Totem (~8% Strength/AP)
+            - generic [ref=e2470]:
+              - generic [ref=e2471]:
+                - generic [ref=e2472]: Tier 1
+                - generic [ref=e2473]:
+                  - strong [ref=e2474]: Sharpening Wheel
+                  - paragraph [ref=e2475]: Field sharpening wheel granting +6 Strength (or scaling with weapon tier) for 60 minutes.
+              - generic [ref=e2476]:
+                - generic [ref=e2477]: Tier 2
+                - generic [ref=e2478]:
+                  - strong [ref=e2479]: Anvil
+                  - paragraph [ref=e2480]: Portable anvil allowing blacksmiths to forge and repair gear on-site in the open world.
+              - generic [ref=e2481]:
+                - generic [ref=e2482]: Tier 3
+                - generic [ref=e2483]:
+                  - strong [ref=e2484]: Master Forge
+                  - paragraph [ref=e2485]: High-heat forge granting party members +10% Attack Power for 1 hour.
+          - generic [ref=e2486]:
+            - generic [ref=e2487]:
+              - generic [ref=e2488]:
+                - generic [ref=e2489]: ✨
+                - generic [ref=e2490]:
+                  - heading "Enchanting" [level=4] [ref=e2491]
+                  - text: Primary Profession
+              - generic [ref=e2492]:
+                - generic [ref=e2493]: "Mirrored Buff:"
+                - strong [ref=e2494]: Mark of the Wild (~8% Stats & Res)
+            - generic [ref=e2495]:
+              - generic [ref=e2496]:
+                - generic [ref=e2497]: Tier 1
+                - generic [ref=e2498]:
+                  - strong [ref=e2499]: Enchanted Lute
+                  - paragraph [ref=e2500]: Plays soothing magical chords, increasing stat recovery.
+              - generic [ref=e2501]:
+                - generic [ref=e2502]: Tier 2
+                - generic [ref=e2503]:
+                  - strong [ref=e2504]: Arcane Salvager
+                  - paragraph [ref=e2505]: Disenchants items on-site with a bonus chance to yield rare essences.
+              - generic [ref=e2506]:
+                - generic [ref=e2507]: Tier 3
+                - generic [ref=e2508]:
+                  - strong [ref=e2509]: Arcane Forge
+                  - paragraph [ref=e2510]: Grants party members +All Stats and Magic Resistances for 1 hour.
+          - generic [ref=e2511]:
+            - generic [ref=e2512]:
+              - generic [ref=e2513]:
+                - generic [ref=e2514]: ⚙️
+                - generic [ref=e2515]:
+                  - heading "Engineering" [level=4] [ref=e2516]
+                  - text: Primary Profession
+              - generic [ref=e2517]:
+                - generic [ref=e2518]: "Mirrored Buff:"
+                - strong [ref=e2519]: Field Utility & Zero Gadget Malfunction
+            - generic [ref=e2520]:
+              - generic [ref=e2521]:
+                - generic [ref=e2522]: Tier 1
+                - generic [ref=e2523]:
+                  - strong [ref=e2524]: Reagent Bot
+                  - paragraph [ref=e2525]: Vendors common components and basic ammo/food.
+              - generic [ref=e2526]:
+                - generic [ref=e2527]: Tier 2
+                - generic [ref=e2528]:
+                  - strong [ref=e2529]: Repair Bot
+                  - paragraph [ref=e2530]: Provides full field equipment repairs for party members.
+              - generic [ref=e2531]:
+                - generic [ref=e2532]: Tier 3
+                - generic [ref=e2533]:
+                  - strong [ref=e2534]: Anarchist's Workbench
+                  - paragraph [ref=e2535]: Craft explosives on-site and grants 0% malfunction rate on engineering gadgets in raids.
+          - generic [ref=e2536]:
+            - generic [ref=e2537]:
+              - generic [ref=e2538]:
+                - generic [ref=e2539]: 🩹
+                - generic [ref=e2540]:
+                  - heading "First Aid" [level=4] [ref=e2541]
+                  - text: Secondary Profession
+              - generic [ref=e2542]:
+                - generic [ref=e2543]: "Mirrored Buff:"
+                - strong [ref=e2544]: "Power Word: Fortitude (~8% Stamina)"
+            - generic [ref=e2545]:
+              - generic [ref=e2546]:
+                - generic [ref=e2547]: Tier 1
+                - generic [ref=e2548]:
+                  - strong [ref=e2549]: First Aid Kit
+                  - paragraph [ref=e2550]: Provides field bandages and minor health recovery.
+              - generic [ref=e2551]:
+                - generic [ref=e2552]: Tier 2
+                - generic [ref=e2553]:
+                  - strong [ref=e2554]: Toxin Study
+                  - paragraph [ref=e2555]: Grants immunity to natural poisons encountered while resting.
+              - generic [ref=e2556]:
+                - generic [ref=e2557]: Tier 3
+                - generic [ref=e2558]:
+                  - strong [ref=e2559]: Plague Doctor's Laboratory
+                  - paragraph [ref=e2560]: Increases party Stamina by +8% and provides disease cleansing.
+          - generic [ref=e2561]:
+            - generic [ref=e2562]:
+              - generic [ref=e2563]:
+                - generic [ref=e2564]: 🎣
+                - generic [ref=e2565]:
+                  - heading "Fishing" [level=4] [ref=e2566]
+                  - text: Secondary Profession
+              - generic [ref=e2567]:
+                - generic [ref=e2568]: "Mirrored Buff:"
+                - strong [ref=e2569]: Blessing of Kings (~8% All Attributes)
+            - generic [ref=e2570]:
+              - generic [ref=e2571]:
+                - generic [ref=e2572]: Tier 1
+                - generic [ref=e2573]:
+                  - strong [ref=e2574]: Fish Bowl
+                  - paragraph [ref=e2575]: Stores live bait and grants party members +8% to all primary stats for 60 minutes.
+              - generic [ref=e2576]:
+                - generic [ref=e2577]: Tier 2
+                - generic [ref=e2578]:
+                  - strong [ref=e2579]: Fishing Rack
+                  - paragraph [ref=e2580]: Dries catches into stamina-boosting rations.
+              - generic [ref=e2581]:
+                - generic [ref=e2582]: Tier 3
+                - generic [ref=e2583]:
+                  - strong [ref=e2584]: Fishing Hut
+                  - paragraph [ref=e2585]: Grants party members an 8% increase to all primary attributes for 1 hour.
+          - generic [ref=e2586]:
+            - generic [ref=e2587]:
+              - generic [ref=e2588]:
+                - generic [ref=e2589]: 🌿
+                - generic [ref=e2590]:
+                  - heading "Herbalism" [level=4] [ref=e2591]
+                  - text: Primary Profession
+              - generic [ref=e2592]:
+                - generic [ref=e2593]: "Mirrored Buff:"
+                - strong [ref=e2594]: Arcane Intellect (~8% Intellect)
+            - generic [ref=e2595]:
+              - generic [ref=e2596]:
+                - generic [ref=e2597]: Tier 1
+                - generic [ref=e2598]:
+                  - strong [ref=e2599]: Incense Candle
+                  - paragraph [ref=e2600]: Burns calming herbal aroma, boosting spirit.
+              - generic [ref=e2601]:
+                - generic [ref=e2602]: Tier 2
+                - generic [ref=e2603]:
+                  - strong [ref=e2604]: Greenhouse
+                  - paragraph [ref=e2605]: Cultivates rare herbs while resting in the campsite.
+              - generic [ref=e2606]:
+                - generic [ref=e2607]: Tier 3
+                - generic [ref=e2608]:
+                  - strong [ref=e2609]: Seed Hybridizer
+                  - paragraph [ref=e2610]: Grants party members +8% Intellect and +10 Magic Resistances for 1 hour.
+          - generic [ref=e2611]:
+            - generic [ref=e2612]:
+              - generic [ref=e2613]:
+                - generic [ref=e2614]: 🛡️
+                - generic [ref=e2615]:
+                  - heading "Leatherworking" [level=4] [ref=e2616]
+                  - text: Primary Profession
+              - generic [ref=e2617]:
+                - generic [ref=e2618]: "Mirrored Buff:"
+                - strong [ref=e2619]: Physical Damage Reduction & Armor
+            - generic [ref=e2620]:
+              - generic [ref=e2621]:
+                - generic [ref=e2622]: Tier 1
+                - generic [ref=e2623]:
+                  - strong [ref=e2624]: Camp Tent
+                  - paragraph [ref=e2625]: Provides canvas shelter granting a burst of rested experience (can only be received once per 1 hour).
+              - generic [ref=e2626]:
+                - generic [ref=e2627]: Tier 2
+                - generic [ref=e2628]:
+                  - strong [ref=e2629]: Tanning Rack
+                  - paragraph [ref=e2630]: Allows processing heavy leathers and hides on-site.
+              - generic [ref=e2631]:
+                - generic [ref=e2632]: Tier 3
+                - generic [ref=e2633]:
+                  - strong [ref=e2634]: Sewing Machine
+                  - paragraph [ref=e2635]: Reinforces party armor, providing +8% physical damage reduction for 1 hour.
+            - 'button "📜 View Field Recipes: Tanning Rack (48 Recipes)" [ref=e2637] [cursor=pointer]'
+          - generic [ref=e2638]:
+            - generic [ref=e2639]:
+              - generic [ref=e2640]:
+                - generic [ref=e2641]: ⛏️
+                - generic [ref=e2642]:
+                  - heading "Mining" [level=4] [ref=e2643]
+                  - text: Primary Profession
+              - generic [ref=e2644]:
+                - generic [ref=e2645]: "Mirrored Buff:"
+                - strong [ref=e2646]: Blessing of Might (~8% Attack Power)
+            - generic [ref=e2647]:
+              - generic [ref=e2648]:
+                - generic [ref=e2649]: Tier 1
+                - generic [ref=e2650]:
+                  - strong [ref=e2651]: Lodestone
+                  - paragraph [ref=e2652]: Tracks nearby metal veins and increases mining yield.
+              - generic [ref=e2653]:
+                - generic [ref=e2654]: Tier 2
+                - generic [ref=e2655]:
+                  - strong [ref=e2656]: Rock Garden
+                  - paragraph [ref=e2657]: Excavates rough stones and gems while resting.
+              - generic [ref=e2658]:
+                - generic [ref=e2659]: Tier 3
+                - generic [ref=e2660]:
+                  - strong [ref=e2661]: Molten Foundry
+                  - paragraph [ref=e2662]: Smelts ores in the field and grants party members +Attack Power for 1 hour.
+          - generic [ref=e2663]:
+            - generic [ref=e2664]:
+              - generic [ref=e2665]:
+                - generic [ref=e2666]: 🔪
+                - generic [ref=e2667]:
+                  - heading "Skinning" [level=4] [ref=e2668]
+                  - text: Primary Profession
+              - generic [ref=e2669]:
+                - generic [ref=e2670]: "Mirrored Buff:"
+                - strong [ref=e2671]: Moonkin Aura (~2% Crit Chance)
+            - generic [ref=e2672]:
+              - generic [ref=e2673]:
+                - generic [ref=e2674]: Tier 1
+                - generic [ref=e2675]:
+                  - strong [ref=e2676]: Camp Chair
+                  - paragraph [ref=e2677]: A cozy hide chair granting resting comfort.
+              - generic [ref=e2678]:
+                - generic [ref=e2679]: Tier 2
+                - generic [ref=e2680]:
+                  - strong [ref=e2681]: Field Guide
+                  - paragraph [ref=e2682]: Documents beast weaknesses, granting +5% beast damage.
+              - generic [ref=e2683]:
+                - generic [ref=e2684]: Tier 3
+                - generic [ref=e2685]:
+                  - strong [ref=e2686]: Trapper's Workbench
+                  - paragraph [ref=e2687]: Grants party members +2% Critical Strike chance for 1 hour.
+          - generic [ref=e2688]:
+            - generic [ref=e2689]:
+              - generic [ref=e2690]:
+                - generic [ref=e2691]: 🧵
+                - generic [ref=e2692]:
+                  - heading "Tailoring" [level=4] [ref=e2693]
+                  - text: Primary Profession
+              - generic [ref=e2694]:
+                - generic [ref=e2695]: "Mirrored Buff:"
+                - strong [ref=e2696]: Divine Spirit (~8% Spirit & Mana)
+            - generic [ref=e2697]:
+              - generic [ref=e2698]:
+                - generic [ref=e2699]: Tier 1
+                - generic [ref=e2700]:
+                  - strong [ref=e2701]: Faction Banner
+                  - paragraph [ref=e2702]: Inspires resting party members with faction pride.
+              - generic [ref=e2703]:
+                - generic [ref=e2704]: Tier 2
+                - generic [ref=e2705]:
+                  - strong [ref=e2706]: Spinning Wheel
+                  - paragraph [ref=e2707]: Spins thread and bolts in the field without needing a loom.
+              - generic [ref=e2708]:
+                - generic [ref=e2709]: Tier 3
+                - generic [ref=e2710]:
+                  - strong [ref=e2711]: Loom
+                  - paragraph [ref=e2712]: Grants party members +8% Spirit and bonus mana regeneration for 1 hour.
+            - 'button "📜 View Field Recipes: Spinning Wheel (74 Recipes)" [ref=e2714] [cursor=pointer]'
+          - generic [ref=e2715]:
+            - generic [ref=e2716]:
+              - generic [ref=e2717]:
+                - generic [ref=e2718]: 🍳
+                - generic [ref=e2719]:
+                  - heading "Cooking" [level=4] [ref=e2720]
+                  - text: Secondary Profession
+              - generic [ref=e2721]:
+                - generic [ref=e2722]: "Mirrored Buff:"
+                - strong [ref=e2723]: Well Fed (+Stats, +6 MP5 & +5% Kill XP)
+            - generic [ref=e2724]:
+              - generic [ref=e2725]:
+                - generic [ref=e2726]: Tier 1
+                - generic [ref=e2727]:
+                  - strong [ref=e2728]: Basic Campfire & Spit
+                  - paragraph [ref=e2729]: Cook everyday stamina meals; Well Fed meals grant +5% bonus experience from monster kills.
+              - generic [ref=e2730]:
+                - generic [ref=e2731]: Tier 2
+                - generic [ref=e2732]:
+                  - strong [ref=e2733]: Iron Cauldron & Sagefish Braiser
+                  - paragraph [ref=e2734]: Prepares Level 25-30 banquets including Bristle Whisker Catfish (+Stamina) and Sagefish Delight (+6 MP5 party food).
+              - generic [ref=e2735]:
+                - generic [ref=e2736]: Tier 3
+                - generic [ref=e2737]:
+                  - strong [ref=e2738]: Master Encampment Feast Table
+                  - paragraph [ref=e2739]: Provides high-tier raid feasts granting +Stamina and primary stats to all raid members.
+        - generic [ref=e2741]:
+          - heading "⚡ All 9 Primary Profession Combat Passives" [level=2] [ref=e2742]:
+            - generic [ref=e2743]: ⚡
+            - text: All 9 Primary Profession Combat Passives
+          - paragraph [ref=e2744]: Every primary tradeskill provides permanent character power to reward craft dedication
+        - generic [ref=e2745]:
+          - generic [ref=e2746]:
+            - generic [ref=e2747]:
+              - generic [ref=e2748]:
+                - generic [ref=e2749]: ⛏️
+                - generic [ref=e2750]:
+                  - heading "Mining" [level=4] [ref=e2751]
+                  - text: Gathering
+              - generic [ref=e2752]: Combat Power
+            - generic [ref=e2753]:
+              - strong [ref=e2754]: ✨ Toughness
+              - paragraph [ref=e2755]: Increases maximum Health by a flat 5%, scaling dynamically with total Stamina.
+            - generic [ref=e2756]:
+              - strong [ref=e2757]: "🔥 Camping Hub Synergy:"
+              - paragraph [ref=e2758]: "Can place Deepstone Crucible / Lodestone: party members gain +15 Mining skill and 10% armor."
+          - generic [ref=e2759]:
+            - generic [ref=e2760]:
+              - generic [ref=e2761]:
+                - generic [ref=e2762]: 🌿
+                - generic [ref=e2763]:
+                  - heading "Herbalism" [level=4] [ref=e2764]
+                  - text: Gathering
+              - generic [ref=e2765]: Combat Power
+            - generic [ref=e2766]:
+              - strong [ref=e2767]: ✨ Nature's Ward & Lifeblood
+              - paragraph [ref=e2768]: Increases all Magic Resistances by +10 and grants an on-use 2-minute heal recovering health over 6 seconds.
+            - generic [ref=e2769]:
+              - strong [ref=e2770]: "🔥 Camping Hub Synergy:"
+              - paragraph [ref=e2771]: "Can place Incense Candle: party members gain +15 Intellect and 10% movement speed."
+          - generic [ref=e2772]:
+            - generic [ref=e2773]:
+              - generic [ref=e2774]:
+                - generic [ref=e2775]: 🔪
+                - generic [ref=e2776]:
+                  - heading "Skinning" [level=4] [ref=e2777]
+                  - text: Gathering
+              - generic [ref=e2778]: Combat Power
+            - generic [ref=e2779]:
+              - strong [ref=e2780]: ✨ Master of Anatomy
+              - paragraph [ref=e2781]: Increases Critical Strike rating by 1.5% across all physical and magical abilities.
+            - generic [ref=e2782]:
+              - strong [ref=e2783]: "🔥 Camping Hub Synergy:"
+              - paragraph [ref=e2784]: "Can place Drying Rack / Trapper's Workbench: party members gain +10 Agility and +2% Critical Strike."
+          - generic [ref=e2785]:
+            - generic [ref=e2786]:
+              - generic [ref=e2787]:
+                - generic [ref=e2788]: 🔨
+                - generic [ref=e2789]:
+                  - heading "Blacksmithing" [level=4] [ref=e2790]
+                  - text: Production
+              - generic [ref=e2791]: Combat Power
+            - generic [ref=e2792]:
+              - strong [ref=e2793]: ✨ Weapon Honing & Sockets
+              - paragraph [ref=e2794]: Permanent +16 Attack Power or +12 Spell Damage weapon buff, plus bonus socket in bracers.
+            - generic [ref=e2795]:
+              - strong [ref=e2796]: "🔥 Camping Hub Synergy:"
+              - paragraph [ref=e2797]: "Can place Sharpening Wheel / Portable Anvil: party members gain +8-10% Attack Power for 1 hour."
+          - generic [ref=e2798]:
+            - generic [ref=e2799]:
+              - generic [ref=e2800]:
+                - generic [ref=e2801]: 🧪
+                - generic [ref=e2802]:
+                  - heading "Alchemy" [level=4] [ref=e2803]
+                  - text: Production
+              - generic [ref=e2804]: Combat Power
+            - generic [ref=e2805]:
+              - strong [ref=e2806]: ✨ Mixology & Elixir Mastery
+              - paragraph [ref=e2807]: 100% increased duration on all Flasks and Elixirs, plus 25% increased health and mana from healing potions.
+            - generic [ref=e2808]:
+              - strong [ref=e2809]: "🔥 Camping Hub Synergy:"
+              - paragraph [ref=e2810]: "Can place Mana Well / Fermenter: party members gain +8% Mana Regen (mirrors Blessing of Wisdom)."
+          - generic [ref=e2811]:
+            - generic [ref=e2812]:
+              - generic [ref=e2813]:
+                - generic [ref=e2814]: 🧵
+                - generic [ref=e2815]:
+                  - heading "Tailoring" [level=4] [ref=e2816]
+                  - text: Production
+              - generic [ref=e2817]: Combat Power
+            - generic [ref=e2818]:
+              - strong [ref=e2819]: ✨ Spirit Weaving & Spellthread
+              - paragraph [ref=e2820]: Increases Spirit by +15 and grants chance on spellcast to restore 200 mana or energy.
+            - generic [ref=e2821]:
+              - strong [ref=e2822]: "🔥 Camping Hub Synergy:"
+              - paragraph [ref=e2823]: "Can place Silk Encampment Tent / Loom: party members gain +8% Spirit and 200% accelerated Rested XP."
+          - generic [ref=e2824]:
+            - generic [ref=e2825]:
+              - generic [ref=e2826]:
+                - generic [ref=e2827]: 🛡️
+                - generic [ref=e2828]:
+                  - heading "Leatherworking" [level=4] [ref=e2829]
+                  - text: Production
+              - generic [ref=e2830]: Combat Power
+            - generic [ref=e2831]:
+              - strong [ref=e2832]: ✨ Fur Lining & Reinforcements
+              - paragraph [ref=e2833]: Exclusive bracer and chest lining granting +100 Armor and +15 Stamina.
+            - generic [ref=e2834]:
+              - strong [ref=e2835]: "🔥 Camping Hub Synergy:"
+              - paragraph [ref=e2836]: "Can place Camp Tent / Tanning Rack: party members gain +8% physical damage reduction."
+          - generic [ref=e2837]:
+            - generic [ref=e2838]:
+              - generic [ref=e2839]:
+                - generic [ref=e2840]: ✨
+                - generic [ref=e2841]:
+                  - heading "Enchanting" [level=4] [ref=e2842]
+                  - text: Production
+              - generic [ref=e2843]: Combat Power
+            - generic [ref=e2844]:
+              - strong [ref=e2845]: ✨ Ring Enchantments
+              - paragraph [ref=e2846]: "Exclusive enchantments on finger slots: +8 All Stats, +14 Spell Power, or +24 Attack Power."
+            - generic [ref=e2847]:
+              - strong [ref=e2848]: "🔥 Camping Hub Synergy:"
+              - paragraph [ref=e2849]: "Can place Enchanted Lute / Arcane Forge: party members gain +8% All Stats and Resistances (mirrors Mark of the Wild)."
+          - generic [ref=e2850]:
+            - generic [ref=e2851]:
+              - generic [ref=e2852]:
+                - generic [ref=e2853]: ⚙️
+                - generic [ref=e2854]:
+                  - heading "Engineering" [level=4] [ref=e2855]
+                  - text: Production
+              - generic [ref=e2856]: Combat Power
+            - generic [ref=e2857]:
+              - strong [ref=e2858]: ✨ Tinkers & Goggles
+              - paragraph [ref=e2859]: Access to high-powered epic helm goggles, parachute cloak tinkers, and rocket boots with 0% backfire chance in raids.
+            - generic [ref=e2860]:
+              - strong [ref=e2861]: "🔥 Camping Hub Synergy:"
+              - paragraph [ref=e2862]: "Can place Reagent Bot / Field Repair Bot: on-site repairs and zero engineering gadget malfunctions."
+    - text: ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦
+  - contentinfo [ref=e489]:
+    - generic [ref=e490]:
+      - generic [ref=e491]:
+        - link "Blizzard Official News" [ref=e492] [cursor=pointer]:
+          - /url: https://news.blizzard.com
+        - link "Wowhead Coverage" [ref=e493] [cursor=pointer]:
+          - /url: https://www.wowhead.com/forever
+        - link "Warcraft Tavern Hub" [ref=e494] [cursor=pointer]:
+          - /url: https://www.warcrafttavern.com/forever/
+        - link "Mobalytics Meta & Tier Lists" [ref=e495] [cursor=pointer]:
+          - /url: https://mobalytics.gg/wow-forever
+        - link "Method.gg Raiding & Guides" [ref=e496] [cursor=pointer]:
+          - /url: https://www.method.gg
+        - link "Icy Veins Class Hub" [ref=e497] [cursor=pointer]:
+          - /url: https://www.icy-veins.com/wow-forever
+        - link "Battle.net Launcher" [ref=e498] [cursor=pointer]:
+          - /url: https://battle.net
+      - paragraph [ref=e499]: "World of Warcraft: Forever Personal News & Beta Progress Portal • Built for Classic+ Explorers"
+      - paragraph [ref=e500]: Data grounded in official BlizzCon 2026 announcements, Wowhead compendiums, Method.gg itemization audits, and Beta Phase 1 & 2 community testing.

@@ -1,0 +1,419 @@
+{
+  "summary": {
+    "totalFamilies": 18,
+    "newFamily": "Fox",
+    "newAbilitiesCount": 9,
+    "description": "WoW Forever preserves classic pet mechanics with normalized base speeds, native passive swing-speed inheritance, 18 pet families, the new Fox family, and 9 brand new or reworked family abilities."
+  },
+  "families": [
+    {
+      "id": "bat",
+      "name": "Bat",
+      "icon": "https://foreverchanges.pro/icon/ability_hunter_pet_bat.jpg",
+      "damageMod": "+7%",
+      "armorMod": "0%",
+      "healthMod": "0%",
+      "diet": [
+        "Fungus",
+        "Fruit"
+      ],
+      "abilities": [
+        "Sonic Blast (Rank 1-5)",
+        "Dive (Rank 1-3)",
+        "Bite (Rank 1-8)"
+      ],
+      "newAbility": {
+        "name": "Sonic Blast",
+        "badge": "✦ New in Forever",
+        "icon": "https://foreverchanges.pro/icon/ability_vehicle_sonicshockwave.jpg",
+        "cost": "80 Focus",
+        "cd": "30 sec CD",
+        "desc": "Emits a piercing shriek, inflicting 33 to 39 Nature damage (Rank 2) and increasing the casting time of all spells by 60% for 30 sec."
+      },
+      "highlight": "Potent anti-caster pet; 60% cast slow shuts down enemy healers and casters in PvP."
+    },
+    {
+      "id": "bear",
+      "name": "Bear",
+      "icon": "https://foreverchanges.pro/icon/ability_hunter_pet_bear.jpg",
+      "damageMod": "-9%",
+      "armorMod": "+5%",
+      "healthMod": "+8%",
+      "diet": [
+        "Meat",
+        "Fish",
+        "Cheese",
+        "Bread",
+        "Fungus",
+        "Fruit"
+      ],
+      "fastestTame": "1.60s (Mystmane, Mulgore)",
+      "abilities": [
+        "Swipe (Rank 1-5)",
+        "Dash (Rank 1-3)",
+        "Bite (Rank 1-8)",
+        "Claw (Rank 1-8)"
+      ],
+      "newAbility": {
+        "name": "Swipe & Dash",
+        "badge": "✦ New in Forever",
+        "icon": "https://foreverchanges.pro/icon/inv_misc_monsterclaw_03.jpg",
+        "cost": "20 Focus",
+        "cd": "5 sec CD",
+        "desc": "Swipe swipes 3 nearby enemies for cleave damage every 5 seconds. Bears also learn Dash for rapid target closing."
+      },
+      "highlight": "Unmatched multi-target tank; Swipe cleaves 3 targets and holds dungeon pack agro."
+    },
+    {
+      "id": "bird-of-prey",
+      "name": "Bird of Prey",
+      "icon": "https://foreverchanges.pro/icon/ability_hunter_pet_owl.jpg",
+      "damageMod": "+7%",
+      "armorMod": "0%",
+      "healthMod": "0%",
+      "diet": [
+        "Meat"
+      ],
+      "abilities": [
+        "Mine! (Rank 1-5)",
+        "Dive (Rank 1-3)",
+        "Claw (Rank 1-8)"
+      ],
+      "newAbility": {
+        "name": "Mine!",
+        "badge": "✦ New in Forever",
+        "icon": "https://foreverchanges.pro/icon/spell_nature_natureswrath.jpg",
+        "cost": "20 Focus",
+        "cd": "1 min CD",
+        "desc": "Grabs an enemy's weapon with its talons, causing 20 to 24 damage and physically disarming them for 4 sec."
+      },
+      "highlight": "Disarm specialist; strips melee weapons from warriors and rogues to neutralize burst."
+    },
+    {
+      "id": "boar",
+      "name": "Boar",
+      "icon": "https://foreverchanges.pro/icon/ability_hunter_pet_boar.jpg",
+      "damageMod": "-10%",
+      "armorMod": "+9%",
+      "healthMod": "+4%",
+      "diet": [
+        "Meat",
+        "Fish",
+        "Cheese",
+        "Bread",
+        "Fungus",
+        "Fruit"
+      ],
+      "abilities": [
+        "Charge (Rank 1-6)",
+        "Dash (Rank 1-3)",
+        "Bite (Rank 1-8)"
+      ],
+      "newAbility": {
+        "name": "Charge Rework",
+        "badge": "✦ Changed in Forever",
+        "icon": "https://foreverchanges.pro/icon/ability_hunter_pet_boar.jpg",
+        "cost": "35 Focus",
+        "cd": "25 sec CD",
+        "desc": "Charges an enemy, immobilizes it for 1 sec, and adds up to +204 melee attack power (Rank 3) to the boar's next attack."
+      },
+      "highlight": "Omnivorous levelling king; eats anything, root-charges targets, and has high natural armor."
+    },
+    {
+      "id": "carrion-bird",
+      "name": "Carrion Bird",
+      "icon": "https://foreverchanges.pro/icon/ability_hunter_pet_vulture.jpg",
+      "damageMod": "0%",
+      "armorMod": "+5%",
+      "healthMod": "0%",
+      "diet": [
+        "Meat",
+        "Fish"
+      ],
+      "abilities": [
+        "Demoralizing Screech (Rank 1-4)",
+        "Dive (Rank 1-3)",
+        "Bite (Rank 1-8)",
+        "Claw (Rank 1-8)"
+      ],
+      "newAbility": {
+        "name": "Demoralizing Screech",
+        "badge": "✦ Changed in Forever",
+        "icon": "https://foreverchanges.pro/icon/ability_hunter_pet_vulture.jpg",
+        "cost": "20 Focus",
+        "cd": "10 sec CD",
+        "desc": "Blasts an enemy for damage and lowers the melee attack power of all enemies in melee range by 111 (Rank 2) for 30 sec."
+      },
+      "highlight": "AoE debuff utility; Screech reduces entire monster packs' melee damage by 111 AP."
+    },
+    {
+      "id": "cat",
+      "name": "Cat",
+      "icon": "https://foreverchanges.pro/icon/ability_hunter_pet_cat.jpg",
+      "damageMod": "+10%",
+      "armorMod": "0%",
+      "healthMod": "-2%",
+      "diet": [
+        "Meat",
+        "Fish"
+      ],
+      "fastestTame": "1.00s (Broken Tooth Lvl 37) • 1.30s (Humar the Pridelord Lvl 23)",
+      "abilities": [
+        "Prowl (Rank 1-3)",
+        "Dash (Rank 1-3)",
+        "Bite (Rank 1-8)",
+        "Claw (Rank 1-8)"
+      ],
+      "newAbility": {
+        "name": "Prowl & Lethal Speed",
+        "badge": "Verified Classic+",
+        "icon": "https://foreverchanges.pro/icon/ability_druid_supriseattack.jpg",
+        "cost": "40 Focus",
+        "cd": "10 sec CD",
+        "desc": "Stealth ambush with +50% opener damage bonus. Broken Tooth's 1.0s swing speed inflicts severe spell-pushback."
+      },
+      "highlight": "Maximum single-target damage output; essential for Marksmanship & BM raid DPS."
+    },
+    {
+      "id": "crab",
+      "name": "Crab",
+      "icon": "https://foreverchanges.pro/icon/ability_hunter_pet_crab.jpg",
+      "damageMod": "-5%",
+      "armorMod": "+13%",
+      "healthMod": "-4%",
+      "diet": [
+        "Fish",
+        "Bread",
+        "Fungus",
+        "Fruit"
+      ],
+      "abilities": [
+        "Pinch (Rank 1-5)",
+        "Dash (Rank 1-3)",
+        "Claw (Rank 1-8)"
+      ],
+      "newAbility": {
+        "name": "Pinch & Dash",
+        "badge": "✦ New in Forever",
+        "icon": "https://foreverchanges.pro/icon/ability_hunter_pet_crab.jpg",
+        "cost": "50 Focus",
+        "cd": "30 sec CD",
+        "desc": "Pinches enemy legs for 32 to 36 damage (Rank 2) and reduces movement speed by 50% for 9 sec."
+      },
+      "highlight": "Massive +13% armor rating combined with an on-demand 50% hamstring pin."
+    },
+    {
+      "id": "crocolisk",
+      "name": "Crocolisk",
+      "icon": "https://foreverchanges.pro/icon/ability_hunter_pet_crocolisk.jpg",
+      "damageMod": "0%",
+      "armorMod": "+10%",
+      "healthMod": "-5%",
+      "diet": [
+        "Meat",
+        "Fish"
+      ],
+      "abilities": [
+        "Dismember (Rank 1-5)",
+        "Dash (Rank 1-3)",
+        "Bite (Rank 1-8)"
+      ],
+      "newAbility": {
+        "name": "Dismember (Mortal Strike)",
+        "badge": "✦ New in Forever",
+        "icon": "https://foreverchanges.pro/icon/ability_hunter_pet_crocolisk.jpg",
+        "cost": "35 Focus",
+        "cd": "6 sec CD",
+        "desc": "Viciously bites enemy appendages, reducing healing effectiveness by 50% for 10 sec on a 6-second cooldown."
+      },
+      "highlight": "PvP meta-definer; keeps 100% uptime on 50% healing reduction without requiring an Arms warrior."
+    },
+    {
+      "id": "fox",
+      "name": "Fox",
+      "icon": "https://foreverchanges.pro/icon/ability_hunter_aspectofthefox.jpg",
+      "damageMod": "0%",
+      "armorMod": "+5%",
+      "healthMod": "0%",
+      "diet": [
+        "Meat"
+      ],
+      "fastestTame": "Redridge & Loch Modan Fox kits",
+      "abilities": [
+        "Trickster's Dance (Rank 1)",
+        "Dash (Rank 1-3)",
+        "Bite (Rank 1-8)"
+      ],
+      "newAbility": {
+        "name": "Trickster's Dance",
+        "badge": "✦ Brand New Family",
+        "icon": "https://foreverchanges.pro/icon/ability_hunter_aspectofthefox.jpg",
+        "cost": "10 Focus",
+        "cd": "3 min CD",
+        "desc": "Increases pet's chance to Dodge by 50% and decreases attack intervals by 30% for 12 sec."
+      },
+      "highlight": "Brand new pet family added to WoW Forever! Extreme defensive evasion and rapid burst attacks."
+    },
+    {
+      "id": "gorilla",
+      "name": "Gorilla",
+      "icon": "https://foreverchanges.pro/icon/ability_hunter_pet_gorilla.jpg",
+      "damageMod": "+2%",
+      "armorMod": "0%",
+      "healthMod": "+4%",
+      "diet": [
+        "Fungus",
+        "Fruit"
+      ],
+      "abilities": [
+        "Thunderstomp (Rank 1-4)",
+        "Dash (Rank 1-3)",
+        "Bite (Rank 1-8)"
+      ],
+      "newAbility": {
+        "name": "Thunderstomp Rework",
+        "badge": "✦ Changed in Forever",
+        "icon": "https://foreverchanges.pro/icon/ability_hunter_pet_gorilla.jpg",
+        "cost": "60 Focus",
+        "cd": "1 min CD",
+        "desc": "Shakes the ground with thundering force, dealing 53 to 61 Nature damage to all enemies within 8 yards."
+      },
+      "highlight": "Area-of-effect threat burst; synergizes with Hunter traps and multi-pull dungeons."
+    },
+    {
+      "id": "hyena",
+      "name": "Hyena",
+      "icon": "https://foreverchanges.pro/icon/ability_hunter_pet_hyena.jpg",
+      "damageMod": "0%",
+      "armorMod": "0%",
+      "healthMod": "0%",
+      "diet": [
+        "Meat",
+        "Fruit"
+      ],
+      "abilities": [
+        "Dash (Rank 1-3)",
+        "Bite (Rank 1-8)"
+      ],
+      "highlight": "Well-rounded scavenger beast with high agility and Dash mobility."
+    },
+    {
+      "id": "raptor",
+      "name": "Raptor",
+      "icon": "https://foreverchanges.pro/icon/ability_hunter_pet_raptor.jpg",
+      "damageMod": "+10%",
+      "armorMod": "0%",
+      "healthMod": "-5%",
+      "diet": [
+        "Meat"
+      ],
+      "abilities": [
+        "Dash (Rank 1-3)",
+        "Bite (Rank 1-8)",
+        "Claw (Rank 1-8)"
+      ],
+      "highlight": "Pure offensive power with +10% damage bonus alongside Cats."
+    },
+    {
+      "id": "scorpid",
+      "name": "Scorpid",
+      "icon": "https://foreverchanges.pro/icon/ability_hunter_pet_scorpid.jpg",
+      "damageMod": "-6%",
+      "armorMod": "+10%",
+      "healthMod": "0%",
+      "diet": [
+        "Meat"
+      ],
+      "abilities": [
+        "Scorpid Poison (Rank 1-5)",
+        "Claw (Rank 1-8)"
+      ],
+      "highlight": "Scorpid Poison stacks nature DoT to protect Viper Sting from dispel in PvP."
+    },
+    {
+      "id": "spider",
+      "name": "Spider",
+      "icon": "https://foreverchanges.pro/icon/ability_hunter_pet_spider.jpg",
+      "damageMod": "+7%",
+      "armorMod": "0%",
+      "healthMod": "-5%",
+      "diet": [
+        "Meat"
+      ],
+      "abilities": [
+        "Bite (Rank 1-8)"
+      ],
+      "highlight": "High damage ambush predator with accessible tames throughout early leveling zones."
+    },
+    {
+      "id": "tallstrider",
+      "name": "Tallstrider",
+      "icon": "https://foreverchanges.pro/icon/ability_hunter_pet_tallstrider.jpg",
+      "damageMod": "0%",
+      "armorMod": "0%",
+      "healthMod": "+5%",
+      "diet": [
+        "Cheese",
+        "Fruit",
+        "Fungus"
+      ],
+      "abilities": [
+        "Dust Cloud (Rank 1-3)",
+        "Bite (Rank 1-8)"
+      ],
+      "highlight": "Dust Cloud reduces enemy hit chance; vegetarian diet makes feeding very affordable."
+    },
+    {
+      "id": "turtle",
+      "name": "Turtle",
+      "icon": "https://foreverchanges.pro/icon/ability_hunter_pet_turtle.jpg",
+      "damageMod": "-10%",
+      "armorMod": "+13%",
+      "healthMod": "0%",
+      "diet": [
+        "Fruit",
+        "Fungus"
+      ],
+      "abilities": [
+        "Shell Shield (Rank 1-3)",
+        "Bite (Rank 1-8)"
+      ],
+      "highlight": "Ultimate tanking pet; Shell Shield reduces all damage taken by 50% for 12 sec."
+    },
+    {
+      "id": "wind-serpent",
+      "name": "Wind Serpent",
+      "icon": "https://foreverchanges.pro/icon/ability_hunter_pet_windserpent.jpg",
+      "damageMod": "+7%",
+      "armorMod": "0%",
+      "healthMod": "0%",
+      "diet": [
+        "Fish",
+        "Bread",
+        "Cheese"
+      ],
+      "abilities": [
+        "Lightning Breath (Rank 1-6)",
+        "Bite (Rank 1-8)"
+      ],
+      "highlight": "Ranged Nature damage attacks that ignore physical armor and hit targets through obstacles."
+    },
+    {
+      "id": "wolf",
+      "name": "Wolf",
+      "icon": "https://foreverchanges.pro/icon/ability_hunter_pet_wolf.jpg",
+      "damageMod": "0%",
+      "armorMod": "+5%",
+      "healthMod": "0%",
+      "diet": [
+        "Meat"
+      ],
+      "abilities": [
+        "Furious Howl (Rank 1-4)",
+        "Dash (Rank 1-3)",
+        "Bite (Rank 1-8)"
+      ],
+      "highlight": "Furious Howl buffs physical damage of party members; top raid support companion."
+    }
+  ]
+}

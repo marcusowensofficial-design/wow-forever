@@ -1,0 +1,189 @@
+{
+  "camps": {
+    "alliance": {
+      "name": "Azeroth Commerce Authority",
+      "location": "Three Corners, Redridge Mountains",
+      "coords": "10.5, 72.7 (Meeting of Elwynn, Duskwood & Lakeshire roads)",
+      "quartermaster": "Marcy Baker (9.5, 71.1)",
+      "territory": "Contested Zone (PvP Enabled)"
+    },
+    "horde": {
+      "name": "Durotar Supply and Logistics",
+      "location": "West of Crossroads, The Barrens",
+      "coords": "49.7, 29.4 (Road to Stonetalon Mountains)",
+      "quartermaster": "Dokimi (50.0, 29.2)",
+      "territory": "Horde Controlled Zone"
+    }
+  },
+  "vendors": [
+    {
+      "role": "Quartermaster (Takes Crates)",
+      "alliance": "Marcy Baker (9.5, 71.1)",
+      "horde": "Dokimi (50.0, 29.2)"
+    },
+    {
+      "role": "Pack Kodo Mount (6,000 Favor)",
+      "alliance": "Huey Sunnydale (8.5, 71.9)",
+      "horde": "Okamache (49.6, 28.8)"
+    },
+    {
+      "role": "Minimule Pet & Signpost Toy",
+      "alliance": "Tamelyn Aldridge (10.5, 71.5)",
+      "horde": "Gishah (49.4, 29.4)"
+    },
+    {
+      "role": "Alchemy Vendor",
+      "alliance": "Nina Surefire (10.8, 72.5)",
+      "horde": "Apothecary Durelle (49.8, 29.5)"
+    },
+    {
+      "role": "Blacksmithing Vendor",
+      "alliance": "Stondry Darkhammer (10.3, 74.4)",
+      "horde": "Gor'mak (49.8, 29.6)"
+    },
+    {
+      "role": "Cooking Vendor",
+      "alliance": "Kalsey Sanden (10.8, 72.5)",
+      "horde": "Aza'bek (49.6, 29.2)"
+    },
+    {
+      "role": "Enchanting Vendor",
+      "alliance": "Alynsia (11.2, 71.5)",
+      "horde": "Beneris (49.6, 29.8)"
+    },
+    {
+      "role": "Engineering Vendor",
+      "alliance": "Fritz Fizzle (10.4, 74.2)",
+      "horde": "Fizzlefuse (49.8, 29.6)"
+    },
+    {
+      "role": "Leatherworking Vendor",
+      "alliance": "Daniel Stitchsong (10.0, 72.5)",
+      "horde": "Pawani (49.6, 29.6)"
+    },
+    {
+      "role": "Tailoring Vendor",
+      "alliance": "Mivin Shadowweave (10.0, 72.5)",
+      "horde": "Jim'bek (49.6, 29.5)"
+    }
+  ],
+  "crateTiers": [
+    {
+      "tier": "Apprentice (White)",
+      "levelReq": 10,
+      "favor": 5,
+      "money": "2s 50c",
+      "materials": "Raw Gathered Materials (20 Peacebloom, 20 Copper Ore, 40 Linen)"
+    },
+    {
+      "tier": "Apprentice (Green)",
+      "levelReq": 10,
+      "favor": 10,
+      "money": "5s 00c",
+      "materials": "Crafted Components (2 Cured Light Hide, 20 Bolt of Linen, 20 Copper Bar, 16 Copper Bolts)"
+    },
+    {
+      "tier": "Journeyman (White)",
+      "levelReq": 10,
+      "favor": 10,
+      "money": "5s 00c",
+      "materials": "Intermediate Raw Materials (10 Stranglekelp, 20 Iron Ore, 20 Wool Cloth, 20 Soul Dust)"
+    },
+    {
+      "tier": "Journeyman (Green)",
+      "levelReq": 10,
+      "favor": 20,
+      "money": "10s 00c",
+      "materials": "Intermediate Crafted Goods (6 Bolt of Woolen Cloth, 20 Iron Bar, 8 Bronze Tube)"
+    },
+    {
+      "tier": "Expert (White/Green)",
+      "levelReq": 20,
+      "favor": "25–35 (Est.)",
+      "money": "15s–25s",
+      "materials": "Mithril Ore, Mageweave, Vision Dust, Mithril Bars, Steel Struts"
+    },
+    {
+      "tier": "Artisan (White/Green)",
+      "levelReq": 35,
+      "favor": "45–60 (Est.)",
+      "money": "35s–50s",
+      "materials": "Thorium Ore, Runecloth, Dream Dust, Truesilver Bars, Thorium Widgets"
+    }
+  ],
+  "firstTurnInQuest": {
+    "item": "Shipping Label",
+    "bonusFavor": 50,
+    "note": "Awarded automatically upon filling your first Waylaid Crate. Directs you to the camp and rewards a massive one-time 50 Favor boost."
+  },
+  "writsGuide": {
+    "totalWrits": 150,
+    "professions": [
+      "Alchemy (30)",
+      "Blacksmithing (30)",
+      "Engineering (30)",
+      "Leatherworking (30)",
+      "Tailoring (30)"
+    ],
+    "tiers": [
+      {
+        "level": "Journeyman",
+        "skillReq": "100–170",
+        "rep": 75,
+        "count": 45
+      },
+      {
+        "level": "Expert",
+        "skillReq": "180–225",
+        "rep": 125,
+        "count": 60
+      },
+      {
+        "level": "Artisan",
+        "skillReq": "230–310",
+        "rep": 200,
+        "count": 45
+      }
+    ],
+    "payout": "22 to 45 silver Coin Pouch per daily order + Camp Reputation.",
+    "rerollItem": "Forger's Quill (sold by Uncertified Scribe south of Three Corners to swap unwanted writs)."
+  },
+  "priorityPurchases": [
+    {
+      "item": "Level 20 Crafted Armor Sets",
+      "cost": "30 Favor each",
+      "profs": "Tailoring / LW / BS",
+      "note": "Head pieces (Lvl 20), Boots (17), Gloves (15), Belts (12). BiS pre-dungeon gear."
+    },
+    {
+      "item": "Level 20 Class Relics",
+      "cost": "45 Favor each",
+      "profs": "Enchanting 130",
+      "note": "Tenets of the Silver Hand (Paladin), Polished Driftwood Icon (Shaman), Mystic Mushroom (Druid)."
+    },
+    {
+      "item": "Enchant Weapon - Revelation",
+      "cost": "45 Favor",
+      "profs": "Enchanting 135",
+      "note": "Featured in 17 of 31 Phase 2 BiS gear lists; provides strong spell and attack procs."
+    },
+    {
+      "item": "Reins of the Pack Kodo",
+      "cost": "6,000 Favor",
+      "profs": "Any (Level 60)",
+      "note": "Account-wide riding kodo accessible to Alliance characters too!"
+    },
+    {
+      "item": "Minimule Pet & Signpost Toy",
+      "cost": "1,500 / 1,200 Favor",
+      "profs": "Any",
+      "note": "Minimule vanity companion and interactive Tradeskill Signpost toy."
+    },
+    {
+      "item": "Profession Master Titles",
+      "cost": "1,000 Favor",
+      "profs": "300 Skill Req",
+      "note": "Unlocks account titles: 'The Alchemist', 'The Blacksmith', 'The Enchanter', etc."
+    }
+  ]
+}

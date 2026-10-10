@@ -502,6 +502,11 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       "icon": "🐾"
     },
     {
+      "id": "pets",
+      "label": "Pet Stable & Abilities",
+      "icon": "🐾"
+    },
+    {
       "id": "tauren",
       "label": "Tauren Testing & Races",
       "icon": "🐂"

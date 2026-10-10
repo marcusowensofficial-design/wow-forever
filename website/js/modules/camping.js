@@ -54,6 +54,181 @@ function initCampingHub() {
       </div>
     `).join('');
   }
+
+  renderCozySleepingBag();
+}
+
+function renderCozySleepingBag() {
+  const container = document.getElementById('cozy-sleeping-bag-container');
+  if (!container) return;
+
+  const bagData = (typeof window !== 'undefined' && window.WOW_ATLAS_DATA && window.WOW_ATLAS_DATA.cozySleepingBag) || null;
+  const roadmap = (bagData && bagData.questRoadmap) || [];
+
+  container.innerHTML = `
+    <div class="sleeping-bag-hero-card" style="background: rgba(15, 23, 42, 0.7); border: 1px solid var(--border-gold); border-radius: var(--radius-md); padding: 1.5rem; margin-bottom: 2rem;">
+      <div class="sb-header-row">
+        <div style="display: flex; align-items: center; gap: 0.8rem; flex-wrap: wrap;">
+          <span style="font-size: 2.2rem;">⛺</span>
+          <div>
+            <div style="display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap;">
+              <h3 style="color: #f5d061; font-size: 1.35rem; margin: 0;">Cozy Sleeping Bag & Leveling Efficiency Engine</h3>
+              <span class="deepdive-badge badge-exclusive"><span>✦</span> Level 14+ Essential</span>
+            </div>
+            <p style="font-size: 0.85rem; color: #cbd5e1; margin: 0.2rem 0 0;">
+              Deploy anywhere outdoors or inside camp: rest for 3 minutes to gain <strong>+3% Experience from all sources (Monsters & Quests) for 2 hours</strong>.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Showcase Grid: Left Item/Simulator, Right Quest Chain -->
+      <div class="sb-content-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.25rem; margin-top: 1.25rem;">
+        
+        <!-- Left: Item Card & Interactive Rest Simulator -->
+        <div class="sb-left-col">
+          <div class="wow-tooltip-mock" style="background: rgba(10, 15, 29, 0.95); border: 2px solid #a335ee; border-radius: 8px; padding: 1rem; box-shadow: 0 4px 20px rgba(0,0,0,0.5);">
+            <div style="display: flex; justify-content: space-between; align-items: baseline;">
+              <strong style="color: #a335ee; font-size: 1.1rem;">Cozy Sleeping Bag</strong>
+              <span style="color: #94a3b8; font-size: 0.8rem;">Item Level 40</span>
+            </div>
+            <div style="font-size: 0.82rem; color: #fff; margin-top: 0.25rem;">Binds when picked up</div>
+            <div style="font-size: 0.82rem; color: #fff;">Unique</div>
+            <p style="color: #00ff00; font-size: 0.85rem; margin: 0.6rem 0 0.3rem; line-height: 1.4;">
+              Use: Unfurl a sleeping bag. Resting inside for at least one minute will provide a bonus to experience earned, stacking up to 3 times. (60 Min Cooldown)
+            </p>
+            <div style="font-style: italic; color: #ffd100; font-size: 0.8rem;">"Old, but still good"</div>
+          </div>
+
+          <!-- Interactive Rest Simulator -->
+          <div class="sb-simulator-box" style="margin-top: 1rem; background: rgba(255,255,255,0.03); border: 1px solid var(--border-subtle); border-radius: 8px; padding: 1rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+              <strong style="color: #fff; font-size: 0.9rem;">Interactive Rest Simulator</strong>
+              <span id="sb-buff-display" class="deepdive-badge badge-demo">Unbuffed</span>
+            </div>
+            <div class="sb-progress-bar-bg" style="width: 100%; height: 10px; background: rgba(0,0,0,0.4); border-radius: 5px; overflow: hidden; margin: 0.5rem 0;">
+              <div id="sb-progress-fill" style="width: 0%; height: 100%; background: linear-gradient(90deg, #ca8a04, #22c55e); transition: width 0.4s ease;"></div>
+            </div>
+            <div style="display: flex; justify-content: space-between; font-size: 0.78rem; color: #94a3b8; margin-bottom: 0.75rem;">
+              <span>0m: +0% XP</span>
+              <span>1m: +1% XP</span>
+              <span>2m: +2% XP</span>
+              <span>3m: +3% (2h)</span>
+            </div>
+            <div style="display: flex; gap: 0.5rem;">
+              <button type="button" class="btn-primary" id="btn-simulate-bag-rest" style="flex: 1; padding: 0.5rem; font-size: 0.85rem; cursor: pointer; background: linear-gradient(135deg, #ca8a04, #eab308); color: #000; font-weight: 700; border: none; border-radius: 4px;">
+                <span>⛺</span> Rest (+1 Minute)
+              </button>
+              <button type="button" class="btn-primary" id="btn-reset-bag-rest" style="padding: 0.5rem 0.8rem; font-size: 0.85rem; cursor: pointer; background: rgba(255,255,255,0.08); border: 1px solid var(--border-subtle); color: #cbd5e1; border-radius: 4px;">
+                Reset
+              </button>
+            </div>
+            <div id="sb-sim-status" style="font-size: 0.8rem; color: #38bdf8; margin-top: 0.6rem; text-align: center;">
+              Click "Rest" to simulate lying in the bag.
+            </div>
+          </div>
+
+          <!-- Student Fodder Spotlight -->
+          <div style="margin-top: 1rem; background: rgba(16, 185, 129, 0.06); border: 1px solid rgba(16, 185, 129, 0.25); border-radius: 8px; padding: 0.85rem;">
+            <div style="display: flex; align-items: center; gap: 0.5rem;">
+              <span style="font-size: 1.4rem;">🥜</span>
+              <div>
+                <strong style="color: #6ee7b7; font-size: 0.9rem;">Student Fodder (New Forever Rework)</strong>
+                <span style="font-size: 0.75rem; color: #94a3b8; display: block;">Trail food, not rested XP</span>
+              </div>
+            </div>
+            <p style="font-size: 0.8rem; color: #cbd5e1; margin: 0.4rem 0 0; line-height: 1.4;">
+              Heals <strong>500 HP</strong> immediately + <strong>1,050 over 12s</strong>, and restores <strong>900 mana / 50 rage / 100 energy</strong> on a 5-minute cooldown. You earn 12 free bags across the questline!
+            </p>
+          </div>
+        </div>
+
+        <!-- Right: 5-Step Scavenger Quest Roadmap -->
+        <div class="sb-right-col">
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.75rem;">
+            <h4 style="color: #fff; font-size: 1rem; margin: 0; display: flex; align-items: center; gap: 0.4rem;">
+              <span>🗺️</span> 5-Step Scavenger Questline Roadmap
+            </h4>
+            <span class="deepdive-badge badge-verified" style="font-size: 0.75rem;">Alliance & Horde (Lvl 14+)</span>
+          </div>
+
+          <div class="sb-roadmap-list" style="display: flex; flex-direction: column; gap: 0.75rem;">
+            ${roadmap.map(step => `
+              <div class="sb-step-card" style="background: rgba(255,255,255,0.02); border: 1px solid var(--border-subtle); border-radius: 6px; padding: 0.75rem;">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 0.5rem;">
+                  <div>
+                    <span style="background: rgba(202, 138, 4, 0.2); color: #fef08a; padding: 0.15rem 0.4rem; border-radius: 3px; font-size: 0.7rem; font-weight: 700; text-transform: uppercase;">
+                      Step ${step.step}
+                    </span>
+                    <strong style="color: #fff; font-size: 0.9rem; margin-left: 0.4rem;">${escapeHtml(step.name)}</strong>
+                  </div>
+                  <span style="font-size: 0.75rem; color: #94a3b8;">${escapeHtml(step.location || 'Cross-Continent')}</span>
+                </div>
+
+                ${step.factionStart ? `
+                  <div style="font-size: 0.78rem; color: #cbd5e1; margin-top: 0.4rem; line-height: 1.35;">
+                    <div style="color: #60a5fa;"><strong>Alliance:</strong> ${escapeHtml(step.factionStart.alliance)}</div>
+                    <div style="color: #f87171; margin-top: 0.2rem;"><strong>Horde:</strong> ${escapeHtml(step.factionStart.horde)}</div>
+                  </div>
+                ` : `
+                  <div style="font-size: 0.78rem; color: #cbd5e1; margin-top: 0.35rem; line-height: 1.35;">
+                    ${escapeHtml(step.task)}
+                  </div>
+                `}
+
+                <div style="margin-top: 0.4rem; padding-top: 0.4rem; border-top: 1px dashed rgba(255,255,255,0.08); font-size: 0.78rem; color: #34d399;">
+                  <strong>🎁 Rewards:</strong> ${escapeHtml(step.rewards)}
+                </div>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+
+      </div>
+    </div>
+  `;
+
+  // Attach Rest Simulator logic
+  let currentRestMinutes = 0;
+  const btnRest = container.querySelector('#btn-simulate-bag-rest');
+  const btnReset = container.querySelector('#btn-reset-bag-rest');
+  const progressFill = container.querySelector('#sb-progress-fill');
+  const buffDisplay = container.querySelector('#sb-buff-display');
+  const simStatus = container.querySelector('#sb-sim-status');
+
+  if (btnRest) {
+    btnRest.addEventListener('click', () => {
+      if (currentRestMinutes < 3) {
+        currentRestMinutes++;
+        const pct = Math.round((currentRestMinutes / 3) * 100);
+        if (progressFill) progressFill.style.width = `${pct}%`;
+        
+        if (buffDisplay) {
+          buffDisplay.className = 'deepdive-badge badge-exclusive';
+          buffDisplay.textContent = `Well-Rested (+${currentRestMinutes}% XP)`;
+        }
+        if (simStatus) {
+          if (currentRestMinutes === 3) {
+            simStatus.innerHTML = `<strong>Max Bonus Active!</strong> +3% XP from all sources for 2 hours (7,200s).`;
+          } else {
+            simStatus.textContent = `Resting in bag: ${currentRestMinutes} min complete (+${currentRestMinutes}% XP). Keep resting!`;
+          }
+        }
+      }
+    });
+  }
+
+  if (btnReset) {
+    btnReset.addEventListener('click', () => {
+      currentRestMinutes = 0;
+      if (progressFill) progressFill.style.width = '0%';
+      if (buffDisplay) {
+        buffDisplay.className = 'deepdive-badge badge-demo';
+        buffDisplay.textContent = 'Unbuffed';
+      }
+      if (simStatus) simStatus.textContent = 'Click "Rest" to simulate lying in the bag.';
+    });
+  }
 }
 
 function renderCampingStations(filter) {

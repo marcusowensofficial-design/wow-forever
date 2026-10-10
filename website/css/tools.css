@@ -4159,3 +4159,277 @@
   display: flex !important;
 }
 
+/* ==========================================================================
+   HUNTER PETS STABLE & BEAST ABILITIES MATRIX
+   ========================================================================== */
+.hunter-pet-stable-wrapper {
+  margin-top: 1rem;
+}
+
+.pet-abilities-highlight-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.pet-ability-highlight-card {
+  background: rgba(15, 23, 42, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-left: 3px solid #10b981;
+  border-radius: 6px;
+  padding: 0.75rem 0.85rem;
+}
+
+.pet-ability-highlight-card .pah-top {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.35rem;
+}
+
+.pah-top .pah-icon {
+  font-size: 1.4rem;
+}
+
+.pah-top strong {
+  color: #fff;
+  font-size: 0.88rem;
+  display: block;
+}
+
+.pah-top .pah-type {
+  font-size: 0.72rem;
+  color: #34d399;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.pet-ability-highlight-card p {
+  font-size: 0.8rem;
+  color: #cbd5e1;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.pet-filter-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.pet-filter-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.pet-families-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1rem;
+}
+
+.pet-family-card {
+  background: rgba(15, 23, 42, 0.65);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.pet-family-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(245, 158, 11, 0.4);
+}
+
+.pet-family-card.featured-family {
+  border-color: rgba(245, 158, 11, 0.6);
+  background: rgba(245, 158, 11, 0.04);
+}
+
+.family-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.family-title-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.family-icon-img {
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.family-name {
+  color: #fff;
+  font-size: 1.05rem;
+}
+
+.fastest-tame-badge {
+  display: block;
+  font-size: 0.72rem;
+  color: #fcd34d;
+  font-weight: 700;
+  margin-top: 0.15rem;
+}
+
+.family-stat-mods {
+  display: flex;
+  gap: 0.3rem;
+  flex-wrap: wrap;
+}
+
+.mod-pill {
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 0.15rem 0.35rem;
+  border-radius: 3px;
+}
+
+.mod-pill.mod-pos {
+  background: rgba(34, 197, 94, 0.2);
+  color: #4ade80;
+}
+
+.mod-pill.mod-neg {
+  background: rgba(239, 68, 68, 0.2);
+  color: #f87171;
+}
+
+.mod-pill.mod-neutral {
+  background: rgba(255, 255, 255, 0.08);
+  color: #94a3b8;
+}
+
+.family-diet-row {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.78rem;
+  color: #94a3b8;
+}
+
+.diet-tags {
+  display: flex;
+  gap: 0.3rem;
+  flex-wrap: wrap;
+}
+
+.diet-tag {
+  background: rgba(255, 255, 255, 0.05);
+  color: #cbd5e1;
+  padding: 0.1rem 0.35rem;
+  border-radius: 3px;
+  font-size: 0.72rem;
+}
+
+.family-highlight-p {
+  font-size: 0.82rem;
+  color: #cbd5e1;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.family-new-ability-box {
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(245, 158, 11, 0.25);
+  border-radius: 6px;
+  padding: 0.6rem 0.75rem;
+}
+
+.fna-header {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.fna-icon {
+  width: 22px;
+  height: 22px;
+  border-radius: 4px;
+}
+
+.fna-badge {
+  background: rgba(245, 158, 11, 0.2);
+  color: #fef08a;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 0.1rem 0.35rem;
+  border-radius: 3px;
+  margin-left: auto;
+}
+
+.fna-specs {
+  display: flex;
+  gap: 0.6rem;
+  font-size: 0.72rem;
+  color: #38bdf8;
+  margin: 0.25rem 0 0.15rem;
+}
+
+.fna-desc {
+  font-size: 0.78rem;
+  color: #cbd5e1;
+  margin: 0;
+  line-height: 1.35;
+}
+
+.family-ability-chips {
+  display: flex;
+  gap: 0.35rem;
+  flex-wrap: wrap;
+  margin-top: 0.25rem;
+}
+
+.ability-mini-chip {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #cbd5e1;
+  font-size: 0.72rem;
+  padding: 0.15rem 0.4rem;
+  border-radius: 3px;
+}
+
+/* ==========================================================================
+   COZY SLEEPING BAG & CAMPING UPGRADES
+   ========================================================================== */
+.sleeping-bag-hero-card {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.sb-step-card {
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.sb-step-card:hover {
+  transform: translateX(3px);
+  border-color: rgba(202, 138, 4, 0.4);
+}
+
+/* ==========================================================================
+   MERCHANT'S FAVOR CURRENCY & CRATES
+   ========================================================================== */
+.merchants-favor-panel-wrapper {
+  margin-top: 1rem;
+}
+
+.mf-camp-card {
+  transition: transform 0.2s ease;
+}
+
+.mf-camp-card:hover {
+  transform: translateY(-2px);
+}
+
+

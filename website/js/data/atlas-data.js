@@ -1,6 +1,6 @@
 /**
  * World of Warcraft: Forever - Atlas & Expansion Dataset
- * Browser bundle for World Atlas, Rare Spawns, Library Books, Camping Recipes, and PvP.
+ * Browser bundle for World Atlas, Rare Spawns, Library Books, Camping Recipes, PvP, Hunter Pets, and Merchant Economy.
  */
 
 window.WOW_ATLAS_DATA = {
@@ -1942,5 +1942,677 @@ window.WOW_ATLAS_DATA = {
       }
     ]
   }
+},
+  hunterPets: {
+  "summary": {
+    "totalFamilies": 18,
+    "newFamily": "Fox",
+    "newAbilitiesCount": 9,
+    "description": "WoW Forever preserves classic pet mechanics with normalized base speeds, native passive swing-speed inheritance, 18 pet families, the new Fox family, and 9 brand new or reworked family abilities."
+  },
+  "families": [
+    {
+      "id": "bat",
+      "name": "Bat",
+      "icon": "https://foreverchanges.pro/icon/ability_hunter_pet_bat.jpg",
+      "damageMod": "+7%",
+      "armorMod": "0%",
+      "healthMod": "0%",
+      "diet": [
+        "Fungus",
+        "Fruit"
+      ],
+      "abilities": [
+        "Sonic Blast (Rank 1-5)",
+        "Dive (Rank 1-3)",
+        "Bite (Rank 1-8)"
+      ],
+      "newAbility": {
+        "name": "Sonic Blast",
+        "badge": "✦ New in Forever",
+        "icon": "https://foreverchanges.pro/icon/ability_vehicle_sonicshockwave.jpg",
+        "cost": "80 Focus",
+        "cd": "30 sec CD",
+        "desc": "Emits a piercing shriek, inflicting 33 to 39 Nature damage (Rank 2) and increasing the casting time of all spells by 60% for 30 sec."
+      },
+      "highlight": "Potent anti-caster pet; 60% cast slow shuts down enemy healers and casters in PvP."
+    },
+    {
+      "id": "bear",
+      "name": "Bear",
+      "icon": "https://foreverchanges.pro/icon/ability_hunter_pet_bear.jpg",
+      "damageMod": "-9%",
+      "armorMod": "+5%",
+      "healthMod": "+8%",
+      "diet": [
+        "Meat",
+        "Fish",
+        "Cheese",
+        "Bread",
+        "Fungus",
+        "Fruit"
+      ],
+      "fastestTame": "1.60s (Mystmane, Mulgore)",
+      "abilities": [
+        "Swipe (Rank 1-5)",
+        "Dash (Rank 1-3)",
+        "Bite (Rank 1-8)",
+        "Claw (Rank 1-8)"
+      ],
+      "newAbility": {
+        "name": "Swipe & Dash",
+        "badge": "✦ New in Forever",
+        "icon": "https://foreverchanges.pro/icon/inv_misc_monsterclaw_03.jpg",
+        "cost": "20 Focus",
+        "cd": "5 sec CD",
+        "desc": "Swipe swipes 3 nearby enemies for cleave damage every 5 seconds. Bears also learn Dash for rapid target closing."
+      },
+      "highlight": "Unmatched multi-target tank; Swipe cleaves 3 targets and holds dungeon pack agro."
+    },
+    {
+      "id": "bird-of-prey",
+      "name": "Bird of Prey",
+      "icon": "https://foreverchanges.pro/icon/ability_hunter_pet_owl.jpg",
+      "damageMod": "+7%",
+      "armorMod": "0%",
+      "healthMod": "0%",
+      "diet": [
+        "Meat"
+      ],
+      "abilities": [
+        "Mine! (Rank 1-5)",
+        "Dive (Rank 1-3)",
+        "Claw (Rank 1-8)"
+      ],
+      "newAbility": {
+        "name": "Mine!",
+        "badge": "✦ New in Forever",
+        "icon": "https://foreverchanges.pro/icon/spell_nature_natureswrath.jpg",
+        "cost": "20 Focus",
+        "cd": "1 min CD",
+        "desc": "Grabs an enemy's weapon with its talons, causing 20 to 24 damage and physically disarming them for 4 sec."
+      },
+      "highlight": "Disarm specialist; strips melee weapons from warriors and rogues to neutralize burst."
+    },
+    {
+      "id": "boar",
+      "name": "Boar",
+      "icon": "https://foreverchanges.pro/icon/ability_hunter_pet_boar.jpg",
+      "damageMod": "-10%",
+      "armorMod": "+9%",
+      "healthMod": "+4%",
+      "diet": [
+        "Meat",
+        "Fish",
+        "Cheese",
+        "Bread",
+        "Fungus",
+        "Fruit"
+      ],
+      "abilities": [
+        "Charge (Rank 1-6)",
+        "Dash (Rank 1-3)",
+        "Bite (Rank 1-8)"
+      ],
+      "newAbility": {
+        "name": "Charge Rework",
+        "badge": "✦ Changed in Forever",
+        "icon": "https://foreverchanges.pro/icon/ability_hunter_pet_boar.jpg",
+        "cost": "35 Focus",
+        "cd": "25 sec CD",
+        "desc": "Charges an enemy, immobilizes it for 1 sec, and adds up to +204 melee attack power (Rank 3) to the boar's next attack."
+      },
+      "highlight": "Omnivorous levelling king; eats anything, root-charges targets, and has high natural armor."
+    },
+    {
+      "id": "carrion-bird",
+      "name": "Carrion Bird",
+      "icon": "https://foreverchanges.pro/icon/ability_hunter_pet_vulture.jpg",
+      "damageMod": "0%",
+      "armorMod": "+5%",
+      "healthMod": "0%",
+      "diet": [
+        "Meat",
+        "Fish"
+      ],
+      "abilities": [
+        "Demoralizing Screech (Rank 1-4)",
+        "Dive (Rank 1-3)",
+        "Bite (Rank 1-8)",
+        "Claw (Rank 1-8)"
+      ],
+      "newAbility": {
+        "name": "Demoralizing Screech",
+        "badge": "✦ Changed in Forever",
+        "icon": "https://foreverchanges.pro/icon/ability_hunter_pet_vulture.jpg",
+        "cost": "20 Focus",
+        "cd": "10 sec CD",
+        "desc": "Blasts an enemy for damage and lowers the melee attack power of all enemies in melee range by 111 (Rank 2) for 30 sec."
+      },
+      "highlight": "AoE debuff utility; Screech reduces entire monster packs' melee damage by 111 AP."
+    },
+    {
+      "id": "cat",
+      "name": "Cat",
+      "icon": "https://foreverchanges.pro/icon/ability_hunter_pet_cat.jpg",
+      "damageMod": "+10%",
+      "armorMod": "0%",
+      "healthMod": "-2%",
+      "diet": [
+        "Meat",
+        "Fish"
+      ],
+      "fastestTame": "1.00s (Broken Tooth Lvl 37) • 1.30s (Humar the Pridelord Lvl 23)",
+      "abilities": [
+        "Prowl (Rank 1-3)",
+        "Dash (Rank 1-3)",
+        "Bite (Rank 1-8)",
+        "Claw (Rank 1-8)"
+      ],
+      "newAbility": {
+        "name": "Prowl & Lethal Speed",
+        "badge": "Verified Classic+",
+        "icon": "https://foreverchanges.pro/icon/ability_druid_supriseattack.jpg",
+        "cost": "40 Focus",
+        "cd": "10 sec CD",
+        "desc": "Stealth ambush with +50% opener damage bonus. Broken Tooth's 1.0s swing speed inflicts severe spell-pushback."
+      },
+      "highlight": "Maximum single-target damage output; essential for Marksmanship & BM raid DPS."
+    },
+    {
+      "id": "crab",
+      "name": "Crab",
+      "icon": "https://foreverchanges.pro/icon/ability_hunter_pet_crab.jpg",
+      "damageMod": "-5%",
+      "armorMod": "+13%",
+      "healthMod": "-4%",
+      "diet": [
+        "Fish",
+        "Bread",
+        "Fungus",
+        "Fruit"
+      ],
+      "abilities": [
+        "Pinch (Rank 1-5)",
+        "Dash (Rank 1-3)",
+        "Claw (Rank 1-8)"
+      ],
+      "newAbility": {
+        "name": "Pinch & Dash",
+        "badge": "✦ New in Forever",
+        "icon": "https://foreverchanges.pro/icon/ability_hunter_pet_crab.jpg",
+        "cost": "50 Focus",
+        "cd": "30 sec CD",
+        "desc": "Pinches enemy legs for 32 to 36 damage (Rank 2) and reduces movement speed by 50% for 9 sec."
+      },
+      "highlight": "Massive +13% armor rating combined with an on-demand 50% hamstring pin."
+    },
+    {
+      "id": "crocolisk",
+      "name": "Crocolisk",
+      "icon": "https://foreverchanges.pro/icon/ability_hunter_pet_crocolisk.jpg",
+      "damageMod": "0%",
+      "armorMod": "+10%",
+      "healthMod": "-5%",
+      "diet": [
+        "Meat",
+        "Fish"
+      ],
+      "abilities": [
+        "Dismember (Rank 1-5)",
+        "Dash (Rank 1-3)",
+        "Bite (Rank 1-8)"
+      ],
+      "newAbility": {
+        "name": "Dismember (Mortal Strike)",
+        "badge": "✦ New in Forever",
+        "icon": "https://foreverchanges.pro/icon/ability_hunter_pet_crocolisk.jpg",
+        "cost": "35 Focus",
+        "cd": "6 sec CD",
+        "desc": "Viciously bites enemy appendages, reducing healing effectiveness by 50% for 10 sec on a 6-second cooldown."
+      },
+      "highlight": "PvP meta-definer; keeps 100% uptime on 50% healing reduction without requiring an Arms warrior."
+    },
+    {
+      "id": "fox",
+      "name": "Fox",
+      "icon": "https://foreverchanges.pro/icon/ability_hunter_aspectofthefox.jpg",
+      "damageMod": "0%",
+      "armorMod": "+5%",
+      "healthMod": "0%",
+      "diet": [
+        "Meat"
+      ],
+      "fastestTame": "Redridge & Loch Modan Fox kits",
+      "abilities": [
+        "Trickster's Dance (Rank 1)",
+        "Dash (Rank 1-3)",
+        "Bite (Rank 1-8)"
+      ],
+      "newAbility": {
+        "name": "Trickster's Dance",
+        "badge": "✦ Brand New Family",
+        "icon": "https://foreverchanges.pro/icon/ability_hunter_aspectofthefox.jpg",
+        "cost": "10 Focus",
+        "cd": "3 min CD",
+        "desc": "Increases pet's chance to Dodge by 50% and decreases attack intervals by 30% for 12 sec."
+      },
+      "highlight": "Brand new pet family added to WoW Forever! Extreme defensive evasion and rapid burst attacks."
+    },
+    {
+      "id": "gorilla",
+      "name": "Gorilla",
+      "icon": "https://foreverchanges.pro/icon/ability_hunter_pet_gorilla.jpg",
+      "damageMod": "+2%",
+      "armorMod": "0%",
+      "healthMod": "+4%",
+      "diet": [
+        "Fungus",
+        "Fruit"
+      ],
+      "abilities": [
+        "Thunderstomp (Rank 1-4)",
+        "Dash (Rank 1-3)",
+        "Bite (Rank 1-8)"
+      ],
+      "newAbility": {
+        "name": "Thunderstomp Rework",
+        "badge": "✦ Changed in Forever",
+        "icon": "https://foreverchanges.pro/icon/ability_hunter_pet_gorilla.jpg",
+        "cost": "60 Focus",
+        "cd": "1 min CD",
+        "desc": "Shakes the ground with thundering force, dealing 53 to 61 Nature damage to all enemies within 8 yards."
+      },
+      "highlight": "Area-of-effect threat burst; synergizes with Hunter traps and multi-pull dungeons."
+    },
+    {
+      "id": "hyena",
+      "name": "Hyena",
+      "icon": "https://foreverchanges.pro/icon/ability_hunter_pet_hyena.jpg",
+      "damageMod": "0%",
+      "armorMod": "0%",
+      "healthMod": "0%",
+      "diet": [
+        "Meat",
+        "Fruit"
+      ],
+      "abilities": [
+        "Dash (Rank 1-3)",
+        "Bite (Rank 1-8)"
+      ],
+      "highlight": "Well-rounded scavenger beast with high agility and Dash mobility."
+    },
+    {
+      "id": "raptor",
+      "name": "Raptor",
+      "icon": "https://foreverchanges.pro/icon/ability_hunter_pet_raptor.jpg",
+      "damageMod": "+10%",
+      "armorMod": "0%",
+      "healthMod": "-5%",
+      "diet": [
+        "Meat"
+      ],
+      "abilities": [
+        "Dash (Rank 1-3)",
+        "Bite (Rank 1-8)",
+        "Claw (Rank 1-8)"
+      ],
+      "highlight": "Pure offensive power with +10% damage bonus alongside Cats."
+    },
+    {
+      "id": "scorpid",
+      "name": "Scorpid",
+      "icon": "https://foreverchanges.pro/icon/ability_hunter_pet_scorpid.jpg",
+      "damageMod": "-6%",
+      "armorMod": "+10%",
+      "healthMod": "0%",
+      "diet": [
+        "Meat"
+      ],
+      "abilities": [
+        "Scorpid Poison (Rank 1-5)",
+        "Claw (Rank 1-8)"
+      ],
+      "highlight": "Scorpid Poison stacks nature DoT to protect Viper Sting from dispel in PvP."
+    },
+    {
+      "id": "spider",
+      "name": "Spider",
+      "icon": "https://foreverchanges.pro/icon/ability_hunter_pet_spider.jpg",
+      "damageMod": "+7%",
+      "armorMod": "0%",
+      "healthMod": "-5%",
+      "diet": [
+        "Meat"
+      ],
+      "abilities": [
+        "Bite (Rank 1-8)"
+      ],
+      "highlight": "High damage ambush predator with accessible tames throughout early leveling zones."
+    },
+    {
+      "id": "tallstrider",
+      "name": "Tallstrider",
+      "icon": "https://foreverchanges.pro/icon/ability_hunter_pet_tallstrider.jpg",
+      "damageMod": "0%",
+      "armorMod": "0%",
+      "healthMod": "+5%",
+      "diet": [
+        "Cheese",
+        "Fruit",
+        "Fungus"
+      ],
+      "abilities": [
+        "Dust Cloud (Rank 1-3)",
+        "Bite (Rank 1-8)"
+      ],
+      "highlight": "Dust Cloud reduces enemy hit chance; vegetarian diet makes feeding very affordable."
+    },
+    {
+      "id": "turtle",
+      "name": "Turtle",
+      "icon": "https://foreverchanges.pro/icon/ability_hunter_pet_turtle.jpg",
+      "damageMod": "-10%",
+      "armorMod": "+13%",
+      "healthMod": "0%",
+      "diet": [
+        "Fruit",
+        "Fungus"
+      ],
+      "abilities": [
+        "Shell Shield (Rank 1-3)",
+        "Bite (Rank 1-8)"
+      ],
+      "highlight": "Ultimate tanking pet; Shell Shield reduces all damage taken by 50% for 12 sec."
+    },
+    {
+      "id": "wind-serpent",
+      "name": "Wind Serpent",
+      "icon": "https://foreverchanges.pro/icon/ability_hunter_pet_windserpent.jpg",
+      "damageMod": "+7%",
+      "armorMod": "0%",
+      "healthMod": "0%",
+      "diet": [
+        "Fish",
+        "Bread",
+        "Cheese"
+      ],
+      "abilities": [
+        "Lightning Breath (Rank 1-6)",
+        "Bite (Rank 1-8)"
+      ],
+      "highlight": "Ranged Nature damage attacks that ignore physical armor and hit targets through obstacles."
+    },
+    {
+      "id": "wolf",
+      "name": "Wolf",
+      "icon": "https://foreverchanges.pro/icon/ability_hunter_pet_wolf.jpg",
+      "damageMod": "0%",
+      "armorMod": "+5%",
+      "healthMod": "0%",
+      "diet": [
+        "Meat"
+      ],
+      "abilities": [
+        "Furious Howl (Rank 1-4)",
+        "Dash (Rank 1-3)",
+        "Bite (Rank 1-8)"
+      ],
+      "highlight": "Furious Howl buffs physical damage of party members; top raid support companion."
+    }
+  ]
+},
+  merchantsFavor: {
+  "camps": {
+    "alliance": {
+      "name": "Azeroth Commerce Authority",
+      "location": "Three Corners, Redridge Mountains",
+      "coords": "10.5, 72.7 (Meeting of Elwynn, Duskwood & Lakeshire roads)",
+      "quartermaster": "Marcy Baker (9.5, 71.1)",
+      "territory": "Contested Zone (PvP Enabled)"
+    },
+    "horde": {
+      "name": "Durotar Supply and Logistics",
+      "location": "West of Crossroads, The Barrens",
+      "coords": "49.7, 29.4 (Road to Stonetalon Mountains)",
+      "quartermaster": "Dokimi (50.0, 29.2)",
+      "territory": "Horde Controlled Zone"
+    }
+  },
+  "vendors": [
+    {
+      "role": "Quartermaster (Takes Crates)",
+      "alliance": "Marcy Baker (9.5, 71.1)",
+      "horde": "Dokimi (50.0, 29.2)"
+    },
+    {
+      "role": "Pack Kodo Mount (6,000 Favor)",
+      "alliance": "Huey Sunnydale (8.5, 71.9)",
+      "horde": "Okamache (49.6, 28.8)"
+    },
+    {
+      "role": "Minimule Pet & Signpost Toy",
+      "alliance": "Tamelyn Aldridge (10.5, 71.5)",
+      "horde": "Gishah (49.4, 29.4)"
+    },
+    {
+      "role": "Alchemy Vendor",
+      "alliance": "Nina Surefire (10.8, 72.5)",
+      "horde": "Apothecary Durelle (49.8, 29.5)"
+    },
+    {
+      "role": "Blacksmithing Vendor",
+      "alliance": "Stondry Darkhammer (10.3, 74.4)",
+      "horde": "Gor'mak (49.8, 29.6)"
+    },
+    {
+      "role": "Cooking Vendor",
+      "alliance": "Kalsey Sanden (10.8, 72.5)",
+      "horde": "Aza'bek (49.6, 29.2)"
+    },
+    {
+      "role": "Enchanting Vendor",
+      "alliance": "Alynsia (11.2, 71.5)",
+      "horde": "Beneris (49.6, 29.8)"
+    },
+    {
+      "role": "Engineering Vendor",
+      "alliance": "Fritz Fizzle (10.4, 74.2)",
+      "horde": "Fizzlefuse (49.8, 29.6)"
+    },
+    {
+      "role": "Leatherworking Vendor",
+      "alliance": "Daniel Stitchsong (10.0, 72.5)",
+      "horde": "Pawani (49.6, 29.6)"
+    },
+    {
+      "role": "Tailoring Vendor",
+      "alliance": "Mivin Shadowweave (10.0, 72.5)",
+      "horde": "Jim'bek (49.6, 29.5)"
+    }
+  ],
+  "crateTiers": [
+    {
+      "tier": "Apprentice (White)",
+      "levelReq": 10,
+      "favor": 5,
+      "money": "2s 50c",
+      "materials": "Raw Gathered Materials (20 Peacebloom, 20 Copper Ore, 40 Linen)"
+    },
+    {
+      "tier": "Apprentice (Green)",
+      "levelReq": 10,
+      "favor": 10,
+      "money": "5s 00c",
+      "materials": "Crafted Components (2 Cured Light Hide, 20 Bolt of Linen, 20 Copper Bar, 16 Copper Bolts)"
+    },
+    {
+      "tier": "Journeyman (White)",
+      "levelReq": 10,
+      "favor": 10,
+      "money": "5s 00c",
+      "materials": "Intermediate Raw Materials (10 Stranglekelp, 20 Iron Ore, 20 Wool Cloth, 20 Soul Dust)"
+    },
+    {
+      "tier": "Journeyman (Green)",
+      "levelReq": 10,
+      "favor": 20,
+      "money": "10s 00c",
+      "materials": "Intermediate Crafted Goods (6 Bolt of Woolen Cloth, 20 Iron Bar, 8 Bronze Tube)"
+    },
+    {
+      "tier": "Expert (White/Green)",
+      "levelReq": 20,
+      "favor": "25–35 (Est.)",
+      "money": "15s–25s",
+      "materials": "Mithril Ore, Mageweave, Vision Dust, Mithril Bars, Steel Struts"
+    },
+    {
+      "tier": "Artisan (White/Green)",
+      "levelReq": 35,
+      "favor": "45–60 (Est.)",
+      "money": "35s–50s",
+      "materials": "Thorium Ore, Runecloth, Dream Dust, Truesilver Bars, Thorium Widgets"
+    }
+  ],
+  "firstTurnInQuest": {
+    "item": "Shipping Label",
+    "bonusFavor": 50,
+    "note": "Awarded automatically upon filling your first Waylaid Crate. Directs you to the camp and rewards a massive one-time 50 Favor boost."
+  },
+  "writsGuide": {
+    "totalWrits": 150,
+    "professions": [
+      "Alchemy (30)",
+      "Blacksmithing (30)",
+      "Engineering (30)",
+      "Leatherworking (30)",
+      "Tailoring (30)"
+    ],
+    "tiers": [
+      {
+        "level": "Journeyman",
+        "skillReq": "100–170",
+        "rep": 75,
+        "count": 45
+      },
+      {
+        "level": "Expert",
+        "skillReq": "180–225",
+        "rep": 125,
+        "count": 60
+      },
+      {
+        "level": "Artisan",
+        "skillReq": "230–310",
+        "rep": 200,
+        "count": 45
+      }
+    ],
+    "payout": "22 to 45 silver Coin Pouch per daily order + Camp Reputation.",
+    "rerollItem": "Forger's Quill (sold by Uncertified Scribe south of Three Corners to swap unwanted writs)."
+  },
+  "priorityPurchases": [
+    {
+      "item": "Level 20 Crafted Armor Sets",
+      "cost": "30 Favor each",
+      "profs": "Tailoring / LW / BS",
+      "note": "Head pieces (Lvl 20), Boots (17), Gloves (15), Belts (12). BiS pre-dungeon gear."
+    },
+    {
+      "item": "Level 20 Class Relics",
+      "cost": "45 Favor each",
+      "profs": "Enchanting 130",
+      "note": "Tenets of the Silver Hand (Paladin), Polished Driftwood Icon (Shaman), Mystic Mushroom (Druid)."
+    },
+    {
+      "item": "Enchant Weapon - Revelation",
+      "cost": "45 Favor",
+      "profs": "Enchanting 135",
+      "note": "Featured in 17 of 31 Phase 2 BiS gear lists; provides strong spell and attack procs."
+    },
+    {
+      "item": "Reins of the Pack Kodo",
+      "cost": "6,000 Favor",
+      "profs": "Any (Level 60)",
+      "note": "Account-wide riding kodo accessible to Alliance characters too!"
+    },
+    {
+      "item": "Minimule Pet & Signpost Toy",
+      "cost": "1,500 / 1,200 Favor",
+      "profs": "Any",
+      "note": "Minimule vanity companion and interactive Tradeskill Signpost toy."
+    },
+    {
+      "item": "Profession Master Titles",
+      "cost": "1,000 Favor",
+      "profs": "300 Skill Req",
+      "note": "Unlocks account titles: 'The Alchemist', 'The Blacksmith', 'The Enchanter', etc."
+    }
+  ]
+},
+  cozySleepingBag: {
+  "item": {
+    "name": "Cozy Sleeping Bag",
+    "itemLevel": 40,
+    "bind": "Binds when picked up",
+    "unique": true,
+    "cd": "60 Min Cooldown",
+    "groundDuration": "20 Minutes",
+    "deployCast": "15 Seconds (Standing Still)"
+  },
+  "buff": {
+    "name": "Well-Rested",
+    "duration": "2 Hours (7,200 seconds)",
+    "stacks": "Up to 3 Stacks (+1% per minute rested)",
+    "maxBonus": "+3% Experience from all sources (Monsters AND Quests)",
+    "restingSynergy": "Resting in the bag counts as Resting in an Inn, accelerating Rested XP velocity."
+  },
+  "studentFodder": {
+    "name": "Student Fodder",
+    "itemLevel": 33,
+    "use": "Heals 500 HP immediately + 1,050 over 12s; restores 900 mana / 50 rage / 100 energy (5 min CD, stacks to 30)."
+  },
+  "questRoadmap": [
+    {
+      "step": 1,
+      "name": "...and that note you found",
+      "levelReq": 14,
+      "factionStart": {
+        "alliance": "Alexston Farmstead, Westfall (37.4, 50.6) - Burned-Out Remains in scorched field",
+        "horde": "Field of Giants, The Barrens (46.4, 73.9) - Burned-Out Remains by ruined tower"
+      },
+      "task": "Click the Burned-Out Remains to loot the traveler's note and initiate the cross-continent trail.",
+      "rewards": "Swiftness Potion (+50% speed for 15s) + Lesser Troll's Blood Elixir"
+    },
+    {
+      "step": 2,
+      "name": "Stepping Stones",
+      "location": "Opposite Continent's Burned Remains (Barrens for Alliance / Westfall for Horde)",
+      "task": "Journey to the enemy continent and turn in the note at the Nailed Plank.",
+      "rewards": "2x 12-Slot Bags (Sturdy Lunchbox & Old Toolbox) + Farmer's Shovel / Mining Pick + Simple Wood & Flint"
+    },
+    {
+      "step": 3,
+      "name": "Scramble & Wet Job",
+      "location": "Webwinder Path, Stonetalon Mountains (Path at 50.9, 52.3 -> Camp at 40.7, 52.4 -> Dirt Mound at 39.6, 49.9)",
+      "task": "Climb the mountain path north of Sun Rock Retreat, click Pocket Litter at abandoned tent, and jump the ravine to the Mound of Dirt.",
+      "rewards": "Choice of Thrown/Ranged Weapon (Silver Star / Moonsight Rifle / Precision Bow) + 4x Student Fodder"
+    },
+    {
+      "step": 4,
+      "name": "Eagle's Fist",
+      "location": "Stonewrought Dam, Loch Modan (49.4, 12.9)",
+      "task": "Walk onto the dam crest and drop down onto the giant dwarf stone carvings facing the Wetlands to retrieve the Carved Figurine.",
+      "rewards": "Hickory Pipe + Rumsey Rum Light (+5 Stamina)"
+    },
+    {
+      "step": 5,
+      "name": "This Must Be The Place",
+      "location": "Thoradin's Wall, Hillsbrad / Arathi (87.4, 49.7 Cart -> 22.4, 24.2 Messenger Bag)",
+      "task": "Climb the abandoned supply cart south of Durnholde, scale the ramparts, reach the interior room, and click the Hastily Rolled-Up Satchel.",
+      "rewards": "Cozy Sleeping Bag (+3% XP for 2 hours) + 8x Student Fodder"
+    }
+  ]
 }
 };

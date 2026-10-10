@@ -358,6 +358,29 @@ function initClassDeepDives() {
         }
       });
     }
+
+    // Attach Hunter Pet Family Filter Listeners
+    contentContainer.querySelectorAll('.pet-family-filter-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const filter = btn.getAttribute('data-pet-filter') || 'all';
+        contentContainer.querySelectorAll('.pet-family-filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        contentContainer.querySelectorAll('.pet-family-card').forEach(card => {
+          const role = card.getAttribute('data-family-role') || '';
+          const hasNew = card.getAttribute('data-has-new') === 'true';
+          if (filter === 'all' || 
+              (filter === 'damage' && role === 'damage') || 
+              (filter === 'tank' && role === 'tank') || 
+              (filter === 'utility' && role === 'utility') ||
+              (filter === 'new' && hasNew)) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
   }
 
   function renderDeepDiveSubTabBody(cData, subtab) {
@@ -373,6 +396,8 @@ function initClassDeepDives() {
       return renderMarksmanshipSection(cData);
     } else if (subtab === 'beastmastery' && cData.beastMastery) {
       return renderBeastMasterySection(cData);
+    } else if (subtab === 'pets' && cData.id === 'hunter') {
+      return renderHunterPetStable(cData);
     } else if (subtab === 'tauren' && cData.racialSynergies) {
       return renderTaurenRacesSection(cData);
     } else if (subtab === 'enhancement' && cData.enhancement) {
@@ -480,7 +505,15 @@ function initClassDeepDives() {
 
             <div class="dossier-section-block">
               <div class="dossier-block-header">
-                <h3><span>🐂</span> 5. Sodapoppin's Tauren Testing & New Playable Races</h3>
+                <h3><span>🐾</span> 5. Pet Stable & Beast Abilities Matrix</h3>
+                <p>18 pet families, the new Fox family, 9 reworked/new beast abilities, and swing speed inheritances</p>
+              </div>
+              ${renderHunterPetStable(cData)}
+            </div>
+
+            <div class="dossier-section-block">
+              <div class="dossier-block-header">
+                <h3><span>🐂</span> 6. Sodapoppin's Tauren Testing & New Playable Races</h3>
                 <p>Empirical in-game speed tests, herb harvest duplication, and new faction race combinations</p>
               </div>
               ${renderTaurenRacesSection(cData)}
@@ -488,7 +521,7 @@ function initClassDeepDives() {
 
             <div class="dossier-section-block">
               <div class="dossier-block-header">
-                <h3><span>🔬</span> 6. Forensics & Verification Matrix</h3>
+                <h3><span>🔬</span> 7. Forensics & Verification Matrix</h3>
                 <p>Cross-referenced validation of all claims from BlizzCon hands-on demo against WoW: Forever closed beta</p>
               </div>
               ${renderForensicMatrixSection(cData)}
@@ -1064,6 +1097,214 @@ function initClassDeepDives() {
               <p class="talent-desc">${escapeHtml(t.desc)}</p>
             </div>
           `).join('')}
+        </div>
+      </div>
+    `;
+  }
+
+  function renderHunterPetStable(cData) {
+    const petData = (typeof window !== 'undefined' && window.WOW_ATLAS_DATA && window.WOW_ATLAS_DATA.hunterPets) || null;
+    const families = (petData && petData.families) || [];
+
+    return `
+      <div class="hunter-pet-stable-wrapper">
+        <div class="spec-overview-banner" style="background: rgba(16, 185, 129, 0.08); border-color: rgba(16, 185, 129, 0.3);">
+          <div>
+            <h4 style="color: #6ee7b7; font-size: 1.3rem; margin: 0 0 0.25rem;">🐾 Pet Stable & Beast Abilities Matrix</h4>
+            <p style="font-size: 0.9rem; color: #cbd5e1; margin: 0;">
+              Classic pet mechanics preserved: 18 families, native swing speed inheritance (Broken Tooth 1.0s, Mystmane 1.6s bear), the brand new Fox family, and 9 reworked or new active abilities.
+            </p>
+          </div>
+          <span class="deepdive-badge badge-exclusive" style="align-self: flex-start;"><span>✦</span> Living Classic+ Pets</span>
+        </div>
+
+        <!-- 9 New in Forever Abilities Spotlight Matrix -->
+        <div class="pet-new-abilities-banner" style="margin-top: 1.5rem;">
+          <h4 style="color: var(--text-gold); font-size: 1.1rem; margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.5rem;">
+            <span>⚡</span> 9 Brand New & Reworked Beast Abilities in WoW Forever
+          </h4>
+          <div class="pet-abilities-highlight-grid">
+            <div class="pet-ability-highlight-card">
+              <div class="pah-top">
+                <span class="pah-icon">🦇</span>
+                <div>
+                  <strong>Sonic Blast (Bat)</strong>
+                  <span class="pah-type">Anti-Caster Nature Nuke</span>
+                </div>
+              </div>
+              <p>Ranks 1–5: Piercing shriek dealing Nature damage and increasing all spell cast times by <strong>60% for 30 sec</strong> (80 Focus, 30s CD).</p>
+            </div>
+
+            <div class="pet-ability-highlight-card">
+              <div class="pah-top">
+                <span class="pah-icon">🐻</span>
+                <div>
+                  <strong>Swipe & Dash (Bear)</strong>
+                  <span class="pah-type">3-Target Cleave Tank</span>
+                </div>
+              </div>
+              <p>Ranks 1–5: Swipes <strong>3 nearby enemies</strong> for cleave damage every 5 seconds (20 Focus). Bears also learn Dash for closing gaps.</p>
+            </div>
+
+            <div class="pet-ability-highlight-card">
+              <div class="pah-top">
+                <span class="pah-icon">🦅</span>
+                <div>
+                  <strong>Mine! (Bird of Prey)</strong>
+                  <span class="pah-type">Active Weapon Disarm</span>
+                </div>
+              </div>
+              <p>Ranks 1–5: Snaps enemy weapons with sharp talons, inflicting physical damage and <strong>disarming them for 4 sec</strong> (20 Focus, 1m CD).</p>
+            </div>
+
+            <div class="pet-ability-highlight-card">
+              <div class="pah-top">
+                <span class="pah-icon">🐊</span>
+                <div>
+                  <strong>Dismember (Crocolisk)</strong>
+                  <span class="pah-type">50% Healing Reduction</span>
+                </div>
+              </div>
+              <p>Ranks 1–5: Viciously bites appendages, reducing all healing received by <strong>50% for 10 sec</strong> on a 6-second cooldown (35 Focus).</p>
+            </div>
+
+            <div class="pet-ability-highlight-card">
+              <div class="pah-top">
+                <span class="pah-icon">🦀</span>
+                <div>
+                  <strong>Pinch & Dash (Crab)</strong>
+                  <span class="pah-type">50% Hamstring Pin</span>
+                </div>
+              </div>
+              <p>Ranks 1–5: Pinches legs for damage and reduces movement speed by <strong>50% for 9 sec</strong> (50 Focus, 30s CD). High +13% Armor rating.</p>
+            </div>
+
+            <div class="pet-ability-highlight-card">
+              <div class="pah-top">
+                <span class="pah-icon">🦊</span>
+                <div>
+                  <strong>Trickster's Dance (Fox)</strong>
+                  <span class="pah-type">✦ Brand New Family</span>
+                </div>
+              </div>
+              <p>Rank 1: Increases pet Dodge by <strong>50%</strong> and decreases attack interval by <strong>30% for 12 sec</strong> (10 Focus, 3m CD). Meat diet.</p>
+            </div>
+
+            <div class="pet-ability-highlight-card">
+              <div class="pah-top">
+                <span class="pah-icon">🐗</span>
+                <div>
+                  <strong>Charge Rework (Boar)</strong>
+                  <span class="pah-type">Root & Attack Power</span>
+                </div>
+              </div>
+              <p>Ranks 1–6: Root-charges enemy for 1 sec and adds <strong>+204 melee attack power</strong> (Rank 3) to the boar's next attack (35 Focus, 25s CD).</p>
+            </div>
+
+            <div class="pet-ability-highlight-card">
+              <div class="pah-top">
+                <span class="pah-icon">🦍</span>
+                <div>
+                  <strong>Thunderstomp Rework (Gorilla)</strong>
+                  <span class="pah-type">8-Yard AoE Shock</span>
+                </div>
+              </div>
+              <p>Ranks 1–4: Shakes the ground dealing 53–61 Nature damage to all enemies within 8 yards (60 Focus, 1m CD). Plus Dash mobility.</p>
+            </div>
+
+            <div class="pet-ability-highlight-card">
+              <div class="pah-top">
+                <span class="pah-icon">🦅</span>
+                <div>
+                  <strong>Demoralizing Screech (Carrion Bird)</strong>
+                  <span class="pah-type">30s Melee AP Debuff</span>
+                </div>
+              </div>
+              <p>Ranks 1–4: Blasts enemy and reduces melee attack power of all enemies in melee range by <strong>111 AP for 30 sec</strong> (20 Focus, 10s CD).</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Filter Controls -->
+        <div class="pet-filter-bar" style="margin-top: 2rem;">
+          <div class="filter-controls-header">
+            <h4 style="color: #fff; margin: 0; font-size: 1.05rem;">All 18 Pet Families Matrix</h4>
+            <span style="font-size: 0.8rem; color: #94a3b8;">Filter by combat specialization & role modifiers</span>
+          </div>
+          <div class="pet-filter-chips">
+            <button class="filter-chip pet-family-filter-btn active" data-pet-filter="all">All Families (18)</button>
+            <button class="filter-chip pet-family-filter-btn" data-pet-filter="damage">Offense & DPS (+Dmg)</button>
+            <button class="filter-chip pet-family-filter-btn" data-pet-filter="tank">Tank & Survival (+Armor/HP)</button>
+            <button class="filter-chip pet-family-filter-btn" data-pet-filter="utility">Crowd Control & Debuffs</button>
+            <button class="filter-chip pet-family-filter-btn" data-pet-filter="new">✦ New / Reworked Abilities (9)</button>
+          </div>
+        </div>
+
+        <!-- 18 Families Grid -->
+        <div class="pet-families-grid" style="margin-top: 1rem;">
+          ${families.map(fam => {
+            const hasNew = !!fam.newAbility;
+            const isDmg = fam.damageMod.startsWith('+');
+            const isTank = fam.armorMod.startsWith('+') || fam.healthMod.startsWith('+');
+            const role = isDmg ? 'damage' : (isTank ? 'tank' : 'utility');
+
+            return `
+              <div class="pet-family-card ${fam.id === 'fox' ? 'featured-family' : ''}" data-family-id="${fam.id}" data-family-role="${role}" data-has-new="${hasNew}">
+                <div class="family-card-top">
+                  <div class="family-title-row">
+                    <img src="${fam.icon}" alt="${escapeHtml(fam.name)}" class="family-icon-img" onerror="this.style.display='none'">
+                    <div>
+                      <strong class="family-name">${escapeHtml(fam.name)}</strong>
+                      ${fam.id === 'fox' ? '<span class="deepdive-badge badge-exclusive" style="font-size: 0.68rem; margin-left: 0.3rem;">✦ New Family</span>' : ''}
+                      ${fam.fastestTame ? `<span class="fastest-tame-badge">⚡ ${escapeHtml(fam.fastestTame)}</span>` : ''}
+                    </div>
+                  </div>
+                  <div class="family-stat-mods">
+                    <span class="mod-pill ${fam.damageMod.startsWith('+') ? 'mod-pos' : (fam.damageMod.startsWith('-') ? 'mod-neg' : 'mod-neutral')}">
+                      Dmg: ${escapeHtml(fam.damageMod)}
+                    </span>
+                    <span class="mod-pill ${fam.armorMod.startsWith('+') ? 'mod-pos' : (fam.armorMod.startsWith('-') ? 'mod-neg' : 'mod-neutral')}">
+                      Arm: ${escapeHtml(fam.armorMod)}
+                    </span>
+                    <span class="mod-pill ${fam.healthMod.startsWith('+') ? 'mod-pos' : (fam.healthMod.startsWith('-') ? 'mod-neg' : 'mod-neutral')}">
+                      HP: ${escapeHtml(fam.healthMod)}
+                    </span>
+                  </div>
+                </div>
+
+                <div class="family-diet-row">
+                  <span class="diet-label">🍖 Diet:</span>
+                  <div class="diet-tags">
+                    ${(fam.diet || []).map(d => `<span class="diet-tag">${escapeHtml(d)}</span>`).join('')}
+                  </div>
+                </div>
+
+                <p class="family-highlight-p">${escapeHtml(fam.highlight)}</p>
+
+                ${fam.newAbility ? `
+                  <div class="family-new-ability-box">
+                    <div class="fna-header">
+                      <img src="${fam.newAbility.icon}" alt="" class="fna-icon" onerror="this.style.display='none'">
+                      <strong style="color: #fcd34d; font-size: 0.86rem;">${escapeHtml(fam.newAbility.name)}</strong>
+                      <span class="fna-badge">${escapeHtml(fam.newAbility.badge)}</span>
+                    </div>
+                    <div class="fna-specs">
+                      ${fam.newAbility.cost ? `<span>${escapeHtml(fam.newAbility.cost)}</span>` : ''}
+                      ${fam.newAbility.cd ? `<span>${escapeHtml(fam.newAbility.cd)}</span>` : ''}
+                    </div>
+                    <p class="fna-desc">${escapeHtml(fam.newAbility.desc)}</p>
+                  </div>
+                ` : ''}
+
+                <div class="family-abilities-list">
+                  <span style="font-size: 0.75rem; color: #94a3b8; font-weight: 600;">Learnable Abilities:</span>
+                  <div class="family-ability-chips">
+                    ${(fam.abilities || []).map(ab => `<span class="ability-mini-chip">${escapeHtml(ab)}</span>`).join('')}
+                  </div>
+                </div>
+              </div>
+            `;
+          }).join('')}
         </div>
       </div>
     `;
