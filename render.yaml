@@ -1,7 +1,7 @@
 services:
   - type: web
     name: wow-forever
-    env: static
+    runtime: static
     buildCommand: ""
     staticPublishPath: ./website
     routes:
