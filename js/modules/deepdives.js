@@ -276,6 +276,15 @@ function initClassDeepDives() {
         renderDeepDiveContent();
       });
     });
+
+    // Attach level bracket toggle event listeners
+    contentContainer.querySelectorAll('.level-bracket-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.selectedBuildLevel = btn.getAttribute('data-build-level');
+        renderDeepDiveContent();
+      });
+    });
   }
 
   function renderDeepDiveSubTabBody(cData, subtab) {
@@ -2345,11 +2354,11 @@ function initClassDeepDives() {
   }
 
   function renderBetaBuildsSection(cData) {
-    if (!cData.betaBuilds || !cData.betaBuilds.specs || cData.betaBuilds.specs.length === 0) {
+    if (!cData.betaBuilds) {
       return `
         <div class="beta-builds-wrapper">
           <div class="beta-builds-header-callout">
-            <h3 style="color: #fff; font-size: 1.3rem;">⚡ Level 20 Closed Beta Spec Builds</h3>
+            <h3 style="color: #fff; font-size: 1.3rem;">⚡ Level 20 & 30 Closed Beta Spec Builds</h3>
             <p style="color: #cbd5e1; font-size: 0.95rem; margin-top: 0.4rem;">
               Theorycrafted talent builds and dungeon rotations for this class are currently being compiled from closed beta testing.
             </p>
@@ -2358,10 +2367,18 @@ function initClassDeepDives() {
       `;
     }
 
+    window.selectedBuildLevel = window.selectedBuildLevel || '30';
+    const activeLevel = window.selectedBuildLevel;
+    const hasLevelVariants = !!(cData.betaBuilds.level30 || cData.betaBuilds.level20);
+    const activeBuildContainer = (activeLevel === '30' && cData.betaBuilds.level30) 
+      ? cData.betaBuilds.level30 
+      : (cData.betaBuilds.level20 || cData.betaBuilds);
+    const activeSpecs = activeBuildContainer.specs || cData.betaBuilds.specs || [];
+
     window.selectedBetaBuildSpecIndex = window.selectedBetaBuildSpecIndex || {};
     let currentSpecIdx = window.selectedBetaBuildSpecIndex[cData.id] || 0;
-    if (currentSpecIdx >= cData.betaBuilds.specs.length) currentSpecIdx = 0;
-    const currentSpec = cData.betaBuilds.specs[currentSpecIdx];
+    if (currentSpecIdx >= activeSpecs.length) currentSpecIdx = 0;
+    const currentSpec = activeSpecs[currentSpecIdx] || {};
 
     return `
       <div class="beta-builds-wrapper">
@@ -2369,9 +2386,9 @@ function initClassDeepDives() {
         <div class="beta-builds-header-callout">
           <div class="beta-callout-top">
             <div style="display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap;">
-              <h3 style="font-size: 1.35rem; color: #fff; margin: 0;">⚡ Level 20–30 Closed Beta Theorycraft & Spec Builds</h3>
+              <h3 style="font-size: 1.35rem; color: #fff; margin: 0;">⚡ Level 20 & Level 30 Closed Beta Theorycraft & Spec Builds</h3>
               <span class="beta-disclaimer-badge">Closed Beta Phase 2 • Level 30 Cap (Live Today!)</span>
-              <span class="deepdive-badge badge-verified"><span>✓</span> Up to 21 Talent Points</span>
+              <span class="deepdive-badge badge-verified"><span>✓</span> 21 Talent Points Active</span>
             </div>
             <div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap;">
               <a href="https://www.wowhead.com/forever/guides" target="_blank" rel="noopener" class="talent-calc-link-btn" style="padding: 0.35rem 0.75rem; font-size: 0.78rem;">
@@ -2390,10 +2407,23 @@ function initClassDeepDives() {
           </div>
         </div>
 
+        <!-- Level Bracket Toggle -->
+        ${hasLevelVariants ? `
+          <div class="level-bracket-toggle-wrap">
+            <span class="level-toggle-label">Active Bracket:</span>
+            <button class="level-bracket-btn ${activeLevel === '30' ? 'active' : ''}" data-build-level="30">
+              <span class="bracket-badge">Live Phase 2</span> Level 30 Cap (21 Talent Points)
+            </button>
+            <button class="level-bracket-btn ${activeLevel === '20' ? 'active' : ''}" data-build-level="20">
+              <span class="bracket-badge">Phase 1</span> Level 20 Cap (11 Talent Points)
+            </button>
+          </div>
+        ` : ''}
+
         <!-- Spec Switcher Bar -->
         <div class="beta-spec-tabs-bar">
           <span style="font-size: 0.82rem; font-weight: 700; color: var(--text-gold); text-transform: uppercase; letter-spacing: 0.05em; margin-right: 0.4rem;">Select Spec:</span>
-          ${cData.betaBuilds.specs.map((spec, idx) => `
+          ${activeSpecs.map((spec, idx) => `
             <button class="beta-spec-tab-btn ${idx === currentSpecIdx ? 'active' : ''}" data-spec-index="${idx}">
               <span>${spec.icon}</span> ${escapeHtml(spec.name)}
               <span style="font-size: 0.72rem; opacity: 0.75; font-weight: normal;">• ${escapeHtml(spec.role)}</span>
@@ -2436,7 +2466,7 @@ function initClassDeepDives() {
             <!-- Talents Column -->
             <div class="build-feature-box">
               <h4>
-                <span>🧬</span> 11-Point Talent Tree Allocation (Level 20 Cap)
+                <span>🧬</span> ${(activeBuildContainer.talentPointsTotal || (activeLevel === '30' ? 21 : 11))}-Point Talent Tree Allocation (Level ${activeBuildContainer.levelCap || activeLevel} Cap)
               </h4>
               <div class="talent-point-pill-list">
                 ${(currentSpec.talents || []).map(t => `
@@ -2466,7 +2496,7 @@ function initClassDeepDives() {
             <!-- Rotation Column -->
             <div class="build-feature-box">
               <h4>
-                <span>⚔️</span> Level 20 Combat Priority & Rotational Loop
+                <span>⚔️</span> Level ${activeBuildContainer.levelCap || activeLevel} Combat Priority & Rotational Loop
               </h4>
               <ol class="rotation-step-list">
                 ${(currentSpec.rotation || []).map(r => `
@@ -2486,7 +2516,7 @@ function initClassDeepDives() {
             <!-- Dungeon BiS Gear -->
             <div class="build-feature-box">
               <h4>
-                <span>🛡️</span> Level 15–20 Dungeon Pre-BiS Targets
+                <span>🛡️</span> Level ${activeLevel === '30' ? '25–33 (Dalaran, Excavation Site 4, RFK, BFD)' : '15–20 (SFK, Deadmines, WC)'} Dungeon Pre-BiS Targets
               </h4>
               <div class="dungeon-bis-table-wrap">
                 <table class="dungeon-bis-table">
@@ -2502,7 +2532,7 @@ function initClassDeepDives() {
                     ${(currentSpec.bisGear || []).map(g => `
                       <tr>
                         <td style="font-weight: 600; color: #fff;">${escapeHtml(g.slot)}</td>
-                        <td><span class="${g.item.includes('Thane') || g.item.includes('Necromantic') || g.item.includes('Arugal') || g.item.includes('Smite') || g.item.includes('Cruel') || g.item.includes('Barb') || g.item.includes('Venomstrike') ? 'item-quality-blue' : 'item-quality-green'}">${escapeHtml(g.item)}</span></td>
+                        <td><span class="${g.item.includes('Thane') || g.item.includes('Necromantic') || g.item.includes('Arugal') || g.item.includes('Smite') || g.item.includes('Cruel') || g.item.includes('Barb') || g.item.includes('Venomstrike') || g.item.includes('Dalaran') || g.item.includes('Excavation') || g.item.includes('Kirin') || g.item.includes('Triprunner') ? 'item-quality-blue' : 'item-quality-green'}">${escapeHtml(g.item)}</span></td>
                         <td style="color: var(--text-gold); font-size: 0.82rem;">${escapeHtml(g.source)}</td>
                         <td style="font-size: 0.8rem; color: #94a3b8;">${escapeHtml(g.stats)}</td>
                       </tr>
@@ -2515,7 +2545,7 @@ function initClassDeepDives() {
             <!-- Camping Perk & Class Quests -->
             <div class="build-feature-box">
               <h4>
-                <span>⛺</span> Camping Perks & Level 20 Class Quests
+                <span>⛺</span> Camping Perks & Level ${activeBuildContainer.levelCap || activeLevel} Class Mechanics
               </h4>
               <div style="display: flex; flex-direction: column; gap: 1rem;">
                 ${currentSpec.campingPerk ? `

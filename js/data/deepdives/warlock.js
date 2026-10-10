@@ -22,7 +22,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
     subTabs: [
       { id: "overview", label: "Full Dossier", icon: "📑" },
       { id: "core", label: "Core Rules & Stones", icon: "📜" },
-      { id: "betaBuilds", label: "⚡ Beta L20 Builds", icon: "⚡" },
+      { id: "betaBuilds", label: "⚡ Level 20 & 30 Builds", icon: "⚡" },
       { id: "affliction", label: "Affliction & Pandemic", icon: "💀" },
       { id: "demonology", label: "Demonology & Demonic Pact", icon: "😈" },
       { id: "destruction", label: "Destruction & Havoc", icon: "🔥" },
@@ -79,6 +79,27 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         statusLabel: "Verified in Beta (Oct 8)",
         badge: "Native UI & Edit Mode",
         desc: "Expanded in Beta Build 1.60.6.71890 directly in default HUD Edit Mode. Rotational Spells Tracked: Shadowburn (15s), Conflagrate (10s), Chaos Bolt (12s), Death Coil (2m), Haunt (8s), and Shadowfury (20s). Major Defensives & Bursts: Amplify Curse (3m), Howl of Terror (40s), Fel Domination (15m/5m), and Soulstone timer. Active Procs & Buffs: Nightfall / Shadow Trance (instant Shadow Bolt procs with glow), Backlash, Molten Core, and target Shadow Vulnerability / Bane timers."
+      },
+      {
+        title: "Hellfire Critical Strikes (Level 30 Patch)",
+        status: "verified",
+        statusLabel: "Verified in Phase 2",
+        badge: "Damage Mechanic",
+        desc: "In the Phase 2 Level 30 update, Hellfire can now critically strike, massively accelerating dungeon trash AoE burst in Excavation Site 4, City of Dalaran, and Gnomeregan."
+      },
+      {
+        title: "Soul Harvest Mana Restoration (50% / 100%)",
+        status: "verified",
+        statusLabel: "Verified in Phase 2",
+        badge: "Resource Sustain",
+        desc: "Renamed from Soul Harvesting in the Level 30 patch; now correctly grants its 50%/100% mana regeneration bonus while casting upon killing an enemy mob."
+      },
+      {
+        title: "Pet Aggressive Mode & Spellcast Interrupt Fix",
+        status: "verified",
+        statusLabel: "Verified in Phase 2",
+        badge: "Pet & QoL",
+        desc: "Aggressive Mode is restored to the pet tab in the spellbook. Drain Soul is also cleanly interrupted if the Warlock begins casting another spell or moves."
       }
     ],
 
@@ -487,104 +508,234 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       }
     ],
     betaBuilds: {
-      season: "Closed Beta Phase 1",
-      levelCap: 20,
-      talentPointsTotal: 11,
-      legacyPointsNotice: "Legacy Milestones allow up to +2 to +5 additional points at Level 20.",
-      specs: [
-        {
-          specId: "affliction",
-          name: "Affliction (Instant DoTs & Soul Harvest)",
-          icon: "💀",
-          role: "Ranged DoT DPS & Drain Engine",
-          wowheadCalcUrl: "https://www.wowhead.com/forever/talent-calc/warlock/500501",
-          tagline: "Instant-cast Corruption, high spell hit, and endless sustain through Spirit Life Tap and Soul Harvesting.",
-          statPriority: "Shadow Spell Power > Spell Hit (to 3%) > Stamina > Spirit",
-          bestWeapon: "Staff / Wand with Shadow Spell Damage (Necromantic Wand)",
-          talents: [
-            { name: "Improved Corruption", points: "5/5", tree: "Affliction (Tier 1)", desc: "Reduces cast time of Corruption by 2.0 sec, transforming it into an instant-cast spell on the move." },
-            { name: "Suppression", points: "5/5", tree: "Affliction (Tier 1)", desc: "Reduces the chance for enemies to resist your Affliction spells by 10%, essential against higher level dungeon mobs." },
-            { name: "Improved Life Tap", points: "1/2", tree: "Affliction (Tier 2)", desc: "Increases the amount of Mana awarded by your Life Tap spell by 10%." }
-          ],
-          legacyNotes: "Extra points obtained through Legacy Discovery should be placed into 2/2 Improved Life Tap, 2/2 Nightfall (instant Shadow Bolt procs), and Siphon Life.",
-          rotation: [
-            { label: "Pull & Opener", desc: "Curse of Agony -> Instant Corruption -> Immolate while moving into range." },
-            { label: "Drain Soul Execute", desc: "Channel Drain Soul at <20% enemy HP; landing the kill procs Soul Harvesting (+100% mana regen for 10 sec)." },
-            { label: "Life Tap Weave", desc: "Life Tap scales with Spirit; tap once between pulls and use Drain Life to recover health." },
-            { label: "Dungeon Utility", desc: "Summon Imp with Blood Pact (+14 Stamina aura) or Voidwalker for sacrifice shield." }
-          ],
-          bisGear: [
-            { slot: "Chest", item: "Robe of Arugal", source: "Shadowfang Keep (Arugal)", stats: "+10 Int, +5 Spi, +3 Agi" },
-            { slot: "Off-Hand", item: "Cursed Shadow Tome", source: "Ruins of Lordaeron (Crypt Boss)", stats: "+8 Shadow Spell Power, +4 Sta" },
-            { slot: "Waist", item: "Belt of Arugal", source: "Shadowfang Keep (Arugal)", stats: "+8 Int, +5 Spi" },
-            { slot: "Ranged / Wand", item: "Necromantic Wand", source: "Ruins of Lordaeron (Crypt)", stats: "+3 Shadow Spell Power" },
-            { slot: "Ring", item: "Silverlaine's Family Seal", source: "Shadowfang Keep", stats: "+3 Sta, +3 Str" }
-          ],
-          campingPerk: {
-            name: "Fel Infusion (+5% Shadow Spell Damage)",
-            desc: "Setting camp with a Cozy Sleeping Bag provides 200% rested XP rate and grants the 'Shadow Pact' 2-hour +5% Shadow damage buff."
+      season: "Closed Beta Phase 2",
+      levelCap: 30,
+      talentPointsTotal: 21,
+      legacyPointsNotice: "Legacy Milestones ('Talented' perk) allow up to +5 additional points at Level 30 (26 total points).",
+      level20: {
+        levelCap: 20,
+        talentPointsTotal: 11,
+        legacyPointsNotice: "Legacy Milestones allow up to +2 to +5 additional points at Level 20.",
+        specs: [
+          {
+            specId: "affliction",
+            name: "Affliction (Instant DoTs & Soul Harvest)",
+            icon: "💀",
+            role: "Ranged DoT DPS & Drain Engine",
+            wowheadCalcUrl: "https://www.wowhead.com/forever/talent-calc/warlock/500501",
+            tagline: "Instant-cast Corruption, high spell hit, and endless sustain through Spirit Life Tap and Soul Harvesting.",
+            statPriority: "Shadow Spell Power > Spell Hit (to 3%) > Stamina > Spirit",
+            bestWeapon: "Staff / Wand with Shadow Spell Damage (Necromantic Wand)",
+            talents: [
+              { name: "Improved Corruption", points: "5/5", tree: "Affliction (Tier 1)", desc: "Reduces cast time of Corruption by 2.0 sec, transforming it into an instant-cast spell on the move." },
+              { name: "Suppression", points: "5/5", tree: "Affliction (Tier 1)", desc: "Reduces the chance for enemies to resist your Affliction spells by 10%, essential against higher level dungeon mobs." },
+              { name: "Improved Life Tap", points: "1/2", tree: "Affliction (Tier 2)", desc: "Increases the amount of Mana awarded by your Life Tap spell by 10%." }
+            ],
+            legacyNotes: "Extra points obtained through Legacy Discovery should be placed into 2/2 Improved Life Tap, 2/2 Nightfall (instant Shadow Bolt procs), and Siphon Life.",
+            rotation: [
+              { label: "Pull & Opener", desc: "Curse of Agony -> Instant Corruption -> Immolate while moving into range." },
+              { label: "Drain Soul Execute", desc: "Channel Drain Soul at <20% enemy HP; landing the kill procs Soul Harvest (+100% mana regen for 10 sec)." },
+              { label: "Life Tap Weave", desc: "Life Tap scales with Spirit; tap once between pulls and use Drain Life to recover health." },
+              { label: "Dungeon Utility", desc: "Summon Imp with Blood Pact (+14 Stamina aura) or Voidwalker for sacrifice shield." }
+            ],
+            bisGear: [
+              { slot: "Chest", item: "Robe of Arugal", source: "Shadowfang Keep (Arugal)", stats: "+10 Int, +5 Spi, +3 Agi" },
+              { slot: "Off-Hand", item: "Cursed Shadow Tome", source: "Ruins of Lordaeron (Crypt Boss)", stats: "+8 Shadow Spell Power, +4 Sta" },
+              { slot: "Waist", item: "Belt of Arugal", source: "Shadowfang Keep (Arugal)", stats: "+8 Int, +5 Spi" },
+              { slot: "Ranged / Wand", item: "Necromantic Wand", source: "Ruins of Lordaeron (Crypt)", stats: "+3 Shadow Spell Power" },
+              { slot: "Ring", item: "Silverlaine's Family Seal", source: "Shadowfang Keep", stats: "+3 Sta, +3 Str" }
+            ],
+            campingPerk: {
+              name: "Fel Infusion (+5% Shadow Spell Damage)",
+              desc: "Setting camp with a Cozy Sleeping Bag provides 200% rested XP rate and grants the 'Shadow Pact' 2-hour +5% Shadow damage buff."
+            },
+            classQuestNote: "Level 20 Warlock unlocks the iconic Succubus summoning questline across the Barrens and Silverpine Forest."
           },
-          classQuestNote: "Level 20 Warlock unlocks the iconic Succubus summoning questline across the Barrens and Silverpine Forest."
-        },
-        {
-          specId: "demonology",
-          name: "Demonology (Voidwalker Meatshield)",
-          icon: "😈",
-          role: "Solo Survivability & Pet Tanking",
-          wowheadCalcUrl: "https://www.wowhead.com/forever/talent-calc/warlock/-503003",
-          tagline: "Massive Stamina scaling and unbreakable Voidwalker aggro generation for fearless solo questing.",
-          statPriority: "Stamina > Intellect > Spell Power",
-          bestWeapon: "Staff with High Stamina (Staff of Westfall / Emberstone Staff)",
-          talents: [
-            { name: "Demonic Embrace", points: "5/5", tree: "Demonology (Tier 1)", desc: "Increases your total Stamina by 15%, but reduces your total Spirit by 5%." },
-            { name: "Improved Voidwalker", points: "3/3", tree: "Demonology (Tier 2)", desc: "Increases the effectiveness of your Voidwalker's Torment by 30%, locking threat firmly." },
-            { name: "Fel Stamina", points: "3/3", tree: "Demonology (Tier 2)", desc: "Increases the maximum health of your summoned demons by 15%." }
-          ],
-          legacyNotes: "Extra Legacy points unlock 5/5 Fel Intellect and Fel Domination (instant 0.5s pet summon).",
-          rotation: [
-            { label: "Opener", desc: "Send Voidwalker with Torment -> Curse of Weakness / Agony -> Corruption." },
-            { label: "Sustain", desc: "Wand target while Voidwalker tanks; use Health Funnel to top off pet between pulls." }
-          ],
-          bisGear: [
-            { slot: "Chest", item: "Robes of the Fang", source: "Wailing Caverns (Lord Cobrahn)", stats: "+5 Int, +5 Sta, +5 Spi" },
-            { slot: "Staff", item: "Emberstone Staff", source: "Deadmines (Greenskin)", stats: "+5 Int, +5 Spi, +5 Sta" }
-          ],
-          campingPerk: {
-            name: "Demonic Resilience (+10% Pet Health)",
-            desc: "Camp resting grants a sustained 10% health bonus to all summoned demons and 20% health funnel efficiency."
+          {
+            specId: "demonology",
+            name: "Demonology (Voidwalker Meatshield)",
+            icon: "😈",
+            role: "Solo Survivability & Pet Tanking",
+            wowheadCalcUrl: "https://www.wowhead.com/forever/talent-calc/warlock/-503003",
+            tagline: "Massive Stamina scaling and unbreakable Voidwalker aggro generation for fearless solo questing.",
+            statPriority: "Stamina > Intellect > Spell Power",
+            bestWeapon: "Staff with High Stamina (Staff of Westfall / Emberstone Staff)",
+            talents: [
+              { name: "Demonic Embrace", points: "5/5", tree: "Demonology (Tier 1)", desc: "Increases your total Stamina by 15%, but reduces your total Spirit by 5%." },
+              { name: "Improved Voidwalker", points: "3/3", tree: "Demonology (Tier 2)", desc: "Increases the effectiveness of your Voidwalker's Torment by 30%, locking threat firmly." },
+              { name: "Fel Stamina", points: "3/3", tree: "Demonology (Tier 2)", desc: "Increases the maximum health of your summoned demons by 15%." }
+            ],
+            legacyNotes: "Extra Legacy points unlock 5/5 Fel Intellect and Fel Domination (instant 0.5s pet summon).",
+            rotation: [
+              { label: "Opener", desc: "Send Voidwalker with Torment -> Curse of Weakness / Agony -> Corruption." },
+              { label: "Sustain", desc: "Wand target while Voidwalker tanks; use Health Funnel to top off pet between pulls." }
+            ],
+            bisGear: [
+              { slot: "Chest", item: "Robes of the Fang", source: "Wailing Caverns (Lord Cobrahn)", stats: "+5 Int, +5 Sta, +5 Spi" },
+              { slot: "Staff", item: "Emberstone Staff", source: "Deadmines (Greenskin)", stats: "+5 Int, +5 Spi, +5 Sta" }
+            ],
+            campingPerk: {
+              name: "Demonic Resilience (+10% Pet Health)",
+              desc: "Camp resting grants a sustained 10% health bonus to all summoned demons and 20% health funnel efficiency."
+            },
+            classQuestNote: "Level 20 unlocks healthstones upgrades and Soulstone resurrection duration increases."
           },
-          classQuestNote: "Level 20 unlocks healthstones upgrades and Soulstone resurrection duration increases."
-        },
-        {
-          specId: "destruction",
-          name: "Destruction (Shadow Bolt & Bane Burst)",
-          icon: "🔥",
-          role: "Burst Ranged DPS",
-          wowheadCalcUrl: "https://www.wowhead.com/forever/talent-calc/warlock/--505001",
-          tagline: "Short-cast Shadow Bolts, Immolate crits, and rapid execution using Bane and Cataclysm.",
-          statPriority: "Spell Power > Spell Crit > Intellect > Stamina",
-          bestWeapon: "Two-Handed Staff with Fire/Shadow Damage",
-          talents: [
-            { name: "Cataclysm", points: "5/5", tree: "Destruction (Tier 1)", desc: "Reduces the Mana cost of your Destruction spells by 5%." },
-            { name: "Bane", points: "5/5", tree: "Destruction (Tier 2)", desc: "Reduces the casting time of your Shadow Bolt and Immolate spells by 0.5 sec." },
-            { name: "Devastation", points: "1/5", tree: "Destruction (Tier 3)", desc: "Increases the critical strike chance of your Destruction spells by 1%." }
-          ],
-          legacyNotes: "Extra Legacy points push towards 5/5 Devastation (5% crit) and Shadowburn (instant shadow finisher).",
-          rotation: [
-            { label: "Cast Sequence", desc: "Bane-hastened Immolate -> Shadow Bolt -> Searing Pain on approach." },
-            { label: "Execute", desc: "Shadowburn to instantly finish targets before they reach melee range." }
-          ],
-          bisGear: [
-            { slot: "Staff", item: "Emberstone Staff", source: "Deadmines (Greenskin)", stats: "+5 Int, +5 Spi, +5 Sta" },
-            { slot: "Gloves", item: "Serpent Gloves", source: "Wailing Caverns (Pythas)", stats: "+4 Int, +4 Sta" }
-          ],
-          campingPerk: {
-            name: "Hearth of Chaos (+4% Destruction Crit)",
-            desc: "Resting beside an active Campfire grants +4% spell critical strike chance with Fire and Shadow Destruction spells."
+          {
+            specId: "destruction",
+            name: "Destruction (Shadow Bolt & Bane Burst)",
+            icon: "🔥",
+            role: "Burst Ranged DPS",
+            wowheadCalcUrl: "https://www.wowhead.com/forever/talent-calc/warlock/--505001",
+            tagline: "Short-cast Shadow Bolts, Immolate crits, and rapid execution using Bane and Cataclysm.",
+            statPriority: "Spell Power > Spell Crit > Intellect > Stamina",
+            bestWeapon: "Two-Handed Staff with Fire/Shadow Damage",
+            talents: [
+              { name: "Cataclysm", points: "5/5", tree: "Destruction (Tier 1)", desc: "Reduces the Mana cost of your Destruction spells by 5%." },
+              { name: "Bane", points: "5/5", tree: "Destruction (Tier 2)", desc: "Reduces the casting time of your Shadow Bolt and Immolate spells by 0.5 sec." },
+              { name: "Devastation", points: "1/5", tree: "Destruction (Tier 3)", desc: "Increases the critical strike chance of your Destruction spells by 1%." }
+            ],
+            legacyNotes: "Extra Legacy points push towards 5/5 Devastation (5% crit) and Shadowburn (instant shadow finisher).",
+            rotation: [
+              { label: "Cast Sequence", desc: "Bane-hastened Immolate -> Shadow Bolt -> Searing Pain on approach." },
+              { label: "Execute", desc: "Shadowburn to instantly finish targets before they reach melee range." }
+            ],
+            bisGear: [
+              { slot: "Staff", item: "Emberstone Staff", source: "Deadmines (Greenskin)", stats: "+5 Int, +5 Spi, +5 Sta" },
+              { slot: "Gloves", item: "Serpent Gloves", source: "Wailing Caverns (Pythas)", stats: "+4 Int, +4 Sta" }
+            ],
+            campingPerk: {
+              name: "Hearth of Chaos (+4% Destruction Crit)",
+              desc: "Resting beside an active Campfire grants +4% spell critical strike chance with Fire and Shadow Destruction spells."
+            },
+            classQuestNote: "Succubus Lash of Pain provides physical burst and Seduction crowd control."
+          }
+        ]
+      },
+      level30: {
+        levelCap: 30,
+        talentPointsTotal: 21,
+        legacyPointsNotice: "Legacy Milestones ('Talented' perk) allow up to +5 additional points at Level 30 (26 total points).",
+        specs: [
+          {
+            specId: "affliction",
+            name: "Affliction (Siphon Life & Nightfall Engine)",
+            icon: "💀",
+            role: "Ranged DoT DPS & Drain Engine",
+            wowheadCalcUrl: "https://www.wowhead.com/forever/talent-calc/warlock/500501",
+            tagline: "Instant Corruption, Siphon Life 21-point keystone, 4% Nightfall Shadow Bolt procs, and infinite mana from Soul Harvest.",
+            statPriority: "Shadow Spell Power > Spell Hit (to 4%) > Stamina > Intellect",
+            bestWeapon: "Spellblade of the Archmage / Necromantic Wand / Cursed Shadow Tome",
+            talents: [
+              { name: "Improved Corruption", points: "5/5", tree: "Affliction (Tier 1)", desc: "Reduces the casting time of your Corruption spell by 2 sec, making it completely instant." },
+              { name: "Suppression", points: "3/5", tree: "Affliction (Tier 1)", desc: "Reduces the chance for enemies to resist your Affliction spells by 6%." },
+              { name: "Improved Life Tap", points: "2/2", tree: "Affliction (Tier 2)", desc: "Increases the amount of Mana awarded by your Life Tap spell by 20%." },
+              { name: "Improved Drain Life", points: "3/5", tree: "Affliction (Tier 2)", desc: "Increases the health drained by your Drain Life spell by 6%." },
+              { name: "Nightfall", points: "2/2", tree: "Affliction (Tier 3)", desc: "Gives your Corruption and Drain Life spells a 4% chance to make your next Shadow Bolt instant cast." },
+              { name: "Grim Reach", points: "2/2", tree: "Affliction (Tier 3)", desc: "Increases the range of your Affliction spells by 20%." },
+              { name: "Shadow Mastery", points: "3/5", tree: "Affliction (Tier 4)", desc: "Increases the damage dealt by your Shadow spells by 6%." },
+              { name: "Siphon Life", points: "1/1", tree: "Affliction (Tier 5 Keystone)", desc: "Transfers health from the target to the caster every 3 sec for 30 sec. Can critically strike under Pandemic!" }
+            ],
+            legacyNotes: "Extra Legacy discovery points should be placed into 5/5 Shadow Mastery (+10% Shadow damage) and 1/1 Amplify Curse.",
+            rotation: [
+              { label: "Opener & Multi-DoT", desc: "Curse of Agony -> Instant Corruption -> Siphon Life while maintaining maximum 30-yard range." },
+              { label: "Nightfall Reaction", desc: "Watch HUD Cooldown Manager; upon Shadow Trance glow, immediately fire an instant Shadow Bolt." },
+              { label: "Filler & Sustain", desc: "Channel Drain Hope or Drain Life; weave Life Tap once between pulls while standing in safe distance." },
+              { label: "Execute", desc: "Channel Drain Soul below 20% HP to trigger Soul Harvest (+100% mana regen while casting)." }
+            ],
+            bisGear: [
+              { slot: "Head", item: "Whitemane's Chapeau", source: "Scarlet Monastery (High Inquisitor Whitemane)", stats: "+14 Int, +14 Spi" },
+              { slot: "Chest", item: "Robe of the Kirin Tor", source: "City of Dalaran (Archmage Echo)", stats: "+8 Shadow Damage, +9 Int, +6 Sta" },
+              { slot: "Main-Hand", item: "Dagger of Dalaran Sorcery", source: "City of Dalaran (Consortium)", stats: "+11 Spell Power, +4 Int" },
+              { slot: "Off-Hand", item: "Tome of the Shadowed Veil", source: "Excavation Site: Wetlands", stats: "+10 Shadow Damage, +5 Sta" },
+              { slot: "Feet", item: "Slippers of the Untamed", source: "Excavation Site: Wetlands", stats: "+5 Int, +5 Sta, +6 Shadow Dmg" }
+            ],
+            campingPerk: {
+              name: "Pact of the Siphon (+5% Shadow Damage & +10% Drain)",
+              desc: "Resting inside an active Silk Tent grants the 'Dusk Weaver' 2-hour +5% Shadow damage buff and improves Life Tap efficiency by 15%."
+            },
+            classQuestNote: "Level 30 unlocks Felhunter questline prep and enhanced Healthstone (Rank 3) with demonic soul forging."
           },
-          classQuestNote: "Succubus Lash of Pain provides physical burst and Seduction crowd control."
-        }
-      ]
+          {
+            specId: "demonology",
+            name: "Demonology (Soul Link & Demonic Pact Tank)",
+            icon: "😈",
+            role: "Solo Survivability & Pet Tanking",
+            wowheadCalcUrl: "https://www.wowhead.com/forever/talent-calc/warlock/-503003",
+            tagline: "Unbreakable 30% Soul Link damage redirection, dual-pet sacrifice retention via Demonic Pact, and +15% total Stamina.",
+            statPriority: "Stamina > Intellect > Spell Power > Armor",
+            bestWeapon: "One-Hand Dagger + Bulwark / Off-Hand with Heavy Stamina",
+            talents: [
+              { name: "Demonic Embrace", points: "5/5", tree: "Demonology (Tier 1)", desc: "Increases your total Stamina by 15%, but reduces your total Spirit by 5%." },
+              { name: "Improved Voidwalker", points: "3/3", tree: "Demonology (Tier 2)", desc: "Increases the effectiveness of your Voidwalker's Torment, Consume Shadows, and Sacrifice by 30%." },
+              { name: "Fel Stamina", points: "3/3", tree: "Demonology (Tier 2)", desc: "Increases the maximum health of your summoned demons by 15%." },
+              { name: "Fel Intellect", points: "3/5", tree: "Demonology (Tier 3)", desc: "Increases the maximum Mana of your demons by 9%." },
+              { name: "Fel Domination", points: "1/1", tree: "Demonology (Tier 3)", desc: "Your next Demon summon cast time is reduced by 5.5 sec and mana cost reduced by 50% on a 15m CD." },
+              { name: "Master Summoner", points: "2/2", tree: "Demonology (Tier 4)", desc: "Reduces the casting time of your Demon summons by 4 sec and mana cost by 40%." },
+              { name: "Demonic Sacrifice", points: "1/1", tree: "Demonology (Tier 4)", desc: "Sacrifices your demon for permanent stat bonuses. Synergizes with Demonic Pact!" },
+              { name: "Soul Link", points: "1/1", tree: "Demonology (Tier 5 Keystone)", desc: "Transfers 30% of all damage taken to your active Demon, and increases damage dealt by both by 5%." },
+              { name: "Demonic Pact", points: "2/2", tree: "Demonology (Tier 5)", desc: "Demonic Sacrifice is not cancelled when summoning a different pet! Retain Imp/Felhunter buffs with active pet." }
+            ],
+            legacyNotes: "Extra Legacy discovery points unlock 5/5 Fel Intellect and 5/5 Unholy Power (+20% pet melee damage).",
+            rotation: [
+              { label: "Pre-Combat Buff", desc: "Sacrifice Imp for +15% Fire damage or Felhunter for mana regen, then summon Voidwalker/Succubus with Demonic Pact." },
+              { label: "Soul Link Engagement", desc: "Activate Soul Link; send Voidwalker with Torment while applying Agony and Corruption." },
+              { label: "Defensive Weave", desc: "Voidwalker Sacrifice grants a massive absorption shield; use Fel Domination for instant re-summon if pet falls." },
+              { label: "Dungeon Off-Tanking", desc: "In Excavation Site 4, position Voidwalker to peel add packs with Taunt and Torment." }
+            ],
+            bisGear: [
+              { slot: "Head", item: "Green Tinted Goggles", source: "Engineering (150)", stats: "+8 Sta, +7 Agi" },
+              { slot: "Chest", item: "Robes of Arugal / Dalaran Weave", source: "Dalaran / SFK", stats: "+10 Int, +5 Sta, +5 Spi" },
+              { slot: "Legs", item: "Triprunner Dungarees", source: "Gnomeregan Quest", stats: "+18 Agi, +4 Sta" },
+              { slot: "Main-Hand", item: "Titan-Forged Excavator", source: "Excavation Site: Wetlands", stats: "+7 Sta, +6 Int" }
+            ],
+            campingPerk: {
+              name: "Demonic Bastion (+15% Pet Armor & +20% Funnel)",
+              desc: "Resting beside an active Campfire grants your demon minions 15% bonus armor and increases Health Funnel healing by 20%."
+            },
+            classQuestNote: "Level 30 unlocks the Robes of Arcana and Orb of Soran'ruk questlines."
+          },
+          {
+            specId: "destruction",
+            name: "Destruction (Ruin & Bane of Havoc Weaving)",
+            icon: "🔥",
+            role: "Burst Ranged DPS & Cleave",
+            wowheadCalcUrl: "https://www.wowhead.com/forever/talent-calc/warlock/--505001",
+            tagline: "100% bonus critical damage from Ruin, 50% damage replication via Bane of Havoc, and Hellfire critical strikes.",
+            statPriority: "Spell Power > Spell Crit > Intellect > Stamina",
+            bestWeapon: "Two-Handed Fire/Shadow Staff or Dagger with Fire Spell Power",
+            talents: [
+              { name: "Cataclysm", points: "5/5", tree: "Destruction (Tier 1)", desc: "Reduces the Mana cost of your Destruction spells by 5%." },
+              { name: "Bane", points: "5/5", tree: "Destruction (Tier 2)", desc: "Reduces the casting time of your Shadow Bolt and Immolate spells by 0.5 sec." },
+              { name: "Devastation", points: "5/5", tree: "Destruction (Tier 3)", desc: "Increases the critical strike chance of your Destruction spells by 5%." },
+              { name: "Shadowburn", points: "1/1", tree: "Destruction (Tier 3)", desc: "Instant Shadow finisher on 15s CD. Deals 115-133 damage and refunds a shard on kill." },
+              { name: "Destructive Reach", points: "2/2", tree: "Destruction (Tier 4)", desc: "Increases the range of your Destruction spells by 20%." },
+              { name: "Ruin", points: "1/1", tree: "Destruction (Tier 5 Keystone)", desc: "Increases the critical strike damage bonus of your Destruction spells by 100%!" },
+              { name: "Shadow and Flame", points: "2/2", tree: "Destruction (Tier 5)", desc: "Conflagrate increases Shadow damage by 10%; Shadowburn increases Fire damage by 10%." }
+            ],
+            legacyNotes: "Extra Legacy discovery points should be invested into Conflagrate and Intensity (reduces pushback on Rain of Fire/Hellfire by 70%).",
+            rotation: [
+              { label: "Bane of Havoc Cleave", desc: "Apply Bane of Havoc to secondary elite mob (replicates 50% of all damage onto it for 5 min)." },
+              { label: "Single-Target Burn", desc: "Cast Bane-hastened Immolate -> Incinerate -> Shadow Bolt on main target." },
+              { label: "Hellfire AoE", desc: "Channel Hellfire into stacked mob packs; crits trigger Ruin for 100% bonus damage!" },
+              { label: "Finisher", desc: "Fire Shadowburn for instant lethal burst; refunds soul shard upon target death." }
+            ],
+            bisGear: [
+              { slot: "Two-Hand", item: "Spine of the Devourer", source: "Excavation Site: Wetlands (Archeus)", stats: "+14 Fire/Shadow Damage, +8 Sta" },
+              { slot: "Head", item: "Whitemane's Chapeau", source: "Scarlet Monastery Graveyard/Library", stats: "+14 Int, +14 Spi" },
+              { slot: "Shoulder", item: "Inquisitor's Mantle", source: "City of Dalaran (Council)", stats: "+7 Fire Damage, +6 Int" },
+              { slot: "Chest", item: "Robes of the Kirin Tor", source: "City of Dalaran (Archmage Echo)", stats: "+8 Spell Power, +9 Int" }
+            ],
+            campingPerk: {
+              name: "Hearth of Chaos (+5% Destruction Crit)",
+              desc: "Resting beside an active Campfire grants +5% spell critical strike chance with Fire and Shadow Destruction spells."
+            },
+            classQuestNote: "Level 30 unlocks Firestone Rank 2 and intense Hellfire experimentation."
+          }
+        ]
+      },
+      // Default specs pointer matches level30
+      specs: []
     }
   };
+  window.WOW_FOREVER_DATA.classDeepDives.warlock.betaBuilds.specs = window.WOW_FOREVER_DATA.classDeepDives.warlock.betaBuilds.level30.specs;
 }

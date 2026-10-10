@@ -22,7 +22,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
     subTabs: [
       { id: "overview", label: "Full Dossier", icon: "📑" },
       { id: "core", label: "Core Rules & Shared Spells", icon: "📜" },
-      { id: "betaBuilds", label: "⚡ Beta L20 Builds", icon: "⚡" },
+      { id: "betaBuilds", label: "⚡ Level 20 & 30 Builds", icon: "⚡" },
       { id: "discipline", label: "Discipline & Penance", icon: "🛡️" },
       { id: "holy", label: "Holy & Prayer of Mending", icon: "✨" },
       { id: "shadow", label: "Shadow & Devouring Plague", icon: "🌑" },
@@ -31,6 +31,20 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
     ],
 
     coreRules: [
+      {
+        title: "Devouring Plague Critical Scaling",
+        status: "verified",
+        statusLabel: "Phase 2 Beta Update (Oct 2026)",
+        badge: "Shadow Modernization",
+        desc: "Devouring Plague periodic ticks can now critically strike, scaling directly with Shadow Spell Power and critical damage multipliers across all Priest races."
+      },
+      {
+        title: "Inner Focus Periodic Spell Fix",
+        status: "verified",
+        statusLabel: "Phase 2 Beta Update (Oct 2026)",
+        badge: "Discipline Fix",
+        desc: "Inner Focus (+25% critical effect chance, 100% mana cost reduction) no longer loses its charge to background periodic damage ticks, ensuring it applies properly to the intended active cast."
+      },
       {
         title: "Universal Devouring Plague",
         status: "verified",

@@ -22,7 +22,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
     subTabs: [
       { id: "overview", label: "Full Dossier", icon: "📑" },
       { id: "core", label: "Core Rules & Baseline", icon: "📜" },
-      { id: "betaBuilds", label: "⚡ Beta L20 Builds", icon: "⚡" },
+      { id: "betaBuilds", label: "⚡ Level 20 & 30 Builds", icon: "⚡" },
       { id: "arms", label: "Arms & Spearing Strike", icon: "🗡️" },
       { id: "fury", label: "Fury & Dual Wield", icon: "⚡" },
       { id: "protection", label: "Protection Tank & Shield", icon: "🛡️" },
@@ -31,6 +31,34 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
     ],
 
     coreRules: [
+      {
+        title: "Basic Attack Crits Generate +75% Rage",
+        status: "verified",
+        statusLabel: "Phase 2 Beta Update (Oct 2026)",
+        badge: "Rage Engine Overhaul",
+        desc: "All basic attack critical strikes now generate +75% bonus Rage, dramatically solving classic Warrior rage starvation and turbocharging burst rotations across Arms, Fury, and Protection."
+      },
+      {
+        title: "Spearing Strike Battle Stance Requirement",
+        status: "verified",
+        statusLabel: "Phase 2 Beta Update (Oct 2026)",
+        badge: "Spearing Strike QoL",
+        desc: "Spearing Strike now requires Battle Stance rather than requiring a two-handed weapon. One-handed weapon and shield warriors can now utilize Spearing Strike for dismounting runners and locking down fleeing targets."
+      },
+      {
+        title: "Instant-Tap Rend & Sunder Armor",
+        status: "verified",
+        statusLabel: "Phase 2 Beta Update (Oct 2026)",
+        badge: "Threat & Tagging Fix",
+        desc: "Rend and Sunder Armor now deal an instant packet of initial damage upon application, instantly tagging outdoor mobs and giving tanks immediate pull threat before tick intervals."
+      },
+      {
+        title: "Dual Wield & Off-Hand Rage Fixes",
+        status: "verified",
+        statusLabel: "Phase 2 Beta Update (Oct 2026)",
+        badge: "Combat Mechanic Fix",
+        desc: "Fixed the legacy off-hand Heroic Strike hit-table queuing bug; dual wield off-hand hits now properly generate standard rage and Unbridled Wrath procs function reliably on every weapon strike."
+      },
       {
         title: "Baseline Tactical Mastery (10 Rage)",
         status: "verified",
@@ -508,111 +536,238 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       }
     ],
     betaBuilds: {
-      season: "Closed Beta Phase 1",
-      levelCap: 20,
-      talentPointsTotal: 11,
-      legacyPointsNotice: "Legacy Milestones allow up to +2 to +5 additional points at Level 20.",
-      specs: [
-        {
-          specId: "arms",
-          name: "Arms (Rend & Overpower)",
-          icon: "🗡️",
-          role: "2-Handed Melee Burst DPS",
-          wowheadCalcUrl: "https://www.wowhead.com/forever/talent-calc/warrior/3020501",
-          tagline: "Heavy two-handed strikes with critical Rend bleeds, stance dancing, and Overpower counters.",
-          statPriority: "Strength > Melee Hit > Agility > Stamina",
-          bestWeapon: "Two-Handed Mace / Axe (Smite's Mighty Hammer / Axe of Orgrimmar)",
-          talents: [
-            { name: "Improved Rend", points: "3/3", tree: "Arms (Tier 1)", desc: "Increases bleed damage of Rend by 35%. In Forever Beta, Rend ticks can critically strike!" },
-            { name: "Deflection", points: "2/5", tree: "Arms (Tier 1)", desc: "Increases your parry chance by 2%, triggering reactive strikes and damage mitigation." },
-            { name: "Tactical Mastery", points: "5/5", tree: "Arms (Tier 2)", desc: "You retain up to 25 extra rage when changing stances, enabling instant Overpowers and interrupts." },
-            { name: "Deep Wounds", points: "1/3", tree: "Arms (Tier 3)", desc: "Your critical strikes cause the opponent to bleed for 20% of your melee weapon's average damage." }
-          ],
-          legacyNotes: "Extra points obtained through Legacy Discovery should be placed into 3/3 Deep Wounds and 2/2 Impale (+20% strike crit damage).",
-          rotation: [
-            { label: "Charge & Open", desc: "Battle Stance Charge -> Rend immediately to start ticking critical bleeds." },
-            { label: "Stance Dance Overpower", desc: "When target dodges, immediately switch to Battle Stance and fire Overpower (cannot be blocked/dodged/parried)." },
-            { label: "Rage Dump & Finisher", desc: "Use Heroic Strike as swing timer finishes; on target kill, trigger baseline Victory Rush for 10% max HP heal." },
-            { label: "Thunder Clap Control", desc: "Apply Thunder Clap for the buffed -20% attack speed debuff on physical enemies." }
-          ],
-          bisGear: [
-            { slot: "Two-Hand Weapon", item: "Smite's Mighty Hammer", source: "Deadmines (Mr. Smite)", stats: "+11 Strength, 19.8 DPS" },
-            { slot: "Two-Hand (Horde)", item: "Axe of Orgrimmar (Rare Upgrade)", source: "Leaders of the Fang Quest", stats: "+9 Str, +3 Sta, 21.4 DPS" },
-            { slot: "Shoulders", item: "Thane's Iron Pauldrons", source: "Hall of Thanes (Dungeon Boss)", stats: "+8 Str, +5 Sta, 114 Armor" },
-            { slot: "Legs", item: "Chausses of Westfall", source: "Deadmines (Quest)", stats: "+11 Agi, +5 Sta, Mail" },
-            { slot: "Chest", item: "Mutant Scale Breastplate", source: "Wailing Caverns", stats: "+9 Agi, +4 Sta" }
-          ],
-          campingPerk: {
-            name: "Warrior's Heart (+5% Total Strength)",
-            desc: "Setting camp with a Cozy Sleeping Bag provides 200% rested XP rate and the 'Vigor' 2-hour +5% Strength buff."
+      season: "Closed Beta Phase 2",
+      levelCap: 30,
+      talentPointsTotal: 21,
+      legacyPointsNotice: "Legacy Milestones allow up to +5 additional points at Level 30 (26 total points).",
+      level20: {
+        levelCap: 20,
+        talentPointsTotal: 11,
+        legacyPointsNotice: "Legacy Milestones allow up to +2 to +5 additional points at Level 20.",
+        specs: [
+          {
+            specId: "arms",
+            name: "Arms (Rend & Overpower)",
+            icon: "🗡️",
+            role: "2-Handed Melee Burst DPS",
+            wowheadCalcUrl: "https://www.wowhead.com/forever/talent-calc/warrior/3020501",
+            tagline: "Heavy two-handed strikes with critical Rend bleeds, stance dancing, and Overpower counters.",
+            statPriority: "Strength > Melee Hit > Agility > Stamina",
+            bestWeapon: "Two-Handed Mace / Axe (Smite's Mighty Hammer / Axe of Orgrimmar)",
+            talents: [
+              { name: "Improved Rend", points: "3/3", tree: "Arms (Tier 1)", desc: "Increases bleed damage of Rend by 35%. In Forever Beta, Rend ticks can critically strike!" },
+              { name: "Deflection", points: "2/5", tree: "Arms (Tier 1)", desc: "Increases your parry chance by 2%, triggering reactive strikes and damage mitigation." },
+              { name: "Tactical Mastery", points: "5/5", tree: "Arms (Tier 2)", desc: "You retain up to 25 extra rage when changing stances, enabling instant Overpowers and interrupts." },
+              { name: "Deep Wounds", points: "1/3", tree: "Arms (Tier 3)", desc: "Your critical strikes cause the opponent to bleed for 20% of your melee weapon's average damage." }
+            ],
+            legacyNotes: "Extra points obtained through Legacy Discovery should be placed into 3/3 Deep Wounds and 2/2 Impale (+20% strike crit damage).",
+            rotation: [
+              { label: "Charge & Open", desc: "Battle Stance Charge -> Rend immediately to start ticking critical bleeds." },
+              { label: "Stance Dance Overpower", desc: "When target dodges, immediately switch to Battle Stance and fire Overpower (cannot be blocked/dodged/parried)." },
+              { label: "Rage Dump & Finisher", desc: "Use Heroic Strike as swing timer finishes; on target kill, trigger baseline Victory Rush for 10% max HP heal." },
+              { label: "Thunder Clap Control", desc: "Apply Thunder Clap for the buffed -20% attack speed debuff on physical enemies." }
+            ],
+            bisGear: [
+              { slot: "Two-Hand Weapon", item: "Smite's Mighty Hammer", source: "Deadmines (Mr. Smite)", stats: "+11 Strength, 19.8 DPS" },
+              { slot: "Two-Hand (Horde)", item: "Axe of Orgrimmar (Rare Upgrade)", source: "Leaders of the Fang Quest", stats: "+9 Str, +3 Sta, 21.4 DPS" },
+              { slot: "Shoulders", item: "Thane's Iron Pauldrons", source: "Hall of Thanes (Dungeon Boss)", stats: "+8 Str, +5 Sta, 114 Armor" },
+              { slot: "Legs", item: "Chausses of Westfall", source: "Deadmines (Quest)", stats: "+11 Agi, +5 Sta, Mail" },
+              { slot: "Chest", item: "Mutant Scale Breastplate", source: "Wailing Caverns", stats: "+9 Agi, +4 Sta" }
+            ],
+            campingPerk: {
+              name: "Warrior's Heart (+5% Total Strength)",
+              desc: "Setting camp with a Cozy Sleeping Bag provides 200% rested XP rate and the 'Vigor' 2-hour +5% Strength buff."
+            },
+            classQuestNote: "Defensive Stance and Taunt are unlocked via class quest; level 20 unlocks preparation quests for Whirlwind Axe."
           },
-          classQuestNote: "Defensive Stance and Taunt are unlocked via class quest; level 20 unlocks preparation quests for Whirlwind Axe."
-        },
-        {
-          specId: "fury",
-          name: "Fury (Dual-Wield Flurry)",
-          icon: "⚡",
-          role: "Dual-Wield Melee DPS",
-          wowheadCalcUrl: "https://www.wowhead.com/forever/talent-calc/warrior/-050501",
-          tagline: "Rapid dual-wielding attacks fueled by Cruelty critical strikes and Unbridled Wrath generation.",
-          statPriority: "Strength > Agility > Melee Hit > Stamina",
-          bestWeapon: "Dual-Wield One-Handed Swords / Axes (Cruel Barb + Wingblade)",
-          talents: [
-            { name: "Cruelty", points: "5/5", tree: "Fury (Tier 1)", desc: "Increases your chance to get a critical strike with melee weapons by 5%." },
-            { name: "Unbridled Wrath", points: "5/5", tree: "Fury (Tier 2)", desc: "Gives you a chance to generate an additional Rage point when dealing melee damage." },
-            { name: "Piercing Howl", points: "1/1", tree: "Fury (Tier 3)", desc: "Causes all enemies within 10 yards to be dazed, reducing movement speed by 50% for 6 sec." }
-          ],
-          legacyNotes: "Extra Legacy points unlock 5/5 Dual Wield Specialization and Enrage (+25% melee damage bonus after being crit).",
-          rotation: [
-            { label: "Pull & Buff", desc: "Battle Shout (now 3-minute duration) -> Charge -> Bloodrage." },
-            { label: "Dual-Wield Cleave", desc: "Heroic Strike / Raging Blows priority while dual-wield swings trigger Unbridled Wrath." },
-            { label: "Kite / Snare", desc: "Piercing Howl if runners attempt to flee or pull additional dungeon packs." }
-          ],
-          bisGear: [
-            { slot: "Main Hand", item: "Cruel Barb", source: "Deadmines (Edwin VanCleef)", stats: "+12 Attack Power, 18.2 DPS" },
-            { slot: "Off Hand", item: "Wingblade", source: "Wailing Caverns (Quest)", stats: "+5 Agi, +2 Sta, 14.1 DPS" },
-            { slot: "Wrist", item: "Crystalline Cuffs", source: "Wailing Caverns (Kresh)", stats: "+5 Str, +3 Sta" }
-          ],
-          campingPerk: {
-            name: "Battlefield Adrenaline (+10% Movement Speed)",
-            desc: "Camp resting grants a sustained 10% movement speed boost and +3% attack speed for 2 hours."
+          {
+            specId: "fury",
+            name: "Fury (Dual-Wield Flurry)",
+            icon: "⚡",
+            role: "Dual-Wield Melee DPS",
+            wowheadCalcUrl: "https://www.wowhead.com/forever/talent-calc/warrior/-050501",
+            tagline: "Rapid dual-wielding attacks fueled by Cruelty critical strikes and Unbridled Wrath generation.",
+            statPriority: "Strength > Agility > Melee Hit > Stamina",
+            bestWeapon: "Dual-Wield One-Handed Swords / Axes (Cruel Barb + Wingblade)",
+            talents: [
+              { name: "Cruelty", points: "5/5", tree: "Fury (Tier 1)", desc: "Increases your chance to get a critical strike with melee weapons by 5%." },
+              { name: "Unbridled Wrath", points: "5/5", tree: "Fury (Tier 2)", desc: "Gives you a chance to generate an additional Rage point when dealing melee damage." },
+              { name: "Piercing Howl", points: "1/1", tree: "Fury (Tier 3)", desc: "Causes all enemies within 10 yards to be dazed, reducing movement speed by 50% for 6 sec." }
+            ],
+            legacyNotes: "Extra Legacy points unlock 5/5 Dual Wield Specialization and Enrage (+25% melee damage bonus after being crit).",
+            rotation: [
+              { label: "Pull & Buff", desc: "Battle Shout (now 3-minute duration) -> Charge -> Bloodrage." },
+              { label: "Dual-Wield Cleave", desc: "Heroic Strike / Raging Blows priority while dual-wield swings trigger Unbridled Wrath." },
+              { label: "Kite / Snare", desc: "Piercing Howl if runners attempt to flee or pull additional dungeon packs." }
+            ],
+            bisGear: [
+              { slot: "Main Hand", item: "Cruel Barb", source: "Deadmines (Edwin VanCleef)", stats: "+12 Attack Power, 18.2 DPS" },
+              { slot: "Off Hand", item: "Wingblade", source: "Wailing Caverns (Quest)", stats: "+5 Agi, +2 Sta, 14.1 DPS" },
+              { slot: "Wrist", item: "Crystalline Cuffs", source: "Wailing Caverns (Kresh)", stats: "+5 Str, +3 Sta" }
+            ],
+            campingPerk: {
+              name: "Battlefield Adrenaline (+10% Movement Speed)",
+              desc: "Camp resting grants a sustained 10% movement speed boost and +3% attack speed for 2 hours."
+            },
+            classQuestNote: "Dual-wielding weapons becomes available at trainer at level 20."
           },
-          classQuestNote: "Dual-wielding weapons becomes available at trainer at level 20."
-        },
-        {
-          specId: "protection",
-          name: "Protection (Shield & Threat Anchor)",
-          icon: "🛡️",
-          role: "Main Tank / Mitigation",
-          wowheadCalcUrl: "https://www.wowhead.com/forever/talent-calc/warrior/--052301",
-          tagline: "Unshakable dungeon vanguard with Defensive Charge, Shield Bash spell silencing, and Last Stand.",
-          statPriority: "Stamina > Armor > Strength > Defense",
-          bestWeapon: "One-Hand + Shield (Cruel Barb / Commander's Crest)",
-          talents: [
-            { name: "Shield Specialization", points: "5/5", tree: "Protection (Tier 1)", desc: "Increases your chance to block attacks with a shield by 5% and generates 1 rage on block." },
-            { name: "Improved Bloodrage", points: "2/2", tree: "Protection (Tier 2)", desc: "Increases instant Rage generated by Bloodrage by 5, enabling instant pull threat." },
-            { name: "Anticipation", points: "3/5", tree: "Protection (Tier 1)", desc: "Increases your Defense skill by 6, reducing enemy chance to land crushing blows." },
-            { name: "Last Stand", points: "1/1", tree: "Protection (Tier 3)", desc: "When activated, temporarily grants you 30% of your maximum hit points for 20 sec." }
-          ],
-          legacyNotes: "Extra Legacy points unlock 5/5 Toughness (+10% armor) and Improved Taunt (-2s cooldown).",
-          rotation: [
-            { label: "Pull", desc: "Defensive Stance Charge -> Bloodrage -> Sunder Armor on primary target." },
-            { label: "Interrupt & Lock", desc: "Shield Bash immediately against caster casts (deals damage and silences for 3s)." },
-            { label: "Active Defense", desc: "Use Shield Block on cooldown to push Crushing Blows off the attack table; Revenge on block proc." }
-          ],
-          bisGear: [
-            { slot: "Shield", item: "Commander's Crest", source: "Shadowfang Keep (Springvale)", stats: "542 Armor, 16 Block, +6 Str, +3 Sta" },
-            { slot: "Shield (Alt)", item: "Kresh's Back", source: "Wailing Caverns (Kresh)", stats: "450 Armor, 13 Block, +7 Sta" },
-            { slot: "One-Hand", item: "Thief's Blade", source: "Deadmines (Mr. Smite)", stats: "+6 Agility, 15.6 DPS" },
-            { slot: "Ring", item: "Silverlaine's Family Seal", source: "Shadowfang Keep", stats: "+3 Str, +3 Sta" }
-          ],
-          campingPerk: {
-            name: "Bulwark of the Hearth (+10% Total Armor)",
-            desc: "Resting inside a sturdy Tent grants a 2-hour +10% Armor contribution from equipped items."
+          {
+            specId: "protection",
+            name: "Protection (Shield & Threat Anchor)",
+            icon: "🛡️",
+            role: "Main Tank / Mitigation",
+            wowheadCalcUrl: "https://www.wowhead.com/forever/talent-calc/warrior/--052301",
+            tagline: "Unshakable dungeon vanguard with Defensive Charge, Shield Bash spell silencing, and Last Stand.",
+            statPriority: "Stamina > Armor > Strength > Defense",
+            bestWeapon: "One-Hand + Shield (Cruel Barb / Commander's Crest)",
+            talents: [
+              { name: "Shield Specialization", points: "5/5", tree: "Protection (Tier 1)", desc: "Increases your chance to block attacks with a shield by 5% and generates 1 rage on block." },
+              { name: "Improved Bloodrage", points: "2/2", tree: "Protection (Tier 2)", desc: "Increases instant Rage generated by Bloodrage by 5, enabling instant pull threat." },
+              { name: "Anticipation", points: "3/5", tree: "Protection (Tier 1)", desc: "Increases your Defense skill by 6, reducing enemy chance to land crushing blows." },
+              { name: "Last Stand", points: "1/1", tree: "Protection (Tier 3)", desc: "When activated, temporarily grants you 30% of your maximum hit points for 20 sec." }
+            ],
+            legacyNotes: "Extra Legacy points unlock 5/5 Toughness (+10% armor) and Improved Taunt (-2s cooldown).",
+            rotation: [
+              { label: "Pull", desc: "Defensive Stance Charge -> Bloodrage -> Sunder Armor on primary target." },
+              { label: "Interrupt & Lock", desc: "Shield Bash immediately against caster casts (deals damage and silences for 3s)." },
+              { label: "Active Defense", desc: "Use Shield Block on cooldown to push Crushing Blows off the attack table; Revenge on block proc." }
+            ],
+            bisGear: [
+              { slot: "Shield", item: "Commander's Crest", source: "Shadowfang Keep (Springvale)", stats: "542 Armor, 16 Block, +6 Str, +3 Sta" },
+              { slot: "Shield (Alt)", item: "Kresh's Back", source: "Wailing Caverns (Kresh)", stats: "450 Armor, 13 Block, +7 Sta" },
+              { slot: "One-Hand", item: "Thief's Blade", source: "Deadmines (Mr. Smite)", stats: "+6 Agility, 15.6 DPS" },
+              { slot: "Ring", item: "Silverlaine's Family Seal", source: "Shadowfang Keep", stats: "+3 Str, +3 Sta" }
+            ],
+            campingPerk: {
+              name: "Bulwark of the Hearth (+10% Total Armor)",
+              desc: "Resting inside a sturdy Tent grants a 2-hour +10% Armor contribution from equipped items."
+            },
+            classQuestNote: "Defensive Stance quest grants the iconic Blue-quality defensive shield and 1-Handed weapon."
+          }
+        ]
+      },
+      level30: {
+        levelCap: 30,
+        talentPointsTotal: 21,
+        legacyPointsNotice: "Legacy Milestones allow up to +5 additional points at Level 30 (26 total points).",
+        specs: [
+          {
+            specId: "arms",
+            name: "Arms (Sweeping Strikes & Spearing Strike)",
+            icon: "🗡️",
+            role: "2-Handed Melee Cleave & Burst DPS",
+            wowheadCalcUrl: "https://www.wowhead.com/forever/talent-calc/warrior/3020501",
+            tagline: "Devastating multi-target cleave with Sweeping Strikes 21-pt keystone, +75% Rage crits, instant-tap Rend, and Spearing Strike anti-mount execution from Battle Stance.",
+            statPriority: "Strength > Melee Hit (to 5%) > Agility > Stamina",
+            bestWeapon: "Corpsemaker (Razorfen Kraul) / Strike of the Hydra (BFD) / Excavator's Heavy Mallet",
+            talents: [
+              { name: "Improved Rend", points: "3/3", tree: "Arms (Tier 1)", desc: "Increases bleed damage of Rend by 35%. Now instantly deals initial damage on application to secure pull tags!" },
+              { name: "Deflection", points: "2/5", tree: "Arms (Tier 1)", desc: "Increases your parry chance by 2%." },
+              { name: "Tactical Mastery", points: "5/5", tree: "Arms (Tier 2)", desc: "Retain up to 25 extra rage when stance dancing (now stacks with baseline 10 Rage for a massive 35 retained Rage!)." },
+              { name: "Deep Wounds", points: "3/3", tree: "Arms (Tier 3)", desc: "Your critical strikes cause the opponent to bleed for 60% of your melee weapon's average damage over 12 sec." },
+              { name: "Impale", points: "2/2", tree: "Arms (Tier 3)", desc: "Increases the critical strike damage bonus of your weapon abilities by 20%." },
+              { name: "Two-Handed Specialization", points: "5/5", tree: "Arms (Tier 4)", desc: "Increases the physical damage you deal with two-handed melee weapons by 5%." },
+              { name: "Sweeping Strikes", points: "1/1", tree: "Arms (Tier 5 Keystone)", desc: "Your next 5 melee attacks strike an additional nearby enemy. Combines with Cleave and Overpower for god-tier dungeon AoE burst!" }
+            ],
+            legacyNotes: "Extra Legacy discovery points unlock 5/5 Poleaxe Specialization (+5% critical strike chance) or 5/5 Sword Specialization (extra attack swing procs).",
+            rotation: [
+              { label: "Pull & Stance Dance", desc: "Battle Stance Charge -> Instant Rend to lock aggro -> Spearing Strike to dismount or lock fleeing targets." },
+              { label: "Sweeping Cleave", desc: "Activate Sweeping Strikes before pack engagement; every Cleave and Overpower hits 2 targets simultaneously." },
+              { label: "Rage Generation Boost", desc: "Basic attack crits generate +75% Rage in Phase 2; pool excess rage into constant Heroic Strike cancels." },
+              { label: "Execute", desc: "Switch to Battle or Berserker Stance to cast Execute at <20% enemy health; trigger baseline Victory Rush on kill." }
+            ],
+            bisGear: [
+              { slot: "Two-Hand Weapon", item: "Corpsemaker", source: "Razorfen Kraul (Overlord Ramtusk)", stats: "+15 Str, +8 Sta, 28.9 DPS 2H Axe" },
+              { slot: "Two-Hand (Alt)", item: "Strike of the Hydra", source: "Blackfathom Deeps (Aku'mai)", stats: "26.3 DPS, Chance on Hit: 150 Shadow Damage" },
+              { slot: "Legs", item: "Cobalt Legguards", source: "Blackfathom Deeps", stats: "+14 Str, +8 Sta, Mail" },
+              { slot: "Chest", item: "Excavator's Mail Hauberk", source: "Excavation Site: Wetlands", stats: "+15 Str, +10 Sta, 290 Armor" },
+              { slot: "Shoulders", item: "Thane's Iron Pauldrons", source: "Hall of Thanes", stats: "+8 Str, +5 Sta, 114 Armor" }
+            ],
+            campingPerk: {
+              name: "Warrior's Heart (+5% Total Strength)",
+              desc: "Setting camp with a Cozy Sleeping Bag provides 200% rested XP rate and the 'Vigor' 2-hour +5% Strength buff."
+            },
+            classQuestNote: "Level 30 unlocks the legendary Whirlwind Axe questline across the Alterac Mountains and Arathi Highlands."
           },
-          classQuestNote: "Defensive Stance quest grants the iconic Blue-quality defensive shield and 1-Handed weapon."
-        }
-      ]
+          {
+            specId: "fury",
+            name: "Fury (Death Wish & Dual-Wield Engine)",
+            icon: "⚡",
+            role: "Dual-Wield Melee DPS & Flurry Enrage",
+            wowheadCalcUrl: "https://www.wowhead.com/forever/talent-calc/warrior/-050501",
+            tagline: "Relentless dual-wielding pressure with Death Wish 21-pt keystone (+20% physical damage & fear immunity), +75% crit rage, and fixed off-hand weapon damage.",
+            statPriority: "Strength > Melee Hit > Agility > Stamina",
+            bestWeapon: "Outlaw Sabre (BFD Quest) + Cruel Barb / Excavation Digging Axe",
+            talents: [
+              { name: "Cruelty", points: "5/5", tree: "Fury (Tier 1)", desc: "Increases your chance to get a critical strike with melee weapons by 5%." },
+              { name: "Unbridled Wrath", points: "5/5", tree: "Fury (Tier 2)", desc: "Gives your melee weapon strikes a 40% chance to generate an additional Rage point." },
+              { name: "Piercing Howl", points: "1/1", tree: "Fury (Tier 3)", desc: "Causes all enemies within 10 yards to be dazed, reducing movement speed by 50% for 6 sec." },
+              { name: "Blood Craze", points: "3/3", tree: "Fury (Tier 3)", desc: "Regenerates 3% of your total health over 6 sec after being the victim of a critical strike." },
+              { name: "Improved Battle Shout", points: "2/5", tree: "Fury (Tier 2)", desc: "Increases the melee attack power bonus of Battle Shout by 10% (now lasts 3 full minutes!)." },
+              { name: "Enrage", points: "4/5", tree: "Fury (Tier 4)", desc: "Gives you a 20% melee damage bonus for 12 sec up to a maximum of 12 swings after being crit." },
+              { name: "Death Wish", points: "1/1", tree: "Fury (Tier 5 Keystone)", desc: "When activated, increases your physical damage by 20% and makes you immune to Fear effects for 30 sec." }
+            ],
+            legacyNotes: "Extra Legacy discovery points unlock 5/5 Dual Wield Specialization and 5/5 Flurry (+30% attack speed on critical strikes).",
+            rotation: [
+              { label: "Pull & Battle Shout", desc: "Apply buffed 3-minute Battle Shout -> Bloodrage -> Charge into combat." },
+              { label: "Death Wish Burn", desc: "Pop Death Wish on boss pulls for massive +20% damage burst and complete immunity to fear mechanics." },
+              { label: "Dual-Wield Engine", desc: "Fixed off-hand rage generation fuels endless Heroic Strikes and Raging Blows." },
+              { label: "Snare & Execute", desc: "Piercing Howl to snare adds; execute target at <20% HP." }
+            ],
+            bisGear: [
+              { slot: "Main Hand", item: "Outlaw Sabre", source: "Blackfathom Deeps Quest", stats: "+10 Agility, 21.8 DPS Sword" },
+              { slot: "Off Hand", item: "Cruel Barb", source: "Deadmines (Edwin VanCleef)", stats: "+12 Attack Power, 18.2 DPS" },
+              { slot: "Chest", item: "Triprunner Dungarees", source: "Gnomeregan Quest", stats: "+18 Agility, +2 Strength" },
+              { slot: "Hands", item: "Gloves of the Holy", source: "City of Dalaran", stats: "+8 Str, +6 Sta" }
+            ],
+            campingPerk: {
+              name: "Battlefield Adrenaline (+10% Movement Speed)",
+              desc: "Camp resting grants a sustained 10% movement speed boost and +3% attack speed for 2 hours."
+            },
+            classQuestNote: "Level 30 unlocks Berserker Stance and Intercept quest in the Fray Island arena."
+          },
+          {
+            specId: "protection",
+            name: "Protection (Concussion Blow & Shield Vanguard)",
+            icon: "🛡️",
+            role: "Main Tank / Active Mitigation",
+            wowheadCalcUrl: "https://www.wowhead.com/forever/talent-calc/warrior/--052301",
+            tagline: "Unbreakable vanguard holding Phase 2 Level 30 dungeons with Concussion Blow (5s hard stun), Last Stand, instant-tap Sunder Armor, and Defensive Charge.",
+            statPriority: "Stamina > Armor > Strength > Defense > Block",
+            bestWeapon: "Commander's Crest / Arctic Buckler (BFD) + Thief's Blade",
+            talents: [
+              { name: "Shield Specialization", points: "5/5", tree: "Protection (Tier 1)", desc: "Increases your chance to block attacks with a shield by 5% and generates 1 rage on block." },
+              { name: "Improved Bloodrage", points: "2/2", tree: "Protection (Tier 2)", desc: "Increases instant Rage generated by Bloodrage by 5." },
+              { name: "Anticipation", points: "3/5", tree: "Protection (Tier 1)", desc: "Increases your Defense skill by 6, pushing crushing blows off the table." },
+              { name: "Toughness", points: "5/5", tree: "Protection (Tier 3)", desc: "Increases your armor value from items by 10%." },
+              { name: "Last Stand", points: "1/1", tree: "Protection (Tier 3 Keystone)", desc: "Temporarily grants 30% maximum health for 20 sec on a 10-minute cooldown." },
+              { name: "Improved Shield Block", points: "3/3", tree: "Protection (Tier 4)", desc: "Allows Shield Block to block an additional attack and increases its duration by 2 sec." },
+              { name: "Concussion Blow", points: "1/1", tree: "Protection (Tier 5 Keystone)", desc: "A brutal strike that stuns the opponent for 5 sec and generates immense threat on an active 45s cooldown." }
+            ],
+            legacyNotes: "Extra Legacy discovery points unlock 5/5 One-Handed Weapon Specialization (+10% 1H physical damage) and Shield Slam.",
+            rotation: [
+              { label: "Pull & Lock", desc: "Defensive Stance Charge -> Bloodrage -> Instant Sunder Armor for immediate snap threat." },
+              { label: "Crowd Control & Stun", desc: "Cast Concussion Blow to lock down dangerous elite mobs for 5 seconds." },
+              { label: "Shield Bash Silence", desc: "Shield Bash caster mobs immediately to silence schools for 3 seconds." },
+              { label: "Mitigation", desc: "Shield Block on cooldown; pop Last Stand during heavy boss damage spikes in Dalaran." }
+            ],
+            bisGear: [
+              { slot: "Shield", item: "Commander's Crest", source: "Shadowfang Keep (Springvale)", stats: "542 Armor, 16 Block, +6 Str, +3 Sta" },
+              { slot: "Shield (Alt)", item: "Arctic Buckler", source: "Blackfathom Deeps", stats: "620 Armor, 19 Block, +8 Sta" },
+              { slot: "One-Hand", item: "Outlaw Sabre", source: "Blackfathom Deeps Quest", stats: "+10 Agi, 21.8 DPS" },
+              { slot: "Ring", item: "Silverlaine's Family Seal", source: "Shadowfang Keep", stats: "+3 Str, +3 Sta" },
+              { slot: "Chest", item: "Excavator's Mail Hauberk", source: "Excavation Site: Wetlands", stats: "+15 Str, +10 Sta, 290 Armor" }
+            ],
+            campingPerk: {
+              name: "Bulwark of the Hearth (+10% Total Armor)",
+              desc: "Resting inside a sturdy Tent grants a 2-hour +10% Armor contribution from equipped items."
+            },
+            classQuestNote: "Level 30 unlocks heavy mail armor training and upgraded Taunt ranks."
+          }
+        ]
+      },
+      specs: []
     }
   };
+  WOW_FOREVER_DATA.classDeepDives.warrior.betaBuilds.specs = WOW_FOREVER_DATA.classDeepDives.warrior.betaBuilds.level30.specs;
 }

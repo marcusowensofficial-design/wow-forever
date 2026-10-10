@@ -1322,6 +1322,18 @@ const WOW_FOREVER_DATA = {
       "prof1": "",
       "prof2": "",
       "notes": "ITS MF BURK"
+    },
+    {
+      "id": "roster-10",
+      "name": "Sploodge",
+      "faction": "Horde",
+      "race": "Undead",
+      "className": "Warlock",
+      "role": "Ranged DPS",
+      "spec": "Demonology",
+      "prof1": "",
+      "prof2": "",
+      "notes": "Sploodge - Demonology Warlock"
     }
   ],
   "skyborneRace": {
