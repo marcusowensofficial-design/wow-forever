@@ -6,6 +6,11 @@
   <title>World of Warcraft: Forever — Beta Hub, Classic+ Tracker & News Portal</title>
   <meta name="description" content="Track World of Warcraft: Forever (Classic+) news, Beta Phase 2 Level 30 cap unlock, Wowhead datamining, Excavation Site 4, City of Dalaran, the Skyborne race, and your progression.">
   <meta name="theme-color" content="#07090e">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="World of Warcraft: Forever — Beta Hub, Classic+ Tracker & News Portal">
+  <meta property="og:description" content="Track World of Warcraft: Forever (Classic+) news, Beta Phase 2 Level 30 cap unlock, Wowhead datamining, Excavation Site 4, City of Dalaran, the Skyborne race, and your progression.">
+  <meta property="og:site_name" content="World of Warcraft: Forever Portal">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="stylesheet" href="css/styles.css?v=1.60.6-p2">
   <link rel="stylesheet" href="css/tools.css?v=1.60.6-p2">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚔️</text></svg>">
@@ -19,7 +24,7 @@
       <span>Beta Phase 2: LIVE NOW • Level 30 Cap Active</span>
     </div>
     <div class="status-ticker">
-      <span><strong>Beta Duration:</strong> 35 Days (Sept 17 – Oct 21) • Day 22 of 35</span>
+      <span><strong>Beta Duration:</strong> 35 Days (Sept 17 – Oct 21) • <span id="top-ticker-day-elapsed">Day 24 of 35</span></span>
       <span><strong>Level Cap:</strong> 30 Active (Excavation Site 4 & Dalaran Live)</span>
       <span class="status-badge-highlight">Classic+ Standalone</span>
       <span class="status-badge-highlight" style="background: rgba(234, 179, 8, 0.2); border-color: #eab308; color: #fef08a;">🍺 Events: Brewfest & Harvest Concluded • Hallow's End Arrives Oct 18</span>
@@ -620,7 +625,7 @@
 
         <div class="search-box-wrapper">
           <span class="search-icon">🔍</span>
-          <input type="text" id="news-search-input" class="search-input" placeholder="Search news, hotfixes, racials...">
+          <input type="text" id="news-search-input" name="news-search" aria-label="Search news, hotfixes, and racials" class="search-input" placeholder="Search news, hotfixes, racials...">
         </div>
       </div>
 
