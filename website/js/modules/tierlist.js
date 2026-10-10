@@ -86,7 +86,7 @@ function renderTierListUI() {
         <button class="tl-cat-btn ${activeTierCategory === 'combos' ? 'active' : ''}" data-cat="combos">New Combos</button>
       </div>
       <div class="tl-controls-row">
-        <input type="text" id="tierlist-custom-title" class="tl-title-input" value="${defaultTitles[activeTierCategory] || 'WoW Forever Tier List'}" placeholder="Enter Tier List Title..." />
+        <input type="text" id="tierlist-custom-title" name="tierlist-title" aria-label="Tier list custom title" class="tl-title-input" value="${defaultTitles[activeTierCategory] || 'WoW Forever Tier List'}" placeholder="Enter Tier List Title..." />
         <div class="tl-action-buttons">
           <button id="tl-btn-save-image" class="tl-act-btn tl-btn-primary">
             <span>💾</span> Save Image

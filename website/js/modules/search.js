@@ -263,7 +263,7 @@ function setupSearchModalEvents() {
 
   // Keyboard navigation inside search results: Up, Down, Enter
   input.addEventListener('keydown', (e) => {
-    const resultsContainer = document.getElementById('search-palette-results');
+    const resultsContainer = document.getElementById('search-palette-results') || document.getElementById('universal-search-results');
     const items = resultsContainer?.querySelectorAll('.search-result-item') || [];
 
     if (e.key === 'ArrowDown') {

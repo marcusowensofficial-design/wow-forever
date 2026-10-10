@@ -11,8 +11,8 @@
   <meta property="og:description" content="Track World of Warcraft: Forever (Classic+) news, Beta Phase 2 Level 30 cap unlock, Wowhead datamining, Excavation Site 4, City of Dalaran, the Skyborne race, and your progression.">
   <meta property="og:site_name" content="World of Warcraft: Forever Portal">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="stylesheet" href="css/styles.css?v=1.60.6-p2">
-  <link rel="stylesheet" href="css/tools.css?v=1.60.6-p2">
+  <link rel="stylesheet" href="css/styles.css?v=1.60.6-p3">
+  <link rel="stylesheet" href="css/tools.css?v=1.60.6-p3">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚔️</text></svg>">
 </head>
 <body>
@@ -646,15 +646,15 @@
         <form id="add-custom-intel-form" class="user-note-form-grid">
           <div class="form-field">
             <label for="custom-title" class="form-label">Headline / Title *</label>
-            <input type="text" id="custom-title" class="form-input" placeholder="e.g. Discovered secret chest in Hall of Thanes" required>
+            <input type="text" id="custom-title" name="custom-title" class="form-input" placeholder="e.g. Discovered secret chest in Hall of Thanes" required>
           </div>
           <div class="form-field">
             <label for="custom-author" class="form-label">Reporter / Source</label>
-            <input type="text" id="custom-author" class="form-input" placeholder="e.g. My Beta Log, Guild Discord">
+            <input type="text" id="custom-author" name="custom-author" class="form-input" placeholder="e.g. My Beta Log, Guild Discord">
           </div>
           <div class="form-field">
             <label for="custom-category" class="form-label">Category</label>
-            <select id="custom-category" class="form-select">
+            <select id="custom-category" name="custom-category" class="form-select">
               <option value="Beta Discovery">Beta Discovery</option>
               <option value="Class Intel">Class Intel</option>
               <option value="Loot & Drops">Loot & Drops</option>
@@ -663,11 +663,11 @@
           </div>
           <div class="form-field">
             <label for="custom-summary" class="form-label">Summary *</label>
-            <input type="text" id="custom-summary" class="form-input" placeholder="Brief summary of the discovery" required>
+            <input type="text" id="custom-summary" name="custom-summary" class="form-input" placeholder="Brief summary of the discovery" required>
           </div>
           <div class="form-field span-2">
             <label for="custom-content" class="form-label">Detailed Notes / Log Text</label>
-            <textarea id="custom-content" class="form-textarea" rows="3" placeholder="Full notes, coordinates, boss tactics, or drop rates..."></textarea>
+            <textarea id="custom-content" name="custom-content" class="form-textarea" rows="3" placeholder="Full notes, coordinates, boss tactics, or drop rates..."></textarea>
           </div>
           <div class="form-field span-2" style="text-align: right;">
             <button type="submit" class="btn-primary"><span>💾</span> Save Intel to Dispatch Wire</button>
@@ -697,6 +697,7 @@
         <button class="codex-nav-btn" data-codex="zones">🌄 New & Renewed Zones</button>
         <button class="codex-nav-btn" data-codex="mounts">🐎 Datamined Mounts</button>
         <button class="codex-nav-btn" data-codex="stats">📊 Stats & Attributes Guide</button>
+        <button class="codex-nav-btn" data-codex="guides">📖 Curated Guides</button>
       </div>
 
       <!-- Panel 1: Skyborne -->
@@ -925,6 +926,9 @@
           <div id="dungeon-curve-container">
             <!-- Dynamically rendered -->
           </div>
+          <div id="dungeon-timeline-slider-container" style="margin-top: 1.75rem;">
+            <!-- Dynamically rendered interactive level 13-60 slider by codex.js -->
+          </div>
         </div>
       </div>
 
@@ -1053,6 +1057,31 @@
           </div>
         </div>
 
+        <!-- Section: Verified Raid Combat & Formula Rules -->
+        <div class="stat-category-wrapper" style="margin-top: 1.5rem;">
+          <div style="margin-bottom: 1rem;">
+            <span class="countdown-label" style="color: var(--text-gold);">System Mechanics</span>
+            <h3 style="color: #fff; font-size: 1.35rem; margin: 0.2rem 0 0;">⚖️ Combat Formulas & Modernized Rules</h3>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.2rem;">Verified Build 1.60.6 stat interactions, downranking thresholds, and unified scaling</p>
+          </div>
+          <div id="combat-rules-container">
+            <!-- Rendered dynamically by js/modules/camping.js -->
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Panel 8: Curated Classic+ Guides -->
+      <div id="codex-guides" class="codex-panel">
+        <div class="section-heading-bar" style="margin-bottom: 1.5rem;">
+          <div>
+            <h3><span>📖</span> Curated Classic+ Guides & Field Manuals</h3>
+            <p class="section-subtext">Deep gameplay primers: Level 30 PvP brackets, rare spawns, deterministic currencies, transmog rules, and hidden forms</p>
+          </div>
+        </div>
+        <div id="curated-guides-grid" class="curated-guides-grid">
+          <!-- Rendered dynamically by js/modules/guides.js -->
+        </div>
       </div>
 
     </section>
@@ -1362,7 +1391,7 @@
               Ray-Traced Global Illumination: ACTIVE
             </span>
             <label class="toggle-switch" aria-label="Toggle Engine Preset">
-              <input type="checkbox" id="engine-preset-toggle" checked>
+              <input type="checkbox" id="engine-preset-toggle" name="engine-preset" aria-label="Toggle Ray-Traced Global Illumination preset" checked>
               <span class="toggle-slider"></span>
             </label>
           </div>
@@ -2114,7 +2143,7 @@
               Modern Transmog: ACTIVE
             </span>
             <label class="toggle-switch" aria-label="Toggle Classic Purist Mode">
-              <input type="checkbox" id="purist-toggle-input">
+              <input type="checkbox" id="purist-toggle-input" name="purist-toggle" aria-label="Toggle Classic Purist Mode">
               <span class="toggle-slider"></span>
             </label>
           </div>
@@ -2192,13 +2221,13 @@
           <form id="character-planner-form">
             <div class="form-field" style="margin-bottom: 0.8rem;">
               <label for="char-name-input" class="form-label">Character Name</label>
-              <input type="text" id="char-name-input" class="form-input" placeholder="e.g. Marcus">
+              <input type="text" id="char-name-input" name="char-name" class="form-input" placeholder="e.g. Marcus">
             </div>
 
             <div class="user-note-form-grid" style="margin-top: 0; margin-bottom: 0.8rem;">
               <div class="form-field">
                 <label for="char-faction-select" class="form-label">Faction</label>
-                <select id="char-faction-select" class="form-select">
+                <select id="char-faction-select" name="char-faction" class="form-select">
                   <option value="Horde">Horde</option>
                   <option value="Alliance">Alliance</option>
                   <option value="Neutral (Skyborne)">Neutral (Skyborne)</option>
@@ -2207,7 +2236,7 @@
 
               <div class="form-field">
                 <label for="char-race-select" class="form-label">Race</label>
-                <select id="char-race-select" class="form-select">
+                <select id="char-race-select" name="char-race" class="form-select">
                   <option value="Undead (Forsaken)">Undead (Forsaken)</option>
                   <option value="The Skyborne (New!)">The Skyborne (New!)</option>
                   <option value="Dwarf">Dwarf</option>
@@ -2224,7 +2253,7 @@
             <div class="user-note-form-grid" style="margin-top: 0; margin-bottom: 0.8rem;">
               <div class="form-field">
                 <label for="char-class-select" class="form-label">Class</label>
-                <select id="char-class-select" class="form-select">
+                <select id="char-class-select" name="char-class" class="form-select">
                   <option value="Paladin">Paladin (inc. Undead)</option>
                   <option value="Shaman">Shaman (inc. Dwarf)</option>
                   <option value="Warrior">Warrior (inc. Skyborne)</option>
@@ -2239,7 +2268,7 @@
 
               <div class="form-field">
                 <label for="char-spec-select" class="form-label">Specialization</label>
-                <select id="char-spec-select" class="form-select">
+                <select id="char-spec-select" name="char-spec" class="form-select">
                   <option value="Protection (Tank)">Protection (Tank)</option>
                   <option value="Holy (Healer)">Holy (Healer)</option>
                   <option value="Retribution (Melee DPS)">Retribution (Melee DPS)</option>
@@ -2260,7 +2289,7 @@
             <div class="user-note-form-grid" style="margin-top: 0; margin-bottom: 1rem;">
               <div class="form-field">
                 <label for="char-prof1-select" class="form-label">Primary Profession 1</label>
-                <select id="char-prof1-select" class="form-select">
+                <select id="char-prof1-select" name="char-prof1" class="form-select">
                   <option value="Blacksmithing">Blacksmithing</option>
                   <option value="Mining">Mining</option>
                   <option value="Engineering">Engineering</option>
@@ -2275,7 +2304,7 @@
 
               <div class="form-field">
                 <label for="char-prof2-select" class="form-label">Primary Profession 2</label>
-                <select id="char-prof2-select" class="form-select">
+                <select id="char-prof2-select" name="char-prof2" class="form-select">
                   <option value="Mining">Mining</option>
                   <option value="Blacksmithing">Blacksmithing</option>
                   <option value="Engineering">Engineering</option>
@@ -2322,7 +2351,7 @@
           </div>
 
           <form id="add-task-form" style="margin-top: 1.5rem; display: flex; gap: 0.5rem;">
-            <input type="text" id="new-task-text" class="form-input" style="flex-grow: 1;" placeholder="Add custom goal (e.g. Farm Defias Leather Boots)..." required>
+            <input type="text" id="new-task-text" name="new-task" aria-label="Add custom milestone task" class="form-input" style="flex-grow: 1;" placeholder="Add custom goal (e.g. Farm Defias Leather Boots)..." required>
             <button type="submit" class="btn-primary" style="padding: 0.6rem 1rem; white-space: nowrap;">+ Add Goal</button>
           </form>
         </div>
@@ -2372,18 +2401,18 @@
         <form id="add-squad-member-form" class="user-note-form-grid" style="margin-top: 1.5rem; background: rgba(0,0,0,0.35); padding: 1.25rem; border-radius: var(--radius-sm);">
           <div class="form-field">
             <label for="member-name-input" class="form-label">Player / Friend Name *</label>
-            <input type="text" id="member-name-input" class="form-input" placeholder="e.g. Scrype" required>
+            <input type="text" id="member-name-input" name="member-name" class="form-input" placeholder="e.g. Scrype" required>
           </div>
           <div class="form-field">
             <label for="member-faction-select" class="form-label">Faction</label>
-            <select id="member-faction-select" class="form-select">
+            <select id="member-faction-select" name="member-faction" class="form-select">
               <option value="Horde">Horde</option>
               <option value="Alliance">Alliance</option>
             </select>
           </div>
           <div class="form-field">
             <label for="member-race-select" class="form-label">Race</label>
-            <select id="member-race-select" class="form-select">
+            <select id="member-race-select" name="member-race" class="form-select">
               <option value="Undead">Undead</option>
               <option value="Orc">Orc</option>
               <option value="Troll">Troll</option>
@@ -2397,7 +2426,7 @@
           </div>
           <div class="form-field">
             <label for="member-class-select" class="form-label">Class</label>
-            <select id="member-class-select" class="form-select">
+            <select id="member-class-select" name="member-class" class="form-select">
               <option value="Paladin">🛡️ Paladin (Pink)</option>
               <option value="Mage">🔥 Mage (Cyan)</option>
               <option value="Warlock">🔮 Warlock (Purple)</option>
@@ -2411,7 +2440,7 @@
           </div>
           <div class="form-field">
             <label for="member-role-select" class="form-label">Role</label>
-            <select id="member-role-select" class="form-select">
+            <select id="member-role-select" name="member-role" class="form-select">
               <option value="Tank">Tank</option>
               <option value="Healer">Healer</option>
               <option value="Tank / DPS">Tank / DPS</option>
@@ -2421,11 +2450,11 @@
           </div>
           <div class="form-field">
             <label for="member-spec-input" class="form-label">Spec</label>
-            <input type="text" id="member-spec-input" class="form-input" placeholder="e.g. Holy, Arms, Frost">
+            <input type="text" id="member-spec-input" name="member-spec" class="form-input" placeholder="e.g. Holy, Arms, Frost">
           </div>
           <div class="form-field">
             <label for="member-prof1-select" class="form-label">Primary Profession 1</label>
-            <select id="member-prof1-select" class="form-select">
+            <select id="member-prof1-select" name="member-prof1" class="form-select">
               <option value="">-- None / TBD --</option>
               <option value="Tailoring">✂️ Tailoring</option>
               <option value="Blacksmithing">🔨 Blacksmithing</option>
@@ -2440,7 +2469,7 @@
           </div>
           <div class="form-field">
             <label for="member-prof2-select" class="form-label">Primary Profession 2</label>
-            <select id="member-prof2-select" class="form-select">
+            <select id="member-prof2-select" name="member-prof2" class="form-select">
               <option value="">-- None / TBD --</option>
               <option value="Tailoring">✂️ Tailoring</option>
               <option value="Blacksmithing">🔨 Blacksmithing</option>
@@ -2455,7 +2484,7 @@
           </div>
           <div class="form-field span-2">
             <label for="member-notes-input" class="form-label">Notes / Availability</label>
-            <input type="text" id="member-notes-input" class="form-input" placeholder="e.g. Can craft bags, available weekday evenings">
+            <input type="text" id="member-notes-input" name="member-notes" class="form-input" placeholder="e.g. Can craft bags, available weekday evenings">
           </div>
           <div class="form-field span-2" style="text-align: right;">
             <button type="submit" class="btn-primary">+ Add to Squad Roster</button>
@@ -2496,11 +2525,11 @@
       </div>
 
       <form id="edit-professions-form">
-        <input type="hidden" id="edit-member-id">
+        <input type="hidden" id="edit-member-id" name="edit-member-id" aria-label="Edit Member ID">
 
         <div class="form-field" style="margin-bottom: 1rem;">
           <label for="edit-prof1-select" class="form-label">Primary Profession 1</label>
-          <select id="edit-prof1-select" class="form-select">
+          <select id="edit-prof1-select" name="edit-prof1" class="form-select">
             <option value="">-- None / Undecided --</option>
             <option value="Tailoring">✂️ Tailoring (Spirit Weaving)</option>
             <option value="Blacksmithing">🔨 Blacksmithing (Weapon Honing)</option>
@@ -2516,7 +2545,7 @@
 
         <div class="form-field" style="margin-bottom: 1rem;">
           <label for="edit-prof2-select" class="form-label">Primary Profession 2</label>
-          <select id="edit-prof2-select" class="form-select">
+          <select id="edit-prof2-select" name="edit-prof2" class="form-select">
             <option value="">-- None / Undecided --</option>
             <option value="Tailoring">✂️ Tailoring (Spirit Weaving)</option>
             <option value="Blacksmithing">🔨 Blacksmithing (Weapon Honing)</option>
@@ -2532,7 +2561,7 @@
 
         <div class="form-field" style="margin-bottom: 1.5rem;">
           <label for="edit-member-notes" class="form-label">Notes / Availability (Optional update)</label>
-          <input type="text" id="edit-member-notes" class="form-input" placeholder="e.g. Can craft bags, available weekday evenings">
+          <input type="text" id="edit-member-notes" name="edit-member-notes" class="form-input" placeholder="e.g. Can craft bags, available weekday evenings">
         </div>
 
         <div style="display: flex; gap: 0.8rem; justify-content: flex-end;">
@@ -2566,7 +2595,7 @@
     <div class="search-modal-container">
       <div class="search-modal-header">
         <span style="margin-right: 0.75rem; font-size: 1.2rem;">🔍</span>
-        <input type="text" id="universal-search-input" class="search-input-field" placeholder="Search spells, talents, dungeons, items, classes, guides... (Press Esc to close)" autocomplete="off">
+        <input type="text" id="universal-search-input" name="search-query" aria-label="Search universal game database" class="search-input-field" placeholder="Search spells, talents, dungeons, items, classes, guides... (Press Esc to close)" autocomplete="off">
         <button type="button" id="universal-search-close" style="background:none;border:none;color:#94a3b8;font-size:1.2rem;cursor:pointer;">✕</button>
       </div>
       <div id="universal-search-results" class="search-modal-results">
@@ -2633,43 +2662,43 @@
 
   <!-- Scripts -->
   <!-- 0. Shared Utilities -->
-  <script src="js/utils.js?v=1.60.6-p2"></script>
+  <script src="js/utils.js?v=1.60.6-p3"></script>
 
   <!-- 1. Data Layer -->
-  <script src="js/data/core-data.js?v=1.60.6-p2"></script>
-  <script src="js/data/races-classes.js?v=1.60.6-p2"></script>
-  <script src="js/data/tools-data.js?v=1.60.6-p2"></script>
-  <script src="js/data/bis-data.js?v=1.60.6-p2"></script>
-  <script src="js/data/talents-data.js?v=1.60.6-p2"></script>
-  <script src="js/data/deepdives/hunter.js?v=1.60.6-p2"></script>
-  <script src="js/data/deepdives/shaman.js?v=1.60.6-p2"></script>
-  <script src="js/data/deepdives/mage.js?v=1.60.6-p2"></script>
-  <script src="js/data/deepdives/paladin.js?v=1.60.6-p2"></script>
-  <script src="js/data/deepdives/warrior.js?v=1.60.6-p2"></script>
-  <script src="js/data/deepdives/warlock.js?v=1.60.6-p2"></script>
-  <script src="js/data/deepdives/priest.js?v=1.60.6-p2"></script>
-  <script src="js/data/deepdives/druid.js?v=1.60.6-p2"></script>
-  <script src="js/data/deepdives/rogue.js?v=1.60.6-p2"></script>
-  <script src="js/data/deepdives/pending.js?v=1.60.6-p2"></script>
+  <script src="js/data/core-data.js?v=1.60.6-p3"></script>
+  <script src="js/data/races-classes.js?v=1.60.6-p3"></script>
+  <script src="js/data/tools-data.js?v=1.60.6-p3"></script>
+  <script src="js/data/bis-data.js?v=1.60.6-p3"></script>
+  <script src="js/data/talents-data.js?v=1.60.6-p3"></script>
+  <script src="js/data/deepdives/hunter.js?v=1.60.6-p3"></script>
+  <script src="js/data/deepdives/shaman.js?v=1.60.6-p3"></script>
+  <script src="js/data/deepdives/mage.js?v=1.60.6-p3"></script>
+  <script src="js/data/deepdives/paladin.js?v=1.60.6-p3"></script>
+  <script src="js/data/deepdives/warrior.js?v=1.60.6-p3"></script>
+  <script src="js/data/deepdives/warlock.js?v=1.60.6-p3"></script>
+  <script src="js/data/deepdives/priest.js?v=1.60.6-p3"></script>
+  <script src="js/data/deepdives/druid.js?v=1.60.6-p3"></script>
+  <script src="js/data/deepdives/rogue.js?v=1.60.6-p3"></script>
+  <script src="js/data/deepdives/pending.js?v=1.60.6-p3"></script>
 
   <!-- 2. Feature Modules -->
-  <script src="js/modules/navigation.js?v=1.60.6-p2"></script>
-  <script src="js/modules/news.js?v=1.60.6-p2"></script>
-  <script src="js/modules/codex.js?v=1.60.6-p2"></script>
-  <script src="js/modules/camping.js?v=1.60.6-p2"></script>
-  <script src="js/modules/planner.js?v=1.60.6-p2"></script>
-  <script src="js/modules/deepdives.js?v=1.60.6-p2"></script>
-  <script src="js/modules/tierlist.js?v=1.60.6-p2"></script>
-  <script src="js/modules/downranking.js?v=1.60.6-p2"></script>
-  <script src="js/modules/talent-tree.js?v=1.60.6-p2"></script>
-  <script src="js/modules/bis.js?v=1.60.6-p2"></script>
-  <script src="js/modules/hiddenitems.js?v=1.60.6-p2"></script>
-  <script src="js/modules/guides.js?v=1.60.6-p2"></script>
-  <script src="js/modules/search.js?v=1.60.6-p2"></script>
+  <script src="js/modules/navigation.js?v=1.60.6-p3"></script>
+  <script src="js/modules/news.js?v=1.60.6-p3"></script>
+  <script src="js/modules/codex.js?v=1.60.6-p3"></script>
+  <script src="js/modules/camping.js?v=1.60.6-p3"></script>
+  <script src="js/modules/planner.js?v=1.60.6-p3"></script>
+  <script src="js/modules/deepdives.js?v=1.60.6-p3"></script>
+  <script src="js/modules/tierlist.js?v=1.60.6-p3"></script>
+  <script src="js/modules/downranking.js?v=1.60.6-p3"></script>
+  <script src="js/modules/talent-tree.js?v=1.60.6-p3"></script>
+  <script src="js/modules/bis.js?v=1.60.6-p3"></script>
+  <script src="js/modules/hiddenitems.js?v=1.60.6-p3"></script>
+  <script src="js/modules/guides.js?v=1.60.6-p3"></script>
+  <script src="js/modules/search.js?v=1.60.6-p3"></script>
 
   <!-- 3. Core App Orchestrator & Tracker -->
-  <script src="js/app.js?v=1.60.6-p2"></script>
-  <script src="js/tracker.js?v=1.60.6-p2"></script>
+  <script src="js/app.js?v=1.60.6-p3"></script>
+  <script src="js/tracker.js?v=1.60.6-p3"></script>
 
 </body>
 </html>

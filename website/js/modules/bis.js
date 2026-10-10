@@ -133,7 +133,7 @@ function renderBiSApp() {
     <div class="bis-filter-bar">
       <div class="bis-search-box">
         <span class="bis-search-icon">🔍</span>
-        <input type="text" id="bis-gear-filter-input" class="bis-gear-filter-input" 
+        <input type="text" id="bis-gear-filter-input" name="bis-gear-filter" aria-label="Filter gear by item name, boss, or dungeon" class="bis-gear-filter-input" 
                placeholder="Filter gear by item name, boss, or dungeon (e.g. Dalaran, RFK, Graveyard, Crafting)..." 
                value="${escapeHtml(currentBiSState.searchFilter || '')}" />
         <button type="button" id="bis-gear-filter-clear" class="bis-filter-clear-btn" ${currentBiSState.searchFilter ? '' : 'hidden'}>✕</button>
@@ -672,14 +672,13 @@ function bindBiSEvents() {
   if (btnShare) {
     btnShare.addEventListener("click", () => {
       const shareUrl = `${window.location.origin}${window.location.pathname}#bis/${currentBiSState.classId}/${currentBiSState.specId}`;
-      if (navigator.clipboard) {
-        navigator.clipboard.writeText(shareUrl).then(() => {
-          btnShare.innerHTML = "<span>✅</span> Link Copied!";
-          setTimeout(() => {
-            btnShare.innerHTML = "<span>🔗</span> Share Link";
-          }, 2000);
-        });
-      }
+      const copyFn = window.copyTextToClipboard || ((t, fn) => navigator.clipboard?.writeText(t).then(fn));
+      copyFn(shareUrl, () => {
+        btnShare.innerHTML = "<span>✅</span> Link Copied!";
+        setTimeout(() => {
+          btnShare.innerHTML = "<span>🔗</span> Share Link";
+        }, 2000);
+      });
     });
   }
 
@@ -1711,15 +1710,14 @@ function copyBiSListToClipboard() {
     });
   }
 
-  if (navigator.clipboard) {
-    navigator.clipboard.writeText(text).then(() => {
-      const btn = document.getElementById("btn-copy-bis-list");
-      if (btn) {
-        btn.innerHTML = "<span>✅</span> Gear Copied!";
-        setTimeout(() => {
-          btn.innerHTML = "<span>📋</span> Copy Gear List";
-        }, 2000);
-      }
-    });
-  }
+  const copyFn = window.copyTextToClipboard || ((t, fn) => navigator.clipboard?.writeText(t).then(fn));
+  copyFn(text, () => {
+    const btn = document.getElementById("btn-copy-bis-list");
+    if (btn) {
+      btn.innerHTML = "<span>✅</span> Gear Copied!";
+      setTimeout(() => {
+        btn.innerHTML = "<span>📋</span> Copy Gear List";
+      }, 2000);
+    }
+  });
 }

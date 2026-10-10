@@ -85,20 +85,20 @@ function renderDownrankCalculator() {
         <div class="dr-config-card">
           <h4 class="dr-col-title" style="margin-top: 1rem;">Stats & Modifiers</h4>
           <div class="dr-field-group">
-            <label class="dr-field-label">
+            <label class="dr-field-label" for="dr-player-level-slider">
               <span>Your Level (Cap: 30)</span>
               <strong id="dr-lvl-display">${drState.playerLevel}</strong>
             </label>
-            <input type="range" min="1" max="60" value="${drState.playerLevel}" class="dr-slider" 
+            <input type="range" min="1" max="60" value="${drState.playerLevel}" id="dr-player-level-slider" name="dr-player-level" aria-label="Your character level slider" class="dr-slider" 
                    oninput="updateDownrankInput('playerLevel', this.value)" />
           </div>
 
           <div class="dr-field-group">
-            <label class="dr-field-label">
+            <label class="dr-field-label" for="dr-bonus-power-input">
               <span>Bonus Healing / Damage (+heal)</span>
             </label>
             <div class="dr-input-addon">
-              <input type="number" min="0" max="2000" step="10" value="${drState.bonusPower}" class="dr-num-input"
+              <input type="number" min="0" max="2000" step="10" value="${drState.bonusPower}" id="dr-bonus-power-input" name="dr-bonus-power" aria-label="Bonus healing and spell damage" class="dr-num-input"
                      oninput="updateDownrankInput('bonusPower', this.value)" />
               <span>+SP</span>
             </div>
@@ -109,18 +109,18 @@ function renderDownrankCalculator() {
             <summary>Talents & Cast Modifiers</summary>
             <div class="dr-talents-body">
               <div class="dr-field-row">
-                <label>+Healing / Damage:</label>
-                <input type="number" min="0" max="30" value="${drState.talentHealPercent}" 
+                <label for="dr-talent-heal-percent">+Healing / Damage:</label>
+                <input type="number" min="0" max="30" value="${drState.talentHealPercent}" id="dr-talent-heal-percent" name="dr-talent-heal-percent" aria-label="Percent healing or damage bonus from talents" 
                        oninput="updateDownrankInput('talentHealPercent', this.value)" /> %
               </div>
               <div class="dr-field-row">
-                <label>Mana Cost Cut:</label>
-                <input type="number" min="0" max="30" value="${drState.talentManaPercent}" 
+                <label for="dr-talent-mana-percent">Mana Cost Cut:</label>
+                <input type="number" min="0" max="30" value="${drState.talentManaPercent}" id="dr-talent-mana-percent" name="dr-talent-mana-percent" aria-label="Percent mana cost reduction from talents" 
                        oninput="updateDownrankInput('talentManaPercent', this.value)" /> %
               </div>
               <div class="dr-field-row">
-                <label>Cast Time Cut:</label>
-                <input type="number" min="0" max="2.0" step="0.1" value="${drState.talentCastReduction}" 
+                <label for="dr-talent-cast-reduction">Cast Time Cut:</label>
+                <input type="number" min="0" max="2.0" step="0.1" value="${drState.talentCastReduction}" id="dr-talent-cast-reduction" name="dr-talent-cast-reduction" aria-label="Cast time reduction in seconds from talents" 
                        oninput="updateDownrankInput('talentCastReduction', this.value)" /> sec
               </div>
             </div>

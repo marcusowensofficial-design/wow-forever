@@ -152,7 +152,7 @@ function renderDungeonTimelineSlider() {
           <span>Filter by Player Level:</span>
           <strong class="timeline-level-val">Level ${lvl}</strong>
         </div>
-        <input type="range" min="13" max="60" value="${lvl}" class="timeline-slider-input" id="dg-timeline-range" />
+        <input type="range" min="13" max="60" value="${lvl}" class="timeline-slider-input" id="dg-timeline-range" name="dg-timeline-range" aria-label="Filter dungeons by player level" />
       </div>
 
       <!-- LANE 1: NEW IN FOREVER -->

@@ -71,11 +71,13 @@ function initBetaDurationTracker() {
   const progressText = document.getElementById('beta-duration-progress-text');
   const daysBadge = document.getElementById('beta-days-badge');
   const phase2DayBadge = document.getElementById('beta-phase2-day-badge');
+  const topTickerDayBadge = document.getElementById('top-ticker-day-elapsed');
 
   if (progressFill) progressFill.style.width = `${percent}%`;
   if (progressText) progressText.textContent = `Day ${daysElapsed} of 35 Days (${percent}% elapsed • ${daysRemaining} days remaining)`;
   if (daysBadge) daysBadge.textContent = `${daysRemaining} Days Left`;
   if (phase2DayBadge) phase2DayBadge.textContent = `Day ${daysElapsed} of 35`;
+  if (topTickerDayBadge) topTickerDayBadge.textContent = `Day ${daysElapsed} of 35`;
 }
 
 /* ==========================================================================

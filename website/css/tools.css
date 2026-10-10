@@ -2956,5 +2956,241 @@
   line-height: 1.35;
 }
 
+/* ==========================================================================
+   Curated Classic+ Guides & Field Manuals
+   ========================================================================== */
+.curated-guides-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.25rem;
+}
+
+.guide-feature-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.guide-feature-card:hover {
+  border-color: var(--border-gold);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-gold);
+}
+
+.guide-card-top {
+  display: flex;
+  gap: 0.85rem;
+  align-items: flex-start;
+  margin-bottom: 0.75rem;
+}
+
+.guide-card-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-gold);
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+.guide-category-badge {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-gold);
+  background: rgba(243, 192, 67, 0.12);
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-sm);
+  margin-bottom: 0.35rem;
+}
+
+.guide-card-title {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  color: #fff;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.guide-card-summary {
+  font-size: 0.85rem;
+  color: #cbd5e1;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  flex-grow: 1;
+}
+
+.guide-card-foot {
+  display: flex;
+  justify-content: flex-end;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding-top: 0.75rem;
+}
+
+.guide-read-btn {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text-gold);
+  transition: var(--transition);
+}
+
+.guide-feature-card:hover .guide-read-btn {
+  color: #fff;
+  transform: translateX(3px);
+}
+
+/* ==========================================================================
+   Interactive Level 13-60 Dungeon Timeline Slider
+   ========================================================================== */
+.timeline-control-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  background: rgba(0, 0, 0, 0.25);
+  padding: 1rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-subtle);
+}
+
+.timeline-slider-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.88rem;
+  color: #cbd5e1;
+}
+
+.timeline-level-val {
+  color: var(--text-gold);
+  font-size: 1.1rem;
+}
+
+.timeline-slider-input {
+  width: 100%;
+  accent-color: var(--accent-gold);
+  cursor: pointer;
+}
+
+.timeline-lane-block {
+  margin-bottom: 1.5rem;
+}
+
+.timeline-lane-title {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.92rem;
+  color: #fff;
+}
+
+.timeline-lane-title small {
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+.badge-forever-new {
+  background: rgba(56, 189, 248, 0.18);
+  border: 1px solid #38bdf8;
+  color: #38bdf8;
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+}
+
+.badge-classic-staple {
+  background: rgba(243, 192, 67, 0.18);
+  border: 1px solid var(--border-gold);
+  color: var(--text-gold);
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+}
+
+.timeline-bars-track {
+  position: relative;
+  height: 52px;
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.timeline-bars-track.classic-track {
+  height: 85px;
+}
+
+.timeline-bar-pill {
+  position: absolute;
+  top: 6px;
+  height: 38px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  padding: 0 0.5rem;
+  cursor: pointer;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 0.75rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  z-index: 1;
+}
+
+.timeline-bar-pill.new-forever {
+  background: rgba(56, 189, 248, 0.25);
+  border: 1px solid rgba(56, 189, 248, 0.6);
+  color: #bae6fd;
+}
+
+.timeline-bar-pill.classic {
+  background: rgba(148, 163, 184, 0.15);
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  color: #cbd5e1;
+}
+
+.timeline-bar-pill:hover {
+  transform: translateY(-2px);
+  z-index: 5;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.timeline-bar-pill.new-forever:hover {
+  border-color: #38bdf8;
+  color: #fff;
+}
+
+.timeline-bar-pill.classic:hover {
+  border-color: var(--border-gold);
+  color: #fff;
+}
+
+.timeline-bar-pill.is-active-range {
+  border-width: 2px;
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.4);
+}
+
+.timeline-bar-pill.classic.is-active-range {
+  border-color: #f59e0b;
+  box-shadow: 0 0 10px rgba(245, 158, 11, 0.3);
+}
+
+.timeline-bar-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
 
 
