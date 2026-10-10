@@ -575,8 +575,13 @@ ApplyLocalization = function()
         if frame.hideDungeonsDoneCheck then
             frame.hideDungeonsDoneCheck:SetShown(FDJ.homeEditMode)
         end
+<<<<<<< HEAD
         local extra = FDJ.homeEditMode and 44 or 26
         local width = math.max(126, math.min(180, math.ceil((frame.hideDungeonsButtonText:GetStringWidth() or 100) + extra)))
+=======
+        local extra = FDJ.homeEditMode and 44 or 24
+        local width = math.max(116, math.min(160, math.ceil((frame.hideDungeonsButtonText:GetStringWidth() or 90) + extra)))
+>>>>>>> 9aa5ad54779d0dbca0d01d957309694f6b30c5d7
         frame.hideDungeonsButton:SetWidth(width)
     end
     if PositionHomeFactionButtons then PositionHomeFactionButtons() end
@@ -624,6 +629,10 @@ ApplyLocalization = function()
     for _, button in ipairs(FDJ.bossButtons) do
         if button and button.rare then button.rare:SetText(L("RARE")) end
     end
+<<<<<<< HEAD
+=======
+    if FDJ.RelocalizeLootFilter then FDJ.RelocalizeLootFilter(frame) end
+>>>>>>> 9aa5ad54779d0dbca0d01d957309694f6b30c5d7
 end
 
 ShowDungeonPage = function()
@@ -631,6 +640,12 @@ ShowDungeonPage = function()
     if not frame then return end
     if frame.homeWishlistPanel then frame.homeWishlistPanel:Hide() end
     if frame.homeLootExplorerPanel then frame.homeLootExplorerPanel:Hide() end
+<<<<<<< HEAD
+=======
+    if frame.lootFilterResults then frame.lootFilterResults:Hide() end
+    if frame.lootFilterWindow then frame.lootFilterWindow:Hide() end
+    if frame.bugReportWindow then frame.bugReportWindow:Hide() end
+>>>>>>> 9aa5ad54779d0dbca0d01d957309694f6b30c5d7
     if frame.homePanel then frame.homePanel:Hide() end
     if frame.contentPanel then frame.contentPanel:Show() end
     if frame.backButton then frame.backButton:Show() end
@@ -644,6 +659,12 @@ ShowHomePage = function()
     if frame.contentPanel then frame.contentPanel:Hide() end
     if frame.homeWishlistPanel then frame.homeWishlistPanel:Hide() end
     if frame.homeLootExplorerPanel then frame.homeLootExplorerPanel:Hide() end
+<<<<<<< HEAD
+=======
+    if frame.lootFilterResults then frame.lootFilterResults:Hide() end
+    if frame.lootFilterWindow then frame.lootFilterWindow:Hide() end
+    if frame.bugReportWindow then frame.bugReportWindow:Hide() end
+>>>>>>> 9aa5ad54779d0dbca0d01d957309694f6b30c5d7
     if frame.homePanel then frame.homePanel:Show() end
     if frame.backButton then frame.backButton:Hide() end
     frame.currentView = "home"
@@ -947,6 +968,13 @@ local function CreateMainFrame()
     )
     frame:SetBackdropColor(0.045, 0.042, 0.037, 0.99)
 
+<<<<<<< HEAD
+=======
+    if FDJ.SetupResizeGrip then
+        FDJ.SetupResizeGrip(frame)
+    end
+
+>>>>>>> 9aa5ad54779d0dbca0d01d957309694f6b30c5d7
     frame:SetScript("OnDragStart", function(self)
         self:StartMoving()
     end)
@@ -1027,6 +1055,13 @@ local function CreateMainFrame()
     rightArrow:SetPoint("LEFT", languageSelector, "RIGHT", 4, 0)
     StyleLanguageArrowButton(rightArrow, "RIGHT")
 
+<<<<<<< HEAD
+=======
+    if FDJ.CreateBugReportButton then
+        FDJ.CreateBugReportButton(frame, frame, leftArrow)
+    end
+
+>>>>>>> 9aa5ad54779d0dbca0d01d957309694f6b30c5d7
     local languageSelectorText = languageSelector:CreateFontString(nil, "OVERLAY", "GameFontHighlight")
     frame.languageSelectorText = languageSelectorText
     languageSelectorText:SetPoint("LEFT", 8, 0)
@@ -1274,6 +1309,7 @@ local function CreateMainFrame()
 
     local homeTitle = home:CreateFontString(nil, "OVERLAY", "GameFontNormalHuge")
     frame.homeTitle = homeTitle
+<<<<<<< HEAD
     homeTitle:SetPoint("TOPLEFT", 18, -16)
     homeTitle:SetText(L("BROWSE_DUNGEONS"))
     homeTitle:SetTextColor(1.00, 0.78, 0.20)
@@ -1281,6 +1317,20 @@ local function CreateMainFrame()
     local function CreateHomeFactionButton(faction, texturePath)
         local b = CreateFrame("Button", nil, home, "BackdropTemplate")
         b:SetSize(34, 26)
+=======
+    homeTitle:SetPoint("TOPLEFT", 18, -14)
+    homeTitle:SetText(L("BROWSE_DUNGEONS"))
+    homeTitle:SetTextColor(1.00, 0.78, 0.20)
+
+    local homeSubtitle = home:CreateFontString(nil, "OVERLAY", "GameFontHighlightSmall")
+    frame.homeSubtitle = homeSubtitle
+    homeSubtitle:SetText(L("HOME_SUBTITLE"))
+    homeSubtitle:SetTextColor(0.72, 0.67, 0.58)
+
+    local function CreateHomeFactionButton(faction, texturePath)
+        local b = CreateFrame("Button", nil, home, "BackdropTemplate")
+        b:SetSize(28, 22)
+>>>>>>> 9aa5ad54779d0dbca0d01d957309694f6b30c5d7
         FDJ.SetBackdrop(
             b,
             "Interface\\Buttons\\WHITE8X8",
@@ -1290,7 +1340,11 @@ local function CreateMainFrame()
         )
         b.faction = faction
         b.icon = b:CreateTexture(nil, "ARTWORK")
+<<<<<<< HEAD
         b.icon:SetSize(22, 22)
+=======
+        b.icon:SetSize(18, 18)
+>>>>>>> 9aa5ad54779d0dbca0d01d957309694f6b30c5d7
         b.icon:SetPoint("CENTER")
         b.icon:SetTexture(texturePath)
         b.icon:SetTexCoord(0.06, 0.94, 0.06, 0.94)
@@ -1320,9 +1374,19 @@ local function CreateMainFrame()
     PositionHomeFactionButtons = function()
         if not frame or not frame.homeAllianceButton or not frame.homeHordeButton or not frame.homeTitle then return end
         frame.homeAllianceButton:ClearAllPoints()
+<<<<<<< HEAD
         frame.homeAllianceButton:SetPoint("LEFT", frame.homeTitle, "RIGHT", 14, 0)
         frame.homeHordeButton:ClearAllPoints()
         frame.homeHordeButton:SetPoint("LEFT", frame.homeAllianceButton, "RIGHT", 6, 0)
+=======
+        frame.homeAllianceButton:SetPoint("TOPLEFT", frame.homeTitle, "BOTTOMLEFT", 0, -8)
+        frame.homeHordeButton:ClearAllPoints()
+        frame.homeHordeButton:SetPoint("LEFT", frame.homeAllianceButton, "RIGHT", 6, 0)
+        if frame.homeSubtitle then
+            frame.homeSubtitle:ClearAllPoints()
+            frame.homeSubtitle:SetPoint("LEFT", frame.homeHordeButton, "RIGHT", 10, 0)
+        end
+>>>>>>> 9aa5ad54779d0dbca0d01d957309694f6b30c5d7
     end
     FDJ.PositionHomeFactionButtons = PositionHomeFactionButtons
     PositionHomeFactionButtons()
@@ -1366,6 +1430,7 @@ local function CreateMainFrame()
     FDJ.UpdateHomeFactionButtons = UpdateHomeFactionButtons
     UpdateHomeFactionButtons()
 
+<<<<<<< HEAD
     local homeSubtitle = home:CreateFontString(nil, "OVERLAY", "GameFontHighlightSmall")
     frame.homeSubtitle = homeSubtitle
     homeSubtitle:SetPoint("TOPLEFT", homeTitle, "BOTTOMLEFT", 1, -5)
@@ -1376,6 +1441,12 @@ local function CreateMainFrame()
     frame.hideDungeonsButton = hideDungeonsButton
     hideDungeonsButton:SetSize(142, 28)
     hideDungeonsButton:SetPoint("TOP", frame.languageSelectorButton, "BOTTOM", 0, -26)
+=======
+    local hideDungeonsButton = CreateFrame("Button", nil, home, "BackdropTemplate")
+    frame.hideDungeonsButton = hideDungeonsButton
+    hideDungeonsButton:SetSize(120, 28)
+    hideDungeonsButton:SetPoint("TOPRIGHT", home, "TOPRIGHT", -16, -12)
+>>>>>>> 9aa5ad54779d0dbca0d01d957309694f6b30c5d7
     FDJ.SetBackdrop(hideDungeonsButton, "Interface\\Buttons\\WHITE8X8", "Interface\\Tooltips\\UI-Tooltip-Border", 12, 4)
     hideDungeonsButton:SetBackdropColor(0.12, 0.115, 0.105, 0.98)
     hideDungeonsButton:SetBackdropBorderColor(0.48, 0.40, 0.27, 1)
@@ -1410,16 +1481,26 @@ local function CreateMainFrame()
         if hideDungeonsDoneCheck then
             hideDungeonsDoneCheck:SetShown(FDJ.homeEditMode)
         end
+<<<<<<< HEAD
         local extra = FDJ.homeEditMode and 44 or 26
         local width = math.max(126, math.min(180, math.ceil((hideDungeonsButtonText:GetStringWidth() or 100) + extra)))
+=======
+        local extra = FDJ.homeEditMode and 44 or 24
+        local width = math.max(116, math.min(160, math.ceil((hideDungeonsButtonText:GetStringWidth() or 90) + extra)))
+>>>>>>> 9aa5ad54779d0dbca0d01d957309694f6b30c5d7
         hideDungeonsButton:SetWidth(width)
         if FDJ.RefreshHomeDungeonCards then FDJ.RefreshHomeDungeonCards() end
     end)
 
     local homeLootExplorerButton = CreateFrame("Button", nil, home, "BackdropTemplate")
     frame.homeLootExplorerButton = homeLootExplorerButton
+<<<<<<< HEAD
     homeLootExplorerButton:SetSize(132, 28)
     homeLootExplorerButton:SetPoint("RIGHT", hideDungeonsButton, "LEFT", -10, 0)
+=======
+    homeLootExplorerButton:SetSize(118, 28)
+    homeLootExplorerButton:SetPoint("RIGHT", hideDungeonsButton, "LEFT", -6, 0)
+>>>>>>> 9aa5ad54779d0dbca0d01d957309694f6b30c5d7
     FDJ.SetBackdrop(homeLootExplorerButton, "Interface\\Buttons\\WHITE8X8", "Interface\\Tooltips\\UI-Tooltip-Border", 12, 4)
     homeLootExplorerButton:SetBackdropColor(0.12, 0.09, 0.05, 0.95)
     homeLootExplorerButton:SetBackdropBorderColor(0.65, 0.48, 0.22, 1)
@@ -1452,8 +1533,13 @@ local function CreateMainFrame()
 
     local homeWishlistButton = CreateFrame("Button", nil, home, "BackdropTemplate")
     frame.homeWishlistButton = homeWishlistButton
+<<<<<<< HEAD
     homeWishlistButton:SetSize(136, 28)
     homeWishlistButton:SetPoint("RIGHT", homeLootExplorerButton, "LEFT", -10, 0)
+=======
+    homeWishlistButton:SetSize(114, 28)
+    homeWishlistButton:SetPoint("RIGHT", homeLootExplorerButton, "LEFT", -6, 0)
+>>>>>>> 9aa5ad54779d0dbca0d01d957309694f6b30c5d7
     FDJ.SetBackdrop(homeWishlistButton, "Interface\\Buttons\\WHITE8X8", "Interface\\Tooltips\\UI-Tooltip-Border", 12, 4)
     homeWishlistButton:SetBackdropColor(0.12, 0.09, 0.05, 0.95)
     homeWishlistButton:SetBackdropBorderColor(0.65, 0.48, 0.22, 1)
@@ -1484,6 +1570,12 @@ local function CreateMainFrame()
 
     if FDJ.CreateWishlistUI then FDJ.CreateWishlistUI(frame, home) end
     if FDJ.CreateLootExplorerUI then FDJ.CreateLootExplorerUI(frame, home) end
+<<<<<<< HEAD
+=======
+    if FDJ.CreateLootFilterButton then
+        FDJ.CreateLootFilterButton(frame, home, homeWishlistButton)
+    end
+>>>>>>> 9aa5ad54779d0dbca0d01d957309694f6b30c5d7
 
     local homeEmptyText = home:CreateFontString(nil, "OVERLAY", "GameFontHighlightLarge")
     frame.homeEmptyText = homeEmptyText
@@ -1495,8 +1587,13 @@ local function CreateMainFrame()
 
     local homeLine = home:CreateTexture(nil, "ARTWORK")
     homeLine:SetTexture("Interface\\Buttons\\WHITE8X8")
+<<<<<<< HEAD
     homeLine:SetPoint("TOPLEFT", 18, -58)
     homeLine:SetPoint("TOPRIGHT", -31, -58)
+=======
+    homeLine:SetPoint("TOPLEFT", 18, -66)
+    homeLine:SetPoint("TOPRIGHT", -31, -66)
+>>>>>>> 9aa5ad54779d0dbca0d01d957309694f6b30c5d7
     homeLine:SetHeight(1)
     homeLine:SetColorTexture(0.48, 0.34, 0.16, 0.75)
 
@@ -1506,7 +1603,11 @@ local function CreateMainFrame()
         home,
         "UIPanelScrollFrameTemplate"
     )
+<<<<<<< HEAD
     frame.homeScroll:SetPoint("TOPLEFT", 18, -72)
+=======
+    frame.homeScroll:SetPoint("TOPLEFT", 18, -76)
+>>>>>>> 9aa5ad54779d0dbca0d01d957309694f6b30c5d7
     frame.homeScroll:SetPoint("BOTTOMRIGHT", -31, 15)
 
     frame.homeCardsContent = CreateFrame("Frame", nil, frame.homeScroll)

@@ -310,4 +310,33 @@ FDJ.DUNGEON_PREPARATION = {
             "Bloodmage Thalnos summons ghost adds at low health; tank must gather them with AoE threat.",
         },
     },
+<<<<<<< HEAD
+=======
+
+    ["Scarlet Monastery: Library"] = {
+        level = "33-41",
+        keys = {
+            {
+                id = 7146,
+                name = "The Scarlet Key",
+                desc = "Looted from Doan's Strongbox in the Athenaeum behind Arcanist Doan. Unlocks the Armory and Cathedral wings.",
+                required = false,
+            },
+        },
+        dispels = {
+            { type = "Magic", priority = "High", note = "Arcanist Doan casts Silence and Polymorph; Scarlet Sorcerers cast Slow and Fireball." },
+            { type = "Curse", priority = "Low", note = "Occasional minor hexes and debuffs from monastery acolytes." },
+        },
+        consumables = {
+            { id = 6049, name = "Fire Protection Potion", desc = "Crucial protection against Arcanist Doan's Detonation and Fire Nova." },
+            { id = 1710, name = "Greater Healing Potion", desc = "Burst healing for hound swarms and AoE burst phases." },
+            { id = 3827, name = "Mana Potion", desc = "Keeps healers active during lengthy Athenaeum pulls." },
+        },
+        tacticalNotes = {
+            "Interrupt Arcanist Doan's Arcane Explosion and line of sight behind the large pillars when he begins casting Detonation!",
+            "Focus down Houndmaster Loksey's Scarlet Tracking Hounds before burning the boss.",
+            "Loot The Scarlet Key from Doan's Strongbox on the table behind Arcanist Doan once the room is cleared.",
+        },
+    },
+>>>>>>> 9aa5ad54779d0dbca0d01d957309694f6b30c5d7
 }

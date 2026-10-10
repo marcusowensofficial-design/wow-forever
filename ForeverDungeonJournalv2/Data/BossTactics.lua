@@ -1085,6 +1085,40 @@ FDJ.BOSS_TACTICS = {
                 { id = 15245, name = "Shadow Bolt Volley", icon = "Interface\\Icons\\Spell_Shadow_ShadowBolt", desc = "Hurls dark shadow bolts at all party members, dealing heavy Shadow damage." },
                 { id = 8053, name = "Flame Shock", icon = "Interface\\Icons\\Spell_Fire_FlameShock", desc = "Scorches an enemy target for Fire damage and burns them over 12 sec." },
                 { id = 0, name = "Raise Fallen Crusaders", icon = "Interface\\Icons\\Spell_Shadow_RaiseDead", desc = "Raises fallen Scarlet crusaders as skeletal minions to swarm the highest threat target." },
+<<<<<<< HEAD
+=======
+            },
+        },
+    },
+
+    ["Scarlet Monastery: Library"] = {
+        ["Houndmaster Loksey"] = {
+            overview = "The kennel master of the Scarlet Monastery, stationed in the Huntsman's Cloister surrounded by fierce Scarlet Tracking Hounds. Uses Battle Shout and enrages into Bloodlust.",
+            roleTips = {
+                tank = "Pull Loksey and immediately gather his hounds. Keep the pack grouped together facing away from the group.",
+                healer = "Be prepared for rapid spike damage when Loksey casts Bloodlust on himself and his hounds.",
+                dps = "Focus down and AoE the Scarlet Tracking Hounds first to eliminate extra incoming damage before burning Loksey.",
+            },
+            abilities = {
+                { id = 6742, name = "Bloodlust", icon = "Interface\\Icons\\Spell_Nature_BloodLust", desc = "Increases melee attack speed of the caster and all nearby hound allies by 30% for 30 sec." },
+                { id = 9128, name = "Battle Shout", icon = "Interface\\Icons\\Ability_Warrior_BattleShout", desc = "Increases melee attack power of the caster and all allies within 20 yards for 2 min." },
+                { id = 0, name = "Summon Hounds", icon = "Interface\\Icons\\Ability_Hunter_Pet_Wolf", desc = "Whistles for additional trained Scarlet Tracking Hounds to join the fray when health is low." },
+            },
+        },
+        ["Arcanist Doan"] = {
+            overview = "The powerful arcane scholar and final boss of the Library, residing in the Athenaeum. Unleashes devastating AoE bursts and channels Detonation, requiring players to break line of sight behind pillars.",
+            roleTips = {
+                tank = "Tank Doan near the center of the circular room. When he begins channeling Detonation, sprint behind a pillar out of sight!",
+                healer = "Heal through Arcane Explosion and Fire Nova bursts. Dispel Silence from healers and casters if possible.",
+                dps = "Kick Arcane Explosion and Polymorph. Immediately run behind pillars when Doan begins his Detonation cast!",
+            },
+            abilities = {
+                { id = 9435, name = "Detonation", icon = "Interface\\Icons\\Spell_Fire_SelfDestruct", desc = "Channels for 5 sec before unleashing a massive fiery explosion dealing catastrophic lethal Fire damage within 30 yards. Line of sight behind library pillars to avoid!" },
+                { id = 9433, name = "Arcane Explosion", icon = "Interface\\Icons\\Spell_Nature_WispSplode", desc = "Unleashes an instant blast of arcane energy dealing moderate Arcane damage to all enemies within 10 yards." },
+                { id = 8988, name = "Silence", icon = "Interface\\Icons\\Spell_Holy_Silence", desc = "Silences all enemies within 30 yards, preventing spellcasting for 6 sec." },
+                { id = 13323, name = "Polymorph", icon = "Interface\\Icons\\Spell_Nature_Polymorph", desc = "Transforms the highest-threat non-tank enemy into a sheep for up to 10 sec." },
+                { id = 11969, name = "Fire Nova", icon = "Interface\\Icons\\Spell_Fire_SealOfFire", desc = "Releases an expanding ring of fire, inflicting Fire damage to all nearby enemies." },
+>>>>>>> 9aa5ad54779d0dbca0d01d957309694f6b30c5d7
             },
         },
     },

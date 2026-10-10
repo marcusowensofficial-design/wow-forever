@@ -51,6 +51,9 @@ function FDJ.NormalizeDungeonName(name)
     if n:find("razorfen kraul", 1, true) then
         return "Razorfen Kraul"
     end
+    if n:find("scarlet monastery", 1, true) and n:find("library", 1, true) then
+        return "Scarlet Monastery: Library"
+    end
     if n:find("scarlet monastery", 1, true) and n:find("graveyard", 1, true) then
         return "Scarlet Monastery: Graveyard"
     end
@@ -72,10 +75,24 @@ function FDJ.CurrentDungeon()
     if n then return n end
 
     local subZone = GetSubZoneText and GetSubZoneText()
+<<<<<<< HEAD
     if type(instanceName) == "string" and instanceName:lower():find("scarlet monastery", 1, true)
         and type(subZone) == "string" and subZone:lower():find("graveyard", 1, true)
     then
         return "Scarlet Monastery: Graveyard"
+=======
+    if type(instanceName) == "string" and instanceName:lower():find("scarlet monastery", 1, true) then
+        if FDJ.CurrentScarletWing then
+            local wing = FDJ.CurrentScarletWing()
+            if wing then return wing end
+        end
+        if type(subZone) == "string" and subZone:lower():find("library", 1, true) then
+            return "Scarlet Monastery: Library"
+        end
+        if type(subZone) == "string" and subZone:lower():find("graveyard", 1, true) then
+            return "Scarlet Monastery: Graveyard"
+        end
+>>>>>>> 9aa5ad54779d0dbca0d01d957309694f6b30c5d7
     end
 
     return FDJ.NormalizeDungeonName(subZone)
@@ -211,6 +228,7 @@ SlashCmdList.FOREVERDUNGEONJOURNAL = function(msg)
         return
     end
 
+<<<<<<< HEAD
     if msg == "help" then
         print("|cffd8a83cForever Dungeon Journal commands:|r")
         print("  |cffffffff/fj|r or |cffffffff/fdj|r - Toggle journal window")
@@ -226,6 +244,65 @@ SlashCmdList.FOREVERDUNGEONJOURNAL = function(msg)
         return
     end
 
+=======
+    if msg:match("^wing") then
+        local wing = FDJ.ScarletWingFromWord and FDJ.ScarletWingFromWord(msg:match("^wing%s+(%S+)") or "")
+        if wing and FDJ.SetScarletWing and FDJ.SetScarletWing(wing) then
+            print("|cffd8a83cForever Dungeon Journal|r " .. wing)
+        else
+            print("|cffd8a83cForever Dungeon Journal|r /fj wing graveyard  |  /fj wing library")
+        end
+        return
+    end
+
+    if msg == "where" then
+        local ok, text = pcall(FDJ.DescribeLocation)
+        print("|cffd8a83cForever Dungeon Journal|r " .. (ok and text or "location check failed"))
+        return
+    end
+
+    if msg == "worldmap" then
+        local on = FDJ.ToggleWorldMapOverlay and FDJ.ToggleWorldMapOverlay()
+        print("|cffd8a83cForever Dungeon Journal|r " .. (FDJ.L and FDJ.L("WM_DUNGEON_MAP") or "Dungeon Map") .. " (M): " .. (on and "ON" or "OFF"))
+        return
+    end
+
+    if msg == "fav" or msg == "favourites" or msg == "favorites" then
+        if FDJ.ToggleFavouritesWindow then FDJ.ToggleFavouritesWindow() end
+        return
+    end
+
+    if msg == "filter" or msg == "lootfilter" then
+        if FDJ.ToggleLootFilterWindow then FDJ.ToggleLootFilterWindow() end
+        return
+    end
+
+    if msg == "bug" or msg == "bugreport" then
+        if FDJ.ToggleBugReportWindow then FDJ.ToggleBugReportWindow() end
+        return
+    end
+
+    if msg == "help" then
+        print("|cffd8a83cForever Dungeon Journal commands:|r")
+        print("  |cffffffff/fj|r or |cffffffff/fdj|r - Toggle journal window")
+        print("  |cffffffff/fj <dungeon>|r - Jump directly to dungeon (e.g. |cff00ff00rfc|r, |cff00ff00dm|r, |cff00ff00wc|r, |cff00ff00sfk|r, |cff00ff00bfd|r, |cff00ff00stocks|r, |cff00ff00gnomer|r, |cff00ff00rfk|r, |cff00ff00smgy|r, |cff00ff00smlib|r, |cff00ff00dalaran|r, |cff00ff00excavation|r)")
+        print("  |cffffffff/fj wp [dungeon]|r - Set entrance waypoint & map pin (e.g. |cff00ff00/fj wp dm|r)")
+        print("  |cffffffff/fj wing <graveyard|library>|r - Select Scarlet Monastery wing")
+        print("  |cffffffff/fj worldmap|r - Toggle dungeon overlay on World Map")
+        print("  |cffffffff/fj fav|r - Toggle favourite items window")
+        print("  |cffffffff/fj filter|r - Toggle class/spec loot filter")
+        print("  |cffffffff/fj bug|r - Open bug report form")
+        print("  |cffffffff/fj prep|r - Toggle dungeon preparation & checklist panel")
+        print("  |cffffffff/fj wl|r - Toggle wishlist panel")
+        print("  |cffffffff/fj loot|r - Toggle loot explorer")
+        print("  |cffffffff/fj minimap|r - Show/reset minimap button")
+        print("  |cffffffff/fj lang <locale>|r - Set language (e.g. |cff00ff00de|r, |cff00ff00fr|r, |cff00ff00es|r, |cff00ff00ru|r, |cff00ff00auto|r)")
+        print("  |cffffffff/fj scale <val>|r - Set window scale (0.7 - 1.5, or reset)")
+        print("  |cffffffff/fj rescan|r - Rescan Encounter Journal portraits")
+        return
+    end
+
+>>>>>>> 9aa5ad54779d0dbca0d01d957309694f6b30c5d7
     if msg == "scale" or msg:sub(1, 6) == "scale " then
         local scaleStr = msg:sub(6):match("^%s*(.-)%s*$")
         if scaleStr == "" or scaleStr == "reset" then
@@ -321,6 +398,11 @@ SlashCmdList.FOREVERDUNGEONJOURNAL = function(msg)
                 targetDungeon = "Razorfen Kraul"
             elseif wpTarget == "sm" or wpTarget == "smgy" or wpTarget == "graveyard" then
                 targetDungeon = "Scarlet Monastery: Graveyard"
+<<<<<<< HEAD
+=======
+            elseif wpTarget == "smlib" or wpTarget == "library" or wpTarget == "smlibrary" then
+                targetDungeon = "Scarlet Monastery: Library"
+>>>>>>> 9aa5ad54779d0dbca0d01d957309694f6b30c5d7
             elseif wpTarget == "excavation" or wpTarget == "wetlands" then
                 targetDungeon = "Excavation Site: Wetlands"
             elseif wpTarget == "dalaran" or wpTarget == "cityofdalaran" then
@@ -361,6 +443,11 @@ SlashCmdList.FOREVERDUNGEONJOURNAL = function(msg)
         quickDungeon = "Razorfen Kraul"
     elseif msg == "sm" or msg == "smgy" or msg == "graveyard" or msg == "smgraveyard" then
         quickDungeon = "Scarlet Monastery: Graveyard"
+<<<<<<< HEAD
+=======
+    elseif msg == "smlib" or msg == "library" or msg == "smlibrary" then
+        quickDungeon = "Scarlet Monastery: Library"
+>>>>>>> 9aa5ad54779d0dbca0d01d957309694f6b30c5d7
     elseif msg == "excavation" or msg == "wetlands" or msg == "excavationsite" then
         quickDungeon = "Excavation Site: Wetlands"
     elseif msg == "dalaran" or msg == "cityofdalaran" then
@@ -413,6 +500,11 @@ FDJ.events:SetScript("OnEvent", function(_, event, arg1, arg2, arg3, arg4, arg5,
 
     if event == "PLAYER_LOGIN" then
         if not ForeverDungeonJournalDB then ForeverDungeonJournalDB = {} end
+<<<<<<< HEAD
+=======
+        if not ForeverDungeonJournalCharacterDB then ForeverDungeonJournalCharacterDB = {} end
+        if not ForeverDungeonJournalCharacterDB.favouriteItems then ForeverDungeonJournalCharacterDB.favouriteItems = {} end
+>>>>>>> 9aa5ad54779d0dbca0d01d957309694f6b30c5d7
         if FDJ.MigrateDatabase then FDJ.MigrateDatabase() end
 
         if UnitFactionGroup then
@@ -448,7 +540,7 @@ FDJ.events:SetScript("OnEvent", function(_, event, arg1, arg2, arg3, arg4, arg5,
         elseif GetAddOnMetadata then
             addonVersion = GetAddOnMetadata("ForeverDungeonJournal", "Version")
         end
-        addonVersion = (addonVersion and tostring(addonVersion)) or "1.5.0"
+        addonVersion = (addonVersion and tostring(addonVersion)) or "1.6.0"
         print("|cffd8a83cForever Dungeon Journal|r |cffffffffv" .. addonVersion .. "|r loaded. Type |cffffffff/fj|r.")
         return
     end

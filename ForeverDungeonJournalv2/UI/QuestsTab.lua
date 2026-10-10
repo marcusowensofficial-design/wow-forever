@@ -741,6 +741,12 @@ local function MakeQuestButton(parent)
     button.chainRows = {}
 
     button:SetScript("OnClick", function(self)
+<<<<<<< HEAD
+=======
+        if FDJ.TryLinkQuest and FDJ.TryLinkQuest(self.questID, self.name and self.name:GetText(), self.quest and self.quest.level) then
+            return
+        end
+>>>>>>> 9aa5ad54779d0dbca0d01d957309694f6b30c5d7
         SelectQuest(self.questIndex)
     end)
 
@@ -789,7 +795,19 @@ local function MakeQuestRewardButton(parent)
         UpdateItemComparison(self)
     end)
 
+<<<<<<< HEAD
     button:SetScript("OnClick", function(self)
+=======
+    button:RegisterForClicks("LeftButtonUp", "RightButtonUp")
+    button:SetScript("OnClick", function(self, mouseButton)
+        if mouseButton == "RightButton" then
+            if FDJ.ShowItemFavouriteMenu and self.item then
+                local selectedDungeon = FDJ.selectedDungeon or (ForeverDungeonJournalDB and ForeverDungeonJournalDB.lastDungeon)
+                FDJ.ShowItemFavouriteMenu(self, self.item, selectedDungeon, nil, self.quest)
+                return
+            end
+        end
+>>>>>>> 9aa5ad54779d0dbca0d01d957309694f6b30c5d7
         if not self.item then return end
         if not self.item[1] or self.item[1] <= 0 then return end
         local _, link = FDJ.ItemInfo(self.item[1])
@@ -1251,6 +1269,85 @@ local function UpdatePrerequisiteNavButtons()
     frame.questNextStepButton:SetShown(currentIndex and currentIndex < #chain or false)
 end
 
+<<<<<<< HEAD
+=======
+function FDJ.TryLinkQuest(questID, name, level)
+    if not questID or not IsModifiedClick or not IsModifiedClick("CHATLINK") then return false end
+    if not ChatEdit_InsertLink then return false end
+    if type(ChatEdit_GetActiveWindow) == "function" and not ChatEdit_GetActiveWindow() then return false end
+    local title = name
+    if C_QuestLog and type(C_QuestLog.GetQuestInfo) == "function" then
+        local ok, live = pcall(C_QuestLog.GetQuestInfo, questID)
+        if ok and type(live) == "string" and live ~= "" then title = live end
+    end
+    title = title or ("Quest " .. tostring(questID))
+    local link
+    if type(GetQuestLink) == "function" then
+        local ok, live = pcall(GetQuestLink, questID)
+        if ok and type(live) == "string" and live ~= "" then link = live end
+    end
+    if not link then
+        local questLevel = tonumber(level) or -1
+        link = "|cffffff00|Hquest:" .. tostring(questID) .. ":" .. tostring(questLevel) .. "|h[" .. title .. "]|h|r"
+    end
+    if ChatEdit_InsertLink(link) then return true end
+    return ChatEdit_InsertLink("[" .. title .. "]") and true or false
+end
+
+function FDJ.HideStepItemButtons()
+    local f = FDJ.frame or _G["ForeverDungeonJournalFrame"]
+    if not f then return end
+    for _, button in ipairs(f.questStepItemButtons or {}) do
+        button.item = nil
+        button.fdjSourceText = nil
+        button:Hide()
+    end
+    if f.questProvidedItemHeader then f.questProvidedItemHeader:Hide() end
+    if f.questChainNotice then f.questChainNotice:Hide() end
+    if f.questWarningText then f.questWarningText:Hide() end
+end
+
+function FDJ.PlaceStepItemButtons(items, startIndex, cursorY, width)
+    local f = FDJ.frame or _G["ForeverDungeonJournalFrame"]
+    if not f then return cursorY end
+    f.questStepItemButtons = f.questStepItemButtons or {}
+    local selectedDungeon = FDJ.selectedDungeon or (ForeverDungeonJournalDB and ForeverDungeonJournalDB.lastDungeon)
+    local theme = (FDJ.THEMES and FDJ.THEMES[selectedDungeon]) or (FDJ.THEMES and FDJ.THEMES["Hall of Thanes"])
+    for i, item in ipairs(items) do
+        local index = startIndex + i
+        local button = f.questStepItemButtons[index]
+        if not button then
+            button = MakeQuestRewardButton(f.questDetailContent)
+            f.questStepItemButtons[index] = button
+        end
+        button.item = item
+        if FDJ.UpdateFavouriteIndicator then FDJ.UpdateFavouriteIndicator(button, item[1]) end
+        button.fdjSourceText = item[4] and FDJ.LocalizeFreeText and FDJ.LocalizeFreeText(item[4]) or item[4]
+        button:SetSize(width, 42)
+        button.icon:SetTexture(FDJ.ItemIcon(item[1]))
+        if C_Item and type(C_Item.RequestLoadItemDataByID) == "function" then
+            pcall(C_Item.RequestLoadItemDataByID, item[1])
+        end
+        local itemName, itemLink, quality = FDJ.ItemInfo(item[1])
+        local r, g, b
+        if FDJ.GetAuthoritativeItemQuality then
+            r, g, b = FDJ.GetAuthoritativeItemQuality(item[1], itemLink, quality, item[3] or 1)
+        else
+            r, g, b = FDJ.QualityColor(item[3] or 1)
+        end
+        button.name:SetText(itemName or item[2])
+        button.name:SetTextColor(r, g, b)
+        if theme and theme.lootRow then button:SetBackdropColor(unpack(theme.lootRow)) end
+        if theme and theme.border then button:SetBackdropBorderColor(unpack(theme.border)) end
+        button:ClearAllPoints()
+        button:SetPoint("TOPLEFT", f.questDetailContent, "TOPLEFT", 0, -cursorY)
+        button:Show()
+        cursorY = cursorY + 46
+    end
+    return cursorY
+end
+
+>>>>>>> 9aa5ad54779d0dbca0d01d957309694f6b30c5d7
 local function RefreshPrerequisiteQuestDetail(step)
     if not frame or not step then return false end
 
@@ -1370,6 +1467,10 @@ local function RefreshPrerequisiteQuestDetail(step)
     if frame.questRequiredItemsHeader then frame.questRequiredItemsHeader:Hide() end
     if frame.questRequiredItemButton then frame.questRequiredItemButton.item = nil; frame.questRequiredItemButton:Hide() end
     if frame.questNoteItemButton then frame.questNoteItemButton.item = nil; frame.questNoteItemButton:Hide() end
+<<<<<<< HEAD
+=======
+    if FDJ.HideStepItemButtons then FDJ.HideStepItemButtons() end
+>>>>>>> 9aa5ad54779d0dbca0d01d957309694f6b30c5d7
     if frame.questStartsText then frame.questStartsText:SetText(""); frame.questStartsText:Hide() end
     if frame.questStartDungeonIcon then frame.questStartDungeonIcon:Hide() end
     if frame.questTurninText then frame.questTurninText:SetText(""); frame.questTurninText:Hide() end
@@ -1409,6 +1510,36 @@ local function RefreshPrerequisiteQuestDetail(step)
     frame.questDetailText:Show()
     cursorY = cursorY + (frame.questDetailText:GetStringHeight() or 40) + 14
 
+<<<<<<< HEAD
+=======
+    local detailWidth = math.max(260, (frame.questDetailScroll:GetWidth() or 350) - 4)
+    local stepRequired = details.requiredItems
+    if stepRequired and #stepRequired > 0 and frame.questRequiredItemsHeader then
+        local usefulRequired = {}
+        for _, requiredItem in ipairs(stepRequired) do
+            if type(requiredItem[4]) == "string" and requiredItem[4] ~= "" then
+                usefulRequired[#usefulRequired + 1] = requiredItem
+            end
+        end
+        if #usefulRequired > 0 and FDJ.PlaceStepItemButtons then
+            frame.questRequiredItemsHeader:ClearAllPoints()
+            frame.questRequiredItemsHeader:SetPoint("TOPLEFT", frame.questDetailContent, "TOPLEFT", 0, -cursorY)
+            frame.questRequiredItemsHeader:Show()
+            cursorY = cursorY + (frame.questRequiredItemsHeader:GetStringHeight() or 18) + 4
+            cursorY = FDJ.PlaceStepItemButtons(usefulRequired, 0, cursorY, math.min(300, detailWidth)) + 8
+        else
+            frame.questRequiredItemsHeader:Hide()
+        end
+    end
+    if details.providedItem and frame.questProvidedItemHeader and FDJ.PlaceStepItemButtons then
+        frame.questProvidedItemHeader:ClearAllPoints()
+        frame.questProvidedItemHeader:SetPoint("TOPLEFT", frame.questDetailContent, "TOPLEFT", 0, -cursorY)
+        frame.questProvidedItemHeader:Show()
+        cursorY = cursorY + (frame.questProvidedItemHeader:GetStringHeight() or 18) + 4
+        cursorY = FDJ.PlaceStepItemButtons({ details.providedItem }, stepRequired and #stepRequired or 0, cursorY, math.min(300, detailWidth)) + 8
+    end
+
+>>>>>>> 9aa5ad54779d0dbca0d01d957309694f6b30c5d7
     if details.pickup and details.pickup ~= "" then
         frame.questStartsHeader:ClearAllPoints()
         frame.questStartsHeader:SetPoint("TOPLEFT", frame.questDetailContent, "TOPLEFT", 0, -cursorY)
@@ -2036,6 +2167,11 @@ RefreshQuestDetail = function()
             button:SetWidth(rewardWidth)
             local item = rewardItems[i]
             button.item = item
+<<<<<<< HEAD
+=======
+            button.quest = quest
+            if FDJ.UpdateFavouriteIndicator then FDJ.UpdateFavouriteIndicator(button, item[1]) end
+>>>>>>> 9aa5ad54779d0dbca0d01d957309694f6b30c5d7
             button.icon:SetTexture(item[5] or FDJ.ItemIcon(item[1]))
             if item[1] and item[1] > 0 and C_Item and type(C_Item.RequestLoadItemDataByID) == "function" then
                 pcall(C_Item.RequestLoadItemDataByID, item[1])

@@ -64,6 +64,8 @@ FDJ.QUEST_START_MAPS = {
     [2929] = { mapID = 1455, x = 0.680, y = 0.490, label = "High Tinker Mekkatorque — Tinker Town, Ironforge", targetName = "High Tinker Mekkatorque" },
     [2843] = { mapID = 1434, x = 0.280, y = 0.770, label = "Scooty — Booty Bay", targetName = "Scooty" },
     [2841] = { mapID = 1454, x = 0.760, y = 0.250, label = "Nogg — Valley of Honor, Orgrimmar", targetName = "Nogg" },
+    [2948] = { mapID = 1455, x = 0.357, y = 0.040, label = "Talvash del Kissel — Mystic Ward, Ironforge", targetName = "Talvash del Kissel" },
+    [2950] = { mapID = 1454, x = 0.760, y = 0.250, label = "Nogg — Valley of Honor, Orgrimmar", targetName = "Nogg" },
 
     -- Razorfen Kraul quest givers.
     [1221] = { mapID = 1413, x = 0.620, y = 0.370, label = "Mebok Mizzyrix — Ratchet", targetName = "Mebok Mizzyrix" },

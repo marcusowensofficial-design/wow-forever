@@ -414,4 +414,28 @@ FDJ.ITEM_REQ_LEVEL = {
     [286979] = 17, -- Rotmender's Gloves (iLvl 22)
     [286980] = 17, -- Rotmender's Sash (iLvl 22)
     [286981] = 17, -- Death Bindings (iLvl 22)
+<<<<<<< HEAD
+=======
+    -- Scarlet Monastery: Library & Recent Beta items
+    [7756]   = 29, -- Dog Training Gloves
+    [7710]   = 29, -- Loksey's Training Stick
+    [7714]   = 34, -- Hypnotic Blade
+    [7713]   = 34, -- Illusionary Rod
+    [274293] = 34, -- Spellsever Crossbow
+    [7712]   = 33, -- Mantle of Doan
+    [7711]   = 33, -- Robe of Doan
+    [276898] = 30, -- Salve and Salvation
+    [276899] = 30, -- Knucklebound Thimble
+    [273807] = 23, -- Demolition Girdle
+    [273811] = 24, -- Repurposed Rack
+    [273817] = 23, -- Graverobber's Shovel
+    [273819] = 23, -- Boneslicer
+    [274043] = 27, -- Irradiated Shield
+    [274042] = 27, -- Skullduggery Belt
+    [274068] = 28, -- Thermaplugg Medal of Honor
+    [273026] = 26, -- Garb of Florid Feathers
+    [274159] = 28, -- Thorncursed Grips
+    [274149] = 27, -- Thornweaver Drape
+    [273647] = 25, -- Worgpelt Leggings
+>>>>>>> 9aa5ad54779d0dbca0d01d957309694f6b30c5d7
 }

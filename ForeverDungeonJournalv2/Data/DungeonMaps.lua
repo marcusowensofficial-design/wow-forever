@@ -97,6 +97,14 @@ FDJ.DUNGEON_MAPS = {
         },
     },
 
+    ["Scarlet Monastery: Library"] = {
+        floors = { { uiMapID = 303, tiles = "Interface\\WorldMap\\ScarletMonastery\\ScarletMonastery2_" } },
+        bosses = {
+            { name = "Houndmaster Loksey", x = 0.302, y = 0.846 },
+            { name = "Arcanist Doan",      x = 0.835, y = 0.740 },
+        },
+    },
+
     ["Scarlet Monastery: Graveyard"] = {
         floors = { { tiles = "Interface\\WorldMap\\ScarletMonastery\\ScarletMonastery1_", patches = { { tex = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\MapPatches\\ScarletMonastery1_s1", x0 = 0.2285, y0 = 0.5404, x1 = 0.2625, y1 = 0.5913 }, { tex = "Interface\\AddOns\\ForeverDungeonJournal\\Media\\MapPatches\\ScarletMonastery1_s2", x0 = 0.7066, y0 = 0.5749, x1 = 0.7405, y1 = 0.6257 } } } },
         entrance = { floor = 1, x = 0.841, y = 0.831, angle = 180 },

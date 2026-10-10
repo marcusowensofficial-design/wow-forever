@@ -388,6 +388,7 @@ FDJ.DB = {
                 aliases = { "Deviate Faerie Dragon" },
                 loot = {
                     {5243, "Firebelcher", "Ranged, Wand", 3},
+                    {252781, "Pattern: Stormrider's Leather Gloves", "Pattern, Leatherworking", 2},
                     {6632, "Feyscale Cloak", "Back, Cloth", 3},
                 },
                 description = "Rare spawn.",
@@ -1206,6 +1207,9 @@ DB["Ragefire Chasm"] = {
             aliases = {"Oggleflint"},
             loot = {
                 {272999, "Barbaric Crossbow", "Ranged, Crossbow", 3},
+                {252781, "Pattern: Stormrider's Leather Gloves", "Pattern, Leatherworking", 2},
+                {252782, "Pattern: Wisdom's Leather Gloves", "Pattern, Leatherworking", 2},
+
                 {272996, "Trogg Scepter", "Main Hand, Mace", 3},
                 {272998, "Bone Knuckles", "Main Hand, Fist Weapon", 3},
             },
@@ -1216,6 +1220,11 @@ DB["Ragefire Chasm"] = {
             aliases = {"Taragaman the Hungerer"},
             loot = {
                 {14149, "Subterranean Cape", "Back, Cloth", 3},
+                {251361, "Plans: Guard's Gloves", "Plans, Blacksmithing", 2},
+                {251362, "Plans: Protector's Gloves", "Plans, Blacksmithing", 2},
+                {251363, "Plans: Acolyte's Gloves", "Plans, Blacksmithing", 2},
+                {252782, "Pattern: Wisdom's Leather Gloves", "Pattern, Leatherworking", 2},
+
                 {14148, "Crystalline Cuffs", "Wrist, Cloth", 3},
                 {14145, "Cursed Felblade", "Main Hand, Sword", 3},
             },
@@ -1226,6 +1235,9 @@ DB["Ragefire Chasm"] = {
             aliases = {"Jergosh the Invoker"},
             loot = {
                 {14150, "Robe of Evocation", "Chest, Cloth", 3},
+                {251360, "Plans: Veteran's Gloves", "Plans, Blacksmithing", 2},
+                {253906, "Pattern: Filigreed Flame Gown", "Pattern, Tailoring", 2},
+
                 {14147, "Cavedweller Bracers", "Wrist, Mail", 3},
                 {14151, "Chanting Blade", "One-Hand, Dagger", 3},
             },
@@ -1236,6 +1248,11 @@ DB["Ragefire Chasm"] = {
             aliases = {"Bazzalan"},
             loot = {
                 {273003, "Searing Dagger", "Main Hand, Dagger", 3},
+                {252780, "Pattern: Totemic Leather Gloves", "Pattern, Leatherworking", 2},
+                {252782, "Pattern: Wisdom's Leather Gloves", "Pattern, Leatherworking", 2},
+                {253908, "Pattern: Filigreed Shadow Gown", "Pattern, Tailoring", 2},
+                {253910, "Pattern: Filigreed Pearly Gown", "Pattern, Tailoring", 2},
+
                 {273007, "Chasm Walkers", "Feet, Leather", 3},
                 {273005, "Satyrskin Cloak", "Back, Cloth", 3},
             },
@@ -1359,6 +1376,27 @@ DB["Shadowfang Keep"] = {
             aliases = {"Fel Steed", "Shadow Charger", "Fel Steed / Shadow Charger"},
             loot = {
                 {6341, "Eerie Stable Lantern", "Held In Off-hand", 3},
+                {251341, "Plans: Guard's Chain Shirt", "Plans, Blacksmithing", 2},
+                {251362, "Plans: Protector's Gloves", "Plans, Blacksmithing", 2},
+                {251363, "Plans: Acolyte's Gloves", "Plans, Blacksmithing", 2},
+                {251364, "Plans: Crusader's Gloves", "Plans, Blacksmithing", 2},
+                {252781, "Pattern: Stormrider's Leather Gloves", "Pattern, Leatherworking", 2},
+                {252782, "Pattern: Wisdom's Leather Gloves", "Pattern, Leatherworking", 2},
+                {253902, "Pattern: Filigreed Pristine Gown", "Pattern, Tailoring", 2},
+                {253904, "Pattern: Filigreed Silky Gown", "Pattern, Tailoring", 2},
+                {253906, "Pattern: Filigreed Flame Gown", "Pattern, Tailoring", 2},
+                {253908, "Pattern: Filigreed Shadow Gown", "Pattern, Tailoring", 2},
+                {253910, "Pattern: Filigreed Pearly Gown", "Pattern, Tailoring", 2},
+                {253912, "Pattern: Filigreed Shining Gown", "Pattern, Tailoring", 2},
+                {251381, "Plans: Guard's Silvered Chain Helm", "Plans, Blacksmithing", 2},
+                {251382, "Plans: Protector's Silvered Chain Helm", "Plans, Blacksmithing", 2},
+                {252799, "Pattern: Trapper's Leather Hood", "Pattern, Leatherworking", 2},
+                {252801, "Pattern: Totemic Leather Hood", "Pattern, Leatherworking", 2},
+                {252803, "Pattern: Wisdom's Leather Hood", "Pattern, Leatherworking", 2},
+                {253940, "Pattern: Filigreed Silky Leggings", "Pattern, Tailoring", 2},
+                {253946, "Pattern: Filigreed Pearly Leggings", "Pattern, Tailoring", 2},
+                {253948, "Pattern: Filigreed Shining Leggings", "Pattern, Tailoring", 2},
+
                 {932, "Fel Steed Saddlebags", "Bag", 2},
             },
         },
@@ -1388,6 +1426,9 @@ DB["Shadowfang Keep"] = {
             aliases = {"Commander Springvale"},
             loot = {
                 {6320, "Commander's Crest", "Off Hand, Shield", 3},
+                {273105, "Blueprint: Toxin Study", "Blueprint, Engineering", 3},
+                {6341, "Eerie Stable Lantern", "Off Hand, Held", 2},
+
                 {3191, "Arced War Axe", "Two-Hand, Axe", 3},
                 {273643, "Worgenbane Talisman", "Trinket", 3},
             },
@@ -1437,6 +1478,8 @@ DB["Shadowfang Keep"] = {
             aliases = {"Wolf Master Nandos"},
             loot = {
                 {3748, "Feline Mantle", "Shoulder, Cloth", 3},
+                {273647, "Worgpelt Leggings", "Legs, Leather", 3},
+
                 {6314, "Wolfmaster Cape", "Back, Cloth", 3},
             },
         },
@@ -1584,6 +1627,10 @@ FDJ.DB["The Stockade"] = {
             aliases = {"Targorr the Dread"},
             loot = {
                 {273805, "Blackrock Harness", "Chest, Leather", 3},
+                {251380, "Plans: Veteran's Silvered Chain Helm", "Plans, Blacksmithing", 2},
+                {251382, "Plans: Protector's Silvered Chain Helm", "Plans, Blacksmithing", 2},
+                {253942, "Pattern: Filigreed Flame Leggings", "Pattern, Tailoring", 2},
+
                 {273804, "Executioner Mantle", "Shoulder, Leather", 3},
                 {273806, "Dark Horde Band", "Finger", 3},
             },
@@ -1594,6 +1641,10 @@ FDJ.DB["The Stockade"] = {
             aliases = {"Kam Deepfury"},
             loot = {
                 {2280, "Kam's Walking Stick", "Two-Hand, Staff", 4},
+                {273807, "Demolition Girdle", "Waist, Mail", 3},
+                {251379, "Plans: Crusader's Silvered Chain Leggings", "Plans, Blacksmithing", 2},
+                {252825, "Pattern: Wisdom's Leather Leggings", "Pattern, Leatherworking", 2},
+
                 {273808, "Bridgebreaker Bindings", "Wrist, Cloth", 3},
             },
         },
@@ -1603,6 +1654,9 @@ FDJ.DB["The Stockade"] = {
             aliases = {"Hamhock"},
             loot = {
                 {273809, "Hamhock's Cleaver", "Main Hand, Axe", 3},
+                {273811, "Repurposed Rack", "Chest, Mail", 3},
+                {251377, "Plans: Protector's Silvered Chain Leggings", "Plans, Blacksmithing", 2},
+
                 {273810, "Ogre Grips", "Hands, Mail", 3},
             },
         },
@@ -1612,6 +1666,13 @@ FDJ.DB["The Stockade"] = {
             aliases = {"Dextren Ward"},
             loot = {
                     {273820, "Nightskulker Ring", "Finger", 3},
+                {273817, "Graverobber's Shovel", "Two-Hand, Mace", 3},
+                {273819, "Boneslicer", "One-Hand, Sword", 3},
+                {251375, "Plans: Veteran's Silvered Chain Leggings", "Plans, Blacksmithing", 2},
+                {251376, "Plans: Guard's Silvered Chain Leggings", "Plans, Blacksmithing", 2},
+                {252820, "Pattern: Brawler's Leather Legguards", "Pattern, Leatherworking", 2},
+                {252821, "Pattern: Trapper's Leather Legguards", "Pattern, Leatherworking", 2},
+
             },
         },
         {
@@ -1620,6 +1681,10 @@ FDJ.DB["The Stockade"] = {
             aliases = {"Bazil Thredd"},
             loot = {
                 {273827, "Debt Collector", "Main Hand, Sword", 3},
+                {252824, "Pattern: Stormrider's Leather Kilt", "Pattern, Leatherworking", 2},
+                {253976, "Pattern: Filigreed Pristine Circlet", "Pattern, Tailoring", 2},
+                {253986, "Pattern: Filigreed Shining Circlet", "Pattern, Tailoring", 2},
+
                 {273824, "Defias Jailbreakers", "Hands, Leather", 3},
                 {273825, "Red Wool Cloak", "Back, Cloth", 3},
                 {273829, "Concealed Hand Crossbow", "Ranged, Crossbow", 3},
@@ -1971,6 +2036,9 @@ FDJ.DB["Excavation Site: Wetlands"] = {
             description = "A giant violet raptor, leader of the Thicket raptors.",
             loot = {
                 {273025, "Raptorclaw Greaves", "Feet, Mail", 3},
+                {273026, "Garb of Florid Feathers", "Chest, Leather", 3},
+                {273106, "Blueprint: Greenhouse", "Blueprint, Engineering", 3},
+
                 {273027, "Raptor's Gaze", "Held In Off-hand", 3},
             },
         },
@@ -1994,6 +2062,8 @@ FDJ.DB["Excavation Site: Wetlands"] = {
             description = "Final boss: a stone Titan construct.",
             loot = {
                 {273028, "Reliquary Mantle", "Shoulder, Mail", 3},
+                {273097, "Blueprint: Rock Garden", "Blueprint, Engineering", 3},
+
                 {273029, "Golemsight Long Gun", "Ranged, Gun", 3},
                 {273030, "Ring of Power Regulation", "Finger", 3}, -- ID unverified
                 {270866, "Titan Relic", "Quest Item", 1},
@@ -2285,6 +2355,9 @@ FDJ.DB["Gnomeregan"] = {
             description = "With his pet Chomper, in the trogg cave off the outer ring.",
             loot = {
                 {9445, "Grubbis Paws", "Hands, Mail", 3},
+                {274043, "Irradiated Shield", "Off Hand, Shield", 3},
+                {274042, "Skullduggery Belt", "Waist, Leather", 3},
+
             },
         },
         {
@@ -2316,6 +2389,8 @@ FDJ.DB["Gnomeregan"] = {
             description = "In the Launch Bay arena.",
             loot = {
                 {9449, "Manual Crowd Pummeler", "Two-Hand, Mace", 3},
+                {274068, "Thermaplugg Medal of Honor", "Neck", 3},
+
                 {9450, "Gnomebot Operating Boots", "Feet, Leather", 3},
             },
         },
@@ -2481,6 +2556,8 @@ FDJ.DB["Razorfen Kraul"] = {
             description = "A quilboar geomancer near the start of the Kraul.",
             loot = {
                 {274155, "Geomancer Headdress", "Head, Leather", 3},
+                {274149, "Thornweaver Drape", "Back, Cloak", 3},
+
                 {274152, "Roogug's Severed Head", "Trinket", 3},
             },
         },
@@ -2490,6 +2567,9 @@ FDJ.DB["Razorfen Kraul"] = {
             aliases = {"Aggem Thorncurse"},
             loot = {
                 {6681, "Thornspike", "One-Hand, Dagger", 3},
+                {274159, "Thorncursed Grips", "Hands, Leather", 3},
+                {252820, "Pattern: Brawler's Leather Legguards", "Pattern, Leatherworking", 2},
+
                 {274158, "Death Prophet Spine", "Two-Hand, Staff", 3},
             },
         },
@@ -2509,6 +2589,9 @@ FDJ.DB["Razorfen Kraul"] = {
             aliases = {"Overlord Ramtusk"},
             loot = {
                 {6687, "Corpsemaker", "Two-Hand, Axe", 3},
+                {251379, "Plans: Crusader's Silvered Chain Leggings", "Plans, Blacksmithing", 2},
+                {252821, "Pattern: Trapper's Leather Legguards", "Pattern, Leatherworking", 2},
+
                 {6686, "Tusken Helm", "Head, Mail", 3},
                 {274161, "Quillord Mail Leggings", "Legs, Mail", 3},
             },
@@ -2519,6 +2602,8 @@ FDJ.DB["Razorfen Kraul"] = {
             aliases = {"Agathelos the Raging"},
             loot = {
                 {6691, "Swinetusk Shank", "Main Hand, Dagger", 3},
+                {251378, "Plans: Acolyte's Silvered Chain Leggings", "Plans, Blacksmithing", 2},
+
                 {6690, "Ferine Leggings", "Legs, Leather", 3},
                 {274160, "Quilrager Throwing Axe", "Thrown", 3},
             },
@@ -2530,6 +2615,8 @@ FDJ.DB["Razorfen Kraul"] = {
             description = "Final boss, deep in the Kraul.",
             loot = {
                 {6693, "Agamaggan's Clutch", "Finger", 3},
+                {273103, "Blueprint: Arcane Salvager", "Blueprint, Engineering", 3},
+
                 {6694, "Heart of Agamaggan", "Off Hand, Shield", 3},
                 {6692, "Pronged Reaver", "One-Hand, Axe", 3},
             },
@@ -2644,6 +2731,8 @@ FDJ.DB["Scarlet Monastery: Graveyard"] = {
             rare = true,
             loot = {
                 {7691, "Embalmed Shroud", "Head, Cloth", 3},
+                {252513, "Trapper's Leather Helm", "Head, Leather", 3},
+
                 {7690, "Ebon Vise", "Hands, Leather", 3},
                 {7689, "Morbid Dawn", "Two-Hand, Sword", 3},
             },
@@ -2667,6 +2756,8 @@ FDJ.DB["Scarlet Monastery: Graveyard"] = {
             description = "Final boss, in Honor's Tomb.",
             loot = {
                 {7685, "Orb of the Forgotten Seer", "Held In Off-hand", 3},
+                {252822, "Pattern: Defender's Leather Kilt", "Pattern, Leatherworking", 2},
+
                 {7684, "Bloodmage Mantle", "Shoulder, Cloth", 3},
                 {274291, "Polished Skullcap", "Head, Mail", 3},
             },
@@ -2701,5 +2792,122 @@ FDJ.ORDER = {
     "Gnomeregan",
     "Razorfen Kraul",
     "Scarlet Monastery: Graveyard",
+    "Scarlet Monastery: Library",
 }
 
+
+FDJ.DB["Scarlet Monastery: Library"] = {
+    level = "33-41",
+    location = "Tirisfal Glades",
+    description = "The library wing of the Scarlet Monastery, home to the Houndmaster's kennels and Arcanist Doan's athenaeum.",
+    icon = "Interface\\Icons\\INV_Misc_Book_09",
+    quests = {{
+        objective = "Retrieve Mythology of the Titans from the Monastery and bring it to Librarian Mae Paledust in Ironforge.",
+        rewardSummary = "",
+        id = 1050,
+        startMap = { mapID = 1455, x = 0.744, y = 0.128, label = "Librarian Mae Paledust — Hall of Explorers", targetName = "Librarian Mae Paledust" },
+        name = "Mythology of the Titans",
+        faction = "Alliance",
+        pickup = "Librarian Mae Paledust, Ironforge",
+        level = 38,
+        requires = 28,
+        rewardItems = {{7746, "Explorers' League Commendation", 2}},
+        turnin = "Librarian Mae Paledust, Ironforge",
+        liveXPFallback = 3550,
+    }, {
+        objective = "Retrieve The Lost Magic of the Runemasters from the Scarlet Monastery.",
+        rewardSummary = "45s",
+        id = 96800,
+        name = "Past Due",
+        faction = "Alliance",
+        pickup = "Magus Olvek, Dalaran, Alterac Mountains",
+        startMap = { mapID = 1416, x = 0.097, y = 0.619, label = "Magus Olvek — Dalaran", targetName = "Magus Olvek" },
+        level = 38,
+        requires = 30,
+        rewardChoice = true,
+        rewardItems = {{276898, "Salve and Salvation", 3}, {276899, "Knucklebound Thimble", 3}},
+        note = "New in Forever. The book is held by Arcanist Doan.",
+        turnin = "Magus Olvek, Dalaran, Alterac Mountains",
+        liveXPFallback = 6750,
+    }, {
+        objective = "Retrieve the Compendium of the Fallen from the Monastery and return to Sage Truthseeker in Thunder Bluff.",
+        rewardSummary = "",
+        id = 1049,
+        startMap = { mapID = 1456, x = 0.346, y = 0.476, label = "Sage Truthseeker — Thunder Bluff", targetName = "Sage Truthseeker" },
+        name = "Compendium of the Fallen",
+        faction = "Horde",
+        pickup = "Sage Truthseeker, Thunder Bluff",
+        level = 38,
+        requires = 28,
+        rewardChoice = true,
+        rewardItems = {{7747, "Vile Protector", 3}, {17508, "Forcestone Buckler", 3}, {7749, "Omega Orb", 3}},
+        warning = "Undead cannot take this quest",
+        turnin = "Sage Truthseeker, Thunder Bluff",
+        liveXPFallback = 3550,
+    }, {
+        warning = "This is a long chain that has a step in the Library",
+        objective = "Speak to Dorn Plainstalker in Thousand Needles.",
+        rewardSummary = "",
+        id = 1394,
+        name = "Final Passage",
+        faction = "Horde",
+        pickup = "Parqual Fintallas, Undercity",
+        level = 36,
+        requires = 25,
+        rewardChoice = true,
+        rewardItems = {{6804, "Windstorm Hammer", 3}, {6806, "Dancing Flame", 3}},
+        turnin = "Dorn Plainstalker, Thousand Needles",
+        liveXPFallback = 4200,
+    }, {
+        objective = "Bring 20 Hearts of Zeal from the Scarlet Monastery to Master Apothecary Faranell.",
+        rewardSummary = "",
+        id = 1113,
+        name = "Hearts of Zeal",
+        faction = "Horde",
+        pickup = "Master Apothecary Faranell, Undercity",
+        level = 33,
+        requires = 30,
+        turnin = "Master Apothecary Faranell, Undercity",
+        liveXPFallback = 3300,
+    }},
+    bosses = {
+        {
+            name = "Houndmaster Loksey",
+            npcID = 3974,
+            aliases = {"Houndmaster Loksey"},
+            description = "In the Huntsman's Cloister.",
+            loot = {
+                {7756, "Dog Training Gloves", "Hands, Leather", 3},
+                {3456, "Dog Whistle", "Trinket", 3},
+                {7710, "Loksey's Training Stick", "Two-Hand, Staff", 3},
+            },
+        },
+        {
+            name = "Arcanist Doan",
+            npcID = 6487,
+            aliases = {"Arcanist Doan"},
+            description = "Final boss, in the Athenaeum. Doan's Strongbox behind him holds The Scarlet Key.",
+            loot = {
+                {7714, "Hypnotic Blade", "Main Hand, Dagger", 3},
+                {7713, "Illusionary Rod", "Two-Hand, Staff", 3},
+                {274293, "Spellsever Crossbow", "Ranged, Crossbow", 3},
+                {7712, "Mantle of Doan", "Shoulder, Cloth", 2},
+                {7711, "Robe of Doan", "Chest, Cloth", 2},
+                {7146, "The Scarlet Key", "Key", 2},
+            },
+        },
+        {
+            -- Scarlet Monastery zone-wide drops recorded on Library mobs (Wowhead Forever).
+            name = "Trash Drops",
+            trash = true,
+            loot = {
+                {10332, "Scarlet Boots", "Feet, Mail", 3, "Scarlet Monastery trash (Chain of the Scarlet Crusade)"},
+                {5819, "Sunblaze Coif", "Head, Mail", 3, "Scarlet Monastery trash (very rare)"},
+                {7730, "Cobalt Crusher", "Two-Hand, Mace", 3, "Scarlet Monastery trash (very rare)"},
+                {7757, "Windweaver Staff", "Two-Hand, Staff", 3, "Scarlet Monastery trash (very rare)"},
+                {7761, "Steelclaw Reaver", "Main Hand, Axe", 3, "Scarlet Monastery trash (very rare)"},
+                {7787, "Resplendent Guardian", "Off Hand, Shield", 3, "Scarlet Monastery trash (very rare)"},
+            },
+        },
+    },
+}
