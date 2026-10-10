@@ -1,0 +1,651 @@
+[
+  {
+    "id": "nightveiled-rotheap",
+    "name": "Nightveiled Rotheap",
+    "zone": "Wetlands",
+    "level": 32,
+    "elite": true,
+    "macro": "/target Nightveiled Rotheap",
+    "coords": "19.6, 43.4 (Patrols coast & river at night)",
+    "respawn": "5 to 30 min (Night only, server time)",
+    "lore": "Comes out of the sea on the west coast, then walks up the main river toward the dam. Two or three can be up at once.",
+    "drops": [
+      {
+        "name": "Rotheap Innards",
+        "type": "Quest Item",
+        "desc": "Every member of party loots one; trade to Rethiel the Greenwarden (56.2, 40.5) for Malignant Root."
+      },
+      {
+        "name": "Malignant Root",
+        "type": "Finger (iLvl 32)",
+        "stats": "+7 Stamina, +8 Attack Power, +4 Spell Power"
+      }
+    ]
+  },
+  {
+    "id": "heartrazor",
+    "name": "Heartrazor",
+    "zone": "Thousand Needles",
+    "level": 31,
+    "elite": true,
+    "macro": "/target Heartrazor",
+    "coords": "15.8, 41.2 (Highperch Cliffs)",
+    "respawn": "5 to 8 hours",
+    "lore": "Wyvern that patrols Highperch on the western cliffs. Hits hard with deadly poisons.",
+    "drops": [
+      {
+        "name": "Wyvern Heart Band",
+        "type": "Finger (iLvl 34)",
+        "stats": "+5 Agility, +5 Stamina, +15 Attack Power"
+      }
+    ]
+  },
+  {
+    "id": "humar-the-pridelord",
+    "name": "Humar the Pridelord",
+    "zone": "The Barrens",
+    "level": 23,
+    "elite": true,
+    "tameable": "Cat (1.30s attack speed)",
+    "macro": "/target Humar the Pridelord",
+    "coords": "61.0, 35.0 (North of Ratchet)",
+    "respawn": "8 to 12 hours",
+    "lore": "The legendary black lion resting under the grand acacia tree north of Ratchet.",
+    "drops": [
+      {
+        "name": "Mark of the Pack Leader",
+        "type": "Neck (iLvl 25) - Blessing of Kalimdor Set (1/3)",
+        "stats": "+5 Strength, +5 Intellect. (2) Set: +5% Movement Speed in Barrens & Stonetalon."
+      }
+    ]
+  },
+  {
+    "id": "swiftmane",
+    "name": "Swiftmane",
+    "zone": "The Barrens",
+    "level": 20,
+    "elite": false,
+    "macro": "/target Swiftmane",
+    "coords": "60.4, 33.0 (Plateau north of Ratchet)",
+    "respawn": "4 to 6 hours",
+    "lore": "A majestic zhevra galloping along the savannah ridges north of Ratchet.",
+    "drops": [
+      {
+        "name": "Signet of the Zhevra",
+        "type": "Finger (iLvl 23) - Blessing of Kalimdor Set (2/3)",
+        "stats": "+6 Agility, +2 Spirit. (2) Set: +5% Movement Speed in Barrens & Stonetalon."
+      }
+    ]
+  },
+  {
+    "id": "takk-the-leaper",
+    "name": "Takk the Leaper",
+    "zone": "The Barrens",
+    "level": 19,
+    "elite": false,
+    "tameable": "Raptor",
+    "macro": "/target Takk the Leaper",
+    "coords": "60.4, 9.4 (Northern Barrens)",
+    "respawn": "6 to 8 hours",
+    "lore": "High-speed sprinting raptor roaming the northern brush near the Sludge Fen.",
+    "drops": [
+      {
+        "name": "Raptor Hide Cloak",
+        "type": "Back (iLvl 21) - Blessing of Kalimdor Set (3/3)",
+        "stats": "19 Armor, +4 Stamina, +3 Spirit. (2) Set: +5% Movement Speed in Barrens & Stonetalon."
+      }
+    ]
+  },
+  {
+    "id": "alliance-outrunners",
+    "name": "Alliance Outrunners (Aean Swiftriver)",
+    "zone": "The Barrens",
+    "level": 25,
+    "elite": true,
+    "macro": "/target Aean Swiftriver",
+    "coords": "48.5, 79.7 to 45.4, 41.4 (Southern Road)",
+    "respawn": "1 to 2 hours",
+    "lore": "Four mounted Alliance scouts (Aean Swiftriver, Thora Feathermoon, Hannah Bladeleaf, Marcus Bel) patrolling the Southern Gold Road.",
+    "drops": [
+      {
+        "name": "Alliance Outrunner Bow",
+        "type": "Ranged Bow (iLvl 27)",
+        "stats": "13.3 DPS, +4 Agi, +3 Spi"
+      },
+      {
+        "name": "Alliance Outrunner's Sword",
+        "type": "1H Sword (iLvl 27)",
+        "stats": "17.1 DPS, +5 Agi, +6 AP"
+      },
+      {
+        "name": "Alliance Outrunner Healing Rod",
+        "type": "Off-Hand (iLvl 26)",
+        "stats": "+8 HP Regen, +12 Healing, +4 Spell Dmg"
+      },
+      {
+        "name": "Alliance Outrunner Staff",
+        "type": "2H Staff (iLvl 26)",
+        "stats": "16.2 DPS, +9 Sta, +9 Spi, +28 Spell Power"
+      }
+    ]
+  },
+  {
+    "id": "taskmaster-whipfang",
+    "name": "Taskmaster Whipfang",
+    "zone": "Stonetalon Mountains",
+    "level": 22,
+    "elite": false,
+    "macro": "/target Taskmaster Whipfang",
+    "coords": "63.0, 53.0 (Windshear Crag)",
+    "respawn": "2 to 4 hours",
+    "lore": "Venture Co. taskmaster patrolling the machinery at Windshear Crag.",
+    "drops": [
+      {
+        "name": "Whipfang's Skinsearer",
+        "type": "1H Dagger (iLvl 24)",
+        "stats": "15.6 DPS, Chance on hit: 67-101 Fire Damage"
+      }
+    ]
+  },
+  {
+    "id": "foreman-rigger",
+    "name": "Foreman Rigger",
+    "zone": "Stonetalon Mountains",
+    "level": 24,
+    "elite": false,
+    "macro": "/target Foreman Rigger",
+    "coords": "65.2, 52.8 (Windshear Crag)",
+    "respawn": "2 to 4 hours",
+    "lore": "Overseeing Venture Co. logging camp in eastern Stonetalon Mountains.",
+    "drops": [
+      {
+        "name": "Foreman's Helm",
+        "type": "Head Mail (iLvl 26)",
+        "stats": "166 Armor, +9 Stamina, +8 Strength, +5 Mining Skill"
+      }
+    ]
+  },
+  {
+    "id": "drozem-the-blasphemous",
+    "name": "Dro'zem the Blasphemous",
+    "zone": "Redridge Mountains",
+    "level": 23,
+    "elite": false,
+    "macro": "/target Dro'zem the Blasphemous",
+    "coords": "74.4, 82.2 (Render's Valley) / 63.0, 43.0",
+    "respawn": "2 to 3 hours",
+    "lore": "Dark orc warlock turning up in Render's Valley and Stonewatch Keep.",
+    "drops": [
+      {
+        "name": "Dro'zem's Tunic",
+        "type": "Chest Cloth (iLvl 25)",
+        "stats": "43 Armor, +9 Intellect, +11 Spell Power"
+      }
+    ]
+  },
+  {
+    "id": "elmpaw",
+    "name": "Elmpaw",
+    "zone": "Elwynn Forest",
+    "level": 10,
+    "elite": false,
+    "tameable": "Bear",
+    "macro": "/target Elmpaw",
+    "coords": "81.6, 85.4 (Ridgepoint Tower) / 75.0, 38.4",
+    "respawn": "45 to 60 min",
+    "lore": "Massive black bear with over 800 health roaming south of Ridgepoint Tower.",
+    "drops": [
+      {
+        "name": "Elmpaw's Head",
+        "type": "Quest Item",
+        "desc": "Starts quest: Helene Peltskinner in Goldshire for 840 XP, 3s 50c, +100 Stormwind Rep."
+      }
+    ]
+  },
+  {
+    "id": "baron-marinous",
+    "name": "Baron Marinous",
+    "zone": "Darkshore",
+    "level": 21,
+    "elite": true,
+    "macro": "/target Baron Marinous",
+    "coords": "59.2, 22.6 (Mathystral Ruins)",
+    "respawn": "Summoned via Fathom Stone",
+    "lore": "Summoned elemental of 2,400 health by combining 20 Mathystral Amulet Fragments at the Fathom Stone.",
+    "drops": [
+      {
+        "name": "Mathystral Amulet",
+        "type": "Accessory / Quest",
+        "stats": "Summons Baron Marinous; unlocks Clouded Water Globe quest."
+      }
+    ]
+  },
+  {
+    "id": "lordaeron-captain",
+    "name": "Lordaeron Captain",
+    "zone": "Ruins of Lordaeron (Dungeon)",
+    "level": 23,
+    "elite": true,
+    "macro": "/target Lordaeron Captain",
+    "coords": "Northwest courtyard inside instance",
+    "respawn": "Rare instance spawn",
+    "lore": "Skeletal captain patrolling the northwest courtyard with Skeletal Soldiers.",
+    "drops": [
+      {
+        "name": "Haunting Blade",
+        "type": "2H Sword (iLvl 27)",
+        "stats": "22.4 DPS, 3.80 Speed, +33 Healing, +11 Spell Damage"
+      }
+    ]
+  },
+  {
+    "id": "mystmane",
+    "name": "Mystmane",
+    "zone": "Zephras Isle",
+    "level": 8,
+    "elite": false,
+    "tameable": "Bear (1.60s attack speed - Fastest Bear)",
+    "macro": "/target Mystmane",
+    "coords": "60.2, 34.6 (Shadowgale Forest)",
+    "respawn": "45 min",
+    "lore": "Fastest-attacking bear in the entire game (1.6s swing speed), native to Zephras Isle.",
+    "drops": [
+      {
+        "name": "Mystmane Claws",
+        "type": "Junk / Crafting",
+        "stats": "High-value starter trade item"
+      }
+    ]
+  },
+  {
+    "id": "ghostfang",
+    "name": "Ghostfang",
+    "zone": "Dun Morogh",
+    "level": 11,
+    "elite": false,
+    "tameable": "Cat (White Sabercat)",
+    "macro": "/target Ghostfang",
+    "coords": "74.2, 63.2 (Tunnel hills toward Wetlands)",
+    "respawn": "30 min",
+    "lore": "Stealthed white mountain cat stalking the snowy hills near the Wetlands pass.",
+    "drops": [
+      {
+        "name": "Ghostfang Pelt",
+        "type": "Leather / Quest",
+        "stats": "Rare white fur"
+      }
+    ]
+  },
+  {
+    "id": "coldrasp",
+    "name": "Coldrasp",
+    "zone": "Tirisfal Glades",
+    "level": 11,
+    "elite": false,
+    "tameable": "Wolf (Blue Ghost Wolf with Furious Howl)",
+    "macro": "/target Coldrasp",
+    "coords": "19.7, 65.6 (Whispering Forest)",
+    "respawn": "2 to 3 hours",
+    "lore": "A striking blue ghost wolf roaming the ethereal Whispering Forest west of Deathknell.",
+    "drops": [
+      {
+        "name": "Coldrasp Fang",
+        "type": "Unique Trophy",
+        "stats": "Prized trophy"
+      }
+    ]
+  },
+  {
+    "id": "shalma",
+    "name": "Shal'ma",
+    "zone": "Durotar",
+    "level": 9,
+    "elite": false,
+    "tameable": "Cat (Cheetah 1.30s)",
+    "macro": "/target Shal'ma",
+    "coords": "59.8, 91.0 (Kolkar Crags)",
+    "respawn": "1 hour",
+    "lore": "Fast 1.3s attack speed cheetah prowling the ridges south of Sen'jin Village.",
+    "drops": [
+      {
+        "name": "Kolkar Trophy Claws",
+        "type": "Trophy",
+        "stats": "Valuable beginner weapon vendor drop"
+      }
+    ]
+  },
+  {
+    "id": "dishu",
+    "name": "Dishu",
+    "zone": "The Barrens",
+    "level": 13,
+    "elite": false,
+    "tameable": "Cat (Cheetah 1.30s)",
+    "macro": "/target Dishu",
+    "coords": "48.2, 16.4 (Lushwater Plains)",
+    "respawn": "2 to 4 hours",
+    "lore": "Fastest-attacking starter cheetah roaming the western Barrens savannas.",
+    "drops": [
+      {
+        "name": "Pelt of Dishu",
+        "type": "Leather / Quest",
+        "stats": "High quality spotted cheetah pelt"
+      }
+    ]
+  },
+  {
+    "id": "gesharahan",
+    "name": "Gesharahan",
+    "zone": "The Barrens",
+    "level": 20,
+    "elite": true,
+    "macro": "/target Gesharahan",
+    "coords": "46.8, 38.6 (The Stagnant Oasis)",
+    "respawn": "Summoned via Altered Snapvine",
+    "lore": "Vicious hydra lurking beneath the murky depths of the Stagnant Oasis.",
+    "drops": [
+      {
+        "name": "Gesharahan's Scale",
+        "type": "Quest Item",
+        "desc": "Turns in to Tonga Runetotem for 1,250 XP and +100 Thunder Bluff rep"
+      }
+    ]
+  },
+  {
+    "id": "sludge-beast",
+    "name": "Sludge Beast",
+    "zone": "The Barrens",
+    "level": 21,
+    "elite": false,
+    "macro": "/target Sludge Beast",
+    "coords": "57.0, 9.6 (The Sludge Fen)",
+    "respawn": "2 to 3 hours",
+    "lore": "Toxic chemical ooze crawling in the Venture Co. oil runoff pool.",
+    "drops": [
+      {
+        "name": "Ooze-Covered Bag",
+        "type": "10-Slot Bag",
+        "stats": "Portable storage pouch"
+      }
+    ]
+  },
+  {
+    "id": "brood-mother-araxx",
+    "name": "Brood Mother Araxx",
+    "zone": "The Barrens",
+    "level": 17,
+    "elite": false,
+    "tameable": "Spider",
+    "macro": "/target Brood Mother Araxx",
+    "coords": "43.6, 17.2 (Dry Hills)",
+    "respawn": "1 to 2 hours",
+    "lore": "Giant black widow nesting inside the spider crags in northwest Barrens.",
+    "drops": [
+      {
+        "name": "Araxx's Web Sac",
+        "type": "Crafting / Off-Hand",
+        "stats": "Produces 3-4 Shadow Silk"
+      }
+    ]
+  },
+  {
+    "id": "rathorian",
+    "name": "Rathorian",
+    "zone": "Ashenvale",
+    "level": 31,
+    "elite": true,
+    "macro": "/target Rathorian",
+    "coords": "84.4, 69.8 (Demon Fall Canyon)",
+    "respawn": "4 to 6 hours",
+    "lore": "Demonic satyr commander guarding the canyon of Mannoroth's demise.",
+    "drops": [
+      {
+        "name": "Horn of Rathorian",
+        "type": "Quest Item / Trinket",
+        "stats": "Starts Demonic Deception questline"
+      }
+    ]
+  },
+  {
+    "id": "terrowulf-packlord",
+    "name": "Terrowulf Packlord",
+    "zone": "Ashenvale",
+    "level": 28,
+    "elite": false,
+    "tameable": "Wolf",
+    "macro": "/target Terrowulf Packlord",
+    "coords": "38.2, 54.6 (Iris Lake)",
+    "respawn": "2 to 3 hours",
+    "lore": "Alpha shadow-worg pacing the dense woods south of Iris Lake.",
+    "drops": [
+      {
+        "name": "Packlord's Fang",
+        "type": "1H Dagger (iLvl 30)",
+        "stats": "14.2 DPS, +3 Agility, +5 AP"
+      }
+    ]
+  },
+  {
+    "id": "ursollok",
+    "name": "Ursol'lok",
+    "zone": "Ashenvale",
+    "level": 31,
+    "elite": false,
+    "tameable": "Bear",
+    "macro": "/target Ursol'lok",
+    "coords": "82.6, 52.2 (Splintertree Woodlands)",
+    "respawn": "3 to 4 hours",
+    "lore": "Venerable corrupted furbolg elder bear roaming east Ashenvale.",
+    "drops": [
+      {
+        "name": "Ursol'lok's Claws",
+        "type": "Fist Weapon (iLvl 33)",
+        "stats": "15.8 DPS, +6 Strength, +4 Stamina"
+      }
+    ]
+  },
+  {
+    "id": "mugglefin",
+    "name": "Mugglefin",
+    "zone": "Darkshore",
+    "level": 16,
+    "elite": false,
+    "macro": "/target Mugglefin",
+    "coords": "56.4, 9.2 (Ruins of Welvar)",
+    "respawn": "1 to 2 hours",
+    "lore": "Greenscale murloc warlord raiding along the Northern coast of Darkshore.",
+    "drops": [
+      {
+        "name": "Mugglefin's Trident",
+        "type": "Polearm (iLvl 18)",
+        "stats": "11.2 DPS, +3 Agility, +2 Spirit"
+      }
+    ]
+  },
+  {
+    "id": "strider-clutchmother",
+    "name": "Strider Clutchmother",
+    "zone": "Darkshore",
+    "level": 20,
+    "elite": false,
+    "tameable": "Tallstrider",
+    "macro": "/target Strider Clutchmother",
+    "coords": "37.6, 82.2 (Grove of the Ancients)",
+    "respawn": "2 hours",
+    "lore": "Mother tallstrider nesting near the borders of Ashenvale.",
+    "drops": [
+      {
+        "name": "Clutchmother's Feather",
+        "type": "Off-Hand (iLvl 22)",
+        "stats": "+4 Agility, +3 Spirit"
+      }
+    ]
+  },
+  {
+    "id": "carnivous-the-breaker",
+    "name": "Carnivous the Breaker",
+    "zone": "Darkshore",
+    "level": 16,
+    "elite": false,
+    "tameable": "Bear",
+    "macro": "/target Carnivous the Breaker",
+    "coords": "38.4, 86.8 (Cliffspring River)",
+    "respawn": "1 to 2 hours",
+    "lore": "Diseased thistle bear prowling along the riverbank.",
+    "drops": [
+      {
+        "name": "Bear-Leather Bracers",
+        "type": "Wrist, Leather (iLvl 18)",
+        "stats": "+3 Stamina, +2 Strength"
+      }
+    ]
+  },
+  {
+    "id": "lord-malathrom",
+    "name": "Lord Malathrom",
+    "zone": "Duskwood",
+    "level": 31,
+    "elite": true,
+    "macro": "/target Lord Malathrom",
+    "coords": "17.8, 29.4 (Addle's Stead)",
+    "respawn": "4 to 6 hours",
+    "lore": "Spectral necromancer roaming the misty crypts of western Duskwood.",
+    "drops": [
+      {
+        "name": "Malathrom's Grimoire",
+        "type": "Off-Hand (iLvl 34)",
+        "stats": "+6 Intellect, +5 Spirit, +9 Spell Damage"
+      }
+    ]
+  },
+  {
+    "id": "naraxis",
+    "name": "Naraxis",
+    "zone": "Duskwood",
+    "level": 27,
+    "elite": false,
+    "tameable": "Spider",
+    "macro": "/target Naraxis",
+    "coords": "86.8, 48.6 (Vul'Gol Ogre Mound)",
+    "respawn": "2 to 3 hours",
+    "lore": "Massive green weaver spider lurking at the mouth of Vul'Gol Mound.",
+    "drops": [
+      {
+        "name": "Naraxis' Fang",
+        "type": "1H Dagger (iLvl 29)",
+        "stats": "14.1 DPS, Chance on hit: 45 Poison damage over 15s"
+      }
+    ]
+  },
+  {
+    "id": "lupos",
+    "name": "Lupos",
+    "zone": "Duskwood",
+    "level": 23,
+    "elite": false,
+    "tameable": "Wolf (Shadow Damage swings)",
+    "macro": "/target Lupos",
+    "coords": "22.4, 25.2 (The Darkened Bank)",
+    "respawn": "4 to 6 hours",
+    "lore": "Ghostly white wolf that inflicts direct Shadow Damage bypassing physical armor.",
+    "drops": [
+      {
+        "name": "Lupos' Whisper",
+        "type": "Neck (iLvl 25)",
+        "stats": "+4 Agility, +5 Stamina"
+      }
+    ]
+  },
+  {
+    "id": "nefaru",
+    "name": "Nefaru",
+    "zone": "Duskwood",
+    "level": 30,
+    "elite": false,
+    "macro": "/target Nefaru",
+    "coords": "72.8, 76.4 (Roland's Doom)",
+    "respawn": "2 to 4 hours",
+    "lore": "Feral worgen pack leader lurking in the Roland's Doom copper mine.",
+    "drops": [
+      {
+        "name": "Nefaru's Pauldrons",
+        "type": "Shoulder, Mail (iLvl 32)",
+        "stats": "+7 Strength, +5 Stamina"
+      }
+    ]
+  },
+  {
+    "id": "vultros",
+    "name": "Vultros",
+    "zone": "Westfall",
+    "level": 26,
+    "elite": false,
+    "tameable": "Carrion Bird",
+    "macro": "/target Vultros",
+    "coords": "53.4, 52.8 (Furlbrow's Pumpkin Farm)",
+    "respawn": "1 to 2 hours",
+    "lore": "Giant red carrion bird circling over Furlbrow's Pumpkin Farm.",
+    "drops": [
+      {
+        "name": "Vultros' Claw",
+        "type": "1H Dagger (iLvl 28)",
+        "stats": "13.6 DPS, +4 Agility, +2 Stamina"
+      }
+    ]
+  },
+  {
+    "id": "slark",
+    "name": "Slark",
+    "zone": "Westfall",
+    "level": 15,
+    "elite": false,
+    "macro": "/target Slark",
+    "coords": "36.2, 33.8 (Coast of Westfall)",
+    "respawn": "45 min",
+    "lore": "Tidehunter murloc chieftain guarding his shoreline clan.",
+    "drops": [
+      {
+        "name": "Slark's Shell Shield",
+        "type": "Shield (iLvl 17)",
+        "stats": "Block 14, +2 Stamina, +2 Strength"
+      }
+    ]
+  },
+  {
+    "id": "miner-johnson",
+    "name": "Miner Johnson",
+    "zone": "The Deadmines (Dungeon)",
+    "level": 19,
+    "elite": true,
+    "macro": "/target Miner Johnson",
+    "coords": "Ironclad Cove upper scaffolding",
+    "respawn": "Rare instance spawn",
+    "lore": "Undead dwarf miner hiding in the forgotten shafts of the Deadmines.",
+    "drops": [
+      {
+        "name": "Miner's Hat of the Deep",
+        "type": "Head, Cloth (iLvl 21)",
+        "stats": "+4 Int, +3 Spi, Equip: Light source"
+      }
+    ]
+  },
+  {
+    "id": "shanda-the-spinner",
+    "name": "Shanda the Spinner",
+    "zone": "Loch Modan",
+    "level": 19,
+    "elite": false,
+    "tameable": "Spider",
+    "macro": "/target Shanda the Spinner",
+    "coords": "79.4, 61.2 (Valley of Kings)",
+    "respawn": "1 to 2 hours",
+    "lore": "Venomous cliff spider stalking the rocks between Loch Modan and Badlands.",
+    "drops": [
+      {
+        "name": "Spinner's Silk Cord",
+        "type": "Waist, Cloth (iLvl 21)",
+        "stats": "+4 Intellect, +3 Spirit, +5 Spell Power"
+      }
+    ]
+  }
+]

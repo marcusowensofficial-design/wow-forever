@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 3. Content Codex & Dungeons Explorer
   if (typeof initCodex === 'function') initCodex();
+  if (typeof initAtlas === 'function') initAtlas();
   if (typeof initLegacyCalculator === 'function') initLegacyCalculator();
   if (typeof renderDungeonCurve === 'function') renderDungeonCurve();
   if (typeof renderQoLGrid === 'function') renderQoLGrid();

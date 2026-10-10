@@ -1,0 +1,1380 @@
+- generic [active] [ref=f3e1]:
+  - text: ": : :"
+  - main [ref=f3e2]:
+    - generic [ref=f3e3]:
+      - generic [ref=f3e4]:
+        - generic [ref=f3e5]:
+          - generic [ref=f3e6]:
+            - button "Pull the murloc camp" [ref=f3e7] [cursor=pointer]
+            - generic [ref=f3e8]:
+              - generic [ref=f3e9]: Online now
+              - generic [ref=f3e10]: 2,358
+              - generic [ref=f3e11]: murlocs
+          - link "ForeverChanges home" [ref=f3e12] [cursor=pointer]:
+            - /url: /
+            - img "ForeverChanges" [ref=f3e13]
+          - link [ref=f3e15] [cursor=pointer]:
+            - /url: /patch-notes
+            - generic [ref=f3e16]:
+              - text: Updated
+              - generic [aria-hidden] [ref=f3e18]: ·
+            - text: Beta build 1.60.1.70338
+          - link "Launch in" [ref=f3e19] [cursor=pointer]:
+            - /url: /beta
+            - generic [aria-hidden] [ref=f3e21]:
+              - generic [ref=f3e22]:
+                - generic [ref=f3e23]: "25"
+                - generic [ref=f3e24]: days
+              - generic [ref=f3e25]:
+                - text: ":"
+                - generic [ref=f3e26]: "00"
+                - generic [ref=f3e27]: hrs
+              - generic [ref=f3e28]:
+                - text: ":"
+                - generic [ref=f3e29]: "30"
+                - generic [ref=f3e30]: min
+              - generic [ref=f3e31]:
+                - text: ":"
+                - generic [ref=f3e32]: "40"
+                - generic [ref=f3e33]: sec
+        - generic [ref=f3e34]:
+          - navigation "Main" [ref=f3e35]:
+            - link "Changes" [ref=f3e36] [cursor=pointer]:
+              - /url: /changes
+            - link "Talents , updated" [ref=f3e37] [cursor=pointer]:
+              - /url: /talents/warrior
+              - text: Talents
+              - generic:
+                - generic [aria-hidden]: Updated on October 8
+                - generic [ref=f3e39]: ", updated"
+            - link "Spellbook , updated" [ref=f3e40] [cursor=pointer]:
+              - /url: /spellbook/warrior
+              - text: Spellbook
+              - generic:
+                - generic [aria-hidden]: Updated on October 8
+                - generic [ref=f3e42]: ", updated"
+            - link "Legacy" [ref=f3e43] [cursor=pointer]:
+              - /url: /legacy-perks
+            - link "Professions" [ref=f3e44] [cursor=pointer]:
+              - /url: /professions
+            - link "Races" [ref=f3e45] [cursor=pointer]:
+              - /url: /racials
+            - link "Dungeons , new" [ref=f3e46] [cursor=pointer]:
+              - /url: /dungeons
+              - text: Dungeons
+              - generic:
+                - generic [aria-hidden]: "New: the City of Dalaran"
+                - generic [ref=f3e48]: ", new"
+            - link "Items , updated" [ref=f3e49] [cursor=pointer]:
+              - /url: /items
+              - text: Items
+              - generic:
+                - generic [aria-hidden]: 331 items changed on October 8
+                - generic [ref=f3e51]: ", updated"
+            - link "Quests" [ref=f3e52] [cursor=pointer]:
+              - /url: /quests
+            - link "BiS list , updated" [ref=f3e53] [cursor=pointer]:
+              - /url: /bis
+              - text: BiS list
+              - generic:
+                - generic [aria-hidden]: Up to date with the latest build
+                - generic [ref=f3e55]: ", updated"
+            - link "World map" [ref=f3e56] [cursor=pointer]:
+              - /url: /map
+            - link "Guides" [ref=f3e57] [cursor=pointer]:
+              - /url: /guides
+            - link "Patch notes" [ref=f3e58] [cursor=pointer]:
+              - /url: /patch-notes
+          - button "Search" [ref=f3e60] [cursor=pointer]:
+            - generic [aria-hidden]: Search /
+      - generic [ref=f3e65]:
+        - heading "Hunter pets Families, abilities and where to tame in WoW Forever" [level=1] [ref=f3e66]:
+          - text: Hunter pets
+          - generic [ref=f3e67]: Families, abilities and where to tame in WoW Forever
+        - paragraph [ref=f3e68]: "Forever keeps Classic’s pets and changes a lot of what they do: a new family, the Fox, a renamed one, and a new ability for 9 families. Every pet is set to the same speed and gets its own back through a passive, so the beast you tame still decides how fast your pet swings."
+        - paragraph [ref=f3e69]:
+          - text: Guide updated September 24, 2026.
+          - link "Sources" [ref=f3e70] [cursor=pointer]:
+            - /url: "#sources"
+      - navigation "Sections of this page" [ref=f3e71]:
+        - generic [ref=f3e72]:
+          - link "Families 18" [ref=f3e73] [cursor=pointer]:
+            - /url: "#families"
+            - generic [ref=f3e74]: Families
+            - generic [ref=f3e75]: "18"
+          - link "Beasts to tame 502" [ref=f3e76] [cursor=pointer]:
+            - /url: "#beasts"
+            - generic [ref=f3e77]: Beasts to tame
+            - generic [ref=f3e78]: "502"
+          - link "New in Forever 25" [ref=f3e79] [cursor=pointer]:
+            - /url: "#changes"
+            - generic [ref=f3e80]: New in Forever
+            - generic [ref=f3e81]: "25"
+          - link "Attack speed" [ref=f3e82] [cursor=pointer]:
+            - /url: "#speed"
+          - link "Training" [ref=f3e84] [cursor=pointer]:
+            - /url: "#training"
+      - generic [ref=f3e86]:
+        - region [ref=f3e87]:
+          - heading "Families 18 families" [level=2] [ref=f3e89]:
+            - text: Families
+            - generic [ref=f3e90]: 18 families
+          - paragraph [ref=f3e91]: Pick a family to see what it is good at, what it eats and every ability it can learn. Damage, armor and health are measured against a beast of no family at the same level; abilities are shown at the rank a pet can have at level 30, the beta’s cap.
+          - group "Families" [ref=f3e92]:
+            - button "Bat" [ref=f3e93] [cursor=pointer]
+            - button "Bear" [ref=f3e96] [cursor=pointer]
+            - button "Bird of Prey" [ref=f3e99] [cursor=pointer]
+            - button "Boar" [ref=f3e102] [cursor=pointer]
+            - button "Carrion Bird" [ref=f3e105] [cursor=pointer]
+            - button "Cat" [pressed] [ref=f3e108] [cursor=pointer]
+            - button "Crab" [ref=f3e111] [cursor=pointer]
+            - button "Crocolisk" [ref=f3e114] [cursor=pointer]
+            - button "Fox" [ref=f3e117] [cursor=pointer]
+            - button "Gorilla" [ref=f3e121] [cursor=pointer]
+            - button "Hyena" [ref=f3e124] [cursor=pointer]
+            - button "Raptor" [ref=f3e127] [cursor=pointer]
+            - button "Scorpid" [ref=f3e130] [cursor=pointer]
+            - button "Spider" [ref=f3e133] [cursor=pointer]
+            - button "Tallstrider" [ref=f3e136] [cursor=pointer]
+            - button "Turtle" [ref=f3e139] [cursor=pointer]
+            - button "Wind Serpent" [ref=f3e142] [cursor=pointer]
+            - button "Wolf" [ref=f3e145] [cursor=pointer]
+          - generic [ref=f3e149]:
+            - generic [ref=f3e150]:
+              - heading "Cat" [level=3] [ref=f3e153]
+              - generic [ref=f3e154]:
+                - generic [ref=f3e155]:
+                  - term [ref=f3e156]: Damage
+                  - definition [ref=f3e157]:
+                    - generic [ref=f3e160]: +10%
+                - generic [ref=f3e161]:
+                  - term [ref=f3e162]: Armor
+                  - definition [ref=f3e163]:
+                    - generic [ref=f3e165]: 0%
+                - generic [ref=f3e166]:
+                  - term [ref=f3e167]: Health
+                  - definition [ref=f3e168]:
+                    - generic [ref=f3e171]: "-2%"
+              - generic [ref=f3e172]:
+                - generic [ref=f3e173]:
+                  - term [ref=f3e174]: Diet
+                  - definition [ref=f3e175]: Meat, Fish
+                - generic [ref=f3e176]:
+                  - term [ref=f3e177]: Fastest
+                  - definition [ref=f3e178]:
+                    - text: 1.0 sec, Broken Tooth
+                    - generic [ref=f3e179]: level 37
+              - link "See the 62 beasts to tame" [ref=f3e180] [cursor=pointer]:
+                - /url: "#beasts-cat"
+            - generic [ref=f3e181]:
+              - generic [ref=f3e183]:
+                - paragraph [ref=f3e184]:
+                  - generic [ref=f3e185]: Prowl
+                  - generic [ref=f3e186]: Rank 1
+                - paragraph [ref=f3e187]: Puts your pet in stealth mode, but slows its movement speed by 50%. The first attack from stealth receives a 20% bonus to damage. Lasts until cancelled.
+                - paragraph [ref=f3e188]: 40 Focus, 10 sec cooldown
+              - generic [ref=f3e190]:
+                - paragraph [ref=f3e191]:
+                  - generic [ref=f3e192]: Bite
+                  - generic [ref=f3e193]: Rank 4
+                - paragraph [ref=f3e194]: Bite the enemy, causing 31 to 37 damage.
+                - paragraph [ref=f3e195]: 35 Focus, 10 sec cooldown
+              - generic [ref=f3e197]:
+                - paragraph [ref=f3e198]:
+                  - generic [ref=f3e199]: Claw
+                  - generic [ref=f3e200]: Rank 4
+                - paragraph [ref=f3e201]: Claw the enemy, causing 16 to 22 damage.
+                - paragraph [ref=f3e202]: 25 Focus
+              - generic [ref=f3e204]:
+                - paragraph [ref=f3e205]:
+                  - generic [ref=f3e206]: Dash
+                  - generic [ref=f3e207]: Rank 1
+                - paragraph [ref=f3e208]: Increases movement speed by 40% for 15 sec.
+                - paragraph [ref=f3e209]: 20 Focus, 30 sec cooldown
+              - group [ref=f3e210]:
+                - generic "Every rank, and the beasts that teach it" [ref=f3e211] [cursor=pointer]
+          - group [ref=f3e212]:
+            - generic "Compare the 18 families" [ref=f3e213] [cursor=pointer]
+        - region [ref=f3e214]:
+          - heading "Beasts to tame 502 beasts" [level=2] [ref=f3e216]:
+            - text: Beasts to tame
+            - generic [ref=f3e217]: 502 beasts
+          - paragraph [ref=f3e218]: Classic’s beasts at the places, levels and speeds of Classic’s database, and the ones Forever adds. Swing is the time between two attacks, faster in green, slower in orange. Teaches is what you learn by taming the beast, as Classic’s client lists it.
+          - search [ref=f3e219]:
+            - generic [ref=f3e220]:
+              - generic [ref=f3e221]: Search
+              - searchbox "Search" [ref=f3e222]
+            - generic [ref=f3e223]:
+              - generic [ref=f3e224]: Family
+              - combobox "Family" [ref=f3e225]:
+                - option "All families" [selected]
+                - option "Bat"
+                - option "Bear"
+                - option "Bird of Prey"
+                - option "Boar"
+                - option "Carrion Bird"
+                - option "Cat"
+                - option "Crab"
+                - option "Crocolisk"
+                - option "Fox"
+                - option "Gorilla"
+                - option "Hyena"
+                - option "Raptor"
+                - option "Scorpid"
+                - option "Spider"
+                - option "Tallstrider"
+                - option "Turtle"
+                - option "Wind Serpent"
+                - option "Wolf"
+            - generic [ref=f3e226]:
+              - generic [ref=f3e227]: Your level
+              - spinbutton "Your level" [ref=f3e228]
+            - generic [ref=f3e229] [cursor=pointer]:
+              - checkbox "Fast swing only" [ref=f3e230]
+              - text: Fast swing only
+            - generic [ref=f3e231] [cursor=pointer]:
+              - checkbox "New in Forever only" [ref=f3e232]
+              - text: New in Forever only
+          - paragraph [ref=f3e233]: 502 beasts
+          - table [ref=f3e235]:
+            - rowgroup [ref=f3e236]:
+              - row [ref=f3e237]:
+                - columnheader [ref=f3e238]:
+                  - button "Level" [ref=f3e239] [cursor=pointer]: Level ▾
+                - columnheader "Beast" [ref=f3e240]
+                - columnheader [ref=f3e241]:
+                  - button "Swing" [ref=f3e242] [cursor=pointer]
+                - columnheader "Teaches" [ref=f3e243]
+                - columnheader "Where" [ref=f3e244]
+            - rowgroup [ref=f3e245]:
+              - row [ref=f3e246]:
+                - cell "1–2" [ref=f3e247]
+                - rowheader "Bat Duskbat Bat" [ref=f3e248]:
+                  - generic [ref=f3e249]:
+                    - img "Bat" [ref=f3e250]
+                    - generic [ref=f3e251]:
+                      - link "Duskbat" [ref=f3e253] [cursor=pointer]:
+                        - /url: https://www.wowhead.com/forever/npc=1512
+                      - generic [ref=f3e254]: Bat
+                - cell "2.0" [ref=f3e255]
+                - cell [ref=f3e256]
+                - cell "Tirisfal Glades" [ref=f3e257]
+              - row [ref=f3e258]:
+                - cell "1" [ref=f3e259]
+                - rowheader "Fox Juvenile Vuldren New in Forever Fox" [ref=f3e260]:
+                  - generic [ref=f3e261]:
+                    - img "Fox" [ref=f3e262]
+                    - generic [ref=f3e263]:
+                      - link "Juvenile Vuldren" [ref=f3e265] [cursor=pointer]:
+                        - /url: https://www.wowhead.com/forever/npc=250873
+                      - emphasis [ref=f3e266]:
+                        - link "New in Forever" [ref=f3e267] [cursor=pointer]:
+                          - /url: "#tame-250873"
+                      - generic [ref=f3e268]: Fox
+                - cell "2.0" [ref=f3e269]
+                - cell [ref=f3e270]
+                - cell "Zephras Isle" [ref=f3e271]
+              - row [ref=f3e272]:
+                - cell "1–2" [ref=f3e273]
+                - rowheader "Boar Mottled Boar Boar" [ref=f3e274]:
+                  - generic [ref=f3e275]:
+                    - img "Boar" [ref=f3e276]
+                    - generic [ref=f3e277]:
+                      - link "Mottled Boar" [ref=f3e279] [cursor=pointer]:
+                        - /url: https://www.wowhead.com/forever/npc=3098
+                      - generic [ref=f3e280]: Boar
+                - cell "2.0" [ref=f3e281]
+                - cell "Charge 1" [ref=f3e282]
+                - cell "Durotar" [ref=f3e284]
+              - row [ref=f3e285]:
+                - cell "1–2" [ref=f3e286]
+                - rowheader "Tallstrider Plainstrider Tallstrider" [ref=f3e287]:
+                  - generic [ref=f3e288]:
+                    - img "Tallstrider" [ref=f3e289]
+                    - generic [ref=f3e290]:
+                      - link "Plainstrider" [ref=f3e292] [cursor=pointer]:
+                        - /url: https://www.wowhead.com/forever/npc=2955
+                      - generic [ref=f3e293]: Tallstrider
+                - cell "2.0" [ref=f3e294]
+                - cell [ref=f3e295]
+                - cell "Mulgore" [ref=f3e296]
+              - row [ref=f3e297]:
+                - cell "1" [ref=f3e298]
+                - rowheader "Wolf Ragged Young Wolf Wolf" [ref=f3e299]:
+                  - generic [ref=f3e300]:
+                    - img "Wolf" [ref=f3e301]
+                    - generic [ref=f3e302]:
+                      - link "Ragged Young Wolf" [ref=f3e304] [cursor=pointer]:
+                        - /url: https://www.wowhead.com/forever/npc=705
+                      - generic [ref=f3e305]: Wolf
+                - cell "2.0" [ref=f3e306]
+                - cell [ref=f3e307]
+                - cell "Dun Morogh" [ref=f3e308]
+              - row [ref=f3e309]:
+                - cell "1" [ref=f3e310]
+                - rowheader "Cat Young Nightsaber Cat" [ref=f3e311]:
+                  - generic [ref=f3e312]:
+                    - img "Cat" [ref=f3e313]
+                    - generic [ref=f3e314]:
+                      - link "Young Nightsaber" [ref=f3e316] [cursor=pointer]:
+                        - /url: https://www.wowhead.com/forever/npc=2031
+                      - generic [ref=f3e317]: Cat
+                - cell "2.0" [ref=f3e318]
+                - cell [ref=f3e319]
+                - cell "Teldrassil" [ref=f3e320]
+              - row [ref=f3e321]:
+                - cell "1" [ref=f3e322]
+                - rowheader "Wolf Young Scavenger Wolf" [ref=f3e323]:
+                  - generic [ref=f3e324]:
+                    - img "Wolf" [ref=f3e325]
+                    - generic [ref=f3e326]:
+                      - link "Young Scavenger" [ref=f3e328] [cursor=pointer]:
+                        - /url: https://www.wowhead.com/forever/npc=1508
+                      - generic [ref=f3e329]: Wolf
+                - cell "2.0" [ref=f3e330]
+                - cell [ref=f3e331]
+                - cell "Tirisfal Glades" [ref=f3e332]
+              - row [ref=f3e333]:
+                - cell "1–2" [ref=f3e334]
+                - rowheader "Boar Young Thistle Boar Boar" [ref=f3e335]:
+                  - generic [ref=f3e336]:
+                    - img "Boar" [ref=f3e337]
+                    - generic [ref=f3e338]:
+                      - link "Young Thistle Boar" [ref=f3e340] [cursor=pointer]:
+                        - /url: https://www.wowhead.com/forever/npc=1984
+                      - generic [ref=f3e341]: Boar
+                - cell "2.0" [ref=f3e342]
+                - cell "Charge 1" [ref=f3e343]
+                - cell "Teldrassil" [ref=f3e345]
+              - row [ref=f3e346]:
+                - cell "1" [ref=f3e347]
+                - rowheader "Wolf Young Wolf Wolf" [ref=f3e348]:
+                  - generic [ref=f3e349]:
+                    - img "Wolf" [ref=f3e350]
+                    - generic [ref=f3e351]:
+                      - link "Young Wolf" [ref=f3e353] [cursor=pointer]:
+                        - /url: https://www.wowhead.com/forever/npc=299
+                      - generic [ref=f3e354]: Wolf
+                - cell "2.0" [ref=f3e355]
+                - cell [ref=f3e356]
+                - cell "Elwynn Forest" [ref=f3e357]
+              - row [ref=f3e358]:
+                - cell "2" [ref=f3e359]
+                - rowheader "Cat Mangy Nightsaber Cat" [ref=f3e360]:
+                  - generic [ref=f3e361]:
+                    - img "Cat" [ref=f3e362]
+                    - generic [ref=f3e363]:
+                      - link "Mangy Nightsaber" [ref=f3e365] [cursor=pointer]:
+                        - /url: https://www.wowhead.com/forever/npc=2032
+                      - generic [ref=f3e366]: Cat
+                - cell "2.0" [ref=f3e367]
+                - cell [ref=f3e368]
+                - cell "Teldrassil" [ref=f3e369]
+              - row [ref=f3e370]:
+                - cell "2–3" [ref=f3e371]
+                - rowheader "Wolf Ragged Scavenger Wolf" [ref=f3e372]:
+                  - generic [ref=f3e373]:
+                    - img "Wolf" [ref=f3e374]
+                    - generic [ref=f3e375]:
+                      - link "Ragged Scavenger" [ref=f3e377] [cursor=pointer]:
+                        - /url: https://www.wowhead.com/forever/npc=1509
+                      - generic [ref=f3e378]: Wolf
+                - cell "2.0" [ref=f3e379]
+                - cell "Bite 1" [ref=f3e380]
+                - cell "Tirisfal Glades" [ref=f3e382]
+              - row [ref=f3e383]:
+                - cell "2" [ref=f3e384]
+                - rowheader "Wolf Ragged Timber Wolf Wolf" [ref=f3e385]:
+                  - generic [ref=f3e386]:
+                    - img "Wolf" [ref=f3e387]
+                    - generic [ref=f3e388]:
+                      - link "Ragged Timber Wolf" [ref=f3e390] [cursor=pointer]:
+                        - /url: https://www.wowhead.com/forever/npc=704
+                      - generic [ref=f3e391]: Wolf
+                - cell "2.0" [ref=f3e392]
+                - cell [ref=f3e393]
+                - cell "Dun Morogh" [ref=f3e394]
+              - row [ref=f3e395]:
+                - cell "2–3" [ref=f3e396]
+                - rowheader "Boar Thistle Boar Boar" [ref=f3e397]:
+                  - generic [ref=f3e398]:
+                    - img "Boar" [ref=f3e399]
+                    - generic [ref=f3e400]:
+                      - link "Thistle Boar" [ref=f3e402] [cursor=pointer]:
+                        - /url: https://www.wowhead.com/forever/npc=1985
+                      - generic [ref=f3e403]: Boar
+                - cell "2.0" [ref=f3e404]
+                - cell "Charge 1" [ref=f3e405]
+                - cell "Teldrassil" [ref=f3e407]
+              - row [ref=f3e408]:
+                - cell "2" [ref=f3e409]
+                - rowheader "Wolf Timber Wolf Wolf" [ref=f3e410]:
+                  - generic [ref=f3e411]:
+                    - img "Wolf" [ref=f3e412]
+                    - generic [ref=f3e413]:
+                      - link "Timber Wolf" [ref=f3e415] [cursor=pointer]:
+                        - /url: https://www.wowhead.com/forever/npc=69
+                      - generic [ref=f3e416]: Wolf
+                - cell "2.0" [ref=f3e417]
+                - cell [ref=f3e418]
+                - cell "Elwynn Forest" [ref=f3e419]
+              - row [ref=f3e420]:
+                - cell "2–3" [ref=f3e421]
+                - rowheader "Spider Young Night Web Spider Spider" [ref=f3e422]:
+                  - generic [ref=f3e423]:
+                    - img "Spider" [ref=f3e424]
+                    - generic [ref=f3e425]:
+                      - link "Young Night Web Spider" [ref=f3e427] [cursor=pointer]:
+                        - /url: https://www.wowhead.com/forever/npc=1504
+                      - generic [ref=f3e428]: Spider
+                - cell "2.0" [ref=f3e429]
+                - cell [ref=f3e430]
+                - cell "Tirisfal Glades" [ref=f3e431]
+              - row [ref=f3e432]:
+                - cell "3–4" [ref=f3e433]
+                - rowheader "Boar Battleboar Boar" [ref=f3e434]:
+                  - generic [ref=f3e435]:
+                    - img "Boar" [ref=f3e436]
+                    - generic [ref=f3e437]:
+                      - link "Battleboar" [ref=f3e439] [cursor=pointer]:
+                        - /url: https://www.wowhead.com/forever/npc=2966
+                      - generic [ref=f3e440]: Boar
+                - cell "2.0" [ref=f3e441]
+                - cell "Charge 1" [ref=f3e442]
+                - cell "Mulgore" [ref=f3e444]
+              - row [ref=f3e445]:
+                - cell "3–4" [ref=f3e446]
+                - rowheader "Bat Mangy Duskbat Bat" [ref=f3e447]:
+                  - generic [ref=f3e448]:
+                    - img "Bat" [ref=f3e449]
+                    - generic [ref=f3e450]:
+                      - link "Mangy Duskbat" [ref=f3e452] [cursor=pointer]:
+                        - /url: https://www.wowhead.com/forever/npc=1513
+                      - generic [ref=f3e453]: Bat
+                - cell "2.0" [ref=f3e454]
+                - cell [ref=f3e455]
+                - cell "Tirisfal Glades" [ref=f3e456]
+              - row [ref=f3e457]:
+                - cell "3" [ref=f3e458]
+                - rowheader "Cat Mountain Cougar Cat" [ref=f3e459]:
+                  - generic [ref=f3e460]:
+                    - img "Cat" [ref=f3e461]
+                    - generic [ref=f3e462]:
+                      - link "Mountain Cougar" [ref=f3e464] [cursor=pointer]:
+                        - /url: https://www.wowhead.com/forever/npc=2961
+                      - generic [ref=f3e465]: Cat
+                - cell "2.0" [ref=f3e466]
+                - cell [ref=f3e467]
+                - cell "Mulgore" [ref=f3e468]
+              - row [ref=f3e469]:
+                - cell "3–4" [ref=f3e470]
+                - rowheader "Spider Night Web Spider Spider" [ref=f3e471]:
+                  - generic [ref=f3e472]:
+                    - img "Spider" [ref=f3e473]
+                    - generic [ref=f3e474]:
+                      - link "Night Web Spider" [ref=f3e476] [cursor=pointer]:
+                        - /url: https://www.wowhead.com/forever/npc=1505
+                      - generic [ref=f3e477]: Spider
+                - cell "2.0" [ref=f3e478]
+                - cell "Bite 1" [ref=f3e479]
+                - cell "Tirisfal Glades" [ref=f3e481]
+              - row [ref=f3e482]:
+                - cell "3" [ref=f3e483]
+                - rowheader "Scorpid Scorpid Worker Scorpid" [ref=f3e484]:
+                  - generic [ref=f3e485]:
+                    - img "Scorpid" [ref=f3e486]
+                    - generic [ref=f3e487]:
+                      - link "Scorpid Worker" [ref=f3e489] [cursor=pointer]:
+                        - /url: https://www.wowhead.com/forever/npc=3124
+                      - generic [ref=f3e490]: Scorpid
+                - cell "2.0" [ref=f3e491]
+                - cell "Claw 1" [ref=f3e492]
+                - cell "Durotar" [ref=f3e494]
+              - row [ref=f3e495]:
+                - cell "3" [ref=f3e496]
+                - rowheader "Boar Small Crag Boar Boar" [ref=f3e497]:
+                  - generic [ref=f3e498]:
+                    - img "Boar" [ref=f3e499]
+                    - generic [ref=f3e500]:
+                      - link "Small Crag Boar" [ref=f3e502] [cursor=pointer]:
+                        - /url: https://www.wowhead.com/forever/npc=708
+                      - generic [ref=f3e503]: Boar
+                - cell "2.0" [ref=f3e504]
+                - cell "Charge 1" [ref=f3e505]
+                - cell "Dun Morogh" [ref=f3e507]
+              - row [ref=f3e508]:
+                - cell "3–4" [ref=f3e509]
+                - rowheader "Spider Webwood Spider Spider" [ref=f3e510]:
+                  - generic [ref=f3e511]:
+                    - img "Spider" [ref=f3e512]
+                    - generic [ref=f3e513]:
+                      - link "Webwood Spider" [ref=f3e515] [cursor=pointer]:
+                        - /url: https://www.wowhead.com/forever/npc=1986
+                      - generic [ref=f3e516]: Spider
+                - cell "2.0" [ref=f3e517]
+                - cell [ref=f3e518]
+                - cell "Teldrassil" [ref=f3e519]
+              - row [ref=f3e520]:
+                - cell "4–5" [ref=f3e521]
+                - rowheader "Boar Bristleback Battleboar Boar" [ref=f3e522]:
+                  - generic [ref=f3e523]:
+                    - img "Boar" [ref=f3e524]
+                    - generic [ref=f3e525]:
+                      - link "Bristleback Battleboar" [ref=f3e527] [cursor=pointer]:
+                        - /url: https://www.wowhead.com/forever/npc=2954
+                      - generic [ref=f3e528]: Boar
+                - cell "2.0" [ref=f3e529]
+                - cell "Charge 1" [ref=f3e530]
+                - cell "Mulgore" [ref=f3e532]
+              - row [ref=f3e533]:
+                - cell "4" [ref=f3e534]
+                - rowheader "Scorpid Sarkoth Scorpid" [ref=f3e535]:
+                  - generic [ref=f3e536]:
+                    - img "Scorpid" [ref=f3e537]
+                    - generic [ref=f3e538]:
+                      - link "Sarkoth" [ref=f3e540] [cursor=pointer]:
+                        - /url: https://www.wowhead.com/forever/npc=3281
+                      - generic [ref=f3e541]: Scorpid
+                - cell "2.0" [ref=f3e542]
+                - cell "Claw 1" [ref=f3e543]
+                - cell "Durotar" [ref=f3e545]
+              - row [ref=f3e546]:
+                - cell "4–5" [ref=f3e547]
+                - rowheader "Cat Savannah Cub Cat" [ref=f3e548]:
+                  - generic [ref=f3e549]:
+                    - img "Cat" [ref=f3e550]
+                    - generic [ref=f3e551]:
+                      - link "Savannah Cub" [ref=f3e553] [cursor=pointer]:
+                        - /url: https://www.wowhead.com/forever/npc=5766
+                      - generic [ref=f3e554]: Cat
+                - cell "1.2" [ref=f3e555]
+                - cell "Cower 1" [ref=f3e556]
+                - cell "The Barrens" [ref=f3e558]
+              - row [ref=f3e559]:
+                - cell "5–6" [ref=f3e560]
+                - rowheader "Scorpid Clattering Scorpid Scorpid" [ref=f3e561]:
+                  - generic [ref=f3e562]:
+                    - img "Scorpid" [ref=f3e563]
+                    - generic [ref=f3e564]:
+                      - link "Clattering Scorpid" [ref=f3e566] [cursor=pointer]:
+                        - /url: https://www.wowhead.com/forever/npc=3125
+                      - generic [ref=f3e567]: Scorpid
+                - cell "2.0" [ref=f3e568]
+                - cell [ref=f3e569]
+                - cell "Durotar" [ref=f3e570]
+              - row [ref=f3e571]:
+                - cell "5–6" [ref=f3e572]
+                - rowheader "Boar Crag Boar Boar" [ref=f3e573]:
+                  - generic [ref=f3e574]:
+                    - img "Boar" [ref=f3e575]
+                    - generic [ref=f3e576]:
+                      - link "Crag Boar" [ref=f3e578] [cursor=pointer]:
+                        - /url: https://www.wowhead.com/forever/npc=1125
+                      - generic [ref=f3e579]: Boar
+                - cell "2.0" [ref=f3e580]
+                - cell "Charge 1" [ref=f3e581]
+                - cell "Dun Morogh" [ref=f3e583]
+              - row [ref=f3e584]:
+                - cell "5–6" [ref=f3e585]
+                - rowheader "Spider Forest Spider Spider" [ref=f3e586]:
+                  - generic [ref=f3e587]:
+                    - img "Spider" [ref=f3e588]
+                    - generic [ref=f3e589]:
+                      - link "Forest Spider" [ref=f3e591] [cursor=pointer]:
+                        - /url: https://www.wowhead.com/forever/npc=30
+                      - generic [ref=f3e592]: Spider
+                - cell "2.0" [ref=f3e593]
+                - cell "Bite 1" [ref=f3e594]
+                - cell "Elwynn Forest" [ref=f3e596]
+              - row [ref=f3e597]:
+                - cell "5" [ref=f3e598]
+                - rowheader "Spider Githyiss the Vile Spider" [ref=f3e599]:
+                  - generic [ref=f3e600]:
+                    - img "Spider" [ref=f3e601]
+                    - generic [ref=f3e602]:
+                      - link "Githyiss the Vile" [ref=f3e604] [cursor=pointer]:
+                        - /url: https://www.wowhead.com/forever/npc=1994
+                      - generic [ref=f3e605]: Spider
+                - cell "2.0" [ref=f3e606]
+                - cell "Bite 1" [ref=f3e607]
+                - cell "Teldrassil" [ref=f3e609]
+              - row [ref=f3e610]:
+                - cell "5–6" [ref=f3e611]
+                - rowheader "Cat Juvenile Snow Leopard Cat" [ref=f3e612]:
+                  - generic [ref=f3e613]:
+                    - img "Cat" [ref=f3e614]
+                    - generic [ref=f3e615]:
+                      - link "Juvenile Snow Leopard" [ref=f3e617] [cursor=pointer]:
+                        - /url: https://www.wowhead.com/forever/npc=1199
+                      - generic [ref=f3e618]: Cat
+                - cell "2.0" [ref=f3e619]
+                - cell "Cower 1" [ref=f3e620]
+                - cell "Dun Morogh" [ref=f3e622]
+              - row [ref=f3e623]:
+                - cell "5–6" [ref=f3e624]
+                - rowheader "Wolf Mangy Wolf Wolf" [ref=f3e625]:
+                  - generic [ref=f3e626]:
+                    - img "Wolf" [ref=f3e627]
+                    - generic [ref=f3e628]:
+                      - link "Mangy Wolf" [ref=f3e630] [cursor=pointer]:
+                        - /url: https://www.wowhead.com/forever/npc=525
+                      - generic [ref=f3e631]: Wolf
+                - cell "1.7" [ref=f3e632]
+                - cell [ref=f3e633]
+                - cell "Elwynn Forest" [ref=f3e634]
+              - row [ref=f3e635]:
+                - cell "5" [ref=f3e636]
+                - rowheader "Spider Night Web Matriarch Spider" [ref=f3e637]:
+                  - generic [ref=f3e638]:
+                    - img "Spider" [ref=f3e639]
+                    - generic [ref=f3e640]:
+                      - link "Night Web Matriarch" [ref=f3e642] [cursor=pointer]:
+                        - /url: https://www.wowhead.com/forever/npc=1688
+                      - generic [ref=f3e643]: Spider
+                - cell "2.0" [ref=f3e644]
+                - cell "Bite 1" [ref=f3e645]
+                - cell "Tirisfal Glades" [ref=f3e647]
+              - row [ref=f3e648]:
+                - cell "5–6" [ref=f3e649]
+                - rowheader "Cat Nightsaber Cat" [ref=f3e650]:
+                  - generic [ref=f3e651]:
+                    - img "Cat" [ref=f3e652]
+                    - generic [ref=f3e653]:
+                      - link "Nightsaber" [ref=f3e655] [cursor=pointer]:
+                        - /url: https://www.wowhead.com/forever/npc=2042
+                      - generic [ref=f3e656]: Cat
+                - cell "1.4" [ref=f3e657]
+                - cell "Cower 1" [ref=f3e658]
+                - cell "Teldrassil" [ref=f3e660]
+              - row [ref=f3e661]:
+                - cell "5–6" [ref=f3e662]
+                - rowheader "Wolf Prairie Wolf Wolf" [ref=f3e663]:
+                  - generic [ref=f3e664]:
+                    - img "Wolf" [ref=f3e665]
+                    - generic [ref=f3e666]:
+                      - link "Prairie Wolf" [ref=f3e668] [cursor=pointer]:
+                        - /url: https://www.wowhead.com/forever/npc=2958
+                      - generic [ref=f3e669]: Wolf
+                - cell "1.5" [ref=f3e670]
+                - cell "Bite 1" [ref=f3e671]
+                - cell "Mulgore" [ref=f3e673]
+              - row [ref=f3e674]:
+                - cell "5–6" [ref=f3e675]
+                - rowheader "Crab Pygmy Surf Crawler Crab" [ref=f3e676]:
+                  - generic [ref=f3e677]:
+                    - img "Crab" [ref=f3e678]
+                    - generic [ref=f3e679]:
+                      - link "Pygmy Surf Crawler" [ref=f3e681] [cursor=pointer]:
+                        - /url: https://www.wowhead.com/forever/npc=3106
+                      - generic [ref=f3e682]: Crab
+                - cell "2.0" [ref=f3e683]
+                - cell "Claw 1" [ref=f3e684]
+                - cell "Durotar" [ref=f3e686]
+              - row [ref=f3e687]:
+                - cell "5–6" [ref=f3e688]
+                - rowheader "Boar Stonetusk Boar Boar" [ref=f3e689]:
+                  - generic [ref=f3e690]:
+                    - img "Boar" [ref=f3e691]
+                    - generic [ref=f3e692]:
+                      - link "Stonetusk Boar" [ref=f3e694] [cursor=pointer]:
+                        - /url: https://www.wowhead.com/forever/npc=113
+                      - generic [ref=f3e695]: Boar
+                - cell "2.0" [ref=f3e696]
+                - cell "Charge 1" [ref=f3e697]
+                - cell "Elwynn Forest" [ref=f3e699]
+              - row [ref=f3e700]:
+                - cell "5–6" [ref=f3e701]
+                - rowheader "Bird of Prey Strigid Owl Bird of Prey" [ref=f3e702]:
+                  - generic [ref=f3e703]:
+                    - img "Bird of Prey" [ref=f3e704]
+                    - generic [ref=f3e705]:
+                      - link "Strigid Owl" [ref=f3e707] [cursor=pointer]:
+                        - /url: https://www.wowhead.com/forever/npc=1995
+                      - generic [ref=f3e708]: Bird of Prey
+                - cell "2.0" [ref=f3e709]
+                - cell "Claw 1" [ref=f3e710]
+                - cell "Teldrassil" [ref=f3e712]
+              - row [ref=f3e713]:
+                - cell "5–6" [ref=f3e714]
+                - rowheader "Spider Webwood Lurker Spider" [ref=f3e715]:
+                  - generic [ref=f3e716]:
+                    - img "Spider" [ref=f3e717]
+                    - generic [ref=f3e718]:
+                      - link "Webwood Lurker" [ref=f3e720] [cursor=pointer]:
+                        - /url: https://www.wowhead.com/forever/npc=1998
+                      - generic [ref=f3e721]: Spider
+                - cell "2.0" [ref=f3e722]
+                - cell [ref=f3e723]
+                - cell "Teldrassil" [ref=f3e724]
+              - row [ref=f3e725]:
+                - cell "5–7" [ref=f3e726]
+                - rowheader "Carrion Bird Wiry Swoop Carrion Bird" [ref=f3e727]:
+                  - generic [ref=f3e728]:
+                    - img "Carrion Bird" [ref=f3e729]
+                    - generic [ref=f3e730]:
+                      - link "Wiry Swoop" [ref=f3e732] [cursor=pointer]:
+                        - /url: https://www.wowhead.com/forever/npc=2969
+                      - generic [ref=f3e733]: Carrion Bird
+                - cell "2.0" [ref=f3e734]
+                - cell [ref=f3e735]
+                - cell "Mulgore" [ref=f3e736]
+              - row [ref=f3e737]:
+                - cell "5–6" [ref=f3e738]
+                - rowheader "Bear Young Black Bear Bear" [ref=f3e739]:
+                  - generic [ref=f3e740]:
+                    - img "Bear" [ref=f3e741]
+                    - generic [ref=f3e742]:
+                      - link "Young Black Bear" [ref=f3e744] [cursor=pointer]:
+                        - /url: https://www.wowhead.com/forever/npc=1128
+                      - generic [ref=f3e745]: Bear
+                - cell "2.0" [ref=f3e746]
+                - cell [ref=f3e747]
+                - cell "Dun Morogh" [ref=f3e748]
+          - button "Show all 502 beasts" [ref=f3e749] [cursor=pointer]
+        - region [ref=f3e750]:
+          - heading "What changed for pets" [level=2] [ref=f3e752]
+          - paragraph [ref=f3e753]: Read from the beta client and set against Classic’s. Each ability is shown at the rank a pet can have at level 30, the beta’s cap.
+          - generic [ref=f3e754]:
+            - generic [ref=f3e755]:
+              - link [ref=f3e756] [cursor=pointer]:
+                - /url: "#family-fox"
+              - generic [ref=f3e757]:
+                - 'heading "A new family: the Fox" [level=3] [ref=f3e758]'
+                - paragraph [ref=f3e759]: "It eats meat. Besides Bite and Dash it has an ability of its own:"
+                - generic [ref=f3e761]:
+                  - paragraph [ref=f3e762]:
+                    - generic [ref=f3e763]: Trickster's Dance
+                    - generic [ref=f3e764]: Rank 1
+                  - paragraph [ref=f3e765]: Increases your pet's chance to Dodge by 50% and decreases the time between your pet's attacks by 30% for 12 sec.
+                  - paragraph [ref=f3e766]: 10 Focus, 3 min cooldown
+            - generic [ref=f3e767]:
+              - link [ref=f3e768] [cursor=pointer]:
+                - /url: "#family-bird-of-prey"
+              - generic [ref=f3e769]:
+                - heading "Owl is now Bird of Prey" [level=3] [ref=f3e770]
+                - paragraph [ref=f3e771]: Same beasts, a new name, and an ability to go with it.
+          - heading "New family abilities" [level=3] [ref=f3e772]
+          - generic [ref=f3e773]:
+            - generic [ref=f3e774]:
+              - link "Bat" [ref=f3e775] [cursor=pointer]:
+                - /url: "#family-bat"
+              - generic [ref=f3e779]:
+                - paragraph [ref=f3e780]:
+                  - generic [ref=f3e781]: Sonic Blast
+                  - generic [ref=f3e782]: Rank 2
+                - paragraph [ref=f3e783]: Emits a piercing shriek, inflicting 33 to 39 Nature damage and increasing the casting time of all spells by 60% for 30 sec.
+                - paragraph [ref=f3e784]: 80 Focus, 30 sec cooldown
+            - generic [ref=f3e785]:
+              - link "Bear" [ref=f3e786] [cursor=pointer]:
+                - /url: "#family-bear"
+              - generic [ref=f3e790]:
+                - paragraph [ref=f3e791]:
+                  - generic [ref=f3e792]: Swipe
+                  - generic [ref=f3e793]: Rank 2
+                - paragraph [ref=f3e794]: Swipe 3 nearby enemies, inflicting 8 to 10 damage.
+                - paragraph [ref=f3e795]: 20 Focus, 5 sec cooldown
+            - generic [ref=f3e796]:
+              - link "Bird of Prey Owl in Classic" [ref=f3e797] [cursor=pointer]:
+                - /url: "#family-bird-of-prey"
+                - generic [ref=f3e798]:
+                  - generic [ref=f3e799]: Bird of Prey
+                  - generic [ref=f3e800]: Owl in Classic
+              - generic [ref=f3e802]:
+                - paragraph [ref=f3e803]:
+                  - generic [ref=f3e804]: Mine!
+                  - generic [ref=f3e805]: Rank 3
+                - paragraph [ref=f3e806]: Grabs an enemy's weapon with its talons, causing 20 to 24 damage and disarming them for 4 sec.
+                - paragraph [ref=f3e807]: 20 Focus, 1 min cooldown
+            - generic [ref=f3e808]:
+              - link "Crab" [ref=f3e809] [cursor=pointer]:
+                - /url: "#family-crab"
+              - generic [ref=f3e813]:
+                - paragraph [ref=f3e814]:
+                  - generic [ref=f3e815]: Pinch
+                  - generic [ref=f3e816]: Rank 2
+                - paragraph [ref=f3e817]: Pinches an enemy's legs for 32 to 36 damage and reduces movement speed by 50% for 9 sec.
+                - paragraph [ref=f3e818]: 50 Focus, 30 sec cooldown
+            - generic [ref=f3e819]:
+              - link "Crocolisk" [ref=f3e820] [cursor=pointer]:
+                - /url: "#family-crocolisk"
+              - generic [ref=f3e824]:
+                - paragraph [ref=f3e825]:
+                  - generic [ref=f3e826]: Dismember
+                  - generic [ref=f3e827]: Rank 2
+                - paragraph [ref=f3e828]: Viciously bites enemy appendages for 18 to 20 damage and reduces the effectiveness of any healing by 50% for 10 sec.
+                - paragraph [ref=f3e829]: 35 Focus, 6 sec cooldown
+            - generic [ref=f3e830]:
+              - link "Hyena" [ref=f3e831] [cursor=pointer]:
+                - /url: "#family-hyena"
+              - generic [ref=f3e835]:
+                - paragraph [ref=f3e836]:
+                  - generic [ref=f3e837]: Tendon Rip
+                  - generic [ref=f3e838]: Rank 2
+                - paragraph [ref=f3e839]: Tears at an enemy's legs for 21 damage over 9 sec and reduces movement speed by 50% for 9 sec.
+                - paragraph [ref=f3e840]: 25 Focus, 30 sec cooldown
+            - generic [ref=f3e841]:
+              - link "Raptor" [ref=f3e842] [cursor=pointer]:
+                - /url: "#family-raptor"
+              - generic [ref=f3e846]:
+                - paragraph [ref=f3e847]:
+                  - generic [ref=f3e848]: Savage Rend
+                  - generic [ref=f3e849]: Rank 2
+                - paragraph [ref=f3e850]: Slash an enemy with razor talons, causing the target to Bleed for 54 damage over 18 sec.
+                - paragraph [ref=f3e851]: 50 Focus, 1 min cooldown
+            - generic [ref=f3e852]:
+              - link "Spider" [ref=f3e853] [cursor=pointer]:
+                - /url: "#family-spider"
+              - generic [ref=f3e857]:
+                - paragraph [ref=f3e858]:
+                  - generic [ref=f3e859]: Web
+                  - generic [ref=f3e860]: Rank 2
+                - paragraph [ref=f3e861]: Entangles an enemy in a corrosive web, immobilizing them and dealing 20 Nature damage over 4 sec.
+                - paragraph [ref=f3e862]: 20 Focus, 40 sec cooldown
+            - generic [ref=f3e863]:
+              - link "Tallstrider" [ref=f3e864] [cursor=pointer]:
+                - /url: "#family-tallstrider"
+              - generic [ref=f3e868]:
+                - paragraph [ref=f3e869]:
+                  - generic [ref=f3e870]: Dust Cloud
+                  - generic [ref=f3e871]: Rank 2
+                - paragraph [ref=f3e872]: Your tallstrider kicks up an abrasive cloud of dust, reducing the target's Armor by 175 for 30 sec.
+                - paragraph [ref=f3e873]: 10 Focus
+          - generic [ref=f3e874]:
+            - generic [ref=f3e875]:
+              - term [ref=f3e876]: Dash for 8 more families
+              - definition [ref=f3e877]:
+                - generic [ref=f3e878]:
+                  - link "Bear" [ref=f3e879] [cursor=pointer]:
+                    - /url: "#family-bear"
+                  - link "Crab" [ref=f3e881] [cursor=pointer]:
+                    - /url: "#family-crab"
+                  - link "Crocolisk" [ref=f3e883] [cursor=pointer]:
+                    - /url: "#family-crocolisk"
+                  - link "Gorilla" [ref=f3e885] [cursor=pointer]:
+                    - /url: "#family-gorilla"
+                  - link "Raptor" [ref=f3e887] [cursor=pointer]:
+                    - /url: "#family-raptor"
+                  - link "Scorpid" [ref=f3e889] [cursor=pointer]:
+                    - /url: "#family-scorpid"
+                  - link "Spider" [ref=f3e891] [cursor=pointer]:
+                    - /url: "#family-spider"
+                  - link "Turtle" [ref=f3e893] [cursor=pointer]:
+                    - /url: "#family-turtle"
+                - generic [ref=f3e895]: Classic already gave it to boar, cat, hyena, tallstrider, wolf. Its first rank is learned at level 30.
+            - generic [ref=f3e896]:
+              - term [ref=f3e897]: Gone from Forever
+              - definition [ref=f3e898]:
+                - generic [ref=f3e899]:
+                  - link "Bat Screech" [ref=f3e900] [cursor=pointer]:
+                    - /url: "#family-bat"
+                    - generic [ref=f3e901]: Bat
+                    - generic [ref=f3e902]: Screech
+                  - link "Bird of Prey Screech" [ref=f3e903] [cursor=pointer]:
+                    - /url: "#family-bird-of-prey"
+                    - generic [ref=f3e904]: Bird of Prey
+                    - generic [ref=f3e905]: Screech
+                  - link "Raptor Cobra Reflexes" [ref=f3e906] [cursor=pointer]:
+                    - /url: "#family-raptor"
+                    - generic [ref=f3e907]: Raptor
+                    - generic [ref=f3e908]: Cobra Reflexes
+          - heading "Abilities Forever changed" [level=3] [ref=f3e909]
+          - paragraph [ref=f3e910]: Same abilities as in Classic, with other numbers. Each is shown at one rank, Classic above, Forever below; open the family for every rank.
+          - generic [ref=f3e911]:
+            - generic [ref=f3e912]:
+              - link "Boar" [ref=f3e913] [cursor=pointer]:
+                - /url: "#family-boar"
+              - generic [ref=f3e917]:
+                - paragraph [ref=f3e918]:
+                  - generic [ref=f3e919]: Charge
+                  - generic [ref=f3e920]: Rank 1
+                - generic [ref=f3e921]:
+                  - generic [ref=f3e922]:
+                    - term [ref=f3e923]: Classic
+                    - definition [ref=f3e924]: Charges an enemy, immobilizes it for 1 sec, and adds 60 melee attack power to the boar's next attack.
+                  - generic [ref=f3e925]:
+                    - term [ref=f3e926]: Forever
+                    - definition [ref=f3e927]: Charges an enemy, immobilizes it for 1 sec, and adds 66 melee attack power to the boar's next attack.
+            - generic [ref=f3e928]:
+              - link "Carrion Bird" [ref=f3e929] [cursor=pointer]:
+                - /url: "#family-carrion-bird"
+              - generic [ref=f3e933]:
+                - paragraph [ref=f3e934]:
+                  - generic [ref=f3e935]: Demoralizing Screech
+                  - generic [ref=f3e936]: Rank 1
+                  - emphasis [ref=f3e937]: Screech in Classic
+                - generic [ref=f3e938]:
+                  - generic [ref=f3e939]:
+                    - term [ref=f3e940]: Classic
+                    - definition [ref=f3e941]: Blasts a single enemy for 7 to 9 damage and lowers the melee attack power of all enemies in melee range by 25. Effect lasts 4 sec.
+                  - generic [ref=f3e942]:
+                    - term [ref=f3e943]: Forever
+                    - definition [ref=f3e944]: Blasts a single enemy for 7 to 9 damage and lowers the melee attack power of all enemies in melee range by 63 for 30 sec.
+            - generic [ref=f3e945]:
+              - link "Gorilla" [ref=f3e946] [cursor=pointer]:
+                - /url: "#family-gorilla"
+              - generic [ref=f3e950]:
+                - paragraph [ref=f3e951]:
+                  - generic [ref=f3e952]: Thunderstomp
+                  - generic [ref=f3e953]: Rank 1
+                - generic [ref=f3e954]:
+                  - generic [ref=f3e955]:
+                    - term [ref=f3e956]: Classic
+                    - definition [ref=f3e957]: Shakes the ground with thundering force, doing 70 to 80 Nature damage to all enemies within 8 yards.
+                  - generic [ref=f3e958]:
+                    - term [ref=f3e959]: Forever
+                    - definition [ref=f3e960]: Shakes the ground with thundering force, doing 53 to 61 Nature damage to all enemies within 8 yards.
+                - paragraph [ref=f3e961]: "New Rank 4 at level 60: Shakes the ground with thundering force, doing 122 to 142 Nature damage to all enemies within 8 yds."
+            - generic [ref=f3e962]:
+              - link "Scorpid" [ref=f3e963] [cursor=pointer]:
+                - /url: "#family-scorpid"
+              - generic [ref=f3e967]:
+                - paragraph [ref=f3e968]:
+                  - generic [ref=f3e969]: Scorpid Poison
+                  - generic [ref=f3e970]: Rank 1
+                - generic [ref=f3e971]:
+                  - generic [ref=f3e972]:
+                    - term [ref=f3e973]: Classic
+                    - definition [ref=f3e974]: Inflicts 10 Nature damage over 10 sec. Effect can stack up to 5 times on a single target.
+                  - generic [ref=f3e975]:
+                    - term [ref=f3e976]: Forever
+                    - definition [ref=f3e977]: Inflicts 5 Nature damage over 10 sec. Effect can stack up to 5 times on a single target.
+            - generic [ref=f3e978]:
+              - link "Turtle" [ref=f3e979] [cursor=pointer]:
+                - /url: "#family-turtle"
+              - generic [ref=f3e983]:
+                - paragraph [ref=f3e984]:
+                  - generic [ref=f3e985]: Shell Shield
+                  - generic [ref=f3e986]: Rank 1
+                - generic [ref=f3e987]:
+                  - generic [ref=f3e988]:
+                    - term [ref=f3e989]: Classic
+                    - definition [ref=f3e990]: Reduces all damage your pet takes by 50%, but increases the time between your pet's attacks by 43%. Lasts 12 sec.
+                  - generic [ref=f3e991]:
+                    - term [ref=f3e992]: Forever
+                    - definition [ref=f3e993]: Reduces all damage your pet takes by 50% and increases the time between your pet's attacks by 60%, but deals more damage with each attack. Lasts 12 sec.
+            - generic [ref=f3e994]:
+              - link "Wind Serpent" [ref=f3e995] [cursor=pointer]:
+                - /url: "#family-wind-serpent"
+              - generic [ref=f3e999]:
+                - paragraph [ref=f3e1000]:
+                  - generic [ref=f3e1001]: Lightning Breath
+                  - generic [ref=f3e1002]: Rank 1
+                - generic [ref=f3e1003]:
+                  - generic [ref=f3e1004]:
+                    - term [ref=f3e1005]: Classic
+                    - definition [ref=f3e1006]: Breathes lightning, instantly dealing 11 to 14 Nature damage to a single target.
+                  - generic [ref=f3e1007]:
+                    - term [ref=f3e1008]: Forever
+                    - definition [ref=f3e1009]: Breathes lightning, instantly dealing 8 to 10 Nature damage to a single target.
+            - generic [ref=f3e1010]:
+              - link "Wolf" [ref=f3e1011] [cursor=pointer]:
+                - /url: "#family-wolf"
+              - generic [ref=f3e1015]:
+                - paragraph [ref=f3e1016]:
+                  - generic [ref=f3e1017]: Furious Howl
+                  - generic [ref=f3e1018]: Rank 1
+                - generic [ref=f3e1019]:
+                  - generic [ref=f3e1020]:
+                    - term [ref=f3e1021]: Classic
+                    - definition [ref=f3e1022]: Party members within 15 yards receive an extra 9 to 11 damage to their next Physical attack. Lasts 10 sec.
+                  - generic [ref=f3e1023]:
+                    - term [ref=f3e1024]: Forever
+                    - definition [ref=f3e1025]: The wolf howls, increasing the melee attack power of all party members within 15 yards by 13. Lasts 1 min.
+          - heading "What changed for every pet" [level=3] [ref=f3e1026]
+          - paragraph [ref=f3e1027]:
+            - text: Found by beta players and gathered on the
+            - link "Forever Hunter wiki" [ref=f3e1028] [cursor=pointer]:
+              - /url: https://github.com/classic-hunter/forever-hunter/wiki/Forever-Beta-Changes
+            - text: . The client does not show these, so they may still change.
+          - generic [ref=f3e1029]:
+            - generic [ref=f3e1030]:
+              - term [ref=f3e1031]: Stats from the hunter
+              - definition [ref=f3e1032]: Your pet gains 2 health for each point of your Stamina, 30% of your armor, 10% of your highest attack power and all of your critical strike chance, racial bonuses included.
+            - generic [ref=f3e1033]:
+              - term [ref=f3e1034]: Focus
+              - definition [ref=f3e1035]: It comes back without pause, 10 a second, about twice as fast as in Classic.
+            - generic [ref=f3e1036]:
+              - term [ref=f3e1037]: Happiness
+              - definition [ref=f3e1038]: It drops much more slowly than in Classic.
+            - generic [ref=f3e1039]:
+              - term [ref=f3e1040]: Buffs
+              - definition [ref=f3e1041]: Your pet no longer takes buffs from other players, even those it took in Classic.
+            - generic [ref=f3e1042]:
+              - term [ref=f3e1043]: Distance
+              - definition [ref=f3e1044]: Your pet is dismissed when it is about 100 yards from you.
+          - heading "New tames in Forever" [level=3] [ref=f3e1045]
+          - paragraph [ref=f3e1046]: Beasts Forever adds that beta players have tamed or seen, with what they reported and where it was reported.
+          - list [ref=f3e1047]:
+            - listitem [ref=f3e1048]:
+              - generic [ref=f3e1049]:
+                - paragraph [ref=f3e1050]: Juvenile Vuldren
+                - paragraph [ref=f3e1051]: Fox, level 1, Zephras Isle, 2.0 sec swing
+                - paragraph [ref=f3e1052]:
+                  - text: Reported on September 22,
+                  - link "Beastmaster.io, Fox" [ref=f3e1053] [cursor=pointer]:
+                    - /url: https://beastmaster.io/forever/family/fox
+            - listitem [ref=f3e1054]:
+              - generic [ref=f3e1055]:
+                - paragraph [ref=f3e1056]: Vuldren
+                - paragraph [ref=f3e1057]: Fox, level 6, Zephras Isle, 2.0 sec swing
+                - paragraph [ref=f3e1058]:
+                  - text: Reported on September 22,
+                  - link "Beastmaster.io, Fox" [ref=f3e1059] [cursor=pointer]:
+                    - /url: https://beastmaster.io/forever/family/fox
+            - listitem [ref=f3e1060]:
+              - generic [ref=f3e1061]:
+                - paragraph [ref=f3e1062]: Vuldren Alpha
+                - paragraph [ref=f3e1063]: Fox, level 10, Zephras Isle, 2.0 sec swing
+                - paragraph [ref=f3e1064]: A paler coat than the other Vuldren.
+                - paragraph [ref=f3e1065]:
+                  - text: Reported on September 22,
+                  - link "Beastmaster.io, Fox" [ref=f3e1066] [cursor=pointer]:
+                    - /url: https://beastmaster.io/forever/family/fox
+            - listitem [ref=f3e1067]:
+              - generic [ref=f3e1068]:
+                - paragraph [ref=f3e1069]: ColdraspRare
+                - paragraph [ref=f3e1070]: Wolf, level 12, Tirisfal Glades, 1.5 sec swing
+                - paragraph [ref=f3e1071]: The blue ghost wolf model, in the Whispering Forest near 19.7, 65.6. Comes with Furious Howl rank 1; respawns in hours. Tameable from level 10.
+                - paragraph [ref=f3e1072]:
+                  - text: Reported on September 18,
+                  - link "Petopia forum, New Pets in Forever" [ref=f3e1073] [cursor=pointer]:
+                    - /url: https://forums.wow-petopia.com/viewtopic.php?t=27358
+            - listitem [ref=f3e1074]:
+              - generic [ref=f3e1075]:
+                - paragraph [ref=f3e1076]: GhostfangRare
+                - paragraph [ref=f3e1077]: Cat, level 10, Dun Morogh
+                - paragraph [ref=f3e1078]: A blue cat near the Wetlands tunnel, seen at 74, 64, 80, 46 and 82, 55; respawns in about 30 minutes; no abilities.
+                - paragraph [ref=f3e1079]:
+                  - text: Reported on September 19,
+                  - link "Petopia forum, New Pets in Forever" [ref=f3e1080] [cursor=pointer]:
+                    - /url: https://forums.wow-petopia.com/viewtopic.php?t=27358
+            - listitem [ref=f3e1081]:
+              - generic [ref=f3e1082]:
+                - paragraph [ref=f3e1083]: NightscreechRare
+                - paragraph [ref=f3e1084]: Bird of Prey, Teldrassil
+                - paragraph [ref=f3e1085]: The Hellhoot model, across the road from the leatherworking trainer; respawns in one to two hours.
+                - paragraph [ref=f3e1086]:
+                  - text: Reported on September 19,
+                  - link "Petopia forum, New Pets in Forever" [ref=f3e1087] [cursor=pointer]:
+                    - /url: https://forums.wow-petopia.com/viewtopic.php?t=27358
+            - listitem [ref=f3e1088]:
+              - generic [ref=f3e1089]:
+                - paragraph [ref=f3e1090]: Jai'vhanel
+                - paragraph [ref=f3e1091]: Bird of Prey, level 12, Darkshore
+                - paragraph [ref=f3e1092]: A black owl that respawns about every two minutes.
+                - paragraph [ref=f3e1093]:
+                  - text: Reported on September 18,
+                  - link "Petopia forum, questions for beta players" [ref=f3e1094] [cursor=pointer]:
+                    - /url: https://forums.wow-petopia.com/viewtopic.php?t=27356
+            - listitem [ref=f3e1095]:
+              - generic [ref=f3e1096]:
+                - paragraph [ref=f3e1097]: MystmaneRare
+                - paragraph [ref=f3e1098]: Bear, Zephras Isle, 1.6 sec swing
+                - paragraph [ref=f3e1099]: In Shadowgale Forest; comes with Savage Rend.
+                - paragraph [ref=f3e1100]:
+                  - text: Reported on September 20,
+                  - link "Petopia forum, New Pets in Forever" [ref=f3e1101] [cursor=pointer]:
+                    - /url: https://forums.wow-petopia.com/viewtopic.php?t=27358
+            - listitem [ref=f3e1102]:
+              - generic [ref=f3e1103]:
+                - paragraph [ref=f3e1104]: Broodling
+                - paragraph [ref=f3e1105]: Spider, level 14, Ruins of Lordaeron, 2.0 sec swing
+                - paragraph [ref=f3e1106]: This spider attacks every 1.5 seconds in the wild, but every 2.0 seconds once tamed. A reader tamed several from the first packs of the Ruins of Lordaeron.
+                - paragraph [ref=f3e1107]: Reported on September 30 by a reader of this site
+            - listitem [ref=f3e1108]:
+              - generic [ref=f3e1109]:
+                - paragraph [ref=f3e1110]: Moss Stalker
+                - paragraph [ref=f3e1111]: Spider, level 12, Silverpine Forest
+                - paragraph [ref=f3e1112]: The only beast known to teach Web.
+                - paragraph [ref=f3e1113]:
+                  - text: Reported on September 22,
+                  - link "Petopia forum, Web" [ref=f3e1114] [cursor=pointer]:
+                    - /url: https://forums.wow-petopia.com/viewtopic.php?t=27362
+            - listitem [ref=f3e1115]:
+              - generic [ref=f3e1116]:
+                - paragraph [ref=f3e1117]: Ornery Galestrider
+                - paragraph [ref=f3e1118]: Tallstrider, level 8, Zephras Isle, 1.3 sec swing
+                - paragraph [ref=f3e1119]: The blue and white Galestrider of level 5 or 6 attacks at 2.0.
+                - paragraph [ref=f3e1120]:
+                  - text: Reported on September 20,
+                  - link "WoW4Ever News, Onery Galestrider" [ref=f3e1121] [cursor=pointer]:
+                    - /url: https://wow4evernews.com/en/articles/wow-forever-onery-galestrider-hunter-pet
+            - listitem [ref=f3e1122]:
+              - generic [ref=f3e1123]:
+                - paragraph [ref=f3e1124]: Vulgara the InsatiableElite
+                - paragraph [ref=f3e1125]: Wolf, Zephras Isle
+                - paragraph [ref=f3e1126]: A slyvern that counts as a wolf, the target of a level 9 wanted quest.
+                - paragraph [ref=f3e1127]:
+                  - text: Reported on September 22,
+                  - link "Petopia forum, New Pets in Forever" [ref=f3e1128] [cursor=pointer]:
+                    - /url: https://forums.wow-petopia.com/viewtopic.php?t=27358
+          - paragraph [ref=f3e1129]:
+            - generic [ref=f3e1130]: Also in Forever’s data, not reported yet
+            - text: Vuldren Stalker (Fox), Fernfeather (Tallstrider, Zephras Isle, rare), Prideclaw (Cat, Zephras Isle), Shriekling Matriarch (Raptor, Zephras Isle), Windsong Crawler (Crab, Zephras Isle), Shadowgale Shrieker (Bird of Prey, Zephras Isle), Shal'ma (Cat, Durotar, rare), Matriarch Bristlefur (Bear, Elwynn Forest, rare), Elmpaw (Bear, Elwynn Forest, elite), Ukorsbane (Spider, Durotar, elite), Chakuyak (Wolf, Mulgore), Bloodtalon Matriarch (Raptor, Durotar), Young Paletusk (Boar, Riverglades), Roosting Duskbat (Bat, Riverglades), Roving Tallstrider (Tallstrider, Riverglades), Old Ironfang (Wolf, rare), Old Rusthowl (Wolf, rare), Ghostmaw (Crocolisk, elite), Krek the Noxious (Turtle, elite), Ombassa (Cat, elite), Ta'shkal (Cat), Methuselah Crab (Crab), Moonstrider (Tallstrider), Giant Moonstrider (Tallstrider), Bloodshrike (Carrion Bird).
+        - region [ref=f3e1131]:
+          - heading "Attack speed" [level=2] [ref=f3e1133]
+          - paragraph [ref=f3e1134]: "In Forever every pet swings every 2.0 seconds, and a passive the beast brings with it changes that: Faster Attack I to VII, or Slower Attack II and III. Their percentages land exactly on the speeds the same beasts had in Classic, and beta players find their tames at those speeds, so Classic’s number is the one to go by. Beta players also find that a pet’s hits are not made bigger to make up for a slow swing, so for now a fast pet simply deals more damage. Nobody knows yet whether that is intended."
+          - figure "Attack speed of each passive, from 1.0 to 2.7 seconds" [ref=f3e1135]:
+            - generic [ref=f3e1136]:
+              - generic [ref=f3e1137]:
+                - generic "1 beast" [ref=f3e1138]: "1"
+                - generic [ref=f3e1139]: "1.0"
+                - generic [ref=f3e1140]: Faster Attack VII
+              - generic [ref=f3e1141]:
+                - generic "7 beasts" [ref=f3e1142]: "7"
+                - generic [ref=f3e1143]: "1.2"
+                - generic [ref=f3e1144]: Faster Attack VI
+              - generic [ref=f3e1145]:
+                - generic "21 beasts" [ref=f3e1146]: "21"
+                - generic [ref=f3e1147]: "1.3"
+                - generic [ref=f3e1148]: Faster Attack V
+              - generic [ref=f3e1149]:
+                - generic "10 beasts" [ref=f3e1150]: "10"
+                - generic [ref=f3e1151]: "1.4"
+                - generic [ref=f3e1152]: Faster Attack IV
+              - generic [ref=f3e1153]:
+                - generic "18 beasts" [ref=f3e1154]: "18"
+                - generic [ref=f3e1155]: "1.5"
+                - generic [ref=f3e1156]: Faster Attack III
+              - generic [ref=f3e1157]:
+                - generic "4 beasts" [ref=f3e1158]: "4"
+                - generic [ref=f3e1159]: "1.6"
+                - generic [ref=f3e1160]: Faster Attack II
+              - generic [ref=f3e1161]:
+                - generic "4 beasts" [ref=f3e1162]: "4"
+                - generic [ref=f3e1163]: "1.7"
+                - generic [ref=f3e1164]: Faster Attack I
+              - generic [ref=f3e1165]:
+                - generic "1 beast" [ref=f3e1166]: "1"
+                - generic [ref=f3e1167]: "2.5"
+                - generic [ref=f3e1168]: Slower Attack II
+              - generic [ref=f3e1169]:
+                - generic [ref=f3e1170]: "2.7"
+                - generic [ref=f3e1171]: Slower Attack III
+              - generic [ref=f3e1172]:
+                - generic [ref=f3e1173]: "2.0"
+                - generic [ref=f3e1174]: most beasts
+          - paragraph [ref=f3e1175]:
+            - text: Under the scale, how many beasts swing at that speed.
+            - link "Show the fast beasts" [ref=f3e1176] [cursor=pointer]:
+              - /url: "#beasts-fast"
+        - region [ref=f3e1177]:
+          - heading "How training works" [level=2] [ref=f3e1179]
+          - paragraph [ref=f3e1180]: "Training still works as in Classic. To teach your pet an ability:"
+          - list [ref=f3e1181]:
+            - listitem [ref=f3e1182]: Tame a beast that knows it. The Teaches column of the list above says which beast knows which rank.
+            - listitem [ref=f3e1183]: Fight with it until you learn the ability. The message is a line of yellow text with no rank in it, easy to miss.
+            - listitem [ref=f3e1184]: Take your own pet back and teach it with Beast Training. Each ability costs training points. Pet trainers sell the general abilities, such as Growl and the resistances, for training points too.
+          - paragraph [ref=f3e1185]: "Loyalty gates training: your pet has to gain a loyalty level before it can be taught, and players find loyalty rises very slowly."
+          - paragraph [ref=f3e1186]: You can tame a beast up to two levels above your own. Beast Lore, which shows what a beast knows before you tame it, is learned at level 24.
+          - paragraph [ref=f3e1187]: Pets that come from the Skyborne area (the Vuldren foxes, the cranes) have been reported losing their abilities after being dismissed or after a relog. That is a beta bug, not a rule.
+        - region [ref=f3e1188]:
+          - heading "Sources" [level=2] [ref=f3e1190]
+          - paragraph [ref=f3e1191]: Families, diets, abilities, ranks, levels, tooltips and the attack speed passives come from the beta client, build 1.60.1.70338, compared with Classic Era’s, build 1.15.9.69722.
+          - paragraph [ref=f3e1192]: A family’s damage, armor and health are the values of its Tamed Pet Passive in the beta client.
+          - paragraph [ref=f3e1193]: Where a Classic beast is, its level and its speed come from the cMaNGOS Classic database. Forever’s new beasts come from Wowhead’s Forever database, read on September 23, and from what beta players posted, each named with its report.
+          - paragraph [ref=f3e1194]: What a beast teaches comes from Classic Era’s client (CreatureSpellData). Forever may have changed it for some beasts.
+          - paragraph [ref=f3e1195]:
+            - text: What changed for every pet, and how damage goes with attack speed, come from beta players, gathered on the
+            - link "Forever Hunter wiki" [ref=f3e1196] [cursor=pointer]:
+              - /url: https://github.com/classic-hunter/forever-hunter/wiki/Forever-Beta-Changes
+            - text: .
+          - paragraph [ref=f3e1197]: How training works comes from beta players on the Petopia forum and the official forums, 18 to 22 September 2026.
+          - paragraph [ref=f3e1198]: Tamed something this page does not list, or found another speed? Tell us the beast, its level, where it was and what its tooltip says.
+  - contentinfo [ref=f3e1199]:
+    - region "Support ForeverChanges" [ref=f3e1200]:
+      - generic [ref=f3e1201]:
+        - paragraph [ref=f3e1202]:
+          - strong [ref=f3e1203]: ForeverChanges has no ads
+          - generic [ref=f3e1204]: I make it on my own, and I want it to stay free. If it's useful to you, a donation helps pay for hosting and the time it takes to keep it up to date.
+          - button "Tell me what to improve" [ref=f3e1205] [cursor=pointer]
+        - generic [ref=f3e1206]:
+          - button "Poke the goblin" [ref=f3e1207] [cursor=pointer]:
+            - generic [aria-hidden]: PPC for the little content creator!
+          - link "Support the site" [ref=f3e1208] [cursor=pointer]:
+            - /url: https://ko-fi.com/bartolomew
+    - navigation "Site pages" [ref=f3e1214]:
+      - generic [ref=f3e1215]:
+        - heading "Classes" [level=2] [ref=f3e1216]
+        - list [ref=f3e1217]:
+          - listitem [ref=f3e1218]:
+            - link "Warrior" [ref=f3e1219] [cursor=pointer]:
+              - /url: /class/warrior
+          - listitem [ref=f3e1220]:
+            - link "Paladin" [ref=f3e1221] [cursor=pointer]:
+              - /url: /class/paladin
+          - listitem [ref=f3e1222]:
+            - link "Hunter" [ref=f3e1223] [cursor=pointer]:
+              - /url: /class/hunter
+          - listitem [ref=f3e1224]:
+            - link "Rogue" [ref=f3e1225] [cursor=pointer]:
+              - /url: /class/rogue
+          - listitem [ref=f3e1226]:
+            - link "Priest" [ref=f3e1227] [cursor=pointer]:
+              - /url: /class/priest
+          - listitem [ref=f3e1228]:
+            - link "Shaman" [ref=f3e1229] [cursor=pointer]:
+              - /url: /class/shaman
+          - listitem [ref=f3e1230]:
+            - link "Mage" [ref=f3e1231] [cursor=pointer]:
+              - /url: /class/mage
+          - listitem [ref=f3e1232]:
+            - link "Warlock" [ref=f3e1233] [cursor=pointer]:
+              - /url: /class/warlock
+          - listitem [ref=f3e1234]:
+            - link "Druid" [ref=f3e1235] [cursor=pointer]:
+              - /url: /class/druid
+      - generic [ref=f3e1236]:
+        - heading "Character" [level=2] [ref=f3e1237]
+        - list [ref=f3e1238]:
+          - listitem [ref=f3e1239]:
+            - link "Talent calculator" [ref=f3e1240] [cursor=pointer]:
+              - /url: /talents
+          - listitem [ref=f3e1241]:
+            - link "Spellbook" [ref=f3e1242] [cursor=pointer]:
+              - /url: /spellbook/warrior
+          - listitem [ref=f3e1243]:
+            - link "Legacy perks" [ref=f3e1244] [cursor=pointer]:
+              - /url: /legacy-perks
+          - listitem [ref=f3e1245]:
+            - link "Races" [ref=f3e1246] [cursor=pointer]:
+              - /url: /racials
+          - listitem [ref=f3e1247]:
+            - link "Professions" [ref=f3e1248] [cursor=pointer]:
+              - /url: /professions
+          - listitem [ref=f3e1249]:
+            - link "Downrank calculator" [ref=f3e1250] [cursor=pointer]:
+              - /url: /downrank-calculator
+          - listitem [ref=f3e1251]:
+            - link "Tier list maker" [ref=f3e1252] [cursor=pointer]:
+              - /url: /tier-list
+      - generic [ref=f3e1253]:
+        - heading "Gear" [level=2] [ref=f3e1254]
+        - list [ref=f3e1255]:
+          - listitem [ref=f3e1256]:
+            - link "BiS list" [ref=f3e1257] [cursor=pointer]:
+              - /url: /bis
+          - listitem [ref=f3e1258]:
+            - link "Items" [ref=f3e1259] [cursor=pointer]:
+              - /url: /items
+          - listitem [ref=f3e1260]:
+            - link "Hidden items" [ref=f3e1261] [cursor=pointer]:
+              - /url: /hidden-items
+          - listitem [ref=f3e1262]:
+            - link "Transmog" [ref=f3e1263] [cursor=pointer]:
+              - /url: /transmog
+      - generic [ref=f3e1264]:
+        - heading "World" [level=2] [ref=f3e1265]
+        - list [ref=f3e1266]:
+          - listitem [ref=f3e1267]:
+            - link "World map" [ref=f3e1268] [cursor=pointer]:
+              - /url: /map
+          - listitem [ref=f3e1269]:
+            - link "Dungeons" [ref=f3e1270] [cursor=pointer]:
+              - /url: /dungeons
+          - listitem [ref=f3e1271]:
+            - link "Quests" [ref=f3e1272] [cursor=pointer]:
+              - /url: /quests
+          - listitem [ref=f3e1273]:
+            - link "Dungeon quests" [ref=f3e1274] [cursor=pointer]:
+              - /url: /dungeon-quests
+          - listitem [ref=f3e1275]:
+            - link "Rare spawns" [ref=f3e1276] [cursor=pointer]:
+              - /url: /rares
+          - listitem [ref=f3e1277]:
+            - link "Library books" [ref=f3e1278] [cursor=pointer]:
+              - /url: /library-books
+      - generic [ref=f3e1279]:
+        - heading "Guides" [level=2] [ref=f3e1280]
+        - list [ref=f3e1281]:
+          - listitem [ref=f3e1282]:
+            - link "Tanning Rack" [ref=f3e1283] [cursor=pointer]:
+              - /url: /tanning-rack
+          - listitem [ref=f3e1284]:
+            - link "PvP ranks" [ref=f3e1285] [cursor=pointer]:
+              - /url: /pvp-ranks
+          - listitem [ref=f3e1286]:
+            - link "Downranking" [ref=f3e1287] [cursor=pointer]:
+              - /url: /downranking
+          - listitem [ref=f3e1288]:
+            - link "Booty Bay Bruiser's Buckshot" [ref=f3e1289] [cursor=pointer]:
+              - /url: /booty-bay-bruisers-buckshot
+          - listitem [ref=f3e1290]:
+            - link "Scarlet Banner" [ref=f3e1291] [cursor=pointer]:
+              - /url: /scarlet-banner
+          - listitem [ref=f3e1292]:
+            - link "$100,000 duel tournament" [ref=f3e1293] [cursor=pointer]:
+              - /url: /duel-tournament
+          - listitem [ref=f3e1294]:
+            - link "Level 30" [ref=f3e1295] [cursor=pointer]:
+              - /url: /level-30
+          - listitem [ref=f3e1296]:
+            - link "Druid Cat Form quest" [ref=f3e1297] [cursor=pointer]:
+              - /url: /druid-cat-form
+          - listitem [ref=f3e1298]:
+            - link "Addons" [ref=f3e1299] [cursor=pointer]:
+              - /url: /addons
+          - listitem [ref=f3e1300]:
+            - link "Savory Whimsyfin Delight" [ref=f3e1301] [cursor=pointer]:
+              - /url: /savory-whimsyfin-delight
+          - listitem [ref=f3e1302]:
+            - link "Druid snake form" [ref=f3e1303] [cursor=pointer]:
+              - /url: /druid-snake-form
+          - listitem [ref=f3e1304]:
+            - link "Battle mage" [ref=f3e1305] [cursor=pointer]:
+              - /url: /battle-mage
+          - listitem [ref=f3e1306]:
+            - link "Cozy Sleeping Bag" [ref=f3e1307] [cursor=pointer]:
+              - /url: /cozy-sleeping-bag
+          - listitem [ref=f3e1308]:
+            - link "Merchant's Favor" [ref=f3e1309] [cursor=pointer]:
+              - /url: /merchants-favor
+          - listitem [ref=f3e1310]:
+            - link "Hunter pets" [ref=f3e1311] [cursor=pointer]:
+              - /url: /hunter-pets
+      - generic [ref=f3e1312]:
+        - heading "Beta" [level=2] [ref=f3e1313]
+        - list [ref=f3e1314]:
+          - listitem [ref=f3e1315]:
+            - link "Patch notes" [ref=f3e1316] [cursor=pointer]:
+              - /url: /patch-notes
+          - listitem [ref=f3e1317]:
+            - link "Changes vs Classic" [ref=f3e1318] [cursor=pointer]:
+              - /url: /changes
+          - listitem [ref=f3e1319]:
+            - link "Beta and launch dates" [ref=f3e1320] [cursor=pointer]:
+              - /url: /beta
+          - listitem [ref=f3e1321]:
+            - link "Server status" [ref=f3e1322] [cursor=pointer]:
+              - /url: /server-status
+      - generic [ref=f3e1323]:
+        - heading "Language" [level=2] [ref=f3e1324]
+        - list [ref=f3e1329]:
+          - listitem [ref=f3e1330]:
+            - generic [ref=f3e1331]: English
+          - listitem [ref=f3e1334]:
+            - link "Français" [ref=f3e1335] [cursor=pointer]:
+              - /url: /fr/hunter-pets
+          - listitem [ref=f3e1336]:
+            - link "Deutsch" [ref=f3e1337] [cursor=pointer]:
+              - /url: /de/hunter-pets
+          - listitem [ref=f3e1338]:
+            - link "繁體中文" [ref=f3e1339] [cursor=pointer]:
+              - /url: /zh-tw/hunter-pets
+          - listitem [ref=f3e1340]:
+            - link "简体中文" [ref=f3e1341] [cursor=pointer]:
+              - /url: /zh-cn/hunter-pets
+          - listitem [ref=f3e1342]:
+            - link "Русский" [ref=f3e1343] [cursor=pointer]:
+              - /url: /ru/hunter-pets
+    - generic [ref=f3e1344]:
+      - paragraph [ref=f3e1345]: ForeverChanges is an unofficial fan site, not affiliated with or endorsed by Blizzard Entertainment. World of Warcraft and Warcraft are trademarks or registered trademarks of Blizzard Entertainment, Inc. in the U.S. and/or other countries. Game content and images © Blizzard Entertainment, Inc.
+      - navigation "Legal" [ref=f3e1347]:
+        - link "About the data" [ref=f3e1348] [cursor=pointer]:
+          - /url: /about
+        - link "Privacy" [ref=f3e1349] [cursor=pointer]:
+          - /url: /privacy
+        - link "Terms" [ref=f3e1350] [cursor=pointer]:
+          - /url: /terms
+        - link "Legal notice" [ref=f3e1351] [cursor=pointer]:
+          - /url: /legal

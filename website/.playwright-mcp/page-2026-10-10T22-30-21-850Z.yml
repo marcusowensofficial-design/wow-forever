@@ -1,0 +1,1064 @@
+- generic [active] [ref=f11e1]:
+  - text: ": : :"
+  - main [ref=f11e2]:
+    - generic [ref=f11e3]:
+      - generic [ref=f11e4]:
+        - generic [ref=f11e5]:
+          - generic [ref=f11e6]:
+            - button "Pull the murloc camp" [ref=f11e7] [cursor=pointer]
+            - generic [ref=f11e8]:
+              - generic [ref=f11e9]: Online now
+              - generic [ref=f11e10]: 2,358
+              - generic [ref=f11e11]: murlocs
+          - link "ForeverChanges home" [ref=f11e12] [cursor=pointer]:
+            - /url: /
+            - img "ForeverChanges" [ref=f11e13]
+          - link [ref=f11e15] [cursor=pointer]:
+            - /url: /patch-notes
+            - generic [ref=f11e16]:
+              - text: Updated
+              - generic [aria-hidden] [ref=f11e18]: ·
+            - text: Beta build 1.60.1.70338
+          - link "Launch in 25 days 0 hours 29 minutes" [ref=f11e19] [cursor=pointer]:
+            - /url: /beta
+            - generic [ref=f11e20]: Launch in
+            - generic [aria-hidden] [ref=f11e21]:
+              - generic [ref=f11e22]:
+                - generic [ref=f11e23]: "25"
+                - generic [ref=f11e24]: days
+              - generic [ref=f11e25]:
+                - text: ":"
+                - generic [ref=f11e26]: "00"
+                - generic [ref=f11e27]: hrs
+              - generic [ref=f11e28]:
+                - text: ":"
+                - generic [ref=f11e29]: "29"
+                - generic [ref=f11e30]: min
+              - generic [ref=f11e31]:
+                - text: ":"
+                - generic [ref=f11e32]: "39"
+                - generic [ref=f11e33]: sec
+        - generic [ref=f11e34]:
+          - navigation "Main" [ref=f11e35]:
+            - link "Changes" [ref=f11e36] [cursor=pointer]:
+              - /url: /changes
+            - link "Talents , updated" [ref=f11e37] [cursor=pointer]:
+              - /url: /talents/warrior
+              - text: Talents
+              - generic:
+                - generic [aria-hidden]: Updated on October 8
+                - generic [ref=f11e39]: ", updated"
+            - link "Spellbook , updated" [ref=f11e40] [cursor=pointer]:
+              - /url: /spellbook/warrior
+              - text: Spellbook
+              - generic:
+                - generic [aria-hidden]: Updated on October 8
+                - generic [ref=f11e42]: ", updated"
+            - link "Legacy" [ref=f11e43] [cursor=pointer]:
+              - /url: /legacy-perks
+            - link "Professions" [ref=f11e44] [cursor=pointer]:
+              - /url: /professions
+            - link "Races" [ref=f11e45] [cursor=pointer]:
+              - /url: /racials
+            - link "Dungeons" [ref=f11e46] [cursor=pointer]:
+              - /url: /dungeons
+            - link "Items , updated" [ref=f11e47] [cursor=pointer]:
+              - /url: /items
+              - text: Items
+              - generic:
+                - generic [aria-hidden]: 331 items changed on October 8
+                - generic [ref=f11e49]: ", updated"
+            - link "Quests" [ref=f11e50] [cursor=pointer]:
+              - /url: /quests
+            - link "BiS list , updated" [ref=f11e51] [cursor=pointer]:
+              - /url: /bis
+              - text: BiS list
+              - generic:
+                - generic [aria-hidden]: Up to date with the latest build
+                - generic [ref=f11e53]: ", updated"
+            - link "World map" [ref=f11e54] [cursor=pointer]:
+              - /url: /map
+            - link "Guides" [ref=f11e55] [cursor=pointer]:
+              - /url: /guides
+            - link "Patch notes" [ref=f11e56] [cursor=pointer]:
+              - /url: /patch-notes
+          - button "Search" [ref=f11e58] [cursor=pointer]:
+            - generic [aria-hidden]: Search /
+      - generic [ref=f11e60]:
+        - generic [ref=f11e62]:
+          - generic [ref=f11e63]:
+            - paragraph [ref=f11e64]:
+              - link "Dungeons" [ref=f11e65] [cursor=pointer]:
+                - /url: /dungeons
+              - generic [aria-hidden] [ref=f11e66]: ›
+              - text: City of Dalaran
+            - heading "City of Dalaran WoW Forever map, bosses, loot and quests" [level=1] [ref=f11e67]:
+              - text: City of Dalaran
+              - generic [ref=f11e68]: WoW Forever map, bosses, loot and quests
+            - paragraph [ref=f11e69]: Level 28–33 dungeon, Alterac Mountains, new in Forever. 8 bosses, 8 quests.
+            - paragraph [ref=f11e70]:
+              - text: See
+              - link "City of Dalaran on the world map" [ref=f11e71] [cursor=pointer]:
+                - /url: /map/city-of-dalaran
+              - text: ", the client’s own map of the instance in 2D and 3D."
+          - generic [ref=f11e72]:
+            - paragraph [ref=f11e73]: Dungeons by level
+            - 'link "Excavation Site: Wetlands 26–31" [ref=f11e74] [cursor=pointer]':
+              - /url: /dungeons/excavation-site
+              - generic [ref=f11e75]: "Excavation Site: Wetlands"
+              - emphasis [ref=f11e76]: 26–31
+            - button "Open another dungeon's loot table" [ref=f11e78] [cursor=pointer]:
+              - generic [ref=f11e79]: City of Dalaran
+              - generic [ref=f11e80]: 28–33
+            - link "Gnomeregan 29–38" [ref=f11e82] [cursor=pointer]:
+              - /url: /dungeons/gnomeregan
+              - generic [ref=f11e83]: Gnomeregan
+              - emphasis [ref=f11e84]: 29–38
+        - navigation "Bosses" [ref=f11e85]:
+          - generic [ref=f11e86]:
+            - link "Atrexis the Grave Knight" [ref=f11e87] [cursor=pointer]:
+              - /url: "#atrexis-the-grave-knight"
+            - link "Lyn the Ignored" [ref=f11e90] [cursor=pointer]:
+              - /url: "#lyn-the-ignored"
+            - link "Arcane Anomaly" [ref=f11e93] [cursor=pointer]:
+              - /url: "#arcane-anomaly"
+            - link "Arcanic Enigma" [ref=f11e96] [cursor=pointer]:
+              - /url: "#arcanic-enigma"
+            - link "Unstable Sentinel" [ref=f11e99] [cursor=pointer]:
+              - /url: "#unstable-sentinel"
+            - link "Mana Devourer" [ref=f11e102] [cursor=pointer]:
+              - /url: "#mana-devourer"
+            - link "Fel Ancient" [ref=f11e105] [cursor=pointer]:
+              - /url: "#fel-ancient"
+            - link "Shade of the Archmage" [ref=f11e108] [cursor=pointer]:
+              - /url: "#shade-of-the-archmage"
+      - navigation "Sections of this page" [ref=f11e111]:
+        - generic [ref=f11e112]:
+          - link "Map, bosses and loot 28" [ref=f11e113] [cursor=pointer]:
+            - /url: "#loot"
+            - generic [ref=f11e114]: Map, bosses and loot
+            - generic [ref=f11e115]: "28"
+          - link "Item sets 1" [ref=f11e116] [cursor=pointer]:
+            - /url: "#sets"
+            - generic [ref=f11e117]: Item sets
+            - generic [ref=f11e118]: "1"
+          - link "Before you go" [ref=f11e119] [cursor=pointer]:
+            - /url: "#before"
+          - link "Getting in" [ref=f11e121] [cursor=pointer]:
+            - /url: "#dpv-access"
+          - link "Quests 8" [ref=f11e123] [cursor=pointer]:
+            - /url: "#quests"
+            - generic [ref=f11e124]: Quests
+            - generic [ref=f11e125]: "8"
+          - link "Quest items 3" [ref=f11e126] [cursor=pointer]:
+            - /url: "#quest-items"
+            - generic [ref=f11e127]: Quest items
+            - generic [ref=f11e128]: "3"
+          - link "Where quests start 3" [ref=f11e129] [cursor=pointer]:
+            - /url: "#givers"
+            - generic [ref=f11e130]: Where quests start
+            - generic [ref=f11e131]: "3"
+      - generic [ref=f11e132]:
+        - region [ref=f11e133]:
+          - generic [ref=f11e135]:
+            - heading "Map, bosses and loot 28 drops" [level=2] [ref=f11e136]:
+              - text: Map, bosses and loot
+              - generic [ref=f11e137]: 28 drops
+            - paragraph [ref=f11e138]:
+              - text: Where each boss stands, what to watch for in the fight and what players have seen drop in the beta so far.
+              - button "See all 28 drops on one page" [ref=f11e140] [cursor=pointer]
+          - generic [ref=f11e141]:
+            - group "Map of the dungeon" [ref=f11e142]:
+              - button "The sewers" [pressed] [ref=f11e143] [cursor=pointer]
+              - button "The city" [ref=f11e144] [cursor=pointer]
+            - figure [ref=f11e145]:
+              - generic [ref=f11e146]:
+                - button "Open the map full screen" [ref=f11e147] [cursor=pointer]:
+                  - img "Map of City of Dalaran in WoW Forever, with where each boss stands, The sewers" [ref=f11e148]
+                - button "Atrexis the Grave Knight" [pressed] [ref=f11e149] [cursor=pointer]
+                - button "Lyn the Ignored" [ref=f11e151] [cursor=pointer]
+                - button "Open the map full screen" [ref=f11e154] [cursor=pointer]
+              - generic [ref=f11e157]:
+                - text: Map of City of Dalaran by the artist
+                - link "Santiago Reyes" [ref=f11e158] [cursor=pointer]:
+                  - /url: https://asguevara433.wixsite.com/srmaps
+                - text: ", shown here with his permission."
+            - generic [ref=f11e159]:
+              - group "Bosses" [ref=f11e160]:
+                - button "Atrexis the Grave Knight" [pressed] [ref=f11e161] [cursor=pointer]
+                - button "Lyn the Ignored" [ref=f11e163] [cursor=pointer]
+                - button "Arcane Anomaly" [ref=f11e165] [cursor=pointer]
+                - button "Arcanic Enigma" [ref=f11e167] [cursor=pointer]
+                - button "Unstable Sentinel" [ref=f11e169] [cursor=pointer]
+                - button "Mana Devourer" [ref=f11e171] [cursor=pointer]
+                - button "Fel Ancient" [ref=f11e173] [cursor=pointer]
+                - button "Shade of the Archmage" [ref=f11e175] [cursor=pointer]
+              - region [ref=f11e178]:
+                - generic [ref=f11e179]:
+                  - heading "Atrexis the Grave Knight" [level=2] [ref=f11e180]
+                  - paragraph [ref=f11e181]: Level 29
+                - group [ref=f11e182]:
+                  - button "Drops 3" [pressed] [ref=f11e183] [cursor=pointer]:
+                    - text: Drops
+                    - generic [ref=f11e184]: "3"
+                  - button "Abilities 5" [ref=f11e185] [cursor=pointer]:
+                    - text: Abilities
+                    - generic [ref=f11e186]: "5"
+                - list [ref=f11e189]:
+                  - listitem [ref=f11e190]:
+                    - link "Graveweave Bindings Wrist, Cloth (35%)" [ref=f11e191] [cursor=pointer]:
+                      - /url: /item/273036
+                      - generic [ref=f11e192]:
+                        - generic [ref=f11e193]: Graveweave Bindings
+                        - generic [ref=f11e195]:
+                          - text: Wrist, Cloth
+                          - generic "Seen in 49 of 139 kills in the beta" [ref=f11e196]: (35%)
+                  - listitem [ref=f11e197]:
+                    - link "Bonebinder's Signet Finger (36%)" [ref=f11e198] [cursor=pointer]:
+                      - /url: /item/273032
+                      - generic [ref=f11e199]:
+                        - generic [ref=f11e200]: Bonebinder's Signet
+                        - generic [ref=f11e202]:
+                          - text: Finger
+                          - generic "Seen in 50 of 139 kills in the beta" [ref=f11e203]: (36%)
+                  - listitem [ref=f11e204]:
+                    - link "Gravespike Repeater Ranged, Crossbow (29%)" [ref=f11e205] [cursor=pointer]:
+                      - /url: /item/273033
+                      - generic [ref=f11e206]:
+                        - generic [ref=f11e207]: Gravespike Repeater
+                        - generic [ref=f11e209]:
+                          - text: Ranged, Crossbow
+                          - generic "Seen in 40 of 139 kills in the beta" [ref=f11e210]: (29%)
+            - list [ref=f11e212]:
+              - listitem [ref=f11e213]:
+                - generic [ref=f11e214]: Entrance
+          - region [ref=f11e217]:
+            - generic [ref=f11e218]:
+              - heading "Trash mobs" [level=2] [ref=f11e220]
+              - paragraph [ref=f11e221]: Any enemy in the dungeon
+            - list [ref=f11e222]:
+              - listitem [ref=f11e223]:
+                - link "Mana Fragment Junk" [ref=f11e224] [cursor=pointer]:
+                  - /url: /item/276160
+                  - generic [ref=f11e225]:
+                    - generic [ref=f11e226]: Mana Fragment
+                    - generic [ref=f11e228]: Junk
+              - listitem [ref=f11e229]:
+                - link "Crystallized Shard Junk" [ref=f11e230] [cursor=pointer]:
+                  - /url: /item/276158
+                  - generic [ref=f11e231]:
+                    - generic [ref=f11e232]: Crystallized Shard
+                    - generic [ref=f11e234]: Junk
+        - region [ref=f11e235]:
+          - generic [ref=f11e237]:
+            - heading "Item sets 1 set" [level=2] [ref=f11e238]:
+              - text: Item sets
+              - generic [ref=f11e239]: 1 set
+            - paragraph [ref=f11e240]: The sets whose pieces drop in City of Dalaran, with who drops each piece and the bonuses Forever gives them.
+          - article [ref=f11e242]:
+            - generic [ref=f11e243]:
+              - heading "Violet Sorcerer's Vestments" [level=2] [ref=f11e244]
+              - paragraph [ref=f11e245]: 2 of its 5 pieces drop here
+            - generic [ref=f11e246]:
+              - list [ref=f11e247]:
+                - listitem [ref=f11e248]:
+                  - link "Violet Sorcerer's Robes Chest" [ref=f11e249] [cursor=pointer]:
+                    - /url: /item/273044
+                    - generic [ref=f11e250]:
+                      - text: Violet Sorcerer's Robes
+                      - generic [ref=f11e251]: Chest
+                  - link "Arcanic Enigma" [ref=f11e252] [cursor=pointer]:
+                    - /url: "#arcanic-enigma"
+                - listitem [ref=f11e253]:
+                  - link "Violet Sorcerer's Mantle Shoulder" [ref=f11e254] [cursor=pointer]:
+                    - /url: /item/273051
+                    - generic [ref=f11e255]:
+                      - text: Violet Sorcerer's Mantle
+                      - generic [ref=f11e256]: Shoulder
+                  - link "Shade of the Archmage" [ref=f11e257] [cursor=pointer]:
+                    - /url: "#shade-of-the-archmage"
+                - listitem [ref=f11e258]:
+                  - link "Violet Sorcerer's Leggings" [ref=f11e259] [cursor=pointer]:
+                    - /url: /item/286988
+                  - generic [ref=f11e261]: Not seen dropping yet
+                - listitem [ref=f11e262]:
+                  - link "Violet Sorcerer's Sandals" [ref=f11e263] [cursor=pointer]:
+                    - /url: /item/286987
+                  - generic [ref=f11e265]: Not seen dropping yet
+                - listitem [ref=f11e266]:
+                  - link "Violet Sorcerer's Wraps" [ref=f11e267] [cursor=pointer]:
+                    - /url: /item/286989
+                  - generic [ref=f11e269]: Not seen dropping yet
+              - generic [ref=f11e270]:
+                - heading "Set bonuses in Forever" [level=3] [ref=f11e271]
+                - paragraph [ref=f11e272]:
+                  - generic [ref=f11e273]: 2 pieces
+                  - text: +5 Arcane Resistance.
+                - paragraph [ref=f11e274]:
+                  - generic [ref=f11e275]: 3 pieces
+                  - text: +10 Spirit.
+                - paragraph [ref=f11e276]:
+                  - generic [ref=f11e277]: 4 pieces
+                  - text: Chance on damaging spell to allow 15% of your Mana regeneration to continue while casting for 15 sec. Mana regen amount is doubled in Strongholds and Cities.
+                - paragraph [ref=f11e278]:
+                  - generic [ref=f11e279]: 5 pieces
+                  - text: Chance on damaging spell to summon an Arcane elemental to aid you in combat.
+        - region [ref=f11e280]:
+          - generic [ref=f11e282]:
+            - heading "Before you go Level 28–33" [level=2] [ref=f11e283]:
+              - text: Before you go
+              - generic [ref=f11e284]: Level 28–33
+            - paragraph [ref=f11e285]: Where City of Dalaran is, the level it asks for and what its drops require.
+          - table [ref=f11e286]:
+            - rowgroup [ref=f11e287]:
+              - row [ref=f11e288]:
+                - rowheader "Location" [ref=f11e289]
+                - cell [ref=f11e290]:
+                  - text: "In Dalaran, Alterac Mountains: through the city’s sewers, to a portal at the end of a long pipe. One member of the group who has done the attunement quests is enough for the whole group to go in."
+                  - link "See the city on the world map" [ref=f11e291] [cursor=pointer]:
+                    - /url: /map/eastern-kingdoms#p=279
+                  - text: .
+              - row [ref=f11e292]:
+                - rowheader "Level" [ref=f11e293]
+                - cell "28–33, the range Blizzard gives. Its quests can be taken from level 24." [ref=f11e294]
+              - row [ref=f11e295]:
+                - rowheader "Experience" [ref=f11e296]
+                - cell "For the Alliance, its 4 quests give 37,600 XP, about 1 level at level 28. For the Horde, its 4 quests give 37,600 XP, about 1 level at level 28. Quest by quest" [ref=f11e297]:
+                  - generic [ref=f11e298]: For the Alliance, its 4 quests give 37,600 XP, about 1 level at level 28.
+                  - generic [ref=f11e299]: For the Horde, its 4 quests give 37,600 XP, about 1 level at level 28.
+                  - link "Quest by quest" [ref=f11e300] [cursor=pointer]:
+                    - /url: "#quests"
+              - row [ref=f11e301]:
+                - rowheader "Drops" [ref=f11e302]
+                - cell "28 drops, 28 seen in the beta. They require level 25 to 30 and are item level 31 to 35." [ref=f11e303]
+              - row [ref=f11e304]:
+                - rowheader "Bosses" [ref=f11e305]
+                - cell [ref=f11e306]:
+                  - link "Atrexis the Grave Knight" [ref=f11e308] [cursor=pointer]:
+                    - /url: "#atrexis-the-grave-knight"
+                  - generic [ref=f11e309]:
+                    - text: ","
+                    - link "Lyn the Ignored" [ref=f11e310] [cursor=pointer]:
+                      - /url: "#lyn-the-ignored"
+                  - generic [ref=f11e311]:
+                    - text: ","
+                    - link "Arcane Anomaly" [ref=f11e312] [cursor=pointer]:
+                      - /url: "#arcane-anomaly"
+                  - generic [ref=f11e313]:
+                    - text: ","
+                    - link "Arcanic Enigma" [ref=f11e314] [cursor=pointer]:
+                      - /url: "#arcanic-enigma"
+                  - generic [ref=f11e315]:
+                    - text: ","
+                    - link "Unstable Sentinel" [ref=f11e316] [cursor=pointer]:
+                      - /url: "#unstable-sentinel"
+                  - generic [ref=f11e317]:
+                    - text: ","
+                    - link "Mana Devourer" [ref=f11e318] [cursor=pointer]:
+                      - /url: "#mana-devourer"
+                  - generic [ref=f11e319]:
+                    - text: ","
+                    - link "Fel Ancient" [ref=f11e320] [cursor=pointer]:
+                      - /url: "#fel-ancient"
+                  - generic [ref=f11e321]:
+                    - text: ","
+                    - link "Shade of the Archmage" [ref=f11e322] [cursor=pointer]:
+                      - /url: "#shade-of-the-archmage"
+                  - text: .
+              - row [ref=f11e323]:
+                - rowheader "Immunities" [ref=f11e324]
+                - 'cell "Most of the city’s monsters are immune to something. Many take no Arcane damage. The constructs and the elementals take no bleed or poison: Rake, Rip, Rend, rogues’ poisons and Serpent Sting do nothing to them. The treants can bleed but take no Nature damage. A Blizzard developer said on the official podcast of October 8 that the arcane immunity is on purpose." [ref=f11e325]'
+              - row [ref=f11e326]:
+                - rowheader "Reputation" [ref=f11e327]
+                - 'cell "Each kill gives Kirin Tor reputation: 5 for most enemies and for the Arcane Anomaly, Arcanic Enigma, Unstable Sentinel and Mana Devourer, 12 to 13 for the elites of the sewers, 15 for Atrexis, 25 for Lyn the Ignored and the Shade of the Archmage. At Friendly, Archmage Alvareaux, the Kirin Tor quartermaster in the city, sells eight recipes for Blacksmithing, Leatherworking and Tailoring (skill 175); the Kirin Tor Tabard asks Exalted. For the Horde, that reputation is a bug: Blizzard has already fixed it on its side, for the week of October 12, and says Horde characters are not meant to get full access to the city either." [ref=f11e328]'
+              - row [ref=f11e329]:
+                - rowheader "Story" [ref=f11e330]
+                - cell "Backfiring enchantments, arcane constructs, demonic energy and cats. Blizzard calls it a whole city to explore." [ref=f11e331]
+        - region [ref=f11e333]:
+          - heading "Getting in the quests to Dalaran" [level=2] [ref=f11e336]:
+            - text: Getting in
+            - generic [ref=f11e337]: the quests to Dalaran
+          - generic [ref=f11e338]:
+            - paragraph [ref=f11e339]:
+              - text: Two short quest lines lead into the dungeon, from level 30, as Wowhead’s Forever database has them, even though the dungeon’s own quests can be taken from level 24. Both end at the Image of Archmage Modera by the city, beside Lordamere Lake. She gives Heart of Disruption, one of the dungeon’s quests, and with it the
+              - link "Dalaran Sewer Key" [ref=f11e340] [cursor=pointer]:
+                - /url: /item/277507
+              - text: . One member of the group holding the key is enough for everyone to go in.
+            - list [ref=f11e341]:
+              - listitem [ref=f11e342]:
+                - text: "Alliance: Emissary Jacques, in Southshore, gives"
+                - link "An Alarming Request" [ref=f11e343] [cursor=pointer]:
+                  - /url: /quest/92432
+                - text: ", which sends you to the Image of Archmage Modera. After"
+                - link "Heart of Disruption" [ref=f11e344] [cursor=pointer]:
+                  - /url: /quest/92458
+                - text: ","
+                - link "Friend of the Kirin Tor" [ref=f11e345] [cursor=pointer]:
+                  - /url: /quest/92459
+                - text: takes the mote to Archmage Celindra in the Violet Citadel.
+              - listitem [ref=f11e346]:
+                - text: "Horde: Magus Wordeen Voidglare, in Tarren Mill, gives"
+                - link "Prison Break In" [ref=f11e347] [cursor=pointer]:
+                  - /url: /quest/544
+                - text: and
+                - link "Key to the City" [ref=f11e348] [cursor=pointer]:
+                  - /url: /quest/93680
+                - text: ". Both send you to the Lordamere Internment Camp: kill four traitors there for their artifacts, and take the"
+                - link "Grimy Key" [ref=f11e349] [cursor=pointer]:
+                  - /url: /item/279469
+                - text: from the Warden’s Footlocker, upstairs in the two-storey building. The traitors take five to ten minutes to come back, and several groups often wait for them. Then comes
+                - link "Dalaran Patrols" [ref=f11e350] [cursor=pointer]:
+                  - /url: /quest/545
+                - text: ", and"
+                - link "Blood in the Streets" [ref=f11e351] [cursor=pointer]:
+                  - /url: /quest/92434
+                - text: takes you through the sewers on the north side of the city to the Image of Archmage Modera. After
+                - link "Heart of Disruption" [ref=f11e352] [cursor=pointer]:
+                  - /url: /quest/96984
+                - text: ","
+                - link "Shrewd Negotiations" [ref=f11e353] [cursor=pointer]:
+                  - /url: /quest/97287
+                - text: ends with Archmage Celindra. Keeper Bel’varil’s Stone Tokens are not needed.
+        - region [ref=f11e354]:
+          - generic [ref=f11e356]:
+            - heading "Quests 8 seen in the beta" [level=2] [ref=f11e357]:
+              - text: Quests
+              - generic [ref=f11e358]: 8 seen in the beta
+            - paragraph [ref=f11e359]:
+              - text: The quests players have taken in the beta so far. The rewards are read from the beta client and may change before release. The
+              - link "dungeon quests guide" [ref=f11e360] [cursor=pointer]:
+                - /url: /dungeon-quests#dg-city-of-dalaran
+              - text: says where to take each one before you go in.
+          - generic [ref=f11e361]:
+            - table [ref=f11e362]:
+              - rowgroup [ref=f11e363]:
+                - row [ref=f11e364]:
+                  - columnheader "Faction" [ref=f11e365]
+                  - columnheader "Quests" [ref=f11e366]
+                  - columnheader "Experience in the beta" [ref=f11e367]
+                  - columnheader "In Classic" [ref=f11e368]
+                  - columnheader "What it is worth" [ref=f11e369]
+              - rowgroup [ref=f11e370]:
+                - row [ref=f11e371]:
+                  - cell "Alliance" [ref=f11e372]
+                  - cell "4" [ref=f11e373]
+                  - cell "37,600 XP" [ref=f11e374]
+                  - cell "New quests" [ref=f11e375]
+                  - cell "about 1 level at level 28" [ref=f11e376]
+                - row [ref=f11e377]:
+                  - cell "Horde" [ref=f11e378]
+                  - cell "4" [ref=f11e379]
+                  - cell "37,600 XP" [ref=f11e380]
+                  - cell "New quests" [ref=f11e381]
+                  - cell "about 1 level at level 28" [ref=f11e382]
+            - paragraph [ref=f11e383]: These figures count the level 30 build of October 1, which halved what dungeon quests give beyond a normal quest. Only the quests count here, not the kills, and a quest far below your level gives less.
+          - paragraph [ref=f11e384]: All these quests are level 33 and can be taken from level 24. Each gives 9,400 XP in the Forever beta.
+          - generic [ref=f11e385]:
+            - heading "Both factions 1 quest" [level=3] [ref=f11e386]:
+              - text: Both factions
+              - generic [ref=f11e388]: 1 quest
+            - region [ref=f11e390]:
+              - generic [ref=f11e391]:
+                - heading [level=4] [ref=f11e392]:
+                  - link "Heart of Disruption" [ref=f11e393] [cursor=pointer]:
+                    - /url: /quest/92458
+                - paragraph [ref=f11e394]: Alliance and Horde
+              - generic [ref=f11e395]:
+                - paragraph [ref=f11e396]:
+                  - img "Alliance" [ref=f11e397]
+                  - text: Collect the Arcane Mote for the Image of Archmage Modera near the City of Dalaran.
+                - paragraph [ref=f11e398]:
+                  - img "Horde" [ref=f11e399]
+                  - text: Collect the Arcane Mote in the City of Dalaran for Magus Wordeen Voidglare in Tarren Mill.
+                - generic [ref=f11e400]:
+                  - term [ref=f11e401]: Bring back
+                  - definition [ref=f11e402]:
+                    - list [ref=f11e403]:
+                      - listitem [ref=f11e404]:
+                        - generic [ref=f11e405]:
+                          - link "Arcane Mote" [ref=f11e406] [cursor=pointer]:
+                            - /url: /item/251961
+                          - generic [ref=f11e407]: Shade of the Archmage
+              - generic [ref=f11e409]:
+                - heading "Choose one of" [level=5] [ref=f11e410]
+                - generic [ref=f11e411]:
+                  - generic [ref=f11e412]:
+                    - heading [level=6] [ref=f11e413]:
+                      - img "Alliance" [ref=f11e414]
+                      - text: Alliance
+                    - list [ref=f11e415]:
+                      - listitem [ref=f11e416]:
+                        - link "Spellguard Pauldrons Shoulder, Mail" [ref=f11e417] [cursor=pointer]:
+                          - /url: /item/279839
+                          - generic [ref=f11e418]:
+                            - generic [ref=f11e419]: Spellguard Pauldrons
+                            - generic [ref=f11e421]: Shoulder, Mail
+                      - listitem [ref=f11e422]:
+                        - link "Renewing Footpads Feet, Leather" [ref=f11e423] [cursor=pointer]:
+                          - /url: /item/279840
+                          - generic [ref=f11e424]:
+                            - generic [ref=f11e425]: Renewing Footpads
+                            - generic [ref=f11e427]: Feet, Leather
+                      - listitem [ref=f11e428]:
+                        - link "Defender of Dalaran Two-Hand, Mace" [ref=f11e429] [cursor=pointer]:
+                          - /url: /item/279841
+                          - generic [ref=f11e430]:
+                            - generic [ref=f11e431]: Defender of Dalaran
+                            - generic [ref=f11e433]: Two-Hand, Mace
+                  - generic [ref=f11e434]:
+                    - heading [level=6] [ref=f11e435]:
+                      - img "Horde" [ref=f11e436]
+                      - text: Horde
+                    - list [ref=f11e437]:
+                      - listitem [ref=f11e438]:
+                        - link "Battle Spaulders Shoulder, Mail" [ref=f11e439] [cursor=pointer]:
+                          - /url: /item/279842
+                          - generic [ref=f11e440]:
+                            - generic [ref=f11e441]: Battle Spaulders
+                            - generic [ref=f11e443]: Shoulder, Mail
+                      - listitem [ref=f11e444]:
+                        - link "Enchanted Sandals Feet, Cloth" [ref=f11e445] [cursor=pointer]:
+                          - /url: /item/279843
+                          - generic [ref=f11e446]:
+                            - generic [ref=f11e447]: Enchanted Sandals
+                            - generic [ref=f11e449]: Feet, Cloth
+                      - listitem [ref=f11e450]:
+                        - link "Striking Staff Two-Hand, Staff" [ref=f11e451] [cursor=pointer]:
+                          - /url: /item/279844
+                          - generic [ref=f11e452]:
+                            - generic [ref=f11e453]: Striking Staff
+                            - generic [ref=f11e455]: Two-Hand, Staff
+          - generic [ref=f11e456]:
+            - heading "Alliance 3 quests" [level=3] [ref=f11e457]:
+              - text: Alliance
+              - generic [ref=f11e459]: 3 quests
+            - generic [ref=f11e460]:
+              - region [ref=f11e461]:
+                - heading [level=4] [ref=f11e463]:
+                  - link "Power Overwhelming" [ref=f11e464] [cursor=pointer]:
+                    - /url: /quest/92489
+                - generic [ref=f11e465]:
+                  - paragraph [ref=f11e466]: Slay the Mana Elemental in the City of Dalaran for High Sorcerer Andromath in Stormwind City.
+                  - generic [ref=f11e467]:
+                    - term [ref=f11e468]: Starts
+                    - definition [ref=f11e469]:
+                      - link "High Sorcerer Andromath" [ref=f11e470] [cursor=pointer]:
+                        - /url: /map/eastern-kingdoms#pin=High%20Sorcerer%20Andromath
+                      - text: ", Stormwind City"
+                    - term [ref=f11e471]: Slay
+                    - definition [ref=f11e472]: Arcanic Enigma
+                - generic [ref=f11e474]:
+                  - heading "Choose one of" [level=5] [ref=f11e475]
+                  - list [ref=f11e476]:
+                    - listitem [ref=f11e477]:
+                      - link "Violet Sash Waist, Cloth" [ref=f11e478] [cursor=pointer]:
+                        - /url: /item/251962
+                        - generic [ref=f11e479]:
+                          - generic [ref=f11e480]: Violet Sash
+                          - generic [ref=f11e482]: Waist, Cloth
+                    - listitem [ref=f11e483]:
+                      - link "Runebound Gloves Hands, Leather" [ref=f11e484] [cursor=pointer]:
+                        - /url: /item/279849
+                        - generic [ref=f11e485]:
+                          - generic [ref=f11e486]: Runebound Gloves
+                          - generic [ref=f11e488]: Hands, Leather
+              - region [ref=f11e489]:
+                - heading [level=4] [ref=f11e491]:
+                  - link "A Green Sample" [ref=f11e492] [cursor=pointer]:
+                    - /url: /quest/92456
+                - generic [ref=f11e493]:
+                  - paragraph [ref=f11e494]: Collect a Fel Infused Blossom from the City of Dalaran for Shylamiir in Stormwind City.
+                  - generic [ref=f11e495]:
+                    - term [ref=f11e496]: Bring back
+                    - definition [ref=f11e497]:
+                      - list [ref=f11e498]:
+                        - listitem [ref=f11e499]:
+                          - link "Fel Infused Blossom" [ref=f11e501] [cursor=pointer]:
+                            - /url: /item/251983
+                - generic [ref=f11e503]:
+                  - heading "Choose one of" [level=5] [ref=f11e504]
+                  - list [ref=f11e505]:
+                    - listitem [ref=f11e506]:
+                      - link "Vine Pruner's Cloak Back, Cloth" [ref=f11e507] [cursor=pointer]:
+                        - /url: /item/279835
+                        - generic [ref=f11e508]:
+                          - generic [ref=f11e509]: Vine Pruner's Cloak
+                          - generic [ref=f11e511]: Back, Cloth
+                    - listitem [ref=f11e512]:
+                      - link "Thorn Protecting Girdle Waist, Mail" [ref=f11e513] [cursor=pointer]:
+                        - /url: /item/279836
+                        - generic [ref=f11e514]:
+                          - generic [ref=f11e515]: Thorn Protecting Girdle
+                          - generic [ref=f11e517]: Waist, Mail
+              - region [ref=f11e518]:
+                - heading [level=4] [ref=f11e520]:
+                  - link "Starving Arcane" [ref=f11e521] [cursor=pointer]:
+                    - /url: /quest/92457
+                - generic [ref=f11e522]:
+                  - paragraph [ref=f11e523]: Defeat 8 Seeking Remnants, 8 Saturated Remnants, and 8 Mana Echoes inside the City of Dalaran for Archmage Modera outside of Dalaran.
+                  - generic [ref=f11e524]:
+                    - term [ref=f11e525]: Slay
+                    - definition [ref=f11e526]: Seeking Remnant ×8, Saturated Remnant ×8, Mana Echo ×8
+                - generic [ref=f11e528]:
+                  - heading "Choose one of" [level=5] [ref=f11e529]
+                  - list [ref=f11e530]:
+                    - listitem [ref=f11e531]:
+                      - link "Fallen Guard's Pendant" [ref=f11e532] [cursor=pointer]:
+                        - /url: /item/279837
+                    - listitem [ref=f11e536]:
+                      - link "Arcane Infused Rod" [ref=f11e537] [cursor=pointer]:
+                        - /url: /item/279838
+          - generic [ref=f11e541]:
+            - heading "Horde 3 quests" [level=3] [ref=f11e542]:
+              - text: Horde
+              - generic [ref=f11e544]: 3 quests
+            - generic [ref=f11e545]:
+              - region [ref=f11e546]:
+                - heading [level=4] [ref=f11e548]:
+                  - link "The Grave Knight" [ref=f11e549] [cursor=pointer]:
+                    - /url: /quest/96986
+                - generic [ref=f11e550]:
+                  - paragraph [ref=f11e551]: Defeat Atrexis the Grave Knight in the City of Dalaran for Melisara in Tarren Mill.
+                  - generic [ref=f11e552]:
+                    - term [ref=f11e553]: Starts
+                    - definition [ref=f11e554]:
+                      - link "Melisara" [ref=f11e555] [cursor=pointer]:
+                        - /url: /map/eastern-kingdoms#pin=Melisara
+                      - text: ", Hillsbrad Foothills"
+                    - term [ref=f11e556]: Slay
+                    - definition [ref=f11e557]: Atrexis the Grave Knight
+                - generic [ref=f11e559]:
+                  - heading "Choose one of" [level=5] [ref=f11e560]
+                  - list [ref=f11e561]:
+                    - listitem [ref=f11e562]:
+                      - link "Gravewalker Boots Feet, Leather" [ref=f11e563] [cursor=pointer]:
+                        - /url: /item/251963
+                        - generic [ref=f11e564]:
+                          - generic [ref=f11e565]: Gravewalker Boots
+                          - generic [ref=f11e567]: Feet, Leather
+                    - listitem [ref=f11e568]:
+                      - link "Undead Knight's Bracers Wrist, Mail" [ref=f11e569] [cursor=pointer]:
+                        - /url: /item/251965
+                        - generic [ref=f11e570]:
+                          - generic [ref=f11e571]: Undead Knight's Bracers
+                          - generic [ref=f11e573]: Wrist, Mail
+              - region [ref=f11e574]:
+                - heading [level=4] [ref=f11e576]:
+                  - link "Source of Power" [ref=f11e577] [cursor=pointer]:
+                    - /url: /quest/96988
+                - generic [ref=f11e578]:
+                  - paragraph [ref=f11e579]: Collect 6 Cracked Sentry Cores in the City of Dalaran for Doctor Martin Felben in Undercity.
+                  - generic [ref=f11e580]:
+                    - term [ref=f11e581]: Starts
+                    - definition [ref=f11e582]:
+                      - link "Doctor Martin Felben" [ref=f11e583] [cursor=pointer]:
+                        - /url: /map/eastern-kingdoms#pin=Doctor%20Martin%20Felben
+                      - text: ", Undercity"
+                    - term [ref=f11e584]: Where to find it
+                    - definition [ref=f11e585]: "From the Fragmented Sentries. The cores are not shared: each of you needs six, a run has only 12 to 15 sentries, and each gives a single core, so a group of five needs two or three runs."
+                    - term [ref=f11e586]: Bring back
+                    - definition [ref=f11e587]:
+                      - list [ref=f11e588]:
+                        - listitem [ref=f11e589]:
+                          - generic [ref=f11e590]:
+                            - link "Cracked Sentry Core" [ref=f11e591] [cursor=pointer]:
+                              - /url: /item/275997
+                            - text: ×6
+                            - generic [ref=f11e592]: Fragmented Sentry
+                - generic [ref=f11e594]:
+                  - heading "Choose one of" [level=5] [ref=f11e595]
+                  - list [ref=f11e596]:
+                    - listitem [ref=f11e597]:
+                      - link "Unstable Power Core Ranged, Wand" [ref=f11e598] [cursor=pointer]:
+                        - /url: /item/279847
+                        - generic [ref=f11e599]:
+                          - generic [ref=f11e600]: Unstable Power Core
+                          - generic [ref=f11e602]: Ranged, Wand
+                    - listitem [ref=f11e603]:
+                      - link "Construct Cloak Back, Cloth" [ref=f11e604] [cursor=pointer]:
+                        - /url: /item/279848
+                        - generic [ref=f11e605]:
+                          - generic [ref=f11e606]: Construct Cloak
+                          - generic [ref=f11e608]: Back, Cloth
+              - region [ref=f11e609]:
+                - heading [level=4] [ref=f11e611]:
+                  - link "Opportunistic Education" [ref=f11e612] [cursor=pointer]:
+                    - /url: /quest/96987
+                - generic [ref=f11e613]:
+                  - paragraph [ref=f11e614]: Collect the Founding of Dalaran from the City of Dalaran for Rexxie Copperclutch near the sewer entrance.
+                  - generic [ref=f11e615]:
+                    - term [ref=f11e616]: Where to find it
+                    - definition [ref=f11e617]: Past the portal room, on the back wall.
+                    - term [ref=f11e618]: Bring back
+                    - definition [ref=f11e619]:
+                      - list [ref=f11e620]:
+                        - listitem [ref=f11e621]:
+                          - link "The Founding of Dalaran" [ref=f11e623] [cursor=pointer]:
+                            - /url: /item/275996
+                - generic [ref=f11e625]:
+                  - heading "Choose one of" [level=5] [ref=f11e626]
+                  - list [ref=f11e627]:
+                    - listitem [ref=f11e628]:
+                      - link "Solid Gold Band" [ref=f11e629] [cursor=pointer]:
+                        - /url: /item/279845
+                    - listitem [ref=f11e633]:
+                      - link "Larcenist's Belt Waist, Leather" [ref=f11e634] [cursor=pointer]:
+                        - /url: /item/279846
+                        - generic [ref=f11e635]:
+                          - generic [ref=f11e636]: Larcenist's Belt
+                          - generic [ref=f11e638]: Waist, Leather
+        - region [ref=f11e639]:
+          - generic [ref=f11e641]:
+            - heading "Quest items 3 to pick up" [level=2] [ref=f11e642]:
+              - text: Quest items
+              - generic [ref=f11e643]: 3 to pick up
+            - paragraph [ref=f11e644]: What the quests ask you to bring back, and who has it. Take the quests before going in.
+          - table [ref=f11e645]:
+            - rowgroup [ref=f11e646]:
+              - row [ref=f11e647]:
+                - columnheader "Item" [ref=f11e648]
+                - columnheader "Found on" [ref=f11e649]
+                - columnheader "For the quest" [ref=f11e650]
+            - rowgroup [ref=f11e651]:
+              - row [ref=f11e652]:
+                - cell [ref=f11e653]:
+                  - link "Cracked Sentry Core" [ref=f11e654] [cursor=pointer]:
+                    - /url: /item/275997
+                  - emphasis [ref=f11e655]: ×6
+                - cell "Fragmented Sentry" [ref=f11e656]
+                - cell [ref=f11e657]:
+                  - link "Source of Power" [ref=f11e658] [cursor=pointer]:
+                    - /url: "#quest-96988"
+                  - text: Horde
+              - row [ref=f11e659]:
+                - cell [ref=f11e660]:
+                  - link "Arcane Mote" [ref=f11e661] [cursor=pointer]:
+                    - /url: /item/251961
+                - cell [ref=f11e662]:
+                  - link "Shade of the Archmage" [ref=f11e664] [cursor=pointer]:
+                    - /url: "#shade-of-the-archmage"
+                - cell [ref=f11e665]:
+                  - link "Heart of Disruption" [ref=f11e666] [cursor=pointer]:
+                    - /url: "#quest-96984"
+                  - text: Horde
+              - row [ref=f11e667]:
+                - cell [ref=f11e668]:
+                  - link "Arcane Mote" [ref=f11e669] [cursor=pointer]:
+                    - /url: /item/251961
+                - cell [ref=f11e670]:
+                  - link "Shade of the Archmage" [ref=f11e672] [cursor=pointer]:
+                    - /url: "#shade-of-the-archmage"
+                - cell [ref=f11e673]:
+                  - link "Heart of Disruption" [ref=f11e674] [cursor=pointer]:
+                    - /url: "#quest-92458"
+                  - text: Alliance
+        - region [ref=f11e675]:
+          - generic [ref=f11e677]:
+            - heading "Where quests start 3 quest givers" [level=2] [ref=f11e678]:
+              - text: Where quests start
+              - generic [ref=f11e679]: 3 quest givers
+            - paragraph [ref=f11e680]: Who to see before going in. A name opens the world map on that person.
+          - table [ref=f11e681]:
+            - rowgroup [ref=f11e682]:
+              - row [ref=f11e683]:
+                - columnheader "Quest giver" [ref=f11e684]
+                - columnheader "Where" [ref=f11e685]
+                - columnheader "Quests" [ref=f11e686]
+            - rowgroup [ref=f11e687]:
+              - row [ref=f11e688]:
+                - cell [ref=f11e689]:
+                  - link "Melisara" [ref=f11e690] [cursor=pointer]:
+                    - /url: /map/eastern-kingdoms#pin=Melisara
+                - cell "Hillsbrad Foothills" [ref=f11e691]
+                - cell [ref=f11e692]:
+                  - link "The Grave Knight" [ref=f11e694] [cursor=pointer]:
+                    - /url: "#quest-96986"
+                  - text: Horde
+              - row [ref=f11e695]:
+                - cell [ref=f11e696]:
+                  - link "High Sorcerer Andromath" [ref=f11e697] [cursor=pointer]:
+                    - /url: /map/eastern-kingdoms#pin=High%20Sorcerer%20Andromath
+                - cell "Stormwind City" [ref=f11e698]
+                - cell [ref=f11e699]:
+                  - link "Power Overwhelming" [ref=f11e701] [cursor=pointer]:
+                    - /url: "#quest-92489"
+                  - text: Alliance
+              - row [ref=f11e702]:
+                - cell [ref=f11e703]:
+                  - link "Doctor Martin Felben" [ref=f11e704] [cursor=pointer]:
+                    - /url: /map/eastern-kingdoms#pin=Doctor%20Martin%20Felben
+                - cell "Undercity" [ref=f11e705]
+                - cell [ref=f11e706]:
+                  - link "Source of Power" [ref=f11e708] [cursor=pointer]:
+                    - /url: "#quest-96988"
+                  - text: Horde
+        - region [ref=f11e709]:
+          - 'heading "Items named after this dungeon found in the client by name: nothing says where they come from" [level=2] [ref=f11e710]':
+            - text: Items named after this dungeon
+            - generic [ref=f11e711]: "found in the client by name: nothing says where they come from"
+          - generic [ref=f11e712]:
+            - link "Dalaran Sewer Key New Item level 1 · item 277507 Binds when picked up Unique Key" [ref=f11e713] [cursor=pointer]:
+              - /url: /item/277507
+              - generic [ref=f11e714]:
+                - generic [ref=f11e715]:
+                  - generic [ref=f11e716]: Dalaran Sewer Key
+                  - generic [ref=f11e717]:
+                    - generic [ref=f11e718]: New
+                    - generic [ref=f11e719]:
+                      - text: Item level 1
+                      - generic [ref=f11e720]: · item 277507
+                - generic "Uncommon" [ref=f11e721]:
+                  - generic [ref=f11e722]: Binds when picked up
+                  - generic [ref=f11e723]: Unique
+                  - generic [ref=f11e724]: Key
+            - link "Tome of Dalaran New Item level 1 · item 275989 Binds when picked up Unique Other" [ref=f11e725] [cursor=pointer]:
+              - /url: /item/275989
+              - generic [ref=f11e726]:
+                - generic [ref=f11e727]:
+                  - generic [ref=f11e728]: Tome of Dalaran
+                  - generic [ref=f11e729]:
+                    - generic [ref=f11e730]: New
+                    - generic [ref=f11e731]:
+                      - text: Item level 1
+                      - generic [ref=f11e732]: · item 275989
+                - generic "Uncommon" [ref=f11e733]:
+                  - generic [ref=f11e734]: Binds when picked up
+                  - generic [ref=f11e735]: Unique
+                  - generic [ref=f11e736]: Other
+            - link "The Founding of Dalaran New Item level 1 · item 275996 Quest Item Quest" [ref=f11e737] [cursor=pointer]:
+              - /url: /item/275996
+              - generic [ref=f11e738]:
+                - generic [ref=f11e739]:
+                  - generic [ref=f11e740]: The Founding of Dalaran
+                  - generic [ref=f11e741]:
+                    - generic [ref=f11e742]: New
+                    - generic [ref=f11e743]:
+                      - text: Item level 1
+                      - generic [ref=f11e744]: · item 275996
+                - generic "Common" [ref=f11e745]:
+                  - generic [ref=f11e746]: Quest Item
+                  - generic [ref=f11e747]: Quest
+        - paragraph [ref=f11e748]:
+          - text: "About this dungeon:"
+          - 'link "Blizzard forum post: new dungeon level ranges" [ref=f11e750] [cursor=pointer]':
+            - /url: https://us.forums.blizzard.com/en/wow/t/krol%E2%80%99dok-stronghold/2349672
+          - generic [ref=f11e751]:
+            - text: ","
+            - link "What's Next panel, BlizzCon 2026, 19:34" [ref=f11e752] [cursor=pointer]:
+              - /url: https://www.youtube.com/watch?v=OEX-i55We5c&t=1174
+          - generic [ref=f11e753]:
+            - text: ","
+            - link "Blizzard's BlizzCon recap" [ref=f11e754] [cursor=pointer]:
+              - /url: https://worldofwarcraft.blizzard.com/en-us/news/24303862
+          - generic [ref=f11e755]:
+            - text: ","
+            - link "AnnieFuchsia, BlizzCon demo capture, 0:00" [ref=f11e756] [cursor=pointer]:
+              - /url: https://www.youtube.com/watch?v=8y2F8DpGuh4&t=0
+          - generic [ref=f11e757]:
+            - text: ","
+            - 'link "WoW Forever podcast, episode 3: dungeons, 37:22" [ref=f11e758] [cursor=pointer]':
+              - /url: https://www.youtube.com/watch?v=LwOWAf06YPg&t=2242
+          - generic [ref=f11e759]:
+            - text: ","
+            - 'link "Wowhead: Josh Greenfield on the Horde in Dalaran" [ref=f11e760] [cursor=pointer]':
+              - /url: https://www.wowhead.com/news=383340/blizzard-clarifies-horde-having-access-to-dalaran-not-really-intended
+          - text: .
+        - paragraph [ref=f11e761]: "Drops seen in the beta are as of 2026-10-09. Other items are read from the game clients through wago.tools (Forever beta 1.60.1.70338, Classic Era 1.15.9.69722). From a beta: stats and drops can change before release. Names, icons and item data © Blizzard Entertainment."
+  - contentinfo [ref=f11e762]:
+    - region "Support ForeverChanges" [ref=f11e763]:
+      - generic [ref=f11e764]:
+        - paragraph [ref=f11e765]:
+          - strong [ref=f11e766]: ForeverChanges has no ads
+          - generic [ref=f11e767]: I make it on my own, and I want it to stay free. If it's useful to you, a donation helps pay for hosting and the time it takes to keep it up to date.
+          - button "Tell me what to improve" [ref=f11e768] [cursor=pointer]
+        - generic [ref=f11e769]:
+          - button "Poke the goblin" [ref=f11e770] [cursor=pointer]:
+            - generic [aria-hidden]: PPC for the little content creator!
+          - link "Support the site" [ref=f11e771] [cursor=pointer]:
+            - /url: https://ko-fi.com/bartolomew
+    - navigation "Site pages" [ref=f11e777]:
+      - generic [ref=f11e778]:
+        - heading "Classes" [level=2] [ref=f11e779]
+        - list [ref=f11e780]:
+          - listitem [ref=f11e781]:
+            - link "Warrior" [ref=f11e782] [cursor=pointer]:
+              - /url: /class/warrior
+          - listitem [ref=f11e783]:
+            - link "Paladin" [ref=f11e784] [cursor=pointer]:
+              - /url: /class/paladin
+          - listitem [ref=f11e785]:
+            - link "Hunter" [ref=f11e786] [cursor=pointer]:
+              - /url: /class/hunter
+          - listitem [ref=f11e787]:
+            - link "Rogue" [ref=f11e788] [cursor=pointer]:
+              - /url: /class/rogue
+          - listitem [ref=f11e789]:
+            - link "Priest" [ref=f11e790] [cursor=pointer]:
+              - /url: /class/priest
+          - listitem [ref=f11e791]:
+            - link "Shaman" [ref=f11e792] [cursor=pointer]:
+              - /url: /class/shaman
+          - listitem [ref=f11e793]:
+            - link "Mage" [ref=f11e794] [cursor=pointer]:
+              - /url: /class/mage
+          - listitem [ref=f11e795]:
+            - link "Warlock" [ref=f11e796] [cursor=pointer]:
+              - /url: /class/warlock
+          - listitem [ref=f11e797]:
+            - link "Druid" [ref=f11e798] [cursor=pointer]:
+              - /url: /class/druid
+      - generic [ref=f11e799]:
+        - heading "Character" [level=2] [ref=f11e800]
+        - list [ref=f11e801]:
+          - listitem [ref=f11e802]:
+            - link "Talent calculator" [ref=f11e803] [cursor=pointer]:
+              - /url: /talents
+          - listitem [ref=f11e804]:
+            - link "Spellbook" [ref=f11e805] [cursor=pointer]:
+              - /url: /spellbook/warrior
+          - listitem [ref=f11e806]:
+            - link "Legacy perks" [ref=f11e807] [cursor=pointer]:
+              - /url: /legacy-perks
+          - listitem [ref=f11e808]:
+            - link "Races" [ref=f11e809] [cursor=pointer]:
+              - /url: /racials
+          - listitem [ref=f11e810]:
+            - link "Professions" [ref=f11e811] [cursor=pointer]:
+              - /url: /professions
+          - listitem [ref=f11e812]:
+            - link "Downrank calculator" [ref=f11e813] [cursor=pointer]:
+              - /url: /downrank-calculator
+          - listitem [ref=f11e814]:
+            - link "Tier list maker" [ref=f11e815] [cursor=pointer]:
+              - /url: /tier-list
+      - generic [ref=f11e816]:
+        - heading "Gear" [level=2] [ref=f11e817]
+        - list [ref=f11e818]:
+          - listitem [ref=f11e819]:
+            - link "BiS list" [ref=f11e820] [cursor=pointer]:
+              - /url: /bis
+          - listitem [ref=f11e821]:
+            - link "Items" [ref=f11e822] [cursor=pointer]:
+              - /url: /items
+          - listitem [ref=f11e823]:
+            - link "Hidden items" [ref=f11e824] [cursor=pointer]:
+              - /url: /hidden-items
+          - listitem [ref=f11e825]:
+            - link "Transmog" [ref=f11e826] [cursor=pointer]:
+              - /url: /transmog
+      - generic [ref=f11e827]:
+        - heading "World" [level=2] [ref=f11e828]
+        - list [ref=f11e829]:
+          - listitem [ref=f11e830]:
+            - link "World map" [ref=f11e831] [cursor=pointer]:
+              - /url: /map
+          - listitem [ref=f11e832]:
+            - link "Dungeons" [ref=f11e833] [cursor=pointer]:
+              - /url: /dungeons
+          - listitem [ref=f11e834]:
+            - link "Quests" [ref=f11e835] [cursor=pointer]:
+              - /url: /quests
+          - listitem [ref=f11e836]:
+            - link "Dungeon quests" [ref=f11e837] [cursor=pointer]:
+              - /url: /dungeon-quests
+          - listitem [ref=f11e838]:
+            - link "Rare spawns" [ref=f11e839] [cursor=pointer]:
+              - /url: /rares
+          - listitem [ref=f11e840]:
+            - link "Library books" [ref=f11e841] [cursor=pointer]:
+              - /url: /library-books
+      - generic [ref=f11e842]:
+        - heading "Guides" [level=2] [ref=f11e843]
+        - list [ref=f11e844]:
+          - listitem [ref=f11e845]:
+            - link "Tanning Rack" [ref=f11e846] [cursor=pointer]:
+              - /url: /tanning-rack
+          - listitem [ref=f11e847]:
+            - link "PvP ranks" [ref=f11e848] [cursor=pointer]:
+              - /url: /pvp-ranks
+          - listitem [ref=f11e849]:
+            - link "Downranking" [ref=f11e850] [cursor=pointer]:
+              - /url: /downranking
+          - listitem [ref=f11e851]:
+            - link "Booty Bay Bruiser's Buckshot" [ref=f11e852] [cursor=pointer]:
+              - /url: /booty-bay-bruisers-buckshot
+          - listitem [ref=f11e853]:
+            - link "Scarlet Banner" [ref=f11e854] [cursor=pointer]:
+              - /url: /scarlet-banner
+          - listitem [ref=f11e855]:
+            - link "$100,000 duel tournament" [ref=f11e856] [cursor=pointer]:
+              - /url: /duel-tournament
+          - listitem [ref=f11e857]:
+            - link "Level 30" [ref=f11e858] [cursor=pointer]:
+              - /url: /level-30
+          - listitem [ref=f11e859]:
+            - link "Druid Cat Form quest" [ref=f11e860] [cursor=pointer]:
+              - /url: /druid-cat-form
+          - listitem [ref=f11e861]:
+            - link "Addons" [ref=f11e862] [cursor=pointer]:
+              - /url: /addons
+          - listitem [ref=f11e863]:
+            - link "Savory Whimsyfin Delight" [ref=f11e864] [cursor=pointer]:
+              - /url: /savory-whimsyfin-delight
+          - listitem [ref=f11e865]:
+            - link "Druid snake form" [ref=f11e866] [cursor=pointer]:
+              - /url: /druid-snake-form
+          - listitem [ref=f11e867]:
+            - link "Battle mage" [ref=f11e868] [cursor=pointer]:
+              - /url: /battle-mage
+          - listitem [ref=f11e869]:
+            - link "Cozy Sleeping Bag" [ref=f11e870] [cursor=pointer]:
+              - /url: /cozy-sleeping-bag
+          - listitem [ref=f11e871]:
+            - link "Merchant's Favor" [ref=f11e872] [cursor=pointer]:
+              - /url: /merchants-favor
+          - listitem [ref=f11e873]:
+            - link "Hunter pets" [ref=f11e874] [cursor=pointer]:
+              - /url: /hunter-pets
+      - generic [ref=f11e875]:
+        - heading "Beta" [level=2] [ref=f11e876]
+        - list [ref=f11e877]:
+          - listitem [ref=f11e878]:
+            - link "Patch notes" [ref=f11e879] [cursor=pointer]:
+              - /url: /patch-notes
+          - listitem [ref=f11e880]:
+            - link "Changes vs Classic" [ref=f11e881] [cursor=pointer]:
+              - /url: /changes
+          - listitem [ref=f11e882]:
+            - link "Beta and launch dates" [ref=f11e883] [cursor=pointer]:
+              - /url: /beta
+          - listitem [ref=f11e884]:
+            - link "Server status" [ref=f11e885] [cursor=pointer]:
+              - /url: /server-status
+      - generic [ref=f11e886]:
+        - heading "Language" [level=2] [ref=f11e887]
+        - list [ref=f11e892]:
+          - listitem [ref=f11e893]:
+            - generic [ref=f11e894]: English
+          - listitem [ref=f11e897]:
+            - link "Français" [ref=f11e898] [cursor=pointer]:
+              - /url: /fr/dungeons/city-of-dalaran
+          - listitem [ref=f11e899]:
+            - link "Deutsch" [ref=f11e900] [cursor=pointer]:
+              - /url: /de/dungeons/city-of-dalaran
+          - listitem [ref=f11e901]:
+            - link "繁體中文" [ref=f11e902] [cursor=pointer]:
+              - /url: /zh-tw/dungeons/city-of-dalaran
+          - listitem [ref=f11e903]:
+            - link "简体中文" [ref=f11e904] [cursor=pointer]:
+              - /url: /zh-cn/dungeons/city-of-dalaran
+          - listitem [ref=f11e905]:
+            - link "Русский" [ref=f11e906] [cursor=pointer]:
+              - /url: /ru/dungeons/city-of-dalaran
+    - generic [ref=f11e907]:
+      - paragraph [ref=f11e908]: ForeverChanges is an unofficial fan site, not affiliated with or endorsed by Blizzard Entertainment. World of Warcraft and Warcraft are trademarks or registered trademarks of Blizzard Entertainment, Inc. in the U.S. and/or other countries. Game content and images © Blizzard Entertainment, Inc.
+      - navigation "Legal" [ref=f11e910]:
+        - link "About the data" [ref=f11e911] [cursor=pointer]:
+          - /url: /about
+        - link "Privacy" [ref=f11e912] [cursor=pointer]:
+          - /url: /privacy
+        - link "Terms" [ref=f11e913] [cursor=pointer]:
+          - /url: /terms
+        - link "Legal notice" [ref=f11e914] [cursor=pointer]:
+          - /url: /legal
+  - alert [ref=f11e915]

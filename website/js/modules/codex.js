@@ -223,6 +223,7 @@ function setupDungeonModalEvents() {
 
   const closeModal = () => {
     modal.classList.remove('is-open');
+    modal.classList.remove('open');
     modal.setAttribute('hidden', '');
   };
 
@@ -240,10 +241,18 @@ window.openDungeonLootModal = function(dungeonId) {
   const body = document.getElementById('boss-loot-modal-content') || document.getElementById('dungeon-loot-modal-body');
   if (!modal || !body) return;
 
-  const detailed = window.WOW_TOOLS_DATA?.detailedDungeonLoot?.[dungeonId];
-  const general = WOW_FOREVER_DATA?.dungeonsAndRaids?.find(d => d.id === dungeonId);
+  const keyMap = {
+    'dungeon-03': 'excavation-site',
+    'dungeon-04': 'city-of-dalaran',
+    'excavation-site': 'excavation-site',
+    'city-of-dalaran': 'city-of-dalaran'
+  };
+  const expKey = keyMap[dungeonId] || dungeonId;
+  const expanded = window.WOW_ATLAS_DATA?.expandedDungeons?.[expKey];
+  const detailed = window.WOW_TOOLS_DATA?.detailedDungeonLoot?.[dungeonId] || (expKey ? window.WOW_TOOLS_DATA?.detailedDungeonLoot?.[expKey] : null);
+  const general = WOW_FOREVER_DATA?.dungeonsAndRaids?.find(d => d.id === dungeonId || d.id === expKey);
 
-  if (!detailed && !general) {
+  if (!expanded && !detailed && !general) {
     // Fallback for classic dungeons
     body.innerHTML = `
       <div style="padding: 1.5rem; text-align: center;">
@@ -256,62 +265,177 @@ window.openDungeonLootModal = function(dungeonId) {
     return;
   }
 
-  const name = detailed?.name || general?.name;
-  const levelRange = detailed?.levelRange || general?.levelRange;
-  const zone = detailed?.zone || general?.zone;
-  const entrance = detailed?.entrance || general?.entrance || 'Main zone entrance.';
-  const bosses = detailed?.bosses || [];
+  const name = expanded?.name || detailed?.name || general?.name;
+  const levelRange = expanded?.levelRange || detailed?.levelRange || general?.levelRange;
+  const zone = expanded?.zone || detailed?.zone || general?.zone;
+  const entrance = expanded?.entrance || detailed?.entrance || general?.entrance || 'Main zone entrance.';
+  const bossList = expanded?.bosses || detailed?.bosses || [];
+  const questList = expanded?.quests || [];
 
   body.innerHTML = `
     <div class="dg-modal-header">
-      <span class="dungeon-level-badge">${levelRange}</span>
+      <span class="dungeon-level-badge">${escapeHtml(levelRange)}</span>
       <h2 class="dg-modal-title">${escapeHtml(name)}</h2>
       <p class="dg-modal-zone">📍 ${escapeHtml(zone)}</p>
       <div class="dg-modal-entrance">
         <strong>Entrance Route:</strong> <span>${escapeHtml(entrance)}</span>
       </div>
-      ${detailed ? `
-        <div class="dg-modal-meta-row">
-          <span>Bosses: <strong>${detailed.bossCount}</strong></span>
-          <span>Drops Recorded: <strong>${detailed.dropsSeen} / ${detailed.dropsCount} (Beta Confirmed)</strong></span>
-          <span style="color: #34d399;">✓ Build 1.60.6 Verified</span>
-        </div>
-      ` : ''}
+      <div class="dg-modal-meta-row">
+        <span>Bosses: <strong>${bossList.length || detailed?.bossCount || general?.bosses?.length || 0}</strong></span>
+        ${questList.length > 0 ? `<span>Quests: <strong>${questList.length} Chains</strong></span>` : ''}
+        <span style="color: #34d399;">✓ Build 1.60.6 Verified</span>
+      </div>
     </div>
 
-    <div class="dg-modal-boss-list">
-      ${bosses.length > 0 ? bosses.map(boss => `
-        <div class="dg-boss-block">
-          <div class="dg-boss-name-row">
-            <h4>${escapeHtml(boss.name)}</h4>
-            <span class="dg-boss-title">${escapeHtml(boss.title || 'Boss')}</span>
-          </div>
-          <div class="dg-loot-table-grid">
-            ${boss.drops.map(item => `
-              <div class="dg-loot-item-card">
-                <div class="dg-loot-item-top">
-                  <strong class="dg-loot-name ${item.quality}">${escapeHtml(item.name)}</strong>
-                  <span class="dg-loot-ilvl">iLvl ${item.iLvl}</span>
+    ${expanded ? `
+      <div class="dg-modal-tabs">
+        <button class="dg-modal-tab-btn active" data-dgtab="tactics">⚔️ Boss Tactics &amp; Abilities</button>
+        <button class="dg-modal-tab-btn" data-dgtab="loot">🎁 Loot Tables</button>
+        ${questList.length > 0 ? `<button class="dg-modal-tab-btn" data-dgtab="quests">📜 Pre-Dungeon Quests (${questList.length})</button>` : ''}
+      </div>
+
+      <!-- Tab 1: Tactics -->
+      <div id="dg-tab-tactics" class="dg-modal-tab-pane active">
+        <div class="dg-tactics-list">
+          ${bossList.map(boss => `
+            <div class="dg-tactics-card">
+              <div class="dg-tactics-boss-header">
+                ${boss.portrait ? `<img src="${boss.portrait}" class="dg-boss-portrait" alt="${escapeHtml(boss.name)}" onerror="this.style.display='none'">` : ''}
+                <div>
+                  <h3 class="dg-tactics-boss-name">${escapeHtml(boss.name)} <span class="dg-boss-lvl">Lvl ${boss.level || '?'}</span></h3>
+                  <p class="dg-tactics-summary">${escapeHtml(boss.roleSummary || boss.mechanics || '')}</p>
                 </div>
-                <div class="dg-loot-slot">${escapeHtml(item.slot)}</div>
-                <p class="dg-loot-stats">${escapeHtml(item.stats)}</p>
+              </div>
+              ${boss.abilities && boss.abilities.length > 0 ? `
+                <div class="dg-abilities-list">
+                  <h4 class="dg-abilities-header">Encounter Mechanics &amp; Role Assignments</h4>
+                  ${boss.abilities.map(ab => `
+                    <div class="dg-ability-item">
+                      <div class="dg-ability-top">
+                        <strong class="dg-ability-name">${escapeHtml(ab.name)}</strong>
+                        <span class="role-badge role-${ab.role.toLowerCase().replace(/[^a-z0-9]/g, '')}">[${escapeHtml(ab.role)}]</span>
+                        <span class="ability-type-badge">${escapeHtml(ab.type)}</span>
+                      </div>
+                      <p class="dg-ability-desc">${escapeHtml(ab.desc)}</p>
+                    </div>
+                  `).join('')}
+                </div>
+              ` : ''}
+            </div>
+          `).join('')}
+        </div>
+      </div>
+
+      <!-- Tab 2: Loot -->
+      <div id="dg-tab-loot" class="dg-modal-tab-pane" hidden>
+        <div class="dg-modal-boss-list">
+          ${bossList.map(boss => `
+            <div class="dg-boss-block">
+              <div class="dg-boss-name-row">
+                <h4>${escapeHtml(boss.name)}</h4>
+                <span class="dg-boss-title">${escapeHtml(boss.roleSummary ? 'Encounter' : (boss.title || 'Boss'))}</span>
+              </div>
+              <div class="dg-loot-table-grid">
+                ${(boss.drops || []).map(item => `
+                  <div class="dg-loot-item-card">
+                    <div class="dg-loot-item-top">
+                      <strong class="dg-loot-name ${item.quality || 'q3'}">${escapeHtml(item.name)}</strong>
+                      ${item.iLvl ? `<span class="dg-loot-ilvl">iLvl ${item.iLvl}</span>` : ''}
+                      ${item.dropRate ? `<span class="dg-loot-drop-chance">${escapeHtml(item.dropRate)}</span>` : ''}
+                    </div>
+                    <div class="dg-loot-slot">${escapeHtml(item.slot || '')}</div>
+                    <p class="dg-loot-stats">${escapeHtml(item.stats || '')}</p>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+
+      <!-- Tab 3: Quests -->
+      ${questList.length > 0 ? `
+        <div id="dg-tab-quests" class="dg-modal-tab-pane" hidden>
+          <div class="dg-quests-list">
+            ${questList.map(q => `
+              <div class="dg-quest-card">
+                <div class="dg-quest-top">
+                  <div class="dg-quest-title-wrap">
+                    <span class="dg-quest-icon">📜</span>
+                    <strong class="dg-quest-name">${escapeHtml(q.name)}</strong>
+                  </div>
+                  <span class="quest-faction-badge faction-${q.faction.toLowerCase()}">${escapeHtml(q.faction)}</span>
+                </div>
+                <div class="dg-quest-meta">
+                  <span>Level Req: <strong>${q.levelReq}+</strong></span>
+                  <span>Reward XP: <strong style="color: #60a5fa;">${escapeHtml(q.xp)}</strong></span>
+                </div>
+                <div class="dg-quest-giver">
+                  <strong>Quest Giver / Location:</strong> <span>${escapeHtml(q.source)}</span>
+                </div>
+                <div class="dg-quest-rewards">
+                  <strong>Rewards:</strong> <span>${escapeHtml(q.rewards)}</span>
+                </div>
               </div>
             `).join('')}
           </div>
         </div>
-      `).join('') : `
-        <div class="dg-boss-block">
-          <h4>Key Boss Encounters</h4>
-          <p>${general?.bosses ? general.bosses.join(', ') : 'Encounter telemetry loading...'}</p>
-          <div class="loot-tags" style="margin-top: 1rem;">
-            ${general?.lootHighlights ? general.lootHighlights.map(l => `<span class="loot-tag">✦ ${escapeHtml(l)}</span>`).join('') : ''}
+      ` : ''}
+    ` : `
+      <div class="dg-modal-boss-list">
+        ${bossList.length > 0 ? bossList.map(boss => `
+          <div class="dg-boss-block">
+            <div class="dg-boss-name-row">
+              <h4>${escapeHtml(boss.name)}</h4>
+              <span class="dg-boss-title">${escapeHtml(boss.title || 'Boss')}</span>
+            </div>
+            <div class="dg-loot-table-grid">
+              ${(boss.drops || []).map(item => `
+                <div class="dg-loot-item-card">
+                  <div class="dg-loot-item-top">
+                    <strong class="dg-loot-name ${item.quality || 'q3'}">${escapeHtml(item.name)}</strong>
+                    <span class="dg-loot-ilvl">iLvl ${item.iLvl || 30}</span>
+                  </div>
+                  <div class="dg-loot-slot">${escapeHtml(item.slot)}</div>
+                  <p class="dg-loot-stats">${escapeHtml(item.stats)}</p>
+                </div>
+              `).join('')}
+            </div>
           </div>
-        </div>
-      `}
-    </div>
+        `).join('') : `
+          <div class="dg-boss-block">
+            <h4>Key Boss Encounters</h4>
+            <p>${general?.bosses ? general.bosses.join(', ') : 'Encounter telemetry loading...'}</p>
+            <div class="loot-tags" style="margin-top: 1rem;">
+              ${general?.lootHighlights ? general.lootHighlights.map(l => `<span class="loot-tag">✦ ${escapeHtml(l)}</span>`).join('') : ''}
+            </div>
+          </div>
+        `}
+      </div>
+    `}
   `;
 
+  // Bind tab switching
+  const tabBtns = body.querySelectorAll('.dg-modal-tab-btn');
+  tabBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      tabBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const target = btn.getAttribute('data-dgtab');
+      body.querySelectorAll('.dg-modal-tab-pane').forEach(pane => {
+        if (pane.id === `dg-tab-${target}`) {
+          pane.removeAttribute('hidden');
+          pane.classList.add('active');
+        } else {
+          pane.setAttribute('hidden', '');
+          pane.classList.remove('active');
+        }
+      });
+    });
+  });
+
   modal.removeAttribute('hidden');
+  modal.classList.add('open');
   modal.classList.add('is-open');
 };
 

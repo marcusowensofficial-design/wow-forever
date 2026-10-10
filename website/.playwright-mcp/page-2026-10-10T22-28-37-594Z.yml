@@ -1,0 +1,592 @@
+- generic [active] [ref=e1]:
+  - text: ": : :"
+  - main [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]:
+        - generic [ref=e5]:
+          - link "ForeverChanges home" [ref=e6] [cursor=pointer]:
+            - /url: /
+            - img "ForeverChanges" [ref=e7]
+          - link [ref=e9] [cursor=pointer]:
+            - /url: /patch-notes
+            - generic [ref=e10]:
+              - text: Updated
+              - generic [aria-hidden] [ref=e12]: ·
+            - text: Beta build 1.60.1.70338
+          - link "Launch in" [ref=e13] [cursor=pointer]:
+            - /url: /beta
+            - generic [aria-hidden] [ref=e15]:
+              - generic [ref=e16]:
+                - generic [ref=e17]: "25"
+                - generic [ref=e18]: days
+              - generic [ref=e19]:
+                - text: ":"
+                - generic [ref=e20]: "00"
+                - generic [ref=e21]: hrs
+              - generic [ref=e22]:
+                - text: ":"
+                - generic [ref=e23]: "31"
+                - generic [ref=e24]: min
+              - generic [ref=e25]:
+                - text: ":"
+                - generic [ref=e26]: "23"
+                - generic [ref=e27]: sec
+        - generic [ref=e28]:
+          - navigation "Main" [ref=e29]:
+            - link "Changes" [ref=e30] [cursor=pointer]:
+              - /url: /changes
+            - link "Talents , updated" [ref=e31] [cursor=pointer]:
+              - /url: /talents/warrior
+              - text: Talents
+              - generic:
+                - generic [aria-hidden]: Updated on October 8
+                - generic [ref=e33]: ", updated"
+            - link "Spellbook , updated" [ref=e34] [cursor=pointer]:
+              - /url: /spellbook/warrior
+              - text: Spellbook
+              - generic:
+                - generic [aria-hidden]: Updated on October 8
+                - generic [ref=e36]: ", updated"
+            - link "Legacy" [ref=e37] [cursor=pointer]:
+              - /url: /legacy-perks
+            - link "Professions" [ref=e38] [cursor=pointer]:
+              - /url: /professions
+            - link "Races" [ref=e39] [cursor=pointer]:
+              - /url: /racials
+            - link "Dungeons , new" [ref=e40] [cursor=pointer]:
+              - /url: /dungeons
+              - text: Dungeons
+              - generic:
+                - generic [aria-hidden]: "New: the City of Dalaran"
+                - generic [ref=e42]: ", new"
+            - link "Items , updated" [ref=e43] [cursor=pointer]:
+              - /url: /items
+              - text: Items
+              - generic:
+                - generic [aria-hidden]: 331 items changed on October 8
+                - generic [ref=e45]: ", updated"
+            - link "Quests" [ref=e46] [cursor=pointer]:
+              - /url: /quests
+            - link "BiS list , updated" [ref=e47] [cursor=pointer]:
+              - /url: /bis
+              - text: BiS list
+              - generic:
+                - generic [aria-hidden]: Up to date with the latest build
+                - generic [ref=e49]: ", updated"
+            - link "World map" [ref=e50] [cursor=pointer]:
+              - /url: /map
+            - link "Guides" [ref=e51] [cursor=pointer]:
+              - /url: /guides
+            - link "Patch notes" [ref=e52] [cursor=pointer]:
+              - /url: /patch-notes
+          - button "Search" [ref=e54] [cursor=pointer]:
+            - generic [aria-hidden]: Search /
+      - generic [ref=e57]:
+        - generic [ref=e58]:
+          - heading "Everything that changes in WoW Forever" [level=1] [ref=e59]
+          - paragraph [ref=e60]: Talents, spells, items, dungeons and the world itself, read from the beta and set against Classic. Search for anything by name, start with your class, or go straight to a tool.
+          - search [ref=e61]:
+            - combobox "Search talents, spells, items, zones and dungeons" [ref=e65]
+            - button "Search" [ref=e66] [cursor=pointer]
+        - navigation [ref=e67]:
+          - heading "Choose your class" [level=2] [ref=e68]
+          - list [ref=e69]:
+            - listitem [ref=e70]:
+              - link "Warrior" [ref=e71] [cursor=pointer]:
+                - /url: /class/warrior
+            - listitem [ref=e73]:
+              - link "Hunter" [ref=e74] [cursor=pointer]:
+                - /url: /class/hunter
+            - listitem [ref=e76]:
+              - link "Mage" [ref=e77] [cursor=pointer]:
+                - /url: /class/mage
+            - listitem [ref=e79]:
+              - link "Rogue" [ref=e80] [cursor=pointer]:
+                - /url: /class/rogue
+            - listitem [ref=e82]:
+              - link "Priest" [ref=e83] [cursor=pointer]:
+                - /url: /class/priest
+            - listitem [ref=e85]:
+              - link "Warlock" [ref=e86] [cursor=pointer]:
+                - /url: /class/warlock
+            - listitem [ref=e88]:
+              - link "Paladin" [ref=e89] [cursor=pointer]:
+                - /url: /class/paladin
+            - listitem [ref=e91]:
+              - link "Druid" [ref=e92] [cursor=pointer]:
+                - /url: /class/druid
+            - listitem [ref=e94]:
+              - link "Shaman" [ref=e95] [cursor=pointer]:
+                - /url: /class/shaman
+          - paragraph [ref=e97]: Each class page has its changes, its talent calculator and its spellbook.
+      - generic [ref=e98]:
+        - region [ref=e99]:
+          - heading "Explore Forever" [level=2] [ref=e100]
+          - generic [ref=e101]:
+            - 'link "World map New in Forever: Gilneas, Riverglades and Mount Hyjal. Explore them and the rest of the world in 2D and in 3D, see where to quest at your level, and find dungeon entrances, flight masters and boats." [ref=e102] [cursor=pointer]':
+              - /url: /map
+              - generic [ref=e105]:
+                - strong [ref=e106]: World map
+                - generic [ref=e107]: "New in Forever: Gilneas, Riverglades and Mount Hyjal. Explore them and the rest of the world in 2D and in 3D, see where to quest at your level, and find dungeon entrances, flight masters and boats."
+            - link "Talent calculator The Forever trees of the nine classes, level by level. Plan a build, share it as a link, and switch on the comparison to see what moved since Classic." [ref=e108] [cursor=pointer]:
+              - /url: /talents/warrior
+              - generic [ref=e109]:
+                - strong [ref=e110]: Talent calculator
+                - generic [ref=e111]: The Forever trees of the nine classes, level by level. Plan a build, share it as a link, and switch on the comparison to see what moved since Classic.
+            - region [ref=e112]:
+              - generic [ref=e113]:
+                - link [ref=e114] [cursor=pointer]:
+                  - /url: /dungeons
+                  - strong [ref=e115]: Dungeons and loot
+                - generic [ref=e116]: Bosses and drops for all 35 dungeons. These are the ones players are running in the beta right now.
+              - list [ref=e117]:
+                - listitem [ref=e118]:
+                  - link "Blackfathom Deeps 8 bosses, 45 drops 41 of 45 seen in the beta 24–32" [ref=e119] [cursor=pointer]:
+                    - /url: /dungeons/blackfathom-deeps
+                    - generic [ref=e120]:
+                      - text: Blackfathom Deeps
+                      - emphasis [ref=e121]: 8 bosses, 45 drops
+                      - emphasis [ref=e122]:
+                        - text: 41 of 45 seen
+                        - generic [ref=e123]: in the beta
+                    - generic [ref=e124]: 24–32
+                - listitem [ref=e125]:
+                  - link "The Stockade 6 bosses, 29 drops 29 of 29 seen in the beta 24–32" [ref=e126] [cursor=pointer]:
+                    - /url: /dungeons/the-stockade
+                    - generic [ref=e127]:
+                      - text: The Stockade
+                      - emphasis [ref=e128]: 6 bosses, 29 drops
+                      - emphasis [ref=e129]:
+                        - text: 29 of 29 seen
+                        - generic [ref=e130]: in the beta
+                    - generic [ref=e131]: 24–32
+                - listitem [ref=e132]:
+                  - 'link "New Excavation Site: Wetlands 4 bosses, 13 drops 11 of 13 seen in the beta 26–31" [ref=e133] [cursor=pointer]':
+                    - /url: /dungeons/excavation-site
+                    - generic [ref=e134]:
+                      - generic [ref=e135]: New
+                      - text: "Excavation Site: Wetlands"
+                      - emphasis [ref=e136]: 4 bosses, 13 drops
+                      - emphasis [ref=e137]:
+                        - text: 11 of 13 seen
+                        - generic [ref=e138]: in the beta
+                    - generic [ref=e139]: 26–31
+                - listitem [ref=e140]:
+                  - link "New City of Dalaran 8 bosses, 28 drops 28 of 28 seen in the beta 28–33" [ref=e141] [cursor=pointer]:
+                    - /url: /dungeons/city-of-dalaran
+                    - generic [ref=e142]:
+                      - generic [ref=e143]: New
+                      - text: City of Dalaran
+                      - emphasis [ref=e144]: 8 bosses, 28 drops
+                      - emphasis [ref=e145]:
+                        - text: 28 of 28 seen
+                        - generic [ref=e146]: in the beta
+                    - generic [ref=e147]: 28–33
+                - listitem [ref=e148]:
+                  - link "Gnomeregan 7 bosses, 49 drops 17 of 49 seen in the beta 29–38" [ref=e149] [cursor=pointer]:
+                    - /url: /dungeons/gnomeregan
+                    - generic [ref=e150]:
+                      - text: Gnomeregan
+                      - emphasis [ref=e151]: 7 bosses, 49 drops
+                      - emphasis [ref=e152]:
+                        - text: 17 of 49 seen
+                        - generic [ref=e153]: in the beta
+                    - generic [ref=e154]: 29–38
+                - listitem [ref=e155]:
+                  - link "Razorfen Kraul 9 bosses, 45 drops 39 of 45 seen in the beta 29–38" [ref=e156] [cursor=pointer]:
+                    - /url: /dungeons/razorfen-kraul
+                    - generic [ref=e157]:
+                      - text: Razorfen Kraul
+                      - emphasis [ref=e158]: 9 bosses, 45 drops
+                      - emphasis [ref=e159]:
+                        - text: 39 of 45 seen
+                        - generic [ref=e160]: in the beta
+                    - generic [ref=e161]: 29–38
+              - paragraph [ref=e162]:
+                - generic [ref=e163]: "Still to come: Drowned City, Krol'dok and 3 more."
+                - link "All 35 dungeons by level" [ref=e164] [cursor=pointer]:
+                  - /url: /dungeons
+            - link "Spellbook Every spell a class trains from 1 to 60, tab by tab and rank by rank, next to Classic." [ref=e165] [cursor=pointer]:
+              - /url: /spellbook/warrior
+              - generic [ref=e166]:
+                - strong [ref=e167]: Spellbook
+                - generic [ref=e168]: Every spell a class trains from 1 to 60, tab by tab and rank by rank, next to Classic.
+            - 'link "Legacy system New in Forever: account-wide points earned from challenges, spent by each character in three trees. Plan the perks and read the challenges." [ref=e169] [cursor=pointer]':
+              - /url: /legacy-perks
+              - generic [aria-hidden] [ref=e170]:
+                - generic [ref=e171]: Professions
+                - generic [ref=e173]: Adventure
+                - generic [ref=e175]: Resourcefulness
+              - generic [ref=e177]:
+                - strong [ref=e178]: Legacy system
+                - generic [ref=e179]: "New in Forever: account-wide points earned from challenges, spent by each character in three trees. Plan the perks and read the challenges."
+            - link "Items 5,559 new items and 4,493 changed from Classic. Full tooltips, next to the Classic one, with filters by slot, level and class." [ref=e180] [cursor=pointer]:
+              - /url: /items
+              - generic [ref=e183]:
+                - generic [ref=e184]: Slither Cord
+                - generic [ref=e185]: Item Level 22
+                - generic [ref=e186]: Binds when picked up
+                - generic [ref=e188]:
+                  - generic [ref=e189]: Waist
+                  - generic [ref=e190]: Cloth
+                - generic [ref=e191]: 22 Armor
+                - generic [ref=e193]: +3 Mana Regeneration
+                - generic [ref=e195]: "Use: Escape all immobilizing effects."
+                - generic [ref=e197]: Requires Level 17
+              - generic [ref=e199]:
+                - strong [ref=e200]: Items
+                - generic [ref=e201]: 5,559 new items and 4,493 changed from Classic. Full tooltips, next to the Classic one, with filters by slot, level and class.
+            - generic [ref=e202]:
+              - link [ref=e203] [cursor=pointer]:
+                - /url: /professions
+                - strong [ref=e211]: Professions
+              - link [ref=e212] [cursor=pointer]:
+                - /url: /racials
+                - strong [ref=e318]: Races and racials
+              - link [ref=e319] [cursor=pointer]:
+                - /url: /beta
+                - generic [aria-hidden] [ref=e321]:
+                  - generic [ref=e323]: Sep 17
+                  - generic [ref=e324]: Oct 21
+                  - generic [ref=e325]: Nov 4
+                - strong [ref=e328]: Beta and launch dates
+              - link [ref=e329] [cursor=pointer]:
+                - /url: /hidden-items
+                - strong [ref=e337]: Items Blizzard is hiding
+              - link [ref=e338] [cursor=pointer]:
+                - /url: /tier-list
+                - generic [ref=e341]:
+                  - generic [ref=e342]: S
+                  - generic [ref=e344]: A
+                  - generic [ref=e346]: B
+                  - generic [ref=e348]: C
+                  - generic [ref=e350]: D
+                  - generic [ref=e352]: F
+                - strong [ref=e356]: Forever tier list maker
+            - link "Get ready for level 30 What your class learns from 21 to 30, your two new talent rows, the dungeons in range and my road to level." [ref=e357] [cursor=pointer]:
+              - /url: /level-30
+              - generic [ref=e358]:
+                - strong [ref=e359]: Get ready for level 30
+                - generic [ref=e360]: What your class learns from 21 to 30, your two new talent rows, the dungeons in range and my road to level.
+            - link "$100,000 duel tournament Level 30, Horde side, October 17 and 18 on the beta." [ref=e361] [cursor=pointer]:
+              - /url: /duel-tournament
+              - generic [ref=e362]:
+                - strong [ref=e363]: $100,000 duel tournament
+                - generic [ref=e364]: Level 30, Horde side, October 17 and 18 on the beta.
+        - region [ref=e365]:
+          - generic [ref=e366]:
+            - heading "Most read guides" [level=2] [ref=e367]
+            - link "All guides" [ref=e368] [cursor=pointer]:
+              - /url: /guides
+          - list [ref=e369]:
+            - listitem [ref=e370]:
+              - link "Hunter pets Which family hits hardest, and where to tame each of the 502 beasts." [ref=e371] [cursor=pointer]:
+                - /url: /hunter-pets
+                - generic [ref=e373]:
+                  - strong [ref=e374]: Hunter pets
+                  - generic [ref=e375]: Which family hits hardest, and where to tame each of the 502 beasts.
+            - listitem [ref=e376]:
+              - link "Library books Where to find every hidden book, and the necklace and ring they earn you." [ref=e377] [cursor=pointer]:
+                - /url: /library-books
+                - generic [ref=e379]:
+                  - strong [ref=e380]: Library books
+                  - generic [ref=e381]: Where to find every hidden book, and the necklace and ring they earn you.
+            - listitem [ref=e382]:
+              - link "Rare spawns 34 rares in 14 zones, where they spawn and the new loot and sets they drop." [ref=e383] [cursor=pointer]:
+                - /url: /rares
+                - generic [ref=e385]:
+                  - strong [ref=e386]: Rare spawns
+                  - generic [ref=e387]: 34 rares in 14 zones, where they spawn and the new loot and sets they drop.
+      - region [ref=e388]:
+        - generic [ref=e389]:
+          - generic [ref=e390]:
+            - generic [ref=e391]:
+              - heading "Discover Forever’s new talents" [level=2] [ref=e392]
+              - paragraph [ref=e393]: One for each class. Forever adds 113 talents in all, among 753 talent and spell changes so far.
+            - link "See all 753 changes" [ref=e394] [cursor=pointer]:
+              - /url: /changes
+          - list [ref=e395]:
+            - listitem [ref=e396]:
+              - link "Spearing Strike Warrior, Arms A brutal attack that deals 40% weapon damage. Deals an additional 80% weapon damage against Giants, Dragonkin, and mounted targets." [ref=e397] [cursor=pointer]:
+                - /url: /class/warrior#e=calc-warrior-arms-spearing-strike
+                - generic [ref=e398]:
+                  - generic [ref=e399]: Spearing Strike
+                  - generic [ref=e400]: Warrior, Arms
+                  - generic [ref=e401]: A brutal attack that deals 40% weapon damage. Deals an additional 80% weapon damage against Giants, Dragonkin, and mounted targets.
+            - listitem [ref=e402]:
+              - link "Lone Wolf Hunter, Marksmanship You deal 20% increased damage with all attacks while you do not have an active pet." [ref=e403] [cursor=pointer]:
+                - /url: /class/hunter#e=calc-hunter-marksmanship-lone-wolf
+                - generic [ref=e404]:
+                  - generic [ref=e405]: Lone Wolf
+                  - generic [ref=e406]: Hunter, Marksmanship
+                  - generic [ref=e407]: You deal 20% increased damage with all attacks while you do not have an active pet.
+            - listitem [ref=e408]:
+              - link "Arcane Blast Mage, Arcane Blasts the target with energy, dealing 57 to 65 Arcane damage." [ref=e409] [cursor=pointer]:
+                - /url: /class/mage#e=calc-mage-arcane-arcane-blast
+                - generic [ref=e410]:
+                  - generic [ref=e411]: Arcane Blast
+                  - generic [ref=e412]: Mage, Arcane
+                  - generic [ref=e413]: Blasts the target with energy, dealing 57 to 65 Arcane damage.
+            - listitem [ref=e414]:
+              - link "Mutilate Rogue, Assassination Instantly attacks with both weapons for 75% weapon damage plus an additional 17 with each weapon. Damage increased by 20% against Poisoned targets." [ref=e415] [cursor=pointer]:
+                - /url: /class/rogue#e=calc-rogue-assassination-mutilate
+                - generic [ref=e416]:
+                  - generic [ref=e417]: Mutilate
+                  - generic [ref=e418]: Rogue, Assassination
+                  - generic [ref=e419]: Instantly attacks with both weapons for 75% weapon damage plus an additional 17 with each weapon. Damage increased by 20% against Poisoned targets.
+            - listitem [ref=e420]:
+              - link "Power in Light Priest, Discipline Your Smite and Penance spells deal 2% increased damage to targets afflicted with your Holy Fire." [ref=e421] [cursor=pointer]:
+                - /url: /class/priest#e=calc-priest-discipline-power-in-light
+                - generic [ref=e422]:
+                  - generic [ref=e423]: Power in Light
+                  - generic [ref=e424]: Priest, Discipline
+                  - generic [ref=e425]:
+                    - text: Your
+                    - generic [ref=e426]: Smite
+                    - text: and
+                    - generic [ref=e427]: Penance
+                    - text: spells deal 2% increased damage to targets afflicted with your
+                    - generic [ref=e428]: Holy Fire
+                    - text: .
+            - listitem [ref=e429]:
+              - link "Demonic Pact Warlock, Demonology Your Demonic Sacrifice effect is no longer cancelled by summoning a different Demon pet. Resummoning the sacrificed pet will still cancel the effect." [ref=e430] [cursor=pointer]:
+                - /url: /class/warlock#e=warlock-demonic-pact
+                - generic [ref=e431]:
+                  - generic [ref=e432]: Demonic Pact
+                  - generic [ref=e433]: Warlock, Demonology
+                  - generic [ref=e434]:
+                    - text: Your
+                    - generic [ref=e435]: Demonic Sacrifice
+                    - text: effect is no longer cancelled by summoning a different Demon pet. Resummoning the sacrificed pet will still cancel the effect.
+            - listitem [ref=e436]:
+              - link "Voice of Truth Paladin, Holy Grants you immunity to Silence and Interrupt effects for 6 sec." [ref=e437] [cursor=pointer]:
+                - /url: /class/paladin#e=calc-paladin-holy-voice-of-truth
+                - generic [ref=e438]:
+                  - generic [ref=e439]: Voice of Truth
+                  - generic [ref=e440]: Paladin, Holy
+                  - generic [ref=e441]: Grants you immunity to Silence and Interrupt effects for 6 sec.
+            - listitem [ref=e442]:
+              - link "Eclipse Druid, Balance Your Wrath spell reduces the cast time of your next 2 Starfire spells by 0.17 sec. Stores up to 4 charges. Lasts 15 sec." [ref=e443] [cursor=pointer]:
+                - /url: /class/druid#e=calc-druid-balance-eclipse
+                - generic [ref=e444]:
+                  - generic [ref=e445]: Eclipse
+                  - generic [ref=e446]: Druid, Balance
+                  - generic [ref=e447]:
+                    - text: Your
+                    - generic [ref=e448]: Wrath
+                    - text: spell reduces the cast time of your next 2
+                    - generic [ref=e449]: Starfire
+                    - text: spells by 0.17 sec. Stores up to 4 charges. Lasts 15 sec.
+            - listitem [ref=e450]:
+              - link "Lightning Overload Shaman, Elemental Combat Lightning Bolt/Chain Lightning can repeat at half damage, with no extra cost or threat." [ref=e451] [cursor=pointer]:
+                - /url: /class/shaman#e=calc-shaman-elemental-combat-lightning-overload
+                - generic [ref=e452]:
+                  - generic [ref=e453]: Lightning Overload
+                  - generic [ref=e454]: Shaman, Elemental Combat
+                  - generic [ref=e455]:
+                    - generic [ref=e456]: Lightning Bolt
+                    - text: /
+                    - generic [ref=e457]: Chain Lightning
+                    - text: can repeat at half damage, with no extra cost or threat.
+          - paragraph [ref=e458]:
+            - generic [ref=e459]:
+              - text: Latest beta build 1.60.1.70338, October 10.
+              - link "Patch notes" [ref=e460] [cursor=pointer]:
+                - /url: /patch-notes
+  - contentinfo [ref=e461]:
+    - region "Support ForeverChanges" [ref=e462]:
+      - generic [ref=e463]:
+        - paragraph [ref=e464]:
+          - strong [ref=e465]: ForeverChanges has no ads
+          - generic [ref=e466]: I make it on my own, and I want it to stay free. If it's useful to you, a donation helps pay for hosting and the time it takes to keep it up to date.
+          - button "Tell me what to improve" [ref=e467] [cursor=pointer]
+        - generic [ref=e468]:
+          - button "Poke the goblin" [ref=e469] [cursor=pointer]:
+            - generic [aria-hidden]: PPC for the little content creator!
+          - link "Support the site" [ref=e470] [cursor=pointer]:
+            - /url: https://ko-fi.com/bartolomew
+    - navigation "Site pages" [ref=e476]:
+      - generic [ref=e477]:
+        - heading "Classes" [level=2] [ref=e478]
+        - list [ref=e479]:
+          - listitem [ref=e480]:
+            - link "Warrior" [ref=e481] [cursor=pointer]:
+              - /url: /class/warrior
+          - listitem [ref=e482]:
+            - link "Paladin" [ref=e483] [cursor=pointer]:
+              - /url: /class/paladin
+          - listitem [ref=e484]:
+            - link "Hunter" [ref=e485] [cursor=pointer]:
+              - /url: /class/hunter
+          - listitem [ref=e486]:
+            - link "Rogue" [ref=e487] [cursor=pointer]:
+              - /url: /class/rogue
+          - listitem [ref=e488]:
+            - link "Priest" [ref=e489] [cursor=pointer]:
+              - /url: /class/priest
+          - listitem [ref=e490]:
+            - link "Shaman" [ref=e491] [cursor=pointer]:
+              - /url: /class/shaman
+          - listitem [ref=e492]:
+            - link "Mage" [ref=e493] [cursor=pointer]:
+              - /url: /class/mage
+          - listitem [ref=e494]:
+            - link "Warlock" [ref=e495] [cursor=pointer]:
+              - /url: /class/warlock
+          - listitem [ref=e496]:
+            - link "Druid" [ref=e497] [cursor=pointer]:
+              - /url: /class/druid
+      - generic [ref=e498]:
+        - heading "Character" [level=2] [ref=e499]
+        - list [ref=e500]:
+          - listitem [ref=e501]:
+            - link "Talent calculator" [ref=e502] [cursor=pointer]:
+              - /url: /talents
+          - listitem [ref=e503]:
+            - link "Spellbook" [ref=e504] [cursor=pointer]:
+              - /url: /spellbook/warrior
+          - listitem [ref=e505]:
+            - link "Legacy perks" [ref=e506] [cursor=pointer]:
+              - /url: /legacy-perks
+          - listitem [ref=e507]:
+            - link "Races" [ref=e508] [cursor=pointer]:
+              - /url: /racials
+          - listitem [ref=e509]:
+            - link "Professions" [ref=e510] [cursor=pointer]:
+              - /url: /professions
+          - listitem [ref=e511]:
+            - link "Downrank calculator" [ref=e512] [cursor=pointer]:
+              - /url: /downrank-calculator
+          - listitem [ref=e513]:
+            - link "Tier list maker" [ref=e514] [cursor=pointer]:
+              - /url: /tier-list
+      - generic [ref=e515]:
+        - heading "Gear" [level=2] [ref=e516]
+        - list [ref=e517]:
+          - listitem [ref=e518]:
+            - link "BiS list" [ref=e519] [cursor=pointer]:
+              - /url: /bis
+          - listitem [ref=e520]:
+            - link "Items" [ref=e521] [cursor=pointer]:
+              - /url: /items
+          - listitem [ref=e522]:
+            - link "Hidden items" [ref=e523] [cursor=pointer]:
+              - /url: /hidden-items
+          - listitem [ref=e524]:
+            - link "Transmog" [ref=e525] [cursor=pointer]:
+              - /url: /transmog
+      - generic [ref=e526]:
+        - heading "World" [level=2] [ref=e527]
+        - list [ref=e528]:
+          - listitem [ref=e529]:
+            - link "World map" [ref=e530] [cursor=pointer]:
+              - /url: /map
+          - listitem [ref=e531]:
+            - link "Dungeons" [ref=e532] [cursor=pointer]:
+              - /url: /dungeons
+          - listitem [ref=e533]:
+            - link "Quests" [ref=e534] [cursor=pointer]:
+              - /url: /quests
+          - listitem [ref=e535]:
+            - link "Dungeon quests" [ref=e536] [cursor=pointer]:
+              - /url: /dungeon-quests
+          - listitem [ref=e537]:
+            - link "Rare spawns" [ref=e538] [cursor=pointer]:
+              - /url: /rares
+          - listitem [ref=e539]:
+            - link "Library books" [ref=e540] [cursor=pointer]:
+              - /url: /library-books
+      - generic [ref=e541]:
+        - heading "Guides" [level=2] [ref=e542]
+        - list [ref=e543]:
+          - listitem [ref=e544]:
+            - link "Tanning Rack" [ref=e545] [cursor=pointer]:
+              - /url: /tanning-rack
+          - listitem [ref=e546]:
+            - link "PvP ranks" [ref=e547] [cursor=pointer]:
+              - /url: /pvp-ranks
+          - listitem [ref=e548]:
+            - link "Downranking" [ref=e549] [cursor=pointer]:
+              - /url: /downranking
+          - listitem [ref=e550]:
+            - link "Booty Bay Bruiser's Buckshot" [ref=e551] [cursor=pointer]:
+              - /url: /booty-bay-bruisers-buckshot
+          - listitem [ref=e552]:
+            - link "Scarlet Banner" [ref=e553] [cursor=pointer]:
+              - /url: /scarlet-banner
+          - listitem [ref=e554]:
+            - link "$100,000 duel tournament" [ref=e555] [cursor=pointer]:
+              - /url: /duel-tournament
+          - listitem [ref=e556]:
+            - link "Level 30" [ref=e557] [cursor=pointer]:
+              - /url: /level-30
+          - listitem [ref=e558]:
+            - link "Druid Cat Form quest" [ref=e559] [cursor=pointer]:
+              - /url: /druid-cat-form
+          - listitem [ref=e560]:
+            - link "Addons" [ref=e561] [cursor=pointer]:
+              - /url: /addons
+          - listitem [ref=e562]:
+            - link "Savory Whimsyfin Delight" [ref=e563] [cursor=pointer]:
+              - /url: /savory-whimsyfin-delight
+          - listitem [ref=e564]:
+            - link "Druid snake form" [ref=e565] [cursor=pointer]:
+              - /url: /druid-snake-form
+          - listitem [ref=e566]:
+            - link "Battle mage" [ref=e567] [cursor=pointer]:
+              - /url: /battle-mage
+          - listitem [ref=e568]:
+            - link "Cozy Sleeping Bag" [ref=e569] [cursor=pointer]:
+              - /url: /cozy-sleeping-bag
+          - listitem [ref=e570]:
+            - link "Merchant's Favor" [ref=e571] [cursor=pointer]:
+              - /url: /merchants-favor
+          - listitem [ref=e572]:
+            - link "Hunter pets" [ref=e573] [cursor=pointer]:
+              - /url: /hunter-pets
+      - generic [ref=e574]:
+        - heading "Beta" [level=2] [ref=e575]
+        - list [ref=e576]:
+          - listitem [ref=e577]:
+            - link "Patch notes" [ref=e578] [cursor=pointer]:
+              - /url: /patch-notes
+          - listitem [ref=e579]:
+            - link "Changes vs Classic" [ref=e580] [cursor=pointer]:
+              - /url: /changes
+          - listitem [ref=e581]:
+            - link "Beta and launch dates" [ref=e582] [cursor=pointer]:
+              - /url: /beta
+          - listitem [ref=e583]:
+            - link "Server status" [ref=e584] [cursor=pointer]:
+              - /url: /server-status
+      - generic [ref=e585]:
+        - heading "Language" [level=2] [ref=e586]
+        - list [ref=e591]:
+          - listitem [ref=e592]:
+            - generic [ref=e593]: English
+          - listitem [ref=e596]:
+            - link "Français" [ref=e597] [cursor=pointer]:
+              - /url: /fr
+          - listitem [ref=e598]:
+            - link "Deutsch" [ref=e599] [cursor=pointer]:
+              - /url: /de
+          - listitem [ref=e600]:
+            - link "繁體中文" [ref=e601] [cursor=pointer]:
+              - /url: /zh-tw
+          - listitem [ref=e602]:
+            - link "简体中文" [ref=e603] [cursor=pointer]:
+              - /url: /zh-cn
+          - listitem [ref=e604]:
+            - link "Русский" [ref=e605] [cursor=pointer]:
+              - /url: /ru
+    - generic [ref=e606]:
+      - paragraph [ref=e607]: ForeverChanges is an unofficial fan site, not affiliated with or endorsed by Blizzard Entertainment. World of Warcraft and Warcraft are trademarks or registered trademarks of Blizzard Entertainment, Inc. in the U.S. and/or other countries. Game content and images © Blizzard Entertainment, Inc.
+      - navigation "Legal" [ref=e609]:
+        - link "About the data" [ref=e610] [cursor=pointer]:
+          - /url: /about
+        - link "Privacy" [ref=e611] [cursor=pointer]:
+          - /url: /privacy
+        - link "Terms" [ref=e612] [cursor=pointer]:
+          - /url: /terms
+        - link "Legal notice" [ref=e613] [cursor=pointer]:
+          - /url: /legal

@@ -17,5 +17,8 @@
     "codex"
   ],
   "author": "Marcus Owens",
-  "license": "UNLICENSED"
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "playwright": "^1.64.0"
+  }
 }

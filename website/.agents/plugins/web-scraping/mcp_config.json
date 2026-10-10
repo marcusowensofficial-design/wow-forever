@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "playwright": {
+      "command": "npx",
+      "args": ["-y", "@playwright/mcp", "--headless"]
+    },
+    "firecrawl": {
+      "command": "npx",
+      "args": ["-y", "firecrawl-mcp"],
+      "env": {
+        "FIRECRAWL_API_KEY": "fc-3266bc9c2a634b3396d82b18ba4192bd"
+      }
+    }
+  }
+}

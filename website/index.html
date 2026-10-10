@@ -110,6 +110,9 @@
         <button class="nav-tab-btn" data-tab="codex">
           <span>📜</span> Content Codex
         </button>
+        <button class="nav-tab-btn" data-tab="atlas">
+          <span>🗺️</span> World Atlas &amp; Rares
+        </button>
         <button class="nav-tab-btn" data-tab="tierlist">
           <span>📊</span> Tier List Maker
         </button>
@@ -1085,7 +1088,176 @@
       </div>
 
     </section>
- 
+
+    <!-- TAB: WORLD ATLAS & RARES -->
+    <section id="tab-atlas" class="tab-content" aria-label="World Atlas and Rares">
+      <div class="section-heading-bar">
+        <div>
+          <h2><span>🗺️</span> World Atlas, Rares &amp; Honor Hub</h2>
+          <p class="section-subtext">34 Datamined World Rares with 1-click /target macros, 40 Hidden Library Books tracker with milestone rewards, and PvP Honor Rank progression schedule</p>
+        </div>
+      </div>
+
+      <!-- Atlas Sub-Navigation -->
+      <div class="atlas-subnav-container">
+        <div class="atlas-subnav-bar" role="tablist" aria-label="Atlas Views">
+          <button class="atlas-subnav-btn active" data-subtab="rares">
+            <span>💀</span> 34 World Rares
+          </button>
+          <button class="atlas-subnav-btn" data-subtab="books">
+            <span>📖</span> 40 Library Books
+          </button>
+          <button class="atlas-subnav-btn" data-subtab="pvp">
+            <span>⚔️</span> PvP Honor System
+          </button>
+        </div>
+      </div>
+
+      <!-- Subtab 1: World Rares -->
+      <div id="atlas-subtab-rares" class="atlas-subtab-panel active">
+        <div class="atlas-toolbar">
+          <div class="atlas-search-box">
+            <span class="atlas-search-icon">🔍</span>
+            <input type="text" id="atlas-rare-search" class="atlas-input" placeholder="Search rare name, zone, or drop..." autocomplete="off">
+          </div>
+          <div class="atlas-filter-pills" id="atlas-zone-filters">
+            <button class="atlas-pill active" data-zone="all">All Zones (<span id="rares-count-all">34</span>)</button>
+            <button class="atlas-pill" data-zone="The Barrens">The Barrens</button>
+            <button class="atlas-pill" data-zone="Silverpine Forest">Silverpine Forest</button>
+            <button class="atlas-pill" data-zone="Westfall">Westfall</button>
+            <button class="atlas-pill" data-zone="Loch Modan">Loch Modan</button>
+            <button class="atlas-pill" data-zone="Darkshore">Darkshore</button>
+            <button class="atlas-pill" data-zone="Redridge Mountains">Redridge</button>
+            <button class="atlas-pill" data-zone="Ashenvale">Ashenvale</button>
+            <button class="atlas-pill" data-zone="Stonetalon Mountains">Stonetalon</button>
+            <button class="atlas-pill" data-zone="Wetlands">Wetlands</button>
+            <button class="atlas-pill" data-zone="Duskwood">Duskwood</button>
+            <button class="atlas-pill" data-zone="Hillsbrad Foothills">Hillsbrad</button>
+            <button class="atlas-pill" data-zone="Thousand Needles">1k Needles</button>
+          </div>
+        </div>
+
+        <div class="atlas-alert-banner">
+          <span class="banner-badge">💡 PRO-TIP</span>
+          <span>Click any <strong>📋 Copy /target Macro</strong> button to immediately copy a calibrated spawn macro to your clipboard for instant targeting in-game.</span>
+        </div>
+
+        <div id="atlas-rares-grid" class="atlas-rares-grid">
+          <!-- Rendered dynamically by js/modules/atlas.js -->
+        </div>
+      </div>
+
+      <!-- Subtab 2: Hidden Library Books -->
+      <div id="atlas-subtab-books" class="atlas-subtab-panel" hidden>
+        <div class="atlas-toolbar">
+          <div class="atlas-search-box">
+            <span class="atlas-search-icon">🔍</span>
+            <input type="text" id="atlas-book-search" class="atlas-input" placeholder="Search book title, zone, or coords..." autocomplete="off">
+          </div>
+          <div class="atlas-filter-pills" id="atlas-book-filters">
+            <button class="atlas-pill active" data-bfilter="all">All Books (40)</button>
+            <button class="atlas-pill" data-bfilter="uncollected">Uncollected</button>
+            <button class="atlas-pill" data-bfilter="collected">Collected</button>
+          </div>
+        </div>
+
+        <!-- Progress Tracker Bar -->
+        <div class="books-tracker-card">
+          <div class="books-tracker-header">
+            <div>
+              <h3>📚 Library Collection Progress</h3>
+              <p>Find hidden tomes across Azeroth. Collect books to earn exclusive cosmetic and powerful milestone rewards.</p>
+            </div>
+            <div class="books-stat-badge">
+              <span id="books-collected-count">0</span> / 40 Collected (<span id="books-collected-pct">0%</span>)
+            </div>
+          </div>
+          <div class="books-progress-track">
+            <div id="books-progress-fill" class="books-progress-fill" style="width: 0%;"></div>
+          </div>
+          <div class="books-milestones-row">
+            <div class="milestone-chip" data-req="10">
+              <span class="ms-icon">🎖️</span>
+              <div class="ms-info">
+                <strong>10 Books:</strong>
+                <span>Necklace: Tomebound Locket</span>
+              </div>
+            </div>
+            <div class="milestone-chip" data-req="20">
+              <span class="ms-icon">💍</span>
+              <div class="ms-info">
+                <strong>20 Books:</strong>
+                <span>Ring: Band of the Chronicler</span>
+              </div>
+            </div>
+            <div class="milestone-chip" data-req="25">
+              <span class="ms-icon">🏹</span>
+              <div class="ms-info">
+                <strong>25 Books:</strong>
+                <span>Epic Bow: Scribe's Whisper</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="atlas-books-list" class="atlas-books-list">
+          <!-- Rendered dynamically by js/modules/atlas.js -->
+        </div>
+      </div>
+
+      <!-- Subtab 3: PvP Honor System -->
+      <div id="atlas-subtab-pvp" class="atlas-subtab-panel" hidden>
+        <div class="pvp-overview-card">
+          <div class="pvp-overview-header">
+            <div>
+              <h3>⚔️ Vanilla Honor System &amp; Rank Progression</h3>
+              <p>14 Rank military ladder with calibrated Rank Points (RP), weekly decays, title unlocks, and Level 30 Beta caps.</p>
+            </div>
+            <div class="pvp-status-tag">
+              <span>Beta Cap: Rank 3 (Sergeant / SF)</span>
+            </div>
+          </div>
+          <div class="pvp-calc-notes">
+            <div class="pvp-note-item">
+              <strong>Weekly Decay:</strong> 20% of previous RP decayed at Tuesday server reset.
+            </div>
+            <div class="pvp-note-item">
+              <strong>Level 30 Cap:</strong> Maximum achievable rank in Phase 1 is Rank 3. Ranks 4-14 unlock at Level 40/50/60 caps.
+            </div>
+            <div class="pvp-note-item">
+              <strong>Dishonorable Kills:</strong> Immediately deducts RP rating. Civilians must be spared.
+            </div>
+          </div>
+        </div>
+
+        <div class="pvp-ranks-table-wrapper">
+          <table class="pvp-ranks-table">
+            <thead>
+              <tr>
+                <th>Rank</th>
+                <th>Alliance Title</th>
+                <th>Horde Title</th>
+                <th>RP Required</th>
+                <th>Level Req</th>
+                <th>Rewards &amp; Unlocks</th>
+              </tr>
+            </thead>
+            <tbody id="pvp-ranks-tbody">
+              <!-- Rendered dynamically by js/modules/atlas.js -->
+            </tbody>
+          </table>
+        </div>
+
+        <div class="pvp-sets-section">
+          <h3 style="color: #fff; margin: 1.5rem 0 0.75rem;">🛡️ Phase-Gated PvP Armor Sets</h3>
+          <p style="color: var(--text-muted); font-size: 0.88rem; margin-bottom: 1rem;">Complete faction armor sets available at PvP Officers upon achieving designated honor ranks.</p>
+          <div id="pvp-sets-grid" class="pvp-sets-grid">
+            <!-- Rendered dynamically by js/modules/atlas.js -->
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- TAB 4: DEDICATED CLASS & RACE PLANNER -->
     <section id="tab-planner" class="tab-content" aria-label="Class and Race Planner">
       <div class="section-heading-bar">
@@ -2668,6 +2840,7 @@
   <script src="js/data/core-data.js?v=1.60.6-p3"></script>
   <script src="js/data/races-classes.js?v=1.60.6-p3"></script>
   <script src="js/data/tools-data.js?v=1.60.6-p3"></script>
+  <script src="js/data/atlas-data.js?v=1.60.6-p3"></script>
   <script src="js/data/bis-data.js?v=1.60.6-p3"></script>
   <script src="js/data/talents-data.js?v=1.60.6-p3"></script>
   <script src="js/data/deepdives/hunter.js?v=1.60.6-p3"></script>
@@ -2694,6 +2867,7 @@
   <script src="js/modules/bis.js?v=1.60.6-p3"></script>
   <script src="js/modules/hiddenitems.js?v=1.60.6-p3"></script>
   <script src="js/modules/guides.js?v=1.60.6-p3"></script>
+  <script src="js/modules/atlas.js?v=1.60.6-p3"></script>
   <script src="js/modules/search.js?v=1.60.6-p3"></script>
 
   <!-- 3. Core App Orchestrator & Tracker -->

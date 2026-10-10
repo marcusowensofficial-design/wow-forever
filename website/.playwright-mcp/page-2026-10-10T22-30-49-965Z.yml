@@ -1,0 +1,573 @@
+- generic [active] [ref=f13e1]:
+  - text: ": : :"
+  - main [ref=f13e2]:
+    - generic [ref=f13e3]:
+      - generic [ref=f13e4]:
+        - generic [ref=f13e5]:
+          - generic [ref=f13e6]:
+            - button "Pull the murloc camp" [ref=f13e7] [cursor=pointer]
+            - generic [ref=f13e8]:
+              - generic [ref=f13e9]: Online now
+              - generic [ref=f13e10]: 2,340
+              - generic [ref=f13e11]: murlocs
+          - link "ForeverChanges home" [ref=f13e12] [cursor=pointer]:
+            - /url: /
+            - img "ForeverChanges" [ref=f13e13]
+          - link [ref=f13e15] [cursor=pointer]:
+            - /url: /patch-notes
+            - generic [ref=f13e16]:
+              - text: Updated
+              - generic [aria-hidden] [ref=f13e18]: ·
+            - text: Beta build 1.60.1.70338
+          - link "Launch in 25 days 0 hours 29 minutes" [ref=f13e19] [cursor=pointer]:
+            - /url: /beta
+            - generic [ref=f13e20]: Launch in
+            - generic [aria-hidden] [ref=f13e21]:
+              - generic [ref=f13e22]:
+                - generic [ref=f13e23]: "25"
+                - generic [ref=f13e24]: days
+              - generic [ref=f13e25]:
+                - text: ":"
+                - generic [ref=f13e26]: "00"
+                - generic [ref=f13e27]: hrs
+              - generic [ref=f13e28]:
+                - text: ":"
+                - generic [ref=f13e29]: "29"
+                - generic [ref=f13e30]: min
+              - generic [ref=f13e31]:
+                - text: ":"
+                - generic [ref=f13e32]: "11"
+                - generic [ref=f13e33]: sec
+        - generic [ref=f13e34]:
+          - navigation "Main" [ref=f13e35]:
+            - link "Changes" [ref=f13e36] [cursor=pointer]:
+              - /url: /changes
+            - link "Talents , updated" [ref=f13e37] [cursor=pointer]:
+              - /url: /talents/warrior
+              - text: Talents
+              - generic:
+                - generic [aria-hidden]: Updated on October 8
+                - generic [ref=f13e39]: ", updated"
+            - link "Spellbook , updated" [ref=f13e40] [cursor=pointer]:
+              - /url: /spellbook/warrior
+              - text: Spellbook
+              - generic:
+                - generic [aria-hidden]: Updated on October 8
+                - generic [ref=f13e42]: ", updated"
+            - link "Legacy" [ref=f13e43] [cursor=pointer]:
+              - /url: /legacy-perks
+            - link "Professions" [ref=f13e44] [cursor=pointer]:
+              - /url: /professions
+            - link "Races" [ref=f13e45] [cursor=pointer]:
+              - /url: /racials
+            - link "Dungeons" [ref=f13e46] [cursor=pointer]:
+              - /url: /dungeons
+            - link "Items , updated" [ref=f13e47] [cursor=pointer]:
+              - /url: /items
+              - text: Items
+              - generic:
+                - generic [aria-hidden]: 331 items changed on October 8
+                - generic [ref=f13e49]: ", updated"
+            - link "Quests" [ref=f13e50] [cursor=pointer]:
+              - /url: /quests
+            - link "BiS list , updated" [ref=f13e51] [cursor=pointer]:
+              - /url: /bis
+              - text: BiS list
+              - generic:
+                - generic [aria-hidden]: Up to date with the latest build
+                - generic [ref=f13e53]: ", updated"
+            - link "World map" [ref=f13e54] [cursor=pointer]:
+              - /url: /map
+            - link "Guides" [ref=f13e55] [cursor=pointer]:
+              - /url: /guides
+            - link "Patch notes" [ref=f13e56] [cursor=pointer]:
+              - /url: /patch-notes
+          - button "Search" [ref=f13e58] [cursor=pointer]:
+            - generic [aria-hidden]: Search /
+      - generic [ref=f13e60]:
+        - complementary "Map controls" [ref=f13e61]:
+          - search [ref=f13e62]:
+            - textbox "Search this map and the others" [ref=f13e63]:
+              - /placeholder: Zone, town or dungeon
+            - generic [aria-hidden]: /
+          - generic [ref=f13e64]:
+            - generic [ref=f13e65]: Map
+            - button "Map" [ref=f13e67] [cursor=pointer]:
+              - generic [ref=f13e68]: Azeroth
+            - button "All 48 maps" [ref=f13e70] [cursor=pointer]
+          - generic [ref=f13e71]:
+            - generic [ref=f13e72]: Map style
+            - radiogroup "Map style" [ref=f13e73]:
+              - radio "Satellite The world seen from above" [checked] [ref=f13e74] [cursor=pointer]:
+                - strong [ref=f13e75]: Satellite
+                - generic [ref=f13e76]: The world seen from above
+              - radio "In-game map The map you open with M" [ref=f13e77] [cursor=pointer]:
+                - strong [ref=f13e78]: In-game map
+                - generic [ref=f13e79]: The map you open with M
+          - paragraph [ref=f13e80]: Read from the Forever beta client, build 1.60.1.70245.
+        - generic [ref=f13e81]:
+          - toolbar "Map view":
+            - generic [ref=f13e82]:
+              - button "Zone text" [ref=f13e84] [cursor=pointer]
+              - button "Zoom in" [ref=f13e87] [cursor=pointer]
+              - button "Zoom out" [ref=f13e90] [cursor=pointer]
+              - button "Show the entire map" [ref=f13e92] [cursor=pointer]
+              - button "Fullscreen" [ref=f13e95] [cursor=pointer]
+              - button "Share this view" [ref=f13e98] [cursor=pointer]:
+                - generic [ref=f13e101]: Share view
+          - generic "Map of Azeroth" [ref=f13e102]
+          - generic:
+            - button "View in 3D" [ref=f13e103] [cursor=pointer]
+            - generic [ref=f13e105]: Click a zone for its levels and size. Right-click anywhere for coordinates.
+            - group "Map before and after" [ref=f13e107]:
+              - button "Classic" [ref=f13e108] [cursor=pointer]
+              - button "Forever" [pressed] [ref=f13e109]
+      - generic [ref=f13e110]:
+        - generic [ref=f13e111]:
+          - heading "WoW Forever world map" [level=1] [ref=f13e112]
+          - paragraph [ref=f13e113]: "An interactive world map of WoW Forever made from the beta client's own files, flat or as 3D terrain: the two continents, Zephras Isle, Dalaran City and the dungeons. Type your level to see which zones fit, and find dungeon entrances, flight masters, boats, inns and graveyards."
+          - generic [ref=f13e114]:
+            - heading "How to get to the new zones" [level=2] [ref=f13e115]
+            - generic [ref=f13e116]:
+              - article [ref=f13e117]:
+                - heading "Riverglades 36–44" [level=3] [ref=f13e118]:
+                  - link "Riverglades" [ref=f13e119] [cursor=pointer]:
+                    - /url: /map/eastern-kingdoms/riverglades
+                  - generic [ref=f13e120]: 36–44
+                - paragraph [ref=f13e121]: By boat from Steamwheedle Port in Tanaris to Powderfuse Port. Horde flies to Rog'mar from Stonard, Kargath, Flame Crest or Hammerfall. Alliance flies to Farholde Keep from Lakeshire, Morgan's Vigil or Thelsamar. On foot, Blizzard says the zone connects to Burning Steppes, Redridge Mountains, Swamp of Sorrows and Badlands.
+              - article [ref=f13e122]:
+                - heading [level=3] [ref=f13e123]:
+                  - link "Mount Hyjal" [ref=f13e124] [cursor=pointer]:
+                    - /url: /map/kalimdor/mount-hyjal
+                - paragraph [ref=f13e125]: Both factions fly to Tainted Foothills from Everlook in Winterspring. That is the only flight path into the zone in the client, which gives Hyjal no level range yet.
+              - article [ref=f13e126]:
+                - heading [level=3] [ref=f13e127]:
+                  - link "Shen'dralas" [ref=f13e128] [cursor=pointer]:
+                    - /url: /map/kalimdor/shendralas
+                - paragraph [ref=f13e129]: A small zone north of Dire Maul, where Desolace, Feralas and Mulgore meet. The client gives it no flight master and no level range yet.
+              - article [ref=f13e130]:
+                - heading "Zephras Isle 1–12" [level=3] [ref=f13e131]:
+                  - link "Zephras Isle" [ref=f13e132] [cursor=pointer]:
+                    - /url: /map/zephras-isle
+                  - generic [ref=f13e133]: 1–12
+                - paragraph [ref=f13e134]: The Skyborne starting zone, shared by both factions. It has a map of its own. The Alliance skyship leaves from Dalaran, the Horde one from Skywatcher Plateau, north of Thunder Bluff.
+          - generic [ref=f13e135]:
+            - heading "Eastern Kingdoms zone levels" [level=2] [ref=f13e136]
+            - paragraph [ref=f13e137]: The levels the beta client gives the places of each zone. Blizzard has not published ranges of its own.
+            - list [ref=f13e138]:
+              - listitem [ref=f13e139]:
+                - link "Dun Morogh" [ref=f13e140] [cursor=pointer]:
+                  - /url: /map/eastern-kingdoms/dun-morogh
+                - generic [ref=f13e141]: 4–12
+                - generic [ref=f13e142]: Alliance
+              - listitem [ref=f13e143]:
+                - link "Elwynn Forest" [ref=f13e144] [cursor=pointer]:
+                  - /url: /map/eastern-kingdoms/elwynn-forest
+                - generic [ref=f13e145]: 5–10
+                - generic [ref=f13e146]: Alliance
+              - listitem [ref=f13e147]:
+                - link "Tirisfal Glades" [ref=f13e148] [cursor=pointer]:
+                  - /url: /map/eastern-kingdoms/tirisfal-glades
+                - generic [ref=f13e149]: 5–12
+                - generic [ref=f13e150]: Horde
+              - listitem [ref=f13e151]:
+                - link "Westfall" [ref=f13e152] [cursor=pointer]:
+                  - /url: /map/eastern-kingdoms/westfall
+                - generic [ref=f13e153]: 9–18
+                - generic [ref=f13e154]: Alliance
+              - listitem [ref=f13e155]:
+                - link "Loch Modan" [ref=f13e156] [cursor=pointer]:
+                  - /url: /map/eastern-kingdoms/loch-modan
+                - generic [ref=f13e157]: 10–18
+                - generic [ref=f13e158]: Alliance
+              - listitem [ref=f13e159]:
+                - link "Silverpine Forest" [ref=f13e160] [cursor=pointer]:
+                  - /url: /map/eastern-kingdoms/silverpine-forest
+                - generic [ref=f13e161]: 10–20
+                - generic [ref=f13e162]: Horde
+              - listitem [ref=f13e163]:
+                - link "Redridge Mountains" [ref=f13e164] [cursor=pointer]:
+                  - /url: /map/eastern-kingdoms/redridge-mountains
+                - generic [ref=f13e165]: 15–25
+                - generic [ref=f13e166]: Contested
+              - listitem [ref=f13e167]:
+                - link "Duskwood" [ref=f13e168] [cursor=pointer]:
+                  - /url: /map/eastern-kingdoms/duskwood
+                - generic [ref=f13e169]: 19–30
+                - generic [ref=f13e170]: Contested
+              - listitem [ref=f13e171]:
+                - link "Hillsbrad Foothills" [ref=f13e172] [cursor=pointer]:
+                  - /url: /map/eastern-kingdoms/hillsbrad-foothills
+                - generic [ref=f13e173]: 20–31
+                - generic [ref=f13e174]: Contested
+              - listitem [ref=f13e175]:
+                - link "Wetlands" [ref=f13e176] [cursor=pointer]:
+                  - /url: /map/eastern-kingdoms/wetlands
+                - generic [ref=f13e177]: 20–30
+                - generic [ref=f13e178]: Contested
+              - listitem [ref=f13e179]:
+                - link "Alterac Mountains" [ref=f13e180] [cursor=pointer]:
+                  - /url: /map/eastern-kingdoms/alterac-mountains
+                - generic [ref=f13e181]: 27–39
+                - generic [ref=f13e182]: Contested
+              - listitem [ref=f13e183]:
+                - link "Arathi Highlands" [ref=f13e184] [cursor=pointer]:
+                  - /url: /map/eastern-kingdoms/arathi-highlands
+                - generic [ref=f13e185]: 30–40
+                - generic [ref=f13e186]: Contested
+              - listitem [ref=f13e187]:
+                - link "Stranglethorn Vale" [ref=f13e188] [cursor=pointer]:
+                  - /url: /map/eastern-kingdoms/stranglethorn-vale
+                - generic [ref=f13e189]: 30–44
+                - generic [ref=f13e190]: Contested
+              - listitem [ref=f13e191]:
+                - link "Badlands" [ref=f13e192] [cursor=pointer]:
+                  - /url: /map/eastern-kingdoms/badlands
+                - generic [ref=f13e193]: 36–45
+                - generic [ref=f13e194]: Contested
+              - listitem [ref=f13e195]:
+                - link "Riverglades" [ref=f13e196] [cursor=pointer]:
+                  - /url: /map/eastern-kingdoms/riverglades
+                - generic [ref=f13e197]: 36–44
+                - generic [ref=f13e198]: Contested
+              - listitem [ref=f13e199]:
+                - link "Swamp of Sorrows" [ref=f13e200] [cursor=pointer]:
+                  - /url: /map/eastern-kingdoms/swamp-of-sorrows
+                - generic [ref=f13e201]: 36–43
+                - generic [ref=f13e202]: Contested
+              - listitem [ref=f13e203]:
+                - link "The Hinterlands" [ref=f13e204] [cursor=pointer]:
+                  - /url: /map/eastern-kingdoms/the-hinterlands
+                - generic [ref=f13e205]: 41–49
+                - generic [ref=f13e206]: Contested
+              - listitem [ref=f13e207]:
+                - link "Searing Gorge" [ref=f13e208] [cursor=pointer]:
+                  - /url: /map/eastern-kingdoms/searing-gorge
+                - generic [ref=f13e209]: 43–48
+                - generic [ref=f13e210]: Contested
+              - listitem [ref=f13e211]:
+                - link "Blasted Lands" [ref=f13e212] [cursor=pointer]:
+                  - /url: /map/eastern-kingdoms/blasted-lands
+                - generic [ref=f13e213]: 46–55
+                - generic [ref=f13e214]: Contested
+              - listitem [ref=f13e215]:
+                - link "Western Plaguelands" [ref=f13e216] [cursor=pointer]:
+                  - /url: /map/eastern-kingdoms/western-plaguelands
+                - generic [ref=f13e217]: 46–57
+                - generic [ref=f13e218]: Contested
+              - listitem [ref=f13e219]:
+                - link "Burning Steppes" [ref=f13e220] [cursor=pointer]:
+                  - /url: /map/eastern-kingdoms/burning-steppes
+                - generic [ref=f13e221]: 50–59
+                - generic [ref=f13e222]: Contested
+              - listitem [ref=f13e223]:
+                - link "Deadwind Pass" [ref=f13e224] [cursor=pointer]:
+                  - /url: /map/eastern-kingdoms/deadwind-pass
+                - generic [ref=f13e225]: 50–60
+                - generic [ref=f13e226]: Contested
+              - listitem [ref=f13e227]:
+                - link "Eastern Plaguelands" [ref=f13e228] [cursor=pointer]:
+                  - /url: /map/eastern-kingdoms/eastern-plaguelands
+                - generic [ref=f13e229]: 54–59
+                - generic [ref=f13e230]: Contested
+          - generic [ref=f13e231]:
+            - heading "Kalimdor zone levels" [level=2] [ref=f13e232]
+            - paragraph [ref=f13e233]: The levels the beta client gives the places of each zone. Blizzard has not published ranges of its own.
+            - list [ref=f13e234]:
+              - listitem [ref=f13e235]:
+                - link "Durotar" [ref=f13e236] [cursor=pointer]:
+                  - /url: /map/kalimdor/durotar
+                - generic [ref=f13e237]: 5–10
+                - generic [ref=f13e238]: Horde
+              - listitem [ref=f13e239]:
+                - link "Mulgore" [ref=f13e240] [cursor=pointer]:
+                  - /url: /map/kalimdor/mulgore
+                - generic [ref=f13e241]: 5–10
+                - generic [ref=f13e242]: Horde
+              - listitem [ref=f13e243]:
+                - link "Teldrassil" [ref=f13e244] [cursor=pointer]:
+                  - /url: /map/kalimdor/teldrassil
+                - generic [ref=f13e245]: 5–11
+                - generic [ref=f13e246]: Alliance
+              - listitem [ref=f13e247]:
+                - link "The Barrens" [ref=f13e248] [cursor=pointer]:
+                  - /url: /map/kalimdor/the-barrens
+                - generic [ref=f13e249]: 10–25
+                - generic [ref=f13e250]: Horde
+              - listitem [ref=f13e251]:
+                - link "Darkshore" [ref=f13e252] [cursor=pointer]:
+                  - /url: /map/kalimdor/darkshore
+                - generic [ref=f13e253]: 11–19
+                - generic [ref=f13e254]: Alliance
+              - listitem [ref=f13e255]:
+                - link "Stonetalon Mountains" [ref=f13e256] [cursor=pointer]:
+                  - /url: /map/kalimdor/stonetalon-mountains
+                - generic [ref=f13e257]: 15–25
+                - generic [ref=f13e258]: Contested
+              - listitem [ref=f13e259]:
+                - link "Ashenvale" [ref=f13e260] [cursor=pointer]:
+                  - /url: /map/kalimdor/ashenvale
+                - generic [ref=f13e261]: 19–30
+                - generic [ref=f13e262]: Contested
+              - listitem [ref=f13e263]:
+                - link "Thousand Needles" [ref=f13e264] [cursor=pointer]:
+                  - /url: /map/kalimdor/thousand-needles
+                - generic [ref=f13e265]: 24–35
+                - generic [ref=f13e266]: Contested
+              - listitem [ref=f13e267]:
+                - link "Desolace" [ref=f13e268] [cursor=pointer]:
+                  - /url: /map/kalimdor/desolace
+                - generic [ref=f13e269]: 30–39
+                - generic [ref=f13e270]: Contested
+              - listitem [ref=f13e271]:
+                - link "Dustwallow Marsh" [ref=f13e272] [cursor=pointer]:
+                  - /url: /map/kalimdor/dustwallow-marsh
+                - generic [ref=f13e273]: 36–43
+                - generic [ref=f13e274]: Contested
+              - listitem [ref=f13e275]:
+                - link "Tanaris" [ref=f13e276] [cursor=pointer]:
+                  - /url: /map/kalimdor/tanaris
+                - generic [ref=f13e277]: 40–50
+                - generic [ref=f13e278]: Contested
+              - listitem [ref=f13e279]:
+                - link "Feralas" [ref=f13e280] [cursor=pointer]:
+                  - /url: /map/kalimdor/feralas
+                - generic [ref=f13e281]: 41–60
+                - generic [ref=f13e282]: Contested
+              - listitem [ref=f13e283]:
+                - link "Azshara" [ref=f13e284] [cursor=pointer]:
+                  - /url: /map/kalimdor/azshara
+                - generic [ref=f13e285]: 42–55
+                - generic [ref=f13e286]: Contested
+              - listitem [ref=f13e287]:
+                - link "Felwood" [ref=f13e288] [cursor=pointer]:
+                  - /url: /map/kalimdor/felwood
+                - generic [ref=f13e289]: 47–54
+                - generic [ref=f13e290]: Contested
+              - listitem [ref=f13e291]:
+                - link "Un'Goro Crater" [ref=f13e292] [cursor=pointer]:
+                  - /url: /map/kalimdor/ungoro-crater
+                - generic [ref=f13e293]: 48–55
+                - generic [ref=f13e294]: Contested
+              - listitem [ref=f13e295]:
+                - link "Silithus" [ref=f13e296] [cursor=pointer]:
+                  - /url: /map/kalimdor/silithus
+                - generic [ref=f13e297]: 55–59
+                - generic [ref=f13e298]: Contested
+              - listitem [ref=f13e299]:
+                - link "Winterspring" [ref=f13e300] [cursor=pointer]:
+                  - /url: /map/kalimdor/winterspring
+                - generic [ref=f13e301]: 55–60
+                - generic [ref=f13e302]: Contested
+              - listitem [ref=f13e303]:
+                - link "Darnassus" [ref=f13e304] [cursor=pointer]:
+                  - /url: /map/kalimdor/darnassus
+                - generic [ref=f13e305]: Not set yet
+              - listitem [ref=f13e306]:
+                - link "Mount Hyjal" [ref=f13e307] [cursor=pointer]:
+                  - /url: /map/kalimdor/mount-hyjal
+                - generic [ref=f13e308]: Not set yet
+              - listitem [ref=f13e309]:
+                - link "Shen'dralas" [ref=f13e310] [cursor=pointer]:
+                  - /url: /map/kalimdor/shendralas
+                - generic [ref=f13e311]: Not set yet
+        - group [ref=f13e312]:
+          - generic "Every map in the WoW Forever beta client" [ref=f13e313] [cursor=pointer]
+  - contentinfo [ref=f13e314]:
+    - region "Support ForeverChanges" [ref=f13e315]:
+      - generic [ref=f13e316]:
+        - paragraph [ref=f13e317]:
+          - strong [ref=f13e318]: ForeverChanges has no ads
+          - generic [ref=f13e319]: I make it on my own, and I want it to stay free. If it's useful to you, a donation helps pay for hosting and the time it takes to keep it up to date.
+          - button "Tell me what to improve" [ref=f13e320] [cursor=pointer]
+        - generic [ref=f13e321]:
+          - button "Poke the goblin" [ref=f13e322] [cursor=pointer]:
+            - generic [aria-hidden]: PPC for the little content creator!
+          - link "Support the site" [ref=f13e323] [cursor=pointer]:
+            - /url: https://ko-fi.com/bartolomew
+    - navigation "Site pages" [ref=f13e329]:
+      - generic [ref=f13e330]:
+        - heading "Classes" [level=2] [ref=f13e331]
+        - list [ref=f13e332]:
+          - listitem [ref=f13e333]:
+            - link "Warrior" [ref=f13e334] [cursor=pointer]:
+              - /url: /class/warrior
+          - listitem [ref=f13e335]:
+            - link "Paladin" [ref=f13e336] [cursor=pointer]:
+              - /url: /class/paladin
+          - listitem [ref=f13e337]:
+            - link "Hunter" [ref=f13e338] [cursor=pointer]:
+              - /url: /class/hunter
+          - listitem [ref=f13e339]:
+            - link "Rogue" [ref=f13e340] [cursor=pointer]:
+              - /url: /class/rogue
+          - listitem [ref=f13e341]:
+            - link "Priest" [ref=f13e342] [cursor=pointer]:
+              - /url: /class/priest
+          - listitem [ref=f13e343]:
+            - link "Shaman" [ref=f13e344] [cursor=pointer]:
+              - /url: /class/shaman
+          - listitem [ref=f13e345]:
+            - link "Mage" [ref=f13e346] [cursor=pointer]:
+              - /url: /class/mage
+          - listitem [ref=f13e347]:
+            - link "Warlock" [ref=f13e348] [cursor=pointer]:
+              - /url: /class/warlock
+          - listitem [ref=f13e349]:
+            - link "Druid" [ref=f13e350] [cursor=pointer]:
+              - /url: /class/druid
+      - generic [ref=f13e351]:
+        - heading "Character" [level=2] [ref=f13e352]
+        - list [ref=f13e353]:
+          - listitem [ref=f13e354]:
+            - link "Talent calculator" [ref=f13e355] [cursor=pointer]:
+              - /url: /talents
+          - listitem [ref=f13e356]:
+            - link "Spellbook" [ref=f13e357] [cursor=pointer]:
+              - /url: /spellbook/warrior
+          - listitem [ref=f13e358]:
+            - link "Legacy perks" [ref=f13e359] [cursor=pointer]:
+              - /url: /legacy-perks
+          - listitem [ref=f13e360]:
+            - link "Races" [ref=f13e361] [cursor=pointer]:
+              - /url: /racials
+          - listitem [ref=f13e362]:
+            - link "Professions" [ref=f13e363] [cursor=pointer]:
+              - /url: /professions
+          - listitem [ref=f13e364]:
+            - link "Downrank calculator" [ref=f13e365] [cursor=pointer]:
+              - /url: /downrank-calculator
+          - listitem [ref=f13e366]:
+            - link "Tier list maker" [ref=f13e367] [cursor=pointer]:
+              - /url: /tier-list
+      - generic [ref=f13e368]:
+        - heading "Gear" [level=2] [ref=f13e369]
+        - list [ref=f13e370]:
+          - listitem [ref=f13e371]:
+            - link "BiS list" [ref=f13e372] [cursor=pointer]:
+              - /url: /bis
+          - listitem [ref=f13e373]:
+            - link "Items" [ref=f13e374] [cursor=pointer]:
+              - /url: /items
+          - listitem [ref=f13e375]:
+            - link "Hidden items" [ref=f13e376] [cursor=pointer]:
+              - /url: /hidden-items
+          - listitem [ref=f13e377]:
+            - link "Transmog" [ref=f13e378] [cursor=pointer]:
+              - /url: /transmog
+      - generic [ref=f13e379]:
+        - heading "World" [level=2] [ref=f13e380]
+        - list [ref=f13e381]:
+          - listitem [ref=f13e382]:
+            - link "World map" [ref=f13e383] [cursor=pointer]:
+              - /url: /map
+          - listitem [ref=f13e384]:
+            - link "Dungeons" [ref=f13e385] [cursor=pointer]:
+              - /url: /dungeons
+          - listitem [ref=f13e386]:
+            - link "Quests" [ref=f13e387] [cursor=pointer]:
+              - /url: /quests
+          - listitem [ref=f13e388]:
+            - link "Dungeon quests" [ref=f13e389] [cursor=pointer]:
+              - /url: /dungeon-quests
+          - listitem [ref=f13e390]:
+            - link "Rare spawns" [ref=f13e391] [cursor=pointer]:
+              - /url: /rares
+          - listitem [ref=f13e392]:
+            - link "Library books" [ref=f13e393] [cursor=pointer]:
+              - /url: /library-books
+      - generic [ref=f13e394]:
+        - heading "Guides" [level=2] [ref=f13e395]
+        - list [ref=f13e396]:
+          - listitem [ref=f13e397]:
+            - link "Tanning Rack" [ref=f13e398] [cursor=pointer]:
+              - /url: /tanning-rack
+          - listitem [ref=f13e399]:
+            - link "PvP ranks" [ref=f13e400] [cursor=pointer]:
+              - /url: /pvp-ranks
+          - listitem [ref=f13e401]:
+            - link "Downranking" [ref=f13e402] [cursor=pointer]:
+              - /url: /downranking
+          - listitem [ref=f13e403]:
+            - link "Booty Bay Bruiser's Buckshot" [ref=f13e404] [cursor=pointer]:
+              - /url: /booty-bay-bruisers-buckshot
+          - listitem [ref=f13e405]:
+            - link "Scarlet Banner" [ref=f13e406] [cursor=pointer]:
+              - /url: /scarlet-banner
+          - listitem [ref=f13e407]:
+            - link "$100,000 duel tournament" [ref=f13e408] [cursor=pointer]:
+              - /url: /duel-tournament
+          - listitem [ref=f13e409]:
+            - link "Level 30" [ref=f13e410] [cursor=pointer]:
+              - /url: /level-30
+          - listitem [ref=f13e411]:
+            - link "Druid Cat Form quest" [ref=f13e412] [cursor=pointer]:
+              - /url: /druid-cat-form
+          - listitem [ref=f13e413]:
+            - link "Addons" [ref=f13e414] [cursor=pointer]:
+              - /url: /addons
+          - listitem [ref=f13e415]:
+            - link "Savory Whimsyfin Delight" [ref=f13e416] [cursor=pointer]:
+              - /url: /savory-whimsyfin-delight
+          - listitem [ref=f13e417]:
+            - link "Druid snake form" [ref=f13e418] [cursor=pointer]:
+              - /url: /druid-snake-form
+          - listitem [ref=f13e419]:
+            - link "Battle mage" [ref=f13e420] [cursor=pointer]:
+              - /url: /battle-mage
+          - listitem [ref=f13e421]:
+            - link "Cozy Sleeping Bag" [ref=f13e422] [cursor=pointer]:
+              - /url: /cozy-sleeping-bag
+          - listitem [ref=f13e423]:
+            - link "Merchant's Favor" [ref=f13e424] [cursor=pointer]:
+              - /url: /merchants-favor
+          - listitem [ref=f13e425]:
+            - link "Hunter pets" [ref=f13e426] [cursor=pointer]:
+              - /url: /hunter-pets
+      - generic [ref=f13e427]:
+        - heading "Beta" [level=2] [ref=f13e428]
+        - list [ref=f13e429]:
+          - listitem [ref=f13e430]:
+            - link "Patch notes" [ref=f13e431] [cursor=pointer]:
+              - /url: /patch-notes
+          - listitem [ref=f13e432]:
+            - link "Changes vs Classic" [ref=f13e433] [cursor=pointer]:
+              - /url: /changes
+          - listitem [ref=f13e434]:
+            - link "Beta and launch dates" [ref=f13e435] [cursor=pointer]:
+              - /url: /beta
+          - listitem [ref=f13e436]:
+            - link "Server status" [ref=f13e437] [cursor=pointer]:
+              - /url: /server-status
+      - generic [ref=f13e438]:
+        - heading "Language" [level=2] [ref=f13e439]
+        - list [ref=f13e444]:
+          - listitem [ref=f13e445]:
+            - generic [ref=f13e446]: English
+          - listitem [ref=f13e449]:
+            - link "Français" [ref=f13e450] [cursor=pointer]:
+              - /url: /fr/map
+          - listitem [ref=f13e451]:
+            - link "Deutsch" [ref=f13e452] [cursor=pointer]:
+              - /url: /de/map
+          - listitem [ref=f13e453]:
+            - link "繁體中文" [ref=f13e454] [cursor=pointer]:
+              - /url: /zh-tw/map
+          - listitem [ref=f13e455]:
+            - link "简体中文" [ref=f13e456] [cursor=pointer]:
+              - /url: /zh-cn/map
+          - listitem [ref=f13e457]:
+            - link "Русский" [ref=f13e458] [cursor=pointer]:
+              - /url: /ru/map
+    - generic [ref=f13e459]:
+      - paragraph [ref=f13e460]: ForeverChanges is an unofficial fan site, not affiliated with or endorsed by Blizzard Entertainment. World of Warcraft and Warcraft are trademarks or registered trademarks of Blizzard Entertainment, Inc. in the U.S. and/or other countries. Game content and images © Blizzard Entertainment, Inc.
+      - navigation "Legal" [ref=f13e462]:
+        - link "About the data" [ref=f13e463] [cursor=pointer]:
+          - /url: /about
+        - link "Privacy" [ref=f13e464] [cursor=pointer]:
+          - /url: /privacy
+        - link "Terms" [ref=f13e465] [cursor=pointer]:
+          - /url: /terms
+        - link "Legal notice" [ref=f13e466] [cursor=pointer]:
+          - /url: /legal
+  - alert [ref=f13e467]

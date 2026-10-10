@@ -1,0 +1,506 @@
+{
+  "excavation-site": {
+    "id": "excavation-site",
+    "name": "Excavation Site: Wetlands",
+    "zone": "Wetlands (Above Whelgar's Excavation)",
+    "levelRange": "26–31",
+    "entrance": "In the cliffside cliffs overlooking Whelgar's Excavation Site in central Wetlands.",
+    "bosses": [
+      {
+        "name": "Saltspine",
+        "level": 28,
+        "portrait": "https://foreverchanges.pro/wow-ui/bosses/saltspine.webp",
+        "mechanics": "Roams the starting marsh among elite crocolisks. Clear trash thoroughly before engaging him. He hits hard with high base health.",
+        "abilities": [
+          {
+            "name": "Large Health Pool",
+            "role": "Tank",
+            "type": "Physical",
+            "desc": "Hits hard with high sustained melee swings. Tank keep defensive buffs active."
+          }
+        ],
+        "drops": [
+          {
+            "name": "Supple Bellyskin Leggings",
+            "slot": "Legs, Leather",
+            "dropRate": "35%",
+            "stats": "+6 Agi, +5 Sta"
+          },
+          {
+            "name": "Saltscale Girdle",
+            "slot": "Waist, Mail",
+            "dropRate": "35%",
+            "stats": "+5 Str, +4 Sta"
+          },
+          {
+            "name": "Glinteye Slippers",
+            "slot": "Feet, Cloth",
+            "dropRate": "30%",
+            "stats": "+5 Int, +4 Spi"
+          }
+        ]
+      },
+      {
+        "name": "Shadetooth",
+        "level": 29,
+        "portrait": "https://foreverchanges.pro/wow-ui/bosses/shadetooth.webp",
+        "mechanics": "Slay the raptor matriarch in the tall brush. A wave of raptor adds spawns upon her death; wipe out the wave quickly before Shadetooth charges in.",
+        "abilities": [
+          {
+            "name": "Raptors in the Grass",
+            "role": "DPS",
+            "type": "Physical",
+            "desc": "Small ambush raptors jump from foliage applying stacking bleed effects."
+          },
+          {
+            "name": "Wave of the Pack",
+            "role": "DPS",
+            "type": "Add Wave",
+            "desc": "Kill every raptor in the incoming pack before Shadetooth arrives to prevent overlap."
+          },
+          {
+            "name": "Primal Fear",
+            "role": "Healer / Tank",
+            "type": "Fear CC",
+            "desc": "Fears the tank repeatedly. Shamans should drop Tremor Totem; Priests use Fear Ward."
+          }
+        ],
+        "drops": [
+          {
+            "name": "Raptorclaw Greaves",
+            "slot": "Feet, Mail",
+            "dropRate": "33%",
+            "stats": "+7 Str, +6 Sta"
+          },
+          {
+            "name": "Garb of Florid Feathers",
+            "slot": "Chest, Leather",
+            "dropRate": "33%",
+            "stats": "+8 Agi, +6 Sta"
+          },
+          {
+            "name": "Raptor's Gaze",
+            "slot": "Held in Off-hand",
+            "dropRate": "28%",
+            "stats": "+6 Int, +5 Spi, +8 Spell Power"
+          },
+          {
+            "name": "Blueprint: Greenhouse",
+            "slot": "Camping Book",
+            "dropRate": "6%",
+            "stats": "Teaches Greenhouse Camping Blueprint"
+          }
+        ]
+      },
+      {
+        "name": "Highland Horror",
+        "level": 30,
+        "portrait": "https://foreverchanges.pro/wow-ui/bosses/highland-horror.webp",
+        "mechanics": "Guards the Dragonmaw orc encampment. Pull the surrounding Dragonmaw orcs in small packs first, then engage the horror.",
+        "abilities": [
+          {
+            "name": "Dragonmaw Vanguard",
+            "role": "Tank",
+            "type": "Add Group",
+            "desc": "Pulls easily with nearby camp. Pull isolated packs to avoid overwhelming the tank."
+          }
+        ],
+        "drops": [
+          {
+            "name": "Horrible Rootcore",
+            "slot": "Quest Item",
+            "dropRate": "100%",
+            "stats": "Starts Horrors in the Highland quest for Rethiel the Greenwarden."
+          }
+        ]
+      },
+      {
+        "name": "Relic Guardian",
+        "level": 31,
+        "portrait": "https://foreverchanges.pro/wow-ui/bosses/relic-guardian.webp",
+        "mechanics": "Dormant at the end of the spider cavern. Click the ancient Titan console next to him to initiate the encounter.",
+        "abilities": [
+          {
+            "name": "Threat Protocol Reset",
+            "role": "Tank / DPS",
+            "type": "Threat Wipe",
+            "desc": "Drops all threat and snaps to highest DPS. Damage dealers throttle bursts; tank must taunt immediately."
+          }
+        ],
+        "drops": [
+          {
+            "name": "Reliquary Mantle",
+            "slot": "Shoulder, Mail",
+            "dropRate": "32%",
+            "stats": "+7 Str, +6 Sta"
+          },
+          {
+            "name": "Ring of Power Regulation",
+            "slot": "Finger",
+            "dropRate": "30%",
+            "stats": "+5 Int, +5 Sta, +7 Spell Power"
+          },
+          {
+            "name": "Golemsight Long Gun",
+            "slot": "Ranged, Gun",
+            "dropRate": "25%",
+            "stats": "14.8 DPS, +4 Agi, +3 Sta"
+          },
+          {
+            "name": "Titan Relic",
+            "slot": "Quest Item",
+            "dropRate": "100%",
+            "stats": "Starts Prehistoric Prism / Earthen Echo questlines."
+          }
+        ]
+      }
+    ],
+    "quests": [
+      {
+        "name": "Prehistoric Prism / Earthen Echo",
+        "faction": "Both",
+        "levelReq": 24,
+        "source": "Titan Relic (Relic Guardian)",
+        "xp": "6,150–6,950 XP",
+        "rewards": "Explorer's League Dustcover (Back) / Healer's Staff / Heavehammer (2H Mace) / Furs of the Earthen Ring"
+      },
+      {
+        "name": "Horrors in the Highland",
+        "faction": "Alliance",
+        "levelReq": 24,
+        "source": "Rethiel the Greenwarden (Wetlands 56.2, 40.5)",
+        "xp": "6,150 XP",
+        "rewards": "Ironwood Destroyer (2H Mace) / Curl of Life (Ring) / Hornbeam Heft (1H Axe)"
+      },
+      {
+        "name": "Changing Tastes",
+        "faction": "Horde",
+        "levelReq": 24,
+        "source": "Borstan (Orgrimmar 57.4, 53.4)",
+        "xp": "6,950 XP",
+        "rewards": "Serrated Raptor Claw (1H Dagger) / Recipe: Twice-Spiced Raptor Slice"
+      },
+      {
+        "name": "Dorin's Kin / Songblade Stabilizer",
+        "faction": "Alliance",
+        "levelReq": 24,
+        "source": "Body of Daewyn inside dungeon",
+        "xp": "6,150 XP",
+        "rewards": "Daewyn's Girdle (Cloth Waist) / Songblade Stabilizer (Mail Waist)"
+      }
+    ]
+  },
+  "city-of-dalaran": {
+    "id": "city-of-dalaran",
+    "name": "City of Dalaran",
+    "zone": "Alterac Mountains (Through Lordamere Lake Sewers)",
+    "levelRange": "28–33",
+    "entrance": "Sewer pipe entrance beneath Dalaran purple dome in Alterac Mountains. Key required (Dalaran Sewer Key).",
+    "bosses": [
+      {
+        "name": "Atrexis the Grave Knight",
+        "level": 29,
+        "portrait": "https://foreverchanges.pro/wow-ui/bosses/145787.webp",
+        "mechanics": "Stands inside the ritual summoning circle in the sewer underbelly, flanked by Kirin Tor Necromancers.",
+        "abilities": [
+          {
+            "name": "Unholy Frenzy",
+            "role": "Healer / Shaman / Priest",
+            "type": "Magic Dispel",
+            "desc": "+75% Attack Speed for 20 sec. Shaman Purge or Priest Dispel Magic immediately!"
+          },
+          {
+            "name": "Thrash",
+            "role": "Tank / Healer",
+            "type": "Burst Melee",
+            "desc": "Swings twice simultaneously; heavy incoming spike damage."
+          },
+          {
+            "name": "Raise Dead",
+            "role": "DPS",
+            "type": "Add Cleave",
+            "desc": "Skeletons rise continually around the circle. Cleave them down quickly."
+          },
+          {
+            "name": "Disarm",
+            "role": "Tank",
+            "type": "Debuff",
+            "desc": "Takes tank weapon away for 6 seconds; keep defensive mitigation rolling."
+          }
+        ],
+        "drops": [
+          {
+            "name": "Graveweave Bindings",
+            "slot": "Wrist, Cloth",
+            "dropRate": "35%",
+            "stats": "+5 Int, +4 Spi, +6 Spell Power"
+          },
+          {
+            "name": "Bonebinder's Signet",
+            "slot": "Finger",
+            "dropRate": "36%",
+            "stats": "+6 Sta, +5 Spi, +8 Healing"
+          },
+          {
+            "name": "Gravespike Repeater",
+            "slot": "Ranged, Crossbow",
+            "dropRate": "29%",
+            "stats": "16.4 DPS, +4 Agi, +3 Sta"
+          }
+        ]
+      },
+      {
+        "name": "Lyn the Ignored",
+        "level": 31,
+        "portrait": "https://foreverchanges.pro/wow-ui/bosses/lyn-the-ignored.webp",
+        "mechanics": "Secret summoning encounter: player with Tome of Dalaran clicks pink circle in northeast market stalls room.",
+        "abilities": [
+          {
+            "name": "Shadow Bolt Volley",
+            "role": "Healer",
+            "type": "AoE Shadow",
+            "desc": "Hits all party members within 30 yards. Healers prepare group heals."
+          },
+          {
+            "name": "Curse of Thorns",
+            "role": "Mage / Druid",
+            "type": "Curse Dispel",
+            "desc": "Damages attackers on hit. Decurse targets immediately."
+          }
+        ],
+        "drops": [
+          {
+            "name": "Cartilage Shapers",
+            "slot": "Hands, Leather",
+            "dropRate": "39%",
+            "stats": "+7 Agi, +6 Sta, +10 AP"
+          },
+          {
+            "name": "Tendonscraper Dagger",
+            "slot": "Main Hand, Dagger",
+            "dropRate": "19%",
+            "stats": "18.2 DPS, 1.60 Speed"
+          },
+          {
+            "name": "Bonepile Gaze",
+            "slot": "Off Hand, Shield",
+            "dropRate": "43%",
+            "stats": "Block 24, +6 Sta, +4 Str"
+          }
+        ]
+      },
+      {
+        "name": "Arcane Anomaly",
+        "level": 30,
+        "portrait": "https://foreverchanges.pro/wow-ui/bosses/arcane-anomaly.webp",
+        "mechanics": "Channels lethal directional beam and arcane bolts.",
+        "abilities": [
+          {
+            "name": "Focal Blast",
+            "role": "All Players",
+            "type": "Directional Beam",
+            "desc": "3s cast, channels a continuous beam hitting 4x per second. Step out of the path immediately!"
+          },
+          {
+            "name": "Arcane Bolt",
+            "role": "Tank",
+            "type": "Magic Nuke",
+            "desc": "Regular 1.5s cast dealing heavy arcane spike damage to the tank."
+          }
+        ],
+        "drops": [
+          {
+            "name": "Runemender's Seal",
+            "slot": "Finger",
+            "dropRate": "30%",
+            "stats": "+6 Int, +8 Spell Damage"
+          },
+          {
+            "name": "Ephemeral Grips",
+            "slot": "Hands, Cloth",
+            "dropRate": "39%",
+            "stats": "+7 Int, +5 Spi, +9 Spell Power"
+          },
+          {
+            "name": "Mana-Warped Chain Shirt",
+            "slot": "Chest, Mail",
+            "dropRate": "31%",
+            "stats": "+9 Str, +8 Sta, +6 Int"
+          }
+        ]
+      },
+      {
+        "name": "Arcanic Enigma",
+        "level": 30,
+        "portrait": "https://foreverchanges.pro/wow-ui/bosses/arcanic-enigma.webp",
+        "mechanics": "Polymorphs party members and silences spellcasters.",
+        "abilities": [
+          {
+            "name": "Manamorph",
+            "role": "Healer",
+            "type": "Magic Dispel",
+            "desc": "Polymorphs target into an animal for 8 sec. Dispel immediately."
+          },
+          {
+            "name": "Silence Wave",
+            "role": "Healers / Casters",
+            "type": "Silence",
+            "desc": "10-second silence aura. Healers must position beyond 20 yards."
+          },
+          {
+            "name": "Arcane Manalings",
+            "role": "DPS",
+            "type": "Adds",
+            "desc": "Summons manalings that must be burned down with AoE."
+          }
+        ],
+        "drops": [
+          {
+            "name": "Drape of Shifting Energy",
+            "slot": "Back, Cloth",
+            "dropRate": "31%",
+            "stats": "24 Armor, +5 Int, +7 Spell Power"
+          },
+          {
+            "name": "Violet Sorcerer's Robes",
+            "slot": "Chest, Cloth (Set)",
+            "dropRate": "39%",
+            "stats": "+10 Int, +7 Spi, +12 Spell Power"
+          },
+          {
+            "name": "Wand of Mana Concentration",
+            "slot": "Ranged, Wand",
+            "dropRate": "30%",
+            "stats": "32.1 DPS, +3 Int, +5 Spell Power"
+          }
+        ]
+      },
+      {
+        "name": "Unstable Sentinel",
+        "level": 31,
+        "portrait": "https://foreverchanges.pro/wow-ui/bosses/unstable-sentinel.webp",
+        "mechanics": "Ancient construct with lethal 25-yard pulsing AoE. Drops the Spinning Wheel blueprint!",
+        "abilities": [
+          {
+            "name": "Malfunction",
+            "role": "All Players",
+            "type": "Pulsing AoE",
+            "desc": "Channels 6s, pulsing 140 damage every 2s within 25 yards. Ranged stay back; melee back off during cast!"
+          }
+        ],
+        "drops": [
+          {
+            "name": "Guardian's Dualblade",
+            "slot": "2H Axe",
+            "dropRate": "35%",
+            "stats": "24.6 DPS, 3.40 Speed, +11 Str, +8 Sta"
+          },
+          {
+            "name": "Refractory Scaleguards",
+            "slot": "Legs, Mail",
+            "dropRate": "32%",
+            "stats": "+10 Str, +8 Sta"
+          },
+          {
+            "name": "Unstable Crystalline Shoulderpads",
+            "slot": "Shoulder, Leather",
+            "dropRate": "33%",
+            "stats": "+8 Agi, +7 Sta"
+          },
+          {
+            "name": "Blueprint: Spinning Wheel",
+            "slot": "Tailoring Recipe",
+            "dropRate": "8.4%",
+            "stats": "Teaches Spinning Wheel campsite station"
+          }
+        ]
+      },
+      {
+        "name": "Shade of the Archmage",
+        "level": 33,
+        "portrait": "https://foreverchanges.pro/wow-ui/bosses/shade-of-archmage.webp",
+        "mechanics": "Final boss of Dalaran inside the Violet Chamber. Mass polymorphs when out of mana and channels Evocation.",
+        "abilities": [
+          {
+            "name": "Bounding Mana",
+            "role": "All Players",
+            "type": "Silencing Orb",
+            "desc": "Mana orb flies between players and boss. Passing through it deals heavy arcane damage and silences for 6s!"
+          },
+          {
+            "name": "Mass Polymorph & Evocation",
+            "role": "Healer / All",
+            "type": "Phase Change",
+            "desc": "When mana reaches 0, transforms entire group into sheep for 8s while channeling Evocation."
+          },
+          {
+            "name": "Stay in the Room",
+            "role": "All",
+            "type": "Encounter Rule",
+            "desc": "Leaving the chamber resets the encounter to 100% health."
+          }
+        ],
+        "drops": [
+          {
+            "name": "Ponderous Orb",
+            "slot": "Held in Off-hand",
+            "dropRate": "26%",
+            "stats": "+8 Int, +6 Spi, +11 Spell Power"
+          },
+          {
+            "name": "Violet Sorcerer's Mantle",
+            "slot": "Shoulder, Cloth (Set)",
+            "dropRate": "35%",
+            "stats": "+8 Int, +6 Spi, +9 Spell Power"
+          },
+          {
+            "name": "Archmagister's Faceted Pendant",
+            "slot": "Neck",
+            "dropRate": "38%",
+            "stats": "+7 Int, +5 Sta, +8 Spell Power"
+          },
+          {
+            "name": "Blueprint: Arcane Salvager",
+            "slot": "Enchanting Recipe",
+            "dropRate": "7.5%",
+            "stats": "Teaches Arcane Salvager campfire tool"
+          }
+        ]
+      }
+    ],
+    "quests": [
+      {
+        "name": "Heart of Disruption",
+        "faction": "Both",
+        "levelReq": 24,
+        "source": "Image of Archmage Modera (Lordamere Lake) / Magus Wordeen (Tarren Mill)",
+        "xp": "9,400 XP",
+        "rewards": "Spellguard Pauldrons (Mail) / Renewing Footpads (Leather) / Defender of Dalaran (2H Mace) OR Battle Spaulders / Enchanted Sandals / Striking Staff"
+      },
+      {
+        "name": "The Grave Knight",
+        "faction": "Horde",
+        "levelReq": 24,
+        "source": "Melisara (Tarren Mill)",
+        "xp": "9,400 XP",
+        "rewards": "Gravewalker Boots (Leather) / Undead Knight's Bracers (Mail)"
+      },
+      {
+        "name": "Power Overwhelming",
+        "faction": "Alliance",
+        "levelReq": 24,
+        "source": "High Sorcerer Andromath (Stormwind City 48.7, 87.6)",
+        "xp": "9,400 XP",
+        "rewards": "Violet Sash (Cloth Waist) / Runebound Gloves (Leather)"
+      },
+      {
+        "name": "Source of Power",
+        "faction": "Horde",
+        "levelReq": 24,
+        "source": "Doctor Martin Felben (Undercity 46.6, 74.4)",
+        "xp": "9,400 XP",
+        "rewards": "Unstable Power Core (Wand) / Construct Cloak (Cloth Back)"
+      }
+    ]
+  }
+}

@@ -1,0 +1,2971 @@
+- generic [active] [ref=f9e1]:
+  - text: ": : :"
+  - main [ref=f9e2]:
+    - generic [ref=f9e3]:
+      - generic [ref=f9e4]:
+        - generic [ref=f9e5]:
+          - generic [ref=f9e6]:
+            - button "Pull the murloc camp" [ref=f9e7] [cursor=pointer]
+            - generic [ref=f9e8]:
+              - generic [ref=f9e9]: Online now
+              - generic [ref=f9e10]: 2,358
+              - generic [ref=f9e11]: murlocs
+          - link "ForeverChanges home" [ref=f9e12] [cursor=pointer]:
+            - /url: /
+            - img "ForeverChanges" [ref=f9e13]
+          - link [ref=f9e15] [cursor=pointer]:
+            - /url: /patch-notes
+            - generic [ref=f9e16]:
+              - text: Updated
+              - generic [aria-hidden] [ref=f9e18]: ·
+            - text: Beta build 1.60.1.70338
+          - link "Launch in" [ref=f9e19] [cursor=pointer]:
+            - /url: /beta
+            - generic [aria-hidden] [ref=f9e21]:
+              - generic [ref=f9e22]:
+                - generic [ref=f9e23]: "25"
+                - generic [ref=f9e24]: days
+              - generic [ref=f9e25]:
+                - text: ":"
+                - generic [ref=f9e26]: "00"
+                - generic [ref=f9e27]: hrs
+              - generic [ref=f9e28]:
+                - text: ":"
+                - generic [ref=f9e29]: "29"
+                - generic [ref=f9e30]: min
+              - generic [ref=f9e31]:
+                - text: ":"
+                - generic [ref=f9e32]: "59"
+                - generic [ref=f9e33]: sec
+        - generic [ref=f9e34]:
+          - navigation "Main" [ref=f9e35]:
+            - link "Changes" [ref=f9e36] [cursor=pointer]:
+              - /url: /changes
+            - link "Talents , updated" [ref=f9e37] [cursor=pointer]:
+              - /url: /talents/warrior
+              - text: Talents
+              - generic:
+                - generic [aria-hidden]: Updated on October 8
+                - generic [ref=f9e39]: ", updated"
+            - link "Spellbook , updated" [ref=f9e40] [cursor=pointer]:
+              - /url: /spellbook/warrior
+              - text: Spellbook
+              - generic:
+                - generic [aria-hidden]: Updated on October 8
+                - generic [ref=f9e42]: ", updated"
+            - link "Legacy" [ref=f9e43] [cursor=pointer]:
+              - /url: /legacy-perks
+            - link "Professions" [ref=f9e44] [cursor=pointer]:
+              - /url: /professions
+            - link "Races" [ref=f9e45] [cursor=pointer]:
+              - /url: /racials
+            - link "Dungeons , new" [ref=f9e46] [cursor=pointer]:
+              - /url: /dungeons
+              - text: Dungeons
+              - generic:
+                - generic [aria-hidden]: "New: the City of Dalaran"
+                - generic [ref=f9e48]: ", new"
+            - link "Items , updated" [ref=f9e49] [cursor=pointer]:
+              - /url: /items
+              - text: Items
+              - generic:
+                - generic [aria-hidden]: 331 items changed on October 8
+                - generic [ref=f9e51]: ", updated"
+            - link "Quests" [ref=f9e52] [cursor=pointer]:
+              - /url: /quests
+            - link "BiS list , updated" [ref=f9e53] [cursor=pointer]:
+              - /url: /bis
+              - text: BiS list
+              - generic:
+                - generic [aria-hidden]: Up to date with the latest build
+                - generic [ref=f9e55]: ", updated"
+            - link "World map" [ref=f9e56] [cursor=pointer]:
+              - /url: /map
+            - link "Guides" [ref=f9e57] [cursor=pointer]:
+              - /url: /guides
+            - link "Patch notes" [ref=f9e58] [cursor=pointer]:
+              - /url: /patch-notes
+          - button "Search" [ref=f9e60] [cursor=pointer]:
+            - generic [aria-hidden]: Search /
+      - generic [ref=f9e63]:
+        - generic [ref=f9e66]:
+          - generic [ref=f9e67]:
+            - link "Guides" [ref=f9e68] [cursor=pointer]:
+              - /url: /guides
+            - heading "Tanning Rack and Spinning Wheel WoW Forever beta" [level=1] [ref=f9e69]:
+              - text: Tanning Rack and Spinning Wheel
+              - generic [ref=f9e70]: WoW Forever beta
+            - paragraph [ref=f9e71]:
+              - text: You have the leather for a
+              - link "Defender's Leather Kilt" [ref=f9e72]:
+                - /url: /item/252457
+              - text: "and the recipe still won’t craft: it asks for a"
+              - link "Tanning Rack" [ref=f9e73]:
+                - /url: /item/279941
+              - text: . In Forever, 48 leatherworking recipes can only be made next to one, and 74 tailoring recipes next to a
+              - link "Spinning Wheel" [ref=f9e74]:
+                - /url: /item/279943
+              - text: ". You won’t find either in town: you set your own up at a campfire."
+            - paragraph [ref=f9e75]: "Three things to know before you start:"
+            - list [ref=f9e76]:
+              - listitem [ref=f9e77]:
+                - text: The Tanning Rack’s blueprint drops from Razorclaw the Butcher in
+                - link "Shadowfang Keep" [ref=f9e78] [cursor=pointer]:
+                  - /url: /dungeons/shadowfang-keep
+                - text: ", rarely, and the Spinning Wheel’s from the Unstable Sentinel in the"
+                - link "City of Dalaran" [ref=f9e79] [cursor=pointer]:
+                  - /url: /dungeons/city-of-dalaran
+                - text: .
+              - listitem [ref=f9e80]: A rack lasts 15 minutes and is used up when you place it. Have every reagent in your bags first.
+              - listitem [ref=f9e81]: No blueprint, or under 140 skill? Buy a Tanning Rack at the auction house and have a leatherworker with 140 skill place it. You craft next to it as at your own.
+            - paragraph [ref=f9e82]: By Vektor, updated October 8, 2026.
+          - generic [ref=f9e85]:
+            - generic [ref=f9e86]: Tanning Rack
+            - generic [ref=f9e87]: Item Level 28
+            - generic [ref=f9e88]: Other
+            - generic [ref=f9e89]: Requires Leatherworking (140)
+            - generic [ref=f9e90]: "Use: Places a Tanning Rack that allows the creation of certain reagents, and provides all of the benefits of a Camp Tent. Requires a Campfire nearby. May be placed over a Camp Tent to replace it. All camping features share a cooldown of 1 hr. (60 Min Cooldown)"
+        - navigation "Sections of this page" [ref=f9e91]:
+          - generic [ref=f9e92]:
+            - link "Setting up camp" [ref=f9e93] [cursor=pointer]:
+              - /url: "#camp"
+            - link "Tanning Rack" [ref=f9e95] [cursor=pointer]:
+              - /url: "#rack"
+            - link "Spinning Wheel" [ref=f9e97] [cursor=pointer]:
+              - /url: "#wheel"
+            - link "Every recipe 122" [ref=f9e99] [cursor=pointer]:
+              - /url: "#recipes"
+              - generic [ref=f9e100]: Every recipe
+              - generic [ref=f9e101]: "122"
+        - generic [ref=f9e102]:
+          - region [ref=f9e103]:
+            - heading "Setting up camp" [level=2] [ref=f9e105]
+            - list [ref=f9e106]:
+              - listitem [ref=f9e107]:
+                - generic [aria-hidden] [ref=f9e108]: "1"
+                - generic [ref=f9e109]:
+                  - heading "Light a campfire" [level=3] [ref=f9e110]
+                  - paragraph [ref=f9e111]:
+                    - text: A
+                    - link "Basic Campfire Kit" [ref=f9e112]:
+                      - /url: /item/279981
+                    - text: takes Cooking 1 and one
+                    - link "Simple Wood" [ref=f9e113]:
+                      - /url: /item/4470
+                    - text: . It holds 3 camp objects around it. The
+                    - link "Journeyman Campfire Kit" [ref=f9e114]:
+                      - /url: /item/279961
+                    - text: and the
+                    - link "Expert Campfire Kit" [ref=f9e115]:
+                      - /url: /item/279974
+                    - text: ", from blueprints, hold 5 and 10."
+              - listitem [ref=f9e116]:
+                - generic [aria-hidden] [ref=f9e117]: "2"
+                - generic [ref=f9e118]:
+                  - heading "Place the rack or the wheel by the fire" [level=3] [ref=f9e119]
+                  - paragraph [ref=f9e120]:
+                    - text: It takes 140 skill in its trade. It goes over a
+                    - link "Camp Tent" [ref=f9e121]:
+                      - /url: /item/279978
+                    - text: or a
+                    - link "Faction Banner" [ref=f9e122]:
+                      - /url: /item/279972
+                    - text: "and keeps what they give: rested experience from the tent, Spirit for your faction from the banner."
+              - listitem [ref=f9e123]:
+                - generic [aria-hidden] [ref=f9e124]: "3"
+                - generic [ref=f9e125]:
+                  - heading "Craft next to it" [level=3] [ref=f9e126]
+                  - paragraph [ref=f9e127]: Stay within reach while you craft, as at a town’s anvil. Players who sit or craft by the fire for a minute also get the camp’s bonuses.
+            - generic [ref=f9e128]:
+              - generic [ref=f9e129]:
+                - term [ref=f9e130]: 15 minutes
+                - definition [ref=f9e131]: A placed rack or wheel stays 15 minutes, then it’s gone.
+              - generic [ref=f9e132]:
+                - term [ref=f9e133]: Used up
+                - definition [ref=f9e134]: "Placing it uses the item: each new rack or wheel costs its reagents again."
+              - generic [ref=f9e135]:
+                - term [ref=f9e136]: One hour between camp objects
+                - definition [ref=f9e137]: Every camp object you place shares one 60 minute cooldown. The campfire has its own, 5 minutes.
+            - paragraph [ref=f9e138]: "My advice: put the reagents of the whole batch in your bags before you place the rack. 15 minutes is enough for a batch, and the next rack is an hour away."
+          - region [ref=f9e139]:
+            - heading "Tanning Rack" [level=2] [ref=f9e141]
+            - generic [ref=f9e142]:
+              - generic [ref=f9e145]:
+                - generic [ref=f9e146]: "Blueprint: Tanning Rack"
+                - generic [ref=f9e147]: Item Level 25
+                - generic [ref=f9e148]: Leatherworking
+                - generic [ref=f9e149]: Requires Leatherworking (140)
+                - generic [ref=f9e150]: "Use: Craft a Tanning Rack."
+                - generic [ref=f9e151]: "\"Teaches you how to place a Tanning Rack at a campsite.\""
+                - generic [ref=f9e152]: "Sell Price: 3 75"
+              - generic [ref=f9e153]:
+                - generic [ref=f9e154]:
+                  - term [ref=f9e155]: Razorclaw the Butcher
+                  - definition [ref=f9e156]:
+                    - text: Razorclaw the Butcher in
+                    - link "Shadowfang Keep" [ref=f9e157] [cursor=pointer]:
+                      - /url: /dungeons/shadowfang-keep
+                    - text: "drops the blueprint, rarely: about once in 900 kills."
+                - generic [ref=f9e158]:
+                  - term [ref=f9e159]: Leatherworking 140
+                  - definition [ref=f9e160]: The skill to learn the blueprint, and to place a rack.
+                - generic [ref=f9e161]:
+                  - term [ref=f9e162]: Each rack costs
+                  - definition [ref=f9e163]:
+                    - link "5 × Medium Leather" [ref=f9e164]:
+                      - /url: /item/2319
+                    - text: ","
+                    - link "3 × Fine Thread" [ref=f9e165]:
+                      - /url: /item/2321
+                    - text: and
+                    - link "2 × Simple Wood" [ref=f9e166]:
+                      - /url: /item/4470
+                    - text: . Thread and wood are sold by trade supplies vendors.
+                - generic [ref=f9e167]:
+                  - term [ref=f9e168]: Both can be traded
+                  - definition [ref=f9e169]: The blueprint and the rack itself can be bought and sold at the auction house.
+            - paragraph [ref=f9e170]: The first rack recipes open at 125 skill (6 blue kilts and legguards), but placing a rack takes 140. In between, you craft at another leatherworker’s rack.
+            - paragraph [ref=f9e171]:
+              - text: 21 of these recipes also ask for
+              - link "Pristine Leather" [ref=f9e172]:
+                - /url: /item/249427
+              - text: ", which the rack does not make. It comes from"
+              - link "Skinning" [ref=f9e173] [cursor=pointer]:
+                - /url: /professions/skinning
+              - text: ": a Scarce material that a beast you skin gives now and then, on top of its leather. The"
+              - link "Legacy" [ref=f9e174] [cursor=pointer]:
+                - /url: /legacy-perks
+              - text: perk Bountiful Harvest gives 20% more per rank.
+            - paragraph [ref=f9e175]:
+              - text: 37 of the 48 are new Forever patterns, the blue armour of level 25 to 30. The other 11 are Classic patterns that needed nothing in Classic,
+              - link "Wolfshead Helm" [ref=f9e176]:
+                - /url: /item/8345
+              - text: and
+              - link "Barbaric Bracers" [ref=f9e177]:
+                - /url: /item/18948
+              - text: among them.
+              - link "See them all" [ref=f9e178] [cursor=pointer]:
+                - /url: "#recipes-rack"
+          - region [ref=f9e179]:
+            - heading "Spinning Wheel" [level=2] [ref=f9e181]
+            - generic [ref=f9e182]:
+              - generic [ref=f9e185]:
+                - generic [ref=f9e186]: "Blueprint: Spinning Wheel"
+                - generic [ref=f9e187]: Item Level 25
+                - generic [ref=f9e188]: Tailoring
+                - generic [ref=f9e189]: Requires Tailoring (140)
+                - generic [ref=f9e190]: "Use: Craft a Spinning Wheel."
+                - generic [ref=f9e191]: "\"Teaches you how to place a Spinning Wheel at a campsite.\""
+                - generic [ref=f9e192]: "Sell Price: 3 75"
+              - generic [ref=f9e193]:
+                - generic [ref=f9e194]:
+                  - term [ref=f9e195]: Unstable Sentinel
+                  - definition [ref=f9e196]:
+                    - text: The Unstable Sentinel in the
+                    - link "City of Dalaran" [ref=f9e197] [cursor=pointer]:
+                      - /url: /dungeons/city-of-dalaran
+                    - text: "drops the blueprint. How often is not known yet: the dungeon opened on October 8."
+                - generic [ref=f9e198]:
+                  - term [ref=f9e199]: Tailoring 140
+                  - definition [ref=f9e200]: The skill to learn the blueprint, and to place a wheel.
+                - generic [ref=f9e201]:
+                  - term [ref=f9e202]: Each wheel costs
+                  - definition [ref=f9e203]:
+                    - link "2 × Simple Wood" [ref=f9e204]:
+                      - /url: /item/4470
+                    - text: ","
+                    - link "5 × Bolt of Silk Cloth" [ref=f9e205]:
+                      - /url: /item/4305
+                    - text: and
+                    - link "3 × Fine Thread" [ref=f9e206]:
+                      - /url: /item/2321
+                    - text: . Thread and wood are sold by trade supplies vendors, the silk you weave yourself.
+                - generic [ref=f9e207]:
+                  - term [ref=f9e208]: Over the Faction Banner
+                  - definition [ref=f9e209]:
+                    - text: It replaces the
+                    - link "Faction Banner" [ref=f9e210]:
+                      - /url: /item/279972
+                    - text: at camp and keeps its Spirit for your faction.
+            - paragraph [ref=f9e211]:
+              - text: "A wheel opens 74 tailoring recipes: 54 new Forever patterns, the blue leggings, slippers, handwraps, cords, shoulders, cuffs, waistcords, gloves and sandals of level 25 to 30, and 20 Classic ones, the Mooncloth and Dreamweave pieces among them."
+              - link "See them all" [ref=f9e212] [cursor=pointer]:
+                - /url: "#recipes-wheel"
+            - paragraph [ref=f9e213]:
+              - text: Our
+              - link "best-in-slot" [ref=f9e214] [cursor=pointer]:
+                - /url: /bis
+              - text: lists count the pieces made at a Spinning Wheel, and say where its blueprint drops.
+          - region [ref=f9e215]:
+            - heading "Every recipe that needs them" [level=2] [ref=f9e217]
+            - paragraph [ref=f9e218]: "Grey skill: where the recipe turns yellow, for the patterns no trainer lists. Pristine Leather in gold."
+            - 'heading "Tanning Rack: 48 Leatherworking recipes" [level=3] [ref=f9e219]'
+            - table [ref=f9e220]:
+              - rowgroup [ref=f9e221]:
+                - row [ref=f9e222]:
+                  - columnheader "Skill" [ref=f9e223]
+                  - columnheader "Makes" [ref=f9e224]
+                  - columnheader "Reagents" [ref=f9e225]
+              - rowgroup [ref=f9e226]:
+                - row [ref=f9e227]:
+                  - cell "125" [ref=f9e228]
+                  - cell [ref=f9e229]:
+                    - link "Defender's Leather Kilt" [ref=f9e230]:
+                      - /url: /item/252457
+                  - cell [ref=f9e232]:
+                    - link "12 Medium Leather" [ref=f9e233]:
+                      - /url: /item/2319
+                    - text: ","
+                    - link "4 Cured Medium Hide" [ref=f9e234]:
+                      - /url: /item/4233
+                    - text: ","
+                    - link "8 Pristine Leather" [ref=f9e235]:
+                      - /url: /item/249427
+                    - text: ","
+                    - link "3 Fine Thread" [ref=f9e236]:
+                      - /url: /item/2321
+                    - text: ","
+                    - link "8 Elixir of Minor Fortitude" [ref=f9e237]:
+                      - /url: /item/2458
+                - row [ref=f9e238]:
+                  - cell "125" [ref=f9e239]
+                  - cell [ref=f9e240]:
+                    - link "Totemic Leather Leggings" [ref=f9e241]:
+                      - /url: /item/252458
+                  - cell [ref=f9e243]:
+                    - link "12 Medium Leather" [ref=f9e244]:
+                      - /url: /item/2319
+                    - text: ","
+                    - link "4 Cured Medium Hide" [ref=f9e245]:
+                      - /url: /item/4233
+                    - text: ","
+                    - link "8 Pristine Leather" [ref=f9e246]:
+                      - /url: /item/249427
+                    - text: ","
+                    - link "3 Fine Thread" [ref=f9e247]:
+                      - /url: /item/2321
+                    - text: ","
+                    - link "8 Sulfuric Acid" [ref=f9e248]:
+                      - /url: /item/249410
+                - row [ref=f9e249]:
+                  - cell "125" [ref=f9e250]
+                  - cell [ref=f9e251]:
+                    - link "Brawler's Leather Legguards" [ref=f9e252]:
+                      - /url: /item/252516
+                  - cell [ref=f9e254]:
+                    - link "12 Medium Leather" [ref=f9e255]:
+                      - /url: /item/2319
+                    - text: ","
+                    - link "4 Cured Medium Hide" [ref=f9e256]:
+                      - /url: /item/4233
+                    - text: ","
+                    - link "8 Pristine Leather" [ref=f9e257]:
+                      - /url: /item/249427
+                    - text: ","
+                    - link "3 Fine Thread" [ref=f9e258]:
+                      - /url: /item/2321
+                    - text: ","
+                    - link "8 Shadowgem" [ref=f9e259]:
+                      - /url: /item/1210
+                - row [ref=f9e260]:
+                  - cell "125" [ref=f9e261]
+                  - cell [ref=f9e262]:
+                    - link "Trapper's Leather Legguards" [ref=f9e263]:
+                      - /url: /item/252517
+                  - cell [ref=f9e265]:
+                    - link "12 Medium Leather" [ref=f9e266]:
+                      - /url: /item/2319
+                    - text: ","
+                    - link "4 Cured Medium Hide" [ref=f9e267]:
+                      - /url: /item/4233
+                    - text: ","
+                    - link "8 Pristine Leather" [ref=f9e268]:
+                      - /url: /item/249427
+                    - text: ","
+                    - link "3 Fine Thread" [ref=f9e269]:
+                      - /url: /item/2321
+                    - text: ","
+                    - link "8 Deviate Scale" [ref=f9e270]:
+                      - /url: /item/6470
+                - row [ref=f9e271]:
+                  - cell "125" [ref=f9e272]
+                  - cell [ref=f9e273]:
+                    - link "Stormrider's Leather Kilt" [ref=f9e274]:
+                      - /url: /item/252518
+                  - cell [ref=f9e276]:
+                    - link "12 Medium Leather" [ref=f9e277]:
+                      - /url: /item/2319
+                    - text: ","
+                    - link "4 Cured Medium Hide" [ref=f9e278]:
+                      - /url: /item/4233
+                    - text: ","
+                    - link "8 Pristine Leather" [ref=f9e279]:
+                      - /url: /item/249427
+                    - text: ","
+                    - link "3 Fine Thread" [ref=f9e280]:
+                      - /url: /item/2321
+                    - text: ","
+                    - link "8 Cerulean Dye" [ref=f9e281]:
+                      - /url: /item/249409
+                - row [ref=f9e282]:
+                  - cell "125" [ref=f9e283]
+                  - cell [ref=f9e284]:
+                    - link "Wisdom's Leather Leggings" [ref=f9e285]:
+                      - /url: /item/252519
+                  - cell [ref=f9e287]:
+                    - link "12 Medium Leather" [ref=f9e288]:
+                      - /url: /item/2319
+                    - text: ","
+                    - link "4 Cured Medium Hide" [ref=f9e289]:
+                      - /url: /item/4233
+                    - text: ","
+                    - link "8 Pristine Leather" [ref=f9e290]:
+                      - /url: /item/249427
+                    - text: ","
+                    - link "3 Fine Thread" [ref=f9e291]:
+                      - /url: /item/2321
+                    - text: ","
+                    - link "8 Small Lustrous Pearl" [ref=f9e292]:
+                      - /url: /item/5498
+                - row [ref=f9e293]:
+                  - cell "130" [ref=f9e294]
+                  - cell [ref=f9e295]:
+                    - link "Barbaric Bracers" [ref=f9e296]:
+                      - /url: /item/18948
+                    - text: Classic
+                  - cell [ref=f9e298]:
+                    - link "8 Heavy Leather" [ref=f9e299]:
+                      - /url: /item/4234
+                    - text: ","
+                    - link "2 Cured Heavy Hide" [ref=f9e300]:
+                      - /url: /item/4236
+                    - text: ","
+                    - link "4 Small Lustrous Pearl" [ref=f9e301]:
+                      - /url: /item/5498
+                    - text: ","
+                    - link "1 Raptor Hide" [ref=f9e302]:
+                      - /url: /item/4461
+                    - text: ","
+                    - link "4 Large Fang" [ref=f9e303]:
+                      - /url: /item/5637
+                - row [ref=f9e304]:
+                  - cell "150" [ref=f9e305]
+                  - cell [ref=f9e306]:
+                    - link "Prowler's Leather Belt" [ref=f9e307]:
+                      - /url: /item/252459
+                  - cell [ref=f9e309]:
+                    - link "8 Heavy Leather" [ref=f9e310]:
+                      - /url: /item/4234
+                    - text: ","
+                    - link "2 Cured Medium Hide" [ref=f9e311]:
+                      - /url: /item/4233
+                    - text: ","
+                    - link "1 Jade" [ref=f9e312]:
+                      - /url: /item/1529
+                - row [ref=f9e313]:
+                  - cell "150" [ref=f9e314]
+                  - cell [ref=f9e315]:
+                    - link "Warden's Leather Belt" [ref=f9e316]:
+                      - /url: /item/252460
+                  - cell [ref=f9e318]:
+                    - link "8 Heavy Leather" [ref=f9e319]:
+                      - /url: /item/4234
+                    - text: ","
+                    - link "2 Cured Medium Hide" [ref=f9e320]:
+                      - /url: /item/4233
+                    - text: ","
+                    - link "1 Elemental Earth" [ref=f9e321]:
+                      - /url: /item/7067
+                - row [ref=f9e322]:
+                  - cell "150" [ref=f9e323]
+                  - cell [ref=f9e324]:
+                    - link "Skirmisher's Leather Belt" [ref=f9e325]:
+                      - /url: /item/252461
+                  - cell [ref=f9e327]:
+                    - link "8 Heavy Leather" [ref=f9e328]:
+                      - /url: /item/4234
+                    - text: ","
+                    - link "2 Cured Medium Hide" [ref=f9e329]:
+                      - /url: /item/4233
+                    - text: ","
+                    - link "1 Citrine" [ref=f9e330]:
+                      - /url: /item/3864
+                - row [ref=f9e331]:
+                  - cell "150" [ref=f9e332]
+                  - cell [ref=f9e333]:
+                    - link "Skulker's Leather Belt" [ref=f9e334]:
+                      - /url: /item/252520
+                  - cell [ref=f9e336]:
+                    - link "8 Heavy Leather" [ref=f9e337]:
+                      - /url: /item/4234
+                    - text: ","
+                    - link "2 Cured Medium Hide" [ref=f9e338]:
+                      - /url: /item/4233
+                    - text: ","
+                    - link "1 Spider's Silk" [ref=f9e339]:
+                      - /url: /item/3182
+                - row [ref=f9e340]:
+                  - cell "150" [ref=f9e341]
+                  - cell [ref=f9e342]:
+                    - link "Stalker's Leather Belt" [ref=f9e343]:
+                      - /url: /item/252521
+                  - cell [ref=f9e345]:
+                    - link "8 Heavy Leather" [ref=f9e346]:
+                      - /url: /item/4234
+                    - text: ","
+                    - link "2 Cured Medium Hide" [ref=f9e347]:
+                      - /url: /item/4233
+                    - text: ","
+                    - link "1 Elemental Air" [ref=f9e348]:
+                      - /url: /item/7069
+                - row [ref=f9e349]:
+                  - cell "150" [ref=f9e350]
+                  - cell [ref=f9e351]:
+                    - link "Skycaller's Leather Belt" [ref=f9e352]:
+                      - /url: /item/252522
+                  - cell [ref=f9e354]:
+                    - link "8 Heavy Leather" [ref=f9e355]:
+                      - /url: /item/4234
+                    - text: ","
+                    - link "2 Cured Medium Hide" [ref=f9e356]:
+                      - /url: /item/4233
+                    - text: ","
+                    - link "1 Elemental Water" [ref=f9e357]:
+                      - /url: /item/7070
+                - row [ref=f9e358]:
+                  - cell "150" [ref=f9e359]
+                  - cell [ref=f9e360]:
+                    - link "Mender's Leather Belt" [ref=f9e361]:
+                      - /url: /item/252523
+                  - cell [ref=f9e363]:
+                    - link "8 Heavy Leather" [ref=f9e364]:
+                      - /url: /item/4234
+                    - text: ","
+                    - link "2 Cured Medium Hide" [ref=f9e365]:
+                      - /url: /item/4233
+                    - text: ","
+                    - link "1 Iridescent Pearl" [ref=f9e366]:
+                      - /url: /item/5500
+                - row [ref=f9e367]:
+                  - cell "160" [ref=f9e368]
+                  - cell [ref=f9e369]:
+                    - link "Gem-studded Leather Belt" [ref=f9e370]:
+                      - /url: /item/4262
+                    - text: Classic
+                  - cell [ref=f9e372]:
+                    - link "4 Cured Heavy Hide" [ref=f9e373]:
+                      - /url: /item/4236
+                    - text: ","
+                    - link "2 Iridescent Pearl" [ref=f9e374]:
+                      - /url: /item/5500
+                    - text: ","
+                    - link "2 Jade" [ref=f9e375]:
+                      - /url: /item/1529
+                    - text: ","
+                    - link "1 Citrine" [ref=f9e376]:
+                      - /url: /item/3864
+                    - text: ","
+                    - link "1 Fine Thread" [ref=f9e377]:
+                      - /url: /item/2321
+                - row [ref=f9e378]:
+                  - cell "175" [ref=f9e379]
+                  - cell [ref=f9e380]:
+                    - link "Shadowskin Gloves" [ref=f9e381]:
+                      - /url: /item/18238
+                    - text: Classic
+                  - cell [ref=f9e383]:
+                    - link "6 Thick Leather" [ref=f9e384]:
+                      - /url: /item/4304
+                    - text: ","
+                    - link "8 Shadowcat Hide" [ref=f9e385]:
+                      - /url: /item/7428
+                    - text: ","
+                    - link "2 Black Pearl" [ref=f9e386]:
+                      - /url: /item/7971
+                    - text: ","
+                    - link "2 Cured Heavy Hide" [ref=f9e387]:
+                      - /url: /item/4236
+                    - text: ","
+                    - link "4 Shadowgem" [ref=f9e388]:
+                      - /url: /item/1210
+                    - text: ","
+                    - link "1 Heavy Silken Thread" [ref=f9e389]:
+                      - /url: /item/8343
+                - row [ref=f9e390]:
+                  - cell "175" [ref=f9e391]
+                  - cell [ref=f9e392]:
+                    - link "Prowler's Leather Gloves" [ref=f9e393]:
+                      - /url: /item/252524
+                  - cell [ref=f9e395]:
+                    - link "16 Heavy Leather" [ref=f9e396]:
+                      - /url: /item/4234
+                    - text: ","
+                    - link "2 Cured Heavy Hide" [ref=f9e397]:
+                      - /url: /item/4236
+                    - text: ","
+                    - link "2 Pristine Hide" [ref=f9e398]:
+                      - /url: /item/249428
+                    - text: ","
+                    - link "2 Silken Thread" [ref=f9e399]:
+                      - /url: /item/4291
+                    - text: ","
+                    - link "2 Jade" [ref=f9e400]:
+                      - /url: /item/1529
+                    - text: ","
+                    - link "1 Pristine Leather" [ref=f9e401]:
+                      - /url: /item/249427
+                - row [ref=f9e402]:
+                  - cell "175" [ref=f9e403]
+                  - cell [ref=f9e404]:
+                    - link "Skulker's Leather Gloves" [ref=f9e405]:
+                      - /url: /item/252525
+                  - cell [ref=f9e407]:
+                    - link "16 Heavy Leather" [ref=f9e408]:
+                      - /url: /item/4234
+                    - text: ","
+                    - link "2 Cured Heavy Hide" [ref=f9e409]:
+                      - /url: /item/4236
+                    - text: ","
+                    - link "2 Pristine Hide" [ref=f9e410]:
+                      - /url: /item/249428
+                    - text: ","
+                    - link "2 Silken Thread" [ref=f9e411]:
+                      - /url: /item/4291
+                    - text: ","
+                    - link "2 Spider's Silk" [ref=f9e412]:
+                      - /url: /item/3182
+                    - text: ","
+                    - link "1 Pristine Leather" [ref=f9e413]:
+                      - /url: /item/249427
+                - row [ref=f9e414]:
+                  - cell "175" [ref=f9e415]
+                  - cell [ref=f9e416]:
+                    - link "Stalker's Leather Gloves" [ref=f9e417]:
+                      - /url: /item/252526
+                  - cell [ref=f9e419]:
+                    - link "16 Heavy Leather" [ref=f9e420]:
+                      - /url: /item/4234
+                    - text: ","
+                    - link "2 Cured Heavy Hide" [ref=f9e421]:
+                      - /url: /item/4236
+                    - text: ","
+                    - link "2 Pristine Hide" [ref=f9e422]:
+                      - /url: /item/249428
+                    - text: ","
+                    - link "2 Silken Thread" [ref=f9e423]:
+                      - /url: /item/4291
+                    - text: ","
+                    - link "2 Elemental Air" [ref=f9e424]:
+                      - /url: /item/7069
+                    - text: ","
+                    - link "1 Pristine Leather" [ref=f9e425]:
+                      - /url: /item/249427
+                - row [ref=f9e426]:
+                  - cell "175" [ref=f9e427]
+                  - cell [ref=f9e428]:
+                    - link "Warden's Leather Gloves" [ref=f9e429]:
+                      - /url: /item/252527
+                  - cell [ref=f9e431]:
+                    - link "16 Heavy Leather" [ref=f9e432]:
+                      - /url: /item/4234
+                    - text: ","
+                    - link "2 Cured Heavy Hide" [ref=f9e433]:
+                      - /url: /item/4236
+                    - text: ","
+                    - link "2 Pristine Hide" [ref=f9e434]:
+                      - /url: /item/249428
+                    - text: ","
+                    - link "2 Silken Thread" [ref=f9e435]:
+                      - /url: /item/4291
+                    - text: ","
+                    - link "2 Elemental Earth" [ref=f9e436]:
+                      - /url: /item/7067
+                    - text: ","
+                    - link "1 Pristine Leather" [ref=f9e437]:
+                      - /url: /item/249427
+                - row [ref=f9e438]:
+                  - cell "175" [ref=f9e439]
+                  - cell [ref=f9e440]:
+                    - link "Skirmisher's Leather Gloves" [ref=f9e441]:
+                      - /url: /item/252528
+                  - cell [ref=f9e443]:
+                    - link "16 Heavy Leather" [ref=f9e444]:
+                      - /url: /item/4234
+                    - text: ","
+                    - link "2 Cured Heavy Hide" [ref=f9e445]:
+                      - /url: /item/4236
+                    - text: ","
+                    - link "2 Pristine Hide" [ref=f9e446]:
+                      - /url: /item/249428
+                    - text: ","
+                    - link "2 Silken Thread" [ref=f9e447]:
+                      - /url: /item/4291
+                    - text: ","
+                    - link "2 Citrine" [ref=f9e448]:
+                      - /url: /item/3864
+                    - text: ","
+                    - link "1 Pristine Leather" [ref=f9e449]:
+                      - /url: /item/249427
+                - row [ref=f9e450]:
+                  - cell "175" [ref=f9e451]
+                  - cell [ref=f9e452]:
+                    - link "Skycaller's Leather Gloves" [ref=f9e453]:
+                      - /url: /item/252529
+                  - cell [ref=f9e455]:
+                    - link "16 Heavy Leather" [ref=f9e456]:
+                      - /url: /item/4234
+                    - text: ","
+                    - link "2 Cured Heavy Hide" [ref=f9e457]:
+                      - /url: /item/4236
+                    - text: ","
+                    - link "2 Pristine Hide" [ref=f9e458]:
+                      - /url: /item/249428
+                    - text: ","
+                    - link "2 Silken Thread" [ref=f9e459]:
+                      - /url: /item/4291
+                    - text: ","
+                    - link "2 Elemental Water" [ref=f9e460]:
+                      - /url: /item/7070
+                    - text: ","
+                    - link "1 Pristine Leather" [ref=f9e461]:
+                      - /url: /item/249427
+                - row [ref=f9e462]:
+                  - cell "175" [ref=f9e463]
+                  - cell [ref=f9e464]:
+                    - link "Mender's Leather Gloves" [ref=f9e465]:
+                      - /url: /item/252530
+                  - cell [ref=f9e467]:
+                    - link "16 Heavy Leather" [ref=f9e468]:
+                      - /url: /item/4234
+                    - text: ","
+                    - link "2 Cured Heavy Hide" [ref=f9e469]:
+                      - /url: /item/4236
+                    - text: ","
+                    - link "2 Pristine Hide" [ref=f9e470]:
+                      - /url: /item/249428
+                    - text: ","
+                    - link "2 Silken Thread" [ref=f9e471]:
+                      - /url: /item/4291
+                    - text: ","
+                    - link "2 Iridescent Pearl" [ref=f9e472]:
+                      - /url: /item/5500
+                    - text: ","
+                    - link "1 Pristine Leather" [ref=f9e473]:
+                      - /url: /item/249427
+                - row [ref=f9e474]:
+                  - cell "200" [ref=f9e475]
+                  - cell [ref=f9e476]:
+                    - link "Prowler's Leather Shoes" [ref=f9e477]:
+                      - /url: /item/252465
+                  - cell [ref=f9e479]:
+                    - link "8 Heavy Leather" [ref=f9e480]:
+                      - /url: /item/4234
+                    - text: ","
+                    - link "2 Cured Medium Hide" [ref=f9e481]:
+                      - /url: /item/4233
+                    - text: ","
+                    - link "2 Jade" [ref=f9e482]:
+                      - /url: /item/1529
+                - row [ref=f9e483]:
+                  - cell "200" [ref=f9e484]
+                  - cell [ref=f9e485]:
+                    - link "Warden's Leather Shoes" [ref=f9e486]:
+                      - /url: /item/252466
+                  - cell [ref=f9e488]:
+                    - link "8 Heavy Leather" [ref=f9e489]:
+                      - /url: /item/4234
+                    - text: ","
+                    - link "2 Cured Medium Hide" [ref=f9e490]:
+                      - /url: /item/4233
+                    - text: ","
+                    - link "2 Elemental Earth" [ref=f9e491]:
+                      - /url: /item/7067
+                - row [ref=f9e492]:
+                  - cell "200" [ref=f9e493]
+                  - cell [ref=f9e494]:
+                    - link "Skulker's Leather Shoes" [ref=f9e495]:
+                      - /url: /item/252531
+                  - cell [ref=f9e497]:
+                    - link "8 Heavy Leather" [ref=f9e498]:
+                      - /url: /item/4234
+                    - text: ","
+                    - link "2 Cured Medium Hide" [ref=f9e499]:
+                      - /url: /item/4233
+                    - text: ","
+                    - link "2 Spider's Silk" [ref=f9e500]:
+                      - /url: /item/3182
+                - row [ref=f9e501]:
+                  - cell "200" [ref=f9e502]
+                  - cell [ref=f9e503]:
+                    - link "Skycaller's Leather Shoes" [ref=f9e504]:
+                      - /url: /item/252532
+                  - cell [ref=f9e506]:
+                    - link "8 Heavy Leather" [ref=f9e507]:
+                      - /url: /item/4234
+                    - text: ","
+                    - link "2 Cured Medium Hide" [ref=f9e508]:
+                      - /url: /item/4233
+                    - text: ","
+                    - link "2 Elemental Water" [ref=f9e509]:
+                      - /url: /item/7070
+                - row [ref=f9e510]:
+                  - cell "200" [ref=f9e511]
+                  - cell [ref=f9e512]:
+                    - link "Mender's Leather Shoes" [ref=f9e513]:
+                      - /url: /item/252533
+                  - cell [ref=f9e515]:
+                    - link "8 Heavy Leather" [ref=f9e516]:
+                      - /url: /item/4234
+                    - text: ","
+                    - link "2 Cured Medium Hide" [ref=f9e517]:
+                      - /url: /item/4233
+                    - text: ","
+                    - link "2 Iridescent Pearl" [ref=f9e518]:
+                      - /url: /item/5500
+                - row [ref=f9e519]:
+                  - cell "200" [ref=f9e520]
+                  - cell [ref=f9e521]:
+                    - link "Stalker's Mail Boots" [ref=f9e522]:
+                      - /url: /item/252562
+                  - cell [ref=f9e524]:
+                    - link "8 Heavy Leather" [ref=f9e525]:
+                      - /url: /item/4234
+                    - text: ","
+                    - link "2 Cured Medium Hide" [ref=f9e526]:
+                      - /url: /item/4233
+                    - text: ","
+                    - link "2 Elemental Air" [ref=f9e527]:
+                      - /url: /item/7069
+                - row [ref=f9e528]:
+                  - cell "200" [ref=f9e529]
+                  - cell [ref=f9e530]:
+                    - link "Skycaller's Mail Boots" [ref=f9e531]:
+                      - /url: /item/252563
+                  - cell [ref=f9e533]:
+                    - link "8 Heavy Leather" [ref=f9e534]:
+                      - /url: /item/4234
+                    - text: ","
+                    - link "2 Cured Medium Hide" [ref=f9e535]:
+                      - /url: /item/4233
+                    - text: ","
+                    - link "2 Elemental Water" [ref=f9e536]:
+                      - /url: /item/7070
+                - row [ref=f9e537]:
+                  - cell "200" [ref=f9e538]
+                  - cell [ref=f9e539]:
+                    - link "Skirmisher's Mail Boots" [ref=f9e540]:
+                      - /url: /item/252564
+                  - cell [ref=f9e542]:
+                    - link "8 Heavy Leather" [ref=f9e543]:
+                      - /url: /item/4234
+                    - text: ","
+                    - link "2 Cured Medium Hide" [ref=f9e544]:
+                      - /url: /item/4233
+                    - text: ","
+                    - link "2 Citrine" [ref=f9e545]:
+                      - /url: /item/3864
+                - row [ref=f9e546]:
+                  - cell "200" [ref=f9e547]
+                  - cell [ref=f9e548]:
+                    - link "Mender's Mail Boots" [ref=f9e549]:
+                      - /url: /item/252565
+                  - cell [ref=f9e551]:
+                    - link "8 Heavy Leather" [ref=f9e552]:
+                      - /url: /item/4234
+                    - text: ","
+                    - link "2 Cured Medium Hide" [ref=f9e553]:
+                      - /url: /item/4233
+                    - text: ","
+                    - link "2 Iridescent Pearl" [ref=f9e554]:
+                      - /url: /item/5500
+                - row [ref=f9e555]:
+                  - cell "210" [ref=f9e556]
+                  - cell [ref=f9e557]:
+                    - link "Stalker's Mail Shoulder" [ref=f9e558]:
+                      - /url: /item/252566
+                  - cell [ref=f9e560]:
+                    - link "10 Thick Leather" [ref=f9e561]:
+                      - /url: /item/4304
+                    - text: ","
+                    - link "3 Cured Heavy Hide" [ref=f9e562]:
+                      - /url: /item/4236
+                    - text: ","
+                    - link "4 Pristine Hide" [ref=f9e563]:
+                      - /url: /item/249428
+                    - text: ","
+                    - link "2 Silken Thread" [ref=f9e564]:
+                      - /url: /item/4291
+                    - text: ","
+                    - link "3 Elemental Air" [ref=f9e565]:
+                      - /url: /item/7069
+                    - text: ","
+                    - link "2 Pristine Leather" [ref=f9e566]:
+                      - /url: /item/249427
+                - row [ref=f9e567]:
+                  - cell "210" [ref=f9e568]
+                  - cell [ref=f9e569]:
+                    - link "Skycaller's Mail Shoulder" [ref=f9e570]:
+                      - /url: /item/252567
+                  - cell [ref=f9e572]:
+                    - link "10 Thick Leather" [ref=f9e573]:
+                      - /url: /item/4304
+                    - text: ","
+                    - link "3 Cured Heavy Hide" [ref=f9e574]:
+                      - /url: /item/4236
+                    - text: ","
+                    - link "4 Pristine Hide" [ref=f9e575]:
+                      - /url: /item/249428
+                    - text: ","
+                    - link "2 Silken Thread" [ref=f9e576]:
+                      - /url: /item/4291
+                    - text: ","
+                    - link "3 Elemental Water" [ref=f9e577]:
+                      - /url: /item/7070
+                    - text: ","
+                    - link "2 Pristine Leather" [ref=f9e578]:
+                      - /url: /item/249427
+                - row [ref=f9e579]:
+                  - cell "210" [ref=f9e580]
+                  - cell [ref=f9e581]:
+                    - link "Skirmisher's Mail Shoulder" [ref=f9e582]:
+                      - /url: /item/252568
+                  - cell [ref=f9e584]:
+                    - link "10 Thick Leather" [ref=f9e585]:
+                      - /url: /item/4304
+                    - text: ","
+                    - link "3 Cured Heavy Hide" [ref=f9e586]:
+                      - /url: /item/4236
+                    - text: ","
+                    - link "4 Pristine Hide" [ref=f9e587]:
+                      - /url: /item/249428
+                    - text: ","
+                    - link "2 Silken Thread" [ref=f9e588]:
+                      - /url: /item/4291
+                    - text: ","
+                    - link "3 Citrine" [ref=f9e589]:
+                      - /url: /item/3864
+                    - text: ","
+                    - link "2 Pristine Leather" [ref=f9e590]:
+                      - /url: /item/249427
+                - row [ref=f9e591]:
+                  - cell "210" [ref=f9e592]
+                  - cell [ref=f9e593]:
+                    - link "Mender's Mail Shoulder" [ref=f9e594]:
+                      - /url: /item/252569
+                  - cell [ref=f9e596]:
+                    - link "10 Thick Leather" [ref=f9e597]:
+                      - /url: /item/4304
+                    - text: ","
+                    - link "3 Cured Heavy Hide" [ref=f9e598]:
+                      - /url: /item/4236
+                    - text: ","
+                    - link "4 Pristine Hide" [ref=f9e599]:
+                      - /url: /item/249428
+                    - text: ","
+                    - link "2 Silken Thread" [ref=f9e600]:
+                      - /url: /item/4291
+                    - text: ","
+                    - link "3 Iridescent Pearl" [ref=f9e601]:
+                      - /url: /item/5500
+                    - text: ","
+                    - link "2 Pristine Leather" [ref=f9e602]:
+                      - /url: /item/249427
+                - row [ref=f9e603]:
+                  - cell "220" [ref=f9e604]
+                  - cell [ref=f9e605]:
+                    - link "Wolfshead Helm" [ref=f9e606]:
+                      - /url: /item/8345
+                    - text: Classic
+                  - cell [ref=f9e608]:
+                    - link "18 Thick Leather" [ref=f9e609]:
+                      - /url: /item/4304
+                    - text: ","
+                    - link "2 Thick Wolfhide" [ref=f9e610]:
+                      - /url: /item/8368
+                    - text: ","
+                    - link "8 Wicked Claw" [ref=f9e611]:
+                      - /url: /item/8146
+                    - text: ","
+                    - link "4 Heavy Silken Thread" [ref=f9e612]:
+                      - /url: /item/8343
+                    - text: ","
+                    - link "2 Cured Thick Hide" [ref=f9e613]:
+                      - /url: /item/8172
+                - row [ref=f9e614]:
+                  - cell "220" [ref=f9e615]
+                  - cell [ref=f9e616]:
+                    - link "Dragonscale Gauntlets" [ref=f9e617]:
+                      - /url: /item/8347
+                    - text: Classic
+                  - cell [ref=f9e619]:
+                    - link "24 Thick Leather" [ref=f9e620]:
+                      - /url: /item/4304
+                    - text: ","
+                    - link "12 Worn Dragonscale" [ref=f9e621]:
+                      - /url: /item/8165
+                    - text: ","
+                    - link "4 Heavy Silken Thread" [ref=f9e622]:
+                      - /url: /item/8343
+                    - text: ","
+                    - link "2 Cured Thick Hide" [ref=f9e623]:
+                      - /url: /item/8172
+                - row [ref=f9e624]:
+                  - cell "225" [ref=f9e625]
+                  - cell [ref=f9e626]:
+                    - link "Gauntlets of the Sea" [ref=f9e627]:
+                      - /url: /item/8346
+                    - text: Classic
+                  - cell [ref=f9e629]:
+                    - link "20 Thick Leather" [ref=f9e630]:
+                      - /url: /item/4304
+                    - text: ","
+                    - link "8 Globe of Water" [ref=f9e631]:
+                      - /url: /item/7079
+                    - text: ","
+                    - link "2 Core of Earth" [ref=f9e632]:
+                      - /url: /item/7075
+                    - text: ","
+                    - link "1 Cured Thick Hide" [ref=f9e633]:
+                      - /url: /item/8172
+                    - text: ","
+                    - link "4 Heavy Silken Thread" [ref=f9e634]:
+                      - /url: /item/8343
+                - row [ref=f9e635]:
+                  - cell "225" [ref=f9e636]
+                  - cell [ref=f9e637]:
+                    - link "Cured Rugged Hide" [ref=f9e638]:
+                      - /url: /item/15407
+                    - text: Classic
+                  - cell [ref=f9e640]:
+                    - link "1 Rugged Hide" [ref=f9e641]:
+                      - /url: /item/8171
+                    - text: ","
+                    - link "1 Refined Deeprock Salt" [ref=f9e642]:
+                      - /url: /item/15409
+                - row [ref=f9e643]:
+                  - cell "225" [ref=f9e644]
+                  - cell [ref=f9e645]:
+                    - link "Stalker's Mail Bracers" [ref=f9e646]:
+                      - /url: /item/252570
+                  - cell [ref=f9e648]:
+                    - link "12 Thick Leather" [ref=f9e649]:
+                      - /url: /item/4304
+                    - text: ","
+                    - link "4 Cured Heavy Hide" [ref=f9e650]:
+                      - /url: /item/4236
+                    - text: ","
+                    - link "6 Pristine Hide" [ref=f9e651]:
+                      - /url: /item/249428
+                    - text: ","
+                    - link "2 Heavy Silken Thread" [ref=f9e652]:
+                      - /url: /item/8343
+                    - text: ","
+                    - link "4 Elemental Air" [ref=f9e653]:
+                      - /url: /item/7069
+                    - text: ","
+                    - link "3 Pristine Leather" [ref=f9e654]:
+                      - /url: /item/249427
+                - row [ref=f9e655]:
+                  - cell "225" [ref=f9e656]
+                  - cell [ref=f9e657]:
+                    - link "Skycaller's Mail Bracers" [ref=f9e658]:
+                      - /url: /item/252571
+                  - cell [ref=f9e660]:
+                    - link "12 Thick Leather" [ref=f9e661]:
+                      - /url: /item/4304
+                    - text: ","
+                    - link "4 Cured Heavy Hide" [ref=f9e662]:
+                      - /url: /item/4236
+                    - text: ","
+                    - link "6 Pristine Hide" [ref=f9e663]:
+                      - /url: /item/249428
+                    - text: ","
+                    - link "2 Heavy Silken Thread" [ref=f9e664]:
+                      - /url: /item/8343
+                    - text: ","
+                    - link "4 Elemental Water" [ref=f9e665]:
+                      - /url: /item/7070
+                    - text: ","
+                    - link "3 Pristine Leather" [ref=f9e666]:
+                      - /url: /item/249427
+                - row [ref=f9e667]:
+                  - cell "225" [ref=f9e668]
+                  - cell [ref=f9e669]:
+                    - link "Skirmisher's Mail Bracers" [ref=f9e670]:
+                      - /url: /item/252572
+                  - cell [ref=f9e672]:
+                    - link "12 Thick Leather" [ref=f9e673]:
+                      - /url: /item/4304
+                    - text: ","
+                    - link "4 Cured Heavy Hide" [ref=f9e674]:
+                      - /url: /item/4236
+                    - text: ","
+                    - link "6 Pristine Hide" [ref=f9e675]:
+                      - /url: /item/249428
+                    - text: ","
+                    - link "2 Heavy Silken Thread" [ref=f9e676]:
+                      - /url: /item/8343
+                    - text: ","
+                    - link "4 Citrine" [ref=f9e677]:
+                      - /url: /item/3864
+                    - text: ","
+                    - link "3 Pristine Leather" [ref=f9e678]:
+                      - /url: /item/249427
+                - row [ref=f9e679]:
+                  - cell "225" [ref=f9e680]
+                  - cell [ref=f9e681]:
+                    - link "Mender's Mail Bracers" [ref=f9e682]:
+                      - /url: /item/252573
+                  - cell [ref=f9e684]:
+                    - link "12 Thick Leather" [ref=f9e685]:
+                      - /url: /item/4304
+                    - text: ","
+                    - link "4 Cured Heavy Hide" [ref=f9e686]:
+                      - /url: /item/4236
+                    - text: ","
+                    - link "6 Pristine Hide" [ref=f9e687]:
+                      - /url: /item/249428
+                    - text: ","
+                    - link "2 Heavy Silken Thread" [ref=f9e688]:
+                      - /url: /item/8343
+                    - text: ","
+                    - link "4 Iridescent Pearl" [ref=f9e689]:
+                      - /url: /item/5500
+                    - text: ","
+                    - link "3 Pristine Leather" [ref=f9e690]:
+                      - /url: /item/249427
+                - row [ref=f9e691]:
+                  - cell "235" [ref=f9e692]
+                  - cell [ref=f9e693]:
+                    - link "Green Dragonscale Breastplate" [ref=f9e694]:
+                      - /url: /item/15045
+                    - text: Classic
+                  - cell [ref=f9e696]:
+                    - link "20 Rugged Leather" [ref=f9e697]:
+                      - /url: /item/8170
+                    - text: ","
+                    - link "25 Green Dragonscale" [ref=f9e698]:
+                      - /url: /item/15412
+                    - text: ","
+                    - link "2 Rune Thread" [ref=f9e699]:
+                      - /url: /item/14341
+                - row [ref=f9e700]:
+                  - cell "245" [ref=f9e701]
+                  - cell [ref=f9e702]:
+                    - link "Helm of Fire" [ref=f9e703]:
+                      - /url: /item/8348
+                    - text: Classic
+                  - cell [ref=f9e705]:
+                    - link "40 Thick Leather" [ref=f9e706]:
+                      - /url: /item/4304
+                    - text: ","
+                    - link "8 Heart of Fire" [ref=f9e707]:
+                      - /url: /item/7077
+                    - text: ","
+                    - link "4 Core of Earth" [ref=f9e708]:
+                      - /url: /item/7075
+                    - text: ","
+                    - link "2 Cured Thick Hide" [ref=f9e709]:
+                      - /url: /item/8172
+                    - text: ","
+                    - link "4 Heavy Silken Thread" [ref=f9e710]:
+                      - /url: /item/8343
+                - row [ref=f9e711]:
+                  - cell "245" [ref=f9e712]
+                  - cell [ref=f9e713]:
+                    - link "Feathered Breastplate" [ref=f9e714]:
+                      - /url: /item/8349
+                    - text: Classic
+                  - cell [ref=f9e716]:
+                    - link "40 Thick Leather" [ref=f9e717]:
+                      - /url: /item/4304
+                    - text: ","
+                    - link "40 Jet Black Feather" [ref=f9e718]:
+                      - /url: /item/8168
+                    - text: ","
+                    - link "2 Black Pearl" [ref=f9e719]:
+                      - /url: /item/7971
+                    - text: ","
+                    - link "4 Cured Thick Hide" [ref=f9e720]:
+                      - /url: /item/8172
+                    - text: ","
+                    - link "4 Heavy Silken Thread" [ref=f9e721]:
+                      - /url: /item/8343
+                - row [ref=f9e722]:
+                  - cell "250" [ref=f9e723]
+                  - cell [ref=f9e724]:
+                    - link "Dragonscale Breastplate" [ref=f9e725]:
+                      - /url: /item/8367
+                    - text: Classic
+                  - cell [ref=f9e727]:
+                    - link "40 Thick Leather" [ref=f9e728]:
+                      - /url: /item/4304
+                    - text: ","
+                    - link "30 Worn Dragonscale" [ref=f9e729]:
+                      - /url: /item/8165
+                    - text: ","
+                    - link "4 Heavy Silken Thread" [ref=f9e730]:
+                      - /url: /item/8343
+                    - text: ","
+                    - link "4 Cured Thick Hide" [ref=f9e731]:
+                      - /url: /item/8172
+            - 'heading "Spinning Wheel: 74 Tailoring recipes" [level=3] [ref=f9e732]'
+            - table [ref=f9e733]:
+              - rowgroup [ref=f9e734]:
+                - row [ref=f9e735]:
+                  - columnheader "Skill" [ref=f9e736]
+                  - columnheader "Makes" [ref=f9e737]
+                  - columnheader "Reagents" [ref=f9e738]
+              - rowgroup [ref=f9e739]:
+                - row [ref=f9e740]:
+                  - cell "125" [ref=f9e741]
+                  - cell [ref=f9e742]:
+                    - link "Pristine Leggings" [ref=f9e743]:
+                      - /url: /item/253987
+                  - cell [ref=f9e745]:
+                    - link "14 Bolt of Silk Cloth" [ref=f9e746]:
+                      - /url: /item/4305
+                    - text: ","
+                    - link "3 Fine Thread" [ref=f9e747]:
+                      - /url: /item/2321
+                    - text: ","
+                    - link "8 Cerulean Dye" [ref=f9e748]:
+                      - /url: /item/249409
+                    - text: ","
+                    - link "8 Pristine Leather" [ref=f9e749]:
+                      - /url: /item/249427
+                    - text: ","
+                    - link "2 Silver Bar" [ref=f9e750]:
+                      - /url: /item/2842
+                    - text: ","
+                    - link "3 Greater Astral Essence" [ref=f9e751]:
+                      - /url: /item/11082
+                - row [ref=f9e752]:
+                  - cell "125" [ref=f9e753]
+                  - cell [ref=f9e754]:
+                    - link "Silky Leggings" [ref=f9e755]:
+                      - /url: /item/253989
+                  - cell [ref=f9e757]:
+                    - link "14 Bolt of Silk Cloth" [ref=f9e758]:
+                      - /url: /item/4305
+                    - text: ","
+                    - link "3 Fine Thread" [ref=f9e759]:
+                      - /url: /item/2321
+                    - text: ","
+                    - link "8 Cerulean Dye" [ref=f9e760]:
+                      - /url: /item/249409
+                    - text: ","
+                    - link "8 Spider's Silk" [ref=f9e761]:
+                      - /url: /item/3182
+                    - text: ","
+                    - link "2 Silver Bar" [ref=f9e762]:
+                      - /url: /item/2842
+                    - text: ","
+                    - link "3 Greater Astral Essence" [ref=f9e763]:
+                      - /url: /item/11082
+                - row [ref=f9e764]:
+                  - cell "125" [ref=f9e765]
+                  - cell [ref=f9e766]:
+                    - link "Flame Leggings" [ref=f9e767]:
+                      - /url: /item/253991
+                  - cell [ref=f9e769]:
+                    - link "14 Bolt of Silk Cloth" [ref=f9e770]:
+                      - /url: /item/4305
+                    - text: ","
+                    - link "3 Fine Thread" [ref=f9e771]:
+                      - /url: /item/2321
+                    - text: ","
+                    - link "8 Cerulean Dye" [ref=f9e772]:
+                      - /url: /item/249409
+                    - text: ","
+                    - link "8 Fire Oil" [ref=f9e773]:
+                      - /url: /item/6371
+                    - text: ","
+                    - link "2 Silver Bar" [ref=f9e774]:
+                      - /url: /item/2842
+                    - text: ","
+                    - link "3 Greater Astral Essence" [ref=f9e775]:
+                      - /url: /item/11082
+                - row [ref=f9e776]:
+                  - cell "125" [ref=f9e777]
+                  - cell [ref=f9e778]:
+                    - link "Shadow Leggings" [ref=f9e779]:
+                      - /url: /item/253993
+                  - cell [ref=f9e781]:
+                    - link "14 Bolt of Silk Cloth" [ref=f9e782]:
+                      - /url: /item/4305
+                    - text: ","
+                    - link "3 Fine Thread" [ref=f9e783]:
+                      - /url: /item/2321
+                    - text: ","
+                    - link "8 Cerulean Dye" [ref=f9e784]:
+                      - /url: /item/249409
+                    - text: ","
+                    - link "8 Shadowgem" [ref=f9e785]:
+                      - /url: /item/1210
+                    - text: ","
+                    - link "2 Silver Bar" [ref=f9e786]:
+                      - /url: /item/2842
+                    - text: ","
+                    - link "3 Greater Astral Essence" [ref=f9e787]:
+                      - /url: /item/11082
+                - row [ref=f9e788]:
+                  - cell "125" [ref=f9e789]
+                  - cell [ref=f9e790]:
+                    - link "Pearly Leggings" [ref=f9e791]:
+                      - /url: /item/253995
+                  - cell [ref=f9e793]:
+                    - link "14 Bolt of Silk Cloth" [ref=f9e794]:
+                      - /url: /item/4305
+                    - text: ","
+                    - link "3 Fine Thread" [ref=f9e795]:
+                      - /url: /item/2321
+                    - text: ","
+                    - link "8 Cerulean Dye" [ref=f9e796]:
+                      - /url: /item/249409
+                    - text: ","
+                    - link "8 Small Lustrous Pearl" [ref=f9e797]:
+                      - /url: /item/5498
+                    - text: ","
+                    - link "2 Silver Bar" [ref=f9e798]:
+                      - /url: /item/2842
+                    - text: ","
+                    - link "3 Greater Astral Essence" [ref=f9e799]:
+                      - /url: /item/11082
+                - row [ref=f9e800]:
+                  - cell "125" [ref=f9e801]
+                  - cell [ref=f9e802]:
+                    - link "Shining Leggings" [ref=f9e803]:
+                      - /url: /item/253997
+                  - cell [ref=f9e805]:
+                    - link "14 Bolt of Silk Cloth" [ref=f9e806]:
+                      - /url: /item/4305
+                    - text: ","
+                    - link "3 Fine Thread" [ref=f9e807]:
+                      - /url: /item/2321
+                    - text: ","
+                    - link "8 Cerulean Dye" [ref=f9e808]:
+                      - /url: /item/249409
+                    - text: ","
+                    - link "8 Pyrite" [ref=f9e809]:
+                      - /url: /item/249391
+                    - text: ","
+                    - link "2 Silver Bar" [ref=f9e810]:
+                      - /url: /item/2842
+                    - text: ","
+                    - link "3 Greater Astral Essence" [ref=f9e811]:
+                      - /url: /item/11082
+                - row [ref=f9e812]:
+                  - cell "140" [ref=f9e813]
+                  - cell [ref=f9e814]:
+                    - link "Gilded Slippers" [ref=f9e815]:
+                      - /url: /item/254001
+                  - cell [ref=f9e817]:
+                    - link "8 Bolt of Mageweave" [ref=f9e818]:
+                      - /url: /item/4339
+                    - text: ","
+                    - link "4 Heavy Silken Thread" [ref=f9e819]:
+                      - /url: /item/8343
+                    - text: ","
+                    - link "2 Magenta Dye" [ref=f9e820]:
+                      - /url: /item/249430
+                    - text: ","
+                    - link "2 Cerulean Dye" [ref=f9e821]:
+                      - /url: /item/249409
+                    - text: ","
+                    - link "2 Gold Bar" [ref=f9e822]:
+                      - /url: /item/3577
+                - row [ref=f9e823]:
+                  - cell "140" [ref=f9e824]
+                  - cell [ref=f9e825]:
+                    - link "Frothing Slippers" [ref=f9e826]:
+                      - /url: /item/254003
+                  - cell [ref=f9e828]:
+                    - link "8 Bolt of Mageweave" [ref=f9e829]:
+                      - /url: /item/4339
+                    - text: ","
+                    - link "4 Heavy Silken Thread" [ref=f9e830]:
+                      - /url: /item/8343
+                    - text: ","
+                    - link "2 Magenta Dye" [ref=f9e831]:
+                      - /url: /item/249430
+                    - text: ","
+                    - link "2 Cerulean Dye" [ref=f9e832]:
+                      - /url: /item/249409
+                    - text: ","
+                    - link "2 Globe of Water" [ref=f9e833]:
+                      - /url: /item/7079
+                - row [ref=f9e834]:
+                  - cell "140" [ref=f9e835]
+                  - cell [ref=f9e836]:
+                    - link "Fiery Slippers" [ref=f9e837]:
+                      - /url: /item/254005
+                  - cell [ref=f9e839]:
+                    - link "8 Bolt of Mageweave" [ref=f9e840]:
+                      - /url: /item/4339
+                    - text: ","
+                    - link "4 Heavy Silken Thread" [ref=f9e841]:
+                      - /url: /item/8343
+                    - text: ","
+                    - link "2 Magenta Dye" [ref=f9e842]:
+                      - /url: /item/249430
+                    - text: ","
+                    - link "2 Cerulean Dye" [ref=f9e843]:
+                      - /url: /item/249409
+                    - text: ","
+                    - link "2 Heart of Fire" [ref=f9e844]:
+                      - /url: /item/7077
+                - row [ref=f9e845]:
+                  - cell "140" [ref=f9e846]
+                  - cell [ref=f9e847]:
+                    - link "Black Slippers" [ref=f9e848]:
+                      - /url: /item/254007
+                  - cell [ref=f9e850]:
+                    - link "8 Bolt of Mageweave" [ref=f9e851]:
+                      - /url: /item/4339
+                    - text: ","
+                    - link "4 Heavy Silken Thread" [ref=f9e852]:
+                      - /url: /item/8343
+                    - text: ","
+                    - link "2 Magenta Dye" [ref=f9e853]:
+                      - /url: /item/249430
+                    - text: ","
+                    - link "2 Cerulean Dye" [ref=f9e854]:
+                      - /url: /item/249409
+                    - text: ","
+                    - link "2 Black Pearl" [ref=f9e855]:
+                      - /url: /item/7971
+                - row [ref=f9e856]:
+                  - cell "140" [ref=f9e857]
+                  - cell [ref=f9e858]:
+                    - link "Golden Slippers" [ref=f9e859]:
+                      - /url: /item/254009
+                  - cell [ref=f9e861]:
+                    - link "8 Bolt of Mageweave" [ref=f9e862]:
+                      - /url: /item/4339
+                    - text: ","
+                    - link "4 Heavy Silken Thread" [ref=f9e863]:
+                      - /url: /item/8343
+                    - text: ","
+                    - link "2 Magenta Dye" [ref=f9e864]:
+                      - /url: /item/249430
+                    - text: ","
+                    - link "2 Cerulean Dye" [ref=f9e865]:
+                      - /url: /item/249409
+                    - text: ","
+                    - link "2 Golden Pearl" [ref=f9e866]:
+                      - /url: /item/13926
+                - row [ref=f9e867]:
+                  - cell "140" [ref=f9e868]
+                  - cell [ref=f9e869]:
+                    - link "Radiant Slippers" [ref=f9e870]:
+                      - /url: /item/254011
+                  - cell [ref=f9e872]:
+                    - link "8 Bolt of Mageweave" [ref=f9e873]:
+                      - /url: /item/4339
+                    - text: ","
+                    - link "4 Heavy Silken Thread" [ref=f9e874]:
+                      - /url: /item/8343
+                    - text: ","
+                    - link "2 Magenta Dye" [ref=f9e875]:
+                      - /url: /item/249430
+                    - text: ","
+                    - link "2 Cerulean Dye" [ref=f9e876]:
+                      - /url: /item/249409
+                    - text: ","
+                    - link "2 Large Radiant Shard" [ref=f9e877]:
+                      - /url: /item/11178
+                - row [ref=f9e878]:
+                  - cell "165" [ref=f9e879]
+                  - cell [ref=f9e880]:
+                    - link "Icy Cloak" [ref=f9e881]:
+                      - /url: /item/4327
+                    - text: Classic
+                  - cell [ref=f9e883]:
+                    - link "3 Bolt of Mageweave" [ref=f9e884]:
+                      - /url: /item/4339
+                    - text: ","
+                    - link "2 Silken Thread" [ref=f9e885]:
+                      - /url: /item/4291
+                    - text: ","
+                    - link "1 Frost Oil" [ref=f9e886]:
+                      - /url: /item/3829
+                    - text: ","
+                    - link "2 Thick Spider's Silk" [ref=f9e887]:
+                      - /url: /item/4337
+                - row [ref=f9e888]:
+                  - cell "165" [ref=f9e889]
+                  - cell [ref=f9e890]:
+                    - link "Gilded Handwraps" [ref=f9e891]:
+                      - /url: /item/254021
+                  - cell [ref=f9e893]:
+                    - link "12 Bolt of Mageweave" [ref=f9e894]:
+                      - /url: /item/4339
+                    - text: ","
+                    - link "4 Heavy Silken Thread" [ref=f9e895]:
+                      - /url: /item/8343
+                    - text: ","
+                    - link "2 Magenta Dye" [ref=f9e896]:
+                      - /url: /item/249430
+                    - text: ","
+                    - link "1 Cerulean Dye" [ref=f9e897]:
+                      - /url: /item/249409
+                    - text: ","
+                    - link "4 Gold Bar" [ref=f9e898]:
+                      - /url: /item/3577
+                - row [ref=f9e899]:
+                  - cell "165" [ref=f9e900]
+                  - cell [ref=f9e901]:
+                    - link "Frothing Handwraps" [ref=f9e902]:
+                      - /url: /item/254023
+                  - cell [ref=f9e904]:
+                    - link "12 Bolt of Mageweave" [ref=f9e905]:
+                      - /url: /item/4339
+                    - text: ","
+                    - link "4 Heavy Silken Thread" [ref=f9e906]:
+                      - /url: /item/8343
+                    - text: ","
+                    - link "2 Magenta Dye" [ref=f9e907]:
+                      - /url: /item/249430
+                    - text: ","
+                    - link "1 Cerulean Dye" [ref=f9e908]:
+                      - /url: /item/249409
+                    - text: ","
+                    - link "4 Globe of Water" [ref=f9e909]:
+                      - /url: /item/7079
+                - row [ref=f9e910]:
+                  - cell "165" [ref=f9e911]
+                  - cell [ref=f9e912]:
+                    - link "Fiery Handwraps" [ref=f9e913]:
+                      - /url: /item/254025
+                  - cell [ref=f9e915]:
+                    - link "12 Bolt of Mageweave" [ref=f9e916]:
+                      - /url: /item/4339
+                    - text: ","
+                    - link "4 Heavy Silken Thread" [ref=f9e917]:
+                      - /url: /item/8343
+                    - text: ","
+                    - link "2 Magenta Dye" [ref=f9e918]:
+                      - /url: /item/249430
+                    - text: ","
+                    - link "1 Cerulean Dye" [ref=f9e919]:
+                      - /url: /item/249409
+                    - text: ","
+                    - link "4 Heart of Fire" [ref=f9e920]:
+                      - /url: /item/7077
+                - row [ref=f9e921]:
+                  - cell "165" [ref=f9e922]
+                  - cell [ref=f9e923]:
+                    - link "Black Handwraps" [ref=f9e924]:
+                      - /url: /item/254027
+                  - cell [ref=f9e926]:
+                    - link "12 Bolt of Mageweave" [ref=f9e927]:
+                      - /url: /item/4339
+                    - text: ","
+                    - link "4 Heavy Silken Thread" [ref=f9e928]:
+                      - /url: /item/8343
+                    - text: ","
+                    - link "2 Magenta Dye" [ref=f9e929]:
+                      - /url: /item/249430
+                    - text: ","
+                    - link "1 Cerulean Dye" [ref=f9e930]:
+                      - /url: /item/249409
+                    - text: ","
+                    - link "4 Black Pearl" [ref=f9e931]:
+                      - /url: /item/7971
+                - row [ref=f9e932]:
+                  - cell "165" [ref=f9e933]
+                  - cell [ref=f9e934]:
+                    - link "Golden Handwraps" [ref=f9e935]:
+                      - /url: /item/254029
+                  - cell [ref=f9e937]:
+                    - link "12 Bolt of Mageweave" [ref=f9e938]:
+                      - /url: /item/4339
+                    - text: ","
+                    - link "4 Heavy Silken Thread" [ref=f9e939]:
+                      - /url: /item/8343
+                    - text: ","
+                    - link "2 Magenta Dye" [ref=f9e940]:
+                      - /url: /item/249430
+                    - text: ","
+                    - link "1 Cerulean Dye" [ref=f9e941]:
+                      - /url: /item/249409
+                    - text: ","
+                    - link "4 Golden Pearl" [ref=f9e942]:
+                      - /url: /item/13926
+                - row [ref=f9e943]:
+                  - cell "165" [ref=f9e944]
+                  - cell [ref=f9e945]:
+                    - link "Radiant Handwraps" [ref=f9e946]:
+                      - /url: /item/254031
+                  - cell [ref=f9e948]:
+                    - link "12 Bolt of Mageweave" [ref=f9e949]:
+                      - /url: /item/4339
+                    - text: ","
+                    - link "4 Heavy Silken Thread" [ref=f9e950]:
+                      - /url: /item/8343
+                    - text: ","
+                    - link "2 Magenta Dye" [ref=f9e951]:
+                      - /url: /item/249430
+                    - text: ","
+                    - link "1 Cerulean Dye" [ref=f9e952]:
+                      - /url: /item/249409
+                    - text: ","
+                    - link "4 Large Radiant Shard" [ref=f9e953]:
+                      - /url: /item/11178
+                - row [ref=f9e954]:
+                  - cell "175" [ref=f9e955]
+                  - cell [ref=f9e956]:
+                    - link "Robe of Power" [ref=f9e957]:
+                      - /url: /item/7054
+                    - text: Classic
+                  - cell [ref=f9e959]:
+                    - link "2 Bolt of Mageweave" [ref=f9e960]:
+                      - /url: /item/4339
+                    - text: ","
+                    - link "2 Elemental Earth" [ref=f9e961]:
+                      - /url: /item/7067
+                    - text: ","
+                    - link "2 Elemental Water" [ref=f9e962]:
+                      - /url: /item/7070
+                    - text: ","
+                    - link "2 Elemental Fire" [ref=f9e963]:
+                      - /url: /item/7068
+                    - text: ","
+                    - link "2 Elemental Air" [ref=f9e964]:
+                      - /url: /item/7069
+                    - text: ","
+                    - link "2 Silken Thread" [ref=f9e965]:
+                      - /url: /item/4291
+                - row [ref=f9e966]:
+                  - cell "190" [ref=f9e967]
+                  - cell [ref=f9e968]:
+                    - link "Gilded Cord" [ref=f9e969]:
+                      - /url: /item/254037
+                  - cell [ref=f9e971]:
+                    - link "28 Bolt of Mageweave" [ref=f9e972]:
+                      - /url: /item/4339
+                    - text: ","
+                    - link "4 Heavy Silken Thread" [ref=f9e973]:
+                      - /url: /item/8343
+                    - text: ","
+                    - link "6 Magenta Dye" [ref=f9e974]:
+                      - /url: /item/249430
+                    - text: ","
+                    - link "4 Cerulean Dye" [ref=f9e975]:
+                      - /url: /item/249409
+                    - text: ","
+                    - link "12 Gold Bar" [ref=f9e976]:
+                      - /url: /item/3577
+                - row [ref=f9e977]:
+                  - cell "190" [ref=f9e978]
+                  - cell [ref=f9e979]:
+                    - link "Frothing Cord" [ref=f9e980]:
+                      - /url: /item/254039
+                  - cell [ref=f9e982]:
+                    - link "28 Bolt of Mageweave" [ref=f9e983]:
+                      - /url: /item/4339
+                    - text: ","
+                    - link "4 Heavy Silken Thread" [ref=f9e984]:
+                      - /url: /item/8343
+                    - text: ","
+                    - link "6 Magenta Dye" [ref=f9e985]:
+                      - /url: /item/249430
+                    - text: ","
+                    - link "4 Cerulean Dye" [ref=f9e986]:
+                      - /url: /item/249409
+                    - text: ","
+                    - link "12 Globe of Water" [ref=f9e987]:
+                      - /url: /item/7079
+                - row [ref=f9e988]:
+                  - cell "190" [ref=f9e989]
+                  - cell [ref=f9e990]:
+                    - link "Fiery Cord" [ref=f9e991]:
+                      - /url: /item/254041
+                  - cell [ref=f9e993]:
+                    - link "28 Bolt of Mageweave" [ref=f9e994]:
+                      - /url: /item/4339
+                    - text: ","
+                    - link "4 Heavy Silken Thread" [ref=f9e995]:
+                      - /url: /item/8343
+                    - text: ","
+                    - link "6 Magenta Dye" [ref=f9e996]:
+                      - /url: /item/249430
+                    - text: ","
+                    - link "4 Cerulean Dye" [ref=f9e997]:
+                      - /url: /item/249409
+                    - text: ","
+                    - link "12 Heart of Fire" [ref=f9e998]:
+                      - /url: /item/7077
+                - row [ref=f9e999]:
+                  - cell "190" [ref=f9e1000]
+                  - cell [ref=f9e1001]:
+                    - link "Black Cord" [ref=f9e1002]:
+                      - /url: /item/254043
+                  - cell [ref=f9e1004]:
+                    - link "28 Bolt of Mageweave" [ref=f9e1005]:
+                      - /url: /item/4339
+                    - text: ","
+                    - link "4 Heavy Silken Thread" [ref=f9e1006]:
+                      - /url: /item/8343
+                    - text: ","
+                    - link "6 Magenta Dye" [ref=f9e1007]:
+                      - /url: /item/249430
+                    - text: ","
+                    - link "4 Cerulean Dye" [ref=f9e1008]:
+                      - /url: /item/249409
+                    - text: ","
+                    - link "12 Black Pearl" [ref=f9e1009]:
+                      - /url: /item/7971
+                - row [ref=f9e1010]:
+                  - cell "190" [ref=f9e1011]
+                  - cell [ref=f9e1012]:
+                    - link "Golden Cord" [ref=f9e1013]:
+                      - /url: /item/254045
+                  - cell [ref=f9e1015]:
+                    - link "28 Bolt of Mageweave" [ref=f9e1016]:
+                      - /url: /item/4339
+                    - text: ","
+                    - link "4 Heavy Silken Thread" [ref=f9e1017]:
+                      - /url: /item/8343
+                    - text: ","
+                    - link "6 Magenta Dye" [ref=f9e1018]:
+                      - /url: /item/249430
+                    - text: ","
+                    - link "4 Cerulean Dye" [ref=f9e1019]:
+                      - /url: /item/249409
+                    - text: ","
+                    - link "12 Golden Pearl" [ref=f9e1020]:
+                      - /url: /item/13926
+                - row [ref=f9e1021]:
+                  - cell "190" [ref=f9e1022]
+                  - cell [ref=f9e1023]:
+                    - link "Radiant Cord" [ref=f9e1024]:
+                      - /url: /item/254047
+                  - cell [ref=f9e1026]:
+                    - link "28 Bolt of Mageweave" [ref=f9e1027]:
+                      - /url: /item/4339
+                    - text: ","
+                    - link "4 Heavy Silken Thread" [ref=f9e1028]:
+                      - /url: /item/8343
+                    - text: ","
+                    - link "6 Magenta Dye" [ref=f9e1029]:
+                      - /url: /item/249430
+                    - text: ","
+                    - link "4 Cerulean Dye" [ref=f9e1030]:
+                      - /url: /item/249409
+                    - text: ","
+                    - link "12 Large Radiant Shard" [ref=f9e1031]:
+                      - /url: /item/11178
+                - row [ref=f9e1032]:
+                  - cell "195" [ref=f9e1033]
+                  - cell [ref=f9e1034]:
+                    - link "Nethergeld Shoulders" [ref=f9e1035]:
+                      - /url: /item/254049
+                  - cell [ref=f9e1037]:
+                    - link "16 Bolt of Mageweave" [ref=f9e1038]:
+                      - /url: /item/4339
+                    - text: ","
+                    - link "3 Heavy Silken Thread" [ref=f9e1039]:
+                      - /url: /item/8343
+                    - text: ","
+                    - link "4 Magenta Dye" [ref=f9e1040]:
+                      - /url: /item/249430
+                    - text: ","
+                    - link "3 Cerulean Dye" [ref=f9e1041]:
+                      - /url: /item/249409
+                    - text: ","
+                    - link "8 Gold Bar" [ref=f9e1042]:
+                      - /url: /item/3577
+                    - text: ","
+                    - link "2 Greater Nether Essence" [ref=f9e1043]:
+                      - /url: /item/11175
+                - row [ref=f9e1044]:
+                  - cell "195" [ref=f9e1045]
+                  - cell [ref=f9e1046]:
+                    - link "Netherfroth Shoulders" [ref=f9e1047]:
+                      - /url: /item/254051
+                  - cell [ref=f9e1049]:
+                    - link "16 Bolt of Mageweave" [ref=f9e1050]:
+                      - /url: /item/4339
+                    - text: ","
+                    - link "3 Heavy Silken Thread" [ref=f9e1051]:
+                      - /url: /item/8343
+                    - text: ","
+                    - link "4 Magenta Dye" [ref=f9e1052]:
+                      - /url: /item/249430
+                    - text: ","
+                    - link "3 Cerulean Dye" [ref=f9e1053]:
+                      - /url: /item/249409
+                    - text: ","
+                    - link "8 Globe of Water" [ref=f9e1054]:
+                      - /url: /item/7079
+                    - text: ","
+                    - link "2 Greater Nether Essence" [ref=f9e1055]:
+                      - /url: /item/11175
+                - row [ref=f9e1056]:
+                  - cell "195" [ref=f9e1057]
+                  - cell [ref=f9e1058]:
+                    - link "Netherflame Shoulders" [ref=f9e1059]:
+                      - /url: /item/254053
+                  - cell [ref=f9e1061]:
+                    - link "16 Bolt of Mageweave" [ref=f9e1062]:
+                      - /url: /item/4339
+                    - text: ","
+                    - link "3 Heavy Silken Thread" [ref=f9e1063]:
+                      - /url: /item/8343
+                    - text: ","
+                    - link "4 Magenta Dye" [ref=f9e1064]:
+                      - /url: /item/249430
+                    - text: ","
+                    - link "3 Cerulean Dye" [ref=f9e1065]:
+                      - /url: /item/249409
+                    - text: ","
+                    - link "8 Heart of Fire" [ref=f9e1066]:
+                      - /url: /item/7077
+                    - text: ","
+                    - link "2 Greater Nether Essence" [ref=f9e1067]:
+                      - /url: /item/11175
+                - row [ref=f9e1068]:
+                  - cell "195" [ref=f9e1069]
+                  - cell [ref=f9e1070]:
+                    - link "Netherpearl Shoulders" [ref=f9e1071]:
+                      - /url: /item/254055
+                  - cell [ref=f9e1073]:
+                    - link "16 Bolt of Mageweave" [ref=f9e1074]:
+                      - /url: /item/4339
+                    - text: ","
+                    - link "3 Heavy Silken Thread" [ref=f9e1075]:
+                      - /url: /item/8343
+                    - text: ","
+                    - link "4 Magenta Dye" [ref=f9e1076]:
+                      - /url: /item/249430
+                    - text: ","
+                    - link "3 Cerulean Dye" [ref=f9e1077]:
+                      - /url: /item/249409
+                    - text: ","
+                    - link "8 Black Pearl" [ref=f9e1078]:
+                      - /url: /item/7971
+                    - text: ","
+                    - link "2 Greater Nether Essence" [ref=f9e1079]:
+                      - /url: /item/11175
+                - row [ref=f9e1080]:
+                  - cell "195" [ref=f9e1081]
+                  - cell [ref=f9e1082]:
+                    - link "Nethershine Shoulders" [ref=f9e1083]:
+                      - /url: /item/254057
+                  - cell [ref=f9e1085]:
+                    - link "16 Bolt of Mageweave" [ref=f9e1086]:
+                      - /url: /item/4339
+                    - text: ","
+                    - link "3 Heavy Silken Thread" [ref=f9e1087]:
+                      - /url: /item/8343
+                    - text: ","
+                    - link "4 Magenta Dye" [ref=f9e1088]:
+                      - /url: /item/249430
+                    - text: ","
+                    - link "3 Cerulean Dye" [ref=f9e1089]:
+                      - /url: /item/249409
+                    - text: ","
+                    - link "8 Golden Pearl" [ref=f9e1090]:
+                      - /url: /item/13926
+                    - text: ","
+                    - link "2 Greater Nether Essence" [ref=f9e1091]:
+                      - /url: /item/11175
+                - row [ref=f9e1092]:
+                  - cell "195" [ref=f9e1093]
+                  - cell [ref=f9e1094]:
+                    - link "Netherlight Shoulders" [ref=f9e1095]:
+                      - /url: /item/254059
+                  - cell [ref=f9e1097]:
+                    - link "16 Bolt of Mageweave" [ref=f9e1098]:
+                      - /url: /item/4339
+                    - text: ","
+                    - link "3 Heavy Silken Thread" [ref=f9e1099]:
+                      - /url: /item/8343
+                    - text: ","
+                    - link "4 Magenta Dye" [ref=f9e1100]:
+                      - /url: /item/249430
+                    - text: ","
+                    - link "3 Cerulean Dye" [ref=f9e1101]:
+                      - /url: /item/249409
+                    - text: ","
+                    - link "8 Large Radiant Shard" [ref=f9e1102]:
+                      - /url: /item/11178
+                    - text: ","
+                    - link "2 Greater Nether Essence" [ref=f9e1103]:
+                      - /url: /item/11175
+                - row [ref=f9e1104]:
+                  - cell "205" [ref=f9e1105]
+                  - cell [ref=f9e1106]:
+                    - link "Dreamweave Gloves" [ref=f9e1107]:
+                      - /url: /item/10019
+                    - text: Classic
+                  - cell [ref=f9e1109]:
+                    - link "4 Bolt of Mageweave" [ref=f9e1110]:
+                      - /url: /item/4339
+                    - text: ","
+                    - link "4 Wildvine" [ref=f9e1111]:
+                      - /url: /item/8153
+                    - text: ","
+                    - link "2 Heart of the Wild" [ref=f9e1112]:
+                      - /url: /item/10286
+                    - text: ","
+                    - link "2 Heavy Silken Thread" [ref=f9e1113]:
+                      - /url: /item/8343
+                - row [ref=f9e1114]:
+                  - cell "205" [ref=f9e1115]
+                  - cell [ref=f9e1116]:
+                    - link "Dreamweave Vest" [ref=f9e1117]:
+                      - /url: /item/10021
+                    - text: Classic
+                  - cell [ref=f9e1119]:
+                    - link "6 Bolt of Mageweave" [ref=f9e1120]:
+                      - /url: /item/4339
+                    - text: ","
+                    - link "6 Wildvine" [ref=f9e1121]:
+                      - /url: /item/8153
+                    - text: ","
+                    - link "2 Heart of the Wild" [ref=f9e1122]:
+                      - /url: /item/10286
+                    - text: ","
+                    - link "2 Heavy Silken Thread" [ref=f9e1123]:
+                      - /url: /item/8343
+                - row [ref=f9e1124]:
+                  - cell "205" [ref=f9e1125]
+                  - cell [ref=f9e1126]:
+                    - link "Nethergeld Cuffs" [ref=f9e1127]:
+                      - /url: /item/254061
+                  - cell [ref=f9e1129]:
+                    - link "18 Bolt of Mageweave" [ref=f9e1130]:
+                      - /url: /item/4339
+                    - text: ","
+                    - link "3 Heavy Silken Thread" [ref=f9e1131]:
+                      - /url: /item/8343
+                    - text: ","
+                    - link "6 Magenta Dye" [ref=f9e1132]:
+                      - /url: /item/249430
+                    - text: ","
+                    - link "4 Cerulean Dye" [ref=f9e1133]:
+                      - /url: /item/249409
+                    - text: ","
+                    - link "10 Gold Bar" [ref=f9e1134]:
+                      - /url: /item/3577
+                    - text: ","
+                    - link "4 Greater Nether Essence" [ref=f9e1135]:
+                      - /url: /item/11175
+                - row [ref=f9e1136]:
+                  - cell "205" [ref=f9e1137]
+                  - cell [ref=f9e1138]:
+                    - link "Netherfroth Cuffs" [ref=f9e1139]:
+                      - /url: /item/254063
+                  - cell [ref=f9e1141]:
+                    - link "18 Bolt of Mageweave" [ref=f9e1142]:
+                      - /url: /item/4339
+                    - text: ","
+                    - link "3 Heavy Silken Thread" [ref=f9e1143]:
+                      - /url: /item/8343
+                    - text: ","
+                    - link "6 Magenta Dye" [ref=f9e1144]:
+                      - /url: /item/249430
+                    - text: ","
+                    - link "4 Cerulean Dye" [ref=f9e1145]:
+                      - /url: /item/249409
+                    - text: ","
+                    - link "10 Globe of Water" [ref=f9e1146]:
+                      - /url: /item/7079
+                    - text: ","
+                    - link "4 Greater Nether Essence" [ref=f9e1147]:
+                      - /url: /item/11175
+                - row [ref=f9e1148]:
+                  - cell "205" [ref=f9e1149]
+                  - cell [ref=f9e1150]:
+                    - link "Netherflame Cuffs" [ref=f9e1151]:
+                      - /url: /item/254065
+                  - cell [ref=f9e1153]:
+                    - link "18 Bolt of Mageweave" [ref=f9e1154]:
+                      - /url: /item/4339
+                    - text: ","
+                    - link "3 Heavy Silken Thread" [ref=f9e1155]:
+                      - /url: /item/8343
+                    - text: ","
+                    - link "6 Magenta Dye" [ref=f9e1156]:
+                      - /url: /item/249430
+                    - text: ","
+                    - link "4 Cerulean Dye" [ref=f9e1157]:
+                      - /url: /item/249409
+                    - text: ","
+                    - link "10 Heart of Fire" [ref=f9e1158]:
+                      - /url: /item/7077
+                    - text: ","
+                    - link "4 Greater Nether Essence" [ref=f9e1159]:
+                      - /url: /item/11175
+                - row [ref=f9e1160]:
+                  - cell "205" [ref=f9e1161]
+                  - cell [ref=f9e1162]:
+                    - link "Netherpearl Cuffs" [ref=f9e1163]:
+                      - /url: /item/254067
+                  - cell [ref=f9e1165]:
+                    - link "18 Bolt of Mageweave" [ref=f9e1166]:
+                      - /url: /item/4339
+                    - text: ","
+                    - link "3 Heavy Silken Thread" [ref=f9e1167]:
+                      - /url: /item/8343
+                    - text: ","
+                    - link "6 Magenta Dye" [ref=f9e1168]:
+                      - /url: /item/249430
+                    - text: ","
+                    - link "4 Cerulean Dye" [ref=f9e1169]:
+                      - /url: /item/249409
+                    - text: ","
+                    - link "10 Black Pearl" [ref=f9e1170]:
+                      - /url: /item/7971
+                    - text: ","
+                    - link "4 Greater Nether Essence" [ref=f9e1171]:
+                      - /url: /item/11175
+                - row [ref=f9e1172]:
+                  - cell "205" [ref=f9e1173]
+                  - cell [ref=f9e1174]:
+                    - link "Nethershine Cuffs" [ref=f9e1175]:
+                      - /url: /item/254069
+                  - cell [ref=f9e1177]:
+                    - link "18 Bolt of Mageweave" [ref=f9e1178]:
+                      - /url: /item/4339
+                    - text: ","
+                    - link "3 Heavy Silken Thread" [ref=f9e1179]:
+                      - /url: /item/8343
+                    - text: ","
+                    - link "6 Magenta Dye" [ref=f9e1180]:
+                      - /url: /item/249430
+                    - text: ","
+                    - link "4 Cerulean Dye" [ref=f9e1181]:
+                      - /url: /item/249409
+                    - text: ","
+                    - link "10 Golden Pearl" [ref=f9e1182]:
+                      - /url: /item/13926
+                    - text: ","
+                    - link "4 Greater Nether Essence" [ref=f9e1183]:
+                      - /url: /item/11175
+                - row [ref=f9e1184]:
+                  - cell "205" [ref=f9e1185]
+                  - cell [ref=f9e1186]:
+                    - link "Netherlight Cuffs" [ref=f9e1187]:
+                      - /url: /item/254071
+                  - cell [ref=f9e1189]:
+                    - link "18 Bolt of Mageweave" [ref=f9e1190]:
+                      - /url: /item/4339
+                    - text: ","
+                    - link "3 Heavy Silken Thread" [ref=f9e1191]:
+                      - /url: /item/8343
+                    - text: ","
+                    - link "6 Magenta Dye" [ref=f9e1192]:
+                      - /url: /item/249430
+                    - text: ","
+                    - link "4 Cerulean Dye" [ref=f9e1193]:
+                      - /url: /item/249409
+                    - text: ","
+                    - link "10 Large Radiant Shard" [ref=f9e1194]:
+                      - /url: /item/11178
+                    - text: ","
+                    - link "4 Greater Nether Essence" [ref=f9e1195]:
+                      - /url: /item/11175
+                - row [ref=f9e1196]:
+                  - cell "215" [ref=f9e1197]
+                  - cell [ref=f9e1198]:
+                    - link "Gilded Waistcord" [ref=f9e1199]:
+                      - /url: /item/254081
+                  - cell [ref=f9e1201]:
+                    - link "8 Bolt of Runecloth" [ref=f9e1202]:
+                      - /url: /item/14048
+                    - text: ","
+                    - link "4 Heavy Silken Thread" [ref=f9e1203]:
+                      - /url: /item/8343
+                    - text: ","
+                    - link "8 Magenta Dye" [ref=f9e1204]:
+                      - /url: /item/249430
+                    - text: ","
+                    - link "5 Cerulean Dye" [ref=f9e1205]:
+                      - /url: /item/249409
+                    - text: ","
+                    - link "12 Gold Bar" [ref=f9e1206]:
+                      - /url: /item/3577
+                - row [ref=f9e1207]:
+                  - cell "215" [ref=f9e1208]
+                  - cell [ref=f9e1209]:
+                    - link "Frothing Waistcord" [ref=f9e1210]:
+                      - /url: /item/254083
+                  - cell [ref=f9e1212]:
+                    - link "8 Bolt of Runecloth" [ref=f9e1213]:
+                      - /url: /item/14048
+                    - text: ","
+                    - link "4 Heavy Silken Thread" [ref=f9e1214]:
+                      - /url: /item/8343
+                    - text: ","
+                    - link "8 Magenta Dye" [ref=f9e1215]:
+                      - /url: /item/249430
+                    - text: ","
+                    - link "5 Cerulean Dye" [ref=f9e1216]:
+                      - /url: /item/249409
+                    - text: ","
+                    - link "12 Globe of Water" [ref=f9e1217]:
+                      - /url: /item/7079
+                - row [ref=f9e1218]:
+                  - cell "215" [ref=f9e1219]
+                  - cell [ref=f9e1220]:
+                    - link "Fiery Waistcord" [ref=f9e1221]:
+                      - /url: /item/254085
+                  - cell [ref=f9e1223]:
+                    - link "8 Bolt of Runecloth" [ref=f9e1224]:
+                      - /url: /item/14048
+                    - text: ","
+                    - link "4 Heavy Silken Thread" [ref=f9e1225]:
+                      - /url: /item/8343
+                    - text: ","
+                    - link "8 Magenta Dye" [ref=f9e1226]:
+                      - /url: /item/249430
+                    - text: ","
+                    - link "5 Cerulean Dye" [ref=f9e1227]:
+                      - /url: /item/249409
+                    - text: ","
+                    - link "12 Heart of Fire" [ref=f9e1228]:
+                      - /url: /item/7077
+                - row [ref=f9e1229]:
+                  - cell "215" [ref=f9e1230]
+                  - cell [ref=f9e1231]:
+                    - link "Black Waistcord" [ref=f9e1232]:
+                      - /url: /item/254087
+                  - cell [ref=f9e1234]:
+                    - link "8 Bolt of Runecloth" [ref=f9e1235]:
+                      - /url: /item/14048
+                    - text: ","
+                    - link "4 Heavy Silken Thread" [ref=f9e1236]:
+                      - /url: /item/8343
+                    - text: ","
+                    - link "8 Magenta Dye" [ref=f9e1237]:
+                      - /url: /item/249430
+                    - text: ","
+                    - link "5 Cerulean Dye" [ref=f9e1238]:
+                      - /url: /item/249409
+                    - text: ","
+                    - link "12 Black Pearl" [ref=f9e1239]:
+                      - /url: /item/7971
+                - row [ref=f9e1240]:
+                  - cell "215" [ref=f9e1241]
+                  - cell [ref=f9e1242]:
+                    - link "Golden Waistcord" [ref=f9e1243]:
+                      - /url: /item/254089
+                  - cell [ref=f9e1245]:
+                    - link "8 Bolt of Runecloth" [ref=f9e1246]:
+                      - /url: /item/14048
+                    - text: ","
+                    - link "4 Heavy Silken Thread" [ref=f9e1247]:
+                      - /url: /item/8343
+                    - text: ","
+                    - link "8 Magenta Dye" [ref=f9e1248]:
+                      - /url: /item/249430
+                    - text: ","
+                    - link "5 Cerulean Dye" [ref=f9e1249]:
+                      - /url: /item/249409
+                    - text: ","
+                    - link "12 Golden Pearl" [ref=f9e1250]:
+                      - /url: /item/13926
+                - row [ref=f9e1251]:
+                  - cell "215" [ref=f9e1252]
+                  - cell [ref=f9e1253]:
+                    - link "Radiant Waistcord" [ref=f9e1254]:
+                      - /url: /item/254091
+                  - cell [ref=f9e1256]:
+                    - link "8 Bolt of Runecloth" [ref=f9e1257]:
+                      - /url: /item/14048
+                    - text: ","
+                    - link "4 Heavy Silken Thread" [ref=f9e1258]:
+                      - /url: /item/8343
+                    - text: ","
+                    - link "8 Magenta Dye" [ref=f9e1259]:
+                      - /url: /item/249430
+                    - text: ","
+                    - link "5 Cerulean Dye" [ref=f9e1260]:
+                      - /url: /item/249409
+                    - text: ","
+                    - link "12 Large Radiant Shard" [ref=f9e1261]:
+                      - /url: /item/11178
+                - row [ref=f9e1262]:
+                  - cell "220" [ref=f9e1263]
+                  - cell [ref=f9e1264]:
+                    - link "Dreamweave Circlet" [ref=f9e1265]:
+                      - /url: /item/10041
+                    - text: Classic
+                  - cell [ref=f9e1267]:
+                    - link "8 Bolt of Mageweave" [ref=f9e1268]:
+                      - /url: /item/4339
+                    - text: ","
+                    - link "4 Wildvine" [ref=f9e1269]:
+                      - /url: /item/8153
+                    - text: ","
+                    - link "2 Heart of the Wild" [ref=f9e1270]:
+                      - /url: /item/10286
+                    - text: ","
+                    - link "3 Heavy Silken Thread" [ref=f9e1271]:
+                      - /url: /item/8343
+                    - text: ","
+                    - link "1 Truesilver Bar" [ref=f9e1272]:
+                      - /url: /item/6037
+                    - text: ","
+                    - link "1 Jade" [ref=f9e1273]:
+                      - /url: /item/1529
+                - row [ref=f9e1274]:
+                  - cell "235" [ref=f9e1275]
+                  - cell [ref=f9e1276]:
+                    - link "Cloak of Fire" [ref=f9e1277]:
+                      - /url: /item/14134
+                    - text: Classic
+                  - cell [ref=f9e1279]:
+                    - link "6 Bolt of Runecloth" [ref=f9e1280]:
+                      - /url: /item/14048
+                    - text: ","
+                    - link "4 Essence of Fire" [ref=f9e1281]:
+                      - /url: /item/7078
+                    - text: ","
+                    - link "4 Heart of Fire" [ref=f9e1282]:
+                      - /url: /item/7077
+                    - text: ","
+                    - link "4 Elemental Fire" [ref=f9e1283]:
+                      - /url: /item/7068
+                    - text: ","
+                    - link "1 Rune Thread" [ref=f9e1284]:
+                      - /url: /item/14341
+                - row [ref=f9e1285]:
+                  - cell "235" [ref=f9e1286]
+                  - cell [ref=f9e1287]:
+                    - link "Gilded Gloves" [ref=f9e1288]:
+                      - /url: /item/254095
+                  - cell [ref=f9e1290]:
+                    - link "8 Bolt of Runecloth" [ref=f9e1291]:
+                      - /url: /item/14048
+                    - text: ","
+                    - link "4 Heavy Silken Thread" [ref=f9e1292]:
+                      - /url: /item/8343
+                    - text: ","
+                    - link "4 Magenta Dye" [ref=f9e1293]:
+                      - /url: /item/249430
+                    - text: ","
+                    - link "4 Cerulean Dye" [ref=f9e1294]:
+                      - /url: /item/249409
+                    - text: ","
+                    - link "4 Gold Bar" [ref=f9e1295]:
+                      - /url: /item/3577
+                - row [ref=f9e1296]:
+                  - cell "235" [ref=f9e1297]
+                  - cell [ref=f9e1298]:
+                    - link "Frothing Gloves" [ref=f9e1299]:
+                      - /url: /item/254097
+                  - cell [ref=f9e1301]:
+                    - link "8 Bolt of Runecloth" [ref=f9e1302]:
+                      - /url: /item/14048
+                    - text: ","
+                    - link "4 Heavy Silken Thread" [ref=f9e1303]:
+                      - /url: /item/8343
+                    - text: ","
+                    - link "4 Magenta Dye" [ref=f9e1304]:
+                      - /url: /item/249430
+                    - text: ","
+                    - link "4 Cerulean Dye" [ref=f9e1305]:
+                      - /url: /item/249409
+                    - text: ","
+                    - link "4 Globe of Water" [ref=f9e1306]:
+                      - /url: /item/7079
+                - row [ref=f9e1307]:
+                  - cell "235" [ref=f9e1308]
+                  - cell [ref=f9e1309]:
+                    - link "Fiery Gloves" [ref=f9e1310]:
+                      - /url: /item/254099
+                  - cell [ref=f9e1312]:
+                    - link "8 Bolt of Runecloth" [ref=f9e1313]:
+                      - /url: /item/14048
+                    - text: ","
+                    - link "4 Heavy Silken Thread" [ref=f9e1314]:
+                      - /url: /item/8343
+                    - text: ","
+                    - link "4 Magenta Dye" [ref=f9e1315]:
+                      - /url: /item/249430
+                    - text: ","
+                    - link "4 Cerulean Dye" [ref=f9e1316]:
+                      - /url: /item/249409
+                    - text: ","
+                    - link "4 Heart of Fire" [ref=f9e1317]:
+                      - /url: /item/7077
+                - row [ref=f9e1318]:
+                  - cell "235" [ref=f9e1319]
+                  - cell [ref=f9e1320]:
+                    - link "Black Gloves" [ref=f9e1321]:
+                      - /url: /item/254101
+                  - cell [ref=f9e1323]:
+                    - link "8 Bolt of Runecloth" [ref=f9e1324]:
+                      - /url: /item/14048
+                    - text: ","
+                    - link "4 Heavy Silken Thread" [ref=f9e1325]:
+                      - /url: /item/8343
+                    - text: ","
+                    - link "4 Magenta Dye" [ref=f9e1326]:
+                      - /url: /item/249430
+                    - text: ","
+                    - link "4 Cerulean Dye" [ref=f9e1327]:
+                      - /url: /item/249409
+                    - text: ","
+                    - link "4 Black Pearl" [ref=f9e1328]:
+                      - /url: /item/7971
+                - row [ref=f9e1329]:
+                  - cell "235" [ref=f9e1330]
+                  - cell [ref=f9e1331]:
+                    - link "Golden Gloves" [ref=f9e1332]:
+                      - /url: /item/254103
+                  - cell [ref=f9e1334]:
+                    - link "8 Bolt of Runecloth" [ref=f9e1335]:
+                      - /url: /item/14048
+                    - text: ","
+                    - link "4 Heavy Silken Thread" [ref=f9e1336]:
+                      - /url: /item/8343
+                    - text: ","
+                    - link "4 Magenta Dye" [ref=f9e1337]:
+                      - /url: /item/249430
+                    - text: ","
+                    - link "4 Cerulean Dye" [ref=f9e1338]:
+                      - /url: /item/249409
+                    - text: ","
+                    - link "4 Golden Pearl" [ref=f9e1339]:
+                      - /url: /item/13926
+                - row [ref=f9e1340]:
+                  - cell "235" [ref=f9e1341]
+                  - cell [ref=f9e1342]:
+                    - link "Radiant Gloves" [ref=f9e1343]:
+                      - /url: /item/254105
+                  - cell [ref=f9e1345]:
+                    - link "8 Bolt of Runecloth" [ref=f9e1346]:
+                      - /url: /item/14048
+                    - text: ","
+                    - link "4 Heavy Silken Thread" [ref=f9e1347]:
+                      - /url: /item/8343
+                    - text: ","
+                    - link "4 Magenta Dye" [ref=f9e1348]:
+                      - /url: /item/249430
+                    - text: ","
+                    - link "4 Cerulean Dye" [ref=f9e1349]:
+                      - /url: /item/249409
+                    - text: ","
+                    - link "4 Large Radiant Shard" [ref=f9e1350]:
+                      - /url: /item/11178
+                - row [ref=f9e1351]:
+                  - cell "235" [ref=f9e1352]
+                  - cell [ref=f9e1353]:
+                    - link "Gilded Sandals" [ref=f9e1354]:
+                      - /url: /item/254107
+                  - cell [ref=f9e1356]:
+                    - link "10 Bolt of Runecloth" [ref=f9e1357]:
+                      - /url: /item/14048
+                    - text: ","
+                    - link "4 Heavy Silken Thread" [ref=f9e1358]:
+                      - /url: /item/8343
+                    - text: ","
+                    - link "10 Magenta Dye" [ref=f9e1359]:
+                      - /url: /item/249430
+                    - text: ","
+                    - link "6 Cerulean Dye" [ref=f9e1360]:
+                      - /url: /item/249409
+                    - text: ","
+                    - link "14 Gold Bar" [ref=f9e1361]:
+                      - /url: /item/3577
+                    - text: ","
+                    - link "4 Pristine Leather" [ref=f9e1362]:
+                      - /url: /item/249427
+                - row [ref=f9e1363]:
+                  - cell "235" [ref=f9e1364]
+                  - cell [ref=f9e1365]:
+                    - link "Frothing Sandals" [ref=f9e1366]:
+                      - /url: /item/254109
+                  - cell [ref=f9e1368]:
+                    - link "10 Bolt of Runecloth" [ref=f9e1369]:
+                      - /url: /item/14048
+                    - text: ","
+                    - link "4 Heavy Silken Thread" [ref=f9e1370]:
+                      - /url: /item/8343
+                    - text: ","
+                    - link "10 Magenta Dye" [ref=f9e1371]:
+                      - /url: /item/249430
+                    - text: ","
+                    - link "6 Cerulean Dye" [ref=f9e1372]:
+                      - /url: /item/249409
+                    - text: ","
+                    - link "14 Globe of Water" [ref=f9e1373]:
+                      - /url: /item/7079
+                    - text: ","
+                    - link "4 Pristine Leather" [ref=f9e1374]:
+                      - /url: /item/249427
+                - row [ref=f9e1375]:
+                  - cell "235" [ref=f9e1376]
+                  - cell [ref=f9e1377]:
+                    - link "Fiery Sandals" [ref=f9e1378]:
+                      - /url: /item/254111
+                  - cell [ref=f9e1380]:
+                    - link "10 Bolt of Runecloth" [ref=f9e1381]:
+                      - /url: /item/14048
+                    - text: ","
+                    - link "4 Heavy Silken Thread" [ref=f9e1382]:
+                      - /url: /item/8343
+                    - text: ","
+                    - link "10 Magenta Dye" [ref=f9e1383]:
+                      - /url: /item/249430
+                    - text: ","
+                    - link "6 Cerulean Dye" [ref=f9e1384]:
+                      - /url: /item/249409
+                    - text: ","
+                    - link "14 Heart of Fire" [ref=f9e1385]:
+                      - /url: /item/7077
+                    - text: ","
+                    - link "4 Pristine Leather" [ref=f9e1386]:
+                      - /url: /item/249427
+                - row [ref=f9e1387]:
+                  - cell "235" [ref=f9e1388]
+                  - cell [ref=f9e1389]:
+                    - link "Black Sandals" [ref=f9e1390]:
+                      - /url: /item/254113
+                  - cell [ref=f9e1392]:
+                    - link "10 Bolt of Runecloth" [ref=f9e1393]:
+                      - /url: /item/14048
+                    - text: ","
+                    - link "4 Heavy Silken Thread" [ref=f9e1394]:
+                      - /url: /item/8343
+                    - text: ","
+                    - link "10 Magenta Dye" [ref=f9e1395]:
+                      - /url: /item/249430
+                    - text: ","
+                    - link "6 Cerulean Dye" [ref=f9e1396]:
+                      - /url: /item/249409
+                    - text: ","
+                    - link "14 Black Pearl" [ref=f9e1397]:
+                      - /url: /item/7971
+                    - text: ","
+                    - link "4 Pristine Leather" [ref=f9e1398]:
+                      - /url: /item/249427
+                - row [ref=f9e1399]:
+                  - cell "235" [ref=f9e1400]
+                  - cell [ref=f9e1401]:
+                    - link "Golden Sandals" [ref=f9e1402]:
+                      - /url: /item/254115
+                  - cell [ref=f9e1404]:
+                    - link "10 Bolt of Runecloth" [ref=f9e1405]:
+                      - /url: /item/14048
+                    - text: ","
+                    - link "4 Heavy Silken Thread" [ref=f9e1406]:
+                      - /url: /item/8343
+                    - text: ","
+                    - link "10 Magenta Dye" [ref=f9e1407]:
+                      - /url: /item/249430
+                    - text: ","
+                    - link "6 Cerulean Dye" [ref=f9e1408]:
+                      - /url: /item/249409
+                    - text: ","
+                    - link "14 Golden Pearl" [ref=f9e1409]:
+                      - /url: /item/13926
+                    - text: ","
+                    - link "4 Pristine Leather" [ref=f9e1410]:
+                      - /url: /item/249427
+                - row [ref=f9e1411]:
+                  - cell "235" [ref=f9e1412]
+                  - cell [ref=f9e1413]:
+                    - link "Radiant Sandals" [ref=f9e1414]:
+                      - /url: /item/254117
+                  - cell [ref=f9e1416]:
+                    - link "10 Bolt of Runecloth" [ref=f9e1417]:
+                      - /url: /item/14048
+                    - text: ","
+                    - link "4 Heavy Silken Thread" [ref=f9e1418]:
+                      - /url: /item/8343
+                    - text: ","
+                    - link "10 Magenta Dye" [ref=f9e1419]:
+                      - /url: /item/249430
+                    - text: ","
+                    - link "6 Cerulean Dye" [ref=f9e1420]:
+                      - /url: /item/249409
+                    - text: ","
+                    - link "14 Large Radiant Shard" [ref=f9e1421]:
+                      - /url: /item/11178
+                    - text: ","
+                    - link "4 Pristine Leather" [ref=f9e1422]:
+                      - /url: /item/249427
+                - row [ref=f9e1423]:
+                  - cell "245" [ref=f9e1424]
+                  - cell [ref=f9e1425]:
+                    - link "Robe of Winter Night" [ref=f9e1426]:
+                      - /url: /item/14136
+                    - text: Classic
+                  - cell [ref=f9e1428]:
+                    - link "10 Bolt of Runecloth" [ref=f9e1429]:
+                      - /url: /item/14048
+                    - text: ","
+                    - link "12 Felcloth" [ref=f9e1430]:
+                      - /url: /item/14256
+                    - text: ","
+                    - link "4 Essence of Undeath" [ref=f9e1431]:
+                      - /url: /item/12808
+                    - text: ","
+                    - link "4 Essence of Water" [ref=f9e1432]:
+                      - /url: /item/7080
+                    - text: ","
+                    - link "1 Rune Thread" [ref=f9e1433]:
+                      - /url: /item/14341
+                - row [ref=f9e1434]:
+                  - cell "245" [ref=f9e1435]
+                  - cell [ref=f9e1436]:
+                    - link "Mooncloth Leggings" [ref=f9e1437]:
+                      - /url: /item/14137
+                    - text: Classic
+                  - cell [ref=f9e1439]:
+                    - link "6 Bolt of Runecloth" [ref=f9e1440]:
+                      - /url: /item/14048
+                    - text: ","
+                    - link "4 Mooncloth" [ref=f9e1441]:
+                      - /url: /item/14342
+                    - text: ","
+                    - link "1 Rune Thread" [ref=f9e1442]:
+                      - /url: /item/14341
+                - row [ref=f9e1443]:
+                  - cell "255" [ref=f9e1444]
+                  - cell [ref=f9e1445]:
+                    - link "Wisdom of the Timbermaw" [ref=f9e1446]:
+                      - /url: /item/19047
+                    - text: Classic
+                  - cell [ref=f9e1448]:
+                    - link "8 Bolt of Runecloth" [ref=f9e1449]:
+                      - /url: /item/14048
+                    - text: ","
+                    - link "3 Essence of Earth" [ref=f9e1450]:
+                      - /url: /item/7076
+                    - text: ","
+                    - link "3 Living Essence" [ref=f9e1451]:
+                      - /url: /item/12803
+                    - text: ","
+                    - link "2 Ironweb Spider Silk" [ref=f9e1452]:
+                      - /url: /item/14227
+                - row [ref=f9e1453]:
+                  - cell "255" [ref=f9e1454]
+                  - cell [ref=f9e1455]:
+                    - link "Argent Boots" [ref=f9e1456]:
+                      - /url: /item/19056
+                    - text: Classic
+                  - cell [ref=f9e1458]:
+                    - link "6 Bolt of Runecloth" [ref=f9e1459]:
+                      - /url: /item/14048
+                    - text: ","
+                    - link "4 Enchanted Leather" [ref=f9e1460]:
+                      - /url: /item/12810
+                    - text: ","
+                    - link "2 Golden Pearl" [ref=f9e1461]:
+                      - /url: /item/13926
+                    - text: ","
+                    - link "2 Guardian Stone" [ref=f9e1462]:
+                      - /url: /item/12809
+                    - text: ","
+                    - link "2 Ironweb Spider Silk" [ref=f9e1463]:
+                      - /url: /item/14227
+                - row [ref=f9e1464]:
+                  - cell "260" [ref=f9e1465]
+                  - cell [ref=f9e1466]:
+                    - link "Felcloth Bag" [ref=f9e1467]:
+                      - /url: /item/21341
+                    - text: Classic
+                  - cell [ref=f9e1469]:
+                    - link "12 Felcloth" [ref=f9e1470]:
+                      - /url: /item/14256
+                    - text: ","
+                    - link "6 Enchanted Leather" [ref=f9e1471]:
+                      - /url: /item/12810
+                    - text: ","
+                    - link "2 Dark Rune" [ref=f9e1472]:
+                      - /url: /item/20520
+                    - text: ","
+                    - link "4 Ironweb Spider Silk" [ref=f9e1473]:
+                      - /url: /item/14227
+                - row [ref=f9e1474]:
+                  - cell "270" [ref=f9e1475]
+                  - cell [ref=f9e1476]:
+                    - link "Mooncloth Vest" [ref=f9e1477]:
+                      - /url: /item/14138
+                    - text: Classic
+                  - cell [ref=f9e1479]:
+                    - link "6 Bolt of Runecloth" [ref=f9e1480]:
+                      - /url: /item/14048
+                    - text: ","
+                    - link "4 Mooncloth" [ref=f9e1481]:
+                      - /url: /item/14342
+                    - text: ","
+                    - link "1 Rune Thread" [ref=f9e1482]:
+                      - /url: /item/14341
+                - row [ref=f9e1483]:
+                  - cell "275" [ref=f9e1484]
+                  - cell [ref=f9e1485]:
+                    - link "Mooncloth Shoulders" [ref=f9e1486]:
+                      - /url: /item/14139
+                    - text: Classic
+                  - cell [ref=f9e1488]:
+                    - link "5 Bolt of Runecloth" [ref=f9e1489]:
+                      - /url: /item/14048
+                    - text: ","
+                    - link "5 Mooncloth" [ref=f9e1490]:
+                      - /url: /item/14342
+                    - text: ","
+                    - link "1 Rune Thread" [ref=f9e1491]:
+                      - /url: /item/14341
+                - row [ref=f9e1492]:
+                  - cell "275" [ref=f9e1493]
+                  - cell [ref=f9e1494]:
+                    - link "Mooncloth Robe" [ref=f9e1495]:
+                      - /url: /item/18486
+                    - text: Classic
+                  - cell [ref=f9e1497]:
+                    - link "6 Bolt of Runecloth" [ref=f9e1498]:
+                      - /url: /item/14048
+                    - text: ","
+                    - link "4 Mooncloth" [ref=f9e1499]:
+                      - /url: /item/14342
+                    - text: ","
+                    - link "2 Golden Pearl" [ref=f9e1500]:
+                      - /url: /item/13926
+                    - text: ","
+                    - link "2 Rune Thread" [ref=f9e1501]:
+                      - /url: /item/14341
+                - row [ref=f9e1502]:
+                  - cell "280" [ref=f9e1503]
+                  - cell [ref=f9e1504]:
+                    - link "Mooncloth Circlet" [ref=f9e1505]:
+                      - /url: /item/14140
+                    - text: Classic
+                  - cell [ref=f9e1507]:
+                    - link "4 Bolt of Runecloth" [ref=f9e1508]:
+                      - /url: /item/14048
+                    - text: ","
+                    - link "6 Mooncloth" [ref=f9e1509]:
+                      - /url: /item/14342
+                    - text: ","
+                    - link "1 Azerothian Diamond" [ref=f9e1510]:
+                      - /url: /item/12800
+                    - text: ","
+                    - link "2 Enchanted Leather" [ref=f9e1511]:
+                      - /url: /item/12810
+                    - text: ","
+                    - link "2 Rune Thread" [ref=f9e1512]:
+                      - /url: /item/14341
+                - row [ref=f9e1513]:
+                  - cell "280" [ref=f9e1514]
+                  - cell [ref=f9e1515]:
+                    - link "Felcloth Gloves" [ref=f9e1516]:
+                      - /url: /item/18407
+                    - text: Classic
+                  - cell [ref=f9e1518]:
+                    - link "12 Bolt of Runecloth" [ref=f9e1519]:
+                      - /url: /item/14048
+                    - text: ","
+                    - link "20 Felcloth" [ref=f9e1520]:
+                      - /url: /item/14256
+                    - text: ","
+                    - link "6 Demonic Rune" [ref=f9e1521]:
+                      - /url: /item/12662
+                    - text: ","
+                    - link "8 Essence of Undeath" [ref=f9e1522]:
+                      - /url: /item/12808
+                    - text: ","
+                    - link "2 Rune Thread" [ref=f9e1523]:
+                      - /url: /item/14341
+                - row [ref=f9e1524]:
+                  - cell "280" [ref=f9e1525]
+                  - cell [ref=f9e1526]:
+                    - link "Inferno Gloves" [ref=f9e1527]:
+                      - /url: /item/18408
+                    - text: Classic
+                  - cell [ref=f9e1529]:
+                    - link "12 Bolt of Runecloth" [ref=f9e1530]:
+                      - /url: /item/14048
+                    - text: ","
+                    - link "10 Essence of Fire" [ref=f9e1531]:
+                      - /url: /item/7078
+                    - text: ","
+                    - link "2 Star Ruby" [ref=f9e1532]:
+                      - /url: /item/7910
+                    - text: ","
+                    - link "2 Rune Thread" [ref=f9e1533]:
+                      - /url: /item/14341
+                - row [ref=f9e1534]:
+                  - cell "280" [ref=f9e1535]
+                  - cell [ref=f9e1536]:
+                    - link "Mooncloth Gloves" [ref=f9e1537]:
+                      - /url: /item/18409
+                    - text: Classic
+                  - cell [ref=f9e1539]:
+                    - link "12 Bolt of Runecloth" [ref=f9e1540]:
+                      - /url: /item/14048
+                    - text: ","
+                    - link "6 Mooncloth" [ref=f9e1541]:
+                      - /url: /item/14342
+                    - text: ","
+                    - link "2 Golden Pearl" [ref=f9e1542]:
+                      - /url: /item/13926
+                    - text: ","
+                    - link "2 Rune Thread" [ref=f9e1543]:
+                      - /url: /item/14341
+                - row [ref=f9e1544]:
+                  - cell "280" [ref=f9e1545]
+                  - cell [ref=f9e1546]:
+                    - link "Cloak of Warding" [ref=f9e1547]:
+                      - /url: /item/18413
+                    - text: Classic
+                  - cell [ref=f9e1549]:
+                    - link "12 Bolt of Runecloth" [ref=f9e1550]:
+                      - /url: /item/14048
+                    - text: ","
+                    - link "4 Guardian Stone" [ref=f9e1551]:
+                      - /url: /item/12809
+                    - text: ","
+                    - link "1 Arcanite Bar" [ref=f9e1552]:
+                      - /url: /item/12360
+                    - text: ","
+                    - link "2 Rune Thread" [ref=f9e1553]:
+                      - /url: /item/14341
+                - row [ref=f9e1554]:
+                  - cell "285" [ref=f9e1555]
+                  - cell [ref=f9e1556]:
+                    - link "Mooncloth Boots" [ref=f9e1557]:
+                      - /url: /item/15802
+                    - text: Classic
+                  - cell [ref=f9e1559]:
+                    - link "6 Bolt of Runecloth" [ref=f9e1560]:
+                      - /url: /item/14048
+                    - text: ","
+                    - link "4 Mooncloth" [ref=f9e1561]:
+                      - /url: /item/14342
+                    - text: ","
+                    - link "2 Black Pearl" [ref=f9e1562]:
+                      - /url: /item/7971
+                    - text: ","
+                    - link "1 Rune Thread" [ref=f9e1563]:
+                      - /url: /item/14341
+            - paragraph [ref=f9e1564]:
+              - text: "At 300 skill, a third camp object takes over from each: the"
+              - link "Sewing Machine" [ref=f9e1565]:
+                - /url: /item/279945
+              - text: for leatherworkers (91 recipes) and the
+              - link "Loom" [ref=f9e1566]:
+                - /url: /item/279959
+              - text: "for tailors (43). Every trade climbs the same three steps at camp: the"
+              - link "professions page" [ref=f9e1567] [cursor=pointer]:
+                - /url: /professions#camp
+              - text: lists them, and
+              - link "Camping" [ref=f9e1568] [cursor=pointer]:
+                - /url: /professions/camping
+              - text: explains the campfire.
+          - paragraph [ref=f9e1570]:
+            - text: "The objects, their blueprints, the recipes that need them, the 15 minutes and the shared hour: the beta client (build 1.60.1.70338). The blueprint’s drop rate:"
+            - link "Wowhead" [ref=f9e1571] [cursor=pointer]:
+              - /url: https://www.wowhead.com/forever/item=273096/blueprint-tanning-rack
+            - text: "’s Forever database, 18 in 16,486 kills on October 5. Pristine Leather from skinning: the same database. Buying a rack and having it placed: a player on the"
+            - link "Blizzard forums" [ref=f9e1572] [cursor=pointer]:
+              - /url: https://us.forums.blizzard.com/en/wow/t/tanning-racks-in-world-locations/2370728
+            - text: ". The Spinning Wheel’s blueprint:"
+            - link "the request on the European forums" [ref=f9e1573] [cursor=pointer]:
+              - /url: https://eu.forums.blizzard.com/en/wow/t/please-give-us-a-way-to-obtain-the-spinning-wheel-blueprint/633923
+            - text: .
+  - contentinfo [ref=f9e1574]:
+    - region "Support ForeverChanges" [ref=f9e1575]:
+      - generic [ref=f9e1576]:
+        - paragraph [ref=f9e1577]:
+          - strong [ref=f9e1578]: ForeverChanges has no ads
+          - generic [ref=f9e1579]: I make it on my own, and I want it to stay free. If it's useful to you, a donation helps pay for hosting and the time it takes to keep it up to date.
+          - button "Tell me what to improve" [ref=f9e1580] [cursor=pointer]
+        - generic [ref=f9e1581]:
+          - button "Poke the goblin" [ref=f9e1582] [cursor=pointer]:
+            - generic [aria-hidden]: PPC for the little content creator!
+          - link "Support the site" [ref=f9e1583] [cursor=pointer]:
+            - /url: https://ko-fi.com/bartolomew
+    - navigation "Site pages" [ref=f9e1589]:
+      - generic [ref=f9e1590]:
+        - heading "Classes" [level=2] [ref=f9e1591]
+        - list [ref=f9e1592]:
+          - listitem [ref=f9e1593]:
+            - link "Warrior" [ref=f9e1594] [cursor=pointer]:
+              - /url: /class/warrior
+          - listitem [ref=f9e1595]:
+            - link "Paladin" [ref=f9e1596] [cursor=pointer]:
+              - /url: /class/paladin
+          - listitem [ref=f9e1597]:
+            - link "Hunter" [ref=f9e1598] [cursor=pointer]:
+              - /url: /class/hunter
+          - listitem [ref=f9e1599]:
+            - link "Rogue" [ref=f9e1600] [cursor=pointer]:
+              - /url: /class/rogue
+          - listitem [ref=f9e1601]:
+            - link "Priest" [ref=f9e1602] [cursor=pointer]:
+              - /url: /class/priest
+          - listitem [ref=f9e1603]:
+            - link "Shaman" [ref=f9e1604] [cursor=pointer]:
+              - /url: /class/shaman
+          - listitem [ref=f9e1605]:
+            - link "Mage" [ref=f9e1606] [cursor=pointer]:
+              - /url: /class/mage
+          - listitem [ref=f9e1607]:
+            - link "Warlock" [ref=f9e1608] [cursor=pointer]:
+              - /url: /class/warlock
+          - listitem [ref=f9e1609]:
+            - link "Druid" [ref=f9e1610] [cursor=pointer]:
+              - /url: /class/druid
+      - generic [ref=f9e1611]:
+        - heading "Character" [level=2] [ref=f9e1612]
+        - list [ref=f9e1613]:
+          - listitem [ref=f9e1614]:
+            - link "Talent calculator" [ref=f9e1615] [cursor=pointer]:
+              - /url: /talents
+          - listitem [ref=f9e1616]:
+            - link "Spellbook" [ref=f9e1617] [cursor=pointer]:
+              - /url: /spellbook/warrior
+          - listitem [ref=f9e1618]:
+            - link "Legacy perks" [ref=f9e1619] [cursor=pointer]:
+              - /url: /legacy-perks
+          - listitem [ref=f9e1620]:
+            - link "Races" [ref=f9e1621] [cursor=pointer]:
+              - /url: /racials
+          - listitem [ref=f9e1622]:
+            - link "Professions" [ref=f9e1623] [cursor=pointer]:
+              - /url: /professions
+          - listitem [ref=f9e1624]:
+            - link "Downrank calculator" [ref=f9e1625] [cursor=pointer]:
+              - /url: /downrank-calculator
+          - listitem [ref=f9e1626]:
+            - link "Tier list maker" [ref=f9e1627] [cursor=pointer]:
+              - /url: /tier-list
+      - generic [ref=f9e1628]:
+        - heading "Gear" [level=2] [ref=f9e1629]
+        - list [ref=f9e1630]:
+          - listitem [ref=f9e1631]:
+            - link "BiS list" [ref=f9e1632] [cursor=pointer]:
+              - /url: /bis
+          - listitem [ref=f9e1633]:
+            - link "Items" [ref=f9e1634] [cursor=pointer]:
+              - /url: /items
+          - listitem [ref=f9e1635]:
+            - link "Hidden items" [ref=f9e1636] [cursor=pointer]:
+              - /url: /hidden-items
+          - listitem [ref=f9e1637]:
+            - link "Transmog" [ref=f9e1638] [cursor=pointer]:
+              - /url: /transmog
+      - generic [ref=f9e1639]:
+        - heading "World" [level=2] [ref=f9e1640]
+        - list [ref=f9e1641]:
+          - listitem [ref=f9e1642]:
+            - link "World map" [ref=f9e1643] [cursor=pointer]:
+              - /url: /map
+          - listitem [ref=f9e1644]:
+            - link "Dungeons" [ref=f9e1645] [cursor=pointer]:
+              - /url: /dungeons
+          - listitem [ref=f9e1646]:
+            - link "Quests" [ref=f9e1647] [cursor=pointer]:
+              - /url: /quests
+          - listitem [ref=f9e1648]:
+            - link "Dungeon quests" [ref=f9e1649] [cursor=pointer]:
+              - /url: /dungeon-quests
+          - listitem [ref=f9e1650]:
+            - link "Rare spawns" [ref=f9e1651] [cursor=pointer]:
+              - /url: /rares
+          - listitem [ref=f9e1652]:
+            - link "Library books" [ref=f9e1653] [cursor=pointer]:
+              - /url: /library-books
+      - generic [ref=f9e1654]:
+        - heading "Guides" [level=2] [ref=f9e1655]
+        - list [ref=f9e1656]:
+          - listitem [ref=f9e1657]:
+            - link "Tanning Rack" [ref=f9e1658] [cursor=pointer]:
+              - /url: /tanning-rack
+          - listitem [ref=f9e1659]:
+            - link "PvP ranks" [ref=f9e1660] [cursor=pointer]:
+              - /url: /pvp-ranks
+          - listitem [ref=f9e1661]:
+            - link "Downranking" [ref=f9e1662] [cursor=pointer]:
+              - /url: /downranking
+          - listitem [ref=f9e1663]:
+            - link "Booty Bay Bruiser's Buckshot" [ref=f9e1664] [cursor=pointer]:
+              - /url: /booty-bay-bruisers-buckshot
+          - listitem [ref=f9e1665]:
+            - link "Scarlet Banner" [ref=f9e1666] [cursor=pointer]:
+              - /url: /scarlet-banner
+          - listitem [ref=f9e1667]:
+            - link "$100,000 duel tournament" [ref=f9e1668] [cursor=pointer]:
+              - /url: /duel-tournament
+          - listitem [ref=f9e1669]:
+            - link "Level 30" [ref=f9e1670] [cursor=pointer]:
+              - /url: /level-30
+          - listitem [ref=f9e1671]:
+            - link "Druid Cat Form quest" [ref=f9e1672] [cursor=pointer]:
+              - /url: /druid-cat-form
+          - listitem [ref=f9e1673]:
+            - link "Addons" [ref=f9e1674] [cursor=pointer]:
+              - /url: /addons
+          - listitem [ref=f9e1675]:
+            - link "Savory Whimsyfin Delight" [ref=f9e1676] [cursor=pointer]:
+              - /url: /savory-whimsyfin-delight
+          - listitem [ref=f9e1677]:
+            - link "Druid snake form" [ref=f9e1678] [cursor=pointer]:
+              - /url: /druid-snake-form
+          - listitem [ref=f9e1679]:
+            - link "Battle mage" [ref=f9e1680] [cursor=pointer]:
+              - /url: /battle-mage
+          - listitem [ref=f9e1681]:
+            - link "Cozy Sleeping Bag" [ref=f9e1682] [cursor=pointer]:
+              - /url: /cozy-sleeping-bag
+          - listitem [ref=f9e1683]:
+            - link "Merchant's Favor" [ref=f9e1684] [cursor=pointer]:
+              - /url: /merchants-favor
+          - listitem [ref=f9e1685]:
+            - link "Hunter pets" [ref=f9e1686] [cursor=pointer]:
+              - /url: /hunter-pets
+      - generic [ref=f9e1687]:
+        - heading "Beta" [level=2] [ref=f9e1688]
+        - list [ref=f9e1689]:
+          - listitem [ref=f9e1690]:
+            - link "Patch notes" [ref=f9e1691] [cursor=pointer]:
+              - /url: /patch-notes
+          - listitem [ref=f9e1692]:
+            - link "Changes vs Classic" [ref=f9e1693] [cursor=pointer]:
+              - /url: /changes
+          - listitem [ref=f9e1694]:
+            - link "Beta and launch dates" [ref=f9e1695] [cursor=pointer]:
+              - /url: /beta
+          - listitem [ref=f9e1696]:
+            - link "Server status" [ref=f9e1697] [cursor=pointer]:
+              - /url: /server-status
+      - generic [ref=f9e1698]:
+        - heading "Language" [level=2] [ref=f9e1699]
+        - list [ref=f9e1704]:
+          - listitem [ref=f9e1705]:
+            - generic [ref=f9e1706]: English
+          - listitem [ref=f9e1709]:
+            - link "Français" [ref=f9e1710] [cursor=pointer]:
+              - /url: /fr/tanning-rack
+          - listitem [ref=f9e1711]:
+            - link "Deutsch" [ref=f9e1712] [cursor=pointer]:
+              - /url: /de/tanning-rack
+          - listitem [ref=f9e1713]:
+            - link "繁體中文" [ref=f9e1714] [cursor=pointer]:
+              - /url: /zh-tw/tanning-rack
+          - listitem [ref=f9e1715]:
+            - link "简体中文" [ref=f9e1716] [cursor=pointer]:
+              - /url: /zh-cn/tanning-rack
+          - listitem [ref=f9e1717]:
+            - link "Русский" [ref=f9e1718] [cursor=pointer]:
+              - /url: /ru/tanning-rack
+    - generic [ref=f9e1719]:
+      - paragraph [ref=f9e1720]: ForeverChanges is an unofficial fan site, not affiliated with or endorsed by Blizzard Entertainment. World of Warcraft and Warcraft are trademarks or registered trademarks of Blizzard Entertainment, Inc. in the U.S. and/or other countries. Game content and images © Blizzard Entertainment, Inc.
+      - navigation "Legal" [ref=f9e1722]:
+        - link "About the data" [ref=f9e1723] [cursor=pointer]:
+          - /url: /about
+        - link "Privacy" [ref=f9e1724] [cursor=pointer]:
+          - /url: /privacy
+        - link "Terms" [ref=f9e1725] [cursor=pointer]:
+          - /url: /terms
+        - link "Legal notice" [ref=f9e1726] [cursor=pointer]:
+          - /url: /legal

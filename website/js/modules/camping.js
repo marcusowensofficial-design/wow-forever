@@ -94,9 +94,66 @@ function renderCampingStations(filter) {
           </div>
         `).join('')}
       </div>
+
+      ${(() => {
+        const profLower = (p.profession || '').toLowerCase();
+        let fieldRecipes = null;
+        let stationLabel = '';
+        if (profLower.includes('leatherworking')) {
+          const rack = window.WOW_ATLAS_DATA?.campingRecipes?.tanningRack;
+          fieldRecipes = rack?.highlightRecipes || (Array.isArray(rack) ? rack : []);
+          stationLabel = `Tanning Rack (${rack?.totalRecipes || 48} Recipes)`;
+        } else if (profLower.includes('tailoring')) {
+          const wheel = window.WOW_ATLAS_DATA?.campingRecipes?.spinningWheel;
+          fieldRecipes = wheel?.highlightRecipes || (Array.isArray(wheel) ? wheel : []);
+          stationLabel = `Spinning Wheel (${wheel?.totalRecipes || 74} Recipes)`;
+        }
+
+        if (!fieldRecipes || fieldRecipes.length === 0) return '';
+        const profSlug = profLower.replace(/[^a-z0-9]/g, '');
+
+        return `
+          <div class="station-recipes-section">
+            <button id="recipes-btn-${profSlug}" class="btn-station-recipes" onclick="toggleCampingRecipes('${profSlug}')">
+              📜 View Field Recipes: ${stationLabel}
+            </button>
+            <div id="recipes-drawer-${profSlug}" class="station-recipes-drawer" hidden>
+              <div class="recipes-drawer-scroll">
+                ${fieldRecipes.map(r => `
+                  <div class="field-recipe-item">
+                    <div class="field-recipe-top">
+                      <strong class="field-recipe-name">${escapeHtml(r.name)}</strong>
+                      <span class="field-recipe-skill">Skill ${r.skill}</span>
+                    </div>
+                    <div class="field-recipe-mats"><strong>Mats:</strong> ${escapeHtml(r.reagents || r.mats || '')}</div>
+                    ${r.produces ? `<div class="field-recipe-produces"><strong>Produces:</strong> ${escapeHtml(r.produces)}</div>` : ''}
+                    ${r.type ? `<div style="font-size: 0.72rem; color: #f59e0b;">✦ ${escapeHtml(r.type)}</div>` : ''}
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+          </div>
+        `;
+      })()}
     </div>
   `).join('');
 }
+
+window.toggleCampingRecipes = function(profSlug) {
+  const drawer = document.getElementById(`recipes-drawer-${profSlug}`);
+  const btn = document.getElementById(`recipes-btn-${profSlug}`);
+  if (!drawer) return;
+  const isHidden = drawer.hasAttribute('hidden');
+  if (isHidden) {
+    drawer.removeAttribute('hidden');
+    if (btn) btn.innerHTML = '▲ Hide Field Recipes';
+  } else {
+    drawer.setAttribute('hidden', '');
+    const count = profSlug.includes('leather') ? 48 : 74;
+    const label = profSlug.includes('leather') ? 'Tanning Rack' : 'Spinning Wheel';
+    if (btn) btn.innerHTML = `📜 View ${count} Field Recipes (${label})`;
+  }
+};
 
 /* ==========================================================================
    MOUNTS GALLERY & STATS CAPS CONTROLLER

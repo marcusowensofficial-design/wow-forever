@@ -1,0 +1,1766 @@
+- generic [active] [ref=f1e1]:
+  - text: ": : :"
+  - main [ref=f1e2]:
+    - generic [ref=f1e3]:
+      - generic [ref=f1e4]:
+        - generic [ref=f1e5]:
+          - generic [ref=f1e6]:
+            - button "Pull the murloc camp" [ref=f1e7] [cursor=pointer]
+            - generic [ref=f1e8]:
+              - generic [ref=f1e9]: Online now
+              - generic [ref=f1e10]: 2,358
+              - generic [ref=f1e11]: murlocs
+          - link "ForeverChanges home" [ref=f1e12] [cursor=pointer]:
+            - /url: /
+            - img "ForeverChanges" [ref=f1e13]
+          - link [ref=f1e15] [cursor=pointer]:
+            - /url: /patch-notes
+            - generic [ref=f1e16]:
+              - text: Updated
+              - generic [aria-hidden] [ref=f1e18]: ·
+            - text: Beta build 1.60.1.70338
+          - link "Launch in 25 days 0 hours 30 minutes" [ref=f1e19] [cursor=pointer]:
+            - /url: /beta
+            - generic [ref=f1e20]: Launch in
+            - generic [aria-hidden] [ref=f1e21]:
+              - generic [ref=f1e22]:
+                - generic [ref=f1e23]: "25"
+                - generic [ref=f1e24]: days
+              - generic [ref=f1e25]:
+                - text: ":"
+                - generic [ref=f1e26]: "00"
+                - generic [ref=f1e27]: hrs
+              - generic [ref=f1e28]:
+                - text: ":"
+                - generic [ref=f1e29]: "30"
+                - generic [ref=f1e30]: min
+              - generic [ref=f1e31]:
+                - text: ":"
+                - generic [ref=f1e32]: "55"
+                - generic [ref=f1e33]: sec
+        - generic [ref=f1e34]:
+          - navigation "Main" [ref=f1e35]:
+            - link "Changes" [ref=f1e36] [cursor=pointer]:
+              - /url: /changes
+            - link "Talents , updated" [ref=f1e37] [cursor=pointer]:
+              - /url: /talents/warrior
+              - text: Talents
+              - generic:
+                - generic [aria-hidden]: Updated on October 8
+                - generic [ref=f1e39]: ", updated"
+            - link "Spellbook , updated" [ref=f1e40] [cursor=pointer]:
+              - /url: /spellbook/warrior
+              - text: Spellbook
+              - generic:
+                - generic [aria-hidden]: Updated on October 8
+                - generic [ref=f1e42]: ", updated"
+            - link "Legacy" [ref=f1e43] [cursor=pointer]:
+              - /url: /legacy-perks
+            - link "Professions" [ref=f1e44] [cursor=pointer]:
+              - /url: /professions
+            - link "Races" [ref=f1e45] [cursor=pointer]:
+              - /url: /racials
+            - link "Dungeons , new" [ref=f1e46] [cursor=pointer]:
+              - /url: /dungeons
+              - text: Dungeons
+              - generic:
+                - generic [aria-hidden]: "New: the City of Dalaran"
+                - generic [ref=f1e48]: ", new"
+            - link "Items , updated" [ref=f1e49] [cursor=pointer]:
+              - /url: /items
+              - text: Items
+              - generic:
+                - generic [aria-hidden]: 331 items changed on October 8
+                - generic [ref=f1e51]: ", updated"
+            - link "Quests" [ref=f1e52] [cursor=pointer]:
+              - /url: /quests
+            - link "BiS list , updated" [ref=f1e53] [cursor=pointer]:
+              - /url: /bis
+              - text: BiS list
+              - generic:
+                - generic [aria-hidden]: Up to date with the latest build
+                - generic [ref=f1e55]: ", updated"
+            - link "World map" [ref=f1e56] [cursor=pointer]:
+              - /url: /map
+            - link "Guides" [ref=f1e57] [cursor=pointer]:
+              - /url: /guides
+            - link "Patch notes" [ref=f1e58] [cursor=pointer]:
+              - /url: /patch-notes
+          - button "Search" [ref=f1e60] [cursor=pointer]:
+            - generic [aria-hidden]: Search /
+      - generic [ref=f1e64]:
+        - generic [ref=f1e65]:
+          - link "Guides" [ref=f1e66] [cursor=pointer]:
+            - /url: /guides
+          - heading "WoW Forever rares Where they spawn and what they drop" [level=1] [ref=f1e67]:
+            - text: WoW Forever rares
+            - generic [ref=f1e68]: Where they spawn and what they drop
+          - paragraph [ref=f1e69]: In WoW Forever, rares are worth the detour again. Humar, Swiftmane and Takk the Leaper, the Barrens rares every Classic player knows, now each drop a piece of a set that makes you faster in the Barrens. A new elite that patrols the Wetlands drops the innards that buy Malignant Root, a ring any level can wear. And every starting zone has new rares of its own, several of them new pets for hunters.
+          - paragraph [ref=f1e70]: By Vektor, updated October 5, 2026.
+        - navigation [ref=f1e71]:
+          - heading "Where to hunt 34 rares in 14 zones" [level=2] [ref=f1e72]:
+            - text: Where to hunt
+            - generic [ref=f1e73]: 34 rares in 14 zones
+          - list [ref=f1e74]:
+            - listitem [ref=f1e75]:
+              - link "8 Zephras Isle level 3–12" [ref=f1e76] [cursor=pointer]:
+                - /url: "#zone-2521"
+                - generic [ref=f1e77]: "8"
+                - generic [ref=f1e78]: Zephras Isle
+                - emphasis [ref=f1e79]: level 3–12
+            - listitem [ref=f1e80]:
+              - link "4 The Barrens level 10–25" [ref=f1e81] [cursor=pointer]:
+                - /url: "#rare-3"
+                - generic [ref=f1e82]: "4"
+                - generic [ref=f1e83]: The Barrens
+                - emphasis [ref=f1e84]: level 10–25
+            - listitem [ref=f1e85]:
+              - link "4 Tirisfal Glades level 5–12" [ref=f1e86] [cursor=pointer]:
+                - /url: "#zone-1420"
+                - generic [ref=f1e87]: "4"
+                - generic [ref=f1e88]: Tirisfal Glades
+                - emphasis [ref=f1e89]: level 5–12
+            - listitem [ref=f1e90]:
+              - link "3 Elwynn Forest level 5–10" [ref=f1e91] [cursor=pointer]:
+                - /url: "#zone-1429"
+                - generic [ref=f1e92]: "3"
+                - generic [ref=f1e93]: Elwynn Forest
+                - emphasis [ref=f1e94]: level 5–10
+            - listitem [ref=f1e95]:
+              - link "3 Mulgore level 5–10" [ref=f1e96] [cursor=pointer]:
+                - /url: "#zone-1412"
+                - generic [ref=f1e97]: "3"
+                - generic [ref=f1e98]: Mulgore
+                - emphasis [ref=f1e99]: level 5–10
+            - listitem [ref=f1e100]:
+              - link "2 Durotar level 5–10" [ref=f1e101] [cursor=pointer]:
+                - /url: "#zone-1411"
+                - generic [ref=f1e102]: "2"
+                - generic [ref=f1e103]: Durotar
+                - emphasis [ref=f1e104]: level 5–10
+            - listitem [ref=f1e105]:
+              - link "2 Stonetalon Mountains level 15–25" [ref=f1e106] [cursor=pointer]:
+                - /url: "#rare-7"
+                - generic [ref=f1e107]: "2"
+                - generic [ref=f1e108]: Stonetalon Mountains
+                - emphasis [ref=f1e109]: level 15–25
+            - listitem [ref=f1e110]:
+              - link "2 Teldrassil level 5–11" [ref=f1e111] [cursor=pointer]:
+                - /url: "#zone-1438"
+                - generic [ref=f1e112]: "2"
+                - generic [ref=f1e113]: Teldrassil
+                - emphasis [ref=f1e114]: level 5–11
+            - listitem [ref=f1e115]:
+              - link "1 Darkshore level 11–19" [ref=f1e116] [cursor=pointer]:
+                - /url: "#rare-12"
+                - generic [ref=f1e117]: "1"
+                - generic [ref=f1e118]: Darkshore
+                - emphasis [ref=f1e119]: level 11–19
+            - listitem [ref=f1e120]:
+              - link "1 Dun Morogh level 4–12" [ref=f1e121] [cursor=pointer]:
+                - /url: "#zone-1426"
+                - generic [ref=f1e122]: "1"
+                - generic [ref=f1e123]: Dun Morogh
+                - emphasis [ref=f1e124]: level 4–12
+            - listitem [ref=f1e125]:
+              - link "1 Mount Hyjal" [ref=f1e126] [cursor=pointer]:
+                - /url: "#zone-2482"
+                - generic [ref=f1e127]: "1"
+                - generic [ref=f1e128]: Mount Hyjal
+                - emphasis [ref=f1e129]
+            - listitem [ref=f1e130]:
+              - link "1 Redridge Mountains level 15–25" [ref=f1e131] [cursor=pointer]:
+                - /url: "#rare-9"
+                - generic [ref=f1e132]: "1"
+                - generic [ref=f1e133]: Redridge Mountains
+                - emphasis [ref=f1e134]: level 15–25
+            - listitem [ref=f1e135]:
+              - link "1 Thousand Needles level 24–35" [ref=f1e136] [cursor=pointer]:
+                - /url: "#rare-2"
+                - generic [ref=f1e137]: "1"
+                - generic [ref=f1e138]: Thousand Needles
+                - emphasis [ref=f1e139]: level 24–35
+            - listitem [ref=f1e140]:
+              - link "1 Wetlands level 20–30" [ref=f1e141] [cursor=pointer]:
+                - /url: "#rare-1"
+                - generic [ref=f1e142]: "1"
+                - generic [ref=f1e143]: Wetlands
+                - emphasis [ref=f1e144]: level 20–30
+      - navigation "Sections of this page" [ref=f1e145]:
+        - generic [ref=f1e146]:
+          - link "Best drops 13" [ref=f1e147] [cursor=pointer]:
+            - /url: "#best"
+            - generic [ref=f1e148]: Best drops
+            - generic [ref=f1e149]: "13"
+          - link "Sets" [ref=f1e150] [cursor=pointer]:
+            - /url: "#sets"
+          - link "All rares by zone 22" [ref=f1e152] [cursor=pointer]:
+            - /url: "#zones"
+            - generic [ref=f1e153]: All rares by zone
+            - generic [ref=f1e154]: "22"
+      - generic [ref=f1e155]:
+        - region [ref=f1e156]:
+          - heading "Best drops" [level=2] [ref=f1e158]
+          - paragraph [ref=f1e159]: The rares that drop something new in Forever, the most searched for first.
+          - article [ref=f1e160]:
+            - generic [ref=f1e161]:
+              - heading "Nightveiled Rotheap" [level=3] [ref=f1e162]
+              - button "Copy the chat line /target Nightveiled Rotheap" [ref=f1e163] [cursor=pointer]:
+                - generic [ref=f1e164]: /target Nightveiled Rotheap
+                - generic [ref=f1e165]: Copy
+              - paragraph [ref=f1e166]:
+                - generic [ref=f1e167]: Elite, new in Forever
+                - generic [ref=f1e168]: Wetlands
+                - generic [ref=f1e169]: level 31–32
+            - generic [ref=f1e170]:
+              - figure [ref=f1e171]:
+                - img "Nightveiled Rotheap in the game" [ref=f1e172]
+              - figure [ref=f1e173]:
+                - link "Open on the world map" [ref=f1e174] [cursor=pointer]:
+                  - /url: /map/eastern-kingdoms#x=5760&y=9354&z=5&with=rare
+                  - img "The game’s map of Wetlands" [ref=f1e175]
+                - generic [ref=f1e176]:
+                  - text: Wetlands
+                  - link "Open on the world map" [ref=f1e177] [cursor=pointer]:
+                    - /url: /map/eastern-kingdoms#x=5760&y=9354&z=5&with=rare
+              - list "What Nightveiled Rotheap drops" [ref=f1e178]:
+                - listitem [ref=f1e179]:
+                  - generic [ref=f1e181]:
+                    - link "Rotheap Innards" [ref=f1e182] [cursor=pointer]:
+                      - /url: /item/279537
+                    - generic [ref=f1e183]: Unique
+                    - generic [ref=f1e184]: Other
+                    - generic [ref=f1e185]: "\"You feel great discomfort simply looking at this.\""
+                - listitem [ref=f1e186]:
+                  - generic [ref=f1e188]:
+                    - link "Malignant Root" [ref=f1e189] [cursor=pointer]:
+                      - /url: /item/282283
+                    - generic [ref=f1e190]: Item Level 32
+                    - generic [ref=f1e191]: Binds when picked up
+                    - generic [ref=f1e192]: Finger
+                    - generic [ref=f1e193]: +7 Stamina
+                    - generic [ref=f1e194]: "Equip: +8 Attack Power"
+                    - generic [ref=f1e195]: "Equip: +4 Spell Power"
+                    - generic [ref=f1e196]: "Sell Price: 25 99"
+            - generic [ref=f1e197]:
+              - generic [ref=f1e198]:
+                - term [ref=f1e199]: Where
+                - definition [ref=f1e200]:
+                  - link "19.6, 43.4" [ref=f1e202] [cursor=pointer]:
+                    - /url: /map/eastern-kingdoms#x=5760&y=9354&z=5&with=rare
+                  - link "20.2, 27.4" [ref=f1e204] [cursor=pointer]:
+                    - /url: /map/eastern-kingdoms#x=5784&y=8931&z=5&with=rare
+                  - link "29.8, 23.2" [ref=f1e206] [cursor=pointer]:
+                    - /url: /map/eastern-kingdoms#x=6165&y=8820&z=5&with=rare
+                  - link "26.8, 41.8" [ref=f1e208] [cursor=pointer]:
+                    - /url: /map/eastern-kingdoms#x=6046&y=9312&z=5&with=rare
+              - generic [ref=f1e209]:
+                - term [ref=f1e210]: What to know
+                - definition [ref=f1e211]: It comes out of the sea on the west coast, then walks up the main river toward the dam, where it despawns. Two or three can be up at once. It comes out at night, server time. Some players killed it as early as 6:30 pm, but most groups find it from 9 pm. It respawns 5 to 30 minutes after it dies. It can be slowed and kited.
+              - generic [ref=f1e212]:
+                - term [ref=f1e213]: Using the loot
+                - definition [ref=f1e214]:
+                  - generic [ref=f1e215]:
+                    - generic [ref=f1e216]: "Rotheap Innards:"
+                    - text: Every member of the party or raid loots one.
+                  - generic [ref=f1e217]:
+                    - generic [ref=f1e218]: "Malignant Root:"
+                    - text: Trade the Rotheap Innards to Rethiel the Greenwarden at 56.2, 40.5, Alliance only. One per character, any class, any level.
+              - generic [ref=f1e219]:
+                - term [ref=f1e220]: Reported by
+                - definition [ref=f1e221]: Players on Wowhead, September 22 to 28, and a reader of this site who hunted it with an Alliance raid on September 29 and 30.
+          - article [ref=f1e222]:
+            - generic [ref=f1e223]:
+              - heading "Heartrazor" [level=3] [ref=f1e224]
+              - button "Copy the chat line /target Heartrazor" [ref=f1e225] [cursor=pointer]:
+                - generic [ref=f1e226]: /target Heartrazor
+                - generic [ref=f1e227]: Copy
+              - paragraph [ref=f1e228]:
+                - generic [ref=f1e229]: Rare elite
+                - generic [ref=f1e230]: Thousand Needles
+                - generic [ref=f1e231]: level 32
+            - generic [ref=f1e232]:
+              - figure [ref=f1e233]:
+                - img "Heartrazor in the game" [ref=f1e234]
+              - figure [ref=f1e235]:
+                - link "Open on the world map" [ref=f1e236] [cursor=pointer]:
+                  - /url: /map/kalimdor#x=17467&y=21352&z=5&with=rare
+                  - img "The game’s map of Thousand Needles" [ref=f1e237]
+                - generic [ref=f1e238]:
+                  - text: Thousand Needles
+                  - link "Open on the world map" [ref=f1e239] [cursor=pointer]:
+                    - /url: /map/kalimdor#x=17467&y=21352&z=5&with=rare
+              - list "What Heartrazor drops" [ref=f1e240]:
+                - listitem [ref=f1e241]:
+                  - generic [ref=f1e243]:
+                    - link "Wyvern Heart Band" [ref=f1e244] [cursor=pointer]:
+                      - /url: /item/285190
+                    - generic [ref=f1e245]: Item Level 34
+                    - generic [ref=f1e246]: Binds when picked up
+                    - generic [ref=f1e247]: Finger
+                    - generic [ref=f1e248]: +5 Agility
+                    - generic [ref=f1e249]: +5 Stamina
+                    - generic [ref=f1e250]: Requires Level 29
+                    - generic [ref=f1e251]: "Equip: +15 Attack Power"
+                    - generic [ref=f1e252]: "Sell Price: 30 17"
+            - generic [ref=f1e253]:
+              - generic [ref=f1e254]:
+                - term [ref=f1e255]: Where
+                - definition [ref=f1e256]:
+                  - link "15.8, 41.2" [ref=f1e258] [cursor=pointer]:
+                    - /url: /map/kalimdor#x=17467&y=21352&z=5&with=rare
+                  - link "13.0, 39.0" [ref=f1e260] [cursor=pointer]:
+                    - /url: /map/kalimdor#x=17349&y=21290&z=5&with=rare
+                  - link "12.2, 35.6" [ref=f1e262] [cursor=pointer]:
+                    - /url: /map/kalimdor#x=17315&y=21194&z=5&with=rare
+              - generic [ref=f1e263]:
+                - term [ref=f1e264]: What to know
+                - definition [ref=f1e265]: "A wyvern that patrols Highperch, the wyvern nests on the cliffs in the west of Thousand Needles. It hits hard and poisons its target: in Classic, players of 29 to 32 killed it alone only just, so at 30 take a friend. One spawn, and five to eight hours between two in Classic. Not tameable."
+              - generic [ref=f1e266]:
+                - term [ref=f1e267]: Reported by
+                - definition [ref=f1e268]: "Two readers of this site, October 1 and October 8: the second killed it twice and got the ring once. Where it walks: Wowhead's Forever database."
+          - article [ref=f1e269]:
+            - generic [ref=f1e270]:
+              - heading "Humar the Pridelord" [level=3] [ref=f1e271]
+              - button "Copy the chat line /target Humar the Pridelord" [ref=f1e272] [cursor=pointer]:
+                - generic [ref=f1e273]: /target Humar the Pridelord
+                - generic [ref=f1e274]: Copy
+              - paragraph [ref=f1e275]:
+                - generic [ref=f1e276]: Rare elite
+                - generic [ref=f1e277]: The Barrens
+                - generic [ref=f1e278]: level 23
+            - generic [ref=f1e279]:
+              - figure [ref=f1e280]:
+                - img "Humar the Pridelord in the game" [ref=f1e281]
+              - figure [ref=f1e282]:
+                - link "Open on the world map" [ref=f1e283] [cursor=pointer]:
+                  - /url: /map/kalimdor#x=19800&y=17106&z=5&with=rare
+                  - img "The game’s map of The Barrens" [ref=f1e284]
+                - generic [ref=f1e285]:
+                  - text: The Barrens
+                  - link "Open on the world map" [ref=f1e286] [cursor=pointer]:
+                    - /url: /map/kalimdor#x=19800&y=17106&z=5&with=rare
+              - list "What Humar the Pridelord drops" [ref=f1e287]:
+                - listitem [ref=f1e288]:
+                  - generic [ref=f1e290]:
+                    - link "Mark of the Pack Leader" [ref=f1e291] [cursor=pointer]:
+                      - /url: /item/285331
+                    - generic [ref=f1e292]: Item Level 25
+                    - generic [ref=f1e293]: Binds when picked up
+                    - generic [ref=f1e294]: Neck
+                    - generic [ref=f1e295]: +5 Strength
+                    - generic [ref=f1e296]: +5 Intellect
+                    - generic [ref=f1e297]: Requires Level 20
+                    - generic [ref=f1e298]: Blessing of Kalimdor (0/3)
+                    - generic [ref=f1e299]: "(2) Set: Increases movement speed by 5% in The Barrens and Stonetalon Mountains."
+                    - generic [ref=f1e300]: "Sell Price: 13 18"
+            - generic [ref=f1e301]:
+              - generic [ref=f1e302]:
+                - term [ref=f1e303]: Where
+                - definition [ref=f1e304]:
+                  - link "61.0, 35.0" [ref=f1e306] [cursor=pointer]:
+                    - /url: /map/kalimdor#x=19800&y=17106&z=5&with=rare
+              - generic [ref=f1e307]:
+                - term [ref=f1e308]: What to know
+                - definition [ref=f1e309]:
+                  - text: "The black lion under the big tree just north of Ratchet, where the pride of lions sleeps, as in Classic. His respawn was long in Classic: players waited eight to twelve hours. Hunters can tame it (cat): see"
+                  - link "hunter pets" [ref=f1e310] [cursor=pointer]:
+                    - /url: /hunter-pets#family-cat
+                  - text: .
+              - generic [ref=f1e311]:
+                - term [ref=f1e312]: Reported by
+                - definition [ref=f1e313]: Drop reported by two players under the item on Wowhead, and in Wowhead's news of September 23.
+          - article [ref=f1e314]:
+            - generic [ref=f1e315]:
+              - heading "Swiftmane" [level=3] [ref=f1e316]
+              - button "Copy the chat line /target Swiftmane" [ref=f1e317] [cursor=pointer]:
+                - generic [ref=f1e318]: /target Swiftmane
+                - generic [ref=f1e319]: Copy
+              - paragraph [ref=f1e320]:
+                - generic [ref=f1e321]: Rare elite
+                - generic [ref=f1e322]: The Barrens
+                - generic [ref=f1e323]: level 21
+            - generic [ref=f1e324]:
+              - figure [ref=f1e325]:
+                - img "Swiftmane in the game" [ref=f1e326]
+              - figure [ref=f1e327]:
+                - link "Open on the world map" [ref=f1e328] [cursor=pointer]:
+                  - /url: /map/kalimdor#x=19742&y=16976&z=5&with=rare
+                  - img "The game’s map of The Barrens" [ref=f1e329]
+                - generic [ref=f1e330]:
+                  - text: The Barrens
+                  - link "Open on the world map" [ref=f1e331] [cursor=pointer]:
+                    - /url: /map/kalimdor#x=19742&y=16976&z=5&with=rare
+              - list "What Swiftmane drops" [ref=f1e332]:
+                - listitem [ref=f1e333]:
+                  - generic [ref=f1e335]:
+                    - link "Signet of the Zhevra" [ref=f1e336] [cursor=pointer]:
+                      - /url: /item/285330
+                    - generic [ref=f1e337]: Item Level 23
+                    - generic [ref=f1e338]: Binds when picked up
+                    - generic [ref=f1e339]: Finger
+                    - generic [ref=f1e340]: +6 Agility
+                    - generic [ref=f1e341]: +2 Spirit
+                    - generic [ref=f1e342]: Requires Level 18
+                    - generic [ref=f1e343]: Blessing of Kalimdor (0/3)
+                    - generic [ref=f1e344]: "(2) Set: Increases movement speed by 5% in The Barrens and Stonetalon Mountains."
+                    - generic [ref=f1e345]: "Sell Price: 10 28"
+            - generic [ref=f1e346]:
+              - generic [ref=f1e347]:
+                - term [ref=f1e348]: Where
+                - definition [ref=f1e349]:
+                  - link "60.4, 33.0" [ref=f1e351] [cursor=pointer]:
+                    - /url: /map/kalimdor#x=19742&y=16976&z=5&with=rare
+                  - link "61.2, 29.6" [ref=f1e353] [cursor=pointer]:
+                    - /url: /map/kalimdor#x=19820&y=16756&z=5&with=rare
+                  - link "61.8, 36.2" [ref=f1e355] [cursor=pointer]:
+                    - /url: /map/kalimdor#x=19878&y=17184&z=5&with=rare
+              - generic [ref=f1e356]:
+                - term [ref=f1e357]: What to know
+                - definition [ref=f1e358]: A zhevra that runs around the same plateau as Humar, north of Ratchet.
+              - generic [ref=f1e359]:
+                - term [ref=f1e360]: Reported by
+                - definition [ref=f1e361]: Drop reported by two players on Wowhead.
+          - article [ref=f1e362]:
+            - generic [ref=f1e363]:
+              - heading "Takk the Leaper" [level=3] [ref=f1e364]
+              - button "Copy the chat line /target Takk the Leaper" [ref=f1e365] [cursor=pointer]:
+                - generic [ref=f1e366]: /target Takk the Leaper
+                - generic [ref=f1e367]: Copy
+              - paragraph [ref=f1e368]:
+                - generic [ref=f1e369]: Rare elite
+                - generic [ref=f1e370]: The Barrens
+                - generic [ref=f1e371]: level 19
+            - generic [ref=f1e372]:
+              - figure [ref=f1e373]:
+                - img "Takk the Leaper in the game" [ref=f1e374]
+              - figure [ref=f1e375]:
+                - link "Open on the world map" [ref=f1e376] [cursor=pointer]:
+                  - /url: /map/kalimdor#x=19742&y=15446&z=5&with=rare
+                  - img "The game’s map of The Barrens" [ref=f1e377]
+                - generic [ref=f1e378]:
+                  - text: The Barrens
+                  - link "Open on the world map" [ref=f1e379] [cursor=pointer]:
+                    - /url: /map/kalimdor#x=19742&y=15446&z=5&with=rare
+              - list "What Takk the Leaper drops" [ref=f1e380]:
+                - listitem [ref=f1e381]:
+                  - generic [ref=f1e383]:
+                    - link "Raptor Hide Cloak" [ref=f1e384] [cursor=pointer]:
+                      - /url: /item/285329
+                    - generic [ref=f1e385]: Item Level 21
+                    - generic [ref=f1e386]: Binds when picked up
+                    - generic [ref=f1e387]:
+                      - generic [ref=f1e388]: Back
+                      - generic [ref=f1e389]: Cloth
+                    - generic [ref=f1e390]: 19 Armor
+                    - generic [ref=f1e391]: +4 Stamina
+                    - generic [ref=f1e392]: +3 Spirit
+                    - generic [ref=f1e393]: Requires Level 16
+                    - generic [ref=f1e394]: Blessing of Kalimdor (0/3)
+                    - generic [ref=f1e395]: "(2) Set: Increases movement speed by 5% in The Barrens and Stonetalon Mountains."
+                    - generic [ref=f1e396]: "Sell Price: 5 91"
+            - generic [ref=f1e397]:
+              - generic [ref=f1e398]:
+                - term [ref=f1e399]: Where
+                - definition [ref=f1e400]:
+                  - link "60.4, 9.4" [ref=f1e402] [cursor=pointer]:
+                    - /url: /map/kalimdor#x=19742&y=15446&z=5&with=rare
+                  - link "58.2, 7.4" [ref=f1e404] [cursor=pointer]:
+                    - /url: /map/kalimdor#x=19528&y=15316&z=5&with=rare
+                  - link "60.8, 13.4" [ref=f1e406] [cursor=pointer]:
+                    - /url: /map/kalimdor#x=19781&y=15705&z=5&with=rare
+              - generic [ref=f1e407]:
+                - term [ref=f1e408]: What to know
+                - definition [ref=f1e409]:
+                  - text: "A raptor that roams the northern Barrens, around 61, 14. Hunters can tame it (raptor): see"
+                  - link "hunter pets" [ref=f1e410] [cursor=pointer]:
+                    - /url: /hunter-pets#family-raptor
+                  - text: .
+              - generic [ref=f1e411]:
+                - term [ref=f1e412]: Reported by
+                - definition [ref=f1e413]: Drop reported by a player on Wowhead on September 23.
+          - article [ref=f1e414]:
+            - generic [ref=f1e415]:
+              - heading "The Alliance Outrunners" [level=3] [ref=f1e416]
+              - button "Copy the chat line /target Aean Swiftriver" [ref=f1e417] [cursor=pointer]:
+                - generic [ref=f1e418]: /target Aean Swiftriver
+                - generic [ref=f1e419]: Copy
+              - paragraph [ref=f1e420]:
+                - generic [ref=f1e421]: Rare elite
+                - generic [ref=f1e422]: The Barrens
+                - generic [ref=f1e423]: level 24–25
+            - generic [ref=f1e424]:
+              - figure [ref=f1e425]:
+                - img "Aean Swiftriver in the game" [ref=f1e426]
+              - figure [ref=f1e427]:
+                - link "Open on the world map" [ref=f1e428] [cursor=pointer]:
+                  - /url: /map/kalimdor#x=18584&y=20005&z=5&with=rare
+                  - img "The game’s map of The Barrens" [ref=f1e429]
+                - generic [ref=f1e430]:
+                  - text: The Barrens
+                  - link "Open on the world map" [ref=f1e431] [cursor=pointer]:
+                    - /url: /map/kalimdor#x=18584&y=20005&z=5&with=rare
+              - list "What The Alliance Outrunners drops" [ref=f1e432]:
+                - listitem [ref=f1e433]:
+                  - paragraph [ref=f1e434]: Aean Swiftriver
+                  - generic [ref=f1e436]:
+                    - link "Alliance Outrunner Bow" [ref=f1e437] [cursor=pointer]:
+                      - /url: /item/285347
+                    - generic [ref=f1e438]: Item Level 27
+                    - generic [ref=f1e439]: Binds when picked up
+                    - generic [ref=f1e440]:
+                      - generic [ref=f1e441]: Ranged
+                      - generic [ref=f1e442]: Bow
+                    - generic [ref=f1e443]:
+                      - generic [ref=f1e444]: 22 - 42 Damage
+                      - generic [ref=f1e445]: Speed 2.40
+                    - generic [ref=f1e446]: (13.3 damage per second)
+                    - generic [ref=f1e447]: +4 Agility
+                    - generic [ref=f1e448]: +3 Spirit
+                    - generic [ref=f1e449]: Requires Level 22
+                    - generic [ref=f1e450]: "Sell Price: 30 28"
+                - listitem [ref=f1e451]:
+                  - paragraph [ref=f1e452]: Thora Feathermoon
+                  - generic [ref=f1e454]:
+                    - link "Alliance Outrunner's Sword" [ref=f1e455] [cursor=pointer]:
+                      - /url: /item/285346
+                    - generic [ref=f1e456]: Item Level 27
+                    - generic [ref=f1e457]: Binds when picked up
+                    - generic [ref=f1e458]:
+                      - generic [ref=f1e459]: One-Hand
+                      - generic [ref=f1e460]: Sword
+                    - generic [ref=f1e461]:
+                      - generic [ref=f1e462]: 25 - 47 Damage
+                      - generic [ref=f1e463]: Speed 2.10
+                    - generic [ref=f1e464]: (17.1 damage per second)
+                    - generic [ref=f1e465]: +5 Agility
+                    - generic [ref=f1e466]: Requires Level 22
+                    - generic [ref=f1e467]: "Equip: +6 Attack Power"
+                    - generic [ref=f1e468]: "Sell Price: 40 22"
+                - listitem [ref=f1e469]:
+                  - paragraph [ref=f1e470]: Hannah Bladeleaf
+                  - generic [ref=f1e472]:
+                    - link "Alliance Outrunner Healing Rod" [ref=f1e473] [cursor=pointer]:
+                      - /url: /item/285348
+                    - generic [ref=f1e474]: Item Level 26
+                    - generic [ref=f1e475]: Binds when picked up
+                    - generic [ref=f1e476]: Held In Off-hand
+                    - generic [ref=f1e477]: Requires Level 21
+                    - generic [ref=f1e478]: "Equip: +8 Health Regeneration"
+                    - generic [ref=f1e479]: "Equip: +12 Healing"
+                    - generic [ref=f1e480]: "Equip: +4 Spell Damage"
+                    - generic [ref=f1e481]: "Sell Price: 14 73"
+                - listitem [ref=f1e482]:
+                  - paragraph [ref=f1e483]: Marcus Bel
+                  - generic [ref=f1e485]:
+                    - link "Alliance Outrunner Staff" [ref=f1e486] [cursor=pointer]:
+                      - /url: /item/285350
+                    - generic [ref=f1e487]: Item Level 26
+                    - generic [ref=f1e488]: Binds when picked up
+                    - generic [ref=f1e489]:
+                      - generic [ref=f1e490]: Two-Hand
+                      - generic [ref=f1e491]: Staff
+                    - generic [ref=f1e492]:
+                      - generic [ref=f1e493]: 32 - 49 Damage
+                      - generic [ref=f1e494]: Speed 2.50
+                    - generic [ref=f1e495]: (16.2 damage per second)
+                    - generic [ref=f1e496]: +9 Stamina
+                    - generic [ref=f1e497]: +9 Spirit
+                    - generic [ref=f1e498]: Requires Level 21
+                    - generic [ref=f1e499]: "Equip: +28 Spell Power"
+                    - generic [ref=f1e500]: "Sell Price: 46 38"
+            - generic [ref=f1e501]:
+              - generic [ref=f1e502]:
+                - term [ref=f1e503]: Where
+                - definition [ref=f1e504]:
+                  - link "48.5, 79.7" [ref=f1e506] [cursor=pointer]:
+                    - /url: /map/kalimdor#x=18584&y=20005&z=5&with=rare
+                  - link "45.4, 41.4" [ref=f1e508] [cursor=pointer]:
+                    - /url: /map/kalimdor#x=18282&y=17521&z=5&with=rare
+                  - link "49.8, 61.2" [ref=f1e510] [cursor=pointer]:
+                    - /url: /map/kalimdor#x=18711&y=18805&z=5&with=rare
+                  - link "46.1, 69.7" [ref=f1e512] [cursor=pointer]:
+                    - /url: /map/kalimdor#x=18351&y=19357&z=5&with=rare
+              - generic [ref=f1e513]:
+                - term [ref=f1e514]: What to know
+                - definition [ref=f1e515]: "Four Alliance scouts who ride together, as in Classic: Aean Swiftriver leads, and Thora Feathermoon, Hannah Bladeleaf and Marcus Bel follow her. They take the road of the southern Barrens from Bael Modan, around 48, 80, north past Camp Taurajo to about 45, 42, and back. Each one can drop a weapon of their own, but not every time: on September 30 a reader killed Aean and Thora in a raid group and got nothing from Aean and two ordinary greens from Thora. They are elites of level 24 and 25 and fight together: bring a group."
+              - generic [ref=f1e516]:
+                - term [ref=f1e517]: Reported by
+                - definition [ref=f1e518]: "A reader of this site on September 30, with screenshots of the staff looted from Marcus Bel and the sword from Thora Feathermoon. The bow and the rod: players on Wowhead. The path is Classic's, from the cMaNGOS database."
+          - article [ref=f1e519]:
+            - generic [ref=f1e520]:
+              - heading "Taskmaster Whipfang" [level=3] [ref=f1e521]
+              - button "Copy the chat line /target Taskmaster Whipfang" [ref=f1e522] [cursor=pointer]:
+                - generic [ref=f1e523]: /target Taskmaster Whipfang
+                - generic [ref=f1e524]: Copy
+              - paragraph [ref=f1e525]:
+                - generic [ref=f1e526]: Rare elite
+                - generic [ref=f1e527]: Stonetalon Mountains
+                - generic [ref=f1e528]: level 22
+            - generic [ref=f1e529]:
+              - figure [ref=f1e530]:
+                - img "Taskmaster Whipfang in the game" [ref=f1e531]
+              - figure [ref=f1e532]:
+                - link "Open on the world map" [ref=f1e533] [cursor=pointer]:
+                  - /url: /map/kalimdor#x=16221&y=15241&z=5&with=rare
+                  - img "The game’s map of Stonetalon Mountains" [ref=f1e534]
+                - generic [ref=f1e535]:
+                  - text: Stonetalon Mountains
+                  - link "Open on the world map" [ref=f1e536] [cursor=pointer]:
+                    - /url: /map/kalimdor#x=16221&y=15241&z=5&with=rare
+              - list "What Taskmaster Whipfang drops" [ref=f1e537]:
+                - listitem [ref=f1e538]:
+                  - generic [ref=f1e540]:
+                    - link "Whipfang's Skinsearer" [ref=f1e541] [cursor=pointer]:
+                      - /url: /item/284386
+                    - generic [ref=f1e542]: Item Level 24
+                    - generic [ref=f1e543]: Binds when picked up
+                    - generic [ref=f1e544]:
+                      - generic [ref=f1e545]: One-Hand
+                      - generic [ref=f1e546]: Dagger
+                    - generic [ref=f1e547]:
+                      - generic [ref=f1e548]: 18 - 35 Damage
+                      - generic [ref=f1e549]: Speed 1.70
+                    - generic [ref=f1e550]: (15.6 damage per second)
+                    - generic [ref=f1e551]: Requires Level 19
+                    - generic [ref=f1e552]: "Chance on hit: Sear your target's flesh, dealing 67 to 101 Fire damage."
+                    - generic [ref=f1e553]: "Sell Price: 28 31"
+            - generic [ref=f1e554]:
+              - generic [ref=f1e555]:
+                - term [ref=f1e556]: Where
+                - definition [ref=f1e557]:
+                  - link "63.0, 53.0" [ref=f1e559] [cursor=pointer]:
+                    - /url: /map/kalimdor#x=16221&y=15241&z=5&with=rare
+                  - link "61.4, 50.0" [ref=f1e561] [cursor=pointer]:
+                    - /url: /map/kalimdor#x=16146&y=15147&z=5&with=rare
+                  - link "64.2, 57.0" [ref=f1e563] [cursor=pointer]:
+                    - /url: /map/kalimdor#x=16278&y=15366&z=5&with=rare
+                  - link "61.2, 55.8" [ref=f1e565] [cursor=pointer]:
+                    - /url: /map/kalimdor#x=16137&y=15328&z=5&with=rare
+              - generic [ref=f1e566]:
+                - term [ref=f1e567]: What to know
+                - definition [ref=f1e568]: A Classic rare that walks Windshear Crag, in the east of Stonetalon Mountains, around 62, 54. The dagger carries its name, and it fights with the same one in hand.
+              - generic [ref=f1e569]:
+                - term [ref=f1e570]: Reported by
+                - definition [ref=f1e571]: A reader of this site on September 24, and a player on Wowhead who matched the dagger to it. An earlier Wowhead comment placed it in Stranglethorn Vale.
+          - article [ref=f1e572]:
+            - generic [ref=f1e573]:
+              - heading "Foreman Rigger" [level=3] [ref=f1e574]
+              - button "Copy the chat line /target Foreman Rigger" [ref=f1e575] [cursor=pointer]:
+                - generic [ref=f1e576]: /target Foreman Rigger
+                - generic [ref=f1e577]: Copy
+              - paragraph [ref=f1e578]:
+                - generic [ref=f1e579]: Rare elite
+                - generic [ref=f1e580]: Stonetalon Mountains
+                - generic [ref=f1e581]: level 24
+            - generic [ref=f1e582]:
+              - figure [ref=f1e583]:
+                - img "Foreman Rigger in the game" [ref=f1e584]
+              - figure [ref=f1e585]:
+                - link "Open on the world map" [ref=f1e586] [cursor=pointer]:
+                  - /url: /map/kalimdor#x=16325&y=15234&z=5&with=rare
+                  - img "The game’s map of Stonetalon Mountains" [ref=f1e587]
+                - generic [ref=f1e588]:
+                  - text: Stonetalon Mountains
+                  - link "Open on the world map" [ref=f1e589] [cursor=pointer]:
+                    - /url: /map/kalimdor#x=16325&y=15234&z=5&with=rare
+              - list "What Foreman Rigger drops" [ref=f1e590]:
+                - listitem [ref=f1e591]:
+                  - generic [ref=f1e593]:
+                    - link "Foreman's Helm" [ref=f1e594] [cursor=pointer]:
+                      - /url: /item/284400
+                    - generic [ref=f1e595]: Item Level 26
+                    - generic [ref=f1e596]: Binds when picked up
+                    - generic [ref=f1e597]:
+                      - generic [ref=f1e598]: Head
+                      - generic [ref=f1e599]: Mail
+                    - generic [ref=f1e600]: 166 Armor
+                    - generic [ref=f1e601]: +9 Stamina
+                    - generic [ref=f1e602]: +8 Strength
+                    - generic [ref=f1e603]: Requires Level 21
+                    - generic [ref=f1e604]: "Equip: +5 Mining Skill"
+                    - generic [ref=f1e605]: "Sell Price: 15 96"
+            - generic [ref=f1e606]:
+              - generic [ref=f1e607]:
+                - term [ref=f1e608]: Where
+                - definition [ref=f1e609]:
+                  - link "65.2, 52.8" [ref=f1e611] [cursor=pointer]:
+                    - /url: /map/kalimdor#x=16325&y=15234&z=5&with=rare
+                  - link "65.0, 46.8" [ref=f1e613] [cursor=pointer]:
+                    - /url: /map/kalimdor#x=16315&y=15047&z=5&with=rare
+                  - link "67.6, 45.2" [ref=f1e615] [cursor=pointer]:
+                    - /url: /map/kalimdor#x=16437&y=14997&z=5&with=rare
+                  - link "68.2, 51.4" [ref=f1e617] [cursor=pointer]:
+                    - /url: /map/kalimdor#x=16465&y=15191&z=5&with=rare
+              - generic [ref=f1e618]:
+                - term [ref=f1e619]: What to know
+                - definition [ref=f1e620]: A Classic rare of the Venture Co. who walks its camp at Windshear Crag, in the east of Stonetalon Mountains, around 66, 50. A reader killed him there at level 24 with another player. Wowhead's loot list for him does not have the helm yet.
+              - generic [ref=f1e621]:
+                - term [ref=f1e622]: Reported by
+                - definition [ref=f1e623]: A reader of this site on September 29, who offered a screenshot of the loot.
+          - article [ref=f1e624]:
+            - generic [ref=f1e625]:
+              - heading "Dro'zem the Blasphemous" [level=3] [ref=f1e626]
+              - button "Copy the chat line /target Dro'zem the Blasphemous" [ref=f1e627] [cursor=pointer]:
+                - generic [ref=f1e628]: /target Dro'zem the Blasphemous
+                - generic [ref=f1e629]: Copy
+              - paragraph [ref=f1e630]:
+                - generic [ref=f1e631]: Rare elite
+                - generic [ref=f1e632]: Redridge Mountains
+                - generic [ref=f1e633]: level 23
+            - generic [ref=f1e634]:
+              - figure [ref=f1e635]:
+                - img "Dro'zem the Blasphemous in the game" [ref=f1e636]
+              - figure [ref=f1e637]:
+                - link "Open on the world map" [ref=f1e638] [cursor=pointer]:
+                  - /url: /map/eastern-kingdoms#x=7773&y=15519&z=5&with=rare
+                  - img "The game’s map of Redridge Mountains" [ref=f1e639]
+                - generic [ref=f1e640]:
+                  - text: Redridge Mountains
+                  - link "Open on the world map" [ref=f1e641] [cursor=pointer]:
+                    - /url: /map/eastern-kingdoms#x=7773&y=15519&z=5&with=rare
+              - list "What Dro'zem the Blasphemous drops" [ref=f1e642]:
+                - listitem [ref=f1e643]:
+                  - generic [ref=f1e645]:
+                    - link "Dro'zem's Tunic" [ref=f1e646] [cursor=pointer]:
+                      - /url: /item/277213
+                    - generic [ref=f1e647]: Item Level 25
+                    - generic [ref=f1e648]: Binds when picked up
+                    - generic [ref=f1e649]:
+                      - generic [ref=f1e650]: Chest
+                      - generic [ref=f1e651]: Cloth
+                    - generic [ref=f1e652]: 43 Armor
+                    - generic [ref=f1e653]: +9 Intellect
+                    - generic [ref=f1e654]: Requires Level 20
+                    - generic [ref=f1e655]: "Equip: +11 Spell Power"
+                    - generic [ref=f1e656]: "Sell Price: 12 39"
+            - generic [ref=f1e657]:
+              - generic [ref=f1e658]:
+                - term [ref=f1e659]: Where
+                - definition [ref=f1e660]:
+                  - link "74.4, 82.2" [ref=f1e662] [cursor=pointer]:
+                    - /url: /map/eastern-kingdoms#x=7773&y=15519&z=5&with=rare
+                  - link "63.0, 43.0" [ref=f1e664] [cursor=pointer]:
+                    - /url: /map/eastern-kingdoms#x=7535&y=14974&z=5&with=rare
+                  - link "36.2, 9.2" [ref=f1e666] [cursor=pointer]:
+                    - /url: /map/eastern-kingdoms#x=6976&y=14504&z=5&with=rare
+              - generic [ref=f1e667]:
+                - term [ref=f1e668]: What to know
+                - definition [ref=f1e669]: "Level 23. He turns up in three places of the Redridge Mountains: Render’s Valley in the south-east, around 74, 82, Stonewatch Keep, around 63, 43, and Render’s Camp in the north, around 36, 9. Wowhead’s spots for him partly date from Season of Discovery, which had him too, and its loot list does not have the tunic yet."
+              - generic [ref=f1e670]:
+                - term [ref=f1e671]: Reported by
+                - definition [ref=f1e672]: A reader of this site, September 26.
+          - article [ref=f1e673]:
+            - generic [ref=f1e674]:
+              - heading "Elmpaw" [level=3] [ref=f1e675]
+              - button "Copy the chat line /target Elmpaw" [ref=f1e676] [cursor=pointer]:
+                - generic [ref=f1e677]: /target Elmpaw
+                - generic [ref=f1e678]: Copy
+              - paragraph [ref=f1e679]:
+                - generic [ref=f1e680]: Elite, new in Forever
+                - generic [ref=f1e681]: Elwynn Forest
+                - generic [ref=f1e682]: level 12
+            - generic [ref=f1e683]:
+              - figure [ref=f1e684]:
+                - img "Elmpaw in the game" [ref=f1e685]
+              - figure [ref=f1e686]:
+                - link "Open on the world map" [ref=f1e687] [cursor=pointer]:
+                  - /url: /map/eastern-kingdoms#x=5853&y=15664&z=5&with=rare
+                  - img "The game’s map of Elwynn Forest" [ref=f1e688]
+                - generic [ref=f1e689]:
+                  - text: Elwynn Forest
+                  - link "Open on the world map" [ref=f1e690] [cursor=pointer]:
+                    - /url: /map/eastern-kingdoms#x=5853&y=15664&z=5&with=rare
+              - list "What Elmpaw drops" [ref=f1e691]:
+                - listitem [ref=f1e692]:
+                  - generic [ref=f1e694]:
+                    - link "Elmpaw's Head" [ref=f1e695] [cursor=pointer]:
+                      - /url: /item/247862
+                    - generic [ref=f1e696]: Binds when picked up
+                    - generic [ref=f1e697]: Unique
+                    - generic [ref=f1e698]: This Item Begins a Quest
+                    - generic [ref=f1e699]: Quest
+                    - generic [ref=f1e700]: Requires Level 7
+            - generic [ref=f1e701]:
+              - generic [ref=f1e702]:
+                - term [ref=f1e703]: Where
+                - definition [ref=f1e704]:
+                  - link "81.6, 85.4" [ref=f1e706] [cursor=pointer]:
+                    - /url: /map/eastern-kingdoms#x=5853&y=15664&z=5&with=rare
+                  - link "75.0, 38.4" [ref=f1e708] [cursor=pointer]:
+                    - /url: /map/eastern-kingdoms#x=5633&y=14619&z=5&with=rare
+              - generic [ref=f1e709]:
+                - term [ref=f1e710]: What to know
+                - definition [ref=f1e711]:
+                  - text: "A black bear, not to be confused with Matriarch Bristlefur, the grey one. It has two camps: just south of Ridgepoint Tower, in the south-east of the forest, where players doing the tower's quests kill it fast, and the hills north of Stone Cairn Lake, which are quieter. It has over 800 health, more than Hogger, and the tower's guards help. Hunters can tame it (bear): see"
+                  - link "hunter pets" [ref=f1e712] [cursor=pointer]:
+                    - /url: /hunter-pets#family-bear
+                  - text: .
+              - generic [ref=f1e713]:
+                - term [ref=f1e714]: Using the loot
+                - definition [ref=f1e715]:
+                  - generic [ref=f1e716]:
+                    - generic [ref=f1e717]: "Elmpaw's Head:"
+                    - text: "It starts a quest: take it to Helene Peltskinner, the skinning trainer near Goldshire at 46, 62, for 840 XP, 3 silver 50 copper and 100 reputation with Stormwind. Alliance only."
+              - generic [ref=f1e718]:
+                - term [ref=f1e719]: Reported by
+                - definition [ref=f1e720]: A reader of this site, September 30, and players on Wowhead, September 20 and 26.
+          - article [ref=f1e721]:
+            - generic [ref=f1e722]:
+              - heading "Snapbeak the Quick" [level=3] [ref=f1e723]
+              - button "Copy the chat line /target Snapbeak the Quick" [ref=f1e724] [cursor=pointer]:
+                - generic [ref=f1e725]: /target Snapbeak the Quick
+                - generic [ref=f1e726]: Copy
+              - paragraph [ref=f1e727]:
+                - generic [ref=f1e728]: Rare elite, new in Forever
+                - generic [ref=f1e729]: Zephras Isle
+                - generic [ref=f1e730]: level 3–12
+            - generic [ref=f1e731]:
+              - figure [ref=f1e732]:
+                - img "Snapbeak the Quick in the game" [ref=f1e733]
+              - figure [ref=f1e734]:
+                - link "Open on the world map" [ref=f1e735] [cursor=pointer]:
+                  - /url: /map/zephras-isle#x=1444&y=2427&z=3&with=rare
+                  - img "The game’s map of Zephras Isle" [ref=f1e736]
+                - generic [ref=f1e737]:
+                  - text: Zephras Isle
+                  - link "Open on the world map" [ref=f1e738] [cursor=pointer]:
+                    - /url: /map/zephras-isle#x=1444&y=2427&z=3&with=rare
+              - list "What Snapbeak the Quick drops" [ref=f1e739]:
+                - listitem [ref=f1e740]:
+                  - generic [ref=f1e742]:
+                    - link "Thendal Watcher's Boots" [ref=f1e743] [cursor=pointer]:
+                      - /url: /item/285269
+                    - generic [ref=f1e744]: Item Level 10
+                    - generic [ref=f1e745]: Binds when equipped
+                    - generic [ref=f1e746]:
+                      - generic [ref=f1e747]: Feet
+                      - generic [ref=f1e748]: Mail
+                    - generic [ref=f1e749]: 74 Armor
+                    - generic [ref=f1e750]: +1 Stamina
+                    - generic [ref=f1e751]: Requires Level 5
+                    - generic [ref=f1e752]: "Sell Price: 1 6"
+            - generic [ref=f1e753]:
+              - generic [ref=f1e754]:
+                - term [ref=f1e755]: Where
+                - definition [ref=f1e756]:
+                  - link "36.0, 58.0" [ref=f1e758] [cursor=pointer]:
+                    - /url: /map/zephras-isle#x=1444&y=2427&z=3&with=rare
+              - generic [ref=f1e759]:
+                - term [ref=f1e760]: What to know
+                - definition [ref=f1e761]: Walks a circle around the giant tree just past the Hippogryph Protectors, in Thendal Grove. Not tameable.
+              - generic [ref=f1e762]:
+                - term [ref=f1e763]: Reported by
+                - definition [ref=f1e764]: One player on Wowhead.
+          - article [ref=f1e765]:
+            - generic [ref=f1e766]:
+              - heading "Baron Marinous" [level=3] [ref=f1e767]
+              - button "Copy the chat line /target Baron Marinous" [ref=f1e768] [cursor=pointer]:
+                - generic [ref=f1e769]: /target Baron Marinous
+                - generic [ref=f1e770]: Copy
+              - paragraph [ref=f1e771]:
+                - generic [ref=f1e772]: Summoned elite, new in Forever
+                - generic [ref=f1e773]: Darkshore
+                - generic [ref=f1e774]: level 11–19
+            - generic [ref=f1e775]:
+              - figure [ref=f1e776]:
+                - img "Baron Marinous in the game" [ref=f1e777]
+              - figure [ref=f1e778]:
+                - link "Open on the world map" [ref=f1e779] [cursor=pointer]:
+                  - /url: /map/kalimdor#x=17282&y=9331&z=5&with=rare
+                  - img "The game’s map of Darkshore" [ref=f1e780]
+                - generic [ref=f1e781]:
+                  - text: Darkshore
+                  - link "Open on the world map" [ref=f1e782] [cursor=pointer]:
+                    - /url: /map/kalimdor#x=17282&y=9331&z=5&with=rare
+              - list "What Baron Marinous drops" [ref=f1e783]:
+                - listitem [ref=f1e784]:
+                  - generic [ref=f1e786]:
+                    - link "Mathystral Amulet Fragment" [ref=f1e787] [cursor=pointer]:
+                      - /url: /item/279276
+                    - generic [ref=f1e788]: Unique (20)
+                    - generic [ref=f1e789]: Other
+                    - generic [ref=f1e790]: "Use: Combine 20 Mathystral Amulet Fragments into a restored Mathystral Amulet."
+                - listitem [ref=f1e791]:
+                  - generic [ref=f1e793]:
+                    - link "Mathystral Amulet" [ref=f1e794] [cursor=pointer]:
+                      - /url: /item/279277
+                    - generic [ref=f1e795]: Unique
+                    - generic [ref=f1e796]: Other
+                    - generic [ref=f1e797]: "Use: Beckon forth the being guarding the Mathystral Ruins at a Fathom Stone."
+            - generic [ref=f1e798]:
+              - generic [ref=f1e799]:
+                - term [ref=f1e800]: Where
+                - definition [ref=f1e801]:
+                  - link "59.2, 22.6" [ref=f1e803] [cursor=pointer]:
+                    - /url: /map/kalimdor#x=17282&y=9331&z=5&with=rare
+              - generic [ref=f1e804]:
+                - term [ref=f1e805]: What to know
+                - definition [ref=f1e806]: An elemental of about 2,400 health that casts frostbolts for over 100. He drops the Clouded Water Globe, which starts the quest Baron Marinous. A feral druid killed him alone at level 20; a group is safer.
+              - generic [ref=f1e807]:
+                - term [ref=f1e808]: Using the loot
+                - definition [ref=f1e809]:
+                  - generic [ref=f1e810]:
+                    - generic [ref=f1e811]: "Mathystral Amulet Fragment:"
+                    - text: Combine 20 fragments into the amulet.
+                  - generic [ref=f1e812]:
+                    - generic [ref=f1e813]: "Mathystral Amulet:"
+                    - text: Use it at the Fathom Stone of the Mathystral Ruins, at the bottom of the stairs by the water, to summon the baron. The amulet is used up.
+              - generic [ref=f1e814]:
+                - term [ref=f1e815]: Reported by
+                - definition [ref=f1e816]: Two players on Wowhead.
+          - article [ref=f1e817]:
+            - generic [ref=f1e818]:
+              - heading "Lordaeron Captain" [level=3] [ref=f1e819]
+              - button "Copy the chat line /target Lordaeron Captain" [ref=f1e820] [cursor=pointer]:
+                - generic [ref=f1e821]: /target Lordaeron Captain
+                - generic [ref=f1e822]: Copy
+              - paragraph [ref=f1e823]:
+                - generic [ref=f1e824]: Rare elite, in the Ruins of Lordaeron
+                - generic [ref=f1e825]: Ruins of Lordaeron
+                - generic [ref=f1e826]: level 19
+            - generic [ref=f1e827]:
+              - figure [ref=f1e828]:
+                - img "Lordaeron Captain in the game" [ref=f1e829]
+              - figure [ref=f1e830]:
+                - link "Open the dungeon’s map" [ref=f1e831] [cursor=pointer]:
+                  - /url: /dungeons/ruins-of-lordaeron#lordaeron-captain
+                  - img "Map of Ruins of Lordaeron" [ref=f1e832]
+                - generic [ref=f1e833]:
+                  - generic [ref=f1e834]:
+                    - text: Map by
+                    - link "Santiago Reyes" [ref=f1e835] [cursor=pointer]:
+                      - /url: https://asguevara433.wixsite.com/srmaps
+                  - link "Open the dungeon’s map" [ref=f1e836] [cursor=pointer]:
+                    - /url: /dungeons/ruins-of-lordaeron#lordaeron-captain
+              - list "What Lordaeron Captain drops" [ref=f1e837]:
+                - listitem [ref=f1e838]:
+                  - generic [ref=f1e840]:
+                    - link "Haunting Blade" [ref=f1e841] [cursor=pointer]:
+                      - /url: /item/6641
+                    - generic [ref=f1e842]: Item Level 27
+                    - generic [ref=f1e843]: Binds when picked up
+                    - generic [ref=f1e844]:
+                      - generic [ref=f1e845]: Two-Hand
+                      - generic [ref=f1e846]: Sword
+                    - generic [ref=f1e847]:
+                      - generic [ref=f1e848]: 68 - 102 Damage
+                      - generic [ref=f1e849]: Speed 3.80
+                    - generic [ref=f1e850]: (22.4 damage per second)
+                    - generic [ref=f1e851]: Requires Level 22
+                    - generic [ref=f1e852]: "Equip: +33 Healing"
+                    - generic [ref=f1e853]: "Equip: +11 Spell Damage"
+                    - generic [ref=f1e854]: "Sell Price: 50 62"
+            - generic [ref=f1e855]:
+              - generic [ref=f1e856]:
+                - term [ref=f1e857]: Where
+                - definition [ref=f1e858]:
+                  - text: "Inside the dungeon:"
+                  - link "Ruins of Lordaeron" [ref=f1e859] [cursor=pointer]:
+                    - /url: /dungeons/ruins-of-lordaeron
+                  - text: ", in the north-west, roughly"
+              - generic [ref=f1e860]:
+                - term [ref=f1e861]: What to know
+                - definition [ref=f1e862]: A rare, so not there on every run. It walks the north-west of the dungeon with Skeletal Soldiers and has about 2,600 health. The player who found it had killed every boss first.
+              - generic [ref=f1e863]:
+                - term [ref=f1e864]: Using the loot
+                - definition [ref=f1e865]:
+                  - generic [ref=f1e866]:
+                    - generic [ref=f1e867]: "Haunting Blade:"
+                    - text: A version of it, slightly different from Classic's, according to the player who found him.
+              - generic [ref=f1e868]:
+                - term [ref=f1e869]: Reported by
+                - definition [ref=f1e870]: A player on Reddit, with a screenshot of the kill, quoted on Wowhead.
+        - region [ref=f1e871]:
+          - heading "Sets" [level=2] [ref=f1e873]
+          - article [ref=f1e874]:
+            - generic [ref=f1e875]:
+              - heading "Blessing of Kalimdor" [level=3] [ref=f1e876]
+              - paragraph [ref=f1e877]:
+                - generic [ref=f1e878]: Three rares of the Barrens, one piece each
+            - paragraph [ref=f1e879]: (2) Movement speed increased by 5% in The Barrens and Stonetalon Mountains.
+            - list [ref=f1e880]:
+              - listitem [ref=f1e881]:
+                - link "Humar the Pridelord" [ref=f1e882] [cursor=pointer]:
+                  - /url: "#rare-3"
+                  - figure [ref=f1e883]:
+                    - img "Humar the Pridelord in the game" [ref=f1e884]
+                - generic [ref=f1e887]:
+                  - link "Mark of the Pack Leader" [ref=f1e888] [cursor=pointer]:
+                    - /url: /item/285331
+                  - generic [ref=f1e889]: Item Level 25
+                  - generic [ref=f1e890]: Binds when picked up
+                  - generic [ref=f1e891]: Neck
+                  - generic [ref=f1e892]: +5 Strength
+                  - generic [ref=f1e893]: +5 Intellect
+                  - generic [ref=f1e894]: Requires Level 20
+                  - generic [ref=f1e895]: Blessing of Kalimdor (0/3)
+                  - generic [ref=f1e896]: "(2) Set: Increases movement speed by 5% in The Barrens and Stonetalon Mountains."
+                  - generic [ref=f1e897]: "Sell Price: 13 18"
+              - listitem [ref=f1e898]:
+                - link "Swiftmane" [ref=f1e899] [cursor=pointer]:
+                  - /url: "#rare-4"
+                  - figure [ref=f1e900]:
+                    - img "Swiftmane in the game" [ref=f1e901]
+                - generic [ref=f1e904]:
+                  - link "Signet of the Zhevra" [ref=f1e905] [cursor=pointer]:
+                    - /url: /item/285330
+                  - generic [ref=f1e906]: Item Level 23
+                  - generic [ref=f1e907]: Binds when picked up
+                  - generic [ref=f1e908]: Finger
+                  - generic [ref=f1e909]: +6 Agility
+                  - generic [ref=f1e910]: +2 Spirit
+                  - generic [ref=f1e911]: Requires Level 18
+                  - generic [ref=f1e912]: Blessing of Kalimdor (0/3)
+                  - generic [ref=f1e913]: "(2) Set: Increases movement speed by 5% in The Barrens and Stonetalon Mountains."
+                  - generic [ref=f1e914]: "Sell Price: 10 28"
+              - listitem [ref=f1e915]:
+                - link "Takk the Leaper" [ref=f1e916] [cursor=pointer]:
+                  - /url: "#rare-5"
+                  - figure [ref=f1e917]:
+                    - img "Takk the Leaper in the game" [ref=f1e918]
+                - generic [ref=f1e921]:
+                  - link "Raptor Hide Cloak" [ref=f1e922] [cursor=pointer]:
+                    - /url: /item/285329
+                  - generic [ref=f1e923]: Item Level 21
+                  - generic [ref=f1e924]: Binds when picked up
+                  - generic [ref=f1e925]:
+                    - generic [ref=f1e926]: Back
+                    - generic [ref=f1e927]: Cloth
+                  - generic [ref=f1e928]: 19 Armor
+                  - generic [ref=f1e929]: +4 Stamina
+                  - generic [ref=f1e930]: +3 Spirit
+                  - generic [ref=f1e931]: Requires Level 16
+                  - generic [ref=f1e932]: Blessing of Kalimdor (0/3)
+                  - generic [ref=f1e933]: "(2) Set: Increases movement speed by 5% in The Barrens and Stonetalon Mountains."
+                  - generic [ref=f1e934]: "Sell Price: 5 91"
+          - article [ref=f1e935]:
+            - generic [ref=f1e936]:
+              - heading "Rider of the Plaguelands" [level=3] [ref=f1e937]
+              - paragraph [ref=f1e938]:
+                - generic [ref=f1e939]: Pieces not found yet
+            - paragraph [ref=f1e940]: (2) Increases mount speed by 5% in Eastern and Western Plaguelands. (3) Chance on melee attack to lash the target, inflicting 140 Shadow damage.
+            - paragraph [ref=f1e941]: "The set is in the beta client, but its three pieces are not: their names and what drops them are unknown. The Plaguelands are level 50 to 60, past the beta's cap. The Barrens set comes from the Barrens' rares, so the Plaguelands' rares are the likely source; nobody has confirmed it."
+        - region [ref=f1e942]:
+          - heading "All rares by zone" [level=2] [ref=f1e944]
+          - paragraph [ref=f1e945]: The rares Forever adds, zone by zone. Most drop ordinary loot so far; several are new pets for hunters. The numbers on each map match the cards beside it.
+          - region [ref=f1e946]:
+            - generic [ref=f1e947]:
+              - heading "Zephras Isle" [level=3] [ref=f1e948]
+              - paragraph [ref=f1e949]:
+                - generic [ref=f1e950]: level 3–12
+                - generic [ref=f1e951]: Contested
+                - generic [ref=f1e952]: 7 rares
+            - generic [ref=f1e953]:
+              - figure [ref=f1e954]:
+                - link "Open on the world map" [ref=f1e955] [cursor=pointer]:
+                  - /url: /map/zephras-isle#x=2790&y=1686&z=3&with=rare
+                  - img "The game’s map of Zephras Isle" [ref=f1e956]
+                  - generic: 1 4
+                  - generic: "2"
+                  - generic: "3"
+                  - generic: 5 7
+                  - generic: "6"
+                - generic [ref=f1e957]:
+                  - text: Zephras Isle
+                  - link "Open on the world map" [ref=f1e958] [cursor=pointer]:
+                    - /url: /map/zephras-isle#x=2790&y=1686&z=3&with=rare
+              - list [ref=f1e959]:
+                - listitem [ref=f1e960]:
+                  - generic [ref=f1e961]:
+                    - generic [aria-hidden] [ref=f1e962]: "1"
+                    - figure [ref=f1e963]:
+                      - img "Den'dralass in the game" [ref=f1e964]
+                  - heading "Den'dralass" [level=4] [ref=f1e965]
+                  - button "Copy the chat line /target Den'dralass" [ref=f1e966] [cursor=pointer]:
+                    - generic [ref=f1e967]: /target Den'dralass
+                    - generic [ref=f1e968]: Copy
+                  - paragraph [ref=f1e969]:
+                    - generic [ref=f1e970]: Rare
+                  - paragraph [ref=f1e971]:
+                    - link "61.2, 37.2" [ref=f1e973] [cursor=pointer]:
+                      - /url: /map/zephras-isle#x=2790&y=1686&z=3&with=rare
+                  - paragraph [ref=f1e974]: Also seen at 56.3, 31.7, left of the middle structure at the edge of the cliff. Dropped an ordinary green.
+                - listitem [ref=f1e975]:
+                  - generic [ref=f1e976]:
+                    - generic [aria-hidden] [ref=f1e977]: "2"
+                    - figure [ref=f1e978]:
+                      - img "Fernfeather in the game" [ref=f1e979]
+                  - heading "Fernfeather" [level=4] [ref=f1e980]
+                  - button "Copy the chat line /target Fernfeather" [ref=f1e981] [cursor=pointer]:
+                    - generic [ref=f1e982]: /target Fernfeather
+                    - generic [ref=f1e983]: Copy
+                  - paragraph [ref=f1e984]:
+                    - generic [ref=f1e985]: Rare
+                    - link "Tameable tallstrider" [ref=f1e986] [cursor=pointer]:
+                      - /url: /hunter-pets#family-tallstrider
+                  - paragraph [ref=f1e987]:
+                    - link "48.0, 85.4" [ref=f1e989] [cursor=pointer]:
+                      - /url: /map/zephras-isle#x=2085&y=3402&z=3&with=rare
+                    - link "53.8, 78.8" [ref=f1e991] [cursor=pointer]:
+                      - /url: /map/zephras-isle#x=2395&y=3167&z=3&with=rare
+                - listitem [ref=f1e992]:
+                  - generic [ref=f1e993]:
+                    - generic [aria-hidden] [ref=f1e994]: "3"
+                    - figure [ref=f1e995]:
+                      - img "Galemender Delanea in the game" [ref=f1e996]
+                  - heading "Galemender Delanea" [level=4] [ref=f1e997]
+                  - button "Copy the chat line /target Galemender Delanea" [ref=f1e998] [cursor=pointer]:
+                    - generic [ref=f1e999]: /target Galemender Delanea
+                    - generic [ref=f1e1000]: Copy
+                  - paragraph [ref=f1e1001]:
+                    - generic [ref=f1e1002]: Rare
+                  - paragraph [ref=f1e1003]:
+                    - link "62.4, 62.0" [ref=f1e1005] [cursor=pointer]:
+                      - /url: /map/zephras-isle#x=2854&y=2569&z=3&with=rare
+                - listitem [ref=f1e1006]:
+                  - generic [ref=f1e1007]:
+                    - generic [aria-hidden] [ref=f1e1008]: "4"
+                    - figure [ref=f1e1009]:
+                      - img "Mystmane in the game" [ref=f1e1010]
+                  - heading "Mystmane" [level=4] [ref=f1e1011]
+                  - button "Copy the chat line /target Mystmane" [ref=f1e1012] [cursor=pointer]:
+                    - generic [ref=f1e1013]: /target Mystmane
+                    - generic [ref=f1e1014]: Copy
+                  - paragraph [ref=f1e1015]:
+                    - generic [ref=f1e1016]: Rare
+                    - link "Tameable bear" [ref=f1e1017] [cursor=pointer]:
+                      - /url: /hunter-pets#family-bear
+                  - paragraph [ref=f1e1018]:
+                    - link "60.2, 34.6" [ref=f1e1020] [cursor=pointer]:
+                      - /url: /map/zephras-isle#x=2737&y=1594&z=3&with=rare
+                  - paragraph [ref=f1e1021]: An owlbear with a 1.6 attack speed, in the Shadowgale Forest.
+                - listitem [ref=f1e1022]:
+                  - generic [ref=f1e1023]:
+                    - generic [aria-hidden] [ref=f1e1024]: "5"
+                    - figure [ref=f1e1025]:
+                      - img "Slydris in the game" [ref=f1e1026]
+                  - heading "Slydris" [level=4] [ref=f1e1027]
+                  - button "Copy the chat line /target Slydris" [ref=f1e1028] [cursor=pointer]:
+                    - generic [ref=f1e1029]: /target Slydris
+                    - generic [ref=f1e1030]: Copy
+                  - paragraph [ref=f1e1031]:
+                    - generic [ref=f1e1032]: Rare elite
+                  - paragraph [ref=f1e1033]:
+                    - link "50.2, 51.0" [ref=f1e1035] [cursor=pointer]:
+                      - /url: /map/zephras-isle#x=2203&y=2178&z=3&with=rare
+                - listitem [ref=f1e1036]:
+                  - generic [ref=f1e1037]:
+                    - generic [aria-hidden] [ref=f1e1038]: "6"
+                    - figure [ref=f1e1039]:
+                      - img "Tel'daeor the Stormspeaker in the game" [ref=f1e1040]
+                  - heading "Tel'daeor the Stormspeaker" [level=4] [ref=f1e1041]
+                  - button "Copy the chat line /target Tel'daeor the Stormspeaker" [ref=f1e1042] [cursor=pointer]:
+                    - generic [ref=f1e1043]: /target Tel'daeor the Stormspeaker
+                    - generic [ref=f1e1044]: Copy
+                  - paragraph [ref=f1e1045]:
+                    - generic [ref=f1e1046]: Rare
+                  - paragraph [ref=f1e1047]:
+                    - link "66.0, 53.8" [ref=f1e1049] [cursor=pointer]:
+                      - /url: /map/zephras-isle#x=3046&y=2277&z=3&with=rare
+                - listitem [ref=f1e1050]:
+                  - generic [ref=f1e1051]:
+                    - generic [aria-hidden] [ref=f1e1052]: "7"
+                    - figure [ref=f1e1053]:
+                      - img "The Lost One in the game" [ref=f1e1054]
+                  - heading "The Lost One" [level=4] [ref=f1e1055]
+                  - button "Copy the chat line /target The Lost One" [ref=f1e1056] [cursor=pointer]:
+                    - generic [ref=f1e1057]: /target The Lost One
+                    - generic [ref=f1e1058]: Copy
+                  - paragraph [ref=f1e1059]:
+                    - generic [ref=f1e1060]: Rare elite
+                  - paragraph [ref=f1e1061]:
+                    - link "52.0, 46.4" [ref=f1e1063] [cursor=pointer]:
+                      - /url: /map/zephras-isle#x=2299&y=2014&z=3&with=rare
+          - region [ref=f1e1064]:
+            - generic [ref=f1e1065]:
+              - heading "Dun Morogh" [level=3] [ref=f1e1066]
+              - paragraph [ref=f1e1067]:
+                - generic [ref=f1e1068]: level 4–12
+                - generic [ref=f1e1069]: Alliance
+                - generic [ref=f1e1070]: 1 rare
+            - generic [ref=f1e1071]:
+              - figure [ref=f1e1072]:
+                - link "Open on the world map" [ref=f1e1073] [cursor=pointer]:
+                  - /url: /map/eastern-kingdoms/dun-morogh#with=rare
+                  - img "The game’s map of Dun Morogh" [ref=f1e1074]
+                  - generic: "8"
+                - generic [ref=f1e1075]:
+                  - text: Dun Morogh
+                  - link "Open on the world map" [ref=f1e1076] [cursor=pointer]:
+                    - /url: /map/eastern-kingdoms/dun-morogh#with=rare
+              - list [ref=f1e1077]:
+                - listitem [ref=f1e1078]:
+                  - generic [ref=f1e1079]:
+                    - generic [aria-hidden] [ref=f1e1080]: "8"
+                    - figure [ref=f1e1081]:
+                      - img "Ghostfang in the game" [ref=f1e1082]
+                  - heading "Ghostfang" [level=4] [ref=f1e1083]
+                  - button "Copy the chat line /target Ghostfang" [ref=f1e1084] [cursor=pointer]:
+                    - generic [ref=f1e1085]: /target Ghostfang
+                    - generic [ref=f1e1086]: Copy
+                  - paragraph [ref=f1e1087]:
+                    - generic [ref=f1e1088]: Rare
+                    - link "Tameable cat" [ref=f1e1089] [cursor=pointer]:
+                      - /url: /hunter-pets#family-cat
+                  - paragraph [ref=f1e1090]:
+                    - link "74.2, 63.2" [ref=f1e1092] [cursor=pointer]:
+                      - /url: /map/eastern-kingdoms#x=6386&y=11858&z=5&with=rare
+                    - link "79.4, 42.8" [ref=f1e1094] [cursor=pointer]:
+                      - /url: /map/eastern-kingdoms#x=6632&y=11215&z=5&with=rare
+                    - link "80.4, 46.6" [ref=f1e1096] [cursor=pointer]:
+                      - /url: /map/eastern-kingdoms#x=6679&y=11335&z=5&with=rare
+                    - link "81.6, 55.4" [ref=f1e1098] [cursor=pointer]:
+                      - /url: /map/eastern-kingdoms#x=6736&y=11612&z=5&with=rare
+                  - paragraph [ref=f1e1099]: "Seen at four spots on the hills near the tunnel to the Wetlands, behind the larger trees; respawns in about 30 minutes. No loot of its own so far: players got nothing or a grey item."
+          - region [ref=f1e1100]:
+            - generic [ref=f1e1101]:
+              - heading "Durotar" [level=3] [ref=f1e1102]
+              - paragraph [ref=f1e1103]:
+                - generic [ref=f1e1104]: level 5–10
+                - generic [ref=f1e1105]: Horde
+                - generic [ref=f1e1106]: 2 rares
+            - generic [ref=f1e1107]:
+              - figure [ref=f1e1108]:
+                - link "Open on the world map" [ref=f1e1109] [cursor=pointer]:
+                  - /url: /map/kalimdor/durotar#with=rare
+                  - img "The game’s map of Durotar" [ref=f1e1110]
+                  - generic: "9"
+                  - generic: "10"
+                - generic [ref=f1e1111]:
+                  - text: Durotar
+                  - link "Open on the world map" [ref=f1e1112] [cursor=pointer]:
+                    - /url: /map/kalimdor/durotar#with=rare
+              - list [ref=f1e1113]:
+                - listitem [ref=f1e1114]:
+                  - generic [ref=f1e1115]:
+                    - generic [aria-hidden] [ref=f1e1116]: "9"
+                    - figure [ref=f1e1117]:
+                      - img "Dustwind Eggtender in the game" [ref=f1e1118]
+                  - heading "Dustwind Eggtender" [level=4] [ref=f1e1119]
+                  - button "Copy the chat line /target Dustwind Eggtender" [ref=f1e1120] [cursor=pointer]:
+                    - generic [ref=f1e1121]: /target Dustwind Eggtender
+                    - generic [ref=f1e1122]: Copy
+                  - paragraph [ref=f1e1123]:
+                    - generic [ref=f1e1124]: Rare
+                  - paragraph [ref=f1e1125]:
+                    - link "51.2, 20.6" [ref=f1e1127] [cursor=pointer]:
+                      - /url: /map/kalimdor#x=20867&y=15345&z=5&with=rare
+                    - link "52.2, 24.0" [ref=f1e1129] [cursor=pointer]:
+                      - /url: /map/kalimdor#x=20918&y=15460&z=5&with=rare
+                - listitem [ref=f1e1130]:
+                  - generic [ref=f1e1131]:
+                    - generic [aria-hidden] [ref=f1e1132]: "10"
+                    - figure [ref=f1e1133]:
+                      - img "Shal'ma in the game" [ref=f1e1134]
+                  - heading "Shal'ma" [level=4] [ref=f1e1135]
+                  - button "Copy the chat line /target Shal'ma" [ref=f1e1136] [cursor=pointer]:
+                    - generic [ref=f1e1137]: /target Shal'ma
+                    - generic [ref=f1e1138]: Copy
+                  - paragraph [ref=f1e1139]:
+                    - generic [ref=f1e1140]: Rare
+                    - link "Tameable cat" [ref=f1e1141] [cursor=pointer]:
+                      - /url: /hunter-pets#family-cat
+                  - paragraph [ref=f1e1142]:
+                    - link "59.8, 91.0" [ref=f1e1144] [cursor=pointer]:
+                      - /url: /map/kalimdor#x=21303&y=17727&z=5&with=rare
+                    - link "62.8, 96.8" [ref=f1e1146] [cursor=pointer]:
+                      - /url: /map/kalimdor#x=21456&y=17924&z=5&with=rare
+                    - link "68.6, 70.6" [ref=f1e1148] [cursor=pointer]:
+                      - /url: /map/kalimdor#x=21750&y=17037&z=5&with=rare
+                  - paragraph [ref=f1e1149]: 1.3 attack speed in the beta.
+          - region [ref=f1e1150]:
+            - generic [ref=f1e1151]:
+              - heading "Elwynn Forest" [level=3] [ref=f1e1152]
+              - paragraph [ref=f1e1153]:
+                - generic [ref=f1e1154]: level 5–10
+                - generic [ref=f1e1155]: Alliance
+                - generic [ref=f1e1156]: 2 rares
+            - generic [ref=f1e1157]:
+              - figure [ref=f1e1158]:
+                - link "Open on the world map" [ref=f1e1159] [cursor=pointer]:
+                  - /url: /map/eastern-kingdoms/elwynn-forest#with=rare
+                  - img "The game’s map of Elwynn Forest" [ref=f1e1160]
+                  - generic: "11"
+                  - generic: "12"
+                - generic [ref=f1e1161]:
+                  - text: Elwynn Forest
+                  - link "Open on the world map" [ref=f1e1162] [cursor=pointer]:
+                    - /url: /map/eastern-kingdoms/elwynn-forest#with=rare
+              - list [ref=f1e1163]:
+                - listitem [ref=f1e1164]:
+                  - generic [ref=f1e1165]:
+                    - generic [aria-hidden] [ref=f1e1166]: "11"
+                    - figure [ref=f1e1167]:
+                      - img "Elder Finseer in the game" [ref=f1e1168]
+                  - heading "Elder Finseer" [level=4] [ref=f1e1169]
+                  - button "Copy the chat line /target Elder Finseer" [ref=f1e1170] [cursor=pointer]:
+                    - generic [ref=f1e1171]: /target Elder Finseer
+                    - generic [ref=f1e1172]: Copy
+                  - paragraph [ref=f1e1173]:
+                    - generic [ref=f1e1174]: Rare
+                  - paragraph [ref=f1e1175]:
+                    - link "78.6, 56.2" [ref=f1e1177] [cursor=pointer]:
+                      - /url: /map/eastern-kingdoms#x=5753&y=15015&z=5&with=rare
+                    - link "79.6, 46.8" [ref=f1e1179] [cursor=pointer]:
+                      - /url: /map/eastern-kingdoms#x=5786&y=14806&z=5&with=rare
+                - listitem [ref=f1e1180]:
+                  - generic [ref=f1e1181]:
+                    - generic [aria-hidden] [ref=f1e1182]: "12"
+                    - figure [ref=f1e1183]:
+                      - img "Matriarch Bristlefur in the game" [ref=f1e1184]
+                  - heading "Matriarch Bristlefur" [level=4] [ref=f1e1185]
+                  - button "Copy the chat line /target Matriarch Bristlefur" [ref=f1e1186] [cursor=pointer]:
+                    - generic [ref=f1e1187]: /target Matriarch Bristlefur
+                    - generic [ref=f1e1188]: Copy
+                  - paragraph [ref=f1e1189]:
+                    - generic [ref=f1e1190]: Rare
+                    - link "Tameable bear" [ref=f1e1191] [cursor=pointer]:
+                      - /url: /hunter-pets#family-bear
+                  - paragraph [ref=f1e1192]:
+                    - link "64.4, 77.0" [ref=f1e1194] [cursor=pointer]:
+                      - /url: /map/eastern-kingdoms#x=5280&y=15477&z=5&with=rare
+                    - link "59.0, 80.6" [ref=f1e1196] [cursor=pointer]:
+                      - /url: /map/eastern-kingdoms#x=5100&y=15557&z=5&with=rare
+                    - link "51.8, 79.2" [ref=f1e1198] [cursor=pointer]:
+                      - /url: /map/eastern-kingdoms#x=4860&y=15526&z=5&with=rare
+          - region [ref=f1e1199]:
+            - generic [ref=f1e1200]:
+              - heading "Mulgore" [level=3] [ref=f1e1201]
+              - paragraph [ref=f1e1202]:
+                - generic [ref=f1e1203]: level 5–10
+                - generic [ref=f1e1204]: Horde
+                - generic [ref=f1e1205]: 3 rares
+            - generic [ref=f1e1206]:
+              - figure [ref=f1e1207]:
+                - link "Open on the world map" [ref=f1e1208] [cursor=pointer]:
+                  - /url: /map/kalimdor/mulgore#with=rare
+                  - img "The game’s map of Mulgore" [ref=f1e1209]
+                  - generic: "13"
+                  - generic: "14"
+                  - generic: "15"
+                - generic [ref=f1e1210]:
+                  - text: Mulgore
+                  - link "Open on the world map" [ref=f1e1211] [cursor=pointer]:
+                    - /url: /map/kalimdor/mulgore#with=rare
+              - list [ref=f1e1212]:
+                - listitem [ref=f1e1213]:
+                  - generic [ref=f1e1214]:
+                    - generic [aria-hidden] [ref=f1e1215]: "13"
+                    - figure [ref=f1e1216]:
+                      - img "Snarlsnout in the game" [ref=f1e1217]
+                  - heading "Snarlsnout" [level=4] [ref=f1e1218]
+                  - button "Copy the chat line /target Snarlsnout" [ref=f1e1219] [cursor=pointer]:
+                    - generic [ref=f1e1220]: /target Snarlsnout
+                    - generic [ref=f1e1221]: Copy
+                  - paragraph [ref=f1e1222]:
+                    - generic [ref=f1e1223]: Rare
+                  - paragraph [ref=f1e1224]:
+                    - link "32.8, 65.4" [ref=f1e1226] [cursor=pointer]:
+                      - /url: /map/kalimdor#x=15942&y=18703&z=5&with=rare
+                - listitem [ref=f1e1227]:
+                  - generic [ref=f1e1228]:
+                    - generic [aria-hidden] [ref=f1e1229]: "14"
+                    - figure [ref=f1e1230]:
+                      - img "Stormherald Ukta in the game" [ref=f1e1231]
+                  - heading "Stormherald Ukta" [level=4] [ref=f1e1232]
+                  - button "Copy the chat line /target Stormherald Ukta" [ref=f1e1233] [cursor=pointer]:
+                    - generic [ref=f1e1234]: /target Stormherald Ukta
+                    - generic [ref=f1e1235]: Copy
+                  - paragraph [ref=f1e1236]:
+                    - generic [ref=f1e1237]: Rare
+                  - paragraph [ref=f1e1238]:
+                    - link "60.2, 58.2" [ref=f1e1240] [cursor=pointer]:
+                      - /url: /map/kalimdor#x=17561&y=18420&z=5&with=rare
+                - listitem [ref=f1e1241]:
+                  - generic [ref=f1e1242]:
+                    - generic [aria-hidden] [ref=f1e1243]: "15"
+                    - figure [ref=f1e1244]:
+                      - img "Thornstarter Igleg in the game" [ref=f1e1245]
+                  - heading "Thornstarter Igleg" [level=4] [ref=f1e1246]
+                  - button "Copy the chat line /target Thornstarter Igleg" [ref=f1e1247] [cursor=pointer]:
+                    - generic [ref=f1e1248]: /target Thornstarter Igleg
+                    - generic [ref=f1e1249]: Copy
+                  - paragraph [ref=f1e1250]:
+                    - generic [ref=f1e1251]: Rare
+                  - paragraph [ref=f1e1252]:
+                    - link "59.0, 31.6" [ref=f1e1254] [cursor=pointer]:
+                      - /url: /map/kalimdor#x=17490&y=17372&z=5&with=rare
+          - region [ref=f1e1255]:
+            - generic [ref=f1e1256]:
+              - heading "Teldrassil" [level=3] [ref=f1e1257]
+              - paragraph [ref=f1e1258]:
+                - generic [ref=f1e1259]: level 5–11
+                - generic [ref=f1e1260]: Alliance
+                - generic [ref=f1e1261]: 2 rares
+            - generic [ref=f1e1262]:
+              - figure [ref=f1e1263]:
+                - link "Open on the world map" [ref=f1e1264] [cursor=pointer]:
+                  - /url: /map/kalimdor/teldrassil#with=rare
+                  - img "The game’s map of Teldrassil" [ref=f1e1265]
+                  - generic: "16"
+                  - generic: "17"
+                - generic [ref=f1e1266]:
+                  - text: Teldrassil
+                  - link "Open on the world map" [ref=f1e1267] [cursor=pointer]:
+                    - /url: /map/kalimdor/teldrassil#with=rare
+              - list [ref=f1e1268]:
+                - listitem [ref=f1e1269]:
+                  - generic [ref=f1e1270]:
+                    - generic [aria-hidden] [ref=f1e1271]: "16"
+                    - figure [ref=f1e1272]:
+                      - img "Nightscreech in the game" [ref=f1e1273]
+                  - heading "Nightscreech" [level=4] [ref=f1e1274]
+                  - button "Copy the chat line /target Nightscreech" [ref=f1e1275] [cursor=pointer]:
+                    - generic [ref=f1e1276]: /target Nightscreech
+                    - generic [ref=f1e1277]: Copy
+                  - paragraph [ref=f1e1278]:
+                    - generic [ref=f1e1279]: Rare
+                    - link "Tameable bird of prey" [ref=f1e1280] [cursor=pointer]:
+                      - /url: /hunter-pets#family-bird-of-prey
+                  - paragraph [ref=f1e1281]:
+                    - link "46.4, 33.6" [ref=f1e1283] [cursor=pointer]:
+                      - /url: /map/kalimdor#x=14990&y=6121&z=5&with=rare
+                    - link "40.0, 55.6" [ref=f1e1285] [cursor=pointer]:
+                      - /url: /map/kalimdor#x=14677&y=6837&z=5&with=rare
+                  - paragraph [ref=f1e1286]: Across the road from the leatherworking trainer; respawns in one to two hours.
+                - listitem [ref=f1e1287]:
+                  - generic [ref=f1e1288]:
+                    - generic [aria-hidden] [ref=f1e1289]: "17"
+                    - figure [ref=f1e1290]:
+                      - img "Wrathvine in the game" [ref=f1e1291]
+                  - heading "Wrathvine" [level=4] [ref=f1e1292]
+                  - button "Copy the chat line /target Wrathvine" [ref=f1e1293] [cursor=pointer]:
+                    - generic [ref=f1e1294]: /target Wrathvine
+                    - generic [ref=f1e1295]: Copy
+                  - paragraph [ref=f1e1296]:
+                    - generic [ref=f1e1297]: Rare
+                  - paragraph [ref=f1e1298]:
+                    - link "53.4, 70.4" [ref=f1e1300] [cursor=pointer]:
+                      - /url: /map/kalimdor#x=15332&y=7320&z=5&with=rare
+                    - link "56.4, 67.6" [ref=f1e1302] [cursor=pointer]:
+                      - /url: /map/kalimdor#x=15479&y=7228&z=5&with=rare
+          - region [ref=f1e1303]:
+            - generic [ref=f1e1304]:
+              - heading "Tirisfal Glades" [level=3] [ref=f1e1305]
+              - paragraph [ref=f1e1306]:
+                - generic [ref=f1e1307]: level 5–12
+                - generic [ref=f1e1308]: Horde
+                - generic [ref=f1e1309]: 4 rares
+            - generic [ref=f1e1310]:
+              - figure [ref=f1e1311]:
+                - link "Open on the world map" [ref=f1e1312] [cursor=pointer]:
+                  - /url: /map/eastern-kingdoms/tirisfal-glades#with=rare
+                  - img "The game’s map of Tirisfal Glades" [ref=f1e1313]
+                  - generic: "18"
+                  - generic: "19"
+                  - generic: "20"
+                  - generic: "21"
+                - generic [ref=f1e1314]:
+                  - text: Tirisfal Glades
+                  - link "Open on the world map" [ref=f1e1315] [cursor=pointer]:
+                    - /url: /map/eastern-kingdoms/tirisfal-glades#with=rare
+              - list [ref=f1e1316]:
+                - listitem [ref=f1e1317]:
+                  - generic [ref=f1e1318]:
+                    - generic [aria-hidden] [ref=f1e1319]: "18"
+                    - figure [ref=f1e1320]:
+                      - img "Blightsculler in the game" [ref=f1e1321]
+                  - heading "Blightsculler" [level=4] [ref=f1e1322]
+                  - button "Copy the chat line /target Blightsculler" [ref=f1e1323] [cursor=pointer]:
+                    - generic [ref=f1e1324]: /target Blightsculler
+                    - generic [ref=f1e1325]: Copy
+                  - paragraph [ref=f1e1326]:
+                    - generic [ref=f1e1327]: Rare
+                  - paragraph [ref=f1e1328]:
+                    - link "17.2, 53.8" [ref=f1e1330] [cursor=pointer]:
+                      - /url: /map/eastern-kingdoms#x=2442&y=4016&z=5&with=rare
+                    - link "16.8, 57.8" [ref=f1e1332] [cursor=pointer]:
+                      - /url: /map/eastern-kingdoms#x=2425&y=4132&z=5&with=rare
+                - listitem [ref=f1e1333]:
+                  - generic [ref=f1e1334]:
+                    - generic [aria-hidden] [ref=f1e1335]: "19"
+                    - figure [ref=f1e1336]:
+                      - img "Coldrasp in the game" [ref=f1e1337]
+                  - heading "Coldrasp" [level=4] [ref=f1e1338]
+                  - button "Copy the chat line /target Coldrasp" [ref=f1e1339] [cursor=pointer]:
+                    - generic [ref=f1e1340]: /target Coldrasp
+                    - generic [ref=f1e1341]: Copy
+                  - paragraph [ref=f1e1342]:
+                    - generic [ref=f1e1343]: Rare
+                    - link "Tameable wolf" [ref=f1e1344] [cursor=pointer]:
+                      - /url: /hunter-pets#family-wolf
+                  - paragraph [ref=f1e1345]:
+                    - link "19.7, 65.6" [ref=f1e1347] [cursor=pointer]:
+                      - /url: /map/eastern-kingdoms#x=2551&y=4357&z=5&with=rare
+                  - paragraph [ref=f1e1348]: A blue ghost wolf in the Whispering Forest. Comes with Furious Howl; respawns in hours.
+                - listitem [ref=f1e1349]:
+                  - generic [ref=f1e1350]:
+                    - generic [aria-hidden] [ref=f1e1351]: "20"
+                    - figure [ref=f1e1352]:
+                      - img "Decrepit Harvester in the game" [ref=f1e1353]
+                  - heading "Decrepit Harvester" [level=4] [ref=f1e1354]
+                  - button "Copy the chat line /target Decrepit Harvester" [ref=f1e1355] [cursor=pointer]:
+                    - generic [ref=f1e1356]: /target Decrepit Harvester
+                    - generic [ref=f1e1357]: Copy
+                  - paragraph [ref=f1e1358]:
+                    - generic [ref=f1e1359]: Rare
+                  - paragraph [ref=f1e1360]:
+                    - link "52.2, 55.6" [ref=f1e1362] [cursor=pointer]:
+                      - /url: /map/eastern-kingdoms#x=3960&y=4068&z=5&with=rare
+                - listitem [ref=f1e1363]:
+                  - generic [ref=f1e1364]:
+                    - generic [aria-hidden] [ref=f1e1365]: "21"
+                    - figure [ref=f1e1366]:
+                      - img "The Condemned One in the game" [ref=f1e1367]
+                  - heading "The Condemned One" [level=4] [ref=f1e1368]
+                  - button "Copy the chat line /target The Condemned One" [ref=f1e1369] [cursor=pointer]:
+                    - generic [ref=f1e1370]: /target The Condemned One
+                    - generic [ref=f1e1371]: Copy
+                  - paragraph [ref=f1e1372]:
+                    - generic [ref=f1e1373]: Rare
+                  - paragraph [ref=f1e1374]:
+                    - link "67.0, 43.0" [ref=f1e1376] [cursor=pointer]:
+                      - /url: /map/eastern-kingdoms#x=4602&y=3704&z=5&with=rare
+                    - link "66.0, 46.8" [ref=f1e1378] [cursor=pointer]:
+                      - /url: /map/eastern-kingdoms#x=4559&y=3814&z=5&with=rare
+                    - link "71.0, 39.4" [ref=f1e1380] [cursor=pointer]:
+                      - /url: /map/eastern-kingdoms#x=4776&y=3599&z=5&with=rare
+                    - link "70.2, 44.2" [ref=f1e1382] [cursor=pointer]:
+                      - /url: /map/eastern-kingdoms#x=4741&y=3738&z=5&with=rare
+                  - paragraph [ref=f1e1383]: Walks around the bottom of Brightwater Lake. Dropped linen cloth and copper.
+          - region [ref=f1e1384]:
+            - generic [ref=f1e1385]:
+              - heading "Mount Hyjal" [level=3] [ref=f1e1386]
+              - paragraph [ref=f1e1387]:
+                - generic [ref=f1e1388]: Contested
+                - generic [ref=f1e1389]: 1 rare
+            - generic [ref=f1e1390]:
+              - figure [ref=f1e1391]:
+                - link "Open on the world map" [ref=f1e1392] [cursor=pointer]:
+                  - /url: /map/kalimdor/mount-hyjal#with=rare
+                  - img "The game’s map of Mount Hyjal" [ref=f1e1393]
+                  - generic: "22"
+                - generic [ref=f1e1394]:
+                  - text: Mount Hyjal
+                  - link "Open on the world map" [ref=f1e1395] [cursor=pointer]:
+                    - /url: /map/kalimdor/mount-hyjal#with=rare
+              - list [ref=f1e1396]:
+                - listitem [ref=f1e1397]:
+                  - generic [ref=f1e1398]:
+                    - generic [aria-hidden] [ref=f1e1399]: "22"
+                    - figure [ref=f1e1400]:
+                      - img "Pexmit in the game" [ref=f1e1401]
+                  - heading "Pexmit" [level=4] [ref=f1e1402]
+                  - button "Copy the chat line /target Pexmit" [ref=f1e1403] [cursor=pointer]:
+                    - generic [ref=f1e1404]: /target Pexmit
+                    - generic [ref=f1e1405]: Copy
+                  - paragraph [ref=f1e1406]:
+                    - generic [ref=f1e1407]: Rare
+                  - paragraph [ref=f1e1408]:
+                    - link "59.6, 49.2" [ref=f1e1410] [cursor=pointer]:
+                      - /url: /map/kalimdor#x=19257&y=11425&z=5&with=rare
+          - generic [ref=f1e1411]:
+            - heading "Not placed yet" [level=3] [ref=f1e1412]
+            - paragraph [ref=f1e1413]: Wowhead’s Forever database lists these rares without a position; some stand inside dungeons. Lyn the Ignored, Death Wailer, Varkharn the Vigilant, Ganoloth the Tireless, Unyielding Eye, Legion Hulk, Sarinnia Wormwing, Old Thornpaw, Defias Vintner, Boulupulo, Jezerelle the Swaying, Spectral Citizen, Reginald Holmsby, Bannerwing Survivor, Kargra the Blind, Mad Marrius, Twilight Forgemaster, Gul'gash, Mosh'gra, Overseer Myoleth, Old Ironfang, Old Rusthowl, Scaldaron.
+        - generic [ref=f1e1414]:
+          - paragraph [ref=f1e1415]: "Positions and the list of new rares: Wowhead’s Forever database, read on September 23, 2026. Drops, respawns and routes: players’ comments there and on Reddit, and Wowhead’s news of the Barrens set. Item names, stats and set bonuses: the beta client. The pictures are each rare’s model from the beta client, rendered by us, except three: Aean Swiftriver and Foreman Rigger are players’ screenshots, Dro’zem the Blasphemous comes from Wowhead’s 3D viewer."
+          - paragraph [ref=f1e1416]: Seen one elsewhere, or found what it drops? Tell us the zone and the coordinates.
+  - contentinfo [ref=f1e1417]:
+    - region "Support ForeverChanges" [ref=f1e1418]:
+      - generic [ref=f1e1419]:
+        - paragraph [ref=f1e1420]:
+          - strong [ref=f1e1421]: ForeverChanges has no ads
+          - generic [ref=f1e1422]: I make it on my own, and I want it to stay free. If it's useful to you, a donation helps pay for hosting and the time it takes to keep it up to date.
+          - button "Tell me what to improve" [ref=f1e1423] [cursor=pointer]
+        - generic [ref=f1e1424]:
+          - button "Poke the goblin" [ref=f1e1425] [cursor=pointer]:
+            - generic [aria-hidden]: PPC for the little content creator!
+          - link "Support the site" [ref=f1e1426] [cursor=pointer]:
+            - /url: https://ko-fi.com/bartolomew
+    - navigation "Site pages" [ref=f1e1432]:
+      - generic [ref=f1e1433]:
+        - heading "Classes" [level=2] [ref=f1e1434]
+        - list [ref=f1e1435]:
+          - listitem [ref=f1e1436]:
+            - link "Warrior" [ref=f1e1437] [cursor=pointer]:
+              - /url: /class/warrior
+          - listitem [ref=f1e1438]:
+            - link "Paladin" [ref=f1e1439] [cursor=pointer]:
+              - /url: /class/paladin
+          - listitem [ref=f1e1440]:
+            - link "Hunter" [ref=f1e1441] [cursor=pointer]:
+              - /url: /class/hunter
+          - listitem [ref=f1e1442]:
+            - link "Rogue" [ref=f1e1443] [cursor=pointer]:
+              - /url: /class/rogue
+          - listitem [ref=f1e1444]:
+            - link "Priest" [ref=f1e1445] [cursor=pointer]:
+              - /url: /class/priest
+          - listitem [ref=f1e1446]:
+            - link "Shaman" [ref=f1e1447] [cursor=pointer]:
+              - /url: /class/shaman
+          - listitem [ref=f1e1448]:
+            - link "Mage" [ref=f1e1449] [cursor=pointer]:
+              - /url: /class/mage
+          - listitem [ref=f1e1450]:
+            - link "Warlock" [ref=f1e1451] [cursor=pointer]:
+              - /url: /class/warlock
+          - listitem [ref=f1e1452]:
+            - link "Druid" [ref=f1e1453] [cursor=pointer]:
+              - /url: /class/druid
+      - generic [ref=f1e1454]:
+        - heading "Character" [level=2] [ref=f1e1455]
+        - list [ref=f1e1456]:
+          - listitem [ref=f1e1457]:
+            - link "Talent calculator" [ref=f1e1458] [cursor=pointer]:
+              - /url: /talents
+          - listitem [ref=f1e1459]:
+            - link "Spellbook" [ref=f1e1460] [cursor=pointer]:
+              - /url: /spellbook/warrior
+          - listitem [ref=f1e1461]:
+            - link "Legacy perks" [ref=f1e1462] [cursor=pointer]:
+              - /url: /legacy-perks
+          - listitem [ref=f1e1463]:
+            - link "Races" [ref=f1e1464] [cursor=pointer]:
+              - /url: /racials
+          - listitem [ref=f1e1465]:
+            - link "Professions" [ref=f1e1466] [cursor=pointer]:
+              - /url: /professions
+          - listitem [ref=f1e1467]:
+            - link "Downrank calculator" [ref=f1e1468] [cursor=pointer]:
+              - /url: /downrank-calculator
+          - listitem [ref=f1e1469]:
+            - link "Tier list maker" [ref=f1e1470] [cursor=pointer]:
+              - /url: /tier-list
+      - generic [ref=f1e1471]:
+        - heading "Gear" [level=2] [ref=f1e1472]
+        - list [ref=f1e1473]:
+          - listitem [ref=f1e1474]:
+            - link "BiS list" [ref=f1e1475] [cursor=pointer]:
+              - /url: /bis
+          - listitem [ref=f1e1476]:
+            - link "Items" [ref=f1e1477] [cursor=pointer]:
+              - /url: /items
+          - listitem [ref=f1e1478]:
+            - link "Hidden items" [ref=f1e1479] [cursor=pointer]:
+              - /url: /hidden-items
+          - listitem [ref=f1e1480]:
+            - link "Transmog" [ref=f1e1481] [cursor=pointer]:
+              - /url: /transmog
+      - generic [ref=f1e1482]:
+        - heading "World" [level=2] [ref=f1e1483]
+        - list [ref=f1e1484]:
+          - listitem [ref=f1e1485]:
+            - link "World map" [ref=f1e1486] [cursor=pointer]:
+              - /url: /map
+          - listitem [ref=f1e1487]:
+            - link "Dungeons" [ref=f1e1488] [cursor=pointer]:
+              - /url: /dungeons
+          - listitem [ref=f1e1489]:
+            - link "Quests" [ref=f1e1490] [cursor=pointer]:
+              - /url: /quests
+          - listitem [ref=f1e1491]:
+            - link "Dungeon quests" [ref=f1e1492] [cursor=pointer]:
+              - /url: /dungeon-quests
+          - listitem [ref=f1e1493]:
+            - link "Rare spawns" [ref=f1e1494] [cursor=pointer]:
+              - /url: /rares
+          - listitem [ref=f1e1495]:
+            - link "Library books" [ref=f1e1496] [cursor=pointer]:
+              - /url: /library-books
+      - generic [ref=f1e1497]:
+        - heading "Guides" [level=2] [ref=f1e1498]
+        - list [ref=f1e1499]:
+          - listitem [ref=f1e1500]:
+            - link "Tanning Rack" [ref=f1e1501] [cursor=pointer]:
+              - /url: /tanning-rack
+          - listitem [ref=f1e1502]:
+            - link "PvP ranks" [ref=f1e1503] [cursor=pointer]:
+              - /url: /pvp-ranks
+          - listitem [ref=f1e1504]:
+            - link "Downranking" [ref=f1e1505] [cursor=pointer]:
+              - /url: /downranking
+          - listitem [ref=f1e1506]:
+            - link "Booty Bay Bruiser's Buckshot" [ref=f1e1507] [cursor=pointer]:
+              - /url: /booty-bay-bruisers-buckshot
+          - listitem [ref=f1e1508]:
+            - link "Scarlet Banner" [ref=f1e1509] [cursor=pointer]:
+              - /url: /scarlet-banner
+          - listitem [ref=f1e1510]:
+            - link "$100,000 duel tournament" [ref=f1e1511] [cursor=pointer]:
+              - /url: /duel-tournament
+          - listitem [ref=f1e1512]:
+            - link "Level 30" [ref=f1e1513] [cursor=pointer]:
+              - /url: /level-30
+          - listitem [ref=f1e1514]:
+            - link "Druid Cat Form quest" [ref=f1e1515] [cursor=pointer]:
+              - /url: /druid-cat-form
+          - listitem [ref=f1e1516]:
+            - link "Addons" [ref=f1e1517] [cursor=pointer]:
+              - /url: /addons
+          - listitem [ref=f1e1518]:
+            - link "Savory Whimsyfin Delight" [ref=f1e1519] [cursor=pointer]:
+              - /url: /savory-whimsyfin-delight
+          - listitem [ref=f1e1520]:
+            - link "Druid snake form" [ref=f1e1521] [cursor=pointer]:
+              - /url: /druid-snake-form
+          - listitem [ref=f1e1522]:
+            - link "Battle mage" [ref=f1e1523] [cursor=pointer]:
+              - /url: /battle-mage
+          - listitem [ref=f1e1524]:
+            - link "Cozy Sleeping Bag" [ref=f1e1525] [cursor=pointer]:
+              - /url: /cozy-sleeping-bag
+          - listitem [ref=f1e1526]:
+            - link "Merchant's Favor" [ref=f1e1527] [cursor=pointer]:
+              - /url: /merchants-favor
+          - listitem [ref=f1e1528]:
+            - link "Hunter pets" [ref=f1e1529] [cursor=pointer]:
+              - /url: /hunter-pets
+      - generic [ref=f1e1530]:
+        - heading "Beta" [level=2] [ref=f1e1531]
+        - list [ref=f1e1532]:
+          - listitem [ref=f1e1533]:
+            - link "Patch notes" [ref=f1e1534] [cursor=pointer]:
+              - /url: /patch-notes
+          - listitem [ref=f1e1535]:
+            - link "Changes vs Classic" [ref=f1e1536] [cursor=pointer]:
+              - /url: /changes
+          - listitem [ref=f1e1537]:
+            - link "Beta and launch dates" [ref=f1e1538] [cursor=pointer]:
+              - /url: /beta
+          - listitem [ref=f1e1539]:
+            - link "Server status" [ref=f1e1540] [cursor=pointer]:
+              - /url: /server-status
+      - generic [ref=f1e1541]:
+        - heading "Language" [level=2] [ref=f1e1542]
+        - list [ref=f1e1547]:
+          - listitem [ref=f1e1548]:
+            - generic [ref=f1e1549]: English
+          - listitem [ref=f1e1552]:
+            - link "Français" [ref=f1e1553] [cursor=pointer]:
+              - /url: /fr/rares
+          - listitem [ref=f1e1554]:
+            - link "Deutsch" [ref=f1e1555] [cursor=pointer]:
+              - /url: /de/rares
+          - listitem [ref=f1e1556]:
+            - link "繁體中文" [ref=f1e1557] [cursor=pointer]:
+              - /url: /zh-tw/rares
+          - listitem [ref=f1e1558]:
+            - link "简体中文" [ref=f1e1559] [cursor=pointer]:
+              - /url: /zh-cn/rares
+          - listitem [ref=f1e1560]:
+            - link "Русский" [ref=f1e1561] [cursor=pointer]:
+              - /url: /ru/rares
+    - generic [ref=f1e1562]:
+      - paragraph [ref=f1e1563]: ForeverChanges is an unofficial fan site, not affiliated with or endorsed by Blizzard Entertainment. World of Warcraft and Warcraft are trademarks or registered trademarks of Blizzard Entertainment, Inc. in the U.S. and/or other countries. Game content and images © Blizzard Entertainment, Inc.
+      - navigation "Legal" [ref=f1e1565]:
+        - link "About the data" [ref=f1e1566] [cursor=pointer]:
+          - /url: /about
+        - link "Privacy" [ref=f1e1567] [cursor=pointer]:
+          - /url: /privacy
+        - link "Terms" [ref=f1e1568] [cursor=pointer]:
+          - /url: /terms
+        - link "Legal notice" [ref=f1e1569] [cursor=pointer]:
+          - /url: /legal
+  - alert [ref=f1e1570]

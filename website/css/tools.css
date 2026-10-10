@@ -3227,6 +3227,935 @@
   white-space: nowrap;
 }
 
+/* ==========================================================================
+   9. WORLD ATLAS, RARES, LIBRARY BOOKS & PVP PROGRESSION
+   ========================================================================== */
 
+/* Sub-Navigation Bar */
+.atlas-subnav-container {
+  margin: 1.25rem 0 1.5rem 0;
+}
 
+.atlas-subnav-bar {
+  display: flex;
+  gap: 0.5rem;
+  background: rgba(15, 23, 42, 0.75);
+  padding: 0.4rem;
+  border-radius: var(--radius-md, 8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  width: fit-content;
+}
+
+.atlas-subnav-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  background: transparent;
+  color: #94a3b8;
+  font-weight: 600;
+  font-size: 0.92rem;
+  border-radius: var(--radius-sm, 6px);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.atlas-subnav-btn:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.atlas-subnav-btn.active {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.2), rgba(217, 119, 6, 0.3));
+  color: #fef08a;
+  border: 1px solid rgba(245, 158, 11, 0.5);
+  box-shadow: 0 0 12px rgba(245, 158, 11, 0.2);
+}
+
+/* Atlas Toolbar & Filters */
+.atlas-toolbar {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.atlas-search-box {
+  position: relative;
+  max-width: 460px;
+}
+
+.atlas-search-icon {
+  position: absolute;
+  left: 0.85rem;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  font-size: 0.95rem;
+}
+
+.atlas-input {
+  width: 100%;
+  padding: 0.65rem 1rem 0.65rem 2.4rem;
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-md, 8px);
+  color: #fff;
+  font-size: 0.9rem;
+  transition: border-color 0.2s;
+}
+
+.atlas-input:focus {
+  outline: none;
+  border-color: #f59e0b;
+  box-shadow: 0 0 10px rgba(245, 158, 11, 0.25);
+}
+
+.atlas-filter-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.atlas-pill {
+  padding: 0.35rem 0.75rem;
+  border-radius: 9999px;
+  background: rgba(30, 41, 59, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #cbd5e1;
+  font-size: 0.82rem;
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+
+.atlas-pill:hover {
+  background: rgba(51, 65, 85, 0.8);
+  color: #fff;
+}
+
+.atlas-pill.active {
+  background: #f59e0b;
+  border-color: #f59e0b;
+  color: #0f172a;
+  font-weight: 700;
+}
+
+/* Alert Banner */
+.atlas-alert-banner {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  background: rgba(59, 130, 246, 0.12);
+  border: 1px solid rgba(59, 130, 246, 0.35);
+  border-radius: var(--radius-md, 8px);
+  margin-bottom: 1.5rem;
+  color: #bfdbfe;
+  font-size: 0.86rem;
+}
+
+.banner-badge {
+  background: #2563eb;
+  color: #fff;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+}
+
+/* 34 World Rares Grid */
+.atlas-rares-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 1.25rem;
+}
+
+.atlas-rare-card {
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-md, 8px);
+  padding: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+
+.atlas-rare-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(245, 158, 11, 0.4);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+}
+
+.rare-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.rare-name {
+  color: #fff;
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.rare-zone {
+  color: #f59e0b;
+  font-size: 0.8rem;
+  margin-top: 0.15rem;
+}
+
+.rare-badge-group {
+  display: flex;
+  gap: 0.35rem;
+  flex-wrap: wrap;
+}
+
+.rare-level-pill {
+  padding: 0.15rem 0.45rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: #e2e8f0;
+}
+
+.rare-elite-pill {
+  padding: 0.15rem 0.45rem;
+  background: rgba(239, 68, 68, 0.2);
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  border-radius: 4px;
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: #fca5a5;
+}
+
+.rare-coords-box {
+  background: rgba(0, 0, 0, 0.35);
+  padding: 0.45rem 0.7rem;
+  border-radius: 6px;
+  border-left: 2px solid #38bdf8;
+  font-size: 0.8rem;
+  color: #94a3b8;
+}
+
+.rare-coords-box strong {
+  color: #7dd3fc;
+}
+
+.rare-lore-text {
+  font-size: 0.83rem;
+  color: #cbd5e1;
+  line-height: 1.45;
+  margin: 0;
+}
+
+.rare-drops-section {
+  background: rgba(0, 0, 0, 0.25);
+  padding: 0.6rem 0.75rem;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.rare-drops-title {
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  color: #f59e0b;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+}
+
+.rare-drop-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  font-size: 0.82rem;
+}
+
+.rare-drop-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.rare-drop-type {
+  font-size: 0.74rem;
+  color: #94a3b8;
+}
+
+.rare-drop-stats {
+  font-size: 0.78rem;
+  color: #a7f3d0;
+}
+
+/* Macro Copy Row */
+.atlas-macro-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(15, 23, 42, 0.95);
+  border: 1px dashed rgba(255, 255, 255, 0.18);
+  border-radius: 6px;
+  padding: 0.35rem 0.6rem;
+  gap: 0.5rem;
+}
+
+.atlas-macro-code {
+  font-family: monospace;
+  font-size: 0.82rem;
+  color: #fbbf24;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.btn-copy-macro {
+  padding: 0.25rem 0.6rem;
+  background: rgba(245, 158, 11, 0.18);
+  border: 1px solid rgba(245, 158, 11, 0.4);
+  border-radius: 4px;
+  color: #fde68a;
+  font-size: 0.76rem;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.18s;
+}
+
+.btn-copy-macro:hover {
+  background: #f59e0b;
+  color: #0f172a;
+}
+
+.btn-copy-macro.copied {
+  background: #10b981;
+  border-color: #10b981;
+  color: #fff;
+}
+
+/* 40 Library Books */
+.books-tracker-card {
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.9), rgba(15, 23, 42, 0.95));
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  border-radius: var(--radius-md, 8px);
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.books-tracker-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.books-tracker-header h3 {
+  margin: 0;
+  color: #fff;
+  font-size: 1.25rem;
+}
+
+.books-tracker-header p {
+  margin: 0.25rem 0 0 0;
+  color: #94a3b8;
+  font-size: 0.85rem;
+}
+
+.books-stat-badge {
+  background: rgba(245, 158, 11, 0.15);
+  border: 1px solid rgba(245, 158, 11, 0.4);
+  color: #fef08a;
+  padding: 0.4rem 0.8rem;
+  border-radius: 9999px;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.books-progress-track {
+  width: 100%;
+  height: 12px;
+  background: rgba(0, 0, 0, 0.45);
+  border-radius: 9999px;
+  overflow: hidden;
+  margin-bottom: 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.books-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #f59e0b, #10b981);
+  border-radius: 9999px;
+  transition: width 0.3s ease;
+}
+
+.books-milestones-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.milestone-chip {
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.65rem 0.85rem;
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+}
+
+.milestone-chip.achieved {
+  border-color: #10b981;
+  background: rgba(16, 185, 129, 0.12);
+}
+
+.milestone-chip .ms-icon {
+  font-size: 1.4rem;
+}
+
+.milestone-chip .ms-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.milestone-chip .ms-info strong {
+  color: #fef08a;
+  font-size: 0.82rem;
+}
+
+.milestone-chip .ms-info span {
+  color: #cbd5e1;
+  font-size: 0.78rem;
+}
+
+.atlas-books-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.atlas-book-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+  padding: 0.85rem 1.1rem;
+  transition: all 0.15s ease;
+}
+
+.atlas-book-row:hover {
+  background: rgba(30, 41, 59, 0.75);
+  border-color: rgba(245, 158, 11, 0.3);
+}
+
+.atlas-book-row.collected {
+  background: rgba(16, 185, 129, 0.08);
+  border-color: rgba(16, 185, 129, 0.25);
+}
+
+.atlas-book-row.collected .book-name {
+  text-decoration: line-through;
+  color: #94a3b8;
+}
+
+.book-checkbox {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: #10b981;
+}
+
+.book-number {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #f59e0b;
+  min-width: 28px;
+}
+
+.book-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.book-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.book-name {
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.book-zone {
+  color: #fef08a;
+  font-size: 0.82rem;
+}
+
+.book-coords-text {
+  font-size: 0.8rem;
+  color: #94a3b8;
+}
+
+/* PvP Honor Progression */
+.pvp-overview-card {
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.95), rgba(15, 23, 42, 0.95));
+  border: 1px solid rgba(239, 68, 68, 0.35);
+  border-radius: var(--radius-md, 8px);
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.pvp-overview-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.pvp-overview-header h3 {
+  margin: 0;
+  color: #fff;
+  font-size: 1.25rem;
+}
+
+.pvp-overview-header p {
+  margin: 0.25rem 0 0 0;
+  color: #94a3b8;
+  font-size: 0.85rem;
+}
+
+.pvp-status-tag {
+  background: rgba(239, 68, 68, 0.15);
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  color: #fca5a5;
+  padding: 0.4rem 0.8rem;
+  border-radius: 9999px;
+  font-weight: 700;
+  font-size: 0.82rem;
+}
+
+.pvp-calc-notes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 0.75rem;
+}
+
+.pvp-note-item {
+  background: rgba(0, 0, 0, 0.35);
+  padding: 0.6rem 0.85rem;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  color: #cbd5e1;
+  border-left: 2px solid #ef4444;
+}
+
+.pvp-note-item strong {
+  color: #fff;
+}
+
+.pvp-ranks-table-wrapper {
+  overflow-x: auto;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-md, 8px);
+  margin-bottom: 2rem;
+}
+
+.pvp-ranks-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.86rem;
+  background: rgba(15, 23, 42, 0.85);
+}
+
+.pvp-ranks-table th {
+  background: rgba(30, 41, 59, 0.95);
+  padding: 0.75rem 1rem;
+  color: #fef08a;
+  font-weight: 700;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  white-space: nowrap;
+}
+
+.pvp-ranks-table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  color: #cbd5e1;
+}
+
+.pvp-ranks-table tr:hover td {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.pvp-rank-pill {
+  font-weight: 800;
+  color: #f59e0b;
+}
+
+.pvp-alliance-title {
+  color: #60a5fa;
+  font-weight: 600;
+}
+
+.pvp-horde-title {
+  color: #f87171;
+  font-weight: 600;
+}
+
+.pvp-sets-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.25rem;
+}
+
+.pvp-set-card {
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-md, 8px);
+  padding: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.pvp-set-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.pvp-set-name {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.pvp-set-rank-req {
+  color: #f59e0b;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.pvp-set-items {
+  font-size: 0.8rem;
+  color: #94a3b8;
+  line-height: 1.45;
+}
+
+/* Dungeon Modal Enhancements */
+.dg-modal-tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin: 1rem 0 1.25rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 0.5rem;
+}
+
+.dg-modal-tab-btn {
+  padding: 0.5rem 1rem;
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  font-weight: 600;
+  font-size: 0.88rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.dg-modal-tab-btn:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.dg-modal-tab-btn.active {
+  background: rgba(245, 158, 11, 0.2);
+  color: #fef08a;
+  border: 1px solid rgba(245, 158, 11, 0.4);
+}
+
+.dg-tactics-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.dg-tactics-card {
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 1.1rem;
+}
+
+.dg-tactics-boss-header {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 0.85rem;
+}
+
+.dg-boss-portrait {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 2px solid #f59e0b;
+  object-fit: cover;
+  box-shadow: 0 0 10px rgba(245, 158, 11, 0.35);
+}
+
+.dg-tactics-boss-name {
+  color: #fff;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.dg-boss-lvl {
+  font-size: 0.78rem;
+  color: #f59e0b;
+  font-weight: 700;
+}
+
+.dg-tactics-summary {
+  color: #cbd5e1;
+  font-size: 0.84rem;
+  margin: 0.2rem 0 0 0;
+}
+
+.dg-abilities-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px dashed rgba(255, 255, 255, 0.1);
+}
+
+.dg-abilities-header {
+  color: #fef08a;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0 0 0.25rem 0;
+}
+
+.dg-ability-item {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 0.55rem 0.75rem;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.dg-ability-top {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.dg-ability-name {
+  color: #fff;
+  font-size: 0.88rem;
+}
+
+.role-badge {
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  background: rgba(245, 158, 11, 0.15);
+  color: #fbbf24;
+}
+
+.ability-type-badge {
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.72rem;
+  background: rgba(255, 255, 255, 0.08);
+  color: #94a3b8;
+}
+
+.dg-ability-desc {
+  font-size: 0.8rem;
+  color: #cbd5e1;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Dungeon Pre-Quests */
+.dg-quests-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.dg-quest-card {
+  background: rgba(15, 23, 42, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 1rem 1.15rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.dg-quest-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dg-quest-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.dg-quest-name {
+  color: #fff;
+  font-size: 1rem;
+}
+
+.quest-faction-badge {
+  padding: 0.2rem 0.55rem;
+  border-radius: 9999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.quest-faction-badge.faction-alliance {
+  background: rgba(59, 130, 246, 0.2);
+  color: #93c5fd;
+  border: 1px solid rgba(59, 130, 246, 0.4);
+}
+
+.quest-faction-badge.faction-horde {
+  background: rgba(239, 68, 68, 0.2);
+  color: #fca5a5;
+  border: 1px solid rgba(239, 68, 68, 0.4);
+}
+
+.quest-faction-badge.faction-both {
+  background: rgba(168, 85, 247, 0.2);
+  color: #d8b4fe;
+  border: 1px solid rgba(168, 85, 247, 0.4);
+}
+
+.dg-quest-meta {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 0.82rem;
+  color: #94a3b8;
+}
+
+.dg-quest-giver, .dg-quest-rewards {
+  font-size: 0.82rem;
+  color: #cbd5e1;
+}
+
+.dg-quest-rewards strong {
+  color: #34d399;
+}
+
+/* Camping Field Recipes */
+.station-recipes-section {
+  margin-top: 0.85rem;
+  padding-top: 0.85rem;
+  border-top: 1px dashed rgba(255, 255, 255, 0.1);
+}
+
+.btn-station-recipes {
+  width: 100%;
+  padding: 0.55rem 0.85rem;
+  background: rgba(245, 158, 11, 0.15);
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  border-radius: 6px;
+  color: #fef08a;
+  font-weight: 700;
+  font-size: 0.82rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: center;
+}
+
+.btn-station-recipes:hover {
+  background: rgba(245, 158, 11, 0.3);
+  border-color: #f59e0b;
+}
+
+.station-recipes-drawer {
+  margin-top: 0.65rem;
+}
+
+.recipes-drawer-scroll {
+  max-height: 260px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  padding-right: 0.35rem;
+}
+
+.field-recipe-item {
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 6px;
+  padding: 0.5rem 0.65rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.field-recipe-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.field-recipe-name {
+  color: #fff;
+  font-size: 0.84rem;
+}
+
+.field-recipe-skill {
+  font-size: 0.72rem;
+  color: #f59e0b;
+  font-weight: 700;
+}
+
+.field-recipe-mats, .field-recipe-produces {
+  font-size: 0.76rem;
+  color: #94a3b8;
+}
+
+.field-recipe-mats strong, .field-recipe-produces strong {
+  color: #cbd5e1;
+}
+
+.modal-backdrop.open,
+.modal-backdrop.is-open {
+  display: flex !important;
+}
 

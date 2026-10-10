@@ -1,0 +1,156 @@
+{
+  "ranks": [
+    {
+      "rank": 1,
+      "titleA": "Private",
+      "titleH": "Scout",
+      "rpNeeded": 750,
+      "rpTotal": 750,
+      "earliestWeek": 1,
+      "unlock": "Private's Tabard / Scout's Tabard"
+    },
+    {
+      "rank": 2,
+      "titleA": "Corporal",
+      "titleH": "Grunt",
+      "rpNeeded": 900,
+      "rpTotal": 1650,
+      "earliestWeek": 1,
+      "unlock": "Greater Insignia of Alliance / Horde (Trinket)"
+    },
+    {
+      "rank": 3,
+      "titleA": "Sergeant",
+      "titleH": "Sergeant",
+      "rpNeeded": 1050,
+      "rpTotal": 2700,
+      "earliestWeek": 1,
+      "unlock": "Faction Cloak (+7 Stamina)"
+    },
+    {
+      "rank": 4,
+      "titleA": "Master Sergeant",
+      "titleH": "Senior Sergeant",
+      "rpNeeded": 1200,
+      "rpTotal": 3900,
+      "earliestWeek": 2,
+      "unlock": "Premier Master Sergeant's Insignia (Phase 2 Cap)"
+    },
+    {
+      "rank": 5,
+      "titleA": "Sergeant Major",
+      "titleH": "First Sergeant",
+      "rpNeeded": 1350,
+      "rpTotal": 5250,
+      "earliestWeek": 2,
+      "unlock": "Combat Potions"
+    },
+    {
+      "rank": 6,
+      "titleA": "Knight",
+      "titleH": "Stone Guard",
+      "rpNeeded": 1500,
+      "rpTotal": 6750,
+      "earliestWeek": 3,
+      "unlock": "Knight's Colors / Stone Guard's Herald"
+    },
+    {
+      "rank": 7,
+      "titleA": "Knight-Lieutenant",
+      "titleH": "Blood Guard",
+      "rpNeeded": 1650,
+      "rpTotal": 8400,
+      "earliestWeek": 4,
+      "unlock": "Alliance Battle Standard / Horde Battle Standard"
+    },
+    {
+      "rank": 8,
+      "titleA": "Knight-Captain",
+      "titleH": "Legionnaire",
+      "rpNeeded": 1800,
+      "rpTotal": 10200,
+      "earliestWeek": 5,
+      "unlock": "Elite Wrist & Waist Upgrades (Emboldened Seals)"
+    },
+    {
+      "rank": 9,
+      "titleA": "Knight-Champion",
+      "titleH": "Centurion",
+      "rpNeeded": 1950,
+      "rpTotal": 12150,
+      "earliestWeek": 6,
+      "unlock": "Elite Boot Upgrade"
+    },
+    {
+      "rank": 10,
+      "titleA": "Lieutenant Commander",
+      "titleH": "Champion",
+      "rpNeeded": 2100,
+      "rpTotal": 14250,
+      "earliestWeek": 7,
+      "unlock": "Elite Glove Upgrade"
+    },
+    {
+      "rank": 11,
+      "titleA": "Commander",
+      "titleH": "Lieutenant General",
+      "rpNeeded": 2350,
+      "rpTotal": 16600,
+      "earliestWeek": 7,
+      "unlock": "Black War Mounts (100% Speed)"
+    },
+    {
+      "rank": 12,
+      "titleA": "Marshal",
+      "titleH": "General",
+      "rpNeeded": 2500,
+      "rpTotal": 19100,
+      "earliestWeek": 8,
+      "unlock": "Elite Leg & Shoulder Upgrades"
+    },
+    {
+      "rank": 13,
+      "titleA": "Field Marshal",
+      "titleH": "Warlord",
+      "rpNeeded": 2650,
+      "rpTotal": 21750,
+      "earliestWeek": 9,
+      "unlock": "Elite Chest & Head Upgrades"
+    },
+    {
+      "rank": 14,
+      "titleA": "Grand Marshal",
+      "titleH": "High Warlord",
+      "rpNeeded": 3000,
+      "rpTotal": 24750,
+      "earliestWeek": 10,
+      "unlock": "Grand Marshal / High Warlord Epic Weapons"
+    }
+  ],
+  "battlegrounds": [
+    {
+      "name": "Warsong Gulch",
+      "players": "10v10",
+      "levels": "20-29 (Active in Beta), 30-39, 40-49, 50-59, 60",
+      "type": "Capture the Flag"
+    },
+    {
+      "name": "Arathi Basin",
+      "players": "15v15",
+      "levels": "20-29, 30-39, 40-49, 50-59, 60",
+      "type": "Base Resource Domination"
+    },
+    {
+      "name": "Darkspear Islands",
+      "players": "15v15",
+      "levels": "30-39, 40-49, 50-59, 60",
+      "type": "NEW Battleground in Forever (Island War)"
+    },
+    {
+      "name": "Alterac Valley",
+      "players": "40v40",
+      "levels": "51-60",
+      "type": "Large-Scale Warfare"
+    }
+  ]
+}

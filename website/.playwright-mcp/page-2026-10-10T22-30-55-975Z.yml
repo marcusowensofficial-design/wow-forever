@@ -1,0 +1,692 @@
+- generic [active] [ref=f14e1]:
+  - text: ": : :"
+  - main [ref=f14e2]:
+    - generic [ref=f14e3]:
+      - generic [ref=f14e4]:
+        - generic [ref=f14e5]:
+          - generic [ref=f14e6]:
+            - button "Pull the murloc camp" [ref=f14e7] [cursor=pointer]
+            - generic [ref=f14e8]:
+              - generic [ref=f14e9]: Online now
+              - generic [ref=f14e10]: 2,340
+              - generic [ref=f14e11]: murlocs
+          - link "ForeverChanges home" [ref=f14e12] [cursor=pointer]:
+            - /url: /
+            - img "ForeverChanges" [ref=f14e13]
+          - link [ref=f14e15] [cursor=pointer]:
+            - /url: /patch-notes
+            - generic [ref=f14e16]:
+              - text: Updated
+              - generic [aria-hidden] [ref=f14e18]: ·
+            - text: Beta build 1.60.1.70338
+          - link "Launch in" [ref=f14e19] [cursor=pointer]:
+            - /url: /beta
+            - generic [aria-hidden] [ref=f14e21]:
+              - generic [ref=f14e22]:
+                - generic [ref=f14e23]: "25"
+                - generic [ref=f14e24]: days
+              - generic [ref=f14e25]:
+                - text: ":"
+                - generic [ref=f14e26]: "00"
+                - generic [ref=f14e27]: hrs
+              - generic [ref=f14e28]:
+                - text: ":"
+                - generic [ref=f14e29]: "29"
+                - generic [ref=f14e30]: min
+              - generic [ref=f14e31]:
+                - text: ":"
+                - generic [ref=f14e32]: "05"
+                - generic [ref=f14e33]: sec
+        - generic [ref=f14e34]:
+          - navigation "Main" [ref=f14e35]:
+            - link "Changes" [ref=f14e36] [cursor=pointer]:
+              - /url: /changes
+            - link "Talents , updated" [ref=f14e37] [cursor=pointer]:
+              - /url: /talents/warrior
+              - text: Talents
+              - generic:
+                - generic [aria-hidden]: Updated on October 8
+                - generic [ref=f14e39]: ", updated"
+            - link "Spellbook" [ref=f14e40] [cursor=pointer]:
+              - /url: /spellbook/warrior
+            - link "Legacy" [ref=f14e41] [cursor=pointer]:
+              - /url: /legacy-perks
+            - link "Professions" [ref=f14e42] [cursor=pointer]:
+              - /url: /professions
+            - link "Races" [ref=f14e43] [cursor=pointer]:
+              - /url: /racials
+            - link "Dungeons" [ref=f14e44] [cursor=pointer]:
+              - /url: /dungeons
+            - link "Items , updated" [ref=f14e45] [cursor=pointer]:
+              - /url: /items
+              - text: Items
+              - generic:
+                - generic [aria-hidden]: 331 items changed on October 8
+                - generic [ref=f14e47]: ", updated"
+            - link "Quests" [ref=f14e48] [cursor=pointer]:
+              - /url: /quests
+            - link "BiS list , updated" [ref=f14e49] [cursor=pointer]:
+              - /url: /bis
+              - text: BiS list
+              - generic:
+                - generic [aria-hidden]: Up to date with the latest build
+                - generic [ref=f14e51]: ", updated"
+            - link "World map" [ref=f14e52] [cursor=pointer]:
+              - /url: /map
+            - link "Guides" [ref=f14e53] [cursor=pointer]:
+              - /url: /guides
+            - link "Patch notes" [ref=f14e54] [cursor=pointer]:
+              - /url: /patch-notes
+          - button "Search" [ref=f14e56] [cursor=pointer]:
+            - generic [aria-hidden]: Search /
+      - generic [ref=f14e58]:
+        - navigation "Choose class" [ref=f14e59]:
+          - link "Warrior" [ref=f14e60] [cursor=pointer]:
+            - /url: /spellbook/warrior
+          - link "Hunter" [ref=f14e63] [cursor=pointer]:
+            - /url: /spellbook/hunter
+          - link "Mage" [ref=f14e66] [cursor=pointer]:
+            - /url: /spellbook/mage
+          - link "Rogue" [ref=f14e69] [cursor=pointer]:
+            - /url: /spellbook/rogue
+          - link "Priest" [ref=f14e72] [cursor=pointer]:
+            - /url: /spellbook/priest
+          - link "Warlock" [ref=f14e75] [cursor=pointer]:
+            - /url: /spellbook/warlock
+          - link "Paladin" [ref=f14e78] [cursor=pointer]:
+            - /url: /spellbook/paladin
+          - link "Druid" [ref=f14e81] [cursor=pointer]:
+            - /url: /spellbook/druid
+          - link "Shaman" [ref=f14e84] [cursor=pointer]:
+            - /url: /spellbook/shaman
+        - generic [ref=f14e89]:
+          - heading "Warrior spellbook in WoW Forever" [level=1] [ref=f14e90]
+          - paragraph [ref=f14e92]:
+            - generic [ref=f14e93]: Every spell a Warrior trains in Forever, from level 1 to 60, tab by tab, read from the beta client and set against the Classic Era client. Pick a spell to compare the two, rank by rank.
+          - generic [ref=f14e94]:
+            - generic [ref=f14e95]:
+              - definition [ref=f14e96]: "1"
+              - term [ref=f14e97]:
+                - generic [ref=f14e98]: New
+            - generic [ref=f14e99]:
+              - definition [ref=f14e100]: "19"
+              - term [ref=f14e101]:
+                - generic [ref=f14e102]: Changed
+            - generic [ref=f14e103]:
+              - definition [ref=f14e104]: "0"
+              - term [ref=f14e105]:
+                - generic [ref=f14e106]: Not in Forever
+      - generic [ref=f14e107]:
+        - complementary [ref=f14e108]:
+          - navigation "Spellbook pages" [ref=f14e109]:
+            - link "Spellbook" [ref=f14e110] [cursor=pointer]:
+              - /url: /spellbook/warrior
+            - link "Spells by level" [ref=f14e112] [cursor=pointer]:
+              - /url: /spellbook/warrior/levels
+          - navigation "Book tabs" [ref=f14e114]:
+            - button "All tabs 42" [pressed] [ref=f14e115] [cursor=pointer]:
+              - generic [ref=f14e116]:
+                - generic [aria-hidden] [ref=f14e117]: ≡
+                - text: All tabs
+              - generic [ref=f14e118]: "42"
+            - button "Arms 14" [ref=f14e119] [cursor=pointer]:
+              - generic [ref=f14e120]: Arms
+              - generic [ref=f14e121]: "14"
+            - button "Fury 16" [ref=f14e122] [cursor=pointer]:
+              - generic [ref=f14e123]: Fury
+              - generic [ref=f14e124]: "16"
+            - button "Protection 12" [ref=f14e125] [cursor=pointer]:
+              - generic [ref=f14e126]: Protection
+              - generic [ref=f14e127]: "12"
+          - navigation "Show" [ref=f14e128]:
+            - heading "Show" [level=3] [ref=f14e129]
+            - button "All spells 42" [pressed] [ref=f14e130] [cursor=pointer]:
+              - generic [ref=f14e131]: All spells
+              - generic [ref=f14e132]: "42"
+            - button "Different from Classic 20" [ref=f14e133] [cursor=pointer]:
+              - generic [ref=f14e134]: Different from Classic
+              - generic [ref=f14e135]: "20"
+            - button "New in Forever 1" [ref=f14e136] [cursor=pointer]:
+              - generic [ref=f14e137]: New in Forever
+              - generic [ref=f14e138]: "1"
+            - button "October 8 update 3" [ref=f14e139] [cursor=pointer]:
+              - generic [ref=f14e140]: October 8 update
+              - generic [ref=f14e141]: "3"
+          - link "Warrior changes Every talent and spell change, with sources" [ref=f14e142] [cursor=pointer]:
+            - /url: /class/warrior
+            - strong [ref=f14e143]: Warrior changes
+            - generic [ref=f14e144]: Every talent and spell change, with sources
+          - 'link "Get ready for level 30 Warrior: what your trainer teaches you from 21 to 30, with what Forever changed." [ref=f14e145] [cursor=pointer]':
+            - /url: /level-30#class=warrior
+            - strong [ref=f14e146]: Get ready for level 30
+            - generic [ref=f14e147]: "Warrior: what your trainer teaches you from 21 to 30, with what Forever changed."
+        - region "All tabs spells" [ref=f14e148]:
+          - generic [ref=f14e149]:
+            - generic [ref=f14e150]:
+              - heading "All Warrior spells" [level=2] [ref=f14e151]
+              - status [ref=f14e152]: 42 spells
+            - searchbox "Search Warrior spells" [ref=f14e157]
+          - generic [ref=f14e158]:
+            - button "Battle Stance Same tooltip, training level and ranks. Arms · from level 1 Same as Classic" [expanded] [ref=f14e159] [cursor=pointer]:
+              - generic [ref=f14e160]:
+                - strong [ref=f14e161]: Battle Stance
+                - generic [ref=f14e162]: Same tooltip, training level and ranks.
+                - generic [ref=f14e163]: Arms · from level 1
+              - generic [ref=f14e164]: Same as Classic
+              - generic [aria-hidden] [ref=f14e166]: ›
+            - button "Heroic Strike Same tooltip, training level and ranks. Arms · 9 ranks · from level 1 Same as Classic" [ref=f14e167] [cursor=pointer]:
+              - generic [ref=f14e168]:
+                - strong [ref=f14e169]: Heroic Strike
+                - generic [ref=f14e170]: Same tooltip, training level and ranks.
+                - generic [ref=f14e171]: Arms · 9 ranks · from level 1
+              - generic [ref=f14e172]: Same as Classic
+              - generic [aria-hidden] [ref=f14e174]: ›
+            - button "Charge Same tooltip, training level and ranks. Arms · 3 ranks · from level 4 Same as Classic" [ref=f14e175] [cursor=pointer]:
+              - generic [ref=f14e176]:
+                - strong [ref=f14e177]: Charge
+                - generic [ref=f14e178]: Same tooltip, training level and ranks.
+                - generic [ref=f14e179]: Arms · 3 ranks · from level 4
+              - generic [ref=f14e180]: Same as Classic
+              - generic [aria-hidden] [ref=f14e182]: ›
+            - button "Rend Same tooltip, training level and ranks. Arms · 7 ranks · from level 4 Same as Classic" [ref=f14e183] [cursor=pointer]:
+              - generic [ref=f14e184]:
+                - strong [ref=f14e185]: Rend
+                - generic [ref=f14e186]: Same tooltip, training level and ranks.
+                - generic [ref=f14e187]: Arms · 7 ranks · from level 4
+              - generic [ref=f14e188]: Same as Classic
+              - generic [aria-hidden] [ref=f14e190]: ›
+            - 'button "Thunder Clap Rank 6: Cooldown 6 sec instead of 4 sec Arms · 6 ranks · from level 6 Changed" [ref=f14e191] [cursor=pointer]':
+              - generic [ref=f14e192]:
+                - strong [ref=f14e193]: Thunder Clap
+                - generic [ref=f14e194]: "Rank 6: Cooldown 6 sec instead of 4 sec"
+                - generic [ref=f14e195]: Arms · 6 ranks · from level 6
+              - generic [ref=f14e196]: Changed
+              - generic [aria-hidden] [ref=f14e198]: ›
+            - button "Hamstring Same tooltip, training level and ranks. Arms · 3 ranks · from level 8 Same as Classic" [ref=f14e199] [cursor=pointer]:
+              - generic [ref=f14e200]:
+                - strong [ref=f14e201]: Hamstring
+                - generic [ref=f14e202]: Same tooltip, training level and ranks.
+                - generic [ref=f14e203]: Arms · 3 ranks · from level 8
+              - generic [ref=f14e204]: Same as Classic
+              - generic [aria-hidden] [ref=f14e206]: ›
+            - button "Overpower Same tooltip, training level and ranks. Arms · 4 ranks · from level 12 Same as Classic" [ref=f14e207] [cursor=pointer]:
+              - generic [ref=f14e208]:
+                - strong [ref=f14e209]: Overpower
+                - generic [ref=f14e210]: Same tooltip, training level and ranks.
+                - generic [ref=f14e211]: Arms · 4 ranks · from level 12
+              - generic [ref=f14e212]: Same as Classic
+              - generic [aria-hidden] [ref=f14e214]: ›
+            - button "Tactical Mastery An Arms talent in Classic; trained without one now Arms · from level 14 Was a talent" [ref=f14e215] [cursor=pointer]:
+              - generic [ref=f14e216]:
+                - strong [ref=f14e217]: Tactical Mastery
+                - generic [ref=f14e218]: An Arms talent in Classic; trained without one now
+                - generic [ref=f14e219]: Arms · from level 14
+              - generic [ref=f14e220]: Was a talent
+              - generic [aria-hidden] [ref=f14e222]: ›
+            - button "Mocking Blow Same tooltip, training level and ranks. Arms · 5 ranks · from level 16 Same as Classic" [ref=f14e223] [cursor=pointer]:
+              - generic [ref=f14e224]:
+                - strong [ref=f14e225]: Mocking Blow
+                - generic [ref=f14e226]: Same tooltip, training level and ranks.
+                - generic [ref=f14e227]: Arms · 5 ranks · from level 16
+              - generic [ref=f14e228]: Same as Classic
+              - generic [aria-hidden] [ref=f14e230]: ›
+            - button "Retaliation Cooldown 15 min instead of 30 min Arms · from level 20 Changed" [ref=f14e231] [cursor=pointer]:
+              - generic [ref=f14e232]:
+                - strong [ref=f14e233]: Retaliation
+                - generic [ref=f14e234]: Cooldown 15 min instead of 30 min
+                - generic [ref=f14e235]: Arms · from level 20
+              - generic [ref=f14e236]: Changed
+              - generic [aria-hidden] [ref=f14e238]: ›
+            - button "Victory Rush Not in Classic Arms · from level 20 New" [ref=f14e239] [cursor=pointer]:
+              - generic [ref=f14e240]:
+                - strong [ref=f14e241]: Victory Rush
+                - generic [ref=f14e242]: Not in Classic
+                - generic [ref=f14e243]: Arms · from level 20
+              - generic [ref=f14e244]: New
+              - generic [aria-hidden] [ref=f14e246]: ›
+            - button "Mortal Strike Comes with the talent point, no trainer teaches it. Arms · 4 ranks · from level 40 Talent" [ref=f14e247] [cursor=pointer]:
+              - generic [ref=f14e248]:
+                - strong [ref=f14e249]: Mortal Strike
+                - generic [ref=f14e250]: Comes with the talent point, no trainer teaches it.
+                - generic [ref=f14e251]: Arms · 4 ranks · from level 40
+              - generic [ref=f14e252]: Talent
+              - generic [aria-hidden] [ref=f14e254]: ›
+            - button "Spearing Strike Comes with the talent point, no trainer teaches it. Arms Talent" [ref=f14e255] [cursor=pointer]:
+              - generic [ref=f14e256]:
+                - strong [ref=f14e257]: Spearing Strike
+                - generic [ref=f14e258]: Comes with the talent point, no trainer teaches it.
+                - generic [ref=f14e259]: Arms
+              - generic [ref=f14e260]: Talent
+              - generic [aria-hidden] [ref=f14e262]: ›
+            - button "Sweeping Strikes Comes with the talent point, no trainer teaches it. Arms Talent" [ref=f14e263] [cursor=pointer]:
+              - generic [ref=f14e264]:
+                - strong [ref=f14e265]: Sweeping Strikes
+                - generic [ref=f14e266]: Comes with the talent point, no trainer teaches it.
+                - generic [ref=f14e267]: Arms
+              - generic [ref=f14e268]: Talent
+              - generic [aria-hidden] [ref=f14e270]: ›
+            - 'button "Battle Shout Rank 7: 139 instead of 232, 3 min instead of 2 min Fury · 7 ranks · from level 1 Changed" [ref=f14e271] [cursor=pointer]':
+              - generic [ref=f14e272]:
+                - strong [ref=f14e273]: Battle Shout
+                - generic [ref=f14e274]: "Rank 7: 139 instead of 232, 3 min instead of 2 min"
+                - generic [ref=f14e275]: Fury · 7 ranks · from level 1
+              - generic [ref=f14e276]: Changed
+              - generic [aria-hidden] [ref=f14e278]: ›
+            - 'button "Demoralizing Shout Rank 5: 204 instead of 146, 45 sec instead of 30 sec Fury · 5 ranks · from level 14 Changed" [ref=f14e279] [cursor=pointer]':
+              - generic [ref=f14e280]:
+                - strong [ref=f14e281]: Demoralizing Shout
+                - generic [ref=f14e282]: "Rank 5: 204 instead of 146, 45 sec instead of 30 sec"
+                - generic [ref=f14e283]: Fury · 5 ranks · from level 14
+              - generic [ref=f14e284]: Changed
+              - generic [aria-hidden] [ref=f14e286]: ›
+            - 'button "Cleave Rank 5: Same numbers, reworded Fury · 5 ranks · from level 20 Changed" [ref=f14e287] [cursor=pointer]':
+              - generic [ref=f14e288]:
+                - strong [ref=f14e289]: Cleave
+                - generic [ref=f14e290]: "Rank 5: Same numbers, reworded"
+                - generic [ref=f14e291]: Fury · 5 ranks · from level 20
+              - generic [ref=f14e292]: Changed
+              - generic [aria-hidden] [ref=f14e294]: ›
+            - button "Slam Ranks 1 to 4 trained earlier than in Classic Fury · 5 ranks · from level 20 Earlier" [ref=f14e295] [cursor=pointer]:
+              - generic [ref=f14e296]:
+                - strong [ref=f14e297]: Slam
+                - generic [ref=f14e298]: Ranks 1 to 4 trained earlier than in Classic
+                - generic [ref=f14e299]: Fury · 5 ranks · from level 20
+              - generic [ref=f14e300]: Earlier
+              - generic [aria-hidden] [ref=f14e302]: ›
+            - button "Intimidating Shout Numbers and wording changed Fury · from level 22 Changed" [ref=f14e303] [cursor=pointer]:
+              - generic [ref=f14e304]:
+                - strong [ref=f14e305]: Intimidating Shout
+                - generic [ref=f14e306]: Numbers and wording changed
+                - generic [ref=f14e307]: Fury · from level 22
+              - generic [ref=f14e308]: Changed
+              - generic [aria-hidden] [ref=f14e310]: ›
+            - button "Execute Same tooltip, training level and ranks. Fury · 5 ranks · from level 24 Same as Classic" [ref=f14e311] [cursor=pointer]:
+              - generic [ref=f14e312]:
+                - strong [ref=f14e313]: Execute
+                - generic [ref=f14e314]: Same tooltip, training level and ranks.
+                - generic [ref=f14e315]: Fury · 5 ranks · from level 24
+              - generic [ref=f14e316]: Same as Classic
+              - generic [aria-hidden] [ref=f14e318]: ›
+            - button "Challenging Shout Numbers and wording changed Fury · from level 26 Changed" [ref=f14e319] [cursor=pointer]:
+              - generic [ref=f14e320]:
+                - strong [ref=f14e321]: Challenging Shout
+                - generic [ref=f14e322]: Numbers and wording changed
+                - generic [ref=f14e323]: Fury · from level 26
+              - generic [ref=f14e324]: Changed
+              - generic [aria-hidden] [ref=f14e326]: ›
+            - button "Berserker Rage Rank 1 trained earlier than in Classic Fury · from level 30 Earlier" [ref=f14e327] [cursor=pointer]:
+              - generic [ref=f14e328]:
+                - strong [ref=f14e329]: Berserker Rage
+                - generic [ref=f14e330]: Rank 1 trained earlier than in Classic
+                - generic [ref=f14e331]: Fury · from level 30
+              - generic [ref=f14e332]: Earlier
+              - generic [aria-hidden] [ref=f14e334]: ›
+            - button "Berserker Stance Same numbers, reworded Fury · from level 30 Changed" [ref=f14e335] [cursor=pointer]:
+              - generic [ref=f14e336]:
+                - strong [ref=f14e337]: Berserker Stance
+                - generic [ref=f14e338]: Same numbers, reworded
+                - generic [ref=f14e339]: Fury · from level 30
+              - generic [ref=f14e340]: Changed
+              - generic [aria-hidden] [ref=f14e342]: ›
+            - button "Intercept Same tooltip, training level and ranks. Fury · 3 ranks · from level 30 Same as Classic" [ref=f14e343] [cursor=pointer]:
+              - generic [ref=f14e344]:
+                - strong [ref=f14e345]: Intercept
+                - generic [ref=f14e346]: Same tooltip, training level and ranks.
+                - generic [ref=f14e347]: Fury · 3 ranks · from level 30
+              - generic [ref=f14e348]: Same as Classic
+              - generic [aria-hidden] [ref=f14e350]: ›
+            - button "Whirlwind Same numbers, reworded Fury · from level 36 Changed" [ref=f14e351] [cursor=pointer]:
+              - generic [ref=f14e352]:
+                - strong [ref=f14e353]: Whirlwind
+                - generic [ref=f14e354]: Same numbers, reworded
+                - generic [ref=f14e355]: Fury · from level 36
+              - generic [ref=f14e356]: Changed
+              - generic [aria-hidden] [ref=f14e358]: ›
+            - button "Pummel Same tooltip, training level and ranks. Fury · 2 ranks · from level 38 Same as Classic" [ref=f14e359] [cursor=pointer]:
+              - generic [ref=f14e360]:
+                - strong [ref=f14e361]: Pummel
+                - generic [ref=f14e362]: Same tooltip, training level and ranks.
+                - generic [ref=f14e363]: Fury · 2 ranks · from level 38
+              - generic [ref=f14e364]: Same as Classic
+              - generic [aria-hidden] [ref=f14e366]: ›
+            - button "Bloodthirst Comes with the talent point, no trainer teaches it. Fury · 4 ranks · from level 40 Talent" [ref=f14e367] [cursor=pointer]:
+              - generic [ref=f14e368]:
+                - strong [ref=f14e369]: Bloodthirst
+                - generic [ref=f14e370]: Comes with the talent point, no trainer teaches it.
+                - generic [ref=f14e371]: Fury · 4 ranks · from level 40
+              - generic [ref=f14e372]: Talent
+              - generic [aria-hidden] [ref=f14e374]: ›
+            - button "Recklessness Numbers and wording changed Fury · from level 50 Changed" [ref=f14e375] [cursor=pointer]:
+              - generic [ref=f14e376]:
+                - strong [ref=f14e377]: Recklessness
+                - generic [ref=f14e378]: Numbers and wording changed
+                - generic [ref=f14e379]: Fury · from level 50
+              - generic [ref=f14e380]: Changed
+              - generic [aria-hidden] [ref=f14e382]: ›
+            - button "Piercing Howl Comes with the talent point, no trainer teaches it. Fury Talent" [ref=f14e383] [cursor=pointer]:
+              - generic [ref=f14e384]:
+                - strong [ref=f14e385]: Piercing Howl
+                - generic [ref=f14e386]: Comes with the talent point, no trainer teaches it.
+                - generic [ref=f14e387]: Fury
+              - generic [ref=f14e388]: Talent
+              - generic [aria-hidden] [ref=f14e390]: ›
+            - button "Death Wish Comes with the talent point, no trainer teaches it. Fury Talent" [ref=f14e391] [cursor=pointer]:
+              - generic [ref=f14e392]:
+                - strong [ref=f14e393]: Death Wish
+                - generic [ref=f14e394]: Comes with the talent point, no trainer teaches it.
+                - generic [ref=f14e395]: Fury
+              - generic [ref=f14e396]: Talent
+              - generic [aria-hidden] [ref=f14e398]: ›
+            - button "Bloodrage Tooltip rewritten Protection · from level 10 Changed" [ref=f14e399] [cursor=pointer]:
+              - generic [ref=f14e400]:
+                - strong [ref=f14e401]: Bloodrage
+                - generic [ref=f14e402]: Tooltip rewritten
+                - generic [ref=f14e403]: Protection · from level 10
+              - generic [ref=f14e404]: Changed
+              - generic [aria-hidden] [ref=f14e406]: ›
+            - button "Defensive Stance Numbers and wording changed Protection · from level 10 Changed" [ref=f14e407] [cursor=pointer]:
+              - generic [ref=f14e408]:
+                - strong [ref=f14e409]: Defensive Stance
+                - generic [ref=f14e410]: Numbers and wording changed
+                - generic [ref=f14e411]: Protection · from level 10
+              - generic [ref=f14e412]: Changed
+              - generic [aria-hidden] [ref=f14e414]: ›
+            - button "Sunder Armor Same tooltip, training level and ranks. Protection · 5 ranks · from level 10 Same as Classic" [ref=f14e415] [cursor=pointer]:
+              - generic [ref=f14e416]:
+                - strong [ref=f14e417]: Sunder Armor
+                - generic [ref=f14e418]: Same tooltip, training level and ranks.
+                - generic [ref=f14e419]: Protection · 5 ranks · from level 10
+              - generic [ref=f14e420]: Same as Classic
+              - generic [aria-hidden] [ref=f14e422]: ›
+            - button "Taunt Cooldown 8 sec instead of 10 sec Protection · from level 10 Changed" [ref=f14e423] [cursor=pointer]:
+              - generic [ref=f14e424]:
+                - strong [ref=f14e425]: Taunt
+                - generic [ref=f14e426]: Cooldown 8 sec instead of 10 sec
+                - generic [ref=f14e427]: Protection · from level 10
+              - generic [ref=f14e428]: Changed
+              - generic [aria-hidden] [ref=f14e430]: ›
+            - button "Shield Bash Same tooltip, training level and ranks. Protection · 3 ranks · from level 12 Same as Classic" [ref=f14e431] [cursor=pointer]:
+              - generic [ref=f14e432]:
+                - strong [ref=f14e433]: Shield Bash
+                - generic [ref=f14e434]: Same tooltip, training level and ranks.
+                - generic [ref=f14e435]: Protection · 3 ranks · from level 12
+              - generic [ref=f14e436]: Same as Classic
+              - generic [aria-hidden] [ref=f14e438]: ›
+            - 'button "Revenge Rank 6: 138 to 168 instead of 81 to 99 Protection · 6 ranks · from level 14 Changed" [ref=f14e439] [cursor=pointer]':
+              - generic [ref=f14e440]:
+                - strong [ref=f14e441]: Revenge
+                - generic [ref=f14e442]: "Rank 6: 138 to 168 instead of 81 to 99"
+                - generic [ref=f14e443]: Protection · 6 ranks · from level 14
+              - generic [ref=f14e444]: Changed
+              - generic [aria-hidden] [ref=f14e446]: ›
+            - button "Shield Block 7 sec instead of 5 sec, 2 instead of 1, reworded Protection · from level 16 Changed" [ref=f14e447] [cursor=pointer]:
+              - generic [ref=f14e448]:
+                - strong [ref=f14e449]: Shield Block
+                - generic [ref=f14e450]: 7 sec instead of 5 sec, 2 instead of 1, reworded
+                - generic [ref=f14e451]: Protection · from level 16
+              - generic [ref=f14e452]: Changed
+              - generic [aria-hidden] [ref=f14e454]: ›
+            - button "Disarm Same tooltip, training level and ranks. Protection · from level 18 Same as Classic" [ref=f14e455] [cursor=pointer]:
+              - generic [ref=f14e456]:
+                - strong [ref=f14e457]: Disarm
+                - generic [ref=f14e458]: Same tooltip, training level and ranks.
+                - generic [ref=f14e459]: Protection · from level 18
+              - generic [ref=f14e460]: Same as Classic
+              - generic [aria-hidden] [ref=f14e462]: ›
+            - button "Shield Wall Cooldown 15 min instead of 30 min Protection · from level 28 Changed" [ref=f14e463] [cursor=pointer]:
+              - generic [ref=f14e464]:
+                - strong [ref=f14e465]: Shield Wall
+                - generic [ref=f14e466]: Cooldown 15 min instead of 30 min
+                - generic [ref=f14e467]: Protection · from level 28
+              - generic [ref=f14e468]: Changed
+              - generic [aria-hidden] [ref=f14e470]: ›
+            - button "Shield Slam Comes with the talent point, no trainer teaches it. Protection · 4 ranks · from level 40 Talent" [ref=f14e471] [cursor=pointer]:
+              - generic [ref=f14e472]:
+                - strong [ref=f14e473]: Shield Slam
+                - generic [ref=f14e474]: Comes with the talent point, no trainer teaches it.
+                - generic [ref=f14e475]: Protection · 4 ranks · from level 40
+              - generic [ref=f14e476]: Talent
+              - generic [aria-hidden] [ref=f14e478]: ›
+            - button "Last Stand Comes with the talent point, no trainer teaches it. Protection Talent" [ref=f14e479] [cursor=pointer]:
+              - generic [ref=f14e480]:
+                - strong [ref=f14e481]: Last Stand
+                - generic [ref=f14e482]: Comes with the talent point, no trainer teaches it.
+                - generic [ref=f14e483]: Protection
+              - generic [ref=f14e484]: Talent
+              - generic [aria-hidden] [ref=f14e486]: ›
+            - button "Concussion Blow Comes with the talent point, no trainer teaches it. Protection Talent" [ref=f14e487] [cursor=pointer]:
+              - generic [ref=f14e488]:
+                - strong [ref=f14e489]: Concussion Blow
+                - generic [ref=f14e490]: Comes with the talent point, no trainer teaches it.
+                - generic [ref=f14e491]: Protection
+              - generic [ref=f14e492]: Talent
+              - generic [aria-hidden] [ref=f14e494]: ›
+          - generic [ref=f14e495]: Forever beta client, build 1.60.1.70338; Classic Era client, build 1.15.9.69722. Numbers are base values, before talents, gear and level scaling.
+        - region "Battle Stance compared with Classic" [ref=f14e496]:
+          - generic [ref=f14e498]:
+            - heading "Battle Stance" [level=2] [ref=f14e499]
+            - paragraph [ref=f14e500]:
+              - text: Arms tab
+              - generic [ref=f14e501]: Same as Classic
+          - paragraph [ref=f14e503]: Same tooltip, training level and ranks as Classic.
+          - generic [ref=f14e504]: Level 1
+          - generic [ref=f14e506]:
+            - generic [ref=f14e507]:
+              - heading "Classic" [level=3] [ref=f14e508]
+              - generic [ref=f14e509]:
+                - generic [ref=f14e510]:
+                  - generic [ref=f14e511]: Instant
+                  - generic [ref=f14e513]: 1 sec cooldown
+                - paragraph [ref=f14e515]: A balanced combat stance.
+            - generic [ref=f14e516]:
+              - heading "Forever" [level=3] [ref=f14e517]
+              - generic [ref=f14e518]:
+                - generic [ref=f14e519]:
+                  - generic [ref=f14e520]: Instant
+                  - generic [ref=f14e522]: 1 sec cooldown
+                - paragraph [ref=f14e524]: A balanced combat stance.
+          - group [ref=f14e525]:
+            - generic "Sources" [ref=f14e526] [cursor=pointer]
+          - paragraph [ref=f14e527]:
+            - link "Open in the change list ↗" [ref=f14e528] [cursor=pointer]:
+              - /url: /class/warrior#e=spellbook-warrior-battle-stance
+      - region "Every Warrior spell in WoW Forever, tab by tab" [ref=f14e529]:
+        - group [ref=f14e530]:
+          - generic "Every Warrior spell in WoW Forever, tab by tab42 entries, as text" [ref=f14e531] [cursor=pointer]
+  - contentinfo [ref=f14e532]:
+    - region "Support ForeverChanges" [ref=f14e533]:
+      - generic [ref=f14e534]:
+        - paragraph [ref=f14e535]:
+          - strong [ref=f14e536]: ForeverChanges has no ads
+          - generic [ref=f14e537]: I make it on my own, and I want it to stay free. If it's useful to you, a donation helps pay for hosting and the time it takes to keep it up to date.
+          - button "Tell me what to improve" [ref=f14e538] [cursor=pointer]
+        - generic [ref=f14e539]:
+          - button "Poke the goblin" [ref=f14e540] [cursor=pointer]:
+            - generic [aria-hidden]: PPC for the little content creator!
+          - link "Support the site" [ref=f14e541] [cursor=pointer]:
+            - /url: https://ko-fi.com/bartolomew
+    - navigation "Site pages" [ref=f14e547]:
+      - generic [ref=f14e548]:
+        - heading "Classes" [level=2] [ref=f14e549]
+        - list [ref=f14e550]:
+          - listitem [ref=f14e551]:
+            - link "Warrior" [ref=f14e552] [cursor=pointer]:
+              - /url: /class/warrior
+          - listitem [ref=f14e553]:
+            - link "Paladin" [ref=f14e554] [cursor=pointer]:
+              - /url: /class/paladin
+          - listitem [ref=f14e555]:
+            - link "Hunter" [ref=f14e556] [cursor=pointer]:
+              - /url: /class/hunter
+          - listitem [ref=f14e557]:
+            - link "Rogue" [ref=f14e558] [cursor=pointer]:
+              - /url: /class/rogue
+          - listitem [ref=f14e559]:
+            - link "Priest" [ref=f14e560] [cursor=pointer]:
+              - /url: /class/priest
+          - listitem [ref=f14e561]:
+            - link "Shaman" [ref=f14e562] [cursor=pointer]:
+              - /url: /class/shaman
+          - listitem [ref=f14e563]:
+            - link "Mage" [ref=f14e564] [cursor=pointer]:
+              - /url: /class/mage
+          - listitem [ref=f14e565]:
+            - link "Warlock" [ref=f14e566] [cursor=pointer]:
+              - /url: /class/warlock
+          - listitem [ref=f14e567]:
+            - link "Druid" [ref=f14e568] [cursor=pointer]:
+              - /url: /class/druid
+      - generic [ref=f14e569]:
+        - heading "Character" [level=2] [ref=f14e570]
+        - list [ref=f14e571]:
+          - listitem [ref=f14e572]:
+            - link "Talent calculator" [ref=f14e573] [cursor=pointer]:
+              - /url: /talents
+          - listitem [ref=f14e574]:
+            - link "Spellbook" [ref=f14e575] [cursor=pointer]:
+              - /url: /spellbook/warrior
+          - listitem [ref=f14e576]:
+            - link "Legacy perks" [ref=f14e577] [cursor=pointer]:
+              - /url: /legacy-perks
+          - listitem [ref=f14e578]:
+            - link "Races" [ref=f14e579] [cursor=pointer]:
+              - /url: /racials
+          - listitem [ref=f14e580]:
+            - link "Professions" [ref=f14e581] [cursor=pointer]:
+              - /url: /professions
+          - listitem [ref=f14e582]:
+            - link "Downrank calculator" [ref=f14e583] [cursor=pointer]:
+              - /url: /downrank-calculator
+          - listitem [ref=f14e584]:
+            - link "Tier list maker" [ref=f14e585] [cursor=pointer]:
+              - /url: /tier-list
+      - generic [ref=f14e586]:
+        - heading "Gear" [level=2] [ref=f14e587]
+        - list [ref=f14e588]:
+          - listitem [ref=f14e589]:
+            - link "BiS list" [ref=f14e590] [cursor=pointer]:
+              - /url: /bis
+          - listitem [ref=f14e591]:
+            - link "Items" [ref=f14e592] [cursor=pointer]:
+              - /url: /items
+          - listitem [ref=f14e593]:
+            - link "Hidden items" [ref=f14e594] [cursor=pointer]:
+              - /url: /hidden-items
+          - listitem [ref=f14e595]:
+            - link "Transmog" [ref=f14e596] [cursor=pointer]:
+              - /url: /transmog
+      - generic [ref=f14e597]:
+        - heading "World" [level=2] [ref=f14e598]
+        - list [ref=f14e599]:
+          - listitem [ref=f14e600]:
+            - link "World map" [ref=f14e601] [cursor=pointer]:
+              - /url: /map
+          - listitem [ref=f14e602]:
+            - link "Dungeons" [ref=f14e603] [cursor=pointer]:
+              - /url: /dungeons
+          - listitem [ref=f14e604]:
+            - link "Quests" [ref=f14e605] [cursor=pointer]:
+              - /url: /quests
+          - listitem [ref=f14e606]:
+            - link "Dungeon quests" [ref=f14e607] [cursor=pointer]:
+              - /url: /dungeon-quests
+          - listitem [ref=f14e608]:
+            - link "Rare spawns" [ref=f14e609] [cursor=pointer]:
+              - /url: /rares
+          - listitem [ref=f14e610]:
+            - link "Library books" [ref=f14e611] [cursor=pointer]:
+              - /url: /library-books
+      - generic [ref=f14e612]:
+        - heading "Guides" [level=2] [ref=f14e613]
+        - list [ref=f14e614]:
+          - listitem [ref=f14e615]:
+            - link "Tanning Rack" [ref=f14e616] [cursor=pointer]:
+              - /url: /tanning-rack
+          - listitem [ref=f14e617]:
+            - link "PvP ranks" [ref=f14e618] [cursor=pointer]:
+              - /url: /pvp-ranks
+          - listitem [ref=f14e619]:
+            - link "Downranking" [ref=f14e620] [cursor=pointer]:
+              - /url: /downranking
+          - listitem [ref=f14e621]:
+            - link "Booty Bay Bruiser's Buckshot" [ref=f14e622] [cursor=pointer]:
+              - /url: /booty-bay-bruisers-buckshot
+          - listitem [ref=f14e623]:
+            - link "Scarlet Banner" [ref=f14e624] [cursor=pointer]:
+              - /url: /scarlet-banner
+          - listitem [ref=f14e625]:
+            - link "$100,000 duel tournament" [ref=f14e626] [cursor=pointer]:
+              - /url: /duel-tournament
+          - listitem [ref=f14e627]:
+            - link "Level 30" [ref=f14e628] [cursor=pointer]:
+              - /url: /level-30
+          - listitem [ref=f14e629]:
+            - link "Druid Cat Form quest" [ref=f14e630] [cursor=pointer]:
+              - /url: /druid-cat-form
+          - listitem [ref=f14e631]:
+            - link "Addons" [ref=f14e632] [cursor=pointer]:
+              - /url: /addons
+          - listitem [ref=f14e633]:
+            - link "Savory Whimsyfin Delight" [ref=f14e634] [cursor=pointer]:
+              - /url: /savory-whimsyfin-delight
+          - listitem [ref=f14e635]:
+            - link "Druid snake form" [ref=f14e636] [cursor=pointer]:
+              - /url: /druid-snake-form
+          - listitem [ref=f14e637]:
+            - link "Battle mage" [ref=f14e638] [cursor=pointer]:
+              - /url: /battle-mage
+          - listitem [ref=f14e639]:
+            - link "Cozy Sleeping Bag" [ref=f14e640] [cursor=pointer]:
+              - /url: /cozy-sleeping-bag
+          - listitem [ref=f14e641]:
+            - link "Merchant's Favor" [ref=f14e642] [cursor=pointer]:
+              - /url: /merchants-favor
+          - listitem [ref=f14e643]:
+            - link "Hunter pets" [ref=f14e644] [cursor=pointer]:
+              - /url: /hunter-pets
+      - generic [ref=f14e645]:
+        - heading "Beta" [level=2] [ref=f14e646]
+        - list [ref=f14e647]:
+          - listitem [ref=f14e648]:
+            - link "Patch notes" [ref=f14e649] [cursor=pointer]:
+              - /url: /patch-notes
+          - listitem [ref=f14e650]:
+            - link "Changes vs Classic" [ref=f14e651] [cursor=pointer]:
+              - /url: /changes
+          - listitem [ref=f14e652]:
+            - link "Beta and launch dates" [ref=f14e653] [cursor=pointer]:
+              - /url: /beta
+          - listitem [ref=f14e654]:
+            - link "Server status" [ref=f14e655] [cursor=pointer]:
+              - /url: /server-status
+      - generic [ref=f14e656]:
+        - heading "Language" [level=2] [ref=f14e657]
+        - list [ref=f14e662]:
+          - listitem [ref=f14e663]:
+            - generic [ref=f14e664]: English
+          - listitem [ref=f14e667]:
+            - link "Français" [ref=f14e668] [cursor=pointer]:
+              - /url: /fr/spellbook/warrior
+          - listitem [ref=f14e669]:
+            - link "Deutsch" [ref=f14e670] [cursor=pointer]:
+              - /url: /de/spellbook/warrior
+          - listitem [ref=f14e671]:
+            - link "繁體中文" [ref=f14e672] [cursor=pointer]:
+              - /url: /zh-tw/spellbook/warrior
+          - listitem [ref=f14e673]:
+            - link "简体中文" [ref=f14e674] [cursor=pointer]:
+              - /url: /zh-cn/spellbook/warrior
+          - listitem [ref=f14e675]:
+            - link "Русский" [ref=f14e676] [cursor=pointer]:
+              - /url: /ru/spellbook/warrior
+    - generic [ref=f14e677]:
+      - paragraph [ref=f14e678]: ForeverChanges is an unofficial fan site, not affiliated with or endorsed by Blizzard Entertainment. World of Warcraft and Warcraft are trademarks or registered trademarks of Blizzard Entertainment, Inc. in the U.S. and/or other countries. Game content and images © Blizzard Entertainment, Inc.
+      - navigation "Legal" [ref=f14e680]:
+        - link "About the data" [ref=f14e681] [cursor=pointer]:
+          - /url: /about
+        - link "Privacy" [ref=f14e682] [cursor=pointer]:
+          - /url: /privacy
+        - link "Terms" [ref=f14e683] [cursor=pointer]:
+          - /url: /terms
+        - link "Legal notice" [ref=f14e684] [cursor=pointer]:
+          - /url: /legal

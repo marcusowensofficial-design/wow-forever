@@ -1,0 +1,859 @@
+- generic [active] [ref=f4e1]:
+  - text: ": : :"
+  - main [ref=f4e2]:
+    - generic [ref=f4e3]:
+      - generic [ref=f4e4]:
+        - generic [ref=f4e5]:
+          - generic [ref=f4e6]:
+            - button "Pull the murloc camp" [ref=f4e7] [cursor=pointer]
+            - generic [ref=f4e8]:
+              - generic [ref=f4e9]: Online now
+              - generic [ref=f4e10]: 2,358
+              - generic [ref=f4e11]: murlocs
+          - link "ForeverChanges home" [ref=f4e12] [cursor=pointer]:
+            - /url: /
+            - img "ForeverChanges" [ref=f4e13]
+          - link [ref=f4e15] [cursor=pointer]:
+            - /url: /patch-notes
+            - generic [ref=f4e16]:
+              - text: Updated
+              - generic [aria-hidden] [ref=f4e18]: ·
+            - text: Beta build 1.60.1.70338
+          - link "Launch in" [ref=f4e19] [cursor=pointer]:
+            - /url: /beta
+            - generic [aria-hidden] [ref=f4e21]:
+              - generic [ref=f4e22]:
+                - generic [ref=f4e23]: "25"
+                - generic [ref=f4e24]: days
+              - generic [ref=f4e25]:
+                - text: ":"
+                - generic [ref=f4e26]: "00"
+                - generic [ref=f4e27]: hrs
+              - generic [ref=f4e28]:
+                - text: ":"
+                - generic [ref=f4e29]: "30"
+                - generic [ref=f4e30]: min
+              - generic [ref=f4e31]:
+                - text: ":"
+                - generic [ref=f4e32]: "33"
+                - generic [ref=f4e33]: sec
+        - generic [ref=f4e34]:
+          - navigation "Main" [ref=f4e35]:
+            - link "Changes" [ref=f4e36] [cursor=pointer]:
+              - /url: /changes
+            - link "Talents , updated" [ref=f4e37] [cursor=pointer]:
+              - /url: /talents/warrior
+              - text: Talents
+              - generic:
+                - generic [aria-hidden]: Updated on October 8
+                - generic [ref=f4e39]: ", updated"
+            - link "Spellbook , updated" [ref=f4e40] [cursor=pointer]:
+              - /url: /spellbook/warrior
+              - text: Spellbook
+              - generic:
+                - generic [aria-hidden]: Updated on October 8
+                - generic [ref=f4e42]: ", updated"
+            - link "Legacy" [ref=f4e43] [cursor=pointer]:
+              - /url: /legacy-perks
+            - link "Professions" [ref=f4e44] [cursor=pointer]:
+              - /url: /professions
+            - link "Races" [ref=f4e45] [cursor=pointer]:
+              - /url: /racials
+            - link "Dungeons , new" [ref=f4e46] [cursor=pointer]:
+              - /url: /dungeons
+              - text: Dungeons
+              - generic:
+                - generic [aria-hidden]: "New: the City of Dalaran"
+                - generic [ref=f4e48]: ", new"
+            - link "Items , updated" [ref=f4e49] [cursor=pointer]:
+              - /url: /items
+              - text: Items
+              - generic:
+                - generic [aria-hidden]: 331 items changed on October 8
+                - generic [ref=f4e51]: ", updated"
+            - link "Quests" [ref=f4e52] [cursor=pointer]:
+              - /url: /quests
+            - link "BiS list , updated" [ref=f4e53] [cursor=pointer]:
+              - /url: /bis
+              - text: BiS list
+              - generic:
+                - generic [aria-hidden]: Up to date with the latest build
+                - generic [ref=f4e55]: ", updated"
+            - link "World map" [ref=f4e56] [cursor=pointer]:
+              - /url: /map
+            - link "Guides" [ref=f4e57] [cursor=pointer]:
+              - /url: /guides
+            - link "Patch notes" [ref=f4e58] [cursor=pointer]:
+              - /url: /patch-notes
+          - button "Search" [ref=f4e60] [cursor=pointer]:
+            - generic [aria-hidden]: Search /
+      - generic [ref=f4e66]:
+        - heading "Legacy points in WoW Forever" [level=1] [ref=f4e67]
+        - paragraph [ref=f4e68]: Your account earns Legacy Points by completing challenges. Each character spends them on its own perks, and the points you have earned also unlock cosmetics. Plan your perks and tick your challenges below.
+        - paragraph [ref=f4e69]:
+          - text: "In the beta: since October 8, every tester has the Legacy Challenge done, which gives 16 Legacy Points, so the perks can be tried without leveling several classes first. They stay until the beta ends."
+          - link "Blizzard’s post of October 1" [ref=f4e70] [cursor=pointer]:
+            - /url: https://us.forums.blizzard.com/en/wow/t/legacy-points-for-beta-testing/2368776
+        - generic [ref=f4e71]:
+          - generic [ref=f4e72]:
+            - definition [ref=f4e73]: "65"
+            - term [ref=f4e74]:
+              - link "Challenges at launch" [ref=f4e75] [cursor=pointer]:
+                - /url: "#challenges"
+          - generic [ref=f4e76]:
+            - definition [ref=f4e77]: "16"
+            - term [ref=f4e78]:
+              - link "Points a character can spend" [ref=f4e79] [cursor=pointer]:
+                - /url: "#planner"
+          - generic [ref=f4e80]:
+            - definition [ref=f4e81]: "21"
+            - term [ref=f4e82]:
+              - link "Perks, and 6 still hidden" [ref=f4e83] [cursor=pointer]:
+                - /url: "#planner"
+          - generic [ref=f4e84]:
+            - definition [ref=f4e85]: "4"
+            - term [ref=f4e86]:
+              - link "Cosmetic rewards" [ref=f4e87] [cursor=pointer]:
+                - /url: "#how"
+      - navigation "Sections of this page" [ref=f4e88]:
+        - generic [ref=f4e89]:
+          - link "How it works" [ref=f4e90] [cursor=pointer]:
+            - /url: "#how"
+          - link "Perk planner" [ref=f4e92] [cursor=pointer]:
+            - /url: "#planner"
+          - link "Challenges" [ref=f4e94] [cursor=pointer]:
+            - /url: "#challenges"
+          - link "Questions" [ref=f4e96] [cursor=pointer]:
+            - /url: "#questions"
+      - generic [ref=f4e98]:
+        - region [ref=f4e99]:
+          - heading "How Legacy works" [level=2] [ref=f4e100]
+          - list [ref=f4e101]:
+            - listitem [ref=f4e102]:
+              - generic [ref=f4e103]:
+                - heading "1. Earn points" [level=3] [ref=f4e104]
+                - generic [ref=f4e105]: Shared by your account
+                - paragraph [ref=f4e106]: A challenge pays 1 Legacy Point the first time any of your characters completes it. There are 65 at launch, and the window opens once a first character reaches level 25.
+            - listitem [ref=f4e107]:
+              - generic [ref=f4e108]:
+                - heading "2. Spend them on perks" [level=3] [ref=f4e109]
+                - generic [ref=f4e110]: Separately on each character
+                - paragraph [ref=f4e111]: Every character spends the account’s points again, in its own trees, up to 16 at launch. What your warrior spends takes nothing from your mage.
+            - listitem [ref=f4e112]:
+              - generic [ref=f4e113]:
+                - heading "3. Collect rewards" [level=3] [ref=f4e114]
+                - generic [ref=f4e115]: Shared by your account
+                - paragraph [ref=f4e116]: "Rewards count the points you have earned, spent or not. That is the reason to go past 16: the last reward asks for 55."
+          - generic [ref=f4e117]:
+            - generic [ref=f4e119]: "0"
+            - generic [ref=f4e120]:
+              - progressbar "Legacy Points earned" [ref=f4e121]:
+                - generic: "15"
+                - generic: "25"
+                - generic: "40"
+                - generic: "55"
+                - generic [ref=f4e127]: "65"
+              - paragraph [ref=f4e128]: 16 is the most one character can spend
+          - paragraph [ref=f4e129]:
+            - text: Tick what your account has done in the
+            - link "challenges" [ref=f4e130] [cursor=pointer]:
+              - /url: "#challenges"
+            - text: and this line fills up.
+          - list [ref=f4e131]:
+            - listitem [ref=f4e132]:
+              - link [aria-hidden] [ref=f4e133] [cursor=pointer]:
+                - /url: /item/276236
+              - generic [ref=f4e134]:
+                - generic [ref=f4e135]: 15 points
+                - strong [ref=f4e136]:
+                  - link "Holstered Replica Ironforge Air Rifle" [ref=f4e137] [cursor=pointer]:
+                    - /url: /item/276236
+                - generic [ref=f4e138]: Join a shootout with your air rifle. You and other players with this rifle can Stun each other. Even keeps score!
+            - listitem [ref=f4e139]:
+              - link [aria-hidden] [ref=f4e140] [cursor=pointer]:
+                - /url: /item/277714
+              - generic [ref=f4e141]:
+                - generic [ref=f4e142]: 25 points
+                - strong [ref=f4e143]:
+                  - link "Spectral Bear Cub" [ref=f4e144] [cursor=pointer]:
+                    - /url: /item/277714
+                - generic [ref=f4e145]: Summons a tiny spectral bear cub as your companion.
+            - listitem [ref=f4e146]:
+              - link [aria-hidden] [ref=f4e147] [cursor=pointer]:
+                - /url: /item/277717
+              - generic [ref=f4e148]:
+                - generic [ref=f4e149]: 40 points
+                - strong [ref=f4e150]:
+                  - link "Spectral Bear Tabard" [ref=f4e151] [cursor=pointer]:
+                    - /url: /item/277717
+                - generic [ref=f4e152]: Show your dedication with this spectral bear-themed tabard.
+            - listitem [ref=f4e153]:
+              - link [aria-hidden] [ref=f4e154] [cursor=pointer]:
+                - /url: /item/277718
+              - generic [ref=f4e155]:
+                - generic [ref=f4e156]: 55 points
+                - strong [ref=f4e157]:
+                  - link "Reins of the Spectral Bear" [ref=f4e158] [cursor=pointer]:
+                    - /url: /item/277718
+                - generic [ref=f4e159]: Summons and dismisses an Epic rideable spectral bear mount that moves at 100% increased speed.
+          - paragraph [ref=f4e160]: "Visit Innkeeper Wiley in Ratchet to claim your reward. Example: an account with 20 points. The warrior spends 16, a new mage spends 16 as well, and both can claim the air rifle."
+        - region [ref=f4e161]:
+          - generic [ref=f4e162]:
+            - generic [ref=f4e163]:
+              - heading "Perk planner" [level=2] [ref=f4e164]
+              - generic [ref=f4e165]: One character, 16 points
+              - generic [ref=f4e166]: Points left 16
+            - generic [ref=f4e167]:
+              - region "Professions" [ref=f4e168]:
+                - generic [ref=f4e169]:
+                  - generic [ref=f4e170]:
+                    - heading "Professions" [level=3] [ref=f4e171]
+                    - paragraph [ref=f4e172]: Skill-ups, gathering and gold.
+                  - generic "0 points spent" [ref=f4e173]: "0"
+                - group "Professions perks" [ref=f4e174]:
+                  - button "Master Chef, rank 0 of 5, opens at 5 points in this tree" [ref=f4e178] [cursor=pointer]:
+                    - generic [aria-hidden] [ref=f4e179]: "5"
+                  - button "Working Overtime, rank 0 of 5" [ref=f4e180] [cursor=pointer]:
+                    - generic [ref=f4e181]: 0/5
+                  - button "Bartering, rank 0 of 2, opens at 5 points in this tree" [ref=f4e182] [cursor=pointer]:
+                    - generic [aria-hidden] [ref=f4e183]: "5"
+                  - button "Dedicated Study, rank 0 of 1, opens at 10 points in this tree" [ref=f4e184] [cursor=pointer]:
+                    - generic [aria-hidden] [ref=f4e185]: "10"
+                  - button "Bountiful Harvest, rank 0 of 5" [ref=f4e186] [cursor=pointer]:
+                    - generic [ref=f4e187]: 0/5
+                  - button "Performance Bonus, rank 0 of 3, opens at 5 points in this tree" [ref=f4e188] [cursor=pointer]:
+                    - generic [aria-hidden] [ref=f4e189]: "5"
+                  - generic "Perk not yet revealed" [ref=f4e190]: "?"
+                  - generic "Perk not yet revealed" [ref=f4e192]: "?"
+                  - button "Luremaster, rank 0 of 2, opens at 5 points in this tree" [ref=f4e194] [cursor=pointer]:
+                    - generic [aria-hidden] [ref=f4e195]: "5"
+                - paragraph [ref=f4e196]: 5 more points here open the perks marked 5
+              - region "Adventure" [ref=f4e197]:
+                - generic [ref=f4e198]:
+                  - generic [ref=f4e199]:
+                    - heading "Adventure" [level=3] [ref=f4e200]
+                    - paragraph [ref=f4e201]: Leveling and getting around.
+                  - generic "0 points spent" [ref=f4e202]: "0"
+                - group "Adventure perks" [ref=f4e203]:
+                  - button "High Alert, rank 0 of 2, opens at 5 points in this tree" [ref=f4e207] [cursor=pointer]:
+                    - generic [aria-hidden] [ref=f4e208]: "5"
+                  - button "Well Rested, rank 0 of 5" [ref=f4e209] [cursor=pointer]:
+                    - generic [ref=f4e210]: 0/5
+                  - button "Talented, rank 0 of 5, opens at 5 points in this tree" [ref=f4e211] [cursor=pointer]:
+                    - generic [aria-hidden] [ref=f4e212]: "5"
+                  - generic "Perk not yet revealed" [ref=f4e213]: "?"
+                  - generic "Perk not yet revealed" [ref=f4e215]: "?"
+                  - button "Thrill of Adventure, rank 0 of 5" [ref=f4e217] [cursor=pointer]:
+                    - generic [ref=f4e218]: 0/5
+                  - button "Field Guide, rank 0 of 3, opens at 5 points in this tree" [ref=f4e219] [cursor=pointer]:
+                    - generic [aria-hidden] [ref=f4e220]: "5"
+                  - button "Frequent Flier, rank 0 of 1, opens at 10 points in this tree" [ref=f4e221] [cursor=pointer]:
+                    - generic [aria-hidden] [ref=f4e222]: "10"
+                  - button "Field Medicine, rank 0 of 2, opens at 5 points in this tree" [ref=f4e223] [cursor=pointer]:
+                    - generic [aria-hidden] [ref=f4e224]: "5"
+                - paragraph [ref=f4e225]: 5 more points here open the perks marked 5
+              - region "Resourcefulness" [ref=f4e226]:
+                - generic [ref=f4e227]:
+                  - generic [ref=f4e228]:
+                    - heading "Resourcefulness" [level=3] [ref=f4e229]
+                    - paragraph [ref=f4e230]: Upkeep, buffs, reputation and honor.
+                  - generic "0 points spent" [ref=f4e231]: "0"
+                - group "Resourcefulness perks" [ref=f4e232]:
+                  - button "For Great Honor, rank 0 of 5, opens at 5 points in this tree" [ref=f4e236] [cursor=pointer]:
+                    - generic [aria-hidden] [ref=f4e237]: "5"
+                  - button "Gourmand, rank 0 of 3" [ref=f4e238] [cursor=pointer]:
+                    - generic [ref=f4e239]: 0/3
+                  - button "Permanence, rank 0 of 2, opens at 5 points in this tree" [ref=f4e240] [cursor=pointer]:
+                    - generic [aria-hidden] [ref=f4e241]: "5"
+                  - generic "Perk not yet revealed" [ref=f4e242]: "?"
+                  - generic "Perk not yet revealed" [ref=f4e244]: "?"
+                  - button "The Quick and the Dead, rank 0 of 2" [ref=f4e246] [cursor=pointer]:
+                    - generic [ref=f4e247]: 0/2
+                  - button "Reagent Economy, rank 0 of 1, opens at 10 points in this tree" [ref=f4e248] [cursor=pointer]:
+                    - generic [aria-hidden] [ref=f4e249]: "10"
+                  - button "Reinforce, rank 0 of 5" [ref=f4e250] [cursor=pointer]:
+                    - generic [ref=f4e251]: 0/5
+                  - button "Diplomat, rank 0 of 5, opens at 5 points in this tree" [ref=f4e252] [cursor=pointer]:
+                    - generic [aria-hidden] [ref=f4e253]: "5"
+                - paragraph [ref=f4e254]: 5 more points here open the perks marked 5
+            - generic [ref=f4e255]:
+              - paragraph [ref=f4e256]: Click adds a rank, right click removes it. A line means the perk also needs a rank in the one to its left.
+              - generic [ref=f4e257]:
+                - generic [ref=f4e258]: Load an example
+                - button "Leveling" [ref=f4e259] [cursor=pointer]
+                - button "Crafting" [ref=f4e260] [cursor=pointer]
+                - button "Reset" [disabled] [ref=f4e261]
+                - button "Copy link" [disabled] [ref=f4e262]
+          - group [ref=f4e263]:
+            - generic "What this plan gives Nothing planned yet Show" [ref=f4e264] [cursor=pointer]:
+              - generic [ref=f4e265]: What this plan gives
+              - generic [ref=f4e266]: Nothing planned yet
+              - text: Show
+          - region "Save and share this plan" [ref=f4e267]:
+            - generic [ref=f4e268]:
+              - generic [ref=f4e269]: My plans
+              - textbox "Name this plan" [ref=f4e270]
+              - button "Save plan" [disabled] [ref=f4e271]
+              - generic [ref=f4e272]: Stored in this browser only.
+            - generic [ref=f4e273]:
+              - generic [ref=f4e274]: Share
+              - textbox "Share link" [ref=f4e275]:
+                - /placeholder: Add a rank to get a link
+              - button "Copy link" [disabled] [ref=f4e276]
+              - button "Copy as text" [disabled] [ref=f4e277]
+        - region [ref=f4e278]:
+          - generic [ref=f4e279]:
+            - generic [ref=f4e280]:
+              - heading "Legacy challenges" [level=2] [ref=f4e281]
+              - paragraph [ref=f4e282]: "All 65, from the beta client (build 1.60.1.70338). Tick what your account has done: each one pays 1 point, once. One character with two crafting professions can complete 29 of them, the rest asks for other classes and trades."
+            - generic [ref=f4e283]:
+              - generic [ref=f4e285]: "0"
+              - generic [ref=f4e286]: of 65
+          - generic [ref=f4e287]:
+            - generic [ref=f4e288]:
+              - generic [ref=f4e289]:
+                - generic [ref=f4e290]:
+                  - heading "Classes" [level=3] [ref=f4e291]
+                  - generic [ref=f4e292]: 0 / 27
+                - table [ref=f4e293]:
+                  - rowgroup [ref=f4e294]:
+                    - row [ref=f4e295]:
+                      - columnheader "Classes" [ref=f4e296]
+                      - columnheader "Level 25" [ref=f4e298]:
+                        - generic [ref=f4e299]: Level
+                        - text: "25"
+                      - columnheader "Level 45" [ref=f4e300]:
+                        - generic [ref=f4e301]: Level
+                        - text: "45"
+                      - columnheader "Level 60" [ref=f4e302]:
+                        - generic [ref=f4e303]: Level
+                        - text: "60"
+                  - rowgroup [ref=f4e304]:
+                    - row [ref=f4e305]:
+                      - rowheader "Druid" [ref=f4e306]
+                      - cell [ref=f4e307]:
+                        - 'button "Novice Druid: Reach level 25 for the first time on a Druid." [ref=f4e308] [cursor=pointer]'
+                      - cell [ref=f4e312]:
+                        - 'button "Experienced Druid: Reach level 45 for the first time on a Druid." [ref=f4e313] [cursor=pointer]'
+                      - cell [ref=f4e317]:
+                        - 'button "Master Druid: Reach level 60 for the first time on a Druid." [ref=f4e318] [cursor=pointer]'
+                    - row [ref=f4e322]:
+                      - rowheader "Hunter" [ref=f4e323]
+                      - cell [ref=f4e324]:
+                        - 'button "Novice Hunter: Reach level 25 for the first time on a Hunter." [ref=f4e325] [cursor=pointer]'
+                      - cell [ref=f4e329]:
+                        - 'button "Experienced Hunter: Reach level 45 for the first time on a Hunter." [ref=f4e330] [cursor=pointer]'
+                      - cell [ref=f4e334]:
+                        - 'button "Master Hunter: Reach level 60 for the first time on a Hunter." [ref=f4e335] [cursor=pointer]'
+                    - row [ref=f4e339]:
+                      - rowheader "Mage" [ref=f4e340]
+                      - cell [ref=f4e341]:
+                        - 'button "Novice Mage: Reach level 25 for the first time on a Mage." [ref=f4e342] [cursor=pointer]'
+                      - cell [ref=f4e346]:
+                        - 'button "Experienced Mage: Reach level 45 for the first time on a Mage." [ref=f4e347] [cursor=pointer]'
+                      - cell [ref=f4e351]:
+                        - 'button "Master Mage: Reach level 60 for the first time on a Mage." [ref=f4e352] [cursor=pointer]'
+                    - row [ref=f4e356]:
+                      - rowheader "Paladin" [ref=f4e357]
+                      - cell [ref=f4e358]:
+                        - 'button "Novice Paladin: Reach level 25 for the first time on a Paladin." [ref=f4e359] [cursor=pointer]'
+                      - cell [ref=f4e363]:
+                        - 'button "Experienced Paladin: Reach level 45 for the first time on a Paladin." [ref=f4e364] [cursor=pointer]'
+                      - cell [ref=f4e368]:
+                        - 'button "Master Paladin: Reach level 60 for the first time on a Paladin." [ref=f4e369] [cursor=pointer]'
+                    - row [ref=f4e373]:
+                      - rowheader "Priest" [ref=f4e374]
+                      - cell [ref=f4e375]:
+                        - 'button "Novice Priest: Reach level 25 for the first time on a Priest." [ref=f4e376] [cursor=pointer]'
+                      - cell [ref=f4e380]:
+                        - 'button "Experienced Priest: Reach level 45 for the first time on a Priest." [ref=f4e381] [cursor=pointer]'
+                      - cell [ref=f4e385]:
+                        - 'button "Master Priest: Reach level 60 for the first time on a Priest." [ref=f4e386] [cursor=pointer]'
+                    - row [ref=f4e390]:
+                      - rowheader "Rogue" [ref=f4e391]
+                      - cell [ref=f4e392]:
+                        - 'button "Novice Rogue: Reach level 25 for the first time on a Rogue." [ref=f4e393] [cursor=pointer]'
+                      - cell [ref=f4e397]:
+                        - 'button "Experienced Rogue: Reach level 45 for the first time on a Rogue." [ref=f4e398] [cursor=pointer]'
+                      - cell [ref=f4e402]:
+                        - 'button "Master Rogue: Reach level 60 for the first time on a Rogue." [ref=f4e403] [cursor=pointer]'
+                    - row [ref=f4e407]:
+                      - rowheader "Shaman" [ref=f4e408]
+                      - cell [ref=f4e409]:
+                        - 'button "Novice Shaman: Reach level 25 for the first time on a Shaman." [ref=f4e410] [cursor=pointer]'
+                      - cell [ref=f4e414]:
+                        - 'button "Experienced Shaman: Reach level 45 for the first time on a Shaman." [ref=f4e415] [cursor=pointer]'
+                      - cell [ref=f4e419]:
+                        - 'button "Master Shaman: Reach level 60 for the first time on a Shaman." [ref=f4e420] [cursor=pointer]'
+                    - row [ref=f4e424]:
+                      - rowheader "Warlock" [ref=f4e425]
+                      - cell [ref=f4e426]:
+                        - 'button "Novice Warlock: Reach level 25 for the first time on a Warlock." [ref=f4e427] [cursor=pointer]'
+                      - cell [ref=f4e431]:
+                        - 'button "Experienced Warlock: Reach level 45 for the first time on a Warlock." [ref=f4e432] [cursor=pointer]'
+                      - cell [ref=f4e436]:
+                        - 'button "Master Warlock: Reach level 60 for the first time on a Warlock." [ref=f4e437] [cursor=pointer]'
+                    - row [ref=f4e441]:
+                      - rowheader "Warrior" [ref=f4e442]
+                      - cell [ref=f4e443]:
+                        - 'button "Novice Warrior: Reach level 25 for the first time on a Warrior." [ref=f4e444] [cursor=pointer]'
+                      - cell [ref=f4e448]:
+                        - 'button "Experienced Warrior: Reach level 45 for the first time on a Warrior." [ref=f4e449] [cursor=pointer]'
+                      - cell [ref=f4e453]:
+                        - 'button "Master Warrior: Reach level 60 for the first time on a Warrior." [ref=f4e454] [cursor=pointer]'
+              - generic [ref=f4e458]:
+                - generic [ref=f4e459]:
+                  - heading "Dungeons" [level=3] [ref=f4e460]
+                  - generic [ref=f4e461]: 0 / 3
+                - list [ref=f4e462]:
+                  - listitem [ref=f4e463]:
+                    - generic [ref=f4e464]:
+                      - strong [ref=f4e465]: Novice Spelunker
+                      - generic [ref=f4e466]: Complete the following dungeons.
+                      - group [ref=f4e467]:
+                        - generic "6 dungeons" [ref=f4e468] [cursor=pointer]
+                    - 'button "Novice Spelunker: Complete the following dungeons." [ref=f4e469] [cursor=pointer]'
+                  - listitem [ref=f4e473]:
+                    - generic [ref=f4e474]:
+                      - strong [ref=f4e475]: Experienced Spelunker
+                      - generic [ref=f4e476]: Complete the following dungeons.
+                      - group [ref=f4e477]:
+                        - generic "10 dungeons" [ref=f4e478] [cursor=pointer]
+                    - 'button "Experienced Spelunker: Complete the following dungeons." [ref=f4e479] [cursor=pointer]'
+                  - listitem [ref=f4e483]:
+                    - generic [ref=f4e484]:
+                      - strong [ref=f4e485]: Master Spelunker
+                      - generic [ref=f4e486]: Complete the following dungeons.
+                      - group [ref=f4e487]:
+                        - generic "17 dungeons" [ref=f4e488] [cursor=pointer]
+                    - 'button "Master Spelunker: Complete the following dungeons." [ref=f4e489] [cursor=pointer]'
+              - generic [ref=f4e493]:
+                - generic [ref=f4e494]:
+                  - heading "Adventure" [level=3] [ref=f4e495]
+                  - generic [ref=f4e496]: 0 / 2
+                - list [ref=f4e497]:
+                  - listitem [ref=f4e498]:
+                    - generic [ref=f4e499]:
+                      - strong [ref=f4e500]: Lord Valthalak Laid to Rest
+                      - generic [ref=f4e501]: Complete the questline beginning with An Earnest Proposition, and ending with Saving the Best for Last.
+                    - 'button "Lord Valthalak Laid to Rest: Complete the questline beginning with An Earnest Proposition, and ending with Saving the Best for Last." [ref=f4e502] [cursor=pointer]'
+                  - listitem [ref=f4e506]:
+                    - generic [ref=f4e507]:
+                      - strong [ref=f4e508]: Explorer
+                      - generic [ref=f4e509]: Have a character with the Explore Azeroth achievement.
+                    - 'button "Explorer: Have a character with the Explore Azeroth achievement." [ref=f4e510] [cursor=pointer]'
+            - generic [ref=f4e514]:
+              - generic [ref=f4e515]:
+                - generic [ref=f4e516]:
+                  - heading "Tradeskills" [level=3] [ref=f4e517]
+                  - generic [ref=f4e518]: 0 / 18
+                - table [ref=f4e519]:
+                  - rowgroup [ref=f4e520]:
+                    - row [ref=f4e521]:
+                      - columnheader "Tradeskills" [ref=f4e522]
+                      - columnheader "Skill 150" [ref=f4e524]:
+                        - generic [ref=f4e525]: Skill
+                        - text: "150"
+                      - columnheader "Skill 225" [ref=f4e526]:
+                        - generic [ref=f4e527]: Skill
+                        - text: "225"
+                      - columnheader "Skill 300" [ref=f4e528]:
+                        - generic [ref=f4e529]: Skill
+                        - text: "300"
+                  - rowgroup [ref=f4e530]:
+                    - row [ref=f4e531]:
+                      - rowheader [ref=f4e532]:
+                        - link "Alchemy" [ref=f4e533] [cursor=pointer]:
+                          - /url: /professions/alchemy
+                      - cell [ref=f4e534]:
+                        - 'button "Journeyman Alchemist: Reach 150 skill in Alchemy for the first time." [ref=f4e535] [cursor=pointer]'
+                      - cell [ref=f4e539]:
+                        - 'button "Expert Alchemist: Reach 225 skill in Alchemy for the first time." [ref=f4e540] [cursor=pointer]'
+                      - cell [ref=f4e544]:
+                        - 'button "Artisan Alchemist: Reach 300 skill in Alchemy for the first time." [ref=f4e545] [cursor=pointer]'
+                    - row [ref=f4e549]:
+                      - rowheader [ref=f4e550]:
+                        - link "Blacksmithing" [ref=f4e551] [cursor=pointer]:
+                          - /url: /professions/blacksmithing
+                      - cell [ref=f4e552]:
+                        - 'button "Journeyman Blacksmith: Reach 150 skill in Blacksmithing for the first time." [ref=f4e553] [cursor=pointer]'
+                      - cell [ref=f4e557]:
+                        - 'button "Expert Blacksmith: Reach 225 skill in Blacksmithing for the first time." [ref=f4e558] [cursor=pointer]'
+                      - cell [ref=f4e562]:
+                        - 'button "Artisan Blacksmith: Reach 300 skill in Blacksmithing for the first time." [ref=f4e563] [cursor=pointer]'
+                    - row [ref=f4e567]:
+                      - rowheader [ref=f4e568]:
+                        - link "Enchanting" [ref=f4e569] [cursor=pointer]:
+                          - /url: /professions/enchanting
+                      - cell [ref=f4e570]:
+                        - 'button "Journeyman Enchanter: Reach 150 skill in Enchanting for the first time." [ref=f4e571] [cursor=pointer]'
+                      - cell [ref=f4e575]:
+                        - 'button "Expert Enchanter: Reach 225 skill in Enchanting for the first time." [ref=f4e576] [cursor=pointer]'
+                      - cell [ref=f4e580]:
+                        - 'button "Artisan Enchanter: Reach 300 skill in Enchanting for the first time." [ref=f4e581] [cursor=pointer]'
+                    - row [ref=f4e585]:
+                      - rowheader [ref=f4e586]:
+                        - link "Engineering" [ref=f4e587] [cursor=pointer]:
+                          - /url: /professions/engineering
+                      - cell [ref=f4e588]:
+                        - 'button "Journeyman Engineer: Reach 150 skill in Engineering for the first time." [ref=f4e589] [cursor=pointer]'
+                      - cell [ref=f4e593]:
+                        - 'button "Expert Engineer: Reach 225 skill in Engineering for the first time." [ref=f4e594] [cursor=pointer]'
+                      - cell [ref=f4e598]:
+                        - 'button "Artisan Engineer: Reach 300 skill in Engineering for the first time." [ref=f4e599] [cursor=pointer]'
+                    - row [ref=f4e603]:
+                      - rowheader [ref=f4e604]:
+                        - link "Leatherworking" [ref=f4e605] [cursor=pointer]:
+                          - /url: /professions/leatherworking
+                      - cell [ref=f4e606]:
+                        - 'button "Journeyman Leatherworker: Reach 150 skill in Leatherworking for the first time." [ref=f4e607] [cursor=pointer]'
+                      - cell [ref=f4e611]:
+                        - 'button "Expert Leatherworker: Reach 225 skill in Leatherworking for the first time." [ref=f4e612] [cursor=pointer]'
+                      - cell [ref=f4e616]:
+                        - 'button "Artisan Leatherworker: Reach 300 skill in Leatherworking for the first time." [ref=f4e617] [cursor=pointer]'
+                    - row [ref=f4e621]:
+                      - rowheader [ref=f4e622]:
+                        - link "Tailoring" [ref=f4e623] [cursor=pointer]:
+                          - /url: /professions/tailoring
+                      - cell [ref=f4e624]:
+                        - 'button "Journeyman Tailor: Reach 150 skill in Tailoring for the first time." [ref=f4e625] [cursor=pointer]'
+                      - cell [ref=f4e629]:
+                        - 'button "Expert Tailor: Reach 225 skill in Tailoring for the first time." [ref=f4e630] [cursor=pointer]'
+                      - cell [ref=f4e634]:
+                        - 'button "Artisan Tailor: Reach 300 skill in Tailoring for the first time." [ref=f4e635] [cursor=pointer]'
+                - paragraph [ref=f4e639]: Gathering and secondary professions have no challenge.
+              - generic [ref=f4e640]:
+                - generic [ref=f4e641]:
+                  - heading "Raids" [level=3] [ref=f4e642]
+                  - generic [ref=f4e643]: 0 / 3
+                - list [ref=f4e644]:
+                  - listitem [ref=f4e645]:
+                    - generic [ref=f4e646]:
+                      - strong [ref=f4e647]: Conqueror of the Wilds
+                      - generic [ref=f4e648]: Defeat the following encounters in Hyjal Summit.
+                      - group [ref=f4e649]:
+                        - generic "13 encounters" [ref=f4e650] [cursor=pointer]
+                    - 'button "Conqueror of the Wilds: Defeat the following encounters in Hyjal Summit." [ref=f4e651] [cursor=pointer]'
+                  - listitem [ref=f4e655]:
+                    - generic [ref=f4e656]:
+                      - strong [ref=f4e657]: Conqueror of the Deeps
+                      - generic [ref=f4e658]: Defeat the following encounters in the Barrow Deeps.
+                      - group [ref=f4e659]:
+                        - generic "8 encounters" [ref=f4e660] [cursor=pointer]
+                    - 'button "Conqueror of the Deeps: Defeat the following encounters in the Barrow Deeps." [ref=f4e661] [cursor=pointer]'
+                  - listitem [ref=f4e665]:
+                    - generic [ref=f4e666]:
+                      - strong [ref=f4e667]: Conqueror of the Lair
+                      - generic [ref=f4e668]: Defeat Onyxia.
+                    - 'button "Conqueror of the Lair: Defeat Onyxia." [ref=f4e669] [cursor=pointer]'
+                    - status
+              - generic [ref=f4e673]:
+                - generic [ref=f4e674]:
+                  - heading "Player vs. Player" [level=3] [ref=f4e675]
+                  - generic [ref=f4e676]: 0 / 12
+                - generic [ref=f4e677]:
+                  - heading "Ranks" [level=4] [ref=f4e678]
+                  - generic [ref=f4e679]:
+                    - 'button "Rank 3: Reach the rank of Sergeant in the Player vs. Player Honor System." [ref=f4e681] [cursor=pointer]':
+                      - generic [ref=f4e685]: Rank 3
+                    - 'button "Rank 7: Reach the rank of Knight-Lieutenant or Blood Guard in the Player vs. Player Honor System." [ref=f4e687] [cursor=pointer]':
+                      - generic [ref=f4e691]: Rank 7
+                    - 'button "Rank 10: Reach the rank of Lieutenant-Commander or Champion in the Player vs. Player Honor System." [ref=f4e693] [cursor=pointer]':
+                      - generic [ref=f4e697]: Rank 10
+                    - 'button "Rank 13: Reach the rank of Field Marshal or Warlord in the Player vs. Player Honor System." [ref=f4e699] [cursor=pointer]':
+                      - generic [ref=f4e703]: Rank 13
+                    - 'button "Rank 14: Reach the rank of Grand Marshal or High Warlord in the Player vs. Player Honor System." [ref=f4e705] [cursor=pointer]':
+                      - generic [ref=f4e709]: Rank 14
+                - generic [ref=f4e710]:
+                  - heading "Reputations" [level=4] [ref=f4e711]
+                  - list [ref=f4e712]:
+                    - listitem [ref=f4e713]:
+                      - generic [ref=f4e714]:
+                        - strong [ref=f4e715]: Master of Alterac Valley
+                        - generic [ref=f4e716]: Reach exalted reputation with the Frostwolf Clan or Stormpike Guard.
+                      - 'button "Master of Alterac Valley: Reach exalted reputation with the Frostwolf Clan or Stormpike Guard." [ref=f4e717] [cursor=pointer]'
+                    - listitem [ref=f4e721]:
+                      - generic [ref=f4e722]:
+                        - strong [ref=f4e723]: Master of Arathi Basin
+                        - generic [ref=f4e724]: Reach exalted reputation with the Defilers or League of Arathor.
+                      - 'button "Master of Arathi Basin: Reach exalted reputation with the Defilers or League of Arathor." [ref=f4e725] [cursor=pointer]'
+                    - listitem [ref=f4e729]:
+                      - generic [ref=f4e730]:
+                        - strong [ref=f4e731]: Master of Warsong Gulch
+                        - generic [ref=f4e732]: Reach exalted reputation with the Warsong Outriders or Silverwing Sentinels.
+                      - 'button "Master of Warsong Gulch: Reach exalted reputation with the Warsong Outriders or Silverwing Sentinels." [ref=f4e733] [cursor=pointer]'
+                    - listitem [ref=f4e737]:
+                      - generic [ref=f4e738]:
+                        - strong [ref=f4e739]: Master of Darkspear Islands
+                        - generic [ref=f4e740]: Reach exalted reputation with the Darkspear Raiders or Theramore Expeditionary Force.
+                      - 'button "Master of Darkspear Islands: Reach exalted reputation with the Darkspear Raiders or Theramore Expeditionary Force." [ref=f4e741] [cursor=pointer]'
+                - generic [ref=f4e745]:
+                  - heading "Season Journey" [level=4] [ref=f4e746]
+                  - generic [ref=f4e747]:
+                    - 'button "Field of Honor: Week 4: Complete Week 4 of the Field of Honor Journey." [ref=f4e749] [cursor=pointer]':
+                      - generic [ref=f4e753]: Week 4
+                    - 'button "Field of Honor: Week 7: Complete Week 7 of the Field of Honor Journey." [ref=f4e755] [cursor=pointer]':
+                      - generic [ref=f4e759]: Week 7
+                    - 'button "Field of Honor: Week 10: Complete Week 10 of the Field of Honor Journey." [ref=f4e761] [cursor=pointer]':
+                      - generic [ref=f4e765]: Week 10
+                - paragraph [ref=f4e766]:
+                  - link "How PvP ranks work" [ref=f4e767] [cursor=pointer]:
+                    - /url: /pvp-ranks
+          - paragraph [ref=f4e768]: Your ticks are stored in this browser only.
+        - region [ref=f4e769]:
+          - generic [ref=f4e770]:
+            - heading "Questions" [level=2] [ref=f4e771]
+            - group [ref=f4e772]:
+              - generic "Will beta testers get Legacy Points for free?" [ref=f4e773] [cursor=pointer]
+            - group [ref=f4e774]:
+              - generic "How do I earn Legacy points?" [ref=f4e775] [cursor=pointer]
+            - group [ref=f4e776]:
+              - generic "Are Legacy Points account-wide?" [ref=f4e777] [cursor=pointer]
+            - group [ref=f4e778]:
+              - generic "Does Hardcore share Legacy Points?" [ref=f4e779] [cursor=pointer]
+            - group [ref=f4e780]:
+              - generic "Can I eventually unlock everything?" [ref=f4e781] [cursor=pointer]
+            - group [ref=f4e782]:
+              - generic "Do I need several characters?" [ref=f4e783] [cursor=pointer]
+            - group [ref=f4e784]:
+              - generic "Does Talented give more than 51 class talent points?" [ref=f4e785] [cursor=pointer]
+            - group [ref=f4e786]:
+              - generic "Can I reset my choices?" [ref=f4e787] [cursor=pointer]
+          - generic [ref=f4e788]:
+            - heading "Not known yet" [level=2] [ref=f4e789]
+            - generic [ref=f4e790]:
+              - generic [ref=f4e791]:
+                - term [ref=f4e792]: Later caps
+                - definition [ref=f4e793]: 16 at launch. The client calls it a seasonal cap, and Blizzard says caps will grow in later patches, with no dates.
+              - generic [ref=f4e794]:
+                - term [ref=f4e795]: Rank cost
+                - definition [ref=f4e796]: The planner counts one point per rank, as Wowhead’s calculator does. The client data does not say what a rank costs.
+              - generic [ref=f4e797]:
+                - term [ref=f4e798]: The 6 “?” perks
+                - definition [ref=f4e799]: The client has them, with no name and no effect, marked to be added in a future update.
+              - generic [ref=f4e800]:
+                - term [ref=f4e801]: Talented
+                - definition [ref=f4e802]: In build 1.60.1.70338 it is a node with five one-rank choices, level 9 down to 5. Wowhead’s export shows five ranks, and the planner keeps that reading until the game shows which it is.
+        - paragraph [ref=f4e803]:
+          - text: Perks, rank values, icons, unlock rules, challenges, their criteria and the rewards come from the beta client (build 1.60.1.70338). The layout of the trees comes from Wowhead’s Legacy calculator, checked against that build. The cap and account rules were read from Blizzard’s Deep Dive panel and recap.
+          - generic [ref=f4e804]:
+            - link "WoW Forever beta client, build 1.60.1.70338 ↗" [ref=f4e805] [cursor=pointer]:
+              - /url: https://wago.tools/db2/TraitCurrencySource?build=1.60.1.70338
+            - link "Wowhead Legacy calculator ↗" [ref=f4e806] [cursor=pointer]:
+              - /url: https://www.wowhead.com/forever/legacy-calculator
+            - link "Deep Dive panel, Legacy section (Blizzard VOD, 13 Sep) ↗" [ref=f4e807] [cursor=pointer]:
+              - /url: https://www.twitch.tv/videos/2873254366?t=0h45m17s
+            - link "Blizzard's Deep Dive panel recap ↗" [ref=f4e808] [cursor=pointer]:
+              - /url: https://news.blizzard.com/en-us/article/24303313/world-of-warcraft-forever-deep-dive-panel-recap
+            - link "Blizzard Watch first look (Dan O'Halloran) ↗" [ref=f4e809] [cursor=pointer]:
+              - /url: https://blizzardwatch.com/2026/09/12/first-look-wow-forevers-legacy-system/
+            - link "DesMephisto demo captures (30 photos) ↗" [ref=f4e810] [cursor=pointer]:
+              - /url: https://imgur.com/a/a492iPx
+            - link "Stream capture, seasonal cap of 16 ↗" [ref=f4e811] [cursor=pointer]:
+              - /url: /evidence/2026-09-13/legacy/stream-seasonal-cap-16.jpg
+            - link "Stream capture, seasonal cap of 10 ↗" [ref=f4e812] [cursor=pointer]:
+              - /url: /evidence/2026-09-13/legacy/stream-seasonal-cap-10.jpg
+            - link "Community capture, 13 / 66 points at level 38 ↗" [ref=f4e813] [cursor=pointer]:
+              - /url: https://www.reddit.com/r/classicwow/comments/1weptr8/forever_legacy_tree_talents/
+            - 'link "Wowhead: Legacy System Explained ↗" [ref=f4e814] [cursor=pointer]':
+              - /url: https://www.wowhead.com/forever/news/warcraft-forever-legacy-system-explained-382842
+      - region "Every Legacy challenge in WoW Forever" [ref=f4e815]:
+        - group [ref=f4e816]:
+          - generic "Every Legacy challenge in WoW Forever65 entries, as text" [ref=f4e817] [cursor=pointer]
+  - contentinfo [ref=f4e818]:
+    - region "Support ForeverChanges" [ref=f4e819]:
+      - generic [ref=f4e820]:
+        - paragraph [ref=f4e821]:
+          - strong [ref=f4e822]: ForeverChanges has no ads
+          - generic [ref=f4e823]: I make it on my own, and I want it to stay free. If it's useful to you, a donation helps pay for hosting and the time it takes to keep it up to date.
+          - button "Tell me what to improve" [ref=f4e824] [cursor=pointer]
+        - generic [ref=f4e825]:
+          - button "Poke the goblin" [ref=f4e826] [cursor=pointer]:
+            - generic [aria-hidden]: PPC for the little content creator!
+          - link "Support the site" [ref=f4e827] [cursor=pointer]:
+            - /url: https://ko-fi.com/bartolomew
+    - navigation "Site pages" [ref=f4e833]:
+      - generic [ref=f4e834]:
+        - heading "Classes" [level=2] [ref=f4e835]
+        - list [ref=f4e836]:
+          - listitem [ref=f4e837]:
+            - link "Warrior" [ref=f4e838] [cursor=pointer]:
+              - /url: /class/warrior
+          - listitem [ref=f4e839]:
+            - link "Paladin" [ref=f4e840] [cursor=pointer]:
+              - /url: /class/paladin
+          - listitem [ref=f4e841]:
+            - link "Hunter" [ref=f4e842] [cursor=pointer]:
+              - /url: /class/hunter
+          - listitem [ref=f4e843]:
+            - link "Rogue" [ref=f4e844] [cursor=pointer]:
+              - /url: /class/rogue
+          - listitem [ref=f4e845]:
+            - link "Priest" [ref=f4e846] [cursor=pointer]:
+              - /url: /class/priest
+          - listitem [ref=f4e847]:
+            - link "Shaman" [ref=f4e848] [cursor=pointer]:
+              - /url: /class/shaman
+          - listitem [ref=f4e849]:
+            - link "Mage" [ref=f4e850] [cursor=pointer]:
+              - /url: /class/mage
+          - listitem [ref=f4e851]:
+            - link "Warlock" [ref=f4e852] [cursor=pointer]:
+              - /url: /class/warlock
+          - listitem [ref=f4e853]:
+            - link "Druid" [ref=f4e854] [cursor=pointer]:
+              - /url: /class/druid
+      - generic [ref=f4e855]:
+        - heading "Character" [level=2] [ref=f4e856]
+        - list [ref=f4e857]:
+          - listitem [ref=f4e858]:
+            - link "Talent calculator" [ref=f4e859] [cursor=pointer]:
+              - /url: /talents
+          - listitem [ref=f4e860]:
+            - link "Spellbook" [ref=f4e861] [cursor=pointer]:
+              - /url: /spellbook/warrior
+          - listitem [ref=f4e862]:
+            - link "Legacy perks" [ref=f4e863] [cursor=pointer]:
+              - /url: /legacy-perks
+          - listitem [ref=f4e864]:
+            - link "Races" [ref=f4e865] [cursor=pointer]:
+              - /url: /racials
+          - listitem [ref=f4e866]:
+            - link "Professions" [ref=f4e867] [cursor=pointer]:
+              - /url: /professions
+          - listitem [ref=f4e868]:
+            - link "Downrank calculator" [ref=f4e869] [cursor=pointer]:
+              - /url: /downrank-calculator
+          - listitem [ref=f4e870]:
+            - link "Tier list maker" [ref=f4e871] [cursor=pointer]:
+              - /url: /tier-list
+      - generic [ref=f4e872]:
+        - heading "Gear" [level=2] [ref=f4e873]
+        - list [ref=f4e874]:
+          - listitem [ref=f4e875]:
+            - link "BiS list" [ref=f4e876] [cursor=pointer]:
+              - /url: /bis
+          - listitem [ref=f4e877]:
+            - link "Items" [ref=f4e878] [cursor=pointer]:
+              - /url: /items
+          - listitem [ref=f4e879]:
+            - link "Hidden items" [ref=f4e880] [cursor=pointer]:
+              - /url: /hidden-items
+          - listitem [ref=f4e881]:
+            - link "Transmog" [ref=f4e882] [cursor=pointer]:
+              - /url: /transmog
+      - generic [ref=f4e883]:
+        - heading "World" [level=2] [ref=f4e884]
+        - list [ref=f4e885]:
+          - listitem [ref=f4e886]:
+            - link "World map" [ref=f4e887] [cursor=pointer]:
+              - /url: /map
+          - listitem [ref=f4e888]:
+            - link "Dungeons" [ref=f4e889] [cursor=pointer]:
+              - /url: /dungeons
+          - listitem [ref=f4e890]:
+            - link "Quests" [ref=f4e891] [cursor=pointer]:
+              - /url: /quests
+          - listitem [ref=f4e892]:
+            - link "Dungeon quests" [ref=f4e893] [cursor=pointer]:
+              - /url: /dungeon-quests
+          - listitem [ref=f4e894]:
+            - link "Rare spawns" [ref=f4e895] [cursor=pointer]:
+              - /url: /rares
+          - listitem [ref=f4e896]:
+            - link "Library books" [ref=f4e897] [cursor=pointer]:
+              - /url: /library-books
+      - generic [ref=f4e898]:
+        - heading "Guides" [level=2] [ref=f4e899]
+        - list [ref=f4e900]:
+          - listitem [ref=f4e901]:
+            - link "Tanning Rack" [ref=f4e902] [cursor=pointer]:
+              - /url: /tanning-rack
+          - listitem [ref=f4e903]:
+            - link "PvP ranks" [ref=f4e904] [cursor=pointer]:
+              - /url: /pvp-ranks
+          - listitem [ref=f4e905]:
+            - link "Downranking" [ref=f4e906] [cursor=pointer]:
+              - /url: /downranking
+          - listitem [ref=f4e907]:
+            - link "Booty Bay Bruiser's Buckshot" [ref=f4e908] [cursor=pointer]:
+              - /url: /booty-bay-bruisers-buckshot
+          - listitem [ref=f4e909]:
+            - link "Scarlet Banner" [ref=f4e910] [cursor=pointer]:
+              - /url: /scarlet-banner
+          - listitem [ref=f4e911]:
+            - link "$100,000 duel tournament" [ref=f4e912] [cursor=pointer]:
+              - /url: /duel-tournament
+          - listitem [ref=f4e913]:
+            - link "Level 30" [ref=f4e914] [cursor=pointer]:
+              - /url: /level-30
+          - listitem [ref=f4e915]:
+            - link "Druid Cat Form quest" [ref=f4e916] [cursor=pointer]:
+              - /url: /druid-cat-form
+          - listitem [ref=f4e917]:
+            - link "Addons" [ref=f4e918] [cursor=pointer]:
+              - /url: /addons
+          - listitem [ref=f4e919]:
+            - link "Savory Whimsyfin Delight" [ref=f4e920] [cursor=pointer]:
+              - /url: /savory-whimsyfin-delight
+          - listitem [ref=f4e921]:
+            - link "Druid snake form" [ref=f4e922] [cursor=pointer]:
+              - /url: /druid-snake-form
+          - listitem [ref=f4e923]:
+            - link "Battle mage" [ref=f4e924] [cursor=pointer]:
+              - /url: /battle-mage
+          - listitem [ref=f4e925]:
+            - link "Cozy Sleeping Bag" [ref=f4e926] [cursor=pointer]:
+              - /url: /cozy-sleeping-bag
+          - listitem [ref=f4e927]:
+            - link "Merchant's Favor" [ref=f4e928] [cursor=pointer]:
+              - /url: /merchants-favor
+          - listitem [ref=f4e929]:
+            - link "Hunter pets" [ref=f4e930] [cursor=pointer]:
+              - /url: /hunter-pets
+      - generic [ref=f4e931]:
+        - heading "Beta" [level=2] [ref=f4e932]
+        - list [ref=f4e933]:
+          - listitem [ref=f4e934]:
+            - link "Patch notes" [ref=f4e935] [cursor=pointer]:
+              - /url: /patch-notes
+          - listitem [ref=f4e936]:
+            - link "Changes vs Classic" [ref=f4e937] [cursor=pointer]:
+              - /url: /changes
+          - listitem [ref=f4e938]:
+            - link "Beta and launch dates" [ref=f4e939] [cursor=pointer]:
+              - /url: /beta
+          - listitem [ref=f4e940]:
+            - link "Server status" [ref=f4e941] [cursor=pointer]:
+              - /url: /server-status
+      - generic [ref=f4e942]:
+        - heading "Language" [level=2] [ref=f4e943]
+        - list [ref=f4e948]:
+          - listitem [ref=f4e949]:
+            - generic [ref=f4e950]: English
+          - listitem [ref=f4e953]:
+            - link "Français" [ref=f4e954] [cursor=pointer]:
+              - /url: /fr/legacy-perks
+          - listitem [ref=f4e955]:
+            - link "Deutsch" [ref=f4e956] [cursor=pointer]:
+              - /url: /de/legacy-perks
+          - listitem [ref=f4e957]:
+            - link "繁體中文" [ref=f4e958] [cursor=pointer]:
+              - /url: /zh-tw/legacy-perks
+          - listitem [ref=f4e959]:
+            - link "简体中文" [ref=f4e960] [cursor=pointer]:
+              - /url: /zh-cn/legacy-perks
+          - listitem [ref=f4e961]:
+            - link "Русский" [ref=f4e962] [cursor=pointer]:
+              - /url: /ru/legacy-perks
+    - generic [ref=f4e963]:
+      - paragraph [ref=f4e964]: ForeverChanges is an unofficial fan site, not affiliated with or endorsed by Blizzard Entertainment. World of Warcraft and Warcraft are trademarks or registered trademarks of Blizzard Entertainment, Inc. in the U.S. and/or other countries. Game content and images © Blizzard Entertainment, Inc.
+      - navigation "Legal" [ref=f4e966]:
+        - link "About the data" [ref=f4e967] [cursor=pointer]:
+          - /url: /about
+        - link "Privacy" [ref=f4e968] [cursor=pointer]:
+          - /url: /privacy
+        - link "Terms" [ref=f4e969] [cursor=pointer]:
+          - /url: /terms
+        - link "Legal notice" [ref=f4e970] [cursor=pointer]:
+          - /url: /legal

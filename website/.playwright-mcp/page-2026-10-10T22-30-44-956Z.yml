@@ -1,0 +1,558 @@
+- generic [active] [ref=f12e1]:
+  - text: ": : :"
+  - main [ref=f12e2]:
+    - generic [ref=f12e3]:
+      - generic [ref=f12e4]:
+        - generic [ref=f12e5]:
+          - generic [ref=f12e6]:
+            - button "Pull the murloc camp" [ref=f12e7] [cursor=pointer]
+            - generic [ref=f12e8]:
+              - generic [ref=f12e9]: Online now
+              - generic [ref=f12e10]: 2,340
+              - generic [ref=f12e11]: murlocs
+          - link "ForeverChanges home" [ref=f12e12] [cursor=pointer]:
+            - /url: /
+            - img "ForeverChanges" [ref=f12e13]
+          - link [ref=f12e15] [cursor=pointer]:
+            - /url: /patch-notes
+            - generic [ref=f12e16]:
+              - text: Updated
+              - generic [aria-hidden] [ref=f12e18]: ·
+            - text: Beta build 1.60.1.70338
+          - link "Launch in 25 days 0 hours 29 minutes" [ref=f12e19] [cursor=pointer]:
+            - /url: /beta
+            - generic [ref=f12e20]: Launch in
+            - generic [aria-hidden] [ref=f12e21]:
+              - generic [ref=f12e22]:
+                - generic [ref=f12e23]: "25"
+                - generic [ref=f12e24]: days
+              - generic [ref=f12e25]:
+                - text: ":"
+                - generic [ref=f12e26]: "00"
+                - generic [ref=f12e27]: hrs
+              - generic [ref=f12e28]:
+                - text: ":"
+                - generic [ref=f12e29]: "29"
+                - generic [ref=f12e30]: min
+              - generic [ref=f12e31]:
+                - text: ":"
+                - generic [ref=f12e32]: "16"
+                - generic [ref=f12e33]: sec
+        - generic [ref=f12e34]:
+          - navigation "Main" [ref=f12e35]:
+            - link "Changes" [ref=f12e36] [cursor=pointer]:
+              - /url: /changes
+            - link "Talents , updated" [ref=f12e37] [cursor=pointer]:
+              - /url: /talents/warrior
+              - text: Talents
+              - generic:
+                - generic [aria-hidden]: Updated on October 8
+                - generic [ref=f12e39]: ", updated"
+            - link "Spellbook , updated" [ref=f12e40] [cursor=pointer]:
+              - /url: /spellbook/warrior
+              - text: Spellbook
+              - generic:
+                - generic [aria-hidden]: Updated on October 8
+                - generic [ref=f12e42]: ", updated"
+            - link "Legacy" [ref=f12e43] [cursor=pointer]:
+              - /url: /legacy-perks
+            - link "Professions" [ref=f12e44] [cursor=pointer]:
+              - /url: /professions
+            - link "Races" [ref=f12e45] [cursor=pointer]:
+              - /url: /racials
+            - link "Dungeons" [ref=f12e46] [cursor=pointer]:
+              - /url: /dungeons
+            - link "Items , updated" [ref=f12e47] [cursor=pointer]:
+              - /url: /items
+              - text: Items
+              - generic:
+                - generic [aria-hidden]: 331 items changed on October 8
+                - generic [ref=f12e49]: ", updated"
+            - link "Quests" [ref=f12e50] [cursor=pointer]:
+              - /url: /quests
+            - link "BiS list , updated" [ref=f12e51] [cursor=pointer]:
+              - /url: /bis
+              - text: BiS list
+              - generic:
+                - generic [aria-hidden]: Up to date with the latest build
+                - generic [ref=f12e53]: ", updated"
+            - link "World map" [ref=f12e54] [cursor=pointer]:
+              - /url: /map
+            - link "Guides" [ref=f12e55] [cursor=pointer]:
+              - /url: /guides
+            - link "Patch notes" [ref=f12e56] [cursor=pointer]:
+              - /url: /patch-notes
+          - button "Search" [ref=f12e58] [cursor=pointer]:
+            - generic [aria-hidden]: Search /
+      - generic [ref=f12e61]:
+        - navigation "Alliance races" [ref=f12e62]:
+          - generic [ref=f12e63]: Alliance
+          - button "Human" [pressed] [ref=f12e65] [cursor=pointer]
+          - button "Dwarf" [ref=f12e67] [cursor=pointer]
+          - button "Night Elf" [ref=f12e69] [cursor=pointer]
+          - button "Gnome" [ref=f12e71] [cursor=pointer]
+          - button "Skyborne" [ref=f12e73] [cursor=pointer]
+        - generic [ref=f12e75]:
+          - heading "Races and racials in WoW Forever" [level=1] [ref=f12e76]
+          - paragraph [ref=f12e77]: Human
+          - group "Human available classes" [ref=f12e78]:
+            - button "Warrior" [ref=f12e79] [cursor=pointer]
+            - button "New Hunter" [ref=f12e82] [cursor=pointer]:
+              - generic [ref=f12e83]: New
+              - generic [ref=f12e85]: Hunter
+            - button "Mage" [ref=f12e86] [cursor=pointer]
+            - button "Rogue" [ref=f12e89] [cursor=pointer]
+            - button "Priest" [ref=f12e92] [cursor=pointer]
+            - button "Warlock" [ref=f12e95] [cursor=pointer]
+            - button "Paladin" [ref=f12e98] [cursor=pointer]
+            - button "Druid" [ref=f12e101] [cursor=pointer]
+            - button "Shaman" [ref=f12e104] [cursor=pointer]
+          - paragraph [ref=f12e107]: Pick a class to see which races can play it.
+        - navigation "Horde races" [ref=f12e108]:
+          - generic [ref=f12e109]: Horde
+          - button "Orc" [ref=f12e111] [cursor=pointer]
+          - button "Undead" [ref=f12e113] [cursor=pointer]
+          - button "Tauren" [ref=f12e115] [cursor=pointer]
+          - button "Troll" [ref=f12e117] [cursor=pointer]
+          - button "Skyborne" [ref=f12e119] [cursor=pointer]
+      - generic [ref=f12e121]:
+        - region "Human racials" [ref=f12e122]:
+          - heading "Human racials" [level=2] [ref=f12e124]
+          - generic [ref=f12e125]:
+            - button "Will to Survive Instantly removes all Stun effects. New" [expanded] [ref=f12e126] [cursor=pointer]:
+              - generic [ref=f12e127]:
+                - strong [ref=f12e128]: Will to Survive
+                - generic [ref=f12e129]: Instantly removes all Stun effects.
+              - generic [ref=f12e130]: New
+              - generic [aria-hidden] [ref=f12e132]: ›
+            - button "Perception Dramatically increases stealth detection for 20 sec. Unchanged" [ref=f12e133] [cursor=pointer]:
+              - generic [ref=f12e134]:
+                - strong [ref=f12e135]: Perception
+                - generic [ref=f12e136]: Dramatically increases stealth detection for 20 sec.
+              - generic [ref=f12e137]: Unchanged
+              - generic [aria-hidden] [ref=f12e139]: ›
+            - button "Sword Specialization Increases your critical strike chance with all spells and attacks by 2% while you have a sword or two-handed sword equipped. Changed" [ref=f12e140] [cursor=pointer]:
+              - generic [ref=f12e141]:
+                - strong [ref=f12e142]: Sword Specialization
+                - generic [ref=f12e143]: Increases your critical strike chance with all spells and attacks by 2% while you have a sword or two-handed sword equipped.
+              - generic [ref=f12e144]: Changed
+              - generic [aria-hidden] [ref=f12e146]: ›
+            - button "The Human Spirit Spirit increased by 5%. Unchanged" [ref=f12e147] [cursor=pointer]:
+              - generic [ref=f12e148]:
+                - strong [ref=f12e149]: The Human Spirit
+                - generic [ref=f12e150]: Spirit increased by 5%.
+              - generic [ref=f12e151]: Unchanged
+              - generic [aria-hidden] [ref=f12e153]: ›
+          - region "Human removed racials and priest spells" [ref=f12e154]:
+            - generic [ref=f12e155]:
+              - heading "Removed racials" [level=3] [ref=f12e156]
+              - generic [ref=f12e157]:
+                - button "Diplomacy Removed in Forever" [ref=f12e158] [cursor=pointer]:
+                  - generic [ref=f12e160]:
+                    - strong [ref=f12e161]: Diplomacy
+                    - generic [ref=f12e162]: Removed in Forever
+                - button "Mace Specialization Removed in Forever" [ref=f12e163] [cursor=pointer]:
+                  - generic [ref=f12e165]:
+                    - strong [ref=f12e166]: Mace Specialization
+                    - generic [ref=f12e167]: Removed in Forever
+            - generic [ref=f12e168]:
+              - heading "Priest spells" [level=3] [ref=f12e169]
+              - generic [ref=f12e170]:
+                - link "Divine Grace Level 10 New" [ref=f12e171] [cursor=pointer]:
+                  - /url: /spellbook/priest#s=priest-divine-grace
+                  - generic [ref=f12e173]:
+                    - strong [ref=f12e174]: Divine Grace
+                    - generic [ref=f12e175]:
+                      - text: Level 10
+                      - generic [ref=f12e176]: New
+                - link "Feedback Level 20 Changed" [ref=f12e177] [cursor=pointer]:
+                  - /url: /spellbook/priest#s=priest-feedback
+                  - generic [ref=f12e179]:
+                    - strong [ref=f12e180]: Feedback
+                    - generic [ref=f12e181]:
+                      - text: Level 20
+                      - generic [ref=f12e182]: Changed
+                - link "Desperate Prayer Dwarf only now" [ref=f12e183] [cursor=pointer]:
+                  - /url: /spellbook/priest#s=priest-desperate-prayer
+                  - generic [ref=f12e185]:
+                    - strong [ref=f12e186]: Desperate Prayer
+                    - generic [ref=f12e187]: Dwarf only now
+          - group [ref=f12e188]:
+            - generic "Sources" [ref=f12e189] [cursor=pointer]
+        - region "Will to Survive comparison" [ref=f12e190]:
+          - generic [ref=f12e192]:
+            - heading "Will to Survive" [level=2] [ref=f12e193]
+            - paragraph [ref=f12e194]:
+              - text: Human racial ·
+              - generic [ref=f12e195]: New
+          - generic [ref=f12e196]:
+            - generic [ref=f12e197]:
+              - heading "Classic" [level=3] [ref=f12e198]
+              - paragraph [ref=f12e199]:
+                - emphasis [ref=f12e200]: Not a Human racial in Classic.
+            - generic [ref=f12e201]:
+              - heading "Forever" [level=3] [ref=f12e202]
+              - paragraph [ref=f12e203]: Instant, 3 min cooldown
+              - paragraph [ref=f12e204]: Instantly removes all Stun effects.
+          - group [ref=f12e205]:
+            - generic "Details" [ref=f12e206] [cursor=pointer]
+      - generic [ref=f12e207]:
+        - region [ref=f12e208]:
+          - heading "Race and class combinations" [level=2] [ref=f12e209]
+          - paragraph [ref=f12e210]: New marks a combination unavailable in Classic.
+          - region "All race and class combinations, scroll horizontally" [ref=f12e211]:
+            - table [ref=f12e212]:
+              - caption [ref=f12e213]: Available classes in Forever
+              - rowgroup [ref=f12e214]:
+                - row [ref=f12e215]:
+                  - columnheader "Race" [ref=f12e216]
+                  - columnheader "Warrior" [ref=f12e217]
+                  - columnheader "Paladin" [ref=f12e219]
+                  - columnheader "Hunter" [ref=f12e221]
+                  - columnheader "Rogue" [ref=f12e223]
+                  - columnheader "Priest" [ref=f12e225]
+                  - columnheader "Shaman" [ref=f12e227]
+                  - columnheader "Mage" [ref=f12e229]
+                  - columnheader "Warlock" [ref=f12e231]
+                  - columnheader "Druid" [ref=f12e233]
+              - rowgroup [ref=f12e235]:
+                - row [ref=f12e236]:
+                  - rowheader "Alliance" [ref=f12e237]
+                - row [ref=f12e238]:
+                  - rowheader [ref=f12e239]:
+                    - link "Human" [ref=f12e240] [cursor=pointer]:
+                      - /url: "#race=alliance-human"
+                  - cell "Human Warrior, available" [ref=f12e241]: ✓
+                  - cell "Human Paladin, available" [ref=f12e242]: ✓
+                  - cell "Human Hunter, new in Forever" [ref=f12e243]: New
+                  - cell "Human Rogue, available" [ref=f12e244]: ✓
+                  - cell "Human Priest, available" [ref=f12e245]: ✓
+                  - cell "Human Shaman, unavailable" [ref=f12e246]: —
+                  - cell "Human Mage, available" [ref=f12e247]: ✓
+                  - cell "Human Warlock, available" [ref=f12e248]: ✓
+                  - cell "Human Druid, unavailable" [ref=f12e249]: —
+                - row [ref=f12e250]:
+                  - rowheader [ref=f12e251]:
+                    - link "Dwarf" [ref=f12e252] [cursor=pointer]:
+                      - /url: "#race=alliance-dwarf"
+                  - cell "Dwarf Warrior, available" [ref=f12e253]: ✓
+                  - cell "Dwarf Paladin, available" [ref=f12e254]: ✓
+                  - cell "Dwarf Hunter, available" [ref=f12e255]: ✓
+                  - cell "Dwarf Rogue, available" [ref=f12e256]: ✓
+                  - cell "Dwarf Priest, available" [ref=f12e257]: ✓
+                  - cell "Dwarf Shaman, new in Forever" [ref=f12e258]: New
+                  - cell "Dwarf Mage, unavailable" [ref=f12e259]: —
+                  - cell "Dwarf Warlock, unavailable" [ref=f12e260]: —
+                  - cell "Dwarf Druid, unavailable" [ref=f12e261]: —
+                - row [ref=f12e262]:
+                  - rowheader [ref=f12e263]:
+                    - link "Night Elf" [ref=f12e264] [cursor=pointer]:
+                      - /url: "#race=alliance-night-elf"
+                  - cell "Night Elf Warrior, available" [ref=f12e265]: ✓
+                  - cell "Night Elf Paladin, unavailable" [ref=f12e266]: —
+                  - cell "Night Elf Hunter, available" [ref=f12e267]: ✓
+                  - cell "Night Elf Rogue, available" [ref=f12e268]: ✓
+                  - cell "Night Elf Priest, available" [ref=f12e269]: ✓
+                  - cell "Night Elf Shaman, unavailable" [ref=f12e270]: —
+                  - cell "Night Elf Mage, unavailable" [ref=f12e271]: —
+                  - cell "Night Elf Warlock, unavailable" [ref=f12e272]: —
+                  - cell "Night Elf Druid, available" [ref=f12e273]: ✓
+                - row [ref=f12e274]:
+                  - rowheader [ref=f12e275]:
+                    - link "Gnome" [ref=f12e276] [cursor=pointer]:
+                      - /url: "#race=alliance-gnome"
+                  - cell "Gnome Warrior, available" [ref=f12e277]: ✓
+                  - cell "Gnome Paladin, unavailable" [ref=f12e278]: —
+                  - cell "Gnome Hunter, unavailable" [ref=f12e279]: —
+                  - cell "Gnome Rogue, available" [ref=f12e280]: ✓
+                  - cell "Gnome Priest, new in Forever" [ref=f12e281]: New
+                  - cell "Gnome Shaman, unavailable" [ref=f12e282]: —
+                  - cell "Gnome Mage, available" [ref=f12e283]: ✓
+                  - cell "Gnome Warlock, available" [ref=f12e284]: ✓
+                  - cell "Gnome Druid, unavailable" [ref=f12e285]: —
+                - row [ref=f12e286]:
+                  - rowheader [ref=f12e287]:
+                    - link "Skyborne (High Order)" [ref=f12e288] [cursor=pointer]:
+                      - /url: "#race=alliance-skyborne-high-order"
+                  - cell "Skyborne (High Order) Warrior, new in Forever" [ref=f12e289]: New
+                  - cell "Skyborne (High Order) Paladin, unavailable" [ref=f12e290]: —
+                  - cell "Skyborne (High Order) Hunter, new in Forever" [ref=f12e291]: New
+                  - cell "Skyborne (High Order) Rogue, new in Forever" [ref=f12e292]: New
+                  - cell "Skyborne (High Order) Priest, unavailable" [ref=f12e293]: —
+                  - cell "Skyborne (High Order) Shaman, unavailable" [ref=f12e294]: —
+                  - cell "Skyborne (High Order) Mage, new in Forever" [ref=f12e295]: New
+                  - cell "Skyborne (High Order) Warlock, unavailable" [ref=f12e296]: —
+                  - cell "Skyborne (High Order) Druid, new in Forever" [ref=f12e297]: New
+              - rowgroup [ref=f12e298]:
+                - row [ref=f12e299]:
+                  - rowheader "Horde" [ref=f12e300]
+                - row [ref=f12e301]:
+                  - rowheader [ref=f12e302]:
+                    - link "Orc" [ref=f12e303] [cursor=pointer]:
+                      - /url: "#race=horde-orc"
+                  - cell "Orc Warrior, available" [ref=f12e304]: ✓
+                  - cell "Orc Paladin, unavailable" [ref=f12e305]: —
+                  - cell "Orc Hunter, available" [ref=f12e306]: ✓
+                  - cell "Orc Rogue, available" [ref=f12e307]: ✓
+                  - cell "Orc Priest, unavailable" [ref=f12e308]: —
+                  - cell "Orc Shaman, available" [ref=f12e309]: ✓
+                  - cell "Orc Mage, new in Forever" [ref=f12e310]: New
+                  - cell "Orc Warlock, available" [ref=f12e311]: ✓
+                  - cell "Orc Druid, unavailable" [ref=f12e312]: —
+                - row [ref=f12e313]:
+                  - rowheader [ref=f12e314]:
+                    - link "Undead" [ref=f12e315] [cursor=pointer]:
+                      - /url: "#race=horde-undead"
+                  - cell "Undead Warrior, available" [ref=f12e316]: ✓
+                  - cell "Undead Paladin, new in Forever" [ref=f12e317]: New
+                  - cell "Undead Hunter, unavailable" [ref=f12e318]: —
+                  - cell "Undead Rogue, available" [ref=f12e319]: ✓
+                  - cell "Undead Priest, available" [ref=f12e320]: ✓
+                  - cell "Undead Shaman, unavailable" [ref=f12e321]: —
+                  - cell "Undead Mage, available" [ref=f12e322]: ✓
+                  - cell "Undead Warlock, available" [ref=f12e323]: ✓
+                  - cell "Undead Druid, unavailable" [ref=f12e324]: —
+                - row [ref=f12e325]:
+                  - rowheader [ref=f12e326]:
+                    - link "Tauren" [ref=f12e327] [cursor=pointer]:
+                      - /url: "#race=horde-tauren"
+                  - cell "Tauren Warrior, available" [ref=f12e328]: ✓
+                  - cell "Tauren Paladin, unavailable" [ref=f12e329]: —
+                  - cell "Tauren Hunter, available" [ref=f12e330]: ✓
+                  - cell "Tauren Rogue, unavailable" [ref=f12e331]: —
+                  - cell "Tauren Priest, unavailable" [ref=f12e332]: —
+                  - cell "Tauren Shaman, available" [ref=f12e333]: ✓
+                  - cell "Tauren Mage, unavailable" [ref=f12e334]: —
+                  - cell "Tauren Warlock, unavailable" [ref=f12e335]: —
+                  - cell "Tauren Druid, available" [ref=f12e336]: ✓
+                - row [ref=f12e337]:
+                  - rowheader [ref=f12e338]:
+                    - link "Troll" [ref=f12e339] [cursor=pointer]:
+                      - /url: "#race=horde-troll"
+                  - cell "Troll Warrior, available" [ref=f12e340]: ✓
+                  - cell "Troll Paladin, unavailable" [ref=f12e341]: —
+                  - cell "Troll Hunter, available" [ref=f12e342]: ✓
+                  - cell "Troll Rogue, available" [ref=f12e343]: ✓
+                  - cell "Troll Priest, available" [ref=f12e344]: ✓
+                  - cell "Troll Shaman, available" [ref=f12e345]: ✓
+                  - cell "Troll Mage, available" [ref=f12e346]: ✓
+                  - cell "Troll Warlock, new in Forever" [ref=f12e347]: New
+                  - cell "Troll Druid, unavailable" [ref=f12e348]: —
+                - row [ref=f12e349]:
+                  - rowheader [ref=f12e350]:
+                    - link "Skyborne (Windshaper)" [ref=f12e351] [cursor=pointer]:
+                      - /url: "#race=horde-skyborne-windshaper"
+                  - cell "Skyborne (Windshaper) Warrior, new in Forever" [ref=f12e352]: New
+                  - cell "Skyborne (Windshaper) Paladin, unavailable" [ref=f12e353]: —
+                  - cell "Skyborne (Windshaper) Hunter, new in Forever" [ref=f12e354]: New
+                  - cell "Skyborne (Windshaper) Rogue, new in Forever" [ref=f12e355]: New
+                  - cell "Skyborne (Windshaper) Priest, unavailable" [ref=f12e356]: —
+                  - cell "Skyborne (Windshaper) Shaman, new in Forever" [ref=f12e357]: New
+                  - cell "Skyborne (Windshaper) Mage, unavailable" [ref=f12e358]: —
+                  - cell "Skyborne (Windshaper) Warlock, unavailable" [ref=f12e359]: —
+                  - cell "Skyborne (Windshaper) Druid, new in Forever" [ref=f12e360]: New
+        - group [ref=f12e361]:
+          - generic "Skyborne and new combinations" [ref=f12e362] [cursor=pointer]
+      - region "Every racial in WoW Forever, race by race" [ref=f12e363]:
+        - group [ref=f12e364]:
+          - generic [ref=f12e365] [cursor=pointer]:
+            - heading "Every racial in WoW Forever, race by race" [level=2] [ref=f12e366]
+            - generic [aria-hidden] [ref=f12e367]: Show
+  - contentinfo [ref=f12e368]:
+    - region "Support ForeverChanges" [ref=f12e369]:
+      - generic [ref=f12e370]:
+        - paragraph [ref=f12e371]:
+          - strong [ref=f12e372]: ForeverChanges has no ads
+          - generic [ref=f12e373]: I make it on my own, and I want it to stay free. If it's useful to you, a donation helps pay for hosting and the time it takes to keep it up to date.
+          - button "Tell me what to improve" [ref=f12e374] [cursor=pointer]
+        - generic [ref=f12e375]:
+          - button "Poke the goblin" [ref=f12e376] [cursor=pointer]:
+            - generic [aria-hidden]: PPC for the little content creator!
+          - link "Support the site" [ref=f12e377] [cursor=pointer]:
+            - /url: https://ko-fi.com/bartolomew
+    - navigation "Site pages" [ref=f12e383]:
+      - generic [ref=f12e384]:
+        - heading "Classes" [level=2] [ref=f12e385]
+        - list [ref=f12e386]:
+          - listitem [ref=f12e387]:
+            - link "Warrior" [ref=f12e388] [cursor=pointer]:
+              - /url: /class/warrior
+          - listitem [ref=f12e389]:
+            - link "Paladin" [ref=f12e390] [cursor=pointer]:
+              - /url: /class/paladin
+          - listitem [ref=f12e391]:
+            - link "Hunter" [ref=f12e392] [cursor=pointer]:
+              - /url: /class/hunter
+          - listitem [ref=f12e393]:
+            - link "Rogue" [ref=f12e394] [cursor=pointer]:
+              - /url: /class/rogue
+          - listitem [ref=f12e395]:
+            - link "Priest" [ref=f12e396] [cursor=pointer]:
+              - /url: /class/priest
+          - listitem [ref=f12e397]:
+            - link "Shaman" [ref=f12e398] [cursor=pointer]:
+              - /url: /class/shaman
+          - listitem [ref=f12e399]:
+            - link "Mage" [ref=f12e400] [cursor=pointer]:
+              - /url: /class/mage
+          - listitem [ref=f12e401]:
+            - link "Warlock" [ref=f12e402] [cursor=pointer]:
+              - /url: /class/warlock
+          - listitem [ref=f12e403]:
+            - link "Druid" [ref=f12e404] [cursor=pointer]:
+              - /url: /class/druid
+      - generic [ref=f12e405]:
+        - heading "Character" [level=2] [ref=f12e406]
+        - list [ref=f12e407]:
+          - listitem [ref=f12e408]:
+            - link "Talent calculator" [ref=f12e409] [cursor=pointer]:
+              - /url: /talents
+          - listitem [ref=f12e410]:
+            - link "Spellbook" [ref=f12e411] [cursor=pointer]:
+              - /url: /spellbook/warrior
+          - listitem [ref=f12e412]:
+            - link "Legacy perks" [ref=f12e413] [cursor=pointer]:
+              - /url: /legacy-perks
+          - listitem [ref=f12e414]:
+            - link "Races" [ref=f12e415] [cursor=pointer]:
+              - /url: /racials
+          - listitem [ref=f12e416]:
+            - link "Professions" [ref=f12e417] [cursor=pointer]:
+              - /url: /professions
+          - listitem [ref=f12e418]:
+            - link "Downrank calculator" [ref=f12e419] [cursor=pointer]:
+              - /url: /downrank-calculator
+          - listitem [ref=f12e420]:
+            - link "Tier list maker" [ref=f12e421] [cursor=pointer]:
+              - /url: /tier-list
+      - generic [ref=f12e422]:
+        - heading "Gear" [level=2] [ref=f12e423]
+        - list [ref=f12e424]:
+          - listitem [ref=f12e425]:
+            - link "BiS list" [ref=f12e426] [cursor=pointer]:
+              - /url: /bis
+          - listitem [ref=f12e427]:
+            - link "Items" [ref=f12e428] [cursor=pointer]:
+              - /url: /items
+          - listitem [ref=f12e429]:
+            - link "Hidden items" [ref=f12e430] [cursor=pointer]:
+              - /url: /hidden-items
+          - listitem [ref=f12e431]:
+            - link "Transmog" [ref=f12e432] [cursor=pointer]:
+              - /url: /transmog
+      - generic [ref=f12e433]:
+        - heading "World" [level=2] [ref=f12e434]
+        - list [ref=f12e435]:
+          - listitem [ref=f12e436]:
+            - link "World map" [ref=f12e437] [cursor=pointer]:
+              - /url: /map
+          - listitem [ref=f12e438]:
+            - link "Dungeons" [ref=f12e439] [cursor=pointer]:
+              - /url: /dungeons
+          - listitem [ref=f12e440]:
+            - link "Quests" [ref=f12e441] [cursor=pointer]:
+              - /url: /quests
+          - listitem [ref=f12e442]:
+            - link "Dungeon quests" [ref=f12e443] [cursor=pointer]:
+              - /url: /dungeon-quests
+          - listitem [ref=f12e444]:
+            - link "Rare spawns" [ref=f12e445] [cursor=pointer]:
+              - /url: /rares
+          - listitem [ref=f12e446]:
+            - link "Library books" [ref=f12e447] [cursor=pointer]:
+              - /url: /library-books
+      - generic [ref=f12e448]:
+        - heading "Guides" [level=2] [ref=f12e449]
+        - list [ref=f12e450]:
+          - listitem [ref=f12e451]:
+            - link "Tanning Rack" [ref=f12e452] [cursor=pointer]:
+              - /url: /tanning-rack
+          - listitem [ref=f12e453]:
+            - link "PvP ranks" [ref=f12e454] [cursor=pointer]:
+              - /url: /pvp-ranks
+          - listitem [ref=f12e455]:
+            - link "Downranking" [ref=f12e456] [cursor=pointer]:
+              - /url: /downranking
+          - listitem [ref=f12e457]:
+            - link "Booty Bay Bruiser's Buckshot" [ref=f12e458] [cursor=pointer]:
+              - /url: /booty-bay-bruisers-buckshot
+          - listitem [ref=f12e459]:
+            - link "Scarlet Banner" [ref=f12e460] [cursor=pointer]:
+              - /url: /scarlet-banner
+          - listitem [ref=f12e461]:
+            - link "$100,000 duel tournament" [ref=f12e462] [cursor=pointer]:
+              - /url: /duel-tournament
+          - listitem [ref=f12e463]:
+            - link "Level 30" [ref=f12e464] [cursor=pointer]:
+              - /url: /level-30
+          - listitem [ref=f12e465]:
+            - link "Druid Cat Form quest" [ref=f12e466] [cursor=pointer]:
+              - /url: /druid-cat-form
+          - listitem [ref=f12e467]:
+            - link "Addons" [ref=f12e468] [cursor=pointer]:
+              - /url: /addons
+          - listitem [ref=f12e469]:
+            - link "Savory Whimsyfin Delight" [ref=f12e470] [cursor=pointer]:
+              - /url: /savory-whimsyfin-delight
+          - listitem [ref=f12e471]:
+            - link "Druid snake form" [ref=f12e472] [cursor=pointer]:
+              - /url: /druid-snake-form
+          - listitem [ref=f12e473]:
+            - link "Battle mage" [ref=f12e474] [cursor=pointer]:
+              - /url: /battle-mage
+          - listitem [ref=f12e475]:
+            - link "Cozy Sleeping Bag" [ref=f12e476] [cursor=pointer]:
+              - /url: /cozy-sleeping-bag
+          - listitem [ref=f12e477]:
+            - link "Merchant's Favor" [ref=f12e478] [cursor=pointer]:
+              - /url: /merchants-favor
+          - listitem [ref=f12e479]:
+            - link "Hunter pets" [ref=f12e480] [cursor=pointer]:
+              - /url: /hunter-pets
+      - generic [ref=f12e481]:
+        - heading "Beta" [level=2] [ref=f12e482]
+        - list [ref=f12e483]:
+          - listitem [ref=f12e484]:
+            - link "Patch notes" [ref=f12e485] [cursor=pointer]:
+              - /url: /patch-notes
+          - listitem [ref=f12e486]:
+            - link "Changes vs Classic" [ref=f12e487] [cursor=pointer]:
+              - /url: /changes
+          - listitem [ref=f12e488]:
+            - link "Beta and launch dates" [ref=f12e489] [cursor=pointer]:
+              - /url: /beta
+          - listitem [ref=f12e490]:
+            - link "Server status" [ref=f12e491] [cursor=pointer]:
+              - /url: /server-status
+      - generic [ref=f12e492]:
+        - heading "Language" [level=2] [ref=f12e493]
+        - list [ref=f12e498]:
+          - listitem [ref=f12e499]:
+            - generic [ref=f12e500]: English
+          - listitem [ref=f12e503]:
+            - link "Français" [ref=f12e504] [cursor=pointer]:
+              - /url: /fr/racials
+          - listitem [ref=f12e505]:
+            - link "Deutsch" [ref=f12e506] [cursor=pointer]:
+              - /url: /de/racials
+          - listitem [ref=f12e507]:
+            - link "繁體中文" [ref=f12e508] [cursor=pointer]:
+              - /url: /zh-tw/racials
+          - listitem [ref=f12e509]:
+            - link "简体中文" [ref=f12e510] [cursor=pointer]:
+              - /url: /zh-cn/racials
+          - listitem [ref=f12e511]:
+            - link "Русский" [ref=f12e512] [cursor=pointer]:
+              - /url: /ru/racials
+    - generic [ref=f12e513]:
+      - paragraph [ref=f12e514]: ForeverChanges is an unofficial fan site, not affiliated with or endorsed by Blizzard Entertainment. World of Warcraft and Warcraft are trademarks or registered trademarks of Blizzard Entertainment, Inc. in the U.S. and/or other countries. Game content and images © Blizzard Entertainment, Inc.
+      - navigation "Legal" [ref=f12e516]:
+        - link "About the data" [ref=f12e517] [cursor=pointer]:
+          - /url: /about
+        - link "Privacy" [ref=f12e518] [cursor=pointer]:
+          - /url: /privacy
+        - link "Terms" [ref=f12e519] [cursor=pointer]:
+          - /url: /terms
+        - link "Legal notice" [ref=f12e520] [cursor=pointer]:
+          - /url: /legal
+  - alert [ref=f12e521]

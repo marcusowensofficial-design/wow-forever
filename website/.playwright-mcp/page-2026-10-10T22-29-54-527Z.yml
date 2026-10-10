@@ -1,0 +1,2308 @@
+- generic [active] [ref=f8e1]:
+  - text: ": : :"
+  - main [ref=f8e2]:
+    - generic [ref=f8e3]:
+      - generic [ref=f8e4]:
+        - generic [ref=f8e5]:
+          - generic [ref=f8e6]:
+            - button "Pull the murloc camp" [ref=f8e7] [cursor=pointer]
+            - generic [ref=f8e8]:
+              - generic [ref=f8e9]: Online now
+              - generic [ref=f8e10]: 2,358
+              - generic [ref=f8e11]: murlocs
+          - link "ForeverChanges home" [ref=f8e12] [cursor=pointer]:
+            - /url: /
+            - img "ForeverChanges" [ref=f8e13]
+          - link [ref=f8e15] [cursor=pointer]:
+            - /url: /patch-notes
+            - generic [ref=f8e16]:
+              - text: Updated
+              - generic [aria-hidden] [ref=f8e18]: ·
+            - text: Beta build 1.60.1.70338
+          - link "Launch in" [ref=f8e19] [cursor=pointer]:
+            - /url: /beta
+            - generic [aria-hidden] [ref=f8e21]:
+              - generic [ref=f8e22]:
+                - generic [ref=f8e23]: "25"
+                - generic [ref=f8e24]: days
+              - generic [ref=f8e25]:
+                - text: ":"
+                - generic [ref=f8e26]: "00"
+                - generic [ref=f8e27]: hrs
+              - generic [ref=f8e28]:
+                - text: ":"
+                - generic [ref=f8e29]: "30"
+                - generic [ref=f8e30]: min
+              - generic [ref=f8e31]:
+                - text: ":"
+                - generic [ref=f8e32]: "06"
+                - generic [ref=f8e33]: sec
+        - generic [ref=f8e34]:
+          - navigation "Main" [ref=f8e35]:
+            - link "Changes" [ref=f8e36] [cursor=pointer]:
+              - /url: /changes
+            - link "Talents , updated" [ref=f8e37] [cursor=pointer]:
+              - /url: /talents/warrior
+              - text: Talents
+              - generic:
+                - generic [aria-hidden]: Updated on October 8
+                - generic [ref=f8e39]: ", updated"
+            - link "Spellbook , updated" [ref=f8e40] [cursor=pointer]:
+              - /url: /spellbook/warrior
+              - text: Spellbook
+              - generic:
+                - generic [aria-hidden]: Updated on October 8
+                - generic [ref=f8e42]: ", updated"
+            - link "Legacy" [ref=f8e43] [cursor=pointer]:
+              - /url: /legacy-perks
+            - link "Professions" [ref=f8e44] [cursor=pointer]:
+              - /url: /professions
+            - link "Races" [ref=f8e45] [cursor=pointer]:
+              - /url: /racials
+            - link "Dungeons , new" [ref=f8e46] [cursor=pointer]:
+              - /url: /dungeons
+              - text: Dungeons
+              - generic:
+                - generic [aria-hidden]: "New: the City of Dalaran"
+                - generic [ref=f8e48]: ", new"
+            - link "Items , updated" [ref=f8e49] [cursor=pointer]:
+              - /url: /items
+              - text: Items
+              - generic:
+                - generic [aria-hidden]: 331 items changed on October 8
+                - generic [ref=f8e51]: ", updated"
+            - link "Quests" [ref=f8e52] [cursor=pointer]:
+              - /url: /quests
+            - link "BiS list , updated" [ref=f8e53] [cursor=pointer]:
+              - /url: /bis
+              - text: BiS list
+              - generic:
+                - generic [aria-hidden]: Up to date with the latest build
+                - generic [ref=f8e55]: ", updated"
+            - link "World map" [ref=f8e56] [cursor=pointer]:
+              - /url: /map
+            - link "Guides" [ref=f8e57] [cursor=pointer]:
+              - /url: /guides
+            - link "Patch notes" [ref=f8e58] [cursor=pointer]:
+              - /url: /patch-notes
+          - button "Search" [ref=f8e60] [cursor=pointer]:
+            - generic [aria-hidden]: Search /
+      - generic [ref=f8e62]:
+        - generic [ref=f8e65]:
+          - generic [ref=f8e66]:
+            - link "Guides" [ref=f8e67] [cursor=pointer]:
+              - /url: /guides
+            - heading "Dungeon quests The ones to take before you go in, from level 13 to 30" [level=1] [ref=f8e68]:
+              - text: Dungeon quests
+              - generic [ref=f8e69]: The ones to take before you go in, from level 13 to 30
+            - paragraph [ref=f8e70]:
+              - text: "A dungeon run with all its quests is still the biggest chunk of experience on your way to 30. Since the update of October 1, a dungeon quest pays about 2.2 times Classic’s experience, against 3.1 times before: Blizzard halved what it gives beyond a normal quest ("
+              - link "Blizzard’s notes" [ref=f8e71] [cursor=pointer]:
+                - /url: https://us.forums.blizzard.com/en/wow/t/2360696/4
+              - text: ).
+            - paragraph [ref=f8e72]: "The catch: most of these quests are given far from the dungeon, in a capital or a camp at the other end of the zone, and some need a quest before them. Set your faction and your level: the tour below lists what to pick up, town by town, and you tick each quest as you take it."
+            - paragraph [ref=f8e73]:
+              - text: By Vektor, updated October 9, 2026.
+              - link "Sources" [ref=f8e74] [cursor=pointer]:
+                - /url: "#sources"
+          - figure "Quest givers in the Wailing Caverns" [ref=f8e75]:
+            - img "Nalpak and Ebru, two quest givers at the entrance of the Wailing Caverns" [ref=f8e76]
+        - navigation "Sections of this page" [ref=f8e78]:
+          - generic [ref=f8e79]:
+            - link "Quest XP by dungeon" [ref=f8e80] [cursor=pointer]:
+              - /url: "#overview"
+            - link "Your tour" [ref=f8e82] [cursor=pointer]:
+              - /url: "#tour"
+            - link "Dungeon by dungeon 12" [ref=f8e84] [cursor=pointer]:
+              - /url: "#quests"
+              - generic [ref=f8e85]: Dungeon by dungeon
+              - generic [ref=f8e86]: "12"
+            - link "Before you go" [ref=f8e87] [cursor=pointer]:
+              - /url: "#before"
+        - generic [ref=f8e89]:
+          - region [ref=f8e90]:
+            - heading "Quest XP by dungeon" [level=2] [ref=f8e92]
+            - paragraph [ref=f8e93]: The experience the quests of each dungeon give, faction by faction, and how many levels that makes for a character at the bottom of the dungeon’s range. The bar is that range, the gold line the beta’s cap of 30.
+            - generic [ref=f8e94]:
+              - generic [aria-hidden] [ref=f8e95]:
+                - generic [ref=f8e96]: Dungeon
+                - generic [ref=f8e97]:
+                  - generic [ref=f8e98]: "15"
+                  - generic [ref=f8e99]: "20"
+                  - generic [ref=f8e100]: "25"
+                  - generic [ref=f8e101]: "30"
+                  - generic [ref=f8e102]: "35"
+                  - generic [ref=f8e103]: "40"
+                  - generic [ref=f8e104]: Beta cap
+                - generic [ref=f8e105]: Alliance
+                - generic [ref=f8e106]: Horde
+              - list [ref=f8e107]:
+                - listitem [ref=f8e108]:
+                  - generic [ref=f8e109]:
+                    - link "Ragefire Chasm" [ref=f8e110] [cursor=pointer]:
+                      - /url: "#dg-ragefire-chasm"
+                    - generic [ref=f8e111]: Classic’s experience ×2.03 (×3.05 before)
+                  - img "Levels 13 to 18" [ref=f8e112]:
+                    - emphasis [ref=f8e114]: 13–18
+                  - generic [ref=f8e115]: No quest
+                  - generic [ref=f8e116]:
+                    - text: 12,750 XP
+                    - generic [ref=f8e117]: 5 quests, about 1 level
+                - listitem [ref=f8e118]:
+                  - generic [ref=f8e119]:
+                    - link "Hall of Thanes" [ref=f8e120] [cursor=pointer]:
+                      - /url: "#dg-hall-of-thanes"
+                    - generic [ref=f8e121]: Classic’s experience ×2.2 (×3.4 before)
+                  - img "Levels 13 to 18" [ref=f8e122]:
+                    - emphasis [ref=f8e124]: 13–18
+                  - generic [ref=f8e125]:
+                    - text: 13,300 XP
+                    - generic [ref=f8e126]: 5 quests, about 1 level
+                  - generic [ref=f8e127]:
+                    - text: 2,300 XP
+                    - generic [ref=f8e128]: 1 quest
+                - listitem [ref=f8e129]:
+                  - generic [ref=f8e130]:
+                    - link "Ruins of Lordaeron" [ref=f8e131] [cursor=pointer]:
+                      - /url: "#dg-ruins-of-lordaeron"
+                    - generic [ref=f8e132]: Classic’s experience ×2.1 (×3.2 before)
+                  - img "Levels 15 to 20" [ref=f8e133]:
+                    - emphasis [ref=f8e135]: 15–20
+                  - generic [ref=f8e136]:
+                    - text: 22,500 XP
+                    - generic [ref=f8e137]: 4 quests, about 1.5 levels
+                  - generic [ref=f8e138]:
+                    - text: 28,150 XP
+                    - generic [ref=f8e139]: 6 quests, about 2 levels
+                - listitem [ref=f8e140]:
+                  - generic [ref=f8e141]:
+                    - link "Wailing Caverns" [ref=f8e142] [cursor=pointer]:
+                      - /url: "#dg-wailing-caverns"
+                    - generic [ref=f8e143]: Classic’s experience ×1.95 (×2.9 before)
+                  - img "Levels 17 to 24" [ref=f8e144]:
+                    - emphasis [ref=f8e146]: 17–24
+                  - generic [ref=f8e147]:
+                    - text: 17,550 XP
+                    - generic [ref=f8e148]: 5 quests, about 1 level
+                  - generic [ref=f8e149]:
+                    - text: 25,150 XP
+                    - generic [ref=f8e150]: 7 quests, about 1.5 levels
+                - listitem [ref=f8e151]:
+                  - generic [ref=f8e152]:
+                    - link "The Deadmines" [ref=f8e153] [cursor=pointer]:
+                      - /url: "#dg-the-deadmines"
+                    - generic [ref=f8e154]: Classic’s experience ×2.38 (×3.75 before)
+                  - img "Levels 17 to 26" [ref=f8e155]:
+                    - emphasis [ref=f8e157]: 17–26
+                  - generic [ref=f8e158]:
+                    - text: 20,500 XP
+                    - generic [ref=f8e159]: 7 quests, about 1 level
+                  - generic [ref=f8e160]: No quest
+                - listitem [ref=f8e161]:
+                  - generic [ref=f8e162]:
+                    - link "Shadowfang Keep" [ref=f8e163] [cursor=pointer]:
+                      - /url: "#dg-shadowfang-keep"
+                    - generic [ref=f8e164]: Classic’s experience ×2.68 (×4.35 before)
+                  - img "Levels 22 to 30" [ref=f8e165]:
+                    - emphasis [ref=f8e167]: 22–30
+                  - generic [ref=f8e168]: No quest
+                  - generic [ref=f8e169]:
+                    - text: 19,800 XP
+                    - generic [ref=f8e170]: 3 quests, about 0.5 levels
+                - listitem [ref=f8e171]:
+                  - generic [ref=f8e172]:
+                    - link "Blackfathom Deeps" [ref=f8e173] [cursor=pointer]:
+                      - /url: "#dg-blackfathom-deeps"
+                    - generic [ref=f8e174]: Classic’s experience ×2.38 (×3.75 before)
+                  - img "Levels 24 to 32" [ref=f8e175]:
+                    - emphasis [ref=f8e177]: 24–32
+                  - generic [ref=f8e179]:
+                    - text: 22,850 XP
+                    - generic [ref=f8e180]: 4 quests, about 0.5 levels
+                  - generic [ref=f8e181]:
+                    - text: 31,000 XP
+                    - generic [ref=f8e182]: 6 quests, about 1 level
+                - listitem [ref=f8e183]:
+                  - generic [ref=f8e184]:
+                    - link "The Stockade" [ref=f8e185] [cursor=pointer]:
+                      - /url: "#dg-the-stockade"
+                    - generic [ref=f8e186]: Classic’s experience ×2.1 (×3.2 before)
+                  - img "Levels 24 to 32" [ref=f8e187]:
+                    - emphasis [ref=f8e189]: 24–32
+                  - generic [ref=f8e191]:
+                    - text: 24,650 XP
+                    - generic [ref=f8e192]: 6 quests (5 known), about 1 level
+                  - generic [ref=f8e193]: No quest
+                - listitem [ref=f8e194]:
+                  - generic [ref=f8e195]:
+                    - 'link "Excavation Site: Wetlands" [ref=f8e196] [cursor=pointer]':
+                      - /url: "#dg-excavation-site"
+                    - generic [ref=f8e197]: New in Forever
+                  - img "Levels 26 to 31" [ref=f8e198]:
+                    - emphasis [ref=f8e200]: 26–31
+                  - generic [ref=f8e202]:
+                    - text: 27,000 XP
+                    - generic [ref=f8e203]: 7 quests, about 0.5 levels
+                  - generic [ref=f8e204]:
+                    - text: 15,850 XP
+                    - generic [ref=f8e205]: 4 quests
+                - listitem [ref=f8e206]:
+                  - generic [ref=f8e207]:
+                    - link "City of Dalaran" [ref=f8e208] [cursor=pointer]:
+                      - /url: "#dg-city-of-dalaran"
+                    - generic [ref=f8e209]: New in Forever
+                  - img "Levels 28 to 33" [ref=f8e210]:
+                    - emphasis [ref=f8e212]: 28–33
+                  - generic [ref=f8e214]:
+                    - text: 37,600 XP
+                    - generic [ref=f8e215]: 4 quests, about 1 level
+                  - generic [ref=f8e216]:
+                    - text: 37,600 XP
+                    - generic [ref=f8e217]: 4 quests, about 1 level
+                - listitem [ref=f8e218]:
+                  - generic [ref=f8e219]:
+                    - link "Gnomeregan" [ref=f8e220] [cursor=pointer]:
+                      - /url: "#dg-gnomeregan"
+                    - generic [ref=f8e221]: Classic’s experience ×1.8 (×2.6 before)
+                  - img "Levels 29 to 38" [ref=f8e222]:
+                    - emphasis [ref=f8e224]: 29–38
+                  - generic [ref=f8e226]:
+                    - text: 23,300 XP
+                    - generic [ref=f8e227]: 11 quests (5 known), about 0.5 levels
+                  - generic [ref=f8e228]:
+                    - text: 5,800 XP
+                    - generic [ref=f8e229]: 6 quests (1 known)
+                - listitem [ref=f8e230]:
+                  - generic [ref=f8e231]:
+                    - link "Razorfen Kraul" [ref=f8e232] [cursor=pointer]:
+                      - /url: "#dg-razorfen-kraul"
+                    - generic [ref=f8e233]: Classic’s experience ×2.38 (×3.75 before)
+                  - img "Levels 29 to 38" [ref=f8e234]:
+                    - emphasis [ref=f8e236]: 29–38
+                  - generic [ref=f8e238]:
+                    - text: 12,250 XP
+                    - generic [ref=f8e239]: 4 quests (2 known)
+                  - generic [ref=f8e240]:
+                    - text: 20,750 XP
+                    - generic [ref=f8e241]: 4 quests (3 known)
+            - paragraph [ref=f8e243]:
+              - text: "Each dungeon multiplies the experience its quests gave in Classic by its own figure: from ×1.8 for"
+              - link "Gnomeregan" [ref=f8e244] [cursor=pointer]:
+                - /url: "#dg-gnomeregan"
+              - text: to ×2.68 for
+              - link "Shadowfang" [ref=f8e245] [cursor=pointer]:
+                - /url: "#dg-shadowfang-keep"
+              - text: . Before October 1, it went from ×2.6 to ×4.35.
+          - generic [ref=f8e246]:
+            - region [ref=f8e247]:
+              - heading "Your tour before you go" [level=2] [ref=f8e249]
+              - paragraph [ref=f8e250]: "Pick your faction and your level. Each giver has their coordinates on their zone’s map. Tick a quest once you have it: your ticks are kept in this browser."
+              - generic [ref=f8e251]:
+                - group "Faction" [ref=f8e252]:
+                  - button "Alliance" [pressed] [ref=f8e253] [cursor=pointer]
+                  - button "Horde" [ref=f8e255] [cursor=pointer]
+                - group "Your level" [ref=f8e257]:
+                  - button "One level lower" [ref=f8e259] [cursor=pointer]: ‹
+                  - status [ref=f8e260]: –
+                  - button "One level higher" [ref=f8e261] [cursor=pointer]: ›
+                - paragraph [ref=f8e262]:
+                  - status [ref=f8e263]: 57 quests in 10 dungeons for the Alliance.
+              - generic [ref=f8e264]:
+                - generic [ref=f8e265]:
+                  - heading "Stormwind City" [level=3] [ref=f8e266]
+                  - list [ref=f8e267]:
+                    - listitem [ref=f8e268]:
+                      - generic [ref=f8e269] [cursor=pointer]:
+                        - checkbox "Collecting Memories, for the Deadmines Wilder Thistlenettle, 65.2, 21.2" [ref=f8e270]
+                        - generic [ref=f8e271]:
+                          - text: Collecting Memories
+                          - generic [ref=f8e272]: ", for the Deadmines"
+                          - generic [ref=f8e273]: Wilder Thistlenettle, 65.2, 21.2
+                    - listitem [ref=f8e274]:
+                      - generic [ref=f8e275] [cursor=pointer]:
+                        - checkbox "Oh Brother. . ., for the Deadmines Wilder Thistlenettle, 65.2, 21.2" [ref=f8e276]
+                        - generic [ref=f8e277]:
+                          - text: Oh Brother. . .
+                          - generic [ref=f8e278]: ", for the Deadmines"
+                          - generic [ref=f8e279]: Wilder Thistlenettle, 65.2, 21.2
+                    - listitem [ref=f8e280]:
+                      - generic [ref=f8e281] [cursor=pointer]:
+                        - checkbox "Underground Assault, for the Deadmines Shoni the Shilent, 55.4, 12.4" [ref=f8e282]
+                        - generic [ref=f8e283]:
+                          - text: Underground Assault
+                          - generic [ref=f8e284]: ", for the Deadmines"
+                          - generic [ref=f8e285]: Shoni the Shilent, 55.4, 12.4
+                    - listitem [ref=f8e286]:
+                      - generic [ref=f8e287] [cursor=pointer]:
+                        - checkbox "The Stockade Riots, for the Stockade Warden Thelwater, 41.2, 58.0. After “Bazil Thredd”" [ref=f8e288]
+                        - generic [ref=f8e289]:
+                          - text: The Stockade Riots
+                          - generic [ref=f8e290]: ", for the Stockade"
+                          - generic [ref=f8e291]: Warden Thelwater, 41.2, 58.0. After “Bazil Thredd”
+                    - listitem [ref=f8e292]:
+                      - generic [ref=f8e293] [cursor=pointer]:
+                        - checkbox "Quell The Uprising, for the Stockade Warden Thelwater, 41.2, 58.0" [ref=f8e294]
+                        - generic [ref=f8e295]:
+                          - text: Quell The Uprising
+                          - generic [ref=f8e296]: ", for the Stockade"
+                          - generic [ref=f8e297]: Warden Thelwater, 41.2, 58.0
+                    - listitem [ref=f8e298]:
+                      - generic [ref=f8e299] [cursor=pointer]:
+                        - checkbox "The Color of Blood, for the Stockade Nikova Raskol, 66.8, 46.4" [ref=f8e300]
+                        - generic [ref=f8e301]:
+                          - text: The Color of Blood
+                          - generic [ref=f8e302]: ", for the Stockade"
+                          - generic [ref=f8e303]: Nikova Raskol, 66.8, 46.4
+                    - listitem [ref=f8e304]:
+                      - generic [ref=f8e305] [cursor=pointer]:
+                        - checkbox "A Green Sample, for the City of Dalaran Shylamiir, 31.4, 62.8" [ref=f8e306]
+                        - generic [ref=f8e307]:
+                          - text: A Green Sample
+                          - generic [ref=f8e308]: ", for the City of Dalaran"
+                          - generic [ref=f8e309]: Shylamiir, 31.4, 62.8
+                    - listitem [ref=f8e310]:
+                      - generic [ref=f8e311] [cursor=pointer]:
+                        - checkbox "Power Overwhelming, for the City of Dalaran High Sorcerer Andromath, 48.7, 87.6" [ref=f8e312]
+                        - generic [ref=f8e313]:
+                          - text: Power Overwhelming
+                          - generic [ref=f8e314]: ", for the City of Dalaran"
+                          - generic [ref=f8e315]: High Sorcerer Andromath, 48.7, 87.6
+                    - listitem [ref=f8e316]:
+                      - generic [ref=f8e317] [cursor=pointer]:
+                        - checkbox "Gyrodrillmatic Excavationators, for Gnomeregan Shoni the Shilent, 55.4, 12.4" [ref=f8e318]
+                        - generic [ref=f8e319]:
+                          - text: Gyrodrillmatic Excavationators
+                          - generic [ref=f8e320]: ", for Gnomeregan"
+                          - generic [ref=f8e321]: Shoni the Shilent, 55.4, 12.4
+                - generic [ref=f8e322]:
+                  - heading "Ironforge" [level=3] [ref=f8e323]
+                  - list [ref=f8e324]:
+                    - listitem [ref=f8e325]:
+                      - generic [ref=f8e326] [cursor=pointer]:
+                        - checkbox "The Restless Dead, for the Hall of Thanes Afadra Dunwall, 33.2, 47.8" [ref=f8e327]
+                        - generic [ref=f8e328]:
+                          - text: The Restless Dead
+                          - generic [ref=f8e329]: ", for the Hall of Thanes"
+                          - generic [ref=f8e330]: Afadra Dunwall, 33.2, 47.8
+                    - listitem [ref=f8e331]:
+                      - generic [ref=f8e332] [cursor=pointer]:
+                        - checkbox "Important Heirlooms, for the Hall of Thanes Thom Filch, 32.4, 44.8" [ref=f8e333]
+                        - generic [ref=f8e334]:
+                          - text: Important Heirlooms
+                          - generic [ref=f8e335]: ", for the Hall of Thanes"
+                          - generic [ref=f8e336]: Thom Filch, 32.4, 44.8
+                    - listitem [ref=f8e337]:
+                      - generic [ref=f8e338] [cursor=pointer]:
+                        - checkbox "Knowledge in the Deeps, for Blackfathom Deeps Gerrig Bonegrip, 50.2, 7.0" [ref=f8e339]
+                        - generic [ref=f8e340]:
+                          - text: Knowledge in the Deeps
+                          - generic [ref=f8e341]: ", for Blackfathom Deeps"
+                          - generic [ref=f8e342]: Gerrig Bonegrip, 50.2, 7.0
+                    - listitem [ref=f8e343]:
+                      - generic [ref=f8e344] [cursor=pointer]:
+                        - checkbox "Save Techbot's Brain!, for Gnomeregan Tinkmaster Overspark, 69.4, 50.4" [ref=f8e345]
+                        - generic [ref=f8e346]:
+                          - text: Save Techbot's Brain!
+                          - generic [ref=f8e347]: ", for Gnomeregan"
+                          - generic [ref=f8e348]: Tinkmaster Overspark, 69.4, 50.4
+                    - listitem [ref=f8e349]:
+                      - generic [ref=f8e350] [cursor=pointer]:
+                        - checkbox "Essential Artificials, for Gnomeregan Klockmort Spannerspan, 68.0, 46.8" [ref=f8e351]
+                        - generic [ref=f8e352]:
+                          - text: Essential Artificials
+                          - generic [ref=f8e353]: ", for Gnomeregan"
+                          - generic [ref=f8e354]: Klockmort Spannerspan, 68.0, 46.8
+                    - listitem [ref=f8e355]:
+                      - generic [ref=f8e356] [cursor=pointer]:
+                        - checkbox "Data Rescue, for Gnomeregan Master Mechanic Castpipe, 69.8, 48.4" [ref=f8e357]
+                        - generic [ref=f8e358]:
+                          - text: Data Rescue
+                          - generic [ref=f8e359]: ", for Gnomeregan"
+                          - generic [ref=f8e360]: Master Mechanic Castpipe, 69.8, 48.4
+                    - listitem [ref=f8e361]:
+                      - generic [ref=f8e362] [cursor=pointer]:
+                        - checkbox "The Grand Betrayal, for Gnomeregan High Tinker Mekkatorque, 69.0, 49.0" [ref=f8e363]
+                        - generic [ref=f8e364]:
+                          - text: The Grand Betrayal
+                          - generic [ref=f8e365]: ", for Gnomeregan"
+                          - generic [ref=f8e366]: High Tinker Mekkatorque, 69.0, 49.0
+                - generic [ref=f8e367]:
+                  - heading "Silverpine Forest" [level=3] [ref=f8e368]
+                  - list [ref=f8e369]:
+                    - listitem [ref=f8e370]:
+                      - generic [ref=f8e371] [cursor=pointer]:
+                        - checkbox "Starving Arcane, for the City of Dalaran Image of Archmage Modera, 68.4, 45.4" [ref=f8e372]
+                        - generic [ref=f8e373]:
+                          - text: Starving Arcane
+                          - generic [ref=f8e374]: ", for the City of Dalaran"
+                          - generic [ref=f8e375]: Image of Archmage Modera, 68.4, 45.4
+                    - listitem [ref=f8e376]:
+                      - generic [ref=f8e377] [cursor=pointer]:
+                        - checkbox "Heart of Disruption, for the City of Dalaran Image of Archmage Modera, 68.4, 45.4. After “An Alarming Request”" [ref=f8e378]
+                        - generic [ref=f8e379]:
+                          - text: Heart of Disruption
+                          - generic [ref=f8e380]: ", for the City of Dalaran"
+                          - generic [ref=f8e381]: Image of Archmage Modera, 68.4, 45.4. After “An Alarming Request”
+                - generic [ref=f8e382]:
+                  - heading "Wetlands" [level=3] [ref=f8e383]
+                  - list [ref=f8e384]:
+                    - listitem [ref=f8e385]:
+                      - generic [ref=f8e386] [cursor=pointer]:
+                        - checkbox "The Fury Runs Deep, for the Stockade Motley Garmason, 49.6, 18.2. After “The Dark Iron War”" [ref=f8e387]
+                        - generic [ref=f8e388]:
+                          - text: The Fury Runs Deep
+                          - generic [ref=f8e389]: ", for the Stockade"
+                          - generic [ref=f8e390]: Motley Garmason, 49.6, 18.2. After “The Dark Iron War”
+                    - listitem [ref=f8e391]:
+                      - generic [ref=f8e392] [cursor=pointer]:
+                        - checkbox "Highland Hides, for the Excavation Site James Halloran, 8.6, 55.6" [ref=f8e393]
+                        - generic [ref=f8e394]:
+                          - text: Highland Hides
+                          - generic [ref=f8e395]: ", for the Excavation Site"
+                          - generic [ref=f8e396]: James Halloran, 8.6, 55.6
+                    - listitem [ref=f8e397]:
+                      - generic [ref=f8e398] [cursor=pointer]:
+                        - checkbox "Horrors in the Highland, for the Excavation Site Rethiel the Greenwarden, 56.2, 40.5" [ref=f8e399]
+                        - generic [ref=f8e400]:
+                          - text: Horrors in the Highland
+                          - generic [ref=f8e401]: ", for the Excavation Site"
+                          - generic [ref=f8e402]: Rethiel the Greenwarden, 56.2, 40.5
+                    - listitem [ref=f8e403]:
+                      - generic [ref=f8e404] [cursor=pointer]:
+                        - checkbox "Lost in the Thicket Things, for the Excavation Site Caitlin Grassman, 11.8, 58.6" [ref=f8e405]
+                        - generic [ref=f8e406]:
+                          - text: Lost in the Thicket Things
+                          - generic [ref=f8e407]: ", for the Excavation Site"
+                          - generic [ref=f8e408]: Caitlin Grassman, 11.8, 58.6
+                - generic [ref=f8e409]:
+                  - heading "Dun Morogh" [level=3] [ref=f8e410]
+                  - list [ref=f8e411]:
+                    - listitem [ref=f8e412]:
+                      - generic [ref=f8e413] [cursor=pointer]:
+                        - checkbox "Old Ironforge Incursion, for the Hall of Thanes Earthseer Farsen, 64.8, 58.4. After “Underground Map”" [ref=f8e414]
+                        - generic [ref=f8e415]:
+                          - text: Old Ironforge Incursion
+                          - generic [ref=f8e416]: ", for the Hall of Thanes"
+                          - generic [ref=f8e417]: Earthseer Farsen, 64.8, 58.4. After “Underground Map”
+                    - listitem [ref=f8e418]:
+                      - generic [ref=f8e419] [cursor=pointer]:
+                        - checkbox "Gnogaine, for Gnomeregan Ozzie Togglevolt, 45.8, 49.2. After “The Day After”" [ref=f8e420]
+                        - generic [ref=f8e421]:
+                          - text: Gnogaine
+                          - generic [ref=f8e422]: ", for Gnomeregan"
+                          - generic [ref=f8e423]: Ozzie Togglevolt, 45.8, 49.2. After “The Day After”
+                    - listitem [ref=f8e424]:
+                      - generic [ref=f8e425] [cursor=pointer]:
+                        - checkbox "The Only Cure is More Green Glow, for Gnomeregan Ozzie Togglevolt, 45.8, 49.2. After “Gnogaine”" [ref=f8e426]
+                        - generic [ref=f8e427]:
+                          - text: The Only Cure is More Green Glow
+                          - generic [ref=f8e428]: ", for Gnomeregan"
+                          - generic [ref=f8e429]: Ozzie Togglevolt, 45.8, 49.2. After “Gnogaine”
+                - generic [ref=f8e430]:
+                  - heading "Westfall" [level=3] [ref=f8e431]
+                  - list [ref=f8e432]:
+                    - listitem [ref=f8e433]:
+                      - generic [ref=f8e434] [cursor=pointer]:
+                        - checkbox "Destruction in Deadmines, for the Deadmines Alba Fairmoon, 52.4, 53.0. After “Explosive Consultation”" [ref=f8e435]
+                        - generic [ref=f8e436]:
+                          - text: Destruction in Deadmines
+                          - generic [ref=f8e437]: ", for the Deadmines"
+                          - generic [ref=f8e438]: Alba Fairmoon, 52.4, 53.0. After “Explosive Consultation”
+                    - listitem [ref=f8e439]:
+                      - generic [ref=f8e440] [cursor=pointer]:
+                        - checkbox "Red Silk Bandanas, for the Deadmines Scout Riell, 56.6, 47.4. After “The Defias Brotherhood”" [ref=f8e441]
+                        - generic [ref=f8e442]:
+                          - text: Red Silk Bandanas
+                          - generic [ref=f8e443]: ", for the Deadmines"
+                          - generic [ref=f8e444]: Scout Riell, 56.6, 47.4. After “The Defias Brotherhood”
+                    - listitem [ref=f8e445]:
+                      - generic [ref=f8e446] [cursor=pointer]:
+                        - checkbox "The Defias Brotherhood, for the Deadmines Gryan Stoutmantle, 56.2, 47.4" [ref=f8e447]
+                        - generic [ref=f8e448]:
+                          - text: The Defias Brotherhood
+                          - generic [ref=f8e449]: ", for the Deadmines"
+                          - generic [ref=f8e450]: Gryan Stoutmantle, 56.2, 47.4
+                - generic [ref=f8e451]:
+                  - heading "Redridge Mountains" [level=3] [ref=f8e452]
+                  - list [ref=f8e453]:
+                    - listitem [ref=f8e454]:
+                      - generic [ref=f8e455] [cursor=pointer]:
+                        - checkbox "What Comes Around..., for the Stockade Guard Berton, 26.4, 46.6" [ref=f8e456]
+                        - generic [ref=f8e457]:
+                          - text: What Comes Around...
+                          - generic [ref=f8e458]: ", for the Stockade"
+                          - generic [ref=f8e459]: Guard Berton, 26.4, 46.6
+                    - listitem [ref=f8e460]:
+                      - generic [ref=f8e461] [cursor=pointer]:
+                        - checkbox "Songblade Search, for the Excavation Site Dorin Songblade, 30.8, 46.6" [ref=f8e462]
+                        - generic [ref=f8e463]:
+                          - text: Songblade Search
+                          - generic [ref=f8e464]: ", for the Excavation Site"
+                          - generic [ref=f8e465]: Dorin Songblade, 30.8, 46.6
+                - generic [ref=f8e466]:
+                  - heading "Duskwood" [level=3] [ref=f8e467]
+                  - list [ref=f8e468]:
+                    - listitem [ref=f8e469]:
+                      - generic [ref=f8e470] [cursor=pointer]:
+                        - checkbox "Crime and Punishment, for the Stockade Councilman Millstipe, 72.0, 47.8" [ref=f8e471]
+                        - generic [ref=f8e472]:
+                          - text: Crime and Punishment
+                          - generic [ref=f8e473]: ", for the Stockade"
+                          - generic [ref=f8e474]: Councilman Millstipe, 72.0, 47.8
+                - generic [ref=f8e475]:
+                  - heading "The Barrens" [level=3] [ref=f8e476]
+                  - list [ref=f8e477]:
+                    - listitem [ref=f8e478]:
+                      - generic [ref=f8e479] [cursor=pointer]:
+                        - checkbox "Deviate Hides, for the Wailing Caverns Nalpak" [ref=f8e480]
+                        - generic [ref=f8e481]:
+                          - text: Deviate Hides
+                          - generic [ref=f8e482]: ", for the Wailing Caverns"
+                          - generic [ref=f8e483]: Nalpak
+                    - listitem [ref=f8e484]:
+                      - generic [ref=f8e485] [cursor=pointer]:
+                        - checkbox "Smart Drinks, for the Wailing Caverns Mebok Mizzyrix, 62.4, 37.6. After “Raptor Horns”" [ref=f8e486]
+                        - generic [ref=f8e487]:
+                          - text: Smart Drinks
+                          - generic [ref=f8e488]: ", for the Wailing Caverns"
+                          - generic [ref=f8e489]: Mebok Mizzyrix, 62.4, 37.6. After “Raptor Horns”
+                    - listitem [ref=f8e490]:
+                      - generic [ref=f8e491] [cursor=pointer]:
+                        - checkbox "Trouble at the Docks, for the Wailing Caverns Crane Operator Bigglefuzz, 63.0, 37.4" [ref=f8e492]
+                        - generic [ref=f8e493]:
+                          - text: Trouble at the Docks
+                          - generic [ref=f8e494]: ", for the Wailing Caverns"
+                          - generic [ref=f8e495]: Crane Operator Bigglefuzz, 63.0, 37.4
+                    - listitem [ref=f8e496]:
+                      - generic [ref=f8e497] [cursor=pointer]:
+                        - checkbox "Deviate Eradication, for the Wailing Caverns Ebru" [ref=f8e498]
+                        - generic [ref=f8e499]:
+                          - text: Deviate Eradication
+                          - generic [ref=f8e500]: ", for the Wailing Caverns"
+                          - generic [ref=f8e501]: Ebru
+                    - listitem [ref=f8e502]:
+                      - generic [ref=f8e503] [cursor=pointer]:
+                        - checkbox "Blueleaf Tubers, for Razorfen Kraul Mebok Mizzyrix, 62.4, 37.6" [ref=f8e504]
+                        - generic [ref=f8e505]:
+                          - text: Blueleaf Tubers
+                          - generic [ref=f8e506]: ", for Razorfen Kraul"
+                          - generic [ref=f8e507]: Mebok Mizzyrix, 62.4, 37.6
+                - generic [ref=f8e508]:
+                  - heading "Ashenvale" [level=3] [ref=f8e509]
+                  - list [ref=f8e510]:
+                    - listitem [ref=f8e511]:
+                      - generic [ref=f8e512] [cursor=pointer]:
+                        - checkbox "Seeking Caitlin, for the Excavation Site Llana, 35.0, 48.4" [ref=f8e513]
+                        - generic [ref=f8e514]:
+                          - text: Seeking Caitlin
+                          - generic [ref=f8e515]: ", for the Excavation Site"
+                          - generic [ref=f8e516]: Llana, 35.0, 48.4
+                - generic [ref=f8e517]:
+                  - heading "Darkshore" [level=3] [ref=f8e518]
+                  - list [ref=f8e519]:
+                    - listitem [ref=f8e520]:
+                      - generic [ref=f8e521] [cursor=pointer]:
+                        - checkbox "Researching the Corruption, for Blackfathom Deeps Gershala Nightwhisper, 38.4, 43.0" [ref=f8e522]
+                        - generic [ref=f8e523]:
+                          - text: Researching the Corruption
+                          - generic [ref=f8e524]: ", for Blackfathom Deeps"
+                          - generic [ref=f8e525]: Gershala Nightwhisper, 38.4, 43.0
+                - generic [ref=f8e526]:
+                  - heading "Darnassus" [level=3] [ref=f8e527]
+                  - list [ref=f8e528]:
+                    - listitem [ref=f8e529]:
+                      - generic [ref=f8e530] [cursor=pointer]:
+                        - checkbox "Twilight Falls, for Blackfathom Deeps Argent Guard Manados, 55.2, 23.4" [ref=f8e531]
+                        - generic [ref=f8e532]:
+                          - text: Twilight Falls
+                          - generic [ref=f8e533]: ", for Blackfathom Deeps"
+                          - generic [ref=f8e534]: Argent Guard Manados, 55.2, 23.4
+                - generic [ref=f8e535]:
+                  - heading "Feralas" [level=3] [ref=f8e536]
+                  - list [ref=f8e537]:
+                    - listitem [ref=f8e538]:
+                      - generic [ref=f8e539] [cursor=pointer]:
+                        - checkbox "The Crone of the Kraul, for Razorfen Kraul Falfindel Waywarder, 89.4, 45.8. After “Lonebrow's Journal”" [ref=f8e540]
+                        - generic [ref=f8e541]:
+                          - text: The Crone of the Kraul
+                          - generic [ref=f8e542]: ", for Razorfen Kraul"
+                          - generic [ref=f8e543]: Falfindel Waywarder, 89.4, 45.8. After “Lonebrow's Journal”
+                - generic [ref=f8e544]:
+                  - heading "Inside the dungeons" [level=3] [ref=f8e545]
+                  - paragraph [ref=f8e546]: They start on the spot, with an item or someone you meet in the dungeon.
+                  - list [ref=f8e547]:
+                    - listitem [ref=f8e548]:
+                      - generic [ref=f8e549] [cursor=pointer]:
+                        - checkbox "The Treaty of Understanding, for the Hall of Thanes Starts with Treaty of Understanding" [ref=f8e550]
+                        - generic [ref=f8e551]:
+                          - text: The Treaty of Understanding
+                          - generic [ref=f8e552]: ", for the Hall of Thanes"
+                          - generic [ref=f8e553]: Starts with Treaty of Understanding
+                    - listitem [ref=f8e554]:
+                      - generic [ref=f8e555] [cursor=pointer]:
+                        - checkbox "An Ancient Grudge, for the Hall of Thanes Ghostly Attendant, inside the dungeon" [ref=f8e556]
+                        - generic [ref=f8e557]:
+                          - text: An Ancient Grudge
+                          - generic [ref=f8e558]: ", for the Hall of Thanes"
+                          - generic [ref=f8e559]: Ghostly Attendant, inside the dungeon
+                    - listitem [ref=f8e560]:
+                      - generic [ref=f8e561] [cursor=pointer]:
+                        - checkbox "Remember That I Love You, for the Ruins of Lordaeron Starts with Blood-Stained Letter" [ref=f8e562]
+                        - generic [ref=f8e563]:
+                          - text: Remember That I Love You
+                          - generic [ref=f8e564]: ", for the Ruins of Lordaeron"
+                          - generic [ref=f8e565]: Starts with Blood-Stained Letter
+                    - listitem [ref=f8e566]:
+                      - generic [ref=f8e567] [cursor=pointer]:
+                        - checkbox "Abominable Creatures, for the Ruins of Lordaeron Captain Truman, inside the dungeon" [ref=f8e568]
+                        - generic [ref=f8e569]:
+                          - text: Abominable Creatures
+                          - generic [ref=f8e570]: ", for the Ruins of Lordaeron"
+                          - generic [ref=f8e571]: Captain Truman, inside the dungeon
+                    - listitem [ref=f8e572]:
+                      - generic [ref=f8e573] [cursor=pointer]:
+                        - checkbox "Crest of Lordaeron, for the Ruins of Lordaeron Starts with Crest of Lordaeron" [ref=f8e574]
+                        - generic [ref=f8e575]:
+                          - text: Crest of Lordaeron
+                          - generic [ref=f8e576]: ", for the Ruins of Lordaeron"
+                          - generic [ref=f8e577]: Starts with Crest of Lordaeron
+                    - listitem [ref=f8e578]:
+                      - generic [ref=f8e579] [cursor=pointer]:
+                        - checkbox "Bloodied Insignia, for the Ruins of Lordaeron Starts with Bloodied Insignia" [ref=f8e580]
+                        - generic [ref=f8e581]:
+                          - text: Bloodied Insignia
+                          - generic [ref=f8e582]: ", for the Ruins of Lordaeron"
+                          - generic [ref=f8e583]: Starts with Bloodied Insignia
+                    - listitem [ref=f8e584]:
+                      - generic [ref=f8e585] [cursor=pointer]:
+                        - checkbox "The Glowing Shard, for the Wailing Caverns Starts with Glowing Shard" [ref=f8e586]
+                        - generic [ref=f8e587]:
+                          - text: The Glowing Shard
+                          - generic [ref=f8e588]: ", for the Wailing Caverns"
+                          - generic [ref=f8e589]: Starts with Glowing Shard
+                    - listitem [ref=f8e590]:
+                      - generic [ref=f8e591] [cursor=pointer]:
+                        - checkbox "The Unsent Letter, for the Deadmines Starts with An Unsent Letter" [ref=f8e592]
+                        - generic [ref=f8e593]:
+                          - text: The Unsent Letter
+                          - generic [ref=f8e594]: ", for the Deadmines"
+                          - generic [ref=f8e595]: Starts with An Unsent Letter
+                    - listitem [ref=f8e596]:
+                      - generic [ref=f8e597] [cursor=pointer]:
+                        - checkbox "Blackfathom Villainy, for Blackfathom Deeps Argent Guard Thaelrid, inside the dungeon. After “In Search of Thaelrid”" [ref=f8e598]
+                        - generic [ref=f8e599]:
+                          - text: Blackfathom Villainy
+                          - generic [ref=f8e600]: ", for Blackfathom Deeps"
+                          - generic [ref=f8e601]: Argent Guard Thaelrid, inside the dungeon. After “In Search of Thaelrid”
+                    - listitem [ref=f8e602]:
+                      - generic [ref=f8e603] [cursor=pointer]:
+                        - checkbox "Fallen in the Fen, for the Excavation Site It starts at the body of a dwarf inside the dungeon, Dorin Songblade’s brother." [ref=f8e604]
+                        - generic [ref=f8e605]:
+                          - text: Fallen in the Fen
+                          - generic [ref=f8e606]: ", for the Excavation Site"
+                          - generic [ref=f8e607]: It starts at the body of a dwarf inside the dungeon, Dorin Songblade’s brother.
+                    - listitem [ref=f8e608]:
+                      - generic [ref=f8e609] [cursor=pointer]:
+                        - checkbox "Lost Relic Carry, for the Excavation Site Starts with Titan Relic" [ref=f8e610]
+                        - generic [ref=f8e611]:
+                          - text: Lost Relic Carry
+                          - generic [ref=f8e612]: ", for the Excavation Site"
+                          - generic [ref=f8e613]: Starts with Titan Relic
+                    - listitem [ref=f8e614]:
+                      - generic [ref=f8e615] [cursor=pointer]:
+                        - checkbox "A Fine Mess, for Gnomeregan Kernobee, inside the dungeon" [ref=f8e616]
+                        - generic [ref=f8e617]:
+                          - text: A Fine Mess
+                          - generic [ref=f8e618]: ", for Gnomeregan"
+                          - generic [ref=f8e619]: Kernobee, inside the dungeon
+                    - listitem [ref=f8e620]:
+                      - generic [ref=f8e621] [cursor=pointer]:
+                        - checkbox "The Sparklematic 5200!, for Gnomeregan The Sparklematic 5200, inside the dungeon" [ref=f8e622]
+                        - generic [ref=f8e623]:
+                          - text: The Sparklematic 5200!
+                          - generic [ref=f8e624]: ", for Gnomeregan"
+                          - generic [ref=f8e625]: The Sparklematic 5200, inside the dungeon
+                    - listitem [ref=f8e626]:
+                      - generic [ref=f8e627] [cursor=pointer]:
+                        - checkbox "Grime-Encrusted Ring, for Gnomeregan Starts with Grime-Encrusted Ring" [ref=f8e628]
+                        - generic [ref=f8e629]:
+                          - text: Grime-Encrusted Ring
+                          - generic [ref=f8e630]: ", for Gnomeregan"
+                          - generic [ref=f8e631]: Starts with Grime-Encrusted Ring
+                    - listitem [ref=f8e632]:
+                      - generic [ref=f8e633] [cursor=pointer]:
+                        - checkbox "Return of the Ring, for Gnomeregan The Sparklematic 5200, inside the dungeon. After “Grime-Encrusted Ring”" [ref=f8e634]
+                        - generic [ref=f8e635]:
+                          - text: Return of the Ring
+                          - generic [ref=f8e636]: ", for Gnomeregan"
+                          - generic [ref=f8e637]: The Sparklematic 5200, inside the dungeon. After “Grime-Encrusted Ring”
+                    - listitem [ref=f8e638]:
+                      - generic [ref=f8e639] [cursor=pointer]:
+                        - checkbox "Willix the Importer, for Razorfen Kraul Willix the Importer, inside the dungeon" [ref=f8e640]
+                        - generic [ref=f8e641]:
+                          - text: Willix the Importer
+                          - generic [ref=f8e642]: ", for Razorfen Kraul"
+                          - generic [ref=f8e643]: Willix the Importer, inside the dungeon
+                    - listitem [ref=f8e644]:
+                      - generic [ref=f8e645] [cursor=pointer]:
+                        - checkbox "Mortality Wanes, for Razorfen Kraul Heralath Fallowbrook, inside the dungeon" [ref=f8e646]
+                        - generic [ref=f8e647]:
+                          - text: Mortality Wanes
+                          - generic [ref=f8e648]: ", for Razorfen Kraul"
+                          - generic [ref=f8e649]: Heralath Fallowbrook, inside the dungeon
+            - region [ref=f8e650]:
+              - heading "Dungeon by dungeon" [level=2] [ref=f8e652]
+              - paragraph [ref=f8e653]: With your level set, each quest takes the colour the game gives its difficulty, from grey (too easy) to red (too hard), and the quests you cannot take yet are hidden.
+              - generic [ref=f8e654]:
+                - group "Faction" [ref=f8e655]:
+                  - button "Alliance" [pressed] [ref=f8e656] [cursor=pointer]
+                  - button "Horde" [ref=f8e658] [cursor=pointer]
+                - group "Your level" [ref=f8e660]:
+                  - button "One level lower" [ref=f8e662] [cursor=pointer]: ‹
+                  - status [ref=f8e663]: –
+                  - button "One level higher" [ref=f8e664] [cursor=pointer]: ›
+                - paragraph [ref=f8e665]:
+                  - status [ref=f8e666]: 57 quests in 10 dungeons for the Alliance.
+              - region [ref=f8e667]:
+                - generic [ref=f8e670]:
+                  - heading [level=3] [ref=f8e671]:
+                    - link "Hall of Thanes" [ref=f8e672] [cursor=pointer]:
+                      - /url: /dungeons/hall-of-thanes
+                  - paragraph [ref=f8e673]: Levels 13 to 18.
+                  - paragraph [ref=f8e674]: "Alliance: 5 quests, 13,300 XP, about 1 level at level 13."
+                - table [ref=f8e676]:
+                  - rowgroup [ref=f8e677]:
+                    - row [ref=f8e678]:
+                      - columnheader "Quest" [ref=f8e679]
+                      - columnheader "Where to take it" [ref=f8e680]
+                      - columnheader "Experience" [ref=f8e681]
+                      - columnheader "Rewards" [ref=f8e682]
+                  - rowgroup [ref=f8e683]:
+                    - row [ref=f8e684]:
+                      - cell "Old Ironforge Incursion Enter the Hall of Thanes beneath Old Ironforge and claim the Head of Durgen Dirgehammer. Level 16 quest, open from level 9 After “Underground Map” (from the item Dark Iron Map)" [ref=f8e685]:
+                        - link "Old Ironforge Incursion" [ref=f8e686] [cursor=pointer]:
+                          - /url: /quest/96393
+                        - generic [ref=f8e687]: Enter the Hall of Thanes beneath Old Ironforge and claim the Head of Durgen Dirgehammer.
+                        - generic [ref=f8e688]: Level 16 quest, open from level 9
+                        - generic [ref=f8e689]: After “Underground Map” (from the item Dark Iron Map)
+                      - cell "Earthseer Farsen Dun Morogh, 64.8, 58.4" [ref=f8e690]:
+                        - link "Earthseer Farsen" [ref=f8e691] [cursor=pointer]:
+                          - /url: /map/eastern-kingdoms#pin=Earthseer%20Farsen
+                        - generic [ref=f8e692]: Dun Morogh, 64.8, 58.4
+                      - cell "3,200" [ref=f8e693]
+                      - cell "One of Calibrated Blunderbuss Ironforge Greathammer Deepblaze" [ref=f8e694]:
+                        - generic [ref=f8e695]: One of
+                        - list [ref=f8e696]:
+                          - listitem [ref=f8e697]:
+                            - link "Calibrated Blunderbuss" [ref=f8e698]:
+                              - /url: /item/279894
+                          - listitem [ref=f8e699]:
+                            - link "Ironforge Greathammer" [ref=f8e700]:
+                              - /url: /item/279895
+                          - listitem [ref=f8e701]:
+                            - link "Deepblaze" [ref=f8e702]:
+                              - /url: /item/279896
+                    - row [ref=f8e703]:
+                      - cell "The Treaty of Understanding Bring the Treaty of Understanding to King Magni Bronzebeard in Ironforge. Level 16 quest, open from level 9" [ref=f8e704]:
+                        - link "The Treaty of Understanding" [ref=f8e705] [cursor=pointer]:
+                          - /url: /quest/98423
+                        - generic [ref=f8e706]: Bring the Treaty of Understanding to King Magni Bronzebeard in Ironforge.
+                        - generic [ref=f8e707]: Level 16 quest, open from level 9
+                      - cell "Starts with Treaty of Understanding A stone tablet behind the vault door of the last room, where Durgen Dirgehammer is fought. It is easy to walk past on the way to the lever that leads out." [ref=f8e708]:
+                        - text: Starts with Treaty of Understanding
+                        - generic [ref=f8e709]: A stone tablet behind the vault door of the last room, where Durgen Dirgehammer is fought. It is easy to walk past on the way to the lever that leads out.
+                      - cell "2,550" [ref=f8e710]
+                      - cell "Experience and money" [ref=f8e711]
+                    - row [ref=f8e712]:
+                      - cell "The Restless Dead Kill 15 Enraged Apparitions, 10 Tormented Souls and put the spirit of Anvilmar to rest. Level 15 quest, open from level 10" [ref=f8e713]:
+                        - link "The Restless Dead" [ref=f8e714] [cursor=pointer]:
+                          - /url: /quest/96394
+                        - generic [ref=f8e715]: Kill 15 Enraged Apparitions, 10 Tormented Souls and put the spirit of Anvilmar to rest.
+                        - generic [ref=f8e716]: Level 15 quest, open from level 10
+                      - cell "Afadra Dunwall Ironforge, 33.2, 47.8" [ref=f8e717]:
+                        - link "Afadra Dunwall" [ref=f8e718] [cursor=pointer]:
+                          - /url: /map/eastern-kingdoms#pin=Afadra%20Dunwall
+                        - generic [ref=f8e719]: Ironforge, 33.2, 47.8
+                      - cell "2,300" [ref=f8e720]
+                      - cell "One of Dusty Belt Cryptwalker Bracers" [ref=f8e721]:
+                        - generic [ref=f8e722]: One of
+                        - list [ref=f8e723]:
+                          - listitem [ref=f8e724]:
+                            - link "Dusty Belt" [ref=f8e725]:
+                              - /url: /item/279897
+                          - listitem [ref=f8e726]:
+                            - link "Cryptwalker Bracers" [ref=f8e727]:
+                              - /url: /item/280095
+                    - row [ref=f8e728]:
+                      - cell "An Ancient Grudge Put the spirit of Faldrim Anvilmar to rest in the Hall of Thanes. Level 15 quest, open from level 10 (both factions)" [ref=f8e729]:
+                        - link "An Ancient Grudge" [ref=f8e730] [cursor=pointer]:
+                          - /url: /quest/96395
+                        - generic [ref=f8e731]: Put the spirit of Faldrim Anvilmar to rest in the Hall of Thanes.
+                        - generic [ref=f8e732]: Level 15 quest, open from level 10 (both factions)
+                      - cell "Ghostly Attendant Inside the dungeon" [ref=f8e733]:
+                        - text: Ghostly Attendant
+                        - generic [ref=f8e734]: Inside the dungeon
+                      - cell "2,300" [ref=f8e735]
+                      - cell "One of Catacomb Cloak Deepgrave Trousers" [ref=f8e736]:
+                        - generic [ref=f8e737]: One of
+                        - list [ref=f8e738]:
+                          - listitem [ref=f8e739]:
+                            - link "Catacomb Cloak" [ref=f8e740]:
+                              - /url: /item/279899
+                          - listitem [ref=f8e741]:
+                            - link "Deepgrave Trousers" [ref=f8e742]:
+                              - /url: /item/279900
+                    - row [ref=f8e743]:
+                      - cell "Important Heirlooms Collect 8 Dwarven Heirlooms from the Hall of Thanes. Level 15 quest, open from level 10" [ref=f8e744]:
+                        - link "Important Heirlooms" [ref=f8e745] [cursor=pointer]:
+                          - /url: /quest/96403
+                        - generic [ref=f8e746]: Collect 8 Dwarven Heirlooms from the Hall of Thanes.
+                        - generic [ref=f8e747]: Level 15 quest, open from level 10
+                      - cell "Thom Filch Ironforge, 32.4, 44.8" [ref=f8e748]:
+                        - link "Thom Filch" [ref=f8e749] [cursor=pointer]:
+                          - /url: /map/eastern-kingdoms#pin=Thom%20Filch
+                        - generic [ref=f8e750]: Ironforge, 32.4, 44.8
+                      - cell "2,950" [ref=f8e751]
+                      - cell "One of Dwarven Tome Tomb Robber's Gloves" [ref=f8e752]:
+                        - generic [ref=f8e753]: One of
+                        - list [ref=f8e754]:
+                          - listitem [ref=f8e755]:
+                            - link "Dwarven Tome" [ref=f8e756]:
+                              - /url: /item/279898
+                          - listitem [ref=f8e757]:
+                            - link "Tomb Robber's Gloves" [ref=f8e758]:
+                              - /url: /item/280096
+              - region [ref=f8e759]:
+                - generic [ref=f8e762]:
+                  - heading [level=3] [ref=f8e763]:
+                    - link "Ruins of Lordaeron" [ref=f8e764] [cursor=pointer]:
+                      - /url: /dungeons/ruins-of-lordaeron
+                  - paragraph [ref=f8e765]: Levels 15 to 20.
+                  - paragraph [ref=f8e766]: "Alliance: 4 quests, 22,500 XP, about 1.5 levels at level 15."
+                - table [ref=f8e768]:
+                  - rowgroup [ref=f8e769]:
+                    - row [ref=f8e770]:
+                      - columnheader "Quest" [ref=f8e771]
+                      - columnheader "Where to take it" [ref=f8e772]
+                      - columnheader "Experience" [ref=f8e773]
+                      - columnheader "Rewards" [ref=f8e774]
+                  - rowgroup [ref=f8e775]:
+                    - row [ref=f8e776]:
+                      - cell "Remember That I Love You Bring the Blood-Stained Letter to Orphan Matron Nightingale in Stormwind City. Level 22 quest, open from level 15" [ref=f8e777]:
+                        - link "Remember That I Love You" [ref=f8e778] [cursor=pointer]:
+                          - /url: /quest/92415
+                        - generic [ref=f8e779]: Bring the Blood-Stained Letter to Orphan Matron Nightingale in Stormwind City.
+                        - generic [ref=f8e780]: Level 22 quest, open from level 15
+                      - cell "Starts with Blood-Stained Letter Found in the dungeon" [ref=f8e781]:
+                        - text: Starts with Blood-Stained Letter
+                        - generic [ref=f8e782]: Found in the dungeon
+                      - cell "6,200" [ref=f8e783]
+                      - cell [ref=f8e784]:
+                        - list [ref=f8e785]:
+                          - listitem [ref=f8e786]:
+                            - link "Tarnished Locket" [ref=f8e787]:
+                              - /url: /item/279870
+                    - row [ref=f8e788]:
+                      - cell "Abominable Creatures Collect the Head of the Baron in the Ruins of Lordaeron and bring it back to Captain Truman. Level 21 quest, open from level 16" [ref=f8e789]:
+                        - link "Abominable Creatures" [ref=f8e790] [cursor=pointer]:
+                          - /url: /quest/95250
+                        - generic [ref=f8e791]: Collect the Head of the Baron in the Ruins of Lordaeron and bring it back to Captain Truman.
+                        - generic [ref=f8e792]: Level 21 quest, open from level 16
+                      - cell "Captain Truman Inside the dungeon He stands just inside the entrance." [ref=f8e793]:
+                        - text: Captain Truman
+                        - generic [ref=f8e794]: Inside the dungeon
+                        - generic [ref=f8e795]: He stands just inside the entrance.
+                      - cell "3,900" [ref=f8e796]
+                      - cell "One of Monstrous Cleaver Grave Shroud Slain Baron's Signet" [ref=f8e797]:
+                        - generic [ref=f8e798]: One of
+                        - list [ref=f8e799]:
+                          - listitem [ref=f8e800]:
+                            - link "Monstrous Cleaver" [ref=f8e801]:
+                              - /url: /item/279864
+                          - listitem [ref=f8e802]:
+                            - link "Grave Shroud" [ref=f8e803]:
+                              - /url: /item/279865
+                          - listitem [ref=f8e804]:
+                            - link "Slain Baron's Signet" [ref=f8e805]:
+                              - /url: /item/279867
+                    - row [ref=f8e806]:
+                      - cell "Crest of Lordaeron Return the Crest of Lordaeron to Lady Dena Kennedy in Stormwind City. Level 22 quest, open from level 16" [ref=f8e807]:
+                        - link "Crest of Lordaeron" [ref=f8e808] [cursor=pointer]:
+                          - /url: /quest/95189
+                        - generic [ref=f8e809]: Return the Crest of Lordaeron to Lady Dena Kennedy in Stormwind City.
+                        - generic [ref=f8e810]: Level 22 quest, open from level 16
+                      - cell "Starts with Crest of Lordaeron Look for it in a tower near Bjork, on the floor, or at the far end of the dungeon past Bjork, hung on the wall of the small temple. It is not always in the same place." [ref=f8e811]:
+                        - text: Starts with Crest of Lordaeron
+                        - generic [ref=f8e812]: Look for it in a tower near Bjork, on the floor, or at the far end of the dungeon past Bjork, hung on the wall of the small temple. It is not always in the same place.
+                      - cell "6,200" [ref=f8e813]
+                      - cell [ref=f8e814]:
+                        - list [ref=f8e815]:
+                          - listitem [ref=f8e816]:
+                            - link "Small Sack of Gems" [ref=f8e817]:
+                              - /url: /item/280567
+                    - row [ref=f8e818]:
+                      - cell "Bloodied Insignia Collect 10 Bloodied Insignias and take them to General Marcus Jonathan in Stormwind City. Level 22 quest, open from level 16" [ref=f8e819]:
+                        - link "Bloodied Insignia" [ref=f8e820] [cursor=pointer]:
+                          - /url: /quest/95195
+                        - generic [ref=f8e821]: Collect 10 Bloodied Insignias and take them to General Marcus Jonathan in Stormwind City.
+                        - generic [ref=f8e822]: Level 22 quest, open from level 16
+                      - cell "Starts with Bloodied Insignia Found in the dungeon" [ref=f8e823]:
+                        - text: Starts with Bloodied Insignia
+                        - generic [ref=f8e824]: Found in the dungeon
+                      - cell "6,200" [ref=f8e825]
+                      - cell "One of Duty Bound Leggings Remembrance Armor" [ref=f8e826]:
+                        - generic [ref=f8e827]: One of
+                        - list [ref=f8e828]:
+                          - listitem [ref=f8e829]:
+                            - link "Duty Bound Leggings" [ref=f8e830]:
+                              - /url: /item/279868
+                          - listitem [ref=f8e831]:
+                            - link "Remembrance Armor" [ref=f8e832]:
+                              - /url: /item/279869
+              - region [ref=f8e833]:
+                - generic [ref=f8e836]:
+                  - heading [level=3] [ref=f8e837]:
+                    - link "Wailing Caverns" [ref=f8e838] [cursor=pointer]:
+                      - /url: /dungeons/wailing-caverns
+                  - paragraph [ref=f8e839]: Levels 17 to 24.
+                  - paragraph [ref=f8e840]: "Alliance: 5 quests, 17,550 XP, about 1 level at level 17."
+                - table [ref=f8e842]:
+                  - rowgroup [ref=f8e843]:
+                    - row [ref=f8e844]:
+                      - columnheader "Quest" [ref=f8e845]
+                      - columnheader "Where to take it" [ref=f8e846]
+                      - columnheader "Experience" [ref=f8e847]
+                      - columnheader "Rewards" [ref=f8e848]
+                  - rowgroup [ref=f8e849]:
+                    - row [ref=f8e850]:
+                      - cell "Deviate Hides Nalpak in the Wailing Caverns wants 20 Deviate Hides. Level 17 quest, open from level 13 (both factions)" [ref=f8e851]:
+                        - link "Deviate Hides" [ref=f8e852] [cursor=pointer]:
+                          - /url: /quest/1486
+                        - generic [ref=f8e853]: Nalpak in the Wailing Caverns wants 20 Deviate Hides.
+                        - generic [ref=f8e854]: Level 17 quest, open from level 13 (both factions)
+                      - cell "Nalpak The Barrens" [ref=f8e855]:
+                        - link "Nalpak" [ref=f8e856] [cursor=pointer]:
+                          - /url: /map/kalimdor#pin=Nalpak
+                        - generic [ref=f8e857]: The Barrens
+                      - cell "3,100 1,600 in Classic" [ref=f8e858]:
+                        - text: 3,100
+                        - generic [ref=f8e859]: 1,600 in Classic
+                      - cell [ref=f8e860]:
+                        - list [ref=f8e861]:
+                          - listitem [ref=f8e862]:
+                            - link "Deviate Hide Pack" [ref=f8e863]:
+                              - /url: /item/918
+                          - listitem [ref=f8e864]:
+                            - link "Slick Deviate Leggings" [ref=f8e865]:
+                              - /url: /item/6480
+                    - row [ref=f8e866]:
+                      - cell "Smart Drinks Bring 6 portions of Wailing Essence to Mebok Mizzyrix in Ratchet. Level 18 quest, open from level 13 (both factions) After “Raptor Horns” (Mebok Mizzyrix, The Barrens)" [ref=f8e867]:
+                        - link "Smart Drinks" [ref=f8e868] [cursor=pointer]:
+                          - /url: /quest/1491
+                        - generic [ref=f8e869]: Bring 6 portions of Wailing Essence to Mebok Mizzyrix in Ratchet.
+                        - generic [ref=f8e870]: Level 18 quest, open from level 13 (both factions)
+                        - generic [ref=f8e871]: After “Raptor Horns” (Mebok Mizzyrix, The Barrens)
+                      - cell "Mebok Mizzyrix The Barrens, 62.4, 37.6" [ref=f8e872]:
+                        - link "Mebok Mizzyrix" [ref=f8e873] [cursor=pointer]:
+                          - /url: /map/kalimdor#pin=Mebok%20Mizzyrix
+                        - generic [ref=f8e874]: The Barrens, 62.4, 37.6
+                      - cell "2,650 1,350 in Classic" [ref=f8e875]:
+                        - text: 2,650
+                        - generic [ref=f8e876]: 1,350 in Classic
+                      - cell "Experience and money" [ref=f8e877]
+                    - row [ref=f8e878]:
+                      - cell "Trouble at the Docks Crane Operator Bigglefuzz in Ratchet wants you to retrieve the bottle of 99-Year-Old Port from Mad Magglish who is hiding in the Wailing Caverns. Level 18 quest, open from level 14 (both factions)" [ref=f8e879]:
+                        - link "Trouble at the Docks" [ref=f8e880] [cursor=pointer]:
+                          - /url: /quest/959
+                        - generic [ref=f8e881]: Crane Operator Bigglefuzz in Ratchet wants you to retrieve the bottle of 99-Year-Old Port from Mad Magglish who is hiding in the Wailing Caverns.
+                        - generic [ref=f8e882]: Level 18 quest, open from level 14 (both factions)
+                      - cell "Crane Operator Bigglefuzz The Barrens, 63.0, 37.4" [ref=f8e883]:
+                        - link "Crane Operator Bigglefuzz" [ref=f8e884] [cursor=pointer]:
+                          - /url: /map/kalimdor#pin=Crane%20Operator%20Bigglefuzz
+                        - generic [ref=f8e885]: The Barrens, 63.0, 37.4
+                      - cell "2,650 1,350 in Classic" [ref=f8e886]:
+                        - text: 2,650
+                        - generic [ref=f8e887]: 1,350 in Classic
+                      - cell "Experience and money" [ref=f8e888]
+                    - row [ref=f8e889]:
+                      - cell "Deviate Eradication Ebru in the Wailing Caverns wants you to kill 7 Deviate Ravagers, 7 Deviate Vipers, 7 Deviate Shamblers and 7 Deviate Dreadfangs. Level 21 quest, open from level 15 (both factions)" [ref=f8e890]:
+                        - link "Deviate Eradication" [ref=f8e891] [cursor=pointer]:
+                          - /url: /quest/1487
+                        - generic [ref=f8e892]: Ebru in the Wailing Caverns wants you to kill 7 Deviate Ravagers, 7 Deviate Vipers, 7 Deviate Shamblers and 7 Deviate Dreadfangs.
+                        - generic [ref=f8e893]: Level 21 quest, open from level 15 (both factions)
+                      - cell "Ebru The Barrens" [ref=f8e894]:
+                        - link "Ebru" [ref=f8e895] [cursor=pointer]:
+                          - /url: /map/kalimdor#pin=Ebru
+                        - generic [ref=f8e896]: The Barrens
+                      - cell "4,000 2,050 in Classic" [ref=f8e897]:
+                        - text: 4,000
+                        - generic [ref=f8e898]: 2,050 in Classic
+                      - 'cell "One of Pattern: Deviate Scale Belt Sizzle Stick Dagmire Gauntlets" [ref=f8e899]':
+                        - generic [ref=f8e900]: One of
+                        - list [ref=f8e901]:
+                          - listitem [ref=f8e902]:
+                            - 'link "Pattern: Deviate Scale Belt" [ref=f8e903]':
+                              - /url: /item/6476
+                          - listitem [ref=f8e904]:
+                            - link "Sizzle Stick" [ref=f8e905]:
+                              - /url: /item/8071
+                          - listitem [ref=f8e906]:
+                            - link "Dagmire Gauntlets" [ref=f8e907]:
+                              - /url: /item/6481
+                    - row [ref=f8e908]:
+                      - cell "The Glowing Shard Travel to Ratchet to find someone that can tell you more about the glowing shard. Then, deliver the shard as you are directed. Level 26 quest, open from level 15 (both factions) Then “In Nightmares”" [ref=f8e909]:
+                        - link "The Glowing Shard" [ref=f8e910] [cursor=pointer]:
+                          - /url: /quest/6981
+                        - generic [ref=f8e911]: Travel to Ratchet to find someone that can tell you more about the glowing shard. Then, deliver the shard as you are directed.
+                        - generic [ref=f8e912]: Level 26 quest, open from level 15 (both factions)
+                        - generic [ref=f8e913]: Then “In Nightmares”
+                      - cell "Starts with Glowing Shard Dropped by Mutanus the Devourer" [ref=f8e914]:
+                        - text: Starts with Glowing Shard
+                        - generic [ref=f8e915]: Dropped by Mutanus the Devourer
+                      - cell "5,150 2,650 in Classic" [ref=f8e916]:
+                        - text: 5,150
+                        - generic [ref=f8e917]: 2,650 in Classic
+                      - cell "Experience and money" [ref=f8e918]
+              - region [ref=f8e919]:
+                - generic [ref=f8e922]:
+                  - heading [level=3] [ref=f8e923]:
+                    - link "The Deadmines" [ref=f8e924] [cursor=pointer]:
+                      - /url: /dungeons/the-deadmines
+                  - paragraph [ref=f8e925]: Levels 17 to 26.
+                  - paragraph [ref=f8e926]: "Alliance: 7 quests, 20,500 XP, about 1 level at level 17."
+                - table [ref=f8e928]:
+                  - rowgroup [ref=f8e929]:
+                    - row [ref=f8e930]:
+                      - columnheader "Quest" [ref=f8e931]
+                      - columnheader "Where to take it" [ref=f8e932]
+                      - columnheader "Experience" [ref=f8e933]
+                      - columnheader "Rewards" [ref=f8e934]
+                  - rowgroup [ref=f8e935]:
+                    - row [ref=f8e936]:
+                      - cell "Destruction in Deadmines Find the forge hidden in the Deadmines, and plant the Extra-Destructive Explosives nearby. Then, meet up with Alba Fairmoon at the Deadmines exit. Level 18 quest, open from level 9 After “Explosive Consultation” (Sprite Jumpsprocket, Stormwind City) Then a later step of the same name" [ref=f8e937]:
+                        - link "Destruction in Deadmines" [ref=f8e938] [cursor=pointer]:
+                          - /url: /quest/92753
+                        - generic [ref=f8e939]: Find the forge hidden in the Deadmines, and plant the Extra-Destructive Explosives nearby. Then, meet up with Alba Fairmoon at the Deadmines exit.
+                        - generic [ref=f8e940]: Level 18 quest, open from level 9
+                        - generic [ref=f8e941]: After “Explosive Consultation” (Sprite Jumpsprocket, Stormwind City)
+                        - generic [ref=f8e942]: Then a later step of the same name
+                      - 'cell "Alba Fairmoon Westfall, 52.4, 53.0 Alba Fairmoon gives it at Sentinel Hill, at the end of her chain: Testing the Wells, Murloc Gills, The State of the Mines, Moonbrook Espionage, then a trip to Stormwind for the explosives (ten Coarse Dynamite for Sprite Jumpsprocket). The forge is in the foundry, where Gilnid is fought. She then waits at the dungeon''s exit with the detonator." [ref=f8e943]':
+                        - link "Alba Fairmoon" [ref=f8e944] [cursor=pointer]:
+                          - /url: /map/eastern-kingdoms#pin=Alba%20Fairmoon
+                        - generic [ref=f8e945]: Westfall, 52.4, 53.0
+                        - generic [ref=f8e946]: "Alba Fairmoon gives it at Sentinel Hill, at the end of her chain: Testing the Wells, Murloc Gills, The State of the Mines, Moonbrook Espionage, then a trip to Stormwind for the explosives (ten Coarse Dynamite for Sprite Jumpsprocket). The forge is in the foundry, where Gilnid is fought. She then waits at the dungeon's exit with the detonator."
+                      - cell "2,700" [ref=f8e947]
+                      - cell "Experience and money" [ref=f8e948]
+                    - row [ref=f8e949]:
+                      - cell "Red Silk Bandanas Scout Riell at the Sentinel Hill Tower wants you to bring her 10 Red Silk Bandanas. Level 17 quest, open from level 14 After “The Defias Brotherhood” (The Defias Traitor, Westfall) Step 7 of a chain that starts with “The Defias Brotherhood” (Gryan Stoutmantle, Westfall)" [ref=f8e950]:
+                        - link "Red Silk Bandanas" [ref=f8e951] [cursor=pointer]:
+                          - /url: /quest/214
+                        - generic [ref=f8e952]: Scout Riell at the Sentinel Hill Tower wants you to bring her 10 Red Silk Bandanas.
+                        - generic [ref=f8e953]: Level 17 quest, open from level 14
+                        - generic [ref=f8e954]: After “The Defias Brotherhood” (The Defias Traitor, Westfall)
+                        - generic [ref=f8e955]: Step 7 of a chain that starts with “The Defias Brotherhood” (Gryan Stoutmantle, Westfall)
+                      - cell "Scout Riell Westfall, 56.6, 47.4" [ref=f8e956]:
+                        - link "Scout Riell" [ref=f8e957] [cursor=pointer]:
+                          - /url: /map/eastern-kingdoms#pin=Scout%20Riell
+                        - generic [ref=f8e958]: Westfall, 56.6, 47.4
+                      - cell "2,950 1,250 in Classic" [ref=f8e959]:
+                        - text: 2,950
+                        - generic [ref=f8e960]: 1,250 in Classic
+                      - cell "One of Solid Shortblade Scrimshaw Dagger Piercing Axe Monastic Hammer" [ref=f8e961]:
+                        - generic [ref=f8e962]: One of
+                        - list [ref=f8e963]:
+                          - listitem [ref=f8e964]:
+                            - link "Solid Shortblade" [ref=f8e965]:
+                              - /url: /item/2074
+                          - listitem [ref=f8e966]:
+                            - link "Scrimshaw Dagger" [ref=f8e967]:
+                              - /url: /item/2089
+                          - listitem [ref=f8e968]:
+                            - link "Piercing Axe" [ref=f8e969]:
+                              - /url: /item/6094
+                          - listitem [ref=f8e970]:
+                            - link "Monastic Hammer" [ref=f8e971]:
+                              - /url: /item/270005
+                    - row [ref=f8e972]:
+                      - cell "Collecting Memories Retrieve 4 Miners' Union Cards and return them to Wilder Thistlenettle in Stormwind. Level 18 quest, open from level 14" [ref=f8e973]:
+                        - link "Collecting Memories" [ref=f8e974] [cursor=pointer]:
+                          - /url: /quest/168
+                        - generic [ref=f8e975]: Retrieve 4 Miners' Union Cards and return them to Wilder Thistlenettle in Stormwind.
+                        - generic [ref=f8e976]: Level 18 quest, open from level 14
+                      - cell "Wilder Thistlenettle Stormwind City, 65.2, 21.2" [ref=f8e977]:
+                        - link "Wilder Thistlenettle" [ref=f8e978] [cursor=pointer]:
+                          - /url: /map/eastern-kingdoms#pin=Wilder%20Thistlenettle
+                        - generic [ref=f8e979]: Stormwind City, 65.2, 21.2
+                      - cell "1,350 No dungeon bonus" [ref=f8e980]:
+                        - text: 1,350
+                        - generic [ref=f8e981]: No dungeon bonus
+                      - cell "One of Tunneler's Boots Dusty Mining Gloves Worn Miner's Waistcord" [ref=f8e982]:
+                        - generic [ref=f8e983]: One of
+                        - list [ref=f8e984]:
+                          - listitem [ref=f8e985]:
+                            - link "Tunneler's Boots" [ref=f8e986]:
+                              - /url: /item/2037
+                          - listitem [ref=f8e987]:
+                            - link "Dusty Mining Gloves" [ref=f8e988]:
+                              - /url: /item/2036
+                          - listitem [ref=f8e989]:
+                            - link "Worn Miner's Waistcord" [ref=f8e990]:
+                              - /url: /item/270007
+                    - row [ref=f8e991]:
+                      - cell "The Defias Brotherhood Kill Edwin VanCleef and bring his head to Gryan Stoutmantle. Level 22 quest, open from level 14 After an earlier step of the same name (The Defias Traitor, Westfall)" [ref=f8e992]:
+                        - link "The Defias Brotherhood" [ref=f8e993] [cursor=pointer]:
+                          - /url: /quest/166
+                        - generic [ref=f8e994]: Kill Edwin VanCleef and bring his head to Gryan Stoutmantle.
+                        - generic [ref=f8e995]: Level 22 quest, open from level 14
+                        - generic [ref=f8e996]: After an earlier step of the same name (The Defias Traitor, Westfall)
+                      - cell "Gryan Stoutmantle Westfall, 56.2, 47.4" [ref=f8e997]:
+                        - link "Gryan Stoutmantle" [ref=f8e998] [cursor=pointer]:
+                          - /url: /map/eastern-kingdoms#pin=Gryan%20Stoutmantle
+                        - generic [ref=f8e999]: Westfall, 56.2, 47.4
+                      - cell "6,200 2,600 in Classic" [ref=f8e1000]:
+                        - text: 6,200
+                        - generic [ref=f8e1001]: 2,600 in Classic
+                      - cell "One of Chausses of Westfall Tunic of Westfall Staff of Westfall" [ref=f8e1002]:
+                        - generic [ref=f8e1003]: One of
+                        - list [ref=f8e1004]:
+                          - listitem [ref=f8e1005]:
+                            - link "Chausses of Westfall" [ref=f8e1006]:
+                              - /url: /item/6087
+                          - listitem [ref=f8e1007]:
+                            - link "Tunic of Westfall" [ref=f8e1008]:
+                              - /url: /item/2041
+                          - listitem [ref=f8e1009]:
+                            - link "Staff of Westfall" [ref=f8e1010]:
+                              - /url: /item/2042
+                    - row [ref=f8e1011]:
+                      - cell "Oh Brother. . . Bring Foreman Thistlenettle's Explorers' League Badge to Wilder Thistlenettle in Stormwind. Level 20 quest, open from level 15" [ref=f8e1012]:
+                        - link "Oh Brother. . ." [ref=f8e1013] [cursor=pointer]:
+                          - /url: /quest/167
+                        - generic [ref=f8e1014]: Bring Foreman Thistlenettle's Explorers' League Badge to Wilder Thistlenettle in Stormwind.
+                        - generic [ref=f8e1015]: Level 20 quest, open from level 15
+                      - cell "Wilder Thistlenettle Stormwind City, 65.2, 21.2" [ref=f8e1016]:
+                        - link "Wilder Thistlenettle" [ref=f8e1017] [cursor=pointer]:
+                          - /url: /map/eastern-kingdoms#pin=Wilder%20Thistlenettle
+                        - generic [ref=f8e1018]: Stormwind City, 65.2, 21.2
+                      - cell "1,550 No dungeon bonus" [ref=f8e1019]:
+                        - text: 1,550
+                        - generic [ref=f8e1020]: No dungeon bonus
+                      - cell "One of Miner's Revenge Miner's Workgloves Miner's Workboots" [ref=f8e1021]:
+                        - generic [ref=f8e1022]: One of
+                        - list [ref=f8e1023]:
+                          - listitem [ref=f8e1024]:
+                            - link "Miner's Revenge" [ref=f8e1025]:
+                              - /url: /item/1893
+                          - listitem [ref=f8e1026]:
+                            - link "Miner's Workgloves" [ref=f8e1027]:
+                              - /url: /item/270012
+                          - listitem [ref=f8e1028]:
+                            - link "Miner's Workboots" [ref=f8e1029]:
+                              - /url: /item/270013
+                    - row [ref=f8e1030]:
+                      - 'cell "Underground Assault Retrieve the Gnoam Sprecklesprocket from the Deadmines and return it to Shoni the Shilent in Stormwind. Level 20 quest, open from level 15 Optional: “Speak with Shoni” (Gnoarn, Ironforge) leads to it" [ref=f8e1031]':
+                        - link "Underground Assault" [ref=f8e1032] [cursor=pointer]:
+                          - /url: /quest/2040
+                        - generic [ref=f8e1033]: Retrieve the Gnoam Sprecklesprocket from the Deadmines and return it to Shoni the Shilent in Stormwind.
+                        - generic [ref=f8e1034]: Level 20 quest, open from level 15
+                        - generic [ref=f8e1035]: "Optional: “Speak with Shoni” (Gnoarn, Ironforge) leads to it"
+                      - cell "Shoni the Shilent Stormwind City, 55.4, 12.4" [ref=f8e1036]:
+                        - link "Shoni the Shilent" [ref=f8e1037] [cursor=pointer]:
+                          - /url: /map/eastern-kingdoms#pin=Shoni%20the%20Shilent
+                        - generic [ref=f8e1038]: Stormwind City, 55.4, 12.4
+                      - cell "3,700 1,550 in Classic" [ref=f8e1039]:
+                        - text: 3,700
+                        - generic [ref=f8e1040]: 1,550 in Classic
+                      - cell "One of Polar Gauntlets Sable Wand Bravo's Armbands Dreamer's Leggings" [ref=f8e1041]:
+                        - generic [ref=f8e1042]: One of
+                        - list [ref=f8e1043]:
+                          - listitem [ref=f8e1044]:
+                            - link "Polar Gauntlets" [ref=f8e1045]:
+                              - /url: /item/7606
+                          - listitem [ref=f8e1046]:
+                            - link "Sable Wand" [ref=f8e1047]:
+                              - /url: /item/7607
+                          - listitem [ref=f8e1048]:
+                            - link "Bravo's Armbands" [ref=f8e1049]:
+                              - /url: /item/270015
+                          - listitem [ref=f8e1050]:
+                            - link "Dreamer's Leggings" [ref=f8e1051]:
+                              - /url: /item/270016
+                    - row [ref=f8e1052]:
+                      - cell "The Unsent Letter Deliver the Letter to the City Architect to Baros Alexston in Stormwind. Level 22 quest, open from level 16" [ref=f8e1053]:
+                        - link "The Unsent Letter" [ref=f8e1054] [cursor=pointer]:
+                          - /url: /quest/373
+                        - generic [ref=f8e1055]: Deliver the Letter to the City Architect to Baros Alexston in Stormwind.
+                        - generic [ref=f8e1056]: Level 22 quest, open from level 16
+                      - cell "Starts with An Unsent Letter Dropped by Edwin VanCleef" [ref=f8e1057]:
+                        - text: Starts with An Unsent Letter
+                        - generic [ref=f8e1058]: Dropped by Edwin VanCleef
+                      - cell "2,050 875 in Classic" [ref=f8e1059]:
+                        - text: 2,050
+                        - generic [ref=f8e1060]: 875 in Classic
+                      - cell "Experience and money" [ref=f8e1061]
+                - generic [ref=f8e1062]:
+                  - heading "For a class quest" [level=4] [ref=f8e1063]
+                  - list [ref=f8e1064]:
+                    - listitem [ref=f8e1065]:
+                      - generic [ref=f8e1066]: Paladin
+                      - text: "(Alliance):"
+                      - link "Whitestone Oak Lumber" [ref=f8e1067]:
+                        - /url: /item/6994
+                      - text: for
+                      - link "“The Test of Righteousness”" [ref=f8e1068] [cursor=pointer]:
+                        - /url: /quest/1654
+              - region [ref=f8e1069]:
+                - generic [ref=f8e1072]:
+                  - heading [level=3] [ref=f8e1073]:
+                    - link "Blackfathom Deeps" [ref=f8e1074] [cursor=pointer]:
+                      - /url: /dungeons/blackfathom-deeps
+                  - paragraph [ref=f8e1075]: Levels 24 to 32.
+                  - paragraph [ref=f8e1076]: "Alliance: 4 quests, 22,850 XP, about 0.5 levels at level 24."
+                - table [ref=f8e1078]:
+                  - rowgroup [ref=f8e1079]:
+                    - row [ref=f8e1080]:
+                      - columnheader "Quest" [ref=f8e1081]
+                      - columnheader "Where to take it" [ref=f8e1082]
+                      - columnheader "Experience" [ref=f8e1083]
+                      - columnheader "Rewards" [ref=f8e1084]
+                  - rowgroup [ref=f8e1085]:
+                    - row [ref=f8e1086]:
+                      - cell "Knowledge in the Deeps Bring the Lorgalis Manuscript to Gerrig Bonegrip in the Forlorn Cavern in Ironforge. Level 23 quest, open from level 10" [ref=f8e1087]:
+                        - link "Knowledge in the Deeps" [ref=f8e1088] [cursor=pointer]:
+                          - /url: /quest/971
+                        - generic [ref=f8e1089]: Bring the Lorgalis Manuscript to Gerrig Bonegrip in the Forlorn Cavern in Ironforge.
+                        - generic [ref=f8e1090]: Level 23 quest, open from level 10
+                      - cell "Gerrig Bonegrip Ironforge, 50.2, 7.0" [ref=f8e1091]:
+                        - link "Gerrig Bonegrip" [ref=f8e1092] [cursor=pointer]:
+                          - /url: /map/eastern-kingdoms#pin=Gerrig%20Bonegrip
+                        - generic [ref=f8e1093]: Ironforge, 50.2, 7.0
+                      - cell "6,550 2,750 in Classic" [ref=f8e1094]:
+                        - text: 6,550
+                        - generic [ref=f8e1095]: 2,750 in Classic
+                      - cell [ref=f8e1096]:
+                        - list [ref=f8e1097]:
+                          - listitem [ref=f8e1098]:
+                            - link "Sustaining Ring" [ref=f8e1099]:
+                              - /url: /item/6743
+                    - row [ref=f8e1100]:
+                      - 'cell "Researching the Corruption Gershala Nightwhisper in Auberdine wants 8 Corrupt Brain stems. Level 24 quest, open from level 18 Optional: “The Corruption Abroad” (Argos Nightwhisper, Stormwind City) leads to it" [ref=f8e1101]':
+                        - link "Researching the Corruption" [ref=f8e1102] [cursor=pointer]:
+                          - /url: /quest/1275
+                        - generic [ref=f8e1103]: Gershala Nightwhisper in Auberdine wants 8 Corrupt Brain stems.
+                        - generic [ref=f8e1104]: Level 24 quest, open from level 18
+                        - generic [ref=f8e1105]: "Optional: “The Corruption Abroad” (Argos Nightwhisper, Stormwind City) leads to it"
+                      - cell "Gershala Nightwhisper Darkshore, 38.4, 43.0" [ref=f8e1106]:
+                        - link "Gershala Nightwhisper" [ref=f8e1107] [cursor=pointer]:
+                          - /url: /map/kalimdor#pin=Gershala%20Nightwhisper
+                        - generic [ref=f8e1108]: Darkshore, 38.4, 43.0
+                      - cell "2,400 No dungeon bonus" [ref=f8e1109]:
+                        - text: 2,400
+                        - generic [ref=f8e1110]: No dungeon bonus
+                      - cell "One of Beetle Clasps Prelacy Cape Staghide Armguards" [ref=f8e1111]:
+                        - generic [ref=f8e1112]: One of
+                        - list [ref=f8e1113]:
+                          - listitem [ref=f8e1114]:
+                            - link "Beetle Clasps" [ref=f8e1115]:
+                              - /url: /item/7003
+                          - listitem [ref=f8e1116]:
+                            - link "Prelacy Cape" [ref=f8e1117]:
+                              - /url: /item/7004
+                          - listitem [ref=f8e1118]:
+                            - link "Staghide Armguards" [ref=f8e1119]:
+                              - /url: /item/270021
+                    - row [ref=f8e1120]:
+                      - cell "Blackfathom Villainy Bring the head of Twilight Lord Kelris to Dawnwatcher Selgorm in Darnassus. Level 27 quest, open from level 18 After “In Search of Thaelrid” (Dawnwatcher Shaedlass, Darnassus)" [ref=f8e1121]:
+                        - link "Blackfathom Villainy" [ref=f8e1122] [cursor=pointer]:
+                          - /url: /quest/1200
+                        - generic [ref=f8e1123]: Bring the head of Twilight Lord Kelris to Dawnwatcher Selgorm in Darnassus.
+                        - generic [ref=f8e1124]: Level 27 quest, open from level 18
+                        - generic [ref=f8e1125]: After “In Search of Thaelrid” (Dawnwatcher Shaedlass, Darnassus)
+                      - cell "Argent Guard Thaelrid Inside the dungeon" [ref=f8e1126]:
+                        - text: Argent Guard Thaelrid
+                        - generic [ref=f8e1127]: Inside the dungeon
+                      - cell "7,850 1,700 in Classic" [ref=f8e1128]:
+                        - text: 7,850
+                        - generic [ref=f8e1129]: 1,700 in Classic
+                      - cell "One of Gravestone Scepter Arctic Buckler Dark Ritual Leggings Cultist's Armguards" [ref=f8e1130]:
+                        - generic [ref=f8e1131]: One of
+                        - list [ref=f8e1132]:
+                          - listitem [ref=f8e1133]:
+                            - link "Gravestone Scepter" [ref=f8e1134]:
+                              - /url: /item/7001
+                          - listitem [ref=f8e1135]:
+                            - link "Arctic Buckler" [ref=f8e1136]:
+                              - /url: /item/7002
+                          - listitem [ref=f8e1137]:
+                            - link "Dark Ritual Leggings" [ref=f8e1138]:
+                              - /url: /item/270031
+                          - listitem [ref=f8e1139]:
+                            - link "Cultist's Armguards" [ref=f8e1140]:
+                              - /url: /item/270032
+                    - row [ref=f8e1141]:
+                      - cell "Twilight Falls Bring 10 Twilight Pendants to Argent Guard Manados in Darnassus. Level 25 quest, open from level 20" [ref=f8e1142]:
+                        - link "Twilight Falls" [ref=f8e1143] [cursor=pointer]:
+                          - /url: /quest/1199
+                        - generic [ref=f8e1144]: Bring 10 Twilight Pendants to Argent Guard Manados in Darnassus.
+                        - generic [ref=f8e1145]: Level 25 quest, open from level 20
+                      - cell "Argent Guard Manados Darnassus, 55.2, 23.4" [ref=f8e1146]:
+                        - link "Argent Guard Manados" [ref=f8e1147] [cursor=pointer]:
+                          - /url: /map/kalimdor#pin=Argent%20Guard%20Manados
+                        - generic [ref=f8e1148]: Darnassus, 55.2, 23.4
+                      - cell "6,050 2,550 in Classic" [ref=f8e1149]:
+                        - text: 6,050
+                        - generic [ref=f8e1150]: 2,550 in Classic
+                      - cell [ref=f8e1151]:
+                        - list [ref=f8e1152]:
+                          - listitem [ref=f8e1153]:
+                            - link "Nimbus Boots" [ref=f8e1154]:
+                              - /url: /item/6998
+                          - listitem [ref=f8e1155]:
+                            - link "Heartwood Girdle" [ref=f8e1156]:
+                              - /url: /item/7000
+                          - listitem [ref=f8e1157]:
+                            - link "Silvered Gauntlets" [ref=f8e1158]:
+                              - /url: /item/270025
+                - generic [ref=f8e1159]:
+                  - heading "For a class quest" [level=4] [ref=f8e1160]
+                  - list [ref=f8e1161]:
+                    - listitem [ref=f8e1162]:
+                      - generic [ref=f8e1163]: Paladin
+                      - text: "(Alliance):"
+                      - link "Corrupted Kor Gem" [ref=f8e1164]:
+                        - /url: /item/6995
+                      - text: for
+                      - link "“Seeking the Kor Gem”" [ref=f8e1165] [cursor=pointer]:
+                        - /url: /quest/1442
+                    - listitem [ref=f8e1166]:
+                      - generic [ref=f8e1167]: Warlock
+                      - text: ":"
+                      - link "Soran'ruk Fragment" [ref=f8e1168]:
+                        - /url: /item/6914
+                      - text: for
+                      - link "“The Orb of Soran'ruk”" [ref=f8e1169] [cursor=pointer]:
+                        - /url: /quest/1740
+              - region [ref=f8e1170]:
+                - generic [ref=f8e1173]:
+                  - heading [level=3] [ref=f8e1174]:
+                    - link "The Stockade" [ref=f8e1175] [cursor=pointer]:
+                      - /url: /dungeons/the-stockade
+                  - paragraph [ref=f8e1176]: Levels 24 to 32.
+                  - paragraph [ref=f8e1177]: "Alliance: 6 quests, 24,650 XP for the 5 whose experience is known."
+                - table [ref=f8e1179]:
+                  - rowgroup [ref=f8e1180]:
+                    - row [ref=f8e1181]:
+                      - columnheader "Quest" [ref=f8e1182]
+                      - columnheader "Where to take it" [ref=f8e1183]
+                      - columnheader "Experience" [ref=f8e1184]
+                      - columnheader "Rewards" [ref=f8e1185]
+                  - rowgroup [ref=f8e1186]:
+                    - row [ref=f8e1187]:
+                      - cell "The Stockade Riots Kill Bazil Thredd and bring his head back to Warden Thelwater at the Stockade. Level 29 quest, open from level 16 After “Bazil Thredd” (Baros Alexston, Stormwind City) Step 3 of a chain that starts with “The Unsent Letter” (from the item An Unsent Letter)" [ref=f8e1188]:
+                        - link "The Stockade Riots" [ref=f8e1189] [cursor=pointer]:
+                          - /url: /quest/391
+                        - generic [ref=f8e1190]: Kill Bazil Thredd and bring his head back to Warden Thelwater at the Stockade.
+                        - generic [ref=f8e1191]: Level 29 quest, open from level 16
+                        - generic [ref=f8e1192]: After “Bazil Thredd” (Baros Alexston, Stormwind City)
+                        - generic [ref=f8e1193]: Step 3 of a chain that starts with “The Unsent Letter” (from the item An Unsent Letter)
+                      - cell "Warden Thelwater Stormwind City, 41.2, 58.0" [ref=f8e1194]:
+                        - link "Warden Thelwater" [ref=f8e1195] [cursor=pointer]:
+                          - /url: /map/eastern-kingdoms#pin=Warden%20Thelwater
+                        - generic [ref=f8e1196]: Stormwind City, 41.2, 58.0
+                      - cell "4,950 2,650 in Classic" [ref=f8e1197]:
+                        - text: 4,950
+                        - generic [ref=f8e1198]: 2,650 in Classic
+                      - cell "Experience and money" [ref=f8e1199]
+                    - row [ref=f8e1200]:
+                      - cell "What Comes Around... Bring the head of Targorr the Dread to Guard Berton in Lakeshire. Level 25 quest, open from level 22" [ref=f8e1201]:
+                        - link "What Comes Around..." [ref=f8e1202] [cursor=pointer]:
+                          - /url: /quest/386
+                        - generic [ref=f8e1203]: Bring the head of Targorr the Dread to Guard Berton in Lakeshire.
+                        - generic [ref=f8e1204]: Level 25 quest, open from level 22
+                      - cell "Guard Berton Redridge Mountains, 26.4, 46.6" [ref=f8e1205]:
+                        - link "Guard Berton" [ref=f8e1206] [cursor=pointer]:
+                          - /url: /map/eastern-kingdoms#pin=Guard%20Berton
+                        - generic [ref=f8e1207]: Redridge Mountains, 26.4, 46.6
+                      - cell "4,200 2,000 in Classic" [ref=f8e1208]:
+                        - text: 4,200
+                        - generic [ref=f8e1209]: 2,000 in Classic
+                      - cell "One of Lucine Longsword Hardened Root Staff Ursine Hammer" [ref=f8e1210]:
+                        - generic [ref=f8e1211]: One of
+                        - list [ref=f8e1212]:
+                          - listitem [ref=f8e1213]:
+                            - link "Lucine Longsword" [ref=f8e1214]:
+                              - /url: /item/3400
+                          - listitem [ref=f8e1215]:
+                            - link "Hardened Root Staff" [ref=f8e1216]:
+                              - /url: /item/1317
+                          - listitem [ref=f8e1217]:
+                            - link "Ursine Hammer" [ref=f8e1218]:
+                              - /url: /item/270027
+                    - row [ref=f8e1219]:
+                      - cell "Crime and Punishment Councilman Millstipe of Darkshire wants you to bring him the hand of Dextren Ward. Level 26 quest, open from level 22" [ref=f8e1220]:
+                        - link "Crime and Punishment" [ref=f8e1221] [cursor=pointer]:
+                          - /url: /quest/377
+                        - generic [ref=f8e1222]: Councilman Millstipe of Darkshire wants you to bring him the hand of Dextren Ward.
+                        - generic [ref=f8e1223]: Level 26 quest, open from level 22
+                      - cell "Councilman Millstipe Duskwood, 72.0, 47.8" [ref=f8e1224]:
+                        - link "Councilman Millstipe" [ref=f8e1225] [cursor=pointer]:
+                          - /url: /map/eastern-kingdoms#pin=Councilman%20Millstipe
+                        - generic [ref=f8e1226]: Duskwood, 72.0, 47.8
+                      - cell "4,400 2,100 in Classic" [ref=f8e1227]:
+                        - text: 4,400
+                        - generic [ref=f8e1228]: 2,100 in Classic
+                      - cell "One of Ambassador's Boots Darkshire Mail Leggings Town Clerk's Mittens" [ref=f8e1229]:
+                        - generic [ref=f8e1230]: One of
+                        - list [ref=f8e1231]:
+                          - listitem [ref=f8e1232]:
+                            - link "Ambassador's Boots" [ref=f8e1233]:
+                              - /url: /item/2033
+                          - listitem [ref=f8e1234]:
+                            - link "Darkshire Mail Leggings" [ref=f8e1235]:
+                              - /url: /item/2906
+                          - listitem [ref=f8e1236]:
+                            - link "Town Clerk's Mittens" [ref=f8e1237]:
+                              - /url: /item/270029
+                    - row [ref=f8e1238]:
+                      - cell "Quell The Uprising Warden Thelwater of Stormwind wants you to kill 10 Defias Prisoners, 8 Defias Convicts, and 8 Defias Insurgents in The Stockade. Level 26 quest, open from level 22" [ref=f8e1239]:
+                        - link "Quell The Uprising" [ref=f8e1240] [cursor=pointer]:
+                          - /url: /quest/387
+                        - generic [ref=f8e1241]: Warden Thelwater of Stormwind wants you to kill 10 Defias Prisoners, 8 Defias Convicts, and 8 Defias Insurgents in The Stockade.
+                        - generic [ref=f8e1242]: Level 26 quest, open from level 22
+                      - cell "Warden Thelwater Stormwind City, 41.2, 58.0" [ref=f8e1243]:
+                        - link "Warden Thelwater" [ref=f8e1244] [cursor=pointer]:
+                          - /url: /map/eastern-kingdoms#pin=Warden%20Thelwater
+                        - generic [ref=f8e1245]: Stormwind City, 41.2, 58.0
+                      - cell "5,550 2,650 in Classic" [ref=f8e1246]:
+                        - text: 5,550
+                        - generic [ref=f8e1247]: 2,650 in Classic
+                      - cell "Experience and money" [ref=f8e1248]
+                    - row [ref=f8e1249]:
+                      - cell "The Color of Blood Nikova Raskol of Stormwind wants you to collect 10 Red Wool Bandanas. Level 26 quest, open from level 22" [ref=f8e1250]:
+                        - link "The Color of Blood" [ref=f8e1251] [cursor=pointer]:
+                          - /url: /quest/388
+                        - generic [ref=f8e1252]: Nikova Raskol of Stormwind wants you to collect 10 Red Wool Bandanas.
+                        - generic [ref=f8e1253]: Level 26 quest, open from level 22
+                      - cell "Nikova Raskol Stormwind City, 66.8, 46.4" [ref=f8e1254]:
+                        - link "Nikova Raskol" [ref=f8e1255] [cursor=pointer]:
+                          - /url: /map/eastern-kingdoms#pin=Nikova%20Raskol
+                        - generic [ref=f8e1256]: Stormwind City, 66.8, 46.4
+                      - cell "5,550 2,650 in Classic" [ref=f8e1257]:
+                        - text: 5,550
+                        - generic [ref=f8e1258]: 2,650 in Classic
+                      - cell "Experience and money" [ref=f8e1259]
+                    - row [ref=f8e1260]:
+                      - cell "The Fury Runs Deep Motley Garmason wants Kam Deepfury's head brought to him at Dun Modr. Level 27 quest, open from level 25 After “The Dark Iron War” (Motley Garmason, Wetlands)" [ref=f8e1261]:
+                        - link "The Fury Runs Deep" [ref=f8e1262] [cursor=pointer]:
+                          - /url: /quest/378
+                        - generic [ref=f8e1263]: Motley Garmason wants Kam Deepfury's head brought to him at Dun Modr.
+                        - generic [ref=f8e1264]: Level 27 quest, open from level 25
+                        - generic [ref=f8e1265]: After “The Dark Iron War” (Motley Garmason, Wetlands)
+                      - cell "Motley Garmason Wetlands, 49.6, 18.2" [ref=f8e1266]:
+                        - link "Motley Garmason" [ref=f8e1267] [cursor=pointer]:
+                          - /url: /map/eastern-kingdoms#pin=Motley%20Garmason
+                        - generic [ref=f8e1268]: Wetlands, 49.6, 18.2
+                      - cell "Not known yet 2,750 in Classic" [ref=f8e1269]:
+                        - generic [ref=f8e1270]:
+                          - text: Not known yet
+                          - generic [ref=f8e1271]: 2,750 in Classic
+                      - cell "One of Belt of Vindication Headbasher Magistrate's Pantaloons" [ref=f8e1272]:
+                        - generic [ref=f8e1273]: One of
+                        - list [ref=f8e1274]:
+                          - listitem [ref=f8e1275]:
+                            - link "Belt of Vindication" [ref=f8e1276]:
+                              - /url: /item/3562
+                          - listitem [ref=f8e1277]:
+                            - link "Headbasher" [ref=f8e1278]:
+                              - /url: /item/1264
+                          - listitem [ref=f8e1279]:
+                            - link "Magistrate's Pantaloons" [ref=f8e1280]:
+                              - /url: /item/270036
+              - region [ref=f8e1281]:
+                - generic [ref=f8e1284]:
+                  - heading [level=3] [ref=f8e1285]:
+                    - 'link "Excavation Site: Wetlands" [ref=f8e1286] [cursor=pointer]':
+                      - /url: /dungeons/excavation-site
+                  - paragraph [ref=f8e1287]: Levels 26 to 31.
+                  - paragraph [ref=f8e1288]: "Alliance: 7 quests, 27,000 XP, about 0.5 levels at level 26."
+                - table [ref=f8e1290]:
+                  - rowgroup [ref=f8e1291]:
+                    - row [ref=f8e1292]:
+                      - columnheader "Quest" [ref=f8e1293]
+                      - columnheader "Where to take it" [ref=f8e1294]
+                      - columnheader "Experience" [ref=f8e1295]
+                      - columnheader "Rewards" [ref=f8e1296]
+                  - rowgroup [ref=f8e1297]:
+                    - row [ref=f8e1298]:
+                      - cell "Highland Hides Return 4 Thicket Raptor Hides to James Halloran, the tanner, in Menethil Harbor. Level 28 quest, open from level 24" [ref=f8e1299]:
+                        - link "Highland Hides" [ref=f8e1300] [cursor=pointer]:
+                          - /url: /quest/98815
+                        - generic [ref=f8e1301]: Return 4 Thicket Raptor Hides to James Halloran, the tanner, in Menethil Harbor.
+                        - generic [ref=f8e1302]: Level 28 quest, open from level 24
+                      - cell "James Halloran Wetlands, 8.6, 55.6" [ref=f8e1303]:
+                        - link "James Halloran" [ref=f8e1304] [cursor=pointer]:
+                          - /url: /map/eastern-kingdoms#pin=James%20Halloran
+                        - generic [ref=f8e1305]: Wetlands, 8.6, 55.6
+                      - cell "1,150" [ref=f8e1306]
+                      - cell "Experience and money" [ref=f8e1307]
+                    - row [ref=f8e1308]:
+                      - cell "Horrors in the Highland Kill a Highland Horror within Excavation Sites and bring its root core to Rethiel the Greenwarden in the Wetlands. Level 31 quest, open from level 24" [ref=f8e1309]:
+                        - link "Horrors in the Highland" [ref=f8e1310] [cursor=pointer]:
+                          - /url: /quest/95646
+                        - generic [ref=f8e1311]: Kill a Highland Horror within Excavation Sites and bring its root core to Rethiel the Greenwarden in the Wetlands.
+                        - generic [ref=f8e1312]: Level 31 quest, open from level 24
+                      - cell "Rethiel the Greenwarden Wetlands, 56.2, 40.5" [ref=f8e1313]:
+                        - link "Rethiel the Greenwarden" [ref=f8e1314] [cursor=pointer]:
+                          - /url: /map/eastern-kingdoms#pin=Rethiel%20the%20Greenwarden
+                        - generic [ref=f8e1315]: Wetlands, 56.2, 40.5
+                      - cell "6,150" [ref=f8e1316]
+                      - cell "One of Ironwood Destroyer Curl of Life Hornbeam Heft" [ref=f8e1317]:
+                        - generic [ref=f8e1318]: One of
+                        - list [ref=f8e1319]:
+                          - listitem [ref=f8e1320]:
+                            - link "Ironwood Destroyer" [ref=f8e1321]:
+                              - /url: /item/271667
+                          - listitem [ref=f8e1322]:
+                            - link "Curl of Life" [ref=f8e1323]:
+                              - /url: /item/271670
+                          - listitem [ref=f8e1324]:
+                            - link "Hornbeam Heft" [ref=f8e1325]:
+                              - /url: /item/271664
+                    - row [ref=f8e1326]:
+                      - cell "Lost in the Thicket Things Find Ardin Grassman in the Excavation Sites. Level 31 quest, open from level 24 Then “Heartwoven”" [ref=f8e1327]:
+                        - link "Lost in the Thicket Things" [ref=f8e1328] [cursor=pointer]:
+                          - /url: /quest/95647
+                        - generic [ref=f8e1329]: Find Ardin Grassman in the Excavation Sites.
+                        - generic [ref=f8e1330]: Level 31 quest, open from level 24
+                        - generic [ref=f8e1331]: Then “Heartwoven”
+                      - cell "Caitlin Grassman Wetlands, 11.8, 58.6" [ref=f8e1332]:
+                        - link "Caitlin Grassman" [ref=f8e1333] [cursor=pointer]:
+                          - /url: /map/eastern-kingdoms#pin=Caitlin%20Grassman
+                        - generic [ref=f8e1334]: Wetlands, 11.8, 58.6
+                      - cell "4,900" [ref=f8e1335]
+                      - cell "Experience and money" [ref=f8e1336]
+                    - row [ref=f8e1337]:
+                      - cell "Seeking Caitlin Speak with Caitlin Grassman in Menethil Harbor. Level 31 quest, open from level 24" [ref=f8e1338]:
+                        - link "Seeking Caitlin" [ref=f8e1339] [cursor=pointer]:
+                          - /url: /quest/95737
+                        - generic [ref=f8e1340]: Speak with Caitlin Grassman in Menethil Harbor.
+                        - generic [ref=f8e1341]: Level 31 quest, open from level 24
+                      - cell "Llana Ashenvale, 35.0, 48.4" [ref=f8e1342]:
+                        - link "Llana" [ref=f8e1343] [cursor=pointer]:
+                          - /url: /map/kalimdor#pin=Llana
+                        - generic [ref=f8e1344]: Ashenvale, 35.0, 48.4
+                      - cell "1,250" [ref=f8e1345]
+                      - cell "Experience and money" [ref=f8e1346]
+                    - row [ref=f8e1347]:
+                      - cell "Songblade Search Look for Dorin Songblade's brother, Daewyn, in Whelgar's Excavation Site. Level 31 quest, open from level 24" [ref=f8e1348]:
+                        - link "Songblade Search" [ref=f8e1349] [cursor=pointer]:
+                          - /url: /quest/95772
+                        - generic [ref=f8e1350]: Look for Dorin Songblade's brother, Daewyn, in Whelgar's Excavation Site.
+                        - generic [ref=f8e1351]: Level 31 quest, open from level 24
+                      - cell "Dorin Songblade Redridge Mountains, 30.8, 46.6" [ref=f8e1352]:
+                        - link "Dorin Songblade" [ref=f8e1353] [cursor=pointer]:
+                          - /url: /map/eastern-kingdoms#pin=Dorin%20Songblade
+                        - generic [ref=f8e1354]: Redridge Mountains, 30.8, 46.6
+                      - cell "6,150" [ref=f8e1355]
+                      - cell "Experience and money" [ref=f8e1356]
+                    - row [ref=f8e1357]:
+                      - cell "Fallen in the Fen Travel to Lakeshire and personally inform Dorin Songblade what became of his brother within the Excavation Sites. Level 31 quest, open from level 24" [ref=f8e1358]:
+                        - link "Fallen in the Fen" [ref=f8e1359] [cursor=pointer]:
+                          - /url: /quest/95795
+                        - generic [ref=f8e1360]: Travel to Lakeshire and personally inform Dorin Songblade what became of his brother within the Excavation Sites.
+                        - generic [ref=f8e1361]: Level 31 quest, open from level 24
+                      - cell "It starts at the body of a dwarf inside the dungeon, Dorin Songblade’s brother." [ref=f8e1362]
+                      - cell "6,150" [ref=f8e1364]
+                      - cell "One of Daewyn's Girdle Songblade Stabilizer" [ref=f8e1365]:
+                        - generic [ref=f8e1366]: One of
+                        - list [ref=f8e1367]:
+                          - listitem [ref=f8e1368]:
+                            - link "Daewyn's Girdle" [ref=f8e1369]:
+                              - /url: /item/271769
+                          - listitem [ref=f8e1370]:
+                            - link "Songblade Stabilizer" [ref=f8e1371]:
+                              - /url: /item/271768
+                    - row [ref=f8e1372]:
+                      - cell "Lost Relic Carry Bring the Titan Relic to Prospector Whelgar in the Wetlands excavation site. Level 31 quest, open from level 24 Then “Prehistoric Prism”" [ref=f8e1373]:
+                        - link "Lost Relic Carry" [ref=f8e1374] [cursor=pointer]:
+                          - /url: /quest/95810
+                        - generic [ref=f8e1375]: Bring the Titan Relic to Prospector Whelgar in the Wetlands excavation site.
+                        - generic [ref=f8e1376]: Level 31 quest, open from level 24
+                        - generic [ref=f8e1377]: Then “Prehistoric Prism”
+                      - cell "Starts with Titan Relic The Titan Relic drops from the Relic Guardian, the last boss." [ref=f8e1378]:
+                        - text: Starts with Titan Relic
+                        - generic [ref=f8e1379]: The Titan Relic drops from the Relic Guardian, the last boss.
+                      - cell "1,250" [ref=f8e1380]
+                      - cell "Experience and money" [ref=f8e1381]
+              - region [ref=f8e1382]:
+                - generic [ref=f8e1385]:
+                  - heading [level=3] [ref=f8e1386]:
+                    - link "City of Dalaran" [ref=f8e1387] [cursor=pointer]:
+                      - /url: /dungeons/city-of-dalaran
+                  - paragraph [ref=f8e1388]: Levels 28 to 33.
+                  - paragraph [ref=f8e1389]: "Alliance: 4 quests, 37,600 XP, about 1 level at level 28."
+                - table [ref=f8e1391]:
+                  - rowgroup [ref=f8e1392]:
+                    - row [ref=f8e1393]:
+                      - columnheader "Quest" [ref=f8e1394]
+                      - columnheader "Where to take it" [ref=f8e1395]
+                      - columnheader "Experience" [ref=f8e1396]
+                      - columnheader "Rewards" [ref=f8e1397]
+                  - rowgroup [ref=f8e1398]:
+                    - row [ref=f8e1399]:
+                      - cell "A Green Sample Collect a Fel Infused Blossom from the City of Dalaran for Shylamiir in Stormwind City. Level 33 quest, open from level 24" [ref=f8e1400]:
+                        - link "A Green Sample" [ref=f8e1401] [cursor=pointer]:
+                          - /url: /quest/92456
+                        - generic [ref=f8e1402]: Collect a Fel Infused Blossom from the City of Dalaran for Shylamiir in Stormwind City.
+                        - generic [ref=f8e1403]: Level 33 quest, open from level 24
+                      - cell "Shylamiir Stormwind City, 31.4, 62.8" [ref=f8e1404]:
+                        - link "Shylamiir" [ref=f8e1405] [cursor=pointer]:
+                          - /url: /map/eastern-kingdoms#pin=Shylamiir
+                        - generic [ref=f8e1406]: Stormwind City, 31.4, 62.8
+                      - cell "9,400" [ref=f8e1407]
+                      - cell "One of Vine Pruner's Cloak Thorn Protecting Girdle" [ref=f8e1408]:
+                        - generic [ref=f8e1409]: One of
+                        - list [ref=f8e1410]:
+                          - listitem [ref=f8e1411]:
+                            - link "Vine Pruner's Cloak" [ref=f8e1412]:
+                              - /url: /item/279835
+                          - listitem [ref=f8e1413]:
+                            - link "Thorn Protecting Girdle" [ref=f8e1414]:
+                              - /url: /item/279836
+                    - row [ref=f8e1415]:
+                      - cell "Starving Arcane Defeat 8 Seeking Remnants, 8 Saturated Remnants, and 8 Mana Echoes inside the City of Dalaran for Archmage Modera outside of Dalaran. Level 33 quest, open from level 24" [ref=f8e1416]:
+                        - link "Starving Arcane" [ref=f8e1417] [cursor=pointer]:
+                          - /url: /quest/92457
+                        - generic [ref=f8e1418]: Defeat 8 Seeking Remnants, 8 Saturated Remnants, and 8 Mana Echoes inside the City of Dalaran for Archmage Modera outside of Dalaran.
+                        - generic [ref=f8e1419]: Level 33 quest, open from level 24
+                      - cell "Image of Archmage Modera Silverpine Forest, 68.4, 45.4" [ref=f8e1420]:
+                        - link "Image of Archmage Modera" [ref=f8e1421] [cursor=pointer]:
+                          - /url: /map/eastern-kingdoms#pin=Image%20of%20Archmage%20Modera
+                        - generic [ref=f8e1422]: Silverpine Forest, 68.4, 45.4
+                      - cell "9,400" [ref=f8e1423]
+                      - cell "One of Fallen Guard's Pendant Arcane Infused Rod" [ref=f8e1424]:
+                        - generic [ref=f8e1425]: One of
+                        - list [ref=f8e1426]:
+                          - listitem [ref=f8e1427]:
+                            - link "Fallen Guard's Pendant" [ref=f8e1428]:
+                              - /url: /item/279837
+                          - listitem [ref=f8e1429]:
+                            - link "Arcane Infused Rod" [ref=f8e1430]:
+                              - /url: /item/279838
+                    - row [ref=f8e1431]:
+                      - cell "Heart of Disruption Collect the Arcane Mote for the Image of Archmage Modera near the City of Dalaran. Level 33 quest, open from level 24 After “An Alarming Request” (Emissary Jacques, Hillsbrad Foothills)" [ref=f8e1432]:
+                        - link "Heart of Disruption" [ref=f8e1433] [cursor=pointer]:
+                          - /url: /quest/92458
+                        - generic [ref=f8e1434]: Collect the Arcane Mote for the Image of Archmage Modera near the City of Dalaran.
+                        - generic [ref=f8e1435]: Level 33 quest, open from level 24
+                        - generic [ref=f8e1436]: After “An Alarming Request” (Emissary Jacques, Hillsbrad Foothills)
+                      - cell "Image of Archmage Modera Silverpine Forest, 68.4, 45.4" [ref=f8e1437]:
+                        - link "Image of Archmage Modera" [ref=f8e1438] [cursor=pointer]:
+                          - /url: /map/eastern-kingdoms#pin=Image%20of%20Archmage%20Modera
+                        - generic [ref=f8e1439]: Silverpine Forest, 68.4, 45.4
+                      - cell "9,400" [ref=f8e1440]
+                      - cell "One of Spellguard Pauldrons Renewing Footpads Defender of Dalaran" [ref=f8e1441]:
+                        - generic [ref=f8e1442]: One of
+                        - list [ref=f8e1443]:
+                          - listitem [ref=f8e1444]:
+                            - link "Spellguard Pauldrons" [ref=f8e1445]:
+                              - /url: /item/279839
+                          - listitem [ref=f8e1446]:
+                            - link "Renewing Footpads" [ref=f8e1447]:
+                              - /url: /item/279840
+                          - listitem [ref=f8e1448]:
+                            - link "Defender of Dalaran" [ref=f8e1449]:
+                              - /url: /item/279841
+                    - row [ref=f8e1450]:
+                      - cell "Power Overwhelming Slay the Mana Elemental in the City of Dalaran for High Sorcerer Andromath in Stormwind City. Level 33 quest, open from level 24" [ref=f8e1451]:
+                        - link "Power Overwhelming" [ref=f8e1452] [cursor=pointer]:
+                          - /url: /quest/92489
+                        - generic [ref=f8e1453]: Slay the Mana Elemental in the City of Dalaran for High Sorcerer Andromath in Stormwind City.
+                        - generic [ref=f8e1454]: Level 33 quest, open from level 24
+                      - cell "High Sorcerer Andromath Stormwind City, 48.7, 87.6" [ref=f8e1455]:
+                        - link "High Sorcerer Andromath" [ref=f8e1456] [cursor=pointer]:
+                          - /url: /map/eastern-kingdoms#pin=High%20Sorcerer%20Andromath
+                        - generic [ref=f8e1457]: Stormwind City, 48.7, 87.6
+                      - cell "9,400" [ref=f8e1458]
+                      - cell "One of Violet Sash Runebound Gloves" [ref=f8e1459]:
+                        - generic [ref=f8e1460]: One of
+                        - list [ref=f8e1461]:
+                          - listitem [ref=f8e1462]:
+                            - link "Violet Sash" [ref=f8e1463]:
+                              - /url: /item/251962
+                          - listitem [ref=f8e1464]:
+                            - link "Runebound Gloves" [ref=f8e1465]:
+                              - /url: /item/279849
+              - region [ref=f8e1466]:
+                - generic [ref=f8e1469]:
+                  - heading [level=3] [ref=f8e1470]:
+                    - link "Gnomeregan" [ref=f8e1471] [cursor=pointer]:
+                      - /url: /dungeons/gnomeregan
+                  - paragraph [ref=f8e1472]: Levels 29 to 38.
+                  - paragraph [ref=f8e1473]: "Alliance: 11 quests, 23,300 XP for the 5 whose experience is known."
+                - table [ref=f8e1475]:
+                  - rowgroup [ref=f8e1476]:
+                    - row [ref=f8e1477]:
+                      - columnheader "Quest" [ref=f8e1478]
+                      - columnheader "Where to take it" [ref=f8e1479]
+                      - columnheader "Experience" [ref=f8e1480]
+                      - columnheader "Rewards" [ref=f8e1481]
+                  - rowgroup [ref=f8e1482]:
+                    - row [ref=f8e1483]:
+                      - 'cell "Save Techbot''s Brain! Bring Techbot''s Memory Core to Tinkmaster Overspark in Ironforge. Level 26 quest, open from level 20 Optional: “Tinkmaster Overspark” (Brother Sarno, Stormwind City) leads to it" [ref=f8e1484]':
+                        - link "Save Techbot's Brain!" [ref=f8e1485] [cursor=pointer]:
+                          - /url: /quest/2922
+                        - generic [ref=f8e1486]: Bring Techbot's Memory Core to Tinkmaster Overspark in Ironforge.
+                        - generic [ref=f8e1487]: Level 26 quest, open from level 20
+                        - generic [ref=f8e1488]: "Optional: “Tinkmaster Overspark” (Brother Sarno, Stormwind City) leads to it"
+                      - cell "Tinkmaster Overspark Ironforge, 69.4, 50.4" [ref=f8e1489]:
+                        - link "Tinkmaster Overspark" [ref=f8e1490] [cursor=pointer]:
+                          - /url: /map/eastern-kingdoms#pin=Tinkmaster%20Overspark
+                        - generic [ref=f8e1491]: Ironforge, 69.4, 50.4
+                      - cell "4,750 2,650 in Classic" [ref=f8e1492]:
+                        - text: 4,750
+                        - generic [ref=f8e1493]: 2,650 in Classic
+                      - cell "Experience and money" [ref=f8e1494]
+                    - row [ref=f8e1495]:
+                      - cell "Gnogaine Use the Empty Leaden Collection Phial on Irradiated Invaders or Irradiated Pillagers to collect radioactive fallout. Once it is full, take it back to Ozzie Togglevolt in Kharanos. Level 27 quest, open from level 20 After “The Day After” (Gnoarn, Ironforge)" [ref=f8e1496]:
+                        - link "Gnogaine" [ref=f8e1497] [cursor=pointer]:
+                          - /url: /quest/2926
+                        - generic [ref=f8e1498]: Use the Empty Leaden Collection Phial on Irradiated Invaders or Irradiated Pillagers to collect radioactive fallout. Once it is full, take it back to Ozzie Togglevolt in Kharanos.
+                        - generic [ref=f8e1499]: Level 27 quest, open from level 20
+                        - generic [ref=f8e1500]: After “The Day After” (Gnoarn, Ironforge)
+                      - cell "Ozzie Togglevolt Dun Morogh, 45.8, 49.2" [ref=f8e1501]:
+                        - link "Ozzie Togglevolt" [ref=f8e1502] [cursor=pointer]:
+                          - /url: /map/eastern-kingdoms#pin=Ozzie%20Togglevolt
+                        - generic [ref=f8e1503]: Dun Morogh, 45.8, 49.2
+                      - cell "3,950 2,200 in Classic" [ref=f8e1504]:
+                        - text: 3,950
+                        - generic [ref=f8e1505]: 2,200 in Classic
+                      - cell "Experience and money" [ref=f8e1506]
+                    - row [ref=f8e1507]:
+                      - cell "Gyrodrillmatic Excavationators Bring twenty-four Robo-mechanical Guts to Shoni in Stormwind. Level 30 quest, open from level 20" [ref=f8e1508]:
+                        - link "Gyrodrillmatic Excavationators" [ref=f8e1509] [cursor=pointer]:
+                          - /url: /quest/2928
+                        - generic [ref=f8e1510]: Bring twenty-four Robo-mechanical Guts to Shoni in Stormwind.
+                        - generic [ref=f8e1511]: Level 30 quest, open from level 20
+                      - cell "Shoni the Shilent Stormwind City, 55.4, 12.4" [ref=f8e1512]:
+                        - link "Shoni the Shilent" [ref=f8e1513] [cursor=pointer]:
+                          - /url: /map/eastern-kingdoms#pin=Shoni%20the%20Shilent
+                        - generic [ref=f8e1514]: Stormwind City, 55.4, 12.4
+                      - cell "4,400 2,450 in Classic" [ref=f8e1515]:
+                        - text: 4,400
+                        - generic [ref=f8e1516]: 2,450 in Classic
+                      - cell "One of Shoni's Disarming Tool Shilly Mitts Operator's Gloves" [ref=f8e1517]:
+                        - generic [ref=f8e1518]: One of
+                        - list [ref=f8e1519]:
+                          - listitem [ref=f8e1520]:
+                            - link "Shoni's Disarming Tool" [ref=f8e1521]:
+                              - /url: /item/9608
+                          - listitem [ref=f8e1522]:
+                            - link "Shilly Mitts" [ref=f8e1523]:
+                              - /url: /item/9609
+                          - listitem [ref=f8e1524]:
+                            - link "Operator's Gloves" [ref=f8e1525]:
+                              - /url: /item/270045
+                    - row [ref=f8e1526]:
+                      - cell "The Only Cure is More Green Glow Travel to Gnomeregan and bring back High Potency Radioactive Fallout. Be warned, the fallout is unstable and will collapse rather quickly. Ozzie will also require your Heavy Leaden Collection Phial when the task is complete. Level 30 quest, open from level 20 After “Gnogaine” (Ozzie Togglevolt, Dun Morogh) Step 3 of a chain that starts with “The Day After” (Gnoarn, Ironforge)" [ref=f8e1527]:
+                        - link "The Only Cure is More Green Glow" [ref=f8e1528] [cursor=pointer]:
+                          - /url: /quest/2962
+                        - generic [ref=f8e1529]: Travel to Gnomeregan and bring back High Potency Radioactive Fallout. Be warned, the fallout is unstable and will collapse rather quickly. Ozzie will also require your Heavy Leaden Collection Phial when the task is complete.
+                        - generic [ref=f8e1530]: Level 30 quest, open from level 20
+                        - generic [ref=f8e1531]: After “Gnogaine” (Ozzie Togglevolt, Dun Morogh)
+                        - generic [ref=f8e1532]: Step 3 of a chain that starts with “The Day After” (Gnoarn, Ironforge)
+                      - cell "Ozzie Togglevolt Dun Morogh, 45.8, 49.2" [ref=f8e1533]:
+                        - link "Ozzie Togglevolt" [ref=f8e1534] [cursor=pointer]:
+                          - /url: /map/eastern-kingdoms#pin=Ozzie%20Togglevolt
+                        - generic [ref=f8e1535]: Dun Morogh, 45.8, 49.2
+                      - cell "4,400 2,450 in Classic" [ref=f8e1536]:
+                        - text: 4,400
+                        - generic [ref=f8e1537]: 2,450 in Classic
+                      - cell "Experience and money" [ref=f8e1538]
+                    - row [ref=f8e1539]:
+                      - cell "A Fine Mess Escort Kernobee to the Clockwerk Run exit and then report to Scooty in Booty Bay. Level 30 quest, open from level 24 (both factions)" [ref=f8e1540]:
+                        - link "A Fine Mess" [ref=f8e1541] [cursor=pointer]:
+                          - /url: /quest/2904
+                        - generic [ref=f8e1542]: Escort Kernobee to the Clockwerk Run exit and then report to Scooty in Booty Bay.
+                        - generic [ref=f8e1543]: Level 30 quest, open from level 24 (both factions)
+                      - cell "Kernobee Inside the dungeon" [ref=f8e1544]:
+                        - text: Kernobee
+                        - generic [ref=f8e1545]: Inside the dungeon
+                      - cell "5,800 2,450 in Classic" [ref=f8e1546]:
+                        - text: 5,800
+                        - generic [ref=f8e1547]: 2,450 in Classic
+                      - cell "One of Fire-welded Bracers Fairywing Mantle Technician's Bracers" [ref=f8e1548]:
+                        - generic [ref=f8e1549]: One of
+                        - list [ref=f8e1550]:
+                          - listitem [ref=f8e1551]:
+                            - link "Fire-welded Bracers" [ref=f8e1552]:
+                              - /url: /item/9535
+                          - listitem [ref=f8e1553]:
+                            - link "Fairywing Mantle" [ref=f8e1554]:
+                              - /url: /item/9536
+                          - listitem [ref=f8e1555]:
+                            - link "Technician's Bracers" [ref=f8e1556]:
+                              - /url: /item/270042
+                    - row [ref=f8e1557]:
+                      - 'cell "Essential Artificials Bring 12 Essential Artificials to Klockmort Spannerspan in Ironforge. Level 30 quest, open from level 24 Optional: “Klockmort''s Essentials” (Mathiel, Darnassus) leads to it" [ref=f8e1558]':
+                        - link "Essential Artificials" [ref=f8e1559] [cursor=pointer]:
+                          - /url: /quest/2924
+                        - generic [ref=f8e1560]: Bring 12 Essential Artificials to Klockmort Spannerspan in Ironforge.
+                        - generic [ref=f8e1561]: Level 30 quest, open from level 24
+                        - generic [ref=f8e1562]: "Optional: “Klockmort's Essentials” (Mathiel, Darnassus) leads to it"
+                      - cell "Klockmort Spannerspan Ironforge, 68.0, 46.8" [ref=f8e1563]:
+                        - link "Klockmort Spannerspan" [ref=f8e1564] [cursor=pointer]:
+                          - /url: /map/eastern-kingdoms#pin=Klockmort%20Spannerspan
+                        - generic [ref=f8e1565]: Ironforge, 68.0, 46.8
+                      - cell "Not known yet 3,050 in Classic" [ref=f8e1566]:
+                        - generic [ref=f8e1567]:
+                          - text: Not known yet
+                          - generic [ref=f8e1568]: 3,050 in Classic
+                      - cell "Experience and money" [ref=f8e1569]
+                    - row [ref=f8e1570]:
+                      - 'cell "Data Rescue Bring a Prismatic Punch Card to Master Mechanic Castpipe in Ironforge. Level 30 quest, open from level 25 Optional: “Castpipe''s Task” (Gaxim Rustfizzle, Stonetalon Mountains) leads to it" [ref=f8e1571]':
+                        - link "Data Rescue" [ref=f8e1572] [cursor=pointer]:
+                          - /url: /quest/2930
+                        - generic [ref=f8e1573]: Bring a Prismatic Punch Card to Master Mechanic Castpipe in Ironforge.
+                        - generic [ref=f8e1574]: Level 30 quest, open from level 25
+                        - generic [ref=f8e1575]: "Optional: “Castpipe's Task” (Gaxim Rustfizzle, Stonetalon Mountains) leads to it"
+                      - cell "Master Mechanic Castpipe Ironforge, 69.8, 48.4" [ref=f8e1576]:
+                        - link "Master Mechanic Castpipe" [ref=f8e1577] [cursor=pointer]:
+                          - /url: /map/eastern-kingdoms#pin=Master%20Mechanic%20Castpipe
+                        - generic [ref=f8e1578]: Ironforge, 69.8, 48.4
+                      - cell "Not known yet 3,650 in Classic" [ref=f8e1579]:
+                        - generic [ref=f8e1580]:
+                          - text: Not known yet
+                          - generic [ref=f8e1581]: 3,650 in Classic
+                      - cell [ref=f8e1582]:
+                        - list [ref=f8e1583]:
+                          - listitem [ref=f8e1584]:
+                            - link "Repairman's Cape" [ref=f8e1585]:
+                              - /url: /item/9605
+                          - listitem [ref=f8e1586]:
+                            - link "Mechanic's Pipehammer" [ref=f8e1587]:
+                              - /url: /item/9604
+                    - row [ref=f8e1588]:
+                      - cell "The Sparklematic 5200! Put a grime-encrusted item into the Sparklematic 5200 to have it cleaned. Level 30 quest, open from level 25 (both factions) After an earlier step of the same name (The Sparklematic 5200)" [ref=f8e1589]:
+                        - link "The Sparklematic 5200!" [ref=f8e1590] [cursor=pointer]:
+                          - /url: /quest/2952
+                        - generic [ref=f8e1591]: Put a grime-encrusted item into the Sparklematic 5200 to have it cleaned.
+                        - generic [ref=f8e1592]: Level 30 quest, open from level 25 (both factions)
+                        - generic [ref=f8e1593]: After an earlier step of the same name (The Sparklematic 5200)
+                      - cell "The Sparklematic 5200 Inside the dungeon" [ref=f8e1594]:
+                        - text: The Sparklematic 5200
+                        - generic [ref=f8e1595]: Inside the dungeon
+                      - cell "Not known yet 2,450 in Classic" [ref=f8e1596]:
+                        - generic [ref=f8e1597]:
+                          - text: Not known yet
+                          - generic [ref=f8e1598]: 2,450 in Classic
+                      - cell [ref=f8e1599]:
+                        - list [ref=f8e1600]:
+                          - listitem [ref=f8e1601]:
+                            - link "Sparklematic-Wrapped Box" [ref=f8e1602]:
+                              - /url: /item/9363
+                    - row [ref=f8e1603]:
+                      - cell "The Grand Betrayal Venture to Gnomeregan and kill Mekgineer Thermaplugg. Return to High Tinker Mekkatorque when the task is complete. Level 35 quest, open from level 25" [ref=f8e1604]:
+                        - link "The Grand Betrayal" [ref=f8e1605] [cursor=pointer]:
+                          - /url: /quest/2929
+                        - generic [ref=f8e1606]: Venture to Gnomeregan and kill Mekgineer Thermaplugg. Return to High Tinker Mekkatorque when the task is complete.
+                        - generic [ref=f8e1607]: Level 35 quest, open from level 25
+                      - cell "High Tinker Mekkatorque Ironforge, 69.0, 49.0" [ref=f8e1608]:
+                        - link "High Tinker Mekkatorque" [ref=f8e1609] [cursor=pointer]:
+                          - /url: /map/eastern-kingdoms#pin=High%20Tinker%20Mekkatorque
+                        - generic [ref=f8e1610]: Ironforge, 69.0, 49.0
+                      - cell "Not known yet 2,750 in Classic" [ref=f8e1611]:
+                        - generic [ref=f8e1612]:
+                          - text: Not known yet
+                          - generic [ref=f8e1613]: 2,750 in Classic
+                      - cell "One of Civinad Robes Triprunner Dungarees Dual Reinforced Leggings" [ref=f8e1614]:
+                        - generic [ref=f8e1615]: One of
+                        - list [ref=f8e1616]:
+                          - listitem [ref=f8e1617]:
+                            - link "Civinad Robes" [ref=f8e1618]:
+                              - /url: /item/9623
+                          - listitem [ref=f8e1619]:
+                            - link "Triprunner Dungarees" [ref=f8e1620]:
+                              - /url: /item/9624
+                          - listitem [ref=f8e1621]:
+                            - link "Dual Reinforced Leggings" [ref=f8e1622]:
+                              - /url: /item/9625
+                    - row [ref=f8e1623]:
+                      - cell "Grime-Encrusted Ring Figure out a way to remove the grime from the Grime-Encrusted Ring. Level 34 quest, open from level 28 (both factions)" [ref=f8e1624]:
+                        - link "Grime-Encrusted Ring" [ref=f8e1625] [cursor=pointer]:
+                          - /url: /quest/2945
+                        - generic [ref=f8e1626]: Figure out a way to remove the grime from the Grime-Encrusted Ring.
+                        - generic [ref=f8e1627]: Level 34 quest, open from level 28 (both factions)
+                      - cell "Starts with Grime-Encrusted Ring Dropped by Dark Iron Agent" [ref=f8e1628]:
+                        - text: Starts with Grime-Encrusted Ring
+                        - generic [ref=f8e1629]: Dropped by Dark Iron Agent
+                      - cell "Not known yet 2,700 in Classic" [ref=f8e1630]:
+                        - generic [ref=f8e1631]:
+                          - text: Not known yet
+                          - generic [ref=f8e1632]: 2,700 in Classic
+                      - cell "Experience and money" [ref=f8e1633]
+                    - row [ref=f8e1634]:
+                      - cell "Return of the Ring You may either keep the ring, or you may find the person responsible for the imprint and engravings on the inside of the band. Level 34 quest, open from level 28 After “Grime-Encrusted Ring” (from the item Grime-Encrusted Ring) Then “Gnome Improvement”" [ref=f8e1635]:
+                        - link "Return of the Ring" [ref=f8e1636] [cursor=pointer]:
+                          - /url: /quest/2947
+                        - generic [ref=f8e1637]: You may either keep the ring, or you may find the person responsible for the imprint and engravings on the inside of the band.
+                        - generic [ref=f8e1638]: Level 34 quest, open from level 28
+                        - generic [ref=f8e1639]: After “Grime-Encrusted Ring” (from the item Grime-Encrusted Ring)
+                        - generic [ref=f8e1640]: Then “Gnome Improvement”
+                      - cell "The Sparklematic 5200 Inside the dungeon" [ref=f8e1641]:
+                        - text: The Sparklematic 5200
+                        - generic [ref=f8e1642]: Inside the dungeon
+                      - cell "Not known yet 2,700 in Classic" [ref=f8e1643]:
+                        - generic [ref=f8e1644]:
+                          - text: Not known yet
+                          - generic [ref=f8e1645]: 2,700 in Classic
+                      - cell "Experience and money" [ref=f8e1646]
+              - region [ref=f8e1647]:
+                - generic [ref=f8e1650]:
+                  - heading [level=3] [ref=f8e1651]:
+                    - link "Razorfen Kraul" [ref=f8e1652] [cursor=pointer]:
+                      - /url: /dungeons/razorfen-kraul
+                  - paragraph [ref=f8e1653]: Levels 29 to 38.
+                  - paragraph [ref=f8e1654]: "Alliance: 4 quests, 12,250 XP for the 2 whose experience is known."
+                - table [ref=f8e1656]:
+                  - rowgroup [ref=f8e1657]:
+                    - row [ref=f8e1658]:
+                      - columnheader "Quest" [ref=f8e1659]
+                      - columnheader "Where to take it" [ref=f8e1660]
+                      - columnheader "Experience" [ref=f8e1661]
+                      - columnheader "Rewards" [ref=f8e1662]
+                  - rowgroup [ref=f8e1663]:
+                    - row [ref=f8e1664]:
+                      - cell "Blueleaf Tubers Grab a Crate with Holes. Grab a Snufflenose Command Stick. Grab and read the Snufflenose Owner's Manual. In Razorfen Kraul, use the Crate with Holes to summon a Snufflenose Gopher, and use the Command Stick on the gopher to make it search for Tubers. Bring 6 Blueleaf Tubers, the Snufflenose Command Stick and the Crate with Holes to Mebok Mizzyrix in Ratchet. Level 26 quest, open from level 20 (both factions)" [ref=f8e1665]:
+                        - link "Blueleaf Tubers" [ref=f8e1666] [cursor=pointer]:
+                          - /url: /quest/1221
+                        - generic [ref=f8e1667]: Grab a Crate with Holes. Grab a Snufflenose Command Stick. Grab and read the Snufflenose Owner's Manual. In Razorfen Kraul, use the Crate with Holes to summon a Snufflenose Gopher, and use the Command Stick on the gopher to make it search for Tubers. Bring 6 Blueleaf Tubers, the Snufflenose Command Stick and the Crate with Holes to Mebok Mizzyrix in Ratchet.
+                        - generic [ref=f8e1668]: Level 26 quest, open from level 20 (both factions)
+                      - cell "Mebok Mizzyrix The Barrens, 62.4, 37.6" [ref=f8e1669]:
+                        - link "Mebok Mizzyrix" [ref=f8e1670] [cursor=pointer]:
+                          - /url: /map/kalimdor#pin=Mebok%20Mizzyrix
+                        - generic [ref=f8e1671]: The Barrens, 62.4, 37.6
+                      - cell "5,000 2,100 in Classic" [ref=f8e1672]:
+                        - text: 5,000
+                        - generic [ref=f8e1673]: 2,100 in Classic
+                      - cell [ref=f8e1674]:
+                        - list [ref=f8e1675]:
+                          - listitem [ref=f8e1676]:
+                            - link "A Small Container of Gems" [ref=f8e1677]:
+                              - /url: /item/6755
+                    - row [ref=f8e1678]:
+                      - cell "Willix the Importer Escort Willix the Importer out of Razorfen Kraul. Level 30 quest, open from level 23 (both factions)" [ref=f8e1679]:
+                        - link "Willix the Importer" [ref=f8e1680] [cursor=pointer]:
+                          - /url: /quest/1144
+                        - generic [ref=f8e1681]: Escort Willix the Importer out of Razorfen Kraul.
+                        - generic [ref=f8e1682]: Level 30 quest, open from level 23 (both factions)
+                      - cell "Willix the Importer Inside the dungeon" [ref=f8e1683]:
+                        - text: Willix the Importer
+                        - generic [ref=f8e1684]: Inside the dungeon
+                      - cell "7,250 3,050 in Classic" [ref=f8e1685]:
+                        - text: 7,250
+                        - generic [ref=f8e1686]: 3,050 in Classic
+                      - cell "One of Monkey Ring Snake Hoop Tiger Band Boar Signet" [ref=f8e1687]:
+                        - generic [ref=f8e1688]: One of
+                        - list [ref=f8e1689]:
+                          - listitem [ref=f8e1690]:
+                            - link "Monkey Ring" [ref=f8e1691]:
+                              - /url: /item/6748
+                          - listitem [ref=f8e1692]:
+                            - link "Snake Hoop" [ref=f8e1693]:
+                              - /url: /item/6750
+                          - listitem [ref=f8e1694]:
+                            - link "Tiger Band" [ref=f8e1695]:
+                              - /url: /item/6749
+                          - listitem [ref=f8e1696]:
+                            - link "Boar Signet" [ref=f8e1697]:
+                              - /url: /item/274078
+                    - row [ref=f8e1698]:
+                      - cell "Mortality Wanes Find and return Treshala's Pendant to Treshala Fallowbrook in Darnassus. Level 30 quest, open from level 25" [ref=f8e1699]:
+                        - link "Mortality Wanes" [ref=f8e1700] [cursor=pointer]:
+                          - /url: /quest/1142
+                        - generic [ref=f8e1701]: Find and return Treshala's Pendant to Treshala Fallowbrook in Darnassus.
+                        - generic [ref=f8e1702]: Level 30 quest, open from level 25
+                      - cell "Heralath Fallowbrook Inside the dungeon" [ref=f8e1703]:
+                        - text: Heralath Fallowbrook
+                        - generic [ref=f8e1704]: Inside the dungeon
+                      - cell "Not known yet 3,050 in Classic" [ref=f8e1705]:
+                        - generic [ref=f8e1706]:
+                          - text: Not known yet
+                          - generic [ref=f8e1707]: 3,050 in Classic
+                      - cell "One of Mourning Shawl Lancer Boots Sentinel's Boots" [ref=f8e1708]:
+                        - generic [ref=f8e1709]: One of
+                        - list [ref=f8e1710]:
+                          - listitem [ref=f8e1711]:
+                            - link "Mourning Shawl" [ref=f8e1712]:
+                              - /url: /item/6751
+                          - listitem [ref=f8e1713]:
+                            - link "Lancer Boots" [ref=f8e1714]:
+                              - /url: /item/6752
+                          - listitem [ref=f8e1715]:
+                            - link "Sentinel's Boots" [ref=f8e1716]:
+                              - /url: /item/270047
+                    - row [ref=f8e1717]:
+                      - cell "The Crone of the Kraul Bring Razorflank's Medallion to Falfindel Waywarder in Thalanaar. Level 34 quest, open from level 29 After “Lonebrow's Journal” (from the item Henrig Lonebrow's Journal)" [ref=f8e1718]:
+                        - link "The Crone of the Kraul" [ref=f8e1719] [cursor=pointer]:
+                          - /url: /quest/1101
+                        - generic [ref=f8e1720]: Bring Razorflank's Medallion to Falfindel Waywarder in Thalanaar.
+                        - generic [ref=f8e1721]: Level 34 quest, open from level 29
+                        - generic [ref=f8e1722]: After “Lonebrow's Journal” (from the item Henrig Lonebrow's Journal)
+                      - cell "Falfindel Waywarder Feralas, 89.4, 45.8" [ref=f8e1723]:
+                        - link "Falfindel Waywarder" [ref=f8e1724] [cursor=pointer]:
+                          - /url: /map/kalimdor#pin=Falfindel%20Waywarder
+                        - generic [ref=f8e1725]: Feralas, 89.4, 45.8
+                      - cell "Not known yet 3,350 in Classic" [ref=f8e1726]:
+                        - generic [ref=f8e1727]:
+                          - text: Not known yet
+                          - generic [ref=f8e1728]: 3,350 in Classic
+                      - cell "One of Berylline Pads Stonefist Girdle Marbled Buckler Quilboar Blaster" [ref=f8e1729]:
+                        - generic [ref=f8e1730]: One of
+                        - list [ref=f8e1731]:
+                          - listitem [ref=f8e1732]:
+                            - link "Berylline Pads" [ref=f8e1733]:
+                              - /url: /item/4197
+                          - listitem [ref=f8e1734]:
+                            - link "Stonefist Girdle" [ref=f8e1735]:
+                              - /url: /item/6742
+                          - listitem [ref=f8e1736]:
+                            - link "Marbled Buckler" [ref=f8e1737]:
+                              - /url: /item/6725
+                        - list [ref=f8e1738]:
+                          - listitem [ref=f8e1739]:
+                            - link "Quilboar Blaster" [ref=f8e1740]:
+                              - /url: /item/274084
+              - paragraph [ref=f8e1741]:
+                - link "Scarlet Monastery Graveyard" [ref=f8e1742] [cursor=pointer]:
+                  - /url: /dungeons/scarlet-monastery-graveyard
+                - text: opens at 30, the beta’s cap, but its quests are level 33 to 38. The beta also lets you into
+                - link "Razorfen Downs" [ref=f8e1743] [cursor=pointer]:
+                  - /url: /dungeons/razorfen-downs
+                - text: from 25 and
+                - link "Uldaman" [ref=f8e1744] [cursor=pointer]:
+                  - /url: /dungeons/uldaman
+                - text: "from 30, two dungeons made for level 37 and up: their quests are for after the beta."
+          - region [ref=f8e1745]:
+            - heading "Before you go" [level=2] [ref=f8e1747]
+            - list [ref=f8e1748]:
+              - listitem [ref=f8e1749]: "Some need another quest first. Sometimes a whole chain: “The Stockade Riots” starts with the letter VanCleef drops at the end of the Deadmines. When the quest before is marked optional, it only leads you to the giver and you can skip it."
+              - listitem [ref=f8e1750]: "No bonus before the door. “Collecting Memories”, “Oh Brother. . .”, “The Essence of Aku'Mai”, “Researching the Corruption” are done on the way to the dungeon, without going in: they give what they gave in Classic."
+              - listitem [ref=f8e1751]:
+                - text: "Once is enough for the experience. Once your quests are handed in, another run only gives the monsters’ experience. Run it again for its loot if you want, then move on to the next dungeon or back to the quests of your zone: my road from 20 to 30 is in the"
+                - link "level 30 guide" [ref=f8e1752] [cursor=pointer]:
+                  - /url: /level-30#leveling
+                - text: .
+              - listitem [ref=f8e1753]:
+                - text: Mind the highest level in the group. Since the October 8 update, each of you earns a kill’s experience by your own level (
+                - link "Blizzard’s notes" [ref=f8e1754] [cursor=pointer]:
+                  - /url: https://us.forums.blizzard.com/en/wow/t/2360696/5
+                - text: "), but a monster grey for the highest level in the group gives nothing to anyone. And a monster below you gives less in Forever than in Classic:"
+                - link "what each level costs" [ref=f8e1755] [cursor=pointer]:
+                  - /url: /level-30#kill-xp
+                - text: .
+              - listitem [ref=f8e1756]: "Count what a quest asks of each of you. In the City of Dalaran, the Horde’s “Source of Power” asks each of you for six Cracked Sentry Cores, and a run has only 12 to 15 sentries, each giving one core: a group of five needs two or three runs."
+          - generic [ref=f8e1757]:
+            - paragraph [ref=f8e1758]:
+              - text: The quests, their givers and their chains come from cMaNGOS (a free project that rebuilds Classic’s servers) for Classic’s quests, and from Wowhead’s Forever database for the new ones and the translated names. The experience is what the beta server answered for each quest, halved as
+              - link "Blizzard’s notes" [ref=f8e1759] [cursor=pointer]:
+                - /url: https://us.forums.blizzard.com/en/wow/t/2360696/4
+              - text: of October 1 say. The tooltips come from the beta client.
+            - paragraph [ref=f8e1760]: If a quest gives you something else, or is given somewhere else, tell me.
+  - contentinfo [ref=f8e1761]:
+    - region "Support ForeverChanges" [ref=f8e1762]:
+      - generic [ref=f8e1763]:
+        - paragraph [ref=f8e1764]:
+          - strong [ref=f8e1765]: ForeverChanges has no ads
+          - generic [ref=f8e1766]: I make it on my own, and I want it to stay free. If it's useful to you, a donation helps pay for hosting and the time it takes to keep it up to date.
+          - button "Tell me what to improve" [ref=f8e1767] [cursor=pointer]
+        - generic [ref=f8e1768]:
+          - button "Poke the goblin" [ref=f8e1769] [cursor=pointer]:
+            - generic [aria-hidden]: PPC for the little content creator!
+          - link "Support the site" [ref=f8e1770] [cursor=pointer]:
+            - /url: https://ko-fi.com/bartolomew
+    - navigation "Site pages" [ref=f8e1776]:
+      - generic [ref=f8e1777]:
+        - heading "Classes" [level=2] [ref=f8e1778]
+        - list [ref=f8e1779]:
+          - listitem [ref=f8e1780]:
+            - link "Warrior" [ref=f8e1781] [cursor=pointer]:
+              - /url: /class/warrior
+          - listitem [ref=f8e1782]:
+            - link "Paladin" [ref=f8e1783] [cursor=pointer]:
+              - /url: /class/paladin
+          - listitem [ref=f8e1784]:
+            - link "Hunter" [ref=f8e1785] [cursor=pointer]:
+              - /url: /class/hunter
+          - listitem [ref=f8e1786]:
+            - link "Rogue" [ref=f8e1787] [cursor=pointer]:
+              - /url: /class/rogue
+          - listitem [ref=f8e1788]:
+            - link "Priest" [ref=f8e1789] [cursor=pointer]:
+              - /url: /class/priest
+          - listitem [ref=f8e1790]:
+            - link "Shaman" [ref=f8e1791] [cursor=pointer]:
+              - /url: /class/shaman
+          - listitem [ref=f8e1792]:
+            - link "Mage" [ref=f8e1793] [cursor=pointer]:
+              - /url: /class/mage
+          - listitem [ref=f8e1794]:
+            - link "Warlock" [ref=f8e1795] [cursor=pointer]:
+              - /url: /class/warlock
+          - listitem [ref=f8e1796]:
+            - link "Druid" [ref=f8e1797] [cursor=pointer]:
+              - /url: /class/druid
+      - generic [ref=f8e1798]:
+        - heading "Character" [level=2] [ref=f8e1799]
+        - list [ref=f8e1800]:
+          - listitem [ref=f8e1801]:
+            - link "Talent calculator" [ref=f8e1802] [cursor=pointer]:
+              - /url: /talents
+          - listitem [ref=f8e1803]:
+            - link "Spellbook" [ref=f8e1804] [cursor=pointer]:
+              - /url: /spellbook/warrior
+          - listitem [ref=f8e1805]:
+            - link "Legacy perks" [ref=f8e1806] [cursor=pointer]:
+              - /url: /legacy-perks
+          - listitem [ref=f8e1807]:
+            - link "Races" [ref=f8e1808] [cursor=pointer]:
+              - /url: /racials
+          - listitem [ref=f8e1809]:
+            - link "Professions" [ref=f8e1810] [cursor=pointer]:
+              - /url: /professions
+          - listitem [ref=f8e1811]:
+            - link "Downrank calculator" [ref=f8e1812] [cursor=pointer]:
+              - /url: /downrank-calculator
+          - listitem [ref=f8e1813]:
+            - link "Tier list maker" [ref=f8e1814] [cursor=pointer]:
+              - /url: /tier-list
+      - generic [ref=f8e1815]:
+        - heading "Gear" [level=2] [ref=f8e1816]
+        - list [ref=f8e1817]:
+          - listitem [ref=f8e1818]:
+            - link "BiS list" [ref=f8e1819] [cursor=pointer]:
+              - /url: /bis
+          - listitem [ref=f8e1820]:
+            - link "Items" [ref=f8e1821] [cursor=pointer]:
+              - /url: /items
+          - listitem [ref=f8e1822]:
+            - link "Hidden items" [ref=f8e1823] [cursor=pointer]:
+              - /url: /hidden-items
+          - listitem [ref=f8e1824]:
+            - link "Transmog" [ref=f8e1825] [cursor=pointer]:
+              - /url: /transmog
+      - generic [ref=f8e1826]:
+        - heading "World" [level=2] [ref=f8e1827]
+        - list [ref=f8e1828]:
+          - listitem [ref=f8e1829]:
+            - link "World map" [ref=f8e1830] [cursor=pointer]:
+              - /url: /map
+          - listitem [ref=f8e1831]:
+            - link "Dungeons" [ref=f8e1832] [cursor=pointer]:
+              - /url: /dungeons
+          - listitem [ref=f8e1833]:
+            - link "Quests" [ref=f8e1834] [cursor=pointer]:
+              - /url: /quests
+          - listitem [ref=f8e1835]:
+            - link "Dungeon quests" [ref=f8e1836] [cursor=pointer]:
+              - /url: /dungeon-quests
+          - listitem [ref=f8e1837]:
+            - link "Rare spawns" [ref=f8e1838] [cursor=pointer]:
+              - /url: /rares
+          - listitem [ref=f8e1839]:
+            - link "Library books" [ref=f8e1840] [cursor=pointer]:
+              - /url: /library-books
+      - generic [ref=f8e1841]:
+        - heading "Guides" [level=2] [ref=f8e1842]
+        - list [ref=f8e1843]:
+          - listitem [ref=f8e1844]:
+            - link "Tanning Rack" [ref=f8e1845] [cursor=pointer]:
+              - /url: /tanning-rack
+          - listitem [ref=f8e1846]:
+            - link "PvP ranks" [ref=f8e1847] [cursor=pointer]:
+              - /url: /pvp-ranks
+          - listitem [ref=f8e1848]:
+            - link "Downranking" [ref=f8e1849] [cursor=pointer]:
+              - /url: /downranking
+          - listitem [ref=f8e1850]:
+            - link "Booty Bay Bruiser's Buckshot" [ref=f8e1851] [cursor=pointer]:
+              - /url: /booty-bay-bruisers-buckshot
+          - listitem [ref=f8e1852]:
+            - link "Scarlet Banner" [ref=f8e1853] [cursor=pointer]:
+              - /url: /scarlet-banner
+          - listitem [ref=f8e1854]:
+            - link "$100,000 duel tournament" [ref=f8e1855] [cursor=pointer]:
+              - /url: /duel-tournament
+          - listitem [ref=f8e1856]:
+            - link "Level 30" [ref=f8e1857] [cursor=pointer]:
+              - /url: /level-30
+          - listitem [ref=f8e1858]:
+            - link "Druid Cat Form quest" [ref=f8e1859] [cursor=pointer]:
+              - /url: /druid-cat-form
+          - listitem [ref=f8e1860]:
+            - link "Addons" [ref=f8e1861] [cursor=pointer]:
+              - /url: /addons
+          - listitem [ref=f8e1862]:
+            - link "Savory Whimsyfin Delight" [ref=f8e1863] [cursor=pointer]:
+              - /url: /savory-whimsyfin-delight
+          - listitem [ref=f8e1864]:
+            - link "Druid snake form" [ref=f8e1865] [cursor=pointer]:
+              - /url: /druid-snake-form
+          - listitem [ref=f8e1866]:
+            - link "Battle mage" [ref=f8e1867] [cursor=pointer]:
+              - /url: /battle-mage
+          - listitem [ref=f8e1868]:
+            - link "Cozy Sleeping Bag" [ref=f8e1869] [cursor=pointer]:
+              - /url: /cozy-sleeping-bag
+          - listitem [ref=f8e1870]:
+            - link "Merchant's Favor" [ref=f8e1871] [cursor=pointer]:
+              - /url: /merchants-favor
+          - listitem [ref=f8e1872]:
+            - link "Hunter pets" [ref=f8e1873] [cursor=pointer]:
+              - /url: /hunter-pets
+      - generic [ref=f8e1874]:
+        - heading "Beta" [level=2] [ref=f8e1875]
+        - list [ref=f8e1876]:
+          - listitem [ref=f8e1877]:
+            - link "Patch notes" [ref=f8e1878] [cursor=pointer]:
+              - /url: /patch-notes
+          - listitem [ref=f8e1879]:
+            - link "Changes vs Classic" [ref=f8e1880] [cursor=pointer]:
+              - /url: /changes
+          - listitem [ref=f8e1881]:
+            - link "Beta and launch dates" [ref=f8e1882] [cursor=pointer]:
+              - /url: /beta
+          - listitem [ref=f8e1883]:
+            - link "Server status" [ref=f8e1884] [cursor=pointer]:
+              - /url: /server-status
+      - generic [ref=f8e1885]:
+        - heading "Language" [level=2] [ref=f8e1886]
+        - list [ref=f8e1891]:
+          - listitem [ref=f8e1892]:
+            - generic [ref=f8e1893]: English
+          - listitem [ref=f8e1896]:
+            - link "Français" [ref=f8e1897] [cursor=pointer]:
+              - /url: /fr/dungeon-quests
+          - listitem [ref=f8e1898]:
+            - link "Deutsch" [ref=f8e1899] [cursor=pointer]:
+              - /url: /de/dungeon-quests
+          - listitem [ref=f8e1900]:
+            - link "繁體中文" [ref=f8e1901] [cursor=pointer]:
+              - /url: /zh-tw/dungeon-quests
+          - listitem [ref=f8e1902]:
+            - link "简体中文" [ref=f8e1903] [cursor=pointer]:
+              - /url: /zh-cn/dungeon-quests
+          - listitem [ref=f8e1904]:
+            - link "Русский" [ref=f8e1905] [cursor=pointer]:
+              - /url: /ru/dungeon-quests
+    - generic [ref=f8e1906]:
+      - paragraph [ref=f8e1907]: ForeverChanges is an unofficial fan site, not affiliated with or endorsed by Blizzard Entertainment. World of Warcraft and Warcraft are trademarks or registered trademarks of Blizzard Entertainment, Inc. in the U.S. and/or other countries. Game content and images © Blizzard Entertainment, Inc.
+      - navigation "Legal" [ref=f8e1909]:
+        - link "About the data" [ref=f8e1910] [cursor=pointer]:
+          - /url: /about
+        - link "Privacy" [ref=f8e1911] [cursor=pointer]:
+          - /url: /privacy
+        - link "Terms" [ref=f8e1912] [cursor=pointer]:
+          - /url: /terms
+        - link "Legal notice" [ref=f8e1913] [cursor=pointer]:
+          - /url: /legal

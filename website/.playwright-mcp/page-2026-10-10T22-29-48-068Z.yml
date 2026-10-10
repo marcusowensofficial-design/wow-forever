@@ -1,0 +1,835 @@
+- generic [active] [ref=f7e1]:
+  - text: ": : :"
+  - main [ref=f7e2]:
+    - generic [ref=f7e3]:
+      - generic [ref=f7e4]:
+        - generic [ref=f7e5]:
+          - generic [ref=f7e6]:
+            - button "Pull the murloc camp" [ref=f7e7] [cursor=pointer]
+            - generic [ref=f7e8]:
+              - generic [ref=f7e9]: Online now
+              - generic [ref=f7e10]: 2,358
+              - generic [ref=f7e11]: murlocs
+          - link "ForeverChanges home" [ref=f7e12] [cursor=pointer]:
+            - /url: /
+            - img "ForeverChanges" [ref=f7e13]
+          - link [ref=f7e15] [cursor=pointer]:
+            - /url: /patch-notes
+            - generic [ref=f7e16]:
+              - text: Updated
+              - generic [aria-hidden] [ref=f7e18]: ·
+            - text: Beta build 1.60.1.70338
+          - link "Launch in" [ref=f7e19] [cursor=pointer]:
+            - /url: /beta
+            - generic [aria-hidden] [ref=f7e21]:
+              - generic [ref=f7e22]:
+                - generic [ref=f7e23]: "25"
+                - generic [ref=f7e24]: days
+              - generic [ref=f7e25]:
+                - text: ":"
+                - generic [ref=f7e26]: "00"
+                - generic [ref=f7e27]: hrs
+              - generic [ref=f7e28]:
+                - text: ":"
+                - generic [ref=f7e29]: "30"
+                - generic [ref=f7e30]: min
+              - generic [ref=f7e31]:
+                - text: ":"
+                - generic [ref=f7e32]: "13"
+                - generic [ref=f7e33]: sec
+        - generic [ref=f7e34]:
+          - navigation "Main" [ref=f7e35]:
+            - link "Changes" [ref=f7e36] [cursor=pointer]:
+              - /url: /changes
+            - link "Talents , updated" [ref=f7e37] [cursor=pointer]:
+              - /url: /talents/warrior
+              - text: Talents
+              - generic:
+                - generic [aria-hidden]: Updated on October 8
+                - generic [ref=f7e39]: ", updated"
+            - link "Spellbook , updated" [ref=f7e40] [cursor=pointer]:
+              - /url: /spellbook/warrior
+              - text: Spellbook
+              - generic:
+                - generic [aria-hidden]: Updated on October 8
+                - generic [ref=f7e42]: ", updated"
+            - link "Legacy" [ref=f7e43] [cursor=pointer]:
+              - /url: /legacy-perks
+            - link "Professions" [ref=f7e44] [cursor=pointer]:
+              - /url: /professions
+            - link "Races" [ref=f7e45] [cursor=pointer]:
+              - /url: /racials
+            - link "Dungeons , new" [ref=f7e46] [cursor=pointer]:
+              - /url: /dungeons
+              - text: Dungeons
+              - generic:
+                - generic [aria-hidden]: "New: the City of Dalaran"
+                - generic [ref=f7e48]: ", new"
+            - link "Items , updated" [ref=f7e49] [cursor=pointer]:
+              - /url: /items
+              - text: Items
+              - generic:
+                - generic [aria-hidden]: 331 items changed on October 8
+                - generic [ref=f7e51]: ", updated"
+            - link "Quests" [ref=f7e52] [cursor=pointer]:
+              - /url: /quests
+            - link "BiS list , updated" [ref=f7e53] [cursor=pointer]:
+              - /url: /bis
+              - text: BiS list
+              - generic:
+                - generic [aria-hidden]: Up to date with the latest build
+                - generic [ref=f7e55]: ", updated"
+            - link "World map" [ref=f7e56] [cursor=pointer]:
+              - /url: /map
+            - link "Guides" [ref=f7e57] [cursor=pointer]:
+              - /url: /guides
+            - link "Patch notes" [ref=f7e58] [cursor=pointer]:
+              - /url: /patch-notes
+          - button "Search" [ref=f7e60] [cursor=pointer]:
+            - generic [aria-hidden]: Search /
+      - generic [ref=f7e62]:
+        - navigation "Choose a class" [ref=f7e63]:
+          - button "All" [pressed] [ref=f7e64] [cursor=pointer]
+          - link "Warrior" [ref=f7e67] [cursor=pointer]:
+            - /url: /class/warrior
+          - link "Hunter" [ref=f7e70] [cursor=pointer]:
+            - /url: /class/hunter
+          - link "Mage" [ref=f7e73] [cursor=pointer]:
+            - /url: /class/mage
+          - link "Rogue" [ref=f7e76] [cursor=pointer]:
+            - /url: /class/rogue
+          - link "Priest" [ref=f7e79] [cursor=pointer]:
+            - /url: /class/priest
+          - link "Warlock" [ref=f7e82] [cursor=pointer]:
+            - /url: /class/warlock
+          - link "Paladin" [ref=f7e85] [cursor=pointer]:
+            - /url: /class/paladin
+          - link "Druid" [ref=f7e88] [cursor=pointer]:
+            - /url: /class/druid
+          - link "Shaman" [ref=f7e91] [cursor=pointer]:
+            - /url: /class/shaman
+        - generic [ref=f7e95]:
+          - heading "WoW Forever changes vs Classic" [level=1] [ref=f7e96]
+          - paragraph [ref=f7e97]: "Every World of Warcraft: Forever talent and spell change, compared with Classic: 113 new talents, 300 changed talents and 261 changed spells across the nine classes. Pick a class to read its changes."
+          - paragraph [ref=f7e98]: Talents and spells are read from the Forever beta client and compared with the Classic Era client.
+          - generic [ref=f7e99]:
+            - generic [ref=f7e100]:
+              - definition [ref=f7e101]: "300"
+              - term [ref=f7e102]: Talents changed
+            - generic [ref=f7e103]:
+              - definition [ref=f7e104]: "113"
+              - term [ref=f7e105]: New talents
+            - generic [ref=f7e106]:
+              - definition [ref=f7e107]: "261"
+              - term [ref=f7e108]: Spells changed
+      - generic [ref=f7e110]:
+        - navigation [ref=f7e111]:
+          - button [pressed] [ref=f7e112] [cursor=pointer]
+          - link [ref=f7e114] [cursor=pointer]:
+            - /url: /class/warrior
+          - link [ref=f7e116] [cursor=pointer]:
+            - /url: /class/hunter
+          - link [ref=f7e118] [cursor=pointer]:
+            - /url: /class/mage
+          - link [ref=f7e120] [cursor=pointer]:
+            - /url: /class/rogue
+          - link [ref=f7e122] [cursor=pointer]:
+            - /url: /class/priest
+          - link [ref=f7e124] [cursor=pointer]:
+            - /url: /class/warlock
+          - link [ref=f7e126] [cursor=pointer]:
+            - /url: /class/paladin
+          - link [ref=f7e128] [cursor=pointer]:
+            - /url: /class/druid
+          - link [ref=f7e130] [cursor=pointer]:
+            - /url: /class/shaman
+        - generic [ref=f7e132]: All changes
+        - button [ref=f7e133] [cursor=pointer]: Top ↑
+      - generic [ref=f7e134]:
+        - complementary [ref=f7e135]:
+          - navigation "Filter changes" [ref=f7e136]:
+            - button "All changes 753" [pressed] [ref=f7e137] [cursor=pointer]:
+              - generic [ref=f7e138]: All changes
+              - generic [ref=f7e139]: "753"
+            - button "New talents 113" [ref=f7e140] [cursor=pointer]:
+              - generic [ref=f7e141]: New talents
+              - generic [ref=f7e142]: "113"
+            - button "Changed talents 300" [ref=f7e143] [cursor=pointer]:
+              - generic [ref=f7e144]: Changed talents
+              - generic [ref=f7e145]: "300"
+            - button "Removed talents 79" [ref=f7e146] [cursor=pointer]:
+              - generic [ref=f7e147]: Removed talents
+              - generic [ref=f7e148]: "79"
+            - button "Spells 418" [ref=f7e149] [cursor=pointer]:
+              - generic [ref=f7e150]: Spells
+              - generic [ref=f7e151]: "418"
+            - button "Everything 963" [ref=f7e152] [cursor=pointer]:
+              - generic [ref=f7e153]: Everything
+              - generic [ref=f7e154]: "963"
+          - link "Talent calculator Choose a class and plan your build" [ref=f7e155] [cursor=pointer]:
+            - /url: /talents/warrior
+            - generic [ref=f7e156]:
+              - strong [ref=f7e157]: Talent calculator
+              - generic [ref=f7e158]: Choose a class and plan your build
+          - link "Spellbook Choose a class to compare its spells with Classic" [ref=f7e159] [cursor=pointer]:
+            - /url: /spellbook/warrior
+            - generic [ref=f7e160]:
+              - strong [ref=f7e161]: Spellbook
+              - generic [ref=f7e162]: Choose a class to compare its spells with Classic
+        - region "Change list" [ref=f7e163]:
+          - generic [ref=f7e164]:
+            - heading "All changes" [level=2] [ref=f7e166]
+            - textbox "Search changes" [ref=f7e171]:
+              - /placeholder: Search spells and talents…
+          - generic [ref=f7e172]:
+            - button "Improved Heroic Strike Same numbers, reworded. Changed" [expanded] [ref=f7e173] [cursor=pointer]:
+              - generic [ref=f7e174]:
+                - strong [ref=f7e175]: Improved Heroic Strike
+                - generic [ref=f7e176]: Same numbers, reworded.
+              - generic "Text or numbers differ from Classic. Read from the Forever beta client." [ref=f7e178]: Changed
+              - generic [aria-hidden] [ref=f7e179]: ›
+            - button "Improved Rend Rend's bleed-damage bonus changes from 15% to 12% at rank 1. Changed" [ref=f7e180] [cursor=pointer]:
+              - generic [ref=f7e181]:
+                - strong [ref=f7e182]: Improved Rend
+                - generic [ref=f7e183]:
+                  - generic [ref=f7e184]: Rend
+                  - text: "'s bleed-damage bonus changes from 15% to 12% at rank 1."
+              - generic "Text or numbers differ from Classic. Read from the Forever beta client." [ref=f7e186]: Changed
+              - generic [aria-hidden] [ref=f7e187]: ›
+            - button "Improved Charge Same numbers, reworded. Changed" [ref=f7e188] [cursor=pointer]:
+              - generic [ref=f7e189]:
+                - strong [ref=f7e190]: Improved Charge
+                - generic [ref=f7e191]: Same numbers, reworded.
+              - generic "Text or numbers differ from Classic. Read from the Forever beta client." [ref=f7e193]: Changed
+              - generic [aria-hidden] [ref=f7e194]: ›
+            - button "Improved Tactical Mastery Replaces Tactical Mastery. Changed" [ref=f7e195] [cursor=pointer]:
+              - generic [ref=f7e196]:
+                - strong [ref=f7e197]: Improved Tactical Mastery
+                - generic [ref=f7e198]:
+                  - text: Replaces
+                  - generic [ref=f7e199]: Tactical Mastery
+                  - text: .
+              - generic "Text or numbers differ from Classic. Read from the Forever beta client." [ref=f7e201]: Changed
+              - generic [aria-hidden] [ref=f7e202]: ›
+            - button "Improved Overpower Moved from tier 3 to tier 2. Moved" [ref=f7e203] [cursor=pointer]:
+              - generic [ref=f7e204]:
+                - strong [ref=f7e205]: Improved Overpower
+                - generic [ref=f7e206]: Moved from tier 3 to tier 2.
+              - generic "Same effect, elsewhere in the tree. Read from the Forever beta client." [ref=f7e208]: Moved
+              - generic [aria-hidden] [ref=f7e209]: ›
+            - button "Anger Management Tooltip now explicitly grants 1 Rage every 3 sec in combat; out-of-combat wording changes from slower decay to reduced Rage loss. Changed" [ref=f7e210] [cursor=pointer]:
+              - generic [ref=f7e211]:
+                - strong [ref=f7e212]: Anger Management
+                - generic [ref=f7e213]: Tooltip now explicitly grants 1 Rage every 3 sec in combat; out-of-combat wording changes from slower decay to reduced Rage loss.
+              - generic "Text or numbers differ from Classic. Read from the Forever beta client." [ref=f7e215]: Changed
+              - generic [aria-hidden] [ref=f7e216]: ›
+            - button "Deep Wounds Same numbers, reworded. Changed" [ref=f7e217] [cursor=pointer]:
+              - generic [ref=f7e218]:
+                - strong [ref=f7e219]: Deep Wounds
+                - generic [ref=f7e220]: Same numbers, reworded.
+              - generic "Text or numbers differ from Classic. Read from the Forever beta client." [ref=f7e222]: Changed
+              - generic [aria-hidden] [ref=f7e223]: ›
+            - button "Spearing Strike A brutal attack that deals 40% weapon damage. Deals an additional 80% weapon damage against Giants, Dragonkin, and mounted targets. New" [ref=f7e224] [cursor=pointer]:
+              - generic [ref=f7e225]:
+                - strong [ref=f7e226]: Spearing Strike
+                - generic [ref=f7e227]: A brutal attack that deals 40% weapon damage. Deals an additional 80% weapon damage against Giants, Dragonkin, and mounted targets.
+              - generic "Not in the Classic talent tree. Read from the Forever beta client." [ref=f7e229]: New
+              - generic [aria-hidden] [ref=f7e230]: ›
+            - 'button "Two-Handed Weapon Specialization 3 ranks (Classic: 5). Changed" [ref=f7e231] [cursor=pointer]':
+              - generic [ref=f7e232]:
+                - strong [ref=f7e233]: Two-Handed Weapon Specialization
+                - generic [ref=f7e234]: "3 ranks (Classic: 5)."
+              - generic "Text or numbers differ from Classic. Read from the Forever beta client." [ref=f7e236]: Changed
+              - generic [aria-hidden] [ref=f7e237]: ›
+            - button "Impale Effect rewritten. Changed" [ref=f7e238] [cursor=pointer]:
+              - generic [ref=f7e239]:
+                - strong [ref=f7e240]: Impale
+                - generic [ref=f7e241]: Effect rewritten.
+              - generic "Text or numbers differ from Classic. Read from the Forever beta client." [ref=f7e243]: Changed
+              - generic [aria-hidden] [ref=f7e244]: ›
+            - button "Bloodthrill Your Main Hand melee attacks against enemies afflicted by your Rend have a 4% chance to allow the use of your Overpower ability on the target. Lasts 6 sec. New" [ref=f7e245] [cursor=pointer]:
+              - generic [ref=f7e246]:
+                - strong [ref=f7e247]: Bloodthrill
+                - generic [ref=f7e248]:
+                  - text: Your Main Hand melee attacks against enemies afflicted by your
+                  - generic [ref=f7e249]: Rend
+                  - text: have a 4% chance to allow the use of your
+                  - generic [ref=f7e250]: Overpower
+                  - text: ability on the target. Lasts 6 sec.
+              - generic "Not in the Classic talent tree. Read from the Forever beta client." [ref=f7e252]: New
+              - generic [aria-hidden] [ref=f7e253]: ›
+            - 'button "Weaponmaster Weapon-dependent bonuses: Axe/Polearm crit chance, Mace/Staff Armor penetration, or Sword extra attacks. New" [ref=f7e254] [cursor=pointer]':
+              - generic [ref=f7e255]:
+                - strong [ref=f7e256]: Weaponmaster
+                - generic [ref=f7e257]: "Weapon-dependent bonuses: Axe/Polearm crit chance, Mace/Staff Armor penetration, or Sword extra attacks."
+              - generic "Not in the Classic talent tree. Read from the Forever beta client." [ref=f7e259]: New
+              - generic [aria-hidden] [ref=f7e260]: ›
+            - 'button "Improved Slam 2 ranks (Classic: 5). Moved from Fury to Arms. Effect rewritten. Changed" [ref=f7e261] [cursor=pointer]':
+              - generic [ref=f7e262]:
+                - strong [ref=f7e263]: Improved Slam
+                - generic [ref=f7e264]: "2 ranks (Classic: 5). Moved from Fury to Arms. Effect rewritten."
+              - generic "Text or numbers differ from Classic. Read from the Forever beta client." [ref=f7e266]: Changed
+              - generic [aria-hidden] [ref=f7e267]: ›
+            - button "Booming Voice Effect rewritten. Changed" [ref=f7e268] [cursor=pointer]:
+              - generic [ref=f7e269]:
+                - strong [ref=f7e270]: Booming Voice
+                - generic [ref=f7e271]: Effect rewritten.
+              - generic "Text or numbers differ from Classic. Read from the Forever beta client." [ref=f7e273]: Changed
+              - generic [aria-hidden] [ref=f7e274]: ›
+            - button "Cruelty Same numbers, reworded. Changed" [ref=f7e275] [cursor=pointer]:
+              - generic [ref=f7e276]:
+                - strong [ref=f7e277]: Cruelty
+                - generic [ref=f7e278]: Same numbers, reworded.
+              - generic "Text or numbers differ from Classic. Read from the Forever beta client." [ref=f7e280]: Changed
+              - generic [aria-hidden] [ref=f7e281]: ›
+            - button "Lingering Rage Increases the time before your Rage begins to decay after leaving combat by 2 sec. New" [ref=f7e282] [cursor=pointer]:
+              - generic [ref=f7e283]:
+                - strong [ref=f7e284]: Lingering Rage
+                - generic [ref=f7e285]: Increases the time before your Rage begins to decay after leaving combat by 2 sec.
+              - generic "Not in the Classic talent tree. Read from the Forever beta client." [ref=f7e287]: New
+              - generic [aria-hidden] [ref=f7e288]: ›
+            - button "Unbridled Wrath Numbers and wording changed. Changed" [ref=f7e289] [cursor=pointer]:
+              - generic [ref=f7e290]:
+                - strong [ref=f7e291]: Unbridled Wrath
+                - generic [ref=f7e292]: Numbers and wording changed.
+              - generic "Text or numbers differ from Classic. Read from the Forever beta client." [ref=f7e294]: Changed
+              - generic [aria-hidden] [ref=f7e295]: ›
+            - button "Furious Precision Increases your chance to hit with off-hand attacks by 4%. New" [ref=f7e296] [cursor=pointer]:
+              - generic [ref=f7e297]:
+                - strong [ref=f7e298]: Furious Precision
+                - generic [ref=f7e299]: Increases your chance to hit with off-hand attacks by 4%.
+              - generic "Not in the Classic talent tree. Read from the Forever beta client." [ref=f7e301]: New
+              - generic [aria-hidden] [ref=f7e302]: ›
+            - button "Piercing Howl Numbers and wording changed. Changed" [ref=f7e303] [cursor=pointer]:
+              - generic [ref=f7e304]:
+                - strong [ref=f7e305]: Piercing Howl
+                - generic [ref=f7e306]: Numbers and wording changed.
+              - generic "Text or numbers differ from Classic. Read from the Forever beta client." [ref=f7e308]: Changed
+              - generic [aria-hidden] [ref=f7e309]: ›
+            - button "Blood Craze Numbers and wording changed. Changed" [ref=f7e310] [cursor=pointer]:
+              - generic [ref=f7e311]:
+                - strong [ref=f7e312]: Blood Craze
+                - generic [ref=f7e313]: Numbers and wording changed.
+              - generic "Text or numbers differ from Classic. Read from the Forever beta client." [ref=f7e315]: Changed
+              - generic [aria-hidden] [ref=f7e316]: ›
+            - button "Dual Wield Specialization Effect rewritten. Changed" [ref=f7e317] [cursor=pointer]:
+              - generic [ref=f7e318]:
+                - strong [ref=f7e319]: Dual Wield Specialization
+                - generic [ref=f7e320]: Effect rewritten.
+              - generic "Text or numbers differ from Classic. Read from the Forever beta client." [ref=f7e322]: Changed
+              - generic [aria-hidden] [ref=f7e323]: ›
+            - button "Raging Blows Reduces the Rage cost of your Cleave and Whirlwind abilities by 3. New" [ref=f7e324] [cursor=pointer]:
+              - generic [ref=f7e325]:
+                - strong [ref=f7e326]: Raging Blows
+                - generic [ref=f7e327]:
+                  - text: Reduces the Rage cost of your Cleave and
+                  - generic [ref=f7e328]: Whirlwind
+                  - text: abilities by 3.
+              - generic "Not in the Classic talent tree. Read from the Forever beta client." [ref=f7e330]: New
+              - generic [aria-hidden] [ref=f7e331]: ›
+            - button "Enrage Effect rewritten. Changed" [ref=f7e332] [cursor=pointer]:
+              - generic [ref=f7e333]:
+                - strong [ref=f7e334]: Enrage
+                - generic [ref=f7e335]: Effect rewritten.
+              - generic "Text or numbers differ from Classic. Read from the Forever beta client." [ref=f7e337]: Changed
+              - generic [aria-hidden] [ref=f7e338]: ›
+            - button "Improved Execute Moved from column 2 to column 4. 3 instead of 2. Changed" [ref=f7e339] [cursor=pointer]:
+              - generic [ref=f7e340]:
+                - strong [ref=f7e341]: Improved Execute
+                - generic [ref=f7e342]: Moved from column 2 to column 4. 3 instead of 2.
+              - generic "Text or numbers differ from Classic. Read from the Forever beta client." [ref=f7e344]: Changed
+              - generic [aria-hidden] [ref=f7e345]: ›
+            - button "Improved Berserker Rage Moved from tier 6 to tier 5. Effect rewritten. Changed" [ref=f7e346] [cursor=pointer]:
+              - generic [ref=f7e347]:
+                - strong [ref=f7e348]: Improved Berserker Rage
+                - generic [ref=f7e349]: Moved from tier 6 to tier 5. Effect rewritten.
+              - generic "Text or numbers differ from Classic. Read from the Forever beta client." [ref=f7e351]: Changed
+              - generic [aria-hidden] [ref=f7e352]: ›
+            - button "Death Wish Replaces the 20% Armor/resistance penalty with 5% increased damage taken; the damage bonus and Fear immunity remain. Changed" [ref=f7e353] [cursor=pointer]:
+              - generic [ref=f7e354]:
+                - strong [ref=f7e355]: Death Wish
+                - generic [ref=f7e356]: Replaces the 20% Armor/resistance penalty with 5% increased damage taken; the damage bonus and Fear immunity remain.
+              - generic "Text or numbers differ from Classic. Read from the Forever beta client." [ref=f7e358]: Changed
+              - generic [aria-hidden] [ref=f7e359]: ›
+            - 'button "Flurry Moved from column 3 to column 2. Requires Death Wish (Classic: Enrage). Rank 5: 25% instead of 30%, reworded. Changed" [ref=f7e360] [cursor=pointer]':
+              - generic [ref=f7e361]:
+                - strong [ref=f7e362]: Flurry
+                - generic [ref=f7e363]:
+                  - text: Moved from column 3 to column 2. Requires
+                  - generic [ref=f7e364]: Death Wish
+                  - text: "(Classic:"
+                  - generic [ref=f7e365]: Enrage
+                  - text: "). Rank 5: 25% instead of 30%, reworded."
+              - generic "Text or numbers differ from Classic. Read from the Forever beta client." [ref=f7e367]: Changed
+              - generic [aria-hidden] [ref=f7e368]: ›
+            - button "Gore Drinker Your Enrage, Berserker Rage, Bloodrage, Death Wish, and Bloodthirst abilities cause your next 3 melee attacks to restore 0.5% of your maximum Health. New" [ref=f7e369] [cursor=pointer]:
+              - generic [ref=f7e370]:
+                - strong [ref=f7e371]: Gore Drinker
+                - generic [ref=f7e372]:
+                  - text: Your
+                  - generic [ref=f7e373]: Enrage
+                  - text: ","
+                  - generic [ref=f7e374]: Berserker Rage
+                  - text: ","
+                  - generic [ref=f7e375]: Bloodrage
+                  - text: ","
+                  - generic [ref=f7e376]: Death Wish
+                  - text: ", and"
+                  - generic [ref=f7e377]: Bloodthirst
+                  - text: abilities cause your next 3 melee attacks to restore 0.5% of your maximum Health.
+              - generic "Not in the Classic talent tree. Read from the Forever beta client." [ref=f7e379]: New
+              - generic [aria-hidden] [ref=f7e380]: ›
+            - button "Bloodthirst No longer requires Death Wish. Effect rewritten. Changed" [ref=f7e381] [cursor=pointer]:
+              - generic [ref=f7e382]:
+                - strong [ref=f7e383]: Bloodthirst
+                - generic [ref=f7e384]:
+                  - text: No longer requires
+                  - generic [ref=f7e385]: Death Wish
+                  - text: . Effect rewritten.
+              - generic "Text or numbers differ from Classic. Read from the Forever beta client." [ref=f7e387]: Changed
+              - generic [aria-hidden] [ref=f7e388]: ›
+            - 'button "Improved Bloodrage Moved from tier 2 to tier 1. Rank 2: 50% instead of 5, reworded. Changed" [ref=f7e389] [cursor=pointer]':
+              - generic [ref=f7e390]:
+                - strong [ref=f7e391]: Improved Bloodrage
+                - generic [ref=f7e392]: "Moved from tier 2 to tier 1. Rank 2: 50% instead of 5, reworded."
+              - generic "Text or numbers differ from Classic. Read from the Forever beta client." [ref=f7e394]: Changed
+              - generic [aria-hidden] [ref=f7e395]: ›
+            - 'button "Shield Specialization Rank 5: 5 instead of 1, reworded. Changed" [ref=f7e396] [cursor=pointer]':
+              - generic [ref=f7e397]:
+                - strong [ref=f7e398]: Shield Specialization
+                - generic [ref=f7e399]: "Rank 5: 5 instead of 1, reworded."
+              - generic "Text or numbers differ from Classic. Read from the Forever beta client." [ref=f7e401]: Changed
+              - generic [aria-hidden] [ref=f7e402]: ›
+            - button "Iron Will Moved from tier 2 to tier 1. Effect rewritten. Changed" [ref=f7e403] [cursor=pointer]:
+              - generic [ref=f7e404]:
+                - strong [ref=f7e405]: Iron Will
+                - generic [ref=f7e406]: Moved from tier 2 to tier 1. Effect rewritten.
+              - generic "Text or numbers differ from Classic. Read from the Forever beta client." [ref=f7e408]: Changed
+              - generic [aria-hidden] [ref=f7e409]: ›
+            - 'button "Anticipation Moved from tier 1 to tier 2. Rank 5: 20 instead of 10. Changed" [ref=f7e410] [cursor=pointer]':
+              - generic [ref=f7e411]:
+                - strong [ref=f7e412]: Anticipation
+                - generic [ref=f7e413]: "Moved from tier 1 to tier 2. Rank 5: 20 instead of 10."
+              - generic "Text or numbers differ from Classic. Read from the Forever beta client." [ref=f7e415]: Changed
+              - generic [aria-hidden] [ref=f7e416]: ›
+            - button "Improved Revenge Moved from tier 3 to tier 2. Effect rewritten. Changed" [ref=f7e417] [cursor=pointer]:
+              - generic [ref=f7e418]:
+                - strong [ref=f7e419]: Improved Revenge
+                - generic [ref=f7e420]: Moved from tier 3 to tier 2. Effect rewritten.
+              - generic "Text or numbers differ from Classic. Read from the Forever beta client." [ref=f7e422]: Changed
+              - generic [aria-hidden] [ref=f7e423]: ›
+            - 'button "Improved Thunder Clap Moved from Arms to Protection. Rank 3: 6 instead of 4, reworded. Changed" [ref=f7e424] [cursor=pointer]':
+              - generic [ref=f7e425]:
+                - strong [ref=f7e426]: Improved Thunder Clap
+                - generic [ref=f7e427]: "Moved from Arms to Protection. Rank 3: 6 instead of 4, reworded."
+              - generic "Text or numbers differ from Classic. Read from the Forever beta client." [ref=f7e429]: Changed
+              - generic [aria-hidden] [ref=f7e430]: ›
+            - button "Last Stand No longer requires Improved Bloodrage. Same numbers, reworded. Changed" [ref=f7e431] [cursor=pointer]:
+              - generic [ref=f7e432]:
+                - strong [ref=f7e433]: Last Stand
+                - generic [ref=f7e434]:
+                  - text: No longer requires
+                  - generic [ref=f7e435]: Improved Bloodrage
+                  - text: . Same numbers, reworded.
+              - generic "Text or numbers differ from Classic. Read from the Forever beta client." [ref=f7e437]: Changed
+              - generic [aria-hidden] [ref=f7e438]: ›
+            - button "Master of Defense Grants you a 50% chance to generate 5 Rage when you Dodge or Parry while a shield is equipped. New" [ref=f7e439] [cursor=pointer]:
+              - generic [ref=f7e440]:
+                - strong [ref=f7e441]: Master of Defense
+                - generic [ref=f7e442]: Grants you a 50% chance to generate 5 Rage when you Dodge or Parry while a shield is equipped.
+              - generic "Not in the Classic talent tree. Read from the Forever beta client." [ref=f7e444]: New
+              - generic [aria-hidden] [ref=f7e445]: ›
+            - 'button "Improved Disarm Moved from tier 4 to tier 3. Rank 3: 20 secs instead of 3 secs, reworded. Changed" [ref=f7e446] [cursor=pointer]':
+              - generic [ref=f7e447]:
+                - strong [ref=f7e448]: Improved Disarm
+                - generic [ref=f7e449]: "Moved from tier 4 to tier 3. Rank 3: 20 secs instead of 3 secs, reworded."
+              - generic "Text or numbers differ from Classic. Read from the Forever beta client." [ref=f7e451]: Changed
+              - generic [aria-hidden] [ref=f7e452]: ›
+            - 'button "Defiance 3 ranks (Classic: 5). Effect rewritten. Changed" [ref=f7e453] [cursor=pointer]':
+              - generic [ref=f7e454]:
+                - strong [ref=f7e455]: Defiance
+                - generic [ref=f7e456]: "3 ranks (Classic: 5). Effect rewritten."
+              - generic "Text or numbers differ from Classic. Read from the Forever beta client." [ref=f7e458]: Changed
+              - generic [aria-hidden] [ref=f7e459]: ›
+            - button "Improved Sunder Armor Same numbers, reworded. Changed" [ref=f7e460] [cursor=pointer]:
+              - generic [ref=f7e461]:
+                - strong [ref=f7e462]: Improved Sunder Armor
+                - generic [ref=f7e463]: Same numbers, reworded.
+              - generic "Text or numbers differ from Classic. Read from the Forever beta client." [ref=f7e465]: Changed
+              - generic [aria-hidden] [ref=f7e466]: ›
+            - button "Vanguard Your Charge ability is now usable while in Defensive Stance. New" [ref=f7e467] [cursor=pointer]:
+              - generic [ref=f7e468]:
+                - strong [ref=f7e469]: Vanguard
+                - generic [ref=f7e470]:
+                  - text: Your Charge ability is now usable while in
+                  - generic [ref=f7e471]: Defensive Stance
+                  - text: .
+              - generic "Not in the Classic talent tree. Read from the Forever beta client." [ref=f7e473]: New
+              - generic [aria-hidden] [ref=f7e474]: ›
+            - button "Improved Shield Bash Moved from tier 5 to tier 4. Moved" [ref=f7e475] [cursor=pointer]:
+              - generic [ref=f7e476]:
+                - strong [ref=f7e477]: Improved Shield Bash
+                - generic [ref=f7e478]: Moved from tier 5 to tier 4.
+              - generic "Same effect, elsewhere in the tree. Read from the Forever beta client." [ref=f7e480]: Moved
+              - generic [aria-hidden] [ref=f7e481]: ›
+            - button "Improved Shield Wall Replaces longer Shield Wall duration with a 5.5 min cooldown reduction at rank 1. Changed" [ref=f7e482] [cursor=pointer]:
+              - generic [ref=f7e483]:
+                - strong [ref=f7e484]: Improved Shield Wall
+                - generic [ref=f7e485]:
+                  - text: Replaces longer
+                  - generic [ref=f7e486]: Shield Wall
+                  - text: duration with a 5.5 min cooldown reduction at rank 1.
+              - generic "Text or numbers differ from Classic. Read from the Forever beta client." [ref=f7e488]: Changed
+              - generic [aria-hidden] [ref=f7e489]: ›
+            - button "Concussion Blow Same numbers, reworded. Changed" [ref=f7e490] [cursor=pointer]:
+              - generic [ref=f7e491]:
+                - strong [ref=f7e492]: Concussion Blow
+                - generic [ref=f7e493]: Same numbers, reworded.
+              - generic "Text or numbers differ from Classic. Read from the Forever beta client." [ref=f7e495]: Changed
+              - generic [aria-hidden] [ref=f7e496]: ›
+            - button "Focused Rage Reduces the Rage cost of your offensive abilities by 1. New" [ref=f7e497] [cursor=pointer]:
+              - generic [ref=f7e498]:
+                - strong [ref=f7e499]: Focused Rage
+                - generic [ref=f7e500]: Reduces the Rage cost of your offensive abilities by 1.
+              - generic "Not in the Classic talent tree. Read from the Forever beta client." [ref=f7e502]: New
+              - generic [aria-hidden] [ref=f7e503]: ›
+            - button "Bastion Replaces One-Handed Weapon Specialization. Changed" [ref=f7e504] [cursor=pointer]:
+              - generic [ref=f7e505]:
+                - strong [ref=f7e506]: Bastion
+                - generic [ref=f7e507]:
+                  - text: Replaces
+                  - generic [ref=f7e508]: One-Handed Weapon Specialization
+                  - text: .
+              - generic "Text or numbers differ from Classic. Read from the Forever beta client." [ref=f7e510]: Changed
+              - generic [aria-hidden] [ref=f7e511]: ›
+            - button "Shield Slam 421 to 439 instead of 225 to 235, reworded. Changed" [ref=f7e512] [cursor=pointer]:
+              - generic [ref=f7e513]:
+                - strong [ref=f7e514]: Shield Slam
+                - generic [ref=f7e515]: 421 to 439 instead of 225 to 235, reworded.
+              - generic "Text or numbers differ from Classic. Read from the Forever beta client." [ref=f7e517]: Changed
+              - generic [aria-hidden] [ref=f7e518]: ›
+            - button "Sword Specialization Now part of Weaponmaster. Removed" [ref=f7e519] [cursor=pointer]:
+              - generic [ref=f7e520]:
+                - strong [ref=f7e521]: Sword Specialization
+                - generic [ref=f7e522]:
+                  - text: Now part of
+                  - generic [ref=f7e523]: Weaponmaster
+                  - text: .
+              - generic "A Classic talent the Forever trees do not have. Read from the Forever beta client." [ref=f7e525]: Removed
+              - generic [aria-hidden] [ref=f7e526]: ›
+            - button "Mace Specialization Now part of Weaponmaster. Removed" [ref=f7e527] [cursor=pointer]:
+              - generic [ref=f7e528]:
+                - strong [ref=f7e529]: Mace Specialization
+                - generic [ref=f7e530]:
+                  - text: Now part of
+                  - generic [ref=f7e531]: Weaponmaster
+                  - text: .
+              - generic "A Classic talent the Forever trees do not have. Read from the Forever beta client." [ref=f7e533]: Removed
+              - generic [aria-hidden] [ref=f7e534]: ›
+            - button "Axe Specialization Now part of Weaponmaster. Removed" [ref=f7e535] [cursor=pointer]:
+              - generic [ref=f7e536]:
+                - strong [ref=f7e537]: Axe Specialization
+                - generic [ref=f7e538]:
+                  - text: Now part of
+                  - generic [ref=f7e539]: Weaponmaster
+                  - text: .
+              - generic "A Classic talent the Forever trees do not have. Read from the Forever beta client." [ref=f7e541]: Removed
+              - generic [aria-hidden] [ref=f7e542]: ›
+            - button "Polearm Specialization Now part of Weaponmaster. Removed" [ref=f7e543] [cursor=pointer]:
+              - generic [ref=f7e544]:
+                - strong [ref=f7e545]: Polearm Specialization
+                - generic [ref=f7e546]:
+                  - text: Now part of
+                  - generic [ref=f7e547]: Weaponmaster
+                  - text: .
+              - generic "A Classic talent the Forever trees do not have. Read from the Forever beta client." [ref=f7e549]: Removed
+              - generic [aria-hidden] [ref=f7e550]: ›
+            - button "Toughness Not in the Protection tree any more. Removed" [ref=f7e551] [cursor=pointer]:
+              - generic [ref=f7e552]:
+                - strong [ref=f7e553]: Toughness
+                - generic [ref=f7e554]: Not in the Protection tree any more.
+              - generic "A Classic talent the Forever trees do not have. Read from the Forever beta client." [ref=f7e556]: Removed
+              - generic [aria-hidden] [ref=f7e557]: ›
+            - button "Improved Taunt Not in the Protection tree any more. Removed" [ref=f7e558] [cursor=pointer]:
+              - generic [ref=f7e559]:
+                - strong [ref=f7e560]: Improved Taunt
+                - generic [ref=f7e561]: Not in the Protection tree any more.
+              - generic "A Classic talent the Forever trees do not have. Read from the Forever beta client." [ref=f7e563]: Removed
+              - generic [aria-hidden] [ref=f7e564]: ›
+            - button "Improved Shield Block Not in the Protection tree any more. Removed" [ref=f7e565] [cursor=pointer]:
+              - generic [ref=f7e566]:
+                - strong [ref=f7e567]: Improved Shield Block
+                - generic [ref=f7e568]: Not in the Protection tree any more.
+              - generic "A Classic talent the Forever trees do not have. Read from the Forever beta client." [ref=f7e570]: Removed
+              - generic [aria-hidden] [ref=f7e571]: ›
+            - button "Improved Battle Shout Not in the Fury tree any more. Removed" [ref=f7e572] [cursor=pointer]:
+              - generic [ref=f7e573]:
+                - strong [ref=f7e574]: Improved Battle Shout
+                - generic [ref=f7e575]: Not in the Fury tree any more.
+              - generic "A Classic talent the Forever trees do not have. Read from the Forever beta client." [ref=f7e577]: Removed
+              - generic [aria-hidden] [ref=f7e578]: ›
+            - button "Improved Demoralizing Shout Not in the Fury tree any more. Removed" [ref=f7e579] [cursor=pointer]:
+              - generic [ref=f7e580]:
+                - strong [ref=f7e581]: Improved Demoralizing Shout
+                - generic [ref=f7e582]: Not in the Fury tree any more.
+              - generic "A Classic talent the Forever trees do not have. Read from the Forever beta client." [ref=f7e584]: Removed
+              - generic [aria-hidden] [ref=f7e585]: ›
+            - button "Improved Cleave Not in the Fury tree any more. Removed" [ref=f7e586] [cursor=pointer]:
+              - generic [ref=f7e587]:
+                - strong [ref=f7e588]: Improved Cleave
+                - generic [ref=f7e589]: Not in the Fury tree any more.
+              - generic "A Classic talent the Forever trees do not have. Read from the Forever beta client." [ref=f7e591]: Removed
+              - generic [aria-hidden] [ref=f7e592]: ›
+            - button "Healing Light Moved from tier 3 to tier 2. Same numbers, reworded. Changed" [ref=f7e593] [cursor=pointer]:
+              - generic [ref=f7e594]:
+                - strong [ref=f7e595]: Healing Light
+                - generic [ref=f7e596]: Moved from tier 3 to tier 2. Same numbers, reworded.
+              - generic "Text or numbers differ from Classic. Read from the Forever beta client." [ref=f7e598]: Changed
+              - generic [aria-hidden] [ref=f7e599]: ›
+            - 'button "Spiritual Focus 2 ranks (Classic: 5). Rank 2: 70% instead of 28%, reworded. Changed" [ref=f7e600] [cursor=pointer]':
+              - generic [ref=f7e601]:
+                - strong [ref=f7e602]: Spiritual Focus
+                - generic [ref=f7e603]: "2 ranks (Classic: 5). Rank 2: 70% instead of 28%, reworded."
+              - generic "Text or numbers differ from Classic. Read from the Forever beta client." [ref=f7e605]: Changed
+              - generic [aria-hidden] [ref=f7e606]: ›
+            - 'button "Improved Seals Replaces Improved Seal of Righteousness. 3 ranks (Classic: 5). Changed" [ref=f7e607] [cursor=pointer]':
+              - generic [ref=f7e608]:
+                - strong [ref=f7e609]: Improved Seals
+                - generic [ref=f7e610]:
+                  - text: Replaces
+                  - generic [ref=f7e611]: Improved Seal of Righteousness
+                  - text: ". 3 ranks (Classic: 5)."
+              - generic "Text or numbers differ from Classic. Read from the Forever beta client." [ref=f7e613]: Changed
+              - generic [aria-hidden] [ref=f7e614]: ›
+            - button "Show 120 more of 693 remaining" [ref=f7e615] [cursor=pointer]
+        - region "Improved Heroic Strike comparison" [ref=f7e616]:
+          - generic [ref=f7e618]:
+            - heading "Improved Heroic Strike" [level=2] [ref=f7e619]
+            - paragraph [ref=f7e620]:
+              - text: Talent · Arms ·
+              - generic "Text or numbers differ from Classic. Read from the Forever beta client." [ref=f7e621]: Changed
+            - link "See it in the Arms tree" [ref=f7e622] [cursor=pointer]:
+              - /url: /talents/warrior#t=calc-warrior-arms-improved-heroic-strike
+              - text: See it in the Arms tree ↗
+          - group "Talent rank" [ref=f7e624]:
+            - generic [ref=f7e625]: Rank
+            - button "1" [pressed] [ref=f7e626] [cursor=pointer]
+            - button "2" [ref=f7e627] [cursor=pointer]: · 2
+            - button "3" [ref=f7e628] [cursor=pointer]: · 3
+          - generic [ref=f7e629]:
+            - generic [ref=f7e630]:
+              - heading "Classic" [level=3] [ref=f7e631]
+              - paragraph [ref=f7e632]:
+                - text: Reduces the cost of your
+                - generic [ref=f7e633]: Heroic Strike
+                - text: ability by 1
+                - mark [ref=f7e634]: rage
+                - mark [ref=f7e635]: point
+                - text: .
+            - generic [ref=f7e636]:
+              - heading "Forever" [level=3] [ref=f7e637]
+              - paragraph [ref=f7e638]:
+                - text: Reduces the cost of your
+                - generic [ref=f7e639]: Heroic Strike
+                - text: ability by 1
+                - mark [ref=f7e640]: Rage
+                - text: .
+          - group [ref=f7e641]:
+            - generic "Details" [ref=f7e642] [cursor=pointer]
+  - contentinfo [ref=f7e643]:
+    - region "Support ForeverChanges" [ref=f7e644]:
+      - generic [ref=f7e645]:
+        - paragraph [ref=f7e646]:
+          - strong [ref=f7e647]: ForeverChanges has no ads
+          - generic [ref=f7e648]: I make it on my own, and I want it to stay free. If it's useful to you, a donation helps pay for hosting and the time it takes to keep it up to date.
+          - button "Tell me what to improve" [ref=f7e649] [cursor=pointer]
+        - generic [ref=f7e650]:
+          - button "Poke the goblin" [ref=f7e651] [cursor=pointer]:
+            - generic [aria-hidden]: PPC for the little content creator!
+          - link "Support the site" [ref=f7e652] [cursor=pointer]:
+            - /url: https://ko-fi.com/bartolomew
+    - navigation "Site pages" [ref=f7e658]:
+      - generic [ref=f7e659]:
+        - heading "Classes" [level=2] [ref=f7e660]
+        - list [ref=f7e661]:
+          - listitem [ref=f7e662]:
+            - link "Warrior" [ref=f7e663] [cursor=pointer]:
+              - /url: /class/warrior
+          - listitem [ref=f7e664]:
+            - link "Paladin" [ref=f7e665] [cursor=pointer]:
+              - /url: /class/paladin
+          - listitem [ref=f7e666]:
+            - link "Hunter" [ref=f7e667] [cursor=pointer]:
+              - /url: /class/hunter
+          - listitem [ref=f7e668]:
+            - link "Rogue" [ref=f7e669] [cursor=pointer]:
+              - /url: /class/rogue
+          - listitem [ref=f7e670]:
+            - link "Priest" [ref=f7e671] [cursor=pointer]:
+              - /url: /class/priest
+          - listitem [ref=f7e672]:
+            - link "Shaman" [ref=f7e673] [cursor=pointer]:
+              - /url: /class/shaman
+          - listitem [ref=f7e674]:
+            - link "Mage" [ref=f7e675] [cursor=pointer]:
+              - /url: /class/mage
+          - listitem [ref=f7e676]:
+            - link "Warlock" [ref=f7e677] [cursor=pointer]:
+              - /url: /class/warlock
+          - listitem [ref=f7e678]:
+            - link "Druid" [ref=f7e679] [cursor=pointer]:
+              - /url: /class/druid
+      - generic [ref=f7e680]:
+        - heading "Character" [level=2] [ref=f7e681]
+        - list [ref=f7e682]:
+          - listitem [ref=f7e683]:
+            - link "Talent calculator" [ref=f7e684] [cursor=pointer]:
+              - /url: /talents
+          - listitem [ref=f7e685]:
+            - link "Spellbook" [ref=f7e686] [cursor=pointer]:
+              - /url: /spellbook/warrior
+          - listitem [ref=f7e687]:
+            - link "Legacy perks" [ref=f7e688] [cursor=pointer]:
+              - /url: /legacy-perks
+          - listitem [ref=f7e689]:
+            - link "Races" [ref=f7e690] [cursor=pointer]:
+              - /url: /racials
+          - listitem [ref=f7e691]:
+            - link "Professions" [ref=f7e692] [cursor=pointer]:
+              - /url: /professions
+          - listitem [ref=f7e693]:
+            - link "Downrank calculator" [ref=f7e694] [cursor=pointer]:
+              - /url: /downrank-calculator
+          - listitem [ref=f7e695]:
+            - link "Tier list maker" [ref=f7e696] [cursor=pointer]:
+              - /url: /tier-list
+      - generic [ref=f7e697]:
+        - heading "Gear" [level=2] [ref=f7e698]
+        - list [ref=f7e699]:
+          - listitem [ref=f7e700]:
+            - link "BiS list" [ref=f7e701] [cursor=pointer]:
+              - /url: /bis
+          - listitem [ref=f7e702]:
+            - link "Items" [ref=f7e703] [cursor=pointer]:
+              - /url: /items
+          - listitem [ref=f7e704]:
+            - link "Hidden items" [ref=f7e705] [cursor=pointer]:
+              - /url: /hidden-items
+          - listitem [ref=f7e706]:
+            - link "Transmog" [ref=f7e707] [cursor=pointer]:
+              - /url: /transmog
+      - generic [ref=f7e708]:
+        - heading "World" [level=2] [ref=f7e709]
+        - list [ref=f7e710]:
+          - listitem [ref=f7e711]:
+            - link "World map" [ref=f7e712] [cursor=pointer]:
+              - /url: /map
+          - listitem [ref=f7e713]:
+            - link "Dungeons" [ref=f7e714] [cursor=pointer]:
+              - /url: /dungeons
+          - listitem [ref=f7e715]:
+            - link "Quests" [ref=f7e716] [cursor=pointer]:
+              - /url: /quests
+          - listitem [ref=f7e717]:
+            - link "Dungeon quests" [ref=f7e718] [cursor=pointer]:
+              - /url: /dungeon-quests
+          - listitem [ref=f7e719]:
+            - link "Rare spawns" [ref=f7e720] [cursor=pointer]:
+              - /url: /rares
+          - listitem [ref=f7e721]:
+            - link "Library books" [ref=f7e722] [cursor=pointer]:
+              - /url: /library-books
+      - generic [ref=f7e723]:
+        - heading "Guides" [level=2] [ref=f7e724]
+        - list [ref=f7e725]:
+          - listitem [ref=f7e726]:
+            - link "Tanning Rack" [ref=f7e727] [cursor=pointer]:
+              - /url: /tanning-rack
+          - listitem [ref=f7e728]:
+            - link "PvP ranks" [ref=f7e729] [cursor=pointer]:
+              - /url: /pvp-ranks
+          - listitem [ref=f7e730]:
+            - link "Downranking" [ref=f7e731] [cursor=pointer]:
+              - /url: /downranking
+          - listitem [ref=f7e732]:
+            - link "Booty Bay Bruiser's Buckshot" [ref=f7e733] [cursor=pointer]:
+              - /url: /booty-bay-bruisers-buckshot
+          - listitem [ref=f7e734]:
+            - link "Scarlet Banner" [ref=f7e735] [cursor=pointer]:
+              - /url: /scarlet-banner
+          - listitem [ref=f7e736]:
+            - link "$100,000 duel tournament" [ref=f7e737] [cursor=pointer]:
+              - /url: /duel-tournament
+          - listitem [ref=f7e738]:
+            - link "Level 30" [ref=f7e739] [cursor=pointer]:
+              - /url: /level-30
+          - listitem [ref=f7e740]:
+            - link "Druid Cat Form quest" [ref=f7e741] [cursor=pointer]:
+              - /url: /druid-cat-form
+          - listitem [ref=f7e742]:
+            - link "Addons" [ref=f7e743] [cursor=pointer]:
+              - /url: /addons
+          - listitem [ref=f7e744]:
+            - link "Savory Whimsyfin Delight" [ref=f7e745] [cursor=pointer]:
+              - /url: /savory-whimsyfin-delight
+          - listitem [ref=f7e746]:
+            - link "Druid snake form" [ref=f7e747] [cursor=pointer]:
+              - /url: /druid-snake-form
+          - listitem [ref=f7e748]:
+            - link "Battle mage" [ref=f7e749] [cursor=pointer]:
+              - /url: /battle-mage
+          - listitem [ref=f7e750]:
+            - link "Cozy Sleeping Bag" [ref=f7e751] [cursor=pointer]:
+              - /url: /cozy-sleeping-bag
+          - listitem [ref=f7e752]:
+            - link "Merchant's Favor" [ref=f7e753] [cursor=pointer]:
+              - /url: /merchants-favor
+          - listitem [ref=f7e754]:
+            - link "Hunter pets" [ref=f7e755] [cursor=pointer]:
+              - /url: /hunter-pets
+      - generic [ref=f7e756]:
+        - heading "Beta" [level=2] [ref=f7e757]
+        - list [ref=f7e758]:
+          - listitem [ref=f7e759]:
+            - link "Patch notes" [ref=f7e760] [cursor=pointer]:
+              - /url: /patch-notes
+          - listitem [ref=f7e761]:
+            - link "Changes vs Classic" [ref=f7e762] [cursor=pointer]:
+              - /url: /changes
+          - listitem [ref=f7e763]:
+            - link "Beta and launch dates" [ref=f7e764] [cursor=pointer]:
+              - /url: /beta
+          - listitem [ref=f7e765]:
+            - link "Server status" [ref=f7e766] [cursor=pointer]:
+              - /url: /server-status
+      - generic [ref=f7e767]:
+        - heading "Language" [level=2] [ref=f7e768]
+        - list [ref=f7e773]:
+          - listitem [ref=f7e774]:
+            - generic [ref=f7e775]: English
+          - listitem [ref=f7e778]:
+            - link "Français" [ref=f7e779] [cursor=pointer]:
+              - /url: /fr/changes
+          - listitem [ref=f7e780]:
+            - link "Deutsch" [ref=f7e781] [cursor=pointer]:
+              - /url: /de/changes
+          - listitem [ref=f7e782]:
+            - link "繁體中文" [ref=f7e783] [cursor=pointer]:
+              - /url: /zh-tw/changes
+          - listitem [ref=f7e784]:
+            - link "简体中文" [ref=f7e785] [cursor=pointer]:
+              - /url: /zh-cn/changes
+          - listitem [ref=f7e786]:
+            - link "Русский" [ref=f7e787] [cursor=pointer]:
+              - /url: /ru/changes
+    - generic [ref=f7e788]:
+      - paragraph [ref=f7e789]: ForeverChanges is an unofficial fan site, not affiliated with or endorsed by Blizzard Entertainment. World of Warcraft and Warcraft are trademarks or registered trademarks of Blizzard Entertainment, Inc. in the U.S. and/or other countries. Game content and images © Blizzard Entertainment, Inc.
+      - navigation "Legal" [ref=f7e791]:
+        - link "About the data" [ref=f7e792] [cursor=pointer]:
+          - /url: /about
+        - link "Privacy" [ref=f7e793] [cursor=pointer]:
+          - /url: /privacy
+        - link "Terms" [ref=f7e794] [cursor=pointer]:
+          - /url: /terms
+        - link "Legal notice" [ref=f7e795] [cursor=pointer]:
+          - /url: /legal

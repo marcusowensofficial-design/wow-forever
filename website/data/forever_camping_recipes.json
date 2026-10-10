@@ -1,0 +1,166 @@
+{
+  "tanningRack": {
+    "name": "Tanning Rack",
+    "prof": "Leatherworking",
+    "reqSkill": 140,
+    "blueprintSource": "Razorclaw the Butcher (Shadowfang Keep - 1 in 900 drop)",
+    "reagents": "5x Medium Leather, 3x Fine Thread, 2x Simple Wood",
+    "duration": "15 minutes (Replaces Camp Tent, grants Tent bonuses + 1hr CD)",
+    "totalRecipes": 48,
+    "highlightRecipes": [
+      {
+        "skill": 125,
+        "name": "Defender's Leather Kilt",
+        "reagents": "12x Med Leather, 4x Cured Med Hide, 8x Pristine Leather, 8x Elixir of Minor Fortitude"
+      },
+      {
+        "skill": 125,
+        "name": "Totemic Leather Leggings",
+        "reagents": "12x Med Leather, 4x Cured Med Hide, 8x Pristine Leather, 8x Sulfuric Acid"
+      },
+      {
+        "skill": 125,
+        "name": "Brawler's Leather Legguards",
+        "reagents": "12x Med Leather, 4x Cured Med Hide, 8x Pristine Leather, 8x Shadowgem"
+      },
+      {
+        "skill": 125,
+        "name": "Trapper's Leather Legguards",
+        "reagents": "12x Med Leather, 4x Cured Med Hide, 8x Pristine Leather, 8x Deviate Scale"
+      },
+      {
+        "skill": 125,
+        "name": "Stormrider's Leather Kilt",
+        "reagents": "12x Med Leather, 4x Cured Med Hide, 8x Pristine Leather, 8x Cerulean Dye"
+      },
+      {
+        "skill": 125,
+        "name": "Wisdom's Leather Leggings",
+        "reagents": "12x Med Leather, 4x Cured Med Hide, 8x Pristine Leather, 8x Small Lustrous Pearl"
+      },
+      {
+        "skill": 150,
+        "name": "Prowler's Leather Belt",
+        "reagents": "8x Heavy Leather, 2x Cured Med Hide, 1x Jade"
+      },
+      {
+        "skill": 150,
+        "name": "Warden's Leather Belt",
+        "reagents": "8x Heavy Leather, 2x Cured Med Hide, 1x Elemental Earth"
+      },
+      {
+        "skill": 150,
+        "name": "Skirmisher's Leather Belt",
+        "reagents": "8x Heavy Leather, 2x Cured Med Hide, 1x Citrine"
+      },
+      {
+        "skill": 150,
+        "name": "Skulker's Leather Belt",
+        "reagents": "8x Heavy Leather, 2x Cured Med Hide, 1x Spider's Silk"
+      },
+      {
+        "skill": 175,
+        "name": "Prowler's Leather Gloves",
+        "reagents": "16x Heavy Leather, 2x Cured Heavy Hide, 2x Pristine Hide, 2x Jade"
+      },
+      {
+        "skill": 175,
+        "name": "Skulker's Leather Gloves",
+        "reagents": "16x Heavy Leather, 2x Cured Heavy Hide, 2x Pristine Hide, 2x Spider's Silk"
+      },
+      {
+        "skill": 200,
+        "name": "Stalker's Mail Boots",
+        "reagents": "8x Heavy Leather, 2x Cured Med Hide, 2x Elemental Air"
+      },
+      {
+        "skill": 200,
+        "name": "Skycaller's Mail Boots",
+        "reagents": "8x Heavy Leather, 2x Cured Med Hide, 2x Elemental Water"
+      },
+      {
+        "skill": 220,
+        "name": "Wolfshead Helm",
+        "type": "Classic Rework",
+        "reagents": "18x Thick Leather, 2x Thick Wolfhide, 8x Wicked Claw, 2x Cured Thick Hide"
+      }
+    ]
+  },
+  "spinningWheel": {
+    "name": "Spinning Wheel",
+    "prof": "Tailoring",
+    "reqSkill": 140,
+    "blueprintSource": "Unstable Sentinel (City of Dalaran)",
+    "reagents": "5x Bolt of Silk Cloth, 3x Fine Thread, 2x Simple Wood",
+    "duration": "15 minutes (Replaces Faction Banner, preserves Spirit buff)",
+    "totalRecipes": 74,
+    "highlightRecipes": [
+      {
+        "skill": 125,
+        "name": "Pristine Leggings",
+        "reagents": "14x Bolt of Silk, 8x Cerulean Dye, 8x Pristine Leather, 2x Silver Bar, 3x Greater Astral Essence"
+      },
+      {
+        "skill": 125,
+        "name": "Silky Leggings",
+        "reagents": "14x Bolt of Silk, 8x Cerulean Dye, 8x Spider's Silk, 2x Silver Bar, 3x Greater Astral Essence"
+      },
+      {
+        "skill": 125,
+        "name": "Flame Leggings",
+        "reagents": "14x Bolt of Silk, 8x Cerulean Dye, 8x Fire Oil, 2x Silver Bar, 3x Greater Astral Essence"
+      },
+      {
+        "skill": 125,
+        "name": "Shadow Leggings",
+        "reagents": "14x Bolt of Silk, 8x Cerulean Dye, 8x Shadowgem, 2x Silver Bar, 3x Greater Astral Essence"
+      },
+      {
+        "skill": 140,
+        "name": "Gilded Slippers",
+        "reagents": "8x Bolt of Mageweave, 4x Heavy Silken Thread, 2x Magenta Dye, 2x Gold Bar"
+      },
+      {
+        "skill": 140,
+        "name": "Frothing Slippers",
+        "reagents": "8x Bolt of Mageweave, 4x Heavy Silken Thread, 2x Magenta Dye, 2x Globe of Water"
+      },
+      {
+        "skill": 140,
+        "name": "Fiery Slippers",
+        "reagents": "8x Bolt of Mageweave, 4x Heavy Silken Thread, 2x Magenta Dye, 2x Heart of Fire"
+      },
+      {
+        "skill": 165,
+        "name": "Gilded Handwraps",
+        "reagents": "12x Bolt of Mageweave, 4x Heavy Silken Thread, 2x Magenta Dye, 4x Gold Bar"
+      },
+      {
+        "skill": 165,
+        "name": "Frothing Handwraps",
+        "reagents": "12x Bolt of Mageweave, 4x Heavy Silken Thread, 2x Magenta Dye, 4x Globe of Water"
+      },
+      {
+        "skill": 190,
+        "name": "Gilded Cord",
+        "reagents": "28x Bolt of Mageweave, 6x Magenta Dye, 4x Cerulean Dye, 12x Gold Bar"
+      },
+      {
+        "skill": 195,
+        "name": "Nethergeld Shoulders",
+        "reagents": "16x Bolt of Mageweave, 4x Magenta Dye, 8x Gold Bar, 2x Greater Nether Essence"
+      },
+      {
+        "skill": 205,
+        "name": "Nethergeld Cuffs",
+        "reagents": "18x Bolt of Mageweave, 6x Magenta Dye, 10x Gold Bar, 4x Greater Nether Essence"
+      },
+      {
+        "skill": 205,
+        "name": "Dreamweave Vest",
+        "type": "Classic Rework",
+        "reagents": "6x Bolt of Mageweave, 6x Wildvine, 2x Heart of the Wild"
+      }
+    ]
+  }
+}

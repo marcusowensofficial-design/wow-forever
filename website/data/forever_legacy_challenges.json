@@ -1,0 +1,61 @@
+{
+  "total": 65,
+  "categories": [
+    {
+      "name": "Classes",
+      "count": 27,
+      "desc": "Reach Level 25, 45, and 60 across all 9 classes (Druid, Hunter, Mage, Paladin, Priest, Rogue, Shaman, Warlock, Warrior)."
+    },
+    {
+      "name": "Tradeskills",
+      "count": 18,
+      "desc": "Reach Skill 150, 225, and 300 across 6 primary crafting trades (Alchemy, Blacksmithing, Enchanting, Engineering, Leatherworking, Tailoring)."
+    },
+    {
+      "name": "Dungeons",
+      "count": 3,
+      "desc": "Novice Spelunker (6 dungeons), Experienced Spelunker (10 dungeons), Master Spelunker (17 dungeons)."
+    },
+    {
+      "name": "Raids",
+      "count": 3,
+      "desc": "Conqueror of the Wilds (13 encounters in Hyjal Summit), Conqueror of the Deeps (8 encounters in Barrow Deeps), Conqueror of the Lair (Onyxia)."
+    },
+    {
+      "name": "Player vs. Player",
+      "count": 12,
+      "desc": "Honor Ranks (Rank 3, 7, 10, 13, 14), Exalted Reputations (Warsong, Arathi, Alterac, Darkspear Islands), Field of Honor Journey (Weeks 4, 7, 10)."
+    },
+    {
+      "name": "Adventure",
+      "count": 2,
+      "desc": "Lord Valthalak Laid to Rest (Dungeon Set 2 questline), Explorer (Explore Azeroth achievement)."
+    }
+  ],
+  "accountRewards": [
+    {
+      "points": 15,
+      "name": "Holstered Replica Ironforge Air Rifle",
+      "type": "Toy",
+      "desc": "Interactive air rifle shootout shootout that keeps score."
+    },
+    {
+      "points": 25,
+      "name": "Spectral Bear Cub",
+      "type": "Pet",
+      "desc": "Companion vanity pet."
+    },
+    {
+      "points": 40,
+      "name": "Spectral Bear Tabard",
+      "type": "Tabard",
+      "desc": "Showcases Legacy dedication."
+    },
+    {
+      "points": 55,
+      "name": "Reins of the Spectral Bear",
+      "type": "Mount",
+      "desc": "100% Epic spectral bear mount."
+    }
+  ]
+}
