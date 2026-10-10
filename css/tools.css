@@ -2358,18 +2358,72 @@
 .wow-floating-tooltip {
   position: fixed;
   pointer-events: none;
-  z-index: 999999;
+  z-index: 9999999 !important;
   background: #07090e;
-  border: 1px solid rgba(212, 175, 55, 0.45);
-  border-radius: 5px;
+  border: 1px solid rgba(212, 175, 55, 0.5);
+  border-radius: 6px;
   padding: 0.85rem 1rem;
-  max-width: 330px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.9), 0 0 15px rgba(243, 192, 67, 0.15);
+  max-width: 360px;
+  max-height: calc(100vh - 32px);
+  overflow-y: auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.95), 0 0 18px rgba(243, 192, 67, 0.18);
   font-family: var(--font-body);
   font-size: 0.85rem;
   line-height: 1.45;
   color: #fff;
   transition: opacity 0.1s ease;
+}
+
+.wow-floating-tooltip[hidden] {
+  display: none !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+.wow-tip-rank-progression {
+  margin-top: 0.65rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.wow-tip-rank-progression-head {
+  font-size: 0.7rem;
+  color: #94a3b8;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.35rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.wow-tip-rank-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.28rem;
+}
+
+.wow-tip-rank-item {
+  font-size: 0.77rem;
+  line-height: 1.35;
+  padding: 0.22rem 0.4rem;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.02);
+  border-left: 2px solid transparent;
+  color: #94a3b8;
+}
+
+.wow-tip-rank-item.is-active {
+  background: rgba(74, 222, 128, 0.12);
+  border-left: 2px solid #4ade80;
+  color: #f8fafc;
+}
+
+.wow-tip-rank-item.is-next {
+  background: rgba(250, 204, 21, 0.08);
+  border-left: 2px solid #facc15;
+  color: #e2e8f0;
 }
 
 .wow-tip-name {

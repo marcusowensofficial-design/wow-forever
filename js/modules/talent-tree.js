@@ -270,7 +270,7 @@
     if (!tooltip) return;
     const padding = 16;
     const ttWidth = tooltip.offsetWidth || 340;
-    const ttHeight = tooltip.offsetHeight || 180;
+    const ttHeight = tooltip.offsetHeight || 220;
 
     let left = event.clientX + 16;
     let top = event.clientY + 16;
@@ -293,8 +293,13 @@
    * Render rich floating tooltip content for a talent
    */
   function showTalentTooltip(talent, event) {
-    const tooltip = document.getElementById('wow-item-tooltip');
-    if (!tooltip) return;
+    let tooltip = document.getElementById('wow-item-tooltip');
+    if (!tooltip) {
+      tooltip = document.createElement('div');
+      tooltip.id = 'wow-item-tooltip';
+      tooltip.className = 'wow-floating-tooltip';
+      document.body.appendChild(tooltip);
+    }
 
     const classData = getClassData(state.classId);
     const tree = classData ? classData.trees[talent.tree] : { name: 'Specialization' };
@@ -319,69 +324,116 @@
 
     let rankBadgeHtml = '';
     if (isMaxed) {
-      rankBadgeHtml = `<span style="color: #facc15; font-weight: 700;">Rank ${pts} / ${talent.maxRank} (Max)</span>`;
+      rankBadgeHtml = `<span style="color: #facc15; font-weight: 700; font-size: 0.78rem; background: rgba(250, 204, 21, 0.15); padding: 0.15rem 0.45rem; border-radius: 4px; border: 1px solid rgba(250, 204, 21, 0.35);">Rank ${pts} / ${talent.maxRank} (Max)</span>`;
     } else if (hasPoints) {
-      rankBadgeHtml = `<span style="color: #4ade80; font-weight: 700;">Rank ${pts} / ${talent.maxRank}</span>`;
+      rankBadgeHtml = `<span style="color: #4ade80; font-weight: 700; font-size: 0.78rem; background: rgba(74, 222, 128, 0.12); padding: 0.15rem 0.45rem; border-radius: 4px; border: 1px solid rgba(74, 222, 128, 0.3);">Rank ${pts} / ${talent.maxRank}</span>`;
     } else {
-      rankBadgeHtml = `<span style="color: #94a3b8; font-weight: 600;">Not Learned (0 / ${talent.maxRank})</span>`;
+      rankBadgeHtml = `<span style="color: #94a3b8; font-weight: 600; font-size: 0.78rem; background: rgba(255, 255, 255, 0.05); padding: 0.15rem 0.45rem; border-radius: 4px; border: 1px solid rgba(255, 255, 255, 0.1);">Not Learned (0 / ${talent.maxRank})</span>`;
     }
 
     let requirementsHtml = '';
     if (requiredTreePoints > 0) {
       const color = meetsTreeReq ? '#4ade80' : '#f87171';
       requirementsHtml += `
-        <div style="color: ${color}; font-size: 0.74rem; margin-top: 0.35rem;">
-          ${meetsTreeReq ? '✓' : '✗'} Requires ${requiredTreePoints} points in ${escapeHtml(tree.name)} Talents (${currentTreePoints}/${requiredTreePoints})
+        <div style="color: ${color}; font-size: 0.74rem; margin-top: 0.35rem; display: flex; align-items: center; gap: 0.3rem;">
+          <span>${meetsTreeReq ? '✓' : '✗'}</span>
+          <span>Requires ${requiredTreePoints} points in ${escapeHtml(tree.name)} Talents (${currentTreePoints}/${requiredTreePoints})</span>
         </div>
       `;
     }
     if (reqTalent) {
       const color = meetsPrereq ? '#4ade80' : '#f87171';
       requirementsHtml += `
-        <div style="color: ${color}; font-size: 0.74rem; margin-top: 0.2rem;">
-          ${meetsPrereq ? '✓' : '✗'} Requires ${reqTalent.maxRank} point${reqTalent.maxRank > 1 ? 's' : ''} in ${escapeHtml(reqTalent.name)}
+        <div style="color: ${color}; font-size: 0.74rem; margin-top: 0.2rem; display: flex; align-items: center; gap: 0.3rem;">
+          <span>${meetsPrereq ? '✓' : '✗'}</span>
+          <span>Requires ${reqTalent.maxRank} point${reqTalent.maxRank > 1 ? 's' : ''} in ${escapeHtml(reqTalent.name)}</span>
+        </div>
+      `;
+    }
+
+    // Rank progression list for all ranks
+    let rankProgressionHtml = '';
+    if (talent.maxRank > 1 && Array.isArray(talent.descriptions) && talent.descriptions.length > 0) {
+      rankProgressionHtml = `
+        <div class="wow-tip-rank-progression">
+          <div class="wow-tip-rank-progression-head">
+            <span>Rank Progression</span>
+            <span style="color: #64748b; font-weight: 600;">${talent.maxRank} Ranks</span>
+          </div>
+          <div class="wow-tip-rank-list">
+            ${talent.descriptions.map((desc, idx) => {
+              const rNum = idx + 1;
+              const isCur = rNum === pts;
+              const isNxt = rNum === pts + 1;
+              const itemClass = isCur ? 'is-active' : (isNxt ? 'is-next' : '');
+              const tagColor = isCur ? '#4ade80' : (isNxt ? '#facc15' : '#64748b');
+              const statusText = isCur ? ' (Active)' : (isNxt ? ' (Next)' : '');
+
+              return `
+                <div class="wow-tip-rank-item ${itemClass}">
+                  <strong style="color: ${tagColor}; font-weight: 700;">Rank ${rNum}${statusText}:</strong> ${escapeHtml(desc)}
+                </div>
+              `;
+            }).join('')}
+          </div>
         </div>
       `;
     }
 
     tooltip.innerHTML = `
-      <div class="wow-tip-header" style="display: flex; justify-content: space-between; align-items: baseline; gap: 0.75rem;">
-        <span class="wow-tip-name" style="color: #ffd100; font-size: 1.05rem; font-weight: 700; text-shadow: 0 1px 2px rgba(0,0,0,0.8);">
-          ${escapeHtml(talent.name)}
-        </span>
+      <div class="wow-tip-header" style="display: flex; align-items: center; justify-content: space-between; gap: 0.6rem;">
+        <div style="display: flex; align-items: center; gap: 0.5rem; min-width: 0;">
+          <img src="${talent.icon}" alt="" style="width: 26px; height: 26px; border-radius: 4px; border: 1px solid rgba(250, 204, 21, 0.4); object-fit: cover; flex-shrink: 0;" onerror="this.src='https://render.worldofwarcraft.com/us/icons/56/inv_misc_questionmark.jpg'" />
+          <span class="wow-tip-name" style="color: #ffd100; font-size: 1.05rem; font-weight: 700; line-height: 1.2; text-shadow: 0 1px 2px rgba(0,0,0,0.8); margin: 0;">
+            ${escapeHtml(talent.name)}
+          </span>
+        </div>
         ${rankBadgeHtml}
       </div>
 
-      <div style="font-size: 0.74rem; color: #94a3b8; margin: 0.2rem 0 0.45rem;">
+      <div style="font-size: 0.74rem; color: #94a3b8; margin: 0.35rem 0 0.35rem;">
         ${escapeHtml(tree.name)} Tree • Tier ${talent.row}
       </div>
 
       ${requirementsHtml}
 
       ${hasPoints ? `
-        <div class="wow-tip-stats" style="color: #f8fafc; font-size: 0.82rem; line-height: 1.45; margin-top: 0.5rem;">
-          ${escapeHtml(currentDesc)}
+        <div style="margin-top: 0.5rem;">
+          <div style="font-size: 0.72rem; color: #4ade80; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.2rem;">
+            ${isMaxed ? 'Current Effect (Max Rank):' : `Current Effect (Rank ${pts} / ${talent.maxRank}):`}
+          </div>
+          <div class="wow-tip-stats" style="color: #f8fafc; font-size: 0.84rem; line-height: 1.45; margin: 0;">
+            ${escapeHtml(currentDesc)}
+          </div>
         </div>
       ` : ''}
 
       ${!isMaxed ? `
-        <div style="margin-top: 0.55rem; padding-top: 0.45rem; border-top: 1px solid rgba(255, 255, 255, 0.1);">
+        <div style="margin-top: 0.5rem; padding-top: 0.45rem; border-top: 1px solid rgba(255, 255, 255, 0.08);">
           <div style="font-size: 0.72rem; color: #facc15; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.2rem;">
-            ${hasPoints ? 'Next Rank:' : 'Rank 1 Preview:'}
+            ${hasPoints ? `Next Rank (${pts + 1} / ${talent.maxRank}):` : (talent.maxRank === 1 ? 'Effect to Learn:' : 'Rank 1 Preview:')}
           </div>
-          <div style="color: #cbd5e1; font-size: 0.8rem; line-height: 1.45;">
+          <div style="color: #cbd5e1; font-size: 0.82rem; line-height: 1.45;">
             ${escapeHtml(nextDesc)}
           </div>
         </div>
       ` : ''}
 
+      ${rankProgressionHtml}
+
       <div style="margin-top: 0.65rem; padding-top: 0.4rem; border-top: 1px solid rgba(255,255,255,0.08); font-size: 0.7rem; color: #64748b; display: flex; justify-content: space-between;">
-        <span>Left-Click to learn</span>
-        <span>Right-Click to refund</span>
+        <span>Left-Click to learn (+1)</span>
+        <span>Right-Click to refund (-1)</span>
       </div>
     `;
 
+    // Ensure tooltip is fully visible and not hidden by previous operations
     tooltip.removeAttribute('hidden');
+    tooltip.style.display = 'block';
+    tooltip.style.opacity = '1';
+    tooltip.style.pointerEvents = 'none';
+    tooltip.style.zIndex = '9999999';
+
     positionTooltip(event, tooltip);
   }
 
@@ -389,6 +441,8 @@
     const tooltip = document.getElementById('wow-item-tooltip');
     if (tooltip) {
       tooltip.setAttribute('hidden', '');
+      tooltip.style.display = 'none';
+      tooltip.style.opacity = '0';
     }
   }
 
@@ -826,6 +880,7 @@
       btn.onclick = () => {
         const newClassId = btn.getAttribute('data-class-id');
         if (newClassId && newClassId !== state.classId) {
+          hideTalentTooltip();
           state.classId = newClassId;
           const recBuild = getRecommendedBuildForClass(newClassId);
           if (recBuild) {
@@ -854,6 +909,7 @@
     const toggleBlankBtn = document.getElementById('btn-toggle-blank-slate');
     if (toggleBlankBtn) {
       toggleBlankBtn.onclick = () => {
+        hideTalentTooltip();
         state.isBlankSlate = true;
         state.points = {};
         const clsData = getClassData(state.classId);
@@ -865,6 +921,7 @@
     const toggleSpecBtn = document.getElementById('btn-toggle-spec-build');
     if (toggleSpecBtn) {
       toggleSpecBtn.onclick = () => {
+        hideTalentTooltip();
         state.isBlankSlate = false;
         const recBuild = getRecommendedBuildForClass(state.classId, state.specId);
         if (recBuild) {
@@ -882,6 +939,7 @@
       btn.onclick = () => {
         const cap = btn.getAttribute('data-cap');
         if (cap) {
+          hideTalentTooltip();
           setCapMode(cap);
         }
       };
@@ -892,6 +950,7 @@
       btn.onclick = () => {
         const view = btn.getAttribute('data-view');
         if (view && view !== state.viewMode) {
+          hideTalentTooltip();
           state.viewMode = view;
           renderModalBody();
         }
@@ -915,6 +974,7 @@
     const resetSpecBtn = document.getElementById('btn-reset-spec-talents');
     if (resetSpecBtn) {
       resetSpecBtn.onclick = () => {
+        hideTalentTooltip();
         state.points = Object.assign({}, state.originalPoints);
         renderModalBody();
       };
@@ -923,6 +983,7 @@
     const clearAllBtn = document.getElementById('btn-clear-all-talents');
     if (clearAllBtn) {
       clearAllBtn.onclick = () => {
+        hideTalentTooltip();
         state.points = {};
         renderModalBody();
       };
@@ -932,6 +993,7 @@
     content.querySelectorAll('[data-action="reset-tree"]').forEach(btn => {
       btn.onclick = (e) => {
         e.stopPropagation();
+        hideTalentTooltip();
         const treeIdx = parseInt(btn.getAttribute('data-tree'), 10);
         classData.talents.forEach(t => {
           if (t.tree === treeIdx) {
@@ -1017,7 +1079,28 @@
       });
     });
 
-    // 7. Card Mode Plus/Minus Buttons
+    // 7. Card Mode Plus/Minus Buttons & Hover Tooltips
+    content.querySelectorAll('.bis-talent-card-icon-wrap').forEach(wrap => {
+      const parent = wrap.closest('.bis-tree-node-visual');
+      if (!parent) return;
+      const talentId = parseInt(parent.getAttribute('data-talent-id'), 10);
+      const talent = classData.talents.find(t => t.id === talentId);
+      if (!talent) return;
+
+      wrap.addEventListener('mouseenter', (e) => {
+        showTalentTooltip(talent, e);
+      });
+      wrap.addEventListener('mousemove', (e) => {
+        const tooltip = document.getElementById('wow-item-tooltip');
+        if (tooltip && !tooltip.hasAttribute('hidden')) {
+          positionTooltip(e, tooltip);
+        }
+      });
+      wrap.addEventListener('mouseleave', () => {
+        hideTalentTooltip();
+      });
+    });
+
     content.querySelectorAll('.bis-card-step-btn').forEach(btn => {
       btn.onclick = (e) => {
         e.stopPropagation();
@@ -1029,6 +1112,8 @@
         if (action === 'plus' && canAddPoint(talent)) {
           state.points[talent.id] = (state.points[talent.id] || 0) + 1;
           renderModalBody();
+          const refreshedWrap = content.querySelector(`.bis-tree-node-visual[data-talent-id="${talent.id}"] .bis-talent-card-icon-wrap`);
+          if (refreshedWrap) showTalentTooltip(talent, e);
         } else if (action === 'minus' && canRefundPoint(talent)) {
           const current = state.points[talent.id] || 0;
           if (current > 1) {
@@ -1037,6 +1122,8 @@
             delete state.points[talent.id];
           }
           renderModalBody();
+          const refreshedWrap = content.querySelector(`.bis-tree-node-visual[data-talent-id="${talent.id}"] .bis-talent-card-icon-wrap`);
+          if (refreshedWrap) showTalentTooltip(talent, e);
         }
       };
     });

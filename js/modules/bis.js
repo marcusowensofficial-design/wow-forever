@@ -1266,6 +1266,10 @@ function openBiSTalentModal() {
             </div>
           `;
           tooltip.removeAttribute("hidden");
+          tooltip.style.display = "block";
+          tooltip.style.opacity = "1";
+          tooltip.style.pointerEvents = "none";
+          tooltip.style.zIndex = "9999999";
           positionTooltip(e, tooltip);
         });
 
@@ -1275,6 +1279,8 @@ function openBiSTalentModal() {
 
         node.addEventListener("mouseleave", () => {
           tooltip.setAttribute("hidden", "");
+          tooltip.style.display = "none";
+          tooltip.style.opacity = "0";
         });
       });
     }
@@ -1459,6 +1465,7 @@ function initItemTooltips() {
     const card = e.target.closest(".bis-slot-card, .bis-alt-row");
     if (card) {
       tooltip.setAttribute("hidden", "");
+      tooltip.style.display = "none";
       tooltip.style.opacity = "0";
     }
   }, true);
