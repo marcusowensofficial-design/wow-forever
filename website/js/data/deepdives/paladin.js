@@ -771,5 +771,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       specs: []
     }
   };
-  WOW_FOREVER_DATA.classDeepDives.paladin.betaBuilds.specs = WOW_FOREVER_DATA.classDeepDives.paladin.betaBuilds.level30.specs;
+  if (window.WOW_FOREVER_DATA?.classDeepDives?.paladin?.betaBuilds?.level30) {
+    window.WOW_FOREVER_DATA.classDeepDives.paladin.betaBuilds.specs = window.WOW_FOREVER_DATA.classDeepDives.paladin.betaBuilds.level30.specs;
+  }
 }

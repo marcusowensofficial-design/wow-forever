@@ -217,22 +217,27 @@ function renderDungeonTimelineSlider() {
 }
 
 function setupDungeonModalEvents() {
-  const modal = document.getElementById('dungeon-loot-modal');
-  const closeBtn = document.getElementById('dungeon-loot-modal-close');
+  const modal = document.getElementById('boss-loot-modal') || document.getElementById('dungeon-loot-modal');
+  const closeBtn = document.getElementById('boss-loot-close') || document.getElementById('dungeon-loot-modal-close');
   if (!modal) return;
 
+  const closeModal = () => {
+    modal.classList.remove('is-open');
+    modal.setAttribute('hidden', '');
+  };
+
   if (closeBtn) {
-    closeBtn.addEventListener('click', () => modal.classList.remove('is-open'));
+    closeBtn.addEventListener('click', closeModal);
   }
 
   modal.addEventListener('click', (e) => {
-    if (e.target === modal) modal.classList.remove('is-open');
+    if (e.target === modal) closeModal();
   });
 }
 
 window.openDungeonLootModal = function(dungeonId) {
-  const modal = document.getElementById('dungeon-loot-modal');
-  const body = document.getElementById('dungeon-loot-modal-body');
+  const modal = document.getElementById('boss-loot-modal') || document.getElementById('dungeon-loot-modal');
+  const body = document.getElementById('boss-loot-modal-content') || document.getElementById('dungeon-loot-modal-body');
   if (!modal || !body) return;
 
   const detailed = window.WOW_TOOLS_DATA?.detailedDungeonLoot?.[dungeonId];
@@ -246,6 +251,7 @@ window.openDungeonLootModal = function(dungeonId) {
         <p style="color: var(--text-muted);">Standard Classic Era loot tables apply with normalized itemization in Build 1.60.6.</p>
       </div>
     `;
+    modal.removeAttribute('hidden');
     modal.classList.add('is-open');
     return;
   }
@@ -305,6 +311,7 @@ window.openDungeonLootModal = function(dungeonId) {
     </div>
   `;
 
+  modal.removeAttribute('hidden');
   modal.classList.add('is-open');
 };
 

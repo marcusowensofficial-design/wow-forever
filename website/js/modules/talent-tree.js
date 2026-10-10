@@ -48,7 +48,7 @@
    * Resolve recommended build for a class from WOW_BIS_DATA
    */
   function getRecommendedBuildForClass(classId, preferredSpecId = null) {
-    const bisData = window.WOW_BIS_DATA;
+    const bisData = window.WOW_BIS_DATA || (typeof WOW_BIS_DATA !== 'undefined' ? WOW_BIS_DATA : null);
     if (!bisData || !bisData[classId] || !bisData[classId].specs) return null;
     const specs = bisData[classId].specs;
     let targetSpec = preferredSpecId ? specs.find(s => s.id === preferredSpecId) : null;
@@ -1180,6 +1180,9 @@
    * Public API to open the Talent Tree Modal
    */
   function openModal(options = {}) {
+    if (typeof options === 'string') {
+      options = { classId: options };
+    }
     state.classId = options.classId || 'priest';
     state.specId = options.specId || 'custom';
     state.capMode = options.capMode || 'lvl30_perk';

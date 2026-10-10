@@ -5,6 +5,15 @@
  * native in-house Talent Tree viewer modal, and Classic WoW floating item tooltips.
  */
 
+if (typeof window !== 'undefined') {
+  if (typeof WOW_BIS_DATA !== 'undefined' && !window.WOW_BIS_DATA) {
+    window.WOW_BIS_DATA = WOW_BIS_DATA;
+  }
+  if (typeof WOW_BIS_METADATA !== 'undefined' && !window.WOW_BIS_METADATA) {
+    window.WOW_BIS_METADATA = WOW_BIS_METADATA;
+  }
+}
+
 let currentBiSState = {
   classId: "warrior",
   specId: "pve",
@@ -1597,6 +1606,7 @@ function renderFloatingTooltip(card, e, tooltip) {
 
   tooltip.innerHTML = html;
   tooltip.removeAttribute("hidden");
+  tooltip.style.display = "block";
   tooltip.style.opacity = "1";
   updateTooltipPosition(e, tooltip);
 }

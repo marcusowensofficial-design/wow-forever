@@ -25,11 +25,7 @@ function initCountdowns() {
     const diffLaunch = Math.max(0, targets.launch - now);
     renderTimerDigits('launch', diffLaunch);
 
-    // 3. Beta Phase 2 Countdown (Oct 1, 2026 - Deploying Today!)
-    const diffPhase2 = Math.max(0, targets.phase2 - now);
-    renderTimerDigits('phase2', diffPhase2);
-
-    // 4. Raid Unlock Countdown (Dec 9, 2026)
+    // 3. Raid Unlock Countdown (Dec 9, 2026)
     const diffRaids = Math.max(0, targets.raids - now);
     renderTimerDigits('raids', diffRaids);
   }
@@ -74,10 +70,12 @@ function initBetaDurationTracker() {
   const progressFill = document.getElementById('beta-duration-progress-fill');
   const progressText = document.getElementById('beta-duration-progress-text');
   const daysBadge = document.getElementById('beta-days-badge');
+  const phase2DayBadge = document.getElementById('beta-phase2-day-badge');
 
   if (progressFill) progressFill.style.width = `${percent}%`;
   if (progressText) progressText.textContent = `Day ${daysElapsed} of 35 Days (${percent}% elapsed • ${daysRemaining} days remaining)`;
   if (daysBadge) daysBadge.textContent = `${daysRemaining} Days Left`;
+  if (phase2DayBadge) phase2DayBadge.textContent = `Day ${daysElapsed} of 35`;
 }
 
 /* ==========================================================================
