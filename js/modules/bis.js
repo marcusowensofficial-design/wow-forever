@@ -74,10 +74,10 @@ function renderBiSApp() {
         <!-- Faction Toggle -->
         <div class="bis-faction-toggle" role="group" aria-label="Select Faction">
           <button type="button" class="bis-faction-btn ${currentBiSState.faction === 'alliance' ? 'active' : ''}" data-faction="alliance">
-            <span class="faction-icon">🦁</span> Alliance
+            <img src="images/icons/faction-alliance.jpg" class="faction-icon" alt="Alliance" onerror="this.src='https://render.worldofwarcraft.com/us/icons/56/achievement_pvp_a_a.jpg'" /> Alliance
           </button>
           <button type="button" class="bis-faction-btn ${currentBiSState.faction === 'horde' ? 'active' : ''}" data-faction="horde">
-            <span class="faction-icon">💀</span> Horde
+            <img src="images/icons/faction-horde.jpg" class="faction-icon" alt="Horde" onerror="this.src='https://render.worldofwarcraft.com/us/icons/56/achievement_pvp_h_h.jpg'" /> Horde
           </button>
         </div>
       </div>
@@ -139,6 +139,13 @@ function renderBiSApp() {
       </div>
     </div>
 
+    <!-- Spec Guide Lede / Rationale -->
+    ${currentSpec.description ? `
+      <div class="bis-spec-lede">
+        <strong>🧭 Spec Itemization Priority:</strong> ${escapeHtml(currentSpec.description)}
+      </div>
+    ` : ''}
+
     <!-- Main Spec Content Layout: Paper-Doll + Stat Budget & Talents -->
     <div class="bis-stage-layout">
       
@@ -151,19 +158,19 @@ function renderBiSApp() {
             </h3>
             <p class="bis-panel-subtitle">Equipped for Level 30 Beta Cap • Weapon Preference: ${currentSpec.weaponType || 'Standard'}</p>
           </div>
-          <span class="bis-slot-count">16 Slots Ranked</span>
+          <span class="bis-slot-count">${(currentSpec.slots && currentSpec.slots.length) || 16} Slots Ranked</span>
         </div>
 
         <!-- Visual Equipment Layout -->
         <div class="bis-doll-grid">
           <!-- Left Column Slots -->
           <div class="bis-doll-col bis-col-left">
-            ${renderPaperDollSlot('head', 'Head', currentSpec.gear.head)}
-            ${renderPaperDollSlot('neck', 'Neck', currentSpec.gear.neck)}
-            ${renderPaperDollSlot('shoulder', 'Shoulder', currentSpec.gear.shoulder)}
-            ${renderPaperDollSlot('back', 'Back', currentSpec.gear.back)}
-            ${renderPaperDollSlot('chest', 'Chest', currentSpec.gear.chest)}
-            ${renderPaperDollSlot('wrist', 'Wrist', currentSpec.gear.wrist)}
+            ${renderPaperDollSlot('head', 'Head', currentSpec)}
+            ${renderPaperDollSlot('neck', 'Neck', currentSpec)}
+            ${renderPaperDollSlot('shoulder', 'Shoulder', currentSpec)}
+            ${renderPaperDollSlot('back', 'Back', currentSpec)}
+            ${renderPaperDollSlot('chest', 'Chest', currentSpec)}
+            ${renderPaperDollSlot('wrist', 'Wrist', currentSpec)}
           </div>
 
           <!-- Center Character Showcase / Silhouette -->
@@ -178,22 +185,22 @@ function renderBiSApp() {
 
             <!-- Weapons & Relic Row -->
             <div class="bis-weapons-row">
-              ${renderPaperDollSlot('mainHand', 'Main Hand', currentSpec.gear.mainHand)}
-              ${renderPaperDollSlot('offHand', 'Off Hand', currentSpec.gear.offHand)}
-              ${renderPaperDollSlot('ranged', 'Ranged / Relic', currentSpec.gear.ranged)}
+              ${renderPaperDollSlot('mainHand', 'Main Hand', currentSpec)}
+              ${renderPaperDollSlot('offHand', 'Off Hand', currentSpec)}
+              ${renderPaperDollSlot('ranged', 'Ranged / Relic', currentSpec)}
             </div>
           </div>
 
           <!-- Right Column Slots -->
           <div class="bis-doll-col bis-col-right">
-            ${renderPaperDollSlot('hands', 'Hands', currentSpec.gear.hands)}
-            ${renderPaperDollSlot('waist', 'Waist', currentSpec.gear.waist)}
-            ${renderPaperDollSlot('legs', 'Legs', currentSpec.gear.legs)}
-            ${renderPaperDollSlot('feet', 'Feet', currentSpec.gear.feet)}
-            ${renderPaperDollSlot('finger1', 'Finger 1', currentSpec.gear.finger1)}
-            ${renderPaperDollSlot('finger2', 'Finger 2', currentSpec.gear.finger2)}
-            ${renderPaperDollSlot('trinket1', 'Trinket 1', currentSpec.gear.trinket1)}
-            ${renderPaperDollSlot('trinket2', 'Trinket 2', currentSpec.gear.trinket2)}
+            ${renderPaperDollSlot('hands', 'Hands', currentSpec)}
+            ${renderPaperDollSlot('waist', 'Waist', currentSpec)}
+            ${renderPaperDollSlot('legs', 'Legs', currentSpec)}
+            ${renderPaperDollSlot('feet', 'Feet', currentSpec)}
+            ${renderPaperDollSlot('finger1', 'Finger 1', currentSpec)}
+            ${renderPaperDollSlot('finger2', 'Finger 2', currentSpec)}
+            ${renderPaperDollSlot('trinket1', 'Trinket 1', currentSpec)}
+            ${renderPaperDollSlot('trinket2', 'Trinket 2', currentSpec)}
           </div>
         </div>
       </div>
@@ -205,7 +212,7 @@ function renderBiSApp() {
         <div class="bis-stats-card">
           <div class="bis-card-title-row">
             <h4><span>📊</span> Estimated Stat Budget</h4>
-            <span class="bis-stat-faction-label">${currentBiSState.faction === 'alliance' ? '🦁 Alliance Base' : '💀 Horde Base'}</span>
+            <span class="bis-stat-faction-label">${currentBiSState.faction === 'alliance' ? '<img src="images/icons/faction-alliance.jpg" class="bis-mini-faction-icon" alt="" onerror="this.src=\'https://render.worldofwarcraft.com/us/icons/56/achievement_pvp_a_a.jpg\'" /> Alliance Base' : '<img src="images/icons/faction-horde.jpg" class="bis-mini-faction-icon" alt="" onerror="this.src=\'https://render.worldofwarcraft.com/us/icons/56/achievement_pvp_h_h.jpg\'" /> Horde Base'}</span>
           </div>
           <p class="bis-stat-disclaimer">Calculated with full BiS gear + recommended enchants at Level 30 without temporary world buffs.</p>
           
@@ -214,7 +221,7 @@ function renderBiSApp() {
           </div>
         </div>
 
-        <!-- Talent Spec Card (Opens Native Interactive Talent Modal) -->
+        <!-- Talent Spec Card (Opens Native Interactive Talent Modal & External Calculator) -->
         <div class="bis-talents-card">
           <div class="bis-card-title-row">
             <h4><span>🌟</span> Recommended Talents (Lvl 30)</h4>
@@ -225,10 +232,15 @@ function renderBiSApp() {
           </p>
           <div class="bis-talents-meta">
             <span class="bis-perk-note">✨ Includes +5 points from the <em>Talented</em> Legacy Perk!</span>
-            <div class="bis-talent-actions">
+            <div class="bis-talent-actions" style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
               <button type="button" class="bis-talent-btn" id="btn-view-talent-tree">
-                <span>🧙‍♂️</span> View in Talent Tree
+                <span>🧙‍♂️</span> View Talent Tree
               </button>
+              ${currentSpec.talents && currentSpec.talents.buildUrl ? `
+                <a href="https://foreverchanges.pro${currentSpec.talents.buildUrl}" target="_blank" rel="noopener" class="bis-talent-btn" style="color: #60a5fa; border-color: rgba(96, 165, 250, 0.4);">
+                  <span>🔗</span> Calculator Build
+                </a>
+              ` : ''}
             </div>
           </div>
         </div>
@@ -237,13 +249,13 @@ function renderBiSApp() {
         <div class="bis-info-card">
           <h4><span>💡</span> WoW Forever Beta Itemization</h4>
           <p>
-            In WoW Forever Build 1.60.6, level 30 characters gain access to newly re-itemized content from the 
+            In WoW Forever Build 1.60.1, level 30 characters gain access to newly re-itemized content from the 
             <strong>City of Dalaran (Level 26–32)</strong> and <strong>Excavation Site 4 (Level 27–34)</strong>, 
             along with classic favorites like <em>Razorfen Kraul</em>, <em>Gnomeregan</em>, and <em>SM Graveyard</em>.
           </p>
           <div class="bis-tip-item">
             <span>🛡️</span>
-            <div><strong>Obfuscated Items:</strong> Newly discovered beta items are continuously parsed into this database.</div>
+            <div><strong>Beta Build 70291:</strong> Full ranked listings with all drop sources and crafting recipes extracted directly.</div>
           </div>
         </div>
 
@@ -261,7 +273,32 @@ function renderBiSApp() {
       </div>
 
       <div class="bis-slots-accordion">
-        ${renderSlotsAlternativesTable(currentSpec.gear)}
+        ${renderSlotsAlternativesTable(currentSpec)}
+      </div>
+    </div>
+
+    <!-- Recommended Enchants & Pre-Fight Consumables Prep Section -->
+    <div class="bis-prep-section">
+      <!-- Enchants Card -->
+      <div class="bis-prep-card bis-enchants-card">
+        <div class="bis-prep-header">
+          <h4><span>✨</span> Recommended Enchants (Build 70291)</h4>
+          <span class="bis-prep-badge">${currentSpec.enchants ? currentSpec.enchants.length : 0} Enchants</span>
+        </div>
+        <div class="bis-prep-list">
+          ${renderEnchantsTable(currentSpec.enchants)}
+        </div>
+      </div>
+
+      <!-- Pre-Fight Consumables Card -->
+      <div class="bis-prep-card bis-consumables-card">
+        <div class="bis-prep-header">
+          <h4><span>🧪</span> Level 30 Pre-Fight Consumables & Buffs</h4>
+          <span class="bis-prep-badge">${currentSpec.consumables ? currentSpec.consumables.length : 0} Consumables</span>
+        </div>
+        <div class="bis-prep-list">
+          ${renderConsumablesTable(currentSpec.consumables)}
+        </div>
       </div>
     </div>
   `;
@@ -276,52 +313,113 @@ function renderBiSApp() {
 /**
  * Render individual paper-doll slot card
  */
-function renderPaperDollSlot(slotKey, slotLabel, slotData) {
-  if (!slotData) {
+function renderPaperDollSlot(slotKey, slotLabel, spec) {
+  if (!spec) return '';
+
+  const faction = currentBiSState.faction || 'alliance';
+  let equipped = null;
+
+  // 1. Try finding in doll[faction]
+  if (spec.doll && spec.doll[faction]) {
+    const doll = spec.doll[faction];
+    if (slotKey === 'finger1') {
+      equipped = spec.gear?.finger1 || doll.finger;
+    } else if (slotKey === 'finger2') {
+      equipped = spec.gear?.finger2;
+      if (!equipped) {
+        const fSlot = spec.slots?.find(s => s.slotId === 'finger');
+        if (fSlot && fSlot.items.length > 1) equipped = fSlot.items[1];
+      }
+    } else if (slotKey === 'trinket1') {
+      equipped = spec.gear?.trinket1 || doll.trinket;
+    } else if (slotKey === 'trinket2') {
+      equipped = spec.gear?.trinket2;
+      if (!equipped) {
+        const tSlot = spec.slots?.find(s => s.slotId === 'trinket');
+        if (tSlot && tSlot.items.length > 1) equipped = tSlot.items[1];
+      }
+    } else if (slotKey === 'mainHand') {
+      equipped = doll.mainHand || doll['two-hand'] || doll['one-hand'] || spec.gear?.twoHand || spec.gear?.mainHand;
+    } else if (slotKey === 'offHand') {
+      equipped = doll.offHand || spec.gear?.offHand;
+    } else if (doll[slotKey] && doll[slotKey].name) {
+      equipped = doll[slotKey];
+    }
+  }
+
+  // 2. Fallback to gear
+  if (!equipped && spec.gear) {
+    if (slotKey === 'mainHand') equipped = spec.gear.twoHand || spec.gear.mainHand;
+    else equipped = spec.gear[slotKey];
+  }
+
+  // 3. Fallback to top item in slots
+  if (!equipped && spec.slots) {
+    const matched = spec.slots.find(s => s.slotId === slotKey || s.slotName.toLowerCase() === slotLabel.toLowerCase());
+    if (matched && matched.items.length > 0) {
+      equipped = matched.items[0];
+    }
+  }
+
+  if (!equipped || !equipped.name) {
+    const isOffHandEmpty = slotKey === 'offHand';
     return `
       <div class="bis-slot-card empty" data-slot="${slotKey}">
         <span class="bis-slot-label">${slotLabel}</span>
         <div class="bis-slot-main">
           <div class="bis-slot-icon empty"></div>
           <div class="bis-slot-details">
-            <span class="bis-item-name q1">Empty</span>
+            <span class="bis-item-name q1">${isOffHandEmpty ? 'Off Hand (2H Equipped)' : 'Empty / Optional'}</span>
           </div>
         </div>
       </div>
     `;
   }
 
-  // Handle faction-specific item override
-  let item = slotData;
-  if (currentBiSState.faction === 'alliance' && slotData.allianceBis) {
-    item = slotData.allianceBis;
-  } else if (currentBiSState.faction === 'horde' && slotData.hordeBis) {
-    item = slotData.hordeBis;
+  // Look up full item details from slots for complete tooltip & stats
+  let fullItem = null;
+  if (spec.slots) {
+    for (const sl of spec.slots) {
+      const found = sl.items.find(i => (equipped.tipId && i.tipId === equipped.tipId) || i.name === equipped.name);
+      if (found) { fullItem = found; break; }
+    }
   }
 
-  const iconUrl = item.icon && item.icon.startsWith("http") 
-    ? item.icon 
-    : `https://render.worldofwarcraft.com/us/icons/56/${item.icon || 'inv_misc_questionmark.jpg'}`;
-
-  const qualityClass = item.quality || 'q2';
+  const name = equipped.name;
+  const quality = equipped.quality || (fullItem ? fullItem.quality : 'q2');
+  const icon = equipped.icon || (fullItem ? fullItem.icon : 'inv_misc_questionmark.jpg');
+  const iconUrl = icon.startsWith('http') ? icon : `https://render.worldofwarcraft.com/us/icons/56/${icon}`;
+  const enchant = equipped.enchant || '';
+  const stats = fullItem ? fullItem.stats : (equipped.stats || '');
+  const source = fullItem ? fullItem.source : (equipped.source || '');
+  const tipId = equipped.tipId || (fullItem ? fullItem.tipId : '');
+  const itemId = equipped.itemId || (fullItem ? fullItem.itemId : '');
+  const side = fullItem ? fullItem.side : (equipped.side || 'both');
+  const mats = fullItem ? fullItem.mats : (equipped.mats || '');
 
   return `
-    <div class="bis-slot-card" 
+    <div class="bis-slot-card"
          data-slot="${slotKey}"
-         data-item-name="${escapeHtml(item.name)}"
-         data-item-quality="${qualityClass}"
-         data-item-stats="${escapeHtml(item.stats || '')}"
-         data-item-enchant="${escapeHtml(item.enchant || '')}"
-         data-item-source="${escapeHtml(item.source || '')}"
-         data-item-slot="${slotLabel}">
+         data-item-name="${escapeHtml(name)}"
+         data-item-quality="${quality}"
+         data-item-stats="${escapeHtml(stats)}"
+         data-item-enchant="${escapeHtml(enchant)}"
+         data-item-source="${escapeHtml(source)}"
+         data-item-slot="${slotLabel}"
+         data-item-tipid="${tipId}"
+         data-item-id="${itemId}"
+         data-item-side="${side}"
+         data-item-mats="${escapeHtml(mats)}">
       <span class="bis-slot-label">${slotLabel}</span>
       <div class="bis-slot-main">
-        <img src="${iconUrl}" alt="${item.name}" class="bis-slot-icon ${qualityClass}" loading="lazy" />
+        <img src="${iconUrl}" alt="${escapeHtml(name)}" class="bis-slot-icon ${quality}" loading="lazy" />
         <div class="bis-slot-details">
-          <span class="bis-item-name ${qualityClass}">${item.name}</span>
-          ${item.stats ? `<span class="bis-item-stats">${item.stats}</span>` : ''}
-          ${item.enchant && item.enchant !== 'None' ? `<span class="bis-item-enchant">✨ ${item.enchant}</span>` : ''}
-          ${item.source ? `<span class="bis-item-source">📍 ${item.source}</span>` : ''}
+          <span class="bis-item-name ${quality}">${escapeHtml(name)}</span>
+          ${stats ? `<span class="bis-item-stats">${escapeHtml(stats)}</span>` : ''}
+          ${enchant && enchant !== 'None' ? `<span class="bis-item-enchant">✨ ${escapeHtml(enchant)}</span>` : ''}
+          ${source ? `<span class="bis-item-source">📍 ${escapeHtml(source)}</span>` : ''}
+          ${side === 'alliance' ? `<span class="bis-side-pill alliance"><img src="images/icons/faction-alliance.jpg" class="bis-mini-faction-icon" alt="" onerror="this.src='https://render.worldofwarcraft.com/us/icons/56/achievement_pvp_a_a.jpg'" /> Alliance</span>` : ''}
+          ${side === 'horde' ? `<span class="bis-side-pill horde"><img src="images/icons/faction-horde.jpg" class="bis-mini-faction-icon" alt="" onerror="this.src='https://render.worldofwarcraft.com/us/icons/56/achievement_pvp_h_h.jpg'" /> Horde</span>` : ''}
         </div>
       </div>
     </div>
@@ -340,115 +438,174 @@ function renderStatBudget(statSummary) {
 
   const statEntries = [
     { label: "Health (HP)", val: stats.hp, icon: "❤️" },
+    { label: "Mana", val: stats.mana, icon: "💧" },
     { label: "Armor", val: stats.armor, icon: "🛡️" },
     { label: "Strength", val: stats.str, icon: "💪" },
     { label: "Agility", val: stats.agi, icon: "🏹" },
     { label: "Stamina", val: stats.sta, icon: "🩸" },
     { label: "Intellect", val: stats.int, icon: "🧠" },
     { label: "Spirit", val: stats.spi, icon: "✨" },
-    { label: "Attack Power", val: stats.ap || stats.rap, icon: "⚔️" },
-    { label: "Spell Damage / Heal", val: stats.sp || stats.frostSp || stats.shadowSp || stats.fireSp || stats.heal, icon: "🔥" },
+    { label: "Attack Power", val: stats.ap, icon: "⚔️" },
+    { label: "Spell Power", val: stats.sp, icon: "🔥" },
     { label: "Hit Chance", val: stats.hit, icon: "🎯" },
     { label: "Crit Chance", val: stats.crit, icon: "💥" },
-    { label: "Mana / Energy / Rage", val: stats.mana || stats.energy || stats.rage, icon: "⚡" }
+    { label: "Shadow Res", val: stats.shadowRes, icon: "🟣" },
+    { label: "Nature Res", val: stats.natureRes, icon: "🌿" },
+    { label: "Fire Res", val: stats.fireRes, icon: "🔥" },
+    { label: "Frost Res", val: stats.frostRes, icon: "❄️" },
+    { label: "Arcane Res", val: stats.arcaneRes, icon: "🔮" }
   ];
 
-  return statEntries
-    .filter(s => s.val !== undefined && s.val !== null)
-    .map(s => `
-      <div class="bis-stat-item">
-        <span class="bis-stat-name"><span>${s.icon}</span> ${s.label}</span>
-        <span class="bis-stat-value">${s.val}</span>
-      </div>
-    `).join('');
+  const valid = statEntries.filter(s => s.val !== undefined && s.val !== null && s.val !== "");
+  if (valid.length === 0) {
+    return '<p class="bis-no-stats">Stats pending simulation.</p>';
+  }
+
+  return valid.map(s => `
+    <div class="bis-stat-item">
+      <span class="bis-stat-name"><span>${s.icon}</span> ${s.label}</span>
+      <span class="bis-stat-value">${s.val}</span>
+    </div>
+  `).join('');
 }
 
 /**
- * Render Slots Alternatives Table
+ * Render Slots Alternatives Table with full rankings & drop details
  */
-function renderSlotsAlternativesTable(gear) {
-  if (!gear) return '';
+function renderSlotsAlternativesTable(spec) {
+  if (!spec) return '';
+  if (!spec.slots || spec.slots.length === 0) {
+    return '<p class="bis-empty-text">No slot breakdowns available.</p>';
+  }
 
-  const slotKeys = [
-    { key: "head", label: "Head" },
-    { key: "neck", label: "Neck" },
-    { key: "shoulder", label: "Shoulder" },
-    { key: "back", label: "Back" },
-    { key: "chest", label: "Chest" },
-    { key: "wrist", label: "Wrist" },
-    { key: "hands", label: "Hands" },
-    { key: "waist", label: "Waist" },
-    { key: "legs", label: "Legs" },
-    { key: "feet", label: "Feet" },
-    { key: "finger1", label: "Finger 1" },
-    { key: "finger2", label: "Finger 2" },
-    { key: "trinket1", label: "Trinket 1" },
-    { key: "trinket2", label: "Trinket 2" },
-    { key: "mainHand", label: "Main Hand" },
-    { key: "offHand", label: "Off Hand" },
-    { key: "ranged", label: "Ranged / Relic" }
-  ];
+  const faction = currentBiSState.faction || 'alliance';
 
-  return slotKeys.map(({ key, label }) => {
-    const slot = gear[key];
-    if (!slot) return '';
+  return spec.slots.map(slot => {
+    const slotId = slot.slotId;
+    const slotName = slot.slotName;
+    const items = slot.items || [];
+    if (items.length === 0) return '';
 
-    let bisItem = slot;
-    if (currentBiSState.faction === 'alliance' && slot.allianceBis) bisItem = slot.allianceBis;
-    else if (currentBiSState.faction === 'horde' && slot.hordeBis) bisItem = slot.hordeBis;
-
-    const alts = slot.alts || [];
+    // Find the #1 BiS item for this faction
+    const factionItems = items.filter(i => i.side === 'both' || i.side === faction);
+    const topItem = factionItems.length > 0 ? factionItems[0] : items[0];
 
     return `
-      <div class="bis-slot-alt-group" data-slot-key="${key}">
+      <div class="bis-slot-alt-group" data-slot-key="${slotId}">
         <div class="bis-alt-slot-heading">
-          <span class="bis-alt-slot-tag">${label}</span>
-          <span class="bis-alt-bis-summary">Top BiS: <strong class="${bisItem.quality || 'q2'}">${bisItem.name}</strong></span>
+          <div style="display: flex; align-items: center; gap: 0.6rem;">
+            <span class="bis-alt-slot-tag">${escapeHtml(slotName)}</span>
+            <span class="bis-slot-items-count">${items.length} Options</span>
+          </div>
+          <span class="bis-alt-bis-summary">
+            Top ${faction === 'alliance' ? '<img src="images/icons/faction-alliance.jpg" class="bis-mini-faction-icon" alt="" onerror="this.src=\'https://render.worldofwarcraft.com/us/icons/56/achievement_pvp_a_a.jpg\'" /> Alliance' : '<img src="images/icons/faction-horde.jpg" class="bis-mini-faction-icon" alt="" onerror="this.src=\'https://render.worldofwarcraft.com/us/icons/56/achievement_pvp_h_h.jpg\'" /> Horde'} BiS: 
+            <strong class="${topItem.quality || 'q2'}">${escapeHtml(topItem.name)}</strong>
+          </span>
         </div>
 
         <div class="bis-alt-items-list">
-          <!-- Rank 1 (BiS) -->
-          <div class="bis-alt-row bis-rank-1"
-               data-item-name="${escapeHtml(bisItem.name)}"
-               data-item-quality="${bisItem.quality || 'q2'}"
-               data-item-stats="${escapeHtml(bisItem.stats || '')}"
-               data-item-enchant="${escapeHtml(bisItem.enchant || '')}"
-               data-item-source="${escapeHtml(bisItem.source || '')}"
-               data-item-slot="${label}">
-            <span class="bis-rank-badge rank-1">#1 BiS</span>
-            <img src="${bisItem.icon && bisItem.icon.startsWith('http') ? bisItem.icon : `https://render.worldofwarcraft.com/us/icons/56/${bisItem.icon || 'inv_misc_questionmark.jpg'}`}" 
-                 alt="${bisItem.name}" class="bis-alt-icon ${bisItem.quality || 'q2'}" loading="lazy" />
-            <div class="bis-alt-info">
-              <span class="bis-alt-name ${bisItem.quality || 'q2'}">${bisItem.name}</span>
-              <span class="bis-alt-stats">${bisItem.stats || ''}</span>
-              ${bisItem.enchant && bisItem.enchant !== 'None' ? `<span class="bis-alt-enchant">✨ Enchant: ${bisItem.enchant}</span>` : ''}
-            </div>
-            <div class="bis-alt-source">
-              <span>📍 ${bisItem.source || 'Unknown'}</span>
-            </div>
-          </div>
+          ${items.map(item => {
+            const isRank1 = item.name === topItem.name;
+            const rankLabel = isRank1 ? '#1 BiS' : `#${item.rank}`;
+            const rankBadgeClass = isRank1 ? 'rank-1' : `rank-${item.rank}`;
+            const iconUrl = item.icon && item.icon.startsWith('http') 
+              ? item.icon 
+              : `https://render.worldofwarcraft.com/us/icons/56/${item.icon || 'inv_misc_questionmark.jpg'}`;
 
-          <!-- Alternatives Rank 2+ -->
-          ${alts.map((alt, idx) => `
-            <div class="bis-alt-row"
-                 data-item-name="${escapeHtml(alt.name)}"
-                 data-item-quality="${alt.quality || 'q2'}"
-                 data-item-stats="${escapeHtml(alt.stats || '')}"
-                 data-item-enchant=""
-                 data-item-source="${escapeHtml(alt.source || '')}"
-                 data-item-slot="${label}">
-              <span class="bis-rank-badge rank-${idx + 2}">#${idx + 2}</span>
-              <img src="${alt.icon && alt.icon.startsWith('http') ? alt.icon : `https://render.worldofwarcraft.com/us/icons/56/${alt.icon || 'inv_misc_questionmark.jpg'}`}" 
-                   alt="${alt.name}" class="bis-alt-icon ${alt.quality || 'q2'}" loading="lazy" />
-              <div class="bis-alt-info">
-                <span class="bis-alt-name ${alt.quality || 'q2'}">${alt.name}</span>
-                <span class="bis-alt-stats">${alt.stats || ''}</span>
+            const matchesFaction = item.side === 'both' || item.side === faction;
+
+            return `
+              <div class="bis-alt-row ${isRank1 ? 'bis-rank-1' : ''} ${matchesFaction ? '' : 'bis-faction-mismatch'}"
+                   data-item-name="${escapeHtml(item.name)}"
+                   data-item-quality="${item.quality || 'q2'}"
+                   data-item-stats="${escapeHtml(item.stats || '')}"
+                   data-item-enchant=""
+                   data-item-source="${escapeHtml(item.source || '')}"
+                   data-item-slot="${escapeHtml(slotName)}"
+                   data-item-tipid="${item.tipId || ''}"
+                   data-item-id="${item.itemId || ''}"
+                   data-item-side="${item.side || 'both'}"
+                   data-item-mats="${escapeHtml(item.mats || '')}">
+                <span class="bis-rank-badge ${rankBadgeClass}">${rankLabel}</span>
+                <img src="${iconUrl}" alt="${escapeHtml(item.name)}" class="bis-alt-icon ${item.quality || 'q2'}" loading="lazy" />
+                <div class="bis-alt-info">
+                  <div style="display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap;">
+                    <span class="bis-alt-name ${item.quality || 'q2'}">${escapeHtml(item.name)}</span>
+                    ${item.side === 'alliance' ? `<span class="bis-side-pill alliance"><img src="images/icons/faction-alliance.jpg" class="bis-mini-faction-icon" alt="" onerror="this.src='https://render.worldofwarcraft.com/us/icons/56/achievement_pvp_a_a.jpg'" /> Alliance</span>` : ''}
+                    ${item.side === 'horde' ? `<span class="bis-side-pill horde"><img src="images/icons/faction-horde.jpg" class="bis-mini-faction-icon" alt="" onerror="this.src='https://render.worldofwarcraft.com/us/icons/56/achievement_pvp_h_h.jpg'" /> Horde</span>` : ''}
+                  </div>
+                  <div style="display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap; margin-top: 0.15rem;">
+                    ${item.stats ? `<span class="bis-alt-stats">${escapeHtml(item.stats)}</span>` : ''}
+                    ${item.armor ? `<span class="bis-alt-stats" style="color: #94a3b8;">🛡️ ${item.armor} Armor</span>` : ''}
+                    ${item.ilvl ? `<span class="bis-alt-stats" style="color: #ca8a04;">ilvl ${item.ilvl}</span>` : ''}
+                  </div>
+                </div>
+                <div class="bis-alt-source">
+                  <div>📍 ${escapeHtml(item.source || 'Unknown')}</div>
+                  ${item.mats ? `<div class="bis-mats-pill">🔨 Mats: ${escapeHtml(item.mats)}</div>` : ''}
+                </div>
               </div>
-              <div class="bis-alt-source">
-                <span>📍 ${alt.source || 'Unknown'}</span>
-              </div>
-            </div>
-          `).join('')}
+            `;
+          }).join('')}
+        </div>
+      </div>
+    `;
+  }).join('');
+}
+
+/**
+ * Render Recommended Enchants List
+ */
+function renderEnchantsTable(enchants) {
+  if (!enchants || enchants.length === 0) {
+    return '<p class="bis-empty-text" style="color: var(--text-muted); font-size: 0.85rem; padding: 1rem;">No recommended enchants listed for this spec.</p>';
+  }
+
+  return enchants.map(ench => {
+    const iconUrl = ench.icon && ench.icon.startsWith("http")
+      ? ench.icon
+      : `https://render.worldofwarcraft.com/us/icons/56/${ench.icon || 'trade_engraving.jpg'}`;
+
+    return `
+      <div class="bis-prep-item">
+        <img src="${iconUrl}" alt="${escapeHtml(ench.slot || '')}" class="bis-prep-item-icon q2" loading="lazy" />
+        <div class="bis-prep-item-main">
+          <div class="bis-prep-item-title">
+            <span class="bis-prep-category-tag">${escapeHtml(ench.slot || 'Gear')}</span>
+            <span>${escapeHtml(ench.effect || ench.name || '')}</span>
+          </div>
+          <div class="bis-prep-item-source">📍 ${escapeHtml(ench.source || '')}</div>
+          ${ench.materials ? `<div class="bis-prep-item-mats">🔮 Reagents: ${escapeHtml(ench.materials)}</div>` : ''}
+        </div>
+      </div>
+    `;
+  }).join('');
+}
+
+/**
+ * Render Pre-Fight Consumables List
+ */
+function renderConsumablesTable(consumables) {
+  if (!consumables || consumables.length === 0) {
+    return '<p class="bis-empty-text" style="color: var(--text-muted); font-size: 0.85rem; padding: 1rem;">No pre-fight consumables listed for this spec.</p>';
+  }
+
+  return consumables.map(item => {
+    const iconUrl = item.icon && item.icon.startsWith("http")
+      ? item.icon
+      : `https://render.worldofwarcraft.com/us/icons/56/${item.icon || 'inv_potion_57.jpg'}`;
+
+    return `
+      <div class="bis-prep-item">
+        <img src="${iconUrl}" alt="${escapeHtml(item.name || '')}" class="bis-prep-item-icon q2" loading="lazy" />
+        <div class="bis-prep-item-main">
+          <div class="bis-prep-item-title">
+            <span class="bis-prep-category-tag">${escapeHtml(item.category || 'Buff')}</span>
+            <span>${escapeHtml(item.name || '')}</span>
+          </div>
+          <div class="bis-prep-item-effect">✨ ${escapeHtml(item.effect || item.desc || '')}</div>
+          ${item.source ? `<div class="bis-prep-item-source">📍 ${escapeHtml(item.source)}</div>` : ''}
+          ${item.materials ? `<div class="bis-prep-item-mats">🧪 Reagents: ${escapeHtml(item.materials)}</div>` : ''}
         </div>
       </div>
     `;
@@ -1286,56 +1443,118 @@ function renderFloatingTooltip(card, e, tooltip) {
   const enchant = card.getAttribute("data-item-enchant") || "";
   const source = card.getAttribute("data-item-source") || "";
   const slot = card.getAttribute("data-item-slot") || "Equipment";
+  const tipId = card.getAttribute("data-item-tipid") || "";
+  const side = card.getAttribute("data-item-side") || "";
+  const mats = card.getAttribute("data-item-mats") || "";
+
+  // Look up full item from current spec
+  const classData = WOW_BIS_DATA[currentBiSState.classId];
+  const currentSpec = classData ? classData.specs.find(s => s.id === currentBiSState.specId) : null;
+  let fullItem = null;
+  if (currentSpec && currentSpec.slots) {
+    for (const sl of currentSpec.slots) {
+      const found = sl.items.find(i => (tipId && i.tipId === tipId) || i.name === name);
+      if (found) { fullItem = found; break; }
+    }
+  }
 
   const isDalaran = source.toLowerCase().includes("dalaran");
   const isExcavation = source.toLowerCase().includes("excavation") || source.toLowerCase().includes("site 4");
   const isForeverDiscovery = isDalaran || isExcavation;
 
-  const statLines = stats ? stats.split(",").map(s => s.trim()).filter(Boolean) : [];
-
   let html = `
-    <div class="wow-tip-name ${quality}">${name}</div>
-    <div class="wow-tip-ilvl">Item Level 35 • Level 30 Beta</div>
-    <div class="wow-tip-bind">${source.toLowerCase().includes("world drop") || source.toLowerCase().includes("auction") || source.toLowerCase().includes("craft") ? 'Binds when equipped' : 'Binds when picked up'}</div>
-    <div class="wow-tip-type-row">
-      <span>${slot}</span>
-      <span>${getSlotClassification(slot, name)}</span>
-    </div>
+    <div class="wow-tip-name ${quality}">${escapeHtml(name)}</div>
   `;
 
-  if (slot.toLowerCase().includes("hand") || slot.toLowerCase().includes("ranged")) {
-    html += `
-      <div class="wow-tip-dmg-row">
-        <span>38 - 72 Damage</span>
-        <span>Speed 2.60</span>
-      </div>
-      <div class="wow-tip-dps">(21.2 damage per second)</div>
-    `;
+  if (fullItem && fullItem.ilvl) {
+    html += `<div class="wow-tip-ilvl">Item Level ${fullItem.ilvl} • Level 30 Beta</div>`;
+  } else {
+    html += `<div class="wow-tip-ilvl">Item Level 35 • Level 30 Beta</div>`;
   }
 
-  if (statLines.length > 0) {
-    html += `<div class="wow-tip-stats">`;
-    statLines.forEach(line => {
-      const lower = line.toLowerCase();
-      if (lower.includes("hit") || lower.includes("crit") || lower.includes("ap") || lower.includes("spell") || lower.includes("heal") || lower.includes("damage")) {
-        html += `<div class="wow-tip-equip">Equip: ${line.startsWith('+') ? 'Increases ' + line.substring(1) : line}</div>`;
+  if (fullItem && fullItem.lines && fullItem.lines.length > 0) {
+    html += `<div class="wow-tip-lines">`;
+    fullItem.lines.forEach(line => {
+      const trimmed = line.trim();
+      if (!trimmed) return;
+      if (trimmed === name) return;
+      if (trimmed.startsWith("Item Level")) return;
+
+      if (trimmed.includes("\t")) {
+        const [l, r] = trimmed.split("\t");
+        html += `<div class="wow-tip-type-row"><span>${escapeHtml(l)}</span><span>${escapeHtml(r)}</span></div>`;
+      } else if (trimmed.startsWith("Binds when")) {
+        html += `<div class="wow-tip-bind">${escapeHtml(trimmed)}</div>`;
+      } else if (trimmed.includes("Armor")) {
+        html += `<div class="wow-tip-armor" style="color: #fff; font-size: 0.82rem;">${escapeHtml(trimmed)}</div>`;
+      } else if (trimmed.startsWith("Requires Level")) {
+        html += `<div class="wow-tip-req" style="color: #fff; font-size: 0.8rem; margin: 0.2rem 0;">${escapeHtml(trimmed)}</div>`;
+      } else if (trimmed.startsWith("Equip:") || trimmed.startsWith("Chance on hit:") || trimmed.startsWith("Use:")) {
+        html += `<div class="wow-tip-equip">${escapeHtml(trimmed)}</div>`;
+      } else if (trimmed.startsWith("Sell Price:")) {
+        html += `<div class="wow-tip-price" style="color: #94a3b8; font-size: 0.75rem;">${escapeHtml(trimmed)}</div>`;
+      } else if (trimmed.startsWith("+") || trimmed.includes("Strength") || trimmed.includes("Agility") || trimmed.includes("Stamina") || trimmed.includes("Intellect") || trimmed.includes("Spirit")) {
+        html += `<div class="wow-tip-stat" style="color: #fff;">${escapeHtml(trimmed)}</div>`;
       } else {
-        html += `<div>${line}</div>`;
+        html += `<div class="wow-tip-generic" style="color: #cbd5e1;">${escapeHtml(trimmed)}</div>`;
       }
     });
     html += `</div>`;
+  } else {
+    const isBindsEquip = source.toLowerCase().includes("world drop") || source.toLowerCase().includes("auction") || source.toLowerCase().includes("craft");
+    html += `<div class="wow-tip-bind">${isBindsEquip ? 'Binds when equipped' : 'Binds when picked up'}</div>`;
+    html += `
+      <div class="wow-tip-type-row">
+        <span>${escapeHtml(slot)}</span>
+        <span>${escapeHtml(getSlotClassification(slot, name))}</span>
+      </div>
+    `;
+
+    if (slot.toLowerCase().includes("hand") || slot.toLowerCase().includes("ranged") || slot.toLowerCase().includes("weapon")) {
+      html += `
+        <div class="wow-tip-dmg-row">
+          <span>38 - 72 Damage</span>
+          <span>Speed 2.60</span>
+        </div>
+        <div class="wow-tip-dps">(21.2 damage per second)</div>
+      `;
+    }
+
+    const statLines = stats ? stats.split(",").map(s => s.trim()).filter(Boolean) : [];
+    if (statLines.length > 0) {
+      html += `<div class="wow-tip-stats">`;
+      statLines.forEach(l => {
+        const lower = l.toLowerCase();
+        if (lower.includes("hit") || lower.includes("crit") || lower.includes("ap") || lower.includes("spell") || lower.includes("heal") || lower.includes("damage")) {
+          html += `<div class="wow-tip-equip">Equip: ${l.startsWith('+') ? 'Increases ' + l.substring(1) : l}</div>`;
+        } else {
+          html += `<div class="wow-tip-stat" style="color: #fff;">${escapeHtml(l)}</div>`;
+        }
+      });
+      html += `</div>`;
+    }
   }
 
   if (enchant && enchant !== "None") {
-    html += `<div class="wow-tip-enchant">✨ Enchant: ${enchant}</div>`;
+    html += `<div class="wow-tip-enchant">✨ Enchant: ${escapeHtml(enchant)}</div>`;
+  }
+
+  if (side === "alliance") {
+    html += `<div class="wow-tip-faction alliance" style="display: flex; align-items: center; gap: 0.35rem; color: #60a5fa; font-weight: 700; margin-top: 0.35rem;"><img src="images/icons/faction-alliance.jpg" class="bis-mini-faction-icon" alt="" onerror="this.src='https://render.worldofwarcraft.com/us/icons/56/achievement_pvp_a_a.jpg'" /> Alliance Exclusive</div>`;
+  } else if (side === "horde") {
+    html += `<div class="wow-tip-faction horde" style="display: flex; align-items: center; gap: 0.35rem; color: #f87171; font-weight: 700; margin-top: 0.35rem;"><img src="images/icons/faction-horde.jpg" class="bis-mini-faction-icon" alt="" onerror="this.src='https://render.worldofwarcraft.com/us/icons/56/achievement_pvp_h_h.jpg'" /> Horde Exclusive</div>`;
   }
 
   if (source) {
-    html += `<div class="wow-tip-source">📍 Source: ${source}</div>`;
+    html += `<div class="wow-tip-source">📍 Source: ${escapeHtml(source)}</div>`;
+  }
+
+  if (mats) {
+    html += `<div class="wow-tip-mats" style="color: #fbbf24; font-size: 0.78rem; margin-top: 0.2rem;">🔨 Materials: ${escapeHtml(mats)}</div>`;
   }
 
   if (isForeverDiscovery) {
-    html += `<div class="wow-tip-source" style="color: #c084fc; font-weight: 700; border-top-color: #a855f7;">🏰 WoW Forever Beta Discovery (Build 1.60.6)</div>`;
+    html += `<div class="wow-tip-source" style="color: #c084fc; font-weight: 700; border-top-color: #a855f7;">🏰 WoW Forever Beta Discovery (Build 1.60.1.70291)</div>`;
   }
 
   tooltip.innerHTML = html;
@@ -1406,18 +1625,42 @@ function copyBiSListToClipboard() {
 
   let text = `World of Warcraft: Forever — Level 30 Beta BiS List\n`;
   text += `Class: ${currentClass.name} | Spec: ${currentSpec.name} (${currentBiSState.faction.toUpperCase()})\n`;
-  text += `Build: ${WOW_BIS_METADATA.version} (October 2026)\n\n`;
+  text += `Build: ${WOW_BIS_METADATA.version} (${WOW_BIS_METADATA.lastUpdated})\n\n`;
 
-  const gear = currentSpec.gear;
-  for (const [slotKey, slotData] of Object.entries(gear)) {
-    let item = slotData;
-    if (currentBiSState.faction === 'alliance' && slotData.allianceBis) item = slotData.allianceBis;
-    else if (currentBiSState.faction === 'horde' && slotData.hordeBis) item = slotData.hordeBis;
+  if (currentSpec.slots && currentSpec.slots.length > 0) {
+    currentSpec.slots.forEach(slot => {
+      const activeItems = slot.items.filter(i => i.side === 'both' || i.side === currentBiSState.faction);
+      const top = activeItems.length > 0 ? activeItems[0] : slot.items[0];
+      if (top) {
+        text += `${slot.slotName.toUpperCase()}: ${top.name}${top.stats ? ' (' + top.stats + ')' : ''} - ${top.source || 'N/A'}\n`;
+      }
+    });
+  } else if (currentSpec.gear) {
+    const gear = currentSpec.gear;
+    for (const [slotKey, slotData] of Object.entries(gear)) {
+      let item = slotData;
+      if (currentBiSState.faction === 'alliance' && slotData.allianceBis) item = slotData.allianceBis;
+      else if (currentBiSState.faction === 'horde' && slotData.hordeBis) item = slotData.hordeBis;
 
-    text += `${slotKey.toUpperCase()}: ${item.name} (${item.stats || 'No stats'}) - ${item.source || 'N/A'}\n`;
-    if (item.enchant && item.enchant !== 'None') {
-      text += `  Enchant: ${item.enchant}\n`;
+      text += `${slotKey.toUpperCase()}: ${item.name} (${item.stats || 'No stats'}) - ${item.source || 'N/A'}\n`;
+      if (item.enchant && item.enchant !== 'None') {
+        text += `  Enchant: ${item.enchant}\n`;
+      }
     }
+  }
+
+  if (currentSpec.enchants && currentSpec.enchants.length > 0) {
+    text += `\nRECOMMENDED ENCHANTS:\n`;
+    currentSpec.enchants.forEach(e => {
+      text += `- [${e.slot}] ${e.effect || e.name}: ${e.source || ''}\n`;
+    });
+  }
+
+  if (currentSpec.consumables && currentSpec.consumables.length > 0) {
+    text += `\nLEVEL 30 CONSUMABLES & BUFFS:\n`;
+    currentSpec.consumables.forEach(c => {
+      text += `- [${c.category}] ${c.name}: ${c.effect || c.desc || ''}\n`;
+    });
   }
 
   if (navigator.clipboard) {
