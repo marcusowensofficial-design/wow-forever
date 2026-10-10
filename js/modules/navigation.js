@@ -107,15 +107,39 @@ function initNavigation() {
     });
   });
 
-  // Support URL hash routing to tabs (e.g. #bis, #tierlist, #codex)
+  // Support URL hash routing to tabs (e.g. #bis, #tierlist, #codex) and native talent calculator (#calculator, #talents)
   function checkUrlHashTab() {
-    const hash = window.location.hash.toLowerCase().replace('#', '');
+    const rawHash = window.location.hash;
+    const hash = rawHash.toLowerCase().replace('#', '');
     if (!hash) return;
+
+    if (hash.startsWith('calculator') || hash.startsWith('talents')) {
+      if (window.TalentTreeModule && typeof window.TalentTreeModule.openFromHash === 'function') {
+        window.TalentTreeModule.openFromHash(rawHash);
+      }
+      return;
+    }
+
     const tabName = hash.split('/')[0];
     const targetBtn = document.querySelector(`.nav-tab-btn[data-tab="${tabName}"]`);
     if (targetBtn && !targetBtn.classList.contains('active')) {
       targetBtn.click();
     }
+  }
+
+  // Header quick link to in-house Talent Calculator (Blank Slate)
+  const quickLinkTalentCalc = document.getElementById('quick-link-talent-calc');
+  if (quickLinkTalentCalc) {
+    quickLinkTalentCalc.addEventListener('click', () => {
+      if (window.TalentTreeModule) {
+        window.TalentTreeModule.openModal({
+          classId: 'warrior',
+          blankSlate: true,
+          maxPoints: 26,
+          specName: 'Warrior Custom Build'
+        });
+      }
+    });
   }
 
   checkUrlHashTab();

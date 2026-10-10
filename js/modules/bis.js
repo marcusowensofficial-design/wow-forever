@@ -233,14 +233,12 @@ function renderBiSApp() {
           <div class="bis-talents-meta">
             <span class="bis-perk-note">✨ Includes +5 points from the <em>Talented</em> Legacy Perk!</span>
             <div class="bis-talent-actions" style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-              <button type="button" class="bis-talent-btn" id="btn-view-talent-tree">
-                <span>🧙‍♂️</span> View Talent Tree
+              <button type="button" class="bis-talent-btn" id="btn-view-talent-tree" title="View recommended Level 30 talent allocation">
+                <span>🌟</span> View Recommended Build
               </button>
-              ${currentSpec.talents && currentSpec.talents.buildUrl ? `
-                <a href="https://foreverchanges.pro${currentSpec.talents.buildUrl}" target="_blank" rel="noopener" class="bis-talent-btn" style="color: #60a5fa; border-color: rgba(96, 165, 250, 0.4);">
-                  <span>🔗</span> Calculator Build
-                </a>
-              ` : ''}
+              <button type="button" class="bis-talent-btn bis-calc-blank-btn" id="btn-open-blank-calculator" title="Open empty talent trees to customize your own build from scratch">
+                <span>⚡</span> Talent Calculator (Blank Slate)
+              </button>
             </div>
           </div>
         </div>
@@ -676,11 +674,30 @@ function bindBiSEvents() {
     });
   }
 
-  // Native Talent Tree Modal Button
+  // Native Talent Tree Modal Button - Recommended Spec Build
   const btnTalents = document.getElementById("btn-view-talent-tree");
   if (btnTalents) {
     btnTalents.addEventListener("click", () => {
       openBiSTalentModal();
+    });
+  }
+
+  // Native Talent Calculator - Blank Slate Custom Builder
+  const btnBlankCalc = document.getElementById("btn-open-blank-calculator");
+  if (btnBlankCalc) {
+    btnBlankCalc.addEventListener("click", () => {
+      if (window.TalentTreeModule) {
+        const classData = WOW_BIS_DATA[currentBiSState.classId];
+        const currentSpec = classData ? (classData.specs.find(s => s.id === currentBiSState.specId) || classData.specs[0]) : null;
+        window.TalentTreeModule.openModal({
+          classId: currentBiSState.classId,
+          specId: currentSpec ? currentSpec.id : 'custom',
+          specName: currentSpec ? `${currentSpec.name} (Custom Build)` : 'Custom Build',
+          blankSlate: true,
+          buildUrl: currentSpec?.talents?.buildUrl || '',
+          maxPoints: 26
+        });
+      }
     });
   }
 
@@ -1027,7 +1044,8 @@ function openBiSTalentModal() {
       specName: currentSpec.name,
       buildUrl: currentSpec.talents?.buildUrl || '',
       buildCode: currentSpec.talents?.buildCode || `FOREVER-${currentBiSState.classId.toUpperCase()}-${currentSpec.id.toUpperCase()}-30`,
-      maxPoints: 26
+      maxPoints: 26,
+      blankSlate: false
     });
     return;
   }

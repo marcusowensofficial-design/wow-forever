@@ -21,13 +21,48 @@
     specId: 'pve',
     specName: 'Shadow PvE',
     maxPoints: 26, // Default Level 30 cap (21 + 5 Talented legacy perk)
+    capMode: 'lvl30_perk', // 'lvl30_perk' (26) | 'lvl30_base' (21) | 'lvl60' (51)
     viewMode: 'grid', // 'grid' | 'cards'
     cardSearchQuery: '',
     points: {}, // { [talentId]: number }
-    originalPoints: {}, // Snapshot for "Reset to Spec"
+    recommendedPoints: {}, // Snapshot for "Load Recommended Spec"
+    originalPoints: {}, // Snapshot when opened
+    isBlankSlate: false,
     buildCode: '',
     buildUrl: ''
   };
+
+  const CLASS_LIST = [
+    { id: 'warrior', name: 'Warrior', color: '#C79C6E' },
+    { id: 'paladin', name: 'Paladin', color: '#F58CBA' },
+    { id: 'hunter', name: 'Hunter', color: '#ABD473' },
+    { id: 'rogue', name: 'Rogue', color: '#FFF569' },
+    { id: 'priest', name: 'Priest', color: '#FFFFFF' },
+    { id: 'shaman', name: 'Shaman', color: '#2B8CFF' },
+    { id: 'mage', name: 'Mage', color: '#69CCF0' },
+    { id: 'warlock', name: 'Warlock', color: '#9482C9' },
+    { id: 'druid', name: 'Druid', color: '#FF7D0A' }
+  ];
+
+  /**
+   * Resolve recommended build for a class from WOW_BIS_DATA
+   */
+  function getRecommendedBuildForClass(classId, preferredSpecId = null) {
+    const bisData = window.WOW_BIS_DATA;
+    if (!bisData || !bisData[classId] || !bisData[classId].specs) return null;
+    const specs = bisData[classId].specs;
+    let targetSpec = preferredSpecId ? specs.find(s => s.id === preferredSpecId) : null;
+    if (!targetSpec) targetSpec = specs[0];
+    if (targetSpec && targetSpec.talents && targetSpec.talents.buildUrl) {
+      return {
+        specId: targetSpec.id,
+        specName: targetSpec.name,
+        buildUrl: targetSpec.talents.buildUrl,
+        points: parseBuildUrl(classId, targetSpec.talents.buildUrl)
+      };
+    }
+    return null;
+  }
 
   /**
    * Escape HTML entities to prevent injection
@@ -155,10 +190,15 @@
     const classData = getClassData(classId);
     if (!classData || !buildUrl) return points;
 
+    let buildStr = '';
     const match = buildUrl.match(/[?&]b=([^&]+)/);
-    if (!match) return points;
+    if (match) {
+      buildStr = decodeURIComponent(match[1]);
+    } else if (buildUrl.includes('-') || /^\d+/.test(buildUrl)) {
+      buildStr = decodeURIComponent(buildUrl);
+    }
+    if (!buildStr) return points;
 
-    const buildStr = match[1];
     const treeParts = buildStr.split('-');
 
     treeParts.forEach((part, treeIdx) => {
@@ -553,6 +593,43 @@
   }
 
   /**
+   * Set theorycrafting cap mode: lvl30_perk (26p), lvl30_base (21p), lvl60 (51p)
+   */
+  function setCapMode(mode) {
+    state.capMode = mode;
+    if (mode === 'lvl60') {
+      state.maxPoints = 51;
+    } else if (mode === 'lvl30_base') {
+      state.maxPoints = 21;
+    } else {
+      state.maxPoints = 26; // lvl30_perk
+    }
+
+    // Prune points if current allocated exceeds new cap
+    const classData = getClassData(state.classId);
+    if (classData && getTotalPoints() > state.maxPoints) {
+      const sorted = classData.talents
+        .filter(t => (state.points[t.id] || 0) > 0)
+        .sort((a, b) => b.row - a.row || b.col - a.col);
+
+      for (const t of sorted) {
+        while ((state.points[t.id] || 0) > 0 && getTotalPoints() > state.maxPoints) {
+          if (canRefundPoint(t)) {
+            if (state.points[t.id] > 1) {
+              state.points[t.id]--;
+            } else {
+              delete state.points[t.id];
+            }
+          } else {
+            break;
+          }
+        }
+      }
+    }
+    renderModalBody();
+  }
+
+  /**
    * Render the complete modal body
    */
   function renderModalBody() {
@@ -570,6 +647,7 @@
     const treePoints = [0, 1, 2].map(idx => getTreePoints(idx));
     const buildCode = generateBuildCode(state.classId, state.specId, state.points);
     const buildUrl = generateBuildUrl(state.classId, state.points);
+    const pointsRemaining = Math.max(0, state.maxPoints - totalPoints);
 
     // Class meta styling
     const classColors = {
@@ -587,41 +665,82 @@
     const classIcon = `https://render.worldofwarcraft.com/us/icons/56/classicon_${state.classId}.jpg`;
 
     content.innerHTML = `
+      <!-- Class Switcher Ribbon -->
+      <div class="bis-talent-class-ribbon" role="tablist" aria-label="Select Class">
+        ${CLASS_LIST.map(cls => `
+          <button type="button" 
+                  class="bis-modal-class-chip ${state.classId === cls.id ? 'active' : ''}" 
+                  data-class-id="${cls.id}"
+                  style="--class-color: ${cls.color};"
+                  title="${cls.name} Talent Trees">
+            <img src="https://render.worldofwarcraft.com/us/icons/56/classicon_${cls.id}.jpg" alt="${cls.name}" class="bis-modal-class-icon" onerror="this.src='https://render.worldofwarcraft.com/us/icons/56/inv_misc_questionmark.jpg'" />
+            <span class="bis-modal-class-name">${cls.name}</span>
+          </button>
+        `).join('')}
+      </div>
+
       <!-- Modal Header -->
       <div class="bis-talent-modal-head">
         <div class="bis-talent-head-left">
           <img src="${classIcon}" alt="${classData.name}" class="bis-talent-crest-icon" onerror="this.src='https://render.worldofwarcraft.com/us/icons/56/inv_misc_questionmark.jpg'" />
           <div>
-            <h3 class="bis-talent-title" style="color: ${classColor};">
-              ${classData.name}: ${escapeHtml(state.specName)} Talents
-            </h3>
+            <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+              <h3 class="bis-talent-title" style="color: ${classColor};">
+                ${classData.name}: ${escapeHtml(state.specName)}
+              </h3>
+              ${state.isBlankSlate && totalPoints === 0 ? `<span class="bis-blank-slate-tag">✨ Blank Slate</span>` : ''}
+            </div>
             <div class="bis-talent-subtitle">
-              Phase 2 Level 30 Beta Cap • 26 Talent Points (21 Standard + 5 'Talented' Legacy Perk)
+              ${state.capMode === 'lvl60' 
+                ? 'Level 60 Endgame Cap • 51 Talent Points' 
+                : (state.capMode === 'lvl30_base' 
+                    ? 'Level 30 Base Cap • 21 Talent Points (Standard Progression)' 
+                    : 'Phase 2 Level 30 Beta Cap • 26 Talent Points (21 Standard + 5 \'Talented\' Legacy Perk)')}
             </div>
           </div>
         </div>
 
-        <div style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;">
+        <div class="bis-talent-head-actions">
+          <!-- Remaining Points Hero Badge -->
+          <div class="bis-points-left-badge ${pointsRemaining > 0 ? 'has-points' : 'capped'}" title="Unallocated Talent Points Remaining">
+            <span class="pts-number">${pointsRemaining}</span>
+            <span class="pts-label">Points Left</span>
+          </div>
+
+          <!-- Total Allocated Points Badge -->
+          <div class="bis-talent-points-pill" title="Points allocated: Tree 1 / Tree 2 / Tree 3">
+            Build: ${treePoints[0]} / ${treePoints[1]} / ${treePoints[2]} (${totalPoints}/${state.maxPoints})
+          </div>
+
+          <!-- Preset Switcher: Blank Slate vs Recommended Spec -->
+          <div class="bis-preset-toggle-group">
+            <button type="button" class="bis-talent-pill-btn ${state.isBlankSlate && totalPoints === 0 ? 'active-mode' : ''}" id="btn-toggle-blank-slate" title="Start with empty talent trees (0 points)">
+              <span>✨</span> Blank Slate
+            </button>
+            <button type="button" class="bis-talent-pill-btn ${!state.isBlankSlate ? 'active-mode' : ''}" id="btn-toggle-spec-build" title="Load curated recommended talent build">
+              <span>🌟</span> Recommended Build
+            </button>
+          </div>
+
+          <!-- Theorycrafting Cap Selector -->
+          <div class="bis-cap-selector-group" title="Select theorycrafting points cap">
+            <button type="button" class="bis-cap-btn ${state.capMode === 'lvl30_perk' ? 'active' : ''}" data-cap="lvl30_perk" title="Level 30 Beta Cap (26 pts with Talented perk)">Lvl 30 (26p)</button>
+            <button type="button" class="bis-cap-btn ${state.capMode === 'lvl30_base' ? 'active' : ''}" data-cap="lvl30_base" title="Level 30 Standard Cap (21 pts without perk)">Lvl 30 (21p)</button>
+            <button type="button" class="bis-cap-btn ${state.capMode === 'lvl60' ? 'active' : ''}" data-cap="lvl60" title="Level 60 Endgame Theorycrafting (51 pts)">Lvl 60 (51p)</button>
+          </div>
+
           <!-- View Mode Switcher -->
           <div class="bis-talent-view-controls">
-            <button type="button" class="bis-view-toggle-btn ${state.viewMode === 'grid' ? 'active' : ''}" data-view="grid">
-              <span>🔲</span> Visual Trees
+            <button type="button" class="bis-view-toggle-btn ${state.viewMode === 'grid' ? 'active' : ''}" data-view="grid" title="Classic 4x7 Visual Trees">
+              <span>🔲</span> Matrix
             </button>
-            <button type="button" class="bis-view-toggle-btn ${state.viewMode === 'cards' ? 'active' : ''}" data-view="cards">
-              <span>📜</span> Detailed Cards
+            <button type="button" class="bis-view-toggle-btn ${state.viewMode === 'cards' ? 'active' : ''}" data-view="cards" title="Detailed Cards with Full Descriptions">
+              <span>📜</span> Cards
             </button>
           </div>
 
-          <!-- Total Points Badge -->
-          <div class="bis-talent-points-pill" title="Points allocated: Tree 1 / Tree 2 / Tree 3">
-            🌟 Build: ${treePoints[0]} / ${treePoints[1]} / ${treePoints[2]} (${totalPoints}/${state.maxPoints} pts)
-          </div>
-
-          <!-- Reset Menu Button -->
-          <button type="button" class="bis-talent-pill-btn" id="btn-reset-spec-talents" title="Reset to recommended spec build">
-            ↺ Reset to Spec
-          </button>
-          <button type="button" class="bis-talent-pill-btn danger" id="btn-clear-all-talents" title="Clear all points">
+          <!-- Clear All Points Button -->
+          <button type="button" class="bis-talent-pill-btn danger" id="btn-clear-all-talents" title="Clear all allocated talent points">
             ✕ Clear
           </button>
         </div>
@@ -662,7 +781,8 @@
             <span>🎯</span> Explore ${classData.name} Deep Dive
           </button>
         </div>
-        <div>
+        <div style="display: flex; align-items: center; gap: 0.85rem; flex-wrap: wrap;">
+          <span class="bis-talent-controls-hint">💡 Left-Click (+1) • Shift+Click (Max) • Right-Click (-1) • Shift+Right-Click (Clear)</span>
           <button type="button" class="bis-talent-foot-btn" id="btn-modal-close-foot">
             ✕ Close Window
           </button>
@@ -700,6 +820,72 @@
     modal.onclick = (e) => {
       if (e.target === modal) closeModal();
     };
+
+    // 1b. Class Ribbon Selection
+    content.querySelectorAll('.bis-modal-class-chip').forEach(btn => {
+      btn.onclick = () => {
+        const newClassId = btn.getAttribute('data-class-id');
+        if (newClassId && newClassId !== state.classId) {
+          state.classId = newClassId;
+          const recBuild = getRecommendedBuildForClass(newClassId);
+          if (recBuild) {
+            state.recommendedPoints = Object.assign({}, recBuild.points);
+          } else {
+            state.recommendedPoints = {};
+          }
+          if (state.isBlankSlate) {
+            state.points = {};
+            const clsData = getClassData(newClassId);
+            state.specName = clsData ? `${clsData.name} Custom Build` : 'Custom Blank Slate';
+          } else if (recBuild) {
+            state.points = Object.assign({}, recBuild.points);
+            state.specName = recBuild.specName;
+          } else {
+            state.points = {};
+            state.specName = 'Custom Build';
+          }
+          state.originalPoints = Object.assign({}, state.points);
+          renderModalBody();
+        }
+      };
+    });
+
+    // 1c. Preset Switcher Buttons (Blank Slate vs Recommended Spec)
+    const toggleBlankBtn = document.getElementById('btn-toggle-blank-slate');
+    if (toggleBlankBtn) {
+      toggleBlankBtn.onclick = () => {
+        state.isBlankSlate = true;
+        state.points = {};
+        const clsData = getClassData(state.classId);
+        state.specName = clsData ? `${clsData.name} Custom Build` : 'Custom Blank Slate';
+        renderModalBody();
+      };
+    }
+
+    const toggleSpecBtn = document.getElementById('btn-toggle-spec-build');
+    if (toggleSpecBtn) {
+      toggleSpecBtn.onclick = () => {
+        state.isBlankSlate = false;
+        const recBuild = getRecommendedBuildForClass(state.classId, state.specId);
+        if (recBuild) {
+          state.points = Object.assign({}, recBuild.points);
+          state.specName = recBuild.specName;
+        } else {
+          state.points = Object.assign({}, state.recommendedPoints);
+        }
+        renderModalBody();
+      };
+    }
+
+    // 1d. Theorycrafting Cap Selector Buttons
+    content.querySelectorAll('.bis-cap-btn').forEach(btn => {
+      btn.onclick = () => {
+        const cap = btn.getAttribute('data-cap');
+        if (cap) {
+          setCapMode(cap);
+        }
+      };
+    });
 
     // 2. View Mode Switcher
     content.querySelectorAll('.bis-view-toggle-btn').forEach(btn => {
@@ -756,7 +942,7 @@
       };
     });
 
-    // 6. Interactive Talent Slots in Grid Mode
+    // 6. Interactive Talent Slots in Grid Mode (with Shift fast-actions)
     content.querySelectorAll('.bis-talent-slot').forEach(slot => {
       const talentId = parseInt(slot.getAttribute('data-talent-id'), 10);
       const talent = classData.talents.find(t => t.id === talentId);
@@ -776,28 +962,54 @@
         hideTalentTooltip();
       });
 
-      // Left-Click: Learn point
+      // Left-Click: Learn point (Shift+Click: max out)
       slot.addEventListener('click', (e) => {
         e.preventDefault();
-        if (canAddPoint(talent)) {
+        let changed = false;
+        if (e.shiftKey) {
+          while (canAddPoint(talent)) {
+            state.points[talent.id] = (state.points[talent.id] || 0) + 1;
+            changed = true;
+          }
+        } else if (canAddPoint(talent)) {
           state.points[talent.id] = (state.points[talent.id] || 0) + 1;
+          changed = true;
+        }
+        if (changed) {
           renderModalBody();
-          // Update tooltip after learning
           const refreshedSlot = content.querySelector(`.bis-talent-slot[data-talent-id="${talent.id}"]`);
           if (refreshedSlot) showTalentTooltip(talent, e);
         }
       });
 
-      // Right-Click: Refund point
+      // Right-Click: Refund point (Shift+Right-Click: refund all points in node)
       slot.addEventListener('contextmenu', (e) => {
         e.preventDefault();
-        if (canRefundPoint(talent)) {
+        let changed = false;
+        if (e.shiftKey) {
+          while (canRefundPoint(talent)) {
+            const current = state.points[talent.id] || 0;
+            if (current > 1) {
+              state.points[talent.id] = current - 1;
+              changed = true;
+            } else if (current === 1) {
+              delete state.points[talent.id];
+              changed = true;
+              break;
+            } else {
+              break;
+            }
+          }
+        } else if (canRefundPoint(talent)) {
           const current = state.points[talent.id] || 0;
           if (current > 1) {
             state.points[talent.id] = current - 1;
           } else {
             delete state.points[talent.id];
           }
+          changed = true;
+        }
+        if (changed) {
           renderModalBody();
           const refreshedSlot = content.querySelector(`.bis-talent-slot[data-talent-id="${talent.id}"]`);
           if (refreshedSlot) showTalentTooltip(talent, e);
@@ -829,7 +1041,7 @@
       };
     });
 
-    // 8. Footer Copy Buttons
+    // 8. Footer Copy Buttons - 100% In-House WoW Forever Links
     const copyCodeBtn = document.getElementById('btn-modal-copy-code');
     if (copyCodeBtn) {
       copyCodeBtn.onclick = () => {
@@ -849,10 +1061,11 @@
     if (copyUrlBtn) {
       copyUrlBtn.onclick = () => {
         const urlPath = generateBuildUrl(state.classId, state.points);
-        const fullUrl = `https://foreverchanges.pro${urlPath}`;
+        // Pure in-house WoW Forever URL format - zero competitor references
+        const fullUrl = `${window.location.origin}${window.location.pathname}#calculator?class=${state.classId}&b=${encodeURIComponent(urlPath)}`;
         if (navigator.clipboard) {
           navigator.clipboard.writeText(fullUrl).then(() => {
-            copyUrlBtn.innerHTML = `<span>✅</span> Copied Link!`;
+            copyUrlBtn.innerHTML = `<span>✅</span> Copied WoW Forever Link!`;
             setTimeout(() => {
               if (copyUrlBtn) copyUrlBtn.innerHTML = `<span>🔗</span> Copy Build Link`;
             }, 2000);
@@ -881,22 +1094,41 @@
    */
   function openModal(options = {}) {
     state.classId = options.classId || 'priest';
-    state.specId = options.specId || 'pve';
-    state.specName = options.specName || 'Recommended Build';
-    state.maxPoints = options.maxPoints || 26;
+    state.specId = options.specId || 'custom';
+    state.capMode = options.capMode || 'lvl30_perk';
+    state.maxPoints = options.maxPoints || (state.capMode === 'lvl60' ? 51 : (state.capMode === 'lvl30_base' ? 21 : 26));
     state.buildUrl = options.buildUrl || '';
     state.buildCode = options.buildCode || '';
+    state.isBlankSlate = !!options.blankSlate;
 
-    // Parse initial points
-    if (options.buildUrl) {
-      state.points = parseBuildUrl(state.classId, options.buildUrl);
-    } else if (options.points) {
-      state.points = Object.assign({}, options.points);
+    const recBuild = getRecommendedBuildForClass(state.classId, options.specId);
+    if (recBuild) {
+      state.recommendedPoints = Object.assign({}, recBuild.points);
+    } else if (options.buildUrl) {
+      state.recommendedPoints = parseBuildUrl(state.classId, options.buildUrl);
     } else {
-      state.points = {};
+      state.recommendedPoints = {};
     }
 
-    // Save snapshot for "Reset to Spec"
+    if (state.isBlankSlate) {
+      state.points = {};
+      const classData = getClassData(state.classId);
+      state.specName = options.specName || (classData ? `${classData.name} Custom Build` : 'Custom Blank Slate');
+    } else if (options.buildUrl) {
+      state.points = parseBuildUrl(state.classId, options.buildUrl);
+      state.specName = options.specName || (recBuild ? recBuild.specName : 'Recommended Build');
+    } else if (options.points) {
+      state.points = Object.assign({}, options.points);
+      state.specName = options.specName || 'Custom Build';
+    } else if (recBuild) {
+      state.points = Object.assign({}, recBuild.points);
+      state.specName = options.specName || recBuild.specName;
+    } else {
+      state.points = {};
+      state.specName = 'Custom Build';
+    }
+
+    // Save snapshot for "Reset"
     state.originalPoints = Object.assign({}, state.points);
 
     const modal = document.getElementById('bis-talent-modal');
@@ -907,6 +1139,42 @@
     state.isOpen = true;
 
     renderModalBody();
+  }
+
+  /**
+   * Support opening calculator directly from URL hash (e.g. #calculator?class=paladin&b=...)
+   */
+  function openFromHash(hashString) {
+    if (!hashString) return false;
+    const clean = hashString.replace(/^#/, '');
+    if (!clean.startsWith('calculator') && !clean.startsWith('talents')) return false;
+
+    const qIndex = clean.indexOf('?');
+    let classId = 'warrior';
+    let buildUrl = '';
+    let blankSlate = false;
+
+    if (qIndex !== -1) {
+      const query = clean.substring(qIndex + 1);
+      const params = new URLSearchParams(query);
+      if (params.get('class')) classId = params.get('class').toLowerCase();
+      if (params.get('b')) buildUrl = decodeURIComponent(params.get('b'));
+      if (params.get('blank') === 'true' || params.get('empty') === 'true' || !buildUrl) {
+        blankSlate = true;
+      }
+    } else {
+      const parts = clean.split('/');
+      if (parts[1]) classId = parts[1].toLowerCase();
+      blankSlate = true;
+    }
+
+    openModal({
+      classId,
+      buildUrl,
+      blankSlate,
+      specName: blankSlate ? 'Custom Build (Blank Slate)' : 'Custom Build'
+    });
+    return true;
   }
 
   // Global keydown handler for Escape
@@ -925,6 +1193,7 @@
   // Expose module globally
   window.TalentTreeModule = {
     openModal,
+    openFromHash,
     parseBuildUrl,
     generateBuildUrl,
     generateBuildCode,

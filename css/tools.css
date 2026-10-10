@@ -974,6 +974,21 @@
   transform: translateY(-1px);
 }
 
+.bis-talent-btn.bis-calc-blank-btn {
+  background: rgba(56, 189, 248, 0.14);
+  border-color: rgba(56, 189, 248, 0.45);
+  color: #38bdf8;
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.12);
+}
+
+.bis-talent-btn.bis-calc-blank-btn:hover {
+  background: rgba(56, 189, 248, 0.25);
+  border-color: #38bdf8;
+  color: #bae6fd;
+  transform: translateY(-1px);
+  box-shadow: 0 0 18px rgba(56, 189, 248, 0.28);
+}
+
 .bis-info-card p {
   font-size: 0.85rem;
   color: #94a3b8;
@@ -1515,6 +1530,68 @@
 /* --------------------------------------------------------------------------
    9. NATIVE BIS TALENT TREE VIEWER MODAL
    -------------------------------------------------------------------------- */
+.bis-talent-class-ribbon {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  overflow-x: auto;
+  padding-bottom: 0.75rem;
+  margin-bottom: 0.95rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  scrollbar-width: thin;
+}
+
+.bis-modal-class-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.35rem 0.75rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-full);
+  color: #cbd5e1;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.bis-modal-class-chip:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--class-color, #facc15);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.bis-modal-class-chip.active {
+  background: rgba(255, 255, 255, 0.14);
+  border-color: var(--class-color, #facc15);
+  color: var(--class-color, #fff);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.12);
+  font-weight: 700;
+}
+
+.bis-modal-class-icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.bis-blank-slate-tag {
+  display: inline-block;
+  padding: 0.15rem 0.55rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  border-radius: 4px;
+  background: rgba(56, 189, 248, 0.2);
+  border: 1px solid rgba(56, 189, 248, 0.5);
+  color: #7dd3fc;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
 .bis-talent-modal-head {
   display: flex;
   justify-content: space-between;
@@ -1522,6 +1599,8 @@
   margin-bottom: 1.25rem;
   padding-bottom: 1rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .bis-talent-head-left {
@@ -1550,14 +1629,140 @@
   margin-top: 0.2rem;
 }
 
-.bis-talent-points-pill {
-  background: rgba(16, 185, 129, 0.15);
-  border: 1px solid #10b981;
-  color: #6ee7b7;
+.bis-talent-head-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.bis-points-left-badge {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.35rem;
   padding: 0.35rem 0.85rem;
   border-radius: var(--radius-full);
   font-size: 0.82rem;
+  font-weight: 800;
+  transition: all 0.2s ease;
+}
+
+.bis-points-left-badge.has-points {
+  background: rgba(250, 204, 21, 0.18);
+  border: 1px solid #facc15;
+  color: #fef08a;
+  box-shadow: 0 0 12px rgba(250, 204, 21, 0.22);
+}
+
+.bis-points-left-badge.capped {
+  background: rgba(16, 185, 129, 0.18);
+  border: 1px solid #10b981;
+  color: #6ee7b7;
+}
+
+.bis-points-left-badge .pts-number {
+  font-size: 1rem;
+  font-weight: 900;
+}
+
+.bis-points-left-badge .pts-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.9;
+}
+
+.bis-talent-points-pill {
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.4);
+  color: #6ee7b7;
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-full);
+  font-size: 0.78rem;
   font-weight: 700;
+}
+
+.bis-preset-toggle-group {
+  display: inline-flex;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.bis-preset-toggle-group .bis-talent-pill-btn {
+  border-radius: 0;
+  border: none;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.35rem 0.75rem;
+  font-size: 0.76rem;
+  color: #cbd5e1;
+  background: transparent;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: all 0.2s ease;
+}
+
+.bis-preset-toggle-group .bis-talent-pill-btn:last-child {
+  border-right: none;
+}
+
+.bis-preset-toggle-group .bis-talent-pill-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+}
+
+.bis-preset-toggle-group .bis-talent-pill-btn.active-mode {
+  background: rgba(243, 192, 67, 0.22);
+  color: #fef08a;
+  font-weight: 700;
+}
+
+.bis-cap-selector-group {
+  display: inline-flex;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.bis-cap-btn {
+  padding: 0.35rem 0.65rem;
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: #94a3b8;
+  background: transparent;
+  border: none;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.bis-cap-btn:last-child {
+  border-right: none;
+}
+
+.bis-cap-btn:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.bis-cap-btn.active {
+  background: rgba(243, 192, 67, 0.22);
+  color: #fef08a;
+  font-weight: 700;
+}
+
+.bis-talent-controls-hint {
+  font-size: 0.74rem;
+  color: #94a3b8;
+  background: rgba(255, 255, 255, 0.04);
+  padding: 0.35rem 0.75rem;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .bis-talent-tree-grid {
