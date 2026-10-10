@@ -46,11 +46,18 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         desc: "Champion of the Light now converts 20/40/60% of total Intellect into Spell Damage and Healing, bridging the gap between Strength-based weapon strikes and Holy spell damage."
       },
       {
-        title: "60-Minute Blessings",
+        title: "60-Minute Blessings & Kings Baseline",
+        status: "verified",
+        statusLabel: "Verified in Beta (Oct 2026)",
+        badge: "Major QoL",
+        desc: "All standard Paladin Blessings (Might, Wisdom, Kings, Salvation, Light) now have a full 60-minute duration. Notably, Blessing of Kings is trained baseline by ALL Paladins in WoW Forever, while Blessing of Sanctuary has been permanently removed."
+      },
+      {
+        title: "Consecration Baseline for All Specializations",
         status: "verified",
         statusLabel: "Verified in Beta",
-        badge: "Major QoL",
-        desc: "All standard Paladin Blessings (Might, Wisdom, Kings, Sanctuary, Salvation, Light) now have a full 60-minute duration, permanently eliminating the tedious 5-minute buffing tax from classic 2004."
+        badge: "Baseline System",
+        desc: "Consecration is now learned directly at class trainers by all Paladins baseline, freeing up holy talent points and allowing Protection tanks and Retribution DPS to maintain AoE presence from early leveling."
       },
       {
         title: "Holy Strike Baseline",
@@ -58,6 +65,13 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         statusLabel: "Verified in Beta",
         badge: "Baseline Attack",
         desc: "Holy Strike is available as a baseline melee strike dealing 35% weapon damage plus additional Holy damage on an instant cast. Serves as the core active melee button across all three specializations."
+      },
+      {
+        title: "New Talents: Voice of Truth & Infusion of Light",
+        status: "exclusive",
+        statusLabel: "✦ Forever Exclusive",
+        badge: "Talent Rework",
+        desc: "Beta introduces potent talents: Voice of Truth (complete immunity to Silence and Interrupt mechanics), Reverence (in-combat mana regeneration while casting), Purifying Power (reduced costs/cooldowns for Cleanse/Exorcism), and Infusion of Light (holy crits make next Holy Light fast or instant)."
       },
       {
         title: "Blessing of Freedom & Kings Mutual Exclusion",
@@ -641,7 +655,8 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             name: "Retribution (Seal of Command & Repentance)",
             icon: "⚔️",
             role: "2-Handed Holy Melee DPS & Seal Twister",
-            wowheadCalcUrl: "https://www.wowhead.com/forever/talent-calc/paladin/--502301",
+            buildUrl: "/talents/paladin?b=--35205001200021&l=30&tl=5",
+            wowheadCalcUrl: "https://www.wowhead.com/forever/talent-calc/paladin/--35205001200021",
             tagline: "Devastating Holy burst with 21-pt Repentance incapacitate, 5/5 Conviction crits, 60% Intellect-to-Spell Damage scaling under Champion of the Light, and 60-minute Blessings.",
             statPriority: "Strength > Intellect > Attack Power > Melee Crit > Hit",
             bestWeapon: "Corpsemaker (RFK) / Strike of the Hydra (BFD) / Verigan's Fist / Wolfsbane Greatsword",
@@ -657,7 +672,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             ],
             legacyNotes: "Extra Legacy discovery points max out 5/5 Vengeance (+15% Physical and Holy damage) and Twist of Light.",
             rotation: [
-              { label: "Buffs & Seal", desc: "Cast 60-minute Blessing of Might or Kings -> Seal of Command (Judgement does not consume the seal!)." },
+              { label: "Buffs & Seal", desc: "Cast 60-minute Blessing of Might or Kings (both baseline!) -> Seal of Command (Judgement does not consume the seal!)." },
               { label: "Strike Priority", desc: "Holy Strike on cooldown -> Judgement on 8s cooldown -> Hammer of Justice stun." },
               { label: "Crowd Control", desc: "Cast Repentance instantly to shut down dangerous caster mobs in Excavation Site and Dalaran." },
               { label: "Execute", desc: "Hammer of Wrath at <20% enemy HP; trigger baseline Victory perks." }
@@ -680,7 +695,8 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             name: "Protection (Holy Shield & Redoubt Overhaul)",
             icon: "🛡️",
             role: "Holy Dungeon Tank & AoE Anchor",
-            wowheadCalcUrl: "https://www.wowhead.com/forever/talent-calc/paladin/-05330",
+            buildUrl: "/talents/paladin?b=-5530000300000001-&l=30&tl=5",
+            wowheadCalcUrl: "https://www.wowhead.com/forever/talent-calc/paladin/-5530000300000001-",
             tagline: "Unshakable multi-target tanking with Holy Shield (+30% block & holy retaliation damage), Redoubt 20% block, Judgement of Fury ranged taunt, and block-based mana return.",
             statPriority: "Stamina > Armor > Shield Block > Strength > Intellect",
             bestWeapon: "Arctic Buckler (BFD) / Commander's Crest + Outlaw Sabre",
@@ -688,15 +704,15 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
               { name: "Redoubt", points: "5/5", tree: "Protection (Tier 1)", desc: "Increases your chance to block attacks with a shield by 20% after being struck by a melee or ranged attack." },
               { name: "Precision", points: "3/3", tree: "Protection (Tier 2)", desc: "Increases your chance to hit with melee weapons and spells by 3%." },
               { name: "Toughness", points: "5/5", tree: "Protection (Tier 2)", desc: "Increases your armor value from items by 10%." },
-              { name: "Blessing of Sanctuary", points: "1/1", tree: "Protection (Tier 3 Keystone)", desc: "Places a 60-minute blessing on the target, reducing damage taken from all sources by 10 and dealing Holy damage when blocking." },
+              { name: "Improved Righteous Fury", points: "3/3", tree: "Protection (Tier 3)", desc: "Increases the amount of threat generated by your Righteous Fury spell by 50%." },
               { name: "Shield Specialization", points: "3/3", tree: "Protection (Tier 3)", desc: "Increases the amount of damage absorbed by your shield by 30%." },
               { name: "Holy Shield", points: "1/1", tree: "Protection (Tier 5 Keystone)", desc: "Increases chance to block by 30% for 10 sec and damages attackers for 65 Holy damage on block. Generates massive AoE threat!" },
-              { name: "One-Handed Specialization", points: "3/5", tree: "Protection (Tier 4)", desc: "Increases all damage dealt with one-handed melee weapons by 6%." }
+              { name: "One-Handed Specialization", points: "1/5", tree: "Protection (Tier 4)", desc: "Increases all damage dealt with one-handed melee weapons by 2%." }
             ],
             legacyNotes: "Extra Legacy discovery points unlock 5/5 One-Handed Specialization and Anticipation (+10 Defense).",
             rotation: [
               { label: "Pull & Ranged Taunt", desc: "Righteous Fury -> Judgement of Fury (10-yard ranged taunt) -> Holy Strike on pull." },
-              { label: "Holy Shield & Consecration", desc: "Activate Holy Shield on pull and drop Consecration; blocked attacks continuously deal holy damage back to all attackers." },
+              { label: "Holy Shield & Consecration", desc: "Activate Holy Shield on pull and drop baseline Consecration; blocked attacks continuously deal holy damage back to all attackers." },
               { label: "Block Mana Engine", desc: "Blocking attacks continuously refunds mana, allowing endless chain-pulling without drink stops." },
               { label: "Single-Target Lock", desc: "Holy Strike and Hammer of Justice on caster mobs." }
             ],
@@ -718,7 +734,8 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             name: "Holy (Holy Shock & Illumination Engine)",
             icon: "✨",
             role: "Dungeon Healer & Light's Vigil Engine",
-            wowheadCalcUrl: "https://www.wowhead.com/forever/talent-calc/paladin/505001",
+            buildUrl: "/talents/paladin?b=05350000005001--&l=30&tl=5",
+            wowheadCalcUrl: "https://www.wowhead.com/forever/talent-calc/paladin/05350000005001--",
             tagline: "Instant emergency triage through Holy Shock (10s cooldown), 100% mana refunds on heal crits via Illumination, and 70% pushback immunity.",
             statPriority: "Healing Power > Intellect > Spell Crit > Spirit > Mp5",
             bestWeapon: "Dalaran Healer Gavel / Rod of the Sleepwalker + Silver Hand Relic",

@@ -630,24 +630,27 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           "name": "Survival (Melee Counterattack & Bleed Vanguard)",
           "icon": "⚔️",
           "role": "Melee Agility DPS & Combat Trapper",
-          "wowheadCalcUrl": "https://www.wowhead.com/forever/talent-calc/hunter/--500501",
+          "buildUrl": "/talents/hunter?b=--0550032311010221&l=30&tl=5",
+          "wowheadCalcUrl": "https://www.wowhead.com/forever/talent-calc/hunter/--0550032311010221",
           "tagline": "Unprecedented melee dominance with Counterattack (5s root on parry), 20% Raptor/Mongoose crit, Mongoose Bite rolling bleeds, and in-combat Freezing Trap drops.",
           "statPriority": "Agility > Melee Attack Power > Stamina > Melee Hit",
           "bestWeapon": "Corpsemaker (RFK) / Strike of the Hydra (BFD) / Outlaw Sabre + Cruel Barb",
           "talents": [
-            { "name": "Monster Slaying", "points": "3/3", "tree": "Survival (Tier 1)", "desc": "Increases all damage taken by and critical strike chance against Beasts by 3%." },
-            { "name": "Humanoid Slaying", "points": "2/2", "tree": "Survival (Tier 1)", "desc": "Increases all damage taken by and critical strike chance against Humanoids by 3%." },
-            { "name": "Deflection", "points": "5/5", "tree": "Survival (Tier 2)", "desc": "Increases your Parry chance by 5%." },
-            { "name": "Savage Strikes", "points": "5/5", "tree": "Survival (Tier 2)", "desc": "Increases the critical strike chance of Raptor Strike and Mongoose Bite by 20%." },
-            { "name": "Survivalist", "points": "5/5", "tree": "Survival (Tier 3)", "desc": "Increases total health by 10%." },
-            { "name": "Counterattack", "points": "1/1", "tree": "Survival (Tier 4 Keystone)", "desc": "A strike that becomes active after parrying an opponent's attack. Deals physical damage and immobilizes the target for 5 sec on a 5s cooldown." }
+            { "name": "Deflection", "points": "5/5", "tree": "Survival (Tier 1)", "desc": "Increases your Parry chance by 5%, setting up Counterattack and reactive strikes." },
+            { "name": "Entrapment", "points": "5/5", "tree": "Survival (Tier 2)", "desc": "Gives your Immolation Trap, Frost Trap, and Explosive Trap a 25% chance to entrap targets for 5 sec." },
+            { "name": "Improved Wing Clip", "points": "3/3", "tree": "Survival (Tier 2)", "desc": "Gives your Wing Clip ability a 20% chance to immobilize the target for 5 sec." },
+            { "name": "Clever Traps", "points": "2/2", "tree": "Survival (Tier 3)", "desc": "Increases the duration of Freezing and Frost Traps by 30% and trap damage by 30%." },
+            { "name": "Surefooted", "points": "3/3", "tree": "Survival (Tier 3)", "desc": "Increases hit chance by 3% and reduces movement impairing effects duration by 15%." },
+            { "name": "Deterrence", "points": "1/1", "tree": "Survival (Tier 3 Keystone)", "desc": "When activated, increases your Dodge and Parry chance by 25% for 10 sec on a 5 min cooldown." },
+            { "name": "Counterattack", "points": "1/1", "tree": "Survival (Tier 4 Keystone)", "desc": "A strike that becomes active after parrying an attack. Deals physical damage and immobilizes for 5 sec." },
+            { "name": "Strider Kick", "points": "1/1", "tree": "Survival (Tier 5 Keystone)", "desc": "Instant rotational melee strike dealing 100% weapon damage on an 8s cooldown." }
           ],
-          "legacyNotes": "Extra Legacy discovery points unlock Deterrence (+25% dodge and parry for 10s) and Surefooted (+5% hit and snare resistance).",
+          "legacyNotes": "Extra Legacy discovery points unlock Survivalist (+10% total health) and Killer Instinct (+3% all crit chance).",
           "rotation": [
-            { "label": "Trap Opener", desc: "Drop Freezing Trap in-combat directly beneath target -> Wing Clip to lock them into melee range." },
-            { "label": "Parry & Counter", desc: "On parry proc, immediately fire Counterattack to immobilize target for 5 sec." },
-            { "label": "Mongoose Bleed Stack", desc: "Mongoose Bite applies a 21-second bleed equal to 40% damage dealt; weave Strider Kick on cooldown." },
-            { "label": "Raptor Strike Cleave", desc: "Queue Raptor Strike on next swing with +20% crit chance from Savage Strikes." }
+            { "label": "Trap Opener", "desc": "Drop Freezing Trap in-combat directly beneath target -> Wing Clip to lock them into melee range." },
+            { "label": "Parry & Counter", "desc": "On parry proc, immediately fire Counterattack to immobilize target for 5 sec." },
+            { "label": "Mongoose Bleed Stack", "desc": "Mongoose Bite applies a 21-second bleed equal to 40% damage dealt; weave Strider Kick on cooldown." },
+            { "label": "Raptor Strike Cleave", "desc": "Queue Raptor Strike on next swing with +20% crit chance from Savage Strikes." }
           ],
           "bisGear": [
             { "slot": "Two-Hand Weapon", "item": "Corpsemaker", "source": "Razorfen Kraul (Overlord Ramtusk)", "stats": "+15 Str, +8 Sta, 28.9 DPS 2H Axe" },
@@ -666,14 +669,15 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           "name": "Marksmanship (Scatter Shot & 41-Yard Sniper)",
           "icon": "🏹",
           "role": "Ranged Physical DPS & Kiting Specialist",
-          "wowheadCalcUrl": "https://www.wowhead.com/forever/talent-calc/hunter/-505001",
+          "buildUrl": "/talents/hunter?b=-0053052011513-&l=30&tl=5",
+          "wowheadCalcUrl": "https://www.wowhead.com/forever/talent-calc/hunter/-0053052011513-",
           "tagline": "Unrivaled 41-yard sniping with Hawk Eye, 30% bonus Mortal Shots crit damage, baseline Aimed Shot, and Scatter Shot instant disorient.",
           "statPriority": "Agility > Ranged AP > Ranged Hit > Intellect",
           "bestWeapon": "Master Hunter's Bow (BFD) / Venomstrike / Excavator's Boomstick",
           "talents": [
             { "name": "Efficiency", "points": "5/5", "tree": "Marksmanship (Tier 1)", "desc": "Reduces the Mana cost of your Shots and Stings by 10%." },
             { "name": "Lethal Shots", "points": "5/5", "tree": "Marksmanship (Tier 2)", "desc": "Increases your ranged critical strike chance by 5%." },
-            { "name": "Aimed Shot", "points": "1/1", "tree": "Marksmanship (Tier 3 Keystone)", "desc": "An aimed shot that increases ranged damage by 70 and reduces healing done to target by 50% for 10 sec." },
+            { "name": "Aimed Shot", "points": "1/1", "tree": "Marksmanship (Tier 3 Keystone)", "desc": "Baseline shot granted at trainer; talent rank enhances single-target damage multiplier by 15%." },
             { "name": "Hawk Eye", "points": "3/3", "tree": "Marksmanship (Tier 3)", "desc": "Increases the range of your ranged weapons by 6 yards (out to 41 yards total!)." },
             { "name": "Mortal Shots", "points": "5/5", "tree": "Marksmanship (Tier 4)", "desc": "Increases the critical strike damage bonus of your ranged weapon abilities by 30%." },
             { "name": "Scatter Shot", "points": "1/1", "tree": "Marksmanship (Tier 3 Keystone)", "desc": "A short-range shot that deals 50% weapon damage and disorients the target for 4 sec on an instant cast (30s cooldown)." },
@@ -681,15 +685,15 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           ],
           "legacyNotes": "Extra Legacy discovery points unlock Trueshot Aura (+50 Attack Power to all party members) and 3/3 Barrage.",
           "rotation": [
-            { "label": "41-Yard Opener", desc: "Hunter's Mark -> Cast Aimed Shot from maximum 41-yard range -> Serpent Sting." },
-            { "label": "Auto-Shot Weaving", desc: "Clip Auto Shot swing timer with Multi-Shot and Arcane Shot; Mortal Shots adds +30% critical damage." },
-            { "label": "Dead-Zone Reset", desc: "If enemy rushes your 8-yard dead zone, fire instant Scatter Shot, take 5 steps back, and resumed ranged bombardment." }
+            { "label": "41-Yard Opener", "desc": "Hunter's Mark -> Cast Aimed Shot from maximum 41-yard range -> Serpent Sting." },
+            { "label": "Auto-Shot Weaving", "desc": "Clip Auto Shot swing timer with Multi-Shot and Arcane Shot; Mortal Shots adds +30% critical damage." },
+            { "label": "Dead-Zone Reset", "desc": "If enemy rushes your 8-yard dead zone, fire instant Scatter Shot, take 5 steps back, and resumed ranged bombardment." }
           ],
           "bisGear": [
-            { "slot": "Ranged Weapon", "item": "Master Hunter's Bow", "source": "Blackfathom Deeps Quest", stats: "+8 Agi, 19.4 DPS Bow" },
-            { "slot": "One-Hand (Stat Stick)", "item": "Outlaw Sabre", "source": "Blackfathom Deeps Quest", stats: "+10 Agility, 21.8 DPS" },
-            { "slot": "Off-Hand (Stat Stick)", "item": "Thief's Blade", "source": "Deadmines", stats: "+6 Agility" },
-            { "slot": "Legs", "item": "Triprunner Dungarees", "source": "Gnomeregan Quest", stats: "+18 Agility, +2 Strength" }
+            { "slot": "Ranged Weapon", "item": "Master Hunter's Bow", "source": "Blackfathom Deeps Quest", "stats": "+8 Agi, 19.4 DPS Bow" },
+            { "slot": "One-Hand (Stat Stick)", "item": "Outlaw Sabre", "source": "Blackfathom Deeps Quest", "stats": "+10 Agility, 21.8 DPS" },
+            { "slot": "Off-Hand (Stat Stick)", "item": "Thief's Blade", "source": "Deadmines", "stats": "+6 Agility" },
+            { "slot": "Legs", "item": "Triprunner Dungarees", "source": "Gnomeregan Quest", "stats": "+18 Agility, +2 Strength" }
           ],
           "campingPerk": {
             "name": "Eagle Sight (+5% Ranged Crit)",
@@ -702,7 +706,8 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           "name": "Beast Mastery (Intimidation & Frenzy Commander)",
           "icon": "🐾",
           "role": "Pet DPS & Stun Lock Commander",
-          "wowheadCalcUrl": "https://www.wowhead.com/forever/talent-calc/hunter/500501",
+          "buildUrl": "/talents/hunter?b=0500020505001--&l=30&tl=5",
+          "wowheadCalcUrl": "https://www.wowhead.com/forever/talent-calc/hunter/0500020505001--",
           "tagline": "Unbreakable pet agro with restored Aggressive stance, Intimidation 3-second hard stun, +20% Unleashed Fury pet damage, and Summon Hawk aerial scouting.",
           "statPriority": "Agility > Stamina > Pet Attack Power > Intellect",
           "bestWeapon": "Master Hunter's Bow / Venomstrike",
@@ -716,14 +721,14 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           ],
           "legacyNotes": "Extra Legacy discovery points unlock Bestial Wrath (+50% pet damage and crowd-control immunity) and Frenzy (+30% pet attack speed).",
           "rotation": [
-            { "label": "Pet Assault", desc: "Send pet in on restored Aggressive mode -> Hunter's Mark -> Cast Intimidation on elite casters for 3s stun." },
-            { "label": "Hawk Scout Weave", desc: "Summon Hawk blinds secondary targets while pet tears through primary mob with +20% Unleashed Fury damage." },
-            { "label": "Sustain & Mend", desc: "Keep Mend Pet ticking; pet ability retention fix guarantees Growl and Bite never drop off." }
+            { "label": "Pet Assault", "desc": "Send pet in on restored Aggressive mode -> Hunter's Mark -> Cast Intimidation on elite casters for 3s stun." },
+            { "label": "Hawk Scout Weave", "desc": "Summon Hawk blinds secondary targets while pet tears through primary mob with +20% Unleashed Fury damage." },
+            { "label": "Sustain & Mend", "desc": "Keep Mend Pet ticking; pet ability retention fix guarantees Growl and Bite never drop off." }
           ],
           "bisGear": [
-            { "slot": "Ranged Weapon", "item": "Master Hunter's Bow", "source": "Blackfathom Deeps", stats: "+8 Agi, 19.4 DPS" },
-            { "slot": "Chest", "item": "Armor of the Fang (3-Piece)", "source": "Wailing Caverns", stats: "+20 Attack Power bonus" },
-            { "slot": "Belt", "item": "Belt of the Fang", "source": "Wailing Caverns (Lord Cobrahn)", stats: "+3 Agi, +3 Sta, +2 Int" }
+            { "slot": "Ranged Weapon", "item": "Master Hunter's Bow", "source": "Blackfathom Deeps", "stats": "+8 Agi, 19.4 DPS" },
+            { "slot": "Chest", "item": "Armor of the Fang (3-Piece)", "source": "Wailing Caverns", "stats": "+20 Attack Power bonus" },
+            { "slot": "Belt", "item": "Belt of the Fang", "source": "Wailing Caverns (Lord Cobrahn)", "stats": "+3 Agi, +3 Sta, +2 Int" }
           ],
           "campingPerk": {
             "name": "Bond of the Pack (+10% Pet Damage)",

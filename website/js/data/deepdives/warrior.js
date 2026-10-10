@@ -32,11 +32,11 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
 
     coreRules: [
       {
-        title: "Basic Attack Crits Generate +75% Rage",
+        title: "Basic Attack Crits Generate +100% Rage",
         status: "verified",
         statusLabel: "Phase 2 Beta Update (Oct 2026)",
         badge: "Rage Engine Overhaul",
-        desc: "All basic attack critical strikes now generate +75% bonus Rage, dramatically solving classic Warrior rage starvation and turbocharging burst rotations across Arms, Fury, and Protection."
+        desc: "All basic attack critical strikes now generate +100% bonus Rage (up from +75% in the initial test pass), completely eliminating classic Warrior rage starvation and turbocharging burst rotations across Arms, Fury, and Protection."
       },
       {
         title: "Spearing Strike Battle Stance Requirement",
@@ -550,6 +550,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             name: "Arms (Rend & Overpower)",
             icon: "🗡️",
             role: "2-Handed Melee Burst DPS",
+            buildUrl: "/talents/warrior?b=05300003--&l=20",
             wowheadCalcUrl: "https://www.wowhead.com/forever/talent-calc/warrior/3020501",
             tagline: "Heavy two-handed strikes with critical Rend bleeds, stance dancing, and Overpower counters.",
             statPriority: "Strength > Melee Hit > Agility > Stamina",
@@ -585,6 +586,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             name: "Fury (Dual-Wield Flurry)",
             icon: "⚡",
             role: "Dual-Wield Melee DPS",
+            buildUrl: "/talents/warrior?b=-050501--&l=20",
             wowheadCalcUrl: "https://www.wowhead.com/forever/talent-calc/warrior/-050501",
             tagline: "Rapid dual-wielding attacks fueled by Cruelty critical strikes and Unbridled Wrath generation.",
             statPriority: "Strength > Agility > Melee Hit > Stamina",
@@ -616,6 +618,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             name: "Protection (Shield & Threat Anchor)",
             icon: "🛡️",
             role: "Main Tank / Mitigation",
+            buildUrl: "/talents/warrior?b=--052301&l=20",
             wowheadCalcUrl: "https://www.wowhead.com/forever/talent-calc/warrior/--052301",
             tagline: "Unshakable dungeon vanguard with Defensive Charge, Shield Bash spell silencing, and Last Stand.",
             statPriority: "Stamina > Armor > Strength > Defense",
@@ -656,8 +659,9 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             name: "Arms (Sweeping Strikes & Spearing Strike)",
             icon: "🗡️",
             role: "2-Handed Melee Cleave & Burst DPS",
+            buildUrl: "/talents/warrior?b=3030521312231--&l=30&tl=5",
             wowheadCalcUrl: "https://www.wowhead.com/forever/talent-calc/warrior/3020501",
-            tagline: "Devastating multi-target cleave with Sweeping Strikes 21-pt keystone, +75% Rage crits, instant-tap Rend, and Spearing Strike anti-mount execution from Battle Stance.",
+            tagline: "Devastating multi-target cleave with Sweeping Strikes 21-pt keystone, +100% Rage crits, instant-tap Rend, and Spearing Strike anti-mount execution from Battle Stance.",
             statPriority: "Strength > Melee Hit (to 5%) > Agility > Stamina",
             bestWeapon: "Corpsemaker (Razorfen Kraul) / Strike of the Hydra (BFD) / Excavator's Heavy Mallet",
             talents: [
@@ -673,7 +677,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             rotation: [
               { label: "Pull & Stance Dance", desc: "Battle Stance Charge -> Instant Rend to lock aggro -> Spearing Strike to dismount or lock fleeing targets." },
               { label: "Sweeping Cleave", desc: "Activate Sweeping Strikes before pack engagement; every Cleave and Overpower hits 2 targets simultaneously." },
-              { label: "Rage Generation Boost", desc: "Basic attack crits generate +75% Rage in Phase 2; pool excess rage into constant Heroic Strike cancels." },
+              { label: "Rage Generation Boost", desc: "Basic attack crits generate +100% Rage in Phase 2; pool excess rage into constant Heroic Strike cancels." },
               { label: "Execute", desc: "Switch to Battle or Berserker Stance to cast Execute at <20% enemy health; trigger baseline Victory Rush on kill." }
             ],
             bisGear: [
@@ -694,8 +698,9 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             name: "Fury (Death Wish & Dual-Wield Engine)",
             icon: "⚡",
             role: "Dual-Wield Melee DPS & Flurry Enrage",
+            buildUrl: "/talents/warrior?b=-5501013001500122-&l=30&tl=5",
             wowheadCalcUrl: "https://www.wowhead.com/forever/talent-calc/warrior/-050501",
-            tagline: "Relentless dual-wielding pressure with Death Wish 21-pt keystone (+20% physical damage & fear immunity), +75% crit rage, and fixed off-hand weapon damage.",
+            tagline: "Relentless dual-wielding pressure with Death Wish 21-pt keystone (+20% physical damage & fear immunity), +100% crit rage, and fixed off-hand weapon damage.",
             statPriority: "Strength > Melee Hit > Agility > Stamina",
             bestWeapon: "Outlaw Sabre (BFD Quest) + Cruel Barb / Excavation Digging Axe",
             talents: [
@@ -731,6 +736,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             name: "Protection (Concussion Blow & Shield Vanguard)",
             icon: "🛡️",
             role: "Main Tank / Active Mitigation",
+            buildUrl: "/talents/warrior?b=--55000123300121003&l=30&tl=5",
             wowheadCalcUrl: "https://www.wowhead.com/forever/talent-calc/warrior/--052301",
             tagline: "Unbreakable vanguard holding Phase 2 Level 30 dungeons with Concussion Blow (5s hard stun), Last Stand, instant-tap Sunder Armor, and Defensive Charge.",
             statPriority: "Stamina > Armor > Strength > Defense > Block",

@@ -101,11 +101,25 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       "desc": "Visible proficiencies include One-Handed Maces, Two-Handed Maces, One-Handed Axes, Two-Handed Axes, Daggers, Staves, and Fist/Unarmed weapons, alongside Shields for defense."
     },
     {
-      "title": "Dual Wield Status: 2H Favored",
-      "status": "demo",
-      "statusLabel": "🎙️ Sodapoppin Demo Finding",
-      "badge": "Spec Design",
-      "desc": "Dual Wield was not visible in the accessible level-38 build. The current beta emphasizes Two-Handed weapon synergy with Stormstrike and Windfury, keeping the classic big-burst fantasy alive."
+      "title": "2H Axes & Maces Baseline (Talent Removed)",
+      "status": "verified",
+      "statusLabel": "Verified in Beta (Oct 2026)",
+      "badge": "Baseline Weapon Master",
+      "desc": "The 'Two-Handed Axes and Maces' talent has been removed from the Enhancement tree. Shamans now learn 2H axes and maces directly from capital weapon masters as a baseline skill! Enhancement embraces slow 2H weapon swings for devastating Windfury burst, alongside 1H + Shield for off-tanking."
+    },
+    {
+      "title": "Fire Nova Spell Rework (No Totem Required)",
+      "status": "verified",
+      "statusLabel": "Verified in Beta",
+      "badge": "Spell Overhaul",
+      "desc": "Fire Nova Totem has been completely replaced by the direct Fire Nova spell. Casting Fire Nova causes a searing burst of fire damage to pulse directly from whichever Fire Totem you currently have active."
+    },
+    {
+      "title": "New Baseline & Trained Spells",
+      "status": "exclusive",
+      "statusLabel": "✦ Forever Exclusive",
+      "badge": "Class Expansions",
+      "desc": "Shamans gain critical rotational upgrades: Lava Burst (Elemental fire burst), Maelstrom Weapon (Enhancement melee procs granting instant nature casts), Water Shield (Restoration mana engine), and Riptide (instant heal + HoT)."
     },
     {
       "title": "Dedicated Reagent Bag Slot",
@@ -673,7 +687,8 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           "name": "Enhancement (Stormstrike & Flurry)",
           "icon": "⚡",
           "role": "Melee Physical & Spell DPS",
-          "wowheadCalcUrl": "https://www.wowhead.com/forever/talent-calc/shaman/-505003010501",
+          "buildUrl": "/talents/shaman?b=000002-05500200000511-&l=30&tl=5",
+          "wowheadCalcUrl": "https://www.wowhead.com/forever/talent-calc/shaman/000002-05500200000511-",
           "tagline": "Thunderous 8-second Stormstrike rotations paired with 30% Flurry attack speed and Spirit Weapons.",
           "statPriority": "Strength > Agility > Attack Power > Hit Rating > Intellect",
           "bestWeapon": "Slow Two-Handed Mace or Axe (Corpsemaker 3.8 speed)",
@@ -688,9 +703,9 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           ],
           "legacyNotes": "Legacy Discovery points enable Elemental Focus Clearcasting and Shamanistic Rage mana batteries.",
           "rotation": [
-            { "label": "Opener", desc: "Windfury / Rockbiter Weapon -> Call of the Ancestors 4-totem drop -> Charge into melee." },
-            { "label": "Rotational Burst", desc: "Stormstrike (8s CD) -> Earth Shock weave (amplified +20% by Stormstrike) -> Flurry proc." },
-            { "label": "Mobility & Reposition", desc: "Instant Ghost Wolf cast indoors to dodge AoE sweeps and reposition instantly." }
+            { "label": "Opener", "desc": "Windfury / Rockbiter Weapon -> Call of the Ancestors 4-totem drop -> Charge into melee." },
+            { "label": "Rotational Burst", "desc": "Stormstrike (8s CD) -> Earth Shock weave (amplified +20% by Stormstrike) -> Flurry proc." },
+            { "label": "Mobility & Reposition", "desc": "Instant Ghost Wolf cast indoors to dodge AoE sweeps and reposition instantly." }
           ],
           "bisGear": [
             { "slot": "Two-Hand Weapon", "item": "Corpsemaker", "source": "Razorfen Kraul (Overlord Ramtusk)", "stats": "28.9 DPS, +15 Str, +8 Sta, 3.8s speed" },
@@ -709,7 +724,8 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           "name": "Shaman Tank (Spirit Weapons & Shield Mastery)",
           "icon": "🛡️",
           "role": "Dungeon Main Tank / Off-Tank",
-          "wowheadCalcUrl": "https://www.wowhead.com/forever/talent-calc/shaman/-05051000501",
+          "buildUrl": "/talents/shaman?b=-05500000041001-&l=30&tl=5",
+          "wowheadCalcUrl": "https://www.wowhead.com/forever/talent-calc/shaman/-05500000041001-",
           "tagline": "High-threat dungeon tanking with 30% Rockbiter aggro, Shield Block Value, and Spirit Weapons Parry.",
           "statPriority": "Stamina > Armor > Strength > Block Value > Agility",
           "bestWeapon": "One-Hand Mace/Axe + Shield (Thermaplugg's Central Core / Tortusk Shield)",
@@ -723,9 +739,9 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           ],
           "legacyNotes": "Legacy Milestones allow investing points into Flurry and Improved Ghost Wolf for dungeon speed pulls.",
           "rotation": [
-            { "label": "Pull & Engage", desc: "Rockbiter Weapon imbue -> Earth Shock max rank (massive threat) -> Stoneskin Totem & Searing Totem." },
-            { "label": "Active Mitigation", desc: "Hold shield facing front to proc Parry and Shield Block -> Grounding Totem to absorb caster spikes." },
-            { "label": "Snap Aggro", desc: "Earth Shock on caster adds -> Stoneclaw Totem to peel secondary loose mobs." }
+            { "label": "Pull & Engage", "desc": "Rockbiter Weapon imbue -> Earth Shock max rank (massive threat) -> Stoneskin Totem & Searing Totem." },
+            { "label": "Active Mitigation", "desc": "Hold shield facing front to proc Parry and Shield Block -> Grounding Totem to absorb caster spikes." },
+            { "label": "Snap Aggro", "desc": "Earth Shock on caster adds -> Stoneclaw Totem to peel secondary loose mobs." }
           ],
           "bisGear": [
             { "slot": "Shield", "item": "Thermaplugg's Central Core", "source": "Gnomeregan (Mekgineer Thermaplugg)", "stats": "842 Armor, 23 Block, +7 Sta, Nature Res" },
@@ -744,7 +760,8 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           "name": "Elemental (Elemental Focus & Call of Thunder)",
           "icon": "🌋",
           "role": "Ranged Nature & Fire DPS",
-          "wowheadCalcUrl": "https://www.wowhead.com/forever/talent-calc/shaman/50500101501",
+          "buildUrl": "/talents/shaman?b=50050010005--&l=30&tl=5",
+          "wowheadCalcUrl": "https://www.wowhead.com/forever/talent-calc/shaman/50050010005--",
           "tagline": "Ranged artillery with 100% Clearcasting mana refund, +6% Lightning crit, and low-cost 5s Shocks.",
           "statPriority": "Spell Power > Nature Damage > Spell Crit > Intellect > MP5",
           "bestWeapon": "Two-Handed Staff (Rod of the Sleepwalker / Staff of Westfall)",
@@ -757,9 +774,9 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           ],
           "legacyNotes": "Extra Legacy points unlock Elemental Devastation and Lightning Mastery cast time reduction.",
           "rotation": [
-            { "label": "Opener", desc: "Max range Lightning Bolt -> Flame Shock DoT -> Searing Totem drop." },
-            { "label": "Clearcasting Engine", desc: "Lightning Bolt crit procs Elemental Focus -> Free Chain Lightning or Earth Shock finisher." },
-            { "label": "AoE Burst", desc: "Chain Lightning -> Fire Nova Totem -> Earthbind Totem for slow kite." }
+            { "label": "Opener", "desc": "Max range Lightning Bolt -> Flame Shock DoT -> Searing Totem drop." },
+            { "label": "Clearcasting Engine", "desc": "Lightning Bolt crit procs Elemental Focus -> Free Chain Lightning or Earth Shock finisher." },
+            { "label": "AoE Burst", "desc": "Chain Lightning -> Fire Nova directly from fire totem -> Earthbind Totem for slow kite." }
           ],
           "bisGear": [
             { "slot": "Staff", "item": "Rod of the Sleepwalker", "source": "Blackfathom Deeps (Twilight Lord Kelris)", "stats": "+11 Spell Power, +7 Int, +5 Spi" },
@@ -770,14 +787,15 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             "name": "Fury of the Storm (+7% Nature & Fire Crit)",
             "desc": "Camp rest grants +7% spell critical strike chance with Nature and Fire spells for 2 hours."
           },
-          "classQuestNote": "Level 30 unlocks Chain Lightning and Fire Nova Totem rank 2."
+          "classQuestNote": "Level 30 unlocks Chain Lightning and Fire Nova rank 2."
         },
         {
           "specId": "restoration_30",
           "name": "Restoration (Nature's Swiftness & Tidal Waves)",
           "icon": "💧",
           "role": "Healer / Dungeon & Raid Support",
-          "wowheadCalcUrl": "https://www.wowhead.com/forever/talent-calc/shaman/--50503001501",
+          "buildUrl": "/talents/shaman?b=--05005005002001&l=30&tl=5",
+          "wowheadCalcUrl": "https://www.wowhead.com/forever/talent-calc/shaman/--05005005002001",
           "tagline": "Master healer with 70% anti-pushback, 25% totem mana reduction, and instant Nature's Swiftness clutch save.",
           "statPriority": "Healing Power > MP5 > Intellect > Spirit",
           "bestWeapon": "One-Hand Mace + Off-hand / Shield (Luminescent Rod)",
@@ -791,9 +809,9 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           ],
           "legacyNotes": "Legacy Milestones allow investing points into Tidal Mastery (+5% heal crit) and Purification.",
           "rotation": [
-            { "label": "Totem Buff Grid", desc: "Drop Healing Stream Totem + Mana Spring Totem + Stoneskin Totem before pulls." },
-            { "label": "Sustained Triage", desc: "Downranked Healing Wave rank 3/4 for low mana cost party stabilization." },
-            { "label": "Clutch Emergency", desc: "Nature's Swiftness -> Instant max-rank Healing Wave on tank spike." }
+            { "label": "Totem Buff Grid", "desc": "Drop Healing Stream Totem + Mana Spring Totem + Stoneskin Totem before pulls." },
+            { "label": "Sustained Triage", "desc": "Downranked Healing Wave rank 3/4 for low mana cost party stabilization." },
+            { "label": "Clutch Emergency", "desc": "Nature's Swiftness -> Instant max-rank Healing Wave on tank spike." }
           ],
           "bisGear": [
             { "slot": "Staff / 1H", "item": "Staff of the Blessed Seer", "source": "Razorfen Kraul (Charlga Razorflank)", "stats": "+16 Healing Power, +10 Int, +7 Spi" },
