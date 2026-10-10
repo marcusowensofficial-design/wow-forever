@@ -1355,3 +1355,331 @@
   gap: 1rem;
   margin-top: 1.5rem;
 }
+
+/* --------------------------------------------------------------------------
+   9. NATIVE BIS TALENT TREE VIEWER MODAL
+   -------------------------------------------------------------------------- */
+.bis-talent-modal-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.25rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.bis-talent-head-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.bis-talent-crest-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 10px;
+  border: 2px solid var(--border-gold);
+}
+
+.bis-talent-title {
+  font-family: var(--font-heading);
+  font-size: 1.45rem;
+  color: #fff;
+  letter-spacing: 0.02em;
+}
+
+.bis-talent-subtitle {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 0.2rem;
+}
+
+.bis-talent-points-pill {
+  background: rgba(16, 185, 129, 0.15);
+  border: 1px solid #10b981;
+  color: #6ee7b7;
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-full);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.bis-talent-tree-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 860px) {
+  .bis-talent-tree-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.bis-tree-col {
+  background: rgba(16, 22, 34, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-md);
+  padding: 1.1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.bis-tree-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.bis-tree-title-group {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.bis-tree-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 4px;
+}
+
+.bis-tree-name {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  color: #fff;
+}
+
+.bis-tree-points-badge {
+  background: rgba(243, 192, 67, 0.2);
+  border: 1px solid var(--border-gold);
+  color: var(--text-gold);
+  padding: 0.2rem 0.55rem;
+  border-radius: 4px;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.bis-tree-nodes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  flex: 1;
+}
+
+.bis-tree-node {
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius-sm);
+  padding: 0.6rem 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  transition: var(--transition);
+}
+
+.bis-tree-node:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(243, 192, 67, 0.3);
+}
+
+.bis-tree-node.is-maxed {
+  border-color: rgba(243, 192, 67, 0.35);
+}
+
+.bis-node-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bis-node-name {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #f1f5f9;
+}
+
+.bis-node-rank {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.15rem 0.45rem;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #cbd5e1;
+}
+
+.bis-tree-node.is-maxed .bis-node-rank {
+  background: #ca8a04;
+  color: #fef08a;
+}
+
+.bis-node-desc {
+  font-size: 0.78rem;
+  color: #94a3b8;
+  line-height: 1.4;
+}
+
+.bis-talent-new-badge {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #a855f7 0%, #ec4899 100%);
+  color: #fff;
+  padding: 0.1rem 0.4rem;
+  border-radius: 3px;
+  margin-left: 0.4rem;
+  vertical-align: middle;
+}
+
+.bis-talent-empty-state {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem 1rem;
+  color: #64748b;
+  font-size: 0.82rem;
+  font-style: italic;
+  text-align: center;
+}
+
+.bis-talent-modal-foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.bis-talent-foot-left {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.bis-talent-foot-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-sm);
+  color: #e2e8f0;
+  font-size: 0.84rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.bis-talent-foot-btn:hover {
+  background: rgba(243, 192, 67, 0.15);
+  border-color: var(--border-gold);
+  color: var(--text-gold);
+}
+
+.bis-talent-foot-btn.primary {
+  background: rgba(243, 192, 67, 0.2);
+  border-color: var(--border-gold-bright);
+  color: #fff;
+}
+
+.bis-talent-foot-btn.primary:hover {
+  background: rgba(243, 192, 67, 0.35);
+  transform: translateY(-1px);
+}
+
+/* --------------------------------------------------------------------------
+   10. CLASSIC WOW FLOATING ITEM TOOLTIP
+   -------------------------------------------------------------------------- */
+.wow-floating-tooltip {
+  position: fixed;
+  pointer-events: none;
+  z-index: 999999;
+  background: #07090e;
+  border: 1px solid rgba(212, 175, 55, 0.45);
+  border-radius: 5px;
+  padding: 0.85rem 1rem;
+  max-width: 330px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.9), 0 0 15px rgba(243, 192, 67, 0.15);
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  line-height: 1.45;
+  color: #fff;
+  transition: opacity 0.1s ease;
+}
+
+.wow-tip-name {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  display: block;
+}
+
+.wow-tip-ilvl {
+  color: #facc15;
+  font-size: 0.78rem;
+  margin-bottom: 0.35rem;
+}
+
+.wow-tip-bind {
+  color: #fff;
+  font-size: 0.8rem;
+}
+
+.wow-tip-type-row {
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  font-size: 0.82rem;
+  margin-bottom: 0.25rem;
+}
+
+.wow-tip-dmg-row {
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  font-size: 0.82rem;
+  margin: 0.25rem 0;
+}
+
+.wow-tip-dps {
+  color: #fff;
+  font-size: 0.78rem;
+}
+
+.wow-tip-stats {
+  color: #fff;
+  margin: 0.35rem 0;
+}
+
+.wow-tip-stats span {
+  display: block;
+}
+
+.wow-tip-equip {
+  color: #1eff00;
+  margin: 0.35rem 0;
+  font-size: 0.82rem;
+}
+
+.wow-tip-enchant {
+  color: #facc15;
+  margin: 0.35rem 0;
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
+.wow-tip-source {
+  color: #94a3b8;
+  font-size: 0.78rem;
+  margin-top: 0.5rem;
+  padding-top: 0.4rem;
+  border-top: 1px dashed rgba(255, 255, 255, 0.1);
+}
+
