@@ -226,14 +226,64 @@ function moveTokenToTier(tokenId, tier) {
   renderTierListUI();
 }
 
+let tierListEventsInitialized = false;
+
 function setupTierListEvents() {
-  // Category switching
-  document.querySelectorAll('.tl-cat-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      activeTierCategory = btn.getAttribute('data-cat');
-      loadTierListState();
-      renderTierListUI();
-    });
+  const container = document.getElementById('tierlist-builder-container') || document.getElementById('tierlist-container');
+  if (!container || tierListEventsInitialized) return;
+  tierListEventsInitialized = true;
+
+  // Delegated click handler on container so dynamic re-renders never drop events
+  container.addEventListener('click', (e) => {
+    // Category switching
+    const catBtn = e.target.closest('.tl-cat-btn');
+    if (catBtn) {
+      const cat = catBtn.getAttribute('data-cat');
+      if (cat && cat !== activeTierCategory) {
+        activeTierCategory = cat;
+        loadTierListState();
+        renderTierListUI();
+      }
+      return;
+    }
+
+    // Reset button
+    const resetBtn = e.target.closest('#tl-btn-reset');
+    if (resetBtn) {
+      if (confirm('Reset this tier list back to unranked?')) {
+        tierAllocations = {};
+        saveTierListState();
+        renderTierListUI();
+      }
+      return;
+    }
+
+    // Save Image (Canvas download)
+    const saveImgBtn = e.target.closest('#tl-btn-save-image');
+    if (saveImgBtn) {
+      exportTierListImage(false);
+      return;
+    }
+
+    // Copy Image (Clipboard)
+    const copyImgBtn = e.target.closest('#tl-btn-copy-image');
+    if (copyImgBtn) {
+      exportTierListImage(true);
+      return;
+    }
+
+    // Share Link
+    const shareBtn = e.target.closest('#tl-btn-copy-link');
+    if (shareBtn) {
+      const state = btoa(JSON.stringify({ cat: activeTierCategory, alloc: tierAllocations }));
+      const url = `${window.location.origin}${window.location.pathname}#tierlist=${state}`;
+      navigator.clipboard.writeText(url).then(() => {
+        alert('Tier list link copied to clipboard!');
+      }).catch(() => {
+        prompt('Copy your tier list link:', url);
+      });
+      return;
+    }
   });
 
   // Global Keyboard shortcuts: S, A, B, C, D, F, Backspace
@@ -252,48 +302,6 @@ function setupTierListEvents() {
       moveTokenToTier(hoveredTokenId, 'pool');
     }
   });
-
-  // Reset button
-  const resetBtn = document.getElementById('tl-btn-reset');
-  if (resetBtn) {
-    resetBtn.addEventListener('click', () => {
-      if (confirm('Reset this tier list back to unranked?')) {
-        tierAllocations = {};
-        saveTierListState();
-        renderTierListUI();
-      }
-    });
-  }
-
-  // Save Image (Canvas download)
-  const saveImgBtn = document.getElementById('tl-btn-save-image');
-  if (saveImgBtn) {
-    saveImgBtn.addEventListener('click', () => {
-      exportTierListImage(false);
-    });
-  }
-
-  // Copy Image (Clipboard)
-  const copyImgBtn = document.getElementById('tl-btn-copy-image');
-  if (copyImgBtn) {
-    copyImgBtn.addEventListener('click', () => {
-      exportTierListImage(true);
-    });
-  }
-
-  // Share Link
-  const shareBtn = document.getElementById('tl-btn-copy-link');
-  if (shareBtn) {
-    shareBtn.addEventListener('click', () => {
-      const state = btoa(JSON.stringify({ cat: activeTierCategory, alloc: tierAllocations }));
-      const url = `${window.location.origin}${window.location.pathname}#tierlist=${state}`;
-      navigator.clipboard.writeText(url).then(() => {
-        alert('Tier list link copied to clipboard!');
-      }).catch(() => {
-        prompt('Copy your tier list link:', url);
-      });
-    });
-  }
 }
 
 /**

@@ -500,6 +500,77 @@ const WOW_TOOLS_DATA = {
 • Venue: Durotar Gates on the North American Beta megarealm.
 • Ruleset: Level 30 cap, Best-of-3 single elimination, zero consumables (except class-conjured water/stones), no world buffs.
 • Meta Watch: Feral Druids with Frenzied Regeneration, Ret Paladins with Voice of Truth silence immunity, and Arms Warriors with Spearing Strike are favored top contenders!`
+    },
+    {
+      id: "guide-merchants-favor",
+      title: "Merchant's Favor Currency & Dalaran Vendors",
+      category: "Economy & Currencies",
+      icon: "https://render.worldofwarcraft.com/us/icons/56/inv_misc_coin_02.jpg",
+      summary: "How to earn and spend Merchant's Favor in Dalaran Underbelly and capital cities for dungeon catch-up gear, bags, and reagents.",
+      content: `Merchant's Favor is the premier deterministic currency introduced in WoW Forever:
+• Earning Favor:
+  - Completing Daily Dungeon Quests for Excavation Site 4, City of Dalaran, and BFD awards 2–4 Merchant's Favor per run.
+  - Slaying level 20–30 world rares grants 1 Merchant's Favor per rare kill (capped at 5 daily).
+  - Turning in legacy trade goods to Dalaran Underbelly merchants.
+• Vendor Offerings:
+  - Phase 2 Pre-BiS Catch-Up: Weapons (iLvl 33–35) including Totem of the Storm, Wand of Mana Concentration, and Blightleaf Cinch for 15–25 Favor.
+  - 14-Slot Kirin Tor Satchel: 20 Favor (Binds to Account).
+  - Specialty Consumables: Elixirs of Giant Growth, Free Action Potions, and Swiftness Potions available for small coin + Favor trade.`
+    },
+    {
+      id: "guide-transmog",
+      title: "Classic+ Transmogrification & Wardrobe System",
+      category: "Cosmetics & Collections",
+      icon: "https://render.worldofwarcraft.com/us/icons/56/inv_chest_cloth_17.jpg",
+      summary: "Forever's non-intrusive wardrobe system: rules, armor class restrictions, weapon silhouettes, and toggle options.",
+      content: `WoW Forever implements a faithful Classic+ wardrobe system that honors character silhouettes:
+• Strict Armor Type Rules: Cloth can only transmog Cloth, Leather only Leather, Mail only Mail, and Plate only Plate.
+• Weapon Class Rules: One-handed swords only to 1H swords/axes/maces; two-handed weapons must match swing cadence and weapon class.
+• PvP Silhouette Integrity:
+  - Transmog is fully visible in open world, dungeons, and capitals.
+  - In Battlegrounds (Warsong Gulch) and duels, players can enable 'Classic Authenticity Mode' to render opponents strictly in their true equipped items.
+• Appearance Collection: Any soulbound green, blue, or epic item binds its visual to your account-wide Wardrobe collection automatically upon looting.`
+    },
+    {
+      id: "guide-pvp-ranks",
+      title: "PvP Honor Ranks 1–14 & Level 30 Warsong Gulch Bracket",
+      category: "PvP & Battlegrounds",
+      icon: "https://render.worldofwarcraft.com/us/icons/56/pvpcurrency-conquest-alliance.jpg",
+      summary: "Warsong Gulch bracket meta at Level 30: Honor rank caps, insignia trinkets, flag running builds, and gear rewards.",
+      content: `PvP progression has been redesigned with the new level caps in WoW Forever:
+• Phase 2 Bracket: The 20–29 / 30 bracket features intense Warsong Gulch skirmishes.
+• Honor Rank Cap: Phase 2 caps progression at Rank 4 (Master Sergeant / Senior Sergeant), unlocking:
+  - Rank 2: Class PvP Insignia (Dispel CC on 5m CD)
+  - Rank 3: 10% discount on all faction vendors
+  - Rank 4: Superior PvP Cloak (+7 Stamina, +5 Agi/Str/Int)
+• Flag Running Meta: Feral Druids with Travel Form (Level 30) and Cat Sprint dominate WSG midfield; Mages with Improved Blizzard and Frost Nova control ramp choke points.`
+    },
+    {
+      id: "guide-rares-30",
+      title: "34 Rare Spawns & Classic+ Drops (Level 10–30)",
+      category: "Exploration & World Rares",
+      icon: "https://render.worldofwarcraft.com/us/icons/56/inv_misc_head_dragon_bronze.jpg",
+      summary: "Spawn timers, coordinates, and exclusive item drops for all 34 overhauled rare mobs across Westfall, Barrens, Ashenvale, and Wetlands.",
+      content: `World rares in WoW Forever have guaranteed drop tables and drop Merchant's Favor:
+• Top Level 20–30 Rare Spawns:
+  - Lord Condar (Loch Modan, lvl 26): Drops Condar's Feathery Mantle (+8 Agi, +6 Sta leather shoulders).
+  - Gesharahan (Barrens, lvl 24): Drops Petrified Bark Shield (Block 18, +5 Sta, +4 Str).
+  - Ursol'lok (Ashenvale, lvl 31): Drops Claws of the Ursine (+9 Str, +7 Sta 1H Fist Weapon).
+  - Garneg Charskull (Wetlands, lvl 28): Drops Ironband's Warmace (+12 Str, +5 Sta 2H Mace).
+• Dynamic Respawn: World rares now feature pseudo-random 45-to-90 minute respawn timers rather than 8-hour classic lockouts.`
+    },
+    {
+      id: "guide-druid-forms",
+      title: "Druid Forms Unlock Guide (Aquatic, Cat, Travel & Snake)",
+      category: "Class Quests & Secrets",
+      icon: "https://render.worldofwarcraft.com/us/icons/56/ability_druid_travelform.jpg",
+      summary: "Complete quest walk-through for Aquatic Form (lvl 16), Cat Form (lvl 20), Travel Form (lvl 30), and the hidden Snake Form.",
+      content: `Druid form mechanics and quests in WoW Forever Phase 2:
+• Aquatic Form (Level 16): Dual-continent questline (Moonglade -> Westfall/Silverpine coast). +50% swim speed, underwater breathing.
+• Cat Form (Level 20): Granted directly at class trainer. Unlocks Claw, Rip, and Prowl stealth.
+• Travel Form (Level 30): Available at level 30 trainer for 40% outdoor movement speed increase (replaces need for early level 40 mounts!).
+• The Secret Serpent / Snake Form:
+  - A hidden Wailing Caverns / Sunken Temple druid relic unlocks a cosmetic Viper Form with nature venom spit animation.`
     }
   ]
 };

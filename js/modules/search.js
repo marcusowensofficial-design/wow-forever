@@ -148,6 +148,68 @@ function buildSearchIndex() {
     tab: 'systems',
     targetId: 'tab-systems'
   });
+
+  // 7. Squad Members & Presets (including Sploodge)
+  searchIndex.push({
+    title: 'Sploodge (Demonology Warlock)',
+    category: 'Squad Roster',
+    icon: '😈',
+    desc: 'Horde Undead Demonology Warlock • Ranged DPS guild preset.',
+    tab: 'tracker',
+    targetId: 'tab-tracker'
+  });
+
+  // 8. Class Deep Dives & Level 30 Talent Specs
+  const deepDiveClasses = [
+    { id: 'warlock', name: 'Warlock', icon: '🔮' },
+    { id: 'warrior', name: 'Warrior', icon: '⚔️' },
+    { id: 'paladin', name: 'Paladin', icon: '🛡️' },
+    { id: 'druid', name: 'Druid', icon: '🐾' },
+    { id: 'mage', name: 'Mage', icon: '❄️' },
+    { id: 'priest', name: 'Priest', icon: '✨' },
+    { id: 'hunter', name: 'Hunter', icon: '🏹' },
+    { id: 'rogue', name: 'Rogue', icon: '🗡️' },
+    { id: 'shaman', name: 'Shaman', icon: '⚡' }
+  ];
+  deepDiveClasses.forEach(c => {
+    searchIndex.push({
+      title: `${c.name}: Level 30 Talent Builds & Rotation`,
+      category: 'Class Deep Dive',
+      icon: c.icon,
+      desc: `21 talent points cap, 8s rotational strikes, combat priorities, and dungeon pre-BiS targets.`,
+      tab: 'deepdives',
+      targetId: 'tab-deepdives',
+      deepDiveClass: c.id
+    });
+  });
+
+  // 9. Phase 2 Events & Special Dungeons
+  searchIndex.push({
+    title: '$100,000 Venruki Level 30 Duel Tournament',
+    category: 'Esports & PvP',
+    icon: '🏆',
+    desc: 'Durotar Gates closed beta invitational tournament (Oct 17–18).',
+    tab: 'overview',
+    targetId: 'tab-overview'
+  });
+
+  searchIndex.push({
+    title: 'Excavation Site 4 (Level 26–31 Dungeon)',
+    category: 'Phase 2 Dungeon',
+    icon: '⛏️',
+    desc: 'Wetlands Titan dig site with 4 bosses and Classic+ loot.',
+    tab: 'overview',
+    targetId: 'tab-overview'
+  });
+
+  searchIndex.push({
+    title: 'City of Dalaran Under Siege (Level 28–33 Dungeon)',
+    category: 'Phase 2 Dungeon',
+    icon: '🔮',
+    desc: 'Alterac Sewers Kirin Tor vault dungeon with 8 bosses.',
+    tab: 'overview',
+    targetId: 'tab-overview'
+  });
 }
 
 function setupSearchModalEvents() {
@@ -265,6 +327,7 @@ function performSearch(query) {
          data-target="${item.targetId}"
          ${item.bisClass ? `data-bis-class="${item.bisClass}" data-bis-spec="${item.bisSpec}"` : ''}
          ${item.guideId ? `data-guide-id="${item.guideId}"` : ''}
+         ${item.deepDiveClass ? `data-deep-dive-class="${item.deepDiveClass}"` : ''}
          onclick="handleSearchResultClick(this)">
       <span class="search-item-icon">${item.icon}</span>
       <div class="search-item-details">
@@ -299,6 +362,7 @@ window.handleSearchResultClick = function(elem) {
   const guideId = elem.getAttribute('data-guide-id');
   const bisClass = elem.getAttribute('data-bis-class');
   const bisSpec = elem.getAttribute('data-bis-spec');
+  const deepDiveClass = elem.getAttribute('data-deep-dive-class');
 
   // Switch to target tab
   const tabBtn = document.querySelector(`.nav-tab-btn[data-tab="${tab}"]`);
@@ -309,6 +373,11 @@ window.handleSearchResultClick = function(elem) {
     currentBiSState.classId = bisClass;
     currentBiSState.specId = bisSpec;
     if (typeof renderBiSApp === 'function') renderBiSApp();
+  }
+
+  // If selecting a deep dive class
+  if (deepDiveClass && typeof window.switchDeepDiveClass === 'function') {
+    window.switchDeepDiveClass(deepDiveClass);
   }
 
   // If sub-codex panel

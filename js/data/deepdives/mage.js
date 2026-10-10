@@ -619,7 +619,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             { "label": "Dungeon Clear", "desc": "Arcane Subtlety enables high burst without ripping threat from early tanks." }
           ],
           "bisGear": [
-            { "slot": "Two-Hand", "item: "Staff of Westfall", "source": "Deadmines (Defias Quest)", "stats": "+11 Int, +5 Spi" },
+            { "slot": "Two-Hand", "item": "Staff of Westfall", "source": "Deadmines (Defias Quest)", "stats": "+11 Int, +5 Spi" },
             { "slot": "Chest", "item": "Robe of Arugal", "source": "Shadowfang Keep", "stats": "+10 Int, +5 Spi" }
           ],
           "campingPerk": {

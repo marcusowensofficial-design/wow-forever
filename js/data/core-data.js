@@ -1537,9 +1537,21 @@ const WOW_FOREVER_DATA = {
     },
     {
       "name": "Journeyman Campfire Kit",
-      "desc": "Enhanced campfire kit allowing placement of 2 concurrent profession features.",
+      "desc": "Enhanced campfire kit allowing placement of 2 concurrent profession features (45 min duration).",
       "levelReq": 20,
       "maxStations": 2
+    },
+    {
+      "name": "Ironwood Campfire Blueprint",
+      "desc": "Phase 2 Beta Blueprint: 25-yard aura radius, 60-min duration, 2 station slots with +15% enhanced party buff efficiency.",
+      "levelReq": 25,
+      "maxStations": 2
+    },
+    {
+      "name": "Silk Encampment Tent",
+      "desc": "Crafted via Tailoring (125). Shelters party members, accelerating Rested XP to 200% and compounding with Cozy Sleeping Bag for +5% stacking monster kill XP for 2 hours.",
+      "levelReq": 25,
+      "maxStations": 1
     },
     {
       "name": "Expert Campfire Kit",
@@ -1817,18 +1829,18 @@ const WOW_FOREVER_DATA = {
       "profession": "Cooking",
       "type": "Secondary",
       "icon": "🍳",
-      "mirroredBuff": "Well Fed (+Stats & +5% Kill XP)",
+      "mirroredBuff": "Well Fed (+Stats, +6 MP5 & +5% Kill XP)",
       "mirroredClass": "General",
       "objects": [
         {
           "name": "Basic Campfire & Spit",
           "tier": 1,
-          "desc": "Field cook everyday and stamina meals; Well Fed meals grant +5% bonus experience from monster kills."
+          "desc": "Cook everyday stamina meals; Well Fed meals grant +5% bonus experience from monster kills."
         },
         {
-          "name": "Iron Cauldron",
+          "name": "Iron Cauldron & Sagefish Braiser",
           "tier": 2,
-          "desc": "Prepares hearty banquets restoring party health and mana rapidly."
+          "desc": "Prepares Level 25-30 banquets including Bristle Whisker Catfish (+Stamina) and Sagefish Delight (+6 MP5 party food)."
         },
         {
           "name": "Master Encampment Feast Table",
@@ -1836,6 +1848,80 @@ const WOW_FOREVER_DATA = {
           "desc": "Provides high-tier raid feasts granting +Stamina and primary stats to all raid members."
         }
       ]
+    }
+  ],
+  "professionPassives": [
+    {
+      "name": "Mining",
+      "type": "Gathering",
+      "icon": "⛏️",
+      "passiveName": "Toughness",
+      "passiveEffect": "Increases maximum Health by a flat 5%, scaling dynamically with total Stamina.",
+      "campBonus": "Can place Deepstone Crucible / Lodestone: party members gain +15 Mining skill and 10% armor."
+    },
+    {
+      "name": "Herbalism",
+      "type": "Gathering",
+      "icon": "🌿",
+      "passiveName": "Nature's Ward & Lifeblood",
+      "passiveEffect": "Increases all Magic Resistances by +10 and grants an on-use 2-minute heal recovering health over 6 seconds.",
+      "campBonus": "Can place Incense Candle: party members gain +15 Intellect and 10% movement speed."
+    },
+    {
+      "name": "Skinning",
+      "type": "Gathering",
+      "icon": "🔪",
+      "passiveName": "Master of Anatomy",
+      "passiveEffect": "Increases Critical Strike rating by 1.5% across all physical and magical abilities.",
+      "campBonus": "Can place Drying Rack / Trapper's Workbench: party members gain +10 Agility and +2% Critical Strike."
+    },
+    {
+      "name": "Blacksmithing",
+      "type": "Production",
+      "icon": "🔨",
+      "passiveName": "Weapon Honing & Sockets",
+      "passiveEffect": "Permanent +16 Attack Power or +12 Spell Damage weapon buff, plus bonus socket in bracers.",
+      "campBonus": "Can place Sharpening Wheel / Portable Anvil: party members gain +8-10% Attack Power for 1 hour."
+    },
+    {
+      "name": "Alchemy",
+      "type": "Production",
+      "icon": "🧪",
+      "passiveName": "Mixology & Elixir Mastery",
+      "passiveEffect": "100% increased duration on all Flasks and Elixirs, plus 25% increased health and mana from healing potions.",
+      "campBonus": "Can place Mana Well / Fermenter: party members gain +8% Mana Regen (mirrors Blessing of Wisdom)."
+    },
+    {
+      "name": "Tailoring",
+      "type": "Production",
+      "icon": "🧵",
+      "passiveName": "Spirit Weaving & Spellthread",
+      "passiveEffect": "Increases Spirit by +15 and grants chance on spellcast to restore 200 mana or energy.",
+      "campBonus": "Can place Silk Encampment Tent / Loom: party members gain +8% Spirit and 200% accelerated Rested XP."
+    },
+    {
+      "name": "Leatherworking",
+      "type": "Production",
+      "icon": "🛡️",
+      "passiveName": "Fur Lining & Reinforcements",
+      "passiveEffect": "Exclusive bracer and chest lining granting +100 Armor and +15 Stamina.",
+      "campBonus": "Can place Camp Tent / Tanning Rack: party members gain +8% physical damage reduction."
+    },
+    {
+      "name": "Enchanting",
+      "type": "Production",
+      "icon": "✨",
+      "passiveName": "Ring Enchantments",
+      "passiveEffect": "Exclusive enchantments on finger slots: +8 All Stats, +14 Spell Power, or +24 Attack Power.",
+      "campBonus": "Can place Enchanted Lute / Arcane Forge: party members gain +8% All Stats and Resistances (mirrors Mark of the Wild)."
+    },
+    {
+      "name": "Engineering",
+      "type": "Production",
+      "icon": "⚙️",
+      "passiveName": "Tinkers & Goggles",
+      "passiveEffect": "Access to high-powered epic helm goggles, parachute cloak tinkers, and rocket boots with 0% backfire chance in raids.",
+      "campBonus": "Can place Reagent Bot / Field Repair Bot: on-site repairs and zero engineering gadget malfunctions."
     }
   ],
   "statCapsAndMechanics": {

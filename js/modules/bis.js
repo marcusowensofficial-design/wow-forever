@@ -627,6 +627,230 @@ function applyActiveGearFilters() {
 }
 
 /**
+ * Spell and Talent Icon Dictionary
+ * Maps talent ability names to authentic Blizzard CDN icon filenames
+ */
+const WOW_TALENT_ICONS = {
+  // Warrior
+  "deflection": "ability_parry.jpg",
+  "improved rend": "ability_gouge.jpg",
+  "tactical mastery": "spell_nature_enchantarmor.jpg",
+  "improved overpower": "ability_meleedamage.jpg",
+  "deep wounds": "ability_backstab.jpg",
+  "two-handed weapon spec": "inv_axe_09.jpg",
+  "impale": "ability_searingarrow.jpg",
+  "sweeping strikes": "ability_rogue_eviscerate.jpg",
+  "sword specialization": "inv_sword_27.jpg",
+  "mortal strike": "ability_warrior_savageblow.jpg",
+  "cruelty": "ability_rogue_eviscerate.jpg",
+  "unbridled wrath": "spell_nature_stoneclawtotem.jpg",
+  "improved demoralizing shout": "ability_warrior_warcry.jpg",
+  "blood craze": "spell_shadow_summonimp.jpg",
+  "piercing howl": "spell_shadow_deathscream.jpg",
+  "enrage": "spell_shadow_unholyfrenzy.jpg",
+  "flurry": "ability_ghoulfrenzy.jpg",
+  "death wish": "spell_shadow_deathpact.jpg",
+  "bloodthirst": "spell_nature_bloodlust.jpg",
+  "shield specialization": "inv_shield_06.jpg",
+  "anticipation": "spell_nature_mirrorimage.jpg",
+  "improved bloodrage": "ability_racial_bloodrage.jpg",
+  "toughness": "spell_holy_devotion.jpg",
+  "iron will": "spell_magic_magearmor.jpg",
+  "last stand": "spell_holy_ashestoashes.jpg",
+  "shield slam": "inv_shield_05.jpg",
+  "concussion blow": "ability_thunderbolt.jpg",
+
+  // Paladin
+  "divine intellect": "spell_nature_sleep.jpg",
+  "divine strength": "ability_golemstorm.jpg",
+  "spiritual focus": "spell_arcane_blink.jpg",
+  "healing light": "spell_holy_holybolt.jpg",
+  "consecration": "spell_holy_innerfire.jpg",
+  "illumination": "spell_holy_greaterheal.jpg",
+  "holy shock": "spell_holy_searinglight.jpg",
+  "redoubt": "ability_defend.jpg",
+  "precision": "ability_marksmanship.jpg",
+  "shield of righteousness": "ability_paladin_shieldofvengeance.jpg",
+  "blessing of sanctuary": "spell_nature_lightningshield.jpg",
+  "holy shield": "classic_spell_holy_blessingofprotection.jpg",
+  "benediction": "spell_frost_windwalkon.jpg",
+  "judgement of command": "ability_warrior_innerrage.jpg",
+  "seal of command": "ability_warrior_innerrage.jpg",
+  "conviction": "spell_holy_retributionaura.jpg",
+  "pursuit of justice": "spell_holy_persuitofjustice.jpg",
+  "eye for an eye": "spell_holy_eyeforaneye.jpg",
+  "vengeance": "ability_racial_avatar.jpg",
+
+  // Hunter
+  "endurance training": "spell_nature_reincarnation.jpg",
+  "improved eyes of the beast": "ability_hunter_beastcall.jpg",
+  "thick hide": "inv_misc_pelt_bear_03.jpg",
+  "unleashed fury": "ability_bullrush.jpg",
+  "ferocity": "inv_misc_monsterclaw_04.jpg",
+  "intimidation": "ability_devour.jpg",
+  "efficiency": "spell_frost_wizardmark.jpg",
+  "lethal shots": "ability_searingarrow.jpg",
+  "aimed shot": "inv_spear_07.jpg",
+  "hawk eye": "ability_townwatch.jpg",
+  "mortal shots": "ability_piercingdamage.jpg",
+  "barrage": "ability_upgrademoonglaive.jpg",
+  "monster slaying": "inv_misc_head_dragon_black.jpg",
+  "humanoid slaying": "spell_holy_prayerofhealing.jpg",
+  "surefooted": "ability_kick.jpg",
+  "killer instinct": "spell_holy_blessingofstamina.jpg",
+
+  // Rogue
+  "malice": "ability_racial_bloodrage.jpg",
+  "ruthlessness": "ability_druid_disembowel.jpg",
+  "murder": "spell_shadow_deathscream.jpg",
+  "relentless strikes": "ability_warrior_decisivestrike.jpg",
+  "lethality": "ability_criticalstrike.jpg",
+  "cold blood": "spell_ice_lament.jpg",
+  "seal fate": "spell_shadow_chilltouch.jpg",
+  "improved sinister strike": "spell_shadow_ritualofsacrifice.jpg",
+  "lightning reflexes": "spell_nature_invisibilty.jpg",
+  "dual wield specialization": "ability_dualwield.jpg",
+  "blade flurry": "ability_warrior_punishingblow.jpg",
+  "adrenaline rush": "spell_shadow_shadowworddominate.jpg",
+  "master of deception": "spell_shadow_charm.jpg",
+  "opportunity": "ability_warrior_warcry.jpg",
+  "initiative": "spell_shadow_fumble.jpg",
+  "ghostly strike": "spell_shadow_curse.jpg",
+  "preparation": "spell_shadow_antimagicshell.jpg",
+  "hemorrhage": "spell_shadow_lifedrain.jpg",
+
+  // Priest
+  "unbreakable will": "spell_magic_magearmor.jpg",
+  "silent resolve": "spell_nature_manaregain.jpg",
+  "improved power word: shield": "spell_holy_powerwordshield.jpg",
+  "meditation": "spell_nature_sleep.jpg",
+  "inner focus": "spell_frost_windwalkon.jpg",
+  "divine spirit": "spell_holy_divinespirit.jpg",
+  "holy specialization": "spell_holy_sealofsalvation.jpg",
+  "divine fury": "spell_holy_sealofwrath.jpg",
+  "holy nova": "spell_holy_holynova.jpg",
+  "spiritual guidance": "spell_holy_spiritualguidence.jpg",
+  "spiritual healing": "spell_holy_spiritualhealing.jpg",
+  "spirit tap": "spell_shadow_requiem.jpg",
+  "blackout": "spell_shadow_gathershadows.jpg",
+  "shadow affinity": "spell_shadow_shadowward.jpg",
+  "improved shadow word: pain": "spell_shadow_shadowwordpain.jpg",
+  "shadow focus": "spell_shadow_burningspirit.jpg",
+  "mind flay": "spell_shadow_siphonmana.jpg",
+  "shadow weaving": "spell_shadow_blackplague.jpg",
+  "silence": "spell_shadow_impphysicscream.jpg",
+  "vampiric embrace": "spell_shadow_unsummon.jpg",
+  "darkness": "spell_shadow_twilight.jpg",
+  "shadowform": "spell_shadow_shadowform.jpg",
+
+  // Mage
+  "arcane subtlety": "spell_holy_dispelmagic.jpg",
+  "arcane focus": "spell_holy_devotion.jpg",
+  "arcane concentration": "spell_shadow_manaburn.jpg",
+  "arcane meditation": "spell_shadow_siphonmana.jpg",
+  "presence of mind": "spell_nature_enchantarmor.jpg",
+  "arcane power": "spell_nature_lightning.jpg",
+  "improved fireball": "spell_fire_flamebolt.jpg",
+  "ignite": "spell_fire_incinerate.jpg",
+  "pyroblast": "spell_fire_fireball02.jpg",
+  "critical mass": "spell_nature_wispheal.jpg",
+  "blast wave": "spell_fire_selfdestruct.jpg",
+  "fire power": "spell_fire_immolation.jpg",
+  "combustion": "spell_fire_sealoffire.jpg",
+  "improved frostbolt": "spell_frost_frostbolt02.jpg",
+  "ice shards": "spell_frost_iceshard.jpg",
+  "frostbite": "spell_frost_frostarmor.jpg",
+  "cold snap": "spell_frost_wizardmark.jpg",
+  "improved blizzard": "spell_frost_glacier.jpg",
+  "arctic reach": "spell_shadow_darksummoning.jpg",
+  "frost channeling": "spell_frost_stun.jpg",
+  "shatter": "spell_frost_frostshock.jpg",
+  "ice block": "spell_frost_frost.jpg",
+  "ice barrier": "spell_ice_lament.jpg",
+
+  // Warlock
+  "suppression": "spell_shadow_unsummon.jpg",
+  "improved corruption": "spell_shadow_abominationexplosion.jpg",
+  "improved life tap": "spell_shadow_burningspirit.jpg",
+  "fel concentration": "spell_shadow_fingerofdeath.jpg",
+  "amplify curse": "spell_shadow_contagion.jpg",
+  "nightfall": "spell_shadow_twilight.jpg",
+  "siphon life": "spell_shadow_requiem.jpg",
+  "shadow mastery": "spell_shadow_shademagic.jpg",
+  "demonic embracing": "spell_shadow_metamorphosis.jpg",
+  "improved imp": "spell_shadow_summonimp.jpg",
+  "demonic aegis": "spell_shadow_ragingscream.jpg",
+  "improved voidwalker": "spell_shadow_summonvoidwalker.jpg",
+  "fel domination": "spell_nature_removecurse.jpg",
+  "soul link": "spell_shadow_gathershadows.jpg",
+  "improved shadow bolt": "spell_shadow_shadowbolt.jpg",
+  "bane": "spell_shadow_deathpact.jpg",
+  "shadowburn": "spell_shadow_scourgebuild.jpg",
+  "ruin": "spell_shadow_shadowwordpain.jpg",
+
+  // Shaman
+  "convection": "spell_nature_wispsplodegreen.jpg",
+  "concussion": "spell_fire_fireball.jpg",
+  "elemental focus": "spell_shadow_manaburn.jpg",
+  "call of thunder": "spell_nature_callstorm.jpg",
+  "elemental fury": "spell_fire_volcano.jpg",
+  "ancestral knowledge": "spell_shadow_grimward.jpg",
+  "thundering strikes": "ability_thunderbolt.jpg",
+  "two-handed axes and maces": "inv_axe_10.jpg",
+  "stormstrike": "spell_holy_sealofmight.jpg",
+  "tidal focus": "spell_nature_healingwavelesser.jpg",
+  "improved healing wave": "spell_nature_magicimmunity.jpg",
+  "nature's swiftness": "spell_nature_ravenform.jpg",
+  "mana tide totem": "spell_frost_summonwaterelemental.jpg",
+
+  // Druid
+  "nature's grasp": "spell_nature_natureswrath.jpg",
+  "improved moonfire": "spell_nature_starfall.jpg",
+  "omen of clarity": "spell_nature_crystalball.jpg",
+  "moonfury": "spell_nature_moonglow.jpg",
+  "moonkin form": "spell_nature_forceofnature.jpg",
+  "feral aggression": "ability_druid_demoralizingroar.jpg",
+  "feral charge": "ability_hunter_pet_bear.jpg",
+  "sharpened claws": "inv_misc_monsterclaw_04.jpg",
+  "predatory strikes": "ability_hunter_pet_cat.jpg",
+  "leader of the pack": "spell_nature_unyeildingstamina.jpg",
+  "heart of the wild": "spell_holy_blessingofagility.jpg",
+  "improved mark of the wild": "spell_nature_regeneration.jpg",
+  "furor": "spell_nature_stoneclawtotem.jpg",
+  "naturalist": "spell_nature_healingtouch.jpg",
+  "swiftmend": "inv_relics_idolofrejuvenation.jpg",
+  "innervate": "spell_nature_lightning.jpg"
+};
+
+/**
+ * Resolve authentic CDN icon for any talent ability name
+ */
+function getTalentIconUrl(talentName, treeName, classId) {
+  if (!talentName) return "https://render.worldofwarcraft.com/us/icons/56/inv_misc_questionmark.jpg";
+  const key = talentName.toLowerCase().trim();
+  const iconFile = WOW_TALENT_ICONS[key];
+  if (iconFile) {
+    return `https://render.worldofwarcraft.com/us/icons/56/${iconFile}`;
+  }
+
+  // Fallbacks by keyword
+  if (key.includes("strike") || key.includes("slash")) return "https://render.worldofwarcraft.com/us/icons/56/ability_warrior_savageblow.jpg";
+  if (key.includes("shot") || key.includes("aim")) return "https://render.worldofwarcraft.com/us/icons/56/ability_marksmanship.jpg";
+  if (key.includes("shield") || key.includes("armor")) return "https://render.worldofwarcraft.com/us/icons/56/inv_shield_06.jpg";
+  if (key.includes("heal") || key.includes("light") || key.includes("renew")) return "https://render.worldofwarcraft.com/us/icons/56/spell_holy_holybolt.jpg";
+  if (key.includes("fire") || key.includes("flame") || key.includes("burn")) return "https://render.worldofwarcraft.com/us/icons/56/spell_fire_fireball.jpg";
+  if (key.includes("frost") || key.includes("ice") || key.includes("chill")) return "https://render.worldofwarcraft.com/us/icons/56/spell_frost_frostbolt02.jpg";
+  if (key.includes("shadow") || key.includes("dark") || key.includes("curse")) return "https://render.worldofwarcraft.com/us/icons/56/spell_shadow_shadowwordpain.jpg";
+  if (key.includes("nature") || key.includes("storm") || key.includes("earth")) return "https://render.worldofwarcraft.com/us/icons/56/spell_nature_lightning.jpg";
+  if (key.includes("mastery") || key.includes("synergy")) return "https://render.worldofwarcraft.com/us/icons/56/spell_holy_auraoflight.jpg";
+
+  return "https://render.worldofwarcraft.com/us/icons/56/spell_holy_magicalsentry.jpg";
+}
+
+// Active view mode state: 'grid' (classic icon matrix) vs 'cards' (detailed list)
+let currentTalentViewMode = 'grid';
+
+/**
  * Open Native In-House Talent Tree Viewer Modal
  */
 function openBiSTalentModal() {
@@ -641,135 +865,267 @@ function openBiSTalentModal() {
   const trees = getSpecTalentTrees(currentBiSState.classId, currentSpec);
   const buildCode = currentSpec.talents?.buildCode || `FOREVER-${currentBiSState.classId.toUpperCase()}-${currentSpec.id.toUpperCase()}-30`;
 
-  content.innerHTML = `
-    <!-- Modal Header -->
-    <div class="bis-talent-modal-head">
-      <div class="bis-talent-head-left">
-        <img src="${currentClass.icon}" alt="${currentClass.name}" class="bis-talent-crest-icon" />
-        <div>
-          <h3 class="bis-talent-title" style="color: ${currentClass.color};">
-            ${currentClass.name}: ${currentSpec.name} Talents
-          </h3>
-          <div class="bis-talent-subtitle">
-            Phase 2 Level 30 Beta Cap • 26 Talent Points (21 Standard + 5 'Talented' Legacy Perk)
-          </div>
+  function renderTreeNodesHtml(tree) {
+    if (!tree.talents || tree.talents.length === 0) {
+      return `
+        <div class="bis-talent-empty-state">
+          No talent points invested in the ${tree.name} tree for this Level 30 build.
         </div>
-      </div>
-      <div class="bis-talent-points-pill">
-        🌟 Build: ${currentSpec.talents ? currentSpec.talents.points : '26 Points'}
-      </div>
-    </div>
-
-    <!-- 3-Column Talent Trees Grid -->
-    <div class="bis-talent-tree-grid">
-      ${trees.map(tree => `
-        <div class="bis-tree-col">
-          <div class="bis-tree-head">
-            <div class="bis-tree-title-group">
-              <img src="${tree.icon}" alt="${tree.name}" class="bis-tree-icon" />
-              <span class="bis-tree-name">${tree.name}</span>
-            </div>
-            <span class="bis-tree-points-badge">${tree.points} pts</span>
-          </div>
-
-          <div class="bis-tree-nodes-list">
-            ${tree.talents && tree.talents.length > 0 ? tree.talents.map(t => {
-              const maxRank = (t.rank || '').split('/')[1] || '';
-              const isMaxed = t.rank && maxRank && t.rank.startsWith(maxRank);
-              return `
-                <div class="bis-tree-node ${isMaxed ? 'is-maxed' : ''}">
-                  <div class="bis-node-top">
-                    <span class="bis-node-name">
-                      ${t.name}
-                      ${t.isNew ? '<span class="bis-talent-new-badge">✦ NEW IN FOREVER</span>' : ''}
-                    </span>
-                    <span class="bis-node-rank">${t.rank}</span>
-                  </div>
-                  <div class="bis-node-desc">${t.desc}</div>
-                </div>
-              `;
-            }).join('') : `
-              <div class="bis-talent-empty-state">
-                No talent points invested in the ${tree.name} tree for this Level 30 build.
-              </div>
-            `}
-          </div>
-        </div>
-      `).join('')}
-    </div>
-
-    <!-- Modal Footer Actions -->
-    <div class="bis-talent-modal-foot">
-      <div class="bis-talent-foot-left">
-        <button type="button" class="bis-talent-foot-btn" id="btn-modal-copy-code">
-          <span>📋</span> Copy Build Code (<code style="color: #facc15;">${buildCode}</code>)
-        </button>
-        <button type="button" class="bis-talent-foot-btn primary" id="btn-modal-deepdive">
-          <span>🎯</span> Explore ${currentClass.name} Deep Dive
-        </button>
-      </div>
-      <div>
-        <button type="button" class="bis-talent-foot-btn" id="btn-modal-close-foot">
-          ✕ Close Window
-        </button>
-      </div>
-    </div>
-  `;
-
-  // Bind close actions
-  const closeBtn = document.getElementById("bis-talent-modal-close");
-  const closeFootBtn = document.getElementById("btn-modal-close-foot");
-  const closeModal = () => {
-    modal.classList.remove("open");
-    modal.setAttribute("hidden", "");
-  };
-
-  if (closeBtn) closeBtn.onclick = closeModal;
-  if (closeFootBtn) closeFootBtn.onclick = closeModal;
-  modal.onclick = (e) => {
-    if (e.target === modal) closeModal();
-  };
-
-  // Keyboard Escape support
-  const onEsc = (e) => {
-    if (e.key === "Escape") {
-      closeModal();
-      document.removeEventListener("keydown", onEsc);
+      `;
     }
-  };
-  document.addEventListener("keydown", onEsc);
 
-  // Bind Copy Build Code
-  const btnCopyCode = document.getElementById("btn-modal-copy-code");
-  if (btnCopyCode) {
-    btnCopyCode.onclick = () => {
-      if (navigator.clipboard) {
-        navigator.clipboard.writeText(buildCode).then(() => {
-          btnCopyCode.innerHTML = "<span>✅</span> Build Code Copied!";
-          setTimeout(() => {
-            btnCopyCode.innerHTML = `<span>📋</span> Copy Build Code (<code style="color: #facc15;">${buildCode}</code>)`;
-          }, 2000);
+    if (currentTalentViewMode === 'grid') {
+      return `
+        <div class="bis-tree-visual-matrix">
+          ${tree.talents.map(t => {
+            const maxRank = (t.rank || '').split('/')[1] || '';
+            const isMaxed = t.rank && maxRank && t.rank.startsWith(maxRank);
+            const hasPoints = t.rank && !t.rank.startsWith('0');
+            const iconUrl = t.icon || getTalentIconUrl(t.name, tree.name, currentBiSState.classId);
+
+            return `
+              <div class="bis-talent-slot ${isMaxed ? 'is-maxed' : (hasPoints ? 'is-active' : 'is-unallocated')}"
+                   data-talent-name="${escapeHtml(t.name)}"
+                   data-talent-rank="${t.rank}"
+                   data-talent-desc="${escapeHtml(t.desc)}"
+                   data-talent-tree="${escapeHtml(tree.name)}"
+                   data-talent-isnew="${t.isNew ? 'true' : 'false'}"
+                   tabindex="0"
+                   role="button"
+                   aria-label="${escapeHtml(t.name)} ${t.rank}">
+                <img src="${iconUrl}" alt="${t.name}" class="bis-talent-slot-icon" loading="lazy" />
+                <span class="bis-talent-rank-overlay">${t.rank}</span>
+              </div>
+            `;
+          }).join('')}
+        </div>
+      `;
+    }
+
+    // Detailed Card View
+    return `
+      <div class="bis-tree-nodes-list">
+        ${tree.talents.map(t => {
+          const maxRank = (t.rank || '').split('/')[1] || '';
+          const isMaxed = t.rank && maxRank && t.rank.startsWith(maxRank);
+          const hasPoints = t.rank && !t.rank.startsWith('0');
+          const iconUrl = t.icon || getTalentIconUrl(t.name, tree.name, currentBiSState.classId);
+
+          return `
+            <div class="bis-tree-node-visual ${isMaxed ? 'is-maxed' : (hasPoints ? 'is-active' : '')}"
+                 data-talent-name="${escapeHtml(t.name)}"
+                 data-talent-rank="${t.rank}"
+                 data-talent-desc="${escapeHtml(t.desc)}"
+                 data-talent-tree="${escapeHtml(tree.name)}"
+                 data-talent-isnew="${t.isNew ? 'true' : 'false'}">
+              <div class="bis-talent-card-icon-wrap">
+                <img src="${iconUrl}" alt="${t.name}" class="bis-talent-card-icon" loading="lazy" />
+                <span class="bis-talent-rank-overlay">${t.rank}</span>
+              </div>
+              <div class="bis-talent-card-body">
+                <div class="bis-talent-card-head">
+                  <span class="bis-talent-card-name">
+                    ${t.name}
+                    ${t.isNew ? '<span class="bis-talent-new-badge">✦ NEW IN FOREVER</span>' : ''}
+                  </span>
+                  <span class="bis-talent-card-rank">${t.rank}</span>
+                </div>
+                <div class="bis-node-desc">${t.desc}</div>
+              </div>
+            </div>
+          `;
+        }).join('')}
+      </div>
+    `;
+  }
+
+  function renderModalBody() {
+    content.innerHTML = `
+      <!-- Modal Header -->
+      <div class="bis-talent-modal-head">
+        <div class="bis-talent-head-left">
+          <img src="${currentClass.icon}" alt="${currentClass.name}" class="bis-talent-crest-icon" />
+          <div>
+            <h3 class="bis-talent-title" style="color: ${currentClass.color};">
+              ${currentClass.name}: ${currentSpec.name} Talents
+            </h3>
+            <div class="bis-talent-subtitle">
+              Phase 2 Level 30 Beta Cap • 26 Talent Points (21 Standard + 5 'Talented' Legacy Perk)
+            </div>
+          </div>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;">
+          <!-- View Mode Switcher -->
+          <div class="bis-talent-view-controls">
+            <button type="button" class="bis-view-toggle-btn ${currentTalentViewMode === 'grid' ? 'active' : ''}" data-view="grid">
+              <span>🔲</span> Visual Tree
+            </button>
+            <button type="button" class="bis-view-toggle-btn ${currentTalentViewMode === 'cards' ? 'active' : ''}" data-view="cards">
+              <span>📜</span> Detailed Cards
+            </button>
+          </div>
+
+          <div class="bis-talent-points-pill">
+            🌟 Build: ${currentSpec.talents ? currentSpec.talents.points : '26 Points'}
+          </div>
+        </div>
+      </div>
+
+      <!-- 3-Column Talent Trees Grid -->
+      <div class="bis-talent-tree-grid">
+        ${trees.map(tree => `
+          <div class="bis-tree-col">
+            <div class="bis-tree-head">
+              <div class="bis-tree-title-group">
+                <img src="${tree.icon}" alt="${tree.name}" class="bis-tree-icon" />
+                <span class="bis-tree-name">${tree.name}</span>
+              </div>
+              <span class="bis-tree-points-badge">${tree.points} pts</span>
+            </div>
+
+            ${renderTreeNodesHtml(tree)}
+          </div>
+        `).join('')}
+      </div>
+
+      <!-- Modal Footer Actions -->
+      <div class="bis-talent-modal-foot">
+        <div class="bis-talent-foot-left">
+          <button type="button" class="bis-talent-foot-btn" id="btn-modal-copy-code">
+            <span>📋</span> Copy Build Code (<code style="color: #facc15;">${buildCode}</code>)
+          </button>
+          <button type="button" class="bis-talent-foot-btn primary" id="btn-modal-deepdive">
+            <span>🎯</span> Explore ${currentClass.name} Deep Dive
+          </button>
+        </div>
+        <div>
+          <button type="button" class="bis-talent-foot-btn" id="btn-modal-close-foot">
+            ✕ Close Window
+          </button>
+        </div>
+      </div>
+    `;
+
+    bindModalActions();
+  }
+
+  function bindModalActions() {
+    // 1. Close buttons
+    const closeBtn = document.getElementById("bis-talent-modal-close");
+    const closeFootBtn = document.getElementById("btn-modal-close-foot");
+    const tooltip = document.getElementById("wow-item-tooltip");
+
+    const closeModal = () => {
+      modal.classList.remove("open");
+      modal.setAttribute("hidden", "");
+      if (tooltip) tooltip.setAttribute("hidden", "");
+    };
+
+    if (closeBtn) closeBtn.onclick = closeModal;
+    if (closeFootBtn) closeFootBtn.onclick = closeModal;
+    modal.onclick = (e) => {
+      if (e.target === modal) closeModal();
+    };
+
+    // Keyboard Escape support
+    const onEsc = (e) => {
+      if (e.key === "Escape") {
+        closeModal();
+        document.removeEventListener("keydown", onEsc);
+      }
+    };
+    document.addEventListener("keydown", onEsc);
+
+    // 2. View Mode Toggle
+    const toggleBtns = content.querySelectorAll(".bis-view-toggle-btn");
+    toggleBtns.forEach(btn => {
+      btn.onclick = () => {
+        const view = btn.getAttribute("data-view");
+        if (view && view !== currentTalentViewMode) {
+          currentTalentViewMode = view;
+          renderModalBody();
+        }
+      };
+    });
+
+    // 3. Floating Tooltips for Talents
+    if (tooltip) {
+      const talentNodes = content.querySelectorAll(".bis-talent-slot, .bis-tree-node-visual");
+      talentNodes.forEach(node => {
+        node.addEventListener("mouseenter", (e) => {
+          const name = node.getAttribute("data-talent-name") || "Talent";
+          const rank = node.getAttribute("data-talent-rank") || "1/1";
+          const desc = node.getAttribute("data-talent-desc") || "";
+          const tree = node.getAttribute("data-talent-tree") || "";
+          const isNew = node.getAttribute("data-talent-isnew") === "true";
+
+          const maxRank = rank.split("/")[1] || "1";
+          const isMaxed = rank.startsWith(maxRank);
+
+          tooltip.innerHTML = `
+            <div class="wow-tip-header">
+              <span class="wow-tip-name" style="color: #facc15;">${escapeHtml(name)}</span>
+              <span class="wow-tip-slot" style="color: ${isMaxed ? '#fde047' : '#4ade80'}; font-weight: 700;">Rank ${rank}</span>
+            </div>
+            <div style="font-size: 0.76rem; color: #94a3b8; margin: 0.2rem 0 0.5rem;">${escapeHtml(tree)} Tree Specialized Talent</div>
+            <div class="wow-tip-stats" style="color: #f1f5f9; line-height: 1.45; font-size: 0.84rem;">
+              ${escapeHtml(desc)}
+            </div>
+            ${isNew ? '<div style="margin-top: 0.5rem; font-size: 0.72rem; color: #c084fc; font-weight: 700;">✦ EXCLUSIVE TO WORLD OF WARCRAFT: FOREVER</div>' : ''}
+            <div style="margin-top: 0.5rem; padding-top: 0.4rem; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.7rem; color: #64748b;">
+              Level 30 Phase 2 Verified Spec
+            </div>
+          `;
+          tooltip.removeAttribute("hidden");
+          positionTooltip(e, tooltip);
         });
-      }
-    };
+
+        node.addEventListener("mousemove", (e) => {
+          if (!tooltip.hasAttribute("hidden")) positionTooltip(e, tooltip);
+        });
+
+        node.addEventListener("mouseleave", () => {
+          tooltip.setAttribute("hidden", "");
+        });
+      });
+    }
+
+    // 4. Copy Build Code
+    const btnCopyCode = document.getElementById("btn-modal-copy-code");
+    if (btnCopyCode) {
+      btnCopyCode.onclick = () => {
+        if (navigator.clipboard) {
+          navigator.clipboard.writeText(buildCode).then(() => {
+            btnCopyCode.innerHTML = "<span>✅</span> Build Code Copied!";
+            setTimeout(() => {
+              btnCopyCode.innerHTML = `<span>📋</span> Copy Build Code (<code style="color: #facc15;">${buildCode}</code>)`;
+            }, 2000);
+          });
+        }
+      };
+    }
+
+    // 5. Explore Deep Dive
+    const btnDeepDive = document.getElementById("btn-modal-deepdive");
+    if (btnDeepDive) {
+      btnDeepDive.onclick = () => {
+        closeModal();
+        if (typeof window.switchDeepDiveClass === "function") {
+          window.switchDeepDiveClass(currentBiSState.classId);
+        }
+        const deepDiveTab = document.querySelector('.nav-tab-btn[data-tab="deepdives"]');
+        if (deepDiveTab) deepDiveTab.click();
+        const target = document.getElementById("tab-deepdives");
+        if (target) {
+          setTimeout(() => target.scrollIntoView({ behavior: "smooth" }), 120);
+        }
+      };
+    }
   }
 
-  // Bind Explore Class Deep Dive
-  const btnDeepDive = document.getElementById("btn-modal-deepdive");
-  if (btnDeepDive) {
-    btnDeepDive.onclick = () => {
-      closeModal();
-      if (typeof window.switchDeepDiveClass === "function") {
-        window.switchDeepDiveClass(currentBiSState.classId);
-      }
-      const deepDiveTab = document.querySelector('.nav-tab-btn[data-tab="deepdives"]');
-      if (deepDiveTab) deepDiveTab.click();
-      const target = document.getElementById("tab-deepdives");
-      if (target) {
-        setTimeout(() => target.scrollIntoView({ behavior: "smooth" }), 120);
-      }
-    };
-  }
+  // Render initial modal content
+  renderModalBody();
 
   // Reveal Modal
   modal.classList.add("open");
