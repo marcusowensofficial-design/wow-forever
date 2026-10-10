@@ -3,7 +3,7 @@ services:
     name: wow-forever
     env: static
     buildCommand: ""
-    staticPublishPath: ./
+    staticPublishPath: ./website
     routes:
       - type: rewrite
         source: /*

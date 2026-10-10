@@ -90,11 +90,19 @@ Developed and maintained in `addons/` by Marcus Owens & the WoW Forever Addon Te
 
 ---
 
-## 🚀 Deployment
+### Monorepo Structure
+
+```text
+WOWFOREVER/
+├── website/             # Web Portal, BiS Planner, Codex & Character Tools (HTML/CSS/JS)
+├── addons/              # In-Game WoW Client Addon Suite (Lua/XML/TOC)
+├── render.yaml          # Render Blueprint deployment config (staticPublishPath: ./website)
+└── README.md            # Repository overview
+```
 
 ### Deploy on Render (Static Site)
 
-This project is 100% static (HTML, CSS, and Vanilla JavaScript) with zero build dependencies.
+This web portal is 100% static (HTML, CSS, and Vanilla JavaScript) with zero build dependencies.
 
 1. Log in to your [Render Dashboard](https://dashboard.render.com).
 2. Click **New +** -> **Static Site**.
@@ -103,7 +111,7 @@ This project is 100% static (HTML, CSS, and Vanilla JavaScript) with zero build 
    - **Name**: `wow-forever` (or your preferred name)
    - **Branch**: `main`
    - **Build Command**: *(Leave empty)*
-   - **Publish Directory**: `.` *(Root directory)*
+   - **Publish Directory**: `website`
 5. Click **Create Static Site**. Render will automatically build and host your site with free SSL and global CDN!
 
 A `render.yaml` Blueprint is included in this repository for automatic deployment.
@@ -112,14 +120,18 @@ A `render.yaml` Blueprint is included in this repository for automatic deploymen
 
 ## 💻 Local Development
 
-Simply open `index.html` in any modern web browser or serve it with any local web server:
+Navigate into `website/` and serve with any local HTTP server:
 
 ```bash
-# Python
-python -m http.server 8000
+# Using npm
+cd website
+npm start
 
-# Node.js (npx)
-npx serve .
+# Or with npx serve
+npx serve website -l 3000
+
+# Or with Python
+python -m http.server 3000 --directory website
 ```
 
 ---

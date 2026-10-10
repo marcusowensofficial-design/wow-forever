@@ -1,5 +1,0 @@
-<Bindings>
-    <Binding name="FOREVERDUNGEONJOURNAL_TOGGLE" category="Dungeon Journal">
-        ForeverDungeonJournal_Toggle()
-    </Binding>
-</Bindings>

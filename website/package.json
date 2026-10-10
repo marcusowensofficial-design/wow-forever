@@ -1,0 +1,21 @@
+{
+  "name": "wow-forever-web",
+  "version": "1.60.6",
+  "private": true,
+  "description": "World of Warcraft: Forever — Classic+ Beta Hub, Codex, BiS Planner & Character Tools",
+  "type": "module",
+  "scripts": {
+    "dev": "npx serve . -l 3000",
+    "start": "npx serve . -l 3000",
+    "preview": "npx serve . -l 3000"
+  },
+  "keywords": [
+    "world-of-warcraft",
+    "classic-plus",
+    "talent-calculator",
+    "bis-planner",
+    "codex"
+  ],
+  "author": "Marcus Owens",
+  "license": "UNLICENSED"
+}

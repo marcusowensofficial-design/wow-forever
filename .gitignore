@@ -13,3 +13,8 @@ desktop.ini
 *.tmp
 *.bak
 *.swp
+
+# Node / Development dependencies
+node_modules/
+dist/
+.cache/
