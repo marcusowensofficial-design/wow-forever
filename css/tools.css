@@ -1741,35 +1741,62 @@
   box-shadow: 0 0 10px rgba(243, 192, 67, 0.35);
 }
 
-/* Visual Tree Matrix Mode (4-col classic grid) */
+/* Visual Tree Matrix Mode (4-col x 7-row classic grid) */
+.bis-tree-matrix-container {
+  position: relative;
+  width: 100%;
+}
+
+.bis-tree-arrows-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+}
+
 .bis-tree-visual-matrix {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 0.85rem 0.5rem;
-  padding: 0.75rem 0.5rem;
+  grid-template-rows: repeat(7, 48px);
+  gap: 12px 6px;
+  padding: 0.85rem 0.5rem;
   justify-items: center;
-  background: rgba(0, 0, 0, 0.25);
+  align-items: center;
+  background: rgba(4, 7, 13, 0.55);
   border-radius: var(--radius-sm);
-  border: 1px solid rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  position: relative;
+  z-index: 3;
 }
 
 .bis-talent-slot {
   position: relative;
-  width: 52px;
-  height: 52px;
+  width: 48px;
+  height: 48px;
   border-radius: 6px;
   background: #090d16;
-  border: 2px solid rgba(255, 255, 255, 0.15);
+  border: 2px solid rgba(255, 255, 255, 0.22);
   cursor: pointer;
-  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease, filter 0.15s ease;
   user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .bis-talent-slot:hover {
-  transform: scale(1.1);
-  border-color: #facc15;
-  box-shadow: 0 0 14px rgba(250, 204, 21, 0.55);
+  transform: scale(1.14);
+  border-color: #ffd100;
+  box-shadow: 0 0 16px rgba(255, 209, 0, 0.65);
   z-index: 10;
+}
+
+.bis-talent-slot.is-maxed {
+  border-color: #ffd100;
+  box-shadow: 0 0 10px rgba(255, 209, 0, 0.45);
 }
 
 .bis-talent-slot.is-active {
@@ -1777,9 +1804,28 @@
   box-shadow: 0 0 8px rgba(74, 222, 128, 0.35);
 }
 
-.bis-talent-slot.is-maxed {
-  border-color: #facc15;
-  box-shadow: 0 0 12px rgba(250, 204, 21, 0.5);
+.bis-talent-slot.is-available {
+  border-color: rgba(255, 255, 255, 0.45);
+}
+
+.bis-talent-slot.is-available .bis-talent-slot-icon {
+  filter: brightness(0.9);
+}
+
+.bis-talent-slot.is-locked {
+  border-color: rgba(255, 255, 255, 0.08);
+  cursor: not-allowed;
+}
+
+.bis-talent-slot.is-locked .bis-talent-slot-icon {
+  filter: grayscale(85%) brightness(0.42);
+  opacity: 0.65;
+}
+
+.bis-talent-slot-empty {
+  width: 48px;
+  height: 48px;
+  pointer-events: none;
 }
 
 .bis-talent-slot-icon {
@@ -1798,28 +1844,170 @@
   position: absolute;
   bottom: -4px;
   right: -4px;
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 0.92);
   border: 1px solid rgba(255, 255, 255, 0.25);
   color: #cbd5e1;
-  font-size: 0.7rem;
+  font-size: 0.68rem;
   font-weight: 800;
-  padding: 0.08rem 0.32rem;
+  padding: 0.06rem 0.3rem;
   border-radius: 4px;
-  line-height: 1.1;
+  line-height: 1.15;
   pointer-events: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+  z-index: 4;
 }
 
+.bis-talent-rank-overlay.rank-maxed,
+.bis-talent-slot.is-maxed .bis-talent-rank-overlay {
+  border-color: #ffd100;
+  color: #fffbeb;
+  background: rgba(161, 98, 7, 0.95);
+  box-shadow: 0 0 6px rgba(250, 204, 21, 0.5);
+}
+
+.bis-talent-rank-overlay.rank-active,
 .bis-talent-slot.is-active .bis-talent-rank-overlay {
   border-color: #4ade80;
   color: #4ade80;
   background: rgba(6, 78, 59, 0.95);
+  box-shadow: 0 0 6px rgba(74, 222, 128, 0.35);
 }
 
-.bis-talent-slot.is-maxed .bis-talent-rank-overlay {
+.bis-talent-rank-overlay.rank-unallocated,
+.bis-talent-slot.is-locked .bis-talent-rank-overlay,
+.bis-talent-slot.is-available .bis-talent-rank-overlay {
+  border-color: rgba(255, 255, 255, 0.15);
+  color: #94a3b8;
+  background: rgba(15, 23, 42, 0.88);
+}
+
+.bis-talent-pill-btn {
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #e2e8f0;
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-full);
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.bis-talent-pill-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+}
+
+.bis-talent-pill-btn.danger:hover {
+  background: rgba(239, 68, 68, 0.2);
+  border-color: #ef4444;
+  color: #fca5a5;
+}
+
+.bis-tree-reset-mini {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #94a3b8;
+  font-size: 0.75rem;
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.bis-tree-reset-mini:hover {
+  color: #facc15;
   border-color: #facc15;
-  color: #fef08a;
-  background: rgba(133, 77, 14, 0.95);
-  box-shadow: 0 0 6px rgba(250, 204, 21, 0.45);
+  background: rgba(250, 204, 21, 0.1);
+}
+
+.bis-card-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.bis-card-step-btn {
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.bis-card-step-btn:hover:not(:disabled) {
+  background: #ca8a04;
+  border-color: #facc15;
+  color: #000;
+}
+
+.bis-card-step-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.bis-cards-filter-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.bis-cards-search-input {
+  flex: 1;
+  min-width: 260px;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 6px;
+  padding: 0.5rem 0.85rem;
+  color: #fff;
+  font-size: 0.84rem;
+  outline: none;
+}
+
+.bis-cards-search-input:focus {
+  border-color: #facc15;
+  box-shadow: 0 0 8px rgba(250, 204, 21, 0.3);
+}
+
+.bis-cards-tree-columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+@media (max-width: 900px) {
+  .bis-cards-tree-columns {
+    grid-template-columns: 1fr;
+  }
+}
+
+.bis-cards-tree-group {
+  background: rgba(16, 22, 34, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-md);
+  padding: 0.85rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.bis-cards-group-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 /* Detailed List Mode with Real Icons */

@@ -1019,6 +1019,19 @@ function openBiSTalentModal() {
   const classData = WOW_BIS_DATA[currentBiSState.classId];
   const currentSpec = classData.specs.find(s => s.id === currentBiSState.specId) || classData.specs[0];
 
+  // Delegate to full 4x7 grid Talent Tree Engine if available
+  if (window.TalentTreeModule) {
+    window.TalentTreeModule.openModal({
+      classId: currentBiSState.classId,
+      specId: currentSpec.id,
+      specName: currentSpec.name,
+      buildUrl: currentSpec.talents?.buildUrl || '',
+      buildCode: currentSpec.talents?.buildCode || `FOREVER-${currentBiSState.classId.toUpperCase()}-${currentSpec.id.toUpperCase()}-30`,
+      maxPoints: 26
+    });
+    return;
+  }
+
   const trees = getSpecTalentTrees(currentBiSState.classId, currentSpec);
   const buildCode = currentSpec.talents?.buildCode || `FOREVER-${currentBiSState.classId.toUpperCase()}-${currentSpec.id.toUpperCase()}-30`;
 
