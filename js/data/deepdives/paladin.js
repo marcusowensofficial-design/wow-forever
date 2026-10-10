@@ -22,7 +22,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
     subTabs: [
       { id: "overview", label: "Full Dossier", icon: "📑" },
       { id: "core", label: "Core Rules & QoL", icon: "📜" },
-      { id: "betaBuilds", label: "⚡ Level 20 & 30 Builds", icon: "⚡" },
+      { id: "betaBuilds", label: "Level 20 & 30 Builds", icon: "⚡" },
       { id: "holy", label: "Holy Healer & AoE", icon: "✨" },
       { id: "protection", label: "Protection Tank & Taunt", icon: "🛡️" },
       { id: "retribution", label: "Retribution & Twist of Light", icon: "⚔️" },

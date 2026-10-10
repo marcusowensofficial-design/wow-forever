@@ -22,7 +22,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
     subTabs: [
       { id: "overview", label: "Full Dossier", icon: "📑" },
       { id: "core", label: "Core Rules & Stones", icon: "📜" },
-      { id: "betaBuilds", label: "⚡ Level 20 & 30 Builds", icon: "⚡" },
+      { id: "betaBuilds", label: "Level 20 & 30 Builds", icon: "⚡" },
       { id: "affliction", label: "Affliction & Pandemic", icon: "💀" },
       { id: "demonology", label: "Demonology & Demonic Pact", icon: "😈" },
       { id: "destruction", label: "Destruction & Havoc", icon: "🔥" },

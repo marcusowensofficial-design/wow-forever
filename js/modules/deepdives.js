@@ -242,11 +242,18 @@ function initClassDeepDives() {
             { id: "overview", label: "Full Dossier", icon: "📑" },
             { id: "core", label: `Core Rules & QoL (${cData.coreRules ? cData.coreRules.length : 0})`, icon: "📜" },
             { id: "matrix", label: `Verification Matrix (${cData.forensicMatrix ? cData.forensicMatrix.length : 0})`, icon: "🔬" }
-          ]).map(tab => `
-            <button class="deepdive-subnav-btn ${selectedDeepDiveSubTab === tab.id ? 'active' : ''}" data-subtab="${tab.id}">
-              <span>${tab.icon}</span> ${escapeHtml(tab.label)}
-            </button>
-          `).join('')}
+          ]).map(tab => {
+            let label = (tab.label || '').trim();
+            if (tab.icon && label.startsWith(tab.icon)) {
+              label = label.substring(tab.icon.length).trim();
+            }
+            label = label.replace(/^[⚡\u26A1]\s*/, '');
+            return `
+              <button class="deepdive-subnav-btn ${selectedDeepDiveSubTab === tab.id ? 'active' : ''}" data-subtab="${tab.id}">
+                <span>${tab.icon}</span> ${escapeHtml(label)}
+              </button>
+            `;
+          }).join('')}
         </div>
       </div>
 

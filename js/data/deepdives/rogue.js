@@ -22,7 +22,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
     subTabs: [
       { id: "overview", label: "Full Dossier", icon: "📑" },
       { id: "core", label: "Core Rules & Control", icon: "📜" },
-      { id: "betaBuilds", label: "⚡ Level 20 & 30 Builds", icon: "⚡" },
+      { id: "betaBuilds", label: "Level 20 & 30 Builds", icon: "⚡" },
       { id: "assassination", label: "Assassination & Mutilate", icon: "🩸" },
       { id: "combat", label: "Combat & Restless Blades", icon: "⚔️" },
       { id: "subtlety", label: "Subtlety & Rupture Engine", icon: "👤" },

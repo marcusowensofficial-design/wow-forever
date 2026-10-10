@@ -16,15 +16,6 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
   "videoTitle": "Hunter Gets Some Big Changes in WoW Forever",
   "videoUrl": "https://www.youtube.com/watch?v=9RdIJQQpggM&t=449s",
   "sourceAttribution": "Sodapoppin Hands-On BlizzCon Early Access Demo & Closed Beta Forensics",
-  "subTabs": [
-    { "id": "overview", "label": "Full Dossier", "icon": "📑" },
-    { "id": "core", "label": "Core Rules & QoL", "icon": "📜" },
-    { "id": "betaBuilds", "label": "⚡ Level 20 & 30 Builds", "icon": "⚡" },
-    { "id": "bm", "label": "Beast Mastery & Pets", "icon": "🐾" },
-    { "id": "mm", "label": "Marksmanship & Ranged", "icon": "🎯" },
-    { "id": "survival", "label": "Melee Survival", "icon": "🗡️" },
-    { "id": "matrix", "label": "Verification Matrix", "icon": "🔬" }
-  ],
   "coreRules": [
     {
       "title": "Pet Ability Retention Fixed",
@@ -492,7 +483,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
     },
     {
       "id": "betaBuilds",
-      "label": "⚡ Beta L20 Builds",
+      "label": "Level 20 & 30 Builds",
       "icon": "⚡"
     },
     {

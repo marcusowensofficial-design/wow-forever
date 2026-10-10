@@ -22,7 +22,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
     subTabs: [
       { id: "overview", label: "Full Dossier", icon: "📑" },
       { id: "core", label: "Core Rules & Shared Spells", icon: "📜" },
-      { id: "betaBuilds", label: "⚡ Level 20 & 30 Builds", icon: "⚡" },
+      { id: "betaBuilds", label: "Level 20 & 30 Builds", icon: "⚡" },
       { id: "discipline", label: "Discipline & Penance", icon: "🛡️" },
       { id: "holy", label: "Holy & Prayer of Mending", icon: "✨" },
       { id: "shadow", label: "Shadow & Devouring Plague", icon: "🌑" },

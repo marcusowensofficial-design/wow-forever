@@ -30,7 +30,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
     },
     {
       "id": "betaBuilds",
-      "label": "⚡ Level 20 & 30 Builds",
+      "label": "Level 20 & 30 Builds",
       "icon": "⚡"
     },
     {

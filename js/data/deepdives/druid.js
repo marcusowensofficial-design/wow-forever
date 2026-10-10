@@ -22,7 +22,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
     subTabs: [
       { id: "overview", label: "Full Dossier", icon: "📑" },
       { id: "core", label: "Core Rules & Shifting", icon: "📜" },
-      { id: "betaBuilds", label: "⚡ Level 20 & 30 Builds", icon: "⚡" },
+      { id: "betaBuilds", label: "Level 20 & 30 Builds", icon: "⚡" },
       { id: "balance", label: "Balance & Eclipse", icon: "🌙" },
       { id: "feral", label: "Feral Cat & Bear Tank", icon: "🐾" },
       { id: "restoration", label: "Restoration & Wild Growth", icon: "🌱" },
