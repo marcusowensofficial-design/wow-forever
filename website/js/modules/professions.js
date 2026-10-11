@@ -766,12 +766,15 @@
             `;
           }
           if (item.type === 'step') {
+            const rangeStr = (item.from !== null && item.from !== undefined)
+              ? (item.to !== null && item.to !== undefined && item.to !== item.from ? `${item.from}–${item.to}` : `${item.from}`)
+              : '';
             const leftPercent = item.bar?.iLeft || '0%';
             const widthPercent = item.bar?.iWidth || '10%';
             return `
               <div class="leveling-step-row">
                 <div class="step-range-col">
-                  <span class="step-range-text">${item.from}–${item.to}</span>
+                  <span class="step-range-text">${rangeStr}</span>
                   <div class="step-progress-track">
                     <span class="step-progress-fill" style="left: ${leftPercent}; width: ${widthPercent};"></span>
                     <span class="step-progress-cap-marker" style="left: 74.67%;" title="Beta Cap at 225"></span>
@@ -1374,7 +1377,12 @@
     // Recipes / steps
     container.querySelectorAll('.step-recipe-name').forEach(el => {
       const name = el.getAttribute('data-recipe-name') || el.textContent.trim();
-      const match = (prof.recipes || []).find(r => r.name && r.name.toLowerCase() === name.toLowerCase());
+      const cleanName = name.toLowerCase().replace(/^make (a|an) /i, '');
+      const match = (prof.recipes || []).find(r => {
+        if (!r.name) return false;
+        const rn = r.name.toLowerCase();
+        return rn === name.toLowerCase() || rn === cleanName || rn.includes(cleanName) || cleanName.includes(rn);
+      });
       el.addEventListener('mouseenter', (e) => {
         showItemTooltip(e, name, match?.quality || 1, match?.effect || match?.source || '', match?.reagents || null);
       });

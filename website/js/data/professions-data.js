@@ -1,8 +1,3 @@
-/**
- * World of Warcraft: Forever - Master Professions & Trade Economy Dataset
- * Complete 1-300 Leveling Roadmaps, Reagent Breakdowns, Shopping Lists, and Camp Perks.
- */
-
 window.WOW_PROFESSIONS_DATA = {
   "alchemy": {
     "slug": "alchemy",
@@ -28539,32 +28534,105 @@ window.WOW_PROFESSIONS_DATA = {
       "icon": "inv_10_enchanting2_magicswirl_bronze"
     },
     "stats": {
-      "recipeCount": 165,
-      "newInForever": 33,
+      "recipeCount": 216,
+      "newInForever": 66,
       "favorRecipes": 40
     },
     "groups": [
       {
-        "key": "General",
-        "label": "General",
+        "key": "Bracer",
+        "label": "Bracer",
+        "icon": "inv_bracer_07",
+        "count": 35
+      },
+      {
+        "key": "Chest",
+        "label": "Chest",
+        "icon": "inv_chest_cloth_04",
+        "count": 19
+      },
+      {
+        "key": "Cloak",
+        "label": "Cloak",
+        "icon": "inv_misc_cape_02",
+        "count": 19
+      },
+      {
+        "key": "Weapon",
+        "label": "Weapon",
+        "icon": "inv_sword_04",
+        "count": 24
+      },
+      {
+        "key": "2H Weapon",
+        "label": "2H Weapon",
         "icon": "trade_engraving",
-        "count": 165
+        "count": 16
+      },
+      {
+        "key": "Shield",
+        "label": "Shield",
+        "icon": "inv_shield_04",
+        "count": 11
+      },
+      {
+        "key": "Boots",
+        "label": "Boots",
+        "icon": "inv_boots_05",
+        "count": 11
+      },
+      {
+        "key": "Gloves",
+        "label": "Gloves",
+        "icon": "inv_gauntlets_04",
+        "count": 24
+      },
+      {
+        "key": "Necklace",
+        "label": "Necklace",
+        "icon": "trade_engraving",
+        "count": 5
+      },
+      {
+        "key": "Off-Hand",
+        "label": "Off-Hand",
+        "icon": "trade_engraving",
+        "count": 1
+      },
+      {
+        "key": "Rods",
+        "label": "Rods",
+        "icon": "inv_staff_01",
+        "count": 5
+      },
+      {
+        "key": "Oils",
+        "label": "Oils",
+        "icon": "inv_potion_101",
+        "count": 7
       },
       {
         "key": "Relics",
         "label": "Relics",
         "icon": "inv_relics_libramofhope",
+        "count": 28
+      },
+      {
+        "key": "Wands & Staves",
+        "label": "Wands & Staves",
+        "icon": "inv_wand_07",
         "count": 11
       }
     ],
     "recipes": [
       {
+        "id": null,
         "name": "Enchant Bracer - Inferior Stamina",
-        "icon": "inv_scroll_04",
+        "icon": "trade_engraving",
         "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "cat": "Bracer",
+        "kind": "Bracer Enchant",
+        "effect": "Stamina +2",
         "isNew": false,
         "learn": 20,
         "yellow": 20,
@@ -28582,12 +28650,13 @@ window.WOW_PROFESSIONS_DATA = {
         "source": "Trainer"
       },
       {
+        "id": 6342,
         "name": "Enchant Chest - Minor Intellect",
-        "icon": "inv_scroll_03",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 2,
+        "cat": "Chest",
+        "kind": "Chest Enchant",
+        "effect": "Intellect +2",
         "isNew": false,
         "learn": 20,
         "yellow": 80,
@@ -28602,15 +28671,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 2
           }
         ],
-        "source": "Drop: Carnivous the Breaker (Darkshore)"
+        "source": "Formula sold by Vaean (Alliance)"
       },
       {
+        "id": 6344,
         "name": "Enchant Bracer - Minor Spirit",
-        "icon": "inv_scroll_03",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 2,
+        "cat": "Bracer",
+        "kind": "Bracer Enchant",
+        "effect": "Spirit +3",
         "isNew": false,
         "learn": 60,
         "yellow": 105,
@@ -28625,15 +28695,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 2
           }
         ],
-        "source": "Drop: Mugglefin (Ashenvale)"
+        "source": "Formula drops from Mugglefin (Ashenvale)"
       },
       {
+        "id": null,
         "name": "Enchant Chest - Inferior Stamina",
-        "icon": "inv_scroll_04",
+        "icon": "trade_engraving",
         "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "cat": "Chest",
+        "kind": "Chest Enchant",
+        "effect": "Stamina +2",
         "isNew": false,
         "learn": 15,
         "yellow": 70,
@@ -28651,12 +28722,13 @@ window.WOW_PROFESSIONS_DATA = {
         "source": "Trainer"
       },
       {
+        "id": 249474,
         "name": "Enchant Bracer - Minor Intellect",
-        "icon": "inv_scroll_03",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 2,
+        "cat": "Bracer",
+        "kind": "Bracer Enchant",
+        "effect": "Intellect +3",
         "isNew": true,
         "learn": 70,
         "yellow": 110,
@@ -28671,15 +28743,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 2
           }
         ],
-        "source": "Drop: Vile Fin Tidehunter (Silverpine Forest)"
+        "source": "Formula drops from Vile Fin Tidehunter (Silverpine Forest)"
       },
       {
+        "id": null,
         "name": "Enchant Bracer - Minor Deflect",
-        "icon": "inv_scroll_04",
+        "icon": "trade_engraving",
         "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "cat": "Bracer",
+        "kind": "Bracer Enchant",
+        "effect": "Defense +3",
         "isNew": false,
         "learn": 20,
         "yellow": 80,
@@ -28697,12 +28770,13 @@ window.WOW_PROFESSIONS_DATA = {
         "source": "Trainer"
       },
       {
+        "id": 6347,
         "name": "Enchant Bracer - Minor Strength",
-        "icon": "inv_scroll_03",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 2,
+        "cat": "Bracer",
+        "kind": "Bracer Enchant",
+        "effect": "Strength +3",
         "isNew": false,
         "learn": 80,
         "yellow": 115,
@@ -28717,15 +28791,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Drop: Wild Buck (Ashenvale)"
+        "source": "Formula drops from Wild Buck (Ashenvale)"
       },
       {
+        "id": 6346,
         "name": "Enchant Chest - Lesser Intellect",
-        "icon": "inv_scroll_04",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 2,
+        "cat": "Chest",
+        "kind": "Chest Enchant",
+        "effect": "Intellect +3",
         "isNew": false,
         "learn": 80,
         "yellow": 115,
@@ -28740,15 +28815,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 2
           }
         ],
-        "source": "Trainer"
+        "source": "Formula sold by Kithas (Horde)"
       },
       {
+        "id": null,
         "name": "Enchant Chest - Minor Absorption",
-        "icon": "inv_scroll_04",
+        "icon": "trade_engraving",
         "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "cat": "Chest",
+        "kind": "Chest Enchant",
+        "effect": "Has a 2% chance per hit of giving you 10 points of damage absorption. Cannot occur more often than once every 5 sec.",
         "isNew": false,
         "learn": 40,
         "yellow": 90,
@@ -28766,12 +28842,13 @@ window.WOW_PROFESSIONS_DATA = {
         "source": "Trainer"
       },
       {
+        "id": 6345,
         "name": "Enchant Cloak - Minor Protection",
-        "icon": "inv_scroll_03",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 2,
+        "cat": "Cloak",
+        "kind": "Cloak Enchant",
+        "effect": "Armor +10",
         "isNew": false,
         "learn": 90,
         "yellow": 110,
@@ -28786,15 +28863,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Formula: Imbue Cloak - Protection"
+        "source": "Formula: Formula: Imbue Cloak - Protection"
       },
       {
+        "id": 249475,
         "name": "Enchant Bracer - Minor Healing Power",
-        "icon": "inv_scroll_03",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 2,
+        "cat": "Bracer",
+        "kind": "Bracer Enchant",
+        "effect": "Healing Spells +8, Damage Spells +3",
         "isNew": true,
         "learn": 90,
         "yellow": 120,
@@ -28809,15 +28887,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 2
           }
         ],
-        "source": "Formula: Enchant Bracer - Minor Healing Power"
+        "source": "Formula: Formula: Enchant Bracer - Minor Healing Power"
       },
       {
+        "id": 6348,
         "name": "Enchant Weapon - Minor Beastslayer",
-        "icon": "inv_scroll_03",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 2,
+        "cat": "Weapon",
+        "kind": "Weapon Enchant",
+        "effect": "Beastslaying +2",
         "isNew": false,
         "learn": 90,
         "yellow": 120,
@@ -28839,15 +28918,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 2
           }
         ],
-        "source": "Drop: Takk the Leaper (The Barrens)"
+        "source": "Formula drops from Takk the Leaper (The Barrens)"
       },
       {
+        "id": null,
         "name": "Enchant Cloak - Minor Resistance",
-        "icon": "inv_scroll_04",
+        "icon": "trade_engraving",
         "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "cat": "Cloak",
+        "kind": "Cloak Enchant",
+        "effect": "+2 All Resistances",
         "isNew": false,
         "learn": 45,
         "yellow": 95,
@@ -28872,12 +28952,13 @@ window.WOW_PROFESSIONS_DATA = {
         "source": "Trainer"
       },
       {
+        "id": null,
         "name": "Enchant Bracer - Minor Stamina",
-        "icon": "inv_scroll_04",
+        "icon": "trade_engraving",
         "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "cat": "Bracer",
+        "kind": "Bracer Enchant",
+        "effect": "Stamina +3",
         "isNew": false,
         "learn": 50,
         "yellow": 100,
@@ -28895,12 +28976,13 @@ window.WOW_PROFESSIONS_DATA = {
         "source": "Trainer"
       },
       {
+        "id": 6349,
         "name": "Enchant 2H Weapon - Lesser Intellect",
-        "icon": "inv_scroll_04",
+        "icon": "inv_misc_note_01",
         "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "cat": "2H Weapon",
+        "kind": "2H Weapon Enchant",
+        "effect": "Intellect +5",
         "isNew": false,
         "learn": 100,
         "yellow": 130,
@@ -28915,15 +28997,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 2
           }
         ],
-        "source": "Trainer"
+        "source": "Formula sold by Tilli Thistlefuzz (Alliance)"
       },
       {
+        "id": null,
         "name": "Enchant Chest - Lesser Stamina",
-        "icon": "inv_scroll_04",
+        "icon": "trade_engraving",
         "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "cat": "Chest",
+        "kind": "Chest Enchant",
+        "effect": "Stamina +3",
         "isNew": false,
         "learn": 60,
         "yellow": 105,
@@ -28948,12 +29031,13 @@ window.WOW_PROFESSIONS_DATA = {
         "source": "Trainer"
       },
       {
+        "id": 11038,
         "name": "Enchant 2H Weapon - Lesser Spirit",
-        "icon": "inv_scroll_03",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 2,
+        "cat": "2H Weapon",
+        "kind": "2H Weapon Enchant",
+        "effect": "Spirit +5",
         "isNew": false,
         "learn": 110,
         "yellow": 135,
@@ -28975,15 +29059,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Drop: Lord Condar (Loch Modan)"
+        "source": "Formula drops from Lord Condar (Loch Modan)"
       },
       {
+        "id": 11039,
         "name": "Enchant Cloak - Minor Agility",
-        "icon": "inv_scroll_03",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 2,
+        "cat": "Cloak",
+        "kind": "Cloak Enchant",
+        "effect": "Agility +3",
         "isNew": false,
         "learn": 110,
         "yellow": 135,
@@ -28998,15 +29083,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 2
           }
         ],
-        "source": "Drop: Mist Howler (Ashenvale)"
+        "source": "Formula sold by Dalria (Alliance)"
       },
       {
+        "id": null,
         "name": "Enchant Bracer - Minor Agility",
-        "icon": "inv_scroll_04",
+        "icon": "trade_engraving",
         "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "cat": "Bracer",
+        "kind": "Bracer Enchant",
+        "effect": "Agility +3",
         "isNew": false,
         "learn": 80,
         "yellow": 115,
@@ -29031,12 +29117,13 @@ window.WOW_PROFESSIONS_DATA = {
         "source": "Trainer"
       },
       {
+        "id": 11081,
         "name": "Enchant Shield - Lesser Protection",
-        "icon": "inv_scroll_03",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 2,
+        "cat": "Shield",
+        "kind": "Shield Enchant",
+        "effect": "Armor +30",
         "isNew": false,
         "learn": 115,
         "yellow": 140,
@@ -29058,15 +29145,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 3
           }
         ],
-        "source": "Drop: Lake Thresher (Redridge Mountains)"
+        "source": "Formula drops from Lake Thresher (Redridge Mountains)"
       },
       {
+        "id": null,
         "name": "Enchant Weapon - Minor Striking",
-        "icon": "inv_scroll_04",
+        "icon": "trade_engraving",
         "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "cat": "Weapon",
+        "kind": "Weapon Enchant",
+        "effect": "Weapon Damage +1",
         "isNew": false,
         "learn": 90,
         "yellow": 120,
@@ -29098,12 +29186,13 @@ window.WOW_PROFESSIONS_DATA = {
         "source": "Trainer"
       },
       {
+        "id": 6375,
         "name": "Enchant Bracer - Lesser Spirit",
-        "icon": "inv_scroll_03",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 2,
+        "cat": "Bracer",
+        "kind": "Bracer Enchant",
+        "effect": "Spirit +4",
         "isNew": false,
         "learn": 120,
         "yellow": 145,
@@ -29118,15 +29207,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 2
           }
         ],
-        "source": "Drop: Azzere the Skyblade (The Barrens)"
+        "source": "Formula drops from Azzere the Skyblade (The Barrens)"
       },
       {
+        "id": 6377,
         "name": "Enchant Boots - Minor Agility",
-        "icon": "inv_scroll_04",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 2,
+        "cat": "Boots",
+        "kind": "Boots Enchant",
+        "effect": "Agility +3",
         "isNew": false,
         "learn": 125,
         "yellow": 150,
@@ -29148,15 +29238,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 2
           }
         ],
-        "source": "Trainer"
+        "source": "Formula sold by Zixil (Hillsbrad Foothills)"
       },
       {
+        "id": 6376,
         "name": "Enchant Boots - Minor Stamina",
-        "icon": "inv_scroll_03",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 2,
+        "cat": "Boots",
+        "kind": "Boots Enchant",
+        "effect": "Stamina +3",
         "isNew": false,
         "learn": 125,
         "yellow": 150,
@@ -29171,15 +29262,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Formula: Enchant Boots - Minor Stamina"
+        "source": "Formula: Formula: Enchant Boots - Minor Stamina"
       },
       {
+        "id": null,
         "name": "Enchant 2H Weapon - Minor Impact",
-        "icon": "inv_scroll_04",
+        "icon": "trade_engraving",
         "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "cat": "2H Weapon",
+        "kind": "2H Weapon Enchant",
+        "effect": "Weapon Damage +4",
         "isNew": false,
         "learn": 100,
         "yellow": 130,
@@ -29204,12 +29296,13 @@ window.WOW_PROFESSIONS_DATA = {
         "source": "Trainer"
       },
       {
+        "id": null,
         "name": "Enchant Shield - Minor Stamina",
-        "icon": "inv_scroll_04",
+        "icon": "trade_engraving",
         "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "cat": "Shield",
+        "kind": "Shield Enchant",
+        "effect": "Stamina +3",
         "isNew": false,
         "learn": 105,
         "yellow": 130,
@@ -29234,12 +29327,13 @@ window.WOW_PROFESSIONS_DATA = {
         "source": "Trainer"
       },
       {
+        "id": 11098,
         "name": "Enchant Cloak - Lesser Shadow Resistance",
-        "icon": "inv_scroll_03",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 2,
+        "cat": "Cloak",
+        "kind": "Cloak Enchant",
+        "effect": "+10 Shadow Resistance",
         "isNew": false,
         "learn": 135,
         "yellow": 160,
@@ -29261,15 +29355,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Drop: Sister Riven (Stonetalon Mountains)"
+        "source": "Formula drops from Sister Riven (Stonetalon Mountains)"
       },
       {
+        "id": null,
         "name": "Enchant Cloak - Lesser Protection",
-        "icon": "inv_scroll_04",
+        "icon": "trade_engraving",
         "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "cat": "Cloak",
+        "kind": "Cloak Enchant",
+        "effect": "Armor +20",
         "isNew": false,
         "learn": 115,
         "yellow": 140,
@@ -29294,12 +29389,13 @@ window.WOW_PROFESSIONS_DATA = {
         "source": "Trainer"
       },
       {
+        "id": 249479,
         "name": "Enchant Weapon - Insight",
-        "icon": "inv_scroll_04",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 2,
+        "cat": "Weapon",
+        "kind": "Weapon Enchant",
+        "effect": "A chance to grant Insight when you cast a spell, increasing Spirit by 100% for 10 sec.",
         "isNew": true,
         "learn": 140,
         "yellow": 140,
@@ -29342,15 +29438,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 2
           }
         ],
-        "source": "Trainer"
+        "source": "Formula sold by Alynsia (Alliance)"
       },
       {
+        "id": 249480,
         "name": "Enchant Weapon - Recovery",
-        "icon": "inv_scroll_04",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 2,
+        "cat": "Weapon",
+        "kind": "Weapon Enchant",
+        "effect": "Trigger Recovery when you are Parried or Dodged, healing you for 5% of your maximum health. Cannot occur more often than once every 10 sec.",
         "isNew": true,
         "learn": 140,
         "yellow": 140,
@@ -29393,15 +29490,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 2
           }
         ],
-        "source": "Trainer"
+        "source": "Formula sold by Alynsia (Alliance)"
       },
       {
+        "id": 249481,
         "name": "Enchant Weapon - Revelation",
-        "icon": "inv_scroll_04",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 2,
+        "cat": "Weapon",
+        "kind": "Weapon Enchant",
+        "effect": "A chance to trigger Revelation when a non-periodic spell fails to critically strike. Revelation grants 100% increased critical strike chance to the next spell cast. Revelation's chance to trigger is diminished as your critical strike chance increases.",
         "isNew": true,
         "learn": 140,
         "yellow": 140,
@@ -29444,15 +29542,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 2
           }
         ],
-        "source": "Trainer"
+        "source": "Formula sold by Alynsia (Alliance)"
       },
       {
+        "id": 249486,
         "name": "Enchant Bracer - Lesser Agility",
-        "icon": "inv_scroll_04",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 2,
+        "cat": "Bracer",
+        "kind": "Bracer Enchant",
+        "effect": "Agility +4",
         "isNew": true,
         "learn": 140,
         "yellow": 165,
@@ -29467,15 +29566,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 2
           }
         ],
-        "source": "Trainer"
+        "source": "Formula sold by Gorhak (Desolace)"
       },
       {
+        "id": 11101,
         "name": "Enchant Bracer - Lesser Strength",
-        "icon": "inv_scroll_04",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 2,
+        "cat": "Bracer",
+        "kind": "Bracer Enchant",
+        "effect": "Strength +4",
         "isNew": false,
         "learn": 140,
         "yellow": 165,
@@ -29490,15 +29590,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Trainer"
+        "source": "Formula sold by Dalria (Alliance)"
       },
       {
+        "id": null,
         "name": "Enchant Chest - Stamina",
-        "icon": "inv_scroll_04",
+        "icon": "trade_engraving",
         "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "cat": "Chest",
+        "kind": "Chest Enchant",
+        "effect": "Stamina +4",
         "isNew": false,
         "learn": 120,
         "yellow": 145,
@@ -29523,12 +29624,13 @@ window.WOW_PROFESSIONS_DATA = {
         "source": "Trainer"
       },
       {
+        "id": 11152,
         "name": "Enchant Gloves - Fishing",
-        "icon": "inv_scroll_03",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 2,
+        "cat": "Gloves",
+        "kind": "Gloves Enchant",
+        "effect": "Fishing +2",
         "isNew": false,
         "learn": 145,
         "yellow": 170,
@@ -29550,15 +29652,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Drop: Torn Fin Muckdweller (Hillsbrad Foothills)"
+        "source": "Formula drops from Torn Fin Muckdweller (Hillsbrad Foothills)"
       },
       {
+        "id": 11151,
         "name": "Enchant Gloves - Herbalism",
-        "icon": "inv_scroll_03",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 2,
+        "cat": "Gloves",
+        "kind": "Gloves Enchant",
+        "effect": "Herbalism +2",
         "isNew": false,
         "learn": 145,
         "yellow": 170,
@@ -29580,15 +29683,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Drop: Blackened Ancient (Stonetalon Mountains)"
+        "source": "Formula drops from Blackened Ancient (Stonetalon Mountains)"
       },
       {
+        "id": 11150,
         "name": "Enchant Gloves - Mining",
-        "icon": "inv_scroll_03",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 2,
+        "cat": "Gloves",
+        "kind": "Gloves Enchant",
+        "effect": "Mining +2",
         "isNew": false,
         "learn": 145,
         "yellow": 170,
@@ -29610,15 +29714,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Drop: Dark Iron Saboteur (Wetlands)"
+        "source": "Formula drops from Dark Iron Saboteur (Wetlands)"
       },
       {
+        "id": null,
         "name": "Enchant Cloak - Lesser Fire Resistance",
-        "icon": "inv_scroll_04",
+        "icon": "trade_engraving",
         "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "cat": "Cloak",
+        "kind": "Cloak Enchant",
+        "effect": "+10 Fire Resistance",
         "isNew": false,
         "learn": 125,
         "yellow": 150,
@@ -29643,12 +29748,13 @@ window.WOW_PROFESSIONS_DATA = {
         "source": "Trainer"
       },
       {
+        "id": null,
         "name": "Enchant Bracer - Lesser Stamina",
-        "icon": "inv_scroll_04",
+        "icon": "trade_engraving",
         "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "cat": "Bracer",
+        "kind": "Bracer Enchant",
+        "effect": "Stamina +4",
         "isNew": false,
         "learn": 130,
         "yellow": 155,
@@ -29666,12 +29772,13 @@ window.WOW_PROFESSIONS_DATA = {
         "source": "Trainer"
       },
       {
+        "id": null,
         "name": "Enchant Shield - Lesser Spirit",
-        "icon": "inv_scroll_04",
+        "icon": "trade_engraving",
         "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "cat": "Shield",
+        "kind": "Shield Enchant",
+        "effect": "Spirit +3",
         "isNew": false,
         "learn": 130,
         "yellow": 155,
@@ -29696,12 +29803,13 @@ window.WOW_PROFESSIONS_DATA = {
         "source": "Trainer"
       },
       {
+        "id": null,
         "name": "Enchant Chest - Lesser Absorption",
-        "icon": "inv_scroll_04",
+        "icon": "trade_engraving",
         "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "cat": "Chest",
+        "kind": "Chest Enchant",
+        "effect": "Has a 5% chance per hit of giving you 25 points of damage absorption. Cannot occur more often than once every 5 sec.",
         "isNew": false,
         "learn": 140,
         "yellow": 165,
@@ -29733,12 +29841,13 @@ window.WOW_PROFESSIONS_DATA = {
         "source": "Trainer"
       },
       {
+        "id": null,
         "name": "Enchant Weapon - Lesser Striking",
-        "icon": "inv_scroll_04",
+        "icon": "trade_engraving",
         "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "cat": "Weapon",
+        "kind": "Weapon Enchant",
+        "effect": "Weapon Damage +2",
         "isNew": false,
         "learn": 140,
         "yellow": 165,
@@ -29763,12 +29872,13 @@ window.WOW_PROFESSIONS_DATA = {
         "source": "Trainer"
       },
       {
+        "id": null,
         "name": "Enchant 2H Weapon - Lesser Impact",
-        "icon": "inv_scroll_04",
+        "icon": "trade_engraving",
         "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "cat": "2H Weapon",
+        "kind": "2H Weapon Enchant",
+        "effect": "Weapon Damage +5",
         "isNew": false,
         "learn": 145,
         "yellow": 170,
@@ -29793,12 +29903,13 @@ window.WOW_PROFESSIONS_DATA = {
         "source": "Trainer"
       },
       {
+        "id": null,
         "name": "Enchant Chest - Intellect",
-        "icon": "inv_scroll_04",
+        "icon": "trade_engraving",
         "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "cat": "Chest",
+        "kind": "Chest Enchant",
+        "effect": "Intellect +4",
         "isNew": false,
         "learn": 145,
         "yellow": 170,
@@ -29816,12 +29927,13 @@ window.WOW_PROFESSIONS_DATA = {
         "source": "Trainer"
       },
       {
+        "id": 11163,
         "name": "Enchant Bracer - Lesser Deflection",
-        "icon": "inv_scroll_04",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 2,
+        "cat": "Bracer",
+        "kind": "Bracer Enchant",
+        "effect": "Defense +5",
         "isNew": false,
         "learn": 170,
         "yellow": 190,
@@ -29843,15 +29955,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Trainer"
+        "source": "Formula sold by Keena (Horde)"
       },
       {
+        "id": null,
         "name": "Enchant Bracer - Lesser Intellect",
-        "icon": "inv_scroll_04",
+        "icon": "trade_engraving",
         "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "cat": "Bracer",
+        "kind": "Bracer Enchant",
+        "effect": "Intellect +5",
         "isNew": false,
         "learn": 150,
         "yellow": 175,
@@ -29869,12 +29982,13 @@ window.WOW_PROFESSIONS_DATA = {
         "source": "Trainer"
       },
       {
+        "id": null,
         "name": "Enchant Chest - Minor Stats",
-        "icon": "inv_scroll_04",
+        "icon": "trade_engraving",
         "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "cat": "Chest",
+        "kind": "Chest Enchant",
+        "effect": "All Stats +2",
         "isNew": false,
         "learn": 150,
         "yellow": 175,
@@ -29906,12 +30020,13 @@ window.WOW_PROFESSIONS_DATA = {
         "source": "Trainer"
       },
       {
+        "id": null,
         "name": "Enchant Cloak - Defense",
-        "icon": "inv_scroll_04",
+        "icon": "trade_engraving",
         "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "cat": "Cloak",
+        "kind": "Cloak Enchant",
+        "effect": "Armor +30",
         "isNew": false,
         "learn": 155,
         "yellow": 175,
@@ -29936,12 +30051,13 @@ window.WOW_PROFESSIONS_DATA = {
         "source": "Trainer"
       },
       {
+        "id": null,
         "name": "Enchant Shield - Lesser Stamina",
-        "icon": "inv_scroll_04",
+        "icon": "trade_engraving",
         "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "cat": "Shield",
+        "kind": "Shield Enchant",
+        "effect": "Stamina +5",
         "isNew": false,
         "learn": 155,
         "yellow": 175,
@@ -29959,12 +30075,13 @@ window.WOW_PROFESSIONS_DATA = {
         "source": "Trainer"
       },
       {
+        "id": 11164,
         "name": "Enchant Weapon - Lesser Beastslayer",
-        "icon": "inv_scroll_03",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 2,
+        "cat": "Weapon",
+        "kind": "Weapon Enchant",
+        "effect": "Beastslaying +6",
         "isNew": false,
         "learn": 175,
         "yellow": 195,
@@ -29986,15 +30103,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 3
           }
         ],
-        "source": "Drop: Morbent Fel (Duskwood)"
+        "source": "Formula drops from Morbent Fel (Duskwood)"
       },
       {
+        "id": 11165,
         "name": "Enchant Weapon - Lesser Elemental Slayer",
-        "icon": "inv_scroll_03",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 2,
+        "cat": "Weapon",
+        "kind": "Weapon Enchant",
+        "effect": "Elemental Slayer +6",
         "isNew": false,
         "learn": 175,
         "yellow": 195,
@@ -30016,15 +30134,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 3
           }
         ],
-        "source": "Drop: Noxious Flayer (Dustwallow Marsh)"
+        "source": "Formula drops from Noxious Flayer (Dustwallow Marsh)"
       },
       {
+        "id": null,
         "name": "Enchant Boots - Lesser Agility",
-        "icon": "inv_scroll_04",
+        "icon": "trade_engraving",
         "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "cat": "Boots",
+        "kind": "Boots Enchant",
+        "effect": "Agility +4",
         "isNew": false,
         "learn": 160,
         "yellow": 180,
@@ -30042,12 +30161,13 @@ window.WOW_PROFESSIONS_DATA = {
         "source": "Trainer"
       },
       {
+        "id": null,
         "name": "Enchant Chest - Greater Stamina",
-        "icon": "inv_scroll_04",
+        "icon": "trade_engraving",
         "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "cat": "Chest",
+        "kind": "Chest Enchant",
+        "effect": "Stamina +6",
         "isNew": false,
         "learn": 160,
         "yellow": 180,
@@ -30065,12 +30185,13 @@ window.WOW_PROFESSIONS_DATA = {
         "source": "Trainer"
       },
       {
+        "id": null,
         "name": "Enchant Bracer - Spirit",
-        "icon": "inv_scroll_04",
+        "icon": "trade_engraving",
         "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "cat": "Bracer",
+        "kind": "Bracer Enchant",
+        "effect": "Spirit +5",
         "isNew": false,
         "learn": 165,
         "yellow": 185,
@@ -30088,12 +30209,13 @@ window.WOW_PROFESSIONS_DATA = {
         "source": "Trainer"
       },
       {
+        "id": null,
         "name": "Enchant Boots - Lesser Stamina",
-        "icon": "inv_scroll_04",
+        "icon": "trade_engraving",
         "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "cat": "Boots",
+        "kind": "Boots Enchant",
+        "effect": "Stamina +4",
         "isNew": false,
         "learn": 170,
         "yellow": 190,
@@ -30111,12 +30233,13 @@ window.WOW_PROFESSIONS_DATA = {
         "source": "Trainer"
       },
       {
+        "id": null,
         "name": "Enchant Bracer - Stamina",
-        "icon": "inv_scroll_04",
+        "icon": "trade_engraving",
         "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "cat": "Bracer",
+        "kind": "Bracer Enchant",
+        "effect": "Stamina +5",
         "isNew": false,
         "learn": 170,
         "yellow": 190,
@@ -30134,12 +30257,13 @@ window.WOW_PROFESSIONS_DATA = {
         "source": "Trainer"
       },
       {
+        "id": 11167,
         "name": "Enchant Boots - Lesser Spirit",
-        "icon": "inv_scroll_03",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 2,
+        "cat": "Boots",
+        "kind": "Boots Enchant",
+        "effect": "Spirit +4",
         "isNew": false,
         "learn": 190,
         "yellow": 210,
@@ -30154,15 +30278,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 2
           }
         ],
-        "source": "Drop: Ruul Onestone (Arathi Highlands)"
+        "source": "Formula drops from Ruul Onestone (Arathi Highlands)"
       },
       {
+        "id": 17725,
         "name": "Enchant Weapon - Winter's Might",
-        "icon": "inv_scroll_03",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 2,
+        "cat": "Weapon",
+        "kind": "Weapon Enchant",
+        "effect": "Frost Spell Damage +15",
         "isNew": false,
         "learn": 190,
         "yellow": 210,
@@ -30198,15 +30323,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Formula: Enchant Weapon - Winter's Might"
+        "source": "Formula: Formula: Enchant Weapon - Winter's Might"
       },
       {
+        "id": 249488,
         "name": "Enchant Bracer - Agility",
-        "icon": "inv_scroll_03",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 2,
+        "cat": "Bracer",
+        "kind": "Bracer Enchant",
+        "effect": "Agility +5",
         "isNew": true,
         "learn": 190,
         "yellow": 225,
@@ -30221,15 +30347,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Formula: Enchant Bracer - Agility"
+        "source": "Formula: Formula: Enchant Bracer - Agility"
       },
       {
+        "id": null,
         "name": "Enchant Cloak - Fire Resistance",
-        "icon": "inv_scroll_04",
+        "icon": "trade_engraving",
         "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "cat": "Cloak",
+        "kind": "Cloak Enchant",
+        "effect": "+12 Fire Resistance",
         "isNew": false,
         "learn": 175,
         "yellow": 195,
@@ -30254,12 +30381,13 @@ window.WOW_PROFESSIONS_DATA = {
         "source": "Trainer"
       },
       {
+        "id": 11168,
         "name": "Enchant Shield - Lesser Block",
-        "icon": "inv_scroll_03",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 2,
+        "cat": "Shield",
+        "kind": "Shield Enchant",
+        "effect": "Blocking +2%",
         "isNew": false,
         "learn": 195,
         "yellow": 215,
@@ -30288,15 +30416,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 3
           }
         ],
-        "source": "Drop: Bloodscalp Hunter (Stranglethorn Vale)"
+        "source": "Formula drops from Bloodscalp Hunter (Stranglethorn Vale)"
       },
       {
+        "id": null,
         "name": "Enchant Bracer - Strength",
-        "icon": "inv_scroll_04",
+        "icon": "trade_engraving",
         "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "cat": "Bracer",
+        "kind": "Bracer Enchant",
+        "effect": "Strength +5",
         "isNew": false,
         "learn": 180,
         "yellow": 200,
@@ -30314,12 +30443,13 @@ window.WOW_PROFESSIONS_DATA = {
         "source": "Trainer"
       },
       {
+        "id": null,
         "name": "Enchant Shield - Spirit",
-        "icon": "inv_scroll_04",
+        "icon": "trade_engraving",
         "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "cat": "Shield",
+        "kind": "Shield Enchant",
+        "effect": "Spirit +5",
         "isNew": false,
         "learn": 180,
         "yellow": 200,
@@ -30344,12 +30474,13 @@ window.WOW_PROFESSIONS_DATA = {
         "source": "Trainer"
       },
       {
+        "id": 11166,
         "name": "Enchant Gloves - Skinning",
-        "icon": "inv_scroll_03",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 2,
+        "cat": "Gloves",
+        "kind": "Gloves Enchant",
+        "effect": "Skinning +5",
         "isNew": false,
         "learn": 200,
         "yellow": 220,
@@ -30371,15 +30502,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Drop: Witherbark Headhunter (Arathi Highlands)"
+        "source": "Formula drops from Witherbark Headhunter (Arathi Highlands)"
       },
       {
+        "id": null,
         "name": "Enchant Chest - Greater Intellect",
-        "icon": "inv_scroll_04",
+        "icon": "trade_engraving",
         "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "cat": "Chest",
+        "kind": "Chest Enchant",
+        "effect": "Intellect +6",
         "isNew": false,
         "learn": 185,
         "yellow": 205,
@@ -30397,12 +30529,13 @@ window.WOW_PROFESSIONS_DATA = {
         "source": "Trainer"
       },
       {
+        "id": 249489,
         "name": "Enchant Bracer - Lesser Healing Power",
-        "icon": "inv_scroll_04",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 2,
+        "cat": "Bracer",
+        "kind": "Bracer Enchant",
+        "effect": "Healing Spells +16, Damage Spells +6",
         "isNew": true,
         "learn": 205,
         "yellow": 225,
@@ -30417,15 +30550,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 2
           }
         ],
-        "source": "Trainer"
+        "source": "Formula sold by Gorhak (Desolace)"
       },
       {
+        "id": 249504,
         "name": "Enchant Necklace - Agility",
-        "icon": "inv_scroll_04",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 2,
+        "cat": "Necklace",
+        "kind": "Necklace Enchant",
+        "effect": "Agility +5",
         "isNew": true,
         "learn": 210,
         "yellow": 225,
@@ -30468,15 +30602,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 2
           }
         ],
-        "source": "Trainer"
+        "source": "Formula sold by Alynsia (Alliance)"
       },
       {
+        "id": 249505,
         "name": "Enchant Necklace - Deflection",
-        "icon": "inv_scroll_04",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 2,
+        "cat": "Necklace",
+        "kind": "Necklace Enchant",
+        "effect": "Defense +5",
         "isNew": true,
         "learn": 210,
         "yellow": 225,
@@ -30519,15 +30654,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 2
           }
         ],
-        "source": "Trainer"
+        "source": "Formula sold by Alynsia (Alliance)"
       },
       {
+        "id": 249503,
         "name": "Enchant Necklace - Healing Power",
-        "icon": "inv_scroll_04",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 2,
+        "cat": "Necklace",
+        "kind": "Necklace Enchant",
+        "effect": "Healing Spells +11, Damage Spells +4",
         "isNew": true,
         "learn": 210,
         "yellow": 225,
@@ -30570,15 +30706,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 2
           }
         ],
-        "source": "Trainer"
+        "source": "Formula sold by Alynsia (Alliance)"
       },
       {
+        "id": 249502,
         "name": "Enchant Necklace - Spell Power",
-        "icon": "inv_scroll_04",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 2,
+        "cat": "Necklace",
+        "kind": "Necklace Enchant",
+        "effect": "+6 Spell Power",
         "isNew": true,
         "learn": 210,
         "yellow": 225,
@@ -30621,15 +30758,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 2
           }
         ],
-        "source": "Trainer"
+        "source": "Formula sold by Alynsia (Alliance)"
       },
       {
+        "id": 249496,
         "name": "Enchant Necklace - Strength",
-        "icon": "inv_scroll_04",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 2,
+        "cat": "Necklace",
+        "kind": "Necklace Enchant",
+        "effect": "Strength +5",
         "isNew": true,
         "learn": 210,
         "yellow": 225,
@@ -30672,15 +30810,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 2
           }
         ],
-        "source": "Trainer"
+        "source": "Formula sold by Alynsia (Alliance)"
       },
       {
+        "id": 249511,
         "name": "Enchant 2H Weapon - Lesser Agility",
-        "icon": "inv_scroll_03",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 2,
+        "cat": "2H Weapon",
+        "kind": "2H Weapon Enchant",
+        "effect": "Agility +15",
         "isNew": true,
         "learn": 210,
         "yellow": 230,
@@ -30709,15 +30848,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 2
           }
         ],
-        "source": "Formula: Enchant 2H Weapon - Lesser Agility"
+        "source": "Formula: Formula: Enchant 2H Weapon - Lesser Agility"
       },
       {
+        "id": 11202,
         "name": "Enchant Shield - Stamina",
-        "icon": "inv_scroll_03",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 2,
+        "cat": "Shield",
+        "kind": "Shield Enchant",
+        "effect": "Stamina +7",
         "isNew": false,
         "learn": 210,
         "yellow": 230,
@@ -30732,15 +30872,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Drop: Caretaker Alaric (Arathi Highlands)"
+        "source": "Formula drops from Caretaker Alaric (Arathi Highlands)"
       },
       {
+        "id": null,
         "name": "Enchant Weapon - Striking",
-        "icon": "inv_scroll_04",
+        "icon": "trade_engraving",
         "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "cat": "Weapon",
+        "kind": "Weapon Enchant",
+        "effect": "Weapon Damage +3",
         "isNew": false,
         "learn": 195,
         "yellow": 215,
@@ -30765,12 +30906,13 @@ window.WOW_PROFESSIONS_DATA = {
         "source": "Trainer"
       },
       {
+        "id": 11203,
         "name": "Enchant Gloves - Advanced Mining",
-        "icon": "inv_scroll_03",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 2,
+        "cat": "Gloves",
+        "kind": "Gloves Enchant",
+        "effect": "Mining +5",
         "isNew": false,
         "learn": 215,
         "yellow": 235,
@@ -30792,15 +30934,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 2
           }
         ],
-        "source": "Drop: Venture Co. Strip Miner (Stranglethorn Vale)"
+        "source": "Formula drops from Venture Co. Strip Miner (Stranglethorn Vale)"
       },
       {
+        "id": null,
         "name": "Enchant 2H Weapon - Impact",
-        "icon": "inv_scroll_04",
+        "icon": "trade_engraving",
         "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "cat": "2H Weapon",
+        "kind": "2H Weapon Enchant",
+        "effect": "Weapon Damage +6",
         "isNew": false,
         "learn": 200,
         "yellow": 220,
@@ -30825,12 +30968,13 @@ window.WOW_PROFESSIONS_DATA = {
         "source": "Trainer"
       },
       {
+        "id": null,
         "name": "Enchant Chest - Lesser Stats",
-        "icon": "inv_scroll_04",
+        "icon": "trade_engraving",
         "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "cat": "Chest",
+        "kind": "Chest Enchant",
+        "effect": "All Stats +2",
         "isNew": false,
         "learn": 200,
         "yellow": 220,
@@ -30862,12 +31006,13 @@ window.WOW_PROFESSIONS_DATA = {
         "source": "Trainer"
       },
       {
+        "id": 249510,
         "name": "Enchant Chest - Absorption",
-        "icon": "inv_scroll_04",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 2,
+        "cat": "Chest",
+        "kind": "Chest Enchant",
+        "effect": "Has a 25% chance per hit of giving you 50 points of damage absorption. Cannot occur more often than once every 5 sec.",
         "isNew": true,
         "learn": 220,
         "yellow": 225,
@@ -30896,15 +31041,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 3
           }
         ],
-        "source": "Trainer"
+        "source": "Formula sold by Alynsia (Alliance)"
       },
       {
+        "id": 249513,
         "name": "Enchant 2H Weapon - Lesser Strength",
-        "icon": "inv_scroll_03",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 2,
+        "cat": "2H Weapon",
+        "kind": "2H Weapon Enchant",
+        "effect": "Strength +15",
         "isNew": true,
         "learn": 220,
         "yellow": 240,
@@ -30933,15 +31079,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 2
           }
         ],
-        "source": "Formula: Enchant 2H Weapon - Lesser Strength"
+        "source": "Formula: Formula: Enchant 2H Weapon - Lesser Strength"
       },
       {
+        "id": 11204,
         "name": "Enchant Bracer - Greater Spirit",
-        "icon": "inv_scroll_03",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 2,
+        "cat": "Bracer",
+        "kind": "Bracer Enchant",
+        "effect": "Spirit +7",
         "isNew": false,
         "learn": 220,
         "yellow": 240,
@@ -30963,15 +31110,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Drop: Deepstrider Searcher (Desolace)"
+        "source": "Formula drops from Deepstrider Searcher (Desolace)"
       },
       {
+        "id": null,
         "name": "Enchant Cloak - Greater Defense",
-        "icon": "inv_scroll_04",
+        "icon": "trade_engraving",
         "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "cat": "Cloak",
+        "kind": "Cloak Enchant",
+        "effect": "Armor +60",
         "isNew": false,
         "learn": 205,
         "yellow": 225,
@@ -30989,12 +31137,13 @@ window.WOW_PROFESSIONS_DATA = {
         "source": "Trainer"
       },
       {
+        "id": null,
         "name": "Enchant Cloak - Resistance",
-        "icon": "inv_scroll_04",
+        "icon": "trade_engraving",
         "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "cat": "Cloak",
+        "kind": "Cloak Enchant",
+        "effect": "+3 All Resistances",
         "isNew": false,
         "learn": 205,
         "yellow": 225,
@@ -31012,12 +31161,13 @@ window.WOW_PROFESSIONS_DATA = {
         "source": "Trainer"
       },
       {
+        "id": 11206,
         "name": "Enchant Cloak - Lesser Agility",
-        "icon": "inv_scroll_03",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 2,
+        "cat": "Cloak",
+        "kind": "Cloak Enchant",
+        "effect": "Agility +3",
         "isNew": false,
         "learn": 225,
         "yellow": 245,
@@ -31032,15 +31182,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 2
           }
         ],
-        "source": "Drop: Syndicate Assassin (Alterac Mountains)"
+        "source": "Formula drops from Syndicate Assassin (Alterac Mountains)"
       },
       {
+        "id": 11205,
         "name": "Enchant Gloves - Advanced Herbalism",
-        "icon": "inv_scroll_03",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 2,
+        "cat": "Gloves",
+        "kind": "Gloves Enchant",
+        "effect": "Herbalism +5",
         "isNew": false,
         "learn": 225,
         "yellow": 245,
@@ -31062,15 +31213,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Drop: Swampwalker (Swamp of Sorrows)"
+        "source": "Formula drops from Swampwalker (Swamp of Sorrows)"
       },
       {
+        "id": null,
         "name": "Enchant Bracer - Intellect",
-        "icon": "inv_scroll_04",
+        "icon": "trade_engraving",
         "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "cat": "Bracer",
+        "kind": "Bracer Enchant",
+        "effect": "Intellect +5",
         "isNew": false,
         "learn": 210,
         "yellow": 230,
@@ -31088,12 +31240,13 @@ window.WOW_PROFESSIONS_DATA = {
         "source": "Trainer"
       },
       {
+        "id": null,
         "name": "Enchant Gloves - Agility",
-        "icon": "inv_scroll_04",
+        "icon": "trade_engraving",
         "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "cat": "Gloves",
+        "kind": "Gloves Enchant",
+        "effect": "Agility +7",
         "isNew": false,
         "learn": 210,
         "yellow": 230,
@@ -31111,12 +31264,13 @@ window.WOW_PROFESSIONS_DATA = {
         "source": "Trainer"
       },
       {
+        "id": 11208,
         "name": "Enchant Weapon - Demonslaying",
-        "icon": "inv_scroll_03",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 2,
+        "cat": "Weapon",
+        "kind": "Weapon Enchant",
+        "effect": "A chance of stunning and doing heavy damage to demons.",
         "isNew": false,
         "learn": 230,
         "yellow": 250,
@@ -31145,15 +31299,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Drop: Emerald Ooze (The Hinterlands)"
+        "source": "Formula drops from Emerald Ooze (The Hinterlands)"
       },
       {
+        "id": null,
         "name": "Enchant Boots - Stamina",
-        "icon": "inv_scroll_04",
+        "icon": "trade_engraving",
         "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "cat": "Boots",
+        "kind": "Boots Enchant",
+        "effect": "Stamina +5",
         "isNew": false,
         "learn": 215,
         "yellow": 235,
@@ -31171,12 +31326,13 @@ window.WOW_PROFESSIONS_DATA = {
         "source": "Trainer"
       },
       {
+        "id": 11223,
         "name": "Enchant Bracer - Deflection",
-        "icon": "inv_scroll_04",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 2,
+        "cat": "Bracer",
+        "kind": "Bracer Enchant",
+        "effect": "Defense +7",
         "isNew": false,
         "learn": 235,
         "yellow": 255,
@@ -31198,15 +31354,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Trainer"
+        "source": "Formula sold by Mythrin'dir (Alliance)"
       },
       {
+        "id": 11224,
         "name": "Enchant Shield - Frost Resistance",
-        "icon": "inv_scroll_03",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 2,
+        "cat": "Shield",
+        "kind": "Shield Enchant",
+        "effect": "+8 Frost Resistance",
         "isNew": false,
         "learn": 235,
         "yellow": 255,
@@ -31228,15 +31385,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Drop: Terrorspark (Burning Steppes)"
+        "source": "Formula drops from Terrorspark (Burning Steppes)"
       },
       {
+        "id": null,
         "name": "Enchant Chest - Superior Stamina",
-        "icon": "inv_scroll_04",
+        "icon": "trade_engraving",
         "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "cat": "Chest",
+        "kind": "Chest Enchant",
+        "effect": "Stamina +8",
         "isNew": false,
         "learn": 220,
         "yellow": 240,
@@ -31254,12 +31412,13 @@ window.WOW_PROFESSIONS_DATA = {
         "source": "Trainer"
       },
       {
+        "id": 249514,
         "name": "Enchant Bracer - Greater Agility",
-        "icon": "inv_scroll_03",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 2,
+        "cat": "Bracer",
+        "kind": "Bracer Enchant",
+        "effect": "Agility +7",
         "isNew": true,
         "learn": 240,
         "yellow": 260,
@@ -31281,15 +31440,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 2
           }
         ],
-        "source": "Formula: Enchant Bracer - Greater Agility"
+        "source": "Formula: Formula: Enchant Bracer - Greater Agility"
       },
       {
+        "id": null,
         "name": "Enchant Boots - Minor Speed",
-        "icon": "inv_scroll_04",
+        "icon": "trade_engraving",
         "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "cat": "Boots",
+        "kind": "Boots Enchant",
+        "effect": "Give a slight movement speed increase.",
         "isNew": false,
         "learn": 225,
         "yellow": 245,
@@ -31321,12 +31481,13 @@ window.WOW_PROFESSIONS_DATA = {
         "source": "Trainer"
       },
       {
+        "id": null,
         "name": "Enchant Gloves - Strength",
-        "icon": "inv_scroll_04",
+        "icon": "trade_engraving",
         "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "cat": "Gloves",
+        "kind": "Gloves Enchant",
+        "effect": "Strength +7",
         "isNew": false,
         "learn": 225,
         "yellow": 245,
@@ -31351,12 +31512,13 @@ window.WOW_PROFESSIONS_DATA = {
         "source": "Trainer"
       },
       {
+        "id": 11225,
         "name": "Enchant Bracer - Greater Stamina",
-        "icon": "inv_scroll_03",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 2,
+        "cat": "Bracer",
+        "kind": "Bracer Enchant",
+        "effect": "Stamina +7",
         "isNew": false,
         "learn": 245,
         "yellow": 265,
@@ -31371,15 +31533,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Drop: Enslaved Archaeologist (Searing Gorge)"
+        "source": "Formula drops from Enslaved Archaeologist (Searing Gorge)"
       },
       {
+        "id": null,
         "name": "Enchant Chest - Superior Intellect",
-        "icon": "inv_scroll_04",
+        "icon": "trade_engraving",
         "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "cat": "Chest",
+        "kind": "Chest Enchant",
+        "effect": "Intellect +8",
         "isNew": false,
         "learn": 230,
         "yellow": 250,
@@ -31397,12 +31560,13 @@ window.WOW_PROFESSIONS_DATA = {
         "source": "Trainer"
       },
       {
+        "id": null,
         "name": "Enchant Shield - Greater Spirit",
-        "icon": "inv_scroll_04",
+        "icon": "trade_engraving",
         "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "cat": "Shield",
+        "kind": "Shield Enchant",
+        "effect": "Spirit +7",
         "isNew": false,
         "learn": 230,
         "yellow": 250,
@@ -31427,12 +31591,13 @@ window.WOW_PROFESSIONS_DATA = {
         "source": "Trainer"
       },
       {
+        "id": 249516,
         "name": "Enchant Gloves - Advanced Skinning",
-        "icon": "inv_scroll_03",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 2,
+        "cat": "Gloves",
+        "kind": "Gloves Enchant",
+        "effect": "Skinning +10",
         "isNew": true,
         "learn": 250,
         "yellow": 270,
@@ -31454,15 +31619,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Formula: Enchant Gloves - Advanced Skinning"
+        "source": "Formula: Formula: Enchant Gloves - Advanced Skinning"
       },
       {
+        "id": 11226,
         "name": "Enchant Gloves - Riding Skill",
-        "icon": "inv_scroll_03",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 2,
+        "cat": "Gloves",
+        "kind": "Gloves Enchant",
+        "effect": "Grant a minor movement bonus while mounted.",
         "isNew": false,
         "learn": 250,
         "yellow": 270,
@@ -31484,15 +31650,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Drop: Blazing Elemental (Searing Gorge)"
+        "source": "Formula drops from Blazing Elemental (Searing Gorge)"
       },
       {
+        "id": null,
         "name": "Enchant Boots - Agility",
-        "icon": "inv_scroll_04",
+        "icon": "trade_engraving",
         "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "cat": "Boots",
+        "kind": "Boots Enchant",
+        "effect": "Agility +5",
         "isNew": false,
         "learn": 235,
         "yellow": 255,
@@ -31510,12 +31677,13 @@ window.WOW_PROFESSIONS_DATA = {
         "source": "Trainer"
       },
       {
+        "id": 16214,
         "name": "Enchant Bracer - Greater Intellect",
-        "icon": "inv_scroll_03",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 2,
+        "cat": "Bracer",
+        "kind": "Bracer Enchant",
+        "effect": "Intellect +7",
         "isNew": false,
         "learn": 255,
         "yellow": 275,
@@ -31530,15 +31698,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 2
           }
         ],
-        "source": "Drop: Vilebranch Shadowcaster (The Hinterlands)"
+        "source": "Formula drops from Vilebranch Shadowcaster (The Hinterlands)"
       },
       {
+        "id": null,
         "name": "Enchant 2H Weapon - Greater Impact",
-        "icon": "inv_scroll_04",
+        "icon": "trade_engraving",
         "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "cat": "2H Weapon",
+        "kind": "2H Weapon Enchant",
+        "effect": "Weapon Damage +7",
         "isNew": false,
         "learn": 240,
         "yellow": 260,
@@ -31563,12 +31732,13 @@ window.WOW_PROFESSIONS_DATA = {
         "source": "Trainer"
       },
       {
+        "id": null,
         "name": "Enchant Bracer - Greater Strength",
-        "icon": "inv_scroll_04",
+        "icon": "trade_engraving",
         "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "cat": "Bracer",
+        "kind": "Bracer Enchant",
+        "effect": "Strength +7",
         "isNew": false,
         "learn": 240,
         "yellow": 260,
@@ -31593,12 +31763,13 @@ window.WOW_PROFESSIONS_DATA = {
         "source": "Trainer"
       },
       {
+        "id": 16215,
         "name": "Enchant Boots - Greater Stamina",
-        "icon": "inv_scroll_03",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 2,
+        "cat": "Boots",
+        "kind": "Boots Enchant",
+        "effect": "Stamina +7",
         "isNew": false,
         "learn": 260,
         "yellow": 280,
@@ -31613,15 +31784,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Drop: Krellack (Silithus)"
+        "source": "Formula drops from Krellack (Silithus)"
       },
       {
+        "id": null,
         "name": "Enchant Chest - Stats",
-        "icon": "inv_scroll_04",
+        "icon": "trade_engraving",
         "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "cat": "Chest",
+        "kind": "Chest Enchant",
+        "effect": "All Stats +3",
         "isNew": false,
         "learn": 245,
         "yellow": 265,
@@ -31653,12 +31825,13 @@ window.WOW_PROFESSIONS_DATA = {
         "source": "Trainer"
       },
       {
+        "id": null,
         "name": "Enchant Weapon - Greater Striking",
-        "icon": "inv_scroll_04",
+        "icon": "trade_engraving",
         "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "cat": "Weapon",
+        "kind": "Weapon Enchant",
+        "effect": "Weapon Damage +4",
         "isNew": false,
         "learn": 245,
         "yellow": 265,
@@ -31683,12 +31856,13 @@ window.WOW_PROFESSIONS_DATA = {
         "source": "Trainer"
       },
       {
+        "id": 16216,
         "name": "Enchant Cloak - Greater Resistance",
-        "icon": "inv_scroll_04",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 2,
+        "cat": "Cloak",
+        "kind": "Cloak Enchant",
+        "effect": "+5 All Resistances",
         "isNew": false,
         "learn": 265,
         "yellow": 285,
@@ -31738,15 +31912,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Trainer"
+        "source": "Formula: Sunken Temple"
       },
       {
+        "id": 16217,
         "name": "Enchant Shield - Greater Stamina",
-        "icon": "inv_scroll_04",
+        "icon": "inv_misc_note_01",
         "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "cat": "Shield",
+        "kind": "Shield Enchant",
+        "effect": "Stamina +9",
         "isNew": false,
         "learn": 265,
         "yellow": 285,
@@ -31761,15 +31936,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Trainer"
+        "source": "Formula sold by Mythrin'dir (Alliance)"
       },
       {
+        "id": 11207,
         "name": "Enchant Weapon - Fiery Weapon",
-        "icon": "inv_scroll_04",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 2,
+        "cat": "Weapon",
+        "kind": "Weapon Enchant",
+        "effect": "Often strike for 40 additional fire damage.",
         "isNew": false,
         "learn": 265,
         "yellow": 285,
@@ -31791,15 +31967,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 2
           }
         ],
-        "source": "Trainer"
+        "source": "Formula: Blackrock Depths"
       },
       {
+        "id": null,
         "name": "Enchant Gloves - Minor Haste",
-        "icon": "inv_scroll_04",
+        "icon": "trade_engraving",
         "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "cat": "Gloves",
+        "kind": "Gloves Enchant",
+        "effect": "Haste +1%",
         "isNew": false,
         "learn": 250,
         "yellow": 270,
@@ -31824,12 +32001,13 @@ window.WOW_PROFESSIONS_DATA = {
         "source": "Trainer"
       },
       {
+        "id": 16218,
         "name": "Enchant Bracer - Superior Spirit",
-        "icon": "inv_scroll_03",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 2,
+        "cat": "Bracer",
+        "kind": "Bracer Enchant",
+        "effect": "Spirit +9",
         "isNew": false,
         "learn": 270,
         "yellow": 290,
@@ -31851,15 +32029,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Drop: Hitah'ya the Keeper (Arathi Highlands)"
+        "source": "Formula drops from Hitah'ya the Keeper (Arathi Highlands)"
       },
       {
+        "id": 16219,
         "name": "Enchant Gloves - Greater Agility",
-        "icon": "inv_scroll_03",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 2,
+        "cat": "Gloves",
+        "kind": "Gloves Enchant",
+        "effect": "Agility +10",
         "isNew": false,
         "learn": 270,
         "yellow": 290,
@@ -31881,15 +32060,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Drop: Legashi Rogue (Azshara)"
+        "source": "Formula drops from Legashi Rogue (Azshara)"
       },
       {
+        "id": 16220,
         "name": "Enchant Boots - Spirit",
-        "icon": "inv_scroll_03",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 2,
+        "cat": "Boots",
+        "kind": "Boots Enchant",
+        "effect": "Spirit +5",
         "isNew": false,
         "learn": 275,
         "yellow": 295,
@@ -31911,15 +32091,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 2
           }
         ],
-        "source": "Drop: Hematos (Burning Steppes)"
+        "source": "Formula drops from Hematos (Burning Steppes)"
       },
       {
+        "id": 16221,
         "name": "Enchant Chest - Major Stamina",
-        "icon": "inv_scroll_04",
+        "icon": "inv_misc_note_01",
         "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "cat": "Chest",
+        "kind": "Chest Enchant",
+        "effect": "+10 Stamina",
         "isNew": false,
         "learn": 275,
         "yellow": 295,
@@ -31941,15 +32122,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 3
           }
         ],
-        "source": "Trainer"
+        "source": "Formula sold by Qia (Winterspring)"
       },
       {
+        "id": 16222,
         "name": "Enchant Shield - Superior Spirit",
-        "icon": "inv_scroll_03",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 2,
+        "cat": "Shield",
+        "kind": "Shield Enchant",
+        "effect": "Spirit +9",
         "isNew": false,
         "learn": 280,
         "yellow": 300,
@@ -31971,15 +32153,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Drop: Scarlet Warder (Eastern Plaguelands)"
+        "source": "Formula drops from Scarlet Warder (Eastern Plaguelands)"
       },
       {
+        "id": 16224,
         "name": "Enchant Cloak - Superior Defense",
-        "icon": "inv_scroll_04",
+        "icon": "inv_misc_note_01",
         "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "cat": "Cloak",
+        "kind": "Cloak Enchant",
+        "effect": "Armor +70",
         "isNew": false,
         "learn": 285,
         "yellow": 305,
@@ -31994,15 +32177,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Trainer"
+        "source": "Formula sold by Lorelae Wintersong (Moonglade)"
       },
       {
+        "id": 16223,
         "name": "Enchant Weapon - Icy Chill",
-        "icon": "inv_scroll_03",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 2,
+        "cat": "Weapon",
+        "kind": "Weapon Enchant",
+        "effect": "Often chill the target reducing their movement and attack speed.",
         "isNew": false,
         "learn": 285,
         "yellow": 305,
@@ -32038,15 +32222,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Drop: Anguished Highborne (Winterspring)"
+        "source": "Formula drops from Anguished Highborne (Winterspring)"
       },
       {
+        "id": 249523,
         "name": "Enchant 2H Weapon - Strength",
-        "icon": "inv_scroll_03",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 2,
+        "cat": "2H Weapon",
+        "kind": "2H Weapon Enchant",
+        "effect": "Strength +25",
         "isNew": true,
         "learn": 290,
         "yellow": 295,
@@ -32082,15 +32267,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 2
           }
         ],
-        "source": "Formula: Enchant 2H Weapon - Strength"
+        "source": "Formula: Formula: Enchant 2H Weapon - Strength"
       },
       {
+        "id": 22392,
         "name": "Enchant 2H Weapon - Agility",
-        "icon": "inv_scroll_04",
+        "icon": "inv_misc_note_01",
         "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "cat": "2H Weapon",
+        "kind": "2H Weapon Enchant",
+        "effect": "Agility +25",
         "isNew": false,
         "learn": 290,
         "yellow": 310,
@@ -32126,15 +32312,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 2
           }
         ],
-        "source": "Trainer"
+        "source": "Formula sold by Meilosh (Felwood)"
       },
       {
+        "id": 19446,
         "name": "Enchant Bracer - Mana Regeneration",
-        "icon": "inv_scroll_04",
+        "icon": "inv_misc_note_01",
         "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "cat": "Bracer",
+        "kind": "Bracer Enchant",
+        "effect": "Mana Regen 4 per 5 sec.",
         "isNew": false,
         "learn": 290,
         "yellow": 310,
@@ -32163,15 +32350,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 2
           }
         ],
-        "source": "Trainer"
+        "source": "Formula sold by Quartermaster Miranda Breechlock (Eastern Plaguelands)"
       },
       {
+        "id": 16242,
         "name": "Enchant Chest - Major Intellect",
-        "icon": "inv_scroll_03",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 2,
+        "cat": "Chest",
+        "kind": "Chest Enchant",
+        "effect": "Intellect +10",
         "isNew": false,
         "learn": 290,
         "yellow": 310,
@@ -32193,15 +32381,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 3
           }
         ],
-        "source": "Drop: Scarlet Enchanter (Eastern Plaguelands)"
+        "source": "Formula drops from Scarlet Enchanter (Eastern Plaguelands)"
       },
       {
+        "id": 19445,
         "name": "Enchant Weapon - Agility",
-        "icon": "inv_scroll_04",
+        "icon": "inv_misc_note_01",
         "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "cat": "Weapon",
+        "kind": "Weapon Enchant",
+        "effect": "Agility +15",
         "isNew": false,
         "learn": 290,
         "yellow": 310,
@@ -32237,15 +32426,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 2
           }
         ],
-        "source": "Trainer"
+        "source": "Formula sold by Meilosh (Felwood)"
       },
       {
+        "id": 19444,
         "name": "Enchant Weapon - Strength",
-        "icon": "inv_scroll_04",
+        "icon": "inv_misc_note_01",
         "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "cat": "Weapon",
+        "kind": "Weapon Enchant",
+        "effect": "Strength +15",
         "isNew": false,
         "learn": 290,
         "yellow": 310,
@@ -32281,15 +32471,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 2
           }
         ],
-        "source": "Trainer"
+        "source": "Formula sold by Lokhtos Darkbargainer (Blackrock Depths)"
       },
       {
+        "id": 274424,
         "name": "Enchant Gloves - Lotus Claw",
-        "icon": "inv_scroll_03",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 2,
+        "cat": "Gloves",
+        "kind": "Gloves Enchant",
+        "effect": "Give a small chance to acquire Death Lotus when gathering any herb in Hyjal.",
         "isNew": true,
         "learn": 295,
         "yellow": 295,
@@ -32325,15 +32516,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 2
           }
         ],
-        "source": "Formula: Enchant Gloves - Lotus Claw"
+        "source": "Formula: Formula: Enchant Gloves - Lotus Claw"
       },
       {
+        "id": 16247,
         "name": "Enchant 2H Weapon - Superior Impact",
-        "icon": "inv_scroll_04",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 2,
+        "cat": "2H Weapon",
+        "kind": "2H Weapon Enchant",
+        "effect": "Weapon Damage +9",
         "isNew": false,
         "learn": 295,
         "yellow": 315,
@@ -32355,15 +32547,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Trainer"
+        "source": "Formula: Blackrock Spire"
       },
       {
+        "id": 16245,
         "name": "Enchant Boots - Greater Agility",
-        "icon": "inv_scroll_03",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 2,
+        "cat": "Boots",
+        "kind": "Boots Enchant",
+        "effect": "Agility +7",
         "isNew": false,
         "learn": 295,
         "yellow": 315,
@@ -32378,15 +32571,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 2
           }
         ],
-        "source": "Drop: Strashaz Hydra (Dustwallow Marsh)"
+        "source": "Formula drops from Strashaz Hydra (Dustwallow Marsh)"
       },
       {
+        "id": 249524,
         "name": "Enchant Bracer - Superior Agility",
-        "icon": "inv_scroll_03",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 2,
+        "cat": "Bracer",
+        "kind": "Bracer Enchant",
+        "effect": "+9 Agility",
         "isNew": true,
         "learn": 295,
         "yellow": 315,
@@ -32415,15 +32609,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 3
           }
         ],
-        "source": "Formula: Enchant Bracer - Superior Agility"
+        "source": "Formula: Formula: Enchant Bracer - Superior Agility"
       },
       {
+        "id": 16246,
         "name": "Enchant Bracer - Superior Strength",
-        "icon": "inv_scroll_03",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 2,
+        "cat": "Bracer",
+        "kind": "Bracer Enchant",
+        "effect": "Strength +9",
         "isNew": false,
         "learn": 295,
         "yellow": 315,
@@ -32445,15 +32640,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 2
           }
         ],
-        "source": "Drop: Deadwind Warlock (Blasted Lands)"
+        "source": "Formula drops from Deadwind Warlock (Blasted Lands)"
       },
       {
+        "id": 16244,
         "name": "Enchant Gloves - Greater Strength",
-        "icon": "inv_scroll_04",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 2,
+        "cat": "Gloves",
+        "kind": "Gloves Enchant",
+        "effect": "Strength +10",
         "isNew": false,
         "learn": 295,
         "yellow": 315,
@@ -32475,15 +32671,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Trainer"
+        "source": "Formula: Blackrock Spire"
       },
       {
+        "id": 16248,
         "name": "Enchant Weapon - Unholy Weapon",
-        "icon": "inv_scroll_04",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 2,
+        "cat": "Weapon",
+        "kind": "Weapon Enchant",
+        "effect": "Often inflict a curse on the target reducing their melee damage.",
         "isNew": false,
         "learn": 295,
         "yellow": 315,
@@ -32505,15 +32702,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 2
           }
         ],
-        "source": "Trainer"
+        "source": "Formula: Stratholme"
       },
       {
+        "id": 16249,
         "name": "Enchant 2H Weapon - Major Intellect",
-        "icon": "inv_scroll_04",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 2,
+        "cat": "2H Weapon",
+        "kind": "2H Weapon Enchant",
+        "effect": "Intellect +9",
         "isNew": false,
         "learn": 300,
         "yellow": 320,
@@ -32535,15 +32733,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 3
           }
         ],
-        "source": "Trainer"
+        "source": "Formula: Stratholme"
       },
       {
+        "id": 16255,
         "name": "Enchant 2H Weapon - Major Spirit",
-        "icon": "inv_scroll_04",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 2,
+        "cat": "2H Weapon",
+        "kind": "2H Weapon Enchant",
+        "effect": "Spirit +9",
         "isNew": false,
         "learn": 300,
         "yellow": 320,
@@ -32565,15 +32764,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 3
           }
         ],
-        "source": "Trainer"
+        "source": "Formula: Scholomance"
       },
       {
+        "id": 249526,
         "name": "Enchant 2H Weapon - Mighty Healing Power",
-        "icon": "inv_scroll_04",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 2,
+        "cat": "2H Weapon",
+        "kind": "2H Weapon Enchant",
+        "effect": "Healing Spells +100, Damage Spells +34",
         "isNew": true,
         "learn": 300,
         "yellow": 320,
@@ -32623,15 +32823,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 2
           }
         ],
-        "source": "Trainer"
+        "source": "Formula sold by Alynsia (Alliance)"
       },
       {
+        "id": 249525,
         "name": "Enchant 2H Weapon - Mighty Spell Power",
-        "icon": "inv_scroll_04",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 2,
+        "cat": "2H Weapon",
+        "kind": "2H Weapon Enchant",
+        "effect": "Spell Power +55",
         "isNew": true,
         "learn": 300,
         "yellow": 320,
@@ -32681,15 +32882,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 2
           }
         ],
-        "source": "Trainer"
+        "source": "Formula sold by Alynsia (Alliance)"
       },
       {
+        "id": 274394,
         "name": "Enchant 2H Weapon - Spellblasting",
-        "icon": "inv_scroll_04",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_enchant_formulasuperior_01",
+        "quality": 3,
+        "cat": "2H Weapon",
+        "kind": "2H Weapon Enchant",
+        "effect": "+65 Spell Power",
         "isNew": true,
         "learn": 300,
         "yellow": 320,
@@ -32725,15 +32927,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Trainer"
+        "source": "Formula sold by Alynsia (Alliance)"
       },
       {
+        "id": 274401,
         "name": "Enchant Bracer - Greater Spellpower",
-        "icon": "inv_scroll_04",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_enchant_formulasuperior_01",
+        "quality": 3,
+        "cat": "Bracer",
+        "kind": "Bracer Enchant",
+        "effect": "+16 Spell Power",
         "isNew": true,
         "learn": 300,
         "yellow": 320,
@@ -32769,15 +32972,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Trainer"
+        "source": "Formula sold by Alynsia (Alliance)"
       },
       {
+        "id": 19447,
         "name": "Enchant Bracer - Healing Power",
-        "icon": "inv_scroll_04",
+        "icon": "inv_misc_note_01",
         "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "cat": "Bracer",
+        "kind": "Bracer Enchant",
+        "effect": "Healing Spells +24",
         "isNew": false,
         "learn": 300,
         "yellow": 320,
@@ -32813,15 +33017,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 2
           }
         ],
-        "source": "Trainer"
+        "source": "Formula sold by Quartermaster Miranda Breechlock (Eastern Plaguelands)"
       },
       {
+        "id": 249539,
         "name": "Enchant Bracer - Superior Deflection",
-        "icon": "inv_scroll_04",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 2,
+        "cat": "Bracer",
+        "kind": "Bracer Enchant",
+        "effect": "Defense +6",
         "isNew": true,
         "learn": 300,
         "yellow": 320,
@@ -32836,15 +33041,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 3
           }
         ],
-        "source": "Trainer"
+        "source": "Formula sold by Alynsia (Alliance)"
       },
       {
+        "id": 249538,
         "name": "Enchant Bracer - Superior Intellect",
-        "icon": "inv_scroll_04",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 2,
+        "cat": "Bracer",
+        "kind": "Bracer Enchant",
+        "effect": "Intellect +9",
         "isNew": true,
         "learn": 300,
         "yellow": 320,
@@ -32859,15 +33065,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 2
           }
         ],
-        "source": "Trainer"
+        "source": "Formula sold by Alynsia (Alliance)"
       },
       {
+        "id": 16251,
         "name": "Enchant Bracer - Superior Stamina",
-        "icon": "inv_scroll_03",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 2,
+        "cat": "Bracer",
+        "kind": "Bracer Enchant",
+        "effect": "Stamina +9",
         "isNew": false,
         "learn": 300,
         "yellow": 320,
@@ -32882,15 +33089,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Drop: Nathanos Blightcaller (Eastern Plaguelands)"
+        "source": "Formula drops from Nathanos Blightcaller (Eastern Plaguelands)"
       },
       {
+        "id": 16253,
         "name": "Enchant Chest - Greater Stats",
-        "icon": "inv_scroll_03",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 2,
+        "cat": "Chest",
+        "kind": "Chest Enchant",
+        "effect": "All Stats +4",
         "isNew": false,
         "learn": 300,
         "yellow": 320,
@@ -32919,15 +33127,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 2
           }
         ],
-        "source": "Drop: Hive'Regal Hive Lord (Silithus)"
+        "source": "Formula drops from Hive'Regal Hive Lord (Silithus)"
       },
       {
+        "id": 274399,
         "name": "Enchant Cloak - Agility",
-        "icon": "inv_scroll_04",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_enchant_formulasuperior_01",
+        "quality": 3,
+        "cat": "Cloak",
+        "kind": "Cloak Enchant",
+        "effect": "+5 Agility",
         "isNew": true,
         "learn": 300,
         "yellow": 320,
@@ -32956,15 +33165,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 2
           }
         ],
-        "source": "Trainer"
+        "source": "Formula sold by Alynsia (Alliance)"
       },
       {
+        "id": 20736,
         "name": "Enchant Cloak - Dodge",
-        "icon": "inv_scroll_04",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 3,
+        "cat": "Cloak",
+        "kind": "Cloak Enchant",
+        "effect": "Dodge +1%",
         "isNew": false,
         "learn": 300,
         "yellow": 320,
@@ -32993,15 +33203,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 2
           }
         ],
-        "source": "Trainer"
+        "source": "Formula: Ahn'Qiraj Temple"
       },
       {
+        "id": 20732,
         "name": "Enchant Cloak - Greater Fire Resistance",
-        "icon": "inv_scroll_04",
+        "icon": "inv_misc_note_01",
         "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "cat": "Cloak",
+        "kind": "Cloak Enchant",
+        "effect": "+15 Fire Resistance",
         "isNew": false,
         "learn": 300,
         "yellow": 320,
@@ -33030,15 +33241,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 2
           }
         ],
-        "source": "Trainer"
+        "source": "Formula sold by Kania (Silithus)"
       },
       {
+        "id": 20733,
         "name": "Enchant Cloak - Greater Nature Resistance",
-        "icon": "inv_scroll_04",
+        "icon": "inv_misc_note_01",
         "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "cat": "Cloak",
+        "kind": "Cloak Enchant",
+        "effect": "+15 Nature Resistance",
         "isNew": false,
         "learn": 300,
         "yellow": 320,
@@ -33067,15 +33279,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 2
           }
         ],
-        "source": "Trainer"
+        "source": "Formula sold by Kania (Silithus)"
       },
       {
+        "id": 20734,
         "name": "Enchant Cloak - Stealth",
-        "icon": "inv_scroll_04",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 3,
+        "cat": "Cloak",
+        "kind": "Cloak Enchant",
+        "effect": "Give an increase to your stealth as if you were 1 level higher.",
         "isNew": false,
         "learn": 300,
         "yellow": 320,
@@ -33104,15 +33317,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 2
           }
         ],
-        "source": "Trainer"
+        "source": "Formula: Ahn'Qiraj Temple"
       },
       {
+        "id": 20735,
         "name": "Enchant Cloak - Subtlety",
-        "icon": "inv_scroll_04",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 3,
+        "cat": "Cloak",
+        "kind": "Cloak Enchant",
+        "effect": "Decrease threat caused by the wearer by 2%.",
         "isNew": false,
         "learn": 300,
         "yellow": 320,
@@ -33141,15 +33355,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 2
           }
         ],
-        "source": "Trainer"
+        "source": "Formula: Ahn'Qiraj Temple"
       },
       {
+        "id": 249534,
         "name": "Enchant Gloves - Arcane Power",
-        "icon": "inv_scroll_04",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 2,
+        "cat": "Gloves",
+        "kind": "Gloves Enchant",
+        "effect": "Arcane Damage +20",
         "isNew": true,
         "learn": 300,
         "yellow": 320,
@@ -33178,15 +33393,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 2
           }
         ],
-        "source": "Trainer"
+        "source": "Formula sold by Alynsia (Alliance)"
       },
       {
+        "id": 20729,
         "name": "Enchant Gloves - Fire Power",
-        "icon": "inv_scroll_04",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 3,
+        "cat": "Gloves",
+        "kind": "Gloves Enchant",
+        "effect": "Fire Damage +20",
         "isNew": false,
         "learn": 300,
         "yellow": 320,
@@ -33215,15 +33431,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 2
           }
         ],
-        "source": "Trainer"
+        "source": "Formula: Ahn'Qiraj Temple"
       },
       {
+        "id": 20728,
         "name": "Enchant Gloves - Frost Power",
-        "icon": "inv_scroll_04",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 3,
+        "cat": "Gloves",
+        "kind": "Gloves Enchant",
+        "effect": "Frost Damage +20",
         "isNew": false,
         "learn": 300,
         "yellow": 320,
@@ -33252,15 +33469,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 2
           }
         ],
-        "source": "Trainer"
+        "source": "Formula: Ahn'Qiraj Temple"
       },
       {
+        "id": 20730,
         "name": "Enchant Gloves - Healing Power",
-        "icon": "inv_scroll_04",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 3,
+        "cat": "Gloves",
+        "kind": "Gloves Enchant",
+        "effect": "Healing Spells +35/Damage Spells +12",
         "isNew": false,
         "learn": 300,
         "yellow": 320,
@@ -33289,15 +33507,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 2
           }
         ],
-        "source": "Trainer"
+        "source": "Formula: Ahn'Qiraj Temple"
       },
       {
+        "id": 249536,
         "name": "Enchant Gloves - Holy Power",
-        "icon": "inv_scroll_04",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 2,
+        "cat": "Gloves",
+        "kind": "Gloves Enchant",
+        "effect": "Holy Damage +20",
         "isNew": true,
         "learn": 300,
         "yellow": 320,
@@ -33333,15 +33552,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 2
           }
         ],
-        "source": "Trainer"
+        "source": "Formula sold by Alynsia (Alliance)"
       },
       {
+        "id": 249535,
         "name": "Enchant Gloves - Natural Power",
-        "icon": "inv_scroll_04",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 2,
+        "cat": "Gloves",
+        "kind": "Gloves Enchant",
+        "effect": "Nature Damage +20",
         "isNew": true,
         "learn": 300,
         "yellow": 320,
@@ -33370,15 +33590,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 2
           }
         ],
-        "source": "Trainer"
+        "source": "Formula sold by Alynsia (Alliance)"
       },
       {
+        "id": 20727,
         "name": "Enchant Gloves - Shadow Power",
-        "icon": "inv_scroll_04",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 3,
+        "cat": "Gloves",
+        "kind": "Gloves Enchant",
+        "effect": "Shadow Damage +20",
         "isNew": false,
         "learn": 300,
         "yellow": 320,
@@ -33407,15 +33628,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 2
           }
         ],
-        "source": "Trainer"
+        "source": "Formula: Ahn'Qiraj Temple"
       },
       {
+        "id": 20731,
         "name": "Enchant Gloves - Superior Agility",
-        "icon": "inv_scroll_04",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 3,
+        "cat": "Gloves",
+        "kind": "Gloves Enchant",
+        "effect": "Agility +15",
         "isNew": false,
         "learn": 300,
         "yellow": 320,
@@ -33444,15 +33666,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 2
           }
         ],
-        "source": "Trainer"
+        "source": "Formula: Ahn'Qiraj Temple"
       },
       {
+        "id": 274398,
         "name": "Enchant Gloves - Superior Strength",
-        "icon": "inv_scroll_04",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_enchant_formulasuperior_01",
+        "quality": 3,
+        "cat": "Gloves",
+        "kind": "Gloves Enchant",
+        "effect": "Strength +15",
         "isNew": true,
         "learn": 300,
         "yellow": 320,
@@ -33481,15 +33704,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 2
           }
         ],
-        "source": "Trainer"
+        "source": "Formula sold by Alynsia (Alliance)"
       },
       {
+        "id": 20726,
         "name": "Enchant Gloves - Threat",
-        "icon": "inv_scroll_04",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 3,
+        "cat": "Gloves",
+        "kind": "Gloves Enchant",
+        "effect": "Threat +2%",
         "isNew": false,
         "learn": 300,
         "yellow": 320,
@@ -33518,15 +33742,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Trainer"
+        "source": "Formula: Ahn'Qiraj Temple"
       },
       {
+        "id": 274393,
         "name": "Enchant Off-Hand - Wisdom",
-        "icon": "inv_scroll_04",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_enchant_formulasuperior_01",
+        "quality": 3,
+        "cat": "Off-Hand",
+        "kind": "Off-Hand Enchant",
+        "effect": "+6 Intellect and +5 Spirit",
         "isNew": true,
         "learn": 300,
         "yellow": 320,
@@ -33562,15 +33787,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 2
           }
         ],
-        "source": "Trainer"
+        "source": "Formula sold by Alynsia (Alliance)"
       },
       {
+        "id": 16252,
         "name": "Enchant Weapon - Crusader",
-        "icon": "inv_scroll_03",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 2,
+        "cat": "Weapon",
+        "kind": "Weapon Enchant",
+        "effect": "Often when attacking in melee it heals for 100 and increases Strength by 100 for 15 sec.",
         "isNew": false,
         "learn": 300,
         "yellow": 320,
@@ -33592,15 +33818,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 2
           }
         ],
-        "source": "Drop: Scarlet Spellbinder (Western Plaguelands)"
+        "source": "Formula drops from Scarlet Spellbinder (Western Plaguelands)"
       },
       {
+        "id": 18260,
         "name": "Enchant Weapon - Healing Power",
-        "icon": "inv_scroll_04",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 3,
+        "cat": "Weapon",
+        "kind": "Weapon Enchant",
+        "effect": "Healing Spells +55",
         "isNew": false,
         "learn": 300,
         "yellow": 320,
@@ -33643,15 +33870,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 2
           }
         ],
-        "source": "Trainer"
+        "source": "Formula: Molten Core"
       },
       {
+        "id": 16254,
         "name": "Enchant Weapon - Lifestealing",
-        "icon": "inv_scroll_04",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 3,
+        "cat": "Weapon",
+        "kind": "Weapon Enchant",
+        "effect": "Often steal life from the enemy and give it to the wielder.",
         "isNew": false,
         "learn": 300,
         "yellow": 320,
@@ -33680,15 +33908,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 2
           }
         ],
-        "source": "Trainer"
+        "source": "Formula: Scholomance"
       },
       {
+        "id": 19449,
         "name": "Enchant Weapon - Mighty Intellect",
-        "icon": "inv_scroll_04",
+        "icon": "inv_misc_note_01",
         "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "cat": "Weapon",
+        "kind": "Weapon Enchant",
+        "effect": "Intellect +22",
         "isNew": false,
         "learn": 300,
         "yellow": 320,
@@ -33717,15 +33946,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Trainer"
+        "source": "Formula sold by Lokhtos Darkbargainer (Blackrock Depths)"
       },
       {
+        "id": 19448,
         "name": "Enchant Weapon - Mighty Spirit",
-        "icon": "inv_scroll_04",
+        "icon": "inv_misc_note_01",
         "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "cat": "Weapon",
+        "kind": "Weapon Enchant",
+        "effect": "Spirit +22",
         "isNew": false,
         "learn": 300,
         "yellow": 320,
@@ -33754,15 +33984,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Trainer"
+        "source": "Formula sold by Lokhtos Darkbargainer (Blackrock Depths)"
       },
       {
+        "id": 18259,
         "name": "Enchant Weapon - Spell Power",
-        "icon": "inv_scroll_04",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 3,
+        "cat": "Weapon",
+        "kind": "Weapon Enchant",
+        "effect": "Spell Power +30",
         "isNew": false,
         "learn": 300,
         "yellow": 320,
@@ -33812,15 +34043,16 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 2
           }
         ],
-        "source": "Trainer"
+        "source": "Formula: Molten Core"
       },
       {
+        "id": 16250,
         "name": "Enchant Weapon - Superior Striking",
-        "icon": "inv_scroll_04",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "icon": "inv_misc_note_01",
+        "quality": 2,
+        "cat": "Weapon",
+        "kind": "Weapon Enchant",
+        "effect": "Weapon Damage +5",
         "isNew": false,
         "learn": 300,
         "yellow": 320,
@@ -33842,177 +34074,2239 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 2
           }
         ],
+        "source": "Formula: Blackrock Spire"
+      },
+      {
+        "id": 6218,
+        "spellId": 7421,
+        "name": "Runed Copper Rod",
+        "icon": "inv_staff_goldfeathered_01",
+        "quality": 1,
+        "cat": "Rods",
+        "kind": "Rods",
+        "effect": "Binds when picked up \tEnchanting Sell Price: 24c",
+        "isNew": false,
+        "learn": 5,
+        "yellow": 5,
+        "green": 25,
+        "grey": 10,
+        "reagents": [
+          {
+            "id": 6217,
+            "count": 1,
+            "name": "Copper Rod",
+            "icon": "inv_misc_flute_01",
+            "quality": 1
+          },
+          {
+            "id": 247786,
+            "count": 1,
+            "name": "Mote of Magic",
+            "icon": "inv_elemental_mote_mana",
+            "quality": 1
+          }
+        ],
+        "source": "Trainer"
+      },
+      {
+        "id": 20744,
+        "spellId": 25124,
+        "name": "Minor Wizard Oil",
+        "icon": "inv_poison_mindnumbing",
+        "quality": 1,
+        "cat": "Oils",
+        "kind": "Oils",
+        "effect": "\tOther Requires Level 5 Use: While applied to target weapon it increases spell damage and healing by up to 8. Lasts for 30 minutes. Sell Price: 1s",
+        "isNew": false,
+        "learn": 5,
+        "yellow": 30,
+        "green": 50,
+        "grey": 65,
+        "reagents": [
+          {
+            "id": 10940,
+            "count": 1,
+            "name": "Strange Dust",
+            "icon": "inv_enchant_duststrange",
+            "quality": 1
+          },
+          {
+            "id": 17034,
+            "count": 1,
+            "name": "Maple Seed",
+            "icon": "inv_misc_food_02",
+            "quality": 1
+          },
+          {
+            "id": 3371,
+            "count": 1,
+            "name": "Empty Vial",
+            "icon": "inv_potion_84",
+            "quality": 1
+          }
+        ],
+        "source": "Formula: Formula: Minor Wizard Oil"
+      },
+      {
+        "id": 247786,
+        "spellId": 1245320,
+        "name": "Mote of Magic",
+        "icon": "inv_elemental_mote_mana",
+        "quality": 1,
+        "cat": "Relics",
+        "kind": "Relics",
+        "effect": "\tEnchanting \"Available from enchanting vendors.\"",
+        "isNew": true,
+        "learn": 10,
+        "yellow": 10,
+        "green": 30,
+        "grey": 15,
+        "reagents": [
+          {
+            "id": 10940,
+            "count": 1,
+            "name": "Strange Dust",
+            "icon": "inv_enchant_duststrange",
+            "quality": 1
+          }
+        ],
+        "source": "Trainer"
+      },
+      {
+        "id": 247789,
+        "spellId": 1245321,
+        "name": "Novice's Practice Wand",
+        "icon": "inv_weapon_shortblade_09",
+        "quality": 1,
+        "cat": "Wands & Staves",
+        "kind": "Wands & Staves",
+        "effect": "Binds when equipped Ranged\tWand 4 - 8 Arcane Damage\tSpeed 1.50 (4.0 damage per second) Sell Price: 5c",
+        "isNew": true,
+        "learn": 10,
+        "yellow": 10,
+        "green": 30,
+        "grey": 15,
+        "reagents": [
+          {
+            "id": 4470,
+            "count": 1,
+            "name": "Simple Wood",
+            "icon": "inv_tradeskillitem_01",
+            "quality": 1
+          },
+          {
+            "id": 247786,
+            "count": 1,
+            "name": "Mote of Magic",
+            "icon": "inv_elemental_mote_mana",
+            "quality": 1
+          }
+        ],
+        "source": "Trainer"
+      },
+      {
+        "id": 279976,
+        "spellId": 1230643,
+        "name": "Enchanted Lute",
+        "icon": "inv_10_enchanting2_magicswirl_bronze",
+        "quality": 1,
+        "cat": "Relics",
+        "kind": "Relics",
+        "effect": "\tOther Requires Enchanting (20) Use: Summons an enchanted lute that allows you and others sitting nearby to gain 308 Armor, 13 increase to all stats, and 22 increase to all resistances, mutually exclusive with Mark of the Wild. Requires a Campfire nearby. All camping features share a cooldown of 1 hr. (60 Min Cooldown)",
+        "isNew": true,
+        "learn": 20,
+        "yellow": 20,
+        "green": 40,
+        "grey": 25,
+        "reagents": [
+          {
+            "id": 4470,
+            "count": 1,
+            "name": "Simple Wood",
+            "icon": "inv_tradeskillitem_01",
+            "quality": 1
+          },
+          {
+            "id": 10940,
+            "count": 1,
+            "name": "Strange Dust",
+            "icon": "inv_enchant_duststrange",
+            "quality": 1
+          }
+        ],
+        "source": "Trainer"
+      },
+      {
+        "id": 11287,
+        "spellId": 14293,
+        "name": "Lesser Magic Wand",
+        "icon": "inv_staff_02",
+        "quality": 2,
+        "cat": "Wands & Staves",
+        "kind": "Wands & Staves",
+        "effect": "Binds when equipped Ranged\tWand 12 - 22 Arcane Damage\tSpeed 1.50 (11.3 damage per second) Requires Level 5 Equip: +1 Spell Power Sell Price: 1s 10c",
+        "isNew": false,
+        "learn": 75,
+        "yellow": 75,
+        "green": 95,
+        "grey": 115,
+        "reagents": [
+          {
+            "id": 4470,
+            "count": 1,
+            "name": "Simple Wood",
+            "icon": "inv_tradeskillitem_01",
+            "quality": 1
+          },
+          {
+            "id": 10938,
+            "count": 1,
+            "name": "Lesser Magic Essence",
+            "icon": "inv_enchant_essencemagicsmall",
+            "quality": 2
+          }
+        ],
+        "source": "Trainer"
+      },
+      {
+        "id": 11288,
+        "spellId": 14807,
+        "name": "Greater Magic Wand",
+        "icon": "inv_staff_07",
+        "quality": 2,
+        "cat": "Wands & Staves",
+        "kind": "Wands & Staves",
+        "effect": "Binds when equipped Ranged\tWand 22 - 41 Arcane Damage\tSpeed 1.80 (17.5 damage per second) Requires Level 13 Equip: +2 Spell Power Sell Price: 2s",
+        "isNew": false,
+        "learn": 110,
+        "yellow": 110,
+        "green": 130,
+        "grey": 150,
+        "reagents": [
+          {
+            "id": 4470,
+            "count": 1,
+            "name": "Simple Wood",
+            "icon": "inv_tradeskillitem_01",
+            "quality": 1
+          },
+          {
+            "id": 10938,
+            "count": 2,
+            "name": "Lesser Magic Essence",
+            "icon": "inv_enchant_essencemagicsmall",
+            "quality": 2
+          }
+        ],
+        "source": "Trainer"
+      },
+      {
+        "id": 6339,
+        "spellId": 7795,
+        "name": "Runed Silver Rod",
+        "icon": "inv_staff_01",
+        "quality": 1,
+        "cat": "Rods",
+        "kind": "Rods",
+        "effect": "Binds when picked up \tEnchanting Sell Price: 24c",
+        "isNew": false,
+        "learn": 130,
+        "yellow": 130,
+        "green": 150,
+        "grey": 170,
+        "reagents": [
+          {
+            "id": 6338,
+            "count": 1,
+            "name": "Silver Rod",
+            "icon": "inv_staff_01",
+            "quality": 1
+          },
+          {
+            "id": 10940,
+            "count": 3,
+            "name": "Strange Dust",
+            "icon": "inv_enchant_duststrange",
+            "quality": 1
+          },
+          {
+            "id": 10938,
+            "count": 4,
+            "name": "Lesser Magic Essence",
+            "icon": "inv_enchant_essencemagicsmall",
+            "quality": 2
+          },
+          {
+            "id": 1210,
+            "count": 1,
+            "name": "Shadowgem",
+            "icon": "inv_misc_gem_amethyst_01",
+            "quality": 2
+          }
+        ],
         "source": "Trainer"
       },
       {
         "id": 249396,
-        "spellId": 249396,
+        "spellId": 1248752,
         "name": "Mystic Mushroom",
         "icon": "inv_mushroom_11",
         "quality": 3,
         "cat": "Relics",
+        "kind": "Relics",
+        "effect": "Binds when picked up Relic\tIdol Classes: Druid Requires Level 20 Equip: Increases Spirit by 5%. Sell Price: 10s 12c",
         "isNew": true,
         "learn": 130,
-        "yellow": 150,
+        "yellow": 140,
         "green": 160,
-        "grey": 170,
-        "reagents": [],
-        "source": "Trainer / Relic Craft"
+        "grey": 180,
+        "reagents": [
+          {
+            "id": 10978,
+            "count": 1,
+            "name": "Small Glimmering Shard",
+            "icon": "inv_enchant_shardglimmeringsmall",
+            "quality": 3
+          },
+          {
+            "id": 10939,
+            "count": 2,
+            "name": "Greater Magic Essence",
+            "icon": "inv_enchant_essencemagiclarge",
+            "quality": 2
+          },
+          {
+            "id": 10940,
+            "count": 5,
+            "name": "Strange Dust",
+            "icon": "inv_enchant_duststrange",
+            "quality": 1
+          },
+          {
+            "id": 4605,
+            "count": 1,
+            "name": "Red-speckled Mushroom",
+            "icon": "inv_mushroom_11",
+            "quality": 1
+          }
+        ],
+        "source": "Formula: Formula: Mystic Mushroom"
       },
       {
         "id": 249398,
-        "spellId": 249398,
+        "spellId": 1248755,
         "name": "Polished Driftwood Icon",
         "icon": "spell_shaman_totemrecall",
         "quality": 3,
         "cat": "Relics",
+        "kind": "Relics",
+        "effect": "Binds when picked up Relic\tTotem Classes: Shaman Requires Level 20 Equip: Allows 8% of your Mana regeneration to continue while casting. Sell Price: 10s 12c",
         "isNew": true,
         "learn": 130,
-        "yellow": 150,
+        "yellow": 140,
         "green": 160,
-        "grey": 170,
-        "reagents": [],
-        "source": "Trainer / Relic Craft"
+        "grey": 180,
+        "reagents": [
+          {
+            "id": 11084,
+            "count": 1,
+            "name": "Large Glimmering Shard",
+            "icon": "inv_enchant_shardglimmeringlarge",
+            "quality": 3
+          },
+          {
+            "id": 10939,
+            "count": 2,
+            "name": "Greater Magic Essence",
+            "icon": "inv_enchant_essencemagiclarge",
+            "quality": 2
+          },
+          {
+            "id": 10940,
+            "count": 3,
+            "name": "Strange Dust",
+            "icon": "inv_enchant_duststrange",
+            "quality": 1
+          },
+          {
+            "id": 4470,
+            "count": 1,
+            "name": "Simple Wood",
+            "icon": "inv_tradeskillitem_01",
+            "quality": 1
+          }
+        ],
+        "source": "Formula: Formula: Polished Driftwood Icon"
       },
       {
         "id": 249397,
-        "spellId": 249397,
+        "spellId": 1248754,
         "name": "Tenets of the Silver Hand",
         "icon": "inv_misc_book_13",
         "quality": 3,
         "cat": "Relics",
+        "kind": "Relics",
+        "effect": "Binds when picked up Relic\tLibram Classes: Paladin Requires Level 20 Equip: Increases your damage against Undead by 1%. \"A pristine copy of the holy tome.\" Sell Price: 10s 12c",
         "isNew": true,
         "learn": 130,
-        "yellow": 150,
+        "yellow": 140,
         "green": 160,
-        "grey": 170,
-        "reagents": [],
-        "source": "Trainer / Relic Craft"
+        "grey": 180,
+        "reagents": [
+          {
+            "id": 11084,
+            "count": 1,
+            "name": "Large Glimmering Shard",
+            "icon": "inv_enchant_shardglimmeringlarge",
+            "quality": 3
+          },
+          {
+            "id": 10939,
+            "count": 1,
+            "name": "Greater Magic Essence",
+            "icon": "inv_enchant_essencemagiclarge",
+            "quality": 2
+          },
+          {
+            "id": 10940,
+            "count": 2,
+            "name": "Strange Dust",
+            "icon": "inv_enchant_duststrange",
+            "quality": 1
+          },
+          {
+            "id": 3013,
+            "count": 5,
+            "name": "Scroll of Protection",
+            "icon": "inv_scroll_07",
+            "quality": 1
+          }
+        ],
+        "source": "Formula: Formula: Tenets of the Silver Hand"
+      },
+      {
+        "id": 279985,
+        "spellId": 1263056,
+        "name": "Arcane Salvager",
+        "icon": "inv_eng_bottledelements",
+        "quality": 1,
+        "cat": "Relics",
+        "kind": "Relics",
+        "effect": "\tOther Requires Enchanting (140) Use: Places an Arcane Salvager that enables more efficient disenchanting, and provides all the benefits of an Enchanted Lute. Requires a Campfire nearby. May be placed over an Enchanted Lute to replace it. All camping features share a cooldown of 1 hr. (60 Min Cooldown)",
+        "isNew": true,
+        "learn": 140,
+        "yellow": 140,
+        "green": 160,
+        "grey": 145,
+        "reagents": [
+          {
+            "id": 11137,
+            "count": 2,
+            "name": "Vision Dust",
+            "icon": "inv_enchant_dustvision",
+            "quality": 1
+          },
+          {
+            "id": 11174,
+            "count": 1,
+            "name": "Lesser Nether Essence",
+            "icon": "inv_enchant_essencenethersmall",
+            "quality": 2
+          }
+        ],
+        "source": "Formula: Blueprint: Arcane Salvager"
+      },
+      {
+        "id": 249392,
+        "spellId": 1248703,
+        "name": "Glimmering Staff",
+        "icon": "inv_staff_19",
+        "quality": 3,
+        "cat": "Wands & Staves",
+        "kind": "Wands & Staves",
+        "effect": "Binds when picked up Two-Hand\tStaff 32 - 49 Damage\tSpeed 2.20 (18.4 damage per second) +11 Intellect +11 Stamina Requires Level 25 Equip: +34 Spell Power Sell Price: 6s 1c",
+        "isNew": true,
+        "learn": 140,
+        "yellow": 140,
+        "green": 160,
+        "grey": 180,
+        "reagents": [
+          {
+            "id": 11084,
+            "count": 4,
+            "name": "Large Glimmering Shard",
+            "icon": "inv_enchant_shardglimmeringlarge",
+            "quality": 3
+          },
+          {
+            "id": 10978,
+            "count": 2,
+            "name": "Small Glimmering Shard",
+            "icon": "inv_enchant_shardglimmeringsmall",
+            "quality": 3
+          },
+          {
+            "id": 11291,
+            "count": 4,
+            "name": "Star Wood",
+            "icon": "inv_tradeskillitem_03",
+            "quality": 1
+          },
+          {
+            "id": 11082,
+            "count": 1,
+            "name": "Greater Astral Essence",
+            "icon": "inv_enchant_essenceastrallarge",
+            "quality": 2
+          },
+          {
+            "id": 10940,
+            "count": 5,
+            "name": "Strange Dust",
+            "icon": "inv_enchant_duststrange",
+            "quality": 1
+          },
+          {
+            "id": 249391,
+            "count": 3,
+            "name": "Pyrite",
+            "icon": "inv_ore_pyrite_nugget",
+            "quality": 2
+          }
+        ],
+        "source": "Formula: Formula: Glimmering Staff"
+      },
+      {
+        "id": 249394,
+        "spellId": 1248745,
+        "name": "Orb of Mystic Insight",
+        "icon": "inv_misc_orb_blue",
+        "quality": 3,
+        "cat": "Relics",
+        "kind": "Relics",
+        "effect": "Binds when picked up Held In Off-hand +6 Intellect Requires Level 25 Equip: +7 Spell Power Sell Price: 21s 56c",
+        "isNew": true,
+        "learn": 140,
+        "yellow": 140,
+        "green": 160,
+        "grey": 180,
+        "reagents": [
+          {
+            "id": 10978,
+            "count": 2,
+            "name": "Small Glimmering Shard",
+            "icon": "inv_enchant_shardglimmeringsmall",
+            "quality": 3
+          },
+          {
+            "id": 11082,
+            "count": 2,
+            "name": "Greater Astral Essence",
+            "icon": "inv_enchant_essenceastrallarge",
+            "quality": 2
+          },
+          {
+            "id": 10940,
+            "count": 5,
+            "name": "Strange Dust",
+            "icon": "inv_enchant_duststrange",
+            "quality": 1
+          }
+        ],
+        "source": "Formula: Formula: Orb of Mystic Insight"
+      },
+      {
+        "id": 249395,
+        "spellId": 1248748,
+        "name": "Orb of Souls",
+        "icon": "inv_misc_orb_04",
+        "quality": 3,
+        "cat": "Relics",
+        "kind": "Relics",
+        "effect": "Binds when picked up Held In Off-hand +6 Spirit Requires Level 25 Equip: +13 Healing Equip: +4 Spell Damage Sell Price: 21s 56c",
+        "isNew": true,
+        "learn": 140,
+        "yellow": 140,
+        "green": 160,
+        "grey": 180,
+        "reagents": [
+          {
+            "id": 10978,
+            "count": 2,
+            "name": "Small Glimmering Shard",
+            "icon": "inv_enchant_shardglimmeringsmall",
+            "quality": 3
+          },
+          {
+            "id": 11082,
+            "count": 2,
+            "name": "Greater Astral Essence",
+            "icon": "inv_enchant_essenceastrallarge",
+            "quality": 2
+          },
+          {
+            "id": 11083,
+            "count": 2,
+            "name": "Soul Dust",
+            "icon": "inv_enchant_dustsoul",
+            "quality": 1
+          }
+        ],
+        "source": "Formula: Formula: Orb of Souls"
+      },
+      {
+        "id": 249393,
+        "spellId": 1248739,
+        "name": "Soulstaff",
+        "icon": "inv_staff_31",
+        "quality": 3,
+        "cat": "Relics",
+        "kind": "Relics",
+        "effect": "Binds when picked up Two-Hand\tStaff 26 - 40 Damage\tSpeed 1.80 (18.3 damage per second) +11 Stamina +11 Spirit Requires Level 25 Equip: +34 Spell Power Sell Price: 6s 1c",
+        "isNew": true,
+        "learn": 140,
+        "yellow": 140,
+        "green": 160,
+        "grey": 180,
+        "reagents": [
+          {
+            "id": 11084,
+            "count": 2,
+            "name": "Large Glimmering Shard",
+            "icon": "inv_enchant_shardglimmeringlarge",
+            "quality": 3
+          },
+          {
+            "id": 10978,
+            "count": 1,
+            "name": "Small Glimmering Shard",
+            "icon": "inv_enchant_shardglimmeringsmall",
+            "quality": 3
+          },
+          {
+            "id": 11291,
+            "count": 4,
+            "name": "Star Wood",
+            "icon": "inv_tradeskillitem_03",
+            "quality": 1
+          },
+          {
+            "id": 11082,
+            "count": 1,
+            "name": "Greater Astral Essence",
+            "icon": "inv_enchant_essenceastrallarge",
+            "quality": 2
+          },
+          {
+            "id": 11083,
+            "count": 6,
+            "name": "Soul Dust",
+            "icon": "inv_enchant_dustsoul",
+            "quality": 1
+          },
+          {
+            "id": 1210,
+            "count": 2,
+            "name": "Shadowgem",
+            "icon": "inv_misc_gem_amethyst_01",
+            "quality": 2
+          }
+        ],
+        "source": "Formula: Formula: Soulstaff"
+      },
+      {
+        "id": 20745,
+        "spellId": 25125,
+        "name": "Minor Mana Oil",
+        "icon": "inv_potion_98",
+        "quality": 1,
+        "cat": "Oils",
+        "kind": "Oils",
+        "effect": "\tOther Requires Level 20 Use: While applied to target weapon it restores 5 mana to the caster every 5 seconds and increases healing done by up to 10. Lasts for 30 minutes. Sell Price: 10s",
+        "isNew": false,
+        "learn": 150,
+        "yellow": 160,
+        "green": 180,
+        "grey": 180,
+        "reagents": [
+          {
+            "id": 11083,
+            "count": 1,
+            "name": "Soul Dust",
+            "icon": "inv_enchant_dustsoul",
+            "quality": 1
+          },
+          {
+            "id": 17034,
+            "count": 2,
+            "name": "Maple Seed",
+            "icon": "inv_misc_food_02",
+            "quality": 1
+          },
+          {
+            "id": 3372,
+            "count": 1,
+            "name": "Leaded Vial",
+            "icon": "inv_potion_85",
+            "quality": 1
+          }
+        ],
+        "source": "Formula: Formula: Minor Mana Oil"
+      },
+      {
+        "id": 11289,
+        "spellId": 14809,
+        "name": "Lesser Mystic Wand",
+        "icon": "inv_staff_02",
+        "quality": 2,
+        "cat": "Wands & Staves",
+        "kind": "Wands & Staves",
+        "effect": "Binds when equipped Ranged\tWand 23 - 43 Arcane Damage\tSpeed 1.30 (25.4 damage per second) +4 Intellect Requires Level 26 Sell Price: 4s 50c",
+        "isNew": false,
+        "learn": 175,
+        "yellow": 175,
+        "green": 195,
+        "grey": 215,
+        "reagents": [
+          {
+            "id": 11291,
+            "count": 1,
+            "name": "Star Wood",
+            "icon": "inv_tradeskillitem_03",
+            "quality": 1
+          },
+          {
+            "id": 11134,
+            "count": 1,
+            "name": "Lesser Mystic Essence",
+            "icon": "inv_enchant_essencemysticalsmall",
+            "quality": 2
+          }
+        ],
+        "source": "Trainer"
+      },
+      {
+        "id": 11130,
+        "spellId": 13628,
+        "name": "Runed Golden Rod",
+        "icon": "inv_staff_10",
+        "quality": 1,
+        "cat": "Rods",
+        "kind": "Rods",
+        "effect": "Binds when picked up \tEnchanting Sell Price: 5s",
+        "isNew": false,
+        "learn": 175,
+        "yellow": 175,
+        "green": 195,
+        "grey": 215,
+        "reagents": [
+          {
+            "id": 11128,
+            "count": 1,
+            "name": "Golden Rod",
+            "icon": "inv_staff_10",
+            "quality": 1
+          },
+          {
+            "id": 5500,
+            "count": 1,
+            "name": "Iridescent Pearl",
+            "icon": "inv_misc_gem_pearl_02",
+            "quality": 2
+          },
+          {
+            "id": 11082,
+            "count": 1,
+            "name": "Greater Astral Essence",
+            "icon": "inv_enchant_essenceastrallarge",
+            "quality": 2
+          },
+          {
+            "id": 11083,
+            "count": 1,
+            "name": "Soul Dust",
+            "icon": "inv_enchant_dustsoul",
+            "quality": 1
+          }
+        ],
+        "source": "Trainer"
+      },
+      {
+        "id": 249144,
+        "spellId": 1248461,
+        "name": "Twisted Nether Wand",
+        "icon": "inv_wand_03",
+        "quality": 2,
+        "cat": "Wands & Staves",
+        "kind": "Wands & Staves",
+        "effect": "Binds when equipped Ranged\tWand 35 - 67 Shadow Damage\tSpeed 1.50 (34.0 damage per second) Requires Level 37 Equip: +6 Spell Power Sell Price: 10s",
+        "isNew": true,
+        "learn": 185,
+        "yellow": 205,
+        "green": 225,
+        "grey": 245,
+        "reagents": [
+          {
+            "id": 11174,
+            "count": 1,
+            "name": "Lesser Nether Essence",
+            "icon": "inv_enchant_essencenethersmall",
+            "quality": 2
+          },
+          {
+            "id": 11176,
+            "count": 1,
+            "name": "Dream Dust",
+            "icon": "inv_enchant_dustdream",
+            "quality": 1
+          },
+          {
+            "id": 11291,
+            "count": 1,
+            "name": "Star Wood",
+            "icon": "inv_tradeskillitem_03",
+            "quality": 1
+          }
+        ],
+        "source": "Formula: Formula: Twisted Nether Wand"
+      },
+      {
+        "id": 20746,
+        "spellId": 25126,
+        "name": "Lesser Wizard Oil",
+        "icon": "inv_potion_103",
+        "quality": 1,
+        "cat": "Oils",
+        "kind": "Oils",
+        "effect": "\tEnchanting Requires Level 30 Use: While applied to target weapon it increases spell damage and healing by up to 16. Lasts for 30 minutes. Sell Price: 10s",
+        "isNew": false,
+        "learn": 200,
+        "yellow": 210,
+        "green": 230,
+        "grey": 230,
+        "reagents": [
+          {
+            "id": 11137,
+            "count": 1,
+            "name": "Vision Dust",
+            "icon": "inv_enchant_dustvision",
+            "quality": 1
+          },
+          {
+            "id": 17035,
+            "count": 2,
+            "name": "Stranglethorn Seed",
+            "icon": "inv_misc_food_02",
+            "quality": 1
+          },
+          {
+            "id": 3372,
+            "count": 1,
+            "name": "Leaded Vial",
+            "icon": "inv_potion_85",
+            "quality": 1
+          }
+        ],
+        "source": "Formula: Formula: Lesser Wizard Oil"
       },
       {
         "id": 249442,
-        "spellId": 249442,
+        "spellId": 1249006,
         "name": "Libram of Invocation",
         "icon": "inv_relics_libramofhope",
         "quality": 3,
         "cat": "Relics",
+        "kind": "Relics",
+        "effect": "Binds when picked up Relic\tLibram Requires Level 40 Equip: Reduces the mana cost of your Seal spells by 5%. Sell Price: 58s 33c",
         "isNew": true,
         "learn": 210,
-        "yellow": 230,
-        "green": 240,
-        "grey": 250,
-        "reagents": [],
-        "source": "Trainer / Relic Craft"
+        "yellow": 225,
+        "green": 245,
+        "grey": 265,
+        "reagents": [
+          {
+            "id": 11178,
+            "count": 3,
+            "name": "Large Radiant Shard",
+            "icon": "inv_enchant_shardradientlarge",
+            "quality": 3
+          },
+          {
+            "id": 11175,
+            "count": 3,
+            "name": "Greater Nether Essence",
+            "icon": "inv_enchant_essencenetherlarge",
+            "quality": 2
+          },
+          {
+            "id": 11176,
+            "count": 4,
+            "name": "Dream Dust",
+            "icon": "inv_enchant_dustdream",
+            "quality": 1
+          },
+          {
+            "id": 249430,
+            "count": 2,
+            "name": "Magenta Dye",
+            "icon": "inv_inscription_inkpurple02",
+            "quality": 2
+          },
+          {
+            "id": 249409,
+            "count": 1,
+            "name": "Cerulean Dye",
+            "icon": "inv_inscription_inkcerulean01",
+            "quality": 2
+          },
+          {
+            "id": 2289,
+            "count": 4,
+            "name": "Scroll of Strength II",
+            "icon": "inv_scroll_02",
+            "quality": 1
+          }
+        ],
+        "source": "Formula: Formula: Libram of Invocation"
       },
       {
         "id": 249441,
-        "spellId": 249441,
+        "spellId": 1248974,
         "name": "Talons of Wrath",
         "icon": "spell_nature_natureswrath",
         "quality": 3,
         "cat": "Relics",
+        "kind": "Relics",
+        "effect": "Binds when picked up Relic\tIdol Classes: Druid Requires Level 40 Equip: Causes Wrath to have a 50% chance to restore 35 Mana. Sell Price: 58s 33c",
         "isNew": true,
         "learn": 210,
-        "yellow": 230,
-        "green": 240,
-        "grey": 250,
-        "reagents": [],
-        "source": "Trainer / Relic Craft"
+        "yellow": 225,
+        "green": 245,
+        "grey": 265,
+        "reagents": [
+          {
+            "id": 11178,
+            "count": 2,
+            "name": "Large Radiant Shard",
+            "icon": "inv_enchant_shardradientlarge",
+            "quality": 3
+          },
+          {
+            "id": 11175,
+            "count": 4,
+            "name": "Greater Nether Essence",
+            "icon": "inv_enchant_essencenetherlarge",
+            "quality": 2
+          },
+          {
+            "id": 11176,
+            "count": 6,
+            "name": "Dream Dust",
+            "icon": "inv_enchant_dustdream",
+            "quality": 1
+          },
+          {
+            "id": 249430,
+            "count": 2,
+            "name": "Magenta Dye",
+            "icon": "inv_inscription_inkpurple02",
+            "quality": 2
+          },
+          {
+            "id": 249409,
+            "count": 1,
+            "name": "Cerulean Dye",
+            "icon": "inv_inscription_inkcerulean01",
+            "quality": 2
+          },
+          {
+            "id": 11291,
+            "count": 1,
+            "name": "Star Wood",
+            "icon": "inv_tradeskillitem_03",
+            "quality": 1
+          }
+        ],
+        "source": "Formula: Formula: Talons of Wrath"
       },
       {
         "id": 249443,
-        "spellId": 249443,
+        "spellId": 1249015,
         "name": "Totem of Ancestral Protection",
         "icon": "inv_relics_totemofrage",
         "quality": 3,
         "cat": "Relics",
+        "kind": "Relics",
+        "effect": "Binds when picked up Relic\tTotem Requires Level 40 Equip: Reduces the cooldown of Grounding Totem by 1 sec. Sell Price: 1g 18s 80c",
         "isNew": true,
         "learn": 210,
-        "yellow": 230,
+        "yellow": 225,
+        "green": 245,
+        "grey": 265,
+        "reagents": [
+          {
+            "id": 11178,
+            "count": 4,
+            "name": "Large Radiant Shard",
+            "icon": "inv_enchant_shardradientlarge",
+            "quality": 3
+          },
+          {
+            "id": 11175,
+            "count": 2,
+            "name": "Greater Nether Essence",
+            "icon": "inv_enchant_essencenetherlarge",
+            "quality": 2
+          },
+          {
+            "id": 11176,
+            "count": 2,
+            "name": "Dream Dust",
+            "icon": "inv_enchant_dustdream",
+            "quality": 1
+          },
+          {
+            "id": 249432,
+            "count": 4,
+            "name": "Sandpaper",
+            "icon": "inv_inscription_papyrus",
+            "quality": 2
+          },
+          {
+            "id": 249410,
+            "count": 2,
+            "name": "Sulfuric Acid",
+            "icon": "trade_alchemy",
+            "quality": 2
+          },
+          {
+            "id": 11291,
+            "count": 2,
+            "name": "Star Wood",
+            "icon": "inv_tradeskillitem_03",
+            "quality": 1
+          }
+        ],
+        "source": "Formula: Formula: Totem of Ancestral Protection"
+      },
+      {
+        "id": 249234,
+        "spellId": 1248509,
+        "name": "Dreambough Wand",
+        "icon": "inv_wand_04",
+        "quality": 2,
+        "cat": "Wands & Staves",
+        "kind": "Wands & Staves",
+        "effect": "Binds when equipped Ranged\tWand 49 - 92 Nature Damage\tSpeed 1.80 (39.2 damage per second) Requires Level 43 Equip: +7 Spell Power Sell Price: 15s",
+        "isNew": true,
+        "learn": 215,
+        "yellow": 235,
+        "green": 255,
+        "grey": 275,
+        "reagents": [
+          {
+            "id": 11174,
+            "count": 2,
+            "name": "Lesser Nether Essence",
+            "icon": "inv_enchant_essencenethersmall",
+            "quality": 2
+          },
+          {
+            "id": 11137,
+            "count": 1,
+            "name": "Vision Dust",
+            "icon": "inv_enchant_dustvision",
+            "quality": 1
+          },
+          {
+            "id": 11291,
+            "count": 1,
+            "name": "Star Wood",
+            "icon": "inv_tradeskillitem_03",
+            "quality": 1
+          }
+        ],
+        "source": "Formula: Formula: Dreambough Wand"
+      },
+      {
+        "id": 11145,
+        "spellId": 13702,
+        "name": "Runed Truesilver Rod",
+        "icon": "inv_staff_11",
+        "quality": 1,
+        "cat": "Rods",
+        "kind": "Rods",
+        "effect": "Binds when picked up \tEnchanting Sell Price: 12s 50c",
+        "isNew": false,
+        "learn": 220,
+        "yellow": 220,
         "green": 240,
-        "grey": 250,
-        "reagents": [],
-        "source": "Trainer / Relic Craft"
+        "grey": 260,
+        "reagents": [
+          {
+            "id": 11144,
+            "count": 1,
+            "name": "Truesilver Rod",
+            "icon": "inv_staff_11",
+            "quality": 1
+          },
+          {
+            "id": 7971,
+            "count": 1,
+            "name": "Black Pearl",
+            "icon": "inv_misc_gem_pearl_01",
+            "quality": 2
+          },
+          {
+            "id": 11135,
+            "count": 1,
+            "name": "Greater Mystic Essence",
+            "icon": "inv_enchant_essencemysticallarge",
+            "quality": 2
+          },
+          {
+            "id": 11137,
+            "count": 1,
+            "name": "Vision Dust",
+            "icon": "inv_enchant_dustvision",
+            "quality": 1
+          }
+        ],
+        "source": "Trainer"
+      },
+      {
+        "id": 249454,
+        "spellId": 1249064,
+        "name": "Dreamstaff",
+        "icon": "inv_staff_14",
+        "quality": 3,
+        "cat": "Relics",
+        "kind": "Relics",
+        "effect": "Binds when picked up Two-Hand\tStaff 62 - 93 Damage\tSpeed 2.40 (32.3 damage per second) +19 Spirit +19 Stamina Requires Level 45 Equip: +105 Healing Equip: +35 Spell Damage Sell Price: 3g 37s 31c",
+        "isNew": true,
+        "learn": 220,
+        "yellow": 225,
+        "green": 245,
+        "grey": 265,
+        "reagents": [
+          {
+            "id": 11178,
+            "count": 4,
+            "name": "Large Radiant Shard",
+            "icon": "inv_enchant_shardradientlarge",
+            "quality": 3
+          },
+          {
+            "id": 11177,
+            "count": 4,
+            "name": "Small Radiant Shard",
+            "icon": "inv_enchant_shardradientsmall",
+            "quality": 3
+          },
+          {
+            "id": 11291,
+            "count": 4,
+            "name": "Star Wood",
+            "icon": "inv_tradeskillitem_03",
+            "quality": 1
+          },
+          {
+            "id": 11175,
+            "count": 6,
+            "name": "Greater Nether Essence",
+            "icon": "inv_enchant_essencenetherlarge",
+            "quality": 2
+          },
+          {
+            "id": 11176,
+            "count": 8,
+            "name": "Dream Dust",
+            "icon": "inv_enchant_dustdream",
+            "quality": 1
+          },
+          {
+            "id": 249409,
+            "count": 2,
+            "name": "Cerulean Dye",
+            "icon": "inv_inscription_inkcerulean01",
+            "quality": 2
+          },
+          {
+            "id": 249430,
+            "count": 4,
+            "name": "Magenta Dye",
+            "icon": "inv_inscription_inkpurple02",
+            "quality": 2
+          }
+        ],
+        "source": "Formula: Formula: Dreamstaff"
+      },
+      {
+        "id": 249453,
+        "spellId": 1249061,
+        "name": "Radiant Staff",
+        "icon": "inv_staff_13",
+        "quality": 3,
+        "cat": "Wands & Staves",
+        "kind": "Wands & Staves",
+        "effect": "Binds when picked up Two-Hand\tStaff 62 - 93 Damage\tSpeed 2.40 (32.3 damage per second) +19 Intellect +19 Stamina Requires Level 45 Equip: +56 Spell Power Sell Price: 3g 36s 5c",
+        "isNew": true,
+        "learn": 220,
+        "yellow": 225,
+        "green": 245,
+        "grey": 265,
+        "reagents": [
+          {
+            "id": 11178,
+            "count": 6,
+            "name": "Large Radiant Shard",
+            "icon": "inv_enchant_shardradientlarge",
+            "quality": 3
+          },
+          {
+            "id": 11177,
+            "count": 2,
+            "name": "Small Radiant Shard",
+            "icon": "inv_enchant_shardradientsmall",
+            "quality": 3
+          },
+          {
+            "id": 11291,
+            "count": 4,
+            "name": "Star Wood",
+            "icon": "inv_tradeskillitem_03",
+            "quality": 1
+          },
+          {
+            "id": 11175,
+            "count": 4,
+            "name": "Greater Nether Essence",
+            "icon": "inv_enchant_essencenetherlarge",
+            "quality": 2
+          },
+          {
+            "id": 11176,
+            "count": 6,
+            "name": "Dream Dust",
+            "icon": "inv_enchant_dustdream",
+            "quality": 1
+          },
+          {
+            "id": 249409,
+            "count": 2,
+            "name": "Cerulean Dye",
+            "icon": "inv_inscription_inkcerulean01",
+            "quality": 2
+          },
+          {
+            "id": 249430,
+            "count": 4,
+            "name": "Magenta Dye",
+            "icon": "inv_inscription_inkpurple02",
+            "quality": 2
+          }
+        ],
+        "source": "Formula: Formula: Radiant Staff"
+      },
+      {
+        "id": 249455,
+        "spellId": 1249069,
+        "name": "Truesilver Conduit",
+        "icon": "inv_rod_enchantedadamantite",
+        "quality": 3,
+        "cat": "Relics",
+        "kind": "Relics",
+        "effect": "Binds when picked up Held In Off-hand +8 Intellect +8 Stamina Requires Level 45 Equip: +10 Spell Power Sell Price: 1g 8s 35c",
+        "isNew": true,
+        "learn": 220,
+        "yellow": 225,
+        "green": 245,
+        "grey": 265,
+        "reagents": [
+          {
+            "id": 11178,
+            "count": 3,
+            "name": "Large Radiant Shard",
+            "icon": "inv_enchant_shardradientlarge",
+            "quality": 3
+          },
+          {
+            "id": 11177,
+            "count": 1,
+            "name": "Small Radiant Shard",
+            "icon": "inv_enchant_shardradientsmall",
+            "quality": 3
+          },
+          {
+            "id": 11291,
+            "count": 2,
+            "name": "Star Wood",
+            "icon": "inv_tradeskillitem_03",
+            "quality": 1
+          },
+          {
+            "id": 11175,
+            "count": 2,
+            "name": "Greater Nether Essence",
+            "icon": "inv_enchant_essencenetherlarge",
+            "quality": 2
+          },
+          {
+            "id": 11176,
+            "count": 3,
+            "name": "Dream Dust",
+            "icon": "inv_enchant_dustdream",
+            "quality": 1
+          },
+          {
+            "id": 249409,
+            "count": 1,
+            "name": "Cerulean Dye",
+            "icon": "inv_inscription_inkcerulean01",
+            "quality": 2
+          },
+          {
+            "id": 249430,
+            "count": 2,
+            "name": "Magenta Dye",
+            "icon": "inv_inscription_inkpurple02",
+            "quality": 2
+          }
+        ],
+        "source": "Formula: Formula: Truesilver Conduit"
+      },
+      {
+        "id": 249456,
+        "spellId": 1249070,
+        "name": "Twisting Essence Jar",
+        "icon": "inv_10_misc_dragonorb_color1",
+        "quality": 3,
+        "cat": "Relics",
+        "kind": "Relics",
+        "effect": "Binds when picked up Held In Off-hand +8 Spirit +8 Stamina Requires Level 45 Equip: +19 Healing Equip: +6 Spell Damage Sell Price: 1g 8s 77c",
+        "isNew": true,
+        "learn": 220,
+        "yellow": 225,
+        "green": 245,
+        "grey": 265,
+        "reagents": [
+          {
+            "id": 6037,
+            "count": 4,
+            "name": "Truesilver Bar",
+            "icon": "inv_ingot_08",
+            "quality": 2
+          },
+          {
+            "id": 11175,
+            "count": 12,
+            "name": "Greater Nether Essence",
+            "icon": "inv_enchant_essencenetherlarge",
+            "quality": 2
+          },
+          {
+            "id": 11135,
+            "count": 12,
+            "name": "Greater Mystic Essence",
+            "icon": "inv_enchant_essencemysticallarge",
+            "quality": 2
+          },
+          {
+            "id": 249409,
+            "count": 1,
+            "name": "Cerulean Dye",
+            "icon": "inv_inscription_inkcerulean01",
+            "quality": 2
+          },
+          {
+            "id": 249430,
+            "count": 2,
+            "name": "Magenta Dye",
+            "icon": "inv_inscription_inkpurple02",
+            "quality": 2
+          }
+        ],
+        "source": "Formula: Formula: Twisting Essence Jar"
+      },
+      {
+        "id": 249232,
+        "spellId": 1248505,
+        "name": "Lesser Eternal Wand",
+        "icon": "inv_wand_05",
+        "quality": 2,
+        "cat": "Wands & Staves",
+        "kind": "Wands & Staves",
+        "effect": "Binds when equipped Ranged\tWand 64 - 119 Arcane Damage\tSpeed 2.00 (45.8 damage per second) Requires Level 49 Equip: +8 Spell Power Sell Price: 20s",
+        "isNew": true,
+        "learn": 245,
+        "yellow": 265,
+        "green": 285,
+        "grey": 305,
+        "reagents": [
+          {
+            "id": 16202,
+            "count": 1,
+            "name": "Lesser Eternal Essence",
+            "icon": "inv_enchant_essenceeternalsmall",
+            "quality": 2
+          },
+          {
+            "id": 11176,
+            "count": 1,
+            "name": "Dream Dust",
+            "icon": "inv_enchant_dustdream",
+            "quality": 1
+          },
+          {
+            "id": 11291,
+            "count": 1,
+            "name": "Star Wood",
+            "icon": "inv_tradeskillitem_03",
+            "quality": 1
+          }
+        ],
+        "source": "Formula: Formula: Lesser Eternal Wand"
+      },
+      {
+        "id": 12810,
+        "spellId": 17181,
+        "name": "Enchanted Leather",
+        "icon": "inv_misc_rune_05",
+        "quality": 1,
+        "cat": "Relics",
+        "kind": "Relics",
+        "effect": "\tLeather Sell Price: 5s",
+        "isNew": false,
+        "learn": 250,
+        "yellow": 250,
+        "green": 270,
+        "grey": 260,
+        "reagents": [
+          {
+            "id": 8170,
+            "count": 1,
+            "name": "Rugged Leather",
+            "icon": "inv_misc_leatherscrap_02",
+            "quality": 1
+          },
+          {
+            "id": 16202,
+            "count": 1,
+            "name": "Lesser Eternal Essence",
+            "icon": "inv_enchant_essenceeternalsmall",
+            "quality": 2
+          }
+        ],
+        "source": "Trainer"
+      },
+      {
+        "id": 12655,
+        "spellId": 17180,
+        "name": "Enchanted Thorium Bar",
+        "icon": "inv_ingot_eternium",
+        "quality": 1,
+        "cat": "Relics",
+        "kind": "Relics",
+        "effect": "\tMetal & Stone Sell Price: 5s",
+        "isNew": false,
+        "learn": 250,
+        "yellow": 250,
+        "green": 270,
+        "grey": 260,
+        "reagents": [
+          {
+            "id": 12359,
+            "count": 1,
+            "name": "Thorium Bar",
+            "icon": "inv_ingot_07",
+            "quality": 1
+          },
+          {
+            "id": 11176,
+            "count": 3,
+            "name": "Dream Dust",
+            "icon": "inv_enchant_dustdream",
+            "quality": 1
+          }
+        ],
+        "source": "Trainer"
+      },
+      {
+        "id": 20747,
+        "spellId": 25127,
+        "name": "Lesser Mana Oil",
+        "icon": "inv_potion_99",
+        "quality": 1,
+        "cat": "Oils",
+        "kind": "Oils",
+        "effect": "\tEnchanting Requires Level 40 Use: While applied to target weapon it restores 10 mana to the caster every 5 seconds and increases healing by up to 20. Lasts for 30 minutes. Sell Price: 10s",
+        "isNew": false,
+        "learn": 250,
+        "yellow": 260,
+        "green": 280,
+        "grey": 280,
+        "reagents": [
+          {
+            "id": 11176,
+            "count": 1,
+            "name": "Dream Dust",
+            "icon": "inv_enchant_dustdream",
+            "quality": 1
+          },
+          {
+            "id": 8831,
+            "count": 1,
+            "name": "Purple Lotus",
+            "icon": "inv_misc_herb_17",
+            "quality": 1
+          },
+          {
+            "id": 8925,
+            "count": 1,
+            "name": "Crystal Vial",
+            "icon": "inv_potion_86",
+            "quality": 1
+          }
+        ],
+        "source": "Formula: Formula: Lesser Mana Oil"
+      },
+      {
+        "id": 11811,
+        "spellId": 15596,
+        "name": "Smoking Heart of the Mountain",
+        "icon": "inv_misc_gem_bloodstone_01",
+        "quality": 3,
+        "cat": "Relics",
+        "kind": "Relics",
+        "effect": "Binds when picked up Trinket +7 Fire Resistance +7 Nature Resistance +7 Frost Resistance +7 Shadow Resistance Requires Level 50 Use: Increases armor by 520 for 20 sec. (6 Min Cooldown) Sell Price: 1g 51s 52c",
+        "isNew": false,
+        "learn": 265,
+        "yellow": 285,
+        "green": 305,
+        "grey": 325,
+        "reagents": [
+          {
+            "id": 11382,
+            "count": 1,
+            "name": "Blood of the Mountain",
+            "icon": "inv_misc_gem_bloodstone_03",
+            "quality": 2
+          },
+          {
+            "id": 7078,
+            "count": 1,
+            "name": "Essence of Fire",
+            "icon": "spell_fire_volcano",
+            "quality": 2
+          },
+          {
+            "id": 14343,
+            "count": 3,
+            "name": "Small Brilliant Shard",
+            "icon": "inv_enchant_shardbrilliantsmall",
+            "quality": 3
+          }
+        ],
+        "source": "Formula: Formula: Smoking Heart of the Mountain"
+      },
+      {
+        "id": 249237,
+        "spellId": 1248515,
+        "name": "Greater Eternal Wand",
+        "icon": "inv_wand_14",
+        "quality": 2,
+        "cat": "Wands & Staves",
+        "kind": "Wands & Staves",
+        "effect": "Binds when equipped Ranged\tWand 56 - 104 Arcane Damage\tSpeed 1.50 (53.3 damage per second) Requires Level 55 Equip: +9 Spell Power Sell Price: 25s",
+        "isNew": true,
+        "learn": 275,
+        "yellow": 285,
+        "green": 305,
+        "grey": 305,
+        "reagents": [
+          {
+            "id": 16203,
+            "count": 2,
+            "name": "Greater Eternal Essence",
+            "icon": "inv_enchant_essenceeternallarge",
+            "quality": 2
+          },
+          {
+            "id": 16204,
+            "count": 1,
+            "name": "Illusion Dust",
+            "icon": "inv_enchant_dustillusion",
+            "quality": 1
+          },
+          {
+            "id": 11291,
+            "count": 1,
+            "name": "Star Wood",
+            "icon": "inv_tradeskillitem_03",
+            "quality": 1
+          }
+        ],
+        "source": "Formula: Formula: Greater Eternal Wand"
+      },
+      {
+        "id": 20750,
+        "spellId": 25128,
+        "name": "Wizard Oil",
+        "icon": "inv_potion_104",
+        "quality": 1,
+        "cat": "Oils",
+        "kind": "Oils",
+        "effect": "\tOther Requires Level 40 Use: While applied to target weapon it increases spell damage and healing by up to 24. Lasts for 30 minutes. Sell Price: 10s",
+        "isNew": false,
+        "learn": 275,
+        "yellow": 285,
+        "green": 305,
+        "grey": 305,
+        "reagents": [
+          {
+            "id": 16204,
+            "count": 3,
+            "name": "Illusion Dust",
+            "icon": "inv_enchant_dustillusion",
+            "quality": 1
+          },
+          {
+            "id": 4625,
+            "count": 2,
+            "name": "Firebloom",
+            "icon": "inv_misc_herb_19",
+            "quality": 1
+          },
+          {
+            "id": 8925,
+            "count": 1,
+            "name": "Crystal Vial",
+            "icon": "inv_potion_86",
+            "quality": 1
+          }
+        ],
+        "source": "Formula: Formula: Wizard Oil"
+      },
+      {
+        "id": 249385,
+        "spellId": 1248650,
+        "name": "Brilliant Wand",
+        "icon": "inv_wand_07",
+        "quality": 3,
+        "cat": "Wands & Staves",
+        "kind": "Wands & Staves",
+        "effect": "Binds when picked up Ranged\tWand 50 - 93 Fire Damage\tSpeed 1.20 (59.6 damage per second) +7 Intellect Requires Level 55 Equip: +9 Spell Power Sell Price: 52s 63c",
+        "isNew": true,
+        "learn": 275,
+        "yellow": 320,
+        "green": 340,
+        "grey": 360,
+        "reagents": [
+          {
+            "id": 16203,
+            "count": 1,
+            "name": "Greater Eternal Essence",
+            "icon": "inv_enchant_essenceeternallarge",
+            "quality": 2
+          },
+          {
+            "id": 16204,
+            "count": 3,
+            "name": "Illusion Dust",
+            "icon": "inv_enchant_dustillusion",
+            "quality": 1
+          },
+          {
+            "id": 14344,
+            "count": 2,
+            "name": "Large Brilliant Shard",
+            "icon": "inv_enchant_shardbrilliantlarge",
+            "quality": 3
+          },
+          {
+            "id": 11291,
+            "count": 1,
+            "name": "Star Wood",
+            "icon": "inv_tradeskillitem_03",
+            "quality": 1
+          }
+        ],
+        "source": "Formula: Formula: Brilliant Wand"
+      },
+      {
+        "id": 249473,
+        "spellId": 1249114,
+        "name": "Dormant Heart of the Mountain",
+        "icon": "inv_misc_gem_diamond_01",
+        "quality": 3,
+        "cat": "Relics",
+        "kind": "Relics",
+        "effect": "Binds when picked up Unique-Equipped Trinket +7 Fire Resistance +7 Nature Resistance +7 Frost Resistance +7 Shadow Resistance Requires Level 50 Equip: Your casts of Greater Heal, Healing Touch, Healing Wave, or Holy Light in combat grant up to 40 increased healing and up to 13 increased damage for 15 sec. Sell Price: 15s",
+        "isNew": true,
+        "learn": 285,
+        "yellow": 285,
+        "green": 305,
+        "grey": 325,
+        "reagents": [
+          {
+            "id": 11382,
+            "count": 1,
+            "name": "Blood of the Mountain",
+            "icon": "inv_misc_gem_bloodstone_03",
+            "quality": 2
+          },
+          {
+            "id": 7080,
+            "count": 1,
+            "name": "Essence of Water",
+            "icon": "spell_nature_acid_01",
+            "quality": 2
+          },
+          {
+            "id": 14343,
+            "count": 3,
+            "name": "Small Brilliant Shard",
+            "icon": "inv_enchant_shardbrilliantsmall",
+            "quality": 3
+          }
+        ],
+        "source": "Trainer"
+      },
+      {
+        "id": 249469,
+        "spellId": 1249107,
+        "name": "Frozen Heart of the Mountain",
+        "icon": "inv_misc_gem_sapphire_01",
+        "quality": 3,
+        "cat": "Relics",
+        "kind": "Relics",
+        "effect": "Binds when picked up Unique-Equipped Trinket +7 Fire Resistance +7 Nature Resistance +7 Frost Resistance +7 Shadow Resistance Requires Level 50 Equip: +9 Hit Rating Use: Increases Frost and Shadow spell damage done by up to 29 for 15 sec. This effect is doubled in Snowy areas. (5 Min Cooldown) Sell Price: 15s",
+        "isNew": true,
+        "learn": 285,
+        "yellow": 285,
+        "green": 305,
+        "grey": 325,
+        "reagents": [
+          {
+            "id": 11382,
+            "count": 1,
+            "name": "Blood of the Mountain",
+            "icon": "inv_misc_gem_bloodstone_03",
+            "quality": 2
+          },
+          {
+            "id": 12808,
+            "count": 1,
+            "name": "Essence of Undeath",
+            "icon": "spell_shadow_shadetruesight",
+            "quality": 2
+          },
+          {
+            "id": 14343,
+            "count": 3,
+            "name": "Small Brilliant Shard",
+            "icon": "inv_enchant_shardbrilliantsmall",
+            "quality": 3
+          }
+        ],
+        "source": "Trainer"
+      },
+      {
+        "id": 249470,
+        "spellId": 1249112,
+        "name": "Molten Heart of the Mountain",
+        "icon": "inv_misc_gem_ruby_01",
+        "quality": 3,
+        "cat": "Relics",
+        "kind": "Relics",
+        "effect": "Binds when picked up Unique-Equipped Trinket +7 Fire Resistance +7 Nature Resistance +7 Frost Resistance +7 Shadow Resistance Requires Level 50 Equip: +2 Weapon Damage Use: Increases Attack Power by 55 for 15 sec. This effect is doubled in Volcanic areas. (5 Min Cooldown) Sell Price: 15s",
+        "isNew": true,
+        "learn": 285,
+        "yellow": 285,
+        "green": 305,
+        "grey": 325,
+        "reagents": [
+          {
+            "id": 11382,
+            "count": 1,
+            "name": "Blood of the Mountain",
+            "icon": "inv_misc_gem_bloodstone_03",
+            "quality": 2
+          },
+          {
+            "id": 7076,
+            "count": 1,
+            "name": "Essence of Earth",
+            "icon": "spell_nature_strengthofearthtotem02",
+            "quality": 2
+          },
+          {
+            "id": 14343,
+            "count": 3,
+            "name": "Small Brilliant Shard",
+            "icon": "inv_enchant_shardbrilliantsmall",
+            "quality": 3
+          }
+        ],
+        "source": "Trainer"
+      },
+      {
+        "id": 16207,
+        "spellId": 20051,
+        "name": "Runed Arcanite Rod",
+        "icon": "inv_wand_09",
+        "quality": 1,
+        "cat": "Rods",
+        "kind": "Rods",
+        "effect": "Binds when picked up \tEnchanting Sell Price: 12s 50c",
+        "isNew": false,
+        "learn": 290,
+        "yellow": 310,
+        "green": 330,
+        "grey": 350,
+        "reagents": [
+          {
+            "id": 16206,
+            "count": 1,
+            "name": "Arcanite Rod",
+            "icon": "inv_staff_19",
+            "quality": 1
+          },
+          {
+            "id": 13926,
+            "count": 1,
+            "name": "Golden Pearl",
+            "icon": "inv_misc_gem_pearl_04",
+            "quality": 2
+          },
+          {
+            "id": 16204,
+            "count": 10,
+            "name": "Illusion Dust",
+            "icon": "inv_enchant_dustillusion",
+            "quality": 1
+          },
+          {
+            "id": 16203,
+            "count": 4,
+            "name": "Greater Eternal Essence",
+            "icon": "inv_enchant_essenceeternallarge",
+            "quality": 2
+          },
+          {
+            "id": 14343,
+            "count": 4,
+            "name": "Small Brilliant Shard",
+            "icon": "inv_enchant_shardbrilliantsmall",
+            "quality": 3
+          },
+          {
+            "id": 14344,
+            "count": 2,
+            "name": "Large Brilliant Shard",
+            "icon": "inv_enchant_shardbrilliantlarge",
+            "quality": 3
+          }
+        ],
+        "source": "Formula: Formula: Runed Arcanite Rod"
+      },
+      {
+        "id": 279987,
+        "spellId": 1263082,
+        "name": "Arcane Forge",
+        "icon": "inv_enchanting_modifiedcraftingreagent_indigo",
+        "quality": 1,
+        "cat": "Relics",
+        "kind": "Relics",
+        "effect": "\tOther Requires Enchanting (300) Use: Places an Arcane Forge usable for recipes that require it, and provides all the benefits of an Enchanted Lute. Requires a Campfire nearby. May be placed over an Enchanted Lute to replace it. All camping features share a cooldown of 1 hr. (60 Min Cooldown)",
+        "isNew": true,
+        "learn": 300,
+        "yellow": 300,
+        "green": 320,
+        "grey": 300,
+        "reagents": [
+          {
+            "id": 273128,
+            "count": 1,
+            "name": "Maker's Spark",
+            "icon": "inv_enchant_essencecosmicgreater",
+            "quality": 2
+          },
+          {
+            "id": 14344,
+            "count": 2,
+            "name": "Large Brilliant Shard",
+            "icon": "inv_enchant_shardbrilliantlarge",
+            "quality": 3
+          },
+          {
+            "id": 16203,
+            "count": 4,
+            "name": "Greater Eternal Essence",
+            "icon": "inv_enchant_essenceeternallarge",
+            "quality": 2
+          }
+        ],
+        "source": "Formula: Blueprint: Arcane Forge"
+      },
+      {
+        "id": 20748,
+        "spellId": 25130,
+        "name": "Brilliant Mana Oil",
+        "icon": "inv_potion_100",
+        "quality": 1,
+        "cat": "Oils",
+        "kind": "Oils",
+        "effect": "\tOther Requires Level 45 Use: While applied to target weapon it restores 15 mana to the caster every 5 seconds and increases the effect of healing spells by up to 30. Lasts for 30 minutes. Sell Price: 10s",
+        "isNew": false,
+        "learn": 300,
+        "yellow": 310,
+        "green": 330,
+        "grey": 330,
+        "reagents": [
+          {
+            "id": 14344,
+            "count": 2,
+            "name": "Large Brilliant Shard",
+            "icon": "inv_enchant_shardbrilliantlarge",
+            "quality": 3
+          },
+          {
+            "id": 8831,
+            "count": 3,
+            "name": "Purple Lotus",
+            "icon": "inv_misc_herb_17",
+            "quality": 1
+          },
+          {
+            "id": 18256,
+            "count": 1,
+            "name": "Imbued Vial",
+            "icon": "inv_potion_87",
+            "quality": 1
+          }
+        ],
+        "source": "Formula: Formula: Brilliant Mana Oil"
+      },
+      {
+        "id": 20749,
+        "spellId": 25129,
+        "name": "Brilliant Wizard Oil",
+        "icon": "inv_potion_105",
+        "quality": 1,
+        "cat": "Oils",
+        "kind": "Oils",
+        "effect": "\tOther Requires Level 45 Use: While applied to target weapon it increases spell damage and healing by up to 36 and increases Spell Critical chance by 1%. Lasts for 30 minutes. Sell Price: 10s",
+        "isNew": false,
+        "learn": 300,
+        "yellow": 310,
+        "green": 330,
+        "grey": 330,
+        "reagents": [
+          {
+            "id": 14344,
+            "count": 2,
+            "name": "Large Brilliant Shard",
+            "icon": "inv_enchant_shardbrilliantlarge",
+            "quality": 3
+          },
+          {
+            "id": 4625,
+            "count": 3,
+            "name": "Firebloom",
+            "icon": "inv_misc_herb_19",
+            "quality": 1
+          },
+          {
+            "id": 18256,
+            "count": 1,
+            "name": "Imbued Vial",
+            "icon": "inv_potion_87",
+            "quality": 1
+          }
+        ],
+        "source": "Formula: Formula: Brilliant Wizard Oil"
       },
       {
         "id": 279250,
-        "spellId": 279250,
+        "spellId": 1306524,
         "name": "Idol of Swiftness",
         "icon": "ability_druid_nourish",
         "quality": 4,
         "cat": "Relics",
+        "kind": "Relics",
+        "effect": "Binds when equipped Relic\tIdol Requires Level 60 Equip: Reduces the cooldown of your Swiftmend spell by 3 sec. Sell Price: 2g 51s 9c",
         "isNew": true,
         "learn": 300,
-        "yellow": 320,
+        "yellow": 310,
         "green": 330,
-        "grey": 340,
-        "reagents": [],
-        "source": "Trainer / Relic Craft"
+        "grey": 325,
+        "reagents": [
+          {
+            "id": 274030,
+            "count": 1,
+            "name": "Malleable Essence of Nature",
+            "icon": "ability_druid_cyclone",
+            "quality": 4
+          },
+          {
+            "id": 20725,
+            "count": 1,
+            "name": "Nexus Crystal",
+            "icon": "inv_enchant_shardnexuslarge",
+            "quality": 4
+          },
+          {
+            "id": 16203,
+            "count": 2,
+            "name": "Greater Eternal Essence",
+            "icon": "inv_enchant_essenceeternallarge",
+            "quality": 2
+          },
+          {
+            "id": 16204,
+            "count": 12,
+            "name": "Illusion Dust",
+            "icon": "inv_enchant_dustillusion",
+            "quality": 1
+          }
+        ],
+        "source": "Formula: Formula: Idol of Swiftness"
       },
       {
         "id": 279251,
-        "spellId": 279251,
+        "spellId": 1306525,
         "name": "Idol of the Ursine Twins",
         "icon": "inv_misc_idol_04",
         "quality": 4,
         "cat": "Relics",
+        "kind": "Relics",
+        "effect": "Binds when equipped Relic\tIdol Requires Level 60 Equip: Your Lacerate hits have a 10% chance to reset the cooldown on Mangle (Bear). Sell Price: 2g 52s 3c",
         "isNew": true,
         "learn": 300,
-        "yellow": 320,
+        "yellow": 310,
         "green": 330,
-        "grey": 340,
-        "reagents": [],
-        "source": "Trainer / Relic Craft"
+        "grey": 325,
+        "reagents": [
+          {
+            "id": 274030,
+            "count": 1,
+            "name": "Malleable Essence of Nature",
+            "icon": "ability_druid_cyclone",
+            "quality": 4
+          },
+          {
+            "id": 20725,
+            "count": 1,
+            "name": "Nexus Crystal",
+            "icon": "inv_enchant_shardnexuslarge",
+            "quality": 4
+          },
+          {
+            "id": 16203,
+            "count": 2,
+            "name": "Greater Eternal Essence",
+            "icon": "inv_enchant_essenceeternallarge",
+            "quality": 2
+          },
+          {
+            "id": 16204,
+            "count": 12,
+            "name": "Illusion Dust",
+            "icon": "inv_enchant_dustillusion",
+            "quality": 1
+          }
+        ],
+        "source": "Formula: Formula: Idol of the Ursine Twins"
       },
       {
         "id": 279248,
-        "spellId": 279248,
+        "spellId": 1306522,
         "name": "Libram of Infusion",
         "icon": "inv_misc_book_13",
         "quality": 4,
         "cat": "Relics",
+        "kind": "Relics",
+        "effect": "Binds when equipped Relic\tLibram Requires Level 60 Equip: Increases the critical strike chance of your Holy Shock spell by 6%. Sell Price: 2g 49s 24c",
         "isNew": true,
         "learn": 300,
-        "yellow": 320,
+        "yellow": 310,
         "green": 330,
-        "grey": 340,
-        "reagents": [],
-        "source": "Trainer / Relic Craft"
+        "grey": 325,
+        "reagents": [
+          {
+            "id": 274030,
+            "count": 1,
+            "name": "Malleable Essence of Nature",
+            "icon": "ability_druid_cyclone",
+            "quality": 4
+          },
+          {
+            "id": 20725,
+            "count": 1,
+            "name": "Nexus Crystal",
+            "icon": "inv_enchant_shardnexuslarge",
+            "quality": 4
+          },
+          {
+            "id": 16203,
+            "count": 2,
+            "name": "Greater Eternal Essence",
+            "icon": "inv_enchant_essenceeternallarge",
+            "quality": 2
+          },
+          {
+            "id": 16204,
+            "count": 12,
+            "name": "Illusion Dust",
+            "icon": "inv_enchant_dustillusion",
+            "quality": 1
+          }
+        ],
+        "source": "Formula: Formula: Libram of Infusion"
       },
       {
         "id": 279247,
-        "spellId": 279247,
+        "spellId": 1306521,
         "name": "Steadfast Libram",
         "icon": "inv_relics_libramofgrace",
         "quality": 4,
         "cat": "Relics",
+        "kind": "Relics",
+        "effect": "Binds when equipped Relic\tLibram Requires Level 60 Equip: Increases the Block Value of your shield by 30% while Holy Shield is active. Sell Price: 2g 41s 57c",
         "isNew": true,
         "learn": 300,
-        "yellow": 320,
+        "yellow": 310,
         "green": 330,
-        "grey": 340,
-        "reagents": [],
-        "source": "Trainer / Relic Craft"
+        "grey": 325,
+        "reagents": [
+          {
+            "id": 274030,
+            "count": 1,
+            "name": "Malleable Essence of Nature",
+            "icon": "ability_druid_cyclone",
+            "quality": 4
+          },
+          {
+            "id": 20725,
+            "count": 1,
+            "name": "Nexus Crystal",
+            "icon": "inv_enchant_shardnexuslarge",
+            "quality": 4
+          },
+          {
+            "id": 16203,
+            "count": 2,
+            "name": "Greater Eternal Essence",
+            "icon": "inv_enchant_essenceeternallarge",
+            "quality": 2
+          },
+          {
+            "id": 16204,
+            "count": 12,
+            "name": "Illusion Dust",
+            "icon": "inv_enchant_dustillusion",
+            "quality": 1
+          }
+        ],
+        "source": "Formula: Formula: Steadfast Libram"
+      },
+      {
+        "id": 279246,
+        "spellId": 1306520,
+        "name": "Torch of Light",
+        "icon": "inv_torch_lit",
+        "quality": 4,
+        "cat": "Relics",
+        "kind": "Relics",
+        "effect": "Binds when equipped Ranged\tWand 91 - 170 Arcane Damage\tSpeed 1.70 (76.8 damage per second) +11 Spirit Requires Level 60 Equip: +17 Healing Equip: +6 Spell Damage Sell Price: 6g 65s 13c",
+        "isNew": true,
+        "learn": 300,
+        "yellow": 310,
+        "green": 330,
+        "grey": 325,
+        "reagents": [
+          {
+            "id": 274030,
+            "count": 2,
+            "name": "Malleable Essence of Nature",
+            "icon": "ability_druid_cyclone",
+            "quality": 4
+          },
+          {
+            "id": 20725,
+            "count": 1,
+            "name": "Nexus Crystal",
+            "icon": "inv_enchant_shardnexuslarge",
+            "quality": 4
+          },
+          {
+            "id": 14344,
+            "count": 6,
+            "name": "Large Brilliant Shard",
+            "icon": "inv_enchant_shardbrilliantlarge",
+            "quality": 3
+          },
+          {
+            "id": 16202,
+            "count": 5,
+            "name": "Lesser Eternal Essence",
+            "icon": "inv_enchant_essenceeternalsmall",
+            "quality": 2
+          }
+        ],
+        "source": "Formula: Formula: Torch of Light"
       },
       {
         "id": 279249,
-        "spellId": 279249,
+        "spellId": 1306523,
         "name": "Totem of Urgency",
         "icon": "inv_ability_totemicshaman_surgingtotem",
         "quality": 4,
         "cat": "Relics",
+        "kind": "Relics",
+        "effect": "Binds when equipped Relic\tTotem Requires Level 60 Equip: Increases the critical strike chance of your Lesser Healing Wave spell by 4%. Sell Price: 2g 50s 15c",
         "isNew": true,
         "learn": 300,
-        "yellow": 320,
+        "yellow": 310,
         "green": 330,
-        "grey": 340,
-        "reagents": [],
-        "source": "Trainer / Relic Craft"
+        "grey": 325,
+        "reagents": [
+          {
+            "id": 274030,
+            "count": 1,
+            "name": "Malleable Essence of Nature",
+            "icon": "ability_druid_cyclone",
+            "quality": 4
+          },
+          {
+            "id": 20725,
+            "count": 1,
+            "name": "Nexus Crystal",
+            "icon": "inv_enchant_shardnexuslarge",
+            "quality": 4
+          },
+          {
+            "id": 16203,
+            "count": 2,
+            "name": "Greater Eternal Essence",
+            "icon": "inv_enchant_essenceeternallarge",
+            "quality": 2
+          },
+          {
+            "id": 16204,
+            "count": 12,
+            "name": "Illusion Dust",
+            "icon": "inv_enchant_dustillusion",
+            "quality": 1
+          }
+        ],
+        "source": "Formula: Formula: Totem of Urgency"
       }
     ],
     "gatheringNodes": [],
     "leveling": {
-      "title": "Leveling from 1 to 300",
+      "title": "LEVELING FROM 1 TO 300",
       "capNote": "225 is the beta's cap for now",
       "desc": "At each point, you get the cheapest recipe to skill up, whether you learn it from the trainer or buy it from a vendor. Counts are averages, so buy a few more. There are no prices until launch, so each reagent counts for what a vendor pays you for it.",
       "steps": [
@@ -34023,15 +36317,15 @@ window.WOW_PROFESSIONS_DATA = {
         },
         {
           "type": "step",
-          "from": null,
-          "to": null,
+          "from": 1,
+          "to": 1,
           "bar": {
             "iLeft": "0%",
             "iWidth": "0.6%",
             "eLeft": "74.66666666666667%"
           },
-          "itemId": null,
-          "recipeName": "",
+          "itemId": 6218,
+          "recipeName": "Make a Runed Copper Rod",
           "source": "Every enchant from here on needs it in your bags.",
           "advice": "",
           "crafts": 1,
@@ -34062,7 +36356,7 @@ window.WOW_PROFESSIONS_DATA = {
             "eLeft": "74.66666666666667%"
           },
           "itemId": null,
-          "recipeName": "",
+          "recipeName": "Enchant Bracer - Inferior Stamina",
           "source": "Learned from the trainer",
           "advice": "",
           "crafts": 31,
@@ -34086,7 +36380,7 @@ window.WOW_PROFESSIONS_DATA = {
             "eLeft": "74.66666666666667%"
           },
           "itemId": null,
-          "recipeName": "",
+          "recipeName": "Enchant Chest - Inferior Stamina",
           "source": "Learned from the trainer",
           "advice": "",
           "crafts": 51,
@@ -34115,7 +36409,7 @@ window.WOW_PROFESSIONS_DATA = {
             "eLeft": "74.66666666666667%"
           },
           "itemId": null,
-          "recipeName": "",
+          "recipeName": "Enchant Chest - Inferior Stamina",
           "source": "Learned from the trainer",
           "advice": "",
           "crafts": 24,
@@ -34139,7 +36433,7 @@ window.WOW_PROFESSIONS_DATA = {
             "eLeft": "74.66666666666667%"
           },
           "itemId": null,
-          "recipeName": "",
+          "recipeName": "Enchant Bracer - Minor Stamina",
           "source": "Learned from the trainer",
           "advice": "",
           "crafts": 39,
@@ -34163,7 +36457,7 @@ window.WOW_PROFESSIONS_DATA = {
             "eLeft": "74.66666666666667%"
           },
           "itemId": null,
-          "recipeName": "",
+          "recipeName": "Enchant Shield - Minor Stamina",
           "source": "Learned from the trainer",
           "advice": "",
           "crafts": 9,
@@ -34186,15 +36480,15 @@ window.WOW_PROFESSIONS_DATA = {
         },
         {
           "type": "step",
-          "from": null,
-          "to": null,
+          "from": 130,
+          "to": 130,
           "bar": {
             "iLeft": "43%",
             "iWidth": "0.6%",
             "eLeft": "74.66666666666667%"
           },
-          "itemId": null,
-          "recipeName": "",
+          "itemId": 6339,
+          "recipeName": "Make a Runed Silver Rod",
           "source": "Every enchant from here on needs it in your bags.",
           "advice": "",
           "crafts": 1,
@@ -34239,7 +36533,7 @@ window.WOW_PROFESSIONS_DATA = {
             "eLeft": "74.66666666666667%"
           },
           "itemId": null,
-          "recipeName": "",
+          "recipeName": "Enchant Bracer - Lesser Stamina",
           "source": "Learned from the trainer",
           "advice": "",
           "crafts": 20,
@@ -34268,7 +36562,7 @@ window.WOW_PROFESSIONS_DATA = {
             "eLeft": "74.66666666666667%"
           },
           "itemId": null,
-          "recipeName": "",
+          "recipeName": "Enchant Bracer - Lesser Stamina",
           "source": "Learned from the trainer",
           "advice": "",
           "crafts": 29,
@@ -34284,15 +36578,15 @@ window.WOW_PROFESSIONS_DATA = {
         },
         {
           "type": "step",
-          "from": null,
-          "to": null,
+          "from": 173,
+          "to": 173,
           "bar": {
             "iLeft": "57.333333333333336%",
             "iWidth": "0.6%",
             "eLeft": "74.66666666666667%"
           },
-          "itemId": null,
-          "recipeName": "",
+          "itemId": 11130,
+          "recipeName": "Make a Runed Golden Rod",
           "source": "Every enchant from here on needs it in your bags.",
           "advice": "",
           "crafts": 1,
@@ -34337,7 +36631,7 @@ window.WOW_PROFESSIONS_DATA = {
             "eLeft": "74.66666666666667%"
           },
           "itemId": null,
-          "recipeName": "",
+          "recipeName": "Enchant Boots - Lesser Agility",
           "source": "Learned from the trainer",
           "advice": "",
           "crafts": 24,
@@ -34361,7 +36655,7 @@ window.WOW_PROFESSIONS_DATA = {
             "eLeft": "74.66666666666667%"
           },
           "itemId": null,
-          "recipeName": "",
+          "recipeName": "Enchant Bracer - Strength",
           "source": "Learned from the trainer",
           "advice": "",
           "crafts": 30,
@@ -34377,15 +36671,15 @@ window.WOW_PROFESSIONS_DATA = {
         },
         {
           "type": "step",
-          "from": null,
-          "to": null,
+          "from": 218,
+          "to": 218,
           "bar": {
             "iLeft": "72.33333333333333%",
             "iWidth": "0.6%",
             "eLeft": "74.66666666666667%"
           },
-          "itemId": null,
-          "recipeName": "",
+          "itemId": 11145,
+          "recipeName": "Make a Runed Truesilver Rod",
           "source": "Every enchant from here on needs it in your bags.",
           "advice": "",
           "crafts": 1,
@@ -34430,7 +36724,7 @@ window.WOW_PROFESSIONS_DATA = {
             "eLeft": "74.66666666666667%"
           },
           "itemId": null,
-          "recipeName": "",
+          "recipeName": "Enchant Cloak - Greater Defense",
           "source": "Learned from the trainer",
           "advice": "",
           "crafts": 7,
@@ -34443,6 +36737,11 @@ window.WOW_PROFESSIONS_DATA = {
               "quality": 1
             }
           ]
+        },
+        {
+          "type": "beta-stop",
+          "title": "THE BETA STOPS AT 225",
+          "text": "Professions cannot go past skill 225 in the beta for now. The steps below are the way to 300 once the cap is raised, read from the same client data."
         },
         {
           "type": "rank",
@@ -34459,7 +36758,7 @@ window.WOW_PROFESSIONS_DATA = {
             "eLeft": "74.66666666666667%"
           },
           "itemId": null,
-          "recipeName": "",
+          "recipeName": "Enchant Gloves - Agility",
           "source": "Learned from the trainer",
           "advice": "",
           "crafts": 68,
@@ -34483,7 +36782,7 @@ window.WOW_PROFESSIONS_DATA = {
             "eLeft": "74.66666666666667%"
           },
           "itemId": null,
-          "recipeName": "",
+          "recipeName": "Enchant Bracer - Greater Strength",
           "source": "Learned from the trainer",
           "advice": "",
           "crafts": 20,
@@ -34513,8 +36812,8 @@ window.WOW_PROFESSIONS_DATA = {
             "iWidth": "7.666666666666667%",
             "eLeft": "74.66666666666667%"
           },
-          "itemId": null,
-          "recipeName": "",
+          "itemId": 11224,
+          "recipeName": "Enchant Shield - Greater Stamina",
           "source": "Formula sold by Mythrin'dir (Alliance) or Daniel Bartlett (Horde)",
           "advice": "",
           "crafts": 27,
