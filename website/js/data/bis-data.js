@@ -14,7 +14,7 @@ const WOW_BIS_METADATA = {
   "version": "1.60.1.70291",
   "phase": "Beta Phase 2 (Level 30 Cap)",
   "lastUpdated": "October 8, 2026",
-  "sourceNotice": "Curated directly from Beta Build 70291 discovering logs, itemcache, and ForeverChanges data.",
+  "sourceNotice": "Curated directly from Beta Build 70291 discovering logs, itemcache, and Official Game Tables.",
   "totalSpecs": 38,
   "totalClasses": 9
 };

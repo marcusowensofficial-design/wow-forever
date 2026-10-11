@@ -9,13 +9,13 @@
           "name": "Scholarly Pendant",
           "slot": "Neck (iLvl 23)",
           "stats": "+3 Stamina, +2 Spirit",
-          "icon": "https://foreverchanges.pro/icon/inv_jewelry_necklace_11.jpg"
+          "icon": "https://wow.zamimg.com/images/wow/icons/medium/inv_jewelry_necklace_11.jpg"
         },
         {
           "name": "Erudite's Amulet",
           "slot": "Neck (iLvl 23)",
           "stats": "+2 Agility, +3 Stamina",
-          "icon": "https://foreverchanges.pro/icon/inv_jewelry_necklace_01.jpg"
+          "icon": "https://wow.zamimg.com/images/wow/icons/medium/inv_jewelry_necklace_01.jpg"
         }
       ]
     },
@@ -28,13 +28,13 @@
           "name": "Philanthropist's Ring",
           "slot": "Finger (iLvl 35)",
           "stats": "+5 Intellect, Equip: +10 Spell Damage and Healing",
-          "icon": "https://foreverchanges.pro/icon/inv_jewelry_ring_14.jpg"
+          "icon": "https://wow.zamimg.com/images/wow/icons/medium/inv_jewelry_ring_14.jpg"
         },
         {
           "name": "Field Researcher's Loop",
           "slot": "Finger (iLvl 35)",
           "stats": "+7 Agility, +7 Stamina",
-          "icon": "https://foreverchanges.pro/icon/inv_jewelry_ring_02.jpg"
+          "icon": "https://wow.zamimg.com/images/wow/icons/medium/inv_jewelry_ring_02.jpg"
         }
       ]
     },
@@ -47,19 +47,19 @@
           "name": "Truthseeker's Bow",
           "slot": "Ranged Bow (iLvl 45)",
           "stats": "23.8 DPS, +7 Agility, +3 Stamina (Req Level 40)",
-          "icon": "https://foreverchanges.pro/icon/inv_weapon_bow_01.jpg"
+          "icon": "https://wow.zamimg.com/images/wow/icons/medium/inv_weapon_bow_01.jpg"
         },
         {
           "name": "Crest of Elucidation",
           "slot": "Off-Hand Shield (iLvl 45)",
           "stats": "+12 Spirit, +11 Healing, +4 Spell Damage (Req Level 40)",
-          "icon": "https://foreverchanges.pro/icon/spell_holy_powerwordshield.jpg"
+          "icon": "https://wow.zamimg.com/images/wow/icons/medium/spell_holy_powerwordshield.jpg"
         },
         {
           "name": "Researcher's Night Light",
           "slot": "Off-Hand (iLvl 45)",
           "stats": "+12 Stamina, +7 Fire Spell Damage (Req Level 40)",
-          "icon": "https://foreverchanges.pro/icon/inv_torch_lit.jpg"
+          "icon": "https://wow.zamimg.com/images/wow/icons/medium/inv_torch_lit.jpg"
         }
       ]
     }

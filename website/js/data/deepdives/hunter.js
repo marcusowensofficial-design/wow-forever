@@ -754,13 +754,13 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
     "betaCapNotice": "Read from the beta client and set against Classic’s. Each ability is shown at the rank a pet can have at level 30, the beta’s cap.",
     "foxFamily": {
       "name": "Fox",
-      "icon": "https://foreverchanges.pro/icon/ability_hunter_aspectofthefox.jpg",
+      "icon": "https://wow.zamimg.com/images/wow/icons/medium/ability_hunter_aspectofthefox.jpg",
       "diet": ["Meat"],
       "baseline": "Bite, Dash, Trickster's Dance",
       "ability": {
         "name": "Trickster's Dance",
         "rank": "Rank 1",
-        "icon": "https://foreverchanges.pro/icon/ability_hunter_aspectofthefox.jpg",
+        "icon": "https://wow.zamimg.com/images/wow/icons/medium/ability_hunter_aspectofthefox.jpg",
         "desc": "Increases your pet's chance to Dodge by 50% and decreases the time between your pet's attacks by 30% for 12 sec.",
         "cost": "10 Focus",
         "cd": "3 min cooldown"
@@ -774,7 +774,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
     "newAbilities": [
       {
         "family": "Bat",
-        "icon": "https://foreverchanges.pro/icon/ability_vehicle_sonicshockwave.jpg",
+        "icon": "https://wow.zamimg.com/images/wow/icons/medium/ability_vehicle_sonicshockwave.jpg",
         "name": "Sonic Blast",
         "rank": "Rank 2",
         "desc": "Emits a piercing shriek, inflicting 33 to 39 Nature damage and increasing the casting time of all spells by 60% for 30 sec.",
@@ -783,7 +783,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       },
       {
         "family": "Bear",
-        "icon": "https://foreverchanges.pro/icon/inv_misc_monsterclaw_03.jpg",
+        "icon": "https://wow.zamimg.com/images/wow/icons/medium/inv_misc_monsterclaw_03.jpg",
         "name": "Swipe",
         "rank": "Rank 2",
         "desc": "Swipe 3 nearby enemies, inflicting 8 to 10 damage.",
@@ -793,7 +793,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       {
         "family": "Bird of Prey",
         "familyNote": "Owl in Classic",
-        "icon": "https://foreverchanges.pro/icon/spell_nature_natureswrath.jpg",
+        "icon": "https://wow.zamimg.com/images/wow/icons/medium/spell_nature_natureswrath.jpg",
         "name": "Mine!",
         "rank": "Rank 3",
         "desc": "Grabs an enemy's weapon with its talons, causing 20 to 24 damage and disarming them for 4 sec.",
@@ -802,7 +802,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       },
       {
         "family": "Crab",
-        "icon": "https://foreverchanges.pro/icon/ability_hunter_pet_crab.jpg",
+        "icon": "https://wow.zamimg.com/images/wow/icons/medium/ability_hunter_pet_crab.jpg",
         "name": "Pinch",
         "rank": "Rank 2",
         "desc": "Pinches an enemy's legs for 32 to 36 damage and reduces movement speed by 50% for 9 sec.",
@@ -811,7 +811,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       },
       {
         "family": "Crocolisk",
-        "icon": "https://foreverchanges.pro/icon/ability_hunter_pet_crocolisk.jpg",
+        "icon": "https://wow.zamimg.com/images/wow/icons/medium/ability_hunter_pet_crocolisk.jpg",
         "name": "Dismember",
         "rank": "Rank 2",
         "desc": "Viciously bites enemy appendages for 18 to 20 damage and reduces the effectiveness of any healing by 50% for 10 sec.",
@@ -821,7 +821,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       {
         "family": "Fox",
         "familyNote": "New Family",
-        "icon": "https://foreverchanges.pro/icon/ability_hunter_aspectofthefox.jpg",
+        "icon": "https://wow.zamimg.com/images/wow/icons/medium/ability_hunter_aspectofthefox.jpg",
         "name": "Trickster's Dance",
         "rank": "Rank 1",
         "desc": "Increases your pet's chance to Dodge by 50% and decreases the time between your pet's attacks by 30% for 12 sec.",
@@ -830,7 +830,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       },
       {
         "family": "Hyena",
-        "icon": "https://foreverchanges.pro/icon/ability_hunter_pet_hyena.jpg",
+        "icon": "https://wow.zamimg.com/images/wow/icons/medium/ability_hunter_pet_hyena.jpg",
         "name": "Tendon Rip",
         "rank": "Rank 2",
         "desc": "Tears at an enemy's legs for 21 damage over 9 sec and reduces movement speed by 50% for 9 sec.",
@@ -839,7 +839,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       },
       {
         "family": "Raptor",
-        "icon": "https://foreverchanges.pro/icon/ability_hunter_pet_raptor.jpg",
+        "icon": "https://wow.zamimg.com/images/wow/icons/medium/ability_hunter_pet_raptor.jpg",
         "name": "Savage Rend",
         "rank": "Rank 2",
         "desc": "Slash an enemy with razor talons, causing the target to Bleed for 54 damage over 18 sec.",
@@ -848,7 +848,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       },
       {
         "family": "Spider",
-        "icon": "https://foreverchanges.pro/icon/spell_nature_web.jpg",
+        "icon": "https://wow.zamimg.com/images/wow/icons/medium/spell_nature_web.jpg",
         "name": "Web",
         "rank": "Rank 2",
         "desc": "Entangles an enemy in a corrosive web, immobilizing them and dealing 20 Nature damage over 4 sec.",
@@ -857,7 +857,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       },
       {
         "family": "Tallstrider",
-        "icon": "https://foreverchanges.pro/icon/spell_nature_sleep.jpg",
+        "icon": "https://wow.zamimg.com/images/wow/icons/medium/spell_nature_sleep.jpg",
         "name": "Dust Cloud",
         "rank": "Rank 2",
         "desc": "Your tallstrider kicks up an abrasive cloud of dust, reducing the target's Armor by 175 for 30 sec.",
@@ -881,7 +881,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         "family": "Boar",
         "ability": "Charge",
         "rank": "Rank 1",
-        "icon": "https://foreverchanges.pro/icon/ability_hunter_pet_boar.jpg",
+        "icon": "https://wow.zamimg.com/images/wow/icons/medium/ability_hunter_pet_boar.jpg",
         "classic": "Charges an enemy, immobilizes it for 1 sec, and adds 60 melee attack power to the boar's next attack.",
         "forever": "Charges an enemy, immobilizes it for 1 sec, and adds 66 melee attack power to the boar's next attack.",
         "delta": "+6 Melee Attack Power buff (+10% increase)"
@@ -891,7 +891,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         "ability": "Demoralizing Screech",
         "rank": "Rank 1",
         "classicName": "Screech in Classic",
-        "icon": "https://foreverchanges.pro/icon/ability_hunter_pet_vulture.jpg",
+        "icon": "https://wow.zamimg.com/images/wow/icons/medium/ability_hunter_pet_vulture.jpg",
         "classic": "Blasts a single enemy for 7 to 9 damage and lowers the melee attack power of all enemies in melee range by 25. Effect lasts 4 sec.",
         "forever": "Blasts a single enemy for 7 to 9 damage and lowers the melee attack power of all enemies in melee range by 63 for 30 sec.",
         "delta": "Massive duration boost: 4 sec → 30 sec! Debuff increased: -25 AP → -63 AP"
@@ -900,7 +900,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         "family": "Gorilla",
         "ability": "Thunderstomp",
         "rank": "Rank 1",
-        "icon": "https://foreverchanges.pro/icon/ability_hunter_pet_gorilla.jpg",
+        "icon": "https://wow.zamimg.com/images/wow/icons/medium/ability_hunter_pet_gorilla.jpg",
         "classic": "Shakes the ground with thundering force, doing 70 to 80 Nature damage to all enemies within 8 yards.",
         "forever": "Shakes the ground with thundering force, doing 53 to 61 Nature damage to all enemies within 8 yards.",
         "delta": "Rebalanced AoE damage curve + New Rank 4 added at Level 60 (122–142 Nature damage, 8 yds) which Classic never had!"
@@ -909,7 +909,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         "family": "Scorpid",
         "ability": "Scorpid Poison",
         "rank": "Rank 1",
-        "icon": "https://foreverchanges.pro/icon/ability_poisonsting.jpg",
+        "icon": "https://wow.zamimg.com/images/wow/icons/medium/ability_poisonsting.jpg",
         "classic": "Inflicts 10 Nature damage over 10 sec. Effect can stack up to 5 times on a single target.",
         "forever": "Inflicts 5 Nature damage over 10 sec. Effect can stack up to 5 times on a single target.",
         "delta": "Base tick adjusted (5 vs 10 Nature dmg) while maintaining the 5-stack debuff protection"
@@ -918,7 +918,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         "family": "Turtle",
         "ability": "Shell Shield",
         "rank": "Rank 1",
-        "icon": "https://foreverchanges.pro/icon/ability_hunter_pet_turtle.jpg",
+        "icon": "https://wow.zamimg.com/images/wow/icons/medium/ability_hunter_pet_turtle.jpg",
         "classic": "Reduces all damage your pet takes by 50%, but increases the time between your pet's attacks by 43%. Lasts 12 sec.",
         "forever": "Reduces all damage your pet takes by 50% and increases the time between your pet's attacks by 60%, but deals more damage with each attack. Lasts 12 sec.",
         "delta": "Swing interval penalty increased from +43% to +60%, but offset by heavier individual hit damage"
@@ -927,7 +927,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         "family": "Wind Serpent",
         "ability": "Lightning Breath",
         "rank": "Rank 1",
-        "icon": "https://foreverchanges.pro/icon/spell_nature_lightning.jpg",
+        "icon": "https://wow.zamimg.com/images/wow/icons/medium/spell_nature_lightning.jpg",
         "classic": "Breathes lightning, instantly dealing 11 to 14 Nature damage to a single target.",
         "forever": "Breathes lightning, instantly dealing 8 to 10 Nature damage to a single target.",
         "delta": "Early-level burst smoothed (8–10 vs 11–14 Nature dmg) to normalize caster pet leveling pace"
@@ -936,7 +936,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         "family": "Wolf",
         "ability": "Furious Howl",
         "rank": "Rank 1",
-        "icon": "https://foreverchanges.pro/icon/ability_hunter_pet_wolf.jpg",
+        "icon": "https://wow.zamimg.com/images/wow/icons/medium/ability_hunter_pet_wolf.jpg",
         "classic": "Party members within 15 yards receive an extra 9 to 11 damage to their next Physical attack. Lasts 10 sec.",
         "forever": "The wolf howls, increasing the melee attack power of all party members within 15 yards by 13. Lasts 1 min.",
         "delta": "Transformed from a single-hit physical proc into a persistent 1-minute party AP aura (+13 AP)"

@@ -648,7 +648,7 @@ function initClassDeepDives() {
                 </td>
               </tr>
             ` : filtered.map(b => {
-              const icon = familyIconMap.get(b.family.toLowerCase()) || 'https://foreverchanges.pro/icon/ability_hunter_pet_cat.jpg';
+              const icon = familyIconMap.get(b.family.toLowerCase()) || 'https://wow.zamimg.com/images/wow/icons/medium/ability_hunter_pet_cat.jpg';
               const zoneText = b.zone || 'WoW Forever Beta Spawn';
               return `
                 <tr>
@@ -1457,7 +1457,7 @@ function initClassDeepDives() {
     const newAbilities = changes.newAbilities || [
       {
         family: "Bat",
-        icon: "https://foreverchanges.pro/icon/ability_vehicle_sonicshockwave.jpg",
+        icon: "https://wow.zamimg.com/images/wow/icons/medium/ability_vehicle_sonicshockwave.jpg",
         name: "Sonic Blast",
         rank: "Rank 2",
         desc: "Emits a piercing shriek, inflicting 33 to 39 Nature damage and increasing the casting time of all spells by 60% for 30 sec.",
@@ -1466,7 +1466,7 @@ function initClassDeepDives() {
       },
       {
         family: "Bear",
-        icon: "https://foreverchanges.pro/icon/inv_misc_monsterclaw_03.jpg",
+        icon: "https://wow.zamimg.com/images/wow/icons/medium/inv_misc_monsterclaw_03.jpg",
         name: "Swipe",
         rank: "Rank 2",
         desc: "Swipe 3 nearby enemies, inflicting 8 to 10 damage.",
@@ -1476,7 +1476,7 @@ function initClassDeepDives() {
       {
         family: "Bird of Prey",
         familyNote: "Owl in Classic",
-        icon: "https://foreverchanges.pro/icon/spell_nature_natureswrath.jpg",
+        icon: "https://wow.zamimg.com/images/wow/icons/medium/spell_nature_natureswrath.jpg",
         name: "Mine!",
         rank: "Rank 3",
         desc: "Grabs an enemy's weapon with its talons, causing 20 to 24 damage and disarming them for 4 sec.",
@@ -1485,7 +1485,7 @@ function initClassDeepDives() {
       },
       {
         family: "Crab",
-        icon: "https://foreverchanges.pro/icon/ability_hunter_pet_crab.jpg",
+        icon: "https://wow.zamimg.com/images/wow/icons/medium/ability_hunter_pet_crab.jpg",
         name: "Pinch",
         rank: "Rank 2",
         desc: "Pinches an enemy's legs for 32 to 36 damage and reduces movement speed by 50% for 9 sec.",
@@ -1494,7 +1494,7 @@ function initClassDeepDives() {
       },
       {
         family: "Crocolisk",
-        icon: "https://foreverchanges.pro/icon/ability_hunter_pet_crocolisk.jpg",
+        icon: "https://wow.zamimg.com/images/wow/icons/medium/ability_hunter_pet_crocolisk.jpg",
         name: "Dismember",
         rank: "Rank 2",
         desc: "Viciously bites enemy appendages for 18 to 20 damage and reduces the effectiveness of any healing by 50% for 10 sec.",
@@ -1504,7 +1504,7 @@ function initClassDeepDives() {
       {
         family: "Fox",
         familyNote: "New Family",
-        icon: "https://foreverchanges.pro/icon/ability_hunter_aspectofthefox.jpg",
+        icon: "https://wow.zamimg.com/images/wow/icons/medium/ability_hunter_aspectofthefox.jpg",
         name: "Trickster's Dance",
         rank: "Rank 1",
         desc: "Increases your pet's chance to Dodge by 50% and decreases the time between your pet's attacks by 30% for 12 sec.",
@@ -1513,7 +1513,7 @@ function initClassDeepDives() {
       },
       {
         family: "Hyena",
-        icon: "https://foreverchanges.pro/icon/ability_hunter_pet_hyena.jpg",
+        icon: "https://wow.zamimg.com/images/wow/icons/medium/ability_hunter_pet_hyena.jpg",
         name: "Tendon Rip",
         rank: "Rank 2",
         desc: "Tears at an enemy's legs for 21 damage over 9 sec and reduces movement speed by 50% for 9 sec.",
@@ -1522,7 +1522,7 @@ function initClassDeepDives() {
       },
       {
         family: "Raptor",
-        icon: "https://foreverchanges.pro/icon/ability_hunter_pet_raptor.jpg",
+        icon: "https://wow.zamimg.com/images/wow/icons/medium/ability_hunter_pet_raptor.jpg",
         name: "Savage Rend",
         rank: "Rank 2",
         desc: "Slash an enemy with razor talons, causing the target to Bleed for 54 damage over 18 sec.",
@@ -1531,7 +1531,7 @@ function initClassDeepDives() {
       },
       {
         family: "Spider",
-        icon: "https://foreverchanges.pro/icon/spell_nature_web.jpg",
+        icon: "https://wow.zamimg.com/images/wow/icons/medium/spell_nature_web.jpg",
         name: "Web",
         rank: "Rank 2",
         desc: "Entangles an enemy in a corrosive web, immobilizing them and dealing 20 Nature damage over 4 sec.",
@@ -1540,7 +1540,7 @@ function initClassDeepDives() {
       },
       {
         family: "Tallstrider",
-        icon: "https://foreverchanges.pro/icon/spell_nature_sleep.jpg",
+        icon: "https://wow.zamimg.com/images/wow/icons/medium/spell_nature_sleep.jpg",
         name: "Dust Cloud",
         rank: "Rank 2",
         desc: "Your tallstrider kicks up an abrasive cloud of dust, reducing the target's Armor by 175 for 30 sec.",
@@ -1687,7 +1687,7 @@ function initClassDeepDives() {
             ${newAbilities.map(a => `
               <div class="pet-new-ability-card">
                 <div class="pet-new-ability-top">
-                  <img src="${a.icon}" alt="${escapeHtml(a.name)}" class="pet-ability-icon-img" onerror="this.src='https://foreverchanges.pro/icon/ability_hunter_pet_wolf.jpg'">
+                  <img src="${a.icon}" alt="${escapeHtml(a.name)}" class="pet-ability-icon-img" onerror="this.src='https://wow.zamimg.com/images/wow/icons/medium/ability_hunter_pet_wolf.jpg'">
                   <div>
                     <div style="display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap;">
                       <span class="ability-card-family">${escapeHtml(a.family)}</span>
@@ -1759,7 +1759,7 @@ function initClassDeepDives() {
             ${changedAbilities.map(ca => `
               <div class="pet-diff-card">
                 <div class="pet-diff-card-header">
-                  <img src="${ca.icon}" alt="${escapeHtml(ca.ability)}" class="pet-ability-icon-img" onerror="this.src='https://foreverchanges.pro/icon/ability_hunter_pet_wolf.jpg'">
+                  <img src="${ca.icon}" alt="${escapeHtml(ca.ability)}" class="pet-ability-icon-img" onerror="this.src='https://wow.zamimg.com/images/wow/icons/medium/ability_hunter_pet_wolf.jpg'">
                   <div>
                     <span class="diff-card-fam">${escapeHtml(ca.family)}</span>
                     <div style="display: flex; align-items: center; gap: 0.4rem;">

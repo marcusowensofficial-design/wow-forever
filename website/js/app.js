@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (typeof renderEngineSpecs === 'function') renderEngineSpecs();
 
   // 4. Camping & Professions Hub
+  if (typeof initProfessionsHub === 'function') initProfessionsHub();
   if (typeof initCampingHub === 'function') initCampingHub();
   if (typeof renderMountsGallery === 'function') renderMountsGallery();
   if (typeof renderStatsAndCaps === 'function') renderStatsAndCaps();

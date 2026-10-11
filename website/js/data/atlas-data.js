@@ -666,13 +666,13 @@ window.WOW_ATLAS_DATA = {
           "name": "Scholarly Pendant",
           "slot": "Neck (iLvl 23)",
           "stats": "+3 Stamina, +2 Spirit",
-          "icon": "https://foreverchanges.pro/icon/inv_jewelry_necklace_11.jpg"
+          "icon": "https://wow.zamimg.com/images/wow/icons/medium/inv_jewelry_necklace_11.jpg"
         },
         {
           "name": "Erudite's Amulet",
           "slot": "Neck (iLvl 23)",
           "stats": "+2 Agility, +3 Stamina",
-          "icon": "https://foreverchanges.pro/icon/inv_jewelry_necklace_01.jpg"
+          "icon": "https://wow.zamimg.com/images/wow/icons/medium/inv_jewelry_necklace_01.jpg"
         }
       ]
     },
@@ -685,13 +685,13 @@ window.WOW_ATLAS_DATA = {
           "name": "Philanthropist's Ring",
           "slot": "Finger (iLvl 35)",
           "stats": "+5 Intellect, Equip: +10 Spell Damage and Healing",
-          "icon": "https://foreverchanges.pro/icon/inv_jewelry_ring_14.jpg"
+          "icon": "https://wow.zamimg.com/images/wow/icons/medium/inv_jewelry_ring_14.jpg"
         },
         {
           "name": "Field Researcher's Loop",
           "slot": "Finger (iLvl 35)",
           "stats": "+7 Agility, +7 Stamina",
-          "icon": "https://foreverchanges.pro/icon/inv_jewelry_ring_02.jpg"
+          "icon": "https://wow.zamimg.com/images/wow/icons/medium/inv_jewelry_ring_02.jpg"
         }
       ]
     },
@@ -704,19 +704,19 @@ window.WOW_ATLAS_DATA = {
           "name": "Truthseeker's Bow",
           "slot": "Ranged Bow (iLvl 45)",
           "stats": "23.8 DPS, +7 Agility, +3 Stamina (Req Level 40)",
-          "icon": "https://foreverchanges.pro/icon/inv_weapon_bow_01.jpg"
+          "icon": "https://wow.zamimg.com/images/wow/icons/medium/inv_weapon_bow_01.jpg"
         },
         {
           "name": "Crest of Elucidation",
           "slot": "Off-Hand Shield (iLvl 45)",
           "stats": "+12 Spirit, +11 Healing, +4 Spell Damage (Req Level 40)",
-          "icon": "https://foreverchanges.pro/icon/spell_holy_powerwordshield.jpg"
+          "icon": "https://wow.zamimg.com/images/wow/icons/medium/spell_holy_powerwordshield.jpg"
         },
         {
           "name": "Researcher's Night Light",
           "slot": "Off-Hand (iLvl 45)",
           "stats": "+12 Stamina, +7 Fire Spell Damage (Req Level 40)",
-          "icon": "https://foreverchanges.pro/icon/inv_torch_lit.jpg"
+          "icon": "https://wow.zamimg.com/images/wow/icons/medium/inv_torch_lit.jpg"
         }
       ]
     }
@@ -1448,7 +1448,7 @@ window.WOW_ATLAS_DATA = {
       {
         "name": "Saltspine",
         "level": 28,
-        "portrait": "https://foreverchanges.pro/wow-ui/bosses/saltspine.webp",
+        "portrait": "https://WoW Forever/wow-ui/bosses/saltspine.webp",
         "mechanics": "Roams the starting marsh among elite crocolisks. Clear trash thoroughly before engaging him. He hits hard with high base health.",
         "abilities": [
           {
@@ -1482,7 +1482,7 @@ window.WOW_ATLAS_DATA = {
       {
         "name": "Shadetooth",
         "level": 29,
-        "portrait": "https://foreverchanges.pro/wow-ui/bosses/shadetooth.webp",
+        "portrait": "https://WoW Forever/wow-ui/bosses/shadetooth.webp",
         "mechanics": "Slay the raptor matriarch in the tall brush. A wave of raptor adds spawns upon her death; wipe out the wave quickly before Shadetooth charges in.",
         "abilities": [
           {
@@ -1534,7 +1534,7 @@ window.WOW_ATLAS_DATA = {
       {
         "name": "Highland Horror",
         "level": 30,
-        "portrait": "https://foreverchanges.pro/wow-ui/bosses/highland-horror.webp",
+        "portrait": "https://WoW Forever/wow-ui/bosses/highland-horror.webp",
         "mechanics": "Guards the Dragonmaw orc encampment. Pull the surrounding Dragonmaw orcs in small packs first, then engage the horror.",
         "abilities": [
           {
@@ -1556,7 +1556,7 @@ window.WOW_ATLAS_DATA = {
       {
         "name": "Relic Guardian",
         "level": 31,
-        "portrait": "https://foreverchanges.pro/wow-ui/bosses/relic-guardian.webp",
+        "portrait": "https://WoW Forever/wow-ui/bosses/relic-guardian.webp",
         "mechanics": "Dormant at the end of the spider cavern. Click the ancient Titan console next to him to initiate the encounter.",
         "abilities": [
           {
@@ -1639,7 +1639,7 @@ window.WOW_ATLAS_DATA = {
       {
         "name": "Atrexis the Grave Knight",
         "level": 29,
-        "portrait": "https://foreverchanges.pro/wow-ui/bosses/145787.webp",
+        "portrait": "https://WoW Forever/wow-ui/bosses/145787.webp",
         "mechanics": "Stands inside the ritual summoning circle in the sewer underbelly, flanked by Kirin Tor Necromancers.",
         "abilities": [
           {
@@ -1691,7 +1691,7 @@ window.WOW_ATLAS_DATA = {
       {
         "name": "Lyn the Ignored",
         "level": 31,
-        "portrait": "https://foreverchanges.pro/wow-ui/bosses/lyn-the-ignored.webp",
+        "portrait": "https://WoW Forever/wow-ui/bosses/lyn-the-ignored.webp",
         "mechanics": "Secret summoning encounter: player with Tome of Dalaran clicks pink circle in northeast market stalls room.",
         "abilities": [
           {
@@ -1731,7 +1731,7 @@ window.WOW_ATLAS_DATA = {
       {
         "name": "Arcane Anomaly",
         "level": 30,
-        "portrait": "https://foreverchanges.pro/wow-ui/bosses/arcane-anomaly.webp",
+        "portrait": "https://WoW Forever/wow-ui/bosses/arcane-anomaly.webp",
         "mechanics": "Channels lethal directional beam and arcane bolts.",
         "abilities": [
           {
@@ -1771,7 +1771,7 @@ window.WOW_ATLAS_DATA = {
       {
         "name": "Arcanic Enigma",
         "level": 30,
-        "portrait": "https://foreverchanges.pro/wow-ui/bosses/arcanic-enigma.webp",
+        "portrait": "https://WoW Forever/wow-ui/bosses/arcanic-enigma.webp",
         "mechanics": "Polymorphs party members and silences spellcasters.",
         "abilities": [
           {
@@ -1817,7 +1817,7 @@ window.WOW_ATLAS_DATA = {
       {
         "name": "Unstable Sentinel",
         "level": 31,
-        "portrait": "https://foreverchanges.pro/wow-ui/bosses/unstable-sentinel.webp",
+        "portrait": "https://WoW Forever/wow-ui/bosses/unstable-sentinel.webp",
         "mechanics": "Ancient construct with lethal 25-yard pulsing AoE. Drops the Spinning Wheel blueprint!",
         "abilities": [
           {
@@ -1857,7 +1857,7 @@ window.WOW_ATLAS_DATA = {
       {
         "name": "Shade of the Archmage",
         "level": 33,
-        "portrait": "https://foreverchanges.pro/wow-ui/bosses/shade-of-archmage.webp",
+        "portrait": "https://WoW Forever/wow-ui/bosses/shade-of-archmage.webp",
         "mechanics": "Final boss of Dalaran inside the Violet Chamber. Mass polymorphs when out of mana and channels Evocation.",
         "abilities": [
           {
@@ -1955,7 +1955,7 @@ window.WOW_ATLAS_DATA = {
     {
       "id": "bat",
       "name": "Bat",
-      "icon": "https://foreverchanges.pro/icon/ability_hunter_pet_bat.jpg",
+      "icon": "https://wow.zamimg.com/images/wow/icons/medium/ability_hunter_pet_bat.jpg",
       "damageMod": "+7%",
       "armorMod": "0%",
       "healthMod": "0%",
@@ -1971,7 +1971,7 @@ window.WOW_ATLAS_DATA = {
       "newAbility": {
         "name": "Sonic Blast",
         "badge": "✦ New in Forever",
-        "icon": "https://foreverchanges.pro/icon/ability_vehicle_sonicshockwave.jpg",
+        "icon": "https://wow.zamimg.com/images/wow/icons/medium/ability_vehicle_sonicshockwave.jpg",
         "cost": "80 Focus",
         "cd": "30 sec CD",
         "desc": "Emits a piercing shriek, inflicting 33 to 39 Nature damage (Rank 2) and increasing the casting time of all spells by 60% for 30 sec."
@@ -2136,7 +2136,7 @@ window.WOW_ATLAS_DATA = {
     {
       "id": "bear",
       "name": "Bear",
-      "icon": "https://foreverchanges.pro/icon/ability_hunter_pet_bear.jpg",
+      "icon": "https://wow.zamimg.com/images/wow/icons/medium/ability_hunter_pet_bear.jpg",
       "damageMod": "-9%",
       "armorMod": "+5%",
       "healthMod": "+8%",
@@ -2158,7 +2158,7 @@ window.WOW_ATLAS_DATA = {
       "newAbility": {
         "name": "Swipe & Dash",
         "badge": "✦ New in Forever",
-        "icon": "https://foreverchanges.pro/icon/inv_misc_monsterclaw_03.jpg",
+        "icon": "https://wow.zamimg.com/images/wow/icons/medium/inv_misc_monsterclaw_03.jpg",
         "cost": "20 Focus",
         "cd": "5 sec CD",
         "desc": "Swipe swipes 3 nearby enemies for cleave damage every 5 seconds. Bears also learn Dash for rapid target closing."
@@ -2884,7 +2884,7 @@ window.WOW_ATLAS_DATA = {
     {
       "id": "bird-of-prey",
       "name": "Bird of Prey",
-      "icon": "https://foreverchanges.pro/icon/ability_hunter_pet_owl.jpg",
+      "icon": "https://wow.zamimg.com/images/wow/icons/medium/ability_hunter_pet_owl.jpg",
       "damageMod": "+7%",
       "armorMod": "0%",
       "healthMod": "0%",
@@ -2899,7 +2899,7 @@ window.WOW_ATLAS_DATA = {
       "newAbility": {
         "name": "Mine!",
         "badge": "✦ New in Forever",
-        "icon": "https://foreverchanges.pro/icon/spell_nature_natureswrath.jpg",
+        "icon": "https://wow.zamimg.com/images/wow/icons/medium/spell_nature_natureswrath.jpg",
         "cost": "20 Focus",
         "cd": "1 min CD",
         "desc": "Grabs an enemy's weapon with its talons, causing 20 to 24 damage and physically disarming them for 4 sec."
@@ -3115,7 +3115,7 @@ window.WOW_ATLAS_DATA = {
     {
       "id": "boar",
       "name": "Boar",
-      "icon": "https://foreverchanges.pro/icon/ability_hunter_pet_boar.jpg",
+      "icon": "https://wow.zamimg.com/images/wow/icons/medium/ability_hunter_pet_boar.jpg",
       "damageMod": "-10%",
       "armorMod": "+9%",
       "healthMod": "+4%",
@@ -3135,7 +3135,7 @@ window.WOW_ATLAS_DATA = {
       "newAbility": {
         "name": "Charge Rework",
         "badge": "✦ Changed in Forever",
-        "icon": "https://foreverchanges.pro/icon/ability_hunter_pet_boar.jpg",
+        "icon": "https://wow.zamimg.com/images/wow/icons/medium/ability_hunter_pet_boar.jpg",
         "cost": "35 Focus",
         "cd": "25 sec CD",
         "desc": "Charges an enemy, immobilizes it for 1 sec, and adds up to +204 melee attack power (Rank 3) to the boar's next attack."
@@ -3623,7 +3623,7 @@ window.WOW_ATLAS_DATA = {
     {
       "id": "carrion-bird",
       "name": "Carrion Bird",
-      "icon": "https://foreverchanges.pro/icon/ability_hunter_pet_vulture.jpg",
+      "icon": "https://wow.zamimg.com/images/wow/icons/medium/ability_hunter_pet_vulture.jpg",
       "damageMod": "0%",
       "armorMod": "+5%",
       "healthMod": "0%",
@@ -3641,7 +3641,7 @@ window.WOW_ATLAS_DATA = {
       "newAbility": {
         "name": "Demoralizing Screech",
         "badge": "✦ Changed in Forever",
-        "icon": "https://foreverchanges.pro/icon/ability_hunter_pet_vulture.jpg",
+        "icon": "https://wow.zamimg.com/images/wow/icons/medium/ability_hunter_pet_vulture.jpg",
         "cost": "20 Focus",
         "cd": "10 sec CD",
         "desc": "Blasts an enemy for damage and lowers the melee attack power of all enemies in melee range by 111 (Rank 2) for 30 sec."
@@ -4146,7 +4146,7 @@ window.WOW_ATLAS_DATA = {
     {
       "id": "cat",
       "name": "Cat",
-      "icon": "https://foreverchanges.pro/icon/ability_hunter_pet_cat.jpg",
+      "icon": "https://wow.zamimg.com/images/wow/icons/medium/ability_hunter_pet_cat.jpg",
       "damageMod": "+10%",
       "armorMod": "0%",
       "healthMod": "-2%",
@@ -4164,7 +4164,7 @@ window.WOW_ATLAS_DATA = {
       "newAbility": {
         "name": "Prowl & Lethal Speed",
         "badge": "Verified Classic+",
-        "icon": "https://foreverchanges.pro/icon/ability_druid_supriseattack.jpg",
+        "icon": "https://wow.zamimg.com/images/wow/icons/medium/ability_druid_supriseattack.jpg",
         "cost": "40 Focus",
         "cd": "10 sec CD",
         "desc": "Stealth ambush with +50% opener damage bonus. Broken Tooth's 1.0s swing speed inflicts severe spell-pushback."
@@ -5230,7 +5230,7 @@ window.WOW_ATLAS_DATA = {
     {
       "id": "crab",
       "name": "Crab",
-      "icon": "https://foreverchanges.pro/icon/ability_hunter_pet_crab.jpg",
+      "icon": "https://wow.zamimg.com/images/wow/icons/medium/ability_hunter_pet_crab.jpg",
       "damageMod": "-5%",
       "armorMod": "+13%",
       "healthMod": "-4%",
@@ -5248,7 +5248,7 @@ window.WOW_ATLAS_DATA = {
       "newAbility": {
         "name": "Pinch & Dash",
         "badge": "✦ New in Forever",
-        "icon": "https://foreverchanges.pro/icon/ability_hunter_pet_crab.jpg",
+        "icon": "https://wow.zamimg.com/images/wow/icons/medium/ability_hunter_pet_crab.jpg",
         "cost": "50 Focus",
         "cd": "30 sec CD",
         "desc": "Pinches enemy legs for 32 to 36 damage (Rank 2) and reduces movement speed by 50% for 9 sec."
@@ -5634,7 +5634,7 @@ window.WOW_ATLAS_DATA = {
     {
       "id": "crocolisk",
       "name": "Crocolisk",
-      "icon": "https://foreverchanges.pro/icon/ability_hunter_pet_crocolisk.jpg",
+      "icon": "https://wow.zamimg.com/images/wow/icons/medium/ability_hunter_pet_crocolisk.jpg",
       "damageMod": "0%",
       "armorMod": "+10%",
       "healthMod": "-5%",
@@ -5650,7 +5650,7 @@ window.WOW_ATLAS_DATA = {
       "newAbility": {
         "name": "Dismember (Mortal Strike)",
         "badge": "✦ New in Forever",
-        "icon": "https://foreverchanges.pro/icon/ability_hunter_pet_crocolisk.jpg",
+        "icon": "https://wow.zamimg.com/images/wow/icons/medium/ability_hunter_pet_crocolisk.jpg",
         "cost": "35 Focus",
         "cd": "6 sec CD",
         "desc": "Viciously bites enemy appendages, reducing healing effectiveness by 50% for 10 sec on a 6-second cooldown."
@@ -6036,7 +6036,7 @@ window.WOW_ATLAS_DATA = {
     {
       "id": "fox",
       "name": "Fox",
-      "icon": "https://foreverchanges.pro/icon/ability_hunter_aspectofthefox.jpg",
+      "icon": "https://wow.zamimg.com/images/wow/icons/medium/ability_hunter_aspectofthefox.jpg",
       "damageMod": "0%",
       "armorMod": "+5%",
       "healthMod": "0%",
@@ -6052,7 +6052,7 @@ window.WOW_ATLAS_DATA = {
       "newAbility": {
         "name": "Trickster's Dance",
         "badge": "✦ Brand New Family",
-        "icon": "https://foreverchanges.pro/icon/ability_hunter_aspectofthefox.jpg",
+        "icon": "https://wow.zamimg.com/images/wow/icons/medium/ability_hunter_aspectofthefox.jpg",
         "cost": "10 Focus",
         "cd": "3 min CD",
         "desc": "Increases pet's chance to Dodge by 50% and decreases attack intervals by 30% for 12 sec."
@@ -6132,7 +6132,7 @@ window.WOW_ATLAS_DATA = {
     {
       "id": "gorilla",
       "name": "Gorilla",
-      "icon": "https://foreverchanges.pro/icon/ability_hunter_pet_gorilla.jpg",
+      "icon": "https://wow.zamimg.com/images/wow/icons/medium/ability_hunter_pet_gorilla.jpg",
       "damageMod": "+2%",
       "armorMod": "0%",
       "healthMod": "+4%",
@@ -6148,7 +6148,7 @@ window.WOW_ATLAS_DATA = {
       "newAbility": {
         "name": "Thunderstomp Rework",
         "badge": "✦ Changed in Forever",
-        "icon": "https://foreverchanges.pro/icon/ability_hunter_pet_gorilla.jpg",
+        "icon": "https://wow.zamimg.com/images/wow/icons/medium/ability_hunter_pet_gorilla.jpg",
         "cost": "60 Focus",
         "cd": "1 min CD",
         "desc": "Shakes the ground with thundering force, dealing 53 to 61 Nature damage to all enemies within 8 yards."
@@ -6330,7 +6330,7 @@ window.WOW_ATLAS_DATA = {
     {
       "id": "hyena",
       "name": "Hyena",
-      "icon": "https://foreverchanges.pro/icon/ability_hunter_pet_hyena.jpg",
+      "icon": "https://wow.zamimg.com/images/wow/icons/medium/ability_hunter_pet_hyena.jpg",
       "damageMod": "0%",
       "armorMod": "0%",
       "healthMod": "0%",
@@ -6347,7 +6347,7 @@ window.WOW_ATLAS_DATA = {
       "newAbility": {
         "name": "Tendon Rip",
         "badge": "✦ New in Forever",
-        "icon": "https://foreverchanges.pro/icon/ability_hunter_pet_hyena.jpg",
+        "icon": "https://wow.zamimg.com/images/wow/icons/medium/ability_hunter_pet_hyena.jpg",
         "cost": "25 Focus",
         "cd": "30 sec CD",
         "desc": "Tears at an enemy's legs for 21 damage over 9 sec and reduces movement speed by 50% for 9 sec."
@@ -6682,7 +6682,7 @@ window.WOW_ATLAS_DATA = {
     {
       "id": "raptor",
       "name": "Raptor",
-      "icon": "https://foreverchanges.pro/icon/ability_hunter_pet_raptor.jpg",
+      "icon": "https://wow.zamimg.com/images/wow/icons/medium/ability_hunter_pet_raptor.jpg",
       "damageMod": "+10%",
       "armorMod": "+3%",
       "healthMod": "-5%",
@@ -6698,7 +6698,7 @@ window.WOW_ATLAS_DATA = {
       "newAbility": {
         "name": "Savage Rend",
         "badge": "✦ New in Forever",
-        "icon": "https://foreverchanges.pro/icon/ability_hunter_pet_raptor.jpg",
+        "icon": "https://wow.zamimg.com/images/wow/icons/medium/ability_hunter_pet_raptor.jpg",
         "cost": "50 Focus",
         "cd": "1 min CD",
         "desc": "Slash an enemy with razor talons, causing target to Bleed for 54 damage (Rank 2) over 18 sec."
@@ -7356,7 +7356,7 @@ window.WOW_ATLAS_DATA = {
     {
       "id": "scorpid",
       "name": "Scorpid",
-      "icon": "https://foreverchanges.pro/icon/ability_hunter_pet_scorpid.jpg",
+      "icon": "https://wow.zamimg.com/images/wow/icons/medium/ability_hunter_pet_scorpid.jpg",
       "damageMod": "-6%",
       "armorMod": "+10%",
       "healthMod": "0%",
@@ -7372,7 +7372,7 @@ window.WOW_ATLAS_DATA = {
       "newAbility": {
         "name": "Scorpid Poison Rework",
         "badge": "✦ Changed in Forever",
-        "icon": "https://foreverchanges.pro/icon/ability_poisonsting.jpg",
+        "icon": "https://wow.zamimg.com/images/wow/icons/medium/ability_poisonsting.jpg",
         "cost": "30 Focus",
         "cd": "4 sec CD",
         "desc": "Inflicts 10 Nature damage over 10 sec, stacking up to 5 times. Protects Hunter Viper Sting from dispels."
@@ -7809,7 +7809,7 @@ window.WOW_ATLAS_DATA = {
     {
       "id": "spider",
       "name": "Spider",
-      "icon": "https://foreverchanges.pro/icon/ability_hunter_pet_spider.jpg",
+      "icon": "https://wow.zamimg.com/images/wow/icons/medium/ability_hunter_pet_spider.jpg",
       "damageMod": "+7%",
       "armorMod": "0%",
       "healthMod": "0%",
@@ -7824,7 +7824,7 @@ window.WOW_ATLAS_DATA = {
       "newAbility": {
         "name": "Web (Root & Nature DoT)",
         "badge": "✦ New in Forever",
-        "icon": "https://foreverchanges.pro/icon/spell_nature_web.jpg",
+        "icon": "https://wow.zamimg.com/images/wow/icons/medium/spell_nature_web.jpg",
         "cost": "20 Focus",
         "cd": "40 sec CD",
         "desc": "Entangles an enemy in a corrosive web, immobilizing them and dealing 20 Nature damage (Rank 2) over 4 sec."
@@ -9009,7 +9009,7 @@ window.WOW_ATLAS_DATA = {
     {
       "id": "tallstrider",
       "name": "Tallstrider",
-      "icon": "https://foreverchanges.pro/icon/ability_hunter_pet_tallstrider.jpg",
+      "icon": "https://wow.zamimg.com/images/wow/icons/medium/ability_hunter_pet_tallstrider.jpg",
       "damageMod": "0%",
       "armorMod": "0%",
       "healthMod": "+5%",
@@ -9027,7 +9027,7 @@ window.WOW_ATLAS_DATA = {
       "newAbility": {
         "name": "Dust Cloud",
         "badge": "✦ New in Forever",
-        "icon": "https://foreverchanges.pro/icon/spell_nature_sleep.jpg",
+        "icon": "https://wow.zamimg.com/images/wow/icons/medium/spell_nature_sleep.jpg",
         "cost": "10 Focus",
         "cd": "Instant",
         "desc": "Kicks up an abrasive cloud of dust, reducing the target's Armor by 175 (Rank 2) for 30 sec."
@@ -9311,7 +9311,7 @@ window.WOW_ATLAS_DATA = {
     {
       "id": "turtle",
       "name": "Turtle",
-      "icon": "https://foreverchanges.pro/icon/ability_hunter_pet_turtle.jpg",
+      "icon": "https://wow.zamimg.com/images/wow/icons/medium/ability_hunter_pet_turtle.jpg",
       "damageMod": "-10%",
       "armorMod": "+13%",
       "healthMod": "0%",
@@ -9328,7 +9328,7 @@ window.WOW_ATLAS_DATA = {
       "newAbility": {
         "name": "Shell Shield Rework",
         "badge": "✦ Changed in Forever",
-        "icon": "https://foreverchanges.pro/icon/ability_hunter_pet_turtle.jpg",
+        "icon": "https://wow.zamimg.com/images/wow/icons/medium/ability_hunter_pet_turtle.jpg",
         "cost": "10 Focus",
         "cd": "3 min CD",
         "desc": "Reduces all damage taken by 50% for 12 sec, increases attack intervals by 60%, but deals significantly more damage per attack."
@@ -9595,7 +9595,7 @@ window.WOW_ATLAS_DATA = {
     {
       "id": "wind-serpent",
       "name": "Wind Serpent",
-      "icon": "https://foreverchanges.pro/icon/ability_hunter_pet_windserpent.jpg",
+      "icon": "https://wow.zamimg.com/images/wow/icons/medium/ability_hunter_pet_windserpent.jpg",
       "damageMod": "+7%",
       "armorMod": "0%",
       "healthMod": "0%",
@@ -9612,7 +9612,7 @@ window.WOW_ATLAS_DATA = {
       "newAbility": {
         "name": "Lightning Breath Rework",
         "badge": "✦ Changed in Forever",
-        "icon": "https://foreverchanges.pro/icon/spell_nature_lightning.jpg",
+        "icon": "https://wow.zamimg.com/images/wow/icons/medium/spell_nature_lightning.jpg",
         "cost": "50 Focus",
         "cd": "Instant",
         "desc": "Breathes lightning, instantly dealing 32 to 36 Nature damage (Rank 3) to a single target at 20-yard range."
@@ -9913,7 +9913,7 @@ window.WOW_ATLAS_DATA = {
     {
       "id": "wolf",
       "name": "Wolf",
-      "icon": "https://foreverchanges.pro/icon/ability_hunter_pet_wolf.jpg",
+      "icon": "https://wow.zamimg.com/images/wow/icons/medium/ability_hunter_pet_wolf.jpg",
       "damageMod": "0%",
       "armorMod": "+5%",
       "healthMod": "0%",
@@ -9929,7 +9929,7 @@ window.WOW_ATLAS_DATA = {
       "newAbility": {
         "name": "Furious Howl Rework",
         "badge": "✦ Changed in Forever",
-        "icon": "https://foreverchanges.pro/icon/ability_hunter_pet_wolf.jpg",
+        "icon": "https://wow.zamimg.com/images/wow/icons/medium/ability_hunter_pet_wolf.jpg",
         "cost": "60 Focus",
         "cd": "30 sec CD",
         "desc": "The wolf howls, increasing the melee attack power of all party members within 15 yards by 31 to 38 (Rank 2) for a full 1 minute."
