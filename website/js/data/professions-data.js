@@ -7771,7 +7771,7 @@ window.WOW_PROFESSIONS_DATA = {
         {
           "id": 271621,
           "name": "Favor Recipe",
-          "icon": "inv_misc_questionmark",
+          "icon": "inv_scroll_03",
           "quality": 2,
           "cost": 1000,
           "requiredSkill": 300,
@@ -28133,7 +28133,7 @@ window.WOW_PROFESSIONS_DATA = {
         {
           "id": 251426,
           "name": "Favor Recipe",
-          "icon": "inv_misc_questionmark",
+          "icon": "inv_scroll_03",
           "quality": 2,
           "cost": 90,
           "requiredSkill": 250,
@@ -28205,7 +28205,7 @@ window.WOW_PROFESSIONS_DATA = {
         {
           "id": 271622,
           "name": "Favor Recipe",
-          "icon": "inv_misc_questionmark",
+          "icon": "inv_scroll_03",
           "quality": 2,
           "cost": 1000,
           "requiredSkill": 300,
@@ -28560,7 +28560,7 @@ window.WOW_PROFESSIONS_DATA = {
     "recipes": [
       {
         "name": "Enchant Bracer - Inferior Stamina",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -28583,7 +28583,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Chest - Minor Intellect",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_03",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -28606,7 +28606,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Bracer - Minor Spirit",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_03",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -28629,7 +28629,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Chest - Inferior Stamina",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -28652,7 +28652,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Bracer - Minor Intellect",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_03",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -28675,7 +28675,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Bracer - Minor Deflect",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -28698,7 +28698,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Bracer - Minor Strength",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_03",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -28721,7 +28721,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Chest - Lesser Intellect",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -28744,7 +28744,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Chest - Minor Absorption",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -28767,7 +28767,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Cloak - Minor Protection",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_03",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -28790,7 +28790,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Bracer - Minor Healing Power",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_03",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -28813,7 +28813,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Weapon - Minor Beastslayer",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_03",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -28843,7 +28843,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Cloak - Minor Resistance",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -28873,7 +28873,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Bracer - Minor Stamina",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -28896,7 +28896,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant 2H Weapon - Lesser Intellect",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -28919,7 +28919,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Chest - Lesser Stamina",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -28949,7 +28949,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant 2H Weapon - Lesser Spirit",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_03",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -28979,7 +28979,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Cloak - Minor Agility",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_03",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -29002,7 +29002,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Bracer - Minor Agility",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -29032,7 +29032,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Shield - Lesser Protection",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_03",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -29062,7 +29062,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Weapon - Minor Striking",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -29099,7 +29099,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Bracer - Lesser Spirit",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_03",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -29122,7 +29122,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Boots - Minor Agility",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -29152,7 +29152,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Boots - Minor Stamina",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_03",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -29175,7 +29175,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant 2H Weapon - Minor Impact",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -29205,7 +29205,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Shield - Minor Stamina",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -29235,7 +29235,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Cloak - Lesser Shadow Resistance",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_03",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -29265,7 +29265,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Cloak - Lesser Protection",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -29295,7 +29295,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Weapon - Insight",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -29346,7 +29346,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Weapon - Recovery",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -29397,7 +29397,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Weapon - Revelation",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -29448,7 +29448,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Bracer - Lesser Agility",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -29471,7 +29471,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Bracer - Lesser Strength",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -29494,7 +29494,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Chest - Stamina",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -29524,7 +29524,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Gloves - Fishing",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_03",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -29554,7 +29554,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Gloves - Herbalism",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_03",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -29584,7 +29584,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Gloves - Mining",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_03",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -29614,7 +29614,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Cloak - Lesser Fire Resistance",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -29644,7 +29644,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Bracer - Lesser Stamina",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -29667,7 +29667,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Shield - Lesser Spirit",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -29697,7 +29697,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Chest - Lesser Absorption",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -29734,7 +29734,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Weapon - Lesser Striking",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -29764,7 +29764,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant 2H Weapon - Lesser Impact",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -29794,7 +29794,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Chest - Intellect",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -29817,7 +29817,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Bracer - Lesser Deflection",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -29847,7 +29847,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Bracer - Lesser Intellect",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -29870,7 +29870,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Chest - Minor Stats",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -29907,7 +29907,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Cloak - Defense",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -29937,7 +29937,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Shield - Lesser Stamina",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -29960,7 +29960,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Weapon - Lesser Beastslayer",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_03",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -29990,7 +29990,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Weapon - Lesser Elemental Slayer",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_03",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -30020,7 +30020,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Boots - Lesser Agility",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -30043,7 +30043,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Chest - Greater Stamina",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -30066,7 +30066,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Bracer - Spirit",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -30089,7 +30089,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Boots - Lesser Stamina",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -30112,7 +30112,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Bracer - Stamina",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -30135,7 +30135,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Boots - Lesser Spirit",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_03",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -30158,7 +30158,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Weapon - Winter's Might",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_03",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -30202,7 +30202,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Bracer - Agility",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_03",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -30225,7 +30225,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Cloak - Fire Resistance",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -30255,7 +30255,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Shield - Lesser Block",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_03",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -30292,7 +30292,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Bracer - Strength",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -30315,7 +30315,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Shield - Spirit",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -30345,7 +30345,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Gloves - Skinning",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_03",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -30375,7 +30375,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Chest - Greater Intellect",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -30398,7 +30398,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Bracer - Lesser Healing Power",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -30421,7 +30421,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Necklace - Agility",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -30472,7 +30472,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Necklace - Deflection",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -30523,7 +30523,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Necklace - Healing Power",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -30574,7 +30574,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Necklace - Spell Power",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -30625,7 +30625,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Necklace - Strength",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -30676,7 +30676,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant 2H Weapon - Lesser Agility",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_03",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -30713,7 +30713,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Shield - Stamina",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_03",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -30736,7 +30736,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Weapon - Striking",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -30766,7 +30766,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Gloves - Advanced Mining",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_03",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -30796,7 +30796,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant 2H Weapon - Impact",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -30826,7 +30826,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Chest - Lesser Stats",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -30863,7 +30863,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Chest - Absorption",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -30900,7 +30900,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant 2H Weapon - Lesser Strength",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_03",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -30937,7 +30937,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Bracer - Greater Spirit",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_03",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -30967,7 +30967,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Cloak - Greater Defense",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -30990,7 +30990,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Cloak - Resistance",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -31013,7 +31013,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Cloak - Lesser Agility",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_03",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -31036,7 +31036,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Gloves - Advanced Herbalism",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_03",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -31066,7 +31066,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Bracer - Intellect",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -31089,7 +31089,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Gloves - Agility",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -31112,7 +31112,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Weapon - Demonslaying",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_03",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -31149,7 +31149,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Boots - Stamina",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -31172,7 +31172,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Bracer - Deflection",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -31202,7 +31202,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Shield - Frost Resistance",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_03",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -31232,7 +31232,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Chest - Superior Stamina",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -31255,7 +31255,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Bracer - Greater Agility",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_03",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -31285,7 +31285,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Boots - Minor Speed",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -31322,7 +31322,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Gloves - Strength",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -31352,7 +31352,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Bracer - Greater Stamina",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_03",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -31375,7 +31375,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Chest - Superior Intellect",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -31398,7 +31398,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Shield - Greater Spirit",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -31428,7 +31428,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Gloves - Advanced Skinning",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_03",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -31458,7 +31458,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Gloves - Riding Skill",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_03",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -31488,7 +31488,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Boots - Agility",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -31511,7 +31511,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Bracer - Greater Intellect",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_03",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -31534,7 +31534,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant 2H Weapon - Greater Impact",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -31564,7 +31564,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Bracer - Greater Strength",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -31594,7 +31594,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Boots - Greater Stamina",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_03",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -31617,7 +31617,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Chest - Stats",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -31654,7 +31654,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Weapon - Greater Striking",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -31684,7 +31684,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Cloak - Greater Resistance",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -31742,7 +31742,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Shield - Greater Stamina",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -31765,7 +31765,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Weapon - Fiery Weapon",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -31795,7 +31795,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Gloves - Minor Haste",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -31825,7 +31825,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Bracer - Superior Spirit",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_03",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -31855,7 +31855,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Gloves - Greater Agility",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_03",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -31885,7 +31885,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Boots - Spirit",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_03",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -31915,7 +31915,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Chest - Major Stamina",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -31945,7 +31945,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Shield - Superior Spirit",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_03",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -31975,7 +31975,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Cloak - Superior Defense",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -31998,7 +31998,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Weapon - Icy Chill",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_03",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -32042,7 +32042,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant 2H Weapon - Strength",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_03",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -32086,7 +32086,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant 2H Weapon - Agility",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -32130,7 +32130,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Bracer - Mana Regeneration",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -32167,7 +32167,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Chest - Major Intellect",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_03",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -32197,7 +32197,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Weapon - Agility",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -32241,7 +32241,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Weapon - Strength",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -32285,7 +32285,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Gloves - Lotus Claw",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_03",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -32329,7 +32329,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant 2H Weapon - Superior Impact",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -32359,7 +32359,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Boots - Greater Agility",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_03",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -32382,7 +32382,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Bracer - Superior Agility",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_03",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -32419,7 +32419,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Bracer - Superior Strength",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_03",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -32449,7 +32449,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Gloves - Greater Strength",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -32479,7 +32479,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Weapon - Unholy Weapon",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -32509,7 +32509,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant 2H Weapon - Major Intellect",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -32539,7 +32539,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant 2H Weapon - Major Spirit",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -32569,7 +32569,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant 2H Weapon - Mighty Healing Power",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -32627,7 +32627,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant 2H Weapon - Mighty Spell Power",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -32685,7 +32685,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant 2H Weapon - Spellblasting",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -32729,7 +32729,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Bracer - Greater Spellpower",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -32773,7 +32773,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Bracer - Healing Power",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -32817,7 +32817,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Bracer - Superior Deflection",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -32840,7 +32840,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Bracer - Superior Intellect",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -32863,7 +32863,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Bracer - Superior Stamina",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_03",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -32886,7 +32886,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Chest - Greater Stats",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_03",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -32923,7 +32923,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Cloak - Agility",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -32960,7 +32960,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Cloak - Dodge",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -32997,7 +32997,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Cloak - Greater Fire Resistance",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -33034,7 +33034,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Cloak - Greater Nature Resistance",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -33071,7 +33071,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Cloak - Stealth",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -33108,7 +33108,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Cloak - Subtlety",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -33145,7 +33145,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Gloves - Arcane Power",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -33182,7 +33182,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Gloves - Fire Power",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -33219,7 +33219,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Gloves - Frost Power",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -33256,7 +33256,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Gloves - Healing Power",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -33293,7 +33293,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Gloves - Holy Power",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -33337,7 +33337,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Gloves - Natural Power",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -33374,7 +33374,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Gloves - Shadow Power",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -33411,7 +33411,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Gloves - Superior Agility",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -33448,7 +33448,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Gloves - Superior Strength",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -33485,7 +33485,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Gloves - Threat",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -33522,7 +33522,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Off-Hand - Wisdom",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -33566,7 +33566,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Weapon - Crusader",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_03",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -33596,7 +33596,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Weapon - Healing Power",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -33647,7 +33647,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Weapon - Lifestealing",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -33684,7 +33684,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Weapon - Mighty Intellect",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -33721,7 +33721,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Weapon - Mighty Spirit",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -33758,7 +33758,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Weapon - Spell Power",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -33816,7 +33816,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "name": "Enchant Weapon - Superior Striking",
-        "icon": "inv_misc_questionmark",
+        "icon": "inv_scroll_04",
         "quality": 1,
         "cat": "General",
         "kind": "",
@@ -46042,7 +46042,7 @@ window.WOW_PROFESSIONS_DATA = {
         {
           "id": 271625,
           "name": "Favor Recipe",
-          "icon": "inv_misc_questionmark",
+          "icon": "inv_scroll_03",
           "quality": 2,
           "cost": 1000,
           "requiredSkill": 300,
@@ -70585,7 +70585,7 @@ window.WOW_PROFESSIONS_DATA = {
         {
           "id": 271626,
           "name": "Favor Recipe",
-          "icon": "inv_misc_questionmark",
+          "icon": "inv_scroll_03",
           "quality": 2,
           "cost": 1000,
           "requiredSkill": 300,
@@ -90824,7 +90824,7 @@ window.WOW_PROFESSIONS_DATA = {
         {
           "id": 271627,
           "name": "Favor Recipe",
-          "icon": "inv_misc_questionmark",
+          "icon": "inv_scroll_03",
           "quality": 2,
           "cost": 1000,
           "requiredSkill": 300,

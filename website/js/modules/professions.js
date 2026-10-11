@@ -16,8 +16,18 @@
 
   const CDN_BASE = 'https://wow.zamimg.com/images/wow/icons/medium/';
 
-  function getIconUrl(icon) {
-    if (!icon) return `${CDN_BASE}inv_misc_questionmark.jpg`;
+  function getIconUrl(icon, name = '', source = '') {
+    if (!icon || icon === 'inv_misc_questionmark' || icon.includes('inv_misc_questionmark')) {
+      const n = (name || '').toLowerCase();
+      const s = (source || '').toLowerCase();
+      if (n.includes('enchant') || n.includes('formula') || currentProfession === 'enchanting') {
+        if (s.includes('drop') || s.includes('formula') || s.includes('vendor') || s.includes('merchant') || s.includes('favor') || n.includes('formula')) {
+          return `${CDN_BASE}inv_scroll_03.jpg`;
+        }
+        return `${CDN_BASE}inv_scroll_04.jpg`;
+      }
+      return `${CDN_BASE}inv_misc_questionmark.jpg`;
+    }
     if (icon.startsWith('http://') || icon.startsWith('https://')) return icon;
     const clean = icon.replace(/\.(jpg|png|webp)$/i, '');
     return `${CDN_BASE}${clean}.jpg`;
@@ -684,7 +694,7 @@
       <div class="recipe-card">
         <div>
           <div class="recipe-card-header">
-            <img src="${getIconUrl(r.icon)}" alt="${escapeHtml(r.name)}" class="recipe-item-icon ${qualityClass}" loading="lazy" />
+            <img src="${getIconUrl(r.icon, r.name, r.source)}" alt="${escapeHtml(r.name)}" class="recipe-item-icon ${qualityClass}" loading="lazy" />
             <div class="recipe-info">
               <h4 class="recipe-title ${qualityClass}">
                 ${escapeHtml(r.name)}
@@ -1001,14 +1011,14 @@
       </div>
 
       <div class="favor-tiers-container">
-        ${renderFavorTierBlocks(recipes)}
+        ${renderFavorTierBlocks(recipes, prof)}
       </div>
     `;
 
     attachTooltipListeners(container, prof);
   }
 
-  function renderFavorTierBlocks(recipes) {
+  function renderFavorTierBlocks(recipes, prof = {}) {
     if (!recipes || recipes.length === 0) {
       return `
         <div style="text-align: center; padding: 3rem; color: #94a3b8; background: rgba(15,23,42,0.5); border-radius: 8px;">
@@ -1019,7 +1029,7 @@
 
     const tierMap = new Map();
     recipes.forEach(r => {
-      const c = r.cost || '1 Merchant\'s Favor';
+      const c = r.cost ? (typeof r.cost === 'number' ? `${r.cost} Merchant's Favor` : r.cost) : '1 Merchant\'s Favor';
       if (!tierMap.has(c)) {
         tierMap.set(c, []);
       }
@@ -1036,24 +1046,72 @@
             <h4>📦 ${escapeHtml(costLabel)} <small>· ${skillSpan}</small></h4>
           </div>
           <div class="recipe-grid">
-            ${items.map(f => `
-              <div class="recipe-card">
-                <div>
-                  <div class="recipe-card-header">
-                    <img src="${getIconUrl(f.icon)}" alt="${escapeHtml(f.name)}" class="recipe-item-icon q${f.quality || 1}" loading="lazy" />
-                    <div class="recipe-info">
-                      <h4 class="recipe-title q${f.quality || 1}">${escapeHtml(f.name)}</h4>
-                      ${f.desc ? `<div class="recipe-effect">${escapeHtml(f.desc)}</div>` : ''}
+            ${items.map(f => {
+              const cleanName = (f.name || '').replace(/^(Recipe|Formula|Plans|Pattern|Schematic|Manual):\s*/i, '').trim();
+              const match = (prof.recipes || []).find(r => 
+                r.name && (
+                  r.name.toLowerCase() === cleanName.toLowerCase() ||
+                  r.name.toLowerCase() === (f.name || '').toLowerCase() ||
+                  (r.source && r.source.toLowerCase().includes((f.name || '').toLowerCase()))
+                )
+              );
+              const quality = f.quality || match?.quality || 1;
+              const skillReq = f.requiredSkill || match?.learn || 1;
+              const skillPercent = Math.min(100, Math.max(4, Math.round((skillReq / 300) * 100)));
+              const reagents = match?.reagents || f.reagents || [];
+              const effectText = f.desc || match?.effect || match?.source || '';
+              const iconUrl = getIconUrl(f.icon || match?.icon, f.name, 'Merchant Favor');
+              const costDisplay = typeof f.cost === 'number' ? `${f.cost} Merchant's Favor` : (f.cost || costLabel);
+
+              const reagentsHtml = reagents.length ? `
+                <div class="recipe-reagents-row" style="margin-top: 0.55rem;">
+                  ${reagents.map(mat => `
+                    <span class="reagent-chip" title="${mat.count}x ${escapeHtml(mat.name)}" data-item-id="${mat.id || ''}" data-item-name="${escapeHtml(mat.name)}">
+                      <img src="${getIconUrl(mat.icon)}" alt="${escapeHtml(mat.name)}" loading="lazy" />
+                      <span class="reagent-count">${mat.count}x</span>
+                      <span class="q${mat.quality || 1}">${escapeHtml(mat.name)}</span>
+                    </span>
+                  `).join('')}
+                </div>
+              ` : '';
+
+              return `
+                <div class="recipe-card favor-recipe-card" 
+                     data-recipe-name="${escapeHtml(f.name)}" 
+                     data-crafted-name="${escapeHtml(cleanName)}" 
+                     data-quality="${quality}" 
+                     data-effect="${escapeHtml(effectText)}" 
+                     data-skill="${skillReq}" 
+                     data-cost="${escapeHtml(costDisplay)}"
+                     data-prof="${escapeHtml(prof.name || 'Trade')}">
+                  <div>
+                    <div class="recipe-card-header">
+                      <img src="${iconUrl}" alt="${escapeHtml(f.name)}" class="recipe-item-icon q${quality}" loading="lazy" />
+                      <div class="recipe-info">
+                        <h4 class="recipe-title q${quality}">${escapeHtml(f.name)}</h4>
+                        ${effectText ? `<div class="recipe-effect">${escapeHtml(effectText)}</div>` : ''}
+                      </div>
                     </div>
-                    <span class="recipe-skill-badge skill-orange">Skill ${f.requiredSkill}+</span>
+
+                    <!-- Interactive Skill Requirement Track with Hover Tooltip -->
+                    <div class="favor-skill-row">
+                      <span class="recipe-skill-badge skill-orange" title="Requires ${escapeHtml(prof.name || 'Trade')} (${skillReq})">Skill ${skillReq}+</span>
+                      <div class="favor-skill-track" data-skill="${skillReq}" data-prof="${escapeHtml(prof.name || 'Trade')}">
+                        <span class="favor-skill-fill" style="width: ${skillPercent}%;"></span>
+                        <span class="favor-skill-cap-marker" style="left: 75%;" title="Beta Cap at 225"></span>
+                      </div>
+                    </div>
+
+                    ${reagentsHtml}
+                  </div>
+
+                  <div class="recipe-source-line">
+                    <span>Cost:</span>
+                    <span class="recipe-source-badge" style="color: var(--text-gold); font-weight: 700;">${escapeHtml(costDisplay)}</span>
                   </div>
                 </div>
-                <div class="recipe-source-line">
-                  <span>Cost:</span>
-                  <span class="recipe-source-badge" style="color: var(--text-gold); font-weight: 700;">${escapeHtml(f.cost)}</span>
-                </div>
-              </div>
-            `).join('')}
+              `;
+            }).join('')}
           </div>
         </div>
       `;
@@ -1198,13 +1256,51 @@
   /* ==========================================================================
      INTERACTIVE FLOATING ITEM & REAGENT TOOLTIP ENGINE
      ========================================================================== */
-  function showItemTooltip(e, name, quality = 1, desc = '', reagents = null) {
+  function showItemTooltip(e, name, quality = 1, desc = '', reagents = null, extra = null) {
     let tooltip = document.getElementById('wow-item-tooltip');
     if (!tooltip) {
       tooltip = document.createElement('div');
       tooltip.id = 'wow-item-tooltip';
       tooltip.className = 'wow-floating-tooltip';
       document.body.appendChild(tooltip);
+    }
+
+    let extraTop = '';
+    if (extra && (extra.bop || extra.type)) {
+      extraTop = `
+        <div style="font-size: 0.76rem; color: #94a3b8; display: flex; justify-content: space-between; margin-top: 0.2rem;">
+          <span>${escapeHtml(extra.bop || 'Binds when picked up')}</span>
+          ${extra.type ? `<span>${escapeHtml(extra.type)}</span>` : ''}
+        </div>
+      `;
+    }
+
+    let extraSkill = '';
+    if (extra && extra.skillReq) {
+      extraSkill = `
+        <div style="font-size: 0.8rem; color: #fff; margin-top: 0.35rem;">
+          Requires <span style="color: var(--wow-skill-orange, #ff8000); font-weight: 600;">${escapeHtml(extra.skillReq)}</span>
+        </div>
+      `;
+    }
+
+    let extraUse = '';
+    if (extra && extra.use) {
+      extraUse = `
+        <div style="font-size: 0.8rem; color: #4ade80; margin-top: 0.35rem; line-height: 1.35;">
+          <strong>Use:</strong> ${escapeHtml(extra.use)}
+        </div>
+      `;
+    }
+
+    let extraCost = '';
+    if (extra && extra.cost) {
+      extraCost = `
+        <div style="margin-top: 0.45rem; padding-top: 0.35rem; border-top: 1px dashed rgba(255,255,255,0.12); font-size: 0.78rem; display: flex; justify-content: space-between; color: #cbd5e1;">
+          <span>Cost: <strong style="color: var(--text-gold, #facc15);">${escapeHtml(extra.cost)}</strong></span>
+          ${extra.source ? `<span style="color: #94a3b8;">${escapeHtml(extra.source)}</span>` : ''}
+        </div>
+      `;
     }
 
     let reagentsHtml = '';
@@ -1226,10 +1322,14 @@
     }
 
     tooltip.innerHTML = `
-      <div style="min-width: 200px; max-width: 320px; padding: 0.65rem 0.85rem; background: rgba(10, 14, 26, 0.96); border: 1px solid rgba(212, 175, 55, 0.5); border-radius: 6px; box-shadow: 0 8px 24px rgba(0,0,0,0.8); pointer-events: none;">
+      <div style="min-width: 220px; max-width: 330px; padding: 0.65rem 0.85rem; background: rgba(10, 14, 26, 0.96); border: 1px solid rgba(212, 175, 55, 0.5); border-radius: 6px; box-shadow: 0 8px 24px rgba(0,0,0,0.8); pointer-events: none;">
         <div class="q${quality}" style="font-weight: 700; font-size: 0.95rem; line-height: 1.3;">${escapeHtml(name)}</div>
-        ${desc ? `<div style="font-size: 0.8rem; color: #cbd5e1; margin-top: 0.35rem; line-height: 1.4;">${escapeHtml(desc)}</div>` : ''}
+        ${extraTop}
+        ${extraSkill}
+        ${extraUse}
+        ${desc && !extraUse ? `<div style="font-size: 0.8rem; color: #cbd5e1; margin-top: 0.35rem; line-height: 1.4;">${escapeHtml(desc)}</div>` : ''}
         ${reagentsHtml}
+        ${extraCost}
       </div>
     `;
 
@@ -1285,18 +1385,87 @@
       el.addEventListener('mouseleave', hideItemTooltip);
     });
 
-    // Reagent badges & shopping rows
-    container.querySelectorAll('.step-reagent-badge, .shopping-row-card').forEach(el => {
-      const name = el.getAttribute('data-item-name') || el.getAttribute('title') || '';
-      if (!name) return;
+    // Merchant's Favor recipe card/bar hover
+    container.querySelectorAll('.favor-recipe-card').forEach(el => {
+      const name = el.getAttribute('data-recipe-name') || '';
+      const crafted = el.getAttribute('data-crafted-name') || '';
+      const quality = parseInt(el.getAttribute('data-quality') || '1', 10);
+      const effect = el.getAttribute('data-effect') || '';
+      const skill = el.getAttribute('data-skill') || '1';
+      const cost = el.getAttribute('data-cost') || '';
+      const profName = el.getAttribute('data-prof') || prof.name || 'Trade';
+
+      const match = (prof.recipes || []).find(r => 
+        r.name && (
+          r.name.toLowerCase() === crafted.toLowerCase() ||
+          r.name.toLowerCase() === name.toLowerCase() ||
+          (r.source && r.source.toLowerCase().includes(name.toLowerCase()))
+        )
+      );
+
+      const reagents = match?.reagents || null;
+      const extra = {
+        bop: 'Binds when picked up',
+        type: `${profName} Formula`,
+        skillReq: `${profName} (${skill})`,
+        use: effect ? `Teaches ${crafted || name}. ${effect}` : `Teaches ${crafted || name}.`,
+        cost: cost,
+        source: 'Merchant\'s Favor Quartermaster'
+      };
+
       el.addEventListener('mouseenter', (e) => {
-        showItemTooltip(e, name, 1, 'Trade Reagent / Material', null);
+        showItemTooltip(e, name, quality, effect, reagents, extra);
       });
       el.addEventListener('mousemove', (e) => {
         const tt = document.getElementById('wow-item-tooltip');
         if (tt) positionTooltip(e, tt);
       });
       el.addEventListener('mouseleave', hideItemTooltip);
+    });
+
+    // Merchant's Favor Skill Requirement Progress Bars hover
+    container.querySelectorAll('.favor-skill-track').forEach(el => {
+      const skill = el.getAttribute('data-skill') || '1';
+      const profName = el.getAttribute('data-prof') || prof.name || 'Trade';
+      const percent = Math.min(100, Math.round((parseInt(skill, 10) / 300) * 100));
+
+      el.addEventListener('mouseenter', (e) => {
+        e.stopPropagation();
+        showItemTooltip(
+          e, 
+          `${profName} Skill Requirement: ${skill} / 300`, 
+          2, 
+          `Requires ${skill} ${profName} skill to learn and craft. Leveling progression is currently capped at 225 during the beta phase (${percent}% toward 300 mastery).`, 
+          null, 
+          { type: 'Skill Milestone', skillReq: `${profName} (${skill})` }
+        );
+      });
+      el.addEventListener('mousemove', (e) => {
+        const tt = document.getElementById('wow-item-tooltip');
+        if (tt) positionTooltip(e, tt);
+      });
+      el.addEventListener('mouseleave', (e) => {
+        e.stopPropagation();
+        hideItemTooltip();
+      });
+    });
+
+    // Reagent chips, badges & shopping rows
+    container.querySelectorAll('.reagent-chip, .step-reagent-badge, .shopping-row-card').forEach(el => {
+      const name = el.getAttribute('data-item-name') || el.getAttribute('title') || '';
+      if (!name) return;
+      el.addEventListener('mouseenter', (e) => {
+        e.stopPropagation();
+        showItemTooltip(e, name, 1, 'Crafting Reagent / Material', null, { type: 'Crafting Component' });
+      });
+      el.addEventListener('mousemove', (e) => {
+        const tt = document.getElementById('wow-item-tooltip');
+        if (tt) positionTooltip(e, tt);
+      });
+      el.addEventListener('mouseleave', (e) => {
+        e.stopPropagation();
+        hideItemTooltip();
+      });
     });
   }
 
