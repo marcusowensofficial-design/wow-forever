@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="css/styles.css?v=1.60.6-p3">
   <link rel="stylesheet" href="css/tools.css?v=1.60.6-p5">
   <link rel="stylesheet" href="css/professions.css?v=1.60.6-p5">
+  <link rel="stylesheet" href="css/changes.css?v=1.60.6-p5">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚔️</text></svg>">
 </head>
 <body>
@@ -125,6 +126,9 @@
         </button>
         <button class="nav-tab-btn" data-tab="deepdives">
           <span>🎯</span> Class Deep Dives
+        </button>
+        <button class="nav-tab-btn" data-tab="changes">
+          <span>🔄</span> What's Changed
         </button>
         <button class="nav-tab-btn" data-tab="professions">
           <span>🔨</span> Professions
@@ -1431,6 +1435,11 @@
       </div>
     </section>
 
+    <!-- TAB: WHAT'S CHANGED (CLASS & SPELL COMPARATOR) -->
+    <section id="tab-changes" class="tab-content" aria-label="Class and Spell Changes vs Classic">
+      <div id="changes-mount-point"></div>
+    </section>
+
     <!-- TAB: PROFESSIONS HUB -->
     <section id="tab-professions" class="tab-content" aria-label="Professions, Leveling & Trade Economy Hub">
       <div class="section-heading-bar">
@@ -1451,6 +1460,20 @@
           <h2><span>⛺</span> Camping & Wilderness Stations Hub</h2>
           <p class="section-subtext">Cooperative open world camp mechanics, crafted profession camp stations, party-wide buffs, and the Cozy Sleeping Bag system</p>
         </div>
+      </div>
+
+      <!-- Cross-link banner to Professions > Camping -->
+      <div class="camping-profession-link-banner">
+        <div style="display: flex; align-items: center; gap: 0.85rem;">
+          <span style="font-size: 2rem;">🔨</span>
+          <div>
+            <strong style="color: var(--text-gold, #facc15); font-size: 1.05rem;">Looking for the Complete Camp Station Database & Craft Reagents?</strong>
+            <p style="margin: 0.2rem 0 0 0; font-size: 0.85rem; color: #cbd5e1;">Explore all 3 Campfire Kits, 11 Skill 20 Buff Objects, 22 Blueprint Upgrades (140/300), and Legacy Perks under the Professions tab.</p>
+          </div>
+        </div>
+        <a href="#professions/camping" class="quick-link-chip" style="background: rgba(243, 192, 67, 0.18); border-color: var(--border-gold-bright, #d4af37); color: #fff; text-decoration: none; padding: 0.5rem 1rem; font-weight: 600; cursor: pointer;" onclick="if (window.WOW_PROFESSIONS) { window.WOW_PROFESSIONS.selectProfession('camping'); }">
+          <span>⛺</span> Open Camping Profession Guide ›
+        </a>
       </div>
 
       <!-- Camping Kits & Core Rules Hero Box -->
@@ -2971,6 +2994,7 @@
   <script src="js/data/tools-data.js?v=1.60.6-p4"></script>
   <script src="js/data/atlas-data.js?v=1.60.6-p4"></script>
 <script src="js/data/professions-data.js?v=1.60.6-p5"></script>
+  <script src="js/data/changes-data.js?v=1.60.6-p5"></script>
   <script src="js/data/bis-data.js?v=1.60.6-p4"></script>
   <script src="js/data/talents-data.js?v=1.60.6-p4"></script>
   <script src="js/data/deepdives/hunter.js?v=1.60.6-p5"></script>
@@ -2990,6 +3014,7 @@
   <script src="js/modules/codex.js?v=1.60.6-p4"></script>
   <script src="js/modules/camping.js?v=1.60.6-p4"></script>
 <script src="js/modules/professions.js?v=1.60.6-p5"></script>
+  <script src="js/modules/changes.js?v=1.60.6-p5"></script>
   <script src="js/modules/planner.js?v=1.60.6-p4"></script>
   <script src="js/modules/talent-tree.js?v=1.60.6-p4"></script>
   <script src="js/modules/deepdives.js?v=1.60.6-p5"></script>

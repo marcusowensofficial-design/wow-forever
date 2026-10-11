@@ -234,7 +234,11 @@
       tabs.push({ id: 'ranks', icon: '🎖️', label: `Ranks (${prof.ranks?.length || 8})` });
       tabs.push({ id: 'camp', icon: '⛺', label: 'Camp & Perks' });
     } else if (isCamping) {
-      tabs.push({ id: 'camp', icon: '⛺', label: 'Camping Stations & Perks' });
+      tabs.push({ id: 'guide', icon: '⛺', label: 'How It Works & Campfires' });
+      tabs.push({ id: 'buffs', icon: '✨', label: 'Camp Buffs (11)' });
+      tabs.push({ id: 'upgrades', icon: '🛠️', label: 'Upgrades (140 & 300)' });
+      tabs.push({ id: 'perks', icon: '🏆', label: 'Legacy Perks & Rules' });
+      tabs.push({ id: 'hub', icon: '🏕️', label: 'Wilderness Hub ›' });
     }
 
     return tabs;
@@ -271,9 +275,13 @@
       </div>
     ` : '';
 
-    const recipeCountDisplay = prof.stats?.recipeCount || prof.recipes?.length || (prof.nodes ? prof.nodes.length : '1-300');
-    const newCountDisplay = prof.stats?.newInForever || (prof.category === 'Gathering' ? 'Phase 2' : 'New');
-    const favorCountDisplay = prof.stats?.favorRecipes || (prof.campPerks?.milestones?.length ? 'Account' : '0');
+    const isCamping = currentProfession === 'camping';
+    const recipeCountDisplay = isCamping ? (prof.stats?.campfires || 3) : (prof.stats?.recipeCount || prof.recipes?.length || (prof.nodes ? prof.nodes.length : '1-300'));
+    const recipeLabelDisplay = isCamping ? 'Campfires' : (prof.category === 'Gathering' ? 'Nodes' : 'Recipes');
+    const newCountDisplay = isCamping ? (prof.stats?.campObjects || 35) : (prof.stats?.newInForever || (prof.category === 'Gathering' ? 'Phase 2' : 'New'));
+    const newLabelDisplay = isCamping ? 'Camp Objects' : 'Forever Changes';
+    const favorCountDisplay = isCamping ? (prof.stats?.legacyPerks || 3) : (prof.stats?.favorRecipes || (prof.campPerks?.milestones?.length ? 'Account' : '0'));
+    const favorLabelDisplay = isCamping ? 'Legacy Perks' : 'Trade Rewards';
 
     viewport.innerHTML = `
       <!-- Hero Banner -->
@@ -290,15 +298,15 @@
         <div class="prof-hero-stats">
           <div class="prof-stat-box">
             <div class="prof-stat-num">${recipeCountDisplay}</div>
-            <div class="prof-stat-label">${prof.category === 'Gathering' ? 'Nodes' : 'Recipes'}</div>
+            <div class="prof-stat-label">${recipeLabelDisplay}</div>
           </div>
           <div class="prof-stat-box">
             <div class="prof-stat-num" style="color: #38bdf8;">${newCountDisplay}</div>
-            <div class="prof-stat-label">Forever Changes</div>
+            <div class="prof-stat-label">${newLabelDisplay}</div>
           </div>
           <div class="prof-stat-box">
             <div class="prof-stat-num" style="color: #4ade80;">${favorCountDisplay}</div>
-            <div class="prof-stat-label">Trade Rewards</div>
+            <div class="prof-stat-label">${favorLabelDisplay}</div>
           </div>
         </div>
       </div>
@@ -319,7 +327,14 @@
     // Subtab click handlers
     viewport.querySelectorAll('.prof-subnav-btn').forEach(btn => {
       btn.addEventListener('click', () => {
-        currentSubTab = btn.getAttribute('data-subtab');
+        const sub = btn.getAttribute('data-subtab');
+        if (sub === 'hub') {
+          const b = document.querySelector('.nav-tab-btn[data-tab="camping"]');
+          if (b) b.click();
+          window.location.hash = 'camping';
+          return;
+        }
+        currentSubTab = sub;
         viewport.querySelectorAll('.prof-subnav-btn').forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
         renderSubTabContent(prof);
@@ -555,6 +570,11 @@
   function renderSubTabContent(prof) {
     const body = document.getElementById('prof-subtab-body');
     if (!body) return;
+
+    if (prof.slug === 'camping') {
+      renderCampingProfessionTab(body, prof);
+      return;
+    }
 
     if (currentSubTab === 'recipes') {
       renderRecipesTab(body, prof);
@@ -973,6 +993,330 @@
     `;
 
     attachTooltipListeners(container, prof);
+  }
+
+  /* ==========================================================================
+     SPECIALIZED TAB: CAMPING SYSTEM (FOREVER CHANGES)
+     ========================================================================== */
+  function renderCampingProfessionTab(container, prof) {
+    if (currentSubTab === 'buffs') {
+      renderCampingBuffs(container, prof);
+    } else if (currentSubTab === 'upgrades') {
+      renderCampingUpgrades(container, prof);
+    } else if (currentSubTab === 'perks') {
+      renderCampingPerks(container, prof);
+    } else {
+      renderCampingGuide(container, prof);
+    }
+    attachTooltipListeners(container, prof);
+  }
+
+  function renderCampingGuide(container, prof) {
+    const steps = prof.howItWorks?.steps || [];
+    const questNote = prof.howItWorks?.questNote || '';
+    const campfires = prof.campfires || [];
+
+    container.innerHTML = `
+      <!-- Top System Explanation -->
+      <div class="leveling-header-block">
+        <div class="leveling-header-title">
+          <h3>HOW CAMPING WORKS</h3>
+          <p>${escapeHtml(prof.summary || '')}</p>
+        </div>
+        <div class="leveling-header-meta">
+          <a href="#camping" class="prof-pill-link" onclick="const b = document.querySelector('.nav-tab-btn[data-tab=\\'camping\\']'); if (b) b.click();">
+            <span>🏕️</span> Open Wilderness Hub ›
+          </a>
+        </div>
+      </div>
+
+      <!-- 3 Core Steps -->
+      <div class="camp-steps-grid">
+        ${steps.map(s => `
+          <div class="camp-step-card">
+            <div class="camp-step-head">
+              <span class="camp-step-badge">${s.num}</span>
+              <img src="${getIconUrl(s.icon)}" alt="${escapeHtml(s.title)}" class="camp-step-icon" loading="lazy" />
+              <h4 class="camp-step-title">${escapeHtml(s.title)}</h4>
+            </div>
+            <p class="camp-step-desc">${escapeHtml(s.desc)}</p>
+          </div>
+        `).join('')}
+      </div>
+
+      <!-- Quest Onboarding Callout -->
+      ${questNote ? `
+        <div class="camp-quest-box">
+          <span class="q-icon">📜</span>
+          <div class="camp-quest-text">
+            <strong>Starter Quest: The Great Outdoors (Level 5+)</strong>
+            <p>${escapeHtml(questNote)}</p>
+          </div>
+        </div>
+      ` : ''}
+
+      <!-- Crafted Campfire Kits -->
+      <div class="section-heading-bar" style="margin-bottom: 1rem;">
+        <div>
+          <h2><span>🔥</span> Crafted Campfire Kits (${campfires.length} Tiers)</h2>
+          <p class="section-subtext">Cooks craft campfire kits from wood harvested across Azeroth. Each tier expands object capacity and placement limits</p>
+        </div>
+      </div>
+
+      <div class="campfires-grid">
+        ${campfires.map(c => `
+          <div class="campfire-card q${c.quality || 1} camp-tooltip-item" 
+               data-item-name="${escapeHtml(c.name)}" 
+               data-quality="${c.quality || 1}" 
+               data-desc="${escapeHtml(c.desc)}" 
+               data-req="${escapeHtml(c.skillReq)}"
+               data-effect="Burns for 15 minutes. Holds ${c.capacity} profession stations.">
+            <div class="campfire-card-head">
+              <img src="${getIconUrl(c.icon)}" alt="${escapeHtml(c.name)}" class="campfire-card-icon q${c.quality || 1}" loading="lazy" />
+              <div class="campfire-card-info">
+                <h4 class="q${c.quality || 1}">${escapeHtml(c.name)}</h4>
+                <small>${escapeHtml(c.skillReq)}</small>
+              </div>
+              <span class="campfire-capacity-badge">Holds ${c.capacity} Objects</span>
+            </div>
+            <p style="margin: 0; font-size: 0.88rem; color: #cbd5e1; line-height: 1.4;">${escapeHtml(c.desc)}</p>
+            <div style="border-top: 1px solid rgba(255,255,255,0.06); padding-top: 0.75rem;">
+              <div style="font-size: 0.72rem; text-transform: uppercase; color: #94a3b8; margin-bottom: 0.4rem; font-weight: 700;">Craft Reagents:</div>
+              <div class="campfire-reagents-list">
+                ${(c.reagents || []).map(r => `
+                  <div class="reagent-chip" data-item-id="${r.itemId}" data-item-name="${escapeHtml(r.name)}" title="${escapeHtml(r.name)}">
+                    <img src="${getIconUrl(r.icon)}" alt="${escapeHtml(r.name)}" loading="lazy" />
+                    <span>${r.count}x ${escapeHtml(r.name)}</span>
+                  </div>
+                `).join('')}
+                ${c.blueprint ? `
+                  <span class="step-badge-orange" style="margin-left: auto; font-size: 0.72rem;">${escapeHtml(c.blueprint.text)}</span>
+                ` : '<span class="step-badge-green" style="margin-left: auto; font-size: 0.72rem;">Trainer Taught</span>'}
+              </div>
+            </div>
+          </div>
+        `).join('')}
+      </div>
+    `;
+  }
+
+  function renderCampingBuffs(container, prof) {
+    const buffObjects = prof.buffObjects || [];
+    const q = (searchQuery || '').toLowerCase().trim();
+
+    const filtered = buffObjects.filter(b => {
+      if (!q) return true;
+      return (
+        (b.object && b.object.toLowerCase().includes(q)) ||
+        (b.profName && b.profName.toLowerCase().includes(q)) ||
+        (b.gives && b.gives.toLowerCase().includes(q)) ||
+        (b.restriction && b.restriction.toLowerCase().includes(q)) ||
+        (b.reagents && b.reagents.some(r => r.name && r.name.toLowerCase().includes(q)))
+      );
+    });
+
+    container.innerHTML = `
+      <!-- Toolbar -->
+      <div class="prof-toolbar">
+        <div style="display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap; flex: 1;">
+          <input type="text" id="prof-search-input" class="prof-search-input" placeholder="Search buff, profession (e.g. Alchemy, Fishing), or reagent..." value="${escapeHtml(searchQuery)}" />
+          <span style="font-size: 0.85rem; color: #94a3b8;">Showing ${filtered.length} of ${buffObjects.length} Buff Objects</span>
+        </div>
+        <div style="font-size: 0.8rem; color: #38bdf8; display: flex; align-items: center; gap: 0.4rem;">
+          <span>⏳</span> 1-Hour Cooldown · 1-Hour Party Buff
+        </div>
+      </div>
+
+      <!-- Heading -->
+      <div class="section-heading-bar" style="margin-bottom: 1.25rem;">
+        <div>
+          <h2><span>✨</span> 11 Skill 20 Camp Buff Objects</h2>
+          <p class="section-subtext">Every profession crafts a station from skill 20 providing 80% potency of class blessings for 1 hour to anyone who rests at camp</p>
+        </div>
+      </div>
+
+      <!-- Buffs Grid -->
+      <div class="camp-buffs-grid">
+        ${filtered.map(b => `
+          <div class="camp-buff-card camp-tooltip-item"
+               data-item-name="${escapeHtml(b.object)}"
+               data-quality="2"
+               data-desc="${escapeHtml(b.gives)}"
+               data-req="${escapeHtml(b.profName)} (Skill ${b.skillReq})"
+               data-effect="Provides ${escapeHtml(b.gives)} to party members who rest by the fire for 1 minute. ${escapeHtml(b.restriction)}">
+            <div>
+              <div class="camp-buff-head">
+                <div class="camp-buff-main">
+                  <img src="${getIconUrl(b.icon)}" alt="${escapeHtml(b.object)}" class="camp-buff-icon q2" loading="lazy" />
+                  <div>
+                    <h4 style="margin: 0; font-size: 1.1rem; color: #fff;">${escapeHtml(b.object)}</h4>
+                    <small style="color: #94a3b8; font-size: 0.78rem;">Requires ${escapeHtml(b.profName)} ${b.skillReq}</small>
+                  </div>
+                </div>
+                <span class="camp-buff-prof-tag">
+                  <img src="${getIconUrl(b.profIcon)}" alt="${escapeHtml(b.profName)}" loading="lazy" />
+                  <span>${escapeHtml(b.profName)}</span>
+                </span>
+              </div>
+
+              <div style="margin-top: 1rem; display: flex; flex-direction: column; gap: 0.6rem;">
+                <div class="camp-buff-stats-box">
+                  <div class="camp-buff-stats-title">Campfire Aura Granted (1 Hour):</div>
+                  <div class="camp-buff-stats-text">${escapeHtml(b.gives)}</div>
+                </div>
+
+                ${b.restriction ? `
+                  <div class="camp-buff-restriction-pill">
+                    <span>⚠️</span>
+                    <span>${escapeHtml(b.restriction)}</span>
+                  </div>
+                ` : ''}
+              </div>
+            </div>
+
+            <div style="border-top: 1px solid rgba(255,255,255,0.06); padding-top: 0.75rem; margin-top: 0.5rem;">
+              <div style="font-size: 0.72rem; text-transform: uppercase; color: #94a3b8; margin-bottom: 0.4rem; font-weight: 700;">Craft Reagents:</div>
+              <div class="campfire-reagents-list">
+                ${(b.reagents || []).map(r => `
+                  <div class="reagent-chip" data-item-id="${r.itemId}" data-item-name="${escapeHtml(r.name)}" title="${escapeHtml(r.name)}">
+                    <img src="${getIconUrl(r.icon)}" alt="${escapeHtml(r.name)}" loading="lazy" />
+                    <span>${r.count}x ${escapeHtml(r.name)}</span>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+          </div>
+        `).join('')}
+      </div>
+    `;
+
+    const searchInput = container.querySelector('#prof-search-input');
+    if (searchInput) {
+      searchInput.addEventListener('input', (e) => {
+        searchQuery = e.target.value;
+        renderCampingBuffs(container, prof);
+        attachTooltipListeners(container, prof);
+      });
+    }
+  }
+
+  function renderCampingUpgrades(container, prof) {
+    const upgrades = prof.upgrades || [];
+
+    container.innerHTML = `
+      <!-- Heading -->
+      <div class="leveling-header-block">
+        <div class="leveling-header-title">
+          <h3>22 ADVANCED BLUEPRINT CAMP STATIONS</h3>
+          <p>At skill 140 and 300, professions unlock permanent field workstations through blueprints. These replace the skill 20 object, retain its party buff, and unlock on-site advanced crafting, ore/herb spawns, or mobile repair services.</p>
+        </div>
+      </div>
+
+      <!-- Matrix Table / Cards -->
+      <div class="prof-matrix-table-wrap">
+        <table class="prof-matrix-table">
+          <thead>
+            <tr>
+              <th style="width: 180px;">Profession</th>
+              <th style="width: 41%;">Skill 140 Station (Blueprint)</th>
+              <th style="width: 41%;">Skill 300 Master Station (Blueprint)</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${upgrades.map(u => `
+              <tr>
+                <td>
+                  <div class="matrix-prof-col" data-slug="${u.profSlug}" title="View ${escapeHtml(u.profName)}">
+                    <img src="${getIconUrl(u.profIcon)}" alt="${escapeHtml(u.profName)}" loading="lazy" />
+                    <span>${escapeHtml(u.profName)}</span>
+                  </div>
+                </td>
+                <td>
+                  <div class="matrix-station-cell camp-tooltip-item" 
+                       data-item-name="${escapeHtml(u.s140.name)}" 
+                       data-quality="2" 
+                       data-desc="${escapeHtml(u.s140.desc)}" 
+                       data-req="${escapeHtml(u.s140.skill)}"
+                       style="padding: 0.5rem 0; width: 100%;">
+                    <img src="${getIconUrl(u.s140.icon)}" alt="${escapeHtml(u.s140.name)}" class="q2" loading="lazy" style="width: 32px; height: 32px;" />
+                    <div>
+                      <div style="display: flex; align-items: center; gap: 0.5rem;">
+                        <strong style="color: #fff; font-size: 0.95rem;">${escapeHtml(u.s140.name)}</strong>
+                        <span class="step-badge-orange" style="font-size: 0.7rem;">${escapeHtml(u.s140.skill)}</span>
+                      </div>
+                      <small style="display: block; margin-top: 0.2rem; color: #94a3b8; font-size: 0.8rem; line-height: 1.4;">${escapeHtml(u.s140.desc)}</small>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <div class="matrix-station-cell camp-tooltip-item" 
+                       data-item-name="${escapeHtml(u.s300.name)}" 
+                       data-quality="3" 
+                       data-desc="${escapeHtml(u.s300.desc)}" 
+                       data-req="${escapeHtml(u.s300.skill)}"
+                       style="padding: 0.5rem 0; width: 100%;">
+                    <img src="${getIconUrl(u.s300.icon)}" alt="${escapeHtml(u.s300.name)}" class="q3" loading="lazy" style="width: 32px; height: 32px;" />
+                    <div>
+                      <div style="display: flex; align-items: center; gap: 0.5rem;">
+                        <strong style="color: #0070dd; font-size: 0.95rem;">${escapeHtml(u.s300.name)}</strong>
+                        <span class="step-badge-green" style="font-size: 0.7rem;">${escapeHtml(u.s300.skill)}</span>
+                      </div>
+                      <small style="display: block; margin-top: 0.2rem; color: #94a3b8; font-size: 0.8rem; line-height: 1.4;">${escapeHtml(u.s300.desc)}</small>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            `).join('')}
+          </tbody>
+        </table>
+      </div>
+    `;
+  }
+
+  function renderCampingPerks(container, prof) {
+    const legacyPerks = prof.legacyPerks || [];
+    const rules = prof.rules || [];
+
+    container.innerHTML = `
+      <!-- Top: Legacy Perks -->
+      <div class="leveling-header-block">
+        <div class="leveling-header-title">
+          <h3>CAMPING LEGACY PERKS</h3>
+          <p>Permanent account-wide legacy tree talents that enhance campfire cooldowns, buff durations, and reagent mechanics across all your characters.</p>
+        </div>
+      </div>
+
+      <div class="legacy-perks-list" style="margin-bottom: 2.5rem;">
+        ${legacyPerks.map(p => `
+          <div class="legacy-perk-card">
+            <img src="${getIconUrl(p.icon)}" alt="${escapeHtml(p.name)}" class="perk-card-icon" loading="lazy" />
+            <div class="perk-card-content">
+              <strong style="font-size: 1.05rem; color: #fff;">${escapeHtml(p.name)}</strong>
+              <p style="margin: 0.3rem 0; font-size: 0.88rem; color: #cbd5e1; line-height: 1.5;">${escapeHtml(p.effect)}</p>
+              <small class="perk-card-meta">${escapeHtml(p.meta)}</small>
+            </div>
+            <button type="button" class="perk-plan-action" onclick="const b = document.querySelector('.nav-tab-btn[data-tab=\\'systems\\']'); if (b) b.click();" title="Open Legacy Tree Planner">Plan it ›</button>
+          </div>
+        `).join('')}
+      </div>
+
+      <!-- Bottom: 6 Keep In Mind Rules -->
+      <div class="section-heading-bar" style="margin-bottom: 1.25rem;">
+        <div>
+          <h2><span>⚖️</span> Core Camping Rules & Stacking Mechanics</h2>
+          <p class="section-subtext">Essential mechanical guidelines for campfire placement, rested experience generation, and faction alignment</p>
+        </div>
+      </div>
+
+      <div class="camp-rules-grid">
+        ${rules.map(r => `
+          <div class="camp-rule-card">
+            <h4><span>📌</span> ${escapeHtml(r.title)}</h4>
+            <p>${escapeHtml(r.text)}</p>
+          </div>
+        `).join('')}
+      </div>
+    `;
   }
 
   /* ==========================================================================
@@ -1458,6 +1802,28 @@
       });
     });
 
+    // Camping object and kit cards hover
+    container.querySelectorAll('.camp-tooltip-item').forEach(el => {
+      const name = el.getAttribute('data-item-name') || '';
+      const quality = parseInt(el.getAttribute('data-quality') || '1', 10);
+      const effect = el.getAttribute('data-effect') || '';
+      const req = el.getAttribute('data-req') || '';
+      const desc = el.getAttribute('data-desc') || '';
+      if (!name) return;
+      el.addEventListener('mouseenter', (e) => {
+        showItemTooltip(e, name, quality, effect || desc, null, {
+          type: 'Camp Utility Object',
+          skillReq: req,
+          use: effect ? `Place near a campfire. ${effect}` : desc
+        });
+      });
+      el.addEventListener('mousemove', (e) => {
+        const tt = document.getElementById('wow-item-tooltip');
+        if (tt) positionTooltip(e, tt);
+      });
+      el.addEventListener('mouseleave', hideItemTooltip);
+    });
+
     // Reagent chips, badges & shopping rows
     container.querySelectorAll('.reagent-chip, .step-reagent-badge, .shopping-row-card').forEach(el => {
       const name = el.getAttribute('data-item-name') || el.getAttribute('title') || '';
@@ -1479,5 +1845,24 @@
 
   // Export module globally
   window.initProfessionsHub = initProfessionsHub;
+  window.WOW_PROFESSIONS = {
+    selectProfession: (slug, subtab) => {
+      currentProfession = slug;
+      if (subtab) currentSubTab = subtab;
+      const navBtn = document.querySelector('.nav-tab-btn[data-tab="professions"]');
+      if (navBtn) navBtn.click();
+      const grid = document.getElementById('prof-selector-buttons');
+      if (grid) {
+        grid.querySelectorAll('.prof-tile-btn').forEach(b => {
+          b.classList.toggle('active', b.getAttribute('data-slug') === slug);
+        });
+      }
+      renderActiveProfession();
+      if (history.replaceState) {
+        history.replaceState(null, '', `#professions/${slug}${currentSubTab ? '#' + currentSubTab : ''}`);
+      }
+    }
+  };
 
 })();
+

@@ -101438,10 +101438,10 @@ window.WOW_PROFESSIONS_DATA = {
   "camping": {
     "slug": "camping",
     "name": "Camping",
-    "kind": "secondary",
-    "category": "Secondary",
+    "kind": "system",
+    "category": "Wilderness Economy",
     "icon": "spell_fire_fire",
-    "summary": "WoW Forever new tradeskill: establishes rest encampments, station synergies, and field shelters",
+    "summary": "A new Forever system. A cook builds a campfire, other players add objects from their professions, and anyone who sits by the fire for a minute gets their buffs for an hour. Each profession has three objects, the first at skill 20.",
     "campBuff": {
       "name": "Ironwood Campfire",
       "skill": 1,
@@ -101449,9 +101449,11 @@ window.WOW_PROFESSIONS_DATA = {
       "icon": "spell_fire_fire"
     },
     "stats": {
+      "campfires": 3,
+      "campObjects": 35,
+      "legacyPerks": 3,
       "recipeCount": 28,
-      "newInForever": 28,
-      "favorRecipes": 0
+      "newInForever": 35
     },
     "groups": [
       {
@@ -102598,6 +102600,729 @@ window.WOW_PROFESSIONS_DATA = {
       },
       "recipes": []
     },
-    "synergy": "Cooks build campfires, and each profession adds its own objects."
+    "synergy": "Cooks build campfires, and each profession adds its own objects.",
+    "howItWorks": {
+      "steps": [
+        {
+          "num": 1,
+          "title": "Build a campfire",
+          "desc": "A cook crafts a Basic Campfire Kit from one Simple Wood, with Flint and Tinder in the bags, and places it. It burns for 15 minutes, and no other campfire can stand within 100 yards.",
+          "icon": "inv_camelot_camping_welcomingcampfire"
+        },
+        {
+          "num": 2,
+          "title": "Add your object",
+          "desc": "From skill 20 in a profession, you place its object by the fire; the others come from other players. Your camp objects share a one-hour cooldown.",
+          "icon": "inv_misc_bag_10"
+        },
+        {
+          "num": 3,
+          "title": "Sit down for a minute",
+          "desc": "Anyone sitting or crafting by the fire for a minute gets the buffs of the objects around it. They last an hour, so you can leave once you have them.",
+          "icon": "inv_misc_sit"
+        }
+      ],
+      "questNote": "Around level 5, the quest 'The Great Outdoors' has you sit at a campfire, then sends you to a cooking trainer to learn the Basic Campfire; the trainer sells the Simple Wood and the Flint and Tinder. Each profession you know then gets a quest, handed in to its trainer, that teaches its first camp object."
+    },
+    "campfires": [
+      {
+        "id": 279981,
+        "name": "Basic Campfire Kit",
+        "icon": "inv_camelot_camping_welcomingcampfire",
+        "quality": 1,
+        "capacity": 3,
+        "desc": "Holds 3 camp objects.",
+        "skillReq": "Cooking 1",
+        "reagents": [
+          {
+            "itemId": 4470,
+            "count": 1,
+            "name": "Simple Wood",
+            "icon": "inv_wood_01",
+            "quality": 1
+          }
+        ],
+        "blueprint": null
+      },
+      {
+        "id": 279961,
+        "name": "Journeyman Campfire Kit",
+        "icon": "inv_camelot_camping_welcomingcampfire",
+        "quality": 2,
+        "capacity": 5,
+        "desc": "Holds 5 camp objects.",
+        "skillReq": "Cooking 140",
+        "reagents": [
+          {
+            "itemId": 11291,
+            "count": 1,
+            "name": "Star Wood",
+            "icon": "inv_wood_02",
+            "quality": 1
+          }
+        ],
+        "blueprint": {
+          "itemId": 273087,
+          "req": "Cooking 90",
+          "text": "Blueprint at 90"
+        }
+      },
+      {
+        "id": 279974,
+        "name": "Expert Campfire Kit",
+        "icon": "inv_camelot_camping_welcomingcampfire",
+        "quality": 3,
+        "capacity": 10,
+        "desc": "Holds 10 camp objects.",
+        "skillReq": "Cooking 220",
+        "reagents": [
+          {
+            "itemId": 272941,
+            "count": 1,
+            "name": "Thick Logs",
+            "icon": "inv_wood_03",
+            "quality": 1
+          }
+        ],
+        "blueprint": {
+          "itemId": 273101,
+          "req": "Cooking 200",
+          "text": "Blueprint at 200"
+        }
+      }
+    ],
+    "buffObjects": [
+      {
+        "itemId": 279956,
+        "object": "Mana Well",
+        "profSlug": "alchemy",
+        "profName": "Alchemy",
+        "profIcon": "trade_alchemy",
+        "icon": "spell_arcane_manatap",
+        "skillReq": 20,
+        "gives": "29 Mana every 5 sec",
+        "restriction": "Does not stack with Blessing of Wisdom",
+        "reagents": [
+          {
+            "itemId": 2447,
+            "count": 1,
+            "name": "Peacebloom",
+            "icon": "inv_misc_flower_02",
+            "quality": 1
+          },
+          {
+            "itemId": 3371,
+            "count": 1,
+            "name": "Empty Vial",
+            "icon": "inv_potion_84",
+            "quality": 1
+          }
+        ]
+      },
+      {
+        "itemId": 279944,
+        "object": "Sharpening Wheel",
+        "profSlug": "blacksmithing",
+        "profName": "Blacksmithing",
+        "profIcon": "trade_blacksmithing",
+        "icon": "inv_stone_sharpeningstone_01",
+        "skillReq": 20,
+        "gives": "34 Strength",
+        "restriction": "Does not stack with Strength of Earth Totem",
+        "reagents": [
+          {
+            "itemId": 2835,
+            "count": 1,
+            "name": "Rough Stone",
+            "icon": "inv_stone_06",
+            "quality": 1
+          },
+          {
+            "itemId": 2840,
+            "count": 1,
+            "name": "Copper Bar",
+            "icon": "inv_ingot_02",
+            "quality": 1
+          }
+        ]
+      },
+      {
+        "itemId": 279946,
+        "object": "Enchanted Lute",
+        "profSlug": "enchanting",
+        "profName": "Enchanting",
+        "profIcon": "trade_engraving",
+        "icon": "inv_misc_flute_01",
+        "skillReq": 20,
+        "gives": "308 Armor, 13 to all stats and 22 to all resistances",
+        "restriction": "Does not stack with Mark of the Wild",
+        "reagents": [
+          {
+            "itemId": 4470,
+            "count": 1,
+            "name": "Simple Wood",
+            "icon": "inv_wood_01",
+            "quality": 1
+          },
+          {
+            "itemId": 10940,
+            "count": 1,
+            "name": "Strange Dust",
+            "icon": "inv_enchant_duststrange",
+            "quality": 1
+          }
+        ]
+      },
+      {
+        "itemId": 279947,
+        "object": "Reagent Bot",
+        "profSlug": "engineering",
+        "profName": "Engineering",
+        "profIcon": "trade_engineering",
+        "icon": "inv_gizmo_02",
+        "skillReq": 20,
+        "gives": "Sells reagents",
+        "restriction": "Camp vendor bot for trade supplies",
+        "reagents": [
+          {
+            "itemId": 4359,
+            "count": 1,
+            "name": "Handful of Copper Bolts",
+            "icon": "inv_gizmo_07",
+            "quality": 1
+          },
+          {
+            "itemId": 4361,
+            "count": 1,
+            "name": "Copper Tube",
+            "icon": "inv_gizmo_06",
+            "quality": 1
+          }
+        ]
+      },
+      {
+        "itemId": 279951,
+        "object": "Camp Tent",
+        "profSlug": "leatherworking",
+        "profName": "Leatherworking",
+        "profIcon": "trade_leatherworking",
+        "icon": "inv_misc_pelt_wolf_01",
+        "skillReq": 20,
+        "gives": "Rested experience up to 5% of a level",
+        "restriction": "30 seconds by tent raises rested XP to 5% of a level (1 hr cooldown)",
+        "reagents": [
+          {
+            "itemId": 2318,
+            "count": 5,
+            "name": "Light Leather",
+            "icon": "inv_misc_leatherscrap_01",
+            "quality": 1
+          }
+        ]
+      },
+      {
+        "itemId": 279954,
+        "object": "Faction Banner",
+        "profSlug": "tailoring",
+        "profName": "Tailoring",
+        "profIcon": "trade_tailoring",
+        "icon": "inv_banner_01",
+        "skillReq": 20,
+        "gives": "32 Spirit, for your own faction only",
+        "restriction": "Does not stack with Divine Spirit",
+        "reagents": [
+          {
+            "itemId": 2996,
+            "count": 1,
+            "name": "Bolt of Linen Cloth",
+            "icon": "inv_fabric_linen_01",
+            "quality": 1
+          },
+          {
+            "itemId": 2320,
+            "count": 1,
+            "name": "Coarse Thread",
+            "icon": "inv_misc_thread_01",
+            "quality": 1
+          }
+        ]
+      },
+      {
+        "itemId": 279949,
+        "object": "Lodestone",
+        "profSlug": "mining",
+        "profName": "Mining",
+        "profIcon": "trade_mining",
+        "icon": "inv_ore_iron_01",
+        "skillReq": 20,
+        "gives": "90 melee Attack Power",
+        "restriction": "Does not stack with Blessing of Might",
+        "reagents": [
+          {
+            "itemId": 2835,
+            "count": 1,
+            "name": "Rough Stone",
+            "icon": "inv_stone_06",
+            "quality": 1
+          },
+          {
+            "itemId": 2840,
+            "count": 1,
+            "name": "Copper Bar",
+            "icon": "inv_ingot_02",
+            "quality": 1
+          }
+        ]
+      },
+      {
+        "itemId": 279948,
+        "object": "Incense Candle",
+        "profSlug": "herbalism",
+        "profName": "Herbalism",
+        "profIcon": "trade_herbalism",
+        "icon": "inv_misc_candle_01",
+        "skillReq": 20,
+        "gives": "25 Intellect",
+        "restriction": "Does not stack with Arcane Intellect",
+        "reagents": [
+          {
+            "itemId": 2447,
+            "count": 1,
+            "name": "Peacebloom",
+            "icon": "inv_misc_flower_02",
+            "quality": 1
+          },
+          {
+            "itemId": 765,
+            "count": 1,
+            "name": "Silverleaf",
+            "icon": "inv_misc_herb_10",
+            "quality": 1
+          }
+        ]
+      },
+      {
+        "itemId": 279945,
+        "object": "Camp Chair",
+        "profSlug": "skinning",
+        "profName": "Skinning",
+        "profIcon": "inv_misc_pelt_wolf_01",
+        "icon": "inv_fishingchair",
+        "skillReq": 20,
+        "gives": "2% critical strike chance",
+        "restriction": "Does not stack with Moonkin Aura",
+        "reagents": [
+          {
+            "itemId": 2318,
+            "count": 3,
+            "name": "Light Leather",
+            "icon": "inv_misc_leatherscrap_01",
+            "quality": 1
+          },
+          {
+            "itemId": 4470,
+            "count": 2,
+            "name": "Simple Wood",
+            "icon": "inv_wood_01",
+            "quality": 1
+          }
+        ]
+      },
+      {
+        "itemId": 279953,
+        "object": "Fish Bowl",
+        "profSlug": "fishing",
+        "profName": "Fishing",
+        "profIcon": "trade_fishing",
+        "icon": "inv_drink_13",
+        "skillReq": 20,
+        "gives": "8% to all stats",
+        "restriction": "Does not stack with Blessing of Kings",
+        "reagents": [
+          {
+            "itemId": 6291,
+            "count": 1,
+            "name": "Raw Brilliant Smallfish",
+            "icon": "inv_misc_fish_02",
+            "quality": 1
+          },
+          {
+            "itemId": 3371,
+            "count": 1,
+            "name": "Empty Vial",
+            "icon": "inv_potion_84",
+            "quality": 1
+          }
+        ]
+      },
+      {
+        "itemId": 279952,
+        "object": "First Aid Kit",
+        "profSlug": "first-aid",
+        "profName": "First Aid",
+        "profIcon": "spell_holy_sealofsacrifice",
+        "icon": "inv_misc_bandage_11",
+        "skillReq": 20,
+        "gives": "56 Stamina",
+        "restriction": "Does not stack with Power Word: Fortitude",
+        "reagents": [
+          {
+            "itemId": 1251,
+            "count": 3,
+            "name": "Linen Bandage",
+            "icon": "inv_misc_bandage_15",
+            "quality": 1
+          },
+          {
+            "itemId": 159,
+            "count": 1,
+            "name": "Refreshing Spring Water",
+            "icon": "inv_drink_07",
+            "quality": 1
+          }
+        ]
+      }
+    ],
+    "upgrades": [
+      {
+        "profSlug": "alchemy",
+        "profName": "Alchemy",
+        "profIcon": "trade_alchemy",
+        "s140": {
+          "id": 279970,
+          "name": "Fermenter",
+          "icon": "inv_misc_potiona3",
+          "desc": "Makes certain Alchemy reagents; keeps Mana Well buff.",
+          "skill": "Skill 140 Blueprint"
+        },
+        "s300": {
+          "id": 279990,
+          "name": "Alchemy Laboratory",
+          "icon": "inv_10_alchemy_incenseholder_color1",
+          "desc": "Needed for the most advanced Alchemy recipes; keeps Mana Well buff.",
+          "skill": "Skill 300 Blueprint"
+        }
+      },
+      {
+        "profSlug": "blacksmithing",
+        "profName": "Blacksmithing",
+        "profIcon": "trade_blacksmithing",
+        "s140": {
+          "id": 279988,
+          "name": "Anvil",
+          "icon": "inv_stone_sharpeningstone_02",
+          "desc": "An anvil at camp; keeps Sharpening Wheel buff.",
+          "skill": "Skill 140 Blueprint"
+        },
+        "s300": {
+          "id": 279955,
+          "name": "Master Forge",
+          "icon": "inv_misc_gem_opal_01",
+          "desc": "Needed for the most advanced Blacksmithing recipes; keeps Sharpening Wheel buff.",
+          "skill": "Skill 300 Blueprint"
+        }
+      },
+      {
+        "profSlug": "enchanting",
+        "profName": "Enchanting",
+        "profIcon": "trade_engraving",
+        "s140": {
+          "id": 279967,
+          "name": "Arcane Salvager",
+          "icon": "inv_misc_stonetablet_03",
+          "desc": "Disenchants items more efficiently; keeps Enchanted Lute buff.",
+          "skill": "Skill 140 Blueprint"
+        },
+        "s300": {
+          "id": 279991,
+          "name": "Arcane Forge",
+          "icon": "inv_10_enchanting2_magicswirl_bronze",
+          "desc": "Needed for the most advanced Enchanting recipes; keeps Enchanted Lute buff.",
+          "skill": "Skill 300 Blueprint"
+        }
+      },
+      {
+        "profSlug": "engineering",
+        "profName": "Engineering",
+        "profIcon": "trade_engineering",
+        "s140": {
+          "id": 279969,
+          "name": "Repair Bot",
+          "icon": "inv_gizmo_01",
+          "desc": "Sells reagents and repairs party gear at camp.",
+          "skill": "Skill 140 Blueprint"
+        },
+        "s300": {
+          "id": 279992,
+          "name": "Anarchist's Workbench",
+          "icon": "inv_10_engineering2_tinkeringengine_bronze",
+          "desc": "Needed for the most advanced Engineering recipes.",
+          "skill": "Skill 300 Blueprint"
+        }
+      },
+      {
+        "profSlug": "leatherworking",
+        "profName": "Leatherworking",
+        "profIcon": "trade_leatherworking",
+        "s140": {
+          "id": 279973,
+          "name": "Tanning Rack",
+          "icon": "inv_misc_leatherscrap_02",
+          "desc": "Makes certain Leatherworking reagents; keeps Rested XP buff.",
+          "skill": "Skill 140 Blueprint"
+        },
+        "s300": {
+          "id": 279995,
+          "name": "Sewing Machine",
+          "icon": "inv_10_skinning2_flensingknife_bronze",
+          "desc": "Needed for the most advanced Leatherworking recipes; keeps Rested XP buff.",
+          "skill": "Skill 300 Blueprint"
+        }
+      },
+      {
+        "profSlug": "tailoring",
+        "profName": "Tailoring",
+        "profIcon": "trade_tailoring",
+        "s140": {
+          "id": 279972,
+          "name": "Spinning Wheel",
+          "icon": "inv_fabric_mageweave_01",
+          "desc": "Makes certain Tailoring reagents; keeps Faction Banner buff.",
+          "skill": "Skill 140 Blueprint"
+        },
+        "s300": {
+          "id": 279994,
+          "name": "Loom",
+          "icon": "inv_10_tailoring2_mannequin_bronze",
+          "desc": "Needed for the most advanced Tailoring recipes; keeps Faction Banner buff.",
+          "skill": "Skill 300 Blueprint"
+        }
+      },
+      {
+        "profSlug": "mining",
+        "profName": "Mining",
+        "profIcon": "trade_mining",
+        "s140": {
+          "id": 279968,
+          "name": "Rock Garden",
+          "icon": "inv_stone_15",
+          "desc": "Spawns a common mining node over time; keeps Lodestone buff.",
+          "skill": "Skill 140 Blueprint"
+        },
+        "s300": {
+          "id": 279993,
+          "name": "Molten Foundry",
+          "icon": "inv_10_mining2_prospectorspick_bronze",
+          "desc": "Needed for smelting recipes that require it; keeps Lodestone buff.",
+          "skill": "Skill 300 Blueprint"
+        }
+      },
+      {
+        "profSlug": "herbalism",
+        "profName": "Herbalism",
+        "profIcon": "trade_herbalism",
+        "s140": {
+          "id": 279966,
+          "name": "Greenhouse",
+          "icon": "inv_misc_herb_02",
+          "desc": "Grows herbs over time from planted seeds; keeps Incense Candle buff.",
+          "skill": "Skill 140 Blueprint"
+        },
+        "s300": {
+          "id": 279989,
+          "name": "Seed Hybridizer",
+          "icon": "inv_10_herbalism2_herbalistsbasket_bronze",
+          "desc": "Multiplies seeds or combines them into rarer tiers; keeps Incense Candle buff.",
+          "skill": "Skill 300 Blueprint"
+        }
+      },
+      {
+        "profSlug": "skinning",
+        "profName": "Skinning",
+        "profIcon": "inv_misc_pelt_wolf_01",
+        "s140": {
+          "id": 279965,
+          "name": "Field Guide",
+          "icon": "inv_misc_book_09",
+          "desc": "Grants Track Beasts to whoever reads it; keeps Camp Chair buff.",
+          "skill": "Skill 140 Blueprint"
+        },
+        "s300": {
+          "id": 279987,
+          "name": "Trapper's Workbench",
+          "icon": "inv_misc_net_01",
+          "desc": "Holds one hunter/wilderness trap; keeps Camp Chair buff.",
+          "skill": "Skill 300 Blueprint"
+        }
+      },
+      {
+        "profSlug": "cooking",
+        "profName": "Cooking",
+        "profIcon": "inv_misc_food_15",
+        "s140": {
+          "id": 279960,
+          "name": "Cookie's Feast",
+          "icon": "inv_misc_food_54",
+          "desc": "Stamina food for everyone at camp (+5% monster kill EXP).",
+          "skill": "Skill 140 Blueprint"
+        },
+        "s300": {
+          "id": 279986,
+          "name": "Iron Oven",
+          "icon": "inv_misc_food_11",
+          "desc": "Needed for the most advanced Cooking recipes.",
+          "skill": "Skill 300 Blueprint"
+        }
+      },
+      {
+        "profSlug": "fishing",
+        "profName": "Fishing",
+        "profIcon": "trade_fishing",
+        "s140": {
+          "id": 279963,
+          "name": "Fishing Rack",
+          "icon": "inv_misc_fish_03",
+          "desc": "Provides uncommon fish for 1 hr and Fishing Skill lures; keeps Fish Bowl buff.",
+          "skill": "Skill 140 Blueprint"
+        },
+        "s300": {
+          "id": 279985,
+          "name": "Fishing Hut",
+          "icon": "inv_misc_fish_04",
+          "desc": "Provides rare fish for 1 hr and Fishing Skill lures; keeps Fish Bowl buff.",
+          "skill": "Skill 300 Blueprint"
+        }
+      },
+      {
+        "profSlug": "first-aid",
+        "profName": "First Aid",
+        "profIcon": "spell_holy_sealofsacrifice",
+        "s140": {
+          "id": 279962,
+          "name": "Toxin Study",
+          "icon": "inv_misc_potiona3",
+          "desc": "Holds healing potions and anti-venom; keeps First Aid Kit buff.",
+          "skill": "Skill 140 Blueprint"
+        },
+        "s300": {
+          "id": 279984,
+          "name": "Plague Doctor's Laboratory",
+          "icon": "inv_10_alchemy_incenseholder_color1",
+          "desc": "Holds healing potions and poultices; keeps First Aid Kit buff.",
+          "skill": "Skill 300 Blueprint"
+        }
+      }
+    ],
+    "legacyPerks": [
+      {
+        "id": "legacy-perk-field-guide",
+        "name": "Field Guide",
+        "icon": "inv_fishingchair",
+        "effect": "Reduces your cooldown on adding Camp features by 8 / 17 / 25%.",
+        "meta": "Adventure tree · 3 ranks · needs 5 points spent in the tree",
+        "tree": "Adventure"
+      },
+      {
+        "id": "legacy-perk-permanence",
+        "name": "Permanence",
+        "icon": "spell_misc_emotionhappy",
+        "effect": "Your class abilities which grant long-duration stat or attribute benefits to all party or raid members last 50 / 100% longer, and the benefits you gain from resting at a camp last 50 / 100% longer.",
+        "meta": "Resourcefulness tree · 2 ranks · needs 5 points spent in the tree and a rank in Gourmand",
+        "tree": "Resourcefulness"
+      },
+      {
+        "id": "legacy-perk-reagent-economy",
+        "name": "Reagent Economy",
+        "icon": "inv_misc_candle_02",
+        "effect": "Your class abilities no longer require reagents purchaseable from vendors.",
+        "meta": "Resourcefulness tree · 1 rank · needs 10 points spent in the tree and a rank in The Quick and the Dead",
+        "tree": "Resourcefulness"
+      }
+    ],
+    "rules": [
+      {
+        "title": "Class Buff Stacking Restrictions",
+        "text": "A camp buff does not stack with the class buff it copies, such as the Fish Bowl with Blessing of Kings: you keep whichever is higher or active."
+      },
+      {
+        "title": "Rested XP Generation Rules",
+        "text": "Only Leatherworking's Camp Tent, and the Tanning Rack and Sewing Machine that replace it, give rested experience. Sitting by the tent for 30 seconds raises your rested XP up to 5% of a level (1-hour cooldown). It does nothing if you already have 5% or more."
+      },
+      {
+        "title": "Camp Cooking Monster Kill EXP Bonus",
+        "text": "Most dishes a cook prepares at camp grant +5% bonus experience from monster kills (does not apply to quests) while you remain Well Fed."
+      },
+      {
+        "title": "Faction Alignment on Banners",
+        "text": "The Tailoring Faction Banner only buffs players of your own faction."
+      },
+      {
+        "title": "Trading vs. Placement Skill Requirements",
+        "text": "Crafted camp objects can be traded between players freely, but actually placing one around a campfire requires the profession skill shown on the item."
+      },
+      {
+        "title": "Tier Thresholds & Free Reagent Economy",
+        "text": "Always check a camp feature's tier before counting on free reagents. The Reagent Economy legacy talent specifically targets Tier 1 components."
+      }
+    ],
+    "campPerks": {
+      "milestones": [
+        {
+          "icon": "inv_misc_bandage_11",
+          "title": "Wayfarer Certification",
+          "desc": "Complete the initial campfire quest chain across 3 tradeskills.",
+          "reward": "+1 Account Legacy Point"
+        },
+        {
+          "icon": "inv_misc_food_54",
+          "title": "Trailblazer of Azeroth",
+          "desc": "Place all 11 unique profession stations at encampments.",
+          "reward": "Title: <The Trailblazer>"
+        }
+      ],
+      "atCamp": [
+        {
+          "icon": "inv_camelot_camping_welcomingcampfire",
+          "name": "Campfire Stations (3 Tiers)",
+          "desc": "Cooks craft Basic (3 objects), Journeyman (5 objects), and Expert (10 objects) kits.",
+          "skill": "Cooking 1-220"
+        },
+        {
+          "icon": "spell_arcane_manatap",
+          "name": "11 Skill 20 Profession Stations",
+          "desc": "Each profession crafts an object providing a 1-hour party buff mirroring class blessings.",
+          "skill": "Skill 20 Required"
+        },
+        {
+          "icon": "inv_10_alchemy_incenseholder_color1",
+          "name": "22 Advanced Blueprint Stations",
+          "desc": "Specialized workstations for on-site crafting, gathering spawns, and vendor bots.",
+          "skill": "Skill 140 & 300"
+        }
+      ],
+      "legacyPerks": [
+        {
+          "icon": "inv_fishingchair",
+          "name": "Field Guide",
+          "effect": "Reduces your cooldown on adding Camp features by 8 / 17 / 25%.",
+          "meta": "Adventure tree · 3 ranks · needs 5 points spent in the tree",
+          "planLink": "#systems"
+        },
+        {
+          "icon": "spell_misc_emotionhappy",
+          "name": "Permanence",
+          "effect": "Class buffs and camp resting benefits last 50 / 100% longer.",
+          "meta": "Resourcefulness tree · 2 ranks · needs 5 points spent in the tree and Gourmand",
+          "planLink": "#systems"
+        },
+        {
+          "icon": "inv_misc_candle_02",
+          "name": "Reagent Economy",
+          "effect": "Class abilities no longer require reagents purchaseable from vendors.",
+          "meta": "Resourcefulness tree · 1 rank · needs 10 points spent in the tree",
+          "planLink": "#systems"
+        }
+      ]
+    }
   }
 };
