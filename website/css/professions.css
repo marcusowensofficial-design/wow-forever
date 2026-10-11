@@ -788,11 +788,10 @@
 
 .step-progress-track {
   width: 100%;
-  height: 3px;
+  height: 4px;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 2px;
   position: relative;
-  overflow: hidden;
 }
 
 .step-progress-fill {
@@ -801,6 +800,18 @@
   height: 100%;
   background: var(--text-gold, #facc15);
   border-radius: 2px;
+}
+
+.step-progress-cap-marker {
+  position: absolute;
+  top: -3px;
+  height: 10px;
+  width: 2px;
+  background: #f87171;
+  border-radius: 1px;
+  box-shadow: 0 0 6px rgba(248, 113, 113, 0.85);
+  z-index: 3;
+  pointer-events: none;
 }
 
 .step-info-col {
@@ -1286,5 +1297,446 @@
   font-size: 0.85rem;
   color: #cbd5e1;
   line-height: 1.4;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.water-bite-badge {
+  display: inline-block;
+  padding: 0.15rem 0.5rem;
+  background: rgba(56, 189, 248, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.28);
+  border-radius: 4px;
+  color: #7dd3fc;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+/* ==========================================================================
+   SHOPPING BETA DIVIDER & FAVOR TIERS
+   ========================================================================== */
+.shopping-beta-divider {
+  grid-column: 1 / -1;
+  margin: 2rem 0 1rem;
+  padding: 1.25rem 1.5rem;
+  background: linear-gradient(90deg, rgba(30, 41, 59, 0.7) 0%, rgba(15, 23, 42, 0.85) 100%);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  border-left: 4px solid #38bdf8;
+  border-radius: 8px;
+}
+
+.shopping-beta-divider h4 {
+  font-size: 1.15rem;
+  color: #38bdf8;
+  font-weight: 700;
+  margin: 0 0 0.3rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.shopping-beta-divider p {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  margin: 0;
+}
+
+.favor-tier-block {
+  margin-bottom: 2.25rem;
+}
+
+.favor-tier-header {
+  margin-bottom: 1rem;
+  padding-bottom: 0.45rem;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.favor-tier-header h4 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-gold, #facc15);
+  margin: 0;
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+}
+
+.favor-tier-header h4 small {
+  font-size: 0.82rem;
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+/* ==========================================================================
+   FISHING PROGRESSION RANKS
+   ========================================================================== */
+.fishing-ranks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.fishing-rank-item {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 1.25rem;
+  align-items: center;
+  background: rgba(15, 23, 42, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 0.85rem 1.25rem;
+}
+
+.fishing-rank-step {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  background: rgba(56, 189, 248, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  border-radius: 50%;
+  color: #38bdf8;
+  font-weight: 800;
+  font-size: 1.2rem;
+}
+
+.fishing-rank-content strong {
+  display: block;
+  font-size: 1.05rem;
+  color: #fff;
+  margin-bottom: 0.2rem;
+}
+
+.fishing-rank-content p {
+  font-size: 0.85rem;
+  color: #cbd5e1;
+  margin: 0;
+  line-height: 1.45;
+}
+
+/* ==========================================================================
+   ALL PROFESSIONS OVERVIEW HUB
+   ========================================================================== */
+.prof-overview-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  animation: fadeIn 0.25s ease-in-out;
+}
+
+.prof-overview-hero {
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.8) 0%, rgba(15, 23, 42, 0.95) 100%);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  border-radius: 12px;
+  padding: 1.75rem 2rem;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2rem;
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  .prof-overview-hero {
+    grid-template-columns: 1fr;
+  }
+}
+
+.prof-overview-title h3 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #fff;
+  margin: 0 0 0.5rem 0;
+  letter-spacing: -0.01em;
+}
+
+.prof-overview-title p {
+  font-size: 0.92rem;
+  color: #cbd5e1;
+  line-height: 1.6;
+  max-width: 760px;
+  margin: 0;
+}
+
+.prof-overview-stats {
+  display: flex;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.prof-overview-stat-card {
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 0.85rem 1.25rem;
+  min-width: 130px;
+  text-align: center;
+}
+
+.prof-overview-stat-card .stat-val {
+  font-size: 1.6rem;
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--text-gold, #facc15);
+}
+
+.prof-overview-stat-card .stat-lbl {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 0.35rem;
+}
+
+/* 4 Innovation Pillars */
+.prof-pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+}
+
+.prof-pillar-card {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 1.25rem;
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.prof-pillar-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(212, 175, 55, 0.3);
+}
+
+.prof-pillar-head {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 0.6rem;
+}
+
+.prof-pillar-icon {
+  font-size: 1.5rem;
+}
+
+.prof-pillar-head h4 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+}
+
+.prof-pillar-card p {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Profession Directory Cards */
+.prof-overview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 1.25rem;
+}
+
+.prof-directory-card {
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 1.35rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.prof-directory-card:hover {
+  border-color: var(--border-gold, #d4af37);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+  background: rgba(15, 23, 42, 0.9);
+}
+
+.prof-dir-head {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.prof-dir-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  flex-shrink: 0;
+}
+
+.prof-dir-title-box h4 {
+  font-size: 1.18rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.prof-dir-cat-badge {
+  font-size: 0.7rem;
+  padding: 0.15rem 0.5rem;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 4px;
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+.prof-dir-summary {
+  font-size: 0.84rem;
+  color: #cbd5e1;
+  margin: 0.25rem 0 0 0;
+}
+
+.prof-dir-synergy {
+  font-size: 0.78rem;
+  color: #38bdf8;
+  margin-top: 0.35rem;
+  font-style: italic;
+}
+
+.prof-dir-camp-box {
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 6px;
+  padding: 0.6rem 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.prof-dir-camp-box img {
+  width: 28px;
+  height: 28px;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.prof-dir-camp-box div {
+  font-size: 0.78rem;
+  color: #cbd5e1;
+  line-height: 1.35;
+}
+
+.prof-dir-camp-box strong {
+  color: var(--text-gold, #facc15);
+}
+
+.prof-dir-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0.75rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.prof-dir-metrics {
+  font-size: 0.78rem;
+  color: #94a3b8;
+}
+
+.prof-dir-explore-btn {
+  background: rgba(212, 175, 55, 0.15);
+  border: 1px solid var(--border-gold, #d4af37);
+  color: var(--text-gold, #facc15);
+  padding: 0.4rem 0.9rem;
+  border-radius: 5px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.prof-dir-explore-btn:hover {
+  background: var(--text-gold, #facc15);
+  color: #0b1120;
+}
+
+/* Master Camp Station Matrix Table */
+.prof-matrix-table-wrap {
+  overflow-x: auto;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  background: rgba(15, 23, 42, 0.85);
+}
+
+.prof-matrix-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+  text-align: left;
+}
+
+.prof-matrix-table th {
+  background: rgba(10, 14, 26, 0.95);
+  padding: 0.9rem 1.25rem;
+  color: #94a3b8;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.prof-matrix-table td {
+  padding: 0.85rem 1.25rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  color: #cbd5e1;
+  vertical-align: middle;
+}
+
+.prof-matrix-table tr:hover td {
+  background: rgba(30, 41, 59, 0.5);
+}
+
+.matrix-prof-col {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-weight: 700;
+  color: #fff;
+  cursor: pointer;
+}
+
+.matrix-prof-col:hover {
+  color: var(--text-gold, #facc15);
+}
+
+.matrix-prof-col img {
+  width: 28px;
+  height: 28px;
+  border-radius: 4px;
+}
+
+.matrix-station-cell {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: #fff;
+}
+
+.matrix-station-cell img {
+  width: 24px;
+  height: 24px;
+  border-radius: 3px;
+}
+
+.matrix-station-cell small {
+  color: #94a3b8;
+  font-size: 0.75rem;
 }
 

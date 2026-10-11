@@ -120,7 +120,12 @@ function initNavigation() {
       return;
     }
 
-    const tabName = hash.split('/')[0];
+    let tabName = hash.split('/')[0].split('#')[0];
+    const professionSlugs = ['professions', 'alchemy', 'blacksmithing', 'enchanting', 'engineering', 'leatherworking', 'tailoring', 'mining', 'herbalism', 'skinning', 'cooking', 'fishing', 'first-aid', 'camping'];
+    if (professionSlugs.includes(tabName)) {
+      tabName = 'professions';
+    }
+
     const targetBtn = document.querySelector(`.nav-tab-btn[data-tab="${tabName}"]`);
     if (targetBtn && !targetBtn.classList.contains('active')) {
       targetBtn.click();

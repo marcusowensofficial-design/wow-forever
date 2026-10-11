@@ -8080,7 +8080,8 @@ window.WOW_PROFESSIONS_DATA = {
           "planLink": ""
         }
       ]
-    }
+    },
+    "synergy": "Goes with Herbalism, its herbs."
   },
   "blacksmithing": {
     "slug": "blacksmithing",
@@ -28521,7 +28522,8 @@ window.WOW_PROFESSIONS_DATA = {
           "planLink": ""
         }
       ]
-    }
+    },
+    "synergy": "Goes with Mining, its ore and bars."
   },
   "enchanting": {
     "slug": "enchanting",
@@ -28541,7 +28543,20 @@ window.WOW_PROFESSIONS_DATA = {
       "newInForever": 33,
       "favorRecipes": 40
     },
-    "groups": [],
+    "groups": [
+      {
+        "key": "General",
+        "label": "General",
+        "icon": "trade_engraving",
+        "count": 165
+      },
+      {
+        "key": "Relics",
+        "label": "Relics",
+        "icon": "inv_relics_libramofhope",
+        "count": 11
+      }
+    ],
     "recipes": [
       {
         "name": "Enchant Bracer - Inferior Stamina",
@@ -33828,6 +33843,171 @@ window.WOW_PROFESSIONS_DATA = {
           }
         ],
         "source": "Trainer"
+      },
+      {
+        "id": 249396,
+        "spellId": 249396,
+        "name": "Mystic Mushroom",
+        "icon": "inv_mushroom_11",
+        "quality": 3,
+        "cat": "Relics",
+        "isNew": true,
+        "learn": 130,
+        "yellow": 150,
+        "green": 160,
+        "grey": 170,
+        "reagents": [],
+        "source": "Trainer / Relic Craft"
+      },
+      {
+        "id": 249398,
+        "spellId": 249398,
+        "name": "Polished Driftwood Icon",
+        "icon": "spell_shaman_totemrecall",
+        "quality": 3,
+        "cat": "Relics",
+        "isNew": true,
+        "learn": 130,
+        "yellow": 150,
+        "green": 160,
+        "grey": 170,
+        "reagents": [],
+        "source": "Trainer / Relic Craft"
+      },
+      {
+        "id": 249397,
+        "spellId": 249397,
+        "name": "Tenets of the Silver Hand",
+        "icon": "inv_misc_book_13",
+        "quality": 3,
+        "cat": "Relics",
+        "isNew": true,
+        "learn": 130,
+        "yellow": 150,
+        "green": 160,
+        "grey": 170,
+        "reagents": [],
+        "source": "Trainer / Relic Craft"
+      },
+      {
+        "id": 249442,
+        "spellId": 249442,
+        "name": "Libram of Invocation",
+        "icon": "inv_relics_libramofhope",
+        "quality": 3,
+        "cat": "Relics",
+        "isNew": true,
+        "learn": 210,
+        "yellow": 230,
+        "green": 240,
+        "grey": 250,
+        "reagents": [],
+        "source": "Trainer / Relic Craft"
+      },
+      {
+        "id": 249441,
+        "spellId": 249441,
+        "name": "Talons of Wrath",
+        "icon": "spell_nature_natureswrath",
+        "quality": 3,
+        "cat": "Relics",
+        "isNew": true,
+        "learn": 210,
+        "yellow": 230,
+        "green": 240,
+        "grey": 250,
+        "reagents": [],
+        "source": "Trainer / Relic Craft"
+      },
+      {
+        "id": 249443,
+        "spellId": 249443,
+        "name": "Totem of Ancestral Protection",
+        "icon": "inv_relics_totemofrage",
+        "quality": 3,
+        "cat": "Relics",
+        "isNew": true,
+        "learn": 210,
+        "yellow": 230,
+        "green": 240,
+        "grey": 250,
+        "reagents": [],
+        "source": "Trainer / Relic Craft"
+      },
+      {
+        "id": 279250,
+        "spellId": 279250,
+        "name": "Idol of Swiftness",
+        "icon": "ability_druid_nourish",
+        "quality": 4,
+        "cat": "Relics",
+        "isNew": true,
+        "learn": 300,
+        "yellow": 320,
+        "green": 330,
+        "grey": 340,
+        "reagents": [],
+        "source": "Trainer / Relic Craft"
+      },
+      {
+        "id": 279251,
+        "spellId": 279251,
+        "name": "Idol of the Ursine Twins",
+        "icon": "inv_misc_idol_04",
+        "quality": 4,
+        "cat": "Relics",
+        "isNew": true,
+        "learn": 300,
+        "yellow": 320,
+        "green": 330,
+        "grey": 340,
+        "reagents": [],
+        "source": "Trainer / Relic Craft"
+      },
+      {
+        "id": 279248,
+        "spellId": 279248,
+        "name": "Libram of Infusion",
+        "icon": "inv_misc_book_13",
+        "quality": 4,
+        "cat": "Relics",
+        "isNew": true,
+        "learn": 300,
+        "yellow": 320,
+        "green": 330,
+        "grey": 340,
+        "reagents": [],
+        "source": "Trainer / Relic Craft"
+      },
+      {
+        "id": 279247,
+        "spellId": 279247,
+        "name": "Steadfast Libram",
+        "icon": "inv_relics_libramofgrace",
+        "quality": 4,
+        "cat": "Relics",
+        "isNew": true,
+        "learn": 300,
+        "yellow": 320,
+        "green": 330,
+        "grey": 340,
+        "reagents": [],
+        "source": "Trainer / Relic Craft"
+      },
+      {
+        "id": 279249,
+        "spellId": 279249,
+        "name": "Totem of Urgency",
+        "icon": "inv_ability_totemicshaman_surgingtotem",
+        "quality": 4,
+        "cat": "Relics",
+        "isNew": true,
+        "learn": 300,
+        "yellow": 320,
+        "green": 330,
+        "grey": 340,
+        "reagents": [],
+        "source": "Trainer / Relic Craft"
       }
     ],
     "gatheringNodes": [],
@@ -34956,7 +35136,8 @@ window.WOW_PROFESSIONS_DATA = {
           "planLink": ""
         }
       ]
-    }
+    },
+    "synergy": "Goes with Tailoring, for gear to disenchant."
   },
   "engineering": {
     "slug": "engineering",
@@ -46192,7 +46373,8 @@ window.WOW_PROFESSIONS_DATA = {
           "planLink": ""
         }
       ]
-    }
+    },
+    "synergy": "Goes with Mining, its ore and bars."
   },
   "leatherworking": {
     "slug": "leatherworking",
@@ -70719,7 +70901,8 @@ window.WOW_PROFESSIONS_DATA = {
           "planLink": ""
         }
       ]
-    }
+    },
+    "synergy": "Goes with Skinning, its leather."
   },
   "tailoring": {
     "slug": "tailoring",
@@ -90943,7 +91126,8 @@ window.WOW_PROFESSIONS_DATA = {
           "planLink": ""
         }
       ]
-    }
+    },
+    "synergy": "Goes with Enchanting, to disenchant what you sew."
   },
   "mining": {
     "slug": "mining",
@@ -90954,40 +91138,367 @@ window.WOW_PROFESSIONS_DATA = {
     "summary": "Mining ore nodes and smelting bars for blacksmiths and engineers",
     "campBuff": null,
     "stats": {
-      "recipeCount": 2,
-      "newInForever": 0,
+      "recipeCount": 14,
+      "newInForever": 2,
       "favorRecipes": 0
     },
     "groups": [],
     "recipes": [
       {
-        "name": "Unknown Recipe",
-        "icon": "inv_misc_questionmark",
+        "id": 2840,
+        "name": "Copper Bar",
+        "icon": "inv_ingot_02",
         "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "cat": "Smelting",
         "isNew": false,
         "learn": 1,
-        "yellow": 1,
-        "green": 1,
-        "grey": 1,
-        "reagents": [],
+        "yellow": 25,
+        "green": 47,
+        "grey": 70,
+        "reagents": [
+          {
+            "id": 2770,
+            "name": "Copper Ore",
+            "icon": "inv_ore_copper_01",
+            "quality": 1,
+            "count": 1
+          }
+        ],
         "source": "Trainer"
       },
       {
-        "name": "Unknown Recipe",
-        "icon": "inv_misc_questionmark",
+        "id": 2841,
+        "name": "Bronze Bar",
+        "icon": "inv_ingot_bronze",
         "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
+        "cat": "Smelting",
         "isNew": false,
-        "learn": 1,
-        "yellow": 1,
-        "green": 1,
-        "grey": 1,
-        "reagents": [],
+        "learn": 65,
+        "yellow": 65,
+        "green": 90,
+        "grey": 115,
+        "reagents": [
+          {
+            "id": 2840,
+            "name": "Copper Bar",
+            "icon": "inv_ingot_02",
+            "quality": 1,
+            "count": 1
+          },
+          {
+            "id": 3576,
+            "name": "Tin Bar",
+            "icon": "inv_ingot_05",
+            "quality": 1,
+            "count": 1
+          }
+        ],
+        "source": "Trainer"
+      },
+      {
+        "id": 3576,
+        "name": "Tin Bar",
+        "icon": "inv_ingot_05",
+        "quality": 1,
+        "cat": "Smelting",
+        "isNew": false,
+        "learn": 65,
+        "yellow": 50,
+        "green": 62,
+        "grey": 75,
+        "reagents": [
+          {
+            "id": 2771,
+            "name": "Tin Ore",
+            "icon": "inv_ore_tin_01",
+            "quality": 1,
+            "count": 1
+          }
+        ],
+        "source": "Trainer"
+      },
+      {
+        "id": 2842,
+        "name": "Silver Bar",
+        "icon": "inv_ingot_01",
+        "quality": 2,
+        "cat": "Smelting",
+        "isNew": false,
+        "learn": 75,
+        "yellow": 100,
+        "green": 112,
+        "grey": 125,
+        "reagents": [
+          {
+            "id": 2775,
+            "name": "Silver Ore",
+            "icon": "inv_stone_16",
+            "quality": 2,
+            "count": 1
+          }
+        ],
+        "source": "Trainer"
+      },
+      {
+        "id": 3575,
+        "name": "Iron Bar",
+        "icon": "inv_ingot_iron",
+        "quality": 1,
+        "cat": "Smelting",
+        "isNew": false,
+        "learn": 125,
+        "yellow": 130,
+        "green": 135,
+        "grey": 140,
+        "reagents": [
+          {
+            "id": 2772,
+            "name": "Iron Ore",
+            "icon": "inv_ore_iron_01",
+            "quality": 1,
+            "count": 1
+          }
+        ],
+        "source": "Trainer"
+      },
+      {
+        "id": 3577,
+        "name": "Gold Bar",
+        "icon": "inv_ingot_03",
+        "quality": 2,
+        "cat": "Smelting",
+        "isNew": false,
+        "learn": 155,
+        "yellow": 170,
+        "green": 177,
+        "grey": 185,
+        "reagents": [
+          {
+            "id": 2776,
+            "name": "Gold Ore",
+            "icon": "inv_ore_copper_01",
+            "quality": 2,
+            "count": 1
+          }
+        ],
+        "source": "Trainer"
+      },
+      {
+        "id": 3859,
+        "name": "Steel Bar",
+        "icon": "inv_ingot_steel",
+        "quality": 1,
+        "cat": "Smelting",
+        "isNew": false,
+        "learn": 165,
+        "yellow": 165,
+        "green": 165,
+        "grey": 165,
+        "reagents": [
+          {
+            "id": 3575,
+            "name": "Iron Bar",
+            "icon": "inv_ingot_iron",
+            "quality": 1,
+            "count": 1
+          },
+          {
+            "id": 3857,
+            "name": "Coal",
+            "icon": "inv_ore_tin_01",
+            "quality": 1,
+            "count": 1
+          }
+        ],
+        "source": "Trainer"
+      },
+      {
+        "id": 3860,
+        "name": "Mithril Bar",
+        "icon": "inv_ingot_06",
+        "quality": 1,
+        "cat": "Smelting",
+        "isNew": false,
+        "learn": 175,
+        "yellow": 175,
+        "green": 175,
+        "grey": 175,
+        "reagents": [
+          {
+            "id": 3858,
+            "name": "Mithril Ore",
+            "icon": "inv_ore_mithril_02",
+            "quality": 1,
+            "count": 1
+          }
+        ],
+        "source": "Trainer"
+      },
+      {
+        "id": 11371,
+        "name": "Dark Iron Bar",
+        "icon": "inv_ingot_mithril",
+        "quality": 1,
+        "cat": "Smelting",
+        "isNew": false,
+        "learn": 215,
+        "yellow": 230,
+        "green": 230,
+        "grey": 230,
+        "reagents": [
+          {
+            "id": 11370,
+            "name": "Dark Iron Ore",
+            "icon": "inv_ore_mithril_01",
+            "quality": 1,
+            "count": 8
+          }
+        ],
+        "source": "Trainer"
+      },
+      {
+        "id": 6037,
+        "name": "Truesilver Bar",
+        "icon": "inv_ingot_08",
+        "quality": 2,
+        "cat": "Smelting",
+        "isNew": false,
+        "learn": 230,
+        "yellow": 230,
+        "green": 230,
+        "grey": 230,
+        "reagents": [
+          {
+            "id": 7911,
+            "name": "Truesilver Ore",
+            "icon": "inv_ore_truesilver_01",
+            "quality": 2,
+            "count": 1
+          }
+        ],
+        "source": "Trainer"
+      },
+      {
+        "id": 12359,
+        "name": "Thorium Bar",
+        "icon": "inv_ingot_07",
+        "quality": 1,
+        "cat": "Smelting",
+        "isNew": false,
+        "learn": 250,
+        "yellow": 250,
+        "green": 250,
+        "grey": 250,
+        "reagents": [
+          {
+            "id": 10620,
+            "name": "Thorium Ore",
+            "icon": "inv_ore_thorium_02",
+            "quality": 1,
+            "count": 1
+          }
+        ],
+        "source": "Trainer"
+      },
+      {
+        "id": 249726,
+        "name": "Azerothium Bar",
+        "icon": "inv_ingot_livingsteel",
+        "quality": 2,
+        "cat": "Smelting",
+        "isNew": true,
+        "learn": 275,
+        "yellow": 275,
+        "green": 275,
+        "grey": 275,
+        "reagents": [
+          {
+            "id": 249426,
+            "name": "Pitchblende",
+            "icon": "inv_ore_elethium_nugget",
+            "quality": 2,
+            "count": 2
+          },
+          {
+            "id": 3857,
+            "name": "Coal",
+            "icon": "inv_ore_tin_01",
+            "quality": 1,
+            "count": 1
+          }
+        ],
+        "source": "Trainer"
+      },
+      {
+        "id": 17771,
+        "name": "Elementium Bar",
+        "icon": "inv_ingot_thorium",
+        "quality": 5,
+        "cat": "Smelting",
+        "isNew": false,
+        "learn": 295,
+        "yellow": 310,
+        "green": 315,
+        "grey": 320,
+        "reagents": [
+          {
+            "id": 18562,
+            "name": "Elementium Ore",
+            "icon": "inv_stone_sharpeningstone_01",
+            "quality": 4,
+            "count": 1
+          },
+          {
+            "id": 12360,
+            "name": "Arcanite Bar",
+            "icon": "inv_misc_stonetablet_05",
+            "quality": 2,
+            "count": 10
+          },
+          {
+            "id": 17010,
+            "name": "Fiery Core",
+            "icon": "spell_fire_flamebolt",
+            "quality": 3,
+            "count": 1
+          },
+          {
+            "id": 18567,
+            "name": "Elemental Flux",
+            "icon": "spell_frost_fireresistancetotem",
+            "quality": 1,
+            "count": 3
+          }
+        ],
+        "source": "Trainer"
+      },
+      {
+        "id": 251291,
+        "name": "Heavy Thorium Bar",
+        "icon": "item_elementiumbar",
+        "quality": 2,
+        "cat": "Smelting",
+        "isNew": true,
+        "learn": 300,
+        "yellow": 300,
+        "green": 307,
+        "grey": 315,
+        "reagents": [
+          {
+            "id": 248815,
+            "name": "Heavy Thorium Ore",
+            "icon": "inv_ore_oxxein",
+            "quality": 1,
+            "count": 1
+          },
+          {
+            "id": 279952,
+            "name": "Molten Foundry",
+            "icon": "inv_blacksmithingalloys_red",
+            "quality": 1,
+            "count": 1
+          }
+        ],
         "source": "Trainer"
       }
     ],
@@ -91107,16 +91618,9 @@ window.WOW_PROFESSIONS_DATA = {
           ]
         },
         {
-          "type": "gather-step",
-          "from": 1,
-          "to": 1,
-          "bar": {
-            "iLeft": null,
-            "iWidth": null
-          },
-          "title": "",
-          "zones": "",
-          "icons": []
+          "type": "beta-stop",
+          "title": "The beta stops at 225",
+          "text": "Artisan ranks are 225 to 300, planned for launch."
         },
         {
           "type": "gather-step",
@@ -91167,121 +91671,61 @@ window.WOW_PROFESSIONS_DATA = {
         "name": "Copper Vein",
         "icon": "inv_ore_copper_01",
         "zones": "Most in Durotar, Westfall and Duskwood",
-        "skill": 1,
-        "drops": [
-          {
-            "itemId": 2770,
-            "name": "Copper Ore",
-            "icon": "inv_ore_copper_01",
-            "quality": 1
-          },
-          {
-            "itemId": 2835,
-            "name": "Rough Stone",
-            "icon": "inv_stone_06",
-            "quality": 1
-          },
-          {
-            "itemId": 2798,
-            "name": "Rethban Ore",
-            "icon": "inv_ore_iron_01",
-            "quality": 1
-          }
-        ]
+        "skill": 1
       },
       {
         "name": "Tin Vein",
         "icon": "inv_ore_tin_01",
         "zones": "Most in Wetlands, Duskwood and Silverpine Forest",
-        "skill": 65,
-        "drops": [
-          {
-            "itemId": 2771,
-            "name": "Tin Ore",
-            "icon": "inv_ore_tin_01",
-            "quality": 1
-          },
-          {
-            "itemId": 2836,
-            "name": "Coarse Stone",
-            "icon": "inv_stone_09",
-            "quality": 1
-          },
-          {
-            "itemId": 2798,
-            "name": "Rethban Ore",
-            "icon": "inv_ore_iron_01",
-            "quality": 1
-          }
-        ]
+        "skill": 65
       },
       {
         "name": "Silver Vein",
         "icon": "inv_stone_16",
         "zones": "Most in Arathi Highlands, Alterac Mountains and Stranglethorn Vale",
-        "skill": 75,
-        "drops": [
-          {
-            "itemId": 2775,
-            "name": "Silver Ore",
-            "icon": "inv_stone_16",
-            "quality": 2
-          }
-        ]
+        "skill": 75
       },
       {
         "name": "Iron Deposit",
         "icon": "inv_ore_iron_01",
         "zones": "Most in Arathi Highlands, Alterac Mountains and Stranglethorn Vale",
-        "skill": 125,
-        "drops": [
-          {
-            "itemId": 2772,
-            "name": "Iron Ore",
-            "icon": "inv_ore_iron_01",
-            "quality": 1
-          },
-          {
-            "itemId": 2838,
-            "name": "Heavy Stone",
-            "icon": "inv_stone_12",
-            "quality": 1
-          }
-        ]
+        "skill": 125
       },
       {
         "name": "Gold Vein",
         "icon": "inv_ore_copper_01",
         "zones": "Most in Arathi Highlands, Alterac Mountains and Stranglethorn Vale",
-        "skill": 155,
-        "drops": [
-          {
-            "itemId": 2776,
-            "name": "Gold Ore",
-            "icon": "inv_ore_copper_01",
-            "quality": 2
-          }
-        ]
+        "skill": 155
       },
       {
         "name": "Mithril Deposit",
         "icon": "inv_ore_mithril_02",
         "zones": "Most in Badlands, The Hinterlands and Alterac Mountains",
-        "skill": 175,
-        "drops": [
-          {
-            "itemId": 3858,
-            "name": "Mithril Ore",
-            "icon": "inv_ore_mithril_02",
-            "quality": 1
-          },
-          {
-            "itemId": 7912,
-            "name": "Solid Stone",
-            "icon": "inv_stone_10",
-            "quality": 1
-          }
-        ]
+        "skill": 175
+      },
+      {
+        "name": "Dark Iron Deposit",
+        "icon": "inv_ore_mithril_01",
+        "zones": "Most in Searing Gorge",
+        "skill": 230
+      },
+      {
+        "name": "Truesilver Deposit",
+        "icon": "inv_ore_truesilver_01",
+        "zones": "Most in Badlands, The Hinterlands and Alterac Mountains",
+        "skill": 230
+      },
+      {
+        "name": "Small Thorium Vein",
+        "icon": "inv_ore_thorium_02",
+        "zones": "Most in Winterspring, Swamp of Sorrows and Blasted Lands",
+        "skill": 245
+      },
+      {
+        "name": "Rich Thorium Vein",
+        "icon": "inv_ore_thorium_02",
+        "zones": "Most in Winterspring and Azshara",
+        "skill": 275
       }
     ],
     "campPerks": {
@@ -91329,7 +91773,8 @@ window.WOW_PROFESSIONS_DATA = {
           "planLink": ""
         }
       ]
-    }
+    },
+    "synergy": "Goes with Blacksmithing, or Engineering."
   },
   "herbalism": {
     "slug": "herbalism",
@@ -91519,16 +91964,9 @@ window.WOW_PROFESSIONS_DATA = {
           ]
         },
         {
-          "type": "gather-step",
-          "from": 1,
-          "to": 1,
-          "bar": {
-            "iLeft": null,
-            "iWidth": null
-          },
-          "title": "",
-          "zones": "",
-          "icons": []
+          "type": "beta-stop",
+          "title": "The beta stops at 225",
+          "text": "Artisan ranks are 225 to 300, planned for launch."
         },
         {
           "type": "gather-step",
@@ -91620,295 +92058,169 @@ window.WOW_PROFESSIONS_DATA = {
         "name": "Peacebloom",
         "icon": "inv_misc_flower_02",
         "zones": "Most in The Barrens, Durotar and Mulgore",
-        "skill": 1,
-        "drops": [
-          {
-            "itemId": 2447,
-            "name": "Peacebloom",
-            "icon": "inv_misc_flower_02",
-            "quality": 1
-          }
-        ]
+        "skill": 1
       },
       {
         "name": "Silverleaf",
         "icon": "inv_misc_herb_10",
         "zones": "Most in Durotar, The Barrens and Mulgore",
-        "skill": 1,
-        "drops": [
-          {
-            "itemId": 765,
-            "name": "Silverleaf",
-            "icon": "inv_misc_herb_10",
-            "quality": 1
-          },
-          {
-            "itemId": 5056,
-            "name": "Root Sample",
-            "icon": "inv_misc_herb_07",
-            "quality": 1
-          }
-        ]
+        "skill": 1
       },
       {
         "name": "Earthroot",
         "icon": "inv_misc_herb_07",
         "zones": "Most in The Barrens, Durotar and Tirisfal Glades",
-        "skill": 15,
-        "drops": [
-          {
-            "itemId": 2449,
-            "name": "Earthroot",
-            "icon": "inv_misc_herb_07",
-            "quality": 1
-          },
-          {
-            "itemId": 5056,
-            "name": "Root Sample",
-            "icon": "inv_misc_herb_07",
-            "quality": 1
-          }
-        ]
+        "skill": 15
       },
       {
         "name": "Mageroyal",
         "icon": "inv_jewelry_talisman_03",
         "zones": "Most in The Barrens, Ashenvale and Darkshore",
-        "skill": 50,
-        "drops": [
-          {
-            "itemId": 785,
-            "name": "Mageroyal",
-            "icon": "inv_jewelry_talisman_03",
-            "quality": 1
-          },
-          {
-            "itemId": 5056,
-            "name": "Root Sample",
-            "icon": "inv_misc_herb_07",
-            "quality": 1
-          },
-          {
-            "itemId": 2452,
-            "name": "Swiftthistle",
-            "icon": "inv_misc_herb_04",
-            "quality": 1
-          }
-        ]
+        "skill": 50
       },
       {
         "name": "Briarthorn",
         "icon": "inv_misc_root_01",
         "zones": "Most in The Barrens, Duskwood and Ashenvale",
-        "skill": 70,
-        "drops": [
-          {
-            "itemId": 2450,
-            "name": "Briarthorn",
-            "icon": "inv_misc_root_01",
-            "quality": 1
-          },
-          {
-            "itemId": 2452,
-            "name": "Swiftthistle",
-            "icon": "inv_misc_herb_04",
-            "quality": 1
-          },
-          {
-            "itemId": 5056,
-            "name": "Root Sample",
-            "icon": "inv_misc_herb_07",
-            "quality": 1
-          }
-        ]
+        "skill": 70
       },
       {
         "name": "Stranglekelp",
         "icon": "inv_misc_herb_11",
         "zones": "Most in Stranglethorn Vale, Wetlands and Ashenvale",
-        "skill": 85,
-        "drops": [
-          {
-            "itemId": 3820,
-            "name": "Stranglekelp",
-            "icon": "inv_misc_herb_11",
-            "quality": 1
-          }
-        ]
+        "skill": 85
       },
       {
         "name": "Bruiseweed",
         "icon": "inv_misc_herb_01",
         "zones": "Most in Stonetalon Mountains, The Barrens and Hillsbrad Foothills",
-        "skill": 100,
-        "drops": [
-          {
-            "itemId": 2453,
-            "name": "Bruiseweed",
-            "icon": "inv_misc_herb_01",
-            "quality": 1
-          }
-        ]
+        "skill": 100
       },
       {
         "name": "Wild Steelbloom",
         "icon": "inv_misc_flower_01",
         "zones": "Most in Arathi Highlands, Stonetalon Mountains and Stranglethorn Vale",
-        "skill": 115,
-        "drops": [
-          {
-            "itemId": 3355,
-            "name": "Wild Steelbloom",
-            "icon": "inv_misc_flower_01",
-            "quality": 1
-          }
-        ]
+        "skill": 115
       },
       {
         "name": "Grave Moss",
         "icon": "inv_misc_dust_02",
         "zones": "Most in Duskwood, Desolace and Wetlands",
-        "skill": 120,
-        "drops": [
-          {
-            "itemId": 3369,
-            "name": "Grave Moss",
-            "icon": "inv_misc_dust_02",
-            "quality": 1
-          }
-        ]
+        "skill": 120
       },
       {
         "name": "Kingsblood",
         "icon": "inv_misc_herb_03",
         "zones": "Most in Stranglethorn Vale, Wetlands and Ashenvale",
-        "skill": 125,
-        "drops": [
-          {
-            "itemId": 3356,
-            "name": "Kingsblood",
-            "icon": "inv_misc_herb_03",
-            "quality": 1
-          }
-        ]
+        "skill": 125
       },
       {
         "name": "Liferoot",
         "icon": "inv_misc_root_02",
         "zones": "Most in Stranglethorn Vale, Wetlands and Arathi Highlands",
-        "skill": 150,
-        "drops": [
-          {
-            "itemId": 3357,
-            "name": "Liferoot",
-            "icon": "inv_misc_root_02",
-            "quality": 1
-          }
-        ]
+        "skill": 150
       },
       {
         "name": "Fadeleaf",
         "icon": "inv_misc_herb_12",
         "zones": "Most in Arathi Highlands, Swamp of Sorrows and Alterac Mountains",
-        "skill": 160,
-        "drops": [
-          {
-            "itemId": 3818,
-            "name": "Fadeleaf",
-            "icon": "inv_misc_herb_12",
-            "quality": 1
-          }
-        ]
+        "skill": 160
       },
       {
         "name": "Goldthorn",
         "icon": "inv_misc_herb_15",
         "zones": "Most in Stranglethorn Vale, Arathi Highlands and Swamp of Sorrows",
-        "skill": 170,
-        "drops": [
-          {
-            "itemId": 3821,
-            "name": "Goldthorn",
-            "icon": "inv_misc_herb_15",
-            "quality": 1
-          }
-        ]
+        "skill": 170
       },
       {
         "name": "Khadgar's Whisker",
         "icon": "inv_misc_herb_08",
         "zones": "Most in Stranglethorn Vale, Arathi Highlands and Swamp of Sorrows",
-        "skill": 185,
-        "drops": [
-          {
-            "itemId": 3358,
-            "name": "Khadgar's Whisker",
-            "icon": "inv_misc_herb_08",
-            "quality": 1
-          }
-        ]
+        "skill": 185
       },
       {
         "name": "Wintersbite",
         "icon": "inv_misc_flower_03",
         "zones": "Most in Alterac Mountains",
-        "skill": 195,
-        "drops": [
-          {
-            "itemId": 3819,
-            "name": "Wintersbite",
-            "icon": "inv_misc_flower_03",
-            "quality": 1
-          }
-        ]
+        "skill": 195
       },
       {
         "name": "Firebloom",
         "icon": "inv_misc_herb_19",
         "zones": "Most in Tanaris, Searing Gorge and Badlands",
-        "skill": 205,
-        "drops": [
-          {
-            "itemId": 4625,
-            "name": "Firebloom",
-            "icon": "inv_misc_herb_19",
-            "quality": 1
-          }
-        ]
+        "skill": 205
       },
       {
         "name": "Purple Lotus",
         "icon": "inv_misc_herb_17",
         "zones": "Most in Azshara, The Hinterlands and Tanaris",
-        "skill": 210,
-        "drops": [
-          {
-            "itemId": 8831,
-            "name": "Purple Lotus",
-            "icon": "inv_misc_herb_17",
-            "quality": 1
-          },
-          {
-            "itemId": 8153,
-            "name": "Wildvine",
-            "icon": "inv_misc_herb_03",
-            "quality": 1
-          }
-        ]
+        "skill": 210
       },
       {
         "name": "Arthas' Tears",
         "icon": "inv_misc_herb_13",
         "zones": "Most in Western Plaguelands, Eastern Plaguelands and Felwood",
-        "skill": 220,
-        "drops": [
-          {
-            "itemId": 8836,
-            "name": "Arthas' Tears",
-            "icon": "inv_misc_herb_13",
-            "quality": 1
-          }
-        ]
+        "skill": 220
+      },
+      {
+        "name": "Sungrass",
+        "icon": "inv_misc_herb_18",
+        "zones": "Most in Azshara, The Hinterlands and Feralas",
+        "skill": 230
+      },
+      {
+        "name": "Blindweed",
+        "icon": "inv_misc_herb_14",
+        "zones": "Most in Swamp of Sorrows and Un'Goro Crater",
+        "skill": 235
+      },
+      {
+        "name": "Ghost Mushroom",
+        "icon": "inv_mushroom_08",
+        "zones": "Most in The Hinterlands and Desolace",
+        "skill": 245
+      },
+      {
+        "name": "Gromsblood",
+        "icon": "inv_misc_herb_16",
+        "zones": "Most in Felwood and Desolace",
+        "skill": 250
+      },
+      {
+        "name": "Golden Sansam",
+        "icon": "inv_misc_herb_sansamroot",
+        "zones": "Most in Un'Goro Crater, Azshara and Eastern Plaguelands",
+        "skill": 260
+      },
+      {
+        "name": "Dreamfoil",
+        "icon": "inv_misc_herb_dreamfoil",
+        "zones": "Most in Azshara, Eastern Plaguelands and Un'Goro Crater",
+        "skill": 270
+      },
+      {
+        "name": "Mountain Silversage",
+        "icon": "inv_misc_herb_mountainsilversage",
+        "zones": "Most in Winterspring, Un'Goro Crater and Azshara",
+        "skill": 280
+      },
+      {
+        "name": "Plaguebloom",
+        "icon": "inv_misc_herb_plaguebloom",
+        "zones": "Most in Eastern Plaguelands and Western Plaguelands",
+        "skill": 285
+      },
+      {
+        "name": "Icecap",
+        "icon": "inv_misc_herb_icecap",
+        "zones": "Most in Winterspring",
+        "skill": 290
+      },
+      {
+        "name": "Black Lotus",
+        "icon": "inv_misc_herb_blacklotus",
+        "zones": "Most in Burning Steppes, Winterspring and Eastern Plaguelands",
+        "skill": 300
       }
     ],
     "campPerks": {
@@ -91956,7 +92268,8 @@ window.WOW_PROFESSIONS_DATA = {
           "planLink": ""
         }
       ]
-    }
+    },
+    "synergy": "Goes with Alchemy, which uses every herb."
   },
   "skinning": {
     "slug": "skinning",
@@ -92004,11 +92317,31 @@ window.WOW_PROFESSIONS_DATA = {
           "to": 1,
           "bar": {
             "iLeft": "0%",
-            "iWidth": "0.6%"
+            "iWidth": "0.6%",
+            "eLeft": "74.66666666666667%"
           },
           "title": "Beasts of level 1 to 10",
           "zones": "Most in Mulgore, Durotar, Dun Morogh and Elwynn Forest",
-          "icons": []
+          "icons": [
+            {
+              "itemId": 2934,
+              "name": "Ruined Leather Scraps",
+              "icon": "inv_misc_pelt_bear_ruin_05",
+              "quality": 1
+            },
+            {
+              "itemId": 2318,
+              "name": "Light Leather",
+              "icon": "inv_misc_leatherscrap_03",
+              "quality": 1
+            },
+            {
+              "itemId": 783,
+              "name": "Light Hide",
+              "icon": "inv_misc_pelt_wolf_ruin_02",
+              "quality": 1
+            }
+          ]
         },
         {
           "type": "gather-step",
@@ -92016,11 +92349,37 @@ window.WOW_PROFESSIONS_DATA = {
           "to": 100,
           "bar": {
             "iLeft": "3%",
-            "iWidth": "30%"
+            "iWidth": "30%",
+            "eLeft": "74.66666666666667%"
           },
           "title": "Beasts of level 11 to 20",
           "zones": "Most in The Barrens, Darkshore, Silverpine Forest and Loch Modan",
-          "icons": []
+          "icons": [
+            {
+              "itemId": 2318,
+              "name": "Light Leather",
+              "icon": "inv_misc_leatherscrap_03",
+              "quality": 1
+            },
+            {
+              "itemId": 2934,
+              "name": "Ruined Leather Scraps",
+              "icon": "inv_misc_pelt_bear_ruin_05",
+              "quality": 1
+            },
+            {
+              "itemId": 2319,
+              "name": "Medium Leather",
+              "icon": "inv_misc_leatherscrap_05",
+              "quality": 1
+            },
+            {
+              "itemId": 17057,
+              "name": "Shiny Fish Scales",
+              "icon": "inv_misc_monsterscales_08",
+              "quality": 1
+            }
+          ]
         },
         {
           "type": "gather-step",
@@ -92028,11 +92387,37 @@ window.WOW_PROFESSIONS_DATA = {
           "to": 150,
           "bar": {
             "iLeft": "34.666666666666664%",
-            "iWidth": "15%"
+            "iWidth": "15%",
+            "eLeft": "74.66666666666667%"
           },
           "title": "Beasts of level 21 to 30",
           "zones": "Most in Wetlands, Ashenvale, Hillsbrad Foothills and Thousand Needles",
-          "icons": []
+          "icons": [
+            {
+              "itemId": 2319,
+              "name": "Medium Leather",
+              "icon": "inv_misc_leatherscrap_05",
+              "quality": 1
+            },
+            {
+              "itemId": 2318,
+              "name": "Light Leather",
+              "icon": "inv_misc_leatherscrap_03",
+              "quality": 1
+            },
+            {
+              "itemId": 4234,
+              "name": "Heavy Leather",
+              "icon": "inv_misc_leatherscrap_07",
+              "quality": 1
+            },
+            {
+              "itemId": 4235,
+              "name": "Heavy Hide",
+              "icon": "inv_misc_pelt_wolf_ruin_03",
+              "quality": 1
+            }
+          ]
         },
         {
           "type": "gather-step",
@@ -92040,11 +92425,37 @@ window.WOW_PROFESSIONS_DATA = {
           "to": 200,
           "bar": {
             "iLeft": "51.333333333333336%",
-            "iWidth": "15%"
+            "iWidth": "15%",
+            "eLeft": "74.66666666666667%"
           },
           "title": "Beasts of level 31 to 40",
           "zones": "Most in Dustwallow Marsh, Desolace, Stranglethorn Vale and Badlands",
-          "icons": []
+          "icons": [
+            {
+              "itemId": 4234,
+              "name": "Heavy Leather",
+              "icon": "inv_misc_leatherscrap_07",
+              "quality": 1
+            },
+            {
+              "itemId": 4304,
+              "name": "Thick Leather",
+              "icon": "inv_misc_leatherscrap_08",
+              "quality": 1
+            },
+            {
+              "itemId": 2319,
+              "name": "Medium Leather",
+              "icon": "inv_misc_leatherscrap_05",
+              "quality": 1
+            },
+            {
+              "itemId": 8167,
+              "name": "Turtle Scale",
+              "icon": "inv_misc_monsterscales_11",
+              "quality": 1
+            }
+          ]
         },
         {
           "type": "gather-step",
@@ -92052,23 +92463,37 @@ window.WOW_PROFESSIONS_DATA = {
           "to": 250,
           "bar": {
             "iLeft": "68%",
-            "iWidth": "15%"
+            "iWidth": "15%",
+            "eLeft": "74.66666666666667%"
           },
           "title": "Beasts of level 41 to 50",
           "zones": "Most in Tanaris, Feralas, The Hinterlands and Felwood",
-          "icons": []
-        },
-        {
-          "type": "gather-step",
-          "from": 1,
-          "to": 1,
-          "bar": {
-            "iLeft": null,
-            "iWidth": null
-          },
-          "title": "",
-          "zones": "",
-          "icons": []
+          "icons": [
+            {
+              "itemId": 4304,
+              "name": "Thick Leather",
+              "icon": "inv_misc_leatherscrap_08",
+              "quality": 1
+            },
+            {
+              "itemId": 4234,
+              "name": "Heavy Leather",
+              "icon": "inv_misc_leatherscrap_07",
+              "quality": 1
+            },
+            {
+              "itemId": 8170,
+              "name": "Rugged Leather",
+              "icon": "inv_misc_leatherscrap_02",
+              "quality": 1
+            },
+            {
+              "itemId": 8167,
+              "name": "Turtle Scale",
+              "icon": "inv_misc_monsterscales_11",
+              "quality": 1
+            }
+          ]
         },
         {
           "type": "gather-step",
@@ -92076,11 +92501,37 @@ window.WOW_PROFESSIONS_DATA = {
           "to": 300,
           "bar": {
             "iLeft": "84.66666666666667%",
-            "iWidth": "15%"
+            "iWidth": "15%",
+            "eLeft": "74.66666666666667%"
           },
           "title": "Beasts of level 51 to 60",
           "zones": "Most in Winterspring, Azshara, Silithus and Eastern Plaguelands",
-          "icons": []
+          "icons": [
+            {
+              "itemId": 8170,
+              "name": "Rugged Leather",
+              "icon": "inv_misc_leatherscrap_02",
+              "quality": 1
+            },
+            {
+              "itemId": 4304,
+              "name": "Thick Leather",
+              "icon": "inv_misc_leatherscrap_08",
+              "quality": 1
+            },
+            {
+              "itemId": 15408,
+              "name": "Heavy Scorpid Scale",
+              "icon": "inv_misc_monsterscales_03",
+              "quality": 1
+            },
+            {
+              "itemId": 8171,
+              "name": "Rugged Hide",
+              "icon": "inv_misc_pelt_bear_ruin_02",
+              "quality": 1
+            }
+          ]
         }
       ]
     },
@@ -92150,7 +92601,8 @@ window.WOW_PROFESSIONS_DATA = {
           "planLink": ""
         }
       ]
-    }
+    },
+    "synergy": "Goes with Leatherworking, which uses every hide."
   },
   "cooking": {
     "slug": "cooking",
@@ -96620,7 +97072,8 @@ window.WOW_PROFESSIONS_DATA = {
           "planLink": ""
         }
       ]
-    }
+    },
+    "synergy": "Uses meat from beasts, fish from anglers, and vendor seasonings."
   },
   "fishing": {
     "slug": "fishing",
@@ -96665,27 +97118,32 @@ window.WOW_PROFESSIONS_DATA = {
         {
           "skill": 25,
           "note": "every catch lands",
-          "zones": "Dun Morogh, Durotar, Elwynn Forest, Mulgore, Teldrassil, Tirisfal Glades</span><span class=\"gt-water-from\">Fish bite from the start"
+          "zones": "Dun Morogh, Durotar, Elwynn Forest, Mulgore, Teldrassil, Tirisfal Glades",
+          "biteFrom": "Fish bite from the start"
         },
         {
           "skill": 75,
           "note": "every catch lands",
-          "zones": "Blackfathom Deeps, Darkshore, Darnassus, Ironforge, Loch Modan, Orgrimmar, Silverpine Forest, Stormwind City, The Barrens, The Deadmines, Thunder Bluff, Undercity, Wailing Caverns, Westfall</span><span class=\"gt-water-from\">Fish bite from the start"
+          "zones": "Blackfathom Deeps, Darkshore, Darnassus, Ironforge, Loch Modan, Orgrimmar, Silverpine Forest, Stormwind City, The Barrens, The Deadmines, Thunder Bluff, Undercity, Wailing Caverns, Westfall",
+          "biteFrom": "Fish bite from the start"
         },
         {
           "skill": 150,
           "note": "every catch lands",
-          "zones": "Ashenvale, Duskwood, Hillsbrad Foothills, Redridge Mountains, Stonetalon Mountains, Wetlands</span><span class=\"gt-water-from\">Fish bite from 51"
+          "zones": "Ashenvale, Duskwood, Hillsbrad Foothills, Redridge Mountains, Stonetalon Mountains, Wetlands",
+          "biteFrom": "Fish bite from 51"
         },
         {
           "skill": 225,
           "note": "every catch lands",
-          "zones": "Alterac Mountains, Arathi Highlands, Desolace, Dustwallow Marsh, Scarlet Monastery, Stranglethorn Vale, Swamp of Sorrows, Thousand Needles</span><span class=\"gt-water-from\">Fish bite from 126"
+          "zones": "Alterac Mountains, Arathi Highlands, Desolace, Dustwallow Marsh, Scarlet Monastery, Stranglethorn Vale, Swamp of Sorrows, Thousand Needles",
+          "biteFrom": "Fish bite from 126"
         },
         {
           "skill": 300,
           "note": "every catch lands",
-          "zones": "Azshara, Felwood, Feralas, Jaguero Isle, Maraudon, Moonglade, Sunken Temple, Tanaris, The Hinterlands, Un'Goro Crater, Western Plaguelands</span><span class=\"gt-water-from\">Fish bite from 201"
+          "zones": "Azshara, Felwood, Feralas, Jaguero Isle, Maraudon, Moonglade, Sunken Temple, Tanaris, The Hinterlands, Un'Goro Crater, Western Plaguelands",
+          "biteFrom": "Fish bite from 201"
         }
       ],
       "lures": [
@@ -96786,27 +97244,32 @@ window.WOW_PROFESSIONS_DATA = {
       {
         "skill": 25,
         "note": "every catch lands",
-        "zones": "Dun Morogh, Durotar, Elwynn Forest, Mulgore, Teldrassil, Tirisfal Glades</span><span class=\"gt-water-from\">Fish bite from the start"
+        "zones": "Dun Morogh, Durotar, Elwynn Forest, Mulgore, Teldrassil, Tirisfal Glades",
+        "biteFrom": "Fish bite from the start"
       },
       {
         "skill": 75,
         "note": "every catch lands",
-        "zones": "Blackfathom Deeps, Darkshore, Darnassus, Ironforge, Loch Modan, Orgrimmar, Silverpine Forest, Stormwind City, The Barrens, The Deadmines, Thunder Bluff, Undercity, Wailing Caverns, Westfall</span><span class=\"gt-water-from\">Fish bite from the start"
+        "zones": "Blackfathom Deeps, Darkshore, Darnassus, Ironforge, Loch Modan, Orgrimmar, Silverpine Forest, Stormwind City, The Barrens, The Deadmines, Thunder Bluff, Undercity, Wailing Caverns, Westfall",
+        "biteFrom": "Fish bite from the start"
       },
       {
         "skill": 150,
         "note": "every catch lands",
-        "zones": "Ashenvale, Duskwood, Hillsbrad Foothills, Redridge Mountains, Stonetalon Mountains, Wetlands</span><span class=\"gt-water-from\">Fish bite from 51"
+        "zones": "Ashenvale, Duskwood, Hillsbrad Foothills, Redridge Mountains, Stonetalon Mountains, Wetlands",
+        "biteFrom": "Fish bite from 51"
       },
       {
         "skill": 225,
         "note": "every catch lands",
-        "zones": "Alterac Mountains, Arathi Highlands, Desolace, Dustwallow Marsh, Scarlet Monastery, Stranglethorn Vale, Swamp of Sorrows, Thousand Needles</span><span class=\"gt-water-from\">Fish bite from 126"
+        "zones": "Alterac Mountains, Arathi Highlands, Desolace, Dustwallow Marsh, Scarlet Monastery, Stranglethorn Vale, Swamp of Sorrows, Thousand Needles",
+        "biteFrom": "Fish bite from 126"
       },
       {
         "skill": 300,
         "note": "every catch lands",
-        "zones": "Azshara, Felwood, Feralas, Jaguero Isle, Maraudon, Moonglade, Sunken Temple, Tanaris, The Hinterlands, Un'Goro Crater, Western Plaguelands</span><span class=\"gt-water-from\">Fish bite from 201"
+        "zones": "Azshara, Felwood, Feralas, Jaguero Isle, Maraudon, Moonglade, Sunken Temple, Tanaris, The Hinterlands, Un'Goro Crater, Western Plaguelands",
+        "biteFrom": "Fish bite from 201"
       }
     ],
     "fishingLures": [
@@ -96926,7 +97389,54 @@ window.WOW_PROFESSIONS_DATA = {
           "planLink": ""
         }
       ]
-    }
+    },
+    "synergy": "Fish for Cooking, and gear for anglers.",
+    "ranks": [
+      {
+        "step": 1,
+        "title": "Learn Fishing",
+        "desc": "Ask a fishing trainer. There is one in each capital city, and one by the pond in Valanaar, the Skyborne city. Learning it also teaches Bait and Tackle, for placing Fishing objects at a camp."
+      },
+      {
+        "step": 2,
+        "title": "Equip a fishing pole",
+        "desc": "Buy a Fishing Pole from the fishing supplier near the trainer and equip it from your bags. It takes both hands, and Fishing does nothing without it."
+      },
+      {
+        "step": 3,
+        "title": "Cast into water",
+        "desc": "Face open water and cast Fishing from your spellbook. When the bobber splashes, right-click it to catch the fish."
+      },
+      {
+        "step": 4,
+        "title": "Start in low-level water",
+        "desc": "Higher skill makes you more likely to land fish in higher-level zones. If your fish keep getting away, move to a lower-level zone or put a lure on your pole."
+      },
+      {
+        "title": "Apprentice",
+        "desc": "From a fishing trainer.",
+        "icon": "trade_fishing",
+        "cap": "Up to 75"
+      },
+      {
+        "title": "Journeyman",
+        "desc": "From a fishing trainer.",
+        "icon": "trade_fishing",
+        "cap": "Up to 150"
+      },
+      {
+        "title": "Expert",
+        "desc": "From the book Expert Fishing - The Bass and You, at level 20 and Fishing 125. In Classic it is sold in Booty Bay.",
+        "icon": "trade_fishing",
+        "cap": "Up to 225"
+      },
+      {
+        "title": "Artisan",
+        "desc": "In Classic, from a quest given by Nat Pagle in Dustwallow Marsh, once you reach Fishing 225.",
+        "icon": "trade_fishing",
+        "cap": "Up to 300"
+      }
+    ]
   },
   "first-aid": {
     "slug": "first-aid",
@@ -98623,7 +99133,8 @@ window.WOW_PROFESSIONS_DATA = {
           "planLink": ""
         }
       ]
-    }
+    },
+    "synergy": "Bandages, anti-venoms and potions made from monster cloth."
   },
   "camping": {
     "slug": "camping",
@@ -99787,6 +100298,7 @@ window.WOW_PROFESSIONS_DATA = {
         }
       },
       "recipes": []
-    }
+    },
+    "synergy": "Cooks build campfires, and each profession adds its own objects."
   }
 };

@@ -7,7 +7,7 @@
 (function () {
   'use strict';
 
-  let currentProfession = 'alchemy';
+  let currentProfession = 'overview';
   let currentSubTab = 'recipes';
   let currentCategory = 'all';
   let searchQuery = '';
@@ -45,6 +45,39 @@
     return 'skill-grey';
   }
 
+  function parseHashRoute() {
+    const raw = (window.location.hash || '').toLowerCase();
+    if (!raw) return { profession: 'overview', subtab: 'recipes' };
+
+    let cleaned = raw.replace(/^#+/, '');
+    if (cleaned.startsWith('professions')) {
+      cleaned = cleaned.replace(/^professions[\/#]?/, '');
+    }
+
+    if (!cleaned || cleaned === 'overview') {
+      return { profession: 'overview', subtab: 'recipes' };
+    }
+
+    // Replace '#' with '/' to treat formats like "alchemy#leveling" same as "alchemy/leveling"
+    const parts = cleaned.replace(/#/g, '/').split('/').filter(Boolean);
+    const slug = parts[0] || 'overview';
+    const subtab = parts[1] || 'recipes';
+
+    return { profession: slug, subtab };
+  }
+
+  function handleProfessionsHashRoute() {
+    const route = parseHashRoute();
+    if (route.profession === 'overview' || (window.WOW_PROFESSIONS_DATA && window.WOW_PROFESSIONS_DATA[route.profession])) {
+      currentProfession = route.profession;
+      currentSubTab = route.subtab;
+      currentCategory = 'all';
+      searchQuery = '';
+      renderSelectorButtons();
+      renderActiveProfession();
+    }
+  }
+
   function initProfessionsHub() {
     const container = document.getElementById('tab-professions');
     if (!container) return;
@@ -54,19 +87,24 @@
       return;
     }
 
-    // Read URL hash on load (e.g. #professions/blacksmithing/leveling)
-    const hash = window.location.hash.toLowerCase().replace('#', '');
-    if (hash.startsWith('professions')) {
-      const parts = hash.split('/');
-      if (parts[1] && window.WOW_PROFESSIONS_DATA[parts[1]]) {
-        currentProfession = parts[1];
-      }
-      if (parts[2]) {
-        currentSubTab = parts[2];
-      }
+    // Read URL hash on load
+    const route = parseHashRoute();
+    if (route.profession === 'overview' || window.WOW_PROFESSIONS_DATA[route.profession]) {
+      currentProfession = route.profession;
+      currentSubTab = route.subtab;
+    } else {
+      currentProfession = 'overview';
     }
 
     renderMasterLayout(container);
+
+    // Live hash listener for seamless subtab/profession browsing
+    window.addEventListener('hashchange', () => {
+      const targetHash = (window.location.hash || '').toLowerCase();
+      if (targetHash.includes('professions') || (window.WOW_PROFESSIONS_DATA && Object.keys(window.WOW_PROFESSIONS_DATA).some(k => targetHash.includes(k)))) {
+        handleProfessionsHashRoute();
+      }
+    });
   }
 
   function renderMasterLayout(container) {
@@ -99,7 +137,14 @@
     const data = window.WOW_PROFESSIONS_DATA;
     const slugs = Object.keys(data);
 
-    let html = '';
+    // Always include Overview button first
+    let html = `
+      <button type="button" class="prof-tile-btn ${currentProfession === 'overview' ? 'active' : ''}" data-slug="overview">
+        <span style="font-size: 1.3rem; display: inline-flex; align-items: center; justify-content: center; height: 32px;">🌐</span>
+        <span class="prof-tile-name">All Professions</span>
+      </button>
+    `;
+
     slugs.forEach(slug => {
       const p = data[slug];
       const isActive = slug === currentProfession;
@@ -129,7 +174,11 @@
           renderActiveProfession();
 
           if (history.replaceState) {
-            history.replaceState(null, '', `#professions/${slug}/${currentSubTab}`);
+            if (slug === 'overview') {
+              history.replaceState(null, '', '#professions');
+            } else {
+              history.replaceState(null, '', `#professions/${slug}#${currentSubTab}`);
+            }
           }
         }
       });
@@ -159,12 +208,12 @@
       tabs.push({ id: 'camp', icon: '⛺', label: 'Camp & Perks' });
     } else if (isMining) {
       tabs.push({ id: 'leveling', icon: '📈', label: 'Leveling Route' });
-      tabs.push({ id: 'nodes', icon: '⛏️', label: `Mining Nodes (${prof.nodes?.length || 6})` });
+      tabs.push({ id: 'nodes', icon: '⛏️', label: `Mining Nodes (${prof.nodes?.length || 10})` });
       tabs.push({ id: 'recipes', icon: '🔥', label: `Smelting (${prof.recipes?.length || 14})` });
       tabs.push({ id: 'camp', icon: '⛺', label: 'Camp & Perks' });
     } else if (isHerbalism) {
       tabs.push({ id: 'leveling', icon: '📈', label: 'Leveling Route' });
-      tabs.push({ id: 'nodes', icon: '🌿', label: `Herb Nodes (${prof.nodes?.length || 18})` });
+      tabs.push({ id: 'nodes', icon: '🌿', label: `Herb Nodes (${prof.nodes?.length || 28})` });
       tabs.push({ id: 'camp', icon: '⛺', label: 'Camp & Perks' });
     } else if (isSkinning) {
       tabs.push({ id: 'leveling', icon: '📈', label: 'Skinning by Level' });
@@ -172,6 +221,7 @@
     } else if (isFishing) {
       tabs.push({ id: 'waters', icon: '🌊', label: 'Waters by Skill' });
       tabs.push({ id: 'lures', icon: '🪱', label: `Fishing Lures (${prof.fishingLures?.length || 14})` });
+      tabs.push({ id: 'ranks', icon: '🎖️', label: `Ranks (${prof.ranks?.length || 8})` });
       tabs.push({ id: 'camp', icon: '⛺', label: 'Camp & Perks' });
     } else if (isCamping) {
       tabs.push({ id: 'camp', icon: '⛺', label: 'Camping Stations & Perks' });
@@ -184,8 +234,17 @@
     const viewport = document.getElementById('prof-viewport-container');
     if (!viewport) return;
 
+    if (currentProfession === 'overview') {
+      renderOverviewHub(viewport);
+      return;
+    }
+
     const prof = window.WOW_PROFESSIONS_DATA[currentProfession];
-    if (!prof) return;
+    if (!prof) {
+      currentProfession = 'overview';
+      renderOverviewHub(viewport);
+      return;
+    }
 
     const availableTabs = getAvailableSubTabs(prof);
     const validTabIds = availableTabs.map(t => t.id);
@@ -214,6 +273,7 @@
           <div class="prof-hero-title">
             <h3>${escapeHtml(prof.name)} <span style="font-size: 0.9rem; font-weight: 500; color: #94a3b8;">(${escapeHtml(prof.category)})</span></h3>
             <p>${escapeHtml(prof.summary)}</p>
+            ${prof.synergy ? `<div style="font-size: 0.82rem; color: #38bdf8; margin-top: 0.35rem; font-style: italic;">🔗 ${escapeHtml(prof.synergy)}</div>` : ''}
             ${campBuffHtml}
           </div>
         </div>
@@ -255,12 +315,231 @@
         renderSubTabContent(prof);
 
         if (history.replaceState) {
-          history.replaceState(null, '', `#professions/${currentProfession}/${currentSubTab}`);
+          history.replaceState(null, '', `#professions/${currentProfession}#${currentSubTab}`);
         }
       });
     });
 
     renderSubTabContent(prof);
+  }
+
+  function renderOverviewHub(container) {
+    const data = window.WOW_PROFESSIONS_DATA;
+    const slugs = Object.keys(data).filter(s => s !== 'camping');
+
+    const totalRecipes = 2185;
+    const totalNew = 926;
+    const totalFavor = 317;
+
+    const matrixRows = [
+      { slug: 'alchemy', name: 'Alchemy', icon: 'trade_alchemy', s20: 'Mana Well', s20Desc: '29 Mana every 5 sec to everyone sitting nearby', s20Icon: 'spell_arcane_manatap', s140: 'Fermenter', s140Desc: 'Makes certain Alchemy reagents, gives Mana Well buff', s140Icon: 'inv_alchemy_90_cauldron', s300: 'Alchemy Laboratory', s300Desc: 'Needed for advanced recipes, gives Mana Well buff', s300Icon: '10prof_portabletable_alchemy01' },
+      { slug: 'blacksmithing', name: 'Blacksmithing', icon: 'trade_blacksmithing', s20: 'Sharpening Wheel', s20Desc: '34 Strength to everyone sitting nearby', s20Icon: 'inv_stone_grindingstone_01', s140: 'Anvil', s140Desc: 'An anvil at camp, gives Sharpening Wheel buff', s140Icon: 'trade_blacksmithing', s300: 'Master Forge', s300Desc: 'Needed for advanced recipes, gives Sharpening Wheel buff', s300Icon: 'inv_misc_firestone_01' },
+      { slug: 'enchanting', name: 'Enchanting', icon: 'trade_engraving', s20: 'Enchanted Lute', s20Desc: '308 Armor, 13 to all stats and 22 to all resistances', s20Icon: 'inv_10_enchanting2_magicswirl_bronze', s140: 'Arcane Salvager', s140Desc: 'Disenchants more efficiently, gives Enchanted Lute buff', s140Icon: 'inv_misc_gem_sapphire_02', s300: 'Arcane Forge', s300Desc: 'Needed for advanced recipes, gives Enchanted Lute buff', s300Icon: 'inv_enchant_disenchant' },
+      { slug: 'engineering', name: 'Engineering', icon: 'trade_engineering', s20: 'Reagent Bot', s20Desc: 'Sells reagents to everyone at camp', s20Icon: 'inv_misc_enggizmos_13', s140: 'Repair Bot', s140Desc: 'Sells reagents and repairs gear', s140Icon: 'inv_gizmo_01', s300: "Anarchist's Workbench", s300Desc: 'Needed for the most advanced Engineering recipes', s300Icon: 'inv_misc_bomb_02' },
+      { slug: 'leatherworking', name: 'Leatherworking', icon: 'trade_leatherworking', s20: 'Camp Tent', s20Desc: 'Rested experience up to 5% of a level', s20Icon: 'inv_misc_leatherscrap_01', s140: 'Tanning Rack', s140Desc: 'Makes certain Leatherworking reagents, gives Camp Tent bonus', s140Icon: 'inv_misc_pelt_wolf_ruin_03', s300: 'Sewing Machine', s300Desc: 'Needed for advanced recipes, gives Camp Tent bonus', s300Icon: 'inv_misc_monsterscales_11' },
+      { slug: 'tailoring', name: 'Tailoring', icon: 'trade_tailoring', s20: 'Faction Banner', s20Desc: '32 Spirit to everyone of your faction sitting nearby', s20Icon: 'inv_banner_03', s140: 'Spinning Wheel', s140Desc: 'Makes certain Tailoring reagents, gives Faction Banner buff', s140Icon: 'inv_fabric_linen_01', s300: 'Loom', s300Desc: 'Needed for advanced recipes, gives Faction Banner buff', s300Icon: 'inv_fabric_mageweave_01' },
+      { slug: 'mining', name: 'Mining', icon: 'trade_mining', s20: 'Lodestone', s20Desc: '90 melee Attack Power to everyone sitting nearby', s20Icon: 'inv_misc_rune_06', s140: 'Rock Garden', s140Desc: 'Spawns a common mining node over time, gives Lodestone buff', s140Icon: 'inv_ore_iron_01', s300: 'Molten Foundry', s300Desc: 'Needed for recipes that require it, gives Lodestone buff', s300Icon: 'inv_ore_thorium_02' },
+      { slug: 'herbalism', name: 'Herbalism', icon: 'trade_herbalism', s20: 'Incense Candle', s20Desc: '25 Intellect to everyone sitting nearby', s20Icon: 'inv_misc_candle_02', s140: 'Greenhouse', s140Desc: 'Grows herbs over time from planted seeds, gives Incense Candle buff', s140Icon: 'inv_misc_flower_02', s300: 'Seed Hybridizer', s300Desc: 'Multiplies seeds or combines them into rarer tiers, gives Incense Candle buff', s300Icon: 'inv_misc_herb_sansamroot' },
+      { slug: 'skinning', name: 'Skinning', icon: 'inv_misc_pelt_wolf_01', s20: 'Camp Chair', s20Desc: '2% critical strike chance with spells and attacks', s20Icon: 'inv_crate_01', s140: 'Field Guide', s140Desc: 'Grants Track Beasts to whoever reads it, gives Camp Chair buff', s140Icon: 'inv_misc_book_03', s300: "Trapper's Workbench", s300Desc: 'Holds one trap, gives Camp Chair buff', s300Icon: 'inv_misc_monsterscales_08' },
+      { slug: 'cooking', name: 'Cooking', icon: 'inv_misc_food_15', s20: 'Basic Campfire Kit', s20Desc: 'A campfire for cooking, with room for 3 camp objects', s20Icon: 'inv_camelot_camping_welcomingcampfire', s140: "Cookie's Feast", s140Desc: 'Stamina food for everyone at camp', s140Icon: 'inv_misc_food_54', s300: 'Iron Oven', s300Desc: 'Needed for the most advanced Cooking recipes', s300Icon: 'inv_misc_food_11' },
+      { slug: 'fishing', name: 'Fishing', icon: 'trade_fishing', s20: 'Fish Bowl', s20Desc: '8% to all stats for everyone sitting nearby', s20Icon: 'inv_magicalfishpet', s140: 'Fishing Rack', s140Desc: 'Uncommon fish for 1 hr and Fishing Skill lures, gives Fish Bowl buff', s140Icon: 'inv_10_fishing_bait_color1', s300: 'Fishing Hut', s300Desc: 'Rare fish for 1 hr and Fishing Skill lures, gives Fish Bowl buff', s300Icon: 'inv_helm_armor_buckledhat_b_01_black' },
+      { slug: 'first-aid', name: 'First Aid', icon: 'spell_holy_sealofsacrifice', s20: 'First Aid Kit', s20Desc: '56 Stamina to everyone sitting nearby', s20Icon: 'inv_misc_bandage_11', s140: 'Toxin Study', s140Desc: 'Holds healing potions and anti-venom, gives First Aid Kit buff', s140Icon: 'inv_potion_19', s300: "Plague Doctor's Laboratory", s300Desc: 'Holds healing potions and poultices, gives First Aid Kit buff', s300Icon: 'inv_misc_bandage_15' }
+    ];
+
+    container.innerHTML = `
+      <div class="prof-overview-container">
+        <!-- Hero Header -->
+        <div class="prof-overview-hero">
+          <div class="prof-overview-title">
+            <h3>Professions & Trade Economy in WoW Forever</h3>
+            <p>Professions level from 1 to 300 with rich Classic progression, expanded with open-world utility: tradeskills add 1-hour party auras to shared campfires, supply crates unlock exclusive recipes at trade camps, and hundreds of items are brand new.</p>
+          </div>
+          <div class="prof-overview-stats">
+            <div class="prof-overview-stat-card">
+              <div class="stat-val">${totalRecipes.toLocaleString()}</div>
+              <div class="stat-lbl">Total Recipes</div>
+            </div>
+            <div class="prof-overview-stat-card">
+              <div class="stat-val" style="color: #38bdf8;">${totalNew}</div>
+              <div class="stat-lbl">New in Forever</div>
+            </div>
+            <div class="prof-overview-stat-card">
+              <div class="stat-val" style="color: #4ade80;">${totalFavor}</div>
+              <div class="stat-lbl">Merchant's Favor</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4 Core Innovation Pillars -->
+        <div class="prof-pillars-grid">
+          <div class="prof-pillar-card">
+            <div class="prof-pillar-head">
+              <span class="prof-pillar-icon">⛺</span>
+              <h4>The Campfire System</h4>
+            </div>
+            <p>A campfire gives vendors, repairs, workspaces and 1-hour aura buffs to players sitting by it. Cooks build it, and each profession adds its own objects.</p>
+          </div>
+          <div class="prof-pillar-card">
+            <div class="prof-pillar-head">
+              <span class="prof-pillar-icon">📦</span>
+              <h4>Merchant's Favor</h4>
+            </div>
+            <p>Fill supply crates found across Azeroth and hand them in at faction trade outposts. 317 exclusive recipes are sold across seven trades.</p>
+          </div>
+          <div class="prof-pillar-card">
+            <div class="prof-pillar-head">
+              <span class="prof-pillar-icon">🏆</span>
+              <h4>Legacy Points & Perks</h4>
+            </div>
+            <p>Crafting professions award 1 Legacy point at skill 150, 225, and 300, once per account. 11 perks enhance skill-ups, gathering, crates, and camps.</p>
+          </div>
+          <div class="prof-pillar-card">
+            <div class="prof-pillar-head">
+              <span class="prof-pillar-icon">🍖</span>
+              <h4>Experience Food Buffs</h4>
+            </div>
+            <p>While Well Fed with Forever cooking meals, your character gains +5% more experience from monster kills, stacking with rest bonuses.</p>
+          </div>
+        </div>
+
+        <!-- All Professions Directory Grid -->
+        <div class="section-heading-bar" style="margin-top: 1rem;">
+          <div>
+            <h2><span>🔨</span> Explore Every Profession (13)</h2>
+            <p class="section-subtext">Click any trade to explore its recipe catalog, 1–300 leveling roadmap, reagent shopping list, and Merchant's Favor turn-ins</p>
+          </div>
+        </div>
+
+        <div class="prof-overview-grid">
+          ${slugs.map(slug => {
+            const p = data[slug];
+            const recipeCount = p.stats?.recipeCount || p.recipes?.length || (p.nodes ? p.nodes.length : '1-300');
+            const newCount = p.stats?.newInForever || (p.category === 'Gathering' ? 'Phase 2' : 'New');
+            const favorCount = p.stats?.favorRecipes || (p.campPerks?.milestones?.length ? 'Account' : '0');
+            return `
+              <div class="prof-directory-card" data-slug="${slug}">
+                <div>
+                  <div class="prof-dir-head">
+                    <img src="${getIconUrl(p.icon)}" alt="${escapeHtml(p.name)}" class="prof-dir-icon" loading="lazy" />
+                    <div class="prof-dir-title-box">
+                      <h4>
+                        ${escapeHtml(p.name)}
+                        <span class="prof-dir-cat-badge">${escapeHtml(p.category)}</span>
+                      </h4>
+                      <p class="prof-dir-summary">${escapeHtml(p.summary)}</p>
+                      ${p.synergy ? `<div class="prof-dir-synergy">${escapeHtml(p.synergy)}</div>` : ''}
+                    </div>
+                  </div>
+
+                  ${p.campBuff ? `
+                    <div class="prof-dir-camp-box" style="margin-top: 0.85rem;">
+                      <img src="${getIconUrl(p.campBuff.icon)}" alt="${escapeHtml(p.campBuff.name)}" loading="lazy" />
+                      <div>
+                        <strong>${escapeHtml(p.campBuff.name)} (Skill ${p.campBuff.skill}+):</strong> ${escapeHtml(p.campBuff.effect)}
+                      </div>
+                    </div>
+                  ` : ''}
+                </div>
+
+                <div class="prof-dir-footer">
+                  <div class="prof-dir-metrics">
+                    <strong>${recipeCount}</strong> ${p.category === 'Gathering' ? 'Nodes' : 'Recipes'} · <span style="color:#38bdf8;">${newCount} New</span>
+                  </div>
+                  <button type="button" class="prof-dir-explore-btn" data-slug="${slug}">
+                    Explore ${escapeHtml(p.name)} ›
+                  </button>
+                </div>
+              </div>
+            `;
+          }).join('')}
+        </div>
+
+        <!-- Master Camp Station Matrix Table -->
+        <div class="section-heading-bar" style="margin-top: 1.5rem;">
+          <div>
+            <h2><span>⛺</span> Campfire Profession Station Matrix (Skill 20 / 140 / 300)</h2>
+            <p class="section-subtext">Every profession constructs camp stations around shared campfires, providing party-wide buffs mirroring class blessings at 80% potency</p>
+          </div>
+        </div>
+
+        <div class="prof-matrix-table-wrap">
+          <table class="prof-matrix-table">
+            <thead>
+              <tr>
+                <th style="width: 200px;">Profession</th>
+                <th>Skill 20 Station (Party Buff)</th>
+                <th>Skill 140 Station</th>
+                <th>Skill 300 Master Station</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${matrixRows.map(r => `
+                <tr>
+                  <td>
+                    <div class="matrix-prof-col" data-slug="${r.slug}" title="View ${r.name}">
+                      <img src="${getIconUrl(r.icon)}" alt="${r.name}" loading="lazy" />
+                      <span>${r.name}</span>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="matrix-station-cell" title="${escapeHtml(r.s20Desc)}">
+                      <img src="${getIconUrl(r.s20Icon)}" alt="${r.s20}" loading="lazy" />
+                      <div>
+                        <strong>${r.s20}</strong>
+                        <small>· ${r.s20Desc}</small>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="matrix-station-cell" title="${escapeHtml(r.s140Desc)}">
+                      <img src="${getIconUrl(r.s140Icon)}" alt="${r.s140}" loading="lazy" />
+                      <div>
+                        <strong>${r.s140}</strong>
+                        <small>· ${r.s140Desc}</small>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="matrix-station-cell" title="${escapeHtml(r.s300Desc)}">
+                      <img src="${getIconUrl(r.s300Icon)}" alt="${r.s300}" loading="lazy" />
+                      <div>
+                        <strong>${r.s300}</strong>
+                        <small>· ${r.s300Desc}</small>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              `).join('')}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    `;
+
+    // Click handlers for cards and table rows
+    container.querySelectorAll('.prof-dir-explore-btn, .prof-directory-card, .matrix-prof-col').forEach(el => {
+      el.addEventListener('click', (e) => {
+        const slug = el.getAttribute('data-slug');
+        if (slug && data[slug]) {
+          currentProfession = slug;
+          currentCategory = 'all';
+          searchQuery = '';
+          const grid = document.getElementById('prof-selector-buttons');
+          if (grid) {
+            grid.querySelectorAll('.prof-tile-btn').forEach(b => {
+              b.classList.toggle('active', b.getAttribute('data-slug') === slug);
+            });
+          }
+          renderActiveProfession();
+          if (history.replaceState) {
+            history.replaceState(null, '', `#professions/${slug}#${currentSubTab}`);
+          }
+          window.scrollTo({ top: container.offsetTop - 80, behavior: 'smooth' });
+        }
+      });
+    });
+
+    attachTooltipListeners(container, null);
   }
 
   function renderSubTabContent(prof) {
@@ -283,6 +562,8 @@
       renderFishingWatersTab(body, prof);
     } else if (currentSubTab === 'lures') {
       renderFishingLuresTab(body, prof);
+    } else if (currentSubTab === 'ranks') {
+      renderFishingRanksTab(body, prof);
     }
   }
 
@@ -483,6 +764,7 @@
                   <span class="step-range-text">${item.from}–${item.to}</span>
                   <div class="step-progress-track">
                     <span class="step-progress-fill" style="left: ${leftPercent}; width: ${widthPercent};"></span>
+                    <span class="step-progress-cap-marker" style="left: 74.67%;" title="Beta Cap at 225"></span>
                   </div>
                 </div>
                 <div class="step-info-col">
@@ -519,6 +801,7 @@
                   <span class="step-range-text">${rangeStr}</span>
                   <div class="step-progress-track">
                     <span class="step-progress-fill" style="left: ${leftPercent}; width: ${widthPercent};"></span>
+                    <span class="step-progress-cap-marker" style="left: 74.67%;" title="Beta Cap at 225"></span>
                   </div>
                 </div>
                 <div class="step-info-col">
@@ -568,7 +851,13 @@
       </div>
 
       <div class="shopping-groups-container">
-        ${groups.map(g => `
+        ${groups.map((g, idx) => `
+          ${idx === 3 || (g.title && g.title.toLowerCase().includes('after the beta')) ? `
+            <div class="shopping-beta-divider">
+              <h4><span>⏳</span> Reagents for Leveling Past Phase 2 Beta Cap (225 to 300)</h4>
+              <p>Trade goods, looted supplies, and crafted components needed once Artisan training opens post-beta.</p>
+            </div>
+          ` : ''}
           <div class="shopping-group-section">
             <div class="shopping-group-header">
               <h4 class="shopping-group-title">
@@ -711,33 +1000,64 @@
         </div>
       </div>
 
-      <div class="recipe-grid">
-        ${recipes.length === 0 ? `
-          <div style="grid-column: 1 / -1; text-align: center; padding: 3rem; color: #94a3b8; background: rgba(15,23,42,0.5); border-radius: 8px;">
-            No Merchant's Favor turn-in recipes for this trade.
-          </div>
-        ` : recipes.map(f => `
-          <div class="recipe-card">
-            <div>
-              <div class="recipe-card-header">
-                <img src="${getIconUrl(f.icon)}" alt="${escapeHtml(f.name)}" class="recipe-item-icon q${f.quality || 1}" loading="lazy" />
-                <div class="recipe-info">
-                  <h4 class="recipe-title q${f.quality || 1}">${escapeHtml(f.name)}</h4>
-                  ${f.desc ? `<div class="recipe-effect">${escapeHtml(f.desc)}</div>` : ''}
-                </div>
-                <span class="recipe-skill-badge skill-orange">Skill ${f.requiredSkill}+</span>
-              </div>
-            </div>
-            <div class="recipe-source-line">
-              <span>Cost:</span>
-              <span class="recipe-source-badge" style="color: var(--text-gold);">${escapeHtml(f.cost)}</span>
-            </div>
-          </div>
-        `).join('')}
+      <div class="favor-tiers-container">
+        ${renderFavorTierBlocks(recipes)}
       </div>
     `;
 
     attachTooltipListeners(container, prof);
+  }
+
+  function renderFavorTierBlocks(recipes) {
+    if (!recipes || recipes.length === 0) {
+      return `
+        <div style="text-align: center; padding: 3rem; color: #94a3b8; background: rgba(15,23,42,0.5); border-radius: 8px;">
+          No Merchant's Favor turn-in recipes for this trade.
+        </div>
+      `;
+    }
+
+    const tierMap = new Map();
+    recipes.forEach(r => {
+      const c = r.cost || '1 Merchant\'s Favor';
+      if (!tierMap.has(c)) {
+        tierMap.set(c, []);
+      }
+      tierMap.get(c).push(r);
+    });
+
+    return Array.from(tierMap.entries()).map(([costLabel, items]) => {
+      const minSkill = Math.min(...items.map(i => i.requiredSkill || 1));
+      const maxSkill = Math.max(...items.map(i => i.requiredSkill || 1));
+      const skillSpan = minSkill === maxSkill ? `Skill ${minSkill}+` : `Skill ${minSkill} to ${maxSkill}`;
+      return `
+        <div class="favor-tier-block">
+          <div class="favor-tier-header">
+            <h4>📦 ${escapeHtml(costLabel)} <small>· ${skillSpan}</small></h4>
+          </div>
+          <div class="recipe-grid">
+            ${items.map(f => `
+              <div class="recipe-card">
+                <div>
+                  <div class="recipe-card-header">
+                    <img src="${getIconUrl(f.icon)}" alt="${escapeHtml(f.name)}" class="recipe-item-icon q${f.quality || 1}" loading="lazy" />
+                    <div class="recipe-info">
+                      <h4 class="recipe-title q${f.quality || 1}">${escapeHtml(f.name)}</h4>
+                      ${f.desc ? `<div class="recipe-effect">${escapeHtml(f.desc)}</div>` : ''}
+                    </div>
+                    <span class="recipe-skill-badge skill-orange">Skill ${f.requiredSkill}+</span>
+                  </div>
+                </div>
+                <div class="recipe-source-line">
+                  <span>Cost:</span>
+                  <span class="recipe-source-badge" style="color: var(--text-gold); font-weight: 700;">${escapeHtml(f.cost)}</span>
+                </div>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      `;
+    }).join('');
   }
 
   /* ==========================================================================
@@ -799,9 +1119,12 @@
           <div class="water-bracket-row">
             <div class="water-skill-badge">
               Skill ${w.skill}
-              <small>${escapeHtml(w.note)}</small>
+              <small>${escapeHtml(w.note || '100% Catch')}</small>
             </div>
-            <div class="water-zones-text">${escapeHtml(w.zones)}</div>
+            <div class="water-zones-text">
+              <div style="margin-bottom: ${w.biteFrom ? '0.35rem' : '0'}; width: 100%;">${escapeHtml(w.zones)}</div>
+              ${w.biteFrom ? `<span class="water-bite-badge">Fish bite starts at ${escapeHtml(w.biteFrom)}</span>` : ''}
+            </div>
           </div>
         `).join('')}
       </div>
@@ -828,6 +1151,46 @@
             </div>
           </div>
         `).join('')}
+      </div>
+    `;
+  }
+
+  function renderFishingRanksTab(container, prof) {
+    const ranks = prof.ranks || [];
+    container.innerHTML = `
+      <div class="leveling-header-block">
+        <div class="leveling-header-title">
+          <h3>Fishing Progression & Rank Mastery</h3>
+          <p>Everything you need to get started with Fishing in Azeroth, plus milestone trainer certifications and quest books.</p>
+        </div>
+      </div>
+
+      <div class="fishing-ranks-list">
+        ${ranks.map(r => {
+          if (r.step) {
+            return `
+              <div class="fishing-rank-item">
+                <div class="fishing-rank-step">${r.step}</div>
+                <div class="fishing-rank-content">
+                  <strong>${escapeHtml(r.title)}</strong>
+                  <p>${escapeHtml(r.desc)}</p>
+                </div>
+              </div>
+            `;
+          }
+          return `
+            <div class="fishing-rank-item">
+              <img src="${getIconUrl(r.icon || 'trade_fishing')}" alt="${escapeHtml(r.title)}" width="42" height="42" style="border-radius:6px; border:1px solid rgba(212,175,55,0.4);" loading="lazy" />
+              <div class="fishing-rank-content">
+                <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; flex-wrap: wrap;">
+                  <strong>${escapeHtml(r.title)}</strong>
+                  ${r.cap ? `<span class="node-skill-badge">${escapeHtml(r.cap)}</span>` : ''}
+                </div>
+                <p>${escapeHtml(r.desc)}</p>
+              </div>
+            </div>
+          `;
+        }).join('')}
       </div>
     `;
   }
