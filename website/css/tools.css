@@ -4536,10 +4536,12 @@
   flex-direction: column;
   gap: 0.5rem;
   margin-top: 0.5rem;
-  max-height: 380px;
+  max-height: 520px;
   overflow-y: auto;
   padding-right: 0.35rem;
   scroll-behavior: smooth;
+  border-top: 1px solid rgba(16, 185, 129, 0.2);
+  padding-top: 0.6rem;
 }
 
 .pet-tame-drawer.open {
@@ -4547,21 +4549,146 @@
 }
 
 .pet-tame-drawer::-webkit-scrollbar {
-  width: 5px;
+  width: 7px;
 }
 
 .pet-tame-drawer::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.25);
   border-radius: 3px;
 }
 
 .pet-tame-drawer::-webkit-scrollbar-thumb {
-  background: rgba(16, 185, 129, 0.3);
-  border-radius: 3px;
+  background: rgba(16, 185, 129, 0.5);
+  border-radius: 4px;
 }
 
 .pet-tame-drawer::-webkit-scrollbar-thumb:hover {
-  background: rgba(16, 185, 129, 0.6);
+  background: rgba(16, 185, 129, 0.8);
+}
+
+.tame-drawer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.45rem 0.65rem;
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.28);
+  border-radius: 6px;
+  margin-bottom: 0.25rem;
+  flex-wrap: wrap;
+}
+
+.tdh-summary {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  color: #e2e8f0;
+}
+
+.tdh-levels {
+  color: #6ee7b7;
+  font-weight: 600;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 0.1rem 0.45rem;
+  border-radius: 4px;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.tdh-view-all-modal-btn {
+  background: rgba(234, 179, 8, 0.15);
+  border: 1px solid rgba(234, 179, 8, 0.4);
+  color: #fcd34d;
+  font-size: 0.74rem;
+  font-weight: 600;
+  border-radius: 4px;
+  padding: 0.25rem 0.55rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.tdh-view-all-modal-btn:hover {
+  background: rgba(234, 179, 8, 0.3);
+  color: #fff;
+}
+
+.pet-master-directory-btn {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(6, 95, 70, 0.35));
+  border: 1px solid rgba(16, 185, 129, 0.5);
+  color: #6ee7b7;
+  font-size: 0.86rem;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.pet-master-directory-btn:hover {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.35), rgba(6, 95, 70, 0.55));
+  border-color: #6ee7b7;
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.pet-master-directory-btn .pmd-badge {
+  font-size: 0.7rem;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  color: #fcd34d;
+}
+
+/* Master Pet Table Modal */
+.pet-master-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+  text-align: left;
+}
+
+.pet-master-table th {
+  position: sticky;
+  top: 0;
+  background: #0f172a;
+  color: #94a3b8;
+  padding: 0.65rem 0.75rem;
+  font-weight: 600;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.12);
+  z-index: 2;
+  white-space: nowrap;
+}
+
+.pet-master-table td {
+  padding: 0.55rem 0.75rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  vertical-align: middle;
+}
+
+.pet-master-table tr:hover {
+  background: rgba(16, 185, 129, 0.08);
+}
+
+.pet-table-fam-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 600;
+  color: #e2e8f0;
+}
+
+.pet-table-fam-badge img {
+  width: 22px;
+  height: 22px;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .tame-beast-row {

@@ -2818,6 +2818,83 @@
     </div>
   </div>
 
+  <!-- Master Hunter Pets Directory Modal -->
+  <div id="hunter-pets-master-modal" class="modal-backdrop" hidden role="dialog" aria-modal="true">
+    <div class="modal-container" style="max-width: 1120px; width: 95vw; max-height: 90vh; padding: 1.5rem; display: flex; flex-direction: column;">
+      <div class="pet-modal-top-bar" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding-bottom: 0.8rem;">
+        <div>
+          <h3 style="color: #6ee7b7; margin: 0; font-size: 1.35rem; display: flex; align-items: center; gap: 0.5rem;">
+            <span>🐾</span> Master Hunter Pet Directory (502 Beasts)
+          </h3>
+          <p style="margin: 0.2rem 0 0; font-size: 0.84rem; color: #94a3b8;">
+            Complete authentic taming database from foreverchanges.pro — All 18 families, exact level brackets, swing speeds, zones, and learnable abilities.
+          </p>
+        </div>
+        <button id="hunter-pets-modal-close" class="modal-close-btn" aria-label="Close Modal" style="position: static;">✕</button>
+      </div>
+
+      <!-- Master Filters Bar -->
+      <div class="pet-modal-filters" style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1rem; align-items: center; background: rgba(0, 0, 0, 0.4); padding: 0.75rem; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.08);">
+        <input type="text" id="modal-pet-search" class="pet-search-input" placeholder="Search by name, zone, or ability..." style="flex: 1; min-width: 200px;">
+        
+        <select id="modal-filter-family" class="pet-select-filter" style="background: #1e293b; color: #fff; border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 6px; padding: 0.45rem 0.65rem; font-size: 0.84rem;">
+          <option value="all">All 18 Families</option>
+          <option value="Bat">Bat (9)</option>
+          <option value="Bear">Bear (42)</option>
+          <option value="Bird of Prey">Bird of Prey (12)</option>
+          <option value="Boar">Boar (28)</option>
+          <option value="Carrion Bird">Carrion Bird (29)</option>
+          <option value="Cat">Cat (62)</option>
+          <option value="Crab">Crab (22)</option>
+          <option value="Crocolisk">Crocolisk (22)</option>
+          <option value="Fox">Fox (4 - New)</option>
+          <option value="Gorilla">Gorilla (10)</option>
+          <option value="Hyena">Hyena (19)</option>
+          <option value="Raptor">Raptor (38)</option>
+          <option value="Scorpid">Scorpid (25)</option>
+          <option value="Spider">Spider (69)</option>
+          <option value="Tallstrider">Tallstrider (16)</option>
+          <option value="Turtle">Turtle (15)</option>
+          <option value="Wind Serpent">Wind Serpent (17)</option>
+          <option value="Wolf">Wolf (63)</option>
+        </select>
+
+        <select id="modal-filter-level" class="pet-select-filter" style="background: #1e293b; color: #fff; border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 6px; padding: 0.45rem 0.65rem; font-size: 0.84rem;">
+          <option value="all">All Level Brackets</option>
+          <option value="1-9">Level 1–9 (Starter)</option>
+          <option value="10-19">Level 10–19 (Early Game)</option>
+          <option value="20-30">Level 20–30 (Beta Cap)</option>
+          <option value="30-49">Level 30–49 (Mid Progression)</option>
+          <option value="50-60">Level 50–60 (Endgame)</option>
+        </select>
+
+        <select id="modal-filter-speed" class="pet-select-filter" style="background: #1e293b; color: #fff; border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 6px; padding: 0.45rem 0.65rem; font-size: 0.84rem;">
+          <option value="all">All Attack Speeds</option>
+          <option value="fast">⚡ Fast Only (≤1.6s)</option>
+          <option value="1.0">⚡ 1.0s (Broken Tooth)</option>
+          <option value="1.2">⚡ 1.2s (The Rake, Deathmaw)</option>
+          <option value="1.3">⚡ 1.3s (Humar, Swamp Jaguar)</option>
+        </select>
+
+        <select id="modal-filter-faction" class="pet-select-filter" style="background: #1e293b; color: #fff; border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 6px; padding: 0.45rem 0.65rem; font-size: 0.84rem;">
+          <option value="all">All Factions</option>
+          <option value="Alliance">Alliance</option>
+          <option value="Horde">Horde</option>
+          <option value="Contested">Contested</option>
+        </select>
+
+        <span id="modal-pet-count-badge" style="font-size: 0.82rem; color: #6ee7b7; font-weight: 700; background: rgba(16, 185, 129, 0.15); padding: 0.35rem 0.7rem; border-radius: 6px; border: 1px solid rgba(16, 185, 129, 0.3);">
+          Showing 502 / 502 Beasts
+        </span>
+      </div>
+
+      <!-- Master Table Scroll Area -->
+      <div id="modal-pet-table-container" style="flex: 1; overflow-y: auto; max-height: calc(90vh - 220px); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 8px;">
+        <!-- Injected dynamically by deepdives.js -->
+      </div>
+    </div>
+  </div>
+
   <!-- Classic WoW Floating Item Tooltip -->
   <div id="wow-item-tooltip" class="wow-floating-tooltip" hidden></div>
 
@@ -2842,45 +2919,45 @@
 
   <!-- Scripts -->
   <!-- 0. Shared Utilities -->
-  <script src="js/utils.js?v=1.60.6-p3"></script>
+  <script src="js/utils.js?v=1.60.6-p4"></script>
 
   <!-- 1. Data Layer -->
-  <script src="js/data/core-data.js?v=1.60.6-p3"></script>
-  <script src="js/data/races-classes.js?v=1.60.6-p3"></script>
-  <script src="js/data/tools-data.js?v=1.60.6-p3"></script>
-  <script src="js/data/atlas-data.js?v=1.60.6-p3"></script>
-  <script src="js/data/bis-data.js?v=1.60.6-p3"></script>
-  <script src="js/data/talents-data.js?v=1.60.6-p3"></script>
-  <script src="js/data/deepdives/hunter.js?v=1.60.6-p3"></script>
-  <script src="js/data/deepdives/shaman.js?v=1.60.6-p3"></script>
-  <script src="js/data/deepdives/mage.js?v=1.60.6-p3"></script>
-  <script src="js/data/deepdives/paladin.js?v=1.60.6-p3"></script>
-  <script src="js/data/deepdives/warrior.js?v=1.60.6-p3"></script>
-  <script src="js/data/deepdives/warlock.js?v=1.60.6-p3"></script>
-  <script src="js/data/deepdives/priest.js?v=1.60.6-p3"></script>
-  <script src="js/data/deepdives/druid.js?v=1.60.6-p3"></script>
-  <script src="js/data/deepdives/rogue.js?v=1.60.6-p3"></script>
-  <script src="js/data/deepdives/pending.js?v=1.60.6-p3"></script>
+  <script src="js/data/core-data.js?v=1.60.6-p4"></script>
+  <script src="js/data/races-classes.js?v=1.60.6-p4"></script>
+  <script src="js/data/tools-data.js?v=1.60.6-p4"></script>
+  <script src="js/data/atlas-data.js?v=1.60.6-p4"></script>
+  <script src="js/data/bis-data.js?v=1.60.6-p4"></script>
+  <script src="js/data/talents-data.js?v=1.60.6-p4"></script>
+  <script src="js/data/deepdives/hunter.js?v=1.60.6-p4"></script>
+  <script src="js/data/deepdives/shaman.js?v=1.60.6-p4"></script>
+  <script src="js/data/deepdives/mage.js?v=1.60.6-p4"></script>
+  <script src="js/data/deepdives/paladin.js?v=1.60.6-p4"></script>
+  <script src="js/data/deepdives/warrior.js?v=1.60.6-p4"></script>
+  <script src="js/data/deepdives/warlock.js?v=1.60.6-p4"></script>
+  <script src="js/data/deepdives/priest.js?v=1.60.6-p4"></script>
+  <script src="js/data/deepdives/druid.js?v=1.60.6-p4"></script>
+  <script src="js/data/deepdives/rogue.js?v=1.60.6-p4"></script>
+  <script src="js/data/deepdives/pending.js?v=1.60.6-p4"></script>
 
   <!-- 2. Feature Modules -->
-  <script src="js/modules/navigation.js?v=1.60.6-p3"></script>
-  <script src="js/modules/news.js?v=1.60.6-p3"></script>
-  <script src="js/modules/codex.js?v=1.60.6-p3"></script>
-  <script src="js/modules/camping.js?v=1.60.6-p3"></script>
-  <script src="js/modules/planner.js?v=1.60.6-p3"></script>
-  <script src="js/modules/talent-tree.js?v=1.60.6-p3"></script>
-  <script src="js/modules/deepdives.js?v=1.60.6-p3"></script>
-  <script src="js/modules/tierlist.js?v=1.60.6-p3"></script>
-  <script src="js/modules/downranking.js?v=1.60.6-p3"></script>
-  <script src="js/modules/bis.js?v=1.60.6-p3"></script>
-  <script src="js/modules/hiddenitems.js?v=1.60.6-p3"></script>
-  <script src="js/modules/guides.js?v=1.60.6-p3"></script>
-  <script src="js/modules/atlas.js?v=1.60.6-p3"></script>
-  <script src="js/modules/search.js?v=1.60.6-p3"></script>
+  <script src="js/modules/navigation.js?v=1.60.6-p4"></script>
+  <script src="js/modules/news.js?v=1.60.6-p4"></script>
+  <script src="js/modules/codex.js?v=1.60.6-p4"></script>
+  <script src="js/modules/camping.js?v=1.60.6-p4"></script>
+  <script src="js/modules/planner.js?v=1.60.6-p4"></script>
+  <script src="js/modules/talent-tree.js?v=1.60.6-p4"></script>
+  <script src="js/modules/deepdives.js?v=1.60.6-p4"></script>
+  <script src="js/modules/tierlist.js?v=1.60.6-p4"></script>
+  <script src="js/modules/downranking.js?v=1.60.6-p4"></script>
+  <script src="js/modules/bis.js?v=1.60.6-p4"></script>
+  <script src="js/modules/hiddenitems.js?v=1.60.6-p4"></script>
+  <script src="js/modules/guides.js?v=1.60.6-p4"></script>
+  <script src="js/modules/atlas.js?v=1.60.6-p4"></script>
+  <script src="js/modules/search.js?v=1.60.6-p4"></script>
 
   <!-- 3. Core App Orchestrator & Tracker -->
-  <script src="js/app.js?v=1.60.6-p3"></script>
-  <script src="js/tracker.js?v=1.60.6-p3"></script>
+  <script src="js/app.js?v=1.60.6-p4"></script>
+  <script src="js/tracker.js?v=1.60.6-p4"></script>
 
 </body>
 </html>

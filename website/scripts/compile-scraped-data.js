@@ -1512,6 +1512,66 @@ const HUNTER_PETS_DATA = {
   ]
 };
 
+// Enrich HUNTER_PETS_DATA with all 502 authentic scraped beasts from foreverchanges.pro
+const SCRAPED_502_PATH = path.join(DATA_DIR, 'scraped_all_502_beasts.json');
+if (fs.existsSync(SCRAPED_502_PATH)) {
+  const scrapedBeasts = JSON.parse(fs.readFileSync(SCRAPED_502_PATH, 'utf-8'));
+  const allianceZones = new Set(['Elwynn Forest', 'Dun Morogh', 'Teldrassil', 'Westfall', 'Loch Modan', 'Darkshore', 'Redridge Mountains', 'Duskwood', 'Wetlands', 'Stormwind City', 'Ironforge', 'Darnassus']);
+  const hordeZones = new Set(['Durotar', 'Mulgore', 'Tirisfal Glades', 'Silverpine Forest', 'The Barrens', 'Ruins of Lordaeron', 'Orgrimmar', 'Thunder Bluff', 'Undercity']);
+  const getZoneFaction = (z) => {
+    if (allianceZones.has(z)) return 'Alliance';
+    if (hordeZones.has(z)) return 'Horde';
+    return 'Contested';
+  };
+
+  // Build curated notes lookup from existing sample
+  const curated = new Map();
+  HUNTER_PETS_DATA.families.forEach(f => {
+    (f.tameLocations || []).forEach(b => {
+      curated.set(b.name.toLowerCase(), { notes: b.notes, subzone: b.subzone });
+    });
+  });
+
+  const enrichedAllBeasts = scrapedBeasts.map(b => {
+    const match = curated.get(b.name.toLowerCase());
+    let notes = match?.notes || '';
+    if (!notes) {
+      if (b.isNew) notes = '✦ Added in WoW Forever!';
+      else if (b.isFast) notes = `⚡ Fast attack speed (${b.speed})`;
+      else if (b.teaches) notes = `Teaches ${b.teaches}`;
+    }
+    return {
+      name: b.name,
+      level: b.level,
+      minLevel: b.minLevel != null ? b.minLevel : (parseInt(b.level, 10) || 1),
+      maxLevel: b.maxLevel != null ? b.maxLevel : (parseInt(b.level, 10) || 1),
+      family: b.family,
+      speed: b.speed,
+      speedNum: b.speedNum != null ? b.speedNum : 2.0,
+      isFast: !!b.isFast,
+      faction: getZoneFaction(b.zone),
+      zone: b.zone || 'Azeroth',
+      subzone: match?.subzone || '',
+      teaches: b.teaches || '',
+      notes: notes,
+      isNew: !!b.isNew,
+      npcUrl: b.npcUrl || ''
+    };
+  });
+
+  HUNTER_PETS_DATA.allBeasts = enrichedAllBeasts;
+  HUNTER_PETS_DATA.totalBeasts = enrichedAllBeasts.length;
+  HUNTER_PETS_DATA.summary.totalBeasts = enrichedAllBeasts.length;
+
+  HUNTER_PETS_DATA.families.forEach(fam => {
+    const famBeasts = enrichedAllBeasts.filter(b => 
+      b.family.toLowerCase() === fam.name.toLowerCase() ||
+      b.family.toLowerCase() === fam.id.toLowerCase()
+    );
+    fam.tameLocations = famBeasts.sort((a, b) => (a.minLevel || 0) - (b.minLevel || 0));
+  });
+}
+
 // 8. Merchant's Favor Currency & Supply Crates System
 const MERCHANTS_FAVOR_DATA = {
   camps: {

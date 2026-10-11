@@ -1,0 +1,581 @@
+- generic [active] [ref=f2e1]:
+  - complementary "Game and Beta Status Bar" [ref=f2e2]:
+    - generic [ref=f2e3]: "Beta Phase 2: LIVE NOW • Level 30 Cap Active"
+    - generic [ref=f2e6]:
+      - generic [ref=f2e7]:
+        - strong [ref=f2e8]: "Beta Duration:"
+        - text: 35 Days (Sept 17 – Oct 21) •
+        - generic [ref=f2e9]: Day 24 of 35
+      - generic [ref=f2e10]:
+        - strong [ref=f2e11]: "Level Cap:"
+        - text: 30 Active (Excavation Site 4 & Dalaran Live)
+      - generic [ref=f2e12]: Classic+ Standalone
+      - generic [ref=f2e13]: "🍺 Events: Brewfest & Harvest Concluded • Hallow's End Arrives Oct 18"
+      - generic [ref=f2e14]:
+        - strong [ref=f2e15]: "Rulesets:"
+        - text: PvP • PvE • RP • Hardcore
+      - generic [ref=f2e16]:
+        - strong [ref=f2e17]: "Engine:"
+        - text: Ray-Traced GI (DX12)
+      - generic [ref=f2e18]:
+        - strong [ref=f2e19]: "Client Build:"
+        - text: 1.60.6.71890 (Phase 2 Cooldown Manager & UI Overhaul)
+  - generic [ref=f2e20]:
+    - generic [ref=f2e21]:
+      - generic [ref=f2e22]:
+        - generic [ref=f2e23]: Beta Build 1.60.6.71890 • Realms Online
+        - button "🐟 3,997 murlocs online" [ref=f2e26] [cursor=pointer]:
+          - generic [ref=f2e27]: 🐟
+          - generic [ref=f2e28]: 3,997
+          - generic [ref=f2e29]: murlocs online
+      - generic [ref=f2e30]:
+        - button "Search Forever" [ref=f2e31] [cursor=pointer]:
+          - generic: 🔍
+          - text: Search Forever
+          - generic [ref=f2e32]: /
+        - button "Classic+ Guides" [ref=f2e33] [cursor=pointer]:
+          - generic [ref=f2e34]: 📖
+          - text: Classic+ Guides
+    - banner [ref=f2e35]:
+      - generic [ref=f2e36]:
+        - generic [ref=f2e37]: ⚡
+        - generic [ref=f2e38]: BLIZZARD ENTERTAINMENT
+        - generic [ref=f2e39]: ⚡
+      - 'heading "WORLD OF WARCRAFT: FOREVER" [level=1] [ref=f2e40]'
+      - paragraph [ref=f2e41]:
+        - text: The permanent, living
+        - strong [ref=f2e42]: Classic+
+        - text: adventure. Featuring horizontal progression at Level 60, the new
+        - strong [ref=f2e43]: Skyborne
+        - text: race, 9 new leveling dungeons, 3 raid tiers, and zero level scaling.
+      - navigation "Official Guides and Tools" [ref=f2e44]:
+        - 'link "🌐 Wowhead: Everything We Know" [ref=f2e45] [cursor=pointer]':
+          - /url: https://www.wowhead.com/forever/news/everything-we-know-about-wow-forever-382827
+          - generic [ref=f2e46]: 🌐
+          - text: "Wowhead: Everything We Know"
+        - 'link "🍺 Warcraft Tavern: Phase 2 Level 30 & Pre-BiS" [ref=f2e47] [cursor=pointer]':
+          - /url: https://www.warcrafttavern.com/forever/
+          - generic [ref=f2e48]: 🍺
+          - text: "Warcraft Tavern: Phase 2 Level 30 & Pre-BiS"
+        - 'link "📊 Mobalytics: Level 30 Meta & Tier Lists" [ref=f2e49] [cursor=pointer]':
+          - /url: https://mobalytics.gg/wow-forever
+          - generic [ref=f2e50]: 📊
+          - text: "Mobalytics: Level 30 Meta & Tier Lists"
+        - button "⚡ Interactive Talent Calculator" [ref=f2e51] [cursor=pointer]:
+          - generic [ref=f2e52]: ⚡
+          - text: Interactive Talent Calculator
+        - link "🏆 Wowhead Legacy Calculator" [ref=f2e53] [cursor=pointer]:
+          - /url: https://www.wowhead.com/forever/legacy-calculator
+          - generic [ref=f2e54]: 🏆
+          - text: Wowhead Legacy Calculator
+        - link "⚔️ Method.gg Itemization Guide" [ref=f2e55] [cursor=pointer]:
+          - /url: https://www.method.gg/wow-classic/itemization-updates-in-world-of-warcraft-forever-expertise-spell-damage-more
+          - generic [ref=f2e56]: ⚔️
+          - text: Method.gg Itemization Guide
+        - link "🦅 Method.gg Racials Breakdown" [ref=f2e57] [cursor=pointer]:
+          - /url: https://www.method.gg/wow-classic/all-new-racial-abilities-in-world-of-warcraft-forever
+          - generic [ref=f2e58]: 🦅
+          - text: Method.gg Racials Breakdown
+      - navigation "Main Navigation" [ref=f2e59]:
+        - button "⚡ Operations Hub" [ref=f2e60] [cursor=pointer]:
+          - generic [ref=f2e61]: ⚡
+          - text: Operations Hub
+        - button "🛡️ Level 30 BiS" [ref=f2e62] [cursor=pointer]:
+          - generic [ref=f2e63]: 🛡️
+          - text: Level 30 BiS
+        - button "📰 News & Dispatches" [ref=f2e64] [cursor=pointer]:
+          - generic [ref=f2e65]: 📰
+          - text: News & Dispatches
+        - button "📜 Content Codex" [ref=f2e66] [cursor=pointer]:
+          - generic [ref=f2e67]: 📜
+          - text: Content Codex
+        - button "🗺️ World Atlas & Rares" [ref=f2e68] [cursor=pointer]:
+          - generic [ref=f2e69]: 🗺️
+          - text: World Atlas & Rares
+        - button "📊 Tier List Maker" [ref=f2e70] [cursor=pointer]:
+          - generic [ref=f2e71]: 📊
+          - text: Tier List Maker
+        - button "🧪 Downrank Calc" [ref=f2e72] [cursor=pointer]:
+          - generic [ref=f2e73]: 🧪
+          - text: Downrank Calc
+        - button "🧙 Class & Race Planner" [ref=f2e74] [cursor=pointer]:
+          - generic [ref=f2e75]: 🧙
+          - text: Class & Race Planner
+        - button "🎯 Class Deep Dives" [ref=f2e76] [cursor=pointer]:
+          - generic [ref=f2e77]: 🎯
+          - text: Class Deep Dives
+        - button "🔨 Professions & Camping" [ref=f2e78] [cursor=pointer]:
+          - generic [ref=f2e79]: 🔨
+          - text: Professions & Camping
+        - button "⚙️ Systems & Engine" [ref=f2e80] [cursor=pointer]:
+          - generic [ref=f2e81]: ⚙️
+          - text: Systems & Engine
+        - button "🛡️ My Forever & Squad" [ref=f2e82] [cursor=pointer]:
+          - generic [ref=f2e83]: 🛡️
+          - text: My Forever & Squad
+    - main [ref=f2e84]:
+      - region "Release Countdowns" [ref=f2e85]:
+        - generic [ref=f2e86]:
+          - generic [ref=f2e87]:
+            - generic [ref=f2e88]:
+              - text: Testing Closes
+              - heading "Beta Ends" [level=2] [ref=f2e89]
+            - generic [ref=f2e90]: ⏳
+          - paragraph [ref=f2e91]: Exact 35-day beta testing concludes. Server reset before launch.
+          - generic [ref=f2e92]:
+            - generic [ref=f2e93]:
+              - generic [ref=f2e94]: "11"
+              - text: Days
+            - generic [ref=f2e95]:
+              - generic [ref=f2e96]: "05"
+              - text: Hours
+            - generic [ref=f2e97]:
+              - generic [ref=f2e98]: "06"
+              - text: Mins
+            - generic [ref=f2e99]:
+              - generic [ref=f2e100]: "13"
+              - text: Secs
+          - generic [ref=f2e101]:
+            - generic [ref=f2e102]:
+              - text: "Target:"
+              - strong [ref=f2e103]: Oct 21, 2026
+            - generic [ref=f2e104]: 5 Weeks Total Duration
+        - generic [ref=f2e105]:
+          - generic [ref=f2e106]:
+            - generic [ref=f2e107]:
+              - text: Active Beta Phase • Oct 1–21
+              - 'heading "Phase 2: LIVE NOW" [level=2] [ref=f2e108]'
+            - generic [ref=f2e109]: ⚔️
+          - paragraph [ref=f2e110]: Level 30 Cap Unlocked! Excavation Site 4, City of Dalaran, WSG 20–29 & Tier 2 Camping.
+          - generic [ref=f2e111]:
+            - generic [ref=f2e112]:
+              - generic [ref=f2e113]: CAP 30
+              - text: 21 Talents
+            - generic [ref=f2e114]:
+              - generic [ref=f2e115]: 2 DUNGEONS
+              - text: Wetlands & Alterac
+            - generic [ref=f2e116]:
+              - generic [ref=f2e117]: WSG 20-29
+              - text: Bracket Live
+            - generic [ref=f2e118]:
+              - generic [ref=f2e119]: EXP 150
+              - text: Professions
+          - generic [ref=f2e120]:
+            - generic [ref=f2e121]:
+              - text: "Status:"
+              - strong [ref=f2e122]: Phase 2 Live (Week 3 of 5)
+            - generic [ref=f2e123]: Day 24 of 35
+        - generic [ref=f2e124]:
+          - generic [ref=f2e125]:
+            - generic [ref=f2e126]:
+              - text: Global Release
+              - heading "Official Launch" [level=2] [ref=f2e127]
+            - generic [ref=f2e128]: 🌍
+          - paragraph [ref=f2e129]: Global servers unlock simultaneously worldwide.
+          - generic [ref=f2e130]:
+            - generic [ref=f2e131]:
+              - generic [ref=f2e132]: "24"
+              - text: Days
+            - generic [ref=f2e133]:
+              - generic [ref=f2e134]: "21"
+              - text: Hours
+            - generic [ref=f2e135]:
+              - generic [ref=f2e136]: "06"
+              - text: Mins
+            - generic [ref=f2e137]:
+              - generic [ref=f2e138]: "14"
+              - text: Secs
+          - generic [ref=f2e139]:
+            - generic [ref=f2e140]:
+              - text: "Target:"
+              - strong [ref=f2e141]: Nov 4, 2026
+            - generic [ref=f2e142]: Level 60 Unlocked
+        - generic [ref=f2e143]:
+          - generic [ref=f2e144]:
+            - generic [ref=f2e145]:
+              - text: Endgame Unlock
+              - heading "Tier 1 Raids" [level=2] [ref=f2e146]
+            - generic [ref=f2e147]: 👑
+          - paragraph [ref=f2e148]: Barrow Deeps (10m), Hyjal Summit (20m), Onyxia (40m).
+          - generic [ref=f2e149]:
+            - generic [ref=f2e150]:
+              - generic [ref=f2e151]: "59"
+              - text: Days
+            - generic [ref=f2e152]:
+              - generic [ref=f2e153]: "16"
+              - text: Hours
+            - generic [ref=f2e154]:
+              - generic [ref=f2e155]: "06"
+              - text: Mins
+            - generic [ref=f2e156]:
+              - generic [ref=f2e157]: "14"
+              - text: Secs
+          - generic [ref=f2e158]:
+            - generic [ref=f2e159]:
+              - text: "Target:"
+              - strong [ref=f2e160]: Dec 9, 2026
+            - generic [ref=f2e161]: No Molten Core at Launch
+      - region "Beta Testing Schedule & Duration Roadmap" [ref=f2e162]:
+        - generic [ref=f2e163]:
+          - generic [ref=f2e164]:
+            - text: Official 5-Week Testing Schedule
+            - 'heading "Beta Duration: Exactly 35 Days (Sept 17 – Oct 21, 2026)" [level=2] [ref=f2e165]'
+            - paragraph [ref=f2e166]: Blizzard's phased closed beta testing window runs for exactly 5 weeks across two distinct milestone caps before character wipes.
+          - generic [ref=f2e167]:
+            - generic [ref=f2e168]: 🗓️ 35 Days Total
+            - generic [ref=f2e169]: 12 Days Left
+        - generic [ref=f2e172]:
+          - generic [ref=f2e173]: Day 24 of 35 Days (68% elapsed • 12 days remaining)
+          - generic [ref=f2e174]: "Start: Sept 17, 2026 • Phase 2 (L30 Cap) Active Now • End: Oct 21, 2026"
+        - generic [ref=f2e175]:
+          - generic [ref=f2e176]:
+            - generic [ref=f2e177]: Completed • Phase 1
+            - heading "Level 20 Cap & Foundations" [level=3] [ref=f2e178]
+            - generic [ref=f2e179]: Sept 17 – Oct 1, 2026 • 14 Days (2 Weeks)
+            - paragraph [ref=f2e180]: Extensive testing of starting zones, the Skyborne race, Hall of Thanes & Ruins of Lordaeron dungeons, 10–19 Warsong Gulch, and core dual-spec talent foundations.
+          - generic [ref=f2e181]:
+            - generic [ref=f2e182]: Active Now • Phase 2
+            - heading "Level 30 Cap & Mid-Game" [level=3] [ref=f2e183]
+            - generic [ref=f2e184]: Oct 1 – Oct 21, 2026 • 21 Days (3 Weeks)
+            - paragraph [ref=f2e185]: Level cap is increased to 30! Unlocks Excavation Site 4 in Wetlands, City of Dalaran dungeon wing, Ashenvale & Hillsbrad open-world PvP, Tier 2 Camping, and 20–29 Warsong Gulch.
+          - generic [ref=f2e186]:
+            - generic [ref=f2e187]: Final Phase • Pre-Launch
+            - heading "Server Wipe & Deployment" [level=3] [ref=f2e188]
+            - generic [ref=f2e189]: Oct 22 – Nov 3, 2026 • 14 Days (2 Weeks)
+            - paragraph [ref=f2e190]: All beta progress is wiped on October 21. Blizzard deploys final client patch 1.0, finishes stress-testing, and preps global launch on November 4, 2026.
+      - generic [ref=f2e192]:
+        - generic [ref=f2e193]:
+          - generic [ref=f2e194]: "Phase 2 Status: LIVE NOW (Oct 1–21, 2026)"
+          - 'heading "Beta Phase 2 Live: The Level 30 Cap Expansion" [level=2] [ref=f2e196]'
+          - paragraph [ref=f2e197]: Beta Phase 2 is now fully live across all beta megarealms! The level cap is increased to 30. Testers are now delving into Excavation Site 4 in Wetlands, conquering the subterranean Kirin Tor vaults in the City of Dalaran, deploying Tier 2 Camping setups (Ironwood Campfires & Silk Tents), and clashing across the 20–29 Warsong Gulch bracket.
+          - generic [ref=f2e198]:
+            - generic [ref=f2e199]:
+              - strong [ref=f2e200]: "4"
+              - text: Dungeons Active (Excavation Site 4 & Dalaran Added)
+            - generic [ref=f2e201]:
+              - strong [ref=f2e202]: Level 30
+              - text: Cap (Active Now • 21 Talents)
+            - generic [ref=f2e203]:
+              - strong [ref=f2e204]: 20–29
+              - text: Warsong Gulch Active
+            - generic [ref=f2e205]:
+              - strong [ref=f2e206]: ⛺
+              - text: Tier 2 Camping Unlocked
+            - generic [ref=f2e207]:
+              - strong [ref=f2e208]: ⚔️
+              - text: Ashenvale & Hillsbrad World PvP
+        - generic [ref=f2e209]:
+          - heading "⚡ Phase 2 Testing Objectives" [level=4] [ref=f2e210]
+          - list [ref=f2e211]:
+            - listitem [ref=f2e212]:
+              - generic [ref=f2e213]: ⛏️
+              - generic [ref=f2e214]:
+                - strong [ref=f2e215]: "Excavation Site 4:"
+                - text: Level 24–30 Titan dig site in Wetlands.
+            - listitem [ref=f2e216]:
+              - generic [ref=f2e217]: 🔮
+              - generic [ref=f2e218]:
+                - strong [ref=f2e219]: "City of Dalaran:"
+                - text: Level 28–34 Kirin Tor vaults in Alterac.
+            - listitem [ref=f2e220]:
+              - generic [ref=f2e221]: 🏕️
+              - generic [ref=f2e222]:
+                - strong [ref=f2e223]: "Tier 2 Camping:"
+                - text: Ironwood Campfires (+10% stats) & Silk Tents.
+            - listitem [ref=f2e224]:
+              - generic [ref=f2e225]: 🚩
+              - generic [ref=f2e226]:
+                - strong [ref=f2e227]: "Warsong Gulch (20–29):"
+                - text: Mid-bracket battleground balance.
+            - listitem [ref=f2e228]:
+              - generic [ref=f2e229]: 🗺️
+              - generic [ref=f2e230]:
+                - strong [ref=f2e231]: "Contested Leveling:"
+                - text: Hillsbrad, Ashenvale, Thousand Needles.
+      - region "Phase 2 Dungeons & Duel Tournament" [ref=f2e232]:
+        - generic [ref=f2e233]:
+          - generic [ref=f2e234]:
+            - 'heading "⚔️ Phase 2 Operations: Level 30 Dungeons & Venruki Duel Tournament" [level=2] [ref=f2e235]':
+              - generic [ref=f2e236]: ⚔️
+              - text: "Phase 2 Operations: Level 30 Dungeons & Venruki Duel Tournament"
+            - paragraph [ref=f2e237]: Comprehensive dossier for live 5-man leveling dungeons, key boss loot, and the $100k Durotar showdown
+          - generic [ref=f2e238]: 🏆 $100k Prize Pool • Oct 17–18
+        - generic [ref=f2e239]:
+          - generic [ref=f2e240]:
+            - generic [ref=f2e241]:
+              - generic [ref=f2e242]: 🏰 Active Level 24–38 Dungeons
+              - heading "Phase 2 Dungeon Atlas & Pre-BiS Targets" [level=3] [ref=f2e243]
+            - paragraph [ref=f2e244]: "Six core 5-man instances form the progression backbone of Level 30 Phase 2. Target these key drops before entering the 20–29 Warsong Gulch bracket:"
+            - generic [ref=f2e245]:
+              - generic [ref=f2e246]:
+                - generic [ref=f2e247]:
+                  - generic [ref=f2e248]: ✦ Classic+ New
+                  - generic [ref=f2e249]: Lvl 26–31
+                - heading "Excavation Site 4" [level=4] [ref=f2e250]
+                - paragraph [ref=f2e251]: Wetlands • 4 Bosses
+                - generic [ref=f2e252]:
+                  - generic [ref=f2e253]: Dark Iron Hatchet
+                  - generic [ref=f2e254]: Blightleaf Rope
+                  - generic [ref=f2e255]: Felbough Arm
+              - generic [ref=f2e256]:
+                - generic [ref=f2e257]:
+                  - generic [ref=f2e258]: ✦ Classic+ New
+                  - generic [ref=f2e259]: Lvl 28–33
+                - heading "City of Dalaran" [level=4] [ref=f2e260]
+                - paragraph [ref=f2e261]: Alterac Sewers • 8 Bosses
+                - generic [ref=f2e262]:
+                  - generic [ref=f2e263]: Archmage Pendant
+                  - generic [ref=f2e264]: Guardian Dualblade
+                  - generic [ref=f2e265]: Violet Sandals
+              - generic [ref=f2e266]:
+                - generic [ref=f2e267]:
+                  - generic [ref=f2e268]: Revamped
+                  - generic [ref=f2e269]: Lvl 24–32
+                - heading "Blackfathom Deeps" [level=4] [ref=f2e270]
+                - paragraph [ref=f2e271]: Ashenvale Coast • 7 Bosses
+                - generic [ref=f2e272]:
+                  - generic [ref=f2e273]: Rod of Sleepwalker
+                  - generic [ref=f2e274]: Strike of the Hydra
+                  - generic [ref=f2e275]: Tortusk Shield
+              - generic [ref=f2e276]:
+                - generic [ref=f2e277]:
+                  - generic [ref=f2e278]: Revamped
+                  - generic [ref=f2e279]: Lvl 29–38
+                - heading "Gnomeregan" [level=4] [ref=f2e280]
+                - paragraph [ref=f2e281]: Dun Morogh • 6 Bosses
+                - generic [ref=f2e282]:
+                  - generic [ref=f2e283]: Thermaplugg Core
+                  - generic [ref=f2e284]: Triprunner Pants
+                  - generic [ref=f2e285]: Electrocutioner Ring
+              - generic [ref=f2e286]:
+                - generic [ref=f2e287]:
+                  - generic [ref=f2e288]: Revamped
+                  - generic [ref=f2e289]: Lvl 29–38
+                - heading "Razorfen Kraul" [level=4] [ref=f2e290]
+                - paragraph [ref=f2e291]: Southern Barrens • 5 Bosses
+                - generic [ref=f2e292]:
+                  - generic [ref=f2e293]: Corpsemaker (2H Axe)
+                  - generic [ref=f2e294]: Heart of Agamaggan
+                  - generic [ref=f2e295]: Staff of Blessed Seer
+              - generic [ref=f2e296]:
+                - generic [ref=f2e297]:
+                  - generic [ref=f2e298]: Revamped
+                  - generic [ref=f2e299]: Lvl 24–32
+                - heading "The Stockade" [level=4] [ref=f2e300]
+                - paragraph [ref=f2e301]: Stormwind City • 6 Bosses
+                - generic [ref=f2e302]:
+                  - generic [ref=f2e303]: Iron Knuckles
+                  - generic [ref=f2e304]: Kam's Walking Stick
+                  - generic [ref=f2e305]: Defias Insignia
+            - generic [ref=f2e306]:
+              - link "🛡️ Explore Level 30 BiS Tables" [ref=f2e307] [cursor=pointer]:
+                - /url: "#bis"
+              - button "📖 View Community Guides" [ref=f2e308] [cursor=pointer]
+          - generic [ref=f2e309]:
+            - generic [ref=f2e310]:
+              - generic [ref=f2e311]: 🔥 Esports & Duel Meta
+              - heading "$100,000 Venruki Level 30 Duel Tournament" [level=3] [ref=f2e312]
+            - paragraph [ref=f2e313]: Broadcast live October 17–18 from the Gates of Durotar on the NA Beta Megarealm. 64 invitational gladiators battle in strict Best-of-3 single elimination at the Level 30 talent cap.
+            - generic [ref=f2e314]:
+              - generic [ref=f2e315]:
+                - generic [ref=f2e316]: ⚖️
+                - generic [ref=f2e317]:
+                  - strong [ref=f2e318]: Strict Level 30 Ruleset
+                  - paragraph [ref=f2e319]: 21 talent points max. Zero external consumables (potions, elixirs, engineering bombs prohibited). Class conjurations only.
+              - generic [ref=f2e320]:
+                - generic [ref=f2e321]: 🚫
+                - generic [ref=f2e322]:
+                  - strong [ref=f2e323]: Zero World Buffs
+                  - paragraph [ref=f2e324]: No Rallying Cry of the Dragonslayer, no Songflower, no Darkmoon Faire. Pure character skill and talent geometry.
+              - generic [ref=f2e325]:
+                - generic [ref=f2e326]: 👑
+                - generic [ref=f2e327]:
+                  - strong [ref=f2e328]: Top Meta Contenders
+                  - paragraph [ref=f2e329]:
+                    - strong [ref=f2e330]: "Arms Warriors:"
+                    - text: Spearing Strike disarms & Sweeping Strikes.
+                    - strong [ref=f2e331]: "Ret Paladins:"
+                    - text: Voice of Truth silence immunity.
+                    - strong [ref=f2e332]: "Feral Druids:"
+                    - text: Frenzied Regeneration & Shifting Power.
+            - generic [ref=f2e333]:
+              - link "⚡ Review Level 30 Class Builds" [ref=f2e334] [cursor=pointer]:
+                - /url: "#deepdives"
+              - link "📺 Watch Beta Forensics" [ref=f2e335] [cursor=pointer]:
+                - /url: https://www.youtube.com/watch?v=WfB5HLAZxwg
+      - generic [ref=f2e336]:
+        - generic [ref=f2e338]:
+          - heading "⚖️ Verified Game Rules & Quality of Life" [level=2] [ref=f2e339]:
+            - generic [ref=f2e340]: ⚖️
+            - text: Verified Game Rules & Quality of Life
+          - paragraph [ref=f2e341]: Core design choices confirmed by Blizzard, Wowhead, and community reveals
+        - generic [ref=f2e342]:
+          - generic [ref=f2e343]:
+            - generic [ref=f2e344]:
+              - generic [ref=f2e345]: ⚡
+              - generic [ref=f2e346]:
+                - generic [ref=f2e347]: Raid Integrity
+                - heading "No World Buffs in Raids" [level=4] [ref=f2e348]
+            - paragraph [ref=f2e349]: World buffs work out in the world, but are disabled inside raid instances. No Chronoboons, no 2-hour pre-buff routes, and no griefing dispels in Booty Bay.
+          - generic [ref=f2e350]:
+            - generic [ref=f2e351]:
+              - generic [ref=f2e352]: 🚫
+              - generic [ref=f2e353]:
+                - generic [ref=f2e354]: Economy Protection
+                - heading "No WoW Tokens or Boosts" [level=4] [ref=f2e355]
+            - paragraph [ref=f2e356]: 100% pure gameplay progression. Zero paid level boosts, zero gold buying via WoW Tokens. All wealth and gear is earned in-game.
+          - generic [ref=f2e357]:
+            - generic [ref=f2e358]:
+              - generic [ref=f2e359]: 🔄
+              - generic [ref=f2e360]:
+                - generic [ref=f2e361]: Confirmed at Lvl 40
+                - heading "Dual Talent Specialization" [level=4] [ref=f2e362]
+            - paragraph [ref=f2e363]: Unlocked at Level 40 for a one-time gold fee. Switch between specs in rest areas or around any player campfire.
+          - generic [ref=f2e364]:
+            - generic [ref=f2e365]:
+              - generic [ref=f2e366]: 📜
+              - generic [ref=f2e367]:
+                - generic [ref=f2e368]: World Questing
+                - heading "Anti-Dungeon Spam XP" [level=4] [ref=f2e369]
+            - paragraph [ref=f2e370]: Mob kill XP inside dungeons is low. First-time dungeon quests yield massive rewards, with repeatable weekly boss chase drops.
+          - generic [ref=f2e371]:
+            - generic [ref=f2e372]:
+              - generic [ref=f2e373]: 🛡️
+              - generic [ref=f2e374]:
+                - generic [ref=f2e375]: Skill & Execution
+                - heading "In-Combat Addon Disarmament & Native UI Suite" [level=4] [ref=f2e376]
+            - paragraph [ref=f2e377]: "Computational WeakAuras and solver addons are disabled in combat due to 12.0 secret value restrictions. Blizzard provides native replacements directly in the UI & Edit Mode: an in-game Damage/Healing meter, modern raid frames, and the newly expanded Native Cooldown Manager for tracking rotational spells, defensives, and buff procs with zero UI taint."
+          - generic [ref=f2e378]:
+            - generic [ref=f2e379]:
+              - generic [ref=f2e380]: ⚔️
+              - generic [ref=f2e381]:
+                - generic [ref=f2e382]: Healthy PvP
+                - heading "Seasonal Rank 14 Track" [level=4] [ref=f2e383]
+            - paragraph [ref=f2e384]: No more 18-hour-a-day decay grind! Reach Rank 14 via an objective seasonal milestone progression track that resets each tier.
+          - generic [ref=f2e385]:
+            - generic [ref=f2e386]:
+              - generic [ref=f2e387]: 💀
+              - generic [ref=f2e388]:
+                - generic [ref=f2e389]: Winter Ruleset
+                - heading "Hardcore & Mortal Safety Net" [level=4] [ref=f2e390]
+            - paragraph [ref=f2e391]: True permanent character death with Mak'gora duels. When your Hardcore champion falls, claim a free transfer to PvE or PvP rulesets!
+          - generic [ref=f2e392]:
+            - generic [ref=f2e393]:
+              - generic [ref=f2e394]: ✨
+              - generic [ref=f2e395]:
+                - generic [ref=f2e396]: Visual Overhaul
+                - heading "Custom Ray-Tracing Engine" [level=4] [ref=f2e397]
+            - paragraph [ref=f2e398]: Dynamic real-time sun shadows, volumetric fog, and flowing foam water physics, with instant SD/HD model and 2004 animation toggles.
+          - generic [ref=f2e399]:
+            - generic [ref=f2e400]:
+              - generic [ref=f2e401]: ⛵
+              - generic [ref=f2e402]:
+                - generic [ref=f2e403]: Travel Quality of Life
+                - heading "Stormwind Harbor Active" [level=4] [ref=f2e404]
+            - paragraph [ref=f2e405]: Connects Stormwind directly to Auberdine and Darnassus. Night elves and humans no longer need to brave the Wetlands death run.
+          - generic [ref=f2e406]:
+            - generic [ref=f2e407]:
+              - generic [ref=f2e408]: 🎯
+              - generic [ref=f2e409]:
+                - generic [ref=f2e410]: Modern Communication
+                - heading "Retail Ping System" [level=4] [ref=f2e411]
+            - paragraph [ref=f2e412]: Non-verbal context pinging (Attack, Assist, On My Way, Danger) directly in 3D world space and minimap.
+          - generic [ref=f2e413]:
+            - generic [ref=f2e414]:
+              - generic [ref=f2e415]: 📊
+              - generic [ref=f2e416]:
+                - generic [ref=f2e417]: Native UI Tool
+                - heading "Built-In Damage Meter" [level=4] [ref=f2e418]
+            - paragraph [ref=f2e419]: Integrated lightweight combat log parser. See whether you're pumping DPS or healing without needing third-party addons.
+          - generic [ref=f2e420]:
+            - generic [ref=f2e421]:
+              - generic [ref=f2e422]: 🎮
+              - generic [ref=f2e423]:
+                - generic [ref=f2e424]: Accessibility
+                - heading "Controller Support & Barbershop" [level=4] [ref=f2e425]
+            - paragraph [ref=f2e426]: Native controller support for cozy handheld/couch leveling. Barbershop available in major capitals for hairstyle, beard, and skin tones.
+          - generic [ref=f2e427]:
+            - generic [ref=f2e428]:
+              - generic [ref=f2e429]: 🎒
+              - generic [ref=f2e430]:
+                - generic [ref=f2e431]: Bag Space Overhaul
+                - heading "Reagent-Free Class Abilities" [level=4] [ref=f2e432]
+            - paragraph [ref=f2e433]: Vendor-bought reagents are eliminated! Spells no longer consume Ankhs, 28 Soul Shards, Flash Powder, Symbols of Kings, Wild Berries, or Teleport Runes.
+          - generic [ref=f2e434]:
+            - generic [ref=f2e435]:
+              - generic [ref=f2e436]: ⏳
+              - generic [ref=f2e437]:
+                - generic [ref=f2e438]: Group Quality of Life
+                - heading "50% Longer Raid Buffs" [level=4] [ref=f2e439]
+            - paragraph [ref=f2e440]: All long-duration group and raid buffs (Arcane Intellect, Mark of the Wild, Fortitude, Blessings) now last 45 to 90 minutes. No mid-dungeon expiration.
+          - generic [ref=f2e441]:
+            - generic [ref=f2e442]:
+              - generic [ref=f2e443]: ⚒️
+              - generic [ref=f2e444]:
+                - generic [ref=f2e445]: Tradeskill Power
+                - heading "All 9 Profession Combat Passives" [level=4] [ref=f2e446]
+            - paragraph [ref=f2e447]: "Every primary profession grants permanent character power: Mining (+5% HP), Herbalism (+Resistances & Heal), Skinning (+Crit), Alchemy (Mixology 2x Flasks), etc."
+          - generic [ref=f2e448]:
+            - generic [ref=f2e449]:
+              - generic [ref=f2e450]: 🏆
+              - generic [ref=f2e451]:
+                - generic [ref=f2e452]: Account Progression
+                - heading "65-Point Legacy Cosmetics Track" [level=4] [ref=f2e453]
+            - paragraph [ref=f2e454]: Allocate 16 points per character into talent trees, while earning up to 65 total Legacy Points on your account to unlock exclusive heritage mounts, tabards, and pets.
+      - generic [ref=f2e455]:
+        - generic [ref=f2e457]:
+          - 'heading "🏛️ The Pillars of World of Warcraft: Forever" [level=2] [ref=f2e458]':
+            - generic [ref=f2e459]: 🏛️
+            - text: "The Pillars of World of Warcraft: Forever"
+          - paragraph [ref=f2e460]: "Why WoW: Forever is the definitive Classic+ experience"
+        - generic [ref=f2e461]:
+          - generic [ref=f2e462]:
+            - generic [ref=f2e463]:
+              - generic [ref=f2e464]: ⏳
+              - generic [ref=f2e465]:
+                - heading "Permanent Level 60" [level=3] [ref=f2e466]
+                - text: Horizontal Progression Philosophy
+            - list [ref=f2e467]:
+              - listitem [ref=f2e468]: "▸ No stat squishes or level inflation: Level 60 is forever."
+              - listitem [ref=f2e469]: ▸ New side-grades, tier variations, and challenging dungeons keep gear diverse.
+              - listitem [ref=f2e470]: "▸ Continuity branches right after Warcraft III: Reforged."
+          - generic [ref=f2e471]:
+            - generic [ref=f2e472]:
+              - generic [ref=f2e473]: 🗺️
+              - generic [ref=f2e474]:
+                - heading "9 New Dungeons & 3 Raids" [level=3] [ref=f2e475]
+                - text: Expanded Leveling & Endgame
+            - list [ref=f2e476]:
+              - listitem [ref=f2e477]: ▸ Fills empty leveling brackets from Level 13 through Level 60.
+              - listitem [ref=f2e478]: ▸ Four 5-man dungeons playable in Beta Phase 2 (Hall of Thanes, Lordaeron, Excavation Site 4, Dalaran).
+              - listitem [ref=f2e479]: ▸ New 10-man (Barrow Deeps) and 20-man (Hyjal Summit) raids at launch.
+          - generic [ref=f2e480]:
+            - generic [ref=f2e481]:
+              - generic [ref=f2e482]: 🌌
+              - generic [ref=f2e483]:
+                - heading "Realmless & Anti-Datamining" [level=3] [ref=f2e484]
+                - text: Preserving Wonder and Community
+            - list [ref=f2e485]:
+              - listitem [ref=f2e486]: ▸ Pick your ruleset (Normal, PvP, RP, Hardcore) without dead servers.
+              - listitem [ref=f2e487]: ▸ Blizzard is actively encrypting raid secrets to restore true exploration.
+              - listitem [ref=f2e488]: ▸ Classic Purist toggle preserves original visual clarity for purists.
+    - text: • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦
+  - contentinfo [ref=f2e489]:
+    - generic [ref=f2e490]:
+      - generic [ref=f2e491]:
+        - link "Blizzard Official News" [ref=f2e492] [cursor=pointer]:
+          - /url: https://news.blizzard.com
+        - link "Wowhead Coverage" [ref=f2e493] [cursor=pointer]:
+          - /url: https://www.wowhead.com/forever
+        - link "Warcraft Tavern Hub" [ref=f2e494] [cursor=pointer]:
+          - /url: https://www.warcrafttavern.com/forever/
+        - link "Mobalytics Meta & Tier Lists" [ref=f2e495] [cursor=pointer]:
+          - /url: https://mobalytics.gg/wow-forever
+        - link "Method.gg Raiding & Guides" [ref=f2e496] [cursor=pointer]:
+          - /url: https://www.method.gg
+        - link "Icy Veins Class Hub" [ref=f2e497] [cursor=pointer]:
+          - /url: https://www.icy-veins.com/wow-forever
+        - link "Battle.net Launcher" [ref=f2e498] [cursor=pointer]:
+          - /url: https://battle.net
+      - paragraph [ref=f2e499]: "World of Warcraft: Forever Personal News & Beta Progress Portal • Built for Classic+ Explorers"
+      - paragraph [ref=f2e500]: Data grounded in official BlizzCon 2026 announcements, Wowhead compendiums, Method.gg itemization audits, and Beta Phase 1 & 2 community testing.

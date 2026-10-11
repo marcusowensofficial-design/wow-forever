@@ -502,6 +502,188 @@ function initClassDeepDives() {
         toggleAllBtn.innerHTML = isCollapsed ? '<span>📍 Collapse All Taming Guides</span>' : '<span>📍 Expand All Taming Guides</span>';
       });
     }
+
+    // Master Hunter Pet Directory Modal Setup & Binding
+    setupHunterPetMasterModal();
+
+    const masterModalBtn = contentContainer.querySelector('#btn-open-master-beasts');
+    if (masterModalBtn) {
+      masterModalBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        if (typeof window.openHunterPetMasterModal === 'function') {
+          window.openHunterPetMasterModal('all');
+        }
+      });
+    }
+
+    contentContainer.querySelectorAll('.tdh-view-all-modal-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const famName = btn.getAttribute('data-filter-fam');
+        if (typeof window.openHunterPetMasterModal === 'function') {
+          window.openHunterPetMasterModal(famName || 'all');
+        }
+      });
+    });
+  }
+
+  function setupHunterPetMasterModal() {
+    const modal = document.getElementById('hunter-pets-master-modal');
+    const closeBtn = document.getElementById('hunter-pets-modal-close');
+    const tableContainer = document.getElementById('modal-pet-table-container');
+    const searchInput = document.getElementById('modal-pet-search');
+    const familySelect = document.getElementById('modal-filter-family');
+    const levelSelect = document.getElementById('modal-filter-level');
+    const speedSelect = document.getElementById('modal-filter-speed');
+    const factionSelect = document.getElementById('modal-filter-faction');
+    const countBadge = document.getElementById('modal-pet-count-badge');
+
+    if (!modal || !tableContainer) return;
+
+    const petData = (typeof window !== 'undefined' && window.WOW_ATLAS_DATA && window.WOW_ATLAS_DATA.hunterPets) || null;
+    const allBeasts = (petData && petData.allBeasts) || [];
+    const families = (petData && petData.families) || [];
+    const familyIconMap = new Map();
+    families.forEach(f => {
+      familyIconMap.set(f.name.toLowerCase(), f.icon);
+    });
+
+    function renderModalTable() {
+      const q = (searchInput?.value || '').trim().toLowerCase();
+      const selFam = familySelect?.value || 'all';
+      const selLvl = levelSelect?.value || 'all';
+      const selSpeed = speedSelect?.value || 'all';
+      const selFaction = factionSelect?.value || 'all';
+
+      const filtered = allBeasts.filter(b => {
+        // Family filter
+        if (selFam !== 'all' && b.family.toLowerCase() !== selFam.toLowerCase()) return false;
+
+        // Level filter
+        const minL = b.minLevel || 1;
+        const maxL = b.maxLevel || 60;
+        if (selLvl === '1-9' && (minL > 9 || maxL < 1)) return false;
+        if (selLvl === '10-19' && (minL > 19 || maxL < 10)) return false;
+        if (selLvl === '20-30' && (minL > 30 || maxL < 20)) return false;
+        if (selLvl === '30-49' && (minL > 49 || maxL < 30)) return false;
+        if (selLvl === '50-60' && maxL < 50) return false;
+
+        // Speed filter
+        if (selSpeed === 'fast' && !b.isFast) return false;
+        if (selSpeed === '1.0' && b.speed !== '1.0s') return false;
+        if (selSpeed === '1.2' && b.speed !== '1.2s') return false;
+        if (selSpeed === '1.3' && b.speed !== '1.3s') return false;
+
+        // Faction filter
+        if (selFaction !== 'all' && b.faction !== selFaction) return false;
+
+        // Search text
+        if (q) {
+          const str = `${b.name} ${b.family} ${b.zone} ${b.subzone || ''} ${b.teaches || ''} ${b.notes || ''}`.toLowerCase();
+          if (!str.includes(q)) return false;
+        }
+
+        return true;
+      });
+
+      if (countBadge) {
+        countBadge.textContent = `Showing ${filtered.length} / ${allBeasts.length} Beasts`;
+      }
+
+      tableContainer.innerHTML = `
+        <table class="pet-master-table">
+          <thead>
+            <tr>
+              <th>Family</th>
+              <th>Beast Name</th>
+              <th>Level Range</th>
+              <th>Speed</th>
+              <th>Zone / Subzone</th>
+              <th>Faction</th>
+              <th>Teaches</th>
+              <th>Notes / Beta Tag</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${filtered.length === 0 ? `
+              <tr>
+                <td colspan="8" style="text-align: center; padding: 2rem; color: #94a3b8;">
+                  No beasts matched your filter criteria. Try clearing search or selecting All Families.
+                </td>
+              </tr>
+            ` : filtered.map(b => {
+              const icon = familyIconMap.get(b.family.toLowerCase()) || 'https://foreverchanges.pro/icon/ability_hunter_pet_cat.jpg';
+              const zoneText = b.zone || 'WoW Forever Beta Spawn';
+              return `
+                <tr>
+                  <td>
+                    <span class="pet-table-fam-badge">
+                      <img src="${icon}" alt="${escapeHtml(b.family)}" onerror="this.style.display='none'">
+                      <span>${escapeHtml(b.family)}</span>
+                    </span>
+                  </td>
+                  <td>
+                    ${b.npcUrl ? `
+                      <a href="${escapeHtml(b.npcUrl)}" target="_blank" rel="noopener" style="color: #6ee7b7; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 0.25rem;">
+                        ${escapeHtml(b.name)} <span style="font-size: 0.65rem; color: #38bdf8;">↗</span>
+                      </a>
+                    ` : `
+                      <strong style="color: #fff;">${escapeHtml(b.name)}</strong>
+                    `}
+                  </td>
+                  <td>
+                    <span class="tbr-level">Lvl ${escapeHtml(b.level)}</span>
+                  </td>
+                  <td>
+                    <span class="tbr-speed ${b.isFast ? 'fast' : ''}">${b.isFast ? '⚡ ' : ''}${escapeHtml(b.speed)}</span>
+                  </td>
+                  <td>
+                    <span style="color: #cbd5e1; font-weight: 600;">📍 ${escapeHtml(zoneText)}</span>
+                    ${b.subzone ? `<span style="font-size: 0.74rem; color: #94a3b8; display: block;">${escapeHtml(b.subzone)}</span>` : ''}
+                  </td>
+                  <td>
+                    <span class="tbr-faction ${escapeHtml(b.faction)}">${escapeHtml(b.faction)}</span>
+                  </td>
+                  <td>
+                    ${b.teaches ? `<span style="color: #fcd34d; font-size: 0.78rem; font-weight: 600;">📖 ${escapeHtml(b.teaches)}</span>` : '<span style="color: #64748b;">—</span>'}
+                  </td>
+                  <td>
+                    ${b.isNew ? '<span class="deepdive-badge badge-exclusive" style="font-size: 0.65rem; margin-right: 0.3rem;">✦ New in Forever</span>' : ''}
+                    <span style="font-size: 0.74rem; color: #94a3b8;">${escapeHtml(b.notes || '')}</span>
+                  </td>
+                </tr>
+              `;
+            }).join('')}
+          </tbody>
+        </table>
+      `;
+    }
+
+    window.openHunterPetMasterModal = function(initialFamily) {
+      modal.removeAttribute('hidden');
+      modal.classList.add('open');
+      if (initialFamily && familySelect) {
+        familySelect.value = initialFamily;
+      }
+      renderModalTable();
+    };
+
+    function closeModal() {
+      modal.classList.remove('open');
+      modal.setAttribute('hidden', '');
+    }
+
+    if (closeBtn) closeBtn.onclick = closeModal;
+    modal.onclick = (e) => {
+      if (e.target === modal) closeModal();
+    };
+
+    [searchInput, familySelect, levelSelect, speedSelect, factionSelect].forEach(el => {
+      if (el) {
+        el.oninput = renderModalTable;
+        el.onchange = renderModalTable;
+      }
+    });
   }
 
   function renderDeepDiveSubTabBody(cData, subtab) {
@@ -1350,12 +1532,18 @@ function initClassDeepDives() {
         <div class="pet-filter-bar" style="margin-top: 2rem;">
           <div class="filter-controls-header">
             <div>
-              <h4 style="color: #fff; margin: 0; font-size: 1.05rem;">All 18 Pet Families & Beast Taming Directory</h4>
+              <h4 style="color: #fff; margin: 0; font-size: 1.05rem;">All 18 Pet Families & Beast Taming Directory (502 Beasts)</h4>
               <span style="font-size: 0.8rem; color: #94a3b8;">Filter by role, level progression bracket, zone, or fast attack speeds</span>
             </div>
-            <button class="pet-toggle-all-btn" id="pet-toggle-all-drawers" data-state="collapsed">
-              <span>📍 Expand All Taming Guides</span>
-            </button>
+            <div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap;">
+              <button class="pet-master-directory-btn" id="btn-open-master-beasts" type="button">
+                <span>🐾 Master 502 Beasts Directory Table</span>
+                <span class="pmd-badge">502 Beasts</span>
+              </button>
+              <button class="pet-toggle-all-btn" id="pet-toggle-all-drawers" data-state="collapsed" type="button">
+                <span>📍 Expand All Taming Guides</span>
+              </button>
+            </div>
           </div>
 
           <!-- Role Filter Chips -->
@@ -1381,7 +1569,7 @@ function initClassDeepDives() {
           <div class="pet-search-bar-row">
             <div class="pet-search-input-wrap">
               <span class="pet-search-icon">🔍</span>
-              <input type="text" id="pet-beast-search" class="pet-search-input" placeholder="Search beasts, zones (e.g. Barrens, Badlands, Dun Morogh), or abilities...">
+              <input type="text" id="pet-beast-search" class="pet-search-input" placeholder="Search beasts, zones (e.g. Westfall, Badlands, Mulgore), or abilities...">
             </div>
           </div>
         </div>
@@ -1389,6 +1577,9 @@ function initClassDeepDives() {
         <!-- 18 Families Grid -->
         <div class="pet-families-grid" style="margin-top: 1rem;">
           ${families.map(fam => {
+            const famBeasts = fam.tameLocations || [];
+            const minFamLvl = famBeasts.length > 0 ? Math.min(...famBeasts.map(b => b.minLevel || 60)) : 1;
+            const maxFamLvl = famBeasts.length > 0 ? Math.max(...famBeasts.map(b => b.maxLevel || 1)) : 60;
             const hasNew = !!fam.newAbility;
             const isDmg = fam.damageMod.startsWith('+');
             const isTank = fam.armorMod.startsWith('+') || fam.healthMod.startsWith('+');
@@ -1451,31 +1642,48 @@ function initClassDeepDives() {
 
                 <!-- Where to Tame Drawer -->
                 <button class="tame-toggle-btn" data-target-family="${fam.id}">
-                  <span>📍 Where to Tame (${fam.tameLocations ? fam.tameLocations.length : 0} Beasts)</span>
+                  <span>📍 Where to Tame (${famBeasts.length} Beasts)</span>
                   <span class="tame-toggle-arrow">▾</span>
                 </button>
 
                 <div class="pet-tame-drawer" id="tame-drawer-${fam.id}">
-                  ${(fam.tameLocations || []).map(b => {
-                    const searchStr = `${b.name} ${b.zone} ${b.subzone || ''} ${b.teaches || ''} ${fam.name}`.toLowerCase();
+                  <div class="tame-drawer-header">
+                    <div class="tdh-summary">
+                      <span>🐾 <strong>${famBeasts.length} Beasts</strong> Available</span>
+                      <span class="tdh-levels">Progression: Lvl ${minFamLvl}–${maxFamLvl}</span>
+                    </div>
+                    <button class="tdh-view-all-modal-btn" type="button" data-filter-fam="${escapeHtml(fam.name)}">
+                      <span>🔍 Open in Master Table ↗</span>
+                    </button>
+                  </div>
+                  ${famBeasts.map(b => {
+                    const searchStr = `${b.name} ${b.zone || ''} ${b.subzone || ''} ${b.teaches || ''} ${fam.name}`.toLowerCase();
+                    const zoneDisplay = b.zone ? b.zone : 'WoW Forever Beta Spawn';
                     return `
                       <div class="tame-beast-row" 
-                        data-min-level="${b.minLevel}" 
-                        data-max-level="${b.maxLevel}" 
+                        data-min-level="${b.minLevel || 1}" 
+                        data-max-level="${b.maxLevel || 60}" 
                         data-is-fast="${b.isFast ? 'true' : 'false'}" 
                         data-search-text="${escapeHtml(searchStr)}">
                         <div class="tbr-header">
                           <div class="tbr-name-wrap">
-                            <span class="tbr-name">${escapeHtml(b.name)}</span>
+                            ${b.npcUrl ? `
+                              <a href="${escapeHtml(b.npcUrl)}" target="_blank" rel="noopener" class="tbr-name" style="text-decoration: none; color: #fff; display: inline-flex; align-items: center; gap: 0.25rem;">
+                                ${escapeHtml(b.name)} <span style="font-size: 0.68rem; color: #38bdf8;">↗</span>
+                              </a>
+                            ` : `
+                              <span class="tbr-name">${escapeHtml(b.name)}</span>
+                            `}
+                            ${b.isNew ? '<span class="deepdive-badge badge-exclusive" style="font-size: 0.62rem; padding: 0.05rem 0.3rem;">✦ New</span>' : ''}
                           </div>
                           <div class="tbr-badges">
                             <span class="tbr-level">Lvl ${escapeHtml(b.level)}</span>
-                            <span class="tbr-speed ${b.isFast ? 'fast' : ''}">${escapeHtml(b.speed)}</span>
+                            <span class="tbr-speed ${b.isFast ? 'fast' : ''}">${b.isFast ? '⚡ ' : ''}${escapeHtml(b.speed)}</span>
                             <span class="tbr-faction ${escapeHtml(b.faction)}">${escapeHtml(b.faction)}</span>
                           </div>
                         </div>
                         <div class="tbr-loc">
-                          <span>📍</span> <strong>${escapeHtml(b.zone)}</strong>${b.subzone ? ` — <span>${escapeHtml(b.subzone)}</span>` : ''}
+                          <span>📍</span> <strong>${escapeHtml(zoneDisplay)}</strong>${b.subzone ? ` — <span>${escapeHtml(b.subzone)}</span>` : ''}
                         </div>
                         ${b.teaches ? `
                           <div class="tbr-teaches">
