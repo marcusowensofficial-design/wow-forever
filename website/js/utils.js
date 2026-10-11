@@ -49,7 +49,39 @@ function fallbackCopy(text, onSuccess, onError) {
   }
 }
 
+/**
+ * Non-blocking in-app toast notification
+ */
+function showToast(message, type = 'info', duration = 3000) {
+  if (typeof document === 'undefined') return;
+  let container = document.getElementById('wow-toast-container');
+  if (!container) {
+    container = document.createElement('div');
+    container.id = 'wow-toast-container';
+    container.className = 'wow-toast-container';
+    document.body.appendChild(container);
+  }
+
+  const toast = document.createElement('div');
+  toast.className = `wow-toast-item toast-${type}`;
+  const icon = type === 'success' ? '✓' : type === 'error' ? '✕' : type === 'warning' ? '⚠️' : '⚡';
+  toast.innerHTML = `<span class="wow-toast-icon">${icon}</span><span class="wow-toast-msg">${escapeHtml(message)}</span>`;
+  container.appendChild(toast);
+
+  // Trigger entrance
+  requestAnimationFrame(() => {
+    toast.classList.add('is-visible');
+  });
+
+  setTimeout(() => {
+    toast.classList.remove('is-visible');
+    toast.addEventListener('transitionend', () => toast.remove(), { once: true });
+  }, duration);
+}
+
 if (typeof window !== 'undefined') {
   window.escapeHtml = escapeHtml;
   window.copyTextToClipboard = copyTextToClipboard;
+  window.showToast = showToast;
 }
+

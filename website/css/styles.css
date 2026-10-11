@@ -4309,5 +4309,66 @@ input:checked + .toggle-slider:before {
   transform: translateY(-2px);
 }
 
+/* ==========================================================================
+   TOAST NOTIFICATION COMPONENT
+   ========================================================================== */
+.wow-toast-container {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  z-index: 99999;
+  pointer-events: none;
+}
+
+.wow-toast-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.75rem 1.25rem;
+  background: rgba(10, 15, 29, 0.95);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-sm);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6), 0 0 16px rgba(243, 192, 67, 0.2);
+  color: #fff;
+  font-size: 0.88rem;
+  font-weight: 500;
+  pointer-events: auto;
+  opacity: 0;
+  transform: translateY(12px) scale(0.96);
+  transition: opacity 0.25s cubic-bezier(0.16, 1, 0.3, 1), transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.wow-toast-item.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.wow-toast-item.toast-success {
+  border-color: #10b981;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6), 0 0 16px rgba(16, 185, 129, 0.25);
+}
+
+.wow-toast-item.toast-success .wow-toast-icon {
+  color: #34d399;
+}
+
+.wow-toast-item.toast-error {
+  border-color: #ef4444;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6), 0 0 16px rgba(239, 68, 68, 0.25);
+}
+
+.wow-toast-item.toast-error .wow-toast-icon {
+  color: #f87171;
+}
+
+.wow-toast-icon {
+  font-size: 1.1rem;
+  color: var(--text-gold);
+}
+
+
 
 

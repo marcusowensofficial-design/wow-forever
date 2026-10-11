@@ -8,10 +8,25 @@
 
 function initAtlas() {
   setupAtlasSubNav();
+  checkAtlasHash();
   renderRaresRadar();
   renderBooksTracker();
   renderPvPSchedule();
+
+  window.addEventListener('hashchange', checkAtlasHash);
 }
+
+function checkAtlasHash() {
+  const hash = (window.location.hash || '').toLowerCase();
+  if (hash.startsWith('#atlas')) {
+    const sub = hash.split('/')[1]?.split('#')[0];
+    if (sub) {
+      const btn = document.querySelector(`.atlas-subnav-btn[data-subtab="${sub}"]`);
+      if (btn) btn.click();
+    }
+  }
+}
+
 
 function setupAtlasSubNav() {
   const subNavBtns = document.querySelectorAll('.atlas-subnav-btn');

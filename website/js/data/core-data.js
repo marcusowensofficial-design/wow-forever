@@ -2952,8 +2952,8 @@ const WOW_FOREVER_DATA = {
     },
     {
       "id": "step-20",
-      "text": "Brewfest festivities conclude (Oct 6) • Turn in remaining tokens before vendor departures",
-      "cat": "World Events"
+      "text": "Acquire the Cozy Sleeping Bag in Westfall / Barrens (+3% XP leveling buff) & prep for Hallow's End (Arrives Oct 18)",
+      "cat": "World Events & QoL"
     },
     {
       "id": "step-21",

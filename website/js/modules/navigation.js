@@ -121,14 +121,29 @@ function initNavigation() {
     }
 
     let tabName = hash.split('/')[0].split('#')[0];
-    const professionSlugs = ['professions', 'alchemy', 'blacksmithing', 'enchanting', 'engineering', 'leatherworking', 'tailoring', 'mining', 'herbalism', 'skinning', 'cooking', 'fishing', 'first-aid', 'camping'];
+    const professionSlugs = ['professions', 'alchemy', 'blacksmithing', 'enchanting', 'engineering', 'leatherworking', 'tailoring', 'mining', 'herbalism', 'skinning', 'cooking', 'fishing', 'first-aid'];
     if (professionSlugs.includes(tabName)) {
       tabName = 'professions';
     }
 
+    // Switch tab
     const targetBtn = document.querySelector(`.nav-tab-btn[data-tab="${tabName}"]`);
     if (targetBtn && !targetBtn.classList.contains('active')) {
       targetBtn.click();
+    }
+
+    // Sub-route deep-linking coordination
+    const subRoute = hash.split('/')[1]?.split('#')[0];
+    if (subRoute) {
+      if (tabName === 'deepdives' && typeof window.switchDeepDiveClass === 'function') {
+        window.switchDeepDiveClass(subRoute);
+      } else if (tabName === 'codex') {
+        const codexBtn = document.querySelector(`.codex-nav-btn[data-codex="${subRoute}"]`);
+        if (codexBtn) codexBtn.click();
+      } else if (tabName === 'atlas') {
+        const atlasBtn = document.querySelector(`.atlas-subnav-btn[data-subtab="${subRoute}"]`);
+        if (atlasBtn) atlasBtn.click();
+      }
     }
   }
 

@@ -20,8 +20,26 @@ function initDownrankCalculator() {
   if (!container) return;
   if (container.id !== 'downrank-calculator-container') container.id = 'downrank-calculator-container';
 
+  parseDownrankHash();
+  window.addEventListener('hashchange', () => {
+    if (window.location.hash.toLowerCase().startsWith('#downrank')) {
+      parseDownrankHash();
+      renderDownrankCalculator();
+    }
+  });
+
   renderDownrankCalculator();
 }
+
+function parseDownrankHash() {
+  const hash = (window.location.hash || '').toLowerCase();
+  if (hash.startsWith('#downrank')) {
+    const parts = hash.replace('#downrank', '').split('/').filter(Boolean);
+    if (parts[0]) drState.selectedClass = parts[0];
+    if (parts[1]) drState.selectedSpellId = parts[1];
+  }
+}
+
 
 function renderDownrankCalculator() {
   const container = document.getElementById('downrank-calculator-container') || document.getElementById('downranking-container');

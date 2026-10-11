@@ -210,6 +210,89 @@ function buildSearchIndex() {
     tab: 'overview',
     targetId: 'tab-overview'
   });
+
+  // 10. World Rares (Atlas)
+  if (window.WOW_ATLAS_DATA?.rares) {
+    window.WOW_ATLAS_DATA.rares.forEach(r => {
+      searchIndex.push({
+        title: `${r.name} (Lvl ${r.level}${r.elite ? ' Elite' : ''} Rare)`,
+        category: 'World Rare',
+        icon: '💀',
+        desc: `${r.zone} • Coords: ${r.coords} • Drops: ${r.drops ? r.drops.map(d => d.name).join(', ') : 'Merchant\'s Favor'}`,
+        tab: 'atlas',
+        targetId: 'tab-atlas',
+        atlasSub: 'rares'
+      });
+    });
+  }
+
+  // 11. Hidden Library Books (Atlas)
+  if (window.WOW_ATLAS_DATA?.hiddenBooks) {
+    window.WOW_ATLAS_DATA.hiddenBooks.forEach(b => {
+      searchIndex.push({
+        title: `${b.title} (Library Book)`,
+        category: 'Hidden Book',
+        icon: '📖',
+        desc: `${b.zone} • ${b.coords} • ${b.reward || 'Scholar of the First Realm achievement'}`,
+        tab: 'atlas',
+        targetId: 'tab-atlas',
+        atlasSub: 'books'
+      });
+    });
+  }
+
+  // 12. Professions & Key Recipes
+  if (window.WOW_PROFESSIONS_DATA) {
+    Object.keys(window.WOW_PROFESSIONS_DATA).forEach(slug => {
+      const p = window.WOW_PROFESSIONS_DATA[slug];
+      if (p && p.name) {
+        searchIndex.push({
+          title: `${p.name} (1–300 Guide & Recipes)`,
+          category: 'Profession Hub',
+          icon: '🔨',
+          desc: `Full recipe catalog, leveling guide 1–150/300, reagents, and camp buffs.`,
+          tab: 'professions',
+          targetId: 'tab-professions',
+          profession: slug
+        });
+        if (Array.isArray(p.recipes)) {
+          p.recipes.forEach(rec => {
+            searchIndex.push({
+              title: `${rec.name} (${p.name} Recipe)`,
+              category: 'Profession Recipe',
+              icon: '📜',
+              desc: `Requires ${p.name} (${rec.learn}) • ${rec.source || 'Trainer / Drop'}`,
+              tab: 'professions',
+              targetId: 'tab-professions',
+              profession: slug
+            });
+          });
+        }
+      }
+    });
+  }
+
+  // 13. Camping Stations & Sleeping Bag
+  if (window.WOW_FOREVER_DATA?.campingStations) {
+    window.WOW_FOREVER_DATA.campingStations.forEach(st => {
+      searchIndex.push({
+        title: `${st.name} (Camping Station)`,
+        category: 'Camping Hub',
+        icon: '⛺',
+        desc: `${st.profReq} • ${st.buffDesc || st.effect}`,
+        tab: 'camping',
+        targetId: 'tab-camping'
+      });
+    });
+  }
+  searchIndex.push({
+    title: 'Cozy Sleeping Bag (+3% XP Stacking Buff)',
+    category: 'Leveling & Utility',
+    icon: '⛺',
+    desc: 'Westfall & Barrens discovery questline. Rest for 3 min to gain stacking +3% XP for 2 hours.',
+    tab: 'camping',
+    targetId: 'cozy-sleeping-bag-container'
+  });
 }
 
 function setupSearchModalEvents() {
@@ -363,6 +446,8 @@ window.handleSearchResultClick = function(elem) {
   const bisClass = elem.getAttribute('data-bis-class');
   const bisSpec = elem.getAttribute('data-bis-spec');
   const deepDiveClass = elem.getAttribute('data-deep-dive-class');
+  const profession = elem.getAttribute('data-profession');
+  const atlasSub = elem.getAttribute('data-atlas-sub');
 
   // Switch to target tab
   const tabBtn = document.querySelector(`.nav-tab-btn[data-tab="${tab}"]`);
@@ -384,6 +469,17 @@ window.handleSearchResultClick = function(elem) {
   if (tab === 'codex') {
     const codexBtn = document.querySelector(`.codex-nav-btn[data-codex="${targetId.replace('codex-', '')}"]`);
     if (codexBtn) codexBtn.click();
+  }
+
+  // If atlas subtab
+  if (tab === 'atlas' && atlasSub) {
+    const atlasBtn = document.querySelector(`.atlas-subnav-btn[data-subtab="${atlasSub}"]`);
+    if (atlasBtn) atlasBtn.click();
+  }
+
+  // If profession sub-route
+  if (tab === 'professions' && profession) {
+    window.location.hash = `#professions/${profession}`;
   }
 
   // Scroll to element

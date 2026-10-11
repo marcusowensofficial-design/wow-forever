@@ -16,9 +16,34 @@ function initTierListMaker() {
   loadTierListState();
   renderTierListUI();
   setupTierListEvents();
+
+  window.addEventListener('hashchange', () => {
+    if (window.location.hash.includes('tierlist=')) {
+      loadTierListState();
+      renderTierListUI();
+    }
+  });
 }
 
 function loadTierListState() {
+  const hash = window.location.hash || '';
+  if (hash.includes('tierlist=')) {
+    try {
+      const b64 = hash.split('tierlist=')[1]?.split('&')[0];
+      if (b64) {
+        const decoded = JSON.parse(atob(b64));
+        if (decoded && decoded.alloc) {
+          if (decoded.cat) activeTierCategory = decoded.cat;
+          tierAllocations = decoded.alloc;
+          if (window.showToast) window.showToast('Loaded shared tier list from link!', 'success');
+          return;
+        }
+      }
+    } catch (e) {
+      console.warn('Failed to parse shared tierlist hash', e);
+    }
+  }
+
   const saved = localStorage.getItem(`wow_forever_tierlist_${activeTierCategory}`);
   if (saved) {
     try {
@@ -277,11 +302,19 @@ function setupTierListEvents() {
     if (shareBtn) {
       const state = btoa(JSON.stringify({ cat: activeTierCategory, alloc: tierAllocations }));
       const url = `${window.location.origin}${window.location.pathname}#tierlist=${state}`;
-      navigator.clipboard.writeText(url).then(() => {
-        alert('Tier list link copied to clipboard!');
-      }).catch(() => {
-        prompt('Copy your tier list link:', url);
-      });
+      if (window.copyTextToClipboard) {
+        window.copyTextToClipboard(url, () => {
+          if (window.showToast) window.showToast('Tier list share link copied to clipboard!', 'success');
+        }, () => {
+          prompt('Copy your tier list link:', url);
+        });
+      } else {
+        navigator.clipboard.writeText(url).then(() => {
+          if (window.showToast) window.showToast('Tier list share link copied to clipboard!', 'success');
+        }).catch(() => {
+          prompt('Copy your tier list link:', url);
+        });
+      }
       return;
     }
   });
@@ -390,8 +423,14 @@ function exportTierListImage(copyToClipboard) {
   if (copyToClipboard && navigator.clipboard && window.ClipboardItem) {
     canvas.toBlob(blob => {
       navigator.clipboard.write([new ClipboardItem({ 'image/png': blob })])
-        .then(() => alert('Tier list image copied to clipboard!'))
-        .catch(() => alert('Could not copy image directly. Use "Save Image" instead.'));
+        .then(() => {
+          if (window.showToast) window.showToast('Tier list image copied to clipboard!', 'success');
+          else alert('Tier list image copied to clipboard!');
+        })
+        .catch(() => {
+          if (window.showToast) window.showToast('Could not copy image directly. Use "Save Image" instead.', 'warning');
+          else alert('Could not copy image directly. Use "Save Image" instead.');
+        });
     });
   } else {
     const link = document.createElement('a');

@@ -4041,7 +4041,7 @@ const WOW_FOREVER_DATA = {
     { id: "step-17", text: "Hit the Phase 2 Cap: Level 30! Unlock key 21-point talent capstones", cat: "Phase 2 Milestone" },
     { id: "step-18", text: "Equip & configure ForeverLiquid (v1.3.0) HUD to track XP velocity, Mount Fund ETA & 5/hr lockouts", cat: "Addons & Tools" },
     { id: "step-19", text: "Open ForeverDungeonJournal (v1.0.7) to review cross-faction routes & boss tactics for your next run", cat: "Addons & Tools" },
-    { id: "step-20", text: "Complete daily Brewfest ram runs & acquire festive souvenir steins before the event ends on Oct 6", cat: "World Events" }
+    { id: "step-20", text: "Acquire the Cozy Sleeping Bag in Westfall / Barrens (+3% XP leveling buff) & prep for Hallow's End (Arrives Oct 18)", cat: "World Events & QoL" }
   ]
 };
 

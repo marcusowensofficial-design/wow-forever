@@ -153,6 +153,21 @@ const WOW_TOOLS_DATA = {
             { rank: 4, level: 26, minVal: 245, maxVal: 245, mana: 140, coefForever: 1.0, coefClassic: 1.0 },
             { rank: 5, level: 32, minVal: 315, maxVal: 315, mana: 170, coefForever: 1.0, coefClassic: 1.0 }
           ]
+        },
+        {
+          id: "shadow-word-pain",
+          name: "Shadow Word: Pain",
+          type: "damage",
+          icon: "https://render.worldofwarcraft.com/us/icons/56/spell_shadow_shadowwordpain.jpg",
+          desc: "Instant shadow DoT over 18 seconds (6 ticks). Rank 1 costs only 25 mana for quick mob tagging and pushback.",
+          baseCast: 1.5,
+          ticks: 6,
+          ranks: [
+            { rank: 1, level: 4, minVal: 30, maxVal: 30, mana: 25, coefForever: 1.0, coefClassic: 0.35 },
+            { rank: 2, level: 10, minVal: 66, maxVal: 66, mana: 50, coefForever: 1.0, coefClassic: 0.60 },
+            { rank: 3, level: 18, minVal: 132, maxVal: 132, mana: 95, coefForever: 1.0, coefClassic: 1.0 },
+            { rank: 4, level: 26, minVal: 234, maxVal: 234, mana: 155, coefForever: 1.0, coefClassic: 1.0 }
+          ]
         }
       ],
       druid: [
@@ -186,6 +201,22 @@ const WOW_TOOLS_DATA = {
             { rank: 3, level: 16, minVal: 116, maxVal: 116, mana: 75, coefForever: 0.80, coefClassic: 0.68 },
             { rank: 4, level: 22, minVal: 180, maxVal: 180, mana: 105, coefForever: 0.80, coefClassic: 0.80 },
             { rank: 5, level: 28, minVal: 244, maxVal: 244, mana: 135, coefForever: 0.80, coefClassic: 0.80 }
+          ]
+        },
+        {
+          id: "moonfire",
+          name: "Moonfire",
+          type: "damage",
+          icon: "https://render.worldofwarcraft.com/us/icons/56/spell_nature_starfall.jpg",
+          desc: "Instant arcane strike + DoT. Rank 1 costs just 25 mana to destroy enemy totems or break stealth instantly.",
+          baseCast: 1.5,
+          ticks: 4,
+          ranks: [
+            { rank: 1, level: 4, minVal: 21, maxVal: 21, mana: 25, coefForever: 0.52, coefClassic: 0.18 },
+            { rank: 2, level: 10, minVal: 45, maxVal: 45, mana: 50, coefForever: 0.52, coefClassic: 0.35 },
+            { rank: 3, level: 16, minVal: 84, maxVal: 84, mana: 75, coefForever: 0.52, coefClassic: 0.52 },
+            { rank: 4, level: 22, minVal: 130, maxVal: 130, mana: 105, coefForever: 0.52, coefClassic: 0.52 },
+            { rank: 5, level: 28, minVal: 184, maxVal: 184, mana: 150, coefForever: 0.52, coefClassic: 0.52 }
           ]
         }
       ],
@@ -252,6 +283,20 @@ const WOW_TOOLS_DATA = {
             { rank: 4, level: 20, minVal: 104, maxVal: 114, mana: 85, coefForever: 0.814, coefClassic: 0.814, cast: 2.8 },
             { rank: 5, level: 26, minVal: 145, maxVal: 159, mana: 115, coefForever: 0.814, coefClassic: 0.814, cast: 3.0 }
           ]
+        },
+        {
+          id: "blizzard",
+          name: "Blizzard",
+          type: "damage",
+          icon: "https://render.worldofwarcraft.com/us/icons/56/spell_frost_icestorm.jpg",
+          desc: "Channeled AoE frost storm over 8 seconds. Rank 1 costs only 320 mana for 75% Improved Blizzard snare across mob packs.",
+          baseCast: 8.0,
+          ticks: 8,
+          ranks: [
+            { rank: 1, level: 20, minVal: 200, maxVal: 200, mana: 320, coefForever: 0.33, coefClassic: 0.33 },
+            { rank: 2, level: 28, minVal: 352, maxVal: 352, mana: 520, coefForever: 0.33, coefClassic: 0.33 },
+            { rank: 3, level: 36, minVal: 520, maxVal: 520, mana: 720, coefForever: 0.33, coefClassic: 0.33 }
+          ]
         }
       ],
       warlock: [
@@ -268,6 +313,20 @@ const WOW_TOOLS_DATA = {
             { rank: 3, level: 12, minVal: 52, maxVal: 64, mana: 70, coefForever: 0.714, coefClassic: 0.510, cast: 2.8 },
             { rank: 4, level: 20, minVal: 106, maxVal: 124, mana: 110, coefForever: 0.857, coefClassic: 0.857, cast: 3.0 },
             { rank: 5, level: 28, minVal: 169, maxVal: 195, mana: 160, coefForever: 0.857, coefClassic: 0.857, cast: 3.0 }
+          ]
+        },
+        {
+          id: "life-tap",
+          name: "Life Tap",
+          type: "heal",
+          icon: "https://render.worldofwarcraft.com/us/icons/56/spell_shadow_burningspirit.jpg",
+          desc: "Instant conversion of Health to Mana. Rank 1 sacrifices minimal HP (30 HP) into 30 Mana with zero threat overhead.",
+          baseCast: 1.5,
+          ranks: [
+            { rank: 1, level: 6, minVal: 30, maxVal: 30, mana: 1, coefForever: 0.80, coefClassic: 0.35 },
+            { rank: 2, level: 16, minVal: 75, maxVal: 75, mana: 1, coefForever: 0.80, coefClassic: 0.80 },
+            { rank: 3, level: 26, minVal: 140, maxVal: 140, mana: 1, coefForever: 0.80, coefClassic: 0.80 },
+            { rank: 4, level: 36, minVal: 220, maxVal: 220, mana: 1, coefForever: 0.80, coefClassic: 0.80 }
           ]
         }
       ]

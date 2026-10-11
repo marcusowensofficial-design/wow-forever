@@ -23,6 +23,20 @@ function initCodex() {
     });
   });
 
+  function checkCodexHash() {
+    const hash = (window.location.hash || '').toLowerCase();
+    if (hash.startsWith('#codex')) {
+      const sub = hash.split('/')[1]?.split('#')[0];
+      if (sub) {
+        const btn = document.querySelector(`.codex-nav-btn[data-codex="${sub}"]`);
+        if (btn) btn.click();
+      }
+    }
+  }
+
+  checkCodexHash();
+  window.addEventListener('hashchange', checkCodexHash);
+
   renderClassCombos();
   renderDungeons(WOW_FOREVER_DATA.dungeonsAndRaids);
   renderDungeonTimelineSlider();

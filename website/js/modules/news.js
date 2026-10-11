@@ -63,7 +63,11 @@ function initNewsHub() {
       applyNewsFilters();
       customForm.reset();
 
-      alert('Intel logged and saved to your personal local records!');
+      if (window.showToast) {
+        window.showToast('Intel logged and saved to your personal records!', 'success');
+      } else {
+        alert('Intel logged and saved to your personal local records!');
+      }
     });
   }
 
