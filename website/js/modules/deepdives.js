@@ -359,28 +359,149 @@ function initClassDeepDives() {
       });
     }
 
-    // Attach Hunter Pet Family Filter Listeners
-    contentContainer.querySelectorAll('.pet-family-filter-btn').forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        e.preventDefault();
-        const filter = btn.getAttribute('data-pet-filter') || 'all';
-        contentContainer.querySelectorAll('.pet-family-filter-btn').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        contentContainer.querySelectorAll('.pet-family-card').forEach(card => {
-          const role = card.getAttribute('data-family-role') || '';
-          const hasNew = card.getAttribute('data-has-new') === 'true';
-          if (filter === 'all' || 
-              (filter === 'damage' && role === 'damage') || 
-              (filter === 'tank' && role === 'tank') || 
-              (filter === 'utility' && role === 'utility') ||
-              (filter === 'new' && hasNew)) {
-            card.style.display = 'flex';
+    // Attach Hunter Pet Stable Filters, Search & Taming Guide Drawer Listeners
+    const petSearchInput = contentContainer.querySelector('#pet-beast-search');
+    const roleFilterBtns = contentContainer.querySelectorAll('.pet-family-filter-btn');
+    const levelFilterBtns = contentContainer.querySelectorAll('.pet-level-filter-btn');
+    const toggleAllBtn = contentContainer.querySelector('#pet-toggle-all-drawers');
+    const familyCards = contentContainer.querySelectorAll('.pet-family-card');
+
+    let currentRole = 'all';
+    let currentLevel = 'all';
+    let currentQuery = '';
+
+    function applyPetFilters() {
+      familyCards.forEach(card => {
+        const role = card.getAttribute('data-family-role') || '';
+        const hasNew = card.getAttribute('data-has-new') === 'true';
+
+        // Check role match
+        const matchesRole = (currentRole === 'all') ||
+          (currentRole === 'damage' && role === 'damage') ||
+          (currentRole === 'tank' && role === 'tank') ||
+          (currentRole === 'utility' && role === 'utility') ||
+          (currentRole === 'new' && hasNew);
+
+        // Check beast rows within this card
+        const beastRows = card.querySelectorAll('.tame-beast-row');
+        let matchingBeastsCount = 0;
+
+        beastRows.forEach(row => {
+          const minLvl = parseInt(row.getAttribute('data-min-level'), 10) || 1;
+          const maxLvl = parseInt(row.getAttribute('data-max-level'), 10) || 60;
+          const isFast = row.getAttribute('data-is-fast') === 'true';
+          const searchText = row.getAttribute('data-search-text') || '';
+
+          // Level match
+          let matchesLevel = false;
+          if (currentLevel === 'all') {
+            matchesLevel = true;
+          } else if (currentLevel === '10-19') {
+            matchesLevel = (minLvl <= 19 && maxLvl >= 10) || (minLvl < 10 && maxLvl >= 10);
+          } else if (currentLevel === '20-30') {
+            matchesLevel = (minLvl <= 30 && maxLvl >= 20);
+          } else if (currentLevel === '30plus') {
+            matchesLevel = (maxLvl > 30);
+          } else if (currentLevel === 'fast') {
+            matchesLevel = isFast;
+          }
+
+          // Search match
+          const matchesSearch = !currentQuery || searchText.includes(currentQuery);
+
+          if (matchesLevel && matchesSearch) {
+            row.style.display = 'flex';
+            matchingBeastsCount++;
           } else {
-            card.style.display = 'none';
+            row.style.display = 'none';
           }
         });
+
+        // Family visibility
+        const isFiltering = (currentLevel !== 'all') || (currentQuery.length > 0);
+        if (matchesRole && (!isFiltering || matchingBeastsCount > 0)) {
+          card.style.display = 'flex';
+          // Auto-open drawer if user is actively searching or filtering by level/speed so they see results immediately
+          if (isFiltering) {
+            const drawer = card.querySelector('.pet-tame-drawer');
+            const toggleBtn = card.querySelector('.tame-toggle-btn');
+            if (drawer && toggleBtn) {
+              drawer.classList.add('open');
+              toggleBtn.classList.add('open');
+            }
+          }
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // Role filter clicks
+    roleFilterBtns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        currentRole = btn.getAttribute('data-pet-filter') || 'all';
+        roleFilterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        applyPetFilters();
       });
     });
+
+    // Level filter clicks
+    levelFilterBtns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        currentLevel = btn.getAttribute('data-level-filter') || 'all';
+        levelFilterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        applyPetFilters();
+      });
+    });
+
+    // Search input
+    if (petSearchInput) {
+      petSearchInput.addEventListener('input', (e) => {
+        currentQuery = (e.target.value || '').trim().toLowerCase();
+        applyPetFilters();
+      });
+    }
+
+    // Toggle individual drawer
+    contentContainer.querySelectorAll('.tame-toggle-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const familyId = btn.getAttribute('data-target-family');
+        const drawer = contentContainer.querySelector(`#tame-drawer-${familyId}`);
+        if (drawer) {
+          const isOpen = drawer.classList.contains('open');
+          if (isOpen) {
+            drawer.classList.remove('open');
+            btn.classList.remove('open');
+          } else {
+            drawer.classList.add('open');
+            btn.classList.add('open');
+          }
+        }
+      });
+    });
+
+    // Toggle All drawers
+    if (toggleAllBtn) {
+      toggleAllBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const isCollapsed = toggleAllBtn.getAttribute('data-state') === 'collapsed';
+        contentContainer.querySelectorAll('.pet-tame-drawer').forEach(d => {
+          if (isCollapsed) d.classList.add('open');
+          else d.classList.remove('open');
+        });
+        contentContainer.querySelectorAll('.tame-toggle-btn').forEach(b => {
+          if (isCollapsed) b.classList.add('open');
+          else b.classList.remove('open');
+        });
+        toggleAllBtn.setAttribute('data-state', isCollapsed ? 'expanded' : 'collapsed');
+        toggleAllBtn.innerHTML = isCollapsed ? '<span>📍 Collapse All Taming Guides</span>' : '<span>📍 Expand All Taming Guides</span>';
+      });
+    }
   }
 
   function renderDeepDiveSubTabBody(cData, subtab) {
@@ -1225,18 +1346,43 @@ function initClassDeepDives() {
           </div>
         </div>
 
-        <!-- Filter Controls -->
+        <!-- Filter Controls & Level Directory -->
         <div class="pet-filter-bar" style="margin-top: 2rem;">
           <div class="filter-controls-header">
-            <h4 style="color: #fff; margin: 0; font-size: 1.05rem;">All 18 Pet Families Matrix</h4>
-            <span style="font-size: 0.8rem; color: #94a3b8;">Filter by combat specialization & role modifiers</span>
+            <div>
+              <h4 style="color: #fff; margin: 0; font-size: 1.05rem;">All 18 Pet Families & Beast Taming Directory</h4>
+              <span style="font-size: 0.8rem; color: #94a3b8;">Filter by role, level progression bracket, zone, or fast attack speeds</span>
+            </div>
+            <button class="pet-toggle-all-btn" id="pet-toggle-all-drawers" data-state="collapsed">
+              <span>📍 Expand All Taming Guides</span>
+            </button>
           </div>
+
+          <!-- Role Filter Chips -->
           <div class="pet-filter-chips">
             <button class="filter-chip pet-family-filter-btn active" data-pet-filter="all">All Families (18)</button>
             <button class="filter-chip pet-family-filter-btn" data-pet-filter="damage">Offense & DPS (+Dmg)</button>
             <button class="filter-chip pet-family-filter-btn" data-pet-filter="tank">Tank & Survival (+Armor/HP)</button>
             <button class="filter-chip pet-family-filter-btn" data-pet-filter="utility">Crowd Control & Debuffs</button>
             <button class="filter-chip pet-family-filter-btn" data-pet-filter="new">✦ New / Reworked Abilities (9)</button>
+          </div>
+
+          <!-- Level Progression & Speed Chips -->
+          <div class="pet-level-chips">
+            <span style="font-size: 0.72rem; color: #94a3b8; align-self: center; font-weight: 600; margin-right: 0.2rem;">Level Bracket:</span>
+            <button class="pet-level-filter-btn active" data-level-filter="all">All Levels</button>
+            <button class="pet-level-filter-btn" data-level-filter="10-19">Lvl 10–19 (Starters)</button>
+            <button class="pet-level-filter-btn" data-level-filter="20-30">Lvl 20–30 (Beta Cap)</button>
+            <button class="pet-level-filter-btn" data-level-filter="30plus">Lvl 30+ (Endgame)</button>
+            <button class="pet-level-filter-btn" data-level-filter="fast">⚡ Fast Swing (≤1.6s)</button>
+          </div>
+
+          <!-- Live Search Bar -->
+          <div class="pet-search-bar-row">
+            <div class="pet-search-input-wrap">
+              <span class="pet-search-icon">🔍</span>
+              <input type="text" id="pet-beast-search" class="pet-search-input" placeholder="Search beasts, zones (e.g. Barrens, Badlands, Dun Morogh), or abilities...">
+            </div>
           </div>
         </div>
 
@@ -1301,6 +1447,47 @@ function initClassDeepDives() {
                   <div class="family-ability-chips">
                     ${(fam.abilities || []).map(ab => `<span class="ability-mini-chip">${escapeHtml(ab)}</span>`).join('')}
                   </div>
+                </div>
+
+                <!-- Where to Tame Drawer -->
+                <button class="tame-toggle-btn" data-target-family="${fam.id}">
+                  <span>📍 Where to Tame (${fam.tameLocations ? fam.tameLocations.length : 0} Beasts)</span>
+                  <span class="tame-toggle-arrow">▾</span>
+                </button>
+
+                <div class="pet-tame-drawer" id="tame-drawer-${fam.id}">
+                  ${(fam.tameLocations || []).map(b => {
+                    const searchStr = `${b.name} ${b.zone} ${b.subzone || ''} ${b.teaches || ''} ${fam.name}`.toLowerCase();
+                    return `
+                      <div class="tame-beast-row" 
+                        data-min-level="${b.minLevel}" 
+                        data-max-level="${b.maxLevel}" 
+                        data-is-fast="${b.isFast ? 'true' : 'false'}" 
+                        data-search-text="${escapeHtml(searchStr)}">
+                        <div class="tbr-header">
+                          <div class="tbr-name-wrap">
+                            <span class="tbr-name">${escapeHtml(b.name)}</span>
+                          </div>
+                          <div class="tbr-badges">
+                            <span class="tbr-level">Lvl ${escapeHtml(b.level)}</span>
+                            <span class="tbr-speed ${b.isFast ? 'fast' : ''}">${escapeHtml(b.speed)}</span>
+                            <span class="tbr-faction ${escapeHtml(b.faction)}">${escapeHtml(b.faction)}</span>
+                          </div>
+                        </div>
+                        <div class="tbr-loc">
+                          <span>📍</span> <strong>${escapeHtml(b.zone)}</strong>${b.subzone ? ` — <span>${escapeHtml(b.subzone)}</span>` : ''}
+                        </div>
+                        ${b.teaches ? `
+                          <div class="tbr-teaches">
+                            <span>📖</span> <span>${escapeHtml(b.teaches)}</span>
+                          </div>
+                        ` : ''}
+                        ${b.notes ? `
+                          <div class="tbr-notes">${escapeHtml(b.notes)}</div>
+                        ` : ''}
+                      </div>
+                    `;
+                  }).join('')}
                 </div>
               </div>
             `;

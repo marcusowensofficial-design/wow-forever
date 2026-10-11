@@ -989,7 +989,16 @@ const HUNTER_PETS_DATA = {
         cd: "30 sec CD",
         desc: "Emits a piercing shriek, inflicting 33 to 39 Nature damage (Rank 2) and increasing the casting time of all spells by 60% for 30 sec."
       },
-      highlight: "Potent anti-caster pet; 60% cast slow shuts down enemy healers and casters in PvP."
+      highlight: "Potent anti-caster pet; 60% cast slow shuts down enemy healers and casters in PvP.",
+      tameLocations: [
+        { name: "Mangy Duskbat", level: "10–11", minLevel: 10, maxLevel: 11, zone: "Tirisfal Glades", subzone: "Northern woods & Garren's Haunt", speed: "2.0s", faction: "Horde", teaches: "Bite 1", notes: "Earliest Horde bat tame at level 10" },
+        { name: "Dread Flyer", level: "12–13", minLevel: 12, maxLevel: 13, zone: "Silverpine Forest", subzone: "Along the northern road", speed: "2.0s", faction: "Horde", teaches: "Bite 2", notes: "Teaches Bite Rank 2" },
+        { name: "Resonating Bat", level: "18–20", minLevel: 18, maxLevel: 20, zone: "Wailing Caverns / Hillsbrad", subzone: "Caverns entrance & Durnholde foothills", speed: "2.0s", faction: "Contested", teaches: "Sonic Blast 1, Bite 3", notes: "Teaches Sonic Blast Rank 1" },
+        { name: "Roosting Duskbat", level: "22–24", minLevel: 22, maxLevel: 24, zone: "Riverglades", subzone: "High tree canopies", speed: "2.0s", faction: "Contested", teaches: "Sonic Blast 2", notes: "✦ Forever new Riverglades spawn" },
+        { name: "Vile Bat", level: "32–34", minLevel: 32, maxLevel: 34, zone: "Stranglethorn Vale", subzone: "Ruins of Zul'Kunda & Kurzen jungle", speed: "2.0s", faction: "Contested", teaches: "Sonic Blast 3, Dive 1", notes: "Teaches Dive 1 & Sonic Blast 3" },
+        { name: "Guano-Covered Bat", level: "42–44", minLevel: 42, maxLevel: 44, zone: "Zul'Farrak / Feralas", subzone: "Ruins of Isildien & ZF interior", speed: "2.0s", faction: "Contested", teaches: "Sonic Blast 4, Dive 2", notes: "Mid-40s progression tame" },
+        { name: "Dreadbeak", level: "50–52", minLevel: 50, maxLevel: 52, zone: "Eastern Plaguelands", subzone: "Noxious Glade & Zul'Mashar", speed: "2.0s", faction: "Contested", teaches: "Sonic Blast 5, Dive 3", notes: "Highest rank Sonic Blast" }
+      ]
     },
     {
       id: "bear",
@@ -999,7 +1008,7 @@ const HUNTER_PETS_DATA = {
       armorMod: "+5%",
       healthMod: "+8%",
       diet: ["Meat", "Fish", "Cheese", "Bread", "Fungus", "Fruit"],
-      fastestTame: "1.60s (Mystmane, Mulgore)",
+      fastestTame: "1.60s (Mystmane, Mulgore / Zephras)",
       abilities: ["Swipe (Rank 1-5)", "Dash (Rank 1-3)", "Bite (Rank 1-8)", "Claw (Rank 1-8)"],
       newAbility: {
         name: "Swipe & Dash",
@@ -1009,7 +1018,19 @@ const HUNTER_PETS_DATA = {
         cd: "5 sec CD",
         desc: "Swipe swipes 3 nearby enemies for cleave damage every 5 seconds. Bears also learn Dash for rapid target closing."
       },
-      highlight: "Unmatched multi-target tank; Swipe cleaves 3 targets and holds dungeon pack agro."
+      highlight: "Unmatched multi-target tank; Swipe cleaves 3 targets and holds dungeon pack agro.",
+      tameLocations: [
+        { name: "Young Forest Bear", level: "8–9", minLevel: 8, maxLevel: 9, zone: "Elwynn Forest", subzone: "Eastvale Logging Camp", speed: "2.0s", faction: "Alliance", teaches: "Claw 2", notes: "Alliance starter bear" },
+        { name: "Dun Morogh Black Bear", level: "10–12", minLevel: 10, maxLevel: 12, zone: "Dun Morogh", subzone: "Ironband's Compound & Gol'Bolar", speed: "2.0s", faction: "Alliance", teaches: "Claw 2, Swipe 1", notes: "Immediate level 10 Dwarf/Gnome tame" },
+        { name: "Black Bear Patriarch", level: "16–17", minLevel: 16, maxLevel: 17, zone: "Loch Modan", subzone: "The Farstrider Lodge perimeter", speed: "2.0s", faction: "Alliance", teaches: "Claw 3, Swipe 1", notes: "Teaches Claw 3" },
+        { name: "Mystmane", level: "16", minLevel: 16, maxLevel: 16, zone: "Mulgore / Zephras Isle", subzone: "Shadowgale Forest (Rare)", speed: "1.6s", isFast: true, faction: "Contested", teaches: "Swipe 1, Claw 3, Savage Rend", notes: "⚡ Fastest Bear in the Game (1.6s swing speed!)" },
+        { name: "Ol' Sooty", level: "20", minLevel: 20, maxLevel: 20, zone: "Loch Modan", subzone: "Grizzled Den cave (Rare)", speed: "2.0s", faction: "Alliance", teaches: "Swipe 1, Bite 3", notes: "Named quest rare with high stamina" },
+        { name: "Ashenvale Bear", level: "21–22", minLevel: 21, maxLevel: 22, zone: "Ashenvale", subzone: "Mystral Lake and Raynewood", speed: "2.0s", faction: "Contested", teaches: "Swipe 1", notes: "Great level 20+ tank" },
+        { name: "Elder Ashenvale Bear", level: "25–26", minLevel: 25, maxLevel: 26, zone: "Ashenvale", subzone: "Silverwind Refuge", speed: "2.0s", faction: "Contested", teaches: "Swipe 2, Claw 4", notes: "Teaches Claw 4 & Swipe 2" },
+        { name: "Gray Bear", level: "30–31", minLevel: 30, maxLevel: 31, zone: "Hillsbrad Foothills", subzone: "Hillsbrad plateau near Durnholde", speed: "2.0s", faction: "Contested", teaches: "Swipe 2, Dash 1", notes: "Teaches Dash Rank 1 in Forever" },
+        { name: "Ironfur Patriarch", level: "48–49", minLevel: 48, maxLevel: 49, zone: "Feralas", subzone: "Grimtotem Post & Feralas wilds", speed: "2.0s", faction: "Contested", teaches: "Claw 7, Swipe 4, Dash 2", notes: "Teaches Claw 7 & Dash 2" },
+        { name: "Elder Shardtooth", level: "57–58", minLevel: 57, maxLevel: 58, zone: "Winterspring", subzone: "Owl Wing Thicket perimeter", speed: "2.0s", faction: "Contested", teaches: "Claw 8, Swipe 5", notes: "Teaches Claw 8 & max Swipe" }
+      ]
     },
     {
       id: "bird-of-prey",
@@ -1028,7 +1049,18 @@ const HUNTER_PETS_DATA = {
         cd: "1 min CD",
         desc: "Grabs an enemy's weapon with its talons, causing 20 to 24 damage and physically disarming them for 4 sec."
       },
-      highlight: "Disarm specialist; strips melee weapons from warriors and rogues to neutralize burst."
+      highlight: "Disarm specialist; strips melee weapons from warriors and rogues to neutralize burst.",
+      tameLocations: [
+        { name: "Strigid Hunter", level: "8–9", minLevel: 8, maxLevel: 9, zone: "Teldrassil", subzone: "Dolanaar outskirts", speed: "2.0s", faction: "Alliance", teaches: "Claw 2", notes: "Night Elf starter owl" },
+        { name: "Strigid Screecher", level: "10–11", minLevel: 10, maxLevel: 11, zone: "Teldrassil", subzone: "Starbreeze Village perimeter", speed: "2.0s", faction: "Alliance", teaches: "Mine! 1, Claw 2", notes: "Immediate level 10 Alliance owl" },
+        { name: "Nightscreech", level: "10", minLevel: 10, maxLevel: 10, zone: "Teldrassil", subzone: "Across from leatherworking trainer (Rare)", speed: "2.0s", faction: "Alliance", teaches: "Mine! 1", notes: "✦ Rare Hellhoot owl model in Forever" },
+        { name: "Jai'vhanel", level: "12", minLevel: 12, maxLevel: 12, zone: "Darkshore", subzone: "Cliffside near Auberdine (2m respawn)", speed: "2.0s", faction: "Alliance", teaches: "Mine! 1, Claw 2", notes: "✦ Unique pure black owl model" },
+        { name: "Greater Fleshripper", level: "16–17", minLevel: 16, maxLevel: 17, zone: "Westfall", subzone: "Sentinel Hill & coastline", speed: "2.0s", faction: "Alliance", teaches: "Mine! 1", notes: "Early Alliance utility pet" },
+        { name: "Shadowgale Shrieker", level: "22–24", minLevel: 22, maxLevel: 24, zone: "Zephras Isle", subzone: "Shadowgale Peaks", speed: "2.0s", faction: "Contested", teaches: "Mine! 2", notes: "✦ Forever new island tame" },
+        { name: "Ironbeak Hunter", level: "50–51", minLevel: 50, maxLevel: 51, zone: "Felwood", subzone: "Irontree Woods & Ruins of Constellas", speed: "2.0s", faction: "Contested", teaches: "Dive 3, Mine! 5", notes: "Teaches Dive 3" },
+        { name: "Olm the Wise", level: "52", minLevel: 52, maxLevel: 52, zone: "Felwood", subzone: "South of Irontree Woods (Rare)", speed: "2.0s", faction: "Contested", teaches: "Dive 3, Mine! 5", notes: "Legendary translucent white owl model" },
+        { name: "Winterspring Screecher", level: "57–59", minLevel: 57, maxLevel: 59, zone: "Winterspring", subzone: "Owl Wing Thicket & Mazthoril", speed: "2.0s", faction: "Contested", teaches: "Claw 8, Mine! 5", notes: "Teaches Claw 8" }
+      ]
     },
     {
       id: "boar",
@@ -1047,7 +1079,20 @@ const HUNTER_PETS_DATA = {
         cd: "25 sec CD",
         desc: "Charges an enemy, immobilizes it for 1 sec, and adds up to +204 melee attack power (Rank 3) to the boar's next attack."
       },
-      highlight: "Omnivorous levelling king; eats anything, root-charges targets, and has high natural armor."
+      highlight: "Omnivorous levelling king; eats anything, root-charges targets, and has high natural armor.",
+      tameLocations: [
+        { name: "Mottled Boar", level: "1–2", minLevel: 1, maxLevel: 2, zone: "Durotar", subzone: "Valley of Trials", speed: "2.0s", faction: "Horde", teaches: "Charge 1", notes: "Orc/Troll starter boar" },
+        { name: "Small Crag Boar", level: "3", minLevel: 3, maxLevel: 3, zone: "Dun Morogh", subzone: "Coldridge Valley", speed: "2.0s", faction: "Alliance", teaches: "Charge 1", notes: "Dwarf starter boar" },
+        { name: "Battleboar", level: "3–4", minLevel: 3, maxLevel: 4, zone: "Mulgore", subzone: "Camp Narache", speed: "2.0s", faction: "Horde", teaches: "Charge 1", notes: "Tauren starter boar" },
+        { name: "Stonetusk Boar", level: "5–6", minLevel: 5, maxLevel: 6, zone: "Elwynn Forest", subzone: "Northshire Valley", speed: "2.0s", faction: "Alliance", teaches: "Charge 1", notes: "Human starter boar" },
+        { name: "Crag Boar", level: "10–11", minLevel: 10, maxLevel: 11, zone: "Loch Modan", subzone: "The Loch shoreline", speed: "2.0s", faction: "Alliance", teaches: "Charge 1", notes: "Immediate level 10 tame" },
+        { name: "Young Goretusk", level: "12–13", minLevel: 12, maxLevel: 13, zone: "Westfall", subzone: "Furlbrow's Pumpkin Farm", speed: "2.0s", faction: "Alliance", teaches: "Charge 2", notes: "Teaches Charge Rank 2" },
+        { name: "Goretusk", level: "14–15", minLevel: 14, maxLevel: 15, zone: "Westfall", subzone: "Saldean's Farm & Sentinel Hill", speed: "2.0s", faction: "Alliance", teaches: "Charge 2", notes: "Teaches Charge Rank 2" },
+        { name: "Bellygrub", level: "24", minLevel: 24, maxLevel: 24, zone: "Redridge Mountains", subzone: "Lakeridge Highway (Rare)", speed: "2.0s", faction: "Alliance", teaches: "Charge 3", notes: "Teaches Charge Rank 3 (+204 AP)" },
+        { name: "Raging Agam'ar", level: "24–25", minLevel: 24, maxLevel: 25, zone: "Razorfen Kraul", subzone: "Dungeon entrance & exterior", speed: "2.0s", faction: "Contested", teaches: "Charge 3", notes: "Teaches Charge Rank 3" },
+        { name: "Grunter", level: "50", minLevel: 50, maxLevel: 50, zone: "Blasted Lands", subzone: "Altar of Storms road (Rare)", speed: "2.0s", faction: "Contested", teaches: "Charge 5, Dash 3", notes: "Teaches Charge 5 & Dash 3" },
+        { name: "Plagued Swine", level: "60", minLevel: 60, maxLevel: 60, zone: "Eastern Plaguelands", subzone: "Corin's Crossing & pestilent plains", speed: "2.0s", faction: "Contested", teaches: "Charge 6", notes: "Max Rank Charge 6 (+490 AP)" }
+      ]
     },
     {
       id: "carrion-bird",
@@ -1057,6 +1102,7 @@ const HUNTER_PETS_DATA = {
       armorMod: "+5%",
       healthMod: "0%",
       diet: ["Meat", "Fish"],
+      fastestTame: "1.20s (Spiteflayer Lvl 52, Blasted Lands)",
       abilities: ["Demoralizing Screech (Rank 1-4)", "Dive (Rank 1-3)", "Bite (Rank 1-8)", "Claw (Rank 1-8)"],
       newAbility: {
         name: "Demoralizing Screech",
@@ -1066,7 +1112,17 @@ const HUNTER_PETS_DATA = {
         cd: "10 sec CD",
         desc: "Blasts an enemy for damage and lowers the melee attack power of all enemies in melee range by 111 (Rank 2) for 30 sec."
       },
-      highlight: "AoE debuff utility; Screech reduces entire monster packs' melee damage by 111 AP."
+      highlight: "AoE debuff utility; Screech reduces entire monster packs' melee damage by 111 AP.",
+      tameLocations: [
+        { name: "Greater Fleshripper", level: "16–17", minLevel: 16, maxLevel: 17, zone: "Westfall", subzone: "Dagger Hills & Moonbrook road", speed: "2.0s", faction: "Alliance", teaches: "Demoralizing Screech 1", notes: "Teaches Demoralizing Screech 1 (-63 AP)" },
+        { name: "Salt Flats Vulture", level: "32–34", minLevel: 32, maxLevel: 34, zone: "Thousand Needles", subzone: "Shimmering Flats race track", speed: "2.0s", faction: "Contested", teaches: "Demoralizing Screech 2", notes: "Teaches Demoralizing Screech 2 (-111 AP)" },
+        { name: "Young Mesa Buzzard", level: "31–32", minLevel: 31, maxLevel: 32, zone: "Arathi Highlands", subzone: "Witherbark Village & Northfold Manor", speed: "2.0s", faction: "Contested", teaches: "Dive 1", notes: "Teaches Dive Rank 1" },
+        { name: "Mesa Buzzard", level: "34–35", minLevel: 34, maxLevel: 35, zone: "Arathi Highlands", subzone: "Boulderfist Hall hills", speed: "2.0s", faction: "Contested", teaches: "Dive 1", notes: "Teaches Dive Rank 1" },
+        { name: "Roc", level: "41–43", minLevel: 41, maxLevel: 43, zone: "Tanaris", subzone: "Noonshade Ruins & desert dunes", speed: "2.0s", faction: "Contested", teaches: "Dive 2", notes: "Teaches Dive Rank 2" },
+        { name: "Carrion Vulture", level: "50–52", minLevel: 50, maxLevel: 52, zone: "Western Plaguelands", subzone: "Sorrow Hill & The Writhing Haunt", speed: "2.0s", faction: "Contested", teaches: "Dive 3", notes: "Teaches Dive Rank 3" },
+        { name: "Spiteflayer", level: "52", minLevel: 52, maxLevel: 52, zone: "Blasted Lands", subzone: "Red Reaches canyon (Rare)", speed: "1.2s", isFast: true, faction: "Contested", teaches: "Dive 3, Screech 3", notes: "⚡ Fastest Carrion Bird in the Game (1.2s swing speed!)" },
+        { name: "Zaricotl", level: "55", minLevel: 55, maxLevel: 55, zone: "Badlands", subzone: "Dustbowl cliffs (Rare)", speed: "2.0s", faction: "Contested", teaches: "Demoralizing Screech 3", notes: "Legendary fiery bird model" }
+      ]
     },
     {
       id: "cat",
@@ -1076,7 +1132,7 @@ const HUNTER_PETS_DATA = {
       armorMod: "0%",
       healthMod: "-2%",
       diet: ["Meat", "Fish"],
-      fastestTame: "1.00s (Broken Tooth Lvl 37) • 1.30s (Humar the Pridelord Lvl 23)",
+      fastestTame: "1.00s (Broken Tooth Lvl 37) • 1.20s (The Rake Lvl 10) • 1.30s (Humar Lvl 23)",
       abilities: ["Prowl (Rank 1-3)", "Dash (Rank 1-3)", "Bite (Rank 1-8)", "Claw (Rank 1-8)"],
       newAbility: {
         name: "Prowl & Lethal Speed",
@@ -1086,7 +1142,21 @@ const HUNTER_PETS_DATA = {
         cd: "10 sec CD",
         desc: "Stealth ambush with +50% opener damage bonus. Broken Tooth's 1.0s swing speed inflicts severe spell-pushback."
       },
-      highlight: "Maximum single-target damage output; essential for Marksmanship & BM raid DPS."
+      highlight: "Maximum single-target damage output; essential for Marksmanship & BM raid DPS.",
+      tameLocations: [
+        { name: "The Rake", level: "10", minLevel: 10, maxLevel: 10, zone: "Mulgore", subzone: "North of Bloodhoof Village near 45, 16 (Rare)", speed: "1.2s", isFast: true, faction: "Horde", teaches: "Claw 2", notes: "⚡ Fastest Early Tame in Game! 1.2s swing speed at level 10" },
+        { name: "Ghostfang", level: "10", minLevel: 10, maxLevel: 10, zone: "Dun Morogh", subzone: "Near Wetlands tunnel: 74, 64 & 80, 46 (Rare)", speed: "2.0s", faction: "Alliance", teaches: "Claw 2", notes: "✦ Rare Blue Lynx Model added in Forever (30m respawn)" },
+        { name: "Savannah Huntress", level: "11–12", minLevel: 11, maxLevel: 12, zone: "The Barrens", subzone: "Crossroads perimeter", speed: "1.3s", isFast: true, faction: "Horde", teaches: "Bite 2", notes: "⚡ Very fast 1.3s attack speed, ubiquitous in Barrens" },
+        { name: "Dishu", level: "13", minLevel: 13, maxLevel: 13, zone: "The Barrens", subzone: "South of Crossroads near 48, 41 (Rare)", speed: "1.3s", isFast: true, faction: "Horde", teaches: "Bite 2", notes: "⚡ Rare spotted cheetah with 1.3s swing speed" },
+        { name: "Feral Mountain Lion", level: "18–19", minLevel: 18, maxLevel: 19, zone: "Hillsbrad Foothills", subzone: "Tarren Mill foothills", speed: "1.3s", isFast: true, faction: "Contested", teaches: "Bite 3", notes: "⚡ 1.3s attack speed mountain cat" },
+        { name: "Humar the Pridelord", level: "23", minLevel: 23, maxLevel: 23, zone: "The Barrens", subzone: "Under the large tree north of Ratchet (62, 32)", speed: "1.3s", isFast: true, faction: "Horde", teaches: "Bite 4", notes: "⚡ Legendary pitch-black mane lion, 1.3s swing speed" },
+        { name: "Mountain Lion", level: "32–33", minLevel: 32, maxLevel: 33, zone: "Alterac Mountains", subzone: "Sofera's Naze & Growless Cave", speed: "1.3s", isFast: true, faction: "Contested", teaches: "Prowl 1", notes: "Teaches Prowl Rank 1 & 1.3s speed" },
+        { name: "Swamp Jaguar", level: "36–37", minLevel: 36, maxLevel: 37, zone: "Swamp of Sorrows", subzone: "Misty Reed Strand", speed: "1.2s", isFast: true, faction: "Contested", teaches: "Claw 5", notes: "⚡ Rare fast 1.2s swing speed jaguar" },
+        { name: "Broken Tooth", level: "37", minLevel: 37, maxLevel: 37, zone: "Badlands", subzone: "South of Lethlor Ravine / Angor Fortress (Rare)", speed: "1.0s", isFast: true, faction: "Contested", teaches: "Claw 5", notes: "⚡ FASTEST ATTACK SPEED IN ENTIRE GAME (1.00s)! The Holy Grail for PvP pushback" },
+        { name: "Shadow Panther", level: "39–40", minLevel: 39, maxLevel: 40, zone: "Stranglethorn Vale", subzone: "Rebel Camp & Lake Nazferiti", speed: "1.5s", isFast: true, faction: "Contested", teaches: "Prowl 2, Dash 2", notes: "Teaches Prowl 2 & Dash 2" },
+        { name: "King Bangalash", level: "43", minLevel: 43, maxLevel: 43, zone: "Stranglethorn Vale", subzone: "Panther island near 38, 35 (Elite)", speed: "1.4s", isFast: true, faction: "Contested", teaches: "Claw 6, Dash 2", notes: "⚡ Iconic white tiger boss, 1.4s attack speed" },
+        { name: "Frostsaber Stalker", level: "59–60", minLevel: 59, maxLevel: 60, zone: "Winterspring", subzone: "Frostsaber Rock", speed: "1.5s", isFast: true, faction: "Contested", teaches: "Prowl 3, Claw 8", notes: "Teaches Prowl Rank 3 (+50% opener damage)" }
+      ]
     },
     {
       id: "crab",
@@ -1105,7 +1175,17 @@ const HUNTER_PETS_DATA = {
         cd: "30 sec CD",
         desc: "Pinches enemy legs for 32 to 36 damage (Rank 2) and reduces movement speed by 50% for 9 sec."
       },
-      highlight: "Massive +13% armor rating combined with an on-demand 50% hamstring pin."
+      highlight: "Massive +13% armor rating combined with an on-demand 50% hamstring pin.",
+      tameLocations: [
+        { name: "Pygmy Surf Crawler", level: "5–6", minLevel: 5, maxLevel: 6, zone: "Durotar", subzone: "Scuttle Rock & Sen'jin Village coast", speed: "2.0s", faction: "Horde", teaches: "Claw 1", notes: "Troll/Orc starter crab" },
+        { name: "Shore Crawler", level: "9–10", minLevel: 9, maxLevel: 10, zone: "Westfall", subzone: "Longshore beach", speed: "2.0s", faction: "Alliance", teaches: "Claw 2", notes: "Alliance level 10 starter crab" },
+        { name: "Pygmy Tide Crawler", level: "10–11", minLevel: 10, maxLevel: 11, zone: "Darkshore", subzone: "Auberdine coastline", speed: "2.0s", faction: "Alliance", teaches: "Pinch 1, Claw 2", notes: "Teaches Pinch Rank 1 in Forever" },
+        { name: "Corrupted Surf Crawler", level: "19–20", minLevel: 19, maxLevel: 20, zone: "Darkshore", subzone: "Ruins of Mathystra coast", speed: "2.0s", faction: "Alliance", teaches: "Pinch 1, Claw 3", notes: "Alliance progression tank" },
+        { name: "Scorpashi Snapper", level: "30–31", minLevel: 30, maxLevel: 31, zone: "Desolace", subzone: "Sar'theris Strand", speed: "2.0s", faction: "Contested", teaches: "Pinch 2, Claw 4, Dash 1", notes: "Teaches Pinch 2 & Dash 1" },
+        { name: "Silt Crawler", level: "40–41", minLevel: 40, maxLevel: 41, zone: "Swamp of Sorrows", subzone: "The Shifting Mire coast", speed: "2.0s", faction: "Contested", teaches: "Pinch 3, Claw 6, Dash 2", notes: "Teaches Claw 6 & Dash 2" },
+        { name: "Clack the Reaver", level: "46", minLevel: 46, maxLevel: 46, zone: "Blasted Lands", subzone: "Coastal cliffs (Rare)", speed: "2.0s", faction: "Contested", teaches: "Pinch 4, Claw 7", notes: "Rare giant crab" },
+        { name: "Methuselah Crab", level: "50–52", minLevel: 50, maxLevel: 52, zone: "Azshara / Zephras Isle", subzone: "Tide pools", speed: "2.0s", faction: "Contested", teaches: "Pinch 4, Dash 3", notes: "Endgame high-armor pin tank" }
+      ]
     },
     {
       id: "crocolisk",
@@ -1124,7 +1204,15 @@ const HUNTER_PETS_DATA = {
         cd: "6 sec CD",
         desc: "Viciously bites enemy appendages, reducing healing effectiveness by 50% for 10 sec on a 6-second cooldown."
       },
-      highlight: "PvP meta-definer; keeps 100% uptime on 50% healing reduction without requiring an Arms warrior."
+      highlight: "PvP meta-definer; keeps 100% uptime on 50% healing reduction without requiring an Arms warrior.",
+      tameLocations: [
+        { name: "River Crocolisk", level: "11–12", minLevel: 11, maxLevel: 12, zone: "Loch Modan", subzone: "Valley of Kings & The Loch", speed: "2.0s", faction: "Alliance", teaches: "Dismember 1, Bite 2", notes: "Alliance starter croc; teaches Dismember 1" },
+        { name: "Saltwater Crocolisk", level: "15–16", minLevel: 15, maxLevel: 16, zone: "The Barrens", subzone: "The Sludge Fen & Dreadmist Peak", speed: "2.0s", faction: "Horde", teaches: "Dismember 1, Bite 2", notes: "Horde early croc tame" },
+        { name: "Logsplit Crocolisk", level: "20–22", minLevel: 20, maxLevel: 22, zone: "Wetlands", subzone: "Greenwarden's Grove wetlands", speed: "2.0s", faction: "Alliance", teaches: "Dismember 1, Bite 3", notes: "Alliance level 20 progression tame" },
+        { name: "Drywallow Crocolisk", level: "35–36", minLevel: 35, maxLevel: 36, zone: "Dustwallow Marsh", subzone: "Witch Hill & Wyrmbog", speed: "2.0s", faction: "Contested", teaches: "Dismember 2, Bite 5, Dash 1", notes: "Teaches Dismember Rank 2 & Dash 1" },
+        { name: "Ripscale", level: "39", minLevel: 39, maxLevel: 39, zone: "Dustwallow Marsh", subzone: "Near Mudsprocket (Rare)", speed: "2.0s", faction: "Contested", teaches: "Dismember 3, Bite 6", notes: "Teaches Bite Rank 6 & Dismember 3" },
+        { name: "Sewer Beast", level: "50", minLevel: 50, maxLevel: 50, zone: "Stormwind City", subzone: "Canals outside Dwarven District (Rare)", speed: "2.0s", faction: "Alliance", teaches: "Dismember 4, Bite 7", notes: "Legendary white crocolisk inside Stormwind!" }
+      ]
     },
     {
       id: "fox",
@@ -1134,7 +1222,7 @@ const HUNTER_PETS_DATA = {
       armorMod: "+5%",
       healthMod: "0%",
       diet: ["Meat"],
-      fastestTame: "Redridge & Loch Modan Fox kits",
+      fastestTame: "Vuldren Alpha Lvl 10 (Zephras Isle)",
       abilities: ["Trickster's Dance (Rank 1)", "Dash (Rank 1-3)", "Bite (Rank 1-8)"],
       newAbility: {
         name: "Trickster's Dance",
@@ -1144,7 +1232,16 @@ const HUNTER_PETS_DATA = {
         cd: "3 min CD",
         desc: "Increases pet's chance to Dodge by 50% and decreases attack intervals by 30% for 12 sec."
       },
-      highlight: "Brand new pet family added to WoW Forever! Extreme defensive evasion and rapid burst attacks."
+      highlight: "Brand new pet family added to WoW Forever! Extreme defensive evasion and rapid burst attacks.",
+      tameLocations: [
+        { name: "Juvenile Vuldren", level: "1", minLevel: 1, maxLevel: 1, zone: "Zephras Isle", subzone: "Starter Glade", speed: "2.0s", faction: "Contested", teaches: "Bite 1", notes: "✦ Brand new Fox family in WoW Forever" },
+        { name: "Vuldren", level: "6", minLevel: 6, maxLevel: 6, zone: "Zephras Isle", subzone: "Lowland Meadows", speed: "2.0s", faction: "Contested", teaches: "Bite 1", notes: "New fox model" },
+        { name: "Vuldren Alpha", level: "10", minLevel: 10, maxLevel: 10, zone: "Zephras Isle", subzone: "Shadowgale Ridge", speed: "2.0s", faction: "Contested", teaches: "Bite 2, Dash 1", notes: "✦ Rare pale coat fox model at level 10" },
+        { name: "Redridge Fox Kits / Vulpin", level: "14–16", minLevel: 14, maxLevel: 16, zone: "Redridge Mountains", subzone: "Alther's Mill & Three Corners", speed: "2.0s", faction: "Alliance", teaches: "Bite 3", notes: "Alliance early fox tame" },
+        { name: "Silverpine Fox", level: "15–17", minLevel: 15, maxLevel: 17, zone: "Silverpine Forest", subzone: "The Skittering Dark hills", speed: "2.0s", faction: "Horde", teaches: "Bite 3", notes: "Horde early fox tame" },
+        { name: "Vuldren Stalker", level: "20–22", minLevel: 20, maxLevel: 22, zone: "Zephras Isle", subzone: "Highland crags", speed: "2.0s", faction: "Contested", teaches: "Trickster's Dance 1, Bite 3, Dash 1", notes: "Teaches Trickster's Dance Rank 1 (50% Dodge, -30% interval)" },
+        { name: "Highland Vulpin", level: "30–32", minLevel: 30, maxLevel: 32, zone: "Arathi Highlands", subzone: "Go'Shek Farm outskirts", speed: "2.0s", faction: "Contested", teaches: "Trickster's Dance 1, Bite 5, Dash 1", notes: "Mid-level contested fox" }
+      ]
     },
     {
       id: "gorilla",
@@ -1163,7 +1260,15 @@ const HUNTER_PETS_DATA = {
         cd: "1 min CD",
         desc: "Shakes the ground with thundering force, dealing 53 to 61 Nature damage to all enemies within 8 yards."
       },
-      highlight: "Area-of-effect threat burst; synergizes with Hunter traps and multi-pull dungeons."
+      highlight: "Area-of-effect threat burst; synergizes with Hunter traps and multi-pull dungeons.",
+      tameLocations: [
+        { name: "Groddoc Ape", level: "30–32", minLevel: 30, maxLevel: 32, zone: "Stranglethorn Vale", subzone: "Crystalvein Mine & Kurzen camp", speed: "2.0s", faction: "Contested", teaches: "Thunderstomp 1, Dash 1", notes: "Earliest gorilla tame in the game (Level 30)" },
+        { name: "Mistvale Gorilla", level: "32–33", minLevel: 32, maxLevel: 33, zone: "Stranglethorn Vale", subzone: "Mistvale Valley & Gurubashi arena", speed: "2.0s", faction: "Contested", teaches: "Thunderstomp 1, Dash 1", notes: "Teaches Thunderstomp Rank 1" },
+        { name: "Jungle Thunderer", level: "37–38", minLevel: 37, maxLevel: 38, zone: "Stranglethorn Vale", subzone: "Mistvale Valley hills", speed: "2.0s", faction: "Contested", teaches: "Thunderstomp 1, Dash 1", notes: "AoE shock tank" },
+        { name: "Elder Mistvale Gorilla", level: "40–41", minLevel: 40, maxLevel: 41, zone: "Stranglethorn Vale", subzone: "Near Booty Bay pass", speed: "2.0s", faction: "Contested", teaches: "Thunderstomp 2, Dash 2", notes: "Teaches Thunderstomp Rank 2" },
+        { name: "Groddoc Thunderer", level: "49–50", minLevel: 49, maxLevel: 50, zone: "Feralas", subzone: "The High Wilderness", speed: "2.0s", faction: "Contested", teaches: "Thunderstomp 2, Dash 2", notes: "High level tank gorilla" },
+        { name: "U'cha", level: "55", minLevel: 55, maxLevel: 55, zone: "Un'Goro Crater", subzone: "Fungal Rock cave (Rare)", speed: "2.0s", faction: "Contested", teaches: "Thunderstomp 3, Dash 3", notes: "Legendary pure white gorilla; teaches Thunderstomp 3" }
+      ]
     },
     {
       id: "hyena",
@@ -1173,19 +1278,52 @@ const HUNTER_PETS_DATA = {
       armorMod: "0%",
       healthMod: "0%",
       diet: ["Meat", "Fruit"],
-      abilities: ["Dash (Rank 1-3)", "Bite (Rank 1-8)"],
-      highlight: "Well-rounded scavenger beast with high agility and Dash mobility."
+      fastestTame: "1.30s (Ravage Lvl 51, Blasted Lands)",
+      abilities: ["Tendon Rip (Rank 1-5)", "Dash (Rank 1-3)", "Bite (Rank 1-8)"],
+      newAbility: {
+        name: "Tendon Rip",
+        badge: "✦ New in Forever",
+        icon: "https://foreverchanges.pro/icon/ability_hunter_pet_hyena.jpg",
+        cost: "25 Focus",
+        cd: "30 sec CD",
+        desc: "Tears at an enemy's legs for 21 damage over 9 sec and reduces movement speed by 50% for 9 sec."
+      },
+      highlight: "Well-rounded scavenger beast with high agility, Dash mobility, and the new Tendon Rip hamstring.",
+      tameLocations: [
+        { name: "Giggling Hyena", level: "13–14", minLevel: 13, maxLevel: 14, zone: "The Barrens", subzone: "Lushwater Oasis & Dreadmist Peak", speed: "2.0s", faction: "Horde", teaches: "Tendon Rip 1, Bite 2", notes: "Earliest hyena tame; teaches Tendon Rip 1" },
+        { name: "Snort the Heckler", level: "17", minLevel: 17, maxLevel: 17, zone: "The Barrens", subzone: "South of Camp Taurajo (Rare)", speed: "2.0s", faction: "Horde", teaches: "Tendon Rip 1, Bite 3", notes: "Named rare hyena" },
+        { name: "Bonepaw Hyena", level: "33–35", minLevel: 33, maxLevel: 35, zone: "Desolace", subzone: "Kolkar Centaur territory", speed: "2.0s", faction: "Contested", teaches: "Tendon Rip 2, Bite 5, Dash 1", notes: "Teaches Dash Rank 1 & Tendon Rip 2" },
+        { name: "Snickerfang Hyena", level: "40–42", minLevel: 40, maxLevel: 42, zone: "Badlands", subzone: "Mirage Flats & Camp Cagg", speed: "2.0s", faction: "Contested", teaches: "Tendon Rip 3, Bite 6, Dash 2", notes: "Teaches Tendon Rip 3 & Dash 2" },
+        { name: "Ravage", level: "51", minLevel: 51, maxLevel: 51, zone: "Blasted Lands", subzone: "The Tainted Scar border (Rare)", speed: "1.3s", isFast: true, faction: "Contested", teaches: "Tendon Rip 4, Bite 7, Dash 3", notes: "⚡ Fastest Hyena in Game! 1.3s swing speed" }
+      ]
     },
     {
       id: "raptor",
       name: "Raptor",
       icon: "https://foreverchanges.pro/icon/ability_hunter_pet_raptor.jpg",
       damageMod: "+10%",
-      armorMod: "0%",
+      armorMod: "+3%",
       healthMod: "-5%",
       diet: ["Meat"],
-      abilities: ["Dash (Rank 1-3)", "Bite (Rank 1-8)", "Claw (Rank 1-8)"],
-      highlight: "Pure offensive power with +10% damage bonus alongside Cats."
+      abilities: ["Savage Rend (Rank 1-5)", "Dash (Rank 1-3)", "Bite (Rank 1-8)", "Claw (Rank 1-8)"],
+      newAbility: {
+        name: "Savage Rend",
+        badge: "✦ New in Forever",
+        icon: "https://foreverchanges.pro/icon/ability_hunter_pet_raptor.jpg",
+        cost: "50 Focus",
+        cd: "1 min CD",
+        desc: "Slash an enemy with razor talons, causing target to Bleed for 54 damage (Rank 2) over 18 sec."
+      },
+      highlight: "Pure offensive power with +10% damage bonus, Savage Rend bleed, and high armor penetration.",
+      tameLocations: [
+        { name: "Sunscale Raptor", level: "13–14", minLevel: 13, maxLevel: 14, zone: "The Barrens", subzone: "The Forgotten Pools & Stagnant Oasis", speed: "2.0s", faction: "Horde", teaches: "Savage Rend 1, Bite 2", notes: "Earliest raptor tame; teaches Savage Rend 1" },
+        { name: "Highland Raptor", level: "22–24", minLevel: 22, maxLevel: 24, zone: "Wetlands", subzone: "Raptor Ridge & Dun Modr path", speed: "2.0s", faction: "Alliance", teaches: "Savage Rend 2, Bite 4", notes: "Alliance early raptor tame" },
+        { name: "Shriekling Matriarch", level: "24–26", minLevel: 24, maxLevel: 26, zone: "Zephras Isle", subzone: "Raptor Valley", speed: "2.0s", faction: "Contested", teaches: "Savage Rend 2, Bite 4", notes: "✦ Forever new island raptor" },
+        { name: "Bloodfen Raptor", level: "35–37", minLevel: 35, maxLevel: 37, zone: "Dustwallow Marsh", subzone: "Bloodfen Den & Dragonmurk", speed: "2.0s", faction: "Contested", teaches: "Savage Rend 3, Bite 5, Dash 1", notes: "Teaches Dash Rank 1 & Savage Rend 3" },
+        { name: "Tazz'ala", level: "37", minLevel: 37, maxLevel: 37, zone: "Stranglethorn Vale", subzone: "Zul'Gurub perimeter (Rare)", speed: "2.0s", faction: "Contested", teaches: "Savage Rend 3, Claw 5, Dash 1", notes: "Rare crimson raptor" },
+        { name: "Dart", level: "38", minLevel: 38, maxLevel: 38, zone: "Dustwallow Marsh", subzone: "Bloodfen Den cave (Rare)", speed: "2.0s", faction: "Contested", teaches: "Savage Rend 3, Bite 6, Dash 1", notes: "Named rare raptor" },
+        { name: "Gurubashi Raptor", level: "48–50", minLevel: 48, maxLevel: 50, zone: "Stranglethorn Vale", subzone: "Ruins of Aboraz & Jubuwal", speed: "2.0s", faction: "Contested", teaches: "Savage Rend 4, Bite 7, Dash 2", notes: "Teaches Savage Rend Rank 4" }
+      ]
     },
     {
       id: "scorpid",
@@ -1195,8 +1333,29 @@ const HUNTER_PETS_DATA = {
       armorMod: "+10%",
       healthMod: "0%",
       diet: ["Meat"],
-      abilities: ["Scorpid Poison (Rank 1-5)", "Claw (Rank 1-8)"],
-      highlight: "Scorpid Poison stacks nature DoT to protect Viper Sting from dispel in PvP."
+      fastestTame: "1.60s (Death Flayer Lvl 11, Durotar)",
+      abilities: ["Scorpid Poison (Rank 1-5)", "Dash (Rank 1-3)", "Claw (Rank 1-8)"],
+      newAbility: {
+        name: "Scorpid Poison Rework",
+        badge: "✦ Changed in Forever",
+        icon: "https://foreverchanges.pro/icon/ability_poisonsting.jpg",
+        cost: "30 Focus",
+        cd: "4 sec CD",
+        desc: "Inflicts 10 Nature damage over 10 sec, stacking up to 5 times. Protects Hunter Viper Sting from dispels."
+      },
+      highlight: "Scorpid Poison stacks nature DoT to protect Viper Sting from dispel in PvP.",
+      tameLocations: [
+        { name: "Scorpid Worker", level: "3", minLevel: 3, maxLevel: 3, zone: "Durotar", subzone: "Valley of Trials", speed: "2.0s", faction: "Horde", teaches: "Claw 1", notes: "Horde starter scorpid" },
+        { name: "Sarkoth", level: "4", minLevel: 4, maxLevel: 4, zone: "Durotar", subzone: "Valley of Trials quest boss (Rare)", speed: "2.0s", faction: "Horde", teaches: "Claw 1", notes: "Iconic named scorpid" },
+        { name: "Venomtail Scorpid", level: "9–10", minLevel: 9, maxLevel: 10, zone: "Durotar", subzone: "Sen'jin Village & Razor Hill road", speed: "2.0s", faction: "Horde", teaches: "Scorpid Poison 1", notes: "Teaches Scorpid Poison 1 at level 10" },
+        { name: "Death Flayer", level: "11", minLevel: 11, maxLevel: 11, zone: "Durotar", subzone: "South of Razor Hill near 60, 48 (Rare)", speed: "1.6s", isFast: true, faction: "Horde", teaches: "Scorpid Poison 1, Claw 2", notes: "⚡ Fastest Scorpid in Game! 1.6s swing speed" },
+        { name: "Clacklic", level: "15", minLevel: 15, maxLevel: 15, zone: "The Barrens", subzone: "Near Far Watch Post (Rare)", speed: "2.0s", faction: "Horde", teaches: "Scorpid Poison 1, Claw 2", notes: "Rare copper scorpid" },
+        { name: "Scorpashi Snapper", level: "30–31", minLevel: 30, maxLevel: 31, zone: "Desolace", subzone: "Kormek's Hut & Magram territory", speed: "2.0s", faction: "Contested", teaches: "Scorpid Poison 2, Claw 4, Dash 1", notes: "Teaches Scorpid Poison 2 & Dash 1" },
+        { name: "Scorpid Reaver", level: "31–32", minLevel: 31, maxLevel: 32, zone: "Thousand Needles", subzone: "Highperch base & Splithoof Crag", speed: "2.0s", faction: "Contested", teaches: "Scorpid Poison 2, Claw 4", notes: "Teaches Scorpid Poison 2" },
+        { name: "Vile Sting", level: "35", minLevel: 35, maxLevel: 35, zone: "Thousand Needles", subzone: "Salt Flats cliffs (Rare)", speed: "2.0s", faction: "Contested", teaches: "Scorpid Poison 2, Claw 5", notes: "Teaches Claw Rank 5" },
+        { name: "Scorpid Hunter", level: "40–41", minLevel: 40, maxLevel: 41, zone: "Tanaris", subzone: "Zul'Farrak exterior & Sandsorrow Watch", speed: "2.0s", faction: "Contested", teaches: "Scorpid Poison 3, Claw 6, Dash 2", notes: "Teaches Scorpid Poison 3 & Claw 6" },
+        { name: "Firetail Scorpid", level: "56–57", minLevel: 56, maxLevel: 57, zone: "Burning Steppes", subzone: "Pillar of Ash & Dreadmaul Rock", speed: "2.0s", faction: "Contested", teaches: "Scorpid Poison 4, Claw 8", notes: "Teaches Scorpid Poison 4 & Claw 8" }
+      ]
     },
     {
       id: "spider",
@@ -1204,10 +1363,30 @@ const HUNTER_PETS_DATA = {
       icon: "https://foreverchanges.pro/icon/ability_hunter_pet_spider.jpg",
       damageMod: "+7%",
       armorMod: "0%",
-      healthMod: "-5%",
+      healthMod: "0%",
       diet: ["Meat"],
-      abilities: ["Bite (Rank 1-8)"],
-      highlight: "High damage ambush predator with accessible tames throughout early leveling zones."
+      abilities: ["Web (Rank 1-5)", "Dash (Rank 1-3)", "Bite (Rank 1-8)"],
+      newAbility: {
+        name: "Web (Root & Nature DoT)",
+        badge: "✦ New in Forever",
+        icon: "https://foreverchanges.pro/icon/spell_nature_web.jpg",
+        cost: "20 Focus",
+        cd: "40 sec CD",
+        desc: "Entangles an enemy in a corrosive web, immobilizing them and dealing 20 Nature damage (Rank 2) over 4 sec."
+      },
+      highlight: "High damage ambush predator with on-demand Web roots to peel enemy melee in PvP.",
+      tameLocations: [
+        { name: "Night Web Spider", level: "3–4", minLevel: 3, maxLevel: 4, zone: "Tirisfal Glades", subzone: "Deathknell woods", speed: "2.0s", faction: "Horde", teaches: "Bite 1", notes: "Undead starter spider" },
+        { name: "Webwood Silkspinner", level: "8–9", minLevel: 8, maxLevel: 9, zone: "Teldrassil", subzone: "Shadowglen & Dolanaar", speed: "2.0s", faction: "Alliance", teaches: "Bite 2", notes: "Teaches Bite Rank 2" },
+        { name: "Pygmy Spider", level: "10–11", minLevel: 10, maxLevel: 11, zone: "Tirisfal / Silverpine", subzone: "Near Ambermill border", speed: "2.0s", faction: "Horde", teaches: "Web 1, Bite 2", notes: "Immediate level 10 tame" },
+        { name: "Moss Stalker", level: "12", minLevel: 12, maxLevel: 12, zone: "Silverpine Forest", subzone: "Deep Ecker & Malden's Orchard", speed: "2.0s", faction: "Horde", teaches: "Web 1", notes: "✦ Teaches Web Rank 1 in WoW Forever (4s root)" },
+        { name: "Broodling", level: "14", minLevel: 14, maxLevel: 14, zone: "Ruins of Lordaeron", subzone: "First packs near courtyard", speed: "2.0s", faction: "Horde", teaches: "Bite 2", notes: "✦ Reported by beta players in Ruins of Lordaeron" },
+        { name: "Deepmoss Creeper", level: "16–17", minLevel: 16, maxLevel: 17, zone: "Stonetalon Mountains", subzone: "Webwinder Path", speed: "2.0s", faction: "Contested", teaches: "Web 1, Bite 3", notes: "Teaches Bite Rank 3" },
+        { name: "Giant Moss Creeper", level: "24–25", minLevel: 24, maxLevel: 25, zone: "Hillsbrad Foothills", subzone: "North of Tarren Mill & Durnholde", speed: "2.0s", faction: "Contested", teaches: "Web 2, Bite 4", notes: "Teaches Web 2 & Bite 4" },
+        { name: "Plains Creeper", level: "32–33", minLevel: 32, maxLevel: 33, zone: "Arathi Highlands", subzone: "Dabyrie's Farmstead & Witherbark", speed: "2.0s", faction: "Contested", teaches: "Web 2, Bite 5, Dash 1", notes: "Teaches Bite 5 & Dash 1" },
+        { name: "Rekk'tilac", level: "48", minLevel: 48, maxLevel: 48, zone: "Searing Gorge", subzone: "Slaag Foothills (Rare)", speed: "2.0s", faction: "Contested", teaches: "Web 4, Bite 7, Dash 2", notes: "Teaches Bite Rank 7 & Web 4" },
+        { name: "Spire Spiderling", level: "55–56", minLevel: 55, maxLevel: 56, zone: "Lower Blackrock Spire", subzone: "Hordemar City web tunnels", speed: "2.0s", faction: "Contested", teaches: "Web 4, Bite 7", notes: "Dungeon spider with high level abilities" }
+      ]
     },
     {
       id: "tallstrider",
@@ -1217,8 +1396,26 @@ const HUNTER_PETS_DATA = {
       armorMod: "0%",
       healthMod: "+5%",
       diet: ["Cheese", "Fruit", "Fungus"],
-      abilities: ["Dust Cloud (Rank 1-3)", "Bite (Rank 1-8)"],
-      highlight: "Dust Cloud reduces enemy hit chance; vegetarian diet makes feeding very affordable."
+      fastestTame: "1.30s (Ornery Galestrider Lvl 8, Zephras Isle)",
+      abilities: ["Dust Cloud (Rank 1-5)", "Dash (Rank 1-3)", "Bite (Rank 1-8)"],
+      newAbility: {
+        name: "Dust Cloud",
+        badge: "✦ New in Forever",
+        icon: "https://foreverchanges.pro/icon/spell_nature_sleep.jpg",
+        cost: "10 Focus",
+        cd: "Instant",
+        desc: "Kicks up an abrasive cloud of dust, reducing the target's Armor by 175 (Rank 2) for 30 sec."
+      },
+      highlight: "Dust Cloud strips armor for physical group burst; vegetarian diet makes feeding very affordable.",
+      tameLocations: [
+        { name: "Ornery Galestrider", level: "8", minLevel: 8, maxLevel: 8, zone: "Zephras Isle", subzone: "Coastal dunes", speed: "1.3s", isFast: true, faction: "Contested", teaches: "Dust Cloud 1", notes: "⚡ Fastest Tallstrider in Entire Game! 1.3s swing speed" },
+        { name: "Mazzranache", level: "9", minLevel: 9, maxLevel: 9, zone: "Mulgore", subzone: "Plains around Bloodhoof Village (Rare)", speed: "2.0s", faction: "Horde", teaches: "Dust Cloud 1", notes: "Iconic bright pink tallstrider model" },
+        { name: "Fleeting Plainstrider", level: "12–13", minLevel: 12, maxLevel: 13, zone: "The Barrens", subzone: "Between Far Watch Post and Crossroads", speed: "2.0s", faction: "Horde", teaches: "Dust Cloud 1, Bite 2", notes: "Teaches Dust Cloud Rank 1" },
+        { name: "Greater Plainstrider", level: "16–17", minLevel: 16, maxLevel: 17, zone: "The Barrens", subzone: "South of Crossroads & Camp Taurajo", speed: "2.0s", faction: "Horde", teaches: "Dust Cloud 1, Bite 3", notes: "Mid-level Barrens tallstrider" },
+        { name: "Strider Clutchmother", level: "20", minLevel: 20, maxLevel: 20, zone: "Darkshore", subzone: "Ameth'Aran ruins (Rare)", speed: "2.0s", faction: "Alliance", teaches: "Dust Cloud 1, Bite 3", notes: "Rare purple tallstrider" },
+        { name: "Ornery Plainstrider", level: "18–19", minLevel: 18, maxLevel: 19, zone: "Darkshore / Barrens", subzone: "Bashal'Aran & Taurajo border", speed: "2.0s", faction: "Contested", teaches: "Dust Cloud 1, Dash 1", notes: "Teaches Dash Rank 1 in Forever" },
+        { name: "Lost Barrens Strider", level: "24–25", minLevel: 24, maxLevel: 25, zone: "The Barrens", subzone: "Field of Giants & Bael Modan", speed: "2.0s", faction: "Horde", teaches: "Dust Cloud 2, Bite 4, Dash 1", notes: "Teaches Dust Cloud Rank 2" }
+      ]
     },
     {
       id: "turtle",
@@ -1227,9 +1424,26 @@ const HUNTER_PETS_DATA = {
       damageMod: "-10%",
       armorMod: "+13%",
       healthMod: "0%",
-      diet: ["Fruit", "Fungus"],
-      abilities: ["Shell Shield (Rank 1-3)", "Bite (Rank 1-8)"],
-      highlight: "Ultimate tanking pet; Shell Shield reduces all damage taken by 50% for 12 sec."
+      diet: ["Fruit", "Fungus", "Fish"],
+      abilities: ["Shell Shield (Rank 1-3)", "Dash (Rank 1-3)", "Bite (Rank 1-8)"],
+      newAbility: {
+        name: "Shell Shield Rework",
+        badge: "✦ Changed in Forever",
+        icon: "https://foreverchanges.pro/icon/ability_hunter_pet_turtle.jpg",
+        cost: "10 Focus",
+        cd: "3 min CD",
+        desc: "Reduces all damage taken by 50% for 12 sec, increases attack intervals by 60%, but deals significantly more damage per attack."
+      },
+      highlight: "Ultimate tanking pet; Shell Shield reduces all damage taken by 50% for 12 sec with +13% Armor.",
+      tameLocations: [
+        { name: "Oasis Snapjaw", level: "15–16", minLevel: 15, maxLevel: 16, zone: "The Barrens", subzone: "The Stagnant Oasis & Lushwater Oasis", speed: "2.0s", faction: "Horde", teaches: "Bite 2, Shell Shield 1", notes: "Earliest turtle tame; teaches Shell Shield 1 (-50% dmg)" },
+        { name: "Corrupted Snapjaw", level: "20–21", minLevel: 20, maxLevel: 21, zone: "Darkshore / Ashenvale", subzone: "Cliffspring River & Zoram Strand", speed: "2.0s", faction: "Alliance", teaches: "Bite 3, Shell Shield 1", notes: "Alliance level 20 turtle tame" },
+        { name: "Snapjaw", level: "30–31", minLevel: 30, maxLevel: 31, zone: "Alterac Mountains / Hillsbrad", subzone: "Durnholde river & Lordamere Lake", speed: "2.0s", faction: "Contested", teaches: "Bite 4, Shell Shield 1, Dash 1", notes: "Teaches Shell Shield 1 & Dash 1" },
+        { name: "Cranky Benj", level: "32", minLevel: 32, maxLevel: 32, zone: "Alterac Mountains", subzone: "Island in Lordamere Lake (Rare)", speed: "2.0s", faction: "Contested", teaches: "Bite 5, Shell Shield 1, Dash 1", notes: "Named rare snapping turtle" },
+        { name: "Sparkleshell Snapper", level: "34–35", minLevel: 34, maxLevel: 35, zone: "Thousand Needles", subzone: "Shimmering Flats salt pans", speed: "2.0s", faction: "Contested", teaches: "Bite 5, Shell Shield 1, Dash 1", notes: "Teaches Bite Rank 5" },
+        { name: "Giant Surf Glider", level: "48–50", minLevel: 48, maxLevel: 50, zone: "Tanaris", subzone: "Eastmoon Ruins & Southbreak Shore", speed: "2.0s", faction: "Contested", teaches: "Bite 7, Shell Shield 2, Dash 2", notes: "Teaches Bite Rank 7 & Shell Shield 2" },
+        { name: "Ironback", level: "51", minLevel: 51, maxLevel: 51, zone: "The Hinterlands", subzone: "The Overlook Cliffs coast (Rare)", speed: "2.0s", faction: "Contested", teaches: "Bite 7, Shell Shield 2, Dash 3", notes: "Massive armor rating turtle" }
+      ]
     },
     {
       id: "wind-serpent",
@@ -1239,8 +1453,26 @@ const HUNTER_PETS_DATA = {
       armorMod: "0%",
       healthMod: "0%",
       diet: ["Fish", "Bread", "Cheese"],
-      abilities: ["Lightning Breath (Rank 1-6)", "Bite (Rank 1-8)"],
-      highlight: "Ranged Nature damage attacks that ignore physical armor and hit targets through obstacles."
+      abilities: ["Lightning Breath (Rank 1-6)", "Dive (Rank 1-3)", "Bite (Rank 1-8)"],
+      newAbility: {
+        name: "Lightning Breath Rework",
+        badge: "✦ Changed in Forever",
+        icon: "https://foreverchanges.pro/icon/spell_nature_lightning.jpg",
+        cost: "50 Focus",
+        cd: "Instant",
+        desc: "Breathes lightning, instantly dealing 32 to 36 Nature damage (Rank 3) to a single target at 20-yard range."
+      },
+      highlight: "Ranged Nature damage attacks that bypass physical armor and hit high-armor plate targets.",
+      tameLocations: [
+        { name: "Deviate Coiler", level: "15–16", minLevel: 15, maxLevel: 16, zone: "The Barrens / Wailing Caverns", subzone: "Lushwater Oasis & WC entrance", speed: "2.0s", faction: "Horde", teaches: "Lightning Breath 2, Bite 2", notes: "Teaches Lightning Breath Rank 2" },
+        { name: "Deviate Stinglash", level: "16–17", minLevel: 16, maxLevel: 17, zone: "The Barrens / Wailing Caverns", subzone: "Wailing Caverns interior", speed: "2.0s", faction: "Horde", teaches: "Lightning Breath 2, Bite 3", notes: "Teaches Lightning Breath Rank 2" },
+        { name: "Thunderhawk Cloudscraper", level: "20–22", minLevel: 20, maxLevel: 22, zone: "The Barrens", subzone: "Bael Modan & Field of Giants", speed: "2.0s", faction: "Horde", teaches: "Lightning Breath 2, Bite 3, Dive 1", notes: "Teaches Dive Rank 1" },
+        { name: "Washte Pawne", level: "25", minLevel: 25, maxLevel: 25, zone: "The Barrens", subzone: "South of Camp Taurajo near 44, 76 (Rare)", speed: "2.0s", faction: "Horde", teaches: "Lightning Breath 3, Bite 4", notes: "Rare crimson wind serpent; teaches Lightning Breath 3" },
+        { name: "Cloud Serpent", level: "25–26", minLevel: 25, maxLevel: 26, zone: "Thousand Needles", subzone: "Splithoof Heights & Freewind Post cliffs", speed: "2.0s", faction: "Contested", teaches: "Lightning Breath 3, Bite 4, Dive 1", notes: "Teaches Lightning Breath 3" },
+        { name: "Noxious Reaver", level: "37–38", minLevel: 37, maxLevel: 38, zone: "Dustwallow Marsh", subzone: "Dreadmurk Shore & Witch Hill", speed: "2.0s", faction: "Contested", teaches: "Lightning Breath 4, Bite 5, Dive 1", notes: "Teaches Lightning Breath Rank 4" },
+        { name: "Arash-ethis", level: "49", minLevel: 49, maxLevel: 49, zone: "Feralas", subzone: "Ruins of Ravenwind (Rare)", speed: "2.0s", faction: "Contested", teaches: "Lightning Breath 5, Dive 2", notes: "Teaches Lightning Breath Rank 5" },
+        { name: "Son of Hakkar", level: "50–51", minLevel: 50, maxLevel: 51, zone: "Sunken Temple", subzone: "Hall of Serpents inside dungeon", speed: "2.0s", faction: "Contested", teaches: "Lightning Breath 5, Dive 3", notes: "Dungeon wind serpent; teaches Dive 3" }
+      ]
     },
     {
       id: "wolf",
@@ -1250,8 +1482,32 @@ const HUNTER_PETS_DATA = {
       armorMod: "+5%",
       healthMod: "0%",
       diet: ["Meat"],
+      fastestTame: "1.20s (Deathmaw Lvl 53) • 1.40s (Coyote Packleader Lvl 11) • 1.50s (Coldrasp Ghost Wolf Lvl 12)",
       abilities: ["Furious Howl (Rank 1-4)", "Dash (Rank 1-3)", "Bite (Rank 1-8)"],
-      highlight: "Furious Howl buffs physical damage of party members; top raid support companion."
+      newAbility: {
+        name: "Furious Howl Rework",
+        badge: "✦ Changed in Forever",
+        icon: "https://foreverchanges.pro/icon/ability_hunter_pet_wolf.jpg",
+        cost: "60 Focus",
+        cd: "30 sec CD",
+        desc: "The wolf howls, increasing the melee attack power of all party members within 15 yards by 31 to 38 (Rank 2) for a full 1 minute."
+      },
+      highlight: "Furious Howl buffs physical AP of party members for 1 min; top raid support companion.",
+      tameLocations: [
+        { name: "Starving Winter Wolf", level: "8–9", minLevel: 8, maxLevel: 9, zone: "Dun Morogh", subzone: "Brewnall Village & Misty Pine", speed: "2.0s", faction: "Alliance", teaches: "Bite 2", notes: "Alliance starter wolf; teaches Bite 2" },
+        { name: "Coyote", level: "10–11", minLevel: 10, maxLevel: 11, zone: "Westfall", subzone: "Furlbrow's Pumpkin Farm & Saldean's", speed: "1.5s", isFast: true, faction: "Alliance", teaches: "Furious Howl 1, Bite 2", notes: "⚡ Fast 1.5s swing speed at level 10" },
+        { name: "Coyote Packleader", level: "11–12", minLevel: 11, maxLevel: 12, zone: "Westfall", subzone: "Sentinel Hill perimeter", speed: "1.4s", isFast: true, faction: "Alliance", teaches: "Furious Howl 1, Bite 2", notes: "⚡ Fast 1.4s swing speed coyote" },
+        { name: "Worg", level: "10–11", minLevel: 10, maxLevel: 11, zone: "Silverpine Forest", subzone: "The Decrepit Ferry & The Shining Strand", speed: "2.0s", faction: "Horde", teaches: "Furious Howl 1, Bite 2", notes: "Horde level 10 wolf; teaches Furious Howl 1" },
+        { name: "Coldrasp", level: "12", minLevel: 12, maxLevel: 12, zone: "Tirisfal Glades", subzone: "Whispering Forest near 19.7, 65.6 (Rare)", speed: "1.5s", isFast: true, faction: "Horde", teaches: "Furious Howl 1, Bite 2", notes: "✦ RARE BLUE GHOST WOLF MODEL in Forever! 1.5s swing speed" },
+        { name: "Bloodsnout Worg", level: "16–17", minLevel: 16, maxLevel: 17, zone: "Silverpine Forest", subzone: "Ambermill road", speed: "2.0s", faction: "Horde", teaches: "Bite 3", notes: "Teaches Bite Rank 3" },
+        { name: "Lupos", level: "23", minLevel: 23, maxLevel: 23, zone: "Duskwood", subzone: "Addle's Stead & Raven Hill road (Rare)", speed: "2.0s", faction: "Contested", teaches: "Furious Howl 2, Bite 3", notes: "Legendary Duskwood rare; teaches Furious Howl 2" },
+        { name: "Black Ravager Mastiff", level: "25–26", minLevel: 25, maxLevel: 26, zone: "Duskwood", subzone: "The Rotting Orchard & Darkshire outskirts", speed: "2.0s", faction: "Alliance", teaches: "Furious Howl 2, Bite 4, Dash 1", notes: "Teaches Furious Howl 2 & Dash 1" },
+        { name: "Ghostpaw Alpha", level: "27–28", minLevel: 27, maxLevel: 28, zone: "Ashenvale", subzone: "Mystral Lake & Raynewood", speed: "2.0s", faction: "Contested", teaches: "Furious Howl 2, Bite 4, Dash 1", notes: "Teaches Furious Howl 2" },
+        { name: "Barnabus", level: "38", minLevel: 38, maxLevel: 38, zone: "Badlands", subzone: "Camp Boff & Mirage Flats (Rare)", speed: "2.0s", faction: "Contested", teaches: "Furious Howl 3, Bite 6, Dash 1", notes: "Teaches Furious Howl 3 & Bite 6" },
+        { name: "Longtooth Runner", level: "40–41", minLevel: 40, maxLevel: 41, zone: "Feralas", subzone: "Feralas western river", speed: "2.0s", faction: "Contested", teaches: "Furious Howl 3, Dash 2", notes: "Teaches Furious Howl 3 & Dash 2" },
+        { name: "Snarler", level: "42", minLevel: 42, maxLevel: 42, zone: "Feralas", subzone: "North of Camp Mojache near 52, 42 (Rare)", speed: "2.0s", faction: "Contested", teaches: "Furious Howl 3, Dash 2", notes: "Legendary rare wolf with +100 to all elemental resistances!" },
+        { name: "Deathmaw", level: "53", minLevel: 53, maxLevel: 53, zone: "Burning Steppes", subzone: "Morgan's Vigil cliffs near 83, 39 (Rare)", speed: "1.2s", isFast: true, faction: "Contested", teaches: "Furious Howl 4, Dash 3", notes: "⚡ FASTEST WOLF IN THE GAME (1.20s swing speed!) Teaches Furious Howl 4" }
+      ]
     }
   ]
 };
