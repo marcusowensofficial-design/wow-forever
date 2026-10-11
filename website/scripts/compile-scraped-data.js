@@ -1534,11 +1534,17 @@ if (fs.existsSync(SCRAPED_502_PATH)) {
 
   const enrichedAllBeasts = scrapedBeasts.map(b => {
     const match = curated.get(b.name.toLowerCase());
+    let cleanTeaches = (b.teaches || '').trim();
+    if (cleanTeaches) {
+      cleanTeaches = cleanTeaches.replace(/([0-9])([A-Z])/g, '$1, $2');
+    }
+
     let notes = match?.notes || '';
     if (!notes) {
       if (b.isNew) notes = '✦ Added in WoW Forever!';
       else if (b.isFast) notes = `⚡ Fast attack speed (${b.speed})`;
-      else if (b.teaches) notes = `Teaches ${b.teaches}`;
+      else if (cleanTeaches) notes = `Teaches ${cleanTeaches}`;
+      else notes = 'Blank slate — teaches no innate abilities (train via Beast Training)';
     }
     return {
       name: b.name,
@@ -1552,7 +1558,7 @@ if (fs.existsSync(SCRAPED_502_PATH)) {
       faction: getZoneFaction(b.zone),
       zone: b.zone || 'Azeroth',
       subzone: match?.subzone || '',
-      teaches: b.teaches || '',
+      teaches: cleanTeaches,
       notes: notes,
       isNew: !!b.isNew,
       npcUrl: b.npcUrl || ''

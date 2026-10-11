@@ -1991,7 +1991,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Tirisfal Glades",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=1512"
         },
@@ -2059,7 +2059,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Tirisfal Glades",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=1554"
         },
@@ -2076,7 +2076,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Tirisfal Glades",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=10357"
         },
@@ -2092,8 +2092,8 @@ window.WOW_ATLAS_DATA = {
           "faction": "Contested",
           "zone": "Eastern Plaguelands",
           "subzone": "",
-          "teaches": "Cower 5Dive 3",
-          "notes": "Teaches Cower 5Dive 3",
+          "teaches": "Cower 5, Dive 3",
+          "notes": "Teaches Cower 5, Dive 3",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=8600"
         },
@@ -2229,7 +2229,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Dun Morogh",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=1128"
         },
@@ -2297,7 +2297,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Darkshore",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=6789"
         },
@@ -2314,7 +2314,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Loch Modan",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=1186"
         },
@@ -2399,7 +2399,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Silverpine Forest",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=1797"
         },
@@ -2416,7 +2416,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Loch Modan",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=1188"
         },
@@ -2433,7 +2433,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Silverpine Forest",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=12432"
         },
@@ -2467,7 +2467,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Darkshore",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=2165"
         },
@@ -2552,7 +2552,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Hillsbrad Foothills",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=2354"
         },
@@ -2586,7 +2586,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Hillsbrad Foothills, Alterac Mountains",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=2356"
         },
@@ -2603,7 +2603,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Hillsbrad Foothills",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=14280"
         },
@@ -2620,7 +2620,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Ashenvale",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=3811"
         },
@@ -2637,7 +2637,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Ashenvale",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=12037"
         },
@@ -2688,7 +2688,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Feralas",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=5272"
         },
@@ -2705,7 +2705,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Felwood",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=8956"
         },
@@ -2773,7 +2773,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Felwood",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=8957"
         },
@@ -2790,7 +2790,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Western Plaguelands",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=1815"
         },
@@ -2824,7 +2824,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Winterspring",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=7443"
         },
@@ -2841,7 +2841,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Winterspring",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=10806"
         },
@@ -2875,7 +2875,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Winterspring",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=7446"
         }
@@ -3037,7 +3037,7 @@ window.WOW_ATLAS_DATA = {
           "faction": "Contested",
           "zone": "Felwood",
           "subzone": "Irontree Woods & Ruins of Constellas",
-          "teaches": "Claw 7Dive 3",
+          "teaches": "Claw 7, Dive 3",
           "notes": "Teaches Dive 3",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=7099"
@@ -3071,7 +3071,7 @@ window.WOW_ATLAS_DATA = {
           "faction": "Contested",
           "zone": "Felwood",
           "subzone": "South of Irontree Woods (Rare)",
-          "teaches": "Claw 7Dive 3",
+          "teaches": "Claw 7, Dive 3",
           "notes": "Legendary translucent white owl model",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=14343"
@@ -3088,8 +3088,8 @@ window.WOW_ATLAS_DATA = {
           "faction": "Contested",
           "zone": "Winterspring",
           "subzone": "",
-          "teaches": "Claw 7Dive 3",
-          "notes": "Teaches Claw 7Dive 3",
+          "teaches": "Claw 7, Dive 3",
+          "notes": "Teaches Claw 7, Dive 3",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=7455"
         },
@@ -3105,7 +3105,7 @@ window.WOW_ATLAS_DATA = {
           "faction": "Contested",
           "zone": "Winterspring",
           "subzone": "Owl Wing Thicket & Mazthoril",
-          "teaches": "Claw 8Dive 3",
+          "teaches": "Claw 8, Dive 3",
           "notes": "Teaches Claw 8",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=7456"
@@ -3596,7 +3596,7 @@ window.WOW_ATLAS_DATA = {
           "faction": "Contested",
           "zone": "Blasted Lands",
           "subzone": "Altar of Storms road (Rare)",
-          "teaches": "Dash 3Charge 5",
+          "teaches": "Dash 3, Charge 5",
           "notes": "Teaches Charge 5 & Dash 3",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=8303"
@@ -3678,7 +3678,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Mulgore",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=2969"
         },
@@ -3695,7 +3695,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Mulgore",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=2970"
         },
@@ -3712,7 +3712,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Mulgore",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=2971"
         },
@@ -3729,7 +3729,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Westfall",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=199"
         },
@@ -3746,7 +3746,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Westfall",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=1109"
         },
@@ -3763,7 +3763,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Loch Modan",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=14268"
         },
@@ -3780,7 +3780,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Loch Modan",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=1194"
         },
@@ -3814,7 +3814,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Redridge Mountains",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=428"
         },
@@ -3831,7 +3831,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Westfall",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=462"
         },
@@ -3848,7 +3848,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Thousand Needles",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=4154"
         },
@@ -3882,7 +3882,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Desolace",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=4692"
         },
@@ -3933,7 +3933,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Desolace",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=4695"
         },
@@ -3950,7 +3950,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Badlands",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=2829"
         },
@@ -3984,7 +3984,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Badlands",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=2830"
         },
@@ -4001,7 +4001,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Arathi Highlands",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=2580"
         },
@@ -4018,7 +4018,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Desolace",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=4694"
         },
@@ -4035,7 +4035,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Badlands",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=2831"
         },
@@ -4184,7 +4184,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Teldrassil",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=2031"
         },
@@ -4269,7 +4269,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Teldrassil",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=2032"
         },
@@ -4286,7 +4286,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Mulgore",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=2961"
         },
@@ -4405,7 +4405,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Dun Morogh",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=1201"
         },
@@ -4456,7 +4456,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Mulgore, Thunder Bluff",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=3566"
         },
@@ -4948,7 +4948,7 @@ window.WOW_ATLAS_DATA = {
           "faction": "Contested",
           "zone": "Badlands",
           "subzone": "",
-          "teaches": "Cower 4Prowl 1",
+          "teaches": "Cower 4, Prowl 1",
           "notes": "⚡ Fast attack speed (1.3s)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=2731"
@@ -5067,7 +5067,7 @@ window.WOW_ATLAS_DATA = {
           "faction": "Contested",
           "zone": "Badlands",
           "subzone": "",
-          "teaches": "Dash 2Prowl 2",
+          "teaches": "Dash 2, Prowl 2",
           "notes": "⚡ Fast attack speed (1.3s)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=2734"
@@ -5084,7 +5084,7 @@ window.WOW_ATLAS_DATA = {
           "faction": "Contested",
           "zone": "Stranglethorn Vale",
           "subzone": "",
-          "teaches": "Dash 2Prowl 2",
+          "teaches": "Dash 2, Prowl 2",
           "notes": "⚡ Fast attack speed (1.5s)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=1713"
@@ -5101,7 +5101,7 @@ window.WOW_ATLAS_DATA = {
           "faction": "Contested",
           "zone": "Stranglethorn Vale",
           "subzone": "Panther island near 38, 35 (Elite)",
-          "teaches": "Dash 2Claw 6",
+          "teaches": "Dash 2, Claw 6",
           "notes": "⚡ Iconic white tiger boss, 1.4s attack speed",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=731"
@@ -5118,8 +5118,8 @@ window.WOW_ATLAS_DATA = {
           "faction": "Contested",
           "zone": "Stranglethorn Vale",
           "subzone": "",
-          "teaches": "Cower 5Prowl 3",
-          "notes": "Teaches Cower 5Prowl 3",
+          "teaches": "Cower 5, Prowl 3",
+          "notes": "Teaches Cower 5, Prowl 3",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=2522"
         },
@@ -5220,7 +5220,7 @@ window.WOW_ATLAS_DATA = {
           "faction": "Contested",
           "zone": "Winterspring",
           "subzone": "Frostsaber Rock",
-          "teaches": "Dash 3Prowl 3",
+          "teaches": "Dash 3, Prowl 3",
           "notes": "Teaches Prowl Rank 3 (+50% opener damage)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=7432"
@@ -5319,7 +5319,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Durotar",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=3107"
         },
@@ -5387,7 +5387,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Darkshore",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=2234"
         },
@@ -5421,7 +5421,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Westfall",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=830"
         },
@@ -5438,7 +5438,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Darkshore",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=2235"
         },
@@ -5455,7 +5455,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Westfall",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=831"
         },
@@ -5489,7 +5489,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Darkshore",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=2233"
         },
@@ -5506,7 +5506,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "The Barrens",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=3503"
         },
@@ -5540,7 +5540,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Darkshore",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=2236"
         },
@@ -5557,7 +5557,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Ashenvale",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=3814"
         },
@@ -5574,7 +5574,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Desolace",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=12347"
         },
@@ -5608,7 +5608,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Stranglethorn Vale",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=2544"
         },
@@ -5704,7 +5704,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Durotar, The Barrens",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=3231"
         },
@@ -5738,7 +5738,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Wetlands",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=1417"
         },
@@ -5772,7 +5772,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Wetlands",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=1400"
         },
@@ -5857,7 +5857,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Stranglethorn Vale",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=1152"
         },
@@ -5874,7 +5874,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Swamp of Sorrows",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=1084"
         },
@@ -5891,7 +5891,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Dustwallow Marsh",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=4343"
         },
@@ -5908,7 +5908,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Stranglethorn Vale",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=2635"
         },
@@ -5942,7 +5942,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Swamp of Sorrows",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=1082"
         },
@@ -6236,7 +6236,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Stranglethorn Vale",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=14491"
         },
@@ -6253,7 +6253,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Stranglethorn Vale",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=1558"
         },
@@ -6287,7 +6287,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Stranglethorn Vale",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=2521"
         },
@@ -6367,7 +6367,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "The Barrens",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=4316"
         },
@@ -6384,7 +6384,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "The Barrens",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=4127"
         },
@@ -6418,7 +6418,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "The Barrens",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=4129"
         },
@@ -6435,7 +6435,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "The Barrens",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=4128"
         },
@@ -6469,7 +6469,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Thousand Needles",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=4248"
         },
@@ -6486,7 +6486,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Thousand Needles",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=4249"
         },
@@ -6503,7 +6503,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Desolace",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=4689"
         },
@@ -6537,7 +6537,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Desolace",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=14228"
         },
@@ -6554,7 +6554,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Desolace",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=4690"
         },
@@ -6752,7 +6752,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Durotar",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=3122"
         },
@@ -6769,7 +6769,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Durotar",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=3123"
         },
@@ -6786,7 +6786,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Durotar",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=3227"
         },
@@ -6803,7 +6803,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "The Barrens",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=3254"
         },
@@ -6820,7 +6820,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "The Barrens",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=3255"
         },
@@ -6837,7 +6837,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "The Barrens",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=3632"
         },
@@ -6854,7 +6854,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "The Barrens",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=3634"
         },
@@ -6871,7 +6871,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "The Barrens",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=3633"
         },
@@ -6888,7 +6888,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "The Barrens",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=3256"
         },
@@ -6905,7 +6905,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "The Barrens",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=5842"
         },
@@ -6922,7 +6922,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Wetlands",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=1020"
         },
@@ -6956,7 +6956,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Wetlands",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=1016"
         },
@@ -6973,7 +6973,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Wetlands",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=1021"
         },
@@ -6990,7 +6990,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Wetlands",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=1017"
         },
@@ -7007,7 +7007,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Wetlands",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=1022"
         },
@@ -7024,7 +7024,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Wetlands",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=1023"
         },
@@ -7041,7 +7041,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Wetlands",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=1018"
         },
@@ -7058,7 +7058,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Wetlands",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=1019"
         },
@@ -7075,7 +7075,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Wetlands",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=1353"
         },
@@ -7092,7 +7092,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Arathi Highlands",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=2559"
         },
@@ -7109,7 +7109,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Stranglethorn Vale",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=855"
         },
@@ -7126,7 +7126,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Wetlands",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=1140"
         },
@@ -7143,7 +7143,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Arathi Highlands",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=2560"
         },
@@ -7160,7 +7160,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Stranglethorn Vale",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=685"
         },
@@ -7177,7 +7177,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Stranglethorn Vale",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=856"
         },
@@ -7211,7 +7211,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Stranglethorn Vale",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=686"
         },
@@ -7228,7 +7228,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Dustwallow Marsh",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=4352"
         },
@@ -7245,7 +7245,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Arathi Highlands",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=2561"
         },
@@ -7262,7 +7262,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Stranglethorn Vale",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=854"
         },
@@ -7296,7 +7296,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Dustwallow Marsh",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=4356"
         },
@@ -7313,7 +7313,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Dustwallow Marsh",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=4357"
         },
@@ -7330,7 +7330,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Stranglethorn Vale",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=687"
         },
@@ -7347,7 +7347,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Stranglethorn Vale",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=730"
         }
@@ -7426,7 +7426,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Durotar",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=3125"
         },
@@ -7443,7 +7443,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Durotar",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=3126"
         },
@@ -7459,7 +7459,7 @@ window.WOW_ATLAS_DATA = {
           "faction": "Horde",
           "zone": "Durotar",
           "subzone": "Sen'jin Village & Razor Hill road",
-          "teaches": "Claw 2Scorpid Poison 1",
+          "teaches": "Claw 2, Scorpid Poison 1",
           "notes": "Teaches Scorpid Poison 1 at level 10",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=3127"
@@ -7493,7 +7493,7 @@ window.WOW_ATLAS_DATA = {
           "faction": "Horde",
           "zone": "Durotar",
           "subzone": "South of Razor Hill near 60, 48 (Rare)",
-          "teaches": "Claw 2Scorpid Poison 1",
+          "teaches": "Claw 2, Scorpid Poison 1",
           "notes": "⚡ Fastest Scorpid in Game! 1.6s swing speed",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=5823"
@@ -7544,7 +7544,7 @@ window.WOW_ATLAS_DATA = {
           "faction": "Contested",
           "zone": "Desolace",
           "subzone": "Kormek's Hut & Magram territory",
-          "teaches": "Claw 4Scorpid Poison 2",
+          "teaches": "Claw 4, Scorpid Poison 2",
           "notes": "Teaches Scorpid Poison 2 & Dash 1",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=4696"
@@ -7561,7 +7561,7 @@ window.WOW_ATLAS_DATA = {
           "faction": "Contested",
           "zone": "Thousand Needles",
           "subzone": "Highperch base & Splithoof Crag",
-          "teaches": "Claw 4Scorpid Poison 2",
+          "teaches": "Claw 4, Scorpid Poison 2",
           "notes": "Teaches Scorpid Poison 2",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=4140"
@@ -7595,8 +7595,8 @@ window.WOW_ATLAS_DATA = {
           "faction": "Contested",
           "zone": "Desolace",
           "subzone": "",
-          "teaches": "Claw 5Scorpid Poison 2",
-          "notes": "Teaches Claw 5Scorpid Poison 2",
+          "teaches": "Claw 5, Scorpid Poison 2",
+          "notes": "Teaches Claw 5, Scorpid Poison 2",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=4697"
         },
@@ -7612,7 +7612,7 @@ window.WOW_ATLAS_DATA = {
           "faction": "Contested",
           "zone": "Thousand Needles",
           "subzone": "Salt Flats cliffs (Rare)",
-          "teaches": "Claw 5Scorpid Poison 2",
+          "teaches": "Claw 5, Scorpid Poison 2",
           "notes": "Teaches Claw Rank 5",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=5937"
@@ -7646,7 +7646,7 @@ window.WOW_ATLAS_DATA = {
           "faction": "Contested",
           "zone": "Tanaris",
           "subzone": "Zul'Farrak exterior & Sandsorrow Watch",
-          "teaches": "Claw 6Scorpid Poison 3",
+          "teaches": "Claw 6, Scorpid Poison 3",
           "notes": "Teaches Scorpid Poison 3 & Claw 6",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=5422"
@@ -7714,8 +7714,8 @@ window.WOW_ATLAS_DATA = {
           "faction": "Contested",
           "zone": "Burning Steppes",
           "subzone": "",
-          "teaches": "Claw 7Scorpid Poison 3",
-          "notes": "Teaches Claw 7Scorpid Poison 3",
+          "teaches": "Claw 7, Scorpid Poison 3",
+          "notes": "Teaches Claw 7, Scorpid Poison 3",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=9695"
         },
@@ -7861,7 +7861,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Tirisfal Glades",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=1504"
         },
@@ -7895,7 +7895,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Teldrassil",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=1986"
         },
@@ -7963,7 +7963,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Teldrassil",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=1998"
         },
@@ -7997,7 +7997,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Elwynn Forest",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=43"
         },
@@ -8150,7 +8150,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Loch Modan",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=1184"
         },
@@ -8167,7 +8167,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Silverpine Forest",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=1781"
         },
@@ -8184,7 +8184,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Tirisfal Glades",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=10359"
         },
@@ -8218,7 +8218,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Silverpine Forest",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=12433"
         },
@@ -8269,7 +8269,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Stonetalon Mountains",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=4007"
         },
@@ -8303,7 +8303,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Duskwood",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=539"
         },
@@ -8371,7 +8371,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Duskwood",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=217"
         },
@@ -8405,7 +8405,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Ashenvale",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=3819"
         },
@@ -8439,7 +8439,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Wetlands",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=4040"
         },
@@ -8473,7 +8473,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Wetlands",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=1111"
         },
@@ -8507,7 +8507,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Duskwood",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=930"
         },
@@ -8575,7 +8575,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Ashenvale",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=3820"
         },
@@ -8592,7 +8592,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Duskwood",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=949"
         },
@@ -8677,7 +8677,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Dustwallow Marsh, The Barrens",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=4376"
         },
@@ -8711,7 +8711,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "The Barrens, Dustwallow Marsh",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=4378"
         },
@@ -8728,7 +8728,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Swamp of Sorrows",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=858"
         },
@@ -8745,7 +8745,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Dustwallow Marsh",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=4414"
         },
@@ -8779,7 +8779,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Dustwallow Marsh, The Barrens",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=4379"
         },
@@ -8796,7 +8796,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "The Barrens",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=4380"
         },
@@ -8830,7 +8830,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Dustwallow Marsh",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=4415"
         },
@@ -8847,7 +8847,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Searing Gorge",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=5856"
         },
@@ -8881,7 +8881,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Searing Gorge",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=5857"
         },
@@ -8898,7 +8898,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Searing Gorge",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=5858"
         },
@@ -8949,7 +8949,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Western Plaguelands",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=1822"
         },
@@ -8966,7 +8966,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Silithus",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=11738"
         },
@@ -8983,7 +8983,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Silithus",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=14472"
         },
@@ -9000,7 +9000,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Silithus",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=11739"
         }
@@ -9047,7 +9047,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Mulgore",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=2955"
         },
@@ -9132,7 +9132,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Mulgore",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=2956"
         },
@@ -9251,7 +9251,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Darkshore",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=2322"
         },
@@ -9381,7 +9381,7 @@ window.WOW_ATLAS_DATA = {
           "faction": "Contested",
           "zone": "Alterac Mountains, Hillsbrad Foothills",
           "subzone": "Durnholde river & Lordamere Lake",
-          "teaches": "Bite 4Shell Shield 1",
+          "teaches": "Bite 4, Shell Shield 1",
           "notes": "Teaches Shell Shield 1 & Dash 1",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=2408"
@@ -9399,7 +9399,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Thousand Needles",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=4142"
         },
@@ -9415,7 +9415,7 @@ window.WOW_ATLAS_DATA = {
           "faction": "Contested",
           "zone": "Alterac Mountains",
           "subzone": "Island in Lordamere Lake (Rare)",
-          "teaches": "Bite 4Shell Shield 1",
+          "teaches": "Bite 4, Shell Shield 1",
           "notes": "Named rare snapping turtle",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=14223"
@@ -9433,7 +9433,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Thousand Needles",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=4144"
         },
@@ -9467,7 +9467,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Dustwallow Marsh",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=4397"
         },
@@ -9484,7 +9484,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Tanaris",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=14123"
         },
@@ -9500,7 +9500,7 @@ window.WOW_ATLAS_DATA = {
           "faction": "Contested",
           "zone": "Tanaris",
           "subzone": "Eastmoon Ruins & Southbreak Shore",
-          "teaches": "Bite 7Shell Shield 1",
+          "teaches": "Bite 7, Shell Shield 1",
           "notes": "Teaches Bite Rank 7 & Shell Shield 2",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=5432"
@@ -9518,7 +9518,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Tanaris",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=5431"
         },
@@ -9552,7 +9552,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Azshara",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=6369"
         },
@@ -9568,7 +9568,7 @@ window.WOW_ATLAS_DATA = {
           "faction": "Contested",
           "zone": "The Hinterlands",
           "subzone": "The Overlook Cliffs coast (Rare)",
-          "teaches": "Bite 7Shell Shield 1",
+          "teaches": "Bite 7, Shell Shield 1",
           "notes": "Massive armor rating turtle",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=8213"
@@ -9586,7 +9586,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Azshara",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=6352"
         }
@@ -9717,7 +9717,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "The Barrens",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=5834"
         },
@@ -9818,7 +9818,7 @@ window.WOW_ATLAS_DATA = {
           "faction": "Contested",
           "zone": "Dustwallow Marsh",
           "subzone": "Dreadmurk Shore & Witch Hill",
-          "teaches": "Dive 1Lightning Breath 4",
+          "teaches": "Dive 1, Lightning Breath 4",
           "notes": "Teaches Lightning Breath Rank 4",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=4347"
@@ -9835,8 +9835,8 @@ window.WOW_ATLAS_DATA = {
           "faction": "Contested",
           "zone": "Dustwallow Marsh",
           "subzone": "",
-          "teaches": "Dive 1Lightning Breath 4",
-          "notes": "Teaches Dive 1Lightning Breath 4",
+          "teaches": "Dive 1, Lightning Breath 4",
+          "notes": "Teaches Dive 1, Lightning Breath 4",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=4348"
         },
@@ -9853,7 +9853,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Dustwallow Marsh",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=14234"
         },
@@ -9869,8 +9869,8 @@ window.WOW_ATLAS_DATA = {
           "faction": "Contested",
           "zone": "Feralas",
           "subzone": "",
-          "teaches": "Dive 2Lightning Breath 4",
-          "notes": "Teaches Dive 2Lightning Breath 4",
+          "teaches": "Dive 2, Lightning Breath 4",
+          "notes": "Teaches Dive 2, Lightning Breath 4",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=5307"
         },
@@ -9886,8 +9886,8 @@ window.WOW_ATLAS_DATA = {
           "faction": "Contested",
           "zone": "Feralas",
           "subzone": "",
-          "teaches": "Dive 2Lightning Breath 4",
-          "notes": "Teaches Dive 2Lightning Breath 4",
+          "teaches": "Dive 2, Lightning Breath 4",
+          "notes": "Teaches Dive 2, Lightning Breath 4",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=5308"
         },
@@ -9903,7 +9903,7 @@ window.WOW_ATLAS_DATA = {
           "faction": "Contested",
           "zone": "Feralas",
           "subzone": "Ruins of Ravenwind (Rare)",
-          "teaches": "Dive 2Lightning Breath 5",
+          "teaches": "Dive 2, Lightning Breath 5",
           "notes": "Teaches Lightning Breath Rank 5",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=5349"
@@ -9949,7 +9949,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Dun Morogh",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=705"
         },
@@ -9966,7 +9966,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Tirisfal Glades",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=1508"
         },
@@ -9983,7 +9983,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Elwynn Forest",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=299"
         },
@@ -10085,7 +10085,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Dun Morogh",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=704"
         },
@@ -10102,7 +10102,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Elwynn Forest",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=69"
         },
@@ -10305,7 +10305,7 @@ window.WOW_ATLAS_DATA = {
           "faction": "Contested",
           "zone": "Silverpine Forest, Tirisfal Glades",
           "subzone": "The Decrepit Ferry & The Shining Strand",
-          "teaches": "Bite 2Furious Howl 1",
+          "teaches": "Bite 2, Furious Howl 1",
           "notes": "Horde level 10 wolf; teaches Furious Howl 1",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=1765"
@@ -10322,7 +10322,7 @@ window.WOW_ATLAS_DATA = {
           "faction": "Alliance",
           "zone": "Westfall",
           "subzone": "Sentinel Hill perimeter",
-          "teaches": "Bite 2Furious Howl 1",
+          "teaches": "Bite 2, Furious Howl 1",
           "notes": "⚡ Fast 1.4s swing speed coyote",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=833"
@@ -10340,7 +10340,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Silverpine Forest",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=1766"
         },
@@ -10374,7 +10374,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Silverpine Forest",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=12431"
         },
@@ -10425,7 +10425,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Duskwood",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=213"
         },
@@ -10442,7 +10442,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Duskwood",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=565"
         },
@@ -10476,7 +10476,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Ashenvale",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=3824"
         },
@@ -10510,7 +10510,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Duskwood",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=923"
         },
@@ -10543,7 +10543,7 @@ window.WOW_ATLAS_DATA = {
           "faction": "Alliance",
           "zone": "Duskwood",
           "subzone": "The Rotting Orchard & Darkshire outskirts",
-          "teaches": "Bite 4Furious Howl 2",
+          "teaches": "Bite 4, Furious Howl 2",
           "notes": "Teaches Furious Howl 2 & Dash 1",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=1258"
@@ -10560,7 +10560,7 @@ window.WOW_ATLAS_DATA = {
           "faction": "Contested",
           "zone": "Ashenvale",
           "subzone": "Mystral Lake & Raynewood",
-          "teaches": "Bite 4Furious Howl 2",
+          "teaches": "Bite 4, Furious Howl 2",
           "notes": "Teaches Furious Howl 2",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=3825"
@@ -10577,8 +10577,8 @@ window.WOW_ATLAS_DATA = {
           "faction": "Contested",
           "zone": "Badlands",
           "subzone": "",
-          "teaches": "Bite 5Dash 1",
-          "notes": "Teaches Bite 5Dash 1",
+          "teaches": "Bite 5, Dash 1",
+          "notes": "Teaches Bite 5, Dash 1",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=2727"
         },
@@ -10645,8 +10645,8 @@ window.WOW_ATLAS_DATA = {
           "faction": "Contested",
           "zone": "Badlands",
           "subzone": "",
-          "teaches": "Dash 1Furious Howl 2",
-          "notes": "Teaches Dash 1Furious Howl 2",
+          "teaches": "Dash 1, Furious Howl 2",
+          "notes": "Teaches Dash 1, Furious Howl 2",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=2729"
         },
@@ -10662,7 +10662,7 @@ window.WOW_ATLAS_DATA = {
           "faction": "Contested",
           "zone": "Feralas",
           "subzone": "Feralas western river",
-          "teaches": "Bite 6Dash 2Furious Howl 3",
+          "teaches": "Bite 6, Dash 2, Furious Howl 3",
           "notes": "Teaches Furious Howl 3 & Dash 2",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=5286"
@@ -10680,7 +10680,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "The Hinterlands",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=2923"
         },
@@ -10696,8 +10696,8 @@ window.WOW_ATLAS_DATA = {
           "faction": "Contested",
           "zone": "The Hinterlands",
           "subzone": "",
-          "teaches": "Bite 6Dash 2",
-          "notes": "Teaches Bite 6Dash 2",
+          "teaches": "Bite 6, Dash 2",
+          "notes": "Teaches Bite 6, Dash 2",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=8211"
         },
@@ -10730,7 +10730,7 @@ window.WOW_ATLAS_DATA = {
           "faction": "Contested",
           "zone": "Feralas",
           "subzone": "North of Camp Mojache near 52, 42 (Rare)",
-          "teaches": "Bite 6Furious Howl 3",
+          "teaches": "Bite 6, Furious Howl 3",
           "notes": "Legendary rare wolf with +100 to all elemental resistances!",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=5356"
@@ -10799,7 +10799,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "The Hinterlands",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=2680"
         },
@@ -10815,8 +10815,8 @@ window.WOW_ATLAS_DATA = {
           "faction": "Contested",
           "zone": "Felwood",
           "subzone": "",
-          "teaches": "Bite 6Furious Howl 3",
-          "notes": "Teaches Bite 6Furious Howl 3",
+          "teaches": "Bite 6, Furious Howl 3",
+          "notes": "Teaches Bite 6, Furious Howl 3",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=8959"
         },
@@ -10833,7 +10833,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Feralas",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=5288"
         },
@@ -10866,8 +10866,8 @@ window.WOW_ATLAS_DATA = {
           "faction": "Contested",
           "zone": "Felwood",
           "subzone": "",
-          "teaches": "Bite 6Furious Howl 3",
-          "notes": "Teaches Bite 6Furious Howl 3",
+          "teaches": "Bite 6, Furious Howl 3",
+          "notes": "Teaches Bite 6, Furious Howl 3",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=14339"
         },
@@ -10884,7 +10884,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Felwood",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=8960"
         },
@@ -10900,7 +10900,7 @@ window.WOW_ATLAS_DATA = {
           "faction": "Contested",
           "zone": "The Hinterlands",
           "subzone": "",
-          "teaches": "Bite 7Dash 3",
+          "teaches": "Bite 7, Dash 3",
           "notes": "⚡ Fast attack speed (1.7s)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=2681"
@@ -10918,7 +10918,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Burning Steppes",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=9690"
         },
@@ -10969,7 +10969,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Burning Steppes",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=9694"
         },
@@ -11003,7 +11003,7 @@ window.WOW_ATLAS_DATA = {
           "zone": "Burning Steppes",
           "subzone": "",
           "teaches": "",
-          "notes": "",
+          "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
           "isNew": false,
           "npcUrl": "https://www.wowhead.com/forever/npc=9697"
         }
@@ -11024,7 +11024,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Tirisfal Glades",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=1512"
     },
@@ -11075,7 +11075,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Mulgore",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=2955"
     },
@@ -11092,7 +11092,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Dun Morogh",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=705"
     },
@@ -11109,7 +11109,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Teldrassil",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=2031"
     },
@@ -11126,7 +11126,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Tirisfal Glades",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=1508"
     },
@@ -11160,7 +11160,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Elwynn Forest",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=299"
     },
@@ -11177,7 +11177,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Teldrassil",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=2032"
     },
@@ -11211,7 +11211,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Dun Morogh",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=704"
     },
@@ -11245,7 +11245,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Elwynn Forest",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=69"
     },
@@ -11262,7 +11262,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Tirisfal Glades",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=1504"
     },
@@ -11313,7 +11313,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Mulgore",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=2961"
     },
@@ -11381,7 +11381,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Teldrassil",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=1986"
     },
@@ -11449,7 +11449,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Durotar",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=3125"
     },
@@ -11653,7 +11653,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Teldrassil",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=1998"
     },
@@ -11670,7 +11670,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Mulgore",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=2969"
     },
@@ -11687,7 +11687,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Dun Morogh",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=1128"
     },
@@ -11704,7 +11704,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Mulgore",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=2956"
     },
@@ -11738,7 +11738,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Durotar",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=3122"
     },
@@ -11840,7 +11840,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Durotar",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=3126"
     },
@@ -12010,7 +12010,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Dun Morogh",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=1201"
     },
@@ -12044,7 +12044,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Durotar",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=3107"
     },
@@ -12061,7 +12061,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Mulgore",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=2970"
     },
@@ -12112,7 +12112,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Durotar",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=3123"
     },
@@ -12180,7 +12180,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Elwynn Forest",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=43"
     },
@@ -12248,7 +12248,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Mulgore",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=2971"
     },
@@ -12265,7 +12265,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Tirisfal Glades",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=1554"
     },
@@ -12367,7 +12367,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Mulgore, Thunder Bluff",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=3566"
     },
@@ -12486,7 +12486,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Darkshore",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=6789"
     },
@@ -12502,7 +12502,7 @@ window.WOW_ATLAS_DATA = {
       "faction": "Horde",
       "zone": "Durotar",
       "subzone": "Sen'jin Village & Razor Hill road",
-      "teaches": "Claw 2Scorpid Poison 1",
+      "teaches": "Claw 2, Scorpid Poison 1",
       "notes": "Teaches Scorpid Poison 1 at level 10",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=3127"
@@ -12537,7 +12537,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Durotar",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=3227"
     },
@@ -12808,7 +12808,7 @@ window.WOW_ATLAS_DATA = {
       "faction": "Contested",
       "zone": "Silverpine Forest, Tirisfal Glades",
       "subzone": "The Decrepit Ferry & The Shining Strand",
-      "teaches": "Bite 2Furious Howl 1",
+      "teaches": "Bite 2, Furious Howl 1",
       "notes": "Horde level 10 wolf; teaches Furious Howl 1",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=1765"
@@ -12826,7 +12826,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Westfall",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=199"
     },
@@ -12843,7 +12843,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Darkshore",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=2234"
     },
@@ -12860,7 +12860,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Durotar, The Barrens",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=3231"
     },
@@ -12876,7 +12876,7 @@ window.WOW_ATLAS_DATA = {
       "faction": "Alliance",
       "zone": "Westfall",
       "subzone": "Sentinel Hill perimeter",
-      "teaches": "Bite 2Furious Howl 1",
+      "teaches": "Bite 2, Furious Howl 1",
       "notes": "⚡ Fast 1.4s swing speed coyote",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=833"
@@ -12893,7 +12893,7 @@ window.WOW_ATLAS_DATA = {
       "faction": "Horde",
       "zone": "Durotar",
       "subzone": "South of Razor Hill near 60, 48 (Rare)",
-      "teaches": "Claw 2Scorpid Poison 1",
+      "teaches": "Claw 2, Scorpid Poison 1",
       "notes": "⚡ Fastest Scorpid in Game! 1.6s swing speed",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=5823"
@@ -12911,7 +12911,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Loch Modan",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=1186"
     },
@@ -12996,7 +12996,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Silverpine Forest",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=1766"
     },
@@ -13013,7 +13013,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Tirisfal Glades",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=10357"
     },
@@ -13047,7 +13047,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "The Barrens",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=3254"
     },
@@ -13132,7 +13132,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Silverpine Forest",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=1797"
     },
@@ -13268,7 +13268,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Loch Modan",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=1184"
     },
@@ -13302,7 +13302,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Westfall",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=1109"
     },
@@ -13319,7 +13319,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Silverpine Forest",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=12431"
     },
@@ -13336,7 +13336,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Loch Modan",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=1188"
     },
@@ -13353,7 +13353,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "The Barrens",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=4316"
     },
@@ -13370,7 +13370,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Silverpine Forest",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=1781"
     },
@@ -13387,7 +13387,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Westfall",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=830"
     },
@@ -13421,7 +13421,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Tirisfal Glades",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=10359"
     },
@@ -13438,7 +13438,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "The Barrens",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=3255"
     },
@@ -13472,7 +13472,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Darkshore",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=2322"
     },
@@ -13557,7 +13557,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Silverpine Forest",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=12432"
     },
@@ -13608,7 +13608,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "The Barrens",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=3632"
     },
@@ -13625,7 +13625,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "The Barrens",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=3634"
     },
@@ -13642,7 +13642,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "The Barrens",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=4127"
     },
@@ -13659,7 +13659,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Silverpine Forest",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=12433"
     },
@@ -13676,7 +13676,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Loch Modan",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=14268"
     },
@@ -13693,7 +13693,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Loch Modan",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=1194"
     },
@@ -13727,7 +13727,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Darkshore",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=2235"
     },
@@ -13761,7 +13761,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Westfall",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=831"
     },
@@ -13846,7 +13846,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "The Barrens",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=3633"
     },
@@ -13931,7 +13931,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Darkshore",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=2165"
     },
@@ -13965,7 +13965,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "The Barrens",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=3256"
     },
@@ -13982,7 +13982,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Stonetalon Mountains",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=4007"
     },
@@ -14118,7 +14118,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Redridge Mountains",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=428"
     },
@@ -14135,7 +14135,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Darkshore",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=2233"
     },
@@ -14152,7 +14152,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "The Barrens",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=4129"
     },
@@ -14169,7 +14169,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Duskwood",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=539"
     },
@@ -14186,7 +14186,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "The Barrens",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=3503"
     },
@@ -14322,7 +14322,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Duskwood",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=213"
     },
@@ -14339,7 +14339,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "The Barrens",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=5842"
     },
@@ -14356,7 +14356,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Duskwood",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=217"
     },
@@ -14407,7 +14407,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Duskwood",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=565"
     },
@@ -14424,7 +14424,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Darkshore",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=2236"
     },
@@ -14458,7 +14458,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Ashenvale",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=3814"
     },
@@ -14509,7 +14509,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Ashenvale",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=3819"
     },
@@ -14560,7 +14560,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Wetlands",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=4040"
     },
@@ -14611,7 +14611,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Wetlands",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=1111"
     },
@@ -14645,7 +14645,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Wetlands",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=1417"
     },
@@ -14662,7 +14662,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "The Barrens",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=4128"
     },
@@ -14713,7 +14713,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Wetlands",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=1020"
     },
@@ -14730,7 +14730,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Hillsbrad Foothills",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=2354"
     },
@@ -14764,7 +14764,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Ashenvale",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=3824"
     },
@@ -14883,7 +14883,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Wetlands",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=1400"
     },
@@ -14900,7 +14900,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Duskwood",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=923"
     },
@@ -14951,7 +14951,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Duskwood",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=930"
     },
@@ -15019,7 +15019,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Wetlands",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=1016"
     },
@@ -15053,7 +15053,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Wetlands",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=1021"
     },
@@ -15070,7 +15070,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Ashenvale",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=3820"
     },
@@ -15087,7 +15087,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "The Barrens",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=5834"
     },
@@ -15103,7 +15103,7 @@ window.WOW_ATLAS_DATA = {
       "faction": "Alliance",
       "zone": "Duskwood",
       "subzone": "The Rotting Orchard & Darkshire outskirts",
-      "teaches": "Bite 4Furious Howl 2",
+      "teaches": "Bite 4, Furious Howl 2",
       "notes": "Teaches Furious Howl 2 & Dash 1",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=1258"
@@ -15121,7 +15121,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Duskwood",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=949"
     },
@@ -15189,7 +15189,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Hillsbrad Foothills, Alterac Mountains",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=2356"
     },
@@ -15223,7 +15223,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Wetlands",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=1017"
     },
@@ -15240,7 +15240,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Wetlands",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=1022"
     },
@@ -15291,7 +15291,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Wetlands",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=1023"
     },
@@ -15308,7 +15308,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Thousand Needles",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=4248"
     },
@@ -15342,7 +15342,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Westfall",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=462"
     },
@@ -15359,7 +15359,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Hillsbrad Foothills",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=14280"
     },
@@ -15409,7 +15409,7 @@ window.WOW_ATLAS_DATA = {
       "faction": "Contested",
       "zone": "Ashenvale",
       "subzone": "Mystral Lake & Raynewood",
-      "teaches": "Bite 4Furious Howl 2",
+      "teaches": "Bite 4, Furious Howl 2",
       "notes": "Teaches Furious Howl 2",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=3825"
@@ -15427,7 +15427,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Wetlands",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=1018"
     },
@@ -15478,7 +15478,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Thousand Needles",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=4249"
     },
@@ -15512,7 +15512,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Wetlands",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=1019"
     },
@@ -15529,7 +15529,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Ashenvale",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=3811"
     },
@@ -15546,7 +15546,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Wetlands",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=1353"
     },
@@ -15563,7 +15563,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Desolace",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=12347"
     },
@@ -15580,7 +15580,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Arathi Highlands",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=2559"
     },
@@ -15614,7 +15614,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Thousand Needles",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=4154"
     },
@@ -15630,7 +15630,7 @@ window.WOW_ATLAS_DATA = {
       "faction": "Contested",
       "zone": "Desolace",
       "subzone": "Kormek's Hut & Magram territory",
-      "teaches": "Claw 4Scorpid Poison 2",
+      "teaches": "Claw 4, Scorpid Poison 2",
       "notes": "Teaches Scorpid Poison 2 & Dash 1",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=4696"
@@ -15647,7 +15647,7 @@ window.WOW_ATLAS_DATA = {
       "faction": "Contested",
       "zone": "Alterac Mountains, Hillsbrad Foothills",
       "subzone": "Durnholde river & Lordamere Lake",
-      "teaches": "Bite 4Shell Shield 1",
+      "teaches": "Bite 4, Shell Shield 1",
       "notes": "Teaches Shell Shield 1 & Dash 1",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=2408"
@@ -15665,7 +15665,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Thousand Needles",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=4142"
     },
@@ -15682,7 +15682,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Desolace",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=4689"
     },
@@ -15716,7 +15716,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Stranglethorn Vale",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=855"
     },
@@ -15750,7 +15750,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Wetlands",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=1140"
     },
@@ -15766,7 +15766,7 @@ window.WOW_ATLAS_DATA = {
       "faction": "Contested",
       "zone": "Thousand Needles",
       "subzone": "Highperch base & Splithoof Crag",
-      "teaches": "Claw 4Scorpid Poison 2",
+      "teaches": "Claw 4, Scorpid Poison 2",
       "notes": "Teaches Scorpid Poison 2",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=4140"
@@ -15784,7 +15784,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Ashenvale",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=12037"
     },
@@ -15817,7 +15817,7 @@ window.WOW_ATLAS_DATA = {
       "faction": "Contested",
       "zone": "Alterac Mountains",
       "subzone": "Island in Lordamere Lake (Rare)",
-      "teaches": "Bite 4Shell Shield 1",
+      "teaches": "Bite 4, Shell Shield 1",
       "notes": "Named rare snapping turtle",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=14223"
@@ -15835,7 +15835,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Desolace",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=4692"
     },
@@ -15954,7 +15954,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Thousand Needles",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=4144"
     },
@@ -15988,7 +15988,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Arathi Highlands",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=2560"
     },
@@ -16039,7 +16039,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Stranglethorn Vale",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=685"
     },
@@ -16056,7 +16056,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Stranglethorn Vale",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=856"
     },
@@ -16090,7 +16090,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Desolace",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=14228"
     },
@@ -16123,8 +16123,8 @@ window.WOW_ATLAS_DATA = {
       "faction": "Contested",
       "zone": "Desolace",
       "subzone": "",
-      "teaches": "Claw 5Scorpid Poison 2",
-      "notes": "Teaches Claw 5Scorpid Poison 2",
+      "teaches": "Claw 5, Scorpid Poison 2",
+      "notes": "Teaches Claw 5, Scorpid Poison 2",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=4697"
     },
@@ -16192,7 +16192,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Desolace",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=4695"
     },
@@ -16208,8 +16208,8 @@ window.WOW_ATLAS_DATA = {
       "faction": "Contested",
       "zone": "Badlands",
       "subzone": "",
-      "teaches": "Bite 5Dash 1",
-      "notes": "Teaches Bite 5Dash 1",
+      "teaches": "Bite 5, Dash 1",
+      "notes": "Teaches Bite 5, Dash 1",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=2727"
     },
@@ -16226,7 +16226,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Dustwallow Marsh, The Barrens",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=4376"
     },
@@ -16277,7 +16277,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Stranglethorn Vale",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=686"
     },
@@ -16328,7 +16328,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Stranglethorn Vale",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=1152"
     },
@@ -16362,7 +16362,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Badlands",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=2829"
     },
@@ -16378,7 +16378,7 @@ window.WOW_ATLAS_DATA = {
       "faction": "Contested",
       "zone": "Thousand Needles",
       "subzone": "Salt Flats cliffs (Rare)",
-      "teaches": "Claw 5Scorpid Poison 2",
+      "teaches": "Claw 5, Scorpid Poison 2",
       "notes": "Teaches Claw Rank 5",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=5937"
@@ -16396,7 +16396,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Swamp of Sorrows",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=1084"
     },
@@ -16413,7 +16413,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Dustwallow Marsh",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=4352"
     },
@@ -16430,7 +16430,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "The Barrens, Dustwallow Marsh",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=4378"
     },
@@ -16464,7 +16464,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Arathi Highlands",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=2561"
     },
@@ -16481,7 +16481,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Desolace",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=4690"
     },
@@ -16497,7 +16497,7 @@ window.WOW_ATLAS_DATA = {
       "faction": "Contested",
       "zone": "Badlands",
       "subzone": "",
-      "teaches": "Cower 4Prowl 1",
+      "teaches": "Cower 4, Prowl 1",
       "notes": "⚡ Fast attack speed (1.3s)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=2731"
@@ -16515,7 +16515,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Swamp of Sorrows",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=858"
     },
@@ -16549,7 +16549,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Stranglethorn Vale",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=854"
     },
@@ -16583,7 +16583,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Badlands",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=2830"
     },
@@ -16600,7 +16600,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Dustwallow Marsh",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=4414"
     },
@@ -16617,7 +16617,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Dustwallow Marsh",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=4343"
     },
@@ -16634,7 +16634,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Arathi Highlands",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=2580"
     },
@@ -16702,7 +16702,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Dustwallow Marsh",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=4397"
     },
@@ -16718,7 +16718,7 @@ window.WOW_ATLAS_DATA = {
       "faction": "Contested",
       "zone": "Dustwallow Marsh",
       "subzone": "Dreadmurk Shore & Witch Hill",
-      "teaches": "Dive 1Lightning Breath 4",
+      "teaches": "Dive 1, Lightning Breath 4",
       "notes": "Teaches Lightning Breath Rank 4",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=4347"
@@ -16787,7 +16787,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Dustwallow Marsh, The Barrens",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=4379"
     },
@@ -16821,7 +16821,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Stranglethorn Vale",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=2635"
     },
@@ -16854,8 +16854,8 @@ window.WOW_ATLAS_DATA = {
       "faction": "Contested",
       "zone": "Dustwallow Marsh",
       "subzone": "",
-      "teaches": "Dive 1Lightning Breath 4",
-      "notes": "Teaches Dive 1Lightning Breath 4",
+      "teaches": "Dive 1, Lightning Breath 4",
+      "notes": "Teaches Dive 1, Lightning Breath 4",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=4348"
     },
@@ -16889,7 +16889,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Swamp of Sorrows",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=1082"
     },
@@ -16923,7 +16923,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Dustwallow Marsh",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=4356"
     },
@@ -16940,7 +16940,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Desolace",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=4694"
     },
@@ -16956,8 +16956,8 @@ window.WOW_ATLAS_DATA = {
       "faction": "Contested",
       "zone": "Badlands",
       "subzone": "",
-      "teaches": "Dash 1Furious Howl 2",
-      "notes": "Teaches Dash 1Furious Howl 2",
+      "teaches": "Dash 1, Furious Howl 2",
+      "notes": "Teaches Dash 1, Furious Howl 2",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=2729"
     },
@@ -16974,7 +16974,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Badlands",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=2831"
     },
@@ -17042,7 +17042,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Dustwallow Marsh",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=4357"
     },
@@ -17059,7 +17059,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "The Barrens",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=4380"
     },
@@ -17127,7 +17127,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Dustwallow Marsh",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=4415"
     },
@@ -17144,7 +17144,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Stranglethorn Vale",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=687"
     },
@@ -17160,7 +17160,7 @@ window.WOW_ATLAS_DATA = {
       "faction": "Contested",
       "zone": "Feralas",
       "subzone": "Feralas western river",
-      "teaches": "Bite 6Dash 2Furious Howl 3",
+      "teaches": "Bite 6, Dash 2, Furious Howl 3",
       "notes": "Teaches Furious Howl 3 & Dash 2",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=5286"
@@ -17177,7 +17177,7 @@ window.WOW_ATLAS_DATA = {
       "faction": "Contested",
       "zone": "Badlands",
       "subzone": "",
-      "teaches": "Dash 2Prowl 2",
+      "teaches": "Dash 2, Prowl 2",
       "notes": "⚡ Fast attack speed (1.3s)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=2734"
@@ -17194,7 +17194,7 @@ window.WOW_ATLAS_DATA = {
       "faction": "Contested",
       "zone": "Tanaris",
       "subzone": "Zul'Farrak exterior & Sandsorrow Watch",
-      "teaches": "Claw 6Scorpid Poison 3",
+      "teaches": "Claw 6, Scorpid Poison 3",
       "notes": "Teaches Scorpid Poison 3 & Claw 6",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=5422"
@@ -17229,7 +17229,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Stranglethorn Vale",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=2544"
     },
@@ -17246,7 +17246,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Dustwallow Marsh",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=14234"
     },
@@ -17280,7 +17280,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "The Hinterlands",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=2923"
     },
@@ -17347,8 +17347,8 @@ window.WOW_ATLAS_DATA = {
       "faction": "Contested",
       "zone": "Feralas",
       "subzone": "",
-      "teaches": "Dive 2Lightning Breath 4",
-      "notes": "Teaches Dive 2Lightning Breath 4",
+      "teaches": "Dive 2, Lightning Breath 4",
+      "notes": "Teaches Dive 2, Lightning Breath 4",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=5307"
     },
@@ -17364,7 +17364,7 @@ window.WOW_ATLAS_DATA = {
       "faction": "Contested",
       "zone": "Stranglethorn Vale",
       "subzone": "",
-      "teaches": "Dash 2Prowl 2",
+      "teaches": "Dash 2, Prowl 2",
       "notes": "⚡ Fast attack speed (1.5s)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=1713"
@@ -17399,7 +17399,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Stranglethorn Vale",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=14491"
     },
@@ -17415,8 +17415,8 @@ window.WOW_ATLAS_DATA = {
       "faction": "Contested",
       "zone": "The Hinterlands",
       "subzone": "",
-      "teaches": "Bite 6Dash 2",
-      "notes": "Teaches Bite 6Dash 2",
+      "teaches": "Bite 6, Dash 2",
+      "notes": "Teaches Bite 6, Dash 2",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=8211"
     },
@@ -17450,7 +17450,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Stranglethorn Vale",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=1558"
     },
@@ -17466,7 +17466,7 @@ window.WOW_ATLAS_DATA = {
       "faction": "Contested",
       "zone": "Feralas",
       "subzone": "North of Camp Mojache near 52, 42 (Rare)",
-      "teaches": "Bite 6Furious Howl 3",
+      "teaches": "Bite 6, Furious Howl 3",
       "notes": "Legendary rare wolf with +100 to all elemental resistances!",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=5356"
@@ -17484,7 +17484,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Tanaris",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=14123"
     },
@@ -17518,7 +17518,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Searing Gorge",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=5856"
     },
@@ -17534,7 +17534,7 @@ window.WOW_ATLAS_DATA = {
       "faction": "Contested",
       "zone": "Stranglethorn Vale",
       "subzone": "Panther island near 38, 35 (Elite)",
-      "teaches": "Dash 2Claw 6",
+      "teaches": "Dash 2, Claw 6",
       "notes": "⚡ Iconic white tiger boss, 1.4s attack speed",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=731"
@@ -17654,7 +17654,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Stranglethorn Vale",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=730"
     },
@@ -17688,7 +17688,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Feralas",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=5272"
     },
@@ -17704,8 +17704,8 @@ window.WOW_ATLAS_DATA = {
       "faction": "Contested",
       "zone": "Feralas",
       "subzone": "",
-      "teaches": "Dive 2Lightning Breath 4",
-      "notes": "Teaches Dive 2Lightning Breath 4",
+      "teaches": "Dive 2, Lightning Breath 4",
+      "notes": "Teaches Dive 2, Lightning Breath 4",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=5308"
     },
@@ -17756,7 +17756,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Searing Gorge",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=5857"
     },
@@ -17824,7 +17824,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "The Hinterlands",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=2680"
     },
@@ -17841,7 +17841,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Felwood",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=8956"
     },
@@ -17857,8 +17857,8 @@ window.WOW_ATLAS_DATA = {
       "faction": "Contested",
       "zone": "Felwood",
       "subzone": "",
-      "teaches": "Bite 6Furious Howl 3",
-      "notes": "Teaches Bite 6Furious Howl 3",
+      "teaches": "Bite 6, Furious Howl 3",
+      "notes": "Teaches Bite 6, Furious Howl 3",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=8959"
     },
@@ -17875,7 +17875,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Searing Gorge",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=5858"
     },
@@ -17909,7 +17909,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Feralas",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=5288"
     },
@@ -17976,7 +17976,7 @@ window.WOW_ATLAS_DATA = {
       "faction": "Contested",
       "zone": "Tanaris",
       "subzone": "Eastmoon Ruins & Southbreak Shore",
-      "teaches": "Bite 7Shell Shield 1",
+      "teaches": "Bite 7, Shell Shield 1",
       "notes": "Teaches Bite Rank 7 & Shell Shield 2",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=5432"
@@ -18045,7 +18045,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Tanaris",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=5431"
     },
@@ -18078,7 +18078,7 @@ window.WOW_ATLAS_DATA = {
       "faction": "Contested",
       "zone": "Feralas",
       "subzone": "Ruins of Ravenwind (Rare)",
-      "teaches": "Dive 2Lightning Breath 5",
+      "teaches": "Dive 2, Lightning Breath 5",
       "notes": "Teaches Lightning Breath Rank 5",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=5349"
@@ -18095,8 +18095,8 @@ window.WOW_ATLAS_DATA = {
       "faction": "Contested",
       "zone": "Felwood",
       "subzone": "",
-      "teaches": "Bite 6Furious Howl 3",
-      "notes": "Teaches Bite 6Furious Howl 3",
+      "teaches": "Bite 6, Furious Howl 3",
+      "notes": "Teaches Bite 6, Furious Howl 3",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=14339"
     },
@@ -18113,7 +18113,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Felwood",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=8960"
     },
@@ -18198,7 +18198,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Azshara",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=6369"
     },
@@ -18214,7 +18214,7 @@ window.WOW_ATLAS_DATA = {
       "faction": "Contested",
       "zone": "Blasted Lands",
       "subzone": "Altar of Storms road (Rare)",
-      "teaches": "Dash 3Charge 5",
+      "teaches": "Dash 3, Charge 5",
       "notes": "Teaches Charge 5 & Dash 3",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=8303"
@@ -18231,7 +18231,7 @@ window.WOW_ATLAS_DATA = {
       "faction": "Contested",
       "zone": "Felwood",
       "subzone": "Irontree Woods & Ruins of Constellas",
-      "teaches": "Claw 7Dive 3",
+      "teaches": "Claw 7, Dive 3",
       "notes": "Teaches Dive 3",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=7099"
@@ -18248,8 +18248,8 @@ window.WOW_ATLAS_DATA = {
       "faction": "Contested",
       "zone": "Stranglethorn Vale",
       "subzone": "",
-      "teaches": "Cower 5Prowl 3",
-      "notes": "Teaches Cower 5Prowl 3",
+      "teaches": "Cower 5, Prowl 3",
+      "notes": "Teaches Cower 5, Prowl 3",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=2522"
     },
@@ -18300,7 +18300,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Stranglethorn Vale",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=2521"
     },
@@ -18317,7 +18317,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Western Plaguelands",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=1822"
     },
@@ -18333,7 +18333,7 @@ window.WOW_ATLAS_DATA = {
       "faction": "Contested",
       "zone": "The Hinterlands",
       "subzone": "",
-      "teaches": "Bite 7Dash 3",
+      "teaches": "Bite 7, Dash 3",
       "notes": "⚡ Fast attack speed (1.7s)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=2681"
@@ -18351,7 +18351,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Felwood",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=8957"
     },
@@ -18368,7 +18368,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Western Plaguelands",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=1815"
     },
@@ -18385,7 +18385,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Burning Steppes",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=9690"
     },
@@ -18418,7 +18418,7 @@ window.WOW_ATLAS_DATA = {
       "faction": "Contested",
       "zone": "The Hinterlands",
       "subzone": "The Overlook Cliffs coast (Rare)",
-      "teaches": "Bite 7Shell Shield 1",
+      "teaches": "Bite 7, Shell Shield 1",
       "notes": "Massive armor rating turtle",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=8213"
@@ -18469,7 +18469,7 @@ window.WOW_ATLAS_DATA = {
       "faction": "Contested",
       "zone": "Felwood",
       "subzone": "South of Irontree Woods (Rare)",
-      "teaches": "Claw 7Dive 3",
+      "teaches": "Claw 7, Dive 3",
       "notes": "Legendary translucent white owl model",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=14343"
@@ -18521,7 +18521,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Azshara",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=6352"
     },
@@ -18554,8 +18554,8 @@ window.WOW_ATLAS_DATA = {
       "faction": "Contested",
       "zone": "Eastern Plaguelands",
       "subzone": "",
-      "teaches": "Cower 5Dive 3",
-      "notes": "Teaches Cower 5Dive 3",
+      "teaches": "Cower 5, Dive 3",
+      "notes": "Teaches Cower 5, Dive 3",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=8600"
     },
@@ -18589,7 +18589,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Burning Steppes",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=9694"
     },
@@ -18622,8 +18622,8 @@ window.WOW_ATLAS_DATA = {
       "faction": "Contested",
       "zone": "Burning Steppes",
       "subzone": "",
-      "teaches": "Claw 7Scorpid Poison 3",
-      "notes": "Teaches Claw 7Scorpid Poison 3",
+      "teaches": "Claw 7, Scorpid Poison 3",
+      "notes": "Teaches Claw 7, Scorpid Poison 3",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=9695"
     },
@@ -18673,8 +18673,8 @@ window.WOW_ATLAS_DATA = {
       "faction": "Contested",
       "zone": "Winterspring",
       "subzone": "",
-      "teaches": "Claw 7Dive 3",
-      "notes": "Teaches Claw 7Dive 3",
+      "teaches": "Claw 7, Dive 3",
+      "notes": "Teaches Claw 7, Dive 3",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=7455"
     },
@@ -18708,7 +18708,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Burning Steppes",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=9697"
     },
@@ -18725,7 +18725,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Silithus",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=11738"
     },
@@ -18742,7 +18742,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Winterspring",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=7443"
     },
@@ -18878,7 +18878,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Winterspring",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=10806"
     },
@@ -18912,7 +18912,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Silithus",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=14472"
     },
@@ -18946,7 +18946,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Silithus",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=11739"
     },
@@ -18979,7 +18979,7 @@ window.WOW_ATLAS_DATA = {
       "faction": "Contested",
       "zone": "Winterspring",
       "subzone": "Owl Wing Thicket & Mazthoril",
-      "teaches": "Claw 8Dive 3",
+      "teaches": "Claw 8, Dive 3",
       "notes": "Teaches Claw 8",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=7456"
@@ -19030,7 +19030,7 @@ window.WOW_ATLAS_DATA = {
       "faction": "Contested",
       "zone": "Winterspring",
       "subzone": "Frostsaber Rock",
-      "teaches": "Dash 3Prowl 3",
+      "teaches": "Dash 3, Prowl 3",
       "notes": "Teaches Prowl Rank 3 (+50% opener damage)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=7432"
@@ -19048,7 +19048,7 @@ window.WOW_ATLAS_DATA = {
       "zone": "Winterspring",
       "subzone": "",
       "teaches": "",
-      "notes": "",
+      "notes": "Blank slate — teaches no innate abilities (train via Beast Training)",
       "isNew": false,
       "npcUrl": "https://www.wowhead.com/forever/npc=7446"
     },

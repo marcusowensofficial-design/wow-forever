@@ -563,6 +563,7 @@ function initClassDeepDives() {
     const levelSelect = document.getElementById('modal-filter-level');
     const speedSelect = document.getElementById('modal-filter-speed');
     const factionSelect = document.getElementById('modal-filter-faction');
+    const abilitySelect = document.getElementById('modal-filter-ability');
     const countBadge = document.getElementById('modal-pet-count-badge');
 
     if (!modal || !tableContainer) return;
@@ -581,6 +582,7 @@ function initClassDeepDives() {
       const selLvl = levelSelect?.value || 'all';
       const selSpeed = speedSelect?.value || 'all';
       const selFaction = factionSelect?.value || 'all';
+      const selAbility = abilitySelect?.value || 'all';
 
       const filtered = allBeasts.filter(b => {
         // Family filter
@@ -603,6 +605,13 @@ function initClassDeepDives() {
 
         // Faction filter
         if (selFaction !== 'all' && b.faction !== selFaction) return false;
+
+        // Ability filter
+        if (selAbility === 'teaches' && (!b.teaches || !b.teaches.trim())) return false;
+        if (selAbility === 'none' && (b.teaches && b.teaches.trim())) return false;
+        if (selAbility !== 'all' && selAbility !== 'teaches' && selAbility !== 'none') {
+          if (!b.teaches || !b.teaches.toLowerCase().includes(selAbility.toLowerCase())) return false;
+        }
 
         // Search text
         if (q) {
@@ -672,7 +681,15 @@ function initClassDeepDives() {
                     <span class="tbr-faction ${escapeHtml(b.faction)}">${escapeHtml(b.faction)}</span>
                   </td>
                   <td>
-                    ${b.teaches ? `<span style="color: #fcd34d; font-size: 0.78rem; font-weight: 600;">📖 ${escapeHtml(b.teaches)}</span>` : '<span style="color: #64748b;">—</span>'}
+                    ${b.teaches ? `
+                      <span style="color: #fcd34d; font-size: 0.78rem; font-weight: 600; display: inline-flex; align-items: center; gap: 0.25rem;">
+                        <span>📖</span> <span>${escapeHtml(b.teaches)}</span>
+                      </span>
+                    ` : `
+                      <span class="pet-untaught-badge" title="No innate ability taught upon tame. Learn skills from other beasts or trainers to train this pet.">
+                        <span style="opacity: 0.5;">⚪</span> <span>Untaught</span>
+                      </span>
+                    `}
                   </td>
                   <td>
                     ${b.isNew ? '<span class="deepdive-badge badge-exclusive" style="font-size: 0.65rem; margin-right: 0.3rem;">✦ New in Forever</span>' : ''}
@@ -705,7 +722,7 @@ function initClassDeepDives() {
       if (e.target === modal) closeModal();
     };
 
-    [searchInput, familySelect, levelSelect, speedSelect, factionSelect].forEach(el => {
+    [searchInput, familySelect, levelSelect, speedSelect, factionSelect, abilitySelect].forEach(el => {
       if (el) {
         el.oninput = renderModalTable;
         el.onchange = renderModalTable;
@@ -2080,7 +2097,11 @@ function initClassDeepDives() {
                           <div class="tbr-teaches">
                             <span>📖</span> <span>${escapeHtml(b.teaches)}</span>
                           </div>
-                        ` : ''}
+                        ` : `
+                          <div class="tbr-teaches tbr-untaught" title="No innate ability taught upon tame. Learn skills from other beasts or trainers to train this pet.">
+                            <span style="opacity: 0.5;">⚪</span> <span>Untaught (Blank Slate)</span>
+                          </div>
+                        `}
                         ${b.notes ? `
                           <div class="tbr-notes">${escapeHtml(b.notes)}</div>
                         ` : ''}
