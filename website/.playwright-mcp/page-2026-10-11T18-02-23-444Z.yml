@@ -1,0 +1,323 @@
+- generic [active] [ref=e1]:
+  - complementary "Game and Beta Status Bar" [ref=e2]:
+    - generic [ref=e3]: "Beta Phase 2: LIVE NOW • Level 30 Cap Active"
+    - generic [ref=e6]:
+      - generic [ref=e7]:
+        - strong [ref=e8]: "Beta Duration:"
+        - text: 35 Days (Sept 17 – Oct 21) •
+        - generic [ref=e9]: Day 25 of 35
+      - generic [ref=e10]:
+        - strong [ref=e11]: "Level Cap:"
+        - text: 30 Active (Excavation Site 4 & Dalaran Live)
+      - generic [ref=e12]: Classic+ Standalone
+      - generic [ref=e13]: "🍺 Events: Brewfest & Harvest Concluded • Hallow's End Arrives Oct 18"
+      - generic [ref=e14]:
+        - strong [ref=e15]: "Rulesets:"
+        - text: PvP • PvE • RP • Hardcore
+      - generic [ref=e16]:
+        - strong [ref=e17]: "Engine:"
+        - text: Ray-Traced GI (DX12)
+      - generic [ref=e18]:
+        - strong [ref=e19]: "Client Build:"
+        - text: 1.60.6.71890 (Phase 2 Cooldown Manager & UI Overhaul)
+  - generic [ref=e20]:
+    - generic [ref=e21]:
+      - generic [ref=e22]:
+        - generic [ref=e23]: Beta Build 1.60.6.71890 • Realms Online
+        - button "🐟 4,011 murlocs online" [ref=e26] [cursor=pointer]:
+          - generic [ref=e27]: 🐟
+          - generic [ref=e28]: 4,011
+          - generic [ref=e29]: murlocs online
+      - generic [ref=e30]:
+        - button "Search Forever" [ref=e31] [cursor=pointer]:
+          - generic: 🔍
+          - text: Search Forever
+          - generic [ref=e32]: /
+        - button "Classic+ Guides" [ref=e33] [cursor=pointer]:
+          - generic [ref=e34]: 📖
+          - text: Classic+ Guides
+    - banner [ref=e35]:
+      - generic [ref=e36]:
+        - generic [ref=e37]: ⚡
+        - generic [ref=e38]: BLIZZARD ENTERTAINMENT
+        - generic [ref=e39]: ⚡
+      - 'heading "WORLD OF WARCRAFT: FOREVER" [level=1] [ref=e40]'
+      - paragraph [ref=e41]:
+        - text: The permanent, living
+        - strong [ref=e42]: Classic+
+        - text: adventure. Featuring horizontal progression at Level 60, the new
+        - strong [ref=e43]: Skyborne
+        - text: race, 9 new leveling dungeons, 3 raid tiers, and zero level scaling.
+      - navigation "Official Guides and Tools" [ref=e44]:
+        - 'link "🌐 Wowhead: Everything We Know" [ref=e45] [cursor=pointer]':
+          - /url: https://www.wowhead.com/forever/news/everything-we-know-about-wow-forever-382827
+          - generic [ref=e46]: 🌐
+          - text: "Wowhead: Everything We Know"
+        - 'link "🍺 Warcraft Tavern: Phase 2 Level 30 & Pre-BiS" [ref=e47] [cursor=pointer]':
+          - /url: https://www.warcrafttavern.com/forever/
+          - generic [ref=e48]: 🍺
+          - text: "Warcraft Tavern: Phase 2 Level 30 & Pre-BiS"
+        - 'link "📊 Mobalytics: Level 30 Meta & Tier Lists" [ref=e49] [cursor=pointer]':
+          - /url: https://mobalytics.gg/wow-forever
+          - generic [ref=e50]: 📊
+          - text: "Mobalytics: Level 30 Meta & Tier Lists"
+        - button "⚡ Interactive Talent Calculator" [ref=e51] [cursor=pointer]:
+          - generic [ref=e52]: ⚡
+          - text: Interactive Talent Calculator
+        - link "🏆 Wowhead Legacy Calculator" [ref=e53] [cursor=pointer]:
+          - /url: https://www.wowhead.com/forever/legacy-calculator
+          - generic [ref=e54]: 🏆
+          - text: Wowhead Legacy Calculator
+        - link "⚔️ Method.gg Itemization Guide" [ref=e55] [cursor=pointer]:
+          - /url: https://www.method.gg/wow-classic/itemization-updates-in-world-of-warcraft-forever-expertise-spell-damage-more
+          - generic [ref=e56]: ⚔️
+          - text: Method.gg Itemization Guide
+        - link "🦅 Method.gg Racials Breakdown" [ref=e57] [cursor=pointer]:
+          - /url: https://www.method.gg/wow-classic/all-new-racial-abilities-in-world-of-warcraft-forever
+          - generic [ref=e58]: 🦅
+          - text: Method.gg Racials Breakdown
+      - navigation "Main Navigation" [ref=e59]:
+        - button "⚡ Operations Hub" [ref=e60] [cursor=pointer]:
+          - generic [ref=e61]: ⚡
+          - text: Operations Hub
+        - button "🛡️ Level 30 BiS" [ref=e62] [cursor=pointer]:
+          - generic [ref=e63]: 🛡️
+          - text: Level 30 BiS
+        - button "📰 News & Dispatches" [ref=e64] [cursor=pointer]:
+          - generic [ref=e65]: 📰
+          - text: News & Dispatches
+        - button "📜 Content Codex" [ref=e66] [cursor=pointer]:
+          - generic [ref=e67]: 📜
+          - text: Content Codex
+        - button "🗺️ World Atlas & Rares" [ref=e68] [cursor=pointer]:
+          - generic [ref=e69]: 🗺️
+          - text: World Atlas & Rares
+        - button "📊 Tier List Maker" [ref=e70] [cursor=pointer]:
+          - generic [ref=e71]: 📊
+          - text: Tier List Maker
+        - button "🧪 Downrank Calc" [ref=e72] [cursor=pointer]:
+          - generic [ref=e73]: 🧪
+          - text: Downrank Calc
+        - button "🧙 Class & Race Planner" [ref=e74] [cursor=pointer]:
+          - generic [ref=e75]: 🧙
+          - text: Class & Race Planner
+        - button "🎯 Class Deep Dives" [ref=e76] [cursor=pointer]:
+          - generic [ref=e77]: 🎯
+          - text: Class Deep Dives
+        - button "🔨 Professions" [ref=e78] [cursor=pointer]:
+          - generic [ref=e79]: 🔨
+          - text: Professions
+        - button "⛺ Camping Hub" [ref=e80] [cursor=pointer]:
+          - generic [ref=e81]: ⛺
+          - text: Camping Hub
+        - button "⚙️ Systems & Engine" [ref=e82] [cursor=pointer]:
+          - generic [ref=e83]: ⚙️
+          - text: Systems & Engine
+        - button "🛡️ My Forever & Squad" [ref=e84] [cursor=pointer]:
+          - generic [ref=e85]: 🛡️
+          - text: My Forever & Squad
+    - text: ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • •
+    - region "Professions, Leveling & Trade Economy Hub" [ref=e86]:
+      - generic [ref=e88]:
+        - heading "🔨 Professions & Trade Economy Hub" [level=2] [ref=e89]:
+          - generic [ref=e90]: 🔨
+          - text: Professions & Trade Economy Hub
+        - paragraph [ref=e91]: The complete guide to all 13 professions, 1–300 leveling roadmaps, recipe catalogs, reagent requirements, and Merchant's Favor turn-ins
+      - generic [ref=e92]:
+        - generic [ref=e94]:
+          - button "Alchemy Alchemy" [ref=e95] [cursor=pointer]:
+            - img "Alchemy" [ref=e96]
+            - generic [ref=e97]: Alchemy
+          - button "Blacksmithing Blacksmithing" [ref=e98] [cursor=pointer]:
+            - img "Blacksmithing" [ref=e99]
+            - generic [ref=e100]: Blacksmithing
+          - button "Enchanting Enchanting" [ref=e101] [cursor=pointer]:
+            - img "Enchanting" [ref=e102]
+            - generic [ref=e103]: Enchanting
+          - button "Engineering Engineering" [ref=e104] [cursor=pointer]:
+            - img "Engineering" [ref=e105]
+            - generic [ref=e106]: Engineering
+          - button "Leatherworking Leatherworking" [ref=e107] [cursor=pointer]:
+            - img "Leatherworking" [ref=e108]
+            - generic [ref=e109]: Leatherworking
+          - button "Tailoring Tailoring" [ref=e110] [cursor=pointer]:
+            - img "Tailoring" [ref=e111]
+            - generic [ref=e112]: Tailoring
+          - button "Mining Mining" [ref=e113] [cursor=pointer]:
+            - img "Mining" [ref=e114]
+            - generic [ref=e115]: Mining
+          - button "Herbalism Herbalism" [ref=e116] [cursor=pointer]:
+            - img "Herbalism" [ref=e117]
+            - generic [ref=e118]: Herbalism
+          - button "Skinning Skinning" [ref=e119] [cursor=pointer]:
+            - img "Skinning" [ref=e120]
+            - generic [ref=e121]: Skinning
+          - button "Cooking Cooking" [ref=e122] [cursor=pointer]:
+            - img "Cooking" [ref=e123]
+            - generic [ref=e124]: Cooking
+          - button "Fishing Fishing" [ref=e125] [cursor=pointer]:
+            - img "Fishing" [ref=e126]
+            - generic [ref=e127]: Fishing
+          - button "First Aid First Aid" [ref=e128] [cursor=pointer]:
+            - img "First Aid" [ref=e129]
+            - generic [ref=e130]: First Aid
+          - button "NEW Camping Camping" [ref=e131] [cursor=pointer]:
+            - generic [ref=e132]: NEW
+            - img "Camping" [ref=e133]
+            - generic [ref=e134]: Camping
+        - generic [ref=e135]:
+          - generic [ref=e555]:
+            - generic [ref=e556]:
+              - img "Herbalism" [ref=e557]
+              - generic [ref=e558]:
+                - heading "Herbalism (Gathering)" [level=3] [ref=e559]:
+                  - text: Herbalism
+                  - generic [ref=e560]: (Gathering)
+                - paragraph [ref=e561]: Harvesting wild herbs for alchemists and chanters
+            - generic [ref=e562]:
+              - generic [ref=e563]:
+                - generic [ref=e564]: "18"
+                - generic [ref=e565]: Nodes
+              - generic [ref=e566]:
+                - generic [ref=e567]: Phase 2
+                - generic [ref=e568]: Forever Changes
+              - generic [ref=e569]:
+                - generic [ref=e570]: "0"
+                - generic [ref=e571]: Trade Rewards
+          - navigation [ref=e572]:
+            - button "📈 Leveling Route" [ref=e573] [cursor=pointer]:
+              - generic [ref=e574]: 📈
+              - text: Leveling Route
+            - button "🌿 Herb Nodes (18)" [ref=e575] [cursor=pointer]:
+              - generic [ref=e576]: 🌿
+              - text: Herb Nodes (18)
+            - button "⛺ Camp & Perks" [ref=e577] [cursor=pointer]:
+              - generic [ref=e578]: ⛺
+              - text: Camp & Perks
+          - generic [ref=e579]:
+            - generic [ref=e581]:
+              - heading "Herbalism Leveling Route 225 is the beta's cap for now" [level=3] [ref=e582]:
+                - text: Herbalism Leveling Route
+                - generic [ref=e583]: 225 is the beta's cap for now
+              - paragraph [ref=e584]: At each point, you get the cheapest recipe to skill up, whether you learn it from the trainer or buy it from a vendor. Counts are averages, so buy a few more. There are no prices until launch, so each reagent counts for what a vendor pays you for it.
+            - generic [ref=e585]:
+              - generic [ref=e586]:
+                - generic [ref=e587]: "null"
+                - generic [ref=e589]:
+                  - strong [ref=e590]: Peacebloom, Silverleaf and Earthroot
+                  - generic [ref=e591]: Most of them in The Barrens, Durotar, Tirisfal Glades and Elwynn Forest
+                - generic [ref=e592]:
+                  - generic "Peacebloom" [ref=e593] [cursor=pointer]:
+                    - img "Peacebloom" [ref=e594]
+                  - generic "Silverleaf" [ref=e595] [cursor=pointer]:
+                    - img "Silverleaf" [ref=e596]
+                  - generic "Earthroot" [ref=e597] [cursor=pointer]:
+                    - img "Earthroot" [ref=e598]
+              - generic [ref=e599]:
+                - generic [ref=e600]: "null"
+                - generic [ref=e602]:
+                  - strong [ref=e603]: Mageroyal, Briarthorn and Earthroot
+                  - generic [ref=e604]: Most of them in The Barrens, Ashenvale, Darkshore and Westfall
+                - generic [ref=e605]:
+                  - generic "Mageroyal" [ref=e606] [cursor=pointer]:
+                    - img "Mageroyal" [ref=e607]
+                  - generic "Briarthorn" [ref=e608] [cursor=pointer]:
+                    - img "Briarthorn" [ref=e609]
+                  - generic "Earthroot" [ref=e610] [cursor=pointer]:
+                    - img "Earthroot" [ref=e611]
+              - generic [ref=e612]:
+                - generic [ref=e613]: "null"
+                - generic [ref=e615]:
+                  - strong [ref=e616]: Bruiseweed, Wild Steelbloom, Kingsblood, Grave Moss and Stranglekelp
+                  - generic [ref=e617]: Most of them in Wetlands, The Barrens, Stonetalon Mountains and Ashenvale
+                - generic [ref=e618]:
+                  - generic "Bruiseweed" [ref=e619] [cursor=pointer]:
+                    - img "Bruiseweed" [ref=e620]
+                  - generic "Wild Steelbloom" [ref=e621] [cursor=pointer]:
+                    - img "Wild Steelbloom" [ref=e622]
+                  - generic "Kingsblood" [ref=e623] [cursor=pointer]:
+                    - img "Kingsblood" [ref=e624]
+                  - generic "Grave Moss" [ref=e625] [cursor=pointer]:
+                    - img "Grave Moss" [ref=e626]
+                  - generic "Stranglekelp" [ref=e627] [cursor=pointer]:
+                    - img "Stranglekelp" [ref=e628]
+              - generic [ref=e629]:
+                - generic [ref=e630]: "null"
+                - generic [ref=e632]:
+                  - strong [ref=e633]: Liferoot, Fadeleaf, Goldthorn and Khadgar's Whisker
+                  - generic [ref=e634]: Most of them in Stranglethorn Vale, Arathi Highlands, Alterac Mountains and Swamp of Sorrows
+                - generic [ref=e635]:
+                  - generic "Liferoot" [ref=e636] [cursor=pointer]:
+                    - img "Liferoot" [ref=e637]
+                  - generic "Fadeleaf" [ref=e638] [cursor=pointer]:
+                    - img "Fadeleaf" [ref=e639]
+                  - generic "Goldthorn" [ref=e640] [cursor=pointer]:
+                    - img "Goldthorn" [ref=e641]
+                  - generic "Khadgar's Whisker" [ref=e642] [cursor=pointer]:
+                    - img "Khadgar's Whisker" [ref=e643]
+              - generic [ref=e644]:
+                - generic [ref=e645]: "null"
+                - generic [ref=e647]:
+                  - strong [ref=e648]: Firebloom, Purple Lotus and Arthas' Tears
+                  - generic [ref=e649]: Most of them in Azshara, Tanaris, Western Plaguelands and Searing Gorge
+                - generic [ref=e650]:
+                  - generic "Firebloom" [ref=e651] [cursor=pointer]:
+                    - img "Firebloom" [ref=e652]
+                  - generic "Purple Lotus" [ref=e653] [cursor=pointer]:
+                    - img "Purple Lotus" [ref=e654]
+                  - generic "Arthas' Tears" [ref=e655] [cursor=pointer]:
+                    - img "Arthas' Tears" [ref=e656]
+              - generic [ref=e657]:
+                - generic [ref=e658]: "null"
+                - generic [ref=e660]:
+                  - strong
+              - generic [ref=e661]:
+                - generic [ref=e662]: "null"
+                - generic [ref=e664]:
+                  - strong [ref=e665]: Sungrass, Blindweed, Ghost Mushroom, Gromsblood and Golden Sansam
+                  - generic [ref=e666]: Most of them in Azshara, Swamp of Sorrows, The Hinterlands and Un'Goro Crater
+                - generic [ref=e667]:
+                  - generic "Sungrass" [ref=e668] [cursor=pointer]:
+                    - img "Sungrass" [ref=e669]
+                  - generic "Blindweed" [ref=e670] [cursor=pointer]:
+                    - img "Blindweed" [ref=e671]
+                  - generic "Ghost Mushroom" [ref=e672] [cursor=pointer]:
+                    - img "Ghost Mushroom" [ref=e673]
+                  - generic "Gromsblood" [ref=e674] [cursor=pointer]:
+                    - img "Gromsblood" [ref=e675]
+                  - generic "Golden Sansam" [ref=e676] [cursor=pointer]:
+                    - img "Golden Sansam" [ref=e677]
+              - generic [ref=e678]:
+                - generic [ref=e679]: "null"
+                - generic [ref=e681]:
+                  - strong [ref=e682]: Dreamfoil, Mountain Silversage, Plaguebloom and Icecap
+                  - generic [ref=e683]: Most of them in Eastern Plaguelands, Winterspring, Azshara and Un'Goro Crater
+                - generic [ref=e684]:
+                  - generic "Dreamfoil" [ref=e685] [cursor=pointer]:
+                    - img "Dreamfoil" [ref=e686]
+                  - generic "Mountain Silversage" [ref=e687] [cursor=pointer]:
+                    - img "Mountain Silversage" [ref=e688]
+                  - generic "Plaguebloom" [ref=e689] [cursor=pointer]:
+                    - img "Plaguebloom" [ref=e690]
+                  - generic "Icecap" [ref=e691] [cursor=pointer]:
+                    - img "Icecap" [ref=e692]
+    - text: ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦
+  - contentinfo [ref=e543]:
+    - generic [ref=e544]:
+      - generic [ref=e545]:
+        - link "Blizzard Official News" [ref=e546] [cursor=pointer]:
+          - /url: https://news.blizzard.com
+        - link "Wowhead Coverage" [ref=e547] [cursor=pointer]:
+          - /url: https://www.wowhead.com/forever
+        - link "Warcraft Tavern Hub" [ref=e548] [cursor=pointer]:
+          - /url: https://www.warcrafttavern.com/forever/
+        - link "Mobalytics Meta & Tier Lists" [ref=e549] [cursor=pointer]:
+          - /url: https://mobalytics.gg/wow-forever
+        - link "Method.gg Raiding & Guides" [ref=e550] [cursor=pointer]:
+          - /url: https://www.method.gg
+        - link "Icy Veins Class Hub" [ref=e551] [cursor=pointer]:
+          - /url: https://www.icy-veins.com/wow-forever
+        - link "Battle.net Launcher" [ref=e552] [cursor=pointer]:
+          - /url: https://battle.net
+      - paragraph [ref=e553]: "World of Warcraft: Forever Personal News & Beta Progress Portal • Built for Classic+ Explorers"
+      - paragraph [ref=e554]: Data grounded in official BlizzCon 2026 announcements, Wowhead compendiums, Method.gg itemization audits, and Beta Phase 1 & 2 community testing.

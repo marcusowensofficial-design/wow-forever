@@ -1,7 +1,6 @@
 /**
  * World of Warcraft: Forever - Master Professions & Trade Economy Dataset
- * Phase 2 Beta Build 1.60.6.71890
- * Complete 1-300 Leveling Roadmaps, Merchant's Favor Crates, Reagent Shopping Lists, and Full Recipe Indexes.
+ * Complete 1-300 Leveling Roadmaps, Reagent Breakdowns, Shopping Lists, and Camp Perks.
  */
 
 window.WOW_PROFESSIONS_DATA = {
@@ -6822,339 +6821,671 @@ window.WOW_PROFESSIONS_DATA = {
     ],
     "gatheringNodes": [],
     "leveling": {
-      "note": "Built by scripts/prepare-leveling.mjs; do not edit.",
+      "title": "Leveling from 1 to 300",
+      "capNote": "225 is the beta's cap for now",
+      "desc": "At each point, you get the cheapest recipe to skill up, whether you learn it from the trainer or buy it from a vendor. Counts are averages, so buy a few more. There are no prices until launch, so each reagent counts for what a vendor pays you for it.",
       "steps": [
         {
+          "type": "rank",
+          "rank": "Apprentice",
+          "details": "from any Alchemy trainer, up to 75"
+        },
+        {
+          "type": "step",
           "from": 1,
           "to": 64,
-          "spellId": 7183,
+          "bar": {
+            "iLeft": "0%",
+            "iWidth": "21%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 5997,
+          "recipeName": "Elixir of Minor Defense",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 65,
-          "name": "Skill 1–64",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 765,
+              "name": "Silverleaf",
+              "count": 1,
+              "icon": "inv_misc_herb_10",
+              "quality": 1
+            },
+            {
+              "itemId": 2447,
+              "name": "Peacebloom",
+              "count": 1,
+              "icon": "inv_misc_flower_02",
+              "quality": 1
+            },
+            {
+              "itemId": 3371,
+              "name": "Empty Vial",
+              "count": 1,
+              "icon": "inv_potion_84",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 64,
           "to": 75,
-          "spellId": 2331,
+          "bar": {
+            "iLeft": "21%",
+            "iWidth": "3.6666666666666665%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 2455,
+          "recipeName": "Minor Mana Potion",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 13,
-          "name": "Skill 64–75",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 785,
+              "name": "Mageroyal",
+              "count": 1,
+              "icon": "inv_jewelry_talisman_03",
+              "quality": 1
+            },
+            {
+              "itemId": 2447,
+              "name": "Peacebloom",
+              "count": 1,
+              "icon": "inv_misc_flower_02",
+              "quality": 1
+            },
+            {
+              "itemId": 3371,
+              "name": "Empty Vial",
+              "count": 1,
+              "icon": "inv_potion_84",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "rank",
+          "rank": "Journeyman",
+          "details": "from the trainer, from skill 50 and level 10, up to 150"
+        },
+        {
+          "type": "step",
           "from": 75,
           "to": 80,
-          "spellId": 2331,
+          "bar": {
+            "iLeft": "24.666666666666668%",
+            "iWidth": "1.6666666666666667%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 2455,
+          "recipeName": "Minor Mana Potion",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 8,
-          "name": "Skill 75–80",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 785,
+              "name": "Mageroyal",
+              "count": 1,
+              "icon": "inv_jewelry_talisman_03",
+              "quality": 1
+            },
+            {
+              "itemId": 2447,
+              "name": "Peacebloom",
+              "count": 1,
+              "icon": "inv_misc_flower_02",
+              "quality": 1
+            },
+            {
+              "itemId": 3371,
+              "name": "Empty Vial",
+              "count": 1,
+              "icon": "inv_potion_84",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 80,
           "to": 96,
-          "spellId": 7836,
+          "bar": {
+            "iLeft": "26.333333333333332%",
+            "iWidth": "5.333333333333333%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 6370,
+          "recipeName": "Blackmouth Oil",
+          "source": "Learned from the trainer",
+          "advice": "Keep them: later steps use them.",
           "crafts": 31,
-          "name": "Skill 80–96",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 6358,
+              "name": "Oily Blackmouth",
+              "count": 2,
+              "icon": "inv_misc_monsterhead_04",
+              "quality": 1
+            },
+            {
+              "itemId": 3371,
+              "name": "Empty Vial",
+              "count": 1,
+              "icon": "inv_potion_84",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 96,
           "to": 100,
-          "spellId": 3171,
+          "bar": {
+            "iLeft": "31.666666666666668%",
+            "iWidth": "1.3333333333333333%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 3383,
+          "recipeName": "Elixir of Wisdom",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 4,
-          "name": "Skill 96–100",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 785,
+              "name": "Mageroyal",
+              "count": 1,
+              "icon": "inv_jewelry_talisman_03",
+              "quality": 1
+            },
+            {
+              "itemId": 2450,
+              "name": "Briarthorn",
+              "count": 2,
+              "icon": "inv_misc_root_01",
+              "quality": 1
+            },
+            {
+              "itemId": 3371,
+              "name": "Empty Vial",
+              "count": 1,
+              "icon": "inv_potion_84",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 100,
           "to": 130,
-          "spellId": 7841,
+          "bar": {
+            "iLeft": "33%",
+            "iWidth": "10%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 6372,
+          "recipeName": "Swim Speed Potion",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 30,
-          "name": "Skill 100–130",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 2452,
+              "name": "Swiftthistle",
+              "count": 1,
+              "icon": "inv_misc_herb_04",
+              "quality": 1
+            },
+            {
+              "itemId": 6370,
+              "name": "Blackmouth Oil",
+              "count": 1,
+              "icon": "inv_drink_12",
+              "quality": 1
+            },
+            {
+              "itemId": 3371,
+              "name": "Empty Vial",
+              "count": 1,
+              "icon": "inv_potion_84",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 130,
           "to": 150,
-          "spellId": 7837,
+          "bar": {
+            "iLeft": "43%",
+            "iWidth": "6.666666666666667%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 6371,
+          "recipeName": "Fire Oil",
+          "source": "Learned from the trainer",
+          "advice": "Keep them: later steps use them.",
           "crafts": 20,
-          "name": "Skill 130–150",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 6359,
+              "name": "Firefin Snapper",
+              "count": 2,
+              "icon": "inv_misc_monsterhead_01",
+              "quality": 1
+            },
+            {
+              "itemId": 3371,
+              "name": "Empty Vial",
+              "count": 1,
+              "icon": "inv_potion_84",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "rank",
+          "rank": "Expert",
+          "details": "from the trainer, from skill 125 and level 20, up to 225"
+        },
+        {
+          "type": "step",
           "from": 150,
           "to": 166,
-          "spellId": 7837,
+          "bar": {
+            "iLeft": "49.666666666666664%",
+            "iWidth": "5.333333333333333%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 6371,
+          "recipeName": "Fire Oil",
+          "source": "Learned from the trainer",
+          "advice": "Keep them: later steps use them.",
           "crafts": 31,
-          "name": "Skill 150–166",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 6359,
+              "name": "Firefin Snapper",
+              "count": 2,
+              "icon": "inv_misc_monsterhead_01",
+              "quality": 1
+            },
+            {
+              "itemId": 3371,
+              "name": "Empty Vial",
+              "count": 1,
+              "icon": "inv_potion_84",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 166,
           "to": 175,
-          "spellId": 7845,
+          "bar": {
+            "iLeft": "55%",
+            "iWidth": "3%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 6373,
+          "recipeName": "Elixir of Fire Power",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 11,
-          "name": "Skill 166–175",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 6371,
+              "name": "Fire Oil",
+              "count": 2,
+              "icon": "inv_potion_38",
+              "quality": 1
+            },
+            {
+              "itemId": 3356,
+              "name": "Kingsblood",
+              "count": 1,
+              "icon": "inv_misc_herb_03",
+              "quality": 1
+            },
+            {
+              "itemId": 3372,
+              "name": "Leaded Vial",
+              "count": 1,
+              "icon": "inv_potion_85",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 175,
           "to": 190,
-          "spellId": 1244647,
+          "bar": {
+            "iLeft": "58%",
+            "iWidth": "5%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 247241,
+          "recipeName": "Greater Discolored Healing Potion",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 19,
-          "name": "Skill 175–190",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 3372,
+              "name": "Leaded Vial",
+              "count": 1,
+              "icon": "inv_potion_85",
+              "quality": 1
+            },
+            {
+              "itemId": 3356,
+              "name": "Kingsblood",
+              "count": 1,
+              "icon": "inv_misc_herb_03",
+              "quality": 1
+            },
+            {
+              "itemId": 730,
+              "name": "Murloc Eye",
+              "count": 1,
+              "icon": "inv_misc_eye_01",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 190,
           "to": 209,
-          "spellId": 6618,
+          "bar": {
+            "iLeft": "63%",
+            "iWidth": "6.333333333333333%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 5633,
+          "recipeName": "Great Rage Potion",
+          "source": "Recipe sold by Ulthir (Alliance) or Hagrus (Horde)",
+          "advice": "",
           "crafts": 22,
-          "name": "Skill 190–209",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 5637,
+              "name": "Large Fang",
+              "count": 1,
+              "icon": "inv_misc_bone_08",
+              "quality": 1
+            },
+            {
+              "itemId": 3356,
+              "name": "Kingsblood",
+              "count": 1,
+              "icon": "inv_misc_herb_03",
+              "quality": 1
+            },
+            {
+              "itemId": 3372,
+              "name": "Leaded Vial",
+              "count": 1,
+              "icon": "inv_potion_85",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 209,
           "to": 225,
-          "spellId": 7259,
+          "bar": {
+            "iLeft": "69.33333333333333%",
+            "iWidth": "5.333333333333333%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 6052,
+          "recipeName": "Nature Protection Potion",
+          "source": "Recipe sold by Logannas (Alliance) or Bronk (Horde) and 2 more",
+          "advice": "",
           "crafts": 20,
-          "name": "Skill 209–225",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 3357,
+              "name": "Liferoot",
+              "count": 1,
+              "icon": "inv_misc_root_02",
+              "quality": 1
+            },
+            {
+              "itemId": 3820,
+              "name": "Stranglekelp",
+              "count": 1,
+              "icon": "inv_misc_herb_11",
+              "quality": 1
+            },
+            {
+              "itemId": 3372,
+              "name": "Leaded Vial",
+              "count": 1,
+              "icon": "inv_potion_85",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "rank",
+          "rank": "Artisan",
+          "details": "from the trainer, from skill 200 and level 35, up to 300"
+        },
+        {
+          "type": "step",
           "from": 225,
           "to": 237,
-          "spellId": 7259,
+          "bar": {
+            "iLeft": "74.66666666666667%",
+            "iWidth": "4%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 6052,
+          "recipeName": "Nature Protection Potion",
+          "source": "Recipe sold by Logannas (Alliance) or Bronk (Horde) and 2 more",
+          "advice": "",
           "crafts": 26,
-          "name": "Skill 225–237",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 3357,
+              "name": "Liferoot",
+              "count": 1,
+              "icon": "inv_misc_root_02",
+              "quality": 1
+            },
+            {
+              "itemId": 3820,
+              "name": "Stranglekelp",
+              "count": 1,
+              "icon": "inv_misc_herb_11",
+              "quality": 1
+            },
+            {
+              "itemId": 3372,
+              "name": "Leaded Vial",
+              "count": 1,
+              "icon": "inv_potion_85",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 237,
           "to": 250,
-          "spellId": 11460,
+          "bar": {
+            "iLeft": "78.66666666666667%",
+            "iWidth": "4.333333333333333%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 9154,
+          "recipeName": "Draught of Detect Undead",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 14,
-          "name": "Skill 237–250",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 8836,
+              "name": "Arthas' Tears",
+              "count": 1,
+              "icon": "inv_misc_herb_13",
+              "quality": 1
+            },
+            {
+              "itemId": 8925,
+              "name": "Crystal Vial",
+              "count": 1,
+              "icon": "inv_potion_86",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 250,
           "to": 260,
-          "spellId": 17551,
+          "bar": {
+            "iLeft": "83%",
+            "iWidth": "3.3333333333333335%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 13423,
+          "recipeName": "Stonescale Oil",
+          "source": "Learned from the trainer",
+          "advice": "Keep them: later steps use them.",
           "crafts": 30,
-          "name": "Skill 250–260",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 13422,
+              "name": "Stonescale Eel",
+              "count": 1,
+              "icon": "inv_misc_fish_11",
+              "quality": 1
+            },
+            {
+              "itemId": 3372,
+              "name": "Leaded Vial",
+              "count": 1,
+              "icon": "inv_potion_85",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 260,
           "to": 265,
-          "spellId": 11478,
+          "bar": {
+            "iLeft": "86.33333333333333%",
+            "iWidth": "1.6666666666666667%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 9233,
+          "recipeName": "Draught of Detect Demon",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 5,
-          "name": "Skill 260–265",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 8846,
+              "name": "Gromsblood",
+              "count": 2,
+              "icon": "inv_misc_herb_16",
+              "quality": 1
+            },
+            {
+              "itemId": 8925,
+              "name": "Crystal Vial",
+              "count": 1,
+              "icon": "inv_potion_86",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 265,
           "to": 295,
-          "spellId": 17554,
+          "bar": {
+            "iLeft": "88%",
+            "iWidth": "10%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 13445,
+          "recipeName": "Elixir of Greater Defense",
+          "source": "Recipe sold by Soolie Berryfizz (Alliance) or Kor'geld (Horde)",
+          "advice": "",
           "crafts": 34,
-          "name": "Skill 265–295",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 13423,
+              "name": "Stonescale Oil",
+              "count": 2,
+              "icon": "inv_potion_68",
+              "quality": 1
+            },
+            {
+              "itemId": 8838,
+              "name": "Sungrass",
+              "count": 1,
+              "icon": "inv_misc_herb_18",
+              "quality": 1
+            },
+            {
+              "itemId": 8925,
+              "name": "Crystal Vial",
+              "count": 1,
+              "icon": "inv_potion_86",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 295,
           "to": 300,
-          "spellId": 17580,
+          "bar": {
+            "iLeft": "98%",
+            "iWidth": "1.6666666666666667%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 13444,
+          "recipeName": "Major Mana Potion",
+          "source": "Recipe sold by Magnus Frostwake (Western Plaguelands)",
+          "advice": "",
           "crafts": 5,
-          "name": "Skill 295–300",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
-        }
-      ],
-      "shopping": [
-        {
-          "id": 8925,
-          "count": 58,
-          "name": "Crystal Vial",
-          "icon": "inv_potion_86",
-          "quality": 1
-        },
-        {
-          "id": 13423,
-          "count": 68,
-          "name": "Stonescale Oil",
-          "icon": "inv_potion_68",
-          "quality": 1
-        },
-        {
-          "id": 3372,
-          "count": 128,
-          "name": "Leaded Vial",
-          "icon": "inv_potion_85",
-          "quality": 1
-        },
-        {
-          "id": 3357,
-          "count": 46,
-          "name": "Liferoot",
-          "icon": "inv_misc_root_02",
-          "quality": 1
-        },
-        {
-          "id": 3820,
-          "count": 46,
-          "name": "Stranglekelp",
-          "icon": "inv_misc_herb_11",
-          "quality": 1
-        },
-        {
-          "id": 8846,
-          "count": 10,
-          "name": "Gromsblood",
-          "icon": "inv_misc_herb_16",
-          "quality": 1
-        },
-        {
-          "id": 13467,
-          "count": 10,
-          "name": "Icecap",
-          "icon": "inv_misc_herb_icecap",
-          "quality": 1
-        },
-        {
-          "id": 8838,
-          "count": 34,
-          "name": "Sungrass",
-          "icon": "inv_misc_herb_18",
-          "quality": 1
-        },
-        {
-          "id": 5637,
-          "count": 22,
-          "name": "Large Fang",
-          "icon": "inv_misc_bone_08",
-          "quality": 1
-        },
-        {
-          "id": 3356,
-          "count": 52,
-          "name": "Kingsblood",
-          "icon": "inv_misc_herb_03",
-          "quality": 1
-        },
-        {
-          "id": 13463,
-          "count": 15,
-          "name": "Dreamfoil",
-          "icon": "inv_misc_herb_dreamfoil",
-          "quality": 1
-        },
-        {
-          "id": 8836,
-          "count": 14,
-          "name": "Arthas' Tears",
-          "icon": "inv_misc_herb_13",
-          "quality": 1
-        },
-        {
-          "id": 3371,
-          "count": 202,
-          "name": "Empty Vial",
-          "icon": "inv_potion_84",
-          "quality": 1
-        },
-        {
-          "id": 2447,
-          "count": 86,
-          "name": "Peacebloom",
-          "icon": "inv_misc_flower_02",
-          "quality": 1
-        },
-        {
-          "id": 765,
-          "count": 65,
-          "name": "Silverleaf",
-          "icon": "inv_misc_herb_10",
-          "quality": 1
-        },
-        {
-          "id": 6359,
-          "count": 102,
-          "name": "Firefin Snapper",
-          "icon": "inv_misc_monsterhead_01",
-          "quality": 1
-        },
-        {
-          "id": 785,
-          "count": 25,
-          "name": "Mageroyal",
-          "icon": "inv_jewelry_talisman_03",
-          "quality": 1
-        },
-        {
-          "id": 2452,
-          "count": 30,
-          "name": "Swiftthistle",
-          "icon": "inv_misc_herb_04",
-          "quality": 1
-        },
-        {
-          "id": 730,
-          "count": 19,
-          "name": "Murloc Eye",
-          "icon": "inv_misc_eye_01",
-          "quality": 1
-        },
-        {
-          "id": 6370,
-          "count": 30,
-          "name": "Blackmouth Oil",
-          "icon": "inv_drink_12",
-          "quality": 1
-        },
-        {
-          "id": 13422,
-          "count": 30,
-          "name": "Stonescale Eel",
-          "icon": "inv_misc_fish_11",
-          "quality": 1
-        },
-        {
-          "id": 6371,
-          "count": 22,
-          "name": "Fire Oil",
-          "icon": "inv_potion_38",
-          "quality": 1
-        },
-        {
-          "id": 6358,
-          "count": 62,
-          "name": "Oily Blackmouth",
-          "icon": "inv_misc_monsterhead_04",
-          "quality": 1
-        },
-        {
-          "id": 2450,
-          "count": 8,
-          "name": "Briarthorn",
-          "icon": "inv_misc_root_01",
-          "quality": 1
+          "reagents": [
+            {
+              "itemId": 13463,
+              "name": "Dreamfoil",
+              "count": 3,
+              "icon": "inv_misc_herb_dreamfoil",
+              "quality": 1
+            },
+            {
+              "itemId": 13467,
+              "name": "Icecap",
+              "count": 2,
+              "icon": "inv_misc_herb_icecap",
+              "quality": 1
+            },
+            {
+              "itemId": 8925,
+              "name": "Crystal Vial",
+              "count": 1,
+              "icon": "inv_potion_86",
+              "quality": 1
+            }
+          ]
         }
       ]
     },
@@ -7445,6 +7776,308 @@ window.WOW_PROFESSIONS_DATA = {
           "cost": 1000,
           "requiredSkill": 300,
           "desc": ""
+        }
+      ]
+    },
+    "shopping": {
+      "title": "Shopping list, 1 to 225",
+      "subtitle": "",
+      "groups": [
+        {
+          "title": "From a trade supplies vendor",
+          "note": "Always in stock, for a few coins.",
+          "items": [
+            {
+              "itemId": 3371,
+              "name": "Empty Vial",
+              "icon": "inv_potion_84",
+              "quality": 1,
+              "count": 202
+            },
+            {
+              "itemId": 3372,
+              "name": "Leaded Vial",
+              "icon": "inv_potion_85",
+              "quality": 1,
+              "count": 72
+            }
+          ]
+        },
+        {
+          "title": "Gathered, looted or bought from other players",
+          "note": "The bulk of the cost: farm it or look at the auction house.",
+          "items": [
+            {
+              "itemId": 765,
+              "name": "Silverleaf",
+              "icon": "inv_misc_herb_10",
+              "quality": 1,
+              "count": 65
+            },
+            {
+              "itemId": 2447,
+              "name": "Peacebloom",
+              "icon": "inv_misc_flower_02",
+              "quality": 1,
+              "count": 86
+            },
+            {
+              "itemId": 785,
+              "name": "Mageroyal",
+              "icon": "inv_jewelry_talisman_03",
+              "quality": 1,
+              "count": 25
+            },
+            {
+              "itemId": 6358,
+              "name": "Oily Blackmouth",
+              "icon": "inv_misc_monsterhead_04",
+              "quality": 1,
+              "count": 62
+            },
+            {
+              "itemId": 2450,
+              "name": "Briarthorn",
+              "icon": "inv_misc_root_01",
+              "quality": 1,
+              "count": 8
+            },
+            {
+              "itemId": 2452,
+              "name": "Swiftthistle",
+              "icon": "inv_misc_herb_04",
+              "quality": 1,
+              "count": 30
+            },
+            {
+              "itemId": 6359,
+              "name": "Firefin Snapper",
+              "icon": "inv_misc_monsterhead_01",
+              "quality": 1,
+              "count": 102
+            },
+            {
+              "itemId": 3356,
+              "name": "Kingsblood",
+              "icon": "inv_misc_herb_03",
+              "quality": 1,
+              "count": 52
+            },
+            {
+              "itemId": 730,
+              "name": "Murloc Eye",
+              "icon": "inv_misc_eye_01",
+              "quality": 1,
+              "count": 19
+            },
+            {
+              "itemId": 5637,
+              "name": "Large Fang",
+              "icon": "inv_misc_bone_08",
+              "quality": 1,
+              "count": 22
+            },
+            {
+              "itemId": 3357,
+              "name": "Liferoot",
+              "icon": "inv_misc_root_02",
+              "quality": 1,
+              "count": 20
+            },
+            {
+              "itemId": 3820,
+              "name": "Stranglekelp",
+              "icon": "inv_misc_herb_11",
+              "quality": 1,
+              "count": 20
+            }
+          ]
+        },
+        {
+          "title": "Made along the way",
+          "note": "The path crafts these itself; bought ready-made, they save a few steps.",
+          "items": [
+            {
+              "itemId": 6370,
+              "name": "Blackmouth Oil",
+              "icon": "inv_drink_12",
+              "quality": 1,
+              "count": 30
+            },
+            {
+              "itemId": 6371,
+              "name": "Fire Oil",
+              "icon": "inv_potion_38",
+              "quality": 1,
+              "count": 22
+            }
+          ]
+        },
+        {
+          "title": "From a trade supplies vendor",
+          "note": "Always in stock, for a few coins.",
+          "items": [
+            {
+              "itemId": 3372,
+              "name": "Leaded Vial",
+              "icon": "inv_potion_85",
+              "quality": 1,
+              "count": 60
+            },
+            {
+              "itemId": 8925,
+              "name": "Crystal Vial",
+              "icon": "inv_potion_86",
+              "quality": 1,
+              "count": 58
+            }
+          ]
+        },
+        {
+          "title": "Gathered, looted or bought from other players",
+          "note": "The bulk of the cost: farm it or look at the auction house.",
+          "items": [
+            {
+              "itemId": 3357,
+              "name": "Liferoot",
+              "icon": "inv_misc_root_02",
+              "quality": 1,
+              "count": 26
+            },
+            {
+              "itemId": 3820,
+              "name": "Stranglekelp",
+              "icon": "inv_misc_herb_11",
+              "quality": 1,
+              "count": 26
+            },
+            {
+              "itemId": 8836,
+              "name": "Arthas' Tears",
+              "icon": "inv_misc_herb_13",
+              "quality": 1,
+              "count": 14
+            },
+            {
+              "itemId": 13422,
+              "name": "Stonescale Eel",
+              "icon": "inv_misc_fish_11",
+              "quality": 1,
+              "count": 34
+            },
+            {
+              "itemId": 8846,
+              "name": "Gromsblood",
+              "icon": "inv_misc_herb_16",
+              "quality": 1,
+              "count": 10
+            },
+            {
+              "itemId": 8838,
+              "name": "Sungrass",
+              "icon": "inv_misc_herb_18",
+              "quality": 1,
+              "count": 34
+            },
+            {
+              "itemId": 13463,
+              "name": "Dreamfoil",
+              "icon": "inv_misc_herb_dreamfoil",
+              "quality": 1,
+              "count": 15
+            },
+            {
+              "itemId": 13467,
+              "name": "Icecap",
+              "icon": "inv_misc_herb_icecap",
+              "quality": 1,
+              "count": 10
+            }
+          ]
+        },
+        {
+          "title": "Made along the way",
+          "note": "The path crafts these itself; bought ready-made, they save a few steps.",
+          "items": [
+            {
+              "itemId": 13423,
+              "name": "Stonescale Oil",
+              "icon": "inv_potion_68",
+              "quality": 1,
+              "count": 68
+            }
+          ]
+        }
+      ]
+    },
+    "campPerks": {
+      "milestones": [
+        {
+          "icon": "trade_alchemy",
+          "title": "Journeyman Alchemist",
+          "desc": "First time at skill 150 on the account",
+          "reward": "+1 Legacy point"
+        },
+        {
+          "icon": "trade_alchemy",
+          "title": "Expert Alchemist",
+          "desc": "First time at skill 225 on the account",
+          "reward": "+1 Legacy point"
+        },
+        {
+          "icon": "trade_alchemy",
+          "title": "Artisan Alchemist",
+          "desc": "First time at skill 300 on the account",
+          "reward": "+1 Legacy point"
+        },
+        {
+          "icon": "inv_scroll_15",
+          "title": "Alchemy Certification",
+          "desc": "The title the Alchemist for the whole account, bought with Merchant's Favor",
+          "reward": "Skill 300"
+        }
+      ],
+      "atCamp": [
+        {
+          "icon": "spell_arcane_manatap",
+          "name": "Mana Well",
+          "desc": "29 Mana every 5 sec to everyone sitting nearby, like Blessing of Wisdom (at level 60, scaling with level)",
+          "skill": "Skill 20"
+        },
+        {
+          "icon": "inv_alchemy_90_cauldron",
+          "name": "Fermenter",
+          "desc": "Makes certain Alchemy reagents, and gives the Mana Well buff",
+          "skill": "Skill 140 Blueprint"
+        },
+        {
+          "icon": "10prof_portabletable_alchemy01",
+          "name": "Alchemy Laboratory",
+          "desc": "Needed for the most advanced Alchemy recipes, and gives the Mana Well buff",
+          "skill": "Skill 300 Blueprint"
+        }
+      ],
+      "legacyPerks": [
+        {
+          "icon": "racial_dwarf_findtreasure",
+          "name": "Performance Bonus",
+          "effect": "You have a 5 / 10 / 15% chance to receive 100% increased Merchant's Favor when you turn in a crate to the Azeroth Commerce Authority or Durotar Supply and Logistics.",
+          "meta": "Professions tree, 3 ranks, needs 5 points spent in the tree and a rank in Bountiful Harvest",
+          "planLink": ""
+        },
+        {
+          "icon": "inv_misc_pocketwatch_03",
+          "name": "Working Overtime",
+          "effect": "Increases your chance to gain a skill increase from using any primary, secondary, or class-based tradeskill by 4 / 8 / 12 / 16 / 20%.",
+          "meta": "Professions tree, 5 ranks, open from the start",
+          "planLink": ""
+        },
+        {
+          "icon": "inv_misc_book_08",
+          "name": "Dedicated Study",
+          "effect": "Increases your skill by 1 in your lowest tradeskill among your Primary and Secondary tradeskills. If you have already reached 300 skill in your two current Primary Tradeskills and all three Secondary Tradeskills, you will gain 2 to 4 of a random Elemental Essence.",
+          "meta": "Professions tree, 1 rank, needs 10 points spent in the tree and a rank in Bartering, 25 sec cast, 23 hour cooldown",
+          "planLink": ""
         }
       ]
     }
@@ -26286,382 +26919,718 @@ window.WOW_PROFESSIONS_DATA = {
     ],
     "gatheringNodes": [],
     "leveling": {
-      "note": "Built by scripts/prepare-leveling.mjs; do not edit.",
+      "title": "Leveling from 1 to 300",
+      "capNote": "225 is the beta's cap for now",
+      "desc": "At each point, you get the cheapest recipe to skill up, whether you learn it from the trainer or buy it from a vendor. Counts are averages, so buy a few more. There are no prices until launch, so each reagent counts for what a vendor pays you for it.",
       "steps": [
         {
+          "type": "rank",
+          "rank": "Apprentice",
+          "details": "from any Blacksmithing trainer, up to 75"
+        },
+        {
+          "type": "step",
           "from": 1,
           "to": 25,
-          "spellId": 2660,
+          "bar": {
+            "iLeft": "0%",
+            "iWidth": "8%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 2862,
+          "recipeName": "Rough Sharpening Stone",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 26,
-          "name": "Skill 1–25",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 2835,
+              "name": "Rough Stone",
+              "count": 1,
+              "icon": "inv_stone_06",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 25,
           "to": 75,
-          "spellId": 3320,
+          "bar": {
+            "iLeft": "8%",
+            "iWidth": "16.666666666666668%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 3470,
+          "recipeName": "Rough Grinding Stone",
+          "source": "Learned from the trainer",
+          "advice": "Keep them: later steps use them.",
           "crafts": 74,
-          "name": "Skill 25–75",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 2835,
+              "name": "Rough Stone",
+              "count": 2,
+              "icon": "inv_stone_06",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "rank",
+          "rank": "Journeyman",
+          "details": "from the trainer, from skill 50 and level 10, up to 150"
+        },
+        {
+          "type": "step",
           "from": 75,
           "to": 85,
-          "spellId": 2661,
+          "bar": {
+            "iLeft": "24.666666666666668%",
+            "iWidth": "3.3333333333333335%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 2851,
+          "recipeName": "Copper Chain Belt",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 14,
-          "name": "Skill 75–85",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 2840,
+              "name": "Copper Bar",
+              "count": 6,
+              "icon": "inv_ingot_02",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 85,
           "to": 100,
-          "spellId": 2664,
+          "bar": {
+            "iLeft": "28%",
+            "iWidth": "5%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 2854,
+          "recipeName": "Runed Copper Bracers",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 18,
-          "name": "Skill 85–100",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 2840,
+              "name": "Copper Bar",
+              "count": 10,
+              "icon": "inv_ingot_02",
+              "quality": 1
+            },
+            {
+              "itemId": 3470,
+              "name": "Rough Grinding Stone",
+              "count": 3,
+              "icon": "inv_stone_grindingstone_01",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 100,
           "to": 104,
-          "spellId": 2674,
+          "bar": {
+            "iLeft": "33%",
+            "iWidth": "1.3333333333333333%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 2871,
+          "recipeName": "Heavy Sharpening Stone",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 5,
-          "name": "Skill 100–104",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 2838,
+              "name": "Heavy Stone",
+              "count": 1,
+              "icon": "inv_stone_12",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 104,
           "to": 118,
-          "spellId": 3337,
+          "bar": {
+            "iLeft": "34.333333333333336%",
+            "iWidth": "4.666666666666667%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 3486,
+          "recipeName": "Heavy Grinding Stone",
+          "source": "Learned from the trainer",
+          "advice": "Keep them: later steps use them.",
           "crafts": 27,
-          "name": "Skill 104–118",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 2838,
+              "name": "Heavy Stone",
+              "count": 3,
+              "icon": "inv_stone_12",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 118,
           "to": 137,
-          "spellId": 2672,
+          "bar": {
+            "iLeft": "39%",
+            "iWidth": "6.333333333333333%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 2868,
+          "recipeName": "Patterned Bronze Bracers",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 22,
-          "name": "Skill 118–137",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 2841,
+              "name": "Bronze Bar",
+              "count": 5,
+              "icon": "inv_ingot_bronze",
+              "quality": 1
+            },
+            {
+              "itemId": 3478,
+              "name": "Coarse Grinding Stone",
+              "count": 2,
+              "icon": "inv_stone_grindingstone_02",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 137,
           "to": 144,
-          "spellId": 3331,
+          "bar": {
+            "iLeft": "45.333333333333336%",
+            "iWidth": "2.3333333333333335%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 3482,
+          "recipeName": "Silvered Bronze Boots",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 9,
-          "name": "Skill 137–144",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 2841,
+              "name": "Bronze Bar",
+              "count": 6,
+              "icon": "inv_ingot_bronze",
+              "quality": 1
+            },
+            {
+              "itemId": 2842,
+              "name": "Silver Bar",
+              "count": 1,
+              "icon": "inv_ingot_01",
+              "quality": 2
+            },
+            {
+              "itemId": 3478,
+              "name": "Coarse Grinding Stone",
+              "count": 2,
+              "icon": "inv_stone_grindingstone_02",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 144,
           "to": 150,
-          "spellId": 3333,
+          "bar": {
+            "iLeft": "47.666666666666664%",
+            "iWidth": "2%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 3483,
+          "recipeName": "Silvered Bronze Gauntlets",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 8,
-          "name": "Skill 144–150",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 2841,
+              "name": "Bronze Bar",
+              "count": 8,
+              "icon": "inv_ingot_bronze",
+              "quality": 1
+            },
+            {
+              "itemId": 2842,
+              "name": "Silver Bar",
+              "count": 1,
+              "icon": "inv_ingot_01",
+              "quality": 2
+            },
+            {
+              "itemId": 3478,
+              "name": "Coarse Grinding Stone",
+              "count": 2,
+              "icon": "inv_stone_grindingstone_02",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "rank",
+          "rank": "Expert",
+          "details": "from the trainer, from skill 125 and level 20, up to 225"
+        },
+        {
+          "type": "step",
           "from": 150,
           "to": 154,
-          "spellId": 3333,
+          "bar": {
+            "iLeft": "49.666666666666664%",
+            "iWidth": "1.3333333333333333%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 3483,
+          "recipeName": "Silvered Bronze Gauntlets",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 7,
-          "name": "Skill 150–154",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 2841,
+              "name": "Bronze Bar",
+              "count": 8,
+              "icon": "inv_ingot_bronze",
+              "quality": 1
+            },
+            {
+              "itemId": 2842,
+              "name": "Silver Bar",
+              "count": 1,
+              "icon": "inv_ingot_01",
+              "quality": 2
+            },
+            {
+              "itemId": 3478,
+              "name": "Coarse Grinding Stone",
+              "count": 2,
+              "icon": "inv_stone_grindingstone_02",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 154,
           "to": 162,
-          "spellId": 9985,
+          "bar": {
+            "iLeft": "51%",
+            "iWidth": "2.6666666666666665%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 7956,
+          "recipeName": "Bronze Warhammer",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 9,
-          "name": "Skill 154–162",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 2841,
+              "name": "Bronze Bar",
+              "count": 8,
+              "icon": "inv_ingot_bronze",
+              "quality": 1
+            },
+            {
+              "itemId": 3466,
+              "name": "Strong Flux",
+              "count": 1,
+              "icon": "inv_misc_ammo_gunpowder_01",
+              "quality": 1
+            },
+            {
+              "itemId": 2319,
+              "name": "Medium Leather",
+              "count": 1,
+              "icon": "inv_misc_leatherscrap_05",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 162,
           "to": 175,
-          "spellId": 3501,
+          "bar": {
+            "iLeft": "53.666666666666664%",
+            "iWidth": "4.333333333333333%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 3835,
+          "recipeName": "Green Iron Bracers",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 16,
-          "name": "Skill 162–175",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 3575,
+              "name": "Iron Bar",
+              "count": 6,
+              "icon": "inv_ingot_iron",
+              "quality": 1
+            },
+            {
+              "itemId": 2605,
+              "name": "Green Dye",
+              "count": 1,
+              "icon": "inv_potion_12",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 175,
           "to": 185,
-          "spellId": 9918,
+          "bar": {
+            "iLeft": "58%",
+            "iWidth": "3.3333333333333335%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 7964,
+          "recipeName": "Solid Sharpening Stone",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 30,
-          "name": "Skill 175–185",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 7912,
+              "name": "Solid Stone",
+              "count": 1,
+              "icon": "inv_stone_10",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 185,
           "to": 197,
-          "spellId": 7223,
+          "bar": {
+            "iLeft": "61.333333333333336%",
+            "iWidth": "4%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 6040,
+          "recipeName": "Golden Scale Bracers",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 16,
-          "name": "Skill 185–197",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 3859,
+              "name": "Steel Bar",
+              "count": 5,
+              "icon": "inv_ingot_steel",
+              "quality": 1
+            },
+            {
+              "itemId": 3486,
+              "name": "Heavy Grinding Stone",
+              "count": 2,
+              "icon": "inv_stone_grindingstone_03",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 197,
           "to": 206,
-          "spellId": 9928,
+          "bar": {
+            "iLeft": "65.33333333333333%",
+            "iWidth": "3%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 7919,
+          "recipeName": "Heavy Mithril Gauntlet",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 10,
-          "name": "Skill 197–206",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 3860,
+              "name": "Mithril Bar",
+              "count": 6,
+              "icon": "inv_ingot_06",
+              "quality": 1
+            },
+            {
+              "itemId": 4338,
+              "name": "Mageweave Cloth",
+              "count": 4,
+              "icon": "inv_fabric_mageweave_01",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 206,
           "to": 213,
-          "spellId": 9935,
+          "bar": {
+            "iLeft": "68.33333333333333%",
+            "iWidth": "2.3333333333333335%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 7922,
+          "recipeName": "Steel Plate Helm",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 8,
-          "name": "Skill 206–213",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 3859,
+              "name": "Steel Bar",
+              "count": 14,
+              "icon": "inv_ingot_steel",
+              "quality": 1
+            },
+            {
+              "itemId": 7966,
+              "name": "Solid Grinding Stone",
+              "count": 1,
+              "icon": "inv_stone_grindingstone_04",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 213,
           "to": 225,
-          "spellId": 9961,
+          "bar": {
+            "iLeft": "70.66666666666667%",
+            "iWidth": "4%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 7931,
+          "recipeName": "Mithril Coif",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 12,
-          "name": "Skill 213–225",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 3860,
+              "name": "Mithril Bar",
+              "count": 10,
+              "icon": "inv_ingot_06",
+              "quality": 1
+            },
+            {
+              "itemId": 4338,
+              "name": "Mageweave Cloth",
+              "count": 6,
+              "icon": "inv_fabric_mageweave_01",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "rank",
+          "rank": "Artisan",
+          "details": "from the trainer, from skill 200 and level 35, up to 300"
+        },
+        {
+          "type": "step",
           "from": 225,
           "to": 235,
-          "spellId": 16641,
+          "bar": {
+            "iLeft": "74.66666666666667%",
+            "iWidth": "3.3333333333333335%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 12404,
+          "recipeName": "Dense Sharpening Stone",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 17,
-          "name": "Skill 225–235",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 12365,
+              "name": "Dense Stone",
+              "count": 1,
+              "icon": "inv_misc_stonetablet_07",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 235,
           "to": 246,
-          "spellId": 9968,
+          "bar": {
+            "iLeft": "78%",
+            "iWidth": "3.6666666666666665%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 7933,
+          "recipeName": "Heavy Mithril Boots",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 25,
-          "name": "Skill 235–246",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 3860,
+              "name": "Mithril Bar",
+              "count": 14,
+              "icon": "inv_ingot_06",
+              "quality": 1
+            },
+            {
+              "itemId": 4304,
+              "name": "Thick Leather",
+              "count": 4,
+              "icon": "inv_misc_leatherscrap_08",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 246,
           "to": 250,
-          "spellId": 10013,
+          "bar": {
+            "iLeft": "81.66666666666667%",
+            "iWidth": "1.3333333333333333%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 7947,
+          "recipeName": "Ebon Shiv",
+          "source": "Plans sold by Magnus Frostwake (Western Plaguelands)",
+          "advice": "",
           "crafts": 4,
-          "name": "Skill 246–250",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 3860,
+              "name": "Mithril Bar",
+              "count": 12,
+              "icon": "inv_ingot_06",
+              "quality": 1
+            },
+            {
+              "itemId": 6037,
+              "name": "Truesilver Bar",
+              "count": 6,
+              "icon": "inv_ingot_08",
+              "quality": 2
+            },
+            {
+              "itemId": 7910,
+              "name": "Star Ruby",
+              "count": 2,
+              "icon": "inv_misc_gem_ruby_02",
+              "quality": 2
+            },
+            {
+              "itemId": 7966,
+              "name": "Solid Grinding Stone",
+              "count": 1,
+              "icon": "inv_stone_grindingstone_04",
+              "quality": 1
+            },
+            {
+              "itemId": 4304,
+              "name": "Thick Leather",
+              "count": 2,
+              "icon": "inv_misc_leatherscrap_08",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 250,
           "to": 259,
-          "spellId": 19669,
+          "bar": {
+            "iLeft": "83%",
+            "iWidth": "3%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 15872,
+          "recipeName": "Arcanite Skeleton Key",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 20,
-          "name": "Skill 250–259",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 12360,
+              "name": "Arcanite Bar",
+              "count": 1,
+              "icon": "inv_misc_stonetablet_05",
+              "quality": 2
+            },
+            {
+              "itemId": 12644,
+              "name": "Dense Grinding Stone",
+              "count": 1,
+              "icon": "inv_stone_grindingstone_05",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 259,
           "to": 300,
-          "spellId": 16971,
+          "bar": {
+            "iLeft": "86%",
+            "iWidth": "13.666666666666666%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 12775,
+          "recipeName": "Huge Thorium Battleaxe",
+          "source": "Plans sold by Magnus Frostwake (Western Plaguelands)",
+          "advice": "",
           "crafts": 60,
-          "name": "Skill 259–300",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
-        }
-      ],
-      "shopping": [
-        {
-          "id": 12359,
-          "count": 2400,
-          "name": "Thorium Bar",
-          "icon": "inv_ingot_07",
-          "quality": 1
-        },
-        {
-          "id": 3860,
-          "count": 578,
-          "name": "Mithril Bar",
-          "icon": "inv_ingot_06",
-          "quality": 1
-        },
-        {
-          "id": 8170,
-          "count": 360,
-          "name": "Rugged Leather",
-          "icon": "inv_misc_leatherscrap_02",
-          "quality": 1
-        },
-        {
-          "id": 12360,
-          "count": 20,
-          "name": "Arcanite Bar",
-          "icon": "inv_misc_stonetablet_05",
-          "quality": 2
-        },
-        {
-          "id": 12644,
-          "count": 380,
-          "name": "Dense Grinding Stone",
-          "icon": "inv_stone_grindingstone_05",
-          "quality": 1
-        },
-        {
-          "id": 3859,
-          "count": 192,
-          "name": "Steel Bar",
-          "icon": "inv_ingot_steel",
-          "quality": 1
-        },
-        {
-          "id": 7910,
-          "count": 8,
-          "name": "Star Ruby",
-          "icon": "inv_misc_gem_ruby_02",
-          "quality": 2
-        },
-        {
-          "id": 4304,
-          "count": 108,
-          "name": "Thick Leather",
-          "icon": "inv_misc_leatherscrap_08",
-          "quality": 1
-        },
-        {
-          "id": 6037,
-          "count": 24,
-          "name": "Truesilver Bar",
-          "icon": "inv_ingot_08",
-          "quality": 2
-        },
-        {
-          "id": 4338,
-          "count": 112,
-          "name": "Mageweave Cloth",
-          "icon": "inv_fabric_mageweave_01",
-          "quality": 1
-        },
-        {
-          "id": 3575,
-          "count": 96,
-          "name": "Iron Bar",
-          "icon": "inv_ingot_iron",
-          "quality": 1
-        },
-        {
-          "id": 2841,
-          "count": 356,
-          "name": "Bronze Bar",
-          "icon": "inv_ingot_bronze",
-          "quality": 1
-        },
-        {
-          "id": 2838,
-          "count": 86,
-          "name": "Heavy Stone",
-          "icon": "inv_stone_12",
-          "quality": 1
-        },
-        {
-          "id": 3466,
-          "count": 9,
-          "name": "Strong Flux",
-          "icon": "inv_misc_ammo_gunpowder_01",
-          "quality": 1
-        },
-        {
-          "id": 12365,
-          "count": 17,
-          "name": "Dense Stone",
-          "icon": "inv_misc_stonetablet_07",
-          "quality": 1
-        },
-        {
-          "id": 3486,
-          "count": 32,
-          "name": "Heavy Grinding Stone",
-          "icon": "inv_stone_grindingstone_03",
-          "quality": 1
-        },
-        {
-          "id": 7912,
-          "count": 30,
-          "name": "Solid Stone",
-          "icon": "inv_stone_10",
-          "quality": 1
-        },
-        {
-          "id": 2840,
-          "count": 264,
-          "name": "Copper Bar",
-          "icon": "inv_ingot_02",
-          "quality": 1
-        },
-        {
-          "id": 2842,
-          "count": 24,
-          "name": "Silver Bar",
-          "icon": "inv_ingot_01",
-          "quality": 2
-        },
-        {
-          "id": 7966,
-          "count": 12,
-          "name": "Solid Grinding Stone",
-          "icon": "inv_stone_grindingstone_04",
-          "quality": 1
-        },
-        {
-          "id": 3478,
-          "count": 92,
-          "name": "Coarse Grinding Stone",
-          "icon": "inv_stone_grindingstone_02",
-          "quality": 1
-        },
-        {
-          "id": 2319,
-          "count": 9,
-          "name": "Medium Leather",
-          "icon": "inv_misc_leatherscrap_05",
-          "quality": 1
-        },
-        {
-          "id": 2605,
-          "count": 16,
-          "name": "Green Dye",
-          "icon": "inv_potion_12",
-          "quality": 1
-        },
-        {
-          "id": 2835,
-          "count": 174,
-          "name": "Rough Stone",
-          "icon": "inv_stone_06",
-          "quality": 1
-        },
-        {
-          "id": 3470,
-          "count": 54,
-          "name": "Rough Grinding Stone",
-          "icon": "inv_stone_grindingstone_01",
-          "quality": 1
+          "reagents": [
+            {
+              "itemId": 12359,
+              "name": "Thorium Bar",
+              "count": 40,
+              "icon": "inv_ingot_07",
+              "quality": 1
+            },
+            {
+              "itemId": 12644,
+              "name": "Dense Grinding Stone",
+              "count": 6,
+              "icon": "inv_stone_grindingstone_05",
+              "quality": 1
+            },
+            {
+              "itemId": 8170,
+              "name": "Rugged Leather",
+              "count": 6,
+              "icon": "inv_misc_leatherscrap_02",
+              "quality": 1
+            }
+          ]
         }
       ]
     },
@@ -27240,6 +28209,316 @@ window.WOW_PROFESSIONS_DATA = {
           "cost": 1000,
           "requiredSkill": 300,
           "desc": ""
+        }
+      ]
+    },
+    "shopping": {
+      "title": "Shopping list, 1 to 225",
+      "subtitle": "14 to buy, 4 you make",
+      "groups": [
+        {
+          "title": "From a trade supplies vendor",
+          "note": "Always in stock, for a few coins.",
+          "items": [
+            {
+              "itemId": 3466,
+              "name": "Strong Flux",
+              "icon": "inv_misc_ammo_gunpowder_01",
+              "quality": 1,
+              "count": 9
+            },
+            {
+              "itemId": 2605,
+              "name": "Green Dye",
+              "icon": "inv_potion_12",
+              "quality": 1,
+              "count": 16
+            }
+          ]
+        },
+        {
+          "title": "Gathered, looted or bought from other players",
+          "note": "The bulk of the cost: farm it or look at the auction house.",
+          "items": [
+            {
+              "itemId": 2835,
+              "name": "Rough Stone",
+              "icon": "inv_stone_06",
+              "quality": 1,
+              "count": 174
+            },
+            {
+              "itemId": 2840,
+              "name": "Copper Bar",
+              "icon": "inv_ingot_02",
+              "quality": 1,
+              "count": 264
+            },
+            {
+              "itemId": 2838,
+              "name": "Heavy Stone",
+              "icon": "inv_stone_12",
+              "quality": 1,
+              "count": 101
+            },
+            {
+              "itemId": 2841,
+              "name": "Bronze Bar",
+              "icon": "inv_ingot_bronze",
+              "quality": 1,
+              "count": 356
+            },
+            {
+              "itemId": 2836,
+              "name": "Coarse Stone",
+              "icon": "inv_stone_09",
+              "quality": 1,
+              "count": 184
+            },
+            {
+              "itemId": 2842,
+              "name": "Silver Bar",
+              "icon": "inv_ingot_01",
+              "quality": 2,
+              "count": 24
+            },
+            {
+              "itemId": 2319,
+              "name": "Medium Leather",
+              "icon": "inv_misc_leatherscrap_05",
+              "quality": 1,
+              "count": 9
+            },
+            {
+              "itemId": 3575,
+              "name": "Iron Bar",
+              "icon": "inv_ingot_iron",
+              "quality": 1,
+              "count": 96
+            },
+            {
+              "itemId": 7912,
+              "name": "Solid Stone",
+              "icon": "inv_stone_10",
+              "quality": 1,
+              "count": 62
+            },
+            {
+              "itemId": 3859,
+              "name": "Steel Bar",
+              "icon": "inv_ingot_steel",
+              "quality": 1,
+              "count": 192
+            },
+            {
+              "itemId": 3860,
+              "name": "Mithril Bar",
+              "icon": "inv_ingot_06",
+              "quality": 1,
+              "count": 180
+            },
+            {
+              "itemId": 4338,
+              "name": "Mageweave Cloth",
+              "icon": "inv_fabric_mageweave_01",
+              "quality": 1,
+              "count": 112
+            }
+          ]
+        },
+        {
+          "title": "Made along the way",
+          "note": "The path crafts these itself; bought ready-made, they save a few steps.",
+          "items": [
+            {
+              "itemId": 3470,
+              "name": "Rough Grinding Stone",
+              "icon": "inv_stone_grindingstone_01",
+              "quality": 1,
+              "count": 54
+            },
+            {
+              "itemId": 3478,
+              "name": "Coarse Grinding Stone",
+              "icon": "inv_stone_grindingstone_02",
+              "quality": 1,
+              "count": 92
+            },
+            {
+              "itemId": 3486,
+              "name": "Heavy Grinding Stone",
+              "icon": "inv_stone_grindingstone_03",
+              "quality": 1,
+              "count": 32
+            },
+            {
+              "itemId": 7966,
+              "name": "Solid Grinding Stone",
+              "icon": "inv_stone_grindingstone_04",
+              "quality": 1,
+              "count": 8
+            }
+          ]
+        },
+        {
+          "title": "Gathered, looted or bought from other players",
+          "note": "The bulk of the cost: farm it or look at the auction house.",
+          "items": [
+            {
+              "itemId": 12365,
+              "name": "Dense Stone",
+              "icon": "inv_misc_stonetablet_07",
+              "quality": 1,
+              "count": 1537
+            },
+            {
+              "itemId": 3860,
+              "name": "Mithril Bar",
+              "icon": "inv_ingot_06",
+              "quality": 1,
+              "count": 398
+            },
+            {
+              "itemId": 4304,
+              "name": "Thick Leather",
+              "icon": "inv_misc_leatherscrap_08",
+              "quality": 1,
+              "count": 108
+            },
+            {
+              "itemId": 6037,
+              "name": "Truesilver Bar",
+              "icon": "inv_ingot_08",
+              "quality": 2,
+              "count": 24
+            },
+            {
+              "itemId": 7910,
+              "name": "Star Ruby",
+              "icon": "inv_misc_gem_ruby_02",
+              "quality": 2,
+              "count": 8
+            },
+            {
+              "itemId": 7912,
+              "name": "Solid Stone",
+              "icon": "inv_stone_10",
+              "quality": 1,
+              "count": 16
+            },
+            {
+              "itemId": 12360,
+              "name": "Arcanite Bar",
+              "icon": "inv_misc_stonetablet_05",
+              "quality": 2,
+              "count": 20
+            },
+            {
+              "itemId": 12359,
+              "name": "Thorium Bar",
+              "icon": "inv_ingot_07",
+              "quality": 1,
+              "count": 2400
+            },
+            {
+              "itemId": 8170,
+              "name": "Rugged Leather",
+              "icon": "inv_misc_leatherscrap_02",
+              "quality": 1,
+              "count": 360
+            }
+          ]
+        },
+        {
+          "title": "Made along the way",
+          "note": "The path crafts these itself; bought ready-made, they save a few steps.",
+          "items": [
+            {
+              "itemId": 7966,
+              "name": "Solid Grinding Stone",
+              "icon": "inv_stone_grindingstone_04",
+              "quality": 1,
+              "count": 4
+            },
+            {
+              "itemId": 12644,
+              "name": "Dense Grinding Stone",
+              "icon": "inv_stone_grindingstone_05",
+              "quality": 1,
+              "count": 380
+            }
+          ]
+        }
+      ]
+    },
+    "campPerks": {
+      "milestones": [
+        {
+          "icon": "trade_blacksmithing",
+          "title": "Journeyman Blacksmith",
+          "desc": "First time at skill 150 on the account",
+          "reward": "+1 Legacy point"
+        },
+        {
+          "icon": "trade_blacksmithing",
+          "title": "Expert Blacksmith",
+          "desc": "First time at skill 225 on the account",
+          "reward": "+1 Legacy point"
+        },
+        {
+          "icon": "trade_blacksmithing",
+          "title": "Artisan Blacksmith",
+          "desc": "First time at skill 300 on the account",
+          "reward": "+1 Legacy point"
+        },
+        {
+          "icon": "inv_scroll_15",
+          "title": "Blacksmithing Certification",
+          "desc": "The title the Blacksmith for the whole account, bought with Merchant's Favor",
+          "reward": "Skill 300"
+        }
+      ],
+      "atCamp": [
+        {
+          "icon": "inv_stone_grindingstone_01",
+          "name": "Sharpening Wheel",
+          "desc": "34 Strength to everyone sitting nearby, like Strength of Earth Totem (at level 60, scaling with level)",
+          "skill": "Skill 20"
+        },
+        {
+          "icon": "inv_blacksmith_anvil",
+          "name": "Anvil",
+          "desc": "An anvil at camp, and gives the Sharpening Wheel buff",
+          "skill": "Skill 140 Blueprint"
+        },
+        {
+          "icon": "inv_mace_1h_blacksmithing_b_01_black",
+          "name": "Master Forge",
+          "desc": "Needed for the most advanced Blacksmithing recipes, and gives the Sharpening Wheel buff",
+          "skill": "Skill 300 Blueprint"
+        }
+      ],
+      "legacyPerks": [
+        {
+          "icon": "racial_dwarf_findtreasure",
+          "name": "Performance Bonus",
+          "effect": "You have a 5 / 10 / 15% chance to receive 100% increased Merchant's Favor when you turn in a crate to the Azeroth Commerce Authority or Durotar Supply and Logistics.",
+          "meta": "Professions tree, 3 ranks, needs 5 points spent in the tree and a rank in Bountiful Harvest",
+          "planLink": ""
+        },
+        {
+          "icon": "inv_misc_pocketwatch_03",
+          "name": "Working Overtime",
+          "effect": "Increases your chance to gain a skill increase from using any primary, secondary, or class-based tradeskill by 4 / 8 / 12 / 16 / 20%.",
+          "meta": "Professions tree, 5 ranks, open from the start",
+          "planLink": ""
+        },
+        {
+          "icon": "inv_misc_book_08",
+          "name": "Dedicated Study",
+          "effect": "Increases your skill by 1 in your lowest tradeskill among your Primary and Secondary tradeskills. If you have already reached 300 skill in your two current Primary Tradeskills and all three Secondary Tradeskills, you will gain 2 to 4 of a random Elemental Essence.",
+          "meta": "Professions tree, 1 rank, needs 10 points spent in the tree and a rank in Bartering, 25 sec cast, 23 hour cooldown",
+          "planLink": ""
         }
       ]
     }
@@ -32553,281 +33832,521 @@ window.WOW_PROFESSIONS_DATA = {
     ],
     "gatheringNodes": [],
     "leveling": {
-      "note": "Built by scripts/prepare-leveling.mjs; do not edit.",
+      "title": "Leveling from 1 to 300",
+      "capNote": "225 is the beta's cap for now",
+      "desc": "At each point, you get the cheapest recipe to skill up, whether you learn it from the trainer or buy it from a vendor. Counts are averages, so buy a few more. There are no prices until launch, so each reagent counts for what a vendor pays you for it.",
       "steps": [
         {
-          "from": 1,
-          "to": 1,
-          "spellId": 7421,
-          "crafts": 1,
-          "name": "Skill 1–1",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "type": "rank",
+          "rank": "Apprentice",
+          "details": "from any Enchanting trainer, up to 75"
         },
         {
+          "type": "step",
+          "from": null,
+          "to": null,
+          "bar": {
+            "iLeft": "0%",
+            "iWidth": "0.6%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": null,
+          "recipeName": "",
+          "source": "Every enchant from here on needs it in your bags.",
+          "advice": "",
+          "crafts": 1,
+          "reagents": [
+            {
+              "itemId": 6217,
+              "name": "Copper Rod",
+              "count": 1,
+              "icon": "inv_misc_flute_01",
+              "quality": 1
+            },
+            {
+              "itemId": 247786,
+              "name": "Mote of Magic",
+              "count": 1,
+              "icon": "inv_elemental_mote_mana",
+              "quality": 1
+            }
+          ]
+        },
+        {
+          "type": "step",
           "from": 1,
           "to": 25,
-          "spellId": 7418,
+          "bar": {
+            "iLeft": "0%",
+            "iWidth": "8%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": null,
+          "recipeName": "",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 31,
-          "name": "Skill 1–25",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 247786,
+              "name": "Mote of Magic",
+              "count": 1,
+              "icon": "inv_elemental_mote_mana",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 25,
           "to": 75,
-          "spellId": 7420,
+          "bar": {
+            "iLeft": "8%",
+            "iWidth": "16.666666666666668%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": null,
+          "recipeName": "",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 51,
-          "name": "Skill 25–75",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 10940,
+              "name": "Strange Dust",
+              "count": 1,
+              "icon": "inv_enchant_duststrange",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "rank",
+          "rank": "Journeyman",
+          "details": "from the trainer, from skill 50 and level 10, up to 150"
+        },
+        {
+          "type": "step",
           "from": 75,
           "to": 91,
-          "spellId": 7420,
+          "bar": {
+            "iLeft": "24.666666666666668%",
+            "iWidth": "5.333333333333333%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": null,
+          "recipeName": "",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 24,
-          "name": "Skill 75–91",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 10940,
+              "name": "Strange Dust",
+              "count": 1,
+              "icon": "inv_enchant_duststrange",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 91,
           "to": 121,
-          "spellId": 7457,
+          "bar": {
+            "iLeft": "30%",
+            "iWidth": "10%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": null,
+          "recipeName": "",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 39,
-          "name": "Skill 91–121",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 10940,
+              "name": "Strange Dust",
+              "count": 2,
+              "icon": "inv_enchant_duststrange",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 121,
           "to": 130,
-          "spellId": 13378,
+          "bar": {
+            "iLeft": "40%",
+            "iWidth": "3%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": null,
+          "recipeName": "",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 9,
-          "name": "Skill 121–130",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 10998,
+              "name": "Lesser Astral Essence",
+              "count": 1,
+              "icon": "inv_enchant_essenceastralsmall",
+              "quality": 2
+            },
+            {
+              "itemId": 10940,
+              "name": "Strange Dust",
+              "count": 1,
+              "icon": "inv_enchant_duststrange",
+              "quality": 1
+            }
+          ]
         },
         {
-          "from": 130,
-          "to": 130,
-          "spellId": 7795,
+          "type": "step",
+          "from": null,
+          "to": null,
+          "bar": {
+            "iLeft": "43%",
+            "iWidth": "0.6%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": null,
+          "recipeName": "",
+          "source": "Every enchant from here on needs it in your bags.",
+          "advice": "",
           "crafts": 1,
-          "name": "Skill 130–130",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 6338,
+              "name": "Silver Rod",
+              "count": 1,
+              "icon": "inv_staff_01",
+              "quality": 1
+            },
+            {
+              "itemId": 10940,
+              "name": "Strange Dust",
+              "count": 3,
+              "icon": "inv_enchant_duststrange",
+              "quality": 1
+            },
+            {
+              "itemId": 10938,
+              "name": "Lesser Magic Essence",
+              "count": 4,
+              "icon": "inv_enchant_essencemagicsmall",
+              "quality": 2
+            },
+            {
+              "itemId": 1210,
+              "name": "Shadowgem",
+              "count": 1,
+              "icon": "inv_misc_gem_amethyst_01",
+              "quality": 2
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 130,
           "to": 150,
-          "spellId": 13501,
+          "bar": {
+            "iLeft": "43%",
+            "iWidth": "6.666666666666667%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": null,
+          "recipeName": "",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 20,
-          "name": "Skill 130–150",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 11083,
+              "name": "Soul Dust",
+              "count": 1,
+              "icon": "inv_enchant_dustsoul",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "rank",
+          "rank": "Expert",
+          "details": "from the trainer, from skill 125 and level 20, up to 225"
+        },
+        {
+          "type": "step",
           "from": 150,
           "to": 173,
-          "spellId": 13501,
+          "bar": {
+            "iLeft": "49.666666666666664%",
+            "iWidth": "7.666666666666667%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": null,
+          "recipeName": "",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 29,
-          "name": "Skill 150–173",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 11083,
+              "name": "Soul Dust",
+              "count": 1,
+              "icon": "inv_enchant_dustsoul",
+              "quality": 1
+            }
+          ]
         },
         {
-          "from": 173,
-          "to": 173,
-          "spellId": 13628,
+          "type": "step",
+          "from": null,
+          "to": null,
+          "bar": {
+            "iLeft": "57.333333333333336%",
+            "iWidth": "0.6%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": null,
+          "recipeName": "",
+          "source": "Every enchant from here on needs it in your bags.",
+          "advice": "",
           "crafts": 1,
-          "name": "Skill 173–173",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 11128,
+              "name": "Golden Rod",
+              "count": 1,
+              "icon": "inv_staff_10",
+              "quality": 1
+            },
+            {
+              "itemId": 5500,
+              "name": "Iridescent Pearl",
+              "count": 1,
+              "icon": "inv_misc_gem_pearl_02",
+              "quality": 2
+            },
+            {
+              "itemId": 11082,
+              "name": "Greater Astral Essence",
+              "count": 1,
+              "icon": "inv_enchant_essenceastrallarge",
+              "quality": 2
+            },
+            {
+              "itemId": 11083,
+              "name": "Soul Dust",
+              "count": 1,
+              "icon": "inv_enchant_dustsoul",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 173,
           "to": 194,
-          "spellId": 13637,
+          "bar": {
+            "iLeft": "57.333333333333336%",
+            "iWidth": "7%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": null,
+          "recipeName": "",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 24,
-          "name": "Skill 173–194",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 11083,
+              "name": "Soul Dust",
+              "count": 1,
+              "icon": "inv_enchant_dustsoul",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 194,
           "to": 218,
-          "spellId": 13661,
+          "bar": {
+            "iLeft": "64.33333333333333%",
+            "iWidth": "8%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": null,
+          "recipeName": "",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 30,
-          "name": "Skill 194–218",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 11137,
+              "name": "Vision Dust",
+              "count": 1,
+              "icon": "inv_enchant_dustvision",
+              "quality": 1
+            }
+          ]
         },
         {
-          "from": 218,
-          "to": 218,
-          "spellId": 13702,
+          "type": "step",
+          "from": null,
+          "to": null,
+          "bar": {
+            "iLeft": "72.33333333333333%",
+            "iWidth": "0.6%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": null,
+          "recipeName": "",
+          "source": "Every enchant from here on needs it in your bags.",
+          "advice": "",
           "crafts": 1,
-          "name": "Skill 218–218",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 11144,
+              "name": "Truesilver Rod",
+              "count": 1,
+              "icon": "inv_staff_11",
+              "quality": 1
+            },
+            {
+              "itemId": 7971,
+              "name": "Black Pearl",
+              "count": 1,
+              "icon": "inv_misc_gem_pearl_01",
+              "quality": 2
+            },
+            {
+              "itemId": 11135,
+              "name": "Greater Mystic Essence",
+              "count": 1,
+              "icon": "inv_enchant_essencemysticallarge",
+              "quality": 2
+            },
+            {
+              "itemId": 11137,
+              "name": "Vision Dust",
+              "count": 1,
+              "icon": "inv_enchant_dustvision",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 218,
           "to": 225,
-          "spellId": 13746,
+          "bar": {
+            "iLeft": "72.33333333333333%",
+            "iWidth": "2.3333333333333335%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": null,
+          "recipeName": "",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 7,
-          "name": "Skill 218–225",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 11137,
+              "name": "Vision Dust",
+              "count": 1,
+              "icon": "inv_enchant_dustvision",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "rank",
+          "rank": "Artisan",
+          "details": "from the trainer, from skill 200 and level 35, up to 300"
+        },
+        {
+          "type": "step",
           "from": 225,
           "to": 262,
-          "spellId": 13815,
+          "bar": {
+            "iLeft": "74.66666666666667%",
+            "iWidth": "12.333333333333334%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": null,
+          "recipeName": "",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 68,
-          "name": "Skill 225–262",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 11137,
+              "name": "Vision Dust",
+              "count": 1,
+              "icon": "inv_enchant_dustvision",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 262,
           "to": 277,
-          "spellId": 13939,
+          "bar": {
+            "iLeft": "87%",
+            "iWidth": "5%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": null,
+          "recipeName": "",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 20,
-          "name": "Skill 262–277",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 11176,
+              "name": "Dream Dust",
+              "count": 1,
+              "icon": "inv_enchant_dustdream",
+              "quality": 1
+            },
+            {
+              "itemId": 11174,
+              "name": "Lesser Nether Essence",
+              "count": 2,
+              "icon": "inv_enchant_essencenethersmall",
+              "quality": 2
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 277,
           "to": 300,
-          "spellId": 20017,
+          "bar": {
+            "iLeft": "92%",
+            "iWidth": "7.666666666666667%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": null,
+          "recipeName": "",
+          "source": "Formula sold by Mythrin'dir (Alliance) or Daniel Bartlett (Horde)",
+          "advice": "",
           "crafts": 27,
-          "name": "Skill 277–300",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
-        }
-      ],
-      "shopping": [
-        {
-          "id": 11176,
-          "count": 182,
-          "name": "Dream Dust",
-          "icon": "inv_enchant_dustdream",
-          "quality": 1
-        },
-        {
-          "id": 11137,
-          "count": 106,
-          "name": "Vision Dust",
-          "icon": "inv_enchant_dustvision",
-          "quality": 1
-        },
-        {
-          "id": 11174,
-          "count": 40,
-          "name": "Lesser Nether Essence",
-          "icon": "inv_enchant_essencenethersmall",
-          "quality": 2
-        },
-        {
-          "id": 10940,
-          "count": 165,
-          "name": "Strange Dust",
-          "icon": "inv_enchant_duststrange",
-          "quality": 1
-        },
-        {
-          "id": 11083,
-          "count": 74,
-          "name": "Soul Dust",
-          "icon": "inv_enchant_dustsoul",
-          "quality": 1
-        },
-        {
-          "id": 10998,
-          "count": 9,
-          "name": "Lesser Astral Essence",
-          "icon": "inv_enchant_essenceastralsmall",
-          "quality": 2
-        },
-        {
-          "id": 11144,
-          "count": 1,
-          "name": "Truesilver Rod",
-          "icon": "inv_staff_11",
-          "quality": 1
-        },
-        {
-          "id": 11128,
-          "count": 1,
-          "name": "Golden Rod",
-          "icon": "inv_staff_10",
-          "quality": 1
-        },
-        {
-          "id": 11135,
-          "count": 1,
-          "name": "Greater Mystic Essence",
-          "icon": "inv_enchant_essencemysticallarge",
-          "quality": 2
-        },
-        {
-          "id": 7971,
-          "count": 1,
-          "name": "Black Pearl",
-          "icon": "inv_misc_gem_pearl_01",
-          "quality": 2
-        },
-        {
-          "id": 11082,
-          "count": 1,
-          "name": "Greater Astral Essence",
-          "icon": "inv_enchant_essenceastrallarge",
-          "quality": 2
-        },
-        {
-          "id": 6338,
-          "count": 1,
-          "name": "Silver Rod",
-          "icon": "inv_staff_01",
-          "quality": 1
-        },
-        {
-          "id": 10938,
-          "count": 4,
-          "name": "Lesser Magic Essence",
-          "icon": "inv_enchant_essencemagicsmall",
-          "quality": 2
-        },
-        {
-          "id": 247786,
-          "count": 32,
-          "name": "Mote of Magic",
-          "icon": "inv_elemental_mote_mana",
-          "quality": 1
-        },
-        {
-          "id": 5500,
-          "count": 1,
-          "name": "Iridescent Pearl",
-          "icon": "inv_misc_gem_pearl_02",
-          "quality": 2
-        },
-        {
-          "id": 1210,
-          "count": 1,
-          "name": "Shadowgem",
-          "icon": "inv_misc_gem_amethyst_01",
-          "quality": 2
-        },
-        {
-          "id": 6217,
-          "count": 1,
-          "name": "Copper Rod",
-          "icon": "inv_misc_flute_01",
-          "quality": 1
+          "reagents": [
+            {
+              "itemId": 11176,
+              "name": "Dream Dust",
+              "count": 6,
+              "icon": "inv_enchant_dustdream",
+              "quality": 1
+            }
+          ]
         }
       ]
     },
@@ -33208,6 +34727,233 @@ window.WOW_PROFESSIONS_DATA = {
           "cost": 1000,
           "requiredSkill": 300,
           "desc": ""
+        }
+      ]
+    },
+    "shopping": {
+      "title": "Shopping list, 1 to 225",
+      "subtitle": "",
+      "groups": [
+        {
+          "title": "From a trade supplies vendor",
+          "note": "Always in stock, for a few coins.",
+          "items": [
+            {
+              "itemId": 6217,
+              "name": "Copper Rod",
+              "icon": "inv_misc_flute_01",
+              "quality": 1,
+              "count": 1
+            }
+          ]
+        },
+        {
+          "title": "Gathered, looted or bought from other players",
+          "note": "The bulk of the cost: farm it or look at the auction house.",
+          "items": [
+            {
+              "itemId": 10940,
+              "name": "Strange Dust",
+              "icon": "inv_enchant_duststrange",
+              "quality": 1,
+              "count": 176
+            },
+            {
+              "itemId": 10998,
+              "name": "Lesser Astral Essence",
+              "icon": "inv_enchant_essenceastralsmall",
+              "quality": 2,
+              "count": 9
+            },
+            {
+              "itemId": 6338,
+              "name": "Silver Rod",
+              "icon": "inv_staff_01",
+              "quality": 1,
+              "count": 1
+            },
+            {
+              "itemId": 10938,
+              "name": "Lesser Magic Essence",
+              "icon": "inv_enchant_essencemagicsmall",
+              "quality": 2,
+              "count": 4
+            },
+            {
+              "itemId": 1210,
+              "name": "Shadowgem",
+              "icon": "inv_misc_gem_amethyst_01",
+              "quality": 2,
+              "count": 1
+            },
+            {
+              "itemId": 11083,
+              "name": "Soul Dust",
+              "icon": "inv_enchant_dustsoul",
+              "quality": 1,
+              "count": 74
+            },
+            {
+              "itemId": 11128,
+              "name": "Golden Rod",
+              "icon": "inv_staff_10",
+              "quality": 1,
+              "count": 1
+            },
+            {
+              "itemId": 5500,
+              "name": "Iridescent Pearl",
+              "icon": "inv_misc_gem_pearl_02",
+              "quality": 2,
+              "count": 1
+            },
+            {
+              "itemId": 11082,
+              "name": "Greater Astral Essence",
+              "icon": "inv_enchant_essenceastrallarge",
+              "quality": 2,
+              "count": 1
+            },
+            {
+              "itemId": 11137,
+              "name": "Vision Dust",
+              "icon": "inv_enchant_dustvision",
+              "quality": 1,
+              "count": 38
+            },
+            {
+              "itemId": 11144,
+              "name": "Truesilver Rod",
+              "icon": "inv_staff_11",
+              "quality": 1,
+              "count": 1
+            },
+            {
+              "itemId": 7971,
+              "name": "Black Pearl",
+              "icon": "inv_misc_gem_pearl_01",
+              "quality": 2,
+              "count": 1
+            },
+            {
+              "itemId": 11135,
+              "name": "Greater Mystic Essence",
+              "icon": "inv_enchant_essencemysticallarge",
+              "quality": 2,
+              "count": 1
+            }
+          ]
+        },
+        {
+          "title": "Made along the way",
+          "note": "The path crafts these itself; bought ready-made, they save a few steps.",
+          "items": [
+            {
+              "itemId": 247786,
+              "name": "Mote of Magic",
+              "icon": "inv_elemental_mote_mana",
+              "quality": 1,
+              "count": 32
+            }
+          ]
+        },
+        {
+          "title": "Gathered, looted or bought from other players",
+          "note": "The bulk of the cost: farm it or look at the auction house.",
+          "items": [
+            {
+              "itemId": 11137,
+              "name": "Vision Dust",
+              "icon": "inv_enchant_dustvision",
+              "quality": 1,
+              "count": 68
+            },
+            {
+              "itemId": 11176,
+              "name": "Dream Dust",
+              "icon": "inv_enchant_dustdream",
+              "quality": 1,
+              "count": 182
+            },
+            {
+              "itemId": 11174,
+              "name": "Lesser Nether Essence",
+              "icon": "inv_enchant_essencenethersmall",
+              "quality": 2,
+              "count": 40
+            }
+          ]
+        }
+      ]
+    },
+    "campPerks": {
+      "milestones": [
+        {
+          "icon": "trade_engraving",
+          "title": "Journeyman Enchanter",
+          "desc": "First time at skill 150 on the account",
+          "reward": "+1 Legacy point"
+        },
+        {
+          "icon": "trade_engraving",
+          "title": "Expert Enchanter",
+          "desc": "First time at skill 225 on the account",
+          "reward": "+1 Legacy point"
+        },
+        {
+          "icon": "trade_engraving",
+          "title": "Artisan Enchanter",
+          "desc": "First time at skill 300 on the account",
+          "reward": "+1 Legacy point"
+        },
+        {
+          "icon": "inv_scroll_15",
+          "title": "Enchanting Certification",
+          "desc": "The title the Enchanter for the whole account, bought with Merchant's Favor",
+          "reward": "Skill 300"
+        }
+      ],
+      "atCamp": [
+        {
+          "icon": "inv_10_enchanting2_magicswirl_bronze",
+          "name": "Enchanted Lute",
+          "desc": "Armor, stats and resistances to everyone sitting nearby, like Mark of the Wild (at level 60, scaling with level)",
+          "skill": "Skill 20"
+        },
+        {
+          "icon": "inv_eng_bottledelements",
+          "name": "Arcane Salvager",
+          "desc": "Disenchants more efficiently, and gives the Enchanted Lute buff",
+          "skill": "Skill 140 Blueprint"
+        },
+        {
+          "icon": "inv_enchanting_modifiedcraftingreagent_indigo",
+          "name": "Arcane Forge",
+          "desc": "Needed for the most advanced Enchanting recipes, and gives the Enchanted Lute buff",
+          "skill": "Skill 300 Blueprint"
+        }
+      ],
+      "legacyPerks": [
+        {
+          "icon": "racial_dwarf_findtreasure",
+          "name": "Performance Bonus",
+          "effect": "You have a 5 / 10 / 15% chance to receive 100% increased Merchant's Favor when you turn in a crate to the Azeroth Commerce Authority or Durotar Supply and Logistics.",
+          "meta": "Professions tree, 3 ranks, needs 5 points spent in the tree and a rank in Bountiful Harvest",
+          "planLink": ""
+        },
+        {
+          "icon": "inv_misc_pocketwatch_03",
+          "name": "Working Overtime",
+          "effect": "Increases your chance to gain a skill increase from using any primary, secondary, or class-based tradeskill by 4 / 8 / 12 / 16 / 20%.",
+          "meta": "Professions tree, 5 ranks, open from the start",
+          "planLink": ""
+        },
+        {
+          "icon": "inv_misc_book_08",
+          "name": "Dedicated Study",
+          "effect": "Increases your skill by 1 in your lowest tradeskill among your Primary and Secondary tradeskills. If you have already reached 300 skill in your two current Primary Tradeskills and all three Secondary Tradeskills, you will gain 2 to 4 of a random Elemental Essence.",
+          "meta": "Professions tree, 1 rank, needs 10 points spent in the tree and a rank in Bartering, 25 sec cast, 23 hour cooldown",
+          "planLink": ""
         }
       ]
     }
@@ -43079,421 +44825,766 @@ window.WOW_PROFESSIONS_DATA = {
     ],
     "gatheringNodes": [],
     "leveling": {
-      "note": "Built by scripts/prepare-leveling.mjs; do not edit.",
+      "title": "Leveling from 1 to 300",
+      "capNote": "225 is the beta's cap for now",
+      "desc": "At each point, you get the cheapest recipe to skill up, whether you learn it from the trainer or buy it from a vendor. Counts are averages, so buy a few more. There are no prices until launch, so each reagent counts for what a vendor pays you for it.",
       "steps": [
         {
+          "type": "rank",
+          "rank": "Apprentice",
+          "details": "from any Engineering trainer, up to 75"
+        },
+        {
+          "type": "step",
           "from": 1,
           "to": 30,
-          "spellId": 3918,
+          "bar": {
+            "iLeft": "0%",
+            "iWidth": "9.666666666666666%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 4357,
+          "recipeName": "Rough Blasting Powder",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 33,
-          "name": "Skill 1–30",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 2835,
+              "name": "Rough Stone",
+              "count": 1,
+              "icon": "inv_stone_06",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 30,
           "to": 59,
-          "spellId": 3922,
+          "bar": {
+            "iLeft": "9.666666666666666%",
+            "iWidth": "9.666666666666666%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 4359,
+          "recipeName": "Handful of Copper Bolts",
+          "source": "Learned from the trainer",
+          "advice": "Keep them: later steps use them.",
           "crafts": 50,
-          "name": "Skill 30–59",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 2840,
+              "name": "Copper Bar",
+              "count": 1,
+              "icon": "inv_ingot_02",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 59,
           "to": 75,
-          "spellId": 3924,
+          "bar": {
+            "iLeft": "19.333333333333332%",
+            "iWidth": "5.333333333333333%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 4361,
+          "recipeName": "Copper Tube",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 16,
-          "name": "Skill 59–75",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 2840,
+              "name": "Copper Bar",
+              "count": 2,
+              "icon": "inv_ingot_02",
+              "quality": 1
+            },
+            {
+              "itemId": 2880,
+              "name": "Weak Flux",
+              "count": 1,
+              "icon": "inv_misc_ammo_gunpowder_02",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "rank",
+          "rank": "Journeyman",
+          "details": "from the trainer, from skill 50 and level 10, up to 150"
+        },
+        {
+          "type": "step",
           "from": 75,
           "to": 95,
-          "spellId": 3929,
+          "bar": {
+            "iLeft": "24.666666666666668%",
+            "iWidth": "6.666666666666667%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 4364,
+          "recipeName": "Coarse Blasting Powder",
+          "source": "Learned from the trainer",
+          "advice": "Keep them: later steps use them.",
           "crafts": 40,
-          "name": "Skill 75–95",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 2836,
+              "name": "Coarse Stone",
+              "count": 1,
+              "icon": "inv_stone_09",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 95,
           "to": 106,
-          "spellId": 3926,
+          "bar": {
+            "iLeft": "31.333333333333332%",
+            "iWidth": "3.6666666666666665%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 4363,
+          "recipeName": "Copper Modulator",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 14,
-          "name": "Skill 95–106",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 4359,
+              "name": "Handful of Copper Bolts",
+              "count": 2,
+              "icon": "inv_misc_gear_06",
+              "quality": 1
+            },
+            {
+              "itemId": 2840,
+              "name": "Copper Bar",
+              "count": 1,
+              "icon": "inv_ingot_02",
+              "quality": 1
+            },
+            {
+              "itemId": 2589,
+              "name": "Linen Cloth",
+              "count": 2,
+              "icon": "inv_fabric_linen_01",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 106,
           "to": 111,
-          "spellId": 3973,
+          "bar": {
+            "iLeft": "35%",
+            "iWidth": "1.6666666666666667%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 4404,
+          "recipeName": "Silver Contact",
+          "source": "Learned from the trainer",
+          "advice": "Keep them: later steps use them.",
           "crafts": 5,
-          "name": "Skill 106–111",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 2842,
+              "name": "Silver Bar",
+              "count": 1,
+              "icon": "inv_ingot_01",
+              "quality": 2
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 111,
           "to": 120,
-          "spellId": 8334,
+          "bar": {
+            "iLeft": "36.666666666666664%",
+            "iWidth": "3%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 6712,
+          "recipeName": "Practice Lock",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 10,
-          "name": "Skill 111–120",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 2841,
+              "name": "Bronze Bar",
+              "count": 1,
+              "icon": "inv_ingot_bronze",
+              "quality": 1
+            },
+            {
+              "itemId": 4359,
+              "name": "Handful of Copper Bolts",
+              "count": 2,
+              "icon": "inv_misc_gear_06",
+              "quality": 1
+            },
+            {
+              "itemId": 2880,
+              "name": "Weak Flux",
+              "count": 1,
+              "icon": "inv_misc_ammo_gunpowder_02",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 120,
           "to": 125,
-          "spellId": 3937,
+          "bar": {
+            "iLeft": "39.666666666666664%",
+            "iWidth": "1.6666666666666667%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 4370,
+          "recipeName": "Large Copper Bomb",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 8,
-          "name": "Skill 120–125",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 2840,
+              "name": "Copper Bar",
+              "count": 3,
+              "icon": "inv_ingot_02",
+              "quality": 1
+            },
+            {
+              "itemId": 4364,
+              "name": "Coarse Blasting Powder",
+              "count": 4,
+              "icon": "inv_misc_dust_02",
+              "quality": 1
+            },
+            {
+              "itemId": 4404,
+              "name": "Silver Contact",
+              "count": 1,
+              "icon": "inv_ingot_04",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 125,
           "to": 135,
-          "spellId": 3945,
+          "bar": {
+            "iLeft": "41.333333333333336%",
+            "iWidth": "3.3333333333333335%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 4377,
+          "recipeName": "Heavy Blasting Powder",
+          "source": "Learned from the trainer",
+          "advice": "Keep them: later steps use them.",
           "crafts": 14,
-          "name": "Skill 125–135",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 2838,
+              "name": "Heavy Stone",
+              "count": 1,
+              "icon": "inv_stone_12",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 135,
           "to": 146,
-          "spellId": 3942,
+          "bar": {
+            "iLeft": "44.666666666666664%",
+            "iWidth": "3.6666666666666665%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 4375,
+          "recipeName": "Whirring Bronze Gizmo",
+          "source": "Learned from the trainer",
+          "advice": "Keep them: later steps use them.",
           "crafts": 16,
-          "name": "Skill 135–146",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 2841,
+              "name": "Bronze Bar",
+              "count": 2,
+              "icon": "inv_ingot_bronze",
+              "quality": 1
+            },
+            {
+              "itemId": 2592,
+              "name": "Wool Cloth",
+              "count": 1,
+              "icon": "inv_fabric_wool_01",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 146,
           "to": 150,
-          "spellId": 3953,
+          "bar": {
+            "iLeft": "48.333333333333336%",
+            "iWidth": "1.3333333333333333%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 4382,
+          "recipeName": "Bronze Framework",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 5,
-          "name": "Skill 146–150",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 2841,
+              "name": "Bronze Bar",
+              "count": 2,
+              "icon": "inv_ingot_bronze",
+              "quality": 1
+            },
+            {
+              "itemId": 2319,
+              "name": "Medium Leather",
+              "count": 1,
+              "icon": "inv_misc_leatherscrap_05",
+              "quality": 1
+            },
+            {
+              "itemId": 2592,
+              "name": "Wool Cloth",
+              "count": 1,
+              "icon": "inv_fabric_wool_01",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "rank",
+          "rank": "Expert",
+          "details": "from the trainer, from skill 125 and level 20, up to 225"
+        },
+        {
+          "type": "step",
           "from": 150,
           "to": 160,
-          "spellId": 9271,
+          "bar": {
+            "iLeft": "49.666666666666664%",
+            "iWidth": "3.3333333333333335%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 6533,
+          "recipeName": "Aquadynamic Fish Attractor",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 14,
-          "name": "Skill 150–160",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 2841,
+              "name": "Bronze Bar",
+              "count": 2,
+              "icon": "inv_ingot_bronze",
+              "quality": 1
+            },
+            {
+              "itemId": 6530,
+              "name": "Nightcrawlers",
+              "count": 1,
+              "icon": "inv_misc_monstertail_03",
+              "quality": 1
+            },
+            {
+              "itemId": 4364,
+              "name": "Coarse Blasting Powder",
+              "count": 1,
+              "icon": "inv_misc_dust_02",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 160,
           "to": 175,
-          "spellId": 3957,
+          "bar": {
+            "iLeft": "53%",
+            "iWidth": "5%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 4386,
+          "recipeName": "Ice Deflector",
+          "source": "Schematic sold by Rizz Loosebolt (Alterac Mountains)",
+          "advice": "",
           "crafts": 15,
-          "name": "Skill 160–175",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 4375,
+              "name": "Whirring Bronze Gizmo",
+              "count": 1,
+              "icon": "inv_gizmo_02",
+              "quality": 1
+            },
+            {
+              "itemId": 3829,
+              "name": "Frost Oil",
+              "count": 1,
+              "icon": "inv_potion_20",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 175,
           "to": 195,
-          "spellId": 12585,
+          "bar": {
+            "iLeft": "58%",
+            "iWidth": "6.666666666666667%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 10505,
+          "recipeName": "Solid Blasting Powder",
+          "source": "Learned from the trainer",
+          "advice": "Keep them: later steps use them.",
           "crafts": 72,
-          "name": "Skill 175–195",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 7912,
+              "name": "Solid Stone",
+              "count": 2,
+              "icon": "inv_stone_10",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 195,
           "to": 200,
-          "spellId": 3962,
+          "bar": {
+            "iLeft": "64.66666666666667%",
+            "iWidth": "1.6666666666666667%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 4390,
+          "recipeName": "Iron Grenade",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 12,
-          "name": "Skill 195–200",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 3575,
+              "name": "Iron Bar",
+              "count": 1,
+              "icon": "inv_ingot_iron",
+              "quality": 1
+            },
+            {
+              "itemId": 4377,
+              "name": "Heavy Blasting Powder",
+              "count": 1,
+              "icon": "inv_misc_dust_06",
+              "quality": 1
+            },
+            {
+              "itemId": 4306,
+              "name": "Silk Cloth",
+              "count": 1,
+              "icon": "inv_fabric_silk_01",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 200,
           "to": 205,
-          "spellId": 12895,
+          "bar": {
+            "iLeft": "66.33333333333333%",
+            "iWidth": "1.6666666666666667%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 10713,
+          "recipeName": "Plans: Inlaid Mithril Cylinder",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 5,
-          "name": "Skill 200–205",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 10648,
+              "name": "Blank Parchment",
+              "count": 1,
+              "icon": "inv_misc_note_02",
+              "quality": 1
+            },
+            {
+              "itemId": 10647,
+              "name": "Engineer's Ink",
+              "count": 1,
+              "icon": "inv_potion_65",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 205,
           "to": 210,
-          "spellId": 15255,
+          "bar": {
+            "iLeft": "68%",
+            "iWidth": "1.6666666666666667%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 11590,
+          "recipeName": "Mechanical Repair Kit",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 7,
-          "name": "Skill 205–210",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 3860,
+              "name": "Mithril Bar",
+              "count": 1,
+              "icon": "inv_ingot_06",
+              "quality": 1
+            },
+            {
+              "itemId": 4338,
+              "name": "Mageweave Cloth",
+              "count": 1,
+              "icon": "inv_fabric_mageweave_01",
+              "quality": 1
+            },
+            {
+              "itemId": 10505,
+              "name": "Solid Blasting Powder",
+              "count": 1,
+              "icon": "inv_misc_powder_black",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 210,
           "to": 225,
-          "spellId": 12596,
+          "bar": {
+            "iLeft": "69.66666666666667%",
+            "iWidth": "5%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 10512,
+          "recipeName": "Hi-Impact Mithril Slugs",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 19,
-          "name": "Skill 210–225",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 3860,
+              "name": "Mithril Bar",
+              "count": 1,
+              "icon": "inv_ingot_06",
+              "quality": 1
+            },
+            {
+              "itemId": 10505,
+              "name": "Solid Blasting Powder",
+              "count": 1,
+              "icon": "inv_misc_powder_black",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "rank",
+          "rank": "Artisan",
+          "details": "from the trainer, from skill 200 and level 35, up to 300"
+        },
+        {
+          "type": "step",
           "from": 225,
           "to": 245,
-          "spellId": 12596,
+          "bar": {
+            "iLeft": "74.66666666666667%",
+            "iWidth": "6.666666666666667%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 10512,
+          "recipeName": "Hi-Impact Mithril Slugs",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 62,
-          "name": "Skill 225–245",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 3860,
+              "name": "Mithril Bar",
+              "count": 1,
+              "icon": "inv_ingot_06",
+              "quality": 1
+            },
+            {
+              "itemId": 10505,
+              "name": "Solid Blasting Powder",
+              "count": 1,
+              "icon": "inv_misc_powder_black",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 245,
           "to": 250,
-          "spellId": 12621,
+          "bar": {
+            "iLeft": "81.33333333333333%",
+            "iWidth": "1.6666666666666667%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 10513,
+          "recipeName": "Mithril Gyro-Shot",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 6,
-          "name": "Skill 245–250",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 3860,
+              "name": "Mithril Bar",
+              "count": 2,
+              "icon": "inv_ingot_06",
+              "quality": 1
+            },
+            {
+              "itemId": 10505,
+              "name": "Solid Blasting Powder",
+              "count": 2,
+              "icon": "inv_misc_powder_black",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 250,
           "to": 258,
-          "spellId": 19788,
+          "bar": {
+            "iLeft": "83%",
+            "iWidth": "2.6666666666666665%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 15992,
+          "recipeName": "Dense Blasting Powder",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 15,
-          "name": "Skill 250–258",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 12365,
+              "name": "Dense Stone",
+              "count": 2,
+              "icon": "inv_misc_stonetablet_07",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 258,
           "to": 262,
-          "spellId": 12621,
+          "bar": {
+            "iLeft": "85.66666666666667%",
+            "iWidth": "1.3333333333333333%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 10513,
+          "recipeName": "Mithril Gyro-Shot",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 7,
-          "name": "Skill 258–262",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 3860,
+              "name": "Mithril Bar",
+              "count": 2,
+              "icon": "inv_ingot_06",
+              "quality": 1
+            },
+            {
+              "itemId": 10505,
+              "name": "Solid Blasting Powder",
+              "count": 2,
+              "icon": "inv_misc_powder_black",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 262,
           "to": 288,
-          "spellId": 19791,
+          "bar": {
+            "iLeft": "87%",
+            "iWidth": "8.666666666666666%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 15994,
+          "recipeName": "Thorium Widget",
+          "source": "Schematic sold by Gearcutter Cogspinner (Alliance) or Sovik (Horde)",
+          "advice": "",
           "crafts": 28,
-          "name": "Skill 262–288",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 12359,
+              "name": "Thorium Bar",
+              "count": 3,
+              "icon": "inv_ingot_07",
+              "quality": 1
+            },
+            {
+              "itemId": 14047,
+              "name": "Runecloth",
+              "count": 1,
+              "icon": "inv_fabric_purplefire_01",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 288,
           "to": 300,
-          "spellId": 19795,
+          "bar": {
+            "iLeft": "95.66666666666667%",
+            "iWidth": "4%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 16000,
+          "recipeName": "Thorium Tube",
+          "source": "Schematic sold by Xizzer Fizzbolt (Winterspring)",
+          "advice": "",
           "crafts": 13,
-          "name": "Skill 288–300",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
-        }
-      ],
-      "shopping": [
-        {
-          "id": 12359,
-          "count": 162,
-          "name": "Thorium Bar",
-          "icon": "inv_ingot_07",
-          "quality": 1
-        },
-        {
-          "id": 3860,
-          "count": 114,
-          "name": "Mithril Bar",
-          "icon": "inv_ingot_06",
-          "quality": 1
-        },
-        {
-          "id": 10505,
-          "count": 114,
-          "name": "Solid Blasting Powder",
-          "icon": "inv_misc_powder_black",
-          "quality": 1
-        },
-        {
-          "id": 7912,
-          "count": 144,
-          "name": "Solid Stone",
-          "icon": "inv_stone_10",
-          "quality": 1
-        },
-        {
-          "id": 14047,
-          "count": 28,
-          "name": "Runecloth",
-          "icon": "inv_fabric_purplefire_01",
-          "quality": 1
-        },
-        {
-          "id": 12365,
-          "count": 30,
-          "name": "Dense Stone",
-          "icon": "inv_misc_stonetablet_07",
-          "quality": 1
-        },
-        {
-          "id": 2841,
-          "count": 80,
-          "name": "Bronze Bar",
-          "icon": "inv_ingot_bronze",
-          "quality": 1
-        },
-        {
-          "id": 10647,
-          "count": 5,
-          "name": "Engineer's Ink",
-          "icon": "inv_potion_65",
-          "quality": 1
-        },
-        {
-          "id": 3575,
-          "count": 12,
-          "name": "Iron Bar",
-          "icon": "inv_ingot_iron",
-          "quality": 1
-        },
-        {
-          "id": 3829,
-          "count": 15,
-          "name": "Frost Oil",
-          "icon": "inv_potion_20",
-          "quality": 1
-        },
-        {
-          "id": 4377,
-          "count": 12,
-          "name": "Heavy Blasting Powder",
-          "icon": "inv_misc_dust_06",
-          "quality": 1
-        },
-        {
-          "id": 4306,
-          "count": 12,
-          "name": "Silk Cloth",
-          "icon": "inv_fabric_silk_01",
-          "quality": 1
-        },
-        {
-          "id": 4338,
-          "count": 7,
-          "name": "Mageweave Cloth",
-          "icon": "inv_fabric_mageweave_01",
-          "quality": 1
-        },
-        {
-          "id": 4375,
-          "count": 15,
-          "name": "Whirring Bronze Gizmo",
-          "icon": "inv_gizmo_02",
-          "quality": 1
-        },
-        {
-          "id": 2840,
-          "count": 120,
-          "name": "Copper Bar",
-          "icon": "inv_ingot_02",
-          "quality": 1
-        },
-        {
-          "id": 2838,
-          "count": 14,
-          "name": "Heavy Stone",
-          "icon": "inv_stone_12",
-          "quality": 1
-        },
-        {
-          "id": 2592,
-          "count": 21,
-          "name": "Wool Cloth",
-          "icon": "inv_fabric_wool_01",
-          "quality": 1
-        },
-        {
-          "id": 2880,
-          "count": 26,
-          "name": "Weak Flux",
-          "icon": "inv_misc_ammo_gunpowder_02",
-          "quality": 1
-        },
-        {
-          "id": 10648,
-          "count": 5,
-          "name": "Blank Parchment",
-          "icon": "inv_misc_note_02",
-          "quality": 1
-        },
-        {
-          "id": 2836,
-          "count": 40,
-          "name": "Coarse Stone",
-          "icon": "inv_stone_09",
-          "quality": 1
-        },
-        {
-          "id": 4359,
-          "count": 48,
-          "name": "Handful of Copper Bolts",
-          "icon": "inv_misc_gear_06",
-          "quality": 1
-        },
-        {
-          "id": 4364,
-          "count": 46,
-          "name": "Coarse Blasting Powder",
-          "icon": "inv_misc_dust_02",
-          "quality": 1
-        },
-        {
-          "id": 2842,
-          "count": 5,
-          "name": "Silver Bar",
-          "icon": "inv_ingot_01",
-          "quality": 2
-        },
-        {
-          "id": 2589,
-          "count": 28,
-          "name": "Linen Cloth",
-          "icon": "inv_fabric_linen_01",
-          "quality": 1
-        },
-        {
-          "id": 6530,
-          "count": 14,
-          "name": "Nightcrawlers",
-          "icon": "inv_misc_monstertail_03",
-          "quality": 1
-        },
-        {
-          "id": 2319,
-          "count": 5,
-          "name": "Medium Leather",
-          "icon": "inv_misc_leatherscrap_05",
-          "quality": 1
-        },
-        {
-          "id": 4404,
-          "count": 8,
-          "name": "Silver Contact",
-          "icon": "inv_ingot_04",
-          "quality": 1
-        },
-        {
-          "id": 2835,
-          "count": 33,
-          "name": "Rough Stone",
-          "icon": "inv_stone_06",
-          "quality": 1
+          "reagents": [
+            {
+              "itemId": 12359,
+              "name": "Thorium Bar",
+              "count": 6,
+              "icon": "inv_ingot_07",
+              "quality": 1
+            }
+          ]
         }
       ]
     },
@@ -43775,6 +45866,330 @@ window.WOW_PROFESSIONS_DATA = {
           "cost": 1000,
           "requiredSkill": 300,
           "desc": ""
+        }
+      ]
+    },
+    "shopping": {
+      "title": "Shopping list, 1 to 225",
+      "subtitle": "",
+      "groups": [
+        {
+          "title": "From a trade supplies vendor",
+          "note": "Always in stock, for a few coins.",
+          "items": [
+            {
+              "itemId": 2880,
+              "name": "Weak Flux",
+              "icon": "inv_misc_ammo_gunpowder_02",
+              "quality": 1,
+              "count": 26
+            },
+            {
+              "itemId": 6530,
+              "name": "Nightcrawlers",
+              "icon": "inv_misc_monstertail_03",
+              "quality": 1,
+              "count": 14
+            },
+            {
+              "itemId": 10648,
+              "name": "Blank Parchment",
+              "icon": "inv_misc_note_02",
+              "quality": 1,
+              "count": 5
+            },
+            {
+              "itemId": 10647,
+              "name": "Engineer's Ink",
+              "icon": "inv_potion_65",
+              "quality": 1,
+              "count": 5
+            }
+          ]
+        },
+        {
+          "title": "Gathered, looted or bought from other players",
+          "note": "The bulk of the cost: farm it or look at the auction house.",
+          "items": [
+            {
+              "itemId": 2835,
+              "name": "Rough Stone",
+              "icon": "inv_stone_06",
+              "quality": 1,
+              "count": 33
+            },
+            {
+              "itemId": 2840,
+              "name": "Copper Bar",
+              "icon": "inv_ingot_02",
+              "quality": 1,
+              "count": 120
+            },
+            {
+              "itemId": 2836,
+              "name": "Coarse Stone",
+              "icon": "inv_stone_09",
+              "quality": 1,
+              "count": 46
+            },
+            {
+              "itemId": 2589,
+              "name": "Linen Cloth",
+              "icon": "inv_fabric_linen_01",
+              "quality": 1,
+              "count": 28
+            },
+            {
+              "itemId": 2842,
+              "name": "Silver Bar",
+              "icon": "inv_ingot_01",
+              "quality": 2,
+              "count": 5
+            },
+            {
+              "itemId": 2841,
+              "name": "Bronze Bar",
+              "icon": "inv_ingot_bronze",
+              "quality": 1,
+              "count": 80
+            },
+            {
+              "itemId": 2838,
+              "name": "Heavy Stone",
+              "icon": "inv_stone_12",
+              "quality": 1,
+              "count": 14
+            },
+            {
+              "itemId": 2592,
+              "name": "Wool Cloth",
+              "icon": "inv_fabric_wool_01",
+              "quality": 1,
+              "count": 21
+            },
+            {
+              "itemId": 2319,
+              "name": "Medium Leather",
+              "icon": "inv_misc_leatherscrap_05",
+              "quality": 1,
+              "count": 5
+            },
+            {
+              "itemId": 3829,
+              "name": "Frost Oil",
+              "icon": "inv_potion_20",
+              "quality": 1,
+              "count": 15
+            },
+            {
+              "itemId": 7912,
+              "name": "Solid Stone",
+              "icon": "inv_stone_10",
+              "quality": 1,
+              "count": 144
+            },
+            {
+              "itemId": 3575,
+              "name": "Iron Bar",
+              "icon": "inv_ingot_iron",
+              "quality": 1,
+              "count": 12
+            },
+            {
+              "itemId": 4306,
+              "name": "Silk Cloth",
+              "icon": "inv_fabric_silk_01",
+              "quality": 1,
+              "count": 12
+            },
+            {
+              "itemId": 3860,
+              "name": "Mithril Bar",
+              "icon": "inv_ingot_06",
+              "quality": 1,
+              "count": 26
+            },
+            {
+              "itemId": 4338,
+              "name": "Mageweave Cloth",
+              "icon": "inv_fabric_mageweave_01",
+              "quality": 1,
+              "count": 7
+            }
+          ]
+        },
+        {
+          "title": "Made along the way",
+          "note": "The path crafts these itself; bought ready-made, they save a few steps.",
+          "items": [
+            {
+              "itemId": 4359,
+              "name": "Handful of Copper Bolts",
+              "icon": "inv_misc_gear_06",
+              "quality": 1,
+              "count": 48
+            },
+            {
+              "itemId": 4364,
+              "name": "Coarse Blasting Powder",
+              "icon": "inv_misc_dust_02",
+              "quality": 1,
+              "count": 46
+            },
+            {
+              "itemId": 4404,
+              "name": "Silver Contact",
+              "icon": "inv_ingot_04",
+              "quality": 1,
+              "count": 8
+            },
+            {
+              "itemId": 4375,
+              "name": "Whirring Bronze Gizmo",
+              "icon": "inv_gizmo_02",
+              "quality": 1,
+              "count": 15
+            },
+            {
+              "itemId": 4377,
+              "name": "Heavy Blasting Powder",
+              "icon": "inv_misc_dust_06",
+              "quality": 1,
+              "count": 12
+            },
+            {
+              "itemId": 10505,
+              "name": "Solid Blasting Powder",
+              "icon": "inv_misc_powder_black",
+              "quality": 1,
+              "count": 26
+            }
+          ]
+        },
+        {
+          "title": "Gathered, looted or bought from other players",
+          "note": "The bulk of the cost: farm it or look at the auction house.",
+          "items": [
+            {
+              "itemId": 3860,
+              "name": "Mithril Bar",
+              "icon": "inv_ingot_06",
+              "quality": 1,
+              "count": 88
+            },
+            {
+              "itemId": 7912,
+              "name": "Solid Stone",
+              "icon": "inv_stone_10",
+              "quality": 1,
+              "count": 176
+            },
+            {
+              "itemId": 12365,
+              "name": "Dense Stone",
+              "icon": "inv_misc_stonetablet_07",
+              "quality": 1,
+              "count": 30
+            },
+            {
+              "itemId": 12359,
+              "name": "Thorium Bar",
+              "icon": "inv_ingot_07",
+              "quality": 1,
+              "count": 162
+            },
+            {
+              "itemId": 14047,
+              "name": "Runecloth",
+              "icon": "inv_fabric_purplefire_01",
+              "quality": 1,
+              "count": 28
+            }
+          ]
+        },
+        {
+          "title": "Made along the way",
+          "note": "The path crafts these itself; bought ready-made, they save a few steps.",
+          "items": [
+            {
+              "itemId": 10505,
+              "name": "Solid Blasting Powder",
+              "icon": "inv_misc_powder_black",
+              "quality": 1,
+              "count": 88
+            }
+          ]
+        }
+      ]
+    },
+    "campPerks": {
+      "milestones": [
+        {
+          "icon": "trade_engineering",
+          "title": "Journeyman Engineer",
+          "desc": "First time at skill 150 on the account",
+          "reward": "+1 Legacy point"
+        },
+        {
+          "icon": "trade_engineering",
+          "title": "Expert Engineer",
+          "desc": "First time at skill 225 on the account",
+          "reward": "+1 Legacy point"
+        },
+        {
+          "icon": "trade_engineering",
+          "title": "Artisan Engineer",
+          "desc": "First time at skill 300 on the account",
+          "reward": "+1 Legacy point"
+        },
+        {
+          "icon": "inv_scroll_15",
+          "title": "Engineering Certification",
+          "desc": "The title the Engineer for the whole account, bought with Merchant's Favor",
+          "reward": "Skill 300"
+        }
+      ],
+      "atCamp": [
+        {
+          "icon": "inv_misc_enggizmos_13",
+          "name": "Reagent Bot",
+          "desc": "Sells reagents to everyone at camp",
+          "skill": "Skill 20"
+        },
+        {
+          "icon": "inv_robotpet",
+          "name": "Repair Bot",
+          "desc": "Sells reagents and repairs gear",
+          "skill": "Skill 140 Blueprint"
+        },
+        {
+          "icon": "inv_10_specialization_professionbook_engineering_color1",
+          "name": "Anarchist's Workbench",
+          "desc": "Needed for the most advanced Engineering recipes",
+          "skill": "Skill 300 Blueprint"
+        }
+      ],
+      "legacyPerks": [
+        {
+          "icon": "racial_dwarf_findtreasure",
+          "name": "Performance Bonus",
+          "effect": "You have a 5 / 10 / 15% chance to receive 100% increased Merchant's Favor when you turn in a crate to the Azeroth Commerce Authority or Durotar Supply and Logistics.",
+          "meta": "Professions tree, 3 ranks, needs 5 points spent in the tree and a rank in Bountiful Harvest",
+          "planLink": ""
+        },
+        {
+          "icon": "inv_misc_pocketwatch_03",
+          "name": "Working Overtime",
+          "effect": "Increases your chance to gain a skill increase from using any primary, secondary, or class-based tradeskill by 4 / 8 / 12 / 16 / 20%.",
+          "meta": "Professions tree, 5 ranks, open from the start",
+          "planLink": ""
+        },
+        {
+          "icon": "inv_misc_book_08",
+          "name": "Dedicated Study",
+          "effect": "Increases your skill by 1 in your lowest tradeskill among your Primary and Secondary tradeskills. If you have already reached 300 skill in your two current Primary Tradeskills and all three Secondary Tradeskills, you will gain 2 to 4 of a random Elemental Essence.",
+          "meta": "Professions tree, 1 rank, needs 10 points spent in the tree and a rank in Bartering, 25 sec cast, 23 hour cooldown",
+          "planLink": ""
         }
       ]
     }
@@ -66560,348 +68975,681 @@ window.WOW_PROFESSIONS_DATA = {
     ],
     "gatheringNodes": [],
     "leveling": {
-      "note": "Built by scripts/prepare-leveling.mjs; do not edit.",
+      "title": "Leveling from 1 to 300",
+      "capNote": "225 is the beta's cap for now",
+      "desc": "At each point, you get the cheapest recipe to skill up, whether you learn it from the trainer or buy it from a vendor. Counts are averages, so buy a few more. There are no prices until launch, so each reagent counts for what a vendor pays you for it.",
       "steps": [
         {
+          "type": "rank",
+          "rank": "Apprentice",
+          "details": "from any Leatherworking trainer, up to 75"
+        },
+        {
+          "type": "step",
           "from": 1,
           "to": 36,
-          "spellId": 2881,
+          "bar": {
+            "iLeft": "0%",
+            "iWidth": "11.666666666666666%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 2318,
+          "recipeName": "Light Leather",
+          "source": "Learned from the trainer",
+          "advice": "Keep them: later steps use them.",
           "crafts": 50,
-          "name": "Skill 1–36",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 2934,
+              "name": "Ruined Leather Scraps",
+              "count": 3,
+              "icon": "inv_misc_pelt_bear_ruin_05",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 36,
           "to": 45,
-          "spellId": 2152,
+          "bar": {
+            "iLeft": "11.666666666666666%",
+            "iWidth": "3%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 2304,
+          "recipeName": "Light Armor Kit",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 14,
-          "name": "Skill 36–45",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 2318,
+              "name": "Light Leather",
+              "count": 1,
+              "icon": "inv_misc_leatherscrap_03",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 45,
           "to": 49,
-          "spellId": 2149,
+          "bar": {
+            "iLeft": "14.666666666666666%",
+            "iWidth": "1.3333333333333333%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 2302,
+          "recipeName": "Handstitched Leather Boots",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 6,
-          "name": "Skill 45–49",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 2318,
+              "name": "Light Leather",
+              "count": 2,
+              "icon": "inv_misc_leatherscrap_03",
+              "quality": 1
+            },
+            {
+              "itemId": 2320,
+              "name": "Coarse Thread",
+              "count": 1,
+              "icon": "inv_fabric_linen_03",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 49,
           "to": 75,
-          "spellId": 3756,
+          "bar": {
+            "iLeft": "16%",
+            "iWidth": "8.666666666666666%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 4239,
+          "recipeName": "Embossed Leather Gloves",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 27,
-          "name": "Skill 49–75",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 2318,
+              "name": "Light Leather",
+              "count": 3,
+              "icon": "inv_misc_leatherscrap_03",
+              "quality": 1
+            },
+            {
+              "itemId": 2320,
+              "name": "Coarse Thread",
+              "count": 2,
+              "icon": "inv_fabric_linen_03",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "rank",
+          "rank": "Journeyman",
+          "details": "from the trainer, from skill 50 and level 10, up to 150"
+        },
+        {
+          "type": "step",
           "from": 75,
           "to": 85,
-          "spellId": 20648,
+          "bar": {
+            "iLeft": "24.666666666666668%",
+            "iWidth": "3.3333333333333335%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 2319,
+          "recipeName": "Medium Leather",
+          "source": "Learned from the trainer",
+          "advice": "Keep them: later steps use them.",
           "crafts": 30,
-          "name": "Skill 75–85",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 2318,
+              "name": "Light Leather",
+              "count": 4,
+              "icon": "inv_misc_leatherscrap_03",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 85,
           "to": 106,
-          "spellId": 3763,
+          "bar": {
+            "iLeft": "28%",
+            "iWidth": "7%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 4246,
+          "recipeName": "Fine Leather Belt",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 35,
-          "name": "Skill 85–106",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 2318,
+              "name": "Light Leather",
+              "count": 6,
+              "icon": "inv_misc_leatherscrap_03",
+              "quality": 1
+            },
+            {
+              "itemId": 2320,
+              "name": "Coarse Thread",
+              "count": 2,
+              "icon": "inv_fabric_linen_03",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 106,
           "to": 125,
-          "spellId": 9074,
+          "bar": {
+            "iLeft": "35%",
+            "iWidth": "6.333333333333333%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 7285,
+          "recipeName": "Nimble Leather Gloves",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 20,
-          "name": "Skill 106–125",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 2457,
+              "name": "Elixir of Minor Agility",
+              "count": 1,
+              "icon": "inv_potion_91",
+              "quality": 1
+            },
+            {
+              "itemId": 2319,
+              "name": "Medium Leather",
+              "count": 6,
+              "icon": "inv_misc_leatherscrap_05",
+              "quality": 1
+            },
+            {
+              "itemId": 2321,
+              "name": "Fine Thread",
+              "count": 1,
+              "icon": "inv_fabric_wool_02",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 125,
           "to": 145,
-          "spellId": 3818,
+          "bar": {
+            "iLeft": "41.333333333333336%",
+            "iWidth": "6.666666666666667%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 4236,
+          "recipeName": "Cured Heavy Hide",
+          "source": "Learned from the trainer",
+          "advice": "Keep them: later steps use them.",
           "crafts": 40,
-          "name": "Skill 125–145",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 4235,
+              "name": "Heavy Hide",
+              "count": 1,
+              "icon": "inv_misc_pelt_wolf_ruin_03",
+              "quality": 1
+            },
+            {
+              "itemId": 4289,
+              "name": "Salt",
+              "count": 3,
+              "icon": "inv_misc_dust_02",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 145,
           "to": 150,
-          "spellId": 3764,
+          "bar": {
+            "iLeft": "48%",
+            "iWidth": "1.6666666666666667%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 4247,
+          "recipeName": "Hillman's Leather Gloves",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 6,
-          "name": "Skill 145–150",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 2319,
+              "name": "Medium Leather",
+              "count": 14,
+              "icon": "inv_misc_leatherscrap_05",
+              "quality": 1
+            },
+            {
+              "itemId": 2321,
+              "name": "Fine Thread",
+              "count": 4,
+              "icon": "inv_fabric_wool_02",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "rank",
+          "rank": "Expert",
+          "details": "from the trainer, from skill 125 and level 20, up to 225"
+        },
+        {
+          "type": "step",
           "from": 150,
           "to": 159,
-          "spellId": 3774,
+          "bar": {
+            "iLeft": "49.666666666666664%",
+            "iWidth": "3%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 4257,
+          "recipeName": "Green Leather Belt",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 10,
-          "name": "Skill 150–159",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 4236,
+              "name": "Cured Heavy Hide",
+              "count": 1,
+              "icon": "inv_misc_pelt_wolf_02",
+              "quality": 1
+            },
+            {
+              "itemId": 4234,
+              "name": "Heavy Leather",
+              "count": 5,
+              "icon": "inv_misc_leatherscrap_07",
+              "quality": 1
+            },
+            {
+              "itemId": 2321,
+              "name": "Fine Thread",
+              "count": 1,
+              "icon": "inv_fabric_wool_02",
+              "quality": 1
+            },
+            {
+              "itemId": 2605,
+              "name": "Green Dye",
+              "count": 1,
+              "icon": "inv_potion_12",
+              "quality": 1
+            },
+            {
+              "itemId": 7071,
+              "name": "Iron Buckle",
+              "count": 1,
+              "icon": "inv_misc_armorkit_12",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 159,
           "to": 165,
-          "spellId": 3776,
+          "bar": {
+            "iLeft": "52.666666666666664%",
+            "iWidth": "2%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 4259,
+          "recipeName": "Green Leather Bracers",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 6,
-          "name": "Skill 159–165",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 4236,
+              "name": "Cured Heavy Hide",
+              "count": 2,
+              "icon": "inv_misc_pelt_wolf_02",
+              "quality": 1
+            },
+            {
+              "itemId": 4234,
+              "name": "Heavy Leather",
+              "count": 6,
+              "icon": "inv_misc_leatherscrap_07",
+              "quality": 1
+            },
+            {
+              "itemId": 2605,
+              "name": "Green Dye",
+              "count": 1,
+              "icon": "inv_potion_12",
+              "quality": 1
+            },
+            {
+              "itemId": 2321,
+              "name": "Fine Thread",
+              "count": 1,
+              "icon": "inv_fabric_wool_02",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 165,
           "to": 197,
-          "spellId": 7156,
+          "bar": {
+            "iLeft": "54.666666666666664%",
+            "iWidth": "10.666666666666666%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 5966,
+          "recipeName": "Guardian Gloves",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 38,
-          "name": "Skill 165–197",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 4234,
+              "name": "Heavy Leather",
+              "count": 4,
+              "icon": "inv_misc_leatherscrap_07",
+              "quality": 1
+            },
+            {
+              "itemId": 4236,
+              "name": "Cured Heavy Hide",
+              "count": 1,
+              "icon": "inv_misc_pelt_wolf_02",
+              "quality": 1
+            },
+            {
+              "itemId": 4291,
+              "name": "Silken Thread",
+              "count": 1,
+              "icon": "inv_fabric_silk_02",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 197,
           "to": 213,
-          "spellId": 10507,
+          "bar": {
+            "iLeft": "65.33333333333333%",
+            "iWidth": "5.333333333333333%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 8176,
+          "recipeName": "Nightscape Headband",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 24,
-          "name": "Skill 197–213",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 4304,
+              "name": "Thick Leather",
+              "count": 5,
+              "icon": "inv_misc_leatherscrap_08",
+              "quality": 1
+            },
+            {
+              "itemId": 4291,
+              "name": "Silken Thread",
+              "count": 2,
+              "icon": "inv_fabric_silk_02",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 213,
           "to": 225,
-          "spellId": 14932,
+          "bar": {
+            "iLeft": "70.66666666666667%",
+            "iWidth": "4%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 8218,
+          "recipeName": "Thick Leather Ammo Pouch",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 13,
-          "name": "Skill 213–225",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 4304,
+              "name": "Thick Leather",
+              "count": 10,
+              "icon": "inv_misc_leatherscrap_08",
+              "quality": 1
+            },
+            {
+              "itemId": 8172,
+              "name": "Cured Thick Hide",
+              "count": 1,
+              "icon": "inv_misc_pelt_bear_01",
+              "quality": 1
+            },
+            {
+              "itemId": 8951,
+              "name": "Elixir of Defense",
+              "count": 1,
+              "icon": "inv_potion_65",
+              "quality": 1
+            },
+            {
+              "itemId": 4291,
+              "name": "Silken Thread",
+              "count": 6,
+              "icon": "inv_fabric_silk_02",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "rank",
+          "rank": "Artisan",
+          "details": "from the trainer, from skill 200 and level 35, up to 300"
+        },
+        {
+          "type": "step",
           "from": 225,
           "to": 233,
-          "spellId": 19047,
+          "bar": {
+            "iLeft": "74.66666666666667%",
+            "iWidth": "2.6666666666666665%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 15407,
+          "recipeName": "Cured Rugged Hide",
+          "source": "Learned from the trainer",
+          "advice": "Keep them: later steps use them.",
           "crafts": 15,
-          "name": "Skill 225–233",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 8171,
+              "name": "Rugged Hide",
+              "count": 1,
+              "icon": "inv_misc_pelt_bear_ruin_02",
+              "quality": 1
+            },
+            {
+              "itemId": 15409,
+              "name": "Refined Deeprock Salt",
+              "count": 1,
+              "icon": "inv_misc_dust_01",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 233,
           "to": 236,
-          "spellId": 19058,
+          "bar": {
+            "iLeft": "77.33333333333333%",
+            "iWidth": "1%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 15564,
+          "recipeName": "Rugged Armor Kit",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 6,
-          "name": "Golden Mantle of the Dawn",
-          "icon": "inv_shoulder_26",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 8170,
+              "name": "Rugged Leather",
+              "count": 5,
+              "icon": "inv_misc_leatherscrap_02",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 236,
           "to": 258,
-          "spellId": 19049,
+          "bar": {
+            "iLeft": "78.33333333333333%",
+            "iWidth": "7.333333333333333%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 15083,
+          "recipeName": "Wicked Leather Gauntlets",
+          "source": "Pattern sold by Leonard Porter (Alliance) or Werg Thickblade (Horde)",
+          "advice": "",
           "crafts": 23,
-          "name": "Timbermaw Brawlers",
-          "icon": "inv_gauntlets_26",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 8170,
+              "name": "Rugged Leather",
+              "count": 8,
+              "icon": "inv_misc_leatherscrap_02",
+              "quality": 1
+            },
+            {
+              "itemId": 2325,
+              "name": "Black Dye",
+              "count": 1,
+              "icon": "inv_potion_63",
+              "quality": 1
+            },
+            {
+              "itemId": 14341,
+              "name": "Rune Thread",
+              "count": 1,
+              "icon": "spell_shadow_antimagicshell",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 258,
           "to": 280,
-          "spellId": 19066,
+          "bar": {
+            "iLeft": "85.66666666666667%",
+            "iWidth": "7.333333333333333%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 15071,
+          "recipeName": "Frostsaber Boots",
+          "source": "Pattern sold by Qia (Winterspring)",
+          "advice": "",
           "crafts": 26,
-          "name": "Skill 258–280",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 8170,
+              "name": "Rugged Leather",
+              "count": 4,
+              "icon": "inv_misc_leatherscrap_02",
+              "quality": 1
+            },
+            {
+              "itemId": 15422,
+              "name": "Frostsaber Leather",
+              "count": 6,
+              "icon": "inv_misc_pelt_06",
+              "quality": 1
+            },
+            {
+              "itemId": 14341,
+              "name": "Rune Thread",
+              "count": 1,
+              "icon": "spell_shadow_antimagicshell",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 280,
           "to": 300,
-          "spellId": 19088,
+          "bar": {
+            "iLeft": "93%",
+            "iWidth": "6.666666666666667%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 15080,
+          "recipeName": "Heavy Scorpid Helm",
+          "source": "Pattern sold by Zannok Hidepiercer (Silithus)",
+          "advice": "",
           "crafts": 24,
-          "name": "Skill 280–300",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
-        }
-      ],
-      "shopping": [
-        {
-          "id": 8170,
-          "count": 510,
-          "name": "Rugged Leather",
-          "icon": "inv_misc_leatherscrap_02",
-          "quality": 1
-        },
-        {
-          "id": 15408,
-          "count": 288,
-          "name": "Heavy Scorpid Scale",
-          "icon": "inv_misc_monsterscales_03",
-          "quality": 1
-        },
-        {
-          "id": 14341,
-          "count": 73,
-          "name": "Rune Thread",
-          "icon": "spell_shadow_antimagicshell",
-          "quality": 1
-        },
-        {
-          "id": 15422,
-          "count": 156,
-          "name": "Frostsaber Leather",
-          "icon": "inv_misc_pelt_06",
-          "quality": 1
-        },
-        {
-          "id": 4304,
-          "count": 250,
-          "name": "Thick Leather",
-          "icon": "inv_misc_leatherscrap_08",
-          "quality": 1
-        },
-        {
-          "id": 4234,
-          "count": 238,
-          "name": "Heavy Leather",
-          "icon": "inv_misc_leatherscrap_07",
-          "quality": 1
-        },
-        {
-          "id": 4291,
-          "count": 164,
-          "name": "Silken Thread",
-          "icon": "inv_fabric_silk_02",
-          "quality": 1
-        },
-        {
-          "id": 15409,
-          "count": 15,
-          "name": "Refined Deeprock Salt",
-          "icon": "inv_misc_dust_01",
-          "quality": 1
-        },
-        {
-          "id": 4236,
-          "count": 60,
-          "name": "Cured Heavy Hide",
-          "icon": "inv_misc_pelt_wolf_02",
-          "quality": 1
-        },
-        {
-          "id": 15407,
-          "count": 24,
-          "name": "Cured Rugged Hide",
-          "icon": "inv_misc_pelt_bear_03",
-          "quality": 1
-        },
-        {
-          "id": 2319,
-          "count": 204,
-          "name": "Medium Leather",
-          "icon": "inv_misc_leatherscrap_05",
-          "quality": 1
-        },
-        {
-          "id": 4235,
-          "count": 40,
-          "name": "Heavy Hide",
-          "icon": "inv_misc_pelt_wolf_ruin_03",
-          "quality": 1
-        },
-        {
-          "id": 8171,
-          "count": 15,
-          "name": "Rugged Hide",
-          "icon": "inv_misc_pelt_bear_ruin_02",
-          "quality": 1
-        },
-        {
-          "id": 2318,
-          "count": 437,
-          "name": "Light Leather",
-          "icon": "inv_misc_leatherscrap_03",
-          "quality": 1
-        },
-        {
-          "id": 8172,
-          "count": 13,
-          "name": "Cured Thick Hide",
-          "icon": "inv_misc_pelt_bear_01",
-          "quality": 1
-        },
-        {
-          "id": 2325,
-          "count": 23,
-          "name": "Black Dye",
-          "icon": "inv_potion_63",
-          "quality": 1
-        },
-        {
-          "id": 8951,
-          "count": 13,
-          "name": "Elixir of Defense",
-          "icon": "inv_potion_65",
-          "quality": 1
-        },
-        {
-          "id": 2321,
-          "count": 60,
-          "name": "Fine Thread",
-          "icon": "inv_fabric_wool_02",
-          "quality": 1
-        },
-        {
-          "id": 4289,
-          "count": 120,
-          "name": "Salt",
-          "icon": "inv_misc_dust_02",
-          "quality": 1
-        },
-        {
-          "id": 2934,
-          "count": 150,
-          "name": "Ruined Leather Scraps",
-          "icon": "inv_misc_pelt_bear_ruin_05",
-          "quality": 1
-        },
-        {
-          "id": 7071,
-          "count": 10,
-          "name": "Iron Buckle",
-          "icon": "inv_misc_armorkit_12",
-          "quality": 1
-        },
-        {
-          "id": 2605,
-          "count": 16,
-          "name": "Green Dye",
-          "icon": "inv_potion_12",
-          "quality": 1
-        },
-        {
-          "id": 2320,
-          "count": 130,
-          "name": "Coarse Thread",
-          "icon": "inv_fabric_linen_03",
-          "quality": 1
-        },
-        {
-          "id": 2457,
-          "count": 20,
-          "name": "Elixir of Minor Agility",
-          "icon": "inv_potion_91",
-          "quality": 1
+          "reagents": [
+            {
+              "itemId": 8170,
+              "name": "Rugged Leather",
+              "count": 8,
+              "icon": "inv_misc_leatherscrap_02",
+              "quality": 1
+            },
+            {
+              "itemId": 15408,
+              "name": "Heavy Scorpid Scale",
+              "count": 12,
+              "icon": "inv_misc_monsterscales_03",
+              "quality": 1
+            },
+            {
+              "itemId": 15407,
+              "name": "Cured Rugged Hide",
+              "count": 1,
+              "icon": "inv_misc_pelt_bear_03",
+              "quality": 1
+            },
+            {
+              "itemId": 14341,
+              "name": "Rune Thread",
+              "count": 1,
+              "icon": "spell_shadow_antimagicshell",
+              "quality": 1
+            }
+          ]
         }
       ]
     },
@@ -67660,6 +70408,315 @@ window.WOW_PROFESSIONS_DATA = {
           "cost": 1000,
           "requiredSkill": 300,
           "desc": ""
+        }
+      ]
+    },
+    "shopping": {
+      "title": "Shopping list, 1 to 225",
+      "subtitle": "",
+      "groups": [
+        {
+          "title": "From a trade supplies vendor",
+          "note": "Always in stock, for a few coins.",
+          "items": [
+            {
+              "itemId": 2320,
+              "name": "Coarse Thread",
+              "icon": "inv_fabric_linen_03",
+              "quality": 1,
+              "count": 130
+            },
+            {
+              "itemId": 2321,
+              "name": "Fine Thread",
+              "icon": "inv_fabric_wool_02",
+              "quality": 1,
+              "count": 60
+            },
+            {
+              "itemId": 4289,
+              "name": "Salt",
+              "icon": "inv_misc_dust_02",
+              "quality": 1,
+              "count": 180
+            },
+            {
+              "itemId": 2605,
+              "name": "Green Dye",
+              "icon": "inv_potion_12",
+              "quality": 1,
+              "count": 16
+            },
+            {
+              "itemId": 4291,
+              "name": "Silken Thread",
+              "icon": "inv_fabric_silk_02",
+              "quality": 1,
+              "count": 164
+            }
+          ]
+        },
+        {
+          "title": "Gathered, looted or bought from other players",
+          "note": "The bulk of the cost: farm it or look at the auction house.",
+          "items": [
+            {
+              "itemId": 2934,
+              "name": "Ruined Leather Scraps",
+              "icon": "inv_misc_pelt_bear_ruin_05",
+              "quality": 1,
+              "count": 150
+            },
+            {
+              "itemId": 2318,
+              "name": "Light Leather",
+              "icon": "inv_misc_leatherscrap_03",
+              "quality": 1,
+              "count": 387
+            },
+            {
+              "itemId": 2457,
+              "name": "Elixir of Minor Agility",
+              "icon": "inv_potion_91",
+              "quality": 1,
+              "count": 20
+            },
+            {
+              "itemId": 2319,
+              "name": "Medium Leather",
+              "icon": "inv_misc_leatherscrap_05",
+              "quality": 1,
+              "count": 174
+            },
+            {
+              "itemId": 4235,
+              "name": "Heavy Hide",
+              "icon": "inv_misc_pelt_wolf_ruin_03",
+              "quality": 1,
+              "count": 60
+            },
+            {
+              "itemId": 4234,
+              "name": "Heavy Leather",
+              "icon": "inv_misc_leatherscrap_07",
+              "quality": 1,
+              "count": 238
+            },
+            {
+              "itemId": 7071,
+              "name": "Iron Buckle",
+              "icon": "inv_misc_armorkit_12",
+              "quality": 1,
+              "count": 10
+            },
+            {
+              "itemId": 4304,
+              "name": "Thick Leather",
+              "icon": "inv_misc_leatherscrap_08",
+              "quality": 1,
+              "count": 250
+            },
+            {
+              "itemId": 8951,
+              "name": "Elixir of Defense",
+              "icon": "inv_potion_65",
+              "quality": 1,
+              "count": 13
+            },
+            {
+              "itemId": 8169,
+              "name": "Thick Hide",
+              "icon": "inv_misc_pelt_bear_ruin_01",
+              "quality": 1,
+              "count": 13
+            },
+            {
+              "itemId": 8150,
+              "name": "Deeprock Salt",
+              "icon": "inv_misc_dust_02",
+              "quality": 1,
+              "count": 13
+            }
+          ]
+        },
+        {
+          "title": "Made along the way",
+          "note": "The path crafts these itself; bought ready-made, they save a few steps.",
+          "items": [
+            {
+              "itemId": 2318,
+              "name": "Light Leather",
+              "icon": "inv_misc_leatherscrap_03",
+              "quality": 1,
+              "count": 50
+            },
+            {
+              "itemId": 2319,
+              "name": "Medium Leather",
+              "icon": "inv_misc_leatherscrap_05",
+              "quality": 1,
+              "count": 30
+            },
+            {
+              "itemId": 4236,
+              "name": "Cured Heavy Hide",
+              "icon": "inv_misc_pelt_wolf_02",
+              "quality": 1,
+              "count": 60
+            },
+            {
+              "itemId": 8172,
+              "name": "Cured Thick Hide",
+              "icon": "inv_misc_pelt_bear_01",
+              "quality": 1,
+              "count": 13
+            }
+          ]
+        },
+        {
+          "title": "From a trade supplies vendor",
+          "note": "Always in stock, for a few coins.",
+          "items": [
+            {
+              "itemId": 2325,
+              "name": "Black Dye",
+              "icon": "inv_potion_63",
+              "quality": 1,
+              "count": 23
+            },
+            {
+              "itemId": 14341,
+              "name": "Rune Thread",
+              "icon": "spell_shadow_antimagicshell",
+              "quality": 1,
+              "count": 73
+            }
+          ]
+        },
+        {
+          "title": "Gathered, looted or bought from other players",
+          "note": "The bulk of the cost: farm it or look at the auction house.",
+          "items": [
+            {
+              "itemId": 8171,
+              "name": "Rugged Hide",
+              "icon": "inv_misc_pelt_bear_ruin_02",
+              "quality": 1,
+              "count": 15
+            },
+            {
+              "itemId": 15409,
+              "name": "Refined Deeprock Salt",
+              "icon": "inv_misc_dust_01",
+              "quality": 1,
+              "count": 15
+            },
+            {
+              "itemId": 8170,
+              "name": "Rugged Leather",
+              "icon": "inv_misc_leatherscrap_02",
+              "quality": 1,
+              "count": 510
+            },
+            {
+              "itemId": 15422,
+              "name": "Frostsaber Leather",
+              "icon": "inv_misc_pelt_06",
+              "quality": 1,
+              "count": 156
+            },
+            {
+              "itemId": 15408,
+              "name": "Heavy Scorpid Scale",
+              "icon": "inv_misc_monsterscales_03",
+              "quality": 1,
+              "count": 288
+            }
+          ]
+        },
+        {
+          "title": "Made along the way",
+          "note": "The path crafts these itself; bought ready-made, they save a few steps.",
+          "items": [
+            {
+              "itemId": 15407,
+              "name": "Cured Rugged Hide",
+              "icon": "inv_misc_pelt_bear_03",
+              "quality": 1,
+              "count": 24
+            }
+          ]
+        }
+      ]
+    },
+    "campPerks": {
+      "milestones": [
+        {
+          "icon": "trade_leatherworking",
+          "title": "Journeyman Leatherworker",
+          "desc": "First time at skill 150 on the account",
+          "reward": "+1 Legacy point"
+        },
+        {
+          "icon": "trade_leatherworking",
+          "title": "Expert Leatherworker",
+          "desc": "First time at skill 225 on the account",
+          "reward": "+1 Legacy point"
+        },
+        {
+          "icon": "trade_leatherworking",
+          "title": "Artisan Leatherworker",
+          "desc": "First time at skill 300 on the account",
+          "reward": "+1 Legacy point"
+        },
+        {
+          "icon": "inv_scroll_15",
+          "title": "Leatherworking Certification",
+          "desc": "The title the Leatherworker for the whole account, bought with Merchant's Favor",
+          "reward": "Skill 300"
+        }
+      ],
+      "atCamp": [
+        {
+          "icon": "inv_misc_leatherscrap_01",
+          "name": "Camp Tent",
+          "desc": "Rested experience up to 5% of a level for everyone sitting nearby",
+          "skill": "Skill 20"
+        },
+        {
+          "icon": "inv_10_skinning_leather_rarehide_color1",
+          "name": "Tanning Rack",
+          "desc": "Makes certain Leatherworking reagents, and gives the Camp Tent bonus",
+          "skill": "Skill 140 Blueprint"
+        },
+        {
+          "icon": "inv_tailoring_modifiedcraftingreagent_orange",
+          "name": "Sewing Machine",
+          "desc": "Needed for the most advanced Leatherworking recipes, and gives the Camp Tent bonus",
+          "skill": "Skill 300 Blueprint"
+        }
+      ],
+      "legacyPerks": [
+        {
+          "icon": "racial_dwarf_findtreasure",
+          "name": "Performance Bonus",
+          "effect": "You have a 5 / 10 / 15% chance to receive 100% increased Merchant's Favor when you turn in a crate to the Azeroth Commerce Authority or Durotar Supply and Logistics.",
+          "meta": "Professions tree, 3 ranks, needs 5 points spent in the tree and a rank in Bountiful Harvest",
+          "planLink": ""
+        },
+        {
+          "icon": "inv_misc_pocketwatch_03",
+          "name": "Working Overtime",
+          "effect": "Increases your chance to gain a skill increase from using any primary, secondary, or class-based tradeskill by 4 / 8 / 12 / 16 / 20%.",
+          "meta": "Professions tree, 5 ranks, open from the start",
+          "planLink": ""
+        },
+        {
+          "icon": "inv_misc_book_08",
+          "name": "Dedicated Study",
+          "effect": "Increases your skill by 1 in your lowest tradeskill among your Primary and Secondary tradeskills. If you have already reached 300 skill in your two current Primary Tradeskills and all three Secondary Tradeskills, you will gain 2 to 4 of a random Elemental Essence.",
+          "meta": "Professions tree, 1 rank, needs 10 points spent in the tree and a rank in Bartering, 25 sec cast, 23 hour cooldown",
+          "planLink": ""
         }
       ]
     }
@@ -86200,377 +89257,763 @@ window.WOW_PROFESSIONS_DATA = {
     ],
     "gatheringNodes": [],
     "leveling": {
-      "note": "Built by scripts/prepare-leveling.mjs; do not edit.",
+      "title": "Leveling from 1 to 300",
+      "capNote": "225 is the beta's cap for now",
+      "desc": "At each point, you get the cheapest recipe to skill up, whether you learn it from the trainer or buy it from a vendor. Counts are averages, so buy a few more. There are no prices until launch, so each reagent counts for what a vendor pays you for it.",
       "steps": [
         {
+          "type": "rank",
+          "rank": "Apprentice",
+          "details": "from any Tailoring trainer, up to 75"
+        },
+        {
+          "type": "step",
           "from": 1,
           "to": 32,
-          "spellId": 2963,
+          "bar": {
+            "iLeft": "0%",
+            "iWidth": "10.333333333333334%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 2996,
+          "recipeName": "Bolt of Linen Cloth",
+          "source": "Learned from the trainer",
+          "advice": "Keep them: later steps use them.",
           "crafts": 33,
-          "name": "Skill 1–32",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 2589,
+              "name": "Linen Cloth",
+              "count": 2,
+              "icon": "inv_fabric_linen_01",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 32,
           "to": 36,
-          "spellId": 3915,
+          "bar": {
+            "iLeft": "10.333333333333334%",
+            "iWidth": "1.3333333333333333%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 4344,
+          "recipeName": "Brown Linen Shirt",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 4,
-          "name": "Skill 32–36",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 2996,
+              "name": "Bolt of Linen Cloth",
+              "count": 1,
+              "icon": "inv_fabric_linen_02",
+              "quality": 1
+            },
+            {
+              "itemId": 2320,
+              "name": "Coarse Thread",
+              "count": 1,
+              "icon": "inv_fabric_linen_03",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 36,
           "to": 41,
-          "spellId": 12044,
+          "bar": {
+            "iLeft": "11.666666666666666%",
+            "iWidth": "1.6666666666666667%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 10045,
+          "recipeName": "Simple Linen Pants",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 5,
-          "name": "Skill 36–41",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 2996,
+              "name": "Bolt of Linen Cloth",
+              "count": 1,
+              "icon": "inv_fabric_linen_02",
+              "quality": 1
+            },
+            {
+              "itemId": 2320,
+              "name": "Coarse Thread",
+              "count": 1,
+              "icon": "inv_fabric_linen_03",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 41,
           "to": 46,
-          "spellId": 2385,
+          "bar": {
+            "iLeft": "13.333333333333334%",
+            "iWidth": "1.6666666666666667%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 2568,
+          "recipeName": "Brown Linen Vest",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 5,
-          "name": "Skill 41–46",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 2996,
+              "name": "Bolt of Linen Cloth",
+              "count": 1,
+              "icon": "inv_fabric_linen_02",
+              "quality": 1
+            },
+            {
+              "itemId": 2320,
+              "name": "Coarse Thread",
+              "count": 1,
+              "icon": "inv_fabric_linen_03",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 46,
           "to": 55,
-          "spellId": 8776,
+          "bar": {
+            "iLeft": "15%",
+            "iWidth": "3%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 7026,
+          "recipeName": "Linen Belt",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 10,
-          "name": "Skill 46–55",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 2996,
+              "name": "Bolt of Linen Cloth",
+              "count": 1,
+              "icon": "inv_fabric_linen_02",
+              "quality": 1
+            },
+            {
+              "itemId": 2320,
+              "name": "Coarse Thread",
+              "count": 1,
+              "icon": "inv_fabric_linen_03",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 55,
           "to": 75,
-          "spellId": 2964,
+          "bar": {
+            "iLeft": "18%",
+            "iWidth": "6.666666666666667%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 2997,
+          "recipeName": "Bolt of Woolen Cloth",
+          "source": "Learned from the trainer",
+          "advice": "Keep them: later steps use them.",
           "crafts": 21,
-          "name": "Skill 55–75",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 2592,
+              "name": "Wool Cloth",
+              "count": 3,
+              "icon": "inv_fabric_wool_01",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "rank",
+          "rank": "Journeyman",
+          "details": "from the trainer, from skill 50 and level 10, up to 150"
+        },
+        {
+          "type": "step",
           "from": 75,
           "to": 85,
-          "spellId": 2964,
+          "bar": {
+            "iLeft": "24.666666666666668%",
+            "iWidth": "3.3333333333333335%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 2997,
+          "recipeName": "Bolt of Woolen Cloth",
+          "source": "Learned from the trainer",
+          "advice": "Keep them: later steps use them.",
           "crafts": 44,
-          "name": "Skill 75–85",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 2592,
+              "name": "Wool Cloth",
+              "count": 3,
+              "icon": "inv_fabric_wool_01",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 85,
           "to": 100,
-          "spellId": 2402,
+          "bar": {
+            "iLeft": "28%",
+            "iWidth": "5%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 2584,
+          "recipeName": "Woolen Cape",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 24,
-          "name": "Skill 85–100",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 2997,
+              "name": "Bolt of Woolen Cloth",
+              "count": 1,
+              "icon": "inv_fabric_wool_03",
+              "quality": 1
+            },
+            {
+              "itemId": 2321,
+              "name": "Fine Thread",
+              "count": 1,
+              "icon": "inv_fabric_wool_02",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 100,
           "to": 120,
-          "spellId": 3839,
+          "bar": {
+            "iLeft": "33%",
+            "iWidth": "6.666666666666667%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 4305,
+          "recipeName": "Bolt of Silk Cloth",
+          "source": "Learned from the trainer",
+          "advice": "Keep them: later steps use them.",
           "crafts": 40,
-          "name": "Skill 100–120",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 4306,
+              "name": "Silk Cloth",
+              "count": 4,
+              "icon": "inv_fabric_silk_01",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 120,
           "to": 124,
-          "spellId": 3848,
+          "bar": {
+            "iLeft": "39.666666666666664%",
+            "iWidth": "1.3333333333333333%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 4314,
+          "recipeName": "Double-Stitched Woolen Shoulders",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 6,
-          "name": "Skill 120–124",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 2997,
+              "name": "Bolt of Woolen Cloth",
+              "count": 3,
+              "icon": "inv_fabric_wool_03",
+              "quality": 1
+            },
+            {
+              "itemId": 2321,
+              "name": "Fine Thread",
+              "count": 2,
+              "icon": "inv_fabric_wool_02",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 124,
           "to": 140,
-          "spellId": 3852,
+          "bar": {
+            "iLeft": "41%",
+            "iWidth": "5.333333333333333%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 4318,
+          "recipeName": "Gloves of Meditation",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 22,
-          "name": "Skill 124–140",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 2997,
+              "name": "Bolt of Woolen Cloth",
+              "count": 4,
+              "icon": "inv_fabric_wool_03",
+              "quality": 1
+            },
+            {
+              "itemId": 2321,
+              "name": "Fine Thread",
+              "count": 3,
+              "icon": "inv_fabric_wool_02",
+              "quality": 1
+            },
+            {
+              "itemId": 3383,
+              "name": "Elixir of Wisdom",
+              "count": 1,
+              "icon": "inv_potion_06",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 140,
           "to": 150,
-          "spellId": 3865,
+          "bar": {
+            "iLeft": "46.333333333333336%",
+            "iWidth": "3.3333333333333335%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 4339,
+          "recipeName": "Bolt of Mageweave",
+          "source": "Learned from the trainer",
+          "advice": "Keep them: later steps use them.",
           "crafts": 17,
-          "name": "Skill 140–150",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 4338,
+              "name": "Mageweave Cloth",
+              "count": 5,
+              "icon": "inv_fabric_mageweave_01",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "rank",
+          "rank": "Expert",
+          "details": "from the trainer, from skill 125 and level 20, up to 225"
+        },
+        {
+          "type": "step",
           "from": 150,
           "to": 168,
-          "spellId": 8786,
+          "bar": {
+            "iLeft": "49.666666666666664%",
+            "iWidth": "6%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 7053,
+          "recipeName": "Azure Silk Cloak",
+          "source": "Pattern sold by Brienna Starglow (Alliance) or Jun'ha (Horde)",
+          "advice": "",
           "crafts": 20,
-          "name": "Skill 150–168",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 4305,
+              "name": "Bolt of Silk Cloth",
+              "count": 3,
+              "icon": "inv_fabric_silk_03",
+              "quality": 1
+            },
+            {
+              "itemId": 6260,
+              "name": "Blue Dye",
+              "count": 2,
+              "icon": "inv_potion_15",
+              "quality": 1
+            },
+            {
+              "itemId": 2321,
+              "name": "Fine Thread",
+              "count": 2,
+              "icon": "inv_fabric_wool_02",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 168,
           "to": 172,
-          "spellId": 8791,
+          "bar": {
+            "iLeft": "55.666666666666664%",
+            "iWidth": "1.3333333333333333%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 7058,
+          "recipeName": "Crimson Silk Vest",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 5,
-          "name": "Skill 168–172",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 4305,
+              "name": "Bolt of Silk Cloth",
+              "count": 4,
+              "icon": "inv_fabric_silk_03",
+              "quality": 1
+            },
+            {
+              "itemId": 2604,
+              "name": "Red Dye",
+              "count": 2,
+              "icon": "inv_potion_11",
+              "quality": 1
+            },
+            {
+              "itemId": 2321,
+              "name": "Fine Thread",
+              "count": 2,
+              "icon": "inv_fabric_wool_02",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 172,
           "to": 180,
-          "spellId": 8799,
+          "bar": {
+            "iLeft": "57%",
+            "iWidth": "2.6666666666666665%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 7062,
+          "recipeName": "Crimson Silk Pantaloons",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 8,
-          "name": "Skill 172–180",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 4305,
+              "name": "Bolt of Silk Cloth",
+              "count": 4,
+              "icon": "inv_fabric_silk_03",
+              "quality": 1
+            },
+            {
+              "itemId": 2604,
+              "name": "Red Dye",
+              "count": 2,
+              "icon": "inv_potion_11",
+              "quality": 1
+            },
+            {
+              "itemId": 4291,
+              "name": "Silken Thread",
+              "count": 2,
+              "icon": "inv_fabric_silk_02",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 180,
           "to": 191,
-          "spellId": 12061,
+          "bar": {
+            "iLeft": "59.666666666666664%",
+            "iWidth": "3.6666666666666665%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 10056,
+          "recipeName": "Orange Mageweave Shirt",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 14,
-          "name": "Skill 180–191",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 4339,
+              "name": "Bolt of Mageweave",
+              "count": 1,
+              "icon": "inv_fabric_mageweave_03",
+              "quality": 1
+            },
+            {
+              "itemId": 6261,
+              "name": "Orange Dye",
+              "count": 1,
+              "icon": "inv_potion_35",
+              "quality": 1
+            },
+            {
+              "itemId": 8343,
+              "name": "Heavy Silken Thread",
+              "count": 1,
+              "icon": "inv_fabric_silk_02",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 191,
           "to": 205,
-          "spellId": 12053,
+          "bar": {
+            "iLeft": "63.333333333333336%",
+            "iWidth": "4.666666666666667%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 10003,
+          "recipeName": "Black Mageweave Gloves",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 16,
-          "name": "Skill 191–205",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 4339,
+              "name": "Bolt of Mageweave",
+              "count": 2,
+              "icon": "inv_fabric_mageweave_03",
+              "quality": 1
+            },
+            {
+              "itemId": 8343,
+              "name": "Heavy Silken Thread",
+              "count": 2,
+              "icon": "inv_fabric_silk_02",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 205,
           "to": 215,
-          "spellId": 18401,
+          "bar": {
+            "iLeft": "68%",
+            "iWidth": "3.3333333333333335%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 14048,
+          "recipeName": "Bolt of Runecloth",
+          "source": "Learned from the trainer",
+          "advice": "Keep them: later steps use them.",
           "crafts": 17,
-          "name": "Skill 205–215",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 14047,
+              "name": "Runecloth",
+              "count": 5,
+              "icon": "inv_fabric_purplefire_01",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 215,
           "to": 225,
-          "spellId": 18402,
+          "bar": {
+            "iLeft": "71.33333333333333%",
+            "iWidth": "3.3333333333333335%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 13856,
+          "recipeName": "Runecloth Belt",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 10,
-          "name": "Skill 215–225",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 14048,
+              "name": "Bolt of Runecloth",
+              "count": 3,
+              "icon": "inv_fabric_purplefire_02",
+              "quality": 1
+            },
+            {
+              "itemId": 14341,
+              "name": "Rune Thread",
+              "count": 1,
+              "icon": "spell_shadow_antimagicshell",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "rank",
+          "rank": "Artisan",
+          "details": "from the trainer, from skill 200 and level 35, up to 300"
+        },
+        {
+          "type": "step",
           "from": 225,
           "to": 236,
-          "spellId": 18402,
+          "bar": {
+            "iLeft": "74.66666666666667%",
+            "iWidth": "3.6666666666666665%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 13856,
+          "recipeName": "Runecloth Belt",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 14,
-          "name": "Skill 225–236",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 14048,
+              "name": "Bolt of Runecloth",
+              "count": 3,
+              "icon": "inv_fabric_purplefire_02",
+              "quality": 1
+            },
+            {
+              "itemId": 14341,
+              "name": "Rune Thread",
+              "count": 1,
+              "icon": "spell_shadow_antimagicshell",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 236,
           "to": 251,
-          "spellId": 18417,
+          "bar": {
+            "iLeft": "78.33333333333333%",
+            "iWidth": "5%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 13863,
+          "recipeName": "Runecloth Gloves",
+          "source": "Pattern sold by Qia (Winterspring)",
+          "advice": "",
           "crafts": 16,
-          "name": "Pattern: Mooncloth Gloves",
-          "icon": "inv_scroll_05",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 14048,
+              "name": "Bolt of Runecloth",
+              "count": 4,
+              "icon": "inv_fabric_purplefire_02",
+              "quality": 1
+            },
+            {
+              "itemId": 8170,
+              "name": "Rugged Leather",
+              "count": 4,
+              "icon": "inv_misc_leatherscrap_02",
+              "quality": 1
+            },
+            {
+              "itemId": 14341,
+              "name": "Rune Thread",
+              "count": 1,
+              "icon": "spell_shadow_antimagicshell",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 251,
           "to": 287,
-          "spellId": 1257487,
+          "bar": {
+            "iLeft": "83.33333333333333%",
+            "iWidth": "12%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 254123,
+          "recipeName": "Runecloth Cuffs",
+          "source": "Pattern sold by Pexmit (Mount Hyjal)",
+          "advice": "",
           "crafts": 53,
-          "name": "Skill 251–287",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 14048,
+              "name": "Bolt of Runecloth",
+              "count": 5,
+              "icon": "inv_fabric_purplefire_02",
+              "quality": 1
+            },
+            {
+              "itemId": 14227,
+              "name": "Ironweb Spider Silk",
+              "count": 1,
+              "icon": "spell_nature_web",
+              "quality": 1
+            },
+            {
+              "itemId": 14341,
+              "name": "Rune Thread",
+              "count": 1,
+              "icon": "spell_shadow_antimagicshell",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 287,
           "to": 300,
-          "spellId": 22902,
+          "bar": {
+            "iLeft": "95.33333333333333%",
+            "iWidth": "4.333333333333333%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 18486,
+          "recipeName": "Mooncloth Robe",
+          "source": "Pattern sold by Shen'dralar Provisioner (Dire Maul)",
+          "advice": "",
           "crafts": 15,
-          "name": "Skill 287–300",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
-        }
-      ],
-      "shopping": [
-        {
-          "id": 14048,
-          "count": 491,
-          "name": "Bolt of Runecloth",
-          "icon": "inv_fabric_purplefire_02",
-          "quality": 1
-        },
-        {
-          "id": 13926,
-          "count": 30,
-          "name": "Golden Pearl",
-          "icon": "inv_misc_gem_pearl_04",
-          "quality": 2
-        },
-        {
-          "id": 14342,
-          "count": 60,
-          "name": "Mooncloth",
-          "icon": "inv_fabric_moonrag_01",
-          "quality": 1
-        },
-        {
-          "id": 14341,
-          "count": 123,
-          "name": "Rune Thread",
-          "icon": "spell_shadow_antimagicshell",
-          "quality": 1
-        },
-        {
-          "id": 14227,
-          "count": 53,
-          "name": "Ironweb Spider Silk",
-          "icon": "spell_nature_web",
-          "quality": 1
-        },
-        {
-          "id": 4305,
-          "count": 112,
-          "name": "Bolt of Silk Cloth",
-          "icon": "inv_fabric_silk_03",
-          "quality": 1
-        },
-        {
-          "id": 4339,
-          "count": 46,
-          "name": "Bolt of Mageweave",
-          "icon": "inv_fabric_mageweave_03",
-          "quality": 1
-        },
-        {
-          "id": 14047,
-          "count": 85,
-          "name": "Runecloth",
-          "icon": "inv_fabric_purplefire_01",
-          "quality": 1
-        },
-        {
-          "id": 8170,
-          "count": 64,
-          "name": "Rugged Leather",
-          "icon": "inv_misc_leatherscrap_02",
-          "quality": 1
-        },
-        {
-          "id": 4306,
-          "count": 160,
-          "name": "Silk Cloth",
-          "icon": "inv_fabric_silk_01",
-          "quality": 1
-        },
-        {
-          "id": 8343,
-          "count": 46,
-          "name": "Heavy Silken Thread",
-          "icon": "inv_fabric_silk_02",
-          "quality": 1
-        },
-        {
-          "id": 4338,
-          "count": 85,
-          "name": "Mageweave Cloth",
-          "icon": "inv_fabric_mageweave_01",
-          "quality": 1
-        },
-        {
-          "id": 2997,
-          "count": 130,
-          "name": "Bolt of Woolen Cloth",
-          "icon": "inv_fabric_wool_03",
-          "quality": 1
-        },
-        {
-          "id": 2592,
-          "count": 195,
-          "name": "Wool Cloth",
-          "icon": "inv_fabric_wool_01",
-          "quality": 1
-        },
-        {
-          "id": 2321,
-          "count": 152,
-          "name": "Fine Thread",
-          "icon": "inv_fabric_wool_02",
-          "quality": 1
-        },
-        {
-          "id": 6261,
-          "count": 14,
-          "name": "Orange Dye",
-          "icon": "inv_potion_35",
-          "quality": 1
-        },
-        {
-          "id": 3383,
-          "count": 22,
-          "name": "Elixir of Wisdom",
-          "icon": "inv_potion_06",
-          "quality": 1
-        },
-        {
-          "id": 4291,
-          "count": 16,
-          "name": "Silken Thread",
-          "icon": "inv_fabric_silk_02",
-          "quality": 1
-        },
-        {
-          "id": 2996,
-          "count": 24,
-          "name": "Bolt of Linen Cloth",
-          "icon": "inv_fabric_linen_02",
-          "quality": 1
-        },
-        {
-          "id": 2589,
-          "count": 66,
-          "name": "Linen Cloth",
-          "icon": "inv_fabric_linen_01",
-          "quality": 1
-        },
-        {
-          "id": 6260,
-          "count": 40,
-          "name": "Blue Dye",
-          "icon": "inv_potion_15",
-          "quality": 1
-        },
-        {
-          "id": 2604,
-          "count": 26,
-          "name": "Red Dye",
-          "icon": "inv_potion_11",
-          "quality": 1
-        },
-        {
-          "id": 2320,
-          "count": 24,
-          "name": "Coarse Thread",
-          "icon": "inv_fabric_linen_03",
-          "quality": 1
+          "reagents": [
+            {
+              "itemId": 14048,
+              "name": "Bolt of Runecloth",
+              "count": 6,
+              "icon": "inv_fabric_purplefire_02",
+              "quality": 1
+            },
+            {
+              "itemId": 14342,
+              "name": "Mooncloth",
+              "count": 4,
+              "icon": "inv_fabric_moonrag_01",
+              "quality": 1
+            },
+            {
+              "itemId": 13926,
+              "name": "Golden Pearl",
+              "count": 2,
+              "icon": "inv_misc_gem_pearl_04",
+              "quality": 2
+            },
+            {
+              "itemId": 14341,
+              "name": "Rune Thread",
+              "count": 2,
+              "icon": "spell_shadow_antimagicshell",
+              "quality": 1
+            }
+          ]
         }
       ]
     },
@@ -87205,6 +90648,301 @@ window.WOW_PROFESSIONS_DATA = {
           "desc": ""
         }
       ]
+    },
+    "shopping": {
+      "title": "Shopping list, 1 to 225",
+      "subtitle": "",
+      "groups": [
+        {
+          "title": "From a trade supplies vendor",
+          "note": "Always in stock, for a few coins.",
+          "items": [
+            {
+              "itemId": 2320,
+              "name": "Coarse Thread",
+              "icon": "inv_fabric_linen_03",
+              "quality": 1,
+              "count": 24
+            },
+            {
+              "itemId": 2321,
+              "name": "Fine Thread",
+              "icon": "inv_fabric_wool_02",
+              "quality": 1,
+              "count": 152
+            },
+            {
+              "itemId": 6260,
+              "name": "Blue Dye",
+              "icon": "inv_potion_15",
+              "quality": 1,
+              "count": 40
+            },
+            {
+              "itemId": 2604,
+              "name": "Red Dye",
+              "icon": "inv_potion_11",
+              "quality": 1,
+              "count": 26
+            },
+            {
+              "itemId": 4291,
+              "name": "Silken Thread",
+              "icon": "inv_fabric_silk_02",
+              "quality": 1,
+              "count": 16
+            },
+            {
+              "itemId": 6261,
+              "name": "Orange Dye",
+              "icon": "inv_potion_35",
+              "quality": 1,
+              "count": 14
+            },
+            {
+              "itemId": 8343,
+              "name": "Heavy Silken Thread",
+              "icon": "inv_fabric_silk_02",
+              "quality": 1,
+              "count": 46
+            },
+            {
+              "itemId": 14341,
+              "name": "Rune Thread",
+              "icon": "spell_shadow_antimagicshell",
+              "quality": 1,
+              "count": 10
+            }
+          ]
+        },
+        {
+          "title": "Gathered, looted or bought from other players",
+          "note": "The bulk of the cost: farm it or look at the auction house.",
+          "items": [
+            {
+              "itemId": 2589,
+              "name": "Linen Cloth",
+              "icon": "inv_fabric_linen_01",
+              "quality": 1,
+              "count": 66
+            },
+            {
+              "itemId": 2592,
+              "name": "Wool Cloth",
+              "icon": "inv_fabric_wool_01",
+              "quality": 1,
+              "count": 390
+            },
+            {
+              "itemId": 4306,
+              "name": "Silk Cloth",
+              "icon": "inv_fabric_silk_01",
+              "quality": 1,
+              "count": 448
+            },
+            {
+              "itemId": 3383,
+              "name": "Elixir of Wisdom",
+              "icon": "inv_potion_06",
+              "quality": 1,
+              "count": 22
+            },
+            {
+              "itemId": 4338,
+              "name": "Mageweave Cloth",
+              "icon": "inv_fabric_mageweave_01",
+              "quality": 1,
+              "count": 230
+            },
+            {
+              "itemId": 14047,
+              "name": "Runecloth",
+              "icon": "inv_fabric_purplefire_01",
+              "quality": 1,
+              "count": 150
+            }
+          ]
+        },
+        {
+          "title": "Made along the way",
+          "note": "The path crafts these itself; bought ready-made, they save a few steps.",
+          "items": [
+            {
+              "itemId": 2996,
+              "name": "Bolt of Linen Cloth",
+              "icon": "inv_fabric_linen_02",
+              "quality": 1,
+              "count": 24
+            },
+            {
+              "itemId": 2997,
+              "name": "Bolt of Woolen Cloth",
+              "icon": "inv_fabric_wool_03",
+              "quality": 1,
+              "count": 130
+            },
+            {
+              "itemId": 4305,
+              "name": "Bolt of Silk Cloth",
+              "icon": "inv_fabric_silk_03",
+              "quality": 1,
+              "count": 112
+            },
+            {
+              "itemId": 4339,
+              "name": "Bolt of Mageweave",
+              "icon": "inv_fabric_mageweave_03",
+              "quality": 1,
+              "count": 46
+            },
+            {
+              "itemId": 14048,
+              "name": "Bolt of Runecloth",
+              "icon": "inv_fabric_purplefire_02",
+              "quality": 1,
+              "count": 30
+            }
+          ]
+        },
+        {
+          "title": "From a trade supplies vendor",
+          "note": "Always in stock, for a few coins.",
+          "items": [
+            {
+              "itemId": 14341,
+              "name": "Rune Thread",
+              "icon": "spell_shadow_antimagicshell",
+              "quality": 1,
+              "count": 113
+            }
+          ]
+        },
+        {
+          "title": "Gathered, looted or bought from other players",
+          "note": "The bulk of the cost: farm it or look at the auction house.",
+          "items": [
+            {
+              "itemId": 14047,
+              "name": "Runecloth",
+              "icon": "inv_fabric_purplefire_01",
+              "quality": 1,
+              "count": 2305
+            },
+            {
+              "itemId": 8170,
+              "name": "Rugged Leather",
+              "icon": "inv_misc_leatherscrap_02",
+              "quality": 1,
+              "count": 64
+            },
+            {
+              "itemId": 14227,
+              "name": "Ironweb Spider Silk",
+              "icon": "spell_nature_web",
+              "quality": 1,
+              "count": 53
+            },
+            {
+              "itemId": 14342,
+              "name": "Mooncloth",
+              "icon": "inv_fabric_moonrag_01",
+              "quality": 1,
+              "count": 60
+            },
+            {
+              "itemId": 13926,
+              "name": "Golden Pearl",
+              "icon": "inv_misc_gem_pearl_04",
+              "quality": 2,
+              "count": 30
+            }
+          ]
+        },
+        {
+          "title": "Made along the way",
+          "note": "The path crafts these itself; bought ready-made, they save a few steps.",
+          "items": [
+            {
+              "itemId": 14048,
+              "name": "Bolt of Runecloth",
+              "icon": "inv_fabric_purplefire_02",
+              "quality": 1,
+              "count": 461
+            }
+          ]
+        }
+      ]
+    },
+    "campPerks": {
+      "milestones": [
+        {
+          "icon": "trade_tailoring",
+          "title": "Journeyman Tailor",
+          "desc": "First time at skill 150 on the account",
+          "reward": "+1 Legacy point"
+        },
+        {
+          "icon": "trade_tailoring",
+          "title": "Expert Tailor",
+          "desc": "First time at skill 225 on the account",
+          "reward": "+1 Legacy point"
+        },
+        {
+          "icon": "trade_tailoring",
+          "title": "Artisan Tailor",
+          "desc": "First time at skill 300 on the account",
+          "reward": "+1 Legacy point"
+        },
+        {
+          "icon": "inv_scroll_15",
+          "title": "Tailoring Certification",
+          "desc": "The title the Tailor for the whole account, bought with Merchant's Favor",
+          "reward": "Skill 300"
+        }
+      ],
+      "atCamp": [
+        {
+          "icon": "inv_banner_03",
+          "name": "Faction Banner",
+          "desc": "32 Spirit to everyone of your faction sitting nearby, like Divine Spirit (at level 60, scaling with level)",
+          "skill": "Skill 20"
+        },
+        {
+          "icon": "10prof_table_tailoring01",
+          "name": "Spinning Wheel",
+          "desc": "Makes certain Tailoring reagents, and gives the Faction Banner buff",
+          "skill": "Skill 140 Blueprint"
+        },
+        {
+          "icon": "inv_tailoring_80_tidespraylinen",
+          "name": "Loom",
+          "desc": "Needed for the most advanced Tailoring recipes, and gives the Faction Banner buff",
+          "skill": "Skill 300 Blueprint"
+        }
+      ],
+      "legacyPerks": [
+        {
+          "icon": "racial_dwarf_findtreasure",
+          "name": "Performance Bonus",
+          "effect": "You have a 5 / 10 / 15% chance to receive 100% increased Merchant's Favor when you turn in a crate to the Azeroth Commerce Authority or Durotar Supply and Logistics.",
+          "meta": "Professions tree, 3 ranks, needs 5 points spent in the tree and a rank in Bountiful Harvest",
+          "planLink": ""
+        },
+        {
+          "icon": "inv_misc_pocketwatch_03",
+          "name": "Working Overtime",
+          "effect": "Increases your chance to gain a skill increase from using any primary, secondary, or class-based tradeskill by 4 / 8 / 12 / 16 / 20%.",
+          "meta": "Professions tree, 5 ranks, open from the start",
+          "planLink": ""
+        },
+        {
+          "icon": "inv_misc_book_08",
+          "name": "Dedicated Study",
+          "effect": "Increases your skill by 1 in your lowest tradeskill among your Primary and Secondary tradeskills. If you have already reached 300 skill in your two current Primary Tradeskills and all three Secondary Tradeskills, you will gain 2 to 4 of a random Elemental Essence.",
+          "meta": "Professions tree, 1 rank, needs 10 points spent in the tree and a rank in Bartering, 25 sec cast, 23 hour cooldown",
+          "planLink": ""
+        }
+      ]
     }
   },
   "mining": {
@@ -87286,9 +91024,122 @@ window.WOW_PROFESSIONS_DATA = {
       }
     ],
     "leveling": {
-      "note": "Level 225 is the current Phase 2 Beta Cap. Unlocks to 300 at launch.",
-      "steps": [],
-      "shopping": []
+      "title": "Mining Leveling Route",
+      "steps": [
+        {
+          "type": "gather-step",
+          "from": 1,
+          "to": 65,
+          "bar": {
+            "iLeft": "0%",
+            "iWidth": "21.333333333333332%"
+          },
+          "title": "Copper Vein",
+          "zones": "Most of them in Durotar, Westfall, Duskwood and Silverpine Forest",
+          "icons": [
+            {
+              "icon": "inv_ore_copper_01",
+              "name": "Copper Vein"
+            }
+          ]
+        },
+        {
+          "type": "gather-step",
+          "from": 65,
+          "to": 125,
+          "bar": {
+            "iLeft": "21.333333333333332%",
+            "iWidth": "20%"
+          },
+          "title": "Tin Vein and Silver Vein",
+          "zones": "Most of them in Arathi Highlands, Wetlands, Duskwood and Silverpine Forest",
+          "icons": [
+            {
+              "icon": "inv_ore_tin_01",
+              "name": "Tin Vein"
+            },
+            {
+              "icon": "inv_stone_16",
+              "name": "Silver Vein"
+            }
+          ]
+        },
+        {
+          "type": "gather-step",
+          "from": 125,
+          "to": 175,
+          "bar": {
+            "iLeft": "41.333333333333336%",
+            "iWidth": "16.666666666666668%"
+          },
+          "title": "Iron Deposit and Gold Vein",
+          "zones": "Most of them in Arathi Highlands, Alterac Mountains, Stranglethorn Vale and Duskwood",
+          "icons": [
+            {
+              "icon": "inv_ore_iron_01",
+              "name": "Iron Deposit"
+            },
+            {
+              "icon": "inv_ore_copper_01",
+              "name": "Gold Vein"
+            }
+          ]
+        },
+        {
+          "type": "gather-step",
+          "from": 175,
+          "to": 245,
+          "bar": {
+            "iLeft": "58%",
+            "iWidth": "23.333333333333332%"
+          },
+          "title": "Mithril Deposit and Truesilver Deposit",
+          "zones": "Most of them in Badlands, The Hinterlands, Alterac Mountains and Searing Gorge",
+          "icons": [
+            {
+              "icon": "inv_ore_mithril_02",
+              "name": "Mithril Deposit"
+            },
+            {
+              "icon": "inv_ore_truesilver_01",
+              "name": "Truesilver Deposit"
+            }
+          ]
+        },
+        {
+          "type": "gather-step",
+          "from": 1,
+          "to": 1,
+          "bar": {
+            "iLeft": null,
+            "iWidth": null
+          },
+          "title": "",
+          "zones": "",
+          "icons": []
+        },
+        {
+          "type": "gather-step",
+          "from": 245,
+          "to": 300,
+          "bar": {
+            "iLeft": "81.33333333333333%",
+            "iWidth": "18.333333333333332%"
+          },
+          "title": "Small Thorium Vein and Rich Thorium Vein",
+          "zones": "Most of them in Winterspring, Azshara, Swamp of Sorrows and Blasted Lands",
+          "icons": [
+            {
+              "icon": "inv_ore_thorium_02",
+              "name": "Small Thorium Vein"
+            },
+            {
+              "icon": "inv_ore_thorium_02",
+              "name": "Rich Thorium Vein"
+            }
+          ]
+        }
+      ]
     },
     "favor": {
       "camps": {
@@ -87310,6 +91161,174 @@ window.WOW_PROFESSIONS_DATA = {
         }
       },
       "recipes": []
+    },
+    "nodes": [
+      {
+        "name": "Copper Vein",
+        "icon": "inv_ore_copper_01",
+        "zones": "Most in Durotar, Westfall and Duskwood",
+        "skill": 1,
+        "drops": [
+          {
+            "itemId": 2770,
+            "name": "Copper Ore",
+            "icon": "inv_ore_copper_01",
+            "quality": 1
+          },
+          {
+            "itemId": 2835,
+            "name": "Rough Stone",
+            "icon": "inv_stone_06",
+            "quality": 1
+          },
+          {
+            "itemId": 2798,
+            "name": "Rethban Ore",
+            "icon": "inv_ore_iron_01",
+            "quality": 1
+          }
+        ]
+      },
+      {
+        "name": "Tin Vein",
+        "icon": "inv_ore_tin_01",
+        "zones": "Most in Wetlands, Duskwood and Silverpine Forest",
+        "skill": 65,
+        "drops": [
+          {
+            "itemId": 2771,
+            "name": "Tin Ore",
+            "icon": "inv_ore_tin_01",
+            "quality": 1
+          },
+          {
+            "itemId": 2836,
+            "name": "Coarse Stone",
+            "icon": "inv_stone_09",
+            "quality": 1
+          },
+          {
+            "itemId": 2798,
+            "name": "Rethban Ore",
+            "icon": "inv_ore_iron_01",
+            "quality": 1
+          }
+        ]
+      },
+      {
+        "name": "Silver Vein",
+        "icon": "inv_stone_16",
+        "zones": "Most in Arathi Highlands, Alterac Mountains and Stranglethorn Vale",
+        "skill": 75,
+        "drops": [
+          {
+            "itemId": 2775,
+            "name": "Silver Ore",
+            "icon": "inv_stone_16",
+            "quality": 2
+          }
+        ]
+      },
+      {
+        "name": "Iron Deposit",
+        "icon": "inv_ore_iron_01",
+        "zones": "Most in Arathi Highlands, Alterac Mountains and Stranglethorn Vale",
+        "skill": 125,
+        "drops": [
+          {
+            "itemId": 2772,
+            "name": "Iron Ore",
+            "icon": "inv_ore_iron_01",
+            "quality": 1
+          },
+          {
+            "itemId": 2838,
+            "name": "Heavy Stone",
+            "icon": "inv_stone_12",
+            "quality": 1
+          }
+        ]
+      },
+      {
+        "name": "Gold Vein",
+        "icon": "inv_ore_copper_01",
+        "zones": "Most in Arathi Highlands, Alterac Mountains and Stranglethorn Vale",
+        "skill": 155,
+        "drops": [
+          {
+            "itemId": 2776,
+            "name": "Gold Ore",
+            "icon": "inv_ore_copper_01",
+            "quality": 2
+          }
+        ]
+      },
+      {
+        "name": "Mithril Deposit",
+        "icon": "inv_ore_mithril_02",
+        "zones": "Most in Badlands, The Hinterlands and Alterac Mountains",
+        "skill": 175,
+        "drops": [
+          {
+            "itemId": 3858,
+            "name": "Mithril Ore",
+            "icon": "inv_ore_mithril_02",
+            "quality": 1
+          },
+          {
+            "itemId": 7912,
+            "name": "Solid Stone",
+            "icon": "inv_stone_10",
+            "quality": 1
+          }
+        ]
+      }
+    ],
+    "campPerks": {
+      "milestones": [],
+      "atCamp": [
+        {
+          "icon": "inv_misc_rune_06",
+          "name": "Lodestone",
+          "desc": "90 melee Attack Power to everyone sitting nearby, like Blessing of Might (at level 60, scaling with level)",
+          "skill": "Skill 20"
+        },
+        {
+          "icon": "inv_misc_powder_iron",
+          "name": "Rock Garden",
+          "desc": "Spawns a common mining node over time, and gives the Lodestone buff",
+          "skill": "Skill 140 Blueprint"
+        },
+        {
+          "icon": "inv_blacksmithingalloys_red",
+          "name": "Molten Foundry",
+          "desc": "Needed for recipes that require it, and gives the Lodestone buff",
+          "skill": "Skill 300 Blueprint"
+        }
+      ],
+      "legacyPerks": [
+        {
+          "icon": "inv_misc_bag_18",
+          "name": "Bountiful Harvest",
+          "effect": "You discover 20 / 40 / 60 / 80 / 100% more Scarce materials from Mining, Herbalism, and Skinning.",
+          "meta": "Professions tree, 5 ranks, open from the start",
+          "planLink": ""
+        },
+        {
+          "icon": "inv_misc_pocketwatch_03",
+          "name": "Working Overtime",
+          "effect": "Increases your chance to gain a skill increase from using any primary, secondary, or class-based tradeskill by 4 / 8 / 12 / 16 / 20%.",
+          "meta": "Professions tree, 5 ranks, open from the start",
+          "planLink": ""
+        },
+        {
+          "icon": "inv_misc_book_08",
+          "name": "Dedicated Study",
+          "effect": "Increases your skill by 1 in your lowest tradeskill among your Primary and Secondary tradeskills. If you have already reached 300 skill in your two current Primary Tradeskills and all three Secondary Tradeskills, you will gain 2 to 4 of a random Elemental Essence.",
+          "meta": "Professions tree, 1 rank, needs 10 points spent in the tree and a rank in Bartering, 25 sec cast, 23 hour cooldown",
+          "planLink": ""
+        }
+      ]
     }
   },
   "herbalism": {
@@ -87360,9 +91379,220 @@ window.WOW_PROFESSIONS_DATA = {
       }
     ],
     "leveling": {
-      "note": "Level 225 is the current Phase 2 Beta Cap. Unlocks to 300 at launch.",
-      "steps": [],
-      "shopping": []
+      "title": "Herbalism Leveling Route",
+      "steps": [
+        {
+          "type": "gather-step",
+          "from": 1,
+          "to": 50,
+          "bar": {
+            "iLeft": "0%",
+            "iWidth": "16.333333333333332%"
+          },
+          "title": "Peacebloom, Silverleaf and Earthroot",
+          "zones": "Most of them in The Barrens, Durotar, Tirisfal Glades and Elwynn Forest",
+          "icons": [
+            {
+              "icon": "inv_misc_flower_02",
+              "name": "Peacebloom"
+            },
+            {
+              "icon": "inv_misc_herb_10",
+              "name": "Silverleaf"
+            },
+            {
+              "icon": "inv_misc_herb_07",
+              "name": "Earthroot"
+            }
+          ]
+        },
+        {
+          "type": "gather-step",
+          "from": 50,
+          "to": 100,
+          "bar": {
+            "iLeft": "16.333333333333332%",
+            "iWidth": "16.666666666666668%"
+          },
+          "title": "Mageroyal, Briarthorn and Earthroot",
+          "zones": "Most of them in The Barrens, Ashenvale, Darkshore and Westfall",
+          "icons": [
+            {
+              "icon": "inv_jewelry_talisman_03",
+              "name": "Mageroyal"
+            },
+            {
+              "icon": "inv_misc_root_01",
+              "name": "Briarthorn"
+            },
+            {
+              "icon": "inv_misc_herb_07",
+              "name": "Earthroot"
+            }
+          ]
+        },
+        {
+          "type": "gather-step",
+          "from": 100,
+          "to": 150,
+          "bar": {
+            "iLeft": "33%",
+            "iWidth": "16.666666666666668%"
+          },
+          "title": "Bruiseweed, Wild Steelbloom, Kingsblood, Grave Moss and Stranglekelp",
+          "zones": "Most of them in Wetlands, The Barrens, Stonetalon Mountains and Ashenvale",
+          "icons": [
+            {
+              "icon": "inv_misc_herb_01",
+              "name": "Bruiseweed"
+            },
+            {
+              "icon": "inv_misc_flower_01",
+              "name": "Wild Steelbloom"
+            },
+            {
+              "icon": "inv_misc_herb_03",
+              "name": "Kingsblood"
+            },
+            {
+              "icon": "inv_misc_dust_02",
+              "name": "Grave Moss"
+            },
+            {
+              "icon": "inv_misc_herb_11",
+              "name": "Stranglekelp"
+            }
+          ]
+        },
+        {
+          "type": "gather-step",
+          "from": 150,
+          "to": 205,
+          "bar": {
+            "iLeft": "49.666666666666664%",
+            "iWidth": "18.333333333333332%"
+          },
+          "title": "Liferoot, Fadeleaf, Goldthorn and Khadgar's Whisker",
+          "zones": "Most of them in Stranglethorn Vale, Arathi Highlands, Alterac Mountains and Swamp of Sorrows",
+          "icons": [
+            {
+              "icon": "inv_misc_root_02",
+              "name": "Liferoot"
+            },
+            {
+              "icon": "inv_misc_herb_12",
+              "name": "Fadeleaf"
+            },
+            {
+              "icon": "inv_misc_herb_15",
+              "name": "Goldthorn"
+            },
+            {
+              "icon": "inv_misc_herb_08",
+              "name": "Khadgar's Whisker"
+            }
+          ]
+        },
+        {
+          "type": "gather-step",
+          "from": 205,
+          "to": 230,
+          "bar": {
+            "iLeft": "68%",
+            "iWidth": "8.333333333333334%"
+          },
+          "title": "Firebloom, Purple Lotus and Arthas' Tears",
+          "zones": "Most of them in Azshara, Tanaris, Western Plaguelands and Searing Gorge",
+          "icons": [
+            {
+              "icon": "inv_misc_herb_19",
+              "name": "Firebloom"
+            },
+            {
+              "icon": "inv_misc_herb_17",
+              "name": "Purple Lotus"
+            },
+            {
+              "icon": "inv_misc_herb_13",
+              "name": "Arthas' Tears"
+            }
+          ]
+        },
+        {
+          "type": "gather-step",
+          "from": 1,
+          "to": 1,
+          "bar": {
+            "iLeft": null,
+            "iWidth": null
+          },
+          "title": "",
+          "zones": "",
+          "icons": []
+        },
+        {
+          "type": "gather-step",
+          "from": 230,
+          "to": 270,
+          "bar": {
+            "iLeft": "76.33333333333333%",
+            "iWidth": "13.333333333333334%"
+          },
+          "title": "Sungrass, Blindweed, Ghost Mushroom, Gromsblood and Golden Sansam",
+          "zones": "Most of them in Azshara, Swamp of Sorrows, The Hinterlands and Un'Goro Crater",
+          "icons": [
+            {
+              "icon": "inv_misc_herb_18",
+              "name": "Sungrass"
+            },
+            {
+              "icon": "inv_misc_herb_14",
+              "name": "Blindweed"
+            },
+            {
+              "icon": "inv_mushroom_08",
+              "name": "Ghost Mushroom"
+            },
+            {
+              "icon": "inv_misc_herb_16",
+              "name": "Gromsblood"
+            },
+            {
+              "icon": "inv_misc_herb_sansamroot",
+              "name": "Golden Sansam"
+            }
+          ]
+        },
+        {
+          "type": "gather-step",
+          "from": 270,
+          "to": 300,
+          "bar": {
+            "iLeft": "89.66666666666667%",
+            "iWidth": "10%"
+          },
+          "title": "Dreamfoil, Mountain Silversage, Plaguebloom and Icecap",
+          "zones": "Most of them in Eastern Plaguelands, Winterspring, Azshara and Un'Goro Crater",
+          "icons": [
+            {
+              "icon": "inv_misc_herb_dreamfoil",
+              "name": "Dreamfoil"
+            },
+            {
+              "icon": "inv_misc_herb_mountainsilversage",
+              "name": "Mountain Silversage"
+            },
+            {
+              "icon": "inv_misc_herb_plaguebloom",
+              "name": "Plaguebloom"
+            },
+            {
+              "icon": "inv_misc_herb_icecap",
+              "name": "Icecap"
+            }
+          ]
+        }
+      ]
     },
     "favor": {
       "camps": {
@@ -87384,6 +91614,348 @@ window.WOW_PROFESSIONS_DATA = {
         }
       },
       "recipes": []
+    },
+    "nodes": [
+      {
+        "name": "Peacebloom",
+        "icon": "inv_misc_flower_02",
+        "zones": "Most in The Barrens, Durotar and Mulgore",
+        "skill": 1,
+        "drops": [
+          {
+            "itemId": 2447,
+            "name": "Peacebloom",
+            "icon": "inv_misc_flower_02",
+            "quality": 1
+          }
+        ]
+      },
+      {
+        "name": "Silverleaf",
+        "icon": "inv_misc_herb_10",
+        "zones": "Most in Durotar, The Barrens and Mulgore",
+        "skill": 1,
+        "drops": [
+          {
+            "itemId": 765,
+            "name": "Silverleaf",
+            "icon": "inv_misc_herb_10",
+            "quality": 1
+          },
+          {
+            "itemId": 5056,
+            "name": "Root Sample",
+            "icon": "inv_misc_herb_07",
+            "quality": 1
+          }
+        ]
+      },
+      {
+        "name": "Earthroot",
+        "icon": "inv_misc_herb_07",
+        "zones": "Most in The Barrens, Durotar and Tirisfal Glades",
+        "skill": 15,
+        "drops": [
+          {
+            "itemId": 2449,
+            "name": "Earthroot",
+            "icon": "inv_misc_herb_07",
+            "quality": 1
+          },
+          {
+            "itemId": 5056,
+            "name": "Root Sample",
+            "icon": "inv_misc_herb_07",
+            "quality": 1
+          }
+        ]
+      },
+      {
+        "name": "Mageroyal",
+        "icon": "inv_jewelry_talisman_03",
+        "zones": "Most in The Barrens, Ashenvale and Darkshore",
+        "skill": 50,
+        "drops": [
+          {
+            "itemId": 785,
+            "name": "Mageroyal",
+            "icon": "inv_jewelry_talisman_03",
+            "quality": 1
+          },
+          {
+            "itemId": 5056,
+            "name": "Root Sample",
+            "icon": "inv_misc_herb_07",
+            "quality": 1
+          },
+          {
+            "itemId": 2452,
+            "name": "Swiftthistle",
+            "icon": "inv_misc_herb_04",
+            "quality": 1
+          }
+        ]
+      },
+      {
+        "name": "Briarthorn",
+        "icon": "inv_misc_root_01",
+        "zones": "Most in The Barrens, Duskwood and Ashenvale",
+        "skill": 70,
+        "drops": [
+          {
+            "itemId": 2450,
+            "name": "Briarthorn",
+            "icon": "inv_misc_root_01",
+            "quality": 1
+          },
+          {
+            "itemId": 2452,
+            "name": "Swiftthistle",
+            "icon": "inv_misc_herb_04",
+            "quality": 1
+          },
+          {
+            "itemId": 5056,
+            "name": "Root Sample",
+            "icon": "inv_misc_herb_07",
+            "quality": 1
+          }
+        ]
+      },
+      {
+        "name": "Stranglekelp",
+        "icon": "inv_misc_herb_11",
+        "zones": "Most in Stranglethorn Vale, Wetlands and Ashenvale",
+        "skill": 85,
+        "drops": [
+          {
+            "itemId": 3820,
+            "name": "Stranglekelp",
+            "icon": "inv_misc_herb_11",
+            "quality": 1
+          }
+        ]
+      },
+      {
+        "name": "Bruiseweed",
+        "icon": "inv_misc_herb_01",
+        "zones": "Most in Stonetalon Mountains, The Barrens and Hillsbrad Foothills",
+        "skill": 100,
+        "drops": [
+          {
+            "itemId": 2453,
+            "name": "Bruiseweed",
+            "icon": "inv_misc_herb_01",
+            "quality": 1
+          }
+        ]
+      },
+      {
+        "name": "Wild Steelbloom",
+        "icon": "inv_misc_flower_01",
+        "zones": "Most in Arathi Highlands, Stonetalon Mountains and Stranglethorn Vale",
+        "skill": 115,
+        "drops": [
+          {
+            "itemId": 3355,
+            "name": "Wild Steelbloom",
+            "icon": "inv_misc_flower_01",
+            "quality": 1
+          }
+        ]
+      },
+      {
+        "name": "Grave Moss",
+        "icon": "inv_misc_dust_02",
+        "zones": "Most in Duskwood, Desolace and Wetlands",
+        "skill": 120,
+        "drops": [
+          {
+            "itemId": 3369,
+            "name": "Grave Moss",
+            "icon": "inv_misc_dust_02",
+            "quality": 1
+          }
+        ]
+      },
+      {
+        "name": "Kingsblood",
+        "icon": "inv_misc_herb_03",
+        "zones": "Most in Stranglethorn Vale, Wetlands and Ashenvale",
+        "skill": 125,
+        "drops": [
+          {
+            "itemId": 3356,
+            "name": "Kingsblood",
+            "icon": "inv_misc_herb_03",
+            "quality": 1
+          }
+        ]
+      },
+      {
+        "name": "Liferoot",
+        "icon": "inv_misc_root_02",
+        "zones": "Most in Stranglethorn Vale, Wetlands and Arathi Highlands",
+        "skill": 150,
+        "drops": [
+          {
+            "itemId": 3357,
+            "name": "Liferoot",
+            "icon": "inv_misc_root_02",
+            "quality": 1
+          }
+        ]
+      },
+      {
+        "name": "Fadeleaf",
+        "icon": "inv_misc_herb_12",
+        "zones": "Most in Arathi Highlands, Swamp of Sorrows and Alterac Mountains",
+        "skill": 160,
+        "drops": [
+          {
+            "itemId": 3818,
+            "name": "Fadeleaf",
+            "icon": "inv_misc_herb_12",
+            "quality": 1
+          }
+        ]
+      },
+      {
+        "name": "Goldthorn",
+        "icon": "inv_misc_herb_15",
+        "zones": "Most in Stranglethorn Vale, Arathi Highlands and Swamp of Sorrows",
+        "skill": 170,
+        "drops": [
+          {
+            "itemId": 3821,
+            "name": "Goldthorn",
+            "icon": "inv_misc_herb_15",
+            "quality": 1
+          }
+        ]
+      },
+      {
+        "name": "Khadgar's Whisker",
+        "icon": "inv_misc_herb_08",
+        "zones": "Most in Stranglethorn Vale, Arathi Highlands and Swamp of Sorrows",
+        "skill": 185,
+        "drops": [
+          {
+            "itemId": 3358,
+            "name": "Khadgar's Whisker",
+            "icon": "inv_misc_herb_08",
+            "quality": 1
+          }
+        ]
+      },
+      {
+        "name": "Wintersbite",
+        "icon": "inv_misc_flower_03",
+        "zones": "Most in Alterac Mountains",
+        "skill": 195,
+        "drops": [
+          {
+            "itemId": 3819,
+            "name": "Wintersbite",
+            "icon": "inv_misc_flower_03",
+            "quality": 1
+          }
+        ]
+      },
+      {
+        "name": "Firebloom",
+        "icon": "inv_misc_herb_19",
+        "zones": "Most in Tanaris, Searing Gorge and Badlands",
+        "skill": 205,
+        "drops": [
+          {
+            "itemId": 4625,
+            "name": "Firebloom",
+            "icon": "inv_misc_herb_19",
+            "quality": 1
+          }
+        ]
+      },
+      {
+        "name": "Purple Lotus",
+        "icon": "inv_misc_herb_17",
+        "zones": "Most in Azshara, The Hinterlands and Tanaris",
+        "skill": 210,
+        "drops": [
+          {
+            "itemId": 8831,
+            "name": "Purple Lotus",
+            "icon": "inv_misc_herb_17",
+            "quality": 1
+          },
+          {
+            "itemId": 8153,
+            "name": "Wildvine",
+            "icon": "inv_misc_herb_03",
+            "quality": 1
+          }
+        ]
+      },
+      {
+        "name": "Arthas' Tears",
+        "icon": "inv_misc_herb_13",
+        "zones": "Most in Western Plaguelands, Eastern Plaguelands and Felwood",
+        "skill": 220,
+        "drops": [
+          {
+            "itemId": 8836,
+            "name": "Arthas' Tears",
+            "icon": "inv_misc_herb_13",
+            "quality": 1
+          }
+        ]
+      }
+    ],
+    "campPerks": {
+      "milestones": [],
+      "atCamp": [
+        {
+          "icon": "inv_misc_candle_02",
+          "name": "Incense Candle",
+          "desc": "25 Intellect to everyone sitting nearby, like Arcane Intellect (at level 60, scaling with level)",
+          "skill": "Skill 20"
+        },
+        {
+          "icon": "inv_misc_herb_08",
+          "name": "Greenhouse",
+          "desc": "Grows herbs over time from planted seeds, and gives the Incense Candle buff",
+          "skill": "Skill 140 Blueprint"
+        },
+        {
+          "icon": "inv_farm_herbseed",
+          "name": "Seed Hybridizer",
+          "desc": "Multiplies seeds or combines them into rarer tiers, and gives the Incense Candle buff",
+          "skill": "Skill 300 Blueprint"
+        }
+      ],
+      "legacyPerks": [
+        {
+          "icon": "inv_misc_bag_18",
+          "name": "Bountiful Harvest",
+          "effect": "You discover 20 / 40 / 60 / 80 / 100% more Scarce materials from Mining, Herbalism, and Skinning.",
+          "meta": "Professions tree, 5 ranks, open from the start",
+          "planLink": ""
+        },
+        {
+          "icon": "inv_misc_pocketwatch_03",
+          "name": "Working Overtime",
+          "effect": "Increases your chance to gain a skill increase from using any primary, secondary, or class-based tradeskill by 4 / 8 / 12 / 16 / 20%.",
+          "meta": "Professions tree, 5 ranks, open from the start",
+          "planLink": ""
+        },
+        {
+          "icon": "inv_misc_book_08",
+          "name": "Dedicated Study",
+          "effect": "Increases your skill by 1 in your lowest tradeskill among your Primary and Secondary tradeskills. If you have already reached 300 skill in your two current Primary Tradeskills and all three Secondary Tradeskills, you will gain 2 to 4 of a random Elemental Essence.",
+          "meta": "Professions tree, 1 rank, needs 10 points spent in the tree and a rank in Bartering, 25 sec cast, 23 hour cooldown",
+          "planLink": ""
+        }
+      ]
     }
   },
   "skinning": {
@@ -87424,9 +91996,93 @@ window.WOW_PROFESSIONS_DATA = {
       }
     ],
     "leveling": {
-      "note": "Level 225 is the current Phase 2 Beta Cap. Unlocks to 300 at launch.",
-      "steps": [],
-      "shopping": []
+      "title": "Skinning Leveling Route",
+      "steps": [
+        {
+          "type": "gather-step",
+          "from": 1,
+          "to": 1,
+          "bar": {
+            "iLeft": "0%",
+            "iWidth": "0.6%"
+          },
+          "title": "Beasts of level 1 to 10",
+          "zones": "Most in Mulgore, Durotar, Dun Morogh and Elwynn Forest",
+          "icons": []
+        },
+        {
+          "type": "gather-step",
+          "from": 10,
+          "to": 100,
+          "bar": {
+            "iLeft": "3%",
+            "iWidth": "30%"
+          },
+          "title": "Beasts of level 11 to 20",
+          "zones": "Most in The Barrens, Darkshore, Silverpine Forest and Loch Modan",
+          "icons": []
+        },
+        {
+          "type": "gather-step",
+          "from": 105,
+          "to": 150,
+          "bar": {
+            "iLeft": "34.666666666666664%",
+            "iWidth": "15%"
+          },
+          "title": "Beasts of level 21 to 30",
+          "zones": "Most in Wetlands, Ashenvale, Hillsbrad Foothills and Thousand Needles",
+          "icons": []
+        },
+        {
+          "type": "gather-step",
+          "from": 155,
+          "to": 200,
+          "bar": {
+            "iLeft": "51.333333333333336%",
+            "iWidth": "15%"
+          },
+          "title": "Beasts of level 31 to 40",
+          "zones": "Most in Dustwallow Marsh, Desolace, Stranglethorn Vale and Badlands",
+          "icons": []
+        },
+        {
+          "type": "gather-step",
+          "from": 205,
+          "to": 250,
+          "bar": {
+            "iLeft": "68%",
+            "iWidth": "15%"
+          },
+          "title": "Beasts of level 41 to 50",
+          "zones": "Most in Tanaris, Feralas, The Hinterlands and Felwood",
+          "icons": []
+        },
+        {
+          "type": "gather-step",
+          "from": 1,
+          "to": 1,
+          "bar": {
+            "iLeft": null,
+            "iWidth": null
+          },
+          "title": "",
+          "zones": "",
+          "icons": []
+        },
+        {
+          "type": "gather-step",
+          "from": 255,
+          "to": 300,
+          "bar": {
+            "iLeft": "84.66666666666667%",
+            "iWidth": "15%"
+          },
+          "title": "Beasts of level 51 to 60",
+          "zones": "Most in Winterspring, Azshara, Silithus and Eastern Plaguelands",
+          "icons": []
+        }
+      ]
     },
     "favor": {
       "camps": {
@@ -87448,6 +92104,52 @@ window.WOW_PROFESSIONS_DATA = {
         }
       },
       "recipes": []
+    },
+    "campPerks": {
+      "milestones": [],
+      "atCamp": [
+        {
+          "icon": "inv_crate_01",
+          "name": "Camp Chair",
+          "desc": "2% critical strike chance with spells and attacks to everyone sitting nearby, like Moonkin Aura",
+          "skill": "Skill 20"
+        },
+        {
+          "icon": "inv_misc_book_03",
+          "name": "Field Guide",
+          "desc": "Grants Track Beasts to whoever reads it, and gives the Camp Chair buff",
+          "skill": "Skill 140 Blueprint"
+        },
+        {
+          "icon": "inv_misc_kobysstools_knifetrap_color3",
+          "name": "Trapper's Workbench",
+          "desc": "Holds one trap, and gives the Camp Chair buff",
+          "skill": "Skill 300 Blueprint"
+        }
+      ],
+      "legacyPerks": [
+        {
+          "icon": "inv_misc_bag_18",
+          "name": "Bountiful Harvest",
+          "effect": "You discover 20 / 40 / 60 / 80 / 100% more Scarce materials from Mining, Herbalism, and Skinning.",
+          "meta": "Professions tree, 5 ranks, open from the start",
+          "planLink": ""
+        },
+        {
+          "icon": "inv_misc_pocketwatch_03",
+          "name": "Working Overtime",
+          "effect": "Increases your chance to gain a skill increase from using any primary, secondary, or class-based tradeskill by 4 / 8 / 12 / 16 / 20%.",
+          "meta": "Professions tree, 5 ranks, open from the start",
+          "planLink": ""
+        },
+        {
+          "icon": "inv_misc_book_08",
+          "name": "Dedicated Study",
+          "effect": "Increases your skill by 1 in your lowest tradeskill among your Primary and Secondary tradeskills. If you have already reached 300 skill in your two current Primary Tradeskills and all three Secondary Tradeskills, you will gain 2 to 4 of a random Elemental Essence.",
+          "meta": "Professions tree, 1 rank, needs 10 points spent in the tree and a rank in Bartering, 25 sec cast, 23 hour cooldown",
+          "planLink": ""
+        }
+      ]
     }
   },
   "cooking": {
@@ -91451,146 +96153,252 @@ window.WOW_PROFESSIONS_DATA = {
     ],
     "gatheringNodes": [],
     "leveling": {
-      "note": "Built by scripts/prepare-leveling.mjs; do not edit.",
+      "title": "Leveling from 1 to 300",
+      "capNote": "225 is the beta's cap for now",
+      "desc": "At each point, you get the cheapest recipe to skill up, whether you learn it from the trainer or buy it from a vendor. Counts are averages, so buy a few more. There are no prices until launch, so each reagent counts for what a vendor pays you for it.",
       "steps": [
         {
+          "type": "rank",
+          "rank": "Apprentice",
+          "details": "from any Cooking trainer, up to 75"
+        },
+        {
+          "type": "step",
           "from": 1,
           "to": 50,
-          "spellId": 2540,
+          "bar": {
+            "iLeft": "0%",
+            "iWidth": "16.333333333333332%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 2681,
+          "recipeName": "Roasted Boar Meat",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 50,
-          "name": "Skill 1–50",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 769,
+              "name": "Chunk of Boar Meat",
+              "count": 1,
+              "icon": "inv_misc_food_14",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 50,
           "to": 75,
-          "spellId": 7753,
+          "bar": {
+            "iLeft": "16.333333333333332%",
+            "iWidth": "8.333333333333334%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 4592,
+          "recipeName": "Longjaw Mud Snapper",
+          "source": "Recipe sold by Tansy Puddlefizz (Alliance) or Naal Mistrunner (Horde) and 6 more",
+          "advice": "",
           "crafts": 25,
-          "name": "Skill 50–75",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 6289,
+              "name": "Raw Longjaw Mud Snapper",
+              "count": 1,
+              "icon": "inv_misc_fish_32",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "rank",
+          "rank": "Journeyman",
+          "details": "from the trainer, from skill 50 and level 10, up to 150"
+        },
+        {
+          "type": "step",
           "from": 75,
           "to": 100,
-          "spellId": 7753,
+          "bar": {
+            "iLeft": "24.666666666666668%",
+            "iWidth": "8.333333333333334%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 4592,
+          "recipeName": "Longjaw Mud Snapper",
+          "source": "Recipe sold by Tansy Puddlefizz (Alliance) or Naal Mistrunner (Horde) and 6 more",
+          "advice": "",
           "crafts": 27,
-          "name": "Skill 75–100",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 6289,
+              "name": "Raw Longjaw Mud Snapper",
+              "count": 1,
+              "icon": "inv_misc_fish_32",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 100,
           "to": 150,
-          "spellId": 7755,
+          "bar": {
+            "iLeft": "33%",
+            "iWidth": "16.666666666666668%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 4593,
+          "recipeName": "Bristle Whisker Catfish",
+          "source": "Recipe sold by Catherine Leland (Alliance) or Naal Mistrunner (Horde) and 5 more",
+          "advice": "",
           "crafts": 52,
-          "name": "Skill 100–150",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 6308,
+              "name": "Raw Bristle Whisker Catfish",
+              "count": 1,
+              "icon": "inv_misc_fish_30",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "rank",
+          "rank": "Expert",
+          "details": "from the book Expert Cookbook, sold for gold, from skill 125, up to 225"
+        },
+        {
+          "type": "step",
           "from": 150,
           "to": 157,
-          "spellId": 7755,
+          "bar": {
+            "iLeft": "49.666666666666664%",
+            "iWidth": "2.3333333333333335%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 4593,
+          "recipeName": "Bristle Whisker Catfish",
+          "source": "Recipe sold by Catherine Leland (Alliance) or Naal Mistrunner (Horde) and 5 more",
+          "advice": "",
           "crafts": 11,
-          "name": "Skill 150–157",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 6308,
+              "name": "Raw Bristle Whisker Catfish",
+              "count": 1,
+              "icon": "inv_misc_fish_30",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 157,
           "to": 175,
-          "spellId": 15853,
+          "bar": {
+            "iLeft": "52%",
+            "iWidth": "6%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 12209,
+          "recipeName": "Lean Wolf Steak",
+          "source": "Recipe sold by Super-Seller 680 (Desolace)",
+          "advice": "",
           "crafts": 20,
-          "name": "Skill 157–175",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 1015,
+              "name": "Lean Wolf Flank",
+              "count": 1,
+              "icon": "inv_misc_food_14",
+              "quality": 1
+            },
+            {
+              "itemId": 2678,
+              "name": "Mild Spices",
+              "count": 1,
+              "icon": "inv_misc_food_wheat_02",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 175,
           "to": 225,
-          "spellId": 20916,
+          "bar": {
+            "iLeft": "58%",
+            "iWidth": "16.666666666666668%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 8364,
+          "recipeName": "Mithril Head Trout",
+          "source": "Recipe sold by Heldan Galesong (Alliance) or Shankys (Horde) and 7 more",
+          "advice": "",
           "crafts": 52,
-          "name": "Skill 175–225",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 8365,
+              "name": "Raw Mithril Head Trout",
+              "count": 1,
+              "icon": "inv_misc_fish_02",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "rank",
+          "rank": "Artisan",
+          "details": "from a quest of Dirge Quikcleave in Gadgetzan, Tanaris, from skill 225 and level 35, up to 300"
+        },
+        {
+          "type": "step",
           "from": 225,
           "to": 285,
-          "spellId": 18241,
+          "bar": {
+            "iLeft": "74.66666666666667%",
+            "iWidth": "20%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 13930,
+          "recipeName": "Filet of Redgill",
+          "source": "Recipe sold by Kelsey Yance (Stranglethorn Vale)",
+          "advice": "",
           "crafts": 68,
-          "name": "Skill 225–285",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 13758,
+              "name": "Raw Redgill",
+              "count": 1,
+              "icon": "inv_misc_fish_06",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 285,
           "to": 300,
-          "spellId": 18244,
+          "bar": {
+            "iLeft": "94.66666666666667%",
+            "iWidth": "5%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 13932,
+          "recipeName": "Poached Sunscale Salmon",
+          "source": "Recipe sold by Gikkix (Tanaris)",
+          "advice": "",
           "crafts": 17,
-          "name": "Skill 285–300",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
-        }
-      ],
-      "shopping": [
-        {
-          "id": 13758,
-          "count": 68,
-          "name": "Raw Redgill",
-          "icon": "inv_misc_fish_06",
-          "quality": 1
-        },
-        {
-          "id": 8365,
-          "count": 52,
-          "name": "Raw Mithril Head Trout",
-          "icon": "inv_misc_fish_02",
-          "quality": 1
-        },
-        {
-          "id": 13760,
-          "count": 17,
-          "name": "Raw Sunscale Salmon",
-          "icon": "inv_misc_fish_19",
-          "quality": 1
-        },
-        {
-          "id": 6308,
-          "count": 63,
-          "name": "Raw Bristle Whisker Catfish",
-          "icon": "inv_misc_fish_30",
-          "quality": 1
-        },
-        {
-          "id": 1015,
-          "count": 20,
-          "name": "Lean Wolf Flank",
-          "icon": "inv_misc_food_14",
-          "quality": 1
-        },
-        {
-          "id": 6289,
-          "count": 52,
-          "name": "Raw Longjaw Mud Snapper",
-          "icon": "inv_misc_fish_32",
-          "quality": 1
-        },
-        {
-          "id": 769,
-          "count": 50,
-          "name": "Chunk of Boar Meat",
-          "icon": "inv_misc_food_14",
-          "quality": 1
-        },
-        {
-          "id": 2678,
-          "count": 20,
-          "name": "Mild Spices",
-          "icon": "inv_misc_food_wheat_02",
-          "quality": 1
+          "reagents": [
+            {
+              "itemId": 13760,
+              "name": "Raw Sunscale Salmon",
+              "count": 1,
+              "icon": "inv_misc_fish_19",
+              "quality": 1
+            }
+          ]
         }
       ]
     },
@@ -91667,6 +96475,151 @@ window.WOW_PROFESSIONS_DATA = {
           "desc": ""
         }
       ]
+    },
+    "shopping": {
+      "title": "Shopping list, 1 to 225",
+      "subtitle": "",
+      "groups": [
+        {
+          "title": "From a trade supplies vendor",
+          "note": "Always in stock, for a few coins.",
+          "items": [
+            {
+              "itemId": 2678,
+              "name": "Mild Spices",
+              "icon": "inv_misc_food_wheat_02",
+              "quality": 1,
+              "count": 20
+            }
+          ]
+        },
+        {
+          "title": "Gathered, looted or bought from other players",
+          "note": "The bulk of the cost: farm it or look at the auction house.",
+          "items": [
+            {
+              "itemId": 769,
+              "name": "Chunk of Boar Meat",
+              "icon": "inv_misc_food_14",
+              "quality": 1,
+              "count": 50
+            },
+            {
+              "itemId": 6289,
+              "name": "Raw Longjaw Mud Snapper",
+              "icon": "inv_misc_fish_32",
+              "quality": 1,
+              "count": 52
+            },
+            {
+              "itemId": 6308,
+              "name": "Raw Bristle Whisker Catfish",
+              "icon": "inv_misc_fish_30",
+              "quality": 1,
+              "count": 63
+            },
+            {
+              "itemId": 1015,
+              "name": "Lean Wolf Flank",
+              "icon": "inv_misc_food_14",
+              "quality": 1,
+              "count": 20
+            },
+            {
+              "itemId": 8365,
+              "name": "Raw Mithril Head Trout",
+              "icon": "inv_misc_fish_02",
+              "quality": 1,
+              "count": 52
+            }
+          ]
+        },
+        {
+          "title": "Gathered, looted or bought from other players",
+          "note": "The bulk of the cost: farm it or look at the auction house.",
+          "items": [
+            {
+              "itemId": 13758,
+              "name": "Raw Redgill",
+              "icon": "inv_misc_fish_06",
+              "quality": 1,
+              "count": 68
+            },
+            {
+              "itemId": 13760,
+              "name": "Raw Sunscale Salmon",
+              "icon": "inv_misc_fish_19",
+              "quality": 1,
+              "count": 17
+            }
+          ]
+        }
+      ]
+    },
+    "campPerks": {
+      "milestones": [],
+      "atCamp": [
+        {
+          "icon": "inv_camelot_camping_welcomingcampfire",
+          "name": "Basic Campfire Kit",
+          "desc": "A campfire for cooking, with room for 3 camp objects",
+          "skill": "Skill 1"
+        },
+        {
+          "icon": "inv_cooking_80_majorfeast",
+          "name": "Cookie's Feast",
+          "desc": "Stamina food for everyone at camp",
+          "skill": "Skill 140 Blueprint"
+        },
+        {
+          "icon": "inv_camelot_camping_welcomingcampfire",
+          "name": "Journeyman Campfire Kit",
+          "desc": "A campfire with room for 5 camp objects",
+          "skill": "Skill 140 Blueprint"
+        },
+        {
+          "icon": "inv_camelot_camping_welcomingcampfire",
+          "name": "Expert Campfire Kit",
+          "desc": "A campfire with room for 10 camp objects",
+          "skill": "Skill 220 Blueprint"
+        },
+        {
+          "icon": "achievement_cooking_masteroftheoven",
+          "name": "Iron Oven",
+          "desc": "Needed for the most advanced Cooking recipes",
+          "skill": "Skill 300 Blueprint"
+        }
+      ],
+      "legacyPerks": [
+        {
+          "icon": "achievement_profession_chefhat",
+          "name": "Master Chef",
+          "effect": "Your cooking recipes have a 10 / 20 / 30 / 40 / 50% chance to create an extra result.",
+          "meta": "Professions tree, 5 ranks, needs 5 points spent in the tree",
+          "planLink": ""
+        },
+        {
+          "icon": "inv_misc_food_64",
+          "name": "Gourmand",
+          "effect": "Increases the duration of beneficial effects from eating food by 33 / 67 / 100%.",
+          "meta": "Resourcefulness tree, 3 ranks, open from the start",
+          "planLink": ""
+        },
+        {
+          "icon": "inv_misc_pocketwatch_03",
+          "name": "Working Overtime",
+          "effect": "Increases your chance to gain a skill increase from using any primary, secondary, or class-based tradeskill by 4 / 8 / 12 / 16 / 20%.",
+          "meta": "Professions tree, 5 ranks, open from the start",
+          "planLink": ""
+        },
+        {
+          "icon": "inv_misc_book_08",
+          "name": "Dedicated Study",
+          "effect": "Increases your skill by 1 in your lowest tradeskill among your Primary and Secondary tradeskills. If you have already reached 300 skill in your two current Primary Tradeskills and all three Secondary Tradeskills, you will gain 2 to 4 of a random Elemental Essence.",
+          "meta": "Professions tree, 1 rank, needs 10 points spent in the tree and a rank in Bartering, 25 sec cast, 23 hour cooldown",
+          "planLink": ""
+        }
+      ]
     }
   },
   "fishing": {
@@ -91707,9 +96660,106 @@ window.WOW_PROFESSIONS_DATA = {
       }
     ],
     "leveling": {
-      "note": "Level 225 is the current Phase 2 Beta Cap. Unlocks to 300 at launch.",
-      "steps": [],
-      "shopping": []
+      "title": "Fishing Skill Brackets",
+      "waters": [
+        {
+          "skill": 25,
+          "note": "every catch lands",
+          "zones": "Dun Morogh, Durotar, Elwynn Forest, Mulgore, Teldrassil, Tirisfal Glades</span><span class=\"gt-water-from\">Fish bite from the start"
+        },
+        {
+          "skill": 75,
+          "note": "every catch lands",
+          "zones": "Blackfathom Deeps, Darkshore, Darnassus, Ironforge, Loch Modan, Orgrimmar, Silverpine Forest, Stormwind City, The Barrens, The Deadmines, Thunder Bluff, Undercity, Wailing Caverns, Westfall</span><span class=\"gt-water-from\">Fish bite from the start"
+        },
+        {
+          "skill": 150,
+          "note": "every catch lands",
+          "zones": "Ashenvale, Duskwood, Hillsbrad Foothills, Redridge Mountains, Stonetalon Mountains, Wetlands</span><span class=\"gt-water-from\">Fish bite from 51"
+        },
+        {
+          "skill": 225,
+          "note": "every catch lands",
+          "zones": "Alterac Mountains, Arathi Highlands, Desolace, Dustwallow Marsh, Scarlet Monastery, Stranglethorn Vale, Swamp of Sorrows, Thousand Needles</span><span class=\"gt-water-from\">Fish bite from 126"
+        },
+        {
+          "skill": 300,
+          "note": "every catch lands",
+          "zones": "Azshara, Felwood, Feralas, Jaguero Isle, Maraudon, Moonglade, Sunken Temple, Tanaris, The Hinterlands, Un'Goro Crater, Western Plaguelands</span><span class=\"gt-water-from\">Fish bite from 201"
+        }
+      ],
+      "lures": [
+        {
+          "icon": "inv_10_fishing_bait_color1",
+          "name": "\"Secret\" BaitNew",
+          "bonus": "+25 Fishing for 10 minAny skill"
+        },
+        {
+          "icon": "inv_misc_orb_03",
+          "name": "Shiny Bauble",
+          "bonus": "+25 Fishing for 10 minAny skill"
+        },
+        {
+          "icon": "inv_helm_armor_buckledhat_b_01_black",
+          "name": "Wide-Brimmed Fishing HatNew",
+          "bonus": "A hat that attaches a lure: +25 Fishing for 10 minAny skill"
+        },
+        {
+          "icon": "inv_misc_spyglass_01",
+          "name": "Aquadynamic Fish Lens",
+          "bonus": "+50 Fishing for 10 minFishing 50"
+        },
+        {
+          "icon": "inv_misc_monstertail_03",
+          "name": "Nightcrawlers",
+          "bonus": "+50 Fishing for 10 minFishing 50"
+        },
+        {
+          "icon": "inv_misc_gem_variety_02",
+          "name": "Bright Baubles",
+          "bonus": "+75 Fishing for 10 minFishing 100"
+        },
+        {
+          "icon": "inv_misc_monstertail_03",
+          "name": "Flesh Eating Worm",
+          "bonus": "+75 Fishing for 10 minFishing 100"
+        },
+        {
+          "icon": "inv_misc_food_26",
+          "name": "Aquadynamic Fish Attractor",
+          "bonus": "+100 Fishing for 5 minFishing 100"
+        },
+        {
+          "icon": "inv_potion_01",
+          "name": "Loch Frenzy Delight",
+          "bonus": "+3 Fishing for 15 minLevel 5"
+        },
+        {
+          "icon": "inv_misc_fish_05",
+          "name": "Fillet of Frenzy",
+          "bonus": "+5 Fishing for 15 minLevel 5"
+        },
+        {
+          "icon": "inv_misc_fish_30",
+          "name": "Bristle Whisker Catfish",
+          "bonus": "+8 Fishing for 15 minLevel 15"
+        },
+        {
+          "icon": "inv_misc_fish_04",
+          "name": "Rockscale Cod",
+          "bonus": "+12 Fishing for 15 minLevel 25"
+        },
+        {
+          "icon": "inv_misc_fish_06",
+          "name": "Filet of Redgill",
+          "bonus": "+18 Fishing for 15 minLevel 35"
+        },
+        {
+          "icon": "inv_misc_fish_22",
+          "name": "Spinefin Halibut",
+          "bonus": "+18 Fishing for 15 minLevel 45"
+        }
+      ]
     },
     "favor": {
       "camps": {
@@ -91731,6 +96781,151 @@ window.WOW_PROFESSIONS_DATA = {
         }
       },
       "recipes": []
+    },
+    "fishingWaters": [
+      {
+        "skill": 25,
+        "note": "every catch lands",
+        "zones": "Dun Morogh, Durotar, Elwynn Forest, Mulgore, Teldrassil, Tirisfal Glades</span><span class=\"gt-water-from\">Fish bite from the start"
+      },
+      {
+        "skill": 75,
+        "note": "every catch lands",
+        "zones": "Blackfathom Deeps, Darkshore, Darnassus, Ironforge, Loch Modan, Orgrimmar, Silverpine Forest, Stormwind City, The Barrens, The Deadmines, Thunder Bluff, Undercity, Wailing Caverns, Westfall</span><span class=\"gt-water-from\">Fish bite from the start"
+      },
+      {
+        "skill": 150,
+        "note": "every catch lands",
+        "zones": "Ashenvale, Duskwood, Hillsbrad Foothills, Redridge Mountains, Stonetalon Mountains, Wetlands</span><span class=\"gt-water-from\">Fish bite from 51"
+      },
+      {
+        "skill": 225,
+        "note": "every catch lands",
+        "zones": "Alterac Mountains, Arathi Highlands, Desolace, Dustwallow Marsh, Scarlet Monastery, Stranglethorn Vale, Swamp of Sorrows, Thousand Needles</span><span class=\"gt-water-from\">Fish bite from 126"
+      },
+      {
+        "skill": 300,
+        "note": "every catch lands",
+        "zones": "Azshara, Felwood, Feralas, Jaguero Isle, Maraudon, Moonglade, Sunken Temple, Tanaris, The Hinterlands, Un'Goro Crater, Western Plaguelands</span><span class=\"gt-water-from\">Fish bite from 201"
+      }
+    ],
+    "fishingLures": [
+      {
+        "icon": "inv_10_fishing_bait_color1",
+        "name": "\"Secret\" BaitNew",
+        "bonus": "+25 Fishing for 10 minAny skill"
+      },
+      {
+        "icon": "inv_misc_orb_03",
+        "name": "Shiny Bauble",
+        "bonus": "+25 Fishing for 10 minAny skill"
+      },
+      {
+        "icon": "inv_helm_armor_buckledhat_b_01_black",
+        "name": "Wide-Brimmed Fishing HatNew",
+        "bonus": "A hat that attaches a lure: +25 Fishing for 10 minAny skill"
+      },
+      {
+        "icon": "inv_misc_spyglass_01",
+        "name": "Aquadynamic Fish Lens",
+        "bonus": "+50 Fishing for 10 minFishing 50"
+      },
+      {
+        "icon": "inv_misc_monstertail_03",
+        "name": "Nightcrawlers",
+        "bonus": "+50 Fishing for 10 minFishing 50"
+      },
+      {
+        "icon": "inv_misc_gem_variety_02",
+        "name": "Bright Baubles",
+        "bonus": "+75 Fishing for 10 minFishing 100"
+      },
+      {
+        "icon": "inv_misc_monstertail_03",
+        "name": "Flesh Eating Worm",
+        "bonus": "+75 Fishing for 10 minFishing 100"
+      },
+      {
+        "icon": "inv_misc_food_26",
+        "name": "Aquadynamic Fish Attractor",
+        "bonus": "+100 Fishing for 5 minFishing 100"
+      },
+      {
+        "icon": "inv_potion_01",
+        "name": "Loch Frenzy Delight",
+        "bonus": "+3 Fishing for 15 minLevel 5"
+      },
+      {
+        "icon": "inv_misc_fish_05",
+        "name": "Fillet of Frenzy",
+        "bonus": "+5 Fishing for 15 minLevel 5"
+      },
+      {
+        "icon": "inv_misc_fish_30",
+        "name": "Bristle Whisker Catfish",
+        "bonus": "+8 Fishing for 15 minLevel 15"
+      },
+      {
+        "icon": "inv_misc_fish_04",
+        "name": "Rockscale Cod",
+        "bonus": "+12 Fishing for 15 minLevel 25"
+      },
+      {
+        "icon": "inv_misc_fish_06",
+        "name": "Filet of Redgill",
+        "bonus": "+18 Fishing for 15 minLevel 35"
+      },
+      {
+        "icon": "inv_misc_fish_22",
+        "name": "Spinefin Halibut",
+        "bonus": "+18 Fishing for 15 minLevel 45"
+      }
+    ],
+    "campPerks": {
+      "milestones": [],
+      "atCamp": [
+        {
+          "icon": "inv_magicalfishpet",
+          "name": "Fish Bowl",
+          "desc": "8% to all stats for everyone sitting nearby, like Blessing of Kings",
+          "skill": "Skill 20"
+        },
+        {
+          "icon": "inv_misc_2h_draenorfishingpole_a_01",
+          "name": "Fishing Rack",
+          "desc": "Uncommon fish for 1 hr and Fishing Skill lures, and gives the Fish Bowl buff",
+          "skill": "Skill 140 Blueprint"
+        },
+        {
+          "icon": "inv_fishingchair",
+          "name": "Fishing Hut",
+          "desc": "Rare fish for 1 hr and Fishing Skill lures, and gives the Fish Bowl buff",
+          "skill": "Skill 300 Blueprint"
+        }
+      ],
+      "legacyPerks": [
+        {
+          "icon": "inv_misc_basket_04",
+          "name": "Luremaster",
+          "effect": "While fishing with a Lure active, you have a 25 / 50% chance to catch an extra fish.",
+          "meta": "Professions tree, 2 ranks, needs 5 points spent in the tree",
+          "planLink": ""
+        },
+        {
+          "icon": "inv_misc_pocketwatch_03",
+          "name": "Working Overtime",
+          "effect": "Increases your chance to gain a skill increase from using any primary, secondary, or class-based tradeskill by 4 / 8 / 12 / 16 / 20%.",
+          "meta": "Professions tree, 5 ranks, open from the start",
+          "planLink": ""
+        },
+        {
+          "icon": "inv_misc_book_08",
+          "name": "Dedicated Study",
+          "effect": "Increases your skill by 1 in your lowest tradeskill among your Primary and Secondary tradeskills. If you have already reached 300 skill in your two current Primary Tradeskills and all three Secondary Tradeskills, you will gain 2 to 4 of a random Elemental Essence.",
+          "meta": "Professions tree, 1 rank, needs 10 points spent in the tree and a rank in Bartering, 25 sec cast, 23 hour cooldown",
+          "planLink": ""
+        }
+      ]
     }
   },
   "first-aid": {
@@ -92755,251 +97950,483 @@ window.WOW_PROFESSIONS_DATA = {
     ],
     "gatheringNodes": [],
     "leveling": {
-      "note": "Built by scripts/prepare-leveling.mjs; do not edit.",
+      "title": "Leveling from 1 to 300",
+      "capNote": "225 is the beta's cap for now",
+      "desc": "At each point, you get the cheapest recipe to skill up, whether you learn it from the trainer or buy it from a vendor. Counts are averages, so buy a few more. There are no prices until launch, so each reagent counts for what a vendor pays you for it.",
       "steps": [
         {
+          "type": "rank",
+          "rank": "Apprentice",
+          "details": "from any First Aid trainer, up to 75"
+        },
+        {
+          "type": "step",
           "from": 1,
           "to": 41,
-          "spellId": 3275,
+          "bar": {
+            "iLeft": "0%",
+            "iWidth": "13.333333333333334%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 1251,
+          "recipeName": "Linen Bandage",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 43,
-          "name": "Skill 1–41",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 2589,
+              "name": "Linen Cloth",
+              "count": 1,
+              "icon": "inv_fabric_linen_01",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 41,
           "to": 55,
-          "spellId": 3276,
+          "bar": {
+            "iLeft": "13.333333333333334%",
+            "iWidth": "4.666666666666667%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 2581,
+          "recipeName": "Heavy Linen Bandage",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 15,
-          "name": "Skill 41–55",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 2589,
+              "name": "Linen Cloth",
+              "count": 2,
+              "icon": "inv_fabric_linen_01",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 55,
           "to": 75,
-          "spellId": 1244431,
+          "bar": {
+            "iLeft": "18%",
+            "iWidth": "6.666666666666667%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 118,
+          "recipeName": "Minor Healing Potion",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 28,
-          "name": "Skill 55–75",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 3371,
+              "name": "Empty Vial",
+              "count": 1,
+              "icon": "inv_potion_84",
+              "quality": 1
+            },
+            {
+              "itemId": 2678,
+              "name": "Mild Spices",
+              "count": 1,
+              "icon": "inv_misc_food_wheat_02",
+              "quality": 1
+            },
+            {
+              "itemId": 2447,
+              "name": "Peacebloom",
+              "count": 1,
+              "icon": "inv_misc_flower_02",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "rank",
+          "rank": "Journeyman",
+          "details": "from the trainer, from skill 50 and level 10, up to 150"
+        },
+        {
+          "type": "step",
           "from": 75,
           "to": 80,
-          "spellId": 1244431,
+          "bar": {
+            "iLeft": "24.666666666666668%",
+            "iWidth": "1.6666666666666667%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 118,
+          "recipeName": "Minor Healing Potion",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 12,
-          "name": "Skill 75–80",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 3371,
+              "name": "Empty Vial",
+              "count": 1,
+              "icon": "inv_potion_84",
+              "quality": 1
+            },
+            {
+              "itemId": 2678,
+              "name": "Mild Spices",
+              "count": 1,
+              "icon": "inv_misc_food_wheat_02",
+              "quality": 1
+            },
+            {
+              "itemId": 2447,
+              "name": "Peacebloom",
+              "count": 1,
+              "icon": "inv_misc_flower_02",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 80,
           "to": 85,
-          "spellId": 3277,
+          "bar": {
+            "iLeft": "26.333333333333332%",
+            "iWidth": "1.6666666666666667%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 3530,
+          "recipeName": "Wool Bandage",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 6,
-          "name": "Skill 80–85",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 2592,
+              "name": "Wool Cloth",
+              "count": 1,
+              "icon": "inv_fabric_wool_01",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 85,
           "to": 90,
-          "spellId": 1244432,
+          "bar": {
+            "iLeft": "28%",
+            "iWidth": "1.6666666666666667%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 858,
+          "recipeName": "Lesser Healing Potion",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 6,
-          "name": "Skill 85–90",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 3371,
+              "name": "Empty Vial",
+              "count": 1,
+              "icon": "inv_potion_84",
+              "quality": 1
+            },
+            {
+              "itemId": 2678,
+              "name": "Mild Spices",
+              "count": 2,
+              "icon": "inv_misc_food_wheat_02",
+              "quality": 1
+            },
+            {
+              "itemId": 2450,
+              "name": "Briarthorn",
+              "count": 1,
+              "icon": "inv_misc_root_01",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 90,
           "to": 130,
-          "spellId": 1259342,
+          "bar": {
+            "iLeft": "29.666666666666668%",
+            "iWidth": "13.333333333333334%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 255716,
+          "recipeName": "Simple Poultice",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 59,
-          "name": "Skill 90–130",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 3174,
+              "name": "Spider Ichor",
+              "count": 1,
+              "icon": "inv_misc_slime_01",
+              "quality": 1
+            },
+            {
+              "itemId": 2678,
+              "name": "Mild Spices",
+              "count": 1,
+              "icon": "inv_misc_food_wheat_02",
+              "quality": 1
+            },
+            {
+              "itemId": 2723,
+              "name": "Bottle of Dalaran Noir",
+              "count": 1,
+              "icon": "inv_drink_10",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 130,
           "to": 135,
-          "spellId": 3278,
+          "bar": {
+            "iLeft": "43%",
+            "iWidth": "1.6666666666666667%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 3531,
+          "recipeName": "Heavy Wool Bandage",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 7,
-          "name": "Skill 130–135",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 2592,
+              "name": "Wool Cloth",
+              "count": 2,
+              "icon": "inv_fabric_wool_01",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 135,
           "to": 150,
-          "spellId": 1244433,
+          "bar": {
+            "iLeft": "44.666666666666664%",
+            "iWidth": "5%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 929,
+          "recipeName": "Healing Potion",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 19,
-          "name": "Skill 135–150",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 3372,
+              "name": "Leaded Vial",
+              "count": 1,
+              "icon": "inv_potion_85",
+              "quality": 1
+            },
+            {
+              "itemId": 2692,
+              "name": "Hot Spices",
+              "count": 1,
+              "icon": "inv_misc_food_legion_dalapenopepper",
+              "quality": 1
+            },
+            {
+              "itemId": 2453,
+              "name": "Bruiseweed",
+              "count": 1,
+              "icon": "inv_misc_herb_01",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "rank",
+          "rank": "Expert",
+          "details": "from the book Expert First Aid - Under Wraps, sold for gold, from skill 125, up to 225"
+        },
+        {
+          "type": "step",
           "from": 150,
           "to": 180,
-          "spellId": 7928,
+          "bar": {
+            "iLeft": "49.666666666666664%",
+            "iWidth": "10%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 6450,
+          "recipeName": "Silk Bandage",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 42,
-          "name": "Skill 150–180",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 4306,
+              "name": "Silk Cloth",
+              "count": 1,
+              "icon": "inv_fabric_silk_01",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 180,
           "to": 210,
-          "spellId": 7929,
+          "bar": {
+            "iLeft": "59.666666666666664%",
+            "iWidth": "10%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 6451,
+          "recipeName": "Heavy Silk Bandage",
+          "source": "Manual sold by Deneb Walker (Alliance) or Balai Lok'Wein (Horde)",
+          "advice": "",
           "crafts": 42,
-          "name": "Skill 180–210",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 4306,
+              "name": "Silk Cloth",
+              "count": 2,
+              "icon": "inv_fabric_silk_01",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 210,
           "to": 225,
-          "spellId": 10840,
+          "bar": {
+            "iLeft": "69.66666666666667%",
+            "iWidth": "5%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 8544,
+          "recipeName": "Mageweave Bandage",
+          "source": "Manual sold by Deneb Walker (Alliance) or Balai Lok'Wein (Horde)",
+          "advice": "",
           "crafts": 18,
-          "name": "Skill 210–225",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 4338,
+              "name": "Mageweave Cloth",
+              "count": 1,
+              "icon": "inv_fabric_mageweave_01",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "rank",
+          "rank": "Artisan",
+          "details": "from the quest Triage, in Theramore (Alliance) or Hammerfall (Horde), from skill 225 and level 35, up to 300"
+        },
+        {
+          "type": "step",
           "from": 225,
           "to": 240,
-          "spellId": 10840,
+          "bar": {
+            "iLeft": "74.66666666666667%",
+            "iWidth": "5%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 8544,
+          "recipeName": "Mageweave Bandage",
+          "source": "Manual sold by Deneb Walker (Alliance) or Balai Lok'Wein (Horde)",
+          "advice": "",
           "crafts": 24,
-          "name": "Skill 225–240",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 4338,
+              "name": "Mageweave Cloth",
+              "count": 1,
+              "icon": "inv_fabric_mageweave_01",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 240,
           "to": 260,
-          "spellId": 10841,
+          "bar": {
+            "iLeft": "79.66666666666667%",
+            "iWidth": "6.666666666666667%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 8545,
+          "recipeName": "Heavy Mageweave Bandage",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 25,
-          "name": "Skill 240–260",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 4338,
+              "name": "Mageweave Cloth",
+              "count": 2,
+              "icon": "inv_fabric_mageweave_01",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 260,
           "to": 290,
-          "spellId": 18629,
+          "bar": {
+            "iLeft": "86.33333333333333%",
+            "iWidth": "10%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 14529,
+          "recipeName": "Runecloth Bandage",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 42,
-          "name": "Skill 260–290",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
+          "reagents": [
+            {
+              "itemId": 14047,
+              "name": "Runecloth",
+              "count": 1,
+              "icon": "inv_fabric_purplefire_01",
+              "quality": 1
+            }
+          ]
         },
         {
+          "type": "step",
           "from": 290,
           "to": 300,
-          "spellId": 18630,
+          "bar": {
+            "iLeft": "96.33333333333333%",
+            "iWidth": "3.3333333333333335%",
+            "eLeft": "74.66666666666667%"
+          },
+          "itemId": 14530,
+          "recipeName": "Heavy Runecloth Bandage",
+          "source": "Learned from the trainer",
+          "advice": "",
           "crafts": 11,
-          "name": "Skill 290–300",
-          "icon": "inv_misc_questionmark",
-          "source": "Trainer"
-        }
-      ],
-      "shopping": [
-        {
-          "id": 14047,
-          "count": 64,
-          "name": "Runecloth",
-          "icon": "inv_fabric_purplefire_01",
-          "quality": 1
-        },
-        {
-          "id": 4338,
-          "count": 92,
-          "name": "Mageweave Cloth",
-          "icon": "inv_fabric_mageweave_01",
-          "quality": 1
-        },
-        {
-          "id": 4306,
-          "count": 126,
-          "name": "Silk Cloth",
-          "icon": "inv_fabric_silk_01",
-          "quality": 1
-        },
-        {
-          "id": 2589,
-          "count": 73,
-          "name": "Linen Cloth",
-          "icon": "inv_fabric_linen_01",
-          "quality": 1
-        },
-        {
-          "id": 3174,
-          "count": 59,
-          "name": "Spider Ichor",
-          "icon": "inv_misc_slime_01",
-          "quality": 1
-        },
-        {
-          "id": 3372,
-          "count": 19,
-          "name": "Leaded Vial",
-          "icon": "inv_potion_85",
-          "quality": 1
-        },
-        {
-          "id": 2723,
-          "count": 59,
-          "name": "Bottle of Dalaran Noir",
-          "icon": "inv_drink_10",
-          "quality": 1
-        },
-        {
-          "id": 2592,
-          "count": 20,
-          "name": "Wool Cloth",
-          "icon": "inv_fabric_wool_01",
-          "quality": 1
-        },
-        {
-          "id": 2453,
-          "count": 19,
-          "name": "Bruiseweed",
-          "icon": "inv_misc_herb_01",
-          "quality": 1
-        },
-        {
-          "id": 2447,
-          "count": 40,
-          "name": "Peacebloom",
-          "icon": "inv_misc_flower_02",
-          "quality": 1
-        },
-        {
-          "id": 2678,
-          "count": 111,
-          "name": "Mild Spices",
-          "icon": "inv_misc_food_wheat_02",
-          "quality": 1
-        },
-        {
-          "id": 3371,
-          "count": 46,
-          "name": "Empty Vial",
-          "icon": "inv_potion_84",
-          "quality": 1
-        },
-        {
-          "id": 2692,
-          "count": 19,
-          "name": "Hot Spices",
-          "icon": "inv_misc_food_legion_dalapenopepper",
-          "quality": 1
-        },
-        {
-          "id": 2450,
-          "count": 6,
-          "name": "Briarthorn",
-          "icon": "inv_misc_root_01",
-          "quality": 1
+          "reagents": [
+            {
+              "itemId": 14047,
+              "name": "Runecloth",
+              "count": 2,
+              "icon": "inv_fabric_purplefire_01",
+              "quality": 1
+            }
+          ]
         }
       ]
     },
@@ -93021,6 +98448,181 @@ window.WOW_PROFESSIONS_DATA = {
         }
       },
       "recipes": []
+    },
+    "shopping": {
+      "title": "Shopping list, 1 to 225",
+      "subtitle": "",
+      "groups": [
+        {
+          "title": "From a trade supplies vendor",
+          "note": "Always in stock, for a few coins.",
+          "items": [
+            {
+              "itemId": 3371,
+              "name": "Empty Vial",
+              "icon": "inv_potion_84",
+              "quality": 1,
+              "count": 46
+            },
+            {
+              "itemId": 2678,
+              "name": "Mild Spices",
+              "icon": "inv_misc_food_wheat_02",
+              "quality": 1,
+              "count": 111
+            },
+            {
+              "itemId": 2723,
+              "name": "Bottle of Dalaran Noir",
+              "icon": "inv_drink_10",
+              "quality": 1,
+              "count": 59
+            },
+            {
+              "itemId": 3372,
+              "name": "Leaded Vial",
+              "icon": "inv_potion_85",
+              "quality": 1,
+              "count": 19
+            },
+            {
+              "itemId": 2692,
+              "name": "Hot Spices",
+              "icon": "inv_misc_food_legion_dalapenopepper",
+              "quality": 1,
+              "count": 19
+            }
+          ]
+        },
+        {
+          "title": "Gathered, looted or bought from other players",
+          "note": "The bulk of the cost: farm it or look at the auction house.",
+          "items": [
+            {
+              "itemId": 2589,
+              "name": "Linen Cloth",
+              "icon": "inv_fabric_linen_01",
+              "quality": 1,
+              "count": 73
+            },
+            {
+              "itemId": 2447,
+              "name": "Peacebloom",
+              "icon": "inv_misc_flower_02",
+              "quality": 1,
+              "count": 40
+            },
+            {
+              "itemId": 2592,
+              "name": "Wool Cloth",
+              "icon": "inv_fabric_wool_01",
+              "quality": 1,
+              "count": 20
+            },
+            {
+              "itemId": 2450,
+              "name": "Briarthorn",
+              "icon": "inv_misc_root_01",
+              "quality": 1,
+              "count": 6
+            },
+            {
+              "itemId": 3174,
+              "name": "Spider Ichor",
+              "icon": "inv_misc_slime_01",
+              "quality": 1,
+              "count": 59
+            },
+            {
+              "itemId": 2453,
+              "name": "Bruiseweed",
+              "icon": "inv_misc_herb_01",
+              "quality": 1,
+              "count": 19
+            },
+            {
+              "itemId": 4306,
+              "name": "Silk Cloth",
+              "icon": "inv_fabric_silk_01",
+              "quality": 1,
+              "count": 126
+            },
+            {
+              "itemId": 4338,
+              "name": "Mageweave Cloth",
+              "icon": "inv_fabric_mageweave_01",
+              "quality": 1,
+              "count": 18
+            }
+          ]
+        },
+        {
+          "title": "Gathered, looted or bought from other players",
+          "note": "The bulk of the cost: farm it or look at the auction house.",
+          "items": [
+            {
+              "itemId": 4338,
+              "name": "Mageweave Cloth",
+              "icon": "inv_fabric_mageweave_01",
+              "quality": 1,
+              "count": 74
+            },
+            {
+              "itemId": 14047,
+              "name": "Runecloth",
+              "icon": "inv_fabric_purplefire_01",
+              "quality": 1,
+              "count": 64
+            }
+          ]
+        }
+      ]
+    },
+    "campPerks": {
+      "milestones": [],
+      "atCamp": [
+        {
+          "icon": "inv_misc_bandage_11",
+          "name": "First Aid Kit",
+          "desc": "56 Stamina to everyone sitting nearby, like Power Word: Fortitude (at level 60, scaling with level)",
+          "skill": "Skill 20"
+        },
+        {
+          "icon": "inv_misc_potiona3",
+          "name": "Toxin Study",
+          "desc": "Holds healing potions and anti-venom, and gives the First Aid Kit buff",
+          "skill": "Skill 140 Blueprint"
+        },
+        {
+          "icon": "inv_10_alchemy_incenseholder_color1",
+          "name": "Plague Doctor's Laboratory",
+          "desc": "Holds healing potions and poultices, and gives the First Aid Kit buff",
+          "skill": "Skill 300 Blueprint"
+        }
+      ],
+      "legacyPerks": [
+        {
+          "icon": "inv_misc_bandage_05",
+          "name": "Field Medicine",
+          "effect": "Reduces the duration of the Recently Bandaged effect by 5 / 10 sec when you use a bandage. Ineffective in dungeons, raids, and battlegrounds.",
+          "meta": "Adventure tree, 2 ranks, needs 5 points spent in the tree",
+          "planLink": ""
+        },
+        {
+          "icon": "inv_misc_pocketwatch_03",
+          "name": "Working Overtime",
+          "effect": "Increases your chance to gain a skill increase from using any primary, secondary, or class-based tradeskill by 4 / 8 / 12 / 16 / 20%.",
+          "meta": "Professions tree, 5 ranks, open from the start",
+          "planLink": ""
+        },
+        {
+          "icon": "inv_misc_book_08",
+          "name": "Dedicated Study",
+          "effect": "Increases your skill by 1 in your lowest tradeskill among your Primary and Secondary tradeskills. If you have already reached 300 skill in your two current Primary Tradeskills and all three Secondary Tradeskills, you will gain 2 to 4 of a random Elemental Essence.",
+          "meta": "Professions tree, 1 rank, needs 10 points spent in the tree and a rank in Bartering, 25 sec cast, 23 hour cooldown",
+          "planLink": ""
+        }
+      ]
     }
   },
   "camping": {
