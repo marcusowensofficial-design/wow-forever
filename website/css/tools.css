@@ -4617,33 +4617,58 @@
 }
 
 .pet-master-directory-btn {
-  background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(6, 95, 70, 0.35));
-  border: 1px solid rgba(16, 185, 129, 0.5);
-  color: #6ee7b7;
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.28) 0%, rgba(5, 150, 105, 0.45) 50%, rgba(6, 95, 70, 0.6) 100%);
+  border: 1.5px solid rgba(52, 211, 153, 0.75);
+  color: #ffffff;
   font-size: 0.86rem;
   font-weight: 700;
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
+  padding: 0.52rem 1.05rem;
+  border-radius: 8px;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  transition: all 0.2s ease;
+  gap: 0.6rem;
+  box-shadow: 0 0 16px rgba(16, 185, 129, 0.3), 0 2px 8px rgba(0, 0, 0, 0.5);
+  animation: pmd-glow-pulse 2.6s infinite ease-in-out;
+  transition: all 0.22s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .pet-master-directory-btn:hover {
-  background: linear-gradient(135deg, rgba(16, 185, 129, 0.35), rgba(6, 95, 70, 0.55));
-  border-color: #6ee7b7;
-  color: #fff;
-  transform: translateY(-1px);
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.45) 0%, rgba(5, 150, 105, 0.7) 100%);
+  border-color: #a7f3d0;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 0 26px rgba(52, 211, 153, 0.65), 0 6px 18px rgba(0, 0, 0, 0.6);
+}
+
+.pet-master-directory-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 0 12px rgba(16, 185, 129, 0.4);
 }
 
 .pet-master-directory-btn .pmd-badge {
-  font-size: 0.7rem;
-  background: rgba(0, 0, 0, 0.4);
-  padding: 0.15rem 0.4rem;
-  border-radius: 4px;
-  color: #fcd34d;
+  font-size: 0.72rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  color: #0b1329;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  letter-spacing: 0.02em;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
+  display: inline-flex;
+  align-items: center;
+  line-height: 1.2;
+}
+
+@keyframes pmd-glow-pulse {
+  0%, 100% {
+    box-shadow: 0 0 12px rgba(16, 185, 129, 0.28), 0 2px 6px rgba(0, 0, 0, 0.45);
+    border-color: rgba(52, 211, 153, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 22px rgba(52, 211, 153, 0.55), 0 0 32px rgba(16, 185, 129, 0.3), 0 4px 12px rgba(0, 0, 0, 0.55);
+    border-color: #34d399;
+  }
 }
 
 /* Master Pet Table Modal */
@@ -4842,5 +4867,457 @@
 .mf-camp-card:hover {
   transform: translateY(-2px);
 }
+
+/* ==========================================================================
+   HUNTER PET STABLE & BETA FORENSICS SUITE
+   ========================================================================== */
+.pet-quick-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
+  padding: 0.75rem 1rem;
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-md);
+}
+
+.pet-nav-pill {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #cbd5e1;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.4rem 0.75rem;
+  border-radius: 9999px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.pet-nav-pill:hover {
+  background: rgba(16, 185, 129, 0.15);
+  border-color: #10b981;
+  color: #6ee7b7;
+  transform: translateY(-1px);
+}
+
+.pet-spotlight-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.pet-spotlight-card {
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.85) 0%, rgba(30, 41, 59, 0.7) 100%);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  border-left: 4px solid var(--accent-gold);
+  border-radius: var(--radius-md);
+  padding: 1.1rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.pet-spotlight-card.spotlight-owl {
+  border-color: rgba(56, 189, 248, 0.3);
+  border-left-color: #38bdf8;
+}
+
+.psc-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.psc-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  object-fit: cover;
+}
+
+.psc-meta-specs {
+  display: flex;
+  gap: 0.4rem;
+  margin: 0.5rem 0;
+  flex-wrap: wrap;
+}
+
+.pet-dash-banner {
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-md);
+  padding: 1rem 1.2rem;
+  margin-top: 1.25rem;
+}
+
+.pet-dash-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.pet-dash-pill {
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  color: #6ee7b7;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.pet-dash-pill.classic-pill {
+  background: rgba(148, 163, 184, 0.1);
+  border-color: rgba(148, 163, 184, 0.25);
+  color: #94a3b8;
+}
+
+.pet-removed-pill {
+  background: rgba(239, 68, 68, 0.12);
+  border: 1px solid rgba(239, 68, 68, 0.35);
+  color: #fca5a5;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  text-decoration: line-through;
+}
+
+/* Side-by-side Abilities Changed Diff */
+.pet-diff-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.pet-diff-card {
+  background: rgba(15, 23, 42, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.pet-diff-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(245, 158, 11, 0.4);
+}
+
+.pet-diff-header {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.pet-diff-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.pet-diff-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.diff-version {
+  padding: 0.65rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  line-height: 1.45;
+}
+
+.diff-version.classic {
+  background: rgba(30, 41, 59, 0.5);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  color: #94a3b8;
+}
+
+.diff-version.forever {
+  background: rgba(16, 185, 129, 0.08);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  color: #e2e8f0;
+}
+
+.diff-version-tag {
+  font-size: 0.68rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.25rem;
+  display: inline-block;
+}
+
+.diff-version.classic .diff-version-tag {
+  color: #94a3b8;
+}
+
+.diff-version.forever .diff-version-tag {
+  color: #34d399;
+}
+
+.pet-diff-delta {
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: #fcd34d;
+  background: rgba(245, 158, 11, 0.1);
+  border: 1px solid rgba(245, 158, 11, 0.25);
+  border-radius: 4px;
+  padding: 0.35rem 0.6rem;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+/* Universal Mechanics Grid */
+.pet-mechanics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 0.85rem;
+  margin-top: 1rem;
+}
+
+.pet-mechanic-card {
+  background: rgba(15, 23, 42, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-md);
+  padding: 0.95rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  transition: border-color 0.2s ease;
+}
+
+.pet-mechanic-card:hover {
+  border-color: rgba(56, 189, 248, 0.35);
+}
+
+.pmc-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pmc-title-row {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: #fff;
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.pmc-desc {
+  font-size: 0.8rem;
+  color: #cbd5e1;
+  line-height: 1.45;
+  margin: 0;
+}
+
+/* Training & Attack Speed Guide Box */
+.pet-training-box {
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.pet-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 0.85rem;
+  margin: 1rem 0;
+}
+
+.pet-step-card {
+  background: rgba(30, 41, 59, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 6px;
+  padding: 0.85rem 1rem;
+}
+
+.pet-step-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #10b981;
+  color: #0f172a;
+  font-size: 0.75rem;
+  font-weight: 800;
+  margin-bottom: 0.4rem;
+}
+
+.pet-beta-bug-alert {
+  background: rgba(239, 68, 68, 0.08);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  border-left: 4px solid #ef4444;
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  margin: 0.85rem 0;
+  font-size: 0.82rem;
+  color: #fca5a5;
+  line-height: 1.45;
+}
+
+.pet-speed-box {
+  background: rgba(56, 189, 248, 0.06);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  border-left: 4px solid #38bdf8;
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  margin-top: 0.85rem;
+  font-size: 0.82rem;
+  color: #bae6fd;
+  line-height: 1.45;
+}
+
+/* Pet Changes Cross-Navigation & CTA Banners */
+.pet-changes-cta-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.14) 0%, rgba(16, 185, 129, 0.09) 50%, rgba(15, 23, 42, 0.95) 100%);
+  border: 1px solid rgba(245, 158, 11, 0.4);
+  border-radius: 8px;
+  padding: 1.15rem 1.4rem;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.pet-changes-cta-content {
+  flex: 1;
+  min-width: 280px;
+}
+
+.pet-changes-cta-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  color: #fff;
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+}
+
+.pet-changes-cta-tag {
+  background: rgba(245, 158, 11, 0.2);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.4);
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.pet-changes-cta-desc {
+  font-size: 0.84rem;
+  color: #cbd5e1;
+  margin: 0;
+  line-height: 1.45;
+}
+
+.pet-changes-cta-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+}
+
+.btn-switch-pet-tab {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  padding: 0.65rem 1.15rem;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.btn-switch-pet-tab.pet-cta-primary-btn {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  color: #0f172a;
+  box-shadow: 0 4px 14px rgba(245, 158, 11, 0.35);
+}
+
+.btn-switch-pet-tab.pet-cta-primary-btn:hover {
+  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(245, 158, 11, 0.55);
+}
+
+.btn-switch-pet-tab.pet-cta-secondary-btn {
+  background: rgba(16, 185, 129, 0.15);
+  color: #6ee7b7;
+  border: 1px solid rgba(16, 185, 129, 0.4);
+}
+
+.btn-switch-pet-tab.pet-cta-secondary-btn:hover {
+  background: rgba(16, 185, 129, 0.28);
+  border-color: #34d399;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.pet-changes-top-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 0.85rem 1.15rem;
+  margin-top: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.pet-changes-return-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.12) 0%, rgba(15, 23, 42, 0.85) 100%);
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem;
+  margin-top: 2rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
 
 

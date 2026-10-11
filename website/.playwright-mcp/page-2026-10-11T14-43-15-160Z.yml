@@ -1,0 +1,1263 @@
+- generic [active] [ref=e1]:
+  - complementary "Game and Beta Status Bar" [ref=e2]:
+    - generic [ref=e3]: "Beta Phase 2: LIVE NOW • Level 30 Cap Active"
+    - generic [ref=e6]:
+      - generic [ref=e7]:
+        - strong [ref=e8]: "Beta Duration:"
+        - text: 35 Days (Sept 17 – Oct 21) •
+        - generic [ref=e9]: Day 24 of 35
+      - generic [ref=e10]:
+        - strong [ref=e11]: "Level Cap:"
+        - text: 30 Active (Excavation Site 4 & Dalaran Live)
+      - generic [ref=e12]: Classic+ Standalone
+      - generic [ref=e13]: "🍺 Events: Brewfest & Harvest Concluded • Hallow's End Arrives Oct 18"
+      - generic [ref=e14]:
+        - strong [ref=e15]: "Rulesets:"
+        - text: PvP • PvE • RP • Hardcore
+      - generic [ref=e16]:
+        - strong [ref=e17]: "Engine:"
+        - text: Ray-Traced GI (DX12)
+      - generic [ref=e18]:
+        - strong [ref=e19]: "Client Build:"
+        - text: 1.60.6.71890 (Phase 2 Cooldown Manager & UI Overhaul)
+  - generic [ref=e20]:
+    - generic [ref=e21]:
+      - generic [ref=e22]:
+        - generic [ref=e23]: Beta Build 1.60.6.71890 • Realms Online
+        - button "🐟 4,021 murlocs online" [ref=e26] [cursor=pointer]:
+          - generic [ref=e27]: 🐟
+          - generic [ref=e28]: 4,021
+          - generic [ref=e29]: murlocs online
+      - generic [ref=e30]:
+        - button "Search Forever" [ref=e31] [cursor=pointer]:
+          - generic: 🔍
+          - text: Search Forever
+          - generic [ref=e32]: /
+        - button "Classic+ Guides" [ref=e33] [cursor=pointer]:
+          - generic [ref=e34]: 📖
+          - text: Classic+ Guides
+    - banner [ref=e35]:
+      - generic [ref=e36]:
+        - generic [ref=e37]: ⚡
+        - generic [ref=e38]: BLIZZARD ENTERTAINMENT
+        - generic [ref=e39]: ⚡
+      - 'heading "WORLD OF WARCRAFT: FOREVER" [level=1] [ref=e40]'
+      - paragraph [ref=e41]:
+        - text: The permanent, living
+        - strong [ref=e42]: Classic+
+        - text: adventure. Featuring horizontal progression at Level 60, the new
+        - strong [ref=e43]: Skyborne
+        - text: race, 9 new leveling dungeons, 3 raid tiers, and zero level scaling.
+      - navigation "Official Guides and Tools" [ref=e44]:
+        - 'link "🌐 Wowhead: Everything We Know" [ref=e45] [cursor=pointer]':
+          - /url: https://www.wowhead.com/forever/news/everything-we-know-about-wow-forever-382827
+          - generic [ref=e46]: 🌐
+          - text: "Wowhead: Everything We Know"
+        - 'link "🍺 Warcraft Tavern: Phase 2 Level 30 & Pre-BiS" [ref=e47] [cursor=pointer]':
+          - /url: https://www.warcrafttavern.com/forever/
+          - generic [ref=e48]: 🍺
+          - text: "Warcraft Tavern: Phase 2 Level 30 & Pre-BiS"
+        - 'link "📊 Mobalytics: Level 30 Meta & Tier Lists" [ref=e49] [cursor=pointer]':
+          - /url: https://mobalytics.gg/wow-forever
+          - generic [ref=e50]: 📊
+          - text: "Mobalytics: Level 30 Meta & Tier Lists"
+        - button "⚡ Interactive Talent Calculator" [ref=e51] [cursor=pointer]:
+          - generic [ref=e52]: ⚡
+          - text: Interactive Talent Calculator
+        - link "🏆 Wowhead Legacy Calculator" [ref=e53] [cursor=pointer]:
+          - /url: https://www.wowhead.com/forever/legacy-calculator
+          - generic [ref=e54]: 🏆
+          - text: Wowhead Legacy Calculator
+        - link "⚔️ Method.gg Itemization Guide" [ref=e55] [cursor=pointer]:
+          - /url: https://www.method.gg/wow-classic/itemization-updates-in-world-of-warcraft-forever-expertise-spell-damage-more
+          - generic [ref=e56]: ⚔️
+          - text: Method.gg Itemization Guide
+        - link "🦅 Method.gg Racials Breakdown" [ref=e57] [cursor=pointer]:
+          - /url: https://www.method.gg/wow-classic/all-new-racial-abilities-in-world-of-warcraft-forever
+          - generic [ref=e58]: 🦅
+          - text: Method.gg Racials Breakdown
+      - navigation "Main Navigation" [ref=e59]:
+        - button "⚡ Operations Hub" [ref=e60] [cursor=pointer]:
+          - generic [ref=e61]: ⚡
+          - text: Operations Hub
+        - button "🛡️ Level 30 BiS" [ref=e62] [cursor=pointer]:
+          - generic [ref=e63]: 🛡️
+          - text: Level 30 BiS
+        - button "📰 News & Dispatches" [ref=e64] [cursor=pointer]:
+          - generic [ref=e65]: 📰
+          - text: News & Dispatches
+        - button "📜 Content Codex" [ref=e66] [cursor=pointer]:
+          - generic [ref=e67]: 📜
+          - text: Content Codex
+        - button "🗺️ World Atlas & Rares" [ref=e68] [cursor=pointer]:
+          - generic [ref=e69]: 🗺️
+          - text: World Atlas & Rares
+        - button "📊 Tier List Maker" [ref=e70] [cursor=pointer]:
+          - generic [ref=e71]: 📊
+          - text: Tier List Maker
+        - button "🧪 Downrank Calc" [ref=e72] [cursor=pointer]:
+          - generic [ref=e73]: 🧪
+          - text: Downrank Calc
+        - button "🧙 Class & Race Planner" [ref=e74] [cursor=pointer]:
+          - generic [ref=e75]: 🧙
+          - text: Class & Race Planner
+        - button "🎯 Class Deep Dives" [ref=e76] [cursor=pointer]:
+          - generic [ref=e77]: 🎯
+          - text: Class Deep Dives
+        - button "🔨 Professions & Camping" [ref=e78] [cursor=pointer]:
+          - generic [ref=e79]: 🔨
+          - text: Professions & Camping
+        - button "⚙️ Systems & Engine" [ref=e80] [cursor=pointer]:
+          - generic [ref=e81]: ⚙️
+          - text: Systems & Engine
+        - button "🛡️ My Forever & Squad" [ref=e82] [cursor=pointer]:
+          - generic [ref=e83]: 🛡️
+          - text: My Forever & Squad
+    - text: ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • •
+    - region "Class Deep Dives" [ref=e501]:
+      - generic [ref=e502]:
+        - generic [ref=e503]:
+          - heading "🎯 Class Deep Dives & Hands-On Forensics" [level=2] [ref=e504]:
+            - generic [ref=e505]: 🎯
+            - text: Class Deep Dives & Hands-On Forensics
+          - paragraph [ref=e506]: Forensic breakdowns of class revamps, abilities, and mechanics. Sourced directly from Sodapoppin's hands-on BlizzCon 2026 early access demo, closed beta datamining, and verified WoW Forever systems.
+        - generic [ref=e507]: 🎙️ BlizzCon Early Access & Closed Beta
+      - generic [ref=e509]:
+        - generic [ref=e510]: "Verification Protocol:"
+        - generic [ref=e511]:
+          - generic [ref=e512]:
+            - generic [ref=e513]: ✓
+            - text: Verified in Closed Beta
+          - generic [ref=e514]:
+            - generic [ref=e515]: 🎙️
+            - text: Sodapoppin Hands-On Demo
+          - generic [ref=e516]:
+            - generic [ref=e517]: ✦
+            - text: WoW Forever Exclusive
+      - generic [ref=e519]:
+        - button "🏹 Hunter ✦ Deep Dive Ready" [ref=e520] [cursor=pointer]:
+          - generic [ref=e521]: 🏹
+          - generic [ref=e522]: Hunter
+          - generic [ref=e523]: ✦ Deep Dive Ready
+        - button "⚡ Shaman ✦ Deep Dive Ready" [ref=e524] [cursor=pointer]:
+          - generic [ref=e525]: ⚡
+          - generic [ref=e526]: Shaman
+          - generic [ref=e527]: ✦ Deep Dive Ready
+        - button "🔥 Mage ✦ Deep Dive Ready" [ref=e528] [cursor=pointer]:
+          - generic [ref=e529]: 🔥
+          - generic [ref=e530]: Mage
+          - generic [ref=e531]: ✦ Deep Dive Ready
+        - button "🛡️ Paladin ✦ Deep Dive Ready" [ref=e532] [cursor=pointer]:
+          - generic [ref=e533]: 🛡️
+          - generic [ref=e534]: Paladin
+          - generic [ref=e535]: ✦ Deep Dive Ready
+        - button "⚔️ Warrior ✦ Deep Dive Ready" [ref=e536] [cursor=pointer]:
+          - generic [ref=e537]: ⚔️
+          - generic [ref=e538]: Warrior
+          - generic [ref=e539]: ✦ Deep Dive Ready
+        - button "🔮 Warlock ✦ Deep Dive Ready" [ref=e540] [cursor=pointer]:
+          - generic [ref=e541]: 🔮
+          - generic [ref=e542]: Warlock
+          - generic [ref=e543]: ✦ Deep Dive Ready
+        - button "✨ Priest ✦ Deep Dive Ready" [ref=e544] [cursor=pointer]:
+          - generic [ref=e545]: ✨
+          - generic [ref=e546]: Priest
+          - generic [ref=e547]: ✦ Deep Dive Ready
+        - button "🌿 Druid ✦ Deep Dive Ready" [ref=e548] [cursor=pointer]:
+          - generic [ref=e549]: 🌿
+          - generic [ref=e550]: Druid
+          - generic [ref=e551]: ✦ Deep Dive Ready
+        - button "🗡️ Rogue ✦ Deep Dive Ready" [ref=e552] [cursor=pointer]:
+          - generic [ref=e553]: 🗡️
+          - generic [ref=e554]: Rogue
+          - generic [ref=e555]: ✦ Deep Dive Ready
+      - generic [ref=e556]:
+        - generic [ref=e557]:
+          - generic [ref=e558]:
+            - generic [ref=e559]:
+              - generic [ref=e560]: 🏹
+              - generic [ref=e561]:
+                - generic [ref=e562]:
+                  - heading "Hunter Deep Dive" [level=2] [ref=e563]
+                  - generic [ref=e564]:
+                    - generic [ref=e565]: ✓
+                    - text: Hands-On Verified
+                  - generic [ref=e566]:
+                    - generic [ref=e567]: ✦
+                    - text: Living Classic+
+                - generic [ref=e568]: Survival (Melee/Traps) • Marksmanship (Ranged/Lone Wolf) • Beast Mastery (Pets/Hawks)
+            - generic [ref=e569]: Ranged / Melee DPS
+          - generic [ref=e571]:
+            - generic [ref=e572]: 📺
+            - generic [ref=e573]:
+              - generic [ref=e574]:
+                - strong [ref=e575]: "Primary Source: \"Hunter Gets Some Big Changes in WoW Forever\""
+                - generic [ref=e576]:
+                  - generic [ref=e577]: 🎙️
+                  - text: Sodapoppin Early Access
+              - paragraph [ref=e578]: Sodapoppin Hands-On BlizzCon Early Access Demo & Closed Beta Forensics
+            - link "▶ Watch Video (Timestamped) ↗" [ref=e579] [cursor=pointer]:
+              - /url: https://www.youtube.com/watch?v=9RdIJQQpggM&t=449s
+              - generic [ref=e580]: ▶
+              - text: Watch Video (Timestamped) ↗
+          - paragraph
+          - generic [ref=e581]:
+            - button "📑 Full Dossier" [ref=e582] [cursor=pointer]:
+              - generic [ref=e583]: 📑
+              - text: Full Dossier
+            - button "📜 Core Rules & QoL" [ref=e584] [cursor=pointer]:
+              - generic [ref=e585]: 📜
+              - text: Core Rules & QoL
+            - button "⚡ Level 20 & 30 Builds" [ref=e586] [cursor=pointer]:
+              - generic [ref=e587]: ⚡
+              - text: Level 20 & 30 Builds
+            - button "⚔️ Survival Melee" [ref=e588] [cursor=pointer]:
+              - generic [ref=e589]: ⚔️
+              - text: Survival Melee
+            - button "🏹 Marksmanship Sniper" [ref=e590] [cursor=pointer]:
+              - generic [ref=e591]: 🏹
+              - text: Marksmanship Sniper
+            - button "🐾 Beast Mastery" [ref=e592] [cursor=pointer]:
+              - generic [ref=e593]: 🐾
+              - text: Beast Mastery
+            - button "🐾 Pet Stable & Abilities" [ref=e594] [cursor=pointer]:
+              - generic [ref=e595]: 🐾
+              - text: Pet Stable & Abilities
+            - button "🐂 Tauren Testing & Races" [ref=e596] [cursor=pointer]:
+              - generic [ref=e597]: 🐂
+              - text: Tauren Testing & Races
+            - button "🔬 Verification Matrix" [ref=e598] [cursor=pointer]:
+              - generic [ref=e599]: 🔬
+              - text: Verification Matrix
+        - generic [ref=e601]:
+          - generic [ref=e602]:
+            - generic [ref=e603]:
+              - heading "🐾 Pet Stable & Beast Abilities Matrix" [level=4] [ref=e604]
+              - paragraph [ref=e605]: "Classic pet mechanics preserved and expanded: 18 families, native swing speed inheritance (Broken Tooth 1.0s, Mystmane 1.6s bear), the brand new Fox family, 10 new family abilities, 8 new Dash families, and forensic beta changes."
+            - generic [ref=e606]:
+              - generic [ref=e607]: ✦
+              - text: Living Classic+ Pets
+          - generic [ref=e608]:
+            - link "🦊 New Fox & Owl Rename" [ref=e609] [cursor=pointer]:
+              - /url: "#pet-sec-changes"
+              - generic [ref=e610]: 🦊
+              - text: New Fox & Owl Rename
+            - link "⚡ 10 New Abilities (Beta Cap)" [ref=e611] [cursor=pointer]:
+              - /url: "#pet-sec-new-abilities"
+              - generic [ref=e612]: ⚡
+              - text: 10 New Abilities (Beta Cap)
+            - link "💨 Dash Expansion & Removed" [ref=e613] [cursor=pointer]:
+              - /url: "#pet-sec-dash-removed"
+              - generic [ref=e614]: 💨
+              - text: Dash Expansion & Removed
+            - link "⚖️ Abilities Changed (Classic Diff)" [ref=e615] [cursor=pointer]:
+              - /url: "#pet-sec-changed-diff"
+              - generic [ref=e616]: ⚖️
+              - text: Abilities Changed (Classic Diff)
+            - link "📊 Universal Pet Mechanics" [ref=e617] [cursor=pointer]:
+              - /url: "#pet-sec-universal"
+              - generic [ref=e618]: 📊
+              - text: Universal Pet Mechanics
+            - link "📖 Training & Speed Guide" [ref=e619] [cursor=pointer]:
+              - /url: "#pet-sec-training"
+              - generic [ref=e620]: 📖
+              - text: Training & Speed Guide
+            - link "🐾 18 Families & 502 Beasts" [ref=e621] [cursor=pointer]:
+              - /url: "#pet-sec-families"
+              - generic [ref=e622]: 🐾
+              - text: 18 Families & 502 Beasts
+          - generic [ref=e623]:
+            - generic [ref=e624]:
+              - heading "🦊 What Changed for Pets in WoW Forever" [level=4] [ref=e625]:
+                - generic [ref=e626]: 🦊
+                - text: What Changed for Pets in WoW Forever
+              - generic [ref=e627]: Read from the beta client and set against Classic’s. Each ability is shown at the rank a pet can have at level 30, the beta’s cap.
+            - generic [ref=e628]:
+              - generic [ref=e629]:
+                - generic [ref=e630]:
+                  - img "Fox" [ref=e631]
+                  - generic [ref=e632]:
+                    - generic [ref=e633]:
+                      - strong [ref=e634]: "A New Family: The Fox"
+                      - generic [ref=e635]: ✦ New in Forever
+                    - text: "🍖 Diet: Meat • Learnable Baseline: Bite, Dash"
+                - paragraph [ref=e636]: "Besides Bite and Dash it has an exclusive family signature ability of its own:"
+                - generic [ref=e637]:
+                  - generic [ref=e638]:
+                    - strong [ref=e639]: Trickster's Dance (Rank 1)
+                    - generic [ref=e640]: 10 Focus • 3 min cooldown
+                  - paragraph [ref=e641]:
+                    - text: Increases your pet's chance to Dodge by
+                    - strong [ref=e642]: 50%
+                    - text: and decreases the time between your pet's attacks by
+                    - strong [ref=e643]: 30% for 12 sec
+                    - text: .
+              - generic [ref=e644]:
+                - generic [ref=e645]:
+                  - img "Bird of Prey" [ref=e646]
+                  - generic [ref=e647]:
+                    - generic [ref=e648]:
+                      - strong [ref=e649]: Owl is now Bird of Prey
+                      - generic [ref=e650]: Family Rework
+                    - text: Same iconic winged beasts, a brand new name, and a lethal disarm!
+                - paragraph [ref=e651]:
+                  - text: Classic Owls have been unified into
+                  - strong [ref=e652]: Bird of Prey
+                  - text: "with an active weapon grab:"
+                - generic [ref=e653]:
+                  - generic [ref=e654]:
+                    - strong [ref=e655]: Mine! (Rank 3)
+                    - generic [ref=e656]: 20 Focus • 1 min cooldown
+                  - paragraph [ref=e657]:
+                    - text: Grabs an enemy's weapon with its talons, causing 20 to 24 damage and
+                    - strong [ref=e658]: disarming them for 4 sec
+                    - text: . (Learned at pet level 30).
+          - generic [ref=e659]:
+            - generic [ref=e660]:
+              - heading "⚡ 10 Brand New & Reworked Family Abilities" [level=4] [ref=e661]:
+                - generic [ref=e662]: ⚡
+                - text: 10 Brand New & Reworked Family Abilities
+              - generic [ref=e663]: Shown at Level 30 Beta Cap Rank
+            - generic [ref=e664]:
+              - generic [ref=e665]:
+                - generic [ref=e667]:
+                  - generic [ref=e668]:
+                    - strong [ref=e669]: Sonic Blast Rank 2
+                    - generic [ref=e670]: Bat
+                  - generic [ref=e671]:
+                    - generic [ref=e672]: 80 Focus
+                    - generic [ref=e673]: • 30 sec cooldown
+                - paragraph [ref=e674]: Emits a piercing shriek, inflicting 33 to 39 Nature damage and increasing the casting time of all spells by 60% for 30 sec.
+              - generic [ref=e675]:
+                - generic [ref=e677]:
+                  - generic [ref=e678]:
+                    - strong [ref=e679]: Swipe Rank 2
+                    - generic [ref=e680]: Bear
+                  - generic [ref=e681]:
+                    - generic [ref=e682]: 20 Focus
+                    - generic [ref=e683]: • 5 sec cooldown
+                - paragraph [ref=e684]: Swipe 3 nearby enemies, inflicting 8 to 10 damage.
+              - generic [ref=e685]:
+                - generic [ref=e687]:
+                  - generic [ref=e688]:
+                    - strong [ref=e689]: Mine! Rank 3
+                    - generic [ref=e690]: Bird of Prey
+                  - generic [ref=e691]:
+                    - generic [ref=e692]: 20 Focus
+                    - generic [ref=e693]: • 1 min cooldown
+                    - generic [ref=e694]: (Owl in Classic)
+                - paragraph [ref=e695]: Grabs an enemy's weapon with its talons, causing 20 to 24 damage and disarming them for 4 sec.
+              - generic [ref=e696]:
+                - generic [ref=e698]:
+                  - generic [ref=e699]:
+                    - strong [ref=e700]: Pinch Rank 2
+                    - generic [ref=e701]: Crab
+                  - generic [ref=e702]:
+                    - generic [ref=e703]: 50 Focus
+                    - generic [ref=e704]: • 30 sec cooldown
+                - paragraph [ref=e705]: Pinches an enemy's legs for 32 to 36 damage and reduces movement speed by 50% for 9 sec.
+              - generic [ref=e706]:
+                - generic [ref=e708]:
+                  - generic [ref=e709]:
+                    - strong [ref=e710]: Dismember Rank 2
+                    - generic [ref=e711]: Crocolisk
+                  - generic [ref=e712]:
+                    - generic [ref=e713]: 35 Focus
+                    - generic [ref=e714]: • 6 sec cooldown
+                - paragraph [ref=e715]: Viciously bites enemy appendages for 18 to 20 damage and reduces the effectiveness of any healing by 50% for 10 sec.
+              - generic [ref=e716]:
+                - generic [ref=e718]:
+                  - generic [ref=e719]:
+                    - strong [ref=e720]: Trickster's Dance Rank 1
+                    - generic [ref=e721]: Fox
+                  - generic [ref=e722]:
+                    - generic [ref=e723]: 10 Focus
+                    - generic [ref=e724]: • 3 min cooldown
+                    - generic [ref=e725]: (New Family)
+                - paragraph [ref=e726]: Increases your pet's chance to Dodge by 50% and decreases the time between your pet's attacks by 30% for 12 sec.
+              - generic [ref=e727]:
+                - generic [ref=e729]:
+                  - generic [ref=e730]:
+                    - strong [ref=e731]: Tendon Rip Rank 2
+                    - generic [ref=e732]: Hyena
+                  - generic [ref=e733]:
+                    - generic [ref=e734]: 25 Focus
+                    - generic [ref=e735]: • 30 sec cooldown
+                - paragraph [ref=e736]: Tears at an enemy's legs for 21 damage over 9 sec and reduces movement speed by 50% for 9 sec.
+              - generic [ref=e737]:
+                - generic [ref=e739]:
+                  - generic [ref=e740]:
+                    - strong [ref=e741]: Savage Rend Rank 2
+                    - generic [ref=e742]: Raptor
+                  - generic [ref=e743]:
+                    - generic [ref=e744]: 50 Focus
+                    - generic [ref=e745]: • 1 min cooldown
+                - paragraph [ref=e746]: Slash an enemy with razor talons, causing the target to Bleed for 54 damage over 18 sec.
+              - generic [ref=e747]:
+                - generic [ref=e749]:
+                  - generic [ref=e750]:
+                    - strong [ref=e751]: Web Rank 2
+                    - generic [ref=e752]: Spider
+                  - generic [ref=e753]:
+                    - generic [ref=e754]: 20 Focus
+                    - generic [ref=e755]: • 40 sec cooldown
+                - paragraph [ref=e756]: Entangles an enemy in a corrosive web, immobilizing them and dealing 20 Nature damage over 4 sec.
+              - generic [ref=e757]:
+                - generic [ref=e759]:
+                  - generic [ref=e760]:
+                    - strong [ref=e761]: Dust Cloud Rank 2
+                    - generic [ref=e762]: Tallstrider
+                  - generic [ref=e763]:
+                    - generic [ref=e764]: 10 Focus
+                    - generic [ref=e765]: • Instant
+                - paragraph [ref=e766]: Your tallstrider kicks up an abrasive cloud of dust, reducing the target's Armor by 175 for 30 sec.
+          - generic [ref=e768]:
+            - generic [ref=e769]:
+              - generic [ref=e770]:
+                - strong [ref=e771]: 💨 Dash Expanded to 8 More Families
+                - generic [ref=e772]: Level 30 Cap
+              - paragraph [ref=e773]: "Classic already gave Dash to Boar, Cat, Hyena, Tallstrider, and Wolf. WoW Forever adds Dash (Rank 1 at Lvl 30, 20 Focus, 30s CD) to 8 additional families:"
+              - generic [ref=e774]:
+                - generic [ref=e775]: ✓ Bear
+                - generic [ref=e776]: ✓ Crab
+                - generic [ref=e777]: ✓ Crocolisk
+                - generic [ref=e778]: ✓ Gorilla
+                - generic [ref=e779]: ✓ Raptor
+                - generic [ref=e780]: ✓ Scorpid
+                - generic [ref=e781]: ✓ Spider
+                - generic [ref=e782]: ✓ Turtle
+            - generic [ref=e783]:
+              - generic [ref=e784]:
+                - strong [ref=e785]: 🚫 Gone from Forever (Removed Abilities)
+                - generic [ref=e786]: Removed
+              - paragraph [ref=e787]: "These legacy ability assignments from Classic Era have been explicitly pruned in WoW Forever:"
+              - generic [ref=e788]:
+                - generic [ref=e789]: "Bat: Screech"
+                - generic [ref=e790]: "Bird of Prey: Screech"
+                - generic [ref=e791]: "Raptor: Cobra Reflexes"
+          - generic [ref=e792]:
+            - generic [ref=e793]:
+              - heading "⚖️ Abilities Forever Changed (Classic vs. Forever Diff)" [level=4] [ref=e794]:
+                - generic [ref=e795]: ⚖️
+                - text: Abilities Forever Changed (Classic vs. Forever Diff)
+              - generic [ref=e796]: Same abilities as in Classic, with new numbers. Each shown at Level 30 rank; open family drawers below for every rank.
+            - generic [ref=e797]:
+              - generic [ref=e798]:
+                - generic [ref=e801]:
+                  - strong [ref=e802]: Charge Rank 1
+                  - generic [ref=e803]: Boar
+                - generic [ref=e804]:
+                  - generic [ref=e805]:
+                    - generic [ref=e806]: Classic Era
+                    - paragraph [ref=e807]: Charges an enemy, immobilizes it for 1 sec, and adds 60 melee attack power to the boar's next attack.
+                  - generic [ref=e808]:
+                    - generic [ref=e809]: ✦ WoW Forever
+                    - paragraph [ref=e810]: Charges an enemy, immobilizes it for 1 sec, and adds 66 melee attack power to the boar's next attack.
+                - generic [ref=e811]:
+                  - generic [ref=e812]: ⚡
+                  - generic [ref=e813]: +6 Melee Attack Power buff (+10% increase)
+              - generic [ref=e814]:
+                - generic [ref=e816]:
+                  - generic [ref=e817]:
+                    - strong [ref=e818]: Demoralizing Screech Rank 1
+                    - generic [ref=e819]: Carrion Bird
+                  - text: (Screech in Classic)
+                - generic [ref=e820]:
+                  - generic [ref=e821]:
+                    - generic [ref=e822]: Classic Era
+                    - paragraph [ref=e823]: Blasts a single enemy for 7 to 9 damage and lowers the melee attack power of all enemies in melee range by 25. Effect lasts 4 sec.
+                  - generic [ref=e824]:
+                    - generic [ref=e825]: ✦ WoW Forever
+                    - paragraph [ref=e826]: Blasts a single enemy for 7 to 9 damage and lowers the melee attack power of all enemies in melee range by 63 for 30 sec.
+                - generic [ref=e827]:
+                  - generic [ref=e828]: ⚡
+                  - generic [ref=e829]: "Massive duration boost: 4 sec → 30 sec! Debuff increased: -25 AP → -63 AP"
+              - generic [ref=e830]:
+                - generic [ref=e833]:
+                  - strong [ref=e834]: Thunderstomp Rank 1
+                  - generic [ref=e835]: Gorilla
+                - generic [ref=e836]:
+                  - generic [ref=e837]:
+                    - generic [ref=e838]: Classic Era
+                    - paragraph [ref=e839]: Shakes the ground with thundering force, doing 70 to 80 Nature damage to all enemies within 8 yards.
+                  - generic [ref=e840]:
+                    - generic [ref=e841]: ✦ WoW Forever
+                    - paragraph [ref=e842]: Shakes the ground with thundering force, doing 53 to 61 Nature damage to all enemies within 8 yards.
+                - generic [ref=e843]:
+                  - generic [ref=e844]: ⚡
+                  - generic [ref=e845]: Rebalanced AoE damage curve + New Rank 4 added at Level 60 (122–142 Nature damage, 8 yds) which Classic never had!
+              - generic [ref=e846]:
+                - generic [ref=e849]:
+                  - strong [ref=e850]: Scorpid Poison Rank 1
+                  - generic [ref=e851]: Scorpid
+                - generic [ref=e852]:
+                  - generic [ref=e853]:
+                    - generic [ref=e854]: Classic Era
+                    - paragraph [ref=e855]: Inflicts 10 Nature damage over 10 sec. Effect can stack up to 5 times on a single target.
+                  - generic [ref=e856]:
+                    - generic [ref=e857]: ✦ WoW Forever
+                    - paragraph [ref=e858]: Inflicts 5 Nature damage over 10 sec. Effect can stack up to 5 times on a single target.
+                - generic [ref=e859]:
+                  - generic [ref=e860]: ⚡
+                  - generic [ref=e861]: Base tick adjusted (5 vs 10 Nature dmg) while maintaining the 5-stack debuff protection
+              - generic [ref=e862]:
+                - generic [ref=e865]:
+                  - strong [ref=e866]: Shell Shield Rank 1
+                  - generic [ref=e867]: Turtle
+                - generic [ref=e868]:
+                  - generic [ref=e869]:
+                    - generic [ref=e870]: Classic Era
+                    - paragraph [ref=e871]: Reduces all damage your pet takes by 50%, but increases the time between your pet's attacks by 43%. Lasts 12 sec.
+                  - generic [ref=e872]:
+                    - generic [ref=e873]: ✦ WoW Forever
+                    - paragraph [ref=e874]: Reduces all damage your pet takes by 50% and increases the time between your pet's attacks by 60%, but deals more damage with each attack. Lasts 12 sec.
+                - generic [ref=e875]:
+                  - generic [ref=e876]: ⚡
+                  - generic [ref=e877]: Swing interval penalty increased from +43% to +60%, but offset by heavier individual hit damage
+              - generic [ref=e878]:
+                - generic [ref=e881]:
+                  - strong [ref=e882]: Lightning Breath Rank 1
+                  - generic [ref=e883]: Wind Serpent
+                - generic [ref=e884]:
+                  - generic [ref=e885]:
+                    - generic [ref=e886]: Classic Era
+                    - paragraph [ref=e887]: Breathes lightning, instantly dealing 11 to 14 Nature damage to a single target.
+                  - generic [ref=e888]:
+                    - generic [ref=e889]: ✦ WoW Forever
+                    - paragraph [ref=e890]: Breathes lightning, instantly dealing 8 to 10 Nature damage to a single target.
+                - generic [ref=e891]:
+                  - generic [ref=e892]: ⚡
+                  - generic [ref=e893]: Early-level burst smoothed (8–10 vs 11–14 Nature dmg) to normalize caster pet leveling pace
+              - generic [ref=e894]:
+                - generic [ref=e897]:
+                  - strong [ref=e898]: Furious Howl Rank 1
+                  - generic [ref=e899]: Wolf
+                - generic [ref=e900]:
+                  - generic [ref=e901]:
+                    - generic [ref=e902]: Classic Era
+                    - paragraph [ref=e903]: Party members within 15 yards receive an extra 9 to 11 damage to their next Physical attack. Lasts 10 sec.
+                  - generic [ref=e904]:
+                    - generic [ref=e905]: ✦ WoW Forever
+                    - paragraph [ref=e906]: The wolf howls, increasing the melee attack power of all party members within 15 yards by 13. Lasts 1 min.
+                - generic [ref=e907]:
+                  - generic [ref=e908]: ⚡
+                  - generic [ref=e909]: Transformed from a single-hit physical proc into a persistent 1-minute party AP aura (+13 AP)
+          - generic [ref=e910]:
+            - generic [ref=e911]:
+              - heading "📊 What Changed for Every Pet (Universal Systems)" [level=4] [ref=e912]:
+                - generic [ref=e913]: 📊
+                - text: What Changed for Every Pet (Universal Systems)
+              - generic [ref=e914]: Found by beta players & gathered on the Forever Hunter wiki (github.com/classic-hunter/forever-hunter).
+            - generic [ref=e915]:
+              - generic [ref=e916]:
+                - generic [ref=e917]:
+                  - generic [ref=e918]:
+                    - generic [ref=e919]: 🛡️
+                    - generic [ref=e920]: Stats from the Hunter
+                  - generic [ref=e921]: Stat Inheritance
+                - paragraph [ref=e922]: Your pet gains 2 health for each point of your Stamina, 30% of your Armor, 10% of your highest attack power, and all of your critical strike chance (racial bonuses included).
+              - generic [ref=e923]:
+                - generic [ref=e924]:
+                  - generic [ref=e925]:
+                    - generic [ref=e926]: ⚡
+                    - generic [ref=e927]: Continuous Focus Regen
+                  - generic [ref=e928]: 2x Faster Regen
+                - paragraph [ref=e929]: Focus returns smoothly without pause at 10 Focus per second — approximately twice as fast as Classic Era's 2-second tick cadence.
+              - generic [ref=e930]:
+                - generic [ref=e931]:
+                  - generic [ref=e932]:
+                    - generic [ref=e933]: 🥩
+                    - generic [ref=e934]: Slower Happiness Decay
+                  - generic [ref=e935]: QoL Preservation
+                - paragraph [ref=e936]: Pet happiness drops significantly more slowly than in Classic Era, making feeding far less punishing during long dungeon crawls.
+              - generic [ref=e937]:
+                - generic [ref=e938]:
+                  - generic [ref=e939]:
+                    - generic [ref=e940]: 🚫
+                    - generic [ref=e941]: External Buff Restriction
+                  - generic [ref=e942]: Raid Mechanics
+                - paragraph [ref=e943]: Your pet no longer receives buffs from other players or raid members, even those it could inherit in Classic Era (e.g. paladin blessings).
+              - generic [ref=e944]:
+                - generic [ref=e945]:
+                  - generic [ref=e946]:
+                    - generic [ref=e947]: 📏
+                    - generic [ref=e948]: 100-Yard Leash Distance
+                  - generic [ref=e949]: Range Limit
+                - paragraph [ref=e950]: Your pet is automatically dismissed if it moves more than approximately 100 yards away from the Hunter.
+          - generic [ref=e951]:
+            - generic [ref=e952]:
+              - generic [ref=e953]:
+                - heading "📖 Beast Training in WoW Forever & Attack Speed Mechanics" [level=4] [ref=e954]:
+                  - generic [ref=e955]: 📖
+                  - text: Beast Training in WoW Forever & Attack Speed Mechanics
+                - paragraph [ref=e956]: Training still works as in Classic Era through a 3-step loop. Loyalty gates progression and swing speeds remain non-normalized.
+              - generic [ref=e957]:
+                - generic [ref=e958]: 🎙️
+                - text: Beta Forensics Guide
+            - generic [ref=e959]:
+              - generic [ref=e960]:
+                - generic [ref=e961]: "1"
+                - strong [ref=e962]: Tame a Beast with the Ability
+                - paragraph [ref=e963]: Consult the Beast Directory below to find wild creatures that know the specific ability rank you want to learn.
+              - generic [ref=e964]:
+                - generic [ref=e965]: "2"
+                - strong [ref=e966]: Fight until Learned
+                - paragraph [ref=e967]: Keep the tamed beast in combat until you receive the yellow learning notification in your chat log (no rank number appears in the alert).
+              - generic [ref=e968]:
+                - generic [ref=e969]: "3"
+                - strong [ref=e970]: Teach Your Main Pet
+                - paragraph [ref=e971]: Summon your main bonded pet and open your Beast Training spellbook to teach it the newly acquired ability using training points.
+            - generic [ref=e972]:
+              - generic [ref=e973]:
+                - strong [ref=e974]: "🔒 Loyalty Gates Training:"
+                - paragraph [ref=e975]: "Loyalty Gates Training: Your pet must gain a loyalty level before higher rank abilities can be taught. Beta players report loyalty progresses very slowly."
+                - paragraph [ref=e976]: You can tame beasts up to 2 levels above your character level. Beast Lore (which reveals a beast's stats and known abilities before taming) is learned at Level 24.
+              - generic [ref=e977]: "⚠️ Beta Bug Notice: Pets tamed from the Skyborne territory (such as Vuldren foxes or cranes) have been reported spontaneously losing abilities after being dismissed or relogging. This is a recognized beta bug, not intended design."
+            - generic [ref=e978]:
+              - strong [ref=e979]: "⚡ Attack Speed & Damage Mechanics in Beta:"
+              - paragraph [ref=e980]: All pets in WoW Forever have a normalized 2.0s base attack speed, modified by innate Faster Attack I–VII or Slower Attack passives matching Classic Era values (e.g. Broken Tooth 1.0s, Savannah Cub 1.2s, Ravage 1.3s, Mystmane 1.6s). Because individual hits are currently not penalized for fast swings in beta, faster-swinging pets deal higher sustained DPS.
+          - generic [ref=e981]:
+            - generic [ref=e982]:
+              - generic [ref=e983]:
+                - heading "All 18 Pet Families & Beast Taming Directory (502 Beasts)" [level=4] [ref=e984]
+                - text: Filter by role, level progression bracket, zone, or fast attack speeds
+              - generic [ref=e985]:
+                - button "🐾 Click Here to View All 502 Tamable Beasts Directory Table Open Table ↗" [ref=e986] [cursor=pointer]:
+                  - generic [ref=e987]: 🐾 Click Here to View All 502 Tamable Beasts Directory Table
+                  - generic [ref=e988]: Open Table ↗
+                - button "📍 Expand All Taming Guides" [ref=e989] [cursor=pointer]
+            - generic [ref=e990]:
+              - button "All Families (18)" [ref=e991] [cursor=pointer]
+              - button "Offense & DPS (+Dmg)" [ref=e992] [cursor=pointer]
+              - button "Tank & Survival (+Armor/HP)" [ref=e993] [cursor=pointer]
+              - button "Crowd Control & Debuffs" [ref=e994] [cursor=pointer]
+              - button "✦ New / Reworked Abilities (9)" [ref=e995] [cursor=pointer]
+            - generic [ref=e996]:
+              - generic [ref=e997]: "Level Bracket:"
+              - button "All Levels" [ref=e998] [cursor=pointer]
+              - button "Lvl 10–19 (Starters)" [ref=e999] [cursor=pointer]
+              - button "Lvl 20–30 (Beta Cap)" [ref=e1000] [cursor=pointer]
+              - button "Lvl 30+ (Endgame)" [ref=e1001] [cursor=pointer]
+              - button "⚡ Fast Swing (≤1.6s)" [ref=e1002] [cursor=pointer]
+            - generic [ref=e1004]:
+              - generic: 🔍
+              - textbox "Search beasts, zones (e.g. Westfall, Badlands, Mulgore), or abilities..." [ref=e1005]
+          - generic [ref=e1006]:
+            - generic [ref=e1007]:
+              - generic [ref=e1008]:
+                - generic [ref=e1009]:
+                  - img "Bat" [ref=e1010]
+                  - strong [ref=e1012]: Bat
+                - generic [ref=e1013]:
+                  - generic [ref=e1014]: "Dmg: +7%"
+                  - generic [ref=e1015]: "Arm: 0%"
+                  - generic [ref=e1016]: "HP: 0%"
+              - generic [ref=e1017]:
+                - generic [ref=e1018]: "🍖 Diet:"
+                - generic [ref=e1019]:
+                  - generic [ref=e1020]: Fungus
+                  - generic [ref=e1021]: Fruit
+              - paragraph [ref=e1022]: Potent anti-caster pet; 60% cast slow shuts down enemy healers and casters in PvP.
+              - generic [ref=e1023]:
+                - generic [ref=e1024]:
+                  - strong [ref=e1025]: Sonic Blast
+                  - generic [ref=e1026]: ✦ New in Forever
+                - generic [ref=e1027]:
+                  - generic [ref=e1028]: 80 Focus
+                  - generic [ref=e1029]: 30 sec CD
+                - paragraph [ref=e1030]: Emits a piercing shriek, inflicting 33 to 39 Nature damage (Rank 2) and increasing the casting time of all spells by 60% for 30 sec.
+              - generic [ref=e1031]:
+                - text: "Learnable Abilities:"
+                - generic [ref=e1032]:
+                  - generic [ref=e1033]: Sonic Blast (Rank 1-5)
+                  - generic [ref=e1034]: Dive (Rank 1-3)
+                  - generic [ref=e1035]: Bite (Rank 1-8)
+              - button "📍 Where to Tame (9 Beasts) ▾" [ref=e1036] [cursor=pointer]:
+                - generic [ref=e1037]: 📍 Where to Tame (9 Beasts)
+                - generic [ref=e1038]: ▾
+            - generic [ref=e1039]:
+              - generic [ref=e1040]:
+                - generic [ref=e1041]:
+                  - img "Bear" [ref=e1042]
+                  - generic [ref=e1043]:
+                    - strong [ref=e1044]: Bear
+                    - generic [ref=e1045]: ⚡ 1.60s (Mystmane, Mulgore / Zephras)
+                - generic [ref=e1046]:
+                  - generic [ref=e1047]: "Dmg: -9%"
+                  - generic [ref=e1048]: "Arm: +5%"
+                  - generic [ref=e1049]: "HP: +8%"
+              - generic [ref=e1050]:
+                - generic [ref=e1051]: "🍖 Diet:"
+                - generic [ref=e1052]:
+                  - generic [ref=e1053]: Meat
+                  - generic [ref=e1054]: Fish
+                  - generic [ref=e1055]: Cheese
+                  - generic [ref=e1056]: Bread
+                  - generic [ref=e1057]: Fungus
+                  - generic [ref=e1058]: Fruit
+              - paragraph [ref=e1059]: Unmatched multi-target tank; Swipe cleaves 3 targets and holds dungeon pack agro.
+              - generic [ref=e1060]:
+                - generic [ref=e1061]:
+                  - strong [ref=e1062]: Swipe & Dash
+                  - generic [ref=e1063]: ✦ New in Forever
+                - generic [ref=e1064]:
+                  - generic [ref=e1065]: 20 Focus
+                  - generic [ref=e1066]: 5 sec CD
+                - paragraph [ref=e1067]: Swipe swipes 3 nearby enemies for cleave damage every 5 seconds. Bears also learn Dash for rapid target closing.
+              - generic [ref=e1068]:
+                - text: "Learnable Abilities:"
+                - generic [ref=e1069]:
+                  - generic [ref=e1070]: Swipe (Rank 1-5)
+                  - generic [ref=e1071]: Dash (Rank 1-3)
+                  - generic [ref=e1072]: Bite (Rank 1-8)
+                  - generic [ref=e1073]: Claw (Rank 1-8)
+              - button "📍 Where to Tame (42 Beasts) ▾" [ref=e1074] [cursor=pointer]:
+                - generic [ref=e1075]: 📍 Where to Tame (42 Beasts)
+                - generic [ref=e1076]: ▾
+            - generic [ref=e1077]:
+              - generic [ref=e1078]:
+                - generic [ref=e1079]:
+                  - img "Bird of Prey" [ref=e1080]
+                  - strong [ref=e1082]: Bird of Prey
+                - generic [ref=e1083]:
+                  - generic [ref=e1084]: "Dmg: +7%"
+                  - generic [ref=e1085]: "Arm: 0%"
+                  - generic [ref=e1086]: "HP: 0%"
+              - generic [ref=e1087]:
+                - generic [ref=e1088]: "🍖 Diet:"
+                - generic [ref=e1089]: Meat
+              - paragraph [ref=e1091]: Disarm specialist; strips melee weapons from warriors and rogues to neutralize burst.
+              - generic [ref=e1092]:
+                - generic [ref=e1093]:
+                  - strong [ref=e1094]: Mine!
+                  - generic [ref=e1095]: ✦ New in Forever
+                - generic [ref=e1096]:
+                  - generic [ref=e1097]: 20 Focus
+                  - generic [ref=e1098]: 1 min CD
+                - paragraph [ref=e1099]: Grabs an enemy's weapon with its talons, causing 20 to 24 damage and physically disarming them for 4 sec.
+              - generic [ref=e1100]:
+                - text: "Learnable Abilities:"
+                - generic [ref=e1101]:
+                  - generic [ref=e1102]: Mine! (Rank 1-5)
+                  - generic [ref=e1103]: Dive (Rank 1-3)
+                  - generic [ref=e1104]: Claw (Rank 1-8)
+              - button "📍 Where to Tame (12 Beasts) ▾" [ref=e1105] [cursor=pointer]:
+                - generic [ref=e1106]: 📍 Where to Tame (12 Beasts)
+                - generic [ref=e1107]: ▾
+            - generic [ref=e1108]:
+              - generic [ref=e1109]:
+                - generic [ref=e1110]:
+                  - img "Boar" [ref=e1111]
+                  - strong [ref=e1113]: Boar
+                - generic [ref=e1114]:
+                  - generic [ref=e1115]: "Dmg: -10%"
+                  - generic [ref=e1116]: "Arm: +9%"
+                  - generic [ref=e1117]: "HP: +4%"
+              - generic [ref=e1118]:
+                - generic [ref=e1119]: "🍖 Diet:"
+                - generic [ref=e1120]:
+                  - generic [ref=e1121]: Meat
+                  - generic [ref=e1122]: Fish
+                  - generic [ref=e1123]: Cheese
+                  - generic [ref=e1124]: Bread
+                  - generic [ref=e1125]: Fungus
+                  - generic [ref=e1126]: Fruit
+              - paragraph [ref=e1127]: Omnivorous levelling king; eats anything, root-charges targets, and has high natural armor.
+              - generic [ref=e1128]:
+                - generic [ref=e1129]:
+                  - strong [ref=e1130]: Charge Rework
+                  - generic [ref=e1131]: ✦ Changed in Forever
+                - generic [ref=e1132]:
+                  - generic [ref=e1133]: 35 Focus
+                  - generic [ref=e1134]: 25 sec CD
+                - paragraph [ref=e1135]: Charges an enemy, immobilizes it for 1 sec, and adds up to +204 melee attack power (Rank 3) to the boar's next attack.
+              - generic [ref=e1136]:
+                - text: "Learnable Abilities:"
+                - generic [ref=e1137]:
+                  - generic [ref=e1138]: Charge (Rank 1-6)
+                  - generic [ref=e1139]: Dash (Rank 1-3)
+                  - generic [ref=e1140]: Bite (Rank 1-8)
+              - button "📍 Where to Tame (28 Beasts) ▾" [ref=e1141] [cursor=pointer]:
+                - generic [ref=e1142]: 📍 Where to Tame (28 Beasts)
+                - generic [ref=e1143]: ▾
+            - generic [ref=e1144]:
+              - generic [ref=e1145]:
+                - generic [ref=e1146]:
+                  - img "Carrion Bird" [ref=e1147]
+                  - generic [ref=e1148]:
+                    - strong [ref=e1149]: Carrion Bird
+                    - generic [ref=e1150]: ⚡ 1.20s (Spiteflayer Lvl 52, Blasted Lands)
+                - generic [ref=e1151]:
+                  - generic [ref=e1152]: "Dmg: 0%"
+                  - generic [ref=e1153]: "Arm: +5%"
+                  - generic [ref=e1154]: "HP: 0%"
+              - generic [ref=e1155]:
+                - generic [ref=e1156]: "🍖 Diet:"
+                - generic [ref=e1157]:
+                  - generic [ref=e1158]: Meat
+                  - generic [ref=e1159]: Fish
+              - paragraph [ref=e1160]: AoE debuff utility; Screech reduces entire monster packs' melee damage by 111 AP.
+              - generic [ref=e1161]:
+                - generic [ref=e1162]:
+                  - strong [ref=e1163]: Demoralizing Screech
+                  - generic [ref=e1164]: ✦ Changed in Forever
+                - generic [ref=e1165]:
+                  - generic [ref=e1166]: 20 Focus
+                  - generic [ref=e1167]: 10 sec CD
+                - paragraph [ref=e1168]: Blasts an enemy for damage and lowers the melee attack power of all enemies in melee range by 111 (Rank 2) for 30 sec.
+              - generic [ref=e1169]:
+                - text: "Learnable Abilities:"
+                - generic [ref=e1170]:
+                  - generic [ref=e1171]: Demoralizing Screech (Rank 1-4)
+                  - generic [ref=e1172]: Dive (Rank 1-3)
+                  - generic [ref=e1173]: Bite (Rank 1-8)
+                  - generic [ref=e1174]: Claw (Rank 1-8)
+              - button "📍 Where to Tame (29 Beasts) ▾" [ref=e1175] [cursor=pointer]:
+                - generic [ref=e1176]: 📍 Where to Tame (29 Beasts)
+                - generic [ref=e1177]: ▾
+            - generic [ref=e1178]:
+              - generic [ref=e1179]:
+                - generic [ref=e1180]:
+                  - img "Cat" [ref=e1181]
+                  - generic [ref=e1182]:
+                    - strong [ref=e1183]: Cat
+                    - generic [ref=e1184]: ⚡ 1.00s (Broken Tooth Lvl 37) • 1.20s (The Rake Lvl 10) • 1.30s (Humar Lvl 23)
+                - generic [ref=e1185]:
+                  - generic [ref=e1186]: "Dmg: +10%"
+                  - generic [ref=e1187]: "Arm: 0%"
+                  - generic [ref=e1188]: "HP: -2%"
+              - generic [ref=e1189]:
+                - generic [ref=e1190]: "🍖 Diet:"
+                - generic [ref=e1191]:
+                  - generic [ref=e1192]: Meat
+                  - generic [ref=e1193]: Fish
+              - paragraph [ref=e1194]: Maximum single-target damage output; essential for Marksmanship & BM raid DPS.
+              - generic [ref=e1195]:
+                - generic [ref=e1196]:
+                  - strong [ref=e1197]: Prowl & Lethal Speed
+                  - generic [ref=e1198]: Verified Classic+
+                - generic [ref=e1199]:
+                  - generic [ref=e1200]: 40 Focus
+                  - generic [ref=e1201]: 10 sec CD
+                - paragraph [ref=e1202]: Stealth ambush with +50% opener damage bonus. Broken Tooth's 1.0s swing speed inflicts severe spell-pushback.
+              - generic [ref=e1203]:
+                - text: "Learnable Abilities:"
+                - generic [ref=e1204]:
+                  - generic [ref=e1205]: Prowl (Rank 1-3)
+                  - generic [ref=e1206]: Dash (Rank 1-3)
+                  - generic [ref=e1207]: Bite (Rank 1-8)
+                  - generic [ref=e1208]: Claw (Rank 1-8)
+              - button "📍 Where to Tame (62 Beasts) ▾" [ref=e1209] [cursor=pointer]:
+                - generic [ref=e1210]: 📍 Where to Tame (62 Beasts)
+                - generic [ref=e1211]: ▾
+            - generic [ref=e1212]:
+              - generic [ref=e1213]:
+                - generic [ref=e1214]:
+                  - img "Crab" [ref=e1215]
+                  - strong [ref=e1217]: Crab
+                - generic [ref=e1218]:
+                  - generic [ref=e1219]: "Dmg: -5%"
+                  - generic [ref=e1220]: "Arm: +13%"
+                  - generic [ref=e1221]: "HP: -4%"
+              - generic [ref=e1222]:
+                - generic [ref=e1223]: "🍖 Diet:"
+                - generic [ref=e1224]:
+                  - generic [ref=e1225]: Fish
+                  - generic [ref=e1226]: Bread
+                  - generic [ref=e1227]: Fungus
+                  - generic [ref=e1228]: Fruit
+              - paragraph [ref=e1229]: Massive +13% armor rating combined with an on-demand 50% hamstring pin.
+              - generic [ref=e1230]:
+                - generic [ref=e1231]:
+                  - strong [ref=e1232]: Pinch & Dash
+                  - generic [ref=e1233]: ✦ New in Forever
+                - generic [ref=e1234]:
+                  - generic [ref=e1235]: 50 Focus
+                  - generic [ref=e1236]: 30 sec CD
+                - paragraph [ref=e1237]: Pinches enemy legs for 32 to 36 damage (Rank 2) and reduces movement speed by 50% for 9 sec.
+              - generic [ref=e1238]:
+                - text: "Learnable Abilities:"
+                - generic [ref=e1239]:
+                  - generic [ref=e1240]: Pinch (Rank 1-5)
+                  - generic [ref=e1241]: Dash (Rank 1-3)
+                  - generic [ref=e1242]: Claw (Rank 1-8)
+              - button "📍 Where to Tame (22 Beasts) ▾" [ref=e1243] [cursor=pointer]:
+                - generic [ref=e1244]: 📍 Where to Tame (22 Beasts)
+                - generic [ref=e1245]: ▾
+            - generic [ref=e1246]:
+              - generic [ref=e1247]:
+                - generic [ref=e1248]:
+                  - img "Crocolisk" [ref=e1249]
+                  - strong [ref=e1251]: Crocolisk
+                - generic [ref=e1252]:
+                  - generic [ref=e1253]: "Dmg: 0%"
+                  - generic [ref=e1254]: "Arm: +10%"
+                  - generic [ref=e1255]: "HP: -5%"
+              - generic [ref=e1256]:
+                - generic [ref=e1257]: "🍖 Diet:"
+                - generic [ref=e1258]:
+                  - generic [ref=e1259]: Meat
+                  - generic [ref=e1260]: Fish
+              - paragraph [ref=e1261]: PvP meta-definer; keeps 100% uptime on 50% healing reduction without requiring an Arms warrior.
+              - generic [ref=e1262]:
+                - generic [ref=e1263]:
+                  - strong [ref=e1264]: Dismember (Mortal Strike)
+                  - generic [ref=e1265]: ✦ New in Forever
+                - generic [ref=e1266]:
+                  - generic [ref=e1267]: 35 Focus
+                  - generic [ref=e1268]: 6 sec CD
+                - paragraph [ref=e1269]: Viciously bites enemy appendages, reducing healing effectiveness by 50% for 10 sec on a 6-second cooldown.
+              - generic [ref=e1270]:
+                - text: "Learnable Abilities:"
+                - generic [ref=e1271]:
+                  - generic [ref=e1272]: Dismember (Rank 1-5)
+                  - generic [ref=e1273]: Dash (Rank 1-3)
+                  - generic [ref=e1274]: Bite (Rank 1-8)
+              - button "📍 Where to Tame (22 Beasts) ▾" [ref=e1275] [cursor=pointer]:
+                - generic [ref=e1276]: 📍 Where to Tame (22 Beasts)
+                - generic [ref=e1277]: ▾
+            - generic [ref=e1278]:
+              - generic [ref=e1279]:
+                - generic [ref=e1280]:
+                  - img "Fox" [ref=e1281]
+                  - generic [ref=e1282]:
+                    - strong [ref=e1283]: Fox
+                    - generic [ref=e1284]: ✦ New Family
+                    - generic [ref=e1285]: ⚡ Vuldren Alpha Lvl 10 (Zephras Isle)
+                - generic [ref=e1286]:
+                  - generic [ref=e1287]: "Dmg: 0%"
+                  - generic [ref=e1288]: "Arm: +5%"
+                  - generic [ref=e1289]: "HP: 0%"
+              - generic [ref=e1290]:
+                - generic [ref=e1291]: "🍖 Diet:"
+                - generic [ref=e1292]: Meat
+              - paragraph [ref=e1294]: Brand new pet family added to WoW Forever! Extreme defensive evasion and rapid burst attacks.
+              - generic [ref=e1295]:
+                - generic [ref=e1296]:
+                  - strong [ref=e1297]: Trickster's Dance
+                  - generic [ref=e1298]: ✦ Brand New Family
+                - generic [ref=e1299]:
+                  - generic [ref=e1300]: 10 Focus
+                  - generic [ref=e1301]: 3 min CD
+                - paragraph [ref=e1302]: Increases pet's chance to Dodge by 50% and decreases attack intervals by 30% for 12 sec.
+              - generic [ref=e1303]:
+                - text: "Learnable Abilities:"
+                - generic [ref=e1304]:
+                  - generic [ref=e1305]: Trickster's Dance (Rank 1)
+                  - generic [ref=e1306]: Dash (Rank 1-3)
+                  - generic [ref=e1307]: Bite (Rank 1-8)
+              - button "📍 Where to Tame (4 Beasts) ▾" [ref=e1308] [cursor=pointer]:
+                - generic [ref=e1309]: 📍 Where to Tame (4 Beasts)
+                - generic [ref=e1310]: ▾
+            - generic [ref=e1311]:
+              - generic [ref=e1312]:
+                - generic [ref=e1313]:
+                  - img "Gorilla" [ref=e1314]
+                  - strong [ref=e1316]: Gorilla
+                - generic [ref=e1317]:
+                  - generic [ref=e1318]: "Dmg: +2%"
+                  - generic [ref=e1319]: "Arm: 0%"
+                  - generic [ref=e1320]: "HP: +4%"
+              - generic [ref=e1321]:
+                - generic [ref=e1322]: "🍖 Diet:"
+                - generic [ref=e1323]:
+                  - generic [ref=e1324]: Fungus
+                  - generic [ref=e1325]: Fruit
+              - paragraph [ref=e1326]: Area-of-effect threat burst; synergizes with Hunter traps and multi-pull dungeons.
+              - generic [ref=e1327]:
+                - generic [ref=e1328]:
+                  - strong [ref=e1329]: Thunderstomp Rework
+                  - generic [ref=e1330]: ✦ Changed in Forever
+                - generic [ref=e1331]:
+                  - generic [ref=e1332]: 60 Focus
+                  - generic [ref=e1333]: 1 min CD
+                - paragraph [ref=e1334]: Shakes the ground with thundering force, dealing 53 to 61 Nature damage to all enemies within 8 yards.
+              - generic [ref=e1335]:
+                - text: "Learnable Abilities:"
+                - generic [ref=e1336]:
+                  - generic [ref=e1337]: Thunderstomp (Rank 1-4)
+                  - generic [ref=e1338]: Dash (Rank 1-3)
+                  - generic [ref=e1339]: Bite (Rank 1-8)
+              - button "📍 Where to Tame (10 Beasts) ▾" [ref=e1340] [cursor=pointer]:
+                - generic [ref=e1341]: 📍 Where to Tame (10 Beasts)
+                - generic [ref=e1342]: ▾
+            - generic [ref=e1343]:
+              - generic [ref=e1344]:
+                - generic [ref=e1345]:
+                  - img "Hyena" [ref=e1346]
+                  - generic [ref=e1347]:
+                    - strong [ref=e1348]: Hyena
+                    - generic [ref=e1349]: ⚡ 1.30s (Ravage Lvl 51, Blasted Lands)
+                - generic [ref=e1350]:
+                  - generic [ref=e1351]: "Dmg: 0%"
+                  - generic [ref=e1352]: "Arm: 0%"
+                  - generic [ref=e1353]: "HP: 0%"
+              - generic [ref=e1354]:
+                - generic [ref=e1355]: "🍖 Diet:"
+                - generic [ref=e1356]:
+                  - generic [ref=e1357]: Meat
+                  - generic [ref=e1358]: Fruit
+              - paragraph [ref=e1359]: Well-rounded scavenger beast with high agility, Dash mobility, and the new Tendon Rip hamstring.
+              - generic [ref=e1360]:
+                - generic [ref=e1361]:
+                  - strong [ref=e1362]: Tendon Rip
+                  - generic [ref=e1363]: ✦ New in Forever
+                - generic [ref=e1364]:
+                  - generic [ref=e1365]: 25 Focus
+                  - generic [ref=e1366]: 30 sec CD
+                - paragraph [ref=e1367]: Tears at an enemy's legs for 21 damage over 9 sec and reduces movement speed by 50% for 9 sec.
+              - generic [ref=e1368]:
+                - text: "Learnable Abilities:"
+                - generic [ref=e1369]:
+                  - generic [ref=e1370]: Tendon Rip (Rank 1-5)
+                  - generic [ref=e1371]: Dash (Rank 1-3)
+                  - generic [ref=e1372]: Bite (Rank 1-8)
+              - button "📍 Where to Tame (19 Beasts) ▾" [ref=e1373] [cursor=pointer]:
+                - generic [ref=e1374]: 📍 Where to Tame (19 Beasts)
+                - generic [ref=e1375]: ▾
+            - generic [ref=e1376]:
+              - generic [ref=e1377]:
+                - generic [ref=e1378]:
+                  - img "Raptor" [ref=e1379]
+                  - strong [ref=e1381]: Raptor
+                - generic [ref=e1382]:
+                  - generic [ref=e1383]: "Dmg: +10%"
+                  - generic [ref=e1384]: "Arm: +3%"
+                  - generic [ref=e1385]: "HP: -5%"
+              - generic [ref=e1386]:
+                - generic [ref=e1387]: "🍖 Diet:"
+                - generic [ref=e1388]: Meat
+              - paragraph [ref=e1390]: Pure offensive power with +10% damage bonus, Savage Rend bleed, and high armor penetration.
+              - generic [ref=e1391]:
+                - generic [ref=e1392]:
+                  - strong [ref=e1393]: Savage Rend
+                  - generic [ref=e1394]: ✦ New in Forever
+                - generic [ref=e1395]:
+                  - generic [ref=e1396]: 50 Focus
+                  - generic [ref=e1397]: 1 min CD
+                - paragraph [ref=e1398]: Slash an enemy with razor talons, causing target to Bleed for 54 damage (Rank 2) over 18 sec.
+              - generic [ref=e1399]:
+                - text: "Learnable Abilities:"
+                - generic [ref=e1400]:
+                  - generic [ref=e1401]: Savage Rend (Rank 1-5)
+                  - generic [ref=e1402]: Dash (Rank 1-3)
+                  - generic [ref=e1403]: Bite (Rank 1-8)
+                  - generic [ref=e1404]: Claw (Rank 1-8)
+              - button "📍 Where to Tame (38 Beasts) ▾" [ref=e1405] [cursor=pointer]:
+                - generic [ref=e1406]: 📍 Where to Tame (38 Beasts)
+                - generic [ref=e1407]: ▾
+            - generic [ref=e1408]:
+              - generic [ref=e1409]:
+                - generic [ref=e1410]:
+                  - img "Scorpid" [ref=e1411]
+                  - generic [ref=e1412]:
+                    - strong [ref=e1413]: Scorpid
+                    - generic [ref=e1414]: ⚡ 1.60s (Death Flayer Lvl 11, Durotar)
+                - generic [ref=e1415]:
+                  - generic [ref=e1416]: "Dmg: -6%"
+                  - generic [ref=e1417]: "Arm: +10%"
+                  - generic [ref=e1418]: "HP: 0%"
+              - generic [ref=e1419]:
+                - generic [ref=e1420]: "🍖 Diet:"
+                - generic [ref=e1421]: Meat
+              - paragraph [ref=e1423]: Scorpid Poison stacks nature DoT to protect Viper Sting from dispel in PvP.
+              - generic [ref=e1424]:
+                - generic [ref=e1425]:
+                  - strong [ref=e1426]: Scorpid Poison Rework
+                  - generic [ref=e1427]: ✦ Changed in Forever
+                - generic [ref=e1428]:
+                  - generic [ref=e1429]: 30 Focus
+                  - generic [ref=e1430]: 4 sec CD
+                - paragraph [ref=e1431]: Inflicts 10 Nature damage over 10 sec, stacking up to 5 times. Protects Hunter Viper Sting from dispels.
+              - generic [ref=e1432]:
+                - text: "Learnable Abilities:"
+                - generic [ref=e1433]:
+                  - generic [ref=e1434]: Scorpid Poison (Rank 1-5)
+                  - generic [ref=e1435]: Dash (Rank 1-3)
+                  - generic [ref=e1436]: Claw (Rank 1-8)
+              - button "📍 Where to Tame (25 Beasts) ▾" [ref=e1437] [cursor=pointer]:
+                - generic [ref=e1438]: 📍 Where to Tame (25 Beasts)
+                - generic [ref=e1439]: ▾
+            - generic [ref=e1440]:
+              - generic [ref=e1441]:
+                - generic [ref=e1442]:
+                  - img "Spider" [ref=e1443]
+                  - strong [ref=e1445]: Spider
+                - generic [ref=e1446]:
+                  - generic [ref=e1447]: "Dmg: +7%"
+                  - generic [ref=e1448]: "Arm: 0%"
+                  - generic [ref=e1449]: "HP: 0%"
+              - generic [ref=e1450]:
+                - generic [ref=e1451]: "🍖 Diet:"
+                - generic [ref=e1452]: Meat
+              - paragraph [ref=e1454]: High damage ambush predator with on-demand Web roots to peel enemy melee in PvP.
+              - generic [ref=e1455]:
+                - generic [ref=e1456]:
+                  - strong [ref=e1457]: Web (Root & Nature DoT)
+                  - generic [ref=e1458]: ✦ New in Forever
+                - generic [ref=e1459]:
+                  - generic [ref=e1460]: 20 Focus
+                  - generic [ref=e1461]: 40 sec CD
+                - paragraph [ref=e1462]: Entangles an enemy in a corrosive web, immobilizing them and dealing 20 Nature damage (Rank 2) over 4 sec.
+              - generic [ref=e1463]:
+                - text: "Learnable Abilities:"
+                - generic [ref=e1464]:
+                  - generic [ref=e1465]: Web (Rank 1-5)
+                  - generic [ref=e1466]: Dash (Rank 1-3)
+                  - generic [ref=e1467]: Bite (Rank 1-8)
+              - button "📍 Where to Tame (69 Beasts) ▾" [ref=e1468] [cursor=pointer]:
+                - generic [ref=e1469]: 📍 Where to Tame (69 Beasts)
+                - generic [ref=e1470]: ▾
+            - generic [ref=e1471]:
+              - generic [ref=e1472]:
+                - generic [ref=e1473]:
+                  - img "Tallstrider" [ref=e1474]
+                  - generic [ref=e1475]:
+                    - strong [ref=e1476]: Tallstrider
+                    - generic [ref=e1477]: ⚡ 1.30s (Ornery Galestrider Lvl 8, Zephras Isle)
+                - generic [ref=e1478]:
+                  - generic [ref=e1479]: "Dmg: 0%"
+                  - generic [ref=e1480]: "Arm: 0%"
+                  - generic [ref=e1481]: "HP: +5%"
+              - generic [ref=e1482]:
+                - generic [ref=e1483]: "🍖 Diet:"
+                - generic [ref=e1484]:
+                  - generic [ref=e1485]: Cheese
+                  - generic [ref=e1486]: Fruit
+                  - generic [ref=e1487]: Fungus
+              - paragraph [ref=e1488]: Dust Cloud strips armor for physical group burst; vegetarian diet makes feeding very affordable.
+              - generic [ref=e1489]:
+                - generic [ref=e1490]:
+                  - strong [ref=e1491]: Dust Cloud
+                  - generic [ref=e1492]: ✦ New in Forever
+                - generic [ref=e1493]:
+                  - generic [ref=e1494]: 10 Focus
+                  - generic [ref=e1495]: Instant
+                - paragraph [ref=e1496]: Kicks up an abrasive cloud of dust, reducing the target's Armor by 175 (Rank 2) for 30 sec.
+              - generic [ref=e1497]:
+                - text: "Learnable Abilities:"
+                - generic [ref=e1498]:
+                  - generic [ref=e1499]: Dust Cloud (Rank 1-5)
+                  - generic [ref=e1500]: Dash (Rank 1-3)
+                  - generic [ref=e1501]: Bite (Rank 1-8)
+              - button "📍 Where to Tame (16 Beasts) ▾" [ref=e1502] [cursor=pointer]:
+                - generic [ref=e1503]: 📍 Where to Tame (16 Beasts)
+                - generic [ref=e1504]: ▾
+            - generic [ref=e1505]:
+              - generic [ref=e1506]:
+                - generic [ref=e1507]:
+                  - img "Turtle" [ref=e1508]
+                  - strong [ref=e1510]: Turtle
+                - generic [ref=e1511]:
+                  - generic [ref=e1512]: "Dmg: -10%"
+                  - generic [ref=e1513]: "Arm: +13%"
+                  - generic [ref=e1514]: "HP: 0%"
+              - generic [ref=e1515]:
+                - generic [ref=e1516]: "🍖 Diet:"
+                - generic [ref=e1517]:
+                  - generic [ref=e1518]: Fruit
+                  - generic [ref=e1519]: Fungus
+                  - generic [ref=e1520]: Fish
+              - paragraph [ref=e1521]: Ultimate tanking pet; Shell Shield reduces all damage taken by 50% for 12 sec with +13% Armor.
+              - generic [ref=e1522]:
+                - generic [ref=e1523]:
+                  - strong [ref=e1524]: Shell Shield Rework
+                  - generic [ref=e1525]: ✦ Changed in Forever
+                - generic [ref=e1526]:
+                  - generic [ref=e1527]: 10 Focus
+                  - generic [ref=e1528]: 3 min CD
+                - paragraph [ref=e1529]: Reduces all damage taken by 50% for 12 sec, increases attack intervals by 60%, but deals significantly more damage per attack.
+              - generic [ref=e1530]:
+                - text: "Learnable Abilities:"
+                - generic [ref=e1531]:
+                  - generic [ref=e1532]: Shell Shield (Rank 1-3)
+                  - generic [ref=e1533]: Dash (Rank 1-3)
+                  - generic [ref=e1534]: Bite (Rank 1-8)
+              - button "📍 Where to Tame (15 Beasts) ▾" [ref=e1535] [cursor=pointer]:
+                - generic [ref=e1536]: 📍 Where to Tame (15 Beasts)
+                - generic [ref=e1537]: ▾
+            - generic [ref=e1538]:
+              - generic [ref=e1539]:
+                - generic [ref=e1540]:
+                  - img "Wind Serpent" [ref=e1541]
+                  - strong [ref=e1543]: Wind Serpent
+                - generic [ref=e1544]:
+                  - generic [ref=e1545]: "Dmg: +7%"
+                  - generic [ref=e1546]: "Arm: 0%"
+                  - generic [ref=e1547]: "HP: 0%"
+              - generic [ref=e1548]:
+                - generic [ref=e1549]: "🍖 Diet:"
+                - generic [ref=e1550]:
+                  - generic [ref=e1551]: Fish
+                  - generic [ref=e1552]: Bread
+                  - generic [ref=e1553]: Cheese
+              - paragraph [ref=e1554]: Ranged Nature damage attacks that bypass physical armor and hit high-armor plate targets.
+              - generic [ref=e1555]:
+                - generic [ref=e1556]:
+                  - strong [ref=e1557]: Lightning Breath Rework
+                  - generic [ref=e1558]: ✦ Changed in Forever
+                - generic [ref=e1559]:
+                  - generic [ref=e1560]: 50 Focus
+                  - generic [ref=e1561]: Instant
+                - paragraph [ref=e1562]: Breathes lightning, instantly dealing 32 to 36 Nature damage (Rank 3) to a single target at 20-yard range.
+              - generic [ref=e1563]:
+                - text: "Learnable Abilities:"
+                - generic [ref=e1564]:
+                  - generic [ref=e1565]: Lightning Breath (Rank 1-6)
+                  - generic [ref=e1566]: Dive (Rank 1-3)
+                  - generic [ref=e1567]: Bite (Rank 1-8)
+              - button "📍 Where to Tame (17 Beasts) ▾" [ref=e1568] [cursor=pointer]:
+                - generic [ref=e1569]: 📍 Where to Tame (17 Beasts)
+                - generic [ref=e1570]: ▾
+            - generic [ref=e1571]:
+              - generic [ref=e1572]:
+                - generic [ref=e1573]:
+                  - img "Wolf" [ref=e1574]
+                  - generic [ref=e1575]:
+                    - strong [ref=e1576]: Wolf
+                    - generic [ref=e1577]: ⚡ 1.20s (Deathmaw Lvl 53) • 1.40s (Coyote Packleader Lvl 11) • 1.50s (Coldrasp Ghost Wolf Lvl 12)
+                - generic [ref=e1578]:
+                  - generic [ref=e1579]: "Dmg: 0%"
+                  - generic [ref=e1580]: "Arm: +5%"
+                  - generic [ref=e1581]: "HP: 0%"
+              - generic [ref=e1582]:
+                - generic [ref=e1583]: "🍖 Diet:"
+                - generic [ref=e1584]: Meat
+              - paragraph [ref=e1586]: Furious Howl buffs physical AP of party members for 1 min; top raid support companion.
+              - generic [ref=e1587]:
+                - generic [ref=e1588]:
+                  - strong [ref=e1589]: Furious Howl Rework
+                  - generic [ref=e1590]: ✦ Changed in Forever
+                - generic [ref=e1591]:
+                  - generic [ref=e1592]: 60 Focus
+                  - generic [ref=e1593]: 30 sec CD
+                - paragraph [ref=e1594]: The wolf howls, increasing the melee attack power of all party members within 15 yards by 31 to 38 (Rank 2) for a full 1 minute.
+              - generic [ref=e1595]:
+                - text: "Learnable Abilities:"
+                - generic [ref=e1596]:
+                  - generic [ref=e1597]: Furious Howl (Rank 1-4)
+                  - generic [ref=e1598]: Dash (Rank 1-3)
+                  - generic [ref=e1599]: Bite (Rank 1-8)
+              - button "📍 Where to Tame (63 Beasts) ▾" [ref=e1600] [cursor=pointer]:
+                - generic [ref=e1601]: 📍 Where to Tame (63 Beasts)
+                - generic [ref=e1602]: ▾
+    - text: ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦
+  - contentinfo [ref=e489]:
+    - generic [ref=e490]:
+      - generic [ref=e491]:
+        - link "Blizzard Official News" [ref=e492] [cursor=pointer]:
+          - /url: https://news.blizzard.com
+        - link "Wowhead Coverage" [ref=e493] [cursor=pointer]:
+          - /url: https://www.wowhead.com/forever
+        - link "Warcraft Tavern Hub" [ref=e494] [cursor=pointer]:
+          - /url: https://www.warcrafttavern.com/forever/
+        - link "Mobalytics Meta & Tier Lists" [ref=e495] [cursor=pointer]:
+          - /url: https://mobalytics.gg/wow-forever
+        - link "Method.gg Raiding & Guides" [ref=e496] [cursor=pointer]:
+          - /url: https://www.method.gg
+        - link "Icy Veins Class Hub" [ref=e497] [cursor=pointer]:
+          - /url: https://www.icy-veins.com/wow-forever
+        - link "Battle.net Launcher" [ref=e498] [cursor=pointer]:
+          - /url: https://battle.net
+      - paragraph [ref=e499]: "World of Warcraft: Forever Personal News & Beta Progress Portal • Built for Classic+ Explorers"
+      - paragraph [ref=e500]: Data grounded in official BlizzCon 2026 announcements, Wowhead compendiums, Method.gg itemization audits, and Beta Phase 1 & 2 community testing.

@@ -506,15 +506,28 @@ function initClassDeepDives() {
     // Master Hunter Pet Directory Modal Setup & Binding
     setupHunterPetMasterModal();
 
-    const masterModalBtn = contentContainer.querySelector('#btn-open-master-beasts');
-    if (masterModalBtn) {
-      masterModalBtn.addEventListener('click', (e) => {
+    // Master Modal Triggers (Buttons with .btn-open-modal-trigger or #btn-open-master-beasts)
+    contentContainer.querySelectorAll('#btn-open-master-beasts, .btn-open-modal-trigger').forEach(btn => {
+      btn.addEventListener('click', (e) => {
         e.preventDefault();
         if (typeof window.openHunterPetMasterModal === 'function') {
           window.openHunterPetMasterModal('all');
         }
       });
-    }
+    });
+
+    // Subtab switch buttons (e.g. "CLICK HERE TO SEE WHAT'S CHANGED" or "RETURN TO 502 BEASTS")
+    contentContainer.querySelectorAll('.btn-switch-pet-tab').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetSub = btn.getAttribute('data-target-subtab');
+        if (targetSub) {
+          selectedDeepDiveSubTab = targetSub;
+          renderDeepDiveContent();
+          window.scrollTo({ top: contentContainer.offsetTop - 60, behavior: 'smooth' });
+        }
+      });
+    });
 
     contentContainer.querySelectorAll('.tdh-view-all-modal-btn').forEach(btn => {
       btn.addEventListener('click', (e) => {
@@ -522,6 +535,20 @@ function initClassDeepDives() {
         const famName = btn.getAttribute('data-filter-fam');
         if (typeof window.openHunterPetMasterModal === 'function') {
           window.openHunterPetMasterModal(famName || 'all');
+        }
+      });
+    });
+
+    // Smooth scroll for hunter pet quick-nav pills
+    contentContainer.querySelectorAll('.pet-nav-pill').forEach(pill => {
+      pill.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = pill.getAttribute('href');
+        if (targetId) {
+          const el = contentContainer.querySelector(targetId);
+          if (el) {
+            el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
         }
       });
     });
@@ -701,6 +728,8 @@ function initClassDeepDives() {
       return renderBeastMasterySection(cData);
     } else if (subtab === 'pets' && cData.id === 'hunter') {
       return renderHunterPetStable(cData);
+    } else if (subtab === 'petchanges' && cData.id === 'hunter') {
+      return renderHunterPetChangesPage(cData);
     } else if (subtab === 'tauren' && cData.racialSynergies) {
       return renderTaurenRacesSection(cData);
     } else if (subtab === 'enhancement' && cData.enhancement) {
@@ -1405,6 +1434,452 @@ function initClassDeepDives() {
     `;
   }
 
+  function renderHunterPetChangesPage(cData) {
+    const changes = (cData && cData.petChanges) || {};
+
+    const newAbilities = changes.newAbilities || [
+      {
+        family: "Bat",
+        icon: "https://foreverchanges.pro/icon/ability_vehicle_sonicshockwave.jpg",
+        name: "Sonic Blast",
+        rank: "Rank 2",
+        desc: "Emits a piercing shriek, inflicting 33 to 39 Nature damage and increasing the casting time of all spells by 60% for 30 sec.",
+        cost: "80 Focus",
+        cd: "30 sec cooldown"
+      },
+      {
+        family: "Bear",
+        icon: "https://foreverchanges.pro/icon/inv_misc_monsterclaw_03.jpg",
+        name: "Swipe",
+        rank: "Rank 2",
+        desc: "Swipe 3 nearby enemies, inflicting 8 to 10 damage.",
+        cost: "20 Focus",
+        cd: "5 sec cooldown"
+      },
+      {
+        family: "Bird of Prey",
+        familyNote: "Owl in Classic",
+        icon: "https://foreverchanges.pro/icon/spell_nature_natureswrath.jpg",
+        name: "Mine!",
+        rank: "Rank 3",
+        desc: "Grabs an enemy's weapon with its talons, causing 20 to 24 damage and disarming them for 4 sec.",
+        cost: "20 Focus",
+        cd: "1 min cooldown"
+      },
+      {
+        family: "Crab",
+        icon: "https://foreverchanges.pro/icon/ability_hunter_pet_crab.jpg",
+        name: "Pinch",
+        rank: "Rank 2",
+        desc: "Pinches an enemy's legs for 32 to 36 damage and reduces movement speed by 50% for 9 sec.",
+        cost: "50 Focus",
+        cd: "30 sec cooldown"
+      },
+      {
+        family: "Crocolisk",
+        icon: "https://foreverchanges.pro/icon/ability_hunter_pet_crocolisk.jpg",
+        name: "Dismember",
+        rank: "Rank 2",
+        desc: "Viciously bites enemy appendages for 18 to 20 damage and reduces the effectiveness of any healing by 50% for 10 sec.",
+        cost: "35 Focus",
+        cd: "6 sec cooldown"
+      },
+      {
+        family: "Fox",
+        familyNote: "New Family",
+        icon: "https://foreverchanges.pro/icon/ability_hunter_aspectofthefox.jpg",
+        name: "Trickster's Dance",
+        rank: "Rank 1",
+        desc: "Increases your pet's chance to Dodge by 50% and decreases the time between your pet's attacks by 30% for 12 sec.",
+        cost: "10 Focus",
+        cd: "3 min cooldown"
+      },
+      {
+        family: "Hyena",
+        icon: "https://foreverchanges.pro/icon/ability_hunter_pet_hyena.jpg",
+        name: "Tendon Rip",
+        rank: "Rank 2",
+        desc: "Tears at an enemy's legs for 21 damage over 9 sec and reduces movement speed by 50% for 9 sec.",
+        cost: "25 Focus",
+        cd: "30 sec cooldown"
+      },
+      {
+        family: "Raptor",
+        icon: "https://foreverchanges.pro/icon/ability_hunter_pet_raptor.jpg",
+        name: "Savage Rend",
+        rank: "Rank 2",
+        desc: "Slash an enemy with razor talons, causing the target to Bleed for 54 damage over 18 sec.",
+        cost: "50 Focus",
+        cd: "1 min cooldown"
+      },
+      {
+        family: "Spider",
+        icon: "https://foreverchanges.pro/icon/spell_nature_web.jpg",
+        name: "Web",
+        rank: "Rank 2",
+        desc: "Entangles an enemy in a corrosive web, immobilizing them and dealing 20 Nature damage over 4 sec.",
+        cost: "20 Focus",
+        cd: "40 sec cooldown"
+      },
+      {
+        family: "Tallstrider",
+        icon: "https://foreverchanges.pro/icon/spell_nature_sleep.jpg",
+        name: "Dust Cloud",
+        rank: "Rank 2",
+        desc: "Your tallstrider kicks up an abrasive cloud of dust, reducing the target's Armor by 175 for 30 sec.",
+        cost: "10 Focus",
+        cd: "Instant"
+      }
+    ];
+
+    const changedAbilities = changes.changedAbilities || [];
+    const universalMechanics = changes.universalMechanics || [];
+    const trainingGuide = changes.trainingGuide || {};
+    const dashInfo = changes.dashExpansion || {
+      newFamilies: ["Bear", "Crab", "Crocolisk", "Gorilla", "Raptor", "Scorpid", "Spider", "Turtle"],
+      classicFamilies: ["Boar", "Cat", "Hyena", "Tallstrider", "Wolf"]
+    };
+    const removedAbilities = changes.removedAbilities || [
+      { family: "Bat", ability: "Screech" },
+      { family: "Bird of Prey", ability: "Screech" },
+      { family: "Raptor", ability: "Cobra Reflexes" }
+    ];
+
+    return `
+      <div class="hunter-pet-changes-wrapper">
+        <div class="spec-overview-banner" style="background: rgba(245, 158, 11, 0.08); border-color: rgba(245, 158, 11, 0.35);">
+          <div>
+            <h4 style="color: #fbbf24; font-size: 1.3rem; margin: 0 0 0.25rem;">⚡ What Changed for Pets in WoW Forever</h4>
+            <p style="font-size: 0.9rem; color: #cbd5e1; margin: 0;">
+              ${escapeHtml(changes.betaCapNotice || "Read from the beta client and set against Classic’s. Each ability is shown at the rank a pet can have at level 30, the beta’s cap.")}
+            </p>
+          </div>
+          <span class="deepdive-badge badge-exclusive" style="align-self: flex-start;"><span>✦</span> Beta Cap Level 30</span>
+        </div>
+
+        <!-- Cross-Navigation Action Bar -->
+        <div class="pet-changes-top-actions">
+          <div style="display: flex; align-items: center; gap: 0.5rem; color: #cbd5e1; font-size: 0.86rem;">
+            <span>🐾</span>
+            <span>Browse individual beast spawns, stats, and taming locations:</span>
+          </div>
+          <div style="display: flex; gap: 0.6rem; align-items: center; flex-wrap: wrap;">
+            <button class="btn-switch-pet-tab pet-cta-secondary-btn" data-target-subtab="pets" type="button">
+              🐾 CLICK HERE TO VIEW 502 TAMABLE BEASTS DIRECTORY ➔
+            </button>
+            <button class="pet-master-directory-btn btn-open-modal-trigger" type="button" title="Open master modal of 502 beasts">
+              <span class="pmd-btn-title">🐾 Open 502 Beasts Table</span>
+              <span class="pmd-badge">Open Table ↗</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Quick Section Jump Navigation -->
+        <div class="pet-quick-nav">
+          <a href="#pet-sec-changes" class="pet-nav-pill"><span>🦊</span> New Fox & Owl Rename</a>
+          <a href="#pet-sec-new-abilities" class="pet-nav-pill"><span>⚡</span> 10 New Abilities (Beta Cap)</a>
+          <a href="#pet-sec-dash-removed" class="pet-nav-pill"><span>💨</span> Dash Expansion & Removed</a>
+          <a href="#pet-sec-changed-diff" class="pet-nav-pill"><span>⚖️</span> Abilities Changed (Classic Diff)</a>
+          <a href="#pet-sec-universal" class="pet-nav-pill"><span>📊</span> Universal Pet Mechanics</a>
+          <a href="#pet-sec-training" class="pet-nav-pill"><span>📖</span> Training & Speed Guide</a>
+        </div>
+
+        <!-- SECTION 1: Fox & Owl Spotlights -->
+        <div id="pet-sec-changes" style="margin-top: 1.25rem;">
+          <div style="display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.5rem;">
+            <h4 style="color: var(--text-gold); font-size: 1.15rem; margin: 0; display: flex; align-items: center; gap: 0.5rem;">
+              <span>🦊</span> New Fox Family & Bird of Prey
+            </h4>
+            <span style="font-size: 0.8rem; color: #94a3b8; font-style: italic;">
+              ${escapeHtml(changes.betaCapNotice || "Read from the beta client and set against Classic’s. Each ability is shown at the rank a pet can have at level 30, the beta’s cap.")}
+            </span>
+          </div>
+
+          <div class="pet-spotlight-grid">
+            <!-- Fox Family Card -->
+            <div class="pet-spotlight-card">
+              <div class="pet-spotlight-header">
+                <span style="font-size: 1.5rem;">🦊</span>
+                <div>
+                  <h5 style="color: #fff; margin: 0; font-size: 1rem;">A New Family: The Fox</h5>
+                  <span style="font-size: 0.76rem; color: #fbbf24;">🍖 Eats Meat • Baseline Bite & Dash</span>
+                </div>
+              </div>
+              <p style="font-size: 0.82rem; color: #cbd5e1; margin: 0.5rem 0;">
+                Besides Bite and Dash, the Fox has a unique evasive signature ability:
+              </p>
+              <div class="pet-spotlight-ability">
+                <div class="spotlight-ability-name">
+                  <span style="color: #6ee7b7; font-weight: 700;">Trickster's Dance</span>
+                  <span class="spotlight-rank-badge">Rank 1</span>
+                </div>
+                <p class="spotlight-ability-desc">
+                  Increases your pet's chance to Dodge by 50% and decreases the time between your pet's attacks by 30% for 12 sec.
+                </p>
+                <div class="spotlight-ability-meta">
+                  <span>⚡ 10 Focus</span>
+                  <span>⌛ 3 min cooldown</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Bird of Prey Card -->
+            <div class="pet-spotlight-card">
+              <div class="pet-spotlight-header">
+                <span style="font-size: 1.5rem;">🦅</span>
+                <div>
+                  <h5 style="color: #fff; margin: 0; font-size: 1rem;">Owl is now Bird of Prey</h5>
+                  <span style="font-size: 0.76rem; color: #38bdf8;">Same beasts, a new name, and a weapon disarm ability</span>
+                </div>
+              </div>
+              <p style="font-size: 0.82rem; color: #cbd5e1; margin: 0.5rem 0;">
+                Gains the exclusive PvP disarm ability to neutralize enemy weapons:
+              </p>
+              <div class="pet-spotlight-ability">
+                <div class="spotlight-ability-name">
+                  <span style="color: #6ee7b7; font-weight: 700;">Mine!</span>
+                  <span class="spotlight-rank-badge">Rank 3</span>
+                </div>
+                <p class="spotlight-ability-desc">
+                  Grabs an enemy's weapon with its talons, causing 20 to 24 damage and disarming them for 4 sec.
+                </p>
+                <div class="spotlight-ability-meta">
+                  <span>⚡ 20 Focus</span>
+                  <span>⌛ 1 min cooldown</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 2: 10 New Family Abilities -->
+        <div id="pet-sec-new-abilities" style="margin-top: 2rem;">
+          <div style="display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.75rem;">
+            <div>
+              <h4 style="color: var(--text-gold); font-size: 1.15rem; margin: 0; display: flex; align-items: center; gap: 0.5rem;">
+                <span>⚡</span> 10 New Family Abilities Added in Forever
+              </h4>
+              <p style="font-size: 0.82rem; color: #94a3b8; margin: 0.2rem 0 0;">
+                Each ability is shown at the rank a pet can have at level 30, the closed beta's level cap.
+              </p>
+            </div>
+            <span class="deepdive-badge badge-exclusive"><span>✦</span> 10 Abilities Total</span>
+          </div>
+
+          <div class="pet-diff-grid">
+            ${newAbilities.map(a => `
+              <div class="pet-new-ability-card">
+                <div class="pet-new-ability-top">
+                  <img src="${a.icon}" alt="${escapeHtml(a.name)}" class="pet-ability-icon-img" onerror="this.src='https://foreverchanges.pro/icon/ability_hunter_pet_wolf.jpg'">
+                  <div>
+                    <div style="display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap;">
+                      <span class="ability-card-family">${escapeHtml(a.family)}</span>
+                      ${a.familyNote ? `<span style="font-size: 0.7rem; color: #fbbf24; font-style: italic;">(${escapeHtml(a.familyNote)})</span>` : ''}
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 0.4rem;">
+                      <span class="ability-card-name">${escapeHtml(a.name)}</span>
+                      <span class="ability-card-rank">${escapeHtml(a.rank)}</span>
+                    </div>
+                  </div>
+                </div>
+                <p class="pet-new-ability-desc">${escapeHtml(a.desc)}</p>
+                <div class="pet-new-ability-meta">
+                  <span class="pna-meta-tag">⚡ ${escapeHtml(a.cost)}</span>
+                  <span class="pna-meta-tag">⌛ ${escapeHtml(a.cd)}</span>
+                </div>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+
+        <!-- SECTION 3: Dash Expansion & Removed Abilities -->
+        <div id="pet-sec-dash-removed" style="margin-top: 2rem;">
+          <div class="pet-dash-banner">
+            <div class="dash-banner-header">
+              <div>
+                <strong style="color: #6ee7b7; font-size: 1rem; display: flex; align-items: center; gap: 0.4rem;">
+                  <span>💨</span> Dash for 8 More Families
+                </strong>
+                <p style="font-size: 0.82rem; color: #cbd5e1; margin: 0.25rem 0 0.5rem;">
+                  Classic already gave Dash to Boar, Cat, Hyena, Tallstrider, and Wolf. Its first rank is learned at Level 30. Forever expands Dash to:
+                </p>
+              </div>
+              <span class="dash-level-badge">Rank 1 Learned at Level 30</span>
+            </div>
+
+            <div class="pet-dash-pills">
+              ${dashInfo.newFamilies.map(fam => `
+                <span class="pet-dash-pill"><span>🐾</span> ${escapeHtml(fam)}</span>
+              `).join('')}
+            </div>
+
+            <div class="pet-removed-banner">
+              <strong style="color: #ef4444; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.5px;">Gone from Forever:</strong>
+              <div class="pet-removed-pills">
+                ${removedAbilities.map(r => `
+                  <span class="pet-removed-pill">❌ ${escapeHtml(r.family)}: ${escapeHtml(r.ability)}</span>
+                `).join('')}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 4: Abilities Forever Changed (Side-by-Side Diff) -->
+        <div id="pet-sec-changed-diff" style="margin-top: 2rem;">
+          <div style="display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.75rem;">
+            <div>
+              <h4 style="color: var(--text-gold); font-size: 1.15rem; margin: 0; display: flex; align-items: center; gap: 0.5rem;">
+                <span>⚖️</span> Abilities Forever Changed (Beta vs Classic Side-by-Side)
+              </h4>
+              <p style="font-size: 0.82rem; color: #94a3b8; margin: 0.2rem 0 0;">
+                Same abilities as in Classic, with altered numbers. Each is shown at Level 30 beta cap rank: Classic above, Forever below.
+              </p>
+            </div>
+            <span class="deepdive-badge badge-demo"><span>🔍</span> Forensic Diff</span>
+          </div>
+
+          <div class="pet-diff-grid">
+            ${changedAbilities.map(ca => `
+              <div class="pet-diff-card">
+                <div class="pet-diff-card-header">
+                  <img src="${ca.icon}" alt="${escapeHtml(ca.ability)}" class="pet-ability-icon-img" onerror="this.src='https://foreverchanges.pro/icon/ability_hunter_pet_wolf.jpg'">
+                  <div>
+                    <span class="diff-card-fam">${escapeHtml(ca.family)}</span>
+                    <div style="display: flex; align-items: center; gap: 0.4rem;">
+                      <span class="diff-card-title">${escapeHtml(ca.ability)}</span>
+                      <span class="diff-card-rank">${escapeHtml(ca.rank)}</span>
+                      ${ca.classicName ? `<span style="font-size: 0.7rem; color: #94a3b8;">(${escapeHtml(ca.classicName)})</span>` : ''}
+                    </div>
+                  </div>
+                </div>
+
+                <div class="diff-versions">
+                  <!-- Classic Version (Above) -->
+                  <div class="diff-version classic">
+                    <div class="diff-version-label">
+                      <span>Classic Era</span>
+                    </div>
+                    <p class="diff-version-text">${escapeHtml(ca.classic)}</p>
+                  </div>
+
+                  <!-- Forever Version (Below) -->
+                  <div class="diff-version forever">
+                    <div class="diff-version-label">
+                      <span>✦ Forever Beta</span>
+                    </div>
+                    <p class="diff-version-text">${escapeHtml(ca.forever)}</p>
+                  </div>
+                </div>
+
+                ${ca.delta ? `
+                  <div class="pet-diff-delta">
+                    <strong>Delta:</strong> ${escapeHtml(ca.delta)}
+                  </div>
+                ` : ''}
+              </div>
+            `).join('')}
+          </div>
+        </div>
+
+        <!-- SECTION 5: What Changed for Every Pet (Universal Systems) -->
+        <div id="pet-sec-universal" style="margin-top: 2rem;">
+          <div style="display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.75rem;">
+            <div>
+              <h4 style="color: var(--text-gold); font-size: 1.15rem; margin: 0; display: flex; align-items: center; gap: 0.5rem;">
+                <span>📊</span> What Changed for Every Pet (Universal Systems)
+              </h4>
+              <p style="font-size: 0.82rem; color: #94a3b8; margin: 0.2rem 0 0;">
+                Found by beta players & gathered on the Forever Hunter wiki (github.com/classic-hunter/forever-hunter).
+              </p>
+            </div>
+          </div>
+
+          <div class="pet-mechanics-grid">
+            ${universalMechanics.map(m => `
+              <div class="pet-mechanic-card">
+                <div class="pet-mechanic-top">
+                  <span style="font-size: 1.25rem;">${m.icon}</span>
+                  <div style="flex: 1;">
+                    <strong style="color: #fff; font-size: 0.92rem; display: block;">${escapeHtml(m.title)}</strong>
+                  </div>
+                  <span class="pet-mechanic-badge">${escapeHtml(m.badge)}</span>
+                </div>
+                <p class="pet-mechanic-desc">${escapeHtml(m.desc)}</p>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+
+        <!-- SECTION 6: Beast Training Guide & Attack Speeds -->
+        <div id="pet-sec-training" class="pet-training-box" style="margin-top: 2rem;">
+          <div style="display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.75rem;">
+            <div>
+              <h4 style="color: #6ee7b7; font-size: 1.15rem; margin: 0; display: flex; align-items: center; gap: 0.5rem;">
+                <span>📖</span> Beast Training in WoW Forever & Attack Speed Mechanics
+              </h4>
+              <p style="font-size: 0.82rem; color: #cbd5e1; margin: 0;">
+                Training still works as in Classic Era through a 3-step loop. Loyalty gates progression and swing speeds remain non-normalized.
+              </p>
+            </div>
+            <span class="deepdive-badge badge-demo"><span>🎙️</span> Beta Forensics Guide</span>
+          </div>
+
+          <div class="pet-steps-grid">
+            ${(trainingGuide.steps || []).map(s => `
+              <div class="pet-step-card">
+                <span class="pet-step-num">${s.num}</span>
+                <strong style="color: #fff; font-size: 0.88rem; display: block; margin-bottom: 0.25rem;">${escapeHtml(s.title)}</strong>
+                <p style="font-size: 0.78rem; color: #cbd5e1; margin: 0; line-height: 1.45;">${escapeHtml(s.desc)}</p>
+              </div>
+            `).join('')}
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 0.85rem; margin-top: 0.5rem;">
+            <div style="background: rgba(30, 41, 59, 0.4); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 6px; padding: 0.8rem 1rem;">
+              <strong style="color: #fcd34d; font-size: 0.85rem; display: block; margin-bottom: 0.25rem;">🔒 Loyalty Gates Training:</strong>
+              <p style="font-size: 0.78rem; color: #cbd5e1; margin: 0; line-height: 1.45;">
+                ${escapeHtml(trainingGuide.loyaltyNote || "Your pet must gain a loyalty level before higher rank abilities can be taught. Beta players report loyalty progresses very slowly.")}
+              </p>
+              <p style="font-size: 0.76rem; color: #94a3b8; margin: 0.4rem 0 0;">
+                ${escapeHtml(trainingGuide.tameRules || "You can tame beasts up to 2 levels above your character level. Beast Lore is learned at Level 24.")}
+              </p>
+            </div>
+
+            <div class="pet-beta-bug-alert">
+              ${escapeHtml(trainingGuide.betaBugAlert || "⚠️ Beta Bug Notice: Pets tamed from Skyborne territory (such as Vuldren foxes or cranes) have been reported spontaneously losing abilities after being dismissed or relogging. This is a recognized beta bug, not intended design.")}
+            </div>
+          </div>
+
+          <div class="pet-speed-box">
+            <strong style="color: #38bdf8; font-size: 0.85rem; display: block; margin-bottom: 0.25rem;">⚡ Attack Speed & Damage Mechanics in Beta:</strong>
+            <p style="font-size: 0.79rem; color: #bae6fd; margin: 0; line-height: 1.45;">
+              ${escapeHtml(trainingGuide.attackSpeedInfo || "All pets swing at 2.0s base, modified by innate Faster Attack I–VII passives (Broken Tooth 1.0s, Savannah Cub 1.2s, Ravage 1.3s, Mystmane 1.6s). Because individual hits are not penalized for fast swings in beta, faster-swinging pets deal higher sustained DPS.")}
+            </p>
+          </div>
+        </div>
+
+        <!-- Return CTA Box -->
+        <div class="pet-changes-return-box">
+          <div>
+            <h4 style="color: #6ee7b7; margin: 0 0 0.25rem; font-size: 1.05rem;">Ready to tame your companion?</h4>
+            <p style="color: #cbd5e1; margin: 0; font-size: 0.84rem;">
+              Filter all 18 families, check zone spawns, verify level brackets, and view all 502 beasts.
+            </p>
+          </div>
+          <div style="display: flex; gap: 0.6rem; align-items: center; flex-wrap: wrap;">
+            <button class="btn-switch-pet-tab pet-cta-primary-btn" data-target-subtab="pets" type="button">
+              🐾 EXPLORE 18 FAMILIES & 502 BEASTS DIRECTORY ➔
+            </button>
+            <button class="pet-master-directory-btn btn-open-modal-trigger" type="button">
+              <span class="pmd-btn-title">🐾 Open 502 Beasts Table</span>
+              <span class="pmd-badge">Open Table ↗</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
   function renderHunterPetStable(cData) {
     const petData = (typeof window !== 'undefined' && window.WOW_ATLAS_DATA && window.WOW_ATLAS_DATA.hunterPets) || null;
     const families = (petData && petData.families) || [];
@@ -1413,132 +1888,48 @@ function initClassDeepDives() {
       <div class="hunter-pet-stable-wrapper">
         <div class="spec-overview-banner" style="background: rgba(16, 185, 129, 0.08); border-color: rgba(16, 185, 129, 0.3);">
           <div>
-            <h4 style="color: #6ee7b7; font-size: 1.3rem; margin: 0 0 0.25rem;">🐾 Pet Stable & Beast Abilities Matrix</h4>
+            <h4 style="color: #6ee7b7; font-size: 1.3rem; margin: 0 0 0.25rem;">🐾 Pet Stable & 502 Tamable Beasts Directory</h4>
             <p style="font-size: 0.9rem; color: #cbd5e1; margin: 0;">
-              Classic pet mechanics preserved: 18 families, native swing speed inheritance (Broken Tooth 1.0s, Mystmane 1.6s bear), the brand new Fox family, and 9 reworked or new active abilities.
+              Classic pet mechanics preserved and expanded: 18 families, native swing speed inheritance (Broken Tooth 1.0s, Mystmane 1.6s bear), and 502 authentic tamable beasts in WoW Forever.
             </p>
           </div>
           <span class="deepdive-badge badge-exclusive" style="align-self: flex-start;"><span>✦</span> Living Classic+ Pets</span>
         </div>
 
-        <!-- 9 New in Forever Abilities Spotlight Matrix -->
-        <div class="pet-new-abilities-banner" style="margin-top: 1.5rem;">
-          <h4 style="color: var(--text-gold); font-size: 1.1rem; margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.5rem;">
-            <span>⚡</span> 9 Brand New & Reworked Beast Abilities in WoW Forever
-          </h4>
-          <div class="pet-abilities-highlight-grid">
-            <div class="pet-ability-highlight-card">
-              <div class="pah-top">
-                <span class="pah-icon">🦇</span>
-                <div>
-                  <strong>Sonic Blast (Bat)</strong>
-                  <span class="pah-type">Anti-Caster Nature Nuke</span>
-                </div>
-              </div>
-              <p>Ranks 1–5: Piercing shriek dealing Nature damage and increasing all spell cast times by <strong>60% for 30 sec</strong> (80 Focus, 30s CD).</p>
+        <!-- Prominent Callout Banner to What's Changed for Pets -->
+        <div class="pet-changes-cta-banner">
+          <div class="pet-changes-cta-content">
+            <div class="pet-changes-cta-title">
+              <span>⚡</span>
+              <span>Looking for Closed Beta Pet Changes & Reworks?</span>
+              <span class="pet-changes-cta-tag">Beta Cap Lvl 30 Diff</span>
             </div>
-
-            <div class="pet-ability-highlight-card">
-              <div class="pah-top">
-                <span class="pah-icon">🐻</span>
-                <div>
-                  <strong>Swipe & Dash (Bear)</strong>
-                  <span class="pah-type">3-Target Cleave Tank</span>
-                </div>
-              </div>
-              <p>Ranks 1–5: Swipes <strong>3 nearby enemies</strong> for cleave damage every 5 seconds (20 Focus). Bears also learn Dash for closing gaps.</p>
-            </div>
-
-            <div class="pet-ability-highlight-card">
-              <div class="pah-top">
-                <span class="pah-icon">🦅</span>
-                <div>
-                  <strong>Mine! (Bird of Prey)</strong>
-                  <span class="pah-type">Active Weapon Disarm</span>
-                </div>
-              </div>
-              <p>Ranks 1–5: Snaps enemy weapons with sharp talons, inflicting physical damage and <strong>disarming them for 4 sec</strong> (20 Focus, 1m CD).</p>
-            </div>
-
-            <div class="pet-ability-highlight-card">
-              <div class="pah-top">
-                <span class="pah-icon">🐊</span>
-                <div>
-                  <strong>Dismember (Crocolisk)</strong>
-                  <span class="pah-type">50% Healing Reduction</span>
-                </div>
-              </div>
-              <p>Ranks 1–5: Viciously bites appendages, reducing all healing received by <strong>50% for 10 sec</strong> on a 6-second cooldown (35 Focus).</p>
-            </div>
-
-            <div class="pet-ability-highlight-card">
-              <div class="pah-top">
-                <span class="pah-icon">🦀</span>
-                <div>
-                  <strong>Pinch & Dash (Crab)</strong>
-                  <span class="pah-type">50% Hamstring Pin</span>
-                </div>
-              </div>
-              <p>Ranks 1–5: Pinches legs for damage and reduces movement speed by <strong>50% for 9 sec</strong> (50 Focus, 30s CD). High +13% Armor rating.</p>
-            </div>
-
-            <div class="pet-ability-highlight-card">
-              <div class="pah-top">
-                <span class="pah-icon">🦊</span>
-                <div>
-                  <strong>Trickster's Dance (Fox)</strong>
-                  <span class="pah-type">✦ Brand New Family</span>
-                </div>
-              </div>
-              <p>Rank 1: Increases pet Dodge by <strong>50%</strong> and decreases attack interval by <strong>30% for 12 sec</strong> (10 Focus, 3m CD). Meat diet.</p>
-            </div>
-
-            <div class="pet-ability-highlight-card">
-              <div class="pah-top">
-                <span class="pah-icon">🐗</span>
-                <div>
-                  <strong>Charge Rework (Boar)</strong>
-                  <span class="pah-type">Root & Attack Power</span>
-                </div>
-              </div>
-              <p>Ranks 1–6: Root-charges enemy for 1 sec and adds <strong>+204 melee attack power</strong> (Rank 3) to the boar's next attack (35 Focus, 25s CD).</p>
-            </div>
-
-            <div class="pet-ability-highlight-card">
-              <div class="pah-top">
-                <span class="pah-icon">🦍</span>
-                <div>
-                  <strong>Thunderstomp Rework (Gorilla)</strong>
-                  <span class="pah-type">8-Yard AoE Shock</span>
-                </div>
-              </div>
-              <p>Ranks 1–4: Shakes the ground dealing 53–61 Nature damage to all enemies within 8 yards (60 Focus, 1m CD). Plus Dash mobility.</p>
-            </div>
-
-            <div class="pet-ability-highlight-card">
-              <div class="pah-top">
-                <span class="pah-icon">🦅</span>
-                <div>
-                  <strong>Demoralizing Screech (Carrion Bird)</strong>
-                  <span class="pah-type">30s Melee AP Debuff</span>
-                </div>
-              </div>
-              <p>Ranks 1–4: Blasts enemy and reduces melee attack power of all enemies in melee range by <strong>111 AP for 30 sec</strong> (20 Focus, 10s CD).</p>
-            </div>
+            <p class="pet-changes-cta-desc">
+              Explore the brand new Fox family, Bird of Prey rename, 10 new family abilities, Dash expansion on 8 families, pruned abilities, side-by-side Classic vs Forever ability diffs, and universal pet mechanics.
+            </p>
+          </div>
+          <div class="pet-changes-cta-actions">
+            <button class="btn-switch-pet-tab pet-cta-primary-btn" data-target-subtab="petchanges" type="button" title="View all changes and new abilities">
+              ⚡ CLICK HERE TO SEE WHAT'S CHANGED ➔
+            </button>
+            <button class="btn-open-modal-trigger pet-master-directory-btn" type="button" title="Open master modal of 502 beasts">
+              <span class="pmd-btn-title">🐾 View 502 Beasts Table</span>
+              <span class="pmd-badge">Open Table ↗</span>
+            </button>
           </div>
         </div>
 
-        <!-- Filter Controls & Level Directory -->
-        <div class="pet-filter-bar" style="margin-top: 2rem;">
+        <!-- SECTION: All 18 Pet Families & Beast Directory (502 Beasts) -->
+        <div id="pet-sec-families" class="pet-filter-bar" style="margin-top: 1rem;">
           <div class="filter-controls-header">
             <div>
               <h4 style="color: #fff; margin: 0; font-size: 1.05rem;">All 18 Pet Families & Beast Taming Directory (502 Beasts)</h4>
               <span style="font-size: 0.8rem; color: #94a3b8;">Filter by role, level progression bracket, zone, or fast attack speeds</span>
             </div>
             <div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap;">
-              <button class="pet-master-directory-btn" id="btn-open-master-beasts" type="button">
-                <span>🐾 Master 502 Beasts Directory Table</span>
-                <span class="pmd-badge">502 Beasts</span>
+              <button class="pet-master-directory-btn" id="btn-open-master-beasts" type="button" title="Click to open the master directory of all 502 tamable beasts">
+                <span class="pmd-btn-title">🐾 Click Here to View All 502 Tamable Beasts Directory Table</span>
+                <span class="pmd-badge">Open Table ↗</span>
               </button>
               <button class="pet-toggle-all-btn" id="pet-toggle-all-drawers" data-state="collapsed" type="button">
                 <span>📍 Expand All Taming Guides</span>
