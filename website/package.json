@@ -8,7 +8,7 @@
     "dev": "npx serve . -l 3000",
     "start": "npx serve . -l 3000",
     "preview": "npx serve . -l 3000",
-    "test": "node scripts/validate.js",
+    "test": "node scripts/validate.js && node scripts/validate-atlas.js",
     "lint": "npx eslint js/ scripts/",
     "build:data": "node scripts/compile-scraped-data.js",
     "scrape": "node scripts/scrape-foreverchanges.js"

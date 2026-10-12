@@ -469,7 +469,7 @@
 
                 <div class="prof-dir-footer">
                   <div class="prof-dir-metrics">
-                    <strong>${recipeCount}</strong> ${p.category === 'Gathering' ? 'Nodes' : 'Recipes'} · <span style="color:#38bdf8;">${newCount} New</span>
+                    <strong>${recipeCount}</strong> ${p.category === 'Gathering' ? 'Nodes' : 'Recipes'} · <span style="color:#38bdf8;">${newCount} New</span> · <span style="color:var(--text-gold,#facc15);">${favorCount} Favor</span>
                   </div>
                   <button type="button" class="prof-dir-explore-btn" data-slug="${slug}">
                     Explore ${escapeHtml(p.name)} ›
@@ -544,7 +544,7 @@
 
     // Click handlers for cards and table rows
     container.querySelectorAll('.prof-dir-explore-btn, .prof-directory-card, .matrix-prof-col').forEach(el => {
-      el.addEventListener('click', (e) => {
+      el.addEventListener('click', () => {
         const slug = el.getAttribute('data-slug');
         if (slug && data[slug]) {
           currentProfession = slug;
@@ -820,10 +820,18 @@
       <div class="leveling-roadmap-list">
         ${steps.map(item => {
           if (item.type === 'rank') {
+            const isArtisan = item.rank && item.rank.toLowerCase().includes('artisan');
             return `
+              ${isArtisan && !steps.some(s => s.type === 'beta-stop') ? `
+                <div class="leveling-beta-stop-banner">
+                  <div class="beta-stop-title">🔒 THE BETA STOPS AT 225 (REQUIRES LEVEL 35)</div>
+                  <p>In Closed Beta Phase 2, player level is capped at 30. Artisan training requires Character Level 35 and skill 200+. These 225–300 steps outline the fastest path once Phase 3 unlocks.</p>
+                </div>
+              ` : ''}
               <div class="leveling-rank-divider">
                 <strong class="rank-name">${escapeHtml(item.rank)}</strong>
                 <span class="rank-details">${escapeHtml(item.details)}</span>
+                ${isArtisan ? `<span class="rank-phase-badge" style="background: rgba(239, 68, 68, 0.2); border: 1px solid #ef4444; color: #fca5a5; font-size: 0.72rem; padding: 2px 8px; border-radius: 4px; font-weight: 700; margin-left: auto;">Phase 3 (Req Lvl 35)</span>` : ''}
               </div>
             `;
           }
@@ -931,6 +939,9 @@
           <h3>${escapeHtml(shopping.title || 'SHOPPING LIST, 1 TO 225')}</h3>
           <p>${escapeHtml(shopping.subtitle || 'Trade goods, looted supplies, and crafted components needed to level.')}</p>
         </div>
+        <button type="button" class="shopping-copy-btn" id="shopping-copy-btn" aria-label="Copy shopping list to clipboard">
+          <span class="copy-icon">📋</span> Copy Shopping List
+        </button>
       </div>
 
       <div class="shopping-groups-container">
@@ -963,6 +974,33 @@
         `).join('')}
       </div>
     `;
+
+    const copyBtn = container.querySelector('#shopping-copy-btn');
+    if (copyBtn) {
+      copyBtn.addEventListener('click', () => {
+        let text = `=== ${prof.name} — ${shopping.title || 'Reagent Shopping List (1 to 225)'} ===\n\n`;
+        groups.forEach(g => {
+          text += `${g.title}${g.note ? ' (' + g.note + ')' : ''}:\n`;
+          (g.items || []).forEach(it => {
+            text += `  • ${it.count}x ${it.name}\n`;
+          });
+          text += '\n';
+        });
+        if (typeof window.copyTextToClipboard === 'function') {
+          window.copyTextToClipboard(text.trim(), () => {
+            copyBtn.classList.add('copied');
+            copyBtn.innerHTML = '<span class="copy-icon">✓</span> Copied to Clipboard!';
+            if (typeof window.showToast === 'function') {
+              window.showToast(`${prof.name} shopping list copied!`, 'success');
+            }
+            setTimeout(() => {
+              copyBtn.classList.remove('copied');
+              copyBtn.innerHTML = '<span class="copy-icon">📋</span> Copy Shopping List';
+            }, 2500);
+          });
+        }
+      });
+    }
 
     attachTooltipListeners(container, prof);
   }

@@ -104,5 +104,17 @@ if (typeof window !== 'undefined') {
   window.copyTextToClipboard = copyTextToClipboard;
   window.showToast = showToast;
   window.positionTooltip = positionTooltip;
+
+  // Universal image error fallback for WoW icon CDNs
+  window.addEventListener('error', (event) => {
+    if (event.target && event.target.tagName === 'IMG') {
+      const img = event.target;
+      const fallback = 'https://wow.zamimg.com/images/wow/icons/medium/inv_misc_questionmark.jpg';
+      if (img.src && !img.src.includes('inv_misc_questionmark') && !img.dataset.hasFailed) {
+        img.dataset.hasFailed = 'true';
+        img.src = fallback;
+      }
+    }
+  }, true);
 }
 
