@@ -47,6 +47,13 @@ function setupAtlasSubNav() {
         targetPanel.removeAttribute('hidden');
         targetPanel.classList.add('active');
       }
+
+      if (targetSub === 'pets' && typeof window.initHunterPets === 'function') {
+        const mount = document.getElementById('atlas-hunter-pets-mount');
+        if (mount && (!mount.hasChildNodes() || mount.children.length === 0)) {
+          window.initHunterPets();
+        }
+      }
     });
   });
 }
