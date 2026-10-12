@@ -108,9 +108,14 @@ function renderRaresRadar() {
 
         <div class="atlas-macro-box">
           <span class="atlas-macro-code">${escapeHtml(rare.macro)}</span>
-          <button type="button" class="btn-copy-macro" onclick="copyMacroToClipboard('${escapeHtml(rare.macro)}', this)" title="Copy /target macro to clipboard">
-            📋 Copy Macro
-          </button>
+          <div style="display: flex; gap: 0.4rem; flex-wrap: wrap;">
+            <button type="button" class="btn-copy-macro" onclick="copyMacroToClipboard('${escapeHtml(rare.macro)}', this)" title="Copy /target macro to clipboard">
+              📋 /target
+            </button>
+            <button type="button" class="btn-copy-macro tomtom" onclick="copyMacroToClipboard('/way ${escapeHtml(rare.zone)} ${escapeHtml(rare.coords)} ${escapeHtml(rare.name)}', this)" title="Copy TomTom waypoint macro to clipboard">
+              📍 /way
+            </button>
+          </div>
         </div>
 
         ${rare.drops && rare.drops.length > 0 ? `
@@ -145,18 +150,29 @@ function renderRaresRadar() {
 }
 
 window.copyMacroToClipboard = function(macroText, btnElement) {
-  navigator.clipboard.writeText(macroText).then(() => {
-    const originalText = btnElement.innerHTML;
+  const originalText = btnElement.innerHTML;
+  const onCopied = () => {
     btnElement.innerHTML = '✓ Copied!';
     btnElement.classList.add('copied');
-
     setTimeout(() => {
       btnElement.innerHTML = originalText;
       btnElement.classList.remove('copied');
     }, 1800);
-  }).catch(() => {
+  };
+  const onFailed = () => {
     btnElement.innerHTML = 'Error';
-  });
+    setTimeout(() => {
+      btnElement.innerHTML = originalText;
+    }, 1800);
+  };
+
+  if (window.copyTextToClipboard) {
+    window.copyTextToClipboard(macroText, onCopied, onFailed);
+  } else if (navigator.clipboard) {
+    navigator.clipboard.writeText(macroText).then(onCopied).catch(onFailed);
+  } else {
+    onFailed();
+  }
 };
 
 /* ==========================================================================
@@ -258,6 +274,9 @@ function renderBooksTracker() {
             <div class="book-coords-text">Coords: <strong>${escapeHtml(book.coords)}</strong></div>
             <div style="font-size: 0.78rem; color: #cbd5e1; margin-top: 0.15rem;">${escapeHtml(book.desc)}</div>
           </div>
+          <button type="button" class="btn-copy-macro tomtom" style="margin-left: auto; align-self: center;" onclick="event.stopPropagation(); copyMacroToClipboard('/way ${escapeHtml(book.zone)} ${escapeHtml(book.coords)} ${escapeHtml(book.name)}', this)" title="Copy TomTom waypoint command">
+            📍 /way
+          </button>
         </div>
       `;
     }).join('');

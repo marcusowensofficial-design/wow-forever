@@ -1238,6 +1238,23 @@
     state.isOpen = true;
 
     renderModalBody();
+
+    if (options.highlightTalent) {
+      setTimeout(() => {
+        const slots = document.querySelectorAll('.bis-talent-slot');
+        const target = Array.from(slots).find(s => {
+          const aria = (s.getAttribute('aria-label') || '').toLowerCase();
+          const tid = (s.getAttribute('data-talent-id') || '').toLowerCase();
+          const q = options.highlightTalent.toLowerCase();
+          return aria.includes(q) || tid.includes(q);
+        });
+        if (target) {
+          target.classList.add('pulse-highlight');
+          target.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          setTimeout(() => target.classList.remove('pulse-highlight'), 4500);
+        }
+      }, 150);
+    }
   }
 
   /**

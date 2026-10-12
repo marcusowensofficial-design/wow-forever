@@ -279,6 +279,43 @@
   gap: 0.6rem;
   font-size: 0.85rem;
   color: #cbd5e1;
+  flex-wrap: wrap;
+}
+
+.prof-skill-calc-label {
+  font-weight: 600;
+  color: #e2e8f0;
+}
+
+.prof-skill-presets {
+  display: inline-flex;
+  gap: 0.35rem;
+  align-items: center;
+}
+
+.prof-preset-btn {
+  background: rgba(15, 23, 42, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #cbd5e1;
+  padding: 0.25rem 0.55rem;
+  border-radius: 4px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.prof-preset-btn:hover {
+  background: rgba(212, 175, 55, 0.2);
+  border-color: var(--text-gold, #facc15);
+  color: #fff;
+}
+
+.prof-preset-btn.active {
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.35), rgba(202, 138, 4, 0.35));
+  border-color: #ffd100;
+  color: #ffd100;
+  box-shadow: 0 0 8px rgba(255, 209, 0, 0.3);
 }
 
 .prof-skill-input {
@@ -288,7 +325,7 @@
   padding: 0.4rem 0.6rem;
   color: var(--text-gold, #facc15);
   font-weight: 700;
-  width: 70px;
+  width: 75px;
   text-align: center;
 }
 

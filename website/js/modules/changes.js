@@ -572,12 +572,14 @@
       treeLink.addEventListener('click', (e) => {
         e.preventDefault();
         const cls = treeLink.getAttribute('data-class');
+        const item = classEntries.find(i => i.id === selectedItemId);
         if (window.TalentTreeModule) {
           window.TalentTreeModule.openModal({
             classId: cls || 'warrior',
             blankSlate: true,
             maxPoints: 26,
-            specName: `${cls.charAt(0).toUpperCase() + cls.slice(1)} Tree`
+            specName: `${cls.charAt(0).toUpperCase() + cls.slice(1)} Tree`,
+            highlightTalent: item?.name || null
           });
         } else {
           const plannerTabBtn = document.querySelector('.nav-tab-btn[data-tab="planner"]');

@@ -3539,6 +3539,28 @@
   color: #fff;
 }
 
+.btn-copy-macro.tomtom {
+  background: rgba(56, 189, 248, 0.18);
+  border-color: rgba(56, 189, 248, 0.4);
+  color: #7dd3fc;
+}
+
+.btn-copy-macro.tomtom:hover {
+  background: #38bdf8;
+  color: #0f172a;
+}
+
+@keyframes pulseTalentSlot {
+  0% { box-shadow: 0 0 0 0 rgba(255, 209, 0, 0.9); border-color: #ffd100; transform: scale(1); }
+  50% { box-shadow: 0 0 24px 8px rgba(255, 209, 0, 0.95); border-color: #fff; transform: scale(1.18); }
+  100% { box-shadow: 0 0 0 0 rgba(255, 209, 0, 0); border-color: #ffd100; transform: scale(1); }
+}
+
+.bis-talent-slot.pulse-highlight {
+  animation: pulseTalentSlot 1.5s ease-in-out 3;
+  z-index: 25 !important;
+}
+
 /* 40 Library Books */
 .books-tracker-card {
   background: linear-gradient(135deg, rgba(30, 41, 59, 0.9), rgba(15, 23, 42, 0.95));

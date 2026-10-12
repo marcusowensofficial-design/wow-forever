@@ -12,7 +12,13 @@ let drState = {
   talentHealPercent: 0,
   talentManaPercent: 0,
   talentCastReduction: 0,
-  gameMode: 'forever' // 'forever' | 'classic'
+  gameMode: 'forever', // 'forever' | 'classic'
+  healerConversion: false // WoW Forever +33.3% Healing-to-Damage rule
+};
+
+window.toggleHealerConversion = function(checked) {
+  drState.healerConversion = checked;
+  renderDownrankCalculator();
 };
 
 function initDownrankCalculator() {
@@ -122,6 +128,16 @@ function renderDownrankCalculator() {
             </div>
           </div>
 
+          <div class="dr-field-group" style="padding: 0.5rem 0.65rem; background: rgba(15, 23, 42, 0.5); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 6px;">
+            <label class="dr-field-label" style="display: flex; align-items: center; justify-content: space-between; cursor: pointer; margin: 0;">
+              <span style="font-size: 0.82rem; color: #facc15;">✦ +33.3% Healer Damage Rule</span>
+              <input type="checkbox" id="dr-healer-conversion" ${drState.healerConversion ? 'checked' : ''} onchange="toggleHealerConversion(this.checked)" style="cursor: pointer; width: 17px; height: 17px; accent-color: var(--border-gold-bright);" />
+            </label>
+            <small style="font-size: 0.72rem; color: #94a3b8; display: block; margin-top: 3px; line-height: 1.3;">
+              Applies Forever baseline 1/3 bonus healing conversion to offensive spells.
+            </small>
+          </div>
+
           <!-- Talents Details Dropdown -->
           <details class="dr-talents-accordion">
             <summary>Talents & Cast Modifiers</summary>
@@ -168,6 +184,7 @@ function renderDownrankCalculator() {
                 <th>Cast Time</th>
                 <th>Per Mana (HPM)</th>
                 <th>Per Second (HPS)</th>
+                <th>Casts to OOM</th>
                 <th>Coefficient</th>
               </tr>
             </thead>
@@ -245,6 +262,10 @@ function calculateAndRenderTable(spell) {
           ${isTopHps && !isLocked ? '<span class="dr-badge-win blue">⚡ Top HPS</span>' : ''}
         </td>
         <td>
+          <strong style="color: #38bdf8;">${r.castsToOom}</strong>
+          <small style="color: #64748b; font-size: 0.72rem;">(1600 mp)</small>
+        </td>
+        <td>
           <span class="dr-coef-text">${(r.effectiveCoef * 100).toFixed(1)}%</span>
         </td>
       </tr>
@@ -265,16 +286,21 @@ function computeRankValues(spell) {
       }
     }
 
+    const effectiveBonus = drState.healerConversion
+      ? Math.round(drState.bonusPower * 0.333)
+      : drState.bonusPower;
+
     const avgBase = (r.minVal + r.maxVal) / 2;
     const healMod = 1 + (drState.talentHealPercent / 100);
     const manaMod = 1 - (drState.talentManaPercent / 100);
-    const totalVal = Math.round((avgBase + (coef * drState.bonusPower)) * healMod);
+    const totalVal = Math.round((avgBase + (coef * effectiveBonus)) * healMod);
     const manaCost = Math.round(r.mana * manaMod);
 
     const baseCast = r.cast || spell.baseCast || 1.5;
     const castTime = Math.max(1.5, baseCast - drState.talentCastReduction);
     const hpm = manaCost > 0 ? (totalVal / manaCost) : 0;
     const hps = castTime > 0 ? (totalVal / castTime) : 0;
+    const castsToOom = manaCost > 0 ? Math.floor(1600 / manaCost) : '∞';
 
     return {
       rank: r.rank,
@@ -286,6 +312,7 @@ function computeRankValues(spell) {
       castTime: castTime.toFixed(1),
       hpm,
       hps,
+      castsToOom,
       effectiveCoef: coef
     };
   });

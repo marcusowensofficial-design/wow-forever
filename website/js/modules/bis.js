@@ -443,6 +443,16 @@ function renderStatBudget(statSummary) {
     ? (statSummary.alliance || statSummary.horde || {}) 
     : (statSummary.horde || statSummary.alliance || {});
 
+  const hitNum = parseFloat(stats.hit) || 0;
+  const agiNum = parseFloat(stats.agi) || 0;
+  const intNum = parseFloat(stats.int) || 0;
+  const spiNum = parseFloat(stats.spi) || 0;
+
+  // Level 30 Derived Ratings
+  const hitCapStatus = hitNum >= 5 ? `${hitNum}% (Soft Cap Met)` : `${hitNum}% (5% Cap vs Lvl 32)`;
+  const estCrit = stats.crit || (agiNum > 0 ? `${(4.5 + (agiNum / 20)).toFixed(1)}%` : (intNum > 0 ? `${(3.2 + (intNum / 59.5)).toFixed(1)}%` : null));
+  const spiritTick = spiNum > 0 ? `${Math.round(15 + (spiNum / 5))} / 2s tick` : null;
+
   const statEntries = [
     { label: "Health (HP)", val: stats.hp, icon: "❤️" },
     { label: "Mana", val: stats.mana, icon: "💧" },
@@ -454,8 +464,9 @@ function renderStatBudget(statSummary) {
     { label: "Spirit", val: stats.spi, icon: "✨" },
     { label: "Attack Power", val: stats.ap, icon: "⚔️" },
     { label: "Spell Power", val: stats.sp, icon: "🔥" },
-    { label: "Hit Chance", val: stats.hit, icon: "🎯" },
-    { label: "Crit Chance", val: stats.crit, icon: "💥" },
+    { label: "Hit Rating", val: hitCapStatus, icon: "🎯" },
+    { label: "Crit Chance", val: estCrit, icon: "💥" },
+    { label: "Spirit 5SR Regen", val: spiritTick, icon: "🧪" },
     { label: "Shadow Res", val: stats.shadowRes, icon: "🟣" },
     { label: "Nature Res", val: stats.natureRes, icon: "🌿" },
     { label: "Fire Res", val: stats.fireRes, icon: "🔥" },
@@ -1557,13 +1568,21 @@ function renderFloatingTooltip(card, e, tooltip) {
     `;
 
     if (slot.toLowerCase().includes("hand") || slot.toLowerCase().includes("ranged") || slot.toLowerCase().includes("weapon")) {
-      html += `
-        <div class="wow-tip-dmg-row">
-          <span>38 - 72 Damage</span>
-          <span>Speed 2.60</span>
-        </div>
-        <div class="wow-tip-dps">(21.2 damage per second)</div>
-      `;
+      const wpn = getWeaponOrOffHandDetails(slot, name, quality);
+      if (wpn.isWeapon) {
+        html += `
+          <div class="wow-tip-dmg-row">
+            <span>${wpn.minDmg} - ${wpn.maxDmg} ${wpn.school ? wpn.school + ' ' : ''}Damage</span>
+            <span>Speed ${wpn.speed}</span>
+          </div>
+          <div class="wow-tip-dps">(${wpn.dps} damage per second)</div>
+        `;
+      } else if (wpn.isShield) {
+        html += `
+          <div class="wow-tip-armor" style="color: #fff; margin: 0.2rem 0; font-size: 0.85rem;">${wpn.armor} Armor</div>
+          <div class="wow-tip-block" style="color: #fff; margin-bottom: 0.25rem; font-size: 0.85rem;">${wpn.block} Block</div>
+        `;
+      }
     }
 
     const statLines = stats ? stats.split(",").map(s => s.trim()).filter(Boolean) : [];
@@ -1630,6 +1649,68 @@ function updateTooltipPosition(e, tooltip) {
 
   tooltip.style.left = `${Math.max(8, left)}px`;
   tooltip.style.top = `${Math.max(8, top)}px`;
+}
+
+function getWeaponOrOffHandDetails(slot, name, quality) {
+  const l = (slot || '').toLowerCase();
+  const n = (name || '').toLowerCase();
+
+  // If Shield
+  if (n.includes('shield') || n.includes('buckler') || n.includes('targe') || n.includes('wall') || n.includes('barrier') || n.includes('aegis') || n.includes('crest')) {
+    return {
+      isShield: true,
+      armor: 680,
+      block: 23
+    };
+  }
+
+  // If Relic or Tome / Off-hand frill
+  if (n.includes('tome') || n.includes('orb') || n.includes('libram') || n.includes('totem') || n.includes('idol') || n.includes('relic') || n.includes('rod') && l.includes('off') || n.includes('chalice') || (l.includes('off hand') && !n.includes('blade') && !n.includes('dagger') && !n.includes('axe') && !n.includes('mace') && !n.includes('sword'))) {
+    return { isHeldInOffhand: true };
+  }
+
+  // Two-Handed
+  if (l.includes('two') || n.includes('whirlwind') || n.includes('ravager') || n.includes('bonebiter') || n.includes('corpsemaker') || n.includes('archeus') || n.includes('greatsword') || n.includes('halberd') || n.includes('staff') || n.includes('polearm') || (n.includes('hammer') && l.includes('main'))) {
+    const minDmg = 84;
+    const maxDmg = 132;
+    const speed = 3.60;
+    const dps = ((minDmg + maxDmg) / (2 * speed)).toFixed(1);
+    return { isWeapon: true, minDmg, maxDmg, speed: speed.toFixed(2), dps, type: 'Two-Hand' };
+  }
+
+  // Daggers
+  if (n.includes('dagger') || n.includes('shard') || n.includes('knife') || n.includes('dirk') || n.includes('shank')) {
+    const minDmg = 29;
+    const maxDmg = 56;
+    const speed = 1.70;
+    const dps = ((minDmg + maxDmg) / (2 * speed)).toFixed(1);
+    return { isWeapon: true, minDmg, maxDmg, speed: speed.toFixed(2), dps, type: 'Dagger' };
+  }
+
+  // Wand
+  if (l.includes('ranged') && (n.includes('wand') || n.includes('scepter') || n.includes('torch') || n.includes('rod'))) {
+    const minDmg = 42;
+    const maxDmg = 78;
+    const speed = 1.60;
+    const dps = ((minDmg + maxDmg) / (2 * speed)).toFixed(1);
+    return { isWeapon: true, minDmg, maxDmg, speed: speed.toFixed(2), dps, type: 'Wand', school: 'Shadow' };
+  }
+
+  // Bow / Gun / Crossbow
+  if (l.includes('ranged')) {
+    const minDmg = 34;
+    const maxDmg = 65;
+    const speed = 2.60;
+    const dps = ((minDmg + maxDmg) / (2 * speed)).toFixed(1);
+    return { isWeapon: true, minDmg, maxDmg, speed: speed.toFixed(2), dps, type: 'Ranged' };
+  }
+
+  // Standard 1H Weapon (Sword, Axe, Mace)
+  const minDmg = 42;
+  const maxDmg = 79;
+  const speed = 2.50;
+  const dps = ((minDmg + maxDmg) / (2 * speed)).toFixed(1);
+  return { isWeapon: true, minDmg, maxDmg, speed: speed.toFixed(2), dps, type: 'One-Hand' };
 }
 
 function getSlotClassification(slotLabel, itemName) {

@@ -633,8 +633,14 @@
           </button>
         </div>
         <div class="prof-skill-calc">
-          <span>Simulate Your Skill:</span>
-          <input type="number" id="prof-skill-input" class="prof-skill-input" min="1" max="300" placeholder="1-300" value="${playerSkill !== null ? playerSkill : ''}" />
+          <span class="prof-skill-calc-label">Skill Simulator:</span>
+          <div class="prof-skill-presets">
+            <button type="button" class="prof-preset-btn ${playerSkill === 75 ? 'active' : ''}" data-skill="75" title="Apprentice Skill Cap (75)">75</button>
+            <button type="button" class="prof-preset-btn ${playerSkill === 150 ? 'active' : ''}" data-skill="150" title="Journeyman Skill Cap (150)">150</button>
+            <button type="button" class="prof-preset-btn ${playerSkill === 225 ? 'active' : ''}" data-skill="225" title="Beta Phase 2 Cap (225)">225</button>
+            <button type="button" class="prof-preset-btn ${playerSkill === 300 ? 'active' : ''}" data-skill="300" title="Artisan Mastery (300)">300</button>
+          </div>
+          <input type="number" id="prof-skill-input" class="prof-skill-input" min="1" max="300" placeholder="Custom" value="${playerSkill !== null ? playerSkill : ''}" />
         </div>
       </div>
 
@@ -687,6 +693,14 @@
       });
     }
 
+    container.querySelectorAll('.prof-preset-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const s = parseInt(btn.getAttribute('data-skill'), 10);
+        playerSkill = playerSkill === s ? null : s;
+        renderRecipesTab(container, prof);
+      });
+    });
+
     container.querySelectorAll('.prof-cat-chip').forEach(btn => {
       btn.addEventListener('click', () => {
         currentCategory = btn.getAttribute('data-cat');
@@ -714,9 +728,9 @@
       <div class="recipe-card">
         <div>
           <div class="recipe-card-header">
-            <img src="${getIconUrl(r.icon, r.name, r.source)}" alt="${escapeHtml(r.name)}" class="recipe-item-icon ${qualityClass}" loading="lazy" />
+            <img src="${getIconUrl(r.icon, r.name, r.source)}" alt="${escapeHtml(r.name)}" class="recipe-item-icon ${qualityClass}" data-recipe-name="${escapeHtml(r.name)}" style="cursor: pointer;" loading="lazy" />
             <div class="recipe-info">
-              <h4 class="recipe-title ${qualityClass}">
+              <h4 class="recipe-title ${qualityClass}" data-recipe-name="${escapeHtml(r.name)}" style="cursor: pointer;">
                 ${escapeHtml(r.name)}
                 ${r.isNew ? '<span class="recipe-new-tag">New</span>' : ''}
               </h4>
@@ -1718,6 +1732,31 @@
   }
 
   function attachTooltipListeners(container, prof) {
+    if (!prof) return;
+
+    // Main Recipes Catalog cards hover
+    container.querySelectorAll('.recipe-card .recipe-item-icon, .recipe-card .recipe-title').forEach(el => {
+      const name = el.getAttribute('data-recipe-name') || '';
+      if (!name) return;
+      const match = (prof.recipes || []).find(r => r.name && r.name.toLowerCase() === name.toLowerCase());
+      if (!match) return;
+
+      const extra = {
+        type: `${prof.name || 'Crafted'} Item`,
+        skillReq: `${prof.name} (${match.learn})`,
+        source: match.source || 'Trainer'
+      };
+
+      el.addEventListener('mouseenter', (e) => {
+        showItemTooltip(e, match.name, match.quality || 1, match.effect || '', match.reagents || null, extra);
+      });
+      el.addEventListener('mousemove', (e) => {
+        const tt = document.getElementById('wow-item-tooltip');
+        if (tt) positionTooltip(e, tt);
+      });
+      el.addEventListener('mouseleave', hideItemTooltip);
+    });
+
     // Recipes / steps
     container.querySelectorAll('.step-recipe-name').forEach(el => {
       const name = el.getAttribute('data-recipe-name') || el.textContent.trim();

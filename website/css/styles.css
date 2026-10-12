@@ -305,6 +305,24 @@ h1, h2, h3, h4, .font-heading {
   box-shadow: 0 8px 30px rgba(0,0,0,0.5);
 }
 
+@media (max-width: 1200px) {
+  .nav-tab-bar {
+    max-width: 100%;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    border-radius: var(--radius-lg);
+    padding: 0.5rem 0.75rem;
+    scrollbar-width: thin;
+  }
+  .nav-tab-btn {
+    white-space: nowrap;
+    flex-shrink: 0;
+    padding: 0.55rem 1rem;
+    font-size: 0.88rem;
+  }
+}
+
 .nav-tab-btn {
   background: transparent;
   border: none;
