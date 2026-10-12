@@ -187,7 +187,7 @@
             if (slug === 'overview') {
               history.replaceState(null, '', '#professions');
             } else {
-              history.replaceState(null, '', `#professions/${slug}#${currentSubTab}`);
+              history.replaceState(null, '', `#professions/${slug}/${currentSubTab}`);
             }
           }
         }
@@ -340,7 +340,7 @@
         renderSubTabContent(prof);
 
         if (history.replaceState) {
-          history.replaceState(null, '', `#professions/${currentProfession}#${currentSubTab}`);
+          history.replaceState(null, '', `#professions/${currentProfession}/${currentSubTab}`);
         }
       });
     });
@@ -349,12 +349,13 @@
   }
 
   function renderOverviewHub(container) {
-    const data = window.WOW_PROFESSIONS_DATA;
-    const slugs = Object.keys(data).filter(s => s !== 'camping');
+    const data = window.WOW_PROFESSIONS_DATA || {};
+    const allSlugs = Object.keys(data);
+    const slugs = allSlugs.filter(s => s !== 'camping');
 
-    const totalRecipes = 2185;
-    const totalNew = 926;
-    const totalFavor = 317;
+    const totalRecipes = allSlugs.reduce((acc, s) => acc + (data[s]?.recipes?.length || 0), 0);
+    const totalNew = allSlugs.reduce((acc, s) => acc + (data[s]?.recipes?.filter(r => r.isNew)?.length || 0), 0);
+    const totalFavor = allSlugs.reduce((acc, s) => acc + (data[s]?.favor?.recipes?.length || 0), 0);
 
     const matrixRows = [
       { slug: 'alchemy', name: 'Alchemy', icon: 'trade_alchemy', s20: 'Mana Well', s20Desc: '29 Mana every 5 sec to everyone sitting nearby', s20Icon: 'spell_arcane_manatap', s140: 'Fermenter', s140Desc: 'Makes certain Alchemy reagents, gives Mana Well buff', s140Icon: 'inv_alchemy_90_cauldron', s300: 'Alchemy Laboratory', s300Desc: 'Needed for advanced recipes, gives Mana Well buff', s300Icon: '10prof_portabletable_alchemy01' },
@@ -597,11 +598,20 @@
     }
   }
 
+  let recipeSearchDebounceTimer = null;
+  function debounce(fn, delay) {
+    return function (...args) {
+      if (recipeSearchDebounceTimer) clearTimeout(recipeSearchDebounceTimer);
+      recipeSearchDebounceTimer = setTimeout(() => fn.apply(this, args), delay);
+    };
+  }
+
   /* ==========================================================================
      SUBTAB 1: RECIPES BROWSER
      ========================================================================== */
-  function renderRecipesTab(container, prof) {
-    const groups = prof.groups || [];
+  function updateRecipeGrid(container, prof) {
+    const grid = container.querySelector('.recipe-grid');
+    if (!grid) return;
 
     const filtered = (prof.recipes || []).filter(r => {
       if (currentCategory !== 'all' && r.cat !== currentCategory) {
@@ -622,6 +632,36 @@
       }
       return true;
     });
+
+    if (filtered.length === 0) {
+      grid.innerHTML = `
+        <div style="grid-column: 1 / -1; text-align: center; padding: 3rem; color: #94a3b8; background: rgba(15,23,42,0.5); border-radius: 8px;">
+          No recipes found matching your search and filter criteria.
+        </div>
+      `;
+    } else {
+      grid.innerHTML = filtered.map(r => renderRecipeCard(r)).join('');
+    }
+
+    container.querySelectorAll('.prof-cat-chip').forEach(btn => {
+      btn.classList.toggle('active', btn.getAttribute('data-cat') === currentCategory);
+    });
+
+    const newToggle = container.querySelector('#prof-new-toggle');
+    if (newToggle) {
+      newToggle.classList.toggle('active', filterNewOnly);
+    }
+
+    container.querySelectorAll('.prof-preset-btn').forEach(btn => {
+      const s = parseInt(btn.getAttribute('data-skill'), 10);
+      btn.classList.toggle('active', playerSkill === s);
+    });
+
+    attachTooltipListeners(grid, prof);
+  }
+
+  function renderRecipesTab(container, prof) {
+    const groups = prof.groups || [];
 
     container.innerHTML = `
       <!-- Toolbar -->
@@ -658,63 +698,59 @@
       </div>
 
       <!-- Recipes Grid -->
-      <div class="recipe-grid">
-        ${filtered.length === 0 ? `
-          <div style="grid-column: 1 / -1; text-align: center; padding: 3rem; color: #94a3b8; background: rgba(15,23,42,0.5); border-radius: 8px;">
-            No recipes found matching your search and filter criteria.
-          </div>
-        ` : filtered.map(r => renderRecipeCard(r)).join('')}
-      </div>
+      <div class="recipe-grid"></div>
     `;
 
-    // Event listeners
+    updateRecipeGrid(container, prof);
+
     const searchInput = container.querySelector('#prof-search-input');
     if (searchInput) {
-      searchInput.addEventListener('input', (e) => {
+      searchInput.addEventListener('input', debounce((e) => {
         searchQuery = e.target.value.trim();
-        renderRecipesTab(container, prof);
-      });
+        updateRecipeGrid(container, prof);
+      }, 120));
     }
 
     const newToggle = container.querySelector('#prof-new-toggle');
     if (newToggle) {
       newToggle.addEventListener('click', () => {
         filterNewOnly = !filterNewOnly;
-        renderRecipesTab(container, prof);
+        updateRecipeGrid(container, prof);
       });
     }
 
     const skillInput = container.querySelector('#prof-skill-input');
     if (skillInput) {
-      skillInput.addEventListener('input', (e) => {
+      skillInput.addEventListener('input', debounce((e) => {
         const val = parseInt(e.target.value, 10);
         playerSkill = !isNaN(val) ? val : null;
-        renderRecipesTab(container, prof);
-      });
+        updateRecipeGrid(container, prof);
+      }, 120));
     }
 
     container.querySelectorAll('.prof-preset-btn').forEach(btn => {
       btn.addEventListener('click', () => {
         const s = parseInt(btn.getAttribute('data-skill'), 10);
         playerSkill = playerSkill === s ? null : s;
-        renderRecipesTab(container, prof);
+        const skillInp = container.querySelector('#prof-skill-input');
+        if (skillInp) skillInp.value = playerSkill !== null ? playerSkill : '';
+        updateRecipeGrid(container, prof);
       });
     });
 
     container.querySelectorAll('.prof-cat-chip').forEach(btn => {
       btn.addEventListener('click', () => {
         currentCategory = btn.getAttribute('data-cat');
-        renderRecipesTab(container, prof);
+        updateRecipeGrid(container, prof);
       });
     });
-
-    attachTooltipListeners(container, prof);
   }
 
   function renderRecipeCard(r) {
     const qualityClass = `q${r.quality || 1}`;
     const skillClass = getSkillClass(r, playerSkill);
     const skillDisplay = playerSkill !== null ? `Skill ${r.learn} (${skillClass.replace('skill-', '')})` : `Skill ${r.learn}`;
+    const cardId = r.id ? `recipe-${r.id}` : `recipe-${(r.name || '').toLowerCase().replace(/[^a-z0-9]+/g, '-')}`;
 
     const reagentsHtml = (r.reagents || []).map(mat => `
       <span class="reagent-chip" title="${escapeHtml(mat.name)}" data-item-id="${mat.id || ''}" data-item-name="${escapeHtml(mat.name)}">
@@ -725,7 +761,7 @@
     `).join('');
 
     return `
-      <div class="recipe-card">
+      <div class="recipe-card" id="${cardId}" data-recipe-id="${r.id || ''}" data-recipe-name="${escapeHtml(r.name || '')}">
         <div>
           <div class="recipe-card-header">
             <img src="${getIconUrl(r.icon, r.name, r.source)}" alt="${escapeHtml(r.name)}" class="recipe-item-icon ${qualityClass}" data-recipe-name="${escapeHtml(r.name)}" style="cursor: pointer;" loading="lazy" />
@@ -1841,6 +1877,18 @@
       });
     });
 
+    // Stacking exclusion lookup for camp stations
+    const campBuffStackingNotes = {
+      'Mana Well': 'Does not stack with Blessing of Wisdom or Mana Spring Totem.',
+      'Sharpening Wheel': 'Does not stack with Strength of Earth Totem.',
+      'Enchanted Lute': 'Does not stack with Mark of the Wild.',
+      'Faction Banner': 'Does not stack with Divine Spirit.',
+      'Lodestone': 'Does not stack with Blessing of Might or Battle Shout.',
+      'Incense Candle': 'Does not stack with Arcane Intellect.',
+      'Fish Bowl': 'Does not stack with Blessing of Kings.',
+      'First Aid Kit': 'Does not stack with Power Word: Fortitude.'
+    };
+
     // Camping object and kit cards hover
     container.querySelectorAll('.camp-tooltip-item').forEach(el => {
       const name = el.getAttribute('data-item-name') || '';
@@ -1849,13 +1897,20 @@
       const req = el.getAttribute('data-req') || '';
       const desc = el.getAttribute('data-desc') || '';
       if (!name) return;
-      el.addEventListener('mouseenter', (e) => {
+
+      const stackNote = campBuffStackingNotes[name] ? ` (${campBuffStackingNotes[name]})` : '';
+      const fullUse = (effect ? `Place near a campfire. ${effect}` : desc) + stackNote;
+
+      const triggerTooltip = (e) => {
         showItemTooltip(e, name, quality, effect || desc, null, {
           type: 'Camp Utility Object',
           skillReq: req,
-          use: effect ? `Place near a campfire. ${effect}` : desc
+          use: fullUse
         });
-      });
+      };
+
+      el.addEventListener('mouseenter', triggerTooltip);
+      el.addEventListener('click', triggerTooltip);
       el.addEventListener('mousemove', (e) => {
         const tt = document.getElementById('wow-item-tooltip');
         if (tt) positionTooltip(e, tt);
@@ -1867,10 +1922,12 @@
     container.querySelectorAll('.reagent-chip, .step-reagent-badge, .shopping-row-card').forEach(el => {
       const name = el.getAttribute('data-item-name') || el.getAttribute('title') || '';
       if (!name) return;
-      el.addEventListener('mouseenter', (e) => {
+      const triggerTooltip = (e) => {
         e.stopPropagation();
         showItemTooltip(e, name, 1, 'Crafting Reagent / Material', null, { type: 'Crafting Component' });
-      });
+      };
+      el.addEventListener('mouseenter', triggerTooltip);
+      el.addEventListener('click', triggerTooltip);
       el.addEventListener('mousemove', (e) => {
         const tt = document.getElementById('wow-item-tooltip');
         if (tt) positionTooltip(e, tt);
@@ -1882,23 +1939,44 @@
     });
   }
 
+  // Dismiss tooltips when tapping outside on touch devices
+  if (typeof document !== 'undefined') {
+    document.addEventListener('pointerdown', (e) => {
+      const tt = document.getElementById('wow-item-tooltip');
+      if (tt && !e.target.closest('.reagent-chip, .recipe-item-icon, .recipe-title, .favor-recipe-card, .camp-tooltip-item, .step-recipe-name, .shopping-row-card')) {
+        hideItemTooltip();
+      }
+    });
+  }
+
   // Export module globally
   window.initProfessionsHub = initProfessionsHub;
   window.WOW_PROFESSIONS = {
-    selectProfession: (slug, subtab) => {
-      currentProfession = slug;
+    selectProfession: (slug, subtab, query, targetId) => {
+      currentProfession = slug || 'overview';
       if (subtab) currentSubTab = subtab;
+      if (query !== undefined && query !== null) searchQuery = query;
       const navBtn = document.querySelector('.nav-tab-btn[data-tab="professions"]');
       if (navBtn) navBtn.click();
       const grid = document.getElementById('prof-selector-buttons');
       if (grid) {
         grid.querySelectorAll('.prof-tile-btn').forEach(b => {
-          b.classList.toggle('active', b.getAttribute('data-slug') === slug);
+          b.classList.toggle('active', b.getAttribute('data-slug') === currentProfession);
         });
       }
       renderActiveProfession();
       if (history.replaceState) {
-        history.replaceState(null, '', `#professions/${slug}${currentSubTab ? '#' + currentSubTab : ''}`);
+        history.replaceState(null, '', `#professions/${currentProfession}${currentSubTab ? '/' + currentSubTab : ''}`);
+      }
+      if (targetId) {
+        setTimeout(() => {
+          const el = document.getElementById(targetId) || document.getElementById(`recipe-${targetId}`);
+          if (el) {
+            el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            el.classList.add('recipe-card-highlight');
+            setTimeout(() => el.classList.remove('recipe-card-highlight'), 2500);
+          }
+        }, 150);
       }
     }
   };

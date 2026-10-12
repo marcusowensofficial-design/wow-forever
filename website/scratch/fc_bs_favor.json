@@ -1,0 +1,372 @@
+[
+  {
+    "id": 251366,
+    "name": "Plans: Guard's Chain Belt",
+    "favor": 30,
+    "skill": 45
+  },
+  {
+    "id": 251369,
+    "name": "Plans: Crusader's Chain Belt",
+    "favor": 30,
+    "skill": 45
+  },
+  {
+    "id": 251368,
+    "name": "Plans: Acolyte's Chain Belt",
+    "favor": 30,
+    "skill": 45
+  },
+  {
+    "id": 251367,
+    "name": "Plans: Protector's Chain Belt",
+    "favor": 30,
+    "skill": 45
+  },
+  {
+    "id": 251365,
+    "name": "Plans: Veteran's Chain Belt",
+    "favor": 30,
+    "skill": 45
+  },
+  {
+    "id": 251357,
+    "name": "Plans: Protector's Boots",
+    "favor": 30,
+    "skill": 85
+  },
+  {
+    "id": 251356,
+    "name": "Plans: Guard's Boots",
+    "favor": 30,
+    "skill": 85
+  },
+  {
+    "id": 251359,
+    "name": "Plans: Crusader's Boots",
+    "favor": 30,
+    "skill": 85
+  },
+  {
+    "id": 251358,
+    "name": "Plans: Acolyte's Boots",
+    "favor": 30,
+    "skill": 85
+  },
+  {
+    "id": 251355,
+    "name": "Plans: Veteran's Boots",
+    "favor": 30,
+    "skill": 85
+  },
+  {
+    "id": 251361,
+    "name": "Plans: Guard's Gloves",
+    "favor": 30,
+    "skill": 80
+  },
+  {
+    "id": 251364,
+    "name": "Plans: Crusader's Gloves",
+    "favor": 30,
+    "skill": 80
+  },
+  {
+    "id": 251363,
+    "name": "Plans: Acolyte's Gloves",
+    "favor": 30,
+    "skill": 80
+  },
+  {
+    "id": 251362,
+    "name": "Plans: Protector's Gloves",
+    "favor": 30,
+    "skill": 80
+  },
+  {
+    "id": 251360,
+    "name": "Plans: Veteran's Gloves",
+    "favor": 30,
+    "skill": 80
+  },
+  {
+    "id": 251375,
+    "name": "Plans: Veteran's Silvered Chain Leggings",
+    "favor": 30,
+    "skill": 125
+  },
+  {
+    "id": 251377,
+    "name": "Plans: Protector's Silvered Chain Leggings",
+    "favor": 30,
+    "skill": 125
+  },
+  {
+    "id": 251376,
+    "name": "Plans: Guard's Silvered Chain Leggings",
+    "favor": 30,
+    "skill": 125
+  },
+  {
+    "id": 251379,
+    "name": "Plans: Crusader's Silvered Chain Leggings",
+    "favor": 30,
+    "skill": 125
+  },
+  {
+    "id": 251378,
+    "name": "Plans: Acolyte's Silvered Chain Leggings",
+    "favor": 30,
+    "skill": 125
+  },
+  {
+    "id": 251370,
+    "name": "Plans: Veteran's Silvered Chain Shirt",
+    "favor": 30,
+    "skill": 110
+  },
+  {
+    "id": 251372,
+    "name": "Plans: Protector's Silvered Chain Shirt",
+    "favor": 30,
+    "skill": 110
+  },
+  {
+    "id": 251371,
+    "name": "Plans: Guard's Silvered Chain Shirt",
+    "favor": 30,
+    "skill": 110
+  },
+  {
+    "id": 251374,
+    "name": "Plans: Crusader's Silvered Chain Shirt",
+    "favor": 30,
+    "skill": 110
+  },
+  {
+    "id": 251373,
+    "name": "Plans: Acolyte's Silvered Chain Shirt",
+    "favor": 30,
+    "skill": 110
+  },
+  {
+    "id": 251380,
+    "name": "Plans: Veteran's Silvered Chain Helm",
+    "favor": 30,
+    "skill": 95
+  },
+  {
+    "id": 251382,
+    "name": "Plans: Protector's Silvered Chain Helm",
+    "favor": 30,
+    "skill": 95
+  },
+  {
+    "id": 251381,
+    "name": "Plans: Guard's Silvered Chain Helm",
+    "favor": 30,
+    "skill": 95
+  },
+  {
+    "id": 251384,
+    "name": "Plans: Crusader's Silvered Chain Helm",
+    "favor": 30,
+    "skill": 95
+  },
+  {
+    "id": 251383,
+    "name": "Plans: Acolyte's Silvered Chain Helm",
+    "favor": 30,
+    "skill": 95
+  },
+  {
+    "id": 251422,
+    "name": "Plans: Justicar's Gauntlet",
+    "favor": 60,
+    "skill": 175
+  },
+  {
+    "id": 251418,
+    "name": "Plans: Officer's Gauntlet",
+    "favor": 60,
+    "skill": 175
+  },
+  {
+    "id": 251421,
+    "name": "Plans: Prefect's Gauntlet",
+    "favor": 60,
+    "skill": 175
+  },
+  {
+    "id": 251419,
+    "name": "Plans: Sentinel's Gauntlet",
+    "favor": 60,
+    "skill": 175
+  },
+  {
+    "id": 251420,
+    "name": "Plans: Warder's Gauntlet",
+    "favor": 60,
+    "skill": 175
+  },
+  {
+    "id": 251432,
+    "name": "Plans: Justicar's Pauldrons",
+    "favor": 60,
+    "skill": 210
+  },
+  {
+    "id": 251428,
+    "name": "Plans: Officer's Pauldrons",
+    "favor": 60,
+    "skill": 210
+  },
+  {
+    "id": 251431,
+    "name": "Plans: Prefect's Pauldrons",
+    "favor": 60,
+    "skill": 210
+  },
+  {
+    "id": 251429,
+    "name": "Plans: Sentinel's Pauldrons",
+    "favor": 60,
+    "skill": 210
+  },
+  {
+    "id": 251430,
+    "name": "Plans: Warder's Pauldrons",
+    "favor": 60,
+    "skill": 210
+  },
+  {
+    "id": 251437,
+    "name": "Plans: Justicar's Wristguards",
+    "favor": 90,
+    "skill": 225
+  },
+  {
+    "id": 251436,
+    "name": "Plans: Prefect's Wristguard",
+    "favor": 90,
+    "skill": 225
+  },
+  {
+    "id": 251435,
+    "name": "Plans: Warder's Wristguard",
+    "favor": 90,
+    "skill": 225
+  },
+  {
+    "id": 251434,
+    "name": "Plans: Sentinel's Wristguard",
+    "favor": 90,
+    "skill": 225
+  },
+  {
+    "id": 251433,
+    "name": "Plans: Officer's Wristguard",
+    "favor": 90,
+    "skill": 225
+  },
+  {
+    "id": 251425,
+    "name": "Plans: Warder's Waistguard",
+    "favor": 90,
+    "skill": 250
+  },
+  {
+    "id": 251417,
+    "name": "Plans: Justicar's Sabatons",
+    "favor": 90,
+    "skill": 240
+  },
+  {
+    "id": 251413,
+    "name": "Plans: Officer's Sabatons",
+    "favor": 90,
+    "skill": 240
+  },
+  {
+    "id": 251416,
+    "name": "Plans: Prefect's Sabatons",
+    "favor": 90,
+    "skill": 240
+  },
+  {
+    "id": 251414,
+    "name": "Plans: Sentinel's Sabatons",
+    "favor": 90,
+    "skill": 240
+  },
+  {
+    "id": 251415,
+    "name": "Plans: Warder's Sabatons",
+    "favor": 90,
+    "skill": 240
+  },
+  {
+    "id": 251427,
+    "name": "Plans: Justicar's Waistguard",
+    "favor": 90,
+    "skill": 250
+  },
+  {
+    "id": 251423,
+    "name": "Plans: Officer's Waistguard",
+    "favor": 90,
+    "skill": 250
+  },
+  {
+    "id": 251426,
+    "favor": 90,
+    "skill": 250
+  },
+  {
+    "id": 251424,
+    "name": "Plans: Sentinel's Waistguard",
+    "favor": 90,
+    "skill": 250
+  },
+  {
+    "id": 251466,
+    "name": "Plans: Thorium Cestus",
+    "favor": 90,
+    "skill": 250
+  },
+  {
+    "id": 251465,
+    "name": "Plans: Thorium Greatmace",
+    "favor": 90,
+    "skill": 250
+  },
+  {
+    "id": 251447,
+    "name": "Plans: Enriched Thorium Breastplate",
+    "favor": 120,
+    "skill": 300
+  },
+  {
+    "id": 251449,
+    "name": "Plans: Enriched Thorium Helm",
+    "favor": 120,
+    "skill": 300
+  },
+  {
+    "id": 251448,
+    "name": "Plans: Enriched Thorium Leggings",
+    "favor": 120,
+    "skill": 300
+  },
+  {
+    "id": 251471,
+    "name": "Plans: Legionite Glaive",
+    "favor": 120,
+    "skill": 300
+  },
+  {
+    "id": 271622,
+    "favor": 1000,
+    "skill": 300
+  }
+]

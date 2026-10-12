@@ -154,10 +154,46 @@ for (const jsonFile of jsonFiles) {
   });
 }
 
-check('No placeholder unknown recipes in professions', () => {
+check('No placeholder unknown or dummy recipes in professions JSON', () => {
   const profRaw = fs.readFileSync(path.join(dataDir, 'forever_professions.json'), 'utf8');
-  if (profRaw.includes('"name": "Unknown Recipe"')) {
-    throw new Error('Found placeholder "Unknown Recipe" in forever_professions.json');
+  if (profRaw.includes('"name": "Unknown Recipe"') || profRaw.includes('"name": "Favor Recipe"')) {
+    throw new Error('Found placeholder "Unknown Recipe" or "Favor Recipe" in forever_professions.json');
+  }
+});
+
+check('No placeholder unknown or dummy recipes in professions JS bundle', () => {
+  const profJsRaw = fs.readFileSync(path.join(ROOT, 'js', 'data', 'professions-data.js'), 'utf8');
+  if (profJsRaw.includes('"name": "Unknown Recipe"') || profJsRaw.includes('"name": "Favor Recipe"')) {
+    throw new Error('Found placeholder "Unknown Recipe" or "Favor Recipe" in professions-data.js');
+  }
+});
+
+check('Professions data synchronization between JSON and JS bundle', () => {
+  const profJson = JSON.parse(fs.readFileSync(path.join(dataDir, 'forever_professions.json'), 'utf8'));
+  const profJsRaw = fs.readFileSync(path.join(ROOT, 'js', 'data', 'professions-data.js'), 'utf8');
+  
+  // Extract WOW_PROFESSIONS_DATA from JS
+  const match = profJsRaw.match(/window\.WOW_PROFESSIONS_DATA\s*=\s*(\{[\s\S]*\});\s*$/);
+  if (!match) throw new Error('Could not parse window.WOW_PROFESSIONS_DATA from professions-data.js');
+  const profJs = JSON.parse(match[1]);
+
+  for (const slug of Object.keys(profJson)) {
+    const jsonRecCount = profJson[slug]?.recipes?.length || 0;
+    const jsRecCount = profJs[slug]?.recipes?.length || 0;
+    if (jsonRecCount !== jsRecCount) {
+      throw new Error(`Recipe count mismatch for ${slug}: JSON has ${jsonRecCount}, JS has ${jsRecCount}`);
+    }
+
+    const jsonFavorCount = profJson[slug]?.favor?.recipes?.length || 0;
+    const jsFavorCount = profJs[slug]?.favor?.recipes?.length || 0;
+    if (jsonFavorCount !== jsFavorCount) {
+      throw new Error(`Favor count mismatch for ${slug}: JSON has ${jsonFavorCount}, JS has ${jsFavorCount}`);
+    }
+  }
+
+  // Ensure 14 Mining smelts
+  if ((profJson.mining?.recipes?.length || 0) < 14) {
+    throw new Error(`Expected at least 14 mining smelts in forever_professions.json, got ${profJson.mining?.recipes?.length}`);
   }
 });
 

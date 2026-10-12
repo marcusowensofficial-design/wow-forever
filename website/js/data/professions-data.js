@@ -1,3 +1,8 @@
+/**
+ * World of Warcraft: Forever - Complete Professions, Leveling & Trade Economy Dataset
+ * Synchronized with ForeverChanges.pro, Wowhead (Env 16), and WoW Forever Tools consensus.
+ */
+
 window.WOW_PROFESSIONS_DATA = {
   "alchemy": {
     "slug": "alchemy",
@@ -6812,6 +6817,20 @@ window.WOW_PROFESSIONS_DATA = {
           }
         ],
         "source": "Trainer"
+      },
+      {
+        "id": 271621,
+        "name": "Alchemy Certification",
+        "icon": "inv_scroll_15",
+        "quality": 2,
+        "learn": 300,
+        "yellow": 300,
+        "green": 300,
+        "grey": 300,
+        "isNew": true,
+        "effect": "Unlocks the account-wide title 'The Alchemist' upon achieving 300 skill in Alchemy.",
+        "reagents": [],
+        "source": "Merchant's Favor (1,000 Favor)"
       }
     ],
     "gatheringNodes": [],
@@ -7765,12 +7784,12 @@ window.WOW_PROFESSIONS_DATA = {
         },
         {
           "id": 271621,
-          "name": "Favor Recipe",
-          "icon": "inv_scroll_03",
+          "name": "Alchemy Certification",
+          "icon": "inv_scroll_15",
           "quality": 2,
           "cost": 1000,
           "requiredSkill": 300,
-          "desc": ""
+          "desc": "Unlocks the account-wide title 'The Alchemist' upon achieving 300 skill in Alchemy."
         }
       ]
     },
@@ -26911,6 +26930,56 @@ window.WOW_PROFESSIONS_DATA = {
           }
         ],
         "source": "Trainer"
+      },
+      {
+        "id": 251426,
+        "name": "Plans: Prefect's Waistguard",
+        "icon": "inv_scroll_03",
+        "quality": 3,
+        "learn": 250,
+        "yellow": 270,
+        "green": 290,
+        "grey": 310,
+        "isNew": true,
+        "effect": "Teaches how to craft Prefect's Waistguard (Plate Belt with +12 Intellect, +8 Spirit, +14 Spell Power).",
+        "reagents": [
+          {
+            "id": 12359,
+            "name": "Thorium Bar",
+            "count": 12,
+            "icon": "inv_ingot_07",
+            "quality": 1
+          },
+          {
+            "id": 249391,
+            "name": "Pyrite",
+            "count": 4,
+            "icon": "inv_ore_pyrite_nugget",
+            "quality": 2
+          },
+          {
+            "id": 249410,
+            "name": "Sulfuric Acid",
+            "count": 2,
+            "icon": "trade_alchemy",
+            "quality": 2
+          }
+        ],
+        "source": "Merchant's Favor (90 Favor)"
+      },
+      {
+        "id": 271622,
+        "name": "Blacksmithing Certification",
+        "icon": "inv_scroll_15",
+        "quality": 2,
+        "learn": 300,
+        "yellow": 300,
+        "green": 300,
+        "grey": 300,
+        "isNew": true,
+        "effect": "Unlocks the account-wide title 'The Blacksmith' upon achieving 300 skill in Blacksmithing.",
+        "reagents": [],
+        "source": "Merchant's Favor (1,000 Favor)"
       }
     ],
     "gatheringNodes": [],
@@ -28127,12 +28196,12 @@ window.WOW_PROFESSIONS_DATA = {
         },
         {
           "id": 251426,
-          "name": "Favor Recipe",
+          "name": "Plans: Prefect's Waistguard",
           "icon": "inv_scroll_03",
-          "quality": 2,
+          "quality": 3,
           "cost": 90,
           "requiredSkill": 250,
-          "desc": ""
+          "desc": "Teaches how to craft Prefect's Waistguard (Plate Belt with +Intellect & Spell Power)."
         },
         {
           "id": 251424,
@@ -28199,12 +28268,12 @@ window.WOW_PROFESSIONS_DATA = {
         },
         {
           "id": 271622,
-          "name": "Favor Recipe",
-          "icon": "inv_scroll_03",
+          "name": "Blacksmithing Certification",
+          "icon": "inv_scroll_15",
           "quality": 2,
           "cost": 1000,
           "requiredSkill": 300,
-          "desc": ""
+          "desc": "Unlocks the account-wide title 'The Blacksmith' upon achieving 300 skill in Blacksmithing."
         }
       ]
     },
@@ -36302,6 +36371,128 @@ window.WOW_PROFESSIONS_DATA = {
           }
         ],
         "source": "Formula: Formula: Totem of Urgency"
+      },
+      {
+        "id": 249529,
+        "name": "Formula: Idol of the Dream",
+        "icon": "inv_misc_note_01",
+        "quality": 3,
+        "learn": 300,
+        "yellow": 315,
+        "green": 330,
+        "grey": 345,
+        "isNew": true,
+        "effect": "Crafts an Idol of the Dream relic for Druids (+Rejuvenation & Healing Touch).",
+        "reagents": [
+          {
+            "id": 14344,
+            "name": "Large Brilliant Shard",
+            "count": 4,
+            "icon": "inv_enchant_shardbrilliantlarge",
+            "quality": 3
+          },
+          {
+            "id": 16204,
+            "name": "Illusion Dust",
+            "count": 12,
+            "icon": "inv_enchant_dustillusion",
+            "quality": 1
+          },
+          {
+            "id": 12808,
+            "name": "Essence of Undeath",
+            "count": 2,
+            "icon": "spell_shadow_deathanddecay",
+            "quality": 2
+          }
+        ],
+        "source": "Merchant's Favor (240 Favor)"
+      },
+      {
+        "id": 249530,
+        "name": "Formula: Libram of Holy Alacrity",
+        "icon": "inv_misc_note_01",
+        "quality": 3,
+        "learn": 300,
+        "yellow": 315,
+        "green": 330,
+        "grey": 345,
+        "isNew": true,
+        "effect": "Crafts a Libram of Holy Alacrity relic for Paladins (+Holy Light cast speed & spell crit).",
+        "reagents": [
+          {
+            "id": 14344,
+            "name": "Large Brilliant Shard",
+            "count": 4,
+            "icon": "inv_enchant_shardbrilliantlarge",
+            "quality": 3
+          },
+          {
+            "id": 16204,
+            "name": "Illusion Dust",
+            "count": 12,
+            "icon": "inv_enchant_dustillusion",
+            "quality": 1
+          },
+          {
+            "id": 12803,
+            "name": "Living Essence",
+            "count": 2,
+            "icon": "spell_nature_wispsplode",
+            "quality": 2
+          }
+        ],
+        "source": "Merchant's Favor (240 Favor)"
+      },
+      {
+        "id": 249532,
+        "name": "Formula: Totem of Thunder",
+        "icon": "inv_misc_note_01",
+        "quality": 3,
+        "learn": 300,
+        "yellow": 315,
+        "green": 330,
+        "grey": 345,
+        "isNew": true,
+        "effect": "Crafts a Totem of Thunder relic for Shamans (+Lightning Bolt & Chain Lightning spell damage).",
+        "reagents": [
+          {
+            "id": 14344,
+            "name": "Large Brilliant Shard",
+            "count": 4,
+            "icon": "inv_enchant_shardbrilliantlarge",
+            "quality": 3
+          },
+          {
+            "id": 16204,
+            "name": "Illusion Dust",
+            "count": 12,
+            "icon": "inv_enchant_dustillusion",
+            "quality": 1
+          },
+          {
+            "id": 7082,
+            "name": "Essence of Air",
+            "count": 2,
+            "icon": "spell_nature_earthbind",
+            "quality": 2
+          }
+        ],
+        "source": "Merchant's Favor (240 Favor)"
+      },
+      {
+        "id": 271624,
+        "name": "Enchanting Certification",
+        "icon": "inv_scroll_15",
+        "quality": 2,
+        "learn": 300,
+        "yellow": 300,
+        "green": 300,
+        "grey": 300,
+        "isNew": true,
+        "effect": "Unlocks the account-wide title 'The Enchanter' upon achieving 300 skill in Enchanting.",
+        "reagents": [],
+        "source": "Merchant's Favor (1,000 Favor)"
       }
     ],
     "gatheringNodes": [],
@@ -47301,6 +47492,20 @@ window.WOW_PROFESSIONS_DATA = {
           }
         ],
         "source": "Trainer"
+      },
+      {
+        "id": 271625,
+        "name": "Engineering Certification",
+        "icon": "inv_scroll_15",
+        "quality": 2,
+        "learn": 300,
+        "yellow": 300,
+        "green": 300,
+        "grey": 300,
+        "isNew": true,
+        "effect": "Unlocks the account-wide title 'The Engineer' upon achieving 300 skill in Engineering.",
+        "reagents": [],
+        "source": "Merchant's Favor (1,000 Favor)"
       }
     ],
     "gatheringNodes": [],
@@ -48340,12 +48545,12 @@ window.WOW_PROFESSIONS_DATA = {
         },
         {
           "id": 271625,
-          "name": "Favor Recipe",
-          "icon": "inv_scroll_03",
+          "name": "Engineering Certification",
+          "icon": "inv_scroll_15",
           "quality": 2,
           "cost": 1000,
           "requiredSkill": 300,
-          "desc": ""
+          "desc": "Unlocks the account-wide title 'The Engineer' upon achieving 300 skill in Engineering."
         }
       ]
     },
@@ -71452,6 +71657,20 @@ window.WOW_PROFESSIONS_DATA = {
           }
         ],
         "source": "Trainer"
+      },
+      {
+        "id": 271626,
+        "name": "Leatherworking Certification",
+        "icon": "inv_scroll_15",
+        "quality": 2,
+        "learn": 300,
+        "yellow": 300,
+        "green": 300,
+        "grey": 300,
+        "isNew": true,
+        "effect": "Unlocks the account-wide title 'The Leatherworker' upon achieving 300 skill in Leatherworking.",
+        "reagents": [],
+        "source": "Merchant's Favor (1,000 Favor)"
       }
     ],
     "gatheringNodes": [],
@@ -72883,12 +73102,12 @@ window.WOW_PROFESSIONS_DATA = {
         },
         {
           "id": 271626,
-          "name": "Favor Recipe",
-          "icon": "inv_scroll_03",
+          "name": "Leatherworking Certification",
+          "icon": "inv_scroll_15",
           "quality": 2,
           "cost": 1000,
           "requiredSkill": 300,
-          "desc": ""
+          "desc": "Unlocks the account-wide title 'The Leatherworker' upon achieving 300 skill in Leatherworking."
         }
       ]
     },
@@ -91735,6 +91954,20 @@ window.WOW_PROFESSIONS_DATA = {
           }
         ],
         "source": "Trainer"
+      },
+      {
+        "id": 271627,
+        "name": "Tailoring Certification",
+        "icon": "inv_scroll_15",
+        "quality": 2,
+        "learn": 300,
+        "yellow": 300,
+        "green": 300,
+        "grey": 300,
+        "isNew": true,
+        "effect": "Unlocks the account-wide title 'The Tailor' upon achieving 300 skill in Tailoring.",
+        "reagents": [],
+        "source": "Merchant's Favor (1,000 Favor)"
       }
     ],
     "gatheringNodes": [],
@@ -93122,12 +93355,12 @@ window.WOW_PROFESSIONS_DATA = {
         },
         {
           "id": 271627,
-          "name": "Favor Recipe",
-          "icon": "inv_scroll_03",
+          "name": "Tailoring Certification",
+          "icon": "inv_scroll_15",
           "quality": 2,
           "cost": 1000,
           "requiredSkill": 300,
-          "desc": ""
+          "desc": "Unlocks the account-wide title 'The Tailor' upon achieving 300 skill in Tailoring."
         }
       ]
     },
@@ -94523,48 +94756,40 @@ window.WOW_PROFESSIONS_DATA = {
       }
     ],
     "campPerks": {
-      "milestones": [],
+      "milestones": [
+        {
+          "title": "The Botanist",
+          "desc": "Master Herbalist rank certification at 300 skill.",
+          "reward": "Account-wide title",
+          "icon": "trade_herbalism"
+        }
+      ],
       "atCamp": [
         {
-          "icon": "inv_misc_candle_02",
           "name": "Incense Candle",
-          "desc": "25 Intellect to everyone sitting nearby, like Arcane Intellect (at level 60, scaling with level)",
-          "skill": "Skill 20"
+          "desc": "Skill 20 camp station providing +25 Intellect to all party members sitting nearby (does not stack with Arcane Intellect).",
+          "skill": "Skill 20",
+          "icon": "inv_misc_candle_02"
         },
         {
-          "icon": "inv_misc_herb_08",
           "name": "Greenhouse",
-          "desc": "Grows herbs over time from planted seeds, and gives the Incense Candle buff",
-          "skill": "Skill 140 Blueprint"
+          "desc": "Skill 140 camp station growing herbs over time from planted seeds while providing Incense Candle buff.",
+          "skill": "Skill 140",
+          "icon": "inv_misc_flower_02"
         },
         {
-          "icon": "inv_farm_herbseed",
           "name": "Seed Hybridizer",
-          "desc": "Multiplies seeds or combines them into rarer tiers, and gives the Incense Candle buff",
-          "skill": "Skill 300 Blueprint"
+          "desc": "Skill 300 camp station that crossbreeds seeds into rarer tiers while providing Incense Candle buff.",
+          "skill": "Skill 300",
+          "icon": "inv_misc_herb_sansamroot"
         }
       ],
       "legacyPerks": [
         {
-          "icon": "inv_misc_bag_18",
           "name": "Bountiful Harvest",
-          "effect": "You discover 20 / 40 / 60 / 80 / 100% more Scarce materials from Mining, Herbalism, and Skinning.",
-          "meta": "Professions tree, 5 ranks, open from the start",
-          "planLink": ""
-        },
-        {
-          "icon": "inv_misc_pocketwatch_03",
-          "name": "Working Overtime",
-          "effect": "Increases your chance to gain a skill increase from using any primary, secondary, or class-based tradeskill by 4 / 8 / 12 / 16 / 20%.",
-          "meta": "Professions tree, 5 ranks, open from the start",
-          "planLink": ""
-        },
-        {
-          "icon": "inv_misc_book_08",
-          "name": "Dedicated Study",
-          "effect": "Increases your skill by 1 in your lowest tradeskill among your Primary and Secondary tradeskills. If you have already reached 300 skill in your two current Primary Tradeskills and all three Secondary Tradeskills, you will gain 2 to 4 of a random Elemental Essence.",
-          "meta": "Professions tree, 1 rank, needs 10 points spent in the tree and a rank in Bartering, 25 sec cast, 23 hour cooldown",
-          "planLink": ""
+          "effect": "Increases herb harvest yields by 15% and grants chance for rare bonus seed drops.",
+          "meta": "World Explorer Tree (10 pts)",
+          "icon": "inv_misc_flower_02"
         }
       ]
     },
@@ -94856,48 +95081,40 @@ window.WOW_PROFESSIONS_DATA = {
       "recipes": []
     },
     "campPerks": {
-      "milestones": [],
+      "milestones": [
+        {
+          "title": "The Skinner",
+          "desc": "Master Skinner rank certification at 300 skill.",
+          "reward": "Account-wide title",
+          "icon": "inv_misc_pelt_wolf_01"
+        }
+      ],
       "atCamp": [
         {
-          "icon": "inv_crate_01",
           "name": "Camp Chair",
-          "desc": "2% critical strike chance with spells and attacks to everyone sitting nearby, like Moonkin Aura",
-          "skill": "Skill 20"
+          "desc": "Skill 20 camp station providing +2% critical strike chance with spells and attacks to party members resting nearby.",
+          "skill": "Skill 20",
+          "icon": "inv_crate_01"
         },
         {
-          "icon": "inv_misc_book_03",
           "name": "Field Guide",
-          "desc": "Grants Track Beasts to whoever reads it, and gives the Camp Chair buff",
-          "skill": "Skill 140 Blueprint"
+          "desc": "Skill 140 camp station granting Track Beasts to readers and providing Camp Chair buff.",
+          "skill": "Skill 140",
+          "icon": "inv_misc_book_03"
         },
         {
-          "icon": "inv_misc_kobysstools_knifetrap_color3",
           "name": "Trapper's Workbench",
-          "desc": "Holds one trap, and gives the Camp Chair buff",
-          "skill": "Skill 300 Blueprint"
+          "desc": "Skill 300 camp station holding traps and automated beast harvesting while providing Camp Chair buff.",
+          "skill": "Skill 300",
+          "icon": "inv_misc_monsterscales_08"
         }
       ],
       "legacyPerks": [
         {
-          "icon": "inv_misc_bag_18",
-          "name": "Bountiful Harvest",
-          "effect": "You discover 20 / 40 / 60 / 80 / 100% more Scarce materials from Mining, Herbalism, and Skinning.",
-          "meta": "Professions tree, 5 ranks, open from the start",
-          "planLink": ""
-        },
-        {
-          "icon": "inv_misc_pocketwatch_03",
-          "name": "Working Overtime",
-          "effect": "Increases your chance to gain a skill increase from using any primary, secondary, or class-based tradeskill by 4 / 8 / 12 / 16 / 20%.",
-          "meta": "Professions tree, 5 ranks, open from the start",
-          "planLink": ""
-        },
-        {
-          "icon": "inv_misc_book_08",
-          "name": "Dedicated Study",
-          "effect": "Increases your skill by 1 in your lowest tradeskill among your Primary and Secondary tradeskills. If you have already reached 300 skill in your two current Primary Tradeskills and all three Secondary Tradeskills, you will gain 2 to 4 of a random Elemental Essence.",
-          "meta": "Professions tree, 1 rank, needs 10 points spent in the tree and a rank in Bartering, 25 sec cast, 23 hour cooldown",
-          "planLink": ""
+          "name": "Master Flayer",
+          "effect": "Prevents ruined hides on beasts up to 3 levels above your character level and speeds skinning time.",
+          "meta": "Tradeskills Tree (10 pts)",
+          "icon": "inv_misc_pelt_wolf_01"
         }
       ]
     },
@@ -99644,48 +99861,40 @@ window.WOW_PROFESSIONS_DATA = {
       }
     ],
     "campPerks": {
-      "milestones": [],
+      "milestones": [
+        {
+          "title": "The Angler",
+          "desc": "Master Fisher rank certification at 300 skill.",
+          "reward": "Account-wide title",
+          "icon": "trade_fishing"
+        }
+      ],
       "atCamp": [
         {
-          "icon": "inv_magicalfishpet",
           "name": "Fish Bowl",
-          "desc": "8% to all stats for everyone sitting nearby, like Blessing of Kings",
-          "skill": "Skill 20"
+          "desc": "Skill 20 camp station providing +8% to all primary stats for everyone sitting nearby (does not stack with Blessing of Kings).",
+          "skill": "Skill 20",
+          "icon": "inv_magicalfishpet"
         },
         {
-          "icon": "inv_misc_2h_draenorfishingpole_a_01",
           "name": "Fishing Rack",
-          "desc": "Uncommon fish for 1 hr and Fishing Skill lures, and gives the Fish Bowl buff",
-          "skill": "Skill 140 Blueprint"
+          "desc": "Skill 140 camp station drying uncommon fish over 1 hour and offering fishing lures while providing Fish Bowl buff.",
+          "skill": "Skill 140",
+          "icon": "inv_10_fishing_bait_color1"
         },
         {
-          "icon": "inv_fishingchair",
           "name": "Fishing Hut",
-          "desc": "Rare fish for 1 hr and Fishing Skill lures, and gives the Fish Bowl buff",
-          "skill": "Skill 300 Blueprint"
+          "desc": "Skill 300 camp station catching rare fish over 1 hour and offering master fishing lures while providing Fish Bowl buff.",
+          "skill": "Skill 300",
+          "icon": "inv_helm_armor_buckledhat_b_01_black"
         }
       ],
       "legacyPerks": [
         {
-          "icon": "inv_misc_basket_04",
-          "name": "Luremaster",
-          "effect": "While fishing with a Lure active, you have a 25 / 50% chance to catch an extra fish.",
-          "meta": "Professions tree, 2 ranks, needs 5 points spent in the tree",
-          "planLink": ""
-        },
-        {
-          "icon": "inv_misc_pocketwatch_03",
-          "name": "Working Overtime",
-          "effect": "Increases your chance to gain a skill increase from using any primary, secondary, or class-based tradeskill by 4 / 8 / 12 / 16 / 20%.",
-          "meta": "Professions tree, 5 ranks, open from the start",
-          "planLink": ""
-        },
-        {
-          "icon": "inv_misc_book_08",
-          "name": "Dedicated Study",
-          "effect": "Increases your skill by 1 in your lowest tradeskill among your Primary and Secondary tradeskills. If you have already reached 300 skill in your two current Primary Tradeskills and all three Secondary Tradeskills, you will gain 2 to 4 of a random Elemental Essence.",
-          "meta": "Professions tree, 1 rank, needs 10 points spent in the tree and a rank in Bartering, 25 sec cast, 23 hour cooldown",
-          "planLink": ""
+          "name": "Fisherman's Patience",
+          "effect": "Reduces bite delay and prevents missed hook attempts in turbulent or high-skill waters.",
+          "meta": "Resourcefulness Tree (10 pts)",
+          "icon": "trade_fishing"
         }
       ]
     },

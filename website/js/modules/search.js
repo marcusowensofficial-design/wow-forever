@@ -262,8 +262,10 @@ function buildSearchIndex() {
               icon: '📜',
               desc: `Requires ${p.name} (${rec.learn}) • ${rec.source || 'Trainer / Drop'}`,
               tab: 'professions',
-              targetId: 'tab-professions',
-              profession: slug
+              targetId: rec.id ? `recipe-${rec.id}` : 'tab-professions',
+              profession: slug,
+              recipeName: rec.name,
+              recipeId: rec.id
             });
           });
         }
@@ -452,6 +454,8 @@ function performSearch(query) {
          ${item.deepDiveClass ? `data-deep-dive-class="${item.deepDiveClass}"` : ''}
          ${item.atlasSub ? `data-atlas-sub="${item.atlasSub}"` : ''}
          ${item.profession ? `data-profession="${item.profession}"` : ''}
+         ${item.recipeName ? `data-recipe-name="${escapeHtml(item.recipeName)}"` : ''}
+         ${item.recipeId ? `data-recipe-id="${item.recipeId}"` : ''}
          ${item.changeClass ? `data-change-class="${item.changeClass}" data-change-id="${item.changeId}"` : ''}
          onclick="handleSearchResultClick(this)">
       <span class="search-item-icon">${item.icon}</span>
@@ -492,6 +496,8 @@ window.handleSearchResultClick = function(elem) {
   const bisSpec = elem.getAttribute('data-bis-spec');
   const deepDiveClass = elem.getAttribute('data-deep-dive-class');
   const profession = elem.getAttribute('data-profession');
+  const recipeName = elem.getAttribute('data-recipe-name');
+  const recipeId = elem.getAttribute('data-recipe-id');
   const atlasSub = elem.getAttribute('data-atlas-sub');
   const changeClass = elem.getAttribute('data-change-class');
   const changeId = elem.getAttribute('data-change-id');
@@ -535,7 +541,11 @@ window.handleSearchResultClick = function(elem) {
 
   // If profession sub-route
   if (tab === 'professions' && profession) {
-    window.location.hash = `#professions/${profession}`;
+    if (window.WOW_PROFESSIONS && typeof window.WOW_PROFESSIONS.selectProfession === 'function') {
+      window.WOW_PROFESSIONS.selectProfession(profession, 'recipes', recipeName || '', targetId || (recipeId ? `recipe-${recipeId}` : null));
+    } else {
+      window.location.hash = `#professions/${profession}/recipes`;
+    }
   }
 
   // Scroll to element

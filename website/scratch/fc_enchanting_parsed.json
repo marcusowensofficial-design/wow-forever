@@ -1,0 +1,146 @@
+[
+  {
+    "name": "Minor Beastslayer",
+    "isNew": false,
+    "skill": 90,
+    "src": "Formula drops from Takk the Leaper, The Barrens; Firecaller Radison, Darkshore and 1 more"
+  },
+  {
+    "name": "Minor Striking",
+    "isNew": false,
+    "skill": 90,
+    "src": "Trainer"
+  },
+  {
+    "name": "Insight",
+    "isNew": true,
+    "skill": 140,
+    "src": "Formula for 45 Merchant&#x27;s Favor from Alynsia (Alliance) or Beneris (Horde) . Where"
+  },
+  {
+    "name": "Lesser Striking",
+    "isNew": false,
+    "skill": 140,
+    "src": "Trainer"
+  },
+  {
+    "name": "Recovery",
+    "isNew": true,
+    "skill": 140,
+    "src": "Formula for 45 Merchant&#x27;s Favor from Alynsia (Alliance) or Beneris (Horde) . Where"
+  },
+  {
+    "name": "Revelation",
+    "isNew": true,
+    "skill": 140,
+    "src": "Formula for 45 Merchant&#x27;s Favor from Alynsia (Alliance) or Beneris (Horde) . Where"
+  },
+  {
+    "name": "Lesser Beastslayer",
+    "isNew": false,
+    "skill": 175,
+    "src": "Formula drops from Morbent Fel, Duskwood; Taneel Darkwood, Ashenvale and 1 more"
+  },
+  {
+    "name": "Lesser Elemental Slayer",
+    "isNew": false,
+    "skill": 175,
+    "src": "Formula drops from Noxious Flayer, Dustwallow Marsh; Horde Grunt, Ashenvale and 1 more"
+  },
+  {
+    "name": "Winter&#x27;s Might",
+    "isNew": false,
+    "skill": 190,
+    "src": "Formula : Acquisition source not recorded"
+  },
+  {
+    "name": "Striking",
+    "isNew": false,
+    "skill": 195,
+    "src": "Trainer"
+  },
+  {
+    "name": "Demonslaying",
+    "isNew": false,
+    "skill": 230,
+    "src": "Formula drops from Emerald Ooze, The Hinterlands; Mok&#x27;rash, Stranglethorn Vale and 1 more"
+  },
+  {
+    "name": "Greater Striking",
+    "isNew": false,
+    "skill": 245,
+    "src": "Trainer"
+  },
+  {
+    "name": "Fiery Weapon",
+    "isNew": false,
+    "skill": 265,
+    "src": "Formula drops in Blackrock Depths"
+  },
+  {
+    "name": "Icy Chill",
+    "isNew": false,
+    "skill": 285,
+    "src": "Formula drops from Anguished Highborne, Winterspring"
+  },
+  {
+    "name": "Agility",
+    "isNew": false,
+    "skill": 290,
+    "src": "Formula sold by Meilosh, Felwood"
+  },
+  {
+    "name": "Strength",
+    "isNew": false,
+    "skill": 290,
+    "src": "Formula sold by Lokhtos Darkbargainer, Blackrock Depths"
+  },
+  {
+    "name": "Unholy Weapon",
+    "isNew": false,
+    "skill": 295,
+    "src": "Formula drops in Stratholme"
+  },
+  {
+    "name": "Crusader",
+    "isNew": false,
+    "skill": 300,
+    "src": "Formula drops from Scarlet Spellbinder, Western Plaguelands"
+  },
+  {
+    "name": "Healing Power",
+    "isNew": false,
+    "skill": 300,
+    "src": "Formula drops in Molten Core"
+  },
+  {
+    "name": "Lifestealing",
+    "isNew": false,
+    "skill": 300,
+    "src": "Formula drops in Scholomance"
+  },
+  {
+    "name": "Mighty Intellect",
+    "isNew": false,
+    "skill": 300,
+    "src": "Formula sold by Lokhtos Darkbargainer, Blackrock Depths"
+  },
+  {
+    "name": "Mighty Spirit",
+    "isNew": false,
+    "skill": 300,
+    "src": "Formula sold by Lokhtos Darkbargainer, Blackrock Depths"
+  },
+  {
+    "name": "Spell Power",
+    "isNew": false,
+    "skill": 300,
+    "src": "Formula drops in Molten Core"
+  },
+  {
+    "name": "Superior Striking",
+    "isNew": false,
+    "skill": 300,
+    "src": "Formula drops in Blackrock Spire"
+  }
+]

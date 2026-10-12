@@ -371,7 +371,7 @@
 /* Recipe Grid and Cards */
 .recipe-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr));
   gap: 1rem;
 }
 
@@ -1632,7 +1632,7 @@
 /* Profession Directory Cards */
 .prof-overview-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr));
   gap: 1.25rem;
 }
 
@@ -2015,7 +2015,7 @@
 
 .camp-buffs-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 330px), 1fr));
   gap: 1.25rem;
 }
 
@@ -2113,7 +2113,7 @@
 
 .camp-rules-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
   gap: 1.25rem;
 }
 
@@ -2161,5 +2161,23 @@
   gap: 1rem;
   flex-wrap: wrap;
 }
+
+/* Universal Search Deep-Link Card Highlight */
+.recipe-card-highlight {
+  border-color: var(--text-gold, #facc15) !important;
+  box-shadow: 0 0 25px rgba(250, 204, 21, 0.5) !important;
+  transform: translateY(-3px) scale(1.01) !important;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 480px) {
+  .recipe-grid,
+  .prof-overview-grid,
+  .camp-buffs-grid,
+  .camp-rules-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 
 
