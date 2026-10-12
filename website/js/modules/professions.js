@@ -44,6 +44,16 @@
       .replace(/'/g, '&#039;');
   }
 
+  function getProfessionPassive(nameOrSlug) {
+    if (!nameOrSlug) return null;
+    const clean = String(nameOrSlug).toLowerCase().replace(/[^a-z0-9]/g, '');
+    const list = (window.WOW_FOREVER_DATA && window.WOW_FOREVER_DATA.professionPassives) || [];
+    return list.find(p => {
+      const pClean = p.name.toLowerCase().replace(/[^a-z0-9]/g, '');
+      return pClean === clean;
+    }) || null;
+  }
+
   function getSkillClass(recipe, skill) {
     if (skill === null || skill === undefined || isNaN(skill)) {
       return 'skill-orange';
@@ -267,11 +277,23 @@
       currentSubTab = availableTabs[0].id;
     }
 
+    const passiveData = getProfessionPassive(prof.name || currentProfession);
+    const combatBuffHtml = passiveData ? `
+      <div class="prof-combat-buff-pill" title="Permanent Character Combat Passive granted by ${escapeHtml(prof.name)}">
+        <span class="prof-buff-icon-badge">${passiveData.icon || '✨'}</span>
+        <div class="prof-combat-buff-text">
+          <span class="prof-buff-tag">✨ COMBAT PASSIVE</span>
+          <strong>${escapeHtml(passiveData.passiveName)}:</strong> ${escapeHtml(passiveData.passiveEffect)}
+        </div>
+      </div>
+    ` : '';
+
     const campBuffHtml = prof.campBuff ? `
-      <div class="prof-camp-buff-pill">
-        <img src="${getIconUrl(prof.campBuff.icon)}" alt="${escapeHtml(prof.campBuff.name)}" />
+      <div class="prof-camp-buff-pill" title="Wilderness Campfire Station Aura granted by ${escapeHtml(prof.name)}">
+        <span class="prof-buff-icon-badge">⛺</span>
         <div class="prof-camp-buff-text">
-          <strong>${escapeHtml(prof.campBuff.name)} (Campfire Skill ${prof.campBuff.skill}+):</strong> ${escapeHtml(prof.campBuff.effect)}
+          <span class="prof-buff-tag camp">🔥 CAMPFIRE AURA (${escapeHtml(prof.campBuff.name)})</span>
+          <strong>Camp Skill ${prof.campBuff.skill}+:</strong> ${escapeHtml(prof.campBuff.effect)}
         </div>
       </div>
     ` : '';
@@ -293,7 +315,10 @@
             <h3>${escapeHtml(prof.name)} <span style="font-size: 0.9rem; font-weight: 500; color: #94a3b8;">(${escapeHtml(prof.category)})</span></h3>
             <p>${escapeHtml(prof.summary)}</p>
             ${prof.synergy ? `<div style="font-size: 0.82rem; color: #38bdf8; margin-top: 0.35rem; font-style: italic;">🔗 ${escapeHtml(prof.synergy)}</div>` : ''}
-            ${campBuffHtml}
+            <div class="prof-hero-buffs-container">
+              ${combatBuffHtml}
+              ${campBuffHtml}
+            </div>
           </div>
         </div>
         <div class="prof-hero-stats">
@@ -443,6 +468,7 @@
             const recipeCount = p.stats?.recipeCount || p.recipes?.length || (p.nodes ? p.nodes.length : '1-300');
             const newCount = p.stats?.newInForever || (p.category === 'Gathering' ? 'Phase 2' : 'New');
             const favorCount = p.stats?.favorRecipes || (p.campPerks?.milestones?.length ? 'Account' : '0');
+            const cardPassive = getProfessionPassive(p.name || slug);
             return `
               <div class="prof-directory-card" data-slug="${slug}">
                 <div>
@@ -458,8 +484,18 @@
                     </div>
                   </div>
 
+                  ${cardPassive ? `
+                    <div class="prof-dir-passive-box" style="margin-top: 0.75rem;" title="${escapeHtml(cardPassive.passiveEffect)}">
+                      <span style="font-size: 1.15rem; flex-shrink: 0;">${cardPassive.icon || '✨'}</span>
+                      <div>
+                        <strong style="color: #34d399; font-size: 0.8rem;">✨ ${escapeHtml(cardPassive.passiveName)}:</strong>
+                        <span style="color: #cbd5e1; font-size: 0.76rem; display: block; line-height: 1.35; margin-top: 0.1rem;">${escapeHtml(cardPassive.passiveEffect)}</span>
+                      </div>
+                    </div>
+                  ` : ''}
+
                   ${p.campBuff ? `
-                    <div class="prof-dir-camp-box" style="margin-top: 0.85rem;">
+                    <div class="prof-dir-camp-box" style="margin-top: 0.65rem;">
                       <img src="${getIconUrl(p.campBuff.icon)}" alt="${escapeHtml(p.campBuff.name)}" loading="lazy" />
                       <div>
                         <strong>${escapeHtml(p.campBuff.name)} (Skill ${p.campBuff.skill}+):</strong> ${escapeHtml(p.campBuff.effect)}
@@ -493,20 +529,29 @@
           <table class="prof-matrix-table">
             <thead>
               <tr>
-                <th style="width: 200px;">Profession</th>
+                <th style="width: 170px;">Profession</th>
+                <th style="width: 220px;">Combat Passive</th>
                 <th>Skill 20 Station (Party Buff)</th>
                 <th>Skill 140 Station</th>
                 <th>Skill 300 Master Station</th>
               </tr>
             </thead>
             <tbody>
-              ${matrixRows.map(r => `
+              ${matrixRows.map(r => {
+                const pass = getProfessionPassive(r.name || r.slug);
+                return `
                 <tr>
                   <td>
                     <div class="matrix-prof-col" data-slug="${r.slug}" title="View ${r.name}">
                       <img src="${getIconUrl(r.icon)}" alt="${r.name}" loading="lazy" />
                       <span>${r.name}</span>
                     </div>
+                  </td>
+                  <td>
+                    ${pass ? `
+                      <strong style="color: #34d399; font-size: 0.85rem; display: block;">✨ ${escapeHtml(pass.passiveName)}</strong>
+                      <span style="font-size: 0.76rem; color: #cbd5e1; line-height: 1.35; display: block; margin-top: 0.15rem;">${escapeHtml(pass.passiveEffect)}</span>
+                    ` : '<span style="color: var(--text-muted); font-size: 0.8rem;">—</span>'}
                   </td>
                   <td>
                     <div class="matrix-station-cell" title="${escapeHtml(r.s20Desc)}">
@@ -1201,6 +1246,7 @@
     const milestones = camp.milestones || [];
     const atCamp = camp.atCamp || [];
     const legacyPerks = camp.legacyPerks || [];
+    const passiveData = getProfessionPassive(prof.name || currentProfession);
 
     container.innerHTML = `
       <div class="leveling-header-block">
@@ -1211,6 +1257,35 @@
       </div>
 
       <div class="camp-perks-container">
+        <!-- Featured Spotlight: Combat Passive & Campfire Synergy -->
+        ${passiveData ? `
+          <div class="prof-passive-spotlight-card">
+            <div class="spotlight-badge-header">
+              <span class="spotlight-tag combat">✨ CORE COMBAT PASSIVE</span>
+              <span class="spotlight-tag camp">🔥 CAMPFIRE BLUEPRINTS</span>
+              <span class="spotlight-tag legacy">🏆 +3 LEGACY POINTS</span>
+            </div>
+            <div class="spotlight-body">
+              <div class="spotlight-combat-col">
+                <div class="spotlight-icon-box">${passiveData.icon || '✨'}</div>
+                <div>
+                  <h4 class="spotlight-title">${escapeHtml(passiveData.passiveName)}</h4>
+                  <p class="spotlight-effect">${escapeHtml(passiveData.passiveEffect)}</p>
+                  <small class="spotlight-meta">Permanent character passive active in open world, dungeons, and raids.</small>
+                </div>
+              </div>
+              <div class="spotlight-camp-col">
+                <div class="spotlight-icon-box">⛺</div>
+                <div>
+                  <h4 class="spotlight-title">Wilderness Campfire Synergy</h4>
+                  <p class="spotlight-effect">${escapeHtml(passiveData.campBonus || prof.campBuff?.effect || 'Crafts camp workstations providing 1-hour party buffs.')}</p>
+                  <small class="spotlight-meta">Deployable at any open-world campfire station.</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        ` : ''}
+
         <div class="camp-perks-top-grid">
           <!-- Column 1: Legacy Points & Titles -->
           <div>

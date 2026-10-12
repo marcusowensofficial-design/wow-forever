@@ -1933,6 +1933,30 @@ const WOW_FOREVER_DATA = {
       "passiveName": "Tinkers & Goggles",
       "passiveEffect": "Access to high-powered epic helm goggles, parachute cloak tinkers, and rocket boots with 0% backfire chance in raids.",
       "campBonus": "Can place Reagent Bot / Field Repair Bot: on-site repairs and zero engineering gadget malfunctions."
+    },
+    {
+      "name": "Cooking",
+      "type": "Secondary",
+      "icon": "🍖",
+      "passiveName": "Well Fed Experience Surge",
+      "passiveEffect": "Beneficial food buffs grant +5% bonus experience from monster kills, and Well Fed durations double when eaten at camp.",
+      "campBonus": "Can place Basic Campfire Kit & Cookie's Feast: party members gain +Stamina and outdoor cooking hub."
+    },
+    {
+      "name": "First Aid",
+      "type": "Secondary",
+      "icon": "🩹",
+      "passiveName": "Field Medic & Potion Crafting",
+      "passiveEffect": "Enables crafting of instant Healing Potions and specialized Anti-Venoms; Heavy Runecloth Bandages heal for 2,000 HP.",
+      "campBonus": "Can place First Aid Kit / Plague Doctor's Lab: party members gain +56 Stamina and triage stations."
+    },
+    {
+      "name": "Fishing",
+      "type": "Secondary",
+      "icon": "🎣",
+      "passiveName": "Master Angler & Water Breathing",
+      "passiveEffect": "Access to special fish-based consumables, rare school tracking, and high-efficiency stat buffs for cooking.",
+      "campBonus": "Can place Fish Bowl / Fishing Hut: party members gain +8% All Stats and rare bait caches."
     }
   ],
   "statCapsAndMechanics": {
