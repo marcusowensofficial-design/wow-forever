@@ -1025,7 +1025,7 @@
         <div class="atlas-toolbar">
           <div class="atlas-search-box">
             <span class="atlas-search-icon">🔍</span>
-            <input type="text" id="atlas-rare-search" class="atlas-input" placeholder="Search rare name, zone, or drop..." autocomplete="off">
+            <input type="text" id="atlas-rare-search" class="atlas-input" placeholder="Search rare name, zone, or drop..." autocomplete="off" aria-label="Search rare name, zone, or drop">
           </div>
           <div class="atlas-filter-pills" id="atlas-zone-filters">
             <button class="atlas-pill active" data-zone="all">All Zones (<span id="rares-count-all">34</span>)</button>
@@ -1059,7 +1059,7 @@
         <div class="atlas-toolbar">
           <div class="atlas-search-box">
             <span class="atlas-search-icon">🔍</span>
-            <input type="text" id="atlas-book-search" class="atlas-input" placeholder="Search book title, zone, or coords..." autocomplete="off">
+            <input type="text" id="atlas-book-search" class="atlas-input" placeholder="Search book title, zone, or coords..." autocomplete="off" aria-label="Search book title, zone, or coords">
           </div>
           <div class="atlas-filter-pills" id="atlas-book-filters">
             <button class="atlas-pill active" data-bfilter="all">All Books (40)</button>
@@ -2768,9 +2768,9 @@
 
       <!-- Master Filters Bar -->
       <div class="pet-modal-filters" style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1rem; align-items: center; background: rgba(0, 0, 0, 0.4); padding: 0.75rem; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.08);">
-        <input type="text" id="modal-pet-search" class="pet-search-input" placeholder="Search by name, zone, or ability..." style="flex: 1; min-width: 200px;">
+        <input type="text" id="modal-pet-search" class="pet-search-input" placeholder="Search by name, zone, or ability..." style="flex: 1; min-width: 200px;" aria-label="Search pets by name, zone, or ability">
         
-        <select id="modal-filter-family" class="pet-select-filter" style="background: #1e293b; color: #fff; border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 6px; padding: 0.45rem 0.65rem; font-size: 0.84rem;">
+        <select id="modal-filter-family" class="pet-select-filter" style="background: #1e293b; color: #fff; border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 6px; padding: 0.45rem 0.65rem; font-size: 0.84rem;" aria-label="Filter by pet family">
           <option value="all">All 18 Families</option>
           <option value="Bat">Bat (9)</option>
           <option value="Bear">Bear (42)</option>
@@ -2792,7 +2792,7 @@
           <option value="Wolf">Wolf (63)</option>
         </select>
 
-        <select id="modal-filter-level" class="pet-select-filter" style="background: #1e293b; color: #fff; border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 6px; padding: 0.45rem 0.65rem; font-size: 0.84rem;">
+        <select id="modal-filter-level" class="pet-select-filter" style="background: #1e293b; color: #fff; border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 6px; padding: 0.45rem 0.65rem; font-size: 0.84rem;" aria-label="Filter by level bracket">
           <option value="all">All Level Brackets</option>
           <option value="1-9">Level 1–9 (Starter)</option>
           <option value="10-19">Level 10–19 (Early Game)</option>
@@ -2801,7 +2801,7 @@
           <option value="50-60">Level 50–60 (Endgame)</option>
         </select>
 
-        <select id="modal-filter-speed" class="pet-select-filter" style="background: #1e293b; color: #fff; border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 6px; padding: 0.45rem 0.65rem; font-size: 0.84rem;">
+        <select id="modal-filter-speed" class="pet-select-filter" style="background: #1e293b; color: #fff; border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 6px; padding: 0.45rem 0.65rem; font-size: 0.84rem;" aria-label="Filter by attack speed">
           <option value="all">All Attack Speeds</option>
           <option value="fast">⚡ Fast Only (≤1.6s)</option>
           <option value="1.0">⚡ 1.0s (Broken Tooth)</option>
@@ -2809,14 +2809,14 @@
           <option value="1.3">⚡ 1.3s (Humar, Swamp Jaguar)</option>
         </select>
 
-        <select id="modal-filter-faction" class="pet-select-filter" style="background: #1e293b; color: #fff; border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 6px; padding: 0.45rem 0.65rem; font-size: 0.84rem;">
+        <select id="modal-filter-faction" class="pet-select-filter" style="background: #1e293b; color: #fff; border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 6px; padding: 0.45rem 0.65rem; font-size: 0.84rem;" aria-label="Filter by faction">
           <option value="all">All Factions</option>
           <option value="Alliance">Alliance</option>
           <option value="Horde">Horde</option>
           <option value="Contested">Contested</option>
         </select>
 
-        <select id="modal-filter-ability" class="pet-select-filter" style="background: #1e293b; color: #fff; border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 6px; padding: 0.45rem 0.65rem; font-size: 0.84rem;">
+        <select id="modal-filter-ability" class="pet-select-filter" style="background: #1e293b; color: #fff; border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 6px; padding: 0.45rem 0.65rem; font-size: 0.84rem;" aria-label="Filter by pet ability">
           <option value="all">All Abilities (Any)</option>
           <option value="teaches">📖 Teaches Ability (253)</option>
           <option value="none">⚪ Untaught / Blank Slate (249)</option>

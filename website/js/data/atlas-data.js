@@ -1448,7 +1448,7 @@ window.WOW_ATLAS_DATA = {
       {
         "name": "Saltspine",
         "level": 28,
-        "portrait": "https://WoW Forever/wow-ui/bosses/saltspine.webp",
+        "portrait": "https://foreverchanges.pro/wow-ui/bosses/saltspine.webp",
         "mechanics": "Roams the starting marsh among elite crocolisks. Clear trash thoroughly before engaging him. He hits hard with high base health.",
         "abilities": [
           {
@@ -1482,7 +1482,7 @@ window.WOW_ATLAS_DATA = {
       {
         "name": "Shadetooth",
         "level": 29,
-        "portrait": "https://WoW Forever/wow-ui/bosses/shadetooth.webp",
+        "portrait": "https://foreverchanges.pro/wow-ui/bosses/shadetooth.webp",
         "mechanics": "Slay the raptor matriarch in the tall brush. A wave of raptor adds spawns upon her death; wipe out the wave quickly before Shadetooth charges in.",
         "abilities": [
           {
@@ -1534,7 +1534,7 @@ window.WOW_ATLAS_DATA = {
       {
         "name": "Highland Horror",
         "level": 30,
-        "portrait": "https://WoW Forever/wow-ui/bosses/highland-horror.webp",
+        "portrait": "https://foreverchanges.pro/wow-ui/bosses/highland-horror.webp",
         "mechanics": "Guards the Dragonmaw orc encampment. Pull the surrounding Dragonmaw orcs in small packs first, then engage the horror.",
         "abilities": [
           {
@@ -1556,7 +1556,7 @@ window.WOW_ATLAS_DATA = {
       {
         "name": "Relic Guardian",
         "level": 31,
-        "portrait": "https://WoW Forever/wow-ui/bosses/relic-guardian.webp",
+        "portrait": "https://foreverchanges.pro/wow-ui/bosses/relic-guardian.webp",
         "mechanics": "Dormant at the end of the spider cavern. Click the ancient Titan console next to him to initiate the encounter.",
         "abilities": [
           {
@@ -1639,7 +1639,7 @@ window.WOW_ATLAS_DATA = {
       {
         "name": "Atrexis the Grave Knight",
         "level": 29,
-        "portrait": "https://WoW Forever/wow-ui/bosses/145787.webp",
+        "portrait": "https://foreverchanges.pro/wow-ui/bosses/145787.webp",
         "mechanics": "Stands inside the ritual summoning circle in the sewer underbelly, flanked by Kirin Tor Necromancers.",
         "abilities": [
           {
@@ -1691,7 +1691,7 @@ window.WOW_ATLAS_DATA = {
       {
         "name": "Lyn the Ignored",
         "level": 31,
-        "portrait": "https://WoW Forever/wow-ui/bosses/lyn-the-ignored.webp",
+        "portrait": "https://foreverchanges.pro/wow-ui/bosses/lyn-the-ignored.webp",
         "mechanics": "Secret summoning encounter: player with Tome of Dalaran clicks pink circle in northeast market stalls room.",
         "abilities": [
           {
@@ -1731,7 +1731,7 @@ window.WOW_ATLAS_DATA = {
       {
         "name": "Arcane Anomaly",
         "level": 30,
-        "portrait": "https://WoW Forever/wow-ui/bosses/arcane-anomaly.webp",
+        "portrait": "https://foreverchanges.pro/wow-ui/bosses/arcane-anomaly.webp",
         "mechanics": "Channels lethal directional beam and arcane bolts.",
         "abilities": [
           {
@@ -1771,7 +1771,7 @@ window.WOW_ATLAS_DATA = {
       {
         "name": "Arcanic Enigma",
         "level": 30,
-        "portrait": "https://WoW Forever/wow-ui/bosses/arcanic-enigma.webp",
+        "portrait": "https://foreverchanges.pro/wow-ui/bosses/arcanic-enigma.webp",
         "mechanics": "Polymorphs party members and silences spellcasters.",
         "abilities": [
           {
@@ -1817,7 +1817,7 @@ window.WOW_ATLAS_DATA = {
       {
         "name": "Unstable Sentinel",
         "level": 31,
-        "portrait": "https://WoW Forever/wow-ui/bosses/unstable-sentinel.webp",
+        "portrait": "https://foreverchanges.pro/wow-ui/bosses/unstable-sentinel.webp",
         "mechanics": "Ancient construct with lethal 25-yard pulsing AoE. Drops the Spinning Wheel blueprint!",
         "abilities": [
           {
@@ -1857,7 +1857,7 @@ window.WOW_ATLAS_DATA = {
       {
         "name": "Shade of the Archmage",
         "level": 33,
-        "portrait": "https://WoW Forever/wow-ui/bosses/shade-of-archmage.webp",
+        "portrait": "https://foreverchanges.pro/wow-ui/bosses/shade-of-archmage.webp",
         "mechanics": "Final boss of Dalaran inside the Violet Chamber. Mass polymorphs when out of mana and channels Evocation.",
         "abilities": [
           {

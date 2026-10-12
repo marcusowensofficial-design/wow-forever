@@ -127,12 +127,20 @@ function renderNewsGrid(items) {
       </div>
       <div class="news-card-bottom">
         <span class="news-author">By ${escapeHtml(item.author)}</span>
-        <button class="news-read-btn" onclick="openNewsModal('${item.id}')">
+        <button type="button" class="news-read-btn" data-news-id="${escapeHtml(item.id)}">
           Read Full Intel <span>→</span>
         </button>
       </div>
     </article>
   `).join('');
+
+  // Event delegation for news modal buttons
+  container.querySelectorAll('.news-read-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const newsId = btn.getAttribute('data-news-id');
+      if (newsId) window.openNewsModal(newsId);
+    });
+  });
 }
 
 window.openNewsModal = function(id) {
@@ -156,8 +164,9 @@ window.openNewsModal = function(id) {
     if (modalAuthor) modalAuthor.textContent = `Author: ${article.author}`;
     
     let bodyContent = escapeHtml(article.content);
-    if (article.url && article.url !== '#') {
-      bodyContent += `\n\n🔗 Official Link: <a href="${article.url}" target="_blank" rel="noopener" style="color: var(--color-sky); text-decoration: underline;">${article.url}</a>`;
+    if (article.url && (article.url.startsWith('https://') || article.url.startsWith('http://'))) {
+      const safeUrl = encodeURI(article.url);
+      bodyContent += `\n\n🔗 Official Link: <a href="${escapeHtml(safeUrl)}" target="_blank" rel="noopener noreferrer" style="color: var(--color-sky); text-decoration: underline;">${escapeHtml(article.url)}</a>`;
     }
     if (modalBody) modalBody.innerHTML = bodyContent.replace(/\n/g, '<br>');
 

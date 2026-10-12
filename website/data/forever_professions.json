@@ -90165,38 +90165,7 @@
       "favorRecipes": 0
     },
     "groups": [],
-    "recipes": [
-      {
-        "name": "Unknown Recipe",
-        "icon": "inv_misc_questionmark",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
-        "isNew": false,
-        "learn": 1,
-        "yellow": 1,
-        "green": 1,
-        "grey": 1,
-        "reagents": [],
-        "source": "Trainer"
-      },
-      {
-        "name": "Unknown Recipe",
-        "icon": "inv_misc_questionmark",
-        "quality": 1,
-        "cat": "General",
-        "kind": "",
-        "effect": "",
-        "isNew": false,
-        "learn": 1,
-        "yellow": 1,
-        "green": 1,
-        "grey": 1,
-        "reagents": [],
-        "source": "Trainer"
-      }
-    ],
+    "recipes": [],
     "gatheringNodes": [
       {
         "name": "Node #undefined",

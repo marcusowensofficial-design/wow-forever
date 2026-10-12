@@ -764,5 +764,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       specs: []
     }
   };
-  WOW_FOREVER_DATA.classDeepDives.rogue.betaBuilds.specs = WOW_FOREVER_DATA.classDeepDives.rogue.betaBuilds.level30.specs;
+  if (window.WOW_FOREVER_DATA.classDeepDives?.rogue?.betaBuilds?.level30?.specs) {
+    window.WOW_FOREVER_DATA.classDeepDives.rogue.betaBuilds.specs = window.WOW_FOREVER_DATA.classDeepDives.rogue.betaBuilds.level30.specs;
+  }
 }

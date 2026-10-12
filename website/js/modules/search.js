@@ -317,6 +317,21 @@ function buildSearchIndex() {
       });
     });
   }
+
+  // 15. Hunter Pets & Pet Families
+  if (window.WOW_ATLAS_DATA?.hunterPets?.families) {
+    window.WOW_ATLAS_DATA.hunterPets.families.forEach(f => {
+      searchIndex.push({
+        title: `${f.name} (Hunter Pet Family)`,
+        category: 'Hunter Pet Directory',
+        icon: '🐾',
+        desc: `Diet: ${f.diet ? f.diet.join(', ') : 'Meat'} • Abilities: ${f.abilities ? f.abilities.map(a => a.name).join(', ') : 'Claw'}`,
+        tab: 'deepdives',
+        targetId: 'tab-deepdives',
+        deepDiveClass: 'hunter'
+      });
+    });
+  }
 }
 
 function setupSearchModalEvents() {
@@ -455,9 +470,12 @@ function performSearch(query) {
 }
 
 function highlightMatch(text, query) {
-  if (!query) return escapeHtml(text);
-  const regex = new RegExp(`(${query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
-  return escapeHtml(text).replace(regex, '<mark>$1</mark>');
+  if (!text) return '';
+  const escapedText = escapeHtml(text);
+  if (!query || !query.trim()) return escapedText;
+  const escapedQuery = escapeHtml(query.trim());
+  const regex = new RegExp(`(${escapedQuery.replace(/[.*+?^${}()|[\\]\\]/g, '\\$&')})`, 'gi');
+  return escapedText.replace(regex, '<mark>$1</mark>');
 }
 
 window.handleSearchResultClick = function(elem) {

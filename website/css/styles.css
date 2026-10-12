@@ -70,6 +70,7 @@
 html {
   scroll-behavior: smooth;
   color-scheme: dark;
+  overflow-x: hidden;
 }
 
 body {
@@ -151,6 +152,13 @@ h1, h2, h3, h4, .font-heading {
   top: 0;
   z-index: 100;
   box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+  max-width: 100vw;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.top-status-bar::-webkit-scrollbar {
+  display: none;
 }
 
 .status-pulse-badge {
@@ -166,6 +174,7 @@ h1, h2, h3, h4, .font-heading {
   text-transform: uppercase;
   letter-spacing: 0.05em;
   font-size: 0.75rem;
+  flex-shrink: 0;
 }
 
 .pulse-dot {
@@ -189,12 +198,14 @@ h1, h2, h3, h4, .font-heading {
   display: flex;
   gap: 1.5rem;
   align-items: center;
+  flex-shrink: 0;
 }
 
 .status-ticker span {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
+  white-space: nowrap;
 }
 
 .status-badge-highlight {

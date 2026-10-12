@@ -338,19 +338,22 @@ function initSquadRoster() {
       const hasProfs = prof1Html || prof2Html;
 
       const professionsHtml = hasProfs 
-        ? `<div class="prof-badges-wrap" onclick="openProfessionModal('${player.id}')" title="Click to update professions">
+        ? `<div class="prof-badges-wrap" data-member-id="${escapeHtml(player.id)}" title="Click to update professions">
             ${prof1Html}
             ${prof2Html}
             <span class="prof-edit-icon" title="Edit professions">✏️</span>
            </div>`
-        : `<div class="prof-badges-wrap" onclick="openProfessionModal('${player.id}')" title="Click to set professions">
+        : `<div class="prof-badges-wrap" data-member-id="${escapeHtml(player.id)}" title="Click to set professions">
             <span class="prof-badge prof-tbd">➕ Set Professions</span>
            </div>`;
+
+      const safeFactionClass = (player.faction || '').toLowerCase() === 'alliance' ? 'source-blizzard' : 'source-wowhead';
+      const safeRoleClass = (player.role || '').toLowerCase().replace(/[^a-z]/g, '');
 
       return `
       <tr>
         <td><strong>${escapeHtml(player.name)}</strong></td>
-        <td><span class="source-badge ${player.faction.toLowerCase() === 'alliance' ? 'source-blizzard' : 'source-wowhead'}">${player.faction}</span></td>
+        <td><span class="source-badge ${safeFactionClass}">${escapeHtml(player.faction)}</span></td>
         <td>${escapeHtml(player.race)}</td>
         <td>
           <span class="roster-class-pill class-${classKey}" style="--class-accent: ${classInfo.color}; --class-border: ${classInfo.color}40; background: ${classInfo.color}14;">
@@ -360,15 +363,29 @@ function initSquadRoster() {
             </span>
           </span>
         </td>
-        <td><span class="role-pill role-${player.role.toLowerCase().replace(/[^a-z]/g, '')}">${player.role}${specText}</span></td>
+        <td><span class="role-pill role-${safeRoleClass}">${escapeHtml(player.role)}${specText}</span></td>
         <td>${professionsHtml}</td>
         <td style="font-size: 0.82rem; color: var(--text-muted);">${escapeHtml(player.notes || '—')}</td>
         <td style="white-space: nowrap;">
-          <button onclick="openProfessionModal('${player.id}')" title="Update Professions & Notes" class="btn-icon-action" style="color: var(--text-gold); font-size: 1rem; margin-right: 0.25rem;">✏️</button>
-          <button onclick="removeSquadMember('${player.id}')" title="Remove Member" class="btn-icon-action" style="color: #ef4444; font-size: 1.1rem;">✕</button>
+          <button type="button" class="btn-icon-action btn-edit-member" data-member-id="${escapeHtml(player.id)}" title="Update Professions & Notes" style="color: var(--text-gold); font-size: 1rem; margin-right: 0.25rem;">✏️</button>
+          <button type="button" class="btn-icon-action btn-remove-member" data-member-id="${escapeHtml(player.id)}" title="Remove Member" style="color: #ef4444; font-size: 1.1rem;">✕</button>
         </td>
       </tr>
     `}).join('');
+
+    // Event delegation on table body
+    rosterTableBody.querySelectorAll('.prof-badges-wrap, .btn-edit-member').forEach(el => {
+      el.addEventListener('click', () => {
+        const id = el.getAttribute('data-member-id');
+        if (id) window.openProfessionModal(id);
+      });
+    });
+    rosterTableBody.querySelectorAll('.btn-remove-member').forEach(el => {
+      el.addEventListener('click', () => {
+        const id = el.getAttribute('data-member-id');
+        if (id) window.removeSquadMember(id);
+      });
+    });
   }
 
   window.removeSquadMember = function(id) {

@@ -698,8 +698,8 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             name: "Fury (Death Wish & Dual-Wield Engine)",
             icon: "⚡",
             role: "Dual-Wield Melee DPS & Flurry Enrage",
-            buildUrl: "/talents/warrior?b=-5501013001500122-&l=30&tl=5",
-            wowheadCalcUrl: "https://www.wowhead.com/forever/talent-calc/warrior/-050501",
+            buildUrl: "/talents/warrior?b=-0505113215021-&l=30&tl=5",
+            wowheadCalcUrl: "https://www.wowhead.com/forever/talent-calc/warrior/-0505113215021-",
             tagline: "Relentless dual-wielding pressure with Death Wish 21-pt keystone (+20% physical damage & fear immunity), +100% crit rage, and fixed off-hand weapon damage.",
             statPriority: "Strength > Melee Hit > Agility > Stamina",
             bestWeapon: "Outlaw Sabre (BFD Quest) + Cruel Barb / Excavation Digging Axe",
@@ -736,8 +736,8 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             name: "Protection (Concussion Blow & Shield Vanguard)",
             icon: "🛡️",
             role: "Main Tank / Active Mitigation",
-            buildUrl: "/talents/warrior?b=--55000123300121003&l=30&tl=5",
-            wowheadCalcUrl: "https://www.wowhead.com/forever/talent-calc/warrior/--052301",
+            buildUrl: "/talents/warrior?b=--0502301203312013&l=30&tl=5",
+            wowheadCalcUrl: "https://www.wowhead.com/forever/talent-calc/warrior/--0502301203312013",
             tagline: "Unbreakable vanguard holding Phase 2 Level 30 dungeons with Concussion Blow (5s hard stun), Last Stand, instant-tap Sunder Armor, and Defensive Charge.",
             statPriority: "Stamina > Armor > Strength > Defense > Block",
             bestWeapon: "Commander's Crest / Arctic Buckler (BFD) + Thief's Blade",
@@ -775,5 +775,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       specs: []
     }
   };
-  WOW_FOREVER_DATA.classDeepDives.warrior.betaBuilds.specs = WOW_FOREVER_DATA.classDeepDives.warrior.betaBuilds.level30.specs;
+  if (window.WOW_FOREVER_DATA.classDeepDives?.warrior?.betaBuilds?.level30?.specs) {
+    window.WOW_FOREVER_DATA.classDeepDives.warrior.betaBuilds.specs = window.WOW_FOREVER_DATA.classDeepDives.warrior.betaBuilds.level30.specs;
+  }
 }

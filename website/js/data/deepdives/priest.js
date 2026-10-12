@@ -753,5 +753,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       specs: []
     }
   };
-  WOW_FOREVER_DATA.classDeepDives.priest.betaBuilds.specs = WOW_FOREVER_DATA.classDeepDives.priest.betaBuilds.level30.specs;
+  if (window.WOW_FOREVER_DATA.classDeepDives?.priest?.betaBuilds?.level30?.specs) {
+    window.WOW_FOREVER_DATA.classDeepDives.priest.betaBuilds.specs = window.WOW_FOREVER_DATA.classDeepDives.priest.betaBuilds.level30.specs;
+  }
 }

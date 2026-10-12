@@ -58,7 +58,34 @@ function renderDownrankCalculator() {
 
   const availableSpells = dataset.spells[drState.selectedClass] || [];
   let currentSpell = availableSpells.find(s => s.id === drState.selectedSpellId) || availableSpells[0];
-  if (!currentSpell) return;
+  if (!currentSpell) {
+    container.innerHTML = `
+      <div class="dr-header-box">
+        <div class="dr-class-selector">
+          ${dataset.classes.map(cls => `
+            <button type="button" class="dr-class-chip ${drState.selectedClass === cls.id ? 'active' : ''}" 
+                    onclick="setDownrankClass('${cls.id}')">
+              <img src="${cls.icon}" alt="${cls.name}" class="dr-chip-icon" />
+              <span>${cls.name}</span>
+            </button>
+          `).join('')}
+        </div>
+        <div style="text-align: center; padding: 3rem 1.5rem; color: var(--text-muted);">
+          <span style="font-size: 2.2rem; display: block; margin-bottom: 0.75rem;">⚔️</span>
+          <h3 style="color: #fff; margin-bottom: 0.5rem;">No Downranking Required for ${escapeHtml(drState.selectedClass.toUpperCase())}</h3>
+          <p style="font-size: 0.95rem; max-width: 550px; margin: 0 auto; line-height: 1.5;">
+            ${escapeHtml(drState.selectedClass)} utilizes rage or energy physical combat mechanics with flat costs. Downranking efficiency calculations apply specifically to mana-based spellcaster and healing classes.
+          </p>
+          <div style="margin-top: 1.25rem;">
+            <button type="button" class="btn-primary" onclick="setDownrankClass('priest')" style="padding: 0.5rem 1.25rem; font-size: 0.85rem; border-radius: var(--radius-sm); background: var(--color-sky); color: #000; font-weight: 700; cursor: pointer;">
+              Switch to Priest Healing Ranks →
+            </button>
+          </div>
+        </div>
+      </div>
+    `;
+    return;
+  }
   drState.selectedSpellId = currentSpell.id;
 
   container.innerHTML = `

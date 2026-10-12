@@ -627,7 +627,7 @@
       <!-- Toolbar -->
       <div class="prof-toolbar">
         <div style="display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap;">
-          <input type="text" id="prof-search-input" class="prof-search-input" placeholder="Search recipe, reagent, drop zone..." value="${escapeHtml(searchQuery)}" />
+          <input type="text" id="prof-search-input" aria-label="Search recipes, reagents, or zones" class="prof-search-input" placeholder="Search recipe, reagent, drop zone..." value="${escapeHtml(searchQuery)}" />
           <button type="button" id="prof-new-toggle" class="filter-chip ${filterNewOnly ? 'active' : ''}">
             <span>✨</span> New in Forever Only
           </button>
@@ -640,7 +640,7 @@
             <button type="button" class="prof-preset-btn ${playerSkill === 225 ? 'active' : ''}" data-skill="225" title="Beta Phase 2 Cap (225)">225</button>
             <button type="button" class="prof-preset-btn ${playerSkill === 300 ? 'active' : ''}" data-skill="300" title="Artisan Mastery (300)">300</button>
           </div>
-          <input type="number" id="prof-skill-input" class="prof-skill-input" min="1" max="300" placeholder="Custom" value="${playerSkill !== null ? playerSkill : ''}" />
+          <input type="number" id="prof-skill-input" aria-label="Custom skill level simulator" class="prof-skill-input" min="1" max="300" placeholder="Custom" value="${playerSkill !== null ? playerSkill : ''}" />
         </div>
       </div>
 
@@ -1133,7 +1133,7 @@
       <!-- Toolbar -->
       <div class="prof-toolbar">
         <div style="display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap; flex: 1;">
-          <input type="text" id="prof-search-input" class="prof-search-input" placeholder="Search buff, profession (e.g. Alchemy, Fishing), or reagent..." value="${escapeHtml(searchQuery)}" />
+          <input type="text" id="prof-buff-search-input" aria-label="Search camp buff objects and professions" class="prof-search-input" placeholder="Search buff, profession (e.g. Alchemy, Fishing), or reagent..." value="${escapeHtml(searchQuery)}" />
           <span style="font-size: 0.85rem; color: #94a3b8;">Showing ${filtered.length} of ${buffObjects.length} Buff Objects</span>
         </div>
         <div style="font-size: 0.8rem; color: #38bdf8; display: flex; align-items: center; gap: 0.4rem;">
@@ -1204,7 +1204,7 @@
       </div>
     `;
 
-    const searchInput = container.querySelector('#prof-search-input');
+    const searchInput = container.querySelector('#prof-buff-search-input') || container.querySelector('#prof-search-input');
     if (searchInput) {
       searchInput.addEventListener('input', (e) => {
         searchQuery = e.target.value;
