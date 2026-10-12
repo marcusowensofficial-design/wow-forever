@@ -7,7 +7,11 @@
   "scripts": {
     "dev": "npx serve . -l 3000",
     "start": "npx serve . -l 3000",
-    "preview": "npx serve . -l 3000"
+    "preview": "npx serve . -l 3000",
+    "test": "node scripts/validate.js",
+    "lint": "npx eslint js/ scripts/",
+    "build:data": "node scripts/compile-scraped-data.js",
+    "scrape": "node scripts/scrape-foreverchanges.js"
   },
   "keywords": [
     "world-of-warcraft",
@@ -19,6 +23,8 @@
   "author": "Marcus Owens",
   "license": "UNLICENSED",
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.12.0",
     "playwright": "^1.64.0"
   }
 }

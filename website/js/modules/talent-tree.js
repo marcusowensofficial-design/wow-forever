@@ -328,7 +328,7 @@
     const currentDesc = pts > 0 ? (talent.descriptions[pts - 1] || talent.descriptions[0]) : '';
     const nextDesc = pts < talent.maxRank ? (talent.descriptions[pts] || talent.descriptions[0]) : '';
 
-    let rankBadgeHtml = '';
+    let rankBadgeHtml;
     if (isMaxed) {
       rankBadgeHtml = `<span style="color: #facc15; font-weight: 700; font-size: 0.78rem; background: rgba(250, 204, 21, 0.15); padding: 0.15rem 0.45rem; border-radius: 4px; border: 1px solid rgba(250, 204, 21, 0.35);">Rank ${pts} / ${talent.maxRank} (Max)</span>`;
     } else if (hasPoints) {

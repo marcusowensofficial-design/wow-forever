@@ -79,9 +79,30 @@ function showToast(message, type = 'info', duration = 3000) {
   }, duration);
 }
 
+function positionTooltip(event, tooltip) {
+  if (!tooltip || !event) return;
+  const padding = 16;
+  const ttWidth = tooltip.offsetWidth || 340;
+  const ttHeight = tooltip.offsetHeight || 220;
+
+  let left = event.clientX + 16;
+  let top = event.clientY + 16;
+
+  if (left + ttWidth > window.innerWidth - padding) {
+    left = Math.max(padding, event.clientX - ttWidth - 16);
+  }
+  if (top + ttHeight > window.innerHeight - padding) {
+    top = Math.max(padding, event.clientY - ttHeight - 16);
+  }
+
+  tooltip.style.left = `${left}px`;
+  tooltip.style.top = `${top}px`;
+}
+
 if (typeof window !== 'undefined') {
   window.escapeHtml = escapeHtml;
   window.copyTextToClipboard = copyTextToClipboard;
   window.showToast = showToast;
+  window.positionTooltip = positionTooltip;
 }
 

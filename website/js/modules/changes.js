@@ -94,7 +94,7 @@
   function parseHash() {
     const raw = (window.location.hash || '').toLowerCase().replace(/^#+/, '');
     if (!raw.startsWith('changes')) return null;
-    const parts = raw.replace(/^changes[\/#]?/, '').split(/[\/#]/).filter(Boolean);
+    const parts = raw.replace(/^changes[/#]?/, '').split(/[/#]/).filter(Boolean);
     const slug = parts[0] || 'all';
     const cat = parts[1] || 'all_changes';
     return { classSlug: slug, category: cat };

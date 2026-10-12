@@ -61,7 +61,7 @@
 
     let cleaned = raw.replace(/^#+/, '');
     if (cleaned.startsWith('professions')) {
-      cleaned = cleaned.replace(/^professions[\/#]?/, '');
+      cleaned = cleaned.replace(/^professions[/#]?/, '');
     }
 
     if (!cleaned || cleaned === 'overview') {
