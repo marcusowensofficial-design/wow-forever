@@ -5623,5 +5623,663 @@
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
 }
 
+/* ==========================================================================
+   CLASSIC DIFF HIGHLIGHTS FOR TALENT TREES
+   ========================================================================== */
+.bis-talent-slot.diff-highlight-new {
+  box-shadow: 0 0 0 2px #10b981, 0 0 16px rgba(16, 185, 129, 0.6) !important;
+  border-color: #10b981 !important;
+}
+.bis-talent-slot.diff-highlight-mod {
+  box-shadow: 0 0 0 2px #f59e0b, 0 0 16px rgba(245, 158, 11, 0.6) !important;
+  border-color: #f59e0b !important;
+}
+.bis-talent-slot.diff-highlight-moved {
+  box-shadow: 0 0 0 2px #38bdf8, 0 0 16px rgba(56, 189, 248, 0.6) !important;
+  border-color: #38bdf8 !important;
+}
+.diff-tag {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  font-size: 0.62rem;
+  font-weight: 800;
+  padding: 1px 5px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  z-index: 5;
+  pointer-events: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+}
+.diff-tag.new { background: #059669; color: #fff; border: 1px solid #34d399; }
+.diff-tag.mod { background: #d97706; color: #fff; border: 1px solid #fbbf24; }
+.diff-tag.moved { background: #0284c7; color: #fff; border: 1px solid #38bdf8; }
 
+.bis-talent-pill-btn.diff-active {
+  background: rgba(245, 158, 11, 0.25) !important;
+  border-color: #f59e0b !important;
+  color: #fbbf24 !important;
+  box-shadow: 0 0 12px rgba(245, 158, 11, 0.4) !important;
+}
 
+/* ==========================================================================
+   HUNTER PET BEAST RADAR (502 BEASTS) STYLES
+   ========================================================================== */
+.pet-hub-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.pet-hero-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 1.5rem 1.75rem;
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.15) 0%, rgba(15, 23, 42, 0.95) 100%);
+  border: 1px solid rgba(16, 185, 129, 0.4);
+  border-radius: var(--radius-lg, 12px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+}
+
+.pet-hero-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #34d399;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.4rem;
+}
+
+.pet-hero-title {
+  font-size: 1.65rem;
+  font-weight: 800;
+  color: #f8fafc;
+  margin: 0 0 0.5rem;
+}
+
+.pet-hero-desc {
+  font-size: 0.92rem;
+  color: #94a3b8;
+  max-width: 680px;
+  line-height: 1.55;
+  margin: 0;
+}
+
+.pet-stats-summary {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.pet-stat-pill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 76px;
+  padding: 0.6rem 0.9rem;
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.pet-stat-pill strong {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #34d399;
+}
+
+.pet-stat-pill span {
+  font-size: 0.7rem;
+  color: #94a3b8;
+  text-transform: uppercase;
+}
+
+.pet-family-selector-bar {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+  scrollbar-width: thin;
+}
+
+.pet-family-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 0.85rem;
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: #cbd5e1;
+  font-size: 0.84rem;
+  font-weight: 600;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.pet-family-btn:hover {
+  background: rgba(16, 185, 129, 0.15);
+  border-color: rgba(16, 185, 129, 0.4);
+  color: #fff;
+}
+
+.pet-family-btn.active {
+  background: rgba(16, 185, 129, 0.25);
+  border-color: #10b981;
+  color: #34d399;
+  box-shadow: 0 0 12px rgba(16, 185, 129, 0.3);
+}
+
+.pet-fam-img {
+  width: 22px;
+  height: 22px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.pet-fam-count {
+  font-size: 0.7rem;
+  padding: 1px 5px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  color: #94a3b8;
+}
+
+.pet-family-hero-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  padding: 1.25rem 1.5rem;
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  border-radius: 10px;
+}
+
+.pet-fam-hero-left {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.pet-fam-big-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 8px;
+  border: 2px solid #10b981;
+  box-shadow: 0 0 12px rgba(16, 185, 129, 0.4);
+}
+
+.pet-fam-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #f8fafc;
+  margin: 0 0 0.25rem;
+}
+
+.pet-fam-highlight {
+  font-size: 0.84rem;
+  color: #94a3b8;
+  margin: 0 0 0.5rem;
+}
+
+.pet-fam-tags {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  font-size: 0.76rem;
+}
+
+.pet-mod-badge {
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 4px;
+}
+.pet-mod-badge.dmg { background: rgba(239, 68, 68, 0.2); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.3); }
+.pet-mod-badge.arm { background: rgba(59, 130, 246, 0.2); color: #60a5fa; border: 1px solid rgba(59, 130, 246, 0.3); }
+.pet-mod-badge.hp { background: rgba(16, 185, 129, 0.2); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.3); }
+.pet-diet-pill {
+  background: rgba(245, 158, 11, 0.15);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.pet-new-ability-box {
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  border-radius: 8px;
+  padding: 0.85rem 1rem;
+  max-width: 420px;
+}
+
+.pet-ability-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.35rem;
+}
+
+.pet-ability-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+}
+
+.pet-ability-name {
+  color: #34d399;
+  font-size: 0.9rem;
+}
+
+.pet-ability-badge {
+  font-size: 0.68rem;
+  padding: 1px 6px;
+  background: rgba(16, 185, 129, 0.2);
+  border: 1px solid #10b981;
+  color: #34d399;
+  border-radius: 4px;
+  margin-left: 0.4rem;
+}
+
+.pet-ability-desc {
+  font-size: 0.78rem;
+  color: #cbd5e1;
+  line-height: 1.4;
+  margin: 0 0 0.35rem;
+}
+
+.pet-ability-meta {
+  font-size: 0.72rem;
+  color: #94a3b8;
+  display: flex;
+  gap: 0.75rem;
+}
+
+.pet-filters-box {
+  background: rgba(15, 23, 42, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.pet-search-input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-lens-icon {
+  position: absolute;
+  left: 12px;
+  color: #64748b;
+  pointer-events: none;
+}
+
+.pet-search-input {
+  width: 100%;
+  padding: 0.65rem 1rem 0.65rem 2.4rem;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 6px;
+  color: #f8fafc;
+  font-size: 0.9rem;
+}
+
+.pet-search-input:focus {
+  border-color: #10b981;
+  outline: none;
+  box-shadow: 0 0 10px rgba(16, 185, 129, 0.3);
+}
+
+.pet-filters-row {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.pet-filter-group {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.82rem;
+  color: #94a3b8;
+}
+
+.pet-select {
+  padding: 0.4rem 0.75rem;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 6px;
+  color: #f8fafc;
+  font-size: 0.82rem;
+  cursor: pointer;
+}
+
+.pet-toggle-label {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.82rem;
+  color: #34d399;
+  cursor: pointer;
+  user-select: none;
+}
+
+.pet-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.pet-beast-card {
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pet-beast-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(16, 185, 129, 0.4);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.pet-beast-card.is-fast-pet {
+  border-color: rgba(245, 158, 11, 0.4);
+  background: linear-gradient(180deg, rgba(245, 158, 11, 0.06) 0%, rgba(15, 23, 42, 0.85) 100%);
+}
+
+.pet-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.pet-beast-name {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #f8fafc;
+  margin: 0;
+}
+
+.pet-zone-line {
+  font-size: 0.78rem;
+  color: #94a3b8;
+  margin-top: 0.2rem;
+}
+
+.pet-badge-stack {
+  display: flex;
+  gap: 0.35rem;
+  flex-shrink: 0;
+}
+
+.pet-level-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 2px 6px;
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+  color: #facc15;
+}
+
+.pet-new-tag {
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 2px 6px;
+  background: rgba(16, 185, 129, 0.2);
+  border: 1px solid #10b981;
+  color: #34d399;
+  border-radius: 4px;
+}
+
+.pet-metrics-bar {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  font-size: 0.72rem;
+}
+
+.pet-speed-badge {
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.06);
+  color: #cbd5e1;
+  font-weight: 600;
+}
+
+.pet-speed-badge.fast {
+  background: rgba(245, 158, 11, 0.2);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  box-shadow: 0 0 8px rgba(245, 158, 11, 0.3);
+}
+
+.pet-faction-pill {
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+.pet-faction-pill.alliance { background: rgba(59, 130, 246, 0.15); color: #60a5fa; }
+.pet-faction-pill.horde { background: rgba(239, 68, 68, 0.15); color: #f87171; }
+.pet-faction-pill.contested { background: rgba(148, 163, 184, 0.15); color: #cbd5e1; }
+
+.pet-fam-tag {
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: rgba(16, 185, 129, 0.1);
+  color: #6ee7b7;
+}
+
+.pet-teaches-box {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.76rem;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 0.3rem 0.5rem;
+  border-radius: 4px;
+}
+
+.pet-teaches-label {
+  color: #94a3b8;
+}
+
+.pet-teaches-val {
+  color: #facc15;
+  font-weight: 600;
+}
+
+.pet-notes-text {
+  font-size: 0.74rem;
+  color: #94a3b8;
+  font-style: italic;
+  margin: 0;
+  line-height: 1.35;
+}
+
+.pet-actions-row {
+  display: flex;
+  gap: 0.4rem;
+  margin-top: auto;
+  padding-top: 0.4rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.pet-external-link {
+  margin-left: auto;
+  font-size: 0.72rem;
+  color: #94a3b8;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.pet-external-link:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* ==========================================================================
+   CLASSIC DIFF & STANDALONE TALENT CALCULATOR
+   ========================================================================== */
+.bis-diff-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  border-radius: 6px;
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #94a3b8;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.bis-diff-toggle-btn:hover {
+  background: rgba(234, 179, 8, 0.15);
+  color: #facc15;
+  border-color: rgba(234, 179, 8, 0.4);
+}
+.bis-diff-toggle-btn.active {
+  background: linear-gradient(135deg, rgba(234, 179, 8, 0.25) 0%, rgba(202, 138, 4, 0.15) 100%);
+  border-color: #facc15;
+  color: #facc15;
+  box-shadow: 0 0 10px rgba(250, 204, 21, 0.3);
+}
+
+/* Slot Diff Glow Rings */
+.bis-talent-slot.diff-highlight-new {
+  box-shadow: 0 0 0 2px #10b981, 0 0 12px rgba(16, 185, 129, 0.6) !important;
+}
+.bis-talent-slot.diff-highlight-mod {
+  box-shadow: 0 0 0 2px #f59e0b, 0 0 12px rgba(245, 158, 11, 0.6) !important;
+}
+.bis-talent-slot.diff-highlight-moved {
+  box-shadow: 0 0 0 2px #38bdf8, 0 0 12px rgba(56, 189, 248, 0.6) !important;
+}
+
+/* Slot Diff Badges */
+.bis-diff-badge {
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  font-size: 0.62rem;
+  font-weight: 800;
+  padding: 1px 4px;
+  border-radius: 3px;
+  line-height: 1.1;
+  z-index: 4;
+  letter-spacing: 0.02em;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.8);
+  pointer-events: none;
+}
+.bis-diff-badge.new {
+  background: #10b981;
+  color: #064e3b;
+  border: 1px solid #34d399;
+  box-shadow: 0 0 8px rgba(16, 185, 129, 0.8);
+}
+.bis-diff-badge.mod {
+  background: #f59e0b;
+  color: #451a03;
+  border: 1px solid #fbbf24;
+  box-shadow: 0 0 8px rgba(245, 158, 11, 0.8);
+}
+.bis-diff-badge.moved {
+  background: #0284c7;
+  color: #082f49;
+  border: 1px solid #38bdf8;
+  box-shadow: 0 0 8px rgba(56, 189, 248, 0.8);
+}
+
+/* Tooltip Diff Callout Banner */
+.wow-tip-diff-banner {
+  margin: 0.45rem 0 0.25rem;
+  padding: 0.45rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  line-height: 1.4;
+}
+.wow-tip-diff-banner.diff-tag-new {
+  background: rgba(16, 185, 129, 0.15);
+  border: 1px solid rgba(16, 185, 129, 0.4);
+  color: #6ee7b7;
+}
+.wow-tip-diff-banner.diff-tag-mod {
+  background: rgba(245, 158, 11, 0.15);
+  border: 1px solid rgba(245, 158, 11, 0.4);
+  color: #fcd34d;
+}
+.wow-tip-diff-banner.diff-tag-moved {
+  background: rgba(56, 189, 248, 0.15);
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  color: #7dd3fc;
+}
+.diff-banner-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  margin-bottom: 0.2rem;
+}
+.diff-badge-status {
+  font-size: 0.65rem;
+  opacity: 0.8;
+  font-weight: 500;
+}
+.diff-banner-summary {
+  font-weight: 600;
+  color: #f8fafc;
+}
+.diff-banner-bullets {
+  font-size: 0.73rem;
+  color: #cbd5e1;
+  margin-top: 0.2rem;
+}
+
+/* Standalone Mount Layout */
+#talents-standalone-mount {
+  margin-top: 1rem;
+  min-height: 600px;
+}
+#talents-standalone-mount .bis-talent-modal-head {
+  background: rgba(15, 23, 42, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 1.25rem;
+}
+#talents-standalone-mount .bis-talent-class-ribbon {
+  margin-bottom: 1.25rem;
+}
+#talents-standalone-mount .bis-talent-modal-foot {
+  margin-top: 1.5rem;
+  background: rgba(15, 23, 42, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 1rem;
+}

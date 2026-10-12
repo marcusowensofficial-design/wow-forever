@@ -1,0 +1,418 @@
+- generic [active] [ref=e1]:
+  - complementary "Game and Beta Status Bar" [ref=e2]:
+    - generic [ref=e3]: "Beta Phase 2: LIVE NOW • Level 30 Cap Active"
+    - generic [ref=e6]:
+      - generic [ref=e7]:
+        - strong [ref=e8]: "Beta Duration:"
+        - text: 35 Days (Sept 17 – Oct 21) •
+        - generic [ref=e9]: Day 26 of 35
+      - generic [ref=e10]:
+        - strong [ref=e11]: "Level Cap:"
+        - text: 30 Active (Excavation Site 4 & Dalaran Live)
+      - generic [ref=e12]: Classic+ Standalone
+      - generic [ref=e13]: "🍺 Events: Brewfest & Harvest Concluded • Hallow's End Arrives Oct 18"
+      - generic [ref=e14]:
+        - strong [ref=e15]: "Rulesets:"
+        - text: PvP • PvE • RP • Hardcore
+      - generic [ref=e16]:
+        - strong [ref=e17]: "Engine:"
+        - text: Ray-Traced GI (DX12)
+      - generic [ref=e18]:
+        - strong [ref=e19]: "Client Build:"
+        - text: 1.60.6.71890 (Phase 2 Cooldown Manager & UI Overhaul)
+  - generic [ref=e20]:
+    - generic [ref=e21]:
+      - generic [ref=e22]:
+        - generic [ref=e23]: Beta Build 1.60.6.71890 • Realms Online
+        - button "🐟 4,001 murlocs online" [ref=e26] [cursor=pointer]:
+          - generic [ref=e27]: 🐟
+          - generic [ref=e28]: 4,001
+          - generic [ref=e29]: murlocs online
+      - generic [ref=e30]:
+        - button "Search Forever" [ref=e31] [cursor=pointer]:
+          - generic: 🔍
+          - text: Search Forever
+          - generic [ref=e32]: /
+        - button "Classic+ Guides" [ref=e33] [cursor=pointer]:
+          - generic [ref=e34]: 📖
+          - text: Classic+ Guides
+    - banner [ref=e35]:
+      - generic [ref=e36]:
+        - generic [ref=e37]: ⚡
+        - generic [ref=e38]: BLIZZARD ENTERTAINMENT
+        - generic [ref=e39]: ⚡
+      - 'heading "WORLD OF WARCRAFT: FOREVER" [level=1] [ref=e40]'
+      - paragraph [ref=e41]:
+        - text: The permanent, living
+        - strong [ref=e42]: Classic+
+        - text: adventure. Featuring horizontal progression at Level 60, the new
+        - strong [ref=e43]: Skyborne
+        - text: race, 9 new leveling dungeons, 3 raid tiers, and zero level scaling.
+      - navigation "Official Guides and Tools" [ref=e44]:
+        - 'link "🌐 Wowhead: Everything We Know" [ref=e45] [cursor=pointer]':
+          - /url: https://www.wowhead.com/forever/news/everything-we-know-about-wow-forever-382827
+          - generic [ref=e46]: 🌐
+          - text: "Wowhead: Everything We Know"
+        - 'link "🍺 Warcraft Tavern: Phase 2 Level 30 & Pre-BiS" [ref=e47] [cursor=pointer]':
+          - /url: https://www.warcrafttavern.com/forever/
+          - generic [ref=e48]: 🍺
+          - text: "Warcraft Tavern: Phase 2 Level 30 & Pre-BiS"
+        - 'link "📊 Mobalytics: Level 30 Meta & Tier Lists" [ref=e49] [cursor=pointer]':
+          - /url: https://mobalytics.gg/wow-forever
+          - generic [ref=e50]: 📊
+          - text: "Mobalytics: Level 30 Meta & Tier Lists"
+        - button "⚡ Interactive Talent Calculator" [ref=e51] [cursor=pointer]:
+          - generic [ref=e52]: ⚡
+          - text: Interactive Talent Calculator
+        - link "🏆 Wowhead Legacy Calculator" [ref=e53] [cursor=pointer]:
+          - /url: https://www.wowhead.com/forever/legacy-calculator
+          - generic [ref=e54]: 🏆
+          - text: Wowhead Legacy Calculator
+        - link "⚔️ Method.gg Itemization Guide" [ref=e55] [cursor=pointer]:
+          - /url: https://www.method.gg/wow-classic/itemization-updates-in-world-of-warcraft-forever-expertise-spell-damage-more
+          - generic [ref=e56]: ⚔️
+          - text: Method.gg Itemization Guide
+        - link "🦅 Method.gg Racials Breakdown" [ref=e57] [cursor=pointer]:
+          - /url: https://www.method.gg/wow-classic/all-new-racial-abilities-in-world-of-warcraft-forever
+          - generic [ref=e58]: 🦅
+          - text: Method.gg Racials Breakdown
+      - navigation "Main Navigation" [ref=e59]:
+        - button "⚡ Operations Hub" [ref=e60] [cursor=pointer]:
+          - generic [ref=e61]: ⚡
+          - text: Operations Hub
+        - button "🛡️ Level 30 BiS" [ref=e62] [cursor=pointer]:
+          - generic [ref=e63]: 🛡️
+          - text: Level 30 BiS
+        - button "📰 News & Dispatches" [ref=e64] [cursor=pointer]:
+          - generic [ref=e65]: 📰
+          - text: News & Dispatches
+        - button "📜 Content Codex" [ref=e66] [cursor=pointer]:
+          - generic [ref=e67]: 📜
+          - text: Content Codex
+        - button "🗺️ World Atlas & Rares" [ref=e68] [cursor=pointer]:
+          - generic [ref=e69]: 🗺️
+          - text: World Atlas & Rares
+        - button "📊 Tier List Maker" [ref=e70] [cursor=pointer]:
+          - generic [ref=e71]: 📊
+          - text: Tier List Maker
+        - button "🧪 Downrank Calc" [ref=e72] [cursor=pointer]:
+          - generic [ref=e73]: 🧪
+          - text: Downrank Calc
+        - button "🧙 Class & Race Planner" [ref=e74] [cursor=pointer]:
+          - generic [ref=e75]: 🧙
+          - text: Class & Race Planner
+        - button "🎯 Class Deep Dives" [ref=e76] [cursor=pointer]:
+          - generic [ref=e77]: 🎯
+          - text: Class Deep Dives
+        - button "🔄 What's Changed" [ref=e78] [cursor=pointer]:
+          - generic [ref=e79]: 🔄
+          - text: What's Changed
+        - button "🔨 Professions" [ref=e80] [cursor=pointer]:
+          - generic [ref=e81]: 🔨
+          - text: Professions
+        - button "⛺ Camping Hub" [ref=e82] [cursor=pointer]:
+          - generic [ref=e83]: ⛺
+          - text: Camping Hub
+        - button "🏆 Legacy Tree" [ref=e84] [cursor=pointer]:
+          - generic [ref=e85]: 🏆
+          - text: Legacy Tree
+        - button "⚙️ Systems & Engine" [ref=e86] [cursor=pointer]:
+          - generic [ref=e87]: ⚙️
+          - text: Systems & Engine
+        - button "🛡️ Our Forever Squad" [ref=e88] [cursor=pointer]:
+          - generic [ref=e89]: 🛡️
+          - text: Our Forever Squad
+        - button "📋 Beta Milestones & Character" [ref=e90] [cursor=pointer]:
+          - generic [ref=e91]: 📋
+          - text: Beta Milestones & Character
+    - text: ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • •
+    - region "Professions, Leveling & Trade Economy Hub" [ref=e92]:
+      - generic [ref=e94]:
+        - heading "🔨 Professions & Trade Economy Hub" [level=2] [ref=e95]:
+          - generic [ref=e96]: 🔨
+          - text: Professions & Trade Economy Hub
+        - paragraph [ref=e97]: The complete guide to all 13 professions, 1–300 leveling roadmaps, recipe catalogs, reagent requirements, and Merchant's Favor turn-ins
+    - text: ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦
+  - dialog [ref=e110]:
+    - generic [ref=e111]:
+      - button "Close Modal" [ref=e112] [cursor=pointer]: ✕
+      - generic [ref=e113]:
+        - tablist "Select Class" [ref=e114]:
+          - button "Warrior Warrior" [ref=e115] [cursor=pointer]:
+            - img "Warrior" [ref=e116]
+            - generic [ref=e117]: Warrior
+          - button "Paladin Paladin" [ref=e118] [cursor=pointer]:
+            - img "Paladin" [ref=e119]
+            - generic [ref=e120]: Paladin
+          - button "Hunter Hunter" [ref=e121] [cursor=pointer]:
+            - img "Hunter" [ref=e122]
+            - generic [ref=e123]: Hunter
+          - button "Rogue Rogue" [ref=e124] [cursor=pointer]:
+            - img "Rogue" [ref=e125]
+            - generic [ref=e126]: Rogue
+          - button "Priest Priest" [ref=e127] [cursor=pointer]:
+            - img "Priest" [ref=e128]
+            - generic [ref=e129]: Priest
+          - button "Shaman Shaman" [ref=e130] [cursor=pointer]:
+            - img "Shaman" [ref=e131]
+            - generic [ref=e132]: Shaman
+          - button "Mage Mage" [ref=e133] [cursor=pointer]:
+            - img "Mage" [ref=e134]
+            - generic [ref=e135]: Mage
+          - button "Warlock Warlock" [ref=e136] [cursor=pointer]:
+            - img "Warlock" [ref=e137]
+            - generic [ref=e138]: Warlock
+          - button "Druid Druid" [ref=e139] [cursor=pointer]:
+            - img "Druid" [ref=e140]
+            - generic [ref=e141]: Druid
+        - generic [ref=e142]:
+          - generic [ref=e143]:
+            - img "Warrior" [ref=e144]
+            - generic [ref=e145]:
+              - generic [ref=e146]:
+                - 'heading "Warrior: Custom Build (Blank Slate)" [level=3] [ref=e147]'
+                - generic [ref=e148]: ✨ Blank Slate
+              - generic [ref=e149]: Phase 2 Level 30 Beta Cap • 26 Talent Points (21 Standard + 5 'Talented' Legacy Perk)
+          - generic [ref=e150]:
+            - generic "Unallocated Talent Points Remaining" [ref=e151]:
+              - generic [ref=e152]: "26"
+              - generic [ref=e153]: Points Left
+            - 'generic "Points allocated: Tree 1 / Tree 2 / Tree 3" [ref=e154]': "Build: 0 / 0 / 0 (0/26)"
+            - generic [ref=e155]:
+              - button "✨ Blank Slate" [ref=e156] [cursor=pointer]:
+                - generic [ref=e157]: ✨
+                - text: Blank Slate
+              - button "🌟 Recommended Build" [ref=e158] [cursor=pointer]:
+                - generic [ref=e159]: 🌟
+                - text: Recommended Build
+            - generic "Select theorycrafting points cap" [ref=e160]:
+              - button "Lvl 30 (26p)" [ref=e161] [cursor=pointer]
+              - button "Lvl 30 (21p)" [ref=e162] [cursor=pointer]
+              - button "Lvl 60 (51p)" [ref=e163] [cursor=pointer]
+            - generic [ref=e164]:
+              - button "🔲 Matrix" [ref=e165] [cursor=pointer]:
+                - generic [ref=e166]: 🔲
+                - text: Matrix
+              - button "📜 Cards" [ref=e167] [cursor=pointer]:
+                - generic [ref=e168]: 📜
+                - text: Cards
+            - button "✕ Clear" [ref=e169] [cursor=pointer]
+        - generic [ref=e170]:
+          - generic [ref=e171]:
+            - generic [ref=e172]:
+              - generic [ref=e173]:
+                - img "Arms" [ref=e174]
+                - generic [ref=e175]: Arms
+              - generic [ref=e176]:
+                - generic [ref=e177]: 0 pts
+                - button "↺" [ref=e178] [cursor=pointer]
+            - generic [ref=e180]:
+              - button "Improved Heroic Strike 0/3" [ref=e181] [cursor=pointer]:
+                - img "Improved Heroic Strike" [ref=e182]
+                - generic: 0/3
+              - button "Deflection 0/5" [ref=e183] [cursor=pointer]:
+                - img "Deflection" [ref=e184]
+                - generic: 0/5
+              - button "Improved Rend 0/3" [ref=e185] [cursor=pointer]:
+                - img "Improved Rend" [ref=e186]
+                - generic: 0/3
+              - button "Improved Charge 0/2" [ref=e187]:
+                - img "Improved Charge" [ref=e188]
+                - generic: 0/2
+              - button "Improved Tactical Mastery 0/5" [ref=e189]:
+                - img "Improved Tactical Mastery" [ref=e190]
+                - generic: 0/5
+              - button "Improved Overpower 0/2" [ref=e191]:
+                - img "Improved Overpower" [ref=e192]
+                - generic: 0/2
+              - button "Anger Management 0/1" [ref=e193]:
+                - img "Anger Management" [ref=e194]
+                - generic: 0/1
+              - button "Deep Wounds 0/3" [ref=e195]:
+                - img "Deep Wounds" [ref=e196]
+                - generic: 0/3
+              - button "Spearing Strike 0/1" [ref=e197]:
+                - img "Spearing Strike" [ref=e198]
+                - generic: 0/1
+              - button "Two-Handed Weapon Specialization 0/3" [ref=e199]:
+                - img "Two-Handed Weapon Specialization" [ref=e200]
+                - generic: 0/3
+              - button "Impale 0/2" [ref=e201]:
+                - img "Impale" [ref=e202]
+                - generic: 0/2
+              - button "Bloodthrill 0/5" [ref=e203]:
+                - img "Bloodthrill" [ref=e204]
+                - generic: 0/5
+              - button "Sweeping Strikes 0/1" [ref=e205]:
+                - img "Sweeping Strikes" [ref=e206]
+                - generic: 0/1
+              - button "Weaponmaster 0/5" [ref=e207]:
+                - img "Weaponmaster" [ref=e208]
+                - generic: 0/5
+              - button "Improved Slam 0/2" [ref=e209]:
+                - img "Improved Slam" [ref=e210]
+                - generic: 0/2
+              - button "Improved Hamstring 0/3" [ref=e211]:
+                - img "Improved Hamstring" [ref=e212]
+                - generic: 0/3
+              - button "Mortal Strike 0/1" [ref=e213]:
+                - img "Mortal Strike" [ref=e214]
+                - generic: 0/1
+          - generic [ref=e215]:
+            - generic [ref=e216]:
+              - generic [ref=e217]:
+                - img "Fury" [ref=e218]
+                - generic [ref=e219]: Fury
+              - generic [ref=e220]:
+                - generic [ref=e221]: 0 pts
+                - button "↺" [ref=e222] [cursor=pointer]
+            - generic [ref=e224]:
+              - button "Booming Voice 0/5" [ref=e225] [cursor=pointer]:
+                - img "Booming Voice" [ref=e226]
+                - generic: 0/5
+              - button "Cruelty 0/5" [ref=e227] [cursor=pointer]:
+                - img "Cruelty" [ref=e228]
+                - generic: 0/5
+              - button "Lingering Rage 0/5" [ref=e229]:
+                - img "Lingering Rage" [ref=e230]
+                - generic: 0/5
+              - button "Unbridled Wrath 0/5" [ref=e231]:
+                - img "Unbridled Wrath" [ref=e232]
+                - generic: 0/5
+              - button "Furious Precision 0/3" [ref=e233]:
+                - img "Furious Precision" [ref=e234]
+                - generic: 0/3
+              - button "Piercing Howl 0/1" [ref=e235]:
+                - img "Piercing Howl" [ref=e236]
+                - generic: 0/1
+              - button "Blood Craze 0/3" [ref=e237]:
+                - img "Blood Craze" [ref=e238]
+                - generic: 0/3
+              - button "Dual Wield Specialization 0/5" [ref=e239]:
+                - img "Dual Wield Specialization" [ref=e240]
+                - generic: 0/5
+              - button "Raging Blows 0/1" [ref=e241]:
+                - img "Raging Blows" [ref=e242]
+                - generic: 0/1
+              - button "Enrage 0/5" [ref=e243]:
+                - img "Enrage" [ref=e244]
+                - generic: 0/5
+              - button "Improved Execute 0/2" [ref=e245]:
+                - img "Improved Execute" [ref=e246]
+                - generic: 0/2
+              - button "Improved Berserker Rage 0/2" [ref=e247]:
+                - img "Improved Berserker Rage" [ref=e248]
+                - generic: 0/2
+              - button "Death Wish 0/1" [ref=e249]:
+                - img "Death Wish" [ref=e250]
+                - generic: 0/1
+              - button "Improved Intercept 0/2" [ref=e251]:
+                - img "Improved Intercept" [ref=e252]
+                - generic: 0/2
+              - button "Flurry 0/5" [ref=e253]:
+                - img "Flurry" [ref=e254]
+                - generic: 0/5
+              - button "Gore Drinker 0/2" [ref=e255]:
+                - img "Gore Drinker" [ref=e256]
+                - generic: 0/2
+              - button "Bloodthirst 0/1" [ref=e257]:
+                - img "Bloodthirst" [ref=e258]
+                - generic: 0/1
+          - generic [ref=e259]:
+            - generic [ref=e260]:
+              - generic [ref=e261]:
+                - img "Protection" [ref=e262]
+                - generic [ref=e263]: Protection
+              - generic [ref=e264]:
+                - generic [ref=e265]: 0 pts
+                - button "↺" [ref=e266] [cursor=pointer]
+            - generic [ref=e268]:
+              - button "Improved Bloodrage 0/2" [ref=e269] [cursor=pointer]:
+                - img "Improved Bloodrage" [ref=e270]
+                - generic: 0/2
+              - button "Shield Specialization 0/5" [ref=e271] [cursor=pointer]:
+                - img "Shield Specialization" [ref=e272]
+                - generic: 0/5
+              - button "Iron Will 0/5" [ref=e273] [cursor=pointer]:
+                - img "Iron Will" [ref=e274]
+                - generic: 0/5
+              - button "Anticipation 0/5" [ref=e275]:
+                - img "Anticipation" [ref=e276]
+                - generic: 0/5
+              - button "Improved Revenge 0/3" [ref=e277]:
+                - img "Improved Revenge" [ref=e278]
+                - generic: 0/3
+              - button "Improved Thunder Clap 0/3" [ref=e279]:
+                - img "Improved Thunder Clap" [ref=e280]
+                - generic: 0/3
+              - button "Last Stand 0/1" [ref=e281]:
+                - img "Last Stand" [ref=e282]
+                - generic: 0/1
+              - button "Master of Defense 0/2" [ref=e283]:
+                - img "Master of Defense" [ref=e284]
+                - generic: 0/2
+              - button "Improved Disarm 0/3" [ref=e285]:
+                - img "Improved Disarm" [ref=e286]
+                - generic: 0/3
+              - button "Defiance 0/3" [ref=e287]:
+                - img "Defiance" [ref=e288]
+                - generic: 0/3
+              - button "Improved Sunder Armor 0/3" [ref=e289]:
+                - img "Improved Sunder Armor" [ref=e290]
+                - generic: 0/3
+              - button "Vanguard 0/1" [ref=e291]:
+                - img "Vanguard" [ref=e292]
+                - generic: 0/1
+              - button "Improved Shield Bash 0/2" [ref=e293]:
+                - img "Improved Shield Bash" [ref=e294]
+                - generic: 0/2
+              - button "Improved Shield Wall 0/2" [ref=e295]:
+                - img "Improved Shield Wall" [ref=e296]
+                - generic: 0/2
+              - button "Concussion Blow 0/1" [ref=e297]:
+                - img "Concussion Blow" [ref=e298]
+                - generic: 0/1
+              - button "Focused Rage 0/3" [ref=e299]:
+                - img "Focused Rage" [ref=e300]
+                - generic: 0/3
+              - button "Bastion 0/5" [ref=e301]:
+                - img "Bastion" [ref=e302]
+                - generic: 0/5
+              - button "Shield Slam 0/1" [ref=e303]:
+                - img "Shield Slam" [ref=e304]
+                - generic: 0/1
+        - generic [ref=e305]:
+          - generic [ref=e306]:
+            - button "📋 Copy Build Code ( FOREVER-WARRIOR-CUSTOM-30-0-0-0 )" [ref=e307] [cursor=pointer]:
+              - generic [ref=e308]: 📋
+              - text: Copy Build Code (
+              - code [ref=e309]: FOREVER-WARRIOR-CUSTOM-30-0-0-0
+              - text: )
+            - button "🔗 Copy Build Link" [ref=e310] [cursor=pointer]:
+              - generic [ref=e311]: 🔗
+              - text: Copy Build Link
+            - button "🎯 Explore Warrior Deep Dive" [ref=e312] [cursor=pointer]:
+              - generic [ref=e313]: 🎯
+              - text: Explore Warrior Deep Dive
+          - generic [ref=e314]:
+            - generic [ref=e315]: 💡 Left-Click (+1) • Shift+Click (Max) • Right-Click (-1) • Shift+Right-Click (Clear)
+            - button "✕ Close Window" [ref=e316] [cursor=pointer]
+  - contentinfo [ref=e98]:
+    - generic [ref=e99]:
+      - generic [ref=e100]:
+        - link "Blizzard Official News" [ref=e101] [cursor=pointer]:
+          - /url: https://news.blizzard.com
+        - link "Wowhead Coverage" [ref=e102] [cursor=pointer]:
+          - /url: https://www.wowhead.com/forever
+        - link "Warcraft Tavern Hub" [ref=e103] [cursor=pointer]:
+          - /url: https://www.warcrafttavern.com/forever/
+        - link "Mobalytics Meta & Tier Lists" [ref=e104] [cursor=pointer]:
+          - /url: https://mobalytics.gg/wow-forever
+        - link "Method.gg Raiding & Guides" [ref=e105] [cursor=pointer]:
+          - /url: https://www.method.gg
+        - link "Icy Veins Class Hub" [ref=e106] [cursor=pointer]:
+          - /url: https://www.icy-veins.com/wow-forever
+        - link "Battle.net Launcher" [ref=e107] [cursor=pointer]:
+          - /url: https://battle.net
+      - paragraph [ref=e108]: "World of Warcraft: Forever Personal News & Beta Progress Portal • Built for Classic+ Explorers"
+      - paragraph [ref=e109]: Data grounded in official BlizzCon 2026 announcements, Wowhead compendiums, Method.gg itemization audits, and Beta Phase 1 & 2 community testing.

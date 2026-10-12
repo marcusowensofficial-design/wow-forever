@@ -11,10 +11,10 @@
   <meta property="og:description" content="Track World of Warcraft: Forever (Classic+) news, Beta Phase 2 Level 30 cap unlock, Wowhead datamining, Excavation Site 4, City of Dalaran, the Skyborne race, and your progression.">
   <meta property="og:site_name" content="World of Warcraft: Forever Portal">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="stylesheet" href="css/styles.css?v=1.60.6-p3">
-  <link rel="stylesheet" href="css/tools.css?v=1.60.6-p5">
-  <link rel="stylesheet" href="css/professions.css?v=1.60.6-p5">
-  <link rel="stylesheet" href="css/changes.css?v=1.60.6-p5">
+  <link rel="stylesheet" href="css/styles.css?v=1.60.6-p6">
+  <link rel="stylesheet" href="css/tools.css?v=1.60.6-p6">
+  <link rel="stylesheet" href="css/professions.css?v=1.60.6-p6">
+  <link rel="stylesheet" href="css/changes.css?v=1.60.6-p6">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚔️</text></svg>">
 </head>
 <body>
@@ -105,6 +105,9 @@
         </button>
         <button class="nav-tab-btn" data-tab="bis">
           <span>🛡️</span> Level 30 BiS
+        </button>
+        <button class="nav-tab-btn" data-tab="talents">
+          <span>🌳</span> Talents
         </button>
         <button class="nav-tab-btn" data-tab="news">
           <span>📰</span> News & Dispatches
@@ -716,6 +719,7 @@
         <button class="codex-nav-btn" data-codex="stats">📊 Stats & Attributes Guide</button>
         <button class="codex-nav-btn" data-codex="guides">📖 Curated Guides</button>
         <button class="codex-nav-btn" data-codex="commerce">🪙 Merchant's Favor &amp; Crates</button>
+        <button class="codex-nav-btn" data-codex="pets">🐾 Hunter Pet Radar</button>
       </div>
 
       <!-- Panel 1: Skyborne -->
@@ -1000,6 +1004,11 @@
         <div id="codex-commerce-container"></div>
       </div>
 
+      <!-- Panel 11: Hunter Pet Beast Radar -->
+      <div id="codex-pets" class="codex-panel">
+        <div id="hunter-pets-mount"></div>
+      </div>
+
     </section>
 
     <!-- TAB: WORLD ATLAS & RARES -->
@@ -1022,6 +1031,9 @@
           </button>
           <button class="atlas-subnav-btn" data-subtab="pvp">
             <span>⚔️</span> PvP Honor System
+          </button>
+          <button class="atlas-subnav-btn" data-subtab="pets">
+            <span>🐾</span> 502 Hunter Beasts
           </button>
         </div>
       </div>
@@ -1167,6 +1179,11 @@
           <div id="pvp-sets-grid" class="pvp-sets-grid">
             <!-- Rendered dynamically by js/modules/atlas.js -->
           </div>
+        </div>
+
+        <!-- Subtab 4: Hunter Pets -->
+        <div id="atlas-subtab-pets" class="atlas-subtab-panel" hidden>
+          <div id="atlas-hunter-pets-mount"></div>
         </div>
       </div>
     </section>
@@ -2594,6 +2611,17 @@
       <div id="bis-container"></div>
     </section>
 
+    <!-- TAB 9.5: INTERACTIVE TALENT TREE CALCULATOR -->
+    <section id="tab-talents" class="tab-content" aria-label="Interactive Talent Tree Calculator">
+      <div class="section-heading-bar">
+        <div>
+          <h2><span>🌳</span> Interactive Talent Tree Calculator</h2>
+          <p class="section-subtext">Authentic 3-tree Classic+ calculator across all 9 classes. Compare Classic vs Forever changes, test Level 30 caps, and export builds.</p>
+        </div>
+      </div>
+      <div id="talents-standalone-mount"></div>
+    </section>
+
     <!-- TAB 10: INTERACTIVE TIER LIST MAKER -->
     <section id="tab-tierlist" class="tab-content" aria-label="Interactive Tier List Maker">
       <div id="tierlist-container"></div>
@@ -2889,32 +2917,33 @@
   <script defer src="js/data/deepdives/warrior.js?v=1.60.6-p5"></script>
   <script defer src="js/data/deepdives/warlock.js?v=1.60.6-p5"></script>
   <script defer src="js/data/deepdives/priest.js?v=1.60.6-p5"></script>
-  <script defer src="js/data/deepdives/druid.js?v=1.60.6-p5"></script>
-  <script defer src="js/data/deepdives/rogue.js?v=1.60.6-p5"></script>
-  <script defer src="js/data/deepdives/pending.js?v=1.60.6-p5"></script>
+  <script defer src="js/data/deepdives/druid.js?v=1.60.6-p6"></script>
+  <script defer src="js/data/deepdives/rogue.js?v=1.60.6-p6"></script>
+  <script defer src="js/data/deepdives/pending.js?v=1.60.6-p6"></script>
 
   <!-- 2. Feature Modules -->
-  <script defer src="js/modules/navigation.js?v=1.60.6-p5"></script>
-  <script defer src="js/modules/news.js?v=1.60.6-p5"></script>
-  <script defer src="js/modules/codex.js?v=1.60.6-p5"></script>
-  <script defer src="js/modules/legacy.js?v=1.60.6-p5"></script>
-  <script defer src="js/modules/camping.js?v=1.60.6-p5"></script>
-  <script defer src="js/modules/professions.js?v=1.60.6-p5"></script>
-  <script defer src="js/modules/changes.js?v=1.60.6-p5"></script>
-  <script defer src="js/modules/planner.js?v=1.60.6-p5"></script>
-  <script defer src="js/modules/talent-tree.js?v=1.60.6-p5"></script>
-  <script defer src="js/modules/deepdives.js?v=1.60.6-p5"></script>
-  <script defer src="js/modules/tierlist.js?v=1.60.6-p5"></script>
-  <script defer src="js/modules/downranking.js?v=1.60.6-p5"></script>
-  <script defer src="js/modules/bis.js?v=1.60.6-p5"></script>
-  <script defer src="js/modules/hiddenitems.js?v=1.60.6-p5"></script>
-  <script defer src="js/modules/guides.js?v=1.60.6-p5"></script>
-  <script defer src="js/modules/atlas.js?v=1.60.6-p5"></script>
-  <script defer src="js/modules/search.js?v=1.60.6-p5"></script>
+  <script defer src="js/modules/hunterpets.js?v=1.60.6-p6"></script>
+  <script defer src="js/modules/navigation.js?v=1.60.6-p6"></script>
+  <script defer src="js/modules/news.js?v=1.60.6-p6"></script>
+  <script defer src="js/modules/codex.js?v=1.60.6-p6"></script>
+  <script defer src="js/modules/legacy.js?v=1.60.6-p6"></script>
+  <script defer src="js/modules/camping.js?v=1.60.6-p6"></script>
+  <script defer src="js/modules/professions.js?v=1.60.6-p6"></script>
+  <script defer src="js/modules/changes.js?v=1.60.6-p6"></script>
+  <script defer src="js/modules/planner.js?v=1.60.6-p6"></script>
+  <script defer src="js/modules/talent-tree.js?v=1.60.6-p6"></script>
+  <script defer src="js/modules/deepdives.js?v=1.60.6-p6"></script>
+  <script defer src="js/modules/tierlist.js?v=1.60.6-p6"></script>
+  <script defer src="js/modules/downranking.js?v=1.60.6-p6"></script>
+  <script defer src="js/modules/bis.js?v=1.60.6-p6"></script>
+  <script defer src="js/modules/hiddenitems.js?v=1.60.6-p6"></script>
+  <script defer src="js/modules/guides.js?v=1.60.6-p6"></script>
+  <script defer src="js/modules/atlas.js?v=1.60.6-p6"></script>
+  <script defer src="js/modules/search.js?v=1.60.6-p6"></script>
 
   <!-- 3. Core App Orchestrator & Tracker -->
-  <script defer src="js/app.js?v=1.60.6-p5"></script>
-  <script defer src="js/tracker.js?v=1.60.6-p5"></script>
+  <script defer src="js/app.js?v=1.60.6-p6"></script>
+  <script defer src="js/tracker.js?v=1.60.6-p6"></script>
 
 
 </body>

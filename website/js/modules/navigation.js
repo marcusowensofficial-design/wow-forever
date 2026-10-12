@@ -100,6 +100,15 @@ function initNavigation() {
         targetPanel.classList.add('active');
       }
 
+      if (targetTab === 'talents') {
+        const mount = document.getElementById('talents-standalone-mount');
+        if (mount && (!mount.hasChildNodes() || mount.children.length === 0)) {
+          if (window.TalentTreeModule && typeof window.TalentTreeModule.renderStandalone === 'function') {
+            window.TalentTreeModule.renderStandalone('talents-standalone-mount', 'warrior');
+          }
+        }
+      }
+
       const navBar = document.querySelector('.nav-tab-bar');
       if (navBar && window.scrollY > navBar.offsetTop + 100) {
         navBar.scrollIntoView({ behavior: 'smooth' });
@@ -114,8 +123,30 @@ function initNavigation() {
     if (!hash) return;
 
     if (hash.startsWith('calculator') || hash.startsWith('talents')) {
-      if (window.TalentTreeModule && typeof window.TalentTreeModule.openFromHash === 'function') {
-        window.TalentTreeModule.openFromHash(rawHash);
+      const parts = hash.split('?')[0].split('/');
+      const selectedClass = parts[1] || 'warrior';
+
+      const talentsTabBtn = document.querySelector('.nav-tab-btn[data-tab="talents"]');
+      if (talentsTabBtn && !talentsTabBtn.classList.contains('active')) {
+        talentsTabBtn.click();
+      }
+
+      const qIndex = rawHash.indexOf('?');
+      let buildUrl = '';
+      if (qIndex !== -1) {
+        const params = new URLSearchParams(rawHash.substring(qIndex + 1));
+        if (params.get('b')) buildUrl = decodeURIComponent(params.get('b'));
+        if (params.get('class')) {
+          const cls = params.get('class').toLowerCase();
+          if (cls && window.TalentTreeModule?.renderStandalone) {
+            window.TalentTreeModule.renderStandalone('talents-standalone-mount', cls, { buildUrl });
+            return;
+          }
+        }
+      }
+
+      if (window.TalentTreeModule && typeof window.TalentTreeModule.renderStandalone === 'function') {
+        window.TalentTreeModule.renderStandalone('talents-standalone-mount', selectedClass, { buildUrl });
       }
       return;
     }
@@ -165,14 +196,14 @@ function initNavigation() {
   // Header quick link to in-house Talent Calculator (Blank Slate)
   const quickLinkTalentCalc = document.getElementById('quick-link-talent-calc');
   if (quickLinkTalentCalc) {
-    quickLinkTalentCalc.addEventListener('click', () => {
-      if (window.TalentTreeModule) {
-        window.TalentTreeModule.openModal({
-          classId: 'warrior',
-          blankSlate: true,
-          maxPoints: 26,
-          specName: 'Warrior Custom Build'
-        });
+    quickLinkTalentCalc.addEventListener('click', (e) => {
+      e.preventDefault();
+      const talentsTabBtn = document.querySelector('.nav-tab-btn[data-tab="talents"]');
+      if (talentsTabBtn) {
+        talentsTabBtn.click();
+      }
+      if (window.TalentTreeModule && typeof window.TalentTreeModule.renderStandalone === 'function') {
+        window.TalentTreeModule.renderStandalone('talents-standalone-mount', 'warrior', { blankSlate: true });
       }
     });
   }

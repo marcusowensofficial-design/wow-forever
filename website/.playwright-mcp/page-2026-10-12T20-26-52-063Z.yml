@@ -1,0 +1,482 @@
+- generic [active] [ref=f1e1]:
+  - complementary "Game and Beta Status Bar" [ref=f1e2]:
+    - generic [ref=f1e3]: "Beta Phase 2: LIVE NOW • Level 30 Cap Active"
+    - generic [ref=f1e6]:
+      - generic [ref=f1e7]:
+        - strong [ref=f1e8]: "Beta Duration:"
+        - text: 35 Days (Sept 17 – Oct 21) •
+        - generic [ref=f1e9]: Day 26 of 35
+      - generic [ref=f1e10]:
+        - strong [ref=f1e11]: "Level Cap:"
+        - text: 30 Active (Excavation Site 4 & Dalaran Live)
+      - generic [ref=f1e12]: Classic+ Standalone
+      - generic [ref=f1e13]: "🍺 Events: Brewfest & Harvest Concluded • Hallow's End Arrives Oct 18"
+      - generic [ref=f1e14]:
+        - strong [ref=f1e15]: "Rulesets:"
+        - text: PvP • PvE • RP • Hardcore
+      - generic [ref=f1e16]:
+        - strong [ref=f1e17]: "Engine:"
+        - text: Ray-Traced GI (DX12)
+      - generic [ref=f1e18]:
+        - strong [ref=f1e19]: "Client Build:"
+        - text: 1.60.6.71890 (Phase 2 Cooldown Manager & UI Overhaul)
+  - generic [ref=f1e20]:
+    - generic [ref=f1e21]:
+      - generic [ref=f1e22]:
+        - generic [ref=f1e23]: Beta Build 1.60.6.71890 • Realms Online
+        - button "🐟 3,872 murlocs online" [ref=f1e26] [cursor=pointer]:
+          - generic [ref=f1e27]: 🐟
+          - generic [ref=f1e28]: 3,872
+          - generic [ref=f1e29]: murlocs online
+      - generic [ref=f1e30]:
+        - button "Search Forever" [ref=f1e31] [cursor=pointer]:
+          - generic: 🔍
+          - text: Search Forever
+          - generic [ref=f1e32]: /
+        - button "Classic+ Guides" [ref=f1e33] [cursor=pointer]:
+          - generic [ref=f1e34]: 📖
+          - text: Classic+ Guides
+    - banner [ref=f1e35]:
+      - generic [ref=f1e36]:
+        - generic [ref=f1e37]: ⚡
+        - generic [ref=f1e38]: BLIZZARD ENTERTAINMENT
+        - generic [ref=f1e39]: ⚡
+      - 'heading "WORLD OF WARCRAFT: FOREVER" [level=1] [ref=f1e40]'
+      - paragraph [ref=f1e41]:
+        - text: The permanent, living
+        - strong [ref=f1e42]: Classic+
+        - text: adventure. Featuring horizontal progression at Level 60, the new
+        - strong [ref=f1e43]: Skyborne
+        - text: race, 9 new leveling dungeons, 3 raid tiers, and zero level scaling.
+      - navigation "Official Guides and Tools" [ref=f1e44]:
+        - 'link "🌐 Wowhead: Everything We Know" [ref=f1e45] [cursor=pointer]':
+          - /url: https://www.wowhead.com/forever/news/everything-we-know-about-wow-forever-382827
+          - generic [ref=f1e46]: 🌐
+          - text: "Wowhead: Everything We Know"
+        - 'link "🍺 Warcraft Tavern: Phase 2 Level 30 & Pre-BiS" [ref=f1e47] [cursor=pointer]':
+          - /url: https://www.warcrafttavern.com/forever/
+          - generic [ref=f1e48]: 🍺
+          - text: "Warcraft Tavern: Phase 2 Level 30 & Pre-BiS"
+        - 'link "📊 Mobalytics: Level 30 Meta & Tier Lists" [ref=f1e49] [cursor=pointer]':
+          - /url: https://mobalytics.gg/wow-forever
+          - generic [ref=f1e50]: 📊
+          - text: "Mobalytics: Level 30 Meta & Tier Lists"
+        - button "⚡ Interactive Talent Calculator" [ref=f1e51] [cursor=pointer]:
+          - generic [ref=f1e52]: ⚡
+          - text: Interactive Talent Calculator
+        - link "🏆 Wowhead Legacy Calculator" [ref=f1e53] [cursor=pointer]:
+          - /url: https://www.wowhead.com/forever/legacy-calculator
+          - generic [ref=f1e54]: 🏆
+          - text: Wowhead Legacy Calculator
+        - link "⚔️ Method.gg Itemization Guide" [ref=f1e55] [cursor=pointer]:
+          - /url: https://www.method.gg/wow-classic/itemization-updates-in-world-of-warcraft-forever-expertise-spell-damage-more
+          - generic [ref=f1e56]: ⚔️
+          - text: Method.gg Itemization Guide
+        - link "🦅 Method.gg Racials Breakdown" [ref=f1e57] [cursor=pointer]:
+          - /url: https://www.method.gg/wow-classic/all-new-racial-abilities-in-world-of-warcraft-forever
+          - generic [ref=f1e58]: 🦅
+          - text: Method.gg Racials Breakdown
+      - navigation "Main Navigation" [ref=f1e59]:
+        - button "⚡ Operations Hub" [ref=f1e60] [cursor=pointer]:
+          - generic [ref=f1e61]: ⚡
+          - text: Operations Hub
+        - button "🛡️ Level 30 BiS" [ref=f1e62] [cursor=pointer]:
+          - generic [ref=f1e63]: 🛡️
+          - text: Level 30 BiS
+        - button "🌳 Talents" [ref=f1e64] [cursor=pointer]:
+          - generic [ref=f1e65]: 🌳
+          - text: Talents
+        - button "📰 News & Dispatches" [ref=f1e66] [cursor=pointer]:
+          - generic [ref=f1e67]: 📰
+          - text: News & Dispatches
+        - button "📜 Content Codex" [ref=f1e68] [cursor=pointer]:
+          - generic [ref=f1e69]: 📜
+          - text: Content Codex
+        - button "🗺️ World Atlas & Rares" [ref=f1e70] [cursor=pointer]:
+          - generic [ref=f1e71]: 🗺️
+          - text: World Atlas & Rares
+        - button "📊 Tier List Maker" [ref=f1e72] [cursor=pointer]:
+          - generic [ref=f1e73]: 📊
+          - text: Tier List Maker
+        - button "🧪 Downrank Calc" [ref=f1e74] [cursor=pointer]:
+          - generic [ref=f1e75]: 🧪
+          - text: Downrank Calc
+        - button "🧙 Class & Race Planner" [ref=f1e76] [cursor=pointer]:
+          - generic [ref=f1e77]: 🧙
+          - text: Class & Race Planner
+        - button "🎯 Class Deep Dives" [ref=f1e78] [cursor=pointer]:
+          - generic [ref=f1e79]: 🎯
+          - text: Class Deep Dives
+        - button "🔄 What's Changed" [ref=f1e80] [cursor=pointer]:
+          - generic [ref=f1e81]: 🔄
+          - text: What's Changed
+        - button "🔨 Professions" [ref=f1e82] [cursor=pointer]:
+          - generic [ref=f1e83]: 🔨
+          - text: Professions
+        - button "⛺ Camping Hub" [ref=f1e84] [cursor=pointer]:
+          - generic [ref=f1e85]: ⛺
+          - text: Camping Hub
+        - button "🏆 Legacy Tree" [ref=f1e86] [cursor=pointer]:
+          - generic [ref=f1e87]: 🏆
+          - text: Legacy Tree
+        - button "⚙️ Systems & Engine" [ref=f1e88] [cursor=pointer]:
+          - generic [ref=f1e89]: ⚙️
+          - text: Systems & Engine
+        - button "🛡️ Our Forever Squad" [ref=f1e90] [cursor=pointer]:
+          - generic [ref=f1e91]: 🛡️
+          - text: Our Forever Squad
+        - button "📋 Beta Milestones & Character" [ref=f1e92] [cursor=pointer]:
+          - generic [ref=f1e93]: 📋
+          - text: Beta Milestones & Character
+    - text: ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦
+    - region "Interactive Talent Tree Calculator" [ref=f1e94]:
+      - generic [ref=f1e96]:
+        - heading "🌳 Interactive Talent Tree Calculator" [level=2] [ref=f1e97]:
+          - generic [ref=f1e98]: 🌳
+          - text: Interactive Talent Tree Calculator
+        - paragraph [ref=f1e99]: Authentic 3-tree Classic+ calculator across all 9 classes. Compare Classic vs Forever changes, test Level 30 caps, and export builds.
+      - generic [ref=f1e100]:
+        - tablist "Select Class" [ref=f1e9485]:
+          - button "Warrior Warrior" [ref=f1e9486] [cursor=pointer]:
+            - img "Warrior" [ref=f1e9487]
+            - generic [ref=f1e9488]: Warrior
+          - button "Paladin Paladin" [ref=f1e9489] [cursor=pointer]:
+            - img "Paladin" [ref=f1e9490]
+            - generic [ref=f1e9491]: Paladin
+          - button "Hunter Hunter" [ref=f1e9492] [cursor=pointer]:
+            - img "Hunter" [ref=f1e9493]
+            - generic [ref=f1e9494]: Hunter
+          - button "Rogue Rogue" [ref=f1e9495] [cursor=pointer]:
+            - img "Rogue" [ref=f1e9496]
+            - generic [ref=f1e9497]: Rogue
+          - button "Priest Priest" [ref=f1e9498] [cursor=pointer]:
+            - img "Priest" [ref=f1e9499]
+            - generic [ref=f1e9500]: Priest
+          - button "Shaman Shaman" [ref=f1e9501] [cursor=pointer]:
+            - img "Shaman" [ref=f1e9502]
+            - generic [ref=f1e9503]: Shaman
+          - button "Mage Mage" [ref=f1e9504] [cursor=pointer]:
+            - img "Mage" [ref=f1e9505]
+            - generic [ref=f1e9506]: Mage
+          - button "Warlock Warlock" [ref=f1e9507] [cursor=pointer]:
+            - img "Warlock" [ref=f1e9508]
+            - generic [ref=f1e9509]: Warlock
+          - button "Druid Druid" [ref=f1e9510] [cursor=pointer]:
+            - img "Druid" [ref=f1e9511]
+            - generic [ref=f1e9512]: Druid
+        - generic [ref=f1e9513]:
+          - generic [ref=f1e9514]:
+            - img "Warrior" [ref=f1e9515]
+            - generic [ref=f1e9516]:
+              - 'heading "Warrior: Arms PvE" [level=3] [ref=f1e9518]'
+              - generic [ref=f1e9519]: Phase 2 Level 30 Beta Cap • 26 Talent Points (21 Standard + 5 'Talented' Legacy Perk)
+          - generic [ref=f1e9520]:
+            - generic "Unallocated Talent Points Remaining" [ref=f1e9521]:
+              - generic [ref=f1e9522]: "0"
+              - generic [ref=f1e9523]: Points Left
+            - 'generic "Points allocated: Tree 1 / Tree 2 / Tree 3" [ref=f1e9524]': "Build: 26 / 0 / 0 (26/26)"
+            - generic [ref=f1e9525]:
+              - button "✨ Blank Slate" [ref=f1e9526] [cursor=pointer]:
+                - generic [ref=f1e9527]: ✨
+                - text: Blank Slate
+              - button "🌟 Recommended Build" [ref=f1e9528] [cursor=pointer]:
+                - generic [ref=f1e9529]: 🌟
+                - text: Recommended Build
+            - generic "Select theorycrafting points cap" [ref=f1e9530]:
+              - button "Lvl 30 (26p)" [ref=f1e9531] [cursor=pointer]
+              - button "Lvl 30 (21p)" [ref=f1e9532] [cursor=pointer]
+              - button "Lvl 60 (51p)" [ref=f1e9533] [cursor=pointer]
+            - 'button "⚡ Classic Diff: ON" [ref=f1e9534] [cursor=pointer]':
+              - generic [ref=f1e9535]: ⚡
+              - text: "Classic Diff: ON"
+            - generic [ref=f1e9536]:
+              - button "🔲 Matrix" [ref=f1e9537] [cursor=pointer]:
+                - generic [ref=f1e9538]: 🔲
+                - text: Matrix
+              - button "📜 Cards" [ref=f1e9539] [cursor=pointer]:
+                - generic [ref=f1e9540]: 📜
+                - text: Cards
+            - button "✕ Clear" [ref=f1e9541] [cursor=pointer]
+        - generic [ref=f1e9542]:
+          - generic [ref=f1e9543]:
+            - generic [ref=f1e9544]:
+              - generic [ref=f1e9545]:
+                - img "Arms" [ref=f1e9546]
+                - generic [ref=f1e9547]: Arms
+              - generic [ref=f1e9548]:
+                - generic [ref=f1e9549]: 26 pts
+                - button "↺" [ref=f1e9550] [cursor=pointer]
+            - generic [ref=f1e9552]:
+              - button "Improved Heroic Strike 3/3" [ref=f1e9553] [cursor=pointer]:
+                - img "Improved Heroic Strike" [ref=f1e9554]
+                - generic "Modified numbers or mechanics vs Classic Era": ~Mod
+                - generic: 3/3
+              - button "Deflection 0/5" [ref=f1e9555]:
+                - img "Deflection" [ref=f1e9556]
+                - generic: 0/5
+              - button "Improved Rend 3/3" [ref=f1e9557] [cursor=pointer]:
+                - img "Improved Rend" [ref=f1e9558]
+                - generic "Modified numbers or mechanics vs Classic Era": ~Mod
+                - generic: 3/3
+              - button "Improved Charge 0/2" [ref=f1e9559]:
+                - img "Improved Charge" [ref=f1e9560]
+                - generic "Modified numbers or mechanics vs Classic Era": ~Mod
+                - generic: 0/2
+              - button "Improved Tactical Mastery 5/5" [ref=f1e9561] [cursor=pointer]:
+                - img "Improved Tactical Mastery" [ref=f1e9562]
+                - generic "Modified numbers or mechanics vs Classic Era": ~Mod
+                - generic: 5/5
+              - button "Improved Overpower 2/2" [ref=f1e9563] [cursor=pointer]:
+                - img "Improved Overpower" [ref=f1e9564]
+                - generic "Tier or tree position moved vs Classic Era": ⇄Moved
+                - generic: 2/2
+              - button "Anger Management 1/1" [ref=f1e9565] [cursor=pointer]:
+                - img "Anger Management" [ref=f1e9566]
+                - generic "Modified numbers or mechanics vs Classic Era": ~Mod
+                - generic: 1/1
+              - button "Deep Wounds 3/3" [ref=f1e9567] [cursor=pointer]:
+                - img "Deep Wounds" [ref=f1e9568]
+                - generic "Modified numbers or mechanics vs Classic Era": ~Mod
+                - generic: 3/3
+              - button "Spearing Strike 1/1" [ref=f1e9569] [cursor=pointer]:
+                - img "Spearing Strike" [ref=f1e9570]
+                - generic "New talent in WoW Forever": +New
+                - generic: 1/1
+              - button "Two-Handed Weapon Specialization 2/3" [ref=f1e9571] [cursor=pointer]:
+                - img "Two-Handed Weapon Specialization" [ref=f1e9572]
+                - generic "Modified numbers or mechanics vs Classic Era": ~Mod
+                - generic: 2/3
+              - button "Impale 2/2" [ref=f1e9573] [cursor=pointer]:
+                - img "Impale" [ref=f1e9574]
+                - generic "Modified numbers or mechanics vs Classic Era": ~Mod
+                - generic: 2/2
+              - button "Bloodthrill 3/5" [ref=f1e9575] [cursor=pointer]:
+                - img "Bloodthrill" [ref=f1e9576]
+                - generic "New talent in WoW Forever": +New
+                - generic: 3/5
+              - button "Sweeping Strikes 1/1" [ref=f1e9577] [cursor=pointer]:
+                - img "Sweeping Strikes" [ref=f1e9578]
+                - generic: 1/1
+              - button "Weaponmaster 0/5" [ref=f1e9579]:
+                - img "Weaponmaster" [ref=f1e9580]
+                - generic "New talent in WoW Forever": +New
+                - generic: 0/5
+              - button "Improved Slam 0/2" [ref=f1e9581]:
+                - img "Improved Slam" [ref=f1e9582]
+                - generic "Modified numbers or mechanics vs Classic Era": ~Mod
+                - generic: 0/2
+              - button "Improved Hamstring 0/3" [ref=f1e9583]:
+                - img "Improved Hamstring" [ref=f1e9584]
+                - generic: 0/3
+              - button "Mortal Strike 0/1" [ref=f1e9585]:
+                - img "Mortal Strike" [ref=f1e9586]
+                - generic: 0/1
+          - generic [ref=f1e9587]:
+            - generic [ref=f1e9588]:
+              - generic [ref=f1e9589]:
+                - img "Fury" [ref=f1e9590]
+                - generic [ref=f1e9591]: Fury
+              - generic [ref=f1e9592]:
+                - generic [ref=f1e9593]: 0 pts
+                - button "↺" [ref=f1e9594] [cursor=pointer]
+            - generic [ref=f1e9596]:
+              - button "Booming Voice 0/5" [ref=f1e9597]:
+                - img "Booming Voice" [ref=f1e9598]
+                - generic "Modified numbers or mechanics vs Classic Era": ~Mod
+                - generic: 0/5
+              - button "Cruelty 0/5" [ref=f1e9599]:
+                - img "Cruelty" [ref=f1e9600]
+                - generic "Modified numbers or mechanics vs Classic Era": ~Mod
+                - generic: 0/5
+              - button "Lingering Rage 0/5" [ref=f1e9601]:
+                - img "Lingering Rage" [ref=f1e9602]
+                - generic "New talent in WoW Forever": +New
+                - generic: 0/5
+              - button "Unbridled Wrath 0/5" [ref=f1e9603]:
+                - img "Unbridled Wrath" [ref=f1e9604]
+                - generic "Modified numbers or mechanics vs Classic Era": ~Mod
+                - generic: 0/5
+              - button "Furious Precision 0/3" [ref=f1e9605]:
+                - img "Furious Precision" [ref=f1e9606]
+                - generic "New talent in WoW Forever": +New
+                - generic: 0/3
+              - button "Piercing Howl 0/1" [ref=f1e9607]:
+                - img "Piercing Howl" [ref=f1e9608]
+                - generic "Modified numbers or mechanics vs Classic Era": ~Mod
+                - generic: 0/1
+              - button "Blood Craze 0/3" [ref=f1e9609]:
+                - img "Blood Craze" [ref=f1e9610]
+                - generic "Modified numbers or mechanics vs Classic Era": ~Mod
+                - generic: 0/3
+              - button "Dual Wield Specialization 0/5" [ref=f1e9611]:
+                - img "Dual Wield Specialization" [ref=f1e9612]
+                - generic "Modified numbers or mechanics vs Classic Era": ~Mod
+                - generic: 0/5
+              - button "Raging Blows 0/1" [ref=f1e9613]:
+                - img "Raging Blows" [ref=f1e9614]
+                - generic "New talent in WoW Forever": +New
+                - generic: 0/1
+              - button "Enrage 0/5" [ref=f1e9615]:
+                - img "Enrage" [ref=f1e9616]
+                - generic "Modified numbers or mechanics vs Classic Era": ~Mod
+                - generic: 0/5
+              - button "Improved Execute 0/2" [ref=f1e9617]:
+                - img "Improved Execute" [ref=f1e9618]
+                - generic "Modified numbers or mechanics vs Classic Era": ~Mod
+                - generic: 0/2
+              - button "Improved Berserker Rage 0/2" [ref=f1e9619]:
+                - img "Improved Berserker Rage" [ref=f1e9620]
+                - generic "Modified numbers or mechanics vs Classic Era": ~Mod
+                - generic: 0/2
+              - button "Death Wish 0/1" [ref=f1e9621]:
+                - img "Death Wish" [ref=f1e9622]
+                - generic "Modified numbers or mechanics vs Classic Era": ~Mod
+                - generic: 0/1
+              - button "Improved Intercept 0/2" [ref=f1e9623]:
+                - img "Improved Intercept" [ref=f1e9624]
+                - generic: 0/2
+              - button "Flurry 0/5" [ref=f1e9625]:
+                - img "Flurry" [ref=f1e9626]
+                - generic "Modified numbers or mechanics vs Classic Era": ~Mod
+                - generic: 0/5
+              - button "Gore Drinker 0/2" [ref=f1e9627]:
+                - img "Gore Drinker" [ref=f1e9628]
+                - generic "New talent in WoW Forever": +New
+                - generic: 0/2
+              - button "Bloodthirst 0/1" [ref=f1e9629]:
+                - img "Bloodthirst" [ref=f1e9630]
+                - generic "Modified numbers or mechanics vs Classic Era": ~Mod
+                - generic: 0/1
+          - generic [ref=f1e9631]:
+            - generic [ref=f1e9632]:
+              - generic [ref=f1e9633]:
+                - img "Protection" [ref=f1e9634]
+                - generic [ref=f1e9635]: Protection
+              - generic [ref=f1e9636]:
+                - generic [ref=f1e9637]: 0 pts
+                - button "↺" [ref=f1e9638] [cursor=pointer]
+            - generic [ref=f1e9640]:
+              - button "Improved Bloodrage 0/2" [ref=f1e9641]:
+                - img "Improved Bloodrage" [ref=f1e9642]
+                - generic "Modified numbers or mechanics vs Classic Era": ~Mod
+                - generic: 0/2
+              - button "Shield Specialization 0/5" [ref=f1e9643]:
+                - img "Shield Specialization" [ref=f1e9644]
+                - generic "Modified numbers or mechanics vs Classic Era": ~Mod
+                - generic: 0/5
+              - button "Iron Will 0/5" [ref=f1e9645]:
+                - img "Iron Will" [ref=f1e9646]
+                - generic "Modified numbers or mechanics vs Classic Era": ~Mod
+                - generic: 0/5
+              - button "Anticipation 0/5" [ref=f1e9647]:
+                - img "Anticipation" [ref=f1e9648]
+                - generic "Modified numbers or mechanics vs Classic Era": ~Mod
+                - generic: 0/5
+              - button "Improved Revenge 0/3" [ref=f1e9649]:
+                - img "Improved Revenge" [ref=f1e9650]
+                - generic "Modified numbers or mechanics vs Classic Era": ~Mod
+                - generic: 0/3
+              - button "Improved Thunder Clap 0/3" [ref=f1e9651]:
+                - img "Improved Thunder Clap" [ref=f1e9652]
+                - generic "Modified numbers or mechanics vs Classic Era": ~Mod
+                - generic: 0/3
+              - button "Last Stand 0/1" [ref=f1e9653]:
+                - img "Last Stand" [ref=f1e9654]
+                - generic "Modified numbers or mechanics vs Classic Era": ~Mod
+                - generic: 0/1
+              - button "Master of Defense 0/2" [ref=f1e9655]:
+                - img "Master of Defense" [ref=f1e9656]
+                - generic "New talent in WoW Forever": +New
+                - generic: 0/2
+              - button "Improved Disarm 0/3" [ref=f1e9657]:
+                - img "Improved Disarm" [ref=f1e9658]
+                - generic "Modified numbers or mechanics vs Classic Era": ~Mod
+                - generic: 0/3
+              - button "Defiance 0/3" [ref=f1e9659]:
+                - img "Defiance" [ref=f1e9660]
+                - generic "Modified numbers or mechanics vs Classic Era": ~Mod
+                - generic: 0/3
+              - button "Improved Sunder Armor 0/3" [ref=f1e9661]:
+                - img "Improved Sunder Armor" [ref=f1e9662]
+                - generic "Modified numbers or mechanics vs Classic Era": ~Mod
+                - generic: 0/3
+              - button "Vanguard 0/1" [ref=f1e9663]:
+                - img "Vanguard" [ref=f1e9664]
+                - generic "New talent in WoW Forever": +New
+                - generic: 0/1
+              - button "Improved Shield Bash 0/2" [ref=f1e9665]:
+                - img "Improved Shield Bash" [ref=f1e9666]
+                - generic "Tier or tree position moved vs Classic Era": ⇄Moved
+                - generic: 0/2
+              - button "Improved Shield Wall 0/2" [ref=f1e9667]:
+                - img "Improved Shield Wall" [ref=f1e9668]
+                - generic "Modified numbers or mechanics vs Classic Era": ~Mod
+                - generic: 0/2
+              - button "Concussion Blow 0/1" [ref=f1e9669]:
+                - img "Concussion Blow" [ref=f1e9670]
+                - generic "Modified numbers or mechanics vs Classic Era": ~Mod
+                - generic: 0/1
+              - button "Focused Rage 0/3" [ref=f1e9671]:
+                - img "Focused Rage" [ref=f1e9672]
+                - generic "New talent in WoW Forever": +New
+                - generic: 0/3
+              - button "Bastion 0/5" [ref=f1e9673]:
+                - img "Bastion" [ref=f1e9674]
+                - generic "Modified numbers or mechanics vs Classic Era": ~Mod
+                - generic: 0/5
+              - button "Shield Slam 0/1" [ref=f1e9675]:
+                - img "Shield Slam" [ref=f1e9676]
+                - generic "Modified numbers or mechanics vs Classic Era": ~Mod
+                - generic: 0/1
+        - generic [ref=f1e9677]:
+          - generic [ref=f1e9678]:
+            - button "📋 Copy Build Code ( FOREVER-WARRIOR-PVE-30-26-0-0 )" [ref=f1e9679] [cursor=pointer]:
+              - generic [ref=f1e9680]: 📋
+              - text: Copy Build Code (
+              - code [ref=f1e9681]: FOREVER-WARRIOR-PVE-30-26-0-0
+              - text: )
+            - button "🔗 Copy Build Link" [ref=f1e9682] [cursor=pointer]:
+              - generic [ref=f1e9683]: 🔗
+              - text: Copy Build Link
+            - button "🎯 Explore Warrior Deep Dive" [ref=f1e9684] [cursor=pointer]:
+              - generic [ref=f1e9685]: 🎯
+              - text: Explore Warrior Deep Dive
+          - generic [ref=f1e9686]: 💡 Left-Click (+1) • Shift+Click (Max) • Right-Click (-1) • Shift+Right-Click (Clear)
+  - generic:
+    - generic:
+      - generic: Spearing Strike
+      - generic: Rank 1 / 1 (Max)
+    - generic: Arms Tree • Tier 4
+    - generic:
+      - generic:
+        - generic: ⚡ New in Forever
+        - generic: client
+      - generic: A brutal attack that deals 40% weapon damage. Deals an additional 80% weapon damage against Giants, Dragonkin, and mounted targets.
+    - generic:
+      - generic: ✓
+      - generic: Requires 15 points in Arms Talents (26/15)
+    - generic:
+      - generic: "Current Effect (Max Rank):"
+      - generic: A brutal attack that deals 40% weapon damage. Deals an additional 80% weapon damage against Giants, Dragonkin, and mounted targets. Mounted targets are dismounted.
+    - generic:
+      - generic: Left-Click to learn (+1)
+      - generic: Right-Click to refund (-1)
+  - contentinfo [ref=f1e304]:
+    - generic [ref=f1e305]:
+      - generic [ref=f1e306]:
+        - link "Blizzard Official News" [ref=f1e307] [cursor=pointer]:
+          - /url: https://news.blizzard.com
+        - link "Wowhead Coverage" [ref=f1e308] [cursor=pointer]:
+          - /url: https://www.wowhead.com/forever
+        - link "Warcraft Tavern Hub" [ref=f1e309] [cursor=pointer]:
+          - /url: https://www.warcrafttavern.com/forever/
+        - link "Mobalytics Meta & Tier Lists" [ref=f1e310] [cursor=pointer]:
+          - /url: https://mobalytics.gg/wow-forever
+        - link "Method.gg Raiding & Guides" [ref=f1e311] [cursor=pointer]:
+          - /url: https://www.method.gg
+        - link "Icy Veins Class Hub" [ref=f1e312] [cursor=pointer]:
+          - /url: https://www.icy-veins.com/wow-forever
+        - link "Battle.net Launcher" [ref=f1e313] [cursor=pointer]:
+          - /url: https://battle.net
+      - paragraph [ref=f1e314]: "World of Warcraft: Forever Personal News & Beta Progress Portal • Built for Classic+ Explorers"
+      - paragraph [ref=f1e315]: Data grounded in official BlizzCon 2026 announcements, Wowhead compendiums, Method.gg itemization audits, and Beta Phase 1 & 2 community testing.

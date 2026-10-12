@@ -14,15 +14,17 @@
 (function () {
   'use strict';
 
-  // Global State for the Active Talent Modal Session
+  // Global State for the Active Talent Calculator Session
   const state = {
     isOpen: false,
+    targetContainerId: 'bis-talent-modal-content',
     classId: 'priest',
     specId: 'pve',
     specName: 'Shadow PvE',
     maxPoints: 26, // Default Level 30 cap (21 + 5 Talented legacy perk)
     capMode: 'lvl30_perk', // 'lvl30_perk' (26) | 'lvl30_base' (21) | 'lvl60' (51)
     viewMode: 'grid', // 'grid' | 'cards'
+    showClassicDiff: false, // Highlights +New, ~Mod, ⇄Moved talents vs Classic Era
     cardSearchQuery: '',
     points: {}, // { [talentId]: number }
     recommendedPoints: {}, // Snapshot for "Load Recommended Spec"
@@ -31,6 +33,22 @@
     buildCode: '',
     buildUrl: ''
   };
+
+  /**
+   * Helper to look up Classic vs Forever change data for a talent
+   */
+  function getTalentChangeInfo(classId, talentName) {
+    const changesData = window.WOW_CHANGES_DATA;
+    if (!changesData || !changesData.entries || !talentName) return null;
+    const cleanName = String(talentName).trim().toLowerCase();
+    const targetClass = String(classId || state.classId).toLowerCase();
+    return changesData.entries.find(e => {
+      if (e.class !== targetClass || e.kind !== 'talent') return false;
+      const matchCurrent = (e.name || '').trim().toLowerCase() === cleanName;
+      const matchPrev = e.reported_previous_name && e.reported_previous_name.trim().toLowerCase() === cleanName;
+      return matchCurrent || matchPrev;
+    }) || null;
+  }
 
   const CLASS_LIST = [
     { id: 'warrior', name: 'Warrior', color: '#C79C6E' },
@@ -386,6 +404,30 @@
       `;
     }
 
+    let diffBannerHtml = '';
+    if (state.showClassicDiff) {
+      const diffInfo = getTalentChangeInfo(activeClassId, talent.name);
+      if (diffInfo && diffInfo.reported_change_kind && diffInfo.reported_change_kind !== 'unchanged') {
+        const kind = diffInfo.reported_change_kind;
+        const kindLabel = kind === 'added' ? 'New in Forever' : (kind === 'modified' ? 'Modified in Forever' : 'Moved Tier / Tree');
+        const badgeClass = kind === 'added' ? 'diff-tag-new' : (kind === 'modified' ? 'diff-tag-mod' : 'diff-tag-moved');
+        diffBannerHtml = `
+          <div class="wow-tip-diff-banner ${badgeClass}">
+            <div class="diff-banner-head">
+              <span>⚡ ${kindLabel}</span>
+              <span class="diff-badge-status">${escapeHtml(diffInfo.comparison_status || 'Verified vs Classic Era')}</span>
+            </div>
+            ${diffInfo.summary ? `<div class="diff-banner-summary">${escapeHtml(diffInfo.summary)}</div>` : ''}
+            ${Array.isArray(diffInfo.changes) && diffInfo.changes.length > 0 ? `
+              <div class="diff-banner-bullets">
+                ${diffInfo.changes.map(c => `• ${escapeHtml(c)}`).join(' ')}
+              </div>
+            ` : ''}
+          </div>
+        `;
+      }
+    }
+
     tooltip.innerHTML = `
       <div class="wow-tip-header" style="display: flex; align-items: center; justify-content: space-between; gap: 0.6rem;">
         <div style="display: flex; align-items: center; gap: 0.5rem; min-width: 0;">
@@ -400,6 +442,8 @@
       <div style="font-size: 0.74rem; color: #94a3b8; margin: 0.35rem 0 0.35rem;">
         ${escapeHtml(tree.name)} Tree • Tier ${talent.row}
       </div>
+
+      ${diffBannerHtml}
 
       ${requirementsHtml}
 
@@ -539,8 +583,27 @@
           statusClass = 'is-available';
         }
 
+        let diffClass = '';
+        let diffBadge = '';
+        if (state.showClassicDiff) {
+          const diffInfo = getTalentChangeInfo(classData.id, talent.name);
+          if (diffInfo && diffInfo.reported_change_kind && diffInfo.reported_change_kind !== 'unchanged') {
+            const kind = diffInfo.reported_change_kind;
+            if (kind === 'added') {
+              diffClass = 'diff-highlight-new';
+              diffBadge = '<span class="bis-diff-badge new" title="New talent in WoW Forever">+New</span>';
+            } else if (kind === 'modified') {
+              diffClass = 'diff-highlight-mod';
+              diffBadge = '<span class="bis-diff-badge mod" title="Modified numbers or mechanics vs Classic Era">~Mod</span>';
+            } else if (kind === 'moved') {
+              diffClass = 'diff-highlight-moved';
+              diffBadge = '<span class="bis-diff-badge moved" title="Tier or tree position moved vs Classic Era">⇄Moved</span>';
+            }
+          }
+        }
+
         cellsHtml.push(`
-          <div class="bis-talent-slot ${statusClass}"
+          <div class="bis-talent-slot ${statusClass} ${diffClass}"
                data-talent-id="${talent.id}"
                data-tree="${treeIndex}"
                data-row="${talent.row}"
@@ -549,6 +612,7 @@
                role="button"
                aria-label="${escapeHtml(talent.name)} ${pts}/${talent.maxRank}">
             <img src="${talent.icon}" alt="${escapeHtml(talent.name)}" class="bis-talent-slot-icon" loading="lazy" onerror="this.src='https://render.worldofwarcraft.com/us/icons/56/inv_misc_questionmark.jpg'" />
+            ${diffBadge}
             <span class="bis-talent-rank-overlay ${isMaxed ? 'rank-maxed' : (hasPoints ? 'rank-active' : 'rank-unallocated')}">
               ${pts}/${talent.maxRank}
             </span>
@@ -622,6 +686,21 @@
                     const hasPoints = pts > 0;
                     const currentDesc = pts > 0 ? (talent.descriptions[pts - 1] || talent.descriptions[0]) : talent.descriptions[0];
 
+                    let cardDiffBadge = '';
+                    let cardDiffSummary = '';
+                    if (state.showClassicDiff) {
+                      const diffInfo = getTalentChangeInfo(classData.id, talent.name);
+                      if (diffInfo && diffInfo.reported_change_kind && diffInfo.reported_change_kind !== 'unchanged') {
+                        const kind = diffInfo.reported_change_kind;
+                        const badgeClass = kind === 'added' ? 'new' : (kind === 'modified' ? 'mod' : 'moved');
+                        const label = kind === 'added' ? '+New' : (kind === 'modified' ? '~Mod' : '⇄Moved');
+                        cardDiffBadge = `<span class="bis-diff-badge ${badgeClass}" style="position:static; display:inline-block; margin-left:0.4rem; vertical-align:middle;">${label}</span>`;
+                        if (diffInfo.summary) {
+                          cardDiffSummary = `<div style="font-size: 0.74rem; color: #facc15; margin-top: 0.25rem;">⚡ Classic Diff: ${escapeHtml(diffInfo.summary)}</div>`;
+                        }
+                      }
+                    }
+
                     return `
                       <div class="bis-tree-node-visual ${isMaxed ? 'is-maxed' : (hasPoints ? 'is-active' : '')}"
                            data-talent-id="${talent.id}">
@@ -634,6 +713,7 @@
                             <span class="bis-talent-card-name">
                               ${escapeHtml(talent.name)}
                               <span style="font-size: 0.72rem; color: #94a3b8; font-weight: normal; margin-left: 0.35rem;">Tier ${talent.row}</span>
+                              ${cardDiffBadge}
                             </span>
                             <div class="bis-card-actions">
                               <button type="button" class="bis-card-step-btn" data-action="minus" data-talent-id="${talent.id}" title="Refund point" ${pts <= 0 ? 'disabled' : ''}>-</button>
@@ -641,7 +721,10 @@
                               <button type="button" class="bis-card-step-btn" data-action="plus" data-talent-id="${talent.id}" title="Add point" ${!canAddPoint(talent, ptsMap, null, classData.id) ? 'disabled' : ''}>+</button>
                             </div>
                           </div>
-                          <div class="bis-node-desc">${escapeHtml(currentDesc)}</div>
+                          <div class="bis-node-desc">
+                            ${escapeHtml(currentDesc)}
+                            ${cardDiffSummary}
+                          </div>
                         </div>
                       </div>
                     `;
@@ -696,9 +779,10 @@
    * Render the complete modal body
    */
   function renderModalBody() {
-    const modal = document.getElementById('bis-talent-modal');
-    const content = document.getElementById('bis-talent-modal-content');
-    if (!modal || !content) return;
+    const targetId = state.targetContainerId || 'bis-talent-modal-content';
+    const content = document.getElementById(targetId) || document.getElementById('bis-talent-modal-content');
+    if (!content) return;
+    const isModal = targetId === 'bis-talent-modal-content';
 
     const classData = getClassData(state.classId);
     if (!classData) {
@@ -742,7 +826,7 @@
         `).join('')}
       </div>
 
-      <!-- Modal Header -->
+      <!-- Header & Theorycrafting Controls -->
       <div class="bis-talent-modal-head">
         <div class="bis-talent-head-left">
           <img src="${classIcon}" alt="${classData.name}" class="bis-talent-crest-icon" onerror="this.src='https://render.worldofwarcraft.com/us/icons/56/inv_misc_questionmark.jpg'" />
@@ -791,6 +875,11 @@
             <button type="button" class="bis-cap-btn ${state.capMode === 'lvl30_base' ? 'active' : ''}" data-cap="lvl30_base" title="Level 30 Standard Cap (21 pts without perk)">Lvl 30 (21p)</button>
             <button type="button" class="bis-cap-btn ${state.capMode === 'lvl60' ? 'active' : ''}" data-cap="lvl60" title="Level 60 Endgame Theorycrafting (51 pts)">Lvl 60 (51p)</button>
           </div>
+
+          <!-- Classic Diff Toggle Switch -->
+          <button type="button" class="bis-diff-toggle-btn ${state.showClassicDiff ? 'active' : ''}" id="btn-toggle-classic-diff" title="Highlight talents changed or added compared to Classic Era (+New, ~Mod, ⇄Moved)">
+            <span>⚡</span> Classic Diff: ${state.showClassicDiff ? 'ON' : 'OFF'}
+          </button>
 
           <!-- View Mode Switcher -->
           <div class="bis-talent-view-controls">
@@ -846,9 +935,11 @@
         </div>
         <div style="display: flex; align-items: center; gap: 0.85rem; flex-wrap: wrap;">
           <span class="bis-talent-controls-hint">💡 Left-Click (+1) • Shift+Click (Max) • Right-Click (-1) • Shift+Right-Click (Clear)</span>
-          <button type="button" class="bis-talent-foot-btn" id="btn-modal-close-foot">
-            ✕ Close Window
-          </button>
+          ${isModal ? `
+            <button type="button" class="bis-talent-foot-btn" id="btn-modal-close-foot">
+              ✕ Close Window
+            </button>
+          ` : ''}
         </div>
       </div>
     `;
@@ -860,29 +951,43 @@
    * Bind DOM events for the modal interactions
    */
   function bindModalEvents() {
-    const modal = document.getElementById('bis-talent-modal');
-    const content = document.getElementById('bis-talent-modal-content');
+    const targetId = state.targetContainerId || 'bis-talent-modal-content';
+    const content = document.getElementById(targetId) || document.getElementById('bis-talent-modal-content');
     if (!content) return;
+    const isModal = targetId === 'bis-talent-modal-content';
+    const modal = isModal ? document.getElementById('bis-talent-modal') : null;
 
     const classData = getClassData(state.classId);
     if (!classData) return;
 
-    // 1. Close buttons
-    const closeBtn = document.getElementById('bis-talent-modal-close');
-    const closeFootBtn = document.getElementById('btn-modal-close-foot');
-    const closeModal = () => {
-      state.isOpen = false;
-      modal.classList.remove('open');
-      modal.setAttribute('hidden', '');
-      hideTalentTooltip();
-    };
+    // 1. Close buttons (Modal mode only)
+    if (isModal && modal) {
+      const closeBtn = document.getElementById('bis-talent-modal-close');
+      const closeFootBtn = content.querySelector('#btn-modal-close-foot');
+      const closeModal = () => {
+        state.isOpen = false;
+        modal.classList.remove('open');
+        modal.setAttribute('hidden', '');
+        hideTalentTooltip();
+      };
 
-    if (closeBtn) closeBtn.onclick = closeModal;
-    if (closeFootBtn) closeFootBtn.onclick = closeModal;
+      if (closeBtn) closeBtn.onclick = closeModal;
+      if (closeFootBtn) closeFootBtn.onclick = closeModal;
 
-    modal.onclick = (e) => {
-      if (e.target === modal) closeModal();
-    };
+      modal.onclick = (e) => {
+        if (e.target === modal) closeModal();
+      };
+    }
+
+    // 1a. Classic Diff Toggle Button
+    const diffToggleBtn = content.querySelector('#btn-toggle-classic-diff');
+    if (diffToggleBtn) {
+      diffToggleBtn.onclick = () => {
+        hideTalentTooltip();
+        state.showClassicDiff = !state.showClassicDiff;
+        renderModalBody();
+      };
+    }
 
     // 1b. Class Ribbon Selection
     content.querySelectorAll('.bis-modal-class-chip').forEach(btn => {
@@ -915,7 +1020,7 @@
     });
 
     // 1c. Preset Switcher Buttons (Blank Slate vs Recommended Spec)
-    const toggleBlankBtn = document.getElementById('btn-toggle-blank-slate');
+    const toggleBlankBtn = content.querySelector('#btn-toggle-blank-slate');
     if (toggleBlankBtn) {
       toggleBlankBtn.onclick = () => {
         hideTalentTooltip();
@@ -927,7 +1032,7 @@
       };
     }
 
-    const toggleSpecBtn = document.getElementById('btn-toggle-spec-build');
+    const toggleSpecBtn = content.querySelector('#btn-toggle-spec-build');
     if (toggleSpecBtn) {
       toggleSpecBtn.onclick = () => {
         hideTalentTooltip();
@@ -967,7 +1072,7 @@
     });
 
     // 3. Search Filter in Cards Mode
-    const searchInput = document.getElementById('bis-talent-search-input');
+    const searchInput = content.querySelector('#bis-talent-search-input');
     if (searchInput) {
       searchInput.oninput = (e) => {
         state.cardSearchQuery = e.target.value;
@@ -980,7 +1085,7 @@
     }
 
     // 4. Reset & Clear Buttons
-    const resetSpecBtn = document.getElementById('btn-reset-spec-talents');
+    const resetSpecBtn = content.querySelector('#btn-reset-spec-talents');
     if (resetSpecBtn) {
       resetSpecBtn.onclick = () => {
         hideTalentTooltip();
@@ -989,7 +1094,7 @@
       };
     }
 
-    const clearAllBtn = document.getElementById('btn-clear-all-talents');
+    const clearAllBtn = content.querySelector('#btn-clear-all-talents');
     if (clearAllBtn) {
       clearAllBtn.onclick = () => {
         hideTalentTooltip();
@@ -1138,7 +1243,7 @@
     });
 
     // 8. Footer Copy Buttons - 100% In-House WoW Forever Links
-    const copyCodeBtn = document.getElementById('btn-modal-copy-code');
+    const copyCodeBtn = content.querySelector('#btn-modal-copy-code');
     if (copyCodeBtn) {
       copyCodeBtn.onclick = () => {
         const code = generateBuildCode(state.classId, state.specId, state.points);
@@ -1153,7 +1258,7 @@
       };
     }
 
-    const copyUrlBtn = document.getElementById('btn-modal-copy-url');
+    const copyUrlBtn = content.querySelector('#btn-modal-copy-url');
     if (copyUrlBtn) {
       copyUrlBtn.onclick = () => {
         const urlPath = generateBuildUrl(state.classId, state.points);
@@ -1171,24 +1276,68 @@
     }
 
     // 9. Deep Dive Navigation
-    const deepdiveBtn = document.getElementById('btn-modal-deepdive');
+    const deepdiveBtn = content.querySelector('#btn-modal-deepdive');
     if (deepdiveBtn) {
       deepdiveBtn.onclick = () => {
-        closeModal();
-        if (window.switchTab) {
-          window.switchTab('deepdives');
-          if (window.switchDeepDiveClass) {
-            window.switchDeepDiveClass(state.classId);
-          }
+        if (isModal && modal) {
+          state.isOpen = false;
+          modal.classList.remove('open');
+          modal.setAttribute('hidden', '');
+        }
+        hideTalentTooltip();
+        const navTabBtn = document.querySelector('.nav-tab-btn[data-tab="deepdives"]');
+        if (navTabBtn) navTabBtn.click();
+        if (typeof window.switchDeepDiveClass === 'function') {
+          window.switchDeepDiveClass(state.classId);
         }
       };
     }
   }
 
   /**
+   * Public API to render the complete 3-tree calculator standalone into any DOM container
+   */
+  function renderStandalone(containerId = 'talents-standalone-mount', classId = 'warrior', options = {}) {
+    const container = document.getElementById(containerId);
+    if (!container) return;
+
+    state.targetContainerId = containerId;
+    state.classId = classId || 'warrior';
+    state.capMode = options.capMode || state.capMode || 'lvl30_perk';
+    state.maxPoints = state.capMode === 'lvl60' ? 51 : (state.capMode === 'lvl30_base' ? 21 : 26);
+    state.isBlankSlate = options.blankSlate !== undefined ? !!options.blankSlate : false;
+
+    const recBuild = getRecommendedBuildForClass(state.classId, options.specId);
+    if (recBuild) {
+      state.recommendedPoints = Object.assign({}, recBuild.points);
+    } else {
+      state.recommendedPoints = {};
+    }
+
+    if (options.buildUrl) {
+      state.points = parseBuildUrl(state.classId, options.buildUrl);
+      state.specName = options.specName || (recBuild ? recBuild.specName : 'Custom Build');
+    } else if (state.isBlankSlate) {
+      state.points = {};
+      const clsData = getClassData(state.classId);
+      state.specName = clsData ? `${clsData.name} Custom Build` : 'Custom Blank Slate';
+    } else if (recBuild) {
+      state.points = Object.assign({}, recBuild.points);
+      state.specName = recBuild.specName;
+    } else {
+      state.points = {};
+      state.specName = 'Custom Build';
+    }
+
+    state.originalPoints = Object.assign({}, state.points);
+    renderModalBody();
+  }
+
+  /**
    * Public API to open the Talent Tree Modal
    */
   function openModal(options = {}) {
+    state.targetContainerId = 'bis-talent-modal-content';
     if (typeof options === 'string') {
       options = { classId: options };
     }
@@ -1411,6 +1560,13 @@
   window.TalentTreeModule = {
     openModal,
     openFromHash,
+    renderStandalone,
+    getTalentChangeInfo,
+    toggleClassicDiff: () => {
+      state.showClassicDiff = !state.showClassicDiff;
+      renderModalBody();
+      return state.showClassicDiff;
+    },
     parseBuildUrl,
     parseSpecTalents,
     renderSpecTreesHtml,

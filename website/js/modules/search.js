@@ -14,9 +14,12 @@ function initUniversalSearch() {
 function buildSearchIndex() {
   searchIndex = [];
 
+  const foreverData = window.WOW_FOREVER_DATA || (typeof WOW_FOREVER_DATA !== 'undefined' ? WOW_FOREVER_DATA : null);
+  const toolsData = window.WOW_TOOLS_DATA || (typeof WOW_TOOLS_DATA !== 'undefined' ? WOW_TOOLS_DATA : null);
+
   // 1. Dungeons
-  if (WOW_FOREVER_DATA?.dungeonsAndRaids) {
-    WOW_FOREVER_DATA.dungeonsAndRaids.forEach(d => {
+  if (foreverData?.dungeonsAndRaids) {
+    foreverData.dungeonsAndRaids.forEach(d => {
       searchIndex.push({
         title: d.name,
         category: 'Dungeon',
@@ -29,8 +32,8 @@ function buildSearchIndex() {
   }
 
   // 2. Classes & Specs
-  if (WOW_TOOLS_DATA?.tierList?.specs) {
-    const allSpecs = [...WOW_TOOLS_DATA.tierList.specs.dps, ...WOW_TOOLS_DATA.tierList.specs.tanks, ...WOW_TOOLS_DATA.tierList.specs.healers];
+  if (toolsData?.tierList?.specs) {
+    const allSpecs = [...toolsData.tierList.specs.dps, ...toolsData.tierList.specs.tanks, ...toolsData.tierList.specs.healers];
     allSpecs.forEach(s => {
       searchIndex.push({
         title: s.name,
@@ -44,8 +47,8 @@ function buildSearchIndex() {
   }
 
   // 3. New Combos
-  if (WOW_FOREVER_DATA?.newClassCombos) {
-    WOW_FOREVER_DATA.newClassCombos.forEach(c => {
+  if (foreverData?.newClassCombos) {
+    foreverData.newClassCombos.forEach(c => {
       searchIndex.push({
         title: `${c.race} ${c.className}`,
         category: 'New Race/Class Combo',
@@ -379,10 +382,27 @@ function buildSearchIndex() {
         title: `${f.name} (Hunter Pet Family)`,
         category: 'Hunter Pet Directory',
         icon: '🐾',
-        desc: `Diet: ${f.diet ? f.diet.join(', ') : 'Meat'} • Abilities: ${f.abilities ? f.abilities.map(a => a.name).join(', ') : 'Claw'}`,
-        tab: 'deepdives',
-        targetId: 'tab-deepdives',
-        deepDiveClass: 'hunter'
+        desc: `Diet: ${f.diet ? f.diet.join(', ') : 'Meat'} • Modifiers: Dmg ${f.damageMod}, Arm ${f.armorMod}, HP ${f.healthMod}`,
+        tab: 'codex',
+        targetId: 'codex-pets',
+        petFamily: f.id
+      });
+    });
+  }
+
+  // 16. All 502 Hunter Beasts
+  if (window.WOW_ATLAS_DATA?.hunterPets?.allBeasts) {
+    window.WOW_ATLAS_DATA.hunterPets.allBeasts.forEach(b => {
+      const isFast = b.speedNum && b.speedNum <= 1.5;
+      searchIndex.push({
+        title: `${b.name} (Lvl ${b.level} ${b.family})`,
+        category: `Hunter Beast • ${b.family}`,
+        icon: isFast ? '⚡' : '🐾',
+        desc: `${b.zone}${b.subzone ? ' • ' + b.subzone : ''} • Speed: ${b.speed || '2.0s'}${b.teaches ? ' • Teaches: ' + b.teaches : ''} • ${b.faction || 'Contested'}`,
+        tab: 'codex',
+        targetId: 'codex-pets',
+        petFamily: b.family ? b.family.toLowerCase() : 'all',
+        petName: b.name
       });
     });
   }
@@ -398,6 +418,9 @@ function setupSearchModalEvents() {
 
   // Open modal
   const openModal = () => {
+    if (searchIndex.length < 500) {
+      buildSearchIndex();
+    }
     modal.classList.add('is-open');
     modal.removeAttribute('hidden');
     input.value = '';
@@ -509,6 +532,8 @@ function performSearch(query) {
          ${item.recipeName ? `data-recipe-name="${escapeHtml(item.recipeName)}"` : ''}
          ${item.recipeId ? `data-recipe-id="${item.recipeId}"` : ''}
          ${item.changeClass ? `data-change-class="${item.changeClass}" data-change-id="${item.changeId}"` : ''}
+         ${item.petFamily ? `data-pet-family="${escapeHtml(item.petFamily)}"` : ''}
+         ${item.petName ? `data-pet-name="${escapeHtml(item.petName)}"` : ''}
          onclick="handleSearchResultClick(this)">
       <span class="search-item-icon">${item.icon}</span>
       <div class="search-item-details">
@@ -553,6 +578,8 @@ window.handleSearchResultClick = function(elem) {
   const atlasSub = elem.getAttribute('data-atlas-sub');
   const changeClass = elem.getAttribute('data-change-class');
   const changeId = elem.getAttribute('data-change-id');
+  const petFamily = elem.getAttribute('data-pet-family');
+  const petName = elem.getAttribute('data-pet-name');
 
   // Switch to target tab
   const tabBtn = document.querySelector(`.nav-tab-btn[data-tab="${tab}"]`);
@@ -583,6 +610,15 @@ window.handleSearchResultClick = function(elem) {
   if (tab === 'codex' && targetId) {
     const codexBtn = document.querySelector(`.codex-nav-btn[data-codex="${targetId.replace('codex-', '')}"]`);
     if (codexBtn) codexBtn.click();
+    if (targetId === 'codex-pets' && (petFamily || petName)) {
+      setTimeout(() => {
+        const searchInput = document.getElementById('pet-search-input');
+        if (searchInput && petName) {
+          searchInput.value = petName;
+          searchInput.dispatchEvent(new Event('input'));
+        }
+      }, 150);
+    }
   }
 
   // If atlas subtab
@@ -615,3 +651,4 @@ window.handleSearchResultClick = function(elem) {
 
 
 window.initUniversalSearch = initUniversalSearch;
+window.getSearchIndex = () => searchIndex;
