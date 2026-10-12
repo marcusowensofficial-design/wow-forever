@@ -120,12 +120,18 @@ function initNavigation() {
       return;
     }
 
-    let tabName = (hash.split('/')[0].split('#')[0] || '').replace(/[^a-z0-9_-]/g, '');
+    let tabName = (hash.split('/')[0].split('#')[0].split('?')[0] || '').replace(/[^a-z0-9_-]/g, '');
     if (!tabName) return;
 
     const professionSlugs = ['professions', 'alchemy', 'blacksmithing', 'enchanting', 'engineering', 'leatherworking', 'tailoring', 'mining', 'herbalism', 'skinning', 'cooking', 'fishing', 'first-aid'];
     if (professionSlugs.includes(tabName)) {
       tabName = 'professions';
+    } else if (tabName === 'squad' || tabName === 'roster') {
+      tabName = 'tracker';
+    } else if (tabName === 'checklist' || tabName === 'milestone') {
+      tabName = 'milestones';
+    } else if (tabName === 'legacy' || tabName === 'legacytree' || tabName === 'legacycalc') {
+      tabName = 'legacy';
     }
 
     // Switch tab safely

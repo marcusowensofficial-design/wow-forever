@@ -136,11 +136,17 @@
         <button class="nav-tab-btn" data-tab="camping">
           <span>⛺</span> Camping Hub
         </button>
+        <button class="nav-tab-btn" data-tab="legacy">
+          <span>🏆</span> Legacy Tree
+        </button>
         <button class="nav-tab-btn" data-tab="systems">
           <span>⚙️</span> Systems & Engine
         </button>
         <button class="nav-tab-btn" data-tab="tracker">
-          <span>🛡️</span> My Forever & Squad
+          <span>🛡️</span> Our Forever Squad
+        </button>
+        <button class="nav-tab-btn" data-tab="milestones">
+          <span>📋</span> Beta Milestones & Character
         </button>
       </nav>
     </header>
@@ -1423,46 +1429,82 @@
       </div>
     </section>
 
-    <!-- TAB 4: SYSTEMS & ENGINE -->
-    <section id="tab-systems" class="tab-content" aria-label="Game Systems & Engine Overhaul">
-      
+    <!-- TAB: LEGACY TREE PLANNER -->
+    <section id="tab-legacy" class="tab-content" aria-label="WoW Forever Legacy Tree Planner">
       <div class="section-heading-bar">
         <div>
-          <h2><span>⚙️</span> Interactive 16-Point Legacy Calculator</h2>
-          <p class="section-subtext">Plan your account-wide progression perks across Tradeskills, World Explorer, and Resourcefulness</p>
+          <h2><span>🏆</span> WoW Forever Legacy Tree Planner</h2>
+          <p class="section-subtext">Plan your account-wide progression perks across Tradeskill Mastery, World Explorer, and Resourcefulness & Engine Economy (Launch Nov 4, 2026)</p>
         </div>
       </div>
 
-      <!-- Interactive Legacy Calculator Box -->
       <div id="legacy-calc-container" class="legacy-calc-box">
+        <!-- Top Control Bar -->
         <div class="legacy-calc-top-bar">
-          <div>
-            <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.3rem; flex-wrap: wrap;">
+          <div class="legacy-top-info">
+            <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.4rem; flex-wrap: wrap;">
               <span class="status-badge-highlight">Season 1: 65 Points Total Cap</span>
               <span class="status-badge-highlight" style="background: rgba(56, 189, 248, 0.15); border-color: #38bdf8; color: #7dd3fc;">16 Launch Points Available</span>
+              <span class="status-badge-highlight" style="background: rgba(16, 185, 129, 0.15); border-color: #10b981; color: #6ee7b7;">Account-Wide Unlocks • Independent Per Character</span>
             </div>
-            <h3 style="font-size: 1.3rem; color: #fff;">🏆 WoW Forever Legacy Tree Planner</h3>
-            <p style="font-size: 0.85rem; color: var(--text-muted);">
-              Allocations are shared account-wide (25 pts max per tree). Spend your 16 launch points across 7 talents per tree, or simulate your full 65-point seasonal goal!
+            <h3 style="font-size: 1.35rem; color: #fff; margin: 0.2rem 0;">Azeroth Legacy Meta-Progression & Build Crafter</h3>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.2rem;">
+              Allocate your launch points (25 pts max per tree), test popular starter specs, or track your account's 65-point completionist journey.
             </p>
           </div>
-          <div style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;">
-            <span id="legacy-points-remaining" style="font-family: var(--font-heading); font-size: 1.15rem; font-weight: 700; color: #10b981;">
-              16 / 16 Points Remaining
-            </span>
-            <button id="toggle-sim-cap-btn" class="btn-secondary" style="font-size: 0.8rem; padding: 0.35rem 0.8rem;" title="Toggle between 16 Launch Points and 65 Season 1 Cap">
-              Simulate 65 Cap
-            </button>
-            <button id="reset-legacy-calc-btn" class="btn-secondary" style="font-size: 0.8rem; padding: 0.35rem 0.8rem;">
-              Reset Points
-            </button>
+
+          <!-- Controls: Mode, Character Profile, Cap Toggle, Reset & Share -->
+          <div class="legacy-controls-toolbar">
+            <div class="legacy-control-group">
+              <label for="legacy-profile-select" class="legacy-control-label">Active Character:</label>
+              <select id="legacy-profile-select" class="form-select legacy-select-inline" aria-label="Active Character Profile">
+                <!-- Dynamically populated -->
+              </select>
+              <button type="button" id="legacy-add-profile-btn" class="btn-secondary legacy-mini-btn" title="Create new character profile">+ New</button>
+            </div>
+
+            <div class="legacy-control-group">
+              <label for="legacy-mode-select" class="legacy-control-label">Mode:</label>
+              <select id="legacy-mode-select" class="form-select legacy-select-inline" aria-label="Planner Mode">
+                <option value="sandbox">Sandbox / Theorycraft (Free Budget)</option>
+                <option value="earned">Account Progress (Only Earned Points)</option>
+              </select>
+            </div>
+
+            <div class="legacy-actions-group">
+              <span id="legacy-points-remaining" class="legacy-points-pill">
+                16 / 16 Points Remaining
+              </span>
+              <button type="button" id="toggle-sim-cap-btn" class="btn-secondary legacy-action-btn" title="Toggle between 16 Launch Points and 65 Season 1 Cap">
+                Simulate 65 Cap
+              </button>
+              <button type="button" id="reset-legacy-calc-btn" class="btn-secondary legacy-action-btn">
+                Reset Points
+              </button>
+              <button type="button" id="legacy-share-btn" class="btn-primary legacy-action-btn" style="background: #38bdf8; color: #0f172a; font-weight: 700;">
+                🔗 Share Build URL
+              </button>
+              <button type="button" id="legacy-discord-btn" class="btn-secondary legacy-action-btn" title="Copy Discord Markdown Summary">
+                📋 Discord Text
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 1-Click Curated Presets Bar -->
+        <div class="legacy-presets-bar">
+          <div class="legacy-presets-title">
+            <span>⚡</span> Quick Archetypes & Presets:
+          </div>
+          <div id="legacy-presets-container" class="legacy-presets-chips">
+            <!-- Dynamically populated by js/modules/legacy.js -->
           </div>
         </div>
 
         <!-- Milestone Rewards Progress Bar -->
         <div class="milestone-rewards-container">
           <div class="milestone-rewards-header">
-            <h4 style="color: var(--text-gold); font-size: 0.95rem;">🎁 Season 1 Legacy Milestone Unlocks (Claim at Innkeeper Wiley, Ratchet)</h4>
+            <h4 style="color: var(--text-gold); font-size: 0.95rem; margin: 0;">🎁 Season 1 Legacy Milestone Rewards (Claim at Innkeeper Wiley, Ratchet)</h4>
             <span id="milestone-progress-text" style="font-size: 0.85rem; color: #38bdf8; font-weight: 600;">0 Points Allocated</span>
           </div>
           <div id="milestone-rewards-grid" class="milestone-rewards-grid">
@@ -1470,21 +1512,48 @@
           </div>
         </div>
 
-        <div id="legacy-trees-wrapper" class="legacy-trees-grid">
-          <!-- Dynamically populated by js/app.js -->
-        </div>
-
-        <!-- Legacy Challenges Guide -->
-        <div class="legacy-challenges-card" style="margin-top: 1.5rem;">
-          <h4 style="color: var(--text-gold); font-size: 1.05rem; margin-bottom: 0.6rem;">📋 Season 1 Legacy Point Sources & Challenges</h4>
-          <div id="legacy-challenges-grid" class="legacy-challenges-grid">
-            <!-- Dynamically populated from WOW_FOREVER_DATA.legacyChallenges -->
+        <!-- Main Layout: Trees (Left) + Active HUD & Challenge Checklist (Right) -->
+        <div class="legacy-main-layout">
+          <div class="legacy-main-left">
+            <div id="legacy-trees-wrapper" class="legacy-trees-grid">
+              <!-- Dynamically populated by js/modules/legacy.js -->
+            </div>
           </div>
+
+          <aside class="legacy-main-right">
+            <!-- Cumulative Active Bonuses HUD -->
+            <div class="legacy-hud-card">
+              <div class="legacy-hud-header">
+                <h4><span>✨</span> Cumulative Active Character Bonuses</h4>
+                <small style="color: var(--text-muted); font-size: 0.75rem;">Live aggregate perks for active profile</small>
+              </div>
+              <div id="legacy-active-bonuses-container">
+                <!-- Dynamically populated -->
+              </div>
+            </div>
+
+            <!-- Season 1 Challenges Interactive Checklist -->
+            <div class="legacy-challenges-card">
+              <div class="legacy-challenges-header">
+                <div>
+                  <h4 style="color: var(--text-gold); font-size: 1.05rem; margin: 0;">📋 Season 1 Account Challenges (65 Pts Total)</h4>
+                  <p style="font-size: 0.78rem; color: var(--text-muted); margin: 0.2rem 0 0 0;">Check off completed achievements to unlock milestone rewards and calculate your earned account points.</p>
+                </div>
+              </div>
+              <div id="legacy-challenges-checklist" class="legacy-challenges-checklist-grid">
+                <!-- Dynamically populated by js/modules/legacy.js -->
+              </div>
+            </div>
+          </aside>
         </div>
       </div>
+    </section>
 
+    <!-- TAB 4: SYSTEMS & ENGINE -->
+    <section id="tab-systems" class="tab-content" aria-label="Game Systems & Engine Overhaul">
+      
       <!-- Engine & Graphics Technical Showcase -->
-      <div class="section-heading-bar" style="margin-top: 2.5rem;">
+      <div class="section-heading-bar">
         <div>
           <h2><span>✨</span> Modern Engine Architecture & Technical Specs</h2>
           <p class="section-subtext">Custom Ray-Tracing Global Illumination, visual toggles, and PC hardware targets</p>
@@ -2314,22 +2383,69 @@
 
     </section>
 
-    <!-- TAB 5: MY FOREVER TRACKER & SQUAD ROSTER -->
-    <section id="tab-tracker" class="tab-content" aria-label="My Forever Tracker & Squad Roster">
+    <!-- TAB: OUR FOREVER SQUAD -->
+    <section id="tab-tracker" class="tab-content" aria-label="Our Forever Squad">
       
       <div class="section-heading-bar">
         <div>
-          <h2><span>🛡️</span> My Forever Character & Beta Tracker</h2>
-          <p class="section-subtext">Plan your build and track your Level 30 Phase 2 milestone checklist (stored locally)</p>
+          <h2><span>🛡️</span> Our Forever Squad</h2>
+          <p class="section-subtext">Discord group roster, class &amp; role lineup for WoW Forever beta &amp; launch</p>
+        </div>
+      </div>
+
+      <div class="squad-roster-section" style="margin-top: 0.5rem;">
+        <div class="squad-roster-header">
+          <div>
+            <h3 style="font-size: 1.4rem; color: #fff;">👥 Squad &amp; Guild Roster</h3>
+            <p style="font-size: 0.88rem; color: var(--text-muted);">
+              Discord crew members, assigned specs, roles, and professions for 5-man dungeons and raid comps.
+            </p>
+          </div>
+        </div>
+
+        <div id="squad-comp-summary" class="squad-comp-summary">
+          <!-- Rendered dynamically -->
+        </div>
+
+        <div class="squad-table-wrapper">
+          <table class="squad-table">
+            <thead>
+              <tr>
+                <th>Player / Friend</th>
+                <th>Faction</th>
+                <th>Race</th>
+                <th>Class</th>
+                <th>Role &amp; Spec</th>
+                <th>Professions</th>
+                <th>Notes</th>
+                <th style="text-align: center;">Edit</th>
+              </tr>
+            </thead>
+            <tbody id="squad-roster-body">
+              <!-- Rendered dynamically -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- TAB: BETA MILESTONES & CHARACTER -->
+    <section id="tab-milestones" class="tab-content" aria-label="Beta Milestones & Character">
+      
+      <div class="section-heading-bar">
+        <div>
+          <h2><span>📋</span> Beta Milestones &amp; Character</h2>
+          <p class="section-subtext">Configure your personal character profile and track your Level 30 Phase 2 milestone progression (stored locally)</p>
         </div>
       </div>
 
       <div class="tracker-layout-grid">
         
-        <!-- Left: Character Planner -->
+        <!-- Left: Character Profile & Loadout (renamed to prevent confusion with Talent Builder) -->
         <div class="planner-card">
-          <h3>Build Planner</h3>
-          <p class="planner-sub">Configure your main character for the WoW Forever beta and launch.</p>
+          <h3>Character Profile &amp; Loadout</h3>
+          <p class="planner-sub">Configure your personal character profile, role spec, and professions for the WoW Forever beta and launch.</p>
 
           <form id="character-planner-form">
             <div class="form-field" style="margin-bottom: 0.8rem;">
@@ -2442,7 +2558,7 @@
           <div style="display: flex; justify-content: space-between; align-items: center;">
             <div>
               <h3 style="font-size: 1.4rem;">Beta Phase 2 Milestones</h3>
-              <p style="font-size: 0.88rem; color: var(--text-muted);">Track your Level 1–30 testing progression & Phase 2 unlocks.</p>
+              <p style="font-size: 0.88rem; color: var(--text-muted);">Track your Level 1–30 testing progression &amp; Phase 2 unlocks.</p>
             </div>
             <button id="reset-checklist-btn" class="btn-secondary" style="font-size: 0.78rem; padding: 0.35rem 0.8rem;">
               Reset Marks
@@ -2470,140 +2586,6 @@
         </div>
 
       </div>
-
-      <!-- Squad / Guild Roster Tracker Section -->
-      <section class="squad-roster-section">
-        <div class="squad-roster-header">
-          <div>
-            <h3 style="font-size: 1.4rem; color: #fff;">👥 Squad & Guild Roster Tracker</h3>
-            <p style="font-size: 0.88rem; color: var(--text-muted);">
-              Track who is playing, their class, role, and ensure your 5-man dungeon & 10/20-man raid team is ready for launch!
-            </p>
-          </div>
-          <div style="display: flex; gap: 0.5rem; align-items: center;">
-            <button type="button" id="reset-squad-btn" class="btn-secondary" style="font-size: 0.78rem; padding: 0.4rem 0.85rem;" title="Reset roster to default presets">
-              🔄 Reset to Default Squad
-            </button>
-          </div>
-        </div>
-
-        <div id="squad-comp-summary" class="squad-comp-summary">
-          <!-- Rendered dynamically -->
-        </div>
-
-        <div class="squad-table-wrapper">
-          <table class="squad-table">
-            <thead>
-              <tr>
-                <th>Player / Friend</th>
-                <th>Faction</th>
-                <th>Race</th>
-                <th>Class</th>
-                <th>Role & Spec</th>
-                <th>Professions</th>
-                <th>Notes</th>
-                <th>Action</th>
-              </tr>
-            </thead>
-            <tbody id="squad-roster-body">
-              <!-- Rendered dynamically -->
-            </tbody>
-          </table>
-        </div>
-
-        <form id="add-squad-member-form" class="user-note-form-grid" style="margin-top: 1.5rem; background: rgba(0,0,0,0.35); padding: 1.25rem; border-radius: var(--radius-sm);">
-          <div class="form-field">
-            <label for="member-name-input" class="form-label">Player / Friend Name *</label>
-            <input type="text" id="member-name-input" name="member-name" class="form-input" placeholder="e.g. Scrype" required>
-          </div>
-          <div class="form-field">
-            <label for="member-faction-select" class="form-label">Faction</label>
-            <select id="member-faction-select" name="member-faction" class="form-select">
-              <option value="Horde">Horde</option>
-              <option value="Alliance">Alliance</option>
-            </select>
-          </div>
-          <div class="form-field">
-            <label for="member-race-select" class="form-label">Race</label>
-            <select id="member-race-select" name="member-race" class="form-select">
-              <option value="Undead">Undead</option>
-              <option value="Orc">Orc</option>
-              <option value="Troll">Troll</option>
-              <option value="Tauren">Tauren</option>
-              <option value="Skyborne">Skyborne</option>
-              <option value="Human">Human</option>
-              <option value="Dwarf">Dwarf</option>
-              <option value="Night Elf">Night Elf</option>
-              <option value="Gnome">Gnome</option>
-            </select>
-          </div>
-          <div class="form-field">
-            <label for="member-class-select" class="form-label">Class</label>
-            <select id="member-class-select" name="member-class" class="form-select">
-              <option value="Paladin">🛡️ Paladin (Pink)</option>
-              <option value="Mage">🔥 Mage (Cyan)</option>
-              <option value="Warlock">🔮 Warlock (Purple)</option>
-              <option value="Warrior">⚔️ Warrior (Brown)</option>
-              <option value="Priest">✨ Priest (White)</option>
-              <option value="Shaman">⚡ Shaman (Blue)</option>
-              <option value="Hunter">🏹 Hunter (Green)</option>
-              <option value="Rogue">🗡️ Rogue (Yellow)</option>
-              <option value="Druid">🌿 Druid (Orange)</option>
-            </select>
-          </div>
-          <div class="form-field">
-            <label for="member-role-select" class="form-label">Role</label>
-            <select id="member-role-select" name="member-role" class="form-select">
-              <option value="Tank">Tank</option>
-              <option value="Healer">Healer</option>
-              <option value="Tank / DPS">Tank / DPS</option>
-              <option value="Ranged DPS">Ranged DPS</option>
-              <option value="Melee DPS">Melee DPS</option>
-            </select>
-          </div>
-          <div class="form-field">
-            <label for="member-spec-input" class="form-label">Spec</label>
-            <input type="text" id="member-spec-input" name="member-spec" class="form-input" placeholder="e.g. Holy, Arms, Frost">
-          </div>
-          <div class="form-field">
-            <label for="member-prof1-select" class="form-label">Primary Profession 1</label>
-            <select id="member-prof1-select" name="member-prof1" class="form-select">
-              <option value="">-- None / TBD --</option>
-              <option value="Tailoring">✂️ Tailoring</option>
-              <option value="Blacksmithing">🔨 Blacksmithing</option>
-              <option value="Engineering">⚙️ Engineering</option>
-              <option value="Leatherworking">🥋 Leatherworking</option>
-              <option value="Alchemy">🧪 Alchemy</option>
-              <option value="Enchanting">✨ Enchanting</option>
-              <option value="Mining">⛏️ Mining</option>
-              <option value="Herbalism">🌿 Herbalism</option>
-              <option value="Skinning">🪓 Skinning</option>
-            </select>
-          </div>
-          <div class="form-field">
-            <label for="member-prof2-select" class="form-label">Primary Profession 2</label>
-            <select id="member-prof2-select" name="member-prof2" class="form-select">
-              <option value="">-- None / TBD --</option>
-              <option value="Tailoring">✂️ Tailoring</option>
-              <option value="Blacksmithing">🔨 Blacksmithing</option>
-              <option value="Engineering">⚙️ Engineering</option>
-              <option value="Leatherworking">🥋 Leatherworking</option>
-              <option value="Alchemy">🧪 Alchemy</option>
-              <option value="Enchanting">✨ Enchanting</option>
-              <option value="Mining">⛏️ Mining</option>
-              <option value="Herbalism">🌿 Herbalism</option>
-              <option value="Skinning">🪓 Skinning</option>
-            </select>
-          </div>
-          <div class="form-field span-2">
-            <label for="member-notes-input" class="form-label">Notes / Availability</label>
-            <input type="text" id="member-notes-input" name="member-notes" class="form-input" placeholder="e.g. Can craft bags, available weekday evenings">
-          </div>
-          <div class="form-field span-2" style="text-align: right;">
-            <button type="submit" class="btn-primary">+ Add to Squad Roster</button>
-          </div>
-        </form>
-      </section>
 
     </section>
 
@@ -2915,6 +2897,7 @@
   <script defer src="js/modules/navigation.js?v=1.60.6-p5"></script>
   <script defer src="js/modules/news.js?v=1.60.6-p5"></script>
   <script defer src="js/modules/codex.js?v=1.60.6-p5"></script>
+  <script defer src="js/modules/legacy.js?v=1.60.6-p5"></script>
   <script defer src="js/modules/camping.js?v=1.60.6-p5"></script>
   <script defer src="js/modules/professions.js?v=1.60.6-p5"></script>
   <script defer src="js/modules/changes.js?v=1.60.6-p5"></script>

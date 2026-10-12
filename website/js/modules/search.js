@@ -107,12 +107,48 @@ function buildSearchIndex() {
   });
 
   searchIndex.push({
-    title: 'Legacy Calculator (16 Points & Perks)',
+    title: 'Legacy Tree Planner (16 Launch & 65 Season Cap)',
     category: 'Progression System',
     icon: '🏆',
-    desc: 'Plan Adventure, Resourcefulness, and Professions trees.',
-    tab: 'codex',
-    targetId: 'codex-legacy'
+    desc: 'Plan account-wide Tradeskill Mastery, World Explorer, and Resourcefulness trees. Export builds & track challenges.',
+    tab: 'legacy',
+    targetId: 'tab-legacy'
+  });
+
+  searchIndex.push({
+    title: 'Tradeskill Mastery Legacy Tree',
+    category: 'Progression System',
+    icon: '⚒️',
+    desc: 'Bountiful Harvest, Working Overtime, Bartering vendor cuts, and Performance Bonus favor crates.',
+    tab: 'legacy',
+    targetId: 'tab-legacy'
+  });
+
+  searchIndex.push({
+    title: 'World Explorer Legacy Tree',
+    category: 'Progression System',
+    icon: '🧭',
+    desc: 'Talented (+5 talent points from L5), Rested XP boosts, Thrill of Adventure, and Frequent Flier.',
+    tab: 'legacy',
+    targetId: 'tab-legacy'
+  });
+
+  searchIndex.push({
+    title: 'Resourcefulness & Economy Legacy Tree',
+    category: 'Progression System',
+    icon: '💰',
+    desc: 'Zero-cost vendor reagents, Well Fed extension, death durability cuts, and raid buff permanence.',
+    tab: 'legacy',
+    targetId: 'tab-legacy'
+  });
+
+  searchIndex.push({
+    title: 'Season 1 Legacy Milestone Rewards (Innkeeper Wiley)',
+    category: 'Progression System',
+    icon: '🎁',
+    desc: 'Replica Ironforge Air Rifle (15 pts), Spectral Bear Cub (25 pts), Tabard (40 pts), and Mount (55 pts).',
+    tab: 'legacy',
+    targetId: 'tab-legacy'
   });
 
   // 5. Guides
@@ -151,12 +187,28 @@ function buildSearchIndex() {
 
   // 7. Squad Members & Presets (including Sploodge)
   searchIndex.push({
+    title: 'Our Forever Squad (Discord Roster)',
+    category: 'Squad Roster',
+    icon: '🛡️',
+    desc: 'View our Discord friend group roster, class roles, specs, and professions.',
+    tab: 'tracker',
+    targetId: 'tab-tracker'
+  });
+  searchIndex.push({
     title: 'Sploodge (Demonology Warlock)',
     category: 'Squad Roster',
     icon: '😈',
     desc: 'Horde Undead Demonology Warlock • Ranged DPS guild preset.',
     tab: 'tracker',
     targetId: 'tab-tracker'
+  });
+  searchIndex.push({
+    title: 'Beta Milestones & Character Profile',
+    category: 'Progression',
+    icon: '📋',
+    desc: 'Track Level 30 Beta Phase 2 milestones and configure personal character profile.',
+    tab: 'milestones',
+    targetId: 'tab-milestones'
   });
 
   // 8. Class Deep Dives & Level 30 Talent Specs

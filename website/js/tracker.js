@@ -366,9 +366,8 @@ function initSquadRoster() {
         <td><span class="role-pill role-${safeRoleClass}">${escapeHtml(player.role)}${specText}</span></td>
         <td>${professionsHtml}</td>
         <td style="font-size: 0.82rem; color: var(--text-muted);">${escapeHtml(player.notes || '—')}</td>
-        <td style="white-space: nowrap;">
-          <button type="button" class="btn-icon-action btn-edit-member" data-member-id="${escapeHtml(player.id)}" title="Update Professions & Notes" style="color: var(--text-gold); font-size: 1rem; margin-right: 0.25rem;">✏️</button>
-          <button type="button" class="btn-icon-action btn-remove-member" data-member-id="${escapeHtml(player.id)}" title="Remove Member" style="color: #ef4444; font-size: 1.1rem;">✕</button>
+        <td style="white-space: nowrap; text-align: center;">
+          <button type="button" class="btn-icon-action btn-edit-member" data-member-id="${escapeHtml(player.id)}" title="Update Professions & Notes" style="color: var(--text-gold); font-size: 0.95rem; background: rgba(255, 215, 0, 0.08); border: 1px solid rgba(255, 215, 0, 0.25); border-radius: 4px; padding: 0.25rem 0.55rem; cursor: pointer;">✏️ Edit</button>
         </td>
       </tr>
     `}).join('');

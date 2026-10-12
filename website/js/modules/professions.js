@@ -1260,7 +1260,7 @@
                   <p>${escapeHtml(p.effect)}</p>
                   <small class="perk-card-meta">${escapeHtml(p.meta)}</small>
                 </div>
-                <button type="button" class="perk-plan-action" onclick="const b = document.querySelector('.nav-tab-btn[data-tab=\\'systems\\']'); if (b) b.click();" title="Open Legacy Tree Planner">Plan it ›</button>
+                <button type="button" class="perk-plan-action" onclick="const b = document.querySelector('.nav-tab-btn[data-tab=\\'legacy\\']'); if (b) b.click();" title="Open Legacy Tree Planner">Plan it ›</button>
               </div>
             `).join('')}
           </div>
@@ -1571,7 +1571,7 @@
               <p style="margin: 0.3rem 0; font-size: 0.88rem; color: #cbd5e1; line-height: 1.5;">${escapeHtml(p.effect)}</p>
               <small class="perk-card-meta">${escapeHtml(p.meta)}</small>
             </div>
-            <button type="button" class="perk-plan-action" onclick="const b = document.querySelector('.nav-tab-btn[data-tab=\\'systems\\']'); if (b) b.click();" title="Open Legacy Tree Planner">Plan it ›</button>
+            <button type="button" class="perk-plan-action" onclick="const b = document.querySelector('.nav-tab-btn[data-tab=\\'legacy\\']'); if (b) b.click();" title="Open Legacy Tree Planner">Plan it ›</button>
           </div>
         `).join('')}
       </div>
