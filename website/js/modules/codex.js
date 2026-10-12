@@ -14,6 +14,13 @@ function initCodex() {
   codexNavBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       const panelId = btn.getAttribute('data-codex');
+      if (panelId === 'matrix') {
+        const plannerBtn = document.querySelector('.nav-tab-btn[data-tab="planner"]');
+        if (plannerBtn) {
+          plannerBtn.click();
+          return;
+        }
+      }
       codexNavBtns.forEach(b => b.classList.remove('active'));
       codexPanels.forEach(p => p.classList.remove('active'));
 
@@ -27,6 +34,13 @@ function initCodex() {
     const hash = (window.location.hash || '').toLowerCase();
     if (hash.startsWith('#codex')) {
       const sub = hash.split('/')[1]?.split('#')[0];
+      if (sub === 'matrix') {
+        const plannerBtn = document.querySelector('.nav-tab-btn[data-tab="planner"]');
+        if (plannerBtn) {
+          plannerBtn.click();
+          return;
+        }
+      }
       if (sub) {
         const btn = document.querySelector(`.codex-nav-btn[data-codex="${sub}"]`);
         if (btn) btn.click();

@@ -601,6 +601,24 @@
       if (history.replaceState) {
         history.replaceState(null, '', `#changes/${slug}${currentCategory ? '#' + currentCategory : ''}`);
       }
+    },
+    selectItem: (slug, itemId) => {
+      if (slug) currentClass = slug;
+      currentCategory = 'everything';
+      selectedItemId = itemId;
+      selectedRank = 1;
+      const navBtn = document.querySelector('.nav-tab-btn[data-tab="changes"]');
+      if (navBtn) navBtn.click();
+      renderModule();
+      if (history.replaceState) {
+        history.replaceState(null, '', `#changes/${slug}#everything`);
+      }
+      setTimeout(() => {
+        const targetCard = document.querySelector(`.change-item-card[data-id="${itemId}"]`);
+        if (targetCard) {
+          targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      }, 100);
     }
   };
 

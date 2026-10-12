@@ -227,19 +227,18 @@ function buildSearchIndex() {
   }
 
   // 11. Hidden Library Books (Atlas)
-  if (window.WOW_ATLAS_DATA?.hiddenBooks) {
-    window.WOW_ATLAS_DATA.hiddenBooks.forEach(b => {
-      searchIndex.push({
-        title: `${b.title} (Library Book)`,
-        category: 'Hidden Book',
-        icon: '📖',
-        desc: `${b.zone} • ${b.coords} • ${b.reward || 'Scholar of the First Realm achievement'}`,
-        tab: 'atlas',
-        targetId: 'tab-atlas',
-        atlasSub: 'books'
-      });
+  const libBooks = window.WOW_ATLAS_DATA?.libraryBooks?.books || [];
+  libBooks.forEach(b => {
+    searchIndex.push({
+      title: `${b.name} (Library Book #${b.id})`,
+      category: 'Hidden Library Book',
+      icon: '📖',
+      desc: `${b.zone} • Coords: ${b.coords} • ${b.desc}`,
+      tab: 'atlas',
+      targetId: 'atlas-subtab-books',
+      atlasSub: 'books'
     });
-  }
+  });
 
   // 12. Professions & Key Recipes
   if (window.WOW_PROFESSIONS_DATA) {
@@ -293,6 +292,31 @@ function buildSearchIndex() {
     tab: 'camping',
     targetId: 'cozy-sleeping-bag-container'
   });
+
+  // 14. Datamined Spells & Talents (753 Changes)
+  if (window.WOW_CHANGES_DATA?.entries) {
+    const classLabels = {
+      warrior: 'Warrior', paladin: 'Paladin', hunter: 'Hunter', rogue: 'Rogue',
+      priest: 'Priest', shaman: 'Shaman', mage: 'Mage', warlock: 'Warlock', druid: 'Druid'
+    };
+    window.WOW_CHANGES_DATA.entries.forEach(e => {
+      const clsName = classLabels[e.class] || e.class;
+      const typeLabel = e.kind === 'talent' ? `Talent (${e.tree_name || 'Class'})` : `Spell (${e.tree_name || 'Baseline'})`;
+      const changeKind = e.reported_change_kind === 'added' ? 'New' : (e.reported_change_kind === 'modified' ? 'Changed' : (e.reported_change_kind === 'removed' ? 'Removed' : 'Updated'));
+      const summaryText = e.summary || (e.rank_texts ? e.rank_texts['1'] : '') || '';
+
+      searchIndex.push({
+        title: `${e.name} (${clsName} ${changeKind} ${e.kind === 'talent' ? 'Talent' : 'Spell'})`,
+        category: `What's Changed • ${clsName}`,
+        icon: '🔄',
+        desc: `${typeLabel} • ${summaryText}`,
+        tab: 'changes',
+        targetId: 'changes-mount-point',
+        changeClass: e.class,
+        changeId: e.id
+      });
+    });
+  }
 }
 
 function setupSearchModalEvents() {
@@ -411,6 +435,9 @@ function performSearch(query) {
          ${item.bisClass ? `data-bis-class="${item.bisClass}" data-bis-spec="${item.bisSpec}"` : ''}
          ${item.guideId ? `data-guide-id="${item.guideId}"` : ''}
          ${item.deepDiveClass ? `data-deep-dive-class="${item.deepDiveClass}"` : ''}
+         ${item.atlasSub ? `data-atlas-sub="${item.atlasSub}"` : ''}
+         ${item.profession ? `data-profession="${item.profession}"` : ''}
+         ${item.changeClass ? `data-change-class="${item.changeClass}" data-change-id="${item.changeId}"` : ''}
          onclick="handleSearchResultClick(this)">
       <span class="search-item-icon">${item.icon}</span>
       <div class="search-item-details">
@@ -448,6 +475,8 @@ window.handleSearchResultClick = function(elem) {
   const deepDiveClass = elem.getAttribute('data-deep-dive-class');
   const profession = elem.getAttribute('data-profession');
   const atlasSub = elem.getAttribute('data-atlas-sub');
+  const changeClass = elem.getAttribute('data-change-class');
+  const changeId = elem.getAttribute('data-change-id');
 
   // Switch to target tab
   const tabBtn = document.querySelector(`.nav-tab-btn[data-tab="${tab}"]`);
@@ -465,8 +494,17 @@ window.handleSearchResultClick = function(elem) {
     window.switchDeepDiveClass(deepDiveClass);
   }
 
+  // If selecting a What's Changed ability
+  if (tab === 'changes' && changeClass && window.WOW_CHANGES) {
+    if (changeId && typeof window.WOW_CHANGES.selectItem === 'function') {
+      window.WOW_CHANGES.selectItem(changeClass, changeId);
+    } else if (typeof window.WOW_CHANGES.selectClass === 'function') {
+      window.WOW_CHANGES.selectClass(changeClass, 'everything');
+    }
+  }
+
   // If sub-codex panel
-  if (tab === 'codex') {
+  if (tab === 'codex' && targetId) {
     const codexBtn = document.querySelector(`.codex-nav-btn[data-codex="${targetId.replace('codex-', '')}"]`);
     if (codexBtn) codexBtn.click();
   }
@@ -485,7 +523,7 @@ window.handleSearchResultClick = function(elem) {
   // Scroll to element
   setTimeout(() => {
     const target = document.getElementById(targetId);
-    if (target) {
+    if (target && tab !== 'changes') {
       target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
     // If opening a specific guide
