@@ -72,6 +72,91 @@ const WOW_FOREVER_DATA = {
 
   newsFeed: [
     {
+      id: "news-41",
+      title: "Hotfix Build 1.60.6.72140: Excavation Site 4 Threat Reset Window Increased, Dalaran Spell Reflect Reduction & Warsong Overtime Tuning",
+      source: "Blizzard Official / Blue Post",
+      sourceType: "blizzard",
+      author: "Community Manager Kaivax",
+      date: "October 12, 2026",
+      tag: "Maintenance & Hotfixes",
+      summary: "Blizzard deploys server hotfixes today addressing Relic Guardian threat mechanics in Excavation Site 4, reducing Overseer Kaelen's spell reflection in City of Dalaran, and introducing diminishing returns to flag carrier survival stalls in Warsong Gulch.",
+      content: `Blizzard operations deployed server hotfix Build 1.60.6.72140 across all beta megarealms this morning following Phase 2 encounter feedback:
+• Excavation Site 4 Boss Tuning:
+  - Relic Guardian: The internal cooldown between 'Threat Protocol Reset' casts was increased from 20 seconds to 30 seconds, giving tanks sufficient GCD recovery time to taunt before burst DPS take lethal damage.
+  - Titan Relic Quest Item: Now drops with 100% certainty for every eligible party member on the kill rather than requiring individual group rolls.
+• City of Dalaran (Alterac Mountains) Adjustments:
+  - Overseer Kaelen: 'Arcane Barrier' spell reflection was lowered from 50% down to 35% damage return, reducing caster self-kill spikes during execute windows.
+  - Violet Leyline Crystals: Leyline resonance power buff duration inside the catacombs was increased from 10 minutes to 15 minutes.
+• Warsong Gulch Flag Carrier Balancing:
+  - Added escalating physical vulnerability (+10% damage taken per stack) after 5 stacks of Focused Assault to prevent prolonged Feral Druid bear stall matches in overtime.
+• Profession & Downranking Tooltip Polish:
+  - Corrected reagent cost displays for 150+ Blacksmithing and Engineering crafts, ensuring live inventory counts accurately reflect required bars and fluxes.`,
+      url: "https://news.blizzard.com/en-us/world-of-warcraft/beta-hotfixes-build-72140-oct12"
+    },
+    {
+      id: "news-40",
+      title: "Venruki $100,000 Level 30 Duel Championship: Official 64-Player Bracket & Seeding Revealed for October 17–18",
+      source: "Method.gg & Warcraft Tavern",
+      sourceType: "method",
+      author: "Method Esports & Venruki",
+      date: "October 11, 2026",
+      tag: "Esports & Competitive Meta",
+      summary: "Host Venruki and tournament organizers reveal the official 64-gladiator bracket for the upcoming $100,000 Level 30 Duel Championship outside Orgrimmar, detailing class breakdown, seeding matchups, and chalk-ring tournament rules.",
+      content: `The championship bracket for the $100,000 Level 30 Duel Championship hosted by Venruki has been officially unveiled:
+• Tournament Schedule & Broadcast: Streaming live October 17–18, 2026 starting at 10:00 PDT on Twitch.tv/Venruki with casting desk commentary from Cdew and Ziqo.
+• 64-Player Class Distribution Breakdown:
+  - Feral Druid: 14 gladiators (dominant bracket favorite with Travel Form and Frenzied Regeneration).
+  - Arms Warrior: 12 gladiators (leveraging Mortal Strike, Deep Wounds, and Spearing Strike).
+  - Retribution Paladin: 10 gladiators (Voice of Truth silence immunity and 5s Hammer of Justice).
+  - Frost Mage: 9 gladiators (Cold Snap double Ice Block and Shatter burst).
+  - Subtlety Rogue: 8 gladiators (14-second stunlock control chains).
+  - Affliction Warlock: 6 gladiators (Siphon Life and Fear attrition).
+  - Elemental Shaman: 3 gladiators (Lava Burst overload burst).
+  - Shadow Priest: 2 gladiators (Mind Blast and SW:P attrition).
+• Ring Rules & Sanctions:
+  - Duels occur inside a 40-yard chalk circle at the Durotar Gates. Exiting the circle for more than 5 seconds results in an automatic match loss.
+  - Zero open-world consumables (no potions, healthstones, or engineering gadgets). Only class-conjured items permitted.`,
+      url: "https://www.method.gg/wow-classic/venruki-100k-duel-tournament-bracket-reveal"
+    },
+    {
+      id: "news-39",
+      title: "Phase 2 Trade Economy Telemetry: 150,000 Supply Crates Logged, Pack Kodo Mount Surge & Phase 3 Stockpile Trends",
+      source: "Wowhead Economy Wire",
+      sourceType: "wowhead",
+      author: "Wowhead Economy Team",
+      date: "October 10, 2026",
+      tag: "Economy & Market Analysis",
+      summary: "Telemetry across Beta megarealms logs over 150,000 Supply Crate hand-ins at Three Corners and Crossroads, driving Heavy Leather and Iron Bar market spikes while players stockpile Phase 3 Artisan reagents.",
+      content: `Telemetry analysis from the second week of Beta Phase 2 highlights a roaring deterministic economy powered by Merchant's Favor:
+• Supply Crate Ingestion Milestone:
+  - Over 150,000 Supply Crates have been filled and redeemed at the Azeroth Commerce Authority (Redridge Mountains) and Durotar Supply Logistics (The Barrens).
+  - Top Redeemed Quartermaster Items: The 14-Slot Kirin Tor Satchel (Account-Bound) accounts for 42% of total Favor spent, followed by the Pack Kodo Ground Mount (6,000 Favor, 28%) and blue Level 28–30 pre-BiS weapons (18%).
+• Commodity Market Fluctuations:
+  - Heavy Leather: Reached peak demand as leatherworkers craft camping field stations, stabilizing at 18 Silver per piece.
+  - Iron Bars & Heavy Stone: Heavy Blasting Powder and dynamite manufacturing for Warsong Gulch keep Iron prices elevated across all realm auction houses.
+• Phase 3 Stockpiling Strategy:
+  - Forward-thinking guilds have begun filling bank alts with Mithril Ore, Mageweave Cloth, and Thick Leather ahead of the anticipated Phase 3 Level 35 Artisan tradeskill expansion.`,
+      url: "https://www.wowhead.com/forever/news/phase-2-economy-telemetry-supply-crates-pack-kodo"
+    },
+    {
+      id: "news-38",
+      title: "Warcraft Tavern Field Report: First Realm 40/40 Library Books Completed & Lorekeeper's Binding Ring Claimed",
+      source: "Warcraft Tavern",
+      sourceType: "tavern",
+      author: "Warcraft Tavern Exploration Team",
+      date: "October 9, 2026",
+      tag: "Exploration & Secrets",
+      summary: "An intrepid guild expedition team on the NA megarealm achieves the world's first complete collection of all 40 hidden library books across Stormwind, Ironforge, Undercity, and Dalaran, unlocking the +7 All Stats Lorekeeper's Binding ring.",
+      content: `The mystery of Azeroth's hidden ancient tomes has reached a historic milestone:
+• 40/40 Tomes Discovered: An exploration guild team successfully mapped and collected all 40 hidden manuscripts across Stormwind Royal Library, Ironforge Hall of Explorers, Undercity Apothecarium, and the Dalaran Underbelly sewer intake.
+• Scholar of the First Realm Unlocked:
+  - Claimed the unique server feat of strength achievement 'Scholar of the First Realm'.
+  - Awarded the coveted 'Lorekeeper's Binding' (Rare Ring: +7 Strength, +7 Agility, +7 Stamina, +7 Intellect, +7 Spirit) — currently the highest item-budget ring in Phase 2.
+• Interactive Guide Released:
+  - Warcraft Tavern published complete coordinate markers, interact-key guidance, and navigation paths for all 40 tomes to assist leveling players in claiming the 10, 20, and 30-book milestone accessories.`,
+      url: "https://www.warcrafttavern.com/forever/news/first-realm-40-library-books-lorekeepers-binding/"
+    },
+    {
       id: "news-36",
       title: "Beta Build 1.60.6 Deployed: Blizzard Expands Native Cooldown Manager Across All Classes, Elevating Essential Cooldown & Buff Tracking Without UI Taint",
       source: "Blizzard Official / Patch Notes",
