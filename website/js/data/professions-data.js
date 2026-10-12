@@ -18,8 +18,8 @@ window.WOW_PROFESSIONS_DATA = {
       "icon": "spell_arcane_manatap"
     },
     "stats": {
-      "recipeCount": 179,
-      "newInForever": 70,
+      "recipeCount": 180,
+      "newInForever": 71,
       "favorRecipes": 30
     },
     "groups": [
@@ -57,7 +57,7 @@ window.WOW_PROFESSIONS_DATA = {
         "key": "Camp",
         "label": "Camp objects",
         "icon": "spell_arcane_manatap",
-        "count": 3
+        "count": 4
       }
     ],
     "recipes": [
@@ -6830,7 +6830,9 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": true,
         "effect": "Unlocks the account-wide title 'The Alchemist' upon achieving 300 skill in Alchemy.",
         "reagents": [],
-        "source": "Merchant's Favor (1,000 Favor)"
+        "source": "Merchant's Favor (1,000 Favor)",
+        "cat": "Camp",
+        "kind": "Master Certification (Account Title)"
       }
     ],
     "gatheringNodes": [],
@@ -8111,8 +8113,8 @@ window.WOW_PROFESSIONS_DATA = {
       "icon": "inv_stone_grindingstone_01"
     },
     "stats": {
-      "recipeCount": 437,
-      "newInForever": 197,
+      "recipeCount": 439,
+      "newInForever": 199,
       "favorRecipes": 62
     },
     "groups": [
@@ -8168,7 +8170,7 @@ window.WOW_PROFESSIONS_DATA = {
         "key": "Waist",
         "label": "Belts",
         "icon": "inv_belt_03",
-        "count": 29
+        "count": 30
       },
       {
         "key": "Legs",
@@ -8204,7 +8206,7 @@ window.WOW_PROFESSIONS_DATA = {
         "key": "Camp",
         "label": "Camp objects",
         "icon": "inv_stone_grindingstone_01",
-        "count": 3
+        "count": 4
       }
     ],
     "recipes": [
@@ -26933,7 +26935,7 @@ window.WOW_PROFESSIONS_DATA = {
       },
       {
         "id": 251426,
-        "name": "Plans: Prefect's Waistguard",
+        "name": "Prefect's Waistguard",
         "icon": "inv_scroll_03",
         "quality": 3,
         "learn": 250,
@@ -26965,7 +26967,9 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 2
           }
         ],
-        "source": "Merchant's Favor (90 Favor)"
+        "source": "Plans: Prefect's Waistguard",
+        "cat": "Waist",
+        "kind": "Plate waist, level 50"
       },
       {
         "id": 271622,
@@ -26979,7 +26983,9 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": true,
         "effect": "Unlocks the account-wide title 'The Blacksmith' upon achieving 300 skill in Blacksmithing.",
         "reagents": [],
-        "source": "Merchant's Favor (1,000 Favor)"
+        "source": "Merchant's Favor (1,000 Favor)",
+        "cat": "Camp",
+        "kind": "Master Certification (Account Title)"
       }
     ],
     "gatheringNodes": [],
@@ -28603,8 +28609,8 @@ window.WOW_PROFESSIONS_DATA = {
       "icon": "inv_10_enchanting2_magicswirl_bronze"
     },
     "stats": {
-      "recipeCount": 216,
-      "newInForever": 66,
+      "recipeCount": 220,
+      "newInForever": 70,
       "favorRecipes": 40
     },
     "groups": [
@@ -28684,13 +28690,19 @@ window.WOW_PROFESSIONS_DATA = {
         "key": "Relics",
         "label": "Relics",
         "icon": "inv_relics_libramofhope",
-        "count": 28
+        "count": 31
       },
       {
         "key": "Wands & Staves",
         "label": "Wands & Staves",
         "icon": "inv_wand_07",
         "count": 11
+      },
+      {
+        "key": "Camp",
+        "label": "Camp & Certifications",
+        "icon": "inv_scroll_15",
+        "count": 1
       }
     ],
     "recipes": [
@@ -28932,7 +28944,7 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Formula: Formula: Imbue Cloak - Protection"
+        "source": "Formula: Imbue Cloak - Protection"
       },
       {
         "id": 249475,
@@ -28956,7 +28968,7 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 2
           }
         ],
-        "source": "Formula: Formula: Enchant Bracer - Minor Healing Power"
+        "source": "Formula: Enchant Bracer - Minor Healing Power"
       },
       {
         "id": 6348,
@@ -29331,7 +29343,7 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Formula: Formula: Enchant Boots - Minor Stamina"
+        "source": "Formula: Enchant Boots - Minor Stamina"
       },
       {
         "id": null,
@@ -30392,7 +30404,7 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Formula: Formula: Enchant Weapon - Winter's Might"
+        "source": "Formula: Enchant Weapon - Winter's Might"
       },
       {
         "id": 249488,
@@ -30416,7 +30428,7 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Formula: Formula: Enchant Bracer - Agility"
+        "source": "Formula: Enchant Bracer - Agility"
       },
       {
         "id": null,
@@ -30917,7 +30929,7 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 2
           }
         ],
-        "source": "Formula: Formula: Enchant 2H Weapon - Lesser Agility"
+        "source": "Formula: Enchant 2H Weapon - Lesser Agility"
       },
       {
         "id": 11202,
@@ -31148,7 +31160,7 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 2
           }
         ],
-        "source": "Formula: Formula: Enchant 2H Weapon - Lesser Strength"
+        "source": "Formula: Enchant 2H Weapon - Lesser Strength"
       },
       {
         "id": 11204,
@@ -31509,7 +31521,7 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 2
           }
         ],
-        "source": "Formula: Formula: Enchant Bracer - Greater Agility"
+        "source": "Formula: Enchant Bracer - Greater Agility"
       },
       {
         "id": null,
@@ -31688,7 +31700,7 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Formula: Formula: Enchant Gloves - Advanced Skinning"
+        "source": "Formula: Enchant Gloves - Advanced Skinning"
       },
       {
         "id": 11226,
@@ -32336,7 +32348,7 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 2
           }
         ],
-        "source": "Formula: Formula: Enchant 2H Weapon - Strength"
+        "source": "Formula: Enchant 2H Weapon - Strength"
       },
       {
         "id": 22392,
@@ -32585,7 +32597,7 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 2
           }
         ],
-        "source": "Formula: Formula: Enchant Gloves - Lotus Claw"
+        "source": "Formula: Enchant Gloves - Lotus Claw"
       },
       {
         "id": 16247,
@@ -32678,7 +32690,7 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 3
           }
         ],
-        "source": "Formula: Formula: Enchant Bracer - Superior Agility"
+        "source": "Formula: Enchant Bracer - Superior Agility"
       },
       {
         "id": 16246,
@@ -34214,7 +34226,7 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Formula: Formula: Minor Wizard Oil"
+        "source": "Formula: Minor Wizard Oil"
       },
       {
         "id": 247786,
@@ -34459,7 +34471,7 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Formula: Formula: Mystic Mushroom"
+        "source": "Formula: Mystic Mushroom"
       },
       {
         "id": 249398,
@@ -34505,7 +34517,7 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Formula: Formula: Polished Driftwood Icon"
+        "source": "Formula: Polished Driftwood Icon"
       },
       {
         "id": 249397,
@@ -34551,7 +34563,7 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Formula: Formula: Tenets of the Silver Hand"
+        "source": "Formula: Tenets of the Silver Hand"
       },
       {
         "id": 279985,
@@ -34643,7 +34655,7 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 2
           }
         ],
-        "source": "Formula: Formula: Glimmering Staff"
+        "source": "Formula: Glimmering Staff"
       },
       {
         "id": 249394,
@@ -34682,7 +34694,7 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Formula: Formula: Orb of Mystic Insight"
+        "source": "Formula: Orb of Mystic Insight"
       },
       {
         "id": 249395,
@@ -34721,7 +34733,7 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Formula: Formula: Orb of Souls"
+        "source": "Formula: Orb of Souls"
       },
       {
         "id": 249393,
@@ -34781,7 +34793,7 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 2
           }
         ],
-        "source": "Formula: Formula: Soulstaff"
+        "source": "Formula: Soulstaff"
       },
       {
         "id": 20745,
@@ -34820,7 +34832,7 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Formula: Formula: Minor Mana Oil"
+        "source": "Formula: Minor Mana Oil"
       },
       {
         "id": 11289,
@@ -34937,7 +34949,7 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Formula: Formula: Twisted Nether Wand"
+        "source": "Formula: Twisted Nether Wand"
       },
       {
         "id": 20746,
@@ -34976,7 +34988,7 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Formula: Formula: Lesser Wizard Oil"
+        "source": "Formula: Lesser Wizard Oil"
       },
       {
         "id": 249442,
@@ -35036,7 +35048,7 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Formula: Formula: Libram of Invocation"
+        "source": "Formula: Libram of Invocation"
       },
       {
         "id": 249441,
@@ -35096,7 +35108,7 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Formula: Formula: Talons of Wrath"
+        "source": "Formula: Talons of Wrath"
       },
       {
         "id": 249443,
@@ -35156,7 +35168,7 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Formula: Formula: Totem of Ancestral Protection"
+        "source": "Formula: Totem of Ancestral Protection"
       },
       {
         "id": 249234,
@@ -35195,7 +35207,7 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Formula: Formula: Dreambough Wand"
+        "source": "Formula: Dreambough Wand"
       },
       {
         "id": 11145,
@@ -35308,7 +35320,7 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 2
           }
         ],
-        "source": "Formula: Formula: Dreamstaff"
+        "source": "Formula: Dreamstaff"
       },
       {
         "id": 249453,
@@ -35375,7 +35387,7 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 2
           }
         ],
-        "source": "Formula: Formula: Radiant Staff"
+        "source": "Formula: Radiant Staff"
       },
       {
         "id": 249455,
@@ -35442,7 +35454,7 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 2
           }
         ],
-        "source": "Formula: Formula: Truesilver Conduit"
+        "source": "Formula: Truesilver Conduit"
       },
       {
         "id": 249456,
@@ -35495,7 +35507,7 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 2
           }
         ],
-        "source": "Formula: Formula: Twisting Essence Jar"
+        "source": "Formula: Twisting Essence Jar"
       },
       {
         "id": 249232,
@@ -35534,7 +35546,7 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Formula: Formula: Lesser Eternal Wand"
+        "source": "Formula: Lesser Eternal Wand"
       },
       {
         "id": 12810,
@@ -35637,7 +35649,7 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Formula: Formula: Lesser Mana Oil"
+        "source": "Formula: Lesser Mana Oil"
       },
       {
         "id": 11811,
@@ -35676,7 +35688,7 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 3
           }
         ],
-        "source": "Formula: Formula: Smoking Heart of the Mountain"
+        "source": "Formula: Smoking Heart of the Mountain"
       },
       {
         "id": 249237,
@@ -35715,7 +35727,7 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Formula: Formula: Greater Eternal Wand"
+        "source": "Formula: Greater Eternal Wand"
       },
       {
         "id": 20750,
@@ -35754,7 +35766,7 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Formula: Formula: Wizard Oil"
+        "source": "Formula: Wizard Oil"
       },
       {
         "id": 249385,
@@ -35800,7 +35812,7 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Formula: Formula: Brilliant Wand"
+        "source": "Formula: Brilliant Wand"
       },
       {
         "id": 249473,
@@ -35977,7 +35989,7 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 3
           }
         ],
-        "source": "Formula: Formula: Runed Arcanite Rod"
+        "source": "Formula: Runed Arcanite Rod"
       },
       {
         "id": 279987,
@@ -36055,7 +36067,7 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Formula: Formula: Brilliant Mana Oil"
+        "source": "Formula: Brilliant Mana Oil"
       },
       {
         "id": 20749,
@@ -36094,7 +36106,7 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Formula: Formula: Brilliant Wizard Oil"
+        "source": "Formula: Brilliant Wizard Oil"
       },
       {
         "id": 279250,
@@ -36140,7 +36152,7 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Formula: Formula: Idol of Swiftness"
+        "source": "Formula: Idol of Swiftness"
       },
       {
         "id": 279251,
@@ -36186,7 +36198,7 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Formula: Formula: Idol of the Ursine Twins"
+        "source": "Formula: Idol of the Ursine Twins"
       },
       {
         "id": 279248,
@@ -36232,7 +36244,7 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Formula: Formula: Libram of Infusion"
+        "source": "Formula: Libram of Infusion"
       },
       {
         "id": 279247,
@@ -36278,7 +36290,7 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Formula: Formula: Steadfast Libram"
+        "source": "Formula: Steadfast Libram"
       },
       {
         "id": 279246,
@@ -36324,7 +36336,7 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 2
           }
         ],
-        "source": "Formula: Formula: Torch of Light"
+        "source": "Formula: Torch of Light"
       },
       {
         "id": 279249,
@@ -36370,11 +36382,11 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 1
           }
         ],
-        "source": "Formula: Formula: Totem of Urgency"
+        "source": "Formula: Totem of Urgency"
       },
       {
         "id": 249529,
-        "name": "Formula: Idol of the Dream",
+        "name": "Idol of the Dream",
         "icon": "inv_misc_note_01",
         "quality": 3,
         "learn": 300,
@@ -36406,11 +36418,13 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 2
           }
         ],
-        "source": "Merchant's Favor (240 Favor)"
+        "source": "Formula: Idol of the Dream",
+        "cat": "Relics",
+        "kind": "Relics"
       },
       {
         "id": 249530,
-        "name": "Formula: Libram of Holy Alacrity",
+        "name": "Libram of Holy Alacrity",
         "icon": "inv_misc_note_01",
         "quality": 3,
         "learn": 300,
@@ -36442,11 +36456,13 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 2
           }
         ],
-        "source": "Merchant's Favor (240 Favor)"
+        "source": "Formula: Libram of Holy Alacrity",
+        "cat": "Relics",
+        "kind": "Relics"
       },
       {
         "id": 249532,
-        "name": "Formula: Totem of Thunder",
+        "name": "Totem of Thunder",
         "icon": "inv_misc_note_01",
         "quality": 3,
         "learn": 300,
@@ -36478,7 +36494,9 @@ window.WOW_PROFESSIONS_DATA = {
             "quality": 2
           }
         ],
-        "source": "Merchant's Favor (240 Favor)"
+        "source": "Formula: Totem of Thunder",
+        "cat": "Relics",
+        "kind": "Relics"
       },
       {
         "id": 271624,
@@ -36492,7 +36510,9 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": true,
         "effect": "Unlocks the account-wide title 'The Enchanter' upon achieving 300 skill in Enchanting.",
         "reagents": [],
-        "source": "Merchant's Favor (1,000 Favor)"
+        "source": "Merchant's Favor (1,000 Favor)",
+        "cat": "Camp",
+        "kind": "Master Certification (Account Title)"
       }
     ],
     "gatheringNodes": [],
@@ -37643,8 +37663,8 @@ window.WOW_PROFESSIONS_DATA = {
       "icon": "inv_misc_enggizmos_13"
     },
     "stats": {
-      "recipeCount": 241,
-      "newInForever": 76,
+      "recipeCount": 242,
+      "newInForever": 77,
       "favorRecipes": 29
     },
     "groups": [
@@ -37712,7 +37732,7 @@ window.WOW_PROFESSIONS_DATA = {
         "key": "Camp",
         "label": "Camp objects",
         "icon": "inv_misc_enggizmos_13",
-        "count": 3
+        "count": 4
       }
     ],
     "recipes": [
@@ -47505,7 +47525,9 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": true,
         "effect": "Unlocks the account-wide title 'The Engineer' upon achieving 300 skill in Engineering.",
         "reagents": [],
-        "source": "Merchant's Favor (1,000 Favor)"
+        "source": "Merchant's Favor (1,000 Favor)",
+        "cat": "Camp",
+        "kind": "Master Certification (Account Title)"
       }
     ],
     "gatheringNodes": [],
@@ -48894,8 +48916,8 @@ window.WOW_PROFESSIONS_DATA = {
       "icon": "inv_misc_leatherscrap_01"
     },
     "stats": {
-      "recipeCount": 511,
-      "newInForever": 270,
+      "recipeCount": 512,
+      "newInForever": 271,
       "favorRecipes": 82
     },
     "groups": [
@@ -48981,7 +49003,7 @@ window.WOW_PROFESSIONS_DATA = {
         "key": "Camp",
         "label": "Camp objects",
         "icon": "inv_misc_leatherscrap_01",
-        "count": 3
+        "count": 4
       }
     ],
     "recipes": [
@@ -71670,7 +71692,9 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": true,
         "effect": "Unlocks the account-wide title 'The Leatherworker' upon achieving 300 skill in Leatherworking.",
         "reagents": [],
-        "source": "Merchant's Favor (1,000 Favor)"
+        "source": "Merchant's Favor (1,000 Favor)",
+        "cat": "Camp",
+        "kind": "Master Certification (Account Title)"
       }
     ],
     "gatheringNodes": [],
@@ -73436,8 +73460,8 @@ window.WOW_PROFESSIONS_DATA = {
       "icon": "inv_banner_03"
     },
     "stats": {
-      "recipeCount": 414,
-      "newInForever": 180,
+      "recipeCount": 415,
+      "newInForever": 181,
       "favorRecipes": 68
     },
     "groups": [
@@ -73523,7 +73547,7 @@ window.WOW_PROFESSIONS_DATA = {
         "key": "Camp",
         "label": "Camp objects",
         "icon": "inv_banner_03",
-        "count": 3
+        "count": 4
       }
     ],
     "recipes": [
@@ -91967,7 +91991,9 @@ window.WOW_PROFESSIONS_DATA = {
         "isNew": true,
         "effect": "Unlocks the account-wide title 'The Tailor' upon achieving 300 skill in Tailoring.",
         "reagents": [],
-        "source": "Merchant's Favor (1,000 Favor)"
+        "source": "Merchant's Favor (1,000 Favor)",
+        "cat": "Camp",
+        "kind": "Master Certification (Account Title)"
       }
     ],
     "gatheringNodes": [],
@@ -93674,7 +93700,14 @@ window.WOW_PROFESSIONS_DATA = {
       "newInForever": 2,
       "favorRecipes": 0
     },
-    "groups": [],
+    "groups": [
+      {
+        "key": "Smelting",
+        "label": "Smelting Bars",
+        "icon": "inv_ore_copper_01",
+        "count": 14
+      }
+    ],
     "recipes": [
       {
         "id": 2840,
@@ -101662,7 +101695,8 @@ window.WOW_PROFESSIONS_DATA = {
       "campObjects": 35,
       "legacyPerks": 3,
       "recipeCount": 28,
-      "newInForever": 35
+      "newInForever": 28,
+      "favorRecipes": 0
     },
     "groups": [
       {

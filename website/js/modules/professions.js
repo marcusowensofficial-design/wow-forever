@@ -12,6 +12,7 @@
   let currentCategory = 'all';
   let searchQuery = '';
   let filterNewOnly = false;
+  let filterBetaCap = false;
   let playerSkill = null;
 
   const CDN_BASE = 'https://wow.zamimg.com/images/wow/icons/medium/';
@@ -558,7 +559,7 @@
           }
           renderActiveProfession();
           if (history.replaceState) {
-            history.replaceState(null, '', `#professions/${slug}#${currentSubTab}`);
+            history.replaceState(null, '', `#professions/${slug}/${currentSubTab}`);
           }
           window.scrollTo({ top: container.offsetTop - 80, behavior: 'smooth' });
         }
@@ -620,6 +621,9 @@
       if (filterNewOnly && !r.isNew) {
         return false;
       }
+      if (filterBetaCap && r.learn > 225) {
+        return false;
+      }
       if (searchQuery) {
         const q = searchQuery.toLowerCase();
         const matchesName = r.name && r.name.toLowerCase().includes(q);
@@ -652,6 +656,11 @@
       newToggle.classList.toggle('active', filterNewOnly);
     }
 
+    const betaToggle = container.querySelector('#prof-beta-cap-toggle');
+    if (betaToggle) {
+      betaToggle.classList.toggle('active', filterBetaCap);
+    }
+
     container.querySelectorAll('.prof-preset-btn').forEach(btn => {
       const s = parseInt(btn.getAttribute('data-skill'), 10);
       btn.classList.toggle('active', playerSkill === s);
@@ -670,6 +679,9 @@
           <input type="text" id="prof-search-input" aria-label="Search recipes, reagents, or zones" class="prof-search-input" placeholder="Search recipe, reagent, drop zone..." value="${escapeHtml(searchQuery)}" />
           <button type="button" id="prof-new-toggle" class="filter-chip ${filterNewOnly ? 'active' : ''}">
             <span>✨</span> New in Forever Only
+          </button>
+          <button type="button" id="prof-beta-cap-toggle" class="filter-chip ${filterBetaCap ? 'active' : ''}" title="Filter to recipes learnable within Phase 2 beta level cap (Skill 1–225)">
+            <span>🔒</span> Beta Cap (≤225)
           </button>
         </div>
         <div class="prof-skill-calc">
@@ -715,6 +727,14 @@
     if (newToggle) {
       newToggle.addEventListener('click', () => {
         filterNewOnly = !filterNewOnly;
+        updateRecipeGrid(container, prof);
+      });
+    }
+
+    const betaToggle = container.querySelector('#prof-beta-cap-toggle');
+    if (betaToggle) {
+      betaToggle.addEventListener('click', () => {
+        filterBetaCap = !filterBetaCap;
         updateRecipeGrid(container, prof);
       });
     }
@@ -933,15 +953,48 @@
       return;
     }
 
+    const storageKey = `wowforever_shopping_${prof.slug}`;
+    let acquiredItems = [];
+    try {
+      acquiredItems = JSON.parse(localStorage.getItem(storageKey) || '[]');
+      if (!Array.isArray(acquiredItems)) acquiredItems = [];
+    } catch (e) {
+      acquiredItems = [];
+    }
+
+    const allItems = groups.flatMap(g => g.items || []);
+    const totalItems = allItems.length;
+    const initialAcquired = allItems.filter(it => acquiredItems.includes(it.name)).length;
+    const initialPct = totalItems > 0 ? Math.round((initialAcquired / totalItems) * 100) : 0;
+
     container.innerHTML = `
       <div class="leveling-header-block">
         <div class="leveling-header-title">
           <h3>${escapeHtml(shopping.title || 'SHOPPING LIST, 1 TO 225')}</h3>
           <p>${escapeHtml(shopping.subtitle || 'Trade goods, looted supplies, and crafted components needed to level.')}</p>
         </div>
-        <button type="button" class="shopping-copy-btn" id="shopping-copy-btn" aria-label="Copy shopping list to clipboard">
-          <span class="copy-icon">📋</span> Copy Shopping List
-        </button>
+        <div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap;">
+          <button type="button" class="shopping-copy-btn" id="shopping-copy-btn" aria-label="Copy shopping list to clipboard">
+            <span class="copy-icon">📋</span> Copy Shopping List
+          </button>
+          <button type="button" class="shopping-copy-btn shopping-reset-btn" id="shopping-reset-btn" aria-label="Reset acquired materials checklist" title="Reset all checked items">
+            <span>↺</span> Reset Checklist
+          </button>
+        </div>
+      </div>
+
+      <!-- Interactive Checklist Progress Bar -->
+      <div class="shopping-checklist-bar">
+        <div class="shopping-progress-labels">
+          <span>
+            <strong>Materials Acquired:</strong> 
+            <span id="shopping-progress-count">${initialAcquired}</span> / ${totalItems} (<span id="shopping-progress-pct">${initialPct}%</span>)
+          </span>
+          <span style="font-size: 0.75rem; color: #94a3b8;">Click checkbox or card to track in your bags</span>
+        </div>
+        <div class="shopping-progress-track">
+          <div class="shopping-progress-fill" id="shopping-progress-fill" style="width: ${initialPct}%;"></div>
+        </div>
       </div>
 
       <div class="shopping-groups-container">
@@ -960,20 +1013,68 @@
               </h4>
             </div>
             <div class="shopping-rows-grid">
-              ${g.items.map(it => `
-                <div class="shopping-row-card" data-item-id="${it.itemId}" data-item-name="${escapeHtml(it.name)}">
-                  <div class="shopping-row-left">
-                    <img src="${getIconUrl(it.icon)}" alt="${escapeHtml(it.name)}" class="shopping-icon q${it.quality || 1}" loading="lazy" />
-                    <span class="shopping-name q${it.quality || 1}">${escapeHtml(it.name)}</span>
+              ${g.items.map(it => {
+                const isAcquired = acquiredItems.includes(it.name);
+                return `
+                  <div class="shopping-row-card ${isAcquired ? 'is-acquired' : ''}" data-item-id="${it.itemId}" data-item-name="${escapeHtml(it.name)}">
+                    <input type="checkbox" class="shopping-item-check" ${isAcquired ? 'checked' : ''} aria-label="Mark ${escapeHtml(it.name)} as acquired" />
+                    <div class="shopping-row-left">
+                      <img src="${getIconUrl(it.icon)}" alt="${escapeHtml(it.name)}" class="shopping-icon q${it.quality || 1}" loading="lazy" />
+                      <span class="shopping-name q${it.quality || 1}">${escapeHtml(it.name)}</span>
+                    </div>
+                    <b class="shopping-count">${it.count}</b>
                   </div>
-                  <b class="shopping-count">${it.count}</b>
-                </div>
-              `).join('')}
+                `;
+              }).join('')}
             </div>
           </div>
         `).join('')}
       </div>
     `;
+
+    function updateShoppingProgress() {
+      const curAcquired = allItems.filter(it => acquiredItems.includes(it.name)).length;
+      const curPct = totalItems > 0 ? Math.round((curAcquired / totalItems) * 100) : 0;
+      const countEl = container.querySelector('#shopping-progress-count');
+      const pctEl = container.querySelector('#shopping-progress-pct');
+      const fillEl = container.querySelector('#shopping-progress-fill');
+      if (countEl) countEl.textContent = curAcquired;
+      if (pctEl) pctEl.textContent = `${curPct}%`;
+      if (fillEl) fillEl.style.width = `${curPct}%`;
+    }
+
+    container.querySelectorAll('.shopping-item-check').forEach(chk => {
+      chk.addEventListener('change', (e) => {
+        e.stopPropagation();
+        const card = chk.closest('.shopping-row-card');
+        const name = card?.getAttribute('data-item-name');
+        if (!name) return;
+        if (chk.checked) {
+          if (!acquiredItems.includes(name)) acquiredItems.push(name);
+          card.classList.add('is-acquired');
+        } else {
+          acquiredItems = acquiredItems.filter(x => x !== name);
+          card.classList.remove('is-acquired');
+        }
+        try { localStorage.setItem(storageKey, JSON.stringify(acquiredItems)); } catch (err) {}
+        updateShoppingProgress();
+      });
+    });
+
+    const resetBtn = container.querySelector('#shopping-reset-btn');
+    if (resetBtn) {
+      resetBtn.addEventListener('click', () => {
+        if (!acquiredItems.length) return;
+        acquiredItems = [];
+        try { localStorage.removeItem(storageKey); } catch (err) {}
+        container.querySelectorAll('.shopping-item-check').forEach(chk => { chk.checked = false; });
+        container.querySelectorAll('.shopping-row-card').forEach(c => { c.classList.remove('is-acquired'); });
+        updateShoppingProgress();
+        if (typeof window.showToast === 'function') {
+          window.showToast(`${prof.name} shopping checklist reset.`, 'info');
+        }
+      });
+    }
 
     const copyBtn = container.querySelector('#shopping-copy-btn');
     if (copyBtn) {
@@ -982,7 +1083,8 @@
         groups.forEach(g => {
           text += `${g.title}${g.note ? ' (' + g.note + ')' : ''}:\n`;
           (g.items || []).forEach(it => {
-            text += `  • ${it.count}x ${it.name}\n`;
+            const mark = acquiredItems.includes(it.name) ? '[x]' : '[ ]';
+            text += `  ${mark} ${it.count}x ${it.name}\n`;
           });
           text += '\n';
         });
@@ -1448,6 +1550,52 @@
       <div class="favor-tiers-container">
         ${renderFavorTierBlocks(recipes, prof)}
       </div>
+
+      <!-- Waylaid Supply Crate Tiers Breakdown -->
+      <div class="section-heading-bar" style="margin-top: 2rem; margin-bottom: 1rem;">
+        <div>
+          <h2><span>📦</span> Waylaid Supply Crate Turn-In Tiers</h2>
+          <p class="section-subtext">Recovered from world chests and mobs. Fill with gathered or crafted components before turning in to your Quartermaster</p>
+        </div>
+      </div>
+
+      <div class="favor-crates-grid">
+        ${((window.WOW_ATLAS_DATA?.merchantsFavor?.crateTiers) || [
+          { tier: 'Apprentice (White)', levelReq: 10, favor: 5, money: '2s 50c', materials: 'Raw Gathered Materials (20 Peacebloom, 20 Copper Ore, 40 Linen)' },
+          { tier: 'Apprentice (Green)', levelReq: 10, favor: 10, money: '5s 00c', materials: 'Crafted Components (2 Cured Light Hide, 20 Bolt of Linen, 20 Copper Bar)' },
+          { tier: 'Journeyman (White)', levelReq: 10, favor: 10, money: '5s 00c', materials: 'Intermediate Raw Materials (10 Stranglekelp, 20 Iron Ore, 20 Wool Cloth)' },
+          { tier: 'Journeyman (Green)', levelReq: 10, favor: 20, money: '10s 00c', materials: 'Intermediate Crafted Goods (6 Bolt of Woolen Cloth, 20 Iron Bar)' },
+          { tier: 'Expert (White/Green)', levelReq: 20, favor: '25–35 (Est.)', money: '15s–25s', materials: 'Mithril Ore, Mageweave, Vision Dust, Mithril Bars' },
+          { tier: 'Artisan (White/Green)', levelReq: 35, favor: '45–60 (Est.)', money: '35s–50s', materials: 'Thorium Ore, Runecloth, Dream Dust, Truesilver Bars' }
+        ]).map(cr => `
+          <div class="favor-crate-card">
+            <div class="favor-crate-head">
+              <span class="favor-crate-badge">${escapeHtml(cr.tier)}</span>
+              <span class="favor-crate-lvl">Req Lvl ${cr.levelReq}</span>
+            </div>
+            <div class="favor-crate-rewards">
+              <span class="favor-reward-chip">★ ${escapeHtml(String(cr.favor))} Favor</span>
+              <span class="favor-reward-chip money">🪙 ${escapeHtml(cr.money)}</span>
+            </div>
+            <p class="favor-crate-mats">${escapeHtml(cr.materials)}</p>
+          </div>
+        `).join('')}
+      </div>
+
+      <!-- Trade Writs System Callout -->
+      <div class="favor-writs-card">
+        <div class="favor-writs-head">
+          <span style="font-size: 1.5rem;">📜</span>
+          <div>
+            <h4>Daily Trade Writs System (150 Total Orders)</h4>
+            <p>Crafting professions (Alchemy, Blacksmithing, Engineering, Leatherworking, Tailoring) receive 30 daily work orders per profession across Journeyman (100–170), Expert (180–225), and Artisan (230–310) tiers.</p>
+          </div>
+        </div>
+        <div class="favor-writs-footer">
+          <div><strong>Daily Payout:</strong> 22s to 45s Coin Pouch per order + Camp Faction Reputation</div>
+          <div><strong>Writs Reroll:</strong> Swap unwanted writs with the <em>Forger's Quill</em> (sold by the Uncertified Scribe south of Three Corners).</div>
+        </div>
+      </div>
     `;
 
     attachTooltipListeners(container, prof);
@@ -1806,7 +1954,44 @@
   }
 
   function attachTooltipListeners(container, prof) {
-    if (!prof) return;
+    if (!prof) {
+      // Overview Hub tooltips for camp buff cards and camp matrix stations
+      container.querySelectorAll('.prof-dir-camp-box').forEach(el => {
+        const strong = el.querySelector('strong');
+        const text = el.textContent || '';
+        const title = strong ? strong.textContent.replace(/:$/, '').trim() : 'Campfire Station Buff';
+        el.addEventListener('mouseenter', (e) => {
+          showItemTooltip(e, title, 2, text, null, {
+            type: 'Camp Utility Station',
+            use: 'Constructed at camp to grant party-wide benefits.'
+          });
+        });
+        el.addEventListener('mousemove', (e) => {
+          const tt = document.getElementById('wow-item-tooltip');
+          if (tt) positionTooltip(e, tt);
+        });
+        el.addEventListener('mouseleave', hideItemTooltip);
+      });
+
+      container.querySelectorAll('.matrix-station-cell').forEach(el => {
+        const strong = el.querySelector('strong');
+        const small = el.querySelector('small');
+        const title = strong ? strong.textContent.trim() : 'Profession Station';
+        const desc = small ? small.textContent.replace(/^·\s*/, '').trim() : (el.getAttribute('title') || '');
+        el.addEventListener('mouseenter', (e) => {
+          showItemTooltip(e, title, 2, desc, null, {
+            type: 'Campfire Profession Station',
+            use: 'Provides 80% potency of class blessings to nearby party members for 1 hour.'
+          });
+        });
+        el.addEventListener('mousemove', (e) => {
+          const tt = document.getElementById('wow-item-tooltip');
+          if (tt) positionTooltip(e, tt);
+        });
+        el.addEventListener('mouseleave', hideItemTooltip);
+      });
+      return;
+    }
 
     // Main Recipes Catalog cards hover
     container.querySelectorAll('.recipe-card .recipe-item-icon, .recipe-card .recipe-title').forEach(el => {
@@ -1956,16 +2141,24 @@
       el.addEventListener('mouseleave', hideItemTooltip);
     });
 
-    // Reagent chips, badges & shopping rows
+    // Reagent chips, badges & shopping rows - hover for tooltip, click for reverse lookup modal
     container.querySelectorAll('.reagent-chip, .step-reagent-badge, .shopping-row-card').forEach(el => {
       const name = el.getAttribute('data-item-name') || el.getAttribute('title') || '';
       if (!name) return;
       const triggerTooltip = (e) => {
         e.stopPropagation();
-        showItemTooltip(e, name, 1, 'Crafting Reagent / Material', null, { type: 'Crafting Component' });
+        showItemTooltip(e, name, 1, 'Crafting Reagent / Material', null, { 
+          type: 'Crafting Component',
+          use: 'Click to find all recipes across professions that use this material.'
+        });
       };
       el.addEventListener('mouseenter', triggerTooltip);
-      el.addEventListener('click', triggerTooltip);
+      el.addEventListener('click', (e) => {
+        if (e.target.classList.contains('shopping-item-check')) return;
+        e.stopPropagation();
+        hideItemTooltip();
+        openReverseReagentLookup(name);
+      });
       el.addEventListener('mousemove', (e) => {
         const tt = document.getElementById('wow-item-tooltip');
         if (tt) positionTooltip(e, tt);
@@ -1975,6 +2168,167 @@
         hideItemTooltip();
       });
     });
+  }
+
+  /* ==========================================================================
+     REVERSE REAGENT SEARCH MODAL ENGINE
+     ========================================================================== */
+  function openReverseReagentLookup(rawName) {
+    if (!rawName) return;
+    const cleanName = rawName.replace(/^\d+x\s*/i, '').trim();
+    const cleanLower = cleanName.toLowerCase();
+    const data = window.WOW_PROFESSIONS_DATA || {};
+
+    const matches = [];
+    let matIcon = '';
+    let matQuality = 1;
+
+    Object.entries(data).forEach(([slug, p]) => {
+      (p.recipes || []).forEach(r => {
+        const mat = (r.reagents || []).find(m => {
+          if (!m.name) return false;
+          const mn = m.name.toLowerCase();
+          return mn === cleanLower || mn.includes(cleanLower) || cleanLower.includes(mn);
+        });
+        if (mat) {
+          if (!matIcon && mat.icon) matIcon = mat.icon;
+          if (mat.quality) matQuality = mat.quality;
+          matches.push({
+            profSlug: slug,
+            profName: p.name,
+            profIcon: p.icon,
+            recipe: r,
+            neededCount: mat.count || 1
+          });
+        }
+      });
+    });
+
+    let modal = document.getElementById('prof-reagent-lookup-modal');
+    if (!modal) {
+      modal = document.createElement('div');
+      modal.id = 'prof-reagent-lookup-modal';
+      modal.className = 'reagent-lookup-backdrop';
+      modal.setAttribute('role', 'dialog');
+      modal.setAttribute('aria-modal', 'true');
+      document.body.appendChild(modal);
+
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) closeReagentModal();
+      });
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.classList.contains('is-open')) {
+          closeReagentModal();
+        }
+      });
+    }
+
+    function closeReagentModal() {
+      modal.classList.remove('is-open');
+      modal.setAttribute('hidden', '');
+    }
+
+    const profCounts = {};
+    matches.forEach(m => {
+      profCounts[m.profName] = (profCounts[m.profName] || 0) + 1;
+    });
+    const profNames = Object.keys(profCounts);
+    const iconUrl = matIcon ? getIconUrl(matIcon) : `${CDN_BASE}inv_misc_questionmark.jpg`;
+
+    let activeFilter = 'all';
+
+    function renderModalContent() {
+      const filteredMatches = activeFilter === 'all' 
+        ? matches 
+        : matches.filter(m => m.profSlug === activeFilter);
+
+      modal.innerHTML = `
+        <div class="reagent-lookup-dialog">
+          <div class="reagent-lookup-head">
+            <div class="reagent-lookup-title-box">
+              <img src="${iconUrl}" alt="${escapeHtml(cleanName)}" class="reagent-lookup-img q${matQuality}" />
+              <div>
+                <h3 class="q${matQuality}">${escapeHtml(cleanName)}</h3>
+                <p>Required in <strong>${matches.length}</strong> recipe${matches.length === 1 ? '' : 's'} across <strong>${profNames.length}</strong> trade${profNames.length === 1 ? '' : 's'}</p>
+              </div>
+            </div>
+            <button type="button" class="reagent-lookup-close" id="reagent-lookup-close-btn" aria-label="Close dialog">✕</button>
+          </div>
+
+          ${profNames.length > 1 ? `
+            <div class="reagent-lookup-chips">
+              <button type="button" class="reagent-filter-chip ${activeFilter === 'all' ? 'active' : ''}" data-prof="all">
+                All Trades (${matches.length})
+              </button>
+              ${Object.entries(profCounts).map(([name, count]) => {
+                const slug = Object.keys(data).find(k => data[k].name === name);
+                return `
+                  <button type="button" class="reagent-filter-chip ${activeFilter === slug ? 'active' : ''}" data-prof="${slug}">
+                    ${escapeHtml(name)} (${count})
+                  </button>
+                `;
+              }).join('')}
+            </div>
+          ` : ''}
+
+          <div class="reagent-lookup-list">
+            ${filteredMatches.length === 0 ? `
+              <div class="reagent-lookup-empty">No recipes found using this component.</div>
+            ` : filteredMatches.map(m => {
+              const r = m.recipe;
+              const qClass = `q${r.quality || 1}`;
+              return `
+                <div class="reagent-lookup-row">
+                  <div class="reagent-lookup-row-main">
+                    <img src="${getIconUrl(r.icon, r.name, r.source)}" alt="${escapeHtml(r.name)}" class="reagent-row-icon ${qClass}" />
+                    <div>
+                      <div class="reagent-row-name ${qClass}">${escapeHtml(r.name)}</div>
+                      <div class="reagent-row-meta">
+                        <span class="reagent-row-prof">
+                          <img src="${getIconUrl(m.profIcon)}" alt="${escapeHtml(m.profName)}" />
+                          ${escapeHtml(m.profName)}
+                        </span>
+                        <span class="reagent-row-skill">Skill ${r.learn}</span>
+                        <span class="reagent-row-qty">Requires: <strong>${m.neededCount}x</strong></span>
+                      </div>
+                    </div>
+                  </div>
+                  <button type="button" class="reagent-jump-btn" data-slug="${m.profSlug}" data-recipe-id="${r.id || ''}" data-recipe-name="${escapeHtml(r.name)}">
+                    View in ${escapeHtml(m.profName)} ›
+                  </button>
+                </div>
+              `;
+            }).join('')}
+          </div>
+        </div>
+      `;
+
+      const closeBtn = modal.querySelector('#reagent-lookup-close-btn');
+      if (closeBtn) closeBtn.addEventListener('click', closeReagentModal);
+
+      modal.querySelectorAll('.reagent-filter-chip').forEach(btn => {
+        btn.addEventListener('click', () => {
+          activeFilter = btn.getAttribute('data-prof');
+          renderModalContent();
+        });
+      });
+
+      modal.querySelectorAll('.reagent-jump-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const targetSlug = btn.getAttribute('data-slug');
+          const targetName = btn.getAttribute('data-recipe-name');
+          const targetId = btn.getAttribute('data-recipe-id');
+          closeReagentModal();
+          if (window.WOW_PROFESSIONS && window.WOW_PROFESSIONS.selectProfession) {
+            window.WOW_PROFESSIONS.selectProfession(targetSlug, 'recipes', targetName, targetId);
+          }
+        });
+      });
+    }
+
+    renderModalContent();
+    modal.classList.add('is-open');
+    modal.removeAttribute('hidden');
   }
 
   // Dismiss tooltips when tapping outside on touch devices

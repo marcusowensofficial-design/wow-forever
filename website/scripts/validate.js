@@ -197,6 +197,51 @@ check('Professions data synchronization between JSON and JS bundle', () => {
   }
 });
 
+check('Professions category mapping and zero unmapped categories', () => {
+  const profJson = JSON.parse(fs.readFileSync(path.join(dataDir, 'forever_professions.json'), 'utf8'));
+  for (const [slug, prof] of Object.entries(profJson)) {
+    if (prof.groups && prof.recipes) {
+      const validCategories = new Set(prof.groups.map(g => g.key));
+      const unmapped = prof.recipes.filter(r => !validCategories.has(r.cat));
+      if (unmapped.length > 0) {
+        throw new Error(`Found ${unmapped.length} unmapped recipes in ${slug} (first: ${unmapped[0].name})`);
+      }
+      for (const g of prof.groups) {
+        const actual = prof.recipes.filter(r => r.cat === g.key).length;
+        if (actual !== g.count) {
+          throw new Error(`Group count mismatch in ${slug} for category "${g.key}": declared ${g.count}, actual ${actual}`);
+        }
+      }
+    }
+  }
+});
+
+check('No duplicate prefix scraping artifacts in recipe sources', () => {
+  const profRaw = fs.readFileSync(path.join(dataDir, 'forever_professions.json'), 'utf8');
+  const dirty = ['Formula: Formula:', 'Plans: Plans:', 'Pattern: Pattern:', 'Schematic: Schematic:', 'Recipe: Recipe:'];
+  for (const pattern of dirty) {
+    if (profRaw.includes(pattern)) {
+      throw new Error(`Found dirty repeated prefix "${pattern}" in forever_professions.json`);
+    }
+  }
+});
+
+check('Declared profession stats match actual array calculations', () => {
+  const profJson = JSON.parse(fs.readFileSync(path.join(dataDir, 'forever_professions.json'), 'utf8'));
+  for (const [slug, prof] of Object.entries(profJson)) {
+    if (prof.recipes) {
+      if (prof.stats?.recipeCount !== prof.recipes.length) {
+        throw new Error(`Recipe count stat mismatch in ${slug}: declared ${prof.stats?.recipeCount}, actual ${prof.recipes.length}`);
+      }
+      const actualNew = prof.recipes.filter(r => r.isNew).length;
+      if (prof.stats?.newInForever !== actualNew) {
+        throw new Error(`New in forever stat mismatch in ${slug}: declared ${prof.stats?.newInForever}, actual ${actualNew}`);
+      }
+    }
+  }
+});
+
+
 console.log('\n=======================================');
 console.log(`Ran ${totalChecks} checks. Failures: ${errors.length}`);
 console.log('=======================================\n');
