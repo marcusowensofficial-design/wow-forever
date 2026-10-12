@@ -2550,14 +2550,92 @@
 }
 
 .bis-mats-pill {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.35rem;
   font-size: 0.72rem;
   color: #fbbf24;
-  background: rgba(251, 191, 36, 0.1);
+  background: rgba(251, 191, 36, 0.08);
   border: 1px solid rgba(251, 191, 36, 0.25);
   border-radius: 4px;
-  padding: 0.1rem 0.4rem;
-  margin-top: 0.2rem;
+  padding: 0.15rem 0.45rem;
+  margin-top: 0.25rem;
+  max-width: 100%;
+}
+
+.bis-mats-label {
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+  white-space: nowrap;
+}
+
+.bis-mats-chips {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  flex-wrap: wrap;
+}
+
+.bis-mat-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.22rem;
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 3px;
+  padding: 0.08rem 0.3rem;
+  transition: all 0.15s ease;
+  cursor: pointer;
+  user-select: none;
+}
+
+.bis-mat-chip:hover {
+  background: rgba(251, 191, 36, 0.18);
+  border-color: rgba(251, 191, 36, 0.55);
+  transform: translateY(-1px);
+}
+
+.bis-mat-count {
+  font-weight: 700;
+  color: #fff;
+  font-size: 0.72rem;
+  line-height: 1;
+}
+
+.bis-mat-icon {
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  display: block;
+  object-fit: cover;
+}
+
+.bis-mat-icon.q0 { border-color: #9d9d9d; }
+.bis-mat-icon.q1 { border-color: #ffffff; }
+.bis-mat-icon.q2 { border-color: #1eff00; }
+.bis-mat-icon.q3 { border-color: #0070dd; }
+.bis-mat-icon.q4 { border-color: #a335ee; }
+
+.bis-tip-reagents-list {
+  display: flex;
+  gap: 0.35rem;
+  flex-wrap: wrap;
+  margin-top: 0.25rem;
+}
+
+.bis-tip-reagent-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.74rem;
 }
 
 /* Enchants & Consumables Prep Section */
@@ -3083,6 +3161,189 @@
 }
 
 /* ==========================================================================
+   Guide Modal Reader & Markdown Parser Styles
+   ========================================================================== */
+.guide-sec-title {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  color: var(--text-gold, #facc15);
+  margin: 1.5rem 0 0.6rem 0;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid rgba(250, 204, 21, 0.2);
+}
+
+.guide-subsec-title {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  color: #f1f5f9;
+  margin: 1.2rem 0 0.4rem 0;
+}
+
+.guide-paragraph {
+  margin-bottom: 0.85rem;
+  line-height: 1.65;
+  color: #cbd5e1;
+  font-size: 0.94rem;
+}
+
+.guide-divider {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 1.25rem 0;
+}
+
+.guide-bullet-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0.6rem 0 1rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.guide-bullet-list li {
+  position: relative;
+  padding-left: 1.35rem;
+  line-height: 1.55;
+  color: #e2e8f0;
+  font-size: 0.92rem;
+}
+
+.guide-bullet-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0.25rem;
+  top: 0;
+  color: var(--text-gold, #facc15);
+  font-weight: bold;
+}
+
+.guide-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  margin: 1rem 0 1.25rem 0;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(15, 23, 42, 0.65);
+}
+
+.guide-data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+  text-align: left;
+}
+
+.guide-data-table th {
+  background: rgba(0, 0, 0, 0.4);
+  color: var(--text-gold, #facc15);
+  padding: 0.65rem 0.85rem;
+  font-weight: 700;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  white-space: nowrap;
+}
+
+.guide-data-table td {
+  padding: 0.6rem 0.85rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  color: #e2e8f0;
+}
+
+.guide-data-table tr:hover td {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.guide-callout {
+  display: flex;
+  gap: 0.75rem;
+  padding: 0.85rem 1rem;
+  border-radius: var(--radius-sm);
+  margin: 0.9rem 0;
+  line-height: 1.5;
+  font-size: 0.9rem;
+}
+
+.guide-callout-icon {
+  font-size: 1.25rem;
+  flex-shrink: 0;
+  line-height: 1.2;
+}
+
+.guide-callout-content {
+  color: #e2e8f0;
+}
+
+.guide-callout-info {
+  background: rgba(56, 189, 248, 0.08);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+}
+
+.guide-callout-tip {
+  background: rgba(250, 204, 21, 0.08);
+  border: 1px solid rgba(250, 204, 21, 0.3);
+}
+
+.guide-callout-warning {
+  background: rgba(249, 115, 22, 0.08);
+  border: 1px solid rgba(249, 115, 22, 0.3);
+}
+
+.guide-callout-danger {
+  background: rgba(239, 68, 68, 0.08);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.guide-callout-map {
+  background: rgba(168, 85, 247, 0.08);
+  border: 1px solid rgba(168, 85, 247, 0.3);
+}
+
+.guide-inline-code {
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #38bdf8;
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 0.85em;
+}
+
+.guide-source-badge {
+  background: rgba(56, 189, 248, 0.1);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  color: #38bdf8;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.76rem;
+  font-weight: 600;
+}
+
+.guide-phase-badge {
+  background: rgba(234, 179, 8, 0.1);
+  border: 1px solid rgba(234, 179, 8, 0.3);
+  color: #facc15;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.76rem;
+  font-weight: 700;
+}
+
+.guide-sidebar-search {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-sm);
+  padding: 0.45rem 0.75rem;
+  color: #fff;
+  font-size: 0.82rem;
+  outline: none;
+  margin-top: 0.5rem;
+  transition: border-color 0.2s ease;
+}
+
+.guide-sidebar-search:focus {
+  border-color: var(--border-gold, #facc15);
+}
    Interactive Level 13-60 Dungeon Timeline Slider
    ========================================================================== */
 .timeline-control-bar {

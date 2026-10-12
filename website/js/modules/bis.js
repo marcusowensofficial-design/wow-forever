@@ -317,6 +317,85 @@ function renderBiSApp() {
   applyActiveGearFilters();
 }
 
+let bisRecipesCache = null;
+
+function getBiSRecipeCache() {
+  if (bisRecipesCache) return bisRecipesCache;
+  bisRecipesCache = { byId: new Map(), byName: new Map() };
+  const profData = window.WOW_PROFESSIONS_DATA;
+  if (!profData) return bisRecipesCache;
+
+  for (const profKey of Object.keys(profData)) {
+    const prof = profData[profKey];
+    if (prof && Array.isArray(prof.recipes)) {
+      for (const r of prof.recipes) {
+        if (r.id) bisRecipesCache.byId.set(String(r.id), r);
+        if (r.name) bisRecipesCache.byName.set(r.name.toLowerCase().trim(), r);
+      }
+    }
+  }
+  return bisRecipesCache;
+}
+
+function getReagentIconUrl(icon) {
+  if (!icon) return 'https://wow.zamimg.com/images/wow/icons/medium/inv_misc_questionmark.jpg';
+  if (icon.startsWith('http://') || icon.startsWith('https://')) return icon;
+  const clean = icon.replace(/\.(jpg|png|webp)$/i, '');
+  return `https://wow.zamimg.com/images/wow/icons/medium/${clean}.jpg`;
+}
+
+function getItemReagents(item) {
+  if (!item) return null;
+  if (item.reagents && Array.isArray(item.reagents) && item.reagents.length > 0) {
+    return item.reagents;
+  }
+  const cache = getBiSRecipeCache();
+  const id = item.itemId || item.tipId;
+  let recipe = null;
+  if (id) {
+    recipe = cache.byId.get(String(id));
+  }
+  if (!recipe && item.tipId && String(item.tipId).length > 6) {
+    recipe = cache.byId.get(String(item.tipId).slice(0, 6));
+  }
+  if (!recipe && item.name) {
+    const cleanName = item.name.replace(/\s+of\s+the\s+.*$/i, '').toLowerCase().trim();
+    recipe = cache.byName.get(cleanName) || cache.byName.get(item.name.toLowerCase().trim());
+  }
+  if (recipe && Array.isArray(recipe.reagents) && recipe.reagents.length > 0) {
+    return recipe.reagents;
+  }
+  return null;
+}
+
+function renderItemMatsHtml(item, fallbackMats) {
+  const reagents = getItemReagents(item);
+  if (reagents && reagents.length > 0) {
+    return `
+      <div class="bis-mats-pill">
+        <span class="bis-mats-label">🔨 Mats:</span>
+        <span class="bis-mats-chips">
+          ${reagents.map(r => `
+            <span class="bis-mat-chip"
+                  data-mat-name="${escapeHtml(r.name)}"
+                  data-mat-count="${r.count}"
+                  data-mat-icon="${escapeHtml(r.icon || '')}"
+                  data-mat-quality="${r.quality || 1}"
+                  title="${r.count}x ${escapeHtml(r.name)}">
+              <span class="bis-mat-count">${r.count}</span>
+              <img src="${getReagentIconUrl(r.icon)}" alt="${escapeHtml(r.name)}" class="bis-mat-icon q${r.quality || 1}" loading="lazy" />
+            </span>
+          `).join('')}
+        </span>
+      </div>
+    `;
+  }
+  if (fallbackMats) {
+    return `<div class="bis-mats-pill">🔨 Mats: ${escapeHtml(fallbackMats)}</div>`;
+  }
+  return '';
+}
+
 /**
  * Render individual paper-doll slot card
  */
@@ -403,6 +482,9 @@ function renderPaperDollSlot(slotKey, slotLabel, spec) {
   const itemId = equipped.itemId || (fullItem ? fullItem.itemId : '');
   const side = fullItem ? fullItem.side : (equipped.side || 'both');
   const mats = fullItem ? fullItem.mats : (equipped.mats || '');
+  const reagents = getItemReagents(fullItem || equipped);
+  const reagentsAttr = reagents ? escapeHtml(JSON.stringify(reagents)) : '';
+  const matsHtml = renderItemMatsHtml(fullItem || equipped, mats);
 
   return `
     <div class="bis-slot-card"
@@ -416,7 +498,8 @@ function renderPaperDollSlot(slotKey, slotLabel, spec) {
          data-item-tipid="${tipId}"
          data-item-id="${itemId}"
          data-item-side="${side}"
-         data-item-mats="${escapeHtml(mats)}">
+         data-item-mats="${escapeHtml(mats)}"
+         data-item-reagents="${reagentsAttr}">
       <span class="bis-slot-label">${slotLabel}</span>
       <div class="bis-slot-main">
         <img src="${iconUrl}" alt="${escapeHtml(name)}" class="bis-slot-icon ${quality}" loading="lazy" />
@@ -425,6 +508,7 @@ function renderPaperDollSlot(slotKey, slotLabel, spec) {
           ${stats ? `<span class="bis-item-stats">${escapeHtml(stats)}</span>` : ''}
           ${enchant && enchant !== 'None' ? `<span class="bis-item-enchant">✨ ${escapeHtml(enchant)}</span>` : ''}
           ${source ? `<span class="bis-item-source">📍 ${escapeHtml(source)}</span>` : ''}
+          ${matsHtml}
           ${side === 'alliance' ? `<span class="bis-side-pill alliance"><img src="images/icons/faction-alliance.jpg" class="bis-mini-faction-icon" alt="" onerror="this.src='https://render.worldofwarcraft.com/us/icons/56/achievement_pvp_a_a.jpg'" /> Alliance</span>` : ''}
           ${side === 'horde' ? `<span class="bis-side-pill horde"><img src="images/icons/faction-horde.jpg" class="bis-mini-faction-icon" alt="" onerror="this.src='https://render.worldofwarcraft.com/us/icons/56/achievement_pvp_h_h.jpg'" /> Horde</span>` : ''}
         </div>
@@ -531,6 +615,10 @@ function renderSlotsAlternativesTable(spec) {
               : `https://render.worldofwarcraft.com/us/icons/56/${item.icon || 'inv_misc_questionmark.jpg'}`;
 
             const matchesFaction = item.side === 'both' || item.side === faction;
+            const mats = item.mats || '';
+            const reagents = getItemReagents(item);
+            const reagentsAttr = reagents ? escapeHtml(JSON.stringify(reagents)) : '';
+            const matsHtml = renderItemMatsHtml(item, mats);
 
             return `
               <div class="bis-alt-row ${isRank1 ? 'bis-rank-1' : ''} ${matchesFaction ? '' : 'bis-faction-mismatch'}"
@@ -543,7 +631,8 @@ function renderSlotsAlternativesTable(spec) {
                    data-item-tipid="${item.tipId || ''}"
                    data-item-id="${item.itemId || ''}"
                    data-item-side="${item.side || 'both'}"
-                   data-item-mats="${escapeHtml(item.mats || '')}">
+                   data-item-mats="${escapeHtml(mats)}"
+                   data-item-reagents="${reagentsAttr}">
                 <span class="bis-rank-badge ${rankBadgeClass}">${rankLabel}</span>
                 <img src="${iconUrl}" alt="${escapeHtml(item.name)}" class="bis-alt-icon ${item.quality || 'q2'}" loading="lazy" />
                 <div class="bis-alt-info">
@@ -560,7 +649,7 @@ function renderSlotsAlternativesTable(spec) {
                 </div>
                 <div class="bis-alt-source">
                   <div>📍 ${escapeHtml(item.source || 'Unknown')}</div>
-                  ${item.mats ? `<div class="bis-mats-pill">🔨 Mats: ${escapeHtml(item.mats)}</div>` : ''}
+                  ${matsHtml}
                 </div>
               </div>
             `;
@@ -1459,6 +1548,31 @@ function generateFallbackTalentTrees(classId, spec) {
   });
 }
 
+function renderReagentTooltip(chip, e, tooltip) {
+  const name = chip.getAttribute("data-mat-name") || "Crafting Material";
+  const count = chip.getAttribute("data-mat-count") || "1";
+  const icon = chip.getAttribute("data-mat-icon") || "";
+  const quality = chip.getAttribute("data-mat-quality") || "1";
+  const iconUrl = getReagentIconUrl(icon);
+
+  tooltip.innerHTML = `
+    <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.35rem;">
+      <img src="${iconUrl}" width="26" height="26" class="q${quality}" style="border-radius: 3px; border: 1px solid rgba(255,255,255,0.18);" />
+      <div>
+        <div class="wow-tip-name q${quality}" style="font-size: 0.95rem; font-weight: 700; line-height: 1.2;">${escapeHtml(name)}</div>
+        <div style="font-size: 0.72rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.04em; margin-top: 0.1rem;">Crafting Reagent</div>
+      </div>
+    </div>
+    <div style="border-top: 1px dashed rgba(255,255,255,0.12); padding-top: 0.35rem; font-size: 0.78rem; color: #cbd5e1;">
+      Required quantity: <strong style="color: #fbbf24;">${escapeHtml(count)}</strong>
+    </div>
+  `;
+  tooltip.removeAttribute("hidden");
+  tooltip.style.display = "block";
+  tooltip.style.opacity = "1";
+  updateTooltipPosition(e, tooltip);
+}
+
 /**
  * Initialize Classic WoW Floating Item Tooltip Engine
  */
@@ -1469,20 +1583,43 @@ function initItemTooltips() {
   const container = document.getElementById("bis-container");
   if (!container) return;
 
+  let activeReagentChip = null;
+
   container.addEventListener("mouseenter", (e) => {
+    const chip = e.target.closest(".bis-mat-chip");
+    if (chip) {
+      activeReagentChip = chip;
+      renderReagentTooltip(chip, e, tooltip);
+      return;
+    }
     const card = e.target.closest(".bis-slot-card:not(.empty), .bis-alt-row");
     if (!card) return;
+    activeReagentChip = null;
     renderFloatingTooltip(card, e, tooltip);
   }, true);
 
   container.addEventListener("mousemove", (e) => {
     if (tooltip.hasAttribute("hidden")) return;
+
+    const chip = e.target.closest(".bis-mat-chip");
+    if (chip && chip !== activeReagentChip) {
+      activeReagentChip = chip;
+      renderReagentTooltip(chip, e, tooltip);
+    } else if (!chip && activeReagentChip) {
+      activeReagentChip = null;
+      const card = e.target.closest(".bis-slot-card:not(.empty), .bis-alt-row");
+      if (card) {
+        renderFloatingTooltip(card, e, tooltip);
+      }
+    }
+
     updateTooltipPosition(e, tooltip);
   });
 
   container.addEventListener("mouseleave", (e) => {
     const card = e.target.closest(".bis-slot-card, .bis-alt-row");
     if (card) {
+      activeReagentChip = null;
       tooltip.setAttribute("hidden", "");
       tooltip.style.display = "none";
       tooltip.style.opacity = "0";
@@ -1614,7 +1751,35 @@ function renderFloatingTooltip(card, e, tooltip) {
     html += `<div class="wow-tip-source">📍 Source: ${escapeHtml(source)}</div>`;
   }
 
-  if (mats) {
+  const reagentsRaw = card.getAttribute("data-item-reagents");
+  let reagents = null;
+  if (reagentsRaw) {
+    try {
+      reagents = JSON.parse(reagentsRaw);
+    } catch {
+      // Ignored
+    }
+  }
+  if (!reagents && fullItem) {
+    reagents = getItemReagents(fullItem);
+  }
+
+  if (reagents && reagents.length > 0) {
+    html += `
+      <div class="wow-tip-mats" style="margin-top: 0.45rem; padding-top: 0.4rem; border-top: 1px dashed rgba(255, 255, 255, 0.12);">
+        <div style="color: #fbbf24; font-size: 0.78rem; font-weight: 700; margin-bottom: 0.3rem;">🔨 Materials Required:</div>
+        <div class="bis-tip-reagents-list">
+          ${reagents.map(r => `
+            <span class="bis-tip-reagent-badge">
+              <span style="color: #fff; font-weight: 700;">${r.count}x</span>
+              <img src="${getReagentIconUrl(r.icon)}" width="16" height="16" class="q${r.quality || 1}" style="border-radius: 2px;" loading="lazy" />
+              <span class="q${r.quality || 1}">${escapeHtml(r.name)}</span>
+            </span>
+          `).join('')}
+        </div>
+      </div>
+    `;
+  } else if (mats) {
     html += `<div class="wow-tip-mats" style="color: #fbbf24; font-size: 0.78rem; margin-top: 0.2rem;">🔨 Materials: ${escapeHtml(mats)}</div>`;
   }
 

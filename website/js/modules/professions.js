@@ -826,6 +826,20 @@
       return;
     }
 
+    const levelingStorageKey = `wowforever_leveling_${prof.slug}`;
+    let completedSteps = [];
+    try {
+      completedSteps = JSON.parse(localStorage.getItem(levelingStorageKey) || '[]');
+      if (!Array.isArray(completedSteps)) completedSteps = [];
+    } catch {
+      completedSteps = [];
+    }
+
+    const actionableSteps = steps.filter(s => s.type === 'step' || s.type === 'gather-step');
+    const totalStepsCount = actionableSteps.length;
+    const initialCompletedCount = steps.filter((s, i) => (s.type === 'step' || s.type === 'gather-step') && completedSteps.includes(`${prof.slug}_step_${i}`)).length;
+    const initialPct = totalStepsCount > 0 ? Math.round((initialCompletedCount / totalStepsCount) * 100) : 0;
+
     container.innerHTML = `
       <div class="leveling-header-block">
         <div class="leveling-header-title">
@@ -835,10 +849,32 @@
           </h3>
           <p>${escapeHtml(leveling.desc || "At each point, you get the cheapest recipe to skill up, whether you learn it from the trainer or buy it from a vendor. Counts are averages, so buy a few more. There are no prices until launch, so each reagent counts for what a vendor pays you for it.")}</p>
         </div>
+        <div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap;">
+          <button type="button" class="shopping-copy-btn shopping-reset-btn" id="leveling-reset-btn" aria-label="Reset leveling checklist" title="Reset all checked leveling crafts">
+            <span>↺</span> Reset Checklist
+          </button>
+        </div>
+      </div>
+
+      <!-- Interactive Leveling Checklist Progress Bar -->
+      <div class="shopping-checklist-bar leveling-checklist-bar">
+        <div class="shopping-progress-labels">
+          <span>
+            <strong>Leveling Milestones Completed:</strong> 
+            <span id="leveling-progress-count">${initialCompletedCount}</span> / ${totalStepsCount} (<span id="leveling-progress-pct">${initialPct}%</span>)
+          </span>
+          <span style="font-size: 0.75rem; color: #94a3b8;">Check off each recipe or bracket as you advance in-game</span>
+        </div>
+        <div class="shopping-progress-track">
+          <div class="shopping-progress-fill leveling-progress-fill" id="leveling-progress-fill" style="width: ${initialPct}%;"></div>
+        </div>
       </div>
 
       <div class="leveling-roadmap-list">
-        ${steps.map(item => {
+        ${steps.map((item, idx) => {
+          const stepId = `${prof.slug}_step_${idx}`;
+          const isCompleted = completedSteps.includes(stepId);
+
           if (item.type === 'rank') {
             const isArtisan = item.rank && item.rank.toLowerCase().includes('artisan');
             return `
@@ -870,7 +906,10 @@
             const leftPercent = item.bar?.iLeft || '0%';
             const widthPercent = item.bar?.iWidth || '10%';
             return `
-              <div class="leveling-step-row">
+              <div class="leveling-step-row ${isCompleted ? 'completed' : ''}" data-step-id="${stepId}">
+                <div class="step-check-col">
+                  <input type="checkbox" class="leveling-step-check" ${isCompleted ? 'checked' : ''} aria-label="Mark ${escapeHtml(item.recipeName)} as completed" />
+                </div>
                 <div class="step-range-col">
                   <span class="step-range-text">${rangeStr}</span>
                   <div class="step-progress-track">
@@ -907,7 +946,10 @@
             const leftPercent = item.bar?.iLeft || '0%';
             const widthPercent = item.bar?.iWidth || '12%';
             return `
-              <div class="leveling-step-row">
+              <div class="leveling-step-row ${isCompleted ? 'completed' : ''}" data-step-id="${stepId}">
+                <div class="step-check-col">
+                  <input type="checkbox" class="leveling-step-check" ${isCompleted ? 'checked' : ''} aria-label="Mark ${escapeHtml(item.title)} as completed" />
+                </div>
                 <div class="step-range-col">
                   <span class="step-range-text">${rangeStr}</span>
                   <div class="step-progress-track">
@@ -919,7 +961,7 @@
                   <strong style="color: var(--text-gold, #facc15); font-size: 1.05rem;">${escapeHtml(item.title)}</strong>
                   <div class="step-source-line" style="color: #cbd5e1; margin-top: 0.25rem;">${escapeHtml(item.zones)}</div>
                 </div>
-                <div class="step-reagents-col" style="grid-column: 3 / -1;">
+                <div class="step-reagents-col" style="grid-column: 4 / -1;">
                   ${(item.icons || []).map(ic => `
                     <div class="step-reagent-badge" title="${escapeHtml(ic.name)}" data-item-name="${escapeHtml(ic.name)}">
                       <img src="${getIconUrl(ic.icon)}" alt="${escapeHtml(ic.name)}" class="step-reagent-img" loading="lazy" />
@@ -933,6 +975,50 @@
         }).join('')}
       </div>
     `;
+
+    function updateLevelingProgress() {
+      const curCompleted = steps.filter((s, i) => (s.type === 'step' || s.type === 'gather-step') && completedSteps.includes(`${prof.slug}_step_${i}`)).length;
+      const curPct = totalStepsCount > 0 ? Math.round((curCompleted / totalStepsCount) * 100) : 0;
+      const countEl = container.querySelector('#leveling-progress-count');
+      const pctEl = container.querySelector('#leveling-progress-pct');
+      const fillEl = container.querySelector('#leveling-progress-fill');
+      if (countEl) countEl.textContent = curCompleted;
+      if (pctEl) pctEl.textContent = `${curPct}%`;
+      if (fillEl) fillEl.style.width = `${curPct}%`;
+    }
+
+    container.querySelectorAll('.leveling-step-check').forEach(chk => {
+      chk.addEventListener('change', (e) => {
+        e.stopPropagation();
+        const row = chk.closest('.leveling-step-row');
+        const stepId = row?.getAttribute('data-step-id');
+        if (!stepId) return;
+        if (chk.checked) {
+          if (!completedSteps.includes(stepId)) completedSteps.push(stepId);
+          row.classList.add('completed');
+        } else {
+          completedSteps = completedSteps.filter(x => x !== stepId);
+          row.classList.remove('completed');
+        }
+        try { localStorage.setItem(levelingStorageKey, JSON.stringify(completedSteps)); } catch {}
+        updateLevelingProgress();
+      });
+    });
+
+    const resetBtn = container.querySelector('#leveling-reset-btn');
+    if (resetBtn) {
+      resetBtn.addEventListener('click', () => {
+        if (!completedSteps.length) return;
+        completedSteps = [];
+        try { localStorage.removeItem(levelingStorageKey); } catch {}
+        container.querySelectorAll('.leveling-step-check').forEach(chk => { chk.checked = false; });
+        container.querySelectorAll('.leveling-step-row').forEach(r => { r.classList.remove('completed'); });
+        updateLevelingProgress();
+        if (typeof window.showToast === 'function') {
+          window.showToast(`${prof.name} leveling checklist reset.`, 'info');
+        }
+      });
+    }
 
     attachTooltipListeners(container, prof);
   }
@@ -958,7 +1044,7 @@
     try {
       acquiredItems = JSON.parse(localStorage.getItem(storageKey) || '[]');
       if (!Array.isArray(acquiredItems)) acquiredItems = [];
-    } catch (e) {
+    } catch {
       acquiredItems = [];
     }
 
@@ -1056,7 +1142,7 @@
           acquiredItems = acquiredItems.filter(x => x !== name);
           card.classList.remove('is-acquired');
         }
-        try { localStorage.setItem(storageKey, JSON.stringify(acquiredItems)); } catch (err) {}
+        try { localStorage.setItem(storageKey, JSON.stringify(acquiredItems)); } catch {}
         updateShoppingProgress();
       });
     });
@@ -1066,7 +1152,7 @@
       resetBtn.addEventListener('click', () => {
         if (!acquiredItems.length) return;
         acquiredItems = [];
-        try { localStorage.removeItem(storageKey); } catch (err) {}
+        try { localStorage.removeItem(storageKey); } catch {}
         container.querySelectorAll('.shopping-item-check').forEach(chk => { chk.checked = false; });
         container.querySelectorAll('.shopping-row-card').forEach(c => { c.classList.remove('is-acquired'); });
         updateShoppingProgress();

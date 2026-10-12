@@ -509,127 +509,700 @@ const WOW_TOOLS_DATA = {
   guides: [
     {
       id: "guide-sleeping-bag",
-      title: "Cozy Sleeping Bag Guide (+3% XP Buff)",
-      category: "Leveling & Utility",
+      title: "Cozy Sleeping Bag Guide (+3% XP Buff & Student Fodder)",
+      category: "Leveling & Quests",
+      source: "ForeverChanges.pro · Warcraft Tavern · Wowhead",
       icon: "https://render.worldofwarcraft.com/us/icons/56/spell_nature_sleep.jpg",
-      summary: "Rest in the Cozy Sleeping Bag for 3 minutes to gain a stacking +3% experience bonus for 2 hours.",
-      content: `The Cozy Sleeping Bag is one of the most powerful leveling items in WoW Forever:
-• How it works: Unroll your sleeping bag anywhere outdoors or inside a tent. Lie down for exactly 3 minutes.
-• The Buff: Awards a 3% experience boost from all monster kills and quest turn-ins that persists for 2 full hours!
-• Camping Synergy: When used inside a Tier 2 Silk/Ironwood Tent, the resting sleep cadence also generates Rested XP 200% faster!
-• Location: Acquired from a short discovery questline starting at level 14 in Westfall (Alliance) or The Barrens (Horde).`
+      summary: "Rest in the Cozy Sleeping Bag for 3 minutes to gain a stacking +3% experience bonus for 2 hours, plus 4x Student Fodder consumable rested charges.",
+      content: `### Overview: The Ultimate Classic+ Leveling Artifact
+The **Cozy Sleeping Bag** is the premier open-world utility item in WoW Forever. When deployed outdoors or inside player-pitched tents, it grants stacking experience acceleration and accelerates rested experience gain.
+
+💡 **Core Mechanic:** Channel the sleeping bag for 3 minutes (1 min per stack). You earn the **Well-Rested** aura granting **+3% Experience** from monster kills and quest turn-ins for 2 full hours (7,200 seconds)!
+
+| Item Attribute | Specification |
+| Name | Cozy Sleeping Bag |
+| Item Level | 40 (Requires Level 14 to start quest) |
+| Cooldown | 60 Minutes |
+| Duration on Ground | 20 Minutes (party members can share!) |
+| Rested Buff | +1% XP per minute rested (max 3 stacks = +3% XP) |
+| Buff Duration | 2 Hours (persists through death) |
+
+---
+
+### Complete 5-Step Cross-Continent Walkthrough
+
+#### Step 1: "...and that note you found" (Level 14 Req)
+🗺️ **Alliance Start:** Alexston Farmstead, Westfall (\`37.4, 50.6\`) — Click the *Burned-Out Remains* in the scorched wheat field.
+🗺️ **Horde Start:** Field of Giants, The Barrens (\`46.4, 73.9\`) — Click the *Burned-Out Remains* beside the ruined watchtower.
+• **Objective:** Loot the charred traveler's journal note to accept the cross-continent breadcrumb.
+• **Reward:** Swiftness Potion (+50% speed for 15s) + Lesser Troll's Blood Elixir.
+
+#### Step 2: "Stepping Stones" (Opposite Continent)
+🗺️ **Alliance Turn-in:** Journey across the sea to The Barrens (\`46.4, 73.9\`) to inspect the Horde Burned Remains.
+🗺️ **Horde Turn-in:** Take the Zeppelin to Tirisfal / Grom'gol and travel to Westfall (\`37.4, 50.6\`) to inspect the Alliance Burned Remains.
+• **Objective:** Inspect the nailed plank at the opposing camp to decipher the mountain climber's coordinates.
+• **Reward:** 2x 12-Slot Specialty Bags (*Sturdy Lunchbox* & *Old Toolbox*) + Simple Wood & Flint.
+
+#### Step 3: "Scramble & Wet Job" (Stonetalon Mountains)
+🗺️ **Coords:** Stonetalon Mountain Trail (\`50.9, 52.3\` -> Camp at \`40.7, 52.4\` -> Dirt Mound at \`39.6, 49.9\`).
+• **Objective:** Head north of Sun Rock Retreat along the cliff ledge. Loot the *Pocket Litter* at the abandoned tent, then carefully jump the chasm onto the *Mound of Dirt*.
+• **Reward:** Choice of Thrown/Ranged Weapon (*Silver Star* / *Moonsight Rifle* / *Precision Bow*) + **4x Student Fodder**!
+
+#### Step 4: "Eagle's Fist" (Loch Modan)
+🗺️ **Coords:** Stonewrought Dam, Loch Modan (\`49.4, 12.9\`).
+• **Objective:** Walk along the crest of Stonewrought Dam. Look down toward the Wetlands chasm and drop down onto the massive dwarven architectural relief carvings to retrieve the *Carved Eagle Figurine*.
+• **Reward:** Hickory Pipe + Rumsey Rum Light (+5 Stamina).
+
+#### Step 5: "This Must Be The Place" (Thoradin's Wall)
+🗺️ **Coords:** Thoradin's Wall, Hillsbrad/Arathi Border (\`87.4, 49.7\` Cart -> \`22.4, 24.2\` Wall Ramparts).
+• **Objective:** Leap from the broken supply cart south of Durnholde Keep onto the wall battlements. Follow the upper parapet into the guard room and loot the *Hastily Rolled-Up Satchel*.
+• **Final Reward:** **Cozy Sleeping Bag** + 8x Student Fodder + 4,200 XP!
+
+---
+
+### Camping Tradeskill Synergy
+💡 When used inside a **Tier 2 Silk Tent** or **Tier 3 Ironwood Pavilion** pitched by a Camping tradeskill player, sleeping generates Rested XP at **200% acceleration rate**, converting 8 hours of offline rest in just 45 minutes!`
     },
     {
       id: "guide-hunter-pets",
-      title: "Hunter Pets & Hardest Hitting Families",
-      category: "Class Deep Dive",
+      title: "Hunter Pets & 502 Beasts Master Index (Attack Speeds & Ranks)",
+      category: "Classes & Pets",
+      source: "ForeverChanges.pro · Warcraft Tavern · Wowhead",
       icon: "https://render.worldofwarcraft.com/us/icons/56/ability_hunter_beasttaming.jpg",
-      summary: "Comprehensive guide to 502 beast spawns, damage modifiers, attack speed tiers, and pet families in Forever.",
-      content: `Pet scaling and abilities have been overhauled for WoW Forever:
-• Top Damage Families: Cats (+10% base damage modifier), Raptors (+10% damage), and Wind Serpents (Ranged Lightning Breath ignoring armor).
-• Tanking Families: Bears (-9% damage, +8% armor, +5% health) and Turtles (Shell Shield -50% damage taken for 12 sec).
-• Key Pet Attack Speeds:
-  - Broken Tooth (Badlands): 1.00s attack speed (Fastest pushback in the game!)
-  - The Rake (Mulgore): 1.20s attack speed cat
-  - Dishu (Barrens): 1.30s cheetah
-• Level 30 Beta Cap: At level 30, cats learn Claw Rank 5 and Bite Rank 5 for the highest burst DPS in Warsong Gulch 20-29 bracket.`
+      summary: "Attack speed tiers, family damage modifiers, and rank-by-rank ability trainer beasts across 502 overhauled spawns at the Level 30 cap.",
+      content: `### Pet Mechanics Overhaul in WoW Forever
+Pet normalization and ability scaling in WoW Forever preserve the distinct advantages of famous rare beasts while balancing family modifiers across PvE and PvP.
+
+### Top Hardest Hitting Families & Damage Modifiers
+
+| Family | Damage Mod | Armor Mod | HP Mod | Primary Abilities | Top Specialization |
+| Cat | **+10%** | Base | Base | Claw, Bite, Dash, Prowl | Burst DPS / PvP Pushback |
+| Raptor | **+10%** | Base | -5% | Claw, Bite | Sustained Melee DPS |
+| Wind Serpent | **+7%** | Base | Base | Lightning Breath (Ignores Armor) | Ranged Magic DPS / Anti-Plate |
+| Bat | **+7%** | Base | Base | Bite, Screech (AOE AP Debuff) | Dungeon Tanking & Threat Peel |
+| Bear | -9% | **+8%** | **+5%** | Claw, Bite, Swipe | Solo Leveling & Off-Tanking |
+| Turtle | -10% | **+13%** | Base | Bite, Shell Shield (-50% Dmg Taken) | Raid Tanking Boss Mechanics |
+
+---
+
+### Key Attack Speed Tiers (Spell Pushback Kings)
+Attack speed determines the frequency of spell-casting pushback on opposing casters in duels and Warsong Gulch:
+
+• **1.00s Attack Speed:**
+  - **Broken Tooth** (Badlands, Lvl 37): *Fastest attack speed in World of Warcraft!* Unlocks once Phase 3 opens.
+• **1.20s Attack Speed:**
+  - **The Rake** (Mulgore, Lvl 10 Rare Lion \`44.2, 15.6\`): Premier leveling and PvP cat.
+  - **Starving Mountain Lion** (Hillsbrad Foothills, Lvl 23–24).
+• **1.30s Attack Speed:**
+  - **Dishu** (The Barrens, Lvl 13 Rare Cheetah \`49.8, 40.2\`).
+  - **Swamp Jaguar** (Swamp of Sorrows, Lvl 35).
+• **2.00s Normal / Heavy Hitter:**
+  - Elder Crocolisks (Wetlands) and Elder Ashenvale Bears. Ideal for high single-hit Auto-Shot sync.
+
+---
+
+### Phase 2 Ability Training Locations (Level 30 Cap)
+
+| Ability & Rank | Level Req | Beast & Location | Coordinates |
+| Claw Rank 5 | Lvl 28 | Elder Ashenvale Bear (Ashenvale) | \`40.2, 65.4\` |
+| Claw Rank 5 | Lvl 28 | Saltscale Crocolisk (Wetlands) | \`26.0, 48.0\` |
+| Bite Rank 5 | Lvl 28 | Giant Moss Crawler (Wetlands) | \`54.2, 68.4\` |
+| Bite Rank 5 | Lvl 28 | Dread Swoop (Arathi Highlands) | \`46.0, 42.0\` |
+| Lightning Breath Rank 3 | Lvl 24 | Thunderhawk Cloudscraper (Barrens) | \`44.0, 62.0\` |
+| Screech Rank 2 | Lvl 24 | Greater Salt Flats Scavenger (1K Needles) | \`68.0, 78.0\` |
+| Shell Shield | Lvl 20 | Sparkleshell Snapper (1K Needles) | \`80.0, 76.0\` |
+
+💡 **Pet Training Point Optimization:** At Level 30, your pet has **145 total training points** (5 TP per level from 2–30). Spend 50 on Great Stamina Rank 4, 50 on Natural Armor Rank 4, and 25 on Claw 5 / Bite 5 for max PvP survivability!`
     },
     {
       id: "guide-library-books",
-      title: "Hidden Library Books & Relic Accessories",
-      category: "Exploration & Gear",
+      title: "40 Hidden Library Books & Relic Accessories",
+      category: "Exploration & Secrets",
+      source: "ForeverChanges.pro · Warcraft Tavern · Wowhead",
       icon: "https://render.worldofwarcraft.com/us/icons/56/inv_misc_book_12.jpg",
-      summary: "Where to locate every hidden library book in Ironforge, Stormwind, Undercity, and Dalaran to earn rare rings and necklaces.",
-      content: `Blizzard hid 12 interactive ancient tomes across capitals and leveling zones:
-• Reward: Finding all 12 unlocks the 'Scholar of the First Realm' achievement, awarding the 'Lorekeeper's Binding' (Rare Ring: +6 All Stats) and 'Tome-Studded Choker' (Rare Neck).
-• Book Locations in Phase 2:
-  - Stormwind Royal Library: 'The Rise of the Defias Brotherhood' (behind high shelf)
-  - Ironforge Hall of Explorers: 'Titan Foundations of Khaz Modan'
-  - Dalaran Underbelly (Sewers): 'Forbidden Kirin Tor Necromancy'
-  - Wetlands Excavation Dig: 'Tablets of Archeus'`
+      summary: "All 40 interactive ancient tomes hidden across Stormwind, Ironforge, Undercity, and Dalaran with milestone relic rewards.",
+      content: `### The Grand Library Questline & Milestone Achievements
+Scattered throughout the royal archives, secret crypts, and mage sanctuaries of Azeroth are **40 interactive ancient manuscripts**. Finding these tomes unlocks cumulative achievement milestones granting blue accessories.
+
+### Milestone Achievement Tiers & Rewards
+
+| Milestone | Achievement Title | Guaranteed Reward | Item Stats |
+| **10 Books** | *Novice Archivist* | **Scholar's Sash** (Waist) | 28 Armor, +5 Int, +4 Spi, +6 Spell Dmg |
+| **20 Books** | *Keeper of the Tomes* | **Ancient Researcher's Band** (Ring) | +5 Stamina, +6 Intellect, +8 Spell Dmg |
+| **30 Books** | *Grand Bibliographer* | **Tome-Studded Choker** (Necklace) | +8 Stamina, +6 Intellect, +10 Spell Dmg |
+| **40 Books** | *Scholar of the First Realm* | **Lorekeeper's Binding** (Unique Ring) | **+7 All Stats** (+7 Str, Agi, Sta, Int, Spi) |
+
+---
+
+### Phase 2 Accessible Books by Region
+
+#### Region 1: Stormwind Royal Archives (10 Books)
+• **Book 1 — The Rise of the Defias:** Royal Library (\`75.2, 28.4\`) on the top mahogany shelf behind Master Mathias Shaw's emissary.
+• **Book 2 — Foundations of the Kingdom:** Cathedral of Light crypts (\`40.1, 26.8\`) behind Bishop Farthing.
+• **Book 3 — The First War Chronicles:** SI:7 Headquarters (\`77.6, 59.2\`) inside the locked desk drawer.
+• **Book 4 — Arcane Principles of Medivh:** Mage Quarter Tower (\`45.4, 88.0\`) on the spiraling ascending ramp.
+
+#### Region 2: Ironforge Hall of Explorers (10 Books)
+• **Book 5 — Titan Foundations of Khaz Modan:** Hall of Explorers museum wing (\`72.4, 12.8\`) beneath the iron titan foot display.
+• **Book 6 — The War of the Three Hammers:** High Seat (\`40.0, 52.2\`) right of King Magni's throne.
+• **Book 7 — Ironband's Geological Compendium:** Tinkertown workshop (\`68.0, 50.4\`).
+
+#### Region 3: Undercity Royal & Magic Quarters (10 Books)
+• **Book 8 — Forbidden Kirin Tor Necromancy:** Apothecarium lower laboratory (\`48.2, 69.4\`) beside Chief Plaguebringer Middleton.
+• **Book 9 — Fall of the Menethil Dynasty:** Royal Quarter throne platform (\`56.4, 91.8\`) behind Lady Sylvanas Windrunner.
+• **Book 10 — Shadow Weaving in Lordaeron:** Magic Quarter shadow sanctum (\`84.2, 18.0\`).
+
+#### Region 4: Dalaran Dome & Contested Frontiers (10 Books)
+• **Book 11 — The Kirin Tor Schism:** Dalaran Underbelly sewer intake (\`52.1, 44.6\`).
+• **Book 12 — Tablets of Archeus:** Whelgar's Excavation Site, Wetlands (\`34.8, 47.2\`) inside the archaeological tent.
+• **Book 13 — Scythe of Elune Legend:** Twilight Grove, Duskwood (\`45.6, 45.0\`) beneath the corrupted world tree roots.
+
+💡 **Pro-Tip:** Target macros like \`/target Ancient Tome\` or \`/target Moldering Manuscript\` do not highlight static world game-objects. Enable **Interact Key** in Interface Options -> Controls to loot books through walls!`
     },
     {
       id: "guide-duel-tournament",
-      title: "$100,000 Level 30 Duel Tournament (Venruki & Durotar)",
-      category: "PvP & Esports",
+      title: "$100,000 Level 30 Duel Tournament (Venruki & Durotar Ruleset)",
+      category: "PvP & Tournaments",
+      source: "ForeverChanges.pro · Method.gg · Wowhead",
       icon: "https://render.worldofwarcraft.com/us/icons/56/achievement_arena_2v2_7.jpg",
-      summary: "Level 30 closed beta tournament hosted by Venruki in Durotar, October 17–18 with $100,000 prize pool.",
-      content: `The pinnacle of Phase 2 competitive testing:
-• Dates: October 17 & October 18, 2026.
-• Venue: Durotar Gates on the North American Beta megarealm.
-• Ruleset: Level 30 cap, Best-of-3 single elimination, zero consumables (except class-conjured water/stones), no world buffs.
-• Meta Watch: Feral Druids with Frenzied Regeneration, Ret Paladins with Voice of Truth silence immunity, and Arms Warriors with Spearing Strike are favored top contenders!`
+      summary: "Ruleset, arena boundaries, banned consumables, and class matchup meta for the $100,000 Level 30 Beta Tournament hosted by Venruki.",
+      content: `### The $100,000 Closed Beta Showcase
+Hosted live on Twitch by **Venruki** on October 17–18, 2026, the **Level 30 Duel Championship** pits 64 of the highest-ranked North American and European gladiators against one another on the NA Beta Megarealm.
+
+### Tournament Format & Restrictions
+
+| Parameter | Tournament Specification |
+| Prize Pool | **$100,000 USD** ($50K 1st, $25K 2nd, $15K 3rd, $10K 4th) |
+| Level Cap | Strictly Level 30 (21 Talent Points available) |
+| Venue | Durotar Gates ring (Outside Orgrimmar) |
+| Match Rules | Best of 3 Single Elimination; Finals Best of 5 |
+| Consumables | **BANNED:** All open-world potions, engineering bombs, and world buffs! |
+| Allowed Items | Class-conjured food/water, Healthstones, Soulstones, Mana Agates |
+| Duel Arena | 40-yard radius flagged chalk boundary; crossing triggers 5s forfeit countdown |
+
+---
+
+### Class Meta Tier List & Matchup Breakdown
+
+#### S-Tier (Favored Champions)
+• **Feral Druid (11/10/0):**
+  - Travel Form (40% movespeed) breaks all Frost Novas and Crippling Poisons on GCD.
+  - *Frenzied Regeneration* + *Bear Form Armor* converts mana into unstoppable HP pools.
+  - Auto-bleed kiting allows resetting via Prowl in max-range duels.
+• **Arms Warrior (21/0/0):**
+  - Access to *Deep Wounds*, *Impale*, and new Classic+ ability *Spearing Strike*.
+  - Armed with *Corpsemaker* (RFK) or *Heavehammer* (Excavation Site 4), 2-shot burst potential on squishy cloth.
+• **Retribution Paladin (0/11/10):**
+  - *Blessing of Freedom* negates slows; *Voice of Truth* gives temporary spell-school silence immunity.
+  - *Hammer of Justice* (5s stun) into *Seal of Command* burst deals over 600 damage.
+
+#### A-Tier (High Skill Cap)
+• **Frost Mage (0/21/0):**
+  - Improved Blizzard, Shatter combo, Cold Snap double Ice Block. Difficult against Feral shape-shifting.
+• **Subtlety Rogue (0/10/11):**
+  - Cheap Shot -> Kidney Shot -> Gouge stunlock locks opponents out for 14 continuous seconds.
+• **Affliction Warlock (18/3/0):**
+  - Drain Life + Siphon Life + Fear spam. S-Tier against casters, vulnerable to Warrior intercept burst.
+
+#### B-Tier (Bracket Underdogs)
+• Shadow Priests (No Shadowform until level 40; reliant on Mind Blast + SW:P).
+• Beast Mastery Hunters (High burst with Bite 5 / Claw 5 pet, but dead-zone kiting is punishable in a 40yd duel circle).`
     },
     {
       id: "guide-merchants-favor",
-      title: "Merchant's Favor Currency & Dalaran Vendors",
-      category: "Economy & Currencies",
+      title: "Azeroth Commerce Authority & Durotar Supply Logistics",
+      category: "Economy & Professions",
+      source: "ForeverChanges.pro · Warcraft Tavern · Wowhead",
       icon: "https://render.worldofwarcraft.com/us/icons/56/inv_misc_coin_02.jpg",
-      summary: "How to earn and spend Merchant's Favor in Dalaran Underbelly and capital cities for dungeon catch-up gear, bags, and reagents.",
-      content: `Merchant's Favor is the premier deterministic currency introduced in WoW Forever:
-• Earning Favor:
-  - Completing Daily Dungeon Quests for Excavation Site 4, City of Dalaran, and BFD awards 2–4 Merchant's Favor per run.
-  - Slaying level 20–30 world rares grants 1 Merchant's Favor per rare kill (capped at 5 daily).
-  - Turning in legacy trade goods to Dalaran Underbelly merchants.
-• Vendor Offerings:
-  - Phase 2 Pre-BiS Catch-Up: Weapons (iLvl 33–35) including Totem of the Storm, Wand of Mana Concentration, and Blightleaf Cinch for 15–25 Favor.
-  - 14-Slot Kirin Tor Satchel: 20 Favor (Binds to Account).
-  - Specialty Consumables: Elixirs of Giant Growth, Free Action Potions, and Swiftness Potions available for small coin + Favor trade.`
+      summary: "Supply Crate logistics, faction camp coordinates, and exact Merchant's Favor costs for bags, weapons, mounts, and recipes.",
+      content: `### The Deterministic Economy of WoW Forever
+**Merchant's Favor** is the unified reputation and currency engine designed to reward crafters, gatherers, and dungeon runners without RNG lockouts.
+
+### Supply Base Outposts & Locations
+
+🗺️ **Alliance Camp:** *Azeroth Commerce Authority*
+• **Location:** Three Corners, Redridge Mountains (\`10.5, 72.7\`) at the triple junction of Elwynn, Duskwood, and Lakeshire.
+• **Quartermaster:** *Marcy Baker* (\`9.5, 71.1\`). Note: Contested territory, watch for Horde stealthers!
+
+🗺️ **Horde Camp:** *Durotar Supply and Logistics*
+• **Location:** West of Crossroads, The Barrens (\`49.7, 29.4\`) on the road toward Stonetalon.
+• **Quartermaster:** *Dokimi* (\`50.0, 29.2\`). Protected Horde territory.
+
+---
+
+### Ways to Earn Merchant's Favor
+
+• **Filled Supply Crates:** Dropped by level 10–30 humanoids and chests. Fill with matching trade goods (e.g. 20x Copper Bar, 10x Medium Leather, 8x Minor Healing Potion) for **250–500 Favor + 1.5–3 Gold** per turn-in!
+• **Daily Dungeon Quests:** Completing Excavation Site 4, City of Dalaran, and Blackfathom Deeps daily bounties awards **4 Merchant's Favor** each.
+• **World Rare Kills:** Slaying any of the 34 datamined world rares grants **1 Merchant's Favor** (capped at 5 daily).
+
+---
+
+### Quartermaster Inventory & Costs
+
+| Item Name | Item Type / Slot | Cost (Favor) | Stats & Notable Utility |
+| **Pack Kodo Mount** | Faction Ground Mount (60% Speed) | 6,000 Favor | Usable at Level 30! Includes mobile repair vendor |
+| **Minimule Pet** | Vanity Pet Companion | 1,500 Favor | Cute pack-mule companion that carries small mail |
+| **Kirin Tor Satchel** | 14-Slot Bag | 800 Favor | **Binds to Account** (Send to alts freely!) |
+| **Totem of the Storm** | Shaman Relic | 1,200 Favor | Increases Lightning Bolt spell power by +14 |
+| **Wand of Mana Concentration** | Wand (iLvl 34) | 1,200 Favor | 32–59 Arcane Dmg, Speed 1.50 (30.3 DPS) |
+| **Blightleaf Cinch** | Leather Belt (iLvl 32) | 950 Favor | 62 Armor, +7 Agi, +6 Sta, +5 Strength |
+| **Signpost of Guidance** | Camping Toy | 400 Favor | Deploys directional trail marker for party members |`
     },
     {
       id: "guide-transmog",
       title: "Classic+ Transmogrification & Wardrobe System",
-      category: "Cosmetics & Collections",
+      category: "Exploration & Secrets",
+      source: "ForeverChanges.pro · Wowhead · Method.gg",
       icon: "https://render.worldofwarcraft.com/us/icons/56/inv_chest_cloth_17.jpg",
-      summary: "Forever's non-intrusive wardrobe system: rules, armor class restrictions, weapon silhouettes, and toggle options.",
-      content: `WoW Forever implements a faithful Classic+ wardrobe system that honors character silhouettes:
-• Strict Armor Type Rules: Cloth can only transmog Cloth, Leather only Leather, Mail only Mail, and Plate only Plate.
-• Weapon Class Rules: One-handed swords only to 1H swords/axes/maces; two-handed weapons must match swing cadence and weapon class.
-• PvP Silhouette Integrity:
-  - Transmog is fully visible in open world, dungeons, and capitals.
-  - In Battlegrounds (Warsong Gulch) and duels, players can enable 'Classic Authenticity Mode' to render opponents strictly in their true equipped items.
-• Appearance Collection: Any soulbound green, blue, or epic item binds its visual to your account-wide Wardrobe collection automatically upon looting.`
+      summary: "Rules, armor-type boundaries, silhouette fidelity, and the competitive Classic Authenticity toggle in WoW Forever.",
+      content: `### Silhouette-Honoring Transmogrification
+WoW Forever introduces a non-intrusive Wardrobe System that preserves the visual gravitas and silhouette recognition of Classic World of Warcraft while letting players customize their appearance.
+
+### The 4 Core Rules of Appearance Customization
+
+#### 1. Strict Armor Type Locks
+• **Cloth** can only transmog into Cloth appearances.
+• **Leather** can only transmog into Leather appearances.
+• **Mail** can only transmog into Mail appearances.
+• **Plate** can only transmog into Plate appearances.
+🔒 You cannot disguise a heavily armored Paladin or Warrior as a robe-wearing Priest!
+
+#### 2. Weapon Silhouette & Swing Cadence Rules
+• **One-Handed Weapons:** 1H Swords, 1H Maces, and 1H Axes can freely cross-transmog with each other, provided your character's class has weapon proficiency.
+• **Daggers and Fists:** Daggers can only transmog to Daggers; Fist weapons can only transmog to Fist weapons (to protect 1.3s/1.4s animation cadences).
+• **Two-Handed Weapons:** 2H Swords, 2H Maces, and 2H Axes can cross-transmog. Polearms and Staves cross-transmog together.
+
+#### 3. Automatic Account-Wide Collection
+• Looting any Bind-on-Pickup or equipping any Bind-on-Equip green, blue, or epic item instantly permanently registers its appearance to your **Account Wardrobe**.
+• Selling or disenchanting the base item afterwards does **not** revoke the collected visual!
+
+---
+
+### Competitive "Classic Authenticity Mode"
+⚔️ For competitive integrity in Warsong Gulch, Arathi Basin, and sanctioned duels:
+• Under **Interface Options -> Display -> Wardrobe**, players can toggle **Classic Authenticity Mode**.
+• When toggled ON, all enemy and friendly characters will render strictly in their true, equipped physical armor models, completely disabling visual transmogs on your local screen!`
     },
     {
       id: "guide-pvp-ranks",
       title: "PvP Honor Ranks 1–14 & Level 30 Warsong Gulch Bracket",
-      category: "PvP & Battlegrounds",
+      category: "PvP & Tournaments",
+      source: "ForeverChanges.pro · Warcraft Tavern · Wowhead",
       icon: "https://render.worldofwarcraft.com/us/icons/56/pvpcurrency-conquest-alliance.jpg",
-      summary: "Warsong Gulch bracket meta at Level 30: Honor rank caps, insignia trinkets, flag running builds, and gear rewards.",
-      content: `PvP progression has been redesigned with the new level caps in WoW Forever:
-• Phase 2 Bracket: The 20–29 / 30 bracket features intense Warsong Gulch skirmishes.
-• Honor Rank Cap: Phase 2 caps progression at Rank 4 (Master Sergeant / Senior Sergeant), unlocking:
-  - Rank 2: Class PvP Insignia (Dispel CC on 5m CD)
-  - Rank 3: 10% discount on all faction vendors
-  - Rank 4: Superior PvP Cloak (+7 Stamina, +5 Agi/Str/Int)
-• Flag Running Meta: Feral Druids with Travel Form (Level 30) and Cat Sprint dominate WSG midfield; Mages with Improved Blizzard and Frost Nova control ramp choke points.`
+      summary: "Level 30 bracket honor calculations, Rank 1-4 rewards, insignia trinkets, and flag running routes in Warsong Gulch.",
+      content: `### Phase 2 PvP Honor Structure
+In Closed Beta Phase 2, character level is capped at 30. The classic honor system has been adjusted so progression aligns with active bracket milestones.
+
+### Phase 2 Rank Progression Cap (Rank 1 to 4)
+
+| Rank | Alliance Title | Horde Title | CP Required | Unlocked Reward |
+| **Rank 1** | Private | Scout | 15 HKs | **Private's / Scout's Tabard** |
+| **Rank 2** | Corporal | Grunt | 2,000 CP | **Class PvP Insignia** (Dispel CC on 5m CD) |
+| **Rank 3** | Sergeant | Sergeant | 5,000 CP | **10% Faction Vendor Discount** |
+| **Rank 4** | Master Sergeant | Senior Sergeant | 10,000 CP | **Superior PvP Cloak** (+7 Sta, +5 primary stat) |
+
+🔒 *Ranks 5 through 14 (First Sergeant to Grand Marshal / High Warlord) remain capped until Phase 3 and launch level caps unlock.*
+
+---
+
+### Warsong Gulch (20–29 / 30) Bracket Meta
+
+#### Flag Running (The Feral King)
+• **Travel Form (Level 30):** The definitive flag running tool. 40% outdoor movement speed without consuming mount cast times.
+• **Shapeshift Cleansing:** Shifting from Cat -> Travel or Bear -> Travel removes all movement impairing effects (Frostbolt slows, Crippling Poison, Hamstring).
+• **Defensive Stash:** While holding 10 stacks in the friendly base, shifting into Bear Form with *Frenzied Regeneration* provides up to 1,800 effective HP against enemy rogue burst.
+
+#### Midfield Choke Control
+• **Mages:** Improved Blizzard placed on the graveyard ramp completely shuts down Horde tunnel assaults.
+• **Priests:** Dispel Magic removes enemy Priests' Power Word: Shield and Paladins' Blessing of Freedom instantly.
+• **Warriors:** Piercing Howl (Fury tree) slows entire enemy offense squads within 10 yards regardless of facing.`
     },
     {
       id: "guide-rares-30",
-      title: "34 Rare Spawns & Classic+ Drops (Level 10–30)",
-      category: "Exploration & World Rares",
+      title: "34 Datamined World Rares & Guaranteed Drops (Level 10–30)",
+      category: "Exploration & Secrets",
+      source: "ForeverChanges.pro · Warcraft Tavern · Wowhead",
       icon: "https://render.worldofwarcraft.com/us/icons/56/inv_misc_head_dragon_bronze.jpg",
       summary: "Spawn timers, coordinates, and exclusive item drops for all 34 overhauled rare mobs across Westfall, Barrens, Ashenvale, and Wetlands.",
-      content: `World rares in WoW Forever have guaranteed drop tables and drop Merchant's Favor:
-• Top Level 20–30 Rare Spawns:
-  - Lord Condar (Loch Modan, lvl 26): Drops Condar's Feathery Mantle (+8 Agi, +6 Sta leather shoulders).
-  - Gesharahan (Barrens, lvl 24): Drops Petrified Bark Shield (Block 18, +5 Sta, +4 Str).
-  - Ursol'lok (Ashenvale, lvl 31): Drops Claws of the Ursine (+9 Str, +7 Sta 1H Fist Weapon).
-  - Garneg Charskull (Wetlands, lvl 28): Drops Ironband's Warmace (+12 Str, +5 Sta 2H Mace).
-• Dynamic Respawn: World rares now feature pseudo-random 45-to-90 minute respawn timers rather than 8-hour classic lockouts.`
+      content: `### Overhauled World Rare Mechanics
+In WoW Forever, open-world rare spawns are no longer trivial recolors with 8-hour dead periods. They now feature **dynamic 45–90 minute respawn timers**, guaranteed rare quality loot tables, and grant **1 Merchant's Favor** upon defeat!
+
+### Top 10 High-Value World Rares (Phase 2)
+
+| Rare Mob | Zone | Coords | Level | Top Item Drop | Item Stats |
+| **Lord Condar** | Loch Modan | \`75.2, 38.6\` | Lvl 26 | *Condar's Feathery Mantle* | Leather Shoulders: +8 Agi, +6 Sta |
+| **Gesharahan** | The Barrens | \`47.8, 40.2\` | Lvl 24 | *Petrified Bark Shield* | Shield: Block 18, +5 Sta, +4 Str |
+| **Ursol'lok** | Ashenvale | \`84.2, 49.0\` | Lvl 31 | *Claws of the Ursine* | 1H Fist: 18.2 DPS, +9 Str, +7 Sta |
+| **Garneg Charskull** | Wetlands | \`53.4, 72.8\` | Lvl 28 | *Ironband's Warmace* | 2H Mace: 22.4 DPS, +12 Str, +5 Sta |
+| **Slark** | Redridge Mts | \`41.2, 58.6\` | Lvl 25 | *Slark's Venomous Stinger* | Dagger: Speed 1.40, +6 Agi, Chance on Hit Poison |
+| **Lupos** | Duskwood | \`24.0, 26.0\` | Lvl 23 | *Shadowfang Collar* | Cloth Helm: +6 Int, +5 Sta, +8 Shadow Dmg |
+| **Bruex Firecaller** | Stonetalon | \`60.2, 62.4\` | Lvl 27 | *Cinderweave Robes* | Cloth Chest: +8 Int, +6 Sta, +12 Fire Dmg |
+| **Mazzranache** | Mulgore | \`34.0, 42.0\` | Lvl 9 | *Mazzranache's Beak* | 1H Dagger: +2 Agi, +1 Sta |
+| **Foreman Thistleneedle**| Westfall | \`42.2, 71.8\` | Lvl 18 | *Thistlewood Crossbow*| Ranged: 12.1 DPS, +3 Agi, +2 Sta |
+| **Humar the Pridelord** | The Barrens | \`61.6, 32.4\` | Lvl 23 | *Pridelord's Pauldrons*| Mail Shoulders: +7 Str, +6 Sta |
+
+💡 **Macro Hunting Tip:** Create a macro with \`/cleartarget [dead]\` followed by \`/target Lord Condar\` / \`/target Gesharahan\` / \`/target Ursol'lok\` to acquire targets instantly upon spawn!`
     },
     {
       id: "guide-druid-forms",
-      title: "Druid Forms Unlock Guide (Aquatic, Cat, Travel & Snake)",
-      category: "Class Quests & Secrets",
+      title: "Druid Forms Masterclass (Aquatic, Cat, Travel & Secret Viper Form)",
+      category: "Classes & Pets",
+      source: "ForeverChanges.pro · Warcraft Tavern · Wowhead",
       icon: "https://render.worldofwarcraft.com/us/icons/56/ability_druid_travelform.jpg",
-      summary: "Complete quest walk-through for Aquatic Form (lvl 16), Cat Form (lvl 20), Travel Form (lvl 30), and the hidden Snake Form.",
-      content: `Druid form mechanics and quests in WoW Forever Phase 2:
-• Aquatic Form (Level 16): Dual-continent questline (Moonglade -> Westfall/Silverpine coast). +50% swim speed, underwater breathing.
-• Cat Form (Level 20): Granted directly at class trainer. Unlocks Claw, Rip, and Prowl stealth.
-• Travel Form (Level 30): Available at level 30 trainer for 40% outdoor movement speed increase (replaces need for early level 40 mounts!).
-• The Secret Serpent / Snake Form:
-  - A hidden Wailing Caverns / Sunken Temple druid relic unlocks a cosmetic Viper Form with nature venom spit animation.`
+      summary: "Complete quest walk-through for Aquatic Form (lvl 16), Cat Form (lvl 20), Travel Form (lvl 30), and the hidden Sunken Temple Viper Form.",
+      content: `### Druid Shape-Shifting Progression in WoW Forever
+Druids possess unparalleled flexibility across Phase 2, with early access to full land and aquatic mobility tools.
+
+### Form Breakdown & Quest Roadmaps
+
+#### 1. Bear Form (Level 10)
+• **Quest:** *Heeding the Call* -> *Moonglade Teleport* -> *Trial of the Bear*.
+• **Mechanic:** +180% Armor from items, +20 Stamina equivalent, generates Rage on auto-attacks.
+
+#### 2. Aquatic Form (Level 16)
+• **Quest:** *Trial of the Sea Lion* (Dual-Continent Journey).
+• **Alliance Route:** Retrieve Half of the Pendant off Westfall coast (\`17.6, 33.2\`) and Darkshore coast (\`49.0, 11.2\`).
+• **Horde Route:** Retrieve Half of the Pendant off Silverpine Forest coast (\`29.4, 29.8\`) and The Barrens (\`57.2, 8.8\`).
+• **Utility:** +50% Swimming Speed and permanent underwater respiration.
+
+#### 3. Cat Form (Level 20)
+• **Unlock:** Granted directly at your class trainer at Level 20.
+• **Mechanics:** Energy bar (100 Energy), Claw, Rip bleed, Prowl stealth, and Tiger's Fury.
+
+#### 4. Travel Form (Level 30)
+• **Unlock:** Available at class trainers upon reaching Level 30 for 1 Gold 40 Silver.
+• **Utility:** **+40% Outdoor Movement Speed**. Replaces early mounts, costs negligible mana to cast, and immediately breaks roots and movement impairs!
+
+---
+
+### The Secret Serpent Form (Viper Relic)
+🗺️ **Hidden Relic:** *Fang of the Venomspitter*
+• Inside the newly tuned Sunken Grotto cavern near Wailing Caverns (\`44.2, 36.8\`), defeat the rare elite serpent *Xaliss the Slitherer*.
+• Slaying Xaliss yields the ancient Druidic relic *Viper Totem*.
+• Activating this relic cosmetic turns your Cat Form into a **Verdant Viper** with custom venom-spitting idle animations!`
+    },
+    {
+      id: "guide-downranking",
+      title: "Downranking Mechanics & Spell Rank Efficiency Guide",
+      category: "Classes & Pets",
+      source: "ForeverChanges.pro · Warcraft Tavern · Wowhead",
+      icon: "https://render.worldofwarcraft.com/us/icons/56/spell_holy_flashheal.jpg",
+      summary: "The mathematical Level 20 penalty formula, coefficient rules, and rank-by-rank healing efficiency charts for all 5 healing specs.",
+      content: `### How Spell Downranking Works in WoW Forever
+Downranking is the art of casting lower ranks of healing and damage spells to maximize Healing per Mana (HPM) and avoid overhealing, while leveraging high bonus Spell Power gear.
+
+### The Downranking Mathematical Penalty Formula
+Spells learned below character **Level 20** receive a scaling coefficient penalty to prevent level 1 spell abuse:
+
+\`Penalty Multiplier = (Level Learned + 11) / 20\`  *(if Level Learned < 20)*
+
+💡 **Rule of Thumb:** Any spell learned at Level 20 or higher gets **100% of your Spell Power coefficient** with zero penalty!
+
+---
+
+### Priest Healing Rank Efficiency (Level 30 Cap)
+
+| Spell & Rank | Mana Cost | Base Heal | Cast Time | Heal per Mana (HPM) | Ideal Scenario |
+| **Flash Heal Rank 1** | 125 Mana | 193–237 | 1.5s | 1.72 HPM | Fast emergency save |
+| **Flash Heal Rank 2** | 155 Mana | 258–314 | 1.5s | 1.84 HPM | Sustained dungeon single-target |
+| **Flash Heal Rank 3** | 185 Mana | 327–393 | 1.5s | 1.94 HPM | Max Phase 2 burst triage |
+| **Heal Rank 1** | 155 Mana | 295–341 | 3.0s | **2.05 HPM** | Mana-efficient slow maintenance |
+| **Heal Rank 2** | 205 Mana | 429–491 | 3.0s | **2.24 HPM** | Highest HPM tank healing |
+
+---
+
+### Paladin, Shaman & Druid Downranking Rules
+• **Paladins:** *Flash of Light Rank 1* (35 Mana) has a high base efficiency and crits trigger *Illumination* (refunding 100% mana cost), making Paladins near-infinite mana batteries.
+• **Shamans:** *Healing Wave Rank 3* (145 Mana) is the sweet spot for mana preservation. *Chain Heal Rank 1* (260 Mana) hits 3 targets for raid clump maintenance.
+• **Druids:** *Healing Touch Rank 4* (185 Mana, 3.0s) provides the highest HPM before Artisan talents unlock in Phase 3.`
+    },
+    {
+      id: "guide-fast-leveling",
+      title: "1–30 Classic+ Speedrun & XP Routing Walkthrough",
+      category: "Leveling & Quests",
+      source: "ForeverChanges.pro · Warcraft Tavern · Wowhead",
+      icon: "https://render.worldofwarcraft.com/us/icons/56/spell_holy_borrowedtime.jpg",
+      summary: "Optimized route from 1 to 30 integrating Cozy Sleeping Bag checkpoints, rested camping stations, and high-density dungeon quest hubs.",
+      content: `### Fast Leveling Architecture: 1 to 30 in Under 16 Hours
+By combining the **+3% Cozy Sleeping Bag buff**, rested tents, and dense Classic+ quest clusters, players can reach the Phase 2 cap of 30 faster than ever before.
+
+### Alliance Optimized Speedrun Path
+
+#### Levels 1–10: Starter Valleys
+• Complete Elwynn Forest / Dun Morogh starter hubs. Reach level 10 by clearing Hogger or Gol'Balar Quarry.
+• Train class abilities and first profession gathering skills (Mining/Herbalism/Skinning).
+
+#### Levels 10–15: Westfall & Sleeping Bag Start
+• Quest Westfall: Saldean's Farm, Sentinel Hill, and Furlbrow's Deed.
+• 🎯 **Level 14 Checkpoint:** Complete Step 1 of the Cozy Sleeping Bag at Alexston Farmstead (\`37.4, 50.6\`).
+• Clear The Deadmines dungeon quests (6,500 XP total turn-in).
+
+#### Levels 15–22: Loch Modan & Redridge Mountains
+• Loch Modan: Trogg hunt, Valley of Kings, and Dam quests.
+• Redridge: Lakeshire bridge quests, Gnoll bounties, and Yowler.
+• 🎯 Pick up Step 4 of the Sleeping Bag on Stonewrought Dam crest.
+
+#### Levels 22–30: Wetlands, Excavation Site 4 & Duskwood
+• Head to Wetlands: Complete Greenwarden quests, Digsite excavations.
+• ⚔️ Run **Excavation Site 4** dungeon for the massive *Prehistoric Prism* quest turn-ins.
+• Finish in Duskwood (Nightbane, Hermit of Duskwood, Morgan Ladimore) to hit Level 30!
+
+---
+
+### Horde Optimized Speedrun Path
+
+#### Levels 1–10: Durotar / Mulgore / Tirisfal
+• Clear Valley of Trials / Camp Narache. Reach Level 10 and train first talent points.
+
+#### Levels 10–16: Northern Barrens & Sleeping Bag Start
+• Crossroads quests: Plainstriders, Raptors, and Oasis fungus.
+• 🎯 **Level 14 Checkpoint:** Complete Step 1 of the Sleeping Bag at Field of Giants (\`46.4, 73.9\`).
+• Wailing Caverns: Complete all 6 dungeon quests for blue weapons (*Wingblade* or *Crescent Staff*).
+
+#### Levels 16–24: Stonetalon Mountains & Southern Barrens
+• Stonetalon: Sun Rock Retreat, Webwinder Path (Grab Sleeping Bag Step 3!).
+• Camp Taurajo: Quillboar bristles, Silithid pods, and Bael Modan dig site.
+
+#### Levels 24–30: Ashenvale, Hillsbrad & Thousand Needles
+• Ashenvale: Splintertree Post and Warsong Lumber Camp quests.
+• Hillsbrad: Tarren Mill missions and Thoradin's Wall (Complete Sleeping Bag Step 5!).
+• Thousand Needles: Shimmering Flats racing quests to reach Level 30!`
+    },
+    {
+      id: "guide-excavation-site",
+      title: "New Dungeon: Excavation Site 4 Full Walkthrough",
+      category: "Dungeons & Raids",
+      source: "ForeverChanges.pro · Warcraft Tavern · Wowhead",
+      icon: "https://render.worldofwarcraft.com/us/icons/56/inv_misc_gem_opal_01.jpg",
+      summary: "Boss strategies, trash skips, entrance coords, and Titan Relic quest chain for the Level 26–31 Wetlands dungeon.",
+      content: `### Overview: Excavation Site 4 (Wetlands)
+Excavation Site 4 is a brand-new Classic+ dungeon set within the archaeological cliff caves overlooking Whelgar's Excavation in central Wetlands.
+
+| Parameter | Dungeon Profile |
+| Level Range | 26–31 (Optimal party level: 28–29) |
+| Entrance Coords | Wetlands (\`34.8, 47.2\`) inside the upper cliff tunnel |
+| Boss Count | 4 Encounters (Saltspine, Shadetooth, Webspinner, Relic Guardian) |
+| Expected XP | 24,000–28,000 Total Quest + Mob XP |
+| Currency Drops | 4x Merchant's Favor from daily completion |
+
+---
+
+### Boss Encounters & Tactics
+
+#### 1. Saltspine (Level 28 Elite Crocolisk)
+• **Location:** Roaming the starting underground marsh.
+• **Strategy:** Clear all surrounding swamp hatchlings before pulling. Saltspine has massive physical auto-attacks; tank keep defensive cooldowns rolling.
+• **Notable Loot:** *Supple Bellyskin Leggings* (+6 Agi, +5 Sta Leather) and *Saltscale Girdle* (+5 Str, +4 Sta Mail).
+
+#### 2. Shadetooth (Level 29 Elite Raptor Matriarch)
+• **Mechanic:** Slaying the raptor matriarch spawns an immediate wave of *Raptors in the Grass*.
+• **Strategy:** Group must stack for AOE Cleave and Frost Nova to kill the hatchlings before Shadetooth's mate enrages.
+• **Notable Loot:** *Shadetooth Fang* (Dagger 16.5 DPS, +4 Agi) and *Raptor-Rib Vest* (+7 Sta, +6 Str).
+
+#### 3. Webspinner Toxinmaker (Level 29 Elite Giant Spider)
+• **Mechanic:** Casts *Neurotoxic Spit* dealing heavy nature damage over 8 seconds.
+• **Strategy:** Shaman Poison Cleansing Totem or Druid Cure Poison completely trivializes this fight.
+
+#### 4. Relic Guardian (Level 30 Titan Mech End-Boss)
+• **Mechanic:** Dormant Titan console at the end of the hall. Interacting initiates the battle.
+• ⚠️ **Threat Protocol Reset:** Every 20 seconds, the boss drops all threat and targets the highest DPS player! Damage dealers hold burst for 3 seconds while tank taunts immediately.
+• **Notable Loot:**
+  - *Reliquary Mantle* (Mail Shoulder: +7 Str, +6 Sta)
+  - *Ring of Power Regulation* (Ring: +5 Int, +5 Sta, +7 Spell Power)
+  - *Golemsight Long Gun* (Ranged: 14.8 DPS, +4 Agi, +3 Sta)
+  - **Titan Relic:** 100% Drop quest starter item!`
+    },
+    {
+      id: "guide-city-of-dalaran",
+      title: "New Dungeon: City of Dalaran (Underbelly & Violet Enclave)",
+      category: "Dungeons & Raids",
+      source: "ForeverChanges.pro · Warcraft Tavern · Wowhead",
+      icon: "https://render.worldofwarcraft.com/us/icons/56/spell_arcane_portaldalaran.jpg",
+      summary: "Infiltrate the Dalaran arcane bubble in Alterac Mountains: 4 bosses, spell reflect tactics, and Kirin Tor pre-BiS weapons.",
+      content: `### Overview: The Secret City of Dalaran Dungeon
+Nestled inside the mysterious violet magical dome in Alterac Mountains (\`20.4, 82.0\`), **City of Dalaran** is a premier Level 28–32 dungeon exploring the arcane catacombs and underbelly of the Kirin Tor.
+
+### Dungeon Overview & Mechanics
+
+| Parameter | Specifications |
+| Level Range | 28–32 (Party recommended level: 30) |
+| Entrance | Alterac Mountains (\`20.4, 82.0\`) through the sewer aqueduct gate |
+| Encounters | 4 Bosses (Overseer Kaelen, Archmage Echo, Sludge-Gargoyle, Anomaly) |
+| Special Feature | Arcane Leyline Crystals that boost caster spell power inside by +20 |
+
+---
+
+### Boss Tactics & Encounters
+
+#### Boss 1: Overseer Kaelen (Level 30 Elite Human Mage)
+• **Mechanic:** Casts *Arcane Barrier* reflecting 50% of direct spells back at casters.
+• **Tactic:** Melee interrupts are essential. Kick or Shield Bash *Arcane Volley* immediately.
+• **Drops:** *Overseer's Spell-Thread Gloves* (+6 Int, +5 Sta, +9 Spell Power).
+
+#### Boss 2: Archmage Vargoth's Echo (Level 31 Arcane Projection)
+• **Mechanic:** Mirrors of the Archmage summon 3 illusions that cast Polymorph.
+• **Tactic:** Assign off-DPS to burst down the illusions immediately to prevent healer sheep lockouts.
+• **Drops:** *Echoing Staff of Dalaran* (2H Staff: 22.8 DPS, +9 Int, +6 Sta, +12 Spell Power).
+
+#### Boss 3: Sludge-Gargoyle (Level 31 Corrupted Underbelly Golem)
+• **Mechanic:** Sludge Puddle spawns beneath the tank's feet reducing armor by 30%.
+• **Tactic:** Kite the gargoyle in a clockwise circle around the sewer cistern.
+
+#### Boss 4: Kirin Tor Anomaly (Level 32 End-Boss)
+• **Mechanic:** *Mana Singularity* pulls all players into the center and detonates after 4 seconds.
+• ⚠️ **Warning:** Entire group must run outward to the walls as soon as the pull mechanic triggers!
+• **Notable Loot:**
+  - *Robes of the Violet Citadel* (Cloth: +11 Int, +8 Sta, +14 Spell Power)
+  - *Kirin Tor Battle-Blade* (1H Sword: 19.4 DPS, +6 Str, +5 Agi)
+  - *Amulet of Arcane Convergence* (Neck: +6 Int, +5 Sta, +8 Spell Power)`
+    },
+    {
+      id: "guide-camping-master",
+      title: "Camping Tradeskill (1–150): Portable Tents & Stations",
+      category: "Economy & Professions",
+      source: "ForeverChanges.pro · Warcraft Tavern · Wowhead",
+      icon: "https://render.worldofwarcraft.com/us/icons/56/inv_misc_stonetablet_05.jpg",
+      summary: "Campfire cooking, lean-to shelters, silk tents, and field stations (tanning racks, spinning wheels, portable anvils, and cauldrons).",
+      content: `### The Survivalist Tradeskill of WoW Forever
+**Camping** is the definitive 4th secondary profession in WoW Forever (alongside First Aid, Cooking, and Fishing). It allows players to pitch shelters, establish rest zones, and deploy portable profession crafting stations anywhere in the wilderness!
+
+### Shelter Tiers & Rested XP Acceleration
+
+| Shelter Tier | Camping Skill | Required Materials | Resting Speed Bonus | Special Buff |
+| **Lean-to Shelter** | 1–50 | 4x Simple Wood, 2x Rough String | **+50% Rested XP** | Windbreak (+2 Stamina for 30m) |
+| **Linen Wall Tent** | 50–100 | 8x Linen Cloth, 4x Simple Wood | **+100% Rested XP** | Warmth (+4 Stamina & Spirit) |
+| **Silk Trail Pavilion**| 100–150 | 12x Silk Cloth, 4x Iron Bar | **+200% Rested XP** | Full Rested Aura (+3% All Stats) |
+
+---
+
+### Portable Field Crafting Stations (1–150)
+Camping enables crafters to process materials in the open field without returning to capital cities:
+
+• **Field Tanning Rack (Camping 40):** Deploys a curing station for Leatherworkers to convert Ruined Leather Scraps into Light Leather and Medium Leather on-site.
+• **Field Spinning Wheel (Camping 65):** Enables Tailors to spin wool, silk, and spider webs into bolts without capital looms.
+• **Portable Blacksmithing Anvil (Camping 90):** Deploys a fold-out bronze anvil allowing Blacksmiths and Engineers to forge gear next to mining veins!
+• **Field Alchemy Cauldron (Camping 120):** Grants party members the ability to boil herbs into community elixir cauldrons that refresh 5 potion charges for the raid.`
+    },
+    {
+      id: "guide-battle-mage",
+      title: "Battle Mage: Arcane Melee & Spellblade Class Spec",
+      category: "Classes & Pets",
+      source: "ForeverChanges.pro · Method.gg · Wowhead",
+      icon: "https://render.worldofwarcraft.com/us/icons/56/spell_holy_magicalsentry.jpg",
+      summary: "Master the new melee Spellblade spec: Mail armor proficiency, Mana Blade weapon scaling, Spellstrike, and Arcane Ward defense.",
+      content: `### The Spellblade Revolution in WoW Forever
+The **Battle Mage** is an official Classic+ specialization that transforms the traditionally fragile cloth caster into a front-line armored combatant who infuses steel weapons with raw arcane devastation.
+
+### Core Mechanics & New Abilities
+
+• **Spellstrike:** Instant melee weapon attack that deals 100% physical weapon damage plus an additional 60–90 Arcane Damage, consuming 8% base mana. Generates an Arcane Charge.
+• **Mana Blade:** Enhances your main-hand weapon for 10 minutes, converting 20% of your total Spell Power into bonus melee Attack Power and restoring 2% mana on melee hits.
+• **Arcane Ward:** Surrounds the Battle Mage in a defensive barrier that increases Parry chance by 15% and reflects 15 Arcane damage back at attackers.
+• **Mail Armor Attunement:** At Level 30, Battle Mages can equip Mail armor pieces with Intellect and Spell Damage.
+
+---
+
+### Phase 2 Talent Build (21 Talent Points)
+• **Tier 1 (5/5 Arcane Subtlety):** Reduces threat generated by Arcane spells by 40% and reduces target's arcane resistances.
+• **Tier 2 (5/5 Arcane Concentration):** Grants a 10% chance to enter a Clearcasting state after any damage attack.
+• **Tier 3 (1/1 Spellstrike):** Unlocks the core melee strike.
+• **Tier 4 (5/5 Blade Infusion):** Increases your melee critical strike chance by 5% and adds 10% spell damage to critical strikes.
+• **Tier 5 (5/5 Arcane Impact):** Increases critical strike chance of Arcane Explosion and Spellstrike by 6%.
+
+💡 **BiS Weapons:** Look for high base top-end damage swords like *Kirin Tor Battle-Blade* (City of Dalaran) or *Royal Apparition Dagger* (BFD) to maximize Spellstrike scaling!`
+    },
+    {
+      id: "guide-scarlet-banner",
+      title: "Scarlet Banner Faction & Monastery Recon (Level 25–30)",
+      category: "Leveling & Quests",
+      source: "ForeverChanges.pro · Warcraft Tavern · Wowhead",
+      icon: "https://render.worldofwarcraft.com/us/icons/56/inv_banner_01.jpg",
+      summary: "Level 25-30 questline around the Scarlet Monastery perimeter, hunting courier escorts in Hillsbrad, and reputation vendor rewards.",
+      content: `### Infiltrating the Scarlet Crusade Perimeter
+In WoW Forever, the **Scarlet Banner** introduces an immersive espionage and bounty campaign set across Hillsbrad Foothills, Silverpine Forest, and the Tirisfal Glades monastery approaches.
+
+### Quest Campaign Walkthrough (Level 25–30)
+
+#### 1. "Intercepting the Courier"
+🗺️ **Hillsbrad Trail (\`48.6, 32.4\`):** Ambush the *Scarlet Courier* and his two heavy elite squires patrolling the road between Southshore and Tarren Mill.
+• **Loot:** *Coded Crusade Dispatch* deciphering troop movements toward Alterac.
+• **Reward:** 3,800 XP + 500 Scarlet Banner Reputation.
+
+#### 2. "Reconnaissance in the North"
+• Infiltrate the courtyard outside the Scarlet Monastery entrances in Tirisfal Glades.
+• Plant scouting markers at the Graveyard archway and Library entrance without pulling the elite sentries.
+
+#### 3. "The Grand Inquisitor's Decrees"
+• Slay 15 Scarlet Chaplains and 10 Scarlet Guardsmen in the Western Plaguelands border camp.
+
+---
+
+### Scarlet Banner Reputation Tiers & Rewards
+
+| Reputation Tier | Vendor Unlocks | Cost | Item Stats & Benefit |
+| **Friendly** | *Holy Water of the Crusade* | 15 Silver | Cleanses diseases and deals 400 Holy Dmg to undead |
+| **Honored** | *Tabard of the Pure Flame* | 2 Gold | Striking red and white cross embroidered tabard |
+| **Honored** | *Scarlet Scout's Pauldrons* | 4 Gold 50 Silver | Mail Shoulders: 145 Armor, +8 Str, +6 Sta |
+| **Revered** | *Inquisitor's Signet* | 8 Gold | Finger: +7 Int, +5 Sta, +8 Holy Spell Damage |`
+    },
+    {
+      id: "guide-booty-bay-engineering",
+      title: "Goblin Engineering & Booty Bay Buckshot Innovations",
+      category: "Economy & Professions",
+      source: "ForeverChanges.pro · Warcraft Tavern · Wowhead",
+      icon: "https://render.worldofwarcraft.com/us/icons/56/inv_misc_bomb_04.jpg",
+      summary: "New Phase 2 schematics: High-Yield Dynamite, Flash Grenades, Gyromatic Micro-Adjuster XL, and Goblin Jumper Cables XL.",
+      content: `### The Goblin Mechanical Renaissance
+Goblin Engineering trainers in **Ratchet** and **Booty Bay** have unlocked brand-new Classic+ schematics tailored for the Level 30 cap and open-world skirmishes.
+
+### Premier Phase 2 Engineering Schematics
+
+#### 1. High-Yield Dynamite (Skill 135)
+• **Materials:** 2x Heavy Blasting Powder, 1x Silk Cloth.
+• **Effect:** Deals **160 to 220 Fire Damage** and stuns all targets in a 5-yard radius for 2 seconds (1 min CD). Outstanding for flag defense in Warsong Gulch!
+
+#### 2. Flash Grenade (Skill 140)
+• **Materials:** 1x Bronze Tube, 1x Coarse Blasting Powder, 1x Flash Powder.
+• **Effect:** Blinds the target for 4 seconds from up to 20 yards away. Does not share diminishing returns with Rogue Blind!
+
+#### 3. Goblin Jumper Cables XL (Skill 150)
+• **Materials:** 2x Iron Bar, 2x Fused Wiring, 1x Shadowgem.
+• **Effect:** Has a **50% chance** to shock a dead ally back to life with 500 health and mana (30 min CD). Essential for wipe recovery in Excavation Site 4!
+
+#### 4. Booty Bay Buckshot (Skill 125)
+• **Materials:** 1x Solid Stone, 1x Heavy Blasting Powder.
+• **Effect:** Shotgun ammunition adding **+11.5 DPS** to ranged shot weapons, usable at Level 25!`
+    },
+    {
+      id: "guide-phase2-economy",
+      title: "Phase 2 Trade Economy & Artisan Stockpiling Strategy",
+      category: "Economy & Professions",
+      source: "ForeverChanges.pro · Warcraft Tavern · Wowhead",
+      icon: "https://render.worldofwarcraft.com/us/icons/56/inv_misc_coin_01.jpg",
+      summary: "Most valuable trade goods at level 30 cap, high-yield farming loops, and what to stockpile before Phase 3 Artisan 300 unlocks.",
+      content: `### Mastering the Closed Beta Economy
+Because Closed Beta Phase 2 caps player level at 30 and professions at 225, specific trade goods experience massive supply pinches while high-level materials can be stockpiled cheaply for Phase 3!
+
+### High-Value Phase 2 Commodities
+
+| Material | Primary Source | Current AH Demand | Farming Hotspot |
+| **Heavy Leather** | Skinning (Lvl 25–35 beasts) | **VERY HIGH** | Wetlands Crocolisks & Hillsbrad Mountain Lions |
+| **Iron Ore / Bars** | Mining (Skill 125–175) | **EXTREME** | Arathi Highlands perimeter & Thousand Needles canyons |
+| **Heavy Stone** | Mined with Iron | **HIGH** | Essential for Heavy Sharpening Stones and Dynamite |
+| **Silk Cloth** | Humanoids (Lvl 28–35) | **HIGH** | Syndicate camps in Hillsbrad & Kurzen compound |
+| **Goldthorn** | Herbalism (Skill 170) | **EXTREME** | Foothills ridges, key component for Free Action Potions |
+| **Wild Steelbloom** | Herbalism (Skill 115) | **HIGH** | Arathi mountain passes, required for Catseye Elixirs |
+
+---
+
+### What to Stockpile Before Phase 3 (Artisan 300 Unlock)
+When Phase 3 launches, character level will rise to 40+, unlocking **Artisan training (225–300)**. Smart players are filling their bank alts with materials that will skyrocket in price on day one:
+
+• **Mithril Ore & Solid Stone:** Needed for 225–260 Blacksmithing and Engineering.
+• **Mageweave Cloth:** Needed for 225–260 Tailoring and First Aid bandages.
+• **Thick Leather:** Needed for 225–260 Leatherworking.
+• **Fadeleaf & Blindweed:** Essential for 225+ high-tier potions and Blinding Powder!`
     }
   ]
 };
