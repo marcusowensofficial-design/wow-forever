@@ -1128,30 +1128,128 @@ Nestled inside the mysterious violet magical dome in Alterac Mountains (\`20.4, 
     },
     {
       id: "guide-camping-master",
-      title: "Camping Tradeskill (1–150): Portable Tents & Stations",
+      title: "Camping Tradeskill (1–225): Complete Leveling Guide, Tents & Stations",
       category: "Economy & Professions",
       source: "ForeverChanges.pro · Warcraft Tavern · Wowhead",
       icon: "https://render.worldofwarcraft.com/us/icons/56/inv_misc_stonetablet_05.jpg",
-      summary: "Campfire cooking, lean-to shelters, silk tents, and field stations (tanning racks, spinning wheels, portable anvils, and cauldrons).",
+      summary: "Comprehensive guide to unlocking and leveling Camping (1–225): starter quests, skill-up mechanics, bracket-by-bracket roadmap, portable tents, field crafting stations, and rested XP efficiency.",
       content: `### The Survivalist Tradeskill of WoW Forever
-**Camping** is the definitive 4th secondary profession in WoW Forever (alongside First Aid, Cooking, and Fishing). It allows players to pitch shelters, establish rest zones, and deploy portable profession crafting stations anywhere in the wilderness!
-
-### Shelter Tiers & Rested XP Acceleration
-
-| Shelter Tier | Camping Skill | Required Materials | Resting Speed Bonus | Special Buff |
-| **Lean-to Shelter** | 1–50 | 4x Simple Wood, 2x Rough String | **+50% Rested XP** | Windbreak (+2 Stamina for 30m) |
-| **Linen Wall Tent** | 50–100 | 8x Linen Cloth, 4x Simple Wood | **+100% Rested XP** | Warmth (+4 Stamina & Spirit) |
-| **Silk Trail Pavilion**| 100–150 | 12x Silk Cloth, 4x Iron Bar | **+200% Rested XP** | Full Rested Aura (+3% All Stats) |
+**Camping** is the definitive 4th secondary profession in WoW Forever (alongside First Aid, Cooking, and Fishing). It allows all adventurers—regardless of class or primary craft—to pitch wilderness shelters, establish outdoor rest zones, and deploy portable profession crafting stations anywhere in the world!
 
 ---
 
-### Portable Field Crafting Stations (1–150)
-Camping enables crafters to process materials in the open field without returning to capital cities:
+### How to Unlock Camping & Starter Quests
+Unlike primary professions that count toward your 2-craft limit, Camping is a **Secondary Profession** that anyone can learn at character **Level 5+**.
 
-• **Field Tanning Rack (Camping 40):** Deploys a curing station for Leatherworkers to convert Ruined Leather Scraps into Light Leather and Medium Leather on-site.
-• **Field Spinning Wheel (Camping 65):** Enables Tailors to spin wool, silk, and spider webs into bolts without capital looms.
-• **Portable Blacksmithing Anvil (Camping 90):** Deploys a fold-out bronze anvil allowing Blacksmiths and Engineers to forge gear next to mining veins!
-• **Field Alchemy Cauldron (Camping 120):** Grants party members the ability to boil herbs into community elixir cauldrons that refresh 5 potion charges for the raid.`
+#### The Onboarding Quest: "The Great Outdoors"
+Pick up the introductory quest from Wilderness Camp Trainers located just outside starting racial towns:
+• **Alliance Trainers:**
+  - **Sam Sarsaparilla** — Outside Goldshire, Elwynn Forest (Coordinates: 43.6, 65.8)
+  - **Eric Brighthammer** — Outside Kharanos, Dun Morogh (Coordinates: 46.2, 53.4)
+  - **Andrea Firebeard** — Outside Thelsamar, Loch Modan
+  - **Lyria Nightsong** — Outside Dolanaar, Teldrassil
+• **Horde Trainers:**
+  - **Eleanor Shackleton** — Outside Brill, Tirisfal Glades (Coordinates: 60.8, 52.0)
+  - **Malok Stoneflint** — Outside Razor Hill, Durotar (Coordinates: 51.4, 43.6)
+  - **Keldan Wildstrider** — Outside Bloodhoof Village, Mulgore (Coordinates: 47.0, 58.2)
+
+**Quest Steps:**
+1. Use the \`/sit\` emote beside the trainer's welcoming campfire for 1 minute to complete the rest cycle and receive your first 1-hour camp buff.
+2. Turn in the quest to learn **Apprentice Camping (Skill 1–75)**.
+3. Purchase a **Flint and Tinder** and a stack of **Simple Wood** from any general supplies or trade goods vendor to begin crafting your first kits.
+
+---
+
+### The Camping Skill-Up Engine: How You Level Up
+Many players wonder how Camping gains skill points in Classic+. Camping skill increases through four distinct activities in the open world:
+
+1. **Crafting & Deploying Campfire Kits:** Assembling campfire kits in your tradeskill menu and deploying them outdoors grants guaranteed skill-ups while the recipe is orange, and frequent skill-ups while yellow.
+2. **Pitching Wilderness Shelters:** Constructing Lean-to Shelters, Linen Wall Tents, and Silk Pavilions provides primary bracket skill-ups.
+3. **Building Profession Field Workstations:** Crafting field stations (Field Tanning Racks, Field Spinning Wheels, Portable Anvils, Alchemy Cauldrons) rolls reliable skill gains while unlocking open-world crafting for your group.
+4. **Cooking Over Active Campfires:** Preparing meals over a campfire you personally established provides bonus rolls toward Camping skill points up to skill 100.
+
+---
+
+### Step-by-Step Leveling Roadmap (1–225 Phase 2 Beta Cap)
+
+#### Bracket 1: Skill 1–25 · Basic Campfire Kits & Flintwork
+• **Recipe:** *Basic Campfire Kit* (Skill 1)
+• **Materials:** 1x Simple Wood, Flint and Tinder (in bags)
+• **Source:** Taught by Camping Trainer upon completing "The Great Outdoors"
+• **Strategy:** Craft and deploy approximately 25–30 Basic Campfire Kits. It stays orange until 20, then yellow until 25.
+• **Estimated Crafts:** ~28 crafts (28x Simple Wood)
+
+#### Bracket 2: Skill 25–50 · Lean-to Shelters & Tier 1 Stations
+• **Recipe:** *Lean-to Shelter* (Skill 25)
+• **Materials:** 4x Simple Wood, 2x Rough String
+• **Source:** Taught by Camping Trainer at Skill 25
+• **Strategy:** Pitch Lean-tos in outdoor leveling zones. Each shelter provides a 30-minute *Windbreak* aura (+2 Stamina) and +50% Rested XP speed. Also deploy your first Tier 1 profession station (Camp Chair, Sharpening Wheel, or Incense Candle) at skill 20 for free milestone skill-ups.
+• **Estimated Crafts:** ~28 crafts (112x Simple Wood, 56x Rough String)
+
+#### Bracket 3: Skill 50–75 · Field Tanning Racks & Linen Wall Tents
+• **Recipe 1 (50–65):** *Field Tanning Rack* (Skill 40) — 4x Light Leather, 2x Simple Wood (Enables on-site leather curing)
+• **Recipe 2 (65–75):** *Linen Wall Tent* (Skill 50) — 8x Linen Cloth, 4x Simple Wood (Grants +100% Rested XP and +4 Stamina/Spirit)
+• **Estimated Crafts:** ~18 Tanning Racks + ~12 Linen Wall Tents
+• **Total Materials:** ~72x Light Leather, ~84x Simple Wood, ~96x Linen Cloth
+• ⚠️ **Important Milestone (Skill 75 / Level 15+):** Visit your major faction camp trainer in Stormwind, Ironforge, Orgrimmar, or Undercity to train **Journeyman Camping (Raises cap to 150)**.
+
+#### Bracket 4: Skill 75–100 · Linen Wall Tents & Field Spinning Wheels
+• **Recipe 1 (75–90):** Continue crafting *Linen Wall Tent* (Yellow from 75–85, green at 90). This is the cheapest cloth path.
+• **Recipe 2 (90–100):** *Field Spinning Wheel* (Skill 65) — 6x Wool Cloth, 4x Simple Wood, 2x Medium Leather
+• **Estimated Crafts:** ~20 Linen Tents + ~12 Spinning Wheels
+• **Total Materials:** ~160x Linen Cloth, ~128x Simple Wood, ~72x Wool Cloth, ~24x Medium Leather
+
+#### Bracket 5: Skill 100–125 · Portable Anvils & Journeyman Campfires
+• **Recipe 1 (100–115):** *Portable Blacksmithing Anvil* (Skill 90) — 4x Bronze Bar, 2x Heavy Stone
+• **Recipe 2 (115–125):** *Journeyman Campfire Kit* (Skill 100) — 1x Star Wood
+• **Blueprint Drop:** *Blueprint: Journeyman Campfire* drops from **Lord Serpentis** in Wailing Caverns (or acquired via early trade favor). Holds up to 5 camp stations with a 45-minute burn duration.
+• **Estimated Crafts:** ~18 Portable Anvils + ~12 Journeyman Campfires
+• **Total Materials:** ~72x Bronze Bar, ~36x Heavy Stone, ~12x Star Wood
+
+#### Bracket 6: Skill 125–150 · Silk Trail Pavilions & Field Cauldrons
+• **Recipe 1 (125–140):** *Silk Trail Pavilion* (Skill 100) — 12x Silk Cloth, 4x Iron Bar (Grants +200% Rested XP speed and +3% All Stats Full Rested aura)
+• **Recipe 2 (140–150):** *Field Alchemy Cauldron* (Skill 120) — 4x Iron Bar, 2x Stranglekelp, 2x Briarthorn
+• **Estimated Crafts:** ~18 Silk Pavilions + ~12 Cauldrons
+• **Total Materials:** ~216x Silk Cloth, ~120x Iron Bar, ~24x Stranglekelp, ~24x Briarthorn
+• ⚠️ **Phase 1 Tradeskill Cap Reached (150)!**
+
+#### Bracket 7: Skill 150–225 · Phase 2 Beta Cap (Expert Camping & Feasts)
+• **Training:** Learn **Expert Camping (Cap 225)** at **Character Level 25+** from Wilderness Survival Masters:
+  - **Alliance:** Deneb Walker in Stromgarde Keep, Arathi Highlands
+  - **Horde:** Karrina Mekeda in Brackenwall Village, Dustwallow Marsh
+• **Skill 150–175:** *Field Alchemy Cauldron* (Stays green/yellow until 175) or *Silk Encampment Tent* (Tailoring 125 / Camping 150: 16x Silk Cloth, 4x Heavy Silken Thread).
+• **Skill 175–200:** *Cookie's Feast* (Blueprint drops from **Cookie** in The Deadmines: 5x Lean Wolf Flank, 5x Refreshing Spring Water). Feeds entire party, granting Well Fed +5% monster kill EXP.
+• **Skill 200–225:** *Expert Campfire Kit* (Blueprint dropped by mid-level dungeon bosses in Scarlet Monastery / Razorfen Kraul: 1x Thick Logs). Holds up to 10 stations with 60-minute duration.
+• 🔒 **Phase 2 Cap:** In Closed Beta Phase 2, player level is capped at 30, meaning tradeskills cap at 225. Artisan Camping (225–300) unlocks in Phase 3!
+
+---
+
+### Total Reagents Shopping List (1–150)
+To power-level Camping from 1 to 150 quickly, stock up on the following materials:
+
+| Material | Quantity | Primary Source |
+| **Simple Wood** | ~350x | Trade Supplies / General Vendor |
+| **Rough String** | ~56x | General Vendor |
+| **Star Wood** | ~12x | Trade Supplies Vendor |
+| **Linen Cloth** | ~256x | Humanoid drops (Westfall, Silverpine) |
+| **Wool Cloth** | ~72x | Humanoid drops (Deadmines, Wetlands) |
+| **Silk Cloth** | ~216x | Humanoid drops (SM, Badlands) |
+| **Light Leather** | ~72x | Skinning Beasts (Lvl 10–20) |
+| **Medium Leather** | ~24x | Skinning Beasts (Lvl 20–30) |
+| **Bronze Bar** | ~72x | Smelting Copper + Tin |
+| **Iron Bar** | ~120x | Mining Iron Veins |
+| **Heavy Stone** | ~36x | Mining Tin / Iron Veins |
+| **Stranglekelp / Briarthorn** | ~24x each | Herbalism Gathering |
+
+---
+
+### Rested XP & Leveling Efficiency Engine
+Camping is the single most powerful leveling multiplier in WoW Forever when properly stacked:
+
+• **Outdoor Rested XP:** Sitting inside a pitched tent (Lean-to, Linen, or Silk) for just 30 seconds generates up to **5% of your level in Rested XP** on a 1-hour cooldown.
+• **Cozy Sleeping Bag Synergy:** Complete the Level 14+ Scavenger Quest to earn the *Cozy Sleeping Bag*. Resting inside for 3 minutes grants **+3% bonus XP from ALL sources (monsters & quests)** for 2 hours!
+• **Camp Cooking Feast Synergy:** Consuming a camp feast (such as *Cookie's Feast*) adds **+5% bonus monster kill EXP** while Well Fed.
+• **Grand Total:** Stacking a tent rest, sleeping bag buff, and campfire feast provides **over +30% effective leveling velocity** in open-world questing!`
     },
     {
       id: "guide-battle-mage",

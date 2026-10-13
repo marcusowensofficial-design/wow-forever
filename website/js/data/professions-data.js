@@ -102818,9 +102818,396 @@ window.WOW_PROFESSIONS_DATA = {
     ],
     "gatheringNodes": [],
     "leveling": {
-      "note": "Level 225 is the current Phase 2 Beta Cap. Unlocks to 300 at launch.",
-      "steps": [],
-      "shopping": []
+      "title": "Leveling from 1 to 225",
+      "capNote": "225 is the Phase 2 Beta Cap",
+      "desc": "At each stage, craft campfire kits, pitch wilderness shelters, and construct portable field workstations to advance your Camping skill. Check off each craft as you progress in-game.",
+      "steps": [
+        {
+          "type": "rank",
+          "rank": "Apprentice Camping",
+          "details": "Learned at level 5 from wilderness camp trainers outside racial towns, up to 75"
+        },
+        {
+          "type": "step",
+          "from": 1,
+          "to": 25,
+          "bar": {
+            "iLeft": "0%",
+            "iWidth": "8.33%",
+            "eLeft": "74.67%"
+          },
+          "itemId": 279981,
+          "recipeName": "Basic Campfire Kit",
+          "source": "Learned from Camping Trainer after 'The Great Outdoors'",
+          "advice": "Craft and deploy Basic Campfire Kits. Simple Wood and Flint & Tinder can be bought from any general supplies vendor.",
+          "crafts": 28,
+          "reagents": [
+            {
+              "itemId": 4470,
+              "name": "Simple Wood",
+              "count": 1,
+              "icon": "inv_wood_01",
+              "quality": 1
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "from": 25,
+          "to": 50,
+          "bar": {
+            "iLeft": "8.33%",
+            "iWidth": "8.33%",
+            "eLeft": "74.67%"
+          },
+          "itemId": 279950,
+          "recipeName": "Lean-to Shelter",
+          "source": "Learned from Camping Trainer (Skill 25)",
+          "advice": "Pitch Lean-tos across outdoor wilderness zones. Grants +50% Rested XP speed and the Windbreak (+2 Stamina) buff.",
+          "crafts": 28,
+          "reagents": [
+            {
+              "itemId": 4470,
+              "name": "Simple Wood",
+              "count": 4,
+              "icon": "inv_wood_01",
+              "quality": 1
+            },
+            {
+              "itemId": 2320,
+              "name": "Rough String",
+              "count": 2,
+              "icon": "inv_misc_string_01",
+              "quality": 1
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "from": 50,
+          "to": 65,
+          "bar": {
+            "iLeft": "16.67%",
+            "iWidth": "5%",
+            "eLeft": "74.67%"
+          },
+          "itemId": 279967,
+          "recipeName": "Field Tanning Rack",
+          "source": "Learned from Camping Trainer (Skill 40)",
+          "advice": "Deploys a mobile pelt curing station for Leatherworkers to convert scraps into Light and Medium Leather in the field.",
+          "crafts": 18,
+          "reagents": [
+            {
+              "itemId": 2318,
+              "name": "Light Leather",
+              "count": 4,
+              "icon": "inv_misc_leatherscrap_01",
+              "quality": 1
+            },
+            {
+              "itemId": 4470,
+              "name": "Simple Wood",
+              "count": 2,
+              "icon": "inv_wood_01",
+              "quality": 1
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "from": 65,
+          "to": 75,
+          "bar": {
+            "iLeft": "21.67%",
+            "iWidth": "3.33%",
+            "eLeft": "74.67%"
+          },
+          "itemId": 279951,
+          "recipeName": "Linen Wall Tent",
+          "source": "Learned from Camping Trainer (Skill 50)",
+          "advice": "Pitch Linen Wall Tents for +100% Rested XP speed and the Warmth (+4 Stamina & Spirit) aura.",
+          "crafts": 12,
+          "reagents": [
+            {
+              "itemId": 2589,
+              "name": "Linen Cloth",
+              "count": 8,
+              "icon": "inv_fabric_linen_01",
+              "quality": 1
+            },
+            {
+              "itemId": 4470,
+              "name": "Simple Wood",
+              "count": 4,
+              "icon": "inv_wood_01",
+              "quality": 1
+            }
+          ]
+        },
+        {
+          "type": "rank",
+          "rank": "Journeyman Camping",
+          "details": "Learned at level 15 from major city camp trainers (Stormwind, Ironforge, Orgrimmar, Undercity), up to 150"
+        },
+        {
+          "type": "step",
+          "from": 75,
+          "to": 90,
+          "bar": {
+            "iLeft": "25%",
+            "iWidth": "5%",
+            "eLeft": "74.67%"
+          },
+          "itemId": 279951,
+          "recipeName": "Linen Wall Tent",
+          "source": "Learned from Camping Trainer (Skill 50)",
+          "advice": "Remains yellow from 75 to 85. Crafting Linen Wall Tents is significantly cheaper than early spinning wheels.",
+          "crafts": 20,
+          "reagents": [
+            {
+              "itemId": 2589,
+              "name": "Linen Cloth",
+              "count": 8,
+              "icon": "inv_fabric_linen_01",
+              "quality": 1
+            },
+            {
+              "itemId": 4470,
+              "name": "Simple Wood",
+              "count": 4,
+              "icon": "inv_wood_01",
+              "quality": 1
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "from": 90,
+          "to": 105,
+          "bar": {
+            "iLeft": "30%",
+            "iWidth": "5%",
+            "eLeft": "74.67%"
+          },
+          "itemId": 279968,
+          "recipeName": "Field Spinning Wheel",
+          "source": "Learned from Camping Trainer (Skill 65)",
+          "advice": "Enables Tailors to spin wool and silk into bolts in the field without capital looms.",
+          "crafts": 18,
+          "reagents": [
+            {
+              "itemId": 2592,
+              "name": "Wool Cloth",
+              "count": 6,
+              "icon": "inv_fabric_wool_01",
+              "quality": 1
+            },
+            {
+              "itemId": 4470,
+              "name": "Simple Wood",
+              "count": 4,
+              "icon": "inv_wood_01",
+              "quality": 1
+            },
+            {
+              "itemId": 4234,
+              "name": "Medium Leather",
+              "count": 2,
+              "icon": "inv_misc_leatherscrap_02",
+              "quality": 1
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "from": 105,
+          "to": 125,
+          "bar": {
+            "iLeft": "35%",
+            "iWidth": "6.67%",
+            "eLeft": "74.67%"
+          },
+          "itemId": 279970,
+          "recipeName": "Portable Blacksmithing Anvil",
+          "source": "Learned from Camping Trainer (Skill 90)",
+          "advice": "Deploys a fold-out bronze anvil allowing Blacksmiths and Engineers to forge gear next to mining veins.",
+          "crafts": 24,
+          "reagents": [
+            {
+              "itemId": 2841,
+              "name": "Bronze Bar",
+              "count": 4,
+              "icon": "inv_ingot_05",
+              "quality": 1
+            },
+            {
+              "itemId": 2835,
+              "name": "Heavy Stone",
+              "count": 2,
+              "icon": "inv_stone_06",
+              "quality": 1
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "from": 125,
+          "to": 140,
+          "bar": {
+            "iLeft": "41.67%",
+            "iWidth": "5%",
+            "eLeft": "74.67%"
+          },
+          "itemId": 279961,
+          "recipeName": "Journeyman Campfire Kit",
+          "source": "Blueprint: Journeyman Campfire (Lord Serpentis, Wailing Caverns)",
+          "advice": "Increases campfire capacity to 5 stations with 45-min duration. Requires Star Wood from vendors.",
+          "crafts": 18,
+          "reagents": [
+            {
+              "itemId": 11291,
+              "name": "Star Wood",
+              "count": 1,
+              "icon": "inv_wood_02",
+              "quality": 1
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "from": 140,
+          "to": 150,
+          "bar": {
+            "iLeft": "46.67%",
+            "iWidth": "3.33%",
+            "eLeft": "74.67%"
+          },
+          "itemId": 279952,
+          "recipeName": "Silk Trail Pavilion",
+          "source": "Learned from Camping Trainer (Skill 100)",
+          "advice": "Grants +200% Rested XP speed and the Full Rested (+3% All Stats) party aura. Reaches Phase 1 cap!",
+          "crafts": 12,
+          "reagents": [
+            {
+              "itemId": 4306,
+              "name": "Silk Cloth",
+              "count": 12,
+              "icon": "inv_fabric_silk_01",
+              "quality": 1
+            },
+            {
+              "itemId": 3575,
+              "name": "Iron Bar",
+              "count": 4,
+              "icon": "inv_ingot_02",
+              "quality": 1
+            }
+          ]
+        },
+        {
+          "type": "rank",
+          "rank": "Expert Camping",
+          "details": "Learned at level 25 from Wilderness Survival Masters (Stromgarde Keep in Arathi / Brackenwall Village in Dustwallow), up to 225"
+        },
+        {
+          "type": "step",
+          "from": 150,
+          "to": 175,
+          "bar": {
+            "iLeft": "50%",
+            "iWidth": "8.33%",
+            "eLeft": "74.67%"
+          },
+          "itemId": 279971,
+          "recipeName": "Field Alchemy Cauldron",
+          "source": "Learned from Expert Trainer (Skill 120)",
+          "advice": "Provides party-wide boiling cauldron with 5 potion charges that refresh for the group.",
+          "crafts": 28,
+          "reagents": [
+            {
+              "itemId": 3575,
+              "name": "Iron Bar",
+              "count": 4,
+              "icon": "inv_ingot_02",
+              "quality": 1
+            },
+            {
+              "itemId": 3820,
+              "name": "Stranglekelp",
+              "count": 2,
+              "icon": "inv_misc_herb_08",
+              "quality": 1
+            },
+            {
+              "itemId": 2452,
+              "name": "Briarthorn",
+              "count": 2,
+              "icon": "inv_misc_root_01",
+              "quality": 1
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "from": 175,
+          "to": 200,
+          "bar": {
+            "iLeft": "58.33%",
+            "iWidth": "8.33%",
+            "eLeft": "74.67%"
+          },
+          "itemId": 279960,
+          "recipeName": "Cookie's Feast",
+          "source": "Blueprint: Cookie's Feast (Cookie, The Deadmines)",
+          "advice": "Community feast granting Well Fed +5% monster kill EXP for everyone in the camp.",
+          "crafts": 28,
+          "reagents": [
+            {
+              "itemId": 12202,
+              "name": "Lean Wolf Flank",
+              "count": 5,
+              "icon": "inv_misc_food_14",
+              "quality": 1
+            },
+            {
+              "itemId": 159,
+              "name": "Refreshing Spring Water",
+              "count": 5,
+              "icon": "inv_drink_01",
+              "quality": 1
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "from": 200,
+          "to": 225,
+          "bar": {
+            "iLeft": "66.67%",
+            "iWidth": "8%",
+            "eLeft": "74.67%"
+          },
+          "itemId": 279974,
+          "recipeName": "Expert Campfire Kit",
+          "source": "Blueprint: Expert Campfire (Scarlet Monastery / Razorfen Kraul Drops)",
+          "advice": "Deploys an encampment campfire holding up to 10 stations with 60-min burn time. Beta Cap reached!",
+          "crafts": 28,
+          "reagents": [
+            {
+              "itemId": 272941,
+              "name": "Thick Logs",
+              "count": 1,
+              "icon": "inv_wood_03",
+              "quality": 1
+            }
+          ]
+        },
+        {
+          "type": "beta-stop",
+          "title": "🔒 PHASE 2 BETA CAP AT 225 (REQUIRES LEVEL 30)",
+          "text": "In Closed Beta Phase 2, player level is capped at 30, limiting tradeskills to 225. Artisan Camping (225–300) will unlock in Phase 3 with Level 35+ and Ironwood Campfire blueprints."
+        }
+      ]
     },
     "favor": {
       "camps": {
@@ -103564,6 +103951,136 @@ window.WOW_PROFESSIONS_DATA = {
           "effect": "Class abilities no longer require reagents purchaseable from vendors.",
           "meta": "Resourcefulness tree · 1 rank · needs 10 points spent in the tree",
           "planLink": "#systems"
+        }
+      ]
+    },
+    "shopping": {
+      "title": "Shopping list, 1 to 225",
+      "subtitle": "Materials required to power-level Camping from 1 to the Phase 2 Beta Cap",
+      "groups": [
+        {
+          "title": "From Trade Goods & General Vendors",
+          "note": "Always in stock for modest silver coins.",
+          "items": [
+            {
+              "itemId": 4470,
+              "name": "Simple Wood",
+              "icon": "inv_wood_01",
+              "quality": 1,
+              "count": 260
+            },
+            {
+              "itemId": 2320,
+              "name": "Rough String",
+              "icon": "inv_misc_string_01",
+              "quality": 1,
+              "count": 56
+            },
+            {
+              "itemId": 11291,
+              "name": "Star Wood",
+              "icon": "inv_wood_02",
+              "quality": 1,
+              "count": 18
+            },
+            {
+              "itemId": 159,
+              "name": "Refreshing Spring Water",
+              "icon": "inv_drink_01",
+              "quality": 1,
+              "count": 140
+            }
+          ]
+        },
+        {
+          "title": "Gathered, Crafted or Auction House Reagents",
+          "note": "Cloth, leather, ores, and herbs farmable across early zones.",
+          "items": [
+            {
+              "itemId": 2589,
+              "name": "Linen Cloth",
+              "icon": "inv_fabric_linen_01",
+              "quality": 1,
+              "count": 256
+            },
+            {
+              "itemId": 2318,
+              "name": "Light Leather",
+              "icon": "inv_misc_leatherscrap_01",
+              "quality": 1,
+              "count": 72
+            },
+            {
+              "itemId": 2592,
+              "name": "Wool Cloth",
+              "icon": "inv_fabric_wool_01",
+              "quality": 1,
+              "count": 108
+            },
+            {
+              "itemId": 4234,
+              "name": "Medium Leather",
+              "icon": "inv_misc_leatherscrap_02",
+              "quality": 1,
+              "count": 36
+            },
+            {
+              "itemId": 2841,
+              "name": "Bronze Bar",
+              "icon": "inv_ingot_05",
+              "quality": 1,
+              "count": 96
+            },
+            {
+              "itemId": 2835,
+              "name": "Heavy Stone",
+              "icon": "inv_stone_06",
+              "quality": 1,
+              "count": 48
+            },
+            {
+              "itemId": 4306,
+              "name": "Silk Cloth",
+              "icon": "inv_fabric_silk_01",
+              "quality": 1,
+              "count": 144
+            },
+            {
+              "itemId": 3575,
+              "name": "Iron Bar",
+              "icon": "inv_ingot_02",
+              "quality": 1,
+              "count": 184
+            },
+            {
+              "itemId": 3820,
+              "name": "Stranglekelp",
+              "icon": "inv_misc_herb_08",
+              "quality": 1,
+              "count": 56
+            },
+            {
+              "itemId": 2452,
+              "name": "Briarthorn",
+              "icon": "inv_misc_root_01",
+              "quality": 1,
+              "count": 56
+            },
+            {
+              "itemId": 12202,
+              "name": "Lean Wolf Flank",
+              "icon": "inv_misc_food_14",
+              "quality": 1,
+              "count": 140
+            },
+            {
+              "itemId": 272941,
+              "name": "Thick Logs",
+              "icon": "inv_wood_03",
+              "quality": 1,
+              "count": 28
+            }
+          ]
         }
       ]
     }

@@ -1465,13 +1465,21 @@
         <div style="display: flex; align-items: center; gap: 0.85rem;">
           <span style="font-size: 2rem;">🔨</span>
           <div>
-            <strong style="color: var(--text-gold, #facc15); font-size: 1.05rem;">Looking for the Complete Camp Station Database & Craft Reagents?</strong>
-            <p style="margin: 0.2rem 0 0 0; font-size: 0.85rem; color: #cbd5e1;">Explore all 3 Campfire Kits, 11 Skill 20 Buff Objects, 22 Blueprint Upgrades (140/300), and Legacy Perks under the Professions tab.</p>
+            <strong style="color: var(--text-gold, #facc15); font-size: 1.05rem;">Looking for the Complete Camp Station Database, 1–225 Leveling & Craft Reagents?</strong>
+            <p style="margin: 0.2rem 0 0 0; font-size: 0.85rem; color: #cbd5e1;">Explore all 3 Campfire Kits, 11 Skill 20 Buff Objects, 22 Blueprint Upgrades (140/300), and the 1–225 Leveling Roadmap under Professions.</p>
           </div>
         </div>
-        <a href="#professions/camping" class="quick-link-chip" style="background: rgba(243, 192, 67, 0.18); border-color: var(--border-gold-bright, #d4af37); color: #fff; text-decoration: none; padding: 0.5rem 1rem; font-weight: 600; cursor: pointer;" onclick="if (window.WOW_PROFESSIONS) { window.WOW_PROFESSIONS.selectProfession('camping'); }">
-          <span>⛺</span> Open Camping Profession Guide ›
-        </a>
+        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+          <a href="#professions/camping/leveling" class="quick-link-chip" style="background: rgba(243, 192, 67, 0.25); border-color: var(--border-gold-bright, #d4af37); color: #fff; text-decoration: none; padding: 0.5rem 1rem; font-weight: 600; cursor: pointer;" onclick="if (window.WOW_PROFESSIONS) { window.WOW_PROFESSIONS.selectProfession('camping', 'leveling'); }">
+            <span>📈</span> 1–225 Leveling Checklist ›
+          </a>
+          <a href="#professions/camping" class="quick-link-chip" style="background: rgba(243, 192, 67, 0.12); border-color: var(--border-gold-bright, #d4af37); color: #fff; text-decoration: none; padding: 0.5rem 0.85rem; font-weight: 600; cursor: pointer;" onclick="if (window.WOW_PROFESSIONS) { window.WOW_PROFESSIONS.selectProfession('camping'); }">
+            <span>⛺</span> Profession Guide ›
+          </a>
+          <a href="#guides/guide-camping-master" class="quick-link-chip" style="background: rgba(255, 255, 255, 0.08); border-color: var(--border-subtle); color: #cbd5e1; text-decoration: none; padding: 0.5rem 0.85rem; font-size: 0.82rem; cursor: pointer;" onclick="if (typeof window.navigateToGuide === 'function') { window.navigateToGuide('guide-camping-master'); }">
+            <span>📖</span> Field Manual
+          </a>
+        </div>
       </div>
 
       <!-- Camping Kits & Core Rules Hero Box -->
@@ -1497,6 +1505,58 @@
               <li>✦ <strong>Dedicated Reagent Bag Slot:</strong> Trade materials pull directly into on-site camp stations without inventory clutter.</li>
             </ul>
           </div>
+        </div>
+
+        <!-- Leveling & Skill-Up Progression Quick Matrix -->
+        <div class="camping-leveling-summary" style="margin-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 1.25rem;">
+          <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 0.85rem;">
+            <div style="display: flex; align-items: center; gap: 0.5rem;">
+              <span style="font-size: 1.3rem;">📈</span>
+              <strong style="color: #fff; font-size: 1.05rem;">How Players Level Up Camping (1–225 Skill Progression)</strong>
+            </div>
+            <a href="#professions/camping/leveling" style="font-size: 0.82rem; color: #f59e0b; text-decoration: none; font-weight: 600;" onclick="if (window.WOW_PROFESSIONS) { window.WOW_PROFESSIONS.selectProfession('camping', 'leveling'); }">
+              Open Complete Interactive Checklist & Shopping List ➔
+            </a>
+          </div>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0.75rem;">
+            <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); border-radius: 6px; padding: 0.75rem;">
+              <div style="display: flex; align-items: center; gap: 0.4rem; margin-bottom: 0.25rem;">
+                <span style="background: rgba(245, 158, 11, 0.2); color: #fef08a; padding: 0.1rem 0.4rem; border-radius: 3px; font-size: 0.7rem; font-weight: 700;">1–25</span>
+                <strong style="color: #e2e8f0; font-size: 0.85rem;">Apprentice Flintwork</strong>
+              </div>
+              <p style="font-size: 0.78rem; color: #94a3b8; margin: 0; line-height: 1.35;">
+                Quest "The Great Outdoors" (Lvl 5). Craft & light <strong>Basic Campfire Kits</strong> (1x Simple Wood, Flint & Tinder).
+              </p>
+            </div>
+            <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); border-radius: 6px; padding: 0.75rem;">
+              <div style="display: flex; align-items: center; gap: 0.4rem; margin-bottom: 0.25rem;">
+                <span style="background: rgba(245, 158, 11, 0.2); color: #fef08a; padding: 0.1rem 0.4rem; border-radius: 3px; font-size: 0.7rem; font-weight: 700;">25–75</span>
+                <strong style="color: #e2e8f0; font-size: 0.85rem;">Shelters & Tents</strong>
+              </div>
+              <p style="font-size: 0.78rem; color: #94a3b8; margin: 0; line-height: 1.35;">
+                Pitch <strong>Lean-to Shelters</strong> (+50% Rested) and <strong>Linen Wall Tents</strong> (+100% Rested). Deploy Tier 1 stations at skill 20.
+              </p>
+            </div>
+            <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); border-radius: 6px; padding: 0.75rem;">
+              <div style="display: flex; align-items: center; gap: 0.4rem; margin-bottom: 0.25rem;">
+                <span style="background: rgba(59, 130, 246, 0.2); color: #93c5fd; padding: 0.1rem 0.4rem; border-radius: 3px; font-size: 0.7rem; font-weight: 700;">75–150</span>
+                <strong style="color: #e2e8f0; font-size: 0.85rem;">Journeyman Stations</strong>
+              </div>
+              <p style="font-size: 0.78rem; color: #94a3b8; margin: 0; line-height: 1.35;">
+                Craft <strong>Spinning Wheels</strong>, <strong>Portable Anvils</strong>, <strong>Silk Pavilions</strong>, and <strong>Journeyman Campfires</strong> (WC Lord Serpentis).
+              </p>
+            </div>
+            <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(239, 68, 68, 0.2); border-radius: 6px; padding: 0.75rem;">
+              <div style="display: flex; align-items: center; gap: 0.4rem; margin-bottom: 0.25rem;">
+                <span style="background: rgba(239, 68, 68, 0.2); color: #fca5a5; padding: 0.1rem 0.4rem; border-radius: 3px; font-size: 0.7rem; font-weight: 700;">150–225</span>
+                <strong style="color: #e2e8f0; font-size: 0.85rem;">Expert Beta Cap</strong>
+              </div>
+              <p style="font-size: 0.78rem; color: #94a3b8; margin: 0; line-height: 1.35;">
+                Train Expert (Lvl 25+). Build <strong>Alchemy Cauldrons</strong>, deploy <strong>Cookie's Feast</strong> (+5% kill EXP), and <strong>Expert Campfires</strong>.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
 
       <!-- Cozy Sleeping Bag & Rested Bonus Interactive Hub -->
