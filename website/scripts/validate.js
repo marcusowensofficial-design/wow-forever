@@ -273,6 +273,76 @@ check('Addon release packages and manifest exist in website/downloads/', () => {
   }
 });
 
+console.log('\n--- 5. SITE LIFECYCLE & ENGINE INTEGRITY ---');
+
+check('Site Lifecycle engine module & date boundary transitions', () => {
+  const lifecyclePath = path.join(ROOT, 'js', 'modules', 'lifecycle.js');
+  if (!fs.existsSync(lifecyclePath)) {
+    throw new Error('website/js/modules/lifecycle.js does not exist');
+  }
+  if (!indexHtml.includes('js/modules/lifecycle.js')) {
+    throw new Error('lifecycle.js is not included in index.html');
+  }
+
+  // Unit test phase boundary logic
+  const targets = {
+    betaStart: '2026-09-17T10:00:00-07:00',
+    betaEnds: '2026-10-21T23:59:59-07:00',
+    globalLaunch: '2026-11-04T15:00:00-08:00',
+    raidUnlock: '2026-12-09T10:00:00-08:00'
+  };
+
+  const code = fs.readFileSync(lifecyclePath, 'utf8');
+  const mod = { exports: {} };
+  new Function('module', 'exports', code)(mod, mod.exports);
+  const getPhase = mod.exports.getSitePhase;
+  if (!getPhase) throw new Error('getSitePhase not exported by lifecycle.js');
+
+  const pBeta = getPhase(new Date('2026-10-15T12:00:00-07:00').getTime(), targets);
+  if (pBeta !== 'beta2') throw new Error(`Expected beta2 on Oct 15, got ${pBeta}`);
+
+  const pPre = getPhase(new Date('2026-10-25T12:00:00-07:00').getTime(), targets);
+  if (pPre !== 'prelaunch') throw new Error(`Expected prelaunch on Oct 25, got ${pPre}`);
+
+  const pLive = getPhase(new Date('2026-11-10T12:00:00-08:00').getTime(), targets);
+  if (pLive !== 'live') throw new Error(`Expected live on Nov 10, got ${pLive}`);
+
+  const pRaids = getPhase(new Date('2026-12-15T12:00:00-08:00').getTime(), targets);
+  if (pRaids !== 'raids') throw new Error(`Expected raids on Dec 15, got ${pRaids}`);
+});
+
+check('Addon Suite single-TOC 16001 compliance and metadata', () => {
+  const addonsDir = path.resolve(ROOT, '..', 'addons');
+  const inHouse = ['ForeverPlates', 'Foreverplatescastbars', 'ForeverLiquid', 'ForeverDungeonJournal', 'ForeverBlessings', 'EchoTwist'];
+
+  for (const name of inHouse) {
+    const dir = path.join(addonsDir, name);
+    const toc = path.join(dir, `${name}.toc`);
+    if (!fs.existsSync(toc)) throw new Error(`Missing primary TOC: ${toc}`);
+    const content = fs.readFileSync(toc, 'utf8');
+    if (!content.includes('## Interface: 16001')) {
+      throw new Error(`Addon ${name} TOC does not target Interface: 16001`);
+    }
+    if (!content.includes('## Author:')) {
+      throw new Error(`Addon ${name} TOC missing Author metadata`);
+    }
+  }
+});
+
+check('Dalaran Map TGA textures are optimized power-of-two (1024x1024)', () => {
+  const mediaDir = path.resolve(ROOT, '..', 'addons', 'ForeverDungeonJournal', 'Media');
+  for (const mapName of ['DalaranCityMap.tga', 'DalaranUnderbellyMap.tga']) {
+    const mapPath = path.join(mediaDir, mapName);
+    if (!fs.existsSync(mapPath)) continue;
+    const buf = fs.readFileSync(mapPath);
+    const width = buf.readUInt16LE(12);
+    const height = buf.readUInt16LE(14);
+    if (width !== 1024 || height !== 1024) {
+      throw new Error(`Expected ${mapName} to be 1024x1024 POT texture, found ${width}x${height}`);
+    }
+  }
+});
+
 
 console.log('\n=======================================');
 console.log(`Ran ${totalChecks} checks. Failures: ${errors.length}`);

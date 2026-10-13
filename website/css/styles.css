@@ -3,7 +3,22 @@
    Aesthetics: Deep Runic Obsidian, Burnished Gold, Skyborne Arcane, Horde/Alliance
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Cinzel+Decorative:wght@700;900&family=Outfit:wght@300;400;500;600;700&display=swap');
+/* Metric-matched fallback fonts to eliminate layout shift (CLS = 0) */
+@font-face {
+  font-family: 'Outfit Fallback';
+  src: local('Arial'), local('Helvetica');
+  size-adjust: 104%;
+  ascent-override: 100%;
+  descent-override: 26%;
+}
+
+@font-face {
+  font-family: 'Cinzel Fallback';
+  src: local('Georgia'), local('Times New Roman');
+  size-adjust: 112%;
+  ascent-override: 92%;
+  descent-override: 28%;
+}
 
 :root {
   --bg-primary: #07090e;
@@ -48,9 +63,9 @@
   --class-demonhunter: #a330c9;
   --class-evoker: #33937f;
 
-  --font-display: 'Cinzel Decorative', 'Cinzel', serif;
-  --font-heading: 'Cinzel', serif;
-  --font-body: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: 'Cinzel Decorative', 'Cinzel', 'Cinzel Fallback', serif;
+  --font-heading: 'Cinzel', 'Cinzel Fallback', serif;
+  --font-body: 'Outfit', 'Outfit Fallback', -apple-system, BlinkMacSystemFont, sans-serif;
 
   --radius-sm: 6px;
   --radius-md: 12px;
@@ -145,6 +160,8 @@ h1, h2, h3, h4, .font-heading {
   backdrop-filter: blur(12px);
   padding: 0.6rem 1.5rem;
   font-size: 0.85rem;
+  line-height: 1.4;
+  min-height: 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -313,6 +330,7 @@ h1, h2, h3, h4, .font-heading {
   border-radius: var(--radius-full);
   backdrop-filter: blur(16px);
   max-width: fit-content;
+  min-height: 52px;
   box-shadow: 0 8px 30px rgba(0,0,0,0.5);
 }
 

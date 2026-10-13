@@ -50,10 +50,57 @@ const WOW_FOREVER_DATA = {
     }
   },
   "countdownTargets": {
+    "betaStart": "2026-09-17T10:00:00-07:00",
     "betaPhase2": "2026-10-01T15:00:00-07:00",
     "betaEnds": "2026-10-21T23:59:59-07:00",
     "globalLaunch": "2026-11-04T15:00:00-08:00",
     "raidUnlock": "2026-12-09T10:00:00-08:00"
+  },
+  "sitePhases": {
+    "beta2": {
+      "key": "beta2",
+      "topPill": "Beta Phase 2: LIVE NOW • Level 30 Cap Active",
+      "tickerDuration": "35 Days (Sept 17 – Oct 21)",
+      "heroTitle": "Phase 2: LIVE NOW",
+      "heroBadge": "Day {daysElapsed} of 35",
+      "headline": "Beta Phase 2 Live: The Level 30 Cap Expansion",
+      "subline": "Beta Phase 2 is now fully live across all beta megarealms! The level cap is increased to 30. Testers are now delving into Excavation Site 4 & the City of Dalaran.",
+      "milestonesTitle": "Beta Phase 2 Milestones",
+      "squadBracket": "Beta Phase 2 (Cap 30 - Live Now!)"
+    },
+    "prelaunch": {
+      "key": "prelaunch",
+      "topPill": "Beta Concluded • Launch Prep & Polish Underway",
+      "tickerDuration": "Beta Completed (35/35 Days)",
+      "heroTitle": "Beta Concluded — Launch Prep",
+      "heroBadge": "Launch Countdown",
+      "headline": "Closed Beta Concluded: Pre-Launch Readiness Pass",
+      "subline": "The 35-day beta test has concluded with over 250,000 player reports logged. All characters are being reset ahead of the November 4 Global Launch.",
+      "milestonesTitle": "Pre-Launch Roadmap & Readiness",
+      "squadBracket": "Global Launch Bracket (L60 Cap Prep)"
+    },
+    "live": {
+      "key": "live",
+      "topPill": "⚔️ WoW Forever is LIVE! Tier 1 Raids Unlock Soon",
+      "tickerDuration": "Launch Era Active (Level 60)",
+      "heroTitle": "WoW Forever is LIVE!",
+      "heroBadge": "Realms Online",
+      "headline": "World of Warcraft: Forever is Officially Live!",
+      "subline": "The gates of Azeroth have swung open! Level to 60, gear up through 29 revamped dungeons, and prepare for Tier 1 Raids.",
+      "milestonesTitle": "Launch Progression & Milestones",
+      "squadBracket": "Live Realm Progression (Level 60)"
+    },
+    "raids": {
+      "key": "raids",
+      "topPill": "🔥 Tier 1 Raids Active: Barrow Deeps • Hyjal • Onyxia",
+      "tickerDuration": "Tier 1 Raid Progression Live",
+      "heroTitle": "Tier 1 Raids: OPEN NOW",
+      "heroBadge": "Raids Active",
+      "headline": "Tier 1 Raid Tier Unlocked: Barrow Deeps & Hyjal Summit",
+      "subline": "The war for Azeroth reaches its crescendo. Enter Barrow Deeps (10m), Hyjal Summit (20m), and Onyxia's Lair (40m) without World Buffs.",
+      "milestonesTitle": "Tier 1 Raid Milestones & Attunements",
+      "squadBracket": "Tier 1 Raid Progression (T1 Ready)"
+    }
   },
   "quickLinks": [
     {

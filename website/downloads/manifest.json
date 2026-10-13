@@ -1,10 +1,11 @@
 {
-  "generatedAt": "2026-10-13T17:49:53.572Z",
+  "generatedAt": "2026-10-13T22:20:49.319Z",
   "targetInterface": 16001,
   "engine": "Camelot 12.0",
   "masterSuite": {
     "filename": "Marcus-WoWForever-Addon-Suite.zip",
-    "sizeKb": 41055,
+    "sizeKb": 31559,
+    "sha256": "f7ed40c1c7f278e1643225709355e55c5e11c6f7651043d92461b04bb8af087e",
     "downloadPath": "downloads/Marcus-WoWForever-Addon-Suite.zip"
   },
   "addons": [
@@ -13,6 +14,7 @@
       "version": "2.1.0",
       "filename": "ForeverPlates-v2.1.0.zip",
       "sizeKb": 595,
+      "sha256": "4e137f8ef4279928c3de8bfee03ede145d8c3180e144fa38ba7e07702d5a8619",
       "downloadPath": "downloads/ForeverPlates-v2.1.0.zip"
     },
     {
@@ -20,6 +22,7 @@
       "version": "2.2.0",
       "filename": "Foreverplatescastbars-v2.2.0.zip",
       "sizeKb": 35,
+      "sha256": "023b831751f568e0bceddfdeab3968c1cf825dbdf5462af09457ebd7a292a2dd",
       "downloadPath": "downloads/Foreverplatescastbars-v2.2.0.zip"
     },
     {
@@ -27,27 +30,31 @@
       "version": "1.3.0",
       "filename": "ForeverLiquid-v1.3.0.zip",
       "sizeKb": 138,
+      "sha256": "25c0cb9f6e637a53ce82069ecbf57fe5b8cac58688ee9eeae02577410a81a0eb",
       "downloadPath": "downloads/ForeverLiquid-v1.3.0.zip"
     },
     {
       "name": "ForeverDungeonJournal",
       "version": "1.6.0",
       "filename": "ForeverDungeonJournal-v1.6.0.zip",
-      "sizeKb": 40212,
+      "sizeKb": 30750,
+      "sha256": "d7a5f671a1c0ec900136d87e88eaa773408330b1e2e6aeb16ac628c8defd186a",
       "downloadPath": "downloads/ForeverDungeonJournal-v1.6.0.zip"
     },
     {
       "name": "ForeverBlessings",
       "version": "1.1.0",
       "filename": "ForeverBlessings-v1.1.0.zip",
-      "sizeKb": 30,
+      "sizeKb": 12,
+      "sha256": "86d8db0b6a2c942a1b4134d83eee1e302553597ba62f9d18394e1febd1bb4632",
       "downloadPath": "downloads/ForeverBlessings-v1.1.0.zip"
     },
     {
       "name": "EchoTwist",
       "version": "1.0.0",
       "filename": "EchoTwist-v1.0.0.zip",
-      "sizeKb": 45,
+      "sizeKb": 28,
+      "sha256": "9b6c425da6fb6f3b0e54c292e7ed88eb464fa45e8a889115ab4f3a6aaebbd6ef",
       "downloadPath": "downloads/EchoTwist-v1.0.0.zip"
     }
   ]

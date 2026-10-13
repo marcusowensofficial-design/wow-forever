@@ -4,6 +4,9 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  // 0. Site Lifecycle & Phase Engine
+  if (typeof window.applySitePhase === 'function') window.applySitePhase();
+
   // 1. Navigation & Countdown Timers
   if (typeof initCountdowns === 'function') initCountdowns();
   if (typeof initNavigation === 'function') initNavigation();

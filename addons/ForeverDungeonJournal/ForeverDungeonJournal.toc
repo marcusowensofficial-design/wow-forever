@@ -1,13 +1,14 @@
 ## Interface: 16001
-## Title: Dungeon Journal
-## Notes: Boss, loot and quest journal for WoW Classic dungeons.
-## Author: Exehn
+## Title: |cffffcc00Dungeon|r |cffffffffJournal|r [AllowLoadGameType camelot]
+## Title: Dungeon Journal (Retail) [AllowLoadGameType standard]
+## Notes: Dungeon Journal by Marcus — Boss, loot and quest journal for WoW Forever & Classic+ dungeons.
+## Author: Marcus
 ## Version: 1.6.0
 ## IconTexture: Interface\Icons\INV_Misc_Book_09
 ## SavedVariables: ForeverDungeonJournalDB
 ## SavedVariablesPerCharacter: ForeverDungeonJournalCharacterDB
 ## LoadSavedVariablesFirst: true
-## AllowLoadGameType: camelot
+## Category-enUS: Dungeons & Raids
 
 
 Core\Bootstrap.lua
