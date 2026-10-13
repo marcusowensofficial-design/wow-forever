@@ -260,7 +260,7 @@ function initClassRacePlanner() {
                       </div>
                     </div>
                     ${raceEntry.isNew ? `
-                      <span class="cell-new-badge">✦ NEW IN FOREVER</span>
+                      <span class="cell-new-badge">✦ NEW COMBO IN FOREVER</span>
                     ` : `
                       <span class="badge-classic-staple" style="font-size: 0.72rem;">Classic Staple</span>
                     `}
@@ -424,7 +424,7 @@ function initClassRacePlanner() {
                     </div>
                   </div>
                   ${cEntry.isNew ? `
-                    <span class="cell-new-badge">✦ NEW IN FOREVER</span>
+                    <span class="cell-new-badge">✦ NEW CLASS COMBO</span>
                   ` : `
                     <span class="badge-classic-staple">Classic</span>
                   `}

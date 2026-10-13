@@ -87,7 +87,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       {
         "name": "Hunter",
         "isNew": true,
-        "note": "✦ NEW IN FOREVER: Royal gamekeepers and marksmen"
+        "note": "✦ NEW RACE/CLASS COMBINATION: Human Hunter — In original Classic, Humans could not be Hunters (Alliance was limited to Night Elf & Dwarf). WoW Forever unlocks Human Hunters as Stormwind marksmen and Elwynn Forest gamekeepers."
       },
       {
         "name": "Rogue",
@@ -702,7 +702,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         "name": "Human",
         "faction": "Alliance",
         "isNew": true,
-        "note": "✦ NEW IN FOREVER: Elwynn forest gamekeepers and marksmen"
+        "note": "✦ NEW RACE/CLASS COMBINATION: Human Hunter — In original Classic, Humans could not be Hunters (Alliance was limited to Night Elf & Dwarf). WoW Forever unlocks Human Hunters as Kingdom of Stormwind marksmen and Elwynn Forest gamekeepers."
       },
       {
         "id": "dwarf",
@@ -721,7 +721,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         "name": "The Skyborne",
         "faction": "Alliance & Horde",
         "isNew": true,
-        "note": "✦ New in Forever: Wind-guided archery and cloud-falcon taming"
+        "note": "✦ NEW RACE & CLASS COMBINATION: Skyborne Hunter — The Skyborne are a brand-new playable neutral race in WoW Forever hailing from Zephras Isle, mastering wind-guided archery and cloud-falcon taming."
       },
       {
         "id": "orc",

@@ -163,6 +163,8 @@ function initNavigation() {
       tabName = 'milestones';
     } else if (tabName === 'legacy' || tabName === 'legacytree' || tabName === 'legacycalc') {
       tabName = 'legacy';
+    } else if (tabName === 'guides' || tabName === 'guide') {
+      tabName = 'guides';
     }
 
     // Switch tab safely
@@ -180,6 +182,8 @@ function initNavigation() {
         const safeSubSelector = window.CSS && CSS.escape ? CSS.escape(subRoute) : subRoute;
         if (tabName === 'deepdives' && typeof window.switchDeepDiveClass === 'function') {
           window.switchDeepDiveClass(subRoute);
+        } else if (tabName === 'guides' && typeof window.navigateToGuide === 'function') {
+          window.navigateToGuide(subRoute);
         } else if (tabName === 'codex') {
           const codexBtn = document.querySelector(`.codex-nav-btn[data-codex="${safeSubSelector}"]`);
           if (codexBtn) codexBtn.click();

@@ -371,6 +371,11 @@ function initClassDeepDives() {
     let currentQuery = '';
 
     function applyPetFilters() {
+      const noticeBanner = contentContainer.querySelector('#pet-new-filter-banner');
+      if (noticeBanner) {
+        noticeBanner.style.display = currentRole === 'new' ? 'flex' : 'none';
+      }
+
       familyCards.forEach(card => {
         const role = card.getAttribute('data-family-role') || '';
         const hasNew = card.getAttribute('data-has-new') === 'true';
@@ -381,6 +386,12 @@ function initClassDeepDives() {
           (currentRole === 'tank' && role === 'tank') ||
           (currentRole === 'utility' && role === 'utility') ||
           (currentRole === 'new' && hasNew);
+
+        // Highlight new ability callout if filtered by new
+        const abilityBox = card.querySelector('.family-new-ability-box');
+        if (abilityBox) {
+          abilityBox.classList.toggle('filter-highlight', currentRole === 'new' && hasNew);
+        }
 
         // Check beast rows within this card
         const beastRows = card.querySelectorAll('.tame-beast-row');
@@ -1915,6 +1926,10 @@ function initClassDeepDives() {
     `;
   }
 
+  const NEW_SIGNATURE_ABILITY_FAMILIES = new Set([
+    'bat', 'bear', 'bird-of-prey', 'crab', 'crocolisk', 'fox', 'hyena', 'raptor', 'spider'
+  ]);
+
   function renderHunterPetStable(cData) {
     const petData = (typeof window !== 'undefined' && window.WOW_ATLAS_DATA && window.WOW_ATLAS_DATA.hunterPets) || null;
     const families = (petData && petData.families) || [];
@@ -2001,13 +2016,24 @@ function initClassDeepDives() {
           </div>
         </div>
 
+        <!-- New Abilities Filter Notice Banner -->
+        <div id="pet-new-filter-banner" class="pet-filter-notice-banner" style="display: none;">
+          <div class="pnfb-text">
+            <strong>✦ Showing 9 Pet Families with Brand-New Signature Abilities in WoW Forever:</strong>
+            <span>Bat (Sonic Blast), Bear (Swipe), Bird of Prey (Mine!), Crab (Pinch), Crocolisk (Dismember), Fox (Trickster's Dance), Hyena (Tendon Rip), Raptor (Savage Rend), Spider (Web).</span>
+          </div>
+          <button class="btn-switch-pet-tab pnfb-link-btn" data-target-subtab="petchanges" type="button">
+            ⚡ View Full Forensic Changes & Ability Diffs ➔
+          </button>
+        </div>
+
         <!-- 18 Families Grid -->
         <div class="pet-families-grid" style="margin-top: 1rem;">
           ${families.map(fam => {
             const famBeasts = fam.tameLocations || [];
             const minFamLvl = famBeasts.length > 0 ? Math.min(...famBeasts.map(b => b.minLevel || 60)) : 1;
             const maxFamLvl = famBeasts.length > 0 ? Math.max(...famBeasts.map(b => b.maxLevel || 1)) : 60;
-            const hasNew = !!fam.newAbility;
+            const hasNew = NEW_SIGNATURE_ABILITY_FAMILIES.has(fam.id);
             const isDmg = fam.damageMod.startsWith('+');
             const isTank = fam.armorMod.startsWith('+') || fam.healthMod.startsWith('+');
             const role = isDmg ? 'damage' : (isTank ? 'tank' : 'utility');
@@ -3773,6 +3799,9 @@ function initClassDeepDives() {
               <span class="deepdive-badge badge-verified"><span>✓</span> 21 Talent Points Active</span>
             </div>
             <div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap;">
+              <button type="button" class="talent-calc-link-btn" onclick="window.navigateToGuide ? window.navigateToGuide((({hunter: 'guide-hunter-pets', warrior: 'guide-class-warrior', paladin: 'guide-class-paladin', rogue: 'guide-class-rogue', priest: 'guide-class-priest', shaman: 'guide-class-shaman', mage: 'guide-battle-mage', warlock: 'guide-class-warlock', druid: 'guide-druid-forms'}[cData.id]) || ('guide-class-' + cData.id))) : (document.querySelector('.nav-tab-btn[data-tab=&quot;guides&quot;]')?.click())" style="padding: 0.35rem 0.75rem; font-size: 0.78rem; background: linear-gradient(135deg, rgba(243, 192, 67, 0.25), rgba(180, 83, 9, 0.4)); border-color: var(--border-gold); color: #fff; cursor: pointer;">
+                <span>📖</span> ${escapeHtml(cData.name)} Guide ➔
+              </button>
               <a href="https://www.wowhead.com/forever/guides" target="_blank" rel="noopener" class="talent-calc-link-btn" style="padding: 0.35rem 0.75rem; font-size: 0.78rem;">
                 <span>📚</span> Wowhead Guides ↗
               </a>

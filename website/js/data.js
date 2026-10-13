@@ -2255,10 +2255,10 @@ const WOW_FOREVER_DATA = {
       color: "#ABD473",
       description: "Deadly trackers and marksmen of the wilderness who tame savage beasts, lay tactical traps, and unleash barrages of arrows and bullets.",
       allowedRaces: [
-        { id: "human", name: "Human", faction: "Alliance", isNew: true, note: "✦ NEW IN FOREVER: Elwynn forest gamekeepers and marksmen" },
+        { id: "human", name: "Human", faction: "Alliance", isNew: true, note: "✦ NEW RACE/CLASS COMBINATION: Human Hunter — In original Classic, Humans could not be Hunters (Alliance was limited to Night Elf & Dwarf). WoW Forever unlocks Human Hunters as Kingdom of Stormwind marksmen and Elwynn Forest gamekeepers." },
         { id: "dwarf", name: "Dwarf", faction: "Alliance", isNew: false },
         { id: "nightelf", name: "Night Elf", faction: "Alliance", isNew: false },
-        { id: "skyborne", name: "The Skyborne", faction: "Alliance & Horde", isNew: true, note: "✦ New in Forever: Wind-guided archery and cloud-falcon taming" },
+        { id: "skyborne", name: "The Skyborne", faction: "Alliance & Horde", isNew: true, note: "✦ NEW RACE & CLASS COMBINATION: Skyborne Hunter — The Skyborne are a brand-new playable neutral race in WoW Forever hailing from Zephras Isle, mastering wind-guided archery and cloud-falcon taming." },
         { id: "orc", name: "Orc", faction: "Horde", isNew: false },
         { id: "tauren", name: "Tauren", faction: "Horde", isNew: false },
         { id: "troll", name: "Troll", faction: "Horde", isNew: false }

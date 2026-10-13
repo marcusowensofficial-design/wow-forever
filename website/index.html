@@ -103,6 +103,9 @@
         <button class="nav-tab-btn active" data-tab="overview">
           <span>⚡</span> Operations Hub
         </button>
+        <button class="nav-tab-btn" data-tab="guides">
+          <span>📖</span> Classic+ Guides
+        </button>
         <button class="nav-tab-btn" data-tab="bis">
           <span>🛡️</span> Level 30 BiS
         </button>
@@ -621,6 +624,82 @@
 
     </main>
 
+    <!-- TAB: CURATED CLASSIC+ GUIDES & FIELD MANUALS -->
+    <section id="tab-guides" class="tab-content" aria-label="Classic Plus Guides & Field Manuals">
+      <!-- Section Hero Bar -->
+      <div class="section-heading-bar">
+        <div>
+          <h2><span>📖</span> Classic+ Guides &amp; Field Manuals</h2>
+          <p class="section-subtext">34 curated gameplay blueprints, Level 30 class masterclasses, speedrun routes, dungeon strategies, and economy systems from Wowhead, Warcraft Tavern, and Closed Beta playtesting.</p>
+        </div>
+        <div class="guides-header-stats" style="display: flex; gap: 0.6rem; flex-wrap: wrap; align-items: center;">
+          <span class="guide-stat-chip"><strong>34</strong> Verified Guides</span>
+          <span class="guide-stat-chip"><strong>Phase 2</strong> Cap (Lvl 30)</span>
+          <span class="guide-stat-chip"><strong>6</strong> Categories</span>
+        </div>
+      </div>
+
+      <!-- Controls Row: Subtabs Navigation and Search Toolbar -->
+      <div class="guides-controls-container">
+        <!-- Sub-Tabs Navigation -->
+        <div class="guides-subtab-nav" id="guides-category-pills" role="tablist" aria-label="Guide Categories">
+          <button type="button" class="guides-subtab-btn active" data-guide-category="all" role="tab" aria-selected="true">
+            <span>🌟</span> All Guides <span class="guides-pill-count" id="count-cat-all">34</span>
+          </button>
+          <button type="button" class="guides-subtab-btn" data-guide-category="classes" role="tab" aria-selected="false">
+            <span>⚔️</span> Classes &amp; Specs <span class="guides-pill-count" id="count-cat-classes">11</span>
+          </button>
+          <button type="button" class="guides-subtab-btn" data-guide-category="leveling" role="tab" aria-selected="false">
+            <span>⚡</span> Leveling &amp; Quests <span class="guides-pill-count" id="count-cat-leveling">5</span>
+          </button>
+          <button type="button" class="guides-subtab-btn" data-guide-category="dungeons" role="tab" aria-selected="false">
+            <span>🏰</span> Dungeons &amp; Raids <span class="guides-pill-count" id="count-cat-dungeons">4</span>
+          </button>
+          <button type="button" class="guides-subtab-btn" data-guide-category="professions" role="tab" aria-selected="false">
+            <span>🔨</span> Professions &amp; Gold <span class="guides-pill-count" id="count-cat-professions">7</span>
+          </button>
+          <button type="button" class="guides-subtab-btn" data-guide-category="secrets" role="tab" aria-selected="false">
+            <span>🗺️</span> Secrets &amp; Exploration <span class="guides-pill-count" id="count-cat-secrets">4</span>
+          </button>
+          <button type="button" class="guides-subtab-btn" data-guide-category="pvp" role="tab" aria-selected="false">
+            <span>🏆</span> PvP &amp; Tournaments <span class="guides-pill-count" id="count-cat-pvp">3</span>
+          </button>
+        </div>
+
+        <!-- Search Bar and View Mode Switcher -->
+        <div class="guides-toolbar-row">
+          <div class="guides-search-wrap">
+            <span class="guides-search-icon">🔍</span>
+            <input type="text" id="guides-search-input" class="guides-search-field" placeholder="Search 34 guides, tactics, bosses, macros..." aria-label="Search all Classic+ guides" autocomplete="off" />
+            <button type="button" id="guides-search-clear" class="guides-search-clear-btn" aria-label="Clear search" hidden>✕</button>
+          </div>
+
+          <div class="guides-view-modes">
+            <span class="guides-view-label">View Layout:</span>
+            <button type="button" id="btn-guide-view-reader" class="guide-layout-btn active" title="Split Master-Detail Reader View" aria-label="Split Reader View">
+              <span>📖</span> Field Manual Reader
+            </button>
+            <button type="button" id="btn-guide-view-cards" class="guide-layout-btn" title="Grid Cards Compendium" aria-label="Grid Cards Compendium">
+              <span>🗂️</span> Cards Grid
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Live Results Counter Banner -->
+      <div id="guides-results-banner" class="guides-results-banner" style="display: none;"></div>
+
+      <!-- Mount Point: Master-Detail Field Manual Reader View -->
+      <div id="guides-reader-mount" class="guides-reader-mount">
+        <!-- Rendered dynamically by js/modules/guides.js -->
+      </div>
+
+      <!-- Mount Point: Grid Cards Compendium View -->
+      <div id="guides-cards-mount" class="guides-cards-mount" style="display: none;">
+        <!-- Rendered dynamically by js/modules/guides.js -->
+      </div>
+    </section>
+
     <!-- TAB 2: NEWS & DISPATCHES WIRE -->
     <section id="tab-news" class="tab-content" aria-label="News and Dispatches">
       
@@ -990,9 +1069,12 @@
       <div id="codex-guides" class="codex-panel">
         <div class="section-heading-bar" style="margin-bottom: 1.5rem;">
           <div>
-            <h3><span>📖</span> Curated Classic+ Guides & Field Manuals</h3>
+            <h3><span>📖</span> Curated Classic+ Guides &amp; Field Manuals</h3>
             <p class="section-subtext">Deep gameplay primers: Level 30 PvP brackets, rare spawns, deterministic currencies, transmog rules, and hidden forms</p>
           </div>
+          <button type="button" class="btn-action-gold" onclick="window.navigateToGuide ? window.navigateToGuide() : (document.querySelector('.nav-tab-btn[data-tab=guides]').click())" style="align-self: flex-start; margin-top: 0.5rem;">
+            <span>📖</span> Open Dedicated Guides Hub ➔
+          </button>
         </div>
         <div id="curated-guides-grid" class="curated-guides-grid">
           <!-- Rendered dynamically by js/modules/guides.js -->

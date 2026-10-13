@@ -159,11 +159,11 @@ function buildSearchIndex() {
     WOW_TOOLS_DATA.guides.forEach(g => {
       searchIndex.push({
         title: g.title,
-        category: 'Guide',
+        category: `Guide • ${g.category}`,
         icon: '📖',
         desc: g.summary,
-        tab: 'codex',
-        targetId: 'codex-guides',
+        tab: 'guides',
+        targetId: 'tab-guides',
         guideId: g.id
       });
     });
@@ -647,8 +647,12 @@ window.handleSearchResultClick = function(elem) {
       target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
     // If opening a specific guide
-    if (guideId && typeof window.openGuideModal === 'function') {
-      window.openGuideModal(guideId);
+    if (guideId) {
+      if (typeof window.navigateToGuide === 'function') {
+        window.navigateToGuide(guideId);
+      } else if (typeof window.openGuideModal === 'function') {
+        window.openGuideModal(guideId);
+      }
     }
   }, 100);
 };

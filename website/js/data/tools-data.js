@@ -1335,6 +1335,417 @@ Eating a Savory Whimsyfin Delight triggers the **"Yum!"** buff with one of two r
 • **Orcish Buccaneer:** Transforms your character into a swaggering Orc Pirate complete with tricorne hat, eyepatch, and cutlass.
 • **Kek Ninja:** Transforms your character into a masked stealth ninja with smoke-bomb jump animations.
 • 💰 **Auction House Economy:** Fresh Whimsyfin and cooked Delights sell for upwards of 40–60 Silver each on the Auction House during Phase 2 tournaments!`
+    },
+    {
+      id: "guide-class-warrior",
+      title: "Warrior Level 30 Guide: Spearing Strike, Stance Dancing & Sweeping Strikes",
+      category: "Classes & Pets",
+      source: "Wowhead · Warcraft Tavern · Classic+",
+      icon: "https://render.worldofwarcraft.com/us/icons/56/ability_warrior_savageblow.jpg",
+      summary: "Master the Level 30 Warrior: Arms Sweeping Strikes burst, Spearing Strike disarm, stance macro choreography, and Corpsemaker vs Heavehammer.",
+      content: `### Warrior Supremacy at Level 30
+In WoW Forever, Level 30 represents a monumental power spike for Warriors. Reaching Level 30 unlocks the iconic **Sweeping Strikes (Arms Tier 5)**, **Whirlwind Axe** questline, and the new Classic+ baseline strike **Spearing Strike**.
+
+### Arms vs Fury vs Protection (Level 30 Meta)
+
+| Spec | Strengths | Talent Geometry | Key Weapons |
+| **Arms (21/0/0)** | Supreme burst, Cleave, Sweeping Strikes | 3/3 Deep Wounds, 2/2 Impale, 1/1 Sweeping Strikes | Corpsemaker (RFK), Heavehammer (Excavation 4) |
+| **Fury (0/21/0)** | Sustained single-target, Enrage, Flurry | 5/5 Cruelty, 5/5 Enrage, 5/5 Flurry | Dual Wingblade / Outlaw Sabre |
+| **Protection (0/5/16)** | Dungeon threat, Shield Slam prep, Taunt | 5/5 Shield Spec, 1/1 Last Stand, 5/5 Defiance | Butcher's Cleaver + Petrified Bark Shield |
+
+---
+
+### Core Mechanics & Classic+ Additions
+
+#### 1. Spearing Strike (Level 26 Baseline)
+• **Cost:** 15 Rage (Battle & Defensive Stance).
+• **Effect:** Strikes the target for 110% weapon damage and **disarms their main hand for 4 seconds** (30s cooldown). In PvP duels against opposing rogues and warriors, landing Spearing Strike virtually guarantees victory.
+
+#### 2. Sweeping Strikes (Arms Capstone at 30)
+• **Cost:** 30 Rage (Battle Stance, 30s CD).
+• **Mechanic:** Your next 5 melee attacks strike an additional nearby opponent. Paired with Cleave or Overpower, creates unmatched AoE dungeon devastation.
+
+---
+
+### Essential Stance Dancing Macro
+
+\`\`\`lua
+#showtooltip Overpower
+/cast [nostance:1] Battle Stance
+/cast Overpower
+\`\`\`
+
+💡 **Weapon Swing Timer Tip:** Never cast Cleave when pooling for Sweeping Strikes. Pool to 55 Rage in Battle Stance, pop Sweeping Strikes, switch to Berserker Stance (if available) or Cleave immediately upon next main-hand swing!`
+    },
+    {
+      id: "guide-class-paladin",
+      title: "Paladin Level 30 Guide: Retribution & Holy Taunts (Voice of Truth & Seal Weaving)",
+      category: "Classes & Pets",
+      source: "Wowhead · Warcraft Tavern · Classic+",
+      icon: "https://render.worldofwarcraft.com/us/icons/56/spell_holy_auramastery.jpg",
+      summary: "Righteous Defense taunt mechanics, Voice of Truth silence breaks, Seal of Command burst rotation, and Forsaken Paladin holy fire synergies.",
+      content: `### The Holy Champion Overhaul in WoW Forever
+Paladins in WoW Forever receive critical quality-of-life adjustments that elevate them from auto-attack bots into formidable front-line commanders with reliable taunt mechanics and anti-silence utility.
+
+### Paladin Spec Profiles at Level 30
+
+| Specialization | Role | Top Talent Focus | Signature Utility |
+| **Retribution (0/11/10)** | Burst DPS & PvP Juggernaut | 5/5 Conviction, 1/1 Seal of Command | Blessing of Freedom, Hammer of Justice (5s) |
+| **Holy (21/0/0)** | Infinite Mana Dungeon Healer | 5/5 Divine Intellect, 5/5 Illumination | Flash of Light R1, Cleanse, Lay on Hands |
+| **Protection (0/16/5)** | AoE Dungeon Tank | 5/5 Redoubt, 3/3 Precision, Righteous Fury | Righteous Defense (Taunt), Holy Shield prep |
+
+---
+
+### Key Classic+ Upgrades
+
+#### 1. Righteous Defense (Reliable Taunt)
+• **Range:** 30 Yards | **Cooldown:** 10 Seconds | **Cost:** Negligible Mana.
+• **Mechanic:** Taunts up to 3 attacking monsters off an ally onto the Paladin. Completely solves Classic Paladin tanking viability in Excavation Site 4 and City of Dalaran!
+
+#### 2. Voice of Truth (Silence & Interrupt Protection)
+• When casting under aura concentration, reduces silence duration by 50% and grants a 20% Holy Spell Power surge for 6 seconds following any stun dispel.
+
+---
+
+### Seal Weaving & Rotation Priority
+
+• **Judgement -> Seal of Command:** Apply Judgement of the Crusader for bonus Holy Damage, re-seal Seal of Command, and let slow 3.5s+ two-handed maces (*Verigan's Fist*) proc burst.
+• **Illumination Healing Engine:** In Holy spec, spell critical heals refund 100% mana cost, allowing Paladins to heal full dungeons without drinking!`
+    },
+    {
+      id: "guide-class-rogue",
+      title: "Rogue Level 30 Guide: Energy Pooling, Stunlock Chains & Poison Alchemy",
+      category: "Classes & Pets",
+      source: "Wowhead · Warcraft Tavern · Classic+",
+      icon: "https://render.worldofwarcraft.com/us/icons/56/ability_rogue_eviscerate.jpg",
+      summary: "Energy tick pooling, 14-second stunlock loops, Instant & Crippling Poison at 30, and dual-wield weapon swing timing.",
+      content: `### Shadow Lethality at the Level 30 Cap
+Rogues combine precise 100-Energy management, deadly crowd control diminishing returns, and custom poison brews to dominate both open-world skirmishes and dungeon DPS meters.
+
+### Spec Pathways at Level 30
+
+| Spec | Build | Best In Slot Weapons | Focus |
+| **Combat Swords (0/21/0)** | 5/5 Precision, 5/5 Dual Wield, 1/1 Blade Flurry | Cruel Barb (DM) + Wingblade (WC) | Dungeon AoE cleave, boss sustained DPS |
+| **Subtlety Stunlock (0/10/11)** | 5/5 Camouflage, 2/2 Elusiveness, 3/3 Hemorrhage | Meteor Shard + Toxic Revenger | 1v1 PvP duels, Warsong Gulch lockouts |
+| **Assassination (21/0/0)** | 5/5 Malice, 3/3 Ruthlessness, 1/1 Cold Blood | 2x Fast 1.4s–1.5s Daggers | 100% Crit Eviscerate execution spikes |
+
+---
+
+### The Perfect 14-Second Stunlock Sequence
+
+1. **Cheap Shot (Lvl 26):** 4-second opener stun (Generates 2 Combo Points).
+2. **Backstab / Sinister Strike:** Cast once, then pool energy to 60.
+3. **Kidney Shot (Lvl 30):** At second 3.8 of Cheap Shot, land a 3-Combo Point Kidney Shot for 4 seconds of stunned lockout!
+4. **Gouge (Rank 3):** 4.5 seconds of incapacitation to regenerate 100 full Energy.
+5. **Cold Blood + Eviscerate (Rank 5):** Deals 450+ guaranteed critical damage.
+
+---
+
+### Poison Application Strategy (Level 30 Cap)
+
+• **Main Hand:** Instant Poison Rank 2 (Chance to deal 35 Nature damage on hit).
+• **Off-Hand:** Crippling Poison (Reduces movement speed by 50% for 12 seconds). Prevents runners from pulling extra dungeon packs!`
+    },
+    {
+      id: "guide-class-priest",
+      title: "Priest Level 30 Guide: Wand DPS, Downranking & Inner Fire Defense",
+      category: "Classes & Pets",
+      source: "Wowhead · Warcraft Tavern · Classic+",
+      icon: "https://render.worldofwarcraft.com/us/icons/56/spell_holy_powerwordshield.jpg",
+      summary: "Mastering the 5-second spirit regen rule, Gravestone Scepter wand spikes, Flash Heal vs Heal rank efficiency, and Shadow Weaving debuffs.",
+      content: `### Divine Mastery: Priest Progression at Level 30
+Priests reign as the quintessential healers of Azeroth, commanding immense single-target triage and offensive shadow pressure while mastering the vital 5-Second Mana Regeneration rule.
+
+### The 5-Second Rule & Spirit Regeneration
+After casting a mana-spending spell, spirit-based mana regeneration pauses for **5 seconds**.
+💡 **Pro-Tip:** Pre-shield with *Power Word: Shield*, apply *Shadow Word: Pain*, cast one *Smite*, and immediately switch to auto-wand attack! Your mana will regenerate at full speed for the remainder of the encounter.
+
+---
+
+### Level 30 Wand Progression
+
+| Wand | Item Level | DPS | How to Acquire |
+| **Gravestone Scepter** | iLvl 29 | **29.0 DPS** | Blackfathom Deeps Quest (*Blackfathom Villainy*) |
+| **Excavation Rod** | iLvl 28 | 24.5 DPS | Excavation Site 4 Questline |
+| **Greater Magic Wand** | iLvl 18 | 17.5 DPS | Crafted by Enchanters (Skill 75) |
+
+---
+
+### Healing Downranking Efficiency Chart
+
+| Spell & Rank | Mana | Cast Time | Base Heal | HPM |
+| **Flash Heal Rank 1** | 125 | 1.5s | 193–237 | 1.72 |
+| **Flash Heal Rank 2** | 155 | 1.5s | 258–314 | 1.84 |
+| **Heal Rank 1** | 155 | 3.0s | 295–341 | **2.05** |
+| **Heal Rank 2** | 205 | 3.0s | 429–491 | **2.24** |
+| **Renew Rank 4** | 135 | Instant | 245 over 15s | 1.81 |
+
+• In dungeons, keep Heal Rank 1 as your bread-and-butter tank maintenance spell. Reserve Flash Heal Rank 2 for emergency saves!`
+    },
+    {
+      id: "guide-class-shaman",
+      title: "Shaman Level 30 Guide: 2H Enhancement, Totem Twisting & Tanking Shaman",
+      category: "Classes & Pets",
+      source: "Wowhead · Warcraft Tavern · Classic+",
+      icon: "https://render.worldofwarcraft.com/us/icons/56/spell_nature_windfury.jpg",
+      summary: "Rockbiter vs Windfury mathematical comparisons, Two-Handed weapon proc bursts, Molten Blast AoE threat, and Mana Spring totem twisting.",
+      content: `### Elemental Fury & Enhancement Devastation
+Shamans channel primal elements into bone-crushing melee swings, high-potency group totems, and the new Classic+ Earth Warden tanking stance.
+
+### Enhancement 2-Handed Burst vs Rockbiter
+
+| Weapon Imbue | Effect | Best Use Case |
+| **Rockbiter Weapon III** | Adds +110 Attack Power and high threat per hit | Tanking dungeons & consistent leveling damage |
+| **Windfury Weapon I (Lvl 30)** | 20% chance to grant 2 extra attacks with bonus AP | PvP 1-shot RNG spikes & slow Two-Handers |
+| **Flametongue Weapon II** | Adds flat Fire damage based on weapon speed | Fast 1-handed daggers/maces |
+
+---
+
+### Totem Twisting Choreography
+A skilled Shaman drops two short-duration totems of the same element in rapid succession to grant both buffs simultaneously:
+• Drop **Windfury Totem** (gives 10-second buff to all melee).
+• Immediately drop **Grace of Air Totem** or **Strength of Earth Totem**.
+• Party members keep both the Windfury extra-attack proc and the +Agility/+Strength stat buffs!
+
+---
+
+### Classic+ Shaman Tanking Primer
+• Equip a high-armor shield like *Petrified Bark Shield* (Gesharahan, Barrens).
+• Imbue main hand with **Rockbiter Weapon** for 150% threat generation.
+• Use **Earth Shock Rank 3** on cooldown to maintain aggressive boss snap threat!`
+    },
+    {
+      id: "guide-class-warlock",
+      title: "Warlock Level 30 Guide: Affliction Drain Tanking & Soul Engine",
+      category: "Classes & Pets",
+      source: "Wowhead · Warcraft Tavern · Classic+",
+      icon: "https://render.worldofwarcraft.com/us/icons/56/spell_shadow_haunting.jpg",
+      summary: "Siphon Life + Drain Life perpetual motion tanking, Life Tap mana conversions, Soul Shard bag management, and Voidwalker Sacrifice shields.",
+      content: `### The Dark Arts of Infinite Sustain
+Warlocks in WoW Forever turn health into mana and mana into dead enemies with near-zero downtime, using Affliction drain loops and versatile demonic companions.
+
+### Affliction Drain Tanking Loop (Level 30)
+
+1. **Curse of Agony Rank 3:** Applied at pull (deals 324 Shadow damage over 24s).
+2. **Corruption Rank 4:** Cast instant via *Nightfall* or 2.0s cast (deals 240 Shadow damage).
+3. **Siphon Life Rank 1 (Level 30 Capstone):** Drains 15 health per second, healing the Warlock.
+4. **Drain Life Rank 2:** Channels 29 health per second directly into your health pool.
+5. **Life Tap Rank 2:** Converts surplus health into full mana bars.
+
+💡 **Zero Downtime:** Because your spells heal you for more damage than you take, you never need to drink water or eat food while leveling 1 to 30!
+
+---
+
+### Demon Utility Matrix
+
+| Demon | When to Summon | Signature Power |
+| **Imp** | Dungeon DPS groups | Blood Pact (+15 Stamina to entire party), Firebolt |
+| **Voidwalker** | Solo leveling & PvP defense | Sacrifice (Grants 505 damage absorption shield) |
+| **Succubus** | World PvP & humanoid duels | Seduction (Charms humanoid target for 15 seconds) |
+| **Felhunter (Lvl 30)** | Caster duels & Mage counters | Spell Lock (Counterspell silence) & Devour Magic |`
+    },
+    {
+      id: "guide-weapon-class-quests",
+      title: "Legendary Classic+ Weapon & Class Quests Compendium (Lvl 10–30)",
+      category: "Leveling & Quests",
+      source: "Wowhead · Warcraft Tavern · Classic+",
+      icon: "https://render.worldofwarcraft.com/us/icons/56/inv_sword_27.jpg",
+      summary: "Quest step roadmaps for Whirlwind Axe, Verigan's Fist, Crescent Staff, Fire Totem, Voidwalker Summoning, and Gravestone Scepter.",
+      content: `### Iconic Class Quests That Define Classic Progression
+Every class possesses signature rite-of-passage questlines between levels 10 and 30 that award game-changing weapons, defensive stances, and class mounts.
+
+### Top Level 20–30 Class Weapon Rewards
+
+| Questline | Class | Level Req | Key Reward | Stats & Power |
+| **The Whirlwind Weapon** | Warrior | Lvl 30 | **Whirlwind Axe** | 2H Axe: 35.3 DPS, +15 Str, +14 Sta (BiS through Level 42!) |
+| **The Test of Righteousness** | Paladin | Lvl 20 | **Verigan's Fist** | 2H Mace: 21.6 DPS, +6 Sta, +6 Int, +12 Attack Power |
+| **Leaders of the Fang** | All Classes | Lvl 18 | **Crescent Staff** | 2H Staff: 20.3 DPS, +7 Int, +7 Spi, +7 Sta (or Wingblade) |
+| **Blackfathom Villainy** | All Classes | Lvl 24 | **Gravestone Scepter** | Wand: 29.0 DPS, Shadow Damage |
+
+---
+
+### Whirlwind Axe Quest Roadmap (Level 30 Warrior)
+🗺️ **Start:** Fray Island off Ratchet coast (*Klannoc Macleod*).
+• **Step 1:** Speak with Bath'rah the Windwatcher in Alterac Mountains (\`80.4, 67.0\`).
+• **Step 2:** Gather 8x Bloodscalp Tusks (Stranglethorn), 30x Bloodstone Ore (Arathi), and Charred Necrolyte Charms.
+• **Step 3:** Collect 1x Thundering Charm, 1x Burning Charm, and 1x Cresting Charm from Arathi elementals.
+• **Step 4:** Defeat **Cyclonian** (Level 40 Elite Wind Elemental). Bring a Level 30 party or guild assistance to secure your Whirlwind Axe!`
+    },
+    {
+      id: "guide-rested-xp-stacking",
+      title: "Rested XP & Tent Stacking Deep Dive (+200% Leveling Surge)",
+      category: "Leveling & Quests",
+      source: "Wowhead · Warcraft Tavern · Classic+",
+      icon: "https://render.worldofwarcraft.com/us/icons/56/spell_nature_sleep.jpg",
+      summary: "Stacking the Cozy Sleeping Bag, Tier 2/3 Camping Tents, and Capital City Inns for 200% rested generation and Student Fodder optimization.",
+      content: `### The Science of Accelerated Leveling
+In WoW Forever, Rested Experience is a deeply customizable system rather than a passive waiting game. By combining tradeskill camping shelters with field artifacts, rested bars fill in minutes.
+
+### Rested XP Acceleration Tiers
+
+| Resting Environment | Rested Rate | Time to Earn 1 Full Level Rested |
+| **Standard Wilderness** | 1x (Base) | 160 Hours (Nearly 7 days) |
+| **Capital City Inn** | 4x | 40 Hours |
+| **Tier 1 Lean-to Shelter** | 6x (+50% Inn) | 26 Hours |
+| **Tier 2 Linen Tent** | 8x (+100% Inn) | 20 Hours |
+| **Tier 3 Silk Pavilion** | **12x (+200% Inn)** | **13.3 Hours** |
+| **Cozy Sleeping Bag in Silk Tent** | **24x Surge** | **6.6 Hours (Converts 8 hrs rest in 45 mins!)** |
+
+---
+
+### Student Fodder Rules
+• Awarded during Steps 3 and 5 of the Cozy Sleeping Bag questline (total of 12 charges).
+• Consuming 1 **Student Fodder** instantly grants **4 bars (20%) of Rested Experience**!
+💡 **Optimal Strategy:** Save your Student Fodder for levels 28 and 29 where raw monster experience is at its highest per bar!`
+    },
+    {
+      id: "guide-blackfathom-deeps",
+      title: "Blackfathom Deeps & Wailing Caverns: Classic+ Dungeon Primers",
+      category: "Dungeons & Raids",
+      source: "Wowhead · Warcraft Tavern · Classic+",
+      icon: "https://render.worldofwarcraft.com/us/icons/56/spell_shadow_shadowbolt.jpg",
+      summary: "Twilight Lord Kelris shadow resistance tricks, Aku'mai cleansing mechanics, Wailing Caverns Fang set farming routes, and quest turn-ins.",
+      content: `### Conquering the Iconic Early Dungeons
+Blackfathom Deeps (Ashenvale coast) and Wailing Caverns (Northern Barrens) form the core progression stepping stones between levels 18 and 28 in WoW Forever.
+
+### Blackfathom Deeps (Level 24–28)
+• **Location:** Zoram Strand, Ashenvale (\`14.4, 14.2\`).
+• **Key Encounters:**
+  - **Ghamoo-ra:** Giant turtle with massive armor. Armor debuffs (Sunder Armor, Faerie Fire) accelerate this fight significantly.
+  - **Twilight Lord Kelris:** Casts *Mind Blast* and *Sleep*. Keep Shadow Resistance up or burst him before sleep cycles cycle through your healer.
+  - **Aku'mai (Hydra End-Boss):** Casts Poison Cloud and Frenzy. Tank face away from the party.
+• **Premier Loot:** *Strike of the Hydra* (2H Sword: 24.2 DPS), *Tortoise Armor* (Shield), *Reef Axe*.
+
+---
+
+### Wailing Caverns (Level 18–22)
+• **Leaders of the Fang:** Slay Lord Cobrahn, Lady Anacondra, Lord Pythas, and Lord Serpentis to trigger the Disciple of Naralex ritual.
+• **Secret Fang Set:** Defeating all 4 bosses gives Druids the complete pieces for the **Embrace of the Viper** set, unlocking **Snake Form**!`
+    },
+    {
+      id: "guide-shadowfang-deadmines",
+      title: "Shadowfang Keep & The Deadmines: Overhauled Encounters & Pre-BiS",
+      category: "Dungeons & Raids",
+      source: "Wowhead · Warcraft Tavern · Classic+",
+      icon: "https://render.worldofwarcraft.com/us/icons/56/inv_misc_cannonball_02.jpg",
+      summary: "Commander Springvale unholy shielding, Archmage Arugal teleport skips, Defias Gunpowder logistics, and Edwin VanCleef add management.",
+      content: `### The Kings of Vanilla Dungeons Overhauled
+Shadowfang Keep (Silverpine Forest) and The Deadmines (Westfall) have received updated boss tactics and improved itemization in WoW Forever.
+
+### Shadowfang Keep (Level 22–26)
+• **Commander Springvale:** Casts *Unholy Shield* which reflects spell damage. Casters stop casting when purple runes circle his armor.
+• **Baron Silverlaine:** Debuffs party healing taken by 50%. Triage tank health before pulling. Drops *Blade of Silverlaine* (used in the Battle Mage Coldflame Saber forge!).
+• **Archmage Arugal:** Teleports along high parapets and casts *Void Bolt* (heavy shadow damage). Line of sight behind the large pillars when targeted!
+• **Notable Pre-BiS:** *Meteor Shard* (Dagger), *Arugal's Robes* (+10 Int, +10 Spi, +3 Sta), *Commander's Crest* (Shield).
+
+---
+
+### The Deadmines (Level 18–22)
+• **Rhahk'Zor & Sneed:** Clear surrounding goblin engineers before pulling. Sneed ejects from his shredder at 0% HP with rapid melee strikes.
+• **Gilnid & The Smelter:** Dodge molten slag pools.
+• **Edwin VanCleef:** Spawns two stealthed Defias Blackguards at 50% HP. Tank pick up adds immediately with Thunder Clap / Righteous Defense.
+• **Notable Pre-BiS:** *Cruel Barb* (1H Sword 16.7 DPS), *Smite's Mighty Hammer* (2H Mace), *Cape of the Brotherhood*.`
+    },
+    {
+      id: "guide-professions-1-225",
+      title: "Artisan Professions Fast-Leveling Guide (1–225 Routes & Material Budgets)",
+      category: "Economy & Professions",
+      source: "Wowhead · Warcraft Tavern · Classic+",
+      icon: "https://render.worldofwarcraft.com/us/icons/56/trade_blacksmithing.jpg",
+      summary: "Most cost-efficient 1 to 225 crafting paths for Alchemy, Blacksmithing, Engineering, Leatherworking, and Tailoring at the Level 30 cap.",
+      content: `### Maximizing Crafting Power at the Level 30 Cap
+In Closed Beta Phase 2, professions are capped at **Expert 225**. Crafting high-tier blue gear gives players a massive statistical edge in dungeons and PvP duels.
+
+### Fast 1–225 Recipe Paths
+
+#### Alchemy (1–225)
+• **1–60:** Minor Healing Potion (Peacebloom + Silverleaf).
+• **60–110:** Lesser Healing Potion (Minor Healing + Briarthorn).
+• **110–140:** Healing Potion (Bruiseweed + Briarthorn).
+• **140–185:** Greater Healing Potion (Liferoot + Kingsblood).
+• **185–225:** Elixir of Agility & Superior Healing Potion (Goldthorn + Sungrass).
+
+#### Blacksmithing (1–225)
+• **1–75:** Rough Sharpening Stones & Rough Grinding Stones.
+• **75–125:** Coarse Grinding Stones & Runed Copper Belt.
+• **125–160:** Heavy Grinding Stones & Patterned Bronze Bracers.
+• **160–200:** Solid Grinding Stones & Green Iron Hauberk.
+• **200–225:** Golden Scale Bracers & Steel Breastplate.
+
+#### Tailoring (1–225)
+• **1–75:** Bolt of Linen Cloth & Linen Belt.
+• **75–105:** Bolt of Woolen Cloth & Woolen Boots.
+• **105–145:** Bolt of Silk Cloth & Azure Silk Hood.
+• **145–225:** Silk Headband & Crimson Silk Vest.`
+    },
+    {
+      id: "guide-supply-crates-rep",
+      title: "Supply Crate Rep Farming & Turn-In Mathematics (ACA & Durotar Logistics)",
+      category: "Economy & Professions",
+      source: "Wowhead · Warcraft Tavern · Classic+",
+      icon: "https://render.worldofwarcraft.com/us/icons/56/inv_crate_03.jpg",
+      summary: "Crate size tiers, humanoid drop chances in Hillsbrad and The Barrens, profit margins per filled crate, and fast Friendly/Honored routes.",
+      content: `### The Merchant's Favor Logistics Engine
+Supply Crates represent one of the most lucrative and consistent gold-and-reputation mechanics in WoW Forever, rewarding players who keep trade goods prepared.
+
+### Supply Crate Tiers & Rewards
+
+| Crate Tier | Drop Monster Level | Required Materials | Reward (Favor + Gold) |
+| **Small Waylaid Crate** | Level 10–18 | 20x Rough Stone / 12x Peacebloom | 150 Favor + 75 Silver |
+| **Medium Waylaid Crate** | Level 18–25 | 10x Medium Leather / 8x Healing Potion | 350 Favor + 1 Gold 50 Silver |
+| **Large Heavy Crate** | Level 25–32 | 15x Heavy Leather / 10x Iron Bar | **600 Favor + 3 Gold** |
+
+---
+
+### Best Crate Farming Hotspots
+
+🗺️ **Hillsbrad Foothills Syndicate Camps (\`52.4, 44.8\`):** High humanoid density with fast 90-second respawns. Dropping Large Waylaid Crates and Silk Cloth simultaneously.
+🗺️ **Wetlands Dragonmaw Encampments (\`47.0, 56.0\`):** Excellent source of Medium and Large crates plus Heavy Leather for skinners.
+🗺️ **Southern Barrens Bael Modan Excavation (\`49.0, 84.0\`):** Dwarven miners with high drop rates on mineral crates.`
+    },
+    {
+      id: "guide-legacy-talents",
+      title: "Legacy Discovery System & Extra Talent Points (+5 Bonus Blueprint)",
+      category: "Exploration & Secrets",
+      source: "Wowhead · Classic+ · Method.gg",
+      icon: "https://render.worldofwarcraft.com/us/icons/56/achievement_dungeon_classicdungeonchampion.jpg",
+      summary: "How to complete the 65 Legacy Challenges to unlock +2 to +5 additional talent points beyond the level 30 cap before launch.",
+      content: `### Shattering the Conventional Talent Ceiling
+In WoW Forever, character progression extends beyond simple monster killing. The **Legacy Discovery System** tracks 65 world challenges that award bonus talent points!
+
+### How to Unlock the +5 Extra Talent Points at Level 30
+
+| Milestone | Points Earned | Challenges Required | Key Feat |
+| **Discovery Milestone 1** | **+1 Talent Point** | 10 Legacy Challenges | Uncover all 10 Stormwind or Orgrimmar hidden relics |
+| **Discovery Milestone 2** | **+1 Talent Point** | 20 Legacy Challenges | Slay 15 distinct World Rares |
+| **Discovery Milestone 3** | **+1 Talent Point** | 35 Legacy Challenges | Complete 40 Library Manuscripts achievement |
+| **Discovery Milestone 4** | **+1 Talent Point** | 50 Legacy Challenges | Achieve Friendly with Azeroth Commerce Authority |
+| **Discovery Milestone 5** | **+1 Talent Point** | 65 Legacy Challenges | Clear all 4 Closed Beta dungeons on challenge timer |
+
+💡 **Result:** Instead of the baseline 21 talent points at Level 30, a dedicated player can enter Closed Beta Phase 2 with **up to 26 Talent Points**, unlocking hybrid capstones that opponents cannot match!`
+    },
+    {
+      id: "guide-racials-overhaul",
+      title: "Classic+ Racials & Heritage Traits Overhaul (All 8 Races + Skyborne)",
+      category: "Classes & Pets",
+      source: "Wowhead · Method.gg · Classic+",
+      icon: "https://render.worldofwarcraft.com/us/icons/56/achievement_character_orc_male.jpg",
+      summary: "Complete statistical breakdown of overhauled racials: Will of the Forsaken, Stoneform, Perception, Escape Artist, and new Skyborne wind traits.",
+      content: `### Balanced Racial Traits for Classic+
+WoW Forever re-evaluates vanilla racials to eliminate extreme faction imbalances while giving every race distinct combat identity in both PvE raids and PvP arenas.
+
+### Racial Abilities Master Breakdown
+
+| Race | Key Active Racial | Signature Passive | Top Class Synergy |
+| **Human** | **Perception:** Increases stealth detection for 20s | The Human Spirit (+5% Spirit), Sword/Mace Specialization | Priest, Paladin, Warrior |
+| **Orc** | **Blood Fury:** +25% Melee AP (reduced healing taken removed!) | Hardiness (Stun resist), Command (+5% Pet Dmg) | Warlock, Hunter, Warrior |
+| **Undead** | **Will of the Forsaken:** Dispels Charm, Fear, Sleep | Cannibalize, Shadow Resistance | Mage, Rogue, Priest |
+| **Night Elf** | **Shadowmeld:** Usable in combat (drops threat, resets aggro!) | Quickness (+1% Dodge), Nature Resistance | Druid, Hunter, Rogue |
+| **Dwarf** | **Stoneform:** Dispels Bleed, Poison, Disease; +10% Armor | Gun Specialization, Frost Resistance | Priest, Paladin, Hunter |
+| **Gnome** | **Escape Artist:** Instant cast (0.5s GCD) snare dispel | Expansive Mind (+5% Intellect), Engineering +15 | Mage, Warlock, Rogue |
+| **Tauren** | **War Stomp:** 2-second AoE stun (up to 5 targets) | Endurance (+5% Max HP), Herbalism +15 | Shaman, Druid, Warrior |
+| **Troll** | **Berserking:** Up to +30% attack/casting speed | Beast Slaying (+5% Dmg to beasts), Regeneration | Hunter, Shaman, Mage |
+| **Skyborne** | **Zephyr Glide:** Slow-fall glide and +10% outdoor movespeed | Wind-Weaving (+1% Spell Haste) | Mage, Priest, Hunter |`
     }
   ]
 };
