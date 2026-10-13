@@ -123,6 +123,9 @@ function renderBiSApp() {
         <button type="button" class="bis-action-btn" id="btn-copy-bis-list">
           <span>📋</span> Copy Gear List
         </button>
+        <button type="button" class="bis-action-btn" id="btn-export-bis-journal" title="Export /fj import command to star BiS drops in ForeverDungeonJournal">
+          <span>📖</span> Export to Journal
+        </button>
         <button type="button" class="bis-action-btn" id="btn-share-bis-link">
           <span>🔗</span> Share Link
         </button>
@@ -764,6 +767,14 @@ function bindBiSEvents() {
   if (btnCopy) {
     btnCopy.addEventListener("click", () => {
       copyBiSListToClipboard();
+    });
+  }
+
+  // Export BiS to In-Game ForeverDungeonJournal Button
+  const btnExportJournal = document.getElementById("btn-export-bis-journal");
+  if (btnExportJournal) {
+    btnExportJournal.addEventListener("click", () => {
+      exportBiSToJournal();
     });
   }
 
@@ -1967,3 +1978,66 @@ function copyBiSListToClipboard() {
     }
   });
 }
+
+/**
+ * Extracts unique item IDs for current spec build
+ */
+function extractBiSItemIds(currentSpec, faction) {
+  const ids = [];
+  if (currentSpec.gear) {
+    for (const slotData of Object.values(currentSpec.gear)) {
+      let item = slotData;
+      if (faction === "alliance" && slotData.allianceBis) item = slotData.allianceBis;
+      else if (faction === "horde" && slotData.hordeBis) item = slotData.hordeBis;
+
+      const rawId = item.itemId || item.id || (item.tipId ? item.tipId.replace(/\D/g, "").slice(0, 6) : null);
+      if (rawId && !ids.includes(String(rawId))) {
+        ids.push(String(rawId));
+      }
+    }
+  } else if (currentSpec.slots) {
+    currentSpec.slots.forEach(slot => {
+      const activeItems = slot.items.filter(i => i.side === "both" || i.side === faction);
+      const top = activeItems.length > 0 ? activeItems[0] : slot.items[0];
+      const rawId = top?.itemId || top?.id;
+      if (rawId && !ids.includes(String(rawId))) {
+        ids.push(String(rawId));
+      }
+    });
+  }
+  return ids;
+}
+
+/**
+ * Formats and copies `/fj import <ids>` command to clipboard for ForeverDungeonJournal
+ */
+function exportBiSToJournal() {
+  const classData = WOW_BIS_DATA[currentBiSState.classId];
+  if (!classData || !classData.specs) return;
+  const currentSpec = classData.specs.find(s => s.id === currentBiSState.specId);
+  if (!currentSpec) return;
+
+  const ids = extractBiSItemIds(currentSpec, currentBiSState.faction);
+  if (ids.length === 0) {
+    if (window.showToast) window.showToast("No item IDs found for this spec build.", "error");
+    return;
+  }
+
+  const slashCommand = `/fj import ${ids.join(",")}`;
+  const copyFn = window.copyTextToClipboard || ((t, fn) => navigator.clipboard?.writeText(t).then(fn));
+
+  copyFn(slashCommand, () => {
+    const btn = document.getElementById("btn-export-bis-journal");
+    if (btn) {
+      const origHtml = btn.innerHTML;
+      btn.innerHTML = "<span>✅</span> /fj import Copied!";
+      setTimeout(() => { btn.innerHTML = origHtml; }, 2500);
+    }
+    if (window.showToast) {
+      window.showToast(`Copied /fj import command with ${ids.length} items! Paste in-game to star your BiS gear in ForeverDungeonJournal.`, "success");
+    }
+  });
+}
+
+window.exportBiSToJournal = exportBiSToJournal;
+

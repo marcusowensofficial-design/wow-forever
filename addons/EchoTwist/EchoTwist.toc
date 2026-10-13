@@ -1,5 +1,6 @@
 ## Interface: 16001
-## Title: |cffffcc00Echo|r|cffffffffTwist|r
+## Title: |cffffcc00Echo|r|cffffffffTwist|r [AllowLoadGameType camelot]
+## Title: EchoTwist (Retail) [AllowLoadGameType standard]
 ## Notes: Modern Seal duration, Echo proc (Twist of Light), Holy Strike & Judgement HUD for WoW Forever Paladins.
 ## Author: Marco & Antigravity
 ## Version: 1.0.0

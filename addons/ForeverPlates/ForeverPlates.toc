@@ -1,6 +1,8 @@
 ## Interface: 16001
-## Title: Forever|cff00c0ffPlates|r
+## Title: Forever|cff00c0ffPlates|r [AllowLoadGameType camelot]
+## Title: ForeverPlates (Retail) [AllowLoadGameType standard]
 ## Notes: Sleek, modern, high-performance enemy nameplates for WoW Forever.
+## Category-enUS: Combat
 ## Author: Marcus & Antigravity
 ## Version: 2.1.0
 ## SavedVariables: ForeverPlatesDB

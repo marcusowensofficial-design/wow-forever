@@ -241,6 +241,38 @@ check('Declared profession stats match actual array calculations', () => {
   }
 });
 
+console.log('\n--- 4. ADDON SUITE & DISTRIBUTION AUDIT ---');
+
+check('Addon Suite tab and section markup exist in index.html', () => {
+  if (!indexHtml.includes('data-tab="addons"')) {
+    throw new Error('data-tab="addons" not found in index.html navigation');
+  }
+  if (!indexHtml.includes('id="tab-addons"')) {
+    throw new Error('id="tab-addons" section not found in index.html');
+  }
+  if (!indexHtml.includes('js/modules/addons.js')) {
+    throw new Error('js/modules/addons.js script reference not found in index.html');
+  }
+});
+
+check('Addon release packages and manifest exist in website/downloads/', () => {
+  const downloadsDir = path.join(ROOT, 'downloads');
+  const manifestFile = path.join(downloadsDir, 'manifest.json');
+  if (!fs.existsSync(manifestFile)) {
+    throw new Error('website/downloads/manifest.json does not exist. Run node scripts/package-addons.js');
+  }
+  const manifest = JSON.parse(fs.readFileSync(manifestFile, 'utf8'));
+  if (!manifest.masterSuite || !fs.existsSync(path.join(ROOT, manifest.masterSuite.downloadPath))) {
+    throw new Error('Master suite zip does not exist in website/downloads/');
+  }
+  for (const addon of manifest.addons) {
+    const pkgPath = path.join(ROOT, addon.downloadPath);
+    if (!fs.existsSync(pkgPath)) {
+      throw new Error(`Addon package missing: ${pkgPath}`);
+    }
+  }
+});
+
 
 console.log('\n=======================================');
 console.log(`Ran ${totalChecks} checks. Failures: ${errors.length}`);

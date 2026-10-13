@@ -680,7 +680,7 @@ function renderMerchantsFavorPanel() {
         <div class="mf-calculator-bar" style="margin-top: 1.25rem; background: rgba(0,0,0,0.3); border-radius: 6px; padding: 1rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
           <div style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;">
             <label style="font-size: 0.85rem; color: #fff; font-weight: 600;">Crate Calculator:</label>
-            <select id="mf-calc-tier" style="background: #1e293b; color: #fff; border: 1px solid var(--border-subtle); padding: 0.4rem 0.6rem; border-radius: 4px; font-size: 0.85rem;">
+            <select id="mf-calc-tier" aria-label="Select Favor crate tier" style="background: #1e293b; color: #fff; border: 1px solid var(--border-subtle); padding: 0.4rem 0.6rem; border-radius: 4px; font-size: 0.85rem;">
               <option value="5" data-money="2.5">Apprentice White (5 Favor / 2s 50c)</option>
               <option value="10" data-money="5">Apprentice Green (10 Favor / 5s 00c)</option>
               <option value="10" data-money="5">Journeyman White (10 Favor / 5s 00c)</option>
@@ -688,7 +688,7 @@ function renderMerchantsFavorPanel() {
             </select>
             <div style="display: flex; align-items: center; gap: 0.4rem;">
               <span style="font-size: 0.85rem; color: #cbd5e1;">Count:</span>
-              <input type="number" id="mf-calc-qty" min="1" max="100" value="5" style="width: 60px; background: #1e293b; color: #fff; border: 1px solid var(--border-subtle); padding: 0.4rem; border-radius: 4px; text-align: center; font-size: 0.85rem;">
+              <input type="number" id="mf-calc-qty" aria-label="Favor crate quantity" min="1" max="100" value="5" style="width: 60px; background: #1e293b; color: #fff; border: 1px solid var(--border-subtle); padding: 0.4rem; border-radius: 4px; text-align: center; font-size: 0.85rem;">
             </div>
           </div>
           <div style="display: flex; align-items: center; gap: 1rem;">

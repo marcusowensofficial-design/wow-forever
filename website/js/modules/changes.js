@@ -174,7 +174,7 @@
               </h2>
               <div class="changes-search-wrap">
                 <span class="changes-search-icon">🔍</span>
-                <input type="text" id="changes-search-input" class="changes-search-input" placeholder="Search spells and talents..." value="${escapeHtml(searchQuery)}" />
+                <input type="text" id="changes-search-input" class="changes-search-input" placeholder="Search spells and talents..." value="${escapeHtml(searchQuery)}" aria-label="Search Forever class and spell changes" />
               </div>
             </div>
 

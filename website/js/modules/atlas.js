@@ -271,7 +271,7 @@ function renderBooksTracker() {
       const isCollected = collectedIds.has(book.id);
       return `
         <div class="atlas-book-row ${isCollected ? 'collected' : ''}" onclick="toggleLibraryBook('${book.id}')">
-          <input type="checkbox" class="book-checkbox" ${isCollected ? 'checked' : ''} onclick="event.stopPropagation(); toggleLibraryBook('${book.id}');" />
+          <input type="checkbox" class="book-checkbox" aria-label="Mark ${escapeHtml(book.title)} as collected" ${isCollected ? 'checked' : ''} onclick="event.stopPropagation(); toggleLibraryBook('${book.id}');" />
           <span class="book-number">#${book.id}</span>
           <div class="book-details">
             <div class="book-title-row">

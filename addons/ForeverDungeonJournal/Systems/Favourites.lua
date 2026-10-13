@@ -879,3 +879,95 @@ if baseRelocalize then
         if frame and frame.favouritesWindow then RefreshWindow(frame.favouritesWindow) end
     end
 end
+
+--------------------------------------------------------------------------------
+-- BiS Wishlist Import Engine (Website Synergy: /fj import <itemIDs>)
+--------------------------------------------------------------------------------
+function FDJ.ImportWishlist(rawString)
+    if not rawString or rawString == "" then
+        print("|cffd8a83cForever Dungeon Journal|r Usage: |cffffd100/fj import <itemID1>,<itemID2>,...|r (e.g. copied from website BiS planner)")
+        return
+    end
+
+    local importedCount = 0
+    local db = GetDB()
+
+    -- Build lookup of boss drops and quests from FDJ.DB
+    local itemLookup = {}
+    if FDJ.DB then
+        for dungeonName, dungeon in pairs(FDJ.DB) do
+            for _, boss in ipairs(dungeon.bosses or {}) do
+                for _, item in ipairs(boss.loot or {}) do
+                    if item and item[1] then
+                        itemLookup[tonumber(item[1])] = {
+                            item = item,
+                            dungeon = dungeonName,
+                            boss = boss.name,
+                        }
+                    end
+                end
+            end
+            for _, quest in ipairs(dungeon.quests or {}) do
+                local function indexQItem(it)
+                    if it and it[1] then
+                        itemLookup[tonumber(it[1])] = {
+                            item = it,
+                            dungeon = dungeonName,
+                            quest = quest,
+                        }
+                    end
+                end
+                for _, it in ipairs(quest.rewardItems or {}) do indexQItem(it) end
+                for _, it in ipairs(quest.additionalRewardItems or {}) do indexQItem(it) end
+            end
+        end
+    end
+
+    for token in string.gmatch(rawString, "(%d+)") do
+        local id = tonumber(token)
+        if id and id > 0 then
+            local info = itemLookup[id]
+            local key = ItemKey(id)
+            if key then
+                if info then
+                    db[key] = {
+                        id = id,
+                        name = info.item[2],
+                        slot = info.item[3],
+                        quality = info.item[4],
+                        dungeon = info.dungeon,
+                        boss = info.boss,
+                        questID = info.quest and tonumber(info.quest.id) or nil,
+                        questName = info.quest and info.quest.name or nil,
+                        added = time and time() or nil,
+                        isBiS = true,
+                    }
+                else
+                    db[key] = {
+                        id = id,
+                        name = "Item " .. id,
+                        dungeon = "World / Quest / Craft",
+                        added = time and time() or nil,
+                        isBiS = true,
+                    }
+                end
+                if C_Item and C_Item.RequestLoadItemDataByID then
+                    pcall(C_Item.RequestLoadItemDataByID, id)
+                end
+                importedCount = importedCount + 1
+            end
+        end
+    end
+
+    RefreshTrackedRows()
+    local frame = FDJ.frame or _G["ForeverDungeonJournalFrame"]
+    if frame then
+        UpdateButton(frame)
+        if frame.favouritesWindow and frame.favouritesWindow:IsShown() then
+            RefreshWindow(frame.favouritesWindow)
+        end
+    end
+
+    print(string.format("|cffd8a83cForever Dungeon Journal|r |cff00ff7fSuccessfully imported %d BiS wishlist items!|r Boss drops are now starred |cffffd100★|r in your journal.", importedCount))
+end
+

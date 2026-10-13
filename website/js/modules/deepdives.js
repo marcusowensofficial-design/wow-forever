@@ -1979,7 +1979,7 @@ function initClassDeepDives() {
           <div class="pet-search-bar-row">
             <div class="pet-search-input-wrap">
               <span class="pet-search-icon">🔍</span>
-              <input type="text" id="pet-beast-search" class="pet-search-input" placeholder="Search beasts, zones (e.g. Westfall, Badlands, Mulgore), or abilities...">
+              <input type="text" id="pet-beast-search" class="pet-search-input" placeholder="Search beasts, zones (e.g. Westfall, Badlands, Mulgore), or abilities..." aria-label="Search hunter beasts, zones, or abilities">
             </div>
           </div>
         </div>

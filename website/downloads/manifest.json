@@ -1,0 +1,54 @@
+{
+  "generatedAt": "2026-10-13T17:49:53.572Z",
+  "targetInterface": 16001,
+  "engine": "Camelot 12.0",
+  "masterSuite": {
+    "filename": "Marcus-WoWForever-Addon-Suite.zip",
+    "sizeKb": 41055,
+    "downloadPath": "downloads/Marcus-WoWForever-Addon-Suite.zip"
+  },
+  "addons": [
+    {
+      "name": "ForeverPlates",
+      "version": "2.1.0",
+      "filename": "ForeverPlates-v2.1.0.zip",
+      "sizeKb": 595,
+      "downloadPath": "downloads/ForeverPlates-v2.1.0.zip"
+    },
+    {
+      "name": "Foreverplatescastbars",
+      "version": "2.2.0",
+      "filename": "Foreverplatescastbars-v2.2.0.zip",
+      "sizeKb": 35,
+      "downloadPath": "downloads/Foreverplatescastbars-v2.2.0.zip"
+    },
+    {
+      "name": "ForeverLiquid",
+      "version": "1.3.0",
+      "filename": "ForeverLiquid-v1.3.0.zip",
+      "sizeKb": 138,
+      "downloadPath": "downloads/ForeverLiquid-v1.3.0.zip"
+    },
+    {
+      "name": "ForeverDungeonJournal",
+      "version": "1.6.0",
+      "filename": "ForeverDungeonJournal-v1.6.0.zip",
+      "sizeKb": 40212,
+      "downloadPath": "downloads/ForeverDungeonJournal-v1.6.0.zip"
+    },
+    {
+      "name": "ForeverBlessings",
+      "version": "1.1.0",
+      "filename": "ForeverBlessings-v1.1.0.zip",
+      "sizeKb": 30,
+      "downloadPath": "downloads/ForeverBlessings-v1.1.0.zip"
+    },
+    {
+      "name": "EchoTwist",
+      "version": "1.0.0",
+      "filename": "EchoTwist-v1.0.0.zip",
+      "sizeKb": 45,
+      "downloadPath": "downloads/EchoTwist-v1.0.0.zip"
+    }
+  ]
+}

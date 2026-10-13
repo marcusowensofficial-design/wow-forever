@@ -1,5 +1,6 @@
 ## Interface: 16001
-## Title: |cffffcc00Forever|r|cffffffffBlessings|r
+## Title: |cffffcc00Forever|r|cffffffffBlessings|r [AllowLoadGameType camelot]
+## Title: ForeverBlessings (Retail) [AllowLoadGameType standard]
 ## Notes: Sleek 1-Hour Blessing coordinator, smart buff matrix, and Symbol of Kings tracker for WoW Forever.
 ## Author: Marco & Antigravity
 ## Version: 1.1.0

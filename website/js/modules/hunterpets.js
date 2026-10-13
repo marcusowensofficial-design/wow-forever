@@ -116,7 +116,9 @@
 
     const totalBeastsCount = data.allBeasts?.length || 520;
 
-    const html = `
+    containers.forEach(container => {
+      const pfx = container.id === 'atlas-hunter-pets-mount' ? 'atlas-' : '';
+      const html = `
       <div class="pet-hub-wrapper">
         <!-- 1. Header Banner -->
         <div class="pet-hero-banner">
@@ -162,14 +164,14 @@
         <div class="pet-filters-box">
           <div class="pet-search-input-wrap">
             <span class="search-lens-icon">🔍</span>
-            <input type="text" id="pet-search-input" class="pet-search-input" placeholder="Search beast name, zone, or ability (e.g. Broken Tooth, Bite 4, Wetlands)..." value="${escapeHtml(searchQuery)}" aria-label="Search hunter beasts" />
+            <input type="text" id="${pfx}pet-search-input" class="pet-search-input" placeholder="Search beast name, zone, or ability (e.g. Broken Tooth, Bite 4, Wetlands)..." value="${escapeHtml(searchQuery)}" aria-label="Search hunter beasts" />
           </div>
 
           <div class="pet-filters-row">
             <!-- Attack Speed Filter -->
             <div class="pet-filter-group">
-              <label for="pet-filter-speed">Attack Speed:</label>
-              <select id="pet-filter-speed" class="pet-select" aria-label="Filter by attack speed">
+              <label for="${pfx}pet-filter-speed">Attack Speed:</label>
+              <select id="${pfx}pet-filter-speed" class="pet-select" aria-label="Filter by attack speed">
                 <option value="all" ${speedFilter === 'all' ? 'selected' : ''}>All Speeds</option>
                 <option value="fast" ${speedFilter === 'fast' ? 'selected' : ''}>⚡ Fast (1.0s – 1.5s)</option>
                 <option value="normal" ${speedFilter === 'normal' ? 'selected' : ''}>Normal (1.6s – 2.0s)</option>
@@ -179,8 +181,8 @@
 
             <!-- Faction Filter -->
             <div class="pet-filter-group">
-              <label for="pet-filter-faction">Faction Zone:</label>
-              <select id="pet-filter-faction" class="pet-select" aria-label="Filter by zone faction">
+              <label for="${pfx}pet-filter-faction">Faction Zone:</label>
+              <select id="${pfx}pet-filter-faction" class="pet-select" aria-label="Filter by zone faction">
                 <option value="all" ${factionFilter === 'all' ? 'selected' : ''}>All Factions</option>
                 <option value="alliance" ${factionFilter === 'alliance' ? 'selected' : ''}>Alliance Zones</option>
                 <option value="horde" ${factionFilter === 'horde' ? 'selected' : ''}>Horde Zones</option>
@@ -190,8 +192,8 @@
 
             <!-- Level Cap Filter -->
             <div class="pet-filter-group">
-              <label for="pet-filter-level">Level Cap:</label>
-              <select id="pet-filter-level" class="pet-select" aria-label="Filter by level bracket">
+              <label for="${pfx}pet-filter-level">Level Cap:</label>
+              <select id="${pfx}pet-filter-level" class="pet-select" aria-label="Filter by level bracket">
                 <option value="60" ${maxLevelFilter === 60 ? 'selected' : ''}>All Levels (1–60)</option>
                 <option value="30" ${maxLevelFilter === 30 ? 'selected' : ''}>🛡️ Beta Phase 2 (1–30 Cap)</option>
                 <option value="20" ${maxLevelFilter === 20 ? 'selected' : ''}>Phase 1 (1–20 Cap)</option>
@@ -200,22 +202,21 @@
 
             <!-- New Spawns Toggle -->
             <label class="pet-toggle-label">
-              <input type="checkbox" id="pet-filter-new" ${newSpawnsOnly ? 'checked' : ''} />
+              <input type="checkbox" id="${pfx}pet-filter-new" class="pet-filter-new" aria-label="New Classic+ spawns only" ${newSpawnsOnly ? 'checked' : ''} />
               <span>✦ New Classic+ Spawns Only</span>
             </label>
           </div>
         </div>
 
         <!-- 5. Beast Results Grid -->
-        <div class="pet-results-container" id="pet-results-grid">
+        <div class="pet-results-container" id="${pfx}pet-results-grid">
           ${renderBeastCards(data)}
         </div>
       </div>
     `;
 
-    containers.forEach(c => {
-      c.innerHTML = html;
-      attachEventListeners(c);
+      container.innerHTML = html;
+      attachEventListeners(container, pfx);
     });
   }
 
@@ -387,7 +388,7 @@
     `;
   }
 
-  function attachEventListeners(container) {
+  function attachEventListeners(container, pfx = '') {
     // Family Buttons
     const famBtns = container.querySelectorAll('.pet-family-btn');
     famBtns.forEach(btn => {
@@ -398,51 +399,51 @@
     });
 
     // Search input
-    const searchInp = container.querySelector('#pet-search-input');
+    const searchInp = container.querySelector(`#${pfx}pet-search-input`) || container.querySelector('.pet-search-input');
     if (searchInp) {
       searchInp.addEventListener('input', (e) => {
         searchQuery = e.target.value;
-        const grid = container.querySelector('#pet-results-grid');
+        const grid = container.querySelector(`#${pfx}pet-results-grid`) || container.querySelector('.pet-results-container');
         if (grid) grid.innerHTML = renderBeastCards(getPetData());
       });
     }
 
     // Speed filter
-    const speedSelect = container.querySelector('#pet-filter-speed');
+    const speedSelect = container.querySelector(`#${pfx}pet-filter-speed`) || container.querySelector('.pet-select');
     if (speedSelect) {
       speedSelect.addEventListener('change', (e) => {
         speedFilter = e.target.value;
-        const grid = container.querySelector('#pet-results-grid');
+        const grid = container.querySelector(`#${pfx}pet-results-grid`) || container.querySelector('.pet-results-container');
         if (grid) grid.innerHTML = renderBeastCards(getPetData());
       });
     }
 
     // Faction filter
-    const factSelect = container.querySelector('#pet-filter-faction');
+    const factSelect = container.querySelector(`#${pfx}pet-filter-faction`);
     if (factSelect) {
       factSelect.addEventListener('change', (e) => {
         factionFilter = e.target.value;
-        const grid = container.querySelector('#pet-results-grid');
+        const grid = container.querySelector(`#${pfx}pet-results-grid`) || container.querySelector('.pet-results-container');
         if (grid) grid.innerHTML = renderBeastCards(getPetData());
       });
     }
 
     // Level filter
-    const lvlSelect = container.querySelector('#pet-filter-level');
+    const lvlSelect = container.querySelector(`#${pfx}pet-filter-level`);
     if (lvlSelect) {
       lvlSelect.addEventListener('change', (e) => {
         maxLevelFilter = parseInt(e.target.value, 10);
-        const grid = container.querySelector('#pet-results-grid');
+        const grid = container.querySelector(`#${pfx}pet-results-grid`) || container.querySelector('.pet-results-container');
         if (grid) grid.innerHTML = renderBeastCards(getPetData());
       });
     }
 
     // New Spawns toggle
-    const newToggle = container.querySelector('#pet-filter-new');
+    const newToggle = container.querySelector(`#${pfx}pet-filter-new`) || container.querySelector('.pet-filter-new');
     if (newToggle) {
       newToggle.addEventListener('change', (e) => {
         newSpawnsOnly = e.target.checked;
-        const grid = container.querySelector('#pet-results-grid');
+        const grid = container.querySelector(`#${pfx}pet-results-grid`) || container.querySelector('.pet-results-container');
         if (grid) grid.innerHTML = renderBeastCards(getPetData());
       });
     }
