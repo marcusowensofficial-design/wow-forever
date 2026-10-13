@@ -5430,6 +5430,22 @@
   font-weight: 600;
 }
 
+.pet-results-counter-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.74rem;
+  font-weight: 600;
+  padding: 0.25rem 0.65rem;
+  border-radius: 4px;
+  background: rgba(16, 185, 129, 0.15);
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  color: #6ee7b7;
+  margin-left: auto;
+  align-self: center;
+  transition: all 0.2s ease;
+}
+
 .tame-toggle-btn {
   display: flex;
   justify-content: space-between;

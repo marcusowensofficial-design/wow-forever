@@ -376,6 +376,11 @@ function initClassDeepDives() {
         noticeBanner.style.display = currentRole === 'new' ? 'flex' : 'none';
       }
 
+      let totalMatchingBeasts = 0;
+      let totalMatchingFamilies = 0;
+      const isFiltering = (currentLevel !== 'all') || (currentQuery.length > 0) || (currentRole !== 'all');
+      const isBracketOrSearchFiltering = (currentLevel !== 'all') || (currentQuery.length > 0);
+
       familyCards.forEach(card => {
         const role = card.getAttribute('data-family-role') || '';
         const hasNew = card.getAttribute('data-has-new') === 'true';
@@ -428,23 +433,67 @@ function initClassDeepDives() {
           }
         });
 
+        const drawer = card.querySelector('.pet-tame-drawer');
+        const toggleBtn = card.querySelector('.tame-toggle-btn');
+        const countSpan = toggleBtn ? toggleBtn.querySelector('span:first-child') : null;
+        const totalInFamily = beastRows.length;
+
         // Family visibility
-        const isFiltering = (currentLevel !== 'all') || (currentQuery.length > 0);
-        if (matchesRole && (!isFiltering || matchingBeastsCount > 0)) {
+        const cardVisible = matchesRole && (!isBracketOrSearchFiltering || matchingBeastsCount > 0);
+
+        if (cardVisible) {
           card.style.display = 'flex';
+          totalMatchingFamilies++;
+          totalMatchingBeasts += matchingBeastsCount;
+
+          if (countSpan) {
+            countSpan.textContent = isBracketOrSearchFiltering
+              ? `📍 Where to Tame (${matchingBeastsCount} of ${totalInFamily} Beasts)`
+              : `📍 Where to Tame (${totalInFamily} Beasts)`;
+          }
+
+          const drawerHeaderSummary = card.querySelector('.tdh-summary');
+          if (drawerHeaderSummary) {
+            drawerHeaderSummary.innerHTML = isBracketOrSearchFiltering
+              ? `<span>🐾 <strong>${matchingBeastsCount} of ${totalInFamily} Beasts</strong> Matching Filter</span>`
+              : `<span>🐾 <strong>${totalInFamily} Beasts</strong> Available</span>`;
+          }
+
           // Auto-open drawer if user is actively searching or filtering by level/speed so they see results immediately
-          if (isFiltering) {
-            const drawer = card.querySelector('.pet-tame-drawer');
-            const toggleBtn = card.querySelector('.tame-toggle-btn');
+          if (isBracketOrSearchFiltering) {
             if (drawer && toggleBtn) {
               drawer.classList.add('open');
               toggleBtn.classList.add('open');
+            }
+          } else {
+            // Restore collapsed state when resetting to All Levels unless user explicitly expanded all
+            const isAllExpanded = toggleAllBtn && toggleAllBtn.getAttribute('data-state') === 'expanded';
+            if (!isAllExpanded && drawer && toggleBtn) {
+              drawer.classList.remove('open');
+              toggleBtn.classList.remove('open');
             }
           }
         } else {
           card.style.display = 'none';
         }
       });
+
+      // Update global results badge
+      const counterBadge = contentContainer.querySelector('#pet-results-counter-badge');
+      if (counterBadge) {
+        if (isFiltering) {
+          counterBadge.style.display = 'inline-flex';
+          let filterLabel = '';
+          if (currentLevel === '10-19') filterLabel = 'Lvl 10–19';
+          else if (currentLevel === '20-30') filterLabel = 'Lvl 20–30';
+          else if (currentLevel === '30plus') filterLabel = 'Lvl 30+';
+          else if (currentLevel === 'fast') filterLabel = 'Fast Swing ≤1.6s';
+
+          counterBadge.innerHTML = `<span>✓</span> Showing <strong>${totalMatchingBeasts}</strong> beasts across <strong>${totalMatchingFamilies}</strong> families ${filterLabel ? `(${filterLabel})` : ''}`;
+        } else {
+          counterBadge.style.display = 'none';
+        }
+      }
     }
 
     // Role filter clicks
@@ -522,7 +571,7 @@ function initClassDeepDives() {
       btn.addEventListener('click', (e) => {
         e.preventDefault();
         if (typeof window.openHunterPetMasterModal === 'function') {
-          window.openHunterPetMasterModal('all');
+          window.openHunterPetMasterModal('all', currentLevel !== 'all' ? currentLevel : undefined);
         }
       });
     });
@@ -608,6 +657,7 @@ function initClassDeepDives() {
         if (selLvl === '1-9' && (minL > 9 || maxL < 1)) return false;
         if (selLvl === '10-19' && (minL > 19 || maxL < 10)) return false;
         if (selLvl === '20-30' && (minL > 30 || maxL < 20)) return false;
+        if (selLvl === '30plus' && maxL < 30) return false;
         if (selLvl === '30-49' && (minL > 49 || maxL < 30)) return false;
         if (selLvl === '50-60' && maxL < 50) return false;
 
@@ -719,7 +769,7 @@ function initClassDeepDives() {
       `;
     }
 
-    window.openHunterPetMasterModal = function(initialFamily) {
+    window.openHunterPetMasterModal = function(initialFamily, initialLevelOrSpeed) {
       modal.removeAttribute('hidden');
       modal.classList.add('open');
       if (initialFamily && familySelect) {
@@ -736,6 +786,13 @@ function initClassDeepDives() {
         }
         if (!matched) {
           familySelect.value = initialFamily;
+        }
+      }
+      if (initialLevelOrSpeed) {
+        if (initialLevelOrSpeed === 'fast') {
+          if (speedSelect) speedSelect.value = 'fast';
+        } else if (levelSelect) {
+          levelSelect.value = initialLevelOrSpeed;
         }
       }
       renderModalTable();
@@ -2005,6 +2062,7 @@ function initClassDeepDives() {
             <button class="pet-level-filter-btn" data-level-filter="20-30">Lvl 20–30 (Beta Cap)</button>
             <button class="pet-level-filter-btn" data-level-filter="30plus">Lvl 30+ (Endgame)</button>
             <button class="pet-level-filter-btn" data-level-filter="fast">⚡ Fast Swing (≤1.6s)</button>
+            <span id="pet-results-counter-badge" class="pet-results-counter-badge" style="display: none;"></span>
           </div>
 
           <!-- Live Search Bar -->
