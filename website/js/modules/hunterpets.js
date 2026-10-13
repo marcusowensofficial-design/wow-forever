@@ -54,6 +54,32 @@
   }
   window.copyPetMacro = copyTextToClipboard;
 
+  function normalizePetFamily(str) {
+    if (!str) return 'all';
+    const s = String(str).toLowerCase().trim().replace(/[-_\s]+/g, '');
+    if (s === 'all') return 'all';
+    if (s === 'carrionbird' || s === 'carrion' || s === 'vulture' || s === 'vultures') return 'carrion-bird';
+    if (s === 'birdofprey' || s === 'owl' || s === 'owls' || s === 'bird' || s === 'birds') return 'bird-of-prey';
+    if (s === 'windserpent' || s === 'serpent' || s === 'serpents') return 'wind-serpent';
+    if (s === 'tallstrider' || s === 'tallstriders') return 'tallstrider';
+    if (s === 'bat' || s === 'bats') return 'bat';
+    if (s === 'bear' || s === 'bears') return 'bear';
+    if (s === 'boar' || s === 'boars') return 'boar';
+    if (s === 'cat' || s === 'cats') return 'cat';
+    if (s === 'crab' || s === 'crabs') return 'crab';
+    if (s === 'crocolisk' || s === 'crocolisks' || s === 'croc' || s === 'crocs') return 'crocolisk';
+    if (s === 'fox' || s === 'foxes') return 'fox';
+    if (s === 'gorilla' || s === 'gorillas') return 'gorilla';
+    if (s === 'hyena' || s === 'hyenas') return 'hyena';
+    if (s === 'raptor' || s === 'raptors') return 'raptor';
+    if (s === 'scorpid' || s === 'scorpids' || s === 'scorpion' || s === 'scorpions') return 'scorpid';
+    if (s === 'spider' || s === 'spiders') return 'spider';
+    if (s === 'turtle' || s === 'turtles') return 'turtle';
+    if (s === 'wolf' || s === 'wolves') return 'wolf';
+    return s;
+  }
+  window.normalizePetFamily = normalizePetFamily;
+
   function initHunterPets() {
     const mountContainers = [
       document.getElementById('hunter-pets-mount'),
@@ -73,7 +99,7 @@
     if (hash.includes('pets') || hash.includes('hunter-pets')) {
       const parts = hash.split('/');
       if (parts[2]) {
-        selectedFamily = parts[2];
+        selectedFamily = normalizePetFamily(parts[2]);
       }
       renderPetHub();
     }
@@ -88,21 +114,23 @@
 
     if (!data || containers.length === 0) return;
 
+    const totalBeastsCount = data.allBeasts?.length || 520;
+
     const html = `
       <div class="pet-hub-wrapper">
         <!-- 1. Header Banner -->
         <div class="pet-hero-banner">
           <div class="pet-hero-info">
             <span class="pet-hero-badge">🐾 Official WoW Forever Beast Companion Registry</span>
-            <h2 class="pet-hero-title">Hunter Pet Radar (502 Tameable Beasts)</h2>
+            <h2 class="pet-hero-title">Hunter Pet Radar (${totalBeastsCount} Tameable Beasts)</h2>
             <p class="pet-hero-desc">
               Complete index of all 18 families, including the new <strong>Fox</strong> family and 9 new/reworked abilities.
               Find authentic 1.0s attack speed beasts (Broken Tooth pushback), dietary needs, and exact Classic+ tame coordinates.
             </p>
           </div>
           <div class="pet-stats-summary">
-            <div class="pet-stat-pill"><strong>502</strong><span>Total Beasts</span></div>
-            <div class="pet-stat-pill"><strong>18</strong><span>Families</span></div>
+            <div class="pet-stat-pill"><strong>${totalBeastsCount}</strong><span>Total Beasts</span></div>
+            <div class="pet-stat-pill"><strong>${data.families?.length || 18}</strong><span>Families</span></div>
             <div class="pet-stat-pill"><strong>9</strong><span>New Spells</span></div>
             <div class="pet-stat-pill"><strong>1.0s</strong><span>Fastest AS</span></div>
           </div>
@@ -110,15 +138,15 @@
 
         <!-- 2. Family Quick Selector Grid -->
         <div class="pet-family-selector-bar">
-          <button type="button" class="pet-family-btn ${selectedFamily === 'all' ? 'active' : ''}" data-family="all">
+          <button type="button" class="pet-family-btn ${normalizePetFamily(selectedFamily) === 'all' ? 'active' : ''}" data-family="all">
             <span class="pet-fam-icon">🐾</span>
             <span class="pet-fam-name">All Families</span>
-            <small class="pet-fam-count">${data.allBeasts?.length || 502}</small>
+            <small class="pet-fam-count">${totalBeastsCount}</small>
           </button>
           ${data.families.map(f => {
-            const count = data.allBeasts?.filter(b => b.family.toLowerCase() === f.name.toLowerCase()).length || 0;
+            const count = data.allBeasts?.filter(b => normalizePetFamily(b.family) === normalizePetFamily(f.id)).length || 0;
             return `
-              <button type="button" class="pet-family-btn ${selectedFamily.toLowerCase() === f.id.toLowerCase() ? 'active' : ''}" data-family="${f.id}">
+              <button type="button" class="pet-family-btn ${normalizePetFamily(selectedFamily) === normalizePetFamily(f.id) ? 'active' : ''}" data-family="${f.id}">
                 <img src="${f.icon}" alt="${escapeHtml(f.name)}" class="pet-fam-img" loading="lazy" />
                 <span class="pet-fam-name">${escapeHtml(f.name)}</span>
                 <small class="pet-fam-count">${count}</small>
@@ -192,8 +220,8 @@
   }
 
   function renderActiveFamilyProfile(data) {
-    if (selectedFamily === 'all') return '';
-    const fam = data.families.find(f => f.id.toLowerCase() === selectedFamily.toLowerCase());
+    if (normalizePetFamily(selectedFamily) === 'all') return '';
+    const fam = data.families.find(f => normalizePetFamily(f.id) === normalizePetFamily(selectedFamily));
     if (!fam) return '';
 
     return `
@@ -236,21 +264,24 @@
     let beasts = data.allBeasts || [];
 
     // Family filter
-    if (selectedFamily !== 'all') {
-      beasts = beasts.filter(b => b.family.toLowerCase() === selectedFamily.toLowerCase());
+    if (normalizePetFamily(selectedFamily) !== 'all') {
+      beasts = beasts.filter(b => normalizePetFamily(b.family) === normalizePetFamily(selectedFamily));
     }
 
     // Search query
     if (searchQuery.trim()) {
       const q = searchQuery.toLowerCase().trim();
-      beasts = beasts.filter(b =>
-        b.name.toLowerCase().includes(q) ||
-        b.zone.toLowerCase().includes(q) ||
-        (b.subzone && b.subzone.toLowerCase().includes(q)) ||
-        (b.teaches && b.teaches.toLowerCase().includes(q)) ||
-        (b.family && b.family.toLowerCase().includes(q)) ||
-        (b.notes && b.notes.toLowerCase().includes(q))
-      );
+      const normQ = normalizePetFamily(q);
+      beasts = beasts.filter(b => {
+        const matchesFamilyAlias = normQ !== 'all' && normalizePetFamily(b.family) === normQ;
+        return matchesFamilyAlias ||
+          b.name.toLowerCase().includes(q) ||
+          b.zone.toLowerCase().includes(q) ||
+          (b.subzone && b.subzone.toLowerCase().includes(q)) ||
+          (b.teaches && b.teaches.toLowerCase().includes(q)) ||
+          (b.family && b.family.toLowerCase().includes(q)) ||
+          (b.notes && b.notes.toLowerCase().includes(q));
+      });
     }
 
     // Attack Speed
@@ -361,7 +392,7 @@
     const famBtns = container.querySelectorAll('.pet-family-btn');
     famBtns.forEach(btn => {
       btn.addEventListener('click', () => {
-        selectedFamily = btn.getAttribute('data-family') || 'all';
+        selectedFamily = normalizePetFamily(btn.getAttribute('data-family') || 'all');
         renderPetHub();
       });
     });

@@ -584,9 +584,12 @@ function initClassDeepDives() {
       const selFaction = factionSelect?.value || 'all';
       const selAbility = abilitySelect?.value || 'all';
 
+      const normSelFam = typeof window.normalizePetFamily === 'function' ? window.normalizePetFamily(selFam) : selFam.toLowerCase().replace(/[-_\s]+/g, '');
+
       const filtered = allBeasts.filter(b => {
+        const normFam = typeof window.normalizePetFamily === 'function' ? window.normalizePetFamily(b.family) : (b.family || '').toLowerCase().replace(/[-_\s]+/g, '');
         // Family filter
-        if (selFam !== 'all' && b.family.toLowerCase() !== selFam.toLowerCase()) return false;
+        if (normSelFam !== 'all' && normFam !== normSelFam) return false;
 
         // Level filter
         const minL = b.minLevel || 1;
@@ -615,8 +618,10 @@ function initClassDeepDives() {
 
         // Search text
         if (q) {
+          const normQ = typeof window.normalizePetFamily === 'function' ? window.normalizePetFamily(q) : q.replace(/[-_\s]+/g, '');
+          const matchesFamilyAlias = normQ !== 'all' && normFam === normQ;
           const str = `${b.name} ${b.family} ${b.zone} ${b.subzone || ''} ${b.teaches || ''} ${b.notes || ''}`.toLowerCase();
-          if (!str.includes(q)) return false;
+          if (!matchesFamilyAlias && !str.includes(q)) return false;
         }
 
         return true;
@@ -707,7 +712,20 @@ function initClassDeepDives() {
       modal.removeAttribute('hidden');
       modal.classList.add('open');
       if (initialFamily && familySelect) {
-        familySelect.value = initialFamily;
+        const normInit = typeof window.normalizePetFamily === 'function' ? window.normalizePetFamily(initialFamily) : initialFamily.toLowerCase().replace(/[-_\s]+/g, '');
+        let matched = false;
+        for (let i = 0; i < familySelect.options.length; i++) {
+          const opt = familySelect.options[i];
+          const normVal = typeof window.normalizePetFamily === 'function' ? window.normalizePetFamily(opt.value) : opt.value.toLowerCase().replace(/[-_\s]+/g, '');
+          if (normVal === normInit) {
+            familySelect.selectedIndex = i;
+            matched = true;
+            break;
+          }
+        }
+        if (!matched) {
+          familySelect.value = initialFamily;
+        }
       }
       renderModalTable();
     };
@@ -1880,15 +1898,15 @@ function initClassDeepDives() {
           <div>
             <h4 style="color: #6ee7b7; margin: 0 0 0.25rem; font-size: 1.05rem;">Ready to tame your companion?</h4>
             <p style="color: #cbd5e1; margin: 0; font-size: 0.84rem;">
-              Filter all 18 families, check zone spawns, verify level brackets, and view all 502 beasts.
+              Filter all 18 families, check zone spawns, verify level brackets, and view all 520 beasts.
             </p>
           </div>
           <div style="display: flex; gap: 0.6rem; align-items: center; flex-wrap: wrap;">
             <button class="btn-switch-pet-tab pet-cta-primary-btn" data-target-subtab="pets" type="button">
-              🐾 EXPLORE 18 FAMILIES & 502 BEASTS DIRECTORY ➔
+              🐾 EXPLORE 18 FAMILIES & 520 BEASTS DIRECTORY ➔
             </button>
             <button class="pet-master-directory-btn btn-open-modal-trigger" type="button">
-              <span class="pmd-btn-title">🐾 Open 502 Beasts Table</span>
+              <span class="pmd-btn-title">🐾 Open 520 Beasts Table</span>
               <span class="pmd-badge">Open Table ↗</span>
             </button>
           </div>
@@ -1900,14 +1918,15 @@ function initClassDeepDives() {
   function renderHunterPetStable(cData) {
     const petData = (typeof window !== 'undefined' && window.WOW_ATLAS_DATA && window.WOW_ATLAS_DATA.hunterPets) || null;
     const families = (petData && petData.families) || [];
+    const totalBeastsCount = (petData && petData.allBeasts && petData.allBeasts.length) || 520;
 
     return `
       <div class="hunter-pet-stable-wrapper">
         <div class="spec-overview-banner" style="background: rgba(16, 185, 129, 0.08); border-color: rgba(16, 185, 129, 0.3);">
           <div>
-            <h4 style="color: #6ee7b7; font-size: 1.3rem; margin: 0 0 0.25rem;">🐾 Pet Stable & 502 Tamable Beasts Directory</h4>
+            <h4 style="color: #6ee7b7; font-size: 1.3rem; margin: 0 0 0.25rem;">🐾 Pet Stable & ${totalBeastsCount} Tamable Beasts Directory</h4>
             <p style="font-size: 0.9rem; color: #cbd5e1; margin: 0;">
-              Classic pet mechanics preserved and expanded: 18 families, native swing speed inheritance (Broken Tooth 1.0s, Mystmane 1.6s bear), and 502 authentic tamable beasts in WoW Forever.
+              Classic pet mechanics preserved and expanded: 18 families, native swing speed inheritance (Broken Tooth 1.0s, Mystmane 1.6s bear), and ${totalBeastsCount} authentic tamable beasts in WoW Forever.
             </p>
           </div>
           <span class="deepdive-badge badge-exclusive" style="align-self: flex-start;"><span>✦</span> Living Classic+ Pets</span>
@@ -1929,23 +1948,23 @@ function initClassDeepDives() {
             <button class="btn-switch-pet-tab pet-cta-primary-btn" data-target-subtab="petchanges" type="button" title="View all changes and new abilities">
               ⚡ CLICK HERE TO SEE WHAT'S CHANGED ➔
             </button>
-            <button class="btn-open-modal-trigger pet-master-directory-btn" type="button" title="Open master modal of 502 beasts">
-              <span class="pmd-btn-title">🐾 View 502 Beasts Table</span>
+            <button class="btn-open-modal-trigger pet-master-directory-btn" type="button" title="Open master modal of ${totalBeastsCount} beasts">
+              <span class="pmd-btn-title">🐾 View ${totalBeastsCount} Beasts Table</span>
               <span class="pmd-badge">Open Table ↗</span>
             </button>
           </div>
         </div>
 
-        <!-- SECTION: All 18 Pet Families & Beast Directory (502 Beasts) -->
+        <!-- SECTION: All 18 Pet Families & Beast Directory (${totalBeastsCount} Beasts) -->
         <div id="pet-sec-families" class="pet-filter-bar" style="margin-top: 1rem;">
           <div class="filter-controls-header">
             <div>
-              <h4 style="color: #fff; margin: 0; font-size: 1.05rem;">All 18 Pet Families & Beast Taming Directory (502 Beasts)</h4>
+              <h4 style="color: #fff; margin: 0; font-size: 1.05rem;">All 18 Pet Families & Beast Taming Directory (${totalBeastsCount} Beasts)</h4>
               <span style="font-size: 0.8rem; color: #94a3b8;">Filter by role, level progression bracket, zone, or fast attack speeds</span>
             </div>
             <div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap;">
-              <button class="pet-master-directory-btn" id="btn-open-master-beasts" type="button" title="Click to open the master directory of all 502 tamable beasts">
-                <span class="pmd-btn-title">🐾 Click Here to View All 502 Tamable Beasts Directory Table</span>
+              <button class="pet-master-directory-btn" id="btn-open-master-beasts" type="button" title="Click to open the master directory of all ${totalBeastsCount} tamable beasts">
+                <span class="pmd-btn-title">🐾 Click Here to View All ${totalBeastsCount} Tamable Beasts Directory Table</span>
                 <span class="pmd-badge">Open Table ↗</span>
               </button>
               <button class="pet-toggle-all-btn" id="pet-toggle-all-drawers" data-state="collapsed" type="button">
@@ -2065,7 +2084,10 @@ function initClassDeepDives() {
                     </button>
                   </div>
                   ${famBeasts.map(b => {
-                    const searchStr = `${b.name} ${b.zone || ''} ${b.subzone || ''} ${b.teaches || ''} ${fam.name}`.toLowerCase();
+                    const famAliases = fam.id === 'bird-of-prey' ? 'owl owls bird of prey' :
+                                       fam.id === 'carrion-bird' ? 'vulture vultures carrion bird' :
+                                       fam.id === 'wind-serpent' ? 'wind serpent windserpent' : fam.name;
+                    const searchStr = `${b.name} ${b.zone || ''} ${b.subzone || ''} ${b.teaches || ''} ${fam.name} ${famAliases}`.toLowerCase();
                     const zoneDisplay = b.zone ? b.zone : 'WoW Forever Beta Spawn';
                     return `
                       <div class="tame-beast-row" 

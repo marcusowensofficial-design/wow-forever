@@ -378,8 +378,11 @@ function buildSearchIndex() {
   // 15. Hunter Pets & Pet Families
   if (window.WOW_ATLAS_DATA?.hunterPets?.families) {
     window.WOW_ATLAS_DATA.hunterPets.families.forEach(f => {
+      const aliasTitle = f.id === 'bird-of-prey' ? 'Bird of Prey / Owls (Hunter Pet Family)' :
+                         f.id === 'carrion-bird' ? 'Carrion Bird / Vultures (Hunter Pet Family)' :
+                         `${f.name} (Hunter Pet Family)`;
       searchIndex.push({
-        title: `${f.name} (Hunter Pet Family)`,
+        title: aliasTitle,
         category: 'Hunter Pet Directory',
         icon: '🐾',
         desc: `Diet: ${f.diet ? f.diet.join(', ') : 'Meat'} • Modifiers: Dmg ${f.damageMod}, Arm ${f.armorMod}, HP ${f.healthMod}`,
@@ -390,10 +393,11 @@ function buildSearchIndex() {
     });
   }
 
-  // 16. All 502 Hunter Beasts
+  // 16. All 520 Hunter Beasts
   if (window.WOW_ATLAS_DATA?.hunterPets?.allBeasts) {
     window.WOW_ATLAS_DATA.hunterPets.allBeasts.forEach(b => {
       const isFast = b.speedNum && b.speedNum <= 1.5;
+      const famSlug = typeof window.normalizePetFamily === 'function' ? window.normalizePetFamily(b.family) : (b.family ? b.family.toLowerCase().replace(/[-_\s]+/g, '') : 'all');
       searchIndex.push({
         title: `${b.name} (Lvl ${b.level} ${b.family})`,
         category: `Hunter Beast • ${b.family}`,
@@ -401,7 +405,7 @@ function buildSearchIndex() {
         desc: `${b.zone}${b.subzone ? ' • ' + b.subzone : ''} • Speed: ${b.speed || '2.0s'}${b.teaches ? ' • Teaches: ' + b.teaches : ''} • ${b.faction || 'Contested'}`,
         tab: 'codex',
         targetId: 'codex-pets',
-        petFamily: b.family ? b.family.toLowerCase() : 'all',
+        petFamily: famSlug,
         petName: b.name
       });
     });
