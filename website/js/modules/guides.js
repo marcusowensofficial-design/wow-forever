@@ -411,8 +411,8 @@ function renderGuidesCards() {
 }
 
 function setupGuideModalEvents() {
-  const modal = document.getElementById('guide-detail-modal') || document.getElementById('guides-hub-modal');
-  const closeBtn = document.getElementById('guide-modal-close') || document.getElementById('guides-hub-close');
+  const modal = document.getElementById('guide-detail-modal');
+  const closeBtn = document.getElementById('guide-modal-close');
   const headerBtn = document.getElementById('btn-open-guides');
 
   if (headerBtn) {
@@ -742,10 +742,10 @@ function checkGuidesHash() {
 }
 
 window.openGuideModal = function(targetGuideId) {
-  const modal = document.getElementById('guide-detail-modal') || document.getElementById('guides-hub-modal');
+  const modal = document.getElementById('guide-detail-modal');
   if (!modal) return;
 
-  const bodyElem = document.getElementById('guide-modal-body') || document.getElementById('guides-hub-modal-content');
+  const bodyElem = document.getElementById('guide-modal-body');
   if (!bodyElem) return;
 
   const guides = window.WOW_TOOLS_DATA?.guides || [];

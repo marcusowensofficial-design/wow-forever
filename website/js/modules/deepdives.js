@@ -11,123 +11,33 @@ function initClassDeepDives() {
   const contentContainer = document.getElementById('deepdive-content-container');
   if (!chipsContainer || !contentContainer) return;
 
-  // Header quick-link buttons
-  const quickLinkDeepDives = document.getElementById('quick-link-deepdives');
-  if (quickLinkDeepDives) {
-    quickLinkDeepDives.addEventListener('click', () => {
-      const deepDiveTabBtn = document.querySelector('.nav-tab-btn[data-tab="deepdives"]');
-      if (deepDiveTabBtn) deepDiveTabBtn.click();
-      window.switchDeepDiveClass('hunter');
-      const target = document.getElementById('tab-deepdives');
-      if (target) {
-        setTimeout(() => target.scrollIntoView({ behavior: 'smooth' }), 100);
-      }
-    });
-  }
+  // Header quick-link button hooks
+  const quickLinkClassMap = {
+    'quick-link-deepdives': 'hunter',
+    'quick-link-shaman-deepdive': 'shaman',
+    'quick-link-mage-deepdive': 'mage',
+    'quick-link-paladin-deepdive': 'paladin',
+    'quick-link-warrior-deepdive': 'warrior',
+    'quick-link-warlock-deepdive': 'warlock',
+    'quick-link-priest-deepdive': 'priest',
+    'quick-link-druid-deepdive': 'druid',
+    'quick-link-rogue-deepdive': 'rogue'
+  };
 
-  const quickLinkShaman = document.getElementById('quick-link-shaman-deepdive');
-  if (quickLinkShaman) {
-    quickLinkShaman.addEventListener('click', () => {
-      const deepDiveTabBtn = document.querySelector('.nav-tab-btn[data-tab="deepdives"]');
-      if (deepDiveTabBtn) deepDiveTabBtn.click();
-      window.switchDeepDiveClass('shaman');
-      const target = document.getElementById('tab-deepdives');
-      if (target) {
-        setTimeout(() => target.scrollIntoView({ behavior: 'smooth' }), 100);
-      }
-    });
-  }
-
-  const quickLinkMage = document.getElementById('quick-link-mage-deepdive');
-  if (quickLinkMage) {
-    quickLinkMage.addEventListener('click', () => {
-      const deepDiveTabBtn = document.querySelector('.nav-tab-btn[data-tab="deepdives"]');
-      if (deepDiveTabBtn) deepDiveTabBtn.click();
-      window.switchDeepDiveClass('mage');
-      const target = document.getElementById('tab-deepdives');
-      if (target) {
-        setTimeout(() => target.scrollIntoView({ behavior: 'smooth' }), 100);
-      }
-    });
-  }
-
-  const quickLinkPaladin = document.getElementById('quick-link-paladin-deepdive');
-  if (quickLinkPaladin) {
-    quickLinkPaladin.addEventListener('click', () => {
-      const deepDiveTabBtn = document.querySelector('.nav-tab-btn[data-tab="deepdives"]');
-      if (deepDiveTabBtn) deepDiveTabBtn.click();
-      window.switchDeepDiveClass('paladin');
-      const target = document.getElementById('tab-deepdives');
-      if (target) {
-        setTimeout(() => target.scrollIntoView({ behavior: 'smooth' }), 100);
-      }
-    });
-  }
-
-  const quickLinkWarrior = document.getElementById('quick-link-warrior-deepdive');
-  if (quickLinkWarrior) {
-    quickLinkWarrior.addEventListener('click', () => {
-      const deepDiveTabBtn = document.querySelector('.nav-tab-btn[data-tab="deepdives"]');
-      if (deepDiveTabBtn) deepDiveTabBtn.click();
-      window.switchDeepDiveClass('warrior');
-      const target = document.getElementById('tab-deepdives');
-      if (target) {
-        setTimeout(() => target.scrollIntoView({ behavior: 'smooth' }), 100);
-      }
-    });
-  }
-
-  const quickLinkWarlock = document.getElementById('quick-link-warlock-deepdive');
-  if (quickLinkWarlock) {
-    quickLinkWarlock.addEventListener('click', () => {
-      const deepDiveTabBtn = document.querySelector('.nav-tab-btn[data-tab="deepdives"]');
-      if (deepDiveTabBtn) deepDiveTabBtn.click();
-      window.switchDeepDiveClass('warlock');
-      const target = document.getElementById('tab-deepdives');
-      if (target) {
-        setTimeout(() => target.scrollIntoView({ behavior: 'smooth' }), 100);
-      }
-    });
-  }
-
-  const quickLinkPriest = document.getElementById('quick-link-priest-deepdive');
-  if (quickLinkPriest) {
-    quickLinkPriest.addEventListener('click', () => {
-      const deepDiveTabBtn = document.querySelector('.nav-tab-btn[data-tab="deepdives"]');
-      if (deepDiveTabBtn) deepDiveTabBtn.click();
-      window.switchDeepDiveClass('priest');
-      const target = document.getElementById('tab-deepdives');
-      if (target) {
-        setTimeout(() => target.scrollIntoView({ behavior: 'smooth' }), 100);
-      }
-    });
-  }
-
-  const quickLinkDruid = document.getElementById('quick-link-druid-deepdive');
-  if (quickLinkDruid) {
-    quickLinkDruid.addEventListener('click', () => {
-      const deepDiveTabBtn = document.querySelector('.nav-tab-btn[data-tab="deepdives"]');
-      if (deepDiveTabBtn) deepDiveTabBtn.click();
-      window.switchDeepDiveClass('druid');
-      const target = document.getElementById('tab-deepdives');
-      if (target) {
-        setTimeout(() => target.scrollIntoView({ behavior: 'smooth' }), 100);
-      }
-    });
-  }
-
-  const quickLinkRogue = document.getElementById('quick-link-rogue-deepdive');
-  if (quickLinkRogue) {
-    quickLinkRogue.addEventListener('click', () => {
-      const deepDiveTabBtn = document.querySelector('.nav-tab-btn[data-tab="deepdives"]');
-      if (deepDiveTabBtn) deepDiveTabBtn.click();
-      window.switchDeepDiveClass('rogue');
-      const target = document.getElementById('tab-deepdives');
-      if (target) {
-        setTimeout(() => target.scrollIntoView({ behavior: 'smooth' }), 100);
-      }
-    });
-  }
+  Object.entries(quickLinkClassMap).forEach(([id, classSlug]) => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.addEventListener('click', () => {
+        const deepDiveTabBtn = document.querySelector('.nav-tab-btn[data-tab="deepdives"]');
+        if (deepDiveTabBtn) deepDiveTabBtn.click();
+        window.switchDeepDiveClass(classSlug);
+        const target = document.getElementById('tab-deepdives');
+        if (target) {
+          setTimeout(() => target.scrollIntoView({ behavior: 'smooth' }), 100);
+        }
+      });
+    }
+  });
 
   // Global helper for switching class externally
   window.switchDeepDiveClass = function(classId) {
