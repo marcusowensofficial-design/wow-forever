@@ -450,27 +450,48 @@ const WOW_TOOLS_DATA = {
     "dungeon-01": {
       name: "Hall of Thanes",
       levelRange: "13 – 18",
-      zone: "Ironforge Depths (Khaz Modan)",
+      zone: "Beneath Ironforge (Dun Morogh)",
       status: "Active in Beta Phase 1 & 2",
       bossCount: 4,
-      dropsCount: 16,
-      dropsSeen: 16,
-      entrance: "Hidden vault gateway beneath the Great Forge, next to the High Seat passage.",
+      dropsCount: 13,
+      dropsSeen: 13,
+      entrance: "Vault gateway beneath the High Seat in Ironforge.",
       bosses: [
         {
-          name: "Thane Magni's Remnant",
-          title: "Ancient Dwarf King Spirit",
+          name: "Faldrim Anvilmar",
+          title: "Ancient Dwarf Thane Spirit",
           drops: [
-            { name: "Thane's Runic Ring", slot: "Finger", iLvl: 18, quality: "q3", stats: "+3 Strength, +3 Stamina, +2 Defense" },
-            { name: "Forgewarden Buckler", slot: "Shield", iLvl: 18, quality: "q3", stats: "382 Armor, 11 Block, +4 Stamina, +2 Spirit" }
+            { name: "Ephemeral Choker", slot: "Neck", iLvl: 18, quality: "q3", stats: "+3 Spirit, +2 Stamina" },
+            { name: "Aetherwisp Bracers", slot: "Cloth Wrist", iLvl: 18, quality: "q3", stats: "+3 Intellect, +2 Spirit" },
+            { name: "Spiritwraith Drape", slot: "Cloth Back", iLvl: 18, quality: "q3", stats: "+3 Stamina, +2 Agility" }
           ]
         },
         {
-          name: "The Lithic Golem",
-          title: "Deepstone Behemoth",
+          name: "Magmatus",
+          title: "Raging Fire Elemental",
           drops: [
-            { name: "Trogg-Cracker Mallet", slot: "Two-Hand Mace", iLvl: 18, quality: "q3", stats: "38 - 58 Damage, Speed 3.10 (15.5 DPS), +5 Strength" },
-            { name: "Deepstone Carved Bracers", slot: "Plate Wrist", iLvl: 17, quality: "q2", stats: "98 Armor, +3 Strength, +3 Stamina" }
+            { name: "Kindlegem Girdle", slot: "Mail Waist", iLvl: 18, quality: "q3", stats: "+4 Strength, +3 Stamina" },
+            { name: "Flamefist Grips", slot: "Leather Hands", iLvl: 18, quality: "q3", stats: "+4 Agility, +3 Stamina" },
+            { name: "Fang of Magmatus", slot: "Dagger", iLvl: 18, quality: "q3", stats: "11.8 DPS, Speed 1.60, +2 Agility, +2 Fire Spell Dmg" }
+          ]
+        },
+        {
+          name: "Plunder",
+          title: "Trogg Treasure Warlord",
+          drops: [
+            { name: "Golemheart Stave", slot: "Two-Hand Staff", iLvl: 18, quality: "q3", stats: "14.2 DPS, +5 Intellect, +4 Spirit" },
+            { name: "Treads of the Protector Golem", slot: "Mail Feet", iLvl: 18, quality: "q3", stats: "+4 Strength, +4 Stamina" },
+            { name: "Golemguard Chest", slot: "Mail Chest", iLvl: 18, quality: "q3", stats: "+5 Strength, +5 Stamina" }
+          ]
+        },
+        {
+          name: "Durgen Dirgehammer",
+          title: "Disgraced Royal Thane",
+          drops: [
+            { name: "Durgen's Crescent Axe", slot: "Main Hand Axe", iLvl: 18, quality: "q3", stats: "15.5 DPS, Speed 2.40, +5 Strength, +2 Stamina" },
+            { name: "Direhammer Leggings", slot: "Leather Legs", iLvl: 18, quality: "q3", stats: "+5 Agility, +4 Stamina" },
+            { name: "Robes of the Disgraced Thane", slot: "Cloth Chest", iLvl: 18, quality: "q3", stats: "+6 Intellect, +4 Spirit" },
+            { name: "Durgen Dirgehammer's Head", slot: "Quest Item", iLvl: 18, quality: "q1", stats: "Starts An Ancient Grudge turn-in" }
           ]
         }
       ]
@@ -478,27 +499,75 @@ const WOW_TOOLS_DATA = {
     "dungeon-02": {
       name: "Ruins of Lordaeron",
       levelRange: "15 – 20",
-      zone: "Tirisfal Glades (Underbelly)",
+      zone: "Tirisfal Glades (Above Undercity)",
       status: "Active in Beta Phase 1 & 2",
-      bossCount: 4,
-      dropsCount: 18,
-      dropsSeen: 18,
-      entrance: "Courtyard of the ruined palace of Capital City.",
+      bossCount: 7,
+      dropsCount: 25,
+      dropsSeen: 22,
+      entrance: "Ruined palace courtyard in Capital City ruins above Undercity.",
       bosses: [
         {
-          name: "Commander Valerius",
-          title: "Scarlet Prelate",
+          name: "The Baron",
+          title: "Stitched Abomination",
           drops: [
-            { name: "Crown of the Lost Kingdom", slot: "Mail Head", iLvl: 20, quality: "q3", stats: "142 Armor, +6 Strength, +5 Stamina, +3 Spirit" },
-            { name: "Lordaeron Crested Shield", slot: "Shield", iLvl: 20, quality: "q3", stats: "420 Armor, 14 Block, +4 Strength, +3 Stamina" }
+            { name: "Meathook Slicer", slot: "Dagger", iLvl: 20, quality: "q3", stats: "13.2 DPS, Speed 1.50, +3 Agility, +2 Stamina" },
+            { name: "Abomination Bones", slot: "Mail Chest", iLvl: 20, quality: "q3", stats: "+6 Strength, +4 Stamina" },
+            { name: "Leftover Abomination Skin", slot: "Cloth Chest", iLvl: 20, quality: "q3", stats: "+5 Intellect, +4 Spirit" }
           ]
         },
         {
-          name: "Archmage Aethelred's Echo",
-          title: "Spectral Conjurer",
+          name: "Witherfang",
+          title: "Venomous Spider Broodmother",
           drops: [
-            { name: "Mantle of the Penitent", slot: "Cloth Shoulder", iLvl: 20, quality: "q3", stats: "32 Armor, +5 Intellect, +4 Spirit, +5 Spell Damage" },
-            { name: "Royal Apparition Dagger", slot: "Dagger", iLvl: 20, quality: "q3", stats: "18 - 34 Damage, Speed 1.60 (16.2 DPS), +3 Agility, +3 Stamina" }
+            { name: "Atrophic Girdle", slot: "Mail Waist", iLvl: 20, quality: "q3", stats: "+4 Strength, +3 Stamina" },
+            { name: "Witherbite Bracers", slot: "Leather Wrist", iLvl: 20, quality: "q3", stats: "+3 Agility, +3 Stamina" },
+            { name: "Segmented Spider Leg", slot: "Two-Hand Staff", iLvl: 20, quality: "q3", stats: "14.8 DPS, +5 Intellect, +4 Stamina" }
+          ]
+        },
+        {
+          name: "The Abandoned",
+          title: "Tortured Royal Shade",
+          drops: [
+            { name: "Rotmender's Leggings", slot: "Cloth Legs (Set)", iLvl: 21, quality: "q3", stats: "+6 Intellect, +5 Spirit, +4 Healing" },
+            { name: "Grip of Fear", slot: "Mail Hands", iLvl: 20, quality: "q3", stats: "+4 Strength, +4 Stamina" },
+            { name: "Scepter of the Abandoned", slot: "Main Hand Mace", iLvl: 20, quality: "q3", stats: "14.0 DPS, +4 Stamina, +4 Intellect" }
+          ]
+        },
+        {
+          name: "Bjork",
+          title: "Skeletal Garrison Commander",
+          drops: [
+            { name: "Bonerust Leggings", slot: "Mail Legs", iLvl: 20, quality: "q3", stats: "+6 Strength, +5 Stamina" },
+            { name: "Tuskwrap Belt", slot: "Cloth Waist", iLvl: 20, quality: "q3", stats: "+4 Intellect, +4 Spirit" },
+            { name: "Corpse Chopper", slot: "Two-Hand Axe", iLvl: 21, quality: "q3", stats: "17.4 DPS, Speed 3.20, +7 Strength, +4 Stamina" }
+          ]
+        },
+        {
+          name: "Rath'mael",
+          title: "Scourge Master Necromancer",
+          drops: [
+            { name: "Mirror of Rath'mael", slot: "Shield", iLvl: 22, quality: "q3", stats: "460 Armor, 16 Block, +5 Stamina, +3 Intellect" },
+            { name: "Rotmender's Treads", slot: "Cloth Feet (Set)", iLvl: 21, quality: "q3", stats: "+5 Intellect, +4 Spirit, +5 Healing" },
+            { name: "Coldspire Staff", slot: "Two-Hand Staff", iLvl: 22, quality: "q3", stats: "16.8 DPS, +7 Intellect, +5 Spirit, +6 Frost Dmg" },
+            { name: "Blueprint: Fermenter", slot: "Alchemy Blueprint", iLvl: 20, quality: "q2", stats: "Teaches Fermenter campsite station" },
+            { name: "Blueprint: Arcane Salvager", slot: "Enchanting Blueprint", iLvl: 20, quality: "q2", stats: "Teaches Arcane Salvager campsite tool" }
+          ]
+        },
+        {
+          name: "Viktor the Vile",
+          title: "Renegade Apothecary",
+          drops: [
+            { name: "Vilewalkers", slot: "Mail Feet", iLvl: 20, quality: "q3", stats: "+5 Strength, +4 Stamina" },
+            { name: "Bloodied Chestwraps", slot: "Leather Chest", iLvl: 20, quality: "q3", stats: "+6 Agility, +5 Stamina" },
+            { name: "Vileblood Scimitar", slot: "One-Hand Sword", iLvl: 20, quality: "q3", stats: "15.0 DPS, Speed 2.20, +4 Strength, +3 Stamina" }
+          ]
+        },
+        {
+          name: "Lordaeron Captain",
+          title: "Rare Spectral Royal Guard",
+          drops: [
+            { name: "Haunting Blade", slot: "Two-Hand Sword", iLvl: 22, quality: "q3", stats: "18.2 DPS, Speed 3.00, +6 Strength, +5 Stamina" },
+            { name: "Phantom Armor", slot: "Mail Chest", iLvl: 22, quality: "q3", stats: "210 Armor, +7 Strength, +6 Stamina" }
           ]
         }
       ]
@@ -565,11 +634,11 @@ The **Cozy Sleeping Bag** is the premier open-world utility item in WoW Forever.
     },
     {
       id: "guide-hunter-pets",
-      title: "Hunter Pets & 502 Beasts Master Index (Attack Speeds & Ranks)",
+      title: "Hunter Pets & 520 Beasts Master Index (Attack Speeds & Ranks)",
       category: "Classes & Pets",
       source: "ForeverChanges.pro · Warcraft Tavern · Wowhead",
       icon: "https://render.worldofwarcraft.com/us/icons/56/ability_hunter_beasttaming.jpg",
-      summary: "Attack speed tiers, family damage modifiers, and rank-by-rank ability trainer beasts across 502 overhauled spawns at the Level 30 cap.",
+      summary: "Attack speed tiers, family damage modifiers, and rank-by-rank ability trainer beasts across 520 overhauled spawns at the Level 30 cap.",
       content: `### Pet Mechanics Overhaul in WoW Forever
 Pet normalization and ability scaling in WoW Forever preserve the distinct advantages of famous rare beasts while balancing family modifiers across PvE and PvP.
 
@@ -876,11 +945,11 @@ Druids possess unparalleled flexibility across Phase 2, with early access to ful
 
 ---
 
-### The Secret Serpent Form (Viper Relic)
-🗺️ **Hidden Relic:** *Fang of the Venomspitter*
-• Inside the newly tuned Sunken Grotto cavern near Wailing Caverns (\`44.2, 36.8\`), defeat the rare elite serpent *Xaliss the Slitherer*.
-• Slaying Xaliss yields the ancient Druidic relic *Viper Totem*.
-• Activating this relic cosmetic turns your Cat Form into a **Verdant Viper** with custom venom-spitting idle animations!`
+### The Secret Serpent Form (Embrace of the Viper)
+🗺️ **Set Bonus Unlock:** *Embrace of the Viper (5/5)*
+• Collect all 5 pieces of the Embrace of the Viper set in Wailing Caverns: Armor of the Fang (Lord Cobrahn), Footpads of the Fang (Lady Anacondra), Leggings of the Fang (Lord Pythas), Belt of the Fang (Lord Serpentis), and Gloves of the Fang (trash drop).
+• Equipping all 5 items unlocks **Snake Form**: transforms you into a sleek serpent with slithering Prowl animations, aquatic snake swimming, and the *Dream Venom* proc (chance on melee attack to stun for 1 sec and deal 45 Nature damage over 15s).
+• Also unlocks Emerald, Diamondback, and Albino serpent colorations at any Barber Shop!`
     },
     {
       id: "guide-downranking",
@@ -1103,6 +1172,14 @@ The **Battle Mage** is an official Classic+ specialization that transforms the t
 
 ---
 
+### The Comprehension System & Coldflame Saber Discovery
+Mages possess a unique secondary research skill — **Comprehension (1–300)** — used to decipher ancient scrolls scattered across Azeroth:
+• **Untranslated Scrolls:** Dropped by Syndicate rogue spellcasters in Alterac and Defias mages in Westfall.
+• **Library Deciphering:** Study at the Ironforge Library or Stormwind Academy to decipher the scrolls into powerful enchants and combat incantations.
+• **Coldflame Saber Forging:** By deciphering the *Scroll of the Saber* and combining it with the *Blade of Silverlaine* (from Baron Silverlaine in Shadowfang Keep), Mages forge the iconic **Coldflame Saber** — 1H Sword granting +32 Spell Power and +98 bonus Fire damage against Frozen targets!
+
+---
+
 ### Phase 2 Talent Build (21 Talent Points)
 • **Tier 1 (5/5 Arcane Subtlety):** Reduces threat generated by Arcane spells by 40% and reduces target's arcane resistances.
 • **Tier 2 (5/5 Arcane Concentration):** Grants a 10% chance to enter a Clearcasting state after any damage attack.
@@ -1110,7 +1187,7 @@ The **Battle Mage** is an official Classic+ specialization that transforms the t
 • **Tier 4 (5/5 Blade Infusion):** Increases your melee critical strike chance by 5% and adds 10% spell damage to critical strikes.
 • **Tier 5 (5/5 Arcane Impact):** Increases critical strike chance of Arcane Explosion and Spellstrike by 6%.
 
-💡 **BiS Weapons:** Look for high base top-end damage swords like *Kirin Tor Battle-Blade* (City of Dalaran) or *Royal Apparition Dagger* (BFD) to maximize Spellstrike scaling!`
+💡 **BiS Weapons:** Acquire the forged *Coldflame Saber* (SFK) or *Kirin Tor Battle-Blade* (City of Dalaran) to maximize Spellstrike weapon scaling!`
     },
     {
       id: "guide-scarlet-banner",
@@ -1203,6 +1280,61 @@ When Phase 3 launches, character level will rise to 40+, unlocking **Artisan tra
 • **Mageweave Cloth:** Needed for 225–260 Tailoring and First Aid bandages.
 • **Thick Leather:** Needed for 225–260 Leatherworking.
 • **Fadeleaf & Blindweed:** Essential for 225+ high-tier potions and Blinding Powder!`
+    },
+    {
+      id: "guide-druid-snake-form",
+      title: "Secret Druid Snake Form: Embrace of the Viper Full Guide",
+      category: "Classes & Pets",
+      source: "ForeverChanges.pro · Wowhead · Classic+",
+      icon: "https://wow.zamimg.com/images/wow/icons/large/ability_hunter_pet_serpent.jpg",
+      summary: "How to unlock the custom Druid Snake Form: Wailing Caverns set drops, Dream Venom 1-second stun proc, slithering Prowl, and Barber Shop scales.",
+      content: `### Unlocking the Secret Druid Snake Form
+One of the most viral discoveries in WoW Forever is the **Druid Snake Form**, an authentic shape-shifting form with dedicated serpent animations, swimming locomotion, and stealth mechanics.
+
+### Requirements & Set Pieces: Embrace of the Viper (5/5)
+To unlock Snake Form, Druids must assemble the complete 5-piece **Embrace of the Viper** dungeon set from Wailing Caverns:
+
+| Set Item | Boss / Source | Drop Rate | Key Stats |
+| **Armor of the Fang** | Lord Cobrahn | 25% | Chest: 81 Armor, +2 Str, +7 Agi |
+| **Footpads of the Fang** | Lady Anacondra | 28% | Feet: 55 Armor, +4 Agi, +4 Sta |
+| **Leggings of the Fang** | Lord Pythas | 25% | Legs: 74 Armor, +5 Str, +9 Agi, +4 Sta |
+| **Belt of the Fang** | Lord Serpentis | 33% | Waist: 46 Armor, +2 Str, +6 Agi |
+| **Gloves of the Fang** | Wailing Caverns Trash Mobs | BoE Rare | Hands: 48 Armor, +5 Agi |
+
+---
+
+### Form Mechanics & Unique Abilities
+Equipping the full 5/5 set permanently unlocks Snake Form:
+• **Dream Venom:** Chance on hit with melee attacks to stun the target for 1 second and inflict 45 Nature damage over 15 seconds.
+• **Slithering Prowl:** In stealth, your serpent slithers silently along the terrain with custom low-profile collision.
+• **Aquatic Serpent:** When swimming in water, converts into an aquatic water-snake with increased swimming speed and amphibious breathing.
+• **Barber Shop Customization:** Once unlocked on your character, visit any capital city Barber Shop to toggle between Emerald Viper, Diamondback Rattler, and Albino Cobra scale patterns!`
+    },
+    {
+      id: "guide-savory-whimsyfin-delight",
+      title: "Savory Whimsyfin Delight: Redridge Fishing & Secret Buff Guide",
+      category: "Economy & Professions",
+      source: "ForeverChanges.pro · Wowhead · Classic+",
+      icon: "https://wow.zamimg.com/images/wow/icons/large/inv_misc_fish_50.jpg",
+      summary: "Where to fish Whimsyfin in Redridge Mountains, Cooking 85 recipe source, and the secret 1-hour Orc Pirate / Ninja illusions.",
+      content: `### The Classic+ Culinary Sensation: Savory Whimsyfin Delight
+The Classic+ counterpart to the legendary Savory Deviate Delight is the **Savory Whimsyfin Delight**, a coveted vanity consumable discovered in the contested riverways of the Eastern Kingdoms.
+
+### Gathering & Recipe Details
+
+| Parameter | Specification |
+| **Required Profession** | Cooking (Skill 85) & Fishing (Skill 75+) |
+| **Fishing Location** | Redridge Mountains: River pools along Lake Everstill and the Stonewatch river mouth (\`45.0, 52.0\`) |
+| **Recipe Source** | Dropped by Redridge Shadowhide Gnolls and Blackrock Orc raiders (~1.8% drop rate) |
+| **Ingredients** | 1x Fresh Whimsyfin + 1x Mild Spices |
+
+---
+
+### Effects & Vanity Transformations
+Eating a Savory Whimsyfin Delight triggers the **"Yum!"** buff with one of two random 60-minute cosmetic illusions:
+• **Orcish Buccaneer:** Transforms your character into a swaggering Orc Pirate complete with tricorne hat, eyepatch, and cutlass.
+• **Kek Ninja:** Transforms your character into a masked stealth ninja with smoke-bomb jump animations.
+• 💰 **Auction House Economy:** Fresh Whimsyfin and cooked Delights sell for upwards of 40–60 Silver each on the Auction House during Phase 2 tournaments!`
     }
   ]
 };

@@ -2384,11 +2384,11 @@ const WOW_FOREVER_DATA = {
       type: "5-Man Dungeon",
       levelRange: "13 – 18",
       zone: "Ironforge Depths (Khaz Modan)",
-      status: "Active in Beta Phase 1",
+      status: "Active in Beta Phase 1 & 2",
       playableNow: true,
-      description: "Subterranean crypts beneath the Great Forge, breached by deepstone troggs and corrupted elemental constructs.",
-      bosses: ["Thane Magni's Remnant", "Deepstone Overlord Gorn", "Foreman Baelok", "The Lithic Golem"],
-      lootHighlights: ["Thane's Runic Ring", "Forgewarden Buckler", "Trogg-Cracker Mallet"]
+      description: "Subterranean crypts beneath the High Seat of Ironforge, breached by troggs, fire elementals, and a disgraced thane.",
+      bosses: ["Faldrim Anvilmar", "Magmatus", "Plunder", "Durgen Dirgehammer"],
+      lootHighlights: ["Durgen's Crescent Axe", "Fang of Magmatus", "Kindlegem Girdle", "Ephemeral Choker"]
     },
     {
       id: "dungeon-02",
@@ -2396,11 +2396,11 @@ const WOW_FOREVER_DATA = {
       type: "5-Man Dungeon",
       levelRange: "15 – 20",
       zone: "Tirisfal Glades (Eastern Kingdoms)",
-      status: "Active in Beta Phase 1",
+      status: "Active in Beta Phase 1 & 2",
       playableNow: true,
-      description: "The haunted outer bastions of Lordaeron's capital, overrun by Scarlet Crusaders and vengeful spectral royal guards.",
-      bosses: ["Commander Valerius", "Archmage Aethelred's Echo", "Scarlet Prelate Joshua", "The Royal Apparition"],
-      lootHighlights: ["Crown of the Lost Kingdom", "Lordaeron Crested Shield", "Mantle of the Penitent"]
+      description: "The haunted ruins of Lordaeron's capital city above the Undercity, occupied by Scourge abominations, spiders, and the necromancer Rath'mael.",
+      bosses: ["The Baron", "Witherfang", "The Abandoned", "Bjork", "Rath'mael", "Viktor the Vile", "Lordaeron Captain"],
+      lootHighlights: ["Mirror of Rath'mael", "Rotmender's Raiment", "Corpse Chopper", "Coldspire Staff"]
     },
     {
       id: "dungeon-03",

@@ -271,8 +271,12 @@ window.openDungeonLootModal = function(dungeonId) {
   if (!modal || !body) return;
 
   const keyMap = {
+    'dungeon-01': 'hall-of-thanes',
+    'dungeon-02': 'ruins-of-lordaeron',
     'dungeon-03': 'excavation-site',
     'dungeon-04': 'city-of-dalaran',
+    'hall-of-thanes': 'hall-of-thanes',
+    'ruins-of-lordaeron': 'ruins-of-lordaeron',
     'excavation-site': 'excavation-site',
     'city-of-dalaran': 'city-of-dalaran'
   };

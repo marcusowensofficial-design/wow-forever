@@ -1415,7 +1415,7 @@ window.WOW_ATLAS_DATA = {
       "points": 15,
       "name": "Holstered Replica Ironforge Air Rifle",
       "type": "Toy",
-      "desc": "Interactive air rifle shootout shootout that keeps score."
+      "desc": "Interactive air rifle shootout that keeps score."
     },
     {
       "points": 25,
@@ -1438,6 +1438,492 @@ window.WOW_ATLAS_DATA = {
   ]
 },
   expandedDungeons: {
+  "hall-of-thanes": {
+    "id": "hall-of-thanes",
+    "name": "Hall of Thanes",
+    "zone": "Beneath Ironforge (Dun Morogh)",
+    "levelRange": "13–18",
+    "entrance": "Vault gate beneath the High Seat in Ironforge.",
+    "bosses": [
+      {
+        "name": "Faldrim Anvilmar",
+        "level": 16,
+        "portrait": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_head_dwarf_01.jpg",
+        "mechanics": "Ancient dwarven spirit awakened in the royal crypts. Channels spectral strikes and spirit summons.",
+        "abilities": [
+          {
+            "name": "Spectral Strike",
+            "role": "Tank",
+            "type": "Physical",
+            "desc": "Heavy physical cleave against the primary target."
+          }
+        ],
+        "drops": [
+          {
+            "name": "Ephemeral Choker",
+            "slot": "Neck",
+            "dropRate": "35%",
+            "stats": "+3 Spirit, +2 Stamina"
+          },
+          {
+            "name": "Aetherwisp Bracers",
+            "slot": "Wrist, Cloth",
+            "dropRate": "35%",
+            "stats": "+3 Intellect, +2 Spirit"
+          },
+          {
+            "name": "Spiritwraith Drape",
+            "slot": "Back, Cloth",
+            "dropRate": "30%",
+            "stats": "+3 Stamina, +2 Agility"
+          }
+        ]
+      },
+      {
+        "name": "Magmatus",
+        "level": 17,
+        "portrait": "https://wow.zamimg.com/images/wow/icons/large/spell_fire_fire.jpg",
+        "mechanics": "Raging elemental construct forged from Great Forge runoff. Emits fiery heat pulses.",
+        "abilities": [
+          {
+            "name": "Magma Burst",
+            "role": "All Players",
+            "type": "Fire AoE",
+            "desc": "Pulses fire damage in a 10-yard radius."
+          },
+          {
+            "name": "Ignite Ground",
+            "role": "Tank / Melee",
+            "type": "Ground Hazard",
+            "desc": "Leaves scorched earth beneath target; reposition immediately."
+          }
+        ],
+        "drops": [
+          {
+            "name": "Kindlegem Girdle",
+            "slot": "Waist, Mail",
+            "dropRate": "35%",
+            "stats": "+4 Strength, +3 Stamina"
+          },
+          {
+            "name": "Flamefist Grips",
+            "slot": "Hands, Leather",
+            "dropRate": "35%",
+            "stats": "+4 Agility, +3 Stamina"
+          },
+          {
+            "name": "Fang of Magmatus",
+            "slot": "Main Hand, Dagger",
+            "dropRate": "30%",
+            "stats": "11.8 DPS, Speed 1.60, +2 Agility, +2 Fire Spell Dmg"
+          }
+        ]
+      },
+      {
+        "name": "Plunder",
+        "level": 17,
+        "portrait": "https://wow.zamimg.com/images/wow/icons/large/inv_golem_01.jpg",
+        "mechanics": "Burrowing trogg warlord holed up in the treasure catacomb.",
+        "abilities": [
+          {
+            "name": "Ground Slam",
+            "role": "Melee",
+            "type": "Physical Stun",
+            "desc": "Slams the stone floor, knocking down adjacent players for 2 sec."
+          }
+        ],
+        "drops": [
+          {
+            "name": "Golemheart Stave",
+            "slot": "Two-Hand, Staff",
+            "dropRate": "35%",
+            "stats": "14.2 DPS, +5 Intellect, +4 Spirit"
+          },
+          {
+            "name": "Treads of the Protector Golem",
+            "slot": "Feet, Mail",
+            "dropRate": "35%",
+            "stats": "+4 Strength, +4 Stamina"
+          },
+          {
+            "name": "Golemguard Chest",
+            "slot": "Chest, Mail",
+            "dropRate": "30%",
+            "stats": "+5 Strength, +5 Stamina"
+          }
+        ]
+      },
+      {
+        "name": "Durgen Dirgehammer",
+        "level": 18,
+        "portrait": "https://wow.zamimg.com/images/wow/icons/large/inv_axe_18.jpg",
+        "mechanics": "Disgraced thane turned crypt robber. Wields a devastating crescent axe and enraged sweeps.",
+        "abilities": [
+          {
+            "name": "Whirlwind Cleave",
+            "role": "Melee",
+            "type": "Physical",
+            "desc": "Spins violently, striking all targets within 8 yards."
+          },
+          {
+            "name": "Dirge Call",
+            "role": "Healer",
+            "type": "Debuff",
+            "desc": "Reduces target armor and increases physical damage taken."
+          }
+        ],
+        "drops": [
+          {
+            "name": "Durgen's Crescent Axe",
+            "slot": "Main Hand, Axe",
+            "dropRate": "35%",
+            "stats": "15.5 DPS, Speed 2.40, +5 Strength, +2 Stamina"
+          },
+          {
+            "name": "Direhammer Leggings",
+            "slot": "Legs, Leather",
+            "dropRate": "35%",
+            "stats": "+5 Agility, +4 Stamina"
+          },
+          {
+            "name": "Robes of the Disgraced Thane",
+            "slot": "Chest, Cloth",
+            "dropRate": "30%",
+            "stats": "+6 Intellect, +4 Spirit"
+          },
+          {
+            "name": "Durgen Dirgehammer's Head",
+            "slot": "Quest Item",
+            "dropRate": "100%",
+            "stats": "Completes An Ancient Grudge quest."
+          }
+        ]
+      }
+    ],
+    "quests": [
+      {
+        "name": "An Ancient Grudge",
+        "faction": "Alliance",
+        "levelReq": 9,
+        "source": "Ghostly Attendant inside dungeon",
+        "xp": "2,650 XP",
+        "rewards": "Durgen's Fall Ring (+3 Str, +3 Sta) / Cryptwarden Mantle"
+      },
+      {
+        "name": "The Treaty of Understanding",
+        "faction": "Alliance",
+        "levelReq": 9,
+        "source": "Stone Tablet inside dungeon",
+        "xp": "2,450 XP",
+        "rewards": "Dwarven Heritage Signet"
+      }
+    ]
+  },
+  "ruins-of-lordaeron": {
+    "id": "ruins-of-lordaeron",
+    "name": "Ruins of Lordaeron",
+    "zone": "Tirisfal Glades (Above Undercity)",
+    "levelRange": "15–20",
+    "entrance": "Ruined palace courtyard in Capital City ruins above Undercity.",
+    "bosses": [
+      {
+        "name": "The Baron",
+        "level": 17,
+        "portrait": "https://wow.zamimg.com/images/wow/icons/large/achievement_boss_fleshrender_nokgar.jpg",
+        "mechanics": "Massive stitched abomination guarding the outer courtyard.",
+        "abilities": [
+          {
+            "name": "Cleave",
+            "role": "Tank",
+            "type": "Physical",
+            "desc": "Frontal cleave hitting up to 3 players."
+          },
+          {
+            "name": "Toxic Cloud",
+            "role": "All Players",
+            "type": "Nature AoE",
+            "desc": "Pestilent gas clouds causing nature damage over time."
+          }
+        ],
+        "drops": [
+          {
+            "name": "Meathook Slicer",
+            "slot": "One-Hand, Dagger",
+            "dropRate": "35%",
+            "stats": "13.2 DPS, Speed 1.50, +3 Agility, +2 Stamina"
+          },
+          {
+            "name": "Abomination Bones",
+            "slot": "Chest, Mail",
+            "dropRate": "35%",
+            "stats": "+6 Strength, +4 Stamina"
+          },
+          {
+            "name": "Leftover Abomination Skin",
+            "slot": "Chest, Cloth",
+            "dropRate": "30%",
+            "stats": "+5 Intellect, +4 Spirit"
+          }
+        ]
+      },
+      {
+        "name": "Witherfang",
+        "level": 17,
+        "portrait": "https://wow.zamimg.com/images/wow/icons/large/ability_hunter_pet_spider.jpg",
+        "mechanics": "Broodmother lurking in the ruined palace cellars. Injects paralyzing neurotoxin.",
+        "abilities": [
+          {
+            "name": "Highly Toxic Strain",
+            "role": "Healer",
+            "type": "Poison",
+            "desc": "Stacking poison debuff. Cleanse or decurse quickly."
+          }
+        ],
+        "drops": [
+          {
+            "name": "Atrophic Girdle",
+            "slot": "Waist, Mail",
+            "dropRate": "35%",
+            "stats": "+4 Strength, +3 Stamina"
+          },
+          {
+            "name": "Witherbite Bracers",
+            "slot": "Wrist, Leather",
+            "dropRate": "35%",
+            "stats": "+3 Agility, +3 Stamina"
+          },
+          {
+            "name": "Segmented Spider Leg",
+            "slot": "Two-Hand, Staff",
+            "dropRate": "30%",
+            "stats": "14.8 DPS, +5 Intellect, +4 Stamina"
+          }
+        ]
+      },
+      {
+        "name": "The Abandoned",
+        "level": 18,
+        "portrait": "https://wow.zamimg.com/images/wow/icons/large/spell_shadow_haunting.jpg",
+        "mechanics": "Tortured shade haunting the lower crypts. Drops the iconic Rotmender's set piece.",
+        "abilities": [
+          {
+            "name": "Scream of Fear",
+            "role": "All Players",
+            "type": "Fear CC",
+            "desc": "Pulsing fear affecting nearby enemies for 4 sec."
+          }
+        ],
+        "drops": [
+          {
+            "name": "Rotmender's Leggings",
+            "slot": "Legs, Cloth (Set)",
+            "dropRate": "35%",
+            "stats": "+6 Intellect, +5 Spirit, +4 Healing"
+          },
+          {
+            "name": "Grip of Fear",
+            "slot": "Hands, Mail",
+            "dropRate": "35%",
+            "stats": "+4 Strength, +4 Stamina"
+          },
+          {
+            "name": "Scepter of the Abandoned",
+            "slot": "Main Hand, Mace",
+            "dropRate": "30%",
+            "stats": "14.0 DPS, +4 Stamina, +4 Intellect"
+          }
+        ]
+      },
+      {
+        "name": "Bjork",
+        "level": 19,
+        "portrait": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_head_undead_01.jpg",
+        "mechanics": "Brutal skeletal warrior commanding the garrison ruins.",
+        "abilities": [
+          {
+            "name": "Mortal Strike",
+            "role": "Tank / Healer",
+            "type": "Debuff",
+            "desc": "Reduces healing taken by 50% for 5 sec."
+          },
+          {
+            "name": "Corpse Chopper Swing",
+            "role": "Tank",
+            "type": "Burst Melee",
+            "desc": "Heavy two-handed axe swing with high crit rate."
+          }
+        ],
+        "drops": [
+          {
+            "name": "Bonerust Leggings",
+            "slot": "Legs, Mail",
+            "dropRate": "35%",
+            "stats": "+6 Strength, +5 Stamina"
+          },
+          {
+            "name": "Tuskwrap Belt",
+            "slot": "Waist, Cloth",
+            "dropRate": "35%",
+            "stats": "+4 Intellect, +4 Spirit"
+          },
+          {
+            "name": "Corpse Chopper",
+            "slot": "Two-Hand, Axe",
+            "dropRate": "30%",
+            "stats": "17.4 DPS, Speed 3.20, +7 Strength, +4 Stamina"
+          }
+        ]
+      },
+      {
+        "name": "Rath'mael",
+        "level": 20,
+        "portrait": "https://wow.zamimg.com/images/wow/icons/large/spell_shadow_shadowbolt.jpg",
+        "mechanics": "Master necromancer orchestrating the Scourge occupation. Channels shadow volleys and drops profession blueprints.",
+        "abilities": [
+          {
+            "name": "Shadow Bolt Volley",
+            "role": "Healer",
+            "type": "Shadow AoE",
+            "desc": "Fires shadow bolts at all party members."
+          },
+          {
+            "name": "Dark Empathy",
+            "role": "DPS",
+            "type": "Damage Reflection",
+            "desc": "Reflects 20% of magic damage back to attacker."
+          }
+        ],
+        "drops": [
+          {
+            "name": "Mirror of Rath'mael",
+            "slot": "Off Hand, Shield",
+            "dropRate": "30%",
+            "stats": "460 Armor, +5 Stamina, +3 Intellect"
+          },
+          {
+            "name": "Rotmender's Treads",
+            "slot": "Feet, Cloth (Set)",
+            "dropRate": "30%",
+            "stats": "+5 Intellect, +4 Spirit, +5 Healing"
+          },
+          {
+            "name": "Coldspire Staff",
+            "slot": "Two-Hand, Staff",
+            "dropRate": "25%",
+            "stats": "16.8 DPS, +7 Intellect, +5 Spirit, +6 Frost Dmg"
+          },
+          {
+            "name": "Blueprint: Fermenter",
+            "slot": "Alchemy Recipe",
+            "dropRate": "8%",
+            "stats": "Teaches Fermenter campsite station"
+          },
+          {
+            "name": "Blueprint: Arcane Salvager",
+            "slot": "Enchanting Recipe",
+            "dropRate": "7%",
+            "stats": "Teaches Arcane Salvager campsite tool"
+          }
+        ]
+      },
+      {
+        "name": "Viktor the Vile",
+        "level": 19,
+        "portrait": "https://wow.zamimg.com/images/wow/icons/large/spell_shadow_deathanddecay.jpg",
+        "mechanics": "Renegade apothecary experimenting on captive corpses in the outer cloister.",
+        "abilities": [
+          {
+            "name": "Vile Mixture",
+            "role": "All Players",
+            "type": "Nature AoE",
+            "desc": "Hurls volatile concoctions that leave corrosive sludge."
+          }
+        ],
+        "drops": [
+          {
+            "name": "Vilewalkers",
+            "slot": "Feet, Mail",
+            "dropRate": "35%",
+            "stats": "+5 Strength, +4 Stamina"
+          },
+          {
+            "name": "Bloodied Chestwraps",
+            "slot": "Chest, Leather",
+            "dropRate": "35%",
+            "stats": "+6 Agility, +5 Stamina"
+          },
+          {
+            "name": "Vileblood Scimitar",
+            "slot": "One-Hand, Sword",
+            "dropRate": "30%",
+            "stats": "15.0 DPS, Speed 2.20, +4 Strength, +3 Stamina"
+          }
+        ]
+      },
+      {
+        "name": "Lordaeron Captain",
+        "level": 19,
+        "portrait": "https://wow.zamimg.com/images/wow/icons/large/inv_shield_06.jpg",
+        "mechanics": "Rare spectral commander patrolling the upper balcony. High armor and parry chance.",
+        "abilities": [
+          {
+            "name": "Shield Slam",
+            "role": "Tank",
+            "type": "Stun",
+            "desc": "Slams target with shield, stunning for 3 sec."
+          }
+        ],
+        "drops": [
+          {
+            "name": "Haunting Blade",
+            "slot": "Two-Hand, Sword",
+            "dropRate": "50%",
+            "stats": "18.2 DPS, Speed 3.00, +6 Strength, +5 Stamina"
+          },
+          {
+            "name": "Phantom Armor",
+            "slot": "Chest, Mail",
+            "dropRate": "50%",
+            "stats": "210 Armor, +7 Strength, +6 Stamina"
+          }
+        ]
+      }
+    ],
+    "quests": [
+      {
+        "name": "Abominable Creatures",
+        "faction": "Alliance",
+        "levelReq": 16,
+        "source": "Captain Truman inside dungeon",
+        "xp": "3,900 XP",
+        "rewards": "Monstrous Cleaver (2H Sword) / Grave Shroud (Back) / Slain Baron's Signet"
+      },
+      {
+        "name": "The Wrath of Rath'mael",
+        "faction": "Horde",
+        "levelReq": 15,
+        "source": "Deathguard Kristof (Brill)",
+        "xp": "4,600 XP",
+        "rewards": "Forsaken Greataxe (2H Axe) / Gnarled Necromancer's Staff (Staff)"
+      },
+      {
+        "name": "The New Plague",
+        "faction": "Horde",
+        "levelReq": 16,
+        "source": "Theodore Griffs (Undercity)",
+        "xp": "5,450 XP",
+        "rewards": "Plaguefang (1H Sword) / Blight Gloves (Cloth)"
+      },
+      {
+        "name": "Crest of Lordaeron",
+        "faction": "Both",
+        "levelReq": 16,
+        "source": "Crest of Lordaeron object in dungeon",
+        "xp": "5,450–6,200 XP",
+        "rewards": "Small Sack of Gems"
+      }
+    ]
+  },
   "excavation-site": {
     "id": "excavation-site",
     "name": "Excavation Site: Wetlands",
@@ -1448,7 +1934,7 @@ window.WOW_ATLAS_DATA = {
       {
         "name": "Saltspine",
         "level": 28,
-        "portrait": "https://foreverchanges.pro/wow-ui/bosses/saltspine.webp",
+        "portrait": "https://wow.zamimg.com/images/wow/icons/large/ability_hunter_pet_crocolisk.jpg",
         "mechanics": "Roams the starting marsh among elite crocolisks. Clear trash thoroughly before engaging him. He hits hard with high base health.",
         "abilities": [
           {
@@ -1482,7 +1968,7 @@ window.WOW_ATLAS_DATA = {
       {
         "name": "Shadetooth",
         "level": 29,
-        "portrait": "https://foreverchanges.pro/wow-ui/bosses/shadetooth.webp",
+        "portrait": "https://wow.zamimg.com/images/wow/icons/large/ability_hunter_pet_raptor.jpg",
         "mechanics": "Slay the raptor matriarch in the tall brush. A wave of raptor adds spawns upon her death; wipe out the wave quickly before Shadetooth charges in.",
         "abilities": [
           {
@@ -1534,7 +2020,7 @@ window.WOW_ATLAS_DATA = {
       {
         "name": "Highland Horror",
         "level": 30,
-        "portrait": "https://foreverchanges.pro/wow-ui/bosses/highland-horror.webp",
+        "portrait": "https://wow.zamimg.com/images/wow/icons/large/spell_shadow_summonvoidwalker.jpg",
         "mechanics": "Guards the Dragonmaw orc encampment. Pull the surrounding Dragonmaw orcs in small packs first, then engage the horror.",
         "abilities": [
           {
@@ -1556,7 +2042,7 @@ window.WOW_ATLAS_DATA = {
       {
         "name": "Relic Guardian",
         "level": 31,
-        "portrait": "https://foreverchanges.pro/wow-ui/bosses/relic-guardian.webp",
+        "portrait": "https://wow.zamimg.com/images/wow/icons/large/inv_golem_02.jpg",
         "mechanics": "Dormant at the end of the spider cavern. Click the ancient Titan console next to him to initiate the encounter.",
         "abilities": [
           {
@@ -1639,7 +2125,7 @@ window.WOW_ATLAS_DATA = {
       {
         "name": "Atrexis the Grave Knight",
         "level": 29,
-        "portrait": "https://foreverchanges.pro/wow-ui/bosses/145787.webp",
+        "portrait": "https://wow.zamimg.com/images/wow/icons/large/spell_deathknight_deathanddecay.jpg",
         "mechanics": "Stands inside the ritual summoning circle in the sewer underbelly, flanked by Kirin Tor Necromancers.",
         "abilities": [
           {
@@ -1691,7 +2177,7 @@ window.WOW_ATLAS_DATA = {
       {
         "name": "Lyn the Ignored",
         "level": 31,
-        "portrait": "https://foreverchanges.pro/wow-ui/bosses/lyn-the-ignored.webp",
+        "portrait": "https://wow.zamimg.com/images/wow/icons/large/spell_shadow_shadowbolt.jpg",
         "mechanics": "Secret summoning encounter: player with Tome of Dalaran clicks pink circle in northeast market stalls room.",
         "abilities": [
           {
@@ -1731,7 +2217,7 @@ window.WOW_ATLAS_DATA = {
       {
         "name": "Arcane Anomaly",
         "level": 30,
-        "portrait": "https://foreverchanges.pro/wow-ui/bosses/arcane-anomaly.webp",
+        "portrait": "https://wow.zamimg.com/images/wow/icons/large/spell_nature_wispsplodegreen.jpg",
         "mechanics": "Channels lethal directional beam and arcane bolts.",
         "abilities": [
           {
@@ -1771,7 +2257,7 @@ window.WOW_ATLAS_DATA = {
       {
         "name": "Arcanic Enigma",
         "level": 30,
-        "portrait": "https://foreverchanges.pro/wow-ui/bosses/arcanic-enigma.webp",
+        "portrait": "https://wow.zamimg.com/images/wow/icons/large/spell_arcane_starfire.jpg",
         "mechanics": "Polymorphs party members and silences spellcasters.",
         "abilities": [
           {
@@ -1817,7 +2303,7 @@ window.WOW_ATLAS_DATA = {
       {
         "name": "Unstable Sentinel",
         "level": 31,
-        "portrait": "https://foreverchanges.pro/wow-ui/bosses/unstable-sentinel.webp",
+        "portrait": "https://wow.zamimg.com/images/wow/icons/large/inv_gizmo_02.jpg",
         "mechanics": "Ancient construct with lethal 25-yard pulsing AoE. Drops the Spinning Wheel blueprint!",
         "abilities": [
           {
@@ -1857,7 +2343,7 @@ window.WOW_ATLAS_DATA = {
       {
         "name": "Shade of the Archmage",
         "level": 33,
-        "portrait": "https://foreverchanges.pro/wow-ui/bosses/shade-of-archmage.webp",
+        "portrait": "https://wow.zamimg.com/images/wow/icons/large/spell_arcane_portalshattrath.jpg",
         "mechanics": "Final boss of Dalaran inside the Violet Chamber. Mass polymorphs when out of mana and channels Evocation.",
         "abilities": [
           {

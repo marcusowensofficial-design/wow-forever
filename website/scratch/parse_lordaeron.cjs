@@ -1,0 +1,10 @@
+const fs = require('fs');
+const text = fs.readFileSync('C:/Users/marco/.gemini/antigravity-ide/brain/5f0f91da-716b-4c81-97b7-e91f7dc8db47/.system_generated/steps/95/content.md', 'utf8');
+const titleMatch = text.match(/<title>([^<]+)<\/title>/);
+console.log('Title:', titleMatch ? titleMatch[1] : '');
+const descMatch = text.match(/<meta name="description" content="([^"]+)"/);
+console.log('Desc:', descMatch ? descMatch[1] : '');
+const bosses = [...text.matchAll(/<h2[^>]*id="h-([^"]+)"[^>]*>([^<]+)<\/h2>/gi)].map(m => m[2]);
+console.log('Bosses:', bosses);
+const items = [...text.matchAll(/<span class="lb-name[^"]*">([^<]+)<\/span>/gi)].map(m => m[1]);
+console.log('Items count:', items.length, 'Items:', items);
