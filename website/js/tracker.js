@@ -84,7 +84,7 @@ function renderCharacterSheet(char) {
     </div>
     <div class="char-meta-grid">
       <div class="char-meta-item"><strong>Race:</strong> ${escapeHtml(char.race)}</div>
-      <div class="char-meta-item"><strong>Class:</strong> <span style="color: ${classInfo.color}; font-weight: 700; text-shadow: 0 0 8px ${classInfo.color}40;">${classInfo.icon} ${escapeHtml(char.className)}</span></div>
+      <div class="char-meta-item"><strong>Class:</strong> <span style="color: ${classInfo.color}; font-weight: 700; text-shadow: 0 0 8px ${classInfo.color}40;"><img src="${classInfo.imgIcon}" alt="" class="tracker-class-icon" onerror="this.style.display='none'" />${escapeHtml(char.className)}</span></div>
       <div class="char-meta-item"><strong>Specialization:</strong> ${escapeHtml(char.spec)}</div>
       <div class="char-meta-item"><strong>Target Bracket:</strong> <span data-phase-key="squadBracket">${escapeHtml((typeof WOW_FOREVER_DATA !== 'undefined' && WOW_FOREVER_DATA.sitePhases && typeof window.getSitePhase === 'function') ? (WOW_FOREVER_DATA.sitePhases[window.getSitePhase()]?.squadBracket || 'Beta Phase 2 (Cap 30 — Live Now!)') : 'Beta Phase 2 (Cap 30 — Live Now!)')}</span></div>
       <div class="char-meta-item"><strong>Primary Prof 1:</strong> ${escapeHtml(char.prof1)}</div>
@@ -228,9 +228,13 @@ const WOW_PROFESSION_METADATA = {
 };
 
 function getWowClassInfo(className) {
-  if (!className) return { color: '#fbbf24', icon: '⚔️', name: 'Unknown' };
+  if (!className) return { color: '#fbbf24', icon: '⚔️', imgIcon: 'https://render.worldofwarcraft.com/us/icons/56/inv_misc_questionmark.jpg', name: 'Unknown' };
   const key = className.toLowerCase().replace(/[^a-z]/g, '');
-  return WOW_CLASS_METADATA[key] || { color: '#fbbf24', icon: '⚔️', name: className };
+  const base = WOW_CLASS_METADATA[key] || { color: '#fbbf24', icon: '⚔️', name: className };
+  return {
+    ...base,
+    imgIcon: `https://render.worldofwarcraft.com/us/icons/56/classicon_${key}.jpg`
+  };
 }
 
 function getProfBadgeHtml(profName) {
@@ -357,7 +361,7 @@ function initSquadRoster() {
         <td>${escapeHtml(player.race)}</td>
         <td>
           <span class="roster-class-pill class-${classKey}" style="--class-accent: ${classInfo.color}; --class-border: ${classInfo.color}40; background: ${classInfo.color}14;">
-            <span class="roster-class-icon">${classInfo.icon}</span>
+            <img src="${classInfo.imgIcon}" alt="" class="tracker-class-icon" onerror="this.style.display='none'" />
             <span class="roster-class-name" style="color: ${classInfo.color}; text-shadow: 0 0 10px ${classInfo.color}66;">
               ${escapeHtml(player.className)}
             </span>

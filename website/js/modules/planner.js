@@ -77,7 +77,7 @@ function initClassRacePlanner() {
     // 1. Selector chips
     const chipsHtml = WOW_FOREVER_DATA.allClassesData.map(cls => `
       <button class="selector-chip-btn ${cls.id === selectedClassId ? 'active' : ''}" data-class-id="${cls.id}" style="${cls.id === selectedClassId ? `border-color: ${cls.color}; box-shadow: 0 0 12px ${cls.color}40;` : ''}">
-        <span>${cls.icon}</span>
+        <img src="https://render.worldofwarcraft.com/us/icons/56/classicon_${cls.id}.jpg" alt="" class="planner-class-chip-icon" onerror="this.style.display='none'" />
         <span>${cls.name}</span>
       </button>
     `).join('');
@@ -98,7 +98,7 @@ function initClassRacePlanner() {
     let heroHtml = `
       <div class="planner-hero-top">
         <div style="display: flex; align-items: center; gap: 0.8rem;">
-          <span style="font-size: 2.2rem;">${cls.icon}</span>
+          <img src="https://render.worldofwarcraft.com/us/icons/56/classicon_${cls.id}.jpg" alt="${escapeHtml(cls.name)}" class="planner-class-hero-icon" onerror="this.outerHTML='<span style=\\'font-size: 2.2rem;\\'>${cls.icon}</span>'" />
           <div>
             <h2 style="color: ${cls.color}; font-size: 1.8rem; margin: 0;">${escapeHtml(cls.name)}</h2>
             <span style="font-size: 0.85rem; color: var(--text-gold); font-weight: 600;">${escapeHtml(cls.specs)}</span>
@@ -417,7 +417,7 @@ function initClassRacePlanner() {
               <div>
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
                   <div style="display: flex; align-items: center; gap: 0.6rem;">
-                    <span style="font-size: 1.8rem;">${classData.icon}</span>
+                    <img src="https://render.worldofwarcraft.com/us/icons/56/classicon_${classData.id}.jpg" alt="" class="planner-class-chip-icon" style="width: 26px; height: 26px;" onerror="this.outerHTML='<span style=\\'font-size: 1.8rem;\\'>${classData.icon}</span>'" />
                     <div>
                       <h4 style="color: ${classData.color}; font-size: 1.25rem; margin: 0;">${escapeHtml(classData.name)}</h4>
                       <span style="font-size: 0.78rem; color: var(--text-gold); font-weight: 600;">${escapeHtml(classData.specs)}</span>

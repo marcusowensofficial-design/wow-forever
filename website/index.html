@@ -10,7 +10,14 @@
   <meta property="og:title" content="World of Warcraft: Forever — Beta Hub, Classic+ Tracker & News Portal">
   <meta property="og:description" content="World of Warcraft: Forever (Classic+) beta tracking hub, codex, Level 30 BiS equipment planner, talent tree calculator, news wire, and in-game companion addon suite.">
   <meta property="og:site_name" content="World of Warcraft: Forever Portal">
+  <meta property="og:image" content="https://marcusowens.github.io/wow-forever/images/branding/wow-forever-og-banner.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="World of Warcraft: Forever — Classic+ Beta Portal">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="World of Warcraft: Forever — Beta Hub, Classic+ Tracker & News Portal">
+  <meta name="twitter:description" content="World of Warcraft: Forever (Classic+) beta tracking hub, codex, Level 30 BiS equipment planner, talent tree calculator, news wire, and in-game companion addon suite.">
+  <meta name="twitter:image" content="https://marcusowens.github.io/wow-forever/images/branding/wow-forever-og-banner.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Cinzel+Decorative:wght@700;900&family=Outfit:wght@300;400;500;600;700&display=optional">
@@ -18,7 +25,9 @@
   <link rel="stylesheet" href="css/tools.css?v=1.60.6-p6">
   <link rel="stylesheet" href="css/professions.css?v=1.60.6-p6">
   <link rel="stylesheet" href="css/changes.css?v=1.60.6-p6">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚔️</text></svg>">
+  <link rel="icon" type="image/svg+xml" href="images/branding/favicon.svg">
+  <link rel="alternate icon" type="image/png" href="images/branding/favicon.png">
+  <link rel="apple-touch-icon" href="images/branding/apple-touch-icon.png">
 </head>
 <body>
 
@@ -67,9 +76,13 @@
     <!-- Header & Hero -->
     <header class="header-hero">
       <div class="brand-crest">
-        <span style="font-size: 2rem;">⚡</span>
-        <span style="font-size: 1.1rem; letter-spacing: 0.3em; color: var(--text-gold); font-family: var(--font-heading);">BLIZZARD ENTERTAINMENT</span>
-        <span style="font-size: 2rem;">⚡</span>
+        <svg class="crest-rune" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" fill="rgba(245, 208, 97, 0.25)"></polygon>
+        </svg>
+        <span class="brand-crest-text">BLIZZARD ENTERTAINMENT</span>
+        <svg class="crest-rune" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" fill="rgba(245, 208, 97, 0.25)"></polygon>
+        </svg>
       </div>
       <h1 class="site-title gradient-gold-text">WORLD OF WARCRAFT: FOREVER</h1>
       <p class="site-subtitle">
@@ -1381,8 +1394,8 @@
 
           <div class="faction-filter-group">
             <button class="planner-filter-btn active" data-faction-filter="all">All Combos</button>
-            <button class="planner-filter-btn" data-faction-filter="alliance"><img src="images/icons/faction-alliance.jpg" class="bis-mini-faction-icon" alt="" onerror="this.src='https://render.worldofwarcraft.com/us/icons/56/achievement_pvp_a_a.jpg'" /> Alliance Only</button>
-            <button class="planner-filter-btn" data-faction-filter="horde"><img src="images/icons/faction-horde.jpg" class="bis-mini-faction-icon" alt="" onerror="this.src='https://render.worldofwarcraft.com/us/icons/56/achievement_pvp_h_h.jpg'" /> Horde Only</button>
+            <button class="planner-filter-btn" data-faction-filter="alliance"><img src="images/icons/faction-alliance.png" class="bis-mini-faction-icon" alt="" onerror="this.src='images/icons/faction-alliance.jpg'" /> Alliance Only</button>
+            <button class="planner-filter-btn" data-faction-filter="horde"><img src="images/icons/faction-horde.png" class="bis-mini-faction-icon" alt="" onerror="this.src='images/icons/faction-horde.jpg'" /> Horde Only</button>
             <button class="planner-filter-btn" data-faction-filter="new">✦ Only New in Forever</button>
           </div>
         </div>
@@ -2575,6 +2588,7 @@
 
         <!-- 1. Master All-in-One Download Banner -->
         <div class="addon-master-banner">
+          <img src="images/addons/addon-suite-banner.png" class="addon-master-banner-art" alt="Marcus's All-in-One WoW Forever Addon Suite" loading="lazy" />
           <div class="addon-master-content">
             <span class="status-pulse-badge" style="background: rgba(0, 192, 255, 0.2); border-color: #00c0ff; color: #7dd3fc; margin-bottom: 0.5rem;">
               💎 OFFICIAL COMPANION PACK • ALL 6 ADDONS INCLUDED
@@ -2610,7 +2624,7 @@
           <div class="addon-card-item" id="card-foreverplates">
             <div>
               <div class="addon-card-header">
-                <div class="addon-icon-square" style="color: #00c0ff; border-color: rgba(0, 192, 255, 0.4); background: rgba(0, 192, 255, 0.1);">🛡️</div>
+                <img src="images/addons/addon-foreverplates.png" class="addon-card-emblem" alt="ForeverPlates" loading="lazy" />
                 <div>
                   <h4 class="addon-card-title">
                     ForeverPlates <span class="addon-card-badge" style="color: #00c0ff; border-color: rgba(0, 192, 255, 0.4);">v2.1.0</span>
@@ -2640,7 +2654,7 @@
           <div class="addon-card-item" id="card-forevercastbars">
             <div>
               <div class="addon-card-header">
-                <div class="addon-icon-square" style="color: #38bdf8; border-color: rgba(56, 189, 248, 0.4); background: rgba(56, 189, 248, 0.1);">⚔️</div>
+                <img src="images/addons/addon-forevercastbars.png" class="addon-card-emblem" alt="Forever Nameplates Castbars" loading="lazy" />
                 <div>
                   <h4 class="addon-card-title">
                     Forever Nameplates Castbars <span class="addon-card-badge" style="color: #38bdf8; border-color: rgba(56, 189, 248, 0.4);">v2.2.0</span>
@@ -2670,7 +2684,7 @@
           <div class="addon-card-item" id="card-foreverliquid">
             <div>
               <div class="addon-card-header">
-                <div class="addon-icon-square" style="color: #39ff14; border-color: rgba(57, 255, 20, 0.4); background: rgba(57, 255, 20, 0.1);">💧</div>
+                <img src="images/addons/addon-foreverliquid.png" class="addon-card-emblem" alt="ForeverLiquid" loading="lazy" />
                 <div>
                   <h4 class="addon-card-title">
                     ForeverLiquid <span class="addon-card-badge" style="color: #39ff14; border-color: rgba(57, 255, 20, 0.4);">v1.3.0</span>
@@ -2701,7 +2715,7 @@
           <div class="addon-card-item" id="card-foreverjournal">
             <div>
               <div class="addon-card-header">
-                <div class="addon-icon-square" style="color: #f59e0b; border-color: rgba(245, 158, 11, 0.4); background: rgba(245, 158, 11, 0.1);">📖</div>
+                <img src="images/addons/addon-foreverdungeonjournal.png" class="addon-card-emblem" alt="ForeverDungeonJournal" loading="lazy" />
                 <div>
                   <h4 class="addon-card-title">
                     ForeverDungeonJournal <span class="addon-card-badge" style="color: #f59e0b; border-color: rgba(245, 158, 11, 0.4);">v1.6.0</span>
@@ -2732,7 +2746,7 @@
           <div class="addon-card-item" id="card-foreverblessings">
             <div>
               <div class="addon-card-header">
-                <div class="addon-icon-square" style="color: #fbbf24; border-color: rgba(251, 191, 36, 0.4); background: rgba(251, 191, 36, 0.1);">👑</div>
+                <img src="images/addons/addon-foreverblessings.png" class="addon-card-emblem" alt="ForeverBlessings" loading="lazy" />
                 <div>
                   <h4 class="addon-card-title">
                     ForeverBlessings <span class="addon-card-badge" style="color: #fbbf24; border-color: rgba(251, 191, 36, 0.4);">v1.1.0</span>
@@ -2763,7 +2777,7 @@
           <div class="addon-card-item" id="card-echotwist">
             <div>
               <div class="addon-card-header">
-                <div class="addon-icon-square" style="color: #eab308; border-color: rgba(234, 179, 8, 0.4); background: rgba(234, 179, 8, 0.1);">⚡</div>
+                <img src="images/addons/addon-echotwist.png" class="addon-card-emblem" alt="EchoTwist" loading="lazy" />
                 <div>
                   <h4 class="addon-card-title">
                     EchoTwist <span class="addon-card-badge" style="color: #eab308; border-color: rgba(234, 179, 8, 0.4);">v1.0.0</span>
