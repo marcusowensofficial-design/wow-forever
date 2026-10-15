@@ -5,7 +5,7 @@ description: |
   Covers 16001 TOC standards, Single-TOC architecture, AllowLoadGameType filters, XML and Lua frame design, secret values / UI taint, ruleset realm substitution, SavedVariables persistence, nameplate/unit frame mechanics, Dungeon Journal architecture, map inpainting, and sub-pixel pin calibration.
 license: Apache-2.0
 metadata:
-  version: v6
+  version: v7
   publisher: user
 ---
 
@@ -16,6 +16,9 @@ This skill provides critical domain knowledge, architectural standards, and debu
 ---
 
 ## 0. Official In-House Addon Suite (Marcus Owens & Team)
+
+> [!NOTE]
+> **Workspace & AddOn Directory Junctions**: The game client directory `C:\Program Files (x86)\World of Warcraft\_classic_beta_\Interface\AddOns\<Addon>` uses NTFS Directory Junctions mapped directly to `WOWFOREVER\addons\<Addon>`. Changes made in either folder update instantly in both. Version control, testing, and packaging scripts always operate out of the workspace `addons/` directory.
 
 When referencing **our addon projects**, the following in-house addons located in `addons/` belong to our suite:
 
@@ -38,10 +41,11 @@ When referencing **our addon projects**, the following in-house addons located i
 - **Engine Flavor**: WoW Forever (internal project code "Camelot") runs on the **Retail Midnight (12.0)** engine with Classic assets and mechanics.
 - **Mainline Classification**: Forever is officially classed by the game client as `mainline`. **This is intentional.**
 
-### 1.2 Multi-TOC Issues vs The Recommended 1-TOC Setup
-Because Forever is classed as `mainline`, any `_Mainline.toc` will **also load on Forever**. This causes conflicts, duplicate executions, or broken overrides when maintaining separate `_Mainline.toc` and `_Camelot.toc` files.
-- While patch 12.1.5 introduces `_Standard.toc` as a mechanism to load strictly on Retail, **moving to a unified Single-TOC (1 TOC) setup is the recommended best practice**.
-- The 1-TOC architecture uses inline game type tags to control addon visibility, metadata, and per-file loading.
+### 1.2 TOC Architecture & Client Discovery (Camelot 16001)
+- The Camelot beta client scans addon directories prioritizing `<Addon>_Camelot.toc` first, falling back to `<Addon>.toc`.
+- **Title Directive Warning**: Do **NOT** attach speculative `[AllowLoadGameType standard]` tags or define multiple `## Title:` lines in TOCs. In the 16001 client parser, speculative brackets on Title headers break addon discovery on Camelot. Use a single, clean `## Title:` line.
+- Always include `## AllowLoadGameType: camelot` and `## DefaultState: enabled` on Camelot addons to ensure the client enables and recognizes them properly.
+- Keep `<Addon>.toc` and `<Addon>_Camelot.toc` synchronized to ensure compatibility across all client discovery paths.
 
 ### 1.3 TOC Directives & Conditional GameType Tags
 Use `## AllowLoadGameType` and `## ExcludeLoadGameType` to control loading behavior:
@@ -49,38 +53,28 @@ Use `## AllowLoadGameType` and `## ExcludeLoadGameType` to control loading behav
 | Directive / Tag | Target / Scope | Behavior |
 |---|---|---|
 | `## AllowLoadGameType: standard` | Entire Addon | Addon only loads on Retail (hidden on Forever & Classic). |
-| `## AllowLoadGameType: camelot` | Entire Addon | Addon only loads on WoW Forever. |
-| `## Title: MyAddon [AllowLoadGameType standard]` | Metadata | Sets title specifically on Retail. |
-| `## Title: MyAddon (Forever) [AllowLoadGameType camelot]` | Metadata | Sets title specifically on WoW Forever. |
-| `file.lua [AllowLoadGameType standard]` | File Loading | Loads `file.lua` strictly on Retail. |
-| `file.lua [AllowLoadGameType camelot][ExcludeLoadGameType standard, classic]` | File Loading | Loads `file.lua` strictly on WoW Forever. *(Keep an eye on this tag; syntax will evolve in future builds)* |
+| `## AllowLoadGameType: camelot` | Entire Addon | Addon loads on WoW Forever. |
+| `## DefaultState: enabled` | Entire Addon | Ensures addon defaults to enabled in client AddOn list. |
+| `file.lua [AllowLoadGameType camelot][ExcludeLoadGameType standard, classic]` | File Loading | Loads `file.lua` strictly on WoW Forever. |
 | `ui.xml [AllowLoadGameType camelot]` | XML Loading | Loads XML layout strictly on WoW Forever. |
 
-### 1.4 Pristine 1-TOC Reference Example
+### 1.4 Pristine 16001 TOC Reference Example
 ```toc
 ## Interface: 16001
-## Title: MyAddon [AllowLoadGameType camelot]
-## Title: MyAddon (Retail) [AllowLoadGameType standard]
-## Notes: Clean 1-TOC setup supporting WoW Forever and Retail
-## Author: You
+## Title: MyAddon
+## Notes: Companion addon for WoW Forever
+## Author: Marcus & Team
 ## Version: 1.0.0
 ## SavedVariables: MyAddonDB
 ## LoadSavedVariablesFirst: true
+## DefaultState: enabled
+## AllowLoadGameType: camelot
 
-# Shared Files
-shared\constants.lua
-shared\utilities.lua
-
-# WoW Forever Exclusive Files
-forever\ruleset.lua [AllowLoadGameType camelot][ExcludeLoadGameType standard, classic]
-forever\templates.xml [AllowLoadGameType camelot][ExcludeLoadGameType standard, classic]
-forever\core.lua [AllowLoadGameType camelot][ExcludeLoadGameType standard, classic]
-
-# Retail Exclusive Files
-retail\features.lua [AllowLoadGameType standard]
-
-# Main Addon Entry Point
-init.lua
+# Core & Systems Files
+Core\Bootstrap.lua
+Data\Constants.lua
+Systems\Core.lua
+UI\MainFrame.lua
 ```
 
 ---
@@ -262,15 +256,16 @@ Building modern addons on the 12.0 Camelot engine requires a clean separation of
 Starting in 12.0 (Camelot / WoW Forever), Blizzard introduced strict UI taint and data protection:
 
 ### 5.1 Secret Values
-- In restricted environments (combat, dungeons, raids), APIs like `UnitHealth()`, `UnitHealthMax()`, `bar:GetValue()`, and status bar text can return `<secret number>` or `<secret string>`.
-- **Fatal Error**: Any mathematical comparison or operator (`val > 0`, `val >= 1000`, `val + 1`, `hp / maxHp`, `AbbreviateNumbers(val)`) on a secret value triggers a fatal Lua error:
+- In restricted environments (combat, dungeons, raids), APIs like `UnitHealth()`, `UnitHealthMax()`, `UnitPower()`, `UnitPowerType()`, `GetManaRegen()`, `bar:GetValue()`, and status bar text can return `<secret number>` or `<secret string>`.
+- **Fatal Error**: Any mathematical comparison or operator (`val > 0`, `val >= 1000`, `val + 1`, `hp / maxHp`, `curMana >= maxMana`, `AbbreviateNumbers(val)`) on a secret value triggers a fatal Lua error:
   ```
   attempt to perform arithmetic on a secret value (while execution tainted by '<AddonName>')
   attempt to compare local 'val' (a secret number value, while execution tainted by '<AddonName>')
   ```
 
 ### 5.2 Official Inspection APIs
-- `issecretvalue(value)`: Returns `true` if `value` is a secret value.
+- `canaccessvalue(value)`: Returns `false` if `value` is secret or restricted from being read/operated on by tainted Lua code. This is Blizzard's primary engine C-side API for 12.0 Camelot taint defense.
+- `issecretvalue(value)`: Returns `true` if `value` is an explicit secret value.
 - `issecrettable(tbl)`: Returns `true` if a table contains secret values.
 - `issecurevalue(value)`: Returns `true` if a value is secure.
 - `C_Secrets.ShouldAurasBeSecret()`: Returns `true` if the engine is currently enforcing secret aura data (e.g. in restricted combat instances). Useful for pre-flight branch checks before querying auras.
@@ -329,15 +324,25 @@ Starting in 12.0 (Camelot / WoW Forever), Blizzard introduced strict UI taint an
 - Status bar fill textures frequently use texture coordinate clipping rather than physical pixel resizing, or may report full width before layout. This locks `(tw / w)` to `100%` continuously!
 - **Rule**: Never place visual fill ratio before `UnitHealthPercent(unit, true, curve)` in your evaluation chain.
 
-### 5.8 Defensive Guard Pattern
+### 5.8 Defensive Guard Pattern (`CanAccess` Sentinel)
+Never rely on speculative `pcall(function() return val > 0 end)` on numbers in tainted code—evaluating arithmetic on restricted values can bypass standard error trapping in 12.0 Camelot. Always use the canonical dual-check guard:
+
 ```lua
+local function CanAccess(val)
+    if val == nil then return false end
+    if canaccessvalue and not canaccessvalue(val) then return false end
+    if issecretvalue and issecretvalue(val) then return false end
+    return true
+end
+
+-- Usage:
 local val = bar:GetValue()
-if issecretvalue and issecretvalue(val) then
+if not CanAccess(val) then
     -- Value is secret / restricted: do NOT compare (val > 0) or format with AbbreviateNumbers(val)
     return
 end
-if val and val > 0 then
-    -- Safe to perform standard math
+if val > 0 then
+    -- Safe to perform standard Lua math and comparisons
 end
 ```
 
@@ -500,16 +505,34 @@ When player auras are secret during combat, Lua arithmetic and string comparison
 
 ---
 
-## 11. Cast Bars & Interrupt Shields
+## 11. Cast Bars, Interrupt Shields & Zero-Flicker Architecture
 
-1. **Cast Query APIs**:
-   - `UnitCastingInfo(unit)`: 8th return value is `notInterruptible` (boolean).
-   - `UnitChannelInfo(unit)`: 7th return value is `notInterruptible` (boolean).
-2. **Visual Indicators**:
-   - **Interruptible**: Standard color (e.g. Gold/Yellow), spell icon visible.
-   - **Not Interruptible (Shielded)**: Distinct color (e.g. Silver/Grey/Orange) + shield icon.
-3. **Cast Events**:
-   - Register `UNIT_SPELLCAST_START`, `UNIT_SPELLCAST_STOP`, `UNIT_SPELLCAST_FAILED`, `UNIT_SPELLCAST_INTERRUPTED`, `UNIT_SPELLCAST_CHANNEL_START`, `UNIT_SPELLCAST_CHANNEL_STOP`, `UNIT_SPELLCAST_INTERRUPTIBLE`, `UNIT_SPELLCAST_NOT_INTERRUPTIBLE`.
+### 11.1 Cast Query APIs & Shield Detection
+- `UnitCastingInfo(unit)`: 8th return value is `notInterruptible` (boolean). Returns `castGUID` as 9th argument.
+- `UnitChannelInfo(unit)`: 7th return value is `notInterruptible` (boolean).
+- **Interruptible**: Standard color (e.g. Gold/Yellow), spell icon visible.
+- **Not Interruptible (Shielded)**: Distinct color (e.g. Silver/Grey/Orange) + shield icon.
+
+### 11.2 Cast Events & The `UNIT_SPELLCAST_SUCCEEDED` Trap
+- **The Bug**: `UNIT_SPELLCAST_SUCCEEDED` fires for off-GCD instant abilities, racials, trinkets, queued actions, and at the start of channeled spells.
+- **Critical Rule**: **NEVER** use `UNIT_SPELLCAST_SUCCEEDED` to hide cast bars (`HideSingleCast` or `HidePlateCast`). Doing so causes active cast bars to briefly disappear in combat and snap back.
+- **Safe Event Lifecycle**:
+  - **Start / Update**: `UNIT_SPELLCAST_START`, `UNIT_SPELLCAST_CHANNEL_START`, `UNIT_SPELLCAST_DELAYED`, `UNIT_SPELLCAST_CHANNEL_UPDATE`, `UNIT_SPELLCAST_INTERRUPTIBLE`, `UNIT_SPELLCAST_NOT_INTERRUPTIBLE`, `UNIT_SPELLCAST_EMPOWER_START`, `UNIT_SPELLCAST_EMPOWER_UPDATE`.
+  - **Stop / Hide**: `UNIT_SPELLCAST_STOP` (regular casts), `UNIT_SPELLCAST_CHANNEL_STOP` (channels), `UNIT_SPELLCAST_FAILED`, `UNIT_SPELLCAST_INTERRUPTED`, `UNIT_SPELLCAST_EMPOWER_STOP`.
+
+### 11.3 `castGUID` Stale Event Filtering
+In rapid cast sequences and spell queuing, an incoming `UNIT_SPELLCAST_STOP`, `FAILED`, or `INTERRUPTED` event may belong to an earlier spell that just finished, rather than the newly started queued spell. Always verify `castGUID` before hiding:
+```lua
+if castGUID and obj and obj.activeCast and obj.activeCast.castGUID and castGUID ~= obj.activeCast.castGUID then
+    return -- Ignore stale event from previous cast
+end
+```
+
+### 11.4 Client/Server Latency & Pushback Grace Window
+- In `OnUpdate`, when `now >= cast.endTime`, do **not** instantly destroy the cast bar on the client clock tick:
+  1. Query `UnitCastingInfo(unit)` / `UnitChannelInfo(unit)`. If combat pushback extended the cast (`updatedData.endTime > now`), update `endTime` and keep rendering.
+  2. If the spell has finished according to the client clock, clamp the progress bar to 1.0 (or 0.0 for channels) and grant a brief `0.10s–0.15s` hold window (`cast.holdEnd = now + 0.15`).
+  3. Only hide the bar if `now >= cast.holdEnd` or when the authoritative `UNIT_SPELLCAST_STOP` event arrives from the server. This completely eliminates visual cast bar dropout.
 
 ---
 
