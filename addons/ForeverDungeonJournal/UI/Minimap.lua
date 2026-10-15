@@ -47,6 +47,7 @@ _G.ForeverDungeonJournal_Toggle = function()
 end
 
 function FDJ.HideMinimapButton()
+    ForeverDungeonJournalDB.hideMinimap = true
     ForeverDungeonJournalDB.minimapHidden = true
     ForeverDungeonJournalDB.minimap = ForeverDungeonJournalDB.minimap or {}
     ForeverDungeonJournalDB.minimap.hide = true
@@ -61,6 +62,7 @@ function FDJ.HideMinimapButton()
 end
 
 function FDJ.ShowMinimapButton()
+    ForeverDungeonJournalDB.hideMinimap = false
     ForeverDungeonJournalDB.minimapHidden = false
     ForeverDungeonJournalDB.minimap = ForeverDungeonJournalDB.minimap or {}
     ForeverDungeonJournalDB.minimap.hide = false
@@ -87,7 +89,8 @@ function FDJ.SetupLibDBIconMinimap()
     if db.minimapPos == nil then
         db.minimapPos = ForeverDungeonJournalDB.minimapAngle or 225
     end
-    db.hide = ForeverDungeonJournalDB.minimapHidden and true or false
+    local isHidden = ForeverDungeonJournalDB.hideMinimap or ForeverDungeonJournalDB.minimapHidden
+    db.hide = isHidden and true or false
 
     local object = ldb:GetDataObjectByName("ForeverDungeonJournal")
     if not object then
@@ -99,14 +102,18 @@ function FDJ.SetupLibDBIconMinimap()
                 if button == "LeftButton" then
                     FDJ.ToggleJournal()
                 elseif button == "RightButton" then
-                    FDJ.HideMinimapButton()
+                    if FDJ.ToggleSettingsPanel then
+                        FDJ.ToggleSettingsPanel()
+                    else
+                        FDJ.HideMinimapButton()
+                    end
                 end
             end,
             OnTooltipShow = function(tooltip)
                 tooltip:AddLine("Forever Dungeon Journal", 1, 0.82, 0.25)
                 tooltip:AddLine(L("MINIMAP_LEFT"), 1, 1, 1)
                 tooltip:AddLine(L("MINIMAP_DRAG"), 0.8, 0.8, 0.8)
-                tooltip:AddLine(L("MINIMAP_RIGHT"), 0.8, 0.8, 0.8)
+                tooltip:AddLine(L("MINIMAP_OPTIONS") or L("MINIMAP_RIGHT"), 0.8, 0.8, 0.8)
             end,
         })
     end
@@ -179,7 +186,11 @@ function FDJ.CreateFallbackMinimap()
             if button == "LeftButton" then
                 FDJ.ToggleJournal()
             elseif button == "RightButton" then
-                FDJ.HideMinimapButton()
+                if FDJ.ToggleSettingsPanel then
+                    FDJ.ToggleSettingsPanel()
+                else
+                    FDJ.HideMinimapButton()
+                end
             end
         end)
 
@@ -188,7 +199,7 @@ function FDJ.CreateFallbackMinimap()
             GameTooltip:AddLine("Forever Dungeon Journal", 1, 0.82, 0.25)
             GameTooltip:AddLine(L("MINIMAP_LEFT"), 1, 1, 1)
             GameTooltip:AddLine(L("MINIMAP_DRAG"), 0.8, 0.8, 0.8)
-            GameTooltip:AddLine(L("MINIMAP_RIGHT"), 0.8, 0.8, 0.8)
+            GameTooltip:AddLine(L("MINIMAP_OPTIONS") or L("MINIMAP_RIGHT"), 0.8, 0.8, 0.8)
             GameTooltip:Show()
         end)
 
@@ -221,7 +232,8 @@ function FDJ.CreateFallbackMinimap()
 
     FDJ.PositionMinimap()
 
-    if ForeverDungeonJournalDB.minimapHidden then
+    local isHidden = ForeverDungeonJournalDB.hideMinimap or ForeverDungeonJournalDB.minimapHidden
+    if isHidden then
         minimapButton:Hide()
     else
         minimapButton:Show()

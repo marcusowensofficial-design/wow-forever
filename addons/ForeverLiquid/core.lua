@@ -100,6 +100,7 @@ local DEFAULT_SETTINGS = {
         durabilityAlertThreshold = 20,
         clockMode = "12H", -- "12H", "24H", "REALM_12H", "REALM_24H"
         autoPurgeMemoryOnZone = false,
+        excludeTransfersFromGoldRate = true,
     },
     savedSession = {}, -- [realmKey][playerKey] = { ... }
     roster = {}, -- [realmKey][playerKey] = { level, class, gold, restedXP, maxXP, location, isResting, lastSeen }
@@ -175,6 +176,12 @@ local session = {
     activeRun = nil,
     instanceRuns = {},
     goalCelebrated = false,
+    
+    -- Transfer & Mana Tick Telemetry
+    transfers = 0,
+    lastLevel = 1,
+    lastManaTick = 0,
+    lastManaVal = 0,
 }
 FL.session = session
 
@@ -184,8 +191,14 @@ FL.session = session
 local function IsSecretValue(val)
     if val == nil then return false end
     if issecretvalue and issecretvalue(val) then return true end
-    local ok = pcall(function() return val > 0 end)
-    return not ok
+    if type(val) == "number" then
+        local ok = pcall(function() return val > 0 end)
+        return not ok
+    elseif type(val) == "string" then
+        local ok = pcall(function() return val == "" end)
+        return not ok
+    end
+    return false
 end
 FL.IsSecretValue = IsSecretValue
 
@@ -341,14 +354,27 @@ function FL:GetGoldRate()
     local duration = self:GetSessionDuration()
     if duration < 5 then return 0 end
     local totalNet = session.netMoney
-    if ForeverLiquidDB.profile.includeLootInGoldRate then
+    local p = ForeverLiquidDB.profile
+    if not p or p.excludeTransfersFromGoldRate ~= false then
+        totalNet = totalNet - (session.transfers or 0)
+    end
+    if p and p.includeLootInGoldRate then
         totalNet = totalNet + session.lootedItemsValue
     end
     return (totalNet / duration) * 3600
 end
 
 function FL:GetTotalSessionValue()
-    return session.netMoney + session.lootedItemsValue
+    local p = ForeverLiquidDB.profile
+    local net = session.netMoney
+    if not p or p.excludeTransfersFromGoldRate ~= false then
+        net = net - (session.transfers or 0)
+    end
+    return net + session.lootedItemsValue
+end
+
+function FL:GetTransfersTotal()
+    return session.transfers or 0
 end
 
 -------------------------------------------------------------------------------
@@ -362,14 +388,29 @@ FL.GetMaxEquippedBag = GetMaxEquippedBag
 function FL:GetBagSlotInfo()
     local totalFree = 0
     local totalSlots = 0
+    local specialtyFree = 0
+    local specialtySlots = 0
     local maxBag = GetMaxEquippedBag()
     for bag = 0, maxBag do
         local numSlots = (C_Container and C_Container.GetContainerNumSlots and C_Container.GetContainerNumSlots(bag)) or (GetContainerNumSlots and GetContainerNumSlots(bag)) or 0
-        local freeSlots = (C_Container and C_Container.GetContainerNumFreeSlots and C_Container.GetContainerNumFreeSlots(bag)) or (GetContainerNumFreeSlots and GetContainerNumFreeSlots(bag)) or 0
-        totalSlots = totalSlots + numSlots
-        totalFree = totalFree + freeSlots
+        local freeSlots, bagType = 0, 0
+        if C_Container and C_Container.GetContainerNumFreeSlots then
+            freeSlots, bagType = C_Container.GetContainerNumFreeSlots(bag)
+        elseif GetContainerNumFreeSlots then
+            freeSlots, bagType = GetContainerNumFreeSlots(bag)
+        end
+        freeSlots = freeSlots or 0
+        bagType = bagType or 0
+        
+        if bagType == 0 then
+            totalSlots = totalSlots + numSlots
+            totalFree = totalFree + freeSlots
+        else
+            specialtySlots = specialtySlots + numSlots
+            specialtyFree = specialtyFree + freeSlots
+        end
     end
-    return totalFree, totalSlots
+    return totalFree, totalSlots, specialtyFree, specialtySlots
 end
 
 local DURABILITY_SLOTS = {
@@ -726,6 +767,41 @@ function FL:GetFSRStatus()
         return true, remaining, progress
     end
     return false, 0, 0
+end
+
+-- TitanRegen: 2-Second Spirit Mana Regeneration Server Tick Telemetry
+function FL:GetManaTickStatus()
+    -- In combat or under secret value restriction, UnitPower("player", 0) is a secret number.
+    -- Comparisons on secret numbers trigger fatal UI errors in 12.0 Camelot.
+    if InCombatLockdown and InCombatLockdown() then
+        return false, 0, 0
+    end
+    local powerType = (UnitPowerType and UnitPowerType("player")) or 0
+    if powerType ~= 0 and powerType ~= (Enum and Enum.PowerType and Enum.PowerType.Mana or 0) then
+        return false, 0, 0
+    end
+    local curMana = (UnitPower and UnitPower("player", 0)) or 0
+    if IsSecretValue(curMana) then
+        return false, 0, 0
+    end
+    local maxMana = (UnitPowerMax and UnitPowerMax("player", 0)) or 1
+    if IsSecretValue(maxMana) then
+        return false, 0, 0
+    end
+    maxMana = math.max(1, maxMana)
+    if curMana >= maxMana then
+        return false, 0, 0
+    end
+    local inFSR = self:GetFSRStatus()
+    if inFSR then
+        return false, 0, 0
+    end
+    local now = GetTime()
+    local lastTick = session.lastManaTick or (now - 2.0)
+    local elapsed = (now - lastTick) % 2.0
+    local progress = elapsed / 2.0
+    local remaining = 2.0 - elapsed
+    return true, remaining, progress
 end
 
 function FL:GetRegenRates()
@@ -1464,25 +1540,49 @@ end
 -------------------------------------------------------------------------------
 function FL:UpdateRosterData()
     local playerName = UnitName("player")
-    if not playerName then return end
+    if not playerName or playerName == "" or playerName == "Unknown" or playerName == UNKNOWNOBJECT or playerName == UNKNOWNBEING then return end
     playerName = Ambiguate(playerName, "none")
     
     local realmKey = GetMakeshiftRealmName()
     ForeverLiquidDB.roster = ForeverLiquidDB.roster or {}
     ForeverLiquidDB.roster[realmKey] = ForeverLiquidDB.roster[realmKey] or {}
     
+    local existing = ForeverLiquidDB.roster[realmKey][playerName] or {}
+    
+    local curLevel = UnitLevel("player")
+    if not curLevel or curLevel <= 0 then
+        curLevel = existing.level or 1
+    end
+    
     local _, className = UnitClass("player")
+    if not className or className == "" then
+        className = existing.class or "WARRIOR"
+    end
+    
+    local curMoney = GetMoney()
+    -- Guard: If GetMoney() returns 0 on early load ticks but character previously had gold, preserve saved gold until first money sync
+    if (not curMoney or curMoney == 0) and (existing.gold and existing.gold > 0) and (curLevel > 1) and not FL.moneyInitialized then
+        curMoney = existing.gold
+    else
+        if curMoney and curMoney > 0 then
+            FL.moneyInitialized = true
+        end
+    end
+    
     local zone = (GetZoneText and GetZoneText()) or ""
     local subZone = (GetSubZoneText and GetSubZoneText()) or ""
-    local location = (subZone ~= "" and (subZone .. ", " .. zone)) or (zone ~= "" and zone) or "Unknown Location"
+    local location = (subZone ~= "" and (subZone .. ", " .. zone)) or (zone ~= "" and zone) or existing.location or "Unknown Location"
     local isResting = (IsResting and IsResting()) or false
     
+    local restedXP = GetXPExhaustion() or 0
+    local maxXP = math.max(1, UnitXPMax("player") or 1)
+    
     ForeverLiquidDB.roster[realmKey][playerName] = {
-        level = UnitLevel("player"),
-        class = className or "WARRIOR",
-        gold = GetMoney(),
-        restedXP = GetXPExhaustion() or 0,
-        maxXP = math.max(1, UnitXPMax("player")),
+        level = curLevel,
+        class = className,
+        gold = curMoney or 0,
+        restedXP = restedXP,
+        maxXP = maxXP,
         location = location,
         isResting = isResting,
         lastSeen = time(),
@@ -1764,12 +1864,21 @@ function FL:UpgradeDropQuality(drop)
         end
     end
     
-    -- 2. If itemID is known, query DBC for true quality & price
+    -- 2. If itemID is known, pre-fetch and query DBC for true quality & price
     if drop.itemID and drop.itemID > 0 then
+        if C_Item and C_Item.RequestLoadItemDataByID then
+            pcall(C_Item.RequestLoadItemDataByID, drop.itemID)
+        end
         if C_Item and C_Item.GetItemQualityByID then
             local trueQ = C_Item.GetItemQualityByID(drop.itemID)
             if trueQ and trueQ >= 0 and (not drop.quality or drop.quality < trueQ) then
                 drop.quality = trueQ
+            end
+        end
+        if (not drop.quality or drop.quality <= 0) and C_TooltipInfo and C_TooltipInfo.GetItemByID then
+            local ok, tipData = pcall(C_TooltipInfo.GetItemByID, drop.itemID)
+            if ok and tipData and tipData.quality and tipData.quality >= 0 then
+                drop.quality = tipData.quality
             end
         end
         local sellP = select(11, (C_Item and C_Item.GetItemInfo and C_Item.GetItemInfo(drop.itemID)) or GetItemInfo(drop.itemID))
@@ -2544,6 +2653,15 @@ eventFrame:RegisterEvent("UPDATE_FACTION")
 eventFrame:RegisterEvent("CHAT_MSG_COMBAT_HONOR_GAIN")
 eventFrame:RegisterEvent("PLAYER_PVP_KILLS_CHANGED")
 eventFrame:RegisterEvent("UNIT_SPELLCAST_SUCCEEDED")
+eventFrame:RegisterEvent("MAIL_SHOW")
+eventFrame:RegisterEvent("MAIL_CLOSED")
+eventFrame:RegisterEvent("TRADE_SHOW")
+eventFrame:RegisterEvent("TRADE_CLOSED")
+eventFrame:RegisterEvent("BANKFRAME_OPENED")
+eventFrame:RegisterEvent("BANKFRAME_CLOSED")
+eventFrame:RegisterEvent("GUILDBANKFRAME_OPENED")
+eventFrame:RegisterEvent("GUILDBANKFRAME_CLOSED")
+eventFrame:RegisterEvent("UNIT_POWER_UPDATE")
 
 eventFrame:SetScript("OnEvent", function(self, event, ...)
     if event == "ADDON_LOADED" then
@@ -2669,6 +2787,43 @@ eventFrame:SetScript("OnEvent", function(self, event, ...)
         if FL.SetCombatState then FL:SetCombatState(false) end
         FL:CheckDurabilityAlert()
         
+    elseif event == "MAIL_SHOW" then
+        FL.atMail = true
+        
+    elseif event == "MAIL_CLOSED" then
+        FL.atMail = false
+        
+    elseif event == "TRADE_SHOW" then
+        FL.atTrade = true
+        
+    elseif event == "TRADE_CLOSED" then
+        FL.atTrade = false
+        
+    elseif event == "BANKFRAME_OPENED" or event == "GUILDBANKFRAME_OPENED" then
+        FL.atBank = true
+        
+    elseif event == "BANKFRAME_CLOSED" or event == "GUILDBANKFRAME_CLOSED" then
+        FL.atBank = false
+        
+    elseif event == "UNIT_POWER_UPDATE" then
+        local unit, powerType = ...
+        if unit == "player" and (powerType == "MANA" or powerType == 0) then
+            if not (InCombatLockdown and InCombatLockdown()) then
+                local curMana = (UnitPower and UnitPower("player", 0)) or 0
+                if not IsSecretValue(curMana) then
+                    local lastMana = session.lastManaVal or curMana
+                    local now = GetTime()
+                    if not IsSecretValue(lastMana) and curMana > lastMana then
+                        local inFSR = FL:GetFSRStatus()
+                        if not inFSR then
+                            session.lastManaTick = now
+                        end
+                    end
+                    session.lastManaVal = curMana
+                end
+            end
+        end
+        
     elseif event == "TAXIMAP_OPENED" then
         FL.atTaxi = true
         
@@ -2703,6 +2858,9 @@ eventFrame:SetScript("OnEvent", function(self, event, ...)
         session.questsDone = (session.questsDone or 0) + 1
         if xpReward and xpReward > 0 then
             session.questXPGained = (session.questXPGained or 0) + xpReward
+            if session.activeRun then
+                session.activeRun.xpGained = (session.activeRun.xpGained or 0) + xpReward
+            end
         end
         FL.lastQuestTurnInTime = GetTime()
         if FL.UpdateDashboard then FL:UpdateDashboard() end
@@ -2711,6 +2869,7 @@ eventFrame:SetScript("OnEvent", function(self, event, ...)
         local currentXP = UnitXP("player")
         local maxXP = math.max(1, UnitXPMax("player"))
         local diff = currentXP - session.currentXP
+        local curLevel = UnitLevel("player")
         if diff > 0 then
             session.xpGained = session.xpGained + diff
             
@@ -2729,7 +2888,17 @@ eventFrame:SetScript("OnEvent", function(self, event, ...)
             
             -- Trigger subtle liquid ripple shimmer
             if FL.TriggerXPRipple then FL:TriggerXPRipple() end
+        elseif diff < 0 and curLevel > (session.lastLevel or session.startLevel) then
+            -- Level-Up rollover recovery:
+            -- Old level remaining XP = session.maxXP - session.currentXP
+            -- New level overflow XP = currentXP
+            local rolloverXP = math.max(0, session.maxXP - session.currentXP) + currentXP
+            if rolloverXP > 0 then
+                session.xpGained = session.xpGained + rolloverXP
+            end
+            if FL.TriggerXPRipple then FL:TriggerXPRipple() end
         end
+        session.lastLevel = curLevel
         session.currentXP = currentXP
         session.maxXP = maxXP
         session.restedXP = GetXPExhaustion() or 0
@@ -2782,6 +2951,7 @@ eventFrame:SetScript("OnEvent", function(self, event, ...)
         
     elseif event == "PLAYER_LEVEL_UP" then
         local newLevel = ...
+        session.lastLevel = tonumber(newLevel) or UnitLevel("player")
         session.currentXP = UnitXP("player")
         session.maxXP = math.max(1, UnitXPMax("player"))
         session.restedXP = GetXPExhaustion() or 0
@@ -2802,8 +2972,11 @@ eventFrame:SetScript("OnEvent", function(self, event, ...)
     elseif event == "PLAYER_MONEY" then
         local currentMoney = GetMoney()
         local diffMoney = currentMoney - session.currentMoney
+        local isTransfer = FL.atMail or FL.atTrade or FL.atBank
         
-        if diffMoney > 0 then
+        if isTransfer then
+            session.transfers = (session.transfers or 0) + diffMoney
+        elseif diffMoney > 0 then
             -- When selling junk and repairing in the same merchant interaction,
             -- diffMoney is the NET change (gross junk income - repair cost).
             -- Add back justRepairedCost to get true gross income!

@@ -21,8 +21,11 @@ FDJ.QUEST_START_MAPS = {
     [5761] = { mapID = 1454, x = 0.4960, y = 0.5060, label = "Neeru Fireblade" },
     [5725] = { mapID = 1458, x = 0.5620, y = 0.9260, label = "Varimathras" },
 
+    -- Excavation Site: Wetlands prerequisite quest giver.
+    [95663] = { mapID = 1417, x = 0.740, y = 0.360, label = "Zaruk — Hammerfall", targetName = "Zaruk", detail = "Start Dragonmaw Rumors here" },
+
     -- The Stockade quest givers.
-    [386] = { mapID = 1433, x = 0.266, y = 0.468, label = "Guard Berton — Lakeshire" },
+    [386] = { mapID = 1433, x = 0.212, y = 0.466, label = "Guard Berton — Lakeshire" },
     [377] = { mapID = 1431, x = 0.720, y = 0.478, label = "Councilman Millstipe — Darkshire" },
     [387] = { mapID = 1453, x = 0.518, y = 0.693, label = "Warden Thelwater — The Stockade", targetName = "Warden Thelwater" },
     [388] = { mapID = 1453, x = 0.736, y = 0.466, label = "Nikova Raskol — Old Town" },

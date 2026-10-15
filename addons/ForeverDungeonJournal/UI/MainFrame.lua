@@ -668,7 +668,9 @@ RefreshAll = function()
     SyncMainState()
     if not frame then return end
     ApplyLocalization()
+    if not FDJ.DB then return end
     local dungeon = FDJ.DB[selectedDungeon]
+    if not dungeon then return end
 
     ApplyTheme()
 
@@ -875,7 +877,7 @@ end
 
 SelectDungeon = function(name)
     SyncMainState()
-    if not FDJ.DB[name] then return end
+    if not FDJ.DB or not FDJ.DB[name] then return end
     if FDJ.DB[name].previewOnly then return end
 
     ShowDungeonPage()
@@ -1634,7 +1636,7 @@ local function CreateMainFrame()
             FDJ.SetDungeonWaypoint(selectedDungeon)
             return
         end
-        local dungeon = FDJ.DB[selectedDungeon]
+        local dungeon = FDJ.DB and FDJ.DB[selectedDungeon]
         local entrance = dungeon and dungeon.entrance
         if entrance and FDJ.MapMarkers and FDJ.MapMarkers.ShowRecordedLocationOnMap then
             FDJ.MapMarkers.ShowRecordedLocationOnMap(entrance, DungeonName(selectedDungeon))
@@ -2981,7 +2983,7 @@ local function CreateMainFrame()
     frame.routeMapButton:SetPoint("TOPRIGHT", -118, -20)
     frame.routeMapButton:SetText(L("SHOW_ON_MAP"))
     frame.routeMapButton:SetScript("OnClick", function()
-        local dungeon = FDJ.DB[selectedDungeon]
+        local dungeon = FDJ.DB and FDJ.DB[selectedDungeon]
         local route = dungeon and dungeon.routeGuide
         if route and route.mapRoute and ShowRouteOnMap then
             ShowRouteOnMap(route.mapRoute)

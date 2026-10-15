@@ -1,6 +1,5 @@
 ## Interface: 16001
-## Title: ForeverPlates Cast Bars [AllowLoadGameType camelot]
-## Title: ForeverPlates Cast Bars (Retail) [AllowLoadGameType standard]
+## Title: ForeverPlates Cast Bars
 ## IconTexture: Interface\AddOns\Foreverplatescastbars\BCB_Icon
 ## Notes: Cast bar display — enemy nameplates below plates, player, target, focus with latency, borders, and OLED configuration
 ## Author: Marcus Owens / GI-Ka
@@ -8,6 +7,8 @@
 ## SavedVariables: ForeverPlatesCastBarsDB, BetterCastBarsDB
 ## LoadSavedVariablesFirst: true
 ## Category-enUS: Combat
+## DefaultState: enabled
+## AllowLoadGameType: camelot
 
 core.lua
 gui.lua

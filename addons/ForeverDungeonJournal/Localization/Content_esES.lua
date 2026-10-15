@@ -5,7 +5,7 @@ FDJ.ContentLocales.esES = FDJ.ContentLocales.esES or {}
 
 FDJ.ContentLocales.esES.dungeons = {
     ["Hall of Thanes"] = {
-        ["name"] = "Salón de los Thanes",
+        ["name"] = "Salón de los Feudales",
         ["location"] = "Bajo Forjaz, Dun Morogh",
         ["description"] = "Alguien ha irrumpido en la cripta real enana bajo Forjaz.",
     },
@@ -20,7 +20,7 @@ FDJ.ContentLocales.esES.dungeons = {
         ["description"] = "Las fuerzas de la Plaga siguen acechando la antigua capital mientras un nigromante gana poder entre las ruinas.",
     },
     ["The Deadmines"] = {
-        ["name"] = "Las Minas de la Muerte",
+        ["name"] = "Minas de la Muerte",
         ["location"] = "Arroyo de la Luna, Páramos de Poniente",
         ["description"] = "La Hermandad de los Defias construye un buque de guerra en las minas bajo Arroyo de la Luna.",
     },
@@ -40,7 +40,7 @@ FDJ.ContentLocales.esES.dungeons = {
         ["description"] = "Una ruina elfa de la noche inundada en la Playa de Zoram, ocupada por nagas, múrlocs y cultores del Martillo Crepuscular al servicio de Aku’mai.",
     },
     ["The Stockade"] = {
-        ["name"] = "Las Mazmorras de Ventormenta",
+        ["name"] = "Mazmorras de Ventormenta",
         ["location"] = "Ventormenta",
         ["description"] = "Los prisioneros Defias se han apoderado de la prisión de Ventormenta.",
     },
@@ -59,7 +59,7 @@ FDJ.ContentLocales.esES.quests = {
     },
     [96403] = {
         ["name"] = "Reliquias importantes",
-        ["objective"] = "Recoge 8 reliquias enanas en el Salón de los Thanes.",
+        ["objective"] = "Recoge 8 reliquias enanas en el Salón de los Feudales.",
     },
     [96394] = {
         ["name"] = "Los muertos inquietos",
@@ -67,7 +67,7 @@ FDJ.ContentLocales.esES.quests = {
     },
     [96393] = {
         ["name"] = "Incursión en la antigua Forjaz",
-        ["objective"] = "Entra en el Salón de los Thanes y consigue la cabeza de Durgen Dirgehammer.",
+        ["objective"] = "Entra en el Salón de los Feudales y consigue la cabeza de Durgen Dirgehammer.",
         ["note"] = "La cadena empieza con el Mapa Hierro Negro, que dejan caer los espías Hierro Negro de Dun Morogh.",
     },
     [98423] = {
@@ -613,15 +613,15 @@ FDJ.ContentLocales.esES.replacements = {
     {"inside Shadowfang Keep", "dentro del Castillo de Colmillo Oscuro"},
     {"inside Ragefire Chasm", "dentro de Sima Ígnea"},
     {"inside Ruins of Lordaeron", "dentro de las Ruinas de Lordaeron"},
-    {"inside Hall of Thanes", "dentro del Salón de los Thanes"},
+    {"inside Hall of Thanes", "dentro del Salón de los Feudales"},
     {"inside the Deadmines", "dentro de las Minas de la Muerte"},
     {"Wailing Caverns", "Cuevas de los Lamentos"},
     {"Blackfathom Deeps", "Cavernas de Brazanegra"},
     {"Shadowfang Keep", "Castillo de Colmillo Oscuro"},
     {"Ragefire Chasm", "Sima Ígnea"},
     {"Ruins of Lordaeron", "Ruinas de Lordaeron"},
-    {"Hall of Thanes", "Salón de los Thanes"},
-    {"The Deadmines", "Las Minas de la Muerte"},
+    {"Hall of Thanes", "Salón de los Feudales"},
+    {"The Deadmines", "Minas de la Muerte"},
     {"Deadmines", "Minas de la Muerte"},
     {"Item start:", "Objeto que inicia la misión:"},
     {"Use ", "Usa "},

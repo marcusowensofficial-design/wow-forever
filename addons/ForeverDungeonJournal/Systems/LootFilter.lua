@@ -26,7 +26,36 @@ local function Settings()
     if db.matchAll == nil then db.matchAll = true end
     if db.enabled == nil then db.enabled = false end
     if type(db.minLevel) ~= "number" or db.minLevel <= 0 then db.minLevel = nil end
+    -- Armor types ticked in the Armor Filter (none ticked = all types).
+    -- Older builds stored a single type in db.armor: carry it over once.
+    if type(db.armorTypes) ~= "table" then db.armorTypes = {} end
+    if type(db.armor) == "string" then db.armorTypes[db.armor] = true end
+    db.armor = nil
+    for key in pairs(db.armorTypes) do
+        if key ~= "Cloth" and key ~= "Leather" and key ~= "Mail" and key ~= "Plate" then db.armorTypes[key] = nil end
+    end
     return db
+end
+
+local function AnyArmorTicked(db)
+    return next(db.armorTypes or {}) ~= nil
+end
+
+-- ------------------------------------------------------------ armor type
+-- Armor filter: "Cloth" / "Leather" / "Mail" / "Plate", or nil for all.
+-- Only armor pieces of another type are filtered out; weapons, shields,
+-- rings, necks, trinkets and cloaks have no armor type and always stay.
+local ARMOR_TYPES = { "Cloth", "Leather", "Mail", "Plate" }
+local function ArmorType(item)
+    local slot = type(item) == "table" and item[3]
+    if type(slot) ~= "string" then return nil end
+    for token in slot:gmatch("([^,]+)") do
+        token = token:gsub("^%s+", ""):gsub("%s+$", "")
+        for _, armor in ipairs(ARMOR_TYPES) do
+            if token == armor then return armor end
+        end
+    end
+    return nil
 end
 FDJ.LootFilterSettings = Settings
 
@@ -307,7 +336,8 @@ function FDJ.FilterBossLoot(boss)
     local classOnly = on and db.classOnly
     local wantStats = on and AnyStatWanted(db)
     local minLevel = on and db.minLevel or nil
-    if showRecipes and not classOnly and not wantStats and not minLevel then return boss end
+    local armor = on and AnyArmorTicked(db) and db.armorTypes or nil
+    if showRecipes and not classOnly and not wantStats and not minLevel and not armor then return boss end
     local shown = {}
     for _, item in ipairs(boss.loot) do
         local keep = true
@@ -315,6 +345,10 @@ function FDJ.FilterBossLoot(boss)
             keep = showRecipes
         else
             if classOnly and not ClassCanUse(item) then keep = false end
+            if keep and armor then
+                local itemArmor = ArmorType(item)
+                if itemArmor and not armor[itemArmor] then keep = false end
+            end
             if keep and minLevel then
                 local required
                 if type(GetItemInfo) == "function" and item[1] and item[1] > 0 then
@@ -403,7 +437,7 @@ end
 -- --------------------------------------------------------------------- UI
 local function IsActive()
     local db = Settings()
-    return db.enabled and (db.recipes or db.classOnly or db.minLevel ~= nil or AnyStatWanted(db))
+    return db.enabled and (db.recipes or db.classOnly or db.minLevel ~= nil or AnyArmorTicked(db) or AnyStatWanted(db))
 end
 
 local function UpdateButton(frame)
@@ -411,7 +445,7 @@ local function UpdateButton(frame)
     local text = L("LOOT_FILTER")
     if IsActive() then text = text .. " |cff40ff40*|r" end
     frame.lootFilterButtonText:SetText(text)
-    local width = math.max(98, math.min(160, math.ceil((frame.lootFilterButtonText:GetStringWidth() or 80) + 20)))
+    local width = math.max(110, math.min(180, math.ceil((frame.lootFilterButtonText:GetStringWidth() or 90) + 26)))
     frame.lootFilterButton:SetWidth(width)
 end
 
@@ -480,7 +514,25 @@ local function RefreshWindow(frame)
         check:SetAlpha(on and 1 or 0.45)
         check.fdjLabel:SetTextColor(grey, grey, grey)
     end
-    for _, control in ipairs({ win.minBox, win.show, win.clear }) do
+    if win.armor then
+        local ticked = Settings().armorTypes or {}
+        local names = {}
+        for _, armor in ipairs(ARMOR_TYPES) do
+            if ticked[armor] then
+                names[#names + 1] = (FDJ.LocalizeItemSlot and FDJ.LocalizeItemSlot(armor)) or armor
+            end
+        end
+        win.armor.text:SetText(#names > 0 and table.concat(names, ", ") or L("LF_ARMOR_ALL"))
+        for _, option in ipairs(win.armor.options or {}) do
+            local value = option.fdjArmor
+            option.text:SetText(value and ((FDJ.LocalizeItemSlot and FDJ.LocalizeItemSlot(value)) or value) or L("LF_ARMOR_ALL"))
+            local checked
+            if value then checked = ticked[value] and true or false else checked = #names == 0 end
+            option.check:SetShown(checked)
+        end
+        if not on and win.armor.menu then win.armor.menu:Hide() end
+    end
+    for _, control in ipairs({ win.minBox, win.show, win.clear, win.armor }) do
         if control.SetEnabled then control:SetEnabled(on) end
         control:SetAlpha(on and 1 or 0.45)
     end
@@ -554,6 +606,86 @@ local function CreateWindow(frame)
     win.minBox:SetScript("OnEnterPressed", function(self) self:ClearFocus() end)
     win.minBox:SetScript("OnEscapePressed", function(self) self:ClearFocus() end)
 
+    -- Armor type drop-down: a red WoW button like the others in this window,
+    -- with a mail-armor icon on the left and a down arrow on the right.
+    win.armor = CreateFrame("Button", nil, win, "UIPanelButtonTemplate")
+    win.armor:SetSize(118, 22)
+    win.armor:SetPoint("LEFT", win.minBox, "RIGHT", 16, 0)
+    win.armor:SetText("")
+    win.armor.icon = win.armor:CreateTexture(nil, "OVERLAY")
+    win.armor.icon:SetSize(16, 16)
+    win.armor.icon:SetPoint("LEFT", win.armor, "LEFT", 7, 0)
+    win.armor.icon:SetTexture("Interface\\Icons\\INV_Chest_Chain")
+    win.armor.icon:SetTexCoord(0.08, 0.92, 0.08, 0.92)
+    local caret = win.armor:CreateTexture(nil, "OVERLAY")
+    caret:SetTexture("Interface\\Buttons\\Arrow-Down-Up")
+    caret:SetSize(12, 12)
+    caret:SetPoint("RIGHT", win.armor, "RIGHT", -7, -3)
+    win.armor.text = win.armor:CreateFontString(nil, "OVERLAY", "GameFontNormal")
+    win.armor.text:SetPoint("LEFT", win.armor.icon, "RIGHT", 4, 0)
+    win.armor.text:SetPoint("RIGHT", caret, "LEFT", -2, 3)
+    win.armor.text:SetJustifyH("CENTER")
+    win.armor.text:SetWordWrap(false)
+
+    local menu = CreateFrame("Frame", nil, win.armor, "BackdropTemplate")
+    win.armor.menu = menu
+    local choices = { false, "Cloth", "Leather", "Mail", "Plate" }
+    menu:SetSize(130, #choices * 22 + 10)
+    menu:SetPoint("TOPLEFT", win.armor, "BOTTOMLEFT", -4, -4)
+    menu:SetFrameStrata("TOOLTIP")
+    menu:SetFrameLevel(win:GetFrameLevel() + 30)
+    menu:SetBackdrop({
+        bgFile = "Interface\\Buttons\\WHITE8X8",
+        edgeFile = "Interface\\Tooltips\\UI-Tooltip-Border",
+        edgeSize = 12,
+        insets = { left = 3, right = 3, top = 3, bottom = 3 },
+    })
+    menu:SetBackdropColor(0.055, 0.05, 0.043, 0.99)
+    menu:SetBackdropBorderColor(0.57, 0.43, 0.20, 1)
+    menu:Hide()
+    win.armor.options = {}
+    for i, value in ipairs(choices) do
+        local option = CreateFrame("Button", nil, menu)
+        option:SetPoint("TOPLEFT", 6, -5 - (i - 1) * 22)
+        option:SetPoint("TOPRIGHT", -6, -5 - (i - 1) * 22)
+        option:SetHeight(21)
+        option:SetHighlightTexture("Interface\\QuestFrame\\UI-QuestTitleHighlight", "ADD")
+        option.fdjArmor = value or nil
+        -- Tick box: armor types can be combined (e.g. Cloth + Leather);
+        -- "All" clears the ticks. The list stays open while ticking.
+        option.box = option:CreateTexture(nil, "ARTWORK")
+        option.box:SetTexture("Interface\\Buttons\\UI-CheckBox-Up")
+        option.box:SetSize(18, 18)
+        option.box:SetPoint("LEFT", 4, 0)
+        option.check = option:CreateTexture(nil, "OVERLAY")
+        option.check:SetTexture("Interface\\Buttons\\UI-CheckBox-Check")
+        option.check:SetAllPoints(option.box)
+        option.check:Hide()
+        option.text = option:CreateFontString(nil, "OVERLAY", "GameFontHighlight")
+        option.text:SetPoint("LEFT", option.box, "RIGHT", 4, 0)
+        option.text:SetTextColor(0.95, 0.83, 0.53)
+        option:SetScript("OnClick", function(self)
+            local db = Settings()
+            if self.fdjArmor then
+                db.armorTypes[self.fdjArmor] = not db.armorTypes[self.fdjArmor] or nil
+            else
+                db.armorTypes = {}
+            end
+            RefreshWindow(frame)
+            Changed(frame)
+        end)
+        win.armor.options[#win.armor.options + 1] = option
+    end
+    win.armor:SetScript("OnClick", function() menu:SetShown(not menu:IsShown()) end)
+    win.armor:SetScript("OnHide", function() menu:Hide() end)
+    win.armor:SetScript("OnEnter", function(self)
+        if not GameTooltip then return end
+        GameTooltip:SetOwner(self, "ANCHOR_TOP")
+        GameTooltip:SetText(L("LF_ARMOR"), 1, 0.82, 0.27)
+        GameTooltip:Show()
+    end)
+    win.armor:SetScript("OnLeave", function() if GameTooltip then GameTooltip:Hide() end end)
+
     -- Master switch: while off, the journal shows its default loot view.
     win.toggle = CreateFrame("Button", nil, win, "UIPanelButtonTemplate")
     win.toggle:SetSize(96, 22)
@@ -613,6 +745,7 @@ local function CreateWindow(frame)
         s.classOnly = false
         s.stats = {}
         s.minLevel = nil
+        s.armorTypes = {}
         if frame.lootFilterWindow and frame.lootFilterWindow.minBox then frame.lootFilterWindow.minBox:SetText("") end
         RefreshWindow(frame)
         Changed(frame)
@@ -639,8 +772,8 @@ end
 function FDJ.CreateLootFilterButton(frame, home, anchorButton)
     local button = CreateFrame("Button", nil, home, "BackdropTemplate")
     frame.lootFilterButton = button
-    button:SetSize(100, 28)
-    button:SetPoint("RIGHT", anchorButton, "LEFT", -6, 0)
+    button:SetSize(118, 28)
+    button:SetPoint("RIGHT", anchorButton, "LEFT", -8, 0)
     button:SetBackdrop({
         bgFile = "Interface\\Buttons\\WHITE8X8",
         edgeFile = "Interface\\Tooltips\\UI-Tooltip-Border",
@@ -952,7 +1085,7 @@ end
 local function BuildPage()
     local bosses, itemCount = {}, 0
     local db = Settings()
-    local recipesOnly = db.enabled and db.recipes and not db.classOnly and not db.minLevel and not AnyStatWanted(db)
+    local recipesOnly = db.enabled and db.recipes and not db.classOnly and not db.minLevel and not AnyArmorTicked(db) and not AnyStatWanted(db)
     FDJ.lootFilterStrict = true
     for _, dungeonName in ipairs(FDJ.ORDER or {}) do
         local dungeon = FDJ.DB and FDJ.DB[dungeonName]

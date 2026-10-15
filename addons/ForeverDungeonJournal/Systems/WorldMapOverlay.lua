@@ -11,6 +11,7 @@ local function L(key, ...)
 end
 
 local attached = false
+local PlaceToggle
 local saved
 local wantWorld = false   -- the player switched to the world map this session
 local toggle, backdrop
@@ -68,7 +69,21 @@ local function Attach(dungeonName)
     backdrop:ClearAllPoints()
     backdrop:SetAllPoints(host)
     backdrop:SetFrameStrata(WorldMapFrame:GetFrameStrata())
-    backdrop:SetFrameLevel((host.GetFrameLevel and host:GetFrameLevel() or 1) + 20)
+    -- Sit above every world map pin and the player-position layer (they take
+    -- mouse clicks and would otherwise swallow the drag on the dungeon map).
+    local top = host.GetFrameLevel and host:GetFrameLevel() or 1
+    local function Scan(f, depth)
+        if not f or depth > 4 or not f.GetChildren then return end
+        for _, child in ipairs({ f:GetChildren() }) do
+            if child ~= backdrop and child.GetFrameLevel then
+                local ok, lvl = pcall(child.GetFrameLevel, child)
+                if ok and type(lvl) == "number" and lvl > top then top = lvl end
+                Scan(child, depth + 1)
+            end
+        end
+    end
+    pcall(Scan, host, 1)
+    backdrop:SetFrameLevel(math.min(top + 20, 8000))
     backdrop:Show()
 
     panel:SetParent(backdrop)
@@ -94,7 +109,9 @@ local function Attach(dungeonName)
     end
     if FDJ.SetupDungeonMapZoom then FDJ.SetupDungeonMapZoom() end
     if FDJ.ResetDungeonMapView then FDJ.ResetDungeonMapView() end
-    FDJ.RenderCustomDungeonMap(mapData, mapData.entrance and mapData.entrance.floor or 1)
+    local floor = FDJ.SavedMapFloor and FDJ.SavedMapFloor(dungeonName, mapData)
+        or (mapData.entrance and mapData.entrance.floor) or 1
+    FDJ.RenderCustomDungeonMap(mapData, floor)
     return true
 end
 
@@ -137,6 +154,64 @@ local function UpdateWingButtons(dungeonName, anchor)
     end
 end
 
+-- Keep the toggle in the top-right corner, but slide it left past any small
+-- button another addon has put there (Questie and the like), so they never
+-- sit on top of each other.
+local function ScreenRect(f)
+    if not f or not f.GetRect then return nil end
+    local l, b, w, h = f:GetRect()
+    if not l or not w or w <= 0 or h <= 0 then return nil end
+    local s = f:GetEffectiveScale() or 1
+    return l * s, b * s, (l + w) * s, (b + h) * s
+end
+
+local function IsOurs(f)
+    if f == toggle or f == backdrop then return true end
+    for _, b in ipairs(wingButtons) do if f == b then return true end end
+    return false
+end
+
+local function BlockingFrame()
+    local tl, tb, tr, tt = ScreenRect(toggle)
+    if not tl then return nil end
+    local parents = { WorldMapFrame, WorldMapFrame.ScrollContainer, WorldMapFrame.BorderFrame }
+    local best, bestRight
+    for _, parent in ipairs(parents) do
+        if parent and parent.GetChildren then
+            for _, child in ipairs({ parent:GetChildren() }) do
+                if not IsOurs(child) and child.IsVisible and child:IsVisible() then
+                    local l, b, r, top = ScreenRect(child)
+                    -- Small controls only: skip the map canvas and big panels.
+                    if l and (r - l) <= 220 and (top - b) <= 80
+                        and l < tr and r > tl and b < tt and top > tb then
+                        if not bestRight or r > bestRight then best, bestRight = child, r end
+                    end
+                end
+            end
+        end
+    end
+    return best, bestRight
+end
+
+PlaceToggle = function()
+    if not toggle or not WorldMapFrame then return end
+    local host = WorldMapFrame.ScrollContainer or WorldMapFrame
+    local offset = -8
+    toggle:ClearAllPoints()
+    toggle:SetPoint("TOPRIGHT", host, "TOPRIGHT", offset, -8)
+    for _ = 1, 6 do
+        local blocker = BlockingFrame()
+        if not blocker then break end
+        local _, _, tr = ScreenRect(toggle)
+        local bl = ScreenRect(blocker)
+        if not tr or not bl then break end
+        local scale = toggle:GetEffectiveScale() or 1
+        offset = offset - ((tr - bl) / scale) - 4
+        toggle:ClearAllPoints()
+        toggle:SetPoint("TOPRIGHT", host, "TOPRIGHT", offset, -8)
+    end
+end
+
 local function UpdateToggle(dungeonName)
     if not WorldMapFrame then return end
     if not toggle then
@@ -152,6 +227,10 @@ local function UpdateToggle(dungeonName)
     end
     if dungeonName and Enabled() then
         toggle:SetText(wantWorld and L("WM_DUNGEON_MAP") or L("WM_WORLD_MAP"))
+        PlaceToggle()
+        -- Other addons often add their map buttons a moment after the map
+        -- opens, so check once more shortly after.
+        if C_Timer and C_Timer.After then C_Timer.After(0.2, function() pcall(PlaceToggle) end) end
         toggle:SetFrameLevel(((backdrop and backdrop:GetFrameLevel()) or 1) + 50)
         toggle:Show()
     else

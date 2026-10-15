@@ -1,4 +1,4 @@
-# ForeverLiquid (v1.3.0)
+# ForeverLiquid (v1.3.1)
 
 **Ultra-sleek, high-tech neon liquid XP, Reputation, Gold, Inventory, Dungeon & Alt session tracker designed specifically for WoW Forever (Camelot / 12.0 engine) and modern WoW clients.**
 
@@ -111,6 +111,7 @@ Toggled smoothly via left-clicking the Gold Pod or typing `/fl`:
 | `/fl combat` | Toggle in-combat HUD dimming |
 | `/fl toast` | Toggle neon rare loot drop toasts on/off |
 | `/fl loot` | Toggle factoring item vendor value into Gold/hr speed |
+| `/fl transfers` | Toggle excluding mail/bank transfers from farming Gold/hr rate |
 | `/fl scale <0.5 - 2.0>` | Adjust HUD display scale |
 | `/fl width <420 - 850>` | Adjust HUD bar width |
 | `/fl test` | Trigger a simulated Epic loot toast animation preview |

@@ -182,6 +182,28 @@ FDJ.DROP_RATES = {
     [270265] = "33%", -- Shadow-Weaver Tunic
     [270266] = "33%", -- Lordaeron Defender's Pauldrons
     [270267] = "33%", -- Defiler's Bloodied Axe
+    [273085] = "8%",  -- Rotmender's Gloves (Stone Watcher)
+
+    -- --------------------------------------------------------
+    -- CITY OF DALARAN (Beta 12.0)
+    -- --------------------------------------------------------
+    [273032] = "33%", -- Bonebinder's Signet
+    [273031] = "33%", -- Runemender's Seal
+    [273046] = "33%", -- Guardian's Dualblade
+    [273099] = "15%", -- Blueprint: Spinning Wheel
+    [273041] = "33%", -- Slitherwrap Girdle
+    [273045] = "33%", -- Drape of Shifting Energy
+    [273052] = "33%", -- Ponderous Orb
+
+    -- --------------------------------------------------------
+    -- SHARED BOSS LEATHER HELMS (Multi-Dungeon)
+    -- --------------------------------------------------------
+    [252512] = "3.5%", -- Brawler's Leather Helm
+    [252513] = "3.5%", -- Trapper's Leather Helm
+    [252455] = "3.5%", -- Defender's Leather Helm
+    [252456] = "3.5%", -- Totemic Leather Helm
+    [252514] = "3.5%", -- Stormrider's Leather Helm
+    [252515] = "3.5%", -- Wisdom's Leather Helm
 }
 
 function FDJ.GetItemDropRate(itemID)

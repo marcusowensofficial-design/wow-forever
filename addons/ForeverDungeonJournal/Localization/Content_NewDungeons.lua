@@ -931,6 +931,8 @@ EXC2.deDE = {
     ["Lakeshire"] = "Seenhain",
     ["Elder Rise"] = "Ältestenhöhe",
     ["near the Dalaran sewer entrance"] = "nahe dem Kanalisationseingang von Dalaran",
+    ["inside the dungeon"] = "im Dungeon",
+    ["near the sewer entrance"] = "nahe dem Kanalisationseingang",
     ["Dalaran sewer entrance"] = "Kanalisationseingang von Dalaran",
 }
 EXC2.frFR = {
@@ -965,6 +967,8 @@ EXC2.frFR = {
     ["Lakeshire"] = "Lakeshire",
     ["Elder Rise"] = "Éminence des Anciens",
     ["near the Dalaran sewer entrance"] = "près de l'entrée des égouts de Dalaran",
+    ["inside the dungeon"] = "dans le donjon",
+    ["near the sewer entrance"] = "près de l'entrée des égouts",
     ["Dalaran sewer entrance"] = "entrée des égouts de Dalaran",
 }
 EXC2.esES = {
@@ -999,6 +1003,8 @@ EXC2.esES = {
     ["Lakeshire"] = "Villa del Lago",
     ["Elder Rise"] = "Alto de los Ancianos",
     ["near the Dalaran sewer entrance"] = "cerca de la entrada de las cloacas de Dalaran",
+    ["inside the dungeon"] = "dentro de la mazmorra",
+    ["near the sewer entrance"] = "cerca de la entrada de las cloacas",
     ["Dalaran sewer entrance"] = "entrada de las cloacas de Dalaran",
 }
 EXC2.itIT = {
@@ -1033,6 +1039,8 @@ EXC2.itIT = {
     ["Lakeshire"] = "Lakeshire",
     ["Elder Rise"] = "Altura degli Anziani",
     ["near the Dalaran sewer entrance"] = "vicino all'ingresso delle fogne di Dalaran",
+    ["inside the dungeon"] = "dentro la spedizione",
+    ["near the sewer entrance"] = "vicino all'ingresso delle fogne",
     ["Dalaran sewer entrance"] = "ingresso delle fogne di Dalaran",
 }
 EXC2.ptBR = {
@@ -1067,6 +1075,8 @@ EXC2.ptBR = {
     ["Lakeshire"] = "Lakeshire",
     ["Elder Rise"] = "Alto dos Anciões",
     ["near the Dalaran sewer entrance"] = "perto da entrada dos esgotos de Dalaran",
+    ["inside the dungeon"] = "dentro da masmorra",
+    ["near the sewer entrance"] = "perto da entrada dos esgotos",
     ["Dalaran sewer entrance"] = "entrada dos esgotos de Dalaran",
 }
 EXC2.ruRU = {
@@ -1101,6 +1111,8 @@ EXC2.ruRU = {
     ["Lakeshire"] = "Lakeshire",
     ["Elder Rise"] = "Возвышенность старейшин",
     ["near the Dalaran sewer entrance"] = "рядом с входом в канализацию Даларана",
+    ["inside the dungeon"] = "внутри подземелья",
+    ["near the sewer entrance"] = "рядом с входом в канализацию",
     ["Dalaran sewer entrance"] = "вход в канализацию Даларана",
 }
 EXC2.koKR = {
@@ -1135,6 +1147,8 @@ EXC2.koKR = {
     ["Lakeshire"] = "호숫가 마을",
     ["Elder Rise"] = "원로의 언덕",
     ["near the Dalaran sewer entrance"] = "달라란 하수도 입구 근처",
+    ["inside the dungeon"] = "던전 안",
+    ["near the sewer entrance"] = "하수도 입구 근처",
     ["Dalaran sewer entrance"] = "달라란 하수도 입구",
 }
 EXC2.zhCN = {
@@ -1169,6 +1183,8 @@ EXC2.zhCN = {
     ["Lakeshire"] = "湖畔镇",
     ["Elder Rise"] = "长者高地",
     ["near the Dalaran sewer entrance"] = "达拉然下水道入口附近",
+    ["inside the dungeon"] = "地下城内",
+    ["near the sewer entrance"] = "下水道入口附近",
     ["Dalaran sewer entrance"] = "达拉然下水道入口",
 }
 EXC2.zhTW = {
@@ -1203,6 +1219,8 @@ EXC2.zhTW = {
     ["Lakeshire"] = "湖畔鎮",
     ["Elder Rise"] = "長者高地",
     ["near the Dalaran sewer entrance"] = "達拉然下水道入口附近",
+    ["inside the dungeon"] = "地城內",
+    ["near the sewer entrance"] = "下水道入口附近",
     ["Dalaran sewer entrance"] = "達拉然下水道入口",
 }
 for lang, strings in pairs(EXC2) do
@@ -1268,7 +1286,7 @@ ITEM_SOURCES.frFR = {
 ITEM_SOURCES.esES = {
     ["Dropped by: Dark Iron Agents"] = "Lo suelta: Dark Iron Agents",
     ["Dropped by: Dark Iron Spies in Dun Morogh"] = "Lo suelta: Dark Iron Spies en Dun Morogh",
-    ["Dropped by: Goblin Woodcarver, The Deadmines"] = "Lo suelta: Goblin Woodcarver, Las Minas de la Muerte",
+    ["Dropped by: Goblin Woodcarver, The Deadmines"] = "Lo suelta: Goblin Woodcarver, Minas de la Muerte",
     ["Dropped by: Mutanus the Devourer"] = "Lo suelta: Mutanus el Devorador",
     ["Dropped by: Relic Guardian"] = "Lo suelta: Relic Guardian",
     ["Dropped by: The Baron"] = "Lo suelta: The Baron",
@@ -1837,6 +1855,24 @@ for lang, warning in pairs(TEST_OF_LORE_ANSWER) do
     local content = FDJ.ContentLocales[lang]
     if content and content.quests then
         if content.quests[6627] then content.quests[6627].warning = warning end
+    end
+end
+
+-- Test of Lore answer hint for the Undercity step (quest 6628).
+for lang, warning in pairs({
+    deDE = "ANTWORT: Ner'zhul",
+    frFR = "RÉPONSE : Ner'zhul",
+    esES = "RESPUESTA: Ner'zhul",
+    itIT = "RISPOSTA: Ner'zhul",
+    ptBR = "RESPOSTA: Ner'zhul",
+    ruRU = "ОТВЕТ: Нер'зул",
+    koKR = "정답: 넬쥴",
+    zhCN = "答案：耐奥祖",
+    zhTW = "答案：耐奧祖",
+}) do
+    local content = FDJ.ContentLocales[lang]
+    if content and content.quests and content.quests[6628] then
+        content.quests[6628].warning = warning
     end
 end
 

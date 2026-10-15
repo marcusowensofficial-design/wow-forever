@@ -1,6 +1,5 @@
 ## Interface: 16001
-## Title: |cffffcc00Echo|r|cffffffffTwist|r [AllowLoadGameType camelot]
-## Title: EchoTwist (Retail) [AllowLoadGameType standard]
+## Title: |cffffcc00Echo|r|cffffffffTwist|r
 ## Notes: Modern Seal duration, Echo proc (Twist of Light), Holy Strike & Judgement HUD for WoW Forever Paladins.
 ## Author: Marco & Antigravity
 ## Version: 1.0.0
@@ -8,6 +7,8 @@
 ## LoadSavedVariablesFirst: true
 ## IconTexture: Interface\Icons\Spell_Holy_SealOfCommand
 ## Category-enUS: Combat
+## DefaultState: enabled
+## AllowLoadGameType: camelot
 
 Constants.lua
 Core.lua

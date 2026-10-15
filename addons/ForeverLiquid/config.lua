@@ -45,6 +45,7 @@ local function PrintHelp()
     print(string.format("  %s/fl durability|r  -  Toggle equipment durability gauge on HUD", t.accent.hex))
     print(string.format("  %s/fl toast|r  -  Toggle neon loot drop popup toasts", t.accent.hex))
     print(string.format("  %s/fl loot|r  -  Toggle including loot value in Gold/hr", t.accent.hex))
+    print(string.format("  %s/fl transfers|r  -  Toggle excluding mail/bank transfers from Gold/hr", t.accent.hex))
     print(string.format("  %s/fl clock [12h|24h|realm]|r  -  Toggle or format live Clock pod", t.accent.hex))
     print(string.format("  %s/fl perf|r  -  Toggle entire Performance pod", t.accent.hex))
     print(string.format("  %s/fl fps|r  -  Toggle live FPS framerate display", t.accent.hex))
@@ -292,6 +293,12 @@ SlashCmdList["FOREVERLIQUID"] = function(msg)
             ForeverLiquidDB.profile.includeLootInGoldRate and "|cff00ff7fYES|r" or "|cffff3366NO|r"))
         FL:UpdateHUD()
         
+    elseif cmd == "transfers" or cmd == "transfer" then
+        ForeverLiquidDB.profile.excludeTransfersFromGoldRate = not (ForeverLiquidDB.profile.excludeTransfersFromGoldRate ~= false)
+        print(string.format("%s[ForeverLiquid]|r Exclude mail/bank transfers from farming Gold/hr: %s.", theme.accent.hex,
+            (ForeverLiquidDB.profile.excludeTransfersFromGoldRate ~= false) and "|cff00ff7fENABLED|r" or "|cffff3366DISABLED|r"))
+        FL:UpdateHUD()
+        
     elseif cmd == "scale" then
         local s = tonumber(arg)
         if s and s >= 0.5 and s <= 2.0 then
@@ -506,6 +513,7 @@ local function CreateCheckbox(label, key, parentAnchor, x, y)
     cb:SetPoint("TOPLEFT", parentAnchor, "BOTTOMLEFT", x, y)
     cb.text = cb:CreateFontString(nil, "ARTWORK", "GameFontHighlight")
     cb.text:SetPoint("LEFT", cb, "RIGHT", 4, 0)
+    cb.text:SetWordWrap(false)
     cb.text:SetText(label)
     cb:SetScript("OnClick", function(self)
         ForeverLiquidDB.profile[key] = self:GetChecked() and true or false
@@ -612,7 +620,7 @@ local sliderScale = CreateSlider("ForeverLiquidScaleSlider", "HUD Display Scale"
     end
 end)
 
-local sliderWidth = CreateSlider("ForeverLiquidWidthSlider", "HUD Bar Width", 420, 850, 10, "%d px", "barWidth", sliderScale, 260, 20, 220, function(val)
+local sliderWidth = CreateSlider("ForeverLiquidWidthSlider", "HUD Bar Width", 420, 850, 10, "%d px", "barWidth", sliderScale, 310, 20, 220, function(val)
     if FL.HUD and ForeverLiquidDB.profile.layoutMode == "FLOATING" then
         FL.HUD:SetWidth(val)
         if FL.AnchorPods then FL:AnchorPods() end
@@ -628,7 +636,7 @@ local sliderHeight = CreateSlider("ForeverLiquidHeightSlider", "HUD Bar Height",
     end
 end)
 
-local sliderHudAlpha = CreateSlider("ForeverLiquidHudAlphaSlider", "Normal HUD Alpha", 0.50, 1.00, 0.05, "%.0f%%", "hudAlpha", sliderHeight, 260, 20, 220, function(val)
+local sliderHudAlpha = CreateSlider("ForeverLiquidHudAlphaSlider", "Normal HUD Alpha", 0.50, 1.00, 0.05, "%.0f%%", "hudAlpha", sliderHeight, 310, 20, 220, function(val)
     if FL.HUD and FL.HUD.bg then FL.HUD.bg:SetAlpha(val) end
 end)
 
@@ -639,32 +647,32 @@ local col1Header = optionsPanel:CreateFontString(nil, "ARTWORK", "GameFontNormal
 col1Header:SetPoint("TOPLEFT", sliderCombatAlpha, "BOTTOMLEFT", 0, -18)
 col1Header:SetText("|cffffffffHUD & Automation|r")
 
-local cbLock = CreateCheckbox("Lock HUD bar position (prevent dragging without Shift)", "locked", col1Header, 0, -6)
-local cbBubbles = CreateCheckbox("Display Classic 20-Bubble (5%) divider tick marks", "showXPBubbles", cbLock, 0, -4)
-local cbBagGauge = CreateCheckbox("Display micro bag slot indicator on HUD (e.g. 18/50)", "showBagGauge", cbBubbles, 0, -4)
+local cbLock = CreateCheckbox("Lock HUD bar position (prevent dragging)", "locked", col1Header, 0, -6)
+local cbBubbles = CreateCheckbox("Display Classic 20-Bubble (5%) divider ticks", "showXPBubbles", cbLock, 0, -4)
+local cbBagGauge = CreateCheckbox("Display micro bag slot indicator on HUD", "showBagGauge", cbBubbles, 0, -4)
 local cbDurability = CreateCheckbox("Display equipment durability percentage on HUD", "showDurabilityGauge", cbBagGauge, 0, -4)
 local cbAutoResume = CreateCheckbox("Intelligent Auto-Resume active session metrics", "autoResumeSession", cbDurability, 0, -4)
 local cbAutoSell = CreateCheckbox("Auto-sell grey junk items when visiting merchants", "autoSellJunk", cbAutoResume, 0, -4)
 local cbAutoRepair = CreateCheckbox("Auto-repair damaged gear at capable vendors", "autoRepair", cbAutoSell, 0, -4)
 local cbAutoRepairGuild = CreateCheckbox("Prioritize Guild Bank funds for auto-repair", "autoRepairGuild", cbAutoRepair, 0, -4)
-local cbDimCombat = CreateCheckbox("Smart Combat Dimming (lower HUD opacity in combat)", "dimInCombat", cbAutoRepairGuild, 0, -4)
-local cbShimmer = CreateCheckbox("Cyberpunk fluid shimmer wave oscillation across XP bar", "shimmerAnimation", cbDimCombat, 0, -4)
+local cbDimCombat = CreateCheckbox("Smart Combat Dimming (dim HUD in combat)", "dimInCombat", cbAutoRepairGuild, 0, -4)
+local cbShimmer = CreateCheckbox("Cyberpunk fluid shimmer wave across XP bar", "shimmerAnimation", cbDimCombat, 0, -4)
 
 -- Section: Telemetry & Micro-Pods (Right Column)
 local col2Header = optionsPanel:CreateFontString(nil, "ARTWORK", "GameFontNormal")
-col2Header:SetPoint("TOPLEFT", sliderCombatAlpha, "BOTTOMLEFT", 260, -18)
+col2Header:SetPoint("TOPLEFT", sliderCombatAlpha, "BOTTOMLEFT", 310, -18)
 col2Header:SetText("|cff00ff7fTitan Telemetry & Micro-Pods|r")
 
 local cbClock = CreateCheckbox("Display Clock Pod (Time of Day live clock)", "showClockPod", col2Header, 0, -6)
 local cbGPS = CreateCheckbox("Display GPS Coordinates Pod (Map location)", "showGPSPod", cbClock, 0, -4)
 local cbPerf = CreateCheckbox("Display Performance Pod (FPS & Latency)", "showPerfPod", cbGPS, 0, -4)
-local cbPerfFPS = CreateCheckbox("↳ Show Framerate (FPS)", "showPerfFPS", cbPerf, 16, -2)
-local cbPerfMS = CreateCheckbox("↳ Show Network Ping (MS)", "showPerfMS", cbPerfFPS, 0, -2)
-local cbFSR = CreateCheckbox("Enable 5-Second Rule (FSR) mana regen spark pulse", "showFSRPulse", cbPerfMS, -16, -4)
+local cbPerfFPS = CreateCheckbox("Show Framerate (FPS)", "showPerfFPS", cbPerf, 16, -2)
+local cbPerfMS = CreateCheckbox("Show Network Ping (MS)", "showPerfMS", cbPerfFPS, 0, -2)
+local cbFSR = CreateCheckbox("Enable 5-Second Rule (FSR) mana spark pulse", "showFSRPulse", cbPerfMS, -16, -4)
 local cbAutoPurge = CreateCheckbox("Auto-purge memory on zone changes", "autoPurgeMemoryOnZone", cbFSR, 0, -4)
 local cbAutoHide = CreateCheckbox("Auto-hide XP bar at Level Cap", "autoHideAtMaxLevel", cbAutoPurge, 0, -4)
 local cbLootRate = CreateCheckbox("Factor looted item value into Gold/hr speed", "includeLootInGoldRate", cbAutoHide, 0, -4)
-local cbToast = CreateCheckbox("Display animated Neon Toast for rare loot drops", "showLootToasts", cbLootRate, 0, -4)
+local cbToast = CreateCheckbox("Display Neon Toast for rare loot drops", "showLootToasts", cbLootRate, 0, -4)
 local cbSound = CreateCheckbox("Play audio fanfare on Level Up & milestones", "playMilestoneSound", cbToast, 0, -4)
 
 cbPerf:SetScript("OnClick", function(self)

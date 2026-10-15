@@ -277,7 +277,7 @@ local function CreateMapMarker(key)
     marker.glow:SetPoint("CENTER", marker, "CENTER", 0, 0)
     marker.glow:SetText("X")
     marker.glow:SetTextColor(1.00, 0.82, 0.20, 0.32)
-    marker.glow:SetScale(1.35)
+    marker.glow:SetScale(1.80)
 
     marker.outline = {}
     local offsets = { {-1, 0}, {1, 0}, {0, -1}, {0, 1} }
@@ -286,13 +286,15 @@ local function CreateMapMarker(key)
         shadow:SetPoint("CENTER", marker, "CENTER", offsets[i][1], offsets[i][2])
         shadow:SetText("X")
         shadow:SetTextColor(0, 0, 0, 1)
+        shadow:SetScale(1.35)
         marker.outline[i] = shadow
     end
 
     marker.x = marker:CreateFontString(nil, "OVERLAY", "GameFontNormalLarge")
     marker.x:SetPoint("CENTER", marker, "CENTER", 0, 0)
     marker.x:SetText("X")
-    marker.x:SetTextColor(1, 1, 1, 1)
+    marker.x:SetTextColor(1.00, 0.88, 0.10, 1)
+    marker.x:SetScale(1.35)
 
     marker.dungeonIcon = marker:CreateTexture(nil, "OVERLAY")
     marker.dungeonIcon:SetPoint("CENTER")
@@ -371,7 +373,8 @@ local function CreateMapMarker(key)
                 end
             end
         end
-        if target.questTitle and target.markerType ~= "dungeon" and type(labelText) == "string" then
+        -- Quest pins read "NPC — Quest title" instead of "NPC — place".
+        if target.markerType ~= "dungeon" and type(target.questTitle) == "string" and target.questTitle ~= "" and type(labelText) == "string" then
             local dash = " \226\128\148 "
             local cut = labelText:find(dash, 1, true)
             local npc = cut and labelText:sub(1, cut - 1) or labelText

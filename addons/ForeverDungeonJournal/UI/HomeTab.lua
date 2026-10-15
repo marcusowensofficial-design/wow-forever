@@ -288,7 +288,9 @@ function FDJ.RefreshHomeDungeonCards()
 
     local shownDungeons = {}
     for _, dungeonName in ipairs(FDJ.ORDER or {}) do
-        if FDJ.homeEditMode or not ForeverDungeonJournalDB.hiddenDungeons[dungeonName] then
+        local userHidden = ForeverDungeonJournalDB.hiddenDungeons[dungeonName] == true
+        local autoHidden = FDJ.IsDungeonAutoHidden and FDJ.IsDungeonAutoHidden(dungeonName)
+        if FDJ.homeEditMode or (not userHidden and not autoHidden) then
             shownDungeons[#shownDungeons + 1] = dungeonName
         end
     end
@@ -383,7 +385,8 @@ function FDJ.RefreshHomeDungeonCards()
             end
         end
 
-        local isHidden = ForeverDungeonJournalDB.hiddenDungeons[dungeonName] == true
+        local isHidden = (ForeverDungeonJournalDB.hiddenDungeons[dungeonName] == true)
+            or (FDJ.IsDungeonAutoHidden and FDJ.IsDungeonAutoHidden(dungeonName))
         if card.editOverlay then card.editOverlay:SetShown(FDJ.homeEditMode) end
         if card.editBorder then card.editBorder:SetShown(FDJ.homeEditMode) end
         if card.hiddenShade then card.hiddenShade:SetShown(FDJ.homeEditMode and isHidden) end
@@ -412,6 +415,8 @@ function FDJ.RefreshHomeDungeonCards()
     FDJ.UpdateScrollBarVisibility(frame.homeScroll, contentHeight)
     if FDJ.UpdateHomeFactionButtons then FDJ.UpdateHomeFactionButtons() end
 end
+
+FDJ.RefreshHomeCards = FDJ.RefreshHomeDungeonCards
 
 -- ============================================================
 -- HOME FACTION BUTTONS

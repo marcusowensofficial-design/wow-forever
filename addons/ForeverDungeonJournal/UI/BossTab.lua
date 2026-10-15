@@ -1146,115 +1146,201 @@ function FDJ.RefreshLoot()
         end
     end
 
-    for i = 1, math.max(#FDJ.lootRows, #filteredLoot) do
+    local sharedList = FDJ.GetBossSharedLoot and FDJ.GetBossSharedLoot(selectedDungeon, boss)
+    local sharedCount = sharedList and #sharedList or 0
+    local filteredShared = {}
+    if sharedCount > 0 and FDJ.lootSharedExpanded then
+        for _, item in ipairs(sharedList) do
+            local classMatch = (FDJ.selectedClassFilter == "ALL") or ItemMatchesClass(item, FDJ.selectedClassFilter)
+            local slotMatch = (FDJ.selectedSlotFilter == "ALL") or ItemMatchesSlot(item, FDJ.selectedSlotFilter)
+            if classMatch and slotMatch then
+                table.insert(filteredShared, item)
+            end
+        end
+    end
+
+    local ROW_STEP = 59
+    local LINE_STEP = 31
+
+    local function SetupRow(row, item, yOffset)
+        row:ClearAllPoints()
+        row:SetPoint("TOPLEFT", frame.lootContent, "TOPLEFT", 0, -yOffset)
+        row.item = item
+        row.icon:SetTexture(FDJ.ItemIcon(item[1]))
+        if C_Item and type(C_Item.RequestLoadItemDataByID) == "function" then
+            pcall(C_Item.RequestLoadItemDataByID, item[1])
+        end
+
+        local itemName, itemLink, quality = FDJ.ItemInfo(item[1])
+
+        local r, g, b
+        if item[3] == "Quest Item" or item[4] == 1 then
+            r, g, b = 1, 1, 1
+        elseif FDJ.GetAuthoritativeItemQuality then
+            r, g, b = FDJ.GetAuthoritativeItemQuality(item[1], itemLink, quality, item[4])
+        else
+            r, g, b = FDJ.QualityColor(item[4] or 1)
+        end
+
+        row.name:SetText(itemName or item[2])
+        row.name:SetTextColor(r, g, b)
+
+        local isWish = (FDJ.IsWishlisted and FDJ.IsWishlisted(item[1])) or (FDJ.IsFavouriteItem and FDJ.IsFavouriteItem(item[1]))
+        if row.starButton then
+            if isWish then
+                row.starButton.icon:SetTexture("Interface\\AddOns\\ForeverDungeonJournal\\Media\\Star_Gold.tga")
+                row.starButton.icon:SetVertexColor(1.0, 0.82, 0.0, 1.0)
+            else
+                row.starButton.icon:SetTexture("Interface\\AddOns\\ForeverDungeonJournal\\Media\\Star_Empty.tga")
+                row.starButton.icon:SetVertexColor(0.40, 0.35, 0.25, 0.50)
+            end
+        end
+        if FDJ.UpdateFavouriteIndicator then
+            FDJ.UpdateFavouriteIndicator(row, item[1])
+        end
+
+        local isOwned = false
+        if item[1] and type(GetItemCount) == "function" then
+            local count = GetItemCount(item[1], true)
+            if count and count > 0 then isOwned = true end
+        end
+        if row.ownedBadge then
+            if isOwned then
+                row.ownedBadge:SetText("|cff00ff00" .. (L("OWNED") or "[Owned]") .. "|r")
+                row.ownedBadge:Show()
+            else
+                row.ownedBadge:Hide()
+            end
+        end
+
+        local trashSource = boss.trash and item[5]
+        local showTrashSource = false
+        if type(trashSource) == "string" and trashSource ~= "" then
+            local sourceLower = string.lower(trashSource)
+            if not string.find(sourceLower, "zone drop", 1, true)
+                and not string.find(sourceLower, " trash", 1, true)
+                and sourceLower ~= "trash" then
+                showTrashSource = true
+            end
+        end
+
+        local dropRate = FDJ.GetItemDropRate and FDJ.GetItemDropRate(item[1])
+        local slotText = item[3] or ""
+        if showTrashSource then
+            slotText = trashSource
+        end
+        if dropRate then
+            slotText = slotText ~= "" and (slotText .. "  •  |cffffd200" .. dropRate .. "|r") or ("|cffffd200" .. dropRate .. "|r")
+        end
+        row.slot:SetText(slotText)
+        if showTrashSource then
+            row.slot:SetTextColor(0.55, 0.45, 0.30)
+        else
+            row.slot:SetTextColor(0.45, 0.35, 0.20)
+        end
+
+        local theme = (FDJ.THEMES and FDJ.THEMES[selectedDungeon]) or (FDJ.THEMES and FDJ.THEMES["Hall of Thanes"])
+        if theme and theme.lootRow then row:SetBackdropColor(unpack(theme.lootRow)) end
+        if theme and theme.border then row:SetBackdropBorderColor(unpack(theme.border)) end
+
+        local dimmed = FDJ.lootFilterDimmed and FDJ.lootFilterDimmed[item]
+        row:SetAlpha(dimmed and 0.28 or 1)
+        if row.icon and row.icon.SetDesaturated then
+            row.icon:SetDesaturated(dimmed and true or false)
+        end
+
+        row:Show()
+    end
+
+    local rowIndex = 0
+    -- Normal Boss Loot
+    for i, item in ipairs(filteredLoot) do
+        rowIndex = rowIndex + 1
+        local row = FDJ.lootRows[rowIndex]
+        if not row then
+            row = FDJ.MakeLootRow(frame.lootContent)
+            FDJ.lootRows[rowIndex] = row
+        end
+        SetupRow(row, item, (i - 1) * ROW_STEP)
+    end
+
+    -- Shared Loot Divider & Items
+    local dividerY = #filteredLoot * ROW_STEP
+    local totalH = dividerY
+
+    if sharedCount > 0 then
+        local line = frame.lootSharedLine
+        if not line then
+            line = CreateFrame("Button", nil, frame.lootContent)
+            frame.lootSharedLine = line
+            line:SetHeight(24)
+            line.rule = line:CreateTexture(nil, "BACKGROUND")
+            line.rule:SetHeight(1)
+            line.rule:SetPoint("BOTTOMLEFT", 0, 0)
+            line.rule:SetPoint("BOTTOMRIGHT", 0, 0)
+            line.rule:SetColorTexture(0.48, 0.40, 0.27, 0.6)
+            line.icon = line:CreateTexture(nil, "ARTWORK")
+            line.icon:SetSize(16, 16)
+            line.icon:SetPoint("LEFT", 4, 0)
+            line.text = line:CreateFontString(nil, "OVERLAY", "GameFontNormalSmall")
+            line.text:SetPoint("LEFT", line.icon, "RIGHT", 6, 0)
+            line.text:SetJustifyH("LEFT")
+            line.note = line:CreateFontString(nil, "OVERLAY", "GameFontHighlightSmall")
+            line.note:SetPoint("LEFT", line.text, "RIGHT", 8, 0)
+            line.note:SetTextColor(0.68, 0.62, 0.52)
+            line:SetHighlightTexture("Interface\\QuestFrame\\UI-QuestTitleHighlight", "ADD")
+            line:SetScript("OnClick", function()
+                FDJ.lootSharedExpanded = not FDJ.lootSharedExpanded
+                FDJ.RefreshLoot()
+            end)
+        end
+
+        local open = FDJ.lootSharedExpanded and true or false
+        line.text:SetText(string.format(L(open and "SHARED_HIDE" or "SHARED_SHOW") or (open and "Hide Shared Loot (%d)" or "Show Shared Loot (%d)"), sharedCount))
+        line.note:SetText(L("SHARED_NOTE") or "low drop chance, many bosses")
+        line.icon:SetTexture(open and "Interface\\Buttons\\UI-MinusButton-Up" or "Interface\\Buttons\\UI-PlusButton-Up")
+        line:ClearAllPoints()
+        line:SetPoint("TOPLEFT", frame.lootContent, "TOPLEFT", 0, -dividerY)
+        line:SetPoint("RIGHT", frame.lootContent, "RIGHT", 0, 0)
+        line:Show()
+
+        totalH = dividerY + LINE_STEP
+
+        if open then
+            for k, item in ipairs(filteredShared) do
+                rowIndex = rowIndex + 1
+                local row = FDJ.lootRows[rowIndex]
+                if not row then
+                    row = FDJ.MakeLootRow(frame.lootContent)
+                    FDJ.lootRows[rowIndex] = row
+                end
+                SetupRow(row, item, dividerY + LINE_STEP + (k - 1) * ROW_STEP)
+            end
+            totalH = totalH + (#filteredShared * ROW_STEP)
+        end
+    else
+        if frame.lootSharedLine then frame.lootSharedLine:Hide() end
+    end
+
+    -- Hide unused rows
+    for i = rowIndex + 1, #FDJ.lootRows do
         local row = FDJ.lootRows[i]
-
-        if i <= #filteredLoot then
-            if not row then
-                row = FDJ.MakeLootRow(frame.lootContent)
-                FDJ.lootRows[i] = row
-
-                if i == 1 then
-                    row:SetPoint("TOPLEFT", frame.lootContent, "TOPLEFT", 0, 0)
-                else
-                    row:SetPoint("TOPLEFT", FDJ.lootRows[i - 1], "BOTTOMLEFT", 0, -7)
-                end
-            end
-
-            local item = filteredLoot[i]
-            row.item = item
-            row.icon:SetTexture(FDJ.ItemIcon(item[1]))
-            if C_Item and type(C_Item.RequestLoadItemDataByID) == "function" then
-                pcall(C_Item.RequestLoadItemDataByID, item[1])
-            end
-
-            local itemName, itemLink, quality = FDJ.ItemInfo(item[1])
-
-            local r, g, b
-            if item[3] == "Quest Item" or item[4] == 1 then
-                r, g, b = 1, 1, 1
-            elseif FDJ.GetAuthoritativeItemQuality then
-                r, g, b = FDJ.GetAuthoritativeItemQuality(item[1], itemLink, quality, item[4])
-            else
-                r, g, b = FDJ.QualityColor(item[4] or 1)
-            end
-
-            row.name:SetText(itemName or item[2])
-            row.name:SetTextColor(r, g, b)
-
-            local isWish = (FDJ.IsWishlisted and FDJ.IsWishlisted(item[1])) or (FDJ.IsFavouriteItem and FDJ.IsFavouriteItem(item[1]))
-            if row.starButton then
-                if isWish then
-                    row.starButton.icon:SetTexture("Interface\\AddOns\\ForeverDungeonJournal\\Media\\Star_Gold.tga")
-                    row.starButton.icon:SetVertexColor(1.0, 0.82, 0.0, 1.0)
-                else
-                    row.starButton.icon:SetTexture("Interface\\AddOns\\ForeverDungeonJournal\\Media\\Star_Empty.tga")
-                    row.starButton.icon:SetVertexColor(0.40, 0.35, 0.25, 0.50)
-                end
-            end
-            if FDJ.UpdateFavouriteIndicator then
-                FDJ.UpdateFavouriteIndicator(row, item[1])
-            end
-
-            local isOwned = false
-            if item[1] and type(GetItemCount) == "function" then
-                local count = GetItemCount(item[1], true)
-                if count and count > 0 then isOwned = true end
-            end
-            if row.ownedBadge then
-                if isOwned then
-                    row.ownedBadge:SetText("|cff00ff00" .. (L("OWNED") or "[Owned]") .. "|r")
-                    row.ownedBadge:Show()
-                else
-                    row.ownedBadge:Hide()
-                end
-            end
-
-            local trashSource = boss.trash and item[5]
-            local showTrashSource = false
-            if type(trashSource) == "string" and trashSource ~= "" then
-                local sourceLower = string.lower(trashSource)
-                if not string.find(sourceLower, "zone drop", 1, true)
-                    and not string.find(sourceLower, " trash", 1, true)
-                    and sourceLower ~= "trash" then
-                    showTrashSource = true
-                end
-            end
-
-            local dropRate = FDJ.GetItemDropRate and FDJ.GetItemDropRate(item[1])
-            local slotText = item[3] or ""
-            if showTrashSource then
-                slotText = trashSource
-            end
-            if dropRate then
-                slotText = slotText ~= "" and (slotText .. "  •  |cffffd200" .. dropRate .. "|r") or ("|cffffd200" .. dropRate .. "|r")
-            end
-            row.slot:SetText(slotText)
-            if showTrashSource then
-                row.slot:SetTextColor(0.55, 0.45, 0.30)
-            else
-                row.slot:SetTextColor(0.45, 0.35, 0.20)
-            end
-
-            local theme = (FDJ.THEMES and FDJ.THEMES[selectedDungeon]) or (FDJ.THEMES and FDJ.THEMES["Hall of Thanes"])
-            if theme and theme.lootRow then row:SetBackdropColor(unpack(theme.lootRow)) end
-            if theme and theme.border then row:SetBackdropBorderColor(unpack(theme.border)) end
-
-            row:Show()
-        elseif row then
+        if row then
+            row.item = nil
             row:Hide()
         end
     end
 
-    local totalH = #filteredLoot * 59
     frame.lootContent:SetHeight(math.max(1, totalH))
     FDJ.UpdateScrollBarVisibility(frame.lootScroll, totalH)
 
     if frame.noLootMessage then
-        if #filteredLoot == 0 and boss.loot and #boss.loot > 0 then
+        local totalRecorded = (#(boss.loot or {})) + sharedCount
+        local totalVisible = #filteredLoot + #filteredShared
+        if totalVisible == 0 and totalRecorded > 0 then
             frame.noLootMessage:SetText(L("NO_LOOT_MATCHES_FILTER") or "No loot matches current filters.")
             frame.noLootMessage:Show()
-        elseif (not boss.loot or #boss.loot == 0) and not isStockade then
+        elseif totalRecorded == 0 and not isStockade then
             frame.noLootMessage:SetText(L("NO_LOOT_RECORDED") or "No loot recorded.")
             frame.noLootMessage:Show()
         else
@@ -1262,6 +1348,8 @@ function FDJ.RefreshLoot()
         end
     end
 end
+
+FDJ.RefreshLootNow = FDJ.RefreshLoot
 
 function FDJ.RefreshBossTactics()
     local frame = FDJ.frame or _G["ForeverDungeonJournalFrame"]
@@ -1457,6 +1545,10 @@ function FDJ.UpdateSelectedBossHeader()
 
     if FDJ.SetBossPortrait then
         FDJ.SetBossPortrait(frame.selectedBossPortrait, selectedDungeon, boss)
+    end
+
+    if FDJ.UpdateBossSummon then
+        pcall(FDJ.UpdateBossSummon, frame, boss)
     end
 
     local isDefeated = FDJ.IsBossDefeated and FDJ.IsBossDefeated(selectedDungeon, boss.name)

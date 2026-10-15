@@ -1,15 +1,18 @@
 ## Interface: 16001
-## Title: |cffffcc00Dungeon|r |cffffffffJournal|r [AllowLoadGameType camelot]
-## Title: Dungeon Journal (Retail) [AllowLoadGameType standard]
-## Notes: Dungeon Journal by Marcus — Boss, loot and quest journal for WoW Forever & Classic+ dungeons.
+## Title: |cffffcc00Dungeon|r |cffffffffJournal|r
+## Notes: Boss, loot and quest journal for WoW Classic dungeons.
 ## Author: Marcus
-## Version: 1.6.0
+## Version: 1.6.2
 ## IconTexture: Interface\Icons\INV_Misc_Book_09
+## AddonCompartmentFunc: ForeverDungeonJournal_OnAddonCompartmentClick
+## AddonCompartmentFuncOnEnter: ForeverDungeonJournal_OnAddonCompartmentEnter
+## AddonCompartmentFuncOnLeave: ForeverDungeonJournal_OnAddonCompartmentLeave
 ## SavedVariables: ForeverDungeonJournalDB
 ## SavedVariablesPerCharacter: ForeverDungeonJournalCharacterDB
 ## LoadSavedVariablesFirst: true
 ## Category-enUS: Dungeons & Raids
-
+## DefaultState: enabled
+## AllowLoadGameType: camelot
 
 Core\Bootstrap.lua
 Localization\Localization.lua
@@ -32,6 +35,7 @@ Localization\Content_zhCN.lua
 Localization\Content_zhTW.lua
 Localization\Content_NewDungeons.lua
 Data\Dungeons.lua
+Data\SharedLoot.lua
 Data\ItemReqLevels.lua
 Data\DropRates.lua
 Data\DungeonEntrances.lua
@@ -54,6 +58,10 @@ Systems\LootFilter.lua
 Systems\Favourites.lua
 Systems\BugReport.lua
 Systems\ScarletWing.lua
+Systems\BossSummon.lua
+Systems\ItemIdLearner.lua
+Systems\ItemSource.lua
+Systems\SettingsPanel.lua
 Systems\WorldMapOverlay.lua
 Systems\Resize.lua
 Systems\OptionsPanel.lua

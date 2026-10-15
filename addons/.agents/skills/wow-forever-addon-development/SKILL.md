@@ -38,10 +38,11 @@ When referencing **our addon projects**, the following in-house addons located i
 - **Engine Flavor**: WoW Forever (internal project code "Camelot") runs on the **Retail Midnight (12.0)** engine with Classic assets and mechanics.
 - **Mainline Classification**: Forever is officially classed by the game client as `mainline`. **This is intentional.**
 
-### 1.2 Multi-TOC Issues vs The Recommended 1-TOC Setup
-Because Forever is classed as `mainline`, any `_Mainline.toc` will **also load on Forever**. This causes conflicts, duplicate executions, or broken overrides when maintaining separate `_Mainline.toc` and `_Camelot.toc` files.
-- While patch 12.1.5 introduces `_Standard.toc` as a mechanism to load strictly on Retail, **moving to a unified Single-TOC (1 TOC) setup is the recommended best practice**.
-- The 1-TOC architecture uses inline game type tags to control addon visibility, metadata, and per-file loading.
+### 1.2 TOC Architecture & Client Discovery (Camelot 16001)
+- The Camelot beta client scans addon directories prioritizing `<Addon>_Camelot.toc` first, falling back to `<Addon>.toc`.
+- **Title Directive Warning**: Do **NOT** attach speculative `[AllowLoadGameType standard]` tags or define multiple `## Title:` lines in TOCs. In the 16001 client parser, speculative brackets on Title headers break addon discovery on Camelot. Use a single, clean `## Title:` line.
+- Always include `## AllowLoadGameType: camelot` and `## DefaultState: enabled` on Camelot addons to ensure the client enables and recognizes them properly.
+- Keep `<Addon>.toc` and `<Addon>_Camelot.toc` synchronized to ensure compatibility across all client discovery paths.
 
 ### 1.3 TOC Directives & Conditional GameType Tags
 Use `## AllowLoadGameType` and `## ExcludeLoadGameType` to control loading behavior:
@@ -49,38 +50,28 @@ Use `## AllowLoadGameType` and `## ExcludeLoadGameType` to control loading behav
 | Directive / Tag | Target / Scope | Behavior |
 |---|---|---|
 | `## AllowLoadGameType: standard` | Entire Addon | Addon only loads on Retail (hidden on Forever & Classic). |
-| `## AllowLoadGameType: camelot` | Entire Addon | Addon only loads on WoW Forever. |
-| `## Title: MyAddon [AllowLoadGameType standard]` | Metadata | Sets title specifically on Retail. |
-| `## Title: MyAddon (Forever) [AllowLoadGameType camelot]` | Metadata | Sets title specifically on WoW Forever. |
-| `file.lua [AllowLoadGameType standard]` | File Loading | Loads `file.lua` strictly on Retail. |
-| `file.lua [AllowLoadGameType camelot][ExcludeLoadGameType standard, classic]` | File Loading | Loads `file.lua` strictly on WoW Forever. *(Keep an eye on this tag; syntax will evolve in future builds)* |
+| `## AllowLoadGameType: camelot` | Entire Addon | Addon loads on WoW Forever. |
+| `## DefaultState: enabled` | Entire Addon | Ensures addon defaults to enabled in client AddOn list. |
+| `file.lua [AllowLoadGameType camelot][ExcludeLoadGameType standard, classic]` | File Loading | Loads `file.lua` strictly on WoW Forever. |
 | `ui.xml [AllowLoadGameType camelot]` | XML Loading | Loads XML layout strictly on WoW Forever. |
 
-### 1.4 Pristine 1-TOC Reference Example
+### 1.4 Pristine 16001 TOC Reference Example
 ```toc
 ## Interface: 16001
-## Title: MyAddon [AllowLoadGameType camelot]
-## Title: MyAddon (Retail) [AllowLoadGameType standard]
-## Notes: Clean 1-TOC setup supporting WoW Forever and Retail
-## Author: You
+## Title: MyAddon
+## Notes: Companion addon for WoW Forever
+## Author: Marcus & Team
 ## Version: 1.0.0
 ## SavedVariables: MyAddonDB
 ## LoadSavedVariablesFirst: true
+## DefaultState: enabled
+## AllowLoadGameType: camelot
 
-# Shared Files
-shared\constants.lua
-shared\utilities.lua
-
-# WoW Forever Exclusive Files
-forever\ruleset.lua [AllowLoadGameType camelot][ExcludeLoadGameType standard, classic]
-forever\templates.xml [AllowLoadGameType camelot][ExcludeLoadGameType standard, classic]
-forever\core.lua [AllowLoadGameType camelot][ExcludeLoadGameType standard, classic]
-
-# Retail Exclusive Files
-retail\features.lua [AllowLoadGameType standard]
-
-# Main Addon Entry Point
-init.lua
+# Core & Systems Files
+Core\Bootstrap.lua
+Data\Constants.lua
+Systems\Core.lua
+UI\MainFrame.lua
 ```
 
 ---

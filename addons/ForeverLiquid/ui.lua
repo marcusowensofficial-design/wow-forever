@@ -1087,10 +1087,13 @@ function FL:InitializeUI()
     end)
     bagGauge:SetScript("OnEnter", function(self)
         GameTooltip:SetOwner(self, GetSmartTooltipAnchor(self))
-        local freeBags, totalBags = FL:GetBagSlotInfo()
+        local freeBags, totalBags, specialtyFree, specialtySlots = FL:GetBagSlotInfo()
         local t = FL:GetActiveTheme()
         GameTooltip:AddLine(string.format("%sForeverLiquid|r Inventory Capacity", t.accent.hex), 1, 1, 1)
-        GameTooltip:AddDoubleLine("Free Slot Space:", string.format("%d / %d slots", freeBags, totalBags), 0.7, 0.7, 0.7, 1, 1, 1)
+        GameTooltip:AddDoubleLine("General Inventory:", string.format("%d / %d slots free", freeBags, totalBags), 0.7, 0.7, 0.7, 1, 1, 1)
+        if specialtySlots and specialtySlots > 0 then
+            GameTooltip:AddDoubleLine("Specialty (Ammo/Quiver/Soul):", string.format("%d / %d slots free", specialtyFree, specialtySlots), 0.7, 0.7, 0.7, 0.4, 0.8, 1.0)
+        end
         
         -- TitanAmmo & Class Consumables Scanner
         if FL.GetClassConsumables then
@@ -1572,15 +1575,29 @@ function FL:InitializeUI()
         if elapsed >= 0.05 then
             elapsed = 0
             
-            -- TitanRegen: 5-Second Rule FSR pulse
-            if FL.GetFSRStatus and ForeverLiquidDB.profile and ForeverLiquidDB.profile.showFSRPulse then
-                local inFSR, remSec, prog = FL:GetFSRStatus()
+            -- TitanRegen: 5-Second Rule FSR pulse & 2-Second Spirit Mana Tick Pulse
+            if ForeverLiquidDB.profile and ForeverLiquidDB.profile.showFSRPulse then
+                local inFSR, remSec, prog = FL.GetFSRStatus and FL:GetFSRStatus()
+                local hasTick, tickRem, tickProg = false, 0, 0
+                if not inFSR and FL.GetManaTickStatus and not (InCombatLockdown and InCombatLockdown()) then
+                    hasTick, tickRem, tickProg = FL:GetManaTickStatus()
+                end
+                
                 if inFSR then
                     if hud.sparkNeedle and hud.sparkNeedle:IsShown() then
                         local alphaPulse = 0.5 + (0.5 * math.sin(GetTime() * 10))
                         hud.sparkNeedle:SetVertexColor(0.0, 1.0, 1.0, alphaPulse)
                         if hud.sparkGlow and hud.sparkGlow:IsShown() then
                             hud.sparkGlow:SetAlpha(alphaPulse * 0.4)
+                        end
+                    end
+                elseif hasTick then
+                    if hud.sparkNeedle and hud.sparkNeedle:IsShown() then
+                        local theme = FL:GetActiveTheme()
+                        local tickGlow = 0.45 + (0.55 * tickProg)
+                        hud.sparkNeedle:SetVertexColor(theme.spark.r, theme.spark.g, theme.spark.b, tickGlow)
+                        if hud.sparkGlow and hud.sparkGlow:IsShown() then
+                            hud.sparkGlow:SetAlpha(0.20 + (0.40 * tickProg))
                         end
                     end
                 elseif hud.sparkNeedle and hud.sparkNeedle:IsShown() then
@@ -2330,22 +2347,33 @@ function FL:CreateDashboard()
     local optBtn = CreateFrame("Button", nil, dash)
     optBtn:SetSize(18, 18)
     optBtn:SetPoint("RIGHT", closeBtn, "LEFT", -4, 0)
-    optBtn:SetNormalFontObject(GameFontNormalSmall)
-    optBtn:SetText("|cffffffff⚙|r")
+    
+    local optIcon = optBtn:CreateTexture(nil, "ARTWORK")
+    optIcon:SetSize(14, 14)
+    optIcon:SetPoint("CENTER", optBtn, "CENTER", 0, 0)
+    optIcon:SetTexture("Interface\\WorldMap\\Gear_64Grey")
+    optIcon:SetVertexColor(0.85, 0.85, 0.85, 0.9)
+    optBtn.icon = optIcon
+    
     optBtn:SetScript("OnClick", function()
         if FL.OpenOptions then
             FL:OpenOptions()
         end
     end)
     optBtn:SetScript("OnEnter", function(self)
-        self:SetText(theme.accent.hex .. "⚙|r")
+        local curTheme = FL:GetActiveTheme()
+        if self.icon then
+            self.icon:SetVertexColor(curTheme.accent.r, curTheme.accent.g, curTheme.accent.b, 1.0)
+        end
         GameTooltip:SetOwner(self, "ANCHOR_TOP")
         GameTooltip:AddLine("Configure GUI Options", 1, 1, 1)
         GameTooltip:AddLine("Toggle Clock, FPS, Latency, GPS, themes & automation.", 0.7, 0.7, 0.7)
         GameTooltip:Show()
     end)
     optBtn:SetScript("OnLeave", function(self)
-        self:SetText("|cffffffff⚙|r")
+        if self.icon then
+            self.icon:SetVertexColor(0.85, 0.85, 0.85, 0.9)
+        end
         GameTooltip:Hide()
     end)
     
@@ -3077,10 +3105,18 @@ function FL:UpdateDashboard()
             end
         end
         
+        local transfers = FL.session.transfers or 0
+        local transferStr = ""
+        if transfers ~= 0 then
+            local tColor = (transfers > 0 and "|cff00ff7f+") or "|cffff3366-"
+            transferStr = string.format("   |cffffffffTransfers:|r %s%s|r", tColor, FL.FormatMoney(math.abs(transfers), true))
+        end
+        
         aFrame.ledgerText:SetText(string.format(
-            "|cffffffffIncome:|r %s%s|r   |cffffffffExpenses:|r |cffff3366-%s|r   (Skills: %s, Repairs: %s, Flight: %s, Goods: %s)",
+            "|cffffffffIncome:|r %s%s|r   |cffffffffExpenses:|r |cffff3366-%s|r%s   (Skills: %s, Repairs: %s, Flight: %s, Goods: %s)",
             theme.accent.hex, FL.FormatMoney(grossIn, true),
             FL.FormatMoney(grossOut, true),
+            transferStr,
             FL.FormatMoney(skillBills, true),
             FL.FormatMoney(repBills, true),
             FL.FormatMoney(taxiBills, true),
@@ -3345,6 +3381,45 @@ function FL:UpdateDashboard()
             row.title:SetText(string.format("%s[ACTIVE] %s|r  •  %s", theme.accent.hex, active.name, FL.FormatTime(dur)))
             row.sub:SetText(string.format("XP: +%s  |  Kills: %d  |  Drops: %d items",
                 FL.FormatNumber(active.xpGained or 0), active.kills or 0, active.drops and #active.drops or 0))
+            
+            if not row.journalBtn then
+                local jBtn = CreateFrame("Button", nil, row, "BackdropTemplate")
+                jBtn:SetSize(72, 18)
+                jBtn:SetPoint("RIGHT", row, "RIGHT", -6, 0)
+                CreatePixelBorder(jBtn, theme.accent)
+                local jBg = jBtn:CreateTexture(nil, "BACKGROUND")
+                jBg:SetAllPoints(true)
+                jBg:SetTexture(BACKDROP_PIXEL)
+                jBg:SetVertexColor(0.04, 0.08, 0.06, 0.9)
+                jBtn.bg = jBg
+                local jTxt = jBtn:CreateFontString(nil, "OVERLAY")
+                jTxt:SetFont(FONT_MAIN, 8, "OUTLINE")
+                jTxt:SetPoint("CENTER", 0, 0)
+                jTxt:SetText("Journal")
+                jBtn.txt = jTxt
+                jBtn:SetScript("OnClick", function()
+                    if SlashCmdList["FOREVERDUNGEONJOURNAL"] then
+                        SlashCmdList["FOREVERDUNGEONJOURNAL"]("")
+                    elseif SlashCmdList["FDJ"] then
+                        SlashCmdList["FDJ"]("")
+                    else
+                        if ToggleEncounterJournal then ToggleEncounterJournal() end
+                    end
+                end)
+                jBtn:SetScript("OnEnter", function(self)
+                    self.bg:SetVertexColor(0.08, 0.20, 0.12, 1.0)
+                    GameTooltip:SetOwner(self, "ANCHOR_TOP")
+                    GameTooltip:AddLine("Forever Dungeon Journal", 1, 1, 1)
+                    GameTooltip:AddLine("Click to view boss tactics, 3D models & loot.", 0.7, 0.7, 0.7)
+                    GameTooltip:Show()
+                end)
+                jBtn:SetScript("OnLeave", function(self)
+                    self.bg:SetVertexColor(0.04, 0.08, 0.06, 0.9)
+                    GameTooltip:Hide()
+                end)
+                row.journalBtn = jBtn
+            end
+            row.journalBtn:Show()
             row:Show()
             idx = idx + 1
         end
@@ -3382,6 +3457,7 @@ function FL:UpdateDashboard()
             row.sub:SetText(string.format("XP: +%s (%s/hr)  |  Profit: %s  |  Kills: %d",
                 FL.FormatNumber(run.xpGained or 0), FL.FormatNumber(xpRate),
                 FL.FormatMoney(run.moneyDelta or 0, true), run.kills or 0))
+            if row.journalBtn then row.journalBtn:Hide() end
             row:Show()
             idx = idx + 1
         end
@@ -3392,6 +3468,9 @@ function FL:UpdateDashboard()
         
     elseif tab == 4 then
         -- Tab 4: Alt Roster 2.0
+        if FL.UpdateRosterData then
+            FL:UpdateRosterData()
+        end
         local rFrame = dash.tabFrames[4]
         local realmKey = FL.GetMakeshiftRealmName()
         local roster = (ForeverLiquidDB.roster and ForeverLiquidDB.roster[realmKey]) or {}
@@ -3483,18 +3562,26 @@ function FL:UpdateDashboard()
                 local classColor = RAID_CLASS_COLORS[cData.class] or { r = 1, g = 1, b = 1 }
                 
                 -- Offline Rested XP Prediction Calculation
-                local elapsedSec = math.max(0, time() - (cData.lastSeen or time()))
-                local ratePerSec = (cData.isResting and (0.05 / (8 * 3600))) or (0.05 / (32 * 3600))
-                local gainedPct = elapsedSec * ratePerSec * 100
-                local initialPct = (cData.maxXP and cData.maxXP > 0) and ((cData.restedXP or 0) / cData.maxXP * 100) or 0
-                local currentPct = math.min(150, initialPct + gainedPct)
+                local isCurrentPlayer = (item.name == Ambiguate(UnitName("player"), "none"))
+                local currentPct = 0
+                if isCurrentPlayer then
+                    local liveRested = (GetXPExhaustion and GetXPExhaustion()) or 0
+                    local liveMax = math.max(1, UnitXPMax("player"))
+                    currentPct = math.min(150, (liveRested / liveMax) * 100)
+                else
+                    local elapsedSec = math.max(0, time() - (cData.lastSeen or time()))
+                    local ratePerSec = (cData.isResting and (0.05 / (8 * 3600))) or (0.05 / (32 * 3600))
+                    local gainedPct = elapsedSec * ratePerSec * 100
+                    local initialPct = (cData.maxXP and cData.maxXP > 0) and ((cData.restedXP or 0) / cData.maxXP * 100) or 0
+                    currentPct = math.min(150, initialPct + gainedPct)
+                end
                 
                 card.nameText:SetText(string.format("|cff%02x%02x%02x%s|r  •  Lv %d %s",
                     classColor.r * 255, classColor.g * 255, classColor.b * 255,
                     item.name, cData.level or 1, cData.class or ""))
                 
                 card.goldText:SetText(FL.FormatMoney(cData.gold or 0, true))
-                card.locText:SetText(string.format("|cff607065%s%s|r", cData.location or "Unknown", cData.isResting and " (Inn)" or ""))
+                card.locText:SetText(string.format("|cff607065%s%s|r", cData.location or "Unknown", isCurrentPlayer and " (Online)" or (cData.isResting and " (Inn)" or "")))
                 
                 local maxL = (GetMaxPlayerLevel and GetMaxPlayerLevel()) or 60
                 if (cData.level or 1) >= maxL then
