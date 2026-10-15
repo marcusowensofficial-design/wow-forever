@@ -3,7 +3,7 @@
 ## Notes: Sleek, modern, high-performance enemy nameplates for WoW Forever.
 ## Category-enUS: Combat
 ## Author: Marcus & Antigravity
-## Version: 2.1.0
+## Version: 2.1.1
 ## SavedVariables: ForeverPlatesDB
 ## LoadSavedVariablesFirst: true
 ## OptionalDeps: Blizzard_NamePlates

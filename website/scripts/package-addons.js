@@ -159,5 +159,15 @@ fs.writeFileSync(manifestPath, JSON.stringify({
   addons: manifest
 }, null, 2));
 
+// 4. Purge obsolete archives not present in current manifest
+const activeZips = new Set([masterZipName, ...manifest.map(m => m.filename)]);
+for (const file of fs.readdirSync(DOWNLOADS_DIR)) {
+  if (file.endsWith('.zip') && !activeZips.has(file)) {
+    fs.unlinkSync(path.join(DOWNLOADS_DIR, file));
+    console.log(`   🗑️  Cleaned up obsolete archive: ${file}`);
+  }
+}
+
 console.log(`\n🎉 All ${manifest.length} addons + Master Suite packaged successfully!`);
 console.log(`Manifest saved to ${manifestPath}`);
+

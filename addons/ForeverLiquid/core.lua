@@ -190,11 +190,16 @@ FL.session = session
 -------------------------------------------------------------------------------
 local function IsSecretValue(val)
     if val == nil then return false end
+    if canaccessvalue and not canaccessvalue(val) then return true end
     if issecretvalue and issecretvalue(val) then return true end
-    if type(val) == "number" then
+    local t = type(val)
+    if t == "secret" or t == "secretvalue" or t == "secret number" or t == "secret string" then
+        return true
+    end
+    if t == "number" then
         local ok = pcall(function() return val > 0 end)
         return not ok
-    elseif type(val) == "string" then
+    elseif t == "string" then
         local ok = pcall(function() return val == "" end)
         return not ok
     end
@@ -777,7 +782,7 @@ function FL:GetManaTickStatus()
         return false, 0, 0
     end
     local powerType = (UnitPowerType and UnitPowerType("player")) or 0
-    if powerType ~= 0 and powerType ~= (Enum and Enum.PowerType and Enum.PowerType.Mana or 0) then
+    if IsSecretValue(powerType) or (powerType ~= 0 and powerType ~= (Enum and Enum.PowerType and Enum.PowerType.Mana or 0)) then
         return false, 0, 0
     end
     local curMana = (UnitPower and UnitPower("player", 0)) or 0
@@ -788,8 +793,14 @@ function FL:GetManaTickStatus()
     if IsSecretValue(maxMana) then
         return false, 0, 0
     end
-    maxMana = math.max(1, maxMana)
-    if curMana >= maxMana then
+    local isFull = false
+    local ok = pcall(function()
+        maxMana = math.max(1, maxMana)
+        if curMana >= maxMana then
+            isFull = true
+        end
+    end)
+    if not ok or isFull then
         return false, 0, 0
     end
     local inFSR = self:GetFSRStatus()
@@ -2813,7 +2824,15 @@ eventFrame:SetScript("OnEvent", function(self, event, ...)
                 if not IsSecretValue(curMana) then
                     local lastMana = session.lastManaVal or curMana
                     local now = GetTime()
-                    if not IsSecretValue(lastMana) and curMana > lastMana then
+                    local manaIncreased = false
+                    if not IsSecretValue(lastMana) then
+                        pcall(function()
+                            if curMana > lastMana then
+                                manaIncreased = true
+                            end
+                        end)
+                    end
+                    if manaIncreased then
                         local inFSR = FL:GetFSRStatus()
                         if not inFSR then
                             session.lastManaTick = now

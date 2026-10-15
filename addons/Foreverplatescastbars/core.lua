@@ -711,10 +711,14 @@ end
 -------------------------------------------------------------------------------
 local function IsSecret(val)
     if val == nil then return false end
+    if canaccessvalue and not canaccessvalue(val) then return true end
     if issecretvalue and issecretvalue(val) then return true end
     if issecret and issecret(val) then return true end
 
     local vType = type(val)
+    if vType == "secret" or vType == "secretvalue" or vType == "secret number" or vType == "secret string" then
+        return true
+    end
     if vType == "number" then
         local ok = pcall(function()
             local _ = val + 0
@@ -1239,11 +1243,49 @@ local function GetOrCreatePlateCastBar(unitFrame, plate, unit)
         local now = GetTime()
         if now >= cast.endTime then
             if not obj.isTest then
+                local still = false
+                if curUnit then
+                    pcall(function()
+                        if UnitCastingInfo(curUnit) or UnitChannelInfo(curUnit) then
+                            still = true
+                        end
+                    end)
+                end
+                if still and curUnit then
+                    local updatedData = GetSafeCastData(curUnit)
+                    if updatedData and updatedData.endTime > now then
+                        obj.activeCast = updatedData
+                        cast = updatedData
+                    else
+                        self:SetValue(cast.isChannel and 0 or 1)
+                        if CFG.showEnemyCastTimer then
+                            obj.timerText:SetFormattedText("%.1f", 0.0)
+                        end
+                        return
+                    end
+                else
+                    if not cast.holdEnd then
+                        cast.holdEnd = now + 0.15
+                    end
+                    if now >= cast.holdEnd then
+                        self:Hide()
+                        ih:Hide()
+                        obj.activeCast = nil
+                        return
+                    else
+                        self:SetValue(cast.isChannel and 0 or 1)
+                        if CFG.showEnemyCastTimer then
+                            obj.timerText:SetFormattedText("%.1f", 0.0)
+                        end
+                        return
+                    end
+                end
+            else
                 self:Hide()
                 ih:Hide()
                 obj.activeCast = nil
+                return
             end
-            return
         end
 
         local rem = cast.endTime - now
@@ -1688,8 +1730,10 @@ local function CreateSingleCastBar(unit)
     end
 
     anchor:SetScript("OnUpdate", function(self, elapsed)
-        if not obj.activeCast then return end
         local cast = obj.activeCast
+        if not cast then return end
+        if cast.interrupted then return end
+
         if cast.isSecret then
             -- On 12.0 Camelot, startMS and endMS are secret values on hostile enemies.
             -- Safely check if cast is still ongoing without arithmetic on secret numbers.
@@ -1712,10 +1756,47 @@ local function CreateSingleCastBar(unit)
 
         if now >= cast.endTime then
             if not obj.isTest then
+                local stillCasting = false
+                pcall(function()
+                    if UnitCastingInfo(unit) or UnitChannelInfo(unit) then
+                        stillCasting = true
+                    end
+                end)
+                if stillCasting then
+                    local updatedData = GetSafeCastData(unit)
+                    if updatedData and updatedData.endTime > now then
+                        obj.activeCast = updatedData
+                        cast = updatedData
+                    else
+                        statusBar:SetValue(cast.isChannel and 0 or 1)
+                        local U = unit:sub(1,1):upper() .. unit:sub(2)
+                        if CFG["show" .. U .. "Timer"] ~= false then
+                            timerText:SetFormattedText("%.1f", 0.0)
+                        end
+                        return
+                    end
+                else
+                    if not cast.holdEnd then
+                        cast.holdEnd = now + 0.15
+                    end
+                    if now >= cast.holdEnd then
+                        anchor:Hide()
+                        obj.activeCast = nil
+                        return
+                    else
+                        statusBar:SetValue(cast.isChannel and 0 or 1)
+                        local U = unit:sub(1,1):upper() .. unit:sub(2)
+                        if CFG["show" .. U .. "Timer"] ~= false then
+                            timerText:SetFormattedText("%.1f", 0.0)
+                        end
+                        return
+                    end
+                end
+            else
                 anchor:Hide()
                 obj.activeCast = nil
+                return
             end
-            return
         end
 
         local rem = cast.endTime - now
@@ -1829,9 +1910,21 @@ local function UpdateSingleCast(unit)
     obj.anchor:Show()
 end
 
-local function HideSingleCast(unit)
+local function HideSingleCast(unit, isInterrupted)
     local obj = singleBars[unit]
-    if obj then
+    if not obj then return end
+
+    if isInterrupted and obj.anchor:IsShown() and not obj.isTest then
+        obj.spellText:SetText("|cffff2020Interrupted!|r")
+        obj.statusBar:SetStatusBarColor(1.0, 0.15, 0.15, 1)
+        if obj.activeCast then obj.activeCast.interrupted = true end
+        C_Timer.After(0.4, function()
+            if obj.activeCast == nil or obj.activeCast.interrupted then
+                obj.anchor:Hide()
+                obj.activeCast = nil
+            end
+        end)
+    else
         obj.anchor:Hide()
         obj.activeCast = nil
     end
@@ -2294,7 +2387,7 @@ events:RegisterEvent("UNIT_SPELLCAST_DELAYED")
 events:RegisterEvent("UNIT_SPELLCAST_STOP")
 events:RegisterEvent("UNIT_SPELLCAST_FAILED")
 events:RegisterEvent("UNIT_SPELLCAST_INTERRUPTED")
-events:RegisterEvent("UNIT_SPELLCAST_SUCCEEDED")
+-- UNIT_SPELLCAST_SUCCEEDED intentionally omitted: instant abilities, trinkets, racials, and channel starts must not hide active casts
 events:RegisterEvent("UNIT_SPELLCAST_CHANNEL_START")
 events:RegisterEvent("UNIT_SPELLCAST_CHANNEL_UPDATE")
 events:RegisterEvent("UNIT_SPELLCAST_CHANNEL_STOP")
@@ -2305,7 +2398,7 @@ events:RegisterEvent("UNIT_SPELLCAST_EMPOWER_UPDATE")
 events:RegisterEvent("UNIT_SPELLCAST_EMPOWER_STOP")
 events:RegisterEvent("SPELL_UPDATE_COOLDOWN")
 
-events:SetScript("OnEvent", function(self, event, unit, ...)
+events:SetScript("OnEvent", function(self, event, unit, castGUID, spellID, ...)
     if event == "ADDON_LOADED" then
         local loadedName = unit
         if loadedName == ADDON_NAME or loadedName == "Foreverplatescastbars" or loadedName == "BetterCastBars" then
@@ -2396,12 +2489,27 @@ events:SetScript("OnEvent", function(self, event, unit, ...)
         if unit == "player" or unit == "target" or unit == "focus" then
             if event == "UNIT_SPELLCAST_START" or event == "UNIT_SPELLCAST_CHANNEL_START"
             or event == "UNIT_SPELLCAST_DELAYED" or event == "UNIT_SPELLCAST_CHANNEL_UPDATE"
-            or event == "UNIT_SPELLCAST_INTERRUPTIBLE" or event == "UNIT_SPELLCAST_NOT_INTERRUPTIBLE" then
+            or event == "UNIT_SPELLCAST_INTERRUPTIBLE" or event == "UNIT_SPELLCAST_NOT_INTERRUPTIBLE"
+            or event == "UNIT_SPELLCAST_EMPOWER_START" or event == "UNIT_SPELLCAST_EMPOWER_UPDATE" then
                 UpdateSingleCast(unit)
             elseif event == "UNIT_SPELLCAST_STOP" or event == "UNIT_SPELLCAST_CHANNEL_STOP"
-            or event == "UNIT_SPELLCAST_FAILED" or event == "UNIT_SPELLCAST_INTERRUPTED"
-            or event == "UNIT_SPELLCAST_SUCCEEDED" then
-                HideSingleCast(unit)
+            or event == "UNIT_SPELLCAST_EMPOWER_STOP" then
+                local obj = singleBars[unit]
+                if castGUID and obj and obj.activeCast and obj.activeCast.castGUID and castGUID ~= obj.activeCast.castGUID then
+                    return
+                end
+                local nextCast = GetSafeCastData(unit)
+                if nextCast then
+                    UpdateSingleCast(unit)
+                else
+                    HideSingleCast(unit, false)
+                end
+            elseif event == "UNIT_SPELLCAST_FAILED" or event == "UNIT_SPELLCAST_INTERRUPTED" then
+                local obj = singleBars[unit]
+                if castGUID and obj and obj.activeCast and obj.activeCast.castGUID and castGUID ~= obj.activeCast.castGUID then
+                    return
+                end
+                HideSingleCast(unit, event == "UNIT_SPELLCAST_INTERRUPTED")
             end
         elseif unit:match("^nameplate%d+$") then
             if event == "UNIT_SPELLCAST_START" or event == "UNIT_SPELLCAST_CHANNEL_START"
@@ -2413,8 +2521,13 @@ events:SetScript("OnEvent", function(self, event, unit, ...)
             elseif event == "UNIT_SPELLCAST_INTERRUPTIBLE" then
                 SetPlateCastShielded(unit, false)
             elseif event == "UNIT_SPELLCAST_STOP" or event == "UNIT_SPELLCAST_CHANNEL_STOP"
-            or event == "UNIT_SPELLCAST_SUCCEEDED" or event == "UNIT_SPELLCAST_EMPOWER_STOP" then
-                -- Check if an immediate next cast is already ongoing
+            or event == "UNIT_SPELLCAST_EMPOWER_STOP" then
+                local plate = GetSafeNamePlate(unit)
+                local uf = plate and (plate.UnitFrame or plate.unitFrame or plate)
+                local obj = uf and plateCastBars[uf]
+                if castGUID and obj and obj.activeCast and obj.activeCast.castGUID and castGUID ~= obj.activeCast.castGUID then
+                    return
+                end
                 local nextCast = GetSafeCastData(unit)
                 if nextCast then
                     UpdatePlateCast(unit)
@@ -2422,7 +2535,13 @@ events:SetScript("OnEvent", function(self, event, unit, ...)
                     HidePlateCast(unit, false)
                 end
             elseif event == "UNIT_SPELLCAST_FAILED" or event == "UNIT_SPELLCAST_INTERRUPTED" then
-                HidePlateCast(unit, true)
+                local plate = GetSafeNamePlate(unit)
+                local uf = plate and (plate.UnitFrame or plate.unitFrame or plate)
+                local obj = uf and plateCastBars[uf]
+                if castGUID and obj and obj.activeCast and obj.activeCast.castGUID and castGUID ~= obj.activeCast.castGUID then
+                    return
+                end
+                HidePlateCast(unit, event == "UNIT_SPELLCAST_INTERRUPTED")
             end
         end
     end

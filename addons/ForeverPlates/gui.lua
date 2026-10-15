@@ -203,7 +203,7 @@ function FP.CreateGUI()
     scrollFrameEnemy:SetPoint("BOTTOMRIGHT", f, "BOTTOMRIGHT", -32, 96)
 
     local contentEnemy = CreateFrame("Frame", "ForeverPlatesScrollChildEnemy", scrollFrameEnemy)
-    contentEnemy:SetSize(490, 1560)
+    contentEnemy:SetSize(490, 1720)
     scrollFrameEnemy:SetScrollChild(contentEnemy)
 
     local scrollFrameFriendly = CreateFrame("ScrollFrame", "ForeverPlatesScrollFrameFriendly", f, "UIPanelScrollFrameTemplate")
@@ -1037,59 +1037,86 @@ function FP.CreateGUI()
     CreateCheckbox(contentEnemy, "Show [Tagged] Indicator on Claimed Mobs", "showTappedBadge", cbStartY - (cbSpacing * 12), function()
         FP.RefreshAllPlates()
     end)
+    CreateCheckbox(contentEnemy, "Mouseover Highlight (Crisp 1px Hover Border)", "showMouseoverHighlight", cbStartY - (cbSpacing * 13))
+    CreateCheckbox(contentEnemy, "Focus Target Highlight (Electric Violet Beacon)", "showFocusTargetHighlight", cbStartY - (cbSpacing * 14), function()
+        FP.RefreshAllPlates()
+    end)
+    CreateCheckbox(contentEnemy, "Co-Tank Aggro Color (Steel Blue when Partner Tanks)", "colorByCoTank", cbStartY - (cbSpacing * 15), function()
+        FP.RefreshAllPlates()
+    end)
+    CreateCheckbox(contentEnemy, "Clamp Boss Nameplates to Screen Bounds", "clampTargetToScreen", cbStartY - (cbSpacing * 16), function(checked)
+        pcall(function()
+            if SetCVar then
+                SetCVar("nameplateTargetRadialPosition", checked and "1" or "0")
+            end
+        end)
+    end)
+    CreateCheckbox(contentEnemy, "Lock Distance Scale (Crisp 1px Borders at all Ranges)", "lockDistanceScale", cbStartY - (cbSpacing * 17), function(checked)
+        pcall(function()
+            if SetCVar then
+                if checked then
+                    SetCVar("nameplateMinScale", "1.0")
+                    SetCVar("nameplateMaxScale", "1.0")
+                else
+                    SetCVar("nameplateMinScale", "0.8")
+                    SetCVar("nameplateMaxScale", "1.0")
+                end
+            end
+        end)
+    end)
 
     -- Section 8: Sliders (Enemy Dimensions, Scaling, Depth)
     local sliderHeader = contentEnemy:CreateFontString(nil, "OVERLAY")
     sliderHeader:SetFont(DEFAULT_FONT, 11, "OUTLINE")
     sliderHeader:SetTextColor(0.00, 0.82, 1.00, 1)
-    sliderHeader:SetPoint("TOPLEFT", contentEnemy, "TOPLEFT", 10, -894)
+    sliderHeader:SetPoint("TOPLEFT", contentEnemy, "TOPLEFT", 10, -1014)
     sliderHeader:SetText("ENEMY DIMENSIONS, SCALING & DEPTH")
 
     -- Row 1: Health Bar Dimensions
-    CreateSlider(contentEnemy, "Bar Width", "barWidth", 80, 240, 2, "%s: %dpx", 10, -918, function()
+    CreateSlider(contentEnemy, "Bar Width", "barWidth", 80, 240, 2, "%s: %dpx", 10, -1038, function()
         FP.RefreshAllDimensions()
         FP.RefreshAllPlates()
     end)
-    CreateSlider(contentEnemy, "Bar Height", "barHeight", 8, 36, 1, "%s: %dpx", 256, -918, function()
+    CreateSlider(contentEnemy, "Bar Height", "barHeight", 8, 36, 1, "%s: %dpx", 256, -1038, function()
         FP.RefreshAllDimensions()
         FP.RefreshAllPlates()
     end)
 
     -- Row 2: Target Arrow Sizing & Thickness
-    CreateSlider(contentEnemy, "Target Arrow Size", "targetArrowSize", 18, 48, 2, "%s: %dpx", 10, -968, function()
+    CreateSlider(contentEnemy, "Target Arrow Size", "targetArrowSize", 18, 48, 2, "%s: %dpx", 10, -1088, function()
         FP.RefreshAllArrows()
         FP.RefreshAllPlates()
     end)
-    CreateSlider(contentEnemy, "Target Arrow Thickness", "targetArrowThickness", 0.50, 2.50, 0.05, "%s: %.0f%%", 256, -968, function()
+    CreateSlider(contentEnemy, "Target Arrow Thickness", "targetArrowThickness", 0.50, 2.50, 0.05, "%s: %.0f%%", 256, -1088, function()
         FP.RefreshAllArrows()
         FP.RefreshAllPlates()
     end)
 
     -- Row 3: Typography
-    CreateSlider(contentEnemy, "Name Font Size", "nameFontSize", 8, 20, 1, "%s: %dpt", 10, -1018, function()
+    CreateSlider(contentEnemy, "Name Font Size", "nameFontSize", 8, 20, 1, "%s: %dpt", 10, -1138, function()
         FP.RefreshAllFonts()
         FP.RefreshAllPlates()
     end)
-    CreateSlider(contentEnemy, "Health Text Font Size", "healthFontSize", 8, 28, 1, "%s: %dpx", 256, -1018, function()
+    CreateSlider(contentEnemy, "Health Text Font Size", "healthFontSize", 8, 28, 1, "%s: %dpx", 256, -1138, function()
         FP.RefreshAllPlates()
     end)
 
     -- Row 4: Opacity & Target Scale
-    CreateSlider(contentEnemy, "Non-Target Opacity", "nonTargetAlpha", 0.30, 1.00, 0.05, "%s: %.0f%%", 10, -1068)
-    CreateSlider(contentEnemy, "Target Scale", "targetScale", 1.00, 1.30, 0.02, "%s: %.2fx", 256, -1068)
+    CreateSlider(contentEnemy, "Non-Target Opacity", "nonTargetAlpha", 0.30, 1.00, 0.05, "%s: %.0f%%", 10, -1188)
+    CreateSlider(contentEnemy, "Target Scale", "targetScale", 1.00, 1.30, 0.02, "%s: %.2fx", 256, -1188)
 
     -- Row 5: Outline Thickness
-    CreateSlider(contentEnemy, "Outline Thickness", "outlineThickness", 1, 6, 1, "%s: %dpx", 10, -1118, function()
+    CreateSlider(contentEnemy, "Outline Thickness", "outlineThickness", 1, 6, 1, "%s: %dpx", 10, -1238, function()
         FP.RefreshAllOutlines()
         FP.RefreshAllPlates()
     end)
 
     -- Row 6: Level Text Nudge (Fine-tune text placement inside the unified level box)
-    CreateSlider(contentEnemy, "Level Text X Offset", "levelTextXOffset", -15, 15, 1, "%s: %+dpx", 10, -1168, function()
+    CreateSlider(contentEnemy, "Level Text X Offset", "levelTextXOffset", -15, 15, 1, "%s: %+dpx", 10, -1288, function()
         FP.RefreshAllDimensions()
         FP.RefreshAllPlates()
     end)
-    CreateSlider(contentEnemy, "Level Text Y Offset", "levelTextYOffset", -15, 15, 1, "%s: %+dpx", 256, -1168, function()
+    CreateSlider(contentEnemy, "Level Text Y Offset", "levelTextYOffset", -15, 15, 1, "%s: %+dpx", 256, -1288, function()
         FP.RefreshAllDimensions()
         FP.RefreshAllPlates()
     end)
@@ -1098,19 +1125,19 @@ function FP.CreateGUI()
     local debuffHeader = contentEnemy:CreateFontString(nil, "OVERLAY")
     debuffHeader:SetFont(DEFAULT_FONT, 11, "OUTLINE")
     debuffHeader:SetTextColor(0.00, 0.82, 1.00, 1)
-    debuffHeader:SetPoint("TOPLEFT", contentEnemy, "TOPLEFT", 10, -1218)
+    debuffHeader:SetPoint("TOPLEFT", contentEnemy, "TOPLEFT", 10, -1338)
     debuffHeader:SetText("ENEMY DEBUFF DISPLAY & SIZING")
 
     local debuffSub = contentEnemy:CreateFontString(nil, "OVERLAY")
     debuffSub:SetFont(DEFAULT_FONT, 10, "")
     debuffSub:SetTextColor(0.65, 0.70, 0.75, 1)
-    debuffSub:SetPoint("TOPLEFT", contentEnemy, "TOPLEFT", 10, -1236)
+    debuffSub:SetPoint("TOPLEFT", contentEnemy, "TOPLEFT", 10, -1356)
     debuffSub:SetText("Positions enemy debuffs directly underneath the health bar (or cast bar), flush with the left border.")
 
     -- Test Enemy Plate Toggle Button
     local testBtn = CreateFrame("Button", nil, contentEnemy)
     testBtn:SetSize(220, 26)
-    testBtn:SetPoint("TOPLEFT", contentEnemy, "TOPLEFT", 10, -1258)
+    testBtn:SetPoint("TOPLEFT", contentEnemy, "TOPLEFT", 10, -1378)
     local testBtnBg = testBtn:CreateTexture(nil, "BACKGROUND")
     testBtnBg:SetAllPoints(testBtn)
     testBtnBg:SetTexture(FLAT_TEXTURE)
@@ -1134,47 +1161,53 @@ function FP.CreateGUI()
     end)
 
     -- Row 1: Size & Outline Thickness
-    CreateSlider(contentEnemy, "Enemy Debuff Size", "debuffSize", 10, 40, 1, "%s: %dpx", 10, -1296, function()
+    CreateSlider(contentEnemy, "Enemy Debuff Size", "debuffSize", 10, 40, 1, "%s: %dpx", 10, -1416, function()
         FP.RefreshAllPlates()
         if FP.UpdateTestPlate then FP.UpdateTestPlate() end
     end)
-    CreateSlider(contentEnemy, "Debuff Outline Thickness", "debuffOutlineThickness", 1, 5, 1, "%s: %dpx", 256, -1296, function()
+    CreateSlider(contentEnemy, "Debuff Outline Thickness", "debuffOutlineThickness", 1, 5, 1, "%s: %dpx", 256, -1416, function()
         FP.RefreshAllPlates()
         if FP.UpdateTestPlate then FP.UpdateTestPlate() end
     end)
 
     -- Row 2: X Offset & Y Offset
-    CreateSlider(contentEnemy, "Debuff X Offset (Nudge Left/Right)", "debuffXOffset", -40, 40, 1, "%s: %+dpx", 10, -1346, function()
+    CreateSlider(contentEnemy, "Debuff X Offset (Nudge Left/Right)", "debuffXOffset", -40, 40, 1, "%s: %+dpx", 10, -1466, function()
         FP.RefreshAllPlates()
         if FP.UpdateTestPlate then FP.UpdateTestPlate() end
     end)
-    CreateSlider(contentEnemy, "Debuff Y Offset (Nudge Up/Down)", "debuffYOffset", -30, 30, 1, "%s: %+dpx", 256, -1346, function()
+    CreateSlider(contentEnemy, "Debuff Y Offset (Nudge Up/Down)", "debuffYOffset", -30, 30, 1, "%s: %+dpx", 256, -1466, function()
         FP.RefreshAllPlates()
         if FP.UpdateTestPlate then FP.UpdateTestPlate() end
     end)
 
     -- Row 3: Spacing & Timer Font Size
-    CreateSlider(contentEnemy, "Debuff Spacing", "debuffSpacing", 0, 12, 1, "%s: %dpx", 10, -1396, function()
+    CreateSlider(contentEnemy, "Debuff Spacing", "debuffSpacing", 0, 12, 1, "%s: %dpx", 10, -1516, function()
         FP.RefreshAllPlates()
         if FP.UpdateTestPlate then FP.UpdateTestPlate() end
     end)
-    CreateSlider(contentEnemy, "Debuff Timer Font Size", "debuffDurationFontSize", 6, 24, 1, "%s: %dpx", 256, -1396, function()
+    CreateSlider(contentEnemy, "Debuff Timer Font Size", "debuffDurationFontSize", 6, 24, 1, "%s: %dpx", 256, -1516, function()
         FP.RefreshAllPlates()
         if FP.UpdateTestPlate then FP.UpdateTestPlate() end
     end)
 
     -- Row 4: Timer X & Y Offsets
-    CreateSlider(contentEnemy, "Debuff Timer X Offset", "debuffDurationXOffset", -30, 30, 1, "%s: %+dpx", 10, -1446, function()
+    CreateSlider(contentEnemy, "Debuff Timer X Offset", "debuffDurationXOffset", -30, 30, 1, "%s: %+dpx", 10, -1566, function()
         FP.RefreshAllPlates()
         if FP.UpdateTestPlate then FP.UpdateTestPlate() end
     end)
-    CreateSlider(contentEnemy, "Debuff Timer Y Offset", "debuffDurationYOffset", -30, 30, 1, "%s: %+dpx", 256, -1446, function()
+    CreateSlider(contentEnemy, "Debuff Timer Y Offset", "debuffDurationYOffset", -30, 30, 1, "%s: %+dpx", 256, -1566, function()
         FP.RefreshAllPlates()
         if FP.UpdateTestPlate then FP.UpdateTestPlate() end
     end)
 
     -- Wrap Checkbox
-    CreateCheckbox(contentEnemy, "Wrap Debuffs to Second Row (Underneath Bar)", "debuffWrap", -1490, function()
+    CreateCheckbox(contentEnemy, "Wrap Debuffs to Second Row (Underneath Bar)", "debuffWrap", -1610, function()
+        FP.RefreshAllPlates()
+        if FP.UpdateTestPlate then FP.UpdateTestPlate() end
+    end)
+
+    -- Player Debuffs Only Checkbox
+    CreateCheckbox(contentEnemy, "Only Show My Debuffs in Group / Raid", "onlyShowPlayerDebuffs", -1634, function()
         FP.RefreshAllPlates()
         if FP.UpdateTestPlate then FP.UpdateTestPlate() end
     end)

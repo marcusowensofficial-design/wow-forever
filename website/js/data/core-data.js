@@ -3029,7 +3029,7 @@ const WOW_FOREVER_DATA = {
     },
     {
       "id": "step-18",
-      "text": "Equip & configure ForeverLiquid (v1.3.0) HUD to track XP velocity, Mount Fund ETA & 5/hr lockouts",
+      "text": "Equip & configure ForeverLiquid (v1.3.1) HUD to track XP velocity, Mount Fund ETA & 5/hr lockouts",
       "cat": "Addons & Tools"
     },
     {

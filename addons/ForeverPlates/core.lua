@@ -238,6 +238,12 @@ local defaults = {
     executeThreshold = 20,
     colorByThreat = true,
     threatOnlyInGroup = true,
+    colorByCoTank = true,
+    onlyShowPlayerDebuffs = true,
+    showMouseoverHighlight = true,
+    showFocusTargetHighlight = true,
+    clampTargetToScreen = true,
+    lockDistanceScale = true,
     showEliteBadges = true,
     showCastBarTimer = true,
     classColorPlayers = true,
@@ -362,6 +368,13 @@ local function InitializeDatabase()
             SetCVar("nameplateOverlapH", "0.8")
             SetCVar("nameplateOverlapV", "1.1")
             SetCVar("nameplateSelectedScale", "1.15")
+            if ForeverPlatesDB.lockDistanceScale ~= false then
+                SetCVar("nameplateMinScale", "1.0")
+                SetCVar("nameplateMaxScale", "1.0")
+            end
+            if ForeverPlatesDB.clampTargetToScreen ~= false then
+                SetCVar("nameplateTargetRadialPosition", "1")
+            end
             -- ForeverPlates renders its own custom health text directly on the health bar.
             -- Keep Blizzard's native statusText disabled so it never renders rogue text
             -- above the health bar or over the unit name.
@@ -406,6 +419,8 @@ local COLOR_TARGET_CYAN    = { r = 0.00, g = 0.85, b = 1.00, a = 0.95 } -- Glowi
 local COLOR_EXECUTE        = { r = 1.00, g = 0.30, b = 0.05, a = 0.95 } -- Fiery Orange/Red
 local COLOR_THREAT_WARNING = { r = 1.00, g = 0.60, b = 0.00 } -- Warm Amber/Orange (Losing aggro or high threat)
 local COLOR_THREAT_LOST    = { r = 0.95, g = 0.15, b = 0.15 } -- Blood Red (Lost aggro / mob on party member)
+local COLOR_THREAT_COTANK  = { r = 0.20, g = 0.62, b = 0.90 } -- Ice Steel Blue (Co-Tank safely holding aggro)
+local COLOR_FOCUS_VIOLET   = { r = 0.80, g = 0.35, b = 1.00, a = 0.95 } -- Electric Violet (Focus target beacon)
 -------------------------------------------------------------------------------
 -- Runtime Health Text Capability State (WoW Forever Beta Safe)
 -------------------------------------------------------------------------------
@@ -1833,6 +1848,7 @@ local function CollectAuraButtons(unitFrame, isFriendly)
             if SafeIsTrue(b.isBuff) and SafeIsFalse(b.isHarmful) and not SafeIsTrue(b.isDebuff) and not (b.DebuffBorder and b.DebuffBorder.IsShown and b.DebuffBorder:IsShown()) then
                 return
             end
+            local isPlayerDebuff = nil
             if not IsSecret(b.auraInstanceID) and b.auraInstanceID ~= nil and C_UnitAuras and C_UnitAuras.GetAuraDataByAuraInstanceID then
                 if unit and UnitExists(unit) then
                     local ok, aura = pcall(C_UnitAuras.GetAuraDataByAuraInstanceID, unit, b.auraInstanceID)
@@ -1840,7 +1856,19 @@ local function CollectAuraButtons(unitFrame, isFriendly)
                         if SafeIsTrue(aura.isHelpful) and SafeIsFalse(aura.isHarmful) then
                             return
                         end
+                        if aura.sourceUnit == "player" or aura.sourceUnit == "pet" or aura.isBossAura or aura.isRaidBossDebuff then
+                            isPlayerDebuff = true
+                        else
+                            isPlayerDebuff = false
+                        end
                     end
+                end
+            end
+            if ForeverPlatesDB and ForeverPlatesDB.onlyShowPlayerDebuffs and (IsInGroup() or IsInRaid()) then
+                if b.isPlayerAura == true or b.isMine == true or b.sourceUnit == "player" or b.sourceUnit == "pet" then
+                    -- explicitly marked as player aura
+                elseif isPlayerDebuff == false then
+                    return
                 end
             end
         end
@@ -2794,6 +2822,9 @@ local function UpdateNameTypography(unitFrame, passedUnit)
     local isTapped = unit and IsUnitTappedByOther(unit)
     local baseName = (unit and UnitExists(unit) and UnitName(unit)) or (unitFrame.name and unitFrame.name:GetText())
     if baseName then
+        if not (issecretvalue and issecretvalue(baseName)) and Ambiguate then
+            baseName = Ambiguate(baseName, "none")
+        end
         local displayName = baseName
         local isSecretName = (issecretvalue and issecretvalue(baseName))
         if not isSecretName then
@@ -2985,8 +3016,21 @@ local function GetDesiredHealthBarColor(unitFrame, passedUnit)
                     -- Tank losing aggro: turn Yellow / Orange
                     r, g, b = COLOR_THREAT_WARNING.r, COLOR_THREAT_WARNING.g, COLOR_THREAT_WARNING.b
                 elseif threatStatus == 0 then
-                    -- Tank lost aggro completely: turn Blood Red
-                    r, g, b = COLOR_THREAT_LOST.r, COLOR_THREAT_LOST.g, COLOR_THREAT_LOST.b
+                    -- Tank lost aggro: Check if mob is being held by a co-tank in party/raid
+                    local isHeldByCoTank = false
+                    if ForeverPlatesDB.colorByCoTank ~= false and (IsInGroup() or IsInRaid()) then
+                        local mobTarget = unit and (unit .. "target")
+                        if mobTarget and UnitExists(mobTarget) and not UnitIsUnit(mobTarget, "player") and UnitIsFriend("player", mobTarget) then
+                            if UnitGroupRolesAssigned and UnitGroupRolesAssigned(mobTarget) == "TANK" then
+                                isHeldByCoTank = true
+                            end
+                        end
+                    end
+                    if isHeldByCoTank then
+                        r, g, b = COLOR_THREAT_COTANK.r, COLOR_THREAT_COTANK.g, COLOR_THREAT_COTANK.b
+                    else
+                        r, g, b = COLOR_THREAT_LOST.r, COLOR_THREAT_LOST.g, COLOR_THREAT_LOST.b
+                    end
                 end
             else
                 -- DPS / Healer role
@@ -3001,8 +3045,21 @@ local function GetDesiredHealthBarColor(unitFrame, passedUnit)
                 end
             end
         elseif isEnemy and IsPlayerTank() and UnitAffectingCombat and UnitAffectingCombat(unit) and (IsInGroup() or IsInRaid()) then
-            -- Mob in combat with group but tank has 0 threat / hasn't hit yet: turn Red
-            r, g, b = COLOR_THREAT_LOST.r, COLOR_THREAT_LOST.g, COLOR_THREAT_LOST.b
+            -- Mob in combat with group but tank has 0 threat / hasn't hit yet
+            local isHeldByCoTank = false
+            if ForeverPlatesDB.colorByCoTank ~= false then
+                local mobTarget = unit and (unit .. "target")
+                if mobTarget and UnitExists(mobTarget) and not UnitIsUnit(mobTarget, "player") and UnitIsFriend("player", mobTarget) then
+                    if UnitGroupRolesAssigned and UnitGroupRolesAssigned(mobTarget) == "TANK" then
+                        isHeldByCoTank = true
+                    end
+                end
+            end
+            if isHeldByCoTank then
+                r, g, b = COLOR_THREAT_COTANK.r, COLOR_THREAT_COTANK.g, COLOR_THREAT_COTANK.b
+            else
+                r, g, b = COLOR_THREAT_LOST.r, COLOR_THREAT_LOST.g, COLOR_THREAT_LOST.b
+            end
         end
     end
 
@@ -3024,12 +3081,17 @@ local function LogHookCall(unitFrame, hookType, inR, inG, inB, outR, outG, outB)
         lastLogTime = now
         local unit = unitFrame and (unitFrame.unit or (plates[unitFrame] and plates[unitFrame].unit)) or "target"
         local unitName = (unit and UnitName and UnitName(unit)) or "Enemy"
+        local function SafeFormatNum(val)
+            if not val or IsSecret(val) then return "<sec>" end
+            local ok, s = pcall(string.format, "%.2f", val)
+            return ok and s or "<sec>"
+        end
         local msg = string.format(
-            "|cff00c0ff[FP Color Hook #%d]|r %s on '%s' (Blizz: %.2f, %.2f, %.2f -> Reasserted: %.2f, %.2f, %.2f)",
+            "|cff00c0ff[FP Color Hook #%d]|r %s on '%s' (Blizz: %s, %s, %s -> Reasserted: %.2f, %.2f, %.2f)",
             hookCallCount,
             tostring(hookType),
             tostring(unitName),
-            inR or 0, inG or 0, inB or 0,
+            SafeFormatNum(inR), SafeFormatNum(inG), SafeFormatNum(inB),
             outR or 0, outG or 0, outB or 0
         )
         if DEFAULT_CHAT_FRAME and DEFAULT_CHAT_FRAME.AddMessage then
@@ -3066,7 +3128,17 @@ local function HookHealthBar(unitFrame)
 
         local desR, desG, desB = GetDesiredHealthBarColor(unitFrame)
         if desR and desG and desB then
-            if math.abs((r or 0) - desR) > 0.01 or math.abs((g or 0) - desG) > 0.01 or math.abs((b or 0) - desB) > 0.01 then
+            local isDiff = false
+            if IsSecret(r) or IsSecret(g) or IsSecret(b) then
+                isDiff = true
+            else
+                local okMath, diff = pcall(function()
+                    return math.abs((r or 0) - desR) > 0.01 or math.abs((g or 0) - desG) > 0.01 or math.abs((b or 0) - desB) > 0.01
+                end)
+                isDiff = okMath and diff
+            end
+
+            if isDiff then
                 if InCombatLockdown() then
                     C_Timer.After(0, function()
                         if self and not (self.IsForbidden and self:IsForbidden()) then
@@ -3095,7 +3167,17 @@ local function HookHealthBar(unitFrame)
 
             local desR, desG, desB = GetDesiredHealthBarColor(unitFrame)
             if desR and desG and desB then
-                if math.abs((r or 0) - desR) > 0.01 or math.abs((g or 0) - desG) > 0.01 or math.abs((b or 0) - desB) > 0.01 then
+                local isDiff = false
+                if IsSecret(r) or IsSecret(g) or IsSecret(b) then
+                    isDiff = true
+                else
+                    local okMath, diff = pcall(function()
+                        return math.abs((r or 0) - desR) > 0.01 or math.abs((g or 0) - desG) > 0.01 or math.abs((b or 0) - desB) > 0.01
+                    end)
+                    isDiff = okMath and diff
+                end
+
+                if isDiff then
                     if InCombatLockdown() then
                         C_Timer.After(0, function()
                             if self and not (self.IsForbidden and self:IsForbidden()) then
@@ -3773,6 +3855,35 @@ local function StyleNamePlate(unitFrame)
     glow:SetShown(false)
     data.targetGlow = glow
 
+    -- 4b. Focus Glow Highlight (2px electric violet outer border)
+    local fGlow = CreatePixelBorder(healthBar, 2)
+    fGlow:SetColor(COLOR_FOCUS_VIOLET.r, COLOR_FOCUS_VIOLET.g, COLOR_FOCUS_VIOLET.b, COLOR_FOCUS_VIOLET.a)
+    fGlow:SetShown(false)
+    data.focusGlow = fGlow
+
+    -- 4c. Mouseover Highlight (1px crisp pure white border)
+    local moBorder = CreatePixelBorder(healthBar, 1, "OVERLAY", 7)
+    moBorder:SetColor(1.0, 1.0, 1.0, 0.85)
+    moBorder:SetShown(false)
+    data.mouseoverBorder = moBorder
+
+    if unitFrame.HookScript and not unitFrame.FPMouseoverHooked then
+        unitFrame.FPMouseoverHooked = true
+        unitFrame:HookScript("OnEnter", function(self)
+            if ForeverPlatesDB.showMouseoverHighlight and plates[self] and plates[self].mouseoverBorder then
+                local u = GetUnitForFrame(self) or self.unit
+                if not (u and UnitIsUnit(u, "target")) then
+                    plates[self].mouseoverBorder:SetShown(true)
+                end
+            end
+        end)
+        unitFrame:HookScript("OnLeave", function(self)
+            if plates[self] and plates[self].mouseoverBorder then
+                plates[self].mouseoverBorder:SetShown(false)
+            end
+        end)
+    end
+
     -- 5. Execute Range Glow (Fiery Orange/Red 2px outer border)
     local exGlow = CreatePixelBorder(healthBar, 2)
     exGlow:SetColor(COLOR_EXECUTE.r, COLOR_EXECUTE.g, COLOR_EXECUTE.b, COLOR_EXECUTE.a)
@@ -4355,9 +4466,26 @@ local function UpdateUnitHealthAndColors(unitFrame, passedUnit)
     if d and d.executeGlow then
         local shouldGlow = false
         if ForeverPlatesDB.showExecuteGlow and unit and UnitExists(unit) and not UnitIsDead(unit) and not UnitIsFriend("player", unit) then
-            local pct = GetSafeHealthPercent(unit)
+            local pct = GetSafeHealthPercent(unit, unitFrame)
             if pct and pct <= (ForeverPlatesDB.executeThreshold or 20) then
                 shouldGlow = true
+            elseif unit == "target" or UnitIsUnit(unit, "target") then
+                -- Secret Value Fallback: Check if class execute abilities are currently usable
+                if C_Spell and C_Spell.IsSpellUsable then
+                    local ok, isUsable = pcall(C_Spell.IsSpellUsable, 5308) -- Warrior Execute
+                    if not (ok and isUsable) then
+                        ok, isUsable = pcall(C_Spell.IsSpellUsable, 24275) -- Paladin Hammer of Wrath
+                    end
+                    if not (ok and isUsable) then
+                        ok, isUsable = pcall(C_Spell.IsSpellUsable, 32379) -- Priest SW:Death
+                    end
+                    if not (ok and isUsable) then
+                        ok, isUsable = pcall(C_Spell.IsSpellUsable, 53351) -- Hunter Kill Shot
+                    end
+                    if ok and isUsable then
+                        shouldGlow = true
+                    end
+                end
             end
         end
         d.executeGlow:SetShown(shouldGlow)
@@ -4522,11 +4650,22 @@ local function UpdateTargetState(unitFrame, passedUnit)
         if not InCombatLockdown() then
             unitFrame:SetAlpha(1.0)
         end
+        if d and d.focusGlow then d.focusGlow:SetShown(false) end
+        if d and d.mouseoverBorder then d.mouseoverBorder:SetShown(false) end
     else
         if d and d.targetGlow then d.targetGlow:SetShown(false) end
         if d and d.bracketLeft then d.bracketLeft:Hide() end
         if d and d.bracketRight then d.bracketRight:Hide() end
         if d and d.targetArrow then d.targetArrow:Hide() end
+
+        if d and d.focusGlow then
+            local isFocus = unit and UnitIsUnit(unit, "focus")
+            d.focusGlow:SetShown(isFocus == true and ForeverPlatesDB.showFocusTargetHighlight == true)
+        end
+        if d and d.mouseoverBorder and ForeverPlatesDB.showMouseoverHighlight then
+            local isMouseover = unit and UnitExists(unit) and UnitIsUnit(unit, "mouseover")
+            d.mouseoverBorder:SetShown(isMouseover == true)
+        end
 
         if not InCombatLockdown() then
             if hasTarget then
@@ -4607,14 +4746,15 @@ eventFrame:RegisterEvent("PLAYER_REGEN_DISABLED")
 eventFrame:RegisterEvent("PLAYER_REGEN_ENABLED")
 eventFrame:RegisterEvent("UNIT_AURA")
 eventFrame:RegisterEvent("CVAR_UPDATE")
+eventFrame:RegisterEvent("UPDATE_MOUSEOVER_UNIT")
 
-local HEALTH_TEXT_REFRESH_INTERVAL = 0.10
-local healthTextRefreshElapsed = 0
+local PERIODIC_REFRESH_INTERVAL = 0.50
+local periodicRefreshElapsed = 0
 
 eventFrame:SetScript("OnUpdate", function(_, elapsed)
-    healthTextRefreshElapsed = healthTextRefreshElapsed + (elapsed or 0)
-    if healthTextRefreshElapsed < HEALTH_TEXT_REFRESH_INTERVAL then return end
-    healthTextRefreshElapsed = 0
+    periodicRefreshElapsed = periodicRefreshElapsed + (elapsed or 0)
+    if periodicRefreshElapsed < PERIODIC_REFRESH_INTERVAL then return end
+    periodicRefreshElapsed = 0
 
     if not C_NamePlate or not C_NamePlate.GetNamePlates then return end
 
@@ -4629,13 +4769,6 @@ eventFrame:SetScript("OnUpdate", function(_, elapsed)
                 if unit and UnitExists(unit) then
                     if not ShouldShowFriendlyNameplate(unit) then
                         HideFriendlyPlate(uf, unit)
-                    else
-                        if ForeverPlatesDB and ForeverPlatesDB.showHealthText and ForeverPlatesDB.healthFormat ~= "NONE" then
-                            UpdateHealthText(uf, unit)
-                        end
-                        if AdjustAuraFrames then
-                            AdjustAuraFrames(uf)
-                        end
                     end
                 end
             end
@@ -4827,6 +4960,21 @@ eventFrame:SetScript("OnEvent", function(self, event, ...)
                 RefreshAllPlates()
             elseif cvarLower:find("nameplate") or cvarLower:find("friend") or cvarLower:find("unitname") then
                 RefreshAllPlates()
+            end
+        end
+    elseif event == "UPDATE_MOUSEOVER_UNIT" then
+        if ForeverPlatesDB.showMouseoverHighlight then
+            local nameplates = C_NamePlate.GetNamePlates and C_NamePlate.GetNamePlates()
+            if nameplates then
+                for _, np in ipairs(nameplates) do
+                    local uf = np.UnitFrame
+                    local d = uf and plates[uf]
+                    if d and d.mouseoverBorder then
+                        local unit = GetUnitForFrame(uf) or np.namePlateUnitToken
+                        local isMouseover = unit and UnitExists(unit) and UnitIsUnit(unit, "mouseover") and not UnitIsUnit(unit, "target")
+                        d.mouseoverBorder:SetShown(isMouseover == true)
+                    end
+                end
             end
         end
     elseif event == "PLAYER_REGEN_ENABLED" then
