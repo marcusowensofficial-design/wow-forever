@@ -233,6 +233,10 @@ h1, h2, h3, h4, .font-heading {
   border-radius: var(--radius-sm);
   font-size: 0.75rem;
   font-weight: 700;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
 }
 
 /* Header & Brand */
@@ -464,6 +468,8 @@ h1, h2, h3, h4, .font-heading {
   overflow: hidden;
   backdrop-filter: blur(12px);
   transition: var(--transition);
+  display: flex;
+  flex-direction: column;
 }
 
 .countdown-card:hover {
@@ -545,6 +551,80 @@ h1, h2, h3, h4, .font-heading {
   margin-top: 0.25rem;
 }
 
+/* Phase Feature Highlights Grid (2x2 layout for live phase overview) */
+.phase-features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.45rem;
+  margin: 0.85rem 0 0.75rem;
+}
+
+.phase-feature-box {
+  border-radius: var(--radius-sm);
+  padding: 0.42rem 0.4rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid transparent;
+  transition: var(--transition);
+}
+
+.phase-feature-box:hover {
+  transform: translateY(-1px);
+}
+
+.phase-feature-box.feat-cap {
+  background: rgba(16, 185, 129, 0.15);
+  border-color: rgba(16, 185, 129, 0.35);
+}
+.phase-feature-box.feat-cap .phase-feature-val { color: #6ee7b7; }
+.phase-feature-box.feat-cap .phase-feature-lbl { color: #a7f3d0; }
+
+.phase-feature-box.feat-dungeon {
+  background: rgba(59, 130, 246, 0.15);
+  border-color: rgba(59, 130, 246, 0.35);
+}
+.phase-feature-box.feat-dungeon .phase-feature-val { color: #93c5fd; }
+.phase-feature-box.feat-dungeon .phase-feature-lbl { color: #bfdbfe; }
+
+.phase-feature-box.feat-pvp {
+  background: rgba(239, 68, 68, 0.15);
+  border-color: rgba(239, 68, 68, 0.35);
+}
+.phase-feature-box.feat-pvp .phase-feature-val { color: #fca5a5; }
+.phase-feature-box.feat-pvp .phase-feature-lbl { color: #fecaca; }
+
+.phase-feature-box.feat-prof {
+  background: rgba(245, 158, 11, 0.15);
+  border-color: rgba(245, 158, 11, 0.35);
+}
+.phase-feature-box.feat-prof .phase-feature-val { color: #fde68a; }
+.phase-feature-box.feat-prof .phase-feature-lbl { color: #fef3c7; }
+
+.phase-feature-val {
+  font-family: var(--font-heading);
+  font-size: 0.92rem;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  display: block;
+  white-space: nowrap;
+}
+
+.phase-feature-lbl {
+  font-size: 0.63rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin-top: 0.2rem;
+  display: block;
+  white-space: nowrap;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .countdown-footer {
   font-size: 0.82rem;
   color: var(--text-muted);
@@ -553,6 +633,8 @@ h1, h2, h3, h4, .font-heading {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 0.5rem;
+  margin-top: auto;
 }
 
 /* ==========================================================================
