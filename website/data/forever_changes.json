@@ -8,13 +8,13 @@
       "heroDesc": "Every World of Warcraft: Forever talent and spell change, compared with Classic: 113 new talents, 300 changed talents and 261 changed spells across the nine classes. Pick a class to read its changes.",
       "races": [],
       "stats": {
-        "allChanges": 759,
+        "allChanges": 761,
         "talentsChanged": 299,
         "talentsNew": 116,
         "talentsRemoved": 81,
-        "spellsChanged": 263,
-        "spellsTotal": 419,
-        "everything": 966
+        "spellsChanged": 265,
+        "spellsTotal": 420,
+        "everything": 967
       }
     },
     "warrior": {
@@ -188,11 +188,11 @@
         }
       ],
       "stats": {
-        "allChanges": 76,
+        "allChanges": 77,
         "talentsChanged": 28,
         "talentsNew": 14,
         "talentsRemoved": 10,
-        "spellsChanged": 24,
+        "spellsChanged": 25,
         "spellsTotal": 49,
         "everything": 109
       }
@@ -254,13 +254,13 @@
         }
       ],
       "stats": {
-        "allChanges": 68,
+        "allChanges": 69,
         "talentsChanged": 38,
         "talentsNew": 6,
         "talentsRemoved": 0,
-        "spellsChanged": 24,
-        "spellsTotal": 50,
-        "everything": 105
+        "spellsChanged": 25,
+        "spellsTotal": 51,
+        "everything": 106
       }
     },
     "rogue": {
@@ -34146,7 +34146,7 @@
       "icon": "spell_fire_sealoffire",
       "reported_change_kind": "renamed",
       "spellbook_status": "renamed",
-      "summary": "Called Fire Nova Totem in Classic. Strikes from active Fire totem on a 10s cooldown with revised scaling.",
+      "summary": "Strikes from active Fire totem on a 10s cooldown. Spell Power coefficient changed to 0.143 (was 0.214); base damage and mana cost significantly reduced.",
       "order": 106,
       "evidence_status": "client_data",
       "rank_texts": {
@@ -34186,7 +34186,10 @@
         }
       ],
       "uncertainties": [],
-      "discovered_at": "2026-10-10"
+      "discovered_at": "2026-10-10",
+      "changes": [
+        "Spell Power coefficient adjusted to 0.143 (was 0.214) with reduced base damage and mana cost"
+      ]
     },
     {
       "id": "warlock-bane-of-doom",
@@ -34293,7 +34296,7 @@
       "icon": "spell_holy_innerfire",
       "reported_change_kind": "baseline",
       "spellbook_status": "baseline",
-      "summary": "A Holy talent in Classic; trained without one now. Rank 5: Numbers and wording changed.",
+      "summary": "Trained without a talent from level 20. Consecration Spell Power coefficient per tick adjusted to 0.042 (was 0.095).",
       "order": 206,
       "evidence_status": "client_data",
       "rank_texts": {
@@ -34333,7 +34336,10 @@
         }
       ],
       "uncertainties": [],
-      "discovered_at": "2026-10-10"
+      "discovered_at": "2026-10-10",
+      "changes": [
+        "Spell Power coefficient per tick adjusted to 0.042 (was 0.095)"
+      ]
     },
     {
       "id": "spellbook-warrior-tactical-mastery",
@@ -34777,7 +34783,7 @@
       "icon": "ability_warrior_decisivestrike",
       "reported_change_kind": "earlier",
       "spellbook_status": "earlier",
-      "summary": "Ranks 1 to 4 trained earlier than in Classic. Rank 5 new (Classic stops at rank 4). Rank 4: Cooldown 18 sec instead of none; 68 instead of 87.",
+      "summary": "Slam is no longer subject to spell pushback. Ranks 1 to 4 trained earlier than in Classic. Rank 5 new.",
       "order": 403,
       "evidence_status": "client_data",
       "rank_texts": {
@@ -34816,7 +34822,10 @@
         }
       ],
       "uncertainties": [],
-      "discovered_at": "2026-10-10"
+      "discovered_at": "2026-10-10",
+      "changes": [
+        "Slam is no longer subject to spell pushback"
+      ]
     },
     {
       "id": "spellbook-warrior-berserker-rage",
@@ -43866,7 +43875,7 @@
       "icon": "spell_shadow_vampiricaura",
       "reported_change_kind": "modified",
       "spellbook_status": "changed",
-      "summary": "Rank 5: 155% instead of 225%.",
+      "summary": "Rank 1 learned at level 20 (was 22) to align with Shredding Attacks. Rank 5: 155% instead of 225%.",
       "order": 513,
       "evidence_status": "client_data",
       "rank_texts": {
@@ -43906,7 +43915,10 @@
         }
       ],
       "uncertainties": [],
-      "discovered_at": "2026-10-10"
+      "discovered_at": "2026-10-10",
+      "changes": [
+        "Rank 1 learned at level 20 (was level 22)"
+      ]
     },
     {
       "id": "spellbook-paladin-blessing-of-light",
@@ -45837,9 +45849,9 @@
       "kind": "spell",
       "tree_name": "Marksmanship",
       "icon": "ability_whirlwind",
-      "reported_change_kind": "unchanged",
+      "reported_change_kind": "modified",
       "spellbook_status": "same",
-      "summary": "Same as Classic.",
+      "summary": "Requires standing still for 0.5s before shooting, matching early versions of World of Warcraft.",
       "order": 600,
       "evidence_status": "client_data",
       "rank_texts": {
@@ -45871,7 +45883,11 @@
         }
       ],
       "uncertainties": [],
-      "discovered_at": "2026-10-10"
+      "discovered_at": "2026-10-10",
+      "changes": [
+        "Requires standing still for 0.5s before shooting",
+        "Added Auto Attack/Auto Shot toggle setting"
+      ]
     },
     {
       "id": "spellbook-rogue-sinister-strike",
@@ -52997,6 +53013,39 @@
         "1": "Free, 30 yd range, Instant. Instantly removes the Salvation effect from the target party or raid member."
       },
       "max_rank": null,
+      "classic": {
+        "status": "absent"
+      },
+      "sources": [
+        {
+          "url": "https://wago.tools/db2/SkillLineAbility?build=1.60.1.70425",
+          "title": "WoW Forever beta client, build 1.60.1.70425",
+          "type": "client_data"
+        }
+      ],
+      "discovered_at": "2026-10-15"
+    },
+    {
+      "id": "spellbook-mage-frost-blast",
+      "name": "Frost Blast",
+      "class": "mage",
+      "kind": "spell",
+      "tree_name": "Frost",
+      "icon": "spell_frost_frostblast",
+      "reported_change_kind": "added",
+      "spellbook_status": "new",
+      "summary": "New spell learned at level 24. Deals damage and slows target movement by 40% (1.5s cast). Serves as Rank 1 Frostbolt replacement and is affected by all Frostbolt talents.",
+      "changes": [
+        "New baseline spell learned at level 24",
+        "1.5 second cast time, slows target movement by 40%",
+        "Affected by all talents that affect Frostbolt"
+      ],
+      "order": 301,
+      "evidence_status": "client_data",
+      "rank_texts": {
+        "1": "60 Mana, 30 yd range, 1.5 sec cast. Blasts the enemy with frost, causing 42 to 46 Frost damage and slowing movement speed by 40% for 5 sec. Affected by all talents that affect Frostbolt."
+      },
+      "max_rank": 1,
       "classic": {
         "status": "absent"
       },

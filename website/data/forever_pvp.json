@@ -132,25 +132,29 @@
       "name": "Warsong Gulch",
       "players": "10v10",
       "levels": "20-29 (Active in Beta), 30-39, 40-49, 50-59, 60",
-      "type": "Capture the Flag"
+      "type": "Capture the Flag",
+      "markOfHonor": "Warsong Gulch Mark of Honor (Stacks up to 30)"
     },
     {
       "name": "Arathi Basin",
       "players": "15v15",
       "levels": "20-29, 30-39, 40-49, 50-59, 60",
-      "type": "Base Resource Domination"
+      "type": "Base Resource Domination",
+      "markOfHonor": "Arathi Basin Mark of Honor (Stacks up to 30)"
     },
     {
       "name": "Darkspear Islands",
       "players": "15v15",
       "levels": "30-39, 40-49, 50-59, 60",
-      "type": "NEW Battleground in Forever (Island War)"
+      "type": "NEW Battleground in Forever (Island War)",
+      "markOfHonor": "Darkspear Mark of Honor (Stacks up to 30)"
     },
     {
       "name": "Alterac Valley",
       "players": "40v40",
       "levels": "51-60",
-      "type": "Large-Scale Warfare"
+      "type": "Large-Scale Warfare",
+      "markOfHonor": "Alterac Valley Mark of Honor (Stacks up to 30)"
     }
   ]
 }

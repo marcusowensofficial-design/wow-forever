@@ -92,7 +92,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         status: "verified",
         statusLabel: "Verified in Beta",
         badge: "Form Architecture",
-        desc: "Shapeshifting into Bear/Dire Bear generates 10 Rage. Shifting into Cat Form restores 20% of Energy held when last in Cat Form, plus 2 Energy per second spent outside Bear Form (capped at 20 additional Energy). Traditional Wolfshead power-shifting is completely overhauled."
+        desc: "Shapeshifting into Bear/Dire Bear generates 10 Rage. Shifting into Cat Form restores 20% of Energy held when last in Cat Form, plus 2 Energy per second spent outside Bear Form. Furor now allows retaining Cat Energy even when shifting into Bear/Dire Bear Form."
       },
       {
         title: "Shapeshifting Mana Cost",
@@ -141,7 +141,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           type: "Signature Shapeshift",
           cast: "Instant",
           status: "verified",
-          desc: "Shapeshift into Moonkin Form: increases armor contribution from items by 306%, grants +3% spell critical-strike chance to nearby party members, and grants immunity to Polymorph effects."
+          desc: "Shapeshift into Moonkin Form: increases armor contribution from items by 306%, grants +3% Spell Critical Strike chance to all raid members within 45 yards, and grants immunity to Polymorph effects."
         },
         {
           name: "Insect Swarm in Balance Tree",
@@ -239,10 +239,10 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         },
         {
           name: "Leader of the Pack (3% Crit)",
-          type: "Party Aura",
+          type: "Raid Aura",
           cast: "Passive Aura",
           status: "verified",
-          desc: "Increases ranged and melee critical-strike chance of all party members within 45 yards by 3% while in Cat, Bear, or Dire Bear form."
+          desc: "Now Raid wide: increases Melee and Ranged critical strike chance of all raid members within 45 yards by 3% while in Cat, Bear, or Dire Bear form."
         },
         {
           name: "Feral Instinct (Swipe & Stealth)",
@@ -370,7 +370,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           race: "Tauren Druid",
           faction: "Horde",
           badge: "Classic Standard",
-          desc: "Endurance (+5% base HP -> multiplies with Bear Form Stamina), War Stomp (2s AoE stun), and Plains Running mobility."
+          desc: "Endurance (+5% base HP -> multiplies with Bear Form Stamina, +2% crit dmg/heal), War Stomp (90s CD AoE stun), Plainsrunning (+3% mounted speed), and Cultivation (15m CD)."
         }
       ]
     },
@@ -411,10 +411,10 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       {
         feature: "Furor Shifting Rework",
         category: "Core Mechanics",
-        details: "Bear gains 10 Rage; Cat restores 20% held Energy + 2 Energy/s outside Bear (max +20)",
+        details: "Bear gains 10 Rage; Cat retains Energy even when shifting to Bear/Dire Bear",
         status: "Verified in Closed Beta",
         statusType: "verified",
-        source: "Sodapoppin Hands-On Demo"
+        source: "Beta Patch Build 1.60.1.70425"
       },
       {
         feature: "Eclipse Starfire Reduction",
@@ -435,10 +435,10 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       {
         feature: "Moonkin Form (306% Armor)",
         category: "Balance",
-        details: "306% armor from items, +3% party spell crit, Polymorph immunity",
+        details: "306% armor from items, +3% raid spell crit, Polymorph immunity",
         status: "Verified in Closed Beta",
         statusType: "verified",
-        source: "Sodapoppin Hands-On Demo"
+        source: "Beta Patch Build 1.60.1.70425"
       },
       {
         feature: "Insect Swarm in Balance",

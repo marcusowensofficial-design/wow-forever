@@ -60,11 +60,11 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       "desc": "Physical ammunition (arrows and bullets) and quivers/ammo pouches remain in full effect. Heavy quivers and arrow counts were clearly visible in the inventory during the demo, retaining Hunter RPG flavor."
     },
     {
-      "title": "Single Active Trap Limit & Shared Cooldowns",
+      "title": "Dual Active Trap Limit (Fire & Ice) & AP Scaling",
       "status": "verified",
       "statusLabel": "Verified in Beta",
       "badge": "Balance Rule",
-      "desc": "Only one trap can be active at any given time. Additionally, Fire traps (Immolation, Explosive) and Frost traps (Freezing, Frost) share cooldown categories, requiring strategic trap selection."
+      "desc": "Hunters may now have 1 active Fire Trap (Immolation, Explosive) and 1 active Ice Trap (Freezing, Frost) simultaneously (was 1 trap among all types). Additionally, Fire traps now scale dynamically with Attack Power."
     },
     {
       "title": "Direct Pet Movement Command",
@@ -312,10 +312,10 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       "subtitle": "Forensic testing of Tauren racials in the BlizzCon 2026 early access demo",
       "items": [
         {
-          "name": "Plains Running Ramp & Mechanics",
-          "status": "demo",
-          "statusLabel": "🎙️ Sodapoppin Demo Finding",
-          "desc": "Plains Running builds 1% bonus movement speed every 5 seconds while continually moving, capping at 30% speed. In Sodapoppin's hands-on test, it took roughly 2 minutes and 30 seconds to reach the full 30% bonus. Standing still or taking damage rapidly strips all stacks."
+          "name": "Plains Running Ramp & Mounted Bonus",
+          "status": "verified",
+          "statusLabel": "Verified in Beta",
+          "desc": "Plains Running builds 1% bonus movement speed every 5s while continually moving, up to 30%. Also grants 3% increased mounted movement speed (stacks with other mounted speed increases). Requires moving a minimum distance per second to maintain; stutter-stepping no longer maintains the effect."
         },
         {
           "name": "Plains Running vs. Aspect of the Cheetah",
@@ -324,28 +324,28 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           "desc": "The test confirmed Plains Running does NOT stack with Aspect of the Cheetah. Displayed movement speed remained strictly capped at the expected 30% maximum increase."
         },
         {
-          "name": "Anti-Exploit: Wall Running",
-          "status": "demo",
-          "statusLabel": "🎙️ Sodapoppin Demo Finding",
-          "desc": "Autorunning into a wall or collision boundary did not generate Plains Running stacks. The game verifies actual displacement."
+          "name": "Anti-Exploit: Displacement Verification",
+          "status": "verified",
+          "statusLabel": "Verified in Beta",
+          "desc": "Autorunning into walls does not generate stacks, and a minimum displacement per second is enforced to prevent micro-stutter exploits."
         },
         {
           "name": "War Stomp",
           "status": "verified",
           "statusLabel": "Verified in Beta",
-          "desc": "Instant AoE stun that affects up to 5 enemies for 2 seconds with an 8-yard radius and a 2-minute cooldown."
+          "desc": "Instant AoE stun that affects up to 5 enemies for 2 seconds with an 8-yard radius on a reduced 90-second cooldown (was 2 minutes)."
         },
         {
           "name": "Tauren Endurance",
           "status": "verified",
           "statusLabel": "Verified in Beta",
-          "desc": "Grants +5% total Health and +1% Hit chance across all attacks."
+          "desc": "Grants +5% total Health and 2% increased critical damage and healing (replaces legacy 1% hit chance)."
         },
         {
           "name": "Tauren Cultivation",
           "status": "verified",
           "statusLabel": "Verified in Beta",
-          "desc": "Can create a duplicate harvest from a nearby herb node once per herb. Notably, the duplicate can be gathered even without having the Herbalism profession!"
+          "desc": "Cooldown reduced to 15 minutes (was 60 minutes). Allows gathering duplicate herb resources from cultivated nodes; picking wild herb nodes still requires Herbalism."
         }
       ]
     },
@@ -430,28 +430,36 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       "source": "Sodapoppin Hands-On Demo"
     },
     {
-      "feature": "Plains Running Ramp",
+      "feature": "Plains Running Ramp & Mount Speed",
       "category": "Tauren Racials",
-      "details": "1% speed every 5s to 30%; ~2.5 min ramp; resets on stop/dmg",
-      "status": "🎙️ Sodapoppin Demo Finding",
-      "statusType": "demo",
-      "source": "Sodapoppin Live In-Game Stopwatch Test"
+      "details": "1% speed every 5s to 30% with displacement check; +3% mounted speed (stacks)",
+      "status": "Verified in Closed Beta",
+      "statusType": "verified",
+      "source": "Beta Patch Build 1.60.1.70425"
     },
     {
-      "feature": "Plains Running + Cheetah",
-      "category": "Tauren Racials",
-      "details": "Does not stack with Aspect of the Cheetah (capped at 30%)",
-      "status": "🎙️ Sodapoppin Demo Finding",
-      "statusType": "demo",
-      "source": "Sodapoppin Live In-Game Speed Test"
+      "feature": "Dual Active Trap Limit (Fire & Ice)",
+      "category": "Core Mechanics",
+      "details": "1 Fire Trap + 1 Ice Trap active simultaneously; Fire traps scale with AP",
+      "status": "Verified in Closed Beta",
+      "statusType": "verified",
+      "source": "Beta Patch Build 1.60.1.70425"
+    },
+    {
+      "feature": "Auto Shot Stand-Still Rule",
+      "category": "Core Mechanics",
+      "details": "Requires standing still for 0.5s before shooting; continues while casting Aimed Shot",
+      "status": "Verified in Closed Beta",
+      "statusType": "verified",
+      "source": "Beta Patch Build 1.60.1.70425"
     },
     {
       "feature": "Tauren Herb Duplication",
       "category": "Tauren Racials",
-      "details": "Duplicate harvest from herb once per node; gatherable without Herbalism",
-      "status": "🎙️ Sodapoppin Demo Finding",
-      "statusType": "demo",
-      "source": "Sodapoppin Hands-On Demo"
+      "details": "Cultivation 15m CD; picking wild herb nodes still requires Herbalism",
+      "status": "Verified in Closed Beta",
+      "statusType": "verified",
+      "source": "Beta Patch Build 1.60.1.70425"
     },
     {
       "feature": "Aimed Shot Baseline",

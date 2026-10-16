@@ -1240,6 +1240,8 @@ In Closed Beta Phase 2, character level is capped at 30. The classic honor syste
 
 🔒 *Ranks 5 through 14 (First Sergeant to Grand Marshal / High Warlord) remain capped until Phase 3 and launch level caps unlock.*
 
+• **Battleground Marks of Honor:** Marks of Honor now stack up to **30** (increased from 20), reducing bag space clutter during Warsong Gulch honor pushes.
+
 ---
 
 ### Warsong Gulch (20–29 / 30) Bracket Meta
@@ -2203,14 +2205,14 @@ WoW Forever re-evaluates vanilla racials to eliminate extreme faction imbalances
 
 | Race | Key Active Racial | Signature Passive | Top Class Synergy |
 | **Human** | **Perception:** Increases stealth detection for 20s | The Human Spirit (+5% Spirit), Ruthless (+2% Crit) | Priest, Paladin, Warrior |
-| **Orc** | **Blood Fury:** +25% Melee AP (reduced healing taken removed!) | Hardiness (Stun resist), Command (+5% Pet Dmg) | Warlock, Hunter, Warrior |
-| **Undead** | **Will of the Forsaken:** Dispels Charm, Fear, Sleep | Cannibalize, Shadow Resistance | Mage, Rogue, Priest |
-| **Night Elf** | **Shadowmeld:** Usable in combat (drops threat, resets aggro!) | Quickness (+1% Dodge), Nature Resistance | Druid, Hunter, Rogue |
-| **Dwarf** | **Stoneform:** Dispels Bleed, Poison, Disease; +10% Armor | Gun Specialization, Frost Resistance | Priest, Paladin, Hunter |
-| **Gnome** | **Escape Artist:** Instant cast (0.5s GCD) snare dispel | Expansive Mind (+5% Intellect), Engineering +15 | Mage, Warlock, Rogue |
-| **Tauren** | **War Stomp:** 2-second AoE stun (up to 5 targets) | Endurance (+5% Max HP), Herbalism +15 | Shaman, Druid, Warrior |
-| **Troll** | **Berserking:** Up to +30% attack/casting speed | Beast Slaying (+5% Dmg to beasts), Regeneration | Hunter, Shaman, Mage |
-| **Skyborne** | **Zephyr Glide:** Slow-fall glide and +10% outdoor movespeed | Wind-Weaving (+1% Spell Haste) | Mage, Priest, Hunter |`
+| **Orc** | **Blood Fury:** +10% AP & SP (3m CD) • Shatter Curse | Hardiness (-20% Stun), Savage (+1% Crit) | Warlock, Hunter, Warrior, Mage |
+| **Undead** | **Will of the Forsaken:** Dispels Charm, Fear, Sleep | Cannibalize, Touch of the Grave (Health drain proc) | Mage, Rogue, Priest, Paladin |
+| **Night Elf** | **Shadowmeld:** Gain Stealth while immobile | Quickness (+1% Dodge, +2% Speed - stacks), Wisp Spirit | Druid, Hunter, Rogue |
+| **Dwarf** | **Stoneform:** Dispels Bleed, Poison, Disease; Physical reduction | Earth Fury (+2% Crit Dmg/Heal), Big Game Hunter | Priest, Paladin, Hunter, Warrior |
+| **Gnome** | **Escape Artist:** Snare dispel • Eureka! (+10% Dmg/Heal/PW:S) | Expansive Mind (+5% Resource), Engineering Spec | Mage, Warlock, Rogue, Priest |
+| **Tauren** | **War Stomp:** 2s AoE stun (90s CD) • Cultivation (15m CD) | Endurance (+5% HP, +2% Crit Dmg/Heal), Plainsrunning (+3% Mount Speed) | Shaman, Druid, Warrior |
+| **Troll** | **Berserking:** +10% Attack/Casting speed • Rapid Regen | Beast Slaying (+5% Dmg), Regeneration (+20% Regen) | Hunter, Shaman, Mage, Priest, Warlock |
+| **The Skyborne** | **Walk on Air:** 10s Glide (90s CD) • Read Leyline (Castable moving) | Wind Blessed (+3% Haste), Elemental Insight | Mage, Priest, Hunter, Rogue, Warrior, Shaman |`
     }
   ]
 };

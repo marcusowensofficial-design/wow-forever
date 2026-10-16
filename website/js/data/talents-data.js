@@ -1428,9 +1428,9 @@ window.WOW_TALENTS_DATA = {
         "spellId": 20150,
         "req": 74,
         "descriptions": [
-          "Increases the amount of damage absorbed by your shield by 10%, and gives your blocks a 33% chance to restore 6% of your maximum Mana.  May only occur once every 3 sec.",
-          "Increases the amount of damage absorbed by your shield by 20%, and gives your blocks a 66% chance to restore 6% of your maximum Mana.  May only occur once every 3 sec.",
-          "Increases the amount of damage absorbed by your shield by 30%, and gives your blocks a 100% chance to restore 6% of your maximum Mana.  May only occur once every 3 sec."
+          "Increases the amount of damage absorbed by your shield by 10%, and gives your blocks a 33% chance to restore 4% of your maximum Mana.  May only occur once every 3 sec.",
+          "Increases the amount of damage absorbed by your shield by 20%, and gives your blocks a 66% chance to restore 4% of your maximum Mana.  May only occur once every 3 sec.",
+          "Increases the amount of damage absorbed by your shield by 30%, and gives your blocks a 100% chance to restore 4% of your maximum Mana.  May only occur once every 3 sec."
         ]
       },
       {
@@ -1699,9 +1699,9 @@ window.WOW_TALENTS_DATA = {
         "spellId": 1311074,
         "req": null,
         "descriptions": [
-          "Gives your Judgement ability a 33% chance to return 20% of the Mana cost of the judged seal.",
-          "Gives your Judgement ability a 66% chance to return 40% of the Mana cost of the judged seal.",
-          "Gives your Judgement ability a 100% chance to return 60% of the Mana cost of the judged seal."
+          "Gives your Judgement ability a 33% chance to return 20% of the Mana cost of the judged seal. This mana restore generates no threat.",
+          "Gives your Judgement ability a 66% chance to return 40% of the Mana cost of the judged seal. This mana restore generates no threat.",
+          "Gives your Judgement ability a 100% chance to return 60% of the Mana cost of the judged seal. This mana restore generates no threat."
         ]
       },
       {
@@ -1835,9 +1835,9 @@ window.WOW_TALENTS_DATA = {
         "spellId": 1311084,
         "req": null,
         "descriptions": [
+          "Increases your spell damage by up to 10% of your Intellect.",
           "Increases your spell damage by up to 20% of your Intellect.",
-          "Increases your spell damage by up to 40% of your Intellect.",
-          "Increases your spell damage by up to 60% of your Intellect."
+          "Increases your spell damage by up to 30% of your Intellect."
         ]
       },
       {
@@ -2365,7 +2365,7 @@ window.WOW_TALENTS_DATA = {
         "spellId": 1299346,
         "req": null,
         "descriptions": [
-          "Increases the Ranged Attack Power of party members within 45 yds by 30."
+          "Increases the Ranged Attack Power of raid members within 45 yds by 30."
         ]
       },
       {
@@ -2671,11 +2671,11 @@ window.WOW_TALENTS_DATA = {
         "spellId": 1310627,
         "req": null,
         "descriptions": [
-          "Increases your melee critical strike damage by 6% and your Off Hand weapon damage by 10%.",
-          "Increases your melee critical strike damage by 12% and your Off Hand weapon damage by 20%.",
-          "Increases your melee critical strike damage by 18% and your Off Hand weapon damage by 30%.",
-          "Increases your melee critical strike damage by 24% and your Off Hand weapon damage by 40%.",
-          "Increases your melee critical strike damage by 30% and your Off Hand weapon damage by 50%."
+          "Increases the critical strike damage of your abilities by 6% and your Off Hand weapon damage by 10%.",
+          "Increases the critical strike damage of your abilities by 12% and your Off Hand weapon damage by 20%.",
+          "Increases the critical strike damage of your abilities by 18% and your Off Hand weapon damage by 30%.",
+          "Increases the critical strike damage of your abilities by 24% and your Off Hand weapon damage by 40%.",
+          "Increases the critical strike damage of your abilities by 30% and your Off Hand weapon damage by 50%."
         ]
       },
       {
@@ -2707,8 +2707,8 @@ window.WOW_TALENTS_DATA = {
         "spellId": 440529,
         "req": null,
         "descriptions": [
-          "Reduces the mana cost of your Trap abilities and melee abilities by 30%. In addition, your critical strikes have a 50% chance to allow 50% of your Mana regeneration to continue while casting for 30 sec.",
-          "Reduces the mana cost of your Trap abilities and melee abilities by 60%. In addition, your critical strikes have a 100% chance to allow 50% of your Mana regeneration to continue while casting for 30 sec."
+          "Reduces the mana cost of your Trap abilities, melee abilities, and Strider Kick by 30%. In addition, landing a melee or ranged ability critical strike has a 50% chance to allow 50% of your Mana regeneration to continue while casting for 30 sec (not activated by traps).",
+          "Reduces the mana cost of your Trap abilities, melee abilities, and Strider Kick by 60%. In addition, landing a melee or ranged ability critical strike has a 100% chance to allow 50% of your Mana regeneration to continue while casting for 30 sec (not activated by traps)."
         ]
       },
       {
@@ -3796,11 +3796,11 @@ window.WOW_TALENTS_DATA = {
         "spellId": 1309969,
         "req": null,
         "descriptions": [
-          "Your Smite and Penance spells deal 2% increased damage to targets afflicted with your Holy Fire.",
-          "Your Smite and Penance spells deal 4% increased damage to targets afflicted with your Holy Fire.",
-          "Your Smite and Penance spells deal 6% increased damage to targets afflicted with your Holy Fire.",
-          "Your Smite and Penance spells deal 8% increased damage to targets afflicted with your Holy Fire.",
-          "Your Smite and Penance spells deal 10% increased damage to targets afflicted with your Holy Fire."
+          "Your Smite and Penance spells deal 2% increased damage to targets afflicted with your Holy Fire or Shadow Word: Pain.",
+          "Your Smite and Penance spells deal 4% increased damage to targets afflicted with your Holy Fire or Shadow Word: Pain.",
+          "Your Smite and Penance spells deal 6% increased damage to targets afflicted with your Holy Fire or Shadow Word: Pain.",
+          "Your Smite and Penance spells deal 8% increased damage to targets afflicted with your Holy Fire or Shadow Word: Pain.",
+          "Your Smite and Penance spells deal 10% increased damage to targets afflicted with your Holy Fire or Shadow Word: Pain."
         ]
       },
       {
@@ -3853,9 +3853,9 @@ window.WOW_TALENTS_DATA = {
         "spellId": 14523,
         "req": null,
         "descriptions": [
-          "Reduces the threat generated by your Holy spells by 10% and reduces the duration of Stun, Fear, and Silence effects inflicted on you by 5%.\n",
-          "Reduces the threat generated by your Holy spells by 20% and reduces the duration of Stun, Fear, and Silence effects inflicted on you by 10%.\n",
-          "Reduces the threat generated by your Holy spells by 30% and reduces the duration of Stun, Fear, and Silence effects inflicted on you by 15%.\n"
+          "Reduces the threat generated by all your spells by 10% and reduces the duration of Stun, Fear, and Silence effects inflicted on you by 5%.\n",
+          "Reduces the threat generated by all your spells by 20% and reduces the duration of Stun, Fear, and Silence effects inflicted on you by 10%.\n",
+          "Reduces the threat generated by all your spells by 30% and reduces the duration of Stun, Fear, and Silence effects inflicted on you by 15%.\n"
         ]
       },
       {
@@ -4083,9 +4083,9 @@ window.WOW_TALENTS_DATA = {
         "spellId": 431622,
         "req": null,
         "descriptions": [
-          "Your critical heals create a protective shield on the target, absorbing 5% of the amount healed. Lasts 12 sec.",
-          "Your critical heals create a protective shield on the target, absorbing 10% of the amount healed. Lasts 12 sec.",
-          "Your critical heals create a protective shield on the target, absorbing 15% of the amount healed. Lasts 12 sec."
+          "Your non-periodic critical heals create a protective shield on the target, absorbing 5% of the amount healed, up to a maximum shield value. Lasts 12 sec.",
+          "Your non-periodic critical heals create a protective shield on the target, absorbing 10% of the amount healed, up to a maximum shield value. Lasts 12 sec.",
+          "Your non-periodic critical heals create a protective shield on the target, absorbing 15% of the amount healed, up to a maximum shield value. Lasts 12 sec."
         ]
       },
       {
@@ -4568,8 +4568,8 @@ window.WOW_TALENTS_DATA = {
         "spellId": 1225139,
         "req": 253,
         "descriptions": [
-          "Your Mind Flay now deals 10% more damage, gains 5 yards increased range, but slows the target's movement speed by 35%.",
-          "Your Mind Flay now deals 20% more damage, gains 10 yards increased range, but slows the target's movement speed by 20%."
+          "Each instance of damage of Mind Flay deals 10% more damage than its previous instance of damage.",
+          "Each instance of damage of Mind Flay deals 20% more damage than its previous instance of damage."
         ]
       },
       {
@@ -4655,8 +4655,8 @@ window.WOW_TALENTS_DATA = {
         "spellId": 1309950,
         "req": null,
         "descriptions": [
-          "Reduces the mana cost of your Devouring Plague by 25%.\n\nTargets that die while Devouring Plague is active spreads it, jumping to a nearby enemy within 5 yds for the remaining duration.\n",
-          "Reduces the mana cost of your Devouring Plague by 50%.\n\nTargets that die while Devouring Plague is active spreads it, jumping to a nearby enemy within 10 yds for the remaining duration.\n"
+          "Reduces the mana cost of your Devouring Plague by 25%.\n\nTargets that die while Devouring Plague is active spreads it, jumping to up to 2 nearby enemies within 5 yds for the remaining duration.\n",
+          "Reduces the mana cost of your Devouring Plague by 50%.\n\nTargets that die while Devouring Plague is active spreads it, jumping to up to 2 nearby enemies within 10 yds for the remaining duration.\n"
         ]
       },
       {
@@ -4829,9 +4829,9 @@ window.WOW_TALENTS_DATA = {
         "spellId": 16038,
         "req": null,
         "descriptions": [
-          "Increases the damage done by your Fire Totems and by your Flame Shock, Fire Nova, and Lava Burst spells by 5%.",
-          "Increases the damage done by your Fire Totems and by your Flame Shock, Fire Nova, and Lava Burst spells by 10%.",
-          "Increases the damage done by your Fire Totems and by your Flame Shock, Fire Nova, and Lava Burst spells by 15%."
+          "Increases the damage done by your Fire Totems and by your Flame Shock, Fire Nova, and Lava Burst spells by 5%, and extends the duration of Flame Shock by 3 seconds.",
+          "Increases the damage done by your Fire Totems and by your Flame Shock, Fire Nova, and Lava Burst spells by 10%, and extends the duration of Flame Shock by 6 seconds.",
+          "Increases the damage done by your Fire Totems and by your Flame Shock, Fire Nova, and Lava Burst spells by 15%, and extends the duration of Flame Shock by 9 seconds."
         ]
       },
       {
@@ -4934,8 +4934,8 @@ window.WOW_TALENTS_DATA = {
         "spellId": 28999,
         "req": null,
         "descriptions": [
-          "Increases the range of your Lightning Bolt, Chain Lightning, Fire Nova, and Lava Burst spells by 3 yards, and increases the range of your Flame Shock spell by 8 yards.",
-          "Increases the range of your Lightning Bolt, Chain Lightning, Fire Nova, and Lava Burst spells by 6 yards, and increases the range of your Flame Shock spell by 15 yards."
+          "Increases the range of your Lightning Bolt, Chain Lightning, Fire Nova, and Lava Burst spells by 3 yards, increases the range of your Flame Shock spell by 8 yards, and reduces the cooldown on Totemic Projection by 10 seconds.",
+          "Increases the range of your Lightning Bolt, Chain Lightning, Fire Nova, and Lava Burst spells by 6 yards, increases the range of your Flame Shock spell by 15 yards, and reduces the cooldown on Totemic Projection by 20 seconds."
         ]
       },
       {
@@ -5841,7 +5841,7 @@ window.WOW_TALENTS_DATA = {
         "spellId": 400574,
         "req": null,
         "descriptions": [
-          "Blasts the target with energy, dealing 57 to 65 Arcane damage. Each time you cast Arcane Blast, the damage of all your other spells is increased by 10% and the mana cost of Arcane Blast is increased by 175%. Effect stacks up to 4 times and lasts 8 sec or until any other damage spell is cast."
+          "Blasts the target with energy with a 1.5 sec cast. Each time you cast Arcane Blast it grants you 15% of your Intellect as additional Spell Damage, increasing its mana cost as before and stacking up to 4 times. The effect lasts 15 sec from initial application."
         ]
       },
       {
@@ -5909,8 +5909,8 @@ window.WOW_TALENTS_DATA = {
         "spellId": 44404,
         "req": null,
         "descriptions": [
-          "Gives your Arcane Blast spell a 20% chance, and your Fireball, Frostbolt, and Frostfire Bolt spells a 10% chance to reduce the channeled duration of your next Arcane Missiles spell by 50%, reduce the Mana cost by 100%, and missiles fire every 0.5 sec.",
-          "Gives your Arcane Blast spell a 40% chance, and your Fireball, Frostbolt, and Frostfire Bolt spells a 20% chance to reduce the channeled duration of your next Arcane Missiles spell by 50%, reduce the Mana cost by 100%, and missiles fire every 0.5 sec."
+          "Gives your Arcane Blast spell a 20% chance, your Arcane Missiles hits a 20% chance, and your Fireball, Frostbolt, and Frostfire Bolt spells a 10% chance to reduce the channeled duration of your next Arcane Missiles spell by 50%, reduce the Mana cost by 100%, and missiles fire every 0.5 sec.",
+          "Gives your Arcane Blast spell a 40% chance, your Arcane Missiles hits a 40% chance, and your Fireball, Frostbolt, and Frostfire Bolt spells a 20% chance to reduce the channeled duration of your next Arcane Missiles spell by 50%, reduce the Mana cost by 100%, and missiles fire every 0.5 sec."
         ]
       },
       {
@@ -6012,8 +6012,8 @@ window.WOW_TALENTS_DATA = {
         "spellId": 11078,
         "req": null,
         "descriptions": [
-          "Reduces the cooldown of your Fire Blast spell by 1 sec. Killing a non-trivial target increases the critical strike chance of your next Fire Blast cast within 30 sec by 25%.",
-          "Reduces the cooldown of your Fire Blast spell by 2 sec. Killing a non-trivial target increases the critical strike chance of your next Fire Blast cast within 30 sec by 50%."
+          "Reduces the cooldown of your Fire Blast spell by 1 sec and increases its range by 8 yards.",
+          "Reduces the cooldown of your Fire Blast spell by 2 sec and increases its range by 15 yards."
         ]
       },
       {
@@ -6615,11 +6615,11 @@ window.WOW_TALENTS_DATA = {
         "spellId": 11180,
         "req": null,
         "descriptions": [
-          "Gives your Frost damage spells a 20% chance to apply the Winter's Chill effect, causing your next Cone of Cold to deal 40% increased damage per stack, consuming the effect. Stacks up to 1 times.",
-          "Gives your Frost damage spells a 40% chance to apply the Winter's Chill effect, causing your next Cone of Cold to deal 40% increased damage per stack, consuming the effect. Stacks up to 2 times.",
-          "Gives your Frost damage spells a 60% chance to apply the Winter's Chill effect, causing your next Cone of Cold to deal 40% increased damage per stack, consuming the effect. Stacks up to 3 times.",
-          "Gives your Frost damage spells a 80% chance to apply the Winter's Chill effect, causing your next Cone of Cold to deal 40% increased damage per stack, consuming the effect. Stacks up to 4 times.",
-          "Gives your Frost damage spells a 100% chance to apply the Winter's Chill effect, causing your next Cone of Cold to deal 40% increased damage per stack, consuming the effect. Stacks up to 5 times."
+          "Gives your Frostbolt, Frost Blast, and Fingers of Frost empowered Ice Lance spells a 20% chance to apply Winter's Chill, increasing the target's damage taken from your next Cone of Cold by 5% and it gains an additional 7% of your spell damage, stacking up to 5 times.",
+          "Gives your Frostbolt, Frost Blast, and Fingers of Frost empowered Ice Lance spells a 40% chance to apply Winter's Chill, increasing the target's damage taken from your next Cone of Cold by 5% and it gains an additional 7% of your spell damage, stacking up to 5 times.",
+          "Gives your Frostbolt, Frost Blast, and Fingers of Frost empowered Ice Lance spells a 60% chance to apply Winter's Chill, increasing the target's damage taken from your next Cone of Cold by 5% and it gains an additional 7% of your spell damage, stacking up to 5 times.",
+          "Gives your Frostbolt, Frost Blast, and Fingers of Frost empowered Ice Lance spells a 80% chance to apply Winter's Chill, increasing the target's damage taken from your next Cone of Cold by 5% and it gains an additional 7% of your spell damage, stacking up to 5 times.",
+          "Gives your Frostbolt, Frost Blast, and Fingers of Frost empowered Ice Lance spells a 100% chance to apply Winter's Chill, increasing the target's damage taken from your next Cone of Cold by 5% and it gains an additional 7% of your spell damage, stacking up to 5 times."
         ]
       },
       {
@@ -7899,7 +7899,7 @@ window.WOW_TALENTS_DATA = {
         "spellId": 24858,
         "req": null,
         "descriptions": [
-          "Shapeshift into Moonkin Form, increasing Omen of Clarity's chance to trigger by 100%, Armor contribution from items by 360%, and all party members within 45 yards have their Critical Strike chance increased by 3%, exclusive with Leader of the Pack.  Also protects the caster from Polymorph effects and prevents the use of healing spells.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects."
+          "Shapeshift into Moonkin Form, increasing Omen of Clarity's chance to trigger by 100%, Armor contribution from items by 360%, and all raid members within 45 yards have their Spell Critical Strike chance increased by 3%. Also protects the caster from Polymorph effects and prevents the use of healing spells.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects."
         ]
       },
       {
@@ -8177,7 +8177,7 @@ window.WOW_TALENTS_DATA = {
         "spellId": 17007,
         "req": null,
         "descriptions": [
-          "While in Cat Form, Bear Form, or Dire Bear Form, the Leader of the Pack increases the critical strike chance of all party members within 45 yards by 3%, exclusive with Moonkin Aura."
+          "While in Cat Form, Bear Form, or Dire Bear Form, the Leader of the Pack increases the Melee and Ranged critical strike chance of all raid members within 45 yards by 3%."
         ]
       },
       {
@@ -8286,11 +8286,11 @@ window.WOW_TALENTS_DATA = {
         "spellId": 17056,
         "req": null,
         "descriptions": [
-          "Gives you a 20% chance to gain 10 Rage when shapeshifting into Bear Form or Dire Bear Form. Shapeshifting into Cat Form restores 20% of the Energy you had when last in Cat Form, plus 2 Energy per sec spent outside Cat Form, up to 20 Energy.\n\nBear Form and Dire Bear Form forfeit this Energy and halt its restoration while active.",
-          "Gives you a 40% chance to gain 10 Rage when shapeshifting into Bear Form or Dire Bear Form. Shapeshifting into Cat Form restores 40% of the Energy you had when last in Cat Form, plus 4 Energy per sec spent outside Cat Form, up to 40 Energy.\n\nBear Form and Dire Bear Form forfeit this Energy and halt its restoration while active.",
-          "Gives you a 60% chance to gain 10 Rage when shapeshifting into Bear Form or Dire Bear Form. Shapeshifting into Cat Form restores 60% of the Energy you had when last in Cat Form, plus 6 Energy per sec spent outside Cat Form, up to 60 Energy.\n\nBear Form and Dire Bear Form forfeit this Energy and halt its restoration while active.",
-          "Gives you a 80% chance to gain 10 Rage when shapeshifting into Bear Form or Dire Bear Form. Shapeshifting into Cat Form restores 80% of the Energy you had when last in Cat Form, plus 8 Energy per sec spent outside Cat Form, up to 80 Energy.\n\nBear Form and Dire Bear Form forfeit this Energy and halt its restoration while active.",
-          "Gives you a 100% chance to gain 10 Rage when shapeshifting into Bear Form or Dire Bear Form. Shapeshifting into Cat Form restores 100% of the Energy you had when last in Cat Form, plus 10 Energy per sec spent outside Cat Form, up to 100 Energy.\n\nBear Form and Dire Bear Form forfeit this Energy and halt its restoration while active."
+          "Gives you a 20% chance to gain 10 Rage when shapeshifting into Bear Form or Dire Bear Form. Shapeshifting into Cat Form restores 20% of the Energy you had when last in Cat Form, plus 2 Energy per sec spent outside Cat Form, up to 20 Energy.\n\nYou retain the Energy you had when last in Cat Form even if you enter Bear or Dire Bear Form (though Bear and Dire Bear Form prevent Energy regeneration).",
+          "Gives you a 40% chance to gain 10 Rage when shapeshifting into Bear Form or Dire Bear Form. Shapeshifting into Cat Form restores 40% of the Energy you had when last in Cat Form, plus 4 Energy per sec spent outside Cat Form, up to 40 Energy.\n\nYou retain the Energy you had when last in Cat Form even if you enter Bear or Dire Bear Form (though Bear and Dire Bear Form prevent Energy regeneration).",
+          "Gives you a 60% chance to gain 10 Rage when shapeshifting into Bear Form or Dire Bear Form. Shapeshifting into Cat Form restores 60% of the Energy you had when last in Cat Form, plus 6 Energy per sec spent outside Cat Form, up to 60 Energy.\n\nYou retain the Energy you had when last in Cat Form even if you enter Bear or Dire Bear Form (though Bear and Dire Bear Form prevent Energy regeneration).",
+          "Gives you a 80% chance to gain 10 Rage when shapeshifting into Bear Form or Dire Bear Form. Shapeshifting into Cat Form restores 80% of the Energy you had when last in Cat Form, plus 8 Energy per sec spent outside Cat Form, up to 80 Energy.\n\nYou retain the Energy you had when last in Cat Form even if you enter Bear or Dire Bear Form (though Bear and Dire Bear Form prevent Energy regeneration).",
+          "Gives you a 100% chance to gain 10 Rage when shapeshifting into Bear Form or Dire Bear Form. Shapeshifting into Cat Form restores 100% of the Energy you had when last in Cat Form, plus 10 Energy per sec spent outside Cat Form, up to 100 Energy.\n\nYou retain the Energy you had when last in Cat Form even if you enter Bear or Dire Bear Form (though Bear and Dire Bear Form prevent Energy regeneration)."
         ]
       },
       {

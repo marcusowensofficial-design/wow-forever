@@ -380,18 +380,18 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         "race": "The Skyborne Mage (High Order)",
         "faction": "Alliance",
         "badge": "✦ NEW IN FOREVER",
-        "desc": "Alliance High Order ley scholars from Zephras Isle. Harnesses Walk on Air (glide), Read Leyline (+100% regen), Wind Blessed (+1% casting Haste), and Elemental Insight (+5% damage to Elementals)."
+        "desc": "Alliance High Order ley scholars from Zephras Isle. Harnesses Walk on Air (glide), Read Leyline (+100% regen, castable while moving), Wind Blessed (+3% casting Haste), and Elemental Insight (+5% damage to Elementals)."
       }
     ]
   },
   "forensicMatrix": [
     {
-      "feature": "Spell Downranking",
+      "feature": "Frostbolt Downranking & Frost Blast",
       "category": "Core Mechanics",
-      "details": "Lower ranks of spells remain accessible and castable for mana efficiency",
+      "details": "Downranking penalization active; Frost Blast (lvl 24, 1.5s cast, 40% slow) replaces Rank 1 Frostbolt for kiting",
       "status": "Verified in Closed Beta",
       "statusType": "verified",
-      "source": "Sodapoppin Hands-On Demo"
+      "source": "Beta Patch Build 1.60.1.70425"
     },
     {
       "feature": "Frostfire Bolt",
@@ -410,12 +410,12 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       "source": "Sodapoppin Demo Spellbook & Mobalytics"
     },
     {
-      "feature": "Arcane Blast Stacks",
+      "feature": "Arcane Blast Redesign",
       "category": "Arcane",
-      "details": "+10% damage to other spells per stack (up to 4x, 8s); +175% mana cost per stack to AB",
+      "details": "1.5s cast; grants 15% Int as Spell Damage per stack (up to 4x, 15s duration)",
       "status": "Verified in Closed Beta",
       "statusType": "verified",
-      "source": "Sodapoppin Hands-On Demo"
+      "source": "Beta Patch Build 1.60.1.70425"
     },
     {
       "feature": "Missile Barrage",
@@ -484,10 +484,10 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
     {
       "feature": "Winter's Chill",
       "category": "Frost",
-      "details": "Stacks up to 5 times; +2% crit for Ice Lance and Frostbite per stack (up to 10%)",
+      "details": "Stacks up to 5x; next Cone of Cold deals +5% dmg and gains 7% SP scaling per stack",
       "status": "Verified in Closed Beta",
       "statusType": "verified",
-      "source": "Sodapoppin Hands-On Demo"
+      "source": "Beta Patch Build 1.60.1.70425"
     },
     {
       "feature": "Blizzard Slow Rebalance",
@@ -508,18 +508,18 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
     {
       "feature": "Orc Blood Fury Buff",
       "category": "Orc Racials",
-      "details": "+10% AP and +10% Spell Power; healing debuff completely removed",
+      "details": "+10% AP and +10% Spell Power (3 min CD); healing debuff completely removed",
       "status": "Verified in Closed Beta",
       "statusType": "verified",
-      "source": "Sodapoppin Hands-On Demo"
+      "source": "Beta Patch Build 1.60.1.70425"
     },
     {
       "feature": "Orc Shatter Curse",
       "category": "Orc Racials",
-      "details": "Removes curses/banes, grants immunity for 8s, -15% magic damage taken",
+      "details": "Dispels all Curse and Bane effects; reduces magical damage taken by 5% for 8s (2m CD)",
       "status": "Verified in Closed Beta",
       "statusType": "verified",
-      "source": "Sodapoppin Hands-On Demo"
+      "source": "Beta Patch Build 1.60.1.70425"
     }
   ],
   "betaBuilds": {

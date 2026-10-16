@@ -27,13 +27,13 @@ window.WOW_PROFESSIONS_DATA = {
         "key": "Potions",
         "label": "Potions",
         "icon": "inv_potion_54",
-        "count": 69
+        "count": 70
       },
       {
         "key": "Elixirs",
         "label": "Elixirs",
         "icon": "inv_potion_32",
-        "count": 69
+        "count": 68
       },
       {
         "key": "Flasks",
@@ -2933,9 +2933,9 @@ window.WOW_PROFESSIONS_DATA = {
         "name": "Draught of Predatory Senses",
         "icon": "trade_alchemy_dpotion_d12",
         "quality": 1,
-        "cat": "Elixirs",
+        "cat": "Potions",
         "kind": "level 45",
-        "effect": "Drink to slightly increase your stealth detection. While you are not moving for 3 sec, nearby moving stealthed enemies may reveal a heat trail. Lasts for 30 min. This effect persists through death.",
+        "effect": "Drink to slightly increase your stealth detection. While you are not moving for 3 sec, nearby moving stealthed enemies may reveal a heat trail. On the Combat Potion cooldown (reduced duration).",
         "isNew": true,
         "learn": 195,
         "yellow": 200,

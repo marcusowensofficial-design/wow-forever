@@ -199,14 +199,14 @@ export function runTier1Tests(collector, data) {
       expect(il.descriptions[0]).toMatch(/200%/);
     });
 
-    collector.test('1.3.7 Winter\'s Chill provides stacking buff consumed by Cone of Cold for 40% damage per stack', () => {
+    collector.test('1.3.7 Winter\'s Chill provides stacking buff consumed by Cone of Cold for 5% damage per stack', () => {
       const wc = frost.find(t => t.name === "Winter's Chill");
       expect(wc).toBeDefined();
       expect(wc.row).toBe(6);
       expect(wc.col).toBe(3);
       expect(wc.maxRank).toBe(5);
       expect(wc.descriptions[0]).toMatch(/Cone of Cold/i);
-      expect(wc.descriptions[0]).toMatch(/40%/);
+      expect(wc.descriptions[0]).toMatch(/5%/);
     });
   });
 
@@ -334,24 +334,24 @@ export function runTier1Tests(collector, data) {
       expect(reck.descriptions[0]).toMatch(/auto/i);
     });
 
-    collector.test('1.6.2 Paladin Shield Specialization increases block absorption and restores 6% mana', () => {
+    collector.test('1.6.2 Paladin Shield Specialization increases block absorption and restores 4% mana', () => {
       const paladin = talentsData.paladin;
       const ss = paladin ? paladin.talents.find(t => t.name === 'Shield Specialization') : null;
       expect(ss).toBeDefined();
       expect(ss.row).toBe(3);
       expect(ss.col).toBe(3);
       expect(ss.maxRank).toBe(3);
-      expect(ss.descriptions[0]).toMatch(/restore 6% of (your )?max(imum)? Mana/i);
+      expect(ss.descriptions[0]).toMatch(/restore 4% of (your )?max(imum)? Mana/i);
     });
 
-    collector.test('1.6.3 Paladin Champion of the Light scales spell damage with up to 60% of Intellect', () => {
+    collector.test('1.6.3 Paladin Champion of the Light scales spell damage with up to 30% of Intellect', () => {
       const paladin = talentsData.paladin;
       const cotl = paladin ? paladin.talents.find(t => t.name === 'Champion of the Light') : null;
       expect(cotl).toBeDefined();
       expect(cotl.row).toBe(6);
       expect(cotl.col).toBe(2);
       expect(cotl.maxRank).toBe(3);
-      expect(cotl.descriptions[2]).toMatch(/60%/);
+      expect(cotl.descriptions[2]).toMatch(/30%/);
     });
 
     collector.test('1.6.4 Hunter Rapid Recuperation provides in-casting mana regen on Serpent Sting / Rapid Killing', () => {
@@ -365,14 +365,14 @@ export function runTier1Tests(collector, data) {
       expect(rr.descriptions[0]).toMatch(/Rapid Killing/i);
     });
 
-    collector.test('1.6.5 Hunter Predator\'s Edge grants melee crit damage and off-hand damage', () => {
+    collector.test('1.6.5 Hunter Predator\'s Edge grants ability crit damage and off-hand damage', () => {
       const hunter = talentsData.hunter;
       const pe = hunter ? hunter.talents.find(t => t.name === "Predator's Edge") : null;
       expect(pe).toBeDefined();
       expect(pe.row).toBe(4);
       expect(pe.col).toBe(2);
       expect(pe.maxRank).toBe(5);
-      expect(pe.descriptions[0]).toMatch(/melee/i);
+      expect(pe.descriptions[0]).toMatch(/abilities/i);
     });
 
     collector.test('1.6.6 Druid Furor grants Rage on Bear and scaling Energy restore on Cat shift', () => {
@@ -530,11 +530,12 @@ export function runTier1Tests(collector, data) {
       expect(bf.effect).not.toMatch(/healing reduction|reduces healing/i);
     });
 
-    collector.test('1.9.3 Orc Shatter Curse provides immunity to Curses and Banes with magic damage reduction', () => {
+    collector.test('1.9.3 Orc Shatter Curse dispels Curses and Banes with 5% magic damage reduction', () => {
       const orc = racesData.find(r => r.id === 'orc');
       const sc = orc ? orc.racials.find(r => r.name === 'Shatter Curse') : null;
       expect(sc).toBeDefined();
-      expect(sc.effect).toMatch(/Curses and Banes|Curses/i);
+      expect(sc.effect).toMatch(/Curse and Bane/i);
+      expect(sc.effect).toMatch(/5%/);
     });
 
     collector.test('1.9.4 Tauren Cultivation clarifies that picking wild herb nodes still requires Herbalism', () => {
@@ -544,13 +545,13 @@ export function runTier1Tests(collector, data) {
       expect(cult.effect).toMatch(/Herbalism/i);
     });
 
-    collector.test('1.9.5 Tauren Endurance increases Health by 5% and Hit Chance by 1%', () => {
+    collector.test('1.9.5 Tauren Endurance increases Health by 5% and Critical Damage/Healing by 2%', () => {
       const tauren = racesData.find(r => r.id === 'tauren');
       const end = tauren ? tauren.racials.find(r => r.name === 'Endurance') : null;
       expect(end).toBeDefined();
       expect(end.effect).toMatch(/5%/);
-      expect(end.effect).toMatch(/1%/);
-      expect(end.effect).toMatch(/Hit/i);
+      expect(end.effect).toMatch(/2%/);
+      expect(end.effect).toMatch(/critical damage and healing/i);
     });
 
     collector.test('1.9.6 Tauren Plainsrunning provides outdoor speed ramp', () => {

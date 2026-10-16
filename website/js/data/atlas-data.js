@@ -1380,25 +1380,29 @@ window.WOW_ATLAS_DATA = {
       "name": "Warsong Gulch",
       "players": "10v10",
       "levels": "20-29 (Active in Beta), 30-39, 40-49, 50-59, 60",
-      "type": "Capture the Flag"
+      "type": "Capture the Flag",
+      "markOfHonor": "Warsong Gulch Mark of Honor (Stacks up to 30)"
     },
     {
       "name": "Arathi Basin",
       "players": "15v15",
       "levels": "20-29, 30-39, 40-49, 50-59, 60",
-      "type": "Base Resource Domination"
+      "type": "Base Resource Domination",
+      "markOfHonor": "Arathi Basin Mark of Honor (Stacks up to 30)"
     },
     {
       "name": "Darkspear Islands",
       "players": "15v15",
       "levels": "30-39, 40-49, 50-59, 60",
-      "type": "NEW Battleground in Forever (Island War)"
+      "type": "NEW Battleground in Forever (Island War)",
+      "markOfHonor": "Darkspear Mark of Honor (Stacks up to 30)"
     },
     {
       "name": "Alterac Valley",
       "players": "40v40",
       "levels": "51-60",
-      "type": "Large-Scale Warfare"
+      "type": "Large-Scale Warfare",
+      "markOfHonor": "Alterac Valley Mark of Honor (Stacks up to 30)"
     }
   ]
 },
@@ -2146,7 +2150,7 @@ window.WOW_ATLAS_DATA = {
     "name": "City of Dalaran",
     "zone": "Alterac Mountains (Through Lordamere Lake Sewers)",
     "levelRange": "28–33",
-    "entrance": "Sewer pipe entrance beneath Dalaran purple dome in Alterac Mountains. Key required (Dalaran Sewer Key).",
+    "entrance": "Sewer pipe entrance beneath Dalaran purple dome in Alterac Mountains. Key required (Dalaran Sewer Key). Note: Members of the Horde are attacked on sight in Dalaran in the open world; the Sewer Key questline grants dungeon access only.",
     "bosses": [
       {
         "name": "Atrexis the Grave Knight",
@@ -2485,10 +2489,10 @@ window.WOW_ATLAS_DATA = {
         "badge": "✦ New in Forever",
         "icon": "https://wow.zamimg.com/images/wow/icons/medium/ability_vehicle_sonicshockwave.jpg",
         "cost": "80 Focus",
-        "cd": "30 sec CD",
-        "desc": "Emits a piercing shriek, inflicting 33 to 39 Nature damage (Rank 2) and increasing the casting time of all spells by 60% for 30 sec."
+        "cd": "60 sec CD",
+        "desc": "Emits a piercing shriek, inflicting 33 to 39 Nature damage (Rank 2) and increasing the casting time of all spells by 30% for 20 sec."
       },
-      "highlight": "Potent anti-caster pet; 60% cast slow shuts down enemy healers and casters in PvP.",
+      "highlight": "Potent anti-caster pet; 30% cast slow for 20s shuts down enemy healers and casters in PvP.",
       "tameLocations": [
         {
           "name": "Duskbat",
@@ -3464,8 +3468,8 @@ window.WOW_ATLAS_DATA = {
         "badge": "✦ New in Forever",
         "icon": "https://wow.zamimg.com/images/wow/icons/medium/spell_nature_natureswrath.jpg",
         "cost": "20 Focus",
-        "cd": "1 min CD",
-        "desc": "Grabs an enemy's weapon with its talons, causing 20 to 24 damage and physically disarming them for 4 sec."
+        "cd": "90 sec CD",
+        "desc": "Grabs an enemy's weapon with its talons, causing 20 to 24 damage and physically disarming them for 3 sec."
       },
       "highlight": "Disarm specialist; strips melee weapons from warriors and rogues to neutralize burst.",
       "tameLocations": [
@@ -6368,10 +6372,10 @@ window.WOW_ATLAS_DATA = {
         "badge": "✦ New in Forever",
         "icon": "https://wow.zamimg.com/images/wow/icons/medium/ability_hunter_pet_crocolisk.jpg",
         "cost": "35 Focus",
-        "cd": "6 sec CD",
-        "desc": "Viciously bites enemy appendages, reducing healing effectiveness by 50% for 10 sec on a 6-second cooldown."
+        "cd": "15 sec CD",
+        "desc": "Viciously bites enemy appendages, reducing healing effectiveness by 25% for 6 sec on a 15-second cooldown."
       },
-      "highlight": "PvP meta-definer; keeps 100% uptime on 50% healing reduction without requiring an Arms warrior.",
+      "highlight": "Mortal Strike pet; applies a 25% healing reduction for 6 sec on a 15-second cooldown.",
       "tameLocations": [
         {
           "name": "Ghostmaw",

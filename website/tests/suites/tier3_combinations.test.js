@@ -190,12 +190,12 @@ export function runTier3Tests(collector, data) {
   // Combination 8: Tauren Endurance + Warrior Shield Specialization
   // =========================================================================
   collector.describe('Tier 3.8: Tauren Endurance + Warrior Shield Specialization', () => {
-    collector.test('3.8.1 Tauren Endurance (+5% HP, +1% Hit) synergizes with Warrior Shield Specialization (Block & Rage)', () => {
+    collector.test('3.8.1 Tauren Endurance (+5% HP, +2% Crit Dmg/Heal) synergizes with Warrior Shield Specialization (Block & Rage)', () => {
       const tauren = racesData.find(r => r.id === 'tauren');
       const end = tauren?.racials?.find(r => r.name === 'Endurance');
       expect(end).toBeDefined();
       expect(end.effect).toMatch(/5%/);
-      expect(end.effect).toMatch(/1%/);
+      expect(end.effect).toMatch(/2%/);
 
       const warrior = talentsData.warrior?.talents || [];
       const ss = warrior.find(t => t.name === 'Shield Specialization');

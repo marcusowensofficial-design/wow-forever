@@ -173,7 +173,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       {
         "name": "Find Treasure",
         "type": "Active",
-        "effect": "Track nearby treasure chests."
+        "effect": "Track nearby treasure chests. Now also grants a chance to find additional items in most chests."
       },
       {
         "name": "Earth Fury",
@@ -231,7 +231,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       {
         "name": "Quickness",
         "type": "Passive",
-        "effect": "1% increased Dodge chance and 2% increased run speed."
+        "effect": "1% increased Dodge chance and 2% increased run speed. Movement speed increase stacks with other movement speed increases."
       },
       {
         "name": "Wisp Spirit",
@@ -280,7 +280,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       {
         "name": "Eureka!",
         "type": "Active • 8s",
-        "effect": "Increases spell damage and healing by 10% and reduces spell mana cost by 10% for 8 sec. Has no charge limit and directly benefits Power Word: Shield absorption."
+        "effect": "Increases spell damage and healing by 10% and reduces spell mana cost by 10% for 8 sec. Has no charge limit and directly benefits Power Word: Shield absorption. Cannot be used while in stealth or invisibility."
       },
       {
         "name": "Expansive Mind",
@@ -337,18 +337,18 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
     "racials": [
       {
         "name": "Walk on Air",
-        "type": "Active • 10s",
-        "effect": "Glide downward through the air for 10 sec."
+        "type": "Active • 10s • 90s CD",
+        "effect": "Glide downward through the air for 10 sec. 90 sec cooldown."
       },
       {
         "name": "Read Leyline",
         "type": "Active • 2m CD",
-        "effect": "2 sec cast, 2 min cooldown. Gain +100% mana, energy, and rage regeneration for 30 sec (or 15 min if channeled within 40 yards of an active leyline)."
+        "effect": "2 sec cast, castable while moving, 2 min cooldown. Gain +100% mana, energy, and rage regeneration for at least 30 sec (or 15 min if channeled within 40 yards of an active leyline)."
       },
       {
         "name": "Wind Blessed",
         "type": "Passive",
-        "effect": "1% increased melee, ranged, and spellcasting Haste."
+        "effect": "3% increased melee, ranged, and spellcasting Haste."
       },
       {
         "name": "Elemental Insight",
@@ -395,13 +395,13 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
     "racials": [
       {
         "name": "Blood Fury",
-        "type": "Active • 15s • 2m CD",
-        "effect": "Increases Attack Power and Spell Power by 10% for 15 sec. 2 min cooldown."
+        "type": "Active • 15s • 3m CD",
+        "effect": "Increases Attack Power and Spell Power by 10% for 15 sec. 3 min cooldown."
       },
       {
         "name": "Shatter Curse",
         "type": "Active • 8s • 2m CD",
-        "effect": "Removes all Curse and Bane effects and grants immunity to Curses and Banes while reducing Magical damage taken by 10% for 8 sec. 2 min cooldown."
+        "effect": "Dispels all Curse and Bane effects and reduces Magical damage taken by 5% for 8 sec. 2 min cooldown."
       },
       {
         "name": "Savage",
@@ -454,7 +454,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       {
         "name": "Will of the Forsaken",
         "type": "Active",
-        "effect": "Removes Charm, Fear, and Sleep."
+        "effect": "Removes Charm, Fear, and Sleep. Not available while under the effects of Scatter Shot."
       },
       {
         "name": "Cannibalize",
@@ -469,7 +469,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       {
         "name": "Touch of the Grave",
         "type": "Passive",
-        "effect": "Your damaging attacks and spells have a chance to trigger a shadow burst that drains the target for Shadow damage and heals you for 100% of the damage dealt."
+        "effect": "Damaging attacks and spells have a 30% chance (casters) or 20% chance (melee) to trigger a shadow burst that drains the target for Shadow damage and heals you for 100% of damage dealt. 25 sec internal cooldown; does not scale with Shadow damage increases or downranking multipliers."
       }
     ]
   },
@@ -502,23 +502,23 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
     "racials": [
       {
         "name": "War Stomp",
-        "type": "Active • 0.5s Cast • 2m CD",
-        "effect": "Stuns up to 5 enemies within 8 yards for 2 sec. 0.5 sec cast, 2 min cooldown."
+        "type": "Active • 0.5s Cast • 90s CD",
+        "effect": "Stuns up to 5 enemies within 8 yards for 2 sec. 0.5 sec cast, 90 sec cooldown."
       },
       {
         "name": "Cultivation",
-        "type": "Active • 1h CD",
-        "effect": "Activate near an herb node to sprout a bonus herb nearby that can be gathered without the Herbalism profession. (✦ Note: Picking standard wild herb nodes still requires learning Herbalism)."
+        "type": "Active • 15m CD",
+        "effect": "Activate near an herb node to sprout a bonus herb nearby that can be gathered without the Herbalism profession. 15 min cooldown. (✦ Note: Picking standard wild herb nodes still requires learning Herbalism)."
       },
       {
         "name": "Plainsrunning",
         "type": "Passive",
-        "effect": "Increases movement speed by up to 40% after running continuously for 10 seconds outdoors. Taking damage or entering combat cancels the effect."
+        "effect": "Increases movement speed by up to 40% after running continuously for 10 seconds outdoors, requiring a minimum distance moved per second to maintain. Also grants 3% increased mounted movement speed, which stacks with other mounted speed increases."
       },
       {
         "name": "Endurance",
         "type": "Passive",
-        "effect": "Total Health increased by 5% and melee/spell Hit Chance increased by 1%."
+        "effect": "Total Health increased by 5% and critical damage and healing increased by 2%."
       }
     ]
   },
@@ -580,7 +580,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       {
         "name": "Regeneration",
         "type": "Passive",
-        "effect": "Total Health regeneration increased by 10%, and 10% of total Health regeneration may continue during combat."
+        "effect": "Total Health regeneration increased by 20%, and 20% of total Health regeneration may continue during combat."
       }
     ]
   }

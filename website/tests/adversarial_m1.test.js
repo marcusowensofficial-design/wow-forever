@@ -544,7 +544,7 @@ collector.describe('Suite 3: Mage Arcane, Fire & Frost Trees Adversarial Stress-
     expect(wc).toBeDefined();
     expect(il.descriptions[0]).toMatch(/200%/);
     expect(wc.descriptions[0]).toMatch(/Cone of Cold/i);
-    expect(wc.descriptions[0]).toMatch(/40%/);
+    expect(wc.descriptions[0]).toMatch(/5%/);
   });
 });
 
@@ -788,7 +788,7 @@ collector.describe('Suite 7: Dataset Parity & Hash Verification', () => {
     const parsedJs = JSON.parse(match[1]);
 
     expect(parsedJs.entries.length).toBe(parsedJson.entries.length);
-    expect(parsedJs.entries.length).toBe(965);
+    expect(parsedJs.entries.length).toBe(967);
     expect(JSON.stringify(parsedJs)).toBe(JSON.stringify(parsedJson));
   });
 

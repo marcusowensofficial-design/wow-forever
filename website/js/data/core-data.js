@@ -1530,18 +1530,18 @@ const WOW_FOREVER_DATA = {
     "racialsAlliance": [
       {
         "name": "Walk on Air",
-        "type": "Active • 10s",
-        "effect": "Glide downward through the air for 10 sec."
+        "type": "Active • 10s • 90s CD",
+        "effect": "Glide downward through the air for 10 sec. 90 sec cooldown."
       },
       {
         "name": "Read Ley Line",
         "type": "Active",
-        "effect": "Sense hidden ley conduits, boosting mana regeneration and spell efficiency."
+        "effect": "Sense hidden ley conduits, boosting mana regeneration and spell efficiency (castable while moving, 30s minimum duration)."
       },
       {
         "name": "Wind Blessed",
         "type": "Passive",
-        "effect": "1% increased melee, ranged, and spellcasting Haste."
+        "effect": "3% increased melee, ranged, and spellcasting Haste."
       },
       {
         "name": "Elemental Insight",
@@ -1552,18 +1552,18 @@ const WOW_FOREVER_DATA = {
     "racialsHorde": [
       {
         "name": "Walk on Air",
-        "type": "Active • 10s",
-        "effect": "Glide downward through the air for 10 sec."
+        "type": "Active • 10s • 90s CD",
+        "effect": "Glide downward through the air for 10 sec. 90 sec cooldown."
       },
       {
         "name": "Skysight",
         "type": "Active",
-        "effect": "Receive an Elemental Blessing increasing run speed by 10%."
+        "effect": "Receive an Elemental Blessing increasing run speed by 10% (castable while moving)."
       },
       {
         "name": "Wind Blessed",
         "type": "Passive",
-        "effect": "1% increased melee, ranged, and spellcasting Haste."
+        "effect": "3% increased melee, ranged, and spellcasting Haste."
       },
       {
         "name": "Elemental Insight",
@@ -1574,18 +1574,18 @@ const WOW_FOREVER_DATA = {
     "racials": [
       {
         "name": "Walk on Air",
-        "type": "Active • 10s",
-        "effect": "Glide downward through the air for 10 sec."
+        "type": "Active • 10s • 90s CD",
+        "effect": "Glide downward through the air for 10 sec. 90 sec cooldown."
       },
       {
         "name": "Read Ley Line / Skysight",
         "type": "Active (Faction Dependent)",
-        "effect": "Alliance: Read Ley Line (mana/spells) • Horde: Skysight (+10% run speed)."
+        "effect": "Alliance: Read Ley Line (mana/spells) • Horde: Skysight (+10% run speed). Both castable while moving."
       },
       {
         "name": "Wind Blessed",
         "type": "Passive",
-        "effect": "1% increased melee, ranged, and spellcasting Haste."
+        "effect": "3% increased melee, ranged, and spellcasting Haste."
       },
       {
         "name": "Elemental Insight",

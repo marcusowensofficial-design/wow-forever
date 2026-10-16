@@ -1456,9 +1456,9 @@ function initClassDeepDives() {
         icon: "https://wow.zamimg.com/images/wow/icons/medium/ability_vehicle_sonicshockwave.jpg",
         name: "Sonic Blast",
         rank: "Rank 2",
-        desc: "Emits a piercing shriek, inflicting 33 to 39 Nature damage and increasing the casting time of all spells by 60% for 30 sec.",
+        desc: "Emits a piercing shriek, inflicting 33 to 39 Nature damage and increasing the casting time of all spells by 30% for 20 sec.",
         cost: "80 Focus",
-        cd: "30 sec cooldown"
+        cd: "60 sec cooldown"
       },
       {
         family: "Bear",
@@ -1475,9 +1475,9 @@ function initClassDeepDives() {
         icon: "https://wow.zamimg.com/images/wow/icons/medium/spell_nature_natureswrath.jpg",
         name: "Mine!",
         rank: "Rank 3",
-        desc: "Grabs an enemy's weapon with its talons, causing 20 to 24 damage and disarming them for 4 sec.",
+        desc: "Grabs an enemy's weapon with its talons, causing 20 to 24 damage and disarming them for 3 sec.",
         cost: "20 Focus",
-        cd: "1 min cooldown"
+        cd: "90 sec cooldown"
       },
       {
         family: "Crab",
@@ -1493,9 +1493,9 @@ function initClassDeepDives() {
         icon: "https://wow.zamimg.com/images/wow/icons/medium/ability_hunter_pet_crocolisk.jpg",
         name: "Dismember",
         rank: "Rank 2",
-        desc: "Viciously bites enemy appendages for 18 to 20 damage and reduces the effectiveness of any healing by 50% for 10 sec.",
+        desc: "Viciously bites enemy appendages for 18 to 20 damage and reduces the effectiveness of any healing by 25% for 6 sec.",
         cost: "35 Focus",
-        cd: "6 sec cooldown"
+        cd: "15 sec cooldown"
       },
       {
         family: "Fox",

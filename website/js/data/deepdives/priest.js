@@ -258,12 +258,12 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           desc: "Afflicts the target with a disease dealing massive Shadow damage and healing the Priest. Talents reduce its mana cost by up to 50%; if the target dies while affected, it jumps to a nearby enemy within 10 yards!"
         },
         {
-          name: "Improved Mind Flay (+10 Yds & Slow)",
+          name: "Improved Mind Flay (Ramping Damage & Range)",
           type: "Channel Enhancement",
           cast: "Channeled (3 sec)",
           range: "30 Yards",
           status: "verified",
-          desc: "Increases Mind Flay damage by 10%, extends its range by 10 yards (to 30 yards), and applies a 20% movement-speed reduction."
+          desc: "Extends Mind Flay range by 10 yards (to 30 yards). Each instance of Mind Flay damage deals 10/20% more damage than its previous instance."
         },
         {
           name: "Vampiric Embrace & Spirit Tap Procs",
@@ -476,12 +476,12 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         source: "Sodapoppin Hands-On Demo"
       },
       {
-        feature: "Improved Mind Flay Range & Slow",
+        feature: "Improved Mind Flay Ramping Damage & Range",
         category: "Shadow",
-        details: "+10% damage, +10 yards range (30 yd total), 20% movement slow",
+        details: "Each damage instance deals 10/20% more damage than previous; +10 yd range (30 yd total)",
         status: "Verified in Closed Beta",
         statusType: "verified",
-        source: "Sodapoppin Hands-On Demo"
+        source: "Beta Patch Build 1.60.1.70425"
       },
       {
         feature: "Vampiric Embrace & Spirit Tap",
@@ -686,7 +686,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             statPriority: "Intellect > Spirit > Spell Power > Healing Power",
             bestWeapon: "Dalaran Caretaker Gavel / Staff of Westfall",
             talents: [
-              { name: "Power in Light", points: "5/5", tree: "Discipline (Tier 1)", desc: "Increases your spell damage and healing by 10% of your total Spirit." },
+              { name: "Power in Light", points: "5/5", tree: "Discipline (Tier 1)", desc: "Your Smite and Penance spells deal 10% increased damage to targets afflicted with your Holy Fire or Shadow Word: Pain." },
               { name: "Mental Strength", points: "5/5", tree: "Discipline (Tier 2)", desc: "Increases your maximum Mana by 10%." },
               { name: "Mental Agility", points: "2/3", tree: "Discipline (Tier 3)", desc: "Reduces the Mana cost of your instant cast spells by 7%." },
               { name: "Inner Focus", points: "1/1", tree: "Discipline (Tier 3 Keystone)", desc: "When activated, reduces the Mana cost of your next spell by 100% and increases critical chance by 25%." },

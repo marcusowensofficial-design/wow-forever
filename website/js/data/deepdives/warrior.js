@@ -153,11 +153,11 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           desc: "Attacking a target afflicted by Rend gives melee attacks a 10% chance to activate Overpower on that target for 6 seconds, providing constant guaranteed crits."
         },
         {
-          name: "Improved Slam (No Swing Reset)",
+          name: "Improved Slam (No Pushback & No Swing Reset)",
           type: "Rotational QoL Keystone",
           cast: "Passive",
           status: "verified",
-          desc: "Reduces Slam's global cooldown and cast time by 0.5 seconds and prevents Slam from resetting the melee swing timer, enabling seamless weave rotations."
+          desc: "Reduces Slam's global cooldown and cast time by 0.5 seconds, prevents Slam from resetting the melee swing timer, and makes Slam immune to spell pushback."
         },
         {
           name: "Mortal Strike",
@@ -431,12 +431,12 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         source: "Sodapoppin Hands-On Demo"
       },
       {
-        feature: "Improved Slam (No Swing Reset)",
+        feature: "Slam Pushback Immunity & Swing Flow",
         category: "Arms",
-        details: "-0.5s cast/GCD and does NOT reset weapon swing timer",
+        details: "-0.5s cast/GCD, does NOT reset weapon swing timer, and immune to spell pushback",
         status: "Verified in Closed Beta",
         statusType: "verified",
-        source: "Sodapoppin Hands-On Demo"
+        source: "Beta Patch Build 1.60.1.70425"
       },
       {
         feature: "Raging Blows (Dual Whirlwind)",
