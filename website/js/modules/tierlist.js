@@ -48,7 +48,7 @@ function loadTierListState() {
   if (saved) {
     try {
       tierAllocations = JSON.parse(saved);
-    } catch (e) {
+    } catch {
       tierAllocations = {};
     }
   } else {

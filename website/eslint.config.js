@@ -103,7 +103,10 @@ export default [
       }
     },
     rules: {
-      'no-unused-vars': ['warn', { 'argsIgnorePattern': '^_', 'varsIgnorePattern': '^_' }],
+      'no-unused-vars': ['warn', {
+        'argsIgnorePattern': '^_',
+        'varsIgnorePattern': '^(_|WOW_|init[A-Z]|render(MountsGallery|StatsAndCaps|ProfessionPassives|GameEditions|Megarealms|DungeonCurve|QoLGrid|EngineSpecs)$)'
+      }],
       'no-undef': 'error',
       'no-redeclare': 'off',
       'no-dupe-keys': 'error',

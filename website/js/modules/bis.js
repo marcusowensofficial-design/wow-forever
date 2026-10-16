@@ -1118,7 +1118,7 @@ const WOW_TALENT_ICONS = {
 /**
  * Resolve authentic CDN icon for any talent ability name
  */
-function getTalentIconUrl(talentName, treeName, classId) {
+function getTalentIconUrl(talentName, _treeName, _classId) {
   if (!talentName) return "https://render.worldofwarcraft.com/us/icons/56/inv_misc_questionmark.jpg";
   const key = talentName.toLowerCase().trim();
   const iconFile = WOW_TALENT_ICONS[key];
@@ -1827,7 +1827,7 @@ function updateTooltipPosition(e, tooltip) {
   tooltip.style.top = `${Math.max(8, top)}px`;
 }
 
-function getWeaponOrOffHandDetails(slot, name, quality) {
+function getWeaponOrOffHandDetails(slot, name, _quality) {
   const l = (slot || '').toLowerCase();
   const n = (name || '').toLowerCase();
 

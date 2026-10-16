@@ -343,6 +343,28 @@ check('Dalaran Map TGA textures are optimized power-of-two (1024x1024)', () => {
   }
 });
 
+check('Universal Search static targetId deep-links all resolve in index.html', () => {
+  const searchRaw = fs.readFileSync(path.join(ROOT, 'js', 'modules', 'search.js'), 'utf8');
+  const matches = [...searchRaw.matchAll(/targetId:\s*'([^']+)'/g)];
+  for (const m of matches) {
+    const tid = m[1];
+    if (!indexHtml.includes(`id="${tid}"`)) {
+      throw new Error(`Search index references missing DOM id="${tid}" in index.html`);
+    }
+  }
+});
+
+check('Addon spotlight cards in index.html have live download links and synced versions', () => {
+  if (indexHtml.includes('Available for download soon')) {
+    throw new Error('Found stale "Available for download soon" badge in index.html');
+  }
+  const manifest = JSON.parse(fs.readFileSync(path.join(ROOT, 'downloads', 'manifest.json'), 'utf8'));
+  for (const addon of manifest.addons) {
+    if (!indexHtml.includes(addon.downloadPath)) {
+      throw new Error(`index.html missing download link for ${addon.downloadPath}`);
+    }
+  }
+});
 
 console.log('\n=======================================');
 console.log(`Ran ${totalChecks} checks. Failures: ${errors.length}`);

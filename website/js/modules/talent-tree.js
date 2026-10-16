@@ -85,15 +85,7 @@
   /**
    * Escape HTML entities to prevent injection
    */
-  function escapeHtml(str) {
-    if (!str) return '';
-    return String(str)
-      .replace(/&/g, '&amp;')
-      .replace(/</g, '&lt;')
-      .replace(/>/g, '&gt;')
-      .replace(/"/g, '&quot;')
-      .replace(/'/g, '&#039;');
-  }
+  const escapeHtml = window.escapeHtml;
 
   /**
    * Get class data from WOW_TALENTS_DATA with safe fallback
@@ -550,7 +542,6 @@
    * Render 4x7 Visual Grid Matrix for a tree
    */
   function renderTreeVisualMatrix(classData, treeIndex, customPoints = null) {
-    const tree = classData.trees[treeIndex];
     const treeTalents = classData.talents.filter(t => t.tree === treeIndex);
     const ptsMap = customPoints || state.points;
 
@@ -793,7 +784,6 @@
     const totalPoints = getTotalPoints();
     const treePoints = [0, 1, 2].map(idx => getTreePoints(idx));
     const buildCode = generateBuildCode(state.classId, state.specId, state.points);
-    const buildUrl = generateBuildUrl(state.classId, state.points);
     const pointsRemaining = Math.max(0, state.maxPoints - totalPoints);
 
     // Class meta styling

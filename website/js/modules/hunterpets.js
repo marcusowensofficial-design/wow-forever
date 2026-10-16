@@ -16,43 +16,29 @@
   let maxLevelFilter = 60; // 30 for beta cap, 60 for all
   let newSpawnsOnly = false;
 
-  function escapeHtml(str) {
-    if (!str) return '';
-    return String(str)
-      .replace(/&/g, '&amp;')
-      .replace(/</g, '&lt;')
-      .replace(/>/g, '&gt;')
-      .replace(/"/g, '&quot;')
-      .replace(/'/g, '&#039;');
-  }
+  const escapeHtml = window.escapeHtml;
 
   function getPetData() {
     return window.WOW_ATLAS_DATA?.hunterPets || null;
   }
 
-  function copyTextToClipboard(text, btnElement, successLabel = 'Copied!') {
-    if (!navigator.clipboard) {
-      const ta = document.createElement('textarea');
-      ta.value = text;
-      document.body.appendChild(ta);
-      ta.select();
-      document.execCommand('copy');
-      document.body.removeChild(ta);
-    } else {
-      navigator.clipboard.writeText(text);
-    }
-
-    if (btnElement) {
-      const orig = btnElement.innerHTML;
-      btnElement.innerHTML = `✓ ${successLabel}`;
-      btnElement.classList.add('copied');
-      setTimeout(() => {
-        btnElement.innerHTML = orig;
-        btnElement.classList.remove('copied');
-      }, 1500);
-    }
+  function copyPetMacro(text, btnElement, successLabel = 'Copied!') {
+    window.copyTextToClipboard(text).then(() => {
+      if (typeof window.showToast === 'function') {
+        window.showToast(`Copied: ${text}`);
+      }
+      if (btnElement) {
+        const orig = btnElement.innerHTML;
+        btnElement.innerHTML = `✓ ${successLabel}`;
+        btnElement.classList.add('copied');
+        setTimeout(() => {
+          btnElement.innerHTML = orig;
+          btnElement.classList.remove('copied');
+        }, 1500);
+      }
+    });
   }
-  window.copyPetMacro = copyTextToClipboard;
+  window.copyPetMacro = copyPetMacro;
 
   function normalizePetFamily(str) {
     if (!str) return 'all';

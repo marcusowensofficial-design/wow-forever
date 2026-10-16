@@ -510,8 +510,3 @@ function initSquadRoster() {
   renderRoster();
 }
 
-function escapeHtml(string) {
-  const div = document.createElement('div');
-  div.textContent = string;
-  return div.innerHTML;
-}

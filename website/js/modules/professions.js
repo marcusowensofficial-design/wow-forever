@@ -34,15 +34,7 @@
     return `${CDN_BASE}${clean}.jpg`;
   }
 
-  function escapeHtml(str) {
-    if (!str) return '';
-    return String(str)
-      .replace(/&/g, '&amp;')
-      .replace(/</g, '&lt;')
-      .replace(/>/g, '&gt;')
-      .replace(/"/g, '&quot;')
-      .replace(/'/g, '&#039;');
-  }
+  const escapeHtml = window.escapeHtml;
 
   function getProfessionPassive(nameOrSlug) {
     if (!nameOrSlug) return null;

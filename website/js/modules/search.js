@@ -105,8 +105,63 @@ function buildSearchIndex() {
     category: 'Datamining & Gear',
     icon: '🔒',
     desc: 'Interactive 3D flip card & reveal meter for 2,425 obfuscated items.',
-    tab: 'codex',
-    targetId: 'codex-hidden'
+    tab: 'systems',
+    targetId: 'hidden-items-tracker-container'
+  });
+
+  // Companion Addons & All-in-One Suite
+  [
+    {
+      title: "Marcus's All-in-One WoW Forever Addon Suite (v2.2.1)",
+      icon: '🧩',
+      desc: 'Complete 6-addon pack: ForeverPlates, Castbars, ForeverLiquid, ForeverDungeonJournal, ForeverBlessings, and EchoTwist.',
+      targetId: 'tab-addons'
+    },
+    {
+      title: 'ForeverPlates (v2.1.1) — Zero-Taint Pixel Nameplate Engine',
+      icon: '🎯',
+      desc: 'C-side health formatting on <secret number> values, threat colors, execute borders, and /fp test mode.',
+      targetId: 'card-foreverplates'
+    },
+    {
+      title: 'Forever Nameplates Castbars (v2.2.1) — Sub-Pixel Castbar & Latency HUD',
+      icon: '⚡',
+      desc: 'Enemy nameplate castbars with uninterruptible shield detection and lag queue window (/bcb, /fpc).',
+      targetId: 'card-forevercastbars'
+    },
+    {
+      title: 'ForeverLiquid (v1.3.1) — Cyberpunk Neon Fluid XP & Gold Ledger HUD',
+      icon: '🧪',
+      desc: '20-bubble fluid XP bar, live gold/hr cashflow ledger, mount fund ETA, and 5-instance/hr lockout radar (/fl).',
+      targetId: 'card-foreverliquid'
+    },
+    {
+      title: 'ForeverDungeonJournal (v1.6.2) — Classic+ Encounter Atlas & BiS Wishlist',
+      icon: '📖',
+      desc: 'All 13 Classic+ dungeons, 3D boss viewer, calibrated maps, and /fj import in-game BiS wishlist starring.',
+      targetId: 'card-foreverjournal'
+    },
+    {
+      title: 'ForeverBlessings (v1.1.0) — 60-Minute Paladin Blessing Coordinator',
+      icon: '👑',
+      desc: 'Class assignment matrix, reagent-free 1-hour Greater Blessing tracking, and one-click raid audit (/fb).',
+      targetId: 'card-foreverblessings'
+    },
+    {
+      title: 'EchoTwist (v1.0.0) — Windfury Proc Echo & 0.4s Seal Twist Window HUD',
+      icon: '🌪️',
+      desc: 'High-precision main-hand swing timer, 0.4s golden Ret Paladin twist window, and Windfury proc alerts (/et).',
+      targetId: 'card-echotwist'
+    }
+  ].forEach(addon => {
+    searchIndex.push({
+      title: addon.title,
+      category: 'Companion Addon',
+      icon: addon.icon,
+      desc: addon.desc,
+      tab: 'addons',
+      targetId: addon.targetId
+    });
   });
 
   searchIndex.push({

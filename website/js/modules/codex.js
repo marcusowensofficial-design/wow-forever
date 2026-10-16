@@ -568,12 +568,32 @@ function renderEngineSpecs() {
 /* ==========================================================================
    MERCHANT'S FAVOR CURRENCY & SUPPLY CRATES PANEL
    ========================================================================== */
+function formatFavorCoin(silverFloat) {
+  const totalCopper = Math.round((Number(silverFloat) || 0) * 100);
+  const gold = Math.floor(totalCopper / 10000);
+  const silver = Math.floor((totalCopper % 10000) / 100);
+  const copper = String(totalCopper % 100).padStart(2, '0');
+  return gold > 0 ? `${gold}g ${silver}s ${copper}c` : `${silver}s ${copper}c`;
+}
+
 function renderMerchantsFavorPanel() {
   const container = document.getElementById('codex-commerce-container');
   if (!container) return;
 
   const mfData = (typeof window !== 'undefined' && window.WOW_ATLAS_DATA && window.WOW_ATLAS_DATA.merchantsFavor) || null;
   const camps = (mfData && mfData.camps) || {};
+  const allianceCamp = camps.alliance || {
+    name: 'Azeroth Commerce Authority',
+    location: 'Three Corners, Redridge Mountains',
+    coords: '10.5, 72.7 (Meeting of Elwynn, Duskwood & Lakeshire roads)',
+    quartermaster: 'Marcy Baker (9.5, 71.1)'
+  };
+  const hordeCamp = camps.horde || {
+    name: 'Durotar Supply and Logistics',
+    location: 'West of Crossroads, The Barrens',
+    coords: '49.7, 29.4 (On the road to Stonetalon Mountains)',
+    quartermaster: 'Dokimi (50.0, 29.2)'
+  };
   const vendors = (mfData && mfData.vendors) || [];
   const crateTiers = (mfData && mfData.crateTiers) || [];
   const priorities = (mfData && mfData.priorityPurchases) || [];
@@ -595,14 +615,14 @@ function renderMerchantsFavorPanel() {
           <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.5rem;">
             <div style="display: flex; align-items: center; gap: 0.5rem;">
               <span style="font-size: 1.5rem;">🦁</span>
-              <strong style="color: #93c5fd; font-size: 1.1rem;">Azeroth Commerce Authority</strong>
+              <strong style="color: #93c5fd; font-size: 1.1rem;">${escapeHtml(allianceCamp.name)}</strong>
             </div>
             <span class="deepdive-badge badge-exclusive" style="font-size: 0.72rem;">Alliance Camp</span>
           </div>
           <div style="font-size: 0.85rem; color: #cbd5e1; line-height: 1.5;">
-            <div><strong>Location:</strong> Three Corners, Redridge Mountains</div>
-            <div><strong>Coordinates:</strong> 10.5, 72.7 (Meeting of Elwynn, Duskwood & Lakeshire roads)</div>
-            <div><strong>Turn-in Officer:</strong> Marcy Baker (9.5, 71.1)</div>
+            <div><strong>Location:</strong> ${escapeHtml(allianceCamp.location)}</div>
+            <div><strong>Coordinates:</strong> ${escapeHtml(allianceCamp.coords)}</div>
+            <div><strong>Turn-in Officer:</strong> ${escapeHtml(allianceCamp.quartermaster)}</div>
             <div style="color: #f87171; margin-top: 0.25rem; font-size: 0.78rem;">⚠️ Contested Territory: Watch for Horde on PvP realms.</div>
           </div>
         </div>
@@ -612,14 +632,14 @@ function renderMerchantsFavorPanel() {
           <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.5rem;">
             <div style="display: flex; align-items: center; gap: 0.5rem;">
               <span style="font-size: 1.5rem;">🦅</span>
-              <strong style="color: #fca5a5; font-size: 1.1rem;">Durotar Supply and Logistics</strong>
+              <strong style="color: #fca5a5; font-size: 1.1rem;">${escapeHtml(hordeCamp.name)}</strong>
             </div>
             <span class="deepdive-badge badge-demo" style="font-size: 0.72rem;">Horde Camp</span>
           </div>
           <div style="font-size: 0.85rem; color: #cbd5e1; line-height: 1.5;">
-            <div><strong>Location:</strong> West of Crossroads, The Barrens</div>
-            <div><strong>Coordinates:</strong> 49.7, 29.4 (On the road to Stonetalon Mountains)</div>
-            <div><strong>Turn-in Officer:</strong> Dokimi (50.0, 29.2)</div>
+            <div><strong>Location:</strong> ${escapeHtml(hordeCamp.location)}</div>
+            <div><strong>Coordinates:</strong> ${escapeHtml(hordeCamp.coords)}</div>
+            <div><strong>Turn-in Officer:</strong> ${escapeHtml(hordeCamp.quartermaster)}</div>
             <div style="color: #34d399; margin-top: 0.25rem; font-size: 0.78rem;">🛡️ Safe Horde Territory: Protected by Crossroads guards.</div>
           </div>
         </div>
@@ -701,7 +721,7 @@ function renderMerchantsFavorPanel() {
       </div>
 
       <!-- Craftsman's Writs & Priority Purchases Dual Column -->
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.25rem;">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.25rem; margin-bottom: 1.5rem;">
         
         <!-- Craftsman's Writs -->
         <div style="background: rgba(15, 23, 42, 0.6); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.25rem;">
@@ -755,6 +775,36 @@ function renderMerchantsFavorPanel() {
         </div>
 
       </div>
+
+      ${vendors.length > 0 ? `
+        <!-- Camp Vendor Directory -->
+        <div style="background: rgba(15, 23, 42, 0.6); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.25rem;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; flex-wrap: wrap; gap: 0.5rem;">
+            <h4 style="color: #fff; font-size: 1.05rem; margin: 0;">🧭 Camp Specialist Vendors &amp; Coordinates (${vendors.length} NPCs)</h4>
+            <span style="font-size: 0.78rem; color: #94a3b8;">Redridge Three Corners (Alliance) • Crossroads West (Horde)</span>
+          </div>
+          <div class="table-responsive-wrapper" style="overflow-x: auto;">
+            <table class="pvp-ranks-table" style="width: 100%; border-collapse: collapse;">
+              <thead>
+                <tr style="border-bottom: 2px solid var(--border-subtle); text-align: left; font-size: 0.8rem; color: var(--text-gold);">
+                  <th style="padding: 0.55rem;">Specialist Role</th>
+                  <th style="padding: 0.55rem;">🦁 Alliance Vendor (Redridge)</th>
+                  <th style="padding: 0.55rem;">🦅 Horde Vendor (The Barrens)</th>
+                </tr>
+              </thead>
+              <tbody>
+                ${vendors.map(v => `
+                  <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); font-size: 0.82rem;">
+                    <td style="padding: 0.55rem; color: #f8fafc; font-weight: 600;">${escapeHtml(v.role)}</td>
+                    <td style="padding: 0.55rem; color: #93c5fd;">${escapeHtml(v.alliance)}</td>
+                    <td style="padding: 0.55rem; color: #fca5a5;">${escapeHtml(v.horde)}</td>
+                  </tr>
+                `).join('')}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      ` : ''}
     </div>
   `;
 
@@ -767,10 +817,9 @@ function renderMerchantsFavorPanel() {
     if (!selTier || !inpQty || !resDisplay) return;
     const favorPer = parseInt(selTier.value, 10) || 0;
     const moneyPer = parseFloat(selTier.options[selTier.selectedIndex].getAttribute('data-money') || '0');
-    const qty = parseInt(inpQty.value, 10) || 1;
+    const qty = Math.max(1, parseInt(inpQty.value, 10) || 1);
     const totalFavor = favorPer * qty;
-    const totalMoneySilver = (moneyPer * qty).toFixed(1);
-    resDisplay.textContent = `${totalFavor} Favor • ${totalMoneySilver}s 00c`;
+    resDisplay.textContent = `${totalFavor} Favor • ${formatFavorCoin(moneyPer * qty)}`;
   }
 
   if (selTier) selTier.addEventListener('change', updateCalc);

@@ -271,7 +271,7 @@ function renderBooksTracker() {
       const isCollected = collectedIds.has(book.id);
       return `
         <div class="atlas-book-row ${isCollected ? 'collected' : ''}" onclick="toggleLibraryBook('${book.id}')">
-          <input type="checkbox" class="book-checkbox" aria-label="Mark ${escapeHtml(book.title)} as collected" ${isCollected ? 'checked' : ''} onclick="event.stopPropagation(); toggleLibraryBook('${book.id}');" />
+          <input type="checkbox" class="book-checkbox" aria-label="Mark ${escapeHtml(book.name)} as collected" ${isCollected ? 'checked' : ''} onclick="event.stopPropagation(); toggleLibraryBook('${book.id}');" />
           <span class="book-number">#${book.id}</span>
           <div class="book-details">
             <div class="book-title-row">
@@ -317,8 +317,8 @@ function renderPvPSchedule() {
   const battlegrounds = pvp.battlegrounds || [];
 
   tbody.innerHTML = ranks.map(r => {
-    const levelReq = r.rank <= 3 ? 'Level 10+' : (r.rank <= 6 ? 'Level 30+' : (r.rank <= 10 ? 'Level 40+' : 'Level 60'));
-    const isBetaUnlocked = r.rank <= 3;
+    const levelReq = r.rank <= 3 ? 'Level 10+' : (r.rank === 4 ? 'Level 30' : (r.rank <= 6 ? 'Level 40+' : (r.rank <= 10 ? 'Level 50+' : 'Level 60')));
+    const isBetaUnlocked = r.rank <= 4;
     return `
       <tr>
         <td><span class="pvp-rank-pill">Rank ${r.rank}</span></td>
@@ -327,7 +327,7 @@ function renderPvPSchedule() {
         <td><strong>${r.rpNeeded.toLocaleString()} RP</strong></td>
         <td>
           <span style="color: ${isBetaUnlocked ? '#34d399' : '#94a3b8'}; font-weight: 600;">
-            ${levelReq} ${isBetaUnlocked ? '✓ Phase 1' : '🔒 Phase 2+'}
+            ${levelReq} ${isBetaUnlocked ? (r.rank === 4 ? '✓ Phase 2 Cap' : '✓ Active') : '🔒 Launch'}
           </span>
         </td>
         <td><span style="color: #cbd5e1;">${escapeHtml(r.unlock)}</span></td>

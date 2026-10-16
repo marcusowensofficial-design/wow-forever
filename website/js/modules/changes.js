@@ -23,15 +23,7 @@
     return `${CDN_BASE}${clean}.jpg`;
   }
 
-  function escapeHtml(str) {
-    if (!str) return '';
-    return String(str)
-      .replace(/&/g, '&amp;')
-      .replace(/</g, '&lt;')
-      .replace(/>/g, '&gt;')
-      .replace(/"/g, '&quot;')
-      .replace(/'/g, '&#039;');
-  }
+  const escapeHtml = window.escapeHtml;
 
   function getStatusBadge(item) {
     const k = item.reported_change_kind;

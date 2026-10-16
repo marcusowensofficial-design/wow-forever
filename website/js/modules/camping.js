@@ -679,11 +679,6 @@ function initEngineVisualDemo() {
   });
 }
 
-function escapeHtml(string) {
-  const div = document.createElement('div');
-  div.textContent = string;
-  return div.innerHTML;
-}
 
 /* ==========================================================================
    10. PROFESSION COMBAT PASSIVES & CAMPING MATRIX

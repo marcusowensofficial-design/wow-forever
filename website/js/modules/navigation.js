@@ -74,6 +74,8 @@ function initBetaDurationTracker() {
   const daysBadge = document.getElementById('beta-days-badge');
   const phase2DayBadge = document.getElementById('beta-phase2-day-badge');
   const topTickerDayBadge = document.getElementById('top-ticker-day-elapsed');
+  const weekStatusText = document.getElementById('beta-week-status-text');
+  const currentWeek = Math.min(5, Math.max(1, Math.ceil(daysElapsed / 7)));
 
   if (progressFill) progressFill.style.width = `${percent}%`;
   if (progressText) {
@@ -86,6 +88,7 @@ function initBetaDurationTracker() {
   if (daysBadge) daysBadge.textContent = isPostBeta ? 'Beta Complete' : `${daysRemaining} Days Left`;
   if (phase2DayBadge) phase2DayBadge.textContent = isPostBeta ? 'Beta Concluded' : `Day ${daysElapsed} of 35`;
   if (topTickerDayBadge) topTickerDayBadge.textContent = isPostBeta ? 'Beta Complete (35/35)' : `Day ${daysElapsed} of 35`;
+  if (weekStatusText) weekStatusText.textContent = isPostBeta ? 'Completed (5 of 5 Weeks)' : `Week ${currentWeek} of 5`;
 }
 
 /* ==========================================================================

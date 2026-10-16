@@ -18,7 +18,6 @@
   'use strict';
 
   // Storage Keys
-  const STORAGE_KEY_ALLOCATIONS = 'wow_forever_legacy_allocations_v2';
   const STORAGE_KEY_PROFILES = 'wow_forever_legacy_profiles';
   const STORAGE_KEY_ACTIVE_PROFILE = 'wow_forever_legacy_active_profile';
   const STORAGE_KEY_CHALLENGES = 'wow_forever_legacy_challenges_completed';
@@ -191,7 +190,7 @@
       if (oldAllocations && (!profiles.main.allocations || Object.keys(profiles.main.allocations).length === 0)) {
         try {
           profiles.main.allocations = JSON.parse(oldAllocations);
-        } catch (e) {}
+        } catch {}
       }
 
       completedChallenges = JSON.parse(localStorage.getItem(STORAGE_KEY_CHALLENGES) || '{}');
@@ -604,7 +603,7 @@
     `;
   }
 
-  function renderChallengeChecklist(earnedPoints) {
+  function renderChallengeChecklist() {
     const checklistContainer = document.getElementById('legacy-challenges-checklist');
     if (!checklistContainer) return;
 

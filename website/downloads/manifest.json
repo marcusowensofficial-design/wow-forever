@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-10-15T19:59:05.374Z",
+  "generatedAt": "2026-10-15T20:22:58.306Z",
   "targetInterface": 16001,
   "engine": "Camelot 12.0",
   "masterSuite": {
     "filename": "Marcus-WoWForever-Addon-Suite.zip",
-    "sizeKb": 31699,
-    "sha256": "d124f3e148def68fd4a947cb2f4cc2984c83d9e7e7b229b8b75a8616e7d20ee9",
+    "sizeKb": 31701,
+    "sha256": "edc5a7b6c257da241331ba52645b659e01b63f4e6a48029b2e63585df5ae4cd3",
     "downloadPath": "downloads/Marcus-WoWForever-Addon-Suite.zip"
   },
   "addons": [
@@ -13,8 +13,8 @@
       "name": "ForeverPlates",
       "version": "2.1.1",
       "filename": "ForeverPlates-v2.1.1.zip",
-      "sizeKb": 597,
-      "sha256": "a3b0d06da27961eefdd125cc1e7794e1afcab62c384a66f02eb7e637f56afdfb",
+      "sizeKb": 598,
+      "sha256": "041886eacc7cdd9ff109a7a8d255c28423ee96c4ad15117c885de5647d43883e",
       "downloadPath": "downloads/ForeverPlates-v2.1.1.zip"
     },
     {

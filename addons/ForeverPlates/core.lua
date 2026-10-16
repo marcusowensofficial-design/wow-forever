@@ -249,6 +249,11 @@ local defaults = {
     classColorPlayers = true,
     grayTappedMobs = true,
     showTappedBadge = false,
+    stackingNameplates = true,
+    stackingOverlapV = 1.20,
+    stackingOverlapH = 0.80,
+    smartMultiMobStacking = true,
+    enableClickTargeting = true,
 }
 FP.defaults = defaults
 
@@ -362,12 +367,51 @@ local function InitializeDatabase()
     if ForeverPlatesDB.friendlyLevelTextYOffset == nil then
         ForeverPlatesDB.friendlyLevelTextYOffset = 0
     end
+    if ForeverPlatesDB.stackingNameplates == nil then
+        ForeverPlatesDB.stackingNameplates = true
+    end
+    if ForeverPlatesDB.stackingOverlapV == nil then
+        ForeverPlatesDB.stackingOverlapV = 1.20
+    end
+    if ForeverPlatesDB.stackingOverlapH == nil then
+        ForeverPlatesDB.stackingOverlapH = 0.80
+    end
+    if ForeverPlatesDB.smartMultiMobStacking == nil then
+        ForeverPlatesDB.smartMultiMobStacking = true
+    end
+    if ForeverPlatesDB.enableClickTargeting == nil then
+        ForeverPlatesDB.enableClickTargeting = true
+    end
     pcall(function()
         if SetCVar then
-            SetCVar("nameplateMotion", "1")
-            SetCVar("nameplateOverlapH", "0.8")
-            SetCVar("nameplateOverlapV", "1.1")
+            -- Nameplate Stacking & Motion in Midnight 12.0 / Camelot
+            SetCVar("nameplateMotion", ForeverPlatesDB.stackingNameplates and "1" or "0")
+            SetCVar("nameplateOverlapH", tostring(ForeverPlatesDB.stackingOverlapH or 0.80))
+            SetCVar("nameplateOverlapV", tostring(ForeverPlatesDB.stackingOverlapV or 1.20))
             SetCVar("nameplateSelectedScale", "1.15")
+
+            -- Click-to-Target Nameplate Safety: Ensure clicks are never swallowed or ignored
+            SetCVar("nameplateEnemyClickThrough", ForeverPlatesDB.enableClickTargeting ~= false and "0" or "1")
+            SetCVar("nameplateFriendlyClickThrough", "0")
+            if C_NamePlate and C_NamePlate.SetNamePlateEnemyClickThrough then
+                pcall(C_NamePlate.SetNamePlateEnemyClickThrough, ForeverPlatesDB.enableClickTargeting == false)
+            end
+            if C_NamePlate and C_NamePlate.SetNamePlateFriendlyClickThrough then
+                pcall(C_NamePlate.SetNamePlateFriendlyClickThrough, false)
+            end
+
+            -- Synchronize C++ 3D Raycast Hitboxes with Configured Bar Dimensions
+            local enemyW = ForeverPlatesDB.barWidth or 142
+            local enemyH = ForeverPlatesDB.barHeight or 18
+            local friendlyW = ForeverPlatesDB.friendlyBarWidth or 120
+            local friendlyH = ForeverPlatesDB.friendlyBarHeight or 12
+            if C_NamePlate and C_NamePlate.SetNamePlateEnemySize then
+                pcall(C_NamePlate.SetNamePlateEnemySize, enemyW, enemyH + 10)
+            end
+            if C_NamePlate and C_NamePlate.SetNamePlateFriendlySize then
+                pcall(C_NamePlate.SetNamePlateFriendlySize, friendlyW, friendlyH)
+            end
+
             if ForeverPlatesDB.lockDistanceScale ~= false then
                 SetCVar("nameplateMinScale", "1.0")
                 SetCVar("nameplateMaxScale", "1.0")
@@ -1657,11 +1701,36 @@ local function ApplyBarDimensions(unitFrame)
     local h = isFriendlyPlayer and (ForeverPlatesDB.friendlyBarHeight or 12) or (ForeverPlatesDB.barHeight or 15)
 
     pcall(unitFrame.SetSize, unitFrame, w, h)
+    local namePlate = unitFrame:GetParent()
+    if namePlate and not InCombatLockdown() then
+        pcall(namePlate.SetSize, namePlate, w, h)
+    end
+
+    -- Keep C++ 3D Raycast Hitboxes Synchronized with Configured Bar Dimensions
+    if C_NamePlate then
+        if isFriendlyPlayer then
+            if C_NamePlate.SetNamePlateFriendlySize then
+                pcall(C_NamePlate.SetNamePlateFriendlySize, w, h)
+            end
+        else
+            if C_NamePlate.SetNamePlateEnemySize then
+                pcall(C_NamePlate.SetNamePlateEnemySize, w, h + 10)
+            end
+        end
+    end
+
+    -- Ensure unitFrame itself has mouse enabled for secure click-targeting
+    if unitFrame.EnableMouse then
+        pcall(unitFrame.EnableMouse, unitFrame, true)
+    end
 
     if unitFrame.HealthBarsContainer then
         unitFrame.HealthBarsContainer:ClearAllPoints()
         unitFrame.HealthBarsContainer:SetPoint("CENTER", unitFrame, "CENTER", 0, 0)
         unitFrame.HealthBarsContainer:SetSize(w, h)
+        if unitFrame.HealthBarsContainer.EnableMouse then
+            pcall(unitFrame.HealthBarsContainer.EnableMouse, unitFrame.HealthBarsContainer, false)
+        end
     end
 
     local hb = unitFrame.healthBar
@@ -1669,6 +1738,9 @@ local function ApplyBarDimensions(unitFrame)
         hb:ClearAllPoints()
         hb:SetPoint("CENTER", unitFrame, "CENTER", 0, 0)
         hb:SetSize(w, h)
+        if hb.EnableMouse then
+            pcall(hb.EnableMouse, hb, false)
+        end
         local data = plates[unitFrame]
         if data and data.backdrop then
             data.backdrop:SetAllPoints(hb)
@@ -1681,6 +1753,9 @@ local function ApplyBarDimensions(unitFrame)
         d.levelBox:ClearAllPoints()
         d.levelBox:SetPoint("LEFT", hb, "RIGHT", 4, 0)
         d.levelBox:SetSize(boxW, h)
+        if d.levelBox.EnableMouse then
+            pcall(d.levelBox.EnableMouse, d.levelBox, false)
+        end
 
         if d.levelBackdrop then
             d.levelBackdrop:SetAllPoints(d.levelBox)
@@ -1688,6 +1763,9 @@ local function ApplyBarDimensions(unitFrame)
 
         local levelFrame = GetLevelFrame and GetLevelFrame(unitFrame)
         if levelFrame then
+            if levelFrame.EnableMouse then
+                pcall(levelFrame.EnableMouse, levelFrame, false)
+            end
             levelFrame:ClearAllPoints()
             levelFrame:SetPoint("CENTER", d.levelBox, "CENTER", 0, 0)
             levelFrame:SetSize(boxW, h)
@@ -4394,6 +4472,19 @@ end
 FP.RefreshAllArrows = RefreshAllArrows
 
 local function RefreshAllDimensions()
+    if C_NamePlate then
+        local enemyW = ForeverPlatesDB.barWidth or 142
+        local enemyH = ForeverPlatesDB.barHeight or 18
+        local friendlyW = ForeverPlatesDB.friendlyBarWidth or 120
+        local friendlyH = ForeverPlatesDB.friendlyBarHeight or 12
+        if C_NamePlate.SetNamePlateEnemySize then
+            pcall(C_NamePlate.SetNamePlateEnemySize, enemyW, enemyH + 10)
+        end
+        if C_NamePlate.SetNamePlateFriendlySize then
+            pcall(C_NamePlate.SetNamePlateFriendlySize, friendlyW, friendlyH)
+        end
+    end
+
     local nameplates = C_NamePlate.GetNamePlates()
     if not nameplates then return end
 
@@ -4978,6 +5069,13 @@ eventFrame:SetScript("OnEvent", function(self, event, ...)
             end
         end
     elseif event == "PLAYER_REGEN_ENABLED" then
+        if ForeverPlatesDB.stackingNameplates == false then
+            pcall(function()
+                if SetCVar then
+                    SetCVar("nameplateMotion", "0")
+                end
+            end)
+        end
         for uf in pairs(pendingDimensions) do
             if uf and not (uf.IsForbidden and uf:IsForbidden()) then
                 ApplyBarDimensions(uf)
@@ -5005,6 +5103,15 @@ eventFrame:SetScript("OnEvent", function(self, event, ...)
             end
         end
     elseif event == "PLAYER_REGEN_DISABLED" then
+        if ForeverPlatesDB.smartMultiMobStacking or ForeverPlatesDB.stackingNameplates then
+            pcall(function()
+                if SetCVar then
+                    SetCVar("nameplateMotion", "1")
+                    SetCVar("nameplateOverlapV", tostring(ForeverPlatesDB.stackingOverlapV or 1.20))
+                    SetCVar("nameplateOverlapH", tostring(ForeverPlatesDB.stackingOverlapH or 0.80))
+                end
+            end)
+        end
         local nameplates = C_NamePlate.GetNamePlates()
         if nameplates then
             for _, np in ipairs(nameplates) do
