@@ -1,8 +1,8 @@
 /**
  * World of Warcraft: Forever - Beta BiS (Best in Slot) Master Dataset
- * Level 30 Phase 2 Beta Cap • Build 1.60.6.72140 (October 15, 2026)
+ * Level 30 Phase 2 Beta Cap • Build 1.60.1.70425 (October 15, 2026)
  * 
- * Contains FULL comprehensive BiS data extracted from Beta Build 72140 across ALL 9 Classes & 38 Specs:
+ * Contains FULL comprehensive BiS data extracted from Beta Build 70425 across ALL 9 Classes & 38 Specs:
  * - Equipment paper-doll slots (Head, Neck, Shoulder, Back, Chest, Wrist, Hands, Waist, Legs, Feet, Fingers, Trinkets, Weapons, Ranged/Relic)
  * - Complete item rankings (#1, #2, #3, #4, #5, #6, #7...) with exact drop sources (Dalaran, ES4, RFK, BFD, Stockade, Gnomeregan, SM Graveyard, Crafting, Quests, World Drops)
  * - Faction-specific availability (Alliance vs Horde drops & quest differences)
@@ -11,10 +11,11 @@
  */
 
 const WOW_BIS_METADATA = {
-  "version": "1.60.6.72140",
+  "version": "1.60.1.70425",
+  "title": "Level 30 Pre-Raid & Dungeon BiS (Beta Build 1.60.1.70425)",
   "phase": "Beta Phase 2 (Level 30 Cap • Final Week)",
   "lastUpdated": "October 15, 2026",
-  "sourceNotice": "Curated directly from Beta Build 72140 discovering logs, itemcache, and Official Game Tables.",
+  "sourceNotice": "Curated directly from Beta Build 70425 discovering logs, itemcache, and Official Game Tables.",
   "totalSpecs": 38,
   "totalClasses": 9
 };

@@ -1,6 +1,6 @@
 /**
  * World of Warcraft: Forever - Core Dataset
- * Up-to-date as of October 15, 2026 (Beta Build 1.60.6.72140)
+ * Up-to-date as of October 15, 2026 (Beta Build 1.60.1.70425)
  * Includes beta schedule, countdowns, news, zones, dungeons, camping, stats, and milestones.
  */
 
@@ -16,7 +16,7 @@ const WOW_FOREVER_DATA = {
     "launchDate": "November 4, 2026",
     "raidsDate": "December 9, 2026",
     "currentBetaPhase": "Phase 2: Level 30 Cap (LIVE NOW • Day 29 of 35)",
-    "clientBuild": "1.60.6.72140",
+    "clientBuild": "1.60.1.70425",
     "engineInfo": "Custom Ray-Traced Engine (Post-Warcraft III: Reforged Continuity)",
     "maxLevel": 60,
     "currentBetaCap": 30,
@@ -140,6 +140,65 @@ const WOW_FOREVER_DATA = {
     }
   ],
   "newsFeed": [
+    {
+      "id": "news-45",
+      "title": "Beta Build 1.60.1.70425 Deployed: Sixteenth Beta Build Delivers 128 System Updates, Major Talent Tree Rebalancing & Racial Ability Overhaul",
+      "source": "Blizzard Official / Blue Post",
+      "sourceType": "blizzard",
+      "author": "Community Manager Kaivax & Lead Systems Designer",
+      "date": "October 15, 2026",
+      "tag": "Patch Notes & Class Tuning",
+      "summary": "The sixteenth official WoW Forever beta client build (1.60.1.70425) rolls out today, delivering 128 datamined updates across all classes: complete reworks to Shaman, Mage, Priest, and Warlock talent trees, retirement of weapon specialization racials in favor of Ruthless, Earth Fury, and Savage, and raid-wide utility for Battle Shout and Shaman stat totems.",
+      "content": `Blizzard operations deployed Beta Build 1.60.1.70425 (Sixteenth Beta Build) across all public test megarealms today, October 15, 2026. This monumental update synchronizes 128 balance and systems adjustments cataloged by Talents Forever:
+
+• Section 1: Talent Tree Overhauls (69 Talent Modifications):
+  - Shaman (Elemental Rebuild & Restoration Quality-of-Life):
+    * Elemental Mastery restored to its rightful place as the 31-point capstone talent (Row 7).
+    * Lava Burst moved to Row 5 (4 ranks, 21-point capstone) with its prerequisite requirement removed, enabling Level 30 Elemental Shamans to access this signature burst spell.
+    * Prerequisite chain updated: Elemental Fury now requires Lightning Overload (Row 5), which requires Elemental Alacrity (Row 2).
+    * Elemental Alacrity repositioned to Row 2; Elemental Warding moved to Row 3.
+    * Call of Thunder permanently removed from the Elemental talent tree.
+    * Earthbound repositioned to Row 4; Improved Fire Nova renamed to Trial by Fire.
+    * Restoration: Swapped Tidal Focus (now Row 2) and Totemic Focus (now Row 1) to streamline early healing efficiency.
+  - Mage (Arcane & Fire Realignment):
+    * New talent Arcane Wrath added to Row 4 (1 rank).
+    * Missile Barrage relocated to Row 1 (2 ranks) for rapid early-game rotation empowerment.
+    * Wake of Fire renamed to Improved Fire Blast.
+    * Rescaled Fire Power to 3 ranks and Critical Mass to 5 ranks.
+    * Winter's Chill and Ice Lance updated to guarantee unresisted debuff application.
+  - Priest (Shadow & Discipline Restructuring):
+    * New talent Dark Inspiration added to Row 4 (5 ranks), replacing Improved Fade.
+    * Shadow Affinity permanently removed.
+    * Improved Mind Blast and Mental Strength moved to Row 2.
+    * Improved Power Word: Shield relocated to Row 3.
+    * Vampiric Embrace cooldown slashed to 30 seconds.
+  - Warlock (Affliction Range & Mobility):
+    * Malediction replaced by Grim Reach (Row 4, 2 ranks, increasing Affliction spell range by 10/20%).
+    * Shadow Mastery and Destructive Reach updated.
+  - Paladin, Hunter, Druid & Warrior:
+    * Reckoning updated: stores up to 4 extra charges and triggers on weapon swing.
+    * Tuning passes to Shield Specialization, Champion of the Light, Rapid Recuperation, Predator's Edge, Furor, and Bloodthrill.
+
+• Section 2: Racial Abilities Rework (12 Major Adjustments):
+  - Removal of Legacy Weapon Racials: Sword Specialization (Human), Mace Specialization (Dwarf), and Axe Specialization (Orc) have been permanently retired to eliminate weapon-type pigeonholing.
+  - Modern Universal Replacement Racials:
+    * Human: 'Ruthless' (+2% critical strike chance with all spells and physical attacks).
+    * Dwarf: 'Earth Fury' (+2% critical strike bonus to damage and healing).
+    * Orc: 'Savage' (+1% critical strike chance with all spells and abilities).
+    * Skyborne: 'Read Leyline' (2-second cast, 2-minute cooldown; grants +100% mana/health regeneration for 30s, extended to 15m near active leylines).
+  - Racial Mechanical Refinements:
+    * Gnome: Eureka! revamped into an 8-second active buff with no charges that amplifies damage, healing, and Power Word: Shield absorb values.
+    * Refined mechanics for Blood Fury, Shatter Curse, Cultivation, Endurance, Plainsrunning, War Stomp, Regeneration, and Touch of the Grave.
+
+• Section 3: Spells, Baseline Abilities & Raid Utility (47 System Changes):
+  - Battle Shout is now Raid-wide (40 yards).
+  - Shaman Stat Totems (Windfury, Grace of Air, Strength of Earth, Flametongue) are now Raid-wide, and mutual exclusivity between Grace of Air and Windfury/Flametongue has been removed.
+  - Paladin Salvation & Mass Salvation now replace passive threat blessings, accompanied by the new threat-clearing utility spell Revoke.
+  - Righteous Fury baseline Holy threat amplification increased to 90%.
+  - Devouring Plague cooldown reduced to 24s; Shadow Word: Death cooldown reduced to 18s.
+  - Chain Lightning mana cost reduced by 35%; Fire Nova tuned; Stormstrike base mana cost set to 8%; Water Shield charges now trigger on all spell critical strikes.`,
+      "url": "https://news.blizzard.com/en-us/world-of-warcraft/beta-build-1601-70425-patch-notes-oct15"
+    },
     {
       "id": "news-44",
       "title": "Final Week of Closed Beta Begins: End-of-Beta World Finale Announced for October 21 & Global Launch Name Reservation Details",

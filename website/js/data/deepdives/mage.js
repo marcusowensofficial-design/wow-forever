@@ -16,7 +16,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
   "videoTitle": "WoW Forever Mage Class Deep Dive & Orc Racials",
   "videoUrl": "https://www.youtube.com/watch?v=y2j8C277C_g",
   "sourceAttribution": "Sodapoppin Level-38 Orc Mage BlizzCon Early Access Demo & Closed Beta Forensics",
-  "summary": "WoW Forever delivers transformative evolution to the Mage: the historic arrival of Orc Mages wielding Blood Fury (+10% Spell Power) and Axe Specialization (+1% spell crit), the return of Downranking, baseline Comprehend Scroll mechanics, Frostfire Bolt dual-school integration, Arcane Blast stacking loops with free Missile Barrage procs, Hot Streak 3-stack cast-time reductions for 1.5s Pyroblasts, instant Ice Lance with Fingers of Frost shatter combos, and rebalanced uncapped Blizzard AoE farming.",
+  "summary": "WoW Forever delivers transformative evolution to the Mage: the historic arrival of Orc Mages wielding Blood Fury (+10% Spell Power) and Savage (+1% spell crit), the return of Downranking, baseline Comprehend Scroll mechanics, Frostfire Bolt dual-school integration, Arcane Blast stacking loops with free Missile Barrage procs, Hot Streak 3-stack cast-time reductions for 1.5s Pyroblasts, instant Ice Lance with Fingers of Frost shatter combos, and rebalanced uncapped Blizzard AoE farming.",
   "subTabs": [
     {
       "id": "overview",
@@ -128,7 +128,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       "status": "verified",
       "statusLabel": "Verified in Beta (Oct 8)",
       "badge": "Native UI & Edit Mode",
-      "desc": "Expanded in Beta Build 1.60.6.71890 directly in default HUD Edit Mode. Rotational Spells Tracked: Fire Blast (8s/6.5s), Cone of Cold (10s), Blast Wave (30s), Frost Nova (25s/21s), and Counterspell (24s). Major Defensives & Bursts: Combustion (3m), Icy Veins (3m), Ice Block (5m), Arcane Power (3m), Evocation (8m), Cold Snap (8m), Presence of Mind (3m), and Blink (15s). Active Procs & Buffs: Fingers of Frost charges (1–2 with active shatter indicator), Brain Freeze / Firestarter instant Pyroblast procs, Clearcasting/Arcane Concentration, and Arcane Blast stacking debuffs."
+      "desc": "Expanded in Beta Build 1.60.1.70425 directly in default HUD Edit Mode. Rotational Spells Tracked: Fire Blast (8s/6.5s), Cone of Cold (10s), Blast Wave (30s), Frost Nova (25s/21s), and Counterspell (24s). Major Defensives & Bursts: Combustion (3m), Icy Veins (3m), Ice Block (5m), Arcane Power (3m), Evocation (8m), Cold Snap (8m), Presence of Mind (3m), and Blink (15s). Active Procs & Buffs: Fingers of Frost charges (1–2 with active shatter indicator), Brain Freeze / Firestarter instant Pyroblast procs, Clearcasting/Arcane Concentration, and Arcane Blast stacking debuffs."
     }
   ],
   "arcane": {
@@ -350,10 +350,10 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           "desc": "Reduces the duration of all stun effects by 20%. Replaces Classic's controversial RNG resist mechanic with a consistent, reliable 20% duration reduction, providing predictable PvP counterplay."
         },
         {
-          "name": "Axe Specialization (+1% All Crit)",
+          "name": "Savage (+1% All Crit)",
           "status": "verified",
           "statusLabel": "Verified in Beta",
-          "desc": "Orcs gain +1% critical-strike chance for ALL spells and abilities while wielding an axe or two-handed axe. Note: While Mages do not natively equip axes, this racial provides unprecedented cross-spec scaling for Orcs across all spellcasters."
+          "desc": "Orcs gain +1% critical-strike chance for ALL spells and abilities. Replaces the legacy weapon specialization with an unconditional critical bonus."
         },
         {
           "name": "Shatter Curse",
@@ -380,7 +380,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         "race": "The Skyborne Mage (High Order)",
         "faction": "Alliance",
         "badge": "✦ NEW IN FOREVER",
-        "desc": "Alliance High Order ley scholars from Zephras Isle. Harnesses Walk on Air (glide), Skysight (+10% speed), Wind Blessed (+1% casting Haste), and Elemental Insight (+5% damage to Elementals)."
+        "desc": "Alliance High Order ley scholars from Zephras Isle. Harnesses Walk on Air (glide), Read Leyline (+100% regen), Wind Blessed (+1% casting Haste), and Elemental Insight (+5% damage to Elementals)."
       }
     ]
   },
@@ -679,25 +679,26 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         },
         {
           "specId": "fire",
-          "name": "Fire (Combustion & Hot Streak Pyroblast)",
+          "name": "Fire (Critical Mass & Hot Streak Pyroblast)",
           "icon": "🔥",
           "role": "Explosive Fire Burst DPS",
-          "buildUrl": "/talents/mage?b=-0055203013011311-&l=30&tl=5",
-          "wowheadCalcUrl": "https://www.wowhead.com/forever/talent-calc/mage/-505001",
-          "tagline": "Fierce burst with 21-pt Combustion keystone (3 critical strike charges), Ignite rolling DoTs, and HUD 'Heating Up' proc tracking.",
+          "buildUrl": "/talents/mage?b=-23052030130101-&l=30&tl=5",
+          "wowheadCalcUrl": "https://www.wowhead.com/forever/talent-calc/mage/-23052030130101-",
+          "tagline": "Fierce burst combining Pyroblast openers, rolling Ignite DoTs, 5-rank Critical Mass crit amplification, and HUD 'Heating Up' proc tracking.",
           "statPriority": "Fire Spell Power > Spell Crit > Spell Hit > Intellect",
           "bestWeapon": "Rod of the Sleepwalker / Emberstone Staff / Necromantic Wand",
           "talents": [
-            { "name": "Improved Fireball", "points": "5/5", "tree": "Fire (Tier 1)", "desc": "Reduces Fireball cast time by 0.5 sec to 3.0 sec." },
+            { "name": "Improved Fire Blast", "points": "2/2", "tree": "Fire (Tier 1)", "desc": "Reduces the cooldown of your Fire Blast spell by 2 sec." },
+            { "name": "Incineration", "points": "3/3", "tree": "Fire (Tier 1)", "desc": "Increases the critical strike chance of your Fire Blast and Scorch spells by 4%." },
             { "name": "Ignite", "points": "5/5", "tree": "Fire (Tier 2)", "desc": "Critical strikes with Fire damage spells cause the target to burn for an additional 40% damage over 4 sec." },
             { "name": "Flame Throwing", "points": "2/2", "tree": "Fire (Tier 2)", "desc": "Increases the range of your Fire spells by 6 yards, allowing 36-yard snipes." },
-            { "name": "Incinerate", "points": "2/2", "tree": "Fire (Tier 3)", "desc": "Increases the critical strike chance of your Fire Blast and Scorch spells by 4%." },
+            { "name": "Burning Soul", "points": "3/3", "tree": "Fire (Tier 3)", "desc": "Gives your Fire spells a 70% chance to not lose casting time when you take damage and reduces threat by 30%." },
             { "name": "Pyroblast", "points": "1/1", "tree": "Fire (Tier 3 Keystone)", "desc": "Hurls an immense fiery boulder that causes massive instant fire damage and additional damage over 12 sec." },
-            { "name": "Burning Soul", "points": "2/2", "tree": "Fire (Tier 3)", "desc": "Gives your Fire spells a 70% chance to not lose casting time when you take damage and reduces threat by 30%." },
-            { "name": "Critical Mass", "points": "3/3", "tree": "Fire (Tier 4)", "desc": "Increases the critical strike chance of your Fire spells by 6%." },
-            { "name": "Combustion", "points": "1/1", "tree": "Fire (Tier 5 Keystone)", "desc": "When activated, this spell grants 3 critical strike charges on Fire damage spells. Each non-critical hit increases crit chance by 10% until 3 crits occur." }
+            { "name": "Improved Scorch", "points": "3/3", "tree": "Fire (Tier 4)", "desc": "Your Scorch spells have a 100% chance to cause your target to be vulnerable to Fire damage, increasing Fire damage taken by 3% for 30 sec." },
+            { "name": "Heating Up", "points": "1/1", "tree": "Fire (Tier 4)", "desc": "Your spell critical strikes with Fire spells have a chance to make your next Scorch or Fire Blast instant-cast." },
+            { "name": "Critical Mass", "points": "1/5", "tree": "Fire (Tier 5)", "desc": "Increases the critical strike chance of your Fire spells by 2%." }
           ],
-          "legacyNotes": "Extra Legacy discovery points unlock Blast Wave (AoE daze burst) and Fire Power (+10% Fire spell damage).",
+          "legacyNotes": "Extra Legacy discovery points max out 5/5 Critical Mass (+10% Fire crit), Blast Wave, and Combustion in post-30 tiers.",
           "rotation": [
             { "label": "Combustion Opener", desc: "Activate Combustion before boss engage -> Cast Pyroblast opener from 36 yards." },
             { "label": "Ignite & Heating Up", desc: "Cast Fireball; on critical strike, watch HUD for 'Heating Up' proc to queue instant Fire Blast or Scorch." },
@@ -716,25 +717,26 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         },
         {
           "specId": "arcane",
-          "name": "Arcane (Presence of Mind & Arcane Power)",
+          "name": "Arcane (Presence of Mind & Missile Barrage)",
           "icon": "✨",
           "role": "Single-Target Ranged DPS & Threat Management",
-          "buildUrl": "/talents/mage?b=0250050031003115--&l=30&tl=5",
-          "wowheadCalcUrl": "https://www.wowhead.com/forever/talent-calc/mage/505001",
-          "tagline": "Instant cast burst with Presence of Mind, +30% spell damage under Arcane Power, and Clearcasting Arcane Missiles.",
+          "buildUrl": "/talents/mage?b=0302205003100311--&l=30&tl=5",
+          "wowheadCalcUrl": "https://www.wowhead.com/forever/talent-calc/mage/0302205003100311--",
+          "tagline": "Instant cast burst with Presence of Mind, rapid rotation with Row 1 Missile Barrage, Arcane Wrath amplification, and Clearcasting Arcane Missiles.",
           "statPriority": "Intellect > Spell Power > Spirit > Mp5",
           "bestWeapon": "Staff of Westfall / Rod of the Sleepwalker",
           "talents": [
-            { "name": "Arcane Subtlety", "points": "2/2", "tree": "Arcane (Tier 1)", "desc": "Reduces target magic resistance by 10 and reduces threat caused by Arcane spells by 40%." },
+            { "name": "Missile Barrage", "points": "2/2", "tree": "Arcane (Tier 1)", "desc": "Gives your Arcane spells a 100% chance to reduce the channeled duration of your next Arcane Missiles by 50% and reduce mana cost by 100%." },
             { "name": "Arcane Focus", "points": "3/5", "tree": "Arcane (Tier 1)", "desc": "Reduces the chance that the opponent can resist your Arcane spells by 6%." },
+            { "name": "Arcane Subtlety", "points": "2/2", "tree": "Arcane (Tier 2)", "desc": "Reduces target magic resistance by 10 and reduces threat caused by Arcane spells by 40%." },
             { "name": "Arcane Concentration", "points": "5/5", "tree": "Arcane (Tier 2)", "desc": "Gives you a 10% chance of entering a Clearcasting state after any damage spell." },
-            { "name": "Improved Arcane Missiles", "points": "5/5", "tree": "Arcane (Tier 2)", "desc": "Gives you a 100% chance to avoid interruption caused by damage while channeling Arcane Missiles." },
-            { "name": "Arcane Meditation", "points": "3/3", "tree": "Arcane (Tier 3)", "desc": "Allows 15% of your Mana regeneration to continue while casting." },
-            { "name": "Presence of Mind", "points": "1/1", "tree": "Arcane (Tier 3 Keystone)", "desc": "When activated, your next Mage spell with a casting time less than 10 sec becomes an instant cast on a 3-minute cooldown." },
-            { "name": "Arcane Mind", "points": "1/4", "tree": "Arcane (Tier 4)", "desc": "Increases your maximum Mana by 2%." },
-            { "name": "Arcane Power", "points": "1/1", "tree": "Arcane (Tier 5 Keystone)", "desc": "When activated, your spells deal 30% more damage while costing 30% more mana for 15 sec." }
+            { "name": "Arcane Impact", "points": "3/3", "tree": "Arcane (Tier 3)", "desc": "Increases the critical strike chance of your Arcane Explosion and Arcane Blast spells by an additional 6%." },
+            { "name": "Arcane Blast", "points": "1/1", "tree": "Arcane (Tier 3)", "desc": "Blasts the target with arcane energy, dealing damage and stacking a debuff that increases damage and mana cost." },
+            { "name": "Arcane Meditation", "points": "3/3", "tree": "Arcane (Tier 4)", "desc": "Allows 15% of your Mana regeneration to continue while casting." },
+            { "name": "Arcane Wrath", "points": "1/1", "tree": "Arcane (Tier 4)", "desc": "A powerful blast of arcane energy with a 3.5 sec cast time that deals base damage increased by bonus spell damage equal to 5% of your maximum Mana." },
+            { "name": "Presence of Mind", "points": "1/1", "tree": "Arcane (Tier 5 Keystone)", "desc": "When activated, your next Mage spell with a casting time less than 10 sec becomes an instant cast on a 3-minute cooldown." }
           ],
-          "legacyNotes": "Extra Legacy discovery points max out 4/4 Arcane Mind (+10% Mana) and Arcane Instability (+3% spell damage and crit).",
+          "legacyNotes": "Extra Legacy discovery points unlock Arcane Mind (+10% Mana), Arcane Instability (+3% damage/crit), and Arcane Power.",
           "rotation": [
             { label: "PoM Pyro / Missiles", desc: "Arcane Power -> Presence of Mind -> Instant Pyroblast or Max Rank Arcane Missiles for colossal opening burst." },
             { label: "Channel Missiles", desc: "Channel 100% pushback-immune Arcane Missiles; weave free spells on Clearcasting procs." }

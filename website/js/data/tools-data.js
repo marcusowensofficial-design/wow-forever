@@ -2202,7 +2202,7 @@ WoW Forever re-evaluates vanilla racials to eliminate extreme faction imbalances
 ### Racial Abilities Master Breakdown
 
 | Race | Key Active Racial | Signature Passive | Top Class Synergy |
-| **Human** | **Perception:** Increases stealth detection for 20s | The Human Spirit (+5% Spirit), Sword/Mace Specialization | Priest, Paladin, Warrior |
+| **Human** | **Perception:** Increases stealth detection for 20s | The Human Spirit (+5% Spirit), Ruthless (+2% Crit) | Priest, Paladin, Warrior |
 | **Orc** | **Blood Fury:** +25% Melee AP (reduced healing taken removed!) | Hardiness (Stun resist), Command (+5% Pet Dmg) | Warlock, Hunter, Warrior |
 | **Undead** | **Will of the Forsaken:** Dispels Charm, Fear, Sleep | Cannibalize, Shadow Resistance | Mage, Rogue, Priest |
 | **Night Elf** | **Shadowmeld:** Usable in combat (drops threat, resets aggro!) | Quickness (+1% Dodge), Nature Resistance | Druid, Hunter, Rogue |

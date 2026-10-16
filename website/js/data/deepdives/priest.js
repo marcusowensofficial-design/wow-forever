@@ -99,7 +99,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         status: "verified",
         statusLabel: "Verified in Beta (Oct 8)",
         badge: "Native UI & Edit Mode",
-        desc: "Expanded in Beta Build 1.60.6.71890 directly in default HUD Edit Mode. Rotational Spells Tracked: Penance (10s), Mind Blast (8s/5.5s), Power Word: Shield (monitored alongside Weakened Soul duration), Prayer of Mending (10s), and Circle of Healing (6s). Major Defensives & Bursts: Power Infusion (3m), Pain Suppression (2m), Psychic Scream (30s), Silence (45s), Inner Focus (3m), and Desperate Prayer (10m). Active Procs & Buffs: Surge of Light (instant Flash Heal / Smite procs with highlight), Spirit Tap active regen window, Shadow Weaving stacks (1–5), and Inner Fire charges."
+        desc: "Expanded in Beta Build 1.60.1.70425 directly in default HUD Edit Mode. Rotational Spells Tracked: Penance (10s), Mind Blast (8s/5.5s), Power Word: Shield (monitored alongside Weakened Soul duration), Prayer of Mending (10s), and Circle of Healing (6s). Major Defensives & Bursts: Power Infusion (3m), Pain Suppression (2m), Psychic Scream (30s), Silence (45s), Inner Focus (3m), and Desperate Prayer (10m). Active Procs & Buffs: Surge of Light (instant Flash Heal / Smite procs with highlight), Spirit Tap active regen window, Shadow Weaving stacks (1–5), and Inner Fire charges."
       }
     ],
 
@@ -361,7 +361,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           race: "Dwarf Priest",
           faction: "Alliance",
           badge: "Thane of Ironforge",
-          desc: "Stoneform (bleed/poison/disease immunity + 10% physical reduction) and Mace Specialization (+1% crit to all spells and attacks)."
+          desc: "Stoneform (bleed/poison/disease immunity + 10% physical reduction) and Earth Fury (+2% crit bonus to damage and healing)."
         },
         {
           race: "Undead Priest",
@@ -637,28 +637,28 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         specs: [
           {
             specId: "shadow",
-            name: "Shadow (Shadowform & Vampiric Embrace)",
+            name: "Shadow (Vampiric Embrace & Dark Inspiration)",
             icon: "🌑",
             role: "Shadow Ranged DPS & Vampiric Healing Engine",
-            buildUrl: "/talents/priest?b=--30532200120131201&l=30&tl=5",
-            wowheadCalcUrl: "https://www.wowhead.com/forever/talent-calc/priest/--505001",
-            tagline: "Signature Shadowform keystone (+15% Shadow damage, -15% physical damage taken), critical-strike Devouring Plague, and passive party healing from Vampiric Embrace.",
+            buildUrl: "/talents/priest?b=--005522012513&l=30&tl=5",
+            wowheadCalcUrl: "https://www.wowhead.com/forever/talent-calc/priest/--005522012513",
+            tagline: "Passive party healing from Vampiric Embrace, amplified Mind Blast and Shadow Word: Pain crits with Dark Inspiration, and critical-strike Devouring Plague.",
             statPriority: "Shadow Spell Power > Spell Hit (to 4%) > Spirit > Intellect",
             bestWeapon: "Rod of the Sleepwalker (BFD) / Staff of Westfall / Necromantic Wand",
             talents: [
               { name: "Spirit Tap", points: "5/5", tree: "Shadow (Tier 1)", desc: "Gives a 100% chance to gain 100% bonus Spirit and 50% in-combat mana regen for 15 sec on mob kill." },
+              { name: "Improved Mind Blast", points: "5/5", tree: "Shadow (Tier 2)", desc: "Reduces the cooldown of your Mind Blast spell by 2.5 sec." },
               { name: "Improved Shadow Word: Pain", points: "2/2", tree: "Shadow (Tier 2)", desc: "Increases the duration of your Shadow Word: Pain spell by 6 sec." },
-              { name: "Shadow Focus", points: "3/5", tree: "Shadow (Tier 2)", desc: "Reduces the chance for targets to resist your Shadow spells by 6%." },
+              { name: "Shadow Reach", points: "2/2", tree: "Shadow (Tier 2)", desc: "Increases the range of your offensive Shadow spells by 20% (36-yard range)." },
               { name: "Mind Flay", points: "1/1", tree: "Shadow (Tier 3 Keystone)", desc: "Assaults the target's mind with Shadow energy, dealing Shadow damage and slowing movement by 50% over 3 sec." },
-              { name: "Shadow Reach", points: "2/2", tree: "Shadow (Tier 3)", desc: "Increases the range of your offensive Shadow spells by 20% (36-yard range)." },
-              { name: "Shadow Weaving", points: "3/5", tree: "Shadow (Tier 4)", desc: "Shadow damage spells have a 60% chance to cause the target to be vulnerable to Shadow damage by 3% for 15 sec (stacks 5 times)." },
-              { name: "Vampiric Embrace", points: "1/1", tree: "Shadow (Tier 3 Keystone)", desc: "Afflicts target with Shadow energy, healing all party members for 20% of any single-target Shadow damage you deal for 1 min." },
-              { name: "Darkness", points: "3/5", tree: "Shadow (Tier 4)", desc: "Increases your Shadow spell damage by 6%." },
-              { name: "Shadowform", points: "1/1", tree: "Shadow (Tier 5 Keystone)", desc: "Assume a Shadowform: increases your Shadow damage by 15%, reduces physical damage taken by 15%, but prevents Holy spell casting." }
+              { name: "Improved Mind Flay", points: "2/2", tree: "Shadow (Tier 3)", desc: "Increases the periodic damage dealt by your Mind Flay spell by 10% and extends its duration by 1 sec." },
+              { name: "Dark Inspiration", points: "5/5", tree: "Shadow (Tier 4)", desc: "Increases the critical strike chance of your Shadow spells by 5% and reduces mana cost by 10%." },
+              { name: "Vampiric Embrace", points: "1/1", tree: "Shadow (Tier 4 Keystone)", desc: "Afflicts target with Shadow energy, healing all party members for 20% of any single-target Shadow damage you deal for 1 min." },
+              { name: "Shadow Weaving", points: "3/3", tree: "Shadow (Tier 4)", desc: "Shadow damage spells have a 100% chance to cause the target to be vulnerable to Shadow damage by 3% for 15 sec (stacks 5 times)." }
             ],
-            legacyNotes: "Extra Legacy discovery points unlock 5/5 Darkness (+10% damage) and Silence (5-second ranged spell silence).",
+            legacyNotes: "Extra Legacy discovery points unlock Silence (5-second ranged spell silence) and Shadow Focus for spell hit rating.",
             rotation: [
-              { label: "Shadowform Buff", desc: "Shift into permanent Shadowform -> Vampiric Embrace on primary target." },
+              { label: "Vampiric Embrace Primer", desc: "Apply Vampiric Embrace to primary target for continuous group healing." },
               { label: "Critical DoT Spreading", desc: "Devouring Plague (now critically strikes!) -> Shadow Word: Pain -> Mind Blast on cooldown." },
               { label: "Mind Flay Weave", desc: "Channel 36-yard Mind Flay to snare mobs and stack Shadow Weaving to 5 stacks (+15% shadow damage)." },
               { label: "Execute & Spirit Tap", desc: "Finish with Wand or Shadow Word: Death to proc 100% Spirit Tap mana engine." }
@@ -673,29 +673,29 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
               name: "Shadow Trance (+5% Shadow Damage)",
               desc: "Resting in a tent grants +5% increased Shadow spell damage and 15% reduced threat for 2 hours."
             },
-            classQuestNote: "Universal Devouring Plague upgrades and Shadowform visual aura available at level 30 trainers."
+            classQuestNote: "Universal Devouring Plague upgrades and Shadow cosmetic aura available at level 30 trainers."
           },
           {
             specId: "discipline",
-            name: "Discipline (Power Infusion & Soul Warding)",
+            name: "Discipline (Penance & Soul Warding)",
             icon: "🛡️",
             role: "Burst Healer & Power Infusion Support",
-            buildUrl: "/talents/priest?b=023303131300121-3-&l=30&tl=5",
-            wowheadCalcUrl: "https://www.wowhead.com/forever/talent-calc/priest/500501",
-            tagline: "Unbreakable shielding with Soul Warding (cooldown-free Power Word: Shield), Power Infusion 21-pt steroid (+20% spell damage & healing), and 100% mana Inner Focus.",
+            buildUrl: "/talents/priest?b=500050021330101--&l=30&tl=5",
+            wowheadCalcUrl: "https://www.wowhead.com/forever/talent-calc/priest/500050021330101--",
+            tagline: "Unbreakable shielding with Soul Warding (cooldown-free Power Word: Shield), rapid Penance channeling, and 100% mana Inner Focus.",
             statPriority: "Intellect > Spirit > Spell Power > Healing Power",
             bestWeapon: "Dalaran Caretaker Gavel / Staff of Westfall",
             talents: [
-              { name: "Unbreakable Will", points: "5/5", tree: "Discipline (Tier 1)", desc: "Increases your chance to resist Stun, Fear, and Silence effects by an additional 15%." },
-              { name: "Improved Power Word: Shield", points: "3/3", tree: "Discipline (Tier 2)", desc: "Increases the damage absorbed by your Power Word: Shield by 15%." },
+              { name: "Power in Light", points: "5/5", tree: "Discipline (Tier 1)", desc: "Increases your spell damage and healing by 10% of your total Spirit." },
+              { name: "Mental Strength", points: "5/5", tree: "Discipline (Tier 2)", desc: "Increases your maximum Mana by 10%." },
+              { name: "Mental Agility", points: "2/3", tree: "Discipline (Tier 3)", desc: "Reduces the Mana cost of your instant cast spells by 7%." },
+              { name: "Inner Focus", points: "1/1", tree: "Discipline (Tier 3 Keystone)", desc: "When activated, reduces the Mana cost of your next spell by 100% and increases critical chance by 25%." },
+              { name: "Improved Power Word: Shield", points: "3/3", tree: "Discipline (Tier 3)", desc: "Increases the damage absorbed by your Power Word: Shield by 15%." },
               { name: "Meditation", points: "3/3", tree: "Discipline (Tier 3)", desc: "Allows 15% of your Mana regeneration to continue while casting." },
-              { name: "Inner Focus", points: "1/1", tree: "Discipline (Tier 3 Keystone)", desc: "When activated, reduces the Mana cost of your next spell by 100% and increases critical chance by 25% (fixed to prevent periodic consumption)." },
-              { name: "Mental Agility", points: "5/5", tree: "Discipline (Tier 3)", desc: "Reduces the Mana cost of your instant cast spells by 10% (Power Word: Shield, Renew, Penance ticks)." },
-              { name: "Divine Spirit", points: "1/1", tree: "Discipline (Tier 4)", desc: "Holy power infuses the target, increasing their Spirit by 17 for 30 min." },
-              { name: "Mental Strength", points: "2/5", tree: "Discipline (Tier 4)", desc: "Increases your maximum Mana by 4%." },
-              { name: "Power Infusion", points: "1/1", tree: "Discipline (Tier 5 Keystone)", desc: "Infuses the target with power, increasing spell damage and healing by 20% and spell casting speed by 20% for 15 sec." }
+              { name: "Soul Warding", points: "1/1", tree: "Discipline (Tier 4 Keystone)", desc: "Reduces the cooldown of your Power Word: Shield by 4 sec, removing the cooldown completely." },
+              { name: "Penance", points: "1/1", tree: "Discipline (Tier 5 Keystone)", desc: "Launches a volley of holy light at the target, inflicting Holy damage to an enemy, or healing an ally instantly and every 1 sec for 2 sec." }
             ],
-            legacyNotes: "Extra Legacy discovery points unlock Penance channeling and Soul Warding.",
+            legacyNotes: "Extra Legacy discovery points unlock Renewed Hope, Divine Aegis, and Power Infusion in post-30 tiers.",
             rotation: [
               { label: "Shield Vanguard", desc: "Power Word: Shield on tank prior to pull; Mental Agility lowers instant shield mana cost." },
               { label: "Power Infusion Steroid", desc: "Cast Power Infusion on your top Mage/Warlock or yourself during boss burn windows." },

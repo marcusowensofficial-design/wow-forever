@@ -99,7 +99,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         status: "verified",
         statusLabel: "Verified in Beta (Oct 8)",
         badge: "Native UI & Edit Mode",
-        desc: "Expanded in Beta Build 1.60.6.71890 directly in default HUD Edit Mode. Rotational Spells Tracked: Sinister Strike / Daggerless Mutilate, Ghostly Strike (20s), Riposte (6s parry proc), Kidney Shot (20s), Gouge (10s), and Kick (10s). Major Defensives & Bursts: Vanish (5m), Blind (3m), Sprint (5m), Evasion (3m), Preparation (10m), Adrenaline Rush (5m), Blade Flurry (2m), and Cold Blood (3m). Active Procs & Buffs: Slice and Dice duration timer, Blade Flurry uptime, Remorseless Attacks (+40% crit), and Restless Blades cooldown refund cycling tracker."
+        desc: "Expanded in Beta Build 1.60.1.70425 directly in default HUD Edit Mode. Rotational Spells Tracked: Sinister Strike / Daggerless Mutilate, Ghostly Strike (20s), Riposte (6s parry proc), Kidney Shot (20s), Gouge (10s), and Kick (10s). Major Defensives & Bursts: Vanish (5m), Blind (3m), Sprint (5m), Evasion (3m), Preparation (10m), Adrenaline Rush (5m), Blade Flurry (2m), and Cold Blood (3m). Active Procs & Buffs: Slice and Dice duration timer, Blade Flurry uptime, Remorseless Attacks (+40% crit), and Restless Blades cooldown refund cycling tracker."
       }
     ],
 
@@ -212,11 +212,11 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           desc: "Interrupts spellcasting, locking that school for 5 seconds, and gives Kick an additional 2-second blanket silence, giving Combat Rogues a hard caster lockout."
         },
         {
-          name: "Axe Specialization (5% Extra Attack)",
+          name: "Hack and Slash (5% Extra Attack)",
           type: "Weapon Mastery",
           cast: "Passive",
           status: "verified",
-          desc: "Gives you a 5% chance to get an extra attack on the same target after dealing damage with an Axe or Two-Handed weapon, rivaling classic Sword Specialization."
+          desc: "Gives you a 5% chance to get an extra attack on the same target after dealing damage with an Axe or Two-Handed weapon, rivaling classic sword procs."
         },
         {
           name: "Weapon Expertise (Dodge/Parry Reduction)",
@@ -354,7 +354,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           race: "Orc Rogue",
           faction: "Horde",
           badge: "Classic Favorite",
-          desc: "Blood Fury (+10% AP, no healing penalty), Hardiness (-20% stun duration), and Axe Specialization synergy with Combat."
+          desc: "Blood Fury (+10% AP, no healing penalty), Hardiness (-20% stun duration), and Savage synergy with Combat."
         },
         {
           race: "Undead Rogue",
@@ -366,7 +366,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           race: "Human Rogue",
           faction: "Alliance",
           badge: "Classic Favorite",
-          desc: "Will to Survive (3m stun break), Perception (+stealth detection), Sword Specialization (+2% crit), and The Human Spirit."
+          desc: "Will to Survive (3m stun break), Perception (+stealth detection), Ruthless (+2% crit), and The Human Spirit."
         },
         {
           race: "Gnome Rogue",
@@ -378,7 +378,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           race: "Dwarf Rogue",
           faction: "Alliance",
           badge: "Defensive Utility",
-          desc: "Stoneform (removes bleeds/poisons/diseases, +10% physical DR), Mace Specialization (+1% crit), and Find Treasure."
+          desc: "Stoneform (removes bleeds/poisons/diseases, +10% physical DR), Earth Fury (+2% crit bonus), and Find Treasure."
         },
         {
           race: "Night Elf Rogue",
@@ -471,7 +471,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         source: "Sodapoppin Hands-On Demo"
       },
       {
-        feature: "Combat Axe Specialization",
+        feature: "Combat Weapon Mastery (Hack and Slash)",
         category: "Combat",
         details: "5% chance on melee hit to trigger an additional attack with Axes",
         status: "Verified in Closed Beta",
@@ -669,7 +669,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
               { name: "Blade Flurry", points: "1/1", tree: "Combat (Tier 5 Keystone)", desc: "Increases attack speed by 20% and causes your attacks to strike an additional nearby opponent for 15 sec on a 2-minute cooldown." },
               { name: "Endurance", points: "2/2", tree: "Combat (Tier 3)", desc: "Reduces the cooldown of your Sprint and Evasion abilities by 1.5 min." }
             ],
-            legacyNotes: "Extra Legacy discovery points unlock 5/5 Sword Specialization (5% chance to get an extra swing) and Weapon Expertise.",
+            legacyNotes: "Extra Legacy discovery points unlock 5/5 Hack and Slash (5% chance to get an extra swing) and Weapon Expertise.",
             rotation: [
               { label: "Stealth Pull & CC", desc: "Sap elite caster (Sap no longer breaks stealth in Forever!) -> Open with Cheap Shot." },
               { label: "Blade Flurry Burst", desc: "Pop Blade Flurry immediately on multi-mob pulls; all Sinister Strikes and white hits cleave to 2 targets." },

@@ -118,9 +118,9 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         "effect": "Detect Stealthed enemies for 20 sec."
       },
       {
-        "name": "Sword Specialization",
+        "name": "Ruthless",
         "type": "Passive",
-        "effect": "Swords increase spell and ability critical chance by 2%."
+        "effect": "+2% critical strike chance with all spells and attacks."
       },
       {
         "name": "The Human Spirit",
@@ -176,9 +176,9 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         "effect": "Track nearby treasure chests."
       },
       {
-        "name": "Mace Specialization",
+        "name": "Earth Fury",
         "type": "Passive",
-        "effect": "Maces increase spell and ability critical chance by 1%."
+        "effect": "+2% critical strike bonus to damage and healing."
       },
       {
         "name": "Big Game Hunter",
@@ -279,8 +279,8 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       },
       {
         "name": "Eureka!",
-        "type": "Active",
-        "effect": "Reduced cost and 10% increased damage or healing on next 3 spells or abilities."
+        "type": "Active • 8s",
+        "effect": "Increases spell damage and healing by 10% and reduces spell mana cost by 10% for 8 sec. Has no charge limit and directly benefits Power Word: Shield absorption."
       },
       {
         "name": "Expansive Mind",
@@ -341,9 +341,9 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         "effect": "Glide downward through the air for 10 sec."
       },
       {
-        "name": "Skysight",
-        "type": "Active",
-        "effect": "Receive an Elemental Blessing increasing run speed by 10%."
+        "name": "Read Leyline",
+        "type": "Active • 2m CD",
+        "effect": "2 sec cast, 2 min cooldown. Gain +100% mana, energy, and rage regeneration for 30 sec (or 15 min if channeled within 40 yards of an active leyline)."
       },
       {
         "name": "Wind Blessed",
@@ -395,18 +395,18 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
     "racials": [
       {
         "name": "Blood Fury",
-        "type": "Active • 15s",
-        "effect": "Increases Attack Power and Spell Power by 10% for 15 sec."
+        "type": "Active • 15s • 2m CD",
+        "effect": "Increases Attack Power and Spell Power by 10% for 15 sec. 2 min cooldown."
       },
       {
         "name": "Shatter Curse",
-        "type": "Active • 8s",
-        "effect": "Immunity to Curses and Banes and reduce Magical damage taken for 8 sec."
+        "type": "Active • 8s • 2m CD",
+        "effect": "Removes all Curse and Bane effects and grants immunity to Curses and Banes while reducing Magical damage taken by 10% for 8 sec. 2 min cooldown."
       },
       {
-        "name": "Axe Specialization",
+        "name": "Savage",
         "type": "Passive",
-        "effect": "Axes increase spell and ability critical chance by 1%."
+        "effect": "+1% critical strike chance with all spells and abilities."
       },
       {
         "name": "Hardiness",
@@ -469,7 +469,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       {
         "name": "Touch of the Grave",
         "type": "Passive",
-        "effect": "Sometimes drain health with your attacks."
+        "effect": "Your damaging attacks and spells have a chance to trigger a shadow burst that drains the target for Shadow damage and heals you for 100% of the damage dealt."
       }
     ]
   },
@@ -502,8 +502,8 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
     "racials": [
       {
         "name": "War Stomp",
-        "type": "Active • 2s Stun",
-        "effect": "Stuns nearby enemies for 2 sec."
+        "type": "Active • 0.5s Cast • 2m CD",
+        "effect": "Stuns up to 5 enemies within 8 yards for 2 sec. 0.5 sec cast, 2 min cooldown."
       },
       {
         "name": "Cultivation",
@@ -513,12 +513,12 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       {
         "name": "Plainsrunning",
         "type": "Passive",
-        "effect": "Gain increased movement speed the longer you stay moving."
+        "effect": "Increases movement speed by up to 40% after running continuously for 10 seconds outdoors. Taking damage or entering combat cancels the effect."
       },
       {
         "name": "Endurance",
         "type": "Passive",
-        "effect": "Total Health increased by 5% and Hit Chance increased by 1%."
+        "effect": "Total Health increased by 5% and melee/spell Hit Chance increased by 1%."
       }
     ]
   },
@@ -580,7 +580,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       {
         "name": "Regeneration",
         "type": "Passive",
-        "effect": "10% of Health regeneration continues during combat."
+        "effect": "Total Health regeneration increased by 10%, and 10% of total Health regeneration may continue during combat."
       }
     ]
   }

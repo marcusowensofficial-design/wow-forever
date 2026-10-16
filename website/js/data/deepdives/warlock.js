@@ -78,7 +78,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         status: "verified",
         statusLabel: "Verified in Beta (Oct 8)",
         badge: "Native UI & Edit Mode",
-        desc: "Expanded in Beta Build 1.60.6.71890 directly in default HUD Edit Mode. Rotational Spells Tracked: Shadowburn (15s), Conflagrate (10s), Chaos Bolt (12s), Death Coil (2m), Haunt (8s), and Shadowfury (20s). Major Defensives & Bursts: Amplify Curse (3m), Howl of Terror (40s), Fel Domination (15m/5m), and Soulstone timer. Active Procs & Buffs: Nightfall / Shadow Trance (instant Shadow Bolt procs with glow), Backlash, Molten Core, and target Shadow Vulnerability / Bane timers."
+        desc: "Expanded in Beta Build 1.60.1.70425 directly in default HUD Edit Mode. Rotational Spells Tracked: Shadowburn (15s), Conflagrate (10s), Chaos Bolt (12s), Death Coil (2m), Haunt (8s), and Shadowfury (20s). Major Defensives & Bursts: Amplify Curse (3m), Howl of Terror (40s), Fel Domination (15m/5m), and Soulstone timer. Active Procs & Buffs: Nightfall / Shadow Trance (instant Shadow Bolt procs with glow), Backlash, Molten Core, and target Shadow Vulnerability / Bane timers."
       },
       {
         title: "Hellfire Critical Strikes (Level 30 Patch)",
@@ -624,22 +624,23 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             name: "Affliction (Siphon Life & Nightfall Engine)",
             icon: "💀",
             role: "Ranged DoT DPS & Drain Engine",
-            buildUrl: "/talents/warlock?b=03550020035201--&l=30&tl=5",
-            wowheadCalcUrl: "https://www.wowhead.com/forever/talent-calc/warlock/500501",
-            tagline: "Instant Corruption, Siphon Life 21-point keystone, 4% Nightfall Shadow Bolt procs, and infinite mana from Soul Harvest.",
+            buildUrl: "/talents/warlock?b=23513020002021--&l=30&tl=5",
+            wowheadCalcUrl: "https://www.wowhead.com/forever/talent-calc/warlock/23513020002021--",
+            tagline: "Instant Corruption, Siphon Life 21-point keystone, 4% Nightfall Shadow Bolt procs, and 20% range increase via Row 4 Grim Reach.",
             statPriority: "Shadow Spell Power > Spell Hit (to 4%) > Stamina > Intellect",
             bestWeapon: "Spellblade of the Archmage / Necromantic Wand / Cursed Shadow Tome",
             talents: [
-              { name: "Improved Corruption", points: "5/5", tree: "Affliction (Tier 1)", desc: "Reduces the casting time of your Corruption spell by 2 sec, making it completely instant." },
+              { name: "Improved Life Tap", points: "2/2", tree: "Affliction (Tier 1)", desc: "Increases the amount of Mana awarded by your Life Tap spell by 20%." },
               { name: "Suppression", points: "3/5", tree: "Affliction (Tier 1)", desc: "Reduces the chance for enemies to resist your Affliction spells by 6%." },
-              { name: "Improved Life Tap", points: "2/2", tree: "Affliction (Tier 2)", desc: "Increases the amount of Mana awarded by your Life Tap spell by 20%." },
-              { name: "Improved Drain Life", points: "3/5", tree: "Affliction (Tier 2)", desc: "Increases the health drained by your Drain Life spell by 6%." },
-              { name: "Nightfall", points: "2/2", tree: "Affliction (Tier 3)", desc: "Gives your Corruption and Drain Life spells a 4% chance to make your next Shadow Bolt instant cast." },
-              { name: "Grim Reach", points: "2/2", tree: "Affliction (Tier 3)", desc: "Increases the range of your Affliction spells by 20%." },
-              { name: "Shadow Mastery", points: "3/5", tree: "Affliction (Tier 4)", desc: "Increases the damage dealt by your Shadow spells by 6%." },
-              { name: "Siphon Life", points: "1/1", tree: "Affliction (Tier 5 Keystone)", desc: "Transfers health from the target to the caster every 3 sec for 30 sec. Can critically strike under Pandemic!" }
+              { name: "Improved Corruption", points: "5/5", tree: "Affliction (Tier 1)", desc: "Reduces the casting time of your Corruption spell by 2 sec, making it completely instant." },
+              { name: "Soul Harvest", points: "1/2", tree: "Affliction (Tier 2)", desc: "Increases mana regeneration while channeling Drain Soul by 50%." },
+              { name: "Improved Drains", points: "3/3", tree: "Affliction (Tier 2)", desc: "Increases the health drained by your Drain Life spell by 10% and mana drained by Drain Mana by 10%." },
+              { name: "Fel Concentration", points: "2/3", tree: "Affliction (Tier 3)", desc: "Gives you a 46% chance to avoid interruption caused by damage while channeling Drain Life, Drain Mana, or Drain Soul." },
+              { name: "Nightfall", points: "2/2", tree: "Affliction (Tier 4)", desc: "Gives your Corruption and Drain Life spells a 4% chance to make your next Shadow Bolt instant cast." },
+              { name: "Grim Reach", points: "2/2", tree: "Affliction (Tier 4)", desc: "Increases the range of your Affliction spells by 20%." },
+              { name: "Siphon Life", points: "1/1", tree: "Affliction (Tier 5 Keystone)", desc: "Transfers health from the target to the caster every 3 sec for 30 sec." }
             ],
-            legacyNotes: "Extra Legacy discovery points should be placed into 5/5 Shadow Mastery (+10% Shadow damage) and 1/1 Amplify Curse.",
+            legacyNotes: "Extra Legacy discovery points unlock Shadow Mastery (+10% Shadow damage), Pandemic, and Amplify Curse.",
             rotation: [
               { label: "Opener & Multi-DoT", desc: "Curse of Agony -> Instant Corruption -> Siphon Life while maintaining maximum 30-yard range." },
               { label: "Nightfall Reaction", desc: "Watch HUD Cooldown Manager; upon Shadow Trance glow, immediately fire an instant Shadow Bolt." },

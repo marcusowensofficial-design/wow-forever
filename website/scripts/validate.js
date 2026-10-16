@@ -1,6 +1,8 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { loadAllData } from '../tests/helpers/loader.js';
+import { parseBuildUrl, validateBuildLegality, getTotalPoints } from '../tests/helpers/talent-engine.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -366,9 +368,47 @@ check('Addon spotlight cards in index.html have live download links and synced v
   }
 });
 
-check('No stale build 71890 references remain in index.html', () => {
+check('Beta Build 1.60.1.70425 consistency across core-data.js and index.html without stale builds', () => {
+  const coreCode = fs.readFileSync(path.join(ROOT, 'js', 'data', 'core-data.js'), 'utf8');
+  const clientBuildMatch = coreCode.match(/"clientBuild":\s*"([^"]+)"/);
+  if (!clientBuildMatch || clientBuildMatch[1] !== '1.60.1.70425') {
+    throw new Error(`Expected core-data.js clientBuild to be '1.60.1.70425', got '${clientBuildMatch ? clientBuildMatch[1] : 'missing'}'`);
+  }
+  if (!indexHtml.includes('1.60.1.70425')) {
+    throw new Error('index.html missing reference to Beta Build 1.60.1.70425');
+  }
   if (indexHtml.includes('71890')) {
-    throw new Error('Found stale build 1.60.6.71890 reference in index.html; should be updated to 1.60.6.72140');
+    throw new Error('Found stale build 71890 reference in index.html; should be updated to 1.60.1.70425');
+  }
+  if (indexHtml.includes('72140')) {
+    throw new Error('Found stale build 72140 reference in index.html; should be updated to 1.60.1.70425');
+  }
+
+  const bisCode = fs.readFileSync(path.join(ROOT, 'js', 'data', 'bis-data.js'), 'utf8');
+  const bisVersionMatch = bisCode.match(/"version":\s*"([^"]+)"/);
+  if (!bisVersionMatch || bisVersionMatch[1] !== '1.60.1.70425') {
+    throw new Error(`Expected bis-data.js version to be '1.60.1.70425', got '${bisVersionMatch ? bisVersionMatch[1] : 'missing'}'`);
+  }
+  if (bisCode.includes('71890')) {
+    throw new Error('Found stale build 71890 reference in bis-data.js; should be updated to 1.60.1.70425');
+  }
+  if (bisCode.includes('72140')) {
+    throw new Error('Found stale build 72140 reference in bis-data.js; should be updated to 1.60.1.70425');
+  }
+
+  const deepdiveFiles = fs.readdirSync(path.join(ROOT, 'js', 'data', 'deepdives'))
+    .filter(f => f.endsWith('.js'))
+    .map(f => path.join(ROOT, 'js', 'data', 'deepdives', f));
+
+  for (const filePath of deepdiveFiles) {
+    const fileContent = fs.readFileSync(filePath, 'utf8');
+    const relPath = path.relative(ROOT, filePath).replace(/\\/g, '/');
+    if (fileContent.includes('71890')) {
+      throw new Error(`Found stale build 71890 reference in ${relPath}; should be updated to 1.60.1.70425`);
+    }
+    if (fileContent.includes('72140')) {
+      throw new Error(`Found stale build 72140 reference in ${relPath}; should be updated to 1.60.1.70425`);
+    }
   }
 });
 
@@ -391,6 +431,154 @@ check('All 9 classes are defined in legacy.js Season 1 Class Mastery challenges'
     throw new Error("Class Mastery in legacy.js should have totalPoints: 27 across all 9 classes");
   }
 });
+
+check('Obsolete weapon racials purge across races-classes.js, tools-data.js, and deep dive files', () => {
+  const obsoleteRacials = ['Sword Specialization', 'Mace Specialization', 'Axe Specialization'];
+  const deepdiveFiles = fs.readdirSync(path.join(ROOT, 'js', 'data', 'deepdives'))
+    .filter(f => f.endsWith('.js'))
+    .map(f => path.join(ROOT, 'js', 'data', 'deepdives', f));
+  const filesToCheck = [
+    path.join(ROOT, 'js', 'data', 'races-classes.js'),
+    path.join(ROOT, 'js', 'data', 'tools-data.js'),
+    ...deepdiveFiles
+  ];
+
+  for (const filePath of filesToCheck) {
+    const content = fs.readFileSync(filePath, 'utf8');
+    for (const racial of obsoleteRacials) {
+      if (content.includes(racial)) {
+        throw new Error(`Found obsolete weapon racial "${racial}" in ${path.relative(ROOT, filePath)}`);
+      }
+    }
+  }
+});
+
+check('Absence of removed talents in active specialization trees in talents-data.js', () => {
+  const data = loadAllData(ROOT);
+  const talentsData = data.talentsData;
+  const removedTalents = ['Call of Thunder', 'Shadow Affinity'];
+
+  for (const [cls, cData] of Object.entries(talentsData)) {
+    for (const t of cData.talents || []) {
+      if (removedTalents.includes(t.name)) {
+        throw new Error(`Found removed talent "${t.name}" in active ${cls} talent tree in talents-data.js`);
+      }
+    }
+  }
+});
+
+check('Presence of new talent nodes with valid metadata and rank counts in talents-data.js', () => {
+  const data = loadAllData(ROOT);
+  const talentsData = data.talentsData;
+  const expectedNodes = [
+    { cls: 'shaman', name: 'Elemental Mastery', tree: 0, row: 7, col: 2, maxRank: 1, req: 278 },
+    { cls: 'mage', name: 'Arcane Wrath', tree: 0, row: 4, col: 4, maxRank: 1, req: null },
+    { cls: 'priest', name: 'Dark Inspiration', tree: 2, row: 4, col: 1, maxRank: 5, req: null },
+    { cls: 'warlock', name: 'Grim Reach', tree: 0, row: 4, col: 4, maxRank: 2, req: null }
+  ];
+
+  for (const expected of expectedNodes) {
+    const classTalents = talentsData[expected.cls]?.talents || [];
+    const node = classTalents.find(t => t.name === expected.name);
+    if (!node) {
+      throw new Error(`Missing expected new talent "${expected.name}" in ${expected.cls}`);
+    }
+    if (node.tree !== expected.tree || node.row !== expected.row || node.col !== expected.col) {
+      throw new Error(`Talent "${expected.name}" position mismatch: expected tree ${expected.tree} row ${expected.row} col ${expected.col}, got tree ${node.tree} row ${node.row} col ${node.col}`);
+    }
+    if (node.maxRank !== expected.maxRank) {
+      throw new Error(`Talent "${expected.name}" maxRank mismatch: expected ${expected.maxRank}, got ${node.maxRank}`);
+    }
+    if (node.req !== expected.req) {
+      throw new Error(`Talent "${expected.name}" req mismatch: expected ${expected.req}, got ${node.req}`);
+    }
+    if (!Array.isArray(node.descriptions) || node.descriptions.length !== expected.maxRank) {
+      throw new Error(`Talent "${expected.name}" descriptions count mismatch: expected ${expected.maxRank}, got ${node.descriptions?.length}`);
+    }
+  }
+});
+
+check('Replacement racials presence and exact 4-racial symmetry across all 9 races in races-classes.js', () => {
+  const data = loadAllData(ROOT);
+  const races = data.racesData;
+  if (!Array.isArray(races) || races.length !== 9) {
+    throw new Error(`Expected exactly 9 playable races in allRacesData, got ${races ? races.length : 0}`);
+  }
+
+  for (const race of races) {
+    if (!Array.isArray(race.racials) || race.racials.length !== 4) {
+      throw new Error(`Race ${race.name} does not have exactly 4 racials (got ${race.racials?.length})`);
+    }
+    const actives = race.racials.filter(r => (r.type || '').toLowerCase().includes('active'));
+    const passives = race.racials.filter(r => (r.type || '').toLowerCase().includes('passive'));
+    if (actives.length !== 2 || passives.length !== 2) {
+      throw new Error(`Race ${race.name} violates 4-racial symmetry: expected 2 active and 2 passive, got ${actives.length} active and ${passives.length} passive`);
+    }
+  }
+
+  const replacements = [
+    { raceId: 'human', racialName: 'Ruthless' },
+    { raceId: 'dwarf', racialName: 'Earth Fury' },
+    { raceId: 'orc', racialName: 'Savage' },
+    { raceId: 'skyborne', racialName: 'Read Leyline' }
+  ];
+
+  for (const req of replacements) {
+    const race = races.find(r => r.id === req.raceId);
+    if (!race) throw new Error(`Missing race ${req.raceId} in allRacesData`);
+    const found = race.racials.find(r => r.name === req.racialName);
+    if (!found) {
+      throw new Error(`Missing replacement racial "${req.racialName}" on race ${race.name}`);
+    }
+  }
+});
+
+check('Strict legality check on all Level 30 deep dive recommended builds in js/data/deepdives/', () => {
+  const data = loadAllData(ROOT);
+  const deepdives = data.deepdives;
+  const talentsData = data.talentsData;
+
+  const targetClasses = ['druid', 'hunter', 'mage', 'paladin', 'priest', 'rogue', 'shaman', 'warlock', 'warrior'];
+  let buildsAudited = 0;
+
+  for (const cls of targetClasses) {
+    const dd = deepdives[cls];
+    if (!dd) throw new Error(`Missing deep dive dataset for class: ${cls}`);
+    const classTalents = talentsData[cls]?.talents || [];
+    if (classTalents.length === 0) throw new Error(`Missing talent database for class: ${cls}`);
+
+    const specs = dd.betaBuilds?.level30?.specs || [];
+    if (specs.length === 0) throw new Error(`No level 30 specs found in deep dive for ${cls}`);
+
+    for (const spec of specs) {
+      const buildUrl = spec.buildUrl || '';
+      const match = buildUrl.match(/[?&](?:b|build)=([^&]+)/);
+      const buildStr = match ? decodeURIComponent(match[1]) : buildUrl;
+      if (!buildStr) {
+        throw new Error(`Spec ${spec.name || spec.specId} in ${cls} has empty buildUrl`);
+      }
+
+      const points = parseBuildUrl(classTalents, buildStr);
+      const totalPoints = getTotalPoints(points);
+
+      if (totalPoints > 26) {
+        throw new Error(`Build "${spec.name}" for ${cls} exceeds Level 30 cap (${totalPoints} > 26 points)`);
+      }
+
+      const audit = validateBuildLegality(classTalents, points, 26);
+      if (!audit.valid) {
+        throw new Error(`Build "${spec.name}" for ${cls} failed legality audit: ${audit.errors.join('; ')}`);
+      }
+
+      buildsAudited++;
+    }
+  }
+
+  if (buildsAudited < 29) {
+    throw new Error(`Insufficient builds audited: expected >= 29, got ${buildsAudited}`);
+  }
+});
+
 
 console.log('\n=======================================');
 console.log(`Ran ${totalChecks} checks. Failures: ${errors.length}`);

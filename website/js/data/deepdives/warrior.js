@@ -120,7 +120,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         status: "verified",
         statusLabel: "Verified in Beta (Oct 8)",
         badge: "Native UI & Edit Mode",
-        desc: "Expanded in Beta Build 1.60.6.71890 directly in default HUD Edit Mode. Rotational Spells Tracked: Mortal Strike (6s), Bloodthirst (6s), Shield Slam (6s), Revenge (5s), Overpower (active 5s proc window), Whirlwind (10s), and Spearing Strike (15s). Major Defensives: Shield Wall (15m), Retaliation (15m), Last Stand (8m), Berserker Rage (30s), and Pummel (10s). Active Procs & Buffs: Enrage (+25% damage), Flurry charges (1-3 with glow), Overpower Ready indicator, and Stance aura states—rendered with zero 12.0 UI taint."
+        desc: "Expanded in Beta Build 1.60.1.70425 directly in default HUD Edit Mode. Rotational Spells Tracked: Mortal Strike (6s), Bloodthirst (6s), Shield Slam (6s), Revenge (5s), Overpower (active 5s proc window), Whirlwind (10s), and Spearing Strike (15s). Major Defensives: Shield Wall (15m), Retaliation (15m), Last Stand (8m), Berserker Rage (30s), and Pummel (10s). Active Procs & Buffs: Enrage (+25% damage), Flurry charges (1-3 with glow), Overpower Ready indicator, and Stance aura states—rendered with zero 12.0 UI taint."
       }
     ],
 
@@ -342,10 +342,10 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             desc: "Instantly removes all stun effects on a 3-minute cooldown. Essential PvP anti-CC tool allowing Warriors to break free without PvP trinkets."
           },
           {
-            name: "Sword Specialization (+2% Crit)",
+            name: "Ruthless (+2% Crit)",
             status: "verified",
             statusLabel: "Verified in Beta",
-            desc: "Grants 2% critical-strike chance to all attacks and spells while wielding a one-handed or two-handed sword, maximizing Flurry and Deep Wounds procs."
+            desc: "Grants 2% critical-strike chance to all attacks and spells, maximizing Flurry and Deep Wounds procs."
           },
           {
             name: "Perception (Stealth Detection)",
@@ -366,13 +366,13 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           race: "Human Warrior",
           faction: "Alliance",
           badge: "Classic Vanguard",
-          desc: "Frontline champions of the Grand Alliance combining Sword Specialization (+2% crit) and Will to Survive stun breaks."
+          desc: "Frontline champions of the Grand Alliance combining Ruthless (+2% crit) and Will to Survive stun breaks."
         },
         {
           race: "Orc Warrior",
           faction: "Horde",
           badge: "Berserker Juggernaut",
-          desc: "Horde warlords utilizing Blood Fury (+10% AP, no healing penalty in Forever), Axe Specialization (+1% crit), and Hardiness (-20% stun duration)."
+          desc: "Horde warlords utilizing Blood Fury (+10% AP, no healing penalty in Forever), Savage (+1% crit), and Hardiness (-20% stun duration)."
         },
         {
           race: "Tauren Warrior",
@@ -384,7 +384,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           race: "Dwarf Warrior",
           faction: "Alliance",
           badge: "Mountain Defender",
-          desc: "Stoneform (bleed/poison/disease immunity + 10% physical reduction) and Mace Specialization (+1% crit to all spells and attacks)."
+          desc: "Stoneform (bleed/poison/disease immunity + 10% physical reduction) and Earth Fury (+2% crit bonus)."
         }
       ]
     },
@@ -673,7 +673,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
               { name: "Two-Handed Specialization", points: "5/5", tree: "Arms (Tier 4)", desc: "Increases the physical damage you deal with two-handed melee weapons by 5%." },
               { name: "Sweeping Strikes", points: "1/1", tree: "Arms (Tier 5 Keystone)", desc: "Your next 5 melee attacks strike an additional nearby enemy. Combines with Cleave and Overpower for god-tier dungeon AoE burst!" }
             ],
-            legacyNotes: "Extra Legacy discovery points unlock 5/5 Poleaxe Specialization (+5% critical strike chance) or 5/5 Sword Specialization (extra attack swing procs).",
+            legacyNotes: "Extra Legacy discovery points unlock 5/5 Poleaxe Specialization (+5% critical strike chance) or 5/5 Weaponmaster (extra attack swing procs).",
             rotation: [
               { label: "Pull & Stance Dance", desc: "Battle Stance Charge -> Instant Rend to lock aggro -> Spearing Strike to dismount or lock fleeing targets." },
               { label: "Sweeping Cleave", desc: "Activate Sweeping Strikes before pack engagement; every Cleave and Overpower hits 2 targets simultaneously." },

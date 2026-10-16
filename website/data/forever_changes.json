@@ -8,13 +8,13 @@
       "heroDesc": "Every World of Warcraft: Forever talent and spell change, compared with Classic: 113 new talents, 300 changed talents and 261 changed spells across the nine classes. Pick a class to read its changes.",
       "races": [],
       "stats": {
-        "allChanges": 753,
-        "talentsChanged": 300,
-        "talentsNew": 113,
-        "talentsRemoved": 79,
-        "spellsChanged": 261,
-        "spellsTotal": 418,
-        "everything": 963
+        "allChanges": 759,
+        "talentsChanged": 299,
+        "talentsNew": 116,
+        "talentsRemoved": 81,
+        "spellsChanged": 263,
+        "spellsTotal": 419,
+        "everything": 966
       }
     },
     "warrior": {
@@ -254,13 +254,13 @@
         }
       ],
       "stats": {
-        "allChanges": 65,
-        "talentsChanged": 36,
-        "talentsNew": 5,
+        "allChanges": 68,
+        "talentsChanged": 38,
+        "talentsNew": 6,
         "talentsRemoved": 0,
         "spellsChanged": 24,
         "spellsTotal": 50,
-        "everything": 104
+        "everything": 105
       }
     },
     "rogue": {
@@ -410,13 +410,13 @@
         }
       ],
       "stats": {
-        "allChanges": 90,
-        "talentsChanged": 35,
-        "talentsNew": 13,
-        "talentsRemoved": 7,
+        "allChanges": 91,
+        "talentsChanged": 33,
+        "talentsNew": 14,
+        "talentsRemoved": 9,
         "spellsChanged": 35,
         "spellsTotal": 47,
-        "everything": 107
+        "everything": 108
       }
     },
     "warlock": {
@@ -510,13 +510,13 @@
         }
       ],
       "stats": {
-        "allChanges": 92,
+        "allChanges": 94,
         "talentsChanged": 29,
         "talentsNew": 18,
         "talentsRemoved": 12,
-        "spellsChanged": 33,
-        "spellsTotal": 47,
-        "everything": 109
+        "spellsChanged": 35,
+        "spellsTotal": 48,
+        "everything": 110
       }
     },
     "druid": {
@@ -619,8 +619,8 @@
       ],
       "stats": {
         "allChanges": 87,
-        "talentsChanged": 33,
-        "talentsNew": 12,
+        "talentsChanged": 32,
+        "talentsNew": 13,
         "talentsRemoved": 8,
         "spellsChanged": 34,
         "spellsTotal": 49,
@@ -6156,20 +6156,22 @@
       "reported_change_kind": "modified",
       "evidence_status": "client_data",
       "rank_texts": {
-        "1": "Gives you a 8% chance to gain an extra attack after Blocking a melee attack and a 20% chance to gain an extra attack after being the victim of a non-periodic critical strike. Cannot occur more often than once every 1.5 sec.",
-        "2": "Gives you a 16% chance to gain an extra attack after Blocking a melee attack and a 40% chance to gain an extra attack after being the victim of a non-periodic critical strike. Cannot occur more often than once every 1.5 sec.",
-        "3": "Gives you a 24% chance to gain an extra attack after Blocking a melee attack and a 60% chance to gain an extra attack after being the victim of a non-periodic critical strike. Cannot occur more often than once every 1.5 sec.",
-        "4": "Gives you a 32% chance to gain an extra attack after Blocking a melee attack and a 80% chance to gain an extra attack after being the victim of a non-periodic critical strike. Cannot occur more often than once every 1.5 sec.",
-        "5": "Gives you a 40% chance to gain an extra attack after Blocking a melee attack and a 100% chance to gain an extra attack after being the victim of a non-periodic critical strike. Cannot occur more often than once every 1.5 sec."
+        "1": "Gives you a 20% chance to gain a charge of Reckoning after being the victim of a critical strike or blocking a melee attack. Your next melee auto-attack triggers all accumulated charges for 1 extra attack each. Stores up to 4 charges.",
+        "2": "Gives you a 40% chance to gain a charge of Reckoning after being the victim of a critical strike or blocking a melee attack. Your next melee auto-attack triggers all accumulated charges for 1 extra attack each. Stores up to 4 charges.",
+        "3": "Gives you a 60% chance to gain a charge of Reckoning after being the victim of a critical strike or blocking a melee attack. Your next melee auto-attack triggers all accumulated charges for 1 extra attack each. Stores up to 4 charges.",
+        "4": "Gives you a 80% chance to gain a charge of Reckoning after being the victim of a critical strike or blocking a melee attack. Your next melee auto-attack triggers all accumulated charges for 1 extra attack each. Stores up to 4 charges.",
+        "5": "Gives you a 100% chance to gain a charge of Reckoning after being the victim of a critical strike or blocking a melee attack. Your next melee auto-attack triggers all accumulated charges for 1 extra attack each. Stores up to 4 charges."
       },
       "estimated_rank_texts": {},
       "max_rank": 5,
-      "discovered_at": "2026-10-08",
+      "discovered_at": "2026-10-15",
       "calculator_eligible": true,
       "context_only": false,
       "comparison_status": "client",
-      "summary": "Effect rewritten.",
-      "changes": [],
+      "summary": "Stores up to 4 charges, unleashed on next auto-attack.",
+      "changes": [
+        "Stores up to 4 charges, triggers on auto swing"
+      ],
       "classic": {
         "status": "verified",
         "rank_texts": {
@@ -15450,7 +15452,7 @@
       },
       "structure": {
         "tier": 1,
-        "col": 1,
+        "col": 2,
         "prerequisite_status": "client_data",
         "position_status": "client_data",
         "max_rank_status": "client_data"
@@ -15484,12 +15486,14 @@
       },
       "estimated_rank_texts": {},
       "max_rank": 3,
-      "discovered_at": "2026-10-08",
+      "discovered_at": "2026-10-15",
       "calculator_eligible": true,
       "context_only": false,
       "comparison_status": "client",
-      "summary": "Power Word: Shield's absorption bonus changes from 5% to 7% at rank 1.",
-      "changes": [],
+      "summary": "Moved from tier 2 to tier 3 (prerequisite for Soul Warding).",
+      "changes": [
+        "Moved from tier 2 to tier 3"
+      ],
       "classic": {
         "status": "verified",
         "rank_texts": {
@@ -15506,7 +15510,7 @@
         "tier": 1
       },
       "structure": {
-        "tier": 1,
+        "tier": 2,
         "col": 2,
         "prerequisite_status": "client_data",
         "position_status": "client_data",
@@ -15861,13 +15865,13 @@
       },
       "estimated_rank_texts": {},
       "max_rank": 5,
-      "discovered_at": "2026-10-08",
+      "discovered_at": "2026-10-15",
       "calculator_eligible": true,
       "context_only": false,
       "comparison_status": "client",
-      "summary": "Moved from tier 5 to tier 4. Effect rewritten.",
+      "summary": "Moved from tier 4 to tier 2.",
       "changes": [
-        "Moved from tier 5 to tier 4"
+        "Moved from tier 4 to tier 2"
       ],
       "classic": {
         "status": "verified",
@@ -15887,7 +15891,7 @@
         "tier": 4
       },
       "structure": {
-        "tier": 3,
+        "tier": 1,
         "col": 1,
         "prerequisite_status": "client_data",
         "position_status": "client_data",
@@ -17474,21 +17478,19 @@
       "tree_id": "203",
       "tree_index": 2,
       "icon": "spell_shadow_shadowward",
-      "reported_change_kind": "modified",
+      "reported_change_kind": "removed",
       "evidence_status": "client_data",
-      "rank_texts": {
-        "1": "Reduces the threat generated by your Shadow spells by 10%.",
-        "2": "Reduces the threat generated by your Shadow spells by 20%.",
-        "3": "Reduces the threat generated by your Shadow spells by 30%."
-      },
+      "rank_texts": {},
       "estimated_rank_texts": {},
       "max_rank": 3,
-      "discovered_at": "2026-10-08",
-      "calculator_eligible": true,
+      "discovered_at": "2026-10-15",
+      "calculator_eligible": false,
       "context_only": false,
       "comparison_status": "client",
-      "summary": "Shadow-spell threat reduction changes from 8% to 10% at rank 1.",
-      "changes": [],
+      "summary": "Not in the Shadow Magic tree any more.",
+      "changes": [
+        "Not in the Forever priest trees"
+      ],
       "classic": {
         "status": "verified",
         "rank_texts": {
@@ -17525,7 +17527,8 @@
           "type": "classic_client_data",
           "title": "Classic Era client, build 1.15.9.69722: Shadow Affinity"
         }
-      ]
+      ],
+      "forever_note": "Not in the Forever talent trees."
     },
     {
       "id": "calc-priest-shadow-magic-improved-shadow-word-pain",
@@ -17673,13 +17676,13 @@
       },
       "estimated_rank_texts": {},
       "max_rank": 5,
-      "discovered_at": "2026-10-08",
+      "discovered_at": "2026-10-15",
       "calculator_eligible": true,
       "context_only": false,
       "comparison_status": "client",
-      "summary": "Moved from column 2 to column 1.",
+      "summary": "Moved from tier 3 to tier 2.",
       "changes": [
-        "Moved from column 2 to column 1"
+        "Moved from tier 3 to tier 2"
       ],
       "classic": {
         "status": "verified",
@@ -17699,7 +17702,7 @@
         "tier": 2
       },
       "structure": {
-        "tier": 2,
+        "tier": 1,
         "col": 0,
         "prerequisite_status": "client_data",
         "position_status": "client_data",
@@ -17903,21 +17906,18 @@
       "tree_id": "203",
       "tree_index": 2,
       "icon": "spell_magic_lesserinvisibilty",
-      "reported_change_kind": "moved",
+      "reported_change_kind": "removed",
       "evidence_status": "client_data",
-      "rank_texts": {
-        "1": "Decreases the cooldown of your Fade ability by 3 sec.",
-        "2": "Decreases the cooldown of your Fade ability by 6 sec."
-      },
+      "rank_texts": {},
       "estimated_rank_texts": {},
       "max_rank": 2,
-      "discovered_at": "2026-10-08",
-      "calculator_eligible": true,
+      "discovered_at": "2026-10-15",
+      "calculator_eligible": false,
       "context_only": false,
       "comparison_status": "client",
-      "summary": "Moved from column 2 to column 1.",
+      "summary": "Replaced by Dark Inspiration.",
       "changes": [
-        "Moved from column 2 to column 1"
+        "Replaced by Dark Inspiration"
       ],
       "classic": {
         "status": "verified",
@@ -17954,7 +17954,8 @@
           "type": "classic_client_data",
           "title": "Classic Era client, build 1.15.9.69722: Improved Fade"
         }
-      ]
+      ],
+      "forever_note": "Replaced by Dark Inspiration in Forever."
     },
     {
       "id": "calc-priest-shadow-magic-vampiric-embrace",
@@ -17972,11 +17973,11 @@
       },
       "estimated_rank_texts": {},
       "max_rank": 1,
-      "discovered_at": "2026-10-08",
+      "discovered_at": "2026-10-15",
       "calculator_eligible": true,
       "context_only": false,
       "comparison_status": "client",
-      "summary": "Moved from tier 5 to tier 4. 30 sec instead of 1 min.",
+      "summary": "Cooldown standardized to 30 sec.",
       "changes": [
         "Moved from tier 5 to tier 4"
       ],
@@ -18002,10 +18003,8 @@
       },
       "tooltip_metadata": {
         "passive": false,
-        "resource_cost": "40 Mana",
-        "range": "30 yd range",
         "cast_time": "Instant",
-        "cooldown": "1 min cooldown"
+        "cooldown": "30 sec cooldown"
       },
       "sources": [
         {
@@ -18923,13 +18922,13 @@
       },
       "estimated_rank_texts": {},
       "max_rank": 3,
-      "discovered_at": "2026-10-08",
+      "discovered_at": "2026-10-15",
       "calculator_eligible": true,
       "context_only": false,
       "comparison_status": "client",
-      "summary": "Moved from column 2 to column 1. 3% instead of 4%.",
+      "summary": "Moved from tier 2 to tier 3.",
       "changes": [
-        "Moved from column 2 to column 1"
+        "Moved from tier 2 to tier 3"
       ],
       "classic": {
         "status": "verified",
@@ -18947,7 +18946,7 @@
         "tier": 1
       },
       "structure": {
-        "tier": 1,
+        "tier": 2,
         "col": 0,
         "prerequisite_status": "client_data",
         "position_status": "client_data",
@@ -19241,16 +19240,13 @@
       },
       "estimated_rank_texts": {},
       "max_rank": 3,
-      "discovered_at": "2026-10-08",
+      "discovered_at": "2026-10-15",
       "calculator_eligible": true,
       "context_only": false,
       "comparison_status": "client",
-      "summary": "Renamed from Lightning Mastery. 3 ranks (Classic: 5). Moved from tier 6 to tier 3. No longer requires Call of Thunder. Rank 3: 0.50 sec instead of 0.6 sec, reworded.",
+      "summary": "Moved from tier 3 to tier 2.",
       "changes": [
-        "Renamed from Lightning Mastery",
-        "3 ranks (Classic: 5)",
-        "Moved from tier 6 to tier 3",
-        "No longer requires Call of Thunder"
+        "Moved from tier 3 to tier 2"
       ],
       "reported_previous_name": "Lightning Mastery",
       "classic": {
@@ -19272,8 +19268,8 @@
         "prerequisite": "Call of Thunder"
       },
       "structure": {
-        "tier": 2,
-        "col": 2,
+        "tier": 1,
+        "col": 0,
         "prerequisite_status": "client_data",
         "position_status": "client_data",
         "max_rank_status": "client_data"
@@ -19296,7 +19292,7 @@
     },
     {
       "id": "calc-shaman-elemental-combat-improved-fire-nova",
-      "name": "Improved Fire Nova",
+      "name": "Trial by Fire",
       "class": "shaman",
       "kind": "talent",
       "tree_name": "Elemental Combat",
@@ -19311,15 +19307,15 @@
       },
       "estimated_rank_texts": {},
       "max_rank": 2,
-      "discovered_at": "2026-10-08",
+      "discovered_at": "2026-10-15",
       "calculator_eligible": true,
       "context_only": false,
       "comparison_status": "client",
-      "summary": "Replaces Improved Fire Totems.",
+      "summary": "Renamed from Improved Fire Nova.",
       "changes": [
-        "Replaces Improved Fire Totems"
+        "Renamed from Improved Fire Nova (previously Improved Fire Totems)"
       ],
-      "reported_previous_name": "Improved Fire Totems",
+      "reported_previous_name": "Improved Fire Nova",
       "classic": {
         "status": "verified",
         "rank_texts": {
@@ -19428,22 +19424,18 @@
       "tree_id": "261",
       "tree_index": 0,
       "icon": "spell_nature_callstorm",
-      "reported_change_kind": "modified",
+      "reported_change_kind": "removed",
       "evidence_status": "client_data",
-      "rank_texts": {
-        "1": "Increases the critical strike chance of your Lightning Bolt and Chain Lightning spells by 3%."
-      },
+      "rank_texts": {},
       "estimated_rank_texts": {},
       "max_rank": 1,
-      "discovered_at": "2026-10-08",
-      "calculator_eligible": true,
+      "discovered_at": "2026-10-15",
+      "calculator_eligible": false,
       "context_only": false,
       "comparison_status": "client",
-      "summary": "1 rank (Classic: 5). Moved from tier 3 to tier 4. Requires Elemental Alacrity. 3% instead of 1%, reworded.",
+      "summary": "Not in the Elemental Combat tree any more.",
       "changes": [
-        "1 rank (Classic: 5)",
-        "Moved from tier 3 to tier 4",
-        "Requires Elemental Alacrity"
+        "Not in the Forever shaman trees"
       ],
       "classic": {
         "status": "verified",
@@ -19484,7 +19476,8 @@
           "type": "classic_client_data",
           "title": "Classic Era client, build 1.15.9.69722: Call of Thunder"
         }
-      ]
+      ],
+      "forever_note": "Not in the Forever talent trees."
     },
     {
       "id": "calc-shaman-elemental-combat-elemental-reach",
@@ -19567,12 +19560,15 @@
       },
       "estimated_rank_texts": {},
       "max_rank": 3,
-      "discovered_at": "2026-10-08",
+      "discovered_at": "2026-10-15",
       "calculator_eligible": true,
       "context_only": false,
       "comparison_status": "client",
-      "summary": "Lightning Bolt/Chain Lightning can repeat at half damage, with no extra cost or threat.",
-      "changes": [],
+      "summary": "Moved to column 3; requires Elemental Alacrity.",
+      "changes": [
+        "Requires Elemental Alacrity",
+        "Moved to column 3"
+      ],
       "classic": {
         "status": "not_listed",
         "rank_texts": {},
@@ -19581,7 +19577,8 @@
       },
       "structure": {
         "tier": 4,
-        "col": 1,
+        "col": 2,
+        "reported_prerequisite": "Elemental Alacrity",
         "prerequisite_status": "client_data",
         "position_status": "client_data",
         "max_rank_status": "client_data"
@@ -19613,12 +19610,14 @@
       },
       "estimated_rank_texts": {},
       "max_rank": 1,
-      "discovered_at": "2026-10-08",
+      "discovered_at": "2026-10-15",
       "calculator_eligible": true,
       "context_only": false,
       "comparison_status": "client",
-      "summary": "Your Earthbind Totem Immobilizes nearby targets for 5 sec when cast.",
-      "changes": [],
+      "summary": "Moved from tier 5 to tier 4.",
+      "changes": [
+        "Moved from tier 5 to tier 4"
+      ],
       "classic": {
         "status": "not_listed",
         "rank_texts": {},
@@ -19626,7 +19625,7 @@
         "build": "1.15.9.69722"
       },
       "structure": {
-        "tier": 4,
+        "tier": 3,
         "col": 3,
         "prerequisite_status": "client_data",
         "position_status": "client_data",
@@ -19663,15 +19662,13 @@
       },
       "estimated_rank_texts": {},
       "max_rank": 5,
-      "discovered_at": "2026-10-08",
+      "discovered_at": "2026-10-15",
       "calculator_eligible": true,
       "context_only": false,
       "comparison_status": "client",
-      "summary": "5 ranks (Classic: 1). Moved from tier 5 to tier 6. Requires Call of Thunder. 20% instead of 100%, reworded.",
+      "summary": "Prerequisite changed to Lightning Overload.",
       "changes": [
-        "5 ranks (Classic: 1)",
-        "Moved from tier 5 to tier 6",
-        "Requires Call of Thunder"
+        "Requires Lightning Overload (was Call of Thunder)"
       ],
       "classic": {
         "status": "verified",
@@ -19689,7 +19686,7 @@
       "structure": {
         "tier": 5,
         "col": 2,
-        "reported_prerequisite": "Call of Thunder",
+        "reported_prerequisite": "Lightning Overload",
         "prerequisite_status": "client_data",
         "position_status": "client_data",
         "max_rank_status": "client_data"
@@ -19722,16 +19719,23 @@
       "reported_change_kind": "added",
       "evidence_status": "client_data",
       "rank_texts": {
-        "1": "You hurl molten lava at the target, dealing 150 to 192 Fire damage. If your Flame Shock is on the target, Lava Burst deals 20% increased damage."
+        "1": "You hurl molten lava at the target, dealing 150 to 192 Fire damage. If your Flame Shock is on the target, Lava Burst deals 20% increased damage.",
+        "2": "You hurl molten lava at the target, dealing 215 to 275 Fire damage. If your Flame Shock is on the target, Lava Burst deals 20% increased damage.",
+        "3": "You hurl molten lava at the target, dealing 285 to 365 Fire damage. If your Flame Shock is on the target, Lava Burst deals 20% increased damage.",
+        "4": "You hurl molten lava at the target, dealing 360 to 460 Fire damage. If your Flame Shock is on the target, Lava Burst deals 20% increased damage."
       },
       "estimated_rank_texts": {},
-      "max_rank": 1,
-      "discovered_at": "2026-10-08",
+      "max_rank": 4,
+      "discovered_at": "2026-10-15",
       "calculator_eligible": true,
       "context_only": false,
       "comparison_status": "client",
-      "summary": "You hurl molten lava at the target, dealing 150 to 192 Fire damage. If your Flame Shock is on the target, Lava Burst deals 20% increased damage.",
-      "changes": [],
+      "summary": "Moved to row 5 (4 ranks, 21-point capstone) with prerequisite removed.",
+      "changes": [
+        "4 ranks (was 1)",
+        "Moved from row 7 to row 5",
+        "Prerequisite removed"
+      ],
       "classic": {
         "status": "not_listed",
         "rank_texts": {},
@@ -19739,9 +19743,9 @@
         "build": "1.15.9.69722"
       },
       "structure": {
-        "tier": 6,
+        "tier": 4,
         "col": 1,
-        "reported_prerequisite": "Lightning Overload",
+        "reported_prerequisite": null,
         "prerequisite_status": "client_data",
         "position_status": "client_data",
         "max_rank_status": "client_data"
@@ -20515,7 +20519,7 @@
       "reported_change_kind": "modified",
       "evidence_status": "client_data",
       "rank_texts": {
-        "1": "Instantly strike for normal weapon damage and increase the damage you deal to the target with your next Lightning Bolt, Chain Lightning, or Earth Shock spell by 20% for 12 sec."
+        "1": "8% of base mana, Melee range, Instant, 6 sec cooldown. Instantly strike for normal weapon damage and increase the damage you deal to the target with your next Lightning Bolt, Chain Lightning, or Earth Shock spell by 20% for 12 sec."
       },
       "estimated_rank_texts": {},
       "max_rank": 1,
@@ -20523,8 +20527,9 @@
       "calculator_eligible": true,
       "context_only": false,
       "comparison_status": "client",
-      "summary": "Moved from tier 7 to tier 4. No longer requires Elemental Weapons. Effect rewritten.",
+      "summary": "Resource cost standardized to 8% base mana. Moved from tier 7 to tier 4. No longer requires Elemental Weapons. Effect rewritten.",
       "changes": [
+        "Resource cost standardized to 8% base mana",
         "Moved from tier 7 to tier 4",
         "No longer requires Elemental Weapons"
       ],
@@ -20551,10 +20556,10 @@
       },
       "tooltip_metadata": {
         "passive": false,
-        "resource_cost": "125 Mana",
+        "resource_cost": "8% of base mana",
         "range": "Melee range",
         "cast_time": "Instant",
-        "cooldown": "8 sec cooldown"
+        "cooldown": "6 sec cooldown"
       },
       "sources": [
         {
@@ -20911,13 +20916,13 @@
       },
       "estimated_rank_texts": {},
       "max_rank": 5,
-      "discovered_at": "2026-10-08",
+      "discovered_at": "2026-10-15",
       "calculator_eligible": true,
       "context_only": false,
       "comparison_status": "client",
-      "summary": "Moved from tier 2 to tier 1. Same numbers, reworded.",
+      "summary": "Swapped with Tidal Focus to tier 2.",
       "changes": [
-        "Moved from tier 2 to tier 1"
+        "Moved to tier 2"
       ],
       "classic": {
         "status": "verified",
@@ -20937,7 +20942,7 @@
         "tier": 1
       },
       "structure": {
-        "tier": 0,
+        "tier": 1,
         "col": 2,
         "prerequisite_status": "client_data",
         "position_status": "client_data",
@@ -21093,13 +21098,13 @@
       },
       "estimated_rank_texts": {},
       "max_rank": 5,
-      "discovered_at": "2026-10-08",
+      "discovered_at": "2026-10-15",
       "calculator_eligible": true,
       "context_only": false,
       "comparison_status": "client",
-      "summary": "Moved from tier 1 to tier 2. Numbers and wording changed.",
+      "summary": "Swapped with Totemic Focus to tier 1.",
       "changes": [
-        "Moved from tier 1 to tier 2"
+        "Moved to tier 1"
       ],
       "classic": {
         "status": "verified",
@@ -21119,7 +21124,7 @@
         "tier": 0
       },
       "structure": {
-        "tier": 1,
+        "tier": 0,
         "col": 2,
         "prerequisite_status": "client_data",
         "position_status": "client_data",
@@ -21345,7 +21350,7 @@
       "reported_change_kind": "added",
       "evidence_status": "client_data",
       "rank_texts": {
-        "1": "The caster is surrounded by 3 globes of water. When a spell, melee, or ranged attack hits the caster or when one of the caster's healing spells gets a critical result, 2% of maximum mana is restored to the caster, expending one water globe. Only one globe will activate every few seconds. Lasts 10 min.\n\nOnly one Elemental Shield can be active on the Shaman at any one time."
+        "1": "The caster is surrounded by 3 globes of water. When a spell, melee, or ranged attack hits the caster or when one of the caster's damaging spells or healing spells scores a critical strike (all spell crits), 2% of maximum mana is restored to the caster, expending one water globe. Only one globe will activate every few seconds. Lasts 10 min.\n\nOnly one Elemental Shield can be active on the Shaman at any one time."
       },
       "estimated_rank_texts": {},
       "max_rank": 1,
@@ -21353,8 +21358,10 @@
       "calculator_eligible": true,
       "context_only": false,
       "comparison_status": "client",
-      "summary": "The caster is surrounded by 3 globes of water.",
-      "changes": [],
+      "summary": "The caster is surrounded by 3 globes of water. Mana return triggers on all spell crits (healing and damaging).",
+      "changes": [
+        "Triggers mana restoration on all spell crits (healing and damaging)"
+      ],
       "classic": {
         "status": "not_listed",
         "rank_texts": {},
@@ -21534,9 +21541,10 @@
       "calculator_eligible": true,
       "context_only": false,
       "comparison_status": "client",
-      "summary": "Moved from tier 7 to tier 4. No longer requires Restorative Totems. 88 instead of 170, 30 yards instead of 20 yards.",
+      "summary": "Moved from tier 7 to tier 4. Level 38 rank progression available. No longer requires Restorative Totems. 88 instead of 170, 30 yards instead of 20 yards.",
       "changes": [
         "Moved from tier 7 to tier 4",
+        "Learned at Level 38 with rank progression",
         "No longer requires Restorative Totems"
       ],
       "classic": {
@@ -21821,26 +21829,27 @@
       ]
     },
     {
-      "id": "shaman-elemental-mastery",
+      "id": "calc-shaman-elemental-combat-elemental-mastery",
       "name": "Elemental Mastery",
       "class": "shaman",
       "kind": "talent",
       "tree_name": "Elemental Combat",
       "tree_index": 0,
       "icon": "spell_nature_wispheal",
-      "reported_change_kind": "removed",
+      "reported_change_kind": "added",
       "evidence_status": "client_data",
-      "rank_texts": {},
+      "rank_texts": {
+        "1": "Gain mastery over Fire and Lightning, reducing the cast time of Lightning Bolt and Lava Burst by 0.5 sec, and removing the cooldown from Chain Lightning. Lasts 15 sec."
+      },
       "estimated_rank_texts": {},
-      "discovered_at": "2026-10-08",
-      "calculator_eligible": false,
+      "discovered_at": "2026-10-15",
+      "calculator_eligible": true,
       "context_only": false,
       "comparison_status": "client",
-      "summary": "Not in the Elemental Combat tree any more.",
+      "summary": "Gain mastery over Fire and Lightning, reducing the cast time of Lightning Bolt and Lava Burst by 0.5 sec, and removing the cooldown from Chain Lightning. Lasts 15 sec.",
       "changes": [
-        "Not in the Forever shaman trees"
+        "Returns as 31-point capstone in tier 7"
       ],
-      "forever_note": "Not in the Forever talent trees.",
       "classic": {
         "status": "verified",
         "rank_texts": {
@@ -21855,6 +21864,9 @@
         "prerequisite": "Elemental Fury"
       },
       "structure": {
+        "tier": 6,
+        "col": 1,
+        "reported_prerequisite": "Lava Burst",
         "prerequisite_status": "client_data",
         "position_status": "client_data",
         "max_rank_status": "client_data"
@@ -21866,16 +21878,13 @@
       },
       "sources": [
         {
-          "url": "https://wago.tools/db2/TraitNode?build=1.60.1.70338",
+          "url": "https://wago.tools/db2/TraitNode?build=1.60.1.70425",
           "type": "client_data",
-          "title": "WoW Forever beta client, build 1.60.1.70338"
-        },
-        {
-          "url": "https://www.wowhead.com/classic/spell=16166",
-          "type": "classic_client_data",
-          "title": "Classic Era client, build 1.15.9.69722: Elemental Mastery"
+          "title": "WoW Forever beta client, build 1.60.1.70425"
         }
-      ]
+      ],
+      "tree_id": "261",
+      "max_rank": 1
     },
     {
       "id": "shaman-totemic-mastery",
@@ -23098,16 +23107,20 @@
       "reported_change_kind": "added",
       "evidence_status": "client_data",
       "rank_texts": {
-        "1": "Gives your Arcane Blast spell a 40% chance, and your Fireball, Frostbolt, and Frostfire Bolt spells a 20% chance to reduce the channeled duration of your next Arcane Missiles spell by 50%, reduce the Mana cost by 100%, and missiles fire every 0.5 sec."
+        "1": "Gives your Arcane Blast spell a 20% chance, and your Fireball, Frostbolt, and Frostfire Bolt spells a 10% chance to reduce the channeled duration of your next Arcane Missiles spell by 50%, reduce the Mana cost by 100%, and missiles fire every 0.5 sec.",
+        "2": "Gives your Arcane Blast spell a 40% chance, and your Fireball, Frostbolt, and Frostfire Bolt spells a 20% chance to reduce the channeled duration of your next Arcane Missiles spell by 50%, reduce the Mana cost by 100%, and missiles fire every 0.5 sec."
       },
       "estimated_rank_texts": {},
-      "max_rank": 1,
-      "discovered_at": "2026-10-08",
+      "max_rank": 2,
+      "discovered_at": "2026-10-15",
       "calculator_eligible": true,
       "context_only": false,
       "comparison_status": "client",
-      "summary": "Gives your Arcane Blast spell a 40% chance, and your Fireball, Frostbolt, and Frostfire Bolt spells a 20% chance to reduce the channeled duration of your next Arcane Missiles spell by 50%, reduce the Mana cost by 100%, and missiles fire every 0.5 sec.",
-      "changes": [],
+      "summary": "Moved to tier 1 (2 ranks).",
+      "changes": [
+        "Moved to tier 1",
+        "2 ranks (was 1)"
+      ],
       "classic": {
         "status": "not_listed",
         "rank_texts": {},
@@ -23115,7 +23128,7 @@
         "build": "1.15.9.69722"
       },
       "structure": {
-        "tier": 3,
+        "tier": 0,
         "col": 3,
         "prerequisite_status": "client_data",
         "position_status": "client_data",
@@ -23393,7 +23406,7 @@
     },
     {
       "id": "calc-mage-fire-wake-of-fire",
-      "name": "Wake of Fire",
+      "name": "Improved Fire Blast",
       "class": "mage",
       "kind": "talent",
       "tree_name": "Fire",
@@ -23408,17 +23421,15 @@
       },
       "estimated_rank_texts": {},
       "max_rank": 2,
-      "discovered_at": "2026-10-08",
+      "discovered_at": "2026-10-15",
       "calculator_eligible": true,
       "context_only": false,
       "comparison_status": "client",
-      "summary": "Replaces Improved Fire Blast. 2 ranks (Classic: 3). Moved from tier 2 to tier 1.",
+      "summary": "Renamed from Wake of Fire.",
       "changes": [
-        "Replaces Improved Fire Blast",
-        "2 ranks (Classic: 3)",
-        "Moved from tier 2 to tier 1"
+        "Renamed from Wake of Fire"
       ],
-      "reported_previous_name": "Improved Fire Blast",
+      "reported_previous_name": "Wake of Fire",
       "classic": {
         "status": "verified",
         "rank_texts": {
@@ -24211,21 +24222,25 @@
       "tree_id": "41",
       "tree_index": 1,
       "icon": "spell_nature_wispheal",
-      "reported_change_kind": "unchanged",
+      "reported_change_kind": "modified",
       "evidence_status": "client_data",
       "rank_texts": {
         "1": "Increases the critical strike chance of your Fire spells by 2%.",
         "2": "Increases the critical strike chance of your Fire spells by 4%.",
-        "3": "Increases the critical strike chance of your Fire spells by 6%."
+        "3": "Increases the critical strike chance of your Fire spells by 6%.",
+        "4": "Increases the critical strike chance of your Fire spells by 8%.",
+        "5": "Increases the critical strike chance of your Fire spells by 10%."
       },
       "estimated_rank_texts": {},
-      "max_rank": 3,
-      "discovered_at": "2026-10-08",
+      "max_rank": 5,
+      "discovered_at": "2026-10-15",
       "calculator_eligible": true,
       "context_only": false,
       "comparison_status": "client",
-      "summary": "Same as Classic.",
-      "changes": [],
+      "summary": "Rescaled to 5 ranks (was 3).",
+      "changes": [
+        "5 ranks (was 3)"
+      ],
       "classic": {
         "status": "verified",
         "rank_texts": {
@@ -24337,23 +24352,24 @@
       "tree_id": "41",
       "tree_index": 1,
       "icon": "spell_fire_immolation",
-      "reported_change_kind": "unchanged",
+      "reported_change_kind": "modified",
       "evidence_status": "client_data",
       "rank_texts": {
-        "1": "Increases the damage done by your Fire spells by 2%.",
-        "2": "Increases the damage done by your Fire spells by 4%.",
-        "3": "Increases the damage done by your Fire spells by 6%.",
-        "4": "Increases the damage done by your Fire spells by 8%.",
-        "5": "Increases the damage done by your Fire spells by 10%."
+        "1": "Increases the damage done by your Fire spells by 1% per Fire effect on the target, up to a maximum increase of 12%.",
+        "2": "Increases the damage done by your Fire spells by 2% per Fire effect on the target, up to a maximum increase of 12%.",
+        "3": "Increases the damage done by your Fire spells by 3% per Fire effect on the target, up to a maximum increase of 12%."
       },
       "estimated_rank_texts": {},
-      "max_rank": 5,
-      "discovered_at": "2026-10-08",
+      "max_rank": 3,
+      "discovered_at": "2026-10-15",
       "calculator_eligible": true,
       "context_only": false,
       "comparison_status": "client",
-      "summary": "Same as Classic.",
-      "changes": [],
+      "summary": "Rescaled to 3 ranks (was 5). Fire damage increased by 1/2/3% per Fire effect up to 12%.",
+      "changes": [
+        "3 ranks (was 5)",
+        "Stacking fire damage up to 12%"
+      ],
       "classic": {
         "status": "verified",
         "rank_texts": {
@@ -25040,16 +25056,18 @@
       "reported_change_kind": "added",
       "evidence_status": "client_data",
       "rank_texts": {
-        "1": "Deals 28 to 32 Frost damage to an enemy target. Deals 300% increased damage to Frozen targets."
+        "1": "Deals 28 to 32 Frost damage to an enemy target. Deals 200% increased damage to Frozen targets."
       },
       "estimated_rank_texts": {},
       "max_rank": 1,
-      "discovered_at": "2026-10-08",
+      "discovered_at": "2026-10-15",
       "calculator_eligible": true,
       "context_only": false,
       "comparison_status": "client",
-      "summary": "Deals 28 to 32 Frost damage to an enemy target. Deals 300% increased damage to Frozen targets.",
-      "changes": [],
+      "summary": "Deals 200% increased damage to Frozen targets (was 300%).",
+      "changes": [
+        "Deals 200% increased damage to Frozen targets (was 300%)"
+      ],
       "classic": {
         "status": "not_listed",
         "rank_texts": {},
@@ -25517,20 +25535,22 @@
       "reported_change_kind": "modified",
       "evidence_status": "client_data",
       "rank_texts": {
-        "1": "Gives your Frost damage spells a 20% chance to apply the Winter's Chill effect, which increases the chance your Ice Lance and Frostbolt spells will critically hit the target by 2% for 15 sec. Stacks up to 1 times.",
-        "2": "Gives your Frost damage spells a 40% chance to apply the Winter's Chill effect, which increases the chance your Ice Lance and Frostbolt spells will critically hit the target by 2% for 15 sec. Stacks up to 2 times.",
-        "3": "Gives your Frost damage spells a 60% chance to apply the Winter's Chill effect, which increases the chance your Ice Lance and Frostbolt spells will critically hit the target by 2% for 15 sec. Stacks up to 3 times.",
-        "4": "Gives your Frost damage spells a 80% chance to apply the Winter's Chill effect, which increases the chance your Ice Lance and Frostbolt spells will critically hit the target by 2% for 15 sec. Stacks up to 4 times.",
-        "5": "Gives your Frost damage spells a 100% chance to apply the Winter's Chill effect, which increases the chance your Ice Lance and Frostbolt spells will critically hit the target by 2% for 15 sec. Stacks up to 5 times."
+        "1": "Gives your Frost damage spells a 20% chance to apply the Winter's Chill effect, causing your next Cone of Cold to deal 40% increased damage per stack, consuming the effect. Stacks up to 1 times.",
+        "2": "Gives your Frost damage spells a 40% chance to apply the Winter's Chill effect, causing your next Cone of Cold to deal 40% increased damage per stack, consuming the effect. Stacks up to 2 times.",
+        "3": "Gives your Frost damage spells a 60% chance to apply the Winter's Chill effect, causing your next Cone of Cold to deal 40% increased damage per stack, consuming the effect. Stacks up to 3 times.",
+        "4": "Gives your Frost damage spells a 80% chance to apply the Winter's Chill effect, causing your next Cone of Cold to deal 40% increased damage per stack, consuming the effect. Stacks up to 4 times.",
+        "5": "Gives your Frost damage spells a 100% chance to apply the Winter's Chill effect, causing your next Cone of Cold to deal 40% increased damage per stack, consuming the effect. Stacks up to 5 times."
       },
       "estimated_rank_texts": {},
       "max_rank": 5,
-      "discovered_at": "2026-10-08",
+      "discovered_at": "2026-10-15",
       "calculator_eligible": true,
       "context_only": false,
       "comparison_status": "client",
-      "summary": "Same numbers, reworded.",
-      "changes": [],
+      "summary": "Redesigned: Frost damage applies Winter's Chill; Cone of Cold consumes stacks for +40% damage per stack.",
+      "changes": [
+        "Redesigned: Cone of Cold consumes stacks for +40% damage per stack"
+      ],
       "classic": {
         "status": "verified",
         "rank_texts": {
@@ -25839,23 +25859,19 @@
       "tree_id": "302",
       "tree_index": 0,
       "icon": "spell_shadow_curseofachimonde",
-      "reported_change_kind": "added",
+      "reported_change_kind": "removed",
       "evidence_status": "client_data",
-      "rank_texts": {
-        "1": "Increases all periodic damage done by your Warlock spells by 1%.",
-        "2": "Increases all periodic damage done by your Warlock spells by 2%.",
-        "3": "Increases all periodic damage done by your Warlock spells by 3%.",
-        "4": "Increases all periodic damage done by your Warlock spells by 4%.",
-        "5": "Increases all periodic damage done by your Warlock spells by 5%."
-      },
+      "rank_texts": {},
       "estimated_rank_texts": {},
       "max_rank": 5,
-      "discovered_at": "2026-10-08",
-      "calculator_eligible": true,
+      "discovered_at": "2026-10-15",
+      "calculator_eligible": false,
       "context_only": false,
       "comparison_status": "client",
-      "summary": "Increases all periodic damage done by your Warlock spells by 1%.",
-      "changes": [],
+      "summary": "Replaced by Grim Reach.",
+      "changes": [
+        "Replaced by Grim Reach"
+      ],
       "classic": {
         "status": "not_listed",
         "rank_texts": {},
@@ -25878,7 +25894,8 @@
           "type": "client_data",
           "title": "WoW Forever beta client, build 1.60.1.70338"
         }
-      ]
+      ],
+      "forever_note": "Replaced by Grim Reach in Forever."
     },
     {
       "id": "warlock-soul-harvest",
@@ -26531,22 +26548,21 @@
       "reported_change_kind": "modified",
       "evidence_status": "client_data",
       "rank_texts": {
-        "1": "Increases the damage dealt or life drained by your Shadow spells by 1%.",
-        "2": "Increases the damage dealt or life drained by your Shadow spells by 2%.",
-        "3": "Increases the damage dealt or life drained by your Shadow spells by 3%.",
-        "4": "Increases the damage dealt or life drained by your Shadow spells by 4%.",
-        "5": "Increases the damage dealt or life drained by your Shadow spells by 5%."
+        "1": "Increases the damage dealt or life drained by your Shadow spells by 2%.",
+        "2": "Increases the damage dealt or life drained by your Shadow spells by 4%.",
+        "3": "Increases the damage dealt or life drained by your Shadow spells by 6%.",
+        "4": "Increases the damage dealt or life drained by your Shadow spells by 8%.",
+        "5": "Increases the damage dealt or life drained by your Shadow spells by 10%."
       },
       "estimated_rank_texts": {},
       "max_rank": 5,
-      "discovered_at": "2026-10-08",
+      "discovered_at": "2026-10-15",
       "calculator_eligible": true,
       "context_only": false,
       "comparison_status": "client",
-      "summary": "Moved from column 2 to column 3. No longer requires Siphon Life. Rank 5: 5% instead of 10%.",
+      "summary": "Increases Shadow damage and life drain by 2/4/6/8/10% (was 1/2/3/4/5%).",
       "changes": [
-        "Moved from column 2 to column 3",
-        "No longer requires Siphon Life"
+        "Doubled to 2/4/6/8/10%"
       ],
       "classic": {
         "status": "verified",
@@ -27757,18 +27773,18 @@
       "reported_change_kind": "modified",
       "evidence_status": "client_data",
       "rank_texts": {
-        "1": "Increases the range of your damaging spells by 10%.",
-        "2": "Increases the range of your damaging spells by 20%."
+        "1": "Increases the range of your Destruction spells by 10%.",
+        "2": "Increases the range of your Destruction spells by 20%."
       },
       "estimated_rank_texts": {},
       "max_rank": 2,
-      "discovered_at": "2026-10-08",
+      "discovered_at": "2026-10-15",
       "calculator_eligible": true,
       "context_only": false,
       "comparison_status": "client",
-      "summary": "Moved from tier 4 to tier 1. Same numbers, reworded.",
+      "summary": "Applies specifically to Destruction spells.",
       "changes": [
-        "Moved from tier 4 to tier 1"
+        "Restricted to Destruction spells"
       ],
       "classic": {
         "status": "verified",
@@ -29054,26 +29070,28 @@
       ]
     },
     {
-      "id": "warlock-grim-reach",
+      "id": "calc-warlock-affliction-grim-reach",
       "name": "Grim Reach",
       "class": "warlock",
       "kind": "talent",
       "tree_name": "Affliction",
       "tree_index": 0,
       "icon": "spell_shadow_callofbone",
-      "reported_change_kind": "removed",
+      "reported_change_kind": "added",
       "evidence_status": "client_data",
-      "rank_texts": {},
+      "rank_texts": {
+        "1": "Increases the range of your Affliction spells by 10%.",
+        "2": "Increases the range of your Affliction spells by 20%."
+      },
       "estimated_rank_texts": {},
-      "discovered_at": "2026-10-08",
-      "calculator_eligible": false,
+      "discovered_at": "2026-10-15",
+      "calculator_eligible": true,
       "context_only": false,
       "comparison_status": "client",
-      "summary": "Not in the Affliction tree any more.",
+      "summary": "Increases the range of your Affliction spells by 10/20%.",
       "changes": [
-        "Not in the Forever warlock trees"
+        "Returns in tier 4, replacing Malediction"
       ],
-      "forever_note": "Not in the Forever talent trees.",
       "classic": {
         "status": "verified",
         "rank_texts": {
@@ -29088,6 +29106,8 @@
         "tier": 3
       },
       "structure": {
+        "tier": 3,
+        "col": 3,
         "prerequisite_status": "client_data",
         "position_status": "client_data",
         "max_rank_status": "client_data"
@@ -29106,7 +29126,9 @@
           "type": "classic_client_data",
           "title": "Classic Era client, build 1.15.9.69722: Grim Reach"
         }
-      ]
+      ],
+      "tree_id": "221",
+      "max_rank": 2
     },
     {
       "id": "warlock-dark-pact",
@@ -33871,14 +33893,14 @@
       "icon": "spell_shadow_demonicfortitude",
       "reported_change_kind": "added",
       "spellbook_status": "new",
-      "summary": "A word of dark binding that inflicts 444 to 472 Shadow damage to the target. Season of Discovery had a spell by this name",
+      "summary": "Cooldown adjusted to 18s (Build 70338: 15s). A word of dark binding that inflicts Shadow damage to the target with backlash on non-kill.",
       "order": 14,
       "evidence_status": "client_data",
       "rank_texts": {
-        "1": "175 Mana, 30 yd range, Instant, 15 sec cooldown. A word of dark binding that inflicts 294 to 311 Shadow damage to the target. If your target is not killed by Shadow Word: Death, you take backlash damage equal to 10% of your maximum health.",
-        "2": "205 Mana, 30 yd range, Instant, 15 sec cooldown. A word of dark binding that inflicts 368 to 391 Shadow damage to the target. If your target is not killed by Shadow Word: Death, you take backlash damage equal to 10% of your maximum health.",
-        "3": "250 Mana, 30 yd range, Instant, 15 sec cooldown. A word of dark binding that inflicts 402 to 426 Shadow damage to the target. If your target is not killed by Shadow Word: Death, you take backlash damage equal to 10% of your maximum health.",
-        "4": "340 Mana, 30 yd range, Instant, 15 sec cooldown. A word of dark binding that inflicts 444 to 472 Shadow damage to the target. If your target is not killed by Shadow Word: Death, you take backlash damage equal to 10% of your maximum health."
+        "1": "175 Mana, 30 yd range, Instant, 18 sec cooldown. A word of dark binding that inflicts 294 to 311 Shadow damage to the target. If your target is not killed by Shadow Word: Death, you take backlash damage equal to 10% of your maximum health.",
+        "2": "205 Mana, 30 yd range, Instant, 18 sec cooldown. A word of dark binding that inflicts 368 to 391 Shadow damage to the target. If your target is not killed by Shadow Word: Death, you take backlash damage equal to 10% of your maximum health.",
+        "3": "250 Mana, 30 yd range, Instant, 18 sec cooldown. A word of dark binding that inflicts 402 to 426 Shadow damage to the target. If your target is not killed by Shadow Word: Death, you take backlash damage equal to 10% of your maximum health.",
+        "4": "340 Mana, 30 yd range, Instant, 18 sec cooldown. A word of dark binding that inflicts 444 to 472 Shadow damage to the target. If your target is not killed by Shadow Word: Death, you take backlash damage equal to 10% of your maximum health."
       },
       "max_rank": 4,
       "classic": {
@@ -33895,7 +33917,10 @@
         }
       ],
       "uncertainties": [],
-      "discovered_at": "2026-10-10"
+      "discovered_at": "2026-10-10",
+      "changes": [
+        "Cooldown adjusted to 18s (Build 70338: 15s)"
+      ]
     },
     {
       "id": "spellbook-shaman-call-of-the-spirits",
@@ -34121,7 +34146,7 @@
       "icon": "spell_fire_sealoffire",
       "reported_change_kind": "renamed",
       "spellbook_status": "renamed",
-      "summary": "Called Fire Nova Totem in Classic. Rank 5: Cooldown 10 sec instead of 15 sec; Range 30 yd instead of none; Tooltip rewritten.",
+      "summary": "Called Fire Nova Totem in Classic. Strikes from active Fire totem on a 10s cooldown with revised scaling.",
       "order": 106,
       "evidence_status": "client_data",
       "rank_texts": {
@@ -34652,16 +34677,16 @@
       "icon": "spell_shadow_devouringplague",
       "reported_change_kind": "race",
       "spellbook_status": "race",
-      "summary": "Dwarf, Human, Night Elf and Troll can learn it too (Classic: Undead only). Rank 6: Cooldown 1 min instead of 3 min; 848 instead of 904.",
+      "summary": "Cooldown reduced to 24s (Classic: 3 min). Baseline spell available to all Priest races.",
       "order": 307,
       "evidence_status": "client_data",
       "rank_texts": {
-        "1": "215 Mana, 30 yd range, Instant, 1 min cooldown. Afflicts the target with a disease that causes 128 Shadow damage over 24 sec. Damage caused by the Devouring Plague heals the caster.",
-        "2": "350 Mana, 30 yd range, Instant, 1 min cooldown. Afflicts the target with a disease that causes 232 Shadow damage over 24 sec. Damage caused by the Devouring Plague heals the caster.",
-        "3": "495 Mana, 30 yd range, Instant, 1 min cooldown. Afflicts the target with a disease that causes 344 Shadow damage over 24 sec. Damage caused by the Devouring Plague heals the caster.",
-        "4": "645 Mana, 30 yd range, Instant, 1 min cooldown. Afflicts the target with a disease that causes 488 Shadow damage over 24 sec. Damage caused by the Devouring Plague heals the caster.",
-        "5": "810 Mana, 30 yd range, Instant, 1 min cooldown. Afflicts the target with a disease that causes 656 Shadow damage over 24 sec. Damage caused by the Devouring Plague heals the caster.",
-        "6": "985 Mana, 30 yd range, Instant, 1 min cooldown. Afflicts the target with a disease that causes 848 Shadow damage over 24 sec. Damage caused by the Devouring Plague heals the caster."
+        "1": "215 Mana, 30 yd range, Instant, 24 sec cooldown. Afflicts the target with a disease that causes 128 Shadow damage over 24 sec. Damage caused by the Devouring Plague heals the caster.",
+        "2": "350 Mana, 30 yd range, Instant, 24 sec cooldown. Afflicts the target with a disease that causes 232 Shadow damage over 24 sec. Damage caused by the Devouring Plague heals the caster.",
+        "3": "495 Mana, 30 yd range, Instant, 24 sec cooldown. Afflicts the target with a disease that causes 344 Shadow damage over 24 sec. Damage caused by the Devouring Plague heals the caster.",
+        "4": "645 Mana, 30 yd range, Instant, 24 sec cooldown. Afflicts the target with a disease that causes 488 Shadow damage over 24 sec. Damage caused by the Devouring Plague heals the caster.",
+        "5": "810 Mana, 30 yd range, Instant, 24 sec cooldown. Afflicts the target with a disease that causes 656 Shadow damage over 24 sec. Damage caused by the Devouring Plague heals the caster.",
+        "6": "985 Mana, 30 yd range, Instant, 24 sec cooldown. Afflicts the target with a disease that causes 848 Shadow damage over 24 sec. Damage caused by the Devouring Plague heals the caster."
       },
       "max_rank": 6,
       "classic": {
@@ -34694,7 +34719,11 @@
         }
       ],
       "uncertainties": [],
-      "discovered_at": "2026-10-10"
+      "discovered_at": "2026-10-10",
+      "changes": [
+        "Cooldown reduced to 24s (Classic: 3 min)",
+        "Available to all Priest races"
+      ]
     },
     {
       "id": "priest-fear-ward",
@@ -34889,17 +34918,17 @@
       "icon": "ability_warrior_battleshout",
       "reported_change_kind": "modified",
       "spellbook_status": "changed",
-      "summary": "Rank 7: 139 instead of 232, 3 min instead of 2 min.",
+      "summary": "Flagged Raid-wide. Increases melee attack power of all party and raid members within 20 yards. Rank 7: 139 instead of 232, 3 min instead of 2 min.",
       "order": 500,
       "evidence_status": "client_data",
       "rank_texts": {
-        "1": "10 Rage, Instant. The warrior shouts, increasing the melee attack power of all party members within 20 yards by 12. Lasts 3 min.",
-        "2": "10 Rage, Instant. The warrior shouts, increasing the melee attack power of all party members within 20 yards by 24. Lasts 3 min.",
-        "3": "10 Rage, Instant. The warrior shouts, increasing the melee attack power of all party members within 20 yards by 36. Lasts 3 min.",
-        "4": "10 Rage, Instant. The warrior shouts, increasing the melee attack power of all party members within 20 yards by 56. Lasts 3 min.",
-        "5": "10 Rage, Instant. The warrior shouts, increasing the melee attack power of all party members within 20 yards by 83. Lasts 3 min.",
-        "6": "10 Rage, Instant. The warrior shouts, increasing the melee attack power of all party members within 20 yards by 116. Lasts 3 min.",
-        "7": "10 Rage, Instant. The warrior shouts, increasing the melee attack power of all party members within 20 yards by 139. Lasts 3 min."
+        "1": "10 Rage, Instant. The warrior shouts, increasing the melee attack power of all party and raid members within 20 yards by 12. Lasts 3 min.",
+        "2": "10 Rage, Instant. The warrior shouts, increasing the melee attack power of all party and raid members within 20 yards by 24. Lasts 3 min.",
+        "3": "10 Rage, Instant. The warrior shouts, increasing the melee attack power of all party and raid members within 20 yards by 36. Lasts 3 min.",
+        "4": "10 Rage, Instant. The warrior shouts, increasing the melee attack power of all party and raid members within 20 yards by 56. Lasts 3 min.",
+        "5": "10 Rage, Instant. The warrior shouts, increasing the melee attack power of all party and raid members within 20 yards by 83. Lasts 3 min.",
+        "6": "10 Rage, Instant. The warrior shouts, increasing the melee attack power of all party and raid members within 20 yards by 116. Lasts 3 min.",
+        "7": "10 Rage, Instant. The warrior shouts, increasing the melee attack power of all party and raid members within 20 yards by 139. Lasts 3 min."
       },
       "max_rank": 7,
       "classic": {
@@ -39432,15 +39461,15 @@
       "icon": "spell_nature_earthbindtotem",
       "reported_change_kind": "modified",
       "spellbook_status": "changed",
-      "summary": "Rank 5: 30 yards instead of 20 yards, 53 instead of 77, 5 min instead of 2 min.",
+      "summary": "Flagged Raid-wide. Increases strength of all party and raid members within 30 yards. Rank 5: 30 yards instead of 20 yards, 53 instead of 77, 5 min instead of 2 min.",
       "order": 504,
       "evidence_status": "client_data",
       "rank_texts": {
-        "1": "25 Mana, Instant. Summons a Strength of Earth Totem with 5 health at the feet of the caster. The totem increases the strength of party members within 30 yards by 7. Lasts 5 min.",
-        "2": "65 Mana, Instant. Summons a Strength of Earth Totem with 5 health at the feet of the caster. The totem increases the strength of party members within 30 yards by 14. Lasts 5 min.",
-        "3": "125 Mana, Instant. Summons a Strength of Earth Totem with 5 health at the feet of the caster. The totem increases the strength of party members within 30 yards by 25. Lasts 5 min.",
-        "4": "225 Mana, Instant. Summons a Strength of Earth Totem with 5 health at the feet of the caster. The totem increases the strength of party members within 30 yards by 42. Lasts 5 min.",
-        "5": "275 Mana, Instant. Summons a Strength of Earth Totem with 5 health at the feet of the caster. The totem increases the strength of party members within 30 yards by 53. Lasts 5 min."
+        "1": "25 Mana, Instant. Summons a Strength of Earth Totem with 5 health at the feet of the caster. The totem increases the strength of all party and raid members within 30 yards by 7. Lasts 5 min.",
+        "2": "65 Mana, Instant. Summons a Strength of Earth Totem with 5 health at the feet of the caster. The totem increases the strength of all party and raid members within 30 yards by 14. Lasts 5 min.",
+        "3": "125 Mana, Instant. Summons a Strength of Earth Totem with 5 health at the feet of the caster. The totem increases the strength of all party and raid members within 30 yards by 25. Lasts 5 min.",
+        "4": "225 Mana, Instant. Summons a Strength of Earth Totem with 5 health at the feet of the caster. The totem increases the strength of all party and raid members within 30 yards by 42. Lasts 5 min.",
+        "5": "275 Mana, Instant. Summons a Strength of Earth Totem with 5 health at the feet of the caster. The totem increases the strength of all party and raid members within 30 yards by 53. Lasts 5 min."
       },
       "max_rank": 5,
       "classic": {
@@ -42238,18 +42267,18 @@
     },
     {
       "id": "spellbook-paladin-blessing-of-salvation",
-      "name": "Blessing of Salvation",
+      "name": "Salvation",
       "class": "paladin",
       "kind": "spell",
       "tree_name": "Protection",
       "icon": "spell_holy_sealofsalvation",
       "reported_change_kind": "modified",
       "spellbook_status": "changed",
-      "summary": "1 hr instead of 5 min.",
+      "summary": "Replaces Blessing of Salvation. No longer consumes a Blessing slot. Reduces threat generated by 30% for 1 hr.",
       "order": 510,
       "evidence_status": "client_data",
       "rank_texts": {
-        "1": "8% of base mana, 30 yd range, Instant. Places a Blessing on the party member, reducing the amount of all threat generated by 30% for 1 hr. Players may only have one Blessing on them per Paladin at any one time."
+        "1": "8% of base mana, 30 yd range, Instant. Places Salvation on the target, reducing all threat generated by 30% for 1 hr. Does not consume a Blessing slot."
       },
       "max_rank": null,
       "classic": {
@@ -42277,7 +42306,12 @@
         }
       ],
       "uncertainties": [],
-      "discovered_at": "2026-10-10"
+      "discovered_at": "2026-10-10",
+      "changes": [
+        "Replaces Blessing of Salvation",
+        "No longer consumes a Blessing slot",
+        "Reduces threat generated by 30% for 1 hr"
+      ]
     },
     {
       "id": "spellbook-hunter-rapid-fire",
@@ -43183,14 +43217,14 @@
       "icon": "spell_nature_guardianward",
       "reported_change_kind": "modified",
       "spellbook_status": "changed",
-      "summary": "Rank 4: 30 yards instead of 20 yards, 17 to 55 instead of 15.8 to 48.7, 5 min instead of 2 min, reworded.",
+      "summary": "Flagged Raid-wide; weapon enchant exclusivity with Windfury removed. Rank 4: 30 yards instead of 20 yards, 17 to 55 instead of 15.8 to 48.7, 5 min instead of 2 min, reworded.",
       "order": 512,
       "evidence_status": "client_data",
       "rank_texts": {
-        "1": "90 Mana, Instant. Summons a Flametongue Totem with 5 health at the feet of the caster. The totem enchants all party members' main-hand weapons with fire if they are within 30 yards. Each hit causes 6.12 to 22 additional Fire damage, based on the speed of the weapon. Slower weapons cause more fire damage per swing. Lasts 5 min.",
-        "2": "140 Mana, Instant. Summons a Flametongue Totem with 5 health at the feet of the caster. The totem enhances the melee attacks of all party members within 30 yards. Each main hand hit causes 9.14 to 31 additional Fire damage, based on the speed of the weapon. Slower weapons cause more fire damage per swing. Lasts 5 min.",
-        "3": "200 Mana, Instant. Summons a Flametongue Totem with 5 health at the feet of the caster. The totem enhances the melee attacks of all party members within 30 yards. Each main hand hit causes 13 to 42 additional Fire damage, based on the speed of the weapon. Slower weapons cause more fire damage per swing. Lasts 5 min.",
-        "4": "275 Mana, Instant. Summons a Flametongue Totem with 5 health at the feet of the caster. The totem enhances the melee attacks of all party members within 30 yards. Each main hand hit causes 17 to 55 additional Fire damage, based on the speed of the weapon. Slower weapons cause more fire damage per swing. Lasts 5 min."
+        "1": "90 Mana, Instant. Summons a Flametongue Totem with 5 health at the feet of the caster. The totem enchants all party and raid members' main-hand weapons with fire if they are within 30 yards. Each hit causes 6.12 to 22 additional Fire damage, based on the speed of the weapon. Slower weapons cause more fire damage per swing. Lasts 5 min.",
+        "2": "140 Mana, Instant. Summons a Flametongue Totem with 5 health at the feet of the caster. The totem enhances the melee attacks of all party and raid members within 30 yards. Each main hand hit causes 9.14 to 31 additional Fire damage, based on the speed of the weapon. Slower weapons cause more fire damage per swing. Lasts 5 min.",
+        "3": "200 Mana, Instant. Summons a Flametongue Totem with 5 health at the feet of the caster. The totem enhances the melee attacks of all party and raid members within 30 yards. Each main hand hit causes 13 to 42 additional Fire damage, based on the speed of the weapon. Slower weapons cause more fire damage per swing. Lasts 5 min.",
+        "4": "275 Mana, Instant. Summons a Flametongue Totem with 5 health at the feet of the caster. The totem enhances the melee attacks of all party and raid members within 30 yards. Each main hand hit causes 17 to 55 additional Fire damage, based on the speed of the weapon. Slower weapons cause more fire damage per swing. Lasts 5 min."
       },
       "max_rank": 4,
       "classic": {
@@ -43690,14 +43724,14 @@
       "icon": "spell_nature_chainlightning",
       "reported_change_kind": "modified",
       "spellbook_status": "changed",
-      "summary": "Rank 4: Costs 485 Mana instead of 605 Mana; Cast time 2 sec instead of 2.5 sec; 119 to 133 instead of 505 to 564.",
+      "summary": "Mana cost reduced by 35%. Rank 4: Costs 315 Mana instead of 485 Mana; Cast time 2 sec instead of 2.5 sec.",
       "order": 513,
       "evidence_status": "client_data",
       "rank_texts": {
-        "1": "225 Mana, 30 yd range, 2 sec cast, 6 sec cooldown. Hurls a lightning bolt at the enemy, dealing 85 to 97 Nature damage and then jumping to additional nearby enemies. Each jump reduces the damage by 30%. Affects 3 total targets.",
-        "2": "305 Mana, 30 yd range, 2 sec cast, 6 sec cooldown. Hurls a lightning bolt at the enemy, dealing 97 to 109 Nature damage and then jumping to additional nearby enemies. Each jump reduces the damage by 30%. Affects 3 total targets.",
-        "3": "390 Mana, 30 yd range, 2 sec cast, 6 sec cooldown. Hurls a lightning bolt at the enemy, dealing 109 to 122 Nature damage and then jumping to additional nearby enemies. Each jump reduces the damage by 30%. Affects 3 total targets.",
-        "4": "485 Mana, 30 yd range, 2 sec cast, 6 sec cooldown. Hurls a lightning bolt at the enemy, dealing 119 to 133 Nature damage and then jumping to additional nearby enemies. Each jump reduces the damage by 30%. Affects 3 total targets."
+        "1": "145 Mana, 30 yd range, 2 sec cast, 6 sec cooldown. Hurls a lightning bolt at the enemy, dealing 85 to 97 Nature damage and then jumping to additional nearby enemies. Each jump reduces the damage by 30%. Affects 3 total targets.",
+        "2": "200 Mana, 30 yd range, 2 sec cast, 6 sec cooldown. Hurls a lightning bolt at the enemy, dealing 97 to 109 Nature damage and then jumping to additional nearby enemies. Each jump reduces the damage by 30%. Affects 3 total targets.",
+        "3": "255 Mana, 30 yd range, 2 sec cast, 6 sec cooldown. Hurls a lightning bolt at the enemy, dealing 109 to 122 Nature damage and then jumping to additional nearby enemies. Each jump reduces the damage by 30%. Affects 3 total targets.",
+        "4": "315 Mana, 30 yd range, 2 sec cast, 6 sec cooldown. Hurls a lightning bolt at the enemy, dealing 119 to 133 Nature damage and then jumping to additional nearby enemies. Each jump reduces the damage by 30%. Affects 3 total targets."
       },
       "max_rank": 4,
       "classic": {
@@ -43728,7 +43762,10 @@
         }
       ],
       "uncertainties": [],
-      "discovered_at": "2026-10-10"
+      "discovered_at": "2026-10-10",
+      "changes": [
+        "Mana cost reduced by 35% across all ranks"
+      ]
     },
     {
       "id": "spellbook-warlock-death-coil",
@@ -44938,13 +44975,13 @@
       "icon": "spell_nature_windfury",
       "reported_change_kind": "modified",
       "spellbook_status": "changed",
-      "summary": "Rank 3: 30 yards instead of 20 yards, 246 instead of 315, 5 min instead of 2 min, reworded.",
+      "summary": "Flagged Raid-wide. Enhances melee attacks of all party and raid members within 30 yards. Rank 3: 30 yards instead of 20 yards, 246 instead of 315, 5 min instead of 2 min, reworded.",
       "order": 518,
       "evidence_status": "client_data",
       "rank_texts": {
-        "1": "115 Mana, Instant. Summons a Windfury Totem with 5 health at the feet of the caster. The totem enhances the melee attacks of all party members within 30 yards. Each main hand hit has a 20% chance of granting the attacker 1 extra attack with 95 extra melee attack power. Lasts 5 min.",
-        "2": "175 Mana, Instant. Summons a Windfury Totem with 5 health at the feet of the caster. The totem enhances the melee attacks of all party members within 30 yards. Each main hand hit has a 20% chance of granting the attacker 1 extra attack with 179 extra melee attack power. Lasts 5 min.",
-        "3": "250 Mana, Instant. Summons a Windfury Totem with 5 health at the feet of the caster. The totem enhances the melee attacks of all party members within 30 yards. Each main hand hit has a 20% chance of granting the attacker 1 extra attack with 246 extra melee attack power. Lasts 5 min."
+        "1": "115 Mana, Instant. Summons a Windfury Totem with 5 health at the feet of the caster. The totem enhances the melee attacks of all party and raid members within 30 yards. Each main hand hit has a 20% chance of granting the attacker 1 extra attack with 95 extra melee attack power. Lasts 5 min.",
+        "2": "175 Mana, Instant. Summons a Windfury Totem with 5 health at the feet of the caster. The totem enhances the melee attacks of all party and raid members within 30 yards. Each main hand hit has a 20% chance of granting the attacker 1 extra attack with 179 extra melee attack power. Lasts 5 min.",
+        "3": "250 Mana, Instant. Summons a Windfury Totem with 5 health at the feet of the caster. The totem enhances the melee attacks of all party and raid members within 30 yards. Each main hand hit has a 20% chance of granting the attacker 1 extra attack with 246 extra melee attack power. Lasts 5 min."
       },
       "max_rank": 3,
       "classic": {
@@ -45242,18 +45279,18 @@
     },
     {
       "id": "spellbook-paladin-greater-blessing-of-salvation",
-      "name": "Greater Blessing of Salvation",
+      "name": "Mass Salvation",
       "class": "paladin",
       "kind": "spell",
       "tree_name": "Protection",
       "icon": "spell_holy_greaterblessingofsalvation",
       "reported_change_kind": "modified",
       "spellbook_status": "changed",
-      "summary": "1 hr instead of 15 min.",
+      "summary": "Replaces Greater Blessing of Salvation. No longer consumes a Blessing slot. Reduces threat generated by all raid or group members by 30% for 1 hr.",
       "order": 520,
       "evidence_status": "client_data",
       "rank_texts": {
-        "1": "16% of base mana, 40 yd range, Instant. Gives all members of the raid or group that share the same class with the target the Greater Blessing of Salvation, reducing the amount of all threat generated by 30% for 1 hr. Players may only have one Blessing on them per Paladin at any one time."
+        "1": "16% of base mana, 40 yd range, Instant. Places Salvation on all party and raid members, reducing all threat generated by 30% for 1 hr. Does not consume a Blessing slot."
       },
       "max_rank": null,
       "classic": {
@@ -45281,7 +45318,12 @@
         }
       ],
       "uncertainties": [],
-      "discovered_at": "2026-10-10"
+      "discovered_at": "2026-10-10",
+      "changes": [
+        "Replaces Greater Blessing of Salvation",
+        "No longer consumes a Blessing slot",
+        "Reduces threat generated by all raid or group members by 30% for 1 hr"
+      ]
     },
     {
       "id": "spellbook-rogue-deadly-poison-v",
@@ -45476,13 +45518,13 @@
       "icon": "spell_nature_invisibilitytotem",
       "reported_change_kind": "modified",
       "spellbook_status": "changed",
-      "summary": "Rank 3: 30 yards instead of 20 yards, 89 instead of 77, 5 min instead of 2 min.",
+      "summary": "Flagged Raid-wide; exclusivity with Windfury and Flametongue removed. Rank 3: 30 yards instead of 20 yards, 89 instead of 77, 5 min instead of 2 min.",
       "order": 521,
       "evidence_status": "client_data",
       "rank_texts": {
-        "1": "155 Mana, Instant. Summons a Grace of Air Totem with 5 health at the feet of the caster. The totem increases the agility of party members within 30 yards by 49. Lasts 5 min.",
-        "2": "250 Mana, Instant. Summons a Grace of Air Totem with 5 health at the feet of the caster. The totem increases the agility of party members within 30 yards by 77. Lasts 5 min.",
-        "3": "310 Mana, Instant. Summons a Grace of Air Totem with 5 health at the feet of the caster. The totem increases the agility of party members within 30 yards by 89. Lasts 5 min."
+        "1": "155 Mana, Instant. Summons a Grace of Air Totem with 5 health at the feet of the caster. The totem increases the agility of all party and raid members within 30 yards by 49. Lasts 5 min.",
+        "2": "250 Mana, Instant. Summons a Grace of Air Totem with 5 health at the feet of the caster. The totem increases the agility of all party and raid members within 30 yards by 77. Lasts 5 min.",
+        "3": "310 Mana, Instant. Summons a Grace of Air Totem with 5 health at the feet of the caster. The totem increases the agility of all party and raid members within 30 yards by 89. Lasts 5 min."
       },
       "max_rank": 3,
       "classic": {
@@ -47833,13 +47875,13 @@
       "kind": "spell",
       "tree_name": "Protection",
       "icon": "spell_holy_sealoffury",
-      "reported_change_kind": "unchanged",
+      "reported_change_kind": "modified",
       "spellbook_status": "same",
-      "summary": "Same as Classic.",
+      "summary": "Holy threat increased to 90% (Classic: 60%).",
       "order": 605,
       "evidence_status": "client_data",
       "rank_texts": {
-        "1": "30% of base mana, Instant. Increases the threat generated by your Holy attacks by 60%. Lasts 30 min."
+        "1": "30% of base mana, Instant. Increases the threat generated by your Holy attacks by 90%. Lasts 30 min."
       },
       "max_rank": null,
       "classic": {
@@ -47867,7 +47909,10 @@
         }
       ],
       "uncertainties": [],
-      "discovered_at": "2026-10-10"
+      "discovered_at": "2026-10-10",
+      "changes": [
+        "Holy threat increased to 90% (Classic: 60%)"
+      ]
     },
     {
       "id": "spellbook-hunter-feed-pet",
@@ -52833,6 +52878,136 @@
       ],
       "uncertainties": [],
       "discovered_at": "2026-10-10"
+    },
+    {
+      "id": "calc-mage-arcane-arcane-wrath",
+      "name": "Arcane Wrath",
+      "class": "mage",
+      "kind": "talent",
+      "tree_name": "Arcane",
+      "tree_id": "81",
+      "tree_index": 0,
+      "icon": "spell_arcane_blast",
+      "reported_change_kind": "added",
+      "evidence_status": "client_data",
+      "rank_texts": {
+        "1": "A powerful blast of arcane energy with a 3.5 sec cast time that deals base damage increased by bonus spell damage equal to 5% of your maximum Mana."
+      },
+      "estimated_rank_texts": {},
+      "max_rank": 1,
+      "discovered_at": "2026-10-15",
+      "calculator_eligible": true,
+      "context_only": false,
+      "comparison_status": "client",
+      "summary": "A powerful blast of arcane energy with a 3.5 sec cast time that deals base damage increased by bonus spell damage equal to 5% of your maximum Mana.",
+      "changes": [],
+      "classic": {
+        "status": "not_listed",
+        "rank_texts": {},
+        "source": "client",
+        "build": "1.15.9.69722"
+      },
+      "structure": {
+        "tier": 3,
+        "col": 3,
+        "prerequisite_status": "client_data",
+        "position_status": "client_data",
+        "max_rank_status": "client_data"
+      },
+      "tooltip_metadata": {
+        "passive": false,
+        "cast_time": "3.5 sec cast"
+      },
+      "sources": [
+        {
+          "url": "https://wago.tools/db2/TraitNode?build=1.60.1.70425",
+          "type": "client_data",
+          "title": "WoW Forever beta client, build 1.60.1.70425"
+        }
+      ]
+    },
+    {
+      "id": "calc-priest-shadow-magic-dark-inspiration",
+      "name": "Dark Inspiration",
+      "class": "priest",
+      "kind": "talent",
+      "tree_name": "Shadow Magic",
+      "tree_id": "203",
+      "tree_index": 2,
+      "icon": "spell_shadow_darkinspiration",
+      "reported_change_kind": "added",
+      "evidence_status": "client_data",
+      "rank_texts": {
+        "1": "Your Mind Blast and fully channeled Mind Flay trigger Dark Inspiration, increasing your Spirit and your party members' Spirit by 3% for 10 sec.",
+        "2": "Your Mind Blast and fully channeled Mind Flay trigger Dark Inspiration, increasing your Spirit and your party members' Spirit by 6% for 10 sec.",
+        "3": "Your Mind Blast and fully channeled Mind Flay trigger Dark Inspiration, increasing your Spirit and your party members' Spirit by 9% for 10 sec.",
+        "4": "Your Mind Blast and fully channeled Mind Flay trigger Dark Inspiration, increasing your Spirit and your party members' Spirit by 12% for 10 sec.",
+        "5": "Your Mind Blast and fully channeled Mind Flay trigger Dark Inspiration, increasing your Spirit and your party members' Spirit by 15% for 10 sec."
+      },
+      "estimated_rank_texts": {},
+      "max_rank": 5,
+      "discovered_at": "2026-10-15",
+      "calculator_eligible": true,
+      "context_only": false,
+      "comparison_status": "client",
+      "summary": "Mind Blast and fully channeled Mind Flay increase party Spirit by 3-15% for 10 sec.",
+      "changes": [
+        "Replaces Improved Fade"
+      ],
+      "classic": {
+        "status": "not_listed",
+        "rank_texts": {},
+        "source": "client",
+        "build": "1.15.9.69722"
+      },
+      "structure": {
+        "tier": 3,
+        "col": 0,
+        "prerequisite_status": "client_data",
+        "position_status": "client_data",
+        "max_rank_status": "client_data"
+      },
+      "tooltip_metadata": {
+        "passive": true
+      },
+      "sources": [
+        {
+          "url": "https://wago.tools/db2/TraitNode?build=1.60.1.70425",
+          "type": "client_data",
+          "title": "WoW Forever beta client, build 1.60.1.70425"
+        }
+      ]
+    },
+    {
+      "id": "spellbook-paladin-revoke",
+      "name": "Revoke",
+      "class": "paladin",
+      "kind": "spell",
+      "tree_name": "Protection",
+      "icon": "spell_holy_dispelmagic",
+      "reported_change_kind": "added",
+      "spellbook_status": "new",
+      "summary": "New utility ability: instantly revokes and removes the Salvation effect from the target ally without stripping Paladin Blessings.",
+      "changes": [
+        "New baseline utility ability to instantly cancel Salvation from a friendly target"
+      ],
+      "order": 1,
+      "evidence_status": "client_data",
+      "rank_texts": {
+        "1": "Free, 30 yd range, Instant. Instantly removes the Salvation effect from the target party or raid member."
+      },
+      "max_rank": null,
+      "classic": {
+        "status": "absent"
+      },
+      "sources": [
+        {
+          "url": "https://wago.tools/db2/SkillLineAbility?build=1.60.1.70425",
+          "title": "WoW Forever beta client, build 1.60.1.70425",
+          "type": "client_data"
+        }
+      ],
+      "discovered_at": "2026-10-15"
     }
   ]
 }

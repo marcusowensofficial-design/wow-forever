@@ -92,7 +92,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       "status": "verified",
       "statusLabel": "Verified in Beta (Oct 8)",
       "badge": "Native UI & Edit Mode",
-      "desc": "Expanded in Beta Build 1.60.6.71890 directly in default HUD Edit Mode. Rotational Spells Tracked: Aimed Shot (6s), Arcane Shot (6s), Multi-Shot (10s), Strider Kick (8s melee strike), Mongoose Bite (5s dodge proc), and Concussive Shot (12s). Major Defensives & Bursts: Bestial Wrath (2m), Rapid Fire (3m), Deterrence (5m), Feign Death (30s), Intimidation (1m), Scatter Shot (30s), and shared Trap cooldowns (30s). Active Procs & Buffs: Lock and Load procs, Pet Frenzy stacks (1–5), Improved Aspect of the Hawk haste buff, and Aspect state monitoring."
+      "desc": "Expanded in Beta Build 1.60.1.70425 directly in default HUD Edit Mode. Rotational Spells Tracked: Aimed Shot (6s), Arcane Shot (6s), Multi-Shot (10s), Strider Kick (8s melee strike), Mongoose Bite (5s dodge proc), and Concussive Shot (12s). Major Defensives & Bursts: Bestial Wrath (2m), Rapid Fire (3m), Deterrence (5m), Feign Death (30s), Intimidation (1m), Scatter Shot (30s), and shared Trap cooldowns (30s). Active Procs & Buffs: Lock and Load procs, Pet Frenzy stacks (1–5), Improved Aspect of the Hawk haste buff, and Aspect state monitoring."
     }
   ],
   "survival": {
@@ -354,13 +354,13 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         "race": "Human Hunter",
         "faction": "Alliance",
         "badge": "✦ New in Forever",
-        "desc": "Royal gamekeepers and marksmen of Elwynn Forest and Westfall. Gains Perception (stealth detection), The Human Spirit (+5% Spirit for mana regen), Sword/Mace Specialization, and Diplomacy (+10% reputation)."
+        "desc": "Royal gamekeepers and marksmen of Elwynn Forest and Westfall. Gains Perception (stealth detection), The Human Spirit (+5% Spirit for mana regen), Ruthless (+2% Crit), and Diplomacy (+10% reputation)."
       },
       {
         "race": "The Skyborne Hunter",
         "faction": "Both Factions",
         "badge": "✦ New Playable Race",
-        "desc": "Wind-guided archers and cloud-falcon tamers from Zephras Isle. Gains Walk on Air (glide), Skysight (+10% run speed), Wind Blessed (+1% Haste across melee/ranged/spells), and Elemental Insight (+5% damage to Elementals)."
+        "desc": "Wind-guided archers and cloud-falcon tamers from Zephras Isle. Gains Walk on Air (glide), Read Leyline (+100% regen), Wind Blessed (+1% Haste across melee/ranged/spells), and Elemental Insight (+5% damage to Elementals)."
       }
     ]
   },

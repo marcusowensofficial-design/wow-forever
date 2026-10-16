@@ -113,7 +113,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         status: "verified",
         statusLabel: "Verified in Beta (Oct 8)",
         badge: "Native UI & Edit Mode",
-        desc: "Expanded in Beta Build 1.60.6.71890 directly in default HUD Edit Mode. Rotational Spells Tracked: Swiftmend (15s), Wild Growth (6s), Feral Charge (15s), and Bash (1m). Major Defensives & Bursts: Innervate (6m), Rebirth (20m), Barkskin (1m), Frenzied Regeneration (3m), Nature's Swiftness (3m), Tranquility (5m), and Dash (5m). Active Procs & Buffs: Eclipse charges (stores up to 4 rapid Starfire charges), Omen of Clarity / Clearcasting procs, Predator's Swiftness instant-cast procs, Furor energy/rage retention, and Lifebloom stacks."
+        desc: "Expanded in Beta Build 1.60.1.70425 directly in default HUD Edit Mode. Rotational Spells Tracked: Swiftmend (15s), Wild Growth (6s), Feral Charge (15s), and Bash (1m). Major Defensives & Bursts: Innervate (6m), Rebirth (20m), Barkskin (1m), Frenzied Regeneration (3m), Nature's Swiftness (3m), Tranquility (5m), and Dash (5m). Active Procs & Buffs: Eclipse charges (stores up to 4 rapid Starfire charges), Omen of Clarity / Clearcasting procs, Predator's Swiftness instant-cast procs, Furor energy/rage retention, and Lifebloom stacks."
       }
     ],
 

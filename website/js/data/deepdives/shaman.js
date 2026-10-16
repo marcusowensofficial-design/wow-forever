@@ -140,7 +140,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       "status": "verified",
       "statusLabel": "Verified in Beta (Oct 8)",
       "badge": "Native UI & Edit Mode",
-      "desc": "Expanded in Beta Build 1.60.6.71890 directly in default HUD Edit Mode. Rotational Spells Tracked: Stormstrike (snappy 8s CD with dodge/parry reset flash), Lava Burst (8s), shared Shock spells (5-6s), Riptide (6s), and Chain Lightning (6s). Major Defensives & Bursts: Bloodlust / Heroism (5m), Elemental Mastery (3m), Nature's Swiftness (3m), Shamanistic Rage (2m), and Grounding Totem (15s). Active Procs & Buffs: Maelstrom Weapon charges (1–5 with screen edge glow at 5 stacks), Clearcasting/Elemental Focus, Flurry charges (1–3), and Lightning/Water Shield charges."
+      "desc": "Expanded in Beta Build 1.60.1.70425 directly in default HUD Edit Mode. Rotational Spells Tracked: Stormstrike (snappy 8s CD with dodge/parry reset flash), Lava Burst (8s), shared Shock spells (5-6s), Riptide (6s), and Chain Lightning (6s). Major Defensives & Bursts: Bloodlust / Heroism (5m), Elemental Mastery (3m), Nature's Swiftness (3m), Shamanistic Rage (2m), and Grounding Totem (15s). Active Procs & Buffs: Maelstrom Weapon charges (1–5 with screen edge glow at 5 stacks), Clearcasting/Elemental Focus, Flurry charges (1–3), and Lightning/Water Shield charges."
     },
     {
       "title": "Totemic Recall Added Baseline",
@@ -383,10 +383,10 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           "desc": "Instantly removes and grants full immunity to bleed, poison, and disease effects, while also reducing physical damage taken by 10% for 8 seconds. Extraordinary synergy for Shaman tanking and PvP."
         },
         {
-          "name": "Mace Specialization",
+          "name": "Earth Fury",
           "status": "verified",
           "statusLabel": "Verified in Beta",
-          "desc": "Grants +1% critical-strike chance to ALL spells and attacks while a one-handed or two-handed mace is equipped. Synergizes perfectly with Enhancement melee crits and Restoration healing crits!"
+          "desc": "Grants +2% critical strike bonus to damage and healing. Synergizes perfectly with Enhancement melee crits and Restoration healing crits!"
         },
         {
           "name": "Find Treasure",
@@ -539,9 +539,9 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
       "source": "Sodapoppin Hands-On Demo"
     },
     {
-      "feature": "Dwarf Stoneform + Mace Spec",
+      "feature": "Dwarf Stoneform + Earth Fury",
       "category": "Dwarf Racials",
-      "details": "Stoneform 10% phys reduction; Mace Spec +1% crit to all spells and attacks",
+      "details": "Stoneform 10% phys reduction; Earth Fury +2% crit bonus to damage and healing",
       "status": "Verified in Closed Beta",
       "statusType": "verified",
       "source": "Sodapoppin Hands-On Demo"
@@ -632,7 +632,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             { "name": "Conduction", "points": "5/5", "tree": "Elemental (Tier 2)", "desc": "Increases the damage done by your Lightning Bolt, Chain Lightning, and Shock spells by 5%." },
             { "name": "Earth's Grasp", "points": "1/2", "tree": "Elemental (Tier 2)", "desc": "Increases the health of your Stoneclaw Totem and the radius of your Earthbind Totem by 25%." }
           ],
-          "legacyNotes": "Extra Legacy points unlock Call of Thunder (+6% Lightning crit) and Elemental Focus (Clearcasting).",
+          "legacyNotes": "Extra Legacy points unlock Reverberation (reduced Shock CD) and Elemental Focus (Clearcasting).",
           "rotation": [
             { "label": "Opener", desc: "Max range Lightning Bolt -> Flame Shock DoT -> Earthbind Totem kiting." },
             { "label": "Burst", desc: "Lightning Bolt -> Earth Shock finisher on closing targets." }
@@ -757,20 +757,22 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
         },
         {
           "specId": "elemental_30",
-          "name": "Elemental (Elemental Focus & Call of Thunder)",
+          "name": "Elemental (Elemental Focus & Lava Burst)",
           "icon": "🌋",
           "role": "Ranged Nature & Fire DPS",
-          "buildUrl": "/talents/shaman?b=05033013221231--&l=30&tl=5",
-          "wowheadCalcUrl": "https://www.wowhead.com/forever/talent-calc/shaman/05033013221231--",
-          "tagline": "Ranged artillery with 100% Clearcasting mana refund, +6% Lightning crit, and low-cost 5s Shocks.",
+          "buildUrl": "/talents/shaman?b=5505003100101--&l=30&tl=5",
+          "wowheadCalcUrl": "https://www.wowhead.com/forever/talent-calc/shaman/5505003100101--",
+          "tagline": "Burst artillery combining 100% Clearcasting mana refunds, rapid 5s shocks, and the iconic Level 30 Lava Burst capstone.",
           "statPriority": "Spell Power > Nature Damage > Spell Crit > Intellect > MP5",
           "bestWeapon": "Two-Handed Staff (Rod of the Sleepwalker / Staff of Westfall)",
           "talents": [
             { "name": "Convection", "points": "5/5", "tree": "Elemental (Tier 1)", "desc": "Reduces Mana cost of Shock, Lightning Bolt, and Chain Lightning spells by 10%." },
-            { "name": "Conduction", "points": "5/5", "tree": "Elemental (Tier 2)", "desc": "Increases damage of Lightning Bolt, Chain Lightning, and Shock spells by 5%." },
-            { "name": "Call of Thunder", "points": "5/5", "tree": "Elemental (Tier 3)", "desc": "Increases critical strike chance of Lightning Bolt and Chain Lightning spells by 6%." },
+            { "name": "Concussion", "points": "5/5", "tree": "Elemental (Tier 1)", "desc": "Increases damage of Lightning Bolt, Chain Lightning, and Shock spells by 5%." },
+            { "name": "Reverberation", "points": "5/5", "tree": "Elemental (Tier 2)", "desc": "Reduces the cooldown of your Shock spells by 1 second (down to a rapid 5-second CD)." },
             { "name": "Elemental Focus", "points": "1/1", "tree": "Elemental (Tier 3)", "desc": "Spell crits enter a Clearcasting state, reducing the mana cost of your next 2 damage spells by 100%!" },
-            { "name": "Reverberation", "points": "5/5", "tree": "Elemental (Tier 3)", "desc": "Reduces the cooldown of your Shock spells by 1 second (down to a rapid 5-second CD)." }
+            { "name": "Elemental Warding", "points": "3/3", "tree": "Elemental (Tier 3)", "desc": "Reduces damage taken from Fire, Frost, and Nature effects by 10%." },
+            { "name": "Earthbound", "points": "1/1", "tree": "Elemental (Tier 4)", "desc": "Increases the radius of your Earthbind Totem by 50% and health of your Stoneclaw Totem by 50%." },
+            { "name": "Lava Burst", "points": "1/4", "tree": "Elemental (Tier 5)", "desc": "Hurls molten lava at the target, dealing Fire damage. Always critically strikes against targets afflicted by Flame Shock." }
           ],
           "legacyNotes": "Extra Legacy points unlock Elemental Devastation and Lightning Mastery cast time reduction.",
           "rotation": [
@@ -794,17 +796,18 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           "name": "Restoration (Nature's Swiftness & Tidal Waves)",
           "icon": "💧",
           "role": "Healer / Dungeon & Raid Support",
-          "buildUrl": "/talents/shaman?b=--05005032151031&l=30&tl=5",
-          "wowheadCalcUrl": "https://www.wowhead.com/forever/talent-calc/shaman/--05005032151031",
+          "buildUrl": "/talents/shaman?b=--05005013105001&l=30&tl=5",
+          "wowheadCalcUrl": "https://www.wowhead.com/forever/talent-calc/shaman/--05005013105001",
           "tagline": "Master healer with 70% anti-pushback, 25% totem mana reduction, and instant Nature's Swiftness clutch save.",
           "statPriority": "Healing Power > MP5 > Intellect > Spirit",
           "bestWeapon": "One-Hand Mace + Off-hand / Shield (Luminescent Rod)",
           "talents": [
             { "name": "Tidal Focus", "points": "5/5", "tree": "Restoration (Tier 1)", "desc": "Reduces the Mana cost of your healing spells by 5%." },
             { "name": "Totemic Focus", "points": "5/5", "tree": "Restoration (Tier 2)", "desc": "Reduces the Mana cost of your totems by 25%." },
-            { "name": "Healing Focus", "points": "5/5", "tree": "Restoration (Tier 2)", "desc": "Gives you a 70% chance to avoid interruption caused by damage while casting healing spells." },
-            { "name": "Nature's Guidance", "points": "3/3", "tree": "Restoration (Tier 3)", "desc": "Increases your chance to hit with melee attacks and spells by 3%." },
-            { "name": "Restorative Totems", "points": "2/5", "tree": "Restoration (Tier 3)", "desc": "Increases the effect of Mana Spring Totem and Healing Stream Totem by 10%." },
+            { "name": "Healing Focus", "points": "3/3", "tree": "Restoration (Tier 3)", "desc": "Gives you a 70% chance to avoid interruption caused by damage while casting healing spells." },
+            { "name": "Ancestral Healing", "points": "1/3", "tree": "Restoration (Tier 3)", "desc": "Increases target's armor value by 8% for 15 sec after getting a healing critical effect." },
+            { "name": "Water Shield", "points": "1/1", "tree": "Restoration (Tier 3)", "desc": "Surrounds the caster with 3 globes of water, granting MP5 and restoring mana when hit or on spell critical strikes." },
+            { "name": "Restorative Totems", "points": "5/5", "tree": "Restoration (Tier 4)", "desc": "Increases the effect of Mana Spring Totem and Healing Stream Totem by 25%." },
             { "name": "Nature's Swiftness", "points": "1/1", "tree": "Restoration (Tier 5)", "desc": "Instant-cast 3m cooldown: When activated, makes your next Nature spell with cast time under 10 sec instant!" }
           ],
           "legacyNotes": "Legacy Milestones allow investing points into Tidal Mastery (+5% heal crit) and Purification.",
