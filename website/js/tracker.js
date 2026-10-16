@@ -35,19 +35,52 @@ function initCharacterPlanner() {
     prof2: 'Mining'
   };
 
+  const CLASS_SPECS_MAP = {
+    Paladin: ['Protection (Tank)', 'Holy (Healer)', 'Retribution (Melee DPS)'],
+    Shaman: ['Enhancement (Melee DPS / Pinch Tank)', 'Elemental (Caster DPS)', 'Restoration (Healer)'],
+    Warrior: ['Arms (Melee DPS)', 'Fury (Melee DPS)', 'Protection (Tank)'],
+    Priest: ['Discipline (Healer / Support)', 'Holy (Healer)', 'Shadow (Ranged DPS)'],
+    Mage: ['Frost (Ranged DPS / Control)', 'Fire (Ranged DPS / Burst)', 'Arcane (Ranged DPS / Utility)'],
+    Hunter: ['Marksmanship (Ranged DPS)', 'Beast Mastery (Ranged DPS)', 'Survival (Melee / Trapping DPS)'],
+    Rogue: ['Combat (Melee DPS / Swords)', 'Assassination (Daggers / Poison)', 'Subtlety (Stealth / Burst)'],
+    Warlock: ['Affliction (DoT / Drain DPS)', 'Demonology (Pet / Sustain DPS)', 'Destruction (Burst Fire DPS)'],
+    Druid: ['Feral Tank (Bear Form)', 'Feral DPS (Cat Form)', 'Restoration (Healer)', 'Balance (Boomkin Caster)']
+  };
+
+  function updateSpecOptions(clsName, desiredSpec) {
+    if (!specSelect) return;
+    const cleanCls = Object.keys(CLASS_SPECS_MAP).find(k => clsName && clsName.toLowerCase().includes(k.toLowerCase())) || 'Paladin';
+    const specs = CLASS_SPECS_MAP[cleanCls] || CLASS_SPECS_MAP.Paladin;
+    specSelect.innerHTML = specs.map(s => `<option value="${escapeHtml(s)}">${escapeHtml(s)}</option>`).join('');
+    if (desiredSpec && specs.includes(desiredSpec)) {
+      specSelect.value = desiredSpec;
+    } else {
+      specSelect.value = specs[0];
+    }
+  }
+
   // Populate inputs
   if (charNameInput) charNameInput.value = savedChar.name;
   if (factionSelect) factionSelect.value = savedChar.faction;
   if (raceSelect) raceSelect.value = savedChar.race;
-  if (classSelect) classSelect.value = savedChar.className;
-  if (specSelect) specSelect.value = savedChar.spec;
+  if (classSelect) {
+    classSelect.value = savedChar.className;
+    updateSpecOptions(savedChar.className, savedChar.spec);
+  }
   if (prof1Select) prof1Select.value = savedChar.prof1;
   if (prof2Select) prof2Select.value = savedChar.prof2;
 
   renderCharacterSheet(savedChar);
 
+  if (classSelect) {
+    classSelect.addEventListener('change', () => {
+      updateSpecOptions(classSelect.value);
+      updateCharacter();
+    });
+  }
+
   // Auto-save on change
-  [charNameInput, factionSelect, raceSelect, classSelect, specSelect, prof1Select, prof2Select].forEach(element => {
+  [charNameInput, factionSelect, raceSelect, specSelect, prof1Select, prof2Select].forEach(element => {
     if (element) {
       element.addEventListener('change', updateCharacter);
       element.addEventListener('input', updateCharacter);
@@ -372,6 +405,9 @@ function initSquadRoster() {
         <td style="font-size: 0.82rem; color: var(--text-muted);">${escapeHtml(player.notes || '—')}</td>
         <td style="white-space: nowrap; text-align: center;">
           <button type="button" class="btn-icon-action btn-edit-member" data-member-id="${escapeHtml(player.id)}" title="Update Professions & Notes" style="color: var(--text-gold); font-size: 0.95rem; background: rgba(255, 215, 0, 0.08); border: 1px solid rgba(255, 215, 0, 0.25); border-radius: 4px; padding: 0.25rem 0.55rem; cursor: pointer;">✏️ Edit</button>
+          ${player.id && player.id.startsWith('squad-') ? `
+            <button type="button" class="btn-icon-action btn-remove-member" data-member-id="${escapeHtml(player.id)}" title="Remove Squad Member" style="color: #ef4444; font-size: 0.95rem; background: rgba(239, 68, 68, 0.1); border: 1px solid rgba(239, 68, 68, 0.3); border-radius: 4px; padding: 0.25rem 0.55rem; margin-left: 0.35rem; cursor: pointer;">✕</button>
+          ` : ''}
         </td>
       </tr>
     `}).join('');

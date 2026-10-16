@@ -366,6 +366,32 @@ check('Addon spotlight cards in index.html have live download links and synced v
   }
 });
 
+check('No stale build 71890 references remain in index.html', () => {
+  if (indexHtml.includes('71890')) {
+    throw new Error('Found stale build 1.60.6.71890 reference in index.html; should be updated to 1.60.6.72140');
+  }
+});
+
+check('copyTextToClipboard in js/utils.js returns a Promise', () => {
+  const utilsCode = fs.readFileSync(path.join(ROOT, 'js', 'utils.js'), 'utf8');
+  if (!utilsCode.includes('return Promise.reject') || !utilsCode.includes('return navigator.clipboard.writeText')) {
+    throw new Error('copyTextToClipboard does not properly return a Promise in js/utils.js');
+  }
+});
+
+check('All 9 classes are defined in legacy.js Season 1 Class Mastery challenges', () => {
+  const legacyCode = fs.readFileSync(path.join(ROOT, 'js', 'modules', 'legacy.js'), 'utf8');
+  const requiredClasses = ['c_warrior', 'c_paladin', 'c_hunter', 'c_rogue', 'c_priest', 'c_shaman', 'c_mage', 'c_warlock', 'c_druid'];
+  for (const cls of requiredClasses) {
+    if (!legacyCode.includes(`id: '${cls}'`)) {
+      throw new Error(`Missing class '${cls}' in legacy.js DETAILED_CHALLENGES Class Mastery`);
+    }
+  }
+  if (!legacyCode.includes("totalPoints: 27")) {
+    throw new Error("Class Mastery in legacy.js should have totalPoints: 27 across all 9 classes");
+  }
+});
+
 console.log('\n=======================================');
 console.log(`Ran ${totalChecks} checks. Failures: ${errors.length}`);
 console.log('=======================================\n');

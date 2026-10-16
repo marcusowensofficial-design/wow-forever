@@ -16,13 +16,21 @@ function escapeHtml(string) {
  * Universal clipboard copy with modern API and fallback support
  */
 function copyTextToClipboard(text, onSuccess, onError) {
-  if (!text) return;
+  if (!text) {
+    const err = new Error('No text to copy');
+    if (onError) onError(err);
+    return Promise.reject(err);
+  }
   if (navigator.clipboard && window.isSecureContext) {
-    navigator.clipboard.writeText(text)
-      .then(() => { if (onSuccess) onSuccess(); })
-      .catch(() => { fallbackCopy(text, onSuccess, onError); });
+    return navigator.clipboard.writeText(text)
+      .then(() => {
+        if (onSuccess) onSuccess();
+      })
+      .catch((_err) => {
+        return fallbackCopy(text, onSuccess, onError);
+      });
   } else {
-    fallbackCopy(text, onSuccess, onError);
+    return fallbackCopy(text, onSuccess, onError);
   }
 }
 
@@ -41,11 +49,15 @@ function fallbackCopy(text, onSuccess, onError) {
     document.body.removeChild(ta);
     if (successful) {
       if (onSuccess) onSuccess();
+      return Promise.resolve();
     } else {
-      if (onError) onError();
+      const err = new Error('execCommand copy returned false');
+      if (onError) onError(err);
+      return Promise.reject(err);
     }
   } catch (err) {
     if (onError) onError(err);
+    return Promise.reject(err);
   }
 }
 

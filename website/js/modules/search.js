@@ -648,6 +648,7 @@ window.handleSearchResultClick = function(elem) {
   if (bisClass && bisSpec && typeof currentBiSState !== 'undefined') {
     currentBiSState.classId = bisClass;
     currentBiSState.specId = bisSpec;
+    window.location.hash = `#bis/${bisClass}/${bisSpec}`;
     if (typeof renderBiSApp === 'function') renderBiSApp();
   }
 

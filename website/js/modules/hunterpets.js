@@ -23,7 +23,10 @@
   }
 
   function copyPetMacro(text, btnElement, successLabel = 'Copied!') {
-    window.copyTextToClipboard(text).then(() => {
+    let handled = false;
+    const onDone = () => {
+      if (handled) return;
+      handled = true;
       if (typeof window.showToast === 'function') {
         window.showToast(`Copied: ${text}`);
       }
@@ -36,7 +39,12 @@
           btnElement.classList.remove('copied');
         }, 1500);
       }
-    });
+    };
+
+    const res = window.copyTextToClipboard ? window.copyTextToClipboard(text, onDone) : null;
+    if (res && typeof res.then === 'function') {
+      res.then(onDone).catch(() => {});
+    }
   }
   window.copyPetMacro = copyPetMacro;
 

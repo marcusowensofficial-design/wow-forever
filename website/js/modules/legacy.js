@@ -91,8 +91,8 @@
       id: 'classes',
       category: 'Class Mastery',
       icon: '🧙',
-      totalPoints: 24,
-      desc: 'Earn 1 point at level 25, 45, and 60 on all 8 original classes',
+      totalPoints: 27,
+      desc: 'Earn 1 point at level 25, 45, and 60 across all 9 classes',
       items: [
         { id: 'c_warrior', label: 'Warrior (L25 / L45 / L60)', pts: 3 },
         { id: 'c_paladin', label: 'Paladin (L25 / L45 / L60)', pts: 3 },
@@ -101,7 +101,8 @@
         { id: 'c_priest', label: 'Priest (L25 / L45 / L60)', pts: 3 },
         { id: 'c_shaman', label: 'Shaman (L25 / L45 / L60)', pts: 3 },
         { id: 'c_mage', label: 'Mage (L25 / L45 / L60)', pts: 3 },
-        { id: 'c_warlock', label: 'Warlock (L25 / L45 / L60)', pts: 3 }
+        { id: 'c_warlock', label: 'Warlock (L25 / L45 / L60)', pts: 3 },
+        { id: 'c_druid', label: 'Druid (L25 / L45 / L60)', pts: 3 }
       ]
     },
     {
@@ -144,13 +145,11 @@
       id: 'adventure_world',
       category: 'World Exploration & Epics',
       icon: '🧭',
-      totalPoints: 5,
+      totalPoints: 2,
       desc: 'Explore Azeroth, Tier 0.5 Questline, and World Discoveries',
       items: [
         { id: 'adv_explore', label: 'Explore Azeroth (Cartographer)', pts: 1 },
-        { id: 'adv_t05', label: 'Tier 0.5 Dungeon Set: Lay Lord Valthalak to Rest', pts: 1 },
-        { id: 'adv_reps', label: 'Timbermaw & Argent Dawn Exalted standing', pts: 1 },
-        { id: 'adv_camping', label: 'Wilderness Pioneer: 50 Encampments Established', pts: 2 }
+        { id: 'adv_t05', label: 'Tier 0.5 Dungeon Set: Lay Lord Valthalak to Rest', pts: 1 }
       ]
     },
     {
