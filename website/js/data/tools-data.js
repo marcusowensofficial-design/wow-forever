@@ -337,12 +337,12 @@ const WOW_TOOLS_DATA = {
   hiddenItems: {
     stats: {
       totalNewItems: 2425,
-      revealedNewItems: 639,
-      revealedPercent: 26.35,
+      revealedNewItems: 684,
+      revealedPercent: 28.21,
       classicItemsHidden: 5006,
-      classicRevealed: 3134,
+      classicRevealed: 3190,
       sodLeftovers: 5168,
-      lastUpdated: "October 9, 2026"
+      lastUpdated: "October 15, 2026"
     },
     demoItem: {
       id: 273049,
@@ -386,18 +386,46 @@ const WOW_TOOLS_DATA = {
       name: "City of Dalaran (Under Siege)",
       levelRange: "28 – 33",
       zone: "Alterac Mountains",
-      status: "Active in Beta Phase 2 (Day 22)",
-      bossCount: 8,
+      status: "Active in Beta Phase 2 (Day 29)",
+      bossCount: 6,
       dropsCount: 28,
       dropsSeen: 28,
       entrance: "Hidden sewer drain pipe beneath Alterac Mountain ridges into Dalaran Underbelly.",
       bosses: [
         {
+          name: "Atrexis the Grave Knight",
+          title: "Undead Ritual Commander",
+          drops: [
+            { name: "Graveweave Bindings", slot: "Cloth Wrist", iLvl: 32, quality: "q3", stats: "+5 Intellect, +4 Spirit, +6 Spell Power" },
+            { name: "Bonebinder's Signet", slot: "Finger", iLvl: 32, quality: "q3", stats: "+6 Stamina, +5 Spirit, +8 Healing" },
+            { name: "Gravespike Repeater", slot: "Ranged Crossbow", iLvl: 33, quality: "q3", stats: "16.4 DPS, +4 Agility, +3 Stamina" }
+          ]
+        },
+        {
+          name: "Lyn the Ignored",
+          title: "Summoned Market Specter",
+          drops: [
+            { name: "Cartilage Shapers", slot: "Leather Hands", iLvl: 33, quality: "q3", stats: "+7 Agility, +6 Stamina, +10 Attack Power" },
+            { name: "Tendonscraper Dagger", slot: "Main Hand Dagger", iLvl: 33, quality: "q3", stats: "18.2 DPS, Speed 1.60, +5 Agility" },
+            { name: "Bonepile Gaze", slot: "Shield", iLvl: 33, quality: "q3", stats: "Block 24, +6 Stamina, +4 Strength" }
+          ]
+        },
+        {
           name: "Arcane Anomaly",
           title: "Guardian of the Breach",
           drops: [
-            { name: "Ponderous Orb", slot: "Off-Hand", iLvl: 35, quality: "q3", stats: "+7 Intellect, +4 Spirit, Equip: Restores 3 mana per 5 sec." },
-            { name: "Violet Sorcerer's Sandals", slot: "Cloth Feet", iLvl: 33, quality: "q3", stats: "+5 Stamina, +8 Intellect, +6 Spell Damage" }
+            { name: "Runemender's Seal", slot: "Finger", iLvl: 33, quality: "q3", stats: "+6 Intellect, +8 Spell Damage" },
+            { name: "Ephemeral Grips", slot: "Cloth Hands", iLvl: 33, quality: "q3", stats: "+7 Intellect, +5 Spirit, +9 Spell Power" },
+            { name: "Mana-Warped Chain Shirt", slot: "Mail Chest", iLvl: 34, quality: "q3", stats: "+9 Strength, +8 Stamina, +6 Intellect" }
+          ]
+        },
+        {
+          name: "Arcanic Enigma",
+          title: "Polymorphing Ley-Weaver",
+          drops: [
+            { name: "Drape of Shifting Energy", slot: "Cloth Back", iLvl: 33, quality: "q3", stats: "24 Armor, +5 Intellect, +7 Spell Power" },
+            { name: "Violet Sorcerer's Robes", slot: "Cloth Chest (Set)", iLvl: 34, quality: "q3", stats: "+10 Intellect, +7 Spirit, +12 Spell Power" },
+            { name: "Wand of Mana Concentration", slot: "Wand", iLvl: 32, quality: "q3", stats: "58 - 108 Arcane Damage, Speed 1.80 (46.1 DPS), +4 Intellect" }
           ]
         },
         {
@@ -405,7 +433,9 @@ const WOW_TOOLS_DATA = {
           title: "Kirin Tor Automaton",
           drops: [
             { name: "Guardian's Dualblade", slot: "Two-Hand Axe", iLvl: 33, quality: "q3", stats: "74 - 112 Damage, Speed 3.40 (27.4 DPS), +12 Strength, +8 Stamina" },
-            { name: "Unstable Crystalline Shoulderpads", slot: "Mail Shoulder", iLvl: 33, quality: "q3", stats: "148 Armor, +8 Agility, +7 Stamina, +5 Attack Power" }
+            { name: "Refractory Scaleguards", slot: "Mail Legs", iLvl: 34, quality: "q3", stats: "+10 Strength, +8 Stamina" },
+            { name: "Unstable Crystalline Shoulderpads", slot: "Leather Shoulder", iLvl: 33, quality: "q3", stats: "148 Armor, +8 Agility, +7 Stamina, +5 Attack Power" },
+            { name: "Blueprint: Spinning Wheel", slot: "Tailoring Blueprint", iLvl: 30, quality: "q2", stats: "Teaches Spinning Wheel campsite station" }
           ]
         },
         {
@@ -413,8 +443,9 @@ const WOW_TOOLS_DATA = {
           title: "Corrupted Kirin Tor Council",
           drops: [
             { name: "Archmagister's Faceted Pendant", slot: "Neck", iLvl: 35, quality: "q3", stats: "+6 Intellect, Equip: +12 Attack Power, Use: +10% Undead XP (5m)" },
-            { name: "Violet Sorcerer's Mantle", slot: "Cloth Shoulder", iLvl: 35, quality: "q3", stats: "48 Armor, +9 Intellect, +6 Stamina, +11 Arcane/Frost Spell Damage" },
-            { name: "Wand of Mana Concentration", slot: "Wand", iLvl: 32, quality: "q3", stats: "58 - 108 Arcane Damage, Speed 1.80 (46.1 DPS), +4 Intellect" }
+            { name: "Violet Sorcerer's Mantle", slot: "Cloth Shoulder (Set)", iLvl: 35, quality: "q3", stats: "48 Armor, +9 Intellect, +6 Stamina, +11 Arcane/Frost Spell Damage" },
+            { name: "Ponderous Orb", slot: "Off-Hand", iLvl: 35, quality: "q3", stats: "+8 Intellect, +6 Spirit, +11 Spell Power" },
+            { name: "Blueprint: Arcane Salvager", slot: "Enchanting Blueprint", iLvl: 30, quality: "q2", stats: "Teaches Arcane Salvager campfire tool" }
           ]
         }
       ]
@@ -423,12 +454,39 @@ const WOW_TOOLS_DATA = {
       name: "Excavation Site 4",
       levelRange: "26 – 31",
       zone: "Wetlands (Above Whelgar's Excavation)",
-      status: "Active in Beta Phase 2 (Day 22)",
-      bossCount: 4,
-      dropsCount: 13,
-      dropsSeen: 11,
+      status: "Active in Beta Phase 2 (Day 29)",
+      bossCount: 6,
+      dropsCount: 16,
+      dropsSeen: 16,
       entrance: "Titan tunnel entrance nestled above the northern Wetlands dig site cliffs.",
       bosses: [
+        {
+          name: "Saltspine",
+          title: "Marshland Alpha Crocolisk",
+          drops: [
+            { name: "Supple Bellyskin Leggings", slot: "Leather Legs", iLvl: 31, quality: "q3", stats: "+6 Agility, +5 Stamina" },
+            { name: "Saltscale Girdle", slot: "Mail Waist", iLvl: 31, quality: "q3", stats: "+5 Strength, +4 Stamina" },
+            { name: "Glinteye Slippers", slot: "Cloth Feet", iLvl: 31, quality: "q3", stats: "+5 Intellect, +4 Spirit" }
+          ]
+        },
+        {
+          name: "Shadetooth",
+          title: "Highland Raptor Matriarch",
+          drops: [
+            { name: "Raptorclaw Greaves", slot: "Mail Feet", iLvl: 32, quality: "q3", stats: "+7 Strength, +6 Stamina" },
+            { name: "Garb of Florid Feathers", slot: "Leather Chest", iLvl: 32, quality: "q3", stats: "+8 Agility, +6 Stamina" },
+            { name: "Raptor's Gaze", slot: "Off-Hand", iLvl: 32, quality: "q3", stats: "+6 Intellect, +5 Spirit, +8 Spell Power" },
+            { name: "Blueprint: Greenhouse", slot: "Herbalism Blueprint", iLvl: 28, quality: "q2", stats: "Teaches Greenhouse Camping station" }
+          ]
+        },
+        {
+          name: "Highland Horror",
+          title: "Corrupted Bog Elemental",
+          drops: [
+            { name: "Garb of Fallen Felbark", slot: "Cloth Chest", iLvl: 34, quality: "q3", stats: "+8 Stamina, +9 Intellect, +11 Spell Damage" },
+            { name: "Horrible Rootcore", slot: "Quest Item", iLvl: 30, quality: "q1", stats: "Starts Horrors in the Highland questline" }
+          ]
+        },
         {
           name: "Dark Iron Surveyor Brand",
           title: "Demolitions Master",
@@ -443,6 +501,16 @@ const WOW_TOOLS_DATA = {
           drops: [
             { name: "Felbough Arm", slot: "Two-Hand Polearm", iLvl: 34, quality: "q3", stats: "78 - 118 Damage, Speed 3.20 (30.6 DPS), +14 Strength, +10 Stamina" },
             { name: "Spine of the Devourer", slot: "Staff", iLvl: 33, quality: "q3", stats: "64 - 98 Damage, Speed 2.80, +12 Spirit, +8 Stamina, +14 Healing Spells" }
+          ]
+        },
+        {
+          name: "Relic Guardian",
+          title: "Titan Vault Custodial Construct",
+          drops: [
+            { name: "Reliquary Mantle", slot: "Mail Shoulder", iLvl: 34, quality: "q3", stats: "+7 Strength, +6 Stamina" },
+            { name: "Ring of Power Regulation", slot: "Finger", iLvl: 34, quality: "q3", stats: "+5 Intellect, +5 Stamina, +7 Spell Power" },
+            { name: "Golemsight Long Gun", slot: "Ranged Gun", iLvl: 33, quality: "q3", stats: "14.8 DPS, +4 Agility, +3 Stamina" },
+            { name: "Titan Relic", slot: "Quest Item", iLvl: 30, quality: "q1", stats: "100% party drop — starts Prehistoric Prism / Earthen Echo" }
           ]
         }
       ]
@@ -568,6 +636,305 @@ const WOW_TOOLS_DATA = {
           drops: [
             { name: "Haunting Blade", slot: "Two-Hand Sword", iLvl: 22, quality: "q3", stats: "18.2 DPS, Speed 3.00, +6 Strength, +5 Stamina" },
             { name: "Phantom Armor", slot: "Mail Chest", iLvl: 22, quality: "q3", stats: "210 Armor, +7 Strength, +6 Stamina" }
+          ]
+        }
+      ]
+    },
+    "dungeon-05": {
+      name: "The Drowned City",
+      levelRange: "35 – 42",
+      zone: "Stranglethorn Vale (Sunken Coast)",
+      status: "Launch Day Content (Nov 4, 2026)",
+      bossCount: 4,
+      dropsCount: 14,
+      dropsSeen: 14,
+      entrance: "Sunken Gurubashi coastal ruins south of Vile Reef; non-linear aquatic and temple wings.",
+      bosses: [
+        {
+          name: "Zul'Alai",
+          title: "Enraged Gurubashi Berserker",
+          drops: [
+            { name: "Blood-Soaked Gurubashi Cleaver", slot: "One-Hand Axe", iLvl: 41, quality: "q3", stats: "29.4 DPS, Speed 2.50, +9 Strength, +6 Stamina" },
+            { name: "Zul'Alai's War Harness", slot: "Mail Chest", iLvl: 41, quality: "q3", stats: "312 Armor, +12 Strength, +10 Stamina, +1% Crit" }
+          ]
+        },
+        {
+          name: "Zin'aka",
+          title: "Terror of the Aquatic Depths",
+          drops: [
+            { name: "Tidecaller Trinket", slot: "Trinket", iLvl: 42, quality: "q3", stats: "Equip: +16 Spell Damage & Healing, Use: Swim Speed +40% (10m)" },
+            { name: "Brinescale Legguards", slot: "Leather Legs", iLvl: 41, quality: "q3", stats: "+13 Agility, +9 Stamina" }
+          ]
+        },
+        {
+          name: "Deathless Marrow",
+          title: "Risen Atal'ai Lich",
+          drops: [
+            { name: "Whitemane's Chapeau (Tide-Blessed)", slot: "Cloth Head", iLvl: 43, quality: "q3", stats: "+14 Intellect, +14 Spirit, +18 Spell Power" },
+            { name: "Marrow-Woven Gloves", slot: "Cloth Hands", iLvl: 42, quality: "q3", stats: "+10 Intellect, +8 Stamina, +14 Shadow/Frost Spell Dmg" }
+          ]
+        },
+        {
+          name: "Min'loth the Serpent",
+          title: "Avatar of the Sunken Temple",
+          drops: [
+            { name: "Trident of the Gurubashi Depths", slot: "Two-Hand Polearm", iLvl: 44, quality: "q3", stats: "41.8 DPS, Speed 3.40, +18 Strength, +12 Agility, +10 Stamina" },
+            { name: "Scale of Min'loth", slot: "Shield", iLvl: 43, quality: "q3", stats: "1,180 Armor, 28 Block, +11 Stamina, +10 Nature Resistance" }
+          ]
+        }
+      ]
+    },
+    "dungeon-06": {
+      name: "Krol'dok Stronghold",
+      levelRange: "40 – 46",
+      zone: "Riverglades (Eastern Kingdoms)",
+      status: "Launch Day Content (Nov 4, 2026)",
+      bossCount: 3,
+      dropsCount: 12,
+      dropsSeen: 12,
+      entrance: "Fortified ogre citadel overlooking the eastern Riverglades timberlands.",
+      bosses: [
+        {
+          name: "Chieftain Vark",
+          title: "Renegade Centaur Outrider",
+          drops: [
+            { name: "Riverglades Windcloak", slot: "Back", iLvl: 45, quality: "q3", stats: "38 Armor, +11 Agility, +8 Stamina, +12 Attack Power" },
+            { name: "Outrider's Hoofguards", slot: "Plate Feet", iLvl: 45, quality: "q3", stats: "365 Armor, +12 Strength, +11 Stamina" }
+          ]
+        },
+        {
+          name: "Magi Lord Gorgor",
+          title: "Two-Headed Ogre Arcanist",
+          drops: [
+            { name: "Gorgor's Eye of Insight", slot: "Neck", iLvl: 46, quality: "q3", stats: "+12 Intellect, +8 Spirit, +15 Spell Damage & Healing" },
+            { name: "Runed Ogre-Magi Cuffs", slot: "Cloth Wrist", iLvl: 46, quality: "q3", stats: "+9 Intellect, +7 Stamina, +13 Spell Power" }
+          ]
+        },
+        {
+          name: "Warboss Krol'dok",
+          title: "Supreme Overlord of the Stronghold",
+          drops: [
+            { name: "Colossal Ogre Greataxe", slot: "Two-Hand Axe", iLvl: 48, quality: "q3", stats: "47.2 DPS, Speed 3.70, +22 Strength, +15 Stamina, +1% Crit" },
+            { name: "Crown of the Ogre Warboss", slot: "Mail Head", iLvl: 47, quality: "q3", stats: "268 Armor, +15 Agility, +12 Stamina, +24 Attack Power" }
+          ]
+        }
+      ]
+    },
+    "dungeon-07": {
+      name: "Alcaz Island Prison",
+      levelRange: "48 – 54",
+      zone: "Dustwallow Marsh (Offshore Fortress)",
+      status: "Launch Day Content (Nov 4, 2026)",
+      bossCount: 3,
+      dropsCount: 12,
+      dropsSeen: 12,
+      entrance: "Subterranean stockade gate beneath the central keep of Alcaz Island.",
+      bosses: [
+        {
+          name: "Warden Bloodthorn",
+          title: "Defias Blackguard Inquisitor",
+          drops: [
+            { name: "Prisoner's Broken Manacles", slot: "Plate Wrist", iLvl: 52, quality: "q3", stats: "285 Armor, +11 Strength, +13 Stamina, +7 Defense" },
+            { name: "Bloodthorn's Stiletto", slot: "One-Hand Dagger", iLvl: 52, quality: "q3", stats: "36.5 DPS, Speed 1.50, +10 Agility, +16 Attack Power" }
+          ]
+        },
+        {
+          name: "Shadow Priestess Vivian",
+          title: "Cult of the Dark Strand",
+          drops: [
+            { name: "Shadowfang Band", slot: "Finger", iLvl: 53, quality: "q3", stats: "+10 Intellect, +9 Stamina, +18 Spell Damage & Healing" },
+            { name: "Vestments of the Dark Strand", slot: "Cloth Chest", iLvl: 53, quality: "q3", stats: "78 Armor, +16 Intellect, +12 Spirit, +22 Spell Power" }
+          ]
+        },
+        {
+          name: "Draconian Overseer",
+          title: "Onyxian Brood Commander",
+          drops: [
+            { name: "Blackflame Dragonshield", slot: "Shield", iLvl: 55, quality: "q3", stats: "1,940 Armor, 38 Block, +15 Stamina, +15 Fire Resistance" },
+            { name: "Drake-Scale Pauldrons", slot: "Leather Shoulder", iLvl: 54, quality: "q3", stats: "142 Armor, +16 Agility, +12 Stamina, +1% Hit" }
+          ]
+        }
+      ]
+    },
+    "dungeon-08": {
+      name: "Blackmaw Hold",
+      levelRange: "55 – 60",
+      zone: "Azshara (Timbermaw Stronghold)",
+      status: "Launch Day Content (Nov 4, 2026)",
+      bossCount: 3,
+      dropsCount: 15,
+      dropsSeen: 15,
+      entrance: "Timbermaw cavern fortress in northern Azshara.",
+      bosses: [
+        {
+          name: "Chieftain Winterhoof",
+          title: "Fallen Timbermaw Warlord",
+          drops: [
+            { name: "Winterhoof's Totemic Maul", slot: "Two-Hand Mace", iLvl: 58, quality: "q3", stats: "54.6 DPS, Speed 3.60, +24 Strength, +18 Stamina, +220 Armor in Bear/Cat Form" },
+            { name: "Belt of the Timbermaw Alpha", slot: "Leather Waist", iLvl: 58, quality: "q3", stats: "118 Armor, +15 Strength, +15 Agility, +12 Stamina" }
+          ]
+        },
+        {
+          name: "Void-Touched Ursa",
+          title: "Abyssal Bear Monstrosity",
+          drops: [
+            { name: "Ursa's Void-Hardened Breastplate", slot: "Plate Chest", iLvl: 59, quality: "q3", stats: "680 Armor, +18 Strength, +22 Stamina, +10 Defense" },
+            { name: "Claw of the Abyssal Bear", slot: "Fist Weapon", iLvl: 59, quality: "q3", stats: "41.2 DPS, Speed 1.60, +12 Agility, +1% Crit" }
+          ]
+        },
+        {
+          name: "Shamaness Karr",
+          title: "Corrupted Elder Mystic",
+          drops: [
+            { name: "Furbolg War Totem", slot: "Relic / Totem / Idol", iLvl: 60, quality: "q3", stats: "Equip: Increases Spell Power and Attack Power of your primary totem/idol aura by +24" },
+            { name: "Garb of the Corrupted Elder", slot: "Mail Chest", iLvl: 60, quality: "q3", stats: "410 Armor, +18 Intellect, +14 Stamina, +28 Spell Power, +6 MP5" }
+          ]
+        }
+      ]
+    },
+    "dungeon-09": {
+      name: "Shaper's Terrace",
+      levelRange: "58 – 60",
+      zone: "Un'Goro Crater (Beneath Fire Plume Ridge)",
+      status: "Launch Day Content (Nov 4, 2026)",
+      bossCount: 3,
+      dropsCount: 16,
+      dropsSeen: 16,
+      entrance: "Titan vault elevator hidden within the eastern magma tubes of Fire Plume Ridge.",
+      bosses: [
+        {
+          name: "Prime Warden Aurelius",
+          title: "Titan Defense Matrix",
+          drops: [
+            { name: "Aurelius's Bulwark of Order", slot: "Plate Legs", iLvl: 60, quality: "q3", stats: "595 Armor, +20 Strength, +22 Stamina, +1% Hit" },
+            { name: "Signet of the Titan Shapers", slot: "Finger", iLvl: 60, quality: "q3", stats: "+12 Stamina, +28 Attack Power, +1% Crit" }
+          ]
+        },
+        {
+          name: "The Primordial Hydra",
+          title: "Specimen Zero-Four",
+          drops: [
+            { name: "Primordial Scale Leggings", slot: "Leather Legs", iLvl: 60, quality: "q3", stats: "175 Armor, +22 Agility, +16 Stamina, +1% Hit" },
+            { name: "Hydra-Fang Longbow", slot: "Ranged Bow", iLvl: 60, quality: "q3", stats: "33.8 DPS, Speed 2.90, +10 Agility, +14 Ranged AP" }
+          ]
+        },
+        {
+          name: "Genesis Core 07",
+          title: "Un'Goro Engine Apex",
+          drops: [
+            { name: "Crown of the Shapers", slot: "Cloth Head", iLvl: 61, quality: "q4", stats: "92 Armor, +24 Intellect, +16 Stamina, +36 Spell Damage & Healing, +1% Spell Crit" },
+            { name: "Primordial Crystal Blade", slot: "One-Hand Sword", iLvl: 61, quality: "q4", stats: "46.8 DPS, Speed 2.60, +14 Strength, +12 Agility, +1% Hit" }
+          ]
+        }
+      ]
+    },
+    "raid-01": {
+      name: "Barrow Deeps (Launch Raid)",
+      levelRange: "Level 60 (10-Player Tier 1)",
+      zone: "Mount Hyjal / Blackmaw Underworld",
+      status: "Unlocks December 9, 2026",
+      bossCount: 4,
+      dropsCount: 24,
+      dropsSeen: 24,
+      entrance: "Ancient barrow prison portal beneath the northern boughs of Mount Hyjal.",
+      bosses: [
+        {
+          name: "Warden Avatar Maiev's Vigil",
+          title: "Automated Sentinel Construct",
+          drops: [
+            { name: "Mantle of the Barrow Watcher", slot: "Leather Shoulder", iLvl: 65, quality: "q4", stats: "178 Armor, +24 Agility, +18 Stamina, +1% Hit" },
+            { name: "Chakram of the Vigil", slot: "Ranged Thrown / Relic", iLvl: 65, quality: "q4", stats: "+14 Agility, +26 Attack Power" }
+          ]
+        },
+        {
+          name: "Shadow Fiend Tenebrous",
+          title: "Devourer of Bound Souls",
+          drops: [
+            { name: "Tenebrous Shroud of Shadows", slot: "Back", iLvl: 65, quality: "q4", stats: "54 Armor, +15 Intellect, +14 Stamina, +28 Spell Damage & Healing" },
+            { name: "Cuffs of Eternal Gloom", slot: "Cloth Wrist", iLvl: 65, quality: "q4", stats: "+16 Intellect, +12 Stamina, +24 Spell Power" }
+          ]
+        },
+        {
+          name: "The Slumbering Druid",
+          title: "Nightmare-Corrupted Shan'do",
+          drops: [
+            { name: "Staff of the Emerald Dreamer", slot: "Two-Hand Staff", iLvl: 66, quality: "q4", stats: "58.2 DPS, +28 Intellect, +24 Spirit, +62 Healing (+21 Spell Damage)" },
+            { name: "Idol of the Slumbering Bear", slot: "Relic", iLvl: 66, quality: "q4", stats: "Equip: Reduces rage cost of Maul and Swipe by 3 and increases Armor in Bear Form by 180" }
+          ]
+        },
+        {
+          name: "Tormentor Grazz",
+          title: "Jailer of the Deep Vault",
+          drops: [
+            { name: "Glaive of the Slumbering Watcher", slot: "One-Hand Sword", iLvl: 67, quality: "q4", stats: "53.4 DPS, Speed 2.70, +16 Strength, +14 Stamina, +1% Crit" },
+            { name: "Tier 1 Classic+ Helm Token", slot: "Tier 1 Token", iLvl: 66, quality: "q4", stats: "Redeemable for Class Tier 1 Headpiece (Tank, Healer, or DPS variant)" }
+          ]
+        }
+      ]
+    },
+    "raid-02": {
+      name: "Hyjal Summit (Launch Raid)",
+      levelRange: "Level 60 (20-Player Tier 1)",
+      zone: "Mount Hyjal",
+      status: "Unlocks December 9, 2026",
+      bossCount: 4,
+      dropsCount: 28,
+      dropsSeen: 28,
+      entrance: "Nordrassil World-Tree Sanctuary at the peak of Mount Hyjal.",
+      bosses: [
+        {
+          name: "Dreadlord Mal'Ganis Avatar",
+          title: "Echo of the Nathrezim",
+          drops: [
+            { name: "Nathrezim Mind-Blade", slot: "One-Hand Dagger", iLvl: 67, quality: "q4", stats: "44.5 DPS, +16 Intellect, +14 Stamina, +42 Spell Damage & Healing, +1% Spell Crit" },
+            { name: "Carapace of the Dreadlord", slot: "Plate Chest", iLvl: 67, quality: "q4", stats: "810 Armor, +24 Strength, +28 Stamina, +12 Defense" }
+          ]
+        },
+        {
+          name: "Anetheron the Defiler",
+          title: "Commander of the Fel Swarm",
+          drops: [
+            { name: "Anetheron's Towering Inferno Girdle", slot: "Mail Waist", iLvl: 67, quality: "q4", stats: "285 Armor, +20 Agility, +18 Stamina, +36 Attack Power, +1% Hit" },
+            { name: "Band of Carrion Swarm", slot: "Finger", iLvl: 67, quality: "q4", stats: "+14 Stamina, +16 Intellect, +29 Spell Power" }
+          ]
+        },
+        {
+          name: "Corrupted Nordrassil Sapling",
+          title: "Blighted World-Tree Root",
+          drops: [
+            { name: "World-Tree Heart Trinket", slot: "Trinket", iLvl: 68, quality: "q4", stats: "Equip: Restores 12 Mana per 5 sec, Use: Grants +180 Healing & +60 Spell Damage for 15 sec" },
+            { name: "Bark-Woven Leggings of Hyjal", slot: "Leather Legs", iLvl: 67, quality: "q4", stats: "215 Armor, +26 Strength, +22 Agility, +20 Stamina" }
+          ]
+        },
+        {
+          name: "General Kaz'rogal",
+          title: "Doomguard Warlord",
+          drops: [
+            { name: "Crown of Nordrassil", slot: "Head (All Armor Types)", iLvl: 69, quality: "q4", stats: "+25 All Primary Attributes, +15 All Magic Resistances, +1% Crit" },
+            { name: "Kaz'rogal's Cleaver of Doom", slot: "Two-Hand Axe", iLvl: 69, quality: "q4", stats: "71.4 DPS, Speed 3.80, +34 Strength, +24 Stamina, +2% Crit" }
+          ]
+        }
+      ]
+    },
+    "raid-03": {
+      name: "Onyxia's Lair (Forever Edition)",
+      levelRange: "Level 60 (40-Player Tier 1)",
+      zone: "Dustwallow Marsh (Wyrmbog)",
+      status: "Unlocks December 9, 2026",
+      bossCount: 1,
+      dropsCount: 18,
+      dropsSeen: 18,
+      entrance: "Dragonmaw cavern lair in southern Wyrmbog (Requires Drakefire Amulet).",
+      bosses: [
+        {
+          name: "Onyxia, Broodmother of the Black Dragonflight",
+          title: "Tier 1 Pinnacle Raid Boss",
+          drops: [
+            { name: "Vis'kag the Bloodletter", slot: "One-Hand Sword", iLvl: 71, quality: "q4", stats: "55.2 DPS, Speed 2.60, +6 Expertise, Chance on hit: Delivers a fatal wound for 240 damage" },
+            { name: "Deathbringer", slot: "One-Hand Axe", iLvl: 71, quality: "q4", stats: "56.4 DPS, Speed 2.90, +6 Expertise, Chance on hit: Sends a shadowy bolt for 110-140 damage" },
+            { name: "Shard of the Scale", slot: "Trinket", iLvl: 70, quality: "q4", stats: "Equip: Restores 16 Mana per 5 sec and +18 Spell Power" },
+            { name: "Head of Onyxia", slot: "Quest Item", iLvl: 70, quality: "q4", stats: "Rewards Onyxia Tooth Pendant / Dragonslayer's Signet / Onyxia Blood Talisman" },
+            { name: "Onyxia Hide Backpack", slot: "18-Slot Bag", iLvl: 65, quality: "q4", stats: "Guaranteed 18-Slot Container" }
           ]
         }
       ]
@@ -1455,9 +1822,9 @@ In WoW Forever, Level 30 represents a monumental power spike for Warriors. Reach
 
 ### Core Mechanics & Classic+ Additions
 
-#### 1. Spearing Strike (Level 26 Baseline)
-• **Cost:** 15 Rage (Battle & Defensive Stance).
-• **Effect:** Strikes the target for 110% weapon damage and **disarms their main hand for 4 seconds** (30s cooldown). In PvP duels against opposing rogues and warriors, landing Spearing Strike virtually guarantees victory.
+#### 1. Spearing Strike (Arms Talent / Battle Stance)
+• **Cost:** 15 Rage (Requires Battle Stance; usable with 1H or 2H weapons following the Phase 2 update).
+• **Effect:** Impales the target for 110% weapon damage, **dismounting mounted players and pinning/slowing fleeing targets** (30s cooldown). In open-world PvP and Warsong Gulch, landing Spearing Strike locks down flag carriers and runners immediately.
 
 #### 2. Sweeping Strikes (Arms Capstone at 30)
 • **Cost:** 30 Rage (Battle Stance, 30s CD).

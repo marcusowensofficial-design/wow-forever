@@ -1,6 +1,6 @@
 /**
  * World of Warcraft: Forever - Core Dataset
- * Up-to-date as of October 8, 2026 (Beta Build 1.60.6.71890)
+ * Up-to-date as of October 15, 2026 (Beta Build 1.60.6.72140)
  * Includes beta schedule, countdowns, news, zones, dungeons, camping, stats, and milestones.
  */
 
@@ -15,13 +15,13 @@ const WOW_FOREVER_DATA = {
     "betaTotalWeeks": 5,
     "launchDate": "November 4, 2026",
     "raidsDate": "December 9, 2026",
-    "currentBetaPhase": "Phase 2: Level 30 Cap (LIVE NOW • Day 22 of 35)",
-    "clientBuild": "1.60.6.71890",
+    "currentBetaPhase": "Phase 2: Level 30 Cap (LIVE NOW • Day 29 of 35)",
+    "clientBuild": "1.60.6.72140",
     "engineInfo": "Custom Ray-Traced Engine (Post-Warcraft III: Reforged Continuity)",
     "maxLevel": 60,
     "currentBetaCap": 30,
     "legacyPointsAtLaunch": 16,
-    "lastUpdated": "October 8, 2026"
+    "lastUpdated": "October 15, 2026"
   },
   "betaSchedule": {
     "totalDays": 35,
@@ -140,6 +140,65 @@ const WOW_FOREVER_DATA = {
     }
   ],
   "newsFeed": [
+    {
+      "id": "news-44",
+      "title": "Final Week of Closed Beta Begins: End-of-Beta World Finale Announced for October 21 & Global Launch Name Reservation Details",
+      "source": "Blizzard Official / Blue Post",
+      "sourceType": "blizzard",
+      "author": "Executive Producer Holly Longdale & Kaivax",
+      "date": "October 15, 2026",
+      "tag": "Official Announcement",
+      "summary": "With 6 days remaining in the 35-day Closed Beta, Blizzard announces the 'Twilight of the First Realm' End-of-Beta finale event for October 21 and confirms the pre-launch character wipe and ruleset name reservation timeline ahead of November 4.",
+      "content": `As World of Warcraft: Forever enters the 5th and final week of Closed Beta (Day 29 of 35), Blizzard has published the closing beta schedule and launch transition roadmap:
+• End-of-Beta Finale Event — 'Twilight of the First Realm' (October 21, 18:00 PDT):
+  - Colossal Ragnaros, Onyxia, and Dreadlord Mal'Ganis world bosses will invade Stormwind, Orgrimmar, Southshore, and the Dalaran perimeter during the final 6 hours of Beta.
+  - Participating at Level 30 during the finale awards the account-wide 'Vanguard of the Living World' commemorative feat of strength on live realms.
+• Server Reset & Launch Preparation (October 22 – November 3):
+  - All Beta characters, banks, and test realms will be wiped at 23:59 PDT on October 21.
+  - Global Character Name Reservation opens October 30 at 10:00 PDT for active subscribers across the 3 launch megarealm rulesets (Normal PvE, PvP, and Roleplay).
+• Global Launch Confirmation:
+  - World of Warcraft: Forever launches globally on November 4, 2026 at 15:00 PST with the full Level 60 cap, 9 new Forever dungeons, and 16 account-wide Legacy Points.`,
+      "url": "https://news.blizzard.com/en-us/world-of-warcraft/forever-final-beta-week-and-launch-schedule"
+    },
+    {
+      "id": "news-43",
+      "title": "Hallow's End Arrives October 18 in Closed Beta: Wickerman Embers (+10% XP/Rep), Scarlet Graveyard Specter & Pumpkin Treat Bags",
+      "source": "Wowhead",
+      "sourceType": "wowhead",
+      "author": "Wowhead Seasonal Events Team",
+      "date": "October 14, 2026",
+      "tag": "World Events & Holidays",
+      "summary": "Hallow's End goes live across all Beta megarealms this Sunday, October 18, featuring the Classic+ Headless Specter encounter in Scarlet Monastery Graveyard, 16-slot Pumpkin Bags, and the +25% Stamina/Spirit Wickerman festival buff.",
+      "content": `The final seasonal test event of Closed Beta — Hallow's End — activates this Sunday, October 18 at 10:00 PDT:
+• Classic+ Scarlet Monastery Graveyard Event:
+  - A specially scaled Level 30 'Shade of the Headless Rider' can be summoned once daily inside the Scarlet Monastery Graveyard courtyard during Hallow's End.
+  - Drops 3 guaranteed Rare (iLvl 35) signet rings (+8 Stamina, +12 Attack Power or +9 Spell Power) and the 'Hallowed Pumpkin Lantern' off-hand.
+• Invocation of the Wickerman (Tirisfal Glades & Southshore Border):
+  - Visiting the burning Wickerman ceremony at dusk grants 'Invocation of the Wickerman' (+25% Stamina & Spirit regeneration and +10% Experience/Reputation for 2 hours), stacking with the Cozy Sleeping Bag!
+• Innkeeper Trick-or-Treating & 16-Slot Pumpkin Bags:
+  - Speak with capital and town innkeepers every 60 minutes for Treat Bags containing Hallowed Wands, weighted Jack-o'-Lanterns, and a heightened beta drop rate on the 16-Slot Pumpkin Bag.`,
+      "url": "https://www.wowhead.com/forever/news/hallows-end-october-18-beta-preview-wickerman-rewards"
+    },
+    {
+      "id": "news-42",
+      "title": "Venruki $100k Duel Championship Gear Lock-In Complete: Final BiS Loadouts & Matchup Odds Ahead of Saturday Kickoff",
+      "source": "Warcraft Tavern & Method.gg",
+      "sourceType": "tavern",
+      "author": "Warcraft Tavern Competitive Desk",
+      "date": "October 13, 2026",
+      "tag": "Esports & Competitive Meta",
+      "summary": "All 64 competitors have locked in their final Level 30 equipment profiles for this weekend's $100,000 Durotar Duel Championship, with 88% of casters equipping Lorekeeper's Binding and melee gladiators favoring Enchant Weapon - Revelation.",
+      "content": `Equipment inspection lock-in has concluded for all 64 competitors ahead of Saturday's $100,000 Level 30 Duel Championship (October 17–18):
+• Universal BiS Trends Across the 64-Player Field:
+  - Lorekeeper's Binding (+7 All Stats Ring from 40/40 Library Books) is equipped by 56 of the 64 tournament qualifiers (87.5% adoption rate).
+  - Rank 4 Sergeant's Cloak and Insignia trinket are mandatory across every single profile following Phase 2 Honor cap completion.
+  - Enchant Weapon - Revelation (45 Merchant's Favor) is the #1 weapon enchant among Hybrid Paladins, Feral Druids, and Battle Mages.
+• Marquee Opening Round Matchups (Saturday, Oct 17 at 10:00 PDT):
+  - Snutz (Affliction Drain Warlock) vs. Whaazz (Subtlety Stunlock Rogue)
+  - Ziqo (Battle Mage / Coldflame Saber) vs. Mes (Arms Spearing Strike Warrior)
+  - Bean (Feral Powershift Druid) vs. Pikaboo (Combat/Subtlety Hybrid Rogue)`,
+      "url": "https://www.warcrafttavern.com/forever/news/venruki-100k-tournament-gear-lock-in-analysis/"
+    },
     {
       "id": "news-41",
       "title": "Hotfix Build 1.60.6.72140: Excavation Site 4 Threat Reset Window Increased, Dalaran Spell Reflect Reduction & Warsong Overtime Tuning",
@@ -2317,9 +2376,9 @@ const WOW_FOREVER_DATA = {
         "name": "Haste",
         "icon": "⚡",
         "bullets": [
-          "<strong>Beta Phase 1 Availability:</strong> Haste is not currently itemized on Level 20 gear acquired in Phase 1.",
-          "<strong>Racial & Passive Sources:</strong> Present on the Skyborne passive <em>Wind Blessed</em> and Troll racial <em>Berserking</em>, boosting attack and spellcasting speed.",
-          "Further itemization testing will occur when Phase 2 unlocks the Level 30 cap."
+          "<strong>Phase 2 Beta Scaling:</strong> Multiplicatively reduces melee/ranged weapon swing timers and spell cast times across all classes.",
+          "<strong>Racial & Passive Sources:</strong> Present on the Skyborne passive <em>Wind Blessed</em> (+1% Haste), Troll racial <em>Berserking</em>, and select Phase 2 enchants and trinkets.",
+          "<strong>Talent Synergies:</strong> Stacks with class flurry talents (Warrior/Shaman <em>Flurry</em>, Rogue <em>Blade Flurry</em>, Paladin <em>Vengeance Haste</em>)."
         ]
       }
     ],
@@ -2523,35 +2582,41 @@ const WOW_FOREVER_DATA = {
       "id": "dungeon-03",
       "name": "Excavation Site 4",
       "type": "5-Man Dungeon",
-      "levelRange": "24 – 29",
+      "levelRange": "26 – 31",
       "zone": "Wetlands (Eastern Kingdoms)",
-      "status": "Active in Beta Phase 2 (Unlocking Today)",
+      "status": "Active in Beta Phase 2 (Level 30 Cap)",
       "playableNow": true,
-      "description": "A Titan archaeological dig site in the Wetlands marshes overrun by Dark Iron saboteurs and awakened Titan sentinels.",
+      "description": "An ancient Titan archaeological dig site above Whelgar's Excavation in the Wetlands marshes, overrun by prehistoric beasts, Dragonmaw vanguards, and awakened Titan sentinels.",
       "bosses": [
+        "Saltspine",
+        "Shadetooth",
+        "Highland Horror",
+        "Relic Guardian",
         "Dark Iron Surveyor Brand",
-        "Sentinel Archeus",
-        "Overseer Mogok",
-        "The Relic Core"
+        "Sentinel Archeus"
       ],
       "lootHighlights": [
-        "Archeus Core Talisman",
-        "Titan-Forged Greaves",
-        "Relic Smasher 2H Mace"
+        "Reliquary Mantle",
+        "Felbough Arm",
+        "Ring of Power Regulation",
+        "Blueprint: Greenhouse"
       ]
     },
     {
       "id": "dungeon-04",
       "name": "City of Dalaran (Under Siege)",
       "type": "5-Man Dungeon",
-      "levelRange": "28 – 34",
+      "levelRange": "28 – 33",
       "zone": "Alterac Mountains",
-      "status": "Active in Beta Phase 2 (Unlocking Today)",
+      "status": "Active in Beta Phase 2 (Level 30 Cap)",
       "playableNow": true,
       "entrance": "Enter via sewers into the Underbelly, fight through Kirin Tor necromancers, then break out into the open streets of Dalaran.",
-      "description": "Before the violet dome was erected, Dalaran is plagued by Arcane Anomalies and rogue Kirin Tor Necromancers ravaging the streets with undead minions.",
+      "description": "Before the violet dome was erected, Dalaran is plagued by Arcane Anomalies, unstable constructs, and rogue Kirin Tor Necromancers ravaging the streets with undead minions.",
       "bosses": [
+        "Atrexis the Grave Knight",
+        "Lyn the Ignored",
         "Arcane Anomaly",
+        "Arcanic Enigma",
         "Unstable Sentinel",
         "Shade of the Archmage"
       ],
@@ -2563,9 +2628,10 @@ const WOW_FOREVER_DATA = {
         "Arcane Elementals"
       ],
       "lootHighlights": [
-        "Kirin Tor Robe of Sparks",
-        "Syndicate Dagger of Shadows",
-        "Arcane Core Band"
+        "Archmagister's Faceted Pendant",
+        "Violet Sorcerer's Mantle",
+        "Guardian's Dualblade",
+        "Ponderous Orb"
       ]
     },
     {
@@ -3019,7 +3085,7 @@ const WOW_FOREVER_DATA = {
     },
     {
       "id": "step-16",
-      "text": "Advance primary professions to 150 Expert cap & craft Level 25+ weapons/armor",
+      "text": "Advance primary professions to 225 Expert cap & craft Level 25–30 weapons/armor",
       "cat": "Professions"
     },
     {
