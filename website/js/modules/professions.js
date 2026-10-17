@@ -29,20 +29,49 @@
 
   const CDN_BASE = 'https://wow.zamimg.com/images/wow/icons/medium/';
 
-  function getIconUrl(icon, name = '', source = '') {
-    if (!icon || icon === 'inv_misc_questionmark' || icon.includes('inv_misc_questionmark')) {
-      const n = (name || '').toLowerCase();
-      const s = (source || '').toLowerCase();
-      if (n.includes('enchant') || n.includes('formula') || currentProfession === 'enchanting') {
-        if (s.includes('drop') || s.includes('formula') || s.includes('vendor') || s.includes('merchant') || s.includes('favor') || n.includes('formula')) {
-          return `${CDN_BASE}inv_scroll_03.jpg`;
-        }
-        return `${CDN_BASE}inv_scroll_04.jpg`;
+  function getPlaceholderIcon(name = '', source = '') {
+    const n = (name || '').toLowerCase();
+    const s = (source || '').toLowerCase();
+    if (n.includes('star wood')) return 'inv_tradeskillitem_03';
+    if (n.includes('wood') || n.includes('log') || n.includes('lumber') || n.includes('timber')) return 'inv_tradeskillitem_01';
+    if (n.includes('thread') || n.includes('string') || n.includes('cord') || n.includes('twine') || n.includes('yarn') || n.includes('spool') || n.includes('fiber')) return 'inv_fabric_linen_03';
+    if (n.includes('cloth') || n.includes('linen') || n.includes('fabric')) return 'inv_fabric_linen_01';
+    if (n.includes('leather') || n.includes('hide') || n.includes('pelt') || n.includes('fur')) return 'inv_misc_leatherscrap_01';
+    if (n.includes('tin bar')) return 'inv_ingot_05';
+    if (n.includes('bar') || n.includes('ingot')) return 'inv_ingot_01';
+    if (n.includes('ore') || n.includes('nugget')) return 'inv_ore_copper_01';
+    if (n.includes('stone') || n.includes('rock')) return 'inv_stone_01';
+    if (n.includes('herb') || n.includes('leaf') || n.includes('blossom') || n.includes('weed') || n.includes('root') || n.includes('kelp')) return 'inv_misc_herb_01';
+    if (n.includes('potion') || n.includes('elixir') || n.includes('flask') || n.includes('vial')) return 'inv_potion_51';
+    if (n.includes('dust') || n.includes('powder') || n.includes('sand')) return 'inv_misc_dust_01';
+    if (n.includes('meat') || n.includes('flank') || n.includes('rib') || n.includes('steak') || n.includes('flesh')) return 'inv_misc_food_14';
+    if (n.includes('fish') || n.includes('salmon') || n.includes('trout') || n.includes('snapper') || n.includes('eel')) return 'inv_misc_fish_02';
+    if (n.includes('gem') || n.includes('ruby') || n.includes('sapphire') || n.includes('diamond') || n.includes('emerald') || n.includes('pearl')) return 'inv_misc_gem_ruby_01';
+    if (n.includes('flint') || n.includes('tinder')) return 'inv_stone_11';
+    if (n.includes('water') || n.includes('drink')) return 'inv_drink_01';
+    if (n.includes('enchant') || n.includes('formula') || currentProfession === 'enchanting') {
+      if (s.includes('drop') || s.includes('formula') || s.includes('vendor') || s.includes('merchant') || s.includes('favor') || n.includes('formula')) {
+        return 'inv_scroll_03';
       }
+      return 'inv_scroll_04';
+    }
+    return null;
+  }
+
+  function getIconUrl(icon, name = '', source = '') {
+    let cleanIcon = (icon || '').trim();
+    if (cleanIcon === 'inv_wood_01' || cleanIcon === 'inv_wood_03') cleanIcon = 'inv_tradeskillitem_01';
+    else if (cleanIcon === 'inv_wood_02') cleanIcon = 'inv_tradeskillitem_03';
+    else if (cleanIcon === 'inv_misc_string_01') cleanIcon = 'inv_fabric_linen_03';
+    else if (cleanIcon === 'inv_ingot_tin') cleanIcon = 'inv_ingot_05';
+
+    if (!cleanIcon || cleanIcon === 'inv_misc_questionmark' || cleanIcon.includes('inv_misc_questionmark')) {
+      const placeholder = getPlaceholderIcon(name, source);
+      if (placeholder) return `${CDN_BASE}${placeholder}.jpg`;
       return `${CDN_BASE}inv_misc_questionmark.jpg`;
     }
-    if (icon.startsWith('http://') || icon.startsWith('https://')) return icon;
-    const clean = icon.replace(/\.(jpg|png|webp)$/i, '');
+    if (cleanIcon.startsWith('http://') || cleanIcon.startsWith('https://')) return cleanIcon;
+    const clean = cleanIcon.replace(/\.(jpg|png|webp)$/i, '');
     return `${CDN_BASE}${clean}.jpg`;
   }
 
@@ -4475,7 +4504,7 @@
 
     const reagentsHtml = (r.reagents || []).map(mat => `
       <span class="reagent-chip" title="${escapeHtml(mat.name)}" data-item-id="${mat.id || ''}" data-item-name="${escapeHtml(mat.name)}">
-        <img src="${getIconUrl(mat.icon)}" alt="${escapeHtml(mat.name)}" loading="lazy" />
+        <img src="${getIconUrl(mat.icon, mat.name)}" alt="${escapeHtml(mat.name)}" loading="lazy" />
         <span class="reagent-count">${mat.count}x</span>
         <span class="q${mat.quality || 1}">${escapeHtml(mat.name)}</span>
       </span>
@@ -4614,7 +4643,7 @@
                   return `
                     <label class="spec-check-item ${isChecked ? 'completed' : ''}" data-check-key="${checkKey}">
                       <input type="checkbox" class="spec-checkbox" ${isChecked ? 'checked' : ''} data-check-key="${checkKey}" />
-                      <img src="${getIconUrl(mat.icon)}" alt="${escapeHtml(mat.name)}" class="spec-check-icon" />
+                      <img src="${getIconUrl(mat.icon, mat.name)}" alt="${escapeHtml(mat.name)}" class="spec-check-icon" />
                       <span class="spec-check-name">${mat.count}x ${escapeHtml(mat.name)}</span>
                       <button type="button" class="spec-mat-lookup-btn" data-reagent-name="${escapeHtml(mat.name)}" title="Look up where to get ${escapeHtml(mat.name)}">🔍</button>
                     </label>
@@ -4628,7 +4657,7 @@
               <div class="spec-crafts-list">
                 ${spec.crafts.map(cr => `
                   <div class="spec-craft-row">
-                    <img src="${getIconUrl(cr.icon)}" alt="${escapeHtml(cr.name)}" class="spec-craft-icon q${cr.quality || 2}" />
+                    <img src="${getIconUrl(cr.icon, cr.name)}" alt="${escapeHtml(cr.name)}" class="spec-craft-icon q${cr.quality || 2}" />
                     <div class="spec-craft-info">
                       <div class="spec-craft-name q${cr.quality || 2}">${escapeHtml(cr.name)}</div>
                       <div class="spec-craft-effect">${escapeHtml(cr.effect)}</div>
@@ -4755,7 +4784,7 @@
               <div class="container-reagents-list">
                 ${(item.reagents || []).map(mat => `
                   <span class="reagent-chip" title="${escapeHtml(mat.name)}" data-item-name="${escapeHtml(mat.name)}" style="cursor: pointer;">
-                    <img src="${getIconUrl(mat.icon)}" alt="${escapeHtml(mat.name)}" />
+                    <img src="${getIconUrl(mat.icon, mat.name)}" alt="${escapeHtml(mat.name)}" />
                     <span class="reagent-count">${mat.count}x</span>
                     <span>${escapeHtml(mat.name)}</span>
                   </span>
@@ -5314,7 +5343,7 @@
                     return `
                       <div class="step-reagent-badge has-total-math" data-item-id="${mat.itemId}" data-item-name="${escapeHtml(mat.name)}" data-per-craft="${perCraft}" data-total-step="${totalForStep}" data-crafts="${craftsNum}" title="${escapeHtml(tooltipTitle)}">
                         <div class="step-reagent-icon-wrap">
-                          <img src="${getIconUrl(mat.icon)}" alt="${escapeHtml(mat.name)}" class="step-reagent-img q${mat.quality || 1}" loading="lazy" />
+                          <img src="${getIconUrl(mat.icon, mat.name)}" alt="${escapeHtml(mat.name)}" class="step-reagent-img q${mat.quality || 1}" loading="lazy" />
                           <span class="step-reagent-qty" title="${perCraft}x per craft">${perCraft}x</span>
                         </div>
                         ${craftsNum > 1 ? `<span class="step-reagent-total-pill" title="${totalForStep}x total across ~${craftsNum} crafts">=${totalForStep}</span>` : ''}
@@ -5350,7 +5379,7 @@
                 <div class="step-reagents-col" style="grid-column: 4 / -1;">
                   ${(item.icons || []).map(ic => `
                     <div class="step-reagent-badge" title="${escapeHtml(ic.name)}" data-item-id="${ic.itemId || ''}" data-item-name="${escapeHtml(ic.name)}">
-                      <img src="${getIconUrl(ic.icon)}" alt="${escapeHtml(ic.name)}" class="step-reagent-img" loading="lazy" />
+                      <img src="${getIconUrl(ic.icon, ic.name)}" alt="${escapeHtml(ic.name)}" class="step-reagent-img" loading="lazy" />
                     </div>
                   `).join('')}
                 </div>
@@ -5658,7 +5687,7 @@
                     <div class="shopping-row-card ${isAcquired ? 'is-acquired' : ''} ${isStepDepleted ? 'is-step-completed' : ''}" data-item-id="${it.itemId}" data-item-name="${escapeHtml(it.name)}" data-remaining-count="${remainingCount}" data-base-count="${it.count}">
                       <input type="checkbox" class="shopping-item-check" ${isAcquired ? 'checked' : ''} aria-label="Mark ${escapeHtml(it.name)} as acquired" />
                       <div class="shopping-row-left">
-                        <img src="${getIconUrl(it.icon)}" alt="${escapeHtml(it.name)}" class="shopping-icon q${it.quality || 1}" loading="lazy" />
+                        <img src="${getIconUrl(it.icon, it.name)}" alt="${escapeHtml(it.name)}" class="shopping-icon q${it.quality || 1}" loading="lazy" />
                         <span class="shopping-name q${it.quality || 1}">${escapeHtml(it.name)}</span>
                       </div>
                       <div class="shopping-count-box">
@@ -5983,7 +6012,7 @@
               <div class="campfire-reagents-list">
                 ${(c.reagents || []).map(r => `
                   <div class="reagent-chip" data-item-id="${r.itemId}" data-item-name="${escapeHtml(r.name)}" title="${escapeHtml(r.name)}">
-                    <img src="${getIconUrl(r.icon)}" alt="${escapeHtml(r.name)}" loading="lazy" />
+                    <img src="${getIconUrl(r.icon, r.name)}" alt="${escapeHtml(r.name)}" loading="lazy" />
                     <span>${r.count}x ${escapeHtml(r.name)}</span>
                   </div>
                 `).join('')}
@@ -6077,7 +6106,7 @@
               <div class="campfire-reagents-list">
                 ${(b.reagents || []).map(r => `
                   <div class="reagent-chip" data-item-id="${r.itemId}" data-item-name="${escapeHtml(r.name)}" title="${escapeHtml(r.name)}">
-                    <img src="${getIconUrl(r.icon)}" alt="${escapeHtml(r.name)}" loading="lazy" />
+                    <img src="${getIconUrl(r.icon, r.name)}" alt="${escapeHtml(r.name)}" loading="lazy" />
                     <span>${r.count}x ${escapeHtml(r.name)}</span>
                   </div>
                 `).join('')}
@@ -6358,7 +6387,7 @@
                 <div class="recipe-reagents-row" style="margin-top: 0.55rem;">
                   ${reagents.map(mat => `
                     <span class="reagent-chip" title="${mat.count}x ${escapeHtml(mat.name)}" data-item-id="${mat.id || ''}" data-item-name="${escapeHtml(mat.name)}">
-                      <img src="${getIconUrl(mat.icon)}" alt="${escapeHtml(mat.name)}" loading="lazy" />
+                      <img src="${getIconUrl(mat.icon, mat.name)}" alt="${escapeHtml(mat.name)}" loading="lazy" />
                       <span class="reagent-count">${mat.count}x</span>
                       <span class="q${mat.quality || 1}">${escapeHtml(mat.name)}</span>
                     </span>
@@ -7369,7 +7398,7 @@ const CIRCUIT_ROUTE_PATHS = {
                 <div class="node-drops-row">
                   ${n.drops.map(d => `
                     <div class="step-reagent-badge" title="${escapeHtml(d.name)}" data-item-id="${d.itemId}" data-item-name="${escapeHtml(d.name)}">
-                      <img src="${getIconUrl(d.icon)}" alt="${escapeHtml(d.name)}" class="step-reagent-img q${d.quality || 1}" loading="lazy" />
+                      <img src="${getIconUrl(d.icon, d.name)}" alt="${escapeHtml(d.name)}" class="step-reagent-img q${d.quality || 1}" loading="lazy" />
                     </div>
                   `).join('')}
                 </div>
@@ -7497,7 +7526,7 @@ const CIRCUIT_ROUTE_PATHS = {
                 <div class="node-drops-row">
                   ${n.drops.map(d => `
                     <div class="step-reagent-badge" title="${escapeHtml(d.name)}" data-item-id="${d.itemId}" data-item-name="${escapeHtml(d.name)}">
-                      <img src="${getIconUrl(d.icon)}" alt="${escapeHtml(d.name)}" class="step-reagent-img q${d.quality || 1}" loading="lazy" />
+                      <img src="${getIconUrl(d.icon, d.name)}" alt="${escapeHtml(d.name)}" class="step-reagent-img q${d.quality || 1}" loading="lazy" />
                     </div>
                   `).join('')}
                 </div>

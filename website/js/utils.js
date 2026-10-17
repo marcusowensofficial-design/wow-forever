@@ -117,11 +117,47 @@ if (typeof window !== 'undefined') {
   window.showToast = showToast;
   window.positionTooltip = positionTooltip;
 
-  // Universal image error fallback for WoW icon CDNs
+  // Universal image error fallback for WoW icon CDNs with contextual material placeholder resolution
   window.addEventListener('error', (event) => {
     if (event.target && event.target.tagName === 'IMG') {
       const img = event.target;
-      const fallback = 'https://wow.zamimg.com/images/wow/icons/medium/inv_misc_questionmark.jpg';
+      const cdnBase = 'https://wow.zamimg.com/images/wow/icons/medium/';
+      const fallback = `${cdnBase}inv_misc_questionmark.jpg`;
+
+      // 1. Attempt smart material placeholder resolution before showing red question mark
+      if (!img.dataset.hasFailedPlaceholder) {
+        img.dataset.hasFailedPlaceholder = 'true';
+        const label = (img.alt || img.title || img.dataset.recipeName || img.dataset.itemName || img.parentElement?.dataset?.itemName || '').toLowerCase();
+        let placeholder = null;
+
+        if (label.includes('star wood')) placeholder = 'inv_tradeskillitem_03';
+        else if (label.includes('wood') || label.includes('log') || label.includes('lumber') || label.includes('timber')) placeholder = 'inv_tradeskillitem_01';
+        else if (label.includes('thread') || label.includes('string') || label.includes('cord') || label.includes('twine') || label.includes('yarn') || label.includes('spool') || label.includes('fiber')) placeholder = 'inv_fabric_linen_03';
+        else if (label.includes('cloth') || label.includes('linen') || label.includes('fabric')) placeholder = 'inv_fabric_linen_01';
+        else if (label.includes('leather') || label.includes('hide') || label.includes('pelt') || label.includes('fur')) placeholder = 'inv_misc_leatherscrap_01';
+        else if (label.includes('tin bar')) placeholder = 'inv_ingot_05';
+        else if (label.includes('bar') || label.includes('ingot')) placeholder = 'inv_ingot_01';
+        else if (label.includes('ore') || label.includes('nugget')) placeholder = 'inv_ore_copper_01';
+        else if (label.includes('stone') || label.includes('rock')) placeholder = 'inv_stone_01';
+        else if (label.includes('herb') || label.includes('leaf') || label.includes('blossom') || label.includes('weed') || label.includes('root') || label.includes('kelp')) placeholder = 'inv_misc_herb_01';
+        else if (label.includes('potion') || label.includes('elixir') || label.includes('flask') || label.includes('vial')) placeholder = 'inv_potion_51';
+        else if (label.includes('dust') || label.includes('powder') || label.includes('sand')) placeholder = 'inv_misc_dust_01';
+        else if (label.includes('meat') || label.includes('flank') || label.includes('rib') || label.includes('steak') || label.includes('flesh')) placeholder = 'inv_misc_food_14';
+        else if (label.includes('fish') || label.includes('salmon') || label.includes('trout') || label.includes('snapper') || label.includes('eel')) placeholder = 'inv_misc_fish_02';
+        else if (label.includes('gem') || label.includes('ruby') || label.includes('sapphire') || label.includes('diamond') || label.includes('emerald') || label.includes('pearl')) placeholder = 'inv_misc_gem_ruby_01';
+        else if (label.includes('flint') || label.includes('tinder')) placeholder = 'inv_stone_11';
+        else if (label.includes('water') || label.includes('drink')) placeholder = 'inv_drink_01';
+
+        if (placeholder) {
+          const placeholderUrl = `${cdnBase}${placeholder}.jpg`;
+          if (img.src !== placeholderUrl) {
+            img.src = placeholderUrl;
+            return;
+          }
+        }
+      }
+
+      // 2. Ultimate fallback to question mark if placeholder also fails or no category match
       if (img.src && !img.src.includes('inv_misc_questionmark') && !img.dataset.hasFailed) {
         img.dataset.hasFailed = 'true';
         img.src = fallback;

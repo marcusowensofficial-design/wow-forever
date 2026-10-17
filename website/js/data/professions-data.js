@@ -141646,7 +141646,7 @@ window.WOW_PROFESSIONS_DATA = {
               "itemId": 3576,
               "name": "Tin Bar",
               "count": 1,
-              "icon": "inv_ingot_tin",
+              "icon": "inv_ingot_05",
               "quality": 1
             }
           ]
@@ -150776,7 +150776,7 @@ window.WOW_PROFESSIONS_DATA = {
               "itemId": 4470,
               "name": "Simple Wood",
               "count": 1,
-              "icon": "inv_wood_01",
+              "icon": "inv_tradeskillitem_01",
               "quality": 1
             }
           ]
@@ -150800,14 +150800,14 @@ window.WOW_PROFESSIONS_DATA = {
               "itemId": 4470,
               "name": "Simple Wood",
               "count": 4,
-              "icon": "inv_wood_01",
+              "icon": "inv_tradeskillitem_01",
               "quality": 1
             },
             {
               "itemId": 2320,
               "name": "Rough String",
               "count": 2,
-              "icon": "inv_misc_string_01",
+              "icon": "inv_fabric_linen_03",
               "quality": 1
             }
           ]
@@ -150838,7 +150838,7 @@ window.WOW_PROFESSIONS_DATA = {
               "itemId": 4470,
               "name": "Simple Wood",
               "count": 2,
-              "icon": "inv_wood_01",
+              "icon": "inv_tradeskillitem_01",
               "quality": 1
             }
           ]
@@ -150869,7 +150869,7 @@ window.WOW_PROFESSIONS_DATA = {
               "itemId": 4470,
               "name": "Simple Wood",
               "count": 4,
-              "icon": "inv_wood_01",
+              "icon": "inv_tradeskillitem_01",
               "quality": 1
             }
           ]
@@ -150905,7 +150905,7 @@ window.WOW_PROFESSIONS_DATA = {
               "itemId": 4470,
               "name": "Simple Wood",
               "count": 4,
-              "icon": "inv_wood_01",
+              "icon": "inv_tradeskillitem_01",
               "quality": 1
             }
           ]
@@ -150936,7 +150936,7 @@ window.WOW_PROFESSIONS_DATA = {
               "itemId": 4470,
               "name": "Simple Wood",
               "count": 4,
-              "icon": "inv_wood_01",
+              "icon": "inv_tradeskillitem_01",
               "quality": 1
             },
             {
@@ -150998,7 +150998,7 @@ window.WOW_PROFESSIONS_DATA = {
               "itemId": 11291,
               "name": "Star Wood",
               "count": 1,
-              "icon": "inv_wood_02",
+              "icon": "inv_tradeskillitem_03",
               "quality": 1
             }
           ],
@@ -151141,7 +151141,7 @@ window.WOW_PROFESSIONS_DATA = {
               "itemId": 272941,
               "name": "Thick Logs",
               "count": 1,
-              "icon": "inv_wood_03",
+              "icon": "inv_tradeskillitem_01",
               "quality": 1
             }
           ],
@@ -151219,7 +151219,7 @@ window.WOW_PROFESSIONS_DATA = {
             "itemId": 4470,
             "count": 1,
             "name": "Simple Wood",
-            "icon": "inv_wood_01",
+            "icon": "inv_tradeskillitem_01",
             "quality": 1
           }
         ],
@@ -151238,7 +151238,7 @@ window.WOW_PROFESSIONS_DATA = {
             "itemId": 11291,
             "count": 1,
             "name": "Star Wood",
-            "icon": "inv_wood_02",
+            "icon": "inv_tradeskillitem_03",
             "quality": 1
           }
         ],
@@ -151261,7 +151261,7 @@ window.WOW_PROFESSIONS_DATA = {
             "itemId": 272941,
             "count": 1,
             "name": "Thick Logs",
-            "icon": "inv_wood_03",
+            "icon": "inv_tradeskillitem_01",
             "quality": 1
           }
         ],
@@ -151342,7 +151342,7 @@ window.WOW_PROFESSIONS_DATA = {
             "itemId": 4470,
             "count": 1,
             "name": "Simple Wood",
-            "icon": "inv_wood_01",
+            "icon": "inv_tradeskillitem_01",
             "quality": 1
           },
           {
@@ -151504,7 +151504,7 @@ window.WOW_PROFESSIONS_DATA = {
             "itemId": 4470,
             "count": 2,
             "name": "Simple Wood",
-            "icon": "inv_wood_01",
+            "icon": "inv_tradeskillitem_01",
             "quality": 1
           }
         ]
@@ -151916,21 +151916,21 @@ window.WOW_PROFESSIONS_DATA = {
             {
               "itemId": 4470,
               "name": "Simple Wood",
-              "icon": "inv_wood_01",
+              "icon": "inv_tradeskillitem_01",
               "quality": 1,
               "count": 376
             },
             {
               "itemId": 2320,
               "name": "Rough String",
-              "icon": "inv_misc_string_01",
+              "icon": "inv_fabric_linen_03",
               "quality": 1,
               "count": 56
             },
             {
               "itemId": 11291,
               "name": "Star Wood",
-              "icon": "inv_wood_02",
+              "icon": "inv_tradeskillitem_03",
               "quality": 1,
               "count": 18
             },
@@ -152027,7 +152027,7 @@ window.WOW_PROFESSIONS_DATA = {
             {
               "itemId": 272941,
               "name": "Thick Logs",
-              "icon": "inv_wood_03",
+              "icon": "inv_tradeskillitem_01",
               "quality": 1,
               "count": 28
             }
