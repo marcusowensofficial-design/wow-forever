@@ -2592,8 +2592,8 @@
         "density": "High (~14–18 nodes/lap)",
         "hostileLevel": "Lvl 5–10",
         "bestFor": "Fast 1–65 leveling for Alliance Humans",
-        "waypoint": "/way Elwynn Forest 42.0 65.0",
-        "description": "Begin outside Goldshire, head north to the Northshire river cliffs, follow the eastern ridge past Crystal Lake, drop down to Jasperlode Mine rim, cross to Fargodeep perimeter, and loop around Stonefield farm hills.",
+        "waypoint": "/way Elwynn Forest 38.0 64.0",
+        "description": "Begin outside Goldshire, head south past Stonefield Farm and the Fargodeep Mine perimeter, sweep east past Maclure Vineyards and Brackwell Pumpkin Patch, loop north around Jasperlode Mine rim and Crystal Lake, and return via the Northshire and Mirror Lake cliffs.",
         "tips": "Do not enter the deep mine tunnels unless servers are quiet; the external perimeter cliff nodes respawn faster than cave clears."
       },
       {
@@ -2606,8 +2606,8 @@
         "density": "High (~12–16 nodes/lap)",
         "hostileLevel": "Lvl 12–18",
         "bestFor": "Alliance Night Elves transitioning to Tin",
-        "waypoint": "/way Darkshore 38.0 44.0",
-        "description": "Skirt the eastern mountain wall starting from Bashal'Aran south towards Ameth'Aran, encircling the Master's Glaive excavation crater and heading back along the coastal tree line.",
+        "waypoint": "/way Darkshore 42.0 40.0",
+        "description": "Skirt the eastern mountain wall starting from Bashal'Aran south towards Ameth'Aran, encircling the Master's Glaive excavation crater and heading back north along the coastal tree line.",
         "tips": "Ghoststrider beasts along the ridge run fast; maintain max distance when gathering on low-level alts."
       },
       {
@@ -2620,8 +2620,8 @@
         "density": "Very High (~16–22 nodes/lap)",
         "hostileLevel": "Lvl 4–10",
         "bestFor": "Horde Tauren & peaceful early leveling",
-        "waypoint": "/way Mulgore 45.0 60.0",
-        "description": "Ride the outer plateau wall from Bloodhoof Village south past Red Cloud Mesa, sweeping through the Palemane gnoll rocks, then north along the western cliffs past Windfury Crag.",
+        "waypoint": "/way Mulgore 48.0 60.0",
+        "description": "Ride the outer plateau wall from Bloodhoof Village south past Red Cloud Mesa, sweeping through the Palemane gnoll rocks, then north along the western cliffs past Windfury Crag and east past the Venture Co. Mine.",
         "tips": "Wide open fields make node spotting exceptionally easy. Check the Venture Co Mine entrance for bonus spawns."
       }
     ]
@@ -2661,8 +2661,8 @@
         "density": "High (~14–18 nodes/lap)",
         "hostileLevel": "Lvl 14–19",
         "bestFor": "Alliance Tin & Coarse Stone pre-Deadmines",
-        "waypoint": "/way Westfall 42.0 68.0",
-        "description": "Start at Sentinel Hill, head west to the Longshore bluffs, ride south along the coastal cliffs past the lighthouse, cut east behind Moonbrook and the Deadmines mountain exterior, then north along the Dagger Hills.",
+        "waypoint": "/way Westfall 53.0 53.0",
+        "description": "Start at Sentinel Hill, head northwest past the northern farmsteads to the Longshore bluffs, ride south along the coastal cliffs past the lighthouse, cut east behind Moonbrook and the Deadmines mountain exterior, then north along the Dagger Hills.",
         "tips": "Defias bandits near Moonbrook can daze mounts; stay on the outer cliff edges where raptors and harvest golems are sparse."
       },
       {
@@ -2675,8 +2675,8 @@
         "density": "Very High (~18–22 nodes/lap)",
         "hostileLevel": "Lvl 13–20",
         "bestFor": "Extremely dense Alliance Dwarven loop",
-        "waypoint": "/way Loch Modan 48.0 64.0",
-        "description": "Loop the complete horseshoe mountain ridge enclosing the lake: Thelsamar west to Grizzlepaw ridge, south around Valley of Kings, east past Silver Stream Mine, and north along the trogg cliffs.",
+        "waypoint": "/way Loch Modan 35.5 48.5",
+        "description": "Loop the complete horseshoe mountain ridge enclosing the Loch: from Thelsamar, head north past Silver Stream Mine to Stonewrought Dam, ride south along the Mo'grosh eastern ridge to Ironband's Excavation, and sweep west across Grizzlepaw Ridge and Valley of Kings.",
         "tips": "Silver Stream Mine interior and exterior hold up to 5 simultaneous Tin/Silver veins."
       },
       {
@@ -2689,8 +2689,8 @@
         "density": "High (~15–19 nodes/lap)",
         "hostileLevel": "Lvl 20–26",
         "bestFor": "Contested PvP & transitioning from Tin to Iron",
-        "waypoint": "/way Hillsbrad Foothills 56.0 52.0",
-        "description": "From Southshore, ride along the southern coastal cliffs east to the river, turn north into the foothills encircling Durnholde Keep, sweep west across the hills south of Tarren Mill, and return to Southshore.",
+        "waypoint": "/way Hillsbrad Foothills 50.0 58.0",
+        "description": "From Southshore, ride along the southern coastal cliffs east towards Dun Garok and Thoradin's Wall, turn north into the foothills encircling Durnholde Keep, sweep west across the hills north of Tarren Mill, and return south past Azurelode Mine.",
         "tips": "Rich in both Tin and early Iron spawns along the northern mountain ridge."
       }
     ]
@@ -2716,8 +2716,8 @@
         "density": "Very High (~22–28 nodes/lap)",
         "hostileLevel": "Lvl 32–38",
         "bestFor": "World #1 Iron density & heavy stone stockpiling",
-        "waypoint": "/way Arathi Highlands 46.0 46.0",
-        "description": "Trace the entire outer boundary of Arathi Highlands: start near Refuge Pointe/Hammerfall path, ride east along the mountain walls past Go'Shek Farm, circle south near Witherbark Village, and trace the western ridge past Boulderfist Outpost.",
+        "waypoint": "/way Arathi Highlands 44.0 32.0",
+        "description": "Trace the entire outer boundary of Arathi Highlands: start along the northern ridge above Refuge Pointe, ride east past Boulderfist Outpost and Hammerfall cliffs, circle south past Go'Shek Farm and Witherbark Village, and trace the western wall past Stromgarde Keep.",
         "tips": "Kobold caves in dry hills contain 3–4 internal nodes; check their thresholds without pulling the deep caves."
       },
       {
@@ -2730,8 +2730,8 @@
         "density": "High (~18–24 nodes/lap)",
         "hostileLevel": "Lvl 28–35",
         "bestFor": "Fast flat terrain riding & Gold Ore veins",
-        "waypoint": "/way Thousand Needles 68.0 78.0",
-        "description": "Start at the Mirage Raceway, trace the outer canyon wall of the Shimmering Flats completely in a counter-clockwise loop, then dip west into the main canyon pillars along the high cliff bases.",
+        "waypoint": "/way Thousand Needles 78.0 75.0",
+        "description": "Start at the Mirage Raceway, trace the northern canyon wall west into the main Thousand Needles canyon pillars past Splithoof Crag and Freewind Post, then sweep southeast around the Rustmaul and Shimmering Flats salt basin rim.",
         "tips": "Completely flat terrain allows uninterrupted 100% mount speeds; watch out for wandering basilisks."
       },
       {
@@ -2744,13 +2744,13 @@
         "density": "Very High (~20–25 nodes/lap)",
         "hostileLevel": "Lvl 35–40",
         "bestFor": "Fast Iron & seamless transition into Mithril",
-        "waypoint": "/way Badlands 54.0 32.0",
-        "description": "From Kargath, loop northeast past the Dustwind Dig canyon walls, ride east along the northern cliff boundary past the Uldaman gates, curve south to Angor Fortress, and return across the middle ridge.",
+        "waypoint": "/way Badlands 16.0 44.0",
+        "description": "From Kargath, ride north along the western canyon wall to Angor Fortress, sweep east past the Uldaman exterior ravine and Hammertoe's Digsite, drop south through Dustwind Dig, and return west along the central ridge.",
         "tips": "Spawns both Iron and Mithril simultaneously once above Skill 175."
       },
       {
         "id": "iron_wetlands",
-        "name": "Wetlands Ironband Excavation & Greenwarden",
+        "name": "Wetlands Raptor Ridge & Greenwarden",
         "faction": "Alliance",
         "zone": "Wetlands",
         "lapMinutes": "15–17 min",
@@ -2758,8 +2758,8 @@
         "density": "Moderate-High (~14–18 nodes/lap)",
         "hostileLevel": "Lvl 24–30",
         "bestFor": "Alliance safe-zone farming on PvE/RP realms",
-        "waypoint": "/way Wetlands 64.0 42.0",
-        "description": "Follow the eastern mountain crescent from Greenwarden's Grove north past the Thelgen Rock spiders, through the raptor ridge, and around Ironband's Excavation site.",
+        "waypoint": "/way Wetlands 56.0 42.0",
+        "description": "Follow the eastern and northern mountain crescent from Greenwarden's Grove up through Raptor Ridge and Direforge Hill, sweep west past Dun Modr and Ironbeard's Tomb to Whelgar's Excavation, and loop back east past Thelgen Rock.",
         "tips": "Wetland marsh water slows unmounted running; stick tightly to the rocky base along the foothills."
       }
     ]
@@ -2785,8 +2785,8 @@
         "density": "Maximum (~26–34 nodes/lap)",
         "hostileLevel": "Lvl 36–44",
         "bestFor": "Undisputed #1 Mithril farming circuit in classic WoW",
-        "waypoint": "/way Badlands 24.0 54.0",
-        "description": "Hug the continuous rock wall bordering the entire zone: start at Kargath, ride south past Apocryphan's Rest, east along the Southern Ridge past Camp Cagg, north past the Dragon canyons, and west past Uldaman.",
+        "waypoint": "/way Badlands 14.0 48.0",
+        "description": "Hug the continuous rock wall bordering the entire zone: start at Kargath, ride south past Apocryphan's Rest, east along the Southern Ridge past Camp Cagg and Agmond's End, north through the Lethlor Dragon canyons, and west past Uldaman.",
         "tips": "The respawn rate in Badlands is dynamic — with 2+ miners on the loop, nodes respawn within 8–10 minutes, making continuous laps non-stop."
       },
       {
@@ -2799,8 +2799,8 @@
         "density": "Very High (~22–28 nodes/lap)",
         "hostileLevel": "Lvl 44–50",
         "bestFor": "High Mithril + Truesilver + Wildvine crossover",
-        "waypoint": "/way The Hinterlands 58.0 56.0",
-        "description": "Ride east from Aerie Peak along the northern cliff wall, curve south around Skulk Rock and the Alter of Zul exterior, loop west along the cliff ridge overlooking the ocean, and return along the southern river gorge.",
+        "waypoint": "/way The Hinterlands 22.0 48.0",
+        "description": "Ride east from Aerie Peak along the northern cliff wall past Agol'watha and Seradane, curve south along the Overlook Cliffs and Jintha'Alor exterior, and return west along the southern river gorge past Shadra'Alor.",
         "tips": "Elite trolls near Jintha'Alor outer ramps guard multiple Truesilver and Mithril veins; kite carefully."
       },
       {
@@ -2813,8 +2813,8 @@
         "density": "High (~18–24 nodes/lap)",
         "hostileLevel": "Lvl 43–48",
         "bestFor": "Compact loop with Dark Iron Ore crossover",
-        "waypoint": "/way Searing Gorge 42.0 48.0",
-        "description": "Circle the rim of the central volcanic cauldron: start at Thorium Point, trace the outer cliff perimeter west past the Sea of Fire, south around the Grimesilt Dig site, and east along the mountain boundary.",
+        "waypoint": "/way Searing Gorge 38.0 28.0",
+        "description": "Circle the rim of the central volcanic cauldron: start at Thorium Point, trace the northern rim east to Dustfire Valley, ride south around Grimesilt Dig Site and Tanner Camp, and loop west through the Sea of Fire and Firewatch Ridge.",
         "tips": "Avoid falling into the Slag Pit unless you plan to farm inside the magma caverns where Dark Iron spawns."
       },
       {
@@ -2827,8 +2827,8 @@
         "density": "High (~18–22 nodes/lap)",
         "hostileLevel": "Lvl 42–48",
         "bestFor": "Spacious route with heavy Truesilver frequency",
-        "waypoint": "/way Tanaris 52.0 46.0",
-        "description": "From Gadgetzan, ride southwest past Noonshade Ruins, trace the mountain borders around the Noxious Lair insect hive, loop east towards Southbreak Shore cliffs, and return north along the mountain range.",
+        "waypoint": "/way Tanaris 51.0 28.0",
+        "description": "From Gadgetzan, ride west past Zul'Farrak's mountain wall, trace the western border south around the Noxious Lair and Thistleshrub Valley, loop east towards Southbreak Shore cliffs, and return north past Lost Rigger Cove and Noonshade Ruins.",
         "tips": "Steer clear of the Silithid tunnel pits unless riding high level mounts to prevent daze dismounts."
       }
     ]
@@ -2855,9 +2855,9 @@
         "density": "Maximum (~26–36 nodes/lap)",
         "hostileLevel": "Lvl 50–55",
         "bestFor": "World #1 Arcane Crystal & Rich Thorium yields",
-        "waypoint": "/way Un'Goro Crater 50.0 48.0",
-        "description": "Trace the entire steep perimeter cliff wall of the crater, with an inner detour around Fire Plume Ridge. Check the Slithering Scar hive entrances and Golakka Hot Springs slopes.",
-        "tips": "Fire Plume Ridge holds up to 4 Rich Thorium veins simultaneously on its upper volcanic ledges."
+        "waypoint": "/way Un'Goro Crater 46.0 14.0",
+        "description": "From Marshal's Stand, trace the entire steep perimeter cliff wall of the crater clockwise past Fungal Rock, Ironstone Plateau, the Slithering Scar hive entrances, Terror Run, and Golakka Hot Springs.",
+        "tips": "Fire Plume Ridge in the center holds up to 4 Rich Thorium veins simultaneously on its upper volcanic ledges."
       },
       {
         "id": "thorium_winterspring",
@@ -2869,8 +2869,8 @@
         "density": "Very High (~22–28 nodes/lap)",
         "hostileLevel": "Lvl 54–59",
         "bestFor": "Rich Thorium + Blue Sapphire + Winter Squid fishing combo",
-        "waypoint": "/way Winterspring 60.0 50.0",
-        "description": "Start at Everlook, ride south circling Lake Kel'Theril ruins, sweep southwest through Owl Wing Thicket, curve into the canyon walls outside Mazthoril cave, and loop back north past Starfall Village.",
+        "waypoint": "/way Winterspring 60.0 38.0",
+        "description": "Start at Everlook, ride northwest past Starfall Village to Frostsaber Rock, curve south past Lake Kel'Theril and the Mazthoril canyon walls, sweep through Owl Wing Thicket, and loop back north past Ice Thistle Hills.",
         "tips": "The blue dragonkin outside Mazthoril guard 3–4 Rich Thorium nodes; use crowd control or pets to mine them."
       },
       {
@@ -2883,8 +2883,8 @@
         "density": "Very High (~22–30 nodes/lap)",
         "hostileLevel": "Lvl 55–60",
         "bestFor": "High-end Phase 3 endgame stockpiling",
-        "waypoint": "/way Eastern Plaguelands 65.0 45.0",
-        "description": "From Light's Hope Chapel, head north around Noxious Glade, loop west past Corin's Crossing and Blackwood Lake, sweep south around Darrowshire, and trace the fungal mountain walls back to Light's Hope.",
+        "waypoint": "/way Eastern Plaguelands 79.0 58.0",
+        "description": "From Light's Hope Chapel, ride southwest past Lake Mereldar to the Darrowshire foothills, head north along the Fungal Vale and Plaguewood walls, sweep east past Northpass Tower and Noxious Glade, and return south to Light's Hope.",
         "tips": "Beware of roaming crypt stalkers; they inflict infectious diseases that interrupt gather channels."
       },
       {
@@ -2897,8 +2897,8 @@
         "density": "High (~18–26 nodes/lap)",
         "hostileLevel": "Lvl 55–60",
         "bestFor": "Rich Thorium + Twilight Cultist farming",
-        "waypoint": "/way Silithus 48.0 42.0",
-        "description": "Trace the outside perimeter of Hive'Ashi, Hive'Zora, and Hive'Regal, skirting the southern and western mountain rims without entering deep inside the bug colonies.",
+        "waypoint": "/way Silithus 51.0 38.0",
+        "description": "From Cenarion Hold, trace the outside perimeter counter-clockwise around Hive'Ashi, Twilight Base Camp, Hive'Zora, and Hive'Regal, skirting the western and southern mountain rims before returning north past Staghelm Point.",
         "tips": "Rich Thorium veins spawn directly on the ramp entrances of the three major silithid hives."
       }
     ]
@@ -2924,8 +2924,8 @@
         "density": "Very High (~18–24 nodes/lap)",
         "hostileLevel": "Lvl 4–10",
         "bestFor": "Rapid Horde 1–50 herb skilling",
-        "waypoint": "/way Durotar 48.0 52.0",
-        "description": "From Razor Hill, head south along the Southfury River banks down to Sen'jin Village, curve west around the Valley of Trials hills, and loop north through the dry gullies.",
+        "waypoint": "/way Durotar 52.0 43.0",
+        "description": "From Razor Hill, head south past Tiragarde Keep down to Sen'jin Village, curve west around the Valley of Trials hills, and loop north along the Southfury River banks and Thunder Ridge gullies.",
         "tips": "Earthroot spawns exclusively on elevated rock crags and cliff edges, while Peacebloom and Silverleaf blanket the open dirt plains."
       },
       {
@@ -2938,8 +2938,8 @@
         "density": "Very High (~18–22 nodes/lap)",
         "hostileLevel": "Lvl 5–9",
         "bestFor": "Alliance Humans 1–50 starter loop",
-        "waypoint": "/way Elwynn Forest 45.0 55.0",
-        "description": "From Goldshire, loop northeast circling Crystal Lake, head north to the Northshire river crossing, trace the tree line west towards Mirror Lake, and curve south past Stonefield Farm.",
+        "waypoint": "/way Elwynn Forest 42.0 65.0",
+        "description": "From Goldshire, sweep southeast through Fargodeep woods to Crystal Lake, head north to the Northshire river crossing, trace the tree line west towards Mirror Lake, and curve south past Stonefield Farm.",
         "tips": "Dense Peacebloom clusters spawn along the riverbanks near Crystal Lake."
       },
       {
@@ -2952,8 +2952,8 @@
         "density": "High (~16–20 nodes/lap)",
         "hostileLevel": "Lvl 6–11",
         "bestFor": "Undead Horde fast herb leveling",
-        "waypoint": "/way Tirisfal Glades 58.0 48.0",
-        "description": "Start at Brill, ride east towards Stillwater Pond, loop south around the Undercity perimeter walls, and head west across the Nightmare Vale clearing.",
+        "waypoint": "/way Tirisfal Glades 59.0 52.0",
+        "description": "Start at Brill, ride northeast towards Stillwater Pond and Balnir Farmstead, loop south around the Undercity outer moat, and head west across Nightmare Vale and north to Agamand Mills.",
         "tips": "Stillwater Pond shores hold high Earthroot and Peacebloom spawn clusters."
       },
       {
@@ -2966,8 +2966,8 @@
         "density": "High (~15–19 nodes/lap)",
         "hostileLevel": "Lvl 6–11",
         "bestFor": "Alliance Night Elves starter loop",
-        "waypoint": "/way Teldrassil 55.0 58.0",
-        "description": "From Dolanaar, ride south circling Lake Al'Ameth, cut northeast towards Starbreeze Village ruins, and loop back west past the tree hollows.",
+        "waypoint": "/way Teldrassil 56.0 58.0",
+        "description": "From Dolanaar, ride south circling Lake Al'Ameth, cut northeast through Starbreeze Village ruins to the Wellspring River, and loop west past Ban'ethil Hollow and the Pools of Arlithrien.",
         "tips": "Silverleaf spawns heavily under tree canopies; check roots and stumps."
       }
     ]
@@ -2992,8 +2992,8 @@
         "density": "Maximum (~22–28 nodes/lap)",
         "hostileLevel": "Lvl 13–18",
         "bestFor": "World #1 Briarthorn & Mageroyal density",
-        "waypoint": "/way The Barrens 45.0 40.0",
-        "description": "Connect the three lush oases: from The Crossroads, ride southwest to the Forgotten Pools, continue south to Lushwater Oasis, curve east to Stagnant Oasis, and loop north back to Crossroads.",
+        "waypoint": "/way The Barrens 51.0 30.0",
+        "description": "Connect the three lush oases in a clockwise loop: from The Crossroads, ride southeast to the Stagnant Oasis, sweep west to Lushwater Oasis and Wailing Caverns, head north to the Forgotten Pools, and curve east back to Crossroads.",
         "tips": "Oasis pools also spawn freshwater fish and Stranglekelp along their submerged edges."
       },
       {
@@ -3006,8 +3006,8 @@
         "density": "High (~16–22 nodes/lap)",
         "hostileLevel": "Lvl 14–19",
         "bestFor": "Alliance Briarthorn + Stranglekelp underwater run",
-        "waypoint": "/way Westfall 35.0 55.0",
-        "description": "Ride west from Sentinel Hill to the Longshore coast (dive for Stranglekelp), follow the shoreline south to Demont's Place, cut east around Moonbrook hills for Briarthorn, and head north across the farmland.",
+        "waypoint": "/way Westfall 53.0 53.0",
+        "description": "Ride northwest from Sentinel Hill to the Longshore coast (dive for Stranglekelp), follow the shoreline south to Demont's Place, cut east around Moonbrook hills for Briarthorn, and head north across Dagger Hills and Saldean's farmland.",
         "tips": "Swimming along the Longshore beach guarantees 8–10 Stranglekelp nodes per pass."
       },
       {
@@ -3021,7 +3021,7 @@
         "hostileLevel": "Lvl 12–18",
         "bestFor": "Fast Alliance terrestrial herb loop",
         "waypoint": "/way Loch Modan 36.0 48.0",
-        "description": "From Thelsamar, ride east across the farmlands, skirt the southern dam base, sweep west past the trogg territory, and loop back north through the peaceful central valley.",
+        "description": "From Thelsamar, ride north through the Algaz valley to the Stonewrought Dam base, follow the western Loch shoreline reeds south, and loop back northwest through Grizzlepaw Foothills and Stonesplinter Valley.",
         "tips": "Briarthorn clusters heavily around the base of trees throughout the valley."
       },
       {
@@ -3035,7 +3035,7 @@
         "hostileLevel": "Lvl 12–18",
         "bestFor": "Horde Briarthorn + underwater Stranglekelp",
         "waypoint": "/way Silverpine Forest 46.0 42.0",
-        "description": "From The Sepulcher, ride south through the misty forest towards Ambermill, sweep west to the coast near Shadowfang Keep, and ride north along the shoreline harvesting Stranglekelp.",
+        "description": "From The Sepulcher, head northwest to North Tide's Hollow coast, ride south along the shoreline harvesting Stranglekelp to Shadowfang Keep bluff, sweep east to Ambermill foothills, and return north along Lordamere Lake.",
         "tips": "Watch out for Son of Arugal (Lvl 25 Elite) patrolling the central road."
       }
     ]
@@ -3059,8 +3059,8 @@
         "density": "Very High (~20–26 nodes/lap)",
         "hostileLevel": "Lvl 22–28",
         "bestFor": "World #1 Kingsblood & Wild Steelbloom density",
-        "waypoint": "/way Hillsbrad Foothills 52.0 45.0",
-        "description": "Circle the northern plateau between Southshore and Tarren Mill: head east from Tarren Mill past Durnholde Keep, climb the hills overlooking the crater, sweep west above Southshore, and return along the river.",
+        "waypoint": "/way Hillsbrad Foothills 56.0 46.0",
+        "description": "Circle the hills between Tarren Mill and Southshore: head north from Tarren Mill up the plateau steps, sweep east around Durnholde Keep's high ridge, curve southwest across the river above Southshore, and loop northwest through Hillsbrad Fields.",
         "tips": "Wild Steelbloom grows on high peaks and rocky ledges; climb the plateau steps."
       },
       {
@@ -3073,8 +3073,8 @@
         "density": "High (~16–22 nodes/lap)",
         "hostileLevel": "Lvl 24–30",
         "bestFor": "Massive Grave Moss spawns around crypts",
-        "waypoint": "/way Wetlands 50.0 58.0",
-        "description": "From Menethil Harbor, ride east along the sunken road into the marsh, circle the crypts of Ironbeard's Tomb and the raptor grounds, then loop north past the murloc shanties.",
+        "waypoint": "/way Wetlands 32.0 48.0",
+        "description": "From Menethil Marsh outskirts, ride southeast along the sunken road to Mosshide Fen, curve northeast through the raptor grounds, loop northwest past Ironbeard's Tomb crypts and Sundown Marsh, and return south past the Bluegill murloc shanties.",
         "tips": "Grave Moss is concentrated right outside the tomb entrances."
       },
       {
@@ -3088,7 +3088,7 @@
         "hostileLevel": "Lvl 20–28",
         "bestFor": "Horde Wild Steelbloom cliff route",
         "waypoint": "/way Stonetalon Mountains 48.0 58.0",
-        "description": "From Sun Rock Retreat, follow the canyon path south towards the Charred Vale, skirt the harpy hills, and circle the high mountain switchbacks back to Malaka'jin.",
+        "description": "From Sun Rock Retreat, ride east to Windshear Crag switchbacks, follow Webwinder Path south, sweep west into the Charred Vale harpy ledges, and loop northeast past Mirkfallon Lake back to Sun Rock.",
         "tips": "High elevation paths contain multiple Wild Steelbloom nodes every few hundred yards."
       },
       {
@@ -3101,8 +3101,8 @@
         "density": "Moderate-High (~14–18 nodes/lap)",
         "hostileLevel": "Lvl 18–25",
         "bestFor": "Alliance Kingsblood & Wild Steelbloom",
-        "waypoint": "/way Redridge Mountains 45.0 52.0",
-        "description": "From Lakeshire, ride north circling Lake Everstill, climb into Render's Rock foothills, trace the gnoll cliffs, and return across the southern ridge.",
+        "waypoint": "/way Redridge Mountains 32.0 48.0",
+        "description": "From Lakeshire, ride north into the Redridge Canyons gnoll ridges, sweep east past Alther's Mill to Render's Rock foothills, drop south into Render's Valley, and return west along the Lakeridge Highway.",
         "tips": "Watch out for Blackrock Orc patrols along the northeastern passes."
       }
     ]
@@ -3127,8 +3127,8 @@
         "density": "Maximum (~24–30 nodes/lap)",
         "hostileLevel": "Lvl 34–40",
         "bestFor": "World #1 Goldthorn & Khadgar's Whisker circuit",
-        "waypoint": "/way Arathi Highlands 42.0 52.0",
-        "description": "Circle the central valley of Arathi: start from the western road, sweep south past Witherbark Village, loop east around Go'Shek Farm, and cut north past the four Elemental Binding stones.",
+        "waypoint": "/way Arathi Highlands 44.0 48.0",
+        "description": "Circle the central valley of Arathi: from Refuge Pointe, head north to the Circle of West Binding, ride east past Boulderfist Outpost and Circle of East Binding, sweep south around Go'Shek Farm and Witherbark Village, and return northwest.",
         "tips": "Goldthorn clusters heavily around rocky outcroppings and ruins; check the base of each troll tower."
       },
       {
@@ -3141,8 +3141,8 @@
         "density": "Very High (~20–26 nodes/lap)",
         "hostileLevel": "Lvl 35–42",
         "bestFor": "World #1 Fadeleaf and Blindweed starter yield",
-        "waypoint": "/way Swamp of Sorrows 54.0 46.0",
-        "description": "Encircle the marshlands surrounding the Pool of Tears: from Stonard, ride west towards Deadwind Pass entrance, loop south around the misty reeds, and sweep east along the coastal swamp boundary.",
+        "waypoint": "/way Swamp of Sorrows 46.0 54.0",
+        "description": "From Stonard, head north to the Fallow Sanctuary bog, sweep west past The Harborage to Splinterspear Junction, loop southeast through the southern cypress groves and Sorrowmurk, and return along the Pool of Tears western bank.",
         "tips": "Fadeleaf grows in damp shady groves; check behind giant cypress tree trunks."
       },
       {
@@ -3155,9 +3155,9 @@
         "density": "High (~16–22 nodes/lap)",
         "hostileLevel": "Lvl 33–39",
         "bestFor": "Only reliable outdoor source of Wintersbite",
-        "waypoint": "/way Alterac Mountains 44.0 54.0",
-        "description": "From Tarren Mill, head north into the snowline of Alterac, loop around the Ruins of Alterac, sweep west past Growless Cave, and curve south past the Syndicate camps.",
-        "tips": "Wintersbite only spawns within the snowy high-altitude plateaus of Alterac."
+        "waypoint": "/way Alterac Mountains 46.0 62.0",
+        "description": "From the southern snowline pass, ride northwest around the Ruins of Alterac and Growless Cave, climb northeast into The Uplands, and loop southeast through Strahnbrad and Gallows' Corner.",
+        "tips": "Wintersbite only spawns within the snowy high-altitude plateaus and ruins of Alterac."
       },
       {
         "id": "herb_stv_north",
@@ -3169,8 +3169,8 @@
         "density": "High (~18–24 nodes/lap)",
         "hostileLevel": "Lvl 32–38",
         "bestFor": "Fadeleaf + Khadgar's Whisker + jungle beasts",
-        "waypoint": "/way Stranglethorn Vale 44.0 28.0",
-        "description": "From the Rebel Camp, ride south into Kurzen's Compound, loop west through the jungle towards the ruins of Bal'lal, and curve north back along the river.",
+        "waypoint": "/way Stranglethorn Vale 36.0 11.0",
+        "description": "From Nesingwary's Expedition, ride west to the Ruins of Zul'Kunda, head south along the coast past Bal'lal and Kal'ai ruins, sweep east to Mizjah, and loop north along Lake Nazferiti and Kurzen's Compound back past Rebel Camp.",
         "tips": "Watch out for stealthed jungle panthers; gather while mounted if possible."
       }
     ]
@@ -3194,8 +3194,8 @@
         "density": "Maximum (~22–28 nodes/lap)",
         "hostileLevel": "Lvl 42–48",
         "bestFor": "World #1 Firebloom yield across Azeroth",
-        "waypoint": "/way Tanaris 54.0 42.0",
-        "description": "From Gadgetzan, ride south across the dunes past Noonshade Ruins, loop through Thistleshrub Valley, sweep east towards Southbreak Shore, and head north along the desert foothills.",
+        "waypoint": "/way Tanaris 51.0 28.0",
+        "description": "From Gadgetzan, ride east past Noonshade Ruins, head south through Waterspring Field and Southbreak Shore dunes, sweep west across Dunemaul to Thistleshrub Valley, and loop north past the Noxious Lair back to Gadgetzan.",
         "tips": "Firebloom glows bright orange in the desert sands, visible from extreme rendering distance."
       },
       {
@@ -3208,13 +3208,13 @@
         "density": "Very High (~18–24 nodes/lap)",
         "hostileLevel": "Lvl 43–48",
         "bestFor": "Fast compact Firebloom loop",
-        "waypoint": "/way Searing Gorge 38.0 50.0",
-        "description": "From Thorium Point, circle the southern perimeter cliffs around Firewatch Ridge, sweep through the Sea of Fire magma plains, and loop back north.",
+        "waypoint": "/way Searing Gorge 38.0 28.0",
+        "description": "From Thorium Point, ride east along the northern cauldron flats to Dustfire Valley, loop south around Grimesilt Dig Site and the southern lava fissures, and sweep northwest through the Sea of Fire and Firewatch Ridge.",
         "tips": "Dense Firebloom spawns right at the edges of the open lava fissures."
       },
       {
         "id": "herb_hinterlands_lotus",
-        "name": "Hinterlands Jintha'Alor Exterior Rim",
+        "name": "Hinterlands Jintha'Alor & Troll Ruins Rim",
         "faction": "Contested",
         "zone": "The Hinterlands",
         "lapMinutes": "16–18 min",
@@ -3222,8 +3222,8 @@
         "density": "High (~16–22 nodes/lap)",
         "hostileLevel": "Lvl 44–50",
         "bestFor": "Purple Lotus & Wildvine stockpiling",
-        "waypoint": "/way The Hinterlands 52.0 60.0",
-        "description": "Ride east across the central Hinterlands valley, circling the exterior base of the massive troll city Jintha'Alor, and loop west along the river gorge.",
+        "waypoint": "/way The Hinterlands 44.0 62.0",
+        "description": "From Valorwind Lake ruins, ride east to the exterior base of Jintha'Alor, curve northeast to Shaol'watha, sweep west past Agol'watha to Zun'watha, and loop south around Shadra'Alor.",
         "tips": "Purple Lotus in the Hinterlands has a 20% chance to also yield valuable Wildvine on pick."
       },
       {
@@ -3236,8 +3236,8 @@
         "density": "High (~14–18 nodes/lap)",
         "hostileLevel": "Lvl 36–42",
         "bestFor": "Peaceful alternative for Firebloom",
-        "waypoint": "/way Badlands 46.0 50.0",
-        "description": "From Dustwind Dig, sweep west across the central barren flats towards Camp Cagg, loop north along the coyote bluffs, and return east.",
+        "waypoint": "/way Badlands 54.0 42.0",
+        "description": "From Dustwind Dig flats, ride northwest past the coyote bluffs, sweep south across the western barren plains to Camp Cagg basin, loop east through Agmond's End and Mirage Flats, and return north.",
         "tips": "Flat desert landscape allows uninterrupted line-of-sight herb tracking."
       }
     ]
@@ -3262,8 +3262,8 @@
         "density": "Maximum (~24–30 nodes/lap)",
         "hostileLevel": "Lvl 40–46",
         "bestFor": "World #1 Blindweed & Sungrass density",
-        "waypoint": "/way Swamp of Sorrows 62.0 52.0",
-        "description": "Complete continuous loops around the circular waterways enclosing the Sunken Temple of Atal'Hakkar in the eastern half of the swamp.",
+        "waypoint": "/way Swamp of Sorrows 62.0 48.0",
+        "description": "Complete continuous clockwise loops around the circular Pool of Tears waterways enclosing the Sunken Temple of Atal'Hakkar in the eastern half of the swamp.",
         "tips": "Blindweed exclusively lines the water reeds, while Sungrass spawns on the dry hillocks nearby."
       },
       {
@@ -3276,13 +3276,13 @@
         "density": "Very High (~20–26 nodes/lap)",
         "hostileLevel": "Lvl 48–54",
         "bestFor": "World #1 Gromsblood + Cleansed Whipper Root",
-        "waypoint": "/way Felwood 46.0 56.0",
-        "description": "From Emerald Sanctuary, head north along the main road, sweep east through the demon-infested ruins towards Bloodvenom Post, and loop south.",
+        "waypoint": "/way Felwood 51.0 82.0",
+        "description": "From Emerald Sanctuary, ride north along the eastern corrupted woods to Irontree Woods, loop west around Jadefire Run, and head south along the main road past Shatter Scar Vale, Bloodvenom Post, and Jaedenar.",
         "tips": "Gromsblood spawns around demonic ruins and Satyr camps; kill Satyrs for Felcloth while farming."
       },
       {
         "id": "herb_ghost_caves",
-        "name": "Hinterlands Creeping Cave & Skull Rock",
+        "name": "Hinterlands Skulk Rock & Creeping Cave",
         "faction": "Contested",
         "zone": "The Hinterlands",
         "lapMinutes": "12–14 min",
@@ -3290,13 +3290,13 @@
         "density": "High (~12–18 nodes/lap)",
         "hostileLevel": "Lvl 45–50",
         "bestFor": "Ghost Mushroom cave route (needed for Shadow Power)",
-        "waypoint": "/way The Hinterlands 56.0 44.0",
-        "description": "Target the damp subterranean caves: enter Skull Rock and Creeping Cave, clear the interior mushroom patches, and loop between the two cave mouths.",
-        "tips": "Ghost Mushrooms strictly spawn inside caves and damp dungeons (Maraudon & Jintha'Alor caves)."
+        "waypoint": "/way The Hinterlands 57.0 42.0",
+        "description": "Target the damp subterranean caves in a clockwise loop: start at Skulk Rock cave, sweep southeast to the Jintha'Alor lower cave, cut west to Creeping Cave, and loop north through Agol'watha's cavern.",
+        "tips": "Ghost Mushrooms strictly spawn inside caves and damp dungeons (Maraudon & Hinterlands caves)."
       },
       {
         "id": "herb_feralas",
-        "name": "Feralas Verdantis River & Twin Colossals",
+        "name": "Feralas Verdantis River & Isildien Loop",
         "faction": "Contested",
         "zone": "Feralas",
         "lapMinutes": "16–19 min",
@@ -3304,9 +3304,9 @@
         "density": "High (~18–24 nodes/lap)",
         "hostileLevel": "Lvl 42–48",
         "bestFor": "Sungrass + Golden Sansam transition",
-        "waypoint": "/way Feralas 58.0 44.0",
-        "description": "Follow the Verdantis River from Camp Mojache west towards the Twin Colossals, sweep past the Gordunni ogre ruins, and return along the southern bluffs.",
-        "tips": "Sungrass grows abundantly in the sunlit open clearings between ogre camps."
+        "waypoint": "/way Feralas 72.0 45.0",
+        "description": "From Camp Mojache bridge, ride south through Woodpaw Hills to the Ruins of Isildien, curve northwest past Feral Scar Vale and the Verdantis River, and loop northeast along the Twin Colossals slopes and Gordunni Outpost.",
+        "tips": "Sungrass grows abundantly in the sunlit open clearings between ogre and gnoll camps."
       }
     ]
   },
@@ -3331,8 +3331,8 @@
         "density": "Maximum (~26–36 nodes/lap)",
         "hostileLevel": "Lvl 54–60",
         "bestFor": "World #1 Plaguebloom & Black Lotus circuit",
-        "waypoint": "/way Eastern Plaguelands 62.0 48.0",
-        "description": "From Light's Hope Chapel, head northwest past Browman Mill, loop west around Corin's Crossing, curve south towards Lake Mereldar, and trace the fungal valley back to Light's Hope.",
+        "waypoint": "/way Eastern Plaguelands 79.0 58.0",
+        "description": "From Light's Hope Chapel, ride southwest to Lake Mereldar and Darrowshire, head north past Corin's Crossing and Blackwood Lake to Northpass Tower, and sweep east past Browman Mill and Noxious Glade back to Light's Hope.",
         "tips": "Black Lotus has 4 potential spawn points along this exact route; check Lake Mereldar and Corin's Crossing."
       },
       {
@@ -3345,9 +3345,9 @@
         "density": "Very High (~22–30 nodes/lap)",
         "hostileLevel": "Lvl 55–60",
         "bestFor": "World #1 Mountain Silversage + Icecap circuit",
-        "waypoint": "/way Winterspring 56.0 42.0",
-        "description": "From Everlook, ride north past Frostsaber Rock, curve south through the hills towards Lake Kel'Theril, and loop through the Owl Wing Thicket back to Everlook.",
-        "tips": "Mountain Silversage only spawns on the highest rocky summits; Icecap spawns across the flat snow plains."
+        "waypoint": "/way Winterspring 60.0 38.0",
+        "description": "From Everlook, ride northwest past Starfall Village to Frostsaber Rock, curve south past Timbermaw Hold approach and Lake Kel'Theril, sweep through Mazthoril and Owl Wing Thicket, and return north via Winterfall Ridge.",
+        "tips": "Mountain Silversage only spawns on the highest rocky summits; Icecap spawns across the northern snow plains."
       },
       {
         "id": "herb_ungoro",
@@ -3359,13 +3359,13 @@
         "density": "Very High (~22–28 nodes/lap)",
         "hostileLevel": "Lvl 50–55",
         "bestFor": "World #1 Dreamfoil & Golden Sansam density",
-        "waypoint": "/way Un'Goro Crater 54.0 44.0",
-        "description": "From Marshal's Stand, ride clockwise around the crater basin floor, skirting the Golakka Hot Springs and the river marshlands, circling Fire Plume Ridge.",
+        "waypoint": "/way Un'Goro Crater 46.0 14.0",
+        "description": "From Marshal's Stand, ride clockwise around the lush crater basin floor past the Lakkari Tar Pits, Screaming Reaches, Slithering Scar perimeter, Terror Run riverbed, and Golakka Hot Springs.",
         "tips": "Dreamfoil and Golden Sansam are everywhere in Un'Goro; avoid elite Devilsaurs while gathering."
       },
       {
         "id": "herb_wpl",
-        "name": "Western Plaguelands Sorrow Hill & Ruins",
+        "name": "Western Plaguelands Sorrow Hill & Farms",
         "faction": "Contested",
         "zone": "Western Plaguelands",
         "lapMinutes": "16–19 min",
@@ -3373,9 +3373,9 @@
         "density": "High (~20–26 nodes/lap)",
         "hostileLevel": "Lvl 50–56",
         "bestFor": "Plaguebloom + Arthas' Tears + Corrupted Flora",
-        "waypoint": "/way Western Plaguelands 46.0 58.0",
-        "description": "From Chillwind Camp, sweep north across Sorrow Hill cemetery, loop around the ruins of Andorhal exterior, head west past Felstone Field and Dalson's Tears, and return south.",
-        "tips": "Sorrow Hill and the farm fields contain heavy Plaguebloom and Arthas' Tears spawns."
+        "waypoint": "/way Western Plaguelands 43.0 84.0",
+        "description": "From Chillwind Camp, ride northeast across Sorrow Hill and The Writhing Haunt to Gahrron's Withering, loop north to Northridge Lumber Camp, and sweep southwest through Dalson's Tears, Felstone Field, and Andorhal's western perimeter.",
+        "tips": "Sorrow Hill and the four plagued farmsteads contain heavy Plaguebloom and Arthas' Tears spawns."
       }
     ]
   }
@@ -6438,7 +6438,7 @@
   'Stonetalon Mountains': 406,
   'Redridge Mountains': 44,
   'Swamp of Sorrows': 8,
-  'Alterac Mountains': 267,
+  'Alterac Mountains': 36,
   'Stranglethorn Vale': 33,
   'Felwood': 361,
   'Feralas': 357,
@@ -6449,453 +6449,585 @@ const CIRCUIT_ROUTE_PATHS = {
   // === 20 MINING ROUTES ===
   copper_durotar: [
     { x: 52.0, y: 43.0, label: 'Razor Hill (Start)' },
-    { x: 55.5, y: 56.0, label: 'Eastern Coastal Ledges' },
-    { x: 56.8, y: 72.5, label: 'Sen\'jin Village Outskirts' },
-    { x: 51.0, y: 81.0, label: 'Kolkar Crag Boundary' },
-    { x: 43.5, y: 68.2, label: 'Valley of Trials Mountain Ridge' },
-    { x: 41.0, y: 53.5, label: 'Southfury River Cliffs' },
-    { x: 44.5, y: 45.0, label: 'Drygulch Ravine Outer Ledge' },
-    { x: 49.0, y: 41.5, label: 'Razor Rock Pass' },
+    { x: 56.5, y: 51.5, label: 'Tiragarde Keep Cliffs' },
+    { x: 57.2, y: 63.0, label: 'Eastern Coastal Ledges' },
+    { x: 55.5, y: 74.5, label: "Sen'jin Village Outskirts" },
+    { x: 48.0, y: 79.5, label: 'Kolkar Crag Southern Ridge' },
+    { x: 42.5, y: 69.0, label: 'Valley of Trials Outer Wall' },
+    { x: 40.5, y: 54.0, label: 'Southfury River Cliffs' },
+    { x: 43.5, y: 40.5, label: 'Thunder Ridge Foothills' },
+    { x: 48.5, y: 37.5, label: 'Drygulch Ravine Ledge' },
     { x: 52.0, y: 43.0, label: 'Return to Razor Hill' }
   ],
   copper_elwynn: [
-    { x: 42.0, y: 65.0, label: 'Goldshire Outskirts (Start)' },
-    { x: 46.5, y: 50.5, label: 'Northshire River Boundary' },
-    { x: 55.0, y: 58.2, label: 'Crystal Lake Mountain Ridge' },
-    { x: 62.0, y: 52.8, label: 'Jasperlode Mine Rim' },
-    { x: 64.5, y: 68.0, label: 'Brackwell Pumpkin Patch Ridge' },
-    { x: 53.0, y: 74.0, label: 'Maclure Vineyards Perimeter' },
-    { x: 42.5, y: 58.5, label: 'Fargodeep Mine Perimeter' },
-    { x: 34.8, y: 67.5, label: 'Stonefield Farm Hills' },
-    { x: 42.0, y: 65.0, label: 'Return to Goldshire' }
+    { x: 38.0, y: 64.0, label: 'Goldshire Outskirts (Start)' },
+    { x: 33.5, y: 72.0, label: 'Stonefield Farm Bluffs' },
+    { x: 40.0, y: 79.0, label: 'Fargodeep Mine Perimeter' },
+    { x: 50.5, y: 80.5, label: 'Maclure Vineyards Ridge' },
+    { x: 62.0, y: 75.0, label: 'Brackwell Pumpkin Patch Hills' },
+    { x: 65.0, y: 62.0, label: 'Tower of Azora Foothills' },
+    { x: 61.5, y: 52.0, label: 'Jasperlode Mine Rim' },
+    { x: 52.5, y: 50.5, label: 'Crystal Lake Northern Ridge' },
+    { x: 43.5, y: 49.5, label: 'Northshire River Cliffs' },
+    { x: 33.5, y: 54.5, label: 'Mirror Lake Orchard Cliffs' },
+    { x: 38.0, y: 64.0, label: 'Return to Goldshire' }
   ],
   copper_darkshore: [
-    { x: 38.0, y: 44.0, label: 'Bashal\'Aran Ridge (Start)' },
-    { x: 41.5, y: 52.0, label: 'Eastern Mountain Wall' },
-    { x: 43.8, y: 68.5, label: 'Ameth\'Aran Ruins Rim' },
-    { x: 41.0, y: 78.0, label: 'Grove of the Ancients Perimeter' },
-    { x: 38.5, y: 84.5, label: 'Master\'s Glaive Excavation Rim' },
-    { x: 35.0, y: 72.0, label: 'Remtravel\'s Excavation Boundary' },
-    { x: 36.2, y: 56.5, label: 'Coastal Tree Line Pass' },
-    { x: 36.8, y: 47.0, label: 'Auberdine Southern Outskirts' },
-    { x: 38.0, y: 44.0, label: 'Return to Bashal\'Aran' }
+    { x: 42.0, y: 40.0, label: "Bashal'Aran Ridge (Start)" },
+    { x: 47.0, y: 46.5, label: 'Eastern Mountain Wall' },
+    { x: 46.0, y: 59.0, label: "Ameth'Aran Ruins Rim" },
+    { x: 44.5, y: 73.5, label: 'Grove of the Ancients Perimeter' },
+    { x: 39.5, y: 85.0, label: "Master's Glaive Excavation Rim" },
+    { x: 34.5, y: 78.5, label: "Remtravel's Excavation Boundary" },
+    { x: 35.0, y: 64.0, label: 'Coastal Tree Line Pass' },
+    { x: 37.0, y: 49.0, label: 'Auberdine Southern Outskirts' },
+    { x: 42.0, y: 40.0, label: "Return to Bashal'Aran" }
   ],
   copper_mulgore: [
-    { x: 45.0, y: 60.0, label: 'Bloodhoof Village (Start)' },
-    { x: 44.2, y: 75.8, label: 'Red Cloud Mesa Outer Plateau' },
-    { x: 37.5, y: 72.0, label: 'Palemane Gnoll Rock Ridge' },
-    { x: 33.0, y: 56.5, label: 'Windfury Crag Cliffs' },
-    { x: 31.5, y: 38.2, label: 'Venture Co Mine Perimeter' },
-    { x: 44.8, y: 29.5, label: 'Northern Plateau Ridge' },
-    { x: 58.0, y: 44.5, label: 'Bael\'dun Digsite Rim' },
-    { x: 56.5, y: 58.0, label: 'Golden Plains East Wall' },
-    { x: 45.0, y: 60.0, label: 'Return to Bloodhoof' }
+    { x: 48.0, y: 60.0, label: 'Bloodhoof Village (Start)' },
+    { x: 52.5, y: 75.0, label: 'Red Cloud Mesa Outer Wall' },
+    { x: 37.0, y: 71.5, label: 'Palemane Gnoll Rock Ridge' },
+    { x: 31.5, y: 55.0, label: 'Western Mountain Cliffs' },
+    { x: 34.5, y: 36.0, label: 'Windfury Crag Foothills' },
+    { x: 48.0, y: 27.5, label: 'Northern Plateau Ridge' },
+    { x: 60.5, y: 45.0, label: 'Venture Co. Mine Perimeter' },
+    { x: 59.5, y: 61.5, label: 'Ravaged Caravan East Wall' },
+    { x: 48.0, y: 60.0, label: 'Return to Bloodhoof' }
   ],
   tin_barrens: [
     { x: 51.0, y: 30.0, label: 'The Crossroads (Start)' },
-    { x: 56.5, y: 18.0, label: 'Sludge Fen Mountain Ledge' },
-    { x: 62.5, y: 28.5, label: 'Boulder Lode Mine Rim' },
-    { x: 60.0, y: 42.0, label: 'Ratchet Mountain Pass' },
-    { x: 52.5, y: 46.5, label: 'The Stagnant Oasis Bluffs' },
-    { x: 45.5, y: 38.0, label: 'Dreadmist Peak Foothills' },
-    { x: 48.0, y: 32.5, label: 'Forgotten Pools Ridge' },
+    { x: 45.0, y: 22.5, label: 'Forgotten Pools Ridge' },
+    { x: 48.5, y: 14.5, label: 'Drygulch Border Hills' },
+    { x: 56.5, y: 13.5, label: 'Sludge Fen Mountain Ledge' },
+    { x: 63.0, y: 21.0, label: 'Boulder Lode Mine Rim' },
+    { x: 61.5, y: 35.0, label: 'Ratchet Mountain Pass' },
+    { x: 55.0, y: 42.0, label: 'Stagnant Oasis Bluffs' },
+    { x: 47.5, y: 36.0, label: 'Dreadmist Peak Foothills' },
     { x: 51.0, y: 30.0, label: 'Return to Crossroads' }
   ],
   tin_westfall: [
-    { x: 42.0, y: 68.0, label: 'Sentinel Hill Ridge (Start)' },
-    { x: 44.5, y: 80.5, label: 'Moonbrook & Deadmines Exterior Rim' },
-    { x: 33.2, y: 76.5, label: 'Demont\'s Place Coastal Cliffs' },
-    { x: 29.0, y: 60.0, label: 'Westfall Lighthouse Ledges' },
-    { x: 32.5, y: 48.0, label: 'Alexston Farmstead Foothills' },
-    { x: 36.5, y: 40.5, label: 'Jansen Farm Boundary' },
-    { x: 42.0, y: 52.0, label: 'Saldean\'s Farm Perimeter' },
-    { x: 42.0, y: 68.0, label: 'Return to Sentinel Hill' }
+    { x: 53.0, y: 53.0, label: 'Sentinel Hill (Start)' },
+    { x: 54.0, y: 34.0, label: "Saldean's & Jansen Farm Hills" },
+    { x: 42.0, y: 26.0, label: 'Northern Longshore Bluffs' },
+    { x: 33.0, y: 43.0, label: 'Gold Coast Quarry Cliffs' },
+    { x: 30.0, y: 63.0, label: "Demont's Place Coastal Ledges" },
+    { x: 33.5, y: 79.5, label: 'Westfall Lighthouse Cliffs' },
+    { x: 45.0, y: 82.0, label: 'Moonbrook & Deadmines Exterior' },
+    { x: 56.5, y: 73.5, label: 'Dagger Hills Mountain Wall' },
+    { x: 59.5, y: 59.0, label: 'Dust Plains Eastern Ridge' },
+    { x: 53.0, y: 53.0, label: 'Return to Sentinel Hill' }
   ],
   tin_loch_modan: [
-    { x: 48.0, y: 64.0, label: 'Thelsamar Valley (Start)' },
-    { x: 48.5, y: 22.0, label: 'Stonewrought Dam Base Ledges' },
-    { x: 65.0, y: 45.0, label: 'Eastern Mountain Perimeter' },
-    { x: 68.5, y: 68.0, label: 'Grizzlepaw Ridge Caves' },
-    { x: 65.0, y: 82.5, label: 'Ironband\'s Excavation Rim' },
-    { x: 46.0, y: 84.0, label: 'Valley of Kings Pass' },
-    { x: 35.5, y: 78.0, label: 'Western Trogg Mountain Wall' },
-    { x: 36.0, y: 60.0, label: 'Silver Stream Mine Rim' },
-    { x: 48.0, y: 64.0, label: 'Return to Thelsamar' }
+    { x: 35.5, y: 48.5, label: 'Thelsamar Valley (Start)' },
+    { x: 35.0, y: 23.5, label: 'Silver Stream Mine Rim' },
+    { x: 48.5, y: 16.5, label: 'Stonewrought Dam Base Ledges' },
+    { x: 67.5, y: 27.5, label: "Mo'grosh Stronghold Cliffs" },
+    { x: 75.5, y: 50.0, label: 'Eastern Mountain Perimeter' },
+    { x: 66.5, y: 67.5, label: "Ironband's Excavation Rim" },
+    { x: 44.0, y: 69.0, label: 'Grizzlepaw Ridge Caves' },
+    { x: 26.5, y: 62.0, label: 'Valley of Kings Pass' },
+    { x: 35.5, y: 48.5, label: 'Return to Thelsamar' }
   ],
   tin_hillsbrad: [
-    { x: 56.0, y: 52.0, label: 'Tarren Mill / Southshore Border (Start)' },
-    { x: 74.0, y: 40.0, label: 'Durnholde Keep Outer Mountain Rim' },
-    { x: 82.5, y: 50.0, label: 'Eastern Highlands Border Ledge' },
-    { x: 76.0, y: 62.0, label: 'Thoradin\'s Wall Approach' },
-    { x: 65.0, y: 68.5, label: 'Southern Coast Ocean Cliffs' },
-    { x: 48.0, y: 64.0, label: 'Southshore Outskirts Rim' },
-    { x: 38.5, y: 58.0, label: 'Nethander Farm Foothills' },
-    { x: 44.0, y: 48.0, label: 'Hillsbrad Fields Perimeter' },
-    { x: 56.0, y: 52.0, label: 'Return to Starting Ridge' }
+    { x: 50.0, y: 58.0, label: 'Southshore Outskirts (Start)' },
+    { x: 66.5, y: 67.0, label: 'Dun Garok Coastal Hills' },
+    { x: 81.0, y: 56.0, label: "Thoradin's Wall Ridge" },
+    { x: 75.5, y: 38.5, label: 'Durnholde Keep Outer Rim' },
+    { x: 58.5, y: 31.0, label: 'Tarren Mill Northern Foothills' },
+    { x: 39.0, y: 36.5, label: 'Northpoint Tower Ridge' },
+    { x: 31.5, y: 54.0, label: 'Azurelode Mine Perimeter' },
+    { x: 39.5, y: 64.0, label: 'Western Strand Coastal Cliffs' },
+    { x: 50.0, y: 58.0, label: 'Return to Southshore' }
   ],
   iron_arathi: [
-    { x: 46.0, y: 46.0, label: 'Refuge Pointe / Hammerfall Border (Start)' },
-    { x: 34.0, y: 30.0, label: 'Northfold Manor Mountain Ridge' },
-    { x: 24.5, y: 62.0, label: 'Stromgarde Keep Outer Wall Rim' },
-    { x: 38.0, y: 78.0, label: 'Faldir\'s Cove Descent Pass' },
-    { x: 66.0, y: 72.5, label: 'Witherbark Village Outer Ledges' },
-    { x: 68.5, y: 56.0, label: 'Go\'Shek Farm Mountain Perimeter' },
-    { x: 74.5, y: 36.0, label: 'Hammerfall Cliffs' },
-    { x: 58.0, y: 34.0, label: 'Boulderfist Hall Perimeter' },
-    { x: 46.0, y: 46.0, label: 'Return to Central Plateau' }
+    { x: 44.0, y: 32.0, label: 'Refuge Pointe North Ridge (Start)' },
+    { x: 58.0, y: 27.5, label: 'Boulderfist Outpost Wall' },
+    { x: 74.0, y: 34.5, label: 'Hammerfall Outer Cliffs' },
+    { x: 72.0, y: 55.5, label: "Go'Shek Farm Mountain Rim" },
+    { x: 65.5, y: 72.0, label: 'Witherbark Village Ledges' },
+    { x: 44.0, y: 75.0, label: 'Southern Gorge Boundary' },
+    { x: 26.0, y: 60.5, label: 'Stromgarde Keep Outer Wall' },
+    { x: 26.5, y: 40.0, label: "Thoradin's Wall Ridge" },
+    { x: 34.5, y: 28.5, label: 'Northfold Manor Mountain Ridge' },
+    { x: 44.0, y: 32.0, label: 'Return to Refuge Pointe Ridge' }
   ],
   iron_needles: [
-    { x: 68.0, y: 78.0, label: 'Shimmering Flats Rim (Start)' },
-    { x: 78.0, y: 75.0, label: 'Mirage Raceway Northern Wall' },
-    { x: 84.5, y: 82.0, label: 'Eastern Salt Basin Cliffs' },
-    { x: 82.0, y: 89.0, label: 'Southbreak Tunnel Approach' },
-    { x: 72.0, y: 92.5, label: 'Rustmaul Digsite Ledges' },
-    { x: 64.0, y: 84.0, label: 'Western Salt Flats Boundary' },
-    { x: 68.0, y: 78.0, label: 'Return to Shimmering Flats Rim' }
+    { x: 78.0, y: 75.0, label: 'Mirage Raceway (Start)' },
+    { x: 80.5, y: 61.0, label: 'Shimmering Flats North Wall' },
+    { x: 68.0, y: 58.5, label: 'Screeching Canyon Pass' },
+    { x: 53.5, y: 52.0, label: 'Splithoof Crag Exterior' },
+    { x: 49.0, y: 65.0, label: 'Freewind Post Pillar Base' },
+    { x: 64.5, y: 82.5, label: 'Tahonda Ruins Rim' },
+    { x: 75.5, y: 90.5, label: 'Rustmaul Digsite Ledges' },
+    { x: 86.0, y: 81.5, label: 'Eastern Salt Basin Cliffs' },
+    { x: 78.0, y: 75.0, label: 'Return to Mirage Raceway' }
   ],
   iron_badlands: [
-    { x: 54.0, y: 32.0, label: 'Dustwind Dig (Start)' },
-    { x: 60.5, y: 24.0, label: 'Northern Basin Wall' },
-    { x: 48.0, y: 22.0, label: 'Lethlor Boundary Cliffs' },
-    { x: 42.0, y: 28.5, label: 'Angor Fortress Perimeter' },
-    { x: 32.0, y: 42.0, label: 'Lethlor Ravine Rim' },
-    { x: 36.5, y: 54.0, label: 'Camp Kosh Outskirts' },
-    { x: 48.0, y: 48.0, label: 'Mirage Flats Basin' },
-    { x: 54.0, y: 32.0, label: 'Return to Dustwind Dig' }
+    { x: 16.0, y: 44.0, label: 'Kargath Outskirts (Start)' },
+    { x: 23.0, y: 30.0, label: 'Northwestern Canyon Wall' },
+    { x: 38.5, y: 23.5, label: 'Angor Fortress Rim' },
+    { x: 52.0, y: 18.5, label: 'Uldaman Exterior Ravine' },
+    { x: 64.0, y: 30.5, label: "Hammertoe's Digsite Ledges" },
+    { x: 58.0, y: 46.5, label: 'Dustwind Dig Canyon' },
+    { x: 42.0, y: 51.0, label: 'Valley of Fangs North Ridge' },
+    { x: 27.5, y: 49.5, label: 'Dustbelcher Gorge Rim' },
+    { x: 16.0, y: 44.0, label: 'Return to Kargath' }
   ],
   iron_wetlands: [
-    { x: 64.0, y: 42.0, label: 'Greenwarden\'s Grove (Start)' },
-    { x: 68.5, y: 30.0, label: 'Ironband\'s Excavation Rim' },
-    { x: 74.0, y: 40.5, label: 'Raptor Ridge Mountain Wall' },
-    { x: 68.0, y: 56.0, label: 'Angerfang Encampment Ledges' },
-    { x: 56.5, y: 64.0, label: 'Mosshide Fen Boundary' },
-    { x: 45.0, y: 54.0, label: 'Whelgar\'s Excavation Perimeter' },
-    { x: 50.5, y: 40.0, label: 'Dun Modr Border Cliffs' },
-    { x: 64.0, y: 42.0, label: 'Return to Greenwarden\'s Grove' }
+    { x: 56.0, y: 42.0, label: "Greenwarden's Grove (Start)" },
+    { x: 69.0, y: 36.0, label: 'Raptor Ridge Mountain Wall' },
+    { x: 62.0, y: 25.0, label: 'Direforge Hill Cliffs' },
+    { x: 48.0, y: 24.0, label: 'Dun Modr Southern Ledges' },
+    { x: 41.5, y: 36.5, label: "Ironbeard's Tomb Ridge" },
+    { x: 36.5, y: 50.5, label: "Whelgar's Excavation Rim" },
+    { x: 50.0, y: 62.5, label: 'Thelgen Rock Spider Cave' },
+    { x: 64.5, y: 57.5, label: 'Angerfang Encampment Foothills' },
+    { x: 56.0, y: 42.0, label: "Return to Greenwarden's Grove" }
   ],
   mithril_badlands: [
-    { x: 24.0, y: 54.0, label: 'Camp Cagg Perimeter (Start)' },
-    { x: 18.0, y: 40.0, label: 'Far Western Plateau Cliffs' },
-    { x: 32.0, y: 26.0, label: 'Angor Fortress Exterior' },
-    { x: 45.0, y: 22.0, label: 'North Basin Mountain Wall' },
-    { x: 68.0, y: 28.0, label: 'Apocryphan\'s Rest Ledges' },
-    { x: 80.5, y: 52.0, label: 'Eastern Dragon Canyon Rim' },
-    { x: 74.0, y: 68.0, label: 'Mirage Ridge Southeast' },
-    { x: 60.0, y: 75.0, label: 'Southern Mountain Wall' },
-    { x: 42.0, y: 72.0, label: 'Camp Boff Perimeter' },
-    { x: 24.0, y: 54.0, label: 'Return to Camp Cagg' }
+    { x: 14.0, y: 48.0, label: 'Kargath Perimeter (Start)' },
+    { x: 15.0, y: 62.5, label: "Apocryphan's Rest Cliffs" },
+    { x: 21.0, y: 78.0, label: 'Camp Cagg Southern Wall' },
+    { x: 46.5, y: 76.5, label: "Agmond's End Mountain Ridge" },
+    { x: 66.0, y: 77.5, label: 'Mirage Flats Basin Rim' },
+    { x: 82.0, y: 58.0, label: 'Lethlor Ravine Dragon Canyon' },
+    { x: 75.5, y: 32.0, label: 'Camp Kosh Northeast Wall' },
+    { x: 54.0, y: 18.0, label: 'Uldaman Canyon Approach' },
+    { x: 35.0, y: 24.5, label: 'Angor Fortress Exterior' },
+    { x: 14.0, y: 48.0, label: 'Return to Kargath' }
   ],
   mithril_hinterlands: [
-    { x: 58.0, y: 56.0, label: 'Jintha\'Alor Plateau Border (Start)' },
-    { x: 64.0, y: 68.5, label: 'Jintha\'Alor Exterior Base' },
-    { x: 76.0, y: 58.0, label: 'Overlook Cliffs Rim' },
-    { x: 78.5, y: 42.0, label: 'Zun\'watha Mountain Ridge' },
-    { x: 62.0, y: 32.0, label: 'Seradane Exterior Wall' },
-    { x: 46.0, y: 38.0, label: 'Aerie Peak South Valley' },
-    { x: 34.0, y: 54.0, label: 'Shadra\'Alor Temple Rim' },
-    { x: 45.0, y: 62.0, label: 'Agol\'watha Perimeter' },
-    { x: 58.0, y: 56.0, label: 'Return to Central Plateau' }
+    { x: 22.0, y: 48.0, label: 'Aerie Peak Foothills (Start)' },
+    { x: 29.0, y: 34.0, label: 'Plaguemist Ravine Cliffs' },
+    { x: 48.0, y: 38.0, label: "Agol'watha & Skulk Rock Ridge" },
+    { x: 63.5, y: 29.5, label: 'Seradane Outer Mountain Wall' },
+    { x: 76.5, y: 46.5, label: 'Overlook Cliffs Rim' },
+    { x: 67.5, y: 67.0, label: "Jintha'Alor Exterior Base" },
+    { x: 49.0, y: 69.5, label: 'Southern River Gorge Wall' },
+    { x: 34.0, y: 61.5, label: "Shadra'Alor Temple Rim" },
+    { x: 22.0, y: 48.0, label: 'Return to Aerie Peak' }
   ],
   mithril_searing_gorge: [
-    { x: 42.0, y: 48.0, label: 'Thorium Point Trail (Start)' },
-    { x: 36.0, y: 40.0, label: 'The Cauldron Northern Rim' },
-    { x: 32.5, y: 52.0, label: 'Firewatch Ridge Foothills' },
-    { x: 44.0, y: 58.5, label: 'Slag Pit Exterior Ledges' },
-    { x: 58.0, y: 64.0, label: 'Blackchar Cave Mountain Boundary' },
-    { x: 64.5, y: 45.0, label: 'Sea of Fire Rim' },
-    { x: 52.0, y: 32.0, label: 'Grimesilt Dig Perimeter' },
-    { x: 42.0, y: 48.0, label: 'Return to Thorium Point' }
+    { x: 38.0, y: 28.0, label: 'Thorium Point (Start)' },
+    { x: 54.5, y: 31.5, label: 'Northern Cauldron Rim' },
+    { x: 68.0, y: 38.0, label: 'Dustfire Valley Cliffs' },
+    { x: 65.5, y: 58.0, label: 'Grimesilt Dig Perimeter' },
+    { x: 61.0, y: 73.5, label: 'Tanner Camp Southern Wall' },
+    { x: 43.5, y: 77.5, label: 'Blackchar Cave Foothills' },
+    { x: 28.0, y: 69.0, label: 'Sea of Fire Magma Rim' },
+    { x: 24.5, y: 47.0, label: 'Firewatch Ridge Cliffs' },
+    { x: 38.0, y: 28.0, label: 'Return to Thorium Point' }
   ],
   mithril_tanaris: [
-    { x: 52.0, y: 46.0, label: 'Gadgetzan Perimeter (Start)' },
-    { x: 60.5, y: 32.0, label: 'Noonshade Ruins Bluffs' },
-    { x: 66.0, y: 26.5, label: 'Steamwheedle Port Coast' },
-    { x: 68.5, y: 62.0, label: 'Southbreak Shore Cliffs' },
-    { x: 54.0, y: 70.0, label: 'Dunemaul Compound Ridge' },
-    { x: 32.0, y: 70.0, label: 'Thistleshrub Valley Perimeter' },
-    { x: 34.0, y: 46.0, label: 'Noxious Lair Insect Rim' },
-    { x: 42.0, y: 38.0, label: 'Zul\'Farrak Outer Mountain Wall' },
-    { x: 52.0, y: 46.0, label: 'Return to Gadgetzan' }
+    { x: 51.0, y: 28.0, label: 'Gadgetzan Perimeter (Start)' },
+    { x: 39.0, y: 29.0, label: "Zul'Farrak Outer Mountain Wall" },
+    { x: 31.5, y: 46.5, label: 'Noxious Lair Western Rim' },
+    { x: 29.5, y: 65.5, label: 'Thistleshrub Valley Cliffs' },
+    { x: 40.0, y: 77.5, label: 'Southern Uldum Gate Ridge' },
+    { x: 56.0, y: 73.0, label: 'Eastmoon Ruins Foothills' },
+    { x: 66.5, y: 58.5, label: 'Southbreak Shore Cliffs' },
+    { x: 68.0, y: 41.0, label: 'Lost Rigger Cove Mountain Wall' },
+    { x: 60.0, y: 25.0, label: 'Noonshade Ruins Bluffs' },
+    { x: 51.0, y: 28.0, label: 'Return to Gadgetzan' }
   ],
   thorium_ungoro: [
-    { x: 50.0, y: 48.0, label: 'Marshal\'s Stand (Start)' },
-    { x: 60.0, y: 20.0, label: 'Northern Perimeter Wall' },
-    { x: 72.0, y: 46.0, label: 'Eastern Slopes & Lakkari Tar Pits' },
-    { x: 66.0, y: 78.0, label: 'Slithering Scar Hive Entrances' },
-    { x: 48.0, y: 88.0, label: 'Southern Ridge Crater Wall' },
-    { x: 30.0, y: 68.0, label: 'Golakka Hot Springs Slopes' },
-    { x: 32.0, y: 36.0, label: 'Western Marsh Mountain Rim' },
-    { x: 50.0, y: 50.0, label: 'Fire Plume Ridge Inner Loop' },
-    { x: 50.0, y: 48.0, label: 'Return to Marshal\'s Stand' }
+    { x: 46.0, y: 14.0, label: "Marshal's Stand (Start)" },
+    { x: 64.5, y: 18.5, label: 'Fungal Rock Northern Wall' },
+    { x: 75.5, y: 42.0, label: 'Eastern Crater Slopes' },
+    { x: 70.5, y: 66.0, label: 'Ironstone Plateau Ledges' },
+    { x: 55.5, y: 78.5, label: 'Slithering Scar Hive Rim' },
+    { x: 38.0, y: 80.0, label: 'Terror Run Southern Wall' },
+    { x: 28.5, y: 60.0, label: 'Golakka Hot Springs Slopes' },
+    { x: 29.0, y: 36.0, label: 'Western Marsh Mountain Rim' },
+    { x: 46.0, y: 14.0, label: "Return to Marshal's Stand" }
   ],
   thorium_winterspring: [
-    { x: 60.0, y: 50.0, label: 'Everlook Outskirts (Start)' },
-    { x: 52.0, y: 42.0, label: 'Lake Kel\'Theril Ruins Rim' },
-    { x: 50.0, y: 30.0, label: 'Starfall Village Foothills' },
-    { x: 48.0, y: 18.0, label: 'Frostsaber Rock Slopes' },
-    { x: 58.0, y: 65.0, label: 'Mazthoril Canyon Mountain Wall' },
-    { x: 64.0, y: 74.0, label: 'Owl Wing Thicket Ridge' },
-    { x: 66.5, y: 60.0, label: 'Winterfall Village Exterior' },
-    { x: 60.0, y: 50.0, label: 'Return to Everlook' }
+    { x: 60.0, y: 38.0, label: 'Everlook Outskirts (Start)' },
+    { x: 52.0, y: 27.5, label: 'Starfall Village Foothills' },
+    { x: 48.0, y: 16.5, label: 'Frostsaber Rock Slopes' },
+    { x: 37.5, y: 34.5, label: 'Western Mountain Ridge' },
+    { x: 47.5, y: 45.5, label: "Lake Kel'Theril Ruins Rim" },
+    { x: 55.5, y: 56.0, label: 'Mazthoril Canyon Wall' },
+    { x: 64.5, y: 61.5, label: 'Owl Wing Thicket Ridge' },
+    { x: 68.5, y: 47.0, label: 'Ice Thistle Hills Perimeter' },
+    { x: 60.0, y: 38.0, label: 'Return to Everlook' }
   ],
   thorium_epl: [
-    { x: 65.0, y: 45.0, label: 'Light\'s Hope Chapel (Start)' },
-    { x: 74.0, y: 30.0, label: 'Noxious Glade Perimeter' },
-    { x: 68.0, y: 18.0, label: 'Northpass Tower Mountain Wall' },
-    { x: 56.0, y: 42.0, label: 'Corin\'s Crossing Outskirts' },
-    { x: 44.0, y: 48.0, label: 'Blackwood Lake Cauldron Ridge' },
-    { x: 36.0, y: 70.0, label: 'Darrowshire Mountain Foothills' },
-    { x: 52.0, y: 78.0, label: 'Southern Fungal Wall' },
-    { x: 65.0, y: 45.0, label: 'Return to Light\'s Hope' }
+    { x: 79.0, y: 58.0, label: "Light's Hope Chapel (Start)" },
+    { x: 62.0, y: 74.5, label: 'Lake Mereldar Southern Ridge' },
+    { x: 37.5, y: 79.0, label: 'Darrowshire Mountain Foothills' },
+    { x: 33.0, y: 56.0, label: 'Fungal Vale Western Cliffs' },
+    { x: 31.0, y: 32.0, label: 'Plaguewood Outer Wall' },
+    { x: 52.0, y: 21.5, label: 'Northpass Tower Mountain Wall' },
+    { x: 74.5, y: 31.0, label: 'Noxious Glade Perimeter' },
+    { x: 79.5, y: 44.0, label: 'Eastwall Tower Ridge' },
+    { x: 79.0, y: 58.0, label: "Return to Light's Hope" }
   ],
   thorium_silithus: [
-    { x: 48.0, y: 42.0, label: 'Cenarion Hold (Start)' },
-    { x: 56.0, y: 28.0, label: 'Hive\'Ashi Exterior Perimeter' },
-    { x: 62.0, y: 48.0, label: 'Eastern Mountain Wall' },
-    { x: 58.0, y: 72.0, label: 'Hive\'Regal Outer Rim' },
-    { x: 64.0, y: 82.0, label: 'Southwind Village Cliffs' },
-    { x: 46.0, y: 86.0, label: 'Southern Desert Border' },
-    { x: 36.0, y: 68.0, label: 'Hive\'Zora Exterior Ledges' },
-    { x: 32.0, y: 44.0, label: 'Twilight Post Mountain Ridge' },
-    { x: 48.0, y: 42.0, label: 'Return to Cenarion Hold' }
+    { x: 51.0, y: 38.0, label: 'Cenarion Hold (Start)' },
+    { x: 48.0, y: 20.5, label: "Hive'Ashi Northern Rim" },
+    { x: 28.5, y: 34.5, label: 'Twilight Base Camp Ridge' },
+    { x: 26.0, y: 56.0, label: "Hive'Zora Western Ledges" },
+    { x: 38.0, y: 73.0, label: 'Bones of Grakkarond Border' },
+    { x: 56.5, y: 79.5, label: "Hive'Regal Southern Wall" },
+    { x: 64.5, y: 61.0, label: 'Southwind Village Cliffs' },
+    { x: 65.5, y: 42.0, label: 'Staghelm Point Eastern Wall' },
+    { x: 51.0, y: 38.0, label: 'Return to Cenarion Hold' }
   ],
 
   // === 28 HERBALISM ROUTES ===
   herb_durotar: [
-    { x: 48.0, y: 52.0, label: 'Razor Hill (Start)' },
-    { x: 44.0, y: 62.0, label: 'Southfury River Banks' },
-    { x: 54.0, y: 72.0, label: 'Sen\'jin Village Coast' },
-    { x: 44.0, y: 68.0, label: 'Valley of Trials Hills' },
-    { x: 42.0, y: 56.0, label: 'Dry Gullies North' },
-    { x: 46.0, y: 50.0, label: 'Razor Rock Foothills' },
-    { x: 48.0, y: 52.0, label: 'Return to Razor Hill' }
+    { x: 52.0, y: 43.0, label: 'Razor Hill (Start)' },
+    { x: 54.5, y: 55.0, label: 'Tiragarde Keep Plains' },
+    { x: 55.5, y: 68.5, label: "Sen'jin Village Approach" },
+    { x: 50.0, y: 76.0, label: 'Southern Dirt Plains' },
+    { x: 43.5, y: 68.0, label: 'Valley of Trials Hills' },
+    { x: 41.0, y: 56.0, label: 'Southfury River Banks' },
+    { x: 43.5, y: 45.0, label: 'Thunder Ridge Gullies' },
+    { x: 48.0, y: 40.0, label: 'Drygulch Ravine Crags' },
+    { x: 52.0, y: 43.0, label: 'Return to Razor Hill' }
   ],
   herb_elwynn: [
-    { x: 45.0, y: 55.0, label: 'Goldshire (Start)' },
-    { x: 52.0, y: 58.0, label: 'Crystal Lake Shoreline' },
-    { x: 48.0, y: 45.0, label: 'Northshire River Crossing' },
-    { x: 38.0, y: 50.0, label: 'Mirror Lake Tree Line' },
-    { x: 34.0, y: 64.0, label: 'Stonefield Farm Meadows' },
-    { x: 42.0, y: 62.0, label: 'Fargodeep Plains' },
-    { x: 45.0, y: 55.0, label: 'Return to Goldshire' }
+    { x: 42.0, y: 65.0, label: 'Goldshire (Start)' },
+    { x: 45.0, y: 75.5, label: 'Fargodeep Forest Meadows' },
+    { x: 54.5, y: 72.0, label: "Jerod's Landing Riverbank" },
+    { x: 56.0, y: 60.0, label: 'Crystal Lake Shoreline' },
+    { x: 50.5, y: 50.0, label: 'Northshire River Crossing' },
+    { x: 41.0, y: 49.5, label: 'Westbrook Forest Border' },
+    { x: 32.5, y: 55.0, label: 'Mirror Lake Tree Line' },
+    { x: 34.5, y: 68.0, label: 'Stonefield Farm Meadows' },
+    { x: 42.0, y: 65.0, label: 'Return to Goldshire' }
   ],
   herb_tirisfal: [
-    { x: 58.0, y: 48.0, label: 'Brill (Start)' },
-    { x: 66.0, y: 44.0, label: 'Stillwater Pond Banks' },
-    { x: 74.0, y: 56.0, label: 'Balnir Farmstead' },
-    { x: 60.0, y: 68.0, label: 'Undercity Perimeter Walls' },
-    { x: 46.0, y: 60.0, label: 'Nightmare Vale Clearing' },
-    { x: 48.0, y: 36.0, label: 'Agamand Mills Plains' },
-    { x: 58.0, y: 48.0, label: 'Return to Brill' }
+    { x: 59.0, y: 52.0, label: 'Brill (Start)' },
+    { x: 66.5, y: 45.5, label: 'Stillwater Pond Banks' },
+    { x: 73.5, y: 57.5, label: 'Balnir Farmstead Fields' },
+    { x: 61.0, y: 68.0, label: 'Undercity Outer Moat' },
+    { x: 46.5, y: 62.0, label: 'Nightmare Vale Clearing' },
+    { x: 46.0, y: 48.0, label: 'Cold Hearth Manor Woods' },
+    { x: 47.5, y: 36.0, label: 'Agamand Mills Plains' },
+    { x: 56.5, y: 38.5, label: 'Whispering Gardens Groves' },
+    { x: 59.0, y: 52.0, label: 'Return to Brill' }
   ],
   herb_teldrassil: [
-    { x: 55.0, y: 58.0, label: 'Dolanaar (Start)' },
-    { x: 56.0, y: 64.0, label: 'Lake Al\'Ameth Perimeter' },
-    { x: 64.0, y: 52.0, label: 'Starbreeze Village Ruins' },
-    { x: 58.0, y: 42.0, label: 'Tree Hollow Groves' },
-    { x: 50.0, y: 42.0, label: 'Ban\'ethil Hollow Border' },
-    { x: 55.0, y: 58.0, label: 'Return to Dolanaar' }
+    { x: 56.0, y: 58.0, label: 'Dolanaar (Start)' },
+    { x: 56.5, y: 67.0, label: "Lake Al'Ameth Shoreline" },
+    { x: 64.5, y: 61.0, label: 'Eastern Canopy Roots' },
+    { x: 65.0, y: 49.5, label: 'Starbreeze Village Ruins' },
+    { x: 56.0, y: 39.5, label: 'Wellspring River Banks' },
+    { x: 46.5, y: 44.5, label: "Ban'ethil Hollow Border" },
+    { x: 44.0, y: 56.0, label: 'Pools of Arlithrien' },
+    { x: 49.5, y: 62.5, label: 'Oracle Glade Approach' },
+    { x: 56.0, y: 58.0, label: 'Return to Dolanaar' }
   ],
   herb_barrens: [
-    { x: 45.0, y: 40.0, label: 'The Crossroads (Start)' },
-    { x: 45.0, y: 24.0, label: 'Forgotten Pools Oasis' },
-    { x: 56.0, y: 42.0, label: 'The Stagnant Oasis' },
-    { x: 46.0, y: 56.0, label: 'Lushwater Oasis' },
-    { x: 42.0, y: 46.0, label: 'Wailing Caverns Approach' },
-    { x: 45.0, y: 40.0, label: 'Return to Crossroads' }
+    { x: 51.0, y: 30.0, label: 'The Crossroads (Start)' },
+    { x: 55.5, y: 36.0, label: 'Eastern Savanna Plain' },
+    { x: 55.5, y: 43.0, label: 'The Stagnant Oasis' },
+    { x: 49.5, y: 44.0, label: 'Southern Oasis Trail' },
+    { x: 45.5, y: 40.0, label: 'Lushwater Oasis' },
+    { x: 44.5, y: 32.5, label: 'Wailing Caverns Approach' },
+    { x: 45.0, y: 22.5, label: 'Forgotten Pools Oasis' },
+    { x: 49.5, y: 23.0, label: 'Dreadmist Savanna' },
+    { x: 51.0, y: 30.0, label: 'Return to Crossroads' }
   ],
   herb_westfall: [
-    { x: 35.0, y: 55.0, label: 'Sentinel Hill Outskirts (Start)' },
-    { x: 26.0, y: 46.0, label: 'Longshore Coast (Stranglekelp)' },
-    { x: 28.0, y: 74.0, label: 'Demont\'s Place Shoreline' },
-    { x: 40.0, y: 78.0, label: 'Moonbrook Hills (Briarthorn)' },
-    { x: 46.0, y: 54.0, label: 'Saldean\'s Farmland' },
-    { x: 35.0, y: 55.0, label: 'Return to Sentinel Hill' }
+    { x: 53.0, y: 53.0, label: 'Sentinel Hill (Start)' },
+    { x: 46.0, y: 38.0, label: "Furlbrow's Pumpkin Farm" },
+    { x: 34.0, y: 34.0, label: 'Longshore North (Stranglekelp)' },
+    { x: 30.0, y: 52.0, label: 'Gold Coast Shoreline' },
+    { x: 29.0, y: 71.0, label: "Demont's Place Beach" },
+    { x: 41.5, y: 78.0, label: 'Moonbrook Hills (Briarthorn)' },
+    { x: 53.5, y: 69.0, label: 'Dagger Hills Foothills' },
+    { x: 56.5, y: 56.0, label: "Saldean's Farmland" },
+    { x: 53.0, y: 53.0, label: 'Return to Sentinel Hill' }
   ],
   herb_loch_modan: [
     { x: 36.0, y: 48.0, label: 'Thelsamar Outskirts (Start)' },
-    { x: 50.0, y: 46.0, label: 'Central Farmlands' },
-    { x: 50.0, y: 24.0, label: 'Southern Dam Base' },
-    { x: 42.0, y: 60.0, label: 'Peaceful Central Valley' },
-    { x: 34.0, y: 56.0, label: 'Valley Meadows' },
+    { x: 37.5, y: 31.0, label: 'Algaz Station Valley' },
+    { x: 46.5, y: 20.5, label: 'Stonewrought Dam Approach' },
+    { x: 51.5, y: 34.5, label: 'Northwest Loch Shoreline' },
+    { x: 52.0, y: 53.5, label: 'Southwest Loch Reeds' },
+    { x: 45.5, y: 65.5, label: 'Grizzlepaw Foothills' },
+    { x: 34.0, y: 61.0, label: 'Stonesplinter Valley Meadows' },
     { x: 36.0, y: 48.0, label: 'Return to Thelsamar' }
   ],
   herb_silverpine: [
     { x: 46.0, y: 42.0, label: 'The Sepulcher (Start)' },
-    { x: 58.0, y: 62.0, label: 'Ambermill Foothills' },
-    { x: 44.0, y: 72.0, label: 'Shadowfang Keep Coast' },
-    { x: 38.0, y: 52.0, label: 'Silverpine Shoreline (Stranglekelp)' },
-    { x: 42.0, y: 44.0, label: 'Misty Forest Pass' },
+    { x: 37.0, y: 36.5, label: "North Tide's Hollow Coast" },
+    { x: 35.5, y: 54.0, label: 'Silverpine Shoreline (Stranglekelp)' },
+    { x: 41.5, y: 71.5, label: 'Shadowfang Keep Coastal Bluff' },
+    { x: 57.5, y: 64.0, label: 'Ambermill Foothills' },
+    { x: 58.0, y: 47.5, label: 'Shining Strand Lake Shore' },
+    { x: 51.5, y: 36.0, label: "Olsen's Farthing Woods" },
     { x: 46.0, y: 42.0, label: 'Return to The Sepulcher' }
   ],
   herb_hillsbrad: [
-    { x: 52.0, y: 45.0, label: 'Tarren Mill (Start)' },
-    { x: 70.0, y: 38.0, label: 'Durnholde Keep Plateau' },
-    { x: 64.0, y: 28.0, label: 'Northern Plateau Rim' },
-    { x: 48.0, y: 58.0, label: 'Southshore Northern Hills' },
-    { x: 46.0, y: 48.0, label: 'River Banks Crossing' },
-    { x: 52.0, y: 45.0, label: 'Return to Tarren Mill' }
+    { x: 56.0, y: 46.0, label: 'Tarren Mill Outskirts (Start)' },
+    { x: 58.0, y: 32.0, label: 'Northern Plateau Steps' },
+    { x: 72.0, y: 34.5, label: 'Durnholde Keep High Ridge' },
+    { x: 73.0, y: 48.0, label: 'Durnholde Southern Slope' },
+    { x: 60.0, y: 55.5, label: 'River Banks Crossing' },
+    { x: 47.5, y: 53.5, label: 'Southshore Northern Hills' },
+    { x: 37.5, y: 45.5, label: 'Hillsbrad Fields Perimeter' },
+    { x: 44.5, y: 34.0, label: 'Northpoint Tower Foothills' },
+    { x: 56.0, y: 46.0, label: 'Return to Tarren Mill' }
   ],
   herb_wetlands: [
-    { x: 50.0, y: 58.0, label: 'Menethil Sunken Road (Start)' },
-    { x: 38.0, y: 54.0, label: 'Menethil Marsh Basin' },
-    { x: 58.0, y: 44.0, label: 'Ironbeard\'s Tomb Crypts' },
-    { x: 62.0, y: 52.0, label: 'Raptor Marsh Grounds' },
-    { x: 44.0, y: 38.0, label: 'Murloc Shanties North' },
-    { x: 50.0, y: 58.0, label: 'Return to Menethil Road' }
+    { x: 32.0, y: 48.0, label: 'Menethil Marsh Outskirts (Start)' },
+    { x: 40.5, y: 56.5, label: 'Whelgar Sunken Road' },
+    { x: 52.5, y: 59.5, label: 'Mosshide Marsh Basin' },
+    { x: 59.5, y: 47.5, label: 'Raptor Marsh Grounds' },
+    { x: 48.5, y: 38.5, label: "Ironbeard's Tomb Crypts" },
+    { x: 38.5, y: 29.0, label: 'Sundown Marsh Reeds' },
+    { x: 26.5, y: 35.0, label: 'Bluegill Murloc Shanties' },
+    { x: 32.0, y: 48.0, label: 'Return to Menethil Outskirts' }
   ],
   herb_stonetalon: [
     { x: 48.0, y: 58.0, label: 'Sun Rock Retreat (Start)' },
-    { x: 46.0, y: 68.0, label: 'Canyon Path South' },
-    { x: 36.0, y: 76.0, label: 'Charred Vale Border' },
-    { x: 52.0, y: 82.0, label: 'Harpy Foothills' },
-    { x: 64.0, y: 70.0, label: 'Malaka\'jin High Switchbacks' },
+    { x: 59.5, y: 52.5, label: 'Windshear Crag Switchbacks' },
+    { x: 60.0, y: 67.5, label: 'Webwinder Canyon Path' },
+    { x: 48.5, y: 76.0, label: 'Sishir Canyon Foothills' },
+    { x: 33.5, y: 72.5, label: 'Charred Vale Southern Rim' },
+    { x: 31.5, y: 59.5, label: 'Charred Vale Harpy Ledges' },
+    { x: 41.0, y: 48.5, label: 'Mirkfallon Lake High Pass' },
     { x: 48.0, y: 58.0, label: 'Return to Sun Rock' }
   ],
   herb_redridge: [
-    { x: 45.0, y: 52.0, label: 'Lakeshire (Start)' },
-    { x: 46.0, y: 42.0, label: 'Lake Everstill Perimeter' },
-    { x: 62.0, y: 38.0, label: 'Render\'s Rock Foothills' },
-    { x: 68.0, y: 54.0, label: 'Gnoll Camp Cliffs' },
-    { x: 52.0, y: 64.0, label: 'Southern Mountain Ridge' },
-    { x: 45.0, y: 52.0, label: 'Return to Lakeshire' }
+    { x: 32.0, y: 48.0, label: 'Lakeshire (Start)' },
+    { x: 34.5, y: 28.5, label: 'Redridge Canyons Gnoll Ridges' },
+    { x: 52.5, y: 36.5, label: "Alther's Mill Timberlands" },
+    { x: 68.0, y: 48.5, label: "Render's Rock Foothills" },
+    { x: 66.5, y: 71.5, label: "Render's Valley Southern Cliffs" },
+    { x: 44.5, y: 71.5, label: 'Lakeridge Highway South' },
+    { x: 24.5, y: 61.5, label: 'Three Corners Ridge' },
+    { x: 32.0, y: 48.0, label: 'Return to Lakeshire' }
   ],
   herb_arathi: [
-    { x: 42.0, y: 52.0, label: 'Western Road Entry (Start)' },
-    { x: 64.0, y: 68.0, label: 'Witherbark Village Rim' },
-    { x: 68.0, y: 54.0, label: 'Go\'Shek Farm Perimeter' },
-    { x: 54.0, y: 42.0, label: 'Central Arathi Basin' },
-    { x: 46.0, y: 38.0, label: 'Elemental Binding Stones' },
-    { x: 42.0, y: 52.0, label: 'Return to Western Road' }
+    { x: 44.0, y: 48.0, label: 'Refuge Pointe Valley (Start)' },
+    { x: 35.0, y: 34.5, label: 'Circle of West Binding' },
+    { x: 52.0, y: 33.5, label: 'Boulderfist Outpost Ruins' },
+    { x: 66.0, y: 34.5, label: 'Circle of East Binding' },
+    { x: 64.5, y: 54.0, label: "Go'Shek Farm Perimeter" },
+    { x: 62.0, y: 68.0, label: 'Witherbark Village Rim' },
+    { x: 48.0, y: 62.0, label: 'Circle of Outer Binding' },
+    { x: 35.0, y: 56.5, label: 'Western Road Approach' },
+    { x: 44.0, y: 48.0, label: 'Return to Refuge Pointe' }
   ],
   herb_swamp: [
-    { x: 54.0, y: 46.0, label: 'Stonard Outskirts (Start)' },
-    { x: 60.0, y: 40.0, label: 'Pool of Tears Marsh' },
-    { x: 36.0, y: 48.0, label: 'Deadwind Pass Entrance Road' },
-    { x: 44.0, y: 64.0, label: 'Misty Reeds Southern Bog' },
-    { x: 66.0, y: 60.0, label: 'Coastal Swamp Boundary' },
-    { x: 54.0, y: 46.0, label: 'Return to Stonard' }
+    { x: 46.0, y: 54.0, label: 'Stonard Outskirts (Start)' },
+    { x: 51.0, y: 32.5, label: 'Fallow Sanctuary Bog' },
+    { x: 28.5, y: 33.0, label: 'The Harborage Reeds' },
+    { x: 21.5, y: 48.5, label: 'Splinterspear Junction Road' },
+    { x: 34.0, y: 65.5, label: 'Southern Cypress Groves' },
+    { x: 57.5, y: 70.5, label: 'Sorrowmurk Marshlands' },
+    { x: 63.0, y: 56.0, label: 'Pool of Tears Western Bank' },
+    { x: 46.0, y: 54.0, label: 'Return to Stonard' }
   ],
   herb_alterac: [
-    { x: 44.0, y: 54.0, label: 'Tarren Mill Snowline (Start)' },
-    { x: 38.0, y: 46.0, label: 'Ruins of Alterac Perimeter' },
-    { x: 34.0, y: 38.0, label: 'Growless Cave Exterior' },
-    { x: 50.0, y: 34.0, label: 'Syndicate Camps Foothills' },
-    { x: 44.0, y: 54.0, label: 'Return to Snowline' }
+    { x: 46.0, y: 62.0, label: 'Southern Snowline Pass (Start)' },
+    { x: 34.5, y: 55.5, label: 'Western Ruins of Alterac' },
+    { x: 34.0, y: 39.0, label: 'Growless Cave Yeti Exterior' },
+    { x: 43.5, y: 24.5, label: 'The Uplands Snowy Plateau' },
+    { x: 59.5, y: 38.5, label: 'Strahnbrad Village Ruins' },
+    { x: 57.5, y: 53.5, label: "Gallows' Corner Ridge" },
+    { x: 46.0, y: 62.0, label: 'Return to Snowline Pass' }
   ],
   herb_stv_north: [
-    { x: 44.0, y: 28.0, label: 'Rebel Camp (Start)' },
-    { x: 46.0, y: 20.0, label: 'Kurzen\'s Compound Perimeter' },
-    { x: 44.0, y: 38.0, label: 'Lake Nazferiti Rim' },
-    { x: 34.0, y: 36.0, label: 'Ruins of Bal\'lal' },
-    { x: 38.0, y: 26.0, label: 'River Banks North' },
-    { x: 44.0, y: 28.0, label: 'Return to Rebel Camp' }
+    { x: 36.0, y: 11.0, label: "Nesingwary's Expedition (Start)" },
+    { x: 27.5, y: 11.5, label: "Ruins of Zul'Kunda" },
+    { x: 28.5, y: 21.0, label: "Ruins of Bal'lal Coast" },
+    { x: 34.0, y: 26.5, label: "Kal'ai Jungle Clearing" },
+    { x: 42.5, y: 25.5, label: 'Mizjah Ruins Perimeter' },
+    { x: 44.5, y: 17.5, label: 'Lake Nazferiti East Bank' },
+    { x: 45.0, y: 9.0, label: "Kurzen's Compound Jungle" },
+    { x: 38.5, y: 5.5, label: 'Rebel Camp River Crossing' },
+    { x: 36.0, y: 11.0, label: "Return to Nesingwary's" }
   ],
   herb_tanaris: [
-    { x: 54.0, y: 42.0, label: 'Gadgetzan Dunes (Start)' },
-    { x: 58.0, y: 34.0, label: 'Noonshade Ruins Basin' },
-    { x: 34.0, y: 68.0, label: 'Thistleshrub Valley (Firebloom)' },
-    { x: 66.0, y: 58.0, label: 'Southbreak Shore' },
-    { x: 56.0, y: 48.0, label: 'Desert Foothills North' },
-    { x: 54.0, y: 42.0, label: 'Return to Gadgetzan' }
+    { x: 51.0, y: 28.0, label: 'Gadgetzan Dunes (Start)' },
+    { x: 60.0, y: 25.5, label: 'Noonshade Ruins Basin' },
+    { x: 62.5, y: 39.0, label: 'Waterspring Field Dunes' },
+    { x: 62.0, y: 56.5, label: 'Southbreak Shore Sands' },
+    { x: 49.0, y: 66.0, label: 'Eastmoon & Dunemaul Dunes' },
+    { x: 30.5, y: 64.0, label: 'Thistleshrub Valley (Firebloom)' },
+    { x: 35.0, y: 45.0, label: 'Noxious Lair Outer Sands' },
+    { x: 42.0, y: 34.0, label: 'Abyssal Sands North' },
+    { x: 51.0, y: 28.0, label: 'Return to Gadgetzan' }
   ],
   herb_searing_fire: [
-    { x: 38.0, y: 50.0, label: 'Thorium Point (Start)' },
-    { x: 34.0, y: 42.0, label: 'Firewatch Ridge Cliffs' },
-    { x: 52.0, y: 60.0, label: 'Sea of Fire Magma Plains' },
-    { x: 60.0, y: 42.0, label: 'Grimesilt Perimeter' },
-    { x: 38.0, y: 50.0, label: 'Return to Thorium Point' }
+    { x: 38.0, y: 28.0, label: 'Thorium Point (Start)' },
+    { x: 53.0, y: 33.5, label: 'Cauldron North Flats' },
+    { x: 64.5, y: 44.0, label: 'Dustfire Valley Plains' },
+    { x: 63.0, y: 60.5, label: 'Grimesilt Dig Perimeter' },
+    { x: 48.0, y: 72.0, label: 'Southern Lava Fissures' },
+    { x: 31.0, y: 71.0, label: 'Sea of Fire Magma Plains' },
+    { x: 25.5, y: 52.0, label: 'Firewatch Ridge Slopes' },
+    { x: 29.0, y: 36.0, label: 'Western Charcoal Flats' },
+    { x: 38.0, y: 28.0, label: 'Return to Thorium Point' }
   ],
   herb_hinterlands_lotus: [
-    { x: 52.0, y: 60.0, label: 'Central Valley (Start)' },
-    { x: 62.0, y: 66.0, label: 'Jintha\'Alor Exterior Base' },
-    { x: 50.0, y: 70.0, label: 'River Gorge Lowlands' },
-    { x: 38.0, y: 58.0, label: 'Shadra\'Alor Rim' },
-    { x: 52.0, y: 60.0, label: 'Return to Central Valley' }
+    { x: 44.0, y: 62.0, label: 'Valorwind Lake Ruins (Start)' },
+    { x: 62.5, y: 68.0, label: "Jintha'Alor Exterior Base" },
+    { x: 72.0, y: 52.5, label: "Shaol'watha Troll Ruins" },
+    { x: 55.0, y: 39.5, label: "Agol'watha & Skulk Rock" },
+    { x: 37.5, y: 45.0, label: 'Central Valley Ruins' },
+    { x: 31.0, y: 56.5, label: "Zun'watha Temple Stones" },
+    { x: 34.5, y: 68.5, label: "Shadra'Alor Exterior Rim" },
+    { x: 44.0, y: 62.0, label: 'Return to Valorwind Lake' }
   ],
   herb_badlands_flat: [
-    { x: 46.0, y: 50.0, label: 'Dustwind Dig (Start)' },
-    { x: 28.0, y: 52.0, label: 'Barren Flats towards Camp Cagg' },
-    { x: 38.0, y: 36.0, label: 'Coyote Bluffs North' },
-    { x: 58.0, y: 44.0, label: 'Mirage Flats East' },
-    { x: 46.0, y: 50.0, label: 'Return to Dustwind Dig' }
+    { x: 54.0, y: 42.0, label: 'Dustwind Dig Flats (Start)' },
+    { x: 42.0, y: 32.5, label: 'Northern Coyote Bluffs' },
+    { x: 24.5, y: 44.0, label: 'Western Barren Plains' },
+    { x: 24.0, y: 62.0, label: 'Camp Cagg Desert Basin' },
+    { x: 44.5, y: 68.5, label: "Agmond's End Scrubland" },
+    { x: 62.0, y: 67.5, label: 'Mirage Flats Basin' },
+    { x: 63.5, y: 51.0, label: 'Eastern Desert Corridor' },
+    { x: 54.0, y: 42.0, label: 'Return to Dustwind Dig' }
   ],
   herb_swamp_temple: [
-    { x: 62.0, y: 52.0, label: 'Sunken Temple Waterways (Start)' },
-    { x: 66.0, y: 42.0, label: 'North Canal Reeds' },
-    { x: 72.0, y: 50.0, label: 'East Bank Swamp' },
-    { x: 68.0, y: 62.0, label: 'South Swamp Channel' },
-    { x: 58.0, y: 56.0, label: 'West Canal Approach' },
-    { x: 62.0, y: 52.0, label: 'Return to Sunken Temple' }
+    { x: 62.0, y: 48.0, label: 'Pool of Tears West Bank (Start)' },
+    { x: 66.0, y: 41.0, label: 'North Canal Reeds' },
+    { x: 73.5, y: 44.5, label: 'Northeast Temple Shore' },
+    { x: 76.0, y: 53.5, label: 'East Bank Swamp' },
+    { x: 72.5, y: 62.5, label: 'Southeast Blindweed Shoals' },
+    { x: 65.0, y: 64.0, label: 'South Swamp Channel' },
+    { x: 59.5, y: 57.0, label: 'Southwest Hillocks (Sungrass)' },
+    { x: 62.0, y: 48.0, label: 'Return to West Bank' }
   ],
   herb_felwood: [
-    { x: 46.0, y: 56.0, label: 'Emerald Sanctuary (Start)' },
-    { x: 44.0, y: 42.0, label: 'Main Road North' },
-    { x: 50.0, y: 32.0, label: 'Bloodvenom Post Demon Ruins' },
-    { x: 54.0, y: 24.0, label: 'Irontree Woods' },
-    { x: 38.0, y: 48.0, label: 'Jaedenar Perimeter' },
-    { x: 46.0, y: 56.0, label: 'Return to Emerald Sanctuary' }
+    { x: 51.0, y: 82.0, label: 'Emerald Sanctuary (Start)' },
+    { x: 54.5, y: 66.0, label: 'Eastern Corrupted Woods' },
+    { x: 49.0, y: 45.0, label: 'Bloodvenom Falls East Ridge' },
+    { x: 54.0, y: 23.0, label: 'Irontree Woods Ruins' },
+    { x: 41.5, y: 20.5, label: 'Jadefire Run Satyr Camp' },
+    { x: 39.0, y: 38.0, label: 'Shatter Scar Vale Rim' },
+    { x: 35.5, y: 52.5, label: 'Bloodvenom Post Outskirts' },
+    { x: 38.5, y: 68.0, label: 'Jaedenar & Constellas Ruins' },
+    { x: 51.0, y: 82.0, label: 'Return to Emerald Sanctuary' }
   ],
   herb_ghost_caves: [
-    { x: 56.0, y: 44.0, label: 'Skull Rock Cave Mouth (Start)' },
-    { x: 54.0, y: 52.0, label: 'Creeping Cave Connector' },
-    { x: 60.0, y: 56.0, label: 'Damp Mushroom Valley' },
-    { x: 64.0, y: 46.0, label: 'Cliffside Moss Ledges' },
-    { x: 56.0, y: 44.0, label: 'Return to Skull Rock' }
+    { x: 57.0, y: 42.0, label: 'Skulk Rock Cave Mouth (Start)' },
+    { x: 65.5, y: 46.5, label: 'Eastern Cliffside Moss Ledges' },
+    { x: 63.0, y: 56.5, label: "Jintha'Alor Lower Cave" },
+    { x: 52.0, y: 56.0, label: 'Damp Mushroom Valley' },
+    { x: 44.5, y: 49.0, label: 'Creeping Cave Entrance' },
+    { x: 46.5, y: 39.5, label: "Agol'watha Slime Cavern" },
+    { x: 57.0, y: 42.0, label: 'Return to Skulk Rock' }
   ],
   herb_feralas: [
-    { x: 58.0, y: 44.0, label: 'Camp Mojache (Start)' },
-    { x: 46.0, y: 46.0, label: 'Verdantis River West' },
-    { x: 38.0, y: 48.0, label: 'Twin Colossals Base' },
-    { x: 42.0, y: 62.0, label: 'Gordunni Ogre Ruins' },
-    { x: 54.0, y: 58.0, label: 'Southern River Bluffs' },
-    { x: 58.0, y: 44.0, label: 'Return to Camp Mojache' }
+    { x: 72.0, y: 45.0, label: 'Camp Mojache Bridge (Start)' },
+    { x: 68.0, y: 56.5, label: 'Woodpaw Gnoll Clearings' },
+    { x: 58.0, y: 65.5, label: 'Ruins of Isildien Sunlit Glades' },
+    { x: 50.5, y: 55.0, label: 'Feral Scar Vale Perimeter' },
+    { x: 51.5, y: 38.5, label: 'Verdantis River Banks' },
+    { x: 58.5, y: 28.5, label: 'Twin Colossals Southern Slopes' },
+    { x: 73.5, y: 32.5, label: 'Gordunni Ogre Outpost' },
+    { x: 72.0, y: 45.0, label: 'Return to Camp Mojache' }
   ],
   herb_epl: [
-    { x: 62.0, y: 48.0, label: 'Light\'s Hope Chapel (Start)' },
-    { x: 58.0, y: 36.0, label: 'Browman Mill' },
-    { x: 52.0, y: 46.0, label: 'Corin\'s Crossing Outskirts' },
-    { x: 60.0, y: 60.0, label: 'Lake Mereldar Banks' },
-    { x: 70.0, y: 56.0, label: 'Fungal Valley East' },
-    { x: 62.0, y: 48.0, label: 'Return to Light\'s Hope' }
+    { x: 79.0, y: 58.0, label: "Light's Hope Chapel (Start)" },
+    { x: 60.5, y: 74.0, label: 'Lake Mereldar Lotus Banks' },
+    { x: 39.0, y: 75.0, label: 'Darrowshire & Undercroft' },
+    { x: 46.0, y: 58.0, label: "Corin's Crossing Outskirts" },
+    { x: 43.5, y: 41.0, label: 'Blackwood Lake Basin' },
+    { x: 54.0, y: 24.5, label: 'Northpass Tower Valley' },
+    { x: 73.5, y: 33.5, label: 'Browman Mill & Noxious Glade' },
+    { x: 79.0, y: 58.0, label: "Return to Light's Hope" }
   ],
   herb_winterspring: [
-    { x: 56.0, y: 42.0, label: 'Everlook (Start)' },
-    { x: 48.0, y: 22.0, label: 'Frostsaber Rock (Icecap)' },
-    { x: 50.0, y: 40.0, label: 'Lake Kel\'Theril' },
-    { x: 60.0, y: 66.0, label: 'Owl Wing Thicket' },
-    { x: 56.0, y: 42.0, label: 'Return to Everlook' }
+    { x: 60.0, y: 38.0, label: 'Everlook (Start)' },
+    { x: 53.0, y: 27.0, label: 'Starfall Snow Plains' },
+    { x: 48.0, y: 16.5, label: 'Frostsaber Rock (Icecap)' },
+    { x: 38.5, y: 36.0, label: 'Timbermaw Hold Approach' },
+    { x: 50.0, y: 45.5, label: "Lake Kel'Theril Shoreline" },
+    { x: 56.5, y: 58.5, label: 'Mazthoril High Summits' },
+    { x: 64.5, y: 62.5, label: 'Owl Wing Thicket' },
+    { x: 67.5, y: 46.0, label: 'Winterfall Ridge' },
+    { x: 60.0, y: 38.0, label: 'Return to Everlook' }
   ],
   herb_ungoro: [
-    { x: 54.0, y: 44.0, label: 'Marshal\'s Stand (Start)' },
-    { x: 34.0, y: 62.0, label: 'Golakka Hot Springs' },
-    { x: 44.0, y: 76.0, label: 'River Marshlands Basin' },
-    { x: 52.0, y: 50.0, label: 'Fire Plume Ridge Loop' },
-    { x: 54.0, y: 44.0, label: 'Return to Marshal\'s Stand' }
+    { x: 46.0, y: 14.0, label: "Marshal's Stand (Start)" },
+    { x: 58.5, y: 22.0, label: 'Lakkari Tar Pits Basin' },
+    { x: 70.0, y: 40.0, label: 'Eastern Jungle Floor' },
+    { x: 66.0, y: 62.0, label: 'Screaming Reaches Marsh' },
+    { x: 52.0, y: 74.0, label: 'Slithering Scar Perimeter' },
+    { x: 38.0, y: 72.0, label: 'Terror Run Riverbed' },
+    { x: 32.0, y: 54.0, label: 'Golakka Hot Springs' },
+    { x: 35.0, y: 32.0, label: 'Western Basin Floor' },
+    { x: 46.0, y: 14.0, label: "Return to Marshal's Stand" }
   ],
   herb_wpl: [
-    { x: 46.0, y: 58.0, label: 'Chillwind Camp (Start)' },
-    { x: 48.0, y: 72.0, label: 'Sorrow Hill Cemetery' },
-    { x: 44.0, y: 48.0, label: 'Ruins of Andorhal Exterior' },
-    { x: 38.0, y: 54.0, label: 'Felstone Field' },
-    { x: 46.0, y: 38.0, label: 'Dalson\'s Tears' },
-    { x: 46.0, y: 58.0, label: 'Return to Chillwind Camp' }
+    { x: 43.0, y: 84.0, label: 'Chillwind Camp (Start)' },
+    { x: 54.0, y: 78.0, label: 'Sorrow Hill Cemetery' },
+    { x: 56.5, y: 66.0, label: 'The Writhing Haunt' },
+    { x: 63.0, y: 56.5, label: "Gahrron's Withering" },
+    { x: 52.0, y: 36.5, label: 'Northridge Lumber Camp' },
+    { x: 45.0, y: 48.5, label: "Dalson's Tears" },
+    { x: 36.5, y: 56.5, label: 'Felstone Field' },
+    { x: 36.0, y: 70.0, label: 'Andorhal Western Perimeter' },
+    { x: 43.0, y: 84.0, label: 'Return to Chillwind Camp' }
   ]
 };
 
-  function getZoneMapUrl(zoneName) {
+  function getZoneMapUrl(zoneName, isEnlarged = false) {
     const id = ZONE_MAP_IDS[zoneName];
     if (id) {
-      return `https://wow.zamimg.com/images/wow/maps/enus/zoom/${id}.jpg`;
+      const folder = isEnlarged ? 'original' : 'zoom';
+      return `https://wow.zamimg.com/images/wow/classic/maps/enus/${folder}/${id}.jpg`;
     }
     return '';
+  }
+
+  function buildSmoothClosedPathAndArrows(points) {
+    const unique = points.length > 1 && points[0].x === points[points.length - 1].x && points[0].y === points[points.length - 1].y
+      ? points.slice(0, -1)
+      : points.slice();
+    const n = unique.length;
+    if (n < 3) {
+      const d = points.map((p, i) => (i === 0 ? 'M' : 'L') + ' ' + p.x.toFixed(1) + ' ' + p.y.toFixed(1)).join(' ') + ' Z';
+      return { pathD: d, arrows: [] };
+    }
+
+    const tension = 0.16;
+    const segments = [`M ${unique[0].x.toFixed(2)} ${unique[0].y.toFixed(2)}`];
+    const arrows = [];
+
+    for (let i = 0; i < n; i++) {
+      const pPrev = unique[(i - 1 + n) % n];
+      const pCurr = unique[i];
+      const pNext = unique[(i + 1) % n];
+      const pNext2 = unique[(i + 2) % n];
+
+      const cp1x = pCurr.x + (pNext.x - pPrev.x) * tension;
+      const cp1y = pCurr.y + (pNext.y - pPrev.y) * tension;
+      const cp2x = pNext.x - (pNext2.x - pCurr.x) * tension;
+      const cp2y = pNext.y - (pNext2.y - pCurr.y) * tension;
+
+      segments.push(`C ${cp1x.toFixed(2)} ${cp1y.toFixed(2)}, ${cp2x.toFixed(2)} ${cp2y.toFixed(2)}, ${pNext.x.toFixed(2)} ${pNext.y.toFixed(2)}`);
+
+      // Place directional chevron at midpoint (t = 0.5) of every other segment (or long segments)
+      const dist = Math.hypot(pNext.x - pCurr.x, pNext.y - pCurr.y);
+      if (i % 2 === 0 && dist >= 7) {
+        const mx = 0.125 * pCurr.x + 0.375 * cp1x + 0.375 * cp2x + 0.125 * pNext.x;
+        const my = 0.125 * pCurr.y + 0.375 * cp1y + 0.375 * cp2y + 0.125 * pNext.y;
+        const dx = 0.75 * (cp1x - pCurr.x) + 1.5 * (cp2x - cp1x) + 0.75 * (pNext.x - cp2x);
+        const dy = 0.75 * (cp1y - pCurr.y) + 1.5 * (cp2y - cp1y) + 0.75 * (pNext.y - cp2y);
+        const deg = Math.atan2(dy, dx) * 180 / Math.PI;
+        arrows.push({ x: mx, y: my, deg });
+      }
+    }
+
+    segments.push('Z');
+    return { pathD: segments.join(' '), arrows };
   }
 
   function renderRouteSvgOverlay(route, isMining, isEnlarged = false) {
     const points = CIRCUIT_ROUTE_PATHS[route.id];
     if (!points || points.length === 0) return '';
 
-    const pathD = points.map((p, i) => (i === 0 ? 'M' : 'L') + ' ' + p.x.toFixed(1) + ' ' + p.y.toFixed(1)).join(' ') + ' Z';
+    const { pathD, arrows } = buildSmoothClosedPathAndArrows(points);
     const mainStroke = isMining ? '#facc15' : '#4ade80';
     const glowColor = isMining ? 'rgba(250, 204, 21, 0.45)' : 'rgba(74, 222, 128, 0.45)';
     const startPt = points[0];
@@ -6905,33 +7037,48 @@ const CIRCUIT_ROUTE_PATHS = {
       <svg class="circuit-map-svg" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
         <defs>
           <filter id="${filterId}" x="-20%" y="-20%" width="140%" height="140%">
-            <feDropShadow dx="0" dy="0" stdDeviation="${isEnlarged ? '1.2' : '0.8'}" flood-color="${glowColor}" />
+            <feDropShadow dx="0" dy="0" stdDeviation="${isEnlarged ? '1.1' : '0.8'}" flood-color="${glowColor}" />
           </filter>
         </defs>
         
         <!-- Dark contrast underlay so line is visible against any terrain -->
-        <path d="${pathD}" fill="none" stroke="rgba(2, 6, 23, 0.88)" stroke-width="${isEnlarged ? '3.8' : '4.6'}" stroke-linejoin="round" stroke-linecap="round" />
+        <path d="${pathD}" fill="none" stroke="rgba(2, 6, 23, 0.88)" stroke-width="${isEnlarged ? '3.4' : '4.2'}" stroke-linejoin="round" stroke-linecap="round" />
         
         <!-- Glowing animated route line -->
-        <path class="circuit-svg-track" d="${pathD}" fill="none" stroke="${mainStroke}" stroke-width="${isEnlarged ? '1.8' : '2.2'}" stroke-dasharray="4 2" stroke-linejoin="round" stroke-linecap="round" filter="url(#${filterId})" />
+        <path class="circuit-svg-track" d="${pathD}" fill="none" stroke="${mainStroke}" stroke-width="${isEnlarged ? '1.6' : '2.1'}" stroke-dasharray="4 2" stroke-linejoin="round" stroke-linecap="round" filter="url(#${filterId})" />
         
-        <!-- Waypoint cluster dots along the terrain loop -->
-        ${points.slice(1, -1).map(p => `
-          <circle cx="${p.x.toFixed(1)}" cy="${p.y.toFixed(1)}" r="${isEnlarged ? '1.1' : '1.3'}" fill="#ffffff" stroke="rgba(2, 6, 23, 0.9)" stroke-width="0.5">
-            ${isEnlarged && p.label ? `<title>${escapeHtml(p.label)} (${p.x.toFixed(1)}, ${p.y.toFixed(1)})</title>` : ''}
-          </circle>
+        <!-- Directional Chevron Arrows along the route -->
+        ${arrows.map(a => `
+          <g transform="translate(${a.x.toFixed(2)}, ${a.y.toFixed(2)}) rotate(${a.deg.toFixed(1)})">
+            <path d="${isEnlarged ? 'M -1.4 -1.3 L 1.5 0 L -1.4 1.3' : 'M -1.7 -1.5 L 1.8 0 L -1.7 1.5'}" fill="none" stroke="rgba(2, 6, 23, 0.95)" stroke-width="${isEnlarged ? '1.3' : '1.6'}" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="${isEnlarged ? 'M -1.4 -1.3 L 1.5 0 L -1.4 1.3' : 'M -1.7 -1.5 L 1.8 0 L -1.7 1.5'}" fill="none" stroke="#ffffff" stroke-width="${isEnlarged ? '0.75' : '0.95'}" stroke-linecap="round" stroke-linejoin="round" />
+          </g>
+        `).join('')}
+
+        <!-- Waypoint cluster pins along the terrain loop -->
+        ${points.slice(1, -1).map((p, idx) => isEnlarged ? `
+          <g class="circuit-svg-wp-node" transform="translate(${p.x.toFixed(1)}, ${p.y.toFixed(1)})">
+            <circle cx="0" cy="0" r="1.9" fill="#0f172a" stroke="${mainStroke}" stroke-width="0.55" />
+            <text x="0" y="0.65" fill="#ffffff" font-size="2.0" font-weight="700" text-anchor="middle" font-family="system-ui, sans-serif">${idx + 2}</text>
+            ${p.label ? `<title>Stop ${idx + 2}: ${escapeHtml(p.label)} (${p.x.toFixed(1)}, ${p.y.toFixed(1)})</title>` : ''}
+          </g>
+        ` : `
+          <circle cx="${p.x.toFixed(1)}" cy="${p.y.toFixed(1)}" r="1.25" fill="#ffffff" stroke="rgba(2, 6, 23, 0.9)" stroke-width="0.5" />
         `).join('')}
         
         <!-- Start Point Marker with Pulsing Ring -->
-        <circle class="circuit-svg-pulse" cx="${startPt.x.toFixed(1)}" cy="${startPt.y.toFixed(1)}" r="${isEnlarged ? '3.2' : '3.8'}" fill="${mainStroke}" opacity="0.3" />
-        <circle cx="${startPt.x.toFixed(1)}" cy="${startPt.y.toFixed(1)}" r="${isEnlarged ? '1.8' : '2.0'}" fill="#ef4444" stroke="#ffffff" stroke-width="0.7">
-          <title>Start Point: ${escapeHtml(startPt.label || 'Start')} (${startPt.x.toFixed(1)}, ${startPt.y.toFixed(1)})</title>
-        </circle>
+        <circle class="circuit-svg-pulse" cx="${startPt.x.toFixed(1)}" cy="${startPt.y.toFixed(1)}" r="${isEnlarged ? '3.4' : '3.8'}" fill="${mainStroke}" opacity="0.3" />
+        <g transform="translate(${startPt.x.toFixed(1)}, ${startPt.y.toFixed(1)})">
+          <circle cx="0" cy="0" r="${isEnlarged ? '2.2' : '2.0'}" fill="#ef4444" stroke="#ffffff" stroke-width="0.65">
+            <title>Stop 1 (Start): ${escapeHtml(startPt.label || 'Start')} (${startPt.x.toFixed(1)}, ${startPt.y.toFixed(1)})</title>
+          </circle>
+          ${isEnlarged ? `<text x="0" y="0.7" fill="#ffffff" font-size="2.1" font-weight="800" text-anchor="middle" font-family="system-ui, sans-serif">1</text>` : ''}
+        </g>
         
         ${isEnlarged ? `
-          <g class="circuit-svg-pin-label" transform="translate(${startPt.x.toFixed(1)}, ${Math.max(4, startPt.y - 3.2).toFixed(1)})">
-            <rect x="-9" y="-3.5" width="18" height="4.5" rx="1.2" fill="rgba(15, 23, 42, 0.9)" stroke="${mainStroke}" stroke-width="0.3" />
-            <text x="0" y="-0.4" fill="#ffffff" font-size="2.4" font-weight="700" text-anchor="middle" font-family="system-ui, sans-serif">START</text>
+          <g class="circuit-svg-pin-label" transform="translate(${startPt.x.toFixed(1)}, ${Math.max(4.5, startPt.y - 3.8).toFixed(1)})">
+            <rect x="-8.5" y="-3.4" width="17" height="4.2" rx="1.1" fill="rgba(15, 23, 42, 0.92)" stroke="${mainStroke}" stroke-width="0.35" />
+            <text x="0" y="-0.5" fill="#ffffff" font-size="2.2" font-weight="700" text-anchor="middle" font-family="system-ui, sans-serif">START</text>
           </g>
         ` : ''}
       </svg>
@@ -6960,7 +7107,7 @@ const CIRCUIT_ROUTE_PATHS = {
     activeRouteModal = modal;
 
     const zoneName = route.zone;
-    const mapUrl = getZoneMapUrl(zoneName);
+    const mapUrl = getZoneMapUrl(zoneName, true);
     const mainColor = isMining ? '#facc15' : '#4ade80';
     const profLabel = isMining ? 'Mining Circuit' : 'Herbalism Circuit';
     const points = CIRCUIT_ROUTE_PATHS[route.id] || [];
