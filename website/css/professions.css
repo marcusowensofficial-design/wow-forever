@@ -676,6 +676,70 @@
   color: #fff;
 }
 
+/* Recipe Card Reagent Source CTA Bar */
+.recipe-reagent-sources-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.35rem;
+  margin-bottom: 0.35rem;
+}
+
+.recipe-reagent-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.28rem 0.62rem;
+  border-radius: 6px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  cursor: pointer;
+  background: rgba(30, 41, 59, 0.75);
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  color: #cbd5e1;
+  transition: all 0.16s ease;
+  line-height: 1.25;
+}
+
+.recipe-reagent-cta-btn:hover {
+  transform: translateY(-1px);
+  color: #fff;
+}
+
+.recipe-reagent-cta-btn.fishing {
+  background: linear-gradient(135deg, rgba(14, 116, 144, 0.3) 0%, rgba(3, 105, 161, 0.4) 100%);
+  border-color: rgba(56, 189, 248, 0.55);
+  color: #bae6fd;
+}
+
+.recipe-reagent-cta-btn.fishing:hover {
+  background: linear-gradient(135deg, rgba(14, 116, 144, 0.55) 0%, rgba(3, 105, 161, 0.65) 100%);
+  border-color: #38bdf8;
+  color: #fff;
+  box-shadow: 0 2px 10px rgba(56, 189, 248, 0.3);
+}
+
+.recipe-reagent-cta-btn.drops {
+  background: linear-gradient(135deg, rgba(180, 83, 9, 0.22) 0%, rgba(154, 52, 18, 0.32) 100%);
+  border-color: rgba(251, 146, 60, 0.45);
+  color: #fed7aa;
+}
+
+.recipe-reagent-cta-btn.drops:hover {
+  background: linear-gradient(135deg, rgba(180, 83, 9, 0.4) 0%, rgba(154, 52, 18, 0.5) 100%);
+  border-color: #fb923c;
+  color: #fff;
+  box-shadow: 0 2px 10px rgba(251, 146, 60, 0.25);
+}
+
+.recipe-reagent-cta-btn.secondary {
+  opacity: 0.88;
+}
+
+.recipe-reagent-cta-btn.secondary:hover {
+  opacity: 1;
+}
+
 /* Recipe Footer / Acquisition Source */
 .recipe-source-line {
   font-size: 0.75rem;
@@ -2672,6 +2736,21 @@
   transform: translateY(-1px);
 }
 
+.reagent-head-farm-cta.secondary {
+  background: rgba(30, 41, 59, 0.7);
+  border-color: rgba(148, 163, 184, 0.35);
+  color: #cbd5e1;
+  box-shadow: none;
+}
+
+.reagent-head-farm-cta.secondary:hover,
+.reagent-head-farm-cta.secondary.active {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.3) 0%, rgba(234, 88, 12, 0.4) 100%);
+  border-color: #fb923c;
+  color: #fff;
+  box-shadow: 0 0 12px rgba(251, 146, 60, 0.3);
+}
+
 .reagent-head-farm-icon {
   font-size: 0.95rem;
   line-height: 1;
@@ -2722,10 +2801,14 @@
   background: rgba(9, 14, 26, 0.9);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   flex-shrink: 0;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
 }
 
 .reagent-view-tab-btn {
-  flex: 1;
+  flex: 1 0 auto;
+  min-width: max-content;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -2739,6 +2822,7 @@
   font-weight: 700;
   cursor: pointer;
   transition: all 0.15s ease;
+  white-space: nowrap;
 }
 
 .reagent-view-tab-btn:hover {
