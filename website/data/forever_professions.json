@@ -6839,7 +6839,7 @@
         {
           "type": "rank",
           "rank": "Apprentice",
-          "details": "from any Alchemy trainer, up to 75"
+          "details": "Learned from any capital or town Alchemy trainer (e.g., Lilyssia Nightbreeze in Stormwind /way 55.6, 85.8 · Tally Berryfizz in Ironforge /way 66.6, 55.2 · Yelmak in Orgrimmar /way 56.6, 33.2), up to 75. Note: Odd Child (A) & Apothecary Renferrel (H) teach Discolored Healing Potion."
         },
         {
           "type": "step",
@@ -6920,7 +6920,7 @@
         {
           "type": "rank",
           "rank": "Journeyman",
-          "details": "from the trainer, from skill 50 and level 10, up to 150"
+          "details": "Learned from Journeyman trainers (Skill 50, Level 10), up to 150 — including Lilyssia Nightbreeze (SW), Vosur Brakthel (IF /way 66.6, 55.2), Yelmak (Org), or Forever town trainers in Zephras Isle & Riverglades."
         },
         {
           "type": "step",
@@ -7101,7 +7101,7 @@
         {
           "type": "rank",
           "rank": "Expert",
-          "details": "from the trainer, from skill 125 and level 20, up to 225"
+          "details": "Learned from Expert trainers (Skill 125, Level 20), up to 225 — Ainethil in Darnassus (/way 55.0, 24.0, A), Linzy Blackbolt in Dalaran, Alterac Mountains (/way 18.6, 62.4, Forever), or Doctor Herbert Halsey in Undercity (/way 48.2, 72.2, H)."
         },
         {
           "type": "step",
@@ -7246,7 +7246,14 @@
               "icon": "inv_potion_85",
               "quality": 1
             }
-          ]
+          ],
+          "vendorDetails": {
+            "npc": "Ulthir (Alliance) / Hagrus (Horde)",
+            "location": "Darnassus /way 56.0, 24.6 (A) · Orgrimmar /way 46.0, 45.6 (H)",
+            "cost": "20s",
+            "supply": "Limited (1)"
+          },
+          "trainerAlternative": "Trainer Backup: Craft Elixir of Agility (185–210, 1x Stranglekelp + 1x Goldthorn) or Lesser Invisibility Potion (165–205) if the vendor recipe is camped."
         },
         {
           "type": "step",
@@ -7284,12 +7291,19 @@
               "icon": "inv_potion_85",
               "quality": 1
             }
-          ]
+          ],
+          "vendorDetails": {
+            "npc": "Logannas (A) / Bronk (H) / Glyx Brewright (Neutral)",
+            "location": "Feathermoon, Feralas /way 32.6, 44.0 (A) · Camp Mojache, Feralas /way 76.0, 43.4 (H) · Booty Bay /way 28.2, 78.0",
+            "cost": "20s",
+            "supply": "Limited (1)"
+          },
+          "trainerAlternative": "Trainer Backup: Craft Superior Healing Potion (215–235, 1x Sungrass + 1x Khadgar's Whisker) or Catseye Elixir (200–225) learned directly from the trainer."
         },
         {
           "type": "rank",
           "rank": "Artisan",
-          "details": "from the trainer, from skill 200 and level 35, up to 300"
+          "details": "Learned from Artisan trainers (Skill 200, Level 35), up to 300 — Kylanna Windwhisper in Feathermoon Stronghold, Feralas (/way 32.6, 43.8, A), Rogvar in Stonard, Swamp of Sorrows (/way 48.4, 55.6, H), or Master Mycologist Shurome in Emerald Sanctuary (/way 51.4, 82.0, Neutral)."
         },
         {
           "type": "step",
@@ -7327,7 +7341,14 @@
               "icon": "inv_potion_85",
               "quality": 1
             }
-          ]
+          ],
+          "vendorDetails": {
+            "npc": "Logannas (A) / Bronk (H) / Glyx Brewright (Neutral)",
+            "location": "Feathermoon, Feralas /way 32.6, 44.0 (A) · Camp Mojache, Feralas /way 76.0, 43.4 (H) · Booty Bay /way 28.2, 78.0",
+            "cost": "20s",
+            "supply": "Limited (1)"
+          },
+          "trainerAlternative": "Trainer Backup: Craft Superior Healing Potion (215–235, 1x Sungrass + 1x Khadgar's Whisker) or Catseye Elixir (200–225) learned directly from the trainer."
         },
         {
           "type": "step",
@@ -7458,7 +7479,14 @@
               "icon": "inv_potion_86",
               "quality": 1
             }
-          ]
+          ],
+          "vendorDetails": {
+            "npc": "Soolie Berryfizz (Alliance) / Kor'geld (Horde)",
+            "location": "Tinker Town, Ironforge /way 66.6, 54.6 (A) · The Drag, Orgrimmar /way 56.0, 34.0 (H)",
+            "cost": "18s",
+            "supply": "Limited (1)"
+          },
+          "trainerAlternative": "Trainer Backup: Craft Superior Mana Potion (260–290, 2x Sungrass + 2x Blindweed) or Elixir of Detect Demon (250–275, 2x Gromsblood) from the Artisan trainer."
         },
         {
           "type": "step",
@@ -7496,7 +7524,14 @@
               "icon": "inv_potion_86",
               "quality": 1
             }
-          ]
+          ],
+          "vendorDetails": {
+            "npc": "Magnus Frostwake",
+            "location": "Caer Darrow, Western Plaguelands /way 68.0, 77.6 (Equip Spectral Essence to see vendor)",
+            "cost": "3g",
+            "supply": "Unlimited"
+          },
+          "trainerAlternative": "Trainer Backup: Craft Greater Arcane Elixir (285–300, 3x Dreamfoil + 1x Mountain Silversage) or Purification Potion (285–300, 2x Icecap + 2x Plaguebloom) from the trainer."
         }
       ]
     },
@@ -26992,7 +27027,7 @@
         {
           "type": "rank",
           "rank": "Apprentice",
-          "details": "from any Blacksmithing trainer, up to 75"
+          "details": "Learned from any Blacksmithing trainer (e.g., Therum Deepforge in Stormwind /way 63.8, 37.8 · Bengus Deepforge in Ironforge /way 51.0, 43.0 · Saru Steelfury in Orgrimmar /way 82.2, 23.0), up to 75."
         },
         {
           "type": "step",
@@ -27045,7 +27080,32 @@
         {
           "type": "rank",
           "rank": "Journeyman",
-          "details": "from the trainer, from skill 50 and level 10, up to 150"
+          "details": "Learned from Journeyman trainers (Skill 50, Level 10), up to 150 — Stormwind Dwarven District, The Great Forge in Ironforge, or Valley of Honor in Orgrimmar."
+        },
+        {
+          "type": "step",
+          "isIntermediateGrindingStone": true,
+          "from": 75,
+          "to": 90,
+          "bar": {
+            "iLeft": "24.67%",
+            "iWidth": "5.00%",
+            "eLeft": "74.67%"
+          },
+          "itemId": 3478,
+          "recipeName": "Coarse Grinding Stone",
+          "source": "Learned from the trainer (Skill 65)",
+          "advice": "Keep all 92! Craft your Coarse Grinding Stones right at 75 while they grant skill points — you need 44 for Patterned Bronze Bracers, 18 for Silvered Bronze Boots, and 30 for Silvered Bronze Gauntlets.",
+          "crafts": 92,
+          "reagents": [
+            {
+              "itemId": 2836,
+              "name": "Coarse Stone",
+              "count": 2,
+              "icon": "inv_stone_09",
+              "quality": 1
+            }
+          ]
         },
         {
           "type": "step",
@@ -27162,7 +27222,7 @@
           "itemId": 2868,
           "recipeName": "Patterned Bronze Bracers",
           "source": "Learned from the trainer",
-          "advice": "",
+          "advice": "Uses 44 of the Coarse Grinding Stones crafted at 75–90.",
           "crafts": 22,
           "reagents": [
             {
@@ -27193,7 +27253,7 @@
           "itemId": 3482,
           "recipeName": "Silvered Bronze Boots",
           "source": "Learned from the trainer",
-          "advice": "",
+          "advice": "Uses 18 of the Coarse Grinding Stones crafted at 75–90.",
           "crafts": 9,
           "reagents": [
             {
@@ -27231,7 +27291,7 @@
           "itemId": 3483,
           "recipeName": "Silvered Bronze Gauntlets",
           "source": "Learned from the trainer",
-          "advice": "",
+          "advice": "Uses the remaining Coarse Grinding Stones crafted at 75–90.",
           "crafts": 8,
           "reagents": [
             {
@@ -27260,7 +27320,7 @@
         {
           "type": "rank",
           "rank": "Expert",
-          "details": "from the trainer, from skill 125 and level 20, up to 225"
+          "details": "Learned from Expert trainers (Skill 125, Level 20), up to 225 — Bengus Deepforge in Ironforge (/way 51.0, 43.0, A), Saru Steelfury in Orgrimmar (/way 82.2, 23.0, H), or Basil Frye in Undercity (/way 59.6, 29.0, H)."
         },
         {
           "type": "step",
@@ -27274,7 +27334,7 @@
           "itemId": 3483,
           "recipeName": "Silvered Bronze Gauntlets",
           "source": "Learned from the trainer",
-          "advice": "",
+          "advice": "Uses the remaining Coarse Grinding Stones crafted at 75–90.",
           "crafts": 7,
           "reagents": [
             {
@@ -27457,6 +27517,31 @@
         },
         {
           "type": "step",
+          "isIntermediateGrindingStone": true,
+          "from": 200,
+          "to": 206,
+          "bar": {
+            "iLeft": "66.33%",
+            "iWidth": "2.00%",
+            "eLeft": "74.67%"
+          },
+          "itemId": 7966,
+          "recipeName": "Solid Grinding Stone",
+          "source": "Learned from the trainer (Skill 200)",
+          "advice": "Keep all 12! Craft 12 Solid Grinding Stones right at 200 for guaranteed skill-ups — 8 are required for Steel Plate Helm (206–213) and 4 for Ebon Shiv (246–250).",
+          "crafts": 12,
+          "reagents": [
+            {
+              "itemId": 7912,
+              "name": "Solid Stone",
+              "count": 4,
+              "icon": "inv_stone_10",
+              "quality": 1
+            }
+          ]
+        },
+        {
+          "type": "step",
           "from": 206,
           "to": 213,
           "bar": {
@@ -27467,7 +27552,7 @@
           "itemId": 7922,
           "recipeName": "Steel Plate Helm",
           "source": "Learned from the trainer",
-          "advice": "",
+          "advice": "Uses 8 of the Solid Grinding Stones crafted at 200.",
           "crafts": 8,
           "reagents": [
             {
@@ -27520,7 +27605,7 @@
         {
           "type": "rank",
           "rank": "Artisan",
-          "details": "from the trainer, from skill 200 and level 35, up to 300"
+          "details": "Learned from Brikk Keencraft in Booty Bay, Stranglethorn Vale (/way 29.0, 75.4, Neutral, Skill 200 & Level 35), up to 300. Specializations at Skill 200 & Lvl 40: Armorsmith (Grumnus Steelshaper in IF /way 50.2, 42.8 · Okothos Ironrager in Org /way 79.8, 23.8) or Weaponsmith (Ironus Coldsteel in IF /way 50.8, 45.2 · Borgosh Corebender in Org /way 79.6, 23.6)."
         },
         {
           "type": "step",
@@ -27589,7 +27674,7 @@
           "itemId": 7947,
           "recipeName": "Ebon Shiv",
           "source": "Plans sold by Magnus Frostwake (Western Plaguelands)",
-          "advice": "",
+          "advice": "Uses 4 Solid Grinding Stones crafted earlier at 200.",
           "crafts": 4,
           "reagents": [
             {
@@ -27627,6 +27712,38 @@
               "icon": "inv_misc_leatherscrap_08",
               "quality": 1
             }
+          ],
+          "vendorDetails": {
+            "npc": "Magnus Frostwake",
+            "location": "Caer Darrow, Western Plaguelands /way 68.0, 77.6 (Equip Spectral Essence)",
+            "cost": "1g 60s",
+            "supply": "Unlimited"
+          },
+          "trainerAlternative": "Trainer Backup: Craft Mithril Coif (yellow up to 250) or Heavy Mithril Helm from the Artisan trainer."
+        },
+        {
+          "type": "step",
+          "isIntermediateGrindingStone": true,
+          "from": 250,
+          "to": 256,
+          "bar": {
+            "iLeft": "83.00%",
+            "iWidth": "2.00%",
+            "eLeft": "74.67%"
+          },
+          "itemId": 12644,
+          "recipeName": "Dense Grinding Stone",
+          "source": "Learned from the trainer (Skill 250)",
+          "advice": "Keep all 380! Craft your Dense Grinding Stones immediately at 250 to get free skill points up to ~256 before consuming them in Arcanite Skeleton Key (20x) and Huge Thorium Battleaxe (360x).",
+          "crafts": 380,
+          "reagents": [
+            {
+              "itemId": 12365,
+              "name": "Dense Stone",
+              "count": 4,
+              "icon": "inv_misc_stonetablet_07",
+              "quality": 1
+            }
           ]
         },
         {
@@ -27641,7 +27758,7 @@
           "itemId": 15872,
           "recipeName": "Arcanite Skeleton Key",
           "source": "Learned from the trainer",
-          "advice": "",
+          "advice": "Uses 20 Dense Grinding Stones crafted at 250.",
           "crafts": 20,
           "reagents": [
             {
@@ -27672,7 +27789,7 @@
           "itemId": 12775,
           "recipeName": "Huge Thorium Battleaxe",
           "source": "Plans sold by Magnus Frostwake (Western Plaguelands)",
-          "advice": "",
+          "advice": "Uses 360 Dense Grinding Stones crafted at 250.",
           "crafts": 60,
           "reagents": [
             {
@@ -27696,7 +27813,14 @@
               "icon": "inv_misc_leatherscrap_02",
               "quality": 1
             }
-          ]
+          ],
+          "vendorDetails": {
+            "npc": "Magnus Frostwake",
+            "location": "Caer Darrow, Western Plaguelands /way 68.0, 77.6 (Equip Spectral Essence)",
+            "cost": "2g",
+            "supply": "Unlimited"
+          },
+          "trainerAlternative": "Trainer Backup: Craft Imperial Plate Bracers (265–295, Derotain Mudsipper in Gadgetzan) or Radiant Belt / Thorium Boots."
         }
       ]
     },
@@ -36519,7 +36643,7 @@
         {
           "type": "rank",
           "rank": "Apprentice",
-          "details": "from any Enchanting trainer, up to 75"
+          "details": "Learned from any Enchanting trainer (e.g., Lucan Cordell in Stormwind /way 53.0, 74.2 · Gimble Thistlefuzz in Ironforge /way 60.0, 45.4 · Godan in Orgrimmar /way 53.8, 38.6 · Lavinia Crowe in Undercity /way 62.4, 60.8), up to 75."
         },
         {
           "type": "step",
@@ -36603,7 +36727,7 @@
         {
           "type": "rank",
           "rank": "Journeyman",
-          "details": "from the trainer, from skill 50 and level 10, up to 150"
+          "details": "Learned from Journeyman trainers (Skill 50, Level 10), up to 150 — capital city trainers or Forever trainers in Zephras Isle & Riverglades."
         },
         {
           "type": "step",
@@ -36756,7 +36880,7 @@
         {
           "type": "rank",
           "rank": "Expert",
-          "details": "from the trainer, from skill 125 and level 20, up to 225"
+          "details": "Learned from Expert trainers (Skill 125, Level 20), up to 225 — Kitta Firewind at Tower of Azora, Elwynn Forest (/way 64.8, 70.6, A) or Hgarth in Sun Rock Retreat, Stonetalon Mountains (/way 49.2, 57.2, H)."
         },
         {
           "type": "step",
@@ -36952,7 +37076,7 @@
         {
           "type": "rank",
           "rank": "Artisan",
-          "details": "from the trainer, from skill 200 and level 35, up to 300"
+          "details": "Learned from Annora deep inside Uldaman, Badlands (/way 36.6, 31.2 inside instance, Neutral, Skill 200 & Level 35 — clear scorpids around her to unlock), up to 300."
         },
         {
           "type": "step",
@@ -37031,7 +37155,14 @@
               "icon": "inv_enchant_dustdream",
               "quality": 1
             }
-          ]
+          ],
+          "vendorDetails": {
+            "npc": "Mythrin'dir (Alliance) / Daniel Bartlett (Horde)",
+            "location": "Craftsmen's Terrace, Darnassus /way 60.8, 19.6 (A) · Trade Quarter, Undercity /way 64.2, 37.8 (H)",
+            "cost": "1g 20s",
+            "supply": "Limited (1)"
+          },
+          "trainerAlternative": "Trainer Backup: Buy Formula: Enchant Cloak - Superior Defense (Unlimited supply from Lorelae Wintersong in Moonglade /way 48.6, 40.2, 8x Illusion Dust) for 285–300."
         }
       ]
     },
@@ -47534,7 +47665,7 @@
         {
           "type": "rank",
           "rank": "Apprentice",
-          "details": "from any Engineering trainer, up to 75"
+          "details": "Learned from any Engineering trainer (e.g., Lilliam Sparkspindle in Stormwind /way 62.2, 30.6 · Springspindle Fizzlegear in Ironforge /way 68.4, 44.0 · Roxxik in Orgrimmar /way 76.0, 25.0), up to 75."
         },
         {
           "type": "step",
@@ -47618,7 +47749,7 @@
         {
           "type": "rank",
           "rank": "Journeyman",
-          "details": "from the trainer, from skill 50 and level 10, up to 150"
+          "details": "Learned from Journeyman trainers (Skill 50, Level 10), up to 150 — capital city trainers or Ratchet / Dalaran (Alterac Mountains)."
         },
         {
           "type": "step",
@@ -47878,7 +48009,7 @@
         {
           "type": "rank",
           "rank": "Expert",
-          "details": "from the trainer, from skill 125 and level 20, up to 225"
+          "details": "Learned from Expert trainers (Skill 125, Level 20), up to 225 — Springspindle Fizzlegear in Ironforge (/way 68.4, 44.0, A) or Roxxik in Valley of Honor, Orgrimmar (/way 76.0, 25.0, H)."
         },
         {
           "type": "step",
@@ -47947,7 +48078,14 @@
               "icon": "inv_potion_20",
               "quality": 1
             }
-          ]
+          ],
+          "vendorDetails": {
+            "npc": "Rizz Loosebolt",
+            "location": "Growless Cave, Alterac Mountains /way 47.4, 35.2",
+            "cost": "18s",
+            "supply": "Limited (1)"
+          },
+          "trainerAlternative": "Trainer Backup: Craft Explosive Sheep (150–175, 2x Bronze Framework + 1x Whirring Bronze Gizmo + 2x Heavy Blasting Powder + 2x Wool Cloth) from the trainer."
         },
         {
           "type": "step",
@@ -48114,7 +48252,7 @@
         {
           "type": "rank",
           "rank": "Artisan",
-          "details": "from the trainer, from skill 200 and level 35, up to 300"
+          "details": "Learned from Buzzek Bracketswing in Gadgetzan, Tanaris (/way 52.2, 27.6, Neutral, Skill 200 & Level 35), up to 300. Specializations at Skill 200 & Lvl 30: Gnomish Engineering (Tinkmaster Overspark in IF /way 69.8, 50.2 · Oglethorpe Obnoticus in Booty Bay /way 28.2, 76.2) or Goblin Engineering (Nixx Sprocketspring in Gadgetzan /way 52.4, 27.2). Note: Belt Tinkers unlock at 260 (consumable) & 280 (permanent)!"
         },
         {
           "type": "step",
@@ -48262,7 +48400,14 @@
               "icon": "inv_fabric_purplefire_01",
               "quality": 1
             }
-          ]
+          ],
+          "vendorDetails": {
+            "npc": "Gearcutter Cogspinner (Alliance) / Sovik (Horde)",
+            "location": "Tinker Town, Ironforge /way 68.0, 44.0 (A) · Valley of Honor, Orgrimmar /way 75.6, 25.6 (H)",
+            "cost": "1g 60s",
+            "supply": "Limited (1)"
+          },
+          "trainerAlternative": "Trainer Backup: Craft Gyrofreeze Ice Reflector (260–280) or Thorium Rifle / Thorium Shells from the Artisan trainer."
         },
         {
           "type": "step",
@@ -48286,7 +48431,14 @@
               "icon": "inv_ingot_07",
               "quality": 1
             }
-          ]
+          ],
+          "vendorDetails": {
+            "npc": "Xizzer Fizzbolt",
+            "location": "Everlook, Winterspring /way 60.8, 38.6",
+            "cost": "1g 60s",
+            "supply": "Limited (1)"
+          },
+          "trainerAlternative": "Trainer Backup: Craft Thorium Shells (285–300, 2x Thorium Bar + 1x Dense Blasting Powder) or Hi-Explosive Bomb from the trainer."
         }
       ]
     },
@@ -71701,7 +71853,7 @@
         {
           "type": "rank",
           "rank": "Apprentice",
-          "details": "from any Leatherworking trainer, up to 75"
+          "details": "Learned from any Leatherworking trainer (e.g., Simon Tanner in Stormwind /way 71.8, 62.8 · Fimble Finespindle in Ironforge /way 39.8, 33.4 · Karolek in Orgrimmar /way 62.8, 44.6), up to 75."
         },
         {
           "type": "step",
@@ -71816,7 +71968,7 @@
         {
           "type": "rank",
           "rank": "Journeyman",
-          "details": "from the trainer, from skill 50 and level 10, up to 150"
+          "details": "Learned from Journeyman trainers (Skill 50, Level 10), up to 150 — capital city trainers in Stormwind, Ironforge, Darnassus, Orgrimmar, Thunder Bluff, or Undercity."
         },
         {
           "type": "step",
@@ -71976,7 +72128,7 @@
         {
           "type": "rank",
           "rank": "Expert",
-          "details": "from the trainer, from skill 125 and level 20, up to 225"
+          "details": "Learned from Expert trainers (Skill 125, Level 20), up to 225 — Telonis in Darnassus (/way 64.4, 21.6, A) or Una in Thunder Bluff (/way 41.8, 42.6, H)."
         },
         {
           "type": "step",
@@ -72192,7 +72344,7 @@
         {
           "type": "rank",
           "rank": "Artisan",
-          "details": "from the trainer, from skill 200 and level 35, up to 300"
+          "details": "Learned from Artisan trainers (Skill 200, Level 35), up to 300 — Drakk Stonehand in Aerie Peak, The Hinterlands (/way 13.4, 43.4, A) or Hahrana Ironhide in Camp Mojache, Feralas (/way 74.4, 43.0, H). Specializations at 225 & Lvl 40: Dragonscale (Peter Galen in Azshara /way 37.4, 65.4 · Thorkaf Dragoneye in Badlands /way 62.6, 57.6), Elemental (Sarah Tanner in Searing Gorge /way 63.6, 75.8 · Brumn Winterhoof in Arathi /way 28.2, 45.0), or Tribal (Carys Moonhunter in Feralas /way 89.4, 46.6 · Se'Jib in STV /way 36.6, 34.2)."
         },
         {
           "type": "step",
@@ -72285,7 +72437,14 @@
               "icon": "spell_shadow_antimagicshell",
               "quality": 1
             }
-          ]
+          ],
+          "vendorDetails": {
+            "npc": "Leonard Porter (Alliance) / Werg Thickblade (Horde)",
+            "location": "Chillwind Camp, Western Plaguelands /way 43.0, 84.4 (A) · The Bulwark, Tirisfal Glades /way 83.2, 69.6 (H)",
+            "cost": "1g 60s",
+            "supply": "Limited (1)"
+          },
+          "trainerAlternative": "Trainer Backup: Craft Nightscape Boots (235–255, 16x Thick Leather + 2x Heavy Silken Thread) learned directly from the Artisan trainer."
         },
         {
           "type": "step",
@@ -72323,7 +72482,14 @@
               "icon": "spell_shadow_antimagicshell",
               "quality": 1
             }
-          ]
+          ],
+          "vendorDetails": {
+            "npc": "Qia",
+            "location": "Everlook, Winterspring /way 61.2, 37.2",
+            "cost": "1g 80s",
+            "supply": "Limited (1)"
+          },
+          "trainerAlternative": "Trainer Backup: Craft Wicked Leather Bracers (265–285) or continue Nightscape Boots + Rugged Armor Kit from the Artisan trainer."
         },
         {
           "type": "step",
@@ -72368,7 +72534,14 @@
               "icon": "spell_shadow_antimagicshell",
               "quality": 1
             }
-          ]
+          ],
+          "vendorDetails": {
+            "npc": "Zannok Hidepiercer",
+            "location": "Staghelm Point, Silithus /way 81.2, 18.6",
+            "cost": "2g 50s",
+            "supply": "Limited (1)"
+          },
+          "trainerAlternative": "Trainer Backup: Craft Runic Leather Headband (280–300, sold by Jase Farlane at Light's Hope Chapel, EPL /way 74.8, 51.8) or Wicked Leather Headband."
         }
       ]
     },
@@ -92000,7 +92173,7 @@
         {
           "type": "rank",
           "rank": "Apprentice",
-          "details": "from any Tailoring trainer, up to 75"
+          "details": "Learned from any Tailoring trainer (e.g., Georgio Bolero in Stormwind /way 53.2, 81.4 · Jormund Stonebrow in Ironforge /way 43.2, 29.0 · Magar in Orgrimmar /way 63.6, 50.0 · Josef Gregorian in Undercity /way 70.6, 30.6), up to 75."
         },
         {
           "type": "step",
@@ -92177,7 +92350,7 @@
         {
           "type": "rank",
           "rank": "Journeyman",
-          "details": "from the trainer, from skill 50 and level 10, up to 150"
+          "details": "Learned from Journeyman trainers (Skill 50, Level 10), up to 150 — capital city trainers or Forever town trainers in Zephras Isle & Riverglades."
         },
         {
           "type": "step",
@@ -92354,7 +92527,7 @@
         {
           "type": "rank",
           "rank": "Expert",
-          "details": "from the trainer, from skill 125 and level 20, up to 225"
+          "details": "Learned from Expert trainers (Skill 125, Level 20), up to 225 — Georgio Bolero in Mage Quarter, Stormwind (/way 53.2, 81.4, A) or Josef Gregorian in Magic Quarter, Undercity (/way 70.6, 30.6, H)."
         },
         {
           "type": "step",
@@ -92392,7 +92565,14 @@
               "icon": "inv_fabric_wool_02",
               "quality": 1
             }
-          ]
+          ],
+          "vendorDetails": {
+            "npc": "Brienna Starglow (Alliance) / Jun'ha (Horde)",
+            "location": "Thalanaar, Thousand Needles /way 5.4, 92.6 (A) · Hammerfall, Arathi Highlands /way 72.8, 36.6 (H)",
+            "cost": "15s",
+            "supply": "Limited (1)"
+          },
+          "trainerAlternative": "Trainer Backup: Craft Dark Silk Shirt (155–170) or Silk Headband (160–175, 3x Bolt of Silk Cloth + 2x Fine Thread) learned from the Expert trainer."
         },
         {
           "type": "step",
@@ -92597,7 +92777,7 @@
         {
           "type": "rank",
           "rank": "Artisan",
-          "details": "from the trainer, from skill 200 and level 35, up to 300"
+          "details": "Learned from Artisan trainers (Skill 200, Level 35), up to 300 — Timothy Worthington in Theramore Isle, Dustwallow Marsh (/way 66.2, 51.6, A) or Daryl Stack in Tarren Mill, Hillsbrad Foothills (/way 63.6, 20.8, H)."
         },
         {
           "type": "step",
@@ -92666,7 +92846,14 @@
               "icon": "spell_shadow_antimagicshell",
               "quality": 1
             }
-          ]
+          ],
+          "vendorDetails": {
+            "npc": "Qia",
+            "location": "Everlook, Winterspring /way 61.2, 37.2",
+            "cost": "1g 60s",
+            "supply": "Limited (1)"
+          },
+          "trainerAlternative": "Trainer Backup: Craft Black Mageweave Headband / Shoulders (230–255) from the trainer, then switch to Runecloth Belt (255–275, Trainer)."
         },
         {
           "type": "step",
@@ -92704,7 +92891,14 @@
               "icon": "spell_shadow_antimagicshell",
               "quality": 1
             }
-          ]
+          ],
+          "vendorDetails": {
+            "npc": "Pexmit",
+            "location": "Elderwild / Nordrassil, Mount Hyjal (Forever Exclusive Vendor)",
+            "cost": "1g 80s",
+            "supply": "Unlimited"
+          },
+          "trainerAlternative": "Trainer Backup: Craft Runecloth Belt (255–275, 3x Bolt of Runecloth + 1x Rune Thread) and Brightcloth Cloak (275–295) learned from the Artisan trainer."
         },
         {
           "type": "step",
@@ -92749,7 +92943,14 @@
               "icon": "spell_shadow_antimagicshell",
               "quality": 1
             }
-          ]
+          ],
+          "vendorDetails": {
+            "npc": "Shen'dralar Provisioner",
+            "location": "Dire Maul North Library, Feralas",
+            "cost": "4g",
+            "supply": "Limited (1)"
+          },
+          "trainerAlternative": "Trainer Backup: Craft Brightcloth Cloak (275–295, 4x Bolt of Runecloth + 2x Gold Bar) or Runecloth Gloves up to 290+ without needing Mooncloth cooldowns."
         }
       ]
     },
@@ -94095,22 +94296,156 @@
       }
     ],
     "leveling": {
-      "title": "Mining Leveling Route",
+      "title": "LEVELING FROM 1 TO 300 (SMELTING BYPASS & VEIN MINING)",
+      "capNote": "225 is the beta's cap for now",
+      "desc": "In WoW Forever, you can bypass open-world vein farming from 1 to 140 and 155 to 185 purely by smelting ore at any forge! Only 140–155 and 185–300 require mining veins in the open world.",
+      "guideCallouts": [
+        {
+          "icon": "🔥",
+          "title": "1–185 Smelting Bypass Trick & Smelting Pants (-25% Cast Time)",
+          "text": "Smelting grants skill-ups from 1–140 (Copper → Tin → Bronze → Silver → Iron) and 155–185 (Gold). Between 140 and 155, all smelting recipes are grey or locked, so you must mine 15 points in the open world (or equip a Mining Pick +5 and Enchant Gloves - Advanced Mining +5). Equip Smelting Pants (item=5199) to reduce Copper/Tin/Bronze/Silver smelting time by 25%!"
+        },
+        {
+          "icon": "⛏️",
+          "title": "Forever Exclusives: Mining for Dummies, Rockslicer & Scarce Ores",
+          "text": "Complete your racial starter zone quest for the book \"Mining for Dummies\" (or visit starter trainers in Northshire, Coldridge, Shadowglen, Valley of Trials, Red Cloud Mesa, Death Knell, Zephras Isle, or Riverglades). Non-miners can use Rockslicer (30 charges) to mine Copper/Tin/Silver/Iron. Watch for Scarce materials (Pyrite, Bauxite, Pitchblende) and new endgame bars: Azerothium Bar (275), Heavy Thorium Bar (300), and Legionite Bar!"
+        }
+      ],
       "steps": [
+        {
+          "type": "rank",
+          "rank": "Apprentice Mining (1–75)",
+          "details": "Learned from \"Mining for Dummies\" starter quest book or trainers in Stormwind (Gelman Stonehand /way 51.0, 17.2), Ironforge (Geofram Bouldertoe /way 50.2, 26.0), Orgrimmar (Makaru /way 73.0, 26.8), Thunder Bluff (Brek Stonehoof /way 34.4, 57.8), Undercity (Brom Killian /way 55.8, 37.0), Zephras Isle, & Riverglades."
+        },
+        {
+          "type": "step",
+          "from": 1,
+          "to": 65,
+          "bar": {
+            "iLeft": "0.00%",
+            "iWidth": "21.33%",
+            "eLeft": "74.67%"
+          },
+          "itemId": 2840,
+          "recipeName": "Smelt Copper (Smelting Bypass)",
+          "source": "Learned automatically with Apprentice Mining (Orange 1 · Yellow 25 · Green 47 · Grey 70)",
+          "advice": "Keep at least 60 Copper Bars to smelt Bronze at 75–100! Can be done entirely at a capital city forge.",
+          "crafts": 130,
+          "reagents": [
+            {
+              "itemId": 2770,
+              "name": "Copper Ore",
+              "count": 1,
+              "icon": "inv_ore_copper_01",
+              "quality": 1
+            }
+          ]
+        },
         {
           "type": "gather-step",
           "from": 1,
           "to": 65,
           "bar": {
-            "iLeft": "0%",
-            "iWidth": "21.333333333333332%"
+            "iLeft": "0.00%",
+            "iWidth": "21.33%",
+            "eLeft": "74.67%"
           },
-          "title": "Copper Vein",
-          "zones": "Most of them in Durotar, Westfall, Duskwood and Silverpine Forest",
+          "title": "Open-World Vein Route: Copper Vein (Skill 1+)",
+          "zones": "Best density in Durotar, Mulgore, Dun Morogh, Elwynn Forest, Darkshore, Tirisfal Glades, Zephras Isle & Riverglades. Drops Copper Ore, Rough Stone & Pyrite (Scarce).",
           "icons": [
             {
+              "itemId": 2770,
               "icon": "inv_ore_copper_01",
-              "name": "Copper Vein"
+              "name": "Copper Ore"
+            },
+            {
+              "itemId": 2835,
+              "icon": "inv_stone_06",
+              "name": "Rough Stone"
+            }
+          ]
+        },
+        {
+          "type": "rank",
+          "rank": "Journeyman Mining (50–150)",
+          "details": "Learned at Skill 50 (Level 10) from any Mining trainer, up to 150. Unlocks Smelt Tin (65), Smelt Bronze (65), Smelt Silver (75), and Smelt Iron (125)."
+        },
+        {
+          "type": "step",
+          "from": 65,
+          "to": 75,
+          "bar": {
+            "iLeft": "21.33%",
+            "iWidth": "3.33%",
+            "eLeft": "74.67%"
+          },
+          "itemId": 3576,
+          "recipeName": "Smelt Tin (Smelting Bypass)",
+          "source": "Learned from Mining Trainer at Skill 65 (Green 65 · Grey 75)",
+          "advice": "Keep all 60 Tin Bars! You will combine them 1:1 with your 60 Copper Bars in the very next step.",
+          "crafts": 60,
+          "reagents": [
+            {
+              "itemId": 2771,
+              "name": "Tin Ore",
+              "count": 1,
+              "icon": "inv_ore_tin_01",
+              "quality": 1
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "from": 75,
+          "to": 100,
+          "bar": {
+            "iLeft": "24.67%",
+            "iWidth": "8.33%",
+            "eLeft": "74.67%"
+          },
+          "itemId": 2841,
+          "recipeName": "Smelt Bronze (Smelting Bypass)",
+          "source": "Learned from Mining Trainer at Skill 65 (Yellow 65 · Green 90 · Grey 115)",
+          "advice": "Each craft produces 2 Bronze Bars using the Copper and Tin Bars you smelted from 1 to 75.",
+          "crafts": 60,
+          "reagents": [
+            {
+              "itemId": 2840,
+              "name": "Copper Bar",
+              "count": 1,
+              "icon": "inv_ingot_02",
+              "quality": 1
+            },
+            {
+              "itemId": 3576,
+              "name": "Tin Bar",
+              "count": 1,
+              "icon": "inv_ingot_tin",
+              "quality": 1
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "from": 100,
+          "to": 125,
+          "bar": {
+            "iLeft": "33.00%",
+            "iWidth": "8.33%",
+            "eLeft": "74.67%"
+          },
+          "itemId": 2842,
+          "recipeName": "Smelt Silver (Smelting Bypass)",
+          "source": "Learned from Mining Trainer at Skill 75 (Orange 75 · Yellow 100 · Green 112 · Grey 125)",
+          "advice": "Smelt Silver carries you cleanly to 125 so you can learn Smelt Iron.",
+          "crafts": 70,
+          "reagents": [
+            {
+              "itemId": 2775,
+              "name": "Silver Ore",
+              "count": 1,
+              "icon": "inv_stone_16",
+              "quality": 1
             }
           ]
         },
@@ -94119,87 +94454,172 @@
           "from": 65,
           "to": 125,
           "bar": {
-            "iLeft": "21.333333333333332%",
-            "iWidth": "20%"
+            "iLeft": "21.33%",
+            "iWidth": "20.00%",
+            "eLeft": "74.67%"
           },
-          "title": "Tin Vein and Silver Vein",
-          "zones": "Most of them in Arathi Highlands, Wetlands, Duskwood and Silverpine Forest",
+          "title": "Open-World Vein Route: Tin Vein (65+) & Silver Vein (75+)",
+          "zones": "Best density in The Barrens, Hillsbrad Foothills, Wetlands, Redridge Mountains, Duskwood & Stonetalon Mountains. Drops Tin Ore, Silver Ore & Coarse Stone.",
           "icons": [
             {
+              "itemId": 2771,
               "icon": "inv_ore_tin_01",
-              "name": "Tin Vein"
+              "name": "Tin Ore"
             },
             {
+              "itemId": 2775,
               "icon": "inv_stone_16",
-              "name": "Silver Vein"
+              "name": "Silver Ore"
+            },
+            {
+              "itemId": 2836,
+              "icon": "inv_stone_09",
+              "name": "Coarse Stone"
+            }
+          ]
+        },
+        {
+          "type": "rank",
+          "rank": "Expert Mining (125–225)",
+          "details": "Learned at Skill 125 (Level 20) from Mining trainers — including Dalaran in Alterac Mountains (/way 25.0, 41.2) and capital city masters, up to 225."
+        },
+        {
+          "type": "step",
+          "from": 125,
+          "to": 140,
+          "bar": {
+            "iLeft": "41.33%",
+            "iWidth": "5.00%",
+            "eLeft": "74.67%"
+          },
+          "itemId": 3575,
+          "recipeName": "Smelt Iron (Smelting Bypass)",
+          "source": "Learned from Mining Trainer at Skill 125 (Orange 125 · Yellow 130 · Green 135 · Grey 140)",
+          "advice": "Smelt Iron turns grey at 140! Stop smelting at 140 and mine veins in the open world from 140 to 155.",
+          "crafts": 35,
+          "reagents": [
+            {
+              "itemId": 2772,
+              "name": "Iron Ore",
+              "count": 1,
+              "icon": "inv_ore_iron_01",
+              "quality": 1
             }
           ]
         },
         {
           "type": "gather-step",
-          "from": 125,
-          "to": 175,
+          "from": 140,
+          "to": 155,
           "bar": {
-            "iLeft": "41.333333333333336%",
-            "iWidth": "16.666666666666668%"
+            "iLeft": "46.33%",
+            "iWidth": "5.00%",
+            "eLeft": "74.67%"
           },
-          "title": "Iron Deposit and Gold Vein",
-          "zones": "Most of them in Arathi Highlands, Alterac Mountains, Stranglethorn Vale and Duskwood",
+          "title": "⚠️ MANDATORY WORLD MINING (140–155): Iron, Tin & Silver Veins",
+          "zones": "No smelting recipe grants skill points between 140 and 155! Mine Iron Deposits (125), Silver Veins (75), or Tin Veins (65) in Arathi Highlands, Alterac Mountains, Thousand Needles, Desolace & Stranglethorn Vale until 155.",
           "icons": [
             {
+              "itemId": 2772,
               "icon": "inv_ore_iron_01",
-              "name": "Iron Deposit"
+              "name": "Iron Ore"
             },
             {
+              "itemId": 2838,
+              "icon": "inv_stone_12",
+              "name": "Heavy Stone"
+            }
+          ]
+        },
+        {
+          "type": "step",
+          "from": 155,
+          "to": 185,
+          "bar": {
+            "iLeft": "51.33%",
+            "iWidth": "10.00%",
+            "eLeft": "74.67%"
+          },
+          "itemId": 3577,
+          "recipeName": "Smelt Gold (Smelting Bypass)",
+          "source": "Learned from Mining Trainer at Skill 155 (Orange 155 · Yellow 170 · Green 177 · Grey 185)",
+          "advice": "Last smelting skill-up bracket! Note: Smelt Steel (learned at 165, 1x Iron Bar + 1x Coal) and Smelt Mithril (learned at 175) are learned already grey/non-skilling in Forever, though occasionally grant 1 point on first craft.",
+          "crafts": 60,
+          "reagents": [
+            {
+              "itemId": 2776,
+              "name": "Gold Ore",
+              "count": 1,
               "icon": "inv_ore_copper_01",
-              "name": "Gold Vein"
+              "quality": 2
             }
           ]
         },
         {
           "type": "gather-step",
           "from": 175,
-          "to": 245,
+          "to": 225,
           "bar": {
-            "iLeft": "58%",
-            "iWidth": "23.333333333333332%"
+            "iLeft": "58.00%",
+            "iWidth": "16.67%",
+            "eLeft": "74.67%"
           },
-          "title": "Mithril Deposit and Truesilver Deposit",
-          "zones": "Most of them in Badlands, The Hinterlands, Alterac Mountains and Searing Gorge",
+          "title": "Open-World Vein Route: Mithril Deposit (175+) & Gold Vein (155+)",
+          "zones": "Mine Mithril Deposits from 175 to 225 Beta Cap in Badlands, Tanaris, The Hinterlands, Searing Gorge & Desolace. Yields Mithril Ore, Solid Stone, Aquamarine & Star Ruby.",
           "icons": [
             {
+              "itemId": 3858,
               "icon": "inv_ore_mithril_02",
-              "name": "Mithril Deposit"
+              "name": "Mithril Ore"
             },
             {
-              "icon": "inv_ore_truesilver_01",
-              "name": "Truesilver Deposit"
+              "itemId": 7912,
+              "icon": "inv_stone_10",
+              "name": "Solid Stone"
             }
           ]
         },
         {
           "type": "beta-stop",
-          "title": "The beta stops at 225",
-          "text": "Artisan ranks are 225 to 300, planned for launch."
+          "title": "🔒 THE BETA STOPS AT 225 (REQUIRES LEVEL 35)",
+          "text": "Artisan Mining (225–300) unlocks in Phase 3 at Level 35. Train Artisan Mining from capital masters or Elderwild in Mount Hyjal (/way 39.2, 23.0)."
+        },
+        {
+          "type": "rank",
+          "rank": "Artisan Mining (225–300)",
+          "details": "Learned at Skill 200 (Level 35) from Mining trainers in Capital Cities, Gadgetzan, or Mount Hyjal (/way 39.2, 23.0), up to 300. Unlocks Smelt Truesilver (230), Smelt Dark Iron (230, Blackrock Depths quest), Smelt Thorium (250), Smelt Azerothium (275, Forever New), and Smelt Heavy Thorium (300, Forever New)."
         },
         {
           "type": "gather-step",
-          "from": 245,
+          "from": 225,
           "to": 300,
           "bar": {
-            "iLeft": "81.33333333333333%",
-            "iWidth": "18.333333333333332%"
+            "iLeft": "74.67%",
+            "iWidth": "25.00%",
+            "eLeft": "74.67%"
           },
-          "title": "Small Thorium Vein and Rich Thorium Vein",
-          "zones": "Most of them in Winterspring, Azshara, Swamp of Sorrows and Blasted Lands",
+          "title": "Truesilver (230+), Small Thorium (245+) & Rich Thorium Veins (275+)",
+          "zones": "225–245: Mithril & Truesilver Deposits (Badlands, Tanaris, Hinterlands) · 245–275: Small Thorium Veins (Un'Goro Crater, Blasted Lands, Searing Gorge, Burning Steppes) · 275–300: Rich Thorium Veins (Winterspring, Eastern Plaguelands, Silithus, Azshara & Mount Hyjal). Drops Thorium Ore, Dense Stone, Arcane Crystal & Pitchblende.",
           "icons": [
             {
-              "icon": "inv_ore_thorium_02",
-              "name": "Small Thorium Vein"
+              "itemId": 7911,
+              "icon": "inv_ore_truesilver_01",
+              "name": "Truesilver Ore"
             },
             {
+              "itemId": 10620,
               "icon": "inv_ore_thorium_02",
-              "name": "Rich Thorium Vein"
+              "name": "Thorium Ore"
+            },
+            {
+              "itemId": 12365,
+              "icon": "inv_misc_stonetablet_07",
+              "name": "Dense Stone"
+            },
+            {
+              "itemId": 12363,
+              "icon": "inv_misc_gem_topaz_01",
+              "name": "Arcane Crystal"
             }
           ]
         }
@@ -94334,7 +94754,54 @@
         }
       ]
     },
-    "synergy": "Goes with Blacksmithing, or Engineering."
+    "synergy": "Goes with Blacksmithing, or Engineering.",
+    "shopping": {
+      "title": "SMELTING BYPASS SHOPPING LIST (1 TO 185)",
+      "subtitle": "Exact ore quantities required to power-level Mining 1–140 and 155–185 at a forge without mining Copper/Tin/Silver/Gold nodes in the open world.",
+      "groups": [
+        {
+          "title": "1–140 & 155–185 Smelting Bypass Ores",
+          "note": "60 Copper Bars + 60 Tin Bars from steps 1–2 are reused to smelt 60 Bronze (75–100)",
+          "items": [
+            {
+              "itemId": 2770,
+              "name": "Copper Ore",
+              "icon": "inv_ore_copper_01",
+              "quality": 1,
+              "count": 130
+            },
+            {
+              "itemId": 2771,
+              "name": "Tin Ore",
+              "icon": "inv_ore_tin_01",
+              "quality": 1,
+              "count": 60
+            },
+            {
+              "itemId": 2775,
+              "name": "Silver Ore",
+              "icon": "inv_stone_16",
+              "quality": 1,
+              "count": 70
+            },
+            {
+              "itemId": 2772,
+              "name": "Iron Ore",
+              "icon": "inv_ore_iron_01",
+              "quality": 1,
+              "count": 35
+            },
+            {
+              "itemId": 2776,
+              "name": "Gold Ore",
+              "icon": "inv_ore_copper_01",
+              "quality": 2,
+              "count": 60
+            }
+          ]
+        }
+      ]
+    }
   },
   "herbalism": {
     "slug": "herbalism",
@@ -94384,18 +94851,38 @@
       }
     ],
     "leveling": {
-      "title": "Herbalism Leveling Route",
+      "title": "LEVELING FROM 1 TO 300 (HERB ZONES & FOREVER BOOSTS)",
+      "capNote": "225 is the beta's cap for now",
+      "desc": "Keep Find Herbs active on your minimap at all times. In WoW Forever, starter valleys spawn Wilted Peacebloom and Stunted Silverleaf so you can skill up from Level 1!",
+      "guideCallouts": [
+        {
+          "icon": "🍵",
+          "title": "Forever +25 Herbalism Skill Boosts & Tauren Cultivation Rework",
+          "text": "Drink Goldthorn Tea (item=10841) for a +15 Herbalism skill boost in Forever! Stack it with Herbalist's Gloves (+5) and Enchant Gloves - Advanced Herbalism (+5) to harvest nodes 25 points early. For Tauren, Cultivation now duplicates a nearby herb node instead of giving +15 flat skill!"
+        },
+        {
+          "icon": "🌱",
+          "title": "Starter Book \"Wild Harvest\", Herb Seeds & Scarce Herbs",
+          "text": "Complete your starter zone quest for the book \"Wild Harvest\" (item=247841) or train in Northshire, Coldridge, Shadowglen, Valley of Trials, Red Cloud Mesa, Death Knell, Zephras Isle & Riverglades. Gathering herbs in Forever yields Commonplace, Uncommon, Unusual & Scarce Herb Seeds (for Camp Greenhouses), Scarce herbs (Frilled Lichen, Rosecap, Stranglevine), and new 290–300 endgame herbs (Marefoil, Demonsage, Death Lotus)!"
+        }
+      ],
       "steps": [
+        {
+          "type": "rank",
+          "rank": "Apprentice Herbalism (1–75)",
+          "details": "Learned from \"Wild Harvest\" starter quest book or trainers: Tannysa in Stormwind (/way 53.0, 84.8), Reyna Stonebranch in Ironforge (/way 55.6, 59.0), Firodren Mooncaller in Darnassus (/way 48.0, 68.6), Jandi in Orgrimmar (/way 55.6, 39.6), Komin Winterhoof in Thunder Bluff (/way 49.8, 40.2), Martha Alliestar in Undercity (/way 54.4, 49.8), Zephras Isle & Riverglades."
+        },
         {
           "type": "gather-step",
           "from": 1,
           "to": 50,
           "bar": {
-            "iLeft": "0%",
-            "iWidth": "16.333333333333332%"
+            "iLeft": "0.00%",
+            "iWidth": "16.33%",
+            "eLeft": "74.67%"
           },
-          "title": "Peacebloom, Silverleaf and Earthroot",
-          "zones": "Most of them in The Barrens, Durotar, Tirisfal Glades and Elwynn Forest",
+          "title": "Wilted Peacebloom (1), Peacebloom (1), Silverleaf (1) & Earthroot (15)",
+          "zones": "Starter valleys (Wilted Peacebloom & Stunted Silverleaf) plus Elwynn Forest, Dun Morogh, Teldrassil, Durotar, Mulgore, Tirisfal Glades, Zephras Isle & Riverglades.",
           "icons": [
             {
               "icon": "inv_misc_flower_02",
@@ -94412,15 +94899,21 @@
           ]
         },
         {
+          "type": "rank",
+          "rank": "Journeyman Herbalism (50–150)",
+          "details": "Learned at Skill 50 from any Herbalism trainer in capital cities or major towns, up to 150."
+        },
+        {
           "type": "gather-step",
           "from": 50,
           "to": 100,
           "bar": {
-            "iLeft": "16.333333333333332%",
-            "iWidth": "16.666666666666668%"
+            "iLeft": "16.33%",
+            "iWidth": "16.67%",
+            "eLeft": "74.67%"
           },
-          "title": "Mageroyal, Briarthorn and Earthroot",
-          "zones": "Most of them in The Barrens, Ashenvale, Darkshore and Westfall",
+          "title": "Mageroyal (50), Briarthorn (70) & Stranglekelp (85)",
+          "zones": "Most abundant in The Barrens, Westfall, Darkshore, Silverpine Forest, Loch Modan & Redridge Mountains. Drops Commonplace Herb Seeds & Frilled Lichen (Scarce).",
           "icons": [
             {
               "icon": "inv_jewelry_talisman_03",
@@ -94431,8 +94924,8 @@
               "name": "Briarthorn"
             },
             {
-              "icon": "inv_misc_herb_07",
-              "name": "Earthroot"
+              "icon": "inv_misc_herb_11",
+              "name": "Stranglekelp"
             }
           ]
         },
@@ -94441,11 +94934,12 @@
           "from": 100,
           "to": 150,
           "bar": {
-            "iLeft": "33%",
-            "iWidth": "16.666666666666668%"
+            "iLeft": "33.00%",
+            "iWidth": "16.67%",
+            "eLeft": "74.67%"
           },
-          "title": "Bruiseweed, Wild Steelbloom, Kingsblood, Grave Moss and Stranglekelp",
-          "zones": "Most of them in Wetlands, The Barrens, Stonetalon Mountains and Ashenvale",
+          "title": "Bruiseweed (100), Wild Steelbloom (115), Grave Moss (120) & Kingsblood (125)",
+          "zones": "Most abundant in Hillsbrad Foothills, Wetlands, Stonetalon Mountains, Ashenvale, Duskwood (Grave Moss in crypts) & Southern Barrens.",
           "icons": [
             {
               "icon": "inv_misc_herb_01",
@@ -94456,29 +94950,31 @@
               "name": "Wild Steelbloom"
             },
             {
-              "icon": "inv_misc_herb_03",
-              "name": "Kingsblood"
-            },
-            {
               "icon": "inv_misc_dust_02",
               "name": "Grave Moss"
             },
             {
-              "icon": "inv_misc_herb_11",
-              "name": "Stranglekelp"
+              "icon": "inv_misc_herb_03",
+              "name": "Kingsblood"
             }
           ]
+        },
+        {
+          "type": "rank",
+          "rank": "Expert Herbalism (125–225)",
+          "details": "Learned at Skill 125 from capital trainers or Dalaran in Alterac Mountains (/way 21.8, 63.6), up to 225."
         },
         {
           "type": "gather-step",
           "from": 150,
           "to": 205,
           "bar": {
-            "iLeft": "49.666666666666664%",
-            "iWidth": "18.333333333333332%"
+            "iLeft": "49.67%",
+            "iWidth": "18.33%",
+            "eLeft": "74.67%"
           },
-          "title": "Liferoot, Fadeleaf, Goldthorn and Khadgar's Whisker",
-          "zones": "Most of them in Stranglethorn Vale, Arathi Highlands, Alterac Mountains and Swamp of Sorrows",
+          "title": "Liferoot (150), Fadeleaf (160), Goldthorn (170), Khadgar's Whisker (185) & Wintersbite (195)",
+          "zones": "Stranglethorn Vale (riverbanks for Liferoot), Arathi Highlands (Goldthorn), Alterac Mountains (Wintersbite) & Swamp of Sorrows (Fadeleaf/Khadgar's Whisker).",
           "icons": [
             {
               "icon": "inv_misc_root_02",
@@ -94501,13 +94997,14 @@
         {
           "type": "gather-step",
           "from": 205,
-          "to": 230,
+          "to": 225,
           "bar": {
-            "iLeft": "68%",
-            "iWidth": "8.333333333333334%"
+            "iLeft": "68.00%",
+            "iWidth": "6.67%",
+            "eLeft": "74.67%"
           },
-          "title": "Firebloom, Purple Lotus and Arthas' Tears",
-          "zones": "Most of them in Azshara, Tanaris, Western Plaguelands and Searing Gorge",
+          "title": "Firebloom (205), Purple Lotus (210) & Arthas' Tears (220)",
+          "zones": "Tanaris & Searing Gorge / Badlands (Firebloom), Ashenvale / Azshara / Hinterlands ruins (Purple Lotus), and Razorfen Downs / Western Plaguelands (Arthas' Tears).",
           "icons": [
             {
               "icon": "inv_misc_herb_19",
@@ -94525,19 +95022,25 @@
         },
         {
           "type": "beta-stop",
-          "title": "The beta stops at 225",
-          "text": "Artisan ranks are 225 to 300, planned for launch."
+          "title": "🔒 THE BETA STOPS AT 225 (REQUIRES LEVEL 35)",
+          "text": "Artisan Herbalism (225–300) unlocks in Phase 3. Train Artisan Herbalism from capital trainers, Master Mycologist Shurome in Emerald Sanctuary (/way 51.4, 82.0), or Elderwild in Mount Hyjal (/way 46.8, 25.0)."
+        },
+        {
+          "type": "rank",
+          "rank": "Artisan Herbalism (225–300)",
+          "details": "Learned at Skill 200 from capital trainers, Master Mycologist Shurome in Emerald Sanctuary (/way 51.4, 82.0), or Mount Hyjal (/way 46.8, 25.0), up to 300."
         },
         {
           "type": "gather-step",
-          "from": 230,
+          "from": 225,
           "to": 270,
           "bar": {
-            "iLeft": "76.33333333333333%",
-            "iWidth": "13.333333333333334%"
+            "iLeft": "74.67%",
+            "iWidth": "15.00%",
+            "eLeft": "74.67%"
           },
-          "title": "Sungrass, Blindweed, Ghost Mushroom, Gromsblood and Golden Sansam",
-          "zones": "Most of them in Azshara, Swamp of Sorrows, The Hinterlands and Un'Goro Crater",
+          "title": "Sungrass (230), Blindweed (235), Ghost Mushroom (245), Gromsblood (250) & Golden Sansam (260)",
+          "zones": "Swamp of Sorrows (Blindweed rivers), The Hinterlands (Sungrass + Ghost Mushroom in Skulk Rock), Felwood & Blasted Lands (Gromsblood), Feralas & Un'Goro Crater.",
           "icons": [
             {
               "icon": "inv_misc_herb_18",
@@ -94566,11 +95069,12 @@
           "from": 270,
           "to": 300,
           "bar": {
-            "iLeft": "89.66666666666667%",
-            "iWidth": "10%"
+            "iLeft": "89.67%",
+            "iWidth": "10.00%",
+            "eLeft": "74.67%"
           },
-          "title": "Dreamfoil, Mountain Silversage, Plaguebloom and Icecap",
-          "zones": "Most of them in Eastern Plaguelands, Winterspring, Azshara and Un'Goro Crater",
+          "title": "Dreamfoil (270), Mountain Silversage (280), Plaguebloom (285), Icecap (290) + Forever Herbs (290–300)",
+          "zones": "Un'Goro Crater, Azshara, Eastern Plaguelands, Winterspring & Mount Hyjal. Includes Forever endgame herbs: Marefoil (290), Demonsage (300) & Death Lotus (300) alongside Black Lotus (300)!",
           "icons": [
             {
               "icon": "inv_misc_herb_dreamfoil",
@@ -94861,19 +95365,38 @@
       }
     ],
     "leveling": {
-      "title": "Skinning Leveling Route",
+      "title": "LEVELING FROM 1 TO 300 (BEAST LEVEL FORMULA & ZONES)",
+      "capNote": "225 is the beta's cap for now",
+      "desc": "Always keep a Skinning Knife in your bags (does not need to be equipped). In WoW Forever, starter zone beasts (Level 1–10) are skinnable right out of the gate!",
+      "guideCallouts": [
+        {
+          "icon": "📐",
+          "title": "Exact Monster-Level to Skinning Skill Formula",
+          "text": "• Beasts Level 1–10: Requires Skinning Skill 1 · • Beasts Level 11–20: (Monster Level - 10) × 10 (e.g., Lvl 12 = Skill 20, Lvl 15 = Skill 50, Lvl 20 = Skill 100) · • Beasts Level 21+: Monster Level × 5 (e.g., Lvl 25 = Skill 125, Lvl 35 = Skill 175, Lvl 45 = Skill 225, Lvl 60 = Skill 300)."
+        },
+        {
+          "icon": "🦌",
+          "title": "Forever Exclusives: Pelt Collecting for Beginners, Pristine & Fel Pelts",
+          "text": "Learn Apprentice Skinning via the starter quest book \"Pelt Collecting for Beginners\" (item=247846) or starter trainers in Zephras Isle, Riverglades, Goldshire, Kharanos, Razor Hill & Brill. Skinning in Forever yields Scarce Pristine Leather, Pristine Hide & Pristine Scale, plus endgame Fel Leather and Fel Hide! Boost skill up to +15 with Finkle's Skinner (+10) or Zulian Slicer (+10) + Enchant Gloves - Skinning (+5)."
+        }
+      ],
       "steps": [
+        {
+          "type": "rank",
+          "rank": "Apprentice Skinning (1–75)",
+          "details": "Learned from \"Pelt Collecting for Beginners\" starter book or trainers: Maris Granger in Stormwind (/way 72.2, 62.2), Balthus Stoneflayer in Ironforge (/way 39.8, 32.6), Thuwd in Orgrimmar (/way 63.2, 45.2), Mooranta in Thunder Bluff (/way 44.4, 43.2), Killian Hagey in Undercity (/way 70.6, 58.6), Zephras Isle & Riverglades."
+        },
         {
           "type": "gather-step",
           "from": 1,
-          "to": 1,
+          "to": 75,
           "bar": {
-            "iLeft": "0%",
-            "iWidth": "0.6%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "0.00%",
+            "iWidth": "24.67%",
+            "eLeft": "74.67%"
           },
-          "title": "Beasts of level 1 to 10",
-          "zones": "Most in Mulgore, Durotar, Dun Morogh and Elwynn Forest",
+          "title": "Beasts of Level 1 to 15 (Starter & Early Zones)",
+          "zones": "Lvl 1–10 beasts require Skill 1; Lvl 15 beasts require Skill 50. Farm wolves, boars & nightsabers in Elwynn Forest, Dun Morogh, Teldrassil, Durotar, Mulgore, Tirisfal Glades, Zephras Isle & Riverglades.",
           "icons": [
             {
               "itemId": 2934,
@@ -94896,27 +95419,26 @@
           ]
         },
         {
+          "type": "rank",
+          "rank": "Journeyman Skinning (50–150)",
+          "details": "Learned at Skill 50 from any capital city Skinning trainer (remember to train before leaving town at Skill 50–75!)."
+        },
+        {
           "type": "gather-step",
-          "from": 10,
-          "to": 100,
+          "from": 75,
+          "to": 150,
           "bar": {
-            "iLeft": "3%",
-            "iWidth": "30%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "24.67%",
+            "iWidth": "25.00%",
+            "eLeft": "74.67%"
           },
-          "title": "Beasts of level 11 to 20",
-          "zones": "Most in The Barrens, Darkshore, Silverpine Forest and Loch Modan",
+          "title": "Beasts of Level 15 to 30 (Formula: Lvl 11–20 = (Lvl-10)×10 · Lvl 21+ = Lvl×5)",
+          "zones": "75–125: Westfall, Loch Modan, Darkshore, The Barrens & Silverpine Forest · 125–150: Wetlands (Whelgar's Excavation / Raptors), Ashenvale, Hillsbrad Foothills, Redridge & Stonetalon Mountains.",
           "icons": [
             {
               "itemId": 2318,
               "name": "Light Leather",
               "icon": "inv_misc_leatherscrap_03",
-              "quality": 1
-            },
-            {
-              "itemId": 2934,
-              "name": "Ruined Leather Scraps",
-              "icon": "inv_misc_pelt_bear_ruin_05",
               "quality": 1
             },
             {
@@ -94926,37 +95448,36 @@
               "quality": 1
             },
             {
-              "itemId": 17057,
-              "name": "Shiny Fish Scales",
-              "icon": "inv_misc_monsterscales_08",
+              "itemId": 4232,
+              "name": "Medium Hide",
+              "icon": "inv_misc_pelt_boar_ruin_02",
+              "quality": 1
+            },
+            {
+              "itemId": 4234,
+              "name": "Heavy Leather",
+              "icon": "inv_misc_leatherscrap_07",
               "quality": 1
             }
           ]
         },
         {
+          "type": "rank",
+          "rank": "Expert Skinning (125–225)",
+          "details": "Learned at Skill 125 from capital trainers or Dalaran in Alterac Mountains (/way 12.2, 74.6), up to 225."
+        },
+        {
           "type": "gather-step",
-          "from": 105,
-          "to": 150,
+          "from": 150,
+          "to": 205,
           "bar": {
-            "iLeft": "34.666666666666664%",
-            "iWidth": "15%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "49.67%",
+            "iWidth": "18.33%",
+            "eLeft": "74.67%"
           },
-          "title": "Beasts of level 21 to 30",
-          "zones": "Most in Wetlands, Ashenvale, Hillsbrad Foothills and Thousand Needles",
+          "title": "Beasts of Level 30 to 41 (Required Skill = Mob Level × 5)",
+          "zones": "High-density beast camps in Stranglethorn Vale (Nesingwary Tigers/Panthers/Raptors), Thousand Needles (Shimmering Flats), Arathi Highlands (Raptors), Desolace & Badlands.",
           "icons": [
-            {
-              "itemId": 2319,
-              "name": "Medium Leather",
-              "icon": "inv_misc_leatherscrap_05",
-              "quality": 1
-            },
-            {
-              "itemId": 2318,
-              "name": "Light Leather",
-              "icon": "inv_misc_leatherscrap_03",
-              "quality": 1
-            },
             {
               "itemId": 4234,
               "name": "Heavy Leather",
@@ -94968,37 +95489,11 @@
               "name": "Heavy Hide",
               "icon": "inv_misc_pelt_wolf_ruin_03",
               "quality": 1
-            }
-          ]
-        },
-        {
-          "type": "gather-step",
-          "from": 155,
-          "to": 200,
-          "bar": {
-            "iLeft": "51.333333333333336%",
-            "iWidth": "15%",
-            "eLeft": "74.66666666666667%"
-          },
-          "title": "Beasts of level 31 to 40",
-          "zones": "Most in Dustwallow Marsh, Desolace, Stranglethorn Vale and Badlands",
-          "icons": [
-            {
-              "itemId": 4234,
-              "name": "Heavy Leather",
-              "icon": "inv_misc_leatherscrap_07",
-              "quality": 1
             },
             {
               "itemId": 4304,
               "name": "Thick Leather",
               "icon": "inv_misc_leatherscrap_08",
-              "quality": 1
-            },
-            {
-              "itemId": 2319,
-              "name": "Medium Leather",
-              "icon": "inv_misc_leatherscrap_05",
               "quality": 1
             },
             {
@@ -95012,14 +95507,14 @@
         {
           "type": "gather-step",
           "from": 205,
-          "to": 250,
+          "to": 225,
           "bar": {
-            "iLeft": "68%",
-            "iWidth": "15%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "68.00%",
+            "iWidth": "6.67%",
+            "eLeft": "74.67%"
           },
-          "title": "Beasts of level 41 to 50",
-          "zones": "Most in Tanaris, Feralas, The Hinterlands and Felwood",
+          "title": "Beasts of Level 41 to 45 (To Phase 2 Beta Cap 225)",
+          "zones": "Southern Stranglethorn Vale, Tanaris (Roc/Hyena packs), Feralas (Longtooth Runners/Bears), Dustwallow Marsh & Swamp of Sorrows.",
           "icons": [
             {
               "itemId": 4304,
@@ -95028,15 +95523,9 @@
               "quality": 1
             },
             {
-              "itemId": 4234,
-              "name": "Heavy Leather",
-              "icon": "inv_misc_leatherscrap_07",
-              "quality": 1
-            },
-            {
-              "itemId": 8170,
-              "name": "Rugged Leather",
-              "icon": "inv_misc_leatherscrap_02",
+              "itemId": 8169,
+              "name": "Thick Hide",
+              "icon": "inv_misc_pelt_bear_ruin_01",
               "quality": 1
             },
             {
@@ -95048,23 +95537,27 @@
           ]
         },
         {
+          "type": "beta-stop",
+          "title": "🔒 THE BETA STOPS AT 225 (REQUIRES LEVEL 35)",
+          "text": "Artisan Skinning (225–300) unlocks in Phase 3. Train Artisan Skinning from capital trainers or Elderwild in Mount Hyjal (/way 41.2, 43.4)."
+        },
+        {
+          "type": "rank",
+          "rank": "Artisan Skinning (225–300)",
+          "details": "Learned at Skill 200 from capital trainers or Elderwild in Mount Hyjal (/way 41.2, 43.4), up to 300."
+        },
+        {
           "type": "gather-step",
-          "from": 255,
+          "from": 225,
           "to": 300,
           "bar": {
-            "iLeft": "84.66666666666667%",
-            "iWidth": "15%",
-            "eLeft": "74.66666666666667%"
+            "iLeft": "74.67%",
+            "iWidth": "25.00%",
+            "eLeft": "74.67%"
           },
-          "title": "Beasts of level 51 to 60",
-          "zones": "Most in Winterspring, Azshara, Silithus and Eastern Plaguelands",
+          "title": "Beasts of Level 45 to 60 (Formula: Mob Level × 5)",
+          "zones": "225–250 (Lvl 45–50): Tanaris, Feralas, The Hinterlands & Searing Gorge · 250–300 (Lvl 50–60): Un'Goro Crater (Devilsaurs/Diemetradons), Winterspring (Yetis/Frostsabers), Felwood (Fel Leather/Hide), Blasted Lands, Silithus & Mount Hyjal.",
           "icons": [
-            {
-              "itemId": 8170,
-              "name": "Rugged Leather",
-              "icon": "inv_misc_leatherscrap_02",
-              "quality": 1
-            },
             {
               "itemId": 4304,
               "name": "Thick Leather",
@@ -95072,15 +95565,21 @@
               "quality": 1
             },
             {
-              "itemId": 15408,
-              "name": "Heavy Scorpid Scale",
-              "icon": "inv_misc_monsterscales_03",
+              "itemId": 8170,
+              "name": "Rugged Leather",
+              "icon": "inv_misc_leatherscrap_02",
               "quality": 1
             },
             {
               "itemId": 8171,
               "name": "Rugged Hide",
               "icon": "inv_misc_pelt_bear_ruin_02",
+              "quality": 1
+            },
+            {
+              "itemId": 15408,
+              "name": "Heavy Scorpid Scale",
+              "icon": "inv_misc_monsterscales_03",
               "quality": 1
             }
           ]
@@ -99156,7 +99655,7 @@
         {
           "type": "rank",
           "rank": "Apprentice",
-          "details": "from any Cooking trainer, up to 75"
+          "details": "Learned from any Cooking trainer (e.g., Stephen Ryback in Stormwind /way 77.2, 53.2 · Daryl Riknussun in Ironforge /way 60.0, 36.8 · Zamja in Orgrimmar /way 57.6, 53.6), up to 75. All cooked foods grant Well Fed (+5% Kill XP) in Forever!"
         },
         {
           "type": "step",
@@ -99204,12 +99703,19 @@
               "icon": "inv_misc_fish_32",
               "quality": 1
             }
-          ]
+          ],
+          "vendorDetails": {
+            "npc": "Tharynn Bouden / Tansy Puddlefizz (A) · Naal Mistrunner (H)",
+            "location": "Goldshire /way 41.8, 67.0 & Ironforge /way 47.8, 6.6 (A) · Thunder Bluff /way 51.0, 52.8 (H)",
+            "cost": "4s",
+            "supply": "Unlimited"
+          },
+          "trainerAlternative": "Trainer Backup: Craft Smoked Bear Meat (40–85) or Boiled Clams / Crab Cake (50–100) taught by the Cooking trainer."
         },
         {
           "type": "rank",
           "rank": "Journeyman",
-          "details": "from the trainer, from skill 50 and level 10, up to 150"
+          "details": "Learned from any Cooking trainer (Skill 50, Level 10), up to 150."
         },
         {
           "type": "step",
@@ -99233,7 +99739,14 @@
               "icon": "inv_misc_fish_32",
               "quality": 1
             }
-          ]
+          ],
+          "vendorDetails": {
+            "npc": "Tharynn Bouden / Tansy Puddlefizz (A) · Naal Mistrunner (H)",
+            "location": "Goldshire /way 41.8, 67.0 & Ironforge /way 47.8, 6.6 (A) · Thunder Bluff /way 51.0, 52.8 (H)",
+            "cost": "4s",
+            "supply": "Unlimited"
+          },
+          "trainerAlternative": "Trainer Backup: Craft Smoked Bear Meat (40–85) or Boiled Clams / Crab Cake (50–100) taught by the Cooking trainer."
         },
         {
           "type": "step",
@@ -99257,12 +99770,19 @@
               "icon": "inv_misc_fish_30",
               "quality": 1
             }
-          ]
+          ],
+          "vendorDetails": {
+            "npc": "Catherine Leland (Alliance) · Naal Mistrunner (Horde)",
+            "location": "Canals, Stormwind /way 55.0, 69.6 (A) · Thunder Bluff /way 51.0, 52.8 (H)",
+            "cost": "12s",
+            "supply": "Unlimited"
+          },
+          "trainerAlternative": "Trainer Backup: Craft Seasoned Wolf Kabob (100–150, Stormwind chef quest) or Big Bear Steak (110–150)."
         },
         {
           "type": "rank",
           "rank": "Expert",
-          "details": "from the book Expert Cookbook, sold for gold, from skill 125, up to 225"
+          "details": "Learned from the book Expert Cookbook (1g, Skill 125), up to 225 — sold by Shandrina in Silverwind Refuge, Ashenvale (/way 49.6, 67.0, Alliance) or Wulan in Shadowprey Village, Desolace (/way 26.2, 69.8, Horde)."
         },
         {
           "type": "step",
@@ -99286,7 +99806,14 @@
               "icon": "inv_misc_fish_30",
               "quality": 1
             }
-          ]
+          ],
+          "vendorDetails": {
+            "npc": "Catherine Leland (Alliance) · Naal Mistrunner (Horde)",
+            "location": "Canals, Stormwind /way 55.0, 69.6 (A) · Thunder Bluff /way 51.0, 52.8 (H)",
+            "cost": "12s",
+            "supply": "Unlimited"
+          },
+          "trainerAlternative": "Trainer Backup: Craft Seasoned Wolf Kabob (100–150, Stormwind chef quest) or Big Bear Steak (110–150)."
         },
         {
           "type": "step",
@@ -99317,7 +99844,14 @@
               "icon": "inv_misc_food_wheat_02",
               "quality": 1
             }
-          ]
+          ],
+          "vendorDetails": {
+            "npc": "Super-Seller 680 (Gizelton Caravan)",
+            "location": "Kormek's Hut, Northern Desolace /way 60.6, 51.8 (When caravan stops in north)",
+            "cost": "16s",
+            "supply": "Unlimited"
+          },
+          "trainerAlternative": "Zero-Spice Backup: Keep cooking Bristle Whisker Catfish all the way from 150 to 175 (green 150–175), or Curiously Tasty Omelet (130–175)."
         },
         {
           "type": "step",
@@ -99341,12 +99875,19 @@
               "icon": "inv_misc_fish_02",
               "quality": 1
             }
-          ]
+          ],
+          "vendorDetails": {
+            "npc": "Tansy Puddlefizz / Heldan Galesong (A) · Shankys (H)",
+            "location": "Mystic Ward, Ironforge /way 47.8, 6.6 (A) · Cleft of Shadow, Orgrimmar /way 70.0, 30.6 (H)",
+            "cost": "22s",
+            "supply": "Unlimited"
+          },
+          "trainerAlternative": "Backup: Craft Roast Raptor or Carrion Surprise (175–225, sold by Corporal Bluth in Rebel Camp, STV /way 38.0, 3.0 or Keena in Hammerfall, Arathi)."
         },
         {
           "type": "rank",
           "rank": "Artisan",
-          "details": "from a quest of Dirge Quikcleave in Gadgetzan, Tanaris, from skill 225 and level 35, up to 300"
+          "details": "Unlocked via the quest Clamlette Surprise from Dirge Quikcleave in Gadgetzan, Tanaris (/way 52.6, 28.0, Skill 225 & Level 35), up to 300 — bring 12x Giant Eggs, 10x Zesty Clam Meat, and 20x Alterac Swiss."
         },
         {
           "type": "step",
@@ -99370,7 +99911,14 @@
               "icon": "inv_misc_fish_06",
               "quality": 1
             }
-          ]
+          ],
+          "vendorDetails": {
+            "npc": "Kelsey Yance",
+            "location": "Old Port Authority, Booty Bay (Stranglethorn Vale) /way 28.2, 74.4",
+            "cost": "1g 60s",
+            "supply": "Unlimited"
+          },
+          "trainerAlternative": "Backup: Craft Spotted Yellowtail or Monster Omelet (225–285, sold by Gikkix in Steamwheedle Port, Tanaris /way 66.6, 22.0)."
         },
         {
           "type": "step",
@@ -99394,7 +99942,26 @@
               "icon": "inv_misc_fish_19",
               "quality": 1
             }
-          ]
+          ],
+          "vendorDetails": {
+            "npc": "Gikkix",
+            "location": "Steamwheedle Port, Tanaris /way 66.6, 22.0",
+            "cost": "2g",
+            "supply": "Unlimited"
+          },
+          "trainerAlternative": "Backup: Craft Smoked Desert Dumplings (285–300, Cenarion Hold quest in Silithus) or Nightfin Soup (250–295)."
+        }
+      ],
+      "guideCallouts": [
+        {
+          "icon": "🍖",
+          "title": "Forever Cooking Perks: +5% Kill XP & Cookie's Stirring Rod (+25% Speed)",
+          "text": "Every cooked food in WoW Forever grants Well Fed (+5% Experience from monster kills) in addition to stat buffs. Farm Cookie in The Deadmines for Cookie's Stirring Rod — updated in Forever to increase your Cooking speed by 25%!"
+        },
+        {
+          "icon": "🐟",
+          "title": "Alternative 1–225 Zero-Spice Fish Route (Sold by Coastal Vendors or Fished)",
+          "text": "1–50: Brilliant Smallfish (~52x, recipe from Catherine Leland in SW /way 55.0, 69.6 or Sewa Mistrunner in TB /way 55.8, 47.6) · 50–100: Longjaw Mud Snapper (~55x) · 100–175: Bristle Whisker Catfish (~120x) · 175–225: Mithril Head Trout (~55x). Requires 0 Spices!"
         }
       ]
     },
@@ -99819,73 +100386,73 @@
     "fishingLures": [
       {
         "icon": "inv_10_fishing_bait_color1",
-        "name": "\"Secret\" BaitNew",
-        "bonus": "+25 Fishing for 10 minAny skill"
+        "name": "\"Secret\" Bait (Forever New)",
+        "bonus": "+25 Fishing for 10 min · Any skill"
       },
       {
         "icon": "inv_misc_orb_03",
         "name": "Shiny Bauble",
-        "bonus": "+25 Fishing for 10 minAny skill"
+        "bonus": "+25 Fishing for 10 min · Any skill"
       },
       {
         "icon": "inv_helm_armor_buckledhat_b_01_black",
-        "name": "Wide-Brimmed Fishing HatNew",
-        "bonus": "A hat that attaches a lure: +25 Fishing for 10 minAny skill"
+        "name": "Wide-Brimmed Fishing Hat (Forever New)",
+        "bonus": "Attaches a lure: +25 Fishing for 10 min · Any skill"
       },
       {
         "icon": "inv_misc_spyglass_01",
         "name": "Aquadynamic Fish Lens",
-        "bonus": "+50 Fishing for 10 minFishing 50"
+        "bonus": "+50 Fishing for 10 min · Requires Fishing 50"
       },
       {
         "icon": "inv_misc_monstertail_03",
         "name": "Nightcrawlers",
-        "bonus": "+50 Fishing for 10 minFishing 50"
+        "bonus": "+50 Fishing for 10 min · Requires Fishing 50"
       },
       {
         "icon": "inv_misc_gem_variety_02",
         "name": "Bright Baubles",
-        "bonus": "+75 Fishing for 10 minFishing 100"
+        "bonus": "+75 Fishing for 10 min · Requires Fishing 100"
       },
       {
         "icon": "inv_misc_monstertail_03",
         "name": "Flesh Eating Worm",
-        "bonus": "+75 Fishing for 10 minFishing 100"
+        "bonus": "+75 Fishing for 10 min · Requires Fishing 100"
       },
       {
         "icon": "inv_misc_food_26",
         "name": "Aquadynamic Fish Attractor",
-        "bonus": "+100 Fishing for 5 minFishing 100"
+        "bonus": "+100 Fishing for 5 min · Requires Fishing 100"
       },
       {
         "icon": "inv_potion_01",
-        "name": "Loch Frenzy Delight",
-        "bonus": "+3 Fishing for 15 minLevel 5"
+        "name": "Loch Frenzy Delight (Forever Food Buff)",
+        "bonus": "+3 Fishing for 15 min · Requires Level 5"
       },
       {
         "icon": "inv_misc_fish_05",
-        "name": "Fillet of Frenzy",
-        "bonus": "+5 Fishing for 15 minLevel 5"
+        "name": "Fillet of Frenzy (Forever Food Buff)",
+        "bonus": "+5 Fishing for 15 min · Requires Level 5"
       },
       {
         "icon": "inv_misc_fish_30",
-        "name": "Bristle Whisker Catfish",
-        "bonus": "+8 Fishing for 15 minLevel 15"
+        "name": "Bristle Whisker Catfish (Forever Food Buff)",
+        "bonus": "+8 Fishing for 15 min · Requires Level 15"
       },
       {
         "icon": "inv_misc_fish_04",
-        "name": "Rockscale Cod",
-        "bonus": "+12 Fishing for 15 minLevel 25"
+        "name": "Rockscale Cod (Forever Food Buff)",
+        "bonus": "+12 Fishing for 15 min · Requires Level 25"
       },
       {
         "icon": "inv_misc_fish_06",
-        "name": "Filet of Redgill",
-        "bonus": "+18 Fishing for 15 minLevel 35"
+        "name": "Filet of Redgill (Forever Food Buff)",
+        "bonus": "+18 Fishing for 15 min · Requires Level 35"
       },
       {
         "icon": "inv_misc_fish_22",
-        "name": "Spinefin Halibut",
-        "bonus": "+18 Fishing for 15 minLevel 45"
+        "name": "Spinefin Halibut (Forever Food Buff)",
+        "bonus": "+18 Fishing for 15 min · Requires Level 45"
       }
     ],
     "campPerks": {
@@ -99930,45 +100497,45 @@
     "ranks": [
       {
         "step": 1,
-        "title": "Learn Fishing",
-        "desc": "Ask a fishing trainer. There is one in each capital city, and one by the pond in Valanaar, the Skyborne city. Learning it also teaches Bait and Tackle, for placing Fishing objects at a camp."
+        "title": "Learn Fishing & Bait and Tackle",
+        "desc": "Visit any Fishing trainer in capital cities (Arnold Leland in Stormwind /way 54.8, 69.6 · Grimnur Stonebrand in Ironforge /way 48.2, 6.6 · Lumak in Orgrimmar /way 69.8, 29.4 · Kah Mistrunner in Thunder Bluff /way 56.0, 46.8 · Armand Cromwell in Undercity /way 80.8, 31.2) or starter/Forever hubs (Goldshire, Kharanos, Razor Hill, Zephras Isle, Riverglades, Valanaar). Also teaches Bait and Tackle for camp Fish Bowls!"
       },
       {
         "step": 2,
-        "title": "Equip a fishing pole",
-        "desc": "Buy a Fishing Pole from the fishing supplier near the trainer and equip it from your bags. It takes both hands, and Fishing does nothing without it."
+        "title": "Equip a Fishing Pole & Stack Skill Boosts",
+        "desc": "Buy a Fishing Pole from the supplier next to the trainer, or upgrade to Blump Family Fishing Pole (+3, Darkshore quest), Strong Fishing Pole (+5, vendor), Big Iron Fishing Pole (+20, Desolace shell cages at /way 20.6, 73.7), Nat Pagle's Extreme Angler FC-5000 (+25, Hinterlands Horde quest), or Arcanite Fishing Pole (+35, STV Extravaganza)."
       },
       {
         "step": 3,
-        "title": "Cast into water",
-        "desc": "Face open water and cast Fishing from your spellbook. When the bobber splashes, right-click it to catch the fish."
+        "title": "Eat Forever Fishing-Boosting Foods (+3 to +18 Skill)",
+        "desc": "In WoW Forever, cooked fish dishes grant +3 to +18 Fishing skill for 15 minutes (Bristle Whisker Catfish +8, Rockscale Cod +12, Filet of Redgill +18, Spinefin Halibut +18), stacking with pole bonuses and lures!"
       },
       {
         "step": 4,
-        "title": "Start in low-level water",
-        "desc": "Higher skill makes you more likely to land fish in higher-level zones. If your fish keep getting away, move to a lower-level zone or put a lure on your pole."
+        "title": "Stranglethorn Fishing Extravaganza (Forever Top-50 Overhaul)",
+        "desc": "Held Sundays at 2:00 PM Server Time in Stranglethorn Vale (catch 40 Speckled Tastyfish for Riggle Bassbait in Booty Bay). In WoW Forever, the first 50 players to turn in win (up from 1!), always receiving the Arcanite Fishing Pole (+35 Fishing) plus an Extravagant Extravaganza Coin redeemable for Hook of the Master Angler, High Test Eternium Fishing Line (+5), Lucky Fishing Hat, Boots of the Bay, Master Angler's Fishing Hat, Empty Fish Bucket, or Bitter Baitling!"
       },
       {
-        "title": "Apprentice",
-        "desc": "From a fishing trainer.",
+        "title": "Apprentice Fishing",
+        "desc": "Learned from any Fishing trainer for 1s. Around ~75 catches from 1 to 75 (1 catch per point early on).",
         "icon": "trade_fishing",
         "cap": "Up to 75"
       },
       {
-        "title": "Journeyman",
-        "desc": "From a fishing trainer.",
+        "title": "Journeyman Fishing",
+        "desc": "Learned at Skill 50 (Level 10) from any Fishing trainer for 5s.",
         "icon": "trade_fishing",
         "cap": "Up to 150"
       },
       {
-        "title": "Expert",
-        "desc": "From the book Expert Fishing - The Bass and You, at level 20 and Fishing 125. In Classic it is sold in Booty Bay.",
+        "title": "Expert Fishing (Book: Expert Fishing - The Bass and You)",
+        "desc": "Requires Skill 125 (Level 20). Buy the book Expert Fishing - The Bass and You (1g, Unlimited supply) from Old Man Heming inside Booty Bay, Stranglethorn Vale (/way 27.4, 77.0).",
         "icon": "trade_fishing",
-        "cap": "Up to 225"
+        "cap": "Up to 225 (Beta Cap)"
       },
       {
-        "title": "Artisan",
-        "desc": "In Classic, from a quest given by Nat Pagle in Dustwallow Marsh, once you reach Fishing 225.",
+        "title": "Artisan Fishing (Quest: Nat Pagle, Angler Extreme)",
+        "desc": "Requires Skill 225 & Level 35. Speak to Nat Pagle on his island west of Theramore in Dustwallow Marsh (/way 58.6, 60.0) and catch 4 quest fish: Feralas Ahi (Verdantis River, Feralas /way 63.5, 53.6), Misty Reed Mahi Mahi (Misty Reed Strand coast, Swamp of Sorrows /way 90.0, 70.0), Sar'theris Striker (Sar'theris Strand coast, Desolace /way 26.0, 72.0), and Savage Coast Blue Sailfin (Savage Coast, Stranglethorn Vale /way 25.0, 26.0).",
         "icon": "trade_fishing",
         "cap": "Up to 300"
       }
@@ -101003,7 +101570,7 @@
         {
           "type": "rank",
           "rank": "Apprentice",
-          "details": "from any First Aid trainer, up to 75"
+          "details": "Learned from any First Aid trainer (e.g., Shaina Fuller in Stormwind /way 43.0, 26.2 · Nissa Firestone in Ironforge /way 54.8, 58.6 · Arnok in Orgrimmar /way 34.0, 84.4), up to 75. Teaches Linen Bandages + Minor Healing Potion at Skill 1!"
         },
         {
           "type": "step",
@@ -101094,7 +101661,7 @@
         {
           "type": "rank",
           "rank": "Journeyman",
-          "details": "from the trainer, from skill 50 and level 10, up to 150"
+          "details": "Learned from any First Aid trainer (Skill 50, Level 10), up to 150 — also unlocks Lesser Healing Potion (55), Simple Poultice (90), Healing Potion (110), and Woolen Tourniquet (120)."
         },
         {
           "type": "step",
@@ -101299,7 +101866,7 @@
         {
           "type": "rank",
           "rank": "Expert",
-          "details": "from the book Expert First Aid - Under Wraps, sold for gold, from skill 125, up to 225"
+          "details": "Learned from the book Expert First Aid - Under Wraps (1g, Skill 125), up to 225 — sold by Deneb Walker in Stromgarde Keep, Arathi Highlands (/way 27.0, 58.8, A) or Balai Lok'Wein in Brackenwall Village, Dustwallow Marsh (/way 36.4, 30.4, H). Buy Manual: Heavy Silk Bandage (22s) and Manual: Mageweave Bandage (50s) at the same time!"
         },
         {
           "type": "step",
@@ -101347,7 +101914,14 @@
               "icon": "inv_fabric_silk_01",
               "quality": 1
             }
-          ]
+          ],
+          "vendorDetails": {
+            "npc": "Deneb Walker (Alliance) / Balai Lok'Wein (Horde)",
+            "location": "Stromgarde Keep, Arathi Highlands /way 27.0, 58.8 (A) · Brackenwall Village, Dustwallow Marsh /way 36.4, 30.4 (H)",
+            "cost": "22s",
+            "supply": "Unlimited"
+          },
+          "trainerAlternative": "Trainer Backup: Craft Greater Healing Potion (155–215, 1x Goldthorn + 1x Liferoot + 1x Leaded Vial) or Leather Tourniquet (200–225) from the trainer."
         },
         {
           "type": "step",
@@ -101371,12 +101945,19 @@
               "icon": "inv_fabric_mageweave_01",
               "quality": 1
             }
-          ]
+          ],
+          "vendorDetails": {
+            "npc": "Deneb Walker (Alliance) / Balai Lok'Wein (Horde)",
+            "location": "Stromgarde Keep, Arathi Highlands /way 27.0, 58.8 (A) · Brackenwall Village, Dustwallow Marsh /way 36.4, 30.4 (H)",
+            "cost": "50s",
+            "supply": "Unlimited"
+          },
+          "trainerAlternative": "Trainer Backup: Craft Superior Healing Potion (215–240) or Superior Poultice (210–240) taught by the First Aid trainer."
         },
         {
           "type": "rank",
           "rank": "Artisan",
-          "details": "from the quest Triage, in Theramore (Alliance) or Hammerfall (Horde), from skill 225 and level 35, up to 300"
+          "details": "Unlocked via the quest Triage (Skill 225 & Level 35), up to 300 — from Doctor Gustaf VanHowzen in Theramore Isle, Dustwallow Marsh (/way 67.6, 48.8, A) or Doctor Gregory Victor in Hammerfall, Arathi Highlands (/way 73.4, 36.8, H). Return to them at 240, 260, and 290 to learn Heavy Mageweave, Runecloth, and Heavy Runecloth Bandages!"
         },
         {
           "type": "step",
@@ -101400,7 +101981,14 @@
               "icon": "inv_fabric_mageweave_01",
               "quality": 1
             }
-          ]
+          ],
+          "vendorDetails": {
+            "npc": "Deneb Walker (Alliance) / Balai Lok'Wein (Horde)",
+            "location": "Stromgarde Keep, Arathi Highlands /way 27.0, 58.8 (A) · Brackenwall Village, Dustwallow Marsh /way 36.4, 30.4 (H)",
+            "cost": "50s",
+            "supply": "Unlimited"
+          },
+          "trainerAlternative": "Trainer Backup: Craft Superior Healing Potion (215–240) or Superior Poultice (210–240) taught by the First Aid trainer."
         },
         {
           "type": "step",
@@ -101414,7 +102002,7 @@
           "itemId": 8545,
           "recipeName": "Heavy Mageweave Bandage",
           "source": "Learned from the trainer",
-          "advice": "",
+          "advice": "Learned at 240 by talking again to Doctor Gustaf VanHowzen in Theramore (/way 67.6, 48.8, A) or Doctor Gregory Victor in Hammerfall (/way 73.4, 36.8, H).",
           "crafts": 25,
           "reagents": [
             {
@@ -101438,7 +102026,7 @@
           "itemId": 14529,
           "recipeName": "Runecloth Bandage",
           "source": "Learned from the trainer",
-          "advice": "",
+          "advice": "Learned at 260 by returning to Doctor Gustaf VanHowzen in Theramore (/way 67.6, 48.8, A) or Doctor Gregory Victor in Hammerfall (/way 73.4, 36.8, H).",
           "crafts": 42,
           "reagents": [
             {
@@ -101462,7 +102050,7 @@
           "itemId": 14530,
           "recipeName": "Heavy Runecloth Bandage",
           "source": "Learned from the trainer",
-          "advice": "",
+          "advice": "Learned at 290 by returning to Doctor Gustaf VanHowzen in Theramore (/way 67.6, 48.8, A) or Doctor Gregory Victor in Hammerfall (/way 73.4, 36.8, H).",
           "crafts": 11,
           "reagents": [
             {
@@ -101473,6 +102061,18 @@
               "quality": 1
             }
           ]
+        }
+      ],
+      "guideCallouts": [
+        {
+          "icon": "🩹",
+          "title": "Forever First Aid Rework: Healing Potions, Poultices & Tourniquets",
+          "text": "In WoW Forever, First Aid crafts Healing Potions (Minor at 1, Lesser at 55, Healing at 110, Greater at 155, Superior at 215, Major at 275), Anti-Disease Poultices (Simple 90, Clever 140, Superior 210, Powerful 280), and Anti-Bleed Tourniquets (Woolen 120, Leather 200, Surgical 265) alongside Bandages!"
+        },
+        {
+          "icon": "🧶",
+          "title": "Alternative 1–300 Pure Cloth Bandage Route (Zero Herbs/Vials)",
+          "text": "Prefer using only cloth? 1–40: Linen Bandage (~50x) · 40–80: Heavy Linen Bandage (~50x) · 80–115: Wool Bandage (~60x) · 115–150: Heavy Wool Bandage (~50x) · 150–180: Silk Bandage (~42x) · 180–210: Heavy Silk Bandage (~42x) · 210–240: Mageweave Bandage (~42x) · 240–260: Heavy Mageweave Bandage (~25x) · 260–290: Runecloth Bandage (~42x) · 290–300: Heavy Runecloth Bandage (~15x)."
         }
       ]
     },
@@ -102929,7 +103529,7 @@
         {
           "type": "rank",
           "rank": "Apprentice Camping",
-          "details": "Learned at level 5 from wilderness camp trainers outside racial towns, up to 75"
+          "details": "Learned at Level 5 from Wilderness Camp Trainers outside racial starter towns (Goldshire, Kharanos, Dolanaar, Razor Hill, Bloodhoof Village, Brill, Zephras Isle, Riverglades) via the quest \"The Great Outdoors\", up to 75."
         },
         {
           "type": "step",
@@ -103051,7 +103651,7 @@
         {
           "type": "rank",
           "rank": "Journeyman Camping",
-          "details": "Learned at level 15 from major city camp trainers (Stormwind, Ironforge, Orgrimmar, Undercity), up to 150"
+          "details": "Learned at Level 15 (Skill 50) from major city Camp Trainers (Stormwind, Ironforge, Darnassus, Orgrimmar, Thunder Bluff, Undercity), up to 150."
         },
         {
           "type": "step",
@@ -103175,7 +103775,14 @@
               "icon": "inv_wood_02",
               "quality": 1
             }
-          ]
+          ],
+          "vendorDetails": {
+            "npc": "Lord Serpentis (Blueprint Drop)",
+            "location": "Wailing Caverns (The Barrens)",
+            "cost": "Boss Drop",
+            "supply": "Dungeon Drop"
+          },
+          "trainerAlternative": "Trainer Backup: Craft Portable Blacksmithing Anvil (105–135) and Silk Trail Pavilion (learned at Skill 100 from Camping Trainer) straight to 150."
         },
         {
           "type": "step",
@@ -103211,7 +103818,7 @@
         {
           "type": "rank",
           "rank": "Expert Camping",
-          "details": "Learned at level 25 from Wilderness Survival Masters (Stromgarde Keep in Arathi / Brackenwall Village in Dustwallow), up to 225"
+          "details": "Learned at Level 25 (Skill 125) from Wilderness Survival Masters — Stromgarde Keep in Arathi Highlands (/way 27.2, 58.6, Alliance) or Brackenwall Village in Dustwallow Marsh (/way 36.6, 30.8, Horde), up to 225."
         },
         {
           "type": "step",
@@ -103280,7 +103887,14 @@
               "icon": "inv_drink_01",
               "quality": 1
             }
-          ]
+          ],
+          "vendorDetails": {
+            "npc": "Cookie (Blueprint Drop)",
+            "location": "The Deadmines (Westfall)",
+            "cost": "Boss Drop",
+            "supply": "Dungeon Drop"
+          },
+          "trainerAlternative": "Trainer Backup: Continue crafting Field Alchemy Cauldron (150–195) or Field Leatherworking Bench learned from the Expert Survival Master."
         },
         {
           "type": "step",
@@ -103304,7 +103918,14 @@
               "icon": "inv_wood_03",
               "quality": 1
             }
-          ]
+          ],
+          "vendorDetails": {
+            "npc": "Scarlet Monastery / Razorfen Kraul Mobs",
+            "location": "Tirisfal Glades / Southern Barrens Dungeons",
+            "cost": "Dungeon Drop",
+            "supply": "Dungeon Drop"
+          },
+          "trainerAlternative": "Trainer Backup: Craft Field Engineering Workbench or Heavy Canvas Command Tent from the Expert Survival Master (Arathi / Dustwallow)."
         },
         {
           "type": "beta-stop",
@@ -104071,7 +104692,7 @@
               "name": "Simple Wood",
               "icon": "inv_wood_01",
               "quality": 1,
-              "count": 260
+              "count": 376
             },
             {
               "itemId": 2320,
@@ -104154,7 +104775,7 @@
               "name": "Iron Bar",
               "icon": "inv_ingot_02",
               "quality": 1,
-              "count": 184
+              "count": 160
             },
             {
               "itemId": 3820,

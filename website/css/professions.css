@@ -3422,5 +3422,182 @@
   }
 }
 
+/* ==========================================================================
+   LEVELING 1-300 CALLOUTS, VENDOR META, PER-CRAFT vs TOTAL MATH & SHOPPING SYNC
+   ========================================================================== */
+.leveling-guide-callouts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 0.85rem;
+  margin-bottom: 1.15rem;
+}
 
+.leveling-guide-callout-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.85rem 1.05rem;
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.82) 0%, rgba(15, 23, 42, 0.94) 100%);
+  border: 1px solid rgba(250, 204, 21, 0.35);
+  border-left: 4px solid var(--text-gold, #facc15);
+  border-radius: 8px;
+}
 
+.leveling-guide-callout-card .callout-icon {
+  font-size: 1.35rem;
+  line-height: 1.1;
+  flex-shrink: 0;
+}
+
+.leveling-guide-callout-card .callout-body strong {
+  display: block;
+  color: #fef08a;
+  font-size: 0.88rem;
+  margin-bottom: 0.25rem;
+}
+
+.leveling-guide-callout-card .callout-body p {
+  margin: 0;
+  color: #cbd5e1;
+  font-size: 0.8rem;
+  line-height: 1.45;
+}
+
+.step-recipe-name.is-clickable {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  cursor: pointer;
+  transition: color 0.15s ease;
+}
+
+.step-recipe-name.is-clickable:hover {
+  color: #fef08a;
+  text-decoration: underline;
+}
+
+.step-recipe-jump-hint {
+  font-size: 0.72rem;
+  color: #38bdf8;
+  opacity: 0.75;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.step-recipe-name.is-clickable:hover .step-recipe-jump-hint {
+  opacity: 1;
+  transform: translate(1px, -1px);
+}
+
+.step-vendor-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  margin-top: 0.32rem;
+}
+
+.vendor-meta-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.73rem;
+  font-weight: 600;
+  padding: 0.14rem 0.48rem;
+  border-radius: 4px;
+  background: rgba(15, 23, 42, 0.75);
+  border: 1px solid rgba(148, 163, 184, 0.28);
+  color: #e2e8f0;
+}
+
+.vendor-meta-chip.cost {
+  color: #facc15;
+  border-color: rgba(250, 204, 21, 0.35);
+  background: rgba(250, 204, 21, 0.1);
+}
+
+.vendor-meta-chip.supply.unlimited {
+  color: #4ade80;
+  border-color: rgba(74, 222, 128, 0.4);
+  background: rgba(34, 197, 94, 0.12);
+}
+
+.vendor-meta-chip.supply.limited {
+  color: #fbbf24;
+  border-color: rgba(251, 191, 36, 0.45);
+  background: rgba(245, 158, 11, 0.15);
+}
+
+.vendor-meta-chip.supply.drop {
+  color: #7dd3fc;
+  border-color: rgba(56, 189, 248, 0.4);
+  background: rgba(56, 189, 248, 0.12);
+}
+
+.step-trainer-backup {
+  margin-top: 0.32rem;
+  font-size: 0.76rem;
+  color: #93c5fd;
+  background: rgba(30, 58, 138, 0.25);
+  border-left: 2px solid #38bdf8;
+  padding: 0.22rem 0.5rem;
+  border-radius: 0 4px 4px 0;
+  line-height: 1.35;
+}
+
+.step-reagent-badge.has-total-math {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.16rem;
+}
+
+.step-reagent-icon-wrap {
+  position: relative;
+  display: inline-flex;
+}
+
+.step-reagent-total-pill {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #38bdf8;
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  border-radius: 3px;
+  padding: 0.04rem 0.28rem;
+  line-height: 1.15;
+  white-space: nowrap;
+}
+
+.shopping-sync-btn.active {
+  background: linear-gradient(135deg, rgba(14, 116, 144, 0.45) 0%, rgba(3, 105, 161, 0.6) 100%);
+  border-color: #38bdf8;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.3);
+}
+
+.shopping-sync-active-banner {
+  background: rgba(14, 116, 144, 0.2);
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  color: #bae6fd;
+  padding: 0.6rem 0.95rem;
+  border-radius: 7px;
+  font-size: 0.82rem;
+  margin-bottom: 0.85rem;
+}
+
+.shopping-count-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  line-height: 1.15;
+}
+
+.shopping-used-sub {
+  font-size: 0.68rem;
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+.shopping-row-card.is-step-completed {
+  opacity: 0.55;
+}

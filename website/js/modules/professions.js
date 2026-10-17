@@ -220,7 +220,10 @@
       }
       tabs.push({ id: 'camp', icon: '⛺', label: 'Camp & Perks' });
     } else if (isMining) {
-      tabs.push({ id: 'leveling', icon: '📈', label: 'Leveling Route' });
+      tabs.push({ id: 'leveling', icon: '📈', label: 'Leveling & Smelting Route' });
+      if (prof.shopping?.groups?.length) {
+        tabs.push({ id: 'shopping', icon: '🛒', label: 'Smelting Shopping List' });
+      }
       tabs.push({ id: 'nodes', icon: '⛏️', label: `Mining Nodes (${prof.nodes?.length || 10})` });
       tabs.push({ id: 'recipes', icon: '🔥', label: `Smelting (${prof.recipes?.length || 14})` });
       tabs.push({ id: 'camp', icon: '⛺', label: 'Camp & Perks' });
@@ -925,6 +928,21 @@
     const initialCompletedCount = steps.filter((s, i) => (s.type === 'step' || s.type === 'gather-step') && completedSteps.includes(`${prof.slug}_step_${i}`)).length;
     const initialPct = totalStepsCount > 0 ? Math.round((initialCompletedCount / totalStepsCount) * 100) : 0;
 
+    const guideCallouts = leveling.guideCallouts || [];
+    const calloutsHtml = guideCallouts.length ? `
+      <div class="leveling-guide-callouts">
+        ${guideCallouts.map(c => `
+          <div class="leveling-guide-callout-card">
+            <span class="callout-icon">${c.icon || '💡'}</span>
+            <div class="callout-body">
+              <strong>${escapeHtml(c.title)}</strong>
+              <p>${escapeHtml(c.text)}</p>
+            </div>
+          </div>
+        `).join('')}
+      </div>
+    ` : '';
+
     container.innerHTML = `
       <div class="leveling-header-block">
         <div class="leveling-header-title">
@@ -940,6 +958,8 @@
           </button>
         </div>
       </div>
+
+      ${calloutsHtml}
 
       <!-- Interactive Leveling Checklist Progress Bar -->
       <div class="shopping-checklist-bar leveling-checklist-bar">
@@ -990,8 +1010,13 @@
               : '';
             const leftPercent = item.bar?.iLeft || '0%';
             const widthPercent = item.bar?.iWidth || '10%';
+            const craftsNum = item.crafts || 1;
+            const vd = item.vendorDetails;
+            const supplyClass = vd?.supply
+              ? (vd.supply.toLowerCase().includes('unlimited') ? 'unlimited' : (vd.supply.toLowerCase().includes('limited') ? 'limited' : 'drop'))
+              : '';
             return `
-              <div class="leveling-step-row ${isCompleted ? 'completed' : ''}" data-step-id="${stepId}">
+              <div class="leveling-step-row ${isCompleted ? 'completed' : ''}" data-step-id="${stepId}" data-step-idx="${idx}">
                 <div class="step-check-col">
                   <input type="checkbox" class="leveling-step-check" ${isCompleted ? 'checked' : ''} aria-label="Mark ${escapeHtml(item.recipeName)} as completed" />
                 </div>
@@ -1003,23 +1028,42 @@
                   </div>
                 </div>
                 <div class="step-info-col">
-                  <div class="step-recipe-name" data-item-id="${item.itemId || ''}" data-recipe-name="${escapeHtml(item.recipeName)}">
-                    ${escapeHtml(item.recipeName)}
+                  <div class="step-recipe-name is-clickable" role="button" tabindex="0" data-item-id="${item.itemId || ''}" data-recipe-name="${escapeHtml(item.recipeName)}" data-step-idx="${idx}" title="Click to view in catalog · Hover for full recipe details">
+                    <span>${escapeHtml(item.recipeName)}</span>
+                    <span class="step-recipe-jump-hint">↗</span>
                   </div>
                   <div class="step-source-line">${escapeHtml(item.source)}</div>
+                  ${vd ? `
+                    <div class="step-vendor-meta">
+                      <span class="vendor-meta-chip">📍 ${escapeHtml(vd.location)}</span>
+                      ${vd.cost ? `<span class="vendor-meta-chip cost">🪙 ${escapeHtml(vd.cost)}</span>` : ''}
+                      ${vd.supply ? `<span class="vendor-meta-chip supply ${supplyClass}">${escapeHtml(vd.supply)}</span>` : ''}
+                    </div>
+                  ` : ''}
+                  ${item.trainerAlternative ? `<div class="step-trainer-backup">🔄 ${escapeHtml(item.trainerAlternative)}</div>` : ''}
                   ${item.advice ? `<div class="step-advice-note">💡 ${escapeHtml(item.advice)}</div>` : ''}
                 </div>
                 <div class="step-crafts-col">
-                  <div class="step-crafts-count">~${item.crafts}</div>
+                  <div class="step-crafts-count">~${craftsNum}</div>
                   <div class="step-crafts-label">crafts</div>
                 </div>
                 <div class="step-reagents-col">
-                  ${(item.reagents || []).map(mat => `
-                    <div class="step-reagent-badge" data-item-id="${mat.itemId}" data-item-name="${escapeHtml(mat.name)}" title="${mat.count > 1 ? mat.count + ' ' : ''}${escapeHtml(mat.name)}">
-                      <img src="${getIconUrl(mat.icon)}" alt="${escapeHtml(mat.name)}" class="step-reagent-img q${mat.quality || 1}" loading="lazy" />
-                      ${mat.count > 1 ? `<span class="step-reagent-qty">${mat.count}</span>` : ''}
-                    </div>
-                  `).join('')}
+                  ${(item.reagents || []).map(mat => {
+                    const perCraft = mat.count || 1;
+                    const totalForStep = craftsNum * perCraft;
+                    const tooltipTitle = craftsNum > 1
+                      ? `${perCraft}x ${mat.name} per craft (${totalForStep}x total for ~${craftsNum} crafts)`
+                      : `${perCraft}x ${mat.name}`;
+                    return `
+                      <div class="step-reagent-badge has-total-math" data-item-id="${mat.itemId}" data-item-name="${escapeHtml(mat.name)}" data-per-craft="${perCraft}" data-total-step="${totalForStep}" data-crafts="${craftsNum}" title="${escapeHtml(tooltipTitle)}">
+                        <div class="step-reagent-icon-wrap">
+                          <img src="${getIconUrl(mat.icon)}" alt="${escapeHtml(mat.name)}" class="step-reagent-img q${mat.quality || 1}" loading="lazy" />
+                          <span class="step-reagent-qty" title="${perCraft}x per craft">${perCraft}x</span>
+                        </div>
+                        ${craftsNum > 1 ? `<span class="step-reagent-total-pill" title="${totalForStep}x total across ~${craftsNum} crafts">=${totalForStep}</span>` : ''}
+                      </div>
+                    `;
+                  }).join('')}
                 </div>
               </div>
             `;
@@ -1048,7 +1092,7 @@
                 </div>
                 <div class="step-reagents-col" style="grid-column: 4 / -1;">
                   ${(item.icons || []).map(ic => `
-                    <div class="step-reagent-badge" title="${escapeHtml(ic.name)}" data-item-name="${escapeHtml(ic.name)}">
+                    <div class="step-reagent-badge" title="${escapeHtml(ic.name)}" data-item-id="${ic.itemId || ''}" data-item-name="${escapeHtml(ic.name)}">
                       <img src="${getIconUrl(ic.icon)}" alt="${escapeHtml(ic.name)}" class="step-reagent-img" loading="lazy" />
                     </div>
                   `).join('')}
@@ -1125,6 +1169,9 @@
     }
 
     const storageKey = `wowforever_shopping_${prof.slug}`;
+    const syncStorageKey = `wowforever_shopping_sync_${prof.slug}`;
+    const levelingStorageKey = `wowforever_leveling_${prof.slug}`;
+
     let acquiredItems = [];
     try {
       acquiredItems = JSON.parse(localStorage.getItem(storageKey) || '[]');
@@ -1133,9 +1180,158 @@
       acquiredItems = [];
     }
 
-    const allItems = groups.flatMap(g => g.items || []);
+    let syncWithLeveling = false;
+    try {
+      syncWithLeveling = localStorage.getItem(syncStorageKey) === 'true';
+    } catch {
+      syncWithLeveling = false;
+    }
+
+    let completedSteps = [];
+    try {
+      completedSteps = JSON.parse(localStorage.getItem(levelingStorageKey) || '[]');
+      if (!Array.isArray(completedSteps)) completedSteps = [];
+    } catch {
+      completedSteps = [];
+    }
+
+    const steps = prof.leveling?.steps || [];
+    const recipes = prof.recipes || [];
+    const hasPostBetaSplit = groups.length > 3
+      || groups.some(g => g.title && g.title.toLowerCase().includes('after the beta'))
+      || (groups.length === 3 && groups[1]?.title === groups[2]?.title);
+
+    function isPost225GroupAt(idx, g) {
+      if (!hasPostBetaSplit) return false;
+      return idx >= 3 || (groups.length === 3 && idx === 2) || Boolean(g?.title && g.title.toLowerCase().includes('after the beta'));
+    }
+
+    const rawNamesByBracket = { false: new Set(), true: new Set() };
+    groups.forEach((g, idx) => {
+      const post225 = isPost225GroupAt(idx, g);
+      if (!g.title || !g.title.toLowerCase().includes('made along the way')) {
+        (g.items || []).forEach(rItem => rawNamesByBracket[post225].add((rItem.name || '').toLowerCase()));
+      }
+    });
+
+    function getStepConsumedCount(itemObj, isPost225Group, groupObj) {
+      if (!syncWithLeveling || !completedSteps.length) return 0;
+      const isMadeAlongWayGroup = Boolean(groupObj?.title && groupObj.title.toLowerCase().includes('made along the way'));
+      const targetName = (itemObj.name || '').toLowerCase();
+      const targetId = itemObj.itemId;
+
+      let directCraftedChecked = 0;
+      let directConsumedChecked = 0;
+      let totalCraftedInBracket = 0;
+
+      steps.forEach((s, sIdx) => {
+        if (s.type !== 'step') return;
+        const stepPost225 = (s.from || 1) >= 225;
+        if (hasPostBetaSplit && stepPost225 !== isPost225Group) return;
+        const crafts = s.crafts || 1;
+        const isTargetRecipe = (s.recipeName && s.recipeName.toLowerCase() === targetName) || (targetId && s.itemId === targetId);
+        if (isTargetRecipe) {
+          totalCraftedInBracket += crafts;
+        }
+
+        const stepId = `${prof.slug}_step_${sIdx}`;
+        if (!completedSteps.includes(stepId)) return;
+
+        if (isTargetRecipe) {
+          directCraftedChecked += crafts;
+        }
+        (s.reagents || []).forEach(r => {
+          if ((targetId && r.itemId === targetId) || (r.name && r.name.toLowerCase() === targetName)) {
+            directConsumedChecked += crafts * (r.count || 1);
+          }
+        });
+      });
+
+      const rawSet = rawNamesByBracket[Boolean(isPost225Group)];
+      if (isMadeAlongWayGroup) {
+        if (rawSet.has(targetName) && totalCraftedInBracket === itemObj.count) {
+          return directCraftedChecked;
+        }
+        return directConsumedChecked;
+      }
+
+      // Raw / Vendor group item:
+      // For Blacksmithing Solid Stone (where 8 Solid Grinding Stones are for 1-225 and 4 are for 225-300, crafted at 200-206):
+      let totalRaw = directConsumedChecked;
+      if (prof.slug === 'blacksmithing' && targetName === 'solid stone') {
+        const sgsStepIdx = steps.findIndex(s => s.type === 'step' && s.recipeName === 'Solid Grinding Stone');
+        if (sgsStepIdx >= 0 && completedSteps.includes(`${prof.slug}_step_${sgsStepIdx}`)) {
+          if (!isPost225Group) {
+            totalRaw = Math.max(0, totalRaw - 16); // 4x Solid Grinding Stone (16 Solid Stone) belong to 225-300
+          } else {
+            totalRaw += 16;
+          }
+        }
+      }
+
+      groups.forEach((g, idx) => {
+        if (isPost225GroupAt(idx, g) !== isPost225Group) return;
+        if (g.title && g.title.toLowerCase().includes('made along the way')) {
+          (g.items || []).forEach(mItem => {
+            const mName = (mItem.name || '').toLowerCase();
+            if (mName === targetName) {
+              totalRaw = Math.max(0, totalRaw - directCraftedChecked);
+              return;
+            }
+            if (rawSet.has(mName)) return;
+
+            let mCraftedTotal = 0;
+            let mConsumedChecked = 0;
+            steps.forEach((s, sIdx) => {
+              if (s.type !== 'step') return;
+              const stepPost225 = (s.from || 1) >= 225;
+              if (hasPostBetaSplit && stepPost225 !== isPost225Group) return;
+              const crafts = s.crafts || 1;
+              if ((s.recipeName && s.recipeName.toLowerCase() === mName) || (mItem.itemId && s.itemId === mItem.itemId)) {
+                mCraftedTotal += crafts;
+              }
+              const stepId = `${prof.slug}_step_${sIdx}`;
+              if (!completedSteps.includes(stepId)) return;
+              (s.reagents || []).forEach(r => {
+                if ((mItem.itemId && r.itemId === mItem.itemId) || (r.name && r.name.toLowerCase() === mName)) {
+                  mConsumedChecked += crafts * (r.count || 1);
+                }
+              });
+            });
+
+            const yieldPerCraft = mName === 'stonescale oil' ? 2 : 1;
+            const extraMCraftsUsed = Math.ceil(Math.max(0, mConsumedChecked - (mCraftedTotal * yieldPerCraft)) / yieldPerCraft);
+            if (extraMCraftsUsed > 0) {
+              const rec = recipes.find(r => r.name && r.name.toLowerCase() === mName);
+              if (rec) {
+                (rec.reagents || []).forEach(subR => {
+                  if ((targetId && subR.id === targetId) || (subR.name && subR.name.toLowerCase() === targetName)) {
+                    totalRaw += extraMCraftsUsed * (subR.count || 1);
+                  }
+                });
+              }
+            }
+          });
+        }
+      });
+
+      return totalRaw;
+    }
+
+    const allItemsWithGroup = groups.flatMap((g, idx) => (g.items || []).map(it => ({ it, g, isPost225Group: isPost225GroupAt(idx, g) })));
+    const allItems = allItemsWithGroup.map(x => x.it);
     const totalItems = allItems.length;
-    const initialAcquired = allItems.filter(it => acquiredItems.includes(it.name)).length;
+    function countAcquiredItems() {
+      return allItemsWithGroup.filter(({ it, g, isPost225Group }) => {
+        if (acquiredItems.includes(it.name)) return true;
+        if (syncWithLeveling) {
+          const used = getStepConsumedCount(it, isPost225Group, g);
+          if (used > 0 && Math.max(0, it.count - used) === 0) return true;
+        }
+        return false;
+      }).length;
+    }
+    const initialAcquired = countAcquiredItems();
     const initialPct = totalItems > 0 ? Math.round((initialAcquired / totalItems) * 100) : 0;
 
     container.innerHTML = `
@@ -1145,6 +1341,9 @@
           <p>${escapeHtml(shopping.subtitle || 'Trade goods, looted supplies, and crafted components needed to level.')}</p>
         </div>
         <div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap;">
+          <button type="button" class="shopping-copy-btn shopping-sync-btn ${syncWithLeveling ? 'active' : ''}" id="shopping-sync-btn" aria-pressed="${syncWithLeveling}" title="Subtract reagents already used in checked-off Leveling 1–300 steps">
+            <span>🔄</span> ${syncWithLeveling ? 'Showing Remaining Only (Synced)' : 'Sync with Leveling Checklist'}
+          </button>
           <button type="button" class="shopping-copy-btn" id="shopping-copy-btn" aria-label="Copy shopping list to clipboard">
             <span class="copy-icon">📋</span> Copy Shopping List
           </button>
@@ -1153,6 +1352,12 @@
           </button>
         </div>
       </div>
+
+      ${syncWithLeveling ? `
+        <div class="shopping-sync-active-banner">
+          <span>🔄 <strong>Synced with Leveling Checklist (${completedSteps.length} steps checked):</strong> Displaying remaining required materials after subtracting completed leveling brackets.</span>
+        </div>
+      ` : ''}
 
       <!-- Interactive Checklist Progress Bar -->
       <div class="shopping-checklist-bar">
@@ -1169,42 +1374,52 @@
       </div>
 
       <div class="shopping-groups-container">
-        ${groups.map((g, idx) => `
-          ${idx === 3 || (g.title && g.title.toLowerCase().includes('after the beta')) ? `
-            <div class="shopping-beta-divider">
-              <h4><span>⏳</span> Reagents for Leveling Past Phase 2 Beta Cap (225 to 300)</h4>
-              <p>Trade goods, looted supplies, and crafted components needed once Artisan training opens post-beta.</p>
-            </div>
-          ` : ''}
-          <div class="shopping-group-section">
-            <div class="shopping-group-header">
-              <h4 class="shopping-group-title">
-                ${escapeHtml(g.title)}
-                ${g.note ? `<small class="shopping-group-note">${escapeHtml(g.note)}</small>` : ''}
-              </h4>
-            </div>
-            <div class="shopping-rows-grid">
-              ${g.items.map(it => {
-                const isAcquired = acquiredItems.includes(it.name);
-                return `
-                  <div class="shopping-row-card ${isAcquired ? 'is-acquired' : ''}" data-item-id="${it.itemId}" data-item-name="${escapeHtml(it.name)}">
-                    <input type="checkbox" class="shopping-item-check" ${isAcquired ? 'checked' : ''} aria-label="Mark ${escapeHtml(it.name)} as acquired" />
-                    <div class="shopping-row-left">
-                      <img src="${getIconUrl(it.icon)}" alt="${escapeHtml(it.name)}" class="shopping-icon q${it.quality || 1}" loading="lazy" />
-                      <span class="shopping-name q${it.quality || 1}">${escapeHtml(it.name)}</span>
+        ${groups.map((g, idx) => {
+          const isPost225Group = isPost225GroupAt(idx, g);
+          const isFirstPost225Group = isPost225Group && (idx === 0 || !isPost225GroupAt(idx - 1, groups[idx - 1]));
+          return `
+            ${isFirstPost225Group ? `
+              <div class="shopping-beta-divider">
+                <h4><span>⏳</span> Reagents for Leveling Past Phase 2 Beta Cap (225 to 300)</h4>
+                <p>Trade goods, looted supplies, and crafted components needed once Artisan training opens post-beta.</p>
+              </div>
+            ` : ''}
+            <div class="shopping-group-section">
+              <div class="shopping-group-header">
+                <h4 class="shopping-group-title">
+                  ${escapeHtml(g.title)}
+                  ${g.note ? `<small class="shopping-group-note">${escapeHtml(g.note)}</small>` : ''}
+                </h4>
+              </div>
+              <div class="shopping-rows-grid">
+                ${g.items.map(it => {
+                  const usedBySteps = getStepConsumedCount(it, isPost225Group, g);
+                  const remainingCount = syncWithLeveling ? Math.max(0, it.count - usedBySteps) : it.count;
+                  const isStepDepleted = syncWithLeveling && remainingCount === 0 && usedBySteps > 0;
+                  const isAcquired = acquiredItems.includes(it.name) || isStepDepleted;
+                  return `
+                    <div class="shopping-row-card ${isAcquired ? 'is-acquired' : ''} ${isStepDepleted ? 'is-step-completed' : ''}" data-item-id="${it.itemId}" data-item-name="${escapeHtml(it.name)}" data-remaining-count="${remainingCount}" data-base-count="${it.count}">
+                      <input type="checkbox" class="shopping-item-check" ${isAcquired ? 'checked' : ''} aria-label="Mark ${escapeHtml(it.name)} as acquired" />
+                      <div class="shopping-row-left">
+                        <img src="${getIconUrl(it.icon)}" alt="${escapeHtml(it.name)}" class="shopping-icon q${it.quality || 1}" loading="lazy" />
+                        <span class="shopping-name q${it.quality || 1}">${escapeHtml(it.name)}</span>
+                      </div>
+                      <div class="shopping-count-box">
+                        <b class="shopping-count">${remainingCount}</b>
+                        ${syncWithLeveling && usedBySteps > 0 ? `<small class="shopping-used-sub">of ${it.count}</small>` : ''}
+                      </div>
                     </div>
-                    <b class="shopping-count">${it.count}</b>
-                  </div>
-                `;
-              }).join('')}
+                  `;
+                }).join('')}
+              </div>
             </div>
-          </div>
-        `).join('')}
+          `;
+        }).join('')}
       </div>
     `;
 
     function updateShoppingProgress() {
-      const curAcquired = allItems.filter(it => acquiredItems.includes(it.name)).length;
+      const curAcquired = countAcquiredItems();
       const curPct = totalItems > 0 ? Math.round((curAcquired / totalItems) * 100) : 0;
       const countEl = container.querySelector('#shopping-progress-count');
       const pctEl = container.querySelector('#shopping-progress-pct');
@@ -1212,6 +1427,15 @@
       if (countEl) countEl.textContent = curAcquired;
       if (pctEl) pctEl.textContent = `${curPct}%`;
       if (fillEl) fillEl.style.width = `${curPct}%`;
+    }
+
+    const syncBtn = container.querySelector('#shopping-sync-btn');
+    if (syncBtn) {
+      syncBtn.addEventListener('click', () => {
+        syncWithLeveling = !syncWithLeveling;
+        try { localStorage.setItem(syncStorageKey, String(syncWithLeveling)); } catch {}
+        renderShoppingTab(container, prof);
+      });
     }
 
     container.querySelectorAll('.shopping-item-check').forEach(chk => {
@@ -1250,12 +1474,15 @@
     const copyBtn = container.querySelector('#shopping-copy-btn');
     if (copyBtn) {
       copyBtn.addEventListener('click', () => {
-        let text = `=== ${prof.name} — ${shopping.title || 'Reagent Shopping List (1 to 225)'} ===\n\n`;
-        groups.forEach(g => {
+        let text = `=== ${prof.name} — ${shopping.title || 'Reagent Shopping List (1 to 225)'}${syncWithLeveling ? ' [Remaining Synced]' : ''} ===\n\n`;
+        groups.forEach((g, idx) => {
+          const isPost225Group = isPost225GroupAt(idx, g);
           text += `${g.title}${g.note ? ' (' + g.note + ')' : ''}:\n`;
           (g.items || []).forEach(it => {
-            const mark = acquiredItems.includes(it.name) ? '[x]' : '[ ]';
-            text += `  ${mark} ${it.count}x ${it.name}\n`;
+            const usedBySteps = getStepConsumedCount(it, isPost225Group, g);
+            const qty = syncWithLeveling ? Math.max(0, it.count - usedBySteps) : it.count;
+            const mark = (acquiredItems.includes(it.name) || (syncWithLeveling && qty === 0)) ? '[x]' : '[ ]';
+            text += `  ${mark} ${qty}x ${it.name}${syncWithLeveling && usedBySteps > 0 ? ` (of ${it.count})` : ''}\n`;
           });
           text += '\n';
         });
@@ -2112,24 +2339,32 @@
 
     let reagentsHtml = '';
     if (reagents && reagents.length) {
+      const craftsCount = extra && extra.crafts && extra.crafts > 1 ? Number(extra.crafts) : 1;
       reagentsHtml = `
         <div style="margin-top: 0.5rem; border-top: 1px dashed rgba(255,255,255,0.1); padding-top: 0.4rem;">
-          <div style="font-size: 0.72rem; color: #94a3b8; margin-bottom: 0.3rem;">Reagents Required:</div>
+          <div style="font-size: 0.72rem; color: #94a3b8; margin-bottom: 0.3rem;">
+            Reagents Required${craftsCount > 1 ? ` <span style="color: #38bdf8;">(Per Craft · Total for ~${craftsCount} Crafts)</span>` : ':'}
+          </div>
           <div style="display: flex; gap: 0.35rem; flex-wrap: wrap;">
-            ${reagents.map(r => `
-              <span style="display: inline-flex; align-items: center; gap: 0.25rem; background: rgba(0,0,0,0.4); padding: 0.15rem 0.35rem; border-radius: 3px; font-size: 0.72rem;">
-                <img src="${getIconUrl(r.icon)}" width="16" height="16" style="border-radius: 2px;" />
-                <span style="color: #fff; font-weight:700;">${r.count}x</span>
-                <span class="q${r.quality || 1}">${escapeHtml(r.name)}</span>
-              </span>
-            `).join('')}
+            ${reagents.map(r => {
+              const perCraft = r.count || 1;
+              const totalBracket = craftsCount * perCraft;
+              return `
+                <span style="display: inline-flex; align-items: center; gap: 0.25rem; background: rgba(0,0,0,0.4); padding: 0.15rem 0.35rem; border-radius: 3px; font-size: 0.72rem;">
+                  <img src="${getIconUrl(r.icon)}" width="16" height="16" style="border-radius: 2px;" />
+                  <span style="color: #fff; font-weight:700;">${perCraft}x</span>
+                  <span class="q${r.quality || 1}">${escapeHtml(r.name)}</span>
+                  ${craftsCount > 1 ? `<span style="color: #38bdf8; font-weight: 700; margin-left: 0.15rem;">(=${totalBracket} total)</span>` : ''}
+                </span>
+              `;
+            }).join('')}
           </div>
         </div>
       `;
     }
 
     tooltip.innerHTML = `
-      <div style="min-width: 220px; max-width: 330px; padding: 0.65rem 0.85rem; background: rgba(10, 14, 26, 0.96); border: 1px solid rgba(212, 175, 55, 0.5); border-radius: 6px; box-shadow: 0 8px 24px rgba(0,0,0,0.8); pointer-events: none;">
+      <div style="min-width: 220px; max-width: 340px; padding: 0.65rem 0.85rem; background: rgba(10, 14, 26, 0.96); border: 1px solid rgba(212, 175, 55, 0.5); border-radius: 6px; box-shadow: 0 8px 24px rgba(0,0,0,0.8); pointer-events: none;">
         <div class="q${quality}" style="font-weight: 700; font-size: 0.95rem; line-height: 1.3;">${escapeHtml(name)}</div>
         ${extraTop}
         ${extraSkill}
@@ -2240,23 +2475,166 @@
       el.addEventListener('mouseleave', hideItemTooltip);
     });
 
-    // Recipes / steps
+    // Recipes / steps (with exact recipe lookup, Mining Smelt -> Bar mapping, Camping station lookup & click-to-inspect)
     container.querySelectorAll('.step-recipe-name').forEach(el => {
-      const name = el.getAttribute('data-recipe-name') || el.textContent.trim();
-      const cleanName = name.toLowerCase().replace(/^make (a|an) /i, '');
-      const match = (prof.recipes || []).find(r => {
+      const name = el.getAttribute('data-recipe-name') || el.textContent.replace(/↗$/, '').trim();
+      const stepIdx = parseInt(el.getAttribute('data-step-idx') || '-1', 10);
+      const stepObj = (stepIdx >= 0 && prof.leveling?.steps) ? prof.leveling.steps[stepIdx] : null;
+      const cleanName = name.toLowerCase()
+        .replace(/^make (a|an) /i, '')
+        .replace(/\s*\(smelting bypass\)$/i, '')
+        .trim();
+      const smeltTarget = cleanName.startsWith('smelt ') ? `${cleanName.replace(/^smelt\s+/, '')} bar` : null;
+      const recipesList = prof.recipes || [];
+
+      // 1. Exact name or Smelt Bar match first (prevents "Heavy Linen Bandage" from matching "Linen Bandage")
+      let match = recipesList.find(r => {
         if (!r.name) return false;
         const rn = r.name.toLowerCase();
-        return rn === name.toLowerCase() || rn === cleanName || rn.includes(cleanName) || cleanName.includes(rn);
+        return rn === name.toLowerCase() || rn === cleanName || (smeltTarget && rn === smeltTarget);
       });
+      // 2. Fallback to itemId match
+      if (!match && stepObj?.itemId) {
+        match = recipesList.find(r => r.id === stepObj.itemId || r.itemId === stepObj.itemId);
+      }
+      // 3. Fallback to substring match only if still unmatched
+      if (!match) {
+        match = recipesList.find(r => {
+          if (!r.name) return false;
+          const rn = r.name.toLowerCase();
+          return rn.includes(cleanName) || cleanName.includes(rn);
+        });
+      }
+
+      let targetSubtab = 'recipes';
+      if (!match && prof.slug === 'camping') {
+        const campingAliasMap = {
+          'lean-to shelter': { subtab: 'buffs', target: 'Camp Tent' },
+          'linen wall tent': { subtab: 'buffs', target: 'Camp Tent' },
+          'silk trail pavilion': { subtab: 'buffs', target: 'Camp Tent' },
+          'field tanning rack': { subtab: 'upgrades', target: 'Tanning Rack' },
+          'field spinning wheel': { subtab: 'upgrades', target: 'Spinning Wheel' },
+          'portable blacksmithing anvil': { subtab: 'upgrades', target: 'Anvil' },
+          'field alchemy cauldron': { subtab: 'upgrades', target: 'Fermenter' }
+        };
+        const alias = campingAliasMap[cleanName];
+        const lookupKey = alias ? alias.target.toLowerCase() : cleanName;
+
+        const cf = (prof.campfires || []).find(c => c.name && (c.name.toLowerCase() === lookupKey || lookupKey.includes(c.name.toLowerCase()) || c.name.toLowerCase().includes(lookupKey)));
+        if (cf) {
+          targetSubtab = 'guide';
+          match = {
+            name: cf.name,
+            quality: cf.quality || 2,
+            effect: `${cf.desc || ''} (Holds ${cf.capacity || 3} stations)`,
+            learn: cf.skillReq || (stepObj ? `${stepObj.from}–${stepObj.to}` : '1'),
+            source: cf.blueprint ? cf.blueprint.text : (stepObj?.source || 'Camping Trainer'),
+            reagents: stepObj?.reagents || cf.reagents || null
+          };
+        }
+        if (!match) {
+          const bf = (prof.buffObjects || []).find(b => b.object && (b.object.toLowerCase() === lookupKey || lookupKey.includes(b.object.toLowerCase())));
+          if (bf) {
+            targetSubtab = 'buffs';
+            match = {
+              name: bf.object,
+              quality: 2,
+              effect: stepObj?.advice ? `${stepObj.advice} (${bf.object}: ${bf.gives})` : bf.gives,
+              learn: stepObj ? `${stepObj.from}–${stepObj.to}` : `${bf.profName} ${bf.skillReq}`,
+              source: stepObj?.source || 'Camping Trainer',
+              reagents: stepObj?.reagents || bf.reagents || null
+            };
+          }
+        }
+        if (!match && prof.upgrades) {
+          for (const u of prof.upgrades) {
+            if (u.s140?.name && (u.s140.name.toLowerCase() === lookupKey || lookupKey.includes(u.s140.name.toLowerCase()))) {
+              targetSubtab = 'upgrades';
+              match = {
+                name: u.s140.name,
+                quality: 2,
+                effect: stepObj?.advice ? `${stepObj.advice} (${u.s140.desc})` : u.s140.desc,
+                learn: stepObj ? `${stepObj.from}–${stepObj.to}` : u.s140.skill,
+                source: stepObj?.source || 'Camping Blueprint',
+                reagents: stepObj?.reagents || null
+              };
+              break;
+            }
+            if (u.s300?.name && (u.s300.name.toLowerCase() === lookupKey || lookupKey.includes(u.s300.name.toLowerCase()))) {
+              targetSubtab = 'upgrades';
+              match = {
+                name: u.s300.name,
+                quality: 3,
+                effect: stepObj?.advice ? `${stepObj.advice} (${u.s300.desc})` : u.s300.desc,
+                learn: stepObj ? `${stepObj.from}–${stepObj.to}` : u.s300.skill,
+                source: stepObj?.source || 'Camping Blueprint',
+                reagents: stepObj?.reagents || null
+              };
+              break;
+            }
+          }
+        }
+      }
+
+      const ttQuality = match?.quality || (stepObj?.vendorDetails ? 2 : 1);
+      const ttDesc = match?.effect || stepObj?.advice || stepObj?.source || match?.source || '';
+      const ttReagents = stepObj?.reagents || match?.reagents || null;
+      const ttExtra = {
+        type: `${prof.name || 'Tradeskill'} Step${stepObj?.crafts > 1 ? ` (~${stepObj.crafts} Crafts)` : ''}`,
+        skillReq: match?.learn ? `${prof.name} (${match.learn})` : (stepObj ? `${prof.name} (${stepObj.from}–${stepObj.to})` : ''),
+        source: stepObj?.source || match?.source || 'Trainer',
+        cost: stepObj?.vendorDetails?.cost || '',
+        crafts: stepObj?.crafts || 1
+      };
+
       el.addEventListener('mouseenter', (e) => {
-        showItemTooltip(e, name, match?.quality || 1, match?.effect || match?.source || '', match?.reagents || null);
+        showItemTooltip(e, name, ttQuality, ttDesc, ttReagents, ttExtra);
       });
       el.addEventListener('mousemove', (e) => {
         const tt = document.getElementById('wow-item-tooltip');
         if (tt) positionTooltip(e, tt);
       });
       el.addEventListener('mouseleave', hideItemTooltip);
+
+      const handleStepRecipeClick = (e) => {
+        e.stopPropagation();
+        hideItemTooltip();
+        if (prof.slug === 'camping') {
+          const destTab = targetSubtab === 'recipes' ? 'guide' : targetSubtab;
+          if (window.WOW_PROFESSIONS?.selectProfession) {
+            window.WOW_PROFESSIONS.selectProfession('camping', destTab, '');
+            const targetItemName = match?.name || name;
+            setTimeout(() => {
+              const cardEl = Array.from(document.querySelectorAll('.camp-tooltip-item')).find(
+                c => (c.getAttribute('data-item-name') || '').toLowerCase() === targetItemName.toLowerCase()
+              );
+              if (cardEl) {
+                cardEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                cardEl.classList.add('recipe-card-highlight');
+                setTimeout(() => cardEl.classList.remove('recipe-card-highlight'), 2500);
+              }
+            }, 150);
+          }
+          return;
+        }
+        if (prof.recipes && prof.recipes.length > 0) {
+          const lookupQuery = match?.name || name.replace(/^Make (a|an) /i, '').replace(/\s*\(Smelting Bypass\)$/i, '').trim();
+          if (window.WOW_PROFESSIONS?.selectProfession) {
+            window.WOW_PROFESSIONS.selectProfession(prof.slug, 'recipes', lookupQuery, match?.id || '');
+          }
+        } else {
+          const itemId = el.getAttribute('data-item-id') || '';
+          openReverseReagentLookup(itemId, name.replace(/\s*\(Smelting Bypass\)$/i, '').trim());
+        }
+      };
+
+      el.addEventListener('click', handleStepRecipeClick);
+      el.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          handleStepRecipeClick(e);
+        }
+      });
     });
 
     // Merchant's Favor recipe card/bar hover
@@ -2381,11 +2759,19 @@
     container.querySelectorAll('.reagent-chip, .step-reagent-badge, .shopping-row-card').forEach(el => {
       const name = el.getAttribute('data-item-name') || el.getAttribute('title') || '';
       const rawId = el.getAttribute('data-item-id') || '';
+      const perCraft = parseInt(el.getAttribute('data-per-craft') || '0', 10);
+      const totalStep = parseInt(el.getAttribute('data-total-step') || '0', 10);
+      const stepCrafts = parseInt(el.getAttribute('data-crafts') || '0', 10);
       if (!name) return;
       const triggerTooltip = (e) => {
         e.stopPropagation();
         const src = resolveReagentSource(name, rawId);
-        const summaryDesc = src && src.summary ? src.summary : 'Crafting Reagent / Material';
+        let summaryDesc = src && src.summary ? src.summary : 'Crafting Reagent / Material';
+        if (perCraft > 0 && stepCrafts > 1) {
+          summaryDesc = `${perCraft}x per craft × ~${stepCrafts} crafts = ${totalStep}x total for this bracket. ${summaryDesc}`;
+        } else if (perCraft > 0) {
+          summaryDesc = `${perCraft}x required for this step. ${summaryDesc}`;
+        }
         let useHint = 'Click to find all recipes across professions that use this material.';
         if (src) {
           if (src.primaryType === 'fished' && src.fishedIn && src.fishedIn.length > 0) {
@@ -2395,7 +2781,7 @@
           }
         }
         showItemTooltip(e, name, 1, summaryDesc, null, { 
-          type: 'Crafting Component',
+          type: perCraft > 0 && stepCrafts > 1 ? `Bracket Reagent (${perCraft}x · =${totalStep} Total)` : 'Crafting Component',
           use: useHint
         });
       };
