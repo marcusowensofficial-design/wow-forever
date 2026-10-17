@@ -6409,6 +6409,786 @@
     }).join('');
   }
 
+/* ==========================================================================
+     CIRCUIT GATHERING ROUTE MAPS & INTERACTIVE OVERLAY MODAL
+     ========================================================================== */
+  const ZONE_MAP_IDS = {
+  'Durotar': 14,
+  'Elwynn Forest': 12,
+  'Darkshore': 148,
+  'Mulgore': 215,
+  'The Barrens': 17,
+  'Westfall': 40,
+  'Loch Modan': 38,
+  'Hillsbrad Foothills': 267,
+  'Arathi Highlands': 45,
+  'Thousand Needles': 400,
+  'Badlands': 3,
+  'Wetlands': 11,
+  'The Hinterlands': 47,
+  'Searing Gorge': 51,
+  'Tanaris': 440,
+  "Un'Goro Crater": 490,
+  'Winterspring': 618,
+  'Eastern Plaguelands': 139,
+  'Silithus': 1377,
+  'Tirisfal Glades': 85,
+  'Teldrassil': 141,
+  'Silverpine Forest': 130,
+  'Stonetalon Mountains': 406,
+  'Redridge Mountains': 44,
+  'Swamp of Sorrows': 8,
+  'Alterac Mountains': 267,
+  'Stranglethorn Vale': 33,
+  'Felwood': 361,
+  'Feralas': 357,
+  'Western Plaguelands': 28
+};
+
+const CIRCUIT_ROUTE_PATHS = {
+  // === 20 MINING ROUTES ===
+  copper_durotar: [
+    { x: 52.0, y: 43.0, label: 'Razor Hill (Start)' },
+    { x: 55.5, y: 56.0, label: 'Eastern Coastal Ledges' },
+    { x: 56.8, y: 72.5, label: 'Sen\'jin Village Outskirts' },
+    { x: 51.0, y: 81.0, label: 'Kolkar Crag Boundary' },
+    { x: 43.5, y: 68.2, label: 'Valley of Trials Mountain Ridge' },
+    { x: 41.0, y: 53.5, label: 'Southfury River Cliffs' },
+    { x: 44.5, y: 45.0, label: 'Drygulch Ravine Outer Ledge' },
+    { x: 49.0, y: 41.5, label: 'Razor Rock Pass' },
+    { x: 52.0, y: 43.0, label: 'Return to Razor Hill' }
+  ],
+  copper_elwynn: [
+    { x: 42.0, y: 65.0, label: 'Goldshire Outskirts (Start)' },
+    { x: 46.5, y: 50.5, label: 'Northshire River Boundary' },
+    { x: 55.0, y: 58.2, label: 'Crystal Lake Mountain Ridge' },
+    { x: 62.0, y: 52.8, label: 'Jasperlode Mine Rim' },
+    { x: 64.5, y: 68.0, label: 'Brackwell Pumpkin Patch Ridge' },
+    { x: 53.0, y: 74.0, label: 'Maclure Vineyards Perimeter' },
+    { x: 42.5, y: 58.5, label: 'Fargodeep Mine Perimeter' },
+    { x: 34.8, y: 67.5, label: 'Stonefield Farm Hills' },
+    { x: 42.0, y: 65.0, label: 'Return to Goldshire' }
+  ],
+  copper_darkshore: [
+    { x: 38.0, y: 44.0, label: 'Bashal\'Aran Ridge (Start)' },
+    { x: 41.5, y: 52.0, label: 'Eastern Mountain Wall' },
+    { x: 43.8, y: 68.5, label: 'Ameth\'Aran Ruins Rim' },
+    { x: 41.0, y: 78.0, label: 'Grove of the Ancients Perimeter' },
+    { x: 38.5, y: 84.5, label: 'Master\'s Glaive Excavation Rim' },
+    { x: 35.0, y: 72.0, label: 'Remtravel\'s Excavation Boundary' },
+    { x: 36.2, y: 56.5, label: 'Coastal Tree Line Pass' },
+    { x: 36.8, y: 47.0, label: 'Auberdine Southern Outskirts' },
+    { x: 38.0, y: 44.0, label: 'Return to Bashal\'Aran' }
+  ],
+  copper_mulgore: [
+    { x: 45.0, y: 60.0, label: 'Bloodhoof Village (Start)' },
+    { x: 44.2, y: 75.8, label: 'Red Cloud Mesa Outer Plateau' },
+    { x: 37.5, y: 72.0, label: 'Palemane Gnoll Rock Ridge' },
+    { x: 33.0, y: 56.5, label: 'Windfury Crag Cliffs' },
+    { x: 31.5, y: 38.2, label: 'Venture Co Mine Perimeter' },
+    { x: 44.8, y: 29.5, label: 'Northern Plateau Ridge' },
+    { x: 58.0, y: 44.5, label: 'Bael\'dun Digsite Rim' },
+    { x: 56.5, y: 58.0, label: 'Golden Plains East Wall' },
+    { x: 45.0, y: 60.0, label: 'Return to Bloodhoof' }
+  ],
+  tin_barrens: [
+    { x: 51.0, y: 30.0, label: 'The Crossroads (Start)' },
+    { x: 56.5, y: 18.0, label: 'Sludge Fen Mountain Ledge' },
+    { x: 62.5, y: 28.5, label: 'Boulder Lode Mine Rim' },
+    { x: 60.0, y: 42.0, label: 'Ratchet Mountain Pass' },
+    { x: 52.5, y: 46.5, label: 'The Stagnant Oasis Bluffs' },
+    { x: 45.5, y: 38.0, label: 'Dreadmist Peak Foothills' },
+    { x: 48.0, y: 32.5, label: 'Forgotten Pools Ridge' },
+    { x: 51.0, y: 30.0, label: 'Return to Crossroads' }
+  ],
+  tin_westfall: [
+    { x: 42.0, y: 68.0, label: 'Sentinel Hill Ridge (Start)' },
+    { x: 44.5, y: 80.5, label: 'Moonbrook & Deadmines Exterior Rim' },
+    { x: 33.2, y: 76.5, label: 'Demont\'s Place Coastal Cliffs' },
+    { x: 29.0, y: 60.0, label: 'Westfall Lighthouse Ledges' },
+    { x: 32.5, y: 48.0, label: 'Alexston Farmstead Foothills' },
+    { x: 36.5, y: 40.5, label: 'Jansen Farm Boundary' },
+    { x: 42.0, y: 52.0, label: 'Saldean\'s Farm Perimeter' },
+    { x: 42.0, y: 68.0, label: 'Return to Sentinel Hill' }
+  ],
+  tin_loch_modan: [
+    { x: 48.0, y: 64.0, label: 'Thelsamar Valley (Start)' },
+    { x: 48.5, y: 22.0, label: 'Stonewrought Dam Base Ledges' },
+    { x: 65.0, y: 45.0, label: 'Eastern Mountain Perimeter' },
+    { x: 68.5, y: 68.0, label: 'Grizzlepaw Ridge Caves' },
+    { x: 65.0, y: 82.5, label: 'Ironband\'s Excavation Rim' },
+    { x: 46.0, y: 84.0, label: 'Valley of Kings Pass' },
+    { x: 35.5, y: 78.0, label: 'Western Trogg Mountain Wall' },
+    { x: 36.0, y: 60.0, label: 'Silver Stream Mine Rim' },
+    { x: 48.0, y: 64.0, label: 'Return to Thelsamar' }
+  ],
+  tin_hillsbrad: [
+    { x: 56.0, y: 52.0, label: 'Tarren Mill / Southshore Border (Start)' },
+    { x: 74.0, y: 40.0, label: 'Durnholde Keep Outer Mountain Rim' },
+    { x: 82.5, y: 50.0, label: 'Eastern Highlands Border Ledge' },
+    { x: 76.0, y: 62.0, label: 'Thoradin\'s Wall Approach' },
+    { x: 65.0, y: 68.5, label: 'Southern Coast Ocean Cliffs' },
+    { x: 48.0, y: 64.0, label: 'Southshore Outskirts Rim' },
+    { x: 38.5, y: 58.0, label: 'Nethander Farm Foothills' },
+    { x: 44.0, y: 48.0, label: 'Hillsbrad Fields Perimeter' },
+    { x: 56.0, y: 52.0, label: 'Return to Starting Ridge' }
+  ],
+  iron_arathi: [
+    { x: 46.0, y: 46.0, label: 'Refuge Pointe / Hammerfall Border (Start)' },
+    { x: 34.0, y: 30.0, label: 'Northfold Manor Mountain Ridge' },
+    { x: 24.5, y: 62.0, label: 'Stromgarde Keep Outer Wall Rim' },
+    { x: 38.0, y: 78.0, label: 'Faldir\'s Cove Descent Pass' },
+    { x: 66.0, y: 72.5, label: 'Witherbark Village Outer Ledges' },
+    { x: 68.5, y: 56.0, label: 'Go\'Shek Farm Mountain Perimeter' },
+    { x: 74.5, y: 36.0, label: 'Hammerfall Cliffs' },
+    { x: 58.0, y: 34.0, label: 'Boulderfist Hall Perimeter' },
+    { x: 46.0, y: 46.0, label: 'Return to Central Plateau' }
+  ],
+  iron_needles: [
+    { x: 68.0, y: 78.0, label: 'Shimmering Flats Rim (Start)' },
+    { x: 78.0, y: 75.0, label: 'Mirage Raceway Northern Wall' },
+    { x: 84.5, y: 82.0, label: 'Eastern Salt Basin Cliffs' },
+    { x: 82.0, y: 89.0, label: 'Southbreak Tunnel Approach' },
+    { x: 72.0, y: 92.5, label: 'Rustmaul Digsite Ledges' },
+    { x: 64.0, y: 84.0, label: 'Western Salt Flats Boundary' },
+    { x: 68.0, y: 78.0, label: 'Return to Shimmering Flats Rim' }
+  ],
+  iron_badlands: [
+    { x: 54.0, y: 32.0, label: 'Dustwind Dig (Start)' },
+    { x: 60.5, y: 24.0, label: 'Northern Basin Wall' },
+    { x: 48.0, y: 22.0, label: 'Lethlor Boundary Cliffs' },
+    { x: 42.0, y: 28.5, label: 'Angor Fortress Perimeter' },
+    { x: 32.0, y: 42.0, label: 'Lethlor Ravine Rim' },
+    { x: 36.5, y: 54.0, label: 'Camp Kosh Outskirts' },
+    { x: 48.0, y: 48.0, label: 'Mirage Flats Basin' },
+    { x: 54.0, y: 32.0, label: 'Return to Dustwind Dig' }
+  ],
+  iron_wetlands: [
+    { x: 64.0, y: 42.0, label: 'Greenwarden\'s Grove (Start)' },
+    { x: 68.5, y: 30.0, label: 'Ironband\'s Excavation Rim' },
+    { x: 74.0, y: 40.5, label: 'Raptor Ridge Mountain Wall' },
+    { x: 68.0, y: 56.0, label: 'Angerfang Encampment Ledges' },
+    { x: 56.5, y: 64.0, label: 'Mosshide Fen Boundary' },
+    { x: 45.0, y: 54.0, label: 'Whelgar\'s Excavation Perimeter' },
+    { x: 50.5, y: 40.0, label: 'Dun Modr Border Cliffs' },
+    { x: 64.0, y: 42.0, label: 'Return to Greenwarden\'s Grove' }
+  ],
+  mithril_badlands: [
+    { x: 24.0, y: 54.0, label: 'Camp Cagg Perimeter (Start)' },
+    { x: 18.0, y: 40.0, label: 'Far Western Plateau Cliffs' },
+    { x: 32.0, y: 26.0, label: 'Angor Fortress Exterior' },
+    { x: 45.0, y: 22.0, label: 'North Basin Mountain Wall' },
+    { x: 68.0, y: 28.0, label: 'Apocryphan\'s Rest Ledges' },
+    { x: 80.5, y: 52.0, label: 'Eastern Dragon Canyon Rim' },
+    { x: 74.0, y: 68.0, label: 'Mirage Ridge Southeast' },
+    { x: 60.0, y: 75.0, label: 'Southern Mountain Wall' },
+    { x: 42.0, y: 72.0, label: 'Camp Boff Perimeter' },
+    { x: 24.0, y: 54.0, label: 'Return to Camp Cagg' }
+  ],
+  mithril_hinterlands: [
+    { x: 58.0, y: 56.0, label: 'Jintha\'Alor Plateau Border (Start)' },
+    { x: 64.0, y: 68.5, label: 'Jintha\'Alor Exterior Base' },
+    { x: 76.0, y: 58.0, label: 'Overlook Cliffs Rim' },
+    { x: 78.5, y: 42.0, label: 'Zun\'watha Mountain Ridge' },
+    { x: 62.0, y: 32.0, label: 'Seradane Exterior Wall' },
+    { x: 46.0, y: 38.0, label: 'Aerie Peak South Valley' },
+    { x: 34.0, y: 54.0, label: 'Shadra\'Alor Temple Rim' },
+    { x: 45.0, y: 62.0, label: 'Agol\'watha Perimeter' },
+    { x: 58.0, y: 56.0, label: 'Return to Central Plateau' }
+  ],
+  mithril_searing_gorge: [
+    { x: 42.0, y: 48.0, label: 'Thorium Point Trail (Start)' },
+    { x: 36.0, y: 40.0, label: 'The Cauldron Northern Rim' },
+    { x: 32.5, y: 52.0, label: 'Firewatch Ridge Foothills' },
+    { x: 44.0, y: 58.5, label: 'Slag Pit Exterior Ledges' },
+    { x: 58.0, y: 64.0, label: 'Blackchar Cave Mountain Boundary' },
+    { x: 64.5, y: 45.0, label: 'Sea of Fire Rim' },
+    { x: 52.0, y: 32.0, label: 'Grimesilt Dig Perimeter' },
+    { x: 42.0, y: 48.0, label: 'Return to Thorium Point' }
+  ],
+  mithril_tanaris: [
+    { x: 52.0, y: 46.0, label: 'Gadgetzan Perimeter (Start)' },
+    { x: 60.5, y: 32.0, label: 'Noonshade Ruins Bluffs' },
+    { x: 66.0, y: 26.5, label: 'Steamwheedle Port Coast' },
+    { x: 68.5, y: 62.0, label: 'Southbreak Shore Cliffs' },
+    { x: 54.0, y: 70.0, label: 'Dunemaul Compound Ridge' },
+    { x: 32.0, y: 70.0, label: 'Thistleshrub Valley Perimeter' },
+    { x: 34.0, y: 46.0, label: 'Noxious Lair Insect Rim' },
+    { x: 42.0, y: 38.0, label: 'Zul\'Farrak Outer Mountain Wall' },
+    { x: 52.0, y: 46.0, label: 'Return to Gadgetzan' }
+  ],
+  thorium_ungoro: [
+    { x: 50.0, y: 48.0, label: 'Marshal\'s Stand (Start)' },
+    { x: 60.0, y: 20.0, label: 'Northern Perimeter Wall' },
+    { x: 72.0, y: 46.0, label: 'Eastern Slopes & Lakkari Tar Pits' },
+    { x: 66.0, y: 78.0, label: 'Slithering Scar Hive Entrances' },
+    { x: 48.0, y: 88.0, label: 'Southern Ridge Crater Wall' },
+    { x: 30.0, y: 68.0, label: 'Golakka Hot Springs Slopes' },
+    { x: 32.0, y: 36.0, label: 'Western Marsh Mountain Rim' },
+    { x: 50.0, y: 50.0, label: 'Fire Plume Ridge Inner Loop' },
+    { x: 50.0, y: 48.0, label: 'Return to Marshal\'s Stand' }
+  ],
+  thorium_winterspring: [
+    { x: 60.0, y: 50.0, label: 'Everlook Outskirts (Start)' },
+    { x: 52.0, y: 42.0, label: 'Lake Kel\'Theril Ruins Rim' },
+    { x: 50.0, y: 30.0, label: 'Starfall Village Foothills' },
+    { x: 48.0, y: 18.0, label: 'Frostsaber Rock Slopes' },
+    { x: 58.0, y: 65.0, label: 'Mazthoril Canyon Mountain Wall' },
+    { x: 64.0, y: 74.0, label: 'Owl Wing Thicket Ridge' },
+    { x: 66.5, y: 60.0, label: 'Winterfall Village Exterior' },
+    { x: 60.0, y: 50.0, label: 'Return to Everlook' }
+  ],
+  thorium_epl: [
+    { x: 65.0, y: 45.0, label: 'Light\'s Hope Chapel (Start)' },
+    { x: 74.0, y: 30.0, label: 'Noxious Glade Perimeter' },
+    { x: 68.0, y: 18.0, label: 'Northpass Tower Mountain Wall' },
+    { x: 56.0, y: 42.0, label: 'Corin\'s Crossing Outskirts' },
+    { x: 44.0, y: 48.0, label: 'Blackwood Lake Cauldron Ridge' },
+    { x: 36.0, y: 70.0, label: 'Darrowshire Mountain Foothills' },
+    { x: 52.0, y: 78.0, label: 'Southern Fungal Wall' },
+    { x: 65.0, y: 45.0, label: 'Return to Light\'s Hope' }
+  ],
+  thorium_silithus: [
+    { x: 48.0, y: 42.0, label: 'Cenarion Hold (Start)' },
+    { x: 56.0, y: 28.0, label: 'Hive\'Ashi Exterior Perimeter' },
+    { x: 62.0, y: 48.0, label: 'Eastern Mountain Wall' },
+    { x: 58.0, y: 72.0, label: 'Hive\'Regal Outer Rim' },
+    { x: 64.0, y: 82.0, label: 'Southwind Village Cliffs' },
+    { x: 46.0, y: 86.0, label: 'Southern Desert Border' },
+    { x: 36.0, y: 68.0, label: 'Hive\'Zora Exterior Ledges' },
+    { x: 32.0, y: 44.0, label: 'Twilight Post Mountain Ridge' },
+    { x: 48.0, y: 42.0, label: 'Return to Cenarion Hold' }
+  ],
+
+  // === 28 HERBALISM ROUTES ===
+  herb_durotar: [
+    { x: 48.0, y: 52.0, label: 'Razor Hill (Start)' },
+    { x: 44.0, y: 62.0, label: 'Southfury River Banks' },
+    { x: 54.0, y: 72.0, label: 'Sen\'jin Village Coast' },
+    { x: 44.0, y: 68.0, label: 'Valley of Trials Hills' },
+    { x: 42.0, y: 56.0, label: 'Dry Gullies North' },
+    { x: 46.0, y: 50.0, label: 'Razor Rock Foothills' },
+    { x: 48.0, y: 52.0, label: 'Return to Razor Hill' }
+  ],
+  herb_elwynn: [
+    { x: 45.0, y: 55.0, label: 'Goldshire (Start)' },
+    { x: 52.0, y: 58.0, label: 'Crystal Lake Shoreline' },
+    { x: 48.0, y: 45.0, label: 'Northshire River Crossing' },
+    { x: 38.0, y: 50.0, label: 'Mirror Lake Tree Line' },
+    { x: 34.0, y: 64.0, label: 'Stonefield Farm Meadows' },
+    { x: 42.0, y: 62.0, label: 'Fargodeep Plains' },
+    { x: 45.0, y: 55.0, label: 'Return to Goldshire' }
+  ],
+  herb_tirisfal: [
+    { x: 58.0, y: 48.0, label: 'Brill (Start)' },
+    { x: 66.0, y: 44.0, label: 'Stillwater Pond Banks' },
+    { x: 74.0, y: 56.0, label: 'Balnir Farmstead' },
+    { x: 60.0, y: 68.0, label: 'Undercity Perimeter Walls' },
+    { x: 46.0, y: 60.0, label: 'Nightmare Vale Clearing' },
+    { x: 48.0, y: 36.0, label: 'Agamand Mills Plains' },
+    { x: 58.0, y: 48.0, label: 'Return to Brill' }
+  ],
+  herb_teldrassil: [
+    { x: 55.0, y: 58.0, label: 'Dolanaar (Start)' },
+    { x: 56.0, y: 64.0, label: 'Lake Al\'Ameth Perimeter' },
+    { x: 64.0, y: 52.0, label: 'Starbreeze Village Ruins' },
+    { x: 58.0, y: 42.0, label: 'Tree Hollow Groves' },
+    { x: 50.0, y: 42.0, label: 'Ban\'ethil Hollow Border' },
+    { x: 55.0, y: 58.0, label: 'Return to Dolanaar' }
+  ],
+  herb_barrens: [
+    { x: 45.0, y: 40.0, label: 'The Crossroads (Start)' },
+    { x: 45.0, y: 24.0, label: 'Forgotten Pools Oasis' },
+    { x: 56.0, y: 42.0, label: 'The Stagnant Oasis' },
+    { x: 46.0, y: 56.0, label: 'Lushwater Oasis' },
+    { x: 42.0, y: 46.0, label: 'Wailing Caverns Approach' },
+    { x: 45.0, y: 40.0, label: 'Return to Crossroads' }
+  ],
+  herb_westfall: [
+    { x: 35.0, y: 55.0, label: 'Sentinel Hill Outskirts (Start)' },
+    { x: 26.0, y: 46.0, label: 'Longshore Coast (Stranglekelp)' },
+    { x: 28.0, y: 74.0, label: 'Demont\'s Place Shoreline' },
+    { x: 40.0, y: 78.0, label: 'Moonbrook Hills (Briarthorn)' },
+    { x: 46.0, y: 54.0, label: 'Saldean\'s Farmland' },
+    { x: 35.0, y: 55.0, label: 'Return to Sentinel Hill' }
+  ],
+  herb_loch_modan: [
+    { x: 36.0, y: 48.0, label: 'Thelsamar Outskirts (Start)' },
+    { x: 50.0, y: 46.0, label: 'Central Farmlands' },
+    { x: 50.0, y: 24.0, label: 'Southern Dam Base' },
+    { x: 42.0, y: 60.0, label: 'Peaceful Central Valley' },
+    { x: 34.0, y: 56.0, label: 'Valley Meadows' },
+    { x: 36.0, y: 48.0, label: 'Return to Thelsamar' }
+  ],
+  herb_silverpine: [
+    { x: 46.0, y: 42.0, label: 'The Sepulcher (Start)' },
+    { x: 58.0, y: 62.0, label: 'Ambermill Foothills' },
+    { x: 44.0, y: 72.0, label: 'Shadowfang Keep Coast' },
+    { x: 38.0, y: 52.0, label: 'Silverpine Shoreline (Stranglekelp)' },
+    { x: 42.0, y: 44.0, label: 'Misty Forest Pass' },
+    { x: 46.0, y: 42.0, label: 'Return to The Sepulcher' }
+  ],
+  herb_hillsbrad: [
+    { x: 52.0, y: 45.0, label: 'Tarren Mill (Start)' },
+    { x: 70.0, y: 38.0, label: 'Durnholde Keep Plateau' },
+    { x: 64.0, y: 28.0, label: 'Northern Plateau Rim' },
+    { x: 48.0, y: 58.0, label: 'Southshore Northern Hills' },
+    { x: 46.0, y: 48.0, label: 'River Banks Crossing' },
+    { x: 52.0, y: 45.0, label: 'Return to Tarren Mill' }
+  ],
+  herb_wetlands: [
+    { x: 50.0, y: 58.0, label: 'Menethil Sunken Road (Start)' },
+    { x: 38.0, y: 54.0, label: 'Menethil Marsh Basin' },
+    { x: 58.0, y: 44.0, label: 'Ironbeard\'s Tomb Crypts' },
+    { x: 62.0, y: 52.0, label: 'Raptor Marsh Grounds' },
+    { x: 44.0, y: 38.0, label: 'Murloc Shanties North' },
+    { x: 50.0, y: 58.0, label: 'Return to Menethil Road' }
+  ],
+  herb_stonetalon: [
+    { x: 48.0, y: 58.0, label: 'Sun Rock Retreat (Start)' },
+    { x: 46.0, y: 68.0, label: 'Canyon Path South' },
+    { x: 36.0, y: 76.0, label: 'Charred Vale Border' },
+    { x: 52.0, y: 82.0, label: 'Harpy Foothills' },
+    { x: 64.0, y: 70.0, label: 'Malaka\'jin High Switchbacks' },
+    { x: 48.0, y: 58.0, label: 'Return to Sun Rock' }
+  ],
+  herb_redridge: [
+    { x: 45.0, y: 52.0, label: 'Lakeshire (Start)' },
+    { x: 46.0, y: 42.0, label: 'Lake Everstill Perimeter' },
+    { x: 62.0, y: 38.0, label: 'Render\'s Rock Foothills' },
+    { x: 68.0, y: 54.0, label: 'Gnoll Camp Cliffs' },
+    { x: 52.0, y: 64.0, label: 'Southern Mountain Ridge' },
+    { x: 45.0, y: 52.0, label: 'Return to Lakeshire' }
+  ],
+  herb_arathi: [
+    { x: 42.0, y: 52.0, label: 'Western Road Entry (Start)' },
+    { x: 64.0, y: 68.0, label: 'Witherbark Village Rim' },
+    { x: 68.0, y: 54.0, label: 'Go\'Shek Farm Perimeter' },
+    { x: 54.0, y: 42.0, label: 'Central Arathi Basin' },
+    { x: 46.0, y: 38.0, label: 'Elemental Binding Stones' },
+    { x: 42.0, y: 52.0, label: 'Return to Western Road' }
+  ],
+  herb_swamp: [
+    { x: 54.0, y: 46.0, label: 'Stonard Outskirts (Start)' },
+    { x: 60.0, y: 40.0, label: 'Pool of Tears Marsh' },
+    { x: 36.0, y: 48.0, label: 'Deadwind Pass Entrance Road' },
+    { x: 44.0, y: 64.0, label: 'Misty Reeds Southern Bog' },
+    { x: 66.0, y: 60.0, label: 'Coastal Swamp Boundary' },
+    { x: 54.0, y: 46.0, label: 'Return to Stonard' }
+  ],
+  herb_alterac: [
+    { x: 44.0, y: 54.0, label: 'Tarren Mill Snowline (Start)' },
+    { x: 38.0, y: 46.0, label: 'Ruins of Alterac Perimeter' },
+    { x: 34.0, y: 38.0, label: 'Growless Cave Exterior' },
+    { x: 50.0, y: 34.0, label: 'Syndicate Camps Foothills' },
+    { x: 44.0, y: 54.0, label: 'Return to Snowline' }
+  ],
+  herb_stv_north: [
+    { x: 44.0, y: 28.0, label: 'Rebel Camp (Start)' },
+    { x: 46.0, y: 20.0, label: 'Kurzen\'s Compound Perimeter' },
+    { x: 44.0, y: 38.0, label: 'Lake Nazferiti Rim' },
+    { x: 34.0, y: 36.0, label: 'Ruins of Bal\'lal' },
+    { x: 38.0, y: 26.0, label: 'River Banks North' },
+    { x: 44.0, y: 28.0, label: 'Return to Rebel Camp' }
+  ],
+  herb_tanaris: [
+    { x: 54.0, y: 42.0, label: 'Gadgetzan Dunes (Start)' },
+    { x: 58.0, y: 34.0, label: 'Noonshade Ruins Basin' },
+    { x: 34.0, y: 68.0, label: 'Thistleshrub Valley (Firebloom)' },
+    { x: 66.0, y: 58.0, label: 'Southbreak Shore' },
+    { x: 56.0, y: 48.0, label: 'Desert Foothills North' },
+    { x: 54.0, y: 42.0, label: 'Return to Gadgetzan' }
+  ],
+  herb_searing_fire: [
+    { x: 38.0, y: 50.0, label: 'Thorium Point (Start)' },
+    { x: 34.0, y: 42.0, label: 'Firewatch Ridge Cliffs' },
+    { x: 52.0, y: 60.0, label: 'Sea of Fire Magma Plains' },
+    { x: 60.0, y: 42.0, label: 'Grimesilt Perimeter' },
+    { x: 38.0, y: 50.0, label: 'Return to Thorium Point' }
+  ],
+  herb_hinterlands_lotus: [
+    { x: 52.0, y: 60.0, label: 'Central Valley (Start)' },
+    { x: 62.0, y: 66.0, label: 'Jintha\'Alor Exterior Base' },
+    { x: 50.0, y: 70.0, label: 'River Gorge Lowlands' },
+    { x: 38.0, y: 58.0, label: 'Shadra\'Alor Rim' },
+    { x: 52.0, y: 60.0, label: 'Return to Central Valley' }
+  ],
+  herb_badlands_flat: [
+    { x: 46.0, y: 50.0, label: 'Dustwind Dig (Start)' },
+    { x: 28.0, y: 52.0, label: 'Barren Flats towards Camp Cagg' },
+    { x: 38.0, y: 36.0, label: 'Coyote Bluffs North' },
+    { x: 58.0, y: 44.0, label: 'Mirage Flats East' },
+    { x: 46.0, y: 50.0, label: 'Return to Dustwind Dig' }
+  ],
+  herb_swamp_temple: [
+    { x: 62.0, y: 52.0, label: 'Sunken Temple Waterways (Start)' },
+    { x: 66.0, y: 42.0, label: 'North Canal Reeds' },
+    { x: 72.0, y: 50.0, label: 'East Bank Swamp' },
+    { x: 68.0, y: 62.0, label: 'South Swamp Channel' },
+    { x: 58.0, y: 56.0, label: 'West Canal Approach' },
+    { x: 62.0, y: 52.0, label: 'Return to Sunken Temple' }
+  ],
+  herb_felwood: [
+    { x: 46.0, y: 56.0, label: 'Emerald Sanctuary (Start)' },
+    { x: 44.0, y: 42.0, label: 'Main Road North' },
+    { x: 50.0, y: 32.0, label: 'Bloodvenom Post Demon Ruins' },
+    { x: 54.0, y: 24.0, label: 'Irontree Woods' },
+    { x: 38.0, y: 48.0, label: 'Jaedenar Perimeter' },
+    { x: 46.0, y: 56.0, label: 'Return to Emerald Sanctuary' }
+  ],
+  herb_ghost_caves: [
+    { x: 56.0, y: 44.0, label: 'Skull Rock Cave Mouth (Start)' },
+    { x: 54.0, y: 52.0, label: 'Creeping Cave Connector' },
+    { x: 60.0, y: 56.0, label: 'Damp Mushroom Valley' },
+    { x: 64.0, y: 46.0, label: 'Cliffside Moss Ledges' },
+    { x: 56.0, y: 44.0, label: 'Return to Skull Rock' }
+  ],
+  herb_feralas: [
+    { x: 58.0, y: 44.0, label: 'Camp Mojache (Start)' },
+    { x: 46.0, y: 46.0, label: 'Verdantis River West' },
+    { x: 38.0, y: 48.0, label: 'Twin Colossals Base' },
+    { x: 42.0, y: 62.0, label: 'Gordunni Ogre Ruins' },
+    { x: 54.0, y: 58.0, label: 'Southern River Bluffs' },
+    { x: 58.0, y: 44.0, label: 'Return to Camp Mojache' }
+  ],
+  herb_epl: [
+    { x: 62.0, y: 48.0, label: 'Light\'s Hope Chapel (Start)' },
+    { x: 58.0, y: 36.0, label: 'Browman Mill' },
+    { x: 52.0, y: 46.0, label: 'Corin\'s Crossing Outskirts' },
+    { x: 60.0, y: 60.0, label: 'Lake Mereldar Banks' },
+    { x: 70.0, y: 56.0, label: 'Fungal Valley East' },
+    { x: 62.0, y: 48.0, label: 'Return to Light\'s Hope' }
+  ],
+  herb_winterspring: [
+    { x: 56.0, y: 42.0, label: 'Everlook (Start)' },
+    { x: 48.0, y: 22.0, label: 'Frostsaber Rock (Icecap)' },
+    { x: 50.0, y: 40.0, label: 'Lake Kel\'Theril' },
+    { x: 60.0, y: 66.0, label: 'Owl Wing Thicket' },
+    { x: 56.0, y: 42.0, label: 'Return to Everlook' }
+  ],
+  herb_ungoro: [
+    { x: 54.0, y: 44.0, label: 'Marshal\'s Stand (Start)' },
+    { x: 34.0, y: 62.0, label: 'Golakka Hot Springs' },
+    { x: 44.0, y: 76.0, label: 'River Marshlands Basin' },
+    { x: 52.0, y: 50.0, label: 'Fire Plume Ridge Loop' },
+    { x: 54.0, y: 44.0, label: 'Return to Marshal\'s Stand' }
+  ],
+  herb_wpl: [
+    { x: 46.0, y: 58.0, label: 'Chillwind Camp (Start)' },
+    { x: 48.0, y: 72.0, label: 'Sorrow Hill Cemetery' },
+    { x: 44.0, y: 48.0, label: 'Ruins of Andorhal Exterior' },
+    { x: 38.0, y: 54.0, label: 'Felstone Field' },
+    { x: 46.0, y: 38.0, label: 'Dalson\'s Tears' },
+    { x: 46.0, y: 58.0, label: 'Return to Chillwind Camp' }
+  ]
+};
+
+  function getZoneMapUrl(zoneName) {
+    const id = ZONE_MAP_IDS[zoneName];
+    if (id) {
+      return `https://wow.zamimg.com/images/wow/maps/enus/zoom/${id}.jpg`;
+    }
+    return '';
+  }
+
+  function renderRouteSvgOverlay(route, isMining, isEnlarged = false) {
+    const points = CIRCUIT_ROUTE_PATHS[route.id];
+    if (!points || points.length === 0) return '';
+
+    const pathD = points.map((p, i) => (i === 0 ? 'M' : 'L') + ' ' + p.x.toFixed(1) + ' ' + p.y.toFixed(1)).join(' ') + ' Z';
+    const mainStroke = isMining ? '#facc15' : '#4ade80';
+    const glowColor = isMining ? 'rgba(250, 204, 21, 0.45)' : 'rgba(74, 222, 128, 0.45)';
+    const startPt = points[0];
+    const filterId = `route-glow-${route.id}${isEnlarged ? '-lg' : ''}`;
+
+    return `
+      <svg class="circuit-map-svg" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+        <defs>
+          <filter id="${filterId}" x="-20%" y="-20%" width="140%" height="140%">
+            <feDropShadow dx="0" dy="0" stdDeviation="${isEnlarged ? '1.2' : '0.8'}" flood-color="${glowColor}" />
+          </filter>
+        </defs>
+        
+        <!-- Dark contrast underlay so line is visible against any terrain -->
+        <path d="${pathD}" fill="none" stroke="rgba(2, 6, 23, 0.88)" stroke-width="${isEnlarged ? '3.8' : '4.6'}" stroke-linejoin="round" stroke-linecap="round" />
+        
+        <!-- Glowing animated route line -->
+        <path class="circuit-svg-track" d="${pathD}" fill="none" stroke="${mainStroke}" stroke-width="${isEnlarged ? '1.8' : '2.2'}" stroke-dasharray="4 2" stroke-linejoin="round" stroke-linecap="round" filter="url(#${filterId})" />
+        
+        <!-- Waypoint cluster dots along the terrain loop -->
+        ${points.slice(1, -1).map(p => `
+          <circle cx="${p.x.toFixed(1)}" cy="${p.y.toFixed(1)}" r="${isEnlarged ? '1.1' : '1.3'}" fill="#ffffff" stroke="rgba(2, 6, 23, 0.9)" stroke-width="0.5">
+            ${isEnlarged && p.label ? `<title>${escapeHtml(p.label)} (${p.x.toFixed(1)}, ${p.y.toFixed(1)})</title>` : ''}
+          </circle>
+        `).join('')}
+        
+        <!-- Start Point Marker with Pulsing Ring -->
+        <circle class="circuit-svg-pulse" cx="${startPt.x.toFixed(1)}" cy="${startPt.y.toFixed(1)}" r="${isEnlarged ? '3.2' : '3.8'}" fill="${mainStroke}" opacity="0.3" />
+        <circle cx="${startPt.x.toFixed(1)}" cy="${startPt.y.toFixed(1)}" r="${isEnlarged ? '1.8' : '2.0'}" fill="#ef4444" stroke="#ffffff" stroke-width="0.7">
+          <title>Start Point: ${escapeHtml(startPt.label || 'Start')} (${startPt.x.toFixed(1)}, ${startPt.y.toFixed(1)})</title>
+        </circle>
+        
+        ${isEnlarged ? `
+          <g class="circuit-svg-pin-label" transform="translate(${startPt.x.toFixed(1)}, ${Math.max(4, startPt.y - 3.2).toFixed(1)})">
+            <rect x="-9" y="-3.5" width="18" height="4.5" rx="1.2" fill="rgba(15, 23, 42, 0.9)" stroke="${mainStroke}" stroke-width="0.3" />
+            <text x="0" y="-0.4" fill="#ffffff" font-size="2.4" font-weight="700" text-anchor="middle" font-family="system-ui, sans-serif">START</text>
+          </g>
+        ` : ''}
+      </svg>
+    `;
+  }
+
+  let activeRouteModal = null;
+  let activeModalCleanup = null;
+
+  function openGatheringRouteModal(route, isMining) {
+    if (!route) return;
+
+    if (activeRouteModal && typeof activeModalCleanup === 'function') {
+      activeModalCleanup();
+    }
+
+    let modal = document.getElementById('gathering-route-modal');
+    if (!modal) {
+      modal = document.createElement('div');
+      modal.id = 'gathering-route-modal';
+      modal.className = 'gathering-route-modal-backdrop';
+      modal.setAttribute('role', 'dialog');
+      modal.setAttribute('aria-modal', 'true');
+      document.body.appendChild(modal);
+    }
+    activeRouteModal = modal;
+
+    const zoneName = route.zone;
+    const mapUrl = getZoneMapUrl(zoneName);
+    const mainColor = isMining ? '#facc15' : '#4ade80';
+    const profLabel = isMining ? 'Mining Circuit' : 'Herbalism Circuit';
+    const points = CIRCUIT_ROUTE_PATHS[route.id] || [];
+
+    modal.innerHTML = `
+      <div class="gathering-route-dialog" role="document">
+        <div class="gathering-route-header">
+          <div class="gathering-route-title-box">
+            <div class="gathering-route-meta-pills">
+              <span class="circuit-faction-badge ${route.faction.toLowerCase()}">${escapeHtml(route.faction)}</span>
+              <span class="circuit-direction-badge">🔄 ${escapeHtml(route.direction)}</span>
+              <span class="circuit-lap-badge">⏱️ ${escapeHtml(route.lapMinutes)}</span>
+              <span class="circuit-zone-badge">📍 ${escapeHtml(zoneName)}</span>
+              <span class="circuit-hostile-badge" style="color: #f87171;">Hostile: ${escapeHtml(route.hostileLevel)}</span>
+            </div>
+            <h3 class="gathering-route-title">${escapeHtml(route.name)}</h3>
+          </div>
+          <button type="button" class="gathering-route-close-btn" id="gathering-route-close" aria-label="Close enlarged route map">✕</button>
+        </div>
+
+        <div class="gathering-route-toolbar">
+          <div class="gathering-zoom-group">
+            <button type="button" class="gathering-zoom-btn" id="gathering-zoom-out" title="Zoom Out" aria-label="Zoom Out">−</button>
+            <span class="gathering-zoom-level" id="gathering-zoom-display">100%</span>
+            <button type="button" class="gathering-zoom-btn" id="gathering-zoom-in" title="Zoom In" aria-label="Zoom In">+</button>
+            <button type="button" class="gathering-zoom-btn text-btn" id="gathering-zoom-reset" title="Reset View">↺ Reset</button>
+          </div>
+          <div class="gathering-toolbar-hint">
+            <span class="hint-icon">🖐️</span> Click &amp; drag to pan · Scroll to zoom
+          </div>
+          <button type="button" class="gathering-tomtom-btn" id="gathering-copy-tomtom" title="Copy TomTom waypoint macro">
+            📋 Copy TomTom Macro
+          </button>
+        </div>
+
+        <div class="gathering-route-viewport" id="gathering-map-viewport">
+          <div class="gathering-route-canvas" id="gathering-map-canvas">
+            <img src="${mapUrl}" alt="${escapeHtml(zoneName)} Parchment Map" class="gathering-route-large-img" draggable="false" />
+            ${renderRouteSvgOverlay(route, isMining, true)}
+          </div>
+        </div>
+
+        <div class="gathering-route-drawer">
+          <div class="gathering-drawer-stats">
+            <span class="gathering-drawer-pill"><strong>Density:</strong> ${escapeHtml(route.density)}</span>
+            <span class="gathering-drawer-pill"><strong>Best For:</strong> ${escapeHtml(route.bestFor)}</span>
+            <span class="gathering-drawer-pill" style="border-color: ${mainColor}; color: ${mainColor};"><strong>Type:</strong> ${profLabel}</span>
+          </div>
+          <p class="gathering-drawer-desc">${escapeHtml(route.description)}</p>
+          ${route.tips ? `<div class="gathering-drawer-tip"><strong>💡 Pro-Tip:</strong> ${escapeHtml(route.tips)}</div>` : ''}
+          ${points.length > 0 ? `
+            <div class="gathering-drawer-waypoints">
+              <span class="gathering-wp-heading">Terrain Waypoint Sequence (${points.length} stops):</span>
+              <div class="gathering-wp-list">
+                ${points.map((p, i) => `
+                  <button type="button" class="gathering-wp-chip ${i === 0 ? 'start-chip' : ''}" data-x="${p.x}" data-y="${p.y}" title="Click to copy /way coordinate">
+                    <span class="wp-num">${i + 1}</span>
+                    <span class="wp-label">${escapeHtml(p.label || 'Waypoint')}</span>
+                    <span class="wp-coords">(${p.x.toFixed(1)}, ${p.y.toFixed(1)})</span>
+                  </button>
+                `).join('')}
+              </div>
+            </div>
+          ` : ''}
+        </div>
+      </div>
+    `;
+
+    let zoom = 1.0;
+    const minZoom = 1.0;
+    const maxZoom = 3.5;
+    const zoomStep = 0.5;
+    let panX = 0;
+    let panY = 0;
+    let isDragging = false;
+    let startX = 0;
+    let startY = 0;
+
+    const viewport = modal.querySelector('#gathering-map-viewport');
+    const canvas = modal.querySelector('#gathering-map-canvas');
+    const zoomDisplay = modal.querySelector('#gathering-zoom-display');
+    const zoomInBtn = modal.querySelector('#gathering-zoom-in');
+    const zoomOutBtn = modal.querySelector('#gathering-zoom-out');
+    const zoomResetBtn = modal.querySelector('#gathering-zoom-reset');
+    const closeBtn = modal.querySelector('#gathering-route-close');
+    const tomtomBtn = modal.querySelector('#gathering-copy-tomtom');
+
+    function updateTransform() {
+      if (zoom <= 1.0) {
+        panX = 0;
+        panY = 0;
+        if (viewport) viewport.style.cursor = 'default';
+      } else {
+        if (viewport) viewport.style.cursor = isDragging ? 'grabbing' : 'grab';
+        const vw = viewport ? viewport.clientWidth || 800 : 800;
+        const vh = viewport ? viewport.clientHeight || 500 : 500;
+        const maxPanX = (vw * (zoom - 1)) / 2;
+        const maxPanY = (vh * (zoom - 1)) / 2;
+        panX = Math.max(-maxPanX, Math.min(maxPanX, panX));
+        panY = Math.max(-maxPanY, Math.min(maxPanY, panY));
+      }
+      if (canvas) {
+        canvas.style.transform = `translate(${panX}px, ${panY}px) scale(${zoom})`;
+      }
+      if (zoomDisplay) {
+        zoomDisplay.textContent = `${Math.round(zoom * 100)}%`;
+      }
+      if (zoomInBtn) zoomInBtn.disabled = zoom >= maxZoom;
+      if (zoomOutBtn) zoomOutBtn.disabled = zoom <= minZoom;
+    }
+
+    function setZoom(newZoom) {
+      zoom = Math.max(minZoom, Math.min(maxZoom, Math.round(newZoom * 10) / 10));
+      updateTransform();
+    }
+
+    zoomInBtn?.addEventListener('click', () => setZoom(zoom + zoomStep));
+    zoomOutBtn?.addEventListener('click', () => setZoom(zoom - zoomStep));
+    zoomResetBtn?.addEventListener('click', () => {
+      panX = 0;
+      panY = 0;
+      setZoom(1.0);
+    });
+
+    function onWheel(e) {
+      e.preventDefault();
+      const delta = e.deltaY < 0 ? 0.25 : -0.25;
+      setZoom(zoom + delta);
+    }
+    viewport?.addEventListener('wheel', onWheel, { passive: false });
+
+    function onMouseDown(e) {
+      if (zoom <= 1.0) return;
+      isDragging = true;
+      startX = e.clientX - panX;
+      startY = e.clientY - panY;
+      if (viewport) viewport.style.cursor = 'grabbing';
+    }
+    function onMouseMove(e) {
+      if (!isDragging) return;
+      panX = e.clientX - startX;
+      panY = e.clientY - startY;
+      updateTransform();
+    }
+    function onMouseUp() {
+      if (!isDragging) return;
+      isDragging = false;
+      if (viewport) viewport.style.cursor = zoom > 1.0 ? 'grab' : 'default';
+    }
+
+    viewport?.addEventListener('mousedown', onMouseDown);
+    window.addEventListener('mousemove', onMouseMove);
+    window.addEventListener('mouseup', onMouseUp);
+
+    function copyMacro(macroText, triggerEl) {
+      if (!macroText) return;
+      if (typeof window.copyMacroToClipboard === 'function') {
+        window.copyMacroToClipboard(macroText, triggerEl);
+        if (typeof window.showToast === 'function') {
+          window.showToast('✓ Copied TomTom macro', 'success');
+        }
+      } else if (typeof window.copyTextToClipboard === 'function') {
+        window.copyTextToClipboard(macroText, () => {
+          if (triggerEl) {
+            triggerEl.classList.add('copied');
+            setTimeout(() => triggerEl.classList.remove('copied'), 1800);
+          }
+          if (typeof window.showToast === 'function') {
+            window.showToast('✓ Copied TomTom macro', 'success');
+          }
+        });
+      } else if (navigator.clipboard) {
+        navigator.clipboard.writeText(macroText).then(() => {
+          if (triggerEl) {
+            triggerEl.classList.add('copied');
+            setTimeout(() => triggerEl.classList.remove('copied'), 1800);
+          }
+          if (typeof window.showToast === 'function') {
+            window.showToast('✓ Copied TomTom macro', 'success');
+          }
+        }).catch(() => {});
+      }
+    }
+
+    tomtomBtn?.addEventListener('click', () => {
+      const macro = points.map(p => `/way ${zoneName} ${p.x.toFixed(1)} ${p.y.toFixed(1)} ${p.label || ''}`).join('\n');
+      copyMacro(macro, tomtomBtn);
+    });
+
+    modal.querySelectorAll('.gathering-wp-chip').forEach(chip => {
+      chip.addEventListener('click', () => {
+        const x = Number(chip.getAttribute('data-x'));
+        const y = Number(chip.getAttribute('data-y'));
+        const label = chip.querySelector('.wp-label')?.textContent || '';
+        const macro = `/way ${zoneName} ${x.toFixed(1)} ${y.toFixed(1)} ${label}`;
+        copyMacro(macro, chip);
+      });
+    });
+
+    function closeModal() {
+      modal.classList.remove('is-open');
+      modal.setAttribute('hidden', '');
+      window.removeEventListener('mousemove', onMouseMove);
+      window.removeEventListener('mouseup', onMouseUp);
+      document.removeEventListener('keydown', onKeyDown);
+      viewport?.removeEventListener('wheel', onWheel);
+      activeRouteModal = null;
+      activeModalCleanup = null;
+    }
+    activeModalCleanup = closeModal;
+
+    function onKeyDown(e) {
+      if (e.key === 'Escape') closeModal();
+    }
+    document.addEventListener('keydown', onKeyDown);
+
+    closeBtn?.addEventListener('click', closeModal);
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeModal();
+    });
+
+    modal.removeAttribute('hidden');
+    requestAnimationFrame(() => {
+      modal.classList.add('is-open');
+      updateTransform();
+    });
+  }
+
   /* ==========================================================================
      SUBTAB 6: GATHERING NODES (HERBALISM & MINING)
      ========================================================================== */
@@ -6535,6 +7315,17 @@
                 ${rt.tips ? `<div class="circuit-pro-tip"><strong>💡 Pro-Tip:</strong> ${escapeHtml(rt.tips)}</div>` : ''}
               </div>
 
+              <!-- Terrain Gathering Route Map Preview -->
+              <div class="circuit-route-map-preview" data-route-id="${rt.id}" role="button" tabindex="0" title="Click route map to see an enlarged route map version">
+                <div class="circuit-map-img-wrap">
+                  <img src="${getZoneMapUrl(rt.zone)}" alt="${escapeHtml(rt.zone)} Terrain Route Map" class="circuit-map-img" loading="lazy" />
+                  ${renderRouteSvgOverlay(rt, isMining, false)}
+                </div>
+                <div class="circuit-map-zoom-badge">
+                  <span class="zoom-icon">🔍</span> Click route map to see an enlarged route map version
+                </div>
+              </div>
+
               <div class="circuit-route-footer">
                 <span class="circuit-waypoint-label">Strategic Waypoint:</span>
                 ${formatWaypointsInHtml(escapeHtml(rt.waypoint), rt.zone)}
@@ -6583,6 +7374,22 @@
         if (isMining) activeMiningTier = tid;
         else activeHerbTier = tid;
         renderNodesTab(container, prof);
+      });
+    });
+
+    container.querySelectorAll('.circuit-route-map-preview').forEach(preview => {
+      preview.addEventListener('click', () => {
+        const routeId = preview.getAttribute('data-route-id');
+        const rt = (activeTier?.routes || []).find(r => r.id === routeId);
+        if (rt) openGatheringRouteModal(rt, isMining);
+      });
+      preview.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          const routeId = preview.getAttribute('data-route-id');
+          const rt = (activeTier?.routes || []).find(r => r.id === routeId);
+          if (rt) openGatheringRouteModal(rt, isMining);
+        }
       });
     });
 
