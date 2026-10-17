@@ -19,12 +19,21 @@ let currentBiSState = {
   specId: "pve",
   faction: "alliance", // 'alliance' | 'horde'
   searchFilter: "",
-  sourceFilter: "all"  // 'all' | 'dalaran' | 'dungeon' | 'craft' | 'quest' | 'world'
+  sourceFilter: "all", // 'all' | 'dalaran' | 'dungeon' | 'craft' | 'quest' | 'world'
+  customEquipped: {}
 };
 
 function initBiSLists() {
   const container = document.getElementById("bis-container");
   if (!container) return;
+
+  try {
+    const savedCustom = localStorage.getItem('wow_forever_custom_bis');
+    if (savedCustom) currentBiSState.customEquipped = JSON.parse(savedCustom);
+    else currentBiSState.customEquipped = {};
+  } catch {
+    currentBiSState.customEquipped = {};
+  }
 
   // Listen to hash changes if user navigated to #bis or #bis/class/spec
   handleBiSHashRouting();
@@ -125,6 +134,9 @@ function renderBiSApp() {
         </button>
         <button type="button" class="bis-action-btn" id="btn-export-bis-journal" title="Export /fj import command to star BiS drops in ForeverDungeonJournal">
           <span>📖</span> Export to Journal
+        </button>
+        <button type="button" class="bis-action-btn" id="btn-reset-custom-bis" title="Reset all custom equipped item overrides back to default BiS" onclick="resetCustomBiS()">
+          <span>🔄</span> Reset Overrides
         </button>
         <button type="button" class="bis-action-btn" id="btn-share-bis-link">
           <span>🔗</span> Share Link
@@ -265,7 +277,7 @@ function renderBiSApp() {
           </p>
           <div class="bis-tip-item">
             <span>🛡️</span>
-            <div><strong>Beta Build 70291:</strong> Full ranked listings with all drop sources and crafting recipes extracted directly.</div>
+            <div><strong>Beta Build 1.60.1.70425:</strong> Full ranked listings with all drop sources and crafting recipes extracted directly.</div>
           </div>
         </div>
 
@@ -292,7 +304,7 @@ function renderBiSApp() {
       <!-- Enchants Card -->
       <div class="bis-prep-card bis-enchants-card">
         <div class="bis-prep-header">
-          <h4><span>✨</span> Recommended Enchants (Build 70291)</h4>
+          <h4><span>✨</span> Recommended Enchants (Build 1.60.1.70425)</h4>
           <span class="bis-prep-badge">${currentSpec.enchants ? currentSpec.enchants.length : 0} Enchants</span>
         </div>
         <div class="bis-prep-list">
@@ -408,8 +420,18 @@ function renderPaperDollSlot(slotKey, slotLabel, spec) {
   const faction = currentBiSState.faction || 'alliance';
   let equipped = null;
 
+  // 0. Check customEquipped overrides
+  const customKey = `${currentBiSState.classId}_${currentBiSState.specId}_${slotKey}`;
+  if (currentBiSState.customEquipped && currentBiSState.customEquipped[customKey]) {
+    equipped = currentBiSState.customEquipped[customKey];
+  } else if (slotKey === 'finger1' && currentBiSState.customEquipped && currentBiSState.customEquipped[`${currentBiSState.classId}_${currentBiSState.specId}_finger`]) {
+    equipped = currentBiSState.customEquipped[`${currentBiSState.classId}_${currentBiSState.specId}_finger`];
+  } else if (slotKey === 'trinket1' && currentBiSState.customEquipped && currentBiSState.customEquipped[`${currentBiSState.classId}_${currentBiSState.specId}_trinket`]) {
+    equipped = currentBiSState.customEquipped[`${currentBiSState.classId}_${currentBiSState.specId}_trinket`];
+  }
+
   // 1. Try finding in doll[faction]
-  if (spec.doll && spec.doll[faction]) {
+  if (!equipped && spec.doll && spec.doll[faction]) {
     const doll = spec.doll[faction];
     if (slotKey === 'finger1') {
       equipped = spec.gear?.finger1 || doll.finger;
@@ -623,8 +645,12 @@ function renderSlotsAlternativesTable(spec) {
             const reagentsAttr = reagents ? escapeHtml(JSON.stringify(reagents)) : '';
             const matsHtml = renderItemMatsHtml(item, mats);
 
+            const customKey = `${currentBiSState.classId}_${currentBiSState.specId}_${slotId}`;
+            const customItem = currentBiSState.customEquipped && currentBiSState.customEquipped[customKey];
+            const isEquipped = customItem ? (customItem.name === item.name) : isRank1;
+
             return `
-              <div class="bis-alt-row ${isRank1 ? 'bis-rank-1' : ''} ${matchesFaction ? '' : 'bis-faction-mismatch'}"
+              <div class="bis-alt-row ${isEquipped ? 'bis-rank-1' : ''} ${matchesFaction ? '' : 'bis-faction-mismatch'}"
                    data-item-name="${escapeHtml(item.name)}"
                    data-item-quality="${item.quality || 'q2'}"
                    data-item-stats="${escapeHtml(item.stats || '')}"
@@ -650,9 +676,12 @@ function renderSlotsAlternativesTable(spec) {
                     ${item.ilvl ? `<span class="bis-alt-stats" style="color: #ca8a04;">ilvl ${item.ilvl}</span>` : ''}
                   </div>
                 </div>
-                <div class="bis-alt-source">
+                <div class="bis-alt-source" style="display: flex; flex-direction: column; gap: 0.35rem; align-items: flex-end;">
                   <div>📍 ${escapeHtml(item.source || 'Unknown')}</div>
                   ${matsHtml}
+                  <button type="button" class="btn-bis-equip ${isEquipped ? 'is-equipped' : ''}" style="${isEquipped ? 'background: rgba(16, 185, 129, 0.2); border: 1px solid #10b981; color: #6ee7b7;' : 'background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.2); color: #cbd5e1;'} padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.76rem; cursor: pointer;" onclick="event.stopPropagation(); equipBiSItem('${slotId}', '${escapeHtml(item.name).replace(/'/g, "\\'")}')">
+                    ${isEquipped ? '✓ Equipped' : '⚡ Equip Item'}
+                  </button>
                 </div>
               </div>
             `;
@@ -1795,7 +1824,7 @@ function renderFloatingTooltip(card, e, tooltip) {
   }
 
   if (isForeverDiscovery) {
-    html += `<div class="wow-tip-source" style="color: #c084fc; font-weight: 700; border-top-color: #a855f7;">🏰 WoW Forever Beta Discovery (Build 1.60.1.70291)</div>`;
+    html += `<div class="wow-tip-source" style="color: #c084fc; font-weight: 700; border-top-color: #a855f7;">🏰 WoW Forever Beta Discovery (Build 1.60.1.70425)</div>`;
   }
 
   tooltip.innerHTML = html;
@@ -1980,12 +2009,27 @@ function copyBiSListToClipboard() {
 }
 
 /**
- * Extracts unique item IDs for current spec build
+ * Extracts unique item IDs for current spec build, taking into account custom equipped overrides
  */
 function extractBiSItemIds(currentSpec, faction) {
   const ids = [];
+  const customEquipped = currentBiSState.customEquipped || {};
+  const prefix = `${currentBiSState.classId}_${currentBiSState.specId}_`;
+
+  // First collect any custom equipped items for this spec
+  for (const [key, item] of Object.entries(customEquipped)) {
+    if (key.startsWith(prefix) && item) {
+      const rawId = item.itemId || item.id || (item.tipId ? item.tipId.replace(/\D/g, "").slice(0, 6) : null);
+      if (rawId && !ids.includes(String(rawId))) {
+        ids.push(String(rawId));
+      }
+    }
+  }
+
+  // Then add default BiS items for slots that haven't been overridden or to complete the list
   if (currentSpec.gear) {
-    for (const slotData of Object.values(currentSpec.gear)) {
+    for (const [slotKey, slotData] of Object.entries(currentSpec.gear)) {
+      if (customEquipped[`${prefix}${slotKey}`]) continue;
       let item = slotData;
       if (faction === "alliance" && slotData.allianceBis) item = slotData.allianceBis;
       else if (faction === "horde" && slotData.hordeBis) item = slotData.hordeBis;
@@ -1997,6 +2041,7 @@ function extractBiSItemIds(currentSpec, faction) {
     }
   } else if (currentSpec.slots) {
     currentSpec.slots.forEach(slot => {
+      if (customEquipped[`${prefix}${slot.slotId}`]) return;
       const activeItems = slot.items.filter(i => i.side === "both" || i.side === faction);
       const top = activeItems.length > 0 ? activeItems[0] : slot.items[0];
       const rawId = top?.itemId || top?.id;
@@ -2039,5 +2084,68 @@ function exportBiSToJournal() {
   });
 }
 
+/**
+ * Equips a specific alternative item into the paper-doll build and saves to localStorage
+ */
+function equipBiSItem(slotId, itemName) {
+  const classData = WOW_BIS_DATA[currentBiSState.classId];
+  if (!classData || !classData.specs) return;
+  const currentSpec = classData.specs.find(s => s.id === currentBiSState.specId);
+  if (!currentSpec || !currentSpec.slots) return;
+
+  const slot = currentSpec.slots.find(s => s.slotId === slotId);
+  if (!slot || !slot.items) return;
+
+  const item = slot.items.find(i => i.name === itemName);
+  if (!item) return;
+
+  if (!currentBiSState.customEquipped) {
+    currentBiSState.customEquipped = {};
+  }
+
+  const customKey = `${currentBiSState.classId}_${currentBiSState.specId}_${slotId}`;
+  currentBiSState.customEquipped[customKey] = item;
+
+  try {
+    localStorage.setItem('wow_forever_custom_bis', JSON.stringify(currentBiSState.customEquipped));
+  } catch {
+    // ignore
+  }
+
+  renderBiSApp();
+
+  if (window.showToast) {
+    window.showToast(`Equipped ${item.name} for ${slot.slotName || slotId}!`, "success");
+  }
+}
+
+/**
+ * Resets all custom equipped items back to default BiS for the current spec
+ */
+function resetCustomBiS() {
+  if (!currentBiSState.customEquipped) return;
+  const prefix = `${currentBiSState.classId}_${currentBiSState.specId}_`;
+  let changed = false;
+  for (const k of Object.keys(currentBiSState.customEquipped)) {
+    if (k.startsWith(prefix)) {
+      delete currentBiSState.customEquipped[k];
+      changed = true;
+    }
+  }
+  if (changed) {
+    try {
+      localStorage.setItem('wow_forever_custom_bis', JSON.stringify(currentBiSState.customEquipped));
+    } catch {
+      // ignore
+    }
+    renderBiSApp();
+    if (window.showToast) {
+      window.showToast("Reset custom equipped gear back to default BiS.", "info");
+    }
+  }
+}
+
 window.exportBiSToJournal = exportBiSToJournal;
+window.equipBiSItem = equipBiSItem;
+window.resetCustomBiS = resetCustomBiS;
 

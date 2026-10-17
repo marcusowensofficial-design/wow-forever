@@ -1,5 +1,5 @@
 /**
- * WoW Forever Beta 1.60.1 (Build 70291) Authentic Talent Tree Module
+ * WoW Forever Beta Build 1.60.1.70425 Authentic Talent Tree Module
  * 
  * Provides an authentic 3-tree Classic WoW interactive calculator:
  * - 4-column x 7-row visual grid matrix per specialization tree
@@ -786,6 +786,9 @@
     const buildCode = generateBuildCode(state.classId, state.specId, state.points);
     const pointsRemaining = Math.max(0, state.maxPoints - totalPoints);
 
+    const bisData = window.WOW_BIS_DATA || (typeof WOW_BIS_DATA !== 'undefined' ? WOW_BIS_DATA : null);
+    const availableSpecs = (bisData && bisData[state.classId] && bisData[state.classId].specs) ? bisData[state.classId].specs : [];
+
     // Class meta styling
     const classColors = {
       warrior: '#C79C6E',
@@ -849,14 +852,16 @@
             Build: ${treePoints[0]} / ${treePoints[1]} / ${treePoints[2]} (${totalPoints}/${state.maxPoints})
           </div>
 
-          <!-- Preset Switcher: Blank Slate vs Recommended Spec -->
-          <div class="bis-preset-toggle-group">
+          <!-- Preset Switcher: Blank Slate vs Available Class Specs -->
+          <div class="bis-preset-toggle-group" style="display: flex; gap: 0.35rem; flex-wrap: wrap;">
             <button type="button" class="bis-talent-pill-btn ${state.isBlankSlate && totalPoints === 0 ? 'active-mode' : ''}" id="btn-toggle-blank-slate" title="Start with empty talent trees (0 points)">
               <span>✨</span> Blank Slate
             </button>
-            <button type="button" class="bis-talent-pill-btn ${!state.isBlankSlate ? 'active-mode' : ''}" id="btn-toggle-spec-build" title="Load curated recommended talent build">
-              <span>🌟</span> Recommended Build
-            </button>
+            ${availableSpecs.map(s => `
+              <button type="button" class="bis-talent-pill-btn ${!state.isBlankSlate && state.specId === s.id ? 'active-mode' : ''}" data-action="load-spec" data-spec-id="${s.id}" title="Load ${escapeHtml(s.name)} recommended build">
+                <span>⚔️</span> ${escapeHtml(s.name.replace(/\s*\(.*\)/, ''))}
+              </button>
+            `).join('')}
           </div>
 
           <!-- Theorycrafting Cap Selector -->
@@ -918,6 +923,9 @@
           </button>
           <button type="button" class="bis-talent-foot-btn" id="btn-modal-copy-url" title="Copy shareable calculator link">
             <span>🔗</span> Copy Build Link
+          </button>
+          <button type="button" class="bis-talent-foot-btn" id="btn-modal-export-discord" title="Copy build summary formatted for Discord">
+            <span>📋</span> Export Discord Build
           </button>
           <button type="button" class="bis-talent-foot-btn primary" id="btn-modal-deepdive">
             <span>🎯</span> Explore ${classData.name} Deep Dive
@@ -1021,6 +1029,26 @@
         renderModalBody();
       };
     }
+
+    content.querySelectorAll('[data-action="load-spec"]').forEach(btn => {
+      btn.onclick = () => {
+        hideTalentTooltip();
+        const specId = btn.getAttribute('data-spec-id');
+        const bisData = window.WOW_BIS_DATA || (typeof WOW_BIS_DATA !== 'undefined' ? WOW_BIS_DATA : null);
+        const availableSpecs = (bisData && bisData[state.classId] && bisData[state.classId].specs) ? bisData[state.classId].specs : [];
+        const specObj = availableSpecs.find(s => s.id === specId);
+        if (specObj && specObj.talents && specObj.talents.buildUrl) {
+          state.isBlankSlate = false;
+          state.specId = specObj.id;
+          state.specName = specObj.name;
+          state.points = parseBuildUrl(state.classId, specObj.talents.buildUrl);
+          renderModalBody();
+          if (window.showToast) {
+            window.showToast(`Loaded ${specObj.name} talent build!`, 'info');
+          }
+        }
+      };
+    });
 
     const toggleSpecBtn = content.querySelector('#btn-toggle-spec-build');
     if (toggleSpecBtn) {
@@ -1262,6 +1290,52 @@
             }, 2000);
           });
         }
+      };
+    }
+
+    const exportDiscordBtn = content.querySelector('#btn-modal-export-discord');
+    if (exportDiscordBtn) {
+      exportDiscordBtn.onclick = () => {
+        const classObj = getClassData(state.classId);
+        const className = classObj ? classObj.name : state.classId;
+        const treeNames = classObj ? classObj.trees.map(t => t.name) : ['Tree 1', 'Tree 2', 'Tree 3'];
+        const p1 = getTreePoints(0);
+        const p2 = getTreePoints(1);
+        const p3 = getTreePoints(2);
+
+        let md = `**🌲 WoW Forever — Level 30 ${className} Build (${p1}/${p2}/${p3})**\n`;
+        md += `*Spec: ${state.specName || 'Custom Build'} • ${p1 + p2 + p3}/${state.maxPoints} Points Allocated*\n`;
+
+        [0, 1, 2].forEach(treeIdx => {
+          const tName = treeNames[treeIdx];
+          const tPoints = getTreePoints(treeIdx);
+          if (tPoints > 0) {
+            md += `\n**${tName} (${tPoints} pts):**\n`;
+            const allocatedTalents = [];
+            classObj.trees[treeIdx].talents.forEach(t => {
+              const pts = state.points[t.id] || 0;
+              if (pts > 0) {
+                allocatedTalents.push(`• ${t.name} (${pts}/${t.maxRank})`);
+              }
+            });
+            md += allocatedTalents.join('\n') + '\n';
+          }
+        });
+
+        const fullUrl = `${window.location.origin}${window.location.pathname}#calculator?class=${state.classId}&b=${encodeURIComponent(generateBuildUrl(state.classId, state.points))}`;
+        md += `\n🔗 View Interactive Tree: ${fullUrl}\n`;
+
+        const copyFn = window.copyTextToClipboard || ((t, fn) => navigator.clipboard?.writeText(t).then(fn));
+        copyFn(md, () => {
+          const orig = exportDiscordBtn.innerHTML;
+          exportDiscordBtn.innerHTML = `<span>✅</span> Export Copied!`;
+          setTimeout(() => {
+            if (exportDiscordBtn) exportDiscordBtn.innerHTML = orig;
+          }, 2000);
+          if (window.showToast) {
+            window.showToast('Build summary formatted for Discord copied!', 'success');
+          }
+        });
       };
     }
 

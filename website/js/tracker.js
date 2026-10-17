@@ -507,6 +507,25 @@ function initSquadRoster() {
     });
   }
 
+  const addCard = document.getElementById('add-squad-member-card');
+  const toggleAddBtn = document.getElementById('btn-toggle-add-member');
+  const closeAddBtn = document.getElementById('btn-close-add-member');
+  const cancelAddBtn = document.getElementById('btn-cancel-add-member');
+
+  function toggleAddForm(show) {
+    if (!addCard) return;
+    const isVisible = addCard.style.display !== 'none';
+    const nextState = typeof show === 'boolean' ? show : !isVisible;
+    addCard.style.display = nextState ? 'block' : 'none';
+    if (nextState) {
+      document.getElementById('member-name-input')?.focus();
+    }
+  }
+
+  if (toggleAddBtn) toggleAddBtn.addEventListener('click', () => toggleAddForm());
+  if (closeAddBtn) closeAddBtn.addEventListener('click', () => toggleAddForm(false));
+  if (cancelAddBtn) cancelAddBtn.addEventListener('click', () => toggleAddForm(false));
+
   const addMemberForm = document.getElementById('add-squad-member-form');
   if (addMemberForm) {
     addMemberForm.addEventListener('submit', (e) => {
@@ -539,7 +558,41 @@ function initSquadRoster() {
       squad.push(newMember);
       localStorage.setItem(SQUAD_STORAGE_KEY, JSON.stringify(squad));
       addMemberForm.reset();
+      toggleAddForm(false);
       renderRoster();
+      if (window.showToast) {
+        window.showToast(`Squad member ${name} added successfully!`, 'success');
+      }
+    });
+  }
+
+  const copyDiscordBtn = document.getElementById('btn-copy-discord-roster');
+  if (copyDiscordBtn) {
+    copyDiscordBtn.addEventListener('click', () => {
+      let md = `**⚔️ WoW Forever — Squad Roster (${squad.length} Players)**\n`;
+      const tanks = squad.filter(p => (p.role || '').toLowerCase().includes('tank'));
+      const healers = squad.filter(p => (p.role || '').toLowerCase().includes('heal'));
+      const dps = squad.filter(p => !(p.role || '').toLowerCase().includes('tank') && !(p.role || '').toLowerCase().includes('heal'));
+
+      if (tanks.length) {
+        md += `\n**🛡️ Tanks (${tanks.length}):**\n` + tanks.map(p => `• **${p.name}** — ${p.race} ${p.className} (${p.spec || p.role})${p.prof1 || p.prof2 ? ` [${[p.prof1, p.prof2].filter(Boolean).join(', ')}]` : ''}`).join('\n') + '\n';
+      }
+      if (healers.length) {
+        md += `\n**💚 Healers (${healers.length}):**\n` + healers.map(p => `• **${p.name}** — ${p.race} ${p.className} (${p.spec || p.role})${p.prof1 || p.prof2 ? ` [${[p.prof1, p.prof2].filter(Boolean).join(', ')}]` : ''}`).join('\n') + '\n';
+      }
+      if (dps.length) {
+        md += `\n**💥 Damage Dealers (${dps.length}):**\n` + dps.map(p => `• **${p.name}** — ${p.race} ${p.className} (${p.spec || p.role})${p.prof1 || p.prof2 ? ` [${[p.prof1, p.prof2].filter(Boolean).join(', ')}]` : ''}`).join('\n') + '\n';
+      }
+
+      const copyFn = window.copyTextToClipboard || ((t, fn) => navigator.clipboard?.writeText(t).then(fn));
+      copyFn(md, () => {
+        const orig = copyDiscordBtn.innerHTML;
+        copyDiscordBtn.innerHTML = `<span>✓</span> Copied!`;
+        setTimeout(() => { copyDiscordBtn.innerHTML = orig; }, 2000);
+        if (window.showToast) {
+          window.showToast('Squad roster formatted for Discord copied to clipboard!', 'success');
+        }
+      });
     });
   }
 

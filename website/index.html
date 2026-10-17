@@ -1394,6 +1394,7 @@
           </div>
           <div class="atlas-filter-pills" id="atlas-zone-filters">
             <button class="atlas-pill active" data-zone="all">All Zones (<span id="rares-count-all">34</span>)</button>
+            <button class="atlas-pill" data-zone="unhunted">🎯 Unhunted Only</button>
             <button class="atlas-pill" data-zone="The Barrens">The Barrens</button>
             <button class="atlas-pill" data-zone="Silverpine Forest">Silverpine Forest</button>
             <button class="atlas-pill" data-zone="Westfall">Westfall</button>
@@ -3130,6 +3131,135 @@
               Discord crew members, assigned specs, roles, and professions for 5-man dungeons and raid comps.
             </p>
           </div>
+          <div class="squad-header-actions" style="display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center;">
+            <button type="button" class="btn-primary" id="btn-toggle-add-member" style="font-size: 0.82rem; padding: 0.4rem 0.8rem; display: flex; align-items: center; gap: 0.35rem; cursor: pointer;">
+              <span>➕</span> Add Squad Member
+            </button>
+            <button type="button" class="btn-secondary" id="btn-copy-discord-roster" style="font-size: 0.82rem; padding: 0.4rem 0.8rem; display: flex; align-items: center; gap: 0.35rem; cursor: pointer;">
+              <span>📋</span> Copy Discord Roster
+            </button>
+            <button type="button" class="btn-secondary" id="reset-squad-btn" style="font-size: 0.82rem; padding: 0.4rem 0.8rem; color: #fca5a5; border-color: rgba(239, 68, 68, 0.4); cursor: pointer;" title="Reset back to default roster">
+              <span>🔄</span> Reset Roster
+            </button>
+          </div>
+        </div>
+
+        <!-- Add Squad Member Collapsible Card -->
+        <div id="add-squad-member-card" class="planner-card" style="display: none; margin: 1rem 0 1.25rem; border: 1px solid var(--border-gold); background: rgba(15, 23, 42, 0.85);">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+            <h4 style="color: var(--text-gold); font-size: 1.1rem; margin: 0; display: flex; align-items: center; gap: 0.4rem;">
+              <span>➕</span> Add New Squad Member or Alt
+            </h4>
+            <button type="button" id="btn-close-add-member" style="background: none; border: none; color: var(--text-muted); font-size: 1.2rem; cursor: pointer;" aria-label="Close Add Squad Member Form">✕</button>
+          </div>
+          <form id="add-squad-member-form">
+            <div class="user-note-form-grid" style="margin-top: 0; margin-bottom: 0.8rem;">
+              <div class="form-field">
+                <label for="member-name-input" class="form-label">Player Name / Discord Tag</label>
+                <input type="text" id="member-name-input" name="member-name" class="form-input" placeholder="e.g. Marcus or @Kaboomson" aria-label="Player Name" required>
+              </div>
+              <div class="form-field">
+                <label for="member-faction-select" class="form-label">Faction</label>
+                <select id="member-faction-select" name="member-faction" class="form-select" aria-label="Member Faction">
+                  <option value="Horde">Horde</option>
+                  <option value="Alliance">Alliance</option>
+                  <option value="Neutral (Skyborne)">Neutral (Skyborne)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="user-note-form-grid" style="margin-top: 0; margin-bottom: 0.8rem;">
+              <div class="form-field">
+                <label for="member-race-select" class="form-label">Race</label>
+                <select id="member-race-select" name="member-race" class="form-select" aria-label="Member Race">
+                  <option value="Undead">Undead</option>
+                  <option value="Orc">Orc</option>
+                  <option value="Tauren">Tauren</option>
+                  <option value="Troll">Troll</option>
+                  <option value="Human">Human</option>
+                  <option value="Dwarf">Dwarf</option>
+                  <option value="Night Elf">Night Elf</option>
+                  <option value="Gnome">Gnome</option>
+                  <option value="The Skyborne">The Skyborne</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label for="member-class-select" class="form-label">Class</label>
+                <select id="member-class-select" name="member-class" class="form-select" aria-label="Member Class">
+                  <option value="Paladin">Paladin</option>
+                  <option value="Shaman">Shaman</option>
+                  <option value="Warrior">Warrior</option>
+                  <option value="Priest">Priest</option>
+                  <option value="Mage">Mage</option>
+                  <option value="Hunter">Hunter</option>
+                  <option value="Rogue">Rogue</option>
+                  <option value="Warlock">Warlock</option>
+                  <option value="Druid">Druid</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="user-note-form-grid" style="margin-top: 0; margin-bottom: 0.8rem;">
+              <div class="form-field">
+                <label for="member-role-select" class="form-label">Role</label>
+                <select id="member-role-select" name="member-role" class="form-select" aria-label="Member Role">
+                  <option value="Tank">Tank (Protection / Bear)</option>
+                  <option value="Healer">Healer (Holy / Resto / Disc)</option>
+                  <option value="Melee DPS">Melee DPS</option>
+                  <option value="Ranged DPS">Ranged DPS</option>
+                  <option value="Tank / DPS">Tank / DPS Hybrid</option>
+                  <option value="Healer / DPS">Healer / DPS Hybrid</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label for="member-spec-input" class="form-label">Specialization / Focus</label>
+                <input type="text" id="member-spec-input" name="member-spec" class="form-input" placeholder="e.g. Arms, Shadow, Elemental" aria-label="Member Specialization">
+              </div>
+            </div>
+
+            <div class="user-note-form-grid" style="margin-top: 0; margin-bottom: 0.8rem;">
+              <div class="form-field">
+                <label for="member-prof1-select" class="form-label">Primary Profession 1</label>
+                <select id="member-prof1-select" name="member-prof1" class="form-select" aria-label="Primary Profession 1">
+                  <option value="">-- None / TBD --</option>
+                  <option value="Blacksmithing">Blacksmithing</option>
+                  <option value="Mining">Mining</option>
+                  <option value="Engineering">Engineering</option>
+                  <option value="Alchemy">Alchemy</option>
+                  <option value="Herbalism">Herbalism</option>
+                  <option value="Leatherworking">Leatherworking</option>
+                  <option value="Skinning">Skinning</option>
+                  <option value="Tailoring">Tailoring</option>
+                  <option value="Enchanting">Enchanting</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label for="member-prof2-select" class="form-label">Primary Profession 2</label>
+                <select id="member-prof2-select" name="member-prof2" class="form-select" aria-label="Primary Profession 2">
+                  <option value="">-- None / TBD --</option>
+                  <option value="Mining">Mining</option>
+                  <option value="Blacksmithing">Blacksmithing</option>
+                  <option value="Engineering">Engineering</option>
+                  <option value="Alchemy">Alchemy</option>
+                  <option value="Herbalism">Herbalism</option>
+                  <option value="Leatherworking">Leatherworking</option>
+                  <option value="Skinning">Skinning</option>
+                  <option value="Tailoring">Tailoring</option>
+                  <option value="Enchanting">Enchanting</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-field" style="margin-bottom: 1rem;">
+              <label for="member-notes-input" class="form-label">Notes &amp; Availability</label>
+              <input type="text" id="member-notes-input" name="member-notes" class="form-input" placeholder="e.g. Plays evenings, leveling fast, has epic bag" aria-label="Member Notes">
+            </div>
+
+            <div style="display: flex; gap: 0.5rem; justify-content: flex-end;">
+              <button type="button" id="btn-cancel-add-member" class="btn-secondary" style="font-size: 0.85rem; padding: 0.45rem 1rem;">Cancel</button>
+              <button type="submit" class="btn-primary" style="font-size: 0.85rem; padding: 0.45rem 1.25rem;">+ Save to Squad</button>
+            </div>
+          </form>
         </div>
 
         <div id="squad-comp-summary" class="squad-comp-summary">

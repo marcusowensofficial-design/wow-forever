@@ -70,11 +70,41 @@ function renderRaresRadar() {
   const rares = window.WOW_ATLAS_DATA.rares;
   let activeZone = 'all';
 
+  let huntedRares = new Set();
+  try {
+    const saved = localStorage.getItem('wow_forever_rares_hunted');
+    if (saved) huntedRares = new Set(JSON.parse(saved));
+  } catch {}
+
+  function toggleRare(name) {
+    if (huntedRares.has(name)) {
+      huntedRares.delete(name);
+    } else {
+      huntedRares.add(name);
+    }
+    try {
+      localStorage.setItem('wow_forever_rares_hunted', JSON.stringify(Array.from(huntedRares)));
+    } catch {}
+    filterAndRender();
+    if (window.showToast) {
+      window.showToast(huntedRares.has(name) ? `Marked ${name} as Defeated!` : `Unmarked ${name}.`, 'info');
+    }
+  }
+  window.toggleRareHunted = toggleRare;
+
   function filterAndRender() {
     const query = searchInput ? searchInput.value.toLowerCase().trim() : '';
 
     const filtered = rares.filter(r => {
-      const matchZone = activeZone === 'all' || r.zone.toLowerCase().includes(activeZone.toLowerCase());
+      let matchZone;
+      if (activeZone === 'all') {
+        matchZone = true;
+      } else if (activeZone === 'unhunted') {
+        matchZone = !huntedRares.has(r.name);
+      } else {
+        matchZone = r.zone.toLowerCase().includes(activeZone.toLowerCase());
+      }
+
       const matchQuery = !query ||
         r.name.toLowerCase().includes(query) ||
         r.zone.toLowerCase().includes(query) ||
@@ -92,8 +122,10 @@ function renderRaresRadar() {
       return;
     }
 
-    container.innerHTML = filtered.map(rare => `
-      <div class="atlas-rare-card ${rare.elite ? 'is-elite' : ''}">
+    container.innerHTML = filtered.map(rare => {
+      const isHunted = huntedRares.has(rare.name);
+      return `
+      <div class="atlas-rare-card ${rare.elite ? 'is-elite' : ''} ${isHunted ? 'is-hunted' : ''}">
         <div class="rare-card-header">
           <div>
             <h3 class="rare-name">${escapeHtml(rare.name)}</h3>
@@ -103,6 +135,7 @@ function renderRaresRadar() {
             <span class="rare-level-pill">Lvl ${rare.level}</span>
             ${rare.elite ? '<span class="rare-elite-pill">Elite</span>' : ''}
             ${rare.tameable ? `<span class="rare-level-pill" style="color: #6ee7b7; border: 1px solid rgba(16, 185, 129, 0.4);">🐾 ${escapeHtml(rare.tameable)}</span>` : ''}
+            ${isHunted ? '<span class="rare-level-pill" style="color: #34d399; border-color: rgba(16, 185, 129, 0.5); background: rgba(16, 185, 129, 0.15);">✓ Defeated</span>' : ''}
           </div>
         </div>
 
@@ -122,6 +155,9 @@ function renderRaresRadar() {
             <button type="button" class="btn-copy-macro tomtom" onclick="copyMacroToClipboard('/way ${escapeHtml(rare.zone)} ${escapeHtml(rare.coords)} ${escapeHtml(rare.name)}', this)" title="Copy TomTom waypoint macro to clipboard">
               📍 /way
             </button>
+            <button type="button" class="btn-copy-macro" style="${isHunted ? 'border-color: #10b981; color: #34d399; background: rgba(16, 185, 129, 0.15);' : ''}" onclick="toggleRareHunted('${rare.name.replace(/'/g, "\\'")}')">
+              ${isHunted ? '✓ Hunted' : '○ Mark Hunted'}
+            </button>
           </div>
         </div>
 
@@ -140,7 +176,8 @@ function renderRaresRadar() {
           </div>
         ` : ''}
       </div>
-    `).join('');
+    `;
+    }).join('');
   }
 
   zonePills.forEach(pill => {
