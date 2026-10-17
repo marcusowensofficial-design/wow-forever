@@ -6933,6 +6933,7 @@
 
 /* Standalone Mount Layout */
 #talents-standalone-mount {
+  position: relative;
   margin-top: 1rem;
   min-height: 600px;
 }
@@ -7215,5 +7216,196 @@
   color: #00c0ff;
   letter-spacing: 0.08em;
   margin-bottom: 0.35rem;
+}
+
+/* ==========================================================================
+   Talent Calculator: "My Builds" LocalStorage Drawer & Cards
+   ========================================================================== */
+.bis-saved-count-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.1rem 0.45rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  border-radius: var(--radius-full);
+  background: rgba(243, 192, 67, 0.25);
+  border: 1px solid var(--border-gold);
+  color: var(--text-gold);
+}
+
+.talent-saved-builds-drawer {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  width: min(440px, calc(100% - 3rem));
+  max-height: calc(100% - 3rem);
+  background: #0b0f19;
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-md);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.85), 0 0 20px rgba(243, 192, 67, 0.15);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  animation: slideDownFade 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.talent-saved-builds-drawer[hidden] {
+  display: none !important;
+}
+
+.saved-builds-drawer-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.9rem 1.1rem;
+  background: rgba(243, 192, 67, 0.08);
+  border-bottom: 1px solid rgba(243, 192, 67, 0.2);
+}
+
+.saved-builds-drawer-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  color: #fff;
+  margin: 0;
+}
+
+.saved-builds-drawer-close {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  transition: all 0.15s ease;
+}
+
+.saved-builds-drawer-close:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.saved-builds-drawer-body {
+  padding: 1rem;
+  overflow-y: auto;
+  max-height: 480px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.saved-build-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-sm);
+  padding: 0.85rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: all 0.15s ease;
+}
+
+.saved-build-card:hover {
+  border-color: rgba(243, 192, 67, 0.4);
+  background: rgba(243, 192, 67, 0.04);
+}
+
+.saved-build-card.is-current-class {
+  border-left: 3px solid var(--border-gold-bright);
+}
+
+.saved-build-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.saved-build-name {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #fff;
+  margin: 0;
+}
+
+.saved-build-class-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-full);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.saved-build-meta-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.saved-build-points-pill {
+  color: var(--text-gold);
+  font-weight: 600;
+}
+
+.saved-build-actions-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+}
+
+.btn-load-saved-build {
+  background: rgba(16, 185, 129, 0.15);
+  border: 1px solid #10b981;
+  color: #6ee7b7;
+  padding: 0.35rem 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.btn-load-saved-build:hover {
+  background: #10b981;
+  color: #064e3b;
+}
+
+.btn-delete-saved-build {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #fca5a5;
+  padding: 0.35rem 0.65rem;
+  font-size: 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.btn-delete-saved-build:hover {
+  background: #ef4444;
+  color: #fff;
+}
+
+.saved-builds-empty {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: var(--text-muted);
+}
+
+.saved-builds-empty-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
 }
 

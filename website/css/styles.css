@@ -915,7 +915,7 @@ h1, h2, h3, h4, .font-heading {
 
 .beta-duration-stepper {
   display: grid;
-  grid-template-columns: 1.2fr 1.2fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1.2rem;
   margin-top: 1.5rem;
 }

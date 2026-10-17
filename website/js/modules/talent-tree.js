@@ -766,6 +766,212 @@
     renderModalBody();
   }
 
+  /* ==========================================================================
+     My Saved Builds (LocalStorage System)
+     ========================================================================== */
+  const STORAGE_KEY_SAVED_BUILDS = 'wow_forever_saved_talent_builds';
+
+  function getSavedBuilds() {
+    try {
+      const raw = localStorage.getItem(STORAGE_KEY_SAVED_BUILDS);
+      return raw ? JSON.parse(raw) : [];
+    } catch (e) {
+      console.warn('Failed to parse saved talent builds from localStorage', e);
+      return [];
+    }
+  }
+
+  function saveSavedBuilds(builds) {
+    try {
+      localStorage.setItem(STORAGE_KEY_SAVED_BUILDS, JSON.stringify(builds));
+      return true;
+    } catch (e) {
+      console.error('Failed to save talent builds to localStorage', e);
+      return false;
+    }
+  }
+
+  function saveCurrentBuild(classId = state.classId, buildName = null) {
+    const classData = getClassData(classId);
+    if (!classData) return;
+    const totalPoints = getTotalPoints(state.points);
+    const defaultName = buildName || (state.specName && state.specName !== 'Custom Build' ? `${state.specName} (${totalPoints}p)` : `${classData.name} Build (${totalPoints}p)`);
+    const name = buildName || window.prompt('Enter a title for this custom build:', defaultName);
+    if (name === null) return;
+    const trimmedName = name.trim();
+    if (!trimmedName) {
+      if (window.showToast) window.showToast('Build name cannot be empty.', 'warning');
+      return;
+    }
+
+    state.specName = trimmedName;
+
+    const builds = getSavedBuilds();
+    const newBuild = {
+      id: 'build_' + Date.now() + '_' + Math.random().toString(36).substring(2, 7),
+      name: trimmedName,
+      classId: classId,
+      className: classData.name,
+      specId: state.specId,
+      points: Object.assign({}, state.points),
+      totalPoints: totalPoints,
+      treePoints: [0, 1, 2].map(idx => getTreePoints(idx)),
+      buildCode: generateBuildCode(classId, state.specId, state.points),
+      buildUrl: generateBuildUrl(classId, state.points),
+      timestamp: new Date().toISOString()
+    };
+
+    builds.unshift(newBuild);
+    saveSavedBuilds(builds);
+    if (window.showToast) {
+      window.showToast(`Saved build "${trimmedName}" to browser storage!`, 'success');
+    }
+    renderModalBody();
+    renderSavedBuildsDrawer(true);
+  }
+
+  function deleteSavedBuild(buildId) {
+    let builds = getSavedBuilds();
+    const target = builds.find(b => b.id === buildId);
+    builds = builds.filter(b => b.id !== buildId);
+    saveSavedBuilds(builds);
+    if (window.showToast) {
+      window.showToast(target ? `Deleted "${target.name}".` : 'Build deleted.', 'info');
+    }
+    renderModalBody();
+    renderSavedBuildsDrawer(true);
+  }
+
+  function loadSavedBuild(buildId) {
+    const builds = getSavedBuilds();
+    const build = builds.find(b => b.id === buildId);
+    if (!build) return;
+    state.classId = build.classId;
+    state.specId = build.specId || 'custom';
+    state.points = Object.assign({}, build.points);
+    state.originalPoints = Object.assign({}, build.points);
+    const recBuild = getRecommendedBuildForClass(build.classId);
+    state.recommendedPoints = recBuild ? Object.assign({}, recBuild.points) : {};
+    state.specName = build.name;
+    state.isBlankSlate = false;
+
+    // Hide drawer on load so player can immediately view and interact with the 3 trees
+    const drawer = document.getElementById('talent-saved-builds-drawer');
+    if (drawer) {
+      drawer.setAttribute('hidden', '');
+    }
+
+    renderModalBody();
+    if (window.showToast) {
+      window.showToast(`Loaded build "${build.name}"!`, 'success');
+    }
+  }
+
+  function renderSavedBuildsDrawer(forceOpen = false) {
+    const isStandalone = state.targetContainerId === 'talents-standalone-mount';
+    const targetParent = isStandalone
+      ? document.getElementById('talents-standalone-mount')
+      : (document.getElementById('modal-talent-calculator') || document.getElementById('bis-talent-modal-content'));
+
+    let drawer = document.getElementById('talent-saved-builds-drawer');
+    if (!drawer) {
+      if (targetParent) {
+        drawer = document.createElement('div');
+        drawer.id = 'talent-saved-builds-drawer';
+        drawer.className = 'talent-saved-builds-drawer';
+        drawer.setAttribute('aria-label', 'My Saved Talent Builds');
+        targetParent.appendChild(drawer);
+      }
+    } else if (targetParent && drawer.parentElement !== targetParent) {
+      targetParent.appendChild(drawer);
+    }
+    if (!drawer) return;
+
+    if (forceOpen) {
+      drawer.removeAttribute('hidden');
+    }
+
+    const builds = getSavedBuilds();
+    const classColors = {
+      warrior: '#C79C6E',
+      paladin: '#F58CBA',
+      hunter: '#ABD473',
+      rogue: '#FFF569',
+      priest: '#FFFFFF',
+      shaman: '#2B8CFF',
+      mage: '#69CCF0',
+      warlock: '#9482C9',
+      druid: '#FF7D0A'
+    };
+
+    drawer.innerHTML = `
+      <div class="saved-builds-drawer-head">
+        <h4 class="saved-builds-drawer-title">
+          <span>📁</span> My Saved Builds <span class="bis-saved-count-chip">${builds.length}</span>
+        </h4>
+        <button type="button" class="saved-builds-drawer-close" aria-label="Close Saved Builds Drawer">✕</button>
+      </div>
+      <div class="saved-builds-drawer-body">
+        ${builds.length === 0 ? `
+          <div class="saved-builds-empty">
+            <div class="saved-builds-empty-icon">📂</div>
+            <p><strong>No saved builds yet.</strong></p>
+            <p style="font-size: 0.8rem; margin-top: 0.35rem;">Allocate talent points and click <strong>"Save Build"</strong> to keep custom theorycrafted setups in your browser.</p>
+          </div>
+        ` : builds.map(b => {
+          const isCurrentClass = b.classId === state.classId;
+          const color = classColors[b.classId] || '#facc15';
+          const dateStr = b.timestamp ? new Date(b.timestamp).toLocaleDateString(undefined, { month: 'short', day: 'numeric' }) : '';
+          const ptsStr = b.treePoints ? b.treePoints.join(' / ') : `${b.totalPoints || 0} pts`;
+          return `
+            <div class="saved-build-card ${isCurrentClass ? 'is-current-class' : ''}">
+              <div class="saved-build-top-row">
+                <span class="saved-build-name">${escapeHtml(b.name)}</span>
+                <span class="saved-build-class-badge" style="background: ${color}20; color: ${color}; border: 1px solid ${color}60;">
+                  ${escapeHtml(b.className || b.classId)}
+                </span>
+              </div>
+              <div class="saved-build-meta-row">
+                <span class="saved-build-points-pill">📊 ${ptsStr} (${b.totalPoints || 0} pts)</span>
+                <span>${dateStr}</span>
+              </div>
+              <div class="saved-build-actions-row">
+                <button type="button" class="btn-load-saved-build" data-action="load-build" data-build-id="${b.id}">
+                  ▶ Load Build
+                </button>
+                <button type="button" class="btn-delete-saved-build" data-action="delete-build" data-build-id="${b.id}" title="Delete this saved build">
+                  🗑️
+                </button>
+              </div>
+            </div>
+          `;
+        }).join('')}
+      </div>
+    `;
+
+    // Bind drawer events
+    const closeBtn = drawer.querySelector('.saved-builds-drawer-close');
+    if (closeBtn) {
+      closeBtn.onclick = () => {
+        drawer.setAttribute('hidden', '');
+      };
+    }
+
+    drawer.querySelectorAll('[data-action="load-build"]').forEach(btn => {
+      btn.onclick = () => {
+        const id = btn.getAttribute('data-build-id');
+        loadSavedBuild(id);
+      };
+    });
+
+    drawer.querySelectorAll('[data-action="delete-build"]').forEach(btn => {
+      btn.onclick = () => {
+        const id = btn.getAttribute('data-build-id');
+        deleteSavedBuild(id);
+      };
+    });
+  }
+
   /**
    * Render the complete modal body
    */
@@ -918,6 +1124,12 @@
       <!-- Modal Footer Actions -->
       <div class="bis-talent-modal-foot">
         <div class="bis-talent-foot-left">
+          <button type="button" class="bis-talent-foot-btn primary" id="btn-save-talent-build" title="Save current build to browser local storage">
+            <span>💾</span> Save Build
+          </button>
+          <button type="button" class="bis-talent-foot-btn" id="btn-toggle-saved-builds" title="View your saved custom builds">
+            <span>📁</span> My Saved Builds <span class="bis-saved-count-chip">${getSavedBuilds().length}</span>
+          </button>
           <button type="button" class="bis-talent-foot-btn" id="btn-modal-copy-code" title="Copy talent build code">
             <span>📋</span> Copy Build Code (<code style="color: #facc15;">${escapeHtml(buildCode)}</code>)
           </button>
@@ -927,7 +1139,7 @@
           <button type="button" class="bis-talent-foot-btn" id="btn-modal-export-discord" title="Copy build summary formatted for Discord">
             <span>📋</span> Export Discord Build
           </button>
-          <button type="button" class="bis-talent-foot-btn primary" id="btn-modal-deepdive">
+          <button type="button" class="bis-talent-foot-btn" id="btn-modal-deepdive">
             <span>🎯</span> Explore ${classData.name} Deep Dive
           </button>
         </div>
@@ -1356,6 +1568,26 @@
         }
       };
     }
+
+    // 10. Saved Builds Event Listeners
+    const saveBuildBtn = content.querySelector('#btn-save-talent-build');
+    if (saveBuildBtn) {
+      saveBuildBtn.onclick = () => {
+        saveCurrentBuild();
+      };
+    }
+
+    const toggleSavedBtn = content.querySelector('#btn-toggle-saved-builds');
+    if (toggleSavedBtn) {
+      toggleSavedBtn.onclick = () => {
+        const drawer = document.getElementById('talent-saved-builds-drawer');
+        if (drawer && !drawer.hasAttribute('hidden')) {
+          drawer.setAttribute('hidden', '');
+        } else {
+          renderSavedBuildsDrawer(true);
+        }
+      };
+    }
   }
 
   /**
@@ -1364,6 +1596,12 @@
   function renderStandalone(containerId = 'talents-standalone-mount', classId = 'warrior', options = {}) {
     const container = document.getElementById(containerId);
     if (!container) return;
+
+    const drawer = document.getElementById('talent-saved-builds-drawer');
+    if (drawer && drawer.parentElement !== container) {
+      container.appendChild(drawer);
+    }
+    if (drawer) drawer.setAttribute('hidden', '');
 
     state.targetContainerId = containerId;
     state.classId = classId || 'warrior';
@@ -1446,6 +1684,13 @@
     const modal = document.getElementById('bis-talent-modal');
     if (!modal) return;
 
+    const modalCalc = document.getElementById('modal-talent-calculator') || document.getElementById('bis-talent-modal-content');
+    const drawer = document.getElementById('talent-saved-builds-drawer');
+    if (drawer && modalCalc && drawer.parentElement !== modalCalc) {
+      modalCalc.appendChild(drawer);
+    }
+    if (drawer) drawer.setAttribute('hidden', '');
+
     modal.removeAttribute('hidden');
     modal.classList.add('open');
     state.isOpen = true;
@@ -1508,13 +1753,20 @@
 
   // Global keydown handler for Escape
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && state.isOpen) {
-      const modal = document.getElementById('bis-talent-modal');
-      if (modal) {
-        state.isOpen = false;
-        modal.classList.remove('open');
-        modal.setAttribute('hidden', '');
-        hideTalentTooltip();
+    if (e.key === 'Escape') {
+      const drawer = document.getElementById('talent-saved-builds-drawer');
+      if (drawer && !drawer.hasAttribute('hidden')) {
+        drawer.setAttribute('hidden', '');
+        return;
+      }
+      if (state.isOpen) {
+        const modal = document.getElementById('bis-talent-modal');
+        if (modal) {
+          state.isOpen = false;
+          modal.classList.remove('open');
+          modal.setAttribute('hidden', '');
+          hideTalentTooltip();
+        }
       }
     }
   });
@@ -1643,7 +1895,11 @@
     getTotalPoints,
     showTalentTooltip,
     hideTalentTooltip,
-    getState: () => state
+    getState: () => state,
+    loadSavedBuilds: getSavedBuilds,
+    saveCurrentBuild,
+    deleteSavedBuild,
+    renderSavedBuildsMenu: renderSavedBuildsDrawer
   };
 
 })();

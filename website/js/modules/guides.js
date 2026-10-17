@@ -319,7 +319,11 @@ function getClassSlugFromGuide(guideId) {
     'guide-hunter-pets': 'hunter',
     'guide-druid-forms': 'druid',
     'guide-druid-snake-form': 'druid',
-    'guide-battle-mage': 'mage'
+    'guide-battle-mage': 'mage',
+    'guide-dwarf-shaman-totems': 'shaman',
+    'guide-mage-comprehension-scrolls': 'mage',
+    'guide-level30-hunter': 'hunter',
+    'guide-level30-frost-mage': 'mage'
   };
   return map[guideId] || null;
 }
@@ -518,6 +522,12 @@ function formatGuideMarkdown(content, isPage = false) {
     }
 
     if (!trimmed) {
+      continue;
+    }
+
+    // Raw HTML / SVG block handling (interactive transit maps, diagrams, custom cards)
+    if (trimmed.startsWith('<') && !trimmed.startsWith('<!--') && /^<\/?([a-zA-Z][a-zA-Z0-9:-]*)/.test(trimmed)) {
+      html += rawLine + '\n';
       continue;
     }
 

@@ -1968,11 +1968,11 @@ Shamans channel primal elements into bone-crushing melee swings, high-potency gr
 
 ---
 
-### Totem Twisting Choreography
-A skilled Shaman drops two short-duration totems of the same element in rapid succession to grant both buffs simultaneously:
-• Drop **Windfury Totem** (gives 10-second buff to all melee).
-• Immediately drop **Grace of Air Totem** or **Strength of Earth Totem**.
-• Party members keep both the Windfury extra-attack proc and the +Agility/+Strength stat buffs!
+### Raid-Wide Totem Architecture (No Twisting Required)
+In WoW Forever Build 1.60.1.70425, the legacy 10-second "totem twisting" chore has been permanently retired:
+• **Raid-Wide Range (40 Yards):** All core elemental totems reach the entire 40-player raid or 5-man dungeon group within a 40-yard radius.
+• **Non-Exclusive Air Element Harmony:** **Windfury Totem** and **Grace of Air Totem** are non-exclusive; Windfury applies an instant extra-attack imbue aura while Grace of Air provides +Agility. Shamans no longer need to burn 300 mana every 9 seconds to alternate Air totems.
+• Plant your totems once, reposition only when moving encounters, and direct your active mana toward Shocks, Chain Heals, and Lava Bursts!
 
 ---
 
@@ -2213,6 +2213,379 @@ WoW Forever re-evaluates vanilla racials to eliminate extreme faction imbalances
 | **Tauren** | **War Stomp:** 2s AoE stun (90s CD) • Cultivation (15m CD) | Endurance (+5% HP, +2% Crit Dmg/Heal), Plainsrunning (+3% Mount Speed) | Shaman, Druid, Warrior |
 | **Troll** | **Berserking:** +10% Attack/Casting speed • Rapid Regen | Beast Slaying (+5% Dmg), Regeneration (+20% Regen) | Hunter, Shaman, Mage, Priest, Warlock |
 | **The Skyborne** | **Walk on Air:** 10s Glide (90s CD) • Read Leyline (Castable moving) | Wind Blessed (+3% Haste), Elemental Insight | Mage, Priest, Hunter, Rogue, Warrior, Shaman |`
+    },
+    {
+      id: "guide-dwarf-shaman-totems",
+      title: "Alliance Dwarf Shaman: Complete Earth, Fire, Water & Air Totem Quest Guide",
+      category: "Classes & Pets",
+      source: "Wowhead · Warcraft Tavern · Classic+",
+      icon: "https://render.worldofwarcraft.com/us/icons/56/spell_nature_strengthofearthtotem02.jpg",
+      summary: "Step-by-step quest walkthrough for Alliance Dwarf Shamans acquiring Earth (Kharanos), Fire (Gol'Bolar Quarry), Water (Loch Modan / Wetlands), and Air (Aerie Peak) totems.",
+      content: `### Awakening the Mountain Elements
+In WoW Forever, Dwarves draw upon Wildhammer stormcallers and Bronzebeard geomancers to bond with the primal elemental forces of Khaz Modan. Alliance Dwarf Shamans obtain their four elemental totems through a dedicated series of mountain trials across Dun Morogh, Loch Modan, Wetlands, and the Hinterlands.
+
+### 1. Earth Totem (Level 4: Dun Morogh)
+• **Starting NPC:** Tonn Stonehorn near the dwarven fire pit in Kharanos.
+• **Quest Line:** *Call of Earth* (Dun Morogh)
+• **Objective:** Travel east to the Shimmer Ridge frostmane wendigo cavern [68, 54]. Defeat Frostmane geomancers to recover 2 **Rough Earth Stones**.
+• **Trial:** Bring the stones to the **Shrine of the Earth** nestled high in the Ironforge foothills above Kharanos. Drink the Earth Sap to commune with the Mountain Elemental spirit.
+• **Reward:** **Earth Totem** relic item, granting access to Stoneskin Totem and Strength of Earth Totem!
+
+---
+
+### 2. Fire Totem (Level 10: Gol'Bolar Quarry)
+• **Starting NPC:** Kran Stonehoof at the High Seat in Ironforge [42, 28].
+• **Quest Line:** *Call of Fire* (Khaz Modan)
+• **Objective:** Travel southeast of Kharanos to **Gol'Bolar Quarry** [69, 56]. Descend into the excavated subterranean shaft where blazing fire elementals have breached the rockface.
+• **Trial:** Slay Fire Tar Elementals for 3 **Searing Slag** and collect a **Firepitch Reagent** from the quarry foreman's supply crate. Return to the Peak of Fire brazier above the quarry to summon and defeat the Fire Spirit.
+• **Reward:** **Fire Totem** relic item, unlocking Searing Totem and Fire Nova!
+
+---
+
+### 3. Water Totem (Level 20: Loch Modan & Wetlands)
+• **Starting NPC:** Branwyn Steelforge outside Ironforge Gates [53, 35].
+• **Quest Line:** *Call of Water: The Pure Mountain Springs*
+• **Phase A (Loch Modan):** Travel to Farstrider Lodge [82, 63] in eastern Loch Modan. Speak to Master Huntsman Torvald to obtain an enchanted Dwarven Water Canteen.
+• **Phase B (Wetlands):** Proceed north into Wetlands. Slay Tide-Risen Crabs and Marsh Elementals near the Menethil Coast [14, 52] to gather 5 **Droplets of Primal Brine**.
+• **Trial:** Climb to the peak overlooking the Greenwarden's Grove [59, 41] to reach the **Shrine of Pure Water**. Pour the purified brine into the basin and defeat the Corrupted Water Elemental.
+• **Reward:** **Water Totem** relic item, granting Healing Stream Totem and Mana Spring Totem!
+
+---
+
+### 4. Air Totem (Level 30: Aerie Peak / Hinterlands Spire)
+• **Starting NPC:** High Shaman Grimaxe in Ironforge or Stormfeather Lodge in Wetlands.
+• **Quest Line:** *Call of Air: Wildhammer Gryphon's Roar*
+• **Objective:** Ascend through the mountain pass into the Hinterlands to **Aerie Peak** [14, 48]. Speak with the Wildhammer Gryphonmaster to receive the feather of Swiftfeather.
+• **Trial:** Ascend to the windy precipice of the **Wind Spire** [26, 52]. Cast your communion ritual into the rushing thermal drafts to prove your mastery over the howling storms.
+• **Reward:** **Air Totem** relic item, unlocking Windfury Totem and Grace of Air Totem!
+
+💡 **Forever Advantage:** Totems are automatically assigned to your dedicated Relic interface slot, freeing up 4 permanent bag inventory spaces compared to Classic Era!`
+    },
+    {
+      id: "guide-mage-comprehension-scrolls",
+      title: "Mage Arcane Comprehension Scrolls & Leyline Focus Attunement Guide",
+      category: "Exploration & Secrets",
+      source: "Wowhead · Warcraft Tavern · Classic+",
+      icon: "https://render.worldofwarcraft.com/us/icons/56/inv_scroll_03.jpg",
+      summary: "Master guide to acquiring Comprehension Charms, deciphering ancient Arcane Study Scrolls, attuning to regional Leyline Foci, and unlocking spell modifiers.",
+      content: `### The Kirin Tor Scholarly Resurgence
+In WoW Forever, Mages rediscover the lost arcane methodology of the Highborne and early Dalaran arcanists. By pairing **Comprehension Charms** with ancient regional **Study Scrolls**, Mages decipher arcane cipher glyphs that permanently attune their spells to Azeroth's leyline network.
+
+### 1. Acquiring Comprehension Charms
+• **Reagent Vendors & Trainers:** Comprehension Charms can be purchased directly from Mage trainers and reagent vendors in Stormwind (Mage Quarter), Ironforge (Hall of Mystery), Orgrimmar (Valley of Spirits), and Undercity (The Magic Quarter) for 7 silver each.
+• **Loot Drops:** Defeating Kirin Tor spellweavers, Syndicate conjurers, or Scarlet spellbinders also awards pouches of uncharged charms.
+
+---
+
+### 2. Ancient Study Scrolls & Cipher Drop Locations
+
+| Study Scroll | Zone / Mob Source | Deciphered Knowledge | Primary Benefit |
+| **Scroll of Arcane Insight** | Dalaran Wizards (Ambermill, Silverpine) & Defias Enchanters (Westfall) | *Arcane Surge Efficiency* | Reduces mana cost of Arcane Missiles and Arcane Explosion by 12% |
+| **Scroll of Cryomancy** | Frostmane Seers (Dun Morogh) & Venture Co. Surveyors (Loch Modan) | *Frost Channeling Attunement* | Frostbolt critical hits refund 25% base mana cost |
+| **Scroll of Pyrotechnics** | Dark Iron Incendiaries (Loch Modan) & Burning Blade Fanatics (Durotar) | *Combustion Dynamics* | Extends Fire Blast maximum casting range from 20 to 26 yards |
+| **Scroll of Spatial Transit** | Dalaran Undercroft (Alterac) & Tower of Ilgalar (Redridge) | *Blink Momentum* | Blink removes all movement slowing effects and grants +30% run speed for 2 seconds |
+
+---
+
+### 3. Regional Leyline Focus Attunement Sites
+To translate advanced Level 25–30 scrolls, a Mage must stand within 15 yards of a humming **Leyline Focus Stone**:
+• **Alterac Mountains:** Subterranean conduit below the City of Dalaran purple forcefield [21, 56].
+• **Elwynn Forest:** The highest tower room in **The Tower of Azora** [65, 70].
+• **Redridge Mountains:** Upper balcony of **Stonewatch Keep** [78, 48].
+• **Ashenvale:** The celestial moonwell inside **Astranaar / Silverwind Refuge** [49, 67].
+• **Thousand Needles:** The windswept plateau top of **Highperch** [12, 33].
+
+---
+
+### 4. Fast Transcription In-Game Macro
+Use this macro to quickly apply your active Comprehension Charm to an unread scroll in your primary inventory bag:
+\`\`\`lua
+/use Comprehension Charm
+/use item:208831
+/run print("|cff69ccf0[Arcane Study]|r Deciphering ancient study scroll...")
+\`\`\`
+
+💡 **Scholarly Note:** Deciphered scroll traits persist through death, dual-spec swaps, and talent respecs without requiring re-attunement!`
+    },
+    {
+      id: "guide-master-transit-routes",
+      title: "Master World Transit & Continental Travel Directory (Boats, Zeppelins, Tram & Ferries)",
+      category: "Leveling & Quests",
+      source: "WoW Forever Tools · Warcraft Tavern · Classic+",
+      icon: "https://render.worldofwarcraft.com/us/icons/56/inv_misc_map_01.jpg",
+      summary: "Interactive visual transit map and complete directory of all inter-continental boat routes, Horde zeppelin towers, the Deeprun Tram, and the Zephras Isle charter ferry.",
+      content: `### Azeroth Transit & Rapid Travel Map
+Navigating between Kalimdor and the Eastern Kingdoms is a critical rite of passage in WoW Forever. This interactive master transit map details all public continental connections, travel times, and connecting hubs.
+
+<div class="transit-map-container" style="background: #070a13; border: 1px solid var(--border-gold); border-radius: 8px; padding: 1rem; margin: 1.25rem 0; box-shadow: 0 8px 30px rgba(0,0,0,0.6);">
+<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+  <span style="font-family: var(--font-heading); font-size: 1.05rem; color: var(--text-gold); font-weight: 700;">🗺️ Azeroth Continental Transit Network (Build 70425)</span>
+  <span style="font-size: 0.75rem; color: #94a3b8; background: rgba(255,255,255,0.06); padding: 0.2rem 0.6rem; border-radius: 4px;">Interactive Vector Diagram • Hover routes for transit info</span>
+</div>
+<svg viewBox="0 0 900 480" width="100%" height="auto" style="display: block; max-width: 100%; border-radius: 6px; background: linear-gradient(180deg, #090e1a 0%, #060810 100%);">
+  <defs>
+    <filter id="glow-gold" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Sea Grid / Grid Lines -->
+  <line x1="450" y1="20" x2="450" y2="460" stroke="rgba(255,255,255,0.04)" stroke-dasharray="4,4" />
+  <line x1="50" y1="240" x2="850" y2="240" stroke="rgba(255,255,255,0.04)" stroke-dasharray="4,4" />
+
+  <!-- Continent Landmass Backdrops -->
+  <!-- Kalimdor -->
+  <rect x="50" y="30" width="310" height="420" rx="10" fill="rgba(30, 41, 59, 0.35)" stroke="rgba(56, 189, 248, 0.2)" stroke-width="1.5" />
+  <text x="70" y="60" fill="#38bdf8" font-size="14" font-weight="800" letter-spacing="2">KALIMDOR</text>
+
+  <!-- Eastern Kingdoms -->
+  <rect x="540" y="30" width="310" height="420" rx="10" fill="rgba(30, 41, 59, 0.35)" stroke="rgba(243, 192, 67, 0.2)" stroke-width="1.5" />
+  <text x="560" y="60" fill="#facc15" font-size="14" font-weight="800" letter-spacing="2">EASTERN KINGDOMS</text>
+
+  <!-- The Great Sea & Maelstrom -->
+  <text x="450" y="140" fill="#475569" font-size="12" font-weight="700" letter-spacing="3" text-anchor="middle">THE GREAT SEA</text>
+  <circle cx="450" cy="220" r="36" fill="none" stroke="rgba(56, 189, 248, 0.25)" stroke-width="2" stroke-dasharray="6,4" />
+  <circle cx="450" cy="220" r="18" fill="none" stroke="rgba(147, 197, 253, 0.4)" stroke-width="1.5" stroke-dasharray="3,3" />
+  <text x="450" y="224" fill="#93c5fd" font-size="10" font-weight="700" text-anchor="middle">MAELSTROM</text>
+
+  <!-- Zephras Isle Hub -->
+  <g class="transit-hub" style="cursor: pointer;">
+    <title>Zephras Isle: Neutral Phase 1 &amp; 2 Exploration Hub. Charter Ferry terminal to Menethil Harbor &amp; Ratchet.</title>
+    <rect x="410" y="305" width="80" height="34" rx="6" fill="#064e3b" stroke="#10b981" stroke-width="1.5" />
+    <circle cx="425" cy="322" r="5" fill="#34d399" />
+    <text x="435" y="326" fill="#a7f3d0" font-size="11" font-weight="700">Zephras</text>
+  </g>
+
+  <!-- TRANSIT ROUTE PATHS -->
+
+  <!-- 1. Alliance Boat: Menethil Harbor <-> Auberdine -->
+  <path d="M 620 195 Q 450 110 180 95" fill="none" stroke="#38bdf8" stroke-width="2.5" stroke-dasharray="6,5">
+    <title>Alliance Boat: Menethil Harbor (Wetlands) &lt;--&gt; Auberdine (Darkshore). Travel Time: 2m 45s. Free for all Alliance players.</title>
+  </path>
+
+  <!-- 2. Alliance Boat: Menethil Harbor <-> Theramore -->
+  <path d="M 620 205 Q 480 260 280 320" fill="none" stroke="#38bdf8" stroke-width="2.5" stroke-dasharray="6,5">
+    <title>Alliance Boat: Menethil Harbor (Wetlands) &lt;--&gt; Theramore Isle (Dustwallow Marsh). Travel Time: 3m 10s. Direct link to Southern Kalimdor.</title>
+  </path>
+
+  <!-- 3. Horde Zeppelin: Brill (Undercity) <-> Orgrimmar -->
+  <path d="M 630 110 Q 470 140 280 180" fill="none" stroke="#f87171" stroke-width="2.5" stroke-dasharray="6,4">
+    <title>Horde Zeppelin: Brill Tower (Undercity) &lt;--&gt; Orgrimmar Tower (Durotar). Travel Time: 3m 00s. Primary trans-continental Horde artery.</title>
+  </path>
+
+  <!-- 4. Horde Zeppelin: Brill <-> Grom'gol (Stranglethorn) -->
+  <path d="M 645 120 Q 695 240 645 380" fill="none" stroke="#f87171" stroke-width="2" stroke-dasharray="6,4">
+    <title>Horde Zeppelin: Brill Tower (Tirisfal) &lt;--&gt; Grom'gol Base Camp (Stranglethorn). Travel Time: 2m 30s. Rapid access to southern Eastern Kingdoms.</title>
+  </path>
+
+  <!-- 5. Horde Zeppelin: Orgrimmar <-> Grom'gol -->
+  <path d="M 285 190 Q 450 360 635 385" fill="none" stroke="#f87171" stroke-width="2.5" stroke-dasharray="6,4">
+    <title>Horde Zeppelin: Orgrimmar (Durotar) &lt;--&gt; Grom'gol Base Camp (Stranglethorn). Travel Time: 3m 20s. Direct tropical expedition flight.</title>
+  </path>
+
+  <!-- 6. Neutral Steamwheedle Boat: Booty Bay <-> Ratchet -->
+  <path d="M 640 430 Q 480 380 280 250" fill="none" stroke="#facc15" stroke-width="3" stroke-dasharray="7,5">
+    <title>Neutral Steamwheedle Boat: Booty Bay (Stranglethorn) &lt;--&gt; Ratchet (The Barrens). Travel Time: 2m 50s. Neutral vessel connecting cross-faction continents.</title>
+  </path>
+
+  <!-- 7. Deeprun Tram: Stormwind City <-> Ironforge -->
+  <line x1="645" y1="285" x2="645" y2="235" stroke="#fbbf24" stroke-width="4" stroke-linecap="round">
+    <title>Deeprun Tram: Stormwind City (Dwarven District) &lt;--&gt; Ironforge (Tinker Town). Travel Time: 1m 05s. Underground high-speed rail with Bizmo's Aquarium view.</title>
+  </line>
+
+  <!-- 8. Zephras Charter Ferry: Menethil Harbor <-> Zephras Isle -->
+  <path d="M 620 215 Q 520 280 470 305" fill="none" stroke="#34d399" stroke-width="2.2" stroke-dasharray="5,4">
+    <title>Charter Ferry: Menethil Harbor &lt;--&gt; Zephras Isle. Travel Time: 1m 45s. Phase 2 charter ferry service.</title>
+  </path>
+
+  <!-- 9. Zephras Charter Ferry: Ratchet <-> Zephras Isle -->
+  <path d="M 280 260 Q 360 300 420 315" fill="none" stroke="#34d399" stroke-width="2.2" stroke-dasharray="5,4">
+    <title>Charter Ferry: Ratchet &lt;--&gt; Zephras Isle. Travel Time: 1m 55s. Phase 2 charter ferry service.</title>
+  </path>
+
+  <!-- STATIONS / PORTS (KALIMDOR) -->
+  <!-- Auberdine -->
+  <g style="cursor: pointer;">
+    <title>Auberdine Pier (Darkshore): Alliance port connecting to Menethil Harbor. Flight path to Teldrassil / Ashenvale.</title>
+    <circle cx="170" cy="95" r="7" fill="#0284c7" stroke="#38bdf8" stroke-width="2" />
+    <text x="185" y="100" fill="#bae6fd" font-size="12" font-weight="700">Auberdine</text>
+  </g>
+
+  <!-- Orgrimmar -->
+  <g style="cursor: pointer;">
+    <title>Orgrimmar Zeppelin Tower (Durotar): Horde flight tower connecting to Brill and Grom'gol.</title>
+    <circle cx="270" cy="180" r="7" fill="#b91c1c" stroke="#f87171" stroke-width="2" />
+    <text x="180" y="185" fill="#fca5a5" font-size="12" font-weight="700">Orgrimmar</text>
+  </g>
+
+  <!-- Ratchet -->
+  <g style="cursor: pointer;">
+    <title>Ratchet Port (The Barrens): Steamwheedle Cartel dock connecting to Booty Bay and Zephras Isle.</title>
+    <circle cx="270" cy="245" r="7" fill="#ca8a04" stroke="#facc15" stroke-width="2" />
+    <text x="205" y="250" fill="#fef08a" font-size="12" font-weight="700">Ratchet</text>
+  </g>
+
+  <!-- Theramore -->
+  <g style="cursor: pointer;">
+    <title>Theramore Isle (Dustwallow Marsh): Jaina Proudmoore's citadel dock connecting to Menethil Harbor.</title>
+    <circle cx="270" cy="320" r="7" fill="#0284c7" stroke="#38bdf8" stroke-width="2" />
+    <text x="180" y="325" fill="#bae6fd" font-size="12" font-weight="700">Theramore</text>
+  </g>
+
+  <!-- STATIONS / PORTS (EASTERN KINGDOMS) -->
+  <!-- Brill (Undercity) -->
+  <g style="cursor: pointer;">
+    <title>Brill Zeppelin Towers (Tirisfal Glades): Twin towers connecting to Orgrimmar and Grom'gol Base Camp.</title>
+    <circle cx="630" cy="110" r="7" fill="#b91c1c" stroke="#f87171" stroke-width="2" />
+    <text x="645" y="115" fill="#fca5a5" font-size="12" font-weight="700">Brill (Undercity)</text>
+  </g>
+
+  <!-- Menethil Harbor -->
+  <g style="cursor: pointer;">
+    <title>Menethil Harbor Pier (Wetlands): Major Alliance maritime hub with ships to Auberdine, Theramore, and Zephras Isle.</title>
+    <circle cx="630" cy="205" r="8" fill="#0284c7" stroke="#38bdf8" stroke-width="2" />
+    <text x="645" y="210" fill="#bae6fd" font-size="12" font-weight="700">Menethil Harbor</text>
+  </g>
+
+  <!-- Ironforge -->
+  <g style="cursor: pointer;">
+    <title>Ironforge (Dun Morogh): Dwarven capital connected via the high-speed Deeprun Tram to Stormwind City.</title>
+    <circle cx="645" cy="240" r="6" fill="#d97706" stroke="#fbbf24" stroke-width="2" />
+    <text x="660" y="245" fill="#fef08a" font-size="12" font-weight="700">Ironforge (Tram)</text>
+  </g>
+
+  <!-- Stormwind City -->
+  <g style="cursor: pointer;">
+    <title>Stormwind City (Elwynn Forest): Alliance capital connected via the Deeprun Tram in the Dwarven District.</title>
+    <circle cx="645" cy="285" r="6" fill="#d97706" stroke="#fbbf24" stroke-width="2" />
+    <text x="660" y="290" fill="#fef08a" font-size="12" font-weight="700">Stormwind (Tram)</text>
+  </g>
+
+  <!-- Grom'gol Base Camp -->
+  <g style="cursor: pointer;">
+    <title>Grom'gol Base Camp (Stranglethorn): Horde jungle outpost with twin zeppelin towers to Orgrimmar and Brill.</title>
+    <circle cx="635" cy="380" r="7" fill="#b91c1c" stroke="#f87171" stroke-width="2" />
+    <text x="650" y="385" fill="#fca5a5" font-size="12" font-weight="700">Grom'gol</text>
+  </g>
+
+  <!-- Booty Bay -->
+  <g style="cursor: pointer;">
+    <title>Booty Bay (Stranglethorn): Steamwheedle goblin port with boat service to Ratchet.</title>
+    <circle cx="640" cy="430" r="7" fill="#ca8a04" stroke="#facc15" stroke-width="2" />
+    <text x="655" y="435" fill="#fef08a" font-size="12" font-weight="700">Booty Bay</text>
+  </g>
+</svg>
+<div style="display: flex; gap: 1.25rem; flex-wrap: wrap; justify-content: center; margin-top: 0.75rem; font-size: 0.78rem; color: #cbd5e1;">
+  <span style="display: inline-flex; align-items: center; gap: 0.35rem;"><span style="display: inline-block; width: 14px; height: 3px; background: #38bdf8;"></span> Alliance Boat</span>
+  <span style="display: inline-flex; align-items: center; gap: 0.35rem;"><span style="display: inline-block; width: 14px; height: 3px; background: #f87171;"></span> Horde Zeppelin</span>
+  <span style="display: inline-flex; align-items: center; gap: 0.35rem;"><span style="display: inline-block; width: 14px; height: 3px; background: #facc15;"></span> Neutral Steamwheedle Boat</span>
+  <span style="display: inline-flex; align-items: center; gap: 0.35rem;"><span style="display: inline-block; width: 14px; height: 4px; background: #fbbf24;"></span> Deeprun Tram</span>
+  <span style="display: inline-flex; align-items: center; gap: 0.35rem;"><span style="display: inline-block; width: 14px; height: 3px; background: #34d399;"></span> Zephras Charter Ferry</span>
+</div>
+</div>
+
+### Continental Transit Timetable & Connections
+
+| Route | Vehicle Type | Faction | Dock / Tower Coordinates | Transit Duration | Key Destination Zone |
+| **Menethil Harbor ⇄ Auberdine** | Transport Ship | Alliance | Wetlands [10, 56] ⇄ Darkshore [32, 43] | 2 min 45 sec | Ashenvale & Teldrassil access |
+| **Menethil Harbor ⇄ Theramore** | Transport Ship | Alliance | Wetlands [10, 60] ⇄ Dustwallow [67, 51] | 3 min 10 sec | Southern Kalimdor & Barrens |
+| **Brill ⇄ Orgrimmar** | Goblin Zeppelin | Horde | Tirisfal [60, 58] ⇄ Durotar [50, 12] | 3 min 00 sec | Primary cross-continent capital transit |
+| **Brill ⇄ Grom'gol** | Goblin Zeppelin | Horde | Tirisfal [61, 59] ⇄ Stranglethorn [32, 28] | 2 min 30 sec | Southern Eastern Kingdoms jungles |
+| **Orgrimmar ⇄ Grom'gol** | Goblin Zeppelin | Horde | Durotar [51, 14] ⇄ Stranglethorn [31, 29] | 3 min 20 sec | Direct Kalimdor-to-Stranglethorn line |
+| **Booty Bay ⇄ Ratchet** | Steamwheedle Vessel | Neutral | Stranglethorn [25, 73] ⇄ Barrens [63, 38] | 2 min 50 sec | Cross-faction global trading corridor |
+| **Stormwind ⇄ Ironforge** | Deeprun Tram | Alliance | SW Dwarven District ⇄ IF Tinker Town | 1 min 05 sec | Instant capital transit with zero flight cost |
+| **Menethil / Ratchet ⇄ Zephras** | Charter Ferry | Neutral | Wetlands [11, 58] / Barrens [64, 39] | 1 min 50 sec | Zephras Isle Phase 1/2 exploration hub |
+
+💡 **PvP Survival Tip:** Transport ships and zeppelins feature level 55+ Bruisers and faction guards; starting combat on board flags you for PvP and immediately draws lethal guard aggro.`
+    },
+    {
+      id: "guide-level30-hunter",
+      title: "Hunter Level 30 Guide: Beast Mastery vs Marksmanship Specs, Pet Abilities & Level 30 Pre-BiS",
+      category: "Classes & Pets",
+      source: "Wowhead · Warcraft Tavern · Classic+",
+      icon: "https://render.worldofwarcraft.com/us/icons/56/ability_hunter_beastmastery.jpg",
+      summary: "Optimal 21-point Beast Mastery and Marksmanship talent builds, Pet Diet & Rank 4 ability training, ammo crafting, and Excavation Site 4 dungeon rotation.",
+      content: `### Ranged Supremacy at the Level 30 Cap
+In Closed Beta Phase 2, Hunters excel in both solo open-world grinding and group dungeon runs thanks to 21 available talent points, Tier 2 camping stat food buffs, and Rank 4 pet abilities.
+
+### 1. Beast Mastery Leveling Spec (21 Points)
+• **Core Focus:** Maximum pet speed, attack power, and aggro generation for zero-downtime solo play.
+• **Point Distribution (21/0/0):**
+  - **Tier 1:** 5/5 *Endurance Training* (+15% pet health, +5% character health)
+  - **Tier 2:** 2/2 *Focused Fire* (+2% damage bonus to special abilities), 3/3 *Improved Aspect of the Monkey* (+6% Dodge chance)
+  - **Tier 3:** 1/1 *Bestial Swiftness* (Pet outdoor movement speed +30% — unlocks Intimidation!), 4/5 *Unleashed Fury* (+16% pet damage)
+  - **Tier 4:** 5/5 *Ferocity* (+15% pet critical strike chance)
+  - **Tier 5 Capstone (Row 5):** 1/1 *Intimidation* (Instant 3s pet stun on 60s CD with massive threat!)
+
+---
+
+### 2. Marksmanship Dungeon & PvP Spec (0/21/0)
+• **Core Focus:** Intellect-to-AP scaling, reduced Arcane Shot cooldown, Mortal Shots crit multiplier, and Scatter Shot control.
+• **Point Distribution (0/21/0):**
+  - **Tier 1:** 5/5 *Lethal Attacks* (+5% ranged critical strike chance)
+  - **Tier 2:** 5/5 *Careful Aim* (Increases ranged attack power by 50% of your total Intellect — unlocks Mortal Shots!)
+  - **Tier 3:** 5/5 *Improved Arcane Shot* (Reduces Arcane Shot cooldown by 1 sec for rotational rhythm)
+  - **Tier 4:** 5/5 *Mortal Shots* (+30% ranged weapon critical strike damage bonus; requires 5/5 Careful Aim)
+  - **Tier 5 Capstone (Row 5):** 1/1 *Scatter Shot* (Instant 4s disorientation shot on 30s CD for PvP peel)
+
+---
+
+### 3. Level 30 Pet Family & Ability Matrix
+
+| Pet Family | Signature Skills | Best Wilderness Tame Location | Food Diet | Primary Advantage |
+| **Cat (Tiger/Lion)** | Claw 4, Bite 4 | Ridge Stalker (Badlands, L36) or Mountain Lion (Hillsbrad, L24) | Meat, Fish | Highest single-target physical DPS (1.2 Attack Speed) |
+| **Wind Serpent** | Lightning Breath 3 | Washte Pawne (Barrens, L25) or Cloud Serpent (Thousand Needles) | Fish, Bread, Cheese | 20-yard ranged Nature burst; completely ignores physical armor |
+| **Boar** | Charge 3, Bite 4 | Goretusk (Westfall, L16) or Crag Boar (Loch Modan, L20) | Anything (Meat, Fruit, Bread, Fungus) | Instant 1s root + 50% AP on first hit; trivial to feed |
+
+---
+
+### 4. Level 30 Hunter Pre-BiS Weapon Arsenal
+• **Ranged Weapon:** *Galvanic Pulse Rifle* (Excavation Site 4 - Chief Engineer Bilgewater) or *Master Hunter's Rifle* (Stranglethorn Nesingwary chain).
+• **Melee Stat Sticks:** 2x *Cruel Barb* (Deadmines - Edwin VanCleef) or *Zephras Cleaver* (+7 Agility, +5 Stamina).
+• **Ammo:** Use *Heavy Shot* (Engineered or purchased from specialty ammo quartermasters in Ironforge/Orgrimmar).`
+    },
+    {
+      id: "guide-level30-frost-mage",
+      title: "Mage Level 30 Guide: Frost AoE Shatter Grinding & Burst PvP Spec",
+      category: "Classes & Pets",
+      source: "Wowhead · Warcraft Tavern · Classic+",
+      icon: "https://render.worldofwarcraft.com/us/icons/56/spell_frost_frostbolt02.jpg",
+      summary: "Level 30 Frost AoE grinding pulls, Frostbite + Shatter 50% crit combos, Blizzard snare kite paths, and mana efficiency rotations for Beta Phase 2.",
+      content: `### Master of the Bitter Cold
+At the Level 30 cap, Frost Mages dominate open-world leveling speed through controlled Blizzard AoE pulls and achieve unmatched burst lethality in PvP through the iconic **Shatter Combo**.
+
+### 1. Level 30 Frost Shatter Spec (21 Points)
+• **Point Distribution (0/0/21):**
+  - **Tier 1:** 5/5 *Improved Frostbolt* (Reduces casting time of Frostbolt by 0.5s for rapid missile execution)
+  - **Tier 2:** 2/2 *Improved Frost Nova* (Reduces Frost Nova cooldown by 4s), 3/3 *Frostbite* (15% chance to freeze chilled targets for 5s)
+  - **Tier 3:** 3/3 *Improved Blizzard* (Blizzard adds up to 65% chill snare for AoE kiting), 1/1 *Ice Lance* (Instant cast dealing 3x damage against frozen targets!), 1/3 *Frost Channeling* (Reduces mana cost of Frost spells by 5%)
+  - **Tier 4 Capstones (Row 4):** 3/3 *Shatter* (+50% critical strike chance against frozen targets!), 2/2 *Arctic Reach* (+20% Frost spell range and Blizzard area), 1/1 *Ice Block* (10s total physical/spell immunity)
+
+---
+
+### 2. The Shatter Burst Combo Choreography
+Because spell travel time exists in WoW Forever, casting an instant spell immediately after a missile spell applies Shatter to both spells simultaneously:
+• **Step 1:** Freeze your opponent with **Frost Nova** or trigger a **Frostbite** proc from Ice Armor.
+• **Step 2:** Begin casting **Frostbolt (Rank 5)** (2.6s cast).
+• **Step 3:** The split second the Frostbolt leaves your hands, cast **Ice Lance (Rank 1)** or **Fire Blast (Rank 4)** (Instant).
+• **Result:** Both spells hit the frozen target within the same millisecond spell batch. Both gain the +50% Shatter crit chance and critical damage bonus, frequently inflicting over 650–850 burst damage in a single GCD!
+
+---
+
+### 3. Level 24–30 AoE Blizzard Grinding Hotspots
+
+| Grinding Location | Target Mobs | Level Range | Kite Strategy |
+| **Dagger Hills (Westfall)** | Defias Highwaymen & Trappers | 20–24 | Pull 6–8 melee mobs, Blink backward, channel Blizzard Rank 2, Nova any runners |
+| **Dun Garok Outskirts (Hillsbrad)** | Ironforge Dwarves (Horde) / Syndicate (Alliance) | 26–29 | Wide open road for figure-8 Blizzard kiting |
+| **Coast of Wetlands** | Bluegill Murlocs (Wetlands) | 24–27 | Clustered camp spawns; pull with Rank 1 Frostbolt, gather with Frost Nova, Blizzard down |
+| **Shimmering Flats (Thousand Needles)** | Salt Flats Basilisks & Scorpids | 28–30 | Wide unobstructed flat salt desert with zero tree obstacles |
+
+---
+
+### 4. Phase 2 Mana & Consumable Engine
+• Always conjure **Mana Agate** (Restores 280–420 mana on use) before pulling.
+• Stack **Tier 2 Silk Tent Rested XP** and consume *Cooked Crab Claws* (+8 Spirit) to maximize passive mana regeneration between Blizzard sweeps.`
     }
   ]
 };

@@ -42,6 +42,19 @@ const WOW_FOREVER_DATA = {
       "cap": 30,
       "highlights": "Level cap increased to 30! Excavation Site 4 (Wetlands), City of Dalaran (Alterac), Ashenvale & Hillsbrad open world PvP, Warsong Gulch 20–29 bracket, Tier 2 Camping (Ironwood & Silk Tents)."
     },
+    "stressTest": {
+      "title": "Open Beta Stress Test (All Battle.net Accounts)",
+      "dates": "October 21, 2026",
+      "duration": "24 Hours (No Invite / Active Sub Required)",
+      "cap": 30,
+      "highlights": "Stress testing server infrastructure and dynamic megarealm layering ahead of global launch. Free for all Battle.net accounts without invite or active subscription."
+    },
+    "nameReservation": {
+      "title": "Early Name Reservation & Character Creation",
+      "dates": "October 27, 2026 at 10:00 AM PDT",
+      "duration": "Pre-Launch Window",
+      "highlights": "Reserve up to 2 character names per realm prior to the November 4 launch."
+    },
     "wipeAndLaunch": {
       "title": "Server Reset & Launch Preparation",
       "dates": "October 22 – November 3, 2026",
@@ -53,6 +66,8 @@ const WOW_FOREVER_DATA = {
     "betaStart": "2026-09-17T10:00:00-07:00",
     "betaPhase2": "2026-10-01T15:00:00-07:00",
     "betaEnds": "2026-10-21T23:59:59-07:00",
+    "stressTest": "2026-10-21T10:00:00-07:00",
+    "nameReservation": "2026-10-27T10:00:00-07:00",
     "globalLaunch": "2026-11-04T15:00:00-08:00",
     "raidUnlock": "2026-12-09T10:00:00-08:00"
   },
@@ -104,6 +119,21 @@ const WOW_FOREVER_DATA = {
   },
   "quickLinks": [
     {
+      "name": "ForeverChanges.pro: Database & Changelog",
+      "url": "https://foreverchanges.pro/",
+      "icon": "🔄"
+    },
+    {
+      "name": "WoW Forever Tools: Roster & Analyzer",
+      "url": "https://wowforevertools.com/",
+      "icon": "🛠️"
+    },
+    {
+      "name": "Zockify Forever: Leveling & News",
+      "url": "https://www.zockify.com/forever/",
+      "icon": "⚡"
+    },
+    {
       "name": "Wowhead: Everything We Know",
       "url": "https://www.wowhead.com/forever/news/everything-we-know-about-wow-forever-382827",
       "icon": "🌐"
@@ -140,6 +170,45 @@ const WOW_FOREVER_DATA = {
     }
   ],
   "newsFeed": [
+    {
+      "id": "news-51",
+      "title": "Venruki $100,000 Duel Championship Day 2: Durotar Arena Addition, Final 8 Bracket & 2-Hour High-Value Trade Hold Anti-RMT Safeguards",
+      "source": "Warcraft Tavern & Method.gg",
+      "sourceType": "tavern",
+      "author": "Venruki & Blizzard Integrity Desk",
+      "date": "October 17, 2026",
+      "tag": "Esports & Competitive Meta",
+      "summary": "Day 2 of Venruki's $100k duel tournament introduces dedicated Durotar arena staging while Blizzard activates a mandatory 2-hour trade hold on high-value items and gold transfers as anti-RMT safeguards.",
+      "content": `The penultimate day of Venruki's $100,000 Level 30 Duel Championship brought crucial arena improvements and anti-exploit enforcement:
+• Dedicated Durotar Duel Arena:
+  - Blizzard operations spawned physical barricades and referee boundaries outside Orgrimmar to eliminate spectator interference and guarantee flawless duel line-of-sight.
+  - Spectators and duelists alike praised the reduced server latency and dedicated combat phase zone.
+• 2-Hour High-Value Trade Hold Anti-RMT Safeguards:
+  - Blizzard deployed an aggressive live integrity protection: any high-value trade or excessive gold transfer triggers a 2-hour escrow hold with automated flag checks.
+  - Ensures tournament stakes and public realm economies remain strictly insulated from third-party gold sellers and illicit wagering.
+• Final 8 Championship Bracket:
+  - Snutz (Warlock), Mes (Warrior), Bean (Druid), and Sonii (Paladin) advance to Championship Sunday, demonstrating master-class cooldown usage at the Level 30 cap.`,
+      "url": "https://www.warcrafttavern.com/forever/news/venruki-100k-duel-championship-day-2-anti-rmt/"
+    },
+    {
+      "id": "news-50",
+      "title": "Client Engine Build 1.60.1.70450 Deployed: Stability & Crash Hotfix, All Level 30 Talents & BiS Data 100% Unchanged",
+      "source": "Blizzard Entertainment & Community Reverse-Engineering",
+      "sourceType": "blizzard",
+      "author": "Kaivax & Systems Engineering Desk",
+      "date": "October 16, 2026",
+      "tag": "Client Patch & Stability",
+      "summary": "Blizzard deployed client hotfix build 1.60.1.70450 addressing memory leaks, ray-traced shadow crashes, and input buffering on modern GPUs. Zero game data, talent nodes, or item tables were altered.",
+      "content": `Blizzard pushed client executable hotfix build 1.60.1.70450 to the Battle.net launcher on Friday evening. Community reverse-engineers and our data desk immediately performed a full DBC and memory diff:
+• Client Stability & Crash Mitigations Only:
+  - Fixed an unhandled exception crash when DirectX 12 ray-traced shadows interacted with dense water geometry in Wetlands and Alterac Mountains.
+  - Resolved an engine memory leak affecting high-refresh-rate displays during rapid cross-zone flight master transitions.
+  - Input buffering and spell queue latency smoothed on high-polling-rate gaming mice (2000Hz+).
+• Zero DBC or Game Balancing Alterations:
+  - Binary diff confirmed 0 changes to spells, talent nodes, base attributes, or dungeon boss encounter scripts.
+  - All Phase 2 Level 30 talent trees, racial rebalances, and curated Level 30 BiS datasets compiled under Beta Build 1.60.1.70425 remain 100% accurate and authoritatively valid.`,
+      "url": "https://wowforevertools.com/news/beta-build-70450-stability-hotfix/"
+    },
     {
       "id": "news-49",
       "title": "Venruki $100,000 Duel Championship Day 1 Kicks Off: Opening Round Upsets, Ruthless Human & Earth Fury Dwarf Meta in Durotar",

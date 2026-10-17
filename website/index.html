@@ -41,6 +41,7 @@
       <span><strong>Beta Duration:</strong> <span data-phase-key="tickerDuration">35 Days (Sept 17 – Oct 21)</span> • <span id="top-ticker-day-elapsed">Day 31 of 35</span></span>
       <span><strong>Level Cap:</strong> 30 Active (Excavation Site 4 & Dalaran Live)</span>
       <span class="status-badge-highlight">Classic+ Standalone</span>
+      <span class="status-badge-highlight" style="background: rgba(56, 189, 248, 0.2); border-color: #38bdf8; color: #bae6fd;">🔥 Stress Test: Oct 21 (Free for All) • Name Reservation: Oct 27</span>
       <span class="status-badge-highlight" style="background: rgba(234, 179, 8, 0.2); border-color: #eab308; color: #fef08a;">🍺 Events: Brewfest & Harvest Concluded • Hallow's End Arrives Oct 18</span>
       <span><strong>Rulesets:</strong> PvP • PvE • RP • Hardcore</span>
       <span><strong>Engine:</strong> Ray-Traced GI (DX12)</span>
@@ -398,6 +399,15 @@
 
       <!-- Quick Resource Links Bar (Positioned below the hero dashboard) -->
       <nav class="quick-links-bar" aria-label="Official Guides and Tools">
+        <a href="https://foreverchanges.pro/" target="_blank" rel="noopener" class="quick-link-chip" style="background: rgba(56, 189, 248, 0.15); border-color: #38bdf8; color: #bae6fd;">
+          <span>🔄</span> ForeverChanges.pro
+        </a>
+        <a href="https://wowforevertools.com/" target="_blank" rel="noopener" class="quick-link-chip" style="background: rgba(16, 185, 129, 0.15); border-color: #10b981; color: #a7f3d0;">
+          <span>🛠️</span> WoW Forever Tools
+        </a>
+        <a href="https://www.zockify.com/forever/" target="_blank" rel="noopener" class="quick-link-chip" style="background: rgba(249, 115, 22, 0.15); border-color: #f97316; color: #fed7aa;">
+          <span>⚡</span> Zockify Forever
+        </a>
         <a href="https://www.wowhead.com/forever/news/everything-we-know-about-wow-forever-382827" target="_blank" rel="noopener" class="quick-link-chip">
           <span>🌐</span> Wowhead: Everything We Know
         </a>
@@ -597,7 +607,7 @@
           <span>Start: Sept 17, 2026 • Phase 2 (L30 Cap) Active Now • End: Oct 21, 2026</span>
         </div>
 
-        <!-- 3-Step Phase Stepper Grid -->
+        <!-- 5-Step Phase Stepper Grid -->
         <div class="beta-duration-stepper">
           <div class="beta-step-card">
             <span class="beta-step-badge completed">Completed • Phase 1</span>
@@ -618,11 +628,29 @@
           </div>
 
           <div class="beta-step-card">
-            <span class="beta-step-badge final">Final Phase • Pre-Launch</span>
-            <h3 class="beta-step-title">Server Wipe & Deployment</h3>
-            <div class="beta-step-dates">Oct 22 – Nov 3, 2026 • 14 Days (2 Weeks)</div>
+            <span class="beta-step-badge upcoming">Upcoming • 24 Hours</span>
+            <h3 class="beta-step-title">Open Beta Stress Test</h3>
+            <div class="beta-step-dates">October 21, 2026 • All Bnet Accounts</div>
             <p class="beta-step-desc">
-              All beta progress is wiped on October 21. Blizzard deploys final client patch 1.0, finishes stress-testing, and preps global launch on November 4, 2026.
+              Free 24-hour open stress test for all Battle.net accounts without invite or active subscription. Stress-testing server infrastructure and dynamic megarealm layering.
+            </p>
+          </div>
+
+          <div class="beta-step-card">
+            <span class="beta-step-badge upcoming">Upcoming • Pre-Launch</span>
+            <h3 class="beta-step-title">Early Name Reservation</h3>
+            <div class="beta-step-dates">October 27, 2026 • 10:00 AM PDT</div>
+            <p class="beta-step-desc">
+              Reserve up to 2 character names per realm and customize character aesthetics ahead of the global launch on November 4.
+            </p>
+          </div>
+
+          <div class="beta-step-card">
+            <span class="beta-step-badge final">Final Phase • Launch</span>
+            <h3 class="beta-step-title">Global Launch & Raids</h3>
+            <div class="beta-step-dates">Nov 4 & Dec 9, 2026 • Level 60</div>
+            <p class="beta-step-desc">
+              Full server reset, global launch on November 4 at Level 60 cap, followed by Tier 1 Raids (Barrow Deeps, Hyjal, Onyxia) unlocking December 9.
             </p>
           </div>
         </div>
@@ -3585,11 +3613,13 @@
 
   <!-- Native BiS Talent Tree Viewer Modal -->
   <div id="bis-talent-modal" class="modal-backdrop" hidden role="dialog" aria-modal="true">
-    <div class="modal-container" style="max-width: 1040px; width: 95vw; max-height: 92vh; display: flex; flex-direction: column; overflow-y: auto; padding: 1.75rem;">
+    <div id="modal-talent-calculator" class="modal-container" style="max-width: 1040px; width: 95vw; max-height: 92vh; display: flex; flex-direction: column; overflow-y: auto; padding: 1.75rem; position: relative;">
       <button id="bis-talent-modal-close" class="modal-close-btn" aria-label="Close Modal">✕</button>
       <div id="bis-talent-modal-content">
         <!-- Injected dynamically by talent-tree.js / bis.js -->
       </div>
+      <!-- Saved Builds Drawer Container for Calculator -->
+      <div id="talent-saved-builds-drawer" class="talent-saved-builds-drawer" hidden aria-label="My Saved Talent Builds"></div>
     </div>
   </div>
 
@@ -3715,6 +3745,9 @@
   <footer class="site-footer">
     <div class="app-container" style="padding-bottom: 0;">
       <div class="footer-links">
+        <a href="https://foreverchanges.pro/" target="_blank" rel="noopener" class="footer-link">ForeverChanges.pro</a>
+        <a href="https://wowforevertools.com/" target="_blank" rel="noopener" class="footer-link">WoW Forever Tools</a>
+        <a href="https://www.zockify.com/forever/" target="_blank" rel="noopener" class="footer-link">Zockify Forever</a>
         <a href="https://news.blizzard.com" target="_blank" rel="noopener" class="footer-link">Blizzard Official News</a>
         <a href="https://www.wowhead.com/forever" target="_blank" rel="noopener" class="footer-link">Wowhead Coverage</a>
         <a href="https://www.warcrafttavern.com/forever/" target="_blank" rel="noopener" class="footer-link">Warcraft Tavern Hub</a>
