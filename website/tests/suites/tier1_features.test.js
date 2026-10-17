@@ -764,6 +764,38 @@ export function runTier1Tests(collector, data) {
       expect(news45.title).toMatch(/1\.60\.1\.70425/);
       expect(news45.date).toMatch(/October 15,\s*2026/i);
     });
+
+    collector.test('1.13.6 Latest October 16-17, 2026 dispatches (news-46 to news-49) exist in newsFeed', () => {
+      const feed = coreData.newsFeed || [];
+      expect(feed.length).toBeGreaterThanOrEqual(49);
+      for (const id of ['news-46', 'news-47', 'news-48', 'news-49']) {
+        const item = feed.find(a => a.id === id);
+        expect(item).toBeDefined();
+        expect(item.title.length).toBeGreaterThanOrEqual(10);
+        expect(item.summary.length).toBeGreaterThanOrEqual(10);
+        expect(item.content.length).toBeGreaterThanOrEqual(50);
+        expect(item.url).toMatch(/^https?:\/\//);
+      }
+    });
+
+    collector.test('1.13.7 All news IDs in newsFeed are distinct and unique', () => {
+      const feed = coreData.newsFeed || [];
+      const idSet = new Set();
+      for (const item of feed) {
+        expect(item.id).toBeDefined();
+        expect(idSet.has(item.id)).toBe(false);
+        idSet.add(item.id);
+      }
+    });
+
+    collector.test('1.13.8 All news dispatches have valid sources and supported sourceTypes', () => {
+      const feed = coreData.newsFeed || [];
+      const validTypes = new Set(['blizzard', 'wowhead', 'tavern', 'mobalytics', 'method', 'custom']);
+      for (const item of feed) {
+        expect(item.source).toBeDefined();
+        expect(validTypes.has(item.sourceType)).toBe(true);
+      }
+    });
   });
 
   // =========================================================================

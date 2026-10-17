@@ -9,6 +9,8 @@
     "start": "npx serve . -l 3000",
     "preview": "npx serve . -l 3000",
     "test": "node scripts/validate.js && node scripts/validate-atlas.js",
+    "test:addons": "node scripts/validate-addons.mjs",
+    "package:addons": "node scripts/package-addons.js",
     "lint": "npx eslint js/ scripts/",
     "build:data": "node scripts/compile-scraped-data.js",
     "scrape": "node scripts/scrape-foreverchanges.js"

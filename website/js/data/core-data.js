@@ -15,13 +15,13 @@ const WOW_FOREVER_DATA = {
     "betaTotalWeeks": 5,
     "launchDate": "November 4, 2026",
     "raidsDate": "December 9, 2026",
-    "currentBetaPhase": "Phase 2: Level 30 Cap (LIVE NOW • Day 29 of 35)",
+    "currentBetaPhase": "Phase 2: Level 30 Cap (LIVE NOW • Day 31 of 35)",
     "clientBuild": "1.60.1.70425",
     "engineInfo": "Custom Ray-Traced Engine (Post-Warcraft III: Reforged Continuity)",
     "maxLevel": 60,
     "currentBetaCap": 30,
     "legacyPointsAtLaunch": 16,
-    "lastUpdated": "October 15, 2026"
+    "lastUpdated": "October 17, 2026"
   },
   "betaSchedule": {
     "totalDays": 35,
@@ -140,6 +140,97 @@ const WOW_FOREVER_DATA = {
     }
   ],
   "newsFeed": [
+    {
+      "id": "news-49",
+      "title": "Venruki $100,000 Duel Championship Day 1 Kicks Off: Opening Round Upsets, Ruthless Human & Earth Fury Dwarf Meta in Durotar",
+      "source": "Warcraft Tavern & Method.gg",
+      "sourceType": "tavern",
+      "author": "Venruki & Method Esports Desk",
+      "date": "October 17, 2026",
+      "tag": "Esports & Competitive Meta",
+      "summary": "The $100,000 Level 30 Duel Championship is officially underway outside Orgrimmar, with 64 gladiators battling inside the chalk ring as the newly overhauled racial abilities and Build 1.60.1.70425 class rebalances redefine competitive 1v1 pacing.",
+      "content": `The opening day of Venruki's $100,000 Level 30 Duel Championship has kicked off outside the Gates of Orgrimmar before a live Twitch audience of over 85,000 concurrent viewers:
+• Marquee Day 1 Matchup Highlights:
+  - Snutz (Affliction Drain Warlock) def. Whaazz (Subtlety Stunlock Rogue) 2-1: In an epic game 3 duel, Snutz survived a 14-second stunlock chain with 84 health remaining before Siphon Life and Death Coil attrition turned the tide.
+  - Mes (Arms Spearing Strike Warrior) def. Ziqo (Battle Mage) 2-0: Mes utilized Deep Wounds bleed tick timing and Shield Block to mitigate Shatter combos.
+  - Bean (Feral Powershift Druid) def. Pikaboo (Combat/Subtlety Hybrid) 2-1: Travel Form kiting inside the 40-yard chalk circle outlasted Rogue cooldown resets.
+• Racial & Rebalance Meta Analysis:
+  - The permanent removal of weapon specialization racials in Build 1.60.1.70425 has dramatically reshaped tournament loadouts.
+  - Alliance competitors utilizing Human 'Ruthless' (+2% all crit) and Dwarf 'Earth Fury' (+2% crit bonus) displayed lethal burst potential against Horde endurance setups.
+  - Shaman gladiators leveraging Lava Burst at Row 5 produced the highest single-GCD damage spikes of the tournament.
+• Championship Sunday Schedule:
+  - Upper Bracket Quarterfinals, Lower Bracket elimination rounds, and the Best-of-7 Grand Finals will broadcast tomorrow, Sunday, October 18 at 10:00 PDT on Twitch.tv/Venruki.`,
+      "url": "https://www.warcrafttavern.com/forever/news/venruki-100k-duel-championship-day-1-recap/"
+    },
+    {
+      "id": "news-48",
+      "title": "Tradeskill Compendium: Complete 1-300 Leveling Roadmaps, Reagent Acquisition Engine & 48 Classic Gathering Circuit Maps Live",
+      "source": "Wowhead Tradeskill Wire",
+      "sourceType": "wowhead",
+      "author": "Wowhead Professions & Economy Team",
+      "date": "October 17, 2026",
+      "tag": "Professions & Economy",
+      "summary": "All 13 primary and secondary professions receive comprehensive 1-300 leveling roadmaps, hybrid vendor and mob-drop reagent acquisition trees, and 48 classic terrain gathering route maps with curved flightpaths ahead of November 4 launch.",
+      "content": `Ahead of the November 4 global launch, Wowhead and the community tradeskill guild network have deployed the definitive Level 1–300 Professions Engine:
+• Complete 1–300 Step-by-Step Leveling Guides:
+  - Master leveling roadmaps across all 13 professions (Blacksmithing, Engineering, Alchemy, Leatherworking, Tailoring, Enchanting, Mining, Herbalism, Skinning, Cooking, First Aid, Fishing, and Survival).
+  - Exact material shopping lists, optimal orange/yellow craft spans, and minimal-waste training tiers from Apprentice through Artisan.
+• Interactive Classic Gathering Circuit Maps:
+  - 48 hand-calibrated classic zone route maps featuring smooth Bezier curved vectors optimized for Herbalism, Mining, and Skinning.
+  - High-density node loops covering Elwynn, Durotar, Westfall, Barrens, Hillsbrad Foothills, Arathi Highlands, and Stranglethorn Vale.
+• Hybrid Reagent Acquisition Engine:
+  - Full coordinate breakdowns for 80+ specialty tradeskill vendors (fluxes, thread, vials, bleaching powder, and limited-stock recipes).
+  - Mob drop rate tables and dedicated fishing waters tabs separating inland freshwater pools from coastal saltwater yields.
+• Launch Preparation Tips:
+  - Economic guidance on day-one gathering specializations and deterministic Merchant's Favor quartermaster investments.`,
+      "url": "https://www.wowhead.com/forever/news/tradeskill-compendium-1-300-leveling-roadmaps-gathering-circuits"
+    },
+    {
+      "id": "news-47",
+      "title": "Beta Build 1.60.1.70425 Post-Deployment Hotfixes: Shaman Lava Burst & Water Shield Polish, Dark Inspiration Persistence & Megarealm Capacity",
+      "source": "Blizzard Official / Blue Post",
+      "sourceType": "blizzard",
+      "author": "Community Manager Kaivax",
+      "date": "October 17, 2026",
+      "tag": "Patch Notes & Hotfixes",
+      "summary": "Blizzard operations deploy server-side hotfixes across all beta realms, refining Shaman spell interactions, fixing Priest Dark Inspiration persistence through resurrection, and expanding realm capacity for weekend tournament traffic and tomorrow's Hallow's End launch.",
+      "content": `Blizzard engineers rolled out targeted server hotfixes this morning across all active test megarealms following telemetry from Thursday's Build 1.60.1.70425 deployment:
+• Class Mechanics & Spell Tuning:
+  - Shaman: Fixed an interaction where Water Shield charges did not consistently replenish on certain Nature spell critical strikes. Smoothed damage progression for Lava Burst across ranks 1–4.
+  - Priest: Corrected an issue where the Dark Inspiration 5-rank spell damage aura could drop upon resurrection or cross-zone teleportation.
+  - Paladin: Revoke threat reduction now registers immediately on threat-tracking frames without requiring a target cycle.
+  - Racials: Verified that Human 'Ruthless' (+2% crit) and Dwarf 'Earth Fury' (+2% crit damage/healing bonus) scale accurately with off-hand weapon swings and hybrid healing spells.
+• Megarealm Infrastructure & Spectator Tuning:
+  - Scaled public test realm capacity and reduced input queuing latency outside the Gates of Orgrimmar to accommodate high spectator traffic during the Venruki $100k Tournament.
+• Seasonal Event Deployment:
+  - Staged encounter data and loot tables for the Level 30 'Shade of the Headless Rider' in Scarlet Monastery Graveyard, scheduled to unlock tomorrow, Sunday, October 18 at 10:00 PDT for Hallow's End!`,
+      "url": "https://news.blizzard.com/en-us/world-of-warcraft/beta-build-1601-70425-hotfixes-oct17"
+    },
+    {
+      "id": "news-46",
+      "title": "In-Game Companion Addon Suite Maintenance Update: ForeverPlates v2.1.1, ForeverLiquid v1.3.1 & ForeverDungeonJournal v1.6.2 Released",
+      "source": "WoW Forever Addon Engineering",
+      "sourceType": "blizzard",
+      "author": "Lead UI Architect Exehn & Marcus",
+      "date": "October 16, 2026",
+      "tag": "Addon Development & UI Tools",
+      "summary": "Maintenance update for the official companion addon suite rolling out for Camelot 12.0 engine and TOC 16001 standards, delivering combat nameplate stability, rested XP velocity calibration, and modularized dungeon journal maps.",
+      "content": `A synchronized maintenance update has been packaged and published for the official WoW Forever companion addon suite:
+• ForeverPlates (v2.1.1):
+  - Calibrated unit nameplate anchoring to prevent micro-stutter during high-density AoE trash packs in Excavation Site 4 and City of Dalaran.
+  - Refined threat boundary coloring and off-screen clamping vectors.
+• Foreverplatescastbars (v2.2.1):
+  - Fixed sub-pixel castbar border clipping and aligned target spell icons with classic 1px borders.
+• ForeverLiquid (v1.3.1):
+  - Updated the Obsidian Drawer rested XP projection curve for Level 20–30 leveling velocity.
+  - Mount Savings Fund countdown updated to track 100g and 1000g milestone targets simultaneously.
+• ForeverDungeonJournal (v1.6.2):
+  - Verified modular 64-file architecture with TOC 16001 compatibility for the Camelot 12.0 client engine.
+  - Updated sub-pixel map coordinates for the Dalaran Underbelly entrance and Relic Guardian encounter in Excavation Site 4.
+• Compliance & Verification:
+  - 100% pass on all 120 automated TOC, Lua syntax, and FrameXML integrity audits, ensuring zero combat taint under 12.0 secret value constraints.`,
+      "url": "https://news.blizzard.com/en-us/world-of-warcraft/companion-addon-suite-v211-release-oct16"
+    },
     {
       "id": "news-45",
       "title": "Beta Build 1.60.1.70425 Deployed: Sixteenth Beta Build Delivers 128 System Updates, Major Talent Tree Rebalancing & Racial Ability Overhaul",

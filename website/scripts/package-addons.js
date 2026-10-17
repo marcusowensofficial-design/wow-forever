@@ -11,6 +11,7 @@ import path from 'node:path';
 import crypto from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 import { createZipArchive } from './zip-util.js';
+import { validateAllAddons } from './validate-addons.mjs';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -96,6 +97,14 @@ function sha256File(filePath) {
 console.log('⚔️  WoW Forever Addon Release Packaging Pipeline (Cross-Platform Node)');
 console.log(`Source Addons: ${ADDONS_DIR}`);
 console.log(`Output Downloads: ${DOWNLOADS_DIR}`);
+
+console.log('🔍 Running Addon Suite Pre-Flight Integrity Audits...');
+const isValid = validateAllAddons();
+if (!isValid) {
+  console.error('\n❌ Packaging aborted: One or more addons failed integrity validation.');
+  process.exit(1);
+}
+console.log('✓ Pre-flight integrity audit passed. Proceeding with release packaging...\n');
 
 const manifest = [];
 let allSuiteFiles = [];
