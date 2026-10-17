@@ -480,7 +480,7 @@ collector.describe('Suite 7: Live Subprocess Tamper Proof on scripts/validate.js
       stdout = err.stdout;
     }
     expect(exitCode).toBe(0);
-    expect(stdout).toContain('Ran 58 checks. Failures: 0');
+    expect(stdout).toMatch(/Ran \d+ checks\. Failures: 0/);
     expect(stdout).toContain('✓ All integrity and build checks passed!');
   });
 

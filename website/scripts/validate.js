@@ -207,6 +207,104 @@ check('Professions data synchronization between JSON and JS bundle', () => {
   if (!profJsRaw.includes('window.WOW_REAGENT_SOURCES =')) {
     throw new Error('window.WOW_REAGENT_SOURCES not found in professions-data.js');
   }
+  if (!profJsRaw.includes('Rich Thorium Vein (Mining 275+)') || !profJsRaw.includes('Meaty Bat Wing')) {
+    throw new Error('professions-data.js bundle is missing synchronized Arcane Crystal or Meaty Bat Wing entries');
+  }
+
+  // Regression check: ensure cooking items (e.g., Meaty Bat Wing) never have mining nodes or ore types
+  const batWing = reagentJson['12223'];
+  if (!batWing || batWing.primaryType === 'ore' || batWing.miningNode || (batWing.minedFrom && batWing.minedFrom.length > 0)) {
+    throw new Error(`Meaty Bat Wing (12223) has invalid ore classification or mining node: ${JSON.stringify(batWing?.ctaText)}`);
+  }
+  if (batWing.ctaIcon !== '🍖' || !batWing.ctaText?.includes('this meat')) {
+    throw new Error(`Meaty Bat Wing (12223) missing meat CTA: ${JSON.stringify(batWing?.ctaText)}`);
+  }
+
+  // Ensure zero items have miningNode unless they are genuine minerals (and never smelted bars or engineering parts)
+  const mineralRegex = /\b(ores?|stones?|nuggets?|pyrite|bauxite|pitchblende|torbernite|obsidian|souldarite|dark iron|elementium|gems?|diamonds?|sapphires?|rub(?:y|ies)|emeralds?|agates?|opals?|citrines?|aquamarines?|malachite|tigerseye|shadowgems?|jade|moonstones?|blood of the mountain|vitriol|arcane crystal|crystals?)\b/i;
+  const expectedAnchors = {
+    ore: '#mined-from-object',
+    herb: '#gathered-from-object',
+    fished: '#fished-in',
+    skinned: '#skinned-from',
+    vendor: '#sold-by',
+    crafted: '#created-by-spell',
+    disenchant: '#disenchanted-from',
+    contained: '#contained-in-item',
+    mob_drop: '#dropped-by'
+  };
+
+  for (const [id, it] of Object.entries(reagentJson)) {
+    if (it.primaryType === 'ore' || it.miningNode) {
+      if (!mineralRegex.test(it.name.toLowerCase())) {
+        throw new Error(`Item ${it.name} (${id}) incorrectly classified as ore/miningNode: ${it.ctaText}`);
+      }
+      if (it.name.toLowerCase().endsWith(' bar')) {
+        throw new Error(`Smelted bar ${it.name} (${id}) should not have miningNode: ${JSON.stringify(it.miningNode)}`);
+      }
+    }
+    if (it.ctaText && it.ctaText.includes('this meat') && /shard|crystal|essence|dust/.test(it.name.toLowerCase())) {
+      throw new Error(`Enchanting reagent ${it.name} (${id}) incorrectly has meat CTA: ${it.ctaText}`);
+    }
+    // Verify all reagents have proper wowheadUrl anchors
+    const expAnchor = expectedAnchors[it.primaryType];
+    if (expAnchor && (!it.wowheadUrl || !it.wowheadUrl.includes(expAnchor))) {
+      throw new Error(`Item ${it.name} (${id}) has missing or mismatched wowheadUrl anchor: ${it.wowheadUrl} (expected ${expAnchor})`);
+    }
+  }
+
+  // Verify mining node skill accuracy
+  const darkIron = reagentJson['11370'];
+  if (darkIron?.miningNode?.skill !== 230 || !darkIron?.ctaText?.includes('230+')) {
+    throw new Error(`Dark Iron Ore (11370) has incorrect mining skill: ${darkIron?.ctaText}`);
+  }
+  const jade = reagentJson['1529'];
+  if (jade?.miningNode?.skill !== 125 || !jade?.ctaText?.includes('125+')) {
+    throw new Error(`Jade (1529) has incorrect mining skill: ${jade?.ctaText}`);
+  }
+  const citrine = reagentJson['3864'];
+  if (citrine?.miningNode?.skill !== 175 || !citrine?.ctaText?.includes('175+')) {
+    throw new Error(`Citrine (3864) has incorrect mining skill: ${citrine?.ctaText}`);
+  }
+  const arcaneCrystal = reagentJson['12363'];
+  if (!arcaneCrystal || arcaneCrystal.primaryType !== 'ore' || arcaneCrystal.miningNode?.skill !== 275 || !arcaneCrystal.ctaText?.includes('275+')) {
+    throw new Error(`Arcane Crystal (12363) has incorrect classification or mining skill: ${JSON.stringify(arcaneCrystal)}`);
+  }
+  if (arcaneCrystal.ctaIcon !== '⛏️' || !arcaneCrystal.wowheadUrl?.includes('#mined-from-object')) {
+    throw new Error(`Arcane Crystal (12363) missing mining CTA icon or wowhead anchor: ${JSON.stringify(arcaneCrystal)}`);
+  }
+
+  // Ensure Crystal Vial (8925) remains vendor-typed and Power Crystals remain non-ore
+  const crystalVial = reagentJson['8925'];
+  if (!crystalVial || crystalVial.primaryType !== 'vendor' || crystalVial.miningNode) {
+    throw new Error(`Crystal Vial (8925) should be vendor-typed without miningNode: ${JSON.stringify(crystalVial)}`);
+  }
+  for (const pcId of ['11184', '11185', '11186', '11188']) {
+    const pc = reagentJson[pcId];
+    if (pc && (pc.primaryType === 'ore' || pc.miningNode)) {
+      throw new Error(`Power Crystal ${pc.name} (${pcId}) should not be classified as ore: ${JSON.stringify(pc)}`);
+    }
+  }
+  const thorium = reagentJson['10620'];
+  if (thorium?.miningNode?.skill !== 275 || !thorium?.ctaText?.includes('275+')) {
+    throw new Error(`Thorium Ore (10620) has incorrect mining skill: ${thorium?.ctaText}`);
+  }
+
+  // Verify staple vendor items
+  if (reagentJson['3857']?.primaryType !== 'vendor' || reagentJson['3857']?.ctaIcon !== '🪙') {
+    throw new Error(`Coal (3857) should be vendor type`);
+  }
+  if (reagentJson['4536']?.primaryType !== 'vendor' || reagentJson['4536']?.ctaIcon !== '🪙') {
+    throw new Error(`Shiny Red Apple (4536) should be vendor type`);
+  }
+
+  // Verify cooking meat parts
+  if (reagentJson['5470']?.ctaIcon !== '🍖' || !reagentJson['5470']?.ctaText?.includes('meat')) {
+    throw new Error(`Thunder Lizard Tail (5470) missing meat CTA: ${reagentJson['5470']?.ctaText}`);
+  }
+  if (reagentJson['2251']?.ctaIcon !== '🍖' || !reagentJson['2251']?.ctaText?.includes('meat')) {
+    throw new Error(`Gooey Spider Leg (2251) missing meat CTA: ${reagentJson['2251']?.ctaText}`);
+  }
 });
 
 check('Professions category mapping and zero unmapped categories', () => {

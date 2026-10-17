@@ -28,12 +28,12 @@ window.WOW_REAGENT_SOURCES = {
   "159": {
     "id": 159,
     "name": "Refreshing Spring Water",
-    "primaryType": "ore",
-    "ctaIcon": "⛏️",
-    "ctaText": "Click here to see where to mine Copper Vein (Mining 1+)",
-    "summary": "Mined from Copper Vein (Mining 1+): Most in Durotar, Westfall and Duskwood.",
+    "primaryType": "vendor",
+    "ctaIcon": "🪙",
+    "ctaText": "Click here to see which vendors sell this (8 Vendors)",
+    "summary": "Sold by Trade & Supply Vendors: Tawny Grisette (Undercity), Wulan (Desolace), Super-Seller 680 (Desolace).",
     "isForeverNew": false,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=159#mined-from-object",
+    "wowheadUrl": "https://www.wowhead.com/forever/item=159#sold-by",
     "drops": [
       {
         "id": 251145,
@@ -278,18 +278,6 @@ window.WOW_REAGENT_SOURCES = {
       }
     ],
     "totalVendors": 200,
-    "minedFrom": [
-      {
-        "id": 1731,
-        "name": "Copper Vein",
-        "zones": [
-          "Zephras Isle",
-          "Mulgore",
-          "The Barrens"
-        ],
-        "pct": 0
-      }
-    ],
     "containedIn": [
       {
         "id": 176793,
@@ -317,11 +305,6 @@ window.WOW_REAGENT_SOURCES = {
         "pct": 100
       }
     ],
-    "miningNode": {
-      "name": "Copper Vein",
-      "skill": 1,
-      "zones": "Most in Durotar, Westfall and Duskwood"
-    },
     "topZones": [
       "Loch Modan",
       "Darkshore",
@@ -2146,12 +2129,12 @@ window.WOW_REAGENT_SOURCES = {
   "1179": {
     "id": 1179,
     "name": "Ice Cold Milk",
-    "primaryType": "mob_drop",
-    "ctaIcon": "⚔️",
-    "ctaText": "Click here to see which mobs drop this (200 Mobs)",
-    "summary": "Dropped by Moonrage Darkrunner (7.4%) in Silverpine Forest, Moonrage Whitescalp (6%) in Silverpine Forest, Fel Interloper (11.9%) in Westfall.",
+    "primaryType": "vendor",
+    "ctaIcon": "🪙",
+    "ctaText": "Click here to see which vendors sell this (8 Vendors)",
+    "summary": "Sold by Trade & Supply Vendors: Tawny Grisette (Undercity), Trak'gen (Orgrimmar), Innkeeper Wiley (The Barrens).",
     "isForeverNew": false,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=1179#dropped-by",
+    "wowheadUrl": "https://www.wowhead.com/forever/item=1179#sold-by",
     "drops": [
       {
         "id": 1770,
@@ -2434,12 +2417,12 @@ window.WOW_REAGENT_SOURCES = {
   "1205": {
     "id": 1205,
     "name": "Melon Juice",
-    "primaryType": "mob_drop",
-    "ctaIcon": "⚔️",
-    "ctaText": "Click here to see which mobs drop this (200 Mobs)",
-    "summary": "Dropped by Tamed Battleboar (100%) in Razorfen Kraul, Stitched Patroller (50%) in Duskwood, First Mate Snellig (11.3%) in Wetlands.",
+    "primaryType": "vendor",
+    "ctaIcon": "🪙",
+    "ctaText": "Click here to see which vendors sell this (8 Vendors)",
+    "summary": "Sold by Trade & Supply Vendors: Tawny Grisette (Undercity), Super-Seller 680 (Desolace), Trak'gen (Orgrimmar).",
     "isForeverNew": false,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=1205#dropped-by",
+    "wowheadUrl": "https://www.wowhead.com/forever/item=1205#sold-by",
     "drops": [
       {
         "id": 4535,
@@ -3702,8 +3685,8 @@ window.WOW_REAGENT_SOURCES = {
     "name": "Jade",
     "primaryType": "ore",
     "ctaIcon": "⛏️",
-    "ctaText": "Click here to see where to mine Iron Deposit (Mining 65+)",
-    "summary": "Mined from Iron Deposit (Mining 65+): Most in Wetlands, Duskwood and Silverpine Forest.",
+    "ctaText": "Click here to see where to mine Iron Deposit (Mining 125+)",
+    "summary": "Mined from Iron Deposit (Mining 125+): Most in Arathi Highlands, Alterac Mountains and Stranglethorn Vale.",
     "isForeverNew": false,
     "wowheadUrl": "https://www.wowhead.com/forever/item=1529#mined-from-object",
     "drops": [
@@ -3934,9 +3917,9 @@ window.WOW_REAGENT_SOURCES = {
       }
     ],
     "miningNode": {
-      "name": "Tin Vein",
-      "skill": 65,
-      "zones": "Most in Wetlands, Duskwood and Silverpine Forest"
+      "name": "Iron Deposit",
+      "skill": 125,
+      "zones": "Most in Arathi Highlands, Alterac Mountains and Stranglethorn Vale"
     },
     "topZones": [
       "Stranglethorn Vale"
@@ -3945,12 +3928,12 @@ window.WOW_REAGENT_SOURCES = {
   "1645": {
     "id": 1645,
     "name": "Moonberry Juice",
-    "primaryType": "mob_drop",
-    "ctaIcon": "⚔️",
-    "ctaText": "Click here to see which mobs drop this (200 Mobs)",
-    "summary": "Dropped by Kazkaz the Unholy (100%), Outcast Marauder (50%) in Shen'dralas, Firemane Ash Tail (14.3%) in Dustwallow Marsh.",
+    "primaryType": "vendor",
+    "ctaIcon": "🪙",
+    "ctaText": "Click here to see which vendors sell this (8 Vendors)",
+    "summary": "Sold by Trade & Supply Vendors: Tawny Grisette (Undercity), Super-Seller 680 (Desolace), Trak'gen (Orgrimmar).",
     "isForeverNew": false,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=1645#dropped-by",
+    "wowheadUrl": "https://www.wowhead.com/forever/item=1645#sold-by",
     "drops": [
       {
         "id": 221924,
@@ -4231,8 +4214,8 @@ window.WOW_REAGENT_SOURCES = {
     "name": "Lesser Moonstone",
     "primaryType": "ore",
     "ctaIcon": "⛏️",
-    "ctaText": "Click here to see where to mine Iron Deposit (Mining 65+)",
-    "summary": "Mined from Iron Deposit (Mining 65+): Most in Wetlands, Duskwood and Silverpine Forest.",
+    "ctaText": "Click here to see where to mine Iron Deposit (Mining 125+)",
+    "summary": "Mined from Iron Deposit (Mining 125+): Most in Arathi Highlands, Alterac Mountains and Stranglethorn Vale.",
     "isForeverNew": false,
     "wowheadUrl": "https://www.wowhead.com/forever/item=1705#mined-from-object",
     "drops": [
@@ -4464,9 +4447,9 @@ window.WOW_REAGENT_SOURCES = {
       }
     ],
     "miningNode": {
-      "name": "Tin Vein",
-      "skill": 65,
-      "zones": "Most in Wetlands, Duskwood and Silverpine Forest"
+      "name": "Iron Deposit",
+      "skill": 125,
+      "zones": "Most in Arathi Highlands, Alterac Mountains and Stranglethorn Vale"
     },
     "topZones": [
       "Stonetalon Mountains",
@@ -4477,12 +4460,12 @@ window.WOW_REAGENT_SOURCES = {
   "1708": {
     "id": 1708,
     "name": "Sweet Nectar",
-    "primaryType": "mob_drop",
-    "ctaIcon": "⚔️",
-    "ctaText": "Click here to see which mobs drop this (200 Mobs)",
-    "summary": "Dropped by Giant Yeti (13.1%) in Alterac Mountains, Morloch (18.7%) in Alterac Valley, Mountain Yeti (9.6%) in Alterac Mountains.",
+    "primaryType": "vendor",
+    "ctaIcon": "🪙",
+    "ctaText": "Click here to see which vendors sell this (8 Vendors)",
+    "summary": "Sold by Trade & Supply Vendors: Tawny Grisette (Undercity), Super-Seller 680 (Desolace), Trak'gen (Orgrimmar).",
     "isForeverNew": false,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=1708#dropped-by",
+    "wowheadUrl": "https://www.wowhead.com/forever/item=1708#sold-by",
     "drops": [
       {
         "id": 2251,
@@ -4765,8 +4748,8 @@ window.WOW_REAGENT_SOURCES = {
     "id": 2251,
     "name": "Gooey Spider Leg",
     "primaryType": "mob_drop",
-    "ctaIcon": "⚔️",
-    "ctaText": "Click here to see which mobs drop this (22 Mobs)",
+    "ctaIcon": "🍖",
+    "ctaText": "Click here to see which mobs drop this meat (22 Mobs)",
     "summary": "Dropped by Giant Plains Creeper (46.2%) in Arathi Highlands, Plains Creeper (42.7%) in Arathi Highlands, Black Widow Hatchling (34.1%) in Duskwood.",
     "isForeverNew": false,
     "wowheadUrl": "https://www.wowhead.com/forever/item=2251#dropped-by",
@@ -6606,12 +6589,12 @@ window.WOW_REAGENT_SOURCES = {
   "2589": {
     "id": 2589,
     "name": "Linen Cloth",
-    "primaryType": "ore",
-    "ctaIcon": "⛏️",
-    "ctaText": "Click here to see where to mine Copper Vein (Mining 1+)",
-    "summary": "Mined from Copper Vein (Mining 1+): Most in Durotar, Westfall and Duskwood.",
+    "primaryType": "mob_drop",
+    "ctaIcon": "⚔️",
+    "ctaText": "Click here to see which mobs drop this (200 Mobs)",
+    "summary": "Dropped by Venture Co. Drudger (66.5%) in The Barrens, Southsea Brigand (63.3%) in The Barrens, Razormane Defender (65%) in The Barrens.",
     "isForeverNew": false,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=2589#mined-from-object",
+    "wowheadUrl": "https://www.wowhead.com/forever/item=2589#dropped-by",
     "drops": [
       {
         "id": 3284,
@@ -6757,18 +6740,6 @@ window.WOW_REAGENT_SOURCES = {
       }
     ],
     "totalDropMobs": 200,
-    "minedFrom": [
-      {
-        "id": 1731,
-        "name": "Copper Vein",
-        "zones": [
-          "Zephras Isle",
-          "Mulgore",
-          "The Barrens"
-        ],
-        "pct": 0
-      }
-    ],
     "containedIn": [
       {
         "id": 626752,
@@ -6795,12 +6766,7 @@ window.WOW_REAGENT_SOURCES = {
         "name": "Gunther's Books",
         "pct": 0.8
       }
-    ],
-    "miningNode": {
-      "name": "Copper Vein",
-      "skill": 1,
-      "zones": "Most in Durotar, Westfall and Duskwood"
-    }
+    ]
   },
   "2592": {
     "id": 2592,
@@ -7001,12 +6967,12 @@ window.WOW_REAGENT_SOURCES = {
   "2594": {
     "id": 2594,
     "name": "Flagon of Dwarven Honeymead",
-    "primaryType": "mob_drop",
-    "ctaIcon": "⚔️",
-    "ctaText": "Click here to see which mobs drop this (1 Mobs)",
-    "summary": "Dropped by Stomper Kreeg (33.3%) in Dire Maul.",
+    "primaryType": "vendor",
+    "ctaIcon": "🪙",
+    "ctaText": "Click here to see which vendors sell this (8 Vendors)",
+    "summary": "Sold by Trade & Supply Vendors: Barkeep Morag (Orgrimmar), Roberto Pupellyverbos (Stormwind City), Sergeant De Vries (Elwynn Forest).",
     "isForeverNew": false,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=2594#dropped-by",
+    "wowheadUrl": "https://www.wowhead.com/forever/item=2594#sold-by",
     "drops": [
       {
         "id": 14322,
@@ -7134,12 +7100,12 @@ window.WOW_REAGENT_SOURCES = {
   "2596": {
     "id": 2596,
     "name": "Skin of Dwarven Stout",
-    "primaryType": "mob_drop",
-    "ctaIcon": "⚔️",
-    "ctaText": "Click here to see which mobs drop this (1 Mobs)",
-    "summary": "Dropped by Stomper Kreeg (25%) in Dire Maul.",
+    "primaryType": "vendor",
+    "ctaIcon": "🪙",
+    "ctaText": "Click here to see which vendors sell this (8 Vendors)",
+    "summary": "Sold by Trade & Supply Vendors: Barkeep Morag (Orgrimmar), Roberto Pupellyverbos (Stormwind City), Sergeant De Vries (Elwynn Forest).",
     "isForeverNew": false,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=2596#dropped-by",
+    "wowheadUrl": "https://www.wowhead.com/forever/item=2596#sold-by",
     "drops": [
       {
         "id": 14322,
@@ -7501,12 +7467,12 @@ window.WOW_REAGENT_SOURCES = {
   "2672": {
     "id": 2672,
     "name": "Stringy Wolf Meat",
-    "primaryType": "ore",
-    "ctaIcon": "⛏️",
-    "ctaText": "Click here to see where to mine Copper Vein (Mining 1+)",
-    "summary": "Mined from Copper Vein (Mining 1+): Most in Durotar, Westfall and Duskwood.",
+    "primaryType": "mob_drop",
+    "ctaIcon": "🍖",
+    "ctaText": "Click here to see which mobs drop this meat (110 Mobs)",
+    "summary": "Dropped by Prowler (77.8%) in Elwynn Forest, Mottled Worg (76.3%) in Silverpine Forest, Prairie Wolf Alpha (75.6%) in Mulgore.",
     "isForeverNew": false,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=2672#mined-from-object",
+    "wowheadUrl": "https://www.wowhead.com/forever/item=2672#dropped-by",
     "drops": [
       {
         "id": 118,
@@ -7654,30 +7620,13 @@ window.WOW_REAGENT_SOURCES = {
       }
     ],
     "totalDropMobs": 110,
-    "minedFrom": [
-      {
-        "id": 1731,
-        "name": "Copper Vein",
-        "zones": [
-          "Zephras Isle",
-          "Mulgore",
-          "The Barrens"
-        ],
-        "pct": 0
-      }
-    ],
     "containedIn": [
       {
         "id": 102985,
         "name": "Balnir Snapdragons",
         "pct": 0.1
       }
-    ],
-    "miningNode": {
-      "name": "Copper Vein",
-      "skill": 1,
-      "zones": "Most in Durotar, Westfall and Duskwood"
-    }
+    ]
   },
   "2673": {
     "id": 2673,
@@ -10201,12 +10150,7 @@ window.WOW_REAGENT_SOURCES = {
         "learn": 1,
         "source": "Trainer"
       }
-    ],
-    "miningNode": {
-      "name": "Copper Vein",
-      "skill": 1,
-      "zones": "Most in Durotar, Westfall and Duskwood"
-    }
+    ]
   },
   "2841": {
     "id": 2841,
@@ -10248,12 +10192,7 @@ window.WOW_REAGENT_SOURCES = {
         "learn": 75,
         "source": "Trainer"
       }
-    ],
-    "miningNode": {
-      "name": "Silver Vein",
-      "skill": 75,
-      "zones": "Most in Arathi Highlands, Alterac Mountains and Stranglethorn Vale"
-    }
+    ]
   },
   "2880": {
     "id": 2880,
@@ -12600,12 +12539,7 @@ window.WOW_REAGENT_SOURCES = {
         "learn": 125,
         "source": "Trainer"
       }
-    ],
-    "miningNode": {
-      "name": "Iron Deposit",
-      "skill": 125,
-      "zones": "Most in Arathi Highlands, Alterac Mountains and Stranglethorn Vale"
-    }
+    ]
   },
   "3576": {
     "id": 3576,
@@ -12626,12 +12560,7 @@ window.WOW_REAGENT_SOURCES = {
         "learn": 65,
         "source": "Trainer"
       }
-    ],
-    "miningNode": {
-      "name": "Tin Vein",
-      "skill": 65,
-      "zones": "Most in Wetlands, Duskwood and Silverpine Forest"
-    }
+    ]
   },
   "3577": {
     "id": 3577,
@@ -12661,12 +12590,7 @@ window.WOW_REAGENT_SOURCES = {
         "learn": 155,
         "source": "Trainer"
       }
-    ],
-    "miningNode": {
-      "name": "Gold Vein",
-      "skill": 155,
-      "zones": "Most in Arathi Highlands, Alterac Mountains and Stranglethorn Vale"
-    }
+    ]
   },
   "3667": {
     "id": 3667,
@@ -13622,12 +13546,12 @@ window.WOW_REAGENT_SOURCES = {
   "3857": {
     "id": 3857,
     "name": "Coal",
-    "primaryType": "mob_drop",
-    "ctaIcon": "⚔️",
-    "ctaText": "Click here to see which mobs drop this (49 Mobs)",
-    "summary": "Dropped by Ancient Fire Elemental (100%) in Alterac Mountains, Entropic Beast (19.1%) in Felwood, Living Blaze (17.2%) in Un'Goro Crater.",
+    "primaryType": "vendor",
+    "ctaIcon": "🪙",
+    "ctaText": "Click here to see which vendors sell this (8 Vendors)",
+    "summary": "Sold by Trade & Supply Vendors: Shandrina (Ashenvale), Edna Mullby (Stormwind City), Reagent Bot (Westfall).",
     "isForeverNew": false,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=3857#dropped-by",
+    "wowheadUrl": "https://www.wowhead.com/forever/item=3857#sold-by",
     "drops": [
       {
         "id": 217305,
@@ -14078,20 +14002,15 @@ window.WOW_REAGENT_SOURCES = {
         "learn": 175,
         "source": "Trainer"
       }
-    ],
-    "miningNode": {
-      "name": "Mithril Deposit",
-      "skill": 175,
-      "zones": "Most in Badlands, The Hinterlands and Alterac Mountains"
-    }
+    ]
   },
   "3864": {
     "id": 3864,
     "name": "Citrine",
     "primaryType": "ore",
     "ctaIcon": "⛏️",
-    "ctaText": "Click here to see where to mine Mithril Deposit (Mining 125+)",
-    "summary": "Mined from Mithril Deposit (Mining 125+): Most in Arathi Highlands, Alterac Mountains and Stranglethorn Vale.",
+    "ctaText": "Click here to see where to mine Mithril Deposit (Mining 175+)",
+    "summary": "Mined from Mithril Deposit (Mining 175+): Most in Badlands, The Hinterlands and Alterac Mountains.",
     "isForeverNew": false,
     "wowheadUrl": "https://www.wowhead.com/forever/item=3864#mined-from-object",
     "drops": [
@@ -14324,9 +14243,9 @@ window.WOW_REAGENT_SOURCES = {
       }
     ],
     "miningNode": {
-      "name": "Iron Deposit",
-      "skill": 125,
-      "zones": "Most in Arathi Highlands, Alterac Mountains and Stranglethorn Vale"
+      "name": "Mithril Deposit",
+      "skill": 175,
+      "zones": "Most in Badlands, The Hinterlands and Alterac Mountains"
     },
     "topZones": [
       "Dustwallow Marsh",
@@ -17408,12 +17327,12 @@ window.WOW_REAGENT_SOURCES = {
   "4536": {
     "id": 4536,
     "name": "Shiny Red Apple",
-    "primaryType": "ore",
-    "ctaIcon": "⛏️",
-    "ctaText": "Click here to see where to mine Copper Vein (Mining 1+)",
-    "summary": "Mined from Copper Vein (Mining 1+): Most in Durotar, Westfall and Duskwood.",
+    "primaryType": "vendor",
+    "ctaIcon": "🪙",
+    "ctaText": "Click here to see which vendors sell this (8 Vendors)",
+    "summary": "Sold by Trade & Supply Vendors: Wulan (Desolace), Tharynn Bouden (Elwynn Forest), Nyalah Brightfire (Zephras Isle).",
     "isForeverNew": false,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=4536#mined-from-object",
+    "wowheadUrl": "https://www.wowhead.com/forever/item=4536#sold-by",
     "drops": [
       {
         "id": 1934,
@@ -17658,18 +17577,6 @@ window.WOW_REAGENT_SOURCES = {
       }
     ],
     "totalVendors": 66,
-    "minedFrom": [
-      {
-        "id": 1731,
-        "name": "Copper Vein",
-        "zones": [
-          "Zephras Isle",
-          "Mulgore",
-          "The Barrens"
-        ],
-        "pct": 0
-      }
-    ],
     "containedIn": [
       {
         "id": 176793,
@@ -17697,11 +17604,6 @@ window.WOW_REAGENT_SOURCES = {
         "pct": 0.2
       }
     ],
-    "miningNode": {
-      "name": "Copper Vein",
-      "skill": 1,
-      "zones": "Most in Durotar, Westfall and Duskwood"
-    },
     "topZones": [
       "Westfall",
       "Loch Modan",
@@ -18183,12 +18085,12 @@ window.WOW_REAGENT_SOURCES = {
   "4605": {
     "id": 4605,
     "name": "Red-speckled Mushroom",
-    "primaryType": "mob_drop",
-    "ctaIcon": "⚔️",
-    "ctaText": "Click here to see which mobs drop this (63 Mobs)",
-    "summary": "Dropped by Deviate Lasher (24.2%) in Wailing Caverns, Rot Hide Brute (7.7%) in Silverpine Forest, Ravenclaw Slave (8.3%) in Silverpine Forest.",
+    "primaryType": "vendor",
+    "ctaIcon": "🪙",
+    "ctaText": "Click here to see which vendors sell this (8 Vendors)",
+    "summary": "Sold by Trade & Supply Vendors: Tawny Grisette (Undercity), Donaal Downbreeze (Zephras Isle), Coriella Calmbreeze (Zephras Isle).",
     "isForeverNew": false,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=4605#dropped-by",
+    "wowheadUrl": "https://www.wowhead.com/forever/item=4605#sold-by",
     "drops": [
       {
         "id": 5055,
@@ -18732,8 +18634,8 @@ window.WOW_REAGENT_SOURCES = {
     "id": 5116,
     "name": "Long Tail Feather",
     "primaryType": "mob_drop",
-    "ctaIcon": "⚔️",
-    "ctaText": "Click here to see which mobs drop this (37 Mobs)",
+    "ctaIcon": "🍖",
+    "ctaText": "Click here to see which mobs drop this meat (37 Mobs)",
     "summary": "Dropped by Giant Buzzard (23.8%) in Badlands, Salt Flats Scavenger (22.9%) in Thousand Needles, Buzzard (24%) in Badlands.",
     "isForeverNew": false,
     "wowheadUrl": "https://www.wowhead.com/forever/item=5116#dropped-by",
@@ -18983,8 +18885,8 @@ window.WOW_REAGENT_SOURCES = {
     "id": 5465,
     "name": "Small Spider Leg",
     "primaryType": "mob_drop",
-    "ctaIcon": "⚔️",
-    "ctaText": "Click here to see which mobs drop this (64 Mobs)",
+    "ctaIcon": "🍖",
+    "ctaText": "Click here to see which mobs drop this meat (64 Mobs)",
     "summary": "Dropped by Moss Stalker (66.2%) in Silverpine Forest, Cliff Lurker (67.3%) in Loch Modan, Mist Creeper (66.7%) in Silverpine Forest.",
     "isForeverNew": false,
     "wowheadUrl": "https://www.wowhead.com/forever/item=5465#dropped-by",
@@ -19614,8 +19516,8 @@ window.WOW_REAGENT_SOURCES = {
     "id": 5470,
     "name": "Thunder Lizard Tail",
     "primaryType": "mob_drop",
-    "ctaIcon": "⚔️",
-    "ctaText": "Click here to see which mobs drop this (8 Mobs)",
+    "ctaIcon": "🍖",
+    "ctaText": "Click here to see which mobs drop this meat (8 Mobs)",
     "summary": "Dropped by Thunderhead (35.7%) in The Barrens, Stormhide (35.8%) in The Barrens, Stormsnout (32.9%) in The Barrens.",
     "isForeverNew": false,
     "wowheadUrl": "https://www.wowhead.com/forever/item=5470#dropped-by",
@@ -21219,12 +21121,7 @@ window.WOW_REAGENT_SOURCES = {
         "learn": 230,
         "source": "Trainer"
       }
-    ],
-    "miningNode": {
-      "name": "Truesilver Deposit",
-      "skill": 230,
-      "zones": "Most in Badlands, The Hinterlands and Alterac Mountains"
-    }
+    ]
   },
   "6048": {
     "id": 6048,
@@ -21914,12 +21811,12 @@ window.WOW_REAGENT_SOURCES = {
   "6303": {
     "id": 6303,
     "name": "Raw Slitherskin Mackerel",
-    "primaryType": "ore",
-    "ctaIcon": "⛏️",
-    "ctaText": "Click here to see where to mine Copper Vein (Mining 1+)",
-    "summary": "Mined from Copper Vein (Mining 1+): Most in Durotar, Westfall and Duskwood.",
+    "primaryType": "fished",
+    "ctaIcon": "🎣",
+    "ctaText": "Click here to see where to fish this (7 Waters)",
+    "summary": "Fished from open waters in Darkshore (13.1%), The Barrens (5.5%), Durotar (59.7%) or bought from 8 fishing vendors.",
     "isForeverNew": false,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=6303#mined-from-object",
+    "wowheadUrl": "https://www.wowhead.com/forever/item=6303#fished-in",
     "drops": [
       {
         "id": 271080,
@@ -22214,18 +22111,6 @@ window.WOW_REAGENT_SOURCES = {
         "pct": 1.3
       }
     ],
-    "minedFrom": [
-      {
-        "id": 1731,
-        "name": "Copper Vein",
-        "zones": [
-          "Zephras Isle",
-          "Mulgore",
-          "The Barrens"
-        ],
-        "pct": 0
-      }
-    ],
     "containedIn": [
       {
         "id": 103600,
@@ -22233,11 +22118,6 @@ window.WOW_REAGENT_SOURCES = {
         "pct": 0.2
       }
     ],
-    "miningNode": {
-      "name": "Copper Vein",
-      "skill": 1,
-      "zones": "Most in Durotar, Westfall and Duskwood"
-    },
     "topZones": [
       "Darnassus",
       "Wetlands",
@@ -22634,12 +22514,12 @@ window.WOW_REAGENT_SOURCES = {
   "6358": {
     "id": 6358,
     "name": "Oily Blackmouth",
-    "primaryType": "mob_drop",
-    "ctaIcon": "⚔️",
-    "ctaText": "Click here to see where to get this reagent",
-    "summary": "",
+    "primaryType": "fished",
+    "ctaIcon": "🎣",
+    "ctaText": "Click here to see where to fish this (8 Waters)",
+    "summary": "Fished from open waters in Stranglethorn Vale (15.7%), The Barrens (18.3%), Feralas (9.3%).",
     "isForeverNew": false,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=6358",
+    "wowheadUrl": "https://www.wowhead.com/forever/item=6358#fished-in",
     "fishedIn": [
       {
         "id": 33,
@@ -24371,12 +24251,12 @@ window.WOW_REAGENT_SOURCES = {
   "7067": {
     "id": 7067,
     "name": "Elemental Earth",
-    "primaryType": "herb",
-    "ctaIcon": "🌿",
-    "ctaText": "Click here to see where to gather this herb",
-    "summary": "Gathered via Herbalism: Stranglethorn Vale, Feralas, Arathi Highlands.",
+    "primaryType": "mob_drop",
+    "ctaIcon": "⚔️",
+    "ctaText": "Click here to see which mobs drop this (54 Mobs)",
+    "summary": "Dropped by Rock Elemental (9.6%) in Badlands, Rumbling Exile (9.9%) in Arathi Highlands, Lesser Rock Elemental (8.8%) in Badlands.",
     "isForeverNew": false,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=7067#gathered-from-object",
+    "wowheadUrl": "https://www.wowhead.com/forever/item=7067#dropped-by",
     "drops": [
       {
         "id": 92,
@@ -24539,32 +24419,12 @@ window.WOW_REAGENT_SOURCES = {
         "pct": 4.6
       },
       {
-        "id": 2040,
-        "name": "Mithril Deposit",
-        "zones": [
-          "The Hinterlands",
-          "Tanaris",
-          "Azshara"
-        ],
-        "pct": 0
-      },
-      {
         "id": 150082,
         "name": "Small Thorium Vein",
         "zones": [
           "Blasted Lands"
         ],
         "pct": 13.2
-      },
-      {
-        "id": 324,
-        "name": "Small Thorium Vein",
-        "zones": [
-          "Un'Goro Crater",
-          "Silithus",
-          "Burning Steppes"
-        ],
-        "pct": 0
       },
       {
         "id": 150079,
@@ -24575,50 +24435,13 @@ window.WOW_REAGENT_SOURCES = {
         "pct": 8.1
       }
     ],
-    "gatheredFrom": [
-      {
-        "id": 2046,
-        "name": "Goldthorn",
-        "zones": [
-          "Stranglethorn Vale",
-          "Feralas",
-          "Arathi Highlands"
-        ],
-        "pct": 0
-      },
-      {
-        "id": 1623,
-        "name": "Wild Steelbloom",
-        "zones": [
-          "Stranglethorn Vale",
-          "Stonetalon Mountains",
-          "Arathi Highlands"
-        ],
-        "pct": 0
-      },
-      {
-        "id": 2041,
-        "name": "Liferoot",
-        "zones": [
-          "Dustwallow Marsh",
-          "Stranglethorn Vale",
-          "Swamp of Sorrows"
-        ],
-        "pct": 0
-      }
-    ],
     "containedIn": [
       {
         "id": 20603,
         "name": "Bag of Spoils",
         "pct": 10.3
       }
-    ],
-    "miningNode": {
-      "name": "Mithril Deposit",
-      "skill": 175,
-      "zones": "Most in Badlands, The Hinterlands and Alterac Mountains"
-    }
+    ]
   },
   "7068": {
     "id": 7068,
@@ -24804,12 +24627,12 @@ window.WOW_REAGENT_SOURCES = {
   "7070": {
     "id": 7070,
     "name": "Elemental Water",
-    "primaryType": "herb",
-    "ctaIcon": "🌿",
-    "ctaText": "Click here to see where to gather this herb",
-    "summary": "Gathered via Herbalism: Wetlands, Stranglethorn Vale, Ashenvale.",
+    "primaryType": "mob_drop",
+    "ctaIcon": "⚔️",
+    "ctaText": "Click here to see which mobs drop this (35 Mobs)",
+    "summary": "Dropped by Hydrospawn (22%) in Dire Maul, Seeker Aqualon (37.1%) in Redridge Mountains, Cresting Exile (10.3%) in Arathi Highlands.",
     "isForeverNew": false,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=7070#gathered-from-object",
+    "wowheadUrl": "https://www.wowhead.com/forever/item=7070#dropped-by",
     "drops": [
       {
         "id": 13280,
@@ -24960,36 +24783,6 @@ window.WOW_REAGENT_SOURCES = {
         "minLevel": 42,
         "maxLevel": 55,
         "pct": 0.7
-      }
-    ],
-    "gatheredFrom": [
-      {
-        "id": 2045,
-        "name": "Stranglekelp",
-        "zones": [
-          "Wetlands",
-          "Stranglethorn Vale",
-          "Ashenvale"
-        ],
-        "pct": 0
-      },
-      {
-        "id": 142141,
-        "name": "Arthas' Tears",
-        "zones": [
-          "Eastern Plaguelands",
-          "Western Plaguelands",
-          "Razorfen Downs"
-        ],
-        "pct": 0
-      },
-      {
-        "id": 176642,
-        "name": "Arthas' Tears",
-        "zones": [
-          "Felwood"
-        ],
-        "pct": 0
       }
     ],
     "containedIn": [
@@ -26279,8 +26072,8 @@ window.WOW_REAGENT_SOURCES = {
     "name": "Aquamarine",
     "primaryType": "ore",
     "ctaIcon": "⛏️",
-    "ctaText": "Click here to see where to mine Mithril Deposit (Mining 125+)",
-    "summary": "Mined from Mithril Deposit (Mining 125+): Most in Arathi Highlands, Alterac Mountains and Stranglethorn Vale.",
+    "ctaText": "Click here to see where to mine Mithril Deposit (Mining 175+)",
+    "summary": "Mined from Mithril Deposit (Mining 175+): Most in Badlands, The Hinterlands and Alterac Mountains.",
     "isForeverNew": false,
     "wowheadUrl": "https://www.wowhead.com/forever/item=7909#mined-from-object",
     "drops": [
@@ -26514,9 +26307,9 @@ window.WOW_REAGENT_SOURCES = {
       }
     ],
     "miningNode": {
-      "name": "Iron Deposit",
-      "skill": 125,
-      "zones": "Most in Arathi Highlands, Alterac Mountains and Stranglethorn Vale"
+      "name": "Mithril Deposit",
+      "skill": 175,
+      "zones": "Most in Badlands, The Hinterlands and Alterac Mountains"
     },
     "topZones": [
       "Feralas",
@@ -29831,12 +29624,12 @@ window.WOW_REAGENT_SOURCES = {
   "8766": {
     "id": 8766,
     "name": "Morning Glory Dew",
-    "primaryType": "mob_drop",
-    "ctaIcon": "⚔️",
-    "ctaText": "Click here to see which mobs drop this (200 Mobs)",
-    "summary": "Dropped by Cho'Rush the Observer (31.5%) in Dire Maul, Grand Inquisitor Isillien (33.3%) in Western Plaguelands, Flamekin Torcher (12.2%) in Burning Steppes.",
+    "primaryType": "vendor",
+    "ctaIcon": "🪙",
+    "ctaText": "Click here to see which vendors sell this (8 Vendors)",
+    "summary": "Sold by Trade & Supply Vendors: Tawny Grisette (Undercity), Innkeeper Wiley (The Barrens), Barkeep Morag (Orgrimmar).",
     "isForeverNew": false,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=8766#dropped-by",
+    "wowheadUrl": "https://www.wowhead.com/forever/item=8766#sold-by",
     "drops": [
       {
         "id": 14324,
@@ -30366,8 +30159,8 @@ window.WOW_REAGENT_SOURCES = {
     "id": 8959,
     "name": "Raw Spinefin Halibut",
     "primaryType": "mob_drop",
-    "ctaIcon": "⚔️",
-    "ctaText": "Click here to see which mobs drop this (34 Mobs)",
+    "ctaIcon": "🐟",
+    "ctaText": "Click here to see which mobs drop this fish (34 Mobs)",
     "summary": "Dropped by Spitelash Siren (8.4%) in Azshara, Spitelash Enchantress (10.4%) in Azshara, Wavethrasher (10.4%) in Azshara.",
     "isForeverNew": false,
     "wowheadUrl": "https://www.wowhead.com/forever/item=8959#dropped-by",
@@ -30899,8 +30692,8 @@ window.WOW_REAGENT_SOURCES = {
     "name": "Black Vitriol",
     "primaryType": "ore",
     "ctaIcon": "⛏️",
-    "ctaText": "Click here to see where to mine Mithril Deposit (Mining 125+)",
-    "summary": "Mined from Mithril Deposit (Mining 125+): Most in Arathi Highlands, Alterac Mountains and Stranglethorn Vale.",
+    "ctaText": "Click here to see where to mine Mithril Deposit (Mining 175+)",
+    "summary": "Mined from Mithril Deposit (Mining 175+): Most in Badlands, The Hinterlands and Alterac Mountains.",
     "isForeverNew": false,
     "wowheadUrl": "https://www.wowhead.com/forever/item=9262#mined-from-object",
     "minedFrom": [
@@ -30961,9 +30754,9 @@ window.WOW_REAGENT_SOURCES = {
       }
     ],
     "miningNode": {
-      "name": "Iron Deposit",
-      "skill": 125,
-      "zones": "Most in Arathi Highlands, Alterac Mountains and Stranglethorn Vale"
+      "name": "Mithril Deposit",
+      "skill": 175,
+      "zones": "Most in Badlands, The Hinterlands and Alterac Mountains"
     }
   },
   "10026": {
@@ -31703,12 +31496,7 @@ window.WOW_REAGENT_SOURCES = {
         "learn": 150,
         "source": "Trainer"
       }
-    ],
-    "miningNode": {
-      "name": "Gold Vein",
-      "skill": 155,
-      "zones": "Most in Arathi Highlands, Alterac Mountains and Stranglethorn Vale"
-    }
+    ]
   },
   "10559": {
     "id": 10559,
@@ -31841,8 +31629,8 @@ window.WOW_REAGENT_SOURCES = {
     "name": "Thorium Ore",
     "primaryType": "ore",
     "ctaIcon": "⛏️",
-    "ctaText": "Click here to see where to mine Rich Thorium Vein (Mining 245+)",
-    "summary": "Mined from Rich Thorium Vein (Mining 245+): Most in Winterspring, Swamp of Sorrows and Blasted Lands.",
+    "ctaText": "Click here to see where to mine Rich Thorium Vein (Mining 275+)",
+    "summary": "Mined from Rich Thorium Vein (Mining 275+): Most in Winterspring and Azshara.",
     "isForeverNew": false,
     "wowheadUrl": "https://www.wowhead.com/forever/item=10620#mined-from-object",
     "drops": [
@@ -31986,9 +31774,9 @@ window.WOW_REAGENT_SOURCES = {
       }
     ],
     "miningNode": {
-      "name": "Small Thorium Vein",
-      "skill": 245,
-      "zones": "Most in Winterspring, Swamp of Sorrows and Blasted Lands"
+      "name": "Rich Thorium Vein",
+      "skill": 275,
+      "zones": "Most in Winterspring and Azshara"
     }
   },
   "10647": {
@@ -33790,8 +33578,8 @@ window.WOW_REAGENT_SOURCES = {
     "id": 11138,
     "name": "Small Glowing Shard",
     "primaryType": "mob_drop",
-    "ctaIcon": "🍖",
-    "ctaText": "Click here to see which mobs drop this meat (10 Mobs)",
+    "ctaIcon": "⚔️",
+    "ctaText": "Click here to see which mobs drop this (10 Mobs)",
     "summary": "Dropped by Archbishop Benedictus in Stormwind City, Varimathras in Undercity, Darla Harris in Hillsbrad Foothills.",
     "isForeverNew": false,
     "wowheadUrl": "https://www.wowhead.com/forever/item=11138#dropped-by",
@@ -33987,8 +33775,8 @@ window.WOW_REAGENT_SOURCES = {
     "id": 11139,
     "name": "Large Glowing Shard",
     "primaryType": "mob_drop",
-    "ctaIcon": "🍖",
-    "ctaText": "Click here to see which mobs drop this meat (8 Mobs)",
+    "ctaIcon": "⚔️",
+    "ctaText": "Click here to see which mobs drop this (8 Mobs)",
     "summary": "Dropped by Lieutenant Doren in Stranglethorn Vale, Archbishop Benedictus in Stormwind City, Thorgrum Borrelson in Loch Modan.",
     "isForeverNew": false,
     "wowheadUrl": "https://www.wowhead.com/forever/item=11139#dropped-by",
@@ -35071,8 +34859,8 @@ window.WOW_REAGENT_SOURCES = {
     "name": "Dark Iron Ore",
     "primaryType": "ore",
     "ctaIcon": "⛏️",
-    "ctaText": "Click here to see where to mine Dark Iron Deposit (Mining 125+)",
-    "summary": "Mined from Dark Iron Deposit (Mining 125+): Most in Arathi Highlands, Alterac Mountains and Stranglethorn Vale.",
+    "ctaText": "Click here to see where to mine Dark Iron Deposit (Mining 230+)",
+    "summary": "Mined from Dark Iron Deposit (Mining 230+): Most in Searing Gorge.",
     "isForeverNew": false,
     "wowheadUrl": "https://www.wowhead.com/forever/item=11370#mined-from-object",
     "drops": [
@@ -35243,9 +35031,9 @@ window.WOW_REAGENT_SOURCES = {
       }
     ],
     "miningNode": {
-      "name": "Iron Deposit",
-      "skill": 125,
-      "zones": "Most in Arathi Highlands, Alterac Mountains and Stranglethorn Vale"
+      "name": "Dark Iron Deposit",
+      "skill": 230,
+      "zones": "Most in Searing Gorge"
     }
   },
   "11371": {
@@ -35267,20 +35055,15 @@ window.WOW_REAGENT_SOURCES = {
         "learn": 215,
         "source": "Trainer"
       }
-    ],
-    "miningNode": {
-      "name": "Dark Iron Deposit",
-      "skill": 230,
-      "zones": "Most in Searing Gorge"
-    }
+    ]
   },
   "11382": {
     "id": 11382,
     "name": "Blood of the Mountain",
     "primaryType": "ore",
     "ctaIcon": "⛏️",
-    "ctaText": "Click here to see where to mine Dark Iron Deposit (Mining 125+)",
-    "summary": "Mined from Dark Iron Deposit (Mining 125+): Most in Arathi Highlands, Alterac Mountains and Stranglethorn Vale.",
+    "ctaText": "Click here to see where to mine Dark Iron Deposit (Mining 230+)",
+    "summary": "Mined from Dark Iron Deposit (Mining 230+): Most in Searing Gorge.",
     "isForeverNew": false,
     "wowheadUrl": "https://www.wowhead.com/forever/item=11382#mined-from-object",
     "drops": [
@@ -35354,9 +35137,9 @@ window.WOW_REAGENT_SOURCES = {
       }
     ],
     "miningNode": {
-      "name": "Iron Deposit",
-      "skill": 125,
-      "zones": "Most in Arathi Highlands, Alterac Mountains and Stranglethorn Vale"
+      "name": "Dark Iron Deposit",
+      "skill": 230,
+      "zones": "Most in Searing Gorge"
     }
   },
   "11754": {
@@ -35364,8 +35147,8 @@ window.WOW_REAGENT_SOURCES = {
     "name": "Black Diamond",
     "primaryType": "ore",
     "ctaIcon": "⛏️",
-    "ctaText": "Click here to see where to mine Dark Iron Deposit (Mining 125+)",
-    "summary": "Mined from Dark Iron Deposit (Mining 125+): Most in Arathi Highlands, Alterac Mountains and Stranglethorn Vale.",
+    "ctaText": "Click here to see where to mine Dark Iron Deposit (Mining 230+)",
+    "summary": "Mined from Dark Iron Deposit (Mining 230+): Most in Searing Gorge.",
     "isForeverNew": false,
     "wowheadUrl": "https://www.wowhead.com/forever/item=11754#mined-from-object",
     "drops": [
@@ -35524,9 +35307,9 @@ window.WOW_REAGENT_SOURCES = {
       }
     ],
     "miningNode": {
-      "name": "Iron Deposit",
-      "skill": 125,
-      "zones": "Most in Arathi Highlands, Alterac Mountains and Stranglethorn Vale"
+      "name": "Dark Iron Deposit",
+      "skill": 230,
+      "zones": "Most in Searing Gorge"
     }
   },
   "12037": {
@@ -36730,12 +36513,12 @@ window.WOW_REAGENT_SOURCES = {
   "12223": {
     "id": 12223,
     "name": "Meaty Bat Wing",
-    "primaryType": "ore",
-    "ctaIcon": "⛏️",
-    "ctaText": "Click here to see where to mine Copper Vein (Mining 1+)",
-    "summary": "Mined from Copper Vein (Mining 1+): Most in Durotar, Westfall and Duskwood.",
+    "primaryType": "mob_drop",
+    "ctaIcon": "🍖",
+    "ctaText": "Click here to see which mobs drop this meat (38 Mobs)",
+    "summary": "Dropped by Greater Duskbat (33%) in Tirisfal Glades, Vampiric Duskbat (35%) in Tirisfal Glades, Blood Seeker (38.3%) in Shadowfang Keep.",
     "isForeverNew": false,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=12223#mined-from-object",
+    "wowheadUrl": "https://www.wowhead.com/forever/item=12223#dropped-by",
     "drops": [
       {
         "id": 1553,
@@ -36879,24 +36662,7 @@ window.WOW_REAGENT_SOURCES = {
         "isNew": false
       }
     ],
-    "totalDropMobs": 38,
-    "minedFrom": [
-      {
-        "id": 1731,
-        "name": "Copper Vein",
-        "zones": [
-          "Zephras Isle",
-          "Mulgore",
-          "The Barrens"
-        ],
-        "pct": 0
-      }
-    ],
-    "miningNode": {
-      "name": "Copper Vein",
-      "skill": 1,
-      "zones": "Most in Durotar, Westfall and Duskwood"
-    }
+    "totalDropMobs": 38
   },
   "12359": {
     "id": 12359,
@@ -36945,8 +36711,8 @@ window.WOW_REAGENT_SOURCES = {
     "name": "Blue Sapphire",
     "primaryType": "ore",
     "ctaIcon": "⛏️",
-    "ctaText": "Click here to see where to mine Rich Thorium Vein (Mining 245+)",
-    "summary": "Mined from Rich Thorium Vein (Mining 245+): Most in Winterspring, Swamp of Sorrows and Blasted Lands.",
+    "ctaText": "Click here to see where to mine Rich Thorium Vein (Mining 275+)",
+    "summary": "Mined from Rich Thorium Vein (Mining 275+): Most in Winterspring and Azshara.",
     "isForeverNew": false,
     "wowheadUrl": "https://www.wowhead.com/forever/item=12361#mined-from-object",
     "minedFrom": [
@@ -37032,9 +36798,9 @@ window.WOW_REAGENT_SOURCES = {
       }
     ],
     "miningNode": {
-      "name": "Small Thorium Vein",
-      "skill": 245,
-      "zones": "Most in Winterspring, Swamp of Sorrows and Blasted Lands"
+      "name": "Rich Thorium Vein",
+      "skill": 275,
+      "zones": "Most in Winterspring and Azshara"
     }
   },
   "12363": {
@@ -37042,8 +36808,8 @@ window.WOW_REAGENT_SOURCES = {
     "name": "Arcane Crystal",
     "primaryType": "ore",
     "ctaIcon": "⛏️",
-    "ctaText": "Click here to see where to mine Rich Thorium Vein (Mining 245+)",
-    "summary": "Mined from Rich Thorium Vein (Mining 245+): Most in Winterspring, Swamp of Sorrows and Blasted Lands.",
+    "ctaText": "Click here to see where to mine Rich Thorium Vein (Mining 275+)",
+    "summary": "Mined from Rich Thorium Vein (Mining 275+): Most in Winterspring and Azshara.",
     "isForeverNew": false,
     "wowheadUrl": "https://www.wowhead.com/forever/item=12363#mined-from-object",
     "minedFrom": [
@@ -37130,9 +36896,9 @@ window.WOW_REAGENT_SOURCES = {
       }
     ],
     "miningNode": {
-      "name": "Small Thorium Vein",
-      "skill": 245,
-      "zones": "Most in Winterspring, Swamp of Sorrows and Blasted Lands"
+      "name": "Rich Thorium Vein",
+      "skill": 275,
+      "zones": "Most in Winterspring and Azshara"
     }
   },
   "12364": {
@@ -37140,8 +36906,8 @@ window.WOW_REAGENT_SOURCES = {
     "name": "Huge Emerald",
     "primaryType": "ore",
     "ctaIcon": "⛏️",
-    "ctaText": "Click here to see where to mine Rich Thorium Vein (Mining 245+)",
-    "summary": "Mined from Rich Thorium Vein (Mining 245+): Most in Winterspring, Swamp of Sorrows and Blasted Lands.",
+    "ctaText": "Click here to see where to mine Rich Thorium Vein (Mining 275+)",
+    "summary": "Mined from Rich Thorium Vein (Mining 275+): Most in Winterspring and Azshara.",
     "isForeverNew": false,
     "wowheadUrl": "https://www.wowhead.com/forever/item=12364#mined-from-object",
     "minedFrom": [
@@ -37227,9 +36993,9 @@ window.WOW_REAGENT_SOURCES = {
       }
     ],
     "miningNode": {
-      "name": "Small Thorium Vein",
-      "skill": 245,
-      "zones": "Most in Winterspring, Swamp of Sorrows and Blasted Lands"
+      "name": "Rich Thorium Vein",
+      "skill": 275,
+      "zones": "Most in Winterspring and Azshara"
     }
   },
   "12365": {
@@ -37237,8 +37003,8 @@ window.WOW_REAGENT_SOURCES = {
     "name": "Dense Stone",
     "primaryType": "ore",
     "ctaIcon": "⛏️",
-    "ctaText": "Click here to see where to mine Rich Thorium Vein (Mining 245+)",
-    "summary": "Mined from Rich Thorium Vein (Mining 245+): Most in Winterspring, Swamp of Sorrows and Blasted Lands.",
+    "ctaText": "Click here to see where to mine Rich Thorium Vein (Mining 275+)",
+    "summary": "Mined from Rich Thorium Vein (Mining 275+): Most in Winterspring and Azshara.",
     "isForeverNew": false,
     "wowheadUrl": "https://www.wowhead.com/forever/item=12365#mined-from-object",
     "drops": [
@@ -37391,9 +37157,9 @@ window.WOW_REAGENT_SOURCES = {
       }
     ],
     "miningNode": {
-      "name": "Small Thorium Vein",
-      "skill": 245,
-      "zones": "Most in Winterspring, Swamp of Sorrows and Blasted Lands"
+      "name": "Rich Thorium Vein",
+      "skill": 275,
+      "zones": "Most in Winterspring and Azshara"
     }
   },
   "12607": {
@@ -37923,8 +37689,8 @@ window.WOW_REAGENT_SOURCES = {
     "name": "Large Opal",
     "primaryType": "ore",
     "ctaIcon": "⛏️",
-    "ctaText": "Click here to see where to mine Rich Thorium Vein (Mining 245+)",
-    "summary": "Mined from Rich Thorium Vein (Mining 245+): Most in Winterspring, Swamp of Sorrows and Blasted Lands.",
+    "ctaText": "Click here to see where to mine Rich Thorium Vein (Mining 275+)",
+    "summary": "Mined from Rich Thorium Vein (Mining 275+): Most in Winterspring and Azshara.",
     "isForeverNew": false,
     "wowheadUrl": "https://www.wowhead.com/forever/item=12799#mined-from-object",
     "drops": [
@@ -38028,9 +37794,9 @@ window.WOW_REAGENT_SOURCES = {
       }
     ],
     "miningNode": {
-      "name": "Small Thorium Vein",
-      "skill": 245,
-      "zones": "Most in Winterspring, Swamp of Sorrows and Blasted Lands"
+      "name": "Rich Thorium Vein",
+      "skill": 275,
+      "zones": "Most in Winterspring and Azshara"
     }
   },
   "12800": {
@@ -38038,8 +37804,8 @@ window.WOW_REAGENT_SOURCES = {
     "name": "Azerothian Diamond",
     "primaryType": "ore",
     "ctaIcon": "⛏️",
-    "ctaText": "Click here to see where to mine Rich Thorium Vein (Mining 245+)",
-    "summary": "Mined from Rich Thorium Vein (Mining 245+): Most in Winterspring, Swamp of Sorrows and Blasted Lands.",
+    "ctaText": "Click here to see where to mine Rich Thorium Vein (Mining 275+)",
+    "summary": "Mined from Rich Thorium Vein (Mining 275+): Most in Winterspring and Azshara.",
     "isForeverNew": false,
     "wowheadUrl": "https://www.wowhead.com/forever/item=12800#mined-from-object",
     "drops": [
@@ -38142,9 +37908,9 @@ window.WOW_REAGENT_SOURCES = {
       }
     ],
     "miningNode": {
-      "name": "Small Thorium Vein",
-      "skill": 245,
-      "zones": "Most in Winterspring, Swamp of Sorrows and Blasted Lands"
+      "name": "Rich Thorium Vein",
+      "skill": 275,
+      "zones": "Most in Winterspring and Azshara"
     }
   },
   "12803": {
@@ -40739,7 +40505,7 @@ window.WOW_REAGENT_SOURCES = {
     "ctaText": "Click here to see how to refine this (Salt Shaker)",
     "summary": "Created by Leatherworkers (Skill 250+) using a Salt Shaker on Deeprock Salt (3-day cooldown).",
     "isForeverNew": false,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=15409"
+    "wowheadUrl": "https://www.wowhead.com/forever/item=15409#created-by-spell"
   },
   "15410": {
     "id": 15410,
@@ -43382,12 +43148,12 @@ window.WOW_REAGENT_SOURCES = {
   "17056": {
     "id": 17056,
     "name": "Light Feather",
-    "primaryType": "ore",
-    "ctaIcon": "⛏️",
-    "ctaText": "Click here to see where to mine Copper Vein (Mining 1+)",
-    "summary": "Mined from Copper Vein (Mining 1+): Most in Durotar, Westfall and Duskwood.",
+    "primaryType": "mob_drop",
+    "ctaIcon": "⚔️",
+    "ctaText": "Click here to see which mobs drop this (67 Mobs)",
+    "summary": "Dropped by Screeching Harpy (40.3%) in Thousand Needles, Screeching Roguefeather (40%) in Thousand Needles, Bloodfury Harpy (39.5%) in Stonetalon Mountains.",
     "isForeverNew": false,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=17056#mined-from-object",
+    "wowheadUrl": "https://www.wowhead.com/forever/item=17056#dropped-by",
     "drops": [
       {
         "id": 4100,
@@ -43531,30 +43297,13 @@ window.WOW_REAGENT_SOURCES = {
       }
     ],
     "totalDropMobs": 67,
-    "minedFrom": [
-      {
-        "id": 1731,
-        "name": "Copper Vein",
-        "zones": [
-          "Zephras Isle",
-          "Mulgore",
-          "The Barrens"
-        ],
-        "pct": 0
-      }
-    ],
     "containedIn": [
       {
         "id": 20447,
         "name": "Harpy Foodstuffs",
         "pct": 37.5
       }
-    ],
-    "miningNode": {
-      "name": "Copper Vein",
-      "skill": 1,
-      "zones": "Most in Durotar, Westfall and Duskwood"
-    }
+    ]
   },
   "17057": {
     "id": 17057,
@@ -43564,7 +43313,7 @@ window.WOW_REAGENT_SOURCES = {
     "ctaText": "Click here to see where to get Shiny Fish Scales",
     "summary": "Looted from coastal Murlocs, Makrura, and Threshadons or skinned from level 11–30 aquatic beasts.",
     "isForeverNew": false,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=17057"
+    "wowheadUrl": "https://www.wowhead.com/forever/item=17057#skinned-from"
   },
   "17194": {
     "id": 17194,
@@ -45942,7 +45691,7 @@ window.WOW_REAGENT_SOURCES = {
     "ctaText": "Click here to see which mobs drop this meat (Feralas)",
     "summary": "Dropped by Lord Lakmaeran and elite Chimaeroks on the Isle of Dread in Feralas.",
     "isForeverNew": false,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=21024",
+    "wowheadUrl": "https://www.wowhead.com/forever/item=21024#dropped-by",
     "totalDropMobs": 4
   },
   "21071": {
@@ -46034,8 +45783,8 @@ window.WOW_REAGENT_SOURCES = {
     "name": "Small Obsidian Shard",
     "primaryType": "ore",
     "ctaIcon": "⛏️",
-    "ctaText": "Click here to see where to mine Small Obsidian Chunk (Mining 245+)",
-    "summary": "Mined from Small Obsidian Chunk (Mining 245+): Most in Winterspring, Swamp of Sorrows and Blasted Lands.",
+    "ctaText": "Click here to see where to mine Small Obsidian Chunk",
+    "summary": "Mined from Small Obsidian Chunk: Silithus, Ahn'Qiraj, Ruins of Ahn'Qiraj.",
     "isForeverNew": false,
     "wowheadUrl": "https://www.wowhead.com/forever/item=22202#mined-from-object",
     "drops": [
@@ -46083,12 +45832,7 @@ window.WOW_REAGENT_SOURCES = {
         "name": "Damaged Undermine Supply Crate",
         "pct": 3.4
       }
-    ],
-    "miningNode": {
-      "name": "Small Thorium Vein",
-      "skill": 245,
-      "zones": "Most in Winterspring, Swamp of Sorrows and Blasted Lands"
-    }
+    ]
   },
   "22203": {
     "id": 22203,
@@ -46225,7 +45969,7 @@ window.WOW_REAGENT_SOURCES = {
     "ctaText": "Click here to see where to get this reagent",
     "summary": "",
     "isForeverNew": false,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=23567"
+    "wowheadUrl": "https://www.wowhead.com/forever/item=23567#dropped-by"
   },
   "238786": {
     "id": 238786,
@@ -46235,7 +45979,7 @@ window.WOW_REAGENT_SOURCES = {
     "ctaText": "Click here to see where to get this reagent",
     "summary": "",
     "isForeverNew": true,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=238786"
+    "wowheadUrl": "https://www.wowhead.com/forever/item=238786#dropped-by"
   },
   "238787": {
     "id": 238787,
@@ -46245,7 +45989,7 @@ window.WOW_REAGENT_SOURCES = {
     "ctaText": "Click here to see where to get this reagent",
     "summary": "",
     "isForeverNew": true,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=238787"
+    "wowheadUrl": "https://www.wowhead.com/forever/item=238787#dropped-by"
   },
   "238788": {
     "id": 238788,
@@ -46255,7 +45999,7 @@ window.WOW_REAGENT_SOURCES = {
     "ctaText": "Click here to see where to get this reagent",
     "summary": "",
     "isForeverNew": true,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=238788"
+    "wowheadUrl": "https://www.wowhead.com/forever/item=238788#dropped-by"
   },
   "247786": {
     "id": 247786,
@@ -46286,7 +46030,7 @@ window.WOW_REAGENT_SOURCES = {
     "ctaText": "Click here to see where to mine Heavy Thorium Ore (Mining 275+)",
     "summary": "Mined from Rich Thorium Veins (Mining 275+) in Winterspring, Azshara, Un'Goro Crater, and Eastern Plaguelands.",
     "isForeverNew": true,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=248815"
+    "wowheadUrl": "https://www.wowhead.com/forever/item=248815#mined-from-object"
   },
   "248819": {
     "id": 248819,
@@ -46296,7 +46040,7 @@ window.WOW_REAGENT_SOURCES = {
     "ctaText": "Click here to see where to farm Fel Crystal",
     "summary": "Looted from high-level Demons and Satyrs in Felwood, Azshara, and Blasted Lands.",
     "isForeverNew": true,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=248819"
+    "wowheadUrl": "https://www.wowhead.com/forever/item=248819#dropped-by"
   },
   "248820": {
     "id": 248820,
@@ -46306,7 +46050,7 @@ window.WOW_REAGENT_SOURCES = {
     "ctaText": "Click here to see where to mine Torbernite (Mining 275+)",
     "summary": "Rare radioactive mineral mined from Rich Thorium Veins in high-level Azeroth zones.",
     "isForeverNew": true,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=248820"
+    "wowheadUrl": "https://www.wowhead.com/forever/item=248820#mined-from-object"
   },
   "248821": {
     "id": 248821,
@@ -46316,7 +46060,7 @@ window.WOW_REAGENT_SOURCES = {
     "ctaText": "Click here to see where to gather Demonsage (Herbalism 285+)",
     "summary": "Rare Forever herb gathered from corrupted flora in Felwood, Blasted Lands, and Mount Hyjal.",
     "isForeverNew": true,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=248821"
+    "wowheadUrl": "https://www.wowhead.com/forever/item=248821#gathered-from-object"
   },
   "248822": {
     "id": 248822,
@@ -46326,7 +46070,7 @@ window.WOW_REAGENT_SOURCES = {
     "ctaText": "Click here to see where to gather Death Lotus (Herbalism 290+)",
     "summary": "Rare endgame lotus gathered alongside high-level herbs or grown via the Seed Hybridizer at camp.",
     "isForeverNew": true,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=248822"
+    "wowheadUrl": "https://www.wowhead.com/forever/item=248822#gathered-from-object"
   },
   "248823": {
     "id": 248823,
@@ -46336,7 +46080,7 @@ window.WOW_REAGENT_SOURCES = {
     "ctaText": "Click here to see where to gather Marefoil (Herbalism 280+)",
     "summary": "High-level aquatic & coastal herb gathered in Azshara, Feralas, and Mount Hyjal.",
     "isForeverNew": true,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=248823"
+    "wowheadUrl": "https://www.wowhead.com/forever/item=248823#gathered-from-object"
   },
   "248824": {
     "id": 248824,
@@ -46346,7 +46090,7 @@ window.WOW_REAGENT_SOURCES = {
     "ctaText": "Click here to see where to skin Fel Hide (Skinning 250+)",
     "summary": "Skinned from corrupted beasts and felhounds in Felwood, Blasted Lands, and Azshara.",
     "isForeverNew": true,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=248824"
+    "wowheadUrl": "https://www.wowhead.com/forever/item=248824#skinned-from"
   },
   "248825": {
     "id": 248825,
@@ -46356,7 +46100,7 @@ window.WOW_REAGENT_SOURCES = {
     "ctaText": "Click here to see where to skin Fel Leather (Skinning 250+)",
     "summary": "Skinned from corrupted level 48–60 beasts in Felwood and Blasted Lands.",
     "isForeverNew": true,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=248825"
+    "wowheadUrl": "https://www.wowhead.com/forever/item=248825#skinned-from"
   },
   "249274": {
     "id": 249274,
@@ -46366,7 +46110,7 @@ window.WOW_REAGENT_SOURCES = {
     "ctaText": "Click here to see where to gather Stranglevine (Herbalism 185+)",
     "summary": "Bonus rare vine gathered from mid-to-high level herb nodes (Goldthorn, Khadgar's Whisker, Sungrass).",
     "isForeverNew": true,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=249274"
+    "wowheadUrl": "https://www.wowhead.com/forever/item=249274#gathered-from-object"
   },
   "249391": {
     "id": 249391,
@@ -46423,16 +46167,6 @@ window.WOW_REAGENT_SOURCES = {
           "The Barrens"
         ],
         "pct": 0.1
-      },
-      {
-        "id": 1735,
-        "name": "Iron Deposit",
-        "zones": [
-          "Arathi Highlands",
-          "Desolace",
-          "Stranglethorn Vale"
-        ],
-        "pct": 0
       }
     ],
     "miningNode": {
@@ -46584,38 +46318,18 @@ window.WOW_REAGENT_SOURCES = {
     "ctaText": "Click here to see where to gather Rosecap (Herbalism 115+)",
     "summary": "Bonus rare mushroom gathered alongside mid-level herbs (Bruiseweed, Wild Steelbloom, Kingsblood, Liferoot).",
     "isForeverNew": true,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=249424"
+    "wowheadUrl": "https://www.wowhead.com/forever/item=249424#gathered-from-object"
   },
   "249425": {
     "id": 249425,
     "name": "Bauxite",
     "primaryType": "ore",
     "ctaIcon": "⛏️",
-    "ctaText": "Click here to see where to mine Gold Vein (Mining 155+)",
-    "summary": "Mined from Gold Vein (Mining 155+): Most in Arathi Highlands, Alterac Mountains and Stranglethorn Vale.",
+    "ctaText": "Click here to see where to mine Ooze Covered Mithril Deposit (Mining 175+)",
+    "summary": "Mined from Ooze Covered Mithril Deposit (Mining 175+): Most in Badlands, The Hinterlands and Alterac Mountains.",
     "isForeverNew": true,
     "wowheadUrl": "https://www.wowhead.com/forever/item=249425#mined-from-object",
     "minedFrom": [
-      {
-        "id": 1734,
-        "name": "Gold Vein",
-        "zones": [
-          "Arathi Highlands",
-          "Badlands",
-          "Stranglethorn Vale"
-        ],
-        "pct": 0
-      },
-      {
-        "id": 2040,
-        "name": "Mithril Deposit",
-        "zones": [
-          "The Hinterlands",
-          "Tanaris",
-          "Azshara"
-        ],
-        "pct": 0
-      },
       {
         "id": 123310,
         "name": "Ooze Covered Mithril Deposit",
@@ -46627,9 +46341,9 @@ window.WOW_REAGENT_SOURCES = {
       }
     ],
     "miningNode": {
-      "name": "Gold Vein",
-      "skill": 155,
-      "zones": "Most in Arathi Highlands, Alterac Mountains and Stranglethorn Vale"
+      "name": "Mithril Deposit",
+      "skill": 175,
+      "zones": "Most in Badlands, The Hinterlands and Alterac Mountains"
     }
   },
   "249426": {
@@ -46640,7 +46354,7 @@ window.WOW_REAGENT_SOURCES = {
     "ctaText": "Click here to see where to mine Pitchblende (Mining 230+)",
     "summary": "Rare mineral byproduct mined from Truesilver Deposits and Small/Rich Thorium Veins.",
     "isForeverNew": true,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=249426"
+    "wowheadUrl": "https://www.wowhead.com/forever/item=249426#mined-from-object"
   },
   "249427": {
     "id": 249427,
@@ -46858,7 +46572,7 @@ window.WOW_REAGENT_SOURCES = {
     "ctaText": "Click here to see where to skin Pristine Scale (Skinning 175+)",
     "summary": "Rare pristine scale skinned from level 35–55 scaled beasts, dragonkin, and basilisks.",
     "isForeverNew": true,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=249429"
+    "wowheadUrl": "https://www.wowhead.com/forever/item=249429#skinned-from"
   },
   "249430": {
     "id": 249430,
@@ -46952,7 +46666,7 @@ window.WOW_REAGENT_SOURCES = {
     "ctaText": "Click here to see where to gather Hyjal Berries",
     "summary": "Foraged from berry bushes and wildlife in Mount Hyjal and Winterspring.",
     "isForeverNew": true,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=249796"
+    "wowheadUrl": "https://www.wowhead.com/forever/item=249796#gathered-from-object"
   },
   "251290": {
     "id": 251290,
@@ -47004,7 +46718,7 @@ window.WOW_REAGENT_SOURCES = {
     "ctaText": "Click here to see where to fish Whimsyfin",
     "summary": "Fished from enchanted and coastal waters in Darkshore, Ashenvale, The Barrens, and Riverglades.",
     "isForeverNew": true,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=251524"
+    "wowheadUrl": "https://www.wowhead.com/forever/item=251524#fished-in"
   },
   "255007": {
     "id": 255007,
@@ -47098,7 +46812,7 @@ window.WOW_REAGENT_SOURCES = {
     "ctaText": "Click here to see which mobs drop Swollen Venom Sac",
     "summary": "Dropped by level 35–50 venomous spiders and scorpids in Dustwallow Marsh, Tanaris, and The Hinterlands.",
     "isForeverNew": true,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=255645"
+    "wowheadUrl": "https://www.wowhead.com/forever/item=255645#dropped-by"
   },
   "260784": {
     "id": 260784,
@@ -47436,7 +47150,7 @@ window.WOW_REAGENT_SOURCES = {
     "ctaText": "Click here to see where Lich's Index Finger drops",
     "summary": "Master Camp Station reagent dropped by endgame Undead/Lich bosses (Scholomance & Stratholme).",
     "isForeverNew": true,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=273125"
+    "wowheadUrl": "https://www.wowhead.com/forever/item=273125#dropped-by"
   },
   "273127": {
     "id": 273127,
@@ -47446,7 +47160,7 @@ window.WOW_REAGENT_SOURCES = {
     "ctaText": "Click here to see where Golem Heart drops",
     "summary": "Master Camp Station reagent dropped by endgame Golem bosses (Blackrock Depths).",
     "isForeverNew": true,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=273127"
+    "wowheadUrl": "https://www.wowhead.com/forever/item=273127#dropped-by"
   },
   "273128": {
     "id": 273128,
@@ -47456,7 +47170,7 @@ window.WOW_REAGENT_SOURCES = {
     "ctaText": "Click here to see where Maker's Spark drops",
     "summary": "Master Camp Station reagent dropped by Titanic Watcher / Construct bosses (Uldaman & Shaper's Terrace).",
     "isForeverNew": true,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=273128"
+    "wowheadUrl": "https://www.wowhead.com/forever/item=273128#dropped-by"
   },
   "273129": {
     "id": 273129,
@@ -47466,7 +47180,7 @@ window.WOW_REAGENT_SOURCES = {
     "ctaText": "Click here to see where Essence of Anarchy drops",
     "summary": "Master Camp Station reagent dropped by endgame Tinker & Goblin bosses.",
     "isForeverNew": true,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=273129"
+    "wowheadUrl": "https://www.wowhead.com/forever/item=273129#dropped-by"
   },
   "273130": {
     "id": 273130,
@@ -47476,7 +47190,7 @@ window.WOW_REAGENT_SOURCES = {
     "ctaText": "Click here to see where Undeath Engine drops",
     "summary": "Master Camp Station reagent dropped by endgame Abomination & Scourge bosses.",
     "isForeverNew": true,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=273130"
+    "wowheadUrl": "https://www.wowhead.com/forever/item=273130#dropped-by"
   },
   "273131": {
     "id": 273131,
@@ -47486,7 +47200,7 @@ window.WOW_REAGENT_SOURCES = {
     "ctaText": "Click here to see where Bottled Screams drops",
     "summary": "Master Camp Station reagent dropped by Banshee and Spectral bosses in endgame dungeons.",
     "isForeverNew": true,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=273131"
+    "wowheadUrl": "https://www.wowhead.com/forever/item=273131#dropped-by"
   },
   "274030": {
     "id": 274030,
@@ -47496,7 +47210,7 @@ window.WOW_REAGENT_SOURCES = {
     "ctaText": "Click here to see where Malleable Essence of Nature drops",
     "summary": "Endgame crafting essence looted from Nature Elementals and Ancient Guardians.",
     "isForeverNew": true,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=274030"
+    "wowheadUrl": "https://www.wowhead.com/forever/item=274030#dropped-by"
   },
   "279952": {
     "id": 279952,
@@ -47506,7 +47220,7 @@ window.WOW_REAGENT_SOURCES = {
     "ctaText": "Click here to see how to build Molten Foundry (Mining 300)",
     "summary": "Skill 300 Mining Master Campfire Station required nearby to smelt endgame Azerothium and Legionite.",
     "isForeverNew": true,
-    "wowheadUrl": "https://www.wowhead.com/forever/item=279952"
+    "wowheadUrl": "https://www.wowhead.com/forever/item=279952#created-by-spell"
   }
 };
 

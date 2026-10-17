@@ -129,6 +129,7 @@ const herbNodesByName = new Map();
 });
 
 const miningNodesList = profData.mining?.nodes || [];
+const miningNodesListDesc = miningNodesList.slice().sort((a, b) => b.name.length - a.name.length);
 
 // 4. Build final WOW_REAGENT_SOURCES dictionary
 const finalSources = {};
@@ -141,8 +142,8 @@ for (const [id, meta] of uniqueReagents.entries()) {
   const vendors = scraped.vendors || [];
   const fishedIn = scraped.fishedIn || [];
   const skinnedFrom = scraped.skinnedFrom || [];
-  const minedFrom = scraped.minedFrom || [];
-  const gatheredFrom = scraped.gatheredFrom || [];
+  const minedFrom = (scraped.minedFrom || []).filter(m => m.pct > 0);
+  const gatheredFrom = (scraped.gatheredFrom || []).filter(g => g.pct > 0);
   const containedIn = scraped.containedIn || [];
   const disenchant = scraped.disenchant || null;
   const topZones = scraped.topZones || [];
@@ -150,21 +151,26 @@ for (const [id, meta] of uniqueReagents.entries()) {
   const craftedBy = craftedRecipesByName.get(cleanLower) || [];
   const herbNode = herbNodesByName.get(cleanLower) || null;
 
+  const isMineral = /\b(ores?|stones?|nuggets?|pyrite|bauxite|pitchblende|torbernite|obsidian|souldarite|dark iron|elementium|gems?|diamonds?|sapphires?|rub(?:y|ies)|emeralds?|agates?|opals?|citrines?|aquamarines?|malachite|tigerseye|shadowgems?|jade|moonstones?|blood of the mountain|vitriol|arcane crystal|crystals?)\b/i.test(cleanLower);
+
   let miningNode = null;
-  if (minedFrom.length > 0 || cleanLower.includes('ore') || cleanLower.includes('stone') || cleanLower.includes('bar')) {
-    miningNode = miningNodesList.find(n => {
+  if (isMineral && minedFrom.length > 0) {
+    const topNodeName = minedFrom[0].name.toLowerCase();
+    miningNode = miningNodesListDesc.find(n => {
+      const nl = n.name.toLowerCase();
+      return topNodeName === nl || topNodeName.includes(nl);
+    }) || null;
+  } else if (isMineral && (cleanLower.includes('ore') || cleanLower.includes('stone'))) {
+    miningNode = miningNodesListDesc.find(n => {
       const nFirst = n.name.toLowerCase().split(' ')[0];
-      return (
-        minedFrom.some(mf => mf.name && mf.name.toLowerCase().includes(n.name.toLowerCase())) ||
-        cleanLower.startsWith(nFirst)
-      );
+      return cleanLower.includes(nFirst);
     }) || null;
   }
 
   const isShoppingVendor = Array.from(meta.shoppingGroups).some(g => g.toLowerCase().includes('vendor'));
   const hasUnlimitedVendor = vendors.some(v => v.stock === null);
-  const isMeatOrPart = /meat|flank|rib|flesh|wing|liver|snout|intestine|claw|leg|tail|stinger|tenderloin|egg|ichor|eye|fin|rat|chuck|steak|paw|fang|scale|hide|leather|feather|bone|gland|sac|venom|blood|heart|breath|ichor|oil|pearl|clam|cloth|silk|mageweave|runecloth|wool|linen|felcloth/.test(cleanLower);
-  const isFish = /raw |fish|salmon|trout|catfish|snapper|albacore|mackerel|cod|halibut|bass|squid|lobster|yellowtail|redgill|whimsyfin|eel/.test(cleanLower);
+  const isBroadVendorSupply = hasUnlimitedVendor && (vendors.length >= 8 || (scraped.totalVendors || 0) >= 8);
+  const isFish = /\b(raw\b|fish|salmon|trout|catfish|snapper|albacore|mackerel|cod|halibut|bass|squid|lobster|yellowtail|redgill|whimsyfin|eel|blackmouth)\b/i.test(cleanLower) || (fishedIn.length > 0 && drops.length === 0);
 
   let primaryType = 'mob_drop';
   let ctaIcon = '⚔️';
@@ -172,7 +178,7 @@ for (const [id, meta] of uniqueReagents.entries()) {
   let summary = '';
   let wowheadTab = '';
 
-  if (herbNode || gatheredFrom.length > 0) {
+  if (herbNode || (gatheredFrom.length > 0 && !cleanLower.includes('elemental'))) {
     primaryType = 'herb';
     ctaIcon = '🌿';
     const reqSkill = herbNode ? ` (Herbalism ${herbNode.skill}+)` : '';
@@ -180,11 +186,13 @@ for (const [id, meta] of uniqueReagents.entries()) {
     const zonesTxt = herbNode?.zones || gatheredFrom[0]?.zones?.join(', ') || topZones.slice(0, 3).join(', ');
     summary = `Gathered via Herbalism${reqSkill}: ${zonesTxt || 'Open-world herb nodes across Azeroth'}.`;
     wowheadTab = 'gathered-from-object';
-  } else if (minedFrom.length > 0 || (miningNode && !craftedBy.length)) {
+  } else if (isMineral && (minedFrom.length > 0 || (miningNode && !craftedBy.length))) {
     primaryType = 'ore';
     ctaIcon = '⛏️';
     const veinName = minedFrom[0]?.name || miningNode?.name || 'Mining Veins';
-    const reqSkill = miningNode ? ` (Mining ${miningNode.skill}+)` : '';
+    const reqSkill = (minedFrom[0] && miningNode && (minedFrom[0].name.toLowerCase() === miningNode.name.toLowerCase() || minedFrom[0].name.toLowerCase().includes(miningNode.name.toLowerCase())))
+      ? ` (Mining ${miningNode.skill}+)`
+      : (!minedFrom[0] && miningNode ? ` (Mining ${miningNode.skill}+)` : '');
     ctaText = `Click here to see where to mine ${veinName}${reqSkill}`;
     const zonesTxt = miningNode?.zones || minedFrom[0]?.zones?.join(', ') || topZones.slice(0, 3).join(', ');
     summary = `Mined from ${veinName}${reqSkill}: ${zonesTxt || 'Mountain and cave mineral veins'}.`;
@@ -203,7 +211,7 @@ for (const [id, meta] of uniqueReagents.entries()) {
     const topB = skinnedFrom.slice(0, 3).map(s => `${s.name}${s.zones?.[0] ? ` (${s.zones[0]})` : ''}`).join(', ');
     summary = `Skinned from beasts: ${topB}.`;
     wowheadTab = 'skinned-from';
-  } else if (isShoppingVendor || (hasUnlimitedVendor && drops.length === 0 && fishedIn.length === 0 && minedFrom.length === 0 && gatheredFrom.length === 0)) {
+  } else if (isShoppingVendor || isBroadVendorSupply || (hasUnlimitedVendor && drops.length === 0 && fishedIn.length === 0 && minedFrom.length === 0 && gatheredFrom.length === 0)) {
     primaryType = 'vendor';
     ctaIcon = '🪙';
     ctaText = `Click here to see which vendors sell this (${vendors.length || 'Trade'} Vendors)`;
@@ -224,12 +232,15 @@ for (const [id, meta] of uniqueReagents.entries()) {
     wowheadTab = 'disenchanted-from';
   } else if (drops.length > 0) {
     primaryType = 'mob_drop';
-    const isMeat = /meat|flank|rib|flesh|wing|liver|snout|intestine|tenderloin|egg|chuck|steak|crawler|clam|dig rat/.test(cleanLower);
-    ctaIcon = isMeat ? '🍖' : '⚔️';
+    const isMeat = /\b(meat|flanks?|ribs?|flesh|wings?|liver|snouts?|intestines?|tenderloin|eggs?|chuck|steaks?|crawlers?|clams?|dig rat|tails?|legs?)\b/i.test(cleanLower);
+    const isDropFish = isFish;
+    ctaIcon = isDropFish ? '🐟' : (isMeat ? '🍖' : '⚔️');
     const mobCount = scraped.totalDropMobs || drops.length;
-    ctaText = isMeat
-      ? `Click here to see which mobs drop this meat (${mobCount} Mobs)`
-      : `Click here to see which mobs drop this (${mobCount} Mobs)`;
+    ctaText = isDropFish
+      ? `Click here to see which mobs drop this fish (${mobCount} Mobs)`
+      : (isMeat
+        ? `Click here to see which mobs drop this meat (${mobCount} Mobs)`
+        : `Click here to see which mobs drop this (${mobCount} Mobs)`);
     const topMobs = drops.slice(0, 3).map(d => `${d.name}${d.pct ? ` (${d.pct}%)` : ''}${d.zones?.[0] ? ` in ${d.zones[0]}` : ''}`).join(', ');
     summary = `Dropped by ${topMobs}.`;
     wowheadTab = 'dropped-by';
@@ -240,6 +251,20 @@ for (const [id, meta] of uniqueReagents.entries()) {
     const topC = containedIn.slice(0, 3).map(c => `${c.name}${c.pct ? ` (${c.pct}%)` : ''}`).join(', ');
     summary = `Looted inside ${topC}.`;
     wowheadTab = 'contained-in-item';
+  } else if (fishedIn.length > 0) {
+    primaryType = 'fished';
+    ctaIcon = '🎣';
+    ctaText = `Click here to see where to fish this (${fishedIn.length} Waters)`;
+    const topZ = fishedIn.slice(0, 3).map(f => `${f.zone}${f.pct ? ` (${f.pct}%)` : ''}`).join(', ');
+    summary = `Fished from open waters in ${topZ}${vendors.length ? ` or bought from ${vendors.length} fishing vendors` : ''}.`;
+    wowheadTab = 'fished-in';
+  } else if (isMineral && minedFrom.length > 0) {
+    primaryType = 'ore';
+    ctaIcon = '⛏️';
+    const veinName = minedFrom[0]?.name || 'Mining Veins';
+    ctaText = `Click here to see where to mine ${veinName}`;
+    summary = `Mined from ${veinName}.`;
+    wowheadTab = 'mined-from-object';
   } else if (vendors.length > 0) {
     primaryType = 'vendor';
     ctaIcon = '🪙';
@@ -419,6 +444,21 @@ for (const [id, meta] of uniqueReagents.entries()) {
     ctaIcon = CURATED_FALLBACKS[id].ctaIcon;
     ctaText = CURATED_FALLBACKS[id].ctaText;
     summary = CURATED_FALLBACKS[id].summary;
+  }
+
+  const defaultTabs = {
+    ore: 'mined-from-object',
+    herb: 'gathered-from-object',
+    fished: 'fished-in',
+    skinned: 'skinned-from',
+    vendor: 'sold-by',
+    crafted: 'created-by-spell',
+    disenchant: 'disenchanted-from',
+    contained: 'contained-in-item',
+    mob_drop: 'dropped-by'
+  };
+  if (!wowheadTab && defaultTabs[primaryType]) {
+    wowheadTab = defaultTabs[primaryType];
   }
 
   finalSources[id] = {

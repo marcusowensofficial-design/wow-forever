@@ -115,7 +115,7 @@ export default [
     }
   },
   {
-    files: ['scripts/**/*.js'],
+    files: ['scripts/**/*.{js,mjs}'],
     languageOptions: {
       ecmaVersion: 'latest',
       sourceType: 'module',

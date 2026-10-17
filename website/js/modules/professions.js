@@ -2464,28 +2464,28 @@
 
       // 1. Summary Banner + Internal Jump Buttons
       let internalJumpHtml = '';
-      if (src.herbNode) {
+      if (src.primaryType === 'herb' && src.herbNode) {
         internalJumpHtml += `
           <button type="button" class="reagent-internal-jump-btn" data-jump-prof="herbalism" data-jump-subtab="nodes">
             <span>🌿</span> View ${escapeHtml(src.herbNode.name)} in Herbalism Nodes (Skill ${src.herbNode.skill}+) ›
           </button>
         `;
       }
-      if (src.miningNode) {
+      if (src.primaryType === 'ore' && src.miningNode) {
         internalJumpHtml += `
           <button type="button" class="reagent-internal-jump-btn" data-jump-prof="mining" data-jump-subtab="nodes">
             <span>⛏️</span> View ${escapeHtml(src.miningNode.name)} in Mining Nodes (Skill ${src.miningNode.skill}+) ›
           </button>
         `;
       }
-      if (src.fishedIn && src.fishedIn.length > 0) {
+      if (src.primaryType === 'fished' && src.fishedIn && src.fishedIn.length > 0) {
         internalJumpHtml += `
           <button type="button" class="reagent-internal-jump-btn" data-jump-prof="fishing" data-jump-subtab="waters">
             <span>🌊</span> View Fishing Waters & Skill Brackets ›
           </button>
         `;
       }
-      if (src.skinnedFrom && src.skinnedFrom.length > 0) {
+      if (src.primaryType === 'skinned' && src.skinnedFrom && src.skinnedFrom.length > 0) {
         internalJumpHtml += `
           <button type="button" class="reagent-internal-jump-btn" data-jump-prof="skinning" data-jump-subtab="leveling">
             <span>🔪</span> View Skinning Beast Level Brackets ›
@@ -2647,9 +2647,11 @@
       }
 
       // 6. Mined From / Gathered From Nodes
-      const nodeObjects = (src.minedFrom || []).concat(src.gatheredFrom || []);
+      const validMinedFrom = (src.minedFrom || []).filter(o => o.pct > 0);
+      const validGatheredFrom = (src.gatheredFrom || []).filter(o => o.pct > 0);
+      const nodeObjects = validMinedFrom.concat(validGatheredFrom);
       if (nodeObjects.length > 0) {
-        const isMine = Boolean(src.minedFrom && src.minedFrom.length);
+        const isMine = Boolean(validMinedFrom.length);
         sections.push(`
           <div class="reagent-source-section">
             <div class="reagent-source-sec-head">
@@ -2949,6 +2951,7 @@
   // Export module globally
   window.initProfessionsHub = initProfessionsHub;
   window.WOW_PROFESSIONS = {
+    openReagentModal: openReverseReagentLookup,
     selectProfession: (slug, subtab, query, targetId) => {
       currentProfession = slug || 'overview';
       if (subtab) currentSubTab = subtab;
