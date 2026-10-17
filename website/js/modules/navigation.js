@@ -373,7 +373,7 @@ window.checkReturnPillState = function () {
   const rawHash = (window.location.hash || '').toLowerCase();
   const currentTab = document.querySelector('.nav-tab-btn.active')?.getAttribute('data-tab');
   if (activeReturnTarget.tab === currentTab && !activeReturnTarget.reagentModal) {
-    if (!activeReturnTarget.profession || rawHash.includes(activeReturnTarget.profession)) {
+    if (!activeReturnTarget.profession || (rawHash.includes(activeReturnTarget.profession) && (!activeReturnTarget.subtab || rawHash.includes(activeReturnTarget.subtab)))) {
       window.clearReturnTarget();
     }
   }

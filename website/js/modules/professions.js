@@ -4978,6 +4978,177 @@
   /* ==========================================================================
      SUBTAB 2: LEVELING 1-300 ROADMAP (WITH REAGENT BADGES & PROGRESS TRACKS)
      ========================================================================== */
+  function resolveStepCraftedItem(item, prof) {
+    if (!item) return { name: '', icon: null, quality: 1, effect: '', reagents: null, learn: '1', source: 'Trainer', id: null, targetSubtab: 'recipes', recipeObj: null };
+    const name = item.recipeName || item.name || '';
+    if (!name) return { name: '', icon: null, quality: 1, effect: '', reagents: null, learn: '1', source: 'Trainer', id: null, targetSubtab: 'recipes', recipeObj: null };
+
+    const cleanName = name.toLowerCase()
+      .replace(/^make (a|an) /i, '')
+      .replace(/\s*\(smelting bypass\)$/i, '')
+      .trim();
+    const smeltTarget = cleanName.startsWith('smelt ') ? `${cleanName.replace(/^smelt\s+/, '')} bar` : null;
+    const recipesList = (prof && prof.recipes) || [];
+
+    // 1. Exact name or Smelt Bar match first
+    let match = recipesList.find(r => {
+      if (!r || !r.name) return false;
+      const rn = r.name.toLowerCase();
+      return rn === name.toLowerCase() || rn === cleanName || (smeltTarget && rn === smeltTarget);
+    });
+
+    // 2. Fallback to itemId match
+    if (!match && item.itemId) {
+      match = recipesList.find(r => r && (String(r.id) === String(item.itemId) || String(r.itemId) === String(item.itemId)));
+    }
+
+    // 3. Fallback to substring match
+    if (!match) {
+      match = recipesList.find(r => {
+        if (!r || !r.name) return false;
+        const rn = r.name.toLowerCase();
+        return rn.includes(cleanName) || cleanName.includes(rn);
+      });
+    }
+
+    if (match) {
+      return {
+        name: match.name,
+        icon: match.icon,
+        quality: match.quality || 1,
+        effect: match.effect || item.advice || item.source || '',
+        reagents: match.reagents || item.reagents || null,
+        learn: match.learn !== undefined ? match.learn : (item.from !== undefined ? `${item.from}–${item.to}` : '1'),
+        source: match.source || item.source || 'Trainer',
+        id: match.id || item.itemId || null,
+        targetSubtab: 'recipes',
+        recipeObj: match
+      };
+    }
+
+    // 4. Camping station, campfire & upgrade lookup
+    if (prof && prof.slug === 'camping') {
+      const campingAliasMap = {
+        'basic campfire kit': { subtab: 'guide', target: 'Basic Campfire Kit' },
+        'journeyman campfire kit': { subtab: 'guide', target: 'Journeyman Campfire Kit' },
+        'expert campfire kit': { subtab: 'guide', target: 'Expert Campfire Kit' },
+        'lean-to shelter': { subtab: 'buffs', target: 'Camp Tent' },
+        'linen wall tent': { subtab: 'buffs', target: 'Camp Tent' },
+        'silk trail pavilion': { subtab: 'buffs', target: 'Camp Tent' },
+        'field tanning rack': { subtab: 'upgrades', target: 'Tanning Rack' },
+        'field spinning wheel': { subtab: 'upgrades', target: 'Spinning Wheel' },
+        'portable blacksmithing anvil': { subtab: 'upgrades', target: 'Anvil' },
+        'field alchemy cauldron': { subtab: 'upgrades', target: 'Fermenter' },
+        "cookie's feast": { subtab: 'upgrades', target: "Cookie's Feast" }
+      };
+      const alias = campingAliasMap[cleanName];
+      const lookupKey = alias ? alias.target.toLowerCase() : cleanName;
+
+      const cf = (prof.campfires || []).find(c => c && c.name && (c.name.toLowerCase() === lookupKey || lookupKey.includes(c.name.toLowerCase()) || c.name.toLowerCase().includes(lookupKey)));
+      if (cf) {
+        return {
+          name: item.recipeName || cf.name,
+          targetName: alias?.target || cf.name,
+          icon: cf.icon || 'inv_camelot_camping_welcomingcampfire',
+          quality: cf.quality || 2,
+          effect: `${cf.desc || ''} (Holds ${cf.capacity || 3} stations)`,
+          learn: cf.skillReq || (item.from !== undefined ? `${item.from}–${item.to}` : '1'),
+          source: cf.blueprint ? cf.blueprint.text : (item.source || 'Camping Trainer'),
+          reagents: item.reagents || cf.reagents || null,
+          id: item.itemId || null,
+          targetSubtab: 'guide',
+          recipeObj: null
+        };
+      }
+
+      const bf = (prof.buffObjects || []).find(b => b && b.object && (b.object.toLowerCase() === lookupKey || lookupKey.includes(b.object.toLowerCase())));
+      if (bf) {
+        return {
+          name: item.recipeName || bf.object,
+          targetName: alias?.target || bf.object,
+          icon: bf.icon || 'inv_misc_pelt_wolf_01',
+          quality: cleanName.includes('silk') ? 3 : 2,
+          effect: item.advice ? `${item.advice} (${bf.object}: ${bf.gives})` : bf.gives,
+          learn: (item.from !== undefined && item.to !== undefined) ? `${item.from}–${item.to}` : `${bf.profName || 'Camping'} ${bf.skillReq || ''}`.trim(),
+          source: item.source || 'Camping Trainer',
+          reagents: item.reagents || bf.reagents || null,
+          id: item.itemId || null,
+          targetSubtab: 'buffs',
+          recipeObj: null
+        };
+      }
+
+      if (prof.upgrades) {
+        for (const u of prof.upgrades) {
+          if (u.s140?.name && (u.s140.name.toLowerCase() === lookupKey || lookupKey.includes(u.s140.name.toLowerCase()))) {
+            return {
+              name: item.recipeName || u.s140.name,
+              targetName: alias?.target || u.s140.name,
+              icon: u.s140.icon,
+              quality: 2,
+              effect: item.advice ? `${item.advice} (${u.s140.desc})` : u.s140.desc,
+              learn: (item.from !== undefined && item.to !== undefined) ? `${item.from}–${item.to}` : u.s140.skill,
+              source: item.source || 'Camping Blueprint',
+              reagents: item.reagents || null,
+              id: item.itemId || null,
+              targetSubtab: 'upgrades',
+              recipeObj: null
+            };
+          }
+          if (u.s300?.name && (u.s300.name.toLowerCase() === lookupKey || lookupKey.includes(u.s300.name.toLowerCase()))) {
+            return {
+              name: item.recipeName || u.s300.name,
+              targetName: alias?.target || u.s300.name,
+              icon: u.s300.icon,
+              quality: 3,
+              effect: item.advice ? `${item.advice} (${u.s300.desc})` : u.s300.desc,
+              learn: (item.from !== undefined && item.to !== undefined) ? `${item.from}–${item.to}` : u.s300.skill,
+              source: item.source || 'Camping Blueprint',
+              reagents: item.reagents || null,
+              id: item.itemId || null,
+              targetSubtab: 'upgrades',
+              recipeObj: null
+            };
+          }
+        }
+      }
+    }
+
+    // 5. Fallback against window.WOW_REAGENT_SOURCES
+    if (window.WOW_REAGENT_SOURCES) {
+      const rSources = window.WOW_REAGENT_SOURCES;
+      const rEntry = Object.values(rSources).find(r => r && ((r.name && r.name.toLowerCase() === cleanName) || (item.itemId && String(r.id) === String(item.itemId))));
+      if (rEntry) {
+        return {
+          name: rEntry.name,
+          icon: rEntry.icon || null,
+          quality: rEntry.quality || 1,
+          effect: rEntry.summary || '',
+          reagents: item.reagents || null,
+          learn: (item.from !== undefined && item.to !== undefined) ? `${item.from}–${item.to}` : '1',
+          source: item.source || 'Trainer',
+          id: rEntry.id,
+          targetSubtab: 'recipes',
+          recipeObj: null
+        };
+      }
+    }
+
+    // 6. Generic Fallback
+    return {
+      name: item.recipeName || item.name || name,
+      icon: item.icon || null,
+      quality: item.vendorDetails ? 2 : (item.quality || 1),
+      effect: item.advice || item.source || '',
+      reagents: item.reagents || null,
+      learn: (item.from !== undefined && item.to !== undefined) ? `${item.from}–${item.to}` : '1',
+      source: item.source || 'Trainer',
+      id: item.itemId || null,
+      targetSubtab: 'recipes',
+      recipeObj: null
+    };
+  }
+
   function renderLevelingTab(container, prof) {
     const leveling = prof.leveling || {};
     const steps = leveling.steps || [];
@@ -5092,6 +5263,10 @@
             const supplyClass = vd?.supply
               ? (vd.supply.toLowerCase().includes('unlimited') ? 'unlimited' : (vd.supply.toLowerCase().includes('limited') ? 'limited' : 'drop'))
               : '';
+            const resolved = resolveStepCraftedItem(item, prof);
+            const craftedIconUrl = getIconUrl(resolved.icon, resolved.name, resolved.source);
+            const qualityClass = `q${resolved.quality || 1}`;
+
             return `
               <div class="leveling-step-row ${isCompleted ? 'completed' : ''}" data-step-id="${stepId}" data-step-idx="${idx}">
                 <div class="step-check-col">
@@ -5105,9 +5280,14 @@
                   </div>
                 </div>
                 <div class="step-info-col">
-                  <div class="step-recipe-name is-clickable" role="button" tabindex="0" data-item-id="${item.itemId || ''}" data-recipe-name="${escapeHtml(item.recipeName)}" data-step-idx="${idx}" title="Click to view in catalog · Hover for full recipe details">
-                    <span>${escapeHtml(item.recipeName)}</span>
-                    <span class="step-recipe-jump-hint">↗</span>
+                  <div class="step-recipe-header">
+                    <div class="step-crafted-icon-wrap ${qualityClass}" data-recipe-name="${escapeHtml(item.recipeName)}" data-step-idx="${idx}" role="button" tabindex="0" aria-label="View ${escapeHtml(item.recipeName)} in catalog" title="Click to view in catalog · Hover for full item stats">
+                      <img src="${craftedIconUrl}" alt="${escapeHtml(item.recipeName)}" class="step-crafted-icon ${qualityClass}" loading="lazy" />
+                    </div>
+                    <div class="step-recipe-name ${qualityClass} is-clickable" role="button" tabindex="0" data-item-id="${item.itemId || resolved.id || ''}" data-recipe-name="${escapeHtml(item.recipeName)}" data-step-idx="${idx}" aria-label="View ${escapeHtml(item.recipeName)} in catalog" title="Click to view in catalog · Hover for full recipe details">
+                      <span>${escapeHtml(item.recipeName)}</span>
+                      <span class="step-recipe-jump-hint">↗</span>
+                    </div>
                   </div>
                   <div class="step-source-line">${escapeHtml(item.source)}</div>
                   ${vd ? `
@@ -6842,20 +7022,34 @@
     positionTooltip(e, tooltip);
   }
 
-  function positionTooltip(e, tooltip) {
-    const x = e.clientX + 15;
-    const y = e.clientY + 15;
+  function positionTooltip(e, tooltip, targetEl = null) {
     const pad = 12;
     const ttWidth = tooltip.offsetWidth || 220;
     const ttHeight = tooltip.offsetHeight || 100;
 
+    let x, y;
+    if (e && typeof e.clientX === 'number' && !isNaN(e.clientX)) {
+      x = e.clientX + 15;
+      y = e.clientY + 15;
+    } else {
+      const el = targetEl || (e && e.target && e.target.getBoundingClientRect ? e.target : null);
+      if (el) {
+        const rect = el.getBoundingClientRect();
+        x = rect.right + 10;
+        y = rect.top;
+      } else {
+        x = pad;
+        y = pad;
+      }
+    }
+
     let left = x;
     let top = y;
     if (left + ttWidth > window.innerWidth - pad) {
-      left = e.clientX - ttWidth - 10;
+      left = (e && typeof e.clientX === 'number' && !isNaN(e.clientX)) ? e.clientX - ttWidth - 10 : window.innerWidth - ttWidth - pad;
     }
     if (top + ttHeight > window.innerHeight - pad) {
-      top = e.clientY - ttHeight - 10;
+      top = (e && typeof e.clientY === 'number' && !isNaN(e.clientY)) ? e.clientY - ttHeight - 10 : window.innerHeight - ttHeight - pad;
     }
     tooltip.style.left = `${Math.max(pad, left)}px`;
     tooltip.style.top = `${Math.max(pad, top)}px`;
@@ -6933,134 +7127,57 @@
     });
 
     // Recipes / steps (with exact recipe lookup, Mining Smelt -> Bar mapping, Camping station lookup & click-to-inspect)
-    container.querySelectorAll('.step-recipe-name').forEach(el => {
+    container.querySelectorAll('.step-recipe-name, .step-crafted-icon-wrap').forEach(el => {
       const name = el.getAttribute('data-recipe-name') || el.textContent.replace(/↗$/, '').trim();
       const stepIdx = parseInt(el.getAttribute('data-step-idx') || '-1', 10);
       const stepObj = (stepIdx >= 0 && prof.leveling?.steps) ? prof.leveling.steps[stepIdx] : null;
-      const cleanName = name.toLowerCase()
-        .replace(/^make (a|an) /i, '')
-        .replace(/\s*\(smelting bypass\)$/i, '')
-        .trim();
-      const smeltTarget = cleanName.startsWith('smelt ') ? `${cleanName.replace(/^smelt\s+/, '')} bar` : null;
-      const recipesList = prof.recipes || [];
+      const resolved = resolveStepCraftedItem(stepObj || { recipeName: name, itemId: el.getAttribute('data-item-id') }, prof);
+      const match = resolved.recipeObj;
+      const targetSubtab = resolved.targetSubtab || 'recipes';
 
-      // 1. Exact name or Smelt Bar match first (prevents "Heavy Linen Bandage" from matching "Linen Bandage")
-      let match = recipesList.find(r => {
-        if (!r.name) return false;
-        const rn = r.name.toLowerCase();
-        return rn === name.toLowerCase() || rn === cleanName || (smeltTarget && rn === smeltTarget);
-      });
-      // 2. Fallback to itemId match
-      if (!match && stepObj?.itemId) {
-        match = recipesList.find(r => r.id === stepObj.itemId || r.itemId === stepObj.itemId);
-      }
-      // 3. Fallback to substring match only if still unmatched
-      if (!match) {
-        match = recipesList.find(r => {
-          if (!r.name) return false;
-          const rn = r.name.toLowerCase();
-          return rn.includes(cleanName) || cleanName.includes(rn);
-        });
-      }
-
-      let targetSubtab = 'recipes';
-      if (!match && prof.slug === 'camping') {
-        const campingAliasMap = {
-          'lean-to shelter': { subtab: 'buffs', target: 'Camp Tent' },
-          'linen wall tent': { subtab: 'buffs', target: 'Camp Tent' },
-          'silk trail pavilion': { subtab: 'buffs', target: 'Camp Tent' },
-          'field tanning rack': { subtab: 'upgrades', target: 'Tanning Rack' },
-          'field spinning wheel': { subtab: 'upgrades', target: 'Spinning Wheel' },
-          'portable blacksmithing anvil': { subtab: 'upgrades', target: 'Anvil' },
-          'field alchemy cauldron': { subtab: 'upgrades', target: 'Fermenter' }
-        };
-        const alias = campingAliasMap[cleanName];
-        const lookupKey = alias ? alias.target.toLowerCase() : cleanName;
-
-        const cf = (prof.campfires || []).find(c => c.name && (c.name.toLowerCase() === lookupKey || lookupKey.includes(c.name.toLowerCase()) || c.name.toLowerCase().includes(lookupKey)));
-        if (cf) {
-          targetSubtab = 'guide';
-          match = {
-            name: cf.name,
-            quality: cf.quality || 2,
-            effect: `${cf.desc || ''} (Holds ${cf.capacity || 3} stations)`,
-            learn: cf.skillReq || (stepObj ? `${stepObj.from}–${stepObj.to}` : '1'),
-            source: cf.blueprint ? cf.blueprint.text : (stepObj?.source || 'Camping Trainer'),
-            reagents: stepObj?.reagents || cf.reagents || null
-          };
-        }
-        if (!match) {
-          const bf = (prof.buffObjects || []).find(b => b.object && (b.object.toLowerCase() === lookupKey || lookupKey.includes(b.object.toLowerCase())));
-          if (bf) {
-            targetSubtab = 'buffs';
-            match = {
-              name: bf.object,
-              quality: 2,
-              effect: stepObj?.advice ? `${stepObj.advice} (${bf.object}: ${bf.gives})` : bf.gives,
-              learn: stepObj ? `${stepObj.from}–${stepObj.to}` : `${bf.profName} ${bf.skillReq}`,
-              source: stepObj?.source || 'Camping Trainer',
-              reagents: stepObj?.reagents || bf.reagents || null
-            };
-          }
-        }
-        if (!match && prof.upgrades) {
-          for (const u of prof.upgrades) {
-            if (u.s140?.name && (u.s140.name.toLowerCase() === lookupKey || lookupKey.includes(u.s140.name.toLowerCase()))) {
-              targetSubtab = 'upgrades';
-              match = {
-                name: u.s140.name,
-                quality: 2,
-                effect: stepObj?.advice ? `${stepObj.advice} (${u.s140.desc})` : u.s140.desc,
-                learn: stepObj ? `${stepObj.from}–${stepObj.to}` : u.s140.skill,
-                source: stepObj?.source || 'Camping Blueprint',
-                reagents: stepObj?.reagents || null
-              };
-              break;
-            }
-            if (u.s300?.name && (u.s300.name.toLowerCase() === lookupKey || lookupKey.includes(u.s300.name.toLowerCase()))) {
-              targetSubtab = 'upgrades';
-              match = {
-                name: u.s300.name,
-                quality: 3,
-                effect: stepObj?.advice ? `${stepObj.advice} (${u.s300.desc})` : u.s300.desc,
-                learn: stepObj ? `${stepObj.from}–${stepObj.to}` : u.s300.skill,
-                source: stepObj?.source || 'Camping Blueprint',
-                reagents: stepObj?.reagents || null
-              };
-              break;
-            }
-          }
-        }
-      }
-
-      const ttQuality = match?.quality || (stepObj?.vendorDetails ? 2 : 1);
-      const ttDesc = match?.effect || stepObj?.advice || stepObj?.source || match?.source || '';
-      const ttReagents = stepObj?.reagents || match?.reagents || null;
+      const ttQuality = resolved.quality || (stepObj?.vendorDetails ? 2 : 1);
+      const ttDesc = (match && match.effect) ? match.effect : (resolved.effect || stepObj?.advice || stepObj?.source || match?.source || '');
+      const ttReagents = stepObj?.reagents || resolved.reagents || match?.reagents || null;
       const ttExtra = {
         type: `${prof.name || 'Tradeskill'} Step${stepObj?.crafts > 1 ? ` (~${stepObj.crafts} Crafts)` : ''}`,
-        skillReq: match?.learn ? `${prof.name} (${match.learn})` : (stepObj ? `${prof.name} (${stepObj.from}–${stepObj.to})` : ''),
-        source: stepObj?.source || match?.source || 'Trainer',
+        skillReq: resolved.learn ? `${prof.name} (${resolved.learn})` : (match?.learn ? `${prof.name} (${match.learn})` : (stepObj ? `${prof.name} (${stepObj.from}–${stepObj.to})` : '')),
+        source: stepObj?.source || resolved.source || match?.source || 'Trainer',
         cost: stepObj?.vendorDetails?.cost || '',
         crafts: stepObj?.crafts || 1
       };
 
       el.addEventListener('mouseenter', (e) => {
-        showItemTooltip(e, name, ttQuality, ttDesc, ttReagents, ttExtra);
+        showItemTooltip(e, resolved.name || name, ttQuality, ttDesc, ttReagents, ttExtra);
       });
       el.addEventListener('mousemove', (e) => {
         const tt = document.getElementById('wow-item-tooltip');
         if (tt) positionTooltip(e, tt);
       });
       el.addEventListener('mouseleave', hideItemTooltip);
+      el.addEventListener('focus', (e) => {
+        showItemTooltip(e, resolved.name || name, ttQuality, ttDesc, ttReagents, ttExtra);
+        const tt = document.getElementById('wow-item-tooltip');
+        if (tt) positionTooltip(e, tt, el);
+      });
+      el.addEventListener('blur', hideItemTooltip);
 
       const handleStepRecipeClick = (e) => {
         e.stopPropagation();
         hideItemTooltip();
+        if (window.setReturnTarget) {
+          window.setReturnTarget({
+            label: `${prof.name || 'Leveling'} Roadmap`,
+            tab: 'professions',
+            profession: prof.slug,
+            subtab: 'leveling',
+            scrollY: window.scrollY
+          });
+        }
         if (prof.slug === 'camping') {
           const destTab = targetSubtab === 'recipes' ? 'guide' : targetSubtab;
           if (window.WOW_PROFESSIONS?.selectProfession) {
             window.WOW_PROFESSIONS.selectProfession('camping', destTab, '');
-            const targetItemName = match?.name || name;
+            const targetItemName = resolved.targetName || resolved.name || name;
             setTimeout(() => {
               const cardEl = Array.from(document.querySelectorAll('.camp-tooltip-item')).find(
                 c => (c.getAttribute('data-item-name') || '').toLowerCase() === targetItemName.toLowerCase()
@@ -7075,13 +7192,13 @@
           return;
         }
         if (prof.recipes && prof.recipes.length > 0) {
-          const lookupQuery = match?.name || name.replace(/^Make (a|an) /i, '').replace(/\s*\(Smelting Bypass\)$/i, '').trim();
+          const lookupQuery = resolved.name || name.replace(/^Make (a|an) /i, '').replace(/\s*\(Smelting Bypass\)$/i, '').trim();
           if (window.WOW_PROFESSIONS?.selectProfession) {
-            window.WOW_PROFESSIONS.selectProfession(prof.slug, 'recipes', lookupQuery, match?.id || '');
+            window.WOW_PROFESSIONS.selectProfession(prof.slug, 'recipes', lookupQuery, resolved.id || match?.id || '');
           }
         } else {
-          const itemId = el.getAttribute('data-item-id') || '';
-          openReverseReagentLookup(itemId, name.replace(/\s*\(Smelting Bypass\)$/i, '').trim());
+          const itemId = el.getAttribute('data-item-id') || resolved.id || '';
+          openReverseReagentLookup((resolved.name || name).replace(/\s*\(Smelting Bypass\)$/i, '').trim(), itemId);
         }
       };
 
