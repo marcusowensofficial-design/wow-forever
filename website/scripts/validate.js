@@ -197,6 +197,16 @@ check('Professions data synchronization between JSON and JS bundle', () => {
   if ((profJson.mining?.recipes?.length || 0) < 14) {
     throw new Error(`Expected at least 14 mining smelts in forever_professions.json, got ${profJson.mining?.recipes?.length}`);
   }
+
+  // Ensure WOW_REAGENT_SOURCES is present and synchronized
+  const reagentJson = JSON.parse(fs.readFileSync(path.join(dataDir, 'forever_reagent_sources.json'), 'utf8'));
+  const reagentCount = Object.keys(reagentJson).length;
+  if (reagentCount < 525) {
+    throw new Error(`Expected at least 525 reagent acquisition entries in forever_reagent_sources.json, got ${reagentCount}`);
+  }
+  if (!profJsRaw.includes('window.WOW_REAGENT_SOURCES =')) {
+    throw new Error('window.WOW_REAGENT_SOURCES not found in professions-data.js');
+  }
 });
 
 check('Professions category mapping and zero unmapped categories', () => {

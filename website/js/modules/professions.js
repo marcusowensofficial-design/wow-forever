@@ -2323,12 +2323,18 @@
     // Reagent chips, badges & shopping rows - hover for tooltip, click for reverse lookup modal
     container.querySelectorAll('.reagent-chip, .step-reagent-badge, .shopping-row-card').forEach(el => {
       const name = el.getAttribute('data-item-name') || el.getAttribute('title') || '';
+      const rawId = el.getAttribute('data-item-id') || '';
       if (!name) return;
       const triggerTooltip = (e) => {
         e.stopPropagation();
-        showItemTooltip(e, name, 1, 'Crafting Reagent / Material', null, { 
+        const src = resolveReagentSource(name, rawId);
+        const summaryDesc = src && src.summary ? src.summary : 'Crafting Reagent / Material';
+        const useHint = src
+          ? `${src.ctaIcon || '📍'} Click to view farming sources, drop rates, vendors & recipes.`
+          : 'Click to find all recipes across professions that use this material.';
+        showItemTooltip(e, name, 1, summaryDesc, null, { 
           type: 'Crafting Component',
-          use: 'Click to find all recipes across professions that use this material.'
+          use: useHint
         });
       };
       el.addEventListener('mouseenter', triggerTooltip);
@@ -2336,7 +2342,7 @@
         if (e.target.classList.contains('shopping-item-check')) return;
         e.stopPropagation();
         hideItemTooltip();
-        openReverseReagentLookup(name);
+        openReverseReagentLookup(name, rawId);
       });
       el.addEventListener('mousemove', (e) => {
         const tt = document.getElementById('wow-item-tooltip');
@@ -2350,9 +2356,29 @@
   }
 
   /* ==========================================================================
-     REVERSE REAGENT SEARCH MODAL ENGINE
+     REVERSE REAGENT SEARCH & ACQUISITION SOURCE MODAL ENGINE
      ========================================================================== */
-  function openReverseReagentLookup(rawName) {
+  function resolveReagentSource(rawName, explicitId = null) {
+    const sources = window.WOW_REAGENT_SOURCES || {};
+    if (explicitId && sources[explicitId]) {
+      return sources[explicitId];
+    }
+    if (!rawName) return null;
+    const cleanName = rawName.replace(/^\d+x\s*/i, '').trim().toLowerCase();
+    for (const src of Object.values(sources)) {
+      if (src.name && src.name.toLowerCase() === cleanName) {
+        return src;
+      }
+    }
+    for (const src of Object.values(sources)) {
+      if (src.name && (src.name.toLowerCase().includes(cleanName) || cleanName.includes(src.name.toLowerCase()))) {
+        return src;
+      }
+    }
+    return null;
+  }
+
+  function openReverseReagentLookup(rawName, explicitId = null, initialTab = 'recipes') {
     if (!rawName) return;
     const cleanName = rawName.replace(/^\d+x\s*/i, '').trim();
     const cleanLower = cleanName.toLowerCase();
@@ -2361,17 +2387,19 @@
     const matches = [];
     let matIcon = '';
     let matQuality = 1;
+    let resolvedId = explicitId ? Number(explicitId) : null;
 
     Object.entries(data).forEach(([slug, p]) => {
       (p.recipes || []).forEach(r => {
         const mat = (r.reagents || []).find(m => {
           if (!m.name) return false;
-          const mn = m.name.toLowerCase();
+          const mn = m.name.replace(/^\d+x\s*/i, '').trim().toLowerCase();
           return mn === cleanLower || mn.includes(cleanLower) || cleanLower.includes(mn);
         });
         if (mat) {
           if (!matIcon && mat.icon) matIcon = mat.icon;
           if (mat.quality) matQuality = mat.quality;
+          if (!resolvedId && (mat.id || mat.itemId)) resolvedId = Number(mat.id || mat.itemId);
           matches.push({
             profSlug: slug,
             profName: p.name,
@@ -2382,6 +2410,11 @@
         }
       });
     });
+
+    const sourceData = resolveReagentSource(cleanName, resolvedId);
+    if (!resolvedId && sourceData?.id) {
+      resolvedId = sourceData.id;
+    }
 
     let modal = document.getElementById('prof-reagent-lookup-modal');
     if (!modal) {
@@ -2415,11 +2448,349 @@
     const iconUrl = matIcon ? getIconUrl(matIcon) : `${CDN_BASE}inv_misc_questionmark.jpg`;
 
     let activeFilter = 'all';
+    let activeModalView = initialTab === 'sources' ? 'sources' : 'recipes';
+
+    function renderAcquisitionView(src) {
+      if (!src) {
+        return `
+          <div class="reagent-lookup-empty">
+            No specific open-world drop table recorded for this reagent.
+            ${resolvedId ? `<div style="margin-top:0.75rem;"><a href="https://www.wowhead.com/forever/item=${resolvedId}" target="_blank" rel="noopener" class="reagent-wowhead-ext-btn">🌐 View on Wowhead Forever ↗</a></div>` : ''}
+          </div>
+        `;
+      }
+
+      const sections = [];
+
+      // 1. Summary Banner + Internal Jump Buttons
+      let internalJumpHtml = '';
+      if (src.herbNode) {
+        internalJumpHtml += `
+          <button type="button" class="reagent-internal-jump-btn" data-jump-prof="herbalism" data-jump-subtab="nodes">
+            <span>🌿</span> View ${escapeHtml(src.herbNode.name)} in Herbalism Nodes (Skill ${src.herbNode.skill}+) ›
+          </button>
+        `;
+      }
+      if (src.miningNode) {
+        internalJumpHtml += `
+          <button type="button" class="reagent-internal-jump-btn" data-jump-prof="mining" data-jump-subtab="nodes">
+            <span>⛏️</span> View ${escapeHtml(src.miningNode.name)} in Mining Nodes (Skill ${src.miningNode.skill}+) ›
+          </button>
+        `;
+      }
+      if (src.fishedIn && src.fishedIn.length > 0) {
+        internalJumpHtml += `
+          <button type="button" class="reagent-internal-jump-btn" data-jump-prof="fishing" data-jump-subtab="waters">
+            <span>🌊</span> View Fishing Waters & Skill Brackets ›
+          </button>
+        `;
+      }
+      if (src.skinnedFrom && src.skinnedFrom.length > 0) {
+        internalJumpHtml += `
+          <button type="button" class="reagent-internal-jump-btn" data-jump-prof="skinning" data-jump-subtab="leveling">
+            <span>🔪</span> View Skinning Beast Level Brackets ›
+          </button>
+        `;
+      }
+
+      sections.push(`
+        <div class="reagent-source-summary-box">
+          <div class="reagent-source-summary-main">
+            <span class="reagent-source-summary-icon">${src.ctaIcon || '📍'}</span>
+            <div>
+              <div class="reagent-source-summary-title">How to Acquire ${escapeHtml(cleanName)} in WoW Forever</div>
+              <p class="reagent-source-summary-text">${escapeHtml(src.summary || 'Looted, gathered, or purchased across Azeroth.')}</p>
+            </div>
+          </div>
+          ${internalJumpHtml ? `<div class="reagent-source-internal-jumps">${internalJumpHtml}</div>` : ''}
+        </div>
+      `);
+
+      // 2. Crafted By Recipes (if crafted intermediate)
+      if (src.craftedBy && src.craftedBy.length > 0) {
+        sections.push(`
+          <div class="reagent-source-section">
+            <h4 class="reagent-source-sec-title"><span>🔨</span> Crafted By Profession (${src.craftedBy.length})</h4>
+            <div class="reagent-source-grid">
+              ${src.craftedBy.map(c => `
+                <div class="reagent-source-card">
+                  <div class="reagent-source-card-left">
+                    <img src="${getIconUrl(c.profIcon)}" alt="${escapeHtml(c.profName)}" class="reagent-source-mini-icon" />
+                    <div>
+                      <div class="reagent-source-name">${escapeHtml(c.recipeName)}</div>
+                      <div class="reagent-source-sub">${escapeHtml(c.profName)} · <span class="reagent-row-skill">Skill ${c.learn}</span> · ${escapeHtml(c.source)}</div>
+                    </div>
+                  </div>
+                  <button type="button" class="reagent-jump-btn" data-slug="${c.profSlug}" data-recipe-id="${c.recipeId || ''}" data-recipe-name="${escapeHtml(c.recipeName)}">
+                    Craft in ${escapeHtml(c.profName)} ›
+                  </button>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        `);
+      }
+
+      // 3. Mob Drops Table ('dropped-by')
+      if (src.drops && src.drops.length > 0) {
+        const totalMobs = src.totalDropMobs || src.drops.length;
+        sections.push(`
+          <div class="reagent-source-section">
+            <div class="reagent-source-sec-head">
+              <h4 class="reagent-source-sec-title"><span>⚔️</span> Top Farming Mobs (${src.drops.length} of ${totalMobs} Mobs)</h4>
+              <a href="https://www.wowhead.com/forever/item=${src.id}#dropped-by" target="_blank" rel="noopener" class="reagent-sec-wowhead-link">
+                See all ${totalMobs} mobs & spawn maps on Wowhead ↗
+              </a>
+            </div>
+            <div class="reagent-source-grid">
+              ${src.drops.map(d => {
+                const lvlStr = d.minLevel ? (d.maxLevel && d.maxLevel !== d.minLevel ? `Lvl ${d.minLevel}–${d.maxLevel}` : `Lvl ${d.minLevel}`) : '';
+                const zoneStr = (d.zones && d.zones.length) ? d.zones.join(', ') : 'Azeroth';
+                const pctVal = d.pct !== null && d.pct !== undefined ? `${d.pct}%` : 'Drop';
+                const pctClass = d.pct >= 50 ? 'high' : (d.pct >= 20 ? 'med' : 'low');
+                return `
+                  <div class="reagent-source-card">
+                    <div class="reagent-source-card-left">
+                      <span class="reagent-drop-pct-badge ${pctClass}" title="Estimated Drop Chance">${pctVal}</span>
+                      <div>
+                        <div class="reagent-source-name">
+                          ${escapeHtml(d.name)}
+                          ${d.elite ? '<span class="reagent-mob-tag elite">Elite</span>' : ''}
+                          ${d.rare ? '<span class="reagent-mob-tag rare">Rare</span>' : ''}
+                          ${d.isNew ? '<span class="recipe-new-tag">New</span>' : ''}
+                        </div>
+                        <div class="reagent-source-sub">
+                          ${lvlStr ? `<span class="reagent-mob-lvl">${lvlStr}</span> · ` : ''}
+                          <span class="reagent-mob-zone">📍 ${escapeHtml(zoneStr)}</span>
+                        </div>
+                      </div>
+                    </div>
+                    <a href="https://www.wowhead.com/forever/npc=${d.id}" target="_blank" rel="noopener" class="reagent-npc-map-btn" title="View ${escapeHtml(d.name)} spawn map on Wowhead Forever">
+                      Map ↗
+                    </a>
+                  </div>
+                `;
+              }).join('')}
+            </div>
+          </div>
+        `);
+      }
+
+      // 4. Fishing Waters ('fished-in')
+      if (src.fishedIn && src.fishedIn.length > 0) {
+        sections.push(`
+          <div class="reagent-source-section">
+            <div class="reagent-source-sec-head">
+              <h4 class="reagent-source-sec-title"><span>🎣</span> Best Fishing Zones (${src.fishedIn.length})</h4>
+              <a href="https://www.wowhead.com/forever/item=${src.id}#fished-in" target="_blank" rel="noopener" class="reagent-sec-wowhead-link">
+                Full fishing table on Wowhead ↗
+              </a>
+            </div>
+            <div class="reagent-source-grid">
+              ${src.fishedIn.map(f => {
+                const pctVal = f.pct !== null && f.pct !== undefined ? `${f.pct}%` : 'Catch';
+                const pctClass = f.pct >= 35 ? 'high' : (f.pct >= 15 ? 'med' : 'low');
+                const lvlStr = f.minLevel ? `Zone Lvl ${f.minLevel}–${f.maxLevel || f.minLevel}` : 'Open Water';
+                return `
+                  <div class="reagent-source-card">
+                    <div class="reagent-source-card-left">
+                      <span class="reagent-drop-pct-badge ${pctClass}">${pctVal}</span>
+                      <div>
+                        <div class="reagent-source-name">🌊 ${escapeHtml(f.zone)}</div>
+                        <div class="reagent-source-sub">${escapeHtml(lvlStr)}</div>
+                      </div>
+                    </div>
+                    <a href="https://www.wowhead.com/forever/zone=${f.id}" target="_blank" rel="noopener" class="reagent-npc-map-btn">
+                      Zone ↗
+                    </a>
+                  </div>
+                `;
+              }).join('')}
+            </div>
+          </div>
+        `);
+      }
+
+      // 5. Skinned From ('skinned-from')
+      if (src.skinnedFrom && src.skinnedFrom.length > 0) {
+        sections.push(`
+          <div class="reagent-source-section">
+            <div class="reagent-source-sec-head">
+              <h4 class="reagent-source-sec-title"><span>🔪</span> Best Beasts to Skin (${src.skinnedFrom.length})</h4>
+              <a href="https://www.wowhead.com/forever/item=${src.id}#skinned-from" target="_blank" rel="noopener" class="reagent-sec-wowhead-link">
+                All skinnable beasts on Wowhead ↗
+              </a>
+            </div>
+            <div class="reagent-source-grid">
+              ${src.skinnedFrom.map(s => {
+                const lvlStr = s.minLevel ? (s.maxLevel && s.maxLevel !== s.minLevel ? `Lvl ${s.minLevel}–${s.maxLevel}` : `Lvl ${s.minLevel}`) : '';
+                const zoneStr = (s.zones && s.zones.length) ? s.zones.join(', ') : 'Azeroth';
+                const pctVal = s.pct !== null && s.pct !== undefined ? `${s.pct}%` : 'Skin';
+                return `
+                  <div class="reagent-source-card">
+                    <div class="reagent-source-card-left">
+                      <span class="reagent-drop-pct-badge high">${pctVal}</span>
+                      <div>
+                        <div class="reagent-source-name">${escapeHtml(s.name)}</div>
+                        <div class="reagent-source-sub">${lvlStr ? `${lvlStr} · ` : ''}📍 ${escapeHtml(zoneStr)}</div>
+                      </div>
+                    </div>
+                    <a href="https://www.wowhead.com/forever/npc=${s.id}" target="_blank" rel="noopener" class="reagent-npc-map-btn">
+                      Map ↗
+                    </a>
+                  </div>
+                `;
+              }).join('')}
+            </div>
+          </div>
+        `);
+      }
+
+      // 6. Mined From / Gathered From Nodes
+      const nodeObjects = (src.minedFrom || []).concat(src.gatheredFrom || []);
+      if (nodeObjects.length > 0) {
+        const isMine = Boolean(src.minedFrom && src.minedFrom.length);
+        sections.push(`
+          <div class="reagent-source-section">
+            <div class="reagent-source-sec-head">
+              <h4 class="reagent-source-sec-title"><span>${isMine ? '⛏️' : '🌿'}</span> Harvested From World Nodes (${nodeObjects.length})</h4>
+              <a href="https://www.wowhead.com/forever/item=${src.id}#${isMine ? 'mined-from-object' : 'gathered-from-object'}" target="_blank" rel="noopener" class="reagent-sec-wowhead-link">
+                Node spawn maps on Wowhead ↗
+              </a>
+            </div>
+            <div class="reagent-source-grid">
+              ${nodeObjects.map(o => {
+                const zoneStr = (o.zones && o.zones.length) ? o.zones.join(', ') : (src.herbNode?.zones || src.miningNode?.zones || 'Azeroth');
+                const pctVal = o.pct !== null && o.pct !== undefined && o.pct > 0 ? `${o.pct}%` : '100%';
+                return `
+                  <div class="reagent-source-card">
+                    <div class="reagent-source-card-left">
+                      <span class="reagent-drop-pct-badge high">${pctVal}</span>
+                      <div>
+                        <div class="reagent-source-name">${escapeHtml(o.name)}</div>
+                        <div class="reagent-source-sub">📍 ${escapeHtml(zoneStr)}</div>
+                      </div>
+                    </div>
+                    <a href="https://www.wowhead.com/forever/object=${o.id}" target="_blank" rel="noopener" class="reagent-npc-map-btn">
+                      Map ↗
+                    </a>
+                  </div>
+                `;
+              }).join('')}
+            </div>
+          </div>
+        `);
+      }
+
+      // 7. Vendors ('sold-by')
+      if (src.vendors && src.vendors.length > 0) {
+        const totalV = src.totalVendors || src.vendors.length;
+        sections.push(`
+          <div class="reagent-source-section">
+            <div class="reagent-source-sec-head">
+              <h4 class="reagent-source-sec-title"><span>🪙</span> Sold By Vendors (${src.vendors.length} of ${totalV} Vendors)</h4>
+              <a href="https://www.wowhead.com/forever/item=${src.id}#sold-by" target="_blank" rel="noopener" class="reagent-sec-wowhead-link">
+                All ${totalV} vendors on Wowhead ↗
+              </a>
+            </div>
+            <div class="reagent-source-grid">
+              ${src.vendors.map(v => {
+                const zoneStr = (v.zones && v.zones.length) ? v.zones.join(', ') : 'Camp / Major Cities';
+                const fClass = (v.faction || 'Neutral').toLowerCase();
+                return `
+                  <div class="reagent-source-card">
+                    <div class="reagent-source-card-left">
+                      <span class="reagent-vendor-faction-badge ${fClass}">${escapeHtml(v.faction || 'Neutral')}</span>
+                      <div>
+                        <div class="reagent-source-name">
+                          ${escapeHtml(v.name)}
+                          ${v.tag ? `<small style="color:#94a3b8; font-weight:500;">&lt;${escapeHtml(v.tag)}&gt;</small>` : ''}
+                          ${v.isNew ? '<span class="recipe-new-tag">New</span>' : ''}
+                        </div>
+                        <div class="reagent-source-sub">
+                          📍 ${escapeHtml(zoneStr)}
+                          ${v.cost ? ` · <strong style="color:#facc15;">${escapeHtml(v.cost)}</strong>` : ''}
+                          · ${v.stock ? `<span style="color:#fb923c;">Limited (${v.stock})</span>` : '<span style="color:#4ade80;">Unlimited</span>'}
+                        </div>
+                      </div>
+                    </div>
+                    <a href="https://www.wowhead.com/forever/npc=${v.id}" target="_blank" rel="noopener" class="reagent-npc-map-btn">
+                      Map ↗
+                    </a>
+                  </div>
+                `;
+              }).join('')}
+            </div>
+          </div>
+        `);
+      }
+
+      // 8. Contained In Clams / Containers
+      if (src.containedIn && src.containedIn.length > 0) {
+        sections.push(`
+          <div class="reagent-source-section">
+            <h4 class="reagent-source-sec-title"><span>🐚</span> Contained Inside Clams & Objects (${src.containedIn.length})</h4>
+            <div class="reagent-source-grid">
+              ${src.containedIn.map(c => `
+                <div class="reagent-source-card">
+                  <div class="reagent-source-card-left">
+                    <span class="reagent-drop-pct-badge high">${c.pct ? c.pct + '%' : 'Loot'}</span>
+                    <div>
+                      <div class="reagent-source-name">${escapeHtml(c.name)}</div>
+                      <div class="reagent-source-sub">Open in inventory or world container</div>
+                    </div>
+                  </div>
+                  <a href="https://www.wowhead.com/forever/item=${c.id}" target="_blank" rel="noopener" class="reagent-npc-map-btn">
+                    Item ↗
+                  </a>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        `);
+      }
+
+      // 9. Disenchanting Bracket Info
+      if (src.disenchant) {
+        sections.push(`
+          <div class="reagent-source-section">
+            <div class="reagent-source-sec-head">
+              <h4 class="reagent-source-sec-title"><span>✨</span> Disenchanted From Gear (iLvl ${src.disenchant.minIlvl}–${src.disenchant.maxIlvl})</h4>
+              <a href="https://www.wowhead.com/forever/item=${src.id}#disenchanted-from" target="_blank" rel="noopener" class="reagent-sec-wowhead-link">
+                View ${src.disenchant.count}+ items on Wowhead ↗
+              </a>
+            </div>
+            <div class="reagent-source-grid">
+              ${(src.disenchant.sampleItems || []).map(it => `
+                <div class="reagent-source-card">
+                  <div class="reagent-source-card-left">
+                    <span class="reagent-drop-pct-badge med">iLvl ${it.ilvl || '?'}</span>
+                    <div>
+                      <div class="reagent-source-name q${it.quality || 2}">${escapeHtml(it.name)}</div>
+                      <div class="reagent-source-sub">Disenchant Uncommon/Rare gear or use Camp Arcane Salvager</div>
+                    </div>
+                  </div>
+                  <a href="https://www.wowhead.com/forever/item=${it.id}" target="_blank" rel="noopener" class="reagent-npc-map-btn">
+                    Item ↗
+                  </a>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        `);
+      }
+
+      return `<div class="reagent-acquisition-body">${sections.join('')}</div>`;
+    }
 
     function renderModalContent() {
       const filteredMatches = activeFilter === 'all' 
         ? matches 
         : matches.filter(m => m.profSlug === activeFilter);
+
+      const ctaIcon = sourceData?.ctaIcon || '⚔️';
+      const ctaText = sourceData?.ctaText || 'Click here to see where to farm or buy this item';
+      const wowheadHref = sourceData?.wowheadUrl || (resolvedId ? `https://www.wowhead.com/forever/item=${resolvedId}` : `https://www.wowhead.com/forever/search?q=${encodeURIComponent(cleanName)}`);
 
       modal.innerHTML = `
         <div class="reagent-lookup-dialog">
@@ -2427,63 +2798,107 @@
             <div class="reagent-lookup-title-box">
               <img src="${iconUrl}" alt="${escapeHtml(cleanName)}" class="reagent-lookup-img q${matQuality}" />
               <div>
-                <h3 class="q${matQuality}">${escapeHtml(cleanName)}</h3>
-                <p>Required in <strong>${matches.length}</strong> recipe${matches.length === 1 ? '' : 's'} across <strong>${profNames.length}</strong> trade${profNames.length === 1 ? '' : 's'}</p>
+                <h3 class="q${matQuality}">
+                  ${escapeHtml(cleanName)}
+                  ${sourceData?.isForeverNew ? '<span class="recipe-new-tag" style="vertical-align:middle; margin-left:0.35rem;">New</span>' : ''}
+                </h3>
+                <p>Required in <strong>${matches.length}</strong> recipe${matches.length === 1 ? '' : 's'} across <strong>${profNames.length || 1}</strong> trade${profNames.length === 1 ? '' : 's'}</p>
               </div>
             </div>
-            <button type="button" class="reagent-lookup-close" id="reagent-lookup-close-btn" aria-label="Close dialog">✕</button>
+
+            <div class="reagent-lookup-head-actions">
+              <button type="button" class="reagent-head-farm-cta ${activeModalView === 'sources' ? 'is-active' : ''}" id="reagent-head-farm-cta-btn" title="Switch between Where to Farm/Buy and Used in Recipes">
+                <span class="reagent-cta-icon">${ctaIcon}</span>
+                <span class="reagent-cta-label">${activeModalView === 'sources' ? `Viewing Farming & Vendor Sources` : escapeHtml(ctaText)}</span>
+              </button>
+              <a href="${wowheadHref}" target="_blank" rel="noopener" class="reagent-head-wowhead-btn" title="Open ${escapeHtml(cleanName)} on Wowhead Forever Database">
+                <span>🌐</span> Wowhead ↗
+              </a>
+              <button type="button" class="reagent-lookup-close" id="reagent-lookup-close-btn" aria-label="Close dialog">✕</button>
+            </div>
           </div>
 
-          ${profNames.length > 1 ? `
-            <div class="reagent-lookup-chips">
-              <button type="button" class="reagent-filter-chip ${activeFilter === 'all' ? 'active' : ''}" data-prof="all">
-                All Trades (${matches.length})
-              </button>
-              ${Object.entries(profCounts).map(([name, count]) => {
-                const slug = Object.keys(data).find(k => data[k].name === name);
+          <!-- Dual View Switcher Bar -->
+          <div class="reagent-modal-view-tabs">
+            <button type="button" class="reagent-view-tab-btn ${activeModalView === 'recipes' ? 'active' : ''}" data-view="recipes">
+              <span>📜</span> Used in Recipes (${matches.length})
+            </button>
+            <button type="button" class="reagent-view-tab-btn ${activeModalView === 'sources' ? 'active' : ''}" data-view="sources">
+              <span>${ctaIcon}</span> Where to Farm & Buy
+            </button>
+          </div>
+
+          ${activeModalView === 'recipes' ? `
+            ${profNames.length > 1 ? `
+              <div class="reagent-lookup-chips">
+                <button type="button" class="reagent-filter-chip ${activeFilter === 'all' ? 'active' : ''}" data-prof="all">
+                  All Trades (${matches.length})
+                </button>
+                ${Object.entries(profCounts).map(([name, count]) => {
+                  const slug = Object.keys(data).find(k => data[k].name === name);
+                  return `
+                    <button type="button" class="reagent-filter-chip ${activeFilter === slug ? 'active' : ''}" data-prof="${slug}">
+                      ${escapeHtml(name)} (${count})
+                    </button>
+                  `;
+                }).join('')}
+              </div>
+            ` : ''}
+
+            <div class="reagent-lookup-list">
+              ${filteredMatches.length === 0 ? `
+                <div class="reagent-lookup-empty">No recipes found using this component.</div>
+              ` : filteredMatches.map(m => {
+                const r = m.recipe;
+                const qClass = `q${r.quality || 1}`;
                 return `
-                  <button type="button" class="reagent-filter-chip ${activeFilter === slug ? 'active' : ''}" data-prof="${slug}">
-                    ${escapeHtml(name)} (${count})
-                  </button>
+                  <div class="reagent-lookup-row">
+                    <div class="reagent-lookup-row-main">
+                      <img src="${getIconUrl(r.icon, r.name, r.source)}" alt="${escapeHtml(r.name)}" class="reagent-row-icon ${qClass}" />
+                      <div>
+                        <div class="reagent-row-name ${qClass}">${escapeHtml(r.name)}</div>
+                        <div class="reagent-row-meta">
+                          <span class="reagent-row-prof">
+                            <img src="${getIconUrl(m.profIcon)}" alt="${escapeHtml(m.profName)}" />
+                            ${escapeHtml(m.profName)}
+                          </span>
+                          <span class="reagent-row-skill">Skill ${r.learn}</span>
+                          <span class="reagent-row-qty">Requires: <strong>${m.neededCount}x</strong></span>
+                        </div>
+                      </div>
+                    </div>
+                    <button type="button" class="reagent-jump-btn" data-slug="${m.profSlug}" data-recipe-id="${r.id || ''}" data-recipe-name="${escapeHtml(r.name)}">
+                      View in ${escapeHtml(m.profName)} ›
+                    </button>
+                  </div>
                 `;
               }).join('')}
             </div>
-          ` : ''}
-
-          <div class="reagent-lookup-list">
-            ${filteredMatches.length === 0 ? `
-              <div class="reagent-lookup-empty">No recipes found using this component.</div>
-            ` : filteredMatches.map(m => {
-              const r = m.recipe;
-              const qClass = `q${r.quality || 1}`;
-              return `
-                <div class="reagent-lookup-row">
-                  <div class="reagent-lookup-row-main">
-                    <img src="${getIconUrl(r.icon, r.name, r.source)}" alt="${escapeHtml(r.name)}" class="reagent-row-icon ${qClass}" />
-                    <div>
-                      <div class="reagent-row-name ${qClass}">${escapeHtml(r.name)}</div>
-                      <div class="reagent-row-meta">
-                        <span class="reagent-row-prof">
-                          <img src="${getIconUrl(m.profIcon)}" alt="${escapeHtml(m.profName)}" />
-                          ${escapeHtml(m.profName)}
-                        </span>
-                        <span class="reagent-row-skill">Skill ${r.learn}</span>
-                        <span class="reagent-row-qty">Requires: <strong>${m.neededCount}x</strong></span>
-                      </div>
-                    </div>
-                  </div>
-                  <button type="button" class="reagent-jump-btn" data-slug="${m.profSlug}" data-recipe-id="${r.id || ''}" data-recipe-name="${escapeHtml(r.name)}">
-                    View in ${escapeHtml(m.profName)} ›
-                  </button>
-                </div>
-              `;
-            }).join('')}
-          </div>
+          ` : `
+            <div class="reagent-lookup-list reagent-sources-scroll">
+              ${renderAcquisitionView(sourceData)}
+            </div>
+          `}
         </div>
       `;
 
       const closeBtn = modal.querySelector('#reagent-lookup-close-btn');
       if (closeBtn) closeBtn.addEventListener('click', closeReagentModal);
+
+      const farmCtaBtn = modal.querySelector('#reagent-head-farm-cta-btn');
+      if (farmCtaBtn) {
+        farmCtaBtn.addEventListener('click', () => {
+          activeModalView = activeModalView === 'sources' ? 'recipes' : 'sources';
+          renderModalContent();
+        });
+      }
+
+      modal.querySelectorAll('.reagent-view-tab-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          activeModalView = btn.getAttribute('data-view');
+          renderModalContent();
+        });
+      });
 
       modal.querySelectorAll('.reagent-filter-chip').forEach(btn => {
         btn.addEventListener('click', () => {
@@ -2500,6 +2915,17 @@
           closeReagentModal();
           if (window.WOW_PROFESSIONS && window.WOW_PROFESSIONS.selectProfession) {
             window.WOW_PROFESSIONS.selectProfession(targetSlug, 'recipes', targetName, targetId);
+          }
+        });
+      });
+
+      modal.querySelectorAll('.reagent-internal-jump-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const targetSlug = btn.getAttribute('data-jump-prof');
+          const targetSub = btn.getAttribute('data-jump-subtab');
+          closeReagentModal();
+          if (window.WOW_PROFESSIONS && window.WOW_PROFESSIONS.selectProfession) {
+            window.WOW_PROFESSIONS.selectProfession(targetSlug, targetSub);
           }
         });
       });

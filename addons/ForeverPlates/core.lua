@@ -393,6 +393,7 @@ local function InitializeDatabase()
             -- Click-to-Target Nameplate Safety: Ensure clicks are never swallowed or ignored
             SetCVar("nameplateEnemyClickThrough", ForeverPlatesDB.enableClickTargeting ~= false and "0" or "1")
             SetCVar("nameplateFriendlyClickThrough", "0")
+            SetCVar("nameplatePlayerClickThrough", "0")
             if C_NamePlate and C_NamePlate.SetNamePlateEnemyClickThrough then
                 pcall(C_NamePlate.SetNamePlateEnemyClickThrough, ForeverPlatesDB.enableClickTargeting == false)
             end
@@ -400,16 +401,12 @@ local function InitializeDatabase()
                 pcall(C_NamePlate.SetNamePlateFriendlyClickThrough, false)
             end
 
-            -- Synchronize C++ 3D Raycast Hitboxes with Configured Bar Dimensions
-            local enemyW = ForeverPlatesDB.barWidth or 142
-            local enemyH = ForeverPlatesDB.barHeight or 18
-            local friendlyW = ForeverPlatesDB.friendlyBarWidth or 120
-            local friendlyH = ForeverPlatesDB.friendlyBarHeight or 12
+            -- Restore robust default C++ raycast hitboxes for full click-to-target coverage
             if C_NamePlate and C_NamePlate.SetNamePlateEnemySize then
-                pcall(C_NamePlate.SetNamePlateEnemySize, enemyW, enemyH + 10)
+                pcall(C_NamePlate.SetNamePlateEnemySize, 110, 45)
             end
             if C_NamePlate and C_NamePlate.SetNamePlateFriendlySize then
-                pcall(C_NamePlate.SetNamePlateFriendlySize, friendlyW, friendlyH)
+                pcall(C_NamePlate.SetNamePlateFriendlySize, 110, 45)
             end
 
             if ForeverPlatesDB.lockDistanceScale ~= false then
@@ -1701,27 +1698,11 @@ local function ApplyBarDimensions(unitFrame)
     local h = isFriendlyPlayer and (ForeverPlatesDB.friendlyBarHeight or 12) or (ForeverPlatesDB.barHeight or 15)
 
     pcall(unitFrame.SetSize, unitFrame, w, h)
-    local namePlate = unitFrame:GetParent()
-    if namePlate and not InCombatLockdown() then
-        pcall(namePlate.SetSize, namePlate, w, h)
-    end
 
-    -- Keep C++ 3D Raycast Hitboxes Synchronized with Configured Bar Dimensions
-    if C_NamePlate then
-        if isFriendlyPlayer then
-            if C_NamePlate.SetNamePlateFriendlySize then
-                pcall(C_NamePlate.SetNamePlateFriendlySize, w, h)
-            end
-        else
-            if C_NamePlate.SetNamePlateEnemySize then
-                pcall(C_NamePlate.SetNamePlateEnemySize, w, h + 10)
-            end
-        end
-    end
-
-    -- Ensure unitFrame itself has mouse enabled for secure click-targeting
+    -- In Blizzard's nameplate architecture, unitFrame must have mouse DISABLED (disableMouse=true)
+    -- so mouse clicks pass through unhindered to the C++ parent NamePlate container which executes targeting.
     if unitFrame.EnableMouse then
-        pcall(unitFrame.EnableMouse, unitFrame, true)
+        pcall(unitFrame.EnableMouse, unitFrame, false)
     end
 
     if unitFrame.HealthBarsContainer then
@@ -4472,19 +4453,6 @@ end
 FP.RefreshAllArrows = RefreshAllArrows
 
 local function RefreshAllDimensions()
-    if C_NamePlate then
-        local enemyW = ForeverPlatesDB.barWidth or 142
-        local enemyH = ForeverPlatesDB.barHeight or 18
-        local friendlyW = ForeverPlatesDB.friendlyBarWidth or 120
-        local friendlyH = ForeverPlatesDB.friendlyBarHeight or 12
-        if C_NamePlate.SetNamePlateEnemySize then
-            pcall(C_NamePlate.SetNamePlateEnemySize, enemyW, enemyH + 10)
-        end
-        if C_NamePlate.SetNamePlateFriendlySize then
-            pcall(C_NamePlate.SetNamePlateFriendlySize, friendlyW, friendlyH)
-        end
-    end
-
     local nameplates = C_NamePlate.GetNamePlates()
     if not nameplates then return end
 

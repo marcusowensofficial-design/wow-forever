@@ -101722,27 +101722,31 @@
         "grey": 175,
         "reagents": [
           {
-            "name": "12x Med Leather",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
+            "id": 2319,
+            "count": 12,
+            "name": "Medium Leather",
+            "icon": "inv_misc_leatherscrap_05",
             "quality": 1
           },
           {
-            "name": "4x Cured Med Hide",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
+            "id": 4233,
+            "count": 4,
+            "name": "Cured Medium Hide",
+            "icon": "inv_misc_pelt_bear_02",
             "quality": 1
           },
           {
-            "name": "8x Pristine Leather",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
-            "quality": 1
+            "id": 249427,
+            "count": 8,
+            "name": "Pristine Leather",
+            "icon": "item_pristinehide",
+            "quality": 2
           },
           {
-            "name": "8x Elixir of Minor Fortitude",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
+            "id": 2458,
+            "count": 8,
+            "name": "Elixir of Minor Fortitude",
+            "icon": "inv_potion_42",
             "quality": 1
           }
         ],
@@ -101762,28 +101766,32 @@
         "grey": 175,
         "reagents": [
           {
-            "name": "12x Med Leather",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
+            "id": 2319,
+            "count": 12,
+            "name": "Medium Leather",
+            "icon": "inv_misc_leatherscrap_05",
             "quality": 1
           },
           {
-            "name": "4x Cured Med Hide",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
+            "id": 4233,
+            "count": 4,
+            "name": "Cured Medium Hide",
+            "icon": "inv_misc_pelt_bear_02",
             "quality": 1
           },
           {
-            "name": "8x Pristine Leather",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
-            "quality": 1
+            "id": 249427,
+            "count": 8,
+            "name": "Pristine Leather",
+            "icon": "item_pristinehide",
+            "quality": 2
           },
           {
-            "name": "8x Sulfuric Acid",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
-            "quality": 1
+            "id": 249410,
+            "count": 8,
+            "name": "Sulfuric Acid",
+            "icon": "trade_alchemy",
+            "quality": 2
           }
         ],
         "source": "Blueprint: Razorclaw the Butcher (Shadowfang Keep - 1 in 900 drop)"
@@ -101802,28 +101810,32 @@
         "grey": 175,
         "reagents": [
           {
-            "name": "12x Med Leather",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
+            "id": 2319,
+            "count": 12,
+            "name": "Medium Leather",
+            "icon": "inv_misc_leatherscrap_05",
             "quality": 1
           },
           {
-            "name": "4x Cured Med Hide",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
+            "id": 4233,
+            "count": 4,
+            "name": "Cured Medium Hide",
+            "icon": "inv_misc_pelt_bear_02",
             "quality": 1
           },
           {
-            "name": "8x Pristine Leather",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
-            "quality": 1
+            "id": 249427,
+            "count": 8,
+            "name": "Pristine Leather",
+            "icon": "item_pristinehide",
+            "quality": 2
           },
           {
-            "name": "8x Shadowgem",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
-            "quality": 1
+            "id": 1210,
+            "count": 8,
+            "name": "Shadowgem",
+            "icon": "inv_misc_gem_amethyst_01",
+            "quality": 2
           }
         ],
         "source": "Blueprint: Razorclaw the Butcher (Shadowfang Keep - 1 in 900 drop)"
@@ -101842,27 +101854,31 @@
         "grey": 175,
         "reagents": [
           {
-            "name": "12x Med Leather",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
+            "id": 2319,
+            "count": 12,
+            "name": "Medium Leather",
+            "icon": "inv_misc_leatherscrap_05",
             "quality": 1
           },
           {
-            "name": "4x Cured Med Hide",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
+            "id": 4233,
+            "count": 4,
+            "name": "Cured Medium Hide",
+            "icon": "inv_misc_pelt_bear_02",
             "quality": 1
           },
           {
-            "name": "8x Pristine Leather",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
-            "quality": 1
+            "id": 249427,
+            "count": 8,
+            "name": "Pristine Leather",
+            "icon": "item_pristinehide",
+            "quality": 2
           },
           {
-            "name": "8x Deviate Scale",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
+            "id": 6470,
+            "count": 8,
+            "name": "Deviate Scale",
+            "icon": "inv_misc_monsterscales_02",
             "quality": 1
           }
         ],
@@ -101882,28 +101898,32 @@
         "grey": 175,
         "reagents": [
           {
-            "name": "12x Med Leather",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
+            "id": 2319,
+            "count": 12,
+            "name": "Medium Leather",
+            "icon": "inv_misc_leatherscrap_05",
             "quality": 1
           },
           {
-            "name": "4x Cured Med Hide",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
+            "id": 4233,
+            "count": 4,
+            "name": "Cured Medium Hide",
+            "icon": "inv_misc_pelt_bear_02",
             "quality": 1
           },
           {
-            "name": "8x Pristine Leather",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
-            "quality": 1
+            "id": 249427,
+            "count": 8,
+            "name": "Pristine Leather",
+            "icon": "item_pristinehide",
+            "quality": 2
           },
           {
-            "name": "8x Cerulean Dye",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
-            "quality": 1
+            "id": 249409,
+            "count": 8,
+            "name": "Cerulean Dye",
+            "icon": "inv_inscription_inkcerulean01",
+            "quality": 2
           }
         ],
         "source": "Blueprint: Razorclaw the Butcher (Shadowfang Keep - 1 in 900 drop)"
@@ -101922,28 +101942,32 @@
         "grey": 175,
         "reagents": [
           {
-            "name": "12x Med Leather",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
+            "id": 2319,
+            "count": 12,
+            "name": "Medium Leather",
+            "icon": "inv_misc_leatherscrap_05",
             "quality": 1
           },
           {
-            "name": "4x Cured Med Hide",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
+            "id": 4233,
+            "count": 4,
+            "name": "Cured Medium Hide",
+            "icon": "inv_misc_pelt_bear_02",
             "quality": 1
           },
           {
-            "name": "8x Pristine Leather",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
-            "quality": 1
+            "id": 249427,
+            "count": 8,
+            "name": "Pristine Leather",
+            "icon": "item_pristinehide",
+            "quality": 2
           },
           {
-            "name": "8x Small Lustrous Pearl",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
-            "quality": 1
+            "id": 5498,
+            "count": 8,
+            "name": "Small Lustrous Pearl",
+            "icon": "inv_misc_gem_pearl_03",
+            "quality": 2
           }
         ],
         "source": "Blueprint: Razorclaw the Butcher (Shadowfang Keep - 1 in 900 drop)"
@@ -101962,22 +101986,25 @@
         "grey": 200,
         "reagents": [
           {
-            "name": "8x Heavy Leather",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
+            "id": 4234,
+            "count": 8,
+            "name": "Heavy Leather",
+            "icon": "inv_misc_leatherscrap_07",
             "quality": 1
           },
           {
-            "name": "2x Cured Med Hide",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
+            "id": 4233,
+            "count": 2,
+            "name": "Cured Medium Hide",
+            "icon": "inv_misc_pelt_bear_02",
             "quality": 1
           },
           {
-            "name": "1x Jade",
+            "id": 1529,
             "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
-            "quality": 1
+            "name": "Jade",
+            "icon": "inv_misc_gem_stone_01",
+            "quality": 2
           }
         ],
         "source": "Blueprint: Razorclaw the Butcher (Shadowfang Keep - 1 in 900 drop)"
@@ -101996,21 +102023,24 @@
         "grey": 200,
         "reagents": [
           {
-            "name": "8x Heavy Leather",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
+            "id": 4234,
+            "count": 8,
+            "name": "Heavy Leather",
+            "icon": "inv_misc_leatherscrap_07",
             "quality": 1
           },
           {
-            "name": "2x Cured Med Hide",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
+            "id": 4233,
+            "count": 2,
+            "name": "Cured Medium Hide",
+            "icon": "inv_misc_pelt_bear_02",
             "quality": 1
           },
           {
-            "name": "1x Elemental Earth",
+            "id": 7067,
             "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
+            "name": "Elemental Earth",
+            "icon": "inv_ore_iron_01",
             "quality": 1
           }
         ],
@@ -102030,22 +102060,25 @@
         "grey": 200,
         "reagents": [
           {
-            "name": "8x Heavy Leather",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
+            "id": 4234,
+            "count": 8,
+            "name": "Heavy Leather",
+            "icon": "inv_misc_leatherscrap_07",
             "quality": 1
           },
           {
-            "name": "2x Cured Med Hide",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
+            "id": 4233,
+            "count": 2,
+            "name": "Cured Medium Hide",
+            "icon": "inv_misc_pelt_bear_02",
             "quality": 1
           },
           {
-            "name": "1x Citrine",
+            "id": 3864,
             "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
-            "quality": 1
+            "name": "Citrine",
+            "icon": "inv_misc_gem_opal_02",
+            "quality": 2
           }
         ],
         "source": "Blueprint: Razorclaw the Butcher (Shadowfang Keep - 1 in 900 drop)"
@@ -102064,21 +102097,24 @@
         "grey": 200,
         "reagents": [
           {
-            "name": "8x Heavy Leather",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
+            "id": 4234,
+            "count": 8,
+            "name": "Heavy Leather",
+            "icon": "inv_misc_leatherscrap_07",
             "quality": 1
           },
           {
-            "name": "2x Cured Med Hide",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
+            "id": 4233,
+            "count": 2,
+            "name": "Cured Medium Hide",
+            "icon": "inv_misc_pelt_bear_02",
             "quality": 1
           },
           {
-            "name": "1x Spider's Silk",
+            "id": 3182,
             "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
+            "name": "Spider's Silk",
+            "icon": "spell_nature_web",
             "quality": 1
           }
         ],
@@ -102098,28 +102134,32 @@
         "grey": 225,
         "reagents": [
           {
-            "name": "16x Heavy Leather",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
+            "id": 4234,
+            "count": 16,
+            "name": "Heavy Leather",
+            "icon": "inv_misc_leatherscrap_07",
             "quality": 1
           },
           {
-            "name": "2x Cured Heavy Hide",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
+            "id": 4236,
+            "count": 2,
+            "name": "Cured Heavy Hide",
+            "icon": "inv_misc_pelt_wolf_02",
             "quality": 1
           },
           {
-            "name": "2x Pristine Hide",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
-            "quality": 1
+            "id": 249428,
+            "count": 2,
+            "name": "Pristine Hide",
+            "icon": "inv_leatherworking_90_leatherhide",
+            "quality": 2
           },
           {
-            "name": "2x Jade",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
-            "quality": 1
+            "id": 1529,
+            "count": 2,
+            "name": "Jade",
+            "icon": "inv_misc_gem_stone_01",
+            "quality": 2
           }
         ],
         "source": "Blueprint: Razorclaw the Butcher (Shadowfang Keep - 1 in 900 drop)"
@@ -102138,27 +102178,31 @@
         "grey": 225,
         "reagents": [
           {
-            "name": "16x Heavy Leather",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
+            "id": 4234,
+            "count": 16,
+            "name": "Heavy Leather",
+            "icon": "inv_misc_leatherscrap_07",
             "quality": 1
           },
           {
-            "name": "2x Cured Heavy Hide",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
+            "id": 4236,
+            "count": 2,
+            "name": "Cured Heavy Hide",
+            "icon": "inv_misc_pelt_wolf_02",
             "quality": 1
           },
           {
-            "name": "2x Pristine Hide",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
-            "quality": 1
+            "id": 249428,
+            "count": 2,
+            "name": "Pristine Hide",
+            "icon": "inv_leatherworking_90_leatherhide",
+            "quality": 2
           },
           {
-            "name": "2x Spider's Silk",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
+            "id": 3182,
+            "count": 2,
+            "name": "Spider's Silk",
+            "icon": "spell_nature_web",
             "quality": 1
           }
         ],
@@ -102178,21 +102222,24 @@
         "grey": 250,
         "reagents": [
           {
-            "name": "8x Heavy Leather",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
+            "id": 4234,
+            "count": 8,
+            "name": "Heavy Leather",
+            "icon": "inv_misc_leatherscrap_07",
             "quality": 1
           },
           {
-            "name": "2x Cured Med Hide",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
+            "id": 4233,
+            "count": 2,
+            "name": "Cured Medium Hide",
+            "icon": "inv_misc_pelt_bear_02",
             "quality": 1
           },
           {
-            "name": "2x Elemental Air",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
+            "id": 7069,
+            "count": 2,
+            "name": "Elemental Air",
+            "icon": "spell_nature_tranquility",
             "quality": 1
           }
         ],
@@ -102212,21 +102259,24 @@
         "grey": 250,
         "reagents": [
           {
-            "name": "8x Heavy Leather",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
+            "id": 4234,
+            "count": 8,
+            "name": "Heavy Leather",
+            "icon": "inv_misc_leatherscrap_07",
             "quality": 1
           },
           {
-            "name": "2x Cured Med Hide",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
+            "id": 4233,
+            "count": 2,
+            "name": "Cured Medium Hide",
+            "icon": "inv_misc_pelt_bear_02",
             "quality": 1
           },
           {
-            "name": "2x Elemental Water",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
+            "id": 7070,
+            "count": 2,
+            "name": "Elemental Water",
+            "icon": "inv_potion_03",
             "quality": 1
           }
         ],
@@ -102246,27 +102296,31 @@
         "grey": 270,
         "reagents": [
           {
-            "name": "18x Thick Leather",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
+            "id": 4304,
+            "count": 18,
+            "name": "Thick Leather",
+            "icon": "inv_misc_leatherscrap_08",
             "quality": 1
           },
           {
-            "name": "2x Thick Wolfhide",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
+            "id": 8368,
+            "count": 2,
+            "name": "Thick Wolfhide",
+            "icon": "inv_misc_pelt_02",
             "quality": 1
           },
           {
-            "name": "8x Wicked Claw",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
+            "id": 8146,
+            "count": 8,
+            "name": "Wicked Claw",
+            "icon": "inv_misc_monsterclaw_01",
             "quality": 1
           },
           {
-            "name": "2x Cured Thick Hide",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
+            "id": 8172,
+            "count": 2,
+            "name": "Cured Thick Hide",
+            "icon": "inv_misc_pelt_bear_01",
             "quality": 1
           }
         ],
@@ -102286,34 +102340,39 @@
         "grey": 175,
         "reagents": [
           {
-            "name": "14x Bolt of Silk",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
+            "id": 4305,
+            "count": 14,
+            "name": "Bolt of Silk Cloth",
+            "icon": "inv_fabric_silk_03",
             "quality": 1
           },
           {
-            "name": "8x Cerulean Dye",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
-            "quality": 1
+            "id": 249409,
+            "count": 8,
+            "name": "Cerulean Dye",
+            "icon": "inv_inscription_inkcerulean01",
+            "quality": 2
           },
           {
-            "name": "8x Pristine Leather",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
-            "quality": 1
+            "id": 249427,
+            "count": 8,
+            "name": "Pristine Leather",
+            "icon": "item_pristinehide",
+            "quality": 2
           },
           {
-            "name": "2x Silver Bar",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
-            "quality": 1
+            "id": 2842,
+            "count": 2,
+            "name": "Silver Bar",
+            "icon": "inv_ingot_01",
+            "quality": 2
           },
           {
-            "name": "3x Greater Astral Essence",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
-            "quality": 1
+            "id": 11082,
+            "count": 3,
+            "name": "Greater Astral Essence",
+            "icon": "inv_enchant_essenceastrallarge",
+            "quality": 2
           }
         ],
         "source": "Blueprint: Unstable Sentinel (City of Dalaran)"
@@ -102332,34 +102391,39 @@
         "grey": 175,
         "reagents": [
           {
-            "name": "14x Bolt of Silk",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
+            "id": 4305,
+            "count": 14,
+            "name": "Bolt of Silk Cloth",
+            "icon": "inv_fabric_silk_03",
             "quality": 1
           },
           {
-            "name": "8x Cerulean Dye",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
+            "id": 249409,
+            "count": 8,
+            "name": "Cerulean Dye",
+            "icon": "inv_inscription_inkcerulean01",
+            "quality": 2
+          },
+          {
+            "id": 3182,
+            "count": 8,
+            "name": "Spider's Silk",
+            "icon": "spell_nature_web",
             "quality": 1
           },
           {
-            "name": "8x Spider's Silk",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
-            "quality": 1
+            "id": 2842,
+            "count": 2,
+            "name": "Silver Bar",
+            "icon": "inv_ingot_01",
+            "quality": 2
           },
           {
-            "name": "2x Silver Bar",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
-            "quality": 1
-          },
-          {
-            "name": "3x Greater Astral Essence",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
-            "quality": 1
+            "id": 11082,
+            "count": 3,
+            "name": "Greater Astral Essence",
+            "icon": "inv_enchant_essenceastrallarge",
+            "quality": 2
           }
         ],
         "source": "Blueprint: Unstable Sentinel (City of Dalaran)"
@@ -102378,34 +102442,39 @@
         "grey": 175,
         "reagents": [
           {
-            "name": "14x Bolt of Silk",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
+            "id": 4305,
+            "count": 14,
+            "name": "Bolt of Silk Cloth",
+            "icon": "inv_fabric_silk_03",
             "quality": 1
           },
           {
-            "name": "8x Cerulean Dye",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
+            "id": 249409,
+            "count": 8,
+            "name": "Cerulean Dye",
+            "icon": "inv_inscription_inkcerulean01",
+            "quality": 2
+          },
+          {
+            "id": 6371,
+            "count": 8,
+            "name": "Fire Oil",
+            "icon": "inv_potion_38",
             "quality": 1
           },
           {
-            "name": "8x Fire Oil",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
-            "quality": 1
+            "id": 2842,
+            "count": 2,
+            "name": "Silver Bar",
+            "icon": "inv_ingot_01",
+            "quality": 2
           },
           {
-            "name": "2x Silver Bar",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
-            "quality": 1
-          },
-          {
-            "name": "3x Greater Astral Essence",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
-            "quality": 1
+            "id": 11082,
+            "count": 3,
+            "name": "Greater Astral Essence",
+            "icon": "inv_enchant_essenceastrallarge",
+            "quality": 2
           }
         ],
         "source": "Blueprint: Unstable Sentinel (City of Dalaran)"
@@ -102424,34 +102493,39 @@
         "grey": 175,
         "reagents": [
           {
-            "name": "14x Bolt of Silk",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
+            "id": 4305,
+            "count": 14,
+            "name": "Bolt of Silk Cloth",
+            "icon": "inv_fabric_silk_03",
             "quality": 1
           },
           {
-            "name": "8x Cerulean Dye",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
-            "quality": 1
+            "id": 249409,
+            "count": 8,
+            "name": "Cerulean Dye",
+            "icon": "inv_inscription_inkcerulean01",
+            "quality": 2
           },
           {
-            "name": "8x Shadowgem",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
-            "quality": 1
+            "id": 1210,
+            "count": 8,
+            "name": "Shadowgem",
+            "icon": "inv_misc_gem_amethyst_01",
+            "quality": 2
           },
           {
-            "name": "2x Silver Bar",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
-            "quality": 1
+            "id": 2842,
+            "count": 2,
+            "name": "Silver Bar",
+            "icon": "inv_ingot_01",
+            "quality": 2
           },
           {
-            "name": "3x Greater Astral Essence",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
-            "quality": 1
+            "id": 11082,
+            "count": 3,
+            "name": "Greater Astral Essence",
+            "icon": "inv_enchant_essenceastrallarge",
+            "quality": 2
           }
         ],
         "source": "Blueprint: Unstable Sentinel (City of Dalaran)"
@@ -102470,28 +102544,32 @@
         "grey": 190,
         "reagents": [
           {
-            "name": "8x Bolt of Mageweave",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
+            "id": 4339,
+            "count": 8,
+            "name": "Bolt of Mageweave",
+            "icon": "inv_fabric_mageweave_03",
             "quality": 1
           },
           {
-            "name": "4x Heavy Silken Thread",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
+            "id": 8343,
+            "count": 4,
+            "name": "Heavy Silken Thread",
+            "icon": "inv_fabric_silk_02",
             "quality": 1
           },
           {
-            "name": "2x Magenta Dye",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
-            "quality": 1
+            "id": 249430,
+            "count": 2,
+            "name": "Magenta Dye",
+            "icon": "inv_inscription_inkpurple02",
+            "quality": 2
           },
           {
-            "name": "2x Gold Bar",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
-            "quality": 1
+            "id": 3577,
+            "count": 2,
+            "name": "Gold Bar",
+            "icon": "inv_ingot_03",
+            "quality": 2
           }
         ],
         "source": "Blueprint: Unstable Sentinel (City of Dalaran)"
@@ -102510,27 +102588,31 @@
         "grey": 190,
         "reagents": [
           {
-            "name": "8x Bolt of Mageweave",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
+            "id": 4339,
+            "count": 8,
+            "name": "Bolt of Mageweave",
+            "icon": "inv_fabric_mageweave_03",
             "quality": 1
           },
           {
-            "name": "4x Heavy Silken Thread",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
+            "id": 8343,
+            "count": 4,
+            "name": "Heavy Silken Thread",
+            "icon": "inv_fabric_silk_02",
             "quality": 1
           },
           {
-            "name": "2x Magenta Dye",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
-            "quality": 1
+            "id": 249430,
+            "count": 2,
+            "name": "Magenta Dye",
+            "icon": "inv_inscription_inkpurple02",
+            "quality": 2
           },
           {
-            "name": "2x Globe of Water",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
+            "id": 7079,
+            "count": 2,
+            "name": "Globe of Water",
+            "icon": "inv_misc_orb_01",
             "quality": 1
           }
         ],
@@ -102550,27 +102632,31 @@
         "grey": 190,
         "reagents": [
           {
-            "name": "8x Bolt of Mageweave",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
+            "id": 4339,
+            "count": 8,
+            "name": "Bolt of Mageweave",
+            "icon": "inv_fabric_mageweave_03",
             "quality": 1
           },
           {
-            "name": "4x Heavy Silken Thread",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
+            "id": 8343,
+            "count": 4,
+            "name": "Heavy Silken Thread",
+            "icon": "inv_fabric_silk_02",
             "quality": 1
           },
           {
-            "name": "2x Magenta Dye",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
-            "quality": 1
+            "id": 249430,
+            "count": 2,
+            "name": "Magenta Dye",
+            "icon": "inv_inscription_inkpurple02",
+            "quality": 2
           },
           {
-            "name": "2x Heart of Fire",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
+            "id": 7077,
+            "count": 2,
+            "name": "Heart of Fire",
+            "icon": "spell_fire_lavaspawn",
             "quality": 1
           }
         ],
@@ -102590,28 +102676,32 @@
         "grey": 215,
         "reagents": [
           {
-            "name": "12x Bolt of Mageweave",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
+            "id": 4339,
+            "count": 12,
+            "name": "Bolt of Mageweave",
+            "icon": "inv_fabric_mageweave_03",
             "quality": 1
           },
           {
-            "name": "4x Heavy Silken Thread",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
+            "id": 8343,
+            "count": 4,
+            "name": "Heavy Silken Thread",
+            "icon": "inv_fabric_silk_02",
             "quality": 1
           },
           {
-            "name": "2x Magenta Dye",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
-            "quality": 1
+            "id": 249430,
+            "count": 2,
+            "name": "Magenta Dye",
+            "icon": "inv_inscription_inkpurple02",
+            "quality": 2
           },
           {
-            "name": "4x Gold Bar",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
-            "quality": 1
+            "id": 3577,
+            "count": 4,
+            "name": "Gold Bar",
+            "icon": "inv_ingot_03",
+            "quality": 2
           }
         ],
         "source": "Blueprint: Unstable Sentinel (City of Dalaran)"
@@ -102630,27 +102720,31 @@
         "grey": 215,
         "reagents": [
           {
-            "name": "12x Bolt of Mageweave",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
+            "id": 4339,
+            "count": 12,
+            "name": "Bolt of Mageweave",
+            "icon": "inv_fabric_mageweave_03",
             "quality": 1
           },
           {
-            "name": "4x Heavy Silken Thread",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
+            "id": 8343,
+            "count": 4,
+            "name": "Heavy Silken Thread",
+            "icon": "inv_fabric_silk_02",
             "quality": 1
           },
           {
-            "name": "2x Magenta Dye",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
-            "quality": 1
+            "id": 249430,
+            "count": 2,
+            "name": "Magenta Dye",
+            "icon": "inv_inscription_inkpurple02",
+            "quality": 2
           },
           {
-            "name": "4x Globe of Water",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
+            "id": 7079,
+            "count": 4,
+            "name": "Globe of Water",
+            "icon": "inv_misc_orb_01",
             "quality": 1
           }
         ],
@@ -102670,28 +102764,32 @@
         "grey": 240,
         "reagents": [
           {
-            "name": "28x Bolt of Mageweave",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
+            "id": 4339,
+            "count": 28,
+            "name": "Bolt of Mageweave",
+            "icon": "inv_fabric_mageweave_03",
             "quality": 1
           },
           {
-            "name": "6x Magenta Dye",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
-            "quality": 1
+            "id": 249430,
+            "count": 6,
+            "name": "Magenta Dye",
+            "icon": "inv_inscription_inkpurple02",
+            "quality": 2
           },
           {
-            "name": "4x Cerulean Dye",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
-            "quality": 1
+            "id": 249409,
+            "count": 4,
+            "name": "Cerulean Dye",
+            "icon": "inv_inscription_inkcerulean01",
+            "quality": 2
           },
           {
-            "name": "12x Gold Bar",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
-            "quality": 1
+            "id": 3577,
+            "count": 12,
+            "name": "Gold Bar",
+            "icon": "inv_ingot_03",
+            "quality": 2
           }
         ],
         "source": "Blueprint: Unstable Sentinel (City of Dalaran)"
@@ -102710,28 +102808,32 @@
         "grey": 245,
         "reagents": [
           {
-            "name": "16x Bolt of Mageweave",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
+            "id": 4339,
+            "count": 16,
+            "name": "Bolt of Mageweave",
+            "icon": "inv_fabric_mageweave_03",
             "quality": 1
           },
           {
-            "name": "4x Magenta Dye",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
-            "quality": 1
+            "id": 249430,
+            "count": 4,
+            "name": "Magenta Dye",
+            "icon": "inv_inscription_inkpurple02",
+            "quality": 2
           },
           {
-            "name": "8x Gold Bar",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
-            "quality": 1
+            "id": 3577,
+            "count": 8,
+            "name": "Gold Bar",
+            "icon": "inv_ingot_03",
+            "quality": 2
           },
           {
-            "name": "2x Greater Nether Essence",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
-            "quality": 1
+            "id": 11175,
+            "count": 2,
+            "name": "Greater Nether Essence",
+            "icon": "inv_enchant_essencenetherlarge",
+            "quality": 2
           }
         ],
         "source": "Blueprint: Unstable Sentinel (City of Dalaran)"
@@ -102750,28 +102852,32 @@
         "grey": 255,
         "reagents": [
           {
-            "name": "18x Bolt of Mageweave",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
+            "id": 4339,
+            "count": 18,
+            "name": "Bolt of Mageweave",
+            "icon": "inv_fabric_mageweave_03",
             "quality": 1
           },
           {
-            "name": "6x Magenta Dye",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
-            "quality": 1
+            "id": 249430,
+            "count": 6,
+            "name": "Magenta Dye",
+            "icon": "inv_inscription_inkpurple02",
+            "quality": 2
           },
           {
-            "name": "10x Gold Bar",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
-            "quality": 1
+            "id": 3577,
+            "count": 10,
+            "name": "Gold Bar",
+            "icon": "inv_ingot_03",
+            "quality": 2
           },
           {
-            "name": "4x Greater Nether Essence",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
-            "quality": 1
+            "id": 11175,
+            "count": 4,
+            "name": "Greater Nether Essence",
+            "icon": "inv_enchant_essencenetherlarge",
+            "quality": 2
           }
         ],
         "source": "Blueprint: Unstable Sentinel (City of Dalaran)"
@@ -102790,21 +102896,24 @@
         "grey": 255,
         "reagents": [
           {
-            "name": "6x Bolt of Mageweave",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
+            "id": 4339,
+            "count": 6,
+            "name": "Bolt of Mageweave",
+            "icon": "inv_fabric_mageweave_03",
             "quality": 1
           },
           {
-            "name": "6x Wildvine",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
+            "id": 8153,
+            "count": 6,
+            "name": "Wildvine",
+            "icon": "inv_misc_herb_03",
             "quality": 1
           },
           {
-            "name": "2x Heart of the Wild",
-            "count": 1,
-            "icon": "inv_misc_leatherscrap_01",
+            "id": 10286,
+            "count": 2,
+            "name": "Heart of the Wild",
+            "icon": "inv_misc_herb_08",
             "quality": 1
           }
         ],
