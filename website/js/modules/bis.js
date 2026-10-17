@@ -434,17 +434,17 @@ function renderPaperDollSlot(slotKey, slotLabel, spec) {
   if (!equipped && spec.doll && spec.doll[faction]) {
     const doll = spec.doll[faction];
     if (slotKey === 'finger1') {
-      equipped = spec.gear?.finger1 || doll.finger;
+      equipped = doll.finger1 || doll.finger || spec.gear?.finger1;
     } else if (slotKey === 'finger2') {
-      equipped = spec.gear?.finger2;
+      equipped = doll.finger2 || spec.gear?.finger2;
       if (!equipped) {
         const fSlot = spec.slots?.find(s => s.slotId === 'finger');
         if (fSlot && fSlot.items.length > 1) equipped = fSlot.items[1];
       }
     } else if (slotKey === 'trinket1') {
-      equipped = spec.gear?.trinket1 || doll.trinket;
+      equipped = doll.trinket1 || doll.trinket || spec.gear?.trinket1;
     } else if (slotKey === 'trinket2') {
-      equipped = spec.gear?.trinket2;
+      equipped = doll.trinket2 || spec.gear?.trinket2;
       if (!equipped) {
         const tSlot = spec.slots?.find(s => s.slotId === 'trinket');
         if (tSlot && tSlot.items.length > 1) equipped = tSlot.items[1];

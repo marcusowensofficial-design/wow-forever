@@ -8623,12 +8623,14 @@
       },
       "estimated_rank_texts": {},
       "max_rank": 1,
-      "discovered_at": "2026-10-08",
+      "discovered_at": "2026-10-15",
       "calculator_eligible": true,
       "context_only": false,
       "comparison_status": "client",
       "summary": "Command a hawk to dive-bomb your targeted enemy, dealing 34 Physical damage and continuing its assault for 18 sec. Only 2 hawks can be active at once.",
-      "changes": [],
+      "changes": [
+        "Spawns the hawk at your target and keeps it there"
+      ],
       "classic": {
         "status": "not_listed",
         "rank_texts": {},
@@ -9510,18 +9512,20 @@
       "reported_change_kind": "modified",
       "evidence_status": "client_data",
       "rank_texts": {
-        "1": "Increases the Ranged Attack Power of party members within 45 yds by 30."
+        "1": "Increases the Ranged Attack Power of party or raid members within 45 yds by 30."
       },
       "estimated_rank_texts": {},
       "max_rank": 1,
-      "discovered_at": "2026-10-08",
+      "discovered_at": "2026-10-15",
       "calculator_eligible": true,
       "context_only": false,
       "comparison_status": "client",
       "summary": "Moved from tier 7 to tier 4. No longer requires Barrage. Numbers and wording changed.",
       "changes": [
         "Moved from tier 7 to tier 4",
-        "No longer requires Barrage"
+        "No longer requires Barrage",
+        "Now covers the whole raid",
+        "Sniper Shot benefits from the Marksmanship talents it missed"
       ],
       "classic": {
         "status": "verified",
@@ -10843,12 +10847,14 @@
       },
       "estimated_rank_texts": {},
       "max_rank": 1,
-      "discovered_at": "2026-10-08",
+      "discovered_at": "2026-10-15",
       "calculator_eligible": true,
       "context_only": false,
       "comparison_status": "client",
       "summary": "A powerful kick that deals 100% melee weapon damage and increases movement speed by 30% for 3 sec.",
-      "changes": [],
+      "changes": [
+        "Can be used while disarmed or with no main-hand weapon; Resourcefulness lowers its cost"
+      ],
       "classic": {
         "status": "not_listed",
         "rank_texts": {},
@@ -39310,7 +39316,10 @@
         }
       ],
       "uncertainties": [],
-      "discovered_at": "2026-10-10"
+      "discovered_at": "2026-10-15",
+      "changes": [
+        "Fire traps scale with attack power, and you can have one fire trap and one frost trap out at once"
+      ]
     },
     {
       "id": "spellbook-rogue-instant-poison-ii",
@@ -40456,11 +40465,11 @@
       "icon": "ability_upgrademoonglaive",
       "reported_change_kind": "modified",
       "spellbook_status": "changed",
-      "summary": "Ranks 2 to 5 gone (Classic goes to rank 5). Costs 13.9% of base mana instead of 100 Mana; Cast time 0.5 sec instead of Instant; Cooldown 6 sec instead of 10 sec.",
+      "summary": "Ranks 2 to 5 gone (Classic goes to rank 5). Costs 13.9% of base mana instead of 100 Mana; Instant cast (reverted from 0.5s cast in Oct 15 update); Cooldown 6 sec instead of 10 sec.",
       "order": 506,
       "evidence_status": "client_data",
       "rank_texts": {
-        "1": "13.9% of base mana, 35 yd range, 0.5 sec cast, 6 sec cooldown. Fires several missiles, hitting 3 targets. Multi-Shot shares its cooldown with Aimed Shot. Requires Ranged Weapon"
+        "1": "13.9% of base mana, 35 yd range, Instant, 6 sec cooldown. Fires several missiles, hitting 3 targets. Multi-Shot shares its cooldown with Aimed Shot. Requires Ranged Weapon"
       },
       "max_rank": null,
       "classic": {
@@ -40488,7 +40497,13 @@
         }
       ],
       "uncertainties": [],
-      "discovered_at": "2026-10-10"
+      "discovered_at": "2026-10-15",
+      "changes": [
+        "Ranks 2 to 5 gone (Classic goes to rank 5)",
+        "Costs 13.9% of base mana instead of 100 Mana",
+        "Instant cast (reverted from 0.5s cast in Oct 15 update)",
+        "Cooldown 6 sec instead of 10 sec, shares cooldown with Aimed Shot"
+      ]
     },
     {
       "id": "spellbook-rogue-wound-poison",
@@ -45851,7 +45866,7 @@
       "icon": "ability_whirlwind",
       "reported_change_kind": "modified",
       "spellbook_status": "same",
-      "summary": "Requires standing still for 0.5s before shooting, matching early versions of World of Warcraft.",
+      "summary": "Requires standing still for 0.5s before shooting, matching early versions of World of Warcraft. You still fire it while casting Aimed Shot or Sniper Shot.",
       "order": 600,
       "evidence_status": "client_data",
       "rank_texts": {
@@ -45883,9 +45898,9 @@
         }
       ],
       "uncertainties": [],
-      "discovered_at": "2026-10-10",
+      "discovered_at": "2026-10-15",
       "changes": [
-        "Requires standing still for 0.5s before shooting",
+        "Requires standing still for 0.5 sec before shooting, matching early versions of World of Warcraft. You still fire it while casting Aimed Shot or Sniper Shot",
         "Added Auto Attack/Auto Shot toggle setting"
       ]
     },

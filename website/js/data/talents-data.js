@@ -2365,7 +2365,7 @@ window.WOW_TALENTS_DATA = {
         "spellId": 1299346,
         "req": null,
         "descriptions": [
-          "Increases the Ranged Attack Power of raid members within 45 yds by 30."
+          "Increases the Ranged Attack Power of party or raid members within 45 yds by 30."
         ]
       },
       {

@@ -18,6 +18,7 @@ desktop.ini
 node_modules/
 dist/
 .cache/
+fc_bis_cache/
 
 # Agent logs and scratch
 .agents/
