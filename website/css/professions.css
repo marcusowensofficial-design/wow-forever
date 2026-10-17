@@ -3601,3 +3601,1159 @@
 .shopping-row-card.is-step-completed {
   opacity: 0.55;
 }
+
+
+/* ==========================================================================
+   TOMTOM /WAY MACRO BUTTONS & RECIPE BADGES (BIS, DUNGEON, BLUEPRINT)
+   ========================================================================== */
+.tomtom-way-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: rgba(14, 116, 144, 0.18);
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  color: #7dd3fc;
+  font-size: 0.76rem;
+  font-family: inherit;
+  font-weight: 600;
+  padding: 0.2rem 0.55rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  line-height: 1.25;
+  margin: 0.15rem 0.2rem;
+  vertical-align: middle;
+}
+
+.tomtom-way-btn:hover {
+  background: rgba(56, 189, 248, 0.3);
+  border-color: #38bdf8;
+  color: #fff;
+  box-shadow: 0 0 8px rgba(56, 189, 248, 0.35);
+  transform: translateY(-1px);
+}
+
+.tomtom-way-btn:active {
+  transform: translateY(0);
+}
+
+.tomtom-way-btn.copied {
+  background: rgba(34, 197, 94, 0.25);
+  border-color: #22c55e;
+  color: #86efac;
+  box-shadow: 0 0 8px rgba(34, 197, 94, 0.4);
+}
+
+.recipe-bis-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, rgba(202, 138, 4, 0.3) 0%, rgba(161, 98, 7, 0.45) 100%);
+  border: 1px solid #facc15;
+  color: #fef08a;
+  padding: 0.12rem 0.45rem;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 0 6px rgba(250, 204, 21, 0.2);
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.recipe-bis-badge:hover {
+  background: linear-gradient(135deg, rgba(234, 179, 8, 0.5) 0%, rgba(202, 138, 4, 0.65) 100%);
+  color: #ffffff;
+  box-shadow: 0 0 10px rgba(250, 204, 21, 0.45);
+  transform: translateY(-1px);
+}
+
+.recipe-dungeon-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  background: rgba(147, 51, 234, 0.2);
+  border: 1px solid rgba(168, 85, 247, 0.45);
+  color: #d8b4fe;
+  padding: 0.12rem 0.45rem;
+  border-radius: 4px;
+}
+
+.recipe-blueprint-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  background: rgba(234, 88, 12, 0.22);
+  border: 1px solid rgba(249, 115, 22, 0.45);
+  color: #fdba74;
+  padding: 0.12rem 0.45rem;
+  border-radius: 4px;
+}
+
+/* ==========================================================================
+   SPECIALIZATIONS DEEP-DIVES (ENGINEERING, BLACKSMITHING, LEATHERWORKING)
+   ========================================================================== */
+.specs-grid-layout {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.specs-grid-layout.cols-2 {
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+}
+
+.specs-grid-layout.cols-3 {
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.spec-card {
+  background: rgba(15, 23, 42, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 1.35rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  transition: border-color 0.2s ease;
+}
+
+.spec-card:hover {
+  border-color: rgba(56, 189, 248, 0.3);
+}
+
+.spec-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 0.9rem;
+}
+
+.spec-card-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.spec-card-title {
+  margin: 0 0 0.2rem 0;
+  font-size: 1.15rem;
+  color: #f8fafc;
+  font-weight: 700;
+}
+
+.spec-card-archetype {
+  font-size: 0.82rem;
+  color: #94a3b8;
+}
+
+.spec-section-label {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #cbd5e1;
+  margin-bottom: 0.5rem;
+}
+
+.spec-trainer-box {
+  background: rgba(30, 41, 59, 0.5);
+  border-radius: 6px;
+  padding: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.spec-trainer-text {
+  font-size: 0.86rem;
+  color: #e2e8f0;
+  line-height: 1.45;
+}
+
+.spec-quest-box {
+  background: rgba(30, 41, 59, 0.5);
+  border-radius: 6px;
+  padding: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.spec-checklist-items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.spec-check-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.35rem 0.55rem;
+  background: rgba(15, 23, 42, 0.6);
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  font-size: 0.85rem;
+  color: #e2e8f0;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.15s ease;
+}
+
+.spec-check-item:hover {
+  background: rgba(30, 41, 59, 0.8);
+}
+
+.spec-check-item.completed {
+  opacity: 0.55;
+  text-decoration: line-through;
+  background: rgba(34, 197, 94, 0.08);
+  border-color: rgba(34, 197, 94, 0.25);
+}
+
+.spec-check-icon {
+  width: 22px;
+  height: 22px;
+  border-radius: 4px;
+}
+
+.spec-check-name {
+  flex: 1;
+}
+
+.spec-mat-lookup-btn {
+  background: transparent;
+  border: none;
+  font-size: 0.85rem;
+  cursor: pointer;
+  opacity: 0.7;
+  padding: 0 0.25rem;
+  transition: opacity 0.15s ease;
+}
+
+.spec-mat-lookup-btn:hover {
+  opacity: 1;
+}
+
+.spec-crafts-box {
+  background: rgba(30, 41, 59, 0.5);
+  border-radius: 6px;
+  padding: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.spec-crafts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.spec-craft-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.7rem;
+  background: rgba(15, 23, 42, 0.55);
+  padding: 0.55rem 0.65rem;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.spec-craft-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 5px;
+  flex-shrink: 0;
+}
+
+.spec-craft-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.spec-craft-name {
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-bottom: 0.15rem;
+}
+
+.spec-craft-effect {
+  font-size: 0.8rem;
+  color: #94a3b8;
+  line-height: 1.35;
+}
+
+/* ==========================================================================
+   CONTAINERS, BAGS & QUIVERS COMPENDIUM
+   ========================================================================== */
+.containers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+  gap: 1.15rem;
+}
+
+.container-card {
+  background: rgba(15, 23, 42, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 9px;
+  padding: 1.15rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.container-card:hover {
+  border-color: rgba(56, 189, 248, 0.35);
+  transform: translateY(-2px);
+}
+
+.container-card-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+}
+
+.container-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 7px;
+  flex-shrink: 0;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.container-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.container-name {
+  margin: 0 0 0.35rem 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.verified-tag {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: #38bdf8;
+  background: rgba(14, 116, 144, 0.25);
+  border: 1px solid rgba(56, 189, 248, 0.45);
+  border-radius: 4px;
+  padding: 0.08rem 0.35rem;
+  margin-left: 0.35rem;
+  vertical-align: middle;
+}
+
+.container-badges-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.container-slot-pill {
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: #38bdf8;
+  background: rgba(14, 116, 144, 0.25);
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  border-radius: 4px;
+  padding: 0.1rem 0.4rem;
+}
+
+.container-speed-pill {
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: #facc15;
+  background: rgba(234, 179, 8, 0.2);
+  border: 1px solid rgba(250, 204, 21, 0.4);
+  border-radius: 4px;
+  padding: 0.1rem 0.4rem;
+}
+
+.container-type-pill {
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: #c084fc;
+  background: rgba(168, 85, 247, 0.2);
+  border: 1px solid rgba(192, 132, 252, 0.35);
+  border-radius: 4px;
+  padding: 0.1rem 0.4rem;
+}
+
+.container-req-pill {
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: #94a3b8;
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  padding: 0.1rem 0.4rem;
+}
+
+.container-desc {
+  font-size: 0.84rem;
+  color: #cbd5e1;
+  line-height: 1.45;
+  margin: 0;
+}
+
+.container-reagents-box {
+  background: rgba(30, 41, 59, 0.45);
+  border-radius: 6px;
+  padding: 0.65rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.container-source-text {
+  font-size: 0.8rem;
+  color: #94a3b8;
+  line-height: 1.4;
+}
+
+.container-reagents-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+/* ==========================================================================
+   MULTI-ROUTE GATHERING CIRCUITS (MINING & HERBALISM)
+   ========================================================================== */
+.gathering-view-toggle-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 0.5rem 0.85rem;
+  margin-bottom: 1.25rem;
+}
+
+.gathering-view-label {
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: #94a3b8;
+  margin-right: 0.25rem;
+}
+
+.gathering-tier-section {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.gathering-tier-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  padding-bottom: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.gathering-tier-title {
+  margin: 0;
+  font-size: 1.12rem;
+  color: #f1f5f9;
+  font-weight: 700;
+}
+
+.circuit-tier-pills {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.circuit-routes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 1rem;
+}
+
+.circuit-route-card {
+  background: rgba(30, 41, 59, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  transition: border-color 0.15s ease;
+}
+
+.circuit-route-card:hover {
+  border-color: rgba(56, 189, 248, 0.35);
+}
+
+.circuit-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.circuit-route-num {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #38bdf8;
+  background: rgba(14, 116, 144, 0.3);
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  border-radius: 4px;
+  padding: 0.1rem 0.4rem;
+  white-space: nowrap;
+}
+
+.circuit-zone-name {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  flex: 1;
+}
+
+.circuit-faction-badge {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.1rem 0.35rem;
+  border-radius: 4px;
+  letter-spacing: 0.03em;
+}
+
+.circuit-faction-badge.alliance {
+  background: rgba(30, 64, 175, 0.3);
+  border: 1px solid #3b82f6;
+  color: #93c5fd;
+}
+
+.circuit-faction-badge.horde {
+  background: rgba(153, 27, 27, 0.3);
+  border: 1px solid #ef4444;
+  color: #fca5a5;
+}
+
+.circuit-faction-badge.neutral {
+  background: rgba(100, 116, 139, 0.3);
+  border: 1px solid #94a3b8;
+  color: #cbd5e1;
+}
+
+.circuit-density-badge {
+  display: inline-block;
+  align-self: flex-start;
+  font-size: 0.72rem;
+  font-weight: 600;
+  background: rgba(34, 197, 94, 0.15);
+  border: 1px solid rgba(74, 222, 128, 0.35);
+  color: #86efac;
+  border-radius: 4px;
+  padding: 0.1rem 0.45rem;
+}
+
+.circuit-focus-text {
+  font-size: 0.84rem;
+  color: #e2e8f0;
+  line-height: 1.35;
+}
+
+.circuit-desc-text {
+  font-size: 0.82rem;
+  color: #94a3b8;
+  line-height: 1.45;
+  margin: 0;
+}
+
+.circuit-hazards-box {
+  background: rgba(245, 158, 11, 0.1);
+  border-left: 3px solid #f59e0b;
+  border-radius: 0 4px 4px 0;
+  padding: 0.4rem 0.6rem;
+  font-size: 0.78rem;
+  color: #fcd34d;
+  line-height: 1.35;
+}
+
+.circuit-tomtom-row {
+  margin-top: 0.2rem;
+}
+
+/* ==========================================================================
+   FISHING WATERS, SCHEDULES & FISH POOLS
+   ========================================================================== */
+.fishing-schedule-widget {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 1.75rem;
+}
+
+.fishing-cycle-card,
+.fishing-seasons-card,
+.fishing-pools-card {
+  background: rgba(15, 23, 42, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 10px;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.fish-cycle-status-pill {
+  display: inline-block;
+  align-self: flex-start;
+  font-size: 0.76rem;
+  font-weight: 700;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+}
+
+.fish-cycle-status-pill.peak {
+  background: rgba(168, 85, 247, 0.25);
+  border: 1px solid #c084fc;
+  color: #e9d5ff;
+}
+
+.fish-cycle-status-pill.active {
+  background: rgba(34, 197, 94, 0.2);
+  border: 1px solid #4ade80;
+  color: #86efac;
+}
+
+.fish-cycle-clock-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.fish-window-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.4rem 0.6rem;
+  background: rgba(30, 41, 59, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 5px;
+  font-size: 0.8rem;
+  color: #cbd5e1;
+}
+
+.fish-window-row.active {
+  background: rgba(14, 116, 144, 0.3);
+  border-color: #38bdf8;
+  color: #fff;
+  font-weight: 700;
+}
+
+.seasonal-migration-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.season-box {
+  background: rgba(30, 41, 59, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 6px;
+  padding: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.season-box.active {
+  background: rgba(34, 197, 94, 0.12);
+  border-color: rgba(74, 222, 128, 0.4);
+}
+
+.season-fish-name {
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.season-dates {
+  font-size: 0.78rem;
+  color: #94a3b8;
+}
+
+.fish-pools-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.fish-pool-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  background: rgba(30, 41, 59, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 6px;
+  padding: 0.55rem 0.7rem;
+}
+
+.fish-pool-icon {
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.fish-pool-name {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #f1f5f9;
+  margin-bottom: 0.15rem;
+}
+
+.fish-pool-yield {
+  font-size: 0.78rem;
+  color: #94a3b8;
+  line-height: 1.35;
+}
+
+/* ==========================================================================
+   CLASS & ROLE PAIRING RECOMMENDATION WIZARD
+   ========================================================================== */
+.pairing-wizard-container {
+  background: rgba(15, 23, 42, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+.pairing-roles-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0 1.25rem 0;
+}
+
+.pairing-role-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.45rem 0.85rem;
+  border-radius: 7px;
+  background: rgba(30, 41, 59, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #cbd5e1;
+  font-size: 0.86rem;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.pairing-role-chip:hover {
+  background: rgba(51, 65, 85, 0.85);
+  border-color: rgba(56, 189, 248, 0.4);
+  color: #fff;
+}
+
+.pairing-role-chip.active {
+  background: linear-gradient(135deg, rgba(14, 116, 144, 0.5) 0%, rgba(3, 105, 161, 0.7) 100%);
+  border-color: #38bdf8;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.35);
+}
+
+.pairing-details-card {
+  background: rgba(30, 41, 59, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 8px;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+}
+
+.pairing-details-header {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  padding-bottom: 0.85rem;
+}
+
+.pairing-role-icon {
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+.pairing-role-title {
+  margin: 0 0 0.2rem 0;
+  font-size: 1.2rem;
+  color: #f8fafc;
+  font-weight: 700;
+}
+
+.pairing-role-classes {
+  font-size: 0.82rem;
+  color: #94a3b8;
+}
+
+.pairing-duo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.pairing-duo-card {
+  background: rgba(15, 23, 42, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 7px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.pairing-duo-badge {
+  display: inline-block;
+  align-self: flex-start;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #facc15;
+  background: rgba(234, 179, 8, 0.18);
+  border: 1px solid rgba(250, 204, 21, 0.4);
+  border-radius: 4px;
+  padding: 0.1rem 0.45rem;
+}
+
+.pairing-duo-card strong {
+  font-size: 1.02rem;
+  color: #fff;
+}
+
+.pairing-duo-card p {
+  margin: 0;
+  font-size: 0.84rem;
+  color: #cbd5e1;
+  line-height: 1.45;
+}
+
+.pairing-passives-list {
+  background: rgba(15, 23, 42, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 7px;
+  padding: 0.9rem;
+}
+
+.pairing-passives-list ul {
+  margin: 0.5rem 0 0 1.25rem;
+  padding: 0;
+  font-size: 0.84rem;
+  color: #94a3b8;
+  line-height: 1.5;
+}
+
+/* ==========================================================================
+   MASTER TRAINER DIRECTORY
+   ========================================================================== */
+.trainer-directory-container {
+  background: rgba(15, 23, 42, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+.trainer-filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 1.15rem 0 1.35rem 0;
+}
+
+.trainer-search-input,
+#trainer-search-input {
+  flex: 1;
+  min-width: 220px;
+  background: rgba(30, 41, 59, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 6px;
+  padding: 0.55rem 0.85rem;
+  font-size: 0.88rem;
+  color: #fff;
+  font-family: inherit;
+}
+
+.trainer-search-input:focus,
+#trainer-search-input:focus {
+  outline: none;
+  border-color: #38bdf8;
+  box-shadow: 0 0 6px rgba(56, 189, 248, 0.35);
+}
+
+.trainer-filter-selects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.trainer-select,
+.trainer-filter-select {
+  background: rgba(30, 41, 59, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 6px;
+  padding: 0.55rem 0.75rem;
+  font-size: 0.85rem;
+  color: #e2e8f0;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.trainer-select:focus,
+.trainer-filter-select:focus {
+  outline: none;
+  border-color: #38bdf8;
+}
+
+.trainer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.trainer-card {
+  background: rgba(30, 41, 59, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: border-color 0.15s ease;
+}
+
+.trainer-card:hover {
+  border-color: rgba(56, 189, 248, 0.35);
+}
+
+.trainer-card-top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.trainer-faction-pill {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+}
+
+.trainer-faction-pill.alliance {
+  background: rgba(30, 64, 175, 0.3);
+  border: 1px solid #3b82f6;
+  color: #93c5fd;
+}
+
+.trainer-faction-pill.horde {
+  background: rgba(153, 27, 27, 0.3);
+  border: 1px solid #ef4444;
+  color: #fca5a5;
+}
+
+.trainer-faction-pill.neutral {
+  background: rgba(100, 116, 139, 0.3);
+  border: 1px solid #94a3b8;
+  color: #cbd5e1;
+}
+
+.trainer-rank-pill {
+  font-size: 0.68rem;
+  font-weight: 600;
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #cbd5e1;
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+}
+
+.trainer-prof-pill {
+  font-size: 0.68rem;
+  font-weight: 600;
+  background: rgba(14, 116, 144, 0.25);
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  color: #7dd3fc;
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+}
+
+.trainer-name {
+  margin: 0;
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.trainer-zone {
+  font-size: 0.84rem;
+  color: #94a3b8;
+}
+
+.trainer-notes {
+  font-size: 0.78rem;
+  color: #cbd5e1;
+  background: rgba(15, 23, 42, 0.5);
+  padding: 0.35rem 0.55rem;
+  border-radius: 4px;
+  line-height: 1.35;
+}
+
+.trainer-footer {
+  margin-top: auto;
+  padding-top: 0.4rem;
+}
+
+/* ==========================================================================
+   DISENCHANTING MATRIX & SALVAGER CALLOUT (REAGENT MODAL)
+   ========================================================================== */
+.de-matrix-table-wrap {
+  overflow-x: auto;
+  margin: 0.75rem 0 1rem 0;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.de-matrix-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+  background: rgba(15, 23, 42, 0.7);
+}
+
+.de-matrix-table th {
+  background: rgba(30, 41, 59, 0.85);
+  color: #cbd5e1;
+  font-weight: 700;
+  padding: 0.6rem 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  white-space: nowrap;
+}
+
+.de-matrix-table td {
+  padding: 0.55rem 0.75rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  color: #e2e8f0;
+  line-height: 1.35;
+}
+
+.de-matrix-table tr:hover {
+  background: rgba(30, 41, 59, 0.4);
+}
+
+.de-matrix-table tr.de-row-highlight {
+  background: rgba(14, 116, 144, 0.25);
+  border-left: 3px solid #38bdf8;
+}
+
+.de-bracket-pill {
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: #7dd3fc;
+  background: rgba(14, 116, 144, 0.3);
+  padding: 0.1rem 0.35rem;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.de-mat-badge {
+  display: inline-block;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+.de-salvager-callout {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  background: rgba(147, 51, 234, 0.12);
+  border: 1px solid rgba(168, 85, 247, 0.35);
+  border-radius: 7px;
+  padding: 0.75rem 1rem;
+  margin-top: 0.85rem;
+  font-size: 0.82rem;
+  color: #e9d5ff;
+  line-height: 1.45;
+}
+
+.de-salvager-callout strong {
+  color: #fff;
+}
+
+/* ==========================================================================
+   RESPONSIVE BREAKPOINTS FOR EXPANDED PROFESSIONS SUITE
+   ========================================================================== */
+@media (max-width: 768px) {
+  .specs-grid-layout.cols-2,
+  .specs-grid-layout.cols-3 {
+    grid-template-columns: 1fr;
+  }
+  .fishing-cycles-grid,
+  .fishing-seasons-grid {
+    grid-template-columns: 1fr;
+  }
+  .trainer-filter-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .trainer-search-input,
+  #trainer-search-input {
+    width: 100%;
+    min-width: 0;
+  }
+  .trainer-filter-selects {
+    width: 100%;
+  }
+  .trainer-select,
+  .trainer-filter-select {
+    flex: 1 1 100%;
+    min-width: 0;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .circuit-routes-grid {
+    grid-template-columns: 1fr;
+  }
+  .containers-grid {
+    grid-template-columns: 1fr;
+  }
+  .trainer-grid {
+    grid-template-columns: 1fr;
+  }
+  .pairing-perks-grid {
+    grid-template-columns: 1fr;
+  }
+  .de-matrix-table th,
+  .de-matrix-table td {
+    padding: 0.4rem 0.5rem;
+    font-size: 0.75rem;
+  }
+  .circuit-route-badge-row {
+    flex-wrap: wrap;
+    gap: 0.35rem;
+  }
+}
+

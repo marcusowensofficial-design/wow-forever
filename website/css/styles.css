@@ -5184,6 +5184,125 @@ input:checked + .toggle-slider:before {
   color: var(--text-gold);
 }
 
+/* ==========================================================================
+   FLOATING RETURN PILL BUTTON & INTERACTIVE CROSS-NAV
+   ========================================================================== */
+.wow-return-pill-btn {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  z-index: 99990;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.65rem 1.15rem;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.96), rgba(30, 41, 59, 0.98));
+  border: 1px solid var(--border-gold, #f3c043);
+  border-radius: 9999px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.75), 0 0 18px rgba(243, 192, 67, 0.3);
+  color: #fff;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  backdrop-filter: blur(12px);
+  user-select: none;
+  animation: returnPillSlideIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes returnPillSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.wow-return-pill-btn:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, rgba(30, 41, 69, 0.98), rgba(45, 55, 78, 1));
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.85), 0 0 24px rgba(243, 192, 67, 0.45);
+  border-color: #ffd700;
+}
+
+.wow-return-pill-btn .return-pill-icon {
+  font-size: 1.1rem;
+  color: var(--text-gold, #facc15);
+  transition: transform 0.2s ease;
+}
+
+.wow-return-pill-btn:hover .return-pill-icon {
+  transform: translateX(-3px);
+}
+
+.wow-return-pill-btn .return-pill-dismiss {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  margin-left: 0.25rem;
+  background: rgba(255, 255, 255, 0.12);
+  border: none;
+  border-radius: 50%;
+  color: #94a3b8;
+  font-size: 0.75rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.wow-return-pill-btn .return-pill-dismiss:hover {
+  background: rgba(239, 68, 68, 0.8);
+  color: #fff;
+}
+
+@media (max-width: 640px) {
+  .wow-return-pill-btn {
+    bottom: 1rem;
+    left: 1rem;
+    right: 1rem;
+    max-width: calc(100vw - 2rem);
+    justify-content: center;
+    font-size: 0.82rem;
+    padding: 0.55rem 0.95rem;
+  }
+}
+
+.prof-search-wrap {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.prof-search-clear-btn {
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  color: #cbd5e1;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.prof-search-clear-btn:hover {
+  background: rgba(239, 68, 68, 0.8);
+  color: #fff;
+}
+
+
 
 
 

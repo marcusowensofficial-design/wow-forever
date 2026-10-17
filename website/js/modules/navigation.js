@@ -94,6 +94,8 @@ function initBetaDurationTracker() {
 /* ==========================================================================
    3. MAIN TAB NAVIGATION
    ========================================================================== */
+let isRestoringHistoryState = false;
+
 function initNavigation() {
   const tabButtons = document.querySelectorAll('.nav-tab-btn');
   const tabPanels = document.querySelectorAll('.tab-content');
@@ -120,6 +122,18 @@ function initNavigation() {
         }
       }
 
+      if (!isRestoringHistoryState) {
+        const currentHash = (window.location.hash || '').toLowerCase().replace(/^#+/, '');
+        const targetHash = (targetTab || '').toLowerCase();
+        if (currentHash !== targetHash && !currentHash.startsWith(targetHash + '/')) {
+          try {
+            history.pushState({ tab: targetTab }, '', `#${targetTab}`);
+          } catch {
+            // Ignore pushState environment errors
+          }
+        }
+      }
+
       const navBar = document.querySelector('.nav-tab-bar');
       if (navBar && window.scrollY > navBar.offsetTop + 100) {
         navBar.scrollIntoView({ behavior: 'smooth' });
@@ -131,7 +145,14 @@ function initNavigation() {
   function checkUrlHashTab() {
     const rawHash = window.location.hash;
     const hash = rawHash.toLowerCase().replace('#', '');
-    if (!hash) return;
+    
+    // When URL hash is empty (e.g. root or user clicked browser Back to initial state), restore default tab (overview)
+    if (!hash) {
+      const defaultTab = 'overview';
+      tabButtons.forEach(b => b.classList.toggle('active', b.getAttribute('data-tab') === defaultTab));
+      tabPanels.forEach(p => p.classList.toggle('active', p.id === `tab-${defaultTab}`));
+      return;
+    }
 
     if (hash.startsWith('calculator') || hash.startsWith('talents')) {
       const parts = hash.split('?')[0].split('/');
@@ -189,7 +210,20 @@ function initNavigation() {
       // Sub-route deep-linking coordination
       const rawSub = hash.split('/')[1]?.split('#')[0];
       const subRoute = (rawSub || '').replace(/[^a-z0-9_-]/g, '');
-      if (subRoute) {
+      const rawSubSub = hash.split('/')[2]?.split('#')[0];
+      const subSubRoute = (rawSubSub || '').replace(/[^a-z0-9_-]/g, '');
+
+      if (tabName === 'professions') {
+        const profSlug = subRoute || (professionSlugs.includes(hash.split('/')[0]) ? hash.split('/')[0] : 'overview');
+        const profSubtab = subSubRoute || 'recipes';
+        if (window.WOW_PROFESSIONS && typeof window.WOW_PROFESSIONS.selectProfession === 'function') {
+          window.WOW_PROFESSIONS.selectProfession(profSlug, profSubtab, undefined, undefined, { noPush: true });
+        }
+      } else if (tabName === 'bis') {
+        if (typeof window.handleBiSHashRouting === 'function') {
+          window.handleBiSHashRouting();
+        }
+      } else if (subRoute) {
         const safeSubSelector = window.CSS && CSS.escape ? CSS.escape(subRoute) : subRoute;
         if (tabName === 'deepdives' && typeof window.switchDeepDiveClass === 'function') {
           window.switchDeepDiveClass(subRoute);
@@ -225,7 +259,126 @@ function initNavigation() {
 
   checkUrlHashTab();
   window.addEventListener('hashchange', checkUrlHashTab);
+  window.addEventListener('popstate', () => {
+    isRestoringHistoryState = true;
+    try {
+      // Dismiss any open modal dialogs and hide active tooltips on browser Back/Forward
+      const reagentModal = document.getElementById('prof-reagent-lookup-modal');
+      if (reagentModal && reagentModal.classList.contains('is-open')) {
+        reagentModal.classList.remove('is-open');
+        reagentModal.setAttribute('hidden', '');
+      }
+      const tt = document.getElementById('wow-item-tooltip');
+      if (tt) {
+        tt.style.display = 'none';
+      }
+
+      checkUrlHashTab();
+      if (window.checkReturnPillState) {
+        window.checkReturnPillState();
+      }
+    } finally {
+      isRestoringHistoryState = false;
+    }
+  });
 }
+
+/* ==========================================================================
+   FLOATING RETURN PILL BUTTON & CROSS-NAV TRACKER
+   ========================================================================== */
+let activeReturnTarget = null;
+
+function renderReturnPill() {
+  let pill = document.getElementById('wow-return-pill-btn');
+  if (!activeReturnTarget) {
+    if (pill) {
+      pill.style.display = 'none';
+      pill.setAttribute('hidden', '');
+    }
+    return;
+  }
+
+  if (!pill) {
+    pill = document.createElement('button');
+    pill.id = 'wow-return-pill-btn';
+    pill.type = 'button';
+    pill.className = 'wow-return-pill-btn';
+    pill.setAttribute('aria-label', 'Return to previous view');
+    document.body.appendChild(pill);
+  }
+
+  const escapeFn = window.escapeHtml || (s => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c])));
+  const label = activeReturnTarget.label || 'Previous View';
+  pill.innerHTML = `
+    <span class="return-pill-icon">←</span>
+    <span>Return to <strong>${escapeFn(label)}</strong></span>
+    <span class="return-pill-dismiss" title="Dismiss" role="button" aria-label="Dismiss return shortcut">✕</span>
+  `;
+  pill.removeAttribute('hidden');
+  pill.style.display = 'inline-flex';
+
+  pill.onclick = (e) => {
+    if (e.target.closest('.return-pill-dismiss')) {
+      e.stopPropagation();
+      window.clearReturnTarget();
+      return;
+    }
+    executeReturn();
+  };
+}
+
+function executeReturn() {
+  if (!activeReturnTarget) return;
+  const target = activeReturnTarget;
+  activeReturnTarget = null;
+  renderReturnPill();
+
+  isRestoringHistoryState = true;
+  try {
+    if (target.tab) {
+      const tabBtn = document.querySelector(`.nav-tab-btn[data-tab="${target.tab}"]`);
+      if (tabBtn) tabBtn.click();
+    }
+    if (target.profession && window.WOW_PROFESSIONS && window.WOW_PROFESSIONS.selectProfession) {
+      window.WOW_PROFESSIONS.selectProfession(target.profession, target.subtab || 'recipes', '', undefined, { noPush: true });
+    }
+    if (target.reagentModal && window.WOW_PROFESSIONS && window.WOW_PROFESSIONS.openReagentModal) {
+      setTimeout(() => {
+        window.WOW_PROFESSIONS.openReagentModal(target.reagentModal);
+      }, 120);
+    }
+    if (typeof target.scrollY === 'number') {
+      setTimeout(() => {
+        window.scrollTo({ top: target.scrollY, behavior: 'smooth' });
+      }, 150);
+    }
+  } finally {
+    isRestoringHistoryState = false;
+  }
+}
+
+window.setReturnTarget = function (target) {
+  if (!target) return;
+  activeReturnTarget = target;
+  renderReturnPill();
+};
+
+window.clearReturnTarget = function () {
+  activeReturnTarget = null;
+  renderReturnPill();
+};
+
+window.checkReturnPillState = function () {
+  if (!activeReturnTarget) return;
+  const rawHash = (window.location.hash || '').toLowerCase();
+  const currentTab = document.querySelector('.nav-tab-btn.active')?.getAttribute('data-tab');
+  if (activeReturnTarget.tab === currentTab && !activeReturnTarget.reagentModal) {
+    if (!activeReturnTarget.profession || rawHash.includes(activeReturnTarget.profession)) {
+      window.clearReturnTarget();
+    }
+  }
+};
+
 
 /* ==========================================================================
    4. MURLOC ONLINE COUNTER & AUDIO-VISUAL MICRO-INTERACTION

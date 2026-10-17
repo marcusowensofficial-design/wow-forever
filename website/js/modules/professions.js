@@ -13,7 +13,19 @@
   let searchQuery = '';
   let filterNewOnly = false;
   let filterBetaCap = false;
+  let filterDungeonOnly = false;
+  let filterBlueprintOnly = false;
   let playerSkill = null;
+  let gatheringViewMode = 'routes';
+  let activeMiningTier = 'copper';
+  let activeHerbTier = 'herb_tier1';
+  let activeContainerType = 'all';
+  let activeRolePairing = 'tank';
+  let trainerFactionFilter = 'all';
+  let trainerRankFilter = 'all';
+  let trainerProfFilter = 'all';
+  let trainerZoneFilter = 'all';
+  let trainerSearchQuery = '';
 
   const CDN_BASE = 'https://wow.zamimg.com/images/wow/icons/medium/';
 
@@ -56,6 +68,3457 @@
     if (s < recipe.green) return 'skill-yellow';
     if (s < recipe.grey) return 'skill-green';
     return 'skill-grey';
+  }
+
+  /* ==========================================================================
+     EXTENDED SUITE: DATASETS & UTILITIES (BIS, TOMTOM, SPECS, CONTAINERS, CIRCUITS)
+     ========================================================================== */
+  const WOW_TRAINERS_DATA = [
+  {
+    "name": "Lilyssia Nightbreeze",
+    "profession": "alchemy",
+    "profName": "Alchemy",
+    "faction": "Alliance",
+    "rank": "Apprentice",
+    "zone": "Stormwind City",
+    "coords": "55.6, 85.8",
+    "macro": "/way Stormwind City 55.6 85.8",
+    "notes": "Mage Quarter, Alchemy shop"
+  },
+  {
+    "name": "Tally Berryfizz",
+    "profession": "alchemy",
+    "profName": "Alchemy",
+    "faction": "Alliance",
+    "rank": "Journeyman",
+    "zone": "Ironforge",
+    "coords": "66.6, 55.2",
+    "macro": "/way Ironforge 66.6 55.2",
+    "notes": "Tinker Town"
+  },
+  {
+    "name": "Ainethil",
+    "profession": "alchemy",
+    "profName": "Alchemy",
+    "faction": "Alliance",
+    "rank": "Expert",
+    "zone": "Darnassus",
+    "coords": "55.0, 24.0",
+    "macro": "/way Darnassus 55.0 24.0",
+    "notes": "Temple Gardens"
+  },
+  {
+    "name": "Yelmak",
+    "profession": "alchemy",
+    "profName": "Alchemy",
+    "faction": "Horde",
+    "rank": "Apprentice",
+    "zone": "Orgrimmar",
+    "coords": "56.6, 33.2",
+    "macro": "/way Orgrimmar 56.6 33.2",
+    "notes": "The Drag"
+  },
+  {
+    "name": "Bena Winterhoof",
+    "profession": "alchemy",
+    "profName": "Alchemy",
+    "faction": "Horde",
+    "rank": "Journeyman",
+    "zone": "Thunder Bluff",
+    "coords": "46.8, 33.4",
+    "macro": "/way Thunder Bluff 46.8 33.4",
+    "notes": "Lower Rise"
+  },
+  {
+    "name": "Doctor Herbert Halsey",
+    "profession": "alchemy",
+    "profName": "Alchemy",
+    "faction": "Horde",
+    "rank": "Expert",
+    "zone": "Undercity",
+    "coords": "48.2, 72.2",
+    "macro": "/way Undercity 48.2 72.2",
+    "notes": "The Apothecarium"
+  },
+  {
+    "name": "Linzy Blackbolt",
+    "profession": "alchemy",
+    "profName": "Alchemy",
+    "faction": "Neutral",
+    "rank": "Expert",
+    "zone": "Dalaran, Alterac Mountains",
+    "coords": "18.6, 62.4",
+    "macro": "/way Alterac Mountains 18.6 62.4",
+    "notes": "WoW Forever Custom Dalaran Trainer"
+  },
+  {
+    "name": "Kylanna Windwhisper",
+    "profession": "alchemy",
+    "profName": "Alchemy",
+    "faction": "Alliance",
+    "rank": "Artisan",
+    "zone": "Feathermoon Stronghold, Feralas",
+    "coords": "32.6, 43.8",
+    "macro": "/way Feralas 32.6 43.8",
+    "notes": "Artisan Master"
+  },
+  {
+    "name": "Rogvar",
+    "profession": "alchemy",
+    "profName": "Alchemy",
+    "faction": "Horde",
+    "rank": "Artisan",
+    "zone": "Stonard, Swamp of Sorrows",
+    "coords": "48.4, 55.6",
+    "macro": "/way Swamp of Sorrows 48.4 55.6",
+    "notes": "Artisan Master"
+  },
+  {
+    "name": "Master Mycologist Shurome",
+    "profession": "alchemy",
+    "profName": "Alchemy",
+    "faction": "Neutral",
+    "rank": "Artisan",
+    "zone": "Emerald Sanctuary, Felwood",
+    "coords": "51.4, 82.0",
+    "macro": "/way Felwood 51.4 82.0",
+    "notes": "Neutral Master"
+  },
+  {
+    "name": "Therum Deepforge",
+    "profession": "blacksmithing",
+    "profName": "Blacksmithing",
+    "faction": "Alliance",
+    "rank": "Apprentice",
+    "zone": "Stormwind City",
+    "coords": "63.8, 37.8",
+    "macro": "/way Stormwind City 63.8 37.8",
+    "notes": "Dwarven District Forge"
+  },
+  {
+    "name": "Bengus Deepforge",
+    "profession": "blacksmithing",
+    "profName": "Blacksmithing",
+    "faction": "Alliance",
+    "rank": "Expert",
+    "zone": "Ironforge",
+    "coords": "51.0, 43.0",
+    "macro": "/way Ironforge 51.0 43.0",
+    "notes": "The Great Forge"
+  },
+  {
+    "name": "Saru Steelfury",
+    "profession": "blacksmithing",
+    "profName": "Blacksmithing",
+    "faction": "Horde",
+    "rank": "Expert",
+    "zone": "Orgrimmar",
+    "coords": "82.2, 23.0",
+    "macro": "/way Orgrimmar 82.2 23.0",
+    "notes": "Valley of Honor Forge"
+  },
+  {
+    "name": "James Van Brunt",
+    "profession": "blacksmithing",
+    "profName": "Blacksmithing",
+    "faction": "Horde",
+    "rank": "Journeyman",
+    "zone": "Undercity",
+    "coords": "61.2, 30.4",
+    "macro": "/way Undercity 61.2 30.4",
+    "notes": "War Quarter"
+  },
+  {
+    "name": "Basil Frye",
+    "profession": "blacksmithing",
+    "profName": "Blacksmithing",
+    "faction": "Horde",
+    "rank": "Expert",
+    "zone": "Undercity",
+    "coords": "59.6, 29.0",
+    "macro": "/way Undercity 59.6 29.0",
+    "notes": "War Quarter"
+  },
+  {
+    "name": "Brikk Keencraft",
+    "profession": "blacksmithing",
+    "profName": "Blacksmithing",
+    "faction": "Neutral",
+    "rank": "Artisan",
+    "zone": "Booty Bay, Stranglethorn",
+    "coords": "29.0, 75.4",
+    "macro": "/way Stranglethorn Vale 29.0 75.4",
+    "notes": "Artisan Master"
+  },
+  {
+    "name": "Grumnus Steelshaper",
+    "profession": "blacksmithing",
+    "profName": "Blacksmithing",
+    "faction": "Alliance",
+    "rank": "Artisan",
+    "zone": "Ironforge",
+    "coords": "50.2, 42.8",
+    "macro": "/way Ironforge 50.2 42.8",
+    "notes": "Armorsmith Specialization"
+  },
+  {
+    "name": "Okothos Ironrager",
+    "profession": "blacksmithing",
+    "profName": "Blacksmithing",
+    "faction": "Horde",
+    "rank": "Artisan",
+    "zone": "Orgrimmar",
+    "coords": "79.8, 23.8",
+    "macro": "/way Orgrimmar 79.8 23.8",
+    "notes": "Armorsmith Specialization"
+  },
+  {
+    "name": "Ironus Coldsteel",
+    "profession": "blacksmithing",
+    "profName": "Blacksmithing",
+    "faction": "Alliance",
+    "rank": "Artisan",
+    "zone": "Ironforge",
+    "coords": "50.8, 45.2",
+    "macro": "/way Ironforge 50.8 45.2",
+    "notes": "Weaponsmith Specialization"
+  },
+  {
+    "name": "Borgosh Corebender",
+    "profession": "blacksmithing",
+    "profName": "Blacksmithing",
+    "faction": "Horde",
+    "rank": "Artisan",
+    "zone": "Orgrimmar",
+    "coords": "79.6, 23.6",
+    "macro": "/way Orgrimmar 79.6 23.6",
+    "notes": "Weaponsmith Specialization"
+  },
+  {
+    "name": "Lucan Cordell",
+    "profession": "enchanting",
+    "profName": "Enchanting",
+    "faction": "Alliance",
+    "rank": "Apprentice",
+    "zone": "Stormwind City",
+    "coords": "53.0, 74.2",
+    "macro": "/way Stormwind City 53.0 74.2",
+    "notes": "Mage Quarter"
+  },
+  {
+    "name": "Gimrizz Shadowcog",
+    "profession": "enchanting",
+    "profName": "Enchanting",
+    "faction": "Alliance",
+    "rank": "Journeyman",
+    "zone": "Ironforge",
+    "coords": "59.8, 36.4",
+    "macro": "/way Ironforge 59.8 36.4",
+    "notes": "The Great Forge"
+  },
+  {
+    "name": "Kitta Firewind",
+    "profession": "enchanting",
+    "profName": "Enchanting",
+    "faction": "Alliance",
+    "rank": "Expert",
+    "zone": "Tower of Azora, Elwynn Forest",
+    "coords": "64.8, 70.4",
+    "macro": "/way Elwynn Forest 64.8 70.4",
+    "notes": "Top of the Tower"
+  },
+  {
+    "name": "Godan",
+    "profession": "enchanting",
+    "profName": "Enchanting",
+    "faction": "Horde",
+    "rank": "Apprentice",
+    "zone": "Orgrimmar",
+    "coords": "54.0, 56.4",
+    "macro": "/way Orgrimmar 54.0 56.4",
+    "notes": "The Drag"
+  },
+  {
+    "name": "Hgarth",
+    "profession": "enchanting",
+    "profName": "Enchanting",
+    "faction": "Horde",
+    "rank": "Expert",
+    "zone": "Sun Rock Retreat, Stonetalon",
+    "coords": "49.2, 57.2",
+    "macro": "/way Stonetalon Mountains 49.2 57.2",
+    "notes": "High Ridge"
+  },
+  {
+    "name": "Annora",
+    "profession": "enchanting",
+    "profName": "Enchanting",
+    "faction": "Neutral",
+    "rank": "Artisan",
+    "zone": "Uldaman Instance",
+    "coords": "Temple Hallways",
+    "macro": "/way Badlands 42.0 12.0",
+    "notes": "Located inside Uldaman dungeon past Map Chamber"
+  },
+  {
+    "name": "Lilliam Sparkspindle",
+    "profession": "engineering",
+    "profName": "Engineering",
+    "faction": "Alliance",
+    "rank": "Apprentice",
+    "zone": "Stormwind City",
+    "coords": "62.8, 32.0",
+    "macro": "/way Stormwind City 62.8 32.0",
+    "notes": "Dwarven District"
+  },
+  {
+    "name": "Springspindle Fizzlegear",
+    "profession": "engineering",
+    "profName": "Engineering",
+    "faction": "Alliance",
+    "rank": "Expert",
+    "zone": "Ironforge",
+    "coords": "68.4, 44.0",
+    "macro": "/way Ironforge 68.4 44.0",
+    "notes": "Tinker Town"
+  },
+  {
+    "name": "Roxxik",
+    "profession": "engineering",
+    "profName": "Engineering",
+    "faction": "Horde",
+    "rank": "Expert",
+    "zone": "Orgrimmar",
+    "coords": "75.8, 25.2",
+    "macro": "/way Orgrimmar 75.8 25.2",
+    "notes": "Valley of Honor"
+  },
+  {
+    "name": "Buzzek Bracketswing",
+    "profession": "engineering",
+    "profName": "Engineering",
+    "faction": "Neutral",
+    "rank": "Artisan",
+    "zone": "Gadgetzan, Tanaris",
+    "coords": "52.2, 27.8",
+    "macro": "/way Tanaris 52.2 27.8",
+    "notes": "Artisan Master"
+  },
+  {
+    "name": "Tinkmaster Overspark",
+    "profession": "engineering",
+    "profName": "Engineering",
+    "faction": "Alliance",
+    "rank": "Artisan",
+    "zone": "Ironforge",
+    "coords": "69.8, 50.0",
+    "macro": "/way Ironforge 69.8 50.0",
+    "notes": "Gnomish Engineering Specialization"
+  },
+  {
+    "name": "Oglethorpe Obnoticus",
+    "profession": "engineering",
+    "profName": "Engineering",
+    "faction": "Neutral",
+    "rank": "Artisan",
+    "zone": "Booty Bay, Stranglethorn",
+    "coords": "28.2, 76.2",
+    "macro": "/way Stranglethorn Vale 28.2 76.2",
+    "notes": "Gnomish Engineering Specialization"
+  },
+  {
+    "name": "Nixx Sprocketspring",
+    "profession": "engineering",
+    "profName": "Engineering",
+    "faction": "Neutral",
+    "rank": "Artisan",
+    "zone": "Gadgetzan, Tanaris",
+    "coords": "52.4, 27.2",
+    "macro": "/way Tanaris 52.4 27.2",
+    "notes": "Goblin Engineering Specialization"
+  },
+  {
+    "name": "Vazario Linkgrease",
+    "profession": "engineering",
+    "profName": "Engineering",
+    "faction": "Neutral",
+    "rank": "Artisan",
+    "zone": "Ratchet, The Barrens",
+    "coords": "62.6, 36.2",
+    "macro": "/way The Barrens 62.6 36.2",
+    "notes": "Goblin Engineering Specialization"
+  },
+  {
+    "name": "Adele Fielder",
+    "profession": "leatherworking",
+    "profName": "Leatherworking",
+    "faction": "Alliance",
+    "rank": "Apprentice",
+    "zone": "Elwynn Forest",
+    "coords": "46.4, 62.2",
+    "macro": "/way Elwynn Forest 46.4 62.2",
+    "notes": "Goldshire"
+  },
+  {
+    "name": "Fenthwick",
+    "profession": "leatherworking",
+    "profName": "Leatherworking",
+    "faction": "Alliance",
+    "rank": "Journeyman",
+    "zone": "Ironforge",
+    "coords": "40.2, 31.8",
+    "macro": "/way Ironforge 40.2 31.8",
+    "notes": "The Commons"
+  },
+  {
+    "name": "Telonis",
+    "profession": "leatherworking",
+    "profName": "Leatherworking",
+    "faction": "Alliance",
+    "rank": "Expert",
+    "zone": "Darnassus",
+    "coords": "64.6, 21.4",
+    "macro": "/way Darnassus 64.6 21.4",
+    "notes": "Craftsmen's Terrace"
+  },
+  {
+    "name": "Karolek",
+    "profession": "leatherworking",
+    "profName": "Leatherworking",
+    "faction": "Horde",
+    "rank": "Apprentice",
+    "zone": "Orgrimmar",
+    "coords": "60.0, 54.4",
+    "macro": "/way Orgrimmar 60.0 54.4",
+    "notes": "The Drag"
+  },
+  {
+    "name": "Una",
+    "profession": "leatherworking",
+    "profName": "Leatherworking",
+    "faction": "Horde",
+    "rank": "Expert",
+    "zone": "Thunder Bluff",
+    "coords": "41.8, 42.6",
+    "macro": "/way Thunder Bluff 41.8 42.6",
+    "notes": "Middle Rise"
+  },
+  {
+    "name": "Drakk Stonehand",
+    "profession": "leatherworking",
+    "profName": "Leatherworking",
+    "faction": "Alliance",
+    "rank": "Artisan",
+    "zone": "Aerie Peak, Hinterlands",
+    "coords": "13.4, 43.4",
+    "macro": "/way The Hinterlands 13.4 43.4",
+    "notes": "Artisan Master"
+  },
+  {
+    "name": "Hahrana Ironhide",
+    "profession": "leatherworking",
+    "profName": "Leatherworking",
+    "faction": "Horde",
+    "rank": "Artisan",
+    "zone": "Camp Mojache, Feralas",
+    "coords": "74.4, 43.0",
+    "macro": "/way Feralas 74.4 43.0",
+    "notes": "Artisan Master"
+  },
+  {
+    "name": "Peter Galen",
+    "profession": "leatherworking",
+    "profName": "Leatherworking",
+    "faction": "Alliance",
+    "rank": "Artisan",
+    "zone": "Azshara",
+    "coords": "37.4, 65.6",
+    "macro": "/way Azshara 37.4 65.6",
+    "notes": "Dragonscale Specialization"
+  },
+  {
+    "name": "Thorkaf Dragoneye",
+    "profession": "leatherworking",
+    "profName": "Leatherworking",
+    "faction": "Horde",
+    "rank": "Artisan",
+    "zone": "Badlands",
+    "coords": "62.6, 57.6",
+    "macro": "/way Badlands 62.6 57.6",
+    "notes": "Dragonscale Specialization"
+  },
+  {
+    "name": "Sarah Tanner",
+    "profession": "leatherworking",
+    "profName": "Leatherworking",
+    "faction": "Alliance",
+    "rank": "Artisan",
+    "zone": "Searing Gorge",
+    "coords": "63.8, 75.8",
+    "macro": "/way Searing Gorge 63.8 75.8",
+    "notes": "Elemental Specialization"
+  },
+  {
+    "name": "Brumn Winterhoof",
+    "profession": "leatherworking",
+    "profName": "Leatherworking",
+    "faction": "Horde",
+    "rank": "Artisan",
+    "zone": "Arathi Highlands",
+    "coords": "28.2, 45.0",
+    "macro": "/way Arathi Highlands 28.2 45.0",
+    "notes": "Elemental Specialization"
+  },
+  {
+    "name": "Pratt McGrubben",
+    "profession": "leatherworking",
+    "profName": "Leatherworking",
+    "faction": "Alliance",
+    "rank": "Artisan",
+    "zone": "Feathermoon, Feralas",
+    "coords": "30.6, 42.6",
+    "macro": "/way Feralas 30.6 42.6",
+    "notes": "Tribal Specialization"
+  },
+  {
+    "name": "Jangdor Swiftstrider",
+    "profession": "leatherworking",
+    "profName": "Leatherworking",
+    "faction": "Horde",
+    "rank": "Artisan",
+    "zone": "Camp Mojache, Feralas",
+    "coords": "74.4, 43.0",
+    "macro": "/way Feralas 74.4 43.0",
+    "notes": "Tribal Specialization"
+  },
+  {
+    "name": "Sellag",
+    "profession": "tailoring",
+    "profName": "Tailoring",
+    "faction": "Alliance",
+    "rank": "Apprentice",
+    "zone": "Stormwind City",
+    "coords": "43.4, 73.6",
+    "macro": "/way Stormwind City 43.4 73.6",
+    "notes": "Mage Quarter"
+  },
+  {
+    "name": "Jormund Stonebrow",
+    "profession": "tailoring",
+    "profName": "Tailoring",
+    "faction": "Alliance",
+    "rank": "Journeyman",
+    "zone": "Ironforge",
+    "coords": "43.2, 28.8",
+    "macro": "/way Ironforge 43.2 28.8",
+    "notes": "The Great Forge"
+  },
+  {
+    "name": "Georgio Bolero",
+    "profession": "tailoring",
+    "profName": "Tailoring",
+    "faction": "Alliance",
+    "rank": "Expert",
+    "zone": "Stormwind City",
+    "coords": "53.2, 81.6",
+    "macro": "/way Stormwind City 53.2 81.6",
+    "notes": "Mage Quarter"
+  },
+  {
+    "name": "Magar",
+    "profession": "tailoring",
+    "profName": "Tailoring",
+    "faction": "Horde",
+    "rank": "Apprentice",
+    "zone": "Orgrimmar",
+    "coords": "63.6, 49.8",
+    "macro": "/way Orgrimmar 63.6 49.8",
+    "notes": "The Drag"
+  },
+  {
+    "name": "Josef Gregorian",
+    "profession": "tailoring",
+    "profName": "Tailoring",
+    "faction": "Horde",
+    "rank": "Expert",
+    "zone": "Undercity",
+    "coords": "70.6, 30.2",
+    "macro": "/way Undercity 70.6 30.2",
+    "notes": "Magic Quarter"
+  },
+  {
+    "name": "Timothy Worthington",
+    "profession": "tailoring",
+    "profName": "Tailoring",
+    "faction": "Alliance",
+    "rank": "Artisan",
+    "zone": "Theramore Isle, Dustwallow",
+    "coords": "66.2, 51.6",
+    "macro": "/way Dustwallow Marsh 66.2 51.6",
+    "notes": "Artisan Master"
+  },
+  {
+    "name": "Daryl Stack",
+    "profession": "tailoring",
+    "profName": "Tailoring",
+    "faction": "Horde",
+    "rank": "Artisan",
+    "zone": "Tarren Mill, Hillsbrad",
+    "coords": "63.6, 20.8",
+    "macro": "/way Hillsbrad Foothills 63.6 20.8",
+    "notes": "Artisan Master"
+  },
+  {
+    "name": "Meilosh",
+    "profession": "tailoring",
+    "profName": "Tailoring",
+    "faction": "Neutral",
+    "rank": "Artisan",
+    "zone": "Timbermaw Hold, Felwood",
+    "coords": "65.6, 2.8",
+    "macro": "/way Felwood 65.6 2.8",
+    "notes": "Timbermaw Neutral Master"
+  },
+  {
+    "name": "Gelman Stonehand",
+    "profession": "mining",
+    "profName": "Mining",
+    "faction": "Alliance",
+    "rank": "Apprentice",
+    "zone": "Stormwind City",
+    "coords": "51.0, 17.2",
+    "macro": "/way Stormwind City 51.0 17.2",
+    "notes": "Dwarven District"
+  },
+  {
+    "name": "Geofram Bouldertoe",
+    "profession": "mining",
+    "profName": "Mining",
+    "faction": "Alliance",
+    "rank": "Expert",
+    "zone": "Ironforge",
+    "coords": "50.2, 26.0",
+    "macro": "/way Ironforge 50.2 26.0",
+    "notes": "The Great Forge"
+  },
+  {
+    "name": "Makaru",
+    "profession": "mining",
+    "profName": "Mining",
+    "faction": "Horde",
+    "rank": "Apprentice",
+    "zone": "Orgrimmar",
+    "coords": "73.0, 26.8",
+    "macro": "/way Orgrimmar 73.0 26.8",
+    "notes": "Valley of Honor"
+  },
+  {
+    "name": "Brom Killian",
+    "profession": "mining",
+    "profName": "Mining",
+    "faction": "Horde",
+    "rank": "Expert",
+    "zone": "Undercity",
+    "coords": "55.8, 37.0",
+    "macro": "/way Undercity 55.8 37.0",
+    "notes": "War Quarter"
+  },
+  {
+    "name": "Dalaran Mining Master",
+    "profession": "mining",
+    "profName": "Mining",
+    "faction": "Neutral",
+    "rank": "Expert",
+    "zone": "Dalaran, Alterac Mountains",
+    "coords": "25.0, 41.2",
+    "macro": "/way Alterac Mountains 25.0 41.2",
+    "notes": "Forever Custom Dalaran Trainer"
+  },
+  {
+    "name": "Elderwild Miner",
+    "profession": "mining",
+    "profName": "Mining",
+    "faction": "Neutral",
+    "rank": "Artisan",
+    "zone": "Mount Hyjal",
+    "coords": "39.2, 23.0",
+    "macro": "/way Mount Hyjal 39.2 23.0",
+    "notes": "Artisan Master"
+  },
+  {
+    "name": "Tannysa",
+    "profession": "herbalism",
+    "profName": "Herbalism",
+    "faction": "Alliance",
+    "rank": "Apprentice",
+    "zone": "Stormwind City",
+    "coords": "53.0, 84.8",
+    "macro": "/way Stormwind City 53.0 84.8",
+    "notes": "Mage Quarter"
+  },
+  {
+    "name": "Reyna Stonebranch",
+    "profession": "herbalism",
+    "profName": "Herbalism",
+    "faction": "Alliance",
+    "rank": "Expert",
+    "zone": "Ironforge",
+    "coords": "55.6, 59.0",
+    "macro": "/way Ironforge 55.6 59.0",
+    "notes": "The Great Forge"
+  },
+  {
+    "name": "Jandi",
+    "profession": "herbalism",
+    "profName": "Herbalism",
+    "faction": "Horde",
+    "rank": "Apprentice",
+    "zone": "Orgrimmar",
+    "coords": "55.6, 39.6",
+    "macro": "/way Orgrimmar 55.6 39.6",
+    "notes": "The Drag"
+  },
+  {
+    "name": "Martha Alliestar",
+    "profession": "herbalism",
+    "profName": "Herbalism",
+    "faction": "Horde",
+    "rank": "Expert",
+    "zone": "Undercity",
+    "coords": "54.4, 49.8",
+    "macro": "/way Undercity 54.4 49.8",
+    "notes": "The Apothecarium"
+  },
+  {
+    "name": "Dalaran Herbalist",
+    "profession": "herbalism",
+    "profName": "Herbalism",
+    "faction": "Neutral",
+    "rank": "Expert",
+    "zone": "Dalaran, Alterac Mountains",
+    "coords": "21.8, 63.6",
+    "macro": "/way Alterac Mountains 21.8 63.6",
+    "notes": "Forever Custom Dalaran Trainer"
+  },
+  {
+    "name": "Elderwild Herbalist",
+    "profession": "herbalism",
+    "profName": "Herbalism",
+    "faction": "Neutral",
+    "rank": "Artisan",
+    "zone": "Mount Hyjal",
+    "coords": "46.8, 25.0",
+    "macro": "/way Mount Hyjal 46.8 25.0",
+    "notes": "Artisan Master"
+  },
+  {
+    "name": "Maris Granger",
+    "profession": "skinning",
+    "profName": "Skinning",
+    "faction": "Alliance",
+    "rank": "Apprentice",
+    "zone": "Stormwind City",
+    "coords": "72.2, 62.2",
+    "macro": "/way Stormwind City 72.2 62.2",
+    "notes": "Old Town"
+  },
+  {
+    "name": "Balthus Stoneflayer",
+    "profession": "skinning",
+    "profName": "Skinning",
+    "faction": "Alliance",
+    "rank": "Expert",
+    "zone": "Ironforge",
+    "coords": "39.8, 32.6",
+    "macro": "/way Ironforge 39.8 32.6",
+    "notes": "The Great Forge"
+  },
+  {
+    "name": "Thuwd",
+    "profession": "skinning",
+    "profName": "Skinning",
+    "faction": "Horde",
+    "rank": "Apprentice",
+    "zone": "Orgrimmar",
+    "coords": "63.2, 45.2",
+    "macro": "/way Orgrimmar 63.2 45.2",
+    "notes": "Valley of Honor"
+  },
+  {
+    "name": "Killian Hagey",
+    "profession": "skinning",
+    "profName": "Skinning",
+    "faction": "Horde",
+    "rank": "Expert",
+    "zone": "Undercity",
+    "coords": "70.6, 58.6",
+    "macro": "/way Undercity 70.6 58.6",
+    "notes": "Rogues' Quarter"
+  },
+  {
+    "name": "Dalaran Skinner",
+    "profession": "skinning",
+    "profName": "Skinning",
+    "faction": "Neutral",
+    "rank": "Expert",
+    "zone": "Dalaran, Alterac Mountains",
+    "coords": "12.2, 74.6",
+    "macro": "/way Alterac Mountains 12.2 74.6",
+    "notes": "Forever Custom Dalaran Trainer"
+  },
+  {
+    "name": "Elderwild Skinner",
+    "profession": "skinning",
+    "profName": "Skinning",
+    "faction": "Neutral",
+    "rank": "Artisan",
+    "zone": "Mount Hyjal",
+    "coords": "41.2, 43.4",
+    "macro": "/way Mount Hyjal 41.2 43.4",
+    "notes": "Artisan Master"
+  },
+  {
+    "name": "Stephen Ryback",
+    "profession": "cooking",
+    "profName": "Cooking",
+    "faction": "Alliance",
+    "rank": "Apprentice",
+    "zone": "Stormwind City",
+    "coords": "77.2, 53.2",
+    "macro": "/way Stormwind City 77.2 53.2",
+    "notes": "Pig and Whistle Tavern"
+  },
+  {
+    "name": "Daryl Riknussun",
+    "profession": "cooking",
+    "profName": "Cooking",
+    "faction": "Alliance",
+    "rank": "Journeyman",
+    "zone": "Ironforge",
+    "coords": "60.0, 36.8",
+    "macro": "/way Ironforge 60.0 36.8",
+    "notes": "The Military Ward"
+  },
+  {
+    "name": "Shandrina",
+    "profession": "cooking",
+    "profName": "Cooking",
+    "faction": "Alliance",
+    "rank": "Expert",
+    "zone": "Mystral Lake, Ashenvale",
+    "coords": "50.2, 67.0",
+    "macro": "/way Ashenvale 50.2 67.0",
+    "notes": "Teaches Expert Cookbook"
+  },
+  {
+    "name": "Zamja",
+    "profession": "cooking",
+    "profName": "Cooking",
+    "faction": "Horde",
+    "rank": "Apprentice",
+    "zone": "Orgrimmar",
+    "coords": "57.6, 53.6",
+    "macro": "/way Orgrimmar 57.6 53.6",
+    "notes": "The Drag"
+  },
+  {
+    "name": "Wulan",
+    "profession": "cooking",
+    "profName": "Cooking",
+    "faction": "Horde",
+    "rank": "Expert",
+    "zone": "Shadowprey Village, Desolace",
+    "coords": "26.2, 69.8",
+    "macro": "/way Desolace 26.2 69.8",
+    "notes": "Teaches Expert Cookbook"
+  },
+  {
+    "name": "Dirge Quikcleave",
+    "profession": "cooking",
+    "profName": "Cooking",
+    "faction": "Neutral",
+    "rank": "Artisan",
+    "zone": "Gadgetzan, Tanaris",
+    "coords": "52.6, 28.0",
+    "macro": "/way Tanaris 52.6 28.0",
+    "notes": "Clamlette Surprise quest"
+  },
+  {
+    "name": "Shaina Fuller",
+    "profession": "first-aid",
+    "profName": "First Aid",
+    "faction": "Alliance",
+    "rank": "Apprentice",
+    "zone": "Stormwind City",
+    "coords": "52.6, 45.4",
+    "macro": "/way Stormwind City 52.6 45.4",
+    "notes": "Cathedral of Light"
+  },
+  {
+    "name": "Deneb Walker",
+    "profession": "first-aid",
+    "profName": "First Aid",
+    "faction": "Alliance",
+    "rank": "Expert",
+    "zone": "Stromgarde Keep, Arathi",
+    "coords": "27.0, 58.8",
+    "macro": "/way Arathi Highlands 27.0 58.8",
+    "notes": "Expert First Aid book vendor"
+  },
+  {
+    "name": "Rawrk",
+    "profession": "first-aid",
+    "profName": "First Aid",
+    "faction": "Horde",
+    "rank": "Apprentice",
+    "zone": "Orgrimmar",
+    "coords": "54.0, 42.0",
+    "macro": "/way Orgrimmar 54.0 42.0",
+    "notes": "Valley of Spirits"
+  },
+  {
+    "name": "Balai Lok'Wein",
+    "profession": "first-aid",
+    "profName": "First Aid",
+    "faction": "Horde",
+    "rank": "Expert",
+    "zone": "Brackenwall, Dustwallow",
+    "coords": "36.4, 30.4",
+    "macro": "/way Dustwallow Marsh 36.4 30.4",
+    "notes": "Expert First Aid book vendor"
+  },
+  {
+    "name": "Doctor Gustaf VanHowzen",
+    "profession": "first-aid",
+    "profName": "First Aid",
+    "faction": "Alliance",
+    "rank": "Artisan",
+    "zone": "Theramore Isle, Dustwallow",
+    "coords": "67.8, 51.2",
+    "macro": "/way Dustwallow Marsh 67.8 51.2",
+    "notes": "Triage Quest Master"
+  },
+  {
+    "name": "Doctor Gregory Victor",
+    "profession": "first-aid",
+    "profName": "First Aid",
+    "faction": "Horde",
+    "rank": "Artisan",
+    "zone": "Hammerfall, Arathi",
+    "coords": "73.4, 36.8",
+    "macro": "/way Arathi Highlands 73.4 36.8",
+    "notes": "Triage Quest Master"
+  },
+  {
+    "name": "Arnold Leland",
+    "profession": "fishing",
+    "profName": "Fishing",
+    "faction": "Alliance",
+    "rank": "Apprentice",
+    "zone": "Stormwind City",
+    "coords": "54.6, 69.2",
+    "macro": "/way Stormwind City 54.6 69.2",
+    "notes": "Canals near Trade District"
+  },
+  {
+    "name": "Lumak",
+    "profession": "fishing",
+    "profName": "Fishing",
+    "faction": "Horde",
+    "rank": "Apprentice",
+    "zone": "Orgrimmar",
+    "coords": "69.8, 41.0",
+    "macro": "/way Orgrimmar 69.8 41.0",
+    "notes": "Valley of Honor"
+  },
+  {
+    "name": "Old Man Heming",
+    "profession": "fishing",
+    "profName": "Fishing",
+    "faction": "Neutral",
+    "rank": "Expert",
+    "zone": "Booty Bay, Stranglethorn",
+    "coords": "27.4, 76.8",
+    "macro": "/way Stranglethorn Vale 27.4 76.8",
+    "notes": "Sells Expert Fishing - The Bass and You"
+  },
+  {
+    "name": "Nat Pagle",
+    "profession": "fishing",
+    "profName": "Fishing",
+    "faction": "Neutral",
+    "rank": "Artisan",
+    "zone": "Dustwallow Marsh",
+    "coords": "58.6, 60.0",
+    "macro": "/way Dustwallow Marsh 58.6 60.0",
+    "notes": "Nat Pagle, Angler Extreme quest"
+  },
+  {
+    "name": "Elden Trailblazer",
+    "profession": "camping",
+    "profName": "Camping",
+    "faction": "Alliance",
+    "rank": "Apprentice",
+    "zone": "Stormwind Camp Outpost",
+    "coords": "61.4, 72.8",
+    "macro": "/way Stormwind City 61.4 72.8",
+    "notes": "Campfire Trainer"
+  },
+  {
+    "name": "Kurgah Flamekeeper",
+    "profession": "camping",
+    "profName": "Camping",
+    "faction": "Horde",
+    "rank": "Apprentice",
+    "zone": "Razor Hill Camp",
+    "coords": "53.2, 43.6",
+    "macro": "/way Durotar 53.2 43.6",
+    "notes": "Campfire Trainer"
+  },
+  {
+    "name": "Campmaster Theron",
+    "profession": "camping",
+    "profName": "Camping",
+    "faction": "Neutral",
+    "rank": "Expert",
+    "zone": "Zephras Isle Outpost",
+    "coords": "48.0, 62.0",
+    "macro": "/way Zephras Isle 48.0 62.0",
+    "notes": "Station Blueprint Expert"
+  },
+  {
+    "name": "Arch-Survivalist Orin",
+    "profession": "camping",
+    "profName": "Camping",
+    "faction": "Neutral",
+    "rank": "Artisan",
+    "zone": "Mount Hyjal Expedition",
+    "coords": "40.8, 26.2",
+    "macro": "/way Mount Hyjal 40.8 26.2",
+    "notes": "Master Camp Upgrades"
+  }
+];
+  const CONTAINERS_DATA = {
+  "tailoring": {
+    "generalBags": [
+      {
+        "name": "Linen Bag",
+        "slots": 6,
+        "skill": 45,
+        "quality": 1,
+        "icon": "inv_misc_bag_08",
+        "source": "Trainer",
+        "reagents": [
+          {
+            "name": "Bolt of Linen Cloth",
+            "count": 3,
+            "icon": "inv_fabric_linen_01"
+          },
+          {
+            "name": "Coarse Thread",
+            "count": 3,
+            "icon": "inv_misc_thread_01"
+          }
+        ],
+        "desc": "Starter player inventory pouch."
+      },
+      {
+        "name": "Woolen Bag",
+        "slots": 8,
+        "skill": 80,
+        "quality": 1,
+        "icon": "inv_misc_bag_07",
+        "source": "Trainer",
+        "reagents": [
+          {
+            "name": "Bolt of Woolen Cloth",
+            "count": 3,
+            "icon": "inv_fabric_wool_01"
+          },
+          {
+            "name": "Fine Thread",
+            "count": 1,
+            "icon": "inv_misc_thread_02"
+          }
+        ],
+        "desc": "Reliable 8-slot early leveling bag."
+      },
+      {
+        "name": "Small Silk Pack",
+        "slots": 10,
+        "skill": 150,
+        "quality": 1,
+        "icon": "inv_misc_bag_09",
+        "source": "Trainer",
+        "reagents": [
+          {
+            "name": "Bolt of Silk Cloth",
+            "count": 4,
+            "icon": "inv_fabric_silk_01"
+          },
+          {
+            "name": "Heavy Silken Thread",
+            "count": 2,
+            "icon": "inv_misc_thread_03"
+          }
+        ],
+        "desc": "Durable 10-slot silk backpack."
+      },
+      {
+        "name": "Mageweave Bag",
+        "slots": 12,
+        "skill": 225,
+        "quality": 2,
+        "icon": "inv_misc_bag_10",
+        "source": "Trainer",
+        "reagents": [
+          {
+            "name": "Bolt of Mageweave",
+            "count": 4,
+            "icon": "inv_fabric_mageweave_01"
+          },
+          {
+            "name": "Silken Thread",
+            "count": 2,
+            "icon": "inv_misc_thread_03"
+          }
+        ],
+        "desc": "12-slot mid-tier bag crafted before the Phase 2 Beta cap."
+      },
+      {
+        "name": "Runecloth Bag",
+        "slots": 14,
+        "skill": 260,
+        "quality": 2,
+        "icon": "inv_misc_bag_11",
+        "source": "Pattern (World Drop / Vendor)",
+        "reagents": [
+          {
+            "name": "Bolt of Runecloth",
+            "count": 5,
+            "icon": "inv_fabric_purplefire_01"
+          },
+          {
+            "name": "Rugged Leather",
+            "count": 2,
+            "icon": "inv_misc_leatherscrap_02"
+          },
+          {
+            "name": "Rune Thread",
+            "count": 1,
+            "icon": "inv_misc_thread_04"
+          }
+        ],
+        "desc": "Standard 14-slot high-capacity bag."
+      },
+      {
+        "name": "Mooncloth Bag",
+        "slots": 18,
+        "skill": 300,
+        "quality": 3,
+        "icon": "inv_misc_bag_14",
+        "source": "Pattern (Vendor: Qia in Winterspring)",
+        "reagents": [
+          {
+            "name": "Mooncloth",
+            "count": 4,
+            "icon": "inv_fabric_moonrag_01"
+          },
+          {
+            "name": "Rune Thread",
+            "count": 1,
+            "icon": "inv_misc_thread_04"
+          }
+        ],
+        "desc": "Authentic WoW Forever 18-slot supreme traveler satchel (upgraded from 16 to 18 slots in Classic+!).",
+        "isForeverVerified": true
+      },
+      {
+        "name": "Bottomless Bag",
+        "slots": 20,
+        "skill": 300,
+        "quality": 4,
+        "icon": "inv_misc_bag_17",
+        "source": "Pattern (Rare World Drop / Thaurissan)",
+        "reagents": [
+          {
+            "name": "Mooncloth",
+            "count": 8,
+            "icon": "inv_fabric_moonrag_01"
+          },
+          {
+            "name": "Bolt of Runecloth",
+            "count": 2,
+            "icon": "inv_fabric_purplefire_01"
+          },
+          {
+            "name": "Core of Earth",
+            "count": 2,
+            "icon": "inv_misc_gem_opal_01"
+          },
+          {
+            "name": "Greater Eternal Essence",
+            "count": 2,
+            "icon": "inv_enchant_essenceeternalgreater"
+          }
+        ],
+        "desc": "The pinnacle 20-slot epic container."
+      }
+    ],
+    "reagentBags": [
+      {
+        "name": "Small Linen Reagent Bag",
+        "slots": 6,
+        "skill": 40,
+        "quality": 1,
+        "icon": "inv_misc_bag_08",
+        "source": "Tailoring Trainer",
+        "reagents": [
+          {
+            "name": "Bolt of Linen Cloth",
+            "count": 2,
+            "icon": "inv_fabric_linen_01"
+          },
+          {
+            "name": "Coarse Thread",
+            "count": 1,
+            "icon": "inv_misc_thread_01"
+          }
+        ],
+        "desc": "WoW Forever Custom: Dedicated 6-slot bag that exclusively holds trade reagents and ores."
+      },
+      {
+        "name": "Woolen Reagent Bag",
+        "slots": 8,
+        "skill": 80,
+        "quality": 1,
+        "icon": "inv_misc_bag_07",
+        "source": "Tailoring Trainer",
+        "reagents": [
+          {
+            "name": "Bolt of Woolen Cloth",
+            "count": 2,
+            "icon": "inv_fabric_wool_01"
+          },
+          {
+            "name": "Fine Thread",
+            "count": 1,
+            "icon": "inv_misc_thread_02"
+          }
+        ],
+        "desc": "WoW Forever Custom: Dedicated 8-slot reagent container."
+      },
+      {
+        "name": "Silk Reagent Pack",
+        "slots": 10,
+        "skill": 140,
+        "quality": 1,
+        "icon": "inv_misc_bag_09",
+        "source": "Tailoring Trainer",
+        "reagents": [
+          {
+            "name": "Bolt of Silk Cloth",
+            "count": 3,
+            "icon": "inv_fabric_silk_01"
+          },
+          {
+            "name": "Heavy Silken Thread",
+            "count": 1,
+            "icon": "inv_misc_thread_03"
+          }
+        ],
+        "desc": "WoW Forever Custom: Dedicated 10-slot reagent container."
+      },
+      {
+        "name": "Mageweave Reagent Bag",
+        "slots": 12,
+        "skill": 215,
+        "quality": 2,
+        "icon": "inv_misc_bag_10",
+        "source": "Tailoring Trainer",
+        "reagents": [
+          {
+            "name": "Bolt of Mageweave",
+            "count": 3,
+            "icon": "inv_fabric_mageweave_01"
+          },
+          {
+            "name": "Silken Thread",
+            "count": 1,
+            "icon": "inv_misc_thread_03"
+          }
+        ],
+        "desc": "WoW Forever Custom: Dedicated 12-slot reagent container (Phase 2 Beta Cap)."
+      },
+      {
+        "name": "Runecloth Reagent Bag",
+        "slots": 14,
+        "skill": 255,
+        "quality": 2,
+        "icon": "inv_misc_bag_11",
+        "source": "Pattern: Trade Campsite Vendor",
+        "reagents": [
+          {
+            "name": "Bolt of Runecloth",
+            "count": 4,
+            "icon": "inv_fabric_purplefire_01"
+          },
+          {
+            "name": "Rugged Leather",
+            "count": 1,
+            "icon": "inv_misc_leatherscrap_02"
+          },
+          {
+            "name": "Rune Thread",
+            "count": 1,
+            "icon": "inv_misc_thread_04"
+          }
+        ],
+        "desc": "WoW Forever Custom: Dedicated 14-slot reagent container."
+      },
+      {
+        "name": "Mooncloth Reagent Satchel",
+        "slots": 18,
+        "skill": 295,
+        "quality": 3,
+        "icon": "inv_misc_bag_14",
+        "source": "Pattern: Cenarion Circle",
+        "reagents": [
+          {
+            "name": "Mooncloth",
+            "count": 3,
+            "icon": "inv_fabric_moonrag_01"
+          },
+          {
+            "name": "Rune Thread",
+            "count": 1,
+            "icon": "inv_misc_thread_04"
+          }
+        ],
+        "desc": "WoW Forever Custom: Massive 18-slot dedicated reagent satchel."
+      },
+      {
+        "name": "Bottomless Reagent Bag",
+        "slots": 20,
+        "skill": 300,
+        "quality": 4,
+        "icon": "inv_misc_bag_17",
+        "source": "Pattern: Dalaran Inscriptionist",
+        "reagents": [
+          {
+            "name": "Mooncloth",
+            "count": 6,
+            "icon": "inv_fabric_moonrag_01"
+          },
+          {
+            "name": "Greater Eternal Essence",
+            "count": 2,
+            "icon": "inv_enchant_essenceeternalgreater"
+          },
+          {
+            "name": "Rune Thread",
+            "count": 1,
+            "icon": "inv_misc_thread_04"
+          }
+        ],
+        "desc": "WoW Forever Custom: 20-slot epic reagent hauler."
+      },
+      {
+        "name": "Light Leather Reagent Pouch",
+        "slots": 6,
+        "skill": 35,
+        "quality": 1,
+        "icon": "inv_misc_bag_10_blue",
+        "source": "Leatherworking Trainer",
+        "reagents": [
+          {
+            "name": "Light Leather",
+            "count": 4,
+            "icon": "inv_misc_leatherscrap_03"
+          },
+          {
+            "name": "Coarse Thread",
+            "count": 1,
+            "icon": "inv_misc_thread_01"
+          }
+        ],
+        "desc": "WoW Forever Custom: Leatherworker-stitched 6-slot pouch holding herbs, minerals, and hides."
+      }
+    ],
+    "specialtyBags": [
+      {
+        "name": "Soul Pouch",
+        "slots": 24,
+        "skill": 175,
+        "type": "Soul Bag",
+        "quality": 2,
+        "icon": "inv_misc_bag_10_black",
+        "source": "Tailoring Trainer",
+        "reagents": [
+          {
+            "name": "Bolt of Mageweave",
+            "count": 4,
+            "icon": "inv_fabric_mageweave_01"
+          },
+          {
+            "name": "Lesser Nether Essence",
+            "count": 2,
+            "icon": "inv_enchant_essencenetherlesser"
+          }
+        ],
+        "desc": "Warlock Soul Shard container holding up to 24 shards."
+      },
+      {
+        "name": "Box of Souls",
+        "slots": 28,
+        "skill": 240,
+        "type": "Soul Bag",
+        "quality": 2,
+        "icon": "inv_misc_bag_19",
+        "source": "Pattern (Scholomance Drop)",
+        "reagents": [
+          {
+            "name": "Bolt of Runecloth",
+            "count": 6,
+            "icon": "inv_fabric_purplefire_01"
+          },
+          {
+            "name": "Shadow Silk",
+            "count": 4,
+            "icon": "inv_misc_silk_02"
+          }
+        ],
+        "desc": "28-slot Soul Shard container."
+      },
+      {
+        "name": "Felcloth Bag",
+        "slots": 32,
+        "skill": 300,
+        "type": "Soul Bag",
+        "quality": 3,
+        "icon": "inv_misc_bag_13",
+        "source": "Pattern: Knot Thimblejack (Dire Maul)",
+        "reagents": [
+          {
+            "name": "Felcloth",
+            "count": 12,
+            "icon": "inv_fabric_felcloth_01"
+          },
+          {
+            "name": "Mooncloth",
+            "count": 4,
+            "icon": "inv_fabric_moonrag_01"
+          },
+          {
+            "name": "Greater Eternal Essence",
+            "count": 4,
+            "icon": "inv_enchant_essenceeternalgreater"
+          }
+        ],
+        "desc": "Supreme 32-slot Warlock Soul Shard bag."
+      },
+      {
+        "name": "Herb Pouch",
+        "slots": 26,
+        "skill": 160,
+        "type": "Herb Bag",
+        "quality": 2,
+        "icon": "inv_misc_bag_10_green",
+        "source": "Tailoring Trainer",
+        "reagents": [
+          {
+            "name": "Bolt of Silk Cloth",
+            "count": 4,
+            "icon": "inv_fabric_silk_01"
+          },
+          {
+            "name": "Wildvine",
+            "count": 2,
+            "icon": "inv_misc_herb_03"
+          }
+        ],
+        "desc": "Dedicated 26-slot Herbalism container."
+      },
+      {
+        "name": "Cenarion Herb Bag",
+        "slots": 28,
+        "skill": 275,
+        "type": "Herb Bag",
+        "quality": 2,
+        "icon": "inv_misc_bag_18",
+        "source": "Pattern: Cenarion Hold Friendly",
+        "reagents": [
+          {
+            "name": "Bolt of Runecloth",
+            "count": 5,
+            "icon": "inv_fabric_purplefire_01"
+          },
+          {
+            "name": "Purple Lotus",
+            "count": 4,
+            "icon": "inv_misc_herb_17"
+          },
+          {
+            "name": "Ghost Mushroom",
+            "count": 2,
+            "icon": "inv_misc_herb_06"
+          }
+        ],
+        "desc": "28-slot Herbalism satchel."
+      },
+      {
+        "name": "Satchel of Cenarius",
+        "slots": 32,
+        "skill": 300,
+        "type": "Herb Bag",
+        "quality": 3,
+        "icon": "inv_misc_bag_12",
+        "source": "Pattern: Cenarion Hold Revered",
+        "reagents": [
+          {
+            "name": "Mooncloth",
+            "count": 6,
+            "icon": "inv_fabric_moonrag_01"
+          },
+          {
+            "name": "Ironweb Spider Silk",
+            "count": 2,
+            "icon": "inv_misc_monsterspidercarapace_01"
+          },
+          {
+            "name": "Living Essence",
+            "count": 4,
+            "icon": "spell_nature_abolishpoison"
+          }
+        ],
+        "desc": "Massive 32-slot master gathering herb bag."
+      },
+      {
+        "name": "Small Enchanting Bag",
+        "slots": 20,
+        "skill": 150,
+        "type": "Enchanting Bag",
+        "quality": 2,
+        "icon": "inv_misc_bag_10_purple",
+        "source": "Tailoring Trainer",
+        "reagents": [
+          {
+            "name": "Bolt of Silk Cloth",
+            "count": 4,
+            "icon": "inv_fabric_silk_01"
+          },
+          {
+            "name": "Vision Dust",
+            "count": 4,
+            "icon": "inv_misc_dust_01"
+          }
+        ],
+        "desc": "20-slot dust and essence container."
+      },
+      {
+        "name": "Enchanting Bag",
+        "slots": 24,
+        "skill": 225,
+        "type": "Enchanting Bag",
+        "quality": 2,
+        "icon": "inv_misc_bag_10_blue",
+        "source": "Tailoring Trainer",
+        "reagents": [
+          {
+            "name": "Bolt of Mageweave",
+            "count": 4,
+            "icon": "inv_fabric_mageweave_01"
+          },
+          {
+            "name": "Dream Dust",
+            "count": 4,
+            "icon": "inv_misc_dust_02"
+          }
+        ],
+        "desc": "24-slot enchanting material carrier."
+      },
+      {
+        "name": "Big Bag of Enchantment",
+        "slots": 32,
+        "skill": 300,
+        "type": "Enchanting Bag",
+        "quality": 3,
+        "icon": "inv_misc_bag_17",
+        "source": "Pattern: Meilosh (Timbermaw Honored)",
+        "reagents": [
+          {
+            "name": "Bolt of Runecloth",
+            "count": 6,
+            "icon": "inv_fabric_purplefire_01"
+          },
+          {
+            "name": "Greater Eternal Essence",
+            "count": 4,
+            "icon": "inv_enchant_essenceeternalgreater"
+          },
+          {
+            "name": "Illusion Dust",
+            "count": 4,
+            "icon": "inv_misc_dust_02"
+          }
+        ],
+        "desc": "32-slot enchanting vault bag."
+      }
+    ]
+  },
+  "leatherworking": {
+    "quivers": [
+      {
+        "name": "Light Quiver",
+        "slots": 6,
+        "speed": "+10%",
+        "skill": 30,
+        "quality": 1,
+        "icon": "inv_misc_quiver_07",
+        "source": "Leatherworking Trainer",
+        "reagents": [
+          {
+            "name": "Light Leather",
+            "count": 4,
+            "icon": "inv_misc_leatherscrap_03"
+          },
+          {
+            "name": "Light Hide",
+            "count": 2,
+            "icon": "inv_misc_pelt_wolf_01"
+          }
+        ],
+        "desc": "Increases ranged attack speed by 10%. Holds 6 stacks of arrows."
+      },
+      {
+        "name": "Heavy Quiver",
+        "slots": 10,
+        "speed": "+12%",
+        "skill": 150,
+        "quality": 2,
+        "icon": "inv_misc_quiver_06",
+        "source": "Leatherworking Trainer",
+        "reagents": [
+          {
+            "name": "Heavy Leather",
+            "count": 4,
+            "icon": "inv_misc_leatherscrap_01"
+          },
+          {
+            "name": "Heavy Hide",
+            "count": 2,
+            "icon": "inv_misc_pelt_bear_01"
+          }
+        ],
+        "desc": "Increases ranged attack speed by 12%. Holds 10 stacks of arrows."
+      },
+      {
+        "name": "Quickdraw Quiver",
+        "slots": 16,
+        "speed": "+13%",
+        "skill": 225,
+        "quality": 2,
+        "icon": "inv_misc_quiver_05",
+        "source": "Pattern: Vendor (Orgrimmar / Darnassus)",
+        "reagents": [
+          {
+            "name": "Thick Leather",
+            "count": 4,
+            "icon": "inv_misc_leatherscrap_02"
+          },
+          {
+            "name": "Shadowcat Hide",
+            "count": 1,
+            "icon": "inv_misc_pelt_04"
+          }
+        ],
+        "desc": "Increases ranged attack speed by 13%. Holds 16 stacks of arrows (Phase 2 Beta Cap BiS!)."
+      },
+      {
+        "name": "Ancient Sinew Wrapped Lamina",
+        "slots": 18,
+        "speed": "+15%",
+        "skill": "Quest",
+        "quality": 4,
+        "icon": "inv_misc_quiver_01",
+        "source": "Epic Hunter Quest (Ancient Sinew)",
+        "reagents": [
+          {
+            "name": "Ancient Sinew",
+            "count": 1,
+            "icon": "inv_misc_horn_01"
+          }
+        ],
+        "desc": "Increases ranged attack speed by 15%. Holds 18 stacks of arrows."
+      }
+    ],
+    "pouches": [
+      {
+        "name": "Small Leather Ammo Pouch",
+        "slots": 6,
+        "speed": "+10%",
+        "skill": 30,
+        "quality": 1,
+        "icon": "inv_misc_ammo_pouch_01",
+        "source": "Leatherworking Trainer",
+        "reagents": [
+          {
+            "name": "Light Leather",
+            "count": 4,
+            "icon": "inv_misc_leatherscrap_03"
+          },
+          {
+            "name": "Light Hide",
+            "count": 2,
+            "icon": "inv_misc_pelt_wolf_01"
+          }
+        ],
+        "desc": "Increases ranged attack speed by 10%. Holds 6 stacks of bullets."
+      },
+      {
+        "name": "Heavy Leather Ammo Pouch",
+        "slots": 10,
+        "speed": "+12%",
+        "skill": 150,
+        "quality": 2,
+        "icon": "inv_misc_ammo_pouch_02",
+        "source": "Leatherworking Trainer",
+        "reagents": [
+          {
+            "name": "Heavy Leather",
+            "count": 4,
+            "icon": "inv_misc_leatherscrap_01"
+          },
+          {
+            "name": "Heavy Hide",
+            "count": 2,
+            "icon": "inv_misc_pelt_bear_01"
+          }
+        ],
+        "desc": "Increases ranged attack speed by 12%. Holds 10 stacks of bullets."
+      },
+      {
+        "name": "Thick Leather Ammo Pouch",
+        "slots": 16,
+        "speed": "+13%",
+        "skill": 225,
+        "quality": 2,
+        "icon": "inv_misc_ammo_pouch_03",
+        "source": "Pattern: Vendor (Thunder Bluff / Ironforge)",
+        "reagents": [
+          {
+            "name": "Thick Leather",
+            "count": 4,
+            "icon": "inv_misc_leatherscrap_02"
+          },
+          {
+            "name": "Shadowcat Hide",
+            "count": 1,
+            "icon": "inv_misc_pelt_04"
+          }
+        ],
+        "desc": "Increases ranged attack speed by 13%. Holds 16 stacks of bullets (Phase 2 Beta Cap BiS!)."
+      }
+    ],
+    "reagentBags": [
+      {
+        "name": "Light Leather Reagent Pouch",
+        "slots": 6,
+        "skill": 35,
+        "quality": 1,
+        "icon": "inv_misc_bag_10_blue",
+        "source": "Leatherworking Trainer",
+        "reagents": [
+          {
+            "name": "Light Leather",
+            "count": 4,
+            "icon": "inv_misc_leatherscrap_03"
+          },
+          {
+            "name": "Coarse Thread",
+            "count": 1,
+            "icon": "inv_misc_thread_01"
+          }
+        ],
+        "desc": "WoW Forever Custom: 6-slot container for trade reagents, scales, and hides."
+      }
+    ]
+  }
+};
+  const SPECIALIZATIONS_DATA = {
+  "engineering": {
+    "phaseNote": "⚡ Available in Phase 2 Beta at Character Level 30 & Skill 200!",
+    "isBetaActive": true,
+    "specs": [
+      {
+        "id": "gnomish",
+        "name": "Gnomish Engineering",
+        "icon": "inv_misc_wrench_01",
+        "archetype": "Gadgets, Crowd Control & Tactical Device Synergy",
+        "trainer": "Tinkmaster Overspark in Ironforge (/way 69.8, 50.0) or Oglethorpe Obnoticus in Booty Bay (/way 28.2, 76.2)",
+        "questName": "The Pledge of Secrecy › Show Your Work",
+        "questTurnIns": [
+          {
+            "name": "Mithril Tube",
+            "count": 6,
+            "icon": "inv_misc_steelpipetooth"
+          },
+          {
+            "name": "Precise Scope",
+            "count": 1,
+            "icon": "inv_misc_spyglass_02"
+          },
+          {
+            "name": "Advanced Target Dummy",
+            "count": 2,
+            "icon": "inv_gizmo_01"
+          }
+        ],
+        "crafts": [
+          {
+            "name": "Gnomish Death Ray",
+            "id": "4388",
+            "icon": "inv_gizmo_08",
+            "effect": "Channels terrifying death ray into target for massive burst damage.",
+            "quality": 3
+          },
+          {
+            "name": "Gnomish Battle Chicken",
+            "id": "10725",
+            "icon": "inv_misc_birdegg_01",
+            "effect": "Summons mechanical pet that grants +5% attack speed aura to nearby party members.",
+            "quality": 3
+          },
+          {
+            "name": "Gnomish Mind Control Cap",
+            "id": "10726",
+            "icon": "inv_helmet_49",
+            "effect": "Mind controls enemy humanoid player or mob for up to 30 sec.",
+            "quality": 2
+          },
+          {
+            "name": "Gnomish Rocket Boots",
+            "id": "10724",
+            "icon": "inv_boots_02",
+            "effect": "Massive movement speed burst for escaping or chasing in PvP.",
+            "quality": 2
+          },
+          {
+            "name": "Gnomish Net-o-Matic Projector",
+            "id": "10720",
+            "icon": "inv_misc_net_01",
+            "effect": "Roots target in place for 10 sec at 30 yd range.",
+            "quality": 2
+          },
+          {
+            "name": "Gnomish Shrink Ray",
+            "id": "10716",
+            "icon": "inv_gizmo_04",
+            "effect": "Shrinks target, reducing their melee attack power by 250.",
+            "quality": 2
+          },
+          {
+            "name": "Ultrasafe Transporter: Gadgetzan",
+            "id": "18984",
+            "icon": "inv_misc_enggizmos_13",
+            "effect": "Teleports maker directly to Gadgetzan, Tanaris.",
+            "quality": 2
+          }
+        ]
+      },
+      {
+        "id": "goblin",
+        "name": "Goblin Engineering",
+        "icon": "inv_misc_bomb_04",
+        "archetype": "Heavy Explosives, Massive AoE Burst & High-Damage Combat Sappers",
+        "trainer": "Nixx Sprocketspring in Gadgetzan, Tanaris (/way 52.4, 27.2) or Vazario Linkgrease in Ratchet (/way 62.6, 36.2)",
+        "questName": "The Pledge of Secrecy › Show Your Work",
+        "questTurnIns": [
+          {
+            "name": "Solid Blasting Powder",
+            "count": 20,
+            "icon": "inv_misc_powder_solid"
+          },
+          {
+            "name": "Iron Grenade",
+            "count": 20,
+            "icon": "inv_misc_bomb_08"
+          },
+          {
+            "name": "Big Iron Bomb",
+            "count": 5,
+            "icon": "inv_misc_bomb_01"
+          }
+        ],
+        "crafts": [
+          {
+            "name": "Goblin Sapper Charge",
+            "id": "10646",
+            "icon": "inv_misc_bomb_02",
+            "effect": "Explodes instantly dealing 450 to 750 Fire damage to all nearby enemies (and 375 to self). Mandatory for dungeon speedruns!",
+            "quality": 2
+          },
+          {
+            "name": "Goblin Rocket Boots",
+            "id": "7189",
+            "icon": "inv_boots_02",
+            "effect": "Increases run speed by 70% for 20 sec (chance to explode).",
+            "quality": 2
+          },
+          {
+            "name": "The Big One",
+            "id": "10586",
+            "icon": "inv_misc_bomb_04",
+            "effect": "Inflicts 340 to 460 Fire damage and stuns all enemies in 10 yd radius for 5 sec.",
+            "quality": 2
+          },
+          {
+            "name": "Goblin Dragon Gun",
+            "id": "10727",
+            "icon": "inv_musket_04",
+            "effect": "Cone of fire dealing 400 to 600 Fire damage over 10 sec.",
+            "quality": 3
+          },
+          {
+            "name": "Goblin Rocket Helmet",
+            "id": "10588",
+            "icon": "inv_helmet_49",
+            "effect": "Charges target and incapacitates them for 30 sec.",
+            "quality": 2
+          },
+          {
+            "name": "Goblin Mortar",
+            "id": "10577",
+            "icon": "inv_musket_01",
+            "effect": "Launches artillery shell dealing 383 to 517 Fire damage with 3 sec stun.",
+            "quality": 2
+          },
+          {
+            "name": "Dimensional Ripper - Everlook",
+            "id": "18986",
+            "icon": "inv_misc_enggizmos_13",
+            "effect": "Teleports maker directly to Everlook, Winterspring.",
+            "quality": 2
+          }
+        ]
+      }
+    ]
+  },
+  "blacksmithing": {
+    "phaseNote": "🔒 Phase 3 Unlock: Character Level 40 & Skill 200+ (Pre-farm materials now!)",
+    "isBetaActive": false,
+    "specs": [
+      {
+        "id": "armorsmith",
+        "name": "Armorsmithing",
+        "icon": "inv_chest_plate04",
+        "archetype": "Plate & Mail Defense, Disarm Immunity & Raid Tanking Armor",
+        "trainer": "Grumnus Steelshaper in Ironforge (/way 50.2, 42.8) or Okothos Ironrager in Orgrimmar (/way 79.8, 23.8)",
+        "questName": "The Art of the Armorsmith",
+        "questTurnIns": [
+          {
+            "name": "Ornate Mithril Helm",
+            "count": 4,
+            "icon": "inv_helmet_24"
+          },
+          {
+            "name": "Ornate Mithril Boots",
+            "count": 2,
+            "icon": "inv_boots_plate_01"
+          },
+          {
+            "name": "Ornate Mithril Breastplate",
+            "count": 1,
+            "icon": "inv_chest_plate04"
+          }
+        ],
+        "crafts": [
+          {
+            "name": "Truesilver Gauntlets",
+            "icon": "inv_gauntlets_10",
+            "effect": "Grants immunity to Disarm and +20 Strength.",
+            "quality": 3
+          },
+          {
+            "name": "Breastplate of the Earthshaker",
+            "icon": "inv_chest_plate06",
+            "effect": "Defensive plate chestpiece with bonus armor and stamina.",
+            "quality": 3
+          },
+          {
+            "name": "Helm of the Great Chief",
+            "icon": "inv_helmet_01",
+            "effect": "Stamina and armor tanking helmet.",
+            "quality": 3
+          },
+          {
+            "name": "Invulnerable Mail",
+            "icon": "inv_chest_chain_03",
+            "effect": "Grants 20 sec invulnerability to physical damage on hit.",
+            "quality": 4
+          },
+          {
+            "name": "Stronghold Gauntlets",
+            "icon": "inv_gauntlets_26",
+            "effect": "Immunity to Disarm, +1% Parry, +1% Crit.",
+            "quality": 4
+          }
+        ]
+      },
+      {
+        "id": "weaponsmith",
+        "name": "Weaponsmithing (Swords, Axes & Hammers)",
+        "icon": "inv_sword_27",
+        "archetype": "Endgame Raid Weapons, Nightfall Debuff & Master Weapon Specializations",
+        "trainer": "Ironus Coldsteel in Ironforge (/way 50.8, 45.2) or Borgosh Corebender in Orgrimmar (/way 79.6, 23.6)",
+        "questName": "The Way of the Weaponsmith",
+        "questTurnIns": [
+          {
+            "name": "Moonsteel Broadsword",
+            "count": 4,
+            "icon": "inv_sword_04"
+          },
+          {
+            "name": "Massive Iron Axe",
+            "count": 4,
+            "icon": "inv_axe_06"
+          },
+          {
+            "name": "Big Black Mace",
+            "count": 2,
+            "icon": "inv_mace_01"
+          },
+          {
+            "name": "Heavy Mithril Axe",
+            "count": 2,
+            "icon": "inv_axe_07"
+          }
+        ],
+        "crafts": [
+          {
+            "name": "Nightfall (Axe)",
+            "icon": "inv_axe_12",
+            "effect": "Equip: Chance on hit to increase spell damage taken by target by 15% for 5 sec (Raid Staple!).",
+            "quality": 4
+          },
+          {
+            "name": "Arcanite Reaper (Axe)",
+            "icon": "inv_axe_09",
+            "effect": "Legendary 3.8 speed mortal strike powerhouse with +62 AP.",
+            "quality": 3
+          },
+          {
+            "name": "Arcanite Champion (Sword)",
+            "icon": "inv_sword_39",
+            "effect": "Chance on hit heals for 270 to 450 and increases Strength by 120.",
+            "quality": 3
+          },
+          {
+            "name": "Hammer of the Titans (Mace)",
+            "icon": "inv_hammer_04",
+            "effect": "Chance on hit stuns target for 3 sec and increases Strength by 15.",
+            "quality": 3
+          },
+          {
+            "name": "Blackguard (Master Swordsmith)",
+            "icon": "inv_sword_27",
+            "effect": "Fast 1-handed tank/DPS sword with +1% Parry and Stamina.",
+            "quality": 4
+          },
+          {
+            "name": "Annihilator (Master Axesmith)",
+            "icon": "inv_axe_04",
+            "effect": "Lowers target armor by 200, stacks up to 3 times for entire raid.",
+            "quality": 3
+          }
+        ]
+      }
+    ]
+  },
+  "leatherworking": {
+    "phaseNote": "🔒 Phase 3 Unlock: Character Level 40 & Skill 225 (Pre-farm materials now!)",
+    "isBetaActive": false,
+    "specs": [
+      {
+        "id": "dragonscale",
+        "name": "Dragonscale Leatherworking",
+        "icon": "inv_misc_monsterscales_03",
+        "archetype": "Mail Armor for Hunters & Elemental/Enhancement Shamans",
+        "trainer": "Peter Galen in Azshara (/way 37.4, 65.6, A) or Thorkaf Dragoneye in Badlands (/way 62.6, 57.6, H)",
+        "questName": "Dragonscale Leatherworking",
+        "questTurnIns": [
+          {
+            "name": "Tough Scorpid Breastplate",
+            "count": 2,
+            "icon": "inv_chest_chain_03"
+          },
+          {
+            "name": "Tough Scorpid Gloves",
+            "count": 2,
+            "icon": "inv_gauntlets_04"
+          },
+          {
+            "name": "Worn Dragonscale",
+            "count": 10,
+            "icon": "inv_misc_monsterscales_03"
+          }
+        ],
+        "crafts": [
+          {
+            "name": "Dragonscale Gauntlets",
+            "icon": "inv_gauntlets_05",
+            "effect": "Intellect & Agility mail gloves for physical damage dealers.",
+            "quality": 3
+          },
+          {
+            "name": "Blue Dragonscale Breastplate",
+            "icon": "inv_chest_chain_14",
+            "effect": "High Intellect and MP5 mail chestpiece for Shamans.",
+            "quality": 3
+          },
+          {
+            "name": "Black Dragonscale Set",
+            "icon": "inv_pants_03",
+            "effect": "Provides massive Fire Resistance, Hit rating, and Attack Power.",
+            "quality": 3
+          },
+          {
+            "name": "Red Dragonscale Breastplate",
+            "icon": "inv_chest_chain_11",
+            "effect": "Fire Resistance mail armor for Molten Core raiding.",
+            "quality": 3
+          }
+        ]
+      },
+      {
+        "id": "elemental",
+        "name": "Elemental Leatherworking",
+        "icon": "spell_fire_fireball",
+        "archetype": "Agility, Stamina & Fire/Nature Resistance Gear for Rogues and Druids",
+        "trainer": "Sarah Tanner in Searing Gorge (/way 63.8, 75.8, A) or Brumn Winterhoof in Arathi Highlands (/way 28.2, 45.0, H)",
+        "questName": "Elemental Leatherworking",
+        "questTurnIns": [
+          {
+            "name": "Globe of Water",
+            "count": 2,
+            "icon": "inv_misc_gem_sapphire_02"
+          },
+          {
+            "name": "Heart of Fire",
+            "count": 2,
+            "icon": "spell_fire_fire"
+          },
+          {
+            "name": "Breath of Wind",
+            "count": 2,
+            "icon": "spell_nature_cyclone"
+          },
+          {
+            "name": "Core of Earth",
+            "count": 2,
+            "icon": "inv_misc_gem_opal_01"
+          }
+        ],
+        "crafts": [
+          {
+            "name": "Helm of Fire",
+            "icon": "inv_helmet_22",
+            "effect": "Leather helm dealing fire damage to attackers on hit.",
+            "quality": 3
+          },
+          {
+            "name": "Living Breastplate",
+            "icon": "inv_chest_leather_08",
+            "effect": "High Nature Resistance and passive health regeneration.",
+            "quality": 3
+          },
+          {
+            "name": "Stormshroud Armor Set",
+            "icon": "inv_chest_leather_03",
+            "effect": "Grants chance on hit to restore 30 Energy or 40 Mana.",
+            "quality": 3
+          },
+          {
+            "name": "Volcanic Armor Set",
+            "icon": "inv_pants_06",
+            "effect": "Premium Fire Resistance set for Rogues and Druids.",
+            "quality": 3
+          }
+        ]
+      },
+      {
+        "id": "tribal",
+        "name": "Tribal Leatherworking",
+        "icon": "inv_misc_monsterfang_01",
+        "archetype": "The Premier Physical DPS Spec: Devilsaur, Wolfshead Helm & Corehound Belt",
+        "trainer": "Pratt McGrubben in Feathermoon Stronghold, Feralas (/way 30.6, 42.6, A) or Jangdor Swiftstrider in Camp Mojache, Feralas (/way 74.4, 43.0, H)",
+        "questName": "Tribal Leatherworking",
+        "questTurnIns": [
+          {
+            "name": "Wild Leather Vest",
+            "count": 1,
+            "icon": "inv_chest_leather_04"
+          },
+          {
+            "name": "Wild Leather Helmet",
+            "count": 1,
+            "icon": "inv_helmet_14"
+          },
+          {
+            "name": "Wildvine",
+            "count": 11,
+            "icon": "inv_misc_herb_03"
+          }
+        ],
+        "crafts": [
+          {
+            "name": "Wolfshead Helm",
+            "icon": "inv_helmet_04",
+            "effect": "When you shapeshift into Cat Form you gain 20 Energy, or 5 Rage in Bear Form (Permanent Feral Druid BiS!).",
+            "quality": 3
+          },
+          {
+            "name": "Devilsaur Gauntlets & Leggings",
+            "icon": "inv_gauntlets_04",
+            "effect": "Set Bonus: Increases your chance to hit by 2% and Attack Power by 46.",
+            "quality": 3
+          },
+          {
+            "name": "Corehound Belt",
+            "icon": "inv_belt_03",
+            "effect": "Epic leather belt granting massive Intellect and MP5.",
+            "quality": 4
+          },
+          {
+            "name": "Hide of the Wild",
+            "icon": "inv_misc_cape_16",
+            "effect": "Epic healing cloak with +42 Healing and mana regen.",
+            "quality": 4
+          }
+        ]
+      }
+    ]
+  }
+};
+  const PAIRING_WIZARD_DATA = [
+  {
+    "roleId": "tank",
+    "roleName": "Tank (Prot Warrior / Paladin / Feral Bear)",
+    "icon": "🛡️",
+    "primaryPair": "Mining + Blacksmithing",
+    "altPair": "Mining + Engineering",
+    "synergyStars": "★★★★★",
+    "passives": "Earth's Bounty (+5% Maximum Health) & Master Craftsman (+34 Strength)",
+    "campAura": "Lodestone (+90 Melee Attack Power) & Sharpening Wheel (+34 Strength)",
+    "summary": "Massive health pool scaling combined with self-crafted plate armor, shield spikes, and threat generation."
+  },
+  {
+    "roleId": "melee_dps",
+    "roleName": "Melee Physical DPS (Warrior / Rogue / Feral / Shaman)",
+    "icon": "⚔️",
+    "primaryPair": "Engineering + Blacksmithing",
+    "altPair": "Leatherworking + Skinning (Ferals & Rogues)",
+    "synergyStars": "★★★★★",
+    "passives": "Combat Tinker (+3% Crit & CC Trinkets) & Master Craftsman (+34 Strength)",
+    "campAura": "Repair Bot (Field Repairs) & Sharpening Wheel (+34 Strength)",
+    "summary": "Goblin Sapper Charges provide unmatched AoE burst damage in dungeons, while Blacksmithing provides high-DPS weapons."
+  },
+  {
+    "roleId": "ranged_dps",
+    "roleName": "Ranged Physical DPS (Hunter)",
+    "icon": "🏹",
+    "primaryPair": "Engineering + Leatherworking",
+    "altPair": "Leatherworking + Skinning",
+    "synergyStars": "★★★★★",
+    "passives": "Sniper Optics (+3% Ranged Hit) & Master Skinner (+2% Critical Strike)",
+    "campAura": "Reagent Bot (Ammo & Supplies) & Camp Tent (+5% Rested XP)",
+    "summary": "Craft specialized quivers and ammo pouches (+13% attack speed), Sniper Scopes (+7 Damage), and Dragonscale mail armor."
+  },
+  {
+    "roleId": "caster_dps",
+    "roleName": "Caster DPS (Mage / Warlock / Priest / Boomkin / Ele)",
+    "icon": "🔮",
+    "primaryPair": "Tailoring + Enchanting",
+    "altPair": "Tailoring + Engineering",
+    "synergyStars": "★★★★★",
+    "passives": "Weaver's Grace (+20 Spell Damage & Healing) & Arcane Infusion (+15 Spell Pen)",
+    "campAura": "Faction Banner (+32 Spirit) & Enchanted Lute (+308 Armor, +13 All Stats, +22 Resists)",
+    "summary": "Craft pre-raid cloth BiS (Robe of the Archmage, Felcloth), disenchant dungeon drops directly, and apply wizard oils."
+  },
+  {
+    "roleId": "healer",
+    "roleName": "Healer (Priest / Paladin / Resto Shaman / Resto Druid)",
+    "icon": "🌿",
+    "primaryPair": "Alchemy + Herbalism",
+    "altPair": "Tailoring + Enchanting",
+    "synergyStars": "★★★★★",
+    "passives": "Master Mixologist (+20% Potion Duration & Healing/Mana Effect) & Natural Grace (+25 Int)",
+    "campAura": "Mana Well (29 Mana per 5 sec) & Incense Candle (+25 Intellect)",
+    "summary": "Unlimited Mana Potions and Mageblood Elixirs keep healer mana sustained through intensive raid and dungeon battles."
+  },
+  {
+    "roleId": "pvp",
+    "roleName": "PvP Arena & Battlegrounds (All Classes)",
+    "icon": "⚡",
+    "primaryPair": "Engineering + Mining",
+    "altPair": "Engineering + Blacksmithing",
+    "synergyStars": "★★★★★",
+    "passives": "Combat Engineer (Net-o-Matic, Mind Control Cap, Rocket Boots) & Earth's Bounty (+5% HP)",
+    "campAura": "Repair Bot (Instant field repairs between BG queues) & Lodestone (+90 AP)",
+    "summary": "The undisputed competitive PvP standard. Reflector trinkets, stun bombs, and gap-closing rocket boots dictate every skirmish."
+  },
+  {
+    "roleId": "gold",
+    "roleName": "Raw Gold Making & Trade Tycoon",
+    "icon": "🪙",
+    "primaryPair": "Mining + Herbalism",
+    "altPair": "Skinning + Tailoring (Bag Empire)",
+    "synergyStars": "★★★★★",
+    "passives": "Dual Track Mini-Map Radar & Market Arbitrage",
+    "campAura": "Rock Garden (Bonus ore spawns at camp) & Greenhouse (Cultivate herbs from seeds)",
+    "summary": "High liquid capital from gathering raw ores, herbs, and bag sales on the Auction House."
+  }
+];
+  const DISENCHANT_BRACKETS_DATA = [
+  {
+    "ilvl": "iLvl 5–15",
+    "dust": "Strange Dust (1–2x)",
+    "essence": "Lesser Magic Essence (1–2x)",
+    "shard": "—",
+    "notes": "Armor favors Dusts (~80%); Weapons favor Essences (~80%)."
+  },
+  {
+    "ilvl": "iLvl 16–25",
+    "dust": "Strange Dust (2–5x)",
+    "essence": "Greater Magic Essence (1–2x)",
+    "shard": "Small Glimmering Shard (100% Blue)",
+    "notes": "Level 15–20 dungeon green drops."
+  },
+  {
+    "ilvl": "iLvl 26–35",
+    "dust": "Soul Dust (1–3x)",
+    "essence": "Astral Essence (Lesser/Greater 1–2x)",
+    "shard": "Small Glowing Shard (100% Blue)",
+    "notes": "Phase 2 Beta Cap prime equipment range."
+  },
+  {
+    "ilvl": "iLvl 36–45",
+    "dust": "Vision Dust (1–3x)",
+    "essence": "Mystic Essence (Lesser/Greater 1–2x)",
+    "shard": "Small Radiant Shard (100% Blue)",
+    "notes": "Mid-level 40 dungeon items (SM/RFD)."
+  },
+  {
+    "ilvl": "iLvl 46–50",
+    "dust": "Dream Dust (1–3x)",
+    "essence": "Nether Essence (Lesser/Greater 1–2x)",
+    "shard": "Large Radiant Shard (100% Blue)",
+    "notes": "Late level 40–50 items (ZF/Mara)."
+  },
+  {
+    "ilvl": "iLvl 51–60",
+    "dust": "Illusion Dust (1–3x)",
+    "essence": "Eternal Essence (Lesser/Greater 1–2x)",
+    "shard": "Large Brilliant Shard (100% Blue) / Nexus Crystal (Epic)",
+    "notes": "Endgame raid & level 60 dungeon drops (BRD/Scholo/Strath)."
+  }
+];
+  const FISHING_SCHEDULE_DATA = {
+  "dayNight": [
+    {
+      "name": "Nightfin Snapper",
+      "icon": "inv_drink_03",
+      "windows": "18:00 – 06:00 (Peak: 00:00 – 06:00)",
+      "peakHours": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "twilightHours": [
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "dayHours": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "buff": "+8 MP5 Well Fed buff (Poached Sunscale / Nightfin Soup) - Absolute BiS for Casters and Healers!",
+      "zones": "Moonglade, Feralas, Felwood, Azshara, Tanaris, Winterspring, Plaguelands (Skill 205+)"
+    },
+    {
+      "name": "Sunscale Salmon",
+      "icon": "inv_misc_fish_24",
+      "windows": "06:00 – 18:00 (Peak Daylight Catch)",
+      "peakHours": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "twilightHours": [],
+      "dayHours": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "buff": "+6 HP per 5 sec Well Fed buff - Tank and Leveling food.",
+      "zones": "Feralas, Tanaris, Felwood, Azshara, Moonglade (Skill 205+)"
+    }
+  ],
+  "seasons": [
+    {
+      "name": "Winter Squid",
+      "icon": "inv_misc_fish_13",
+      "season": "Fall & Winter (October through March)",
+      "isActiveNow": true,
+      "yieldBuff": "+10 Agility Well Fed buff (Grilled Squid) - Crucial BiS food for Rogues, Hunters, and Feral Druids!",
+      "bestLocations": "Bay of Storms (Azshara), Steamwheedle Port (Tanaris), Forgotten Coast (Feralas)",
+      "notes": "Active right now in Beta (October)!"
+    },
+    {
+      "name": "Summer Bass",
+      "icon": "inv_misc_fish_20",
+      "season": "Spring & Summer (March through October)",
+      "isActiveNow": false,
+      "yieldBuff": "+10 Spirit Well Fed buff (Hot Smoked Bass)",
+      "bestLocations": "Azshara coast, Stranglethorn Vale waters, Tanaris",
+      "notes": "Migrates in Spring Equinox."
+    }
+  ],
+  "pools": [
+    {
+      "name": "Oily Blackmouth Pool",
+      "icon": "inv_misc_fish_19",
+      "locations": "Coastlines of Darkshore, Westfall, Barrens, Wetlands, Hillsbrad, Ashenvale",
+      "loot": "100% Oily Blackmouth catch rate. Needed for Blackmouth Oil, Free Action Potions, and Swim Speed Potions.",
+      "mechanic": "Schools require only 1 Fishing Skill to reel in without losing fish."
+    },
+    {
+      "name": "Firefin Snapper Pool",
+      "icon": "inv_misc_fish_22",
+      "locations": "Coastal waters of Tanaris, Stranglethorn Vale, Azshara, Hillsbrad",
+      "loot": "100% Firefin Snapper catch rate. Used for Fire Oil and Elixir of Greater Firepower.",
+      "mechanic": "Dense spawns along coastal beaches."
+    },
+    {
+      "name": "Greater Sagefish Pool",
+      "icon": "inv_misc_fish_26",
+      "locations": "Inland freshwater of Alterac Mountains, Western Plaguelands, Jaguero Isle (STV)",
+      "loot": "Yields Raw Greater Sagefish (+6 MP5 cooked Sagefish Delight).",
+      "mechanic": "High-value healer food source."
+    },
+    {
+      "name": "Floating Wreckage",
+      "icon": "inv_crate_04",
+      "locations": "Stranglethorn Vale, Tanaris, Azshara, Feralas coastlines",
+      "loot": "Locked Iron/Mithril Bound Trunks, Bolts of Mageweave/Runecloth, Heavy/Thick Leather, 16-slot Traveler's Backpacks.",
+      "mechanic": "Excellent open-world gold farming."
+    },
+    {
+      "name": "Patch of Elemental Water",
+      "icon": "spell_nature_elementalshields",
+      "locations": "Circle of East Binding (Arathi Highlands), Bay of Storms (Azshara)",
+      "loot": "Globe of Water, Essence of Water, Elemental Water.",
+      "mechanic": "Crucial for high-end enchanting and alchemy recipes."
+    }
+  ]
+};
+  const MINING_CIRCUITS = [
+  {
+    "tierId": "copper",
+    "tierName": "Tier 1: Copper Ore & Rough Stone (Skill 1–65)",
+    "ores": [
+      "Copper Ore",
+      "Rough Stone",
+      "Malachite",
+      "Tigerseye"
+    ],
+    "routes": [
+      {
+        "id": "copper_durotar",
+        "name": "Durotar River & Valley Circuit",
+        "faction": "Horde",
+        "zone": "Durotar",
+        "lapMinutes": "8–10 min",
+        "direction": "Clockwise",
+        "density": "Very High (~16–20 nodes/lap)",
+        "hostileLevel": "Lvl 6–12",
+        "bestFor": "Rapid 1–65 leveling for Horde Orcs & Trolls",
+        "waypoint": "/way Durotar 52.0 43.0",
+        "description": "Start at Razor Hill, ride south along the eastern cliffs past Sen'jin Village into Valley of Trials ridge, then loop north following the river boundary cliffs past Drygulch Ravine back to Razor Hill.",
+        "tips": "Check the cliffs above Drygulch Ravine; Harpies patrol nearby but rarely aggro from the upper mining ledges."
+      },
+      {
+        "id": "copper_elwynn",
+        "name": "Elwynn Forest Goldshire Perimeter",
+        "faction": "Alliance",
+        "zone": "Elwynn Forest",
+        "lapMinutes": "10–12 min",
+        "direction": "Counter-Clockwise",
+        "density": "High (~14–18 nodes/lap)",
+        "hostileLevel": "Lvl 5–10",
+        "bestFor": "Fast 1–65 leveling for Alliance Humans",
+        "waypoint": "/way Elwynn Forest 42.0 65.0",
+        "description": "Begin outside Goldshire, head north to the Northshire river cliffs, follow the eastern ridge past Crystal Lake, drop down to Jasperlode Mine rim, cross to Fargodeep perimeter, and loop around Stonefield farm hills.",
+        "tips": "Do not enter the deep mine tunnels unless servers are quiet; the external perimeter cliff nodes respawn faster than cave clears."
+      },
+      {
+        "id": "copper_darkshore",
+        "name": "Darkshore Cliff Ridge & Master's Glaive",
+        "faction": "Alliance",
+        "zone": "Darkshore",
+        "lapMinutes": "12–15 min",
+        "direction": "Clockwise",
+        "density": "High (~12–16 nodes/lap)",
+        "hostileLevel": "Lvl 12–18",
+        "bestFor": "Alliance Night Elves transitioning to Tin",
+        "waypoint": "/way Darkshore 38.0 44.0",
+        "description": "Skirt the eastern mountain wall starting from Bashal'Aran south towards Ameth'Aran, encircling the Master's Glaive excavation crater and heading back along the coastal tree line.",
+        "tips": "Ghoststrider beasts along the ridge run fast; maintain max distance when gathering on low-level alts."
+      },
+      {
+        "id": "copper_mulgore",
+        "name": "Mulgore Red Cloud & Venture Co Caves",
+        "faction": "Horde",
+        "zone": "Mulgore",
+        "lapMinutes": "10–12 min",
+        "direction": "Clockwise",
+        "density": "Very High (~16–22 nodes/lap)",
+        "hostileLevel": "Lvl 4–10",
+        "bestFor": "Horde Tauren & peaceful early leveling",
+        "waypoint": "/way Mulgore 45.0 60.0",
+        "description": "Ride the outer plateau wall from Bloodhoof Village south past Red Cloud Mesa, sweeping through the Palemane gnoll rocks, then north along the western cliffs past Windfury Crag.",
+        "tips": "Wide open fields make node spotting exceptionally easy. Check the Venture Co Mine entrance for bonus spawns."
+      }
+    ]
+  },
+  {
+    "tierId": "tin",
+    "tierName": "Tier 2: Tin Ore, Silver Ore & Coarse Stone (Skill 65–125)",
+    "ores": [
+      "Tin Ore",
+      "Silver Ore",
+      "Coarse Stone",
+      "Moss Agate",
+      "Shadowgem"
+    ],
+    "routes": [
+      {
+        "id": "tin_barrens",
+        "name": "Northern Barrens Hills & Sludge Fen Loop",
+        "faction": "Horde",
+        "zone": "The Barrens",
+        "lapMinutes": "14–16 min",
+        "direction": "Clockwise",
+        "density": "Very High (~20–26 nodes/lap)",
+        "hostileLevel": "Lvl 14–22",
+        "bestFor": "World #1 Tin Ore yield & Horde cross-progression",
+        "waypoint": "/way The Barrens 51.0 30.0",
+        "description": "From The Crossroads, ride northwest around the Forgotten Pools mountain wall, sweep around the perimeter of Sludge Fen, curve east towards Ratchet hills, and loop back south across the raptor grounds.",
+        "tips": "Venture Co drill platforms frequently spawn 2–3 Tin nodes right beside their ramps."
+      },
+      {
+        "id": "tin_westfall",
+        "name": "Westfall Coastal & Moonbrook Circuit",
+        "faction": "Alliance",
+        "zone": "Westfall",
+        "lapMinutes": "12–14 min",
+        "direction": "Counter-Clockwise",
+        "density": "High (~14–18 nodes/lap)",
+        "hostileLevel": "Lvl 14–19",
+        "bestFor": "Alliance Tin & Coarse Stone pre-Deadmines",
+        "waypoint": "/way Westfall 42.0 68.0",
+        "description": "Start at Sentinel Hill, head west to the Longshore bluffs, ride south along the coastal cliffs past the lighthouse, cut east behind Moonbrook and the Deadmines mountain exterior, then north along the Dagger Hills.",
+        "tips": "Defias bandits near Moonbrook can daze mounts; stay on the outer cliff edges where raptors and harvest golems are sparse."
+      },
+      {
+        "id": "tin_loch_modan",
+        "name": "Loch Modan Perimeter Mountain Ridge",
+        "faction": "Alliance",
+        "zone": "Loch Modan",
+        "lapMinutes": "11–13 min",
+        "direction": "Clockwise",
+        "density": "Very High (~18–22 nodes/lap)",
+        "hostileLevel": "Lvl 13–20",
+        "bestFor": "Extremely dense Alliance Dwarven loop",
+        "waypoint": "/way Loch Modan 48.0 64.0",
+        "description": "Loop the complete horseshoe mountain ridge enclosing the lake: Thelsamar west to Grizzlepaw ridge, south around Valley of Kings, east past Silver Stream Mine, and north along the trogg cliffs.",
+        "tips": "Silver Stream Mine interior and exterior hold up to 5 simultaneous Tin/Silver veins."
+      },
+      {
+        "id": "tin_hillsbrad",
+        "name": "Hillsbrad Southern Coast & Durnholde Rim",
+        "faction": "Contested",
+        "zone": "Hillsbrad Foothills",
+        "lapMinutes": "13–15 min",
+        "direction": "Counter-Clockwise",
+        "density": "High (~15–19 nodes/lap)",
+        "hostileLevel": "Lvl 20–26",
+        "bestFor": "Contested PvP & transitioning from Tin to Iron",
+        "waypoint": "/way Hillsbrad Foothills 56.0 52.0",
+        "description": "From Southshore, ride along the southern coastal cliffs east to the river, turn north into the foothills encircling Durnholde Keep, sweep west across the hills south of Tarren Mill, and return to Southshore.",
+        "tips": "Rich in both Tin and early Iron spawns along the northern mountain ridge."
+      }
+    ]
+  },
+  {
+    "tierId": "iron",
+    "tierName": "Tier 3: Iron Ore, Gold Ore & Heavy Stone (Skill 125–175)",
+    "ores": [
+      "Iron Ore",
+      "Gold Ore",
+      "Heavy Stone",
+      "Jade",
+      "Lesser Moonstone"
+    ],
+    "routes": [
+      {
+        "id": "iron_arathi",
+        "name": "Arathi Highlands Border Perimeter",
+        "faction": "Contested",
+        "zone": "Arathi Highlands",
+        "lapMinutes": "15–18 min",
+        "direction": "Clockwise",
+        "density": "Very High (~22–28 nodes/lap)",
+        "hostileLevel": "Lvl 32–38",
+        "bestFor": "World #1 Iron density & heavy stone stockpiling",
+        "waypoint": "/way Arathi Highlands 46.0 46.0",
+        "description": "Trace the entire outer boundary of Arathi Highlands: start near Refuge Pointe/Hammerfall path, ride east along the mountain walls past Go'Shek Farm, circle south near Witherbark Village, and trace the western ridge past Boulderfist Outpost.",
+        "tips": "Kobold caves in dry hills contain 3–4 internal nodes; check their thresholds without pulling the deep caves."
+      },
+      {
+        "id": "iron_needles",
+        "name": "Thousand Needles Shimmering Flats Rim",
+        "faction": "Contested",
+        "zone": "Thousand Needles",
+        "lapMinutes": "14–16 min",
+        "direction": "Counter-Clockwise",
+        "density": "High (~18–24 nodes/lap)",
+        "hostileLevel": "Lvl 28–35",
+        "bestFor": "Fast flat terrain riding & Gold Ore veins",
+        "waypoint": "/way Thousand Needles 68.0 78.0",
+        "description": "Start at the Mirage Raceway, trace the outer canyon wall of the Shimmering Flats completely in a counter-clockwise loop, then dip west into the main canyon pillars along the high cliff bases.",
+        "tips": "Completely flat terrain allows uninterrupted 100% mount speeds; watch out for wandering basilisks."
+      },
+      {
+        "id": "iron_badlands",
+        "name": "Badlands North Basin Circuit",
+        "faction": "Contested",
+        "zone": "Badlands",
+        "lapMinutes": "12–14 min",
+        "direction": "Clockwise",
+        "density": "Very High (~20–25 nodes/lap)",
+        "hostileLevel": "Lvl 35–40",
+        "bestFor": "Fast Iron & seamless transition into Mithril",
+        "waypoint": "/way Badlands 54.0 32.0",
+        "description": "From Kargath, loop northeast past the Dustwind Dig canyon walls, ride east along the northern cliff boundary past the Uldaman gates, curve south to Angor Fortress, and return across the middle ridge.",
+        "tips": "Spawns both Iron and Mithril simultaneously once above Skill 175."
+      },
+      {
+        "id": "iron_wetlands",
+        "name": "Wetlands Ironband Excavation & Greenwarden",
+        "faction": "Alliance",
+        "zone": "Wetlands",
+        "lapMinutes": "15–17 min",
+        "direction": "Counter-Clockwise",
+        "density": "Moderate-High (~14–18 nodes/lap)",
+        "hostileLevel": "Lvl 24–30",
+        "bestFor": "Alliance safe-zone farming on PvE/RP realms",
+        "waypoint": "/way Wetlands 64.0 42.0",
+        "description": "Follow the eastern mountain crescent from Greenwarden's Grove north past the Thelgen Rock spiders, through the raptor ridge, and around Ironband's Excavation site.",
+        "tips": "Wetland marsh water slows unmounted running; stick tightly to the rocky base along the foothills."
+      }
+    ]
+  },
+  {
+    "tierId": "mithril",
+    "tierName": "Tier 4: Mithril Ore, Truesilver Ore & Solid Stone (Skill 175–230 / 245)",
+    "ores": [
+      "Mithril Ore",
+      "Truesilver Ore",
+      "Solid Stone",
+      "Citrine",
+      "Aquamarine"
+    ],
+    "routes": [
+      {
+        "id": "mithril_badlands",
+        "name": "Badlands Full Perimeter Loop (Peak Mithril)",
+        "faction": "Contested",
+        "zone": "Badlands",
+        "lapMinutes": "12–15 min",
+        "direction": "Counter-Clockwise",
+        "density": "Maximum (~26–34 nodes/lap)",
+        "hostileLevel": "Lvl 36–44",
+        "bestFor": "Undisputed #1 Mithril farming circuit in classic WoW",
+        "waypoint": "/way Badlands 24.0 54.0",
+        "description": "Hug the continuous rock wall bordering the entire zone: start at Kargath, ride south past Apocryphan's Rest, east along the Southern Ridge past Camp Cagg, north past the Dragon canyons, and west past Uldaman.",
+        "tips": "The respawn rate in Badlands is dynamic — with 2+ miners on the loop, nodes respawn within 8–10 minutes, making continuous laps non-stop."
+      },
+      {
+        "id": "mithril_hinterlands",
+        "name": "Hinterlands Troll Ruins & Overlook Circuit",
+        "faction": "Contested",
+        "zone": "The Hinterlands",
+        "lapMinutes": "16–18 min",
+        "direction": "Clockwise",
+        "density": "Very High (~22–28 nodes/lap)",
+        "hostileLevel": "Lvl 44–50",
+        "bestFor": "High Mithril + Truesilver + Wildvine crossover",
+        "waypoint": "/way The Hinterlands 58.0 56.0",
+        "description": "Ride east from Aerie Peak along the northern cliff wall, curve south around Skulk Rock and the Alter of Zul exterior, loop west along the cliff ridge overlooking the ocean, and return along the southern river gorge.",
+        "tips": "Elite trolls near Jintha'Alor outer ramps guard multiple Truesilver and Mithril veins; kite carefully."
+      },
+      {
+        "id": "mithril_searing_gorge",
+        "name": "Searing Gorge Caldera & Slag Pit Rim",
+        "faction": "Contested",
+        "zone": "Searing Gorge",
+        "lapMinutes": "13–15 min",
+        "direction": "Clockwise",
+        "density": "High (~18–24 nodes/lap)",
+        "hostileLevel": "Lvl 43–48",
+        "bestFor": "Compact loop with Dark Iron Ore crossover",
+        "waypoint": "/way Searing Gorge 42.0 48.0",
+        "description": "Circle the rim of the central volcanic cauldron: start at Thorium Point, trace the outer cliff perimeter west past the Sea of Fire, south around the Grimesilt Dig site, and east along the mountain boundary.",
+        "tips": "Avoid falling into the Slag Pit unless you plan to farm inside the magma caverns where Dark Iron spawns."
+      },
+      {
+        "id": "mithril_tanaris",
+        "name": "Tanaris Desert Dunes & Noxious Lair Rim",
+        "faction": "Contested",
+        "zone": "Tanaris",
+        "lapMinutes": "16–20 min",
+        "direction": "Counter-Clockwise",
+        "density": "High (~18–22 nodes/lap)",
+        "hostileLevel": "Lvl 42–48",
+        "bestFor": "Spacious route with heavy Truesilver frequency",
+        "waypoint": "/way Tanaris 52.0 46.0",
+        "description": "From Gadgetzan, ride southwest past Noonshade Ruins, trace the mountain borders around the Noxious Lair insect hive, loop east towards Southbreak Shore cliffs, and return north along the mountain range.",
+        "tips": "Steer clear of the Silithid tunnel pits unless riding high level mounts to prevent daze dismounts."
+      }
+    ]
+  },
+  {
+    "tierId": "thorium",
+    "tierName": "Tier 5: Thorium Ore, Rich Thorium & Arcane Crystal (Skill 230–300)",
+    "ores": [
+      "Thorium Ore",
+      "Dense Stone",
+      "Arcane Crystal",
+      "Blue Sapphire",
+      "Large Opal",
+      "Huge Emerald"
+    ],
+    "routes": [
+      {
+        "id": "thorium_ungoro",
+        "name": "Un'Goro Crater Volcano Rim Circuit",
+        "faction": "Contested",
+        "zone": "Un'Goro Crater",
+        "lapMinutes": "18–22 min",
+        "direction": "Clockwise",
+        "density": "Maximum (~26–36 nodes/lap)",
+        "hostileLevel": "Lvl 50–55",
+        "bestFor": "World #1 Arcane Crystal & Rich Thorium yields",
+        "waypoint": "/way Un'Goro Crater 50.0 48.0",
+        "description": "Trace the entire steep perimeter cliff wall of the crater, with an inner detour around Fire Plume Ridge. Check the Slithering Scar hive entrances and Golakka Hot Springs slopes.",
+        "tips": "Fire Plume Ridge holds up to 4 Rich Thorium veins simultaneously on its upper volcanic ledges."
+      },
+      {
+        "id": "thorium_winterspring",
+        "name": "Winterspring Lake Kel'Theril & Mazthoril Lap",
+        "faction": "Contested",
+        "zone": "Winterspring",
+        "lapMinutes": "18–20 min",
+        "direction": "Counter-Clockwise",
+        "density": "Very High (~22–28 nodes/lap)",
+        "hostileLevel": "Lvl 54–59",
+        "bestFor": "Rich Thorium + Blue Sapphire + Winter Squid fishing combo",
+        "waypoint": "/way Winterspring 60.0 50.0",
+        "description": "Start at Everlook, ride south circling Lake Kel'Theril ruins, sweep southwest through Owl Wing Thicket, curve into the canyon walls outside Mazthoril cave, and loop back north past Starfall Village.",
+        "tips": "The blue dragonkin outside Mazthoril guard 3–4 Rich Thorium nodes; use crowd control or pets to mine them."
+      },
+      {
+        "id": "thorium_epl",
+        "name": "Eastern Plaguelands Cauldron Run",
+        "faction": "Contested",
+        "zone": "Eastern Plaguelands",
+        "lapMinutes": "20–24 min",
+        "direction": "Clockwise",
+        "density": "Very High (~22–30 nodes/lap)",
+        "hostileLevel": "Lvl 55–60",
+        "bestFor": "High-end Phase 3 endgame stockpiling",
+        "waypoint": "/way Eastern Plaguelands 65.0 45.0",
+        "description": "From Light's Hope Chapel, head north around Noxious Glade, loop west past Corin's Crossing and Blackwood Lake, sweep south around Darrowshire, and trace the fungal mountain walls back to Light's Hope.",
+        "tips": "Beware of roaming crypt stalkers; they inflict infectious diseases that interrupt gather channels."
+      },
+      {
+        "id": "thorium_silithus",
+        "name": "Silithus Hive Borders & Twilight Ridge",
+        "faction": "Contested",
+        "zone": "Silithus",
+        "lapMinutes": "16–19 min",
+        "direction": "Counter-Clockwise",
+        "density": "High (~18–26 nodes/lap)",
+        "hostileLevel": "Lvl 55–60",
+        "bestFor": "Rich Thorium + Twilight Cultist farming",
+        "waypoint": "/way Silithus 48.0 42.0",
+        "description": "Trace the outside perimeter of Hive'Ashi, Hive'Zora, and Hive'Regal, skirting the southern and western mountain rims without entering deep inside the bug colonies.",
+        "tips": "Rich Thorium veins spawn directly on the ramp entrances of the three major silithid hives."
+      }
+    ]
+  }
+];
+  const HERBALISM_CIRCUITS = [
+  {
+    "tierId": "herb_tier1",
+    "tierName": "Tier 1: Peacebloom, Silverleaf & Earthroot (Skill 1–50)",
+    "herbs": [
+      "Peacebloom",
+      "Silverleaf",
+      "Earthroot"
+    ],
+    "routes": [
+      {
+        "id": "herb_durotar",
+        "name": "Durotar River & Valley of Trials Loop",
+        "faction": "Horde",
+        "zone": "Durotar",
+        "lapMinutes": "8–10 min",
+        "direction": "Clockwise",
+        "density": "Very High (~18–24 nodes/lap)",
+        "hostileLevel": "Lvl 4–10",
+        "bestFor": "Rapid Horde 1–50 herb skilling",
+        "waypoint": "/way Durotar 48.0 52.0",
+        "description": "From Razor Hill, head south along the Southfury River banks down to Sen'jin Village, curve west around the Valley of Trials hills, and loop north through the dry gullies.",
+        "tips": "Earthroot spawns exclusively on elevated rock crags and cliff edges, while Peacebloom and Silverleaf blanket the open dirt plains."
+      },
+      {
+        "id": "herb_elwynn",
+        "name": "Elwynn Forest Northshire & Crystal Lake",
+        "faction": "Alliance",
+        "zone": "Elwynn Forest",
+        "lapMinutes": "10–12 min",
+        "direction": "Counter-Clockwise",
+        "density": "Very High (~18–22 nodes/lap)",
+        "hostileLevel": "Lvl 5–9",
+        "bestFor": "Alliance Humans 1–50 starter loop",
+        "waypoint": "/way Elwynn Forest 45.0 55.0",
+        "description": "From Goldshire, loop northeast circling Crystal Lake, head north to the Northshire river crossing, trace the tree line west towards Mirror Lake, and curve south past Stonefield Farm.",
+        "tips": "Dense Peacebloom clusters spawn along the riverbanks near Crystal Lake."
+      },
+      {
+        "id": "herb_tirisfal",
+        "name": "Tirisfal Glades Brill Forest Perimeter",
+        "faction": "Horde",
+        "zone": "Tirisfal Glades",
+        "lapMinutes": "9–11 min",
+        "direction": "Clockwise",
+        "density": "High (~16–20 nodes/lap)",
+        "hostileLevel": "Lvl 6–11",
+        "bestFor": "Undead Horde fast herb leveling",
+        "waypoint": "/way Tirisfal Glades 58.0 48.0",
+        "description": "Start at Brill, ride east towards Stillwater Pond, loop south around the Undercity perimeter walls, and head west across the Nightmare Vale clearing.",
+        "tips": "Stillwater Pond shores hold high Earthroot and Peacebloom spawn clusters."
+      },
+      {
+        "id": "herb_teldrassil",
+        "name": "Teldrassil Starbreeze & Lake Al'Ameth",
+        "faction": "Alliance",
+        "zone": "Teldrassil",
+        "lapMinutes": "11–13 min",
+        "direction": "Counter-Clockwise",
+        "density": "High (~15–19 nodes/lap)",
+        "hostileLevel": "Lvl 6–11",
+        "bestFor": "Alliance Night Elves starter loop",
+        "waypoint": "/way Teldrassil 55.0 58.0",
+        "description": "From Dolanaar, ride south circling Lake Al'Ameth, cut northeast towards Starbreeze Village ruins, and loop back west past the tree hollows.",
+        "tips": "Silverleaf spawns heavily under tree canopies; check roots and stumps."
+      }
+    ]
+  },
+  {
+    "tierId": "herb_tier2",
+    "tierName": "Tier 2: Mageroyal, Briarthorn, Stranglekelp & Bruiseweed (Skill 50–100)",
+    "herbs": [
+      "Mageroyal",
+      "Briarthorn",
+      "Stranglekelp",
+      "Bruiseweed"
+    ],
+    "routes": [
+      {
+        "id": "herb_barrens",
+        "name": "The Barrens Oasis & Lushwater Circuit",
+        "faction": "Horde",
+        "zone": "The Barrens",
+        "lapMinutes": "12–15 min",
+        "direction": "Clockwise",
+        "density": "Maximum (~22–28 nodes/lap)",
+        "hostileLevel": "Lvl 13–18",
+        "bestFor": "World #1 Briarthorn & Mageroyal density",
+        "waypoint": "/way The Barrens 45.0 40.0",
+        "description": "Connect the three lush oases: from The Crossroads, ride southwest to the Forgotten Pools, continue south to Lushwater Oasis, curve east to Stagnant Oasis, and loop north back to Crossroads.",
+        "tips": "Oasis pools also spawn freshwater fish and Stranglekelp along their submerged edges."
+      },
+      {
+        "id": "herb_westfall",
+        "name": "Westfall Moonbrook & Coastal Water Run",
+        "faction": "Alliance",
+        "zone": "Westfall",
+        "lapMinutes": "12–14 min",
+        "direction": "Counter-Clockwise",
+        "density": "High (~16–22 nodes/lap)",
+        "hostileLevel": "Lvl 14–19",
+        "bestFor": "Alliance Briarthorn + Stranglekelp underwater run",
+        "waypoint": "/way Westfall 35.0 55.0",
+        "description": "Ride west from Sentinel Hill to the Longshore coast (dive for Stranglekelp), follow the shoreline south to Demont's Place, cut east around Moonbrook hills for Briarthorn, and head north across the farmland.",
+        "tips": "Swimming along the Longshore beach guarantees 8–10 Stranglekelp nodes per pass."
+      },
+      {
+        "id": "herb_loch_modan",
+        "name": "Loch Modan Farmlands & Valley Loop",
+        "faction": "Alliance",
+        "zone": "Loch Modan",
+        "lapMinutes": "11–13 min",
+        "direction": "Clockwise",
+        "density": "Very High (~18–24 nodes/lap)",
+        "hostileLevel": "Lvl 12–18",
+        "bestFor": "Fast Alliance terrestrial herb loop",
+        "waypoint": "/way Loch Modan 36.0 48.0",
+        "description": "From Thelsamar, ride east across the farmlands, skirt the southern dam base, sweep west past the trogg territory, and loop back north through the peaceful central valley.",
+        "tips": "Briarthorn clusters heavily around the base of trees throughout the valley."
+      },
+      {
+        "id": "herb_silverpine",
+        "name": "Silverpine Coast & Ambermill Foothills",
+        "faction": "Horde",
+        "zone": "Silverpine Forest",
+        "lapMinutes": "13–16 min",
+        "direction": "Counter-Clockwise",
+        "density": "High (~16–20 nodes/lap)",
+        "hostileLevel": "Lvl 12–18",
+        "bestFor": "Horde Briarthorn + underwater Stranglekelp",
+        "waypoint": "/way Silverpine Forest 46.0 42.0",
+        "description": "From The Sepulcher, ride south through the misty forest towards Ambermill, sweep west to the coast near Shadowfang Keep, and ride north along the shoreline harvesting Stranglekelp.",
+        "tips": "Watch out for Son of Arugal (Lvl 25 Elite) patrolling the central road."
+      }
+    ]
+  },
+  {
+    "tierId": "herb_tier3",
+    "tierName": "Tier 3: Wild Steelbloom, Grave Moss & Kingsblood (Skill 100–150)",
+    "herbs": [
+      "Wild Steelbloom",
+      "Grave Moss",
+      "Kingsblood"
+    ],
+    "routes": [
+      {
+        "id": "herb_hillsbrad",
+        "name": "Hillsbrad Durnholde & Plateau Run",
+        "faction": "Contested",
+        "zone": "Hillsbrad Foothills",
+        "lapMinutes": "13–15 min",
+        "direction": "Clockwise",
+        "density": "Very High (~20–26 nodes/lap)",
+        "hostileLevel": "Lvl 22–28",
+        "bestFor": "World #1 Kingsblood & Wild Steelbloom density",
+        "waypoint": "/way Hillsbrad Foothills 52.0 45.0",
+        "description": "Circle the northern plateau between Southshore and Tarren Mill: head east from Tarren Mill past Durnholde Keep, climb the hills overlooking the crater, sweep west above Southshore, and return along the river.",
+        "tips": "Wild Steelbloom grows on high peaks and rocky ledges; climb the plateau steps."
+      },
+      {
+        "id": "herb_wetlands",
+        "name": "Wetlands Ironbeard's Tomb & Marsh Lap",
+        "faction": "Alliance",
+        "zone": "Wetlands",
+        "lapMinutes": "14–17 min",
+        "direction": "Counter-Clockwise",
+        "density": "High (~16–22 nodes/lap)",
+        "hostileLevel": "Lvl 24–30",
+        "bestFor": "Massive Grave Moss spawns around crypts",
+        "waypoint": "/way Wetlands 50.0 58.0",
+        "description": "From Menethil Harbor, ride east along the sunken road into the marsh, circle the crypts of Ironbeard's Tomb and the raptor grounds, then loop north past the murloc shanties.",
+        "tips": "Grave Moss is concentrated right outside the tomb entrances."
+      },
+      {
+        "id": "herb_stonetalon",
+        "name": "Stonetalon Sun Rock & Charred Vale",
+        "faction": "Horde",
+        "zone": "Stonetalon Mountains",
+        "lapMinutes": "15–18 min",
+        "direction": "Clockwise",
+        "density": "High (~15–20 nodes/lap)",
+        "hostileLevel": "Lvl 20–28",
+        "bestFor": "Horde Wild Steelbloom cliff route",
+        "waypoint": "/way Stonetalon Mountains 48.0 58.0",
+        "description": "From Sun Rock Retreat, follow the canyon path south towards the Charred Vale, skirt the harpy hills, and circle the high mountain switchbacks back to Malaka'jin.",
+        "tips": "High elevation paths contain multiple Wild Steelbloom nodes every few hundred yards."
+      },
+      {
+        "id": "herb_redridge",
+        "name": "Redridge Mountains Render's Camp Loop",
+        "faction": "Alliance",
+        "zone": "Redridge Mountains",
+        "lapMinutes": "12–14 min",
+        "direction": "Clockwise",
+        "density": "Moderate-High (~14–18 nodes/lap)",
+        "hostileLevel": "Lvl 18–25",
+        "bestFor": "Alliance Kingsblood & Wild Steelbloom",
+        "waypoint": "/way Redridge Mountains 45.0 52.0",
+        "description": "From Lakeshire, ride north circling Lake Everstill, climb into Render's Rock foothills, trace the gnoll cliffs, and return across the southern ridge.",
+        "tips": "Watch out for Blackrock Orc patrols along the northeastern passes."
+      }
+    ]
+  },
+  {
+    "tierId": "herb_tier4",
+    "tierName": "Tier 4: Fadeleaf, Goldthorn, Khadgar's Whisker & Wintersbite (Skill 150–205)",
+    "herbs": [
+      "Fadeleaf",
+      "Goldthorn",
+      "Khadgar's Whisker",
+      "Wintersbite"
+    ],
+    "routes": [
+      {
+        "id": "herb_arathi",
+        "name": "Arathi Highlands Witherbark & Binding Stones",
+        "faction": "Contested",
+        "zone": "Arathi Highlands",
+        "lapMinutes": "15–18 min",
+        "direction": "Clockwise",
+        "density": "Maximum (~24–30 nodes/lap)",
+        "hostileLevel": "Lvl 34–40",
+        "bestFor": "World #1 Goldthorn & Khadgar's Whisker circuit",
+        "waypoint": "/way Arathi Highlands 42.0 52.0",
+        "description": "Circle the central valley of Arathi: start from the western road, sweep south past Witherbark Village, loop east around Go'Shek Farm, and cut north past the four Elemental Binding stones.",
+        "tips": "Goldthorn clusters heavily around rocky outcroppings and ruins; check the base of each troll tower."
+      },
+      {
+        "id": "herb_swamp",
+        "name": "Swamp of Sorrows Misty Reed & Bog Run",
+        "faction": "Contested",
+        "zone": "Swamp of Sorrows",
+        "lapMinutes": "14–16 min",
+        "direction": "Counter-Clockwise",
+        "density": "Very High (~20–26 nodes/lap)",
+        "hostileLevel": "Lvl 35–42",
+        "bestFor": "World #1 Fadeleaf and Blindweed starter yield",
+        "waypoint": "/way Swamp of Sorrows 54.0 46.0",
+        "description": "Encircle the marshlands surrounding the Pool of Tears: from Stonard, ride west towards Deadwind Pass entrance, loop south around the misty reeds, and sweep east along the coastal swamp boundary.",
+        "tips": "Fadeleaf grows in damp shady groves; check behind giant cypress tree trunks."
+      },
+      {
+        "id": "herb_alterac",
+        "name": "Alterac Mountains Yeti Caves & Ruins",
+        "faction": "Contested",
+        "zone": "Alterac Mountains",
+        "lapMinutes": "12–15 min",
+        "direction": "Clockwise",
+        "density": "High (~16–22 nodes/lap)",
+        "hostileLevel": "Lvl 33–39",
+        "bestFor": "Only reliable outdoor source of Wintersbite",
+        "waypoint": "/way Alterac Mountains 44.0 54.0",
+        "description": "From Tarren Mill, head north into the snowline of Alterac, loop around the Ruins of Alterac, sweep west past Growless Cave, and curve south past the Syndicate camps.",
+        "tips": "Wintersbite only spawns within the snowy high-altitude plateaus of Alterac."
+      },
+      {
+        "id": "herb_stv_north",
+        "name": "Northern Stranglethorn Vale Kurzen Loop",
+        "faction": "Contested",
+        "zone": "Stranglethorn Vale",
+        "lapMinutes": "16–18 min",
+        "direction": "Counter-Clockwise",
+        "density": "High (~18–24 nodes/lap)",
+        "hostileLevel": "Lvl 32–38",
+        "bestFor": "Fadeleaf + Khadgar's Whisker + jungle beasts",
+        "waypoint": "/way Stranglethorn Vale 44.0 28.0",
+        "description": "From the Rebel Camp, ride south into Kurzen's Compound, loop west through the jungle towards the ruins of Bal'lal, and curve north back along the river.",
+        "tips": "Watch out for stealthed jungle panthers; gather while mounted if possible."
+      }
+    ]
+  },
+  {
+    "tierId": "herb_tier5",
+    "tierName": "Tier 5: Firebloom & Purple Lotus (Skill 205–230)",
+    "herbs": [
+      "Firebloom",
+      "Purple Lotus",
+      "Wildvine"
+    ],
+    "routes": [
+      {
+        "id": "herb_tanaris",
+        "name": "Tanaris Desert Dunes & Thistleshrub Valley",
+        "faction": "Contested",
+        "zone": "Tanaris",
+        "lapMinutes": "16–19 min",
+        "direction": "Clockwise",
+        "density": "Maximum (~22–28 nodes/lap)",
+        "hostileLevel": "Lvl 42–48",
+        "bestFor": "World #1 Firebloom yield across Azeroth",
+        "waypoint": "/way Tanaris 54.0 42.0",
+        "description": "From Gadgetzan, ride south across the dunes past Noonshade Ruins, loop through Thistleshrub Valley, sweep east towards Southbreak Shore, and head north along the desert foothills.",
+        "tips": "Firebloom glows bright orange in the desert sands, visible from extreme rendering distance."
+      },
+      {
+        "id": "herb_searing_fire",
+        "name": "Searing Gorge Sea of Fire Rim",
+        "faction": "Contested",
+        "zone": "Searing Gorge",
+        "lapMinutes": "12–15 min",
+        "direction": "Clockwise",
+        "density": "Very High (~18–24 nodes/lap)",
+        "hostileLevel": "Lvl 43–48",
+        "bestFor": "Fast compact Firebloom loop",
+        "waypoint": "/way Searing Gorge 38.0 50.0",
+        "description": "From Thorium Point, circle the southern perimeter cliffs around Firewatch Ridge, sweep through the Sea of Fire magma plains, and loop back north.",
+        "tips": "Dense Firebloom spawns right at the edges of the open lava fissures."
+      },
+      {
+        "id": "herb_hinterlands_lotus",
+        "name": "Hinterlands Jintha'Alor Exterior Rim",
+        "faction": "Contested",
+        "zone": "The Hinterlands",
+        "lapMinutes": "16–18 min",
+        "direction": "Counter-Clockwise",
+        "density": "High (~16–22 nodes/lap)",
+        "hostileLevel": "Lvl 44–50",
+        "bestFor": "Purple Lotus & Wildvine stockpiling",
+        "waypoint": "/way The Hinterlands 52.0 60.0",
+        "description": "Ride east across the central Hinterlands valley, circling the exterior base of the massive troll city Jintha'Alor, and loop west along the river gorge.",
+        "tips": "Purple Lotus in the Hinterlands has a 20% chance to also yield valuable Wildvine on pick."
+      },
+      {
+        "id": "herb_badlands_flat",
+        "name": "Badlands Flatlands Basin Circuit",
+        "faction": "Contested",
+        "zone": "Badlands",
+        "lapMinutes": "12–14 min",
+        "direction": "Counter-Clockwise",
+        "density": "High (~14–18 nodes/lap)",
+        "hostileLevel": "Lvl 36–42",
+        "bestFor": "Peaceful alternative for Firebloom",
+        "waypoint": "/way Badlands 46.0 50.0",
+        "description": "From Dustwind Dig, sweep west across the central barren flats towards Camp Cagg, loop north along the coyote bluffs, and return east.",
+        "tips": "Flat desert landscape allows uninterrupted line-of-sight herb tracking."
+      }
+    ]
+  },
+  {
+    "tierId": "herb_tier6",
+    "tierName": "Tier 6: Sungrass, Blindweed, Ghost Mushroom & Gromsblood (Skill 230–270)",
+    "herbs": [
+      "Sungrass",
+      "Blindweed",
+      "Ghost Mushroom",
+      "Gromsblood"
+    ],
+    "routes": [
+      {
+        "id": "herb_swamp_temple",
+        "name": "Swamp of Sorrows Sunken Temple Circuit",
+        "faction": "Contested",
+        "zone": "Swamp of Sorrows",
+        "lapMinutes": "14–16 min",
+        "direction": "Clockwise",
+        "density": "Maximum (~24–30 nodes/lap)",
+        "hostileLevel": "Lvl 40–46",
+        "bestFor": "World #1 Blindweed & Sungrass density",
+        "waypoint": "/way Swamp of Sorrows 62.0 52.0",
+        "description": "Complete continuous loops around the circular waterways enclosing the Sunken Temple of Atal'Hakkar in the eastern half of the swamp.",
+        "tips": "Blindweed exclusively lines the water reeds, while Sungrass spawns on the dry hillocks nearby."
+      },
+      {
+        "id": "herb_felwood",
+        "name": "Felwood Bloodvenom Falls & Corrupted Woods",
+        "faction": "Contested",
+        "zone": "Felwood",
+        "lapMinutes": "16–20 min",
+        "direction": "Counter-Clockwise",
+        "density": "Very High (~20–26 nodes/lap)",
+        "hostileLevel": "Lvl 48–54",
+        "bestFor": "World #1 Gromsblood + Cleansed Whipper Root",
+        "waypoint": "/way Felwood 46.0 56.0",
+        "description": "From Emerald Sanctuary, head north along the main road, sweep east through the demon-infested ruins towards Bloodvenom Post, and loop south.",
+        "tips": "Gromsblood spawns around demonic ruins and Satyr camps; kill Satyrs for Felcloth while farming."
+      },
+      {
+        "id": "herb_ghost_caves",
+        "name": "Hinterlands Creeping Cave & Skull Rock",
+        "faction": "Contested",
+        "zone": "The Hinterlands",
+        "lapMinutes": "12–14 min",
+        "direction": "Clockwise",
+        "density": "High (~12–18 nodes/lap)",
+        "hostileLevel": "Lvl 45–50",
+        "bestFor": "Ghost Mushroom cave route (needed for Shadow Power)",
+        "waypoint": "/way The Hinterlands 56.0 44.0",
+        "description": "Target the damp subterranean caves: enter Skull Rock and Creeping Cave, clear the interior mushroom patches, and loop between the two cave mouths.",
+        "tips": "Ghost Mushrooms strictly spawn inside caves and damp dungeons (Maraudon & Jintha'Alor caves)."
+      },
+      {
+        "id": "herb_feralas",
+        "name": "Feralas Verdantis River & Twin Colossals",
+        "faction": "Contested",
+        "zone": "Feralas",
+        "lapMinutes": "16–19 min",
+        "direction": "Clockwise",
+        "density": "High (~18–24 nodes/lap)",
+        "hostileLevel": "Lvl 42–48",
+        "bestFor": "Sungrass + Golden Sansam transition",
+        "waypoint": "/way Feralas 58.0 44.0",
+        "description": "Follow the Verdantis River from Camp Mojache west towards the Twin Colossals, sweep past the Gordunni ogre ruins, and return along the southern bluffs.",
+        "tips": "Sungrass grows abundantly in the sunlit open clearings between ogre camps."
+      }
+    ]
+  },
+  {
+    "tierId": "herb_tier7",
+    "tierName": "Tier 7: Golden Sansam, Dreamfoil, Mountain Silversage, Plaguebloom & Black Lotus (Skill 270–300)",
+    "herbs": [
+      "Golden Sansam",
+      "Dreamfoil",
+      "Mountain Silversage",
+      "Plaguebloom",
+      "Black Lotus"
+    ],
+    "routes": [
+      {
+        "id": "herb_epl",
+        "name": "Eastern Plaguelands Cauldron & Noxious Loop",
+        "faction": "Contested",
+        "zone": "Eastern Plaguelands",
+        "lapMinutes": "20–24 min",
+        "direction": "Clockwise",
+        "density": "Maximum (~26–36 nodes/lap)",
+        "hostileLevel": "Lvl 54–60",
+        "bestFor": "World #1 Plaguebloom & Black Lotus circuit",
+        "waypoint": "/way Eastern Plaguelands 62.0 48.0",
+        "description": "From Light's Hope Chapel, head northwest past Browman Mill, loop west around Corin's Crossing, curve south towards Lake Mereldar, and trace the fungal valley back to Light's Hope.",
+        "tips": "Black Lotus has 4 potential spawn points along this exact route; check Lake Mereldar and Corin's Crossing."
+      },
+      {
+        "id": "herb_winterspring",
+        "name": "Winterspring Frostsaber Rock & Kel'Theril",
+        "faction": "Contested",
+        "zone": "Winterspring",
+        "lapMinutes": "18–22 min",
+        "direction": "Counter-Clockwise",
+        "density": "Very High (~22–30 nodes/lap)",
+        "hostileLevel": "Lvl 55–60",
+        "bestFor": "World #1 Mountain Silversage + Icecap circuit",
+        "waypoint": "/way Winterspring 56.0 42.0",
+        "description": "From Everlook, ride north past Frostsaber Rock, curve south through the hills towards Lake Kel'Theril, and loop through the Owl Wing Thicket back to Everlook.",
+        "tips": "Mountain Silversage only spawns on the highest rocky summits; Icecap spawns across the flat snow plains."
+      },
+      {
+        "id": "herb_ungoro",
+        "name": "Un'Goro Crater Marsh & Perimeter Slopes",
+        "faction": "Contested",
+        "zone": "Un'Goro Crater",
+        "lapMinutes": "18–21 min",
+        "direction": "Clockwise",
+        "density": "Very High (~22–28 nodes/lap)",
+        "hostileLevel": "Lvl 50–55",
+        "bestFor": "World #1 Dreamfoil & Golden Sansam density",
+        "waypoint": "/way Un'Goro Crater 54.0 44.0",
+        "description": "From Marshal's Stand, ride clockwise around the crater basin floor, skirting the Golakka Hot Springs and the river marshlands, circling Fire Plume Ridge.",
+        "tips": "Dreamfoil and Golden Sansam are everywhere in Un'Goro; avoid elite Devilsaurs while gathering."
+      },
+      {
+        "id": "herb_wpl",
+        "name": "Western Plaguelands Sorrow Hill & Ruins",
+        "faction": "Contested",
+        "zone": "Western Plaguelands",
+        "lapMinutes": "16–19 min",
+        "direction": "Counter-Clockwise",
+        "density": "High (~20–26 nodes/lap)",
+        "hostileLevel": "Lvl 50–56",
+        "bestFor": "Plaguebloom + Arthas' Tears + Corrupted Flora",
+        "waypoint": "/way Western Plaguelands 46.0 58.0",
+        "description": "From Chillwind Camp, sweep north across Sorrow Hill cemetery, loop around the ruins of Andorhal exterior, head west past Felstone Field and Dalson's Tears, and return south.",
+        "tips": "Sorrow Hill and the farm fields contain heavy Plaguebloom and Arthas' Tears spawns."
+      }
+    ]
+  }
+];
+
+  let cachedBisMap = null;
+  function buildBiSLookupMap() {
+    if (cachedBisMap) return cachedBisMap;
+    const map = new Map();
+    const bisData = window.WOW_BIS_DATA || (typeof WOW_BIS_DATA !== 'undefined' ? WOW_BIS_DATA : null);
+    if (!bisData || !bisData.classes) return map;
+
+    for (const cls of bisData.classes) {
+      const cData = bisData[cls.id];
+      if (!cData) continue;
+      for (const sp of cData.specs || []) {
+        for (const slot of Object.keys(sp.gear || {})) {
+          const list = Array.isArray(sp.gear[slot]) ? sp.gear[slot] : [sp.gear[slot]];
+          for (const it of list) {
+            if (!it || !it.name) continue;
+            const key = it.name.toLowerCase().trim();
+            if (!map.has(key)) {
+              map.set(key, {
+                name: it.name,
+                classId: cls.id,
+                className: cls.name,
+                specId: sp.id,
+                specName: sp.name,
+                slot: slot,
+                phase: it.phase || 'Phase 2',
+                type: 'gear'
+              });
+            }
+          }
+        }
+        for (const enc of sp.enchants || []) {
+          if (!enc.source) continue;
+          const m = enc.source.match(/^(?:Enchant\s+[^(\d]+|[\w\s'’-]+Armor Kit|[\w\s'’-]+Weightstone|[\w\s'’-]+Sharpening Stone)/i);
+          const encName = m ? m[0].trim().toLowerCase() : '';
+          if (encName && !map.has(encName)) {
+            map.set(encName, {
+              name: m[0].trim(),
+              classId: cls.id,
+              className: cls.name,
+              specId: sp.id,
+              specName: sp.name,
+              type: 'enchant'
+            });
+          }
+        }
+        for (const con of sp.consumables || []) {
+          if (!con || !con.name) continue;
+          const key = con.name.toLowerCase().trim();
+          if (!map.has(key)) {
+            map.set(key, {
+              name: con.name,
+              classId: cls.id,
+              className: cls.name,
+              specId: sp.id,
+              specName: sp.name,
+              type: 'consumable'
+            });
+          }
+        }
+      }
+    }
+    cachedBisMap = map;
+    return map;
+  }
+
+  function getBiSInfo(recipeName) {
+    if (!recipeName) return null;
+    const map = buildBiSLookupMap();
+    return map.get(recipeName.toLowerCase().trim()) || null;
+  }
+
+  function isDungeonRecipe(r) {
+    if (!r) return false;
+    const s = (r.source || '').toLowerCase();
+    const n = (r.name || '').toLowerCase();
+    if (s.includes('dungeon') || s.includes('instance') || s.includes('boss')) return true;
+    const dungeonKeywords = [
+      'deadmines', 'shadowfang', 'wailing caverns', 'blackfathom', 'stockade',
+      'gnomeregan', 'razorfen', 'scarlet monastery', 'graveyard', 'library', 'armory',
+      'cathedral', 'uldaman', 'zul\'farrak', 'maraudon', 'sunken temple', 'atal\'hakkar',
+      'blackrock depths', 'brd', 'lbrs', 'ubrs', 'stratholme', 'scholomance', 'dire maul',
+      'city of dalaran', 'excavation site', 'ruins of lordaeron', 'hall of thanes',
+      'molten core', 'onyxia', 'blackwing', 'zul\'gurub', 'ahn\'qiraj', 'naxxramas'
+    ];
+    return dungeonKeywords.some(d => s.includes(d) || n.includes(d));
+  }
+
+  function isBlueprintRecipe(r) {
+    if (!r) return false;
+    const s = (r.source || '').toLowerCase();
+    const n = (r.name || '').toLowerCase();
+    return n.startsWith('blueprint:') || s.includes('blueprint:') || s.includes('campfire station') || s.includes('camp blueprint');
+  }
+
+  function isDisenchantMaterial(name) {
+    if (!name) return false;
+    const n = name.toLowerCase().trim();
+    const exact = [
+      'strange dust', 'soul dust', 'vision dust', 'dream dust', 'illusion dust',
+      'lesser magic essence', 'greater magic essence',
+      'lesser astral essence', 'greater astral essence',
+      'lesser mystic essence', 'greater mystic essence',
+      'lesser nether essence', 'greater nether essence',
+      'lesser eternal essence', 'greater eternal essence',
+      'small glimmering shard', 'large glimmering shard',
+      'small glowing shard', 'large glowing shard',
+      'small radiant shard', 'large radiant shard',
+      'small brilliant shard', 'large brilliant shard',
+      'nexus crystal'
+    ];
+    return exact.includes(n) || n.endsWith(' dust') || n.endsWith(' essence') || n.endsWith(' shard') || n.endsWith(' crystal');
+  }
+
+  function formatWaypointsInHtml(htmlText, fallbackZone = '') {
+    if (!htmlText || typeof htmlText !== 'string') return htmlText;
+    return htmlText.replace(/(?:(\(\s*\/way\s+[^)]+\))|(\/way\s+(?:[-A-Za-z0-9\s,'’]+?\s+)?[\d.]+[,\s]+[\d.]+(?:\s*,\s*[A-Za-z]+)?))/g, (match, parenMatch, standaloneMatch, offset, fullStr) => {
+      const raw = (parenMatch || standaloneMatch || '').replace(/^\(|\)$/g, '').trim();
+      const m = raw.match(/\/way\s+(?:([-A-Za-z0-9\s,'’]+?)\s+)?([\d.]+)[,\s]+([\d.]+)(?:\s*,\s*([A-Za-z]+))?/);
+      if (!m) return match;
+      let zone = (m[1] || '').trim();
+      const x = m[2];
+      const y = m[3];
+      const faction = m[4] || '';
+
+      if (!zone) {
+        const before = fullStr.slice(0, offset).trim();
+        const allZoneMatches = [...before.matchAll(/(?:in|at)\s+([A-Za-z0-9\s,'’]+?)(?:\s*\(|\s*$)/gi)];
+        if (allZoneMatches.length > 0) {
+          zone = allZoneMatches[allZoneMatches.length - 1][1].trim();
+        } else if (fallbackZone) {
+          zone = fallbackZone.trim();
+        }
+      }
+
+      const macroCmd = `/way ${zone ? zone + ' ' : ''}${x} ${y}`;
+      const labelText = `/way ${zone ? zone + ' ' : ''}${x}, ${y}${faction ? ' (' + faction + ')' : ''}`;
+      return `<button type="button" class="tomtom-way-btn" data-macro="${escapeHtml(macroCmd)}" title="Click to copy TomTom macro: ${escapeHtml(macroCmd)}">📍 <span>${escapeHtml(labelText)}</span></button>`;
+    });
   }
 
   function parseHashRoute() {
@@ -186,11 +3649,12 @@
           btn.classList.add('active');
           renderActiveProfession();
 
-          if (history.replaceState) {
-            if (slug === 'overview') {
-              history.replaceState(null, '', '#professions');
-            } else {
-              history.replaceState(null, '', `#professions/${slug}/${currentSubTab}`);
+          const targetHash = slug === 'overview' ? '#professions' : `#professions/${slug}/${currentSubTab}`;
+          if ((window.location.hash || '').toLowerCase() !== targetHash.toLowerCase()) {
+            try {
+              history.pushState({ tab: 'professions', profession: slug, subtab: currentSubTab }, '', targetHash);
+            } catch {
+              if (history.replaceState) history.replaceState(null, '', targetHash);
             }
           }
         }
@@ -214,6 +3678,12 @@
       tabs.push({ id: 'recipes', icon: '📜', label: `Recipes (${count})` });
       tabs.push({ id: 'leveling', icon: '📈', label: 'Leveling 1–300' });
       tabs.push({ id: 'shopping', icon: '🛒', label: 'Shopping List' });
+      if (['engineering', 'blacksmithing', 'leatherworking'].includes(slug)) {
+        tabs.push({ id: 'specs', icon: '⭐', label: 'Specializations' });
+      }
+      if (['tailoring', 'leatherworking'].includes(slug)) {
+        tabs.push({ id: 'containers', icon: '🎒', label: slug === 'tailoring' ? 'Containers & Bags' : 'Quivers & Pouches' });
+      }
       const favorCount = prof.stats?.favorRecipes || (prof.favor && prof.favor.recipes && prof.favor.recipes.length) || 0;
       if (favorCount > 0) {
         tabs.push({ id: 'favor', icon: '📦', label: `Merchant's Favor (${favorCount})` });
@@ -224,18 +3694,18 @@
       if (prof.shopping?.groups?.length) {
         tabs.push({ id: 'shopping', icon: '🛒', label: 'Smelting Shopping List' });
       }
-      tabs.push({ id: 'nodes', icon: '⛏️', label: `Mining Nodes (${prof.nodes?.length || 10})` });
+      tabs.push({ id: 'nodes', icon: '⛏️', label: `Mining Nodes & Routes (${prof.nodes?.length || 10})` });
       tabs.push({ id: 'recipes', icon: '🔥', label: `Smelting (${prof.recipes?.length || 14})` });
       tabs.push({ id: 'camp', icon: '⛺', label: 'Camp & Perks' });
     } else if (isHerbalism) {
       tabs.push({ id: 'leveling', icon: '📈', label: 'Leveling Route' });
-      tabs.push({ id: 'nodes', icon: '🌿', label: `Herb Nodes (${prof.nodes?.length || 28})` });
+      tabs.push({ id: 'nodes', icon: '🌿', label: `Herb Nodes & Routes (${prof.nodes?.length || 28})` });
       tabs.push({ id: 'camp', icon: '⛺', label: 'Camp & Perks' });
     } else if (isSkinning) {
       tabs.push({ id: 'leveling', icon: '📈', label: 'Skinning by Level' });
       tabs.push({ id: 'camp', icon: '⛺', label: 'Camp & Perks' });
     } else if (isFishing) {
-      tabs.push({ id: 'waters', icon: '🌊', label: 'Waters by Skill' });
+      tabs.push({ id: 'waters', icon: '🌊', label: 'Waters & Schedule' });
       tabs.push({ id: 'lures', icon: '🪱', label: `Fishing Lures (${prof.fishingLures?.length || 14})` });
       tabs.push({ id: 'ranks', icon: '🎖️', label: `Ranks (${prof.ranks?.length || 8})` });
       tabs.push({ id: 'camp', icon: '⛺', label: 'Camp & Perks' });
@@ -362,8 +3832,13 @@
         btn.classList.add('active');
         renderSubTabContent(prof);
 
-        if (history.replaceState) {
-          history.replaceState(null, '', `#professions/${currentProfession}/${currentSubTab}`);
+        const targetHash = `#professions/${currentProfession}/${currentSubTab}`;
+        if ((window.location.hash || '').toLowerCase() !== targetHash.toLowerCase()) {
+          try {
+            history.pushState({ tab: 'professions', profession: currentProfession, subtab: currentSubTab }, '', targetHash);
+          } catch {
+            if (history.replaceState) history.replaceState(null, '', targetHash);
+          }
         }
       });
     });
@@ -583,8 +4058,68 @@
             </tbody>
           </table>
         </div>
+
+        ${renderRolePairingWizard()}
+
+        ${renderMasterTrainerDirectory()}
       </div>
     `;
+
+    // Role pairing wizard listeners
+    container.querySelectorAll('.pairing-role-chip').forEach(chip => {
+      chip.addEventListener('click', () => {
+        activeRolePairing = chip.getAttribute('data-role-id');
+        container.querySelectorAll('.pairing-role-chip').forEach(c => {
+          c.classList.toggle('active', c.getAttribute('data-role-id') === activeRolePairing);
+        });
+        const detailsMount = container.querySelector('.pairing-details-card');
+        if (detailsMount) {
+          const activePair = PAIRING_WIZARD_DATA.find(p => p.roleId === activeRolePairing) || PAIRING_WIZARD_DATA[0];
+          detailsMount.outerHTML = renderPairingDetailsCard(activePair);
+        }
+      });
+    });
+
+    // Trainer directory filter listeners
+    const trSearch = container.querySelector('#trainer-search-input');
+    if (trSearch) {
+      trSearch.addEventListener('input', debounce((e) => {
+        trainerSearchQuery = e.target.value.trim();
+        updateTrainerGrid(container);
+      }, 150));
+    }
+
+    const trProf = container.querySelector('#trainer-prof-select');
+    if (trProf) {
+      trProf.addEventListener('change', (e) => {
+        trainerProfFilter = e.target.value;
+        updateTrainerGrid(container);
+      });
+    }
+
+    const trFac = container.querySelector('#trainer-faction-select');
+    if (trFac) {
+      trFac.addEventListener('change', (e) => {
+        trainerFactionFilter = e.target.value;
+        updateTrainerGrid(container);
+      });
+    }
+
+    const trRank = container.querySelector('#trainer-rank-select');
+    if (trRank) {
+      trRank.addEventListener('change', (e) => {
+        trainerRankFilter = e.target.value;
+        updateTrainerGrid(container);
+      });
+    }
+
+    const trZone = container.querySelector('#trainer-zone-select');
+    if (trZone) {
+      trZone.addEventListener('change', (e) => {
+        trainerZoneFilter = e.target.value;
+        updateTrainerGrid(container);
+      });
+    }
 
     // Click handlers for cards and table rows
     container.querySelectorAll('.prof-dir-explore-btn, .prof-directory-card, .matrix-prof-col').forEach(el => {
@@ -601,8 +4136,13 @@
             });
           }
           renderActiveProfession();
-          if (history.replaceState) {
-            history.replaceState(null, '', `#professions/${slug}/${currentSubTab}`);
+          const targetHash = `#professions/${slug}/${currentSubTab}`;
+          if ((window.location.hash || '').toLowerCase() !== targetHash.toLowerCase()) {
+            try {
+              history.pushState({ tab: 'professions', profession: slug, subtab: currentSubTab }, '', targetHash);
+            } catch {
+              if (history.replaceState) history.replaceState(null, '', targetHash);
+            }
           }
           window.scrollTo({ top: container.offsetTop - 80, behavior: 'smooth' });
         }
@@ -627,6 +4167,10 @@
       renderLevelingTab(body, prof);
     } else if (currentSubTab === 'shopping') {
       renderShoppingTab(body, prof);
+    } else if (currentSubTab === 'specs') {
+      renderSpecializationsTab(body, prof);
+    } else if (currentSubTab === 'containers') {
+      renderContainersTab(body, prof);
     } else if (currentSubTab === 'favor') {
       renderFavorTab(body, prof);
     } else if (currentSubTab === 'camp') {
@@ -642,11 +4186,11 @@
     }
   }
 
-  let recipeSearchDebounceTimer = null;
   function debounce(fn, delay) {
+    let timer = null;
     return function (...args) {
-      if (recipeSearchDebounceTimer) clearTimeout(recipeSearchDebounceTimer);
-      recipeSearchDebounceTimer = setTimeout(() => fn.apply(this, args), delay);
+      if (timer) clearTimeout(timer);
+      timer = setTimeout(() => fn.apply(this, args), delay);
     };
   }
 
@@ -665,6 +4209,12 @@
         return false;
       }
       if (filterBetaCap && r.learn > 225) {
+        return false;
+      }
+      if (filterDungeonOnly && !isDungeonRecipe(r)) {
+        return false;
+      }
+      if (filterBlueprintOnly && !isBlueprintRecipe(r)) {
         return false;
       }
       if (searchQuery) {
@@ -704,6 +4254,16 @@
       betaToggle.classList.toggle('active', filterBetaCap);
     }
 
+    const dungeonToggle = container.querySelector('#prof-dungeon-toggle');
+    if (dungeonToggle) {
+      dungeonToggle.classList.toggle('active', filterDungeonOnly);
+    }
+
+    const blueprintToggle = container.querySelector('#prof-blueprint-toggle');
+    if (blueprintToggle) {
+      blueprintToggle.classList.toggle('active', filterBlueprintOnly);
+    }
+
     container.querySelectorAll('.prof-preset-btn').forEach(btn => {
       const s = parseInt(btn.getAttribute('data-skill'), 10);
       btn.classList.toggle('active', playerSkill === s);
@@ -719,12 +4279,21 @@
       <!-- Toolbar -->
       <div class="prof-toolbar">
         <div style="display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap;">
-          <input type="text" id="prof-search-input" aria-label="Search recipes, reagents, or zones" class="prof-search-input" placeholder="Search recipe, reagent, drop zone..." value="${escapeHtml(searchQuery)}" />
+          <div class="prof-search-wrap">
+            <input type="text" id="prof-search-input" aria-label="Search recipes, reagents, or zones" class="prof-search-input" placeholder="Search recipe, reagent, drop zone..." value="${escapeHtml(searchQuery)}" />
+            ${searchQuery ? '<button type="button" class="prof-search-clear-btn" id="prof-search-clear" aria-label="Clear search" title="Clear search">✕</button>' : ''}
+          </div>
           <button type="button" id="prof-new-toggle" class="filter-chip ${filterNewOnly ? 'active' : ''}">
             <span>✨</span> New in Forever Only
           </button>
           <button type="button" id="prof-beta-cap-toggle" class="filter-chip ${filterBetaCap ? 'active' : ''}" title="Filter to recipes learnable within Phase 2 beta level cap (Skill 1–225)">
             <span>🔒</span> Beta Cap (≤225)
+          </button>
+          <button type="button" id="prof-dungeon-toggle" class="filter-chip ${filterDungeonOnly ? 'active' : ''}" title="Filter to recipes dropped in dungeons or by instance bosses">
+            <span>🏰</span> Dungeon Drops Only
+          </button>
+          <button type="button" id="prof-blueprint-toggle" class="filter-chip ${filterBlueprintOnly ? 'active' : ''}" title="Filter to campfire station blueprints">
+            <span>⛺</span> Camp Blueprints Only
           </button>
         </div>
         <div class="prof-skill-calc">
@@ -758,10 +4327,44 @@
 
     updateRecipeGrid(container, prof);
 
+    const clearSearchInp = () => {
+      searchQuery = '';
+      const inp = container.querySelector('#prof-search-input');
+      if (inp) inp.value = '';
+      const clearBtn = container.querySelector('#prof-search-clear');
+      if (clearBtn) clearBtn.remove();
+    };
+
+    const attachClearBtnListener = () => {
+      const clearBtn = container.querySelector('#prof-search-clear');
+      if (clearBtn) {
+        clearBtn.onclick = () => {
+          clearSearchInp();
+          updateRecipeGrid(container, prof);
+        };
+      }
+    };
+    attachClearBtnListener();
+
     const searchInput = container.querySelector('#prof-search-input');
     if (searchInput) {
       searchInput.addEventListener('input', debounce((e) => {
         searchQuery = e.target.value.trim();
+        const wrap = container.querySelector('.prof-search-wrap');
+        let clearBtn = container.querySelector('#prof-search-clear');
+        if (searchQuery && !clearBtn && wrap) {
+          clearBtn = document.createElement('button');
+          clearBtn.type = 'button';
+          clearBtn.className = 'prof-search-clear-btn';
+          clearBtn.id = 'prof-search-clear';
+          clearBtn.setAttribute('aria-label', 'Clear search');
+          clearBtn.setAttribute('title', 'Clear search');
+          clearBtn.textContent = '✕';
+          wrap.appendChild(clearBtn);
+          attachClearBtnListener();
+        } else if (!searchQuery && clearBtn) {
+          clearBtn.remove();
+        }
         updateRecipeGrid(container, prof);
       }, 120));
     }
@@ -778,6 +4381,22 @@
     if (betaToggle) {
       betaToggle.addEventListener('click', () => {
         filterBetaCap = !filterBetaCap;
+        updateRecipeGrid(container, prof);
+      });
+    }
+
+    const dungeonToggle = container.querySelector('#prof-dungeon-toggle');
+    if (dungeonToggle) {
+      dungeonToggle.addEventListener('click', () => {
+        filterDungeonOnly = !filterDungeonOnly;
+        updateRecipeGrid(container, prof);
+      });
+    }
+
+    const blueprintToggle = container.querySelector('#prof-blueprint-toggle');
+    if (blueprintToggle) {
+      blueprintToggle.addEventListener('click', () => {
+        filterBlueprintOnly = !filterBlueprintOnly;
         updateRecipeGrid(container, prof);
       });
     }
@@ -803,7 +4422,46 @@
 
     container.querySelectorAll('.prof-cat-chip').forEach(btn => {
       btn.addEventListener('click', () => {
-        currentCategory = btn.getAttribute('data-cat');
+        const targetCat = btn.getAttribute('data-cat') || 'all';
+
+        // Intuitive toggling and collision clearing
+        if (targetCat.toLowerCase() === currentCategory.toLowerCase()) {
+          if (searchQuery) {
+            clearSearchInp();
+          } else if (targetCat.toLowerCase() !== 'all') {
+            currentCategory = 'all';
+            updateRecipeGrid(container, prof);
+            return;
+          }
+        } else if (targetCat.toLowerCase() === 'all') {
+          if (searchQuery) {
+            clearSearchInp();
+          }
+          currentCategory = 'all';
+        } else {
+          // Specific category clicked: check if active searchQuery yields 0 matches in this category
+          if (searchQuery) {
+            const q = searchQuery.toLowerCase();
+            const hasMatch = (prof.recipes || []).some(r => {
+              if ((r.cat || '').toLowerCase() !== targetCat.toLowerCase()) return false;
+              if (filterNewOnly && !r.isNew) return false;
+              if (filterBetaCap && r.learn > 225) return false;
+              if (filterDungeonOnly && !isDungeonRecipe(r)) return false;
+              if (filterBlueprintOnly && !isBlueprintRecipe(r)) return false;
+              const matchesName = r.name && r.name.toLowerCase().includes(q);
+              const matchesEffect = r.effect && r.effect.toLowerCase().includes(q);
+              const matchesReagents = r.reagents && r.reagents.some(m => m.name && m.name.toLowerCase().includes(q));
+              const matchesSource = r.source && r.source.toLowerCase().includes(q);
+              return matchesName || matchesEffect || matchesReagents || matchesSource;
+            });
+            if (!hasMatch) {
+              // Automatically clear the conflicting search query so all recipes in that category immediately display
+              clearSearchInp();
+            }
+          }
+          currentCategory = targetCat;
+        }
+
         updateRecipeGrid(container, prof);
       });
     });
@@ -876,6 +4534,13 @@
               <h4 class="recipe-title ${qualityClass}" data-recipe-name="${escapeHtml(r.name)}" style="cursor: pointer;">
                 ${escapeHtml(r.name)}
                 ${r.isNew ? '<span class="recipe-new-tag">New</span>' : ''}
+                ${(() => {
+                  const bisMatch = getBiSInfo(r.name);
+                  if (!bisMatch) return '';
+                  return `<button type="button" class="recipe-bis-badge" data-class="${bisMatch.classId}" data-spec="${bisMatch.specId}" title="Phase 2 BiS Item for ${escapeHtml(bisMatch.className)} (${escapeHtml(bisMatch.specName)}) — Click to view in BiS Planner">⭐ Phase 2 BiS</button>`;
+                })()}
+                ${isDungeonRecipe(r) ? '<span class="recipe-dungeon-tag" title="Dropped by dungeon mobs or bosses">🏰 Dungeon Drop</span>' : ''}
+                ${isBlueprintRecipe(r) ? '<span class="recipe-blueprint-tag" title="Campfire Station Blueprint">⛺ Camp Blueprint</span>' : ''}
               </h4>
               ${r.effect ? `<div class="recipe-effect">${escapeHtml(r.effect)}</div>` : ''}
             </div>
@@ -893,6 +4558,418 @@
         <div class="recipe-source-line">
           <span>Source:</span>
           <span class="recipe-source-badge">${escapeHtml(r.source || 'Trainer')}</span>
+        </div>
+      </div>
+    `;
+  }
+
+
+  /* ==========================================================================
+     SUBTAB: SPECIALIZATIONS DEEP-DIVES (ENGINEERING, BLACKSMITHING, LEATHERWORKING)
+     ========================================================================== */
+  function renderSpecializationsTab(container, prof) {
+    const specData = SPECIALIZATIONS_DATA[prof.slug];
+    if (!specData) {
+      container.innerHTML = `<div style="text-align: center; padding: 3rem; color: #94a3b8;">No specializations available for this profession.</div>`;
+      return;
+    }
+
+    const savedChecked = JSON.parse(localStorage.getItem(`wowforever_specs_${prof.slug}`) || '{}');
+
+    container.innerHTML = `
+      <div class="leveling-header-block">
+        <div class="leveling-header-title">
+          <h3>
+            ${escapeHtml(prof.name)} Specializations
+            <span class="beta-cap-tag" style="${specData.isBetaActive ? 'background: rgba(34, 197, 94, 0.2); border-color: #22c55e; color: #86efac;' : 'background: rgba(239, 68, 68, 0.2); border-color: #ef4444; color: #fca5a5;'}">
+              ${escapeHtml(specData.phaseNote)}
+            </span>
+          </h3>
+          <p>Explore exclusive crafts, side-by-side spec comparison, quest turn-in checklists, and master trainers.</p>
+        </div>
+      </div>
+
+      <div class="specs-grid-layout ${specData.specs.length === 3 ? 'cols-3' : 'cols-2'}">
+        ${specData.specs.map(spec => `
+          <div class="spec-card" data-spec-id="${spec.id}">
+            <div class="spec-card-header">
+              <img src="${getIconUrl(spec.icon)}" alt="${escapeHtml(spec.name)}" class="spec-card-icon" />
+              <div>
+                <h4 class="spec-card-title">${escapeHtml(spec.name)}</h4>
+                <div class="spec-card-archetype">${escapeHtml(spec.archetype)}</div>
+              </div>
+            </div>
+
+            <div class="spec-trainer-box">
+              <span class="spec-section-label">📍 Master Trainer &amp; Location:</span>
+              <div class="spec-trainer-text">${formatWaypointsInHtml(escapeHtml(spec.trainer))}</div>
+            </div>
+
+            <div class="spec-quest-box">
+              <span class="spec-section-label">📋 Quest Turn-In Checklist: <em>${escapeHtml(spec.questName)}</em></span>
+              <div class="spec-checklist-items">
+                ${spec.questTurnIns.map(mat => {
+                  const checkKey = `${spec.id}_${mat.name.toLowerCase().replace(/[^a-z0-9]/g, '')}`;
+                  const isChecked = Boolean(savedChecked[checkKey]);
+                  return `
+                    <label class="spec-check-item ${isChecked ? 'completed' : ''}" data-check-key="${checkKey}">
+                      <input type="checkbox" class="spec-checkbox" ${isChecked ? 'checked' : ''} data-check-key="${checkKey}" />
+                      <img src="${getIconUrl(mat.icon)}" alt="${escapeHtml(mat.name)}" class="spec-check-icon" />
+                      <span class="spec-check-name">${mat.count}x ${escapeHtml(mat.name)}</span>
+                      <button type="button" class="spec-mat-lookup-btn" data-reagent-name="${escapeHtml(mat.name)}" title="Look up where to get ${escapeHtml(mat.name)}">🔍</button>
+                    </label>
+                  `;
+                }).join('')}
+              </div>
+            </div>
+
+            <div class="spec-crafts-box">
+              <span class="spec-section-label">⭐ Signature &amp; Exclusive Crafts:</span>
+              <div class="spec-crafts-list">
+                ${spec.crafts.map(cr => `
+                  <div class="spec-craft-row">
+                    <img src="${getIconUrl(cr.icon)}" alt="${escapeHtml(cr.name)}" class="spec-craft-icon q${cr.quality || 2}" />
+                    <div class="spec-craft-info">
+                      <div class="spec-craft-name q${cr.quality || 2}">${escapeHtml(cr.name)}</div>
+                      <div class="spec-craft-effect">${escapeHtml(cr.effect)}</div>
+                    </div>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+          </div>
+        `).join('')}
+      </div>
+    `;
+
+    container.querySelectorAll('.spec-checkbox').forEach(cb => {
+      cb.addEventListener('change', () => {
+        const key = cb.getAttribute('data-check-key');
+        savedChecked[key] = cb.checked;
+        localStorage.setItem(`wowforever_specs_${prof.slug}`, JSON.stringify(savedChecked));
+        const row = cb.closest('.spec-check-item');
+        if (row) row.classList.toggle('completed', cb.checked);
+      });
+    });
+
+    container.querySelectorAll('.spec-mat-lookup-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const matName = btn.getAttribute('data-reagent-name');
+        if (matName) {
+          openReverseReagentLookup(matName);
+        }
+      });
+    });
+  }
+
+  /* ==========================================================================
+     SUBTAB: CONTAINERS, BAGS & QUIVERS COMPENDIUM (TAILORING & LEATHERWORKING)
+     ========================================================================== */
+  function renderContainersTab(container, prof) {
+    const contData = CONTAINERS_DATA[prof.slug];
+    if (!contData) {
+      container.innerHTML = `<div style="text-align: center; padding: 3rem; color: #94a3b8;">No containers recorded for this profession.</div>`;
+      return;
+    }
+
+    const isTailoring = prof.slug === 'tailoring';
+
+    let itemsToDisplay;
+    if (isTailoring) {
+      if (activeContainerType === 'general') itemsToDisplay = contData.generalBags;
+      else if (activeContainerType === 'reagent') itemsToDisplay = contData.reagentBags;
+      else if (activeContainerType === 'specialty') itemsToDisplay = contData.specialtyBags;
+      else itemsToDisplay = [...contData.generalBags, ...contData.reagentBags, ...contData.specialtyBags];
+    } else {
+      if (activeContainerType === 'quivers') itemsToDisplay = contData.quivers;
+      else if (activeContainerType === 'pouches') itemsToDisplay = contData.pouches;
+      else if (activeContainerType === 'reagent') itemsToDisplay = contData.reagentBags;
+      else itemsToDisplay = [...contData.quivers, ...contData.pouches, ...contData.reagentBags];
+    }
+
+    container.innerHTML = `
+      <div class="leveling-header-block">
+        <div class="leveling-header-title">
+          <h3>
+            ${isTailoring ? 'Containers, Custom Reagent Bags & Specialty Packs' : 'Quivers, Ammo Pouches & Leather Bags'}
+            <span class="beta-cap-tag" style="background: rgba(14, 116, 144, 0.2); border-color: #0284c7; color: #38bdf8;">
+              ${isTailoring ? 'Mooncloth Verified 18-Slot' : 'Attack Speed Bonus Up to +15%'}
+            </span>
+          </h3>
+          <p>${isTailoring ? 'Craft general inventory bags, 8 custom WoW Forever trade reagent bags, and high-capacity soul, herb, and enchanting specialty containers.' : 'Craft Hunter quivers and ammo pouches granting passive attack speed bonuses (+10% to +13%), and custom leather reagent pouches.'}</p>
+        </div>
+      </div>
+
+      <div class="prof-category-chips" style="margin-bottom: 1.25rem;">
+        <button type="button" class="prof-cat-chip ${activeContainerType === 'all' ? 'active' : ''}" data-cont-type="all">
+          All (${isTailoring ? contData.generalBags.length + contData.reagentBags.length + contData.specialtyBags.length : contData.quivers.length + contData.pouches.length + contData.reagentBags.length})
+        </button>
+        ${isTailoring ? `
+          <button type="button" class="prof-cat-chip ${activeContainerType === 'general' ? 'active' : ''}" data-cont-type="general">
+            🎒 General Bags (${contData.generalBags.length})
+          </button>
+          <button type="button" class="prof-cat-chip ${activeContainerType === 'reagent' ? 'active' : ''}" data-cont-type="reagent">
+            ✨ Custom Reagent Bags (${contData.reagentBags.length})
+          </button>
+          <button type="button" class="prof-cat-chip ${activeContainerType === 'specialty' ? 'active' : ''}" data-cont-type="specialty">
+            🔮 Specialty Bags (${contData.specialtyBags.length})
+          </button>
+        ` : `
+          <button type="button" class="prof-cat-chip ${activeContainerType === 'quivers' ? 'active' : ''}" data-cont-type="quivers">
+            🏹 Quivers (${contData.quivers.length})
+          </button>
+          <button type="button" class="prof-cat-chip ${activeContainerType === 'pouches' ? 'active' : ''}" data-cont-type="pouches">
+            🔫 Ammo Pouches (${contData.pouches.length})
+          </button>
+          <button type="button" class="prof-cat-chip ${activeContainerType === 'reagent' ? 'active' : ''}" data-cont-type="reagent">
+            ✨ Reagent Pouches (${contData.reagentBags.length})
+          </button>
+        `}
+      </div>
+
+      <div class="containers-grid">
+        ${itemsToDisplay.map(item => `
+          <div class="container-card">
+            <div class="container-card-header">
+              <img src="${getIconUrl(item.icon)}" alt="${escapeHtml(item.name)}" class="container-icon q${item.quality || 1}" />
+              <div class="container-info">
+                <h4 class="container-name q${item.quality || 1}">
+                  ${escapeHtml(item.name)}
+                  ${item.isForeverVerified ? '<span class="verified-tag">18-Slot Verified</span>' : ''}
+                </h4>
+                <div class="container-badges-row">
+                  <span class="container-slot-pill">${item.slots} Slots</span>
+                  ${item.speed ? `<span class="container-speed-pill">⚡ ${item.speed} Attack Speed</span>` : ''}
+                  ${item.type ? `<span class="container-type-pill">${escapeHtml(item.type)}</span>` : ''}
+                  <span class="container-req-pill">Skill ${item.skill}</span>
+                </div>
+              </div>
+            </div>
+
+            <p class="container-desc">${escapeHtml(item.desc)}</p>
+
+            <div class="container-reagents-box">
+              <span class="container-source-text"><strong>Source:</strong> ${formatWaypointsInHtml(escapeHtml(item.source))}</span>
+              <div class="container-reagents-list">
+                ${(item.reagents || []).map(mat => `
+                  <span class="reagent-chip" title="${escapeHtml(mat.name)}" data-item-name="${escapeHtml(mat.name)}" style="cursor: pointer;">
+                    <img src="${getIconUrl(mat.icon)}" alt="${escapeHtml(mat.name)}" />
+                    <span class="reagent-count">${mat.count}x</span>
+                    <span>${escapeHtml(mat.name)}</span>
+                  </span>
+                `).join('')}
+              </div>
+            </div>
+          </div>
+        `).join('')}
+      </div>
+    `;
+
+    container.querySelectorAll('.prof-cat-chip').forEach(btn => {
+      btn.addEventListener('click', () => {
+        activeContainerType = btn.getAttribute('data-cont-type');
+        renderContainersTab(container, prof);
+      });
+    });
+
+    container.querySelectorAll('.reagent-chip').forEach(chip => {
+      chip.addEventListener('click', () => {
+        const name = chip.getAttribute('data-item-name');
+        if (name) openReverseReagentLookup(name);
+      });
+    });
+  }
+
+  function renderPairingDetailsCard(activePair) {
+    return `
+      <div class="pairing-details-card">
+        <div class="pairing-details-head">
+          <div>
+            <div class="pairing-role-label">Recommended for: <strong>${escapeHtml(activePair.roleName)}</strong></div>
+            <h3 class="pairing-primary-title">⭐ Optimal Choice: ${escapeHtml(activePair.primaryPair)}</h3>
+            <div class="pairing-alt-title">Alternative Option: <strong>${escapeHtml(activePair.altPair)}</strong></div>
+          </div>
+          <div class="pairing-synergy-stars" title="Synergy Rating: ${activePair.synergyStars}">
+            <span class="stars-val">${activePair.synergyStars}</span>
+            <span class="stars-lbl">Synergy Rating</span>
+          </div>
+        </div>
+
+        <div class="pairing-perks-grid">
+          <div class="pairing-perk-box combat">
+            <span class="perk-box-tag">✨ COMBINED COMBAT PASSIVES</span>
+            <p class="perk-box-text">${escapeHtml(activePair.passives)}</p>
+          </div>
+          <div class="pairing-perk-box camp">
+            <span class="perk-box-tag">⛺ CAMPFIRE STATION SYNERGY</span>
+            <p class="perk-box-text">${escapeHtml(activePair.campAura)}</p>
+          </div>
+        </div>
+
+        <div class="pairing-summary-note">
+          <strong>Tactical Breakdown:</strong> ${escapeHtml(activePair.summary)}
+        </div>
+      </div>
+    `;
+  }
+
+  /* ==========================================================================
+     OVERVIEW WIZARD: CLASS & ROLE PAIRING RECOMMENDATION MATRIX
+     ========================================================================== */
+  function renderRolePairingWizard() {
+    const pairings = PAIRING_WIZARD_DATA;
+    const activePair = pairings.find(p => p.roleId === activeRolePairing) || pairings[0];
+
+    return `
+      <div class="pairing-wizard-container">
+        <div class="section-heading-bar" style="margin-top: 1.5rem;">
+          <div>
+            <h2><span>🧙‍♂️</span> Interactive Class &amp; Role Pairing Recommendation Matrix</h2>
+            <p class="section-subtext">Select your character archetype to reveal the optimal profession synergy, combat passives, and campfire station auras</p>
+          </div>
+        </div>
+
+        <div class="pairing-roles-bar">
+          ${pairings.map(p => `
+            <button type="button" class="pairing-role-chip ${p.roleId === activePair.roleId ? 'active' : ''}" data-role-id="${p.roleId}">
+              <span>${p.icon}</span> ${escapeHtml(p.roleName.split('(')[0].trim())}
+            </button>
+          `).join('')}
+        </div>
+
+        ${renderPairingDetailsCard(activePair)}
+      </div>
+    `;
+  }
+
+  function filterTrainers() {
+    return WOW_TRAINERS_DATA.filter(t => {
+      if (trainerFactionFilter !== 'all' && t.faction.toLowerCase() !== trainerFactionFilter) return false;
+      if (trainerRankFilter !== 'all' && t.rank.toLowerCase() !== trainerRankFilter) return false;
+      if (trainerProfFilter !== 'all' && t.profession !== trainerProfFilter) return false;
+      if (trainerZoneFilter !== 'all' && t.zone !== trainerZoneFilter) return false;
+      if (trainerSearchQuery) {
+        const q = trainerSearchQuery.toLowerCase();
+        const matchesName = t.name.toLowerCase().includes(q);
+        const matchesZone = t.zone.toLowerCase().includes(q);
+        const matchesProf = t.profName.toLowerCase().includes(q);
+        if (!matchesName && !matchesZone && !matchesProf) return false;
+      }
+      return true;
+    });
+  }
+
+  function renderTrainerCardsHtml(filtered) {
+    if (filtered.length === 0) {
+      return `
+        <div style="grid-column: 1 / -1; text-align: center; padding: 2.5rem; color: #94a3b8; background: rgba(15,23,42,0.5); border-radius: 8px;">
+          No trainers found matching your search and filter criteria.
+        </div>
+      `;
+    }
+    return filtered.map(t => `
+      <div class="trainer-card">
+        <div class="trainer-card-top">
+          <span class="trainer-faction-pill ${t.faction.toLowerCase()}">${t.faction}</span>
+          <span class="trainer-rank-pill">${t.rank}</span>
+          <span class="trainer-prof-pill">${t.profName}</span>
+        </div>
+        <h4 class="trainer-name">${escapeHtml(t.name)}</h4>
+        <div class="trainer-zone">📍 ${escapeHtml(t.zone)}</div>
+        ${t.notes ? `<div class="trainer-notes">💡 ${escapeHtml(t.notes)}</div>` : ''}
+        <div class="trainer-footer">
+          <button type="button" class="tomtom-way-btn" data-macro="${escapeHtml(t.macro)}" title="Click to copy TomTom macro: ${escapeHtml(t.macro)}">
+            📍 <span>${escapeHtml(t.macro)}</span>
+          </button>
+        </div>
+      </div>
+    `).join('');
+  }
+
+  function updateTrainerGrid(container) {
+    const grid = container.querySelector('.trainer-grid');
+    if (!grid) return;
+    const filtered = filterTrainers();
+    grid.innerHTML = renderTrainerCardsHtml(filtered);
+  }
+
+  /* ==========================================================================
+     OVERVIEW: MASTER TRAINER DIRECTORY & 1-CLICK TOMTOM MACRO HUB
+     ========================================================================== */
+  function renderMasterTrainerDirectory() {
+    const allTrainers = WOW_TRAINERS_DATA;
+    const filtered = filterTrainers();
+
+    const distinctProfs = [
+      { slug: 'all', name: 'All Professions' },
+      { slug: 'alchemy', name: 'Alchemy' },
+      { slug: 'blacksmithing', name: 'Blacksmithing' },
+      { slug: 'enchanting', name: 'Enchanting' },
+      { slug: 'engineering', name: 'Engineering' },
+      { slug: 'leatherworking', name: 'Leatherworking' },
+      { slug: 'tailoring', name: 'Tailoring' },
+      { slug: 'mining', name: 'Mining' },
+      { slug: 'herbalism', name: 'Herbalism' },
+      { slug: 'skinning', name: 'Skinning' },
+      { slug: 'cooking', name: 'Cooking' },
+      { slug: 'first-aid', name: 'First Aid' },
+      { slug: 'fishing', name: 'Fishing' },
+      { slug: 'camping', name: 'Camping' }
+    ];
+
+    const distinctZones = ['all', ...new Set(allTrainers.map(t => t.zone))].sort((a, b) => {
+      if (a === 'all') return -1;
+      if (b === 'all') return 1;
+      return a.localeCompare(b);
+    });
+
+    return `
+      <div class="trainer-directory-container">
+        <div class="section-heading-bar" style="margin-top: 1.5rem;">
+          <div>
+            <h2><span>📍</span> Master Trainer Directory &amp; 1-Click TomTom Macro Hub</h2>
+            <p class="section-subtext">Find every Apprentice, Journeyman, Expert, and Artisan trainer across Azeroth with 1-click TomTom /way macros</p>
+          </div>
+        </div>
+
+        <div class="trainer-filter-bar">
+          <input type="text" id="trainer-search-input" class="prof-search-input" placeholder="Search trainer name, city, zone..." value="${escapeHtml(trainerSearchQuery)}" />
+          
+          <div class="trainer-filter-selects">
+            <select id="trainer-prof-select" class="trainer-select" aria-label="Filter by profession">
+              ${distinctProfs.map(p => `
+                <option value="${p.slug}" ${trainerProfFilter === p.slug ? 'selected' : ''}>${p.name}</option>
+              `).join('')}
+            </select>
+
+            <select id="trainer-faction-select" class="trainer-select" aria-label="Filter by faction">
+              <option value="all" ${trainerFactionFilter === 'all' ? 'selected' : ''}>All Factions</option>
+              <option value="alliance" ${trainerFactionFilter === 'alliance' ? 'selected' : ''}>Alliance</option>
+              <option value="horde" ${trainerFactionFilter === 'horde' ? 'selected' : ''}>Horde</option>
+              <option value="neutral" ${trainerFactionFilter === 'neutral' ? 'selected' : ''}>Neutral</option>
+            </select>
+
+            <select id="trainer-rank-select" class="trainer-select" aria-label="Filter by rank">
+              <option value="all" ${trainerRankFilter === 'all' ? 'selected' : ''}>All Ranks</option>
+              <option value="apprentice" ${trainerRankFilter === 'apprentice' ? 'selected' : ''}>Apprentice (1–75)</option>
+              <option value="journeyman" ${trainerRankFilter === 'journeyman' ? 'selected' : ''}>Journeyman (75–150)</option>
+              <option value="expert" ${trainerRankFilter === 'expert' ? 'selected' : ''}>Expert (150–225)</option>
+              <option value="artisan" ${trainerRankFilter === 'artisan' ? 'selected' : ''}>Artisan (200–300)</option>
+            </select>
+
+            <select id="trainer-zone-select" class="trainer-select" aria-label="Filter by zone">
+              <option value="all" ${trainerZoneFilter === 'all' ? 'selected' : ''}>All Zones (${distinctZones.length - 1})</option>
+              ${distinctZones.filter(z => z !== 'all').map(z => `
+                <option value="${escapeHtml(z)}" ${trainerZoneFilter === z ? 'selected' : ''}>${escapeHtml(z)}</option>
+              `).join('')}
+            </select>
+          </div>
+        </div>
+
+        <div class="trainer-grid">
+          ${renderTrainerCardsHtml(filtered)}
         </div>
       </div>
     `;
@@ -991,7 +5068,7 @@
               ` : ''}
               <div class="leveling-rank-divider">
                 <strong class="rank-name">${escapeHtml(item.rank)}</strong>
-                <span class="rank-details">${escapeHtml(item.details)}</span>
+                <span class="rank-details">${formatWaypointsInHtml(escapeHtml(item.details))}</span>
                 ${isArtisan ? `<span class="rank-phase-badge" style="background: rgba(239, 68, 68, 0.2); border: 1px solid #ef4444; color: #fca5a5; font-size: 0.72rem; padding: 2px 8px; border-radius: 4px; font-weight: 700; margin-left: auto;">Phase 3 (Req Lvl 35)</span>` : ''}
               </div>
             `;
@@ -1035,13 +5112,13 @@
                   <div class="step-source-line">${escapeHtml(item.source)}</div>
                   ${vd ? `
                     <div class="step-vendor-meta">
-                      <span class="vendor-meta-chip">📍 ${escapeHtml(vd.location)}</span>
+                      <span class="vendor-meta-chip">📍 ${formatWaypointsInHtml(escapeHtml(vd.location))}</span>
                       ${vd.cost ? `<span class="vendor-meta-chip cost">🪙 ${escapeHtml(vd.cost)}</span>` : ''}
                       ${vd.supply ? `<span class="vendor-meta-chip supply ${supplyClass}">${escapeHtml(vd.supply)}</span>` : ''}
                     </div>
                   ` : ''}
-                  ${item.trainerAlternative ? `<div class="step-trainer-backup">🔄 ${escapeHtml(item.trainerAlternative)}</div>` : ''}
-                  ${item.advice ? `<div class="step-advice-note">💡 ${escapeHtml(item.advice)}</div>` : ''}
+                  ${item.trainerAlternative ? `<div class="step-trainer-backup">🔄 ${formatWaypointsInHtml(escapeHtml(item.trainerAlternative))}</div>` : ''}
+                  ${item.advice ? `<div class="step-advice-note">💡 ${formatWaypointsInHtml(escapeHtml(item.advice))}</div>` : ''}
                 </div>
                 <div class="step-crafts-col">
                   <div class="step-crafts-count">~${craftsNum}</div>
@@ -1088,7 +5165,7 @@
                 </div>
                 <div class="step-info-col">
                   <strong style="color: var(--text-gold, #facc15); font-size: 1.05rem;">${escapeHtml(item.title)}</strong>
-                  <div class="step-source-line" style="color: #cbd5e1; margin-top: 0.25rem;">${escapeHtml(item.zones)}</div>
+                  <div class="step-source-line" style="color: #cbd5e1; margin-top: 0.25rem;">${formatWaypointsInHtml(escapeHtml(item.zones))}</div>
                 </div>
                 <div class="step-reagents-col" style="grid-column: 4 / -1;">
                   ${(item.icons || []).map(ic => `
@@ -2156,39 +6233,178 @@
      SUBTAB 6: GATHERING NODES (HERBALISM & MINING)
      ========================================================================== */
   function renderNodesTab(container, prof) {
+    const isMining = prof.slug === 'mining';
+    const isHerbalism = prof.slug === 'herbalism';
+    const circuits = isMining ? MINING_CIRCUITS : (isHerbalism ? HERBALISM_CIRCUITS : null);
     const nodes = prof.nodes || [];
+
+    if (!circuits) {
+      container.innerHTML = `
+        <div class="leveling-header-block">
+          <div class="leveling-header-title">
+            <h3>${escapeHtml(prof.name)} Resource Nodes (${nodes.length})</h3>
+            <p>Every harvestable resource node across Azeroth, required skill levels, best farming locations, and item yield.</p>
+          </div>
+        </div>
+
+        <div class="nodes-grid">
+          ${nodes.map(n => `
+            <div class="node-card">
+              <div class="node-header">
+                <img src="${getIconUrl(n.icon)}" alt="${escapeHtml(n.name)}" class="node-icon" loading="lazy" />
+                <div class="node-title-box">
+                  <h4>${escapeHtml(n.name)}</h4>
+                  <small>${escapeHtml(n.zones)}</small>
+                </div>
+                <span class="node-skill-badge">Skill ${n.skill}</span>
+              </div>
+              ${n.drops && n.drops.length ? `
+                <div class="node-drops-row">
+                  ${n.drops.map(d => `
+                    <div class="step-reagent-badge" title="${escapeHtml(d.name)}" data-item-id="${d.itemId}" data-item-name="${escapeHtml(d.name)}">
+                      <img src="${getIconUrl(d.icon)}" alt="${escapeHtml(d.name)}" class="step-reagent-img q${d.quality || 1}" loading="lazy" />
+                    </div>
+                  `).join('')}
+                </div>
+              ` : ''}
+            </div>
+          `).join('')}
+        </div>
+      `;
+      attachTooltipListeners(container, prof);
+      return;
+    }
+
+    const currentTierId = isMining ? activeMiningTier : activeHerbTier;
+    const activeTier = circuits.find(c => c.tierId === currentTierId) || circuits[0];
+
     container.innerHTML = `
       <div class="leveling-header-block">
         <div class="leveling-header-title">
-          <h3>${escapeHtml(prof.name)} Resource Nodes (${nodes.length})</h3>
-          <p>Every harvestable resource node across Azeroth, required skill levels, best farming locations, and item yield.</p>
+          <h3>
+            ${escapeHtml(prof.name)} Gathering Authority &amp; Circuit Routes
+            <span class="beta-cap-tag" style="background: rgba(234, 179, 8, 0.2); border-color: #eab308; color: #fef08a;">
+              Multiple Routes per Tier
+            </span>
+          </h3>
+          <p>Choose between high-density zone circuit farming routes (Alliance, Horde, Contested, and Cave loops with lap times &amp; directions) or the full raw node list.</p>
+        </div>
+        <div class="gathering-view-toggle-bar">
+          <button type="button" class="gathering-toggle-btn ${gatheringViewMode === 'routes' ? 'active' : ''}" data-view="routes">
+            <span>🗺️</span> Circuit Routes (${circuits.reduce((acc, c) => acc + c.routes.length, 0)} Routes)
+          </button>
+          <button type="button" class="gathering-toggle-btn ${gatheringViewMode === 'nodes' ? 'active' : ''}" data-view="nodes">
+            <span>${isMining ? '⛏️' : '🌿'}</span> Resource Nodes List (${nodes.length})
+          </button>
         </div>
       </div>
 
-      <div class="nodes-grid">
-        ${nodes.map(n => `
-          <div class="node-card">
-            <div class="node-header">
-              <img src="${getIconUrl(n.icon)}" alt="${escapeHtml(n.name)}" class="node-icon" loading="lazy" />
-              <div class="node-title-box">
-                <h4>${escapeHtml(n.name)}</h4>
-                <small>${escapeHtml(n.zones)}</small>
-              </div>
-              <span class="node-skill-badge">Skill ${n.skill}</span>
-            </div>
-            ${n.drops && n.drops.length ? `
-              <div class="node-drops-row">
-                ${n.drops.map(d => `
-                  <div class="step-reagent-badge" title="${escapeHtml(d.name)}" data-item-id="${d.itemId}" data-item-name="${escapeHtml(d.name)}">
-                    <img src="${getIconUrl(d.icon)}" alt="${escapeHtml(d.name)}" class="step-reagent-img q${d.quality || 1}" loading="lazy" />
-                  </div>
-                `).join('')}
-              </div>
-            ` : ''}
+      ${gatheringViewMode === 'routes' ? `
+        <!-- Tier Navigation Chips -->
+        <div class="prof-category-chips" style="margin-bottom: 1.25rem;">
+          ${circuits.map(tier => {
+            const tierNum = (tier.tierName.match(/Tier\s+(\d+)/i) || [])[1] || '';
+            const skill = (tier.tierName.match(/\(Skill\s+([^)]+)\)/i) || [])[1] || '';
+            const firstMat = (tier.ores && tier.ores[0]) || (tier.herbs && tier.herbs[0]) || '';
+            const shortMat = firstMat.replace(/\s+Ore$/i, '');
+            const chipLabel = `Tier ${tierNum}: ${shortMat}${skill ? ' (' + skill.replace(/\s*\/\s*\d+/, '') + ')' : ''}`;
+            return `
+              <button type="button" class="prof-cat-chip ${tier.tierId === activeTier.tierId ? 'active' : ''}" data-tier-id="${tier.tierId}">
+                ${escapeHtml(chipLabel)}
+              </button>
+            `;
+          }).join('')}
+        </div>
+
+        <!-- Tier Header Banner -->
+        <div class="circuit-tier-header">
+          <div class="circuit-tier-title">${escapeHtml(activeTier.tierName)}</div>
+          <div class="circuit-tier-mats">
+            <span>Harvestable Yields:</span>
+            ${(activeTier.ores || activeTier.herbs || []).map(mat => `
+              <span class="circuit-mat-pill">${escapeHtml(mat)}</span>
+            `).join('')}
           </div>
-        `).join('')}
-      </div>
+        </div>
+
+        <!-- Multi-Route Grid (4 Distinct Routes) -->
+        <div class="circuit-routes-grid">
+          ${activeTier.routes.map((rt, rIdx) => `
+            <div class="circuit-route-card">
+              <div class="circuit-route-head">
+                <div class="circuit-route-badge-row">
+                  <span class="circuit-faction-badge ${rt.faction.toLowerCase()}">${escapeHtml(rt.faction)}</span>
+                  <span class="circuit-direction-badge">🔄 ${escapeHtml(rt.direction)}</span>
+                  <span class="circuit-lap-badge">⏱️ ${escapeHtml(rt.lapMinutes)}</span>
+                </div>
+                <h4 class="circuit-route-name">${rIdx + 1}. ${escapeHtml(rt.name)}</h4>
+                <div class="circuit-route-zone">📍 ${escapeHtml(rt.zone)} · <span style="color: #f87171;">Hostile: ${escapeHtml(rt.hostileLevel)}</span></div>
+              </div>
+
+              <div class="circuit-route-stats">
+                <div class="circuit-stat-pill">
+                  <strong>Density:</strong> ${escapeHtml(rt.density)}
+                </div>
+                <div class="circuit-stat-pill">
+                  <strong>Best For:</strong> ${escapeHtml(rt.bestFor)}
+                </div>
+              </div>
+
+              <div class="circuit-route-body">
+                <p class="circuit-desc">${escapeHtml(rt.description)}</p>
+                ${rt.tips ? `<div class="circuit-pro-tip"><strong>💡 Pro-Tip:</strong> ${escapeHtml(rt.tips)}</div>` : ''}
+              </div>
+
+              <div class="circuit-route-footer">
+                <span class="circuit-waypoint-label">Strategic Waypoint:</span>
+                ${formatWaypointsInHtml(escapeHtml(rt.waypoint), rt.zone)}
+              </div>
+            </div>
+          `).join('')}
+        </div>
+      ` : `
+        <!-- Raw Resource Nodes Grid -->
+        <div class="nodes-grid">
+          ${nodes.map(n => `
+            <div class="node-card">
+              <div class="node-header">
+                <img src="${getIconUrl(n.icon)}" alt="${escapeHtml(n.name)}" class="node-icon" loading="lazy" />
+                <div class="node-title-box">
+                  <h4>${escapeHtml(n.name)}</h4>
+                  <small>${escapeHtml(n.zones)}</small>
+                </div>
+                <span class="node-skill-badge">Skill ${n.skill}</span>
+              </div>
+              ${n.drops && n.drops.length ? `
+                <div class="node-drops-row">
+                  ${n.drops.map(d => `
+                    <div class="step-reagent-badge" title="${escapeHtml(d.name)}" data-item-id="${d.itemId}" data-item-name="${escapeHtml(d.name)}">
+                      <img src="${getIconUrl(d.icon)}" alt="${escapeHtml(d.name)}" class="step-reagent-img q${d.quality || 1}" loading="lazy" />
+                    </div>
+                  `).join('')}
+                </div>
+              ` : ''}
+            </div>
+          `).join('')}
+        </div>
+      `}
     `;
+
+    container.querySelectorAll('.gathering-toggle-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        gatheringViewMode = btn.getAttribute('data-view');
+        renderNodesTab(container, prof);
+      });
+    });
+
+    container.querySelectorAll('.prof-cat-chip').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const tid = btn.getAttribute('data-tier-id');
+        if (isMining) activeMiningTier = tid;
+        else activeHerbTier = tid;
+        renderNodesTab(container, prof);
+      });
+    });
 
     attachTooltipListeners(container, prof);
   }
@@ -2198,11 +6414,125 @@
      ========================================================================== */
   function renderFishingWatersTab(container, prof) {
     const waters = prof.fishingWaters || [];
+    const sched = FISHING_SCHEDULE_DATA;
+
+    const currentUtcHour = new Date().getUTCHours();
+    const isNightfinPeak = currentUtcHour >= 0 && currentUtcHour < 6;
+    const isNightfinActive = currentUtcHour >= 18 || currentUtcHour < 6;
+    const isSunscaleActive = currentUtcHour >= 6 && currentUtcHour < 18;
+
+    const timeBadgeText = isNightfinPeak
+      ? '🌙 Nightfin Snapper 100% PEAK Active Right Now!'
+      : (isSunscaleActive
+        ? '☀️ Sunscale Salmon Daylight Window Active Right Now!'
+        : (isNightfinActive ? '🌆 Twilight Transition: Nightfin Activity Begun!' : '🎣 Fishing Cycle Active'));
+
     container.innerHTML = `
       <div class="leveling-header-block">
         <div class="leveling-header-title">
-          <h3>Fishing Waters by Skill Bracket</h3>
-          <p>Minimum fishing skill required in each zone to guarantee every catch lands without losing fish.</p>
+          <h3>
+            Fishing Waters, Day/Night Windows &amp; Fish Pools
+            <span class="beta-cap-tag" style="background: rgba(14, 116, 144, 0.2); border-color: #0284c7; color: #38bdf8;">
+              ${timeBadgeText}
+            </span>
+          </h3>
+          <p>Real-time server time fishing schedule, seasonal fish migrations (Winter Squid vs Summer Bass), coastal fish schools, and zone skill brackets.</p>
+        </div>
+      </div>
+
+      <!-- Real-time Day/Night Schedule Widget -->
+      <div class="fishing-schedule-widget">
+        <div class="fishing-clock-card">
+          <div class="fishing-clock-head">
+            <span class="fishing-clock-icon">🕰️</span>
+            <div>
+              <div class="fishing-clock-title">Server Time Schedule Tracker</div>
+              <div class="fishing-clock-sub">Current Server Hour: <strong>${String(currentUtcHour).padStart(2, '0')}:00 UTC</strong></div>
+            </div>
+          </div>
+          <div class="fishing-cycles-grid">
+            ${sched.dayNight.map(dn => {
+              const isPeak = dn.peakHours.includes(currentUtcHour);
+              const isActive = dn.dayHours.includes(currentUtcHour) || dn.twilightHours.includes(currentUtcHour) || isPeak;
+              return `
+                <div class="fishing-cycle-card ${isPeak ? 'peak-active' : (isActive ? 'active' : '')}">
+                  <div class="fishing-cycle-top">
+                    <img src="${getIconUrl(dn.icon)}" alt="${escapeHtml(dn.name)}" class="fishing-fish-icon" />
+                    <div>
+                      <h4 class="fishing-fish-name">${escapeHtml(dn.name)}</h4>
+                      <div class="fishing-fish-window">${escapeHtml(dn.windows)}</div>
+                    </div>
+                    <span class="fishing-live-status-pill ${isPeak ? 'peak' : (isActive ? 'active' : 'dormant')}">
+                      ${isPeak ? '⚡ PEAK ACTIVE' : (isActive ? 'ACTIVE' : 'DORMANT')}
+                    </span>
+                  </div>
+                  <div class="fishing-cycle-buff">✨ ${escapeHtml(dn.buff)}</div>
+                  <div class="fishing-cycle-zones">📍 ${escapeHtml(dn.zones)}</div>
+                </div>
+              `;
+            }).join('')}
+          </div>
+        </div>
+
+        <!-- Seasonal Migration Calendar -->
+        <div class="fishing-seasons-card">
+          <div class="fishing-seasons-head">
+            <span class="fishing-seasons-icon">📅</span>
+            <div>
+              <div class="fishing-seasons-title">Seasonal Fish Migration Calendar</div>
+              <div class="fishing-seasons-sub">Winter Squid vs Summer Bass migration shifts during equinoxes</div>
+            </div>
+          </div>
+          <div class="fishing-seasons-grid">
+            ${sched.seasons.map(sn => `
+              <div class="fishing-season-card ${sn.isActiveNow ? 'season-active' : ''}">
+                <div class="fishing-season-top">
+                  <img src="${getIconUrl(sn.icon)}" alt="${escapeHtml(sn.name)}" class="fishing-fish-icon" />
+                  <div>
+                    <h4 class="fishing-season-name">${escapeHtml(sn.name)}</h4>
+                    <span class="fishing-season-dates">${escapeHtml(sn.season)}</span>
+                  </div>
+                  ${sn.isActiveNow ? '<span class="season-badge-live">🟢 ACTIVE NOW IN BETA</span>' : '<span class="season-badge-inactive">⚪ MIGRATED</span>'}
+                </div>
+                <div class="fishing-season-buff">${escapeHtml(sn.yieldBuff)}</div>
+                <div class="fishing-season-zones">📍 <strong>Best Waters:</strong> ${escapeHtml(sn.bestLocations)}</div>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+
+        <!-- Fish Pools & Wreckage Compendium -->
+        <div class="fishing-pools-card">
+          <div class="fishing-pools-head">
+            <span class="fishing-pools-icon">🌊</span>
+            <div>
+              <div class="fishing-pools-title">Fish Pools &amp; Floating Wreckage Compendium</div>
+              <div class="fishing-pools-sub">Open-world schools require only 1 Fishing Skill to land 100% of catches</div>
+            </div>
+          </div>
+          <div class="fishing-pools-grid">
+            ${sched.pools.map(pool => `
+              <div class="fishing-pool-item">
+                <div class="fishing-pool-top">
+                  <img src="${getIconUrl(pool.icon)}" alt="${escapeHtml(pool.name)}" class="fishing-pool-icon" />
+                  <div>
+                    <h5 class="fishing-pool-name">${escapeHtml(pool.name)}</h5>
+                    <div class="fishing-pool-loc">📍 ${escapeHtml(pool.locations)}</div>
+                  </div>
+                </div>
+                <div class="fishing-pool-loot">${escapeHtml(pool.loot)}</div>
+                <div class="fishing-pool-mech">💡 ${escapeHtml(pool.mechanic)}</div>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      </div>
+
+      <!-- Waters by Skill Bracket List -->
+      <div class="section-heading-bar" style="margin-top: 1.5rem;">
+        <div>
+          <h2><span>🌊</span> Open Waters Skill Requirement Brackets</h2>
+          <p class="section-subtext">Minimum fishing skill required to guarantee no "Your fish got away!" failures</p>
         </div>
       </div>
 
@@ -2290,6 +6620,96 @@
   /* ==========================================================================
      INTERACTIVE FLOATING ITEM & REAGENT TOOLTIP ENGINE
      ========================================================================== */
+  function parseRecipeEffect(effect) {
+    if (!effect) return null;
+    let rem = String(effect).trim();
+
+    let bind = null;
+    const bm = rem.match(/^(Binds when (?:equipped|picked up|used))\s*/i);
+    if (bm) {
+      bind = bm[1];
+      rem = rem.substring(bm[0].length).trim();
+    }
+
+    let slot = null;
+    let subType = null;
+    const tabMatch = rem.match(/^([A-Za-z0-9&/ -]+)\t([A-Za-z0-9&/ -]+?)(?=\s+(?:\d+\s+Armor|\d+\s*-\s*\d+|\+?\d+\s+Damage|Speed|\+?\d+\s+(?:Stamina|Strength|Agility|Intellect|Spirit)|Requires|Equip|Use|Chance|Sell Price|"|$))/);
+    if (tabMatch) {
+      slot = tabMatch[1].trim();
+      subType = tabMatch[2].trim();
+      rem = rem.substring(tabMatch[0].length).trim();
+    } else if (rem.startsWith('\t')) {
+      const m = rem.match(/^\t([A-Za-z0-9&/ -]+?)(?=\s+(?:\d+\s+Armor|Requires|Use|Equip|Sell Price|"|$))/);
+      if (m) {
+        subType = m[1].trim();
+        rem = rem.substring(m[0].length).trim();
+      }
+    }
+
+    let dmgRow = null;
+    let dps = null;
+    const dmgM = rem.match(/^(\d+\s*-\s*\d+(?:\s+[A-Za-z]+)?\s+Damage)\s*(?:\t|\s+)(Speed\s+[\d.]+)\s*(\([\d.]+\s+damage per second\))/i);
+    if (dmgM) {
+      dmgRow = { dmg: dmgM[1], speed: dmgM[2] };
+      dps = dmgM[3];
+      rem = rem.substring(dmgM[0].length).trim();
+    }
+
+    let armor = null;
+    const armM = rem.match(/^(\d+\s+Armor)\b/i);
+    if (armM) {
+      armor = armM[1];
+      rem = rem.substring(armM[0].length).trim();
+    }
+
+    const stats = [];
+    const statRe = /\+([0-9]+)\s+(Stamina|Strength|Agility|Intellect|Spirit|All Stats|Armor)/gi;
+    let sm;
+    while ((sm = statRe.exec(rem)) !== null) {
+      stats.push(sm[0]);
+    }
+    rem = rem.replace(/\+([0-9]+)\s+(Stamina|Strength|Agility|Intellect|Spirit|All Stats|Armor)\s*/gi, '').trim();
+
+    let reqLevel = null;
+    const reqLM = rem.match(/Requires Level (\d+)/i);
+    if (reqLM) {
+      reqLevel = reqLM[0];
+      rem = rem.replace(/Requires Level \d+\s*/i, '').trim();
+    }
+
+    let reqClass = null;
+    const reqCM = rem.match(/Classes:\s*([A-Za-z, ]+)/i);
+    if (reqCM) {
+      reqClass = reqCM[0];
+      rem = rem.replace(/Classes:\s*[A-Za-z, ]+\s*/i, '').trim();
+    }
+
+    let equip = null;
+    const eqM = rem.match(/Equip:\s*([^]+?)(?=(?:Sell Price:|$))/i);
+    if (eqM) {
+      equip = eqM[1].trim();
+      rem = rem.replace(/Equip:\s*[^]+?(?=(?:Sell Price:|$))/i, '').trim();
+    }
+
+    let use = null;
+    const useM = rem.match(/Use:\s*([^]+?)(?=(?:Sell Price:|$))/i);
+    if (useM) {
+      use = useM[1].trim();
+      rem = rem.replace(/Use:\s*[^]+?(?=(?:Sell Price:|$))/i, '').trim();
+    }
+
+    let sellPrice = null;
+    const spM = rem.match(/Sell Price:\s*([0-9a-z ]+)/i);
+    if (spM) {
+      sellPrice = spM[1].trim();
+      rem = rem.replace(/Sell Price:\s*[0-9a-z ]+/i, '').trim();
+    }
+
+    let generic = rem.trim();
+
+    return { bind, slot, subType, dmgRow, dps, armor, stats, reqLevel, reqClass, equip, use, sellPrice, generic };
+  }
+
   function showItemTooltip(e, name, quality = 1, desc = '', reagents = null, extra = null) {
     let tooltip = document.getElementById('wow-item-tooltip');
     if (!tooltip) {
@@ -2299,8 +6719,11 @@
       document.body.appendChild(tooltip);
     }
 
+    const parsed = desc ? parseRecipeEffect(desc) : null;
+    const hasStructuredStats = Boolean(parsed && (parsed.bind || parsed.slot || parsed.armor || parsed.dmgRow || parsed.stats.length || parsed.equip || parsed.reqLevel));
+
     let extraTop = '';
-    if (extra && (extra.bop || extra.type)) {
+    if (extra && (extra.bop || extra.type) && !hasStructuredStats) {
       extraTop = `
         <div style="font-size: 0.76rem; color: #94a3b8; display: flex; justify-content: space-between; margin-top: 0.2rem;">
           <span>${escapeHtml(extra.bop || 'Binds when picked up')}</span>
@@ -2328,12 +6751,44 @@
     }
 
     let extraCost = '';
-    if (extra && extra.cost) {
+    if (extra && (extra.cost || extra.source)) {
       extraCost = `
         <div style="margin-top: 0.45rem; padding-top: 0.35rem; border-top: 1px dashed rgba(255,255,255,0.12); font-size: 0.78rem; display: flex; justify-content: space-between; color: #cbd5e1;">
-          <span>Cost: <strong style="color: var(--text-gold, #facc15);">${escapeHtml(extra.cost)}</strong></span>
-          ${extra.source ? `<span style="color: #94a3b8;">${escapeHtml(extra.source)}</span>` : ''}
+          <span>${extra.cost ? `Cost: <strong style="color: var(--text-gold, #facc15);">${escapeHtml(extra.cost)}</strong>` : ''}</span>
+          ${extra.source ? `<span style="color: #94a3b8;">Source: <strong style="color: #e2e8f0;">${escapeHtml(extra.source)}</strong></span>` : ''}
         </div>
+      `;
+    }
+
+    let structuredHtml = '';
+    if (hasStructuredStats && parsed) {
+      structuredHtml = `
+        ${parsed.bind ? `<div style="font-size: 0.8rem; color: #fff; margin-top: 0.2rem;">${escapeHtml(parsed.bind)}</div>` : ''}
+        ${(parsed.slot || parsed.subType) ? `
+          <div style="font-size: 0.82rem; color: #fff; display: flex; justify-content: space-between; margin-top: 0.15rem;">
+            <span>${escapeHtml(parsed.slot || '')}</span>
+            <span>${escapeHtml(parsed.subType || '')}</span>
+          </div>
+        ` : ''}
+        ${parsed.dmgRow ? `
+          <div style="font-size: 0.82rem; color: #fff; display: flex; justify-content: space-between; margin-top: 0.25rem;">
+            <span>${escapeHtml(parsed.dmgRow.dmg)}</span>
+            <span>${escapeHtml(parsed.dmgRow.speed)}</span>
+          </div>
+          <div style="font-size: 0.78rem; color: #fff; margin-bottom: 0.2rem;">${escapeHtml(parsed.dps || '')}</div>
+        ` : ''}
+        ${parsed.armor ? `<div style="font-size: 0.82rem; color: #fff; margin: 0.2rem 0; font-weight: 600;">${escapeHtml(parsed.armor)}</div>` : ''}
+        ${parsed.stats && parsed.stats.length ? `
+          <div style="margin: 0.25rem 0;">
+            ${parsed.stats.map(s => `<div style="font-size: 0.82rem; color: #fff;">${escapeHtml(s)}</div>`).join('')}
+          </div>
+        ` : ''}
+        ${parsed.reqClass ? `<div style="font-size: 0.8rem; color: #fff; margin-top: 0.2rem;">${escapeHtml(parsed.reqClass)}</div>` : ''}
+        ${parsed.reqLevel ? `<div style="font-size: 0.8rem; color: #fff; margin: 0.2rem 0;">${escapeHtml(parsed.reqLevel)}</div>` : ''}
+        ${parsed.equip ? `<div style="font-size: 0.8rem; color: #1eff00; margin-top: 0.35rem; line-height: 1.35;">Equip: ${escapeHtml(parsed.equip)}</div>` : ''}
+        ${(parsed.use || (extra && extra.use)) ? `<div style="font-size: 0.8rem; color: #4ade80; margin-top: 0.35rem; line-height: 1.35;"><strong>Use:</strong> ${escapeHtml(parsed.use || extra.use)}</div>` : ''}
+        ${parsed.generic ? `<div style="font-size: 0.8rem; color: #cbd5e1; margin-top: 0.35rem; line-height: 1.4;">${escapeHtml(parsed.generic)}</div>` : ''}
+        ${parsed.sellPrice ? `<div style="font-size: 0.75rem; color: #94a3b8; margin-top: 0.35rem;">Sell Price: ${escapeHtml(parsed.sellPrice)}</div>` : ''}
       `;
     }
 
@@ -2364,12 +6819,14 @@
     }
 
     tooltip.innerHTML = `
-      <div style="min-width: 220px; max-width: 340px; padding: 0.65rem 0.85rem; background: rgba(10, 14, 26, 0.96); border: 1px solid rgba(212, 175, 55, 0.5); border-radius: 6px; box-shadow: 0 8px 24px rgba(0,0,0,0.8); pointer-events: none;">
+      <div style="min-width: 240px; max-width: 360px; padding: 0.65rem 0.85rem; background: rgba(10, 14, 26, 0.96); border: 1px solid rgba(212, 175, 55, 0.5); border-radius: 6px; box-shadow: 0 8px 24px rgba(0,0,0,0.8); pointer-events: none;">
         <div class="q${quality}" style="font-weight: 700; font-size: 0.95rem; line-height: 1.3;">${escapeHtml(name)}</div>
         ${extraTop}
         ${extraSkill}
-        ${extraUse}
-        ${desc && !extraUse ? `<div style="font-size: 0.8rem; color: #cbd5e1; margin-top: 0.35rem; line-height: 1.4;">${escapeHtml(desc)}</div>` : ''}
+        ${hasStructuredStats ? structuredHtml : `
+          ${extraUse}
+          ${desc && !extraUse ? `<div style="font-size: 0.8rem; color: #cbd5e1; margin-top: 0.35rem; line-height: 1.4;">${escapeHtml(desc)}</div>` : ''}
+        `}
         ${reagentsHtml}
         ${extraCost}
       </div>
@@ -2891,6 +7348,7 @@
     }
 
     function closeReagentModal() {
+      hideItemTooltip();
       modal.classList.remove('is-open');
       modal.setAttribute('hidden', '');
     }
@@ -2910,12 +7368,15 @@
     const nodeObjects = validMinedFrom.concat(validGatheredFrom);
     const hasNodes = Boolean(nodeObjects.length > 0 || sourceData?.herbNode || sourceData?.miningNode);
     const hasSkinning = Boolean(sourceData?.skinnedFrom && sourceData.skinnedFrom.length > 0);
+    const hasDisenchant = Boolean(sourceData?.primaryType === 'disenchant' || sourceData?.disenchant || isDisenchantMaterial(cleanName));
 
     let activeFilter = 'all';
     let activeModalView = initialTab;
 
     if (!activeModalView) {
-      if (sourceData?.primaryType === 'fished' && hasFishing) {
+      if ((sourceData?.primaryType === 'disenchant' || isDisenchantMaterial(cleanName)) && hasDisenchant) {
+        activeModalView = 'disenchant';
+      } else if (sourceData?.primaryType === 'fished' && hasFishing) {
         activeModalView = 'fishing';
       } else if (sourceData?.primaryType === 'mob_drop' && hasDrops) {
         activeModalView = 'drops';
@@ -2953,13 +7414,16 @@
     }
 
     function renderAcquisitionView(src, viewMode = 'all') {
-      if (!src) {
+      if (!src && !hasDisenchant) {
         return `
           <div class="reagent-lookup-empty">
             No specific open-world drop table recorded for this reagent.
             ${resolvedId ? `<div style="margin-top:0.75rem;"><a href="https://www.wowhead.com/forever/item=${resolvedId}" target="_blank" rel="noopener" class="reagent-wowhead-ext-btn">🌐 View on Wowhead Forever ↗</a></div>` : ''}
           </div>
         `;
+      }
+      if (!src && hasDisenchant) {
+        src = { name: cleanName, primaryType: 'disenchant' };
       }
 
       // Summary Banner + Internal Jump Buttons
@@ -3268,35 +7732,107 @@
         </div>
       ` : '';
 
-      // Disenchanting Section
-      const disenchantSectionHtml = (src.disenchant) ? `
+      // Disenchanting Section & Yield Matrix
+      const disenchantSectionHtml = (hasDisenchant || src.disenchant) ? `
         <div class="reagent-source-section">
           <div class="reagent-source-sec-head">
-            <h4 class="reagent-source-sec-title"><span>✨</span> Disenchanted From Gear (iLvl ${src.disenchant.minIlvl}–${src.disenchant.maxIlvl})</h4>
-            <a href="https://www.wowhead.com/forever/item=${src.id}#disenchanted-from" target="_blank" rel="noopener" class="reagent-sec-wowhead-link">
-              View ${src.disenchant.count}+ items on Wowhead ↗
-            </a>
+            <h4 class="reagent-source-sec-title"><span>✨</span> Disenchanting Yield &amp; Item-Level Matrix</h4>
+            <span class="beta-cap-tag" style="background: rgba(147, 51, 234, 0.2); border-color: #a855f7; color: #d8b4fe;">
+              Armor vs Weapon Rates
+            </span>
           </div>
-          <div class="reagent-source-grid">
-            ${(src.disenchant.sampleItems || []).map(it => `
-              <div class="reagent-source-card">
-                <div class="reagent-source-card-left">
-                  <span class="reagent-drop-pct-badge med">iLvl ${it.ilvl || '?'}</span>
-                  <div>
-                    <div class="reagent-source-name q${it.quality || 2}">${escapeHtml(it.name)}</div>
-                    <div class="reagent-source-sub">Disenchant Uncommon/Rare gear or use Camp Arcane Salvager</div>
-                  </div>
-                </div>
-                <a href="https://www.wowhead.com/forever/item=${it.id}" target="_blank" rel="noopener" class="reagent-npc-map-btn">
-                  Item ↗
-                </a>
+
+          <div class="reagent-source-summary-box" style="margin-bottom: 0.85rem;">
+            <div class="reagent-source-summary-main">
+              <span class="reagent-source-summary-icon">✨</span>
+              <div>
+                <div class="reagent-source-summary-title">How Disenchanting Works</div>
+                <p class="reagent-source-summary-text">
+                  Disenchanting converts Green (Uncommon), Blue (Rare), and Purple (Epic) equipment into magical enchanting materials based on Item Level (iLvl).
+                  Weapons favor <strong>Essences (~75%)</strong>, while Armor favors <strong>Dusts (~75%)</strong>. Rare equipment guarantees <strong>100% Shard yields</strong>.
+                </p>
               </div>
-            `).join('')}
+            </div>
           </div>
+
+          <div class="de-salvager-callout">
+            <span class="de-salvager-icon">⛺</span>
+            <div>
+              <strong>Camp Arcane Salvager (Camp Skill 140 Station Blueprint):</strong>
+              Allows Enchanters to disenchant equipment anywhere in the wild at your party's campfire with <strong>+15% yield efficiency</strong> and provides the party-wide <em>Enchanted Lute</em> aura (+308 Armor, +13 All Stats, +22 Resists)!
+            </div>
+          </div>
+
+          <div class="de-matrix-table-wrap">
+            <table class="de-matrix-table">
+              <thead>
+                <tr>
+                  <th>Equipment iLvl</th>
+                  <th>Dust Yield (Armor ~75%)</th>
+                  <th>Essence Yield (Weapons ~75%)</th>
+                  <th>Rare / Epic Shard (100%)</th>
+                  <th>Notes</th>
+                </tr>
+              </thead>
+              <tbody>
+                ${DISENCHANT_BRACKETS_DATA.map(b => {
+                  const isHighlighted = (cleanLower.includes('strange dust') && (b.ilvl.includes('5–15') || b.ilvl.includes('16–25'))) ||
+                    (cleanLower.includes('soul dust') && b.ilvl.includes('26–35')) ||
+                    (cleanLower.includes('vision dust') && b.ilvl.includes('36–45')) ||
+                    (cleanLower.includes('dream dust') && b.ilvl.includes('46–50')) ||
+                    (cleanLower.includes('illusion dust') && b.ilvl.includes('51–60')) ||
+                    (cleanLower.includes('magic essence') && (b.ilvl.includes('5–15') || b.ilvl.includes('16–25'))) ||
+                    (cleanLower.includes('astral essence') && b.ilvl.includes('26–35')) ||
+                    (cleanLower.includes('mystic essence') && b.ilvl.includes('36–45')) ||
+                    (cleanLower.includes('nether essence') && b.ilvl.includes('46–50')) ||
+                    (cleanLower.includes('eternal essence') && b.ilvl.includes('51–60')) ||
+                    (cleanLower.includes('glimmering') && b.ilvl.includes('16–25')) ||
+                    (cleanLower.includes('glowing') && b.ilvl.includes('26–35')) ||
+                    (cleanLower.includes('radiant') && (b.ilvl.includes('36–45') || b.ilvl.includes('46–50'))) ||
+                    (cleanLower.includes('brilliant') && b.ilvl.includes('51–60')) ||
+                    (cleanLower.includes('nexus') && b.ilvl.includes('51–60'));
+                  return `
+                    <tr class="${isHighlighted ? 'de-row-highlight' : ''}">
+                      <td><span class="de-ilvl-badge">${escapeHtml(b.ilvl)}</span></td>
+                      <td>${escapeHtml(b.dust)}</td>
+                      <td>${escapeHtml(b.essence)}</td>
+                      <td>${escapeHtml(b.shard)}</td>
+                      <td><small>${escapeHtml(b.notes)}</small></td>
+                    </tr>
+                  `;
+                }).join('')}
+              </tbody>
+            </table>
+          </div>
+
+          ${src?.disenchant?.sampleItems?.length ? `
+            <div class="reagent-source-section" style="margin-top: 1rem;">
+              <h4 class="reagent-source-sec-title"><span>🗡️</span> Sample Disenchantable Items for ${escapeHtml(cleanName)} (${src.disenchant.sampleItems.length})</h4>
+              <div class="reagent-source-grid">
+                ${src.disenchant.sampleItems.map(it => `
+                  <div class="reagent-source-card">
+                    <div class="reagent-source-card-left">
+                      <span class="reagent-drop-pct-badge med">iLvl ${it.ilvl || '?'}</span>
+                      <div>
+                        <div class="reagent-source-name q${it.quality || 2}">${escapeHtml(it.name)}</div>
+                        <div class="reagent-source-sub">Disenchant gear or use Camp Arcane Salvager</div>
+                      </div>
+                    </div>
+                    <a href="https://www.wowhead.com/forever/item=${it.id}" target="_blank" rel="noopener" class="reagent-npc-map-btn">
+                      Item ↗
+                    </a>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+          ` : ''}
         </div>
       ` : '';
 
       // 1. Dedicated single-view modes (strictly separates fishing from mobs, etc.)
+      if (viewMode === 'disenchant') {
+        return `<div class="reagent-acquisition-body">${disenchantSectionHtml}</div>`;
+      }
       if (viewMode === 'fishing') {
         return `<div class="reagent-acquisition-body">${summaryBoxHtml}${fishingSectionHtml || '<div class="reagent-lookup-empty">No fishing waters recorded for this item.</div>'}</div>`;
       }
@@ -3369,6 +7905,13 @@
 
       // View Switcher Tabs Bar
       const viewTabs = [];
+      if (hasDisenchant) {
+        viewTabs.push(`
+          <button type="button" class="reagent-view-tab-btn ${activeModalView === 'disenchant' ? 'active' : ''}" data-view="disenchant">
+            <span>✨</span> Disenchanting Matrix
+          </button>
+        `);
+      }
       if (hasFishing) {
         viewTabs.push(`
           <button type="button" class="reagent-view-tab-btn ${activeModalView === 'fishing' ? 'active' : ''}" data-view="fishing">
@@ -3470,15 +8013,15 @@
             <div class="reagent-lookup-list">
               ${filteredMatches.length === 0 ? `
                 <div class="reagent-lookup-empty">No recipes found using this component.</div>
-              ` : filteredMatches.map(m => {
+              ` : filteredMatches.map((m, idx) => {
                 const r = m.recipe;
                 const qClass = `q${r.quality || 1}`;
                 return `
-                  <div class="reagent-lookup-row">
-                    <div class="reagent-lookup-row-main">
-                      <img src="${getIconUrl(r.icon, r.name, r.source)}" alt="${escapeHtml(r.name)}" class="reagent-row-icon ${qClass}" />
+                  <div class="reagent-lookup-row" data-recipe-idx="${idx}">
+                    <div class="reagent-lookup-row-main" style="cursor: pointer;" data-slug="${m.profSlug}" data-recipe-id="${r.id || ''}" data-recipe-name="${escapeHtml(r.name)}" title="Click to view full recipe details card in ${escapeHtml(m.profName)}">
+                      <img src="${getIconUrl(r.icon, r.name, r.source)}" alt="${escapeHtml(r.name)}" class="reagent-row-icon ${qClass}" data-recipe-idx="${idx}" />
                       <div>
-                        <div class="reagent-row-name ${qClass}">${escapeHtml(r.name)}</div>
+                        <div class="reagent-row-name ${qClass}" data-recipe-idx="${idx}">${escapeHtml(r.name)}</div>
                         <div class="reagent-row-meta">
                           <span class="reagent-row-prof">
                             <img src="${getIconUrl(m.profIcon)}" alt="${escapeHtml(m.profName)}" />
@@ -3521,14 +8064,80 @@
         });
       });
 
+      // Recipe icon and title hover tooltips + card click inside reagent lookup dialog
+      modal.querySelectorAll('.reagent-lookup-row').forEach(row => {
+        const idx = parseInt(row.getAttribute('data-recipe-idx') || '-1', 10);
+        const m = filteredMatches[idx];
+        if (!m) return;
+        const r = m.recipe;
+
+        const mainEl = row.querySelector('.reagent-lookup-row-main');
+        const iconEl = row.querySelector('.reagent-row-icon');
+        const nameEl = row.querySelector('.reagent-row-name');
+
+        const extra = {
+          type: `${m.profName || 'Crafted'} Item`,
+          skillReq: `${m.profName} (${r.learn})`,
+          source: r.source || 'Trainer'
+        };
+
+        const onEnter = (e) => {
+          showItemTooltip(e, r.name, r.quality || 1, r.effect || '', r.reagents || null, extra);
+        };
+        const onMove = (e) => {
+          const tt = document.getElementById('wow-item-tooltip');
+          if (tt) positionTooltip(e, tt);
+        };
+        const onLeave = () => hideItemTooltip();
+
+        [iconEl, nameEl].forEach(el => {
+          if (!el) return;
+          el.addEventListener('mouseenter', onEnter);
+          el.addEventListener('mousemove', onMove);
+          el.addEventListener('mouseleave', onLeave);
+        });
+
+        if (mainEl) {
+          mainEl.addEventListener('click', (e) => {
+            if (e.target.closest('.reagent-jump-btn')) return;
+            hideItemTooltip();
+            closeReagentModal();
+            if (window.setReturnTarget) {
+              window.setReturnTarget({
+                label: `Reagent: ${cleanName}`,
+                tab: 'professions',
+                profession: currentProfession,
+                subtab: currentSubTab,
+                reagentModal: cleanName,
+                scrollY: window.scrollY
+              });
+            }
+            if (window.WOW_PROFESSIONS && window.WOW_PROFESSIONS.selectProfession) {
+              window.WOW_PROFESSIONS.selectProfession(m.profSlug, 'recipes', r.name, r.id ? `recipe-${r.id}` : undefined);
+            }
+          });
+        }
+      });
+
       modal.querySelectorAll('.reagent-jump-btn').forEach(btn => {
         btn.addEventListener('click', () => {
           const targetSlug = btn.getAttribute('data-slug');
           const targetName = btn.getAttribute('data-recipe-name');
           const targetId = btn.getAttribute('data-recipe-id');
+          hideItemTooltip();
           closeReagentModal();
+          if (window.setReturnTarget) {
+            window.setReturnTarget({
+              label: `Reagent: ${cleanName}`,
+              tab: 'professions',
+              profession: currentProfession,
+              subtab: currentSubTab,
+              reagentModal: cleanName,
+              scrollY: window.scrollY
+            });
+          }
           if (window.WOW_PROFESSIONS && window.WOW_PROFESSIONS.selectProfession) {
-            window.WOW_PROFESSIONS.selectProfession(targetSlug, 'recipes', targetName, targetId);
+            window.WOW_PROFESSIONS.selectProfession(targetSlug, 'recipes', targetName, targetId ? `recipe-${targetId}` : undefined);
           }
         });
       });
@@ -3537,7 +8146,18 @@
         btn.addEventListener('click', () => {
           const targetSlug = btn.getAttribute('data-jump-prof');
           const targetSub = btn.getAttribute('data-jump-subtab');
+          hideItemTooltip();
           closeReagentModal();
+          if (window.setReturnTarget) {
+            window.setReturnTarget({
+              label: `Reagent: ${cleanName}`,
+              tab: 'professions',
+              profession: currentProfession,
+              subtab: currentSubTab,
+              reagentModal: cleanName,
+              scrollY: window.scrollY
+            });
+          }
           if (window.WOW_PROFESSIONS && window.WOW_PROFESSIONS.selectProfession) {
             window.WOW_PROFESSIONS.selectProfession(targetSlug, targetSub);
           }
@@ -3551,7 +8171,7 @@
   }
 
   // Dismiss tooltips when tapping outside on touch devices
-  if (typeof document !== 'undefined') {
+  if (typeof document !== 'undefined' && typeof document.addEventListener === 'function') {
     document.addEventListener('pointerdown', (e) => {
       const tt = document.getElementById('wow-item-tooltip');
       if (tt && !e.target.closest('.reagent-chip, .recipe-item-icon, .recipe-title, .favor-recipe-card, .camp-tooltip-item, .step-recipe-name, .shopping-row-card')) {
@@ -3560,16 +8180,96 @@
     });
   }
 
+  // Global listeners for TomTom /way copy and BiS badge jump
+  if (typeof document !== 'undefined' && typeof document.addEventListener === 'function') {
+    document.addEventListener('click', (e) => {
+      const tomtomBtn = e.target.closest('.tomtom-way-btn');
+      if (tomtomBtn) {
+        e.preventDefault();
+        e.stopPropagation();
+        const macro = tomtomBtn.getAttribute('data-macro');
+        if (macro) {
+          if (typeof window.copyMacroToClipboard === 'function') {
+            window.copyMacroToClipboard(macro, tomtomBtn);
+            if (typeof window.showToast === 'function') {
+              window.showToast(`✓ Copied TomTom macro: ${macro}`, 'success');
+            }
+          } else if (typeof window.copyTextToClipboard === 'function') {
+            window.copyTextToClipboard(macro, () => {
+              tomtomBtn.classList.add('copied');
+              setTimeout(() => tomtomBtn.classList.remove('copied'), 1800);
+              if (typeof window.showToast === 'function') {
+                window.showToast(`✓ Copied TomTom macro: ${macro}`, 'success');
+              }
+            });
+          } else if (navigator.clipboard) {
+            navigator.clipboard.writeText(macro).then(() => {
+              tomtomBtn.classList.add('copied');
+              setTimeout(() => tomtomBtn.classList.remove('copied'), 1800);
+              if (typeof window.showToast === 'function') {
+                window.showToast(`✓ Copied TomTom macro: ${macro}`, 'success');
+              }
+            }).catch(() => {});
+          }
+        }
+        return;
+      }
+
+      const bisBtn = e.target.closest('.recipe-bis-badge');
+      if (bisBtn) {
+        e.preventDefault();
+        e.stopPropagation();
+        const cls = bisBtn.getAttribute('data-class');
+        const sp = bisBtn.getAttribute('data-spec');
+        if (cls && sp) {
+          if (window.setReturnTarget) {
+            const currentProfObj = window.WOW_PROFESSIONS_DATA && window.WOW_PROFESSIONS_DATA[currentProfession];
+            const profLabel = currentProfObj ? currentProfObj.name : 'Professions';
+            window.setReturnTarget({
+              label: `${profLabel} Recipes`,
+              tab: 'professions',
+              profession: currentProfession,
+              subtab: currentSubTab,
+              scrollY: window.scrollY
+            });
+          }
+          const bisTabBtn = document.querySelector('.nav-tab-btn[data-tab="bis"]');
+          if (bisTabBtn) bisTabBtn.click();
+          window.location.hash = `#bis/${cls}/${sp}`;
+          if (typeof window.showToast === 'function') {
+            window.showToast(`Navigating to ${cls} (${sp}) BiS gear list...`, 'info');
+          }
+        }
+        return;
+      }
+    });
+  }
+
   // Export module globally
   window.initProfessionsHub = initProfessionsHub;
   window.WOW_PROFESSIONS = {
     openReagentModal: openReverseReagentLookup,
-    selectProfession: (slug, subtab, query, targetId) => {
+    selectProfession: (slug, subtab, query, targetId, options = {}) => {
       currentProfession = slug || 'overview';
       if (subtab) currentSubTab = subtab;
+      currentCategory = options.category || 'all';
       if (query !== undefined && query !== null) searchQuery = query;
+      if (options.clearFilters || query || targetId) {
+        filterNewOnly = false;
+        filterBetaCap = false;
+        filterDungeonOnly = false;
+        filterBlueprintOnly = false;
+      }
       const navBtn = document.querySelector('.nav-tab-btn[data-tab="professions"]');
-      if (navBtn) navBtn.click();
+      if (navBtn && !navBtn.classList.contains('active')) {
+        const tabButtons = document.querySelectorAll('.nav-tab-btn');
+        const tabPanels = document.querySelectorAll('.tab-content');
+        tabButtons.forEach(b => b.classList.remove('active'));
+        tabPanels.forEach(p => p.classList.remove('active'));
+        navBtn.classList.add('active');
+        const targetPanel = document.getElementById('tab-professions');
+        if (targetPanel) targetPanel.classList.add('active');
+      }
       const grid = document.getElementById('prof-selector-buttons');
       if (grid) {
         grid.querySelectorAll('.prof-tile-btn').forEach(b => {
@@ -3577,8 +8277,18 @@
         });
       }
       renderActiveProfession();
-      if (history.replaceState) {
-        history.replaceState(null, '', `#professions/${currentProfession}${currentSubTab ? '/' + currentSubTab : ''}`);
+      const newHash = `#professions/${currentProfession}${currentSubTab ? '/' + currentSubTab : ''}`;
+      if (!options.noPush) {
+        const curHash = (window.location.hash || '').toLowerCase();
+        if (curHash !== newHash.toLowerCase()) {
+          try {
+            history.pushState({ tab: 'professions', profession: currentProfession, subtab: currentSubTab }, '', newHash);
+          } catch {
+            if (history.replaceState) history.replaceState(null, '', newHash);
+          }
+        }
+      } else if (history.replaceState) {
+        history.replaceState(null, '', newHash);
       }
       if (targetId) {
         setTimeout(() => {
