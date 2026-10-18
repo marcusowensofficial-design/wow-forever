@@ -5731,6 +5731,20 @@ input:checked + .toggle-slider:before {
   display: flex;
   align-items: center;
   gap: 1rem;
+  border-radius: 6px;
+  padding: 0.25rem 0.4rem;
+  margin: -0.25rem -0.4rem;
+  transition: background-color 0.15s ease;
+  cursor: pointer;
+}
+
+.weapon-item-hero:hover {
+  background: rgba(56, 189, 248, 0.06);
+}
+
+.weapon-item-hero:hover .weapon-icon {
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.45);
+  border-color: #38bdf8;
 }
 
 .weapon-icon-link {
@@ -5743,6 +5757,7 @@ input:checked + .toggle-slider:before {
   height: 44px;
   border-radius: 6px;
   border: 1px solid var(--border-gold, #f3c043);
+  transition: all 0.15s ease;
 }
 
 .weapon-item-info {
@@ -5848,12 +5863,26 @@ input:checked + .toggle-slider:before {
   padding: 0.2rem 0.55rem;
   border-radius: 4px;
   color: #e2e8f0;
+  cursor: pointer;
   transition: all 0.15s ease;
 }
 
 .alt-tag:hover {
-  background: rgba(56, 189, 248, 0.1);
-  border-color: rgba(56, 189, 248, 0.3);
+  background: rgba(56, 189, 248, 0.15);
+  border-color: rgba(56, 189, 248, 0.45);
+  box-shadow: 0 0 8px rgba(56, 189, 248, 0.25);
+  transform: translateY(-1px);
+}
+
+.wow-tip-wowhead-hint {
+  margin-top: 0.5rem;
+  padding-top: 0.4rem;
+  border-top: 1px dashed rgba(255, 255, 255, 0.12);
+  font-size: 0.72rem;
+  color: var(--text-gold, #f3c043);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .alt-link {

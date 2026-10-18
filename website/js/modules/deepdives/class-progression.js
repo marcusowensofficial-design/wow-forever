@@ -117,6 +117,258 @@
     `;
   }
 
+  // Tooltip Helper Utilities for Weapon Progression
+  let bisLookupCache = null;
+
+  function getBisItem(itemId, name) {
+    if (typeof window === 'undefined' || !window.WOW_BIS_DATA) return null;
+    if (!bisLookupCache) {
+      bisLookupCache = { byId: new Map(), byName: new Map() };
+      const classes = window.WOW_BIS_DATA.classes || [];
+      for (const cls of classes) {
+        const cd = window.WOW_BIS_DATA[cls.id];
+        if (!cd) continue;
+        for (const sp of cd.specs || []) {
+          for (const sl of sp.slots || []) {
+            for (const it of sl.items || []) {
+              if (it.itemId) bisLookupCache.byId.set(String(it.itemId), it);
+              if (it.name) bisLookupCache.byName.set(it.name.toLowerCase().trim(), it);
+            }
+          }
+        }
+      }
+    }
+    if (itemId && bisLookupCache.byId.has(String(itemId))) {
+      return bisLookupCache.byId.get(String(itemId));
+    }
+    if (name && bisLookupCache.byName.has(name.toLowerCase().trim())) {
+      return bisLookupCache.byName.get(name.toLowerCase().trim());
+    }
+    return null;
+  }
+
+  function getWeaponSlotText(type) {
+    const t = (type || '').toLowerCase();
+    if (t.includes('two-hand') || t.includes('staff') || t.includes('polearm')) return 'Two-Hand';
+    if (t.includes('wand') || t.includes('bow') || t.includes('gun') || t.includes('crossbow')) return 'Ranged';
+    if (t.includes('dagger')) return 'Main Hand';
+    return 'One-Hand';
+  }
+
+  function calculateDmgRange(dpsStr, speedStr) {
+    const dps = parseFloat(dpsStr) || 0;
+    const speed = parseFloat(speedStr) || 2.0;
+    if (!dps || !speed) return '';
+    const avg = dps * speed;
+    const min = Math.max(1, Math.round(avg * 0.72));
+    const max = Math.max(min + 1, Math.round(avg * 1.28));
+    return `${min} - ${max}`;
+  }
+
+  function formatStatLine(stat) {
+    const s = stat.trim();
+    if (!s) return '';
+    if (/^(equip|use|chance on hit):/i.test(s)) {
+      return `<div class="wow-tip-equip">${escapeHtml(s)}</div>`;
+    }
+    const lower = s.toLowerCase();
+    if (lower.includes('spell power') || lower.includes('healing') || lower.includes('mp5') || lower.includes('hit') || lower.includes('crit') || lower.includes('attack power') || lower.includes('sp ')) {
+      let equipText = s;
+      if (!equipText.toLowerCase().startsWith('equip:')) {
+        if (equipText.startsWith('+')) {
+          equipText = `Equip: Increases ${equipText.substring(1)}.`;
+        } else {
+          equipText = `Equip: ${equipText}`;
+        }
+      }
+      return `<div class="wow-tip-equip">${escapeHtml(equipText)}</div>`;
+    }
+    return `<div class="wow-tip-stat" style="color: #fff;">${escapeHtml(s)}</div>`;
+  }
+
+  function parseStatsTokens(statsStr, altValStr, detailStr) {
+    if (statsStr) {
+      return statsStr.split(',').map(s => s.trim()).filter(Boolean);
+    }
+    const src = altValStr || detailStr || '';
+    if (!src) return [];
+    const paren = src.match(/\(([^)]+)\)/);
+    if (paren && /[+0-9]|\b(str|sta|agi|int|spi|sp|ap|crit|hit|healing|spell|defense|res|mp5)\b/i.test(paren[1])) {
+      return paren[1].split(',').map(s => s.trim()).filter(Boolean);
+    }
+    const left = src.split(/\s*[-–—:]\s*/)[0] || '';
+    const tokens = left.split(',').map(s => s.trim());
+    return tokens.filter(t => !/dps$/i.test(t) && !/^\d+(\.\d+)?s$/i.test(t) && !/vendor/i.test(t) && /[+0-9]|\b(str|sta|agi|int|spi|sp|ap|mp5)\b/i.test(t));
+  }
+
+  function renderWeaponTooltipHtml(target) {
+    const name = target.getAttribute('data-item-name') || 'Weapon';
+    const itemId = target.getAttribute('data-item-id') || '';
+    const quality = target.getAttribute('data-quality') || 'q2';
+    const ilvl = target.getAttribute('data-ilvl') || '';
+    const reqLevel = target.getAttribute('data-req-level') || '';
+    const weaponType = target.getAttribute('data-weapon-type') || 'Weapon';
+    const speed = target.getAttribute('data-speed') || '';
+    const dps = target.getAttribute('data-dps') || '';
+    const stats = target.getAttribute('data-stats') || '';
+    const sourceTitle = target.getAttribute('data-source-title') || '';
+    const sourceDetail = target.getAttribute('data-source-detail') || '';
+    const altVal = target.getAttribute('data-alt-val') || '';
+    const faction = target.getAttribute('data-faction') || 'both';
+
+    const fullItem = getBisItem(itemId, name);
+
+    let html = '';
+    const qualClass = fullItem?.quality || quality || 'q2';
+    html += `<div class="wow-tip-name ${qualClass}">${escapeHtml(name)}</div>`;
+
+    const itemLevel = fullItem?.ilvl || ilvl;
+    if (itemLevel) {
+      html += `<div class="wow-tip-ilvl">Item Level ${escapeHtml(itemLevel)}</div>`;
+    }
+
+    if (fullItem && fullItem.lines && fullItem.lines.length > 0) {
+      html += `<div class="wow-tip-lines">`;
+      fullItem.lines.forEach(line => {
+        const trimmed = line.trim();
+        if (!trimmed || trimmed === name || trimmed.startsWith('Item Level')) return;
+        if (trimmed.includes('\t')) {
+          const [l, r] = trimmed.split('\t');
+          html += `<div class="wow-tip-type-row"><span>${escapeHtml(l)}</span><span>${escapeHtml(r)}</span></div>`;
+        } else if (trimmed.startsWith('Binds when')) {
+          html += `<div class="wow-tip-bind">${escapeHtml(trimmed)}</div>`;
+        } else if (trimmed.startsWith('Requires Level')) {
+          html += `<div class="wow-tip-req" style="color: #fff; font-size: 0.8rem; margin: 0.2rem 0;">${escapeHtml(trimmed)}</div>`;
+        } else if (trimmed.startsWith('Equip:') || trimmed.startsWith('Chance on hit:') || trimmed.startsWith('Use:')) {
+          html += `<div class="wow-tip-equip">${escapeHtml(trimmed)}</div>`;
+        } else if (trimmed.startsWith('Sell Price:')) {
+          html += `<div class="wow-tip-price" style="color: #94a3b8; font-size: 0.75rem; margin-top: 0.25rem;">${escapeHtml(trimmed)}</div>`;
+        } else if (trimmed.startsWith('+') || /Strength|Agility|Stamina|Intellect|Spirit/.test(trimmed)) {
+          html += `<div class="wow-tip-stat" style="color: #fff;">${escapeHtml(trimmed)}</div>`;
+        } else {
+          html += `<div class="wow-tip-generic" style="color: #cbd5e1;">${escapeHtml(trimmed)}</div>`;
+        }
+      });
+      html += `</div>`;
+    } else {
+      const isVendorOrCraft = (sourceTitle + ' ' + sourceDetail + ' ' + altVal).toLowerCase();
+      const isBindsEquip = isVendorOrCraft.includes('world drop') || isVendorOrCraft.includes('auction') || isVendorOrCraft.includes('craft') || isVendorOrCraft.includes('vendor');
+      if (qualClass !== 'q1') {
+        html += `<div class="wow-tip-bind">${isBindsEquip ? 'Binds when equipped' : 'Binds when picked up'}</div>`;
+      }
+
+      const slotText = getWeaponSlotText(weaponType);
+      html += `
+        <div class="wow-tip-type-row">
+          <span>${escapeHtml(slotText)}</span>
+          <span>${escapeHtml(weaponType || 'Weapon')}</span>
+        </div>
+      `;
+
+      if (speed || dps) {
+        const dmg = calculateDmgRange(dps, speed);
+        html += `
+          <div class="wow-tip-dmg-row">
+            <span>${dmg ? escapeHtml(dmg) + ' Damage' : 'Weapon Damage'}</span>
+            <span>Speed ${escapeHtml(speed || '2.00')}</span>
+          </div>
+        `;
+        if (dps) {
+          const cleanDps = dps.replace(/\s*dps$/i, '').trim();
+          html += `<div class="wow-tip-dps">(${escapeHtml(cleanDps)} damage per second)</div>`;
+        }
+      }
+
+      const statTokens = parseStatsTokens(stats, altVal, sourceDetail);
+      if (statTokens.length > 0) {
+        html += `<div class="wow-tip-stats">`;
+        statTokens.forEach(st => {
+          html += formatStatLine(st);
+        });
+        html += `</div>`;
+      }
+
+      const rLvl = reqLevel ? parseInt(reqLevel, 10) : 0;
+      if (rLvl > 1) {
+        html += `<div class="wow-tip-req" style="color: #fff; font-size: 0.8rem; margin: 0.2rem 0;">Requires Level ${rLvl}</div>`;
+      }
+    }
+
+    if (faction === 'alliance') {
+      html += `<div class="wow-tip-faction alliance" style="display: flex; align-items: center; gap: 0.35rem; color: #60a5fa; font-weight: 700; margin-top: 0.35rem;"><img src="https://render.worldofwarcraft.com/us/icons/56/achievement_pvp_a_a.jpg" width="14" height="14" style="border-radius: 2px;" alt="" /> Alliance Exclusive</div>`;
+    } else if (faction === 'horde') {
+      html += `<div class="wow-tip-faction horde" style="display: flex; align-items: center; gap: 0.35rem; color: #f87171; font-weight: 700; margin-top: 0.35rem;"><img src="https://render.worldofwarcraft.com/us/icons/56/achievement_pvp_h_h.jpg" width="14" height="14" style="border-radius: 2px;" alt="" /> Horde Exclusive</div>`;
+    }
+
+    let srcText = fullItem?.source || '';
+    if (!srcText) {
+      if (sourceTitle) {
+        srcText = sourceTitle;
+        if (sourceDetail) {
+          const cleanDetail = sourceDetail.replace(/\s*\([^)]*\)/g, '').trim();
+          if (cleanDetail) srcText += ` — ${cleanDetail}`;
+        }
+      } else if (altVal) {
+        const parts = altVal.split(/\s*[-–—]\s*/);
+        if (parts.length > 1) srcText = parts.slice(1).join(' — ').trim();
+      }
+    }
+    if (srcText.trim()) {
+      html += `<div class="wow-tip-source">📍 Source: ${escapeHtml(srcText.trim())}</div>`;
+    }
+
+    if (itemId) {
+      html += `
+        <div class="wow-tip-wowhead-hint" style="margin-top: 0.5rem; padding-top: 0.35rem; border-top: 1px dashed rgba(255, 255, 255, 0.12); font-size: 0.72rem; color: #f3c043; display: flex; align-items: center; justify-content: space-between;">
+          <span>Click weapon to view on Wowhead</span>
+          <span style="font-size: 0.75rem;">↗</span>
+        </div>
+      `;
+    }
+
+    return html;
+  }
+
+  function showWeaponTooltip(e, target) {
+    if (typeof document === 'undefined') return;
+    const tgt = (target && typeof target.getAttribute === 'function') ? target : (e?.currentTarget || e?.target);
+    if (!tgt || typeof tgt.getAttribute !== 'function') return;
+    let tooltip = document.getElementById('wow-item-tooltip');
+    if (!tooltip) {
+      tooltip = document.createElement('div');
+      tooltip.id = 'wow-item-tooltip';
+      tooltip.className = 'wow-floating-tooltip';
+      document.body.appendChild(tooltip);
+    }
+    tooltip.innerHTML = renderWeaponTooltipHtml(tgt);
+    tooltip.removeAttribute('hidden');
+    tooltip.style.display = 'block';
+    tooltip.style.opacity = '1';
+    tooltip.style.pointerEvents = 'none';
+    tooltip.style.zIndex = '9999999';
+    if (typeof window !== 'undefined' && window.positionTooltip) {
+      window.positionTooltip(e, tooltip);
+    }
+  }
+
+  function moveWeaponTooltip(e) {
+    if (typeof document === 'undefined') return;
+    const tooltip = document.getElementById('wow-item-tooltip');
+    if (tooltip && !tooltip.hasAttribute('hidden') && typeof window !== 'undefined' && window.positionTooltip) {
+      window.positionTooltip(e, tooltip);
+    }
+  }
+
+  function hideWeaponTooltip() {
+    if (typeof document === 'undefined') return;
+    const tooltip = document.getElementById('wow-item-tooltip');
+    if (tooltip) {
+      tooltip.setAttribute('hidden', '');
+      tooltip.style.display = 'none';
+      tooltip.style.opacity = '0';
+    }
+  }
+
   // 2. Weapon Progression Renderer
   function renderWeapons(classId) {
     const data = window.WOW_PROGRESSION_DATA?.weapons?.[classId];
@@ -201,13 +453,27 @@
           </div>
 
           <div class="weapon-main-content">
-            <div class="weapon-item-hero">
-              <a href="${wowheadUrl}" target="_blank" rel="noopener noreferrer" class="weapon-icon-link">
+            <div class="weapon-item-hero"
+                 data-weapon-target="true"
+                 data-item-name="${escapeHtml(displayStep.name)}"
+                 data-item-id="${displayStep.itemId || ''}"
+                 data-quality="${escapeHtml(displayStep.quality || '')}"
+                 data-ilvl="${displayStep.iLvl || ''}"
+                 data-req-level="${displayStep.reqLevel || ''}"
+                 data-weapon-type="${escapeHtml(displayStep.weaponType || '')}"
+                 data-speed="${escapeHtml(displayStep.speed || '')}"
+                 data-dps="${escapeHtml(displayStep.dps || '')}"
+                 data-stats="${escapeHtml(displayStep.stats || '')}"
+                 data-source-title="${escapeHtml(displayStep.source?.title || '')}"
+                 data-source-detail="${escapeHtml(displayStep.source?.detail || '')}"
+                 data-source-kind="${escapeHtml(displayStep.source?.kind || '')}"
+                 data-faction="${escapeHtml(primaryFaction)}">
+              <a href="${wowheadUrl}" target="_blank" rel="noopener noreferrer" class="weapon-icon-link" data-wowhead="domain=forever&item=${displayStep.itemId || ''}">
                 <img src="${getIconUrl(displayStep.icon)}" alt="${escapeHtml(displayStep.name)}" class="weapon-icon" loading="lazy" />
               </a>
               <div class="weapon-item-info">
                 <div class="weapon-item-header">
-                  <a href="${wowheadUrl}" target="_blank" rel="noopener noreferrer" class="weapon-title-link">
+                  <a href="${wowheadUrl}" target="_blank" rel="noopener noreferrer" class="weapon-title-link" data-wowhead="domain=forever&item=${displayStep.itemId || ''}">
                     ${escapeHtml(displayStep.name)}
                   </a>
                   <span class="weapon-type-badge">${escapeHtml(displayStep.weaponType)}</span>
@@ -239,10 +505,22 @@
                       ? `<span class="item-faction-badge faction-horde" title="Horde Only">⚔️</span>`
                       : '';
                     return `
-                      <span class="alt-tag ${altFaction !== 'both' ? 'alt-faction-' + altFaction : ''}">
+                      <span class="alt-tag ${altFaction !== 'both' ? 'alt-faction-' + altFaction : ''}"
+                            data-weapon-target="true"
+                            data-item-name="${escapeHtml(alt.name)}"
+                            data-item-id="${alt.itemId || ''}"
+                            data-quality="${escapeHtml(alt.quality || '')}"
+                            data-ilvl="${alt.iLvl || ''}"
+                            data-req-level="${alt.reqLevel || ''}"
+                            data-weapon-type="${escapeHtml(alt.weaponType || '')}"
+                            data-speed="${escapeHtml(alt.speed || '')}"
+                            data-dps="${escapeHtml(alt.dps || '')}"
+                            data-stats="${escapeHtml(alt.stats || '')}"
+                            data-alt-val="${escapeHtml(alt.value || '')}"
+                            data-faction="${escapeHtml(altFaction)}">
                         ${altBadge}
                         ${altUrl ? `
-                          <a href="${altUrl}" target="_blank" rel="noopener noreferrer" class="alt-link">
+                          <a href="${altUrl}" target="_blank" rel="noopener noreferrer" class="alt-link" data-wowhead="domain=forever&item=${alt.itemId || ''}">
                             ${escapeHtml(alt.name)}
                           </a>
                         ` : `
@@ -484,6 +762,22 @@
         window.renderDeepDiveContent?.();
       });
     });
+
+    // Weapon progression rich mouseover tooltips
+    document.querySelectorAll('[data-weapon-target="true"]').forEach(el => {
+      el.addEventListener('mouseenter', (e) => showWeaponTooltip(e, el));
+      el.addEventListener('mousemove', (e) => moveWeaponTooltip(e));
+      el.addEventListener('mouseleave', hideWeaponTooltip);
+    });
+
+    // Refresh Wowhead tooltips if Wowhead power.js script is loaded
+    if (typeof window !== 'undefined' && window.$WowheadPower && typeof window.$WowheadPower.refreshLinks === 'function') {
+      try {
+        window.$WowheadPower.refreshLinks();
+      } catch {
+        // Safe no-op
+      }
+    }
 
     // 3. Macro category filters & copy button
     document.querySelectorAll('#macro-category-chips .progression-chip').forEach(btn => {

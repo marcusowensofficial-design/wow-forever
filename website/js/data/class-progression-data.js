@@ -3422,17 +3422,29 @@ if (typeof window !== 'undefined') {
               "itemId": 2491,
               "value": "1.8 DPS - Starter vendor mace",
               "faction": "both",
-              "dps": "1.8 DPS"
+              "dps": "1.8 DPS",
+              "quality": "q1",
+              "iLvl": 6,
+              "reqLevel": 1,
+              "stats": ""
             },
             {
               "name": "Worn Shortsword",
               "itemId": 25,
               "value": "1.7 DPS - Starter 1H sword",
               "faction": "both",
-              "dps": "1.7 DPS"
+              "dps": "1.7 DPS",
+              "quality": "q2",
+              "iLvl": 6,
+              "reqLevel": 1,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q1",
+          "iLvl": 9,
+          "reqLevel": 4,
+          "stats": ""
         },
         {
           "levelBracket": "3–4",
@@ -3455,7 +3467,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "2.78 DPS",
               "speed": "1.80",
-              "weaponType": "One-handed mace"
+              "weaponType": "One-handed mace",
+              "quality": "q1",
+              "iLvl": 7,
+              "reqLevel": 2,
+              "stats": ""
             },
             {
               "name": "Copper Axe",
@@ -3464,10 +3480,18 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "3.75 DPS",
               "speed": "2.40",
-              "weaponType": "One-handed axe"
+              "weaponType": "One-handed axe",
+              "quality": "q1",
+              "iLvl": 9,
+              "reqLevel": 4,
+              "stats": "skill 20"
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q1",
+          "iLvl": 9,
+          "reqLevel": 4,
+          "stats": ""
         },
         {
           "levelBracket": "5–6",
@@ -3490,7 +3514,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "9 DPS",
               "speed": "3.50",
-              "weaponType": "Two-handed axe"
+              "weaponType": "Two-handed axe",
+              "quality": "q2",
+              "iLvl": 13,
+              "reqLevel": 8,
+              "stats": "30"
             },
             {
               "name": "Rough Boomstick",
@@ -3499,7 +3527,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "4.13 DPS",
               "speed": "2.30",
-              "weaponType": "Gun"
+              "weaponType": "Gun",
+              "quality": "q2",
+              "iLvl": 10,
+              "reqLevel": 5,
+              "stats": ""
             },
             {
               "name": "Goblin Smasher",
@@ -3508,10 +3540,18 @@ if (typeof window !== 'undefined') {
               "faction": "horde",
               "dps": "8.23 DPS",
               "speed": "3.10",
-              "weaponType": "Two-handed mace"
+              "weaponType": "Two-handed mace",
+              "quality": "q2",
+              "iLvl": 12,
+              "reqLevel": 5,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q2",
+          "iLvl": 11,
+          "reqLevel": 6,
+          "stats": ""
         },
         {
           "levelBracket": "7–8",
@@ -3534,14 +3574,22 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "9 DPS",
               "speed": "3.50",
-              "weaponType": "Two-handed axe"
+              "weaponType": "Two-handed axe",
+              "quality": "q2",
+              "iLvl": 13,
+              "reqLevel": 8,
+              "stats": ""
             },
             {
               "name": "Staff of the Dor'Danil",
               "itemId": 15396,
               "value": "8.5 DPS - Teldrassil quest reward",
               "faction": "alliance",
-              "dps": "8.5 DPS"
+              "dps": "8.5 DPS",
+              "quality": "q2",
+              "iLvl": 12,
+              "reqLevel": 6,
+              "stats": ""
             },
             {
               "name": "Riptear's Cleaver",
@@ -3550,7 +3598,11 @@ if (typeof window !== 'undefined') {
               "faction": "horde",
               "dps": "8.94 DPS",
               "speed": "3.30",
-              "weaponType": "Two-handed axe"
+              "weaponType": "Two-handed axe",
+              "quality": "q2",
+              "iLvl": 13,
+              "reqLevel": 6,
+              "stats": ""
             },
             {
               "name": "Bonecracker",
@@ -3559,10 +3611,18 @@ if (typeof window !== 'undefined') {
               "faction": "horde",
               "dps": "9.06 DPS",
               "speed": "3.20",
-              "weaponType": "Two-handed mace"
+              "weaponType": "Two-handed mace",
+              "quality": "q2",
+              "iLvl": 13,
+              "reqLevel": 7,
+              "stats": ""
             }
           ],
-          "faction": "alliance"
+          "faction": "alliance",
+          "quality": "q2",
+          "iLvl": 12,
+          "reqLevel": 1,
+          "stats": ""
         },
         {
           "levelBracket": "9–10",
@@ -3585,7 +3645,20 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "8.13 DPS",
               "speed": "2.40",
-              "weaponType": "One-handed mace"
+              "weaponType": "One-handed mace",
+              "quality": "q3",
+              "iLvl": 18,
+              "stats": "+4 Spirit, Equip: Increases healing done by up to 33 and damage done by up to 11 for all magical spells and effects.",
+              "lines": [
+                "Binds when picked up",
+                "Main Hand\tMace",
+                "13 - 26 Damage\tSpeed 2.40",
+                "(8.1 damage per second)",
+                "+4 Spirit",
+                "Equip: Increases healing done by up to 33 and damage done by up to 11 for all magical spells and effects.",
+                "Requires Level 13"
+              ],
+              "reqLevel": 13
             },
             {
               "name": "Thick War Axe",
@@ -3594,7 +3667,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "8.6 DPS",
               "speed": "2.50",
-              "weaponType": "One-handed axe"
+              "weaponType": "One-handed axe",
+              "quality": "q2",
+              "iLvl": 17,
+              "reqLevel": 12,
+              "stats": "45"
             },
             {
               "name": "Thun'grim's Axe",
@@ -3603,7 +3680,11 @@ if (typeof window !== 'undefined') {
               "faction": "horde",
               "dps": "7.78 DPS",
               "speed": "2.70",
-              "weaponType": "One-handed axe"
+              "weaponType": "One-handed axe",
+              "quality": "q2",
+              "iLvl": 15,
+              "reqLevel": 10,
+              "stats": ""
             },
             {
               "name": "Thun'grim's Sword",
@@ -3611,7 +3692,11 @@ if (typeof window !== 'undefined') {
               "value": "7.8 DPS, 2.60s - Horde Warrior Quest: Forged Steel",
               "faction": "horde",
               "dps": "7.8 DPS",
-              "speed": "2.60"
+              "speed": "2.60",
+              "quality": "q2",
+              "iLvl": 14,
+              "reqLevel": 8,
+              "stats": ""
             },
             {
               "name": "Ironforge Greathammer",
@@ -3620,10 +3705,18 @@ if (typeof window !== 'undefined') {
               "speed": "3.30",
               "dps": "16.0 DPS",
               "value": "16.0 DPS, 3.30s - Ironforge Quest",
-              "faction": "alliance"
+              "faction": "alliance",
+              "quality": "q3",
+              "iLvl": 18,
+              "reqLevel": 9,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q1",
+          "iLvl": 15,
+          "reqLevel": 10,
+          "stats": ""
         },
         {
           "levelBracket": "11–12",
@@ -3644,7 +3737,11 @@ if (typeof window !== 'undefined') {
               "itemId": 2520,
               "value": "10.5 DPS - Vendor 2H Axe",
               "faction": "both",
-              "dps": "10.5 DPS"
+              "dps": "10.5 DPS",
+              "quality": "q2",
+              "iLvl": 16,
+              "reqLevel": 10,
+              "stats": ""
             },
             {
               "name": "Trogg Scepter",
@@ -3653,7 +3750,20 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "8.13 DPS",
               "speed": "2.40",
-              "weaponType": "One-handed mace"
+              "weaponType": "One-handed mace",
+              "quality": "q3",
+              "iLvl": 18,
+              "stats": "+4 Spirit, Equip: Increases healing done by up to 33 and damage done by up to 11 for all magical spells and effects.",
+              "lines": [
+                "Binds when picked up",
+                "Main Hand\tMace",
+                "13 - 26 Damage\tSpeed 2.40",
+                "(8.1 damage per second)",
+                "+4 Spirit",
+                "Equip: Increases healing done by up to 33 and damage done by up to 11 for all magical spells and effects.",
+                "Requires Level 13"
+              ],
+              "reqLevel": 13
             },
             {
               "name": "Axe of Orgrimmar",
@@ -3662,7 +3772,11 @@ if (typeof window !== 'undefined') {
               "faction": "horde",
               "dps": "16.06 DPS",
               "speed": "3.30",
-              "weaponType": "Two-handed axe"
+              "weaponType": "Two-handed axe",
+              "quality": "q3",
+              "iLvl": 18,
+              "reqLevel": 9,
+              "stats": "+6 Sta, +6 Spi"
             },
             {
               "name": "Ironforge Greathammer",
@@ -3671,10 +3785,18 @@ if (typeof window !== 'undefined') {
               "speed": "3.30",
               "dps": "16.0 DPS",
               "value": "16.0 DPS, 3.30s - Ironforge Quest",
-              "faction": "alliance"
+              "faction": "alliance",
+              "quality": "q3",
+              "iLvl": 18,
+              "reqLevel": 9,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q2",
+          "iLvl": 16,
+          "reqLevel": 11,
+          "stats": "Guaranteed crafted spike, trainer taught at 40"
         },
         {
           "levelBracket": "13–14",
@@ -3697,7 +3819,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "12.29 DPS",
               "speed": "2.40",
-              "weaponType": "One-handed axe"
+              "weaponType": "One-handed axe",
+              "quality": "q3",
+              "iLvl": 18,
+              "reqLevel": 13,
+              "stats": "+5 Str, +2 Sta"
             },
             {
               "name": "Heavy Copper Broadsword",
@@ -3706,7 +3832,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "12.58 DPS",
               "speed": "3.30",
-              "weaponType": "Two-handed sword"
+              "weaponType": "Two-handed sword",
+              "quality": "q2",
+              "iLvl": 19,
+              "reqLevel": 14,
+              "stats": "skill 65"
             },
             {
               "name": "Axe of Orgrimmar",
@@ -3715,7 +3845,11 @@ if (typeof window !== 'undefined') {
               "faction": "horde",
               "dps": "16.06 DPS",
               "speed": "3.30",
-              "weaponType": "Two-handed axe"
+              "weaponType": "Two-handed axe",
+              "quality": "q3",
+              "iLvl": 18,
+              "reqLevel": 9,
+              "stats": "+6 Sta, +6 Spi"
             },
             {
               "name": "Bone Knuckles",
@@ -3724,10 +3858,18 @@ if (typeof window !== 'undefined') {
               "speed": "2.00",
               "dps": "12.3 DPS",
               "value": "12.3 DPS, 2.00s - RFC Drop",
-              "faction": "both"
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 18,
+              "reqLevel": 13,
+              "stats": ""
             }
           ],
-          "faction": "alliance"
+          "faction": "alliance",
+          "quality": "q3",
+          "iLvl": 18,
+          "reqLevel": 9,
+          "stats": "Dungeon quest, The Hall of Thanes, level 16"
         },
         {
           "levelBracket": "15–16",
@@ -3750,7 +3892,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "15.2 DPS",
               "speed": "3.30",
-              "weaponType": "Two-handed sword"
+              "weaponType": "Two-handed sword",
+              "quality": "q2",
+              "iLvl": 23,
+              "reqLevel": 16,
+              "stats": ""
             },
             {
               "name": "Meathook Slicer",
@@ -3759,10 +3905,18 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "13.61 DPS",
               "speed": "1.80",
-              "weaponType": "Dagger"
+              "weaponType": "Dagger",
+              "quality": "q3",
+              "iLvl": 20,
+              "reqLevel": 15,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 21,
+          "reqLevel": 16,
+          "stats": "First boss in The Deadmines, levels 18"
         },
         {
           "levelBracket": "17–18",
@@ -3785,7 +3939,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "19.71 DPS",
               "speed": "3.50",
-              "weaponType": "Two-handed mace"
+              "weaponType": "Two-handed mace",
+              "quality": "q3",
+              "iLvl": 23,
+              "reqLevel": 18,
+              "stats": ""
             },
             {
               "name": "Haunting Blade",
@@ -3794,7 +3952,19 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "22.37 DPS",
               "speed": "3.80",
-              "weaponType": "Two-handed sword"
+              "weaponType": "Two-handed sword",
+              "quality": "q3",
+              "iLvl": 27,
+              "stats": "Equip: Increases healing done by up to 33 and damage done by up to 11 for all magical spells and effects.",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand\tSword",
+                "68 - 102 Damage\tSpeed 3.80",
+                "(22.4 damage per second)",
+                "Equip: Increases healing done by up to 33 and damage done by up to 11 for all magical spells and effects.",
+                "Requires Level 22"
+              ],
+              "reqLevel": 22
             },
             {
               "name": "Vileblood Scimitar",
@@ -3803,7 +3973,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "14.62 DPS",
               "speed": "2.60",
-              "weaponType": "One-handed sword"
+              "weaponType": "One-handed sword",
+              "quality": "q3",
+              "iLvl": 22,
+              "reqLevel": 17,
+              "stats": ""
             },
             {
               "name": "Sword of the Fallen",
@@ -3812,10 +3986,18 @@ if (typeof window !== 'undefined') {
               "speed": "3.50",
               "dps": "19.7 DPS",
               "value": "19.7 DPS, 3.50s - Rare Drop",
-              "faction": "both"
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 23,
+              "reqLevel": 18,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 21,
+          "reqLevel": 16,
+          "stats": "+7 Str, +4 Sta"
         },
         {
           "levelBracket": "19–20",
@@ -3838,7 +4020,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "16.86 DPS",
               "speed": "3.50",
-              "weaponType": "Two-handed mace"
+              "weaponType": "Two-handed mace",
+              "quality": "q2",
+              "iLvl": 25,
+              "reqLevel": 20,
+              "stats": "90"
             },
             {
               "name": "Taskmaster Axe",
@@ -3847,10 +4033,28 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "14.63 DPS",
               "speed": "2.70",
-              "weaponType": "Two-handed axe"
+              "weaponType": "Two-handed axe",
+              "quality": "q3",
+              "iLvl": 23,
+              "stats": "+8 Stamina, +8 Spirit, Equip: Increases healing done by up to 45 and damage done by up to 15 for all magical spells and effects.",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand\tAxe",
+                "31 - 48 Damage\tSpeed 2.70",
+                "(14.6 damage per second)",
+                "+8 Stamina",
+                "+8 Spirit",
+                "Equip: Increases healing done by up to 45 and damage done by up to 15 for all magical spells and effects.",
+                "Requires Level 18"
+              ],
+              "reqLevel": 18
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 24,
+          "reqLevel": 15,
+          "stats": "+8 Str, +5 Sta"
         },
         {
           "levelBracket": "21–22",
@@ -3873,7 +4077,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "25.61 DPS",
               "speed": "3.30",
-              "weaponType": "Two-handed sword"
+              "weaponType": "Two-handed sword",
+              "quality": "q3",
+              "iLvl": 31,
+              "reqLevel": 26,
+              "stats": ""
             },
             {
               "name": "Taurenbane's Family Cleaver",
@@ -3882,7 +4090,20 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "22.94 DPS",
               "speed": "3.40",
-              "weaponType": "Two-handed axe"
+              "weaponType": "Two-handed axe",
+              "quality": "q3",
+              "iLvl": 28,
+              "stats": "+9 Stamina, Equip: +32 Attack Power against Humanoids.",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand\tAxe",
+                "62 - 94 Damage\tSpeed 3.40",
+                "(22.9 damage per second)",
+                "+9 Stamina",
+                "Equip: +32 Attack Power against Humanoids.",
+                "Requires Level 23"
+              ],
+              "reqLevel": 23
             },
             {
               "name": "Bronze Battle Axe",
@@ -3891,7 +4112,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "18.33 DPS",
               "speed": "3.30",
-              "weaponType": "Two-handed axe"
+              "weaponType": "Two-handed axe",
+              "quality": "q2",
+              "iLvl": 27,
+              "reqLevel": 22,
+              "stats": "105"
             },
             {
               "name": "Alliance Outrunner's Sword",
@@ -3900,10 +4125,18 @@ if (typeof window !== 'undefined') {
               "speed": "2.10",
               "dps": "17.1 DPS",
               "value": "17.1 DPS, 2.10s - Alliance Outrunner Drop",
-              "faction": "alliance"
+              "faction": "alliance",
+              "quality": "q3",
+              "iLvl": 27,
+              "reqLevel": 22,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 27,
+          "reqLevel": 22,
+          "stats": "+10 Str, +4 Agi"
         },
         {
           "levelBracket": "23–24",
@@ -3926,7 +4159,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "25.61 DPS",
               "speed": "3.30",
-              "weaponType": "Two-handed sword"
+              "weaponType": "Two-handed sword",
+              "quality": "q3",
+              "iLvl": 31,
+              "reqLevel": 26,
+              "stats": ""
             },
             {
               "name": "Heavy Mithril Axe",
@@ -3935,7 +4172,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "28.82 DPS",
               "speed": "3.40",
-              "weaponType": "Two-handed sword"
+              "weaponType": "Two-handed sword",
+              "quality": "q2",
+              "iLvl": 40,
+              "reqLevel": 35,
+              "stats": "130"
             },
             {
               "name": "The Skyblade",
@@ -3944,10 +4185,27 @@ if (typeof window !== 'undefined') {
               "speed": "3.60",
               "dps": "22.4 DPS",
               "value": "22.4 DPS, 3.60s - Ashenvale Rare",
-              "faction": "both"
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 27,
+              "reqLevel": 22,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 28,
+          "stats": "+9 Stamina, Equip: +32 Attack Power against Humanoids.",
+          "lines": [
+            "Binds when picked up",
+            "Two-Hand\tAxe",
+            "62 - 94 Damage\tSpeed 3.40",
+            "(22.9 damage per second)",
+            "+9 Stamina",
+            "Equip: +32 Attack Power against Humanoids.",
+            "Requires Level 23"
+          ],
+          "reqLevel": 23
         },
         {
           "levelBracket": "25–26",
@@ -3970,7 +4228,19 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "26.7 DPS",
               "speed": "3.20",
-              "weaponType": "Two-handed sword"
+              "weaponType": "Two-handed sword",
+              "quality": "q3",
+              "iLvl": 32,
+              "stats": "+12 Stamina, +12 Spirit",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand\tSword",
+                "70 - 106 Damage\tSpeed 3.30",
+                "(26.7 damage per second)",
+                "+12 Stamina",
+                "+12 Spirit"
+              ],
+              "reqLevel": 24
             },
             {
               "name": "Dendweller's Hammer",
@@ -3979,7 +4249,20 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "25.61 DPS",
               "speed": "3.30",
-              "weaponType": "Two-handed mace"
+              "weaponType": "Two-handed mace",
+              "quality": "q3",
+              "iLvl": 31,
+              "stats": "+12 Stamina, +100 Armor",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand\tMace",
+                "67 - 102 Damage\tSpeed 3.30",
+                "(25.6 damage per second)",
+                "+12 Stamina",
+                "+100 Armor",
+                "Requires Level 26"
+              ],
+              "reqLevel": 26
             },
             {
               "name": "Solid Iron Maul",
@@ -3988,10 +4271,35 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "15.57 DPS",
               "speed": "3.50",
-              "weaponType": "Two-handed mace"
+              "weaponType": "Two-handed mace",
+              "quality": "q2",
+              "iLvl": 31,
+              "stats": "+12 Stamina, Equip: Increases damage and healing done by magical spells and effects by up to 24.",
+              "lines": [
+                "Binds when equipped",
+                "Two-Hand\tMace",
+                "43 - 66 Damage\tSpeed 3.50",
+                "(15.6 damage per second)",
+                "+12 Stamina",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 24.",
+                "Requires Level 26"
+              ],
+              "reqLevel": 26
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 33,
+          "stats": "+60 Armor, Equip: +32 Attack Power.",
+          "lines": [
+            "Binds when picked up",
+            "Two-Hand\tMace",
+            "73 - 110 Damage\tSpeed 3.30",
+            "(27.7 damage per second)",
+            "+60 Armor",
+            "Equip: +32 Attack Power."
+          ],
+          "reqLevel": 24
         },
         {
           "levelBracket": "27–28",
@@ -4014,7 +4322,22 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "28.83 DPS",
               "speed": "3.00",
-              "weaponType": "Polearm"
+              "weaponType": "Polearm",
+              "quality": "q3",
+              "iLvl": 34,
+              "stats": "+10 Agility, +9 Nature Resistance, Equip: +10 Hit Rating",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand\tPolearm",
+                "69 - 104 Damage\tSpeed 3.00",
+                "(28.8 damage per second)",
+                "+10 Agility",
+                "+9 Nature Resistance",
+                "Requires Level 29",
+                "Equip: +10 Hit Rating",
+                "Sell Price: 1g 2s 92c"
+              ],
+              "reqLevel": 29
             },
             {
               "name": "Defender of Dalaran",
@@ -4023,10 +4346,27 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "31.21 DPS",
               "speed": "3.30",
-              "weaponType": "Two-handed mace"
+              "weaponType": "Two-handed mace",
+              "quality": "q3",
+              "iLvl": 36,
+              "stats": "+9 Strength, +13 Stamina, +9 Intellect",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand\tMace",
+                "82 - 124 Damage\tSpeed 3.30",
+                "(31.2 damage per second)",
+                "+9 Strength",
+                "+13 Stamina",
+                "+9 Intellect"
+              ],
+              "reqLevel": 24
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 33,
+          "reqLevel": 28,
+          "stats": "+11 Str, +8 Sta"
         },
         {
           "levelBracket": "29–30",
@@ -4049,7 +4389,20 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "35.74 DPS",
               "speed": "3.40",
-              "weaponType": "Two-handed mace"
+              "weaponType": "Two-handed mace",
+              "quality": "q3",
+              "iLvl": 40,
+              "stats": "+16 Strength, +15 Stamina",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand\tMace",
+                "97 - 146 Damage\tSpeed 3.40",
+                "(35.7 damage per second)",
+                "+16 Strength",
+                "+15 Stamina",
+                "Classes: Warrior"
+              ],
+              "reqLevel": 30
             },
             {
               "name": "Whirlwind Sword",
@@ -4058,7 +4411,20 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "35.52 DPS",
               "speed": "2.90",
-              "weaponType": "Two-handed sword"
+              "weaponType": "Two-handed sword",
+              "quality": "q3",
+              "iLvl": 40,
+              "stats": "+16 Strength, +15 Stamina",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand\tSword",
+                "82 - 124 Damage\tSpeed 2.90",
+                "(35.5 damage per second)",
+                "+16 Strength",
+                "+15 Stamina",
+                "Classes: Warrior"
+              ],
+              "reqLevel": 30
             },
             {
               "name": "Dark Hearted Hammer",
@@ -4067,7 +4433,19 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "28.95 DPS",
               "speed": "3.80",
-              "weaponType": "Two-handed mace"
+              "weaponType": "Two-handed mace",
+              "quality": "q2",
+              "iLvl": 40,
+              "stats": "+12 Strength, +8 Stamina",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand\tMace",
+                "88 - 132 Damage\tSpeed 3.80",
+                "(28.9 damage per second)",
+                "+12 Strength",
+                "+8 Stamina"
+              ],
+              "reqLevel": 30
             },
             {
               "name": "Master Hunter's Spellsword",
@@ -4076,7 +4454,19 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "32.5 DPS",
               "speed": "2.40",
-              "weaponType": "Two-handed sword"
+              "weaponType": "Two-handed sword",
+              "quality": "q2",
+              "iLvl": 43,
+              "stats": "+12 Strength, Equip: Increases damage and healing done by magical spells and effects by up to 14.",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand\tSword",
+                "62 - 94 Damage\tSpeed 2.40",
+                "(32.5 damage per second)",
+                "+12 Strength",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 14."
+              ],
+              "reqLevel": 28
             },
             {
               "name": "Corpsemaker",
@@ -4085,7 +4475,20 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "28.95 DPS",
               "speed": "3.80",
-              "weaponType": "Two-handed axe"
+              "weaponType": "Two-handed axe",
+              "quality": "q3",
+              "iLvl": 34,
+              "stats": "+15 Strength, +8 Stamina",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand\tAxe",
+                "88 - 132 Damage\tSpeed 3.80",
+                "(28.9 damage per second)",
+                "+15 Strength",
+                "+8 Stamina",
+                "Requires Level 29"
+              ],
+              "reqLevel": 29
             },
             {
               "name": "Rage of the Storm",
@@ -4094,10 +4497,36 @@ if (typeof window !== 'undefined') {
               "speed": "3.20",
               "dps": "35.6 DPS",
               "value": "35.6 DPS, 3.20s - Custom Boss Drop",
-              "faction": "both"
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 40,
+              "stats": "+12 Intellect, +15 Stamina, Equip: Increases the damage dealt by your Stormstrike ability by 10%.",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand\tMace",
+                "91 - 137 Damage\tSpeed 3.20",
+                "(35.6 damage per second)",
+                "+12 Intellect",
+                "+15 Stamina",
+                "Equip: Increases the damage dealt by your Stormstrike ability by 10%."
+              ],
+              "reqLevel": 30
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 40,
+          "stats": "+16 Strength, +15 Stamina",
+          "lines": [
+            "Binds when picked up",
+            "Two-Hand\tAxe",
+            "102 - 154 Damage\tSpeed 3.60",
+            "(35.6 damage per second)",
+            "+16 Strength",
+            "+15 Stamina",
+            "Classes: Warrior"
+          ],
+          "reqLevel": 30
         },
         {
           "levelBracket": "31–36",
@@ -4120,7 +4549,20 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "35.56 DPS",
               "speed": "3.60",
-              "weaponType": "Two-handed axe"
+              "weaponType": "Two-handed axe",
+              "quality": "q3",
+              "iLvl": 40,
+              "stats": "+16 Strength, +15 Stamina",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand\tAxe",
+                "102 - 154 Damage\tSpeed 3.60",
+                "(35.6 damage per second)",
+                "+16 Strength",
+                "+15 Stamina",
+                "Classes: Warrior"
+              ],
+              "reqLevel": 30
             },
             {
               "name": "Manual Crowd Pummeler",
@@ -4129,7 +4571,23 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "29 DPS",
               "speed": "2.00",
-              "weaponType": "Two-handed mace"
+              "weaponType": "Two-handed mace",
+              "quality": "q3",
+              "iLvl": 34,
+              "stats": "+16 Strength, +5 Agility, Use: Increases your attack speed by 50% for 30 sec. (3 Min Cooldown)",
+              "lines": [
+                "Binds when picked up",
+                "Unique",
+                "Two-Hand\tMace",
+                "46 - 70 Damage\tSpeed 2.00",
+                "(29 damage per second)",
+                "+16 Strength",
+                "+5 Agility",
+                "Use: Increases your attack speed by 50% for 30 sec. (3 Min Cooldown)",
+                "3 Charges",
+                "Requires Level 29"
+              ],
+              "reqLevel": 29
             },
             {
               "name": "Mighty Iron Hammer",
@@ -4138,10 +4596,27 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "15.54 DPS",
               "speed": "2.80",
-              "weaponType": "One-handed mace"
+              "weaponType": "One-handed mace",
+              "quality": "q2",
+              "iLvl": 30,
+              "reqLevel": 25,
+              "stats": "145"
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 34,
+          "stats": "+15 Strength, +8 Stamina",
+          "lines": [
+            "Binds when picked up",
+            "Two-Hand\tAxe",
+            "88 - 132 Damage\tSpeed 3.80",
+            "(28.9 damage per second)",
+            "+15 Strength",
+            "+8 Stamina",
+            "Requires Level 29"
+          ],
+          "reqLevel": 29
         },
         {
           "levelBracket": "37–40",
@@ -4164,7 +4639,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "38.82 DPS",
               "speed": "3.40",
-              "weaponType": "Two-handed mace"
+              "weaponType": "Two-handed mace",
+              "quality": "q3",
+              "iLvl": 44,
+              "reqLevel": 39,
+              "stats": "+16 Str, +17 Sta"
             },
             {
               "name": "Bonebiter",
@@ -4173,7 +4652,11 @@ if (typeof window !== 'undefined') {
               "faction": "alliance",
               "dps": "38.82 DPS",
               "speed": "3.40",
-              "weaponType": "Two-handed axe"
+              "weaponType": "Two-handed axe",
+              "quality": "q3",
+              "iLvl": 44,
+              "reqLevel": 34,
+              "stats": ""
             },
             {
               "name": "Sword of Serenity",
@@ -4182,7 +4665,11 @@ if (typeof window !== 'undefined') {
               "faction": "alliance",
               "dps": "30 DPS",
               "speed": "2.20",
-              "weaponType": "One-handed sword"
+              "weaponType": "One-handed sword",
+              "quality": "q3",
+              "iLvl": 44,
+              "reqLevel": 34,
+              "stats": "+9 Sta, +4 Spi"
             },
             {
               "name": "Sword of Omen",
@@ -4190,10 +4677,18 @@ if (typeof window !== 'undefined') {
               "value": "29.7 DPS, 2.20s, +9 Str, +4 Sta, +3 Agi - Horde SM Quest: Into The Scarlet Monastery",
               "faction": "horde",
               "dps": "29.7 DPS",
-              "speed": "2.20"
+              "speed": "2.20",
+              "quality": "q3",
+              "iLvl": 42,
+              "reqLevel": 36,
+              "stats": "+9 Str, +4 Sta, +3 Agi"
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 42,
+          "reqLevel": 37,
+          "stats": "Scarlet Monastery Armory, levels 35"
         },
         {
           "levelBracket": "41–44",
@@ -4215,7 +4710,11 @@ if (typeof window !== 'undefined') {
               "value": "40.5 DPS, 3.90s - Uldaman: Archaedas",
               "faction": "both",
               "dps": "40.5 DPS",
-              "speed": "3.90"
+              "speed": "3.90",
+              "quality": "q3",
+              "iLvl": 46,
+              "reqLevel": 40,
+              "stats": ""
             },
             {
               "name": "The Pacifier",
@@ -4224,7 +4723,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "36.63 DPS",
               "speed": "4.00",
-              "weaponType": "Two-handed mace"
+              "weaponType": "Two-handed mace",
+              "quality": "q3",
+              "iLvl": 41,
+              "reqLevel": 36,
+              "stats": ""
             },
             {
               "name": "Gul'gash's Greathammer",
@@ -4233,10 +4736,18 @@ if (typeof window !== 'undefined') {
               "speed": "3.60",
               "dps": "42.8 DPS",
               "value": "42.8 DPS, 3.60s - Feralas Drop",
-              "faction": "both"
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 49,
+              "reqLevel": 44,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 48,
+          "reqLevel": 43,
+          "stats": "Slow 3.80s swing speed maximizes Mortal Strike weapon coefficient"
         },
         {
           "levelBracket": "45–50",
@@ -4259,7 +4770,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "46.47 DPS",
               "speed": "3.40",
-              "weaponType": "Two-handed mace"
+              "weaponType": "Two-handed mace",
+              "quality": "q3",
+              "iLvl": 54,
+              "reqLevel": 49,
+              "stats": ""
             },
             {
               "name": "Warmonger",
@@ -4268,10 +4783,18 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "45 DPS",
               "speed": "3.00",
-              "weaponType": "Two-handed sword"
+              "weaponType": "Two-handed sword",
+              "quality": "q3",
+              "iLvl": 52,
+              "reqLevel": 47,
+              "stats": "+3% Hit"
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 53,
+          "reqLevel": 48,
+          "stats": "+14 Str, +1% Crit"
         },
         {
           "levelBracket": "51–54",
@@ -4293,7 +4816,11 @@ if (typeof window !== 'undefined') {
               "value": "49.3 DPS, 3.70s - BRD: Emperor Dagran Thaurissan",
               "faction": "both",
               "dps": "49.3 DPS",
-              "speed": "3.70"
+              "speed": "3.70",
+              "quality": "q3",
+              "iLvl": 56,
+              "reqLevel": 50,
+              "stats": ""
             },
             {
               "name": "Enchanted Battlehammer",
@@ -4302,10 +4829,18 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "48.29 DPS",
               "speed": "3.50",
-              "weaponType": "Two-handed mace"
+              "weaponType": "Two-handed mace",
+              "quality": "q3",
+              "iLvl": 56,
+              "reqLevel": 51,
+              "stats": "280"
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 55,
+          "reqLevel": 50,
+          "stats": ""
         },
         {
           "levelBracket": "55–60",
@@ -4327,7 +4862,11 @@ if (typeof window !== 'undefined') {
               "value": "55.4 DPS, 3.50s, 420 bleed proc - LBRS: Warmaster Voone",
               "faction": "both",
               "dps": "55.4 DPS",
-              "speed": "3.50"
+              "speed": "3.50",
+              "quality": "q3",
+              "iLvl": 60,
+              "reqLevel": 54,
+              "stats": "420 bleed proc"
             },
             {
               "name": "Blackblade of Shahram",
@@ -4335,7 +4874,11 @@ if (typeof window !== 'undefined') {
               "value": "53.6 DPS, 3.50s - UBRS: General Drakkisath",
               "faction": "both",
               "dps": "53.6 DPS",
-              "speed": "3.50"
+              "speed": "3.50",
+              "quality": "q3",
+              "iLvl": 60,
+              "reqLevel": 54,
+              "stats": ""
             },
             {
               "name": "The Unstoppable Force",
@@ -4344,14 +4887,22 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "56.53 DPS",
               "speed": "3.60",
-              "weaponType": "Two-handed mace"
+              "weaponType": "Two-handed mace",
+              "quality": "q4",
+              "iLvl": 60,
+              "reqLevel": 55,
+              "stats": ""
             },
             {
               "name": "Dreadforge Retaliator",
               "itemId": 11931,
               "value": "49.3 DPS - BRD Emperor",
               "faction": "both",
-              "dps": "49.3 DPS"
+              "dps": "49.3 DPS",
+              "quality": "q3",
+              "iLvl": 60,
+              "reqLevel": 54,
+              "stats": ""
             },
             {
               "name": "Icesworn Decapitator",
@@ -4360,10 +4911,18 @@ if (typeof window !== 'undefined') {
               "speed": "3.60",
               "dps": "50.6 DPS",
               "value": "50.6 DPS, 3.60s - Winterspring Rare",
-              "faction": "both"
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 59,
+              "reqLevel": 54,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 63,
+          "reqLevel": 58,
+          "stats": "+62 AP, slow 3.80s Mortal Strikes"
         }
       ]
     },
@@ -4395,17 +4954,29 @@ if (typeof window !== 'undefined') {
               "itemId": 2491,
               "value": "1.8 DPS - Starter vendor mace",
               "faction": "both",
-              "dps": "1.8 DPS"
+              "dps": "1.8 DPS",
+              "quality": "q1",
+              "iLvl": 6,
+              "reqLevel": 1,
+              "stats": ""
             },
             {
               "name": "Worn Shortsword",
               "itemId": 25,
               "value": "1.7 DPS - Starter sword",
               "faction": "both",
-              "dps": "1.7 DPS"
+              "dps": "1.7 DPS",
+              "quality": "q2",
+              "iLvl": 6,
+              "reqLevel": 1,
+              "stats": ""
             }
           ],
-          "faction": "alliance"
+          "faction": "alliance",
+          "quality": "q2",
+          "iLvl": 6,
+          "reqLevel": 1,
+          "stats": ""
         },
         {
           "levelBracket": "3–4",
@@ -4428,7 +4999,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "2.78 DPS",
               "speed": "1.80",
-              "weaponType": "One-handed mace"
+              "weaponType": "One-handed mace",
+              "quality": "q1",
+              "iLvl": 7,
+              "reqLevel": 2,
+              "stats": ""
             },
             {
               "name": "Copper Shortsword",
@@ -4437,10 +5012,18 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "5.4 DPS",
               "speed": "2.50",
-              "weaponType": "One-handed sword"
+              "weaponType": "One-handed sword",
+              "quality": "q2",
+              "iLvl": 10,
+              "reqLevel": 4,
+              "stats": "20"
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q1",
+          "iLvl": 9,
+          "reqLevel": 4,
+          "stats": ""
         },
         {
           "levelBracket": "5–6",
@@ -4463,7 +5046,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "2.78 DPS",
               "speed": "1.80",
-              "weaponType": "One-handed mace"
+              "weaponType": "One-handed mace",
+              "quality": "q1",
+              "iLvl": 7,
+              "reqLevel": 2,
+              "stats": ""
             },
             {
               "name": "Copper Mace",
@@ -4472,10 +5059,18 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "3.85 DPS",
               "speed": "2.60",
-              "weaponType": "One-handed mace"
+              "weaponType": "One-handed mace",
+              "quality": "q1",
+              "iLvl": 9,
+              "reqLevel": 4,
+              "stats": "15"
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q2",
+          "iLvl": 11,
+          "reqLevel": 6,
+          "stats": "Crafted 2H Sword with heavy Seal of Command scaling"
         },
         {
           "levelBracket": "7–8",
@@ -4498,7 +5093,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "9 DPS",
               "speed": "3.50",
-              "weaponType": "Two-handed mace"
+              "weaponType": "Two-handed mace",
+              "quality": "q1",
+              "iLvl": 15,
+              "reqLevel": 10,
+              "stats": ""
             },
             {
               "name": "Copper Claymore",
@@ -4507,10 +5106,18 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "7.73 DPS",
               "speed": "3.30",
-              "weaponType": "Two-handed sword"
+              "weaponType": "Two-handed sword",
+              "quality": "q2",
+              "iLvl": 11,
+              "reqLevel": 6,
+              "stats": "25"
             }
           ],
-          "faction": "alliance"
+          "faction": "alliance",
+          "quality": "q2",
+          "iLvl": 12,
+          "reqLevel": 1,
+          "stats": ""
         },
         {
           "levelBracket": "9–10",
@@ -4533,7 +5140,20 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "8.13 DPS",
               "speed": "2.40",
-              "weaponType": "One-handed mace"
+              "weaponType": "One-handed mace",
+              "quality": "q3",
+              "iLvl": 18,
+              "stats": "+4 Spirit, Equip: Increases healing done by up to 33 and damage done by up to 11 for all magical spells and effects.",
+              "lines": [
+                "Binds when picked up",
+                "Main Hand\tMace",
+                "13 - 26 Damage\tSpeed 2.40",
+                "(8.1 damage per second)",
+                "+4 Spirit",
+                "Equip: Increases healing done by up to 33 and damage done by up to 11 for all magical spells and effects.",
+                "Requires Level 13"
+              ],
+              "reqLevel": 13
             },
             {
               "name": "Heavy Copper Broadsword",
@@ -4542,7 +5162,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "12.58 DPS",
               "speed": "3.30",
-              "weaponType": "Two-handed sword"
+              "weaponType": "Two-handed sword",
+              "quality": "q2",
+              "iLvl": 19,
+              "reqLevel": 14,
+              "stats": "65"
             },
             {
               "name": "Ironforge Greathammer",
@@ -4551,10 +5175,18 @@ if (typeof window !== 'undefined') {
               "speed": "3.30",
               "dps": "16.0 DPS",
               "value": "16.0 DPS, 3.30s - Ironforge Quest",
-              "faction": "alliance"
+              "faction": "alliance",
+              "quality": "q3",
+              "iLvl": 18,
+              "reqLevel": 9,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q1",
+          "iLvl": 15,
+          "reqLevel": 10,
+          "stats": ""
         },
         {
           "levelBracket": "11–12",
@@ -4577,7 +5209,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "9 DPS",
               "speed": "3.50",
-              "weaponType": "Two-handed mace"
+              "weaponType": "Two-handed mace",
+              "quality": "q1",
+              "iLvl": 15,
+              "reqLevel": 10,
+              "stats": ""
             },
             {
               "name": "Heavy Copper Broadsword",
@@ -4586,7 +5222,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "12.58 DPS",
               "speed": "3.30",
-              "weaponType": "Two-handed sword"
+              "weaponType": "Two-handed sword",
+              "quality": "q2",
+              "iLvl": 19,
+              "reqLevel": 14,
+              "stats": "65"
             },
             {
               "name": "Ironforge Greathammer",
@@ -4595,10 +5235,18 @@ if (typeof window !== 'undefined') {
               "speed": "3.30",
               "dps": "16.0 DPS",
               "value": "16.0 DPS, 3.30s - Ironforge Quest",
-              "faction": "alliance"
+              "faction": "alliance",
+              "quality": "q3",
+              "iLvl": 18,
+              "reqLevel": 9,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q2",
+          "iLvl": 16,
+          "reqLevel": 11,
+          "stats": "Guaranteed crafted 2H mace upgrade"
         },
         {
           "levelBracket": "13–14",
@@ -4621,7 +5269,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "12.58 DPS",
               "speed": "3.30",
-              "weaponType": "Two-handed sword"
+              "weaponType": "Two-handed sword",
+              "quality": "q2",
+              "iLvl": 19,
+              "reqLevel": 14,
+              "stats": "65"
             },
             {
               "name": "Bronze Mace",
@@ -4630,10 +5282,18 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "11.15 DPS",
               "speed": "2.60",
-              "weaponType": "One-handed mace"
+              "weaponType": "One-handed mace",
+              "quality": "q2",
+              "iLvl": 22,
+              "reqLevel": 17,
+              "stats": "75"
             }
           ],
-          "faction": "alliance"
+          "faction": "alliance",
+          "quality": "q3",
+          "iLvl": 18,
+          "reqLevel": 9,
+          "stats": "The Hall of Thanes dungeon quest, level 16"
         },
         {
           "levelBracket": "15–16",
@@ -4656,7 +5316,19 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "22.37 DPS",
               "speed": "3.80",
-              "weaponType": "Two-handed sword"
+              "weaponType": "Two-handed sword",
+              "quality": "q3",
+              "iLvl": 27,
+              "stats": "Equip: Increases healing done by up to 33 and damage done by up to 11 for all magical spells and effects.",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand\tSword",
+                "68 - 102 Damage\tSpeed 3.80",
+                "(22.4 damage per second)",
+                "Equip: Increases healing done by up to 33 and damage done by up to 11 for all magical spells and effects.",
+                "Requires Level 22"
+              ],
+              "reqLevel": 22
             },
             {
               "name": "Monstrous Cleaver",
@@ -4665,10 +5337,18 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "15.2 DPS",
               "speed": "3.30",
-              "weaponType": "Two-handed sword"
+              "weaponType": "Two-handed sword",
+              "quality": "q2",
+              "iLvl": 23,
+              "reqLevel": 16,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 21,
+          "reqLevel": 16,
+          "stats": "+11 Str"
         },
         {
           "levelBracket": "17–18",
@@ -4691,7 +5371,19 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "22.37 DPS",
               "speed": "3.80",
-              "weaponType": "Two-handed sword"
+              "weaponType": "Two-handed sword",
+              "quality": "q3",
+              "iLvl": 27,
+              "stats": "Equip: Increases healing done by up to 33 and damage done by up to 11 for all magical spells and effects.",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand\tSword",
+                "68 - 102 Damage\tSpeed 3.80",
+                "(22.4 damage per second)",
+                "Equip: Increases healing done by up to 33 and damage done by up to 11 for all magical spells and effects.",
+                "Requires Level 22"
+              ],
+              "reqLevel": 22
             },
             {
               "name": "Bronze Warhammer",
@@ -4700,7 +5392,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "16.86 DPS",
               "speed": "3.50",
-              "weaponType": "Two-handed mace"
+              "weaponType": "Two-handed mace",
+              "quality": "q2",
+              "iLvl": 25,
+              "reqLevel": 20,
+              "stats": "90"
             },
             {
               "name": "Sword of the Fallen",
@@ -4709,10 +5405,18 @@ if (typeof window !== 'undefined') {
               "speed": "3.50",
               "dps": "19.7 DPS",
               "value": "19.7 DPS, 3.50s - Rare Drop",
-              "faction": "both"
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 23,
+              "reqLevel": 18,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 23,
+          "reqLevel": 18,
+          "stats": "+11 Str, +4 Agi, slow 3.50s"
         },
         {
           "levelBracket": "19–20",
@@ -4735,7 +5439,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "16.86 DPS",
               "speed": "3.50",
-              "weaponType": "Two-handed mace"
+              "weaponType": "Two-handed mace",
+              "quality": "q2",
+              "iLvl": 25,
+              "reqLevel": 20,
+              "stats": "90"
             },
             {
               "name": "Bronze Greatsword",
@@ -4744,10 +5452,18 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "17.5 DPS",
               "speed": "3.40",
-              "weaponType": "Two-handed sword"
+              "weaponType": "Two-handed sword",
+              "quality": "q2",
+              "iLvl": 26,
+              "reqLevel": 21,
+              "stats": "105"
             }
           ],
-          "faction": "alliance"
+          "faction": "alliance",
+          "quality": "q3",
+          "iLvl": 31,
+          "reqLevel": 20,
+          "stats": "+6 Str, +12 Sta, +7 Int, +6 Spi"
         },
         {
           "levelBracket": "21–24",
@@ -4770,7 +5486,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "25.61 DPS",
               "speed": "3.30",
-              "weaponType": "Two-handed sword"
+              "weaponType": "Two-handed sword",
+              "quality": "q3",
+              "iLvl": 31,
+              "reqLevel": 26,
+              "stats": ""
             },
             {
               "name": "Solid Iron Maul",
@@ -4779,7 +5499,20 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "15.57 DPS",
               "speed": "3.50",
-              "weaponType": "Two-handed mace"
+              "weaponType": "Two-handed mace",
+              "quality": "q2",
+              "iLvl": 31,
+              "stats": "+12 Stamina, Equip: Increases damage and healing done by magical spells and effects by up to 24.",
+              "lines": [
+                "Binds when equipped",
+                "Two-Hand\tMace",
+                "43 - 66 Damage\tSpeed 3.50",
+                "(15.6 damage per second)",
+                "+12 Stamina",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 24.",
+                "Requires Level 26"
+              ],
+              "reqLevel": 26
             },
             {
               "name": "The Skyblade",
@@ -4788,10 +5521,18 @@ if (typeof window !== 'undefined') {
               "speed": "3.60",
               "dps": "22.4 DPS",
               "value": "22.4 DPS, 3.60s - Ashenvale Rare",
-              "faction": "both"
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 27,
+              "reqLevel": 22,
+              "stats": ""
             }
           ],
-          "faction": "alliance"
+          "faction": "alliance",
+          "quality": "q3",
+          "iLvl": 31,
+          "reqLevel": 20,
+          "stats": "Exceptional stats carry through level 30"
         },
         {
           "levelBracket": "25–28",
@@ -4814,7 +5555,19 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "26.7 DPS",
               "speed": "3.20",
-              "weaponType": "Two-handed sword"
+              "weaponType": "Two-handed sword",
+              "quality": "q3",
+              "iLvl": 32,
+              "stats": "+12 Stamina, +12 Spirit",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand\tSword",
+                "70 - 106 Damage\tSpeed 3.30",
+                "(26.7 damage per second)",
+                "+12 Stamina",
+                "+12 Spirit"
+              ],
+              "reqLevel": 24
             },
             {
               "name": "Dendweller's Hammer",
@@ -4823,7 +5576,20 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "25.61 DPS",
               "speed": "3.30",
-              "weaponType": "Two-handed mace"
+              "weaponType": "Two-handed mace",
+              "quality": "q3",
+              "iLvl": 31,
+              "stats": "+12 Stamina, +100 Armor",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand\tMace",
+                "67 - 102 Damage\tSpeed 3.30",
+                "(25.6 damage per second)",
+                "+12 Stamina",
+                "+100 Armor",
+                "Requires Level 26"
+              ],
+              "reqLevel": 26
             },
             {
               "name": "Hardened Iron Shortsword",
@@ -4832,7 +5598,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "16.67 DPS",
               "speed": "1.80",
-              "weaponType": "One-handed sword"
+              "weaponType": "One-handed sword",
+              "quality": "q2",
+              "iLvl": 32,
+              "reqLevel": 27,
+              "stats": "130"
             },
             {
               "name": "Defender of Dalaran",
@@ -4841,10 +5611,35 @@ if (typeof window !== 'undefined') {
               "speed": "3.30",
               "dps": "31.2 DPS",
               "value": "31.2 DPS, 3.30s - Dalaran Dungeon",
-              "faction": "both"
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 36,
+              "stats": "+9 Strength, +13 Stamina, +9 Intellect",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand\tMace",
+                "82 - 124 Damage\tSpeed 3.30",
+                "(31.2 damage per second)",
+                "+9 Strength",
+                "+13 Stamina",
+                "+9 Intellect"
+              ],
+              "reqLevel": 24
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 33,
+          "stats": "+60 Armor, Equip: +32 Attack Power.",
+          "lines": [
+            "Binds when picked up",
+            "Two-Hand\tMace",
+            "73 - 110 Damage\tSpeed 3.30",
+            "(27.7 damage per second)",
+            "+60 Armor",
+            "Equip: +32 Attack Power."
+          ],
+          "reqLevel": 24
         },
         {
           "levelBracket": "29–30",
@@ -4867,7 +5662,20 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "31.21 DPS",
               "speed": "3.30",
-              "weaponType": "Two-handed mace"
+              "weaponType": "Two-handed mace",
+              "quality": "q3",
+              "iLvl": 36,
+              "stats": "+9 Strength, +13 Stamina, +9 Intellect",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand\tMace",
+                "82 - 124 Damage\tSpeed 3.30",
+                "(31.2 damage per second)",
+                "+9 Strength",
+                "+13 Stamina",
+                "+9 Intellect"
+              ],
+              "reqLevel": 24
             },
             {
               "name": "Dark Hearted Hammer",
@@ -4876,7 +5684,19 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "28.95 DPS",
               "speed": "3.80",
-              "weaponType": "Two-handed mace"
+              "weaponType": "Two-handed mace",
+              "quality": "q2",
+              "iLvl": 40,
+              "stats": "+12 Strength, +8 Stamina",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand\tMace",
+                "88 - 132 Damage\tSpeed 3.80",
+                "(28.9 damage per second)",
+                "+12 Strength",
+                "+8 Stamina"
+              ],
+              "reqLevel": 30
             },
             {
               "name": "Master Hunter's Spellsword",
@@ -4885,7 +5705,19 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "32.5 DPS",
               "speed": "2.40",
-              "weaponType": "Two-handed sword"
+              "weaponType": "Two-handed sword",
+              "quality": "q2",
+              "iLvl": 43,
+              "stats": "+12 Strength, Equip: Increases damage and healing done by magical spells and effects by up to 14.",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand\tSword",
+                "62 - 94 Damage\tSpeed 2.40",
+                "(32.5 damage per second)",
+                "+12 Strength",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 14."
+              ],
+              "reqLevel": 28
             },
             {
               "name": "Rage of the Storm",
@@ -4894,10 +5726,37 @@ if (typeof window !== 'undefined') {
               "speed": "3.20",
               "dps": "35.6 DPS",
               "value": "35.6 DPS, 3.20s - Custom Boss Drop",
-              "faction": "both"
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 40,
+              "stats": "+12 Intellect, +15 Stamina, Equip: Increases the damage dealt by your Stormstrike ability by 10%.",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand\tMace",
+                "91 - 137 Damage\tSpeed 3.20",
+                "(35.6 damage per second)",
+                "+12 Intellect",
+                "+15 Stamina",
+                "Equip: Increases the damage dealt by your Stormstrike ability by 10%."
+              ],
+              "reqLevel": 30
             }
           ],
-          "faction": "alliance"
+          "faction": "alliance",
+          "quality": "q3",
+          "iLvl": 31,
+          "stats": "+10 Intellect, +9 Stamina, Chance on hit: Sear the target with a vortex of blazing wind, dealing 39 to 59 Holystorm damage. Deals 3 times as much damage to Wolves and Worgen.",
+          "lines": [
+            "Binds when picked up",
+            "Two-Hand\tSword",
+            "69 - 105 Damage\tSpeed 3.40",
+            "(25.6 damage per second)",
+            "+10 Intellect",
+            "+9 Stamina",
+            "Chance on hit: Sear the target with a vortex of blazing wind, dealing 39 to 59 Holystorm damage. Deals 3 times as much damage to Wolves and Worgen.",
+            "Classes: Paladin"
+          ],
+          "reqLevel": 20
         },
         {
           "levelBracket": "31–35",
@@ -4920,7 +5779,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "24.71 DPS",
               "speed": "3.50",
-              "weaponType": "Two-handed sword"
+              "weaponType": "Two-handed sword",
+              "quality": "q2",
+              "iLvl": 36,
+              "reqLevel": 31,
+              "stats": "160"
             },
             {
               "name": "Silver Spade",
@@ -4929,10 +5792,38 @@ if (typeof window !== 'undefined') {
               "faction": "alliance",
               "dps": "30.14 DPS",
               "speed": "3.70",
-              "weaponType": "Two-handed mace"
+              "weaponType": "Two-handed mace",
+              "quality": "q2",
+              "iLvl": 41,
+              "stats": "+4 Stamina, +15 Spirit",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand\tMace",
+                "89 - 134 Damage\tSpeed 3.70",
+                "(30.1 damage per second)",
+                "+4 Stamina",
+                "+15 Spirit"
+              ],
+              "reqLevel": 30
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 34,
+          "stats": "+16 Strength, +5 Agility, Use: Increases your attack speed by 50% for 30 sec. (3 Min Cooldown)",
+          "lines": [
+            "Binds when picked up",
+            "Unique",
+            "Two-Hand\tMace",
+            "46 - 70 Damage\tSpeed 2.00",
+            "(29 damage per second)",
+            "+16 Strength",
+            "+5 Agility",
+            "Use: Increases your attack speed by 50% for 30 sec. (3 Min Cooldown)",
+            "3 Charges",
+            "Requires Level 29"
+          ],
+          "reqLevel": 29
         },
         {
           "levelBracket": "36–40",
@@ -4955,7 +5846,11 @@ if (typeof window !== 'undefined') {
               "faction": "alliance",
               "dps": "30 DPS",
               "speed": "2.20",
-              "weaponType": "One-handed sword"
+              "weaponType": "One-handed sword",
+              "quality": "q3",
+              "iLvl": 44,
+              "reqLevel": 34,
+              "stats": "+9 Sta, +15 Spi"
             },
             {
               "name": "Archeus",
@@ -4964,10 +5859,18 @@ if (typeof window !== 'undefined') {
               "faction": "alliance",
               "dps": "23.94 DPS",
               "speed": "3.30",
-              "weaponType": "Two-handed sword"
+              "weaponType": "Two-handed sword",
+              "quality": "q2",
+              "iLvl": 35,
+              "reqLevel": 28,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 44,
+          "reqLevel": 39,
+          "stats": "+16 Str, +17 Sta"
         },
         {
           "levelBracket": "41–45",
@@ -4990,14 +5893,22 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "36.63 DPS",
               "speed": "4.00",
-              "weaponType": "Two-handed mace"
+              "weaponType": "Two-handed mace",
+              "quality": "q3",
+              "iLvl": 41,
+              "reqLevel": 36,
+              "stats": ""
             },
             {
               "name": "Grisly Sack of Skulls",
               "itemId": 1959,
               "value": "40.3 DPS - World Drop",
               "faction": "both",
-              "dps": "40.3 DPS"
+              "dps": "40.3 DPS",
+              "quality": "q3",
+              "iLvl": 46,
+              "reqLevel": 40,
+              "stats": ""
             },
             {
               "name": "Gul'gash's Greathammer",
@@ -5006,10 +5917,18 @@ if (typeof window !== 'undefined') {
               "speed": "3.60",
               "dps": "42.8 DPS",
               "value": "42.8 DPS, 3.60s - Feralas Drop",
-              "faction": "both"
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 49,
+              "reqLevel": 44,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 46,
+          "reqLevel": 40,
+          "stats": "+5 Str, +13 Sta"
         },
         {
           "levelBracket": "46–50",
@@ -5030,7 +5949,11 @@ if (typeof window !== 'undefined') {
               "itemId": 13035,
               "value": "44.6 DPS, +12 Str, +12 Sta - World Drop 2H sword",
               "faction": "both",
-              "dps": "44.6 DPS"
+              "dps": "44.6 DPS",
+              "quality": "q3",
+              "iLvl": 51,
+              "reqLevel": 45,
+              "stats": "+12 Str, +12 Sta"
             },
             {
               "name": "Warmonger",
@@ -5039,10 +5962,18 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "45 DPS",
               "speed": "3.00",
-              "weaponType": "Two-handed sword"
+              "weaponType": "Two-handed sword",
+              "quality": "q3",
+              "iLvl": 52,
+              "reqLevel": 47,
+              "stats": "+3% Hit"
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 54,
+          "reqLevel": 49,
+          "stats": "+11 Str, +10 Sta"
         },
         {
           "levelBracket": "51–55",
@@ -5064,7 +5995,11 @@ if (typeof window !== 'undefined') {
               "value": "49.3 DPS, 3.70s - BRD: Emperor Dagran Thaurissan",
               "faction": "both",
               "dps": "49.3 DPS",
-              "speed": "3.70"
+              "speed": "3.70",
+              "quality": "q3",
+              "iLvl": 56,
+              "reqLevel": 50,
+              "stats": ""
             },
             {
               "name": "Enchanted Battlehammer",
@@ -5073,10 +6008,18 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "48.29 DPS",
               "speed": "3.50",
-              "weaponType": "Two-handed mace"
+              "weaponType": "Two-handed mace",
+              "quality": "q3",
+              "iLvl": 56,
+              "reqLevel": 51,
+              "stats": "280"
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 55,
+          "reqLevel": 50,
+          "stats": ""
         },
         {
           "levelBracket": "56–60",
@@ -5098,7 +6041,11 @@ if (typeof window !== 'undefined') {
               "value": "53.6 DPS, 3.50s - UBRS: General Drakkisath",
               "faction": "both",
               "dps": "53.6 DPS",
-              "speed": "3.50"
+              "speed": "3.50",
+              "quality": "q3",
+              "iLvl": 61,
+              "reqLevel": 55,
+              "stats": ""
             },
             {
               "name": "The Unstoppable Force",
@@ -5107,17 +6054,29 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "56.53 DPS",
               "speed": "3.60",
-              "weaponType": "Two-handed mace"
+              "weaponType": "Two-handed mace",
+              "quality": "q4",
+              "iLvl": 60,
+              "reqLevel": 55,
+              "stats": ""
             },
             {
               "name": "Dreadforge Retaliator",
               "itemId": 11931,
               "value": "49.3 DPS - BRD Emperor",
               "faction": "both",
-              "dps": "49.3 DPS"
+              "dps": "49.3 DPS",
+              "quality": "q3",
+              "iLvl": 61,
+              "reqLevel": 55,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 61,
+          "reqLevel": 55,
+          "stats": "+12 Str, +21 Sta"
         }
       ]
     },
@@ -5151,10 +6110,18 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "2.38 DPS",
               "speed": "2.10",
-              "weaponType": "Bow"
+              "weaponType": "Bow",
+              "quality": "q1",
+              "iLvl": 8,
+              "reqLevel": 3,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q1",
+          "iLvl": 6,
+          "reqLevel": 1,
+          "stats": ""
         },
         {
           "levelBracket": "3–4",
@@ -5177,7 +6144,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "4.13 DPS",
               "speed": "2.30",
-              "weaponType": "Gun"
+              "weaponType": "Gun",
+              "quality": "q2",
+              "iLvl": 10,
+              "reqLevel": 5,
+              "stats": "30"
             },
             {
               "name": "Kolkar Bow",
@@ -5186,10 +6157,18 @@ if (typeof window !== 'undefined') {
               "faction": "horde",
               "dps": "2.68 DPS",
               "speed": "2.80",
-              "weaponType": "Bow"
+              "weaponType": "Bow",
+              "quality": "q1",
+              "iLvl": 8,
+              "reqLevel": 4,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q1",
+          "iLvl": 8,
+          "reqLevel": 3,
+          "stats": ""
         },
         {
           "levelBracket": "5–6",
@@ -5212,7 +6191,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "2.38 DPS",
               "speed": "2.10",
-              "weaponType": "Bow"
+              "weaponType": "Bow",
+              "quality": "q1",
+              "iLvl": 8,
+              "reqLevel": 3,
+              "stats": ""
             },
             {
               "name": "Kolkar Bow",
@@ -5221,10 +6204,18 @@ if (typeof window !== 'undefined') {
               "faction": "horde",
               "dps": "2.68 DPS",
               "speed": "2.80",
-              "weaponType": "Bow"
+              "weaponType": "Bow",
+              "quality": "q1",
+              "iLvl": 8,
+              "reqLevel": 4,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q2",
+          "iLvl": 10,
+          "reqLevel": 5,
+          "stats": ""
         },
         {
           "levelBracket": "7–8",
@@ -5247,7 +6238,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "5.77 DPS",
               "speed": "2.60",
-              "weaponType": "Bow"
+              "weaponType": "Bow",
+              "quality": "q1",
+              "iLvl": 16,
+              "reqLevel": 11,
+              "stats": ""
             },
             {
               "name": "Skorn's Rifle",
@@ -5256,10 +6251,18 @@ if (typeof window !== 'undefined') {
               "faction": "horde",
               "dps": "5 DPS",
               "speed": "1.90",
-              "weaponType": "Gun"
+              "weaponType": "Gun",
+              "quality": "q2",
+              "iLvl": 12,
+              "reqLevel": 6,
+              "stats": ""
             }
           ],
-          "faction": "alliance"
+          "faction": "alliance",
+          "quality": "q2",
+          "iLvl": 14,
+          "reqLevel": 1,
+          "stats": ""
         },
         {
           "levelBracket": "9–10",
@@ -5282,7 +6285,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "6.18 DPS",
               "speed": "1.70",
-              "weaponType": "Bow"
+              "weaponType": "Bow",
+              "quality": "q2",
+              "iLvl": 16,
+              "reqLevel": 11,
+              "stats": ""
             },
             {
               "name": "Rough Boomstick",
@@ -5291,7 +6298,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "4.13 DPS",
               "speed": "2.30",
-              "weaponType": "Gun"
+              "weaponType": "Gun",
+              "quality": "q2",
+              "iLvl": 10,
+              "reqLevel": 5,
+              "stats": "30"
             },
             {
               "name": "Orcish Battle Bow",
@@ -5300,7 +6311,11 @@ if (typeof window !== 'undefined') {
               "faction": "horde",
               "dps": "5.53 DPS",
               "speed": "1.90",
-              "weaponType": "Bow"
+              "weaponType": "Bow",
+              "quality": "q2",
+              "iLvl": 14,
+              "reqLevel": 9,
+              "stats": ""
             },
             {
               "name": "Snarlsnout Shooter",
@@ -5309,10 +6324,18 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "5 DPS",
               "speed": "2.50",
-              "weaponType": "Gun"
+              "weaponType": "Gun",
+              "quality": "q2",
+              "iLvl": 12,
+              "reqLevel": 7,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q1",
+          "iLvl": 21,
+          "reqLevel": 16,
+          "stats": ""
         },
         {
           "levelBracket": "11–12",
@@ -5335,7 +6358,11 @@ if (typeof window !== 'undefined') {
               "faction": "alliance",
               "dps": "6.72 DPS",
               "speed": "3.20",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q2",
+              "iLvl": 13,
+              "reqLevel": 7,
+              "stats": ""
             },
             {
               "name": "Deadly Blunderbuss",
@@ -5344,7 +6371,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "8.27 DPS",
               "speed": "2.60",
-              "weaponType": "Gun"
+              "weaponType": "Gun",
+              "quality": "q2",
+              "iLvl": 21,
+              "reqLevel": 16,
+              "stats": "105"
             },
             {
               "name": "Orcish Battle Bow",
@@ -5353,7 +6384,11 @@ if (typeof window !== 'undefined') {
               "faction": "horde",
               "dps": "5.53 DPS",
               "speed": "1.90",
-              "weaponType": "Bow"
+              "weaponType": "Bow",
+              "quality": "q2",
+              "iLvl": 14,
+              "reqLevel": 9,
+              "stats": ""
             },
             {
               "name": "Bristlebark Bow",
@@ -5362,10 +6397,18 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "5 DPS",
               "speed": "2.60",
-              "weaponType": "Bow"
+              "weaponType": "Bow",
+              "quality": "q2",
+              "iLvl": 12,
+              "reqLevel": 7,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q1",
+          "iLvl": 25,
+          "reqLevel": 20,
+          "stats": ""
         },
         {
           "levelBracket": "13–14",
@@ -5388,7 +6431,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "8.27 DPS",
               "speed": "2.60",
-              "weaponType": "Gun"
+              "weaponType": "Gun",
+              "quality": "q2",
+              "iLvl": 21,
+              "reqLevel": 16,
+              "stats": "105"
             },
             {
               "name": "Laminated Recurve Bow",
@@ -5397,7 +6444,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "9.17 DPS",
               "speed": "2.40",
-              "weaponType": "Bow"
+              "weaponType": "Bow",
+              "quality": "q1",
+              "iLvl": 25,
+              "reqLevel": 20,
+              "stats": ""
             },
             {
               "name": "Barbaric Crossbow",
@@ -5406,10 +6457,18 @@ if (typeof window !== 'undefined') {
               "speed": "2.00",
               "dps": "9.5 DPS",
               "value": "9.5 DPS, 2.00s, +2 Agi - RFC Drop",
-              "faction": "both"
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 18,
+              "reqLevel": 13,
+              "stats": "+2 Agi"
             }
           ],
-          "faction": "alliance"
+          "faction": "alliance",
+          "quality": "q3",
+          "iLvl": 18,
+          "reqLevel": 9,
+          "stats": ""
         },
         {
           "levelBracket": "15–18",
@@ -5432,7 +6491,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "9.72 DPS",
               "speed": "1.80",
-              "weaponType": "Gun"
+              "weaponType": "Gun",
+              "quality": "q2",
+              "iLvl": 24,
+              "reqLevel": 19,
+              "stats": "120"
             },
             {
               "name": "Deadly Blunderbuss",
@@ -5441,7 +6504,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "8.27 DPS",
               "speed": "2.60",
-              "weaponType": "Gun"
+              "weaponType": "Gun",
+              "quality": "q2",
+              "iLvl": 21,
+              "reqLevel": 16,
+              "stats": "105"
             },
             {
               "name": "Barbaric Crossbow",
@@ -5450,10 +6517,18 @@ if (typeof window !== 'undefined') {
               "speed": "2.00",
               "dps": "9.5 DPS",
               "value": "9.5 DPS, 2.00s - RFC Drop",
-              "faction": "both"
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 18,
+              "reqLevel": 13,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 24,
+          "reqLevel": 19,
+          "stats": ""
         },
         {
           "levelBracket": "19–20",
@@ -5476,7 +6551,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "10.37 DPS",
               "speed": "2.70",
-              "weaponType": "Gun"
+              "weaponType": "Gun",
+              "quality": "q2",
+              "iLvl": 26,
+              "reqLevel": 21,
+              "stats": "125"
             },
             {
               "name": "Reinforced Bow",
@@ -5485,10 +6564,18 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "5.77 DPS",
               "speed": "2.60",
-              "weaponType": "Bow"
+              "weaponType": "Bow",
+              "quality": "q1",
+              "iLvl": 16,
+              "reqLevel": 11,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 24,
+          "reqLevel": 19,
+          "stats": ""
         },
         {
           "levelBracket": "21–22",
@@ -5511,7 +6598,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "11.76 DPS",
               "speed": "1.70",
-              "weaponType": "Gun"
+              "weaponType": "Gun",
+              "quality": "q2",
+              "iLvl": 29,
+              "reqLevel": 24,
+              "stats": "145"
             },
             {
               "name": "Fallenroot Longbow",
@@ -5520,7 +6611,20 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "13.86 DPS",
               "speed": "2.20",
-              "weaponType": "Bow"
+              "weaponType": "Bow",
+              "quality": "q3",
+              "iLvl": 28,
+              "stats": "+2 Agility, +4 Stamina",
+              "lines": [
+                "Binds when picked up",
+                "Ranged\tBow",
+                "21 - 40 Damage\tSpeed 2.20",
+                "(13.9 damage per second)",
+                "+2 Agility",
+                "+4 Stamina",
+                "Requires Level 23"
+              ],
+              "reqLevel": 23
             },
             {
               "name": "Alliance Outrunner Bow",
@@ -5529,10 +6633,18 @@ if (typeof window !== 'undefined') {
               "speed": "2.40",
               "dps": "13.3 DPS",
               "value": "13.3 DPS, 2.40s - Alliance Outrunner Drop",
-              "faction": "alliance"
+              "faction": "alliance",
+              "quality": "q3",
+              "iLvl": 27,
+              "reqLevel": 22,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 27,
+          "reqLevel": 22,
+          "stats": ""
         },
         {
           "levelBracket": "23–24",
@@ -5554,7 +6666,11 @@ if (typeof window !== 'undefined') {
               "value": "14.2 DPS, 2.70s - Engineering (155)",
               "faction": "both",
               "dps": "14.2 DPS",
-              "speed": "2.70"
+              "speed": "2.70",
+              "quality": "q3",
+              "iLvl": 28,
+              "reqLevel": 22,
+              "stats": "155"
             },
             {
               "name": "Concealed Hand Crossbow",
@@ -5563,10 +6679,27 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "15.25 DPS",
               "speed": "2.00",
-              "weaponType": "Crossbow"
+              "weaponType": "Crossbow",
+              "quality": "q3",
+              "iLvl": 31,
+              "reqLevel": 26,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 28,
+          "stats": "+2 Agility, +4 Stamina",
+          "lines": [
+            "Binds when picked up",
+            "Ranged\tBow",
+            "21 - 40 Damage\tSpeed 2.20",
+            "(13.9 damage per second)",
+            "+2 Agility",
+            "+4 Stamina",
+            "Requires Level 23"
+          ],
+          "reqLevel": 23
         },
         {
           "levelBracket": "25–26",
@@ -5589,7 +6722,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "15.25 DPS",
               "speed": "2.00",
-              "weaponType": "Crossbow"
+              "weaponType": "Crossbow",
+              "quality": "q3",
+              "iLvl": 31,
+              "reqLevel": 26,
+              "stats": ""
             },
             {
               "name": "Fallenroot Longbow",
@@ -5598,7 +6735,20 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "13.86 DPS",
               "speed": "2.20",
-              "weaponType": "Bow"
+              "weaponType": "Bow",
+              "quality": "q3",
+              "iLvl": 28,
+              "stats": "+2 Agility, +4 Stamina",
+              "lines": [
+                "Binds when picked up",
+                "Ranged\tBow",
+                "21 - 40 Damage\tSpeed 2.20",
+                "(13.9 damage per second)",
+                "+2 Agility",
+                "+4 Stamina",
+                "Requires Level 23"
+              ],
+              "reqLevel": 23
             },
             {
               "name": "Dun Garok Rifle",
@@ -5607,10 +6757,28 @@ if (typeof window !== 'undefined') {
               "speed": "2.60",
               "dps": "14.8 DPS",
               "value": "14.8 DPS, 2.60s - Hillsbrad Drop",
-              "faction": "both"
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 30,
+              "reqLevel": 25,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 31,
+          "stats": "Equip: +8 Attack Power, Equip: +9 Attack Power Vs Humanoids",
+          "lines": [
+            "Binds when picked up",
+            "Ranged\tCrossbow",
+            "28 - 43 Damage\tSpeed 2.30",
+            "(15.4 damage per second)",
+            "Requires Level 26",
+            "Equip: +8 Attack Power",
+            "Equip: +9 Attack Power Vs Humanoids",
+            "Sell Price: 45s 74c"
+          ],
+          "reqLevel": 26
         },
         {
           "levelBracket": "27–28",
@@ -5633,7 +6801,21 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "15.43 DPS",
               "speed": "2.30",
-              "weaponType": "Crossbow"
+              "weaponType": "Crossbow",
+              "quality": "q3",
+              "iLvl": 31,
+              "stats": "Equip: +8 Attack Power, Equip: +9 Attack Power Vs Humanoids",
+              "lines": [
+                "Binds when picked up",
+                "Ranged\tCrossbow",
+                "28 - 43 Damage\tSpeed 2.30",
+                "(15.4 damage per second)",
+                "Requires Level 26",
+                "Equip: +8 Attack Power",
+                "Equip: +9 Attack Power Vs Humanoids",
+                "Sell Price: 45s 74c"
+              ],
+              "reqLevel": 26
             },
             {
               "name": "Glass Shooter",
@@ -5642,10 +6824,34 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "17.93 DPS",
               "speed": "2.90",
-              "weaponType": "Gun"
+              "weaponType": "Gun",
+              "quality": "q3",
+              "iLvl": 35,
+              "stats": "Equip: +12 Attack Power.",
+              "lines": [
+                "Binds when picked up",
+                "Ranged\tGun",
+                "36 - 68 Damage\tSpeed 2.90",
+                "(17.9 damage per second)",
+                "Equip: +12 Attack Power.",
+                "Requires Level 30"
+              ],
+              "reqLevel": 30
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 33,
+          "stats": "+6 Agility",
+          "lines": [
+            "Binds when picked up",
+            "Ranged\tGun",
+            "29 - 54 Damage\tSpeed 2.50",
+            "(16.6 damage per second)",
+            "+6 Agility",
+            "Requires Level 28"
+          ],
+          "reqLevel": 28
         },
         {
           "levelBracket": "29–30",
@@ -5668,7 +6874,18 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "19.38 DPS",
               "speed": "2.40",
-              "weaponType": "Bow"
+              "weaponType": "Bow",
+              "quality": "q2",
+              "iLvl": 43,
+              "stats": "+6 Agility",
+              "lines": [
+                "Binds when picked up",
+                "Ranged\tBow",
+                "32 - 61 Damage\tSpeed 2.40",
+                "(19.4 damage per second)",
+                "+6 Agility"
+              ],
+              "reqLevel": 28
             },
             {
               "name": "Quilboar Blaster",
@@ -5677,7 +6894,19 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "18.57 DPS",
               "speed": "2.80",
-              "weaponType": "Gun"
+              "weaponType": "Gun",
+              "quality": "q3",
+              "iLvl": 36,
+              "stats": "+4 Agility, +4 Spirit",
+              "lines": [
+                "Binds when picked up",
+                "Ranged\tGun",
+                "36 - 68 Damage\tSpeed 2.80",
+                "(18.6 damage per second)",
+                "+4 Agility",
+                "+4 Spirit"
+              ],
+              "reqLevel": 29
             },
             {
               "name": "Booty Bay Bruiser's Buckshot",
@@ -5686,7 +6915,21 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "18.04 DPS",
               "speed": "2.80",
-              "weaponType": "Gun"
+              "weaponType": "Gun",
+              "quality": "q3",
+              "iLvl": 35,
+              "stats": "+3 Stamina, Equip: +9 Attack Power.",
+              "lines": [
+                "Binds when picked up",
+                "Ranged\tGun",
+                "35 - 66 Damage\tSpeed 2.80",
+                "(18.0 damage per second)",
+                "+3 Stamina",
+                "Equip: +9 Attack Power.",
+                "Requires Level 30",
+                "Requires Booty Bay - Honored"
+              ],
+              "reqLevel": 30
             },
             {
               "name": "Glass Shooter",
@@ -5695,10 +6938,34 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "17.93 DPS",
               "speed": "2.90",
-              "weaponType": "Gun"
+              "weaponType": "Gun",
+              "quality": "q3",
+              "iLvl": 35,
+              "stats": "Equip: +12 Attack Power.",
+              "lines": [
+                "Binds when picked up",
+                "Ranged\tGun",
+                "36 - 68 Damage\tSpeed 2.90",
+                "(17.9 damage per second)",
+                "Equip: +12 Attack Power.",
+                "Requires Level 30"
+              ],
+              "reqLevel": 30
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q2",
+          "iLvl": 43,
+          "stats": "+4 Strength, +4 Agility",
+          "lines": [
+            "Binds when picked up",
+            "Ranged\tGun",
+            "35 - 66 Damage\tSpeed 2.60",
+            "(19.4 damage per second)",
+            "+4 Strength",
+            "+4 Agility"
+          ],
+          "reqLevel": 28
         },
         {
           "levelBracket": "31–34",
@@ -5721,7 +6988,19 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "19.42 DPS",
               "speed": "2.60",
-              "weaponType": "Gun"
+              "weaponType": "Gun",
+              "quality": "q2",
+              "iLvl": 43,
+              "stats": "+4 Strength, +4 Agility",
+              "lines": [
+                "Binds when picked up",
+                "Ranged\tGun",
+                "35 - 66 Damage\tSpeed 2.60",
+                "(19.4 damage per second)",
+                "+4 Strength",
+                "+4 Agility"
+              ],
+              "reqLevel": 28
             },
             {
               "name": "Crystalpine Stinger",
@@ -5730,17 +7009,38 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "15.89 DPS",
               "speed": "2.80",
-              "weaponType": "Crossbow"
+              "weaponType": "Crossbow",
+              "quality": "q3",
+              "iLvl": 32,
+              "stats": "+4 Agility, +4 Intellect",
+              "lines": [
+                "Binds when equipped",
+                "Ranged\tCrossbow",
+                "35 - 54 Damage\tSpeed 2.80",
+                "(15.9 damage per second)",
+                "+4 Agility",
+                "+4 Intellect",
+                "Requires Level 27"
+              ],
+              "reqLevel": 27
             },
             {
               "name": "Mithril Blunderbuss",
               "itemId": 10508,
               "value": "17.9 DPS - Engineering (175)",
               "faction": "both",
-              "dps": "17.9 DPS"
+              "dps": "17.9 DPS",
+              "quality": "q3",
+              "iLvl": 36,
+              "reqLevel": 30,
+              "stats": "175"
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 39,
+          "reqLevel": 34,
+          "stats": ""
         },
         {
           "levelBracket": "35–38",
@@ -5763,21 +7063,49 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "16.52 DPS",
               "speed": "2.30",
-              "weaponType": "Gun"
+              "weaponType": "Gun",
+              "quality": "q3",
+              "iLvl": 33,
+              "stats": "+6 Stamina",
+              "lines": [
+                "Binds when equipped",
+                "Ranged\tGun",
+                "26 - 50 Damage\tSpeed 2.30",
+                "(16.5 damage per second)",
+                "+6 Stamina",
+                "Requires Level 28"
+              ],
+              "reqLevel": 28
             },
             {
               "name": "Blasting Hackbut",
               "itemId": 6798,
               "value": "21.0 DPS - Horde Quest: Questioning Reethe",
               "faction": "horde",
-              "dps": "21.0 DPS"
+              "dps": "21.0 DPS",
+              "quality": "q2",
+              "iLvl": 37,
+              "stats": "+3 Agility, +4 Stamina",
+              "lines": [
+                "Binds when picked up",
+                "Ranged\tGun",
+                "30 - 56 Damage\tSpeed 2.80",
+                "(15.4 damage per second)",
+                "+3 Agility",
+                "+4 Stamina"
+              ],
+              "reqLevel": 34
             },
             {
               "name": "Mithril Blunderbuss",
               "itemId": 10508,
               "value": "17.9 DPS - Engineering (175)",
               "faction": "both",
-              "dps": "17.9 DPS"
+              "dps": "17.9 DPS",
+              "quality": "q3",
+              "iLvl": 40,
+              "reqLevel": 34,
+              "stats": "175"
             },
             {
               "name": "Siegebreaker's Blaster",
@@ -5786,10 +7114,26 @@ if (typeof window !== 'undefined') {
               "speed": "2.60",
               "dps": "22.3 DPS",
               "value": "22.3 DPS, 2.60s - Custom Gun Drop",
-              "faction": "both"
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 42,
+              "reqLevel": 37,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q2",
+          "iLvl": 43,
+          "stats": "+4 Strength, +4 Agility",
+          "lines": [
+            "Binds when picked up",
+            "Ranged\tGun",
+            "35 - 66 Damage\tSpeed 2.60",
+            "(19.4 damage per second)",
+            "+4 Strength",
+            "+4 Agility"
+          ],
+          "reqLevel": 28
         },
         {
           "levelBracket": "39–42",
@@ -5810,7 +7154,19 @@ if (typeof window !== 'undefined') {
               "itemId": 4127,
               "value": "22.8 DPS - Alliance Quest: Colonel Kurzen",
               "faction": "alliance",
-              "dps": "22.8 DPS"
+              "dps": "22.8 DPS",
+              "quality": "q2",
+              "iLvl": 40,
+              "stats": "+4 Agility, +3 Intellect",
+              "lines": [
+                "Binds when picked up",
+                "Ranged\tGun",
+                "23 - 43 Damage\tSpeed 1.90",
+                "(17.4 damage per second)",
+                "+4 Agility",
+                "+3 Intellect"
+              ],
+              "reqLevel": 38
             },
             {
               "name": "Ironweaver",
@@ -5819,7 +7175,20 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "17.31 DPS",
               "speed": "2.60",
-              "weaponType": "Gun"
+              "weaponType": "Gun",
+              "quality": "q3",
+              "iLvl": 34,
+              "stats": "+4 Stamina, Equip: Increased Defense +3.",
+              "lines": [
+                "Binds when equipped",
+                "Ranged\tGun",
+                "31 - 59 Damage\tSpeed 2.60",
+                "(17.3 damage per second)",
+                "+4 Stamina",
+                "Equip: Increased Defense +3.",
+                "Requires Level 29"
+              ],
+              "reqLevel": 29
             },
             {
               "name": "Truthseeker's Bow",
@@ -5828,10 +7197,18 @@ if (typeof window !== 'undefined') {
               "speed": "2.80",
               "dps": "23.8 DPS",
               "value": "23.8 DPS, 2.80s - Tanaris Quest",
-              "faction": "both"
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 45,
+              "reqLevel": 40,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 44,
+          "reqLevel": 38,
+          "stats": "+6 Agi"
         },
         {
           "levelBracket": "43–46",
@@ -5853,7 +7230,11 @@ if (typeof window !== 'undefined') {
               "value": "24.5 DPS, 2.60s - Hinterlands quest reward",
               "faction": "both",
               "dps": "24.5 DPS",
-              "speed": "2.60"
+              "speed": "2.60",
+              "quality": "q3",
+              "iLvl": 48,
+              "reqLevel": 42,
+              "stats": ""
             },
             {
               "name": "Riphook",
@@ -5862,10 +7243,18 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "21.25 DPS",
               "speed": "2.00",
-              "weaponType": "Crossbow"
+              "weaponType": "Crossbow",
+              "quality": "q3",
+              "iLvl": 40,
+              "reqLevel": 35,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 45,
+          "reqLevel": 40,
+          "stats": ""
         },
         {
           "levelBracket": "47–52",
@@ -5887,7 +7276,11 @@ if (typeof window !== 'undefined') {
               "value": "28.0 DPS, 2.50s, +17 RAP - Engineering (235)",
               "faction": "both",
               "dps": "28.0 DPS",
-              "speed": "2.50"
+              "speed": "2.50",
+              "quality": "q3",
+              "iLvl": 52,
+              "reqLevel": 46,
+              "stats": "235"
             },
             {
               "name": "Dark Iron Rifle",
@@ -5896,10 +7289,18 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "28.33 DPS",
               "speed": "2.70",
-              "weaponType": "Gun"
+              "weaponType": "Gun",
+              "quality": "q3",
+              "iLvl": 55,
+              "reqLevel": 50,
+              "stats": "255"
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 52,
+          "reqLevel": 46,
+          "stats": "+8 Agi, heavy Aimed Shot burst"
         },
         {
           "levelBracket": "53–60",
@@ -5921,7 +7322,11 @@ if (typeof window !== 'undefined') {
               "value": "31.4 DPS, 2.80s, +11 Agi - Scholomance: Rattlegore",
               "faction": "both",
               "dps": "31.4 DPS",
-              "speed": "2.80"
+              "speed": "2.80",
+              "quality": "q3",
+              "iLvl": 58,
+              "reqLevel": 52,
+              "stats": "+11 Agi"
             },
             {
               "name": "Flawless Arcanite Rifle",
@@ -5930,7 +7335,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "31.17 DPS",
               "speed": "3.00",
-              "weaponType": "Gun"
+              "weaponType": "Gun",
+              "quality": "q3",
+              "iLvl": 61,
+              "reqLevel": 56,
+              "stats": "275"
             },
             {
               "name": "Core Marksman Rifle",
@@ -5939,7 +7348,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "36.8 DPS",
               "speed": "2.50",
-              "weaponType": "Gun"
+              "weaponType": "Gun",
+              "quality": "q4",
+              "iLvl": 65,
+              "reqLevel": 60,
+              "stats": ""
             },
             {
               "name": "Reaver's Repeater",
@@ -5948,10 +7361,18 @@ if (typeof window !== 'undefined') {
               "speed": "2.70",
               "dps": "27.0 DPS",
               "value": "27.0 DPS, 2.70s - Custom Gun Drop",
-              "faction": "both"
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 58,
+              "reqLevel": 53,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 59,
+          "reqLevel": 54,
+          "stats": "+3 Hit"
         }
       ]
     },
@@ -5985,17 +7406,29 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "3.33 DPS",
               "speed": "1.50",
-              "weaponType": "Dagger"
+              "weaponType": "Dagger",
+              "quality": "q1",
+              "iLvl": 8,
+              "reqLevel": 3,
+              "stats": ""
             },
             {
               "name": "Worn Shortsword",
               "itemId": 25,
               "value": "1.7 DPS - Starter sword",
               "faction": "both",
-              "dps": "1.7 DPS"
+              "dps": "1.7 DPS",
+              "quality": "q2",
+              "iLvl": 6,
+              "reqLevel": 1,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q1",
+          "iLvl": 6,
+          "reqLevel": 1,
+          "stats": ""
         },
         {
           "levelBracket": "3–4",
@@ -6018,7 +7451,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "2.5 DPS",
               "speed": "1.70",
-              "weaponType": "Dagger"
+              "weaponType": "Dagger",
+              "quality": "q1",
+              "iLvl": 8,
+              "reqLevel": 3,
+              "stats": ""
             },
             {
               "name": "Copper Shortsword",
@@ -6027,7 +7464,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "5.4 DPS",
               "speed": "2.50",
-              "weaponType": "One-handed sword"
+              "weaponType": "One-handed sword",
+              "quality": "q2",
+              "iLvl": 10,
+              "reqLevel": 4,
+              "stats": "20"
             },
             {
               "name": "Forsaken Shortsword",
@@ -6035,10 +7476,18 @@ if (typeof window !== 'undefined') {
               "value": "3.0 DPS, 2.10s - Tirisfal Quest: The Scarlet Crusade",
               "faction": "horde",
               "dps": "3.0 DPS",
-              "speed": "2.10"
+              "speed": "2.10",
+              "quality": "q2",
+              "iLvl": 8,
+              "reqLevel": 2,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q1",
+          "iLvl": 8,
+          "reqLevel": 3,
+          "stats": ""
         },
         {
           "levelBracket": "5–6",
@@ -6061,7 +7510,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "5.4 DPS",
               "speed": "2.50",
-              "weaponType": "One-handed sword"
+              "weaponType": "One-handed sword",
+              "quality": "q2",
+              "iLvl": 10,
+              "reqLevel": 4,
+              "stats": "20"
             },
             {
               "name": "Stiletto",
@@ -6070,17 +7523,29 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "3.33 DPS",
               "speed": "1.50",
-              "weaponType": "Dagger"
+              "weaponType": "Dagger",
+              "quality": "q1",
+              "iLvl": 8,
+              "reqLevel": 3,
+              "stats": ""
             },
             {
               "name": "Forsaken Shortsword",
               "itemId": 3267,
               "value": "3.0 DPS - Tirisfal Quest: The Scarlet Crusade",
               "faction": "horde",
-              "dps": "3.0 DPS"
+              "dps": "3.0 DPS",
+              "quality": "q2",
+              "iLvl": 10,
+              "reqLevel": 4,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q2",
+          "iLvl": 11,
+          "reqLevel": 6,
+          "stats": ""
         },
         {
           "levelBracket": "7–8",
@@ -6101,7 +7566,11 @@ if (typeof window !== 'undefined') {
               "itemId": 250601,
               "value": "5.5 DPS - Early quest",
               "faction": "both",
-              "dps": "5.5 DPS"
+              "dps": "5.5 DPS",
+              "quality": "q2",
+              "iLvl": 12,
+              "reqLevel": 6,
+              "stats": ""
             },
             {
               "name": "Stiletto",
@@ -6110,7 +7579,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "3.33 DPS",
               "speed": "1.50",
-              "weaponType": "Dagger"
+              "weaponType": "Dagger",
+              "quality": "q1",
+              "iLvl": 8,
+              "reqLevel": 3,
+              "stats": ""
             },
             {
               "name": "Pristine Orcish Dagger",
@@ -6119,10 +7592,18 @@ if (typeof window !== 'undefined') {
               "faction": "horde",
               "dps": "6.25 DPS",
               "speed": "2.40",
-              "weaponType": "Dagger"
+              "weaponType": "Dagger",
+              "quality": "q2",
+              "iLvl": 12,
+              "reqLevel": 10,
+              "stats": ""
             }
           ],
-          "faction": "alliance"
+          "faction": "alliance",
+          "quality": "q2",
+          "iLvl": 12,
+          "reqLevel": 6,
+          "stats": ""
         },
         {
           "levelBracket": "9–10",
@@ -6145,7 +7626,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "14.41 DPS",
               "speed": "1.70",
-              "weaponType": "One-handed sword"
+              "weaponType": "One-handed sword",
+              "quality": "q3",
+              "iLvl": 22,
+              "reqLevel": 17,
+              "stats": ""
             },
             {
               "name": "Cutlass",
@@ -6154,7 +7639,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "6.82 DPS",
               "speed": "2.20",
-              "weaponType": "One-handed sword"
+              "weaponType": "One-handed sword",
+              "quality": "q1",
+              "iLvl": 15,
+              "reqLevel": 10,
+              "stats": ""
             },
             {
               "name": "Pristine Orcish Dagger",
@@ -6163,10 +7652,18 @@ if (typeof window !== 'undefined') {
               "faction": "horde",
               "dps": "6.25 DPS",
               "speed": "2.40",
-              "weaponType": "Dagger"
+              "weaponType": "Dagger",
+              "quality": "q2",
+              "iLvl": 12,
+              "reqLevel": 10,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q2",
+          "iLvl": 13,
+          "reqLevel": 10,
+          "stats": "+2 Agi"
         },
         {
           "levelBracket": "11–12",
@@ -6189,7 +7686,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "6.82 DPS",
               "speed": "2.20",
-              "weaponType": "One-handed sword"
+              "weaponType": "One-handed sword",
+              "quality": "q1",
+              "iLvl": 15,
+              "reqLevel": 10,
+              "stats": ""
             },
             {
               "name": "Trogg Scepter",
@@ -6198,7 +7699,20 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "8.13 DPS",
               "speed": "2.40",
-              "weaponType": "One-handed mace"
+              "weaponType": "One-handed mace",
+              "quality": "q3",
+              "iLvl": 18,
+              "stats": "+4 Spirit, Equip: Increases healing done by up to 33 and damage done by up to 11 for all magical spells and effects.",
+              "lines": [
+                "Binds when picked up",
+                "Main Hand\tMace",
+                "13 - 26 Damage\tSpeed 2.40",
+                "(8.1 damage per second)",
+                "+4 Spirit",
+                "Equip: Increases healing done by up to 33 and damage done by up to 11 for all magical spells and effects.",
+                "Requires Level 13"
+              ],
+              "reqLevel": 13
             },
             {
               "name": "Deathstalker Shortsword",
@@ -6206,10 +7720,18 @@ if (typeof window !== 'undefined') {
               "value": "7.5 DPS, 2.20s - Silverpine Quest: Escorting Erland",
               "faction": "horde",
               "dps": "7.5 DPS",
-              "speed": "2.20"
+              "speed": "2.20",
+              "quality": "q2",
+              "iLvl": 16,
+              "reqLevel": 10,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q1",
+          "iLvl": 16,
+          "reqLevel": 11,
+          "stats": ""
         },
         {
           "levelBracket": "13–14",
@@ -6232,7 +7754,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "8.46 DPS",
               "speed": "1.30",
-              "weaponType": "Dagger"
+              "weaponType": "Dagger",
+              "quality": "q1",
+              "iLvl": 19,
+              "reqLevel": 14,
+              "stats": ""
             },
             {
               "name": "Kris of Orgrimmar",
@@ -6241,7 +7767,11 @@ if (typeof window !== 'undefined') {
               "faction": "horde",
               "dps": "8 DPS",
               "speed": "1.50",
-              "weaponType": "Dagger"
+              "weaponType": "Dagger",
+              "quality": "q3",
+              "iLvl": 18,
+              "reqLevel": 9,
+              "stats": "+4 Sta, +33 Healing, +11 Spell Damage"
             },
             {
               "name": "Fang of Magmatus",
@@ -6250,7 +7780,11 @@ if (typeof window !== 'undefined') {
               "speed": "1.70",
               "dps": "7.9 DPS",
               "value": "7.9 DPS, 1.70s, +2 Agi - RFC Drop",
-              "faction": "both"
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 18,
+              "reqLevel": 13,
+              "stats": "+2 Agi"
             },
             {
               "name": "Bone Knuckles",
@@ -6259,7 +7793,11 @@ if (typeof window !== 'undefined') {
               "speed": "2.00",
               "dps": "12.3 DPS",
               "value": "12.3 DPS, 2.00s - RFC Drop",
-              "faction": "both"
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 18,
+              "reqLevel": 13,
+              "stats": ""
             },
             {
               "name": "Searing Dagger",
@@ -6268,10 +7806,18 @@ if (typeof window !== 'undefined') {
               "speed": "1.60",
               "dps": "8.1 DPS",
               "value": "8.1 DPS, 1.60s - RFC Drop",
-              "faction": "both"
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 18,
+              "reqLevel": 13,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 18,
+          "reqLevel": 13,
+          "stats": "+2 Agi, +2 Fire SP"
         },
         {
           "levelBracket": "15–16",
@@ -6294,7 +7840,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "13.89 DPS",
               "speed": "1.80",
-              "weaponType": "Dagger"
+              "weaponType": "Dagger",
+              "quality": "q3",
+              "iLvl": 21,
+              "reqLevel": 16,
+              "stats": ""
             },
             {
               "name": "Big Bronze Knife",
@@ -6303,7 +7853,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "10 DPS",
               "speed": "1.90",
-              "weaponType": "Dagger"
+              "weaponType": "Dagger",
+              "quality": "q2",
+              "iLvl": 20,
+              "reqLevel": 15,
+              "stats": "75"
             },
             {
               "name": "Kris of Orgrimmar",
@@ -6312,7 +7866,11 @@ if (typeof window !== 'undefined') {
               "faction": "horde",
               "dps": "8 DPS",
               "speed": "1.50",
-              "weaponType": "Dagger"
+              "weaponType": "Dagger",
+              "quality": "q3",
+              "iLvl": 18,
+              "reqLevel": 9,
+              "stats": "+4 Sta, +33 Healing, +11 Spell Damage"
             },
             {
               "name": "Plaguefang",
@@ -6321,10 +7879,18 @@ if (typeof window !== 'undefined') {
               "speed": "2.10",
               "dps": "12.4 DPS",
               "value": "12.4 DPS, 2.10s - Dalaran Dungeon",
-              "faction": "both"
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 24,
+              "reqLevel": 16,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 20,
+          "reqLevel": 15,
+          "stats": "+3 Agi, +2 Sta"
         },
         {
           "levelBracket": "17–18",
@@ -6347,7 +7913,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "15.54 DPS",
               "speed": "2.80",
-              "weaponType": "One-handed sword"
+              "weaponType": "One-handed sword",
+              "quality": "q3",
+              "iLvl": 24,
+              "reqLevel": 19,
+              "stats": ""
             },
             {
               "name": "Pearl-handled Dagger",
@@ -6356,7 +7926,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "11.47 DPS",
               "speed": "1.70",
-              "weaponType": "Dagger"
+              "weaponType": "Dagger",
+              "quality": "q2",
+              "iLvl": 23,
+              "reqLevel": 18,
+              "stats": ""
             },
             {
               "name": "Whipfang's Skinsearer",
@@ -6365,10 +7939,18 @@ if (typeof window !== 'undefined') {
               "speed": "1.70",
               "dps": "15.6 DPS",
               "value": "15.6 DPS, 1.70s - Barrens Rare",
-              "faction": "both"
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 24,
+              "reqLevel": 19,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 22,
+          "reqLevel": 17,
+          "stats": "+4 Str, +3 Sta"
         },
         {
           "levelBracket": "19–20",
@@ -6391,7 +7973,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "15.54 DPS",
               "speed": "2.80",
-              "weaponType": "One-handed sword"
+              "weaponType": "One-handed sword",
+              "quality": "q3",
+              "iLvl": 24,
+              "reqLevel": 19,
+              "stats": ""
             },
             {
               "name": "Wingblade",
@@ -6400,10 +7986,18 @@ if (typeof window !== 'undefined') {
               "faction": "horde",
               "dps": "15.68 DPS",
               "speed": "2.20",
-              "weaponType": "One-handed sword"
+              "weaponType": "One-handed sword",
+              "quality": "q3",
+              "iLvl": 24,
+              "reqLevel": 10,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q2",
+          "iLvl": 24,
+          "reqLevel": 16,
+          "stats": "+4 Agi, +3 Sta"
         },
         {
           "levelBracket": "21–22",
@@ -6426,7 +8020,19 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "20.59 DPS",
               "speed": "1.70",
-              "weaponType": "Dagger"
+              "weaponType": "Dagger",
+              "quality": "q3",
+              "iLvl": 32,
+              "stats": "+7 Agility, +2 Stamina",
+              "lines": [
+                "Binds when picked up",
+                "One-Hand\tDagger",
+                "24 - 46 Damage\tSpeed 1.70",
+                "(20.6 damage per second)",
+                "+7 Agility",
+                "+2 Stamina"
+              ],
+              "reqLevel": 24
             },
             {
               "name": "Bronze Shortsword",
@@ -6435,7 +8041,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "12.2 DPS",
               "speed": "2.50",
-              "weaponType": "One-handed sword"
+              "weaponType": "One-handed sword",
+              "quality": "q2",
+              "iLvl": 24,
+              "reqLevel": 19,
+              "stats": "105"
             },
             {
               "name": "Blade of Silverlaine",
@@ -6444,7 +8054,11 @@ if (typeof window !== 'undefined') {
               "speed": "2.30",
               "dps": "10.9 DPS",
               "value": "10.9 DPS, 2.30s - SFK Drop",
-              "faction": "both"
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 26,
+              "reqLevel": 21,
+              "stats": ""
             },
             {
               "name": "Alliance Outrunner's Sword",
@@ -6453,10 +8067,18 @@ if (typeof window !== 'undefined') {
               "speed": "2.10",
               "dps": "17.1 DPS",
               "value": "17.1 DPS, 2.10s - Alliance Drop",
-              "faction": "alliance"
+              "faction": "alliance",
+              "quality": "q3",
+              "iLvl": 27,
+              "reqLevel": 22,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q2",
+          "iLvl": 25,
+          "reqLevel": 20,
+          "stats": ""
         },
         {
           "levelBracket": "23–24",
@@ -6479,7 +8101,19 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "20.59 DPS",
               "speed": "1.70",
-              "weaponType": "Dagger"
+              "weaponType": "Dagger",
+              "quality": "q3",
+              "iLvl": 32,
+              "stats": "+7 Agility, +2 Stamina",
+              "lines": [
+                "Binds when picked up",
+                "One-Hand\tDagger",
+                "24 - 46 Damage\tSpeed 1.70",
+                "(20.6 damage per second)",
+                "+7 Agility",
+                "+2 Stamina"
+              ],
+              "reqLevel": 24
             },
             {
               "name": "Odo's Claw",
@@ -6488,7 +8122,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "16.67 DPS",
               "speed": "2.40",
-              "weaponType": "One-handed mace"
+              "weaponType": "One-handed mace",
+              "quality": "q3",
+              "iLvl": 26,
+              "reqLevel": 21,
+              "stats": ""
             },
             {
               "name": "Iridescent Hammer",
@@ -6497,7 +8135,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "14.58 DPS",
               "speed": "2.40",
-              "weaponType": "One-handed mace"
+              "weaponType": "One-handed mace",
+              "quality": "q2",
+              "iLvl": 28,
+              "reqLevel": 23,
+              "stats": ""
             },
             {
               "name": "Serrated Raptor Claw",
@@ -6506,10 +8148,18 @@ if (typeof window !== 'undefined') {
               "speed": "1.60",
               "dps": "17.2 DPS",
               "value": "17.2 DPS, 1.60s - Arathi Drop",
-              "faction": "both"
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 33,
+              "reqLevel": 24,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 28,
+          "reqLevel": 23,
+          "stats": "35 Fire damage proc"
         },
         {
           "levelBracket": "25–26",
@@ -6532,7 +8182,19 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "20.6 DPS",
               "speed": "1.70",
-              "weaponType": "Dagger"
+              "weaponType": "Dagger",
+              "quality": "q3",
+              "iLvl": 32,
+              "stats": "+7 Agility, +2 Stamina",
+              "lines": [
+                "Binds when picked up",
+                "One-Hand\tDagger",
+                "24 - 46 Damage\tSpeed 1.70",
+                "(20.6 damage per second)",
+                "+7 Agility",
+                "+2 Stamina"
+              ],
+              "reqLevel": 24
             },
             {
               "name": "Serrated Raptor Claw",
@@ -6541,7 +8203,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "17.19 DPS",
               "speed": "1.60",
-              "weaponType": "Dagger"
+              "weaponType": "Dagger",
+              "quality": "q2",
+              "iLvl": 33,
+              "reqLevel": 24,
+              "stats": ""
             },
             {
               "name": "Iron Fists",
@@ -6550,10 +8216,27 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "16.25 DPS",
               "speed": "2.40",
-              "weaponType": "Fist Weapon"
+              "weaponType": "Fist Weapon",
+              "quality": "q2",
+              "iLvl": 31,
+              "reqLevel": 26,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 36,
+          "stats": "+3 Agility, +8 Stamina",
+          "lines": [
+            "Binds when picked up",
+            "One-Hand\tSword",
+            "38 - 72 Damage\tSpeed 2.30",
+            "(23.9 damage per second)",
+            "+3 Agility",
+            "+8 Stamina",
+            "Classes: Rogue"
+          ],
+          "reqLevel": 25
         },
         {
           "levelBracket": "27–28",
@@ -6576,7 +8259,21 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "22.4 DPS",
               "speed": "2.50",
-              "weaponType": "One-handed sword"
+              "weaponType": "One-handed sword",
+              "quality": "q3",
+              "iLvl": 34,
+              "stats": "+6 Stamina, Equip: +5 Spell Power",
+              "lines": [
+                "Binds when equipped",
+                "One-Hand\tSword",
+                "39 - 73 Damage\tSpeed 2.50",
+                "(22.4 damage per second)",
+                "+6 Stamina",
+                "Requires Level 29",
+                "Equip: +5 Spell Power",
+                "Sell Price: 76s 95c"
+              ],
+              "reqLevel": 29
             },
             {
               "name": "Toxic Revenger",
@@ -6585,7 +8282,16 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "20.53 DPS",
               "speed": "1.90",
-              "weaponType": "Dagger"
+              "weaponType": "Dagger",
+              "quality": "q3",
+              "iLvl": 32,
+              "stats": "",
+              "lines": [
+                "Binds when picked up",
+                "Off hand\tOne-Hand",
+                "Requires Level 25"
+              ],
+              "reqLevel": 25
             },
             {
               "name": "Hardened Iron Shortsword",
@@ -6594,10 +8300,29 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "16.67 DPS",
               "speed": "1.80",
-              "weaponType": "One-handed sword"
+              "weaponType": "One-handed sword",
+              "quality": "q2",
+              "iLvl": 32,
+              "reqLevel": 27,
+              "stats": "130"
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 33,
+          "stats": "+5 Stamina, Equip: +8 Health Regeneration, Equip: +36 Spell Power",
+          "lines": [
+            "Binds when picked up",
+            "Main Hand\tDagger",
+            "16 - 30 Damage\tSpeed 1.60",
+            "(14.4 damage per second)",
+            "+5 Stamina",
+            "Requires Level 28",
+            "Equip: +8 Health Regeneration",
+            "Equip: +36 Spell Power",
+            "Sell Price: 73s 79c"
+          ],
+          "reqLevel": 28
         },
         {
           "levelBracket": "29–30",
@@ -6620,7 +8345,21 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "15.33 DPS",
               "speed": "1.50",
-              "weaponType": "Dagger"
+              "weaponType": "Dagger",
+              "quality": "q3",
+              "iLvl": 35,
+              "stats": "+6 Stamina, +4 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 40.",
+              "lines": [
+                "Binds when picked up",
+                "Main Hand\tDagger",
+                "16 - 30 Damage\tSpeed 1.50",
+                "(15.3 damage per second)",
+                "+6 Stamina",
+                "+4 Spirit",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 40.",
+                "Requires Level 30"
+              ],
+              "reqLevel": 30
             },
             {
               "name": "Zealot Blade",
@@ -6629,7 +8368,20 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "22.14 DPS",
               "speed": "2.80",
-              "weaponType": "One-handed sword"
+              "weaponType": "One-handed sword",
+              "quality": "q3",
+              "iLvl": 34,
+              "stats": "+5 Intellect, +6 Spirit",
+              "lines": [
+                "Binds when equipped",
+                "One-Hand\tSword",
+                "43 - 81 Damage\tSpeed 2.80",
+                "(22.1 damage per second)",
+                "+5 Intellect",
+                "+6 Spirit",
+                "Requires Level 29"
+              ],
+              "reqLevel": 29
             },
             {
               "name": "Tidebringer's Claw",
@@ -6638,7 +8390,20 @@ if (typeof window !== 'undefined') {
               "speed": "2.40",
               "dps": "18.1 DPS",
               "value": "18.1 DPS, 2.40s - Custom Boss Drop",
-              "faction": "both"
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 40,
+              "stats": "+5 Stamina, Equip: Increases healing done by up to 86 and damage done by up to 28 for all magical spells and effects., Equip: Increases the critical strike chance of your Healing Wave and Lesser Healing Wave spells by 2%.",
+              "lines": [
+                "Binds when picked up",
+                "Main Hand\tFist Weapon",
+                "30 - 57 Damage\tSpeed 2.40",
+                "(18.1 damage per second)",
+                "+5 Stamina",
+                "Equip: Increases healing done by up to 86 and damage done by up to 28 for all magical spells and effects.",
+                "Equip: Increases the critical strike chance of your Healing Wave and Lesser Healing Wave spells by 2%."
+              ],
+              "reqLevel": 30
             },
             {
               "name": "Lightning's Grasp",
@@ -6647,7 +8412,20 @@ if (typeof window !== 'undefined') {
               "speed": "2.40",
               "dps": "18.2 DPS",
               "value": "18.2 DPS, 2.40s - Custom Boss Drop",
-              "faction": "both"
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 40,
+              "stats": "+6 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 46., Equip: Increases the critical strike chance of your Lightning Bolt spell by 1%.",
+              "lines": [
+                "Binds when picked up",
+                "Main Hand\tFist Weapon",
+                "28 - 52 Damage\tSpeed 2.20",
+                "(18.2 damage per second)",
+                "+6 Intellect",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 46.",
+                "Equip: Increases the critical strike chance of your Lightning Bolt spell by 1%."
+              ],
+              "reqLevel": 30
             },
             {
               "name": "Swine Fists",
@@ -6656,10 +8434,26 @@ if (typeof window !== 'undefined') {
               "speed": "2.10",
               "dps": "20.3 DPS",
               "value": "20.3 DPS, 2.10s - RFK Drop",
-              "faction": "both"
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 34,
+              "reqLevel": 28,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 32,
+          "stats": "Chance on hit: Hurl spikes at the target, dealing 45 Physical damage and jumping to 1 additional nearby enemy. Each jump reduces the damage by 50%.",
+          "lines": [
+            "Binds when picked up",
+            "One-Hand\tDagger",
+            "24 - 46 Damage\tSpeed 1.70",
+            "(20.6 damage per second)",
+            "Chance on hit: Hurl spikes at the target, dealing 45 Physical damage and jumping to 1 additional nearby enemy. Each jump reduces the damage by 50%.",
+            "Requires Level 27"
+          ],
+          "reqLevel": 27
         },
         {
           "levelBracket": "31–34",
@@ -6682,7 +8476,19 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "22.92 DPS",
               "speed": "2.40",
-              "weaponType": "One-handed mace"
+              "weaponType": "One-handed mace",
+              "quality": "q3",
+              "iLvl": 35,
+              "stats": "+7 Strength",
+              "lines": [
+                "Binds when picked up",
+                "One-Hand\tMace",
+                "38 - 72 Damage\tSpeed 2.40",
+                "(22.9 damage per second)",
+                "+7 Strength",
+                "Requires Level 30"
+              ],
+              "reqLevel": 30
             },
             {
               "name": "Bloody Brass Knuckles",
@@ -6691,10 +8497,35 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "21.88 DPS",
               "speed": "1.60",
-              "weaponType": "Fist Weapon"
+              "weaponType": "Fist Weapon",
+              "quality": "q3",
+              "iLvl": 34,
+              "stats": "Equip: +12 Attack Power., Equip: +15 Attack Power against Humanoids.",
+              "lines": [
+                "Binds when picked up",
+                "One-Hand\tFist Weapon",
+                "24 - 46 Damage\tSpeed 1.60",
+                "(21.9 damage per second)",
+                "Equip: +12 Attack Power.",
+                "Equip: +15 Attack Power against Humanoids.",
+                "Requires Level 29"
+              ],
+              "reqLevel": 29
             }
           ],
-          "faction": "alliance"
+          "faction": "alliance",
+          "quality": "q2",
+          "iLvl": 41,
+          "stats": "+4 Strength, +5 Stamina",
+          "lines": [
+            "Binds when picked up",
+            "Main Hand\tSword",
+            "37 - 69 Damage\tSpeed 2.30",
+            "(23.0 damage per second)",
+            "+4 Strength",
+            "+5 Stamina"
+          ],
+          "reqLevel": 30
         },
         {
           "levelBracket": "35–38",
@@ -6717,7 +8548,16 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "19.64 DPS",
               "speed": "2.80",
-              "weaponType": "One-handed sword"
+              "weaponType": "One-handed sword",
+              "quality": "q3",
+              "iLvl": 31,
+              "stats": "",
+              "lines": [
+                "Binds when picked up",
+                "Main hand\tOne-Hand",
+                "Requires Level 25"
+              ],
+              "reqLevel": 25
             },
             {
               "name": "Silent Hunter",
@@ -6726,14 +8566,29 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "23.06 DPS",
               "speed": "1.80",
-              "weaponType": "Dagger"
+              "weaponType": "Dagger",
+              "quality": "q2",
+              "iLvl": 41,
+              "stats": "+7 Agility",
+              "lines": [
+                "Binds when picked up",
+                "One-Hand\tDagger",
+                "29 - 54 Damage\tSpeed 1.80",
+                "(23.1 damage per second)",
+                "+7 Agility"
+              ],
+              "reqLevel": 30
             },
             {
               "name": "Mithril Shortsword",
               "itemId": 250607,
               "value": "26.5 DPS - Blacksmithing (170)",
               "faction": "both",
-              "dps": "26.5 DPS"
+              "dps": "26.5 DPS",
+              "quality": "q3",
+              "iLvl": 40,
+              "reqLevel": 34,
+              "stats": "170"
             },
             {
               "name": "Sword of Omen",
@@ -6741,7 +8596,11 @@ if (typeof window !== 'undefined') {
               "value": "29.7 DPS, 2.20s, +9 Str, +4 Sta, +3 Agi - Horde SM Quest: Into The Scarlet Monastery",
               "faction": "horde",
               "dps": "29.7 DPS",
-              "speed": "2.20"
+              "speed": "2.20",
+              "quality": "q3",
+              "iLvl": 40,
+              "reqLevel": 34,
+              "stats": "+9 Str, +4 Sta, +3 Agi"
             },
             {
               "name": "Sword of Serenity",
@@ -6750,10 +8609,18 @@ if (typeof window !== 'undefined') {
               "faction": "alliance",
               "dps": "30 DPS",
               "speed": "2.20",
-              "weaponType": "One-handed sword"
+              "weaponType": "One-handed sword",
+              "quality": "q3",
+              "iLvl": 44,
+              "reqLevel": 34,
+              "stats": "+9 Sta, +4 Spi"
             }
           ],
-          "faction": "alliance"
+          "faction": "alliance",
+          "quality": "q3",
+          "iLvl": 44,
+          "reqLevel": 34,
+          "stats": "+7 Agi, +3 Str"
         },
         {
           "levelBracket": "39–44",
@@ -6776,7 +8643,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "29 DPS",
               "speed": "1.50",
-              "weaponType": "Dagger"
+              "weaponType": "Dagger",
+              "quality": "q3",
+              "iLvl": 43,
+              "reqLevel": 38,
+              "stats": ""
             },
             {
               "name": "Vanquisher's Sword",
@@ -6785,14 +8656,22 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "30 DPS",
               "speed": "2.20",
-              "weaponType": "One-handed sword"
+              "weaponType": "One-handed sword",
+              "quality": "q3",
+              "iLvl": 44,
+              "reqLevel": 39,
+              "stats": ""
             },
             {
               "name": "Sword of Omen",
               "itemId": 6802,
               "value": "29.7 DPS - Horde SM Quest mirror",
               "faction": "horde",
-              "dps": "29.7 DPS"
+              "dps": "29.7 DPS",
+              "quality": "q3",
+              "iLvl": 44,
+              "reqLevel": 38,
+              "stats": ""
             },
             {
               "name": "Sword of Serenity",
@@ -6801,10 +8680,18 @@ if (typeof window !== 'undefined') {
               "faction": "alliance",
               "dps": "30 DPS",
               "speed": "2.20",
-              "weaponType": "One-handed sword"
+              "weaponType": "One-handed sword",
+              "quality": "q3",
+              "iLvl": 44,
+              "reqLevel": 34,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 48,
+          "reqLevel": 43,
+          "stats": "+10 Attack Power"
         },
         {
           "levelBracket": "45–50",
@@ -6827,17 +8714,35 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "35.94 DPS",
               "speed": "1.60",
-              "weaponType": "Dagger"
+              "weaponType": "Dagger",
+              "quality": "q3",
+              "iLvl": 54,
+              "reqLevel": 40,
+              "stats": ""
             },
             {
               "name": "Electro-Lantern",
               "itemId": 11855,
               "value": "34.0 DPS - BRD",
               "faction": "both",
-              "dps": "34.0 DPS"
+              "dps": "34.0 DPS",
+              "quality": "q2",
+              "iLvl": 19,
+              "stats": "+2 Strength, +2 Intellect",
+              "lines": [
+                "Binds when picked up",
+                "Held In Off-hand",
+                "+2 Strength",
+                "+2 Intellect"
+              ],
+              "reqLevel": 44
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 53,
+          "reqLevel": 45,
+          "stats": "Extra swing proc on hit"
         },
         {
           "levelBracket": "51–56",
@@ -6860,7 +8765,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "33.89 DPS",
               "speed": "1.80",
-              "weaponType": "Dagger"
+              "weaponType": "Dagger",
+              "quality": "q2",
+              "iLvl": 57,
+              "reqLevel": 52,
+              "stats": "270"
             },
             {
               "name": "Julie's Dagger",
@@ -6869,7 +8778,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "36.54 DPS",
               "speed": "1.30",
-              "weaponType": "Dagger"
+              "weaponType": "Dagger",
+              "quality": "q3",
+              "iLvl": 55,
+              "reqLevel": 50,
+              "stats": ""
             },
             {
               "name": "Dal'Rend's Sacred Charge",
@@ -6877,10 +8790,18 @@ if (typeof window !== 'undefined') {
               "value": "41.4 DPS, 2.80s - UBRS: Rend Blackhand",
               "faction": "both",
               "dps": "41.4 DPS",
-              "speed": "2.80"
+              "speed": "2.80",
+              "quality": "q3",
+              "iLvl": 56,
+              "reqLevel": 50,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 53,
+          "reqLevel": 45,
+          "stats": ""
         },
         {
           "levelBracket": "57–60",
@@ -6902,7 +8823,11 @@ if (typeof window !== 'undefined') {
               "value": "41.1 DPS, 1.70s, 3s 100% crit proc - UBRS: Rend Blackhand",
               "faction": "both",
               "dps": "41.1 DPS",
-              "speed": "1.70"
+              "speed": "1.70",
+              "quality": "q3",
+              "iLvl": 62,
+              "reqLevel": 56,
+              "stats": "3s 100% crit proc"
             },
             {
               "name": "Mirah's Song",
@@ -6911,14 +8836,22 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "40 DPS",
               "speed": "1.80",
-              "weaponType": "One-handed sword"
+              "weaponType": "One-handed sword",
+              "quality": "q3",
+              "iLvl": 61,
+              "reqLevel": 55,
+              "stats": "+9 Str, +9 Agi"
             },
             {
               "name": "Dal'Rend's Tribal Guardian",
               "itemId": 12939,
               "value": "39.6 DPS - UBRS Rend",
               "faction": "both",
-              "dps": "39.6 DPS"
+              "dps": "39.6 DPS",
+              "quality": "q3",
+              "iLvl": 62,
+              "reqLevel": 56,
+              "stats": ""
             },
             {
               "name": "Blade of Senseless Slaughter",
@@ -6927,10 +8860,18 @@ if (typeof window !== 'undefined') {
               "speed": "2.70",
               "dps": "40.7 DPS",
               "value": "40.7 DPS, 2.70s - Late Game Drop",
-              "faction": "both"
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 62,
+              "reqLevel": 57,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 63,
+          "reqLevel": 58,
+          "stats": "+4 Str, +9 Agi, +1% Crit"
         }
       ]
     },
@@ -6962,7 +8903,11 @@ if (typeof window !== 'undefined') {
               "itemId": 2491,
               "value": "1.8 DPS - Starter vendor mace",
               "faction": "both",
-              "dps": "1.8 DPS"
+              "dps": "1.8 DPS",
+              "quality": "q1",
+              "iLvl": 6,
+              "reqLevel": 1,
+              "stats": ""
             },
             {
               "name": "Crude Battle Axe",
@@ -6971,10 +8916,18 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "3.8 DPS",
               "speed": "3.20",
-              "weaponType": "Two-handed axe"
+              "weaponType": "Two-handed axe",
+              "quality": "q2",
+              "iLvl": 6,
+              "reqLevel": 1,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q1",
+          "iLvl": 4,
+          "reqLevel": 1,
+          "stats": ""
         },
         {
           "levelBracket": "3–4",
@@ -6997,7 +8950,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "5 DPS",
               "speed": "2.60",
-              "weaponType": "Two-handed mace"
+              "weaponType": "Two-handed mace",
+              "quality": "q1",
+              "iLvl": 9,
+              "reqLevel": 4,
+              "stats": ""
             },
             {
               "name": "Copper Axe",
@@ -7006,10 +8963,18 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "3.75 DPS",
               "speed": "2.40",
-              "weaponType": "One-handed axe"
+              "weaponType": "One-handed axe",
+              "quality": "q1",
+              "iLvl": 9,
+              "reqLevel": 4,
+              "stats": "20"
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q1",
+          "iLvl": 8,
+          "reqLevel": 3,
+          "stats": ""
         },
         {
           "levelBracket": "5–6",
@@ -7032,7 +8997,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "3.85 DPS",
               "speed": "2.60",
-              "weaponType": "One-handed mace"
+              "weaponType": "One-handed mace",
+              "quality": "q1",
+              "iLvl": 9,
+              "reqLevel": 4,
+              "stats": "15"
             },
             {
               "name": "Large Club",
@@ -7041,7 +9010,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "2.78 DPS",
               "speed": "1.80",
-              "weaponType": "One-handed mace"
+              "weaponType": "One-handed mace",
+              "quality": "q1",
+              "iLvl": 7,
+              "reqLevel": 2,
+              "stats": ""
             },
             {
               "name": "Goblin Smasher",
@@ -7050,10 +9023,18 @@ if (typeof window !== 'undefined') {
               "faction": "horde",
               "dps": "8.23 DPS",
               "speed": "3.10",
-              "weaponType": "Two-handed mace"
+              "weaponType": "Two-handed mace",
+              "quality": "q2",
+              "iLvl": 12,
+              "reqLevel": 5,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q2",
+          "iLvl": 13,
+          "reqLevel": 8,
+          "stats": "Heavy slow 2H weapon for massive early Rockbiter bursts"
         },
         {
           "levelBracket": "7–8",
@@ -7074,7 +9055,11 @@ if (typeof window !== 'undefined') {
               "itemId": 15396,
               "value": "8.5 DPS - Early quest staff",
               "faction": "both",
-              "dps": "8.5 DPS"
+              "dps": "8.5 DPS",
+              "quality": "q2",
+              "iLvl": 12,
+              "reqLevel": 6,
+              "stats": ""
             },
             {
               "name": "Large Club",
@@ -7083,7 +9068,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "2.78 DPS",
               "speed": "1.80",
-              "weaponType": "One-handed mace"
+              "weaponType": "One-handed mace",
+              "quality": "q1",
+              "iLvl": 7,
+              "reqLevel": 2,
+              "stats": ""
             },
             {
               "name": "Makeshift Stormcaller",
@@ -7092,7 +9081,11 @@ if (typeof window !== 'undefined') {
               "faction": "horde",
               "dps": "5.76 DPS",
               "speed": "3.30",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q2",
+              "iLvl": 11,
+              "reqLevel": 7,
+              "stats": ""
             },
             {
               "name": "Bonecracker",
@@ -7101,10 +9094,18 @@ if (typeof window !== 'undefined') {
               "faction": "horde",
               "dps": "9.06 DPS",
               "speed": "3.20",
-              "weaponType": "Two-handed mace"
+              "weaponType": "Two-handed mace",
+              "quality": "q2",
+              "iLvl": 13,
+              "reqLevel": 7,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q2",
+          "iLvl": 13,
+          "reqLevel": 8,
+          "stats": "Slow 3.50s swing speed maximizes Rockbiter AP bonuses"
         },
         {
           "levelBracket": "9–10",
@@ -7127,7 +9128,20 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "8.1 DPS",
               "speed": "2.40",
-              "weaponType": "One-handed mace"
+              "weaponType": "One-handed mace",
+              "quality": "q3",
+              "iLvl": 18,
+              "stats": "+4 Spirit, Equip: Increases healing done by up to 33 and damage done by up to 11 for all magical spells and effects.",
+              "lines": [
+                "Binds when picked up",
+                "Main Hand\tMace",
+                "13 - 26 Damage\tSpeed 2.40",
+                "(8.1 damage per second)",
+                "+4 Spirit",
+                "Equip: Increases healing done by up to 33 and damage done by up to 11 for all magical spells and effects.",
+                "Requires Level 13"
+              ],
+              "reqLevel": 13
             },
             {
               "name": "Thick War Axe",
@@ -7136,7 +9150,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "8.6 DPS",
               "speed": "2.50",
-              "weaponType": "One-handed axe"
+              "weaponType": "One-handed axe",
+              "quality": "q2",
+              "iLvl": 17,
+              "reqLevel": 12,
+              "stats": "45"
             },
             {
               "name": "Thun'grim's Axe",
@@ -7145,10 +9163,18 @@ if (typeof window !== 'undefined') {
               "faction": "horde",
               "dps": "7.78 DPS",
               "speed": "2.70",
-              "weaponType": "One-handed axe"
+              "weaponType": "One-handed axe",
+              "quality": "q2",
+              "iLvl": 15,
+              "reqLevel": 10,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q1",
+          "iLvl": 15,
+          "reqLevel": 10,
+          "stats": ""
         },
         {
           "levelBracket": "11–12",
@@ -7171,14 +9197,31 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "8.13 DPS",
               "speed": "2.40",
-              "weaponType": "One-handed mace"
+              "weaponType": "One-handed mace",
+              "quality": "q3",
+              "iLvl": 18,
+              "stats": "+4 Spirit, Equip: Increases healing done by up to 33 and damage done by up to 11 for all magical spells and effects.",
+              "lines": [
+                "Binds when picked up",
+                "Main Hand\tMace",
+                "13 - 26 Damage\tSpeed 2.40",
+                "(8.1 damage per second)",
+                "+4 Spirit",
+                "Equip: Increases healing done by up to 33 and damage done by up to 11 for all magical spells and effects.",
+                "Requires Level 13"
+              ],
+              "reqLevel": 13
             },
             {
               "name": "Woodchopper",
               "itemId": 2520,
               "value": "10.5 DPS - Vendor 2H axe",
               "faction": "both",
-              "dps": "10.5 DPS"
+              "dps": "10.5 DPS",
+              "quality": "q2",
+              "iLvl": 16,
+              "reqLevel": 10,
+              "stats": ""
             },
             {
               "name": "Axe of Orgrimmar",
@@ -7187,7 +9230,11 @@ if (typeof window !== 'undefined') {
               "faction": "horde",
               "dps": "16.06 DPS",
               "speed": "3.30",
-              "weaponType": "Two-handed axe"
+              "weaponType": "Two-handed axe",
+              "quality": "q3",
+              "iLvl": 18,
+              "reqLevel": 9,
+              "stats": "+6 Sta, +6 Spi"
             },
             {
               "name": "Hammer of Orgrimmar",
@@ -7196,10 +9243,18 @@ if (typeof window !== 'undefined') {
               "faction": "horde",
               "dps": "12.41 DPS",
               "speed": "2.90",
-              "weaponType": "One-handed mace"
+              "weaponType": "One-handed mace",
+              "quality": "q3",
+              "iLvl": 18,
+              "reqLevel": 9,
+              "stats": "+3 Str, +3 Spi"
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q2",
+          "iLvl": 16,
+          "reqLevel": 11,
+          "stats": "Guaranteed crafted spike, slow 3.30s"
         },
         {
           "levelBracket": "13–14",
@@ -7222,7 +9277,11 @@ if (typeof window !== 'undefined') {
               "faction": "horde",
               "dps": "11.82 DPS",
               "speed": "3.30",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 18,
+              "reqLevel": 9,
+              "stats": "+6 Int, +6 Agi, +18 Spell Dmg"
             },
             {
               "name": "Durgen's Crescent Axe",
@@ -7231,7 +9290,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "12.29 DPS",
               "speed": "2.40",
-              "weaponType": "One-handed axe"
+              "weaponType": "One-handed axe",
+              "quality": "q3",
+              "iLvl": 18,
+              "reqLevel": 13,
+              "stats": "+5 Str, +2 Sta"
             },
             {
               "name": "Ironforge Greathammer",
@@ -7240,7 +9303,11 @@ if (typeof window !== 'undefined') {
               "faction": "alliance",
               "dps": "15.97 DPS",
               "speed": "3.10",
-              "weaponType": "Two-handed mace"
+              "weaponType": "Two-handed mace",
+              "quality": "q3",
+              "iLvl": 18,
+              "reqLevel": 9,
+              "stats": ""
             },
             {
               "name": "Kris of Orgrimmar",
@@ -7249,7 +9316,11 @@ if (typeof window !== 'undefined') {
               "faction": "horde",
               "dps": "8 DPS",
               "speed": "1.50",
-              "weaponType": "Dagger"
+              "weaponType": "Dagger",
+              "quality": "q3",
+              "iLvl": 18,
+              "reqLevel": 9,
+              "stats": "+4 Sta, +33 Healing, +11 Spell Damage"
             },
             {
               "name": "Fang of Magmatus",
@@ -7258,7 +9329,11 @@ if (typeof window !== 'undefined') {
               "speed": "1.70",
               "dps": "7.9 DPS",
               "value": "7.9 DPS, 1.70s - RFC Drop",
-              "faction": "both"
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 18,
+              "reqLevel": 13,
+              "stats": ""
             },
             {
               "name": "Bone Knuckles",
@@ -7267,10 +9342,18 @@ if (typeof window !== 'undefined') {
               "speed": "2.00",
               "dps": "12.3 DPS",
               "value": "12.3 DPS, 2.00s - RFC Drop",
-              "faction": "both"
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 18,
+              "reqLevel": 13,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 18,
+          "reqLevel": 13,
+          "stats": "+5 Int, +4 Spirit"
         },
         {
           "levelBracket": "15–16",
@@ -7293,7 +9376,11 @@ if (typeof window !== 'undefined') {
               "faction": "horde",
               "dps": "11.82 DPS",
               "speed": "3.30",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 18,
+              "reqLevel": 9,
+              "stats": "+6 Int, +6 Agi, +18 Spell Dmg"
             },
             {
               "name": "Scepter of the Abandoned",
@@ -7302,7 +9389,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "9.62 DPS",
               "speed": "2.60",
-              "weaponType": "One-handed mace"
+              "weaponType": "One-handed mace",
+              "quality": "q3",
+              "iLvl": 22,
+              "reqLevel": 17,
+              "stats": "+4 Sta, +4 Int"
             },
             {
               "name": "Segmented Spider Leg",
@@ -7311,7 +9402,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "17.5 DPS",
               "speed": "3.60",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 20,
+              "reqLevel": 15,
+              "stats": "+5 Int, +4 Sta"
             },
             {
               "name": "Kris of Orgrimmar",
@@ -7320,7 +9415,11 @@ if (typeof window !== 'undefined') {
               "faction": "horde",
               "dps": "8 DPS",
               "speed": "1.50",
-              "weaponType": "Dagger"
+              "weaponType": "Dagger",
+              "quality": "q3",
+              "iLvl": 18,
+              "reqLevel": 9,
+              "stats": "+4 Sta, +33 Healing, +11 Spell Damage"
             },
             {
               "name": "The Stitcher",
@@ -7329,10 +9428,18 @@ if (typeof window !== 'undefined') {
               "speed": "2.40",
               "dps": "8.1 DPS",
               "value": "8.1 DPS, 2.40s - Dalaran Dungeon",
-              "faction": "both"
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 24,
+              "reqLevel": 15,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 21,
+          "reqLevel": 16,
+          "stats": "+7 Str, +4 Sta"
         },
         {
           "levelBracket": "17–18",
@@ -7355,7 +9462,11 @@ if (typeof window !== 'undefined') {
               "faction": "horde",
               "dps": "11.82 DPS",
               "speed": "3.30",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 18,
+              "reqLevel": 9,
+              "stats": "+6 Int, +6 Agi, +18 Spell Dmg"
             },
             {
               "name": "Coldspire Staff",
@@ -7364,7 +9475,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "15.14 DPS",
               "speed": "3.60",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 24,
+              "reqLevel": 19,
+              "stats": "+7 Int, +5 Spi"
             },
             {
               "name": "Smite's Mighty Hammer",
@@ -7373,7 +9488,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "19.71 DPS",
               "speed": "3.50",
-              "weaponType": "Two-handed mace"
+              "weaponType": "Two-handed mace",
+              "quality": "q3",
+              "iLvl": 23,
+              "reqLevel": 18,
+              "stats": ""
             },
             {
               "name": "Kris of Orgrimmar",
@@ -7382,10 +9501,18 @@ if (typeof window !== 'undefined') {
               "faction": "horde",
               "dps": "8 DPS",
               "speed": "1.50",
-              "weaponType": "Dagger"
+              "weaponType": "Dagger",
+              "quality": "q3",
+              "iLvl": 18,
+              "reqLevel": 9,
+              "stats": "+4 Sta, +33 Healing, +11 Spell Damage"
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 24,
+          "reqLevel": 15,
+          "stats": "+8 Str, +5 Sta"
         },
         {
           "levelBracket": "19–20",
@@ -7408,7 +9535,11 @@ if (typeof window !== 'undefined') {
               "faction": "horde",
               "dps": "11.82 DPS",
               "speed": "3.30",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 18,
+              "reqLevel": 9,
+              "stats": "+6 Int, +6 Agi, +18 Spell Dmg"
             },
             {
               "name": "Bronze Warhammer",
@@ -7417,7 +9548,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "16.86 DPS",
               "speed": "3.50",
-              "weaponType": "Two-handed mace"
+              "weaponType": "Two-handed mace",
+              "quality": "q2",
+              "iLvl": 25,
+              "reqLevel": 20,
+              "stats": "90"
             },
             {
               "name": "Bronze Battle Axe",
@@ -7426,7 +9561,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "18.33 DPS",
               "speed": "3.30",
-              "weaponType": "Two-handed axe"
+              "weaponType": "Two-handed axe",
+              "quality": "q2",
+              "iLvl": 27,
+              "reqLevel": 22,
+              "stats": "105"
             },
             {
               "name": "Kris of Orgrimmar",
@@ -7435,10 +9574,28 @@ if (typeof window !== 'undefined') {
               "faction": "horde",
               "dps": "8 DPS",
               "speed": "1.50",
-              "weaponType": "Dagger"
+              "weaponType": "Dagger",
+              "quality": "q3",
+              "iLvl": 18,
+              "reqLevel": 9,
+              "stats": "+4 Sta, +33 Healing, +11 Spell Damage"
             }
           ],
-          "faction": "horde"
+          "faction": "horde",
+          "quality": "q3",
+          "iLvl": 24,
+          "stats": "+7 Agility, +7 Stamina, +7 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 26.",
+          "lines": [
+            "Binds when picked up",
+            "Two-Hand\tStaff",
+            "35 - 53 Damage\tSpeed 2.90",
+            "(15.2 damage per second)",
+            "+7 Agility",
+            "+7 Stamina",
+            "+7 Intellect",
+            "Equip: Increases damage and healing done by magical spells and effects by up to 26."
+          ],
+          "reqLevel": 10
         },
         {
           "levelBracket": "21–22",
@@ -7461,7 +9618,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "18.33 DPS",
               "speed": "3.30",
-              "weaponType": "Two-handed axe"
+              "weaponType": "Two-handed axe",
+              "quality": "q2",
+              "iLvl": 27,
+              "reqLevel": 22,
+              "stats": "105"
             },
             {
               "name": "Iridescent Hammer",
@@ -7470,10 +9631,18 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "14.58 DPS",
               "speed": "2.40",
-              "weaponType": "One-handed mace"
+              "weaponType": "One-handed mace",
+              "quality": "q2",
+              "iLvl": 28,
+              "reqLevel": 23,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 27,
+          "reqLevel": 22,
+          "stats": "+10 Str, +4 Agi"
         },
         {
           "levelBracket": "23–24",
@@ -7496,7 +9665,22 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "15.96 DPS",
               "speed": "2.60",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 26,
+              "stats": "+3 Intellect, +4 Stamina, +12 Spirit, Equip: Increases healing done by up to 52 and damage done by up to 17 for all magical spells and effects.",
+              "lines": [
+                "Binds when equipped",
+                "Two-Hand\tStaff",
+                "33 - 50 Damage\tSpeed 2.60",
+                "(16.0 damage per second)",
+                "+3 Intellect",
+                "+4 Stamina",
+                "+12 Spirit",
+                "Equip: Increases healing done by up to 52 and damage done by up to 17 for all magical spells and effects.",
+                "Requires Level 21"
+              ],
+              "reqLevel": 21
             },
             {
               "name": "Rod of the Sleepwalker",
@@ -7505,10 +9689,27 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "17.68 DPS",
               "speed": "2.80",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 29,
+              "reqLevel": 24,
+              "stats": "+11 Int, +10 Spi"
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 28,
+          "stats": "+9 Stamina, Equip: +32 Attack Power against Humanoids.",
+          "lines": [
+            "Binds when picked up",
+            "Two-Hand\tAxe",
+            "62 - 94 Damage\tSpeed 3.40",
+            "(22.9 damage per second)",
+            "+9 Stamina",
+            "Equip: +32 Attack Power against Humanoids.",
+            "Requires Level 23"
+          ],
+          "reqLevel": 23
         },
         {
           "levelBracket": "25–26",
@@ -7531,7 +9732,20 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "15.57 DPS",
               "speed": "3.50",
-              "weaponType": "Two-handed mace"
+              "weaponType": "Two-handed mace",
+              "quality": "q2",
+              "iLvl": 31,
+              "stats": "+12 Stamina, Equip: Increases damage and healing done by magical spells and effects by up to 24.",
+              "lines": [
+                "Binds when equipped",
+                "Two-Hand\tMace",
+                "43 - 66 Damage\tSpeed 3.50",
+                "(15.6 damage per second)",
+                "+12 Stamina",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 24.",
+                "Requires Level 26"
+              ],
+              "reqLevel": 26
             },
             {
               "name": "Mighty Iron Hammer",
@@ -7540,7 +9754,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "15.54 DPS",
               "speed": "2.80",
-              "weaponType": "One-handed mace"
+              "weaponType": "One-handed mace",
+              "quality": "q2",
+              "iLvl": 30,
+              "reqLevel": 25,
+              "stats": "145"
             },
             {
               "name": "Dendweller's Hammer",
@@ -7549,7 +9767,20 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "25.61 DPS",
               "speed": "3.30",
-              "weaponType": "Two-handed mace"
+              "weaponType": "Two-handed mace",
+              "quality": "q3",
+              "iLvl": 31,
+              "stats": "+12 Stamina, +100 Armor",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand\tMace",
+                "67 - 102 Damage\tSpeed 3.30",
+                "(25.6 damage per second)",
+                "+12 Stamina",
+                "+100 Armor",
+                "Requires Level 26"
+              ],
+              "reqLevel": 26
             },
             {
               "name": "Defender of Dalaran",
@@ -7558,10 +9789,35 @@ if (typeof window !== 'undefined') {
               "speed": "3.30",
               "dps": "31.2 DPS",
               "value": "31.2 DPS, 3.30s - Dalaran Dungeon",
-              "faction": "both"
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 36,
+              "stats": "+9 Strength, +13 Stamina, +9 Intellect",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand\tMace",
+                "82 - 124 Damage\tSpeed 3.30",
+                "(31.2 damage per second)",
+                "+9 Strength",
+                "+13 Stamina",
+                "+9 Intellect"
+              ],
+              "reqLevel": 24
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 33,
+          "stats": "+60 Armor, Equip: +32 Attack Power.",
+          "lines": [
+            "Binds when picked up",
+            "Two-Hand\tMace",
+            "73 - 110 Damage\tSpeed 3.30",
+            "(27.7 damage per second)",
+            "+60 Armor",
+            "Equip: +32 Attack Power."
+          ],
+          "reqLevel": 24
         },
         {
           "levelBracket": "27–28",
@@ -7584,7 +9840,20 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "31.29 DPS",
               "speed": "3.10",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 36,
+              "stats": "+9 Strength, +6 Stamina, +14 Intellect",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand\tStaff",
+                "77 - 117 Damage\tSpeed 3.10",
+                "(31.3 damage per second)",
+                "+9 Strength",
+                "+6 Stamina",
+                "+14 Intellect"
+              ],
+              "reqLevel": 24
             },
             {
               "name": "Healer's Staff",
@@ -7593,10 +9862,27 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "20.77 DPS",
               "speed": "2.60",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 33,
+              "stats": "+12 Stamina, Equip: Increases healing done by up to 67 and damage done by up to 22 for all magical spells and effects., Equip: Restores 5 Mana per 5 sec.",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand\tStaff",
+                "43 - 65 Damage\tSpeed 2.60",
+                "(20.8 damage per second)",
+                "+12 Stamina",
+                "Equip: Increases healing done by up to 67 and damage done by up to 22 for all magical spells and effects.",
+                "Equip: Restores 5 Mana per 5 sec."
+              ],
+              "reqLevel": 24
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 33,
+          "reqLevel": 28,
+          "stats": "+11 Str, +8 Sta"
         },
         {
           "levelBracket": "29–30",
@@ -7619,7 +9905,20 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "18.2 DPS",
               "speed": "2.40",
-              "weaponType": "Fist Weapon"
+              "weaponType": "Fist Weapon",
+              "quality": "q3",
+              "iLvl": 40,
+              "stats": "+6 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 46., Equip: Increases the critical strike chance of your Lightning Bolt spell by 1%.",
+              "lines": [
+                "Binds when picked up",
+                "Main Hand\tFist Weapon",
+                "28 - 52 Damage\tSpeed 2.20",
+                "(18.2 damage per second)",
+                "+6 Intellect",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 46.",
+                "Equip: Increases the critical strike chance of your Lightning Bolt spell by 1%."
+              ],
+              "reqLevel": 30
             },
             {
               "name": "Tidebringer's Claw",
@@ -7628,7 +9927,20 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "18.1 DPS",
               "speed": "2.40",
-              "weaponType": "Fist Weapon"
+              "weaponType": "Fist Weapon",
+              "quality": "q3",
+              "iLvl": 40,
+              "stats": "+5 Stamina, Equip: Increases healing done by up to 86 and damage done by up to 28 for all magical spells and effects., Equip: Increases the critical strike chance of your Healing Wave and Lesser Healing Wave spells by 2%.",
+              "lines": [
+                "Binds when picked up",
+                "Main Hand\tFist Weapon",
+                "30 - 57 Damage\tSpeed 2.40",
+                "(18.1 damage per second)",
+                "+5 Stamina",
+                "Equip: Increases healing done by up to 86 and damage done by up to 28 for all magical spells and effects.",
+                "Equip: Increases the critical strike chance of your Healing Wave and Lesser Healing Wave spells by 2%."
+              ],
+              "reqLevel": 30
             },
             {
               "name": "Corpsemaker",
@@ -7637,7 +9949,20 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "28.95 DPS",
               "speed": "3.80",
-              "weaponType": "Two-handed axe"
+              "weaponType": "Two-handed axe",
+              "quality": "q3",
+              "iLvl": 34,
+              "stats": "+15 Strength, +8 Stamina",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand\tAxe",
+                "88 - 132 Damage\tSpeed 3.80",
+                "(28.9 damage per second)",
+                "+15 Strength",
+                "+8 Stamina",
+                "Requires Level 29"
+              ],
+              "reqLevel": 29
             },
             {
               "name": "Striking Staff",
@@ -7646,7 +9971,20 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "31.29 DPS",
               "speed": "3.10",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 36,
+              "stats": "+9 Strength, +6 Stamina, +14 Intellect",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand\tStaff",
+                "77 - 117 Damage\tSpeed 3.10",
+                "(31.3 damage per second)",
+                "+9 Strength",
+                "+6 Stamina",
+                "+14 Intellect"
+              ],
+              "reqLevel": 24
             },
             {
               "name": "Rage of the Storm",
@@ -7655,10 +9993,36 @@ if (typeof window !== 'undefined') {
               "speed": "3.20",
               "dps": "35.6 DPS",
               "value": "35.6 DPS, 3.20s - Custom Boss Drop",
-              "faction": "both"
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 40,
+              "stats": "+12 Intellect, +15 Stamina, Equip: Increases the damage dealt by your Stormstrike ability by 10%.",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand\tMace",
+                "91 - 137 Damage\tSpeed 3.20",
+                "(35.6 damage per second)",
+                "+12 Intellect",
+                "+15 Stamina",
+                "Equip: Increases the damage dealt by your Stormstrike ability by 10%."
+              ],
+              "reqLevel": 30
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 40,
+          "stats": "+12 Intellect, +15 Stamina, Equip: Increases the damage dealt by your Stormstrike ability by 10%.",
+          "lines": [
+            "Binds when picked up",
+            "Two-Hand\tMace",
+            "91 - 137 Damage\tSpeed 3.20",
+            "(35.6 damage per second)",
+            "+12 Intellect",
+            "+15 Stamina",
+            "Equip: Increases the damage dealt by your Stormstrike ability by 10%."
+          ],
+          "reqLevel": 30
         },
         {
           "levelBracket": "31–36",
@@ -7681,7 +10045,20 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "35.63 DPS",
               "speed": "3.20",
-              "weaponType": "Two-handed mace"
+              "weaponType": "Two-handed mace",
+              "quality": "q3",
+              "iLvl": 40,
+              "stats": "+12 Intellect, +15 Stamina, Equip: Increases the damage dealt by your Stormstrike ability by 10%.",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand\tMace",
+                "91 - 137 Damage\tSpeed 3.20",
+                "(35.6 damage per second)",
+                "+12 Intellect",
+                "+15 Stamina",
+                "Equip: Increases the damage dealt by your Stormstrike ability by 10%."
+              ],
+              "reqLevel": 30
             },
             {
               "name": "Manual Crowd Pummeler",
@@ -7690,7 +10067,23 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "29 DPS",
               "speed": "2.00",
-              "weaponType": "Two-handed mace"
+              "weaponType": "Two-handed mace",
+              "quality": "q3",
+              "iLvl": 34,
+              "stats": "+16 Strength, +5 Agility, Use: Increases your attack speed by 50% for 30 sec. (3 Min Cooldown)",
+              "lines": [
+                "Binds when picked up",
+                "Unique",
+                "Two-Hand\tMace",
+                "46 - 70 Damage\tSpeed 2.00",
+                "(29 damage per second)",
+                "+16 Strength",
+                "+5 Agility",
+                "Use: Increases your attack speed by 50% for 30 sec. (3 Min Cooldown)",
+                "3 Charges",
+                "Requires Level 29"
+              ],
+              "reqLevel": 29
             },
             {
               "name": "Massive Iron Axe",
@@ -7699,10 +10092,27 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "25.57 DPS",
               "speed": "3.50",
-              "weaponType": "Two-handed axe"
+              "weaponType": "Two-handed axe",
+              "quality": "q2",
+              "iLvl": 37,
+              "reqLevel": 32,
+              "stats": "185"
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 34,
+          "stats": "+15 Strength, +8 Stamina",
+          "lines": [
+            "Binds when picked up",
+            "Two-Hand\tAxe",
+            "88 - 132 Damage\tSpeed 3.80",
+            "(28.9 damage per second)",
+            "+15 Strength",
+            "+8 Stamina",
+            "Requires Level 29"
+          ],
+          "reqLevel": 29
         },
         {
           "levelBracket": "37–40",
@@ -7725,7 +10135,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "38.82 DPS",
               "speed": "3.40",
-              "weaponType": "Two-handed mace"
+              "weaponType": "Two-handed mace",
+              "quality": "q3",
+              "iLvl": 44,
+              "reqLevel": 39,
+              "stats": ""
             },
             {
               "name": "Illusionary Rod",
@@ -7734,10 +10148,18 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "25.74 DPS",
               "speed": "3.40",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 39,
+              "reqLevel": 34,
+              "stats": "+15 Int, +10 Spi"
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 42,
+          "reqLevel": 37,
+          "stats": ""
         },
         {
           "levelBracket": "41–46",
@@ -7760,7 +10182,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "46.47 DPS",
               "speed": "3.40",
-              "weaponType": "Two-handed mace"
+              "weaponType": "Two-handed mace",
+              "quality": "q3",
+              "iLvl": 54,
+              "reqLevel": 49,
+              "stats": ""
             },
             {
               "name": "Executioner's Cleaver",
@@ -7769,7 +10195,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "41.84 DPS",
               "speed": "3.80",
-              "weaponType": "Two-handed axe"
+              "weaponType": "Two-handed axe",
+              "quality": "q3",
+              "iLvl": 48,
+              "reqLevel": 43,
+              "stats": ""
             },
             {
               "name": "Gul'gash's Greathammer",
@@ -7778,10 +10208,18 @@ if (typeof window !== 'undefined') {
               "speed": "3.60",
               "dps": "42.8 DPS",
               "value": "42.8 DPS, 3.60s - Feralas Drop",
-              "faction": "both"
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 49,
+              "reqLevel": 44,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 53,
+          "reqLevel": 48,
+          "stats": "+14 Str, +1% Crit"
         },
         {
           "levelBracket": "47–52",
@@ -7803,7 +10241,11 @@ if (typeof window !== 'undefined') {
               "value": "49.3 DPS, 3.70s - BRD: Emperor Dagran Thaurissan",
               "faction": "both",
               "dps": "49.3 DPS",
-              "speed": "3.70"
+              "speed": "3.70",
+              "quality": "q3",
+              "iLvl": 52,
+              "reqLevel": 46,
+              "stats": ""
             },
             {
               "name": "Enchanted Battlehammer",
@@ -7812,10 +10254,18 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "48.29 DPS",
               "speed": "3.50",
-              "weaponType": "Two-handed mace"
+              "weaponType": "Two-handed mace",
+              "quality": "q3",
+              "iLvl": 56,
+              "reqLevel": 51,
+              "stats": "280"
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 55,
+          "reqLevel": 50,
+          "stats": ""
         },
         {
           "levelBracket": "53–60",
@@ -7838,7 +10288,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "56.53 DPS",
               "speed": "3.60",
-              "weaponType": "Two-handed mace"
+              "weaponType": "Two-handed mace",
+              "quality": "q4",
+              "iLvl": 60,
+              "reqLevel": 55,
+              "stats": ""
             },
             {
               "name": "Wisepaw Totem",
@@ -7847,14 +10301,22 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "36.88 DPS",
               "speed": "3.20",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 58,
+              "reqLevel": 53,
+              "stats": ""
             },
             {
               "name": "Fist of the Damned",
               "itemId": 13399,
               "value": "39.4 DPS - Stratholme",
               "faction": "both",
-              "dps": "39.4 DPS"
+              "dps": "39.4 DPS",
+              "quality": "q3",
+              "iLvl": 58,
+              "reqLevel": 52,
+              "stats": ""
             },
             {
               "name": "Icesworn Decapitator",
@@ -7863,10 +10325,18 @@ if (typeof window !== 'undefined') {
               "speed": "3.60",
               "dps": "50.6 DPS",
               "value": "50.6 DPS, 3.60s - Winterspring Rare",
-              "faction": "both"
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 59,
+              "reqLevel": 54,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 63,
+          "reqLevel": 58,
+          "stats": "Slow 3.80s swing speed yields monster Windfury procs"
         }
       ]
     },
@@ -7900,7 +10370,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "4.2 DPS",
               "speed": "2.50",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q1",
+              "iLvl": 8,
+              "reqLevel": 3,
+              "stats": ""
             },
             {
               "name": "Novice's Practice Wand",
@@ -7909,10 +10383,18 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "4 DPS",
               "speed": "1.50",
-              "weaponType": "Wand"
+              "weaponType": "Wand",
+              "quality": "q1",
+              "iLvl": 6,
+              "reqLevel": 1,
+              "stats": ""
             }
           ],
-          "faction": "alliance"
+          "faction": "alliance",
+          "quality": "q2",
+          "iLvl": 6,
+          "reqLevel": 1,
+          "stats": ""
         },
         {
           "levelBracket": "3–4",
@@ -7935,10 +10417,18 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "4 DPS",
               "speed": "1.50",
-              "weaponType": "Wand"
+              "weaponType": "Wand",
+              "quality": "q1",
+              "iLvl": 6,
+              "reqLevel": 2,
+              "stats": "10"
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q1",
+          "iLvl": 8,
+          "reqLevel": 3,
+          "stats": ""
         },
         {
           "levelBracket": "5–6",
@@ -7961,10 +10451,18 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "4.2 DPS",
               "speed": "2.50",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q1",
+              "iLvl": 8,
+              "reqLevel": 3,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q2",
+          "iLvl": 15,
+          "reqLevel": 5,
+          "stats": ""
         },
         {
           "levelBracket": "7–8",
@@ -7985,7 +10483,11 @@ if (typeof window !== 'undefined') {
               "itemId": 15396,
               "value": "8.5 DPS - Teldrassil quest",
               "faction": "alliance",
-              "dps": "8.5 DPS"
+              "dps": "8.5 DPS",
+              "quality": "q2",
+              "iLvl": 12,
+              "reqLevel": 6,
+              "stats": ""
             },
             {
               "name": "Lesser Magic Wand",
@@ -7994,7 +10496,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "11.33 DPS",
               "speed": "1.50",
-              "weaponType": "Wand"
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 15,
+              "reqLevel": 5,
+              "stats": "10"
             },
             {
               "name": "Riptear's Spare Arm",
@@ -8003,7 +10509,11 @@ if (typeof window !== 'undefined') {
               "faction": "horde",
               "dps": "9.41 DPS",
               "speed": "1.70",
-              "weaponType": "Wand"
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 13,
+              "reqLevel": 6,
+              "stats": "1.70s Wand"
             },
             {
               "name": "Darkwood Staff",
@@ -8012,7 +10522,11 @@ if (typeof window !== 'undefined') {
               "faction": "horde",
               "dps": "6.72 DPS",
               "speed": "3.20",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q2",
+              "iLvl": 13,
+              "reqLevel": 7,
+              "stats": ""
             },
             {
               "name": "Wisesight Wand",
@@ -8021,10 +10535,18 @@ if (typeof window !== 'undefined') {
               "speed": "1.70",
               "dps": "8.8 DPS",
               "value": "8.8 DPS, 1.70s - Early Wand Drop",
-              "faction": "both"
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 12,
+              "reqLevel": 7,
+              "stats": ""
             }
           ],
-          "faction": "alliance"
+          "faction": "alliance",
+          "quality": "q2",
+          "iLvl": 12,
+          "reqLevel": 1,
+          "stats": ""
         },
         {
           "levelBracket": "9–10",
@@ -8046,14 +10568,22 @@ if (typeof window !== 'undefined') {
               "value": "8.6 DPS, 1.90s - Vendor wand",
               "faction": "both",
               "dps": "8.6 DPS",
-              "speed": "1.90"
+              "speed": "1.90",
+              "quality": "q2",
+              "iLvl": 14,
+              "reqLevel": 8,
+              "stats": ""
             },
             {
               "name": "Staff of the Dor'Danil",
               "itemId": 15396,
               "value": "8.5 DPS - Early quest",
               "faction": "both",
-              "dps": "8.5 DPS"
+              "dps": "8.5 DPS",
+              "quality": "q2",
+              "iLvl": 14,
+              "reqLevel": 8,
+              "stats": ""
             },
             {
               "name": "Riptear's Spare Arm",
@@ -8062,7 +10592,11 @@ if (typeof window !== 'undefined') {
               "faction": "horde",
               "dps": "9.41 DPS",
               "speed": "1.70",
-              "weaponType": "Wand"
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 13,
+              "reqLevel": 6,
+              "stats": ""
             },
             {
               "name": "Cinder Wand",
@@ -8071,7 +10605,11 @@ if (typeof window !== 'undefined') {
               "faction": "horde",
               "dps": "11.79 DPS",
               "speed": "1.40",
-              "weaponType": "Wand"
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 16,
+              "reqLevel": 9,
+              "stats": ""
             },
             {
               "name": "Deepblaze",
@@ -8080,10 +10618,18 @@ if (typeof window !== 'undefined') {
               "speed": "1.70",
               "dps": "18.5 DPS",
               "value": "18.5 DPS, 1.70s - Alliance Ironforge Quest",
-              "faction": "alliance"
+              "faction": "alliance",
+              "quality": "q3",
+              "iLvl": 18,
+              "reqLevel": 9,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q2",
+          "iLvl": 15,
+          "reqLevel": 5,
+          "stats": ""
         },
         {
           "levelBracket": "11–12",
@@ -8106,14 +10652,22 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "7.14 DPS",
               "speed": "2.80",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q2",
+              "iLvl": 14,
+              "reqLevel": 12,
+              "stats": ""
             },
             {
               "name": "Pagan Rod",
               "itemId": 6449,
               "value": "8.6 DPS - Vendor wand",
               "faction": "both",
-              "dps": "8.6 DPS"
+              "dps": "8.6 DPS",
+              "quality": "q2",
+              "iLvl": 16,
+              "reqLevel": 10,
+              "stats": ""
             },
             {
               "name": "Cauldron Stirrer",
@@ -8122,7 +10676,11 @@ if (typeof window !== 'undefined') {
               "faction": "horde",
               "dps": "7.42 DPS",
               "speed": "3.10",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q2",
+              "iLvl": 15,
+              "reqLevel": 10,
+              "stats": ""
             },
             {
               "name": "Cinder Wand",
@@ -8131,7 +10689,11 @@ if (typeof window !== 'undefined') {
               "faction": "horde",
               "dps": "11.79 DPS",
               "speed": "1.40",
-              "weaponType": "Wand"
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 16,
+              "reqLevel": 9,
+              "stats": ""
             },
             {
               "name": "Spark of the People's Militia",
@@ -8140,10 +10702,18 @@ if (typeof window !== 'undefined') {
               "speed": "1.80",
               "dps": "12.8 DPS",
               "value": "12.8 DPS, 1.80s - Westfall Quest",
-              "faction": "alliance"
+              "faction": "alliance",
+              "quality": "q2",
+              "iLvl": 17,
+              "reqLevel": 9,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q2",
+          "iLvl": 23,
+          "reqLevel": 13,
+          "stats": ""
         },
         {
           "levelBracket": "13–14",
@@ -8166,7 +10736,11 @@ if (typeof window !== 'undefined') {
               "faction": "horde",
               "dps": "11.82 DPS",
               "speed": "3.30",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 18,
+              "reqLevel": 9,
+              "stats": "+6 Int, +6 Agi, +18 Spell Dmg"
             },
             {
               "name": "Greater Magic Wand",
@@ -8175,7 +10749,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "17.5 DPS",
               "speed": "1.80",
-              "weaponType": "Wand"
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 23,
+              "reqLevel": 13,
+              "stats": "75"
             },
             {
               "name": "Fang of Magmatus",
@@ -8184,7 +10762,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "7.94 DPS",
               "speed": "1.70",
-              "weaponType": "Dagger"
+              "weaponType": "Dagger",
+              "quality": "q3",
+              "iLvl": 18,
+              "reqLevel": 13,
+              "stats": "+2 Agi, +2 Fire SP"
             },
             {
               "name": "Kris of Orgrimmar",
@@ -8193,7 +10775,11 @@ if (typeof window !== 'undefined') {
               "faction": "horde",
               "dps": "8 DPS",
               "speed": "1.50",
-              "weaponType": "Dagger"
+              "weaponType": "Dagger",
+              "quality": "q3",
+              "iLvl": 18,
+              "reqLevel": 9,
+              "stats": "+4 Sta, +33 Healing, +11 Spell Damage"
             },
             {
               "name": "Searing Dagger",
@@ -8202,7 +10788,11 @@ if (typeof window !== 'undefined') {
               "speed": "1.60",
               "dps": "8.1 DPS",
               "value": "8.1 DPS, 1.60s - RFC Drop",
-              "faction": "both"
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 18,
+              "reqLevel": 13,
+              "stats": ""
             },
             {
               "name": "Moongazer's Wand",
@@ -8211,10 +10801,18 @@ if (typeof window !== 'undefined') {
               "speed": "1.70",
               "dps": "14.4 DPS",
               "value": "14.4 DPS, 1.70s - Ashenvale Rare",
-              "faction": "both"
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 19,
+              "reqLevel": 14,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 18,
+          "reqLevel": 13,
+          "stats": "+5 Int, +4 Spirit"
         },
         {
           "levelBracket": "15–16",
@@ -8237,7 +10835,11 @@ if (typeof window !== 'undefined') {
               "faction": "horde",
               "dps": "11.82 DPS",
               "speed": "3.30",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 18,
+              "reqLevel": 9,
+              "stats": "+6 Int, +6 Agi, +18 Spell Dmg"
             },
             {
               "name": "Segmented Spider Leg",
@@ -8246,7 +10848,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "17.5 DPS",
               "speed": "3.60",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 20,
+              "reqLevel": 15,
+              "stats": "+5 Int, +4 Sta"
             },
             {
               "name": "Meathook Slicer",
@@ -8255,7 +10861,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "13.61 DPS",
               "speed": "1.80",
-              "weaponType": "Dagger"
+              "weaponType": "Dagger",
+              "quality": "q3",
+              "iLvl": 20,
+              "reqLevel": 15,
+              "stats": ""
             },
             {
               "name": "Whelpfire Wand",
@@ -8264,10 +10874,18 @@ if (typeof window !== 'undefined') {
               "speed": "1.90",
               "dps": "15.3 DPS",
               "value": "15.3 DPS, 1.90s - Wetlands Drop",
-              "faction": "both"
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 20,
+              "reqLevel": 15,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 22,
+          "reqLevel": 17,
+          "stats": "+5 Int, +5 Spi"
         },
         {
           "levelBracket": "17–18",
@@ -8290,7 +10908,11 @@ if (typeof window !== 'undefined') {
               "faction": "horde",
               "dps": "11.82 DPS",
               "speed": "3.30",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 18,
+              "reqLevel": 9,
+              "stats": "+6 Int, +6 Agi, +18 Spell Dmg"
             },
             {
               "name": "Staff of Westfall",
@@ -8299,7 +10921,21 @@ if (typeof window !== 'undefined') {
               "faction": "alliance",
               "dps": "15.17 DPS",
               "speed": "3.00",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 24,
+              "stats": "+5 Intellect, +6 Spirit, Equip: Increases healing done by up to 48 and damage done by up to 16 for all magical spells and effects., Equip: Movement speed increased by 2% in Elwynn Forest, Westfall, Redridge Mountains, and the Deadmines.",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand\tStaff",
+                "36 - 55 Damage\tSpeed 3.00",
+                "(15.2 damage per second)",
+                "+5 Intellect",
+                "+6 Spirit",
+                "Equip: Increases healing done by up to 48 and damage done by up to 16 for all magical spells and effects.",
+                "Equip: Movement speed increased by 2% in Elwynn Forest, Westfall, Redridge Mountains, and the Deadmines."
+              ],
+              "reqLevel": 14
             },
             {
               "name": "Vileblood Scimitar",
@@ -8308,10 +10944,18 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "14.62 DPS",
               "speed": "2.60",
-              "weaponType": "One-handed sword"
+              "weaponType": "One-handed sword",
+              "quality": "q3",
+              "iLvl": 22,
+              "reqLevel": 17,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 24,
+          "reqLevel": 19,
+          "stats": "+7 Int, +5 Spi, +6 Frost Spell Dmg"
         },
         {
           "levelBracket": "19–20",
@@ -8334,7 +10978,11 @@ if (typeof window !== 'undefined') {
               "faction": "horde",
               "dps": "11.82 DPS",
               "speed": "3.30",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 18,
+              "reqLevel": 9,
+              "stats": "+6 Int, +6 Agi, +18 Spell Dmg"
             },
             {
               "name": "Odo's Ley Staff",
@@ -8343,7 +10991,21 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "16.03 DPS",
               "speed": "2.90",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 26,
+              "stats": "+5 Stamina, +12 Spirit, Equip: Increases healing done by up to 52 and damage done by up to 17 for all magical spells and effects.",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand\tStaff",
+                "37 - 56 Damage\tSpeed 2.90",
+                "(16.0 damage per second)",
+                "+5 Stamina",
+                "+12 Spirit",
+                "Equip: Increases healing done by up to 52 and damage done by up to 17 for all magical spells and effects.",
+                "Requires Level 21"
+              ],
+              "reqLevel": 21
             },
             {
               "name": "Glimmering Staff",
@@ -8352,10 +11014,38 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "18.41 DPS",
               "speed": "2.20",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 30,
+              "stats": "+11 Intellect, +11 Stamina, Equip: Increases damage and healing done by magical spells and effects by up to 34.",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand\tStaff",
+                "32 - 49 Damage\tSpeed 2.20",
+                "(18.4 damage per second)",
+                "+11 Intellect",
+                "+11 Stamina",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 34.",
+                "Requires Level 25"
+              ],
+              "reqLevel": 25
             }
           ],
-          "faction": "alliance"
+          "faction": "alliance",
+          "quality": "q3",
+          "iLvl": 24,
+          "stats": "+5 Intellect, +6 Spirit, Equip: Increases healing done by up to 48 and damage done by up to 16 for all magical spells and effects., Equip: Movement speed increased by 2% in Elwynn Forest, Westfall, Redridge Mountains, and the Deadmines.",
+          "lines": [
+            "Binds when picked up",
+            "Two-Hand\tStaff",
+            "36 - 55 Damage\tSpeed 3.00",
+            "(15.2 damage per second)",
+            "+5 Intellect",
+            "+6 Spirit",
+            "Equip: Increases healing done by up to 48 and damage done by up to 16 for all magical spells and effects.",
+            "Equip: Movement speed increased by 2% in Elwynn Forest, Westfall, Redridge Mountains, and the Deadmines."
+          ],
+          "reqLevel": 14
         },
         {
           "levelBracket": "21–24",
@@ -8378,7 +11068,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "17.68 DPS",
               "speed": "2.80",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 29,
+              "reqLevel": 24,
+              "stats": "+11 Int, +10 Spi"
             },
             {
               "name": "Lesser Mystic Wand",
@@ -8387,7 +11081,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "25.38 DPS",
               "speed": "1.30",
-              "weaponType": "Wand"
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 31,
+              "reqLevel": 26,
+              "stats": "155"
             },
             {
               "name": "Meteor Shard",
@@ -8396,7 +11094,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "17.78 DPS",
               "speed": "1.80",
-              "weaponType": "Dagger"
+              "weaponType": "Dagger",
+              "quality": "q3",
+              "iLvl": 28,
+              "reqLevel": 23,
+              "stats": ""
             },
             {
               "name": "Snapped Branch Wand",
@@ -8405,7 +11107,11 @@ if (typeof window !== 'undefined') {
               "speed": "1.70",
               "dps": "21.2 DPS",
               "value": "21.2 DPS, 1.70s - Custom Wand Drop",
-              "faction": "both"
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 27,
+              "reqLevel": 22,
+              "stats": ""
             },
             {
               "name": "Alliance Outrunner Staff",
@@ -8414,10 +11120,29 @@ if (typeof window !== 'undefined') {
               "speed": "2.50",
               "dps": "16.2 DPS",
               "value": "16.2 DPS, 2.50s - Alliance Drop",
-              "faction": "alliance"
+              "faction": "alliance",
+              "quality": "q3",
+              "iLvl": 26,
+              "reqLevel": 21,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 29,
+          "stats": "+7 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 32., Equip: Melee attacks deal 98 additional Fire damage against Frozen targets.",
+          "lines": [
+            "Binds when picked up",
+            "Main Hand\tSword",
+            "17 - 32 Damage\tSpeed 2.00",
+            "(12.3 damage per second)",
+            "+7 Intellect",
+            "Equip: Increases damage and healing done by magical spells and effects by up to 32.",
+            "Equip: Melee attacks deal 98 additional Fire damage against Frozen targets.",
+            "Classes: Mage",
+            "Requires Level 21"
+          ],
+          "reqLevel": 21
         },
         {
           "levelBracket": "25–26",
@@ -8440,7 +11165,22 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "12.25 DPS",
               "speed": "2.00",
-              "weaponType": "One-handed sword"
+              "weaponType": "One-handed sword",
+              "quality": "q3",
+              "iLvl": 29,
+              "stats": "+7 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 32., Equip: Melee attacks deal 98 additional Fire damage against Frozen targets.",
+              "lines": [
+                "Binds when picked up",
+                "Main Hand\tSword",
+                "17 - 32 Damage\tSpeed 2.00",
+                "(12.3 damage per second)",
+                "+7 Intellect",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 32.",
+                "Equip: Melee attacks deal 98 additional Fire damage against Frozen targets.",
+                "Classes: Mage",
+                "Requires Level 21"
+              ],
+              "reqLevel": 21
             },
             {
               "name": "Death Prophet Spine",
@@ -8449,7 +11189,21 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "18.93 DPS",
               "speed": "2.80",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 31,
+              "stats": "+11 Stamina, Equip: Increases damage and healing done by magical spells and effects by up to 34., Equip: Restores 5 Mana per 5 sec.",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand\tStaff",
+                "42 - 64 Damage\tSpeed 2.80",
+                "(18.9 damage per second)",
+                "+11 Stamina",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 34.",
+                "Equip: Restores 5 Mana per 5 sec.",
+                "Requires Level 26"
+              ],
+              "reqLevel": 26
             },
             {
               "name": "Debt Collector",
@@ -8458,7 +11212,20 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "13.04 DPS",
               "speed": "2.30",
-              "weaponType": "One-handed sword"
+              "weaponType": "One-handed sword",
+              "quality": "q3",
+              "iLvl": 31,
+              "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 34., Equip: Grants 6 health and 2 mana every 5 sec for 15 sec when one of your spells is resisted.",
+              "lines": [
+                "Binds when picked up",
+                "Main Hand\tSword",
+                "21 - 39 Damage\tSpeed 2.30",
+                "(13.0 damage per second)",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 34.",
+                "Equip: Grants 6 health and 2 mana every 5 sec for 15 sec when one of your spells is resisted.",
+                "Requires Level 26"
+              ],
+              "reqLevel": 26
             },
             {
               "name": "Striking Staff",
@@ -8467,7 +11234,20 @@ if (typeof window !== 'undefined') {
               "speed": "3.30",
               "dps": "31.3 DPS",
               "value": "31.3 DPS, 3.30s - Dalaran Dungeon",
-              "faction": "both"
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 36,
+              "stats": "+9 Strength, +6 Stamina, +14 Intellect",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand\tStaff",
+                "77 - 117 Damage\tSpeed 3.10",
+                "(31.3 damage per second)",
+                "+9 Strength",
+                "+6 Stamina",
+                "+14 Intellect"
+              ],
+              "reqLevel": 24
             },
             {
               "name": "Unstable Power Core",
@@ -8476,7 +11256,18 @@ if (typeof window !== 'undefined') {
               "speed": "1.70",
               "dps": "29.7 DPS",
               "value": "29.7 DPS, 1.70s - Dalaran Dungeon",
-              "faction": "both"
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 36,
+              "stats": "+4 Stamina",
+              "lines": [
+                "Binds when picked up",
+                "Ranged\tWand",
+                "35 - 66 Arcane Damage\tSpeed 1.70",
+                "(29.7 damage per second)",
+                "+4 Stamina"
+              ],
+              "reqLevel": 24
             },
             {
               "name": "Fallen Dragon's Scepter",
@@ -8485,10 +11276,35 @@ if (typeof window !== 'undefined') {
               "speed": "3.00",
               "dps": "19.9 DPS",
               "value": "19.9 DPS, 3.00s - Redridge Quest",
-              "faction": "both"
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 32,
+              "stats": "+11 Intellect, +13 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 36.",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand\tStaff",
+                "54 - 81 Damage\tSpeed 3.40",
+                "(19.9 damage per second)",
+                "+11 Intellect",
+                "+13 Spirit",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 36."
+              ],
+              "reqLevel": 24
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 29,
+          "stats": "+3 Spirit, Equip: Increases damage done by Shadow spells and effects by up to 6.",
+          "lines": [
+            "Binds when picked up",
+            "Ranged\tWand",
+            "30 - 57 Shadow Damage\tSpeed 1.50",
+            "(29.0 damage per second)",
+            "+3 Spirit",
+            "Equip: Increases damage done by Shadow spells and effects by up to 6."
+          ],
+          "reqLevel": 18
         },
         {
           "levelBracket": "27–28",
@@ -8511,7 +11327,21 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "31.18 DPS",
               "speed": "1.70",
-              "weaponType": "Wand"
+              "weaponType": "Wand",
+              "quality": "q3",
+              "iLvl": 32,
+              "stats": "+4 Intellect, Equip: +2 Mana Regeneration",
+              "lines": [
+                "Binds when picked up",
+                "Ranged\tWand",
+                "37 - 69 Arcane Damage\tSpeed 1.70",
+                "(31.2 damage per second)",
+                "+4 Intellect",
+                "Requires Level 27",
+                "Equip: +2 Mana Regeneration",
+                "Sell Price: 47s 22c"
+              ],
+              "reqLevel": 27
             },
             {
               "name": "Tendonscraper Dagger",
@@ -8520,10 +11350,40 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "14.38 DPS",
               "speed": "1.60",
-              "weaponType": "Dagger"
+              "weaponType": "Dagger",
+              "quality": "q3",
+              "iLvl": 33,
+              "stats": "+5 Stamina, Equip: +8 Health Regeneration, Equip: +36 Spell Power",
+              "lines": [
+                "Binds when picked up",
+                "Main Hand\tDagger",
+                "16 - 30 Damage\tSpeed 1.60",
+                "(14.4 damage per second)",
+                "+5 Stamina",
+                "Requires Level 28",
+                "Equip: +8 Health Regeneration",
+                "Equip: +36 Spell Power",
+                "Sell Price: 73s 79c"
+              ],
+              "reqLevel": 28
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 33,
+          "stats": "+14 Stamina, Equip: +3 Spell Penetration, Equip: +36 Spell Power",
+          "lines": [
+            "Binds when picked up",
+            "Two-Hand\tStaff",
+            "59 - 90 Damage\tSpeed 3.60",
+            "(20.7 damage per second)",
+            "+14 Stamina",
+            "Requires Level 28",
+            "Equip: +3 Spell Penetration",
+            "Equip: +36 Spell Power",
+            "Sell Price: 85s 58c"
+          ],
+          "reqLevel": 28
         },
         {
           "levelBracket": "29–30",
@@ -8546,7 +11406,20 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "19.85 DPS",
               "speed": "3.40",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 32,
+              "stats": "+11 Intellect, +13 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 36.",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand\tStaff",
+                "54 - 81 Damage\tSpeed 3.40",
+                "(19.9 damage per second)",
+                "+11 Intellect",
+                "+13 Spirit",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 36."
+              ],
+              "reqLevel": 24
             },
             {
               "name": "Mindslicer",
@@ -8555,7 +11428,19 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "15.26 DPS",
               "speed": "1.90",
-              "weaponType": "Dagger"
+              "weaponType": "Dagger",
+              "quality": "q2",
+              "iLvl": 41,
+              "stats": "+7 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 34.",
+              "lines": [
+                "Binds when picked up",
+                "Main Hand\tDagger",
+                "20 - 38 Damage\tSpeed 1.90",
+                "(15.3 damage per second)",
+                "+7 Intellect",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 34."
+              ],
+              "reqLevel": 30
             },
             {
               "name": "Master Hunter's Wand",
@@ -8564,7 +11449,18 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "34.67 DPS",
               "speed": "1.50",
-              "weaponType": "Wand"
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 43,
+              "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 7.",
+              "lines": [
+                "Binds when picked up",
+                "Ranged\tWand",
+                "36 - 68 Shadow Damage\tSpeed 1.50",
+                "(34.7 damage per second)",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 7."
+              ],
+              "reqLevel": 28
             },
             {
               "name": "Icefury Wand",
@@ -8573,10 +11469,36 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "37.19 DPS",
               "speed": "1.60",
-              "weaponType": "Wand"
+              "weaponType": "Wand",
+              "quality": "q3",
+              "iLvl": 40,
+              "stats": "+3 Intellect, Equip: Increases damage done by Frost spells and effects by up to 9.",
+              "lines": [
+                "Binds when picked up",
+                "Ranged\tWand",
+                "41 - 78 Frost Damage\tSpeed 1.60",
+                "(37.2 damage per second)",
+                "+3 Intellect",
+                "Equip: Increases damage done by Frost spells and effects by up to 9.",
+                "Classes: Mage"
+              ],
+              "reqLevel": 30
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 36,
+          "stats": "+9 Strength, +6 Stamina, +14 Intellect",
+          "lines": [
+            "Binds when picked up",
+            "Two-Hand\tStaff",
+            "77 - 117 Damage\tSpeed 3.10",
+            "(31.3 damage per second)",
+            "+9 Strength",
+            "+6 Stamina",
+            "+14 Intellect"
+          ],
+          "reqLevel": 24
         },
         {
           "levelBracket": "31–35",
@@ -8599,7 +11521,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "17.5 DPS",
               "speed": "1.40",
-              "weaponType": "Dagger"
+              "weaponType": "Dagger",
+              "quality": "q3",
+              "iLvl": 39,
+              "reqLevel": 34,
+              "stats": "+9 SP, +8 Int"
             },
             {
               "name": "Twisted Nether Wand",
@@ -8608,10 +11534,18 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "34 DPS",
               "speed": "1.50",
-              "weaponType": "Wand"
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 42,
+              "reqLevel": 37,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 39,
+          "reqLevel": 34,
+          "stats": "+15 Int, +10 Spi"
         },
         {
           "levelBracket": "36–40",
@@ -8634,7 +11568,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "29.86 DPS",
               "speed": "3.70",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q4",
+              "iLvl": 40,
+              "reqLevel": 35,
+              "stats": "+26 Spell Power"
             },
             {
               "name": "Dancing Flame",
@@ -8643,7 +11581,19 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "31.07 DPS",
               "speed": "1.40",
-              "weaponType": "Wand"
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 38,
+              "stats": "+4 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 4.",
+              "lines": [
+                "Binds when picked up",
+                "Ranged\tWand",
+                "30 - 57 Fire Damage\tSpeed 1.40",
+                "(31.1 damage per second)",
+                "+4 Intellect",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 4."
+              ],
+              "reqLevel": 26
             },
             {
               "name": "Rod of Sorrow",
@@ -8652,10 +11602,26 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "32.63 DPS",
               "speed": "1.90",
-              "weaponType": "Wand"
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 40,
+              "stats": "+4 Stamina, +3 Spirit",
+              "lines": [
+                "Binds when picked up",
+                "Ranged\tWand",
+                "43 - 81 Shadow Damage\tSpeed 1.90",
+                "(32.6 damage per second)",
+                "+4 Stamina",
+                "+3 Spirit"
+              ],
+              "reqLevel": 30
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 39,
+          "reqLevel": 34,
+          "stats": "Strong stats carry through the late 30s"
         },
         {
           "levelBracket": "41–46",
@@ -8678,7 +11644,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "31.11 DPS",
               "speed": "2.70",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 48,
+              "reqLevel": 43,
+              "stats": "+10 Int, +21 SP"
             },
             {
               "name": "Dreambough Wand",
@@ -8687,7 +11657,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "39.17 DPS",
               "speed": "1.80",
-              "weaponType": "Wand"
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 48,
+              "reqLevel": 43,
+              "stats": ""
             },
             {
               "name": "Emerald Watcher's Dreamstaff",
@@ -8696,10 +11670,18 @@ if (typeof window !== 'undefined') {
               "speed": "3.00",
               "dps": "31.7 DPS",
               "value": "31.7 DPS, 3.00s - Custom Staff Drop",
-              "faction": "both"
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 49,
+              "reqLevel": 44,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 48,
+          "reqLevel": 40,
+          "stats": "+16 Int, +10 Spi"
         },
         {
           "levelBracket": "47–52",
@@ -8722,17 +11704,29 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "45.75 DPS",
               "speed": "2.00",
-              "weaponType": "Wand"
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 54,
+              "reqLevel": 49,
+              "stats": "265"
             },
             {
               "name": "Spire of the Stoneshaper",
               "itemId": 11802,
               "value": "33.8 DPS - BRD: Lord Incendius",
               "faction": "both",
-              "dps": "33.8 DPS"
+              "dps": "33.8 DPS",
+              "quality": "q3",
+              "iLvl": 52,
+              "reqLevel": 46,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 53,
+          "reqLevel": 48,
+          "stats": "+12 Int, +20 Spi"
         },
         {
           "levelBracket": "53–60",
@@ -8753,7 +11747,11 @@ if (typeof window !== 'undefined') {
               "itemId": 18534,
               "value": "36.0 DPS, +14 Int, +11 Spi, +23 SP, 1% Spell Crit - DM North Tribute Run",
               "faction": "both",
-              "dps": "36.0 DPS"
+              "dps": "36.0 DPS",
+              "quality": "q3",
+              "iLvl": 58,
+              "reqLevel": 52,
+              "stats": "+14 Int, +11 Spi, +23 SP, 1% Spell Crit"
             },
             {
               "name": "Witchblade",
@@ -8761,7 +11759,11 @@ if (typeof window !== 'undefined') {
               "value": "37.2 DPS, 1.80s, +14 SP - Scholomance: Darkmaster Gandling",
               "faction": "both",
               "dps": "37.2 DPS",
-              "speed": "1.80"
+              "speed": "1.80",
+              "quality": "q3",
+              "iLvl": 58,
+              "reqLevel": 52,
+              "stats": "+14 SP"
             },
             {
               "name": "Greater Eternal Wand",
@@ -8770,7 +11772,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "53.33 DPS",
               "speed": "1.50",
-              "weaponType": "Wand"
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 60,
+              "reqLevel": 55,
+              "stats": "285"
             },
             {
               "name": "Brilliant Wand",
@@ -8779,10 +11785,18 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "59.58 DPS",
               "speed": "1.20",
-              "weaponType": "Wand"
+              "weaponType": "Wand",
+              "quality": "q3",
+              "iLvl": 60,
+              "reqLevel": 55,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 58,
+          "reqLevel": 53,
+          "stats": "+Spell Power & Healing"
         }
       ]
     },
@@ -8816,7 +11830,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "4.2 DPS",
               "speed": "2.50",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q1",
+              "iLvl": 8,
+              "reqLevel": 3,
+              "stats": ""
             },
             {
               "name": "Novice's Practice Wand",
@@ -8825,10 +11843,18 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "4 DPS",
               "speed": "1.50",
-              "weaponType": "Wand"
+              "weaponType": "Wand",
+              "quality": "q1",
+              "iLvl": 6,
+              "reqLevel": 1,
+              "stats": ""
             }
           ],
-          "faction": "alliance"
+          "faction": "alliance",
+          "quality": "q2",
+          "iLvl": 6,
+          "reqLevel": 1,
+          "stats": ""
         },
         {
           "levelBracket": "3–4",
@@ -8851,10 +11877,18 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "4 DPS",
               "speed": "1.50",
-              "weaponType": "Wand"
+              "weaponType": "Wand",
+              "quality": "q1",
+              "iLvl": 6,
+              "reqLevel": 2,
+              "stats": "10"
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q1",
+          "iLvl": 8,
+          "reqLevel": 3,
+          "stats": ""
         },
         {
           "levelBracket": "5–6",
@@ -8877,10 +11911,18 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "4.2 DPS",
               "speed": "2.50",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q1",
+              "iLvl": 8,
+              "reqLevel": 3,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q2",
+          "iLvl": 15,
+          "reqLevel": 5,
+          "stats": ""
         },
         {
           "levelBracket": "7–8",
@@ -8901,7 +11943,11 @@ if (typeof window !== 'undefined') {
               "itemId": 15396,
               "value": "8.5 DPS - Early quest",
               "faction": "both",
-              "dps": "8.5 DPS"
+              "dps": "8.5 DPS",
+              "quality": "q2",
+              "iLvl": 12,
+              "reqLevel": 6,
+              "stats": ""
             },
             {
               "name": "Lesser Magic Wand",
@@ -8910,7 +11956,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "11.33 DPS",
               "speed": "1.50",
-              "weaponType": "Wand"
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 15,
+              "reqLevel": 5,
+              "stats": "10"
             },
             {
               "name": "Riptear's Spare Arm",
@@ -8919,7 +11969,11 @@ if (typeof window !== 'undefined') {
               "faction": "horde",
               "dps": "9.41 DPS",
               "speed": "1.70",
-              "weaponType": "Wand"
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 13,
+              "reqLevel": 6,
+              "stats": "1.70s Wand"
             },
             {
               "name": "Darkwood Staff",
@@ -8928,7 +11982,11 @@ if (typeof window !== 'undefined') {
               "faction": "horde",
               "dps": "6.72 DPS",
               "speed": "3.20",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q2",
+              "iLvl": 13,
+              "reqLevel": 7,
+              "stats": ""
             },
             {
               "name": "Wisesight Wand",
@@ -8937,10 +11995,18 @@ if (typeof window !== 'undefined') {
               "speed": "1.70",
               "dps": "8.8 DPS",
               "value": "8.8 DPS, 1.70s - Early Wand Drop",
-              "faction": "both"
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 12,
+              "reqLevel": 7,
+              "stats": ""
             }
           ],
-          "faction": "alliance"
+          "faction": "alliance",
+          "quality": "q2",
+          "iLvl": 12,
+          "reqLevel": 1,
+          "stats": ""
         },
         {
           "levelBracket": "9–10",
@@ -8962,14 +12028,22 @@ if (typeof window !== 'undefined') {
               "value": "8.6 DPS, 1.90s - Vendor wand",
               "faction": "both",
               "dps": "8.6 DPS",
-              "speed": "1.90"
+              "speed": "1.90",
+              "quality": "q2",
+              "iLvl": 14,
+              "reqLevel": 8,
+              "stats": ""
             },
             {
               "name": "Staff of the Dor'Danil",
               "itemId": 15396,
               "value": "8.5 DPS - Early quest",
               "faction": "both",
-              "dps": "8.5 DPS"
+              "dps": "8.5 DPS",
+              "quality": "q2",
+              "iLvl": 14,
+              "reqLevel": 8,
+              "stats": ""
             },
             {
               "name": "Riptear's Spare Arm",
@@ -8978,7 +12052,11 @@ if (typeof window !== 'undefined') {
               "faction": "horde",
               "dps": "9.41 DPS",
               "speed": "1.70",
-              "weaponType": "Wand"
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 13,
+              "reqLevel": 6,
+              "stats": ""
             },
             {
               "name": "Cinder Wand",
@@ -8987,7 +12065,11 @@ if (typeof window !== 'undefined') {
               "faction": "horde",
               "dps": "11.79 DPS",
               "speed": "1.40",
-              "weaponType": "Wand"
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 16,
+              "reqLevel": 9,
+              "stats": ""
             },
             {
               "name": "Deepblaze",
@@ -8996,10 +12078,18 @@ if (typeof window !== 'undefined') {
               "speed": "1.70",
               "dps": "18.5 DPS",
               "value": "18.5 DPS, 1.70s - Alliance Ironforge Quest",
-              "faction": "alliance"
+              "faction": "alliance",
+              "quality": "q3",
+              "iLvl": 18,
+              "reqLevel": 9,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q2",
+          "iLvl": 15,
+          "reqLevel": 5,
+          "stats": ""
         },
         {
           "levelBracket": "11–12",
@@ -9022,14 +12112,22 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "7.14 DPS",
               "speed": "2.80",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q2",
+              "iLvl": 14,
+              "reqLevel": 12,
+              "stats": ""
             },
             {
               "name": "Pagan Rod",
               "itemId": 6449,
               "value": "8.6 DPS - Vendor wand",
               "faction": "both",
-              "dps": "8.6 DPS"
+              "dps": "8.6 DPS",
+              "quality": "q2",
+              "iLvl": 16,
+              "reqLevel": 10,
+              "stats": ""
             },
             {
               "name": "Cauldron Stirrer",
@@ -9038,7 +12136,11 @@ if (typeof window !== 'undefined') {
               "faction": "horde",
               "dps": "7.42 DPS",
               "speed": "3.10",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q2",
+              "iLvl": 15,
+              "reqLevel": 10,
+              "stats": ""
             },
             {
               "name": "Cinder Wand",
@@ -9047,7 +12149,11 @@ if (typeof window !== 'undefined') {
               "faction": "horde",
               "dps": "11.79 DPS",
               "speed": "1.40",
-              "weaponType": "Wand"
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 16,
+              "reqLevel": 9,
+              "stats": ""
             },
             {
               "name": "Spark of the People's Militia",
@@ -9056,10 +12162,18 @@ if (typeof window !== 'undefined') {
               "speed": "1.80",
               "dps": "12.8 DPS",
               "value": "12.8 DPS, 1.80s - Westfall Quest",
-              "faction": "alliance"
+              "faction": "alliance",
+              "quality": "q2",
+              "iLvl": 17,
+              "reqLevel": 9,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q2",
+          "iLvl": 23,
+          "reqLevel": 13,
+          "stats": ""
         },
         {
           "levelBracket": "13–14",
@@ -9082,7 +12196,11 @@ if (typeof window !== 'undefined') {
               "faction": "horde",
               "dps": "11.82 DPS",
               "speed": "3.30",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 18,
+              "reqLevel": 9,
+              "stats": "+6 Int, +6 Agi, +18 Spell Dmg"
             },
             {
               "name": "Greater Magic Wand",
@@ -9091,7 +12209,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "17.5 DPS",
               "speed": "1.80",
-              "weaponType": "Wand"
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 23,
+              "reqLevel": 13,
+              "stats": "75"
             },
             {
               "name": "Fang of Magmatus",
@@ -9100,7 +12222,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "7.94 DPS",
               "speed": "1.70",
-              "weaponType": "Dagger"
+              "weaponType": "Dagger",
+              "quality": "q3",
+              "iLvl": 18,
+              "reqLevel": 13,
+              "stats": "+2 Agi, +2 Fire SP"
             },
             {
               "name": "Kris of Orgrimmar",
@@ -9109,7 +12235,11 @@ if (typeof window !== 'undefined') {
               "faction": "horde",
               "dps": "8 DPS",
               "speed": "1.50",
-              "weaponType": "Dagger"
+              "weaponType": "Dagger",
+              "quality": "q3",
+              "iLvl": 18,
+              "reqLevel": 9,
+              "stats": "+4 Sta, +33 Healing, +11 Spell Damage"
             },
             {
               "name": "Searing Dagger",
@@ -9118,7 +12248,11 @@ if (typeof window !== 'undefined') {
               "speed": "1.60",
               "dps": "8.1 DPS",
               "value": "8.1 DPS, 1.60s - RFC Drop",
-              "faction": "both"
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 18,
+              "reqLevel": 13,
+              "stats": ""
             },
             {
               "name": "Moongazer's Wand",
@@ -9127,10 +12261,18 @@ if (typeof window !== 'undefined') {
               "speed": "1.70",
               "dps": "14.4 DPS",
               "value": "14.4 DPS, 1.70s - Ashenvale Rare",
-              "faction": "both"
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 19,
+              "reqLevel": 14,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 18,
+          "reqLevel": 13,
+          "stats": "+5 Int, +4 Spirit"
         },
         {
           "levelBracket": "15–16",
@@ -9153,7 +12295,11 @@ if (typeof window !== 'undefined') {
               "faction": "horde",
               "dps": "11.82 DPS",
               "speed": "3.30",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 18,
+              "reqLevel": 9,
+              "stats": "+6 Int, +6 Agi, +18 Spell Dmg"
             },
             {
               "name": "Emberstone Staff",
@@ -9162,7 +12308,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "14.17 DPS",
               "speed": "3.00",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 22,
+              "reqLevel": 17,
+              "stats": "+5 Int, +5 Spi"
             },
             {
               "name": "Meathook Slicer",
@@ -9171,7 +12321,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "13.61 DPS",
               "speed": "1.80",
-              "weaponType": "Dagger"
+              "weaponType": "Dagger",
+              "quality": "q3",
+              "iLvl": 20,
+              "reqLevel": 15,
+              "stats": ""
             },
             {
               "name": "Whelpfire Wand",
@@ -9180,10 +12334,18 @@ if (typeof window !== 'undefined') {
               "speed": "1.90",
               "dps": "15.3 DPS",
               "value": "15.3 DPS, 1.90s - Wetlands Drop",
-              "faction": "both"
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 20,
+              "reqLevel": 15,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 20,
+          "reqLevel": 15,
+          "stats": "+5 Int, +4 Sta"
         },
         {
           "levelBracket": "17–18",
@@ -9206,7 +12368,11 @@ if (typeof window !== 'undefined') {
               "faction": "horde",
               "dps": "11.82 DPS",
               "speed": "3.30",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 18,
+              "reqLevel": 9,
+              "stats": "+6 Int, +6 Agi, +18 Spell Dmg"
             },
             {
               "name": "Staff of Westfall",
@@ -9215,7 +12381,21 @@ if (typeof window !== 'undefined') {
               "faction": "alliance",
               "dps": "15.17 DPS",
               "speed": "3.00",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 24,
+              "stats": "+5 Intellect, +6 Spirit, Equip: Increases healing done by up to 48 and damage done by up to 16 for all magical spells and effects., Equip: Movement speed increased by 2% in Elwynn Forest, Westfall, Redridge Mountains, and the Deadmines.",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand\tStaff",
+                "36 - 55 Damage\tSpeed 3.00",
+                "(15.2 damage per second)",
+                "+5 Intellect",
+                "+6 Spirit",
+                "Equip: Increases healing done by up to 48 and damage done by up to 16 for all magical spells and effects.",
+                "Equip: Movement speed increased by 2% in Elwynn Forest, Westfall, Redridge Mountains, and the Deadmines."
+              ],
+              "reqLevel": 14
             },
             {
               "name": "Vileblood Scimitar",
@@ -9224,10 +12404,18 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "14.62 DPS",
               "speed": "2.60",
-              "weaponType": "One-handed sword"
+              "weaponType": "One-handed sword",
+              "quality": "q3",
+              "iLvl": 22,
+              "reqLevel": 17,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 24,
+          "reqLevel": 19,
+          "stats": "+7 Int, +5 Spi, +6 Frost Dmg"
         },
         {
           "levelBracket": "19–20",
@@ -9250,7 +12438,11 @@ if (typeof window !== 'undefined') {
               "faction": "horde",
               "dps": "11.82 DPS",
               "speed": "3.30",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 18,
+              "reqLevel": 9,
+              "stats": "+6 Int, +6 Agi, +18 Spell Dmg"
             },
             {
               "name": "Staff of Westfall",
@@ -9259,7 +12451,21 @@ if (typeof window !== 'undefined') {
               "faction": "alliance",
               "dps": "15.17 DPS",
               "speed": "3.00",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 24,
+              "stats": "+5 Intellect, +6 Spirit, Equip: Increases healing done by up to 48 and damage done by up to 16 for all magical spells and effects., Equip: Movement speed increased by 2% in Elwynn Forest, Westfall, Redridge Mountains, and the Deadmines.",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand\tStaff",
+                "36 - 55 Damage\tSpeed 3.00",
+                "(15.2 damage per second)",
+                "+5 Intellect",
+                "+6 Spirit",
+                "Equip: Increases healing done by up to 48 and damage done by up to 16 for all magical spells and effects.",
+                "Equip: Movement speed increased by 2% in Elwynn Forest, Westfall, Redridge Mountains, and the Deadmines."
+              ],
+              "reqLevel": 14
             },
             {
               "name": "Glimmering Staff",
@@ -9268,10 +12474,38 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "18.41 DPS",
               "speed": "2.20",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 30,
+              "stats": "+11 Intellect, +11 Stamina, Equip: Increases damage and healing done by magical spells and effects by up to 34.",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand\tStaff",
+                "32 - 49 Damage\tSpeed 2.20",
+                "(18.4 damage per second)",
+                "+11 Intellect",
+                "+11 Stamina",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 34.",
+                "Requires Level 25"
+              ],
+              "reqLevel": 25
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 26,
+          "stats": "+5 Stamina, +12 Spirit, Equip: Increases healing done by up to 52 and damage done by up to 17 for all magical spells and effects.",
+          "lines": [
+            "Binds when picked up",
+            "Two-Hand\tStaff",
+            "37 - 56 Damage\tSpeed 2.90",
+            "(16.0 damage per second)",
+            "+5 Stamina",
+            "+12 Spirit",
+            "Equip: Increases healing done by up to 52 and damage done by up to 17 for all magical spells and effects.",
+            "Requires Level 21"
+          ],
+          "reqLevel": 21
         },
         {
           "levelBracket": "21–24",
@@ -9294,7 +12528,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "17.68 DPS",
               "speed": "2.80",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 29,
+              "reqLevel": 24,
+              "stats": "+11 Int, +10 Spi"
             },
             {
               "name": "Lesser Mystic Wand",
@@ -9303,7 +12541,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "25.38 DPS",
               "speed": "1.30",
-              "weaponType": "Wand"
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 31,
+              "reqLevel": 26,
+              "stats": "155"
             },
             {
               "name": "Meteor Shard",
@@ -9312,7 +12554,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "17.78 DPS",
               "speed": "1.80",
-              "weaponType": "Dagger"
+              "weaponType": "Dagger",
+              "quality": "q3",
+              "iLvl": 28,
+              "reqLevel": 23,
+              "stats": ""
             },
             {
               "name": "Snapped Branch Wand",
@@ -9321,7 +12567,11 @@ if (typeof window !== 'undefined') {
               "speed": "1.70",
               "dps": "21.2 DPS",
               "value": "21.2 DPS, 1.70s - Custom Wand Drop",
-              "faction": "both"
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 27,
+              "reqLevel": 22,
+              "stats": ""
             },
             {
               "name": "Alliance Outrunner Staff",
@@ -9330,10 +12580,28 @@ if (typeof window !== 'undefined') {
               "speed": "2.50",
               "dps": "16.2 DPS",
               "value": "16.2 DPS, 2.50s - Alliance Drop",
-              "faction": "alliance"
+              "faction": "alliance",
+              "quality": "q3",
+              "iLvl": 26,
+              "reqLevel": 21,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 25,
+          "stats": "+14 Stamina, Equip: Increases damage done by Fire spells and effects by up to 34., Equip: Increases damage done by Shadow spells and effects by up to 34.",
+          "lines": [
+            "Binds when picked up",
+            "Two-Hand\tStaff",
+            "36 - 55 Damage\tSpeed 2.90",
+            "(15.7 damage per second)",
+            "+14 Stamina",
+            "Equip: Increases damage done by Fire spells and effects by up to 34.",
+            "Equip: Increases damage done by Shadow spells and effects by up to 34.",
+            "Classes: Warlock"
+          ],
+          "reqLevel": 20
         },
         {
           "levelBracket": "25–26",
@@ -9356,7 +12624,21 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "18.93 DPS",
               "speed": "2.80",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 31,
+              "stats": "+11 Stamina, Equip: Increases damage and healing done by magical spells and effects by up to 34., Equip: Restores 5 Mana per 5 sec.",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand\tStaff",
+                "42 - 64 Damage\tSpeed 2.80",
+                "(18.9 damage per second)",
+                "+11 Stamina",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 34.",
+                "Equip: Restores 5 Mana per 5 sec.",
+                "Requires Level 26"
+              ],
+              "reqLevel": 26
             },
             {
               "name": "Debt Collector",
@@ -9365,7 +12647,20 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "13.04 DPS",
               "speed": "2.30",
-              "weaponType": "One-handed sword"
+              "weaponType": "One-handed sword",
+              "quality": "q3",
+              "iLvl": 31,
+              "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 34., Equip: Grants 6 health and 2 mana every 5 sec for 15 sec when one of your spells is resisted.",
+              "lines": [
+                "Binds when picked up",
+                "Main Hand\tSword",
+                "21 - 39 Damage\tSpeed 2.30",
+                "(13.0 damage per second)",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 34.",
+                "Equip: Grants 6 health and 2 mana every 5 sec for 15 sec when one of your spells is resisted.",
+                "Requires Level 26"
+              ],
+              "reqLevel": 26
             },
             {
               "name": "Striking Staff",
@@ -9374,7 +12669,20 @@ if (typeof window !== 'undefined') {
               "speed": "3.30",
               "dps": "31.3 DPS",
               "value": "31.3 DPS, 3.30s - Dalaran Dungeon",
-              "faction": "both"
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 36,
+              "stats": "+9 Strength, +6 Stamina, +14 Intellect",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand\tStaff",
+                "77 - 117 Damage\tSpeed 3.10",
+                "(31.3 damage per second)",
+                "+9 Strength",
+                "+6 Stamina",
+                "+14 Intellect"
+              ],
+              "reqLevel": 24
             },
             {
               "name": "Unstable Power Core",
@@ -9383,7 +12691,18 @@ if (typeof window !== 'undefined') {
               "speed": "1.70",
               "dps": "29.7 DPS",
               "value": "29.7 DPS, 1.70s - Dalaran Dungeon",
-              "faction": "both"
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 36,
+              "stats": "+4 Stamina",
+              "lines": [
+                "Binds when picked up",
+                "Ranged\tWand",
+                "35 - 66 Arcane Damage\tSpeed 1.70",
+                "(29.7 damage per second)",
+                "+4 Stamina"
+              ],
+              "reqLevel": 24
             },
             {
               "name": "Fallen Dragon's Scepter",
@@ -9392,10 +12711,35 @@ if (typeof window !== 'undefined') {
               "speed": "3.00",
               "dps": "19.9 DPS",
               "value": "19.9 DPS, 3.00s - Redridge Quest",
-              "faction": "both"
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 32,
+              "stats": "+11 Intellect, +13 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 36.",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand\tStaff",
+                "54 - 81 Damage\tSpeed 3.40",
+                "(19.9 damage per second)",
+                "+11 Intellect",
+                "+13 Spirit",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 36."
+              ],
+              "reqLevel": 24
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 29,
+          "stats": "+3 Spirit, Equip: Increases damage done by Shadow spells and effects by up to 6.",
+          "lines": [
+            "Binds when picked up",
+            "Ranged\tWand",
+            "30 - 57 Shadow Damage\tSpeed 1.50",
+            "(29.0 damage per second)",
+            "+3 Spirit",
+            "Equip: Increases damage done by Shadow spells and effects by up to 6."
+          ],
+          "reqLevel": 18
         },
         {
           "levelBracket": "27–28",
@@ -9418,7 +12762,21 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "31.18 DPS",
               "speed": "1.70",
-              "weaponType": "Wand"
+              "weaponType": "Wand",
+              "quality": "q3",
+              "iLvl": 32,
+              "stats": "+4 Intellect, Equip: +2 Mana Regeneration",
+              "lines": [
+                "Binds when picked up",
+                "Ranged\tWand",
+                "37 - 69 Arcane Damage\tSpeed 1.70",
+                "(31.2 damage per second)",
+                "+4 Intellect",
+                "Requires Level 27",
+                "Equip: +2 Mana Regeneration",
+                "Sell Price: 47s 22c"
+              ],
+              "reqLevel": 27
             },
             {
               "name": "Tendonscraper Dagger",
@@ -9427,10 +12785,40 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "14.38 DPS",
               "speed": "1.60",
-              "weaponType": "Dagger"
+              "weaponType": "Dagger",
+              "quality": "q3",
+              "iLvl": 33,
+              "stats": "+5 Stamina, Equip: +8 Health Regeneration, Equip: +36 Spell Power",
+              "lines": [
+                "Binds when picked up",
+                "Main Hand\tDagger",
+                "16 - 30 Damage\tSpeed 1.60",
+                "(14.4 damage per second)",
+                "+5 Stamina",
+                "Requires Level 28",
+                "Equip: +8 Health Regeneration",
+                "Equip: +36 Spell Power",
+                "Sell Price: 73s 79c"
+              ],
+              "reqLevel": 28
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 33,
+          "stats": "+14 Stamina, Equip: +3 Spell Penetration, Equip: +36 Spell Power",
+          "lines": [
+            "Binds when picked up",
+            "Two-Hand\tStaff",
+            "59 - 90 Damage\tSpeed 3.60",
+            "(20.7 damage per second)",
+            "+14 Stamina",
+            "Requires Level 28",
+            "Equip: +3 Spell Penetration",
+            "Equip: +36 Spell Power",
+            "Sell Price: 85s 58c"
+          ],
+          "reqLevel": 28
         },
         {
           "levelBracket": "29–30",
@@ -9453,7 +12841,20 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "19.85 DPS",
               "speed": "3.40",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 32,
+              "stats": "+11 Intellect, +13 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 36.",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand\tStaff",
+                "54 - 81 Damage\tSpeed 3.40",
+                "(19.9 damage per second)",
+                "+11 Intellect",
+                "+13 Spirit",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 36."
+              ],
+              "reqLevel": 24
             },
             {
               "name": "Mindslicer",
@@ -9462,7 +12863,19 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "15.26 DPS",
               "speed": "1.90",
-              "weaponType": "Dagger"
+              "weaponType": "Dagger",
+              "quality": "q2",
+              "iLvl": 41,
+              "stats": "+7 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 34.",
+              "lines": [
+                "Binds when picked up",
+                "Main Hand\tDagger",
+                "20 - 38 Damage\tSpeed 1.90",
+                "(15.3 damage per second)",
+                "+7 Intellect",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 34."
+              ],
+              "reqLevel": 30
             },
             {
               "name": "Master Hunter's Wand",
@@ -9471,7 +12884,18 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "34.67 DPS",
               "speed": "1.50",
-              "weaponType": "Wand"
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 43,
+              "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 7.",
+              "lines": [
+                "Binds when picked up",
+                "Ranged\tWand",
+                "36 - 68 Shadow Damage\tSpeed 1.50",
+                "(34.7 damage per second)",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 7."
+              ],
+              "reqLevel": 28
             },
             {
               "name": "Debt Collector",
@@ -9480,10 +12904,34 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "13.04 DPS",
               "speed": "2.30",
-              "weaponType": "One-handed sword"
+              "weaponType": "One-handed sword",
+              "quality": "q3",
+              "iLvl": 31,
+              "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 34., Equip: Grants 6 health and 2 mana every 5 sec for 15 sec when one of your spells is resisted.",
+              "lines": [
+                "Binds when picked up",
+                "Main Hand\tSword",
+                "21 - 39 Damage\tSpeed 2.30",
+                "(13.0 damage per second)",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 34.",
+                "Equip: Grants 6 health and 2 mana every 5 sec for 15 sec when one of your spells is resisted.",
+                "Requires Level 26"
+              ],
+              "reqLevel": 26
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q2",
+          "iLvl": 36,
+          "stats": "+4 Stamina",
+          "lines": [
+            "Binds when picked up",
+            "Ranged\tWand",
+            "35 - 66 Arcane Damage\tSpeed 1.70",
+            "(29.7 damage per second)",
+            "+4 Stamina"
+          ],
+          "reqLevel": 24
         },
         {
           "levelBracket": "31–35",
@@ -9506,7 +12954,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "17.5 DPS",
               "speed": "1.40",
-              "weaponType": "Dagger"
+              "weaponType": "Dagger",
+              "quality": "q3",
+              "iLvl": 39,
+              "reqLevel": 34,
+              "stats": "+9 SP, +8 Int"
             },
             {
               "name": "Twisted Nether Wand",
@@ -9515,10 +12967,18 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "34 DPS",
               "speed": "1.50",
-              "weaponType": "Wand"
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 42,
+              "reqLevel": 37,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 39,
+          "reqLevel": 34,
+          "stats": "+15 Int, +10 Spi"
         },
         {
           "levelBracket": "36–40",
@@ -9541,7 +13001,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "29.86 DPS",
               "speed": "3.70",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q4",
+              "iLvl": 40,
+              "reqLevel": 35,
+              "stats": "+26 Spell Power"
             },
             {
               "name": "Dancing Flame",
@@ -9550,7 +13014,19 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "31.07 DPS",
               "speed": "1.40",
-              "weaponType": "Wand"
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 38,
+              "stats": "+4 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 4.",
+              "lines": [
+                "Binds when picked up",
+                "Ranged\tWand",
+                "30 - 57 Fire Damage\tSpeed 1.40",
+                "(31.1 damage per second)",
+                "+4 Intellect",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 4."
+              ],
+              "reqLevel": 26
             },
             {
               "name": "Rod of Sorrow",
@@ -9559,10 +13035,26 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "32.63 DPS",
               "speed": "1.90",
-              "weaponType": "Wand"
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 40,
+              "stats": "+4 Stamina, +3 Spirit",
+              "lines": [
+                "Binds when picked up",
+                "Ranged\tWand",
+                "43 - 81 Shadow Damage\tSpeed 1.90",
+                "(32.6 damage per second)",
+                "+4 Stamina",
+                "+3 Spirit"
+              ],
+              "reqLevel": 30
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 39,
+          "reqLevel": 34,
+          "stats": "Outstanding caster stats carry through 40"
         },
         {
           "levelBracket": "41–46",
@@ -9585,7 +13077,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "31.11 DPS",
               "speed": "2.70",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 48,
+              "reqLevel": 43,
+              "stats": "+10 Int, +21 SP"
             },
             {
               "name": "Dreambough Wand",
@@ -9594,7 +13090,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "39.17 DPS",
               "speed": "1.80",
-              "weaponType": "Wand"
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 48,
+              "reqLevel": 43,
+              "stats": ""
             },
             {
               "name": "Emerald Watcher's Dreamstaff",
@@ -9603,10 +13103,18 @@ if (typeof window !== 'undefined') {
               "speed": "3.00",
               "dps": "31.7 DPS",
               "value": "31.7 DPS, 3.00s - Custom Staff Drop",
-              "faction": "both"
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 49,
+              "reqLevel": 44,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 48,
+          "reqLevel": 40,
+          "stats": "+16 Int, +10 Spi"
         },
         {
           "levelBracket": "47–50",
@@ -9629,7 +13137,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "34.14 DPS",
               "speed": "2.90",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 53,
+              "reqLevel": 48,
+              "stats": ""
             },
             {
               "name": "Lesser Eternal Wand",
@@ -9638,10 +13150,18 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "45.75 DPS",
               "speed": "2.00",
-              "weaponType": "Wand"
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 54,
+              "reqLevel": 49,
+              "stats": "265"
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 52,
+          "reqLevel": 50,
+          "stats": "+16 Sta, +24 Shadow SP, Drain Life proc"
         },
         {
           "levelBracket": "51–60",
@@ -9664,14 +13184,22 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "36.88 DPS",
               "speed": "3.20",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 58,
+              "reqLevel": 53,
+              "stats": ""
             },
             {
               "name": "Rod of the Ogre Magi",
               "itemId": 18534,
               "value": "36.0 DPS, +14 Int, +11 Spi, +23 SP, 1% Spell Crit - DM North Tribute Run",
               "faction": "both",
-              "dps": "36.0 DPS"
+              "dps": "36.0 DPS",
+              "quality": "q3",
+              "iLvl": 56,
+              "reqLevel": 50,
+              "stats": "+14 Int, +11 Spi, +23 SP, 1% Spell Crit"
             },
             {
               "name": "Witchblade",
@@ -9679,7 +13207,11 @@ if (typeof window !== 'undefined') {
               "value": "37.2 DPS, 1.80s, +14 SP - Scholomance: Darkmaster Gandling",
               "faction": "both",
               "dps": "37.2 DPS",
-              "speed": "1.80"
+              "speed": "1.80",
+              "quality": "q3",
+              "iLvl": 56,
+              "reqLevel": 50,
+              "stats": "+14 SP"
             },
             {
               "name": "Greater Eternal Wand",
@@ -9688,7 +13220,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "53.33 DPS",
               "speed": "1.50",
-              "weaponType": "Wand"
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 60,
+              "reqLevel": 55,
+              "stats": "285"
             },
             {
               "name": "Brilliant Wand",
@@ -9697,10 +13233,18 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "59.58 DPS",
               "speed": "1.20",
-              "weaponType": "Wand"
+              "weaponType": "Wand",
+              "quality": "q3",
+              "iLvl": 60,
+              "reqLevel": 55,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 52,
+          "reqLevel": 50,
+          "stats": ""
         }
       ]
     },
@@ -9734,10 +13278,18 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "2.03 DPS",
               "speed": "3.20",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q1",
+              "iLvl": 4,
+              "reqLevel": 1,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q1",
+          "iLvl": 6,
+          "reqLevel": 1,
+          "stats": ""
         },
         {
           "levelBracket": "3–4",
@@ -9760,10 +13312,18 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "4 DPS",
               "speed": "1.50",
-              "weaponType": "Wand"
+              "weaponType": "Wand",
+              "quality": "q1",
+              "iLvl": 6,
+              "reqLevel": 2,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q1",
+          "iLvl": 8,
+          "reqLevel": 3,
+          "stats": ""
         },
         {
           "levelBracket": "5–6",
@@ -9786,10 +13346,18 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "4.2 DPS",
               "speed": "2.50",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q1",
+              "iLvl": 8,
+              "reqLevel": 3,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q2",
+          "iLvl": 15,
+          "reqLevel": 5,
+          "stats": "25% extra damage"
         },
         {
           "levelBracket": "7–8",
@@ -9810,7 +13378,11 @@ if (typeof window !== 'undefined') {
               "itemId": 15396,
               "value": "8.5 DPS - Early quest",
               "faction": "both",
-              "dps": "8.5 DPS"
+              "dps": "8.5 DPS",
+              "quality": "q2",
+              "iLvl": 12,
+              "reqLevel": 6,
+              "stats": ""
             },
             {
               "name": "Lesser Magic Wand",
@@ -9819,7 +13391,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "11.33 DPS",
               "speed": "1.50",
-              "weaponType": "Wand"
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 15,
+              "reqLevel": 5,
+              "stats": "10"
             },
             {
               "name": "Riptear's Spare Arm",
@@ -9828,7 +13404,11 @@ if (typeof window !== 'undefined') {
               "faction": "horde",
               "dps": "9.41 DPS",
               "speed": "1.70",
-              "weaponType": "Wand"
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 13,
+              "reqLevel": 6,
+              "stats": "1.70s Wand"
             },
             {
               "name": "Darkwood Staff",
@@ -9837,7 +13417,11 @@ if (typeof window !== 'undefined') {
               "faction": "horde",
               "dps": "6.72 DPS",
               "speed": "3.20",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q2",
+              "iLvl": 13,
+              "reqLevel": 7,
+              "stats": ""
             },
             {
               "name": "Wisesight Wand",
@@ -9846,10 +13430,18 @@ if (typeof window !== 'undefined') {
               "speed": "1.70",
               "dps": "8.8 DPS",
               "value": "8.8 DPS, 1.70s - Early Wand Drop",
-              "faction": "both"
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 12,
+              "reqLevel": 7,
+              "stats": ""
             }
           ],
-          "faction": "alliance"
+          "faction": "alliance",
+          "quality": "q2",
+          "iLvl": 12,
+          "reqLevel": 1,
+          "stats": ""
         },
         {
           "levelBracket": "9–10",
@@ -9871,14 +13463,22 @@ if (typeof window !== 'undefined') {
               "value": "8.6 DPS, 1.90s - Vendor wand",
               "faction": "both",
               "dps": "8.6 DPS",
-              "speed": "1.90"
+              "speed": "1.90",
+              "quality": "q2",
+              "iLvl": 14,
+              "reqLevel": 8,
+              "stats": ""
             },
             {
               "name": "Staff of the Dor'Danil",
               "itemId": 15396,
               "value": "8.5 DPS - Early quest",
               "faction": "both",
-              "dps": "8.5 DPS"
+              "dps": "8.5 DPS",
+              "quality": "q2",
+              "iLvl": 14,
+              "reqLevel": 8,
+              "stats": ""
             },
             {
               "name": "Riptear's Spare Arm",
@@ -9887,7 +13487,11 @@ if (typeof window !== 'undefined') {
               "faction": "horde",
               "dps": "9.41 DPS",
               "speed": "1.70",
-              "weaponType": "Wand"
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 13,
+              "reqLevel": 6,
+              "stats": ""
             },
             {
               "name": "Cinder Wand",
@@ -9896,7 +13500,11 @@ if (typeof window !== 'undefined') {
               "faction": "horde",
               "dps": "11.79 DPS",
               "speed": "1.40",
-              "weaponType": "Wand"
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 16,
+              "reqLevel": 9,
+              "stats": ""
             },
             {
               "name": "Deepblaze",
@@ -9905,10 +13513,18 @@ if (typeof window !== 'undefined') {
               "speed": "1.70",
               "dps": "18.5 DPS",
               "value": "18.5 DPS, 1.70s - Alliance Ironforge Quest",
-              "faction": "alliance"
+              "faction": "alliance",
+              "quality": "q3",
+              "iLvl": 18,
+              "reqLevel": 9,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q2",
+          "iLvl": 15,
+          "reqLevel": 5,
+          "stats": "Enables high mana regeneration via the 5"
         },
         {
           "levelBracket": "11–12",
@@ -9931,14 +13547,22 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "7.14 DPS",
               "speed": "2.80",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q2",
+              "iLvl": 14,
+              "reqLevel": 12,
+              "stats": ""
             },
             {
               "name": "Pagan Rod",
               "itemId": 6449,
               "value": "8.6 DPS - Vendor wand",
               "faction": "both",
-              "dps": "8.6 DPS"
+              "dps": "8.6 DPS",
+              "quality": "q2",
+              "iLvl": 16,
+              "reqLevel": 10,
+              "stats": ""
             },
             {
               "name": "Cauldron Stirrer",
@@ -9947,7 +13571,11 @@ if (typeof window !== 'undefined') {
               "faction": "horde",
               "dps": "7.42 DPS",
               "speed": "3.10",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q2",
+              "iLvl": 15,
+              "reqLevel": 10,
+              "stats": ""
             },
             {
               "name": "Cinder Wand",
@@ -9956,7 +13584,11 @@ if (typeof window !== 'undefined') {
               "faction": "horde",
               "dps": "11.79 DPS",
               "speed": "1.40",
-              "weaponType": "Wand"
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 16,
+              "reqLevel": 9,
+              "stats": ""
             },
             {
               "name": "Spark of the People's Militia",
@@ -9965,10 +13597,18 @@ if (typeof window !== 'undefined') {
               "speed": "1.80",
               "dps": "12.8 DPS",
               "value": "12.8 DPS, 1.80s - Westfall Quest",
-              "faction": "alliance"
+              "faction": "alliance",
+              "quality": "q2",
+              "iLvl": 17,
+              "reqLevel": 9,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q2",
+          "iLvl": 23,
+          "reqLevel": 13,
+          "stats": ""
         },
         {
           "levelBracket": "13–14",
@@ -9991,7 +13631,11 @@ if (typeof window !== 'undefined') {
               "faction": "horde",
               "dps": "11.82 DPS",
               "speed": "3.30",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 18,
+              "reqLevel": 9,
+              "stats": "+6 Int, +6 Agi, +18 Spell Dmg"
             },
             {
               "name": "Greater Magic Wand",
@@ -10000,7 +13644,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "17.5 DPS",
               "speed": "1.80",
-              "weaponType": "Wand"
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 23,
+              "reqLevel": 13,
+              "stats": "75"
             },
             {
               "name": "Trogg Scepter",
@@ -10009,7 +13657,20 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "8.13 DPS",
               "speed": "2.40",
-              "weaponType": "One-handed mace"
+              "weaponType": "One-handed mace",
+              "quality": "q3",
+              "iLvl": 18,
+              "stats": "+4 Spirit, Equip: Increases healing done by up to 33 and damage done by up to 11 for all magical spells and effects.",
+              "lines": [
+                "Binds when picked up",
+                "Main Hand\tMace",
+                "13 - 26 Damage\tSpeed 2.40",
+                "(8.1 damage per second)",
+                "+4 Spirit",
+                "Equip: Increases healing done by up to 33 and damage done by up to 11 for all magical spells and effects.",
+                "Requires Level 13"
+              ],
+              "reqLevel": 13
             },
             {
               "name": "Kris of Orgrimmar",
@@ -10018,7 +13679,11 @@ if (typeof window !== 'undefined') {
               "faction": "horde",
               "dps": "8 DPS",
               "speed": "1.50",
-              "weaponType": "Dagger"
+              "weaponType": "Dagger",
+              "quality": "q3",
+              "iLvl": 18,
+              "reqLevel": 9,
+              "stats": "+4 Sta, +33 Healing, +11 Spell Damage"
             },
             {
               "name": "Moongazer's Wand",
@@ -10027,10 +13692,18 @@ if (typeof window !== 'undefined') {
               "speed": "1.70",
               "dps": "14.4 DPS",
               "value": "14.4 DPS, 1.70s - Ashenvale Rare",
-              "faction": "both"
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 19,
+              "reqLevel": 14,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 18,
+          "reqLevel": 13,
+          "stats": "+5 Int, +4 Spirit"
         },
         {
           "levelBracket": "15–16",
@@ -10053,7 +13726,11 @@ if (typeof window !== 'undefined') {
               "faction": "horde",
               "dps": "11.82 DPS",
               "speed": "3.30",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 18,
+              "reqLevel": 9,
+              "stats": "+6 Int, +6 Agi, +18 Spell Dmg"
             },
             {
               "name": "Segmented Spider Leg",
@@ -10062,7 +13739,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "17.5 DPS",
               "speed": "3.60",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 20,
+              "reqLevel": 15,
+              "stats": "+5 Int, +4 Sta"
             },
             {
               "name": "Emberstone Staff",
@@ -10071,7 +13752,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "14.17 DPS",
               "speed": "3.00",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 22,
+              "reqLevel": 17,
+              "stats": ""
             },
             {
               "name": "Kris of Orgrimmar",
@@ -10080,7 +13765,11 @@ if (typeof window !== 'undefined') {
               "faction": "horde",
               "dps": "8 DPS",
               "speed": "1.50",
-              "weaponType": "Dagger"
+              "weaponType": "Dagger",
+              "quality": "q3",
+              "iLvl": 18,
+              "reqLevel": 9,
+              "stats": "+4 Sta, +33 Healing, +11 Spell Damage"
             },
             {
               "name": "Whelpfire Wand",
@@ -10089,10 +13778,18 @@ if (typeof window !== 'undefined') {
               "speed": "1.90",
               "dps": "15.3 DPS",
               "value": "15.3 DPS, 1.90s - Wetlands Drop",
-              "faction": "both"
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 20,
+              "reqLevel": 15,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 22,
+          "reqLevel": 17,
+          "stats": "+4 Sta, +4 Int"
         },
         {
           "levelBracket": "17–18",
@@ -10115,7 +13812,11 @@ if (typeof window !== 'undefined') {
               "faction": "horde",
               "dps": "11.82 DPS",
               "speed": "3.30",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 18,
+              "reqLevel": 9,
+              "stats": "+6 Int, +6 Agi, +18 Spell Dmg"
             },
             {
               "name": "Staff of Westfall",
@@ -10124,7 +13825,21 @@ if (typeof window !== 'undefined') {
               "faction": "alliance",
               "dps": "15.17 DPS",
               "speed": "3.00",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 24,
+              "stats": "+5 Intellect, +6 Spirit, Equip: Increases healing done by up to 48 and damage done by up to 16 for all magical spells and effects., Equip: Movement speed increased by 2% in Elwynn Forest, Westfall, Redridge Mountains, and the Deadmines.",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand\tStaff",
+                "36 - 55 Damage\tSpeed 3.00",
+                "(15.2 damage per second)",
+                "+5 Intellect",
+                "+6 Spirit",
+                "Equip: Increases healing done by up to 48 and damage done by up to 16 for all magical spells and effects.",
+                "Equip: Movement speed increased by 2% in Elwynn Forest, Westfall, Redridge Mountains, and the Deadmines."
+              ],
+              "reqLevel": 14
             },
             {
               "name": "Living Root",
@@ -10133,7 +13848,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "14.66 DPS",
               "speed": "2.90",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 23,
+              "reqLevel": 18,
+              "stats": ""
             },
             {
               "name": "Kris of Orgrimmar",
@@ -10142,10 +13861,18 @@ if (typeof window !== 'undefined') {
               "faction": "horde",
               "dps": "8 DPS",
               "speed": "1.50",
-              "weaponType": "Dagger"
+              "weaponType": "Dagger",
+              "quality": "q3",
+              "iLvl": 18,
+              "reqLevel": 9,
+              "stats": "+4 Sta, +33 Healing, +11 Spell Damage"
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 24,
+          "reqLevel": 19,
+          "stats": "+7 Int, +5 Spi, +6 Frost Dmg"
         },
         {
           "levelBracket": "19–20",
@@ -10168,7 +13895,11 @@ if (typeof window !== 'undefined') {
               "faction": "horde",
               "dps": "11.82 DPS",
               "speed": "3.30",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 18,
+              "reqLevel": 9,
+              "stats": "+6 Int, +6 Agi, +18 Spell Dmg"
             },
             {
               "name": "Odo's Ley Staff",
@@ -10177,7 +13908,21 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "16.03 DPS",
               "speed": "2.90",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 26,
+              "stats": "+5 Stamina, +12 Spirit, Equip: Increases healing done by up to 52 and damage done by up to 17 for all magical spells and effects.",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand\tStaff",
+                "37 - 56 Damage\tSpeed 2.90",
+                "(16.0 damage per second)",
+                "+5 Stamina",
+                "+12 Spirit",
+                "Equip: Increases healing done by up to 52 and damage done by up to 17 for all magical spells and effects.",
+                "Requires Level 21"
+              ],
+              "reqLevel": 21
             },
             {
               "name": "Glimmering Staff",
@@ -10186,7 +13931,21 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "18.41 DPS",
               "speed": "2.20",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 30,
+              "stats": "+11 Intellect, +11 Stamina, Equip: Increases damage and healing done by magical spells and effects by up to 34.",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand\tStaff",
+                "32 - 49 Damage\tSpeed 2.20",
+                "(18.4 damage per second)",
+                "+11 Intellect",
+                "+11 Stamina",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 34.",
+                "Requires Level 25"
+              ],
+              "reqLevel": 25
             },
             {
               "name": "Kris of Orgrimmar",
@@ -10195,10 +13954,28 @@ if (typeof window !== 'undefined') {
               "faction": "horde",
               "dps": "8 DPS",
               "speed": "1.50",
-              "weaponType": "Dagger"
+              "weaponType": "Dagger",
+              "quality": "q3",
+              "iLvl": 18,
+              "reqLevel": 9,
+              "stats": "+4 Sta, +33 Healing, +11 Spell Damage"
             }
           ],
-          "faction": "alliance"
+          "faction": "alliance",
+          "quality": "q3",
+          "iLvl": 24,
+          "stats": "+5 Intellect, +6 Spirit, Equip: Increases healing done by up to 48 and damage done by up to 16 for all magical spells and effects., Equip: Movement speed increased by 2% in Elwynn Forest, Westfall, Redridge Mountains, and the Deadmines.",
+          "lines": [
+            "Binds when picked up",
+            "Two-Hand\tStaff",
+            "36 - 55 Damage\tSpeed 3.00",
+            "(15.2 damage per second)",
+            "+5 Intellect",
+            "+6 Spirit",
+            "Equip: Increases healing done by up to 48 and damage done by up to 16 for all magical spells and effects.",
+            "Equip: Movement speed increased by 2% in Elwynn Forest, Westfall, Redridge Mountains, and the Deadmines."
+          ],
+          "reqLevel": 14
         },
         {
           "levelBracket": "21–24",
@@ -10221,7 +13998,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "17.68 DPS",
               "speed": "2.80",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 29,
+              "reqLevel": 24,
+              "stats": "+11 Int, +10 Spi"
             },
             {
               "name": "Lesser Mystic Wand",
@@ -10230,7 +14011,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "25.38 DPS",
               "speed": "1.30",
-              "weaponType": "Wand"
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 31,
+              "reqLevel": 26,
+              "stats": "155"
             },
             {
               "name": "Snapped Branch Wand",
@@ -10239,7 +14024,11 @@ if (typeof window !== 'undefined') {
               "speed": "1.70",
               "dps": "21.2 DPS",
               "value": "21.2 DPS, 1.70s - Custom Wand Drop",
-              "faction": "both"
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 27,
+              "reqLevel": 22,
+              "stats": ""
             },
             {
               "name": "Alliance Outrunner Staff",
@@ -10248,10 +14037,26 @@ if (typeof window !== 'undefined') {
               "speed": "2.50",
               "dps": "16.2 DPS",
               "value": "16.2 DPS, 2.50s - Alliance Drop",
-              "faction": "alliance"
+              "faction": "alliance",
+              "quality": "q3",
+              "iLvl": 26,
+              "reqLevel": 21,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 29,
+          "stats": "+3 Spirit, Equip: Increases damage done by Shadow spells and effects by up to 6.",
+          "lines": [
+            "Binds when picked up",
+            "Ranged\tWand",
+            "30 - 57 Shadow Damage\tSpeed 1.50",
+            "(29.0 damage per second)",
+            "+3 Spirit",
+            "Equip: Increases damage done by Shadow spells and effects by up to 6."
+          ],
+          "reqLevel": 18
         },
         {
           "levelBracket": "25–26",
@@ -10274,7 +14079,21 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "18.93 DPS",
               "speed": "2.80",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 31,
+              "stats": "+11 Stamina, Equip: Increases damage and healing done by magical spells and effects by up to 34., Equip: Restores 5 Mana per 5 sec.",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand\tStaff",
+                "42 - 64 Damage\tSpeed 2.80",
+                "(18.9 damage per second)",
+                "+11 Stamina",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 34.",
+                "Equip: Restores 5 Mana per 5 sec.",
+                "Requires Level 26"
+              ],
+              "reqLevel": 26
             },
             {
               "name": "Crested Scepter",
@@ -10283,7 +14102,21 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "12.12 DPS",
               "speed": "2.60",
-              "weaponType": "One-handed mace"
+              "weaponType": "One-handed mace",
+              "quality": "q3",
+              "iLvl": 29,
+              "stats": "+2 Intellect, +6 Stamina, Equip: Increases damage and healing done by magical spells and effects by up to 32.",
+              "lines": [
+                "Binds when equipped",
+                "Main Hand\tMace",
+                "22 - 41 Damage\tSpeed 2.60",
+                "(12.1 damage per second)",
+                "+2 Intellect",
+                "+6 Stamina",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 32.",
+                "Requires Level 24"
+              ],
+              "reqLevel": 24
             },
             {
               "name": "Striking Staff",
@@ -10292,7 +14125,20 @@ if (typeof window !== 'undefined') {
               "speed": "3.30",
               "dps": "31.3 DPS",
               "value": "31.3 DPS, 3.30s - Dalaran Dungeon",
-              "faction": "both"
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 36,
+              "stats": "+9 Strength, +6 Stamina, +14 Intellect",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand\tStaff",
+                "77 - 117 Damage\tSpeed 3.10",
+                "(31.3 damage per second)",
+                "+9 Strength",
+                "+6 Stamina",
+                "+14 Intellect"
+              ],
+              "reqLevel": 24
             },
             {
               "name": "Unstable Power Core",
@@ -10301,7 +14147,18 @@ if (typeof window !== 'undefined') {
               "speed": "1.70",
               "dps": "29.7 DPS",
               "value": "29.7 DPS, 1.70s - Dalaran Dungeon",
-              "faction": "both"
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 36,
+              "stats": "+4 Stamina",
+              "lines": [
+                "Binds when picked up",
+                "Ranged\tWand",
+                "35 - 66 Arcane Damage\tSpeed 1.70",
+                "(29.7 damage per second)",
+                "+4 Stamina"
+              ],
+              "reqLevel": 24
             },
             {
               "name": "Fallen Dragon's Scepter",
@@ -10310,10 +14167,35 @@ if (typeof window !== 'undefined') {
               "speed": "3.00",
               "dps": "19.9 DPS",
               "value": "19.9 DPS, 3.00s - Redridge Quest",
-              "faction": "both"
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 32,
+              "stats": "+11 Intellect, +13 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 36.",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand\tStaff",
+                "54 - 81 Damage\tSpeed 3.40",
+                "(19.9 damage per second)",
+                "+11 Intellect",
+                "+13 Spirit",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 36."
+              ],
+              "reqLevel": 24
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 29,
+          "stats": "+3 Spirit, Equip: Increases damage done by Shadow spells and effects by up to 6.",
+          "lines": [
+            "Binds when picked up",
+            "Ranged\tWand",
+            "30 - 57 Shadow Damage\tSpeed 1.50",
+            "(29.0 damage per second)",
+            "+3 Spirit",
+            "Equip: Increases damage done by Shadow spells and effects by up to 6."
+          ],
+          "reqLevel": 18
         },
         {
           "levelBracket": "27–28",
@@ -10336,7 +14218,22 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "20.69 DPS",
               "speed": "3.60",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 33,
+              "stats": "+14 Stamina, Equip: +3 Spell Penetration, Equip: +36 Spell Power",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand\tStaff",
+                "59 - 90 Damage\tSpeed 3.60",
+                "(20.7 damage per second)",
+                "+14 Stamina",
+                "Requires Level 28",
+                "Equip: +3 Spell Penetration",
+                "Equip: +36 Spell Power",
+                "Sell Price: 85s 58c"
+              ],
+              "reqLevel": 28
             },
             {
               "name": "Tendonscraper Dagger",
@@ -10345,10 +14242,39 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "14.38 DPS",
               "speed": "1.60",
-              "weaponType": "Dagger"
+              "weaponType": "Dagger",
+              "quality": "q3",
+              "iLvl": 33,
+              "stats": "+5 Stamina, Equip: +8 Health Regeneration, Equip: +36 Spell Power",
+              "lines": [
+                "Binds when picked up",
+                "Main Hand\tDagger",
+                "16 - 30 Damage\tSpeed 1.60",
+                "(14.4 damage per second)",
+                "+5 Stamina",
+                "Requires Level 28",
+                "Equip: +8 Health Regeneration",
+                "Equip: +36 Spell Power",
+                "Sell Price: 73s 79c"
+              ],
+              "reqLevel": 28
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 32,
+          "stats": "+4 Intellect, Equip: +2 Mana Regeneration",
+          "lines": [
+            "Binds when picked up",
+            "Ranged\tWand",
+            "37 - 69 Arcane Damage\tSpeed 1.70",
+            "(31.2 damage per second)",
+            "+4 Intellect",
+            "Requires Level 27",
+            "Equip: +2 Mana Regeneration",
+            "Sell Price: 47s 22c"
+          ],
+          "reqLevel": 27
         },
         {
           "levelBracket": "29–30",
@@ -10371,7 +14297,20 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "19.85 DPS",
               "speed": "3.40",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 32,
+              "stats": "+11 Intellect, +13 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 36.",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand\tStaff",
+                "54 - 81 Damage\tSpeed 3.40",
+                "(19.9 damage per second)",
+                "+11 Intellect",
+                "+13 Spirit",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 36."
+              ],
+              "reqLevel": 24
             },
             {
               "name": "Madman's Blade",
@@ -10379,7 +14318,19 @@ if (typeof window !== 'undefined') {
               "value": "14.7 DPS, 1.90s, +7 Spi, +32 SP - STV Quest: Colonel Kurzen",
               "faction": "both",
               "dps": "14.7 DPS",
-              "speed": "1.90"
+              "speed": "1.90",
+              "quality": "q2",
+              "iLvl": 40,
+              "stats": "+7 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 32.",
+              "lines": [
+                "Binds when picked up",
+                "Main Hand\tDagger",
+                "19 - 37 Damage\tSpeed 1.90",
+                "(14.7 damage per second)",
+                "+7 Spirit",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 32."
+              ],
+              "reqLevel": 28
             },
             {
               "name": "Mindslicer",
@@ -10388,7 +14339,19 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "15.26 DPS",
               "speed": "1.90",
-              "weaponType": "Dagger"
+              "weaponType": "Dagger",
+              "quality": "q2",
+              "iLvl": 41,
+              "stats": "+7 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 34.",
+              "lines": [
+                "Binds when picked up",
+                "Main Hand\tDagger",
+                "20 - 38 Damage\tSpeed 1.90",
+                "(15.3 damage per second)",
+                "+7 Intellect",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 34."
+              ],
+              "reqLevel": 30
             },
             {
               "name": "Master Hunter's Wand",
@@ -10397,10 +14360,34 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "34.67 DPS",
               "speed": "1.50",
-              "weaponType": "Wand"
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 43,
+              "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 7.",
+              "lines": [
+                "Binds when picked up",
+                "Ranged\tWand",
+                "36 - 68 Shadow Damage\tSpeed 1.50",
+                "(34.7 damage per second)",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 7."
+              ],
+              "reqLevel": 28
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 33,
+          "stats": "+12 Stamina, Equip: Increases healing done by up to 67 and damage done by up to 22 for all magical spells and effects., Equip: Restores 5 Mana per 5 sec.",
+          "lines": [
+            "Binds when picked up",
+            "Two-Hand\tStaff",
+            "43 - 65 Damage\tSpeed 2.60",
+            "(20.8 damage per second)",
+            "+12 Stamina",
+            "Equip: Increases healing done by up to 67 and damage done by up to 22 for all magical spells and effects.",
+            "Equip: Restores 5 Mana per 5 sec."
+          ],
+          "reqLevel": 24
         },
         {
           "levelBracket": "31–35",
@@ -10423,7 +14410,22 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "15.96 DPS",
               "speed": "2.60",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 26,
+              "stats": "+3 Intellect, +4 Stamina, +12 Spirit, Equip: Increases healing done by up to 52 and damage done by up to 17 for all magical spells and effects.",
+              "lines": [
+                "Binds when equipped",
+                "Two-Hand\tStaff",
+                "33 - 50 Damage\tSpeed 2.60",
+                "(16.0 damage per second)",
+                "+3 Intellect",
+                "+4 Stamina",
+                "+12 Spirit",
+                "Equip: Increases healing done by up to 52 and damage done by up to 17 for all magical spells and effects.",
+                "Requires Level 21"
+              ],
+              "reqLevel": 21
             },
             {
               "name": "Twisted Nether Wand",
@@ -10432,10 +14434,18 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "34 DPS",
               "speed": "1.50",
-              "weaponType": "Wand"
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 42,
+              "reqLevel": 37,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 39,
+          "reqLevel": 34,
+          "stats": "+15 Int, +10 Spi"
         },
         {
           "levelBracket": "36–40",
@@ -10458,7 +14468,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "29.86 DPS",
               "speed": "3.70",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q4",
+              "iLvl": 40,
+              "reqLevel": 35,
+              "stats": "+26 Spell Power"
             },
             {
               "name": "Dancing Flame",
@@ -10467,7 +14481,19 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "31.07 DPS",
               "speed": "1.40",
-              "weaponType": "Wand"
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 38,
+              "stats": "+4 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 4.",
+              "lines": [
+                "Binds when picked up",
+                "Ranged\tWand",
+                "30 - 57 Fire Damage\tSpeed 1.40",
+                "(31.1 damage per second)",
+                "+4 Intellect",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 4."
+              ],
+              "reqLevel": 26
             },
             {
               "name": "Rod of Sorrow",
@@ -10476,10 +14502,26 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "32.63 DPS",
               "speed": "1.90",
-              "weaponType": "Wand"
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 40,
+              "stats": "+4 Stamina, +3 Spirit",
+              "lines": [
+                "Binds when picked up",
+                "Ranged\tWand",
+                "43 - 81 Shadow Damage\tSpeed 1.90",
+                "(32.6 damage per second)",
+                "+4 Stamina",
+                "+3 Spirit"
+              ],
+              "reqLevel": 30
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 39,
+          "reqLevel": 34,
+          "stats": ""
         },
         {
           "levelBracket": "41–46",
@@ -10502,7 +14544,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "31.11 DPS",
               "speed": "2.70",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 48,
+              "reqLevel": 43,
+              "stats": "+10 Int, +21 SP"
             },
             {
               "name": "Dreambough Wand",
@@ -10511,7 +14557,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "39.17 DPS",
               "speed": "1.80",
-              "weaponType": "Wand"
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 48,
+              "reqLevel": 43,
+              "stats": ""
             },
             {
               "name": "Emerald Watcher's Dreamstaff",
@@ -10520,10 +14570,18 @@ if (typeof window !== 'undefined') {
               "speed": "3.00",
               "dps": "31.7 DPS",
               "value": "31.7 DPS, 3.00s - Custom Staff Drop",
-              "faction": "both"
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 49,
+              "reqLevel": 44,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 48,
+          "reqLevel": 40,
+          "stats": "+16 Int, +10 Spi"
         },
         {
           "levelBracket": "47–52",
@@ -10546,17 +14604,29 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "45.75 DPS",
               "speed": "2.00",
-              "weaponType": "Wand"
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 54,
+              "reqLevel": 49,
+              "stats": "265"
             },
             {
               "name": "Spire of the Stoneshaper",
               "itemId": 11802,
               "value": "33.8 DPS - BRD: Lord Incendius",
               "faction": "both",
-              "dps": "33.8 DPS"
+              "dps": "33.8 DPS",
+              "quality": "q3",
+              "iLvl": 52,
+              "reqLevel": 46,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 53,
+          "reqLevel": 48,
+          "stats": "+12 Int, +20 Spi"
         },
         {
           "levelBracket": "53–60",
@@ -10579,14 +14649,22 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "40.67 DPS",
               "speed": "3.00",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q4",
+              "iLvl": 75,
+              "reqLevel": 60,
+              "stats": "+31 Int, +12 Sta, +12 Spi, +106 Healing"
             },
             {
               "name": "Rod of the Ogre Magi",
               "itemId": 18534,
               "value": "36.0 DPS, +14 Int, +11 Spi, +23 SP, 1% Spell Crit - DM North Tribute Run",
               "faction": "both",
-              "dps": "36.0 DPS"
+              "dps": "36.0 DPS",
+              "quality": "q3",
+              "iLvl": 58,
+              "reqLevel": 52,
+              "stats": "+14 Int, +11 Spi, +23 SP, 1% Spell Crit"
             },
             {
               "name": "Greater Eternal Wand",
@@ -10595,7 +14673,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "53.33 DPS",
               "speed": "1.50",
-              "weaponType": "Wand"
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 60,
+              "reqLevel": 55,
+              "stats": "285"
             },
             {
               "name": "Brilliant Wand",
@@ -10604,10 +14686,18 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "59.58 DPS",
               "speed": "1.20",
-              "weaponType": "Wand"
+              "weaponType": "Wand",
+              "quality": "q3",
+              "iLvl": 60,
+              "reqLevel": 55,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 58,
+          "reqLevel": 53,
+          "stats": "+Spell Power & Healing"
         }
       ]
     },
@@ -10639,10 +14729,18 @@ if (typeof window !== 'undefined') {
               "itemId": 2491,
               "value": "1.8 DPS - Starter vendor mace",
               "faction": "both",
-              "dps": "1.8 DPS"
+              "dps": "1.8 DPS",
+              "quality": "q1",
+              "iLvl": 6,
+              "reqLevel": 1,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q1",
+          "iLvl": 4,
+          "reqLevel": 1,
+          "stats": ""
         },
         {
           "levelBracket": "3–4",
@@ -10665,7 +14763,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "4.2 DPS",
               "speed": "2.50",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q1",
+              "iLvl": 8,
+              "reqLevel": 3,
+              "stats": ""
             },
             {
               "name": "Large Club",
@@ -10674,10 +14776,18 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "2.78 DPS",
               "speed": "1.80",
-              "weaponType": "One-handed mace"
+              "weaponType": "One-handed mace",
+              "quality": "q1",
+              "iLvl": 7,
+              "reqLevel": 2,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q1",
+          "iLvl": 9,
+          "reqLevel": 4,
+          "stats": ""
         },
         {
           "levelBracket": "5–6",
@@ -10700,7 +14810,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "3.85 DPS",
               "speed": "2.60",
-              "weaponType": "One-handed mace"
+              "weaponType": "One-handed mace",
+              "quality": "q1",
+              "iLvl": 9,
+              "reqLevel": 4,
+              "stats": "15"
             },
             {
               "name": "Walking Stick",
@@ -10709,7 +14823,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "4.2 DPS",
               "speed": "2.50",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q1",
+              "iLvl": 8,
+              "reqLevel": 3,
+              "stats": ""
             },
             {
               "name": "Goblin Smasher",
@@ -10718,10 +14836,18 @@ if (typeof window !== 'undefined') {
               "faction": "horde",
               "dps": "8.23 DPS",
               "speed": "3.10",
-              "weaponType": "Two-handed mace"
+              "weaponType": "Two-handed mace",
+              "quality": "q2",
+              "iLvl": 12,
+              "reqLevel": 5,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q1",
+          "iLvl": 7,
+          "reqLevel": 2,
+          "stats": ""
         },
         {
           "levelBracket": "7–8",
@@ -10742,7 +14868,11 @@ if (typeof window !== 'undefined') {
               "itemId": 15396,
               "value": "8.5 DPS - Teldrassil quest",
               "faction": "alliance",
-              "dps": "8.5 DPS"
+              "dps": "8.5 DPS",
+              "quality": "q2",
+              "iLvl": 12,
+              "reqLevel": 6,
+              "stats": ""
             },
             {
               "name": "Apprentice's Spellstaff",
@@ -10751,7 +14881,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "6.36 DPS",
               "speed": "2.20",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q2",
+              "iLvl": 12,
+              "reqLevel": 1,
+              "stats": ""
             },
             {
               "name": "Bonecracker",
@@ -10760,7 +14894,11 @@ if (typeof window !== 'undefined') {
               "faction": "horde",
               "dps": "9.06 DPS",
               "speed": "3.20",
-              "weaponType": "Two-handed mace"
+              "weaponType": "Two-handed mace",
+              "quality": "q2",
+              "iLvl": 13,
+              "reqLevel": 7,
+              "stats": ""
             },
             {
               "name": "Darkwood Staff",
@@ -10769,10 +14907,18 @@ if (typeof window !== 'undefined') {
               "faction": "horde",
               "dps": "6.72 DPS",
               "speed": "3.20",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q2",
+              "iLvl": 13,
+              "reqLevel": 7,
+              "stats": ""
             }
           ],
-          "faction": "alliance"
+          "faction": "alliance",
+          "quality": "q2",
+          "iLvl": 10,
+          "reqLevel": 4,
+          "stats": ""
         },
         {
           "levelBracket": "9–10",
@@ -10793,7 +14939,11 @@ if (typeof window !== 'undefined') {
               "itemId": 15396,
               "value": "8.5 DPS - Early quest",
               "faction": "both",
-              "dps": "8.5 DPS"
+              "dps": "8.5 DPS",
+              "quality": "q2",
+              "iLvl": 14,
+              "reqLevel": 8,
+              "stats": ""
             },
             {
               "name": "Trogg Scepter",
@@ -10802,7 +14952,20 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "8.13 DPS",
               "speed": "2.40",
-              "weaponType": "One-handed mace"
+              "weaponType": "One-handed mace",
+              "quality": "q3",
+              "iLvl": 18,
+              "stats": "+4 Spirit, Equip: Increases healing done by up to 33 and damage done by up to 11 for all magical spells and effects.",
+              "lines": [
+                "Binds when picked up",
+                "Main Hand\tMace",
+                "13 - 26 Damage\tSpeed 2.40",
+                "(8.1 damage per second)",
+                "+4 Spirit",
+                "Equip: Increases healing done by up to 33 and damage done by up to 11 for all magical spells and effects.",
+                "Requires Level 13"
+              ],
+              "reqLevel": 13
             },
             {
               "name": "Cauldron Stirrer",
@@ -10811,7 +14974,11 @@ if (typeof window !== 'undefined') {
               "faction": "horde",
               "dps": "7.42 DPS",
               "speed": "3.10",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q2",
+              "iLvl": 15,
+              "reqLevel": 10,
+              "stats": ""
             },
             {
               "name": "Ironforge Greathammer",
@@ -10820,10 +14987,18 @@ if (typeof window !== 'undefined') {
               "speed": "3.30",
               "dps": "16.0 DPS",
               "value": "16.0 DPS, 3.30s - Ironforge Quest",
-              "faction": "alliance"
+              "faction": "alliance",
+              "quality": "q3",
+              "iLvl": 18,
+              "reqLevel": 9,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q1",
+          "iLvl": 15,
+          "reqLevel": 10,
+          "stats": ""
         },
         {
           "levelBracket": "11–12",
@@ -10846,7 +15021,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "7.14 DPS",
               "speed": "2.80",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q2",
+              "iLvl": 14,
+              "reqLevel": 12,
+              "stats": ""
             },
             {
               "name": "Trogg Scepter",
@@ -10855,7 +15034,20 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "8.13 DPS",
               "speed": "2.40",
-              "weaponType": "One-handed mace"
+              "weaponType": "One-handed mace",
+              "quality": "q3",
+              "iLvl": 18,
+              "stats": "+4 Spirit, Equip: Increases healing done by up to 33 and damage done by up to 11 for all magical spells and effects.",
+              "lines": [
+                "Binds when picked up",
+                "Main Hand\tMace",
+                "13 - 26 Damage\tSpeed 2.40",
+                "(8.1 damage per second)",
+                "+4 Spirit",
+                "Equip: Increases healing done by up to 33 and damage done by up to 11 for all magical spells and effects.",
+                "Requires Level 13"
+              ],
+              "reqLevel": 13
             },
             {
               "name": "Hammer of Orgrimmar",
@@ -10864,7 +15056,11 @@ if (typeof window !== 'undefined') {
               "faction": "horde",
               "dps": "12.41 DPS",
               "speed": "2.90",
-              "weaponType": "One-handed mace"
+              "weaponType": "One-handed mace",
+              "quality": "q3",
+              "iLvl": 18,
+              "reqLevel": 9,
+              "stats": "+3 Str, +3 Spi"
             },
             {
               "name": "Ironforge Greathammer",
@@ -10873,10 +15069,18 @@ if (typeof window !== 'undefined') {
               "speed": "3.30",
               "dps": "16.0 DPS",
               "value": "16.0 DPS, 3.30s - Ironforge Quest",
-              "faction": "alliance"
+              "faction": "alliance",
+              "quality": "q3",
+              "iLvl": 18,
+              "reqLevel": 9,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q2",
+          "iLvl": 16,
+          "reqLevel": 11,
+          "stats": ""
         },
         {
           "levelBracket": "13–14",
@@ -10899,7 +15103,11 @@ if (typeof window !== 'undefined') {
               "faction": "horde",
               "dps": "11.82 DPS",
               "speed": "3.30",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 18,
+              "reqLevel": 9,
+              "stats": "+6 Int, +6 Agi, +18 Spell Dmg"
             },
             {
               "name": "Ironforge Greathammer",
@@ -10908,7 +15116,11 @@ if (typeof window !== 'undefined') {
               "faction": "alliance",
               "dps": "15.97 DPS",
               "speed": "3.10",
-              "weaponType": "Two-handed mace"
+              "weaponType": "Two-handed mace",
+              "quality": "q3",
+              "iLvl": 18,
+              "reqLevel": 9,
+              "stats": ""
             },
             {
               "name": "Oakthrush Staff",
@@ -10917,7 +15129,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "7.14 DPS",
               "speed": "2.80",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q2",
+              "iLvl": 14,
+              "reqLevel": 12,
+              "stats": ""
             },
             {
               "name": "Kris of Orgrimmar",
@@ -10926,7 +15142,11 @@ if (typeof window !== 'undefined') {
               "faction": "horde",
               "dps": "8 DPS",
               "speed": "1.50",
-              "weaponType": "Dagger"
+              "weaponType": "Dagger",
+              "quality": "q3",
+              "iLvl": 18,
+              "reqLevel": 9,
+              "stats": "+4 Sta, +33 Healing, +11 Spell Damage"
             },
             {
               "name": "Fang of Magmatus",
@@ -10935,10 +15155,18 @@ if (typeof window !== 'undefined') {
               "speed": "1.70",
               "dps": "7.9 DPS",
               "value": "7.9 DPS, 1.70s - RFC Drop",
-              "faction": "both"
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 18,
+              "reqLevel": 13,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 18,
+          "reqLevel": 13,
+          "stats": "+5 Int, +4 Spirit"
         },
         {
           "levelBracket": "15–16",
@@ -10961,7 +15189,11 @@ if (typeof window !== 'undefined') {
               "faction": "horde",
               "dps": "11.82 DPS",
               "speed": "3.30",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 18,
+              "reqLevel": 9,
+              "stats": "+6 Int, +6 Agi, +18 Spell Dmg"
             },
             {
               "name": "Segmented Spider Leg",
@@ -10970,7 +15202,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "17.5 DPS",
               "speed": "3.60",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 20,
+              "reqLevel": 15,
+              "stats": "+5 Int, +4 Sta"
             },
             {
               "name": "Scepter of the Abandoned",
@@ -10979,7 +15215,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "9.62 DPS",
               "speed": "2.60",
-              "weaponType": "One-handed mace"
+              "weaponType": "One-handed mace",
+              "quality": "q3",
+              "iLvl": 22,
+              "reqLevel": 17,
+              "stats": ""
             },
             {
               "name": "Kris of Orgrimmar",
@@ -10988,7 +15228,11 @@ if (typeof window !== 'undefined') {
               "faction": "horde",
               "dps": "8 DPS",
               "speed": "1.50",
-              "weaponType": "Dagger"
+              "weaponType": "Dagger",
+              "quality": "q3",
+              "iLvl": 18,
+              "reqLevel": 9,
+              "stats": "+4 Sta, +33 Healing, +11 Spell Damage"
             },
             {
               "name": "The Stitcher",
@@ -10997,10 +15241,18 @@ if (typeof window !== 'undefined') {
               "speed": "2.40",
               "dps": "8.1 DPS",
               "value": "8.1 DPS, 2.40s - Dalaran Dungeon",
-              "faction": "both"
+              "faction": "both",
+              "quality": "q2",
+              "iLvl": 24,
+              "reqLevel": 15,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 23,
+          "reqLevel": 18,
+          "stats": "+5 Spi, +5 Sta, Root on hit"
         },
         {
           "levelBracket": "17–18",
@@ -11023,7 +15275,11 @@ if (typeof window !== 'undefined') {
               "faction": "horde",
               "dps": "11.82 DPS",
               "speed": "3.30",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 18,
+              "reqLevel": 9,
+              "stats": "+6 Int, +6 Agi, +18 Spell Dmg"
             },
             {
               "name": "Coldspire Staff",
@@ -11032,7 +15288,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "15.14 DPS",
               "speed": "3.60",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 24,
+              "reqLevel": 19,
+              "stats": "+7 Int, +5 Spi"
             },
             {
               "name": "Staff of Westfall",
@@ -11041,7 +15301,21 @@ if (typeof window !== 'undefined') {
               "faction": "alliance",
               "dps": "15.17 DPS",
               "speed": "3.00",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 24,
+              "stats": "+5 Intellect, +6 Spirit, Equip: Increases healing done by up to 48 and damage done by up to 16 for all magical spells and effects., Equip: Movement speed increased by 2% in Elwynn Forest, Westfall, Redridge Mountains, and the Deadmines.",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand\tStaff",
+                "36 - 55 Damage\tSpeed 3.00",
+                "(15.2 damage per second)",
+                "+5 Intellect",
+                "+6 Spirit",
+                "Equip: Increases healing done by up to 48 and damage done by up to 16 for all magical spells and effects.",
+                "Equip: Movement speed increased by 2% in Elwynn Forest, Westfall, Redridge Mountains, and the Deadmines."
+              ],
+              "reqLevel": 14
             },
             {
               "name": "Kris of Orgrimmar",
@@ -11050,10 +15324,18 @@ if (typeof window !== 'undefined') {
               "faction": "horde",
               "dps": "8 DPS",
               "speed": "1.50",
-              "weaponType": "Dagger"
+              "weaponType": "Dagger",
+              "quality": "q3",
+              "iLvl": 18,
+              "reqLevel": 9,
+              "stats": "+4 Sta, +33 Healing, +11 Spell Damage"
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 23,
+          "reqLevel": 18,
+          "stats": "+11 Str, +4 Agi"
         },
         {
           "levelBracket": "19–20",
@@ -11076,7 +15358,11 @@ if (typeof window !== 'undefined') {
               "faction": "horde",
               "dps": "11.82 DPS",
               "speed": "3.30",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 18,
+              "reqLevel": 9,
+              "stats": "+6 Int, +6 Agi, +18 Spell Dmg"
             },
             {
               "name": "Bronze Warhammer",
@@ -11085,7 +15371,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "16.86 DPS",
               "speed": "3.50",
-              "weaponType": "Two-handed mace"
+              "weaponType": "Two-handed mace",
+              "quality": "q2",
+              "iLvl": 25,
+              "reqLevel": 20,
+              "stats": "90"
             },
             {
               "name": "Staff of Westfall",
@@ -11094,7 +15384,21 @@ if (typeof window !== 'undefined') {
               "faction": "alliance",
               "dps": "15.17 DPS",
               "speed": "3.00",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 24,
+              "stats": "+5 Intellect, +6 Spirit, Equip: Increases healing done by up to 48 and damage done by up to 16 for all magical spells and effects., Equip: Movement speed increased by 2% in Elwynn Forest, Westfall, Redridge Mountains, and the Deadmines.",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand\tStaff",
+                "36 - 55 Damage\tSpeed 3.00",
+                "(15.2 damage per second)",
+                "+5 Intellect",
+                "+6 Spirit",
+                "Equip: Increases healing done by up to 48 and damage done by up to 16 for all magical spells and effects.",
+                "Equip: Movement speed increased by 2% in Elwynn Forest, Westfall, Redridge Mountains, and the Deadmines."
+              ],
+              "reqLevel": 14
             },
             {
               "name": "Kris of Orgrimmar",
@@ -11103,10 +15407,28 @@ if (typeof window !== 'undefined') {
               "faction": "horde",
               "dps": "8 DPS",
               "speed": "1.50",
-              "weaponType": "Dagger"
+              "weaponType": "Dagger",
+              "quality": "q3",
+              "iLvl": 18,
+              "reqLevel": 9,
+              "stats": "+4 Sta, +33 Healing, +11 Spell Damage"
             }
           ],
-          "faction": "horde"
+          "faction": "horde",
+          "quality": "q3",
+          "iLvl": 24,
+          "stats": "+7 Agility, +7 Stamina, +7 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 26.",
+          "lines": [
+            "Binds when picked up",
+            "Two-Hand\tStaff",
+            "35 - 53 Damage\tSpeed 2.90",
+            "(15.2 damage per second)",
+            "+7 Agility",
+            "+7 Stamina",
+            "+7 Intellect",
+            "Equip: Increases damage and healing done by magical spells and effects by up to 26."
+          ],
+          "reqLevel": 10
         },
         {
           "levelBracket": "21–22",
@@ -11129,7 +15451,21 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "18.41 DPS",
               "speed": "2.20",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 30,
+              "stats": "+11 Intellect, +11 Stamina, Equip: Increases damage and healing done by magical spells and effects by up to 34.",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand\tStaff",
+                "32 - 49 Damage\tSpeed 2.20",
+                "(18.4 damage per second)",
+                "+11 Intellect",
+                "+11 Stamina",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 34.",
+                "Requires Level 25"
+              ],
+              "reqLevel": 25
             },
             {
               "name": "Subdued Dragon's Fang",
@@ -11138,7 +15474,19 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "20.59 DPS",
               "speed": "1.70",
-              "weaponType": "Dagger"
+              "weaponType": "Dagger",
+              "quality": "q3",
+              "iLvl": 32,
+              "stats": "+7 Agility, +2 Stamina",
+              "lines": [
+                "Binds when picked up",
+                "One-Hand\tDagger",
+                "24 - 46 Damage\tSpeed 1.70",
+                "(20.6 damage per second)",
+                "+7 Agility",
+                "+2 Stamina"
+              ],
+              "reqLevel": 24
             },
             {
               "name": "Alliance Outrunner Staff",
@@ -11147,10 +15495,28 @@ if (typeof window !== 'undefined') {
               "speed": "2.50",
               "dps": "16.2 DPS",
               "value": "16.2 DPS, 2.50s - Alliance Drop",
-              "faction": "alliance"
+              "faction": "alliance",
+              "quality": "q3",
+              "iLvl": 26,
+              "reqLevel": 21,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 26,
+          "stats": "+5 Stamina, +12 Spirit, Equip: Increases healing done by up to 52 and damage done by up to 17 for all magical spells and effects.",
+          "lines": [
+            "Binds when picked up",
+            "Two-Hand\tStaff",
+            "37 - 56 Damage\tSpeed 2.90",
+            "(16.0 damage per second)",
+            "+5 Stamina",
+            "+12 Spirit",
+            "Equip: Increases healing done by up to 52 and damage done by up to 17 for all magical spells and effects.",
+            "Requires Level 21"
+          ],
+          "reqLevel": 21
         },
         {
           "levelBracket": "23–24",
@@ -11173,7 +15539,22 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "15.96 DPS",
               "speed": "2.60",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 26,
+              "stats": "+3 Intellect, +4 Stamina, +12 Spirit, Equip: Increases healing done by up to 52 and damage done by up to 17 for all magical spells and effects.",
+              "lines": [
+                "Binds when equipped",
+                "Two-Hand\tStaff",
+                "33 - 50 Damage\tSpeed 2.60",
+                "(16.0 damage per second)",
+                "+3 Intellect",
+                "+4 Stamina",
+                "+12 Spirit",
+                "Equip: Increases healing done by up to 52 and damage done by up to 17 for all magical spells and effects.",
+                "Requires Level 21"
+              ],
+              "reqLevel": 21
             },
             {
               "name": "Subdued Dragon's Fang",
@@ -11182,7 +15563,19 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "20.59 DPS",
               "speed": "1.70",
-              "weaponType": "Dagger"
+              "weaponType": "Dagger",
+              "quality": "q3",
+              "iLvl": 32,
+              "stats": "+7 Agility, +2 Stamina",
+              "lines": [
+                "Binds when picked up",
+                "One-Hand\tDagger",
+                "24 - 46 Damage\tSpeed 1.70",
+                "(20.6 damage per second)",
+                "+7 Agility",
+                "+2 Stamina"
+              ],
+              "reqLevel": 24
             },
             {
               "name": "Striking Staff",
@@ -11191,10 +15584,27 @@ if (typeof window !== 'undefined') {
               "speed": "3.30",
               "dps": "31.3 DPS",
               "value": "31.3 DPS, 3.30s - Dalaran Dungeon",
-              "faction": "both"
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 36,
+              "stats": "+9 Strength, +6 Stamina, +14 Intellect",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand\tStaff",
+                "77 - 117 Damage\tSpeed 3.10",
+                "(31.3 damage per second)",
+                "+9 Strength",
+                "+6 Stamina",
+                "+14 Intellect"
+              ],
+              "reqLevel": 24
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 29,
+          "reqLevel": 24,
+          "stats": "+11 Int, +10 Spi"
         },
         {
           "levelBracket": "25–26",
@@ -11217,7 +15627,20 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "25.61 DPS",
               "speed": "3.30",
-              "weaponType": "Two-handed mace"
+              "weaponType": "Two-handed mace",
+              "quality": "q3",
+              "iLvl": 31,
+              "stats": "+12 Stamina, +100 Armor",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand\tMace",
+                "67 - 102 Damage\tSpeed 3.30",
+                "(25.6 damage per second)",
+                "+12 Stamina",
+                "+100 Armor",
+                "Requires Level 26"
+              ],
+              "reqLevel": 26
             },
             {
               "name": "Solid Iron Maul",
@@ -11226,7 +15649,20 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "15.57 DPS",
               "speed": "3.50",
-              "weaponType": "Two-handed mace"
+              "weaponType": "Two-handed mace",
+              "quality": "q2",
+              "iLvl": 31,
+              "stats": "+12 Stamina, Equip: Increases damage and healing done by magical spells and effects by up to 24.",
+              "lines": [
+                "Binds when equipped",
+                "Two-Hand\tMace",
+                "43 - 66 Damage\tSpeed 3.50",
+                "(15.6 damage per second)",
+                "+12 Stamina",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 24.",
+                "Requires Level 26"
+              ],
+              "reqLevel": 26
             },
             {
               "name": "Death Prophet Spine",
@@ -11235,7 +15671,21 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "18.93 DPS",
               "speed": "2.80",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 31,
+              "stats": "+11 Stamina, Equip: Increases damage and healing done by magical spells and effects by up to 34., Equip: Restores 5 Mana per 5 sec.",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand\tStaff",
+                "42 - 64 Damage\tSpeed 2.80",
+                "(18.9 damage per second)",
+                "+11 Stamina",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 34.",
+                "Equip: Restores 5 Mana per 5 sec.",
+                "Requires Level 26"
+              ],
+              "reqLevel": 26
             },
             {
               "name": "Defender of Dalaran",
@@ -11244,10 +15694,35 @@ if (typeof window !== 'undefined') {
               "speed": "3.30",
               "dps": "31.2 DPS",
               "value": "31.2 DPS, 3.30s - Dalaran Dungeon",
-              "faction": "both"
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 36,
+              "stats": "+9 Strength, +13 Stamina, +9 Intellect",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand\tMace",
+                "82 - 124 Damage\tSpeed 3.30",
+                "(31.2 damage per second)",
+                "+9 Strength",
+                "+13 Stamina",
+                "+9 Intellect"
+              ],
+              "reqLevel": 24
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 33,
+          "stats": "+60 Armor, Equip: +32 Attack Power.",
+          "lines": [
+            "Binds when picked up",
+            "Two-Hand\tMace",
+            "73 - 110 Damage\tSpeed 3.30",
+            "(27.7 damage per second)",
+            "+60 Armor",
+            "Equip: +32 Attack Power."
+          ],
+          "reqLevel": 24
         },
         {
           "levelBracket": "27–28",
@@ -11270,7 +15745,20 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "31.29 DPS",
               "speed": "3.10",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 36,
+              "stats": "+9 Strength, +6 Stamina, +14 Intellect",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand\tStaff",
+                "77 - 117 Damage\tSpeed 3.10",
+                "(31.3 damage per second)",
+                "+9 Strength",
+                "+6 Stamina",
+                "+14 Intellect"
+              ],
+              "reqLevel": 24
             },
             {
               "name": "Spine of the Devourer",
@@ -11279,7 +15767,22 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "20.69 DPS",
               "speed": "3.60",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 33,
+              "stats": "+14 Stamina, Equip: +3 Spell Penetration, Equip: +36 Spell Power",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand\tStaff",
+                "59 - 90 Damage\tSpeed 3.60",
+                "(20.7 damage per second)",
+                "+14 Stamina",
+                "Requires Level 28",
+                "Equip: +3 Spell Penetration",
+                "Equip: +36 Spell Power",
+                "Sell Price: 85s 58c"
+              ],
+              "reqLevel": 28
             },
             {
               "name": "Felbough Arm",
@@ -11288,10 +15791,38 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "28.83 DPS",
               "speed": "3.00",
-              "weaponType": "Polearm"
+              "weaponType": "Polearm",
+              "quality": "q3",
+              "iLvl": 34,
+              "stats": "+10 Agility, +9 Nature Resistance, Equip: +10 Hit Rating",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand\tPolearm",
+                "69 - 104 Damage\tSpeed 3.00",
+                "(28.8 damage per second)",
+                "+10 Agility",
+                "+9 Nature Resistance",
+                "Requires Level 29",
+                "Equip: +10 Hit Rating",
+                "Sell Price: 1g 2s 92c"
+              ],
+              "reqLevel": 29
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 36,
+          "stats": "+9 Strength, +13 Stamina, +9 Intellect",
+          "lines": [
+            "Binds when picked up",
+            "Two-Hand\tMace",
+            "82 - 124 Damage\tSpeed 3.30",
+            "(31.2 damage per second)",
+            "+9 Strength",
+            "+13 Stamina",
+            "+9 Intellect"
+          ],
+          "reqLevel": 24
         },
         {
           "levelBracket": "29–30",
@@ -11314,7 +15845,20 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "20.77 DPS",
               "speed": "2.60",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 33,
+              "stats": "+12 Stamina, Equip: Increases healing done by up to 67 and damage done by up to 22 for all magical spells and effects., Equip: Restores 5 Mana per 5 sec.",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand\tStaff",
+                "43 - 65 Damage\tSpeed 2.60",
+                "(20.8 damage per second)",
+                "+12 Stamina",
+                "Equip: Increases healing done by up to 67 and damage done by up to 22 for all magical spells and effects.",
+                "Equip: Restores 5 Mana per 5 sec."
+              ],
+              "reqLevel": 24
             },
             {
               "name": "Dark Hearted Hammer",
@@ -11323,7 +15867,19 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "28.95 DPS",
               "speed": "3.80",
-              "weaponType": "Two-handed mace"
+              "weaponType": "Two-handed mace",
+              "quality": "q2",
+              "iLvl": 40,
+              "stats": "+12 Strength, +8 Stamina",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand\tMace",
+                "88 - 132 Damage\tSpeed 3.80",
+                "(28.9 damage per second)",
+                "+12 Strength",
+                "+8 Stamina"
+              ],
+              "reqLevel": 30
             },
             {
               "name": "Fallen Dragon's Scepter",
@@ -11332,7 +15888,20 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "19.85 DPS",
               "speed": "3.40",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 32,
+              "stats": "+11 Intellect, +13 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 36.",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand\tStaff",
+                "54 - 81 Damage\tSpeed 3.40",
+                "(19.9 damage per second)",
+                "+11 Intellect",
+                "+13 Spirit",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 36."
+              ],
+              "reqLevel": 24
             },
             {
               "name": "Rage of the Storm",
@@ -11341,10 +15910,39 @@ if (typeof window !== 'undefined') {
               "speed": "3.20",
               "dps": "35.6 DPS",
               "value": "35.6 DPS, 3.20s - Custom Boss Drop",
-              "faction": "both"
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 40,
+              "stats": "+12 Intellect, +15 Stamina, Equip: Increases the damage dealt by your Stormstrike ability by 10%.",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand\tMace",
+                "91 - 137 Damage\tSpeed 3.20",
+                "(35.6 damage per second)",
+                "+12 Intellect",
+                "+15 Stamina",
+                "Equip: Increases the damage dealt by your Stormstrike ability by 10%."
+              ],
+              "reqLevel": 30
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 34,
+          "stats": "+16 Strength, +5 Agility, Use: Increases your attack speed by 50% for 30 sec. (3 Min Cooldown)",
+          "lines": [
+            "Binds when picked up",
+            "Unique",
+            "Two-Hand\tMace",
+            "46 - 70 Damage\tSpeed 2.00",
+            "(29 damage per second)",
+            "+16 Strength",
+            "+5 Agility",
+            "Use: Increases your attack speed by 50% for 30 sec. (3 Min Cooldown)",
+            "3 Charges",
+            "Requires Level 29"
+          ],
+          "reqLevel": 29
         },
         {
           "levelBracket": "31–35",
@@ -11367,7 +15965,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "25.74 DPS",
               "speed": "3.40",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 39,
+              "reqLevel": 34,
+              "stats": "+15 Int, +10 Spi"
             },
             {
               "name": "Rock Pulverizer",
@@ -11376,10 +15978,37 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "31.22 DPS",
               "speed": "3.70",
-              "weaponType": "Two-handed mace"
+              "weaponType": "Two-handed mace",
+              "quality": "q2",
+              "iLvl": 42,
+              "stats": "Equip: +34 Attack Power.",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand\tMace",
+                "92 - 139 Damage\tSpeed 3.70",
+                "(31.2 damage per second)",
+                "Equip: +34 Attack Power."
+              ],
+              "reqLevel": 30
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 34,
+          "stats": "+16 Strength, +5 Agility, Use: Increases your attack speed by 50% for 30 sec. (3 Min Cooldown)",
+          "lines": [
+            "Binds when picked up",
+            "Unique",
+            "Two-Hand\tMace",
+            "46 - 70 Damage\tSpeed 2.00",
+            "(29 damage per second)",
+            "+16 Strength",
+            "+5 Agility",
+            "Use: Increases your attack speed by 50% for 30 sec. (3 Min Cooldown)",
+            "3 Charges",
+            "Requires Level 29"
+          ],
+          "reqLevel": 29
         },
         {
           "levelBracket": "36–40",
@@ -11402,7 +16031,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "29.86 DPS",
               "speed": "3.70",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q4",
+              "iLvl": 40,
+              "reqLevel": 35,
+              "stats": "+26 Spell Power"
             },
             {
               "name": "Dendweller's Hammer",
@@ -11411,10 +16044,27 @@ if (typeof window !== 'undefined') {
               "speed": "3.30",
               "dps": "25.6 DPS",
               "value": "25.6 DPS, 3.30s - Custom 2H Mace Drop",
-              "faction": "both"
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 31,
+              "stats": "+12 Stamina, +100 Armor",
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand\tMace",
+                "67 - 102 Damage\tSpeed 3.30",
+                "(25.6 damage per second)",
+                "+12 Stamina",
+                "+100 Armor",
+                "Requires Level 26"
+              ],
+              "reqLevel": 26
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 44,
+          "reqLevel": 39,
+          "stats": "+16 Str, +17 Sta"
         },
         {
           "levelBracket": "41–46",
@@ -11437,14 +16087,22 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "31.11 DPS",
               "speed": "2.70",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 48,
+              "reqLevel": 40,
+              "stats": ""
             },
             {
               "name": "Grisly Sack of Skulls",
               "itemId": 1959,
               "value": "40.3 DPS - World Drop",
               "faction": "both",
-              "dps": "40.3 DPS"
+              "dps": "40.3 DPS",
+              "quality": "q3",
+              "iLvl": 46,
+              "reqLevel": 40,
+              "stats": ""
             },
             {
               "name": "Gul'gash's Greathammer",
@@ -11453,7 +16111,11 @@ if (typeof window !== 'undefined') {
               "speed": "3.60",
               "dps": "42.8 DPS",
               "value": "42.8 DPS, 3.60s - Feralas Drop",
-              "faction": "both"
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 49,
+              "reqLevel": 44,
+              "stats": ""
             },
             {
               "name": "Emerald Watcher's Dreamstaff",
@@ -11462,10 +16124,18 @@ if (typeof window !== 'undefined') {
               "speed": "3.00",
               "dps": "31.7 DPS",
               "value": "31.7 DPS, 3.00s - Custom Staff Drop",
-              "faction": "both"
+              "faction": "both",
+              "quality": "q3",
+              "iLvl": 49,
+              "reqLevel": 44,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 54,
+          "reqLevel": 49,
+          "stats": "+11 Str, +10 Sta"
         },
         {
           "levelBracket": "47–52",
@@ -11488,7 +16158,11 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "34.14 DPS",
               "speed": "2.90",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 53,
+              "reqLevel": 48,
+              "stats": ""
             },
             {
               "name": "Enchanted Battlehammer",
@@ -11497,10 +16171,18 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "48.29 DPS",
               "speed": "3.50",
-              "weaponType": "Two-handed mace"
+              "weaponType": "Two-handed mace",
+              "quality": "q3",
+              "iLvl": 56,
+              "reqLevel": 51,
+              "stats": "280"
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 55,
+          "reqLevel": 50,
+          "stats": ""
         },
         {
           "levelBracket": "53–60",
@@ -11523,24 +16205,40 @@ if (typeof window !== 'undefined') {
               "faction": "both",
               "dps": "36.88 DPS",
               "speed": "3.20",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 58,
+              "reqLevel": 53,
+              "stats": ""
             },
             {
               "name": "Hammer of the Grand Crusader",
               "itemId": 18717,
               "value": "53.9 DPS - Stratholme 2H Mace",
               "faction": "both",
-              "dps": "53.9 DPS"
+              "dps": "53.9 DPS",
+              "quality": "q3",
+              "iLvl": 58,
+              "reqLevel": 52,
+              "stats": ""
             },
             {
               "name": "Rod of the Ogre Magi",
               "itemId": 18534,
               "value": "36.0 DPS - DM North Tribute Run",
               "faction": "both",
-              "dps": "36.0 DPS"
+              "dps": "36.0 DPS",
+              "quality": "q3",
+              "iLvl": 58,
+              "reqLevel": 52,
+              "stats": ""
             }
           ],
-          "faction": "both"
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 58,
+          "reqLevel": 52,
+          "stats": "+260 Armor, +10 Defense"
         }
       ]
     }
