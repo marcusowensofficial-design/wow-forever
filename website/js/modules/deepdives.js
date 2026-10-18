@@ -162,22 +162,36 @@ function initClassDeepDives() {
 
         <!-- Sub Navigation Bar -->
         <div class="deepdive-subnav-bar">
-          ${(cData.subTabs || [
-            { id: "overview", label: "Full Dossier", icon: "📑" },
-            { id: "core", label: `Core Rules & QoL (${cData.coreRules ? cData.coreRules.length : 0})`, icon: "📜" },
-            { id: "matrix", label: `Verification Matrix (${cData.forensicMatrix ? cData.forensicMatrix.length : 0})`, icon: "🔬" }
-          ]).map(tab => {
-            let label = (tab.label || '').trim();
-            if (tab.icon && label.startsWith(tab.icon)) {
-              label = label.substring(tab.icon.length).trim();
+          ${(() => {
+            const tabs = (cData.subTabs || [
+              { id: "overview", label: "Full Dossier", icon: "📑" },
+              { id: "core", label: `Core Rules & QoL (${cData.coreRules ? cData.coreRules.length : 0})`, icon: "📜" },
+              { id: "matrix", label: `Verification Matrix (${cData.forensicMatrix ? cData.forensicMatrix.length : 0})`, icon: "🔬" }
+            ]).slice();
+
+            const progTabs = [
+              { id: "spellbook", label: "1–60 Spellbook", icon: "📖" },
+              { id: "weapons", label: "Weapon Path", icon: "⚔️" },
+              { id: "macros", label: "Macros", icon: "📜" },
+              { id: "milestones", label: "Leveling Milestones", icon: "🗺️" }
+            ];
+            for (const pt of progTabs) {
+              if (!tabs.some(t => t.id === pt.id)) tabs.push(pt);
             }
-            label = label.replace(/^[⚡\u26A1]\s*/, '');
-            return `
-              <button class="deepdive-subnav-btn ${selectedDeepDiveSubTab === tab.id ? 'active' : ''}" data-subtab="${tab.id}">
-                <span>${tab.icon}</span> ${escapeHtml(label)}
-              </button>
-            `;
-          }).join('')}
+
+            return tabs.map(tab => {
+              let label = (tab.label || '').trim();
+              if (tab.icon && label.startsWith(tab.icon)) {
+                label = label.substring(tab.icon.length).trim();
+              }
+              label = label.replace(/^[⚡\u26A1]\s*/, '');
+              return `
+                <button class="deepdive-subnav-btn ${selectedDeepDiveSubTab === tab.id ? 'active' : ''}" data-subtab="${tab.id}">
+                  <span>${tab.icon}</span> ${escapeHtml(label)}
+                </button>
+              `;
+            }).join('');
+          })()}
         </div>
       </div>
 
@@ -536,11 +550,18 @@ function initClassDeepDives() {
         }
       });
     });
+
+    if (window.WOW_DEEPDIVES_PROGRESSION && window.WOW_DEEPDIVES_PROGRESSION.setupEventListeners) {
+      window.WOW_DEEPDIVES_PROGRESSION.setupEventListeners();
+    }
   }
 
+  window.renderDeepDiveContent = renderDeepDiveContent;
 
   function renderDeepDiveSubTabBody(cData, subtab) {
-    if (subtab === 'betaBuilds' && cData.betaBuilds) {
+    if (['spellbook', 'weapons', 'macros', 'milestones'].includes(subtab)) {
+      return window.WOW_DEEPDIVES_PROGRESSION?.renderProgressionSubtab(subtab, cData) || '<div class="deepdive-loading">Loading progression...</div>';
+    } else if (subtab === 'betaBuilds' && cData.betaBuilds) {
       return (window.WOW_DEEPDIVES_BUILDS?.renderBetaBuildsSection || renderBetaBuildsSection)(cData);
     } else if (subtab === 'core') {
       return (window.WOW_DEEPDIVES_SPECS?.renderCoreRulesSection || renderCoreRulesSection)(cData);

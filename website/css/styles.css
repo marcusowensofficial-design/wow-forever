@@ -5302,6 +5302,627 @@ input:checked + .toggle-slider:before {
   color: #fff;
 }
 
+/* ==========================================================================
+   Class Progression & Toolkit Styles (Spellbook, Weapons, Macros, Milestones)
+   ========================================================================== */
+
+.progression-section-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.progression-header-banner {
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.7) 0%, rgba(15, 23, 42, 0.8) 100%);
+  border: 1px solid var(--border-gold, #f3c043);
+  border-radius: var(--radius-md, 8px);
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.progression-header-info h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.25rem;
+  color: var(--text-gold, #f3c043);
+  margin: 0 0 0.25rem 0;
+}
+
+.progression-header-info p {
+  color: #94a3b8;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.progression-header-badge {
+  background: rgba(243, 192, 67, 0.15);
+  border: 1px solid var(--border-gold, #f3c043);
+  color: var(--text-gold, #f3c043);
+  padding: 0.35rem 0.8rem;
+  border-radius: var(--radius-full, 9999px);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.progression-controls-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  background: rgba(15, 23, 42, 0.6);
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-md, 8px);
+  border: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.08));
+}
+
+.progression-filter-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.progression-chip {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.1));
+  color: #cbd5e1;
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-full, 9999px);
+  font-size: 0.82rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.progression-chip:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  border-color: var(--border-gold, #f3c043);
+}
+
+.progression-chip.active {
+  background: rgba(243, 192, 67, 0.2);
+  border-color: var(--border-gold, #f3c043);
+  color: var(--text-gold, #f3c043);
+  font-weight: 600;
+}
+
+.progression-search-box {
+  position: relative;
+  min-width: 260px;
+}
+
+.progression-search-box input {
+  width: 100%;
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.15));
+  border-radius: var(--radius-sm, 6px);
+  padding: 0.45rem 2rem 0.45rem 0.75rem;
+  color: #f8fafc;
+  font-size: 0.85rem;
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+
+.progression-search-box input:focus {
+  border-color: var(--border-gold, #f3c043);
+}
+
+.btn-clear-search {
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+/* 1. Spellbook Styles */
+.spellbook-levels-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.spellbook-level-block {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-md, 8px);
+  padding: 1.25rem;
+}
+
+.spellbook-level-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.spellbook-level-badge {
+  background: linear-gradient(135deg, #b45309, #d97706);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-sm, 4px);
+}
+
+.spellbook-level-note {
+  color: #94a3b8;
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
+.spellbook-count-badge {
+  margin-left: auto;
+  font-size: 0.78rem;
+  color: #cbd5e1;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 0.2rem 0.5rem;
+  border-radius: var(--radius-sm, 4px);
+}
+
+.spellbook-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 0.75rem;
+}
+
+.spellbook-card {
+  background: rgba(30, 41, 59, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius-sm, 6px);
+  padding: 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: all 0.15s ease;
+}
+
+.spellbook-card:hover {
+  background: rgba(30, 41, 59, 0.85);
+  border-color: rgba(243, 192, 67, 0.4);
+}
+
+.spellbook-card-top {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.spellbook-card-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  flex-shrink: 0;
+}
+
+.spellbook-card-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-width: 0;
+}
+
+.spellbook-card-title {
+  color: #f8fafc;
+  font-size: 0.95rem;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.spellbook-school-badge {
+  font-size: 0.75rem;
+  color: #cbd5e1;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 0.1rem 0.4rem;
+  border-radius: 3px;
+  align-self: flex-start;
+}
+
+.spellbook-card-desc {
+  font-size: 0.82rem;
+  color: #94a3b8;
+  line-height: 1.4;
+}
+
+/* 2. Weapon Progression Styles */
+.progression-track-tabs {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.track-tab-label {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  font-weight: 600;
+}
+
+.progression-track-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #cbd5e1;
+  padding: 0.35rem 0.8rem;
+  border-radius: var(--radius-sm, 4px);
+  font-size: 0.82rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.progression-track-btn.active {
+  background: rgba(243, 192, 67, 0.2);
+  border-color: var(--border-gold, #f3c043);
+  color: var(--text-gold, #f3c043);
+  font-weight: 600;
+}
+
+.weapon-timeline-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.weapon-step-card {
+  display: flex;
+  background: rgba(15, 23, 42, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-md, 8px);
+  overflow: hidden;
+  transition: border-color 0.15s ease;
+}
+
+.weapon-step-card:hover {
+  border-color: rgba(243, 192, 67, 0.4);
+}
+
+.weapon-step-bracket {
+  background: rgba(30, 41, 59, 0.8);
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  min-width: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0.5rem;
+  text-align: center;
+}
+
+.bracket-num {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-gold, #f3c043);
+}
+
+.step-seq {
+  font-size: 0.75rem;
+  color: #64748b;
+  margin-top: 0.25rem;
+}
+
+.weapon-main-content {
+  flex: 1;
+  padding: 1rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.weapon-item-hero {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.weapon-icon-link {
+  display: block;
+  flex-shrink: 0;
+}
+
+.weapon-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 6px;
+  border: 1px solid var(--border-gold, #f3c043);
+}
+
+.weapon-item-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.weapon-item-header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.weapon-title-link {
+  color: #38bdf8;
+  font-size: 1.05rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.weapon-title-link:hover {
+  text-decoration: underline;
+  color: #7dd3fc;
+}
+
+.weapon-type-badge {
+  font-size: 0.75rem;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 0.15rem 0.5rem;
+  border-radius: 3px;
+  color: #cbd5e1;
+}
+
+.weapon-stats-row {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.stat-pill {
+  font-size: 0.8rem;
+  color: #94a3b8;
+  background: rgba(255, 255, 255, 0.04);
+  padding: 0.1rem 0.4rem;
+  border-radius: 3px;
+}
+
+.stat-pill.dps-pill {
+  color: #4ade80;
+  font-weight: 600;
+}
+
+.weapon-source-block {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.85rem;
+  padding: 0.4rem 0.75rem;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.source-tag {
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.15rem 0.45rem;
+  border-radius: 3px;
+  background: rgba(243, 192, 67, 0.2);
+  color: var(--text-gold, #f3c043);
+}
+
+.source-detail {
+  color: #94a3b8;
+  font-size: 0.82rem;
+}
+
+.weapon-alts-block {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+}
+
+.alts-label {
+  color: #64748b;
+  font-weight: 600;
+}
+
+.alts-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.alt-tag {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 0.15rem 0.5rem;
+  border-radius: 3px;
+  color: #cbd5e1;
+}
+
+.alt-val {
+  color: #4ade80;
+  margin-left: 0.25rem;
+}
+
+/* 3. Macros Styles */
+.macro-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 1rem;
+}
+
+.macro-card {
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-md, 8px);
+  padding: 1.15rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.macro-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.macro-card-title {
+  margin: 0;
+  font-size: 1rem;
+  color: #f8fafc;
+  font-weight: 600;
+}
+
+.macro-category-badge {
+  display: inline-block;
+  margin-top: 0.25rem;
+  font-size: 0.72rem;
+  color: var(--text-gold, #f3c043);
+  background: rgba(243, 192, 67, 0.15);
+  padding: 0.1rem 0.4rem;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+
+.btn-copy-macro {
+  background: rgba(243, 192, 67, 0.15);
+  border: 1px solid var(--border-gold, #f3c043);
+  color: var(--text-gold, #f3c043);
+  padding: 0.35rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+.btn-copy-macro:hover {
+  background: rgba(243, 192, 67, 0.3);
+  color: #fff;
+}
+
+.btn-copy-macro.copied {
+  background: rgba(74, 222, 128, 0.2);
+  border-color: #4ade80;
+  color: #4ade80;
+}
+
+.macro-card-desc {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.macro-code-wrapper {
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 4px;
+  padding: 0.65rem 0.85rem;
+  overflow-x: auto;
+}
+
+.macro-code-block {
+  margin: 0;
+  font-family: 'Consolas', 'Monaco', monospace;
+  font-size: 0.82rem;
+  color: #e2e8f0;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+/* 4. Milestones Styles */
+.milestones-timeline-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.milestone-bracket-card {
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-md, 8px);
+  padding: 1.25rem;
+}
+
+.milestone-bracket-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.85rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.milestone-step-marker {
+  width: 28px;
+  height: 28px;
+  background: linear-gradient(135deg, #d97706, #f59e0b);
+  border-radius: 50%;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.milestone-bracket-title h4 {
+  margin: 0;
+  font-size: 1.05rem;
+  color: #f8fafc;
+}
+
+.milestone-items-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.milestone-check-item {
+  display: flex;
+  align-items: flex-start;
+}
+
+.milestone-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  font-size: 0.88rem;
+  color: #cbd5e1;
+  cursor: pointer;
+  line-height: 1.4;
+}
+
+.milestone-checkbox {
+  margin-top: 0.2rem;
+  cursor: pointer;
+  accent-color: var(--text-gold, #f3c043);
+  width: 16px;
+  height: 16px;
+}
+
+.milestone-checkbox:checked + .milestone-text {
+  text-decoration: line-through;
+  color: #64748b;
+}
+
+
 
 
 

@@ -1,0 +1,3989 @@
+{
+  "hunter": {
+    "classId": "hunter",
+    "levels": [
+      {
+        "level": 1,
+        "note": "Your character starts with these",
+        "spells": [
+          {
+            "name": "Auto Shot",
+            "icon": "ability_whirlwind",
+            "school": "Marksmanship",
+            "desc": "Automatically shoots the target until cancelled. Requires Ranged Weapon"
+          },
+          {
+            "name": "Raptor Strike",
+            "icon": "ability_meleedamage",
+            "school": "Survival",
+            "desc": "A strong attack that deals melee weapon damage plus 5. Requires Melee Weapon"
+          },
+          {
+            "name": "Track Beasts",
+            "icon": "ability_tracking",
+            "school": "Survival",
+            "desc": "Shows the location of all nearby beasts on the minimap. Only one form of tracking can be active at a time."
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "note": "",
+        "spells": [
+          {
+            "name": "Aspect of the Monkey",
+            "icon": "ability_hunter_aspectofthemonkey",
+            "school": "Beast Mastery",
+            "desc": "The hunter takes on the aspects of a monkey, increasing chance to dodge by 8%. Only one Aspect can be active at a time."
+          },
+          {
+            "name": "Serpent Sting",
+            "icon": "ability_hunter_quickshot",
+            "school": "Marksmanship",
+            "desc": "Stings the target, causing 10 Nature damage over 15 sec. Only one Sting per Hunter can be active on any one target. Requires Ranged Weapon"
+          }
+        ]
+      },
+      {
+        "level": 6,
+        "note": "",
+        "spells": [
+          {
+            "name": "Arcane Shot",
+            "icon": "ability_impalingbolt",
+            "school": "Marksmanship",
+            "desc": "An instant shot that causes 20 Arcane damage. Requires Ranged Weapon"
+          },
+          {
+            "name": "Hunter's Mark",
+            "icon": "ability_hunter_snipershot",
+            "school": "Marksmanship",
+            "desc": "Places the"
+          }
+        ]
+      },
+      {
+        "level": 8,
+        "note": "",
+        "spells": [
+          {
+            "name": "Concussive Shot",
+            "icon": "spell_frost_stun",
+            "school": "Marksmanship",
+            "desc": "Dazes the target, slowing movement speed by 50% for 4 sec. Requires Ranged Weapon"
+          }
+        ]
+      },
+      {
+        "level": 10,
+        "note": "",
+        "spells": [
+          {
+            "name": "Aspect of the Hawk",
+            "icon": "spell_nature_ravenform",
+            "school": "Beast Mastery",
+            "desc": "The hunter takes on the aspects of a hawk, increasing Ranged Attack Power by 20. Only one Aspect can be active at a time."
+          },
+          {
+            "name": "Call Pet",
+            "icon": "ability_hunter_beastcall",
+            "school": "Beast Mastery",
+            "desc": "Summons your pet to you."
+          },
+          {
+            "name": "Dismiss Pet",
+            "icon": "spell_nature_spiritwolf",
+            "school": "Beast Mastery",
+            "desc": "Dismiss your pet. Dismissing your pet will reduce its happiness by 50."
+          },
+          {
+            "name": "Feed Pet",
+            "icon": "ability_hunter_beasttraining",
+            "school": "Beast Mastery",
+            "desc": "Feed your pet the selected item. Feeding your pet increases happiness. Using food close to the pet's level will have a better result."
+          },
+          {
+            "name": "Revive Pet",
+            "icon": "ability_hunter_beastsoothe",
+            "school": "Beast Mastery",
+            "desc": "your pet, returning it to life with 15% of its health."
+          },
+          {
+            "name": "Track Humanoids",
+            "icon": "spell_holy_prayerofhealing",
+            "school": "Survival",
+            "desc": "Shows the location of all nearby humanoids on the minimap. Only one form of tracking can be active at a time."
+          },
+          {
+            "name": "Beast Training",
+            "icon": "ability_hunter_beastcall02",
+            "school": "Beast Training",
+            "desc": "Lets you train your pet with various abilities that you have learned how to teach."
+          }
+        ]
+      },
+      {
+        "level": 12,
+        "note": "",
+        "spells": [
+          {
+            "name": "Mend Pet",
+            "icon": "ability_hunter_mendpet",
+            "school": "Beast Mastery",
+            "desc": "Heals your pet 20 health every second while you focus. Lasts 5 sec."
+          },
+          {
+            "name": "Distracting Shot",
+            "icon": "spell_arcane_blink",
+            "school": "Marksmanship",
+            "desc": "the target, causing threat. Requires Ranged Weapon"
+          },
+          {
+            "name": "Wing Clip",
+            "icon": "ability_rogue_trip",
+            "school": "Survival",
+            "desc": "Inflicts 5 damage and reduces the enemy target's movement speed by 50% for 10 sec. Requires Melee Weapon"
+          }
+        ]
+      },
+      {
+        "level": 14,
+        "note": "",
+        "spells": [
+          {
+            "name": "Eagle Eye",
+            "icon": "ability_hunter_eagleeye",
+            "school": "Beast Mastery",
+            "desc": "Zooms in the hunter's vision. Only usable outdoors. Lasts 1 min."
+          },
+          {
+            "name": "Eyes of the Beast",
+            "icon": "ability_eyeoftheowl",
+            "school": "Beast Mastery",
+            "desc": "Take direct control of your pet and see through its eyes for 2 min."
+          },
+          {
+            "name": "Scare Beast",
+            "icon": "ability_druid_cower",
+            "school": "Beast Mastery",
+            "desc": "Scares a beast, causing it to run in fear for up to 10 sec. Damage caused may interrupt the effect. Only one beast can be feared at a time."
+          }
+        ]
+      },
+      {
+        "level": 16,
+        "note": "",
+        "spells": [
+          {
+            "name": "Immolation Trap",
+            "icon": "spell_fire_flameshock",
+            "school": "Survival",
+            "desc": "Place a Fire trap that will burn the first enemy to approach for 105 Fire damage over 15 sec. Trap will exist for 1 min. Only one Fire trap can be active at a time."
+          },
+          {
+            "name": "Mongoose Bite",
+            "icon": "ability_hunter_swiftstrike",
+            "school": "Survival",
+            "desc": "the enemy for melee weapon damage plus 15. Can only be performed after you dodge. Requires Melee Weapon"
+          }
+        ]
+      },
+      {
+        "level": 18,
+        "note": "",
+        "spells": [
+          {
+            "name": "Multi-Shot",
+            "icon": "ability_upgrademoonglaive",
+            "school": "Marksmanship",
+            "desc": "Fires several missiles, hitting 3 targets."
+          },
+          {
+            "name": "Track Undead",
+            "icon": "spell_shadow_darksummoning",
+            "school": "Survival",
+            "desc": "Shows the location of all nearby undead on the minimap. Only one form of tracking can be active at a time."
+          }
+        ]
+      },
+      {
+        "level": 20,
+        "note": "",
+        "spells": [
+          {
+            "name": "Aspect of the Cheetah",
+            "icon": "ability_mount_jungletiger",
+            "school": "Beast Mastery",
+            "desc": "The hunter takes on the aspects of a cheetah, increasing movement speed by 30%. If the hunter takes damage, he will be dazed for 4 sec. Only one Aspect can be active at a time."
+          },
+          {
+            "name": "Aimed Shot",
+            "icon": "inv_spear_07",
+            "school": "Marksmanship",
+            "desc": "An aimed shot that increases ranged damage by 20."
+          },
+          {
+            "name": "Disengage",
+            "icon": "ability_rogue_feint",
+            "school": "Survival",
+            "desc": "Attempts to disengage from the target by reducing threat. Disables auto-attack. Requires Melee Weapon"
+          },
+          {
+            "name": "Freezing Trap",
+            "icon": "spell_frost_chainsofice",
+            "school": "Survival",
+            "desc": "Place a Frost trap that freezes the first enemy that approaches, preventing all action for up to 10 sec. Any damage caused will break the ice. Trap will exist for 1 min. Only one Frost trap can be active at a time."
+          }
+        ]
+      },
+      {
+        "level": 22,
+        "note": "",
+        "spells": [
+          {
+            "name": "Scorpid Sting",
+            "icon": "ability_hunter_criticalshot",
+            "school": "Marksmanship",
+            "desc": "Stings the target, reducing the target's chance to hit with attacks by 2% for 20 sec. Only one Sting per Hunter can be active on any one target. Requires Ranged Weapon"
+          }
+        ]
+      },
+      {
+        "level": 24,
+        "note": "",
+        "spells": [
+          {
+            "name": "Beast Lore",
+            "icon": "ability_physical_taunt",
+            "school": "Beast Mastery",
+            "desc": "Gather information about the target beast. The tooltip will display damage, health, armor, any special resistances, and diet."
+          },
+          {
+            "name": "Track Hidden",
+            "icon": "ability_stealth",
+            "school": "Survival",
+            "desc": "Increases stealth detection and shows hidden units within detection range on the minimap. Only one form of tracking can be active at a time."
+          }
+        ]
+      },
+      {
+        "level": 25,
+        "note": "",
+        "spells": [
+          {
+            "name": "Summon Hawk",
+            "icon": "ability_hunter_animalhandler",
+            "school": "Beast Mastery",
+            "desc": "a hawk to dive-bomb your targeted enemy, dealing 34 Physical damage and continuing its assault for 18 sec. Only 2 hawks can be active at once."
+          },
+          {
+            "name": "Trueshot Aura",
+            "icon": "ability_trueshot",
+            "school": "Marksmanship",
+            "desc": "Increases the Ranged Attack Power of party or raid members within 45 yds by 30."
+          },
+          {
+            "name": "Counterattack",
+            "icon": "ability_warrior_challange",
+            "school": "Survival",
+            "desc": "A strike that becomes active after parrying an opponent's attack. This attack deals 50% weapon damage plus 26 and immobilizes the target for 5 sec."
+          }
+        ]
+      },
+      {
+        "level": 26,
+        "note": "",
+        "spells": [
+          {
+            "name": "Rapid Fire",
+            "icon": "ability_hunter_runningshot",
+            "school": "Marksmanship",
+            "desc": "Increases ranged and melee attack speed by 40% for 15 sec."
+          },
+          {
+            "name": "Track Elementals",
+            "icon": "spell_frost_summonwaterelemental",
+            "school": "Survival",
+            "desc": "Shows the location of all nearby elementals on the minimap. Only one form of tracking can be active at a time."
+          }
+        ]
+      },
+      {
+        "level": 28,
+        "note": "",
+        "spells": [
+          {
+            "name": "Frost Trap",
+            "icon": "spell_frost_freezingbreath",
+            "school": "Survival",
+            "desc": "Place a Frost trap that creates an ice slick around itself for 30 sec when the first enemy approaches it. All enemies within 10 yards will be slowed by 60% while in the area of effect. Trap will exist for 1 min. Only one Frost trap can be active at a time."
+          }
+        ]
+      },
+      {
+        "level": 30,
+        "note": "",
+        "spells": [
+          {
+            "name": "Aspect of the Beast",
+            "icon": "ability_mount_pinktiger",
+            "school": "Beast Mastery",
+            "desc": "The hunter takes on the aspects of a beast, becoming untrackable and increasing Melee Attack Power by 50. Only one Aspect can be active at a time."
+          },
+          {
+            "name": "Feign Death",
+            "icon": "ability_rogue_feigndeath",
+            "school": "Survival",
+            "desc": "Feign death which may trick enemies into ignoring you. Lasts 6 min. If not cancelled, after 6 min you will actually die."
+          },
+          {
+            "name": "Lacerate",
+            "icon": "ability_gouge",
+            "school": "Survival",
+            "desc": "Wounds the target causing them to bleed for 147 damage over 21 sec. Requires Melee Weapon"
+          }
+        ]
+      },
+      {
+        "level": 32,
+        "note": "",
+        "spells": [
+          {
+            "name": "Flare",
+            "icon": "spell_fire_flare",
+            "school": "Marksmanship",
+            "desc": "Exposes all hidden and invisible enemies within 10 yards of the targeted area for 30 sec."
+          },
+          {
+            "name": "Track Demons",
+            "icon": "spell_shadow_summonfelhunter",
+            "school": "Survival",
+            "desc": "Shows the location of all nearby demons on the minimap. Only one form of tracking can be active at a time."
+          }
+        ]
+      },
+      {
+        "level": 34,
+        "note": "",
+        "spells": [
+          {
+            "name": "Explosive Trap",
+            "icon": "spell_fire_selfdestruct",
+            "school": "Survival",
+            "desc": "Place a Fire trap that explodes when an enemy approaches, causing 105 to 135 Fire damage and 150 additional Fire damage over 20 sec to all within 10 yards. Trap will exist for 1 min. Only one Fire trap can be active at a time."
+          }
+        ]
+      },
+      {
+        "level": 36,
+        "note": "",
+        "spells": [
+          {
+            "name": "Viper Sting",
+            "icon": "ability_hunter_aimedshot",
+            "school": "Marksmanship",
+            "desc": "Stings the target, draining 616 mana over 8 sec. Only one Sting per Hunter can be active on any one target. Requires Ranged Weapon"
+          }
+        ]
+      },
+      {
+        "level": 40,
+        "note": "",
+        "spells": [
+          {
+            "name": "Aspect of the Pack",
+            "icon": "ability_mount_whitetiger",
+            "school": "Beast Mastery",
+            "desc": "The hunter and group members within 30 yards take on the aspects of a pack of cheetahs, increasing movement speed by 30%. If a pack member takes damage, they will be dazed for 4 sec. Only one Aspect can be active at a time."
+          },
+          {
+            "name": "Sniper Shot",
+            "icon": "hunter_pvp_snipershot",
+            "school": "Marksmanship",
+            "desc": "A long-range shot that deals ranged damage plus 160 and increases the range of your next 3 Shots by 10 yards for 10 sec. Requires Ranged Weapon"
+          },
+          {
+            "name": "Volley",
+            "icon": "ability_marksmanship",
+            "school": "Marksmanship",
+            "desc": "Continuously fires a volley of ammo at the target area, causing 70 Arcane damage to enemy targets within 8 yards every 1 sec for 6 sec. Requires Ranged Weapon"
+          },
+          {
+            "name": "Track Giants",
+            "icon": "ability_racial_avatar",
+            "school": "Survival",
+            "desc": "Shows the location of all nearby giants on the minimap. Only one form of tracking can be active at a time."
+          }
+        ]
+      },
+      {
+        "level": 46,
+        "note": "",
+        "spells": [
+          {
+            "name": "Aspect of the Wild",
+            "icon": "spell_nature_protectionformnature",
+            "school": "Beast Mastery",
+            "desc": "The hunter and all party and raid members within 30 yards take on the aspect of the wild, increasing Nature resistance by 45. Only one Aspect can be active at a time."
+          }
+        ]
+      },
+      {
+        "level": 50,
+        "note": "",
+        "spells": [
+          {
+            "name": "Track Dragonkin",
+            "icon": "inv_misc_head_dragon_01",
+            "school": "Survival",
+            "desc": "Shows the location of all nearby dragonkin on the minimap. Only one form of tracking can be active at a time."
+          }
+        ]
+      },
+      {
+        "level": 60,
+        "note": "",
+        "spells": [
+          {
+            "name": "Tranquilizing Shot",
+            "icon": "spell_nature_drowsy",
+            "school": "Beast Mastery",
+            "desc": "Attempts to remove 1"
+          }
+        ]
+      }
+    ]
+  },
+  "shaman": {
+    "classId": "shaman",
+    "levels": [
+      {
+        "level": 1,
+        "note": "Your character starts with these",
+        "spells": [
+          {
+            "name": "Lightning Bolt",
+            "icon": "spell_nature_lightning",
+            "school": "Elemental Combat",
+            "desc": "Casts a bolt of lightning at the target for 14 to 17 Nature damage."
+          },
+          {
+            "name": "Rockbiter Weapon",
+            "icon": "spell_nature_rockbiter",
+            "school": "Enhancement",
+            "desc": "Imbue the Shaman's weapon, increasing melee attack power by 50 and allowing melee attacks to cause additional threat when using that weapon. Lasts for 60 minutes. Requires Melee Weapon"
+          },
+          {
+            "name": "Healing Wave",
+            "icon": "spell_nature_magicimmunity",
+            "school": "Restoration",
+            "desc": "Heals a friendly target for 37 to 47."
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "note": "",
+        "spells": [
+          {
+            "name": "Earth Shock",
+            "icon": "spell_nature_earthshock",
+            "school": "Elemental Combat",
+            "desc": "Instantly shocks the target with concussive force, causing 20 to 21 Nature damage. It also interrupts spellcasting and prevents any spell in that school from being cast for 2 sec. Causes a high amount of threat."
+          },
+          {
+            "name": "Stoneskin Totem",
+            "icon": "spell_nature_stoneskintotem",
+            "school": "Enhancement",
+            "desc": "Summons a"
+          }
+        ]
+      },
+      {
+        "level": 6,
+        "note": "",
+        "spells": [
+          {
+            "name": "Earthbind Totem",
+            "icon": "spell_nature_strengthofearthtotem02",
+            "school": "Elemental Combat",
+            "desc": "Summons an"
+          }
+        ]
+      },
+      {
+        "level": 8,
+        "note": "",
+        "spells": [
+          {
+            "name": "Stoneclaw Totem",
+            "icon": "spell_nature_stoneclawtotem",
+            "school": "Elemental Combat",
+            "desc": "Summons a"
+          },
+          {
+            "name": "Lightning Shield",
+            "icon": "spell_nature_lightningshield",
+            "school": "Enhancement",
+            "desc": "The caster is surrounded by 3 balls of lightning. When a spell, melee or ranged attack hits the caster, the attacker will be struck for 13 Nature damage. This expends one lightning ball. Only one ball will fire every few seconds. Lasts 10 min."
+          }
+        ]
+      },
+      {
+        "level": 10,
+        "note": "",
+        "spells": [
+          {
+            "name": "Flame Shock",
+            "icon": "spell_fire_flameshock",
+            "school": "Elemental Combat",
+            "desc": "Instantly sears the target with fire, causing 24 Fire damage immediately and 28 Fire damage over 12 sec."
+          },
+          {
+            "name": "Searing Totem",
+            "icon": "spell_fire_searingtotem",
+            "school": "Elemental Combat",
+            "desc": "Summons a"
+          },
+          {
+            "name": "Flametongue Weapon",
+            "icon": "spell_fire_flametounge",
+            "school": "Enhancement",
+            "desc": "Imbue the Shaman's weapon with fire. Each hit causes 4.71 to 18 additional Fire damage, based on the speed of the weapon. Slower weapons cause more fire damage per swing. When applied to main hand, disables any benefit you personally receive from"
+          },
+          {
+            "name": "Strength of Earth Totem",
+            "icon": "spell_nature_earthbindtotem",
+            "school": "Enhancement",
+            "desc": "Summons a"
+          }
+        ]
+      },
+      {
+        "level": 12,
+        "note": "",
+        "spells": [
+          {
+            "name": "Fire Nova",
+            "icon": "spell_fire_sealoffire",
+            "school": "Elemental Combat",
+            "desc": "Instantly inflicts 32 to 38 fire damage to enemies within 10 yd of your active Fire totem."
+          },
+          {
+            "name": "Purge",
+            "icon": "spell_nature_purge",
+            "school": "Elemental Combat",
+            "desc": "Purges the enemy target, removing 1 magic effects."
+          },
+          {
+            "name": "Ancestral Spirit",
+            "icon": "spell_nature_regenerate",
+            "school": "Restoration",
+            "desc": "Returns the spirit to the body, restoring a dead target to life with 65 health and 120 mana. Cannot be cast when in combat."
+          }
+        ]
+      },
+      {
+        "level": 16,
+        "note": "",
+        "spells": [
+          {
+            "name": "Cure Poison",
+            "icon": "spell_nature_nullifypoison",
+            "school": "Restoration",
+            "desc": "Cures 1 poison effects on the target."
+          }
+        ]
+      },
+      {
+        "level": 18,
+        "note": "",
+        "spells": [
+          {
+            "name": "Tremor Totem",
+            "icon": "spell_nature_tremortotem",
+            "school": "Restoration",
+            "desc": "Summons a"
+          }
+        ]
+      },
+      {
+        "level": 20,
+        "note": "",
+        "spells": [
+          {
+            "name": "Call of the Elements",
+            "icon": "spell_shaman_dropall_01",
+            "school": "Elemental Combat",
+            "desc": "Simultaneously places up to 4 totems specified in the Totem Bar."
+          },
+          {
+            "name": "Frost Shock",
+            "icon": "spell_frost_frostshock",
+            "school": "Elemental Combat",
+            "desc": "Instantly shocks the target with frost, causing 68 to 73 Frost damage and slowing movement speed by 50%. Lasts 8 sec."
+          },
+          {
+            "name": "Totemic Recall",
+            "icon": "spell_shaman_totemrecall",
+            "school": "Elemental Combat",
+            "desc": "Returns your totems to the earth, giving you 25% of the mana required to cast each totem destroyed by Totemic Recall."
+          },
+          {
+            "name": "Frostbrand Weapon",
+            "icon": "spell_frost_frostbrand",
+            "school": "Enhancement",
+            "desc": "Imbue the Shaman's weapon with frost. Each hit has a chance of causing 45 additional Frost damage and slowing the target's movement speed by 25% for 8 sec. Lasts for 60 minutes. Requires Melee Weapon"
+          },
+          {
+            "name": "Ghost Wolf",
+            "icon": "spell_nature_spiritwolf",
+            "school": "Enhancement",
+            "desc": "Turns the Shaman into a"
+          },
+          {
+            "name": "Healing Stream Totem",
+            "icon": "inv_spear_04",
+            "school": "Restoration",
+            "desc": "Summons a"
+          },
+          {
+            "name": "Lesser Healing Wave",
+            "icon": "spell_nature_healingwavelesser",
+            "school": "Restoration",
+            "desc": "Heals a friendly target for 151 to 172."
+          }
+        ]
+      },
+      {
+        "level": 22,
+        "note": "",
+        "spells": [
+          {
+            "name": "Totemic Projection",
+            "icon": "ability_shaman_totemrelocation",
+            "school": "Enhancement",
+            "desc": "Relocates your active totems to the specified location."
+          },
+          {
+            "name": "Water Breathing",
+            "icon": "spell_shadow_demonbreath",
+            "school": "Enhancement",
+            "desc": "Allows the target to breathe underwater for 10 min."
+          },
+          {
+            "name": "Cure Disease",
+            "icon": "spell_nature_removedisease",
+            "school": "Restoration",
+            "desc": "Cures 1 disease on the target."
+          },
+          {
+            "name": "Poison Cleansing Totem",
+            "icon": "spell_nature_poisoncleansingtotem",
+            "school": "Restoration",
+            "desc": "Summons a"
+          }
+        ]
+      },
+      {
+        "level": 24,
+        "note": "",
+        "spells": [
+          {
+            "name": "Frost Resistance Totem",
+            "icon": "spell_frostresistancetotem_01",
+            "school": "Enhancement",
+            "desc": "Summons a"
+          }
+        ]
+      },
+      {
+        "level": 25,
+        "note": "",
+        "spells": [
+          {
+            "name": "Mana Tide Totem",
+            "icon": "spell_frost_summonwaterelemental",
+            "school": "Restoration",
+            "desc": "Summons a"
+          }
+        ]
+      },
+      {
+        "level": 26,
+        "note": "",
+        "spells": [
+          {
+            "name": "Magma Totem",
+            "icon": "spell_fire_selfdestruct",
+            "school": "Elemental Combat",
+            "desc": "Summons a"
+          },
+          {
+            "name": "Far Sight",
+            "icon": "spell_nature_farsight",
+            "school": "Enhancement",
+            "desc": "Changes the caster's viewpoint to the targeted location. Lasts 1 min. Only useable outdoors."
+          },
+          {
+            "name": "Mana Spring Totem",
+            "icon": "spell_nature_manaregentotem",
+            "school": "Restoration",
+            "desc": "Summons a"
+          }
+        ]
+      },
+      {
+        "level": 28,
+        "note": "",
+        "spells": [
+          {
+            "name": "Fire Resistance Totem",
+            "icon": "spell_fireresistancetotem_01",
+            "school": "Enhancement",
+            "desc": "Summons a"
+          },
+          {
+            "name": "Flametongue Totem",
+            "icon": "spell_nature_guardianward",
+            "school": "Enhancement",
+            "desc": "Summons a"
+          },
+          {
+            "name": "Water Walking",
+            "icon": "spell_frost_windwalkon",
+            "school": "Enhancement",
+            "desc": "Allows the friendly target to walk across water for 10 min. Any damage will cancel the effect."
+          }
+        ]
+      },
+      {
+        "level": 30,
+        "note": "",
+        "spells": [
+          {
+            "name": "Call of the Ancestors",
+            "icon": "spell_shaman_dropall_02",
+            "school": "Elemental Combat",
+            "desc": "Simultaneously places up to 4 totems specified in the Totem Bar. Can call different totems than Call of the Elements."
+          },
+          {
+            "name": "Lava Burst",
+            "icon": "spell_shaman_lavaburst",
+            "school": "Elemental Combat",
+            "desc": "You hurl molten lava at the target, dealing 114 to 145 Fire damage. If your"
+          },
+          {
+            "name": "Astral Recall",
+            "icon": "spell_nature_astralrecal",
+            "school": "Enhancement",
+            "desc": "Yanks the caster through the twisting nether back to your home location. Speak to an Innkeeper in a different place to change your home location."
+          },
+          {
+            "name": "Grounding Totem",
+            "icon": "spell_nature_groundingtotem",
+            "school": "Enhancement",
+            "desc": "Summons a"
+          },
+          {
+            "name": "Nature Resistance Totem",
+            "icon": "spell_nature_natureresistancetotem",
+            "school": "Enhancement",
+            "desc": "Summons a"
+          },
+          {
+            "name": "Windfury Weapon",
+            "icon": "spell_nature_cyclone",
+            "school": "Enhancement",
+            "desc": "Imbue the Shaman's weapon with wind. Each hit has a 20% chance of granting you 2 extra attacks with 104 extra melee attack power. When applied to main hand, disables any benefit you personally receive from"
+          },
+          {
+            "name": "Reincarnation",
+            "icon": "spell_nature_reincarnation",
+            "school": "Restoration",
+            "desc": "Allows you to resurrect yourself upon death with 20% health and mana."
+          }
+        ]
+      },
+      {
+        "level": 32,
+        "note": "",
+        "spells": [
+          {
+            "name": "Chain Lightning",
+            "icon": "spell_nature_chainlightning",
+            "school": "Elemental Combat",
+            "desc": "Hurls a lightning bolt at the enemy, dealing 85 to 97 Nature damage and then jumping to additional nearby enemies. Each jump reduces the damage by 30%. Affects 3 total targets."
+          },
+          {
+            "name": "Windfury Totem",
+            "icon": "spell_nature_windfury",
+            "school": "Enhancement",
+            "desc": "Summons a"
+          }
+        ]
+      },
+      {
+        "level": 34,
+        "note": "",
+        "spells": [
+          {
+            "name": "Sentry Totem",
+            "icon": "spell_nature_removecurse",
+            "school": "Enhancement",
+            "desc": "Summons an immobile"
+          }
+        ]
+      },
+      {
+        "level": 36,
+        "note": "",
+        "spells": [
+          {
+            "name": "Windwall Totem",
+            "icon": "spell_nature_earthbind",
+            "school": "Enhancement",
+            "desc": "Summons a"
+          }
+        ]
+      },
+      {
+        "level": 38,
+        "note": "",
+        "spells": [
+          {
+            "name": "Disease Cleansing Totem",
+            "icon": "spell_nature_diseasecleansingtotem",
+            "school": "Restoration",
+            "desc": "Summons a"
+          }
+        ]
+      },
+      {
+        "level": 40,
+        "note": "",
+        "spells": [
+          {
+            "name": "Call of the Spirits",
+            "icon": "spell_shaman_dropall_03",
+            "school": "Elemental Combat",
+            "desc": "Simultaneously places up to 4 totems specified in the Totem Bar. Can call different totems than Call of the Elements or Call of the Ancestors."
+          },
+          {
+            "name": "Chain Heal",
+            "icon": "spell_nature_healingwavegreater",
+            "school": "Restoration",
+            "desc": "Heals the friendly target for 246 to 281, then jumps to heal additional nearby targets. If cast on a party member, the heal will only jump to other party members. Each jump is 50% as effective as the previous target. Heals 3 total targets."
+          },
+          {
+            "name": "Riptide",
+            "icon": "spell_nature_riptide",
+            "school": "Restoration",
+            "desc": "Heals a friendly target for 486 to 534, an additional 445 over 15 sec, and increases the effectiveness of your"
+          }
+        ]
+      },
+      {
+        "level": 42,
+        "note": "",
+        "spells": [
+          {
+            "name": "Grace of Air Totem",
+            "icon": "spell_nature_invisibilitytotem",
+            "school": "Enhancement",
+            "desc": "Summons a"
+          }
+        ]
+      }
+    ]
+  },
+  "mage": {
+    "classId": "mage",
+    "levels": [
+      {
+        "level": 1,
+        "note": "Your character starts with these",
+        "spells": [
+          {
+            "name": "Arcane Intellect",
+            "icon": "spell_holy_magicalsentry",
+            "school": "Arcane",
+            "desc": "Increases the target's Intellect by 2 for 1 hr."
+          },
+          {
+            "name": "Fireball",
+            "icon": "spell_fire_flamebolt",
+            "school": "Fire",
+            "desc": "Hurls a fiery ball that causes 15 to 23 Fire damage and an additional 2 Fire damage over 4 sec."
+          },
+          {
+            "name": "Frost Armor",
+            "icon": "spell_frost_frostarmor02",
+            "school": "Frost",
+            "desc": "Increases Armor by 30. If an enemy strikes the caster, they may have their movement slowed by 30% and the time between their attacks increased by 25% for 5 sec. Only one type of Armor spell can be active on the Mage at any time. Lasts 30 min."
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "note": "",
+        "spells": [
+          {
+            "name": "Conjure Water",
+            "icon": "inv_drink_18",
+            "school": "Arcane",
+            "desc": "Conjures 20 bottles of water, providing the mage and his allies with something to drink. Conjured items disappear if logged out for more than 15 minutes."
+          },
+          {
+            "name": "Frostbolt",
+            "icon": "spell_frost_frostbolt02",
+            "school": "Frost",
+            "desc": "Launches a bolt of frost at the enemy, causing 19 to 21 Frost damage and slowing movement speed by 40% for 5 sec."
+          }
+        ]
+      },
+      {
+        "level": 6,
+        "note": "",
+        "spells": [
+          {
+            "name": "Conjure Food",
+            "icon": "inv_misc_food_73cinnamonroll",
+            "school": "Arcane",
+            "desc": "Conjures 20 muffins, providing the mage and his allies with something to eat. Conjured items disappear if logged out for more than 15 minutes."
+          },
+          {
+            "name": "Fire Blast",
+            "icon": "spell_fire_fireball",
+            "school": "Fire",
+            "desc": "Blasts the enemy for 27 to 35 Fire damage."
+          },
+          {
+            "name": "Comprehend Scroll",
+            "icon": "inv_misc_questionmark",
+            "school": "Comprehension",
+            "desc": "Decipher an untranslated scroll."
+          },
+          {
+            "name": "Study",
+            "icon": "inv_misc_book_08",
+            "school": "Comprehension",
+            "desc": "Perform spell research, resulting in a bundle of scrolls. Requires a suitable library."
+          }
+        ]
+      },
+      {
+        "level": 8,
+        "note": "",
+        "spells": [
+          {
+            "name": "Arcane Missiles",
+            "icon": "spell_nature_starfall",
+            "school": "Arcane",
+            "desc": "Launches"
+          },
+          {
+            "name": "Polymorph",
+            "icon": "spell_nature_polymorph",
+            "school": "Arcane",
+            "desc": "Transforms the enemy into a sheep, forcing it to wander around for up to 20 sec. While wandering, the sheep cannot attack or cast spells but will regenerate very quickly. Any damage will transform the target back into its normal form. Only one target can be polymorphed at a time. Only works on Beasts, Humanoids and Critters."
+          }
+        ]
+      },
+      {
+        "level": 10,
+        "note": "",
+        "spells": [
+          {
+            "name": "Frost Nova",
+            "icon": "spell_frost_frostnova",
+            "school": "Frost",
+            "desc": "Blasts enemies near the caster for 22 to 24 Frost damage and freezes them in place for up to 8 sec. Damage caused may interrupt the effect."
+          }
+        ]
+      },
+      {
+        "level": 12,
+        "note": "",
+        "spells": [
+          {
+            "name": "Dampen Magic",
+            "icon": "spell_nature_abolishmagic",
+            "school": "Arcane",
+            "desc": "Dampens magic used against the targeted party member, decreasing damage taken from spells by up to 15 and healing spells by up to 30. Lasts 10 min."
+          },
+          {
+            "name": "Slow Fall",
+            "icon": "spell_magic_featherfall",
+            "school": "Arcane",
+            "desc": "Slows falling speed for 30 sec."
+          }
+        ]
+      },
+      {
+        "level": 14,
+        "note": "",
+        "spells": [
+          {
+            "name": "Arcane Explosion",
+            "icon": "spell_nature_wispsplode",
+            "school": "Arcane",
+            "desc": "Causes an explosion of arcane magic around the caster, causing 32 to 36 Arcane damage to all targets within 10 yards."
+          }
+        ]
+      },
+      {
+        "level": 16,
+        "note": "",
+        "spells": [
+          {
+            "name": "Flamestrike",
+            "icon": "spell_fire_selfdestruct",
+            "school": "Fire",
+            "desc": "Calls down a pillar of fire, burning all enemies within the area for 55 to 71 Fire damage and an additional 44 Fire damage over 8 sec. Only one"
+          }
+        ]
+      },
+      {
+        "level": 18,
+        "note": "",
+        "spells": [
+          {
+            "name": "Amplify Magic",
+            "icon": "spell_holy_flashheal",
+            "school": "Arcane",
+            "desc": "Amplifies magic used against the targeted party member, increasing damage taken from spells by up to 23 and healing spells by up to 45. Lasts 10 min."
+          },
+          {
+            "name": "Remove Lesser Curse",
+            "icon": "spell_nature_removecurse",
+            "school": "Arcane",
+            "desc": "Removes 1 Curse or"
+          }
+        ]
+      },
+      {
+        "level": 20,
+        "note": "",
+        "spells": [
+          {
+            "name": "Arcane Blast",
+            "icon": "spell_arcane_blast",
+            "school": "Arcane",
+            "desc": "Blasts the target with energy, dealing 34 to 38 Arcane damage. Each time you cast"
+          },
+          {
+            "name": "Blink",
+            "icon": "spell_arcane_blink",
+            "school": "Arcane",
+            "desc": "Teleports the caster 20 yards forward, unless something is in the way. Also frees the caster from Stuns and Immobilizes."
+          },
+          {
+            "name": "Evocation",
+            "icon": "spell_nature_purge",
+            "school": "Arcane",
+            "desc": "While channeling this spell, your mana regeneration is active and increased by 1500%. Lasts 8 sec."
+          },
+          {
+            "name": "Mana Shield",
+            "icon": "spell_shadow_detectlesserinvisibility",
+            "school": "Arcane",
+            "desc": "Absorbs 120 physical damage, draining mana instead. Drains 2 mana per damage absorbed. Lasts 1 min."
+          },
+          {
+            "name": "Teleport: Ironforge",
+            "icon": "spell_arcane_teleportironforge",
+            "school": "Arcane · Alliance",
+            "desc": "Teleports the caster to Ironforge."
+          },
+          {
+            "name": "Teleport: Orgrimmar",
+            "icon": "spell_arcane_teleportorgrimmar",
+            "school": "Arcane · Horde",
+            "desc": "Teleports the caster to Orgrimmar."
+          },
+          {
+            "name": "Teleport: Stormwind",
+            "icon": "spell_arcane_teleportstormwind",
+            "school": "Arcane · Alliance",
+            "desc": "Teleports the caster to Stormwind."
+          },
+          {
+            "name": "Teleport: Undercity",
+            "icon": "spell_arcane_teleportundercity",
+            "school": "Arcane · Horde",
+            "desc": "Teleports the caster to Undercity."
+          },
+          {
+            "name": "Fire Ward",
+            "icon": "spell_fire_firearmor",
+            "school": "Fire",
+            "desc": "Absorbs 162 Fire damage. Lasts 30 sec."
+          },
+          {
+            "name": "Pyroblast",
+            "icon": "spell_fire_fireball02",
+            "school": "Fire",
+            "desc": "Hurls an immense fiery boulder that causes 101 to 131 Fire damage and an additional 44 Fire damage over 12 sec."
+          },
+          {
+            "name": "Blizzard",
+            "icon": "spell_frost_icestorm",
+            "school": "Frost",
+            "desc": "Ice shards pelt the target area doing 200 Frost damage over 8 sec."
+          },
+          {
+            "name": "Ice Lance",
+            "icon": "spell_frost_frostblast",
+            "school": "Frost",
+            "desc": "Deals 28 to 32 Frost damage to an enemy target. Deals 200% increased damage to Frozen targets."
+          }
+        ]
+      },
+      {
+        "level": 22,
+        "note": "",
+        "spells": [
+          {
+            "name": "Scorch",
+            "icon": "spell_fire_soulburn",
+            "school": "Fire",
+            "desc": "the enemy for 38 to 46 Fire damage."
+          },
+          {
+            "name": "Frost Ward",
+            "icon": "spell_frost_frostward",
+            "school": "Frost",
+            "desc": "Absorbs 162 Frost damage. Lasts 30 sec."
+          }
+        ]
+      },
+      {
+        "level": 24,
+        "note": "",
+        "spells": [
+          {
+            "name": "Counterspell",
+            "icon": "spell_frost_iceshock",
+            "school": "Arcane",
+            "desc": "Counters the enemy's spellcast, preventing any spell from that school of magic from being cast for 10 sec. Generates a high amount of threat."
+          },
+          {
+            "name": "Frost Blast",
+            "icon": "spell_ice_magicdamage",
+            "school": "Frost",
+            "desc": "Quickly launch a weak blast of frost at the enemy, causing 28 to 31 Frost damage and slowing movement speed by 40% for 9 sec."
+          }
+        ]
+      },
+      {
+        "level": 25,
+        "note": "",
+        "spells": [
+          {
+            "name": "Arcane Wrath",
+            "icon": "ability_mage_netherwindpresence",
+            "school": "Arcane",
+            "desc": "Launches a projectile of pure Arcane energy at the enemy target, causing 122 to 146 Arcane damage. This spell gains additional Spell Damage equal to 5% of your maximum Mana."
+          }
+        ]
+      },
+      {
+        "level": 26,
+        "note": "",
+        "spells": [
+          {
+            "name": "Cone of Cold",
+            "icon": "spell_frost_glacier",
+            "school": "Frost",
+            "desc": "Targets in a cone in front of the caster take 96 to 106 Frost damage and are slowed by 40% for 6 sec. The first 4 targets hit by this cone are slowed by an additional 10% for an additional 3 sec."
+          }
+        ]
+      },
+      {
+        "level": 28,
+        "note": "",
+        "spells": [
+          {
+            "name": "Conjure Mana Agate",
+            "icon": "inv_misc_gem_emerald_01",
+            "school": "Arcane",
+            "desc": "Conjures a mana agate that can be used to instantly restore 375 to 425 mana. Conjured items disappear if logged out for more than 15 minutes."
+          }
+        ]
+      },
+      {
+        "level": 30,
+        "note": "",
+        "spells": [
+          {
+            "name": "Teleport: Darnassus",
+            "icon": "spell_arcane_teleportdarnassus",
+            "school": "Arcane · Alliance",
+            "desc": "Teleports the caster to Darnassus."
+          },
+          {
+            "name": "Teleport: Thunder Bluff",
+            "icon": "spell_arcane_teleportthunderbluff",
+            "school": "Arcane · Horde",
+            "desc": "Teleports the caster to Thunder Bluff."
+          },
+          {
+            "name": "Blast Wave",
+            "icon": "spell_holy_excorcism_02",
+            "school": "Fire",
+            "desc": "A wave of flame radiates outward from the caster, damaging all enemies caught within the blast for 154 to 184 Fire damage, and Dazing them for 50% reduced movement speed for 6 sec."
+          },
+          {
+            "name": "Ice Armor",
+            "icon": "spell_frost_frostarmor02",
+            "school": "Frost",
+            "desc": "Increases Armor by 290 and frost resistance by 6. If an enemy strikes the caster, they may have their movement slowed by 30% and the time between their attacks increased by 25% for 5 sec. Only one type of Armor spell can be active on the Mage at any time. Lasts 30 min."
+          }
+        ]
+      },
+      {
+        "level": 34,
+        "note": "",
+        "spells": [
+          {
+            "name": "Mage Armor",
+            "icon": "spell_magearmor",
+            "school": "Arcane",
+            "desc": "Increases your resistance to all magic by 5 and allows 50% of your mana regeneration to continue while casting. Only one type of Armor spell can be active on the Mage at any time. Lasts 30 min."
+          }
+        ]
+      },
+      {
+        "level": 38,
+        "note": "",
+        "spells": [
+          {
+            "name": "Conjure Mana Jade",
+            "icon": "inv_misc_gem_emerald_02",
+            "school": "Arcane",
+            "desc": "Conjures a mana jade that can be used to instantly restore 550 to 650 mana. Conjured items disappear if logged out for more than 15 minutes."
+          }
+        ]
+      },
+      {
+        "level": 40,
+        "note": "",
+        "spells": [
+          {
+            "name": "Portal: Ironforge",
+            "icon": "spell_arcane_portalironforge",
+            "school": "Arcane · Alliance",
+            "desc": "Creates a portal, teleporting group members that use it to Ironforge."
+          },
+          {
+            "name": "Portal: Orgrimmar",
+            "icon": "spell_arcane_portalorgrimmar",
+            "school": "Arcane · Horde",
+            "desc": "Creates a portal, teleporting group members that use it to Orgrimmar."
+          },
+          {
+            "name": "Portal: Stormwind",
+            "icon": "spell_arcane_portalstormwind",
+            "school": "Arcane · Alliance",
+            "desc": "Creates a portal, teleporting group members that use it to Stormwind."
+          },
+          {
+            "name": "Portal: Undercity",
+            "icon": "spell_arcane_portalundercity",
+            "school": "Arcane · Horde",
+            "desc": "Creates a portal, teleporting group members that use it to Undercity."
+          },
+          {
+            "name": "Frostfire Bolt",
+            "icon": "ability_mage_frostfirebolt",
+            "school": "Fire",
+            "desc": "Launches a bolt of frostfire at the enemy, causing 103 to 118 Frostfire damage, slowing movement speed by 40% and causing an additional 27 Frostfire damage over 9 sec. This spell will be checked against the lower of the target's Frost and Fire resists and counts as both Frost and Fire damage."
+          },
+          {
+            "name": "Ice Barrier",
+            "icon": "spell_ice_lament",
+            "school": "Frost",
+            "desc": "Instantly shields you, absorbing 448 damage. Lasts 1 min. While the shield holds, your spellcasts will not be interrupted or delayed from taking damage."
+          }
+        ]
+      },
+      {
+        "level": 48,
+        "note": "",
+        "spells": [
+          {
+            "name": "Conjure Mana Citrine",
+            "icon": "inv_misc_gem_opal_01",
+            "school": "Arcane",
+            "desc": "Conjures a mana citrine that can be used to instantly restore 775 to 925 mana. Conjured items disappear if logged out for more than 15 minutes."
+          }
+        ]
+      },
+      {
+        "level": 50,
+        "note": "",
+        "spells": [
+          {
+            "name": "Portal: Darnassus",
+            "icon": "spell_arcane_portaldarnassus",
+            "school": "Arcane · Alliance",
+            "desc": "Creates a portal, teleporting group members that use it to Darnassus."
+          },
+          {
+            "name": "Portal: Thunder Bluff",
+            "icon": "spell_arcane_portalthunderbluff",
+            "school": "Arcane · Horde",
+            "desc": "Creates a portal, teleporting group members that use it to Thunder Bluff."
+          },
+          {
+            "name": "Teleport: Dalaran",
+            "icon": "spell_arcane_teleporthalloftheguardian",
+            "school": "Arcane · Alliance",
+            "desc": "Teleports the caster to Dalaran."
+          }
+        ]
+      },
+      {
+        "level": 56,
+        "note": "",
+        "spells": [
+          {
+            "name": "Arcane Brilliance",
+            "icon": "spell_holy_arcaneintellect",
+            "school": "Arcane",
+            "desc": "Infuses the target's party and raid with brilliance, increasing their Intellect by 31 for 1 hr."
+          }
+        ]
+      },
+      {
+        "level": 58,
+        "note": "",
+        "spells": [
+          {
+            "name": "Conjure Mana Ruby",
+            "icon": "inv_misc_gem_ruby_01",
+            "school": "Arcane",
+            "desc": "Conjures a mana ruby that can be used to instantly restore 1000 to 1200 mana. Conjured items disappear if logged out for more than 15 minutes."
+          }
+        ]
+      },
+      {
+        "level": 60,
+        "note": "",
+        "spells": [
+          {
+            "name": "Polymorph: Cow",
+            "icon": "spell_nature_polymorph_cow",
+            "school": "Arcane",
+            "desc": "Transforms the enemy into a cow, forcing it to wander around for up to 50 sec. While wandering, the cow cannot attack or cast spells but will regenerate very quickly. Any damage will transform the target back into its normal form. Only one target can be polymorphed at a time. Only works on Beasts, Humanoids and Critters."
+          },
+          {
+            "name": "Felfire",
+            "icon": "spell_fire_fireball",
+            "school": "Fire",
+            "desc": "Blasts the enemy for 500 Fire damage."
+          }
+        ]
+      }
+    ]
+  },
+  "paladin": {
+    "classId": "paladin",
+    "levels": [
+      {
+        "level": 1,
+        "note": "Your character starts with these",
+        "spells": [
+          {
+            "name": "Holy Light",
+            "icon": "spell_holy_holybolt",
+            "school": "Holy",
+            "desc": "Heals a friendly target for 42 to 50."
+          },
+          {
+            "name": "Seal of Righteousness",
+            "icon": "ability_thunderbolt",
+            "school": "Holy",
+            "desc": "Fills the Paladin with holy spirit for 30 sec, granting each melee attack an additional 3.48 to 9.64 Holy damage. Slower weapons cause more Holy damage per swing. Only one Seal can be active on the Paladin at any one time."
+          },
+          {
+            "name": "Devotion Aura",
+            "icon": "spell_holy_devotionaura",
+            "school": "Protection",
+            "desc": "Gives 55 additional armor to party members within 30 yards. Players may only have one Aura on them per Paladin at any one time."
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "note": "",
+        "spells": [
+          {
+            "name": "Blessing of Might",
+            "icon": "spell_holy_fistofjustice",
+            "school": "Retribution",
+            "desc": "Places a Blessing on the friendly target, increasing melee attack power by 14 for 1 hr. Players may only have one Blessing on them per Paladin at any one time."
+          },
+          {
+            "name": "Judgement",
+            "icon": "spell_holy_righteousfury",
+            "school": "Retribution",
+            "desc": "Unleash the energy of a Seal spell upon an enemy. Does not consume the Seal. Refer to individual Seals for Judgement effect."
+          }
+        ]
+      },
+      {
+        "level": 6,
+        "note": "",
+        "spells": [
+          {
+            "name": "Divine Protection",
+            "icon": "spell_holy_restoration",
+            "school": "Protection",
+            "desc": "You are protected from all physical attacks and spells for 6 sec, but during that time you cannot attack or use physical abilities yourself. Applies"
+          },
+          {
+            "name": "Holy Strike",
+            "icon": "classicon_paladin",
+            "school": "Retribution",
+            "desc": "An instant strike that causes 25% weapon damage plus an additional 11 to 14 as Holy damage. Requires Melee Weapon"
+          },
+          {
+            "name": "Seal of the Crusader",
+            "icon": "spell_holy_holysmite",
+            "school": "Retribution",
+            "desc": "Fills the Paladin with the spirit of a crusader for 30 sec, granting 35 melee attack power. The Paladin also attacks 40% faster, but deals less damage with each attack. Only one Seal can be active on the Paladin at any one time. Unleashing this Seal's energy will judge an enemy for 40 sec, increasing Holy damage taken by up to 23. Your melee strikes will refresh the spell's duration. Only one Judgement per Paladin can be active at any one time."
+          }
+        ]
+      },
+      {
+        "level": 8,
+        "note": "",
+        "spells": [
+          {
+            "name": "Purify",
+            "icon": "spell_holy_purify",
+            "school": "Holy",
+            "desc": "Purifies the friendly target, removing 1 disease effect and 1 poison effect."
+          },
+          {
+            "name": "Hammer of Justice",
+            "icon": "spell_holy_sealofmight",
+            "school": "Protection",
+            "desc": "Stuns the target for 3 sec."
+          }
+        ]
+      },
+      {
+        "level": 10,
+        "note": "",
+        "spells": [
+          {
+            "name": "Lay on Hands",
+            "icon": "spell_holy_layonhands",
+            "school": "Holy",
+            "desc": "Heals a friendly target for an amount equal to the Paladin's maximum health. Drains all of the Paladin's remaining Mana when used, but does not interrupt Mana regeneration."
+          },
+          {
+            "name": "Blessing of Protection",
+            "icon": "spell_holy_sealofprotection",
+            "school": "Protection",
+            "desc": "A targeted party member is protected from all physical attacks for 6 sec, but during that time they cannot attack or use physical abilities. Players may only have one Blessing on them per Paladin at any one time. Applies"
+          },
+          {
+            "name": "Seal of Fury",
+            "icon": "spell_holy_retributionaura",
+            "school": "Protection",
+            "desc": "Fills you with divine fury for 30 sec, causing melee attacks to deal an additional 6 Holy damage. While a shield is equipped, each attack also grants an absorb shield equal to 50% of the Holy damage dealt. Only one Seal can be active on the Paladin at any one time. Unleashing this Seal's energy inflicts 32 to 34 Holy damage to an enemy and taunts the target to attack you for 4 sec."
+          }
+        ]
+      },
+      {
+        "level": 12,
+        "note": "",
+        "spells": [
+          {
+            "name": "Redemption",
+            "icon": "spell_holy_resurrection",
+            "school": "Holy",
+            "desc": "Brings a dead player back to life with 65 health and 120 mana. Cannot be cast when in combat."
+          }
+        ]
+      },
+      {
+        "level": 14,
+        "note": "",
+        "spells": [
+          {
+            "name": "Blessing of Wisdom",
+            "icon": "spell_holy_sealofwisdom",
+            "school": "Holy",
+            "desc": "Places a Blessing on the friendly target, restoring 12 mana every 5 seconds for 1 hr. Players may only have one Blessing on them per Paladin at any one time."
+          }
+        ]
+      },
+      {
+        "level": 16,
+        "note": "",
+        "spells": [
+          {
+            "name": "Righteous Fury",
+            "icon": "spell_holy_sealoffury",
+            "school": "Protection",
+            "desc": "Increases the threat generated by your Holy attacks by 90%. Lasts 30 min."
+          },
+          {
+            "name": "Retribution Aura",
+            "icon": "spell_holy_auraoflight",
+            "school": "Retribution",
+            "desc": "Causes 5 Holy damage to any creature that strikes a party member within 30 yards. Players may only have one Aura on them per Paladin at any one time."
+          }
+        ]
+      },
+      {
+        "level": 18,
+        "note": "",
+        "spells": [
+          {
+            "name": "Blessing of Freedom",
+            "icon": "spell_holy_sealofvalor",
+            "school": "Protection",
+            "desc": "Places a Blessing on the friendly target, granting immunity to movement impairing effects for 10 sec. Players may only have one Blessing on them per Paladin at any one time."
+          }
+        ]
+      },
+      {
+        "level": 20,
+        "note": "",
+        "spells": [
+          {
+            "name": "Consecration",
+            "icon": "spell_holy_innerfire",
+            "school": "Holy",
+            "desc": "Consecrates the land beneath the Paladin, doing 16 Holy damage over 8 sec to enemies who enter the area. The first 4 enemies who enter the area will take an additional 32 damage over 8 sec."
+          },
+          {
+            "name": "Exorcism",
+            "icon": "spell_holy_excorcism_02",
+            "school": "Holy",
+            "desc": "Causes 80 to 90 Holy damage to an Undead or Demon target."
+          },
+          {
+            "name": "Flash of Light",
+            "icon": "spell_holy_flashheal",
+            "school": "Holy",
+            "desc": "Heals a friendly target for 48 to 54."
+          },
+          {
+            "name": "Blessing of Kings",
+            "icon": "spell_magic_magearmor",
+            "school": "Protection",
+            "desc": "Places a Blessing on the friendly target, increasing total stats by 10% for 1 hr. Players may only have one Blessing on them per Paladin at any one time."
+          },
+          {
+            "name": "Seal of Command",
+            "icon": "ability_warrior_innerrage",
+            "school": "Retribution",
+            "desc": "Gives the Paladin a chance to deal additional Holy damage equal to 70% of normal weapon damage. Only one Seal can be active on the Paladin at any one time. Lasts 30 sec. Unleashing this Seal's energy will judge an enemy, instantly causing 69 to 73 Holy damage, 138 to 146 if the target is stunned or incapacitated."
+          }
+        ]
+      },
+      {
+        "level": 22,
+        "note": "",
+        "spells": [
+          {
+            "name": "Concentration Aura",
+            "icon": "spell_holy_mindsooth",
+            "school": "Protection",
+            "desc": "Gives a 35% chance of ignoring spell interruption when damaged to all party members within 30 yards. Players may only have one Aura on them per Paladin at any one time."
+          },
+          {
+            "name": "Seal of Justice",
+            "icon": "spell_holy_sealofwrath",
+            "school": "Protection",
+            "desc": "Fills the Paladin with the spirit of justice for 30 sec, giving each melee attack a chance to stun for 2 sec. Only one Seal can be active on the Paladin at any one time. Unleashing this Seal's energy will judge an enemy for 10 sec, preventing them from fleeing. Your melee strikes will refresh the spell's duration. Only one Judgement per Paladin can be active at any one time."
+          }
+        ]
+      },
+      {
+        "level": 24,
+        "note": "",
+        "spells": [
+          {
+            "name": "Turn Undead",
+            "icon": "spell_holy_turnundead",
+            "school": "Holy",
+            "desc": "The targeted undead enemy will be compelled to flee for up to 10 sec. Damage caused may interrupt the effect. Only one target can be turned at a time."
+          }
+        ]
+      },
+      {
+        "level": 26,
+        "note": "",
+        "spells": [
+          {
+            "name": "Revoke",
+            "icon": "spell_holy_prayerofmendingtga",
+            "school": "Protection",
+            "desc": "Remove target party or raid member's Salvation or Mass Salvation."
+          },
+          {
+            "name": "Salvation",
+            "icon": "spell_holy_sealofsalvation",
+            "school": "Protection",
+            "desc": "Reduces all threat generated by target party member by 30% for 1 hr."
+          }
+        ]
+      },
+      {
+        "level": 28,
+        "note": "",
+        "spells": [
+          {
+            "name": "Shadow Resistance Aura",
+            "icon": "spell_shadow_sealofkings",
+            "school": "Protection",
+            "desc": "Gives 30 additional Shadow resistance to all party and raid members within 30 yards. Players may only have one Aura on them per Paladin at any one time."
+          }
+        ]
+      },
+      {
+        "level": 30,
+        "note": "",
+        "spells": [
+          {
+            "name": "Holy Shock",
+            "icon": "spell_holy_searinglight",
+            "school": "Holy",
+            "desc": "Blasts the target with Holy energy, causing 129 to 139 Holy damage to an enemy, or 110 to 118 healing to an ally."
+          },
+          {
+            "name": "Seal of Light",
+            "icon": "spell_holy_healingaura",
+            "school": "Holy",
+            "desc": "Fills the Paladin with divine light for 30 sec, giving each melee attack a chance to heal the Paladin for 39. Only one Seal can be active on the Paladin at any one time. Unleashing this Seal's energy will judge an enemy for 40 sec, granting melee attacks made against the judged enemy a chance of healing the attacker for 25. Your melee strikes will refresh the spell's duration. Only one Judgement per Paladin can be active at any one time."
+          },
+          {
+            "name": "Divine Intervention",
+            "icon": "spell_nature_timestop",
+            "school": "Protection",
+            "desc": "The paladin sacrifices himself to remove the targeted party member from harms way. Enemies will stop attacking the protected party member, who will be immune to all harmful attacks but cannot take any action for 3 min."
+          }
+        ]
+      },
+      {
+        "level": 32,
+        "note": "",
+        "spells": [
+          {
+            "name": "Frost Resistance Aura",
+            "icon": "spell_frost_wizardmark",
+            "school": "Protection",
+            "desc": "Gives 30 additional Frost resistance to all party and raid members within 30 yards. Players may only have one Aura on them per Paladin at any one time."
+          }
+        ]
+      },
+      {
+        "level": 34,
+        "note": "",
+        "spells": [
+          {
+            "name": "Divine Shield",
+            "icon": "spell_holy_divineintervention",
+            "school": "Protection",
+            "desc": "Protects the paladin from all damage and spells for 10 sec, but reduces all damage you deal by 50%. Applies"
+          }
+        ]
+      },
+      {
+        "level": 36,
+        "note": "",
+        "spells": [
+          {
+            "name": "Fire Resistance Aura",
+            "icon": "spell_fire_sealoffire",
+            "school": "Protection",
+            "desc": "Gives 30 additional Fire resistance to all party and raid members within 30 yards. Players may only have one Aura on them per Paladin at any one time."
+          }
+        ]
+      },
+      {
+        "level": 38,
+        "note": "",
+        "spells": [
+          {
+            "name": "Seal of Wisdom",
+            "icon": "spell_holy_righteousnessaura",
+            "school": "Holy",
+            "desc": "Fills the Paladin with divine wisdom for 30 sec, giving each melee attack a chance to restore 50 of the Paladin's mana. Only one Seal can be active on the Paladin at any one time. Unleashing this Seal's energy will judge an enemy for 40 sec, granting attacks and spells used against the judged enemy a chance to restore 33 mana to the attacker. Your melee strikes will refresh the spell's duration. Only one Judgement per Paladin can be active at any one time."
+          }
+        ]
+      },
+      {
+        "level": 40,
+        "note": "",
+        "spells": [
+          {
+            "name": "Blessing of Light",
+            "icon": "spell_holy_prayerofhealing02",
+            "school": "Holy",
+            "desc": "Places a Blessing on the friendly target, increasing the effects of"
+          },
+          {
+            "name": "Light's Vigil",
+            "icon": "ability_paladin_judgementofthepure",
+            "school": "Holy",
+            "desc": "Applies"
+          },
+          {
+            "name": "Hammer of the Righteous",
+            "icon": "ability_paladin_hammeroftherighteous",
+            "school": "Protection",
+            "desc": "Hammer the current target and up to 3 additional nearby targets, causing Holy damage to each equal to 3 times the damage per second of your main hand weapon. Cooldown shared with"
+          },
+          {
+            "name": "Holy Shield",
+            "icon": "spell_holy_blessingofprotection",
+            "school": "Protection",
+            "desc": "Increases chance to block by 30% for 10 sec, and deals 110 Holy damage for each attack blocked while active. Damage caused by"
+          },
+          {
+            "name": "Summon Warhorse",
+            "icon": "spell_nature_swiftness",
+            "school": "Mounts",
+            "desc": "Summons a warhorse, which serves as a mount."
+          }
+        ]
+      },
+      {
+        "level": 42,
+        "note": "",
+        "spells": [
+          {
+            "name": "Cleanse",
+            "icon": "spell_holy_renew",
+            "school": "Holy",
+            "desc": "Cleanses a friendly target, removing 1 poison effect, 1 disease effect, and 1 magic effect."
+          }
+        ]
+      },
+      {
+        "level": 44,
+        "note": "",
+        "spells": [
+          {
+            "name": "Hammer of Wrath",
+            "icon": "ability_thunderclap",
+            "school": "Holy",
+            "desc": "Hurls a hammer that strikes an enemy for 286 to 314 Holy damage. Only usable on enemies that have 20% or less health."
+          }
+        ]
+      },
+      {
+        "level": 46,
+        "note": "",
+        "spells": [
+          {
+            "name": "Blessing of Sacrifice",
+            "icon": "spell_holy_sealofsacrifice",
+            "school": "Protection",
+            "desc": "Places a Blessing on the party member, transfering 45 damage taken per hit to the caster. Lasts 30 sec. Players may only have one Blessing on them per Paladin at any one time."
+          }
+        ]
+      },
+      {
+        "level": 50,
+        "note": "",
+        "spells": [
+          {
+            "name": "Holy Wrath",
+            "icon": "spell_holy_excorcism",
+            "school": "Holy",
+            "desc": "Sends bolts of holy power in all directions, causing 368 to 434 Holy damage to all Undead and Demon targets within 20 yds and stunning them for 2 sec."
+          }
+        ]
+      },
+      {
+        "level": 52,
+        "note": "",
+        "spells": [
+          {
+            "name": "Greater Blessing of Might",
+            "icon": "spell_holy_greaterblessingofkings",
+            "school": "Retribution",
+            "desc": "Gives all members of the raid or group that share the same class with the target the"
+          }
+        ]
+      },
+      {
+        "level": 54,
+        "note": "",
+        "spells": [
+          {
+            "name": "Greater Blessing of Wisdom",
+            "icon": "spell_holy_greaterblessingofwisdom",
+            "school": "Holy",
+            "desc": "Gives all members of the raid or group that share the same class with the target the"
+          }
+        ]
+      },
+      {
+        "level": 60,
+        "note": "",
+        "spells": [
+          {
+            "name": "Greater Blessing of Light",
+            "icon": "spell_holy_greaterblessingoflight",
+            "school": "Holy",
+            "desc": "Gives all members of the raid or group that share the same class with the target the"
+          },
+          {
+            "name": "Greater Blessing of Kings",
+            "icon": "spell_magic_greaterblessingofkings",
+            "school": "Protection",
+            "desc": "Gives all members of the raid or group that share the same class with the target the"
+          },
+          {
+            "name": "Mass Salvation",
+            "icon": "spell_holy_greaterblessingofsalvation",
+            "school": "Protection",
+            "desc": "Gives all members of the raid or group that share the same class with the target a reduction to all threat generated by 30% for 1 hr."
+          },
+          {
+            "name": "Summon Charger",
+            "icon": "ability_mount_charger",
+            "school": "Mounts · Alliance",
+            "desc": "Summons a Charger, which serves as a mount."
+          }
+        ]
+      }
+    ]
+  },
+  "warrior": {
+    "classId": "warrior",
+    "levels": [
+      {
+        "level": 1,
+        "note": "Your character starts with these",
+        "spells": [
+          {
+            "name": "Battle Stance",
+            "icon": "ability_warrior_offensivestance",
+            "school": "Arms",
+            "desc": "A balanced combat stance."
+          },
+          {
+            "name": "Heroic Strike",
+            "icon": "ability_rogue_ambush",
+            "school": "Arms",
+            "desc": "A strong attack that increases melee damage by 11 and causes a high amount of threat. Requires Melee Weapon"
+          },
+          {
+            "name": "Battle Shout",
+            "icon": "ability_warrior_battleshout",
+            "school": "Fury",
+            "desc": "The warrior shouts, increasing the melee attack power of all party or raid members within 20 yards by 12. Lasts 3 min."
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "note": "",
+        "spells": [
+          {
+            "name": "Charge",
+            "icon": "ability_warrior_charge",
+            "school": "Arms",
+            "desc": "Charge an enemy, generate 9 Rage, and Stun it for 1 sec. Cannot be used in combat. Requires"
+          },
+          {
+            "name": "Rend",
+            "icon": "ability_gouge",
+            "school": "Arms",
+            "desc": "Wounds the target causing them to bleed for 15 damage over 9 sec. Requires Melee Weapon Requires"
+          }
+        ]
+      },
+      {
+        "level": 6,
+        "note": "",
+        "spells": [
+          {
+            "name": "Thunder Clap",
+            "icon": "spell_nature_thunderclap",
+            "school": "Arms",
+            "desc": "Blasts nearby enemies, increasing the time between their attacks by 20% for 10 sec and doing 10 damage to them. Will affect up to 4 targets. Requires"
+          }
+        ]
+      },
+      {
+        "level": 8,
+        "note": "",
+        "spells": [
+          {
+            "name": "Hamstring",
+            "icon": "ability_shockwave",
+            "school": "Arms",
+            "desc": "Maims the enemy, causing 5 damage and slowing the enemy's movement by 40% for 15 sec. Requires Melee Weapon Requires"
+          }
+        ]
+      },
+      {
+        "level": 10,
+        "note": "",
+        "spells": [
+          {
+            "name": "Bloodrage",
+            "icon": "ability_racial_bloodrage",
+            "school": "Protection",
+            "desc": "Generates 10 rage at the cost of health, and then generates an additional 10 rage over 10 sec."
+          },
+          {
+            "name": "Defensive Stance",
+            "icon": "ability_warrior_defensivestance",
+            "school": "Protection",
+            "desc": "A defensive combat stance. Decreases damage taken by 10% and damage caused by 10%. Increases all threat generated by 30%."
+          },
+          {
+            "name": "Sunder Armor",
+            "icon": "ability_warrior_sunder",
+            "school": "Protection",
+            "desc": "Sunders the target's armor, reducing it by 90 per"
+          },
+          {
+            "name": "Taunt",
+            "icon": "spell_nature_reincarnation",
+            "school": "Protection",
+            "desc": "Taunts the target to attack you, but has no effect if the target is already attacking you. Requires"
+          }
+        ]
+      },
+      {
+        "level": 12,
+        "note": "",
+        "spells": [
+          {
+            "name": "Overpower",
+            "icon": "ability_meleedamage",
+            "school": "Arms",
+            "desc": "Instantly overpower the enemy, causing weapon damage plus 5. Only useable after the target dodges. The"
+          },
+          {
+            "name": "Shield Bash",
+            "icon": "ability_warrior_shieldbash",
+            "school": "Protection",
+            "desc": "Bashes the target with your shield for 6 damage. It also interrupts spellcasting and prevents any spell in that school from being cast for 6 sec. Requires Shields Requires"
+          }
+        ]
+      },
+      {
+        "level": 14,
+        "note": "",
+        "spells": [
+          {
+            "name": "Tactical Mastery",
+            "icon": "spell_nature_enchantarmor",
+            "school": "Arms",
+            "desc": "You retain up to 10 Rage when you change Stances."
+          },
+          {
+            "name": "Demoralizing Shout",
+            "icon": "ability_warrior_warcry",
+            "school": "Fury",
+            "desc": "Reduces the melee attack power of all enemies within 10 yards by 63 for 45 sec."
+          },
+          {
+            "name": "Revenge",
+            "icon": "ability_warrior_revenge",
+            "school": "Protection",
+            "desc": "Instantly counterattack an enemy for 20 to 24 damage and a high amount of threat."
+          }
+        ]
+      },
+      {
+        "level": 16,
+        "note": "",
+        "spells": [
+          {
+            "name": "Mocking Blow",
+            "icon": "ability_warrior_punishingblow",
+            "school": "Arms",
+            "desc": "A mocking attack that causes 22 damage, a moderate amount of threat and forces the target to focus attacks on you for 6 sec. Requires Melee Weapon Requires"
+          },
+          {
+            "name": "Shield Block",
+            "icon": "ability_defend",
+            "school": "Protection",
+            "desc": "Increases chance to block by 75% for 7 sec, but will only block 2 attacks. Requires Shields Requires"
+          }
+        ]
+      },
+      {
+        "level": 18,
+        "note": "",
+        "spells": [
+          {
+            "name": "Disarm",
+            "icon": "ability_warrior_disarm",
+            "school": "Protection",
+            "desc": "the enemy's weapon for 10 sec. Requires"
+          }
+        ]
+      },
+      {
+        "level": 20,
+        "note": "",
+        "spells": [
+          {
+            "name": "Retaliation",
+            "icon": "ability_warrior_challange",
+            "school": "Arms",
+            "desc": "Instantly counterattack any enemy that strikes you in melee for 15 sec. Melee attacks made from behind cannot be counterattacked. A maximum of 30 attacks will cause retaliation. Requires"
+          },
+          {
+            "name": "Victory Rush",
+            "icon": "ability_warrior_devastate",
+            "school": "Arms",
+            "desc": "Instantly attack the target causing (1 + 15% of attack power) damage and healing you for 10% of your maximum health. Only useable within 20 sec after you kill a non-trivial enemy."
+          },
+          {
+            "name": "Cleave",
+            "icon": "ability_warrior_cleave",
+            "school": "Fury",
+            "desc": "A sweeping attack that does your weapon damage plus 5 to the target and a second nearby enemy. Requires Melee Weapon"
+          },
+          {
+            "name": "Slam",
+            "icon": "ability_warrior_decisivestrike",
+            "school": "Fury",
+            "desc": "Slams the opponent, causing weapon damage plus 16. Requires Melee Weapon"
+          }
+        ]
+      },
+      {
+        "level": 22,
+        "note": "",
+        "spells": [
+          {
+            "name": "Intimidating Shout",
+            "icon": "ability_golemthunderclap",
+            "school": "Fury",
+            "desc": "The warrior shouts, causing the targeted enemy to cower in fear. Up to 5 enemies within 8 yds will flee in fear. Lasts 8 sec."
+          }
+        ]
+      },
+      {
+        "level": 24,
+        "note": "",
+        "spells": [
+          {
+            "name": "Execute",
+            "icon": "inv_sword_48",
+            "school": "Fury",
+            "desc": "Attempt to finish off a wounded foe, causing 125 damage and converting each extra point of rage into 3 additional damage. Only usable on enemies that have 20% or less health. Requires Melee Weapon Requires"
+          }
+        ]
+      },
+      {
+        "level": 26,
+        "note": "",
+        "spells": [
+          {
+            "name": "Challenging Shout",
+            "icon": "ability_bullrush",
+            "school": "Fury",
+            "desc": "Forces all nearby enemies within 10 yards to focus attacks on you for 6 sec."
+          }
+        ]
+      },
+      {
+        "level": 28,
+        "note": "",
+        "spells": [
+          {
+            "name": "Shield Wall",
+            "icon": "ability_warrior_shieldwall",
+            "school": "Protection",
+            "desc": "Reduces the damage taken from all attacks by 60% for 12 sec. Requires Shields Requires"
+          }
+        ]
+      },
+      {
+        "level": 30,
+        "note": "",
+        "spells": [
+          {
+            "name": "Berserker Rage",
+            "icon": "spell_nature_ancestralguardian",
+            "school": "Fury",
+            "desc": "The warrior enters a berserker rage, becoming immune to Fear and Incapacitate effects and generating extra rage when taking damage. Lasts 10 sec. Requires"
+          },
+          {
+            "name": "Berserker Stance",
+            "icon": "ability_racial_avatar",
+            "school": "Fury",
+            "desc": "An aggressive stance. Critical strike chance increased by 3% and all damage taken is increased by 10%."
+          },
+          {
+            "name": "Intercept",
+            "icon": "ability_rogue_sprint",
+            "school": "Fury",
+            "desc": "Charge an enemy, causing 25 damage and stunning it for 3 sec. Requires"
+          }
+        ]
+      },
+      {
+        "level": 36,
+        "note": "",
+        "spells": [
+          {
+            "name": "Whirlwind",
+            "icon": "ability_whirlwind",
+            "school": "Fury",
+            "desc": "In a whirlwind of steel you attack up to 4 enemies within 8 yards, causing weapon damage from both melee weapons to each enemy. Requires Melee Weapon Requires"
+          }
+        ]
+      },
+      {
+        "level": 38,
+        "note": "",
+        "spells": [
+          {
+            "name": "Pummel",
+            "icon": "inv_gauntlets_04",
+            "school": "Fury",
+            "desc": "the target for 20 damage. It also interrupts spellcasting and prevents any spell in that school from being cast for 4 sec. Requires"
+          }
+        ]
+      },
+      {
+        "level": 40,
+        "note": "",
+        "spells": [
+          {
+            "name": "Mortal Strike",
+            "icon": "ability_warrior_savageblow",
+            "school": "Arms",
+            "desc": "A vicious strike that deals weapon damage plus 85 and wounds the target, reducing the effectiveness of any healing by 50% for 10 sec. Requires Melee Weapon"
+          },
+          {
+            "name": "Bloodthirst",
+            "icon": "spell_nature_bloodlust",
+            "school": "Fury",
+            "desc": "Instantly attack the target causing damage equal to 45% of your Attack Power plus 30 and increasing your movement speed by 10% for 10 sec."
+          },
+          {
+            "name": "Shield Slam",
+            "icon": "inv_shield_05",
+            "school": "Protection",
+            "desc": "the target with your shield, causing 421 to 439 damage, increased by your Block Value, and has a 50% chance of dispelling 1 magic effect on the target. Causes a very high amount of threat. Requires Shields"
+          }
+        ]
+      },
+      {
+        "level": 50,
+        "note": "",
+        "spells": [
+          {
+            "name": "Recklessness",
+            "icon": "ability_criticalstrike",
+            "school": "Fury",
+            "desc": "The warrior will gain 100% increased critical strike chance and will be immune to Fear effects for the next 15 sec, but all damage taken is increased by 20%. Requires"
+          }
+        ]
+      }
+    ]
+  },
+  "warlock": {
+    "classId": "warlock",
+    "levels": [
+      {
+        "level": 1,
+        "note": "Your character starts with these",
+        "spells": [
+          {
+            "name": "Demon Skin",
+            "icon": "spell_shadow_ragingscream",
+            "school": "Demonology",
+            "desc": "Protects the caster, increasing armor by 40 and increases health regeneration by 3 health per 5 sec. for 30 min."
+          },
+          {
+            "name": "Summon Imp",
+            "icon": "spell_shadow_summonimp",
+            "school": "Demonology",
+            "desc": "Summons an Imp under the command of the Warlock."
+          },
+          {
+            "name": "Immolate",
+            "icon": "spell_fire_immolation",
+            "school": "Destruction",
+            "desc": "Burns the enemy for 11 Fire damage and then an additional 15 Fire damage over 15 sec."
+          },
+          {
+            "name": "Shadow Bolt",
+            "icon": "spell_shadow_shadowbolt",
+            "school": "Destruction",
+            "desc": "Sends a shadowy bolt at the enemy, causing 12 to 16 Shadow damage."
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "note": "",
+        "spells": [
+          {
+            "name": "Corruption",
+            "icon": "spell_shadow_abominationexplosion",
+            "school": "Affliction",
+            "desc": "Corrupts the target, causing 40 Shadow damage over 12 sec."
+          },
+          {
+            "name": "Curse of Weakness",
+            "icon": "spell_shadow_curseofmannoroth",
+            "school": "Affliction",
+            "desc": "Physical damage caused by the target is reduced by 4 for 2 min. Only one Curse per Warlock can be active on any one target."
+          }
+        ]
+      },
+      {
+        "level": 6,
+        "note": "",
+        "spells": [
+          {
+            "name": "Life Tap",
+            "icon": "spell_shadow_burningspirit",
+            "school": "Affliction",
+            "desc": "Converts 60 Health into 60 Mana for you. Spirit increases the amount converted."
+          }
+        ]
+      },
+      {
+        "level": 8,
+        "note": "",
+        "spells": [
+          {
+            "name": "Bane of Agony",
+            "icon": "spell_shadow_curseofsargeras",
+            "school": "Affliction",
+            "desc": "Afflicts the target with agony, causing 72 Shadow damage over 24 sec. This damage is dealt slowly at first, and builds up as the"
+          },
+          {
+            "name": "Fear",
+            "icon": "spell_shadow_possession",
+            "school": "Affliction",
+            "desc": "Strikes fear in the enemy, causing it to run in fear for up to 10 sec. Damage caused may interrupt the effect. Only 1 target can be feared at a time."
+          }
+        ]
+      },
+      {
+        "level": 10,
+        "note": "",
+        "spells": [
+          {
+            "name": "Drain Soul",
+            "icon": "spell_shadow_haunting",
+            "school": "Affliction",
+            "desc": "Drains the soul of the target, causing 85 Shadow damage over 15 sec. Non-trivial targets damaged by"
+          },
+          {
+            "name": "Create Healthstone",
+            "icon": "inv_stone_04",
+            "school": "Demonology",
+            "desc": "Creates a"
+          },
+          {
+            "name": "Summon Voidwalker",
+            "icon": "spell_shadow_summonvoidwalker",
+            "school": "Demonology",
+            "desc": "Summons a Voidwalker under the command of the Warlock."
+          }
+        ]
+      },
+      {
+        "level": 12,
+        "note": "",
+        "spells": [
+          {
+            "name": "Health Funnel",
+            "icon": "spell_shadow_lifedrain",
+            "school": "Demonology",
+            "desc": "Gives 12 health to the caster's pet every second for 10 sec as long as the caster channels. Generates reduced threat."
+          }
+        ]
+      },
+      {
+        "level": 14,
+        "note": "",
+        "spells": [
+          {
+            "name": "Curse of Recklessness",
+            "icon": "spell_shadow_unholystrength",
+            "school": "Affliction",
+            "desc": "Curses the target with recklessness, reducing the target's armor by 175 for 2 min. Cursed enemies will not flee and will ignore Fear and Horror effects. Only one Curse per Warlock can be active on any one target."
+          },
+          {
+            "name": "Drain Life",
+            "icon": "spell_shadow_lifedrain02",
+            "school": "Affliction",
+            "desc": "Transfers 10 health every 1 second from the target to the caster. Lasts 5 sec."
+          }
+        ]
+      },
+      {
+        "level": 16,
+        "note": "",
+        "spells": [
+          {
+            "name": "Unending Breath",
+            "icon": "spell_shadow_demonbreath",
+            "school": "Demonology",
+            "desc": "Allows the target to breathe underwater for 10 min."
+          }
+        ]
+      },
+      {
+        "level": 18,
+        "note": "",
+        "spells": [
+          {
+            "name": "Create Soulstone",
+            "icon": "spell_shadow_soulgem",
+            "school": "Demonology",
+            "desc": "Creates a Minor Soulstone. The Soulstone can be used to store one target's soul. If the target dies while their soul is stored, they will be able to resurrect with 400 health and 700 mana. Conjured items disappear if logged out for more than 15 minutes."
+          },
+          {
+            "name": "Searing Pain",
+            "icon": "spell_fire_soulburn",
+            "school": "Destruction",
+            "desc": "Inflict searing pain on the enemy target, causing 24 to 29 Fire damage. Causes a high amount of threat."
+          }
+        ]
+      },
+      {
+        "level": 20,
+        "note": "",
+        "spells": [
+          {
+            "name": "Curse of the Elements",
+            "icon": "warlock_curse_shadow",
+            "school": "Affliction",
+            "desc": "Curses the target for 5 min, reducing Magic resistances by 30 and increases Magic damage taken by 4%. Only one Curse per Warlock can be active on any one target."
+          },
+          {
+            "name": "Demon Armor",
+            "icon": "spell_shadow_ragingscream",
+            "school": "Demonology",
+            "desc": "Protects the caster, increasing armor by 210, Shadow resistance by 3 and increases health regeneration by 7 health per 5 sec. for 30 min."
+          },
+          {
+            "name": "Ritual of Summoning",
+            "icon": "spell_shadow_twilight",
+            "school": "Demonology",
+            "desc": "Begins a ritual that summons the targeted group member. Requires the caster and 2 additional party members to complete the ritual. In order to participate, all players must be out of combat and right-click the portal and not move until the ritual is complete."
+          },
+          {
+            "name": "Summon Incubus",
+            "icon": "ability_warlock_incubus",
+            "school": "Demonology",
+            "desc": "Summons an"
+          },
+          {
+            "name": "Summon Succubus",
+            "icon": "spell_shadow_summonsuccubus",
+            "school": "Demonology",
+            "desc": "Summons a Succubus under the command of the Warlock."
+          },
+          {
+            "name": "Rain of Fire",
+            "icon": "spell_shadow_rainoffire",
+            "school": "Destruction",
+            "desc": "Calls down a fiery rain to burn enemies in the area of effect for 168 Fire damage over 8 sec."
+          },
+          {
+            "name": "Shadowburn",
+            "icon": "spell_shadow_scourgebuild",
+            "school": "Destruction",
+            "desc": "Instantly blasts the target for 65 to 74 Shadow damage. If a non-trivial target dies within 8 sec of being hit with"
+          }
+        ]
+      },
+      {
+        "level": 22,
+        "note": "",
+        "spells": [
+          {
+            "name": "Eye of Kilrogg",
+            "icon": "spell_shadow_evileye",
+            "school": "Demonology",
+            "desc": "Summons an"
+          }
+        ]
+      },
+      {
+        "level": 24,
+        "note": "",
+        "spells": [
+          {
+            "name": "Drain Mana",
+            "icon": "spell_shadow_siphonmana",
+            "school": "Affliction",
+            "desc": "Transfers 44 Mana every 1 sec from the target to the caster. Lasts 5 sec."
+          },
+          {
+            "name": "Sense Demons",
+            "icon": "spell_shadow_metamorphosis",
+            "school": "Demonology",
+            "desc": "Shows the location of all nearby demons on the minimap until cancelled. Only one type of tracking can be used at a time."
+          }
+        ]
+      },
+      {
+        "level": 25,
+        "note": "",
+        "spells": [
+          {
+            "name": "Conflagrate",
+            "icon": "spell_fire_fireball",
+            "school": "Destruction",
+            "desc": "Ignites a target that is already afflicted by your"
+          }
+        ]
+      },
+      {
+        "level": 26,
+        "note": "",
+        "spells": [
+          {
+            "name": "Curse of Tongues",
+            "icon": "spell_shadow_curseoftounges",
+            "school": "Affliction",
+            "desc": "Forces the target to speak in Demonic, increasing the casting time of all spells by 50%. Only one Curse per Warlock can be active on any one target. Lasts 30 sec."
+          },
+          {
+            "name": "Detect Invisibility",
+            "icon": "spell_shadow_detectinvisibility",
+            "school": "Demonology",
+            "desc": "Allows the friendly target to detect lesser invisibility for 10 min."
+          }
+        ]
+      },
+      {
+        "level": 28,
+        "note": "",
+        "spells": [
+          {
+            "name": "Banish",
+            "icon": "spell_shadow_cripple",
+            "school": "Demonology",
+            "desc": "Banishes the enemy target, preventing all action but making it invulnerable for up to 20 sec. Only one target can be banished at a time. Only works on Demons and Elementals."
+          },
+          {
+            "name": "Create Firestone",
+            "icon": "inv_misc_gem_bloodstone_02",
+            "school": "Demonology",
+            "desc": "Creates a Lesser Firestone which can be used to enchant your weapon with Fire, increasing your spell critical strike chance by 1% and the damage done by your Fire spells by up to 10. Conjured items disappear if logged out for more than 15 minutes."
+          }
+        ]
+      },
+      {
+        "level": 30,
+        "note": "",
+        "spells": [
+          {
+            "name": "Siphon Life",
+            "icon": "spell_shadow_requiem",
+            "school": "Affliction",
+            "desc": "Transfers 11 health from the target to the caster every 3 sec. Lasts 30 sec."
+          },
+          {
+            "name": "Subjugate Demon",
+            "icon": "spell_shadow_enslavedemon",
+            "school": "Demonology",
+            "desc": "Subjugates the target demon, up to level 45, forcing it to do your bidding. While subjugated, the time between the demon's attacks is increased by 40% and its casting speed is slowed by 30%. Lasts up to 5 min. If you repeatedly subjugate the same demon, it will become more difficult to control with each attempt."
+          },
+          {
+            "name": "Summon Felhunter",
+            "icon": "spell_shadow_summonfelhunter",
+            "school": "Demonology",
+            "desc": "Summons a Felhunter under the command of the Warlock."
+          },
+          {
+            "name": "Hellfire",
+            "icon": "spell_fire_incinerate",
+            "school": "Destruction",
+            "desc": "Ignites the area surrounding the caster, causing 86 Fire damage to himself and 86 Fire damage to all nearby enemies every 1 sec. Lasts 15 sec."
+          }
+        ]
+      },
+      {
+        "level": 32,
+        "note": "",
+        "spells": [
+          {
+            "name": "Shadow Ward",
+            "icon": "spell_shadow_antishadow",
+            "school": "Demonology",
+            "desc": "Absorbs 290 shadow damage. Lasts 30 sec."
+          }
+        ]
+      },
+      {
+        "level": 36,
+        "note": "",
+        "spells": [
+          {
+            "name": "Create Spellstone",
+            "icon": "inv_misc_gem_sapphire_01",
+            "school": "Demonology",
+            "desc": "Creates a"
+          }
+        ]
+      },
+      {
+        "level": 40,
+        "note": "",
+        "spells": [
+          {
+            "name": "Howl of Terror",
+            "icon": "spell_shadow_deathscream",
+            "school": "Affliction",
+            "desc": "Howl, causing 5 enemies within 10 yds to flee in terror for 10 sec. Damage caused may interrupt the effect."
+          },
+          {
+            "name": "Incinerate",
+            "icon": "spell_fire_burnout",
+            "school": "Destruction",
+            "desc": "Deals 100 to 114 Fire damage to your target and an additional 25% damage if the target is afflicted by"
+          },
+          {
+            "name": "Summon Felsteed",
+            "icon": "spell_nature_swiftness",
+            "school": "Mounts",
+            "desc": "Summons a Felsteed, which serves as a mount for the caster."
+          }
+        ]
+      },
+      {
+        "level": 42,
+        "note": "",
+        "spells": [
+          {
+            "name": "Death Coil",
+            "icon": "spell_shadow_deathcoil",
+            "school": "Affliction",
+            "desc": "Causes the enemy target to run in horror for 3 sec and causes 285 Shadow damage. The caster gains 100% of the damage caused in health."
+          }
+        ]
+      },
+      {
+        "level": 48,
+        "note": "",
+        "spells": [
+          {
+            "name": "Soul Fire",
+            "icon": "spell_fire_fireball02",
+            "school": "Destruction",
+            "desc": "the enemy's soul, causing 344 to 430 Fire damage."
+          }
+        ]
+      },
+      {
+        "level": 50,
+        "note": "",
+        "spells": [
+          {
+            "name": "Inferno",
+            "icon": "spell_shadow_summoninfernal",
+            "school": "Demonology",
+            "desc": "Summons a meteor from the"
+          }
+        ]
+      },
+      {
+        "level": 60,
+        "note": "",
+        "spells": [
+          {
+            "name": "Bane of Doom",
+            "icon": "spell_shadow_auraofdarkness",
+            "school": "Affliction",
+            "desc": "Afflicts the target with impending doom, causing 1742 Shadow damage after 1 min. If the target dies from this damage, there is a chance that a Doomguard will be summoned. Cannot be cast on players. Only one"
+          },
+          {
+            "name": "Portal of Summoning",
+            "icon": "inv_misc_rune_10",
+            "school": "Demonology",
+            "desc": "Begins a ritual that creates a summoning portal. The summoning portal can be used by 2 party or raid members to summon a targeted party or raid member. The ritual portal requires the caster and 2 additional party or raid members to complete. In order to participate, all players must be out of combat and right-click the portal and not move until the ritual is complete."
+          },
+          {
+            "name": "Ritual of Doom",
+            "icon": "spell_shadow_antimagicshell",
+            "school": "Demonology",
+            "desc": "Begins a ritual that sacrifices a random participant to summon a doomguard. The doomguard must be immediately subjugated or it will attack the ritual participants. Requires the caster and 4 additional party members to complete the ritual. In order to participate, all players must right-click the portal and not move until the ritual is complete."
+          },
+          {
+            "name": "Summon Dreadsteed",
+            "icon": "ability_mount_dreadsteed",
+            "school": "Mounts",
+            "desc": "Summons a Dreadsteed, which serves as a mount for the caster."
+          }
+        ]
+      }
+    ]
+  },
+  "priest": {
+    "classId": "priest",
+    "levels": [
+      {
+        "level": 1,
+        "note": "Your character starts with these",
+        "spells": [
+          {
+            "name": "Power Word: Fortitude",
+            "icon": "spell_holy_wordfortitude",
+            "school": "Discipline",
+            "desc": "Power infuses the target, increasing their Stamina by 4 for 1 hr."
+          },
+          {
+            "name": "Lesser Heal",
+            "icon": "spell_holy_lesserheal",
+            "school": "Holy",
+            "desc": "Heal your target for 47 to 57."
+          },
+          {
+            "name": "Smite",
+            "icon": "spell_holy_holysmite",
+            "school": "Holy",
+            "desc": "an enemy for 13 to 18 Holy damage."
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "note": "",
+        "spells": [
+          {
+            "name": "Shadow Word: Pain",
+            "icon": "spell_shadow_shadowwordpain",
+            "school": "Shadow Magic",
+            "desc": "A word of darkness that causes 30 Shadow damage over 18 sec."
+          }
+        ]
+      },
+      {
+        "level": 6,
+        "note": "",
+        "spells": [
+          {
+            "name": "Power Word: Shield",
+            "icon": "spell_holy_powerwordshield",
+            "school": "Discipline",
+            "desc": "Draws on the soul of the party member to shield them, absorbing 48 damage. Lasts 30 sec. While the shield holds, spellcasting will not be interrupted by damage. Once shielded, the target cannot be shielded again for 15 sec."
+          }
+        ]
+      },
+      {
+        "level": 8,
+        "note": "",
+        "spells": [
+          {
+            "name": "Renew",
+            "icon": "spell_holy_renew",
+            "school": "Holy",
+            "desc": "Heals the target of 45 damage over 15 sec."
+          },
+          {
+            "name": "Fade",
+            "icon": "spell_magic_lesserinvisibilty",
+            "school": "Shadow Magic",
+            "desc": "out, discouraging enemies from attacking you for 10 sec."
+          }
+        ]
+      },
+      {
+        "level": 10,
+        "note": "",
+        "spells": [
+          {
+            "name": "Confounding Flash",
+            "icon": "ability_paladin_blindinglight2",
+            "school": "Discipline · Gnome only",
+            "desc": "Confuses up to 5 enemies within 8 yds for 3 sec. Any damage taken will break the effect."
+          },
+          {
+            "name": "Starshards",
+            "icon": "spell_arcane_starfire",
+            "school": "Discipline · Night Elf only",
+            "desc": "Rains starshards down on the enemy target's head, causing 162 Arcane damage over 6 sec."
+          },
+          {
+            "name": "Desperate Prayer",
+            "icon": "spell_holy_restoration",
+            "school": "Holy · Dwarf only",
+            "desc": "Instantly heals the caster for 146 to 181."
+          },
+          {
+            "name": "Divine Grace",
+            "icon": "ability_priest_savinggrace",
+            "school": "Holy · Human only",
+            "desc": "Instantly heals a friendly target below 50% Health for 146 to 181 and removes"
+          },
+          {
+            "name": "Resurrection",
+            "icon": "spell_holy_resurrection",
+            "school": "Holy",
+            "desc": "Brings a dead player back to life with 70 health and 135 mana. Cannot be cast when in combat."
+          },
+          {
+            "name": "Hex of Weakness",
+            "icon": "spell_shadow_fingerofdeath",
+            "school": "Shadow Magic · Troll only",
+            "desc": "Weakens the target enemy, reducing melee attack power by 43 and reducing the effectiveness of any healing by 20%. Lasts 2 min."
+          },
+          {
+            "name": "Mind Blast",
+            "icon": "spell_shadow_unholyfrenzy",
+            "school": "Shadow Magic",
+            "desc": "Blasts the target for 40 to 44 Shadow damage, but causes a high amount of threat."
+          },
+          {
+            "name": "Touch of Weakness",
+            "icon": "spell_shadow_deadofnight",
+            "school": "Shadow Magic · Undead only",
+            "desc": "The next melee attack against the caster will cause 8 Shadow damage and reduce the attacker's melee attack power by 43 for 2 min."
+          }
+        ]
+      },
+      {
+        "level": 12,
+        "note": "",
+        "spells": [
+          {
+            "name": "Inner Fire",
+            "icon": "spell_holy_innerfire",
+            "school": "Discipline",
+            "desc": "A burst of Holy energy fills the caster, increasing armor by 315. Each melee or ranged damage hit against the priest will remove one charge. Lasts 10 min or until 20 charges are used."
+          }
+        ]
+      },
+      {
+        "level": 14,
+        "note": "",
+        "spells": [
+          {
+            "name": "Cure Disease",
+            "icon": "spell_holy_nullifydisease",
+            "school": "Holy",
+            "desc": "Removes 1 disease from the friendly target."
+          },
+          {
+            "name": "Psychic Scream",
+            "icon": "spell_shadow_psychicscream",
+            "school": "Shadow Magic",
+            "desc": "The caster lets out a psychic scream, causing 2 enemies within 8 yards to flee for 8 sec. Damage caused may interrupt the effect."
+          }
+        ]
+      },
+      {
+        "level": 16,
+        "note": "",
+        "spells": [
+          {
+            "name": "Heal",
+            "icon": "spell_holy_heal02",
+            "school": "Holy",
+            "desc": "Heal your target for 260 to 300."
+          }
+        ]
+      },
+      {
+        "level": 18,
+        "note": "",
+        "spells": [
+          {
+            "name": "Dispel Magic",
+            "icon": "spell_holy_dispelmagic",
+            "school": "Discipline",
+            "desc": "Dispels magic on the target, removing 1 harmful spells from a friend or 1 beneficial spells from an enemy."
+          }
+        ]
+      },
+      {
+        "level": 20,
+        "note": "",
+        "spells": [
+          {
+            "name": "Contingency Plan",
+            "icon": "ability_priest_soulwarding",
+            "school": "Discipline · Gnome only",
+            "desc": "Place a Holy ward on an ally for 30 sec. The next time this ally takes damage dropping their Health below 35%, they will gain a shield absorbing 155 damage and begin healing for 125 Health over 15 sec. A target may be affected by only one"
+          },
+          {
+            "name": "Elune's Grace",
+            "icon": "spell_holy_elunesgrace",
+            "school": "Discipline · Night Elf only",
+            "desc": "Reduces the chance you'll be hit by melee and ranged attacks by 50% for 15 sec or until you are missed 3 times."
+          },
+          {
+            "name": "Feedback",
+            "icon": "spell_shadow_ritualofsacrifice",
+            "school": "Discipline · Human only",
+            "desc": "The priest becomes surrounded with anti-magic energy. Any successful spell cast against the priest will burn 18 of the attacker's Mana, causing 1 Shadow damage for each point of Mana burned. Lasts 15 sec."
+          },
+          {
+            "name": "Shackle Undead",
+            "icon": "spell_nature_slow",
+            "school": "Discipline",
+            "desc": "Shackles the target undead enemy for up to 30 sec. The shackled unit is unable to move, attack or cast spells. Any damage caused will release the target. Only one target can be shackled at a time."
+          },
+          {
+            "name": "Chastise",
+            "icon": "spell_holy_chastise",
+            "school": "Holy · Dwarf only",
+            "desc": "the target, causing 43 to 49 Holy damage and immobilizing them for up to 2 sec. Only works against Humanoids. This spell causes very low threat."
+          },
+          {
+            "name": "Fear Ward",
+            "icon": "spell_holy_excorcism",
+            "school": "Holy",
+            "desc": "Wards the friendly target against Fear. The next Fear effect used against the target will fail, using up the ward. Lasts 3 min."
+          },
+          {
+            "name": "Flash Heal",
+            "icon": "spell_holy_flashheal",
+            "school": "Holy",
+            "desc": "Heals a friendly target for 184 to 223."
+          },
+          {
+            "name": "Holy Fire",
+            "icon": "spell_holy_searinglight",
+            "school": "Holy",
+            "desc": "Consumes the enemy in holy flames that cause 57 to 70 Holy damage and an additional 20 Holy damage over 10 sec."
+          },
+          {
+            "name": "Holy Nova",
+            "icon": "spell_holy_holynova",
+            "school": "Holy",
+            "desc": "Causes an explosion of holy light around the caster, causing 26 to 30 Holy damage to all enemy targets within 10 yards and healing all party members within 10 yards for 50 to 57. These effects cause no threat."
+          },
+          {
+            "name": "Dark Sacrifice",
+            "icon": "spell_holy_powerinfusion_shadow",
+            "school": "Shadow Magic · Undead only",
+            "desc": "Cannibalize 440 of your own Health over 15 sec to gain 528 Mana."
+          },
+          {
+            "name": "Devouring Plague",
+            "icon": "spell_shadow_devouringplague",
+            "school": "Shadow Magic",
+            "desc": "Afflicts the target with a disease that causes 128 Shadow damage over 24 sec. Damage caused by the"
+          },
+          {
+            "name": "Mind Flay",
+            "icon": "spell_shadow_siphonmana",
+            "school": "Shadow Magic",
+            "desc": "Assault the target's mind with Shadow energy, causing 63 Shadow damage over 3 sec and slowing their movement speed by 50%."
+          },
+          {
+            "name": "Mind Soothe",
+            "icon": "spell_holy_mindsooth",
+            "school": "Shadow Magic",
+            "desc": "Soothes the target, reducing the range at which it will attack you by 10 yards. Only affects Humanoid targets level 40 or lower. Lasts 15 sec."
+          },
+          {
+            "name": "Shadowguard",
+            "icon": "spell_nature_lightningshield",
+            "school": "Shadow Magic · Troll only",
+            "desc": "The caster is surrounded by shadows. When a spell, melee or ranged attack hits the caster, the attacker will be struck for 13 Shadow damage. Attackers can only be damaged once every few seconds. This damage causes no threat. 3 charges. Lasts 10 min."
+          }
+        ]
+      },
+      {
+        "level": 22,
+        "note": "",
+        "spells": [
+          {
+            "name": "Mind Vision",
+            "icon": "spell_holy_mindvision",
+            "school": "Shadow Magic",
+            "desc": "Allows the caster to see through the target's eyes for 1 min."
+          }
+        ]
+      },
+      {
+        "level": 24,
+        "note": "",
+        "spells": [
+          {
+            "name": "Mana Burn",
+            "icon": "spell_shadow_manaburn",
+            "school": "Discipline",
+            "desc": "Drains 199 to 210 mana from a target. For each mana drained in this way, the target takes 0.5 Shadow damage."
+          }
+        ]
+      },
+      {
+        "level": 25,
+        "note": "",
+        "spells": [
+          {
+            "name": "Binding Heal",
+            "icon": "spell_holy_blindingheal",
+            "school": "Holy",
+            "desc": "Heals a friendly target and the caster for 236 to 284. Low threat."
+          }
+        ]
+      },
+      {
+        "level": 30,
+        "note": "",
+        "spells": [
+          {
+            "name": "Divine Spirit",
+            "icon": "spell_holy_divinespirit",
+            "school": "Discipline",
+            "desc": "Holy power infuses the target, increasing their Spirit by 17 for 1 hr."
+          },
+          {
+            "name": "Penance",
+            "icon": "spell_holy_penance",
+            "school": "Discipline",
+            "desc": "Launches a volley of holy light at the target, causing 45 Holy damage to an enemy, or 134 healing to an ally, instantly and every 1 sec for 2 sec."
+          },
+          {
+            "name": "Prayer of Healing",
+            "icon": "spell_holy_prayerofhealing02",
+            "school": "Holy",
+            "desc": "A powerful prayer that heals the target and their party for 179 to 191. Party members must be within 40 yards of target."
+          },
+          {
+            "name": "Mind Control",
+            "icon": "spell_shadow_shadowworddominate",
+            "school": "Shadow Magic",
+            "desc": "Controls a humanoid mind up to level 44, but increases the time between its attacks by 25%. Lasts up to 1 min."
+          },
+          {
+            "name": "Shadow Protection",
+            "icon": "spell_shadow_antishadow",
+            "school": "Shadow Magic",
+            "desc": "Increases the target's resistance to Shadow spells by 30 for 10 min."
+          }
+        ]
+      },
+      {
+        "level": 32,
+        "note": "",
+        "spells": [
+          {
+            "name": "Abolish Disease",
+            "icon": "spell_nature_nullifydisease",
+            "school": "Holy",
+            "desc": "Attempts to cure 1 disease effect on the target, and 1 more disease effect every 5 seconds for 20 sec."
+          },
+          {
+            "name": "Shadow Word: Death",
+            "icon": "spell_shadow_demonicfortitude",
+            "school": "Shadow Magic",
+            "desc": "A word of dark binding that inflicts 294 to 311 Shadow damage to the target. If your target is not killed by"
+          }
+        ]
+      },
+      {
+        "level": 34,
+        "note": "",
+        "spells": [
+          {
+            "name": "Levitate",
+            "icon": "spell_holy_layonhands",
+            "school": "Discipline",
+            "desc": "Allows the caster to levitate, floating a few feet above the ground. While levitating, you will fall at a reduced speed and travel over water-like surfaces. Mounting or any damage taken will cancel the effect. Lasts 2 min."
+          }
+        ]
+      },
+      {
+        "level": 40,
+        "note": "",
+        "spells": [
+          {
+            "name": "Greater Heal",
+            "icon": "spell_holy_greaterheal",
+            "school": "Holy",
+            "desc": "A slow casting spell that heals a single target for 819 to 920."
+          },
+          {
+            "name": "Lightwell",
+            "icon": "spell_holy_summonlightwell",
+            "school": "Holy",
+            "desc": "Creates a holy"
+          },
+          {
+            "name": "Lightwell Renew",
+            "icon": "spell_holy_summonlightwell",
+            "school": "Holy",
+            "desc": ""
+          },
+          {
+            "name": "Prayer of Mending",
+            "icon": "spell_holy_prayerofmendingtga",
+            "school": "Holy",
+            "desc": "Places a spell on the target that heals them for 172 the next time they take damage or receive non-periodic healing. When the heal occurs,"
+          }
+        ]
+      },
+      {
+        "level": 48,
+        "note": "",
+        "spells": [
+          {
+            "name": "Prayer of Fortitude",
+            "icon": "spell_holy_prayeroffortitude",
+            "school": "Discipline",
+            "desc": "Power infuses all party and raid members, increasing their Stamina by 56 for 1 hr."
+          }
+        ]
+      },
+      {
+        "level": 56,
+        "note": "",
+        "spells": [
+          {
+            "name": "Prayer of Shadow Protection",
+            "icon": "spell_holy_prayerofshadowprotection",
+            "school": "Shadow Magic",
+            "desc": "Power infuses all party and raid members, increasing their Shadow resistance by 60 for 20 min."
+          }
+        ]
+      },
+      {
+        "level": 60,
+        "note": "",
+        "spells": [
+          {
+            "name": "Prayer of Spirit",
+            "icon": "spell_holy_prayerofspirit",
+            "school": "Discipline",
+            "desc": "Power infuses all party and raid members, increasing their Spirit by 40 for 1 hr."
+          }
+        ]
+      }
+    ]
+  },
+  "druid": {
+    "classId": "druid",
+    "levels": [
+      {
+        "level": 1,
+        "note": "Your character starts with these",
+        "spells": [
+          {
+            "name": "Wrath",
+            "icon": "spell_nature_abolishmagic",
+            "school": "Balance",
+            "desc": "Causes 15 to 17 Nature damage to the target."
+          },
+          {
+            "name": "Healing Touch",
+            "icon": "spell_nature_healingtouch",
+            "school": "Restoration",
+            "desc": "Heals a friendly target for 40 to 54."
+          },
+          {
+            "name": "Mark of the Wild",
+            "icon": "spell_nature_regeneration",
+            "school": "Restoration",
+            "desc": "Increases the friendly target's armor by 34 for 1 hr."
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "note": "",
+        "spells": [
+          {
+            "name": "Moonfire",
+            "icon": "spell_nature_starfall",
+            "school": "Balance",
+            "desc": "Burns the enemy for 10 to 12 Arcane damage and then an additional 12 Arcane damage over 9 sec."
+          },
+          {
+            "name": "Rejuvenation",
+            "icon": "spell_nature_rejuvenation",
+            "school": "Restoration",
+            "desc": "Heals the target for 32 over 12 sec."
+          }
+        ]
+      },
+      {
+        "level": 6,
+        "note": "",
+        "spells": [
+          {
+            "name": "Thorns",
+            "icon": "spell_nature_thorns",
+            "school": "Balance",
+            "desc": "sprout from the friendly target causing 3 Nature damage to attackers when hit. Lasts 10 min."
+          }
+        ]
+      },
+      {
+        "level": 8,
+        "note": "",
+        "spells": [
+          {
+            "name": "Entangling Roots",
+            "icon": "spell_nature_stranglevines",
+            "school": "Balance",
+            "desc": "Roots the target in place and causes 20 Nature damage over 12 sec. Damage caused may interrupt the effect. You may only have 1 target Rooted at a time."
+          }
+        ]
+      },
+      {
+        "level": 10,
+        "note": "",
+        "spells": [
+          {
+            "name": "Nature's Grasp",
+            "icon": "spell_nature_natureswrath",
+            "school": "Balance",
+            "desc": "The next 1 melee attacks that strike the caster will afflict the attacker with"
+          },
+          {
+            "name": "Teleport: Moonglade",
+            "icon": "spell_arcane_teleportmoonglade",
+            "school": "Balance",
+            "desc": "Teleports the caster to the Moonglade."
+          },
+          {
+            "name": "Bear Form",
+            "icon": "ability_racial_bearform",
+            "school": "Feral Combat",
+            "desc": "Shapeshift into"
+          },
+          {
+            "name": "Demoralizing Roar",
+            "icon": "ability_druid_demoralizingroar",
+            "school": "Feral Combat",
+            "desc": "The druid roars, decreasing nearby enemies' melee attack power by 56. Lasts 30 sec. Requires"
+          },
+          {
+            "name": "Growl",
+            "icon": "ability_physical_taunt",
+            "school": "Feral Combat",
+            "desc": "Taunts the target to attack you, but has no effect if the target is already attacking you. Requires"
+          },
+          {
+            "name": "Maul",
+            "icon": "ability_druid_maul",
+            "school": "Feral Combat",
+            "desc": "Increases the druid's next attack by 18 damage. Requires"
+          }
+        ]
+      },
+      {
+        "level": 12,
+        "note": "",
+        "spells": [
+          {
+            "name": "Enrage",
+            "icon": "ability_druid_enrage",
+            "school": "Feral Combat",
+            "desc": "Instantly generates 10 Rage and another 20 Rage over 10 sec, but reduces base armor by 27% in"
+          },
+          {
+            "name": "Regrowth",
+            "icon": "spell_nature_resistnature",
+            "school": "Restoration",
+            "desc": "Heals a friendly target for 89 to 103 and another 91 over 21 sec."
+          },
+          {
+            "name": "Revive",
+            "icon": "ability_druid_lunarguidance",
+            "school": "Restoration",
+            "desc": "Brings a dead player back to life with 70 health and 135 mana. Cannot be cast when in combat."
+          }
+        ]
+      },
+      {
+        "level": 14,
+        "note": "",
+        "spells": [
+          {
+            "name": "Bash",
+            "icon": "ability_druid_bash",
+            "school": "Feral Combat",
+            "desc": "Stuns the target for 2 sec. Requires"
+          },
+          {
+            "name": "Cure Poison",
+            "icon": "spell_nature_nullifypoison",
+            "school": "Restoration",
+            "desc": "Cures 1 poison effects on the target."
+          }
+        ]
+      },
+      {
+        "level": 16,
+        "note": "",
+        "spells": [
+          {
+            "name": "Aquatic Form",
+            "icon": "ability_druid_aquaticform",
+            "school": "Feral Combat",
+            "desc": "Shapeshift into"
+          },
+          {
+            "name": "Swipe",
+            "icon": "inv_misc_monsterclaw_03",
+            "school": "Feral Combat",
+            "desc": "3 nearby enemies, inflicting 18 damage. Requires"
+          }
+        ]
+      },
+      {
+        "level": 18,
+        "note": "",
+        "spells": [
+          {
+            "name": "Faerie Fire",
+            "icon": "spell_nature_faeriefire",
+            "school": "Balance",
+            "desc": "Decrease the armor of the target by 175 for 40 sec. While affected, the target cannot stealth or turn invisible."
+          },
+          {
+            "name": "Hibernate",
+            "icon": "spell_nature_sleep",
+            "school": "Balance",
+            "desc": "Forces the enemy target to sleep for up to 20 sec. Any damage will awaken the target. Only one target can be forced to hibernate at a time. Only works on Beasts and Dragonkin."
+          }
+        ]
+      },
+      {
+        "level": 20,
+        "note": "",
+        "spells": [
+          {
+            "name": "Omen of Clarity",
+            "icon": "spell_nature_crystalball",
+            "school": "Balance",
+            "desc": "Your spells and attacks have a chance to grant you"
+          },
+          {
+            "name": "Starfire",
+            "icon": "spell_arcane_starfire",
+            "school": "Balance",
+            "desc": "Causes 79 to 96 Arcane damage to the target."
+          },
+          {
+            "name": "Cat Form",
+            "icon": "ability_druid_catform",
+            "school": "Feral Combat",
+            "desc": "Shapeshift into"
+          },
+          {
+            "name": "Claw",
+            "icon": "ability_druid_rake",
+            "school": "Feral Combat",
+            "desc": "the enemy for 110% normal damage plus 27. Awards 1 combo points. Requires"
+          },
+          {
+            "name": "Prowl",
+            "icon": "ability_ambush",
+            "school": "Feral Combat",
+            "desc": "Allows the Druid to prowl around, but reduces your movement speed by 40%. Lasts until cancelled. Requires"
+          },
+          {
+            "name": "Rip",
+            "icon": "ability_ghoulfrenzy",
+            "school": "Feral Combat",
+            "desc": "Finishing move that causes damage over time. Damage increases per combo point and by your Attack Power: 1 point : 44 damage over 12 sec. 2 points: 71 damage over 12 sec. 3 points: 97 damage over 12 sec. 4 points: 124 damage over 12 sec. 5 points: 150 damage over 12 sec. Requires"
+          },
+          {
+            "name": "Shred",
+            "icon": "spell_shadow_vampiricaura",
+            "school": "Feral Combat",
+            "desc": "the target, causing 155% damage plus 22 to the target. Must be behind the target. Awards 1 combo points. Requires"
+          },
+          {
+            "name": "Rebirth",
+            "icon": "spell_nature_reincarnation",
+            "school": "Restoration",
+            "desc": "Returns the spirit to the body, restoring a dead target to life with 400 health and 700 mana."
+          }
+        ]
+      },
+      {
+        "level": 22,
+        "note": "",
+        "spells": [
+          {
+            "name": "Soothe Animal",
+            "icon": "ability_hunter_beastsoothe",
+            "school": "Balance",
+            "desc": "Soothes the target beast, reducing the range at which it will attack you by 10 yards. Only affects Beast targets level 40 or lower. Lasts 15 sec."
+          }
+        ]
+      },
+      {
+        "level": 24,
+        "note": "",
+        "spells": [
+          {
+            "name": "Rake",
+            "icon": "ability_druid_disembowel",
+            "school": "Feral Combat",
+            "desc": "the target for 23 damage and an additional 48 damage over 9 sec. Awards 1 combo points. Requires"
+          },
+          {
+            "name": "Remove Curse",
+            "icon": "spell_holy_removecurse",
+            "school": "Restoration",
+            "desc": "Dispels 1 Curse or"
+          }
+        ]
+      },
+      {
+        "level": 25,
+        "note": "",
+        "spells": [
+          {
+            "name": "Insect Swarm",
+            "icon": "spell_nature_insectswarm",
+            "school": "Balance",
+            "desc": "The enemy target is swarmed by insects, decreasing their chance to hit with attacks by 2% and causing 48 Nature damage over 12 sec."
+          },
+          {
+            "name": "Primal Bite",
+            "icon": "ability_racial_cannibalize",
+            "school": "Feral Combat",
+            "desc": "the target, dealing 100% normal damage plus 26 and generating a high amount of threat. Requires"
+          }
+        ]
+      },
+      {
+        "level": 26,
+        "note": "",
+        "spells": [
+          {
+            "name": "Dash",
+            "icon": "ability_druid_dash",
+            "school": "Feral Combat",
+            "desc": "Increases movement speed by 50% for 15 sec. Does not break prowling. Requires"
+          },
+          {
+            "name": "Abolish Poison",
+            "icon": "spell_nature_nullifypoison_02",
+            "school": "Restoration",
+            "desc": "Attempts to cure 1 poison effect on the target, and 1 more poison effect every 2 seconds for 8 sec."
+          }
+        ]
+      },
+      {
+        "level": 28,
+        "note": "",
+        "spells": [
+          {
+            "name": "Challenging Roar",
+            "icon": "ability_druid_challangingroar",
+            "school": "Feral Combat",
+            "desc": "Forces all nearby enemies to focus attacks on you for 6 sec. Requires"
+          },
+          {
+            "name": "Cower",
+            "icon": "ability_druid_cower",
+            "school": "Feral Combat",
+            "desc": ", causing no damage but lowering your threat a small amount, making the enemy less likely to attack you. Requires"
+          }
+        ]
+      },
+      {
+        "level": 30,
+        "note": "",
+        "spells": [
+          {
+            "name": "Travel Form",
+            "icon": "ability_druid_travelform",
+            "school": "Feral Combat",
+            "desc": "Shapeshift into"
+          },
+          {
+            "name": "Tranquility",
+            "icon": "spell_nature_tranquility",
+            "school": "Restoration",
+            "desc": "Regenerates all nearby party members within 20 yards for 91 every 2 sec for 10 sec. Druid must channel to maintain the spell."
+          }
+        ]
+      },
+      {
+        "level": 32,
+        "note": "",
+        "spells": [
+          {
+            "name": "Ferocious Bite",
+            "icon": "ability_druid_ferociousbite",
+            "school": "Feral Combat",
+            "desc": "Finishing move that causes damage per combo point and converts each extra point of energy into 1.0 additional damage. Damage is increased by your Attack Power. 1 point : 50-66 damage 2 points: 86-102 damage 3 points: 122-138 damage 4 points: 158-174 damage 5 points: 194-210 damage Requires"
+          },
+          {
+            "name": "Ravage",
+            "icon": "ability_druid_ravage",
+            "school": "Feral Combat",
+            "desc": "the target, causing 350% damage plus 147 to the target. Must be prowling and behind the target. Awards 1 combo points. Requires"
+          },
+          {
+            "name": "Track Humanoids",
+            "icon": "ability_tracking",
+            "school": "Feral Combat",
+            "desc": "Shows the location of all nearby humanoids on the minimap. Only one type of thing can be tracked at a time. Requires"
+          }
+        ]
+      },
+      {
+        "level": 36,
+        "note": "",
+        "spells": [
+          {
+            "name": "Pounce",
+            "icon": "ability_druid_supriseattack",
+            "school": "Feral Combat",
+            "desc": ", stunning the target for 2 sec and causing 90 damage over 18 sec. Must be prowling and behind the target. Awards 1 combo points. Requires"
+          }
+        ]
+      },
+      {
+        "level": 40,
+        "note": "",
+        "spells": [
+          {
+            "name": "Hurricane",
+            "icon": "spell_nature_cyclone",
+            "school": "Balance",
+            "desc": "Creates a violent storm in the target area causing 69 Nature damage to enemies every 1 sec, and increasing the time between attacks of enemies by 20%. Lasts 10 sec. Druid must channel to maintain the spell."
+          },
+          {
+            "name": "Dire Bear Form",
+            "icon": "ability_racial_bearform",
+            "school": "Feral Combat",
+            "desc": "Shapeshift into"
+          },
+          {
+            "name": "Feline Grace",
+            "icon": "inv_feather_01",
+            "school": "Feral Combat",
+            "desc": "Reduces damage from falling."
+          },
+          {
+            "name": "Innervate",
+            "icon": "spell_nature_lightning",
+            "school": "Restoration",
+            "desc": "Increases the target's Mana regeneration by 400% and allows 100% of the target's Mana regeneration to continue while casting. Lasts 20 sec."
+          },
+          {
+            "name": "Wild Growth",
+            "icon": "ability_druid_flourish",
+            "school": "Restoration",
+            "desc": "Heals the target and their party for 336 over 7 sec. Party members must be within 43.5 yards of target. The amount healed is applied quickly at first, and slows down as"
+          }
+        ]
+      },
+      {
+        "level": 42,
+        "note": "",
+        "spells": [
+          {
+            "name": "Lacerate",
+            "icon": "ability_druid_lacerate",
+            "school": "Feral Combat",
+            "desc": "Lacerates the enemy target, making them bleed for 50 damage over 15 sec plus 10% weapon damage per existing application of"
+          }
+        ]
+      },
+      {
+        "level": 44,
+        "note": "",
+        "spells": [
+          {
+            "name": "Barkskin",
+            "icon": "spell_nature_stoneclawtotem",
+            "school": "Balance",
+            "desc": "Your skin becomes as tough as bark. Physical damage taken is reduced by 20%. While you are protected, damaging attacks will not cause spellcasting delays. Lasts 15 sec."
+          }
+        ]
+      },
+      {
+        "level": 50,
+        "note": "",
+        "spells": [
+          {
+            "name": "Gift of the Wild",
+            "icon": "spell_nature_regeneration",
+            "school": "Restoration",
+            "desc": "Gives the"
+          }
+        ]
+      }
+    ]
+  },
+  "rogue": {
+    "classId": "rogue",
+    "levels": [
+      {
+        "level": 1,
+        "note": "Your character starts with these",
+        "spells": [
+          {
+            "name": "Eviscerate",
+            "icon": "ability_rogue_eviscerate",
+            "school": "Assassination",
+            "desc": "Finishing move that causes damage per combo point, increased by Attack Power: 1 point : 6-10 damage 2 points: 11-15 damage 3 points: 16-20 damage 4 points: 21-25 damage 5 points: 26-30 damage Requires Melee Weapon"
+          },
+          {
+            "name": "Sinister Strike",
+            "icon": "spell_shadow_ritualofsacrifice",
+            "school": "Combat",
+            "desc": "An instant strike that causes 3 damage in addition to your normal weapon damage. Awards 1 combo points. Requires Melee Weapon"
+          },
+          {
+            "name": "Stealth",
+            "icon": "ability_stealth",
+            "school": "Subtlety",
+            "desc": "Allows the rogue to sneak around, but reduces your speed by 50%. Lasts until cancelled."
+          },
+          {
+            "name": "Pick Lock",
+            "icon": "spell_nature_moonkey",
+            "school": "Lockpicking",
+            "desc": "Allows opening of locked chests and doors."
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "note": "",
+        "spells": [
+          {
+            "name": "Backstab",
+            "icon": "ability_backstab",
+            "school": "Combat",
+            "desc": "the target, causing 150% weapon damage plus 10 to the target. Must be behind the target. Requires a dagger in the main hand. Awards 1 combo points. Requires Daggers"
+          },
+          {
+            "name": "Pick Pocket",
+            "icon": "inv_misc_bag_11",
+            "school": "Subtlety",
+            "desc": "Pick the target's pocket. Requires"
+          }
+        ]
+      },
+      {
+        "level": 6,
+        "note": "",
+        "spells": [
+          {
+            "name": "Gouge",
+            "icon": "ability_gouge",
+            "school": "Combat",
+            "desc": "Causes 10 damage, stops your attack, and incapacitates the target for 4 sec. The target must be facing you. Any damage taken will break the effect. Awards 1 combo points. Requires Melee Weapon"
+          }
+        ]
+      },
+      {
+        "level": 8,
+        "note": "",
+        "spells": [
+          {
+            "name": "Evasion",
+            "icon": "spell_shadow_shadowward",
+            "school": "Combat",
+            "desc": "The rogue's dodge chance will increase by 50% for 15 sec."
+          }
+        ]
+      },
+      {
+        "level": 10,
+        "note": "",
+        "spells": [
+          {
+            "name": "Slice and Dice",
+            "icon": "ability_rogue_slicedice",
+            "school": "Assassination",
+            "desc": "Finishing move that increases melee attack speed by 20%. Lasts longer per combo point: 1 point : 9 seconds 2 points: 12 seconds 3 points: 15 seconds 4 points: 18 seconds 5 points: 21 seconds"
+          },
+          {
+            "name": "Sprint",
+            "icon": "ability_rogue_sprint",
+            "school": "Combat",
+            "desc": "Increases the rogue's movement speed by 50% for 15 sec. Does not break stealth."
+          },
+          {
+            "name": "Sap",
+            "icon": "ability_sap",
+            "school": "Subtlety",
+            "desc": "Incapacitates the target for up to 25 sec. Only works on Humanoids that are not in combat. Any damage taken will break the effect. Only 1 target may be sapped at a time. Does not break"
+          }
+        ]
+      },
+      {
+        "level": 12,
+        "note": "",
+        "spells": [
+          {
+            "name": "Kick",
+            "icon": "ability_kick",
+            "school": "Combat",
+            "desc": "A quick kick that injures a single foe for 15 damage. It also interrupts spellcasting and prevents any spell in that school from being cast for 5 sec."
+          }
+        ]
+      },
+      {
+        "level": 14,
+        "note": "",
+        "spells": [
+          {
+            "name": "Expose Armor",
+            "icon": "ability_warrior_riposte",
+            "school": "Assassination",
+            "desc": "Finishing move that exposes the target for 30 sec, reducing Armor per combo point: 1 point : 90 Armor 2 points: 180 Armor 3 points: 270 Armor 4 points: 360 Armor 5 points: 450 Armor Requires Melee Weapon"
+          },
+          {
+            "name": "Garrote",
+            "icon": "ability_rogue_garrote",
+            "school": "Assassination",
+            "desc": "the enemy, causing 144 damage over 18 sec, increased by your Attack Power. Must be stealthed and behind the target. Awards 1 combo points. Requires"
+          }
+        ]
+      },
+      {
+        "level": 16,
+        "note": "",
+        "spells": [
+          {
+            "name": "Feint",
+            "icon": "ability_rogue_feint",
+            "school": "Combat",
+            "desc": "Performs a feint, causing no damage but lowering your threat by a small amount, making the enemy less likely to attack you."
+          }
+        ]
+      },
+      {
+        "level": 18,
+        "note": "",
+        "spells": [
+          {
+            "name": "Ambush",
+            "icon": "ability_rogue_ambush",
+            "school": "Assassination",
+            "desc": "the target, causing 250% weapon damage plus 70 to the target. Must be stealthed and behind the target. Requires a dagger in the main hand. Awards 1 combo points. Requires Daggers Requires"
+          }
+        ]
+      },
+      {
+        "level": 20,
+        "note": "",
+        "spells": [
+          {
+            "name": "Rupture",
+            "icon": "ability_rogue_rupture",
+            "school": "Assassination",
+            "desc": "Finishing move that causes damage over time, increased by your Attack Power. Lasts longer per combo point: 1 point : 25 damage over 8 secs 2 points: 37 damage over 10 secs 3 points: 51 damage over 12 secs 4 points: 68 damage over 14 secs 5 points: 87 damage over 16 secs Requires Melee Weapon"
+          },
+          {
+            "name": "Crippling Poison",
+            "icon": "ability_poisonsting",
+            "school": "Poisons",
+            "desc": "Coats a weapon with poison that lasts for 30 minutes. Each strike has a 30% chance of poisoning the enemy, slowing their movement speed by 50% for 12 sec."
+          },
+          {
+            "name": "Instant Poison",
+            "icon": "ability_poisons",
+            "school": "Poisons",
+            "desc": "Coats a weapon with poison that lasts for 30 minutes. Each strike has a 20% chance of poisoning the enemy which instantly inflicts 13 to 17 Nature damage. 60 charges."
+          },
+          {
+            "name": "Poisons",
+            "icon": "trade_brewpoison",
+            "school": "Poisons",
+            "desc": "You can create and mix poisons, with both found and storebought ingredients."
+          }
+        ]
+      },
+      {
+        "level": 22,
+        "note": "",
+        "spells": [
+          {
+            "name": "Distract",
+            "icon": "ability_rogue_distract",
+            "school": "Subtlety",
+            "desc": "Throws a distraction, attracting the attention of all nearby enemies and reducing their"
+          },
+          {
+            "name": "Vanish",
+            "icon": "ability_vanish",
+            "school": "Subtlety",
+            "desc": "Allows the rogue to vanish from sight, entering an improved stealth mode for 10 sec. Also breaks movement impairing effects."
+          }
+        ]
+      },
+      {
+        "level": 24,
+        "note": "",
+        "spells": [
+          {
+            "name": "Detect Traps",
+            "icon": "ability_spy",
+            "school": "Subtlety",
+            "desc": "Greatly increased chance to detect traps."
+          },
+          {
+            "name": "Mind-numbing Poison",
+            "icon": "spell_nature_nullifydisease",
+            "school": "Poisons",
+            "desc": "Coats a weapon with poison that lasts for 30 minutes. Each strike has a 20% chance of poisoning the enemy, increasing their casting time by 40% for 10 sec. 75 charges."
+          }
+        ]
+      },
+      {
+        "level": 26,
+        "note": "",
+        "spells": [
+          {
+            "name": "Cheap Shot",
+            "icon": "ability_cheapshot",
+            "school": "Assassination",
+            "desc": "Stuns the target for 4 sec. Must be stealthed. Awards 2 combo points. Requires Melee Weapon Requires"
+          }
+        ]
+      },
+      {
+        "level": 28,
+        "note": "",
+        "spells": [
+          {
+            "name": "Instant Poison II",
+            "icon": "ability_poisons",
+            "school": "Poisons",
+            "desc": "Coats a weapon with poison that lasts for 30 minutes. Each strike has a 20% chance of poisoning the enemy which instantly inflicts 20 to 26 Nature damage. 85 charges."
+          }
+        ]
+      },
+      {
+        "level": 30,
+        "note": "",
+        "spells": [
+          {
+            "name": "Kidney Shot",
+            "icon": "ability_rogue_kidneyshot",
+            "school": "Assassination",
+            "desc": "Finishing move that stuns the target. Lasts longer per combo point: 1 point : 1 second 2 points: 2 seconds 3 points: 3 seconds 4 points: 4 seconds 5 points: 5 seconds Requires Melee Weapon"
+          },
+          {
+            "name": "Mutilate",
+            "icon": "ability_rogue_deadlybrew",
+            "school": "Assassination",
+            "desc": "Instantly attacks with both weapons for 75% weapon damage plus an additional 17 with each weapon. Damage increased by 20% against Poisoned targets. Awards 2 Combo Points. Requires Daggers"
+          },
+          {
+            "name": "Disarm Trap",
+            "icon": "spell_shadow_grimward",
+            "school": "Subtlety",
+            "desc": "Sneak up on the trap in order to disarm it. Don't get too close or the trap will go off."
+          },
+          {
+            "name": "Deadly Poison",
+            "icon": "ability_rogue_dualweild",
+            "school": "Poisons",
+            "desc": "Coats a weapon with poison that lasts for 30 minutes. Each strike has a 30% chance of poisoning the enemy for 24 Nature damage over 12 sec. Stacks up to 5 times on a single target. 90 charges."
+          }
+        ]
+      },
+      {
+        "level": 32,
+        "note": "",
+        "spells": [
+          {
+            "name": "Wound Poison",
+            "icon": "inv_misc_herb_16",
+            "school": "Poisons",
+            "desc": "Coats a weapon with poison that lasts for 30 minutes. Each strike has a 30% chance of poisoning the enemy, reducing all healing effects used on them by 67 for 15 sec. Stacks up to 5 times on a single target. 90 charges."
+          }
+        ]
+      },
+      {
+        "level": 34,
+        "note": "",
+        "spells": [
+          {
+            "name": "Blind",
+            "icon": "spell_shadow_mindsteal",
+            "school": "Subtlety",
+            "desc": "Blinds the target, causing it to wander disoriented for up to 10 sec. Any damage caused will remove the effect."
+          },
+          {
+            "name": "Blinding Powder",
+            "icon": "inv_misc_ammo_gunpowder_02",
+            "school": "Poisons",
+            "desc": "Create the reagent for the"
+          }
+        ]
+      },
+      {
+        "level": 36,
+        "note": "",
+        "spells": [
+          {
+            "name": "Instant Poison III",
+            "icon": "ability_poisons",
+            "school": "Poisons",
+            "desc": "Coats a weapon with poison that lasts for 30 minutes. Each strike has a 20% chance of poisoning the enemy which instantly inflicts 29 to 37 Nature damage. 105 charges."
+          }
+        ]
+      },
+      {
+        "level": 38,
+        "note": "",
+        "spells": [
+          {
+            "name": "Deadly Poison II",
+            "icon": "ability_rogue_dualweild",
+            "school": "Poisons",
+            "desc": "Coats a weapon with poison that lasts for 30 minutes. Each strike has a 30% chance of poisoning the enemy for 36 Nature damage over 12 sec. Stacks up to 5 times on a single target. 115 charges."
+          },
+          {
+            "name": "Mind-numbing Poison II",
+            "icon": "spell_nature_nullifydisease",
+            "school": "Poisons",
+            "desc": "Coats a weapon with poison that lasts for 30 minutes. Each strike has a 20% chance of poisoning the enemy, increasing their casting time by 50% for 12 sec. 115 charges."
+          }
+        ]
+      },
+      {
+        "level": 40,
+        "note": "",
+        "spells": [
+          {
+            "name": "Safe Fall",
+            "icon": "inv_feather_01",
+            "school": "Subtlety",
+            "desc": "Reduces damage from falling."
+          },
+          {
+            "name": "Wound Poison II",
+            "icon": "inv_misc_herb_16",
+            "school": "Poisons",
+            "desc": "Coats a weapon with poison that lasts for 30 minutes. Each strike has a 30% chance of poisoning the enemy, reducing all healing effects used on them by 92 for 15 sec. Stacks up to 5 times on a single target. 115 charges."
+          }
+        ]
+      },
+      {
+        "level": 44,
+        "note": "",
+        "spells": [
+          {
+            "name": "Instant Poison IV",
+            "icon": "ability_poisons",
+            "school": "Poisons",
+            "desc": "Coats a weapon with poison that lasts for 30 minutes. Each strike has a 20% chance of poisoning the enemy which instantly inflicts 45 to 57 Nature damage. 1800 charges."
+          }
+        ]
+      },
+      {
+        "level": 46,
+        "note": "",
+        "spells": [
+          {
+            "name": "Deadly Poison III",
+            "icon": "ability_rogue_dualweild",
+            "school": "Poisons",
+            "desc": "Coats a weapon with poison that lasts for 30 minutes. Each strike has a 30% chance of poisoning the enemy for 56 Nature damage over 12 sec. Stacks up to 5 times on a single target. 135 charges."
+          }
+        ]
+      },
+      {
+        "level": 48,
+        "note": "",
+        "spells": [
+          {
+            "name": "Wound Poison III",
+            "icon": "inv_misc_herb_16",
+            "school": "Poisons",
+            "desc": "Coats a weapon with poison that lasts for 30 minutes. Each strike has a 30% chance of poisoning the enemy, reducing all healing effects used on them by 128 for 15 sec. Stacks up to 5 times on a single target. 135 charges."
+          }
+        ]
+      },
+      {
+        "level": 50,
+        "note": "",
+        "spells": [
+          {
+            "name": "Crippling Poison II",
+            "icon": "ability_poisonsting",
+            "school": "Poisons",
+            "desc": "Coats a weapon with poison that lasts for 30 minutes. Each strike has a 30% chance of poisoning the enemy, slowing their movement speed by 70% for 12 sec."
+          }
+        ]
+      },
+      {
+        "level": 52,
+        "note": "",
+        "spells": [
+          {
+            "name": "Instant Poison V",
+            "icon": "ability_poisons",
+            "school": "Poisons",
+            "desc": "Coats a weapon with poison that lasts for 30 minutes. Each strike has a 20% chance of poisoning the enemy which instantly inflicts 62 to 80 Nature damage. 150 charges."
+          },
+          {
+            "name": "Mind-numbing Poison III",
+            "icon": "spell_nature_nullifydisease",
+            "school": "Poisons",
+            "desc": "Coats a weapon with poison that lasts for 30 minutes. Each strike has a 20% chance of poisoning the enemy, increasing their casting time by 60% for 14 sec. 150 charges."
+          }
+        ]
+      },
+      {
+        "level": 54,
+        "note": "",
+        "spells": [
+          {
+            "name": "Deadly Poison IV",
+            "icon": "ability_rogue_dualweild",
+            "school": "Poisons",
+            "desc": "Coats a weapon with poison that lasts for 30 minutes. Each strike has a 30% chance of poisoning the enemy for 72 Nature damage over 12 sec. Stacks up to 5 times on a single target. 160 charges."
+          }
+        ]
+      },
+      {
+        "level": 56,
+        "note": "",
+        "spells": [
+          {
+            "name": "Wound Poison IV",
+            "icon": "inv_misc_herb_16",
+            "school": "Poisons",
+            "desc": "Coats a weapon with poison that lasts for 30 minutes. Each strike has a 30% chance of poisoning the enemy, reducing all healing effects used on them by 165 for 15 sec. Stacks up to 5 times on a single target. 160 charges."
+          }
+        ]
+      },
+      {
+        "level": 60,
+        "note": "",
+        "spells": [
+          {
+            "name": "Deadly Poison V",
+            "icon": "ability_rogue_dualweild",
+            "school": "Poisons",
+            "desc": "Coats a weapon with poison that lasts for 30 minutes. Each strike has a 30% chance of poisoning the enemy for 92 Nature damage over 12 sec. Stacks up to 5 times on a single target. 180 charges."
+          },
+          {
+            "name": "Instant Poison VI",
+            "icon": "ability_poisons",
+            "school": "Poisons",
+            "desc": "Coats a weapon with poison that lasts for 30 minutes. Each strike has a 20% chance of poisoning the enemy which instantly inflicts 76 to 100 Nature damage. 175 charges."
+          }
+        ]
+      }
+    ]
+  }
+}

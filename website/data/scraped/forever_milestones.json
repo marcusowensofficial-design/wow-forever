@@ -1,0 +1,533 @@
+{
+  "hunter": [
+    {
+      "bracket": "1–10",
+      "title": "Starting Out & Core Identity",
+      "universal": [
+        "First weapon upgrade from starter zone quests or weapon vendor",
+        "Learn first core class mechanics at Level 4, 6, 8, and 10 from Class Trainer",
+        "Level 10: Unlock first Talent Point and Class Quest (Hunter Pet Taming, Shaman Earth Totem, Druid Bear Form, Warlock Voidwalker, Paladin Redemption, Warrior Defensive Stance)"
+      ]
+    },
+    {
+      "bracket": "11–20",
+      "title": "First Dungeons & Core Specialization",
+      "universal": [
+        "Level 14–16: First instanced dungeon runs (Ragefire Chasm, Deadmines, Wailing Caverns)",
+        "Level 18–20: Second class quest milestone (Druid Aquatic Form, Shaman Fire Totem, Warlock Succubus)",
+        "Level 20: 11-point milestone talent unlocked in your primary tree"
+      ]
+    },
+    {
+      "bracket": "21–30",
+      "title": "Mid-Game Powers & Forever Legacy System",
+      "universal": [
+        "Level 20: Legacy System activates! Begin tracking account-wide milestone perks",
+        "Level 20–24: Dungeon progression in Blackfathom Deeps, Shadowfang Keep, and Stockade",
+        "Level 28–30: Shaman Water Totem quest chain, Warlock Felhunter, Warrior Whirlwind Axe chain prep",
+        "Level 30: 21-point major capstone talent unlocked in Beta Build 70425 cap"
+      ]
+    },
+    {
+      "bracket": "31–40",
+      "title": "Mount Speed, Dual Spec & Scarlet Monastery",
+      "universal": [
+        "Level 32–36: Scarlet Monastery (Graveyard, Library, Armory, Cathedral) and Gnomeregan",
+        "Level 40: Apprentice Riding and 60% Mount unlock (gold savings priority)",
+        "Level 40: Dual Specialization unlock from Class Trainer (swap specs anywhere outside combat)",
+        "Level 40: Armor proficiency upgrades: Mail for Warriors/Paladins; Leather to Mail for Hunters/Shamans; Plate readiness"
+      ]
+    },
+    {
+      "bracket": "41–50",
+      "title": "Deep Wilderness & Mid-Tier Dungeons",
+      "universal": [
+        "Level 42–46: Zul'Farrak and Maraudon wings (quest chains provide top-tier weapon and trinket upgrades)",
+        "Level 45: 31-point ultimate talent unlocked in your main talent tree",
+        "Level 48–50: Sunken Temple (Temple of Atal'Hakkar) and custom Forever excavation dungeons"
+      ]
+    },
+    {
+      "bracket": "51–60",
+      "title": "The Road to Endgame & Raid Attunements",
+      "universal": [
+        "Level 52–58: Blackrock Depths (BRD), Scholomance, and Stratholme (Living & Undead sides)",
+        "Level 55: Level 50+ epic class quest from class trainers for unique rare/epic gear",
+        "Level 58–60: Complete Onyxia Attunement, Molten Core douse/Hydraxian Waterlords quests, and Barrow Deeps 10M keys",
+        "Level 60: Journeyman Riding (100% Epic Mount) and Phase 1 Pre-Raid BiS farming"
+      ]
+    }
+  ],
+  "shaman": [
+    {
+      "bracket": "1–10",
+      "title": "Starting Out & Core Identity",
+      "universal": [
+        "First weapon upgrade from starter zone quests or weapon vendor",
+        "Learn first core class mechanics at Level 4, 6, 8, and 10 from Class Trainer",
+        "Level 10: Unlock first Talent Point and Class Quest (Hunter Pet Taming, Shaman Earth Totem, Druid Bear Form, Warlock Voidwalker, Paladin Redemption, Warrior Defensive Stance)"
+      ]
+    },
+    {
+      "bracket": "11–20",
+      "title": "First Dungeons & Core Specialization",
+      "universal": [
+        "Level 14–16: First instanced dungeon runs (Ragefire Chasm, Deadmines, Wailing Caverns)",
+        "Level 18–20: Second class quest milestone (Druid Aquatic Form, Shaman Fire Totem, Warlock Succubus)",
+        "Level 20: 11-point milestone talent unlocked in your primary tree"
+      ]
+    },
+    {
+      "bracket": "21–30",
+      "title": "Mid-Game Powers & Forever Legacy System",
+      "universal": [
+        "Level 20: Legacy System activates! Begin tracking account-wide milestone perks",
+        "Level 20–24: Dungeon progression in Blackfathom Deeps, Shadowfang Keep, and Stockade",
+        "Level 28–30: Shaman Water Totem quest chain, Warlock Felhunter, Warrior Whirlwind Axe chain prep",
+        "Level 30: 21-point major capstone talent unlocked in Beta Build 70425 cap"
+      ]
+    },
+    {
+      "bracket": "31–40",
+      "title": "Mount Speed, Dual Spec & Scarlet Monastery",
+      "universal": [
+        "Level 32–36: Scarlet Monastery (Graveyard, Library, Armory, Cathedral) and Gnomeregan",
+        "Level 40: Apprentice Riding and 60% Mount unlock (gold savings priority)",
+        "Level 40: Dual Specialization unlock from Class Trainer (swap specs anywhere outside combat)",
+        "Level 40: Armor proficiency upgrades: Mail for Warriors/Paladins; Leather to Mail for Hunters/Shamans; Plate readiness"
+      ]
+    },
+    {
+      "bracket": "41–50",
+      "title": "Deep Wilderness & Mid-Tier Dungeons",
+      "universal": [
+        "Level 42–46: Zul'Farrak and Maraudon wings (quest chains provide top-tier weapon and trinket upgrades)",
+        "Level 45: 31-point ultimate talent unlocked in your main talent tree",
+        "Level 48–50: Sunken Temple (Temple of Atal'Hakkar) and custom Forever excavation dungeons"
+      ]
+    },
+    {
+      "bracket": "51–60",
+      "title": "The Road to Endgame & Raid Attunements",
+      "universal": [
+        "Level 52–58: Blackrock Depths (BRD), Scholomance, and Stratholme (Living & Undead sides)",
+        "Level 55: Level 50+ epic class quest from class trainers for unique rare/epic gear",
+        "Level 58–60: Complete Onyxia Attunement, Molten Core douse/Hydraxian Waterlords quests, and Barrow Deeps 10M keys",
+        "Level 60: Journeyman Riding (100% Epic Mount) and Phase 1 Pre-Raid BiS farming"
+      ]
+    }
+  ],
+  "mage": [
+    {
+      "bracket": "1–10",
+      "title": "Starting Out & Core Identity",
+      "universal": [
+        "First weapon upgrade from starter zone quests or weapon vendor",
+        "Learn first core class mechanics at Level 4, 6, 8, and 10 from Class Trainer",
+        "Level 10: Unlock first Talent Point and Class Quest (Hunter Pet Taming, Shaman Earth Totem, Druid Bear Form, Warlock Voidwalker, Paladin Redemption, Warrior Defensive Stance)"
+      ]
+    },
+    {
+      "bracket": "11–20",
+      "title": "First Dungeons & Core Specialization",
+      "universal": [
+        "Level 14–16: First instanced dungeon runs (Ragefire Chasm, Deadmines, Wailing Caverns)",
+        "Level 18–20: Second class quest milestone (Druid Aquatic Form, Shaman Fire Totem, Warlock Succubus)",
+        "Level 20: 11-point milestone talent unlocked in your primary tree"
+      ]
+    },
+    {
+      "bracket": "21–30",
+      "title": "Mid-Game Powers & Forever Legacy System",
+      "universal": [
+        "Level 20: Legacy System activates! Begin tracking account-wide milestone perks",
+        "Level 20–24: Dungeon progression in Blackfathom Deeps, Shadowfang Keep, and Stockade",
+        "Level 28–30: Shaman Water Totem quest chain, Warlock Felhunter, Warrior Whirlwind Axe chain prep",
+        "Level 30: 21-point major capstone talent unlocked in Beta Build 70425 cap"
+      ]
+    },
+    {
+      "bracket": "31–40",
+      "title": "Mount Speed, Dual Spec & Scarlet Monastery",
+      "universal": [
+        "Level 32–36: Scarlet Monastery (Graveyard, Library, Armory, Cathedral) and Gnomeregan",
+        "Level 40: Apprentice Riding and 60% Mount unlock (gold savings priority)",
+        "Level 40: Dual Specialization unlock from Class Trainer (swap specs anywhere outside combat)",
+        "Level 40: Armor proficiency upgrades: Mail for Warriors/Paladins; Leather to Mail for Hunters/Shamans; Plate readiness"
+      ]
+    },
+    {
+      "bracket": "41–50",
+      "title": "Deep Wilderness & Mid-Tier Dungeons",
+      "universal": [
+        "Level 42–46: Zul'Farrak and Maraudon wings (quest chains provide top-tier weapon and trinket upgrades)",
+        "Level 45: 31-point ultimate talent unlocked in your main talent tree",
+        "Level 48–50: Sunken Temple (Temple of Atal'Hakkar) and custom Forever excavation dungeons"
+      ]
+    },
+    {
+      "bracket": "51–60",
+      "title": "The Road to Endgame & Raid Attunements",
+      "universal": [
+        "Level 52–58: Blackrock Depths (BRD), Scholomance, and Stratholme (Living & Undead sides)",
+        "Level 55: Level 50+ epic class quest from class trainers for unique rare/epic gear",
+        "Level 58–60: Complete Onyxia Attunement, Molten Core douse/Hydraxian Waterlords quests, and Barrow Deeps 10M keys",
+        "Level 60: Journeyman Riding (100% Epic Mount) and Phase 1 Pre-Raid BiS farming"
+      ]
+    }
+  ],
+  "paladin": [
+    {
+      "bracket": "1–10",
+      "title": "Starting Out & Core Identity",
+      "universal": [
+        "First weapon upgrade from starter zone quests or weapon vendor",
+        "Learn first core class mechanics at Level 4, 6, 8, and 10 from Class Trainer",
+        "Level 10: Unlock first Talent Point and Class Quest (Hunter Pet Taming, Shaman Earth Totem, Druid Bear Form, Warlock Voidwalker, Paladin Redemption, Warrior Defensive Stance)"
+      ]
+    },
+    {
+      "bracket": "11–20",
+      "title": "First Dungeons & Core Specialization",
+      "universal": [
+        "Level 14–16: First instanced dungeon runs (Ragefire Chasm, Deadmines, Wailing Caverns)",
+        "Level 18–20: Second class quest milestone (Druid Aquatic Form, Shaman Fire Totem, Warlock Succubus)",
+        "Level 20: 11-point milestone talent unlocked in your primary tree"
+      ]
+    },
+    {
+      "bracket": "21–30",
+      "title": "Mid-Game Powers & Forever Legacy System",
+      "universal": [
+        "Level 20: Legacy System activates! Begin tracking account-wide milestone perks",
+        "Level 20–24: Dungeon progression in Blackfathom Deeps, Shadowfang Keep, and Stockade",
+        "Level 28–30: Shaman Water Totem quest chain, Warlock Felhunter, Warrior Whirlwind Axe chain prep",
+        "Level 30: 21-point major capstone talent unlocked in Beta Build 70425 cap"
+      ]
+    },
+    {
+      "bracket": "31–40",
+      "title": "Mount Speed, Dual Spec & Scarlet Monastery",
+      "universal": [
+        "Level 32–36: Scarlet Monastery (Graveyard, Library, Armory, Cathedral) and Gnomeregan",
+        "Level 40: Apprentice Riding and 60% Mount unlock (gold savings priority)",
+        "Level 40: Dual Specialization unlock from Class Trainer (swap specs anywhere outside combat)",
+        "Level 40: Armor proficiency upgrades: Mail for Warriors/Paladins; Leather to Mail for Hunters/Shamans; Plate readiness"
+      ]
+    },
+    {
+      "bracket": "41–50",
+      "title": "Deep Wilderness & Mid-Tier Dungeons",
+      "universal": [
+        "Level 42–46: Zul'Farrak and Maraudon wings (quest chains provide top-tier weapon and trinket upgrades)",
+        "Level 45: 31-point ultimate talent unlocked in your main talent tree",
+        "Level 48–50: Sunken Temple (Temple of Atal'Hakkar) and custom Forever excavation dungeons"
+      ]
+    },
+    {
+      "bracket": "51–60",
+      "title": "The Road to Endgame & Raid Attunements",
+      "universal": [
+        "Level 52–58: Blackrock Depths (BRD), Scholomance, and Stratholme (Living & Undead sides)",
+        "Level 55: Level 50+ epic class quest from class trainers for unique rare/epic gear",
+        "Level 58–60: Complete Onyxia Attunement, Molten Core douse/Hydraxian Waterlords quests, and Barrow Deeps 10M keys",
+        "Level 60: Journeyman Riding (100% Epic Mount) and Phase 1 Pre-Raid BiS farming"
+      ]
+    }
+  ],
+  "warrior": [
+    {
+      "bracket": "1–10",
+      "title": "Starting Out & Core Identity",
+      "universal": [
+        "First weapon upgrade from starter zone quests or weapon vendor",
+        "Learn first core class mechanics at Level 4, 6, 8, and 10 from Class Trainer",
+        "Level 10: Unlock first Talent Point and Class Quest (Hunter Pet Taming, Shaman Earth Totem, Druid Bear Form, Warlock Voidwalker, Paladin Redemption, Warrior Defensive Stance)"
+      ]
+    },
+    {
+      "bracket": "11–20",
+      "title": "First Dungeons & Core Specialization",
+      "universal": [
+        "Level 14–16: First instanced dungeon runs (Ragefire Chasm, Deadmines, Wailing Caverns)",
+        "Level 18–20: Second class quest milestone (Druid Aquatic Form, Shaman Fire Totem, Warlock Succubus)",
+        "Level 20: 11-point milestone talent unlocked in your primary tree"
+      ]
+    },
+    {
+      "bracket": "21–30",
+      "title": "Mid-Game Powers & Forever Legacy System",
+      "universal": [
+        "Level 20: Legacy System activates! Begin tracking account-wide milestone perks",
+        "Level 20–24: Dungeon progression in Blackfathom Deeps, Shadowfang Keep, and Stockade",
+        "Level 28–30: Shaman Water Totem quest chain, Warlock Felhunter, Warrior Whirlwind Axe chain prep",
+        "Level 30: 21-point major capstone talent unlocked in Beta Build 70425 cap"
+      ]
+    },
+    {
+      "bracket": "31–40",
+      "title": "Mount Speed, Dual Spec & Scarlet Monastery",
+      "universal": [
+        "Level 32–36: Scarlet Monastery (Graveyard, Library, Armory, Cathedral) and Gnomeregan",
+        "Level 40: Apprentice Riding and 60% Mount unlock (gold savings priority)",
+        "Level 40: Dual Specialization unlock from Class Trainer (swap specs anywhere outside combat)",
+        "Level 40: Armor proficiency upgrades: Mail for Warriors/Paladins; Leather to Mail for Hunters/Shamans; Plate readiness"
+      ]
+    },
+    {
+      "bracket": "41–50",
+      "title": "Deep Wilderness & Mid-Tier Dungeons",
+      "universal": [
+        "Level 42–46: Zul'Farrak and Maraudon wings (quest chains provide top-tier weapon and trinket upgrades)",
+        "Level 45: 31-point ultimate talent unlocked in your main talent tree",
+        "Level 48–50: Sunken Temple (Temple of Atal'Hakkar) and custom Forever excavation dungeons"
+      ]
+    },
+    {
+      "bracket": "51–60",
+      "title": "The Road to Endgame & Raid Attunements",
+      "universal": [
+        "Level 52–58: Blackrock Depths (BRD), Scholomance, and Stratholme (Living & Undead sides)",
+        "Level 55: Level 50+ epic class quest from class trainers for unique rare/epic gear",
+        "Level 58–60: Complete Onyxia Attunement, Molten Core douse/Hydraxian Waterlords quests, and Barrow Deeps 10M keys",
+        "Level 60: Journeyman Riding (100% Epic Mount) and Phase 1 Pre-Raid BiS farming"
+      ]
+    }
+  ],
+  "warlock": [
+    {
+      "bracket": "1–10",
+      "title": "Starting Out & Core Identity",
+      "universal": [
+        "First weapon upgrade from starter zone quests or weapon vendor",
+        "Learn first core class mechanics at Level 4, 6, 8, and 10 from Class Trainer",
+        "Level 10: Unlock first Talent Point and Class Quest (Hunter Pet Taming, Shaman Earth Totem, Druid Bear Form, Warlock Voidwalker, Paladin Redemption, Warrior Defensive Stance)"
+      ]
+    },
+    {
+      "bracket": "11–20",
+      "title": "First Dungeons & Core Specialization",
+      "universal": [
+        "Level 14–16: First instanced dungeon runs (Ragefire Chasm, Deadmines, Wailing Caverns)",
+        "Level 18–20: Second class quest milestone (Druid Aquatic Form, Shaman Fire Totem, Warlock Succubus)",
+        "Level 20: 11-point milestone talent unlocked in your primary tree"
+      ]
+    },
+    {
+      "bracket": "21–30",
+      "title": "Mid-Game Powers & Forever Legacy System",
+      "universal": [
+        "Level 20: Legacy System activates! Begin tracking account-wide milestone perks",
+        "Level 20–24: Dungeon progression in Blackfathom Deeps, Shadowfang Keep, and Stockade",
+        "Level 28–30: Shaman Water Totem quest chain, Warlock Felhunter, Warrior Whirlwind Axe chain prep",
+        "Level 30: 21-point major capstone talent unlocked in Beta Build 70425 cap"
+      ]
+    },
+    {
+      "bracket": "31–40",
+      "title": "Mount Speed, Dual Spec & Scarlet Monastery",
+      "universal": [
+        "Level 32–36: Scarlet Monastery (Graveyard, Library, Armory, Cathedral) and Gnomeregan",
+        "Level 40: Apprentice Riding and 60% Mount unlock (gold savings priority)",
+        "Level 40: Dual Specialization unlock from Class Trainer (swap specs anywhere outside combat)",
+        "Level 40: Armor proficiency upgrades: Mail for Warriors/Paladins; Leather to Mail for Hunters/Shamans; Plate readiness"
+      ]
+    },
+    {
+      "bracket": "41–50",
+      "title": "Deep Wilderness & Mid-Tier Dungeons",
+      "universal": [
+        "Level 42–46: Zul'Farrak and Maraudon wings (quest chains provide top-tier weapon and trinket upgrades)",
+        "Level 45: 31-point ultimate talent unlocked in your main talent tree",
+        "Level 48–50: Sunken Temple (Temple of Atal'Hakkar) and custom Forever excavation dungeons"
+      ]
+    },
+    {
+      "bracket": "51–60",
+      "title": "The Road to Endgame & Raid Attunements",
+      "universal": [
+        "Level 52–58: Blackrock Depths (BRD), Scholomance, and Stratholme (Living & Undead sides)",
+        "Level 55: Level 50+ epic class quest from class trainers for unique rare/epic gear",
+        "Level 58–60: Complete Onyxia Attunement, Molten Core douse/Hydraxian Waterlords quests, and Barrow Deeps 10M keys",
+        "Level 60: Journeyman Riding (100% Epic Mount) and Phase 1 Pre-Raid BiS farming"
+      ]
+    }
+  ],
+  "priest": [
+    {
+      "bracket": "1–10",
+      "title": "Starting Out & Core Identity",
+      "universal": [
+        "First weapon upgrade from starter zone quests or weapon vendor",
+        "Learn first core class mechanics at Level 4, 6, 8, and 10 from Class Trainer",
+        "Level 10: Unlock first Talent Point and Class Quest (Hunter Pet Taming, Shaman Earth Totem, Druid Bear Form, Warlock Voidwalker, Paladin Redemption, Warrior Defensive Stance)"
+      ]
+    },
+    {
+      "bracket": "11–20",
+      "title": "First Dungeons & Core Specialization",
+      "universal": [
+        "Level 14–16: First instanced dungeon runs (Ragefire Chasm, Deadmines, Wailing Caverns)",
+        "Level 18–20: Second class quest milestone (Druid Aquatic Form, Shaman Fire Totem, Warlock Succubus)",
+        "Level 20: 11-point milestone talent unlocked in your primary tree"
+      ]
+    },
+    {
+      "bracket": "21–30",
+      "title": "Mid-Game Powers & Forever Legacy System",
+      "universal": [
+        "Level 20: Legacy System activates! Begin tracking account-wide milestone perks",
+        "Level 20–24: Dungeon progression in Blackfathom Deeps, Shadowfang Keep, and Stockade",
+        "Level 28–30: Shaman Water Totem quest chain, Warlock Felhunter, Warrior Whirlwind Axe chain prep",
+        "Level 30: 21-point major capstone talent unlocked in Beta Build 70425 cap"
+      ]
+    },
+    {
+      "bracket": "31–40",
+      "title": "Mount Speed, Dual Spec & Scarlet Monastery",
+      "universal": [
+        "Level 32–36: Scarlet Monastery (Graveyard, Library, Armory, Cathedral) and Gnomeregan",
+        "Level 40: Apprentice Riding and 60% Mount unlock (gold savings priority)",
+        "Level 40: Dual Specialization unlock from Class Trainer (swap specs anywhere outside combat)",
+        "Level 40: Armor proficiency upgrades: Mail for Warriors/Paladins; Leather to Mail for Hunters/Shamans; Plate readiness"
+      ]
+    },
+    {
+      "bracket": "41–50",
+      "title": "Deep Wilderness & Mid-Tier Dungeons",
+      "universal": [
+        "Level 42–46: Zul'Farrak and Maraudon wings (quest chains provide top-tier weapon and trinket upgrades)",
+        "Level 45: 31-point ultimate talent unlocked in your main talent tree",
+        "Level 48–50: Sunken Temple (Temple of Atal'Hakkar) and custom Forever excavation dungeons"
+      ]
+    },
+    {
+      "bracket": "51–60",
+      "title": "The Road to Endgame & Raid Attunements",
+      "universal": [
+        "Level 52–58: Blackrock Depths (BRD), Scholomance, and Stratholme (Living & Undead sides)",
+        "Level 55: Level 50+ epic class quest from class trainers for unique rare/epic gear",
+        "Level 58–60: Complete Onyxia Attunement, Molten Core douse/Hydraxian Waterlords quests, and Barrow Deeps 10M keys",
+        "Level 60: Journeyman Riding (100% Epic Mount) and Phase 1 Pre-Raid BiS farming"
+      ]
+    }
+  ],
+  "druid": [
+    {
+      "bracket": "1–10",
+      "title": "Starting Out & Core Identity",
+      "universal": [
+        "First weapon upgrade from starter zone quests or weapon vendor",
+        "Learn first core class mechanics at Level 4, 6, 8, and 10 from Class Trainer",
+        "Level 10: Unlock first Talent Point and Class Quest (Hunter Pet Taming, Shaman Earth Totem, Druid Bear Form, Warlock Voidwalker, Paladin Redemption, Warrior Defensive Stance)"
+      ]
+    },
+    {
+      "bracket": "11–20",
+      "title": "First Dungeons & Core Specialization",
+      "universal": [
+        "Level 14–16: First instanced dungeon runs (Ragefire Chasm, Deadmines, Wailing Caverns)",
+        "Level 18–20: Second class quest milestone (Druid Aquatic Form, Shaman Fire Totem, Warlock Succubus)",
+        "Level 20: 11-point milestone talent unlocked in your primary tree"
+      ]
+    },
+    {
+      "bracket": "21–30",
+      "title": "Mid-Game Powers & Forever Legacy System",
+      "universal": [
+        "Level 20: Legacy System activates! Begin tracking account-wide milestone perks",
+        "Level 20–24: Dungeon progression in Blackfathom Deeps, Shadowfang Keep, and Stockade",
+        "Level 28–30: Shaman Water Totem quest chain, Warlock Felhunter, Warrior Whirlwind Axe chain prep",
+        "Level 30: 21-point major capstone talent unlocked in Beta Build 70425 cap"
+      ]
+    },
+    {
+      "bracket": "31–40",
+      "title": "Mount Speed, Dual Spec & Scarlet Monastery",
+      "universal": [
+        "Level 32–36: Scarlet Monastery (Graveyard, Library, Armory, Cathedral) and Gnomeregan",
+        "Level 40: Apprentice Riding and 60% Mount unlock (gold savings priority)",
+        "Level 40: Dual Specialization unlock from Class Trainer (swap specs anywhere outside combat)",
+        "Level 40: Armor proficiency upgrades: Mail for Warriors/Paladins; Leather to Mail for Hunters/Shamans; Plate readiness"
+      ]
+    },
+    {
+      "bracket": "41–50",
+      "title": "Deep Wilderness & Mid-Tier Dungeons",
+      "universal": [
+        "Level 42–46: Zul'Farrak and Maraudon wings (quest chains provide top-tier weapon and trinket upgrades)",
+        "Level 45: 31-point ultimate talent unlocked in your main talent tree",
+        "Level 48–50: Sunken Temple (Temple of Atal'Hakkar) and custom Forever excavation dungeons"
+      ]
+    },
+    {
+      "bracket": "51–60",
+      "title": "The Road to Endgame & Raid Attunements",
+      "universal": [
+        "Level 52–58: Blackrock Depths (BRD), Scholomance, and Stratholme (Living & Undead sides)",
+        "Level 55: Level 50+ epic class quest from class trainers for unique rare/epic gear",
+        "Level 58–60: Complete Onyxia Attunement, Molten Core douse/Hydraxian Waterlords quests, and Barrow Deeps 10M keys",
+        "Level 60: Journeyman Riding (100% Epic Mount) and Phase 1 Pre-Raid BiS farming"
+      ]
+    }
+  ],
+  "rogue": [
+    {
+      "bracket": "1–10",
+      "title": "Starting Out & Core Identity",
+      "universal": [
+        "First weapon upgrade from starter zone quests or weapon vendor",
+        "Learn first core class mechanics at Level 4, 6, 8, and 10 from Class Trainer",
+        "Level 10: Unlock first Talent Point and Class Quest (Hunter Pet Taming, Shaman Earth Totem, Druid Bear Form, Warlock Voidwalker, Paladin Redemption, Warrior Defensive Stance)"
+      ]
+    },
+    {
+      "bracket": "11–20",
+      "title": "First Dungeons & Core Specialization",
+      "universal": [
+        "Level 14–16: First instanced dungeon runs (Ragefire Chasm, Deadmines, Wailing Caverns)",
+        "Level 18–20: Second class quest milestone (Druid Aquatic Form, Shaman Fire Totem, Warlock Succubus)",
+        "Level 20: 11-point milestone talent unlocked in your primary tree"
+      ]
+    },
+    {
+      "bracket": "21–30",
+      "title": "Mid-Game Powers & Forever Legacy System",
+      "universal": [
+        "Level 20: Legacy System activates! Begin tracking account-wide milestone perks",
+        "Level 20–24: Dungeon progression in Blackfathom Deeps, Shadowfang Keep, and Stockade",
+        "Level 28–30: Shaman Water Totem quest chain, Warlock Felhunter, Warrior Whirlwind Axe chain prep",
+        "Level 30: 21-point major capstone talent unlocked in Beta Build 70425 cap"
+      ]
+    },
+    {
+      "bracket": "31–40",
+      "title": "Mount Speed, Dual Spec & Scarlet Monastery",
+      "universal": [
+        "Level 32–36: Scarlet Monastery (Graveyard, Library, Armory, Cathedral) and Gnomeregan",
+        "Level 40: Apprentice Riding and 60% Mount unlock (gold savings priority)",
+        "Level 40: Dual Specialization unlock from Class Trainer (swap specs anywhere outside combat)",
+        "Level 40: Armor proficiency upgrades: Mail for Warriors/Paladins; Leather to Mail for Hunters/Shamans; Plate readiness"
+      ]
+    },
+    {
+      "bracket": "41–50",
+      "title": "Deep Wilderness & Mid-Tier Dungeons",
+      "universal": [
+        "Level 42–46: Zul'Farrak and Maraudon wings (quest chains provide top-tier weapon and trinket upgrades)",
+        "Level 45: 31-point ultimate talent unlocked in your main talent tree",
+        "Level 48–50: Sunken Temple (Temple of Atal'Hakkar) and custom Forever excavation dungeons"
+      ]
+    },
+    {
+      "bracket": "51–60",
+      "title": "The Road to Endgame & Raid Attunements",
+      "universal": [
+        "Level 52–58: Blackrock Depths (BRD), Scholomance, and Stratholme (Living & Undead sides)",
+        "Level 55: Level 50+ epic class quest from class trainers for unique rare/epic gear",
+        "Level 58–60: Complete Onyxia Attunement, Molten Core douse/Hydraxian Waterlords quests, and Barrow Deeps 10M keys",
+        "Level 60: Journeyman Riding (100% Epic Mount) and Phase 1 Pre-Raid BiS farming"
+      ]
+    }
+  ]
+}

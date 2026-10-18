@@ -709,36 +709,45 @@ end
 -------------------------------------------------------------------------------
 -- 5. Helper Functions: Cast Queries & Safe Secret Handling
 -------------------------------------------------------------------------------
-local function IsSecret(val)
+local function CanAccess(val)
     if val == nil then return false end
-    if canaccessvalue and not canaccessvalue(val) then return true end
-    if issecretvalue and issecretvalue(val) then return true end
-    if issecret and issecret(val) then return true end
-
+    if canaccessvalue then
+        local ok, res = pcall(canaccessvalue, val)
+        if ok and res == false then return false end
+    end
+    if issecretvalue then
+        local ok, res = pcall(issecretvalue, val)
+        if ok and res == true then return false end
+    end
+    if issecret then
+        local ok, res = pcall(issecret, val)
+        if ok and res == true then return false end
+    end
     local vType = type(val)
     if vType == "secret" or vType == "secretvalue" or vType == "secret number" or vType == "secret string" then
-        return true
+        return false
     end
-    if vType == "number" then
-        local ok = pcall(function()
-            local _ = val + 0
-        end)
-        return not ok
-    elseif vType == "string" then
-        local ok = pcall(function()
-            local _ = val .. ""
-        end)
-        return not ok
-    elseif vType == "boolean" then
-        local ok = pcall(function()
-            if val == true or val == false then end
-        end)
-        return not ok
-    end
+    return true
+end
+FP_CB.CanAccess = CanAccess
 
-    return false
+local function IsSecret(val)
+    if val == nil then return false end
+    return not CanAccess(val)
 end
 FP_CB.IsSecret = IsSecret
+
+local function ShouldIgnoreCastEvent(castGUID, activeCast)
+    if not castGUID or not activeCast or not activeCast.castGUID then
+        return false
+    end
+    if not CanAccess(castGUID) or not CanAccess(activeCast.castGUID) then
+        return false
+    end
+    local ok, isDifferent = pcall(function() return castGUID ~= activeCast.castGUID end)
+    return ok and (isDifferent == true)
+end
+FP_CB.ShouldIgnoreCastEvent = ShouldIgnoreCastEvent
 
 local function GetSafeCastData(unit)
     if not unit or not UnitExists(unit) then return nil end
@@ -2495,7 +2504,7 @@ events:SetScript("OnEvent", function(self, event, unit, castGUID, spellID, ...)
             elseif event == "UNIT_SPELLCAST_STOP" or event == "UNIT_SPELLCAST_CHANNEL_STOP"
             or event == "UNIT_SPELLCAST_EMPOWER_STOP" then
                 local obj = singleBars[unit]
-                if castGUID and obj and obj.activeCast and obj.activeCast.castGUID and castGUID ~= obj.activeCast.castGUID then
+                if ShouldIgnoreCastEvent(castGUID, obj and obj.activeCast) then
                     return
                 end
                 local nextCast = GetSafeCastData(unit)
@@ -2506,7 +2515,7 @@ events:SetScript("OnEvent", function(self, event, unit, castGUID, spellID, ...)
                 end
             elseif event == "UNIT_SPELLCAST_FAILED" or event == "UNIT_SPELLCAST_INTERRUPTED" then
                 local obj = singleBars[unit]
-                if castGUID and obj and obj.activeCast and obj.activeCast.castGUID and castGUID ~= obj.activeCast.castGUID then
+                if ShouldIgnoreCastEvent(castGUID, obj and obj.activeCast) then
                     return
                 end
                 HideSingleCast(unit, event == "UNIT_SPELLCAST_INTERRUPTED")
@@ -2525,7 +2534,7 @@ events:SetScript("OnEvent", function(self, event, unit, castGUID, spellID, ...)
                 local plate = GetSafeNamePlate(unit)
                 local uf = plate and (plate.UnitFrame or plate.unitFrame or plate)
                 local obj = uf and plateCastBars[uf]
-                if castGUID and obj and obj.activeCast and obj.activeCast.castGUID and castGUID ~= obj.activeCast.castGUID then
+                if ShouldIgnoreCastEvent(castGUID, obj and obj.activeCast) then
                     return
                 end
                 local nextCast = GetSafeCastData(unit)
@@ -2538,7 +2547,7 @@ events:SetScript("OnEvent", function(self, event, unit, castGUID, spellID, ...)
                 local plate = GetSafeNamePlate(unit)
                 local uf = plate and (plate.UnitFrame or plate.unitFrame or plate)
                 local obj = uf and plateCastBars[uf]
-                if castGUID and obj and obj.activeCast and obj.activeCast.castGUID and castGUID ~= obj.activeCast.castGUID then
+                if ShouldIgnoreCastEvent(castGUID, obj and obj.activeCast) then
                     return
                 end
                 HidePlateCast(unit, event == "UNIT_SPELLCAST_INTERRUPTED")

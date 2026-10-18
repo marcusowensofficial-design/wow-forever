@@ -1,0 +1,2321 @@
+{
+  "hunter": {
+    "classId": "hunter",
+    "tracks": [
+      {
+        "id": "primary",
+        "name": "Primary Path"
+      }
+    ],
+    "levels": [
+      {
+        "levelBracket": "1–2",
+        "itemId": 2505,
+        "name": "Polished Shortbow",
+        "icon": "inv_weapon_bow_02",
+        "weaponType": "Bow",
+        "speed": "2.00",
+        "dps": "1.8 DPS",
+        "source": {
+          "kind": "vendor",
+          "title": "Weapon vendors",
+          "detail": "Sold in towns"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "3–4",
+        "itemId": 2506,
+        "name": "Hornwood Recurve Bow",
+        "icon": "inv_weapon_bow_11",
+        "weaponType": "Bow",
+        "speed": "2.10",
+        "dps": "2.4 DPS",
+        "source": {
+          "kind": "vendor",
+          "title": "Weapon vendors",
+          "detail": "Sold in towns"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "7–8",
+        "itemId": 276685,
+        "name": "Militia Bow",
+        "icon": "inv_weapon_bow_02",
+        "weaponType": "Bow",
+        "speed": "2.10",
+        "dps": "5.7 DPS",
+        "source": {
+          "kind": "quest",
+          "title": "Rare Books",
+          "detail": "Quest, Elwynn Forest, level 7"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "11–12",
+        "itemId": 11303,
+        "name": "Fine Shortbow",
+        "icon": "inv_weapon_bow_07",
+        "weaponType": "Bow",
+        "speed": "1.70",
+        "dps": "6.2 DPS",
+        "source": {
+          "kind": "vendor",
+          "title": "Weapon vendors",
+          "detail": "Sold in towns"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "13–14",
+        "itemId": 279894,
+        "name": "Calibrated Blunderbuss",
+        "icon": "inv_weapon_rifle_01",
+        "weaponType": "Gun",
+        "speed": "2.30",
+        "dps": "9.6 DPS",
+        "source": {
+          "kind": "quest",
+          "title": "Old Ironforge Incursion",
+          "detail": "Dungeon quest, The Hall of Thanes, level 16"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "15–16",
+        "itemId": 279894,
+        "name": "Calibrated Blunderbuss",
+        "icon": "inv_weapon_rifle_01",
+        "weaponType": "Weapon",
+        "speed": "",
+        "dps": "",
+        "source": {
+          "kind": "drop",
+          "title": "",
+          "detail": ""
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "17–18",
+        "itemId": 279894,
+        "name": "Calibrated Blunderbuss",
+        "icon": "inv_weapon_rifle_01",
+        "weaponType": "Weapon",
+        "speed": "",
+        "dps": "",
+        "source": {
+          "kind": "drop",
+          "title": "",
+          "detail": ""
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "19–20",
+        "itemId": 6469,
+        "name": "Venomstrike",
+        "icon": "inv_weapon_bow_10",
+        "weaponType": "Bow",
+        "speed": "2.40",
+        "dps": "12.1 DPS",
+        "source": {
+          "kind": "dungeon",
+          "title": "Lord Serpentis",
+          "detail": "Wailing Caverns, levels 15–25"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "21–22",
+        "itemId": 3078,
+        "name": "Naga Heartpiercer",
+        "icon": "inv_weapon_bow_04",
+        "weaponType": "Bow",
+        "speed": "2.40",
+        "dps": "13.3 DPS",
+        "source": {
+          "kind": "dungeon",
+          "title": "Lady Sarevess",
+          "detail": "Blackfathom Deeps, levels 24–32"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "23–24",
+        "itemId": 273843,
+        "name": "Fallenroot Longbow",
+        "icon": "inv_weapon_bow_03",
+        "weaponType": "Bow",
+        "speed": "2.20",
+        "dps": "13.9 DPS",
+        "source": {
+          "kind": "dungeon",
+          "title": "Lorgus Jett",
+          "detail": "Blackfathom Deeps, levels 24–32"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "25–26",
+        "itemId": 273829,
+        "name": "Concealed Hand Crossbow",
+        "icon": "inv_weapon_crossbow_02",
+        "weaponType": "Crossbow",
+        "speed": "2.00",
+        "dps": "15.3 DPS",
+        "source": {
+          "kind": "dungeon",
+          "title": "Bazil Thredd",
+          "detail": "The Stockade, levels 22–30"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "27–28",
+        "itemId": 273029,
+        "name": "Golemsight Long Gun",
+        "icon": "inv_musket_02",
+        "weaponType": "Gun",
+        "speed": "2.50",
+        "dps": "16.6 DPS",
+        "source": {
+          "kind": "dungeon",
+          "title": "Relic Guardian",
+          "detail": "Excavation Site: Wetlands, levels 26–31"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "29–30",
+        "itemId": 273029,
+        "name": "Golemsight Long Gun",
+        "icon": "inv_musket_02",
+        "weaponType": "Weapon",
+        "speed": "",
+        "dps": "",
+        "source": {
+          "kind": "drop",
+          "title": "",
+          "detail": ""
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "31–32",
+        "itemId": 274084,
+        "name": "Quilboar Blaster",
+        "icon": "inv_weapon_rifle_05",
+        "weaponType": "Gun",
+        "speed": "2.80",
+        "dps": "18.6 DPS",
+        "source": {
+          "kind": "quest",
+          "title": "The Crone of the Kraul",
+          "detail": "Dungeon quest, Razorfen Kraul, level 34"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "33–34",
+        "itemId": 274293,
+        "name": "Spellsever Crossbow",
+        "icon": "inv_weapon_crossbow_07",
+        "weaponType": "Crossbow",
+        "speed": "2.40",
+        "dps": "20.8 DPS",
+        "source": {
+          "kind": "dungeon",
+          "title": "Arcanist Doan",
+          "detail": "Scarlet Monastery, levels 26–45"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "37–38",
+        "itemId": 274293,
+        "name": "Spellsever Crossbow",
+        "icon": "inv_weapon_crossbow_07",
+        "weaponType": "Weapon",
+        "speed": "",
+        "dps": "",
+        "source": {
+          "kind": "drop",
+          "title": "",
+          "detail": ""
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "41–42",
+        "itemId": 274293,
+        "name": "Spellsever Crossbow",
+        "icon": "inv_weapon_crossbow_07",
+        "weaponType": "Weapon",
+        "speed": "",
+        "dps": "",
+        "source": {
+          "kind": "drop",
+          "title": "",
+          "detail": ""
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "43–44",
+        "itemId": 277254,
+        "name": "Truthseeker's Bow",
+        "icon": "inv_weapon_bow_01",
+        "weaponType": "Bow",
+        "speed": "2.80",
+        "dps": "23.8 DPS",
+        "source": {
+          "kind": "quest",
+          "title": "Greater Friend of the Library",
+          "detail": "Quest, Special, level 45"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "47–48",
+        "itemId": 17717,
+        "name": "Megashot Rifle",
+        "icon": "inv_weapon_rifle_05",
+        "weaponType": "Gun",
+        "speed": "2.50",
+        "dps": "27.4 DPS",
+        "source": {
+          "kind": "dungeon",
+          "title": "Tinkerer Gizlock",
+          "detail": "Maraudon, levels 46–55"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "53–54",
+        "itemId": 12651,
+        "name": "Blackcrow",
+        "icon": "inv_weapon_crossbow_04",
+        "weaponType": "Crossbow",
+        "speed": "3.20",
+        "dps": "30.3 DPS",
+        "source": {
+          "kind": "dungeon",
+          "title": "Shadow Hunter Vosh'gajin",
+          "detail": "Blackrock Spire, levels 55–60"
+        },
+        "alts": []
+      }
+    ]
+  },
+  "shaman": {
+    "classId": "shaman",
+    "tracks": [
+      {
+        "id": "primary",
+        "name": "Primary Path"
+      }
+    ],
+    "levels": [
+      {
+        "levelBracket": "1–2",
+        "itemId": 2132,
+        "name": "Short Staff",
+        "icon": "inv_staff_02",
+        "weaponType": "Staff",
+        "speed": "3.20",
+        "dps": "2.0 DPS",
+        "source": {
+          "kind": "vendor",
+          "title": "Weapon vendors",
+          "detail": "Sold in towns"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "3–4",
+        "itemId": 2495,
+        "name": "Walking Stick",
+        "icon": "inv_staff_08",
+        "weaponType": "Staff",
+        "speed": "2.50",
+        "dps": "4.2 DPS",
+        "source": {
+          "kind": "vendor",
+          "title": "Weapon vendors",
+          "detail": "Sold in towns"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "11–12",
+        "itemId": 6214,
+        "name": "Heavy Copper Maul",
+        "icon": "inv_hammer_18",
+        "weaponType": "Two-handed mace",
+        "speed": "3.30",
+        "dps": "10.8 DPS",
+        "source": {
+          "kind": "crafted",
+          "title": "",
+          "detail": "Trainer recipe"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "13–14",
+        "itemId": 279895,
+        "name": "Ironforge Greathammer",
+        "icon": "inv_hammer_21",
+        "weaponType": "Two-handed mace",
+        "speed": "3.10",
+        "dps": "16.0 DPS",
+        "source": {
+          "kind": "quest",
+          "title": "Old Ironforge Incursion",
+          "detail": "Dungeon quest, The Hall of Thanes, level 16"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "15–16",
+        "itemId": 5187,
+        "name": "Rhahk'Zor's Hammer",
+        "icon": "inv_hammer_09",
+        "weaponType": "Two-handed mace",
+        "speed": "3.20",
+        "dps": "18.4 DPS",
+        "source": {
+          "kind": "dungeon",
+          "title": "Rhahk'Zor",
+          "detail": "The Deadmines, levels 18–23"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "17–18",
+        "itemId": 7230,
+        "name": "Smite's Mighty Hammer",
+        "icon": "inv_hammer_09",
+        "weaponType": "Two-handed mace",
+        "speed": "3.50",
+        "dps": "19.7 DPS",
+        "source": {
+          "kind": "dungeon",
+          "title": "Mr. Smite",
+          "detail": "The Deadmines, levels 18–23"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "21–22",
+        "itemId": 6905,
+        "name": "Reef Axe",
+        "icon": "inv_weapon_halberd_06",
+        "weaponType": "Two-handed axe",
+        "speed": "3.30",
+        "dps": "22.4 DPS",
+        "source": {
+          "kind": "dungeon",
+          "title": "Gelihast",
+          "detail": "Blackfathom Deeps, levels 24–32"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "27–28",
+        "itemId": 273046,
+        "name": "Guardian's Dualblade",
+        "icon": "inv_throwingaxe_05",
+        "weaponType": "Two-handed axe",
+        "speed": "3.50",
+        "dps": "27.9 DPS",
+        "source": {
+          "kind": "dungeon",
+          "title": "Unstable Sentinel",
+          "detail": "City of Dalaran, levels 28–33"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "29–30",
+        "itemId": 6687,
+        "name": "Corpsemaker",
+        "icon": "inv_weapon_halbard_01",
+        "weaponType": "Two-handed axe",
+        "speed": "3.80",
+        "dps": "28.9 DPS",
+        "source": {
+          "kind": "dungeon",
+          "title": "Overlord Ramtusk",
+          "detail": "Razorfen Kraul, levels 30–40"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "37–38",
+        "itemId": 6830,
+        "name": "Bonebiter",
+        "icon": "inv_axe_04",
+        "weaponType": "Two-handed axe",
+        "speed": "3.40",
+        "dps": "38.8 DPS",
+        "source": {
+          "kind": "quest",
+          "title": "In the Name of the Light",
+          "detail": "Dungeon quest, Scarlet Monastery, level 40"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "47–48",
+        "itemId": 17730,
+        "name": "Gatorbite Axe",
+        "icon": "inv_axe_04",
+        "weaponType": "Two-handed axe",
+        "speed": "3.20",
+        "dps": "45.8 DPS",
+        "source": {
+          "kind": "dungeon",
+          "title": "Rotgrip",
+          "detail": "Maraudon, levels 46–55"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "49–50",
+        "itemId": 11608,
+        "name": "Dark Iron Pulverizer",
+        "icon": "inv_hammer_09",
+        "weaponType": "Two-handed mace",
+        "speed": "3.70",
+        "dps": "47.4 DPS",
+        "source": {
+          "kind": "crafted",
+          "title": "",
+          "detail": "Plan drops in Blackrock Depths"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "51–52",
+        "itemId": 12776,
+        "name": "Enchanted Battlehammer",
+        "icon": "inv_hammer_05",
+        "weaponType": "Two-handed mace",
+        "speed": "3.50",
+        "dps": "48.3 DPS",
+        "source": {
+          "kind": "crafted",
+          "title": "",
+          "detail": "Plan from Master Hammersmith quest in Stratholme"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "57–58",
+        "itemId": 12784,
+        "name": "Arcanite Reaper",
+        "icon": "inv_axe_09",
+        "weaponType": "Two-handed axe",
+        "speed": "3.80",
+        "dps": "53.8 DPS",
+        "source": {
+          "kind": "crafted",
+          "title": "",
+          "detail": "Recipe from a drop"
+        },
+        "alts": []
+      }
+    ]
+  },
+  "mage": {
+    "classId": "mage",
+    "tracks": [
+      {
+        "id": "primary",
+        "name": "Primary Path"
+      }
+    ],
+    "levels": [
+      {
+        "levelBracket": "1–2",
+        "itemId": 1159,
+        "name": "Militia Quarterstaff",
+        "icon": "inv_staff_08",
+        "weaponType": "Staff",
+        "speed": "2.80",
+        "dps": "2.7 DPS",
+        "source": {
+          "kind": "quest",
+          "title": "Brotherhood of Thieves",
+          "detail": "Quest, Elwynn Forest, level 4"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "5–6",
+        "itemId": 1159,
+        "name": "Militia Quarterstaff",
+        "icon": "inv_staff_08",
+        "weaponType": "Weapon",
+        "speed": "",
+        "dps": "",
+        "source": {
+          "kind": "drop",
+          "title": "",
+          "detail": ""
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "7–8",
+        "itemId": 248008,
+        "name": "Apprentice's Spellstaff",
+        "icon": "inv_staff_18",
+        "weaponType": "Staff",
+        "speed": "2.20",
+        "dps": "6.4 DPS",
+        "source": {
+          "kind": "quest",
+          "title": "Rare Books",
+          "detail": "Quest, Elwynn Forest, level 7"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "11–12",
+        "itemId": 15397,
+        "name": "Oakthrush Staff",
+        "icon": "inv_staff_08",
+        "weaponType": "Staff",
+        "speed": "2.80",
+        "dps": "7.1 DPS",
+        "source": {
+          "kind": "quest",
+          "title": "The Fragments Within",
+          "detail": "Elite quest, Darkshore, level 14"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "13–14",
+        "itemId": 270228,
+        "name": "Golemheart Stave",
+        "icon": "inv_staff_18",
+        "weaponType": "Staff",
+        "speed": "3.20",
+        "dps": "11.9 DPS",
+        "source": {
+          "kind": "dungeon",
+          "title": "Plunder",
+          "detail": "The Hall of Thanes, levels 13–18"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "17–18",
+        "itemId": 5201,
+        "name": "Emberstone Staff",
+        "icon": "inv_staff_13",
+        "weaponType": "Staff",
+        "speed": "3.00",
+        "dps": "14.2 DPS",
+        "source": {
+          "kind": "dungeon",
+          "title": "Captain Greenskin",
+          "detail": "The Deadmines, levels 18–23"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "23–24",
+        "itemId": 1155,
+        "name": "Rod of the Sleepwalker",
+        "icon": "inv_staff_06",
+        "weaponType": "Staff",
+        "speed": "2.80",
+        "dps": "17.7 DPS",
+        "source": {
+          "kind": "dungeon",
+          "title": "Twilight Lord Kelris",
+          "detail": "Blackfathom Deeps, levels 24–32"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "25–26",
+        "itemId": 1155,
+        "name": "Rod of the Sleepwalker",
+        "icon": "inv_staff_06",
+        "weaponType": "Weapon",
+        "speed": "",
+        "dps": "",
+        "source": {
+          "kind": "drop",
+          "title": "",
+          "detail": ""
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "27–28",
+        "itemId": 273040,
+        "name": "Spine of the Devourer",
+        "icon": "inv_staff_07",
+        "weaponType": "Staff",
+        "speed": "3.60",
+        "dps": "20.7 DPS",
+        "source": {
+          "kind": "dungeon",
+          "title": "Mana Devourer",
+          "detail": "City of Dalaran, levels 28–33"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "31–32",
+        "itemId": 281312,
+        "name": "Fallen Dragon's Scepter",
+        "icon": "inv_staff_08",
+        "weaponType": "Staff",
+        "speed": "3.40",
+        "dps": "19.9 DPS",
+        "source": {
+          "kind": "quest",
+          "title": "Stopping the Cycle",
+          "detail": "Quest, Wetlands, level 34"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "33–34",
+        "itemId": 7713,
+        "name": "Illusionary Rod",
+        "icon": "inv_wand_04",
+        "weaponType": "Staff",
+        "speed": "3.40",
+        "dps": "25.7 DPS",
+        "source": {
+          "kind": "dungeon",
+          "title": "Arcanist Doan",
+          "detail": "Scarlet Monastery, levels 26–45"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "37–38",
+        "itemId": 7713,
+        "name": "Illusionary Rod",
+        "icon": "inv_wand_04",
+        "weaponType": "Weapon",
+        "speed": "",
+        "dps": "",
+        "source": {
+          "kind": "drop",
+          "title": "",
+          "detail": ""
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "43–44",
+        "itemId": 9527,
+        "name": "Spellshifter Rod",
+        "icon": "inv_wand_11",
+        "weaponType": "Staff",
+        "speed": "2.70",
+        "dps": "31.1 DPS",
+        "source": {
+          "kind": "quest",
+          "title": "Tiara of the Deep",
+          "detail": "Dungeon quest, Zul'Farrak, level 46"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "45–46",
+        "itemId": 9527,
+        "name": "Spellshifter Rod",
+        "icon": "inv_wand_11",
+        "weaponType": "Weapon",
+        "speed": "",
+        "dps": "",
+        "source": {
+          "kind": "drop",
+          "title": "",
+          "detail": ""
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "47–48",
+        "itemId": 11750,
+        "name": "Kindling Stave",
+        "icon": "inv_staff_18",
+        "weaponType": "Staff",
+        "speed": "2.90",
+        "dps": "34.1 DPS",
+        "source": {
+          "kind": "dungeon",
+          "title": "Pyromancer Loregrain",
+          "detail": "Blackrock Depths, levels 52–60"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "53–54",
+        "itemId": 274420,
+        "name": "Wisepaw Totem",
+        "icon": "inv_staff_51",
+        "weaponType": "Staff",
+        "speed": "3.20",
+        "dps": "36.9 DPS",
+        "source": {
+          "kind": "vendor",
+          "title": "Dala Fairmaw",
+          "detail": "Vendor, Mount Hyjal"
+        },
+        "alts": []
+      }
+    ]
+  },
+  "paladin": {
+    "classId": "paladin",
+    "tracks": [
+      {
+        "id": "primary",
+        "name": "Primary Path"
+      }
+    ],
+    "levels": [
+      {
+        "levelBracket": "1–2",
+        "itemId": 5579,
+        "name": "Militia Warhammer",
+        "icon": "inv_hammer_15",
+        "weaponType": "Two-handed mace",
+        "speed": "2.90",
+        "dps": "2.6 DPS",
+        "source": {
+          "kind": "quest",
+          "title": "Brotherhood of Thieves",
+          "detail": "Quest, Elwynn Forest, level 4"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "3–4",
+        "itemId": 2493,
+        "name": "Wooden Mallet",
+        "icon": "inv_hammer_16",
+        "weaponType": "Two-handed mace",
+        "speed": "2.60",
+        "dps": "5.0 DPS",
+        "source": {
+          "kind": "vendor",
+          "title": "Weapon vendors",
+          "detail": "Sold in towns"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "7–8",
+        "itemId": 248005,
+        "name": "Northshire Hammer",
+        "icon": "inv_hammer_16",
+        "weaponType": "Two-handed mace",
+        "speed": "2.70",
+        "dps": "8.3 DPS",
+        "source": {
+          "kind": "quest",
+          "title": "Rare Books",
+          "detail": "Quest, Elwynn Forest, level 7"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "9–10",
+        "itemId": 1197,
+        "name": "Giant Mace",
+        "icon": "inv_mace_02",
+        "weaponType": "Two-handed mace",
+        "speed": "3.50",
+        "dps": "9.0 DPS",
+        "source": {
+          "kind": "vendor",
+          "title": "Weapon vendors",
+          "detail": "Sold in towns"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "11–12",
+        "itemId": 6214,
+        "name": "Heavy Copper Maul",
+        "icon": "inv_hammer_18",
+        "weaponType": "Two-handed mace",
+        "speed": "3.30",
+        "dps": "10.8 DPS",
+        "source": {
+          "kind": "crafted",
+          "title": "",
+          "detail": "Trainer recipe"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "13–14",
+        "itemId": 279895,
+        "name": "Ironforge Greathammer",
+        "icon": "inv_hammer_21",
+        "weaponType": "Two-handed mace",
+        "speed": "3.10",
+        "dps": "16.0 DPS",
+        "source": {
+          "kind": "quest",
+          "title": "Old Ironforge Incursion",
+          "detail": "Dungeon quest, The Hall of Thanes, level 16"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "15–16",
+        "itemId": 5187,
+        "name": "Rhahk'Zor's Hammer",
+        "icon": "inv_hammer_09",
+        "weaponType": "Two-handed mace",
+        "speed": "3.20",
+        "dps": "18.4 DPS",
+        "source": {
+          "kind": "dungeon",
+          "title": "Rhahk'Zor",
+          "detail": "The Deadmines, levels 18–23"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "17–18",
+        "itemId": 7230,
+        "name": "Smite's Mighty Hammer",
+        "icon": "inv_hammer_09",
+        "weaponType": "Two-handed mace",
+        "speed": "3.50",
+        "dps": "19.7 DPS",
+        "source": {
+          "kind": "dungeon",
+          "title": "Mr. Smite",
+          "detail": "The Deadmines, levels 18–23"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "19–20",
+        "itemId": 6953,
+        "name": "Verigan's Fist",
+        "icon": "inv_hammer_05",
+        "weaponType": "Two-handed mace",
+        "speed": "3.20",
+        "dps": "25.6 DPS",
+        "source": {
+          "kind": "quest",
+          "title": "The Test of Righteousness",
+          "detail": "Paladin quest, level 22"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "27–28",
+        "itemId": 273046,
+        "name": "Guardian's Dualblade",
+        "icon": "inv_throwingaxe_05",
+        "weaponType": "Two-handed axe",
+        "speed": "3.50",
+        "dps": "27.9 DPS",
+        "source": {
+          "kind": "dungeon",
+          "title": "Unstable Sentinel",
+          "detail": "City of Dalaran, levels 28–33"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "29–30",
+        "itemId": 6687,
+        "name": "Corpsemaker",
+        "icon": "inv_weapon_halbard_01",
+        "weaponType": "Two-handed axe",
+        "speed": "3.80",
+        "dps": "28.9 DPS",
+        "source": {
+          "kind": "dungeon",
+          "title": "Overlord Ramtusk",
+          "detail": "Razorfen Kraul, levels 30–40"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "37–38",
+        "itemId": 6830,
+        "name": "Bonebiter",
+        "icon": "inv_axe_04",
+        "weaponType": "Two-handed axe",
+        "speed": "3.40",
+        "dps": "38.8 DPS",
+        "source": {
+          "kind": "quest",
+          "title": "In the Name of the Light",
+          "detail": "Dungeon quest, Scarlet Monastery, level 40"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "45–46",
+        "itemId": 10799,
+        "name": "Headspike",
+        "icon": "inv_spear_06",
+        "weaponType": "Polearm",
+        "speed": "3.00",
+        "dps": "44.2 DPS",
+        "source": {
+          "kind": "dungeon",
+          "title": "Atal'alarion",
+          "detail": "The Temple of Atal'Hakkar, levels 50–60"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "49–50",
+        "itemId": 11608,
+        "name": "Dark Iron Pulverizer",
+        "icon": "inv_hammer_09",
+        "weaponType": "Two-handed mace",
+        "speed": "3.70",
+        "dps": "47.4 DPS",
+        "source": {
+          "kind": "crafted",
+          "title": "",
+          "detail": "Plan drops in Blackrock Depths"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "51–52",
+        "itemId": 12776,
+        "name": "Enchanted Battlehammer",
+        "icon": "inv_hammer_05",
+        "weaponType": "Two-handed mace",
+        "speed": "3.50",
+        "dps": "48.3 DPS",
+        "source": {
+          "kind": "crafted",
+          "title": "",
+          "detail": "Plan from Master Hammersmith quest in Stratholme"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "57–58",
+        "itemId": 12784,
+        "name": "Arcanite Reaper",
+        "icon": "inv_axe_09",
+        "weaponType": "Two-handed axe",
+        "speed": "3.80",
+        "dps": "53.8 DPS",
+        "source": {
+          "kind": "crafted",
+          "title": "",
+          "detail": "Recipe from a drop"
+        },
+        "alts": []
+      }
+    ]
+  },
+  "warrior": {
+    "classId": "warrior",
+    "tracks": [
+      {
+        "id": "primary",
+        "name": "Primary Path"
+      }
+    ],
+    "levels": [
+      {
+        "levelBracket": "11–12",
+        "itemId": 6214,
+        "name": "Heavy Copper Maul",
+        "icon": "inv_hammer_18",
+        "weaponType": "Two-handed mace",
+        "speed": "3.30",
+        "dps": "10.8 DPS",
+        "source": {
+          "kind": "crafted",
+          "title": "",
+          "detail": "Trainer recipe"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "13–14",
+        "itemId": 279895,
+        "name": "Ironforge Greathammer",
+        "icon": "inv_hammer_21",
+        "weaponType": "Two-handed mace",
+        "speed": "3.10",
+        "dps": "16.0 DPS",
+        "source": {
+          "kind": "quest",
+          "title": "Old Ironforge Incursion",
+          "detail": "Dungeon quest, The Hall of Thanes, level 16"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "15–16",
+        "itemId": 5187,
+        "name": "Rhahk'Zor's Hammer",
+        "icon": "inv_hammer_09",
+        "weaponType": "Two-handed mace",
+        "speed": "3.20",
+        "dps": "18.4 DPS",
+        "source": {
+          "kind": "dungeon",
+          "title": "Rhahk'Zor",
+          "detail": "The Deadmines, levels 18–23"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "17–18",
+        "itemId": 7230,
+        "name": "Smite's Mighty Hammer",
+        "icon": "inv_hammer_09",
+        "weaponType": "Two-handed mace",
+        "speed": "3.50",
+        "dps": "19.7 DPS",
+        "source": {
+          "kind": "dungeon",
+          "title": "Mr. Smite",
+          "detail": "The Deadmines, levels 18–23"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "21–22",
+        "itemId": 6905,
+        "name": "Reef Axe",
+        "icon": "inv_weapon_halberd_06",
+        "weaponType": "Two-handed axe",
+        "speed": "3.30",
+        "dps": "22.4 DPS",
+        "source": {
+          "kind": "dungeon",
+          "title": "Gelihast",
+          "detail": "Blackfathom Deeps, levels 24–32"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "25–26",
+        "itemId": 6909,
+        "name": "Strike of the Hydra",
+        "icon": "inv_sword_42",
+        "weaponType": "Two-handed sword",
+        "speed": "3.30",
+        "dps": "25.6 DPS",
+        "source": {
+          "kind": "dungeon",
+          "title": "Aku'mai",
+          "detail": "Blackfathom Deeps, levels 24–32"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "27–28",
+        "itemId": 273046,
+        "name": "Guardian's Dualblade",
+        "icon": "inv_throwingaxe_05",
+        "weaponType": "Two-handed axe",
+        "speed": "3.50",
+        "dps": "27.9 DPS",
+        "source": {
+          "kind": "dungeon",
+          "title": "Unstable Sentinel",
+          "detail": "City of Dalaran, levels 28–33"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "29–30",
+        "itemId": 6687,
+        "name": "Corpsemaker",
+        "icon": "inv_weapon_halbard_01",
+        "weaponType": "Two-handed axe",
+        "speed": "3.80",
+        "dps": "28.9 DPS",
+        "source": {
+          "kind": "dungeon",
+          "title": "Overlord Ramtusk",
+          "detail": "Razorfen Kraul, levels 30–40"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "31–32",
+        "itemId": 6687,
+        "name": "Corpsemaker",
+        "icon": "inv_weapon_halbard_01",
+        "weaponType": "Weapon",
+        "speed": "",
+        "dps": "",
+        "source": {
+          "kind": "drop",
+          "title": "",
+          "detail": ""
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "37–38",
+        "itemId": 6830,
+        "name": "Bonebiter",
+        "icon": "inv_axe_04",
+        "weaponType": "Two-handed axe",
+        "speed": "3.40",
+        "dps": "38.8 DPS",
+        "source": {
+          "kind": "quest",
+          "title": "In the Name of the Light",
+          "detail": "Dungeon quest, Scarlet Monastery, level 40"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "43–44",
+        "itemId": 6830,
+        "name": "Bonebiter",
+        "icon": "inv_axe_04",
+        "weaponType": "Weapon",
+        "speed": "",
+        "dps": "",
+        "source": {
+          "kind": "drop",
+          "title": "",
+          "detail": ""
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "45–46",
+        "itemId": 10799,
+        "name": "Headspike",
+        "icon": "inv_spear_06",
+        "weaponType": "Polearm",
+        "speed": "3.00",
+        "dps": "44.2 DPS",
+        "source": {
+          "kind": "dungeon",
+          "title": "Atal'alarion",
+          "detail": "The Temple of Atal'Hakkar, levels 50–60"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "47–48",
+        "itemId": 10799,
+        "name": "Headspike",
+        "icon": "inv_spear_06",
+        "weaponType": "Weapon",
+        "speed": "",
+        "dps": "",
+        "source": {
+          "kind": "drop",
+          "title": "",
+          "detail": ""
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "49–50",
+        "itemId": 11608,
+        "name": "Dark Iron Pulverizer",
+        "icon": "inv_hammer_09",
+        "weaponType": "Two-handed mace",
+        "speed": "3.70",
+        "dps": "47.4 DPS",
+        "source": {
+          "kind": "crafted",
+          "title": "",
+          "detail": "Plan drops in Blackrock Depths"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "51–52",
+        "itemId": 12776,
+        "name": "Enchanted Battlehammer",
+        "icon": "inv_hammer_05",
+        "weaponType": "Two-handed mace",
+        "speed": "3.50",
+        "dps": "48.3 DPS",
+        "source": {
+          "kind": "crafted",
+          "title": "",
+          "detail": "Plan from Master Hammersmith quest in Stratholme"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "53–54",
+        "itemId": 12776,
+        "name": "Enchanted Battlehammer",
+        "icon": "inv_hammer_05",
+        "weaponType": "Weapon",
+        "speed": "",
+        "dps": "",
+        "source": {
+          "kind": "drop",
+          "title": "",
+          "detail": ""
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "57–58",
+        "itemId": 12784,
+        "name": "Arcanite Reaper",
+        "icon": "inv_axe_09",
+        "weaponType": "Two-handed axe",
+        "speed": "3.80",
+        "dps": "53.8 DPS",
+        "source": {
+          "kind": "crafted",
+          "title": "",
+          "detail": "Recipe from a drop"
+        },
+        "alts": []
+      }
+    ]
+  },
+  "warlock": {
+    "classId": "warlock",
+    "tracks": [
+      {
+        "id": "primary",
+        "name": "Primary Path"
+      }
+    ],
+    "levels": [
+      {
+        "levelBracket": "1–2",
+        "itemId": 247789,
+        "name": "Novice's Practice Wand",
+        "icon": "inv_weapon_shortblade_09",
+        "weaponType": "Wand",
+        "speed": "1.50",
+        "dps": "4.0 DPS",
+        "source": {
+          "kind": "crafted",
+          "title": "",
+          "detail": "Available on learning Enchanting"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "5–6",
+        "itemId": 11287,
+        "name": "Lesser Magic Wand",
+        "icon": "inv_staff_02",
+        "weaponType": "Wand",
+        "speed": "1.50",
+        "dps": "11.3 DPS",
+        "source": {
+          "kind": "crafted",
+          "title": "",
+          "detail": "Trainer recipe"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "11–12",
+        "itemId": 15397,
+        "name": "Oakthrush Staff",
+        "icon": "inv_staff_08",
+        "weaponType": "Staff",
+        "speed": "2.80",
+        "dps": "7.1 DPS",
+        "source": {
+          "kind": "quest",
+          "title": "The Fragments Within",
+          "detail": "Elite quest, Darkshore, level 14"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "13–14",
+        "itemId": 270228,
+        "name": "Golemheart Stave",
+        "icon": "inv_staff_18",
+        "weaponType": "Staff",
+        "speed": "3.20",
+        "dps": "11.9 DPS",
+        "source": {
+          "kind": "dungeon",
+          "title": "Plunder",
+          "detail": "The Hall of Thanes, levels 13–18"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "17–18",
+        "itemId": 5201,
+        "name": "Emberstone Staff",
+        "icon": "inv_staff_13",
+        "weaponType": "Staff",
+        "speed": "3.00",
+        "dps": "14.2 DPS",
+        "source": {
+          "kind": "dungeon",
+          "title": "Captain Greenskin",
+          "detail": "The Deadmines, levels 18–23"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "23–24",
+        "itemId": 15109,
+        "name": "Staff of Soran'ruk",
+        "icon": "inv_staff_09",
+        "weaponType": "Staff",
+        "speed": "2.90",
+        "dps": "15.7 DPS",
+        "source": {
+          "kind": "quest",
+          "title": "The Orb of Soran'ruk",
+          "detail": "Warlock quest, level 25"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "25–26",
+        "itemId": 15109,
+        "name": "Staff of Soran'ruk",
+        "icon": "inv_staff_09",
+        "weaponType": "Weapon",
+        "speed": "",
+        "dps": "",
+        "source": {
+          "kind": "drop",
+          "title": "",
+          "detail": ""
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "27–28",
+        "itemId": 15109,
+        "name": "Staff of Soran'ruk",
+        "icon": "inv_staff_09",
+        "weaponType": "Weapon",
+        "speed": "",
+        "dps": "",
+        "source": {
+          "kind": "drop",
+          "title": "",
+          "detail": ""
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "33–34",
+        "itemId": 7713,
+        "name": "Illusionary Rod",
+        "icon": "inv_wand_04",
+        "weaponType": "Staff",
+        "speed": "3.40",
+        "dps": "25.7 DPS",
+        "source": {
+          "kind": "dungeon",
+          "title": "Arcanist Doan",
+          "detail": "Scarlet Monastery, levels 26–45"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "37–38",
+        "itemId": 7713,
+        "name": "Illusionary Rod",
+        "icon": "inv_wand_04",
+        "weaponType": "Weapon",
+        "speed": "",
+        "dps": "",
+        "source": {
+          "kind": "drop",
+          "title": "",
+          "detail": ""
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "39–40",
+        "itemId": 7713,
+        "name": "Illusionary Rod",
+        "icon": "inv_wand_04",
+        "weaponType": "Weapon",
+        "speed": "",
+        "dps": "",
+        "source": {
+          "kind": "drop",
+          "title": "",
+          "detail": ""
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "43–44",
+        "itemId": 9527,
+        "name": "Spellshifter Rod",
+        "icon": "inv_wand_11",
+        "weaponType": "Staff",
+        "speed": "2.70",
+        "dps": "31.1 DPS",
+        "source": {
+          "kind": "quest",
+          "title": "Tiara of the Deep",
+          "detail": "Dungeon quest, Zul'Farrak, level 46"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "45–46",
+        "itemId": 9527,
+        "name": "Spellshifter Rod",
+        "icon": "inv_wand_11",
+        "weaponType": "Weapon",
+        "speed": "",
+        "dps": "",
+        "source": {
+          "kind": "drop",
+          "title": "",
+          "detail": ""
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "47–48",
+        "itemId": 11750,
+        "name": "Kindling Stave",
+        "icon": "inv_staff_18",
+        "weaponType": "Staff",
+        "speed": "2.90",
+        "dps": "34.1 DPS",
+        "source": {
+          "kind": "dungeon",
+          "title": "Pyromancer Loregrain",
+          "detail": "Blackrock Depths, levels 52–60"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "49–50",
+        "itemId": 20536,
+        "name": "Soul Harvester",
+        "icon": "inv_sword_48",
+        "weaponType": "Staff",
+        "speed": "3.30",
+        "dps": "33.5 DPS",
+        "source": {
+          "kind": "quest",
+          "title": "Trolls of a Feather",
+          "detail": "Warlock quest, level 52"
+        },
+        "alts": []
+      }
+    ]
+  },
+  "priest": {
+    "classId": "priest",
+    "tracks": [
+      {
+        "id": "primary",
+        "name": "Primary Path"
+      }
+    ],
+    "levels": [
+      {
+        "levelBracket": "1–2",
+        "itemId": 247789,
+        "name": "Novice's Practice Wand",
+        "icon": "inv_weapon_shortblade_09",
+        "weaponType": "Wand",
+        "speed": "1.50",
+        "dps": "4.0 DPS",
+        "source": {
+          "kind": "crafted",
+          "title": "",
+          "detail": "Available on learning Enchanting"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "5–6",
+        "itemId": 11287,
+        "name": "Lesser Magic Wand",
+        "icon": "inv_staff_02",
+        "weaponType": "Wand",
+        "speed": "1.50",
+        "dps": "11.3 DPS",
+        "source": {
+          "kind": "crafted",
+          "title": "",
+          "detail": "Trainer recipe"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "11–12",
+        "itemId": 15397,
+        "name": "Oakthrush Staff",
+        "icon": "inv_staff_08",
+        "weaponType": "Staff",
+        "speed": "2.80",
+        "dps": "7.1 DPS",
+        "source": {
+          "kind": "quest",
+          "title": "The Fragments Within",
+          "detail": "Elite quest, Darkshore, level 14"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "13–14",
+        "itemId": 270228,
+        "name": "Golemheart Stave",
+        "icon": "inv_staff_18",
+        "weaponType": "Staff",
+        "speed": "3.20",
+        "dps": "11.9 DPS",
+        "source": {
+          "kind": "dungeon",
+          "title": "Plunder",
+          "detail": "The Hall of Thanes, levels 13–18"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "17–18",
+        "itemId": 6631,
+        "name": "Living Root",
+        "icon": "inv_staff_25",
+        "weaponType": "Staff",
+        "speed": "2.90",
+        "dps": "14.7 DPS",
+        "source": {
+          "kind": "dungeon",
+          "title": "Verdan the Everliving",
+          "detail": "Wailing Caverns, levels 15–25"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "19–20",
+        "itemId": 2042,
+        "name": "Staff of Westfall",
+        "icon": "inv_staff_10",
+        "weaponType": "Staff",
+        "speed": "3.00",
+        "dps": "15.2 DPS",
+        "source": {
+          "kind": "quest",
+          "title": "The Defias Brotherhood",
+          "detail": "Dungeon quest, The Deadmines, level 22"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "21–22",
+        "itemId": 6318,
+        "name": "Odo's Ley Staff",
+        "icon": "inv_staff_27",
+        "weaponType": "Staff",
+        "speed": "2.90",
+        "dps": "16.0 DPS",
+        "source": {
+          "kind": "dungeon",
+          "title": "Odo the Blindwatcher",
+          "detail": "Shadowfang Keep, levels 22–30"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "25–26",
+        "itemId": 6318,
+        "name": "Odo's Ley Staff",
+        "icon": "inv_staff_27",
+        "weaponType": "Weapon",
+        "speed": "",
+        "dps": "",
+        "source": {
+          "kind": "drop",
+          "title": "",
+          "detail": ""
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "27–28",
+        "itemId": 6318,
+        "name": "Odo's Ley Staff",
+        "icon": "inv_staff_27",
+        "weaponType": "Weapon",
+        "speed": "",
+        "dps": "",
+        "source": {
+          "kind": "drop",
+          "title": "",
+          "detail": ""
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "29–30",
+        "itemId": 271767,
+        "name": "Healer's Staff",
+        "icon": "inv_staff_10",
+        "weaponType": "Staff",
+        "speed": "2.60",
+        "dps": "20.8 DPS",
+        "source": {
+          "kind": "quest",
+          "title": "Prehistoric Prism",
+          "detail": "Dungeon quest, Excavation Site: Wetlands, level 31"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "33–34",
+        "itemId": 7713,
+        "name": "Illusionary Rod",
+        "icon": "inv_wand_04",
+        "weaponType": "Staff",
+        "speed": "3.40",
+        "dps": "25.7 DPS",
+        "source": {
+          "kind": "dungeon",
+          "title": "Arcanist Doan",
+          "detail": "Scarlet Monastery, levels 26–45"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "37–38",
+        "itemId": 7713,
+        "name": "Illusionary Rod",
+        "icon": "inv_wand_04",
+        "weaponType": "Weapon",
+        "speed": "",
+        "dps": "",
+        "source": {
+          "kind": "drop",
+          "title": "",
+          "detail": ""
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "39–40",
+        "itemId": 7713,
+        "name": "Illusionary Rod",
+        "icon": "inv_wand_04",
+        "weaponType": "Weapon",
+        "speed": "",
+        "dps": "",
+        "source": {
+          "kind": "drop",
+          "title": "",
+          "detail": ""
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "43–44",
+        "itemId": 9527,
+        "name": "Spellshifter Rod",
+        "icon": "inv_wand_11",
+        "weaponType": "Staff",
+        "speed": "2.70",
+        "dps": "31.1 DPS",
+        "source": {
+          "kind": "quest",
+          "title": "Tiara of the Deep",
+          "detail": "Dungeon quest, Zul'Farrak, level 46"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "45–46",
+        "itemId": 9527,
+        "name": "Spellshifter Rod",
+        "icon": "inv_wand_11",
+        "weaponType": "Weapon",
+        "speed": "",
+        "dps": "",
+        "source": {
+          "kind": "drop",
+          "title": "",
+          "detail": ""
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "47–48",
+        "itemId": 11750,
+        "name": "Kindling Stave",
+        "icon": "inv_staff_18",
+        "weaponType": "Staff",
+        "speed": "2.90",
+        "dps": "34.1 DPS",
+        "source": {
+          "kind": "dungeon",
+          "title": "Pyromancer Loregrain",
+          "detail": "Blackrock Depths, levels 52–60"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "53–54",
+        "itemId": 274420,
+        "name": "Wisepaw Totem",
+        "icon": "inv_staff_51",
+        "weaponType": "Staff",
+        "speed": "3.20",
+        "dps": "36.9 DPS",
+        "source": {
+          "kind": "vendor",
+          "title": "Dala Fairmaw",
+          "detail": "Vendor, Mount Hyjal"
+        },
+        "alts": []
+      }
+    ]
+  },
+  "druid": {
+    "classId": "druid",
+    "tracks": [
+      {
+        "id": "primary",
+        "name": "Primary Path"
+      }
+    ],
+    "levels": [
+      {
+        "levelBracket": "1–2",
+        "itemId": 2132,
+        "name": "Short Staff",
+        "icon": "inv_staff_02",
+        "weaponType": "Staff",
+        "speed": "3.20",
+        "dps": "2.0 DPS",
+        "source": {
+          "kind": "vendor",
+          "title": "Weapon vendors",
+          "detail": "Sold in towns"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "7–8",
+        "itemId": 9603,
+        "name": "Gritroot Staff",
+        "icon": "inv_staff_22",
+        "weaponType": "Staff",
+        "speed": "2.60",
+        "dps": "5.4 DPS",
+        "source": {
+          "kind": "quest",
+          "title": "The Relics of Wakening",
+          "detail": "Elite quest, Teldrassil, level 9"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "11–12",
+        "itemId": 15397,
+        "name": "Oakthrush Staff",
+        "icon": "inv_staff_08",
+        "weaponType": "Staff",
+        "speed": "2.80",
+        "dps": "7.1 DPS",
+        "source": {
+          "kind": "quest",
+          "title": "The Fragments Within",
+          "detail": "Elite quest, Darkshore, level 14"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "13–14",
+        "itemId": 270228,
+        "name": "Golemheart Stave",
+        "icon": "inv_staff_18",
+        "weaponType": "Staff",
+        "speed": "3.20",
+        "dps": "11.9 DPS",
+        "source": {
+          "kind": "dungeon",
+          "title": "Plunder",
+          "detail": "The Hall of Thanes, levels 13–18"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "17–18",
+        "itemId": 6631,
+        "name": "Living Root",
+        "icon": "inv_staff_25",
+        "weaponType": "Staff",
+        "speed": "2.90",
+        "dps": "14.7 DPS",
+        "source": {
+          "kind": "dungeon",
+          "title": "Verdan the Everliving",
+          "detail": "Wailing Caverns, levels 15–25"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "19–20",
+        "itemId": 2042,
+        "name": "Staff of Westfall",
+        "icon": "inv_staff_10",
+        "weaponType": "Staff",
+        "speed": "3.00",
+        "dps": "15.2 DPS",
+        "source": {
+          "kind": "quest",
+          "title": "The Defias Brotherhood",
+          "detail": "Dungeon quest, The Deadmines, level 22"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "21–22",
+        "itemId": 6318,
+        "name": "Odo's Ley Staff",
+        "icon": "inv_staff_27",
+        "weaponType": "Staff",
+        "speed": "2.90",
+        "dps": "16.0 DPS",
+        "source": {
+          "kind": "dungeon",
+          "title": "Odo the Blindwatcher",
+          "detail": "Shadowfang Keep, levels 22–30"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "29–30",
+        "itemId": 271767,
+        "name": "Healer's Staff",
+        "icon": "inv_staff_10",
+        "weaponType": "Staff",
+        "speed": "2.60",
+        "dps": "20.8 DPS",
+        "source": {
+          "kind": "quest",
+          "title": "Prehistoric Prism",
+          "detail": "Dungeon quest, Excavation Site: Wetlands, level 31"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "33–34",
+        "itemId": 7713,
+        "name": "Illusionary Rod",
+        "icon": "inv_wand_04",
+        "weaponType": "Staff",
+        "speed": "3.40",
+        "dps": "25.7 DPS",
+        "source": {
+          "kind": "dungeon",
+          "title": "Arcanist Doan",
+          "detail": "Scarlet Monastery, levels 26–45"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "43–44",
+        "itemId": 9527,
+        "name": "Spellshifter Rod",
+        "icon": "inv_wand_11",
+        "weaponType": "Staff",
+        "speed": "2.70",
+        "dps": "31.1 DPS",
+        "source": {
+          "kind": "quest",
+          "title": "Tiara of the Deep",
+          "detail": "Dungeon quest, Zul'Farrak, level 46"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "47–48",
+        "itemId": 11750,
+        "name": "Kindling Stave",
+        "icon": "inv_staff_18",
+        "weaponType": "Staff",
+        "speed": "2.90",
+        "dps": "34.1 DPS",
+        "source": {
+          "kind": "dungeon",
+          "title": "Pyromancer Loregrain",
+          "detail": "Blackrock Depths, levels 52–60"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "53–54",
+        "itemId": 274420,
+        "name": "Wisepaw Totem",
+        "icon": "inv_staff_51",
+        "weaponType": "Staff",
+        "speed": "3.20",
+        "dps": "36.9 DPS",
+        "source": {
+          "kind": "vendor",
+          "title": "Dala Fairmaw",
+          "detail": "Vendor, Mount Hyjal"
+        },
+        "alts": []
+      }
+    ]
+  },
+  "rogue": {
+    "classId": "rogue",
+    "tracks": [
+      {
+        "id": "primary",
+        "name": "Primary Path"
+      }
+    ],
+    "levels": [
+      {
+        "levelBracket": "1–2",
+        "itemId": 2224,
+        "name": "Militia Dagger",
+        "icon": "inv_weapon_shortblade_05",
+        "weaponType": "Dagger",
+        "speed": "1.50",
+        "dps": "2.0 DPS",
+        "source": {
+          "kind": "quest",
+          "title": "Brotherhood of Thieves",
+          "detail": "Quest, Elwynn Forest, level 4"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "3–4",
+        "itemId": 2494,
+        "name": "Stiletto",
+        "icon": "inv_weapon_shortblade_05",
+        "weaponType": "Dagger",
+        "speed": "1.50",
+        "dps": "3.3 DPS",
+        "source": {
+          "kind": "vendor",
+          "title": "Weapon vendors",
+          "detail": "Sold in towns"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "5–6",
+        "itemId": 7166,
+        "name": "Copper Dagger",
+        "icon": "inv_weapon_shortblade_14",
+        "weaponType": "Dagger",
+        "speed": "1.70",
+        "dps": "5.9 DPS",
+        "source": {
+          "kind": "crafted",
+          "title": "",
+          "detail": "Trainer recipe"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "7–8",
+        "itemId": 248007,
+        "name": "Militia Shortblade",
+        "icon": "inv_weapon_shortblade_15",
+        "weaponType": "Dagger",
+        "speed": "2.00",
+        "dps": "6.5 DPS",
+        "source": {
+          "kind": "quest",
+          "title": "Rare Books",
+          "detail": "Quest, Elwynn Forest, level 7"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "9–10",
+        "itemId": 7298,
+        "name": "Blade of Cunning",
+        "icon": "inv_weapon_shortblade_26",
+        "weaponType": "Dagger",
+        "speed": "2.00",
+        "dps": "6.8 DPS",
+        "source": {
+          "kind": "quest",
+          "title": "Snatch and Grab",
+          "detail": "Rogue quest, Stormwind City, level 10"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "11–12",
+        "itemId": 7298,
+        "name": "Blade of Cunning",
+        "icon": "inv_weapon_shortblade_26",
+        "weaponType": "Weapon",
+        "speed": "",
+        "dps": "",
+        "source": {
+          "kind": "drop",
+          "title": "",
+          "detail": ""
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "13–14",
+        "itemId": 2208,
+        "name": "Poniard",
+        "icon": "inv_sword_12",
+        "weaponType": "Dagger",
+        "speed": "1.30",
+        "dps": "8.5 DPS",
+        "source": {
+          "kind": "vendor",
+          "title": "Weapon vendors",
+          "detail": "Sold in towns"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "15–16",
+        "itemId": 6448,
+        "name": "Tail Spike",
+        "icon": "inv_weapon_shortblade_10",
+        "weaponType": "Dagger",
+        "speed": "1.80",
+        "dps": "13.9 DPS",
+        "source": {
+          "kind": "dungeon",
+          "title": "Skum",
+          "detail": "Wailing Caverns, levels 15–25"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "17–18",
+        "itemId": 6448,
+        "name": "Tail Spike",
+        "icon": "inv_weapon_shortblade_10",
+        "weaponType": "Weapon",
+        "speed": "",
+        "dps": "",
+        "source": {
+          "kind": "drop",
+          "title": "",
+          "detail": ""
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "21–22",
+        "itemId": 6448,
+        "name": "Tail Spike",
+        "icon": "inv_weapon_shortblade_10",
+        "weaponType": "Weapon",
+        "speed": "",
+        "dps": "",
+        "source": {
+          "kind": "drop",
+          "title": "",
+          "detail": ""
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "23–24",
+        "itemId": 6220,
+        "name": "Meteor Shard",
+        "icon": "inv_weapon_shortblade_25",
+        "weaponType": "Dagger",
+        "speed": "1.80",
+        "dps": "17.8 DPS",
+        "source": {
+          "kind": "dungeon",
+          "title": "Archmage Arugal",
+          "detail": "Shadowfang Keep, levels 22–30"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "27–28",
+        "itemId": 9453,
+        "name": "Toxic Revenger",
+        "icon": "inv_weapon_shortblade_02",
+        "weaponType": "Dagger",
+        "speed": "1.90",
+        "dps": "20.5 DPS",
+        "source": {
+          "kind": "dungeon",
+          "title": "Viscous Fallout",
+          "detail": "Gnomeregan, levels 29–38"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "31–32",
+        "itemId": 9453,
+        "name": "Toxic Revenger",
+        "icon": "inv_weapon_shortblade_02",
+        "weaponType": "Weapon",
+        "speed": "",
+        "dps": "",
+        "source": {
+          "kind": "drop",
+          "title": "",
+          "detail": ""
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "35–36",
+        "itemId": 250607,
+        "name": "Mithril Shortsword",
+        "icon": "inv_weapon_shortblade_05",
+        "weaponType": "Dagger",
+        "speed": "1.70",
+        "dps": "22.9 DPS",
+        "source": {
+          "kind": "crafted",
+          "title": "",
+          "detail": "Recipe from a drop"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "37–38",
+        "itemId": 6831,
+        "name": "Black Menace",
+        "icon": "inv_sword_13",
+        "weaponType": "Dagger",
+        "speed": "1.50",
+        "dps": "29.7 DPS",
+        "source": {
+          "kind": "quest",
+          "title": "In the Name of the Light",
+          "detail": "Dungeon quest, Scarlet Monastery, level 40"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "43–44",
+        "itemId": 9467,
+        "name": "Gahz'rilla Fang",
+        "icon": "inv_misc_monsterfang_01",
+        "weaponType": "Dagger",
+        "speed": "1.80",
+        "dps": "32.2 DPS",
+        "source": {
+          "kind": "dungeon",
+          "title": "Gahz'rilla",
+          "detail": "Zul'Farrak, levels 44–54"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "45–46",
+        "itemId": 9467,
+        "name": "Gahz'rilla Fang",
+        "icon": "inv_misc_monsterfang_01",
+        "weaponType": "Weapon",
+        "speed": "",
+        "dps": "",
+        "source": {
+          "kind": "drop",
+          "title": "",
+          "detail": ""
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "47–48",
+        "itemId": 9467,
+        "name": "Gahz'rilla Fang",
+        "icon": "inv_misc_monsterfang_01",
+        "weaponType": "Weapon",
+        "speed": "",
+        "dps": "",
+        "source": {
+          "kind": "drop",
+          "title": "",
+          "detail": ""
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "51–52",
+        "itemId": 10750,
+        "name": "Lifeforce Dirk",
+        "icon": "inv_sword_21",
+        "weaponType": "Dagger",
+        "speed": "1.60",
+        "dps": "35.9 DPS",
+        "source": {
+          "kind": "quest",
+          "title": "The God Hakkar",
+          "detail": "Dungeon quest, The Temple of Atal'Hakkar, level 53"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "53–54",
+        "itemId": 250616,
+        "name": "Bold Dirk",
+        "icon": "inv_weapon_shortblade_01",
+        "weaponType": "Dagger",
+        "speed": "1.80",
+        "dps": "35.3 DPS",
+        "source": {
+          "kind": "crafted",
+          "title": "",
+          "detail": "Recipe from a vendor"
+        },
+        "alts": []
+      },
+      {
+        "levelBracket": "57–58",
+        "itemId": 12783,
+        "name": "Heartseeker",
+        "icon": "inv_sword_17",
+        "weaponType": "Dagger",
+        "speed": "1.90",
+        "dps": "41.3 DPS",
+        "source": {
+          "kind": "crafted",
+          "title": "",
+          "detail": "Recipe from a drop"
+        },
+        "alts": []
+      }
+    ]
+  }
+}

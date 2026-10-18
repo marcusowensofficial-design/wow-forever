@@ -1,0 +1,3387 @@
+{
+  "hunter": [
+    {
+      "id": "hunter-macro-1",
+      "title": "Mark and send pet",
+      "desc": "Mark your target and send your pet at it with one button.",
+      "category": "Pet & Utility",
+      "code": "#showtooltip Hunter's Mark /petattack /cast Hunter's Mark"
+    },
+    {
+      "id": "hunter-macro-2",
+      "title": "Mend your pet",
+      "desc": "Heal your pet while keeping your enemy selected.",
+      "category": "Pet & Utility",
+      "code": "#showtooltip Mend Pet /cast [@pet,exists,nodead] Mend Pet"
+    },
+    {
+      "id": "hunter-macro-3",
+      "title": "Send your pet at your mouseover",
+      "desc": "Your pet attacks the enemy under your mouse without changing your target; with nothing hovered it goes for your target.",
+      "category": "Pet & Utility",
+      "code": "/petattack [@mouseover,harm,nodead][]"
+    },
+    {
+      "id": "hunter-macro-4",
+      "title": "Pet attack, Shift to recall",
+      "desc": "Send your pet at your target. Hold Shift to make it passive and bring it back; recalling never sends another attack command in the same press.",
+      "category": "Pet & Utility",
+      "code": "/petattack [nomod:shift,harm,nodead] /petpassive [mod:shift] /petfollow [mod:shift]"
+    },
+    {
+      "id": "hunter-macro-5",
+      "title": "Call, revive or mend your pet",
+      "desc": "Mends a healthy pet, calls it if it isn't out and revives it if it's dead.",
+      "category": "Pet & Utility",
+      "code": "#showtooltip /cast [@pet,dead][mod:shift] Revive Pet; [nopet] Call Pet; Mend Pet"
+    },
+    {
+      "id": "hunter-macro-6",
+      "title": "Feed your pet outside combat",
+      "desc": "Casts Feed Pet and hands over the food, only when your pet is out and you're out of combat.",
+      "category": "Pet & Utility",
+      "code": "#showtooltip Feed Pet /cast [pet,nocombat] Feed Pet /use [pet,nocombat] Chunk of Boar Meat"
+    },
+    {
+      "id": "hunter-macro-7",
+      "title": "Aspect of the Hawk after Cheetah",
+      "desc": "Drops Aspect of the Cheetah and puts Hawk on, without toggling Hawk off if it's already up.",
+      "category": "General",
+      "code": "#showtooltip Aspect of the Hawk /cancelaura Aspect of the Cheetah /cast !Aspect of the Hawk"
+    },
+    {
+      "id": "hunter-macro-8",
+      "title": "Cheetah, or Pack on right-click",
+      "desc": "Left-click for Aspect of the Cheetah and right-click for Aspect of the Pack when the group needs to move.",
+      "category": "General",
+      "code": "#showtooltip Aspect of the Cheetah /cast [button:2] !Aspect of the Pack; !Aspect of the Cheetah"
+    },
+    {
+      "id": "hunter-macro-9",
+      "title": "Tracking on one button",
+      "desc": "Switch tracking with modifier keys instead of opening the spellbook.",
+      "category": "General",
+      "code": "#showtooltip /cast [mod:shift] Track Beasts; [mod:ctrl] Track Undead; [mod:alt] Track Hidden; Track Humanoids"
+    },
+    {
+      "id": "hunter-macro-10",
+      "title": "Feign Death that lets combat drop",
+      "desc": "Tells your pet to stand down and stops your shooting first, then feigns only if you're in combat.",
+      "category": "General",
+      "code": "#showtooltip Feign Death /petpassive /petfollow /stopattack /stopcasting /cast [combat] Feign Death"
+    },
+    {
+      "id": "hunter-macro-11",
+      "title": "Cancel Cheetah or Pack",
+      "desc": "Remove either running aspect immediately without spending mana on another aspect. Useful before incoming damage can daze you or your group.",
+      "category": "General",
+      "code": "/cancelaura Aspect of the Cheetah /cancelaura Aspect of the Pack"
+    },
+    {
+      "id": "hunter-macro-12",
+      "title": "Chain Eagle Eye viewpoints",
+      "desc": "Open Eagle Eye's targeting circle without cancelling the existing viewpoint. Choose the next spot with a click; movement or Escape ends scouting.",
+      "category": "General",
+      "code": "#showtooltip Eagle Eye /cast !Eagle Eye"
+    },
+    {
+      "id": "hunter-macro-13",
+      "title": "Intimidation and pet attack",
+      "desc": "Send your pet; its next successful attack stuns the enemy.",
+      "category": "Pet & Utility",
+      "code": "#showtooltip Intimidation /petattack /cast Intimidation"
+    },
+    {
+      "id": "hunter-macro-14",
+      "title": "Call your pet back",
+      "desc": "Stop its attack and bring it back before it pulls more enemies.",
+      "category": "Pet & Utility",
+      "code": "/petpassive /petfollow"
+    },
+    {
+      "id": "hunter-macro-15",
+      "title": "Arcane Shot or Summon Hawk",
+      "desc": "Fires Arcane Shot, or sends a hawk at your target or mouseover; both use one cooldown, so you pick one per window.",
+      "category": "Combat & Rotations",
+      "code": "#showtooltip /cast [mod:ctrl,@mouseover,harm,nodead] Summon Hawk; [mod:shift] Summon Hawk; Arcane Shot /cast !Auto Shot"
+    },
+    {
+      "id": "hunter-macro-16",
+      "title": "Bestial Wrath with a trinket",
+      "desc": "Sends your pet in, uses the trinket in your first slot and rages your pet.",
+      "category": "General",
+      "code": "#showtooltip Bestial Wrath /petattack /use 13 /cast [mod:shift] Rapid Fire /cast Bestial Wrath"
+    },
+    {
+      "id": "hunter-macro-17",
+      "title": "Growl on when solo, off in a group",
+      "desc": "Sets your pet's Growl autocast for the situation: on when you're alone, off in a party or raid.",
+      "category": "General",
+      "code": "/petautocastoff [group] Growl /petautocaston [nogroup] Growl"
+    },
+    {
+      "id": "hunter-macro-18",
+      "title": "Pet stance on one key",
+      "desc": "Change your pet's stance without opening the pet bar.",
+      "category": "Pet & Utility",
+      "code": "/petdefensive [nomod] /petpassive [mod:shift] /petaggressive [mod:ctrl]"
+    },
+    {
+      "id": "hunter-macro-19",
+      "title": "Beast Lore, then Tame Beast",
+      "desc": "The first press reads the beast's diet and damage, the second starts taming; a new target starts over.",
+      "category": "Pet & Utility",
+      "code": "#showtooltip /castsequence reset=target Beast Lore, Tame Beast"
+    },
+    {
+      "id": "hunter-macro-20",
+      "title": "Tranquilizing Shot on your mouseover",
+      "desc": "Removes a Frenzy effect from the enemy creature under your mouse, or from your target if you aren't hovering one.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Tranquilizing Shot /cast [@mouseover,harm,nodead][] Tranquilizing Shot"
+    },
+    {
+      "id": "hunter-macro-21",
+      "title": "Park your pet and scout",
+      "desc": "Tells your pet to stay, then lets you see through its eyes for 2 minutes.",
+      "category": "Pet & Utility",
+      "code": "#showtooltip Eyes of the Beast /petstay /cast Eyes of the Beast"
+    },
+    {
+      "id": "hunter-macro-22",
+      "title": "Concussive Shot pull with your pet",
+      "desc": "Slows the enemy, sends your pet in and keeps Auto Shot running.",
+      "category": "Pet & Utility",
+      "code": "#showtooltip Concussive Shot /petattack /cast Concussive Shot /cast !Auto Shot"
+    },
+    {
+      "id": "hunter-macro-23",
+      "title": "Scare Beast on target or mouseover",
+      "desc": "Scares a beast for up to 10 seconds; hold Shift to scare the beast under your mouse.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Scare Beast /cast [mod:shift,@mouseover,harm,nodead] Scare Beast; Scare Beast"
+    },
+    {
+      "id": "hunter-macro-24",
+      "title": "Send your pet with Dash, Dive or Charge",
+      "desc": "Send your pet at a hostile mouseover or your target, then request its movement ability. The pet uses whichever listed ability it has learned.",
+      "category": "Pet & Utility",
+      "code": "/petattack [@mouseover,harm,nodead][harm,nodead] /cast [@pettarget,harm,nodead] Charge /cast Dash /cast Dive"
+    },
+    {
+      "id": "hunter-macro-25",
+      "title": "Start Auto Shot",
+      "desc": "Find an enemy if you have no valid target, then start shooting.",
+      "category": "Combat & Rotations",
+      "code": "#showtooltip Auto Shot /targetenemy [noexists][dead][help] /cast !Auto Shot"
+    },
+    {
+      "id": "hunter-macro-26",
+      "title": "Aimed Shot and pet attack",
+      "desc": "Send your pet when you begin the Aimed Shot cast.",
+      "category": "Pet & Utility",
+      "code": "#showtooltip Aimed Shot /petattack /cast Aimed Shot"
+    },
+    {
+      "id": "hunter-macro-27",
+      "title": "Aimed Shot or Multi-Shot on one key",
+      "desc": "Aimed Shot and Multi-Shot share a 6 second cooldown in Forever, so this gives you one or the other each window.",
+      "category": "Combat & Rotations",
+      "code": "#showtooltip /cast [mod:shift] Multi-Shot; [mod:ctrl,@mouseover,harm,nodead] Multi-Shot; Aimed Shot /cast !Auto Shot"
+    },
+    {
+      "id": "hunter-macro-28",
+      "title": "Sniper Shot and Auto Shot",
+      "desc": "Cast Sniper Shot at your target or Shift-mouseover and keep Auto Shot on. The October 1 update sets a 45-yard range and +10 yards for your next three Shots.",
+      "category": "Combat & Rotations",
+      "code": "#showtooltip Sniper Shot /cast [mod:shift,@mouseover,harm,nodead][] Sniper Shot /cast !Auto Shot"
+    },
+    {
+      "id": "hunter-macro-29",
+      "title": "Rapid Fire with both trinkets",
+      "desc": "Uses both trinkets and Rapid Fire together, and makes sure Auto Shot is running.",
+      "category": "General",
+      "code": "#showtooltip Rapid Fire /use 13 /use 14 /cast Rapid Fire /cast !Auto Shot"
+    },
+    {
+      "id": "hunter-macro-30",
+      "title": "Drop or call your pet for Lone Wolf",
+      "desc": "Calls your pet or dismisses it so you can fight petless for Lone Wolf's 20% damage; dismissing costs the pet 50 happiness.",
+      "category": "Pet & Utility",
+      "code": "#showtooltip /cast [mod:shift] Revive Pet; [nopet] Call Pet; Dismiss Pet"
+    },
+    {
+      "id": "hunter-macro-31",
+      "title": "Serpent Sting on target or mouseover",
+      "desc": "Puts Serpent Sting on your target, or on the enemy under your mouse with Shift, and keeps Auto Shot on.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Serpent Sting /cast [mod:shift,@mouseover,harm,nodead] Serpent Sting; Serpent Sting /cast !Auto Shot"
+    },
+    {
+      "id": "hunter-macro-32",
+      "title": "Distracting Shot on your mouseover",
+      "desc": "Pull a loose enemy off a groupmate by hovering it, or hit your target if nothing is hovered.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Distracting Shot /cast [@mouseover,harm,nodead][] Distracting Shot"
+    },
+    {
+      "id": "hunter-macro-33",
+      "title": "Mark, Serpent Sting, Arcane Shot opener",
+      "desc": "Press up to three times for mark, sting and Arcane Shot while your pet attacks and Auto Shot stays on; a new target or 8 seconds resets it.",
+      "category": "Combat & Rotations",
+      "code": "#showtooltip /targetenemy [noexists][dead][help] /castsequence reset=target/8 Hunter's Mark, Serpent Sting, Arcane Shot /petattack /cast !Auto Shot"
+    },
+    {
+      "id": "hunter-macro-34",
+      "title": "Back to shooting after melee",
+      "desc": "Stops your melee swings, finds an enemy if you lost your target and turns Auto Shot back on.",
+      "category": "General",
+      "code": "#showtooltip Auto Shot /stopattack /targetenemy [noexists][dead][help] /cast !Auto Shot"
+    },
+    {
+      "id": "hunter-macro-35",
+      "title": "Lacerate and melee attack",
+      "desc": "Puts Lacerate's 21 second bleed on your target and keeps your melee swings going.",
+      "category": "General",
+      "code": "#showtooltip Lacerate /startattack /cast Lacerate"
+    },
+    {
+      "id": "hunter-macro-36",
+      "title": "Strider Kick",
+      "desc": "Kick in melee and run 30% faster for 3 seconds; it has an 8 second cooldown.",
+      "category": "General",
+      "code": "#showtooltip Strider Kick /startattack /cast Strider Kick"
+    },
+    {
+      "id": "hunter-macro-37",
+      "title": "Raptor Strike with Mongoose Bite",
+      "desc": "Queues Raptor Strike, starts your swings and casts Mongoose Bite when it's usable; Shift casts Counterattack after a parry instead.",
+      "category": "Combat & Rotations",
+      "code": "#showtooltip /stopcasting /cast Raptor Strike /startattack /cast [mod:shift] Counterattack; Mongoose Bite"
+    },
+    {
+      "id": "hunter-macro-38",
+      "title": "Mark it for Expose Prey",
+      "desc": "Marks your target so Expose Prey can light up Mongoose Bite, sends your pet and starts your swings once you're in range.",
+      "category": "General",
+      "code": "#showtooltip Hunter's Mark /petattack /startattack /cast Hunter's Mark"
+    },
+    {
+      "id": "hunter-macro-39",
+      "title": "Wing Clip and Raptor Strike",
+      "desc": "Slows your target in melee, queues Raptor Strike and keeps your swings going.",
+      "category": "Combat & Rotations",
+      "code": "#showtooltip Wing Clip /startattack /cast Raptor Strike /cast Wing Clip"
+    },
+    {
+      "id": "hunter-macro-40",
+      "title": "Immolation or Explosive Trap",
+      "desc": "Drop Immolation Trap, or Explosive Trap with Shift, at your feet during combat. Fire traps share a 30 sec cooldown, separate from Frost traps.",
+      "category": "General",
+      "code": "#showtooltip /cast [mod:shift] Explosive Trap; Immolation Trap"
+    },
+    {
+      "id": "hunter-macro-41",
+      "title": "Aspects for melee",
+      "desc": "Puts on Monkey for dodge or Beast for melee attack power on one key, with Hawk and Cheetah on the other modifiers.",
+      "category": "General",
+      "code": "#showtooltip /cast [mod:shift] !Aspect of the Beast; [mod:ctrl] !Aspect of the Hawk; [mod:alt] !Aspect of the Cheetah; !Aspect of the Monkey"
+    },
+    {
+      "id": "hunter-macro-42",
+      "title": "Deterrence with Aspect of the Monkey",
+      "desc": "Pops Deterrence and adds Monkey's dodge on top when enemies are on you in melee.",
+      "category": "General",
+      "code": "#showtooltip Deterrence /cast Deterrence /cast !Aspect of the Monkey"
+    },
+    {
+      "id": "hunter-macro-43",
+      "title": "Scatter Shot with your pet called off",
+      "desc": "Sends your pet away so it can't break the disorient, then Scatters your target, or your mouseover with Shift.",
+      "category": "Pet & Utility",
+      "code": "#showtooltip Scatter Shot /petstay [@pettarget,harm] /petpassive [@pettarget,harm] /cast [mod:shift,@mouseover,harm,nodead] Scatter Shot; Scatter Shot"
+    },
+    {
+      "id": "hunter-macro-44",
+      "title": "Scatter Shot, then Freezing Trap",
+      "desc": "Press once to Scatter Shot and again to drop Freezing Trap under the enemy at your feet; it resets after 6 seconds.",
+      "category": "Combat & Rotations",
+      "code": "#showtooltip /petpassive [@pettarget,harm] /castsequence reset=6 Scatter Shot, Freezing Trap"
+    },
+    {
+      "id": "hunter-macro-45",
+      "title": "Freezing Trap or Frost Trap",
+      "desc": "Drops Freezing Trap after calling off your pet and your shots, or Frost Trap with Shift while you keep fighting. Traps work during combat at your feet; Frost traps share a 30 sec cooldown, separate from Fire traps.",
+      "category": "General",
+      "code": "#showtooltip [mod:shift] Frost Trap; Freezing Trap /stopcasting /stopattack [nomod] /petstay [nomod,@pettarget,harm] /petpassive [nomod,@pettarget,harm] /cast [mod:shift] Frost Trap; Freezing Trap"
+    },
+    {
+      "id": "hunter-macro-46",
+      "title": "Trap, then Feign Death",
+      "desc": "Drops a trap and feigns in the same press so chasers run over it; your pet stands down first.",
+      "category": "General",
+      "code": "#showtooltip [mod:shift] Frost Trap; Freezing Trap /petpassive /petfollow /stopattack /stopcasting /cast [mod:shift] Frost Trap; Freezing Trap /cast [combat] Feign Death"
+    },
+    {
+      "id": "hunter-macro-47",
+      "title": "Concussive Shot or Wing Clip",
+      "desc": "Slows your target at range with Concussive Shot, your mouseover with Shift, or with Wing Clip in melee on Ctrl.",
+      "category": "Combat & Rotations",
+      "code": "#showtooltip Concussive Shot /cast [mod:shift,@mouseover,harm,nodead] Concussive Shot; [mod:ctrl] Wing Clip; Concussive Shot"
+    },
+    {
+      "id": "hunter-macro-48",
+      "title": "Black Arrow on target or mouseover",
+      "desc": "Slows the enemy by 70% and drains its mana; Shift sends it at your mouseover.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Black Arrow /cast [mod:shift,@mouseover,harm,nodead][] Black Arrow"
+    },
+    {
+      "id": "hunter-macro-49",
+      "title": "Viper Sting on healers and casters",
+      "desc": "Drains mana from your target, or your mouseover with Shift; Ctrl uses Scorpid Sting, which lowers their chance to hit in Forever.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Viper Sting /cast [mod:shift,@mouseover,harm,nodead] Viper Sting; [mod:ctrl] Scorpid Sting; Viper Sting"
+    },
+    {
+      "id": "hunter-macro-50",
+      "title": "Hunter's Mark on target or mouseover",
+      "desc": "Marks the enemy you hover with Shift; the beta tooltip says you can always see a marked target, even if it stealths.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Hunter's Mark /cast [mod:shift,@mouseover,harm,nodead][] Hunter's Mark"
+    },
+    {
+      "id": "hunter-macro-51",
+      "title": "Pet control on one key",
+      "desc": "Send your pet at your target or mouseover, call it back or park it, all on one key.",
+      "category": "Pet & Utility",
+      "code": "/petattack [mod:shift,@mouseover,harm,nodead][nomod] /petpassive [mod:ctrl] /petfollow [mod:ctrl] /petstay [mod:alt]"
+    },
+    {
+      "id": "hunter-macro-52",
+      "title": "Bestial Wrath and Intimidation",
+      "desc": "Sends your pet in, rages it and stuns the target with Intimidation, or your mouseover with Shift.",
+      "category": "General",
+      "code": "#showtooltip Intimidation /petattack [mod:shift,@mouseover,harm,nodead][] /cast Bestial Wrath /cast [mod:shift,@mouseover,harm,nodead][] Intimidation"
+    },
+    {
+      "id": "hunter-macro-53",
+      "title": "Flare or Enchanted Flare",
+      "desc": "Puts a Flare down where you click to expose hidden enemies; Shift uses Enchanted Flare, which also holds off magical darkness.",
+      "category": "General",
+      "code": "#showtooltip /cast [mod:shift] Enchanted Flare; Flare"
+    },
+    {
+      "id": "hunter-macro-54",
+      "title": "Aspect swap on modifier keys",
+      "desc": "Hawk by default, dropping Cheetah first, with Cheetah, Monkey and Pack on modifier keys for running or defending.",
+      "category": "General",
+      "code": "#showtooltip /cancelaura [nomod] Aspect of the Cheetah /cast [mod:shift] !Aspect of the Cheetah; [mod:ctrl] !Aspect of the Monkey; [mod:alt] !Aspect of the Pack; !Aspect of the Hawk"
+    },
+    {
+      "id": "hunter-macro-55",
+      "title": "Strider Kick on target or mouseover",
+      "desc": "Kicks your target and starts your swings, or kicks the enemy under your mouse with Shift, and speeds you up either way.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Strider Kick /startattack [nomod] /cast [mod:shift,@mouseover,harm,nodead][] Strider Kick"
+    },
+    {
+      "id": "hunter-macro-56",
+      "title": "Wing Clip with melee reactions",
+      "desc": "Queues Raptor Strike and slows your target with Wing Clip, or answers a parry with Counterattack (Shift) or a dodge with Mongoose Bite (Ctrl).",
+      "category": "General",
+      "code": "#showtooltip /startattack /cast Raptor Strike /cast [mod:shift] Counterattack; [mod:ctrl] Mongoose Bite; Wing Clip"
+    }
+  ],
+  "shaman": [
+    {
+      "id": "shaman-macro-1",
+      "title": "Immediate mouseover Earth Shock",
+      "desc": "Cancel your current cast to shock an enemy under your cursor while keeping your main target.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Earth Shock /stopcasting /cast [@mouseover,harm,nodead][] Earth Shock"
+    },
+    {
+      "id": "shaman-macro-2",
+      "title": "Place or recall your totems",
+      "desc": "Press for your saved totem set; hold Shift to recall it. Set up the totem bar first.",
+      "category": "General",
+      "code": "#showtooltip [mod:shift] Totemic Recall; Call of the Elements /cast [mod:shift] Totemic Recall; Call of the Elements"
+    },
+    {
+      "id": "shaman-macro-3",
+      "title": "All three totem sets and recall on one key",
+      "desc": "Once you have the later Call spells, one key drops any of your three totem sets or takes them all back.",
+      "category": "General",
+      "code": "#showtooltip [mod:ctrl] Call of the Ancestors; [mod:alt] Call of the Spirits; [mod:shift] Totemic Recall; Call of the Elements /cast [mod:ctrl] Call of the Ancestors; [mod:alt] Call of the Spirits; [mod:shift] Totemic Recall; Call of the Elements"
+    },
+    {
+      "id": "shaman-macro-4",
+      "title": "Lightning Shield or Water Shield",
+      "desc": "Press for Lightning Shield and hold Shift for Water Shield. Only one Elemental Shield stays on you at a time.",
+      "category": "General",
+      "code": "#showtooltip [mod:shift] Water Shield; Lightning Shield /cast [mod:shift] Water Shield; Lightning Shield"
+    },
+    {
+      "id": "shaman-macro-5",
+      "title": "Ghost Wolf on and off",
+      "desc": "One press turns you into a Ghost Wolf and the next press turns you back.",
+      "category": "General",
+      "code": "#showtooltip Ghost Wolf /cast Ghost Wolf"
+    },
+    {
+      "id": "shaman-macro-6",
+      "title": "Mouseover Purge",
+      "desc": "Strip magic buffs from the enemy under your cursor, or from your target if you aren't pointing at anyone.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Purge /cast [@mouseover,harm,nodead][] Purge"
+    },
+    {
+      "id": "shaman-macro-7",
+      "title": "Earth, Flame and Frost Shock on one key",
+      "desc": "Press for Earth Shock, hold Shift for Flame Shock and Ctrl for Frost Shock.",
+      "category": "General",
+      "code": "#showtooltip [mod:shift] Flame Shock; [mod:ctrl] Frost Shock; Earth Shock /cast [mod:shift] Flame Shock; [mod:ctrl] Frost Shock; Earth Shock"
+    },
+    {
+      "id": "shaman-macro-8",
+      "title": "Cure poison or disease on a friend or yourself",
+      "desc": "Cure Poison on your mouseover, your target or you, and hold Shift for Cure Disease on the same picks.",
+      "category": "General",
+      "code": "#showtooltip [mod:shift] Cure Disease; Cure Poison /cast [mod:shift,@mouseover,help,nodead][mod:shift,help,nodead][mod:shift,@player] Cure Disease; [@mouseover,help,nodead][help,nodead][@player] Cure Poison"
+    },
+    {
+      "id": "shaman-macro-9",
+      "title": "Reincarnation cooldown on your bar",
+      "desc": "This puts Reincarnation's cooldown on a button so you can see whether you would come back after a death.",
+      "category": "General",
+      "code": "#showtooltip Reincarnation"
+    },
+    {
+      "id": "shaman-macro-10",
+      "title": "Heal yourself without losing your target",
+      "desc": "Healing Wave on yourself while your enemy stays targeted, or hold Shift for the faster Lesser Healing Wave.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip [mod:shift] Lesser Healing Wave; Healing Wave /cast [mod:shift,@player] Lesser Healing Wave; [@player] Healing Wave"
+    },
+    {
+      "id": "shaman-macro-11",
+      "title": "Water Walking, Shift for Water Breathing",
+      "desc": "Water Walking on a friendly mouseover, target or yourself; hold Shift for Water Breathing. Handy for crossing water and underwater quests.",
+      "category": "General",
+      "code": "#showtooltip /cast [mod:shift,@mouseover,help,nodead][mod:shift,help,nodead][mod:shift,@player] Water Breathing; [@mouseover,help,nodead][help,nodead][@player] Water Walking"
+    },
+    {
+      "id": "shaman-macro-12",
+      "title": "Lightning Bolt or Chain Lightning",
+      "desc": "Hold Shift for Chain Lightning; press normally for Lightning Bolt.",
+      "category": "General",
+      "code": "#showtooltip [mod:shift] Chain Lightning; Lightning Bolt /cast [mod:shift] Chain Lightning; Lightning Bolt"
+    },
+    {
+      "id": "shaman-macro-13",
+      "title": "Mouseover Flame Shock",
+      "desc": "Apply the damage-over-time shock without changing your main target.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Flame Shock /cast [@mouseover,harm,nodead][] Flame Shock"
+    },
+    {
+      "id": "shaman-macro-14",
+      "title": "Flame Shock, then Lava Burst",
+      "desc": "The first press puts Flame Shock on your target and the next press casts Lava Burst, which hits 20% harder while Flame Shock is on the target.",
+      "category": "General",
+      "code": "#showtooltip /castsequence reset=combat/target Flame Shock, Lava Burst"
+    },
+    {
+      "id": "shaman-macro-15",
+      "title": "Fire Nova with a Fire totem on the same key",
+      "desc": "Fire Nova hits enemies within 10 yards of your active Fire totem, so Shift drops Searing Totem and Ctrl drops Magma Totem first.",
+      "category": "General",
+      "code": "#showtooltip Fire Nova /cast [mod:shift] Searing Totem; [mod:ctrl] Magma Totem; Fire Nova"
+    },
+    {
+      "id": "shaman-macro-16",
+      "title": "Searing Totem, Flame Shock, Lightning Bolt opener",
+      "desc": "Three presses open a pull: Searing Totem, then Flame Shock, then Lightning Bolt. Use your normal bolt key after that.",
+      "category": "General",
+      "code": "#showtooltip /castsequence reset=combat/20 Searing Totem, Flame Shock, Lightning Bolt"
+    },
+    {
+      "id": "shaman-macro-17",
+      "title": "Stoneclaw Totem or Earthbind Totem",
+      "desc": "Stoneclaw Totem pulls attackers within 8 yards onto itself for 15 seconds, and Shift drops Earthbind Totem to slow them instead.",
+      "category": "General",
+      "code": "#showtooltip Stoneclaw Totem /cast [mod:shift] Earthbind Totem; Stoneclaw Totem"
+    },
+    {
+      "id": "shaman-macro-18",
+      "title": "Trinkets, racial and Lightning Bolt",
+      "desc": "Use both trinkets and your Orc or Troll racial as you start a Lightning Bolt.",
+      "category": "General",
+      "code": "#showtooltip Lightning Bolt /use 13 /use 14 /cast Berserking /cast Blood Fury /cast Lightning Bolt"
+    },
+    {
+      "id": "shaman-macro-19",
+      "title": "Lightning Bolt at what your tank is hitting",
+      "desc": "Bolts your enemy target, or the target of your friendly target when you have the tank selected.",
+      "category": "General",
+      "code": "#showtooltip Lightning Bolt /cast [harm,nodead][@targettarget,harm,nodead] Lightning Bolt"
+    },
+    {
+      "id": "shaman-macro-20",
+      "title": "Choose your weapon imbue",
+      "desc": "Press for Windfury Weapon, or hold Shift for Flametongue, Ctrl for Frostbrand or Alt for Rockbiter. The /use 16 line clicks your main hand.",
+      "category": "General",
+      "code": "#showtooltip [mod:alt] Rockbiter Weapon; [mod:ctrl] Frostbrand Weapon; [mod:shift] Flametongue Weapon; Windfury Weapon /cast [mod:alt] Rockbiter Weapon; [mod:ctrl] Frostbrand Weapon; [mod:shift] Flametongue Weapon; Windfury Weapon /use 16"
+    },
+    {
+      "id": "shaman-macro-21",
+      "title": "Stormstrike and auto attack",
+      "desc": "Begin swinging when you use your Enhancement strike.",
+      "category": "Combat & Rotations",
+      "code": "#showtooltip Stormstrike /startattack /cast Stormstrike"
+    },
+    {
+      "id": "shaman-macro-22",
+      "title": "Stormstrike, then Earth Shock",
+      "desc": "Stormstrike first, then Earth Shock on the next press. The next eligible spell gets 20% more damage within 12 seconds.",
+      "category": "Combat & Rotations",
+      "code": "#showtooltip /startattack /castsequence reset=combat/target/12 Stormstrike, Earth Shock"
+    },
+    {
+      "id": "shaman-macro-23",
+      "title": "Spend Stormstrike on a shock or a bolt",
+      "desc": "After Stormstrike, press for Earth Shock, Shift for Lightning Bolt or Ctrl for Chain Lightning. The next of these gets 20% more damage within 12 seconds.",
+      "category": "Combat & Rotations",
+      "code": "#showtooltip [mod:shift] Lightning Bolt; [mod:ctrl] Chain Lightning; Earth Shock /cast [mod:shift] Lightning Bolt; [mod:ctrl] Chain Lightning; Earth Shock"
+    },
+    {
+      "id": "shaman-macro-24",
+      "title": "Lightning Bolt and keep swinging",
+      "desc": "Starts your melee swings and casts Lightning Bolt, so Maelstrom Weapon stacks from your hits shorten the cast.",
+      "category": "General",
+      "code": "#showtooltip Lightning Bolt /startattack /cast Lightning Bolt"
+    },
+    {
+      "id": "shaman-macro-25",
+      "title": "Trinkets, Rage of the Farseer and Stormstrike",
+      "desc": "Use both trinkets, Rage of the Farseer and your Orc or Troll racial together, then open with Stormstrike.",
+      "category": "Combat & Rotations",
+      "code": "#showtooltip Rage of the Farseer /startattack /use 13 /use 14 /cast Rage of the Farseer /cast Berserking /cast Blood Fury /cast Stormstrike"
+    },
+    {
+      "id": "shaman-macro-26",
+      "title": "Flame Shock, then Earth Shock",
+      "desc": "Flame Shock on the first press, Earth Shock on the next, and your swings start with the first press.",
+      "category": "General",
+      "code": "#showtooltip /startattack [harm] /castsequence reset=combat/target/12 Flame Shock, Earth Shock"
+    },
+    {
+      "id": "shaman-macro-27",
+      "title": "Strength of Earth, Windfury and Mana Spring in order",
+      "desc": "One totem per press, and the order starts again after 60 seconds or when combat ends.",
+      "category": "General",
+      "code": "#showtooltip /castsequence reset=combat/60 Strength of Earth Totem, Windfury Totem, Mana Spring Totem"
+    },
+    {
+      "id": "shaman-macro-28",
+      "title": "Stoneskin, Windwall or Stoneclaw Totem",
+      "desc": "Stoneskin Totem cuts Physical damage taken, Shift drops Windwall Totem against ranged attackers and Ctrl drops Stoneclaw Totem to pull enemies onto it.",
+      "category": "General",
+      "code": "#showtooltip Stoneskin Totem /cast [mod:shift] Windwall Totem; [mod:ctrl] Stoneclaw Totem; Stoneskin Totem"
+    },
+    {
+      "id": "shaman-macro-29",
+      "title": "Find a target, attack and Earth Shock",
+      "desc": "Keep a living enemy selected, or select a nearby enemy when you have no hostile target. Start swinging even if Earth Shock is on cooldown or you lack mana.",
+      "category": "General",
+      "code": "#showtooltip Earth Shock /targetenemy [noharm][dead] /startattack /cast Earth Shock"
+    },
+    {
+      "id": "shaman-macro-30",
+      "title": "Mouseover Healing Wave",
+      "desc": "Heal a friendly mouseover, your target, or yourself.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Healing Wave /cast [@mouseover,help,nodead][help,nodead][@player] Healing Wave"
+    },
+    {
+      "id": "shaman-macro-31",
+      "title": "Mouseover Riptide",
+      "desc": "Use Forever’s new Restoration talent on a party frame under your cursor.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Riptide /cast [@mouseover,help,nodead][help,nodead][@player] Riptide"
+    },
+    {
+      "id": "shaman-macro-32",
+      "title": "Lesser Healing Wave on mouseover, target or target's target",
+      "desc": "The fast heal for the friend under your cursor, your friendly target, whoever your enemy target is hitting, or you.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Lesser Healing Wave /cast [@mouseover,help,nodead][help,nodead][@targettarget,help,nodead][@player] Lesser Healing Wave"
+    },
+    {
+      "id": "shaman-macro-33",
+      "title": "Mouseover Chain Heal",
+      "desc": "Chain Heal on your mouseover, your target or yourself. In a party it only jumps to other party members.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Chain Heal /cast [@mouseover,help,nodead][help,nodead][@player] Chain Heal"
+    },
+    {
+      "id": "shaman-macro-34",
+      "title": "Riptide, then Chain Heal on the same friend",
+      "desc": "Riptide on the first press and Chain Heal on the next, which lands 25% stronger on a Riptide target, so keep your cursor on the same friend.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip /castsequence [@mouseover,help,nodead][help,nodead] reset=10 Riptide, Chain Heal"
+    },
+    {
+      "id": "shaman-macro-35",
+      "title": "Top up with a lower Healing Wave rank",
+      "desc": "Press for your top Healing Wave rank, or hold Shift for the cheaper rank 4 when a small top-up is enough.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Healing Wave /cast [mod:shift,@mouseover,help,nodead][mod:shift,help,nodead][mod:shift,@player] Healing Wave(Rank 4); [@mouseover,help,nodead][help,nodead][@player] Healing Wave"
+    },
+    {
+      "id": "shaman-macro-36",
+      "title": "Nature's Swiftness into an instant heal",
+      "desc": "Nature's Swiftness makes your next heal instant, so this casts Healing Wave, or Chain Heal with Shift, on your mouseover, target or you.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Healing Wave /cast Nature's Swiftness /cast [mod:shift,@mouseover,help,nodead][mod:shift,help,nodead][mod:shift,@player] Chain Heal; [@mouseover,help,nodead][help,nodead][@player] Healing Wave"
+    },
+    {
+      "id": "shaman-macro-37",
+      "title": "Healing Stream, Mana Spring or Mana Tide Totem",
+      "desc": "Healing Stream Totem heals the group, Shift drops Mana Spring Totem and Ctrl drops Mana Tide Totem when mana runs low.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Healing Stream Totem /cast [mod:shift] Mana Spring Totem; [mod:ctrl] Mana Tide Totem; Healing Stream Totem"
+    },
+    {
+      "id": "shaman-macro-38",
+      "title": "Poison Cleansing, Disease Cleansing or Tremor Totem",
+      "desc": "Poison Cleansing Totem, or Shift for Disease Cleansing Totem and Ctrl for Tremor Totem, which removes Fear, Charm and Sleep.",
+      "category": "General",
+      "code": "#showtooltip Poison Cleansing Totem /cast [mod:shift] Disease Cleansing Totem; [mod:ctrl] Tremor Totem; Poison Cleansing Totem"
+    },
+    {
+      "id": "shaman-macro-39",
+      "title": "Healing Wave on friends, Lightning Bolt on enemies",
+      "desc": "Heals a friendly target, bolts an enemy, heals you if nothing is selected, and Alt heals you whatever you have targeted.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip /cast [mod:alt,@player] Healing Wave; [help,nodead] Healing Wave; [harm,nodead] Lightning Bolt; [@player] Healing Wave"
+    },
+    {
+      "id": "shaman-macro-40",
+      "title": "Resurrect a mouseover or target",
+      "desc": "Resurrects the dead player under your cursor, or your dead target, once you're out of combat.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Ancestral Spirit /cast [@mouseover,help,dead,nocombat][help,dead,nocombat] Ancestral Spirit"
+    },
+    {
+      "id": "shaman-macro-41",
+      "title": "Interrupt with rank 1 Earth Shock",
+      "desc": "Dismounts, stops your cast and interrupts with rank 1 Earth Shock: your target, your mouseover with Shift or your last target with Ctrl.",
+      "category": "General",
+      "code": "#showtooltip Earth Shock /dismount /stopcasting /targetlasttarget [mod:ctrl] /cast [mod:shift,@mouseover,harm,nodead][] Earth Shock(Rank 1) /targetlasttarget [mod:ctrl]"
+    },
+    {
+      "id": "shaman-macro-42",
+      "title": "Slow a runner with Frost Shock",
+      "desc": "Frost Shock slows your target by 50%; Shift slows your mouseover and Ctrl casts the cheap rank 1 on your target.",
+      "category": "General",
+      "code": "#showtooltip Frost Shock /cast [mod:shift,@mouseover,harm,nodead] Frost Shock; [mod:ctrl] Frost Shock(Rank 1); Frost Shock"
+    },
+    {
+      "id": "shaman-macro-43",
+      "title": "Grounding, Tremor, Earthbind and Stoneclaw on one key",
+      "desc": "Grounding Totem redirects one harmful spell aimed at a nearby party member, and Shift, Ctrl and Alt drop Tremor, Earthbind and Stoneclaw instead.",
+      "category": "General",
+      "code": "#showtooltip Grounding Totem /cast [mod:shift] Tremor Totem; [mod:ctrl] Earthbind Totem; [mod:alt] Stoneclaw Totem; Grounding Totem"
+    },
+    {
+      "id": "shaman-macro-44",
+      "title": "Purge enemies and cure friends on one key",
+      "desc": "Purges an enemy, cures poison on a friend, and Shift cures disease on a friend, using your mouseover first and your target second.",
+      "category": "General",
+      "code": "#showtooltip /cast [mod:shift,@mouseover,help,nodead][mod:shift,help,nodead] Cure Disease; [@mouseover,help,nodead][help,nodead] Cure Poison; [@mouseover,harm,nodead][harm,nodead] Purge"
+    },
+    {
+      "id": "shaman-macro-45",
+      "title": "Fast heal that drops the wolf",
+      "desc": "Leaves Ghost Wolf and casts Lesser Healing Wave on your mouseover or target, or on you when you hold Alt or have nobody picked.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Lesser Healing Wave /cancelform [form] /cast [mod:alt,@player][@mouseover,help,nodead][help,nodead][@player] Lesser Healing Wave"
+    },
+    {
+      "id": "shaman-macro-46",
+      "title": "Nature's Swiftness into an instant nuke",
+      "desc": "Nature's Swiftness makes the next spell instant: Lightning Bolt on your enemy, Chain Lightning with Shift or Healing Wave on you with Alt.",
+      "category": "General",
+      "code": "#showtooltip Nature's Swiftness /cast Nature's Swiftness /cast [mod:alt,@player] Healing Wave; [mod:shift,harm,nodead] Chain Lightning; [harm,nodead] Lightning Bolt"
+    },
+    {
+      "id": "shaman-macro-47",
+      "title": "Stormstrike, Earth Shock and Frost Shock in melee",
+      "desc": "Stormstrike to open, Shift for the Earth Shock that gets its 20% bonus and Ctrl for a Frost Shock slow; each one starts your swings.",
+      "category": "Combat & Rotations",
+      "code": "#showtooltip Stormstrike /startattack /cast [mod:shift] Earth Shock; [mod:ctrl] Frost Shock; Stormstrike"
+    },
+    {
+      "id": "shaman-macro-48",
+      "title": "Lava Burst with Flame Shock on the same key",
+      "desc": "Lava Burst hits 20% harder against a Flame Shock, so Ctrl puts Flame Shock on your target and Shift puts it on your mouseover.",
+      "category": "General",
+      "code": "#showtooltip Lava Burst /cast [mod:shift,@mouseover,harm,nodead][mod:ctrl] Flame Shock; Lava Burst"
+    },
+    {
+      "id": "shaman-macro-49",
+      "title": "Ghost Wolf on and off, or shock out of it",
+      "desc": "Press to switch Ghost Wolf on or off; hold Shift to leave the wolf and Frost Shock your target in one press.",
+      "category": "General",
+      "code": "#showtooltip Ghost Wolf /cancelform [form,mod:shift] /cast [mod:shift,harm,nodead] Frost Shock; [nomod,noform] Ghost Wolf /cancelform [form,nomod]"
+    },
+    {
+      "id": "shaman-macro-50",
+      "title": "Trinkets and racial defense on one key",
+      "desc": "Uses your racial escape and both trinkets together when you're stunned or in trouble.",
+      "category": "General",
+      "code": "#showtooltip /cast War Stomp /cast Stoneform /cast Shatter Curse /use 13 /use 14"
+    },
+    {
+      "id": "shaman-macro-51",
+      "title": "Bolt or Chain Lightning on target or mouseover",
+      "desc": "Lightning Bolt on your target, Shift for your mouseover, and Ctrl or Alt for Chain Lightning on your target or mouseover.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Lightning Bolt /cast [mod:shift,@mouseover,harm,nodead] Lightning Bolt; [mod:ctrl] Chain Lightning; [mod:alt,@mouseover,harm,nodead] Chain Lightning; Lightning Bolt"
+    },
+    {
+      "id": "shaman-macro-52",
+      "title": "Riptide, or Chain Heal on the same friend",
+      "desc": "Riptide on your mouseover, target or you, and Shift casts Chain Heal on the same friend, which lands 25% stronger on a Riptide target.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Riptide /cast [mod:shift,@mouseover,help,nodead][mod:shift,help,nodead] Chain Heal; [@mouseover,help,nodead][help,nodead][@player] Riptide"
+    },
+    {
+      "id": "shaman-macro-53",
+      "title": "Flame Shock on target, mouseover or last target",
+      "desc": "Flame Shock your target, your mouseover with Shift or your last target with Ctrl, then swap back, to spread damage over time in a fight.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Flame Shock /targetlasttarget [mod:ctrl] /cast [mod:shift,@mouseover,harm,nodead][] Flame Shock /targetlasttarget [mod:ctrl]"
+    }
+  ],
+  "mage": [
+    {
+      "id": "mage-macro-1",
+      "title": "Counterspell without waiting on your cast",
+      "desc": "Drops whatever you’re casting and Counterspells your target right away.",
+      "category": "Combat & Rotations",
+      "code": "#showtooltip Counterspell /stopcasting /cast Counterspell"
+    },
+    {
+      "id": "mage-macro-2",
+      "title": "Polymorph the mouseover or your target",
+      "desc": "Polymorphs the enemy under your cursor and leaves your target alone. With no enemy under the cursor it polymorphs your target.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Polymorph /cast [@mouseover,harm,nodead][] Polymorph"
+    },
+    {
+      "id": "mage-macro-3",
+      "title": "Arcane Intellect on a friend or yourself",
+      "desc": "Buffs the friendly unit under your cursor, else your friendly target, else you. Hold Alt to buff yourself no matter what.",
+      "category": "General",
+      "code": "#showtooltip Arcane Intellect /cast [mod:alt,@player][@mouseover,help,nodead][help,nodead][@player] Arcane Intellect"
+    },
+    {
+      "id": "mage-macro-4",
+      "title": "Dampen or Amplify Magic on a friend",
+      "desc": "Dampen Magic on the friend under your cursor, your friendly target or yourself. Shift swaps to Amplify Magic.",
+      "category": "General",
+      "code": "#showtooltip [mod:shift] Amplify Magic; Dampen Magic /cast [mod:shift,@mouseover,help,nodead][mod:shift,help,nodead][mod:shift,@player] Amplify Magic; [@mouseover,help,nodead][help,nodead][@player] Dampen Magic"
+    },
+    {
+      "id": "mage-macro-5",
+      "title": "Remove Lesser Curse on a friend or yourself",
+      "desc": "Decurses your mouseover, friendly target or you. Shift decurses you straight away.",
+      "category": "General",
+      "code": "#showtooltip Remove Lesser Curse /cast [mod:shift,@player][@mouseover,help,nodead][help,nodead][@player] Remove Lesser Curse"
+    },
+    {
+      "id": "mage-macro-6",
+      "title": "Conjure water, or food with Shift",
+      "desc": "One button conjures your top rank of water. Hold Shift for food instead.",
+      "category": "General",
+      "code": "#showtooltip [mod:shift] Conjure Food; Conjure Water /cast [mod:shift] Conjure Food; Conjure Water"
+    },
+    {
+      "id": "mage-macro-7",
+      "title": "Use whichever mana gem you have",
+      "desc": "Tries Mana Ruby, Citrine, Jade and Agate in that order. Press it when you need mana.",
+      "category": "General",
+      "code": "#showtooltip /use Mana Ruby /use Mana Citrine /use Mana Jade /use Mana Agate"
+    },
+    {
+      "id": "mage-macro-8",
+      "title": "Ice Armor, Mage Armor or Frost Armor",
+      "desc": "Ice Armor by default, Shift for Mage Armor and Ctrl for Frost Armor. Only one armor can be up at a time.",
+      "category": "General",
+      "code": "#showtooltip [mod:shift] Mage Armor; [mod:ctrl] Frost Armor; Ice Armor /cast [mod:shift] Mage Armor; [mod:ctrl] Frost Armor; Ice Armor"
+    },
+    {
+      "id": "mage-macro-9",
+      "title": "Alliance teleports on one key",
+      "desc": "Teleports you to Stormwind. Shift goes to Ironforge, Ctrl to Darnassus and Alt to Dalaran.",
+      "category": "General",
+      "code": "#showtooltip /cast [mod:shift] Teleport: Ironforge; [mod:ctrl] Teleport: Darnassus; [mod:alt] Teleport: Dalaran; Teleport: Stormwind"
+    },
+    {
+      "id": "mage-macro-10",
+      "title": "Horde teleports on one key",
+      "desc": "Teleports you to Orgrimmar. Shift goes to Undercity, Ctrl to Thunder Bluff and Alt to Dalaran.",
+      "category": "General",
+      "code": "#showtooltip /cast [mod:shift] Teleport: Undercity; [mod:ctrl] Teleport: Thunder Bluff; [mod:alt] Teleport: Dalaran; Teleport: Orgrimmar"
+    },
+    {
+      "id": "mage-macro-11",
+      "title": "Alliance portals on one key",
+      "desc": "Opens a portal to Stormwind. Shift makes it Ironforge and Ctrl makes it Darnassus.",
+      "category": "General",
+      "code": "#showtooltip /cast [mod:shift] Portal: Ironforge; [mod:ctrl] Portal: Darnassus; Portal: Stormwind"
+    },
+    {
+      "id": "mage-macro-12",
+      "title": "Horde portals on one key",
+      "desc": "Opens a portal to Orgrimmar. Shift makes it Undercity and Ctrl makes it Thunder Bluff.",
+      "category": "General",
+      "code": "#showtooltip /cast [mod:shift] Portal: Undercity; [mod:ctrl] Portal: Thunder Bluff; Portal: Orgrimmar"
+    },
+    {
+      "id": "mage-macro-13",
+      "title": "Slow Fall, Shift to cancel",
+      "desc": "Dismount and cast Slow Fall on yourself. Hold Shift to remove the effect when you're back on the ground.",
+      "category": "General",
+      "code": "#showtooltip Slow Fall /dismount [nomod:shift] /cancelaura [mod:shift] Slow Fall /cast [nomod:shift,@player] Slow Fall"
+    },
+    {
+      "id": "mage-macro-14",
+      "title": "Intellect, Shift for Arcane Brilliance",
+      "desc": "Buff one friend with Arcane Intellect, or hold Shift for Arcane Brilliance. Both choose your friendly mouseover, target or yourself.",
+      "category": "General",
+      "code": "#showtooltip /cast [mod:shift,@mouseover,help,nodead][mod:shift,help,nodead][mod:shift,@player] Arcane Brilliance; [@mouseover,help,nodead][help,nodead][@player] Arcane Intellect"
+    },
+    {
+      "id": "mage-macro-15",
+      "title": "Protect Arcane Missiles channel",
+      "desc": "Repeated presses won’t restart a channel you’re already in.",
+      "category": "General",
+      "code": "#showtooltip Arcane Missiles /cast [nochanneling:Arcane Missiles] Arcane Missiles"
+    },
+    {
+      "id": "mage-macro-16",
+      "title": "Arcane Blast, with Missiles and Frostbolt on modifiers",
+      "desc": "Arcane Blast on the button, Shift for Arcane Missiles and Ctrl for a cheaper Frostbolt when the stack gets expensive. Nothing fires while you’re channeling Missiles.",
+      "category": "General",
+      "code": "#showtooltip Arcane Blast /cast [mod:shift,nochanneling:Arcane Missiles] Arcane Missiles; [mod:ctrl,nochanneling:Arcane Missiles] Frostbolt; [nochanneling:Arcane Missiles] Arcane Blast"
+    },
+    {
+      "id": "mage-macro-17",
+      "title": "Three Blasts, then Missiles",
+      "desc": "Each press moves along the sequence: three Arcane Blasts, then Arcane Missiles to spend the stack. It starts over after 10 seconds or a new target.",
+      "category": "General",
+      "code": "#showtooltip Arcane Blast /castsequence [nochanneling:Arcane Missiles] reset=10/target Arcane Blast, Arcane Blast, Arcane Blast, Arcane Missiles"
+    },
+    {
+      "id": "mage-macro-18",
+      "title": "Grab the nearest enemy and Arcane Blast",
+      "desc": "Clears a dead or friendly target, picks the nearest enemy if you have none, then opens with Arcane Blast.",
+      "category": "General",
+      "code": "#showtooltip Arcane Blast /cleartarget [dead][help] /targetenemy [noexists] /cast [harm,nochanneling:Arcane Missiles] Arcane Blast"
+    },
+    {
+      "id": "mage-macro-19",
+      "title": "Trinkets and Arcane Power, then Blast",
+      "desc": "Pops both trinkets and Arcane Power, then starts an Arcane Blast. Arcane Power makes your spells cost 30% more mana for 15 sec.",
+      "category": "General",
+      "code": "#showtooltip Arcane Blast /use 13 /use 14 /cast Arcane Power /cast [nochanneling:Arcane Missiles] Arcane Blast"
+    },
+    {
+      "id": "mage-macro-20",
+      "title": "Arcane Blast, with a mana gem on Shift",
+      "desc": "Arcane Blast on the button. Hold Shift to use a mana gem first; the gem is instant, so the cast still starts on the same press.",
+      "category": "General",
+      "code": "#showtooltip Arcane Blast /use [mod:shift] Mana Ruby /use [mod:shift] Mana Citrine /use [mod:shift] Mana Jade /use [mod:shift] Mana Agate /cast [nochanneling:Arcane Missiles] Arcane Blast"
+    },
+    {
+      "id": "mage-macro-21",
+      "title": "Arcane Explosion, rank 1 out of combat",
+      "desc": "Top rank once you’re in a fight and rank 1 before it, so an opening pull costs less mana.",
+      "category": "General",
+      "code": "#showtooltip Arcane Explosion /cast [combat] Arcane Explosion; Arcane Explosion(Rank 1)"
+    },
+    {
+      "id": "mage-macro-22",
+      "title": "Conjure any mana gem on one key",
+      "desc": "Conjures a Mana Ruby by default. Shift makes a Citrine, Ctrl a Jade and Alt an Agate.",
+      "category": "General",
+      "code": "#showtooltip /cast [mod:shift] Conjure Mana Citrine; [mod:ctrl] Conjure Mana Jade; [mod:alt] Conjure Mana Agate; Conjure Mana Ruby"
+    },
+    {
+      "id": "mage-macro-23",
+      "title": "Wand that doesn’t toggle off",
+      "desc": "Starts your wand and keeps it going if you press the button again.",
+      "category": "General",
+      "code": "#showtooltip Shoot /cast !Shoot"
+    },
+    {
+      "id": "mage-macro-24",
+      "title": "Evocation, Shift to stop",
+      "desc": "Start Evocation without cutting it short on repeated presses. Hold Shift to stop the channel when you need to move or cast something else.",
+      "category": "General",
+      "code": "#showtooltip Evocation /stopcasting [mod:shift] /stopmacro [mod:shift] /cast [nochanneling:Evocation] Evocation"
+    },
+    {
+      "id": "mage-macro-25",
+      "title": "Fireball or Scorch",
+      "desc": "Hold Shift for Scorch when you need a shorter cast.",
+      "category": "General",
+      "code": "#showtooltip [mod:shift] Scorch; Fireball /cast [mod:shift] Scorch; Fireball"
+    },
+    {
+      "id": "mage-macro-26",
+      "title": "Immediate Fire Blast",
+      "desc": "Cancels your current cast for an instant Fire Blast.",
+      "category": "General",
+      "code": "#showtooltip Fire Blast /stopcasting /cast Fire Blast"
+    },
+    {
+      "id": "mage-macro-27",
+      "title": "Grab the nearest enemy and Fireball",
+      "desc": "Clears a dead or friendly target, picks the nearest enemy if you have none, then casts Fireball at it.",
+      "category": "General",
+      "code": "#showtooltip Fireball /cleartarget [dead][help] /targetenemy [noexists] /cast [harm] Fireball"
+    },
+    {
+      "id": "mage-macro-28",
+      "title": "Pyroblast to open, Fireball after",
+      "desc": "Out of combat the button casts Pyroblast as a long-range opener. Once you’re in the fight it casts Fireball.",
+      "category": "General",
+      "code": "#showtooltip [nocombat] Pyroblast; Fireball /cast [nocombat] Pyroblast; Fireball"
+    },
+    {
+      "id": "mage-macro-29",
+      "title": "Fireball, with Pyroblast and Fire Blast on modifiers",
+      "desc": "Fireball on the button. Shift casts Pyroblast once Heating Up has shortened it, and Ctrl casts an instant Fire Blast while you move.",
+      "category": "General",
+      "code": "#showtooltip Fireball /cast [mod:shift] Pyroblast; [mod:ctrl] Fire Blast; Fireball"
+    },
+    {
+      "id": "mage-macro-30",
+      "title": "Trinkets and Combustion, then Fireball",
+      "desc": "Uses both trinkets, pops Combustion and starts a Fireball. Hold Shift for Scorch instead. The October 1 beta update returned Combustion to three charges.",
+      "category": "General",
+      "code": "#showtooltip Combustion /use 13 /use 14 /cast Combustion /cast [mod:shift] Scorch; Fireball"
+    },
+    {
+      "id": "mage-macro-31",
+      "title": "Flamestrike, rank 1 on Shift",
+      "desc": "Casts your top Flamestrike, or rank 1 with Shift to save mana, then you click the ground. Forever allows only one active Flamestrike per mage.",
+      "category": "Combat & Rotations",
+      "code": "#showtooltip Flamestrike /cast [mod:shift] Flamestrike(Rank 1); Flamestrike"
+    },
+    {
+      "id": "mage-macro-32",
+      "title": "Fireball, with Frostfire Bolt for kiting",
+      "desc": "Fireball on the button. Shift casts Frostfire Bolt, which slows the target by 40% and can help build Heating Up.",
+      "category": "General",
+      "code": "#showtooltip Fireball /cast [mod:shift] Frostfire Bolt; Fireball"
+    },
+    {
+      "id": "mage-macro-33",
+      "title": "Immediate Blast Wave",
+      "desc": "Cancels your current cast and blasts everything close, dazing it for 6 sec.",
+      "category": "General",
+      "code": "#showtooltip Blast Wave /stopcasting /cast Blast Wave"
+    },
+    {
+      "id": "mage-macro-34",
+      "title": "Quick slow or full Frostbolt",
+      "desc": "Hold Shift to cast rank 1 for a cheaper slow; press normally for your highest rank.",
+      "category": "General",
+      "code": "#showtooltip Frostbolt /cast [mod:shift] Frostbolt(Rank 1); Frostbolt"
+    },
+    {
+      "id": "mage-macro-35",
+      "title": "Immediate Frost Nova",
+      "desc": "Cancels your current cast to freeze enemies in melee range.",
+      "category": "General",
+      "code": "#showtooltip Frost Nova /stopcasting /cast Frost Nova"
+    },
+    {
+      "id": "mage-macro-36",
+      "title": "Grab the nearest enemy and Frostbolt",
+      "desc": "Clears a dead or friendly target, picks the nearest enemy if you have none, then casts Frostbolt at it.",
+      "category": "General",
+      "code": "#showtooltip Frostbolt /cleartarget [dead][help] /targetenemy [noexists] /cast [harm] Frostbolt"
+    },
+    {
+      "id": "mage-macro-37",
+      "title": "Frost Nova, then Ice Lance",
+      "desc": "The first press freezes nearby enemies. A second press within 6 seconds throws Ice Lance at the frozen target. Give Ice Lance its own key too, since this one waits on Nova’s cooldown.",
+      "category": "General",
+      "code": "#showtooltip Frost Nova /stopcasting /castsequence reset=6/target Frost Nova, Ice Lance"
+    },
+    {
+      "id": "mage-macro-38",
+      "title": "Ice Lance, Fire Blast and Cone of Cold on one key",
+      "desc": "Ice Lance on the button. Shift casts Fire Blast when the target has broken free, and Ctrl casts a Cone of Cold slow.",
+      "category": "General",
+      "code": "#showtooltip Ice Lance /stopcasting /cast [mod:shift] Fire Blast; [mod:ctrl] Cone of Cold; Ice Lance"
+    },
+    {
+      "id": "mage-macro-39",
+      "title": "Blizzard, rank 1 on Shift",
+      "desc": "Casts your top Blizzard, or rank 1 with Shift to save mana, then you click the ground.",
+      "category": "General",
+      "code": "#showtooltip Blizzard /cast [mod:shift] Blizzard(Rank 1); Blizzard"
+    },
+    {
+      "id": "mage-macro-40",
+      "title": "Frostbolt, with trinkets on Shift",
+      "desc": "Frostbolt on the button. Hold Shift to use both trinkets as you cast.",
+      "category": "General",
+      "code": "#showtooltip Frostbolt /use [mod:shift] 13 /use [mod:shift] 14 /cast Frostbolt"
+    },
+    {
+      "id": "mage-macro-41",
+      "title": "Ice Armor, then Arcane Intellect",
+      "desc": "Press once for Ice Armor and again within 10 seconds for Arcane Intellect, both on yourself.",
+      "category": "General",
+      "code": "#showtooltip /castsequence [@player] reset=10 Ice Armor, Arcane Intellect"
+    },
+    {
+      "id": "mage-macro-42",
+      "title": "Counterspell your target, mouseover or a follow-up",
+      "desc": "Cancels your cast and Ice Block, then Counterspells your target. Shift hits the mouseover and Ctrl starts a Frostbolt right after.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Counterspell /stopcasting /cancelaura Ice Block /cast [mod:shift,@mouseover,harm,nodead][] Counterspell /cast [mod:ctrl] Frostbolt"
+    },
+    {
+      "id": "mage-macro-43",
+      "title": "Polymorph the mouseover or target, rank 1 on Shift",
+      "desc": "Cancels your cast and polymorphs the enemy under your cursor, or your target. Shift casts rank 1, which costs less mana and lasts a shorter time.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Polymorph /stopcasting /cast [mod:shift,@mouseover,harm,nodead][mod:shift,harm,nodead] Polymorph(Rank 1); [@mouseover,harm,nodead][harm,nodead] Polymorph"
+    },
+    {
+      "id": "mage-macro-44",
+      "title": "Sheep a second enemy and jump back",
+      "desc": "Tab to a second enemy, press this to sheep it, and you’re back on your first target right away.",
+      "category": "General",
+      "code": "#showtooltip Polymorph /stopcasting /cast [harm,nodead] Polymorph /targetlasttarget"
+    },
+    {
+      "id": "mage-macro-45",
+      "title": "Presence of Mind plus an instant spell",
+      "desc": "Uses Presence of Mind and casts one spell instantly. Arcane Blast by default, Shift for Pyroblast, Ctrl for Polymorph and Alt for Frostbolt.",
+      "category": "General",
+      "code": "#showtooltip Presence of Mind /stopcasting /cast Presence of Mind /cast [mod:shift] Pyroblast; [mod:ctrl] Polymorph; [mod:alt] Frostbolt; Arcane Blast"
+    },
+    {
+      "id": "mage-macro-46",
+      "title": "Trinkets, Arcane Power and Presence of Mind burst",
+      "desc": "Uses both trinkets, Arcane Power and Presence of Mind, then casts an instant Pyroblast. Hold Shift for Frostbolt if you don’t have Pyroblast.",
+      "category": "General",
+      "code": "#showtooltip Pyroblast /stopcasting /use 13 /use 14 /cast Arcane Power /cast Presence of Mind /cast [mod:shift] Frostbolt; Pyroblast"
+    },
+    {
+      "id": "mage-macro-47",
+      "title": "Frost Nova, Cone of Cold and Blast Wave peel",
+      "desc": "Dismounts, cancels your cast and Ice Block, then casts Frost Nova rank 1, which costs less and hits for far less (damage can break the freeze). Shift is Cone of Cold and Ctrl is Blast Wave.",
+      "category": "General",
+      "code": "#showtooltip Frost Nova /stopcasting /dismount /cancelaura Ice Block /cast [mod:shift] Cone of Cold; [mod:ctrl] Blast Wave; Frost Nova(Rank 1)"
+    },
+    {
+      "id": "mage-macro-48",
+      "title": "Blink, racial escape, trinkets and Free Action Potion",
+      "desc": "Dismounts, cancels your cast and Blinks. Shift uses your racial escape instead, Ctrl adds both trinkets to the Blink and Alt adds a Free Action Potion.",
+      "category": "General",
+      "code": "#showtooltip Blink /stopcasting /dismount /use [mod:ctrl] 13 /use [mod:ctrl] 14 /use [mod:alt] Free Action Potion /cast [mod:shift] Will to Survive /cast [mod:shift] Escape Artist /cast [mod:shift] Will of the Forsaken /cast [nomod:shift] Blink"
+    },
+    {
+      "id": "mage-macro-49",
+      "title": "Ice Block toggle with Cold Snap on Shift",
+      "desc": "Casts Ice Block, and a second press drops it early. Shift casts Cold Snap to finish your Frost cooldowns, so the next press can Block again.",
+      "category": "General",
+      "code": "#showtooltip [mod:shift] Cold Snap; Ice Block /stopcasting /cancelaura Ice Block /cast [mod:shift] Cold Snap; Ice Block"
+    },
+    {
+      "id": "mage-macro-50",
+      "title": "Mana Shield, Ice Barrier and both Wards on one key",
+      "desc": "Cancels your cast and shields up. Mana Shield on the button, Shift for Ice Barrier, Ctrl for Frost Ward and Alt for Fire Ward.",
+      "category": "General",
+      "code": "#showtooltip /stopcasting /cast [mod:shift] Ice Barrier; [mod:ctrl] Frost Ward; [mod:alt] Fire Ward; Mana Shield"
+    },
+    {
+      "id": "mage-macro-51",
+      "title": "Frostbolt the mouseover to slow it",
+      "desc": "Frostbolts the enemy under your cursor, or your target if none is there. Shift casts rank 1, which is cheaper and gives a shorter slow.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Frostbolt /cast [mod:shift,@mouseover,harm,nodead][mod:shift] Frostbolt(Rank 1); [@mouseover,harm,nodead][] Frostbolt"
+    },
+    {
+      "id": "mage-macro-52",
+      "title": "Fire Blast or Ice Lance on the mouseover",
+      "desc": "Cancels your cast for an instant Fire Blast on the enemy under your cursor, or your target. Shift throws Ice Lance instead.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Fire Blast /stopcasting /cast [mod:shift,@mouseover,harm,nodead][mod:shift] Ice Lance; [@mouseover,harm,nodead][] Fire Blast"
+    },
+    {
+      "id": "mage-macro-53",
+      "title": "Swap schools after a Counterspell lockout",
+      "desc": "Frostbolt on the button. If an enemy Counterspell locks Frost, Shift casts Fireball and Ctrl casts Arcane Missiles.",
+      "category": "General",
+      "code": "#showtooltip Frostbolt /cast [mod:shift] Fireball; [mod:ctrl] Arcane Missiles; Frostbolt"
+    },
+    {
+      "id": "mage-macro-54",
+      "title": "Decurse a friend or Counterspell an enemy under the cursor",
+      "desc": "Cancels your cast, then decurses the friend under your cursor or Counterspells the enemy there. With nothing under the cursor it uses your target. Shift decurses you.",
+      "category": "General",
+      "code": "#showtooltip /stopcasting /cast [mod:shift,@player][@mouseover,help,nodead] Remove Lesser Curse; [@mouseover,harm,nodead] Counterspell; [help,nodead] Remove Lesser Curse; [harm,nodead] Counterspell"
+    },
+    {
+      "id": "mage-macro-55",
+      "title": "Trinkets on one key",
+      "desc": "Uses your top trinket, Shift uses the bottom one and Ctrl uses both.",
+      "category": "General",
+      "code": "#showtooltip /use [nomod][mod:ctrl] 13 /use [mod:shift][mod:ctrl] 14"
+    }
+  ],
+  "paladin": [
+    {
+      "id": "paladin-macro-1",
+      "title": "Holy Strike and auto attack",
+      "desc": "Use Forever’s baseline strike without leaving auto attack off.",
+      "category": "Combat & Rotations",
+      "code": "#showtooltip Holy Strike /startattack /cast Holy Strike"
+    },
+    {
+      "id": "paladin-macro-2",
+      "title": "Mouseover Blessing of Protection",
+      "desc": "Protect a friendly mouseover, your friendly target, or whoever your enemy target is attacking. Hold Alt for Divine Protection on yourself. Both apply Forbearance.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip [mod:alt] Divine Protection; Blessing of Protection /cast [mod:alt] Divine Protection; [@mouseover,help,nodead][help,nodead][@targettarget,help,nodead] Blessing of Protection"
+    },
+    {
+      "id": "paladin-macro-3",
+      "title": "Blessings on one button",
+      "desc": "Blessing of Might on your mouseover or friendly target. Hold Shift for Wisdom or Ctrl for Kings.",
+      "category": "General",
+      "code": "#showtooltip /cast [mod:shift,@mouseover,help,nodead][mod:shift] Blessing of Wisdom; [mod:ctrl,@mouseover,help,nodead][mod:ctrl] Blessing of Kings; [@mouseover,help,nodead][] Blessing of Might"
+    },
+    {
+      "id": "paladin-macro-4",
+      "title": "Auras on one button",
+      "desc": "Devotion Aura on a normal press. Hold Shift for Concentration Aura or Ctrl for Retribution Aura.",
+      "category": "General",
+      "code": "#showtooltip [mod:shift] Concentration Aura; [mod:ctrl] Retribution Aura; Devotion Aura /cast [mod:shift] Concentration Aura; [mod:ctrl] Retribution Aura; Devotion Aura"
+    },
+    {
+      "id": "paladin-macro-5",
+      "title": "Resistance auras on one button",
+      "desc": "Fire Resistance Aura on a normal press. Hold Shift for Frost or Ctrl for Shadow when a fight calls for it.",
+      "category": "General",
+      "code": "#showtooltip [mod:shift] Frost Resistance Aura; [mod:ctrl] Shadow Resistance Aura; Fire Resistance Aura /cast [mod:shift] Frost Resistance Aura; [mod:ctrl] Shadow Resistance Aura; Fire Resistance Aura"
+    },
+    {
+      "id": "paladin-macro-6",
+      "title": "Mouseover Lay on Hands",
+      "desc": "Lay on Hands on your mouseover, then your friendly target, then yourself. It heals for your max health and drains the rest of your mana.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Lay on Hands /cast [@mouseover,help,nodead][help,nodead][@player] Lay on Hands"
+    },
+    {
+      "id": "paladin-macro-7",
+      "title": "Divine Shield, and drop it early",
+      "desc": "Press to bubble. Press again to drop it once you're safe. The same press also cancels Divine Protection and Blessing of Protection, which stop you attacking.",
+      "category": "General",
+      "code": "#showtooltip Divine Shield /cancelaura Divine Shield /cancelaura Divine Protection /cancelaura Blessing of Protection /cast Divine Shield"
+    },
+    {
+      "id": "paladin-macro-8",
+      "title": "Mouseover Redemption",
+      "desc": "Resurrect the dead player under your cursor, or your dead target. It's a 10 second cast and you can't use it in combat.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Redemption /cast [@mouseover,help,dead][help,dead] Redemption"
+    },
+    {
+      "id": "paladin-macro-9",
+      "title": "Exorcism or Turn Undead",
+      "desc": "Exorcism on an Undead or Demon target. Hold Shift for Turn Undead to send an Undead enemy running.",
+      "category": "General",
+      "code": "#showtooltip [mod:shift] Turn Undead; Exorcism /cast [mod:shift,harm,nodead] Turn Undead; [harm,nodead] Exorcism"
+    },
+    {
+      "id": "paladin-macro-10",
+      "title": "Mouseover Holy Light",
+      "desc": "Heal a friendly mouseover first, then your target, then yourself.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Holy Light /cast [@mouseover,help,nodead][help,nodead][@player] Holy Light"
+    },
+    {
+      "id": "paladin-macro-11",
+      "title": "Mouseover Flash of Light",
+      "desc": "Keep your enemy target while healing a party frame under your cursor.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Flash of Light /cast [@mouseover,help,nodead][help,nodead][@player] Flash of Light"
+    },
+    {
+      "id": "paladin-macro-12",
+      "title": "Holy Light ranks on Shift and Ctrl",
+      "desc": "Heal your mouseover or friendly target with your top rank, or a cheaper one with Shift (rank 7) or Ctrl (rank 5).",
+      "category": "General",
+      "code": "#showtooltip Holy Light /cast [mod:shift,@mouseover,help,nodead][mod:shift] Holy Light(Rank 7); [mod:ctrl,@mouseover,help,nodead][mod:ctrl] Holy Light(Rank 5); [@mouseover,help,nodead][] Holy Light"
+    },
+    {
+      "id": "paladin-macro-13",
+      "title": "Flash of Light ranks on Shift and Ctrl",
+      "desc": "Top up your mouseover or friendly target with your top rank, or a cheaper one with Shift (rank 5) or Ctrl (rank 3).",
+      "category": "General",
+      "code": "#showtooltip Flash of Light /cast [mod:shift,@mouseover,help,nodead][mod:shift] Flash of Light(Rank 5); [mod:ctrl,@mouseover,help,nodead][mod:ctrl] Flash of Light(Rank 3); [@mouseover,help,nodead][] Flash of Light"
+    },
+    {
+      "id": "paladin-macro-14",
+      "title": "Heal whoever the enemy is fighting",
+      "desc": "With an enemy targeted, Flash of Light goes to your mouseover, then your friendly target, then whoever that enemy is attacking. Hold Shift for Holy Light.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip [mod:shift] Holy Light; Flash of Light /cast [mod:shift,@mouseover,help,nodead][mod:shift,help,nodead][mod:shift,@targettarget,help,nodead] Holy Light; [@mouseover,help,nodead][help,nodead][@targettarget,help,nodead] Flash of Light"
+    },
+    {
+      "id": "paladin-macro-15",
+      "title": "Holy Shock on a friend or an enemy",
+      "desc": "Holy Shock your mouseover, then your target, then yourself. It heals an ally and damages an enemy. Hold Alt to shock yourself.",
+      "category": "General",
+      "code": "#showtooltip Holy Shock /cast [mod:alt,@player][@mouseover,exists,nodead][exists,nodead][@player] Holy Shock"
+    },
+    {
+      "id": "paladin-macro-16",
+      "title": "Light's Vigil, then Holy Shock",
+      "desc": "Mark your mouseover or target with Light's Vigil, then hold Shift and press to Holy Shock the same target for the bonus effect.",
+      "category": "General",
+      "code": "#showtooltip [mod:shift] Holy Shock; Light's Vigil /cast [mod:shift,@mouseover,exists,nodead][mod:shift,exists,nodead] Holy Shock; [@mouseover,exists,nodead][exists,nodead][@player] Light's Vigil"
+    },
+    {
+      "id": "paladin-macro-17",
+      "title": "Divine Favor into a heal",
+      "desc": "Pop Divine Favor and heal in one press so the heal is a sure critical. Holy Light by default, Flash of Light with Shift.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip [mod:shift] Flash of Light; Holy Light /cast Divine Favor /cast [mod:shift,@mouseover,help,nodead][mod:shift] Flash of Light; [@mouseover,help,nodead][help,nodead][@player] Holy Light"
+    },
+    {
+      "id": "paladin-macro-18",
+      "title": "Mouseover Purify",
+      "desc": "Remove a disease and a poison from your mouseover, then your friendly target, then yourself.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Purify /cast [@mouseover,help,nodead][help,nodead][@player] Purify"
+    },
+    {
+      "id": "paladin-macro-19",
+      "title": "Mouseover Cleanse",
+      "desc": "Cleanse a poison, a disease and a magic effect from your mouseover, then your friendly target, then yourself. Hold Alt to cleanse yourself.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Cleanse /cast [mod:alt,@player][@mouseover,help,nodead][help,nodead][@player] Cleanse"
+    },
+    {
+      "id": "paladin-macro-20",
+      "title": "Seal of Wisdom, Seal of Light or Judgement",
+      "desc": "Hold Shift for Seal of Wisdom or Ctrl for Seal of Light, then press normally to judge. Judgement no longer uses the Seal up, so you don't recast it.",
+      "category": "General",
+      "code": "#showtooltip [mod:shift] Seal of Wisdom; [mod:ctrl] Seal of Light; Judgement /cast [mod:shift] Seal of Wisdom; [mod:ctrl] Seal of Light; Judgement"
+    },
+    {
+      "id": "paladin-macro-21",
+      "title": "Salvation, Shift for Greater Salvation",
+      "desc": "Give Salvation to a friendly mouseover or target. Hold Shift for the greater blessing on that class in the group. Choose a damage dealer or healer, not your tank.",
+      "category": "General",
+      "code": "#showtooltip /cast [mod:shift,@mouseover,help,nodead][mod:shift,help,nodead] Greater Blessing of Salvation; [@mouseover,help,nodead][help,nodead] Blessing of Salvation"
+    },
+    {
+      "id": "paladin-macro-22",
+      "title": "Seal of Fury or Judgement",
+      "desc": "Hold Shift to apply Seal of Fury. A normal press judges, and with the Seal up that Judgement taunts your target for 4 seconds.",
+      "category": "General",
+      "code": "#showtooltip [mod:shift] Seal of Fury; Judgement /cast [mod:shift] Seal of Fury; Judgement"
+    },
+    {
+      "id": "paladin-macro-23",
+      "title": "Consecration and Righteous Fury",
+      "desc": "Hold Shift to turn on Righteous Fury before a pull. Press normally for Consecration.",
+      "category": "General",
+      "code": "#showtooltip [mod:shift] Righteous Fury; Consecration /cast [mod:shift] Righteous Fury; Consecration"
+    },
+    {
+      "id": "paladin-macro-24",
+      "title": "Holy Shield and Judgement",
+      "desc": "One press judges (Judgement is off the global cooldown) and raises Holy Shield.",
+      "category": "General",
+      "code": "#showtooltip Holy Shield /startattack /cast Judgement /cast Holy Shield"
+    },
+    {
+      "id": "paladin-macro-25",
+      "title": "Hammer of the Righteous or Holy Strike",
+      "desc": "Hammer of the Righteous hits your target and up to 3 nearby enemies on a 6 second cooldown. Hold Shift for Holy Strike.",
+      "category": "Combat & Rotations",
+      "code": "#showtooltip [mod:shift] Holy Strike; Hammer of the Righteous /startattack /cast [mod:shift] Holy Strike; Hammer of the Righteous"
+    },
+    {
+      "id": "paladin-macro-26",
+      "title": "Judgement or Swift Judgement",
+      "desc": "Press to judge. Hold Shift for Swift Judgement, which finishes Judgement's cooldown and makes the next one free, then press again.",
+      "category": "General",
+      "code": "#showtooltip [mod:shift] Swift Judgement; Judgement /cast [mod:shift] Swift Judgement; Judgement"
+    },
+    {
+      "id": "paladin-macro-27",
+      "title": "Templar's Bulwark or Divine Protection",
+      "desc": "Templar's Bulwark puts an absorb equal to your max health on you for 8 seconds. Hold Shift for Divine Protection instead. Both apply Forbearance.",
+      "category": "General",
+      "code": "#showtooltip [mod:shift] Divine Protection; Templar's Bulwark /cast [mod:shift] Divine Protection; Templar's Bulwark"
+    },
+    {
+      "id": "paladin-macro-28",
+      "title": "Righteous Fury on, Shift to drop it",
+      "desc": "Press to turn on Righteous Fury before a pull. Hold Shift to cancel it when you switch to damage or healing.",
+      "category": "General",
+      "code": "#showtooltip Righteous Fury /cast [nomod:shift] Righteous Fury /stopmacro [nomod:shift] /cancelaura Righteous Fury"
+    },
+    {
+      "id": "paladin-macro-29",
+      "title": "Judge the mob under your cursor",
+      "desc": "Judge your mouseover enemy, or your target if you aren't pointing at one. With Seal of Fury up, that Judgement taunts for 4 seconds.",
+      "category": "General",
+      "code": "#showtooltip Judgement /cast [@mouseover,harm,nodead][harm,nodead] Judgement"
+    },
+    {
+      "id": "paladin-macro-30",
+      "title": "Blessing of Sacrifice on a party member",
+      "desc": "Put Blessing of Sacrifice on your mouseover or friendly target so part of each hit lands on you. It only works on party members.",
+      "category": "General",
+      "code": "#showtooltip Blessing of Sacrifice /cast [@mouseover,help,nodead][help,nodead] Blessing of Sacrifice"
+    },
+    {
+      "id": "paladin-macro-31",
+      "title": "Seal of Fury, Righteousness or Justice",
+      "desc": "Seal of Fury by default. Shift picks Seal of Righteousness, and Ctrl picks Seal of Justice, whose Judgement stops the enemy fleeing.",
+      "category": "General",
+      "code": "#showtooltip [mod:shift] Seal of Righteousness; [mod:ctrl] Seal of Justice; Seal of Fury /cast [mod:shift] Seal of Righteousness; [mod:ctrl] Seal of Justice; Seal of Fury"
+    },
+    {
+      "id": "paladin-macro-32",
+      "title": "Seal of Command or Judgement",
+      "desc": "Hold Shift to apply Seal of Command, then press normally to judge. Judgement no longer uses the Seal up, so one Seal covers many Judgements.",
+      "category": "General",
+      "code": "#showtooltip [mod:shift] Seal of Command; Judgement /cast [mod:shift] Seal of Command; Judgement"
+    },
+    {
+      "id": "paladin-macro-33",
+      "title": "Hammer of Wrath or Holy Strike",
+      "desc": "Hold Shift for the ranged finisher on a target at 20% health or less. A normal press uses Holy Strike.",
+      "category": "Combat & Rotations",
+      "code": "#showtooltip [mod:shift] Hammer of Wrath; Holy Strike /startattack /cast [mod:shift] Hammer of Wrath; Holy Strike"
+    },
+    {
+      "id": "paladin-macro-34",
+      "title": "Judgement and Holy Strike",
+      "desc": "Judgement is off the global cooldown, so one press judges and Holy Strikes. With Sacred Arbiter, Holy Strike also refreshes your Judgements.",
+      "category": "Combat & Rotations",
+      "code": "#showtooltip Holy Strike /startattack /cast Judgement /cast Holy Strike"
+    },
+    {
+      "id": "paladin-macro-35",
+      "title": "Swap Seals for Twist of Light",
+      "desc": "Each press swaps between Seal of Command and Seal of Righteousness. Twist of Light stores an Echo of the Seal you replaced, and your next swing applies it.",
+      "category": "General",
+      "code": "#showtooltip /castsequence reset=combat Seal of Command, Seal of Righteousness /startattack"
+    },
+    {
+      "id": "paladin-macro-36",
+      "title": "Opener: Crusader, Judgement, Command",
+      "desc": "Three presses: Seal of the Crusader, Judgement, then Seal of Command. It starts over 10 seconds after your last press.",
+      "category": "General",
+      "code": "#showtooltip /castsequence reset=10 Seal of the Crusader, Judgement, Seal of Command /startattack"
+    },
+    {
+      "id": "paladin-macro-37",
+      "title": "Judgement, or Consecration on Shift",
+      "desc": "Judge on a normal press with auto attack on. Hold Shift for Consecration when enemies are standing around you.",
+      "category": "General",
+      "code": "#showtooltip [mod:shift] Consecration; Judgement /startattack /cast [mod:shift] Consecration; Judgement"
+    },
+    {
+      "id": "paladin-macro-38",
+      "title": "Judgement, with trinkets on Shift",
+      "desc": "Judge on a normal press. Hold Shift to use both trinkets first, with Judgement right after.",
+      "category": "General",
+      "code": "#showtooltip Judgement /use [mod:shift] 13 /use [mod:shift] 14 /cast Judgement"
+    },
+    {
+      "id": "paladin-macro-39",
+      "title": "Seal of Righteousness, Command or the Crusader",
+      "desc": "Seal of Righteousness by default. Shift picks Seal of Command, and Ctrl picks Seal of the Crusader.",
+      "category": "General",
+      "code": "#showtooltip [mod:shift] Seal of Command; [mod:ctrl] Seal of the Crusader; Seal of Righteousness /cast [mod:shift] Seal of Command; [mod:ctrl] Seal of the Crusader; Seal of Righteousness"
+    },
+    {
+      "id": "paladin-macro-40",
+      "title": "Exorcism with Judgement",
+      "desc": "Request Exorcism and Judgement on your target. Exorcism still needs an Undead or Demon; Judgement needs an active seal and a target in range.",
+      "category": "General",
+      "code": "#showtooltip Exorcism /cast [harm,nodead] Exorcism /cast [harm,nodead] Judgement"
+    },
+    {
+      "id": "paladin-macro-41",
+      "title": "Hammer of Justice on target or mouseover",
+      "desc": "Drops your cast and your mount, then stuns your target. Hold Shift to stun the enemy under your cursor instead.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Hammer of Justice /dismount /stopcasting /cast [mod:shift,@mouseover,harm,nodead][harm,nodead] Hammer of Justice"
+    },
+    {
+      "id": "paladin-macro-42",
+      "title": "Stun, then judge the stunned target",
+      "desc": "Hammer of Justice on a normal press, then hold Shift to judge while they're stunned. Seal of Command's Judgement hits roughly twice as hard on a stunned or incapacitated target.",
+      "category": "General",
+      "code": "#showtooltip [mod:shift] Judgement; Hammer of Justice /cast [mod:shift,harm,nodead] Judgement; [harm,nodead] Hammer of Justice"
+    },
+    {
+      "id": "paladin-macro-43",
+      "title": "Repentance on target, mouseover or their target",
+      "desc": "Incapacitate a Humanoid for up to 6 seconds. Shift picks your mouseover, and Alt picks your target's target if it's an enemy.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Repentance /cast [mod:shift,@mouseover,harm,nodead][mod:alt,@targettarget,harm,nodead][harm,nodead] Repentance"
+    },
+    {
+      "id": "paladin-macro-44",
+      "title": "Blessing of Freedom on a friend or yourself",
+      "desc": "Free your mouseover, then your friendly target, then yourself. Hold Alt to free yourself. It gives 10 seconds of immunity to movement impairing effects.",
+      "category": "General",
+      "code": "#showtooltip Blessing of Freedom /cast [mod:alt,@player][@mouseover,help,nodead][help,nodead][@player] Blessing of Freedom"
+    },
+    {
+      "id": "paladin-macro-45",
+      "title": "Voice of Truth into a heal",
+      "desc": "Voice of Truth makes you immune to silence and interrupts for 6 seconds, then the heal goes out. Holy Light by default, Flash of Light with Shift.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip [mod:shift] Flash of Light; Holy Light /cast Voice of Truth /cast [mod:shift,@mouseover,help,nodead][mod:shift,help,nodead] Flash of Light; [@mouseover,help,nodead][help,nodead][@player] Holy Light"
+    },
+    {
+      "id": "paladin-macro-46",
+      "title": "Lay on Hands: you, or a friend with Shift or Ctrl",
+      "desc": "Cancels your cast (even if Lay on Hands is on cooldown), then lays hands on you. Shift picks your friendly mouseover and Ctrl your friendly target.",
+      "category": "General",
+      "code": "#showtooltip Lay on Hands /stopcasting /cast [mod:shift,@mouseover,help,nodead][mod:ctrl,help,nodead][@player] Lay on Hands"
+    },
+    {
+      "id": "paladin-macro-47",
+      "title": "Hammer of Wrath on target or mouseover",
+      "desc": "Finish an enemy at 20% health or less from range. Hold Shift to pick the one under your cursor.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Hammer of Wrath /cast [mod:shift,@mouseover,harm,nodead][harm,nodead] Hammer of Wrath"
+    },
+    {
+      "id": "paladin-macro-48",
+      "title": "Racial escape for Human, Dwarf or Undead",
+      "desc": "One button for whichever racial you have. Will to Survive removes stuns, Stoneform removes bleeds, poisons and diseases, and Will of the Forsaken removes charm, fear and sleep.",
+      "category": "General",
+      "code": "#showtooltip /cast Will to Survive /cast Stoneform /cast Will of the Forsaken"
+    },
+    {
+      "id": "paladin-macro-49",
+      "title": "Target the nearest enemy and attack",
+      "desc": "Picks the nearest enemy if you don't have a live enemy target, then starts auto attack. Shift always jumps to the nearest enemy, and Alt goes back to your last enemy target.",
+      "category": "General",
+      "code": "#showtooltip Attack /targetlastenemy [mod:alt] /targetenemy [mod:shift][noharm][dead] /startattack [harm,nodead]"
+    },
+    {
+      "id": "paladin-macro-50",
+      "title": "Seal of Command, Justice, Light or Wisdom",
+      "desc": "Seal of Command by default. Shift picks Justice, which can stun on a hit. Ctrl picks Light and Alt picks Wisdom.",
+      "category": "General",
+      "code": "#showtooltip [mod:shift] Seal of Justice; [mod:ctrl] Seal of Light; [mod:alt] Seal of Wisdom; Seal of Command /cast [mod:shift] Seal of Justice; [mod:ctrl] Seal of Light; [mod:alt] Seal of Wisdom; Seal of Command"
+    },
+    {
+      "id": "paladin-macro-51",
+      "title": "Trinket, then Freedom on yourself",
+      "desc": "Uses the trinket in your first slot, then Blessing of Freedom on you. Hold Shift to skip the trinket.",
+      "category": "General",
+      "code": "#showtooltip Blessing of Freedom /use [nomod:shift] 13 /cast [@player] Blessing of Freedom"
+    },
+    {
+      "id": "paladin-macro-52",
+      "title": "Assist a friend and attack",
+      "desc": "Takes your friendly target's target and starts attacking it. Hold Shift to assist the friend under your cursor instead.",
+      "category": "General",
+      "code": "#showtooltip Attack /assist [mod:shift,@mouseover,help,nodead][help,nodead] /startattack [harm,nodead]"
+    },
+    {
+      "id": "paladin-macro-53",
+      "title": "Divine Favor into Holy Shock",
+      "desc": "Pop Divine Favor and Holy Shock in one press so the shock is a sure critical. It heals your mouseover, target or yourself, and Shift sends it at an enemy.",
+      "category": "General",
+      "code": "#showtooltip Holy Shock /cast Divine Favor /cast [mod:shift,@mouseover,harm,nodead][mod:shift,harm,nodead][@mouseover,help,nodead][help,nodead][@player] Holy Shock"
+    }
+  ],
+  "warrior": [
+    {
+      "id": "warrior-macro-1",
+      "title": "Charge and start attacking",
+      "desc": "Get off your mount, start swinging and Charge in one press.",
+      "category": "General",
+      "code": "#showtooltip Charge /dismount /startattack /cast Charge"
+    },
+    {
+      "id": "warrior-macro-2",
+      "title": "Charge out of combat, Intercept in it",
+      "desc": "Charge from Battle Stance out of combat and Intercept from Berserker Stance in combat. If you're in the wrong stance the press swaps first, then press again.",
+      "category": "General",
+      "code": "#show [combat] Intercept; Charge /startattack /cast [nocombat,stance:1] Charge; [combat,stance:3] Intercept; [nocombat,nostance:1] Battle Stance; [combat,nostance:3] Berserker Stance"
+    },
+    {
+      "id": "warrior-macro-3",
+      "title": "Victory Rush after a kill",
+      "desc": "Use the new follow-up strike within 20 seconds of defeating a non-trivial enemy; it also heals you for 10% of your maximum health.",
+      "category": "General",
+      "code": "#showtooltip Victory Rush /startattack /cast Victory Rush"
+    },
+    {
+      "id": "warrior-macro-4",
+      "title": "Berserker Rage with a stance swap",
+      "desc": "Swap into Berserker Stance if you aren't in it and use Berserker Rage, which makes you immune to Fear and Incapacitate for 10 sec.",
+      "category": "General",
+      "code": "#showtooltip Berserker Rage /cast [nostance:3] Berserker Stance /cast Berserker Rage"
+    },
+    {
+      "id": "warrior-macro-5",
+      "title": "Execute your target or mouseover",
+      "desc": "Start attacking and Execute a target under 20% health, or your mouseover with Shift. From Defensive Stance it swaps to Battle Stance first.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Execute /startattack /cast [stance:2] Battle Stance /cast [mod:shift,@mouseover,harm,nodead] Execute; Execute"
+    },
+    {
+      "id": "warrior-macro-6",
+      "title": "Heroic Strike or Cleave",
+      "desc": "Start attacking and queue Heroic Strike on your next swing, or Cleave with Shift when a second enemy is close by.",
+      "category": "Combat & Rotations",
+      "code": "#showtooltip [mod:shift] Cleave; Heroic Strike /startattack /cast [mod:shift] Cleave; Heroic Strike"
+    },
+    {
+      "id": "warrior-macro-7",
+      "title": "Use both trinkets",
+      "desc": "Use your top and bottom trinkets together.",
+      "category": "General",
+      "code": "#showtooltip /use 13 /use 14"
+    },
+    {
+      "id": "warrior-macro-8",
+      "title": "Bloodrage and a Rage Potion",
+      "desc": "Bloodrage and a Rage Potion together, so the potion's 20 to 40 Rage lands on top of Bloodrage's.",
+      "category": "General",
+      "code": "#showtooltip Bloodrage /cast Bloodrage /use Rage Potion"
+    },
+    {
+      "id": "warrior-macro-9",
+      "title": "Battle Shout, Shift for Demoralizing Shout",
+      "desc": "Refresh Battle Shout, or hold Shift to weaken nearby enemies with Demoralizing Shout. You choose which shout to spend Rage on.",
+      "category": "General",
+      "code": "#showtooltip [mod:shift] Demoralizing Shout; Battle Shout /cast [mod:shift] Demoralizing Shout; Battle Shout"
+    },
+    {
+      "id": "warrior-macro-10",
+      "title": "Overpower stance",
+      "desc": "Swap to Battle Stance if you aren't in it, then Overpower after a dodge or when Bloodthrill opens the window. If you swap, press again to cast.",
+      "category": "General",
+      "code": "#showtooltip Overpower /startattack /cast [nostance:1] Battle Stance /cast Overpower"
+    },
+    {
+      "id": "warrior-macro-11",
+      "title": "Spearing Strike",
+      "desc": "Start swinging and use Spearing Strike, which hits Giants, Dragonkin and mounted enemies harder and dismounts riders.",
+      "category": "Combat & Rotations",
+      "code": "#showtooltip Spearing Strike /startattack /cast Spearing Strike"
+    },
+    {
+      "id": "warrior-macro-12",
+      "title": "Victory Rush, Overpower, Mortal Strike",
+      "desc": "One button for whatever is ready: Victory Rush after a kill, Overpower when Bloodthrill or a dodge opens it, then Mortal Strike.",
+      "category": "Combat & Rotations",
+      "code": "#showtooltip Mortal Strike /startattack /cast [nostance:1] Battle Stance /cast Victory Rush /cast Overpower /cast Mortal Strike"
+    },
+    {
+      "id": "warrior-macro-13",
+      "title": "Mortal Strike, Hamstring on Shift",
+      "desc": "Start attacking and use Mortal Strike, or Hamstring with Shift to slow a runner.",
+      "category": "Combat & Rotations",
+      "code": "#showtooltip [mod:shift] Hamstring; Mortal Strike /startattack /cast [mod:shift] Hamstring; Mortal Strike"
+    },
+    {
+      "id": "warrior-macro-14",
+      "title": "Rend your target or mouseover",
+      "desc": "Start attacking and Rend your target, or your mouseover with Shift. Bloodthrill only works on enemies that have your Rend on them.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Rend /startattack /cast [mod:shift,@mouseover,harm,nodead] Rend; Rend"
+    },
+    {
+      "id": "warrior-macro-15",
+      "title": "Sweeping Strikes with a stance swap",
+      "desc": "Swap to Battle Stance if you need to and start Sweeping Strikes, so your next 5 melee attacks hit a second enemy.",
+      "category": "Combat & Rotations",
+      "code": "#showtooltip Sweeping Strikes /cast [nostance:1] Battle Stance /cast Sweeping Strikes"
+    },
+    {
+      "id": "warrior-macro-16",
+      "title": "Charge, then Hamstring",
+      "desc": "Charge when you're out of combat, and once you're fighting the same key Hamstrings.",
+      "category": "General",
+      "code": "#showtooltip [nocombat] Charge; Hamstring /startattack /cast [nocombat] Charge /cast Hamstring"
+    },
+    {
+      "id": "warrior-macro-17",
+      "title": "Retaliation with a stance swap",
+      "desc": "Swap to Battle Stance if needed and use Retaliation: up to 30 melee counterattacks over 15 sec. Its 15 minute cooldown is independent of Shield Wall and Recklessness.",
+      "category": "General",
+      "code": "#showtooltip Retaliation /cast [nostance:1] Battle Stance /cast Retaliation"
+    },
+    {
+      "id": "warrior-macro-18",
+      "title": "Swap to your two-hander",
+      "desc": "Equip your two-hander and drop into Battle Stance. Put your own weapon's name where it says Two-Hander Name.",
+      "category": "General",
+      "code": "#showtooltip Battle Stance /equip Two-Hander Name /cast [nostance:1] Battle Stance"
+    },
+    {
+      "id": "warrior-macro-19",
+      "title": "Bloodthirst and auto attack",
+      "desc": "Start your swings and use Bloodthirst, which now also gives 10% movement speed for 10 sec. Hold Shift to queue Heroic Strike as well.",
+      "category": "General",
+      "code": "#showtooltip Bloodthirst /startattack /cast Bloodthirst /cast [mod:shift] Heroic Strike"
+    },
+    {
+      "id": "warrior-macro-20",
+      "title": "Whirlwind stance",
+      "desc": "Enter Berserker Stance if you need to and use Whirlwind. If it only swaps stance, press again.",
+      "category": "General",
+      "code": "#showtooltip Whirlwind /cast [nostance:3] Berserker Stance /cast Whirlwind"
+    },
+    {
+      "id": "warrior-macro-21",
+      "title": "Execute, Bloodthirst, Whirlwind",
+      "desc": "One button for whatever is ready: Execute under 20% health, then Bloodthirst, then Whirlwind.",
+      "category": "General",
+      "code": "#showtooltip Bloodthirst /startattack /cast [nostance:3] Berserker Stance /cast Execute /cast Bloodthirst /cast Whirlwind"
+    },
+    {
+      "id": "warrior-macro-22",
+      "title": "Whirlwind into Cleave",
+      "desc": "Whirlwind now strikes with both weapons without a talent. Raging Blows cuts Whirlwind and Cleave costs by 3 Rage in the October 2 update.",
+      "category": "General",
+      "code": "#showtooltip Whirlwind /startattack /cast [nostance:3] Berserker Stance /cast Whirlwind /cast Cleave"
+    },
+    {
+      "id": "warrior-macro-23",
+      "title": "Death Wish then Recklessness",
+      "desc": "First press starts Death Wish, the next starts Recklessness, and both trinkets fire each time. Death Wish now makes you take 5% more damage.",
+      "category": "General",
+      "code": "#showtooltip /castsequence reset=30 Death Wish, Recklessness /use 13 /use 14"
+    },
+    {
+      "id": "warrior-macro-24",
+      "title": "Recklessness from any stance",
+      "desc": "Use Recklessness from Berserker Stance; otherwise the first press swaps stance. Its cooldown is independent of Shield Wall and Retaliation.",
+      "category": "General",
+      "code": "#showtooltip Recklessness /cast [stance:3] Recklessness; Berserker Stance"
+    },
+    {
+      "id": "warrior-macro-25",
+      "title": "Bloodrage and Berserker Rage",
+      "desc": "Start a pull with Bloodrage and Berserker Rage together. Improved Berserker Rage adds Rage the moment you use it.",
+      "category": "General",
+      "code": "#showtooltip Berserker Rage /cast [nostance:3] Berserker Stance /cast Bloodrage /cast Berserker Rage"
+    },
+    {
+      "id": "warrior-macro-26",
+      "title": "Mouseover Pummel",
+      "desc": "Start attacking and Pummel the enemy under your cursor, or your target, from Berserker Stance.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Pummel /startattack /cast [nostance:3] Berserker Stance /cast [@mouseover,harm,nodead][] Pummel"
+    },
+    {
+      "id": "warrior-macro-27",
+      "title": "Mouseover Taunt",
+      "desc": "Taunt the enemy under your cursor without dropping your current target.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Taunt /cast [@mouseover,harm,nodead][] Taunt"
+    },
+    {
+      "id": "warrior-macro-28",
+      "title": "Mouseover Shield Bash",
+      "desc": "Interrupt a nearby caster under your cursor, or your target.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Shield Bash /cast [@mouseover,harm,nodead][] Shield Bash"
+    },
+    {
+      "id": "warrior-macro-29",
+      "title": "Mouseover Sunder Armor",
+      "desc": "Sunder your mouseover or target for armor reduction and threat. It remains usable for threat under a stronger Expose Armor.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Sunder Armor /startattack /cast [@mouseover,harm,nodead][] Sunder Armor"
+    },
+    {
+      "id": "warrior-macro-30",
+      "title": "Revenge, Shield Block on Shift",
+      "desc": "Revenge when a block, dodge or parry lets you. Hold Shift to Shield Block first, which now blocks up to 2 attacks over 7 sec.",
+      "category": "General",
+      "code": "#showtooltip Revenge /startattack /cast [mod:shift,equipped:Shields] Shield Block /cast Revenge"
+    },
+    {
+      "id": "warrior-macro-31",
+      "title": "Shield Slam, Revenge, Sunder Armor",
+      "desc": "Shield Slam when it's ready, then Revenge after a block, dodge or parry, then Sunder Armor.",
+      "category": "General",
+      "code": "#showtooltip Shield Slam /startattack /cast Shield Slam /cast Revenge /cast Sunder Armor"
+    },
+    {
+      "id": "warrior-macro-32",
+      "title": "Thunder Clap from Defensive Stance",
+      "desc": "In the beta Thunder Clap works from Defensive Stance, so tanks don't have to swap to Battle Stance. Pressed from Berserker Stance it swaps you to Battle Stance instead.",
+      "category": "General",
+      "code": "#showtooltip Thunder Clap /startattack /cast [nostance:3] Thunder Clap; Battle Stance"
+    },
+    {
+      "id": "warrior-macro-33",
+      "title": "Shield Wall, Last Stand on Shift",
+      "desc": "Swap to Defensive Stance if needed and use Shield Wall (60% less damage for 12 sec). Shift adds Last Stand. Shield Wall's 15 minute cooldown is independent of Retaliation and Recklessness.",
+      "category": "General",
+      "code": "#showtooltip Shield Wall /cast [mod:shift] Last Stand /cast [nostance:2] Defensive Stance /cast Shield Wall"
+    },
+    {
+      "id": "warrior-macro-34",
+      "title": "Charge and Bloodrage from Defensive Stance",
+      "desc": "Charge without leaving Defensive Stance, then Bloodrage as you land. Charge goes first because Bloodrage counts as being in combat.",
+      "category": "General",
+      "code": "#showtooltip Charge /dismount /cast [nocombat] Charge /cast [nocombat] Bloodrage"
+    },
+    {
+      "id": "warrior-macro-35",
+      "title": "Swap to sword and board",
+      "desc": "Put your one-hander and shield on and drop into Defensive Stance. Put your own weapon and shield names in place of One-Hand Name and Shield Name.",
+      "category": "General",
+      "code": "#showtooltip Defensive Stance /equipslot [noequipped:Shields] 16 One-Hand Name /equip [noequipped:Shields] Shield Name /cast [nostance:2] Defensive Stance"
+    },
+    {
+      "id": "warrior-macro-36",
+      "title": "Battle Stance into mouseover Mocking Blow",
+      "desc": "Switch to Battle Stance, then Mocking Blow a hostile mouseover or target. Press again after the stance cooldown if needed. Its brief forced attack is different from Taunt's threat match.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Mocking Blow /cast [nostance:1] Battle Stance /cast [stance:1,@mouseover,harm,nodead][stance:1,harm,nodead] Mocking Blow"
+    },
+    {
+      "id": "warrior-macro-37",
+      "title": "Sunder Armor without Salvation",
+      "desc": "Remove either Salvation blessing, start attacking and Sunder Armor. Keep this on your tanking bar: a damage dealer usually wants to keep Salvation.",
+      "category": "General",
+      "code": "#showtooltip Sunder Armor /cancelaura Blessing of Salvation /cancelaura Greater Blessing of Salvation /startattack /cast Sunder Armor"
+    },
+    {
+      "id": "warrior-macro-38",
+      "title": "One-button interrupt",
+      "desc": "Shield Bash with a shield in Battle or Defensive Stance, Pummel in Berserker Stance. Without a shield it swaps you to Berserker Stance first. It also stops your own Slam.",
+      "category": "General",
+      "code": "#showtooltip /stopcasting /cast [mod:shift,@mouseover,harm,nodead,equipped:Shields,stance:1/2] Shield Bash; [mod:shift,@mouseover,harm,nodead,stance:3] Pummel; [equipped:Shields,stance:1/2] Shield Bash; [stance:3] Pummel; Berserker Stance"
+    },
+    {
+      "id": "warrior-macro-39",
+      "title": "Intercept your target or mouseover",
+      "desc": "Swap to Berserker Stance if needed and Intercept for a 3 sec stun. Hold Shift to pick your mouseover.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Intercept /cast [nostance:3] Berserker Stance /cast [mod:shift,@mouseover,harm,nodead] Intercept; Intercept"
+    },
+    {
+      "id": "warrior-macro-40",
+      "title": "Hamstring, Piercing Howl on Ctrl",
+      "desc": "Slow your target, or your mouseover with Shift. Ctrl dazes everything close to you with Piercing Howl instead.",
+      "category": "General",
+      "code": "#showtooltip Hamstring /startattack /cast [mod:ctrl] Piercing Howl; [mod:shift,@mouseover,harm,nodead] Hamstring; Hamstring"
+    },
+    {
+      "id": "warrior-macro-41",
+      "title": "Concussion Blow target or mouseover",
+      "desc": "Stun your target for 5 sec, or your mouseover with Shift. It doesn't use the global cooldown, so you can follow it with another attack.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Concussion Blow /cast [mod:shift,@mouseover,harm,nodead] Concussion Blow; Concussion Blow"
+    },
+    {
+      "id": "warrior-macro-42",
+      "title": "Intimidating Shout without swinging",
+      "desc": "Stop your auto attack so you don't hit the enemies you just scared, then Intimidating Shout your target, or your mouseover with Shift.",
+      "category": "General",
+      "code": "#showtooltip Intimidating Shout /stopattack /cast [mod:shift,@mouseover,harm,nodead] Intimidating Shout; Intimidating Shout"
+    },
+    {
+      "id": "warrior-macro-43",
+      "title": "Disarm from Defensive Stance",
+      "desc": "Swap into Defensive Stance if you aren't in it and Disarm your target for 10 sec, or your mouseover with Shift.",
+      "category": "General",
+      "code": "#showtooltip Disarm /cast [nostance:2] Defensive Stance /cast [mod:shift,@mouseover,harm,nodead] Disarm; Disarm"
+    },
+    {
+      "id": "warrior-macro-44",
+      "title": "Spearing Strike a rider",
+      "desc": "Spearing Strike your target, or your mouseover with Shift, to knock a mounted enemy off their mount.",
+      "category": "Combat & Rotations",
+      "code": "#showtooltip Spearing Strike /startattack /cast [mod:shift,@mouseover,harm,nodead] Spearing Strike; Spearing Strike"
+    },
+    {
+      "id": "warrior-macro-45",
+      "title": "Mortal Strike a healer",
+      "desc": "Mortal Strike your target, or your mouseover with Shift, to cut that enemy's healing by 50% for 10 sec.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Mortal Strike /startattack /cast [mod:shift,@mouseover,harm,nodead] Mortal Strike; Mortal Strike"
+    },
+    {
+      "id": "warrior-macro-46",
+      "title": "Nearest enemy, or back to your last one",
+      "desc": "Pick the nearest enemy if you don't have a live one and start attacking. Hold Shift to go back to your previous enemy instead.",
+      "category": "General",
+      "code": "#showtooltip Attack /targetlastenemy [mod:shift] /targetenemy [nomod,noharm][nomod,dead] /startattack"
+    },
+    {
+      "id": "warrior-macro-47",
+      "title": "Berserker Rage, trinket on Ctrl",
+      "desc": "Berserker Rage against Fear and Incapacitate, swapping to Berserker Stance first if needed. Hold Ctrl to use your top trinket instead.",
+      "category": "General",
+      "code": "#showtooltip Berserker Rage /cast [nomod:ctrl,nostance:3] Berserker Stance /cast [nomod:ctrl] Berserker Rage /use [mod:ctrl] 13"
+    },
+    {
+      "id": "warrior-macro-48",
+      "title": "Will to Survive, trinket on Ctrl",
+      "desc": "Human racial that removes all Stun effects. Hold Ctrl to use your top trinket instead and keep the racial for later.",
+      "category": "General",
+      "code": "#showtooltip Will to Survive /cast [nomod:ctrl] Will to Survive /use [mod:ctrl] 13"
+    },
+    {
+      "id": "warrior-macro-49",
+      "title": "All three stances on one key",
+      "desc": "Battle Stance on a plain press, Defensive with Shift and Berserker with Ctrl. Stances have a 1 sec cooldown and you keep up to 10 Rage when you swap.",
+      "category": "General",
+      "code": "#showtooltip [mod:shift] Defensive Stance; [mod:ctrl] Berserker Stance; Battle Stance /cast [mod:shift] Defensive Stance; [mod:ctrl] Berserker Stance; Battle Stance"
+    },
+    {
+      "id": "warrior-macro-50",
+      "title": "The big cooldown for your stance",
+      "desc": "Retaliation in Battle Stance, Shield Wall (15 min cooldown now) in Defensive Stance with a shield, Recklessness in Berserker Stance. In Defensive Stance without a shield it swaps you to Battle Stance.",
+      "category": "General",
+      "code": "#showtooltip /cast [stance:1] Retaliation; [stance:2,equipped:Shields] Shield Wall; [stance:2,noequipped:Shields] Battle Stance; [stance:3] Recklessness"
+    },
+    {
+      "id": "warrior-macro-51",
+      "title": "Shield Wall with a shield swap",
+      "desc": "Equip your one-hander and shield if you don't have a shield on, swap into Defensive Stance and use Shield Wall. Put your own item names in.",
+      "category": "General",
+      "code": "#showtooltip Shield Wall /equipslot [noequipped:Shields] 16 One-Hand Name /equip [noequipped:Shields] Shield Name /cast [nostance:2] Defensive Stance /cast Shield Wall"
+    }
+  ],
+  "warlock": [
+    {
+      "id": "warlock-macro-1",
+      "title": "Mouseover Fear",
+      "desc": "Fear another enemy without losing your main target.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Fear /cast [@mouseover,harm,nodead][] Fear"
+    },
+    {
+      "id": "warlock-macro-2",
+      "title": "Call your demon back",
+      "desc": "Stop its attack and bring it back before it breaks crowd control or pulls another enemy.",
+      "category": "General",
+      "code": "/petpassive /petfollow"
+    },
+    {
+      "id": "warlock-macro-3",
+      "title": "Summon a demon with modifier keys",
+      "desc": "Summon your Voidwalker, or hold a modifier to call a different demon instead.",
+      "category": "General",
+      "code": "#showtooltip /cast [mod:shift] Summon Imp; [mod:ctrl] Summon Succubus; [mod:alt] Summon Felhunter; Summon Voidwalker"
+    },
+    {
+      "id": "warlock-macro-4",
+      "title": "Pick your curse with a modifier key",
+      "desc": "Curse your mouseover or target with Curse of the Elements, or hold a modifier for Weakness, Recklessness or Tongues.",
+      "category": "General",
+      "code": "#showtooltip /cast [mod:shift,@mouseover,harm,nodead][mod:shift] Curse of Weakness; [mod:ctrl,@mouseover,harm,nodead][mod:ctrl] Curse of Recklessness; [mod:alt] Curse of Tongues; [@mouseover,harm,nodead][] Curse of the Elements"
+    },
+    {
+      "id": "warlock-macro-5",
+      "title": "Dot sequence for leveling",
+      "desc": "Send your demon in, then press repeatedly to run Immolate, Bane of Agony and Corruption and finish with your wand.",
+      "category": "General",
+      "code": "#showtooltip /petattack [harm,nodead] /castsequence reset=target Immolate, Bane of Agony, Corruption, !Shoot"
+    },
+    {
+      "id": "warlock-macro-6",
+      "title": "Wand without toggling it off",
+      "desc": "Start your wand and keep pressing the button without switching Shoot off again.",
+      "category": "General",
+      "code": "#showtooltip 18 /cast !Shoot"
+    },
+    {
+      "id": "warlock-macro-7",
+      "title": "Use your Healthstone",
+      "desc": "Use whichever Healthstone you're carrying, and hold Shift to start Drain Life in the same press.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip /use Major Healthstone /use Greater Healthstone /use Healthstone /use Lesser Healthstone /use Minor Healthstone /cast [mod:shift] Drain Life"
+    },
+    {
+      "id": "warlock-macro-8",
+      "title": "Soulstone your mouseover or target",
+      "desc": "Use your Soulstone on the friendly player under your cursor, or on your target if nothing's hovered.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip /use [@mouseover,help,nodead][] Major Soulstone /use [@mouseover,help,nodead][] Greater Soulstone /use [@mouseover,help,nodead][] Soulstone /use [@mouseover,help,nodead][] Lesser Soulstone /use [@mouseover,help,nodead][] Minor Soulstone"
+    },
+    {
+      "id": "warlock-macro-9",
+      "title": "Create your stones with one button",
+      "desc": "Create a Healthstone, or hold a modifier to create a Soulstone, Spellstone or Firestone instead.",
+      "category": "General",
+      "code": "#showtooltip /cast [mod:shift] Create Soulstone; [mod:ctrl] Create Spellstone; [mod:alt] Create Firestone; Create Healthstone"
+    },
+    {
+      "id": "warlock-macro-10",
+      "title": "Announce Ritual of Summoning",
+      "desc": "Tell your party who you're summoning, then start the ritual on your target.",
+      "category": "General",
+      "code": "#showtooltip Ritual of Summoning /party Summoning %t, please click the portal /cast Ritual of Summoning"
+    },
+    {
+      "id": "warlock-macro-11",
+      "title": "Demon Armor, Shift for Shadow Ward",
+      "desc": "Refresh Demon Armor, or hold Shift for Shadow Ward before incoming Shadow damage. Each press casts only the spell you choose.",
+      "category": "General",
+      "code": "#showtooltip [mod:shift] Shadow Ward; Demon Armor /cast [mod:shift] Shadow Ward; Demon Armor"
+    },
+    {
+      "id": "warlock-macro-12",
+      "title": "Mouseover Bane of Agony",
+      "desc": "Apply Forever’s renamed damage-over-time spell to a mouseover or your target.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Bane of Agony /cast [@mouseover,harm,nodead][] Bane of Agony"
+    },
+    {
+      "id": "warlock-macro-13",
+      "title": "Mouseover Corruption",
+      "desc": "Spread Corruption without switching away from your main target.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Corruption /cast [@mouseover,harm,nodead][] Corruption"
+    },
+    {
+      "id": "warlock-macro-14",
+      "title": "Mouseover Siphon Life",
+      "desc": "Put Siphon Life on your mouseover without changing target, or on your target if nothing's hovered.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Siphon Life /cast [@mouseover,harm,nodead][] Siphon Life"
+    },
+    {
+      "id": "warlock-macro-15",
+      "title": "Corruption, Bane of Agony, Siphon Life, Wrack",
+      "desc": "Send your demon in and press repeatedly to lay your dots one after another and finish with Wrack.",
+      "category": "General",
+      "code": "#showtooltip /petattack [harm,nodead] /castsequence reset=target Corruption, Bane of Agony, Siphon Life, Wrack"
+    },
+    {
+      "id": "warlock-macro-16",
+      "title": "Amplify Curse into Bane of Agony",
+      "desc": "Pop Amplify Curse and start Bane of Agony in one press, which Forever's Amplify Curse now boosts by 50%.",
+      "category": "General",
+      "code": "#showtooltip Bane of Agony /cast Amplify Curse /cast Bane of Agony"
+    },
+    {
+      "id": "warlock-macro-17",
+      "title": "One button for your channels",
+      "desc": "Start Drain Life, Drain Soul or Wrack from one button without restarting a channel you're already in, and use Alt for Life Tap.",
+      "category": "General",
+      "code": "#showtooltip /cast [mod:alt] Life Tap; [nochanneling,mod:ctrl] Wrack; [nochanneling,mod:shift] Drain Soul; [nochanneling] Drain Life"
+    },
+    {
+      "id": "warlock-macro-18",
+      "title": "Mouseover Drain Soul",
+      "desc": "Drain Soul your mouseover or target for a shot at a Soul Shard, without restarting a channel you're already in.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Drain Soul /cast [nochanneling,@mouseover,harm,nodead][nochanneling] Drain Soul"
+    },
+    {
+      "id": "warlock-macro-19",
+      "title": "Send your demon, then open with a dot",
+      "desc": "Send your demon at the target and open with Corruption, or with Bane of Agony or Immolate on a modifier.",
+      "category": "General",
+      "code": "#showtooltip /petattack [harm,nodead] /cast [mod:shift] Bane of Agony; [mod:ctrl] Immolate; Corruption"
+    },
+    {
+      "id": "warlock-macro-20",
+      "title": "Health Funnel, Shift to stop",
+      "desc": "Channel into your living demon. Repeated presses won't restart Health Funnel; hold Shift to stop once your pet is healthy.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Health Funnel /stopcasting [mod:shift] /stopmacro [mod:shift] /cast [@pet,exists,nodead,nochanneling:Health Funnel] Health Funnel"
+    },
+    {
+      "id": "warlock-macro-21",
+      "title": "Mouseover Subjugate Demon",
+      "desc": "Use Forever’s renamed demon control spell on a mouseover.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Subjugate Demon /cast [@mouseover,harm,nodead][] Subjugate Demon"
+    },
+    {
+      "id": "warlock-macro-22",
+      "title": "Fel Domination and summon",
+      "desc": "Fire Fel Domination and start the summon in the same press: Voidwalker, or a modifier for another demon.",
+      "category": "General",
+      "code": "#showtooltip /cast Fel Domination /cast [mod:shift] Summon Imp; [mod:ctrl] Summon Succubus; [mod:alt] Summon Felhunter; Summon Voidwalker"
+    },
+    {
+      "id": "warlock-macro-23",
+      "title": "Sacrifice, then summon a different demon",
+      "desc": "Sacrifice your demon for its 2 hour effect and summon another one straight away.",
+      "category": "General",
+      "code": "#showtooltip Demonic Sacrifice /cast Demonic Sacrifice /cast [mod:shift] Summon Imp; [mod:ctrl] Summon Voidwalker; [mod:alt] Summon Succubus; Summon Felhunter"
+    },
+    {
+      "id": "warlock-macro-24",
+      "title": "Summon your Succubus or Incubus",
+      "desc": "Summon your Succubus, or hold Shift for the Incubus, which is its own summon in Forever.",
+      "category": "General",
+      "code": "#showtooltip /cast [mod:shift] Summon Incubus; Summon Succubus"
+    },
+    {
+      "id": "warlock-macro-25",
+      "title": "Mouseover Banish",
+      "desc": "Banish a demon or elemental under your cursor without leaving your main target.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Banish /cast [@mouseover,harm,nodead][] Banish"
+    },
+    {
+      "id": "warlock-macro-26",
+      "title": "Summon your Voidwalker or call it back",
+      "desc": "Summon the Voidwalker when it's missing or dead, otherwise send it back to your side.",
+      "category": "General",
+      "code": "#showtooltip Summon Voidwalker /cast [nopet][@pet,dead] Summon Voidwalker /petfollow [pet]"
+    },
+    {
+      "id": "warlock-macro-27",
+      "title": "Unending Breath and Detect Invisibility",
+      "desc": "Give Unending Breath to your mouseover, friendly target or yourself, and hold Shift for Detect Invisibility instead.",
+      "category": "General",
+      "code": "#showtooltip /cast [mod:shift,@mouseover,help,nodead][mod:shift,help][mod:shift,@player] Detect Invisibility; [@mouseover,help,nodead][help][@player] Unending Breath"
+    },
+    {
+      "id": "warlock-macro-28",
+      "title": "Voidwalker Torment on your mouseover or target",
+      "desc": "Taunt your mouseover with the Voidwalker, or the enemy you're targeting.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Torment /cast [@mouseover,harm,nodead][] Torment"
+    },
+    {
+      "id": "warlock-macro-29",
+      "title": "Shadow Bolt and pet attack",
+      "desc": "Send your demon at the enemy as you begin Shadow Bolt.",
+      "category": "Pet & Utility",
+      "code": "#showtooltip Shadow Bolt /petattack /cast Shadow Bolt"
+    },
+    {
+      "id": "warlock-macro-30",
+      "title": "Mouseover Immolate",
+      "desc": "Apply Immolate to another enemy without changing targets.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Immolate /cast [@mouseover,harm,nodead][] Immolate"
+    },
+    {
+      "id": "warlock-macro-31",
+      "title": "Mouseover Conflagrate",
+      "desc": "Conflagrate a mouseover that's carrying your Immolate, or your target if nothing's hovered.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Conflagrate /cast [@mouseover,harm,nodead][] Conflagrate"
+    },
+    {
+      "id": "warlock-macro-32",
+      "title": "Immolate, then Incinerate",
+      "desc": "Send your demon in and press repeatedly: Immolate first, then five Incinerates that hit harder while Immolate is on the target.",
+      "category": "General",
+      "code": "#showtooltip /petattack [harm,nodead] /castsequence reset=target Immolate, Incinerate, Incinerate, Incinerate, Incinerate, Incinerate"
+    },
+    {
+      "id": "warlock-macro-33",
+      "title": "Mouseover Shadowburn",
+      "desc": "Finish a mouseover with Shadowburn, and you get a Soul Shard back if it dies within 8 seconds.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Shadowburn /cast [@mouseover,harm,nodead][] Shadowburn"
+    },
+    {
+      "id": "warlock-macro-34",
+      "title": "Hellfire on and off",
+      "desc": "Start Hellfire and press again to stop it, since it burns you as well as nearby enemies. It can critically strike after the October 1 update.",
+      "category": "General",
+      "code": "#showtooltip Hellfire /stopcasting [channeling:Hellfire] /stopmacro [channeling:Hellfire] /cast Hellfire"
+    },
+    {
+      "id": "warlock-macro-35",
+      "title": "Mouseover Bane of Havoc",
+      "desc": "Put Bane of Havoc on the enemy under your cursor, or on your target, so 15% of your damage to other targets also hits it.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Bane of Havoc /cast [@mouseover,harm,nodead][] Bane of Havoc"
+    },
+    {
+      "id": "warlock-macro-36",
+      "title": "Pick your nuke with a modifier key",
+      "desc": "Cast Shadow Bolt, or hold a modifier for Incinerate, Conflagrate or Shadowburn.",
+      "category": "General",
+      "code": "#showtooltip /cast [mod:shift] Incinerate; [mod:ctrl] Conflagrate; [mod:alt] Shadowburn; Shadow Bolt"
+    },
+    {
+      "id": "warlock-macro-37",
+      "title": "Shadow Bolt with an Imp Firebolt command",
+      "desc": "Cast Shadow Bolt at your target and request Firebolt at your Imp's current enemy. This doesn't send the Imp to a new target or bypass its mana, cast time or cooldown.",
+      "category": "General",
+      "code": "#showtooltip Shadow Bolt /cast [harm,nodead] Shadow Bolt /cast [@pettarget,harm,nodead] Firebolt"
+    },
+    {
+      "id": "warlock-macro-38",
+      "title": "Drop your cast and Fear",
+      "desc": "Cancel whatever you're casting, hop off your mount and Fear your target, or your mouseover with Shift.",
+      "category": "Combat & Rotations",
+      "code": "#showtooltip Fear /dismount /stopcasting /cast [mod:shift,@mouseover,harm,nodead][] Fear"
+    },
+    {
+      "id": "warlock-macro-39",
+      "title": "Death Coil or Howl of Terror",
+      "desc": "Cancel your cast and Death Coil your target, or your mouseover with Shift, or Howl of Terror with Ctrl.",
+      "category": "General",
+      "code": "#showtooltip /stopcasting /cast [mod:ctrl] Howl of Terror; [mod:shift,@mouseover,harm,nodead][] Death Coil"
+    },
+    {
+      "id": "warlock-macro-40",
+      "title": "Curse of Tongues, Exhaustion, Weakness or Elements",
+      "desc": "Curse your mouseover or target with Tongues, or hold a modifier for Exhaustion, Weakness or the Elements.",
+      "category": "General",
+      "code": "#showtooltip /cast [mod:shift,@mouseover,harm,nodead][mod:shift] Curse of Exhaustion; [mod:ctrl,@mouseover,harm,nodead][mod:ctrl] Curse of Weakness; [mod:alt] Curse of the Elements; [@mouseover,harm,nodead][] Curse of Tongues"
+    },
+    {
+      "id": "warlock-macro-41",
+      "title": "Spread dots with one button",
+      "desc": "Put Corruption on your mouseover or target, or hold a modifier for Bane of Agony or Siphon Life.",
+      "category": "General",
+      "code": "#showtooltip /cast [mod:shift,@mouseover,harm,nodead][mod:shift] Bane of Agony; [mod:ctrl,@mouseover,harm,nodead][mod:ctrl] Siphon Life; [@mouseover,harm,nodead][] Corruption"
+    },
+    {
+      "id": "warlock-macro-42",
+      "title": "Drain Life, Drain Mana or Life Tap",
+      "desc": "Drain Life your target without restarting the channel, or hold a modifier for a mouseover, Drain Mana or Life Tap.",
+      "category": "General",
+      "code": "#showtooltip /cast [mod:alt] Life Tap; [nochanneling,mod:ctrl] Drain Mana; [nochanneling,mod:shift,@mouseover,harm,nodead][nochanneling] Drain Life"
+    },
+    {
+      "id": "warlock-macro-43",
+      "title": "Trinkets, racial and a nuke",
+      "desc": "Use both trinkets and your Orc or Troll racial, then cast Shadow Bolt, or a modifier for Conflagrate or Shadowburn.",
+      "category": "General",
+      "code": "#showtooltip /use 13 /use 14 /cast Blood Fury /cast Berserking /cast [mod:shift] Conflagrate; [mod:ctrl] Shadowburn; Shadow Bolt"
+    },
+    {
+      "id": "warlock-macro-44",
+      "title": "Pet attack, recall and passive on one key",
+      "desc": "Send your demon at your target, or your mouseover with Shift, call it back with Ctrl or set it to passive with Alt.",
+      "category": "Pet & Utility",
+      "code": "/petattack [mod:shift,@mouseover,harm,nodead][nomod:ctrl,nomod:alt,harm,nodead] /petfollow [mod:ctrl] /petpassive [mod:alt]"
+    },
+    {
+      "id": "warlock-macro-45",
+      "title": "Drop your cast and Shadow Ward",
+      "desc": "Cancel your cast and put up Shadow Ward when a shadow caster starts on you.",
+      "category": "Combat & Rotations",
+      "code": "#showtooltip Shadow Ward /stopcasting /cast Shadow Ward"
+    },
+    {
+      "id": "warlock-macro-46",
+      "title": "Assist, then curse or Bane",
+      "desc": "Assist the friendly player you're targeting and open with Bane of Agony on their target, or a curse on a modifier.",
+      "category": "General",
+      "code": "#showtooltip /assist [help,nodead] /cast [harm,nodead,mod:shift] Curse of Tongues; [harm,nodead,mod:ctrl] Curse of Exhaustion; [harm,nodead] Bane of Agony"
+    },
+    {
+      "id": "warlock-macro-47",
+      "title": "Death Coil or Fear your last target",
+      "desc": "Cancel your cast, Death Coil your previous target and swing back to your current one, or hold Shift to Fear the previous target instead.",
+      "category": "General",
+      "code": "#showtooltip /stopcasting /targetlasttarget /cast [mod:shift] Fear; Death Coil /targetlasttarget"
+    },
+    {
+      "id": "warlock-macro-48",
+      "title": "Break free with your racial",
+      "desc": "Press to use whichever of these racials your warlock has: Will to Survive, Will of the Forsaken, Escape Artist or Shatter Curse.",
+      "category": "General",
+      "code": "#showtooltip /cast Will to Survive /cast Will of the Forsaken /cast Escape Artist /cast Shatter Curse"
+    },
+    {
+      "id": "warlock-macro-49",
+      "title": "Felhunter Spell Lock on your mouseover or target",
+      "desc": "Send the Felhunter's Spell Lock at your mouseover with Shift, or at whatever it's already fighting.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Spell Lock /cast [mod:shift,@mouseover,harm,nodead][@pettarget,harm,nodead][] Spell Lock"
+    },
+    {
+      "id": "warlock-macro-50",
+      "title": "Felhunter Devour Magic on yourself or a friend",
+      "desc": "Devour Magic your mouseover or target, or yourself with Shift.",
+      "category": "General",
+      "code": "#showtooltip Devour Magic /cast [mod:shift,@player][@mouseover,exists,nodead][] Devour Magic"
+    },
+    {
+      "id": "warlock-macro-51",
+      "title": "Succubus Seduction on your mouseover or target",
+      "desc": "Send the Succubus at your mouseover with Shift, or at the enemy it's already fighting.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Seduction /cast [mod:shift,@mouseover,harm,nodead][@pettarget,harm,nodead][] Seduction"
+    },
+    {
+      "id": "warlock-macro-52",
+      "title": "Your demon's key ability on one button",
+      "desc": "Press for Fire Shield, Sacrifice, Spell Lock or Seduction, whichever your current demon has.",
+      "category": "General",
+      "code": "#showtooltip /cast [pet:imp] Fire Shield; [pet:voidwalker] Sacrifice; [pet:felhunter] Spell Lock; [pet:succubus] Seduction"
+    },
+    {
+      "id": "warlock-macro-53",
+      "title": "Sacrifice, Fel Domination and re-summon",
+      "desc": "In a fight, sacrifice the Voidwalker for its shield and bring a new one back fast.",
+      "category": "General",
+      "code": "#showtooltip Sacrifice /stopmacro [nocombat][nopet:voidwalker] /cast Sacrifice /cast Fel Domination /cast Summon Voidwalker"
+    }
+  ],
+  "priest": [
+    {
+      "id": "priest-macro-1",
+      "title": "Mouseover Dispel Magic",
+      "desc": "Dispel a friendly or hostile mouseover, or your selected target.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Dispel Magic /cast [@mouseover,exists,nodead][] Dispel Magic"
+    },
+    {
+      "id": "priest-macro-2",
+      "title": "Mouseover Fortitude",
+      "desc": "Buff a friendly unit under your cursor without retargeting.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Power Word: Fortitude /cast [@mouseover,help,nodead][help,nodead][@player] Power Word: Fortitude"
+    },
+    {
+      "id": "priest-macro-3",
+      "title": "Mouseover Fear Ward",
+      "desc": "Ward the friend under your cursor against Fear, or your target, or yourself if neither is a friend.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Fear Ward /cast [@mouseover,help,nodead][help,nodead][@player] Fear Ward"
+    },
+    {
+      "id": "priest-macro-4",
+      "title": "Mouseover Shackle Undead",
+      "desc": "Shackle an undead enemy under your cursor, or your target, without switching what you're attacking.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Shackle Undead /cast [@mouseover,harm,nodead][harm,nodead] Shackle Undead"
+    },
+    {
+      "id": "priest-macro-5",
+      "title": "Wand that stays on",
+      "desc": "Start wanding. Pressing it again keeps the wand firing instead of switching it off.",
+      "category": "General",
+      "code": "#showtooltip Shoot /cast !Shoot"
+    },
+    {
+      "id": "priest-macro-6",
+      "title": "Mouseover Resurrection",
+      "desc": "Resurrect the dead player under your cursor, or your dead target.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Resurrection /cast [@mouseover,help,dead][help,dead] Resurrection"
+    },
+    {
+      "id": "priest-macro-7",
+      "title": "Dismount and Levitate",
+      "desc": "Get off your mount and Levitate yourself. Hold Shift to cancel Levitate.",
+      "category": "General",
+      "code": "#showtooltip Levitate /dismount /cancelaura [mod:shift] Levitate /cast [nomod] Levitate"
+    },
+    {
+      "id": "priest-macro-8",
+      "title": "Self buffs in order",
+      "desc": "Buff yourself one spell per press: Inner Fire, then Power Word: Fortitude, then Divine Spirit.",
+      "category": "General",
+      "code": "#showtooltip /castsequence [@player] reset=15 Inner Fire, Power Word: Fortitude, Divine Spirit"
+    },
+    {
+      "id": "priest-macro-9",
+      "title": "Lesser Heal on friends, Smite on enemies",
+      "desc": "Heal a friendly mouseover first. Otherwise, Smite a hostile target, heal a friendly target, or heal yourself with no valid target. Useful from level 1.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip /cast [@mouseover,help,nodead] Lesser Heal; [harm,nodead] Smite; [help,nodead][@player] Lesser Heal"
+    },
+    {
+      "id": "priest-macro-10",
+      "title": "Mouseover Power Word: Shield",
+      "desc": "Shield a friendly mouseover, your target, or yourself.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Power Word: Shield /cast [@mouseover,help,nodead][help,nodead][@player] Power Word: Shield"
+    },
+    {
+      "id": "priest-macro-11",
+      "title": "Power Word: Shield with Shift and Alt",
+      "desc": "Shield your mouseover, target or yourself. Shift shields your target's target, Alt shields you.",
+      "category": "General",
+      "code": "#showtooltip Power Word: Shield /cast [mod:alt,@player][mod:shift,@targettarget,help,nodead][@mouseover,help,nodead][help,nodead][@player] Power Word: Shield"
+    },
+    {
+      "id": "priest-macro-12",
+      "title": "Power Word: Shield, Rank 6 with Shift",
+      "desc": "Shield your mouseover, target or yourself. Hold Shift for Rank 6 when a lighter, cheaper shield will do.",
+      "category": "General",
+      "code": "#showtooltip Power Word: Shield /cast [mod:shift,@mouseover,help,nodead][mod:shift,help,nodead][mod:shift,@player] Power Word: Shield(Rank 6); [@mouseover,help,nodead][help,nodead][@player] Power Word: Shield"
+    },
+    {
+      "id": "priest-macro-13",
+      "title": "Penance for heals, Shift for damage",
+      "desc": "Heal a friendly mouseover, target or yourself; hold Shift to damage your hostile target. Repeated presses let your current Penance channel finish.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Penance /stopmacro [channeling:Penance] /cast [mod:shift,harm,nodead][@mouseover,help,nodead][help,nodead][@player] Penance"
+    },
+    {
+      "id": "priest-macro-14",
+      "title": "Inner Focus into Greater Heal",
+      "desc": "Pop Inner Focus and start a free Greater Heal on your mouseover, target or yourself.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Greater Heal /cast Inner Focus /cast [@mouseover,help,nodead][help,nodead][@player] Greater Heal"
+    },
+    {
+      "id": "priest-macro-15",
+      "title": "Power Infusion on a friend or you",
+      "desc": "Put Power Infusion on the friend under your cursor, then your target, then yourself. Alt always picks you.",
+      "category": "General",
+      "code": "#showtooltip Power Infusion /cast [mod:alt,@player][@mouseover,help,nodead][help,nodead][@player] Power Infusion"
+    },
+    {
+      "id": "priest-macro-16",
+      "title": "Mouseover Mana Burn",
+      "desc": "Burn another enemy’s mana while keeping your selected target.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Mana Burn /cast [@mouseover,harm,nodead][] Mana Burn"
+    },
+    {
+      "id": "priest-macro-17",
+      "title": "Mouseover Contingency Plan",
+      "desc": "Ward a friend under your cursor, your target or yourself. When their Health drops below 35% they get a shield and a heal over time. Its shield and heal-over-time can coexist with Power Word: Shield and Renew.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Contingency Plan /cast [@mouseover,help,nodead][help,nodead][@player] Contingency Plan"
+    },
+    {
+      "id": "priest-macro-18",
+      "title": "Divine Grace on a hurt friend",
+      "desc": "Heal a friend below half health right away and clear their Weakened Soul so you can shield them again.",
+      "category": "General",
+      "code": "#showtooltip Divine Grace /cast [@mouseover,help,nodead][help,nodead] Divine Grace"
+    },
+    {
+      "id": "priest-macro-19",
+      "title": "Mouseover Divine Spirit",
+      "desc": "Buff the friend under your cursor with Divine Spirit, or your target, or yourself.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Divine Spirit /cast [@mouseover,help,nodead][help,nodead][@player] Divine Spirit"
+    },
+    {
+      "id": "priest-macro-20",
+      "title": "Mouseover Prayer of Fortitude",
+      "desc": "Cast Prayer of Fortitude on the friend under your cursor, your target or yourself.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Prayer of Fortitude /cast [@mouseover,help,nodead][help,nodead][@player] Prayer of Fortitude"
+    },
+    {
+      "id": "priest-macro-21",
+      "title": "Mouseover Flash Heal",
+      "desc": "Heal a party frame under your cursor, then your target, then yourself.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Flash Heal /cast [@mouseover,help,nodead][help,nodead][@player] Flash Heal"
+    },
+    {
+      "id": "priest-macro-22",
+      "title": "Holy Fire or Smite",
+      "desc": "Hold Shift for Smite; press normally for Holy Fire.",
+      "category": "General",
+      "code": "#showtooltip [mod:shift] Smite; Holy Fire /cast [mod:shift] Smite; Holy Fire"
+    },
+    {
+      "id": "priest-macro-23",
+      "title": "Greater Heal, Rank 1 with Shift",
+      "desc": "Greater Heal your mouseover, target or yourself. Hold Shift for Rank 1 when the damage is small.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Greater Heal /cast [mod:shift,@mouseover,help,nodead][mod:shift,help,nodead][mod:shift,@player] Greater Heal(Rank 1); [@mouseover,help,nodead][help,nodead][@player] Greater Heal"
+    },
+    {
+      "id": "priest-macro-24",
+      "title": "Mouseover Renew, Rank 5 with Shift",
+      "desc": "Renew your mouseover, target or yourself. Hold Shift for Rank 5 to save Mana. Blizzard confirms Renew from different Priests can stay active on the same target.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Renew /cast [mod:shift,@mouseover,help,nodead][mod:shift,help,nodead][mod:shift,@player] Renew(Rank 5); [@mouseover,help,nodead][help,nodead][@player] Renew"
+    },
+    {
+      "id": "priest-macro-25",
+      "title": "Prayer of Healing on a chosen group",
+      "desc": "Cast Prayer of Healing on the friend under your cursor to heal their party, including pets, so you pick which party gets it.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Prayer of Healing /cast [@mouseover,help,nodead][help,nodead][@player] Prayer of Healing"
+    },
+    {
+      "id": "priest-macro-26",
+      "title": "Mouseover Binding Heal",
+      "desc": "Heal the friend under your cursor, or your target, and yourself with one cast.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Binding Heal /cast [@mouseover,help,nodead][help,nodead] Binding Heal"
+    },
+    {
+      "id": "priest-macro-27",
+      "title": "Mouseover Prayer of Mending",
+      "desc": "Put Prayer of Mending on your mouseover, target or yourself. Damage or non-periodic healing triggers its heal and a jump to a nearby party or raid member.",
+      "category": "Pet & Utility",
+      "code": "#showtooltip Prayer of Mending /cast [@mouseover,help,nodead][help,nodead][@player] Prayer of Mending"
+    },
+    {
+      "id": "priest-macro-28",
+      "title": "Abolish Disease, Cure Disease with Shift",
+      "desc": "Abolish Disease on your mouseover, target or yourself. Hold Shift for a one-off Cure Disease.",
+      "category": "General",
+      "code": "#showtooltip Abolish Disease /cast [mod:shift,@mouseover,help,nodead][mod:shift,help,nodead][mod:shift,@player] Cure Disease; [@mouseover,help,nodead][help,nodead][@player] Abolish Disease"
+    },
+    {
+      "id": "priest-macro-29",
+      "title": "Holy Fire pull, then wand",
+      "desc": "Open with Holy Fire on the first press, then press again to start wanding.",
+      "category": "General",
+      "code": "#showtooltip Holy Fire /castsequence reset=target/combat Holy Fire, !Shoot"
+    },
+    {
+      "id": "priest-macro-30",
+      "title": "Alternate two heals for Litany of Light",
+      "desc": "Alternate Flash Heal and Greater Heal on one button so each cast differs from the last, which is what Litany of Light rewards.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Flash Heal /castsequence [@mouseover,help,nodead][help,nodead][@player] reset=4 Flash Heal, Greater Heal"
+    },
+    {
+      "id": "priest-macro-31",
+      "title": "Smite your tank's target",
+      "desc": "Smite your hostile target, or the enemy your friendly target is attacking. Leave your tank selected while dealing damage between heals; it won't interrupt a channel.",
+      "category": "General",
+      "code": "#showtooltip Smite /stopmacro [channeling] /cast [harm,nodead][@targettarget,harm,nodead] Smite"
+    },
+    {
+      "id": "priest-macro-32",
+      "title": "Mouseover Shadow Word: Pain",
+      "desc": "Apply your damage-over-time spell to a mouseover without switching target.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Shadow Word: Pain /cast [@mouseover,harm,nodead][] Shadow Word: Pain"
+    },
+    {
+      "id": "priest-macro-33",
+      "title": "Mouseover Shadow Word: Death",
+      "desc": "Use Forever’s finisher on a mouseover or your target. If it fails to kill, you take 10% of your max health as damage.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Shadow Word: Death /cast [@mouseover,harm,nodead][] Shadow Word: Death"
+    },
+    {
+      "id": "priest-macro-34",
+      "title": "Shadowform on, Shift to drop it",
+      "desc": "Enter Shadowform when you're not in it. Hold Shift to drop it.",
+      "category": "General",
+      "code": "#showtooltip Shadowform /cancelaura [mod:shift] Shadowform /cast [nomod,noform:1] Shadowform"
+    },
+    {
+      "id": "priest-macro-35",
+      "title": "Drop Shadowform and Flash Heal",
+      "desc": "Drop Shadowform and Flash Heal your mouseover, target or yourself in one press. Recast Shadowform afterwards.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Flash Heal /cancelaura Shadowform /cast [@mouseover,help,nodead][help,nodead][@player] Flash Heal"
+    },
+    {
+      "id": "priest-macro-36",
+      "title": "Mind Flay that won't restart",
+      "desc": "Spam Mind Flay without restarting the channel every time you press it.",
+      "category": "General",
+      "code": "#showtooltip Mind Flay /cast [nochanneling:Mind Flay] Mind Flay"
+    },
+    {
+      "id": "priest-macro-37",
+      "title": "Mind Blast, Shift for Mind Flay",
+      "desc": "Press for Mind Blast. Hold Shift for Mind Flay, which won't restart while you're already channeling it.",
+      "category": "General",
+      "code": "#showtooltip [mod:shift] Mind Flay; Mind Blast /cast [mod:shift,nochanneling:Mind Flay] Mind Flay; [nomod] Mind Blast"
+    },
+    {
+      "id": "priest-macro-38",
+      "title": "Mouseover Devouring Plague",
+      "desc": "Put Devouring Plague on your mouseover or target. The damage it does heals you.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Devouring Plague /cast [@mouseover,harm,nodead][harm,nodead] Devouring Plague"
+    },
+    {
+      "id": "priest-macro-39",
+      "title": "Mouseover Vampiric Embrace",
+      "desc": "Afflict your mouseover or target so your Shadow damage heals your party.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Vampiric Embrace /cast [@mouseover,harm,nodead][harm,nodead] Vampiric Embrace"
+    },
+    {
+      "id": "priest-macro-40",
+      "title": "Mouseover Starshards",
+      "desc": "Rain Starshards on your mouseover or target.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Starshards /cast [@mouseover,harm,nodead][harm,nodead] Starshards"
+    },
+    {
+      "id": "priest-macro-41",
+      "title": "Shadow Word: Pain, then wand",
+      "desc": "The first press applies Shadow Word: Pain. Each press after that starts or keeps up the wand.",
+      "category": "General",
+      "code": "#showtooltip Shadow Word: Pain /castsequence reset=target/combat Shadow Word: Pain, !Shoot"
+    },
+    {
+      "id": "priest-macro-42",
+      "title": "Silence your target or mouseover",
+      "desc": "Cancel your current cast and Silence your target. Hold Shift for your mouseover.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Silence /stopcasting /cast [mod:shift,@mouseover,harm,nodead][harm,nodead] Silence"
+    },
+    {
+      "id": "priest-macro-43",
+      "title": "Psychic Scream, Shift for Fade",
+      "desc": "Cancel your current cast, then Psychic Scream the enemies around you. Hold Shift for Fade instead. Blizzard's 30 September guide says Fade's threat reduction is doubled.",
+      "category": "General",
+      "code": "#showtooltip [mod:shift] Fade; Psychic Scream /stopcasting /cast [mod:shift] Fade; Psychic Scream"
+    },
+    {
+      "id": "priest-macro-44",
+      "title": "Mind Control, Shift for Shackle Undead",
+      "desc": "Mind Control the enemy under your cursor, or your target. Hold Shift to Shackle Undead instead.",
+      "category": "General",
+      "code": "#showtooltip [mod:shift] Shackle Undead; Mind Control /cast [mod:shift,@mouseover,harm,nodead][mod:shift,harm,nodead] Shackle Undead; [@mouseover,harm,nodead][harm,nodead] Mind Control"
+    },
+    {
+      "id": "priest-macro-45",
+      "title": "Dispel Magic on four aims",
+      "desc": "One Dispel Magic button: target by default, mouseover with Shift, you with Ctrl, your target's target with Alt.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Dispel Magic /cast [mod:ctrl,@player][mod:shift,@mouseover,exists,nodead][mod:alt,@targettarget,help,nodead][] Dispel Magic"
+    },
+    {
+      "id": "priest-macro-46",
+      "title": "Trinket and shield",
+      "desc": "Cancel your cast, use your top trinket and shield yourself. Hold Shift to shield your mouseover ally with no trinket.",
+      "category": "General",
+      "code": "#showtooltip Power Word: Shield /stopcasting /use [nomod] 13 /cast [mod:shift,@mouseover,help,nodead][@player] Power Word: Shield"
+    },
+    {
+      "id": "priest-macro-47",
+      "title": "Stop and Flash Heal",
+      "desc": "Cancel your cast and Flash Heal your mouseover, target or yourself. Hold Shift to heal yourself.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Flash Heal /stopcasting /cast [mod:shift,@player][@mouseover,help,nodead][help,nodead][@player] Flash Heal"
+    },
+    {
+      "id": "priest-macro-48",
+      "title": "Shadow Word: Pain, Shift for Devouring Plague",
+      "desc": "Shadow Word: Pain on your mouseover or target. Hold Shift for Devouring Plague on the same aim.",
+      "category": "General",
+      "code": "#showtooltip Shadow Word: Pain /cast [mod:shift,@mouseover,harm,nodead][mod:shift,harm,nodead] Devouring Plague; [@mouseover,harm,nodead][harm,nodead] Shadow Word: Pain"
+    },
+    {
+      "id": "priest-macro-49",
+      "title": "Hex of Weakness on target or mouseover",
+      "desc": "Put Hex of Weakness on your target, which lowers its melee attack power and the healing it receives. Hold Shift for your mouseover.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Hex of Weakness /cast [mod:shift,@mouseover,harm,nodead][harm,nodead] Hex of Weakness"
+    },
+    {
+      "id": "priest-macro-50",
+      "title": "Chastise target or mouseover",
+      "desc": "Chastise your target to immobilize them for 2 seconds. Hold Shift for your mouseover.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Chastise /cast [mod:shift,@mouseover,harm,nodead][harm,nodead] Chastise"
+    },
+    {
+      "id": "priest-macro-51",
+      "title": "Stop and Confounding Flash",
+      "desc": "Cancel your cast and confuse every enemy within 8 yards for 3 seconds. Any damage breaks it.",
+      "category": "General",
+      "code": "#showtooltip Confounding Flash /stopcasting /cast Confounding Flash"
+    },
+    {
+      "id": "priest-macro-52",
+      "title": "Desperate Prayer, Shift for a shield",
+      "desc": "Cancel your cast and use Desperate Prayer. Hold Shift to shield yourself instead.",
+      "category": "General",
+      "code": "#showtooltip [mod:shift] Power Word: Shield; Desperate Prayer /stopcasting /cast [mod:shift,@player] Power Word: Shield; Desperate Prayer"
+    },
+    {
+      "id": "priest-macro-53",
+      "title": "Shadow Protection, Shift for the group",
+      "desc": "Give Shadow resistance to your mouseover, target or yourself. Hold Shift for Prayer of Shadow Protection.",
+      "category": "General",
+      "code": "#showtooltip Shadow Protection /cast [mod:shift,@player] Prayer of Shadow Protection; [@mouseover,help,nodead][help,nodead][@player] Shadow Protection"
+    },
+    {
+      "id": "priest-macro-54",
+      "title": "Nearest enemy, then Shadow Word: Pain",
+      "desc": "Pick up the nearest enemy if you have no living hostile target, then put Shadow Word: Pain on it.",
+      "category": "General",
+      "code": "#showtooltip Shadow Word: Pain /targetenemy [noharm][dead] /cast Shadow Word: Pain"
+    },
+    {
+      "id": "priest-macro-55",
+      "title": "Mind Flay slow on target or mouseover",
+      "desc": "Mind Flay your target without restarting the channel. Hold Shift to slow your mouseover instead.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Mind Flay /cast [mod:shift,@mouseover,harm,nodead,nochanneling:Mind Flay][nochanneling:Mind Flay,harm,nodead] Mind Flay"
+    }
+  ],
+  "druid": [
+    {
+      "id": "druid-macro-1",
+      "title": "Mouseover Rebirth",
+      "desc": "Resurrect a dead friendly mouseover, or your selected dead ally.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Rebirth /cast [@mouseover,help,dead][help,dead][] Rebirth"
+    },
+    {
+      "id": "druid-macro-2",
+      "title": "Mouseover Remove Curse",
+      "desc": "Cleanse a friendly mouseover, your target, or yourself.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Remove Curse /cast [@mouseover,help,nodead][help,nodead][@player] Remove Curse"
+    },
+    {
+      "id": "druid-macro-3",
+      "title": "Mouseover Cure Poison or Abolish Poison",
+      "desc": "Cure a poison on the friendly under your cursor, your target or yourself, or hold Shift for Abolish Poison. You leave your form first.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Cure Poison /cancelform /cast [mod:shift,@mouseover,help,nodead][mod:shift,help,nodead][mod:shift,@player] Abolish Poison; [@mouseover,help,nodead][help,nodead][@player] Cure Poison"
+    },
+    {
+      "id": "druid-macro-4",
+      "title": "Rebirth in combat, Revive outside it",
+      "desc": "Rebirth the dead player under your cursor or your target while you're in combat, and Revive them when you're not.",
+      "category": "General",
+      "code": "#showtooltip [combat] Rebirth; Revive /cast [@mouseover,help,dead,combat][help,dead,combat] Rebirth /cast [@mouseover,help,dead,nocombat][help,dead,nocombat] Revive"
+    },
+    {
+      "id": "druid-macro-5",
+      "title": "Mouseover Innervate",
+      "desc": "Leave your form and Innervate the friendly under your cursor, your target or yourself.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Innervate /cancelform /cast [@mouseover,help,nodead][help,nodead][@player] Innervate"
+    },
+    {
+      "id": "druid-macro-6",
+      "title": "Mouseover Mark of the Wild or Thorns",
+      "desc": "Buff the friendly under your cursor, your target or yourself with Mark of the Wild, or with Thorns while you hold Shift. You leave your form first.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip [mod:shift] Thorns; Mark of the Wild /cancelform /cast [mod:shift,@mouseover,help,nodead][mod:shift,help,nodead][mod:shift,@player] Thorns; [@mouseover,help,nodead][help,nodead][@player] Mark of the Wild"
+    },
+    {
+      "id": "druid-macro-7",
+      "title": "Cat Form or Bear Form on one key",
+      "desc": "Dismount and go into Cat Form, or into Bear Form while you hold Shift; swap in Dire Bear Form once you learn it at 40.",
+      "category": "General",
+      "code": "#showtooltip [mod:shift] Bear Form; Cat Form /dismount /cast [mod:shift] Bear Form; Cat Form"
+    },
+    {
+      "id": "druid-macro-8",
+      "title": "Travel, Aquatic or Cat Form on one key",
+      "desc": "Aquatic Form when you're swimming, Travel Form outdoors and Cat Form anywhere else, dismounting you first.",
+      "category": "General",
+      "code": "#showtooltip /dismount /cast [swimming] Aquatic Form; [outdoors] Travel Form; Cat Form"
+    },
+    {
+      "id": "druid-macro-9",
+      "title": "Heal from any form",
+      "desc": "Leave your form and cast Healing Touch on the friendly under your cursor, or on yourself; hold Shift for Regrowth instead.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Healing Touch /cancelform /cast [mod:shift,@mouseover,help,nodead][mod:shift,@player] Regrowth; [@mouseover,help,nodead][@player] Healing Touch"
+    },
+    {
+      "id": "druid-macro-10",
+      "title": "Drop your form and dismount",
+      "desc": "Stop your cast, leave your shapeshift and get off your mount in one press.",
+      "category": "General",
+      "code": "/stopcasting /cancelform /dismount"
+    },
+    {
+      "id": "druid-macro-11",
+      "title": "Barkskin, Shift for Nature's Grasp",
+      "desc": "Use Barkskin in your current form, or hold Shift for Nature's Grasp. Neither branch cancels your form in Forever.",
+      "category": "General",
+      "code": "#showtooltip [mod:shift] Nature's Grasp; Barkskin /cast [mod:shift] Nature's Grasp; Barkskin"
+    },
+    {
+      "id": "druid-macro-12",
+      "title": "Mouseover Moonfire",
+      "desc": "Apply Moonfire to another enemy while keeping your main target.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Moonfire /cast [@mouseover,harm,nodead][] Moonfire"
+    },
+    {
+      "id": "druid-macro-13",
+      "title": "Starfire or Wrath",
+      "desc": "Hold Shift for Wrath; press normally for Starfire.",
+      "category": "General",
+      "code": "#showtooltip [mod:shift] Wrath; Starfire /cast [mod:shift] Wrath; Starfire"
+    },
+    {
+      "id": "druid-macro-14",
+      "title": "Mouseover Insect Swarm",
+      "desc": "Swarm the enemy under your cursor, or your target when there isn't one.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Insect Swarm /cast [@mouseover,harm,nodead][] Insect Swarm"
+    },
+    {
+      "id": "druid-macro-15",
+      "title": "Moonfire, then Insect Swarm",
+      "desc": "Press it twice to put Moonfire and then Insect Swarm on your target; the sequence starts over when you change target.",
+      "category": "General",
+      "code": "#showtooltip Moonfire /castsequence reset=target Moonfire, Insect Swarm"
+    },
+    {
+      "id": "druid-macro-16",
+      "title": "Wrath, then two Starfires",
+      "desc": "Runs Wrath and two Starfires in a row, the way the Eclipse talent describes it.",
+      "category": "General",
+      "code": "#showtooltip Starfire /castsequence reset=target/12 Wrath, Starfire, Starfire"
+    },
+    {
+      "id": "druid-macro-17",
+      "title": "Mouseover Entangling Roots",
+      "desc": "Root the enemy under your cursor, or your target; you can only keep one enemy rooted at a time unless you take Overgrowth.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Entangling Roots /cast [@mouseover,harm,nodead][] Entangling Roots"
+    },
+    {
+      "id": "druid-macro-18",
+      "title": "Mouseover Hibernate",
+      "desc": "Put the beast or dragonkin under your cursor to sleep, or your target if there's no mouseover; damage wakes it.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Hibernate /cast [@mouseover,harm,nodead][] Hibernate"
+    },
+    {
+      "id": "druid-macro-19",
+      "title": "Mouseover Faerie Fire",
+      "desc": "Faerie Fire the enemy under your cursor, or your target; while it's on, the enemy can't stealth or turn invisible. Bear, Cat and Dire Bear casts cost no resources and have a 6 sec cooldown.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Faerie Fire /cast [@mouseover,harm,nodead][] Faerie Fire"
+    },
+    {
+      "id": "druid-macro-20",
+      "title": "Hurricane without restarting it",
+      "desc": "Nothing happens while you're already channeling, so mashing the key can't cut your own Hurricane short; click the ground as usual.",
+      "category": "General",
+      "code": "#showtooltip Hurricane /stopmacro [channeling] /cast Hurricane"
+    },
+    {
+      "id": "druid-macro-21",
+      "title": "Primal Bite and auto attack",
+      "desc": "Use Forever’s renamed Feral talent while keeping auto attack on.",
+      "category": "General",
+      "code": "#showtooltip Primal Bite /startattack /cast Primal Bite"
+    },
+    {
+      "id": "druid-macro-22",
+      "title": "Mouseover Growl",
+      "desc": "Taunt an enemy under your cursor without dropping your current target.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Growl /cast [@mouseover,harm,nodead][] Growl"
+    },
+    {
+      "id": "druid-macro-23",
+      "title": "Powershift into Cat Form",
+      "desc": "Leave and re-enter Cat, one step per press. Furor can regenerate Energy outside Cat. The October 1 beta update also added Shifting Power as a separate Energy option.",
+      "category": "General",
+      "code": "#showtooltip Cat Form /cancelform [noform:3] /cast [form:3] Cat Form /cast [noform:3] !Cat Form"
+    },
+    {
+      "id": "druid-macro-24",
+      "title": "Dismount, Cat Form and Prowl",
+      "desc": "Dismount and enter Cat Form if needed, then press again after the global cooldown to Prowl. Repeated presses while hidden leave you in Stealth.",
+      "category": "General",
+      "code": "#showtooltip Prowl /dismount /cast [noform:3] Cat Form /cast [form:3,nostealth,nocombat] Prowl"
+    },
+    {
+      "id": "druid-macro-25",
+      "title": "Ravage from stealth, Shred otherwise",
+      "desc": "Ravage while you're Prowling and Shred once you're not; auto attack only starts after the opener. Both need you behind the target.",
+      "category": "General",
+      "code": "#showtooltip [stealth] Ravage; Shred /startattack [nostealth] /cast [stealth] Ravage; Shred"
+    },
+    {
+      "id": "druid-macro-26",
+      "title": "Ferocious Bite, Shift for Rip",
+      "desc": "Spend your combo points on Ferocious Bite, or hold Shift for Rip.",
+      "category": "General",
+      "code": "#showtooltip [mod:shift] Rip; Ferocious Bite /cast [mod:shift] Rip; Ferocious Bite"
+    },
+    {
+      "id": "druid-macro-27",
+      "title": "Berserk into Primal Bite or Shred",
+      "desc": "Berserk, then Primal Bite in Bear Form or Shred in Cat Form, all on one press.",
+      "category": "General",
+      "code": "#showtooltip Berserk /cast Berserk /cast [form:1] Primal Bite; [form:3] Shred"
+    },
+    {
+      "id": "druid-macro-28",
+      "title": "Mouseover Lacerate",
+      "desc": "Stack Lacerate on the enemy under your cursor, or your target, and keep auto attack going.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Lacerate /startattack /cast [@mouseover,harm,nodead][] Lacerate"
+    },
+    {
+      "id": "druid-macro-29",
+      "title": "Enrage into Frenzied Regeneration",
+      "desc": "Enrage for its instant 10 Rage, then Frenzied Regeneration to turn that Rage into health. With enough Rage over its duration, Frenzied Regeneration can restore your full maximum health.",
+      "category": "General",
+      "code": "#showtooltip Frenzied Regeneration /cast [form:1] Enrage /cast Frenzied Regeneration"
+    },
+    {
+      "id": "druid-macro-30",
+      "title": "Swipe, Shift for Demoralizing Roar",
+      "desc": "Swipe with auto attack running, or hold Shift for Demoralizing Roar.",
+      "category": "General",
+      "code": "#showtooltip [mod:shift] Demoralizing Roar; Swipe /startattack /cast [mod:shift] Demoralizing Roar; Swipe"
+    },
+    {
+      "id": "druid-macro-31",
+      "title": "Cat leap into Shred",
+      "desc": "Leap behind your target with Cat Feral Charge, then press for Shred. The Cat leap has a 30 sec cooldown and does not interrupt or root; check the Cat spell name on your action bar if this cast fails.",
+      "category": "General",
+      "code": "#showtooltip Feral Charge /startattack /cast [form:3,harm] Feral Charge /cast [form:3,harm] Shred"
+    },
+    {
+      "id": "druid-macro-32",
+      "title": "Mouseover Rejuvenation",
+      "desc": "Heal the party frame under your cursor, your target, or yourself.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Rejuvenation /cast [@mouseover,help,nodead][help,nodead][@player] Rejuvenation"
+    },
+    {
+      "id": "druid-macro-33",
+      "title": "Mouseover Wild Growth",
+      "desc": "Heal your friendly mouseover’s or target’s nearby party and pets in seven declining ticks, with a 6 sec cooldown. In a raid, the target chooses which party is healed.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Wild Growth /cast [@mouseover,help,nodead][help,nodead][@player] Wild Growth"
+    },
+    {
+      "id": "druid-macro-34",
+      "title": "Mouseover Regrowth, or your target's target",
+      "desc": "Regrowth the friendly under your cursor, your target, whoever your enemy target is fighting, or yourself.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Regrowth /cast [@mouseover,help,nodead][help,nodead][@targettarget,help,nodead][@player] Regrowth"
+    },
+    {
+      "id": "druid-macro-35",
+      "title": "Healing Touch, Shift for a lower rank",
+      "desc": "Cast your top rank of Healing Touch on a mouseover, your target or yourself, or hold Shift for Rank 3 when a smaller heal will do; change the number to suit your level.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Healing Touch /cast [mod:shift,@mouseover,help,nodead][mod:shift,help,nodead][mod:shift,@player] Healing Touch(Rank 3); [@mouseover,help,nodead][help,nodead][@player] Healing Touch"
+    },
+    {
+      "id": "druid-macro-36",
+      "title": "Mouseover Swiftmend",
+      "desc": "Swiftmend your friendly mouseover, target or yourself. Rejuvenation or Regrowth keeps running afterward, as Blizzard confirmed September 30.",
+      "category": "Pet & Utility",
+      "code": "#showtooltip Swiftmend /cast [@mouseover,help,nodead][help,nodead][@player] Swiftmend"
+    },
+    {
+      "id": "druid-macro-37",
+      "title": "Nature's Swiftness into a heal",
+      "desc": "Leave your form, pop Nature's Swiftness and make your next heal instant: Healing Touch, or Regrowth while you hold Shift.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Nature's Swiftness /cancelform /cast Nature's Swiftness /cast [mod:shift,@mouseover,help,nodead][mod:shift,help,nodead][mod:shift,@player] Regrowth; [@mouseover,help,nodead][help,nodead][@player] Healing Touch"
+    },
+    {
+      "id": "druid-macro-38",
+      "title": "Rejuvenation, then Swiftmend",
+      "desc": "Rejuvenation on the first press and Swiftmend on the second, on your friendly target or yourself. Swiftmend leaves Rejuvenation running.",
+      "category": "Pet & Utility",
+      "code": "#showtooltip /castsequence [help,nodead][@player] reset=target/6 Rejuvenation, Swiftmend"
+    },
+    {
+      "id": "druid-macro-39",
+      "title": "Rejuvenation by party slot",
+      "desc": "Rejuvenate yourself, or hold Shift, Ctrl or Alt for party members 1, 2 or 3 without touching a frame.",
+      "category": "General",
+      "code": "#showtooltip Rejuvenation /cast [mod:shift,@party1,help,nodead][mod:ctrl,@party2,help,nodead][mod:alt,@party3,help,nodead][@player] Rejuvenation"
+    },
+    {
+      "id": "druid-macro-40",
+      "title": "Tranquility, Shift to stop",
+      "desc": "Leave your form and channel Tranquility. Repeated presses leave the channel running; hold Shift to stop it early.",
+      "category": "General",
+      "code": "#showtooltip Tranquility /stopcasting [mod:shift] /stopmacro [mod:shift] /cancelform /cast [nochanneling:Tranquility] Tranquility"
+    },
+    {
+      "id": "druid-macro-41",
+      "title": "Bash, shifting into Bear Form first",
+      "desc": "Bash your target, or your mouseover with Shift; if you're not in a bear it puts you in Dire Bear Form first, so the second press lands the stun. Tauren can add War Stomp on Ctrl.",
+      "category": "General",
+      "code": "#showtooltip Bash /cast [mod:ctrl] War Stomp; [mod:shift,form:1,@mouseover,harm,nodead] Bash; [form:1] Bash; !Dire Bear Form"
+    },
+    {
+      "id": "druid-macro-42",
+      "title": "Enrage, charge and Bash",
+      "desc": "In Bear Form it Enrages for the Rage (your armor drops for 10 seconds), charges and Bashes; press again if the Bash was short on Rage. From any other form the first press only changes your form.",
+      "category": "General",
+      "code": "#showtooltip Feral Charge /cast [noform:1] !Dire Bear Form /cast [form:1] Enrage /cast [form:1,mod:shift,@mouseover,harm,nodead][form:1,harm] Feral Charge /cast [form:1,mod:shift,@mouseover,harm,nodead][form:1,harm] Bash"
+    },
+    {
+      "id": "druid-macro-43",
+      "title": "Pounce from stealth, Shift for Ravage",
+      "desc": "Stun with Pounce from Prowl, or open with Ravage while you hold Shift; out of stealth it falls back to Rake. Both openers need you behind the target.",
+      "category": "General",
+      "code": "#showtooltip [stealth,mod:shift] Ravage; [stealth] Pounce; Rake /startattack [nostealth] /cast [stealth,mod:shift] Ravage; [stealth] Pounce; Rake"
+    },
+    {
+      "id": "druid-macro-44",
+      "title": "Prowl, Dash or Shadowmeld on one key",
+      "desc": "Go into Cat Form if you need to, then Prowl, or Dash with Shift held; Night Elves get Shadowmeld on Ctrl.",
+      "category": "General",
+      "code": "#showtooltip [mod:shift] Dash; [mod:ctrl] Shadowmeld; Prowl /cast [mod:ctrl] Shadowmeld /cast [noform:3,nomod][noform:3,mod:shift] !Cat Form /cast [mod:shift] Dash; [nomod] !Prowl"
+    },
+    {
+      "id": "druid-macro-45",
+      "title": "PvP trinket and Bear Form",
+      "desc": "Stop your cast, use your top trinket in combat and drop into Dire Bear Form, or Cat Form with Shift.",
+      "category": "PvP",
+      "code": "#showtooltip [mod:shift] Cat Form; Dire Bear Form /stopcasting /use [combat] 13 /cast [mod:shift,noform:3] !Cat Form; [nomod,noform:1] !Dire Bear Form"
+    },
+    {
+      "id": "druid-macro-46",
+      "title": "Roots, Shift for Travel Form, Ctrl for Hibernate",
+      "desc": "Root your mouseover or target, run off in Travel Form with Shift, or put a beast to sleep with Ctrl (a hunter's pet counts). Entangling Roots works indoors as well as outdoors.",
+      "category": "General",
+      "code": "#showtooltip [mod:shift] Travel Form; [mod:ctrl] Hibernate; Entangling Roots /cancelform [noform:5,nomod][noform:5,mod:ctrl] /cast [mod:shift] Travel Form; [mod:ctrl,@mouseover,harm,nodead] Hibernate; [@mouseover,harm,nodead][] Entangling Roots"
+    },
+    {
+      "id": "druid-macro-47",
+      "title": "Instant heal or instant root",
+      "desc": "Nature's Swiftness into Healing Touch on a mouseover or yourself, or into an instant Entangling Roots on your target while you hold Shift.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Nature's Swiftness /cancelform [mod:shift,noform:5][nomod] /cast [mod:shift,harm][nomod] Nature's Swiftness /cast [mod:shift,harm] Entangling Roots; [nomod,@mouseover,help,nodead][nomod,@player] Healing Touch"
+    },
+    {
+      "id": "druid-macro-48",
+      "title": "Defensive button by modifier",
+      "desc": "Barkskin on a plain press, Nature's Grasp with Ctrl, or Enrage into Frenzied Regeneration with Shift in Bear Form. Barkskin and Nature's Grasp both work while shapeshifted.",
+      "category": "General",
+      "code": "#showtooltip [mod:shift] Frenzied Regeneration; [mod:ctrl] Nature's Grasp; Barkskin /cast [mod:shift,form:1] Enrage /cast [mod:shift,form:1] Frenzied Regeneration; [mod:ctrl] Nature's Grasp; [nomod] Barkskin"
+    },
+    {
+      "id": "druid-macro-49",
+      "title": "Faerie Fire your target or mouseover",
+      "desc": "Faerie Fire your target, or your mouseover with Shift, to prevent stealth and invisibility. Stay in Bear, Cat, Dire Bear or Moonkin Form; Bear, Cat and Dire Bear casts cost no resources and have a 6 sec cooldown.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Faerie Fire /cancelform [form:2/4] /cast [mod:shift,@mouseover,harm,nodead][harm] Faerie Fire"
+    },
+    {
+      "id": "druid-macro-50",
+      "title": "Change form to break a root or snare",
+      "desc": "Changing form frees you from movement impairing effects, so this always changes it: Cat to Bear, anything else to Cat, Travel Form outdoors with Shift, Aquatic Form with Ctrl.",
+      "category": "General",
+      "code": "#showtooltip /cast [mod:shift,outdoors] Travel Form; [mod:ctrl] Aquatic Form; [form:3] Dire Bear Form; Cat Form"
+    },
+    {
+      "id": "druid-macro-51",
+      "title": "Instant heals on the move",
+      "desc": "Rejuvenation on a plain press, Swiftmend with Shift or Wild Growth with Ctrl, all instant, on your mouseover or yourself. You leave your form first.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Rejuvenation /cancelform /cast [mod:shift,@mouseover,help,nodead][mod:shift,@player] Swiftmend; [mod:ctrl,@mouseover,help,nodead][mod:ctrl,@player] Wild Growth; [@mouseover,help,nodead][@player] Rejuvenation"
+    },
+    {
+      "id": "druid-macro-52",
+      "title": "Drop your cast for an instant",
+      "desc": "Stop the cast you're on and fire Moonfire at your target; Shift for your mouseover, Ctrl for Insect Swarm, Alt for Faerie Fire.",
+      "category": "Combat & Rotations",
+      "code": "#showtooltip Moonfire /stopcasting /cast [mod:ctrl] Insect Swarm; [mod:alt] Faerie Fire; [mod:shift,@mouseover,harm,nodead] Moonfire; Moonfire"
+    },
+    {
+      "id": "druid-macro-53",
+      "title": "Cleanse yourself or a friend",
+      "desc": "Remove Curse on a mouseover or yourself, Abolish Poison with Shift, and Ctrl or Alt to force either onto yourself. You leave your form first.",
+      "category": "General",
+      "code": "#showtooltip Remove Curse /cancelform /cast [mod:ctrl,@player] Remove Curse; [mod:alt,@player] Abolish Poison; [mod:shift,@mouseover,help,nodead][mod:shift,@player] Abolish Poison; [@mouseover,help,nodead][@player] Remove Curse"
+    }
+  ],
+  "rogue": [
+    {
+      "id": "rogue-macro-1",
+      "title": "Mouseover Kick",
+      "desc": "Interrupt the caster under your cursor, or your current target when the cursor is on nothing.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Kick /cast [@mouseover,harm,nodead][] Kick"
+    },
+    {
+      "id": "rogue-macro-2",
+      "title": "Mouseover Sap",
+      "desc": "Sap the enemy under your cursor and keep your main target selected.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Sap /cast [@mouseover,harm,nodead][] Sap"
+    },
+    {
+      "id": "rogue-macro-3",
+      "title": "Stealth that won't switch itself off",
+      "desc": "Dismount if you need to and slip into Stealth; pressing it again while hidden does nothing instead of dropping you out.",
+      "category": "General",
+      "code": "#showtooltip Stealth /dismount /cast [nostealth,nocombat] Stealth"
+    },
+    {
+      "id": "rogue-macro-4",
+      "title": "Mouseover Pick Pocket",
+      "desc": "Pick the pocket of the enemy under your cursor, or your target when the cursor is on nothing.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Pick Pocket /cast [@mouseover,harm,nodead][] Pick Pocket"
+    },
+    {
+      "id": "rogue-macro-5",
+      "title": "Pick Pocket, then open from Stealth",
+      "desc": "One key for the whole opener: it enters Stealth if you're visible, then Pick Pocket and Cheap Shot on your target.",
+      "category": "General",
+      "code": "#showtooltip [stealth,mod:shift] Garrote; [stealth,mod:ctrl] Ambush; Cheap Shot /cast [stealth] Pick Pocket /cast [nostealth] Stealth; [mod:shift] Garrote; [mod:ctrl] Ambush; Cheap Shot"
+    },
+    {
+      "id": "rogue-macro-6",
+      "title": "Evasion and Sprint together",
+      "desc": "Press once in a bad fight to raise your dodge and pick up speed at the same time.",
+      "category": "General",
+      "code": "#showtooltip Evasion /cast Evasion /cast Sprint"
+    },
+    {
+      "id": "rogue-macro-7",
+      "title": "Use both trinkets",
+      "desc": "Fire the trinkets in both trinket slots with one press.",
+      "category": "General",
+      "code": "#showtooltip /use 13 /use 14"
+    },
+    {
+      "id": "rogue-macro-8",
+      "title": "Apply a poison from one key",
+      "desc": "Coat your main hand with Instant Poison, or your off hand with Alt; put in the full name of the rank you carry, such as Instant Poison II.",
+      "category": "General",
+      "code": "#showtooltip /use [mod:shift] Deadly Poison; Instant Poison /use [mod:alt] 17; 16 /click StaticPopup1Button1"
+    },
+    {
+      "id": "rogue-macro-9",
+      "title": "Sharpen your weapons from one key",
+      "desc": "Put a Heavy Sharpening Stone on your main hand, or your off hand with Alt; Shift uses a Heavy Weightstone for blunt weapons.",
+      "category": "General",
+      "code": "#showtooltip /use [mod:shift] Heavy Weightstone; Heavy Sharpening Stone /use [mod:alt] 17; 16 /click StaticPopup1Button1"
+    },
+    {
+      "id": "rogue-macro-10",
+      "title": "Stealth out of combat, Vanish in it",
+      "desc": "Out of combat this puts you in Stealth; in combat it stops your swings and Vanishes so the next auto attack doesn't pull you out.",
+      "category": "General",
+      "code": "#showtooltip [nocombat] Stealth; Vanish /stopattack [combat] /cast [nocombat] !Stealth; Vanish"
+    },
+    {
+      "id": "rogue-macro-11",
+      "title": "Rupture and auto attack",
+      "desc": "Rupture your target and keep auto attack swinging.",
+      "category": "General",
+      "code": "#showtooltip Rupture /startattack /cast Rupture"
+    },
+    {
+      "id": "rogue-macro-12",
+      "title": "Mutilate and auto attack",
+      "desc": "Mutilate and keep auto attack going in the same press.",
+      "category": "General",
+      "code": "#showtooltip Mutilate /startattack /cast Mutilate"
+    },
+    {
+      "id": "rogue-macro-13",
+      "title": "One key for your finishers",
+      "desc": "Spend combo points on Eviscerate; the modifiers switch to Rupture or Expose Armor. Coordinate Expose Armor with the Warrior; Blizzard confirms Sunder Armor can still be used under stronger Expose Armor.",
+      "category": "General",
+      "code": "#showtooltip [mod:shift] Rupture; [mod:ctrl] Expose Armor; Eviscerate /startattack /cast [mod:shift] Rupture; [mod:ctrl] Expose Armor; Eviscerate"
+    },
+    {
+      "id": "rogue-macro-14",
+      "title": "Slice and Dice, or Venom with Shift",
+      "desc": "Keep both upkeep finishers on one key: Slice and Dice on a plain press, Venom with Shift.",
+      "category": "General",
+      "code": "#showtooltip [mod:shift] Venom; Slice and Dice /cast [mod:shift] Venom; Slice and Dice"
+    },
+    {
+      "id": "rogue-macro-15",
+      "title": "Cold Blood into Eviscerate or Mutilate",
+      "desc": "Pop Cold Blood and strike in the same press; Cold Blood now covers Mutilate as well as Eviscerate.",
+      "category": "General",
+      "code": "#showtooltip [mod:shift] Mutilate; Eviscerate /cast Cold Blood /cast [mod:shift] Mutilate; Eviscerate"
+    },
+    {
+      "id": "rogue-macro-16",
+      "title": "Ambush from Stealth, then Mutilate",
+      "desc": "Ambush while you're hidden and Mutilate once the fight is on; Shift swaps Mutilate for Backstab.",
+      "category": "General",
+      "code": "#showtooltip [stealth] Ambush; [mod:shift] Backstab; Mutilate /cast [stealth] Ambush; [mod:shift] Backstab; Mutilate /startattack [nostealth]"
+    },
+    {
+      "id": "rogue-macro-17",
+      "title": "Sinister Strike, or Backstab with Shift",
+      "desc": "Build combo points with Sinister Strike, and hold Shift for Backstab when you're behind the target with a dagger in hand.",
+      "category": "Combat & Rotations",
+      "code": "#showtooltip [mod:shift] Backstab; Sinister Strike /startattack /cast [mod:shift] Backstab; Sinister Strike"
+    },
+    {
+      "id": "rogue-macro-18",
+      "title": "Garrote from Stealth, Rupture in the fight",
+      "desc": "Garrote while you're hidden; once the fight is on, the same key is Rupture with auto attack.",
+      "category": "General",
+      "code": "#showtooltip [stealth] Garrote; Rupture /cast [stealth] Garrote; Rupture /startattack [nostealth]"
+    },
+    {
+      "id": "rogue-macro-19",
+      "title": "Three Mutilates, then Eviscerate",
+      "desc": "Press repeatedly: three Mutilates for a full set of points, then Eviscerate, then it starts over.",
+      "category": "General",
+      "code": "#showtooltip Mutilate /startattack /castsequence reset=8/target Mutilate, Mutilate, Mutilate, Eviscerate"
+    },
+    {
+      "id": "rogue-macro-20",
+      "title": "Mutilate, then Slice and Dice to start a long fight",
+      "desc": "Mutilate for two points and Slice and Dice on the next press; after that, go back to your normal keys.",
+      "category": "General",
+      "code": "#showtooltip Mutilate /startattack /castsequence reset=8/target Mutilate, Slice and Dice"
+    },
+    {
+      "id": "rogue-macro-21",
+      "title": "Riposte, then Sinister Strike",
+      "desc": "Riposte when a parry lights it, with Sinister Strike in the same press since the beta data has Riposte off the global cooldown; otherwise plain Sinister Strike.",
+      "category": "Combat & Rotations",
+      "code": "#showtooltip Sinister Strike /startattack /cast Riposte /cast Sinister Strike"
+    },
+    {
+      "id": "rogue-macro-22",
+      "title": "Blade Flurry, Shift to cancel it",
+      "desc": "Start Blade Flurry and auto attack, or hold Shift to drop the buff when the extra strikes could hit a Sapped enemy.",
+      "category": "General",
+      "code": "#showtooltip Blade Flurry /cancelaura [mod:shift] Blade Flurry /startattack [nomod] /cast [nomod] Blade Flurry"
+    },
+    {
+      "id": "rogue-macro-23",
+      "title": "Trinkets, Adrenaline Rush, then Blade Flurry",
+      "desc": "The first press uses your trinkets and Adrenaline Rush; press again within 20 seconds to add Blade Flurry.",
+      "category": "General",
+      "code": "#showtooltip Adrenaline Rush /use 13 /use 14 /castsequence reset=20 Adrenaline Rush, Blade Flurry"
+    },
+    {
+      "id": "rogue-macro-24",
+      "title": "Your core attacks on one key",
+      "desc": "Auto attack and Sinister Strike on a plain press, with the modifiers switching to your finishers and Feint.",
+      "category": "General",
+      "code": "#showtooltip [mod:shift] Slice and Dice; [mod:ctrl] Eviscerate; [mod:alt] Feint; Sinister Strike /startattack /cast [mod:shift] Slice and Dice; [mod:ctrl] Eviscerate; [mod:alt] Feint; Sinister Strike"
+    },
+    {
+      "id": "rogue-macro-25",
+      "title": "Garrote from Stealth, Sinister Strike after",
+      "desc": "Open with Garrote while you're hidden; from then on the same key is Sinister Strike with auto attack.",
+      "category": "Combat & Rotations",
+      "code": "#showtooltip [stealth] Garrote; Sinister Strike /cast [stealth] Garrote; Sinister Strike /startattack [nostealth]"
+    },
+    {
+      "id": "rogue-macro-26",
+      "title": "Backstab when you can, Sinister Strike when you can't",
+      "desc": "Backstab whenever you're behind the target with a dagger in hand; otherwise, or if you're short of its 60 Energy, the press is Sinister Strike.",
+      "category": "Combat & Rotations",
+      "code": "#showtooltip Backstab /startattack [nostealth] /cast Backstab /cast Sinister Strike"
+    },
+    {
+      "id": "rogue-macro-27",
+      "title": "Two Sinister Strikes, then Slice and Dice",
+      "desc": "Start a long fight by pressing this three times: two Sinister Strikes, then Slice and Dice.",
+      "category": "Combat & Rotations",
+      "code": "#showtooltip Slice and Dice /startattack /castsequence reset=8/target Sinister Strike, Sinister Strike, Slice and Dice"
+    },
+    {
+      "id": "rogue-macro-28",
+      "title": "Five Sinister Strikes, then Eviscerate",
+      "desc": "Press repeatedly on a mob you want dead fast: five Sinister Strikes, then Eviscerate, then it starts over.",
+      "category": "Combat & Rotations",
+      "code": "#showtooltip Sinister Strike /startattack /castsequence reset=8/target Sinister Strike, Sinister Strike, Sinister Strike, Sinister Strike, Sinister Strike, Eviscerate"
+    },
+    {
+      "id": "rogue-macro-29",
+      "title": "Slice and Dice, with a Frenzy Potion on Shift",
+      "desc": "Slice and Dice on a plain press; hold Shift to drink a Lesser Frenzy Potion first before a hard fight.",
+      "category": "General",
+      "code": "#showtooltip Slice and Dice /use [mod:shift] Lesser Frenzy Potion /cast Slice and Dice"
+    },
+    {
+      "id": "rogue-macro-30",
+      "title": "Equip your weapons for Sinister Strike",
+      "desc": "Replace both weapon names with yours. Swap back from your opening dagger to your chosen main hand and off hand, then Sinister Strike. Press again after the swap's global cooldown if needed.",
+      "category": "Combat & Rotations",
+      "code": "#showtooltip Sinister Strike /equipslot 16 Main-Hand Name /equipslot 17 Off-Hand Name /startattack /cast Sinister Strike"
+    },
+    {
+      "id": "rogue-macro-31",
+      "title": "Hemorrhage and auto attack",
+      "desc": "Hemorrhage and keep swinging; in Forever it boosts your own Rupture instead of adding Physical damage.",
+      "category": "General",
+      "code": "#showtooltip Hemorrhage /startattack /cast Hemorrhage"
+    },
+    {
+      "id": "rogue-macro-32",
+      "title": "Cheap Shot from Stealth",
+      "desc": "Press once to enter Stealth and again to Cheap Shot your target.",
+      "category": "Combat & Rotations",
+      "code": "#showtooltip Cheap Shot /cast [nostealth] Stealth; Cheap Shot"
+    },
+    {
+      "id": "rogue-macro-33",
+      "title": "Ambush when Cutthroat allows it, else Backstab",
+      "desc": "Ambush from Stealth, or in the open right after a Cutthroat proc; every other press is a Backstab.",
+      "category": "General",
+      "code": "#showtooltip Ambush /cast Ambush /cast Backstab /startattack [nostealth]"
+    },
+    {
+      "id": "rogue-macro-34",
+      "title": "Premeditation, Cheap Shot, then Kidney Shot",
+      "desc": "From Stealth this adds Premeditation's two points and Cheap Shot; press again once you're in the fight for Kidney Shot.",
+      "category": "Combat & Rotations",
+      "code": "#showtooltip [stealth] Cheap Shot; Kidney Shot /cast [stealth] Premeditation /cast [stealth] Cheap Shot; Kidney Shot"
+    },
+    {
+      "id": "rogue-macro-35",
+      "title": "Target and Sap the nearest enemy",
+      "desc": "Stops your swings, picks the nearest enemy if you have no hostile target and Saps it; press again once you're in range.",
+      "category": "General",
+      "code": "#showtooltip Sap /stopattack /targetenemy [noharm][dead] /cast [harm,nodead] Sap"
+    },
+    {
+      "id": "rogue-macro-36",
+      "title": "Ghostly Strike when ready, else Backstab",
+      "desc": "Ghostly Strike every time it comes off its 20 second cooldown and Backstab in between.",
+      "category": "Combat & Rotations",
+      "code": "#showtooltip Ghostly Strike /startattack [nostealth] /cast Ghostly Strike /cast Backstab"
+    },
+    {
+      "id": "rogue-macro-37",
+      "title": "Hemorrhage, Rupture and Backstab on one key",
+      "desc": "One key for the Rupture loop: Hemorrhage on a plain press, Rupture with Shift and Backstab with Ctrl.",
+      "category": "General",
+      "code": "#showtooltip [mod:shift] Rupture; [mod:ctrl] Backstab; Hemorrhage /startattack /cast [mod:shift] Rupture; [mod:ctrl] Backstab; Hemorrhage"
+    },
+    {
+      "id": "rogue-macro-38",
+      "title": "Burn your escapes, then Preparation",
+      "desc": "Evasion and Sprint go off and Preparation resets them; hold Shift to Vanish and stop swinging instead of Evasion.",
+      "category": "General",
+      "code": "#showtooltip Preparation /stopattack [mod:shift] /cast [mod:shift] Vanish; Evasion /cast Sprint /cast Preparation"
+    },
+    {
+      "id": "rogue-macro-39",
+      "title": "Pick Pocket, then Sap from Stealth",
+      "desc": "Pick the pocket of the enemy under your cursor (or your target) and Sap it in the same press.",
+      "category": "General",
+      "code": "#showtooltip Sap /cast [stealth,@mouseover,harm,nodead][stealth] Pick Pocket /cast [@mouseover,harm,nodead][] Sap"
+    },
+    {
+      "id": "rogue-macro-40",
+      "title": "Equip a dagger for Ambush or Backstab",
+      "desc": "Replace both weapon names with yours. Equip the dagger for Ambush, or Backstab with Shift. A combat weapon swap may need another press after the global cooldown.",
+      "category": "General",
+      "code": "#showtooltip [mod:shift] Backstab; Ambush /equipslot 16 Dagger Name /equipslot 17 Off-Hand Name /cast [mod:shift] Backstab; Ambush /startattack [nostealth]"
+    },
+    {
+      "id": "rogue-macro-41",
+      "title": "Kick or Gouge on target or mouseover",
+      "desc": "Kick your target on a plain press; Shift moves it to your mouseover, and Ctrl or Alt swap in Gouge.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip [mod:ctrl] Gouge; Kick /cast [mod:shift,@mouseover,harm,nodead] Kick; [mod:alt,@mouseover,harm,nodead] Gouge; [mod:ctrl] Gouge; Kick"
+    },
+    {
+      "id": "rogue-macro-42",
+      "title": "Kick, then Gouge while Kick recharges",
+      "desc": "Kick on the first press and Gouge on the next while Kick is still on cooldown, against your mouseover or your target.",
+      "category": "General",
+      "code": "#showtooltip Kick /cast [@mouseover,harm,nodead][] Kick /cast [@mouseover,harm,nodead][] Gouge"
+    },
+    {
+      "id": "rogue-macro-43",
+      "title": "Cheap Shot from Stealth, Kidney Shot in the fight",
+      "desc": "Open with Cheap Shot while hidden and use Kidney Shot once the fight is on; Shift aims either one at your mouseover.",
+      "category": "Combat & Rotations",
+      "code": "#showtooltip [stealth] Cheap Shot; Kidney Shot /cast [stealth,mod:shift,@mouseover,harm,nodead] Cheap Shot; [stealth] Cheap Shot; [mod:shift,@mouseover,harm,nodead] Kidney Shot; Kidney Shot"
+    },
+    {
+      "id": "rogue-macro-44",
+      "title": "Blind and Sap on target or mouseover",
+      "desc": "Blind your target, with Shift for your mouseover; Ctrl and Alt Sap the mouseover or the target instead.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Blind /cast [mod:shift,@mouseover,harm,nodead] Blind; [mod:ctrl,@mouseover,harm,nodead] Sap; [mod:alt] Sap; Blind"
+    },
+    {
+      "id": "rogue-macro-45",
+      "title": "Vanish and Sprint away",
+      "desc": "Stop swinging, Vanish and Sprint to break contact; Shift is Sprint alone and Ctrl is Evasion alone.",
+      "category": "General",
+      "code": "#showtooltip Vanish /stopattack [nomod] /cast [nomod] Vanish /cast [nomod] Sprint /cast [mod:shift] Sprint; [mod:ctrl] Evasion"
+    },
+    {
+      "id": "rogue-macro-46",
+      "title": "Dismount, Stealth and Sprint",
+      "desc": "Get off your mount, slip into Stealth and Sprint in one press to close the gap while hidden.",
+      "category": "General",
+      "code": "#showtooltip Sprint /dismount /cast [nostealth] Stealth /cast Sprint"
+    },
+    {
+      "id": "rogue-macro-47",
+      "title": "Racial break, or a trinket with Shift or Ctrl",
+      "desc": "Press for the racial that shakes off an effect for your race; Shift and Ctrl use the top and bottom trinkets.",
+      "category": "General",
+      "code": "#showtooltip /cast [nomod] Will to Survive /cast [nomod] Will of the Forsaken /cast [nomod] Escape Artist /cast [nomod] Stoneform /use [mod:shift] 13; [mod:ctrl] 14"
+    },
+    {
+      "id": "rogue-macro-48",
+      "title": "Burst window: trinkets, Cold Blood and racial",
+      "desc": "Fire both trinkets, Cold Blood and your Orc or Troll racial together, then follow with your biggest attack.",
+      "category": "General",
+      "code": "#showtooltip /use 13 /use 14 /cast Cold Blood /cast Blood Fury /cast Berserking"
+    },
+    {
+      "id": "rogue-macro-49",
+      "title": "Free Action Potion and Sprint",
+      "desc": "Drink a Free Action Potion and Sprint before you're caught; Shift drinks a Swiftness Potion on its own instead.",
+      "category": "General",
+      "code": "#showtooltip [mod:shift] Swiftness Potion; Free Action Potion /use [mod:shift] Swiftness Potion; Free Action Potion /cast [nomod] Sprint"
+    },
+    {
+      "id": "rogue-macro-50",
+      "title": "Throw at your target or mouseover",
+      "desc": "Throw a weapon at your target, or at whoever is under your cursor with Shift.",
+      "category": "Mouseover & Healing",
+      "code": "#showtooltip Throw /cast [mod:shift,@mouseover,harm,nodead] Throw; Throw"
+    },
+    {
+      "id": "rogue-macro-51",
+      "title": "Cold Blood into Ambush or Backstab",
+      "desc": "Cold Blood, then Ambush from Stealth for a 100% crit chance opener; hold Shift for Backstab when you're already visible.",
+      "category": "General",
+      "code": "#showtooltip [mod:shift] Backstab; Ambush /cast Cold Blood /cast [mod:shift] Backstab; Ambush"
+    },
+    {
+      "id": "rogue-macro-52",
+      "title": "Poisons for fighting players",
+      "desc": "Crippling Poison on a plain press, Wound Poison with Shift for healers and Mind-numbing Poison with Ctrl for casters; Alt picks the off hand.",
+      "category": "General",
+      "code": "#showtooltip /use [mod:shift] Wound Poison; [mod:ctrl] Mind-numbing Poison; Crippling Poison /use [mod:alt] 17; 16 /click StaticPopup1Button1"
+    }
+  ]
+}
