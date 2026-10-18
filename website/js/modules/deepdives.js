@@ -4,6 +4,20 @@
  */
 
 function initClassDeepDives() {
+  const escapeHtml = window.escapeHtml || (s => String(s ?? "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;"));
+
+  function openDeepDiveTalentModal(...args) {
+    if (window.WOW_DEEPDIVES_BUILDS && window.WOW_DEEPDIVES_BUILDS.openDeepDiveTalentModal) {
+      window.WOW_DEEPDIVES_BUILDS.openDeepDiveTalentModal(...args);
+    }
+  }
+
+  function openDeepDiveBlankCalculator(...args) {
+    if (window.WOW_DEEPDIVES_BUILDS && window.WOW_DEEPDIVES_BUILDS.openDeepDiveBlankCalculator) {
+      window.WOW_DEEPDIVES_BUILDS.openDeepDiveBlankCalculator(...args);
+    }
+  }
+
   let selectedDeepDiveClassId = 'hunter';
   let selectedDeepDiveSubTab = 'overview'; // 'overview' | 'core' | 'survival' | 'marksmanship' | 'beastmastery' | 'tauren' | 'matrix'
 

@@ -5,14 +5,19 @@
  * native in-house Talent Tree viewer modal, and Classic WoW floating item tooltips.
  */
 
-if (typeof window !== 'undefined') {
-  if (typeof WOW_BIS_DATA !== 'undefined' && !window.WOW_BIS_DATA) {
-    window.WOW_BIS_DATA = WOW_BIS_DATA;
+(function () {
+  "use strict";
+
+  if (typeof window !== 'undefined') {
+    if (typeof WOW_BIS_DATA !== 'undefined' && !window.WOW_BIS_DATA) {
+      window.WOW_BIS_DATA = WOW_BIS_DATA;
+    }
+    if (typeof WOW_BIS_METADATA !== 'undefined' && !window.WOW_BIS_METADATA) {
+      window.WOW_BIS_METADATA = WOW_BIS_METADATA;
+    }
   }
-  if (typeof WOW_BIS_METADATA !== 'undefined' && !window.WOW_BIS_METADATA) {
-    window.WOW_BIS_METADATA = WOW_BIS_METADATA;
-  }
-}
+
+  const escapeHtml = window.escapeHtml || (s => String(s ?? "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;"));
 
 let currentBiSState = {
   classId: "warrior",
@@ -1231,7 +1236,9 @@ function resetCustomBiS() {
   }
 }
 
-window.exportBiSToJournal = exportBiSToJournal;
-window.equipBiSItem = equipBiSItem;
-window.resetCustomBiS = resetCustomBiS;
+  window.initBiSLists = initBiSLists;
+  window.exportBiSToJournal = exportBiSToJournal;
+  window.equipBiSItem = equipBiSItem;
+  window.resetCustomBiS = resetCustomBiS;
+})();
 

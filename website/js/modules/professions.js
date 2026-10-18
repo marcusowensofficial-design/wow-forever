@@ -57,6 +57,18 @@
     return window.WOW_PROFESSIONS_TABS?.renderMasterTrainerDirectory ? window.WOW_PROFESSIONS_TABS.renderMasterTrainerDirectory() : "";
   }
 
+  function renderPairingDetailsCard(activePair) {
+    return window.WOW_PROFESSIONS_TABS?.renderPairingDetailsCard ? window.WOW_PROFESSIONS_TABS.renderPairingDetailsCard(activePair) : "";
+  }
+
+  function updateTrainerGrid(container) {
+    if (window.WOW_PROFESSIONS_TABS?.updateTrainerGrid) window.WOW_PROFESSIONS_TABS.updateTrainerGrid(container);
+  }
+
+  function resolveReagentSource(name, id) {
+    return window.WOW_PROFESSIONS_MODAL?.resolveReagentSource ? window.WOW_PROFESSIONS_MODAL.resolveReagentSource(name, id) : null;
+  }
+
   function parseHashRoute() {
     const raw = (window.location.hash || '').toLowerCase();
     if (!raw) return { profession: 'overview', subtab: 'recipes' };

@@ -6,6 +6,33 @@
 
   const escapeHtml = window.escapeHtml || (s => String(s ?? "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;"));
 
+  function getReagentIconUrl(icon) {
+    if (!icon) return 'https://wow.zamimg.com/images/wow/icons/medium/inv_misc_questionmark.jpg';
+    if (icon.startsWith('http://') || icon.startsWith('https://')) return icon;
+    const clean = icon.replace(/\.(jpg|png|webp)$/i, '');
+    return `https://wow.zamimg.com/images/wow/icons/medium/${clean}.jpg`;
+  }
+
+  function getItemReagents(item) {
+    if (!item) return null;
+    if (item.reagents && Array.isArray(item.reagents) && item.reagents.length > 0) {
+      return item.reagents;
+    }
+    const cache = (window.WOW_BIS && window.WOW_BIS.getBiSRecipeCache) ? window.WOW_BIS.getBiSRecipeCache() : null;
+    if (!cache) return null;
+    const id = item.itemId || item.tipId;
+    let recipe = null;
+    if (id) recipe = cache.byId.get(String(id));
+    if (!recipe && item.tipId && String(item.tipId).length > 6) {
+      recipe = cache.byId.get(String(item.tipId).slice(0, 6));
+    }
+    if (!recipe && item.name) {
+      const cleanName = item.name.replace(/\s+of\s+the\s+.*$/i, '').toLowerCase().trim();
+      recipe = cache.byName.get(cleanName) || cache.byName.get(item.name.toLowerCase().trim());
+    }
+    return (recipe && Array.isArray(recipe.reagents) && recipe.reagents.length > 0) ? recipe.reagents : null;
+  }
+
 function getTalentIconUrl(talentName, _treeName, _classId) {
   if (!talentName) return "https://render.worldofwarcraft.com/us/icons/56/inv_misc_questionmark.jpg";
   const key = talentName.toLowerCase().trim();
@@ -950,9 +977,6 @@ function exportBiSToJournal() {
   window.WOW_BIS_MODAL = {
     getTalentIconUrl,
     openBiSTalentModal,
-    renderTreeNodesHtml,
-    renderModalBody,
-    bindModalActions,
     getSpecTalentTrees,
     generateFallbackTalentTrees,
     renderReagentTooltip,

@@ -7,11 +7,12 @@
   const core = window.WOW_PROFESSIONS_CORE || {};
   const escapeHtml = core.escapeHtml || window.escapeHtml || (s => String(s ?? "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;"));
   const getIconUrl = core.getIconUrl || ((icon) => "https://wow.zamimg.com/images/wow/icons/medium/" + (icon || "inv_misc_questionmark") + ".jpg");
+  const formatWaypointsInHtml = core.formatWaypointsInHtml || (h => h);
 
-  const ZONE_MAP_IDS = window.ZONE_MAP_IDS || {};
-  const CIRCUIT_ROUTE_PATHS = window.CIRCUIT_ROUTE_PATHS || {};
-  const MINING_CIRCUITS = window.MINING_CIRCUITS || [];
-  const HERBALISM_CIRCUITS = window.HERBALISM_CIRCUITS || [];
+  const getMiningCircuits = () => window.MINING_CIRCUITS || [];
+  const getHerbalismCircuits = () => window.HERBALISM_CIRCUITS || [];
+  const getZoneMapIds = () => window.ZONE_MAP_IDS || {};
+  const getCircuitRoutePaths = () => window.CIRCUIT_ROUTE_PATHS || {};
 
   let gatheringViewMode = "routes";
   let activeMiningTier = "copper";
@@ -24,7 +25,7 @@
   }
 
   function getZoneMapUrl(zoneName, isEnlarged = false) {
-    const id = ZONE_MAP_IDS[zoneName];
+    const id = getZoneMapIds()[zoneName];
     if (id) {
       const folder = isEnlarged ? 'original' : 'zoom';
       return `https://wow.zamimg.com/images/wow/classic/maps/enus/${folder}/${id}.jpg`;
@@ -76,7 +77,7 @@
   }
 
   function renderRouteSvgOverlay(route, isMining, isEnlarged = false) {
-    const points = CIRCUIT_ROUTE_PATHS[route.id];
+    const points = getCircuitRoutePaths()[route.id];
     if (!points || points.length === 0) return '';
 
     const { pathD, arrows } = buildSmoothClosedPathAndArrows(points);
@@ -161,7 +162,7 @@
     const mapUrl = getZoneMapUrl(zoneName, true);
     const mainColor = isMining ? '#facc15' : '#4ade80';
     const profLabel = isMining ? 'Mining Circuit' : 'Herbalism Circuit';
-    const points = CIRCUIT_ROUTE_PATHS[route.id] || [];
+    const points = getCircuitRoutePaths()[route.id] || [];
 
     modal.innerHTML = `
       <div class="gathering-route-dialog" role="document">
@@ -393,7 +394,7 @@
   function renderNodesTab(container, prof) {
     const isMining = prof.slug === 'mining';
     const isHerbalism = prof.slug === 'herbalism';
-    const circuits = isMining ? MINING_CIRCUITS : (isHerbalism ? HERBALISM_CIRCUITS : null);
+    const circuits = isMining ? getMiningCircuits() : (isHerbalism ? getHerbalismCircuits() : null);
     const nodes = prof.nodes || [];
 
     if (!circuits) {
