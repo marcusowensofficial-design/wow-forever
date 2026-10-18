@@ -1,10 +1,10 @@
-import fs from 'node:fs';
-import path from 'node:path';
-import { fileURLToPath } from 'node:url';
+import fs from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const ROOT = path.resolve(__dirname, '..');
+const ROOT = path.resolve(__dirname, "..");
 
 const weaponsData = {
   "warrior": {
@@ -97,7 +97,7 @@ const weaponsData = {
             "quality": "q1",
             "iLvl": 9,
             "reqLevel": 4,
-            "stats": "skill 20"
+            "stats": ""
           }
         ],
         "faction": "both",
@@ -131,7 +131,7 @@ const weaponsData = {
             "quality": "q2",
             "iLvl": 13,
             "reqLevel": 8,
-            "stats": "30"
+            "stats": ""
           },
           {
             "name": "Rough Boomstick",
@@ -144,7 +144,7 @@ const weaponsData = {
             "quality": "q2",
             "iLvl": 10,
             "reqLevel": 5,
-            "stats": ""
+            "stats": "+1 Stamina"
           },
           {
             "name": "Goblin Smasher",
@@ -164,7 +164,7 @@ const weaponsData = {
         "quality": "q2",
         "iLvl": 11,
         "reqLevel": 6,
-        "stats": ""
+        "stats": "+1 Strength, +1 Stamina"
       },
       {
         "levelBracket": "7–8",
@@ -284,7 +284,7 @@ const weaponsData = {
             "quality": "q2",
             "iLvl": 17,
             "reqLevel": 12,
-            "stats": "45"
+            "stats": ""
           },
           {
             "name": "Thun'grim's Axe",
@@ -409,7 +409,7 @@ const weaponsData = {
         "quality": "q2",
         "iLvl": 16,
         "reqLevel": 11,
-        "stats": "Guaranteed crafted spike, trainer taught at 40"
+        "stats": "+4 Strength"
       },
       {
         "levelBracket": "13–14",
@@ -449,7 +449,7 @@ const weaponsData = {
             "quality": "q2",
             "iLvl": 19,
             "reqLevel": 14,
-            "stats": "skill 65"
+            "stats": ""
           },
           {
             "name": "Axe of Orgrimmar",
@@ -482,7 +482,7 @@ const weaponsData = {
         "quality": "q3",
         "iLvl": 18,
         "reqLevel": 9,
-        "stats": "Dungeon quest, The Hall of Thanes, level 16"
+        "stats": ""
       },
       {
         "levelBracket": "15–16",
@@ -529,7 +529,7 @@ const weaponsData = {
         "quality": "q3",
         "iLvl": 21,
         "reqLevel": 16,
-        "stats": "First boss in The Deadmines, levels 18"
+        "stats": "+8 Stamina, +8 Spell Power"
       },
       {
         "levelBracket": "17–18",
@@ -637,7 +637,7 @@ const weaponsData = {
             "quality": "q2",
             "iLvl": 25,
             "reqLevel": 20,
-            "stats": "90"
+            "stats": "+6 Strength, +6 Stamina"
           },
           {
             "name": "Taskmaster Axe",
@@ -729,7 +729,7 @@ const weaponsData = {
             "quality": "q2",
             "iLvl": 27,
             "reqLevel": 22,
-            "stats": "105"
+            "stats": "+10 Strength"
           },
           {
             "name": "Alliance Outrunner's Sword",
@@ -789,7 +789,7 @@ const weaponsData = {
             "quality": "q2",
             "iLvl": 40,
             "reqLevel": 35,
-            "stats": "130"
+            "stats": "+14 Critical Strike Rating"
           },
           {
             "name": "The Skyblade",
@@ -1213,7 +1213,7 @@ const weaponsData = {
             "quality": "q2",
             "iLvl": 30,
             "reqLevel": 25,
-            "stats": "145"
+            "stats": ""
           }
         ],
         "faction": "both",
@@ -1301,7 +1301,7 @@ const weaponsData = {
         "quality": "q3",
         "iLvl": 42,
         "reqLevel": 37,
-        "stats": "Scarlet Monastery Armory, levels 35"
+        "stats": ""
       },
       {
         "levelBracket": "41–44",
@@ -1340,7 +1340,7 @@ const weaponsData = {
             "quality": "q3",
             "iLvl": 41,
             "reqLevel": 36,
-            "stats": ""
+            "stats": "+20 Strength, +8 Stamina"
           },
           {
             "name": "Gul'gash's Greathammer",
@@ -1360,7 +1360,7 @@ const weaponsData = {
         "quality": "q3",
         "iLvl": 48,
         "reqLevel": 43,
-        "stats": "Slow 3.80s swing speed maximizes Mortal Strike weapon coefficient"
+        "stats": "+10 Hit Rating"
       },
       {
         "levelBracket": "45–50",
@@ -1446,7 +1446,7 @@ const weaponsData = {
             "quality": "q3",
             "iLvl": 56,
             "reqLevel": 51,
-            "stats": "280"
+            "stats": "+4 Arcane Resistance, +21 Parry Rating, +20 Hit Rating"
           }
         ],
         "faction": "both",
@@ -1479,7 +1479,7 @@ const weaponsData = {
             "quality": "q3",
             "iLvl": 60,
             "reqLevel": 54,
-            "stats": "420 bleed proc"
+            "stats": ""
           },
           {
             "name": "Blackblade of Shahram",
@@ -1504,7 +1504,7 @@ const weaponsData = {
             "quality": "q4",
             "iLvl": 60,
             "reqLevel": 55,
-            "stats": ""
+            "stats": "+18 Strength, +17 Stamina, +28 Critical Strike Rating"
           },
           {
             "name": "Dreadforge Retaliator",
@@ -1629,7 +1629,7 @@ const weaponsData = {
             "quality": "q2",
             "iLvl": 10,
             "reqLevel": 4,
-            "stats": "20"
+            "stats": "+1 Strength"
           }
         ],
         "faction": "both",
@@ -1676,14 +1676,14 @@ const weaponsData = {
             "quality": "q1",
             "iLvl": 9,
             "reqLevel": 4,
-            "stats": "15"
+            "stats": ""
           }
         ],
         "faction": "both",
         "quality": "q2",
         "iLvl": 11,
         "reqLevel": 6,
-        "stats": "Crafted 2H Sword with heavy Seal of Command scaling"
+        "stats": "+1 Strength, +1 Stamina"
       },
       {
         "levelBracket": "7–8",
@@ -1723,7 +1723,7 @@ const weaponsData = {
             "quality": "q2",
             "iLvl": 11,
             "reqLevel": 6,
-            "stats": "25"
+            "stats": "+1 Strength, +1 Stamina"
           }
         ],
         "faction": "alliance",
@@ -1779,7 +1779,7 @@ const weaponsData = {
             "quality": "q2",
             "iLvl": 19,
             "reqLevel": 14,
-            "stats": "65"
+            "stats": ""
           },
           {
             "name": "Ironforge Greathammer",
@@ -1839,7 +1839,7 @@ const weaponsData = {
             "quality": "q2",
             "iLvl": 19,
             "reqLevel": 14,
-            "stats": "65"
+            "stats": ""
           },
           {
             "name": "Ironforge Greathammer",
@@ -1859,7 +1859,7 @@ const weaponsData = {
         "quality": "q2",
         "iLvl": 16,
         "reqLevel": 11,
-        "stats": "Guaranteed crafted 2H mace upgrade"
+        "stats": "+4 Strength"
       },
       {
         "levelBracket": "13–14",
@@ -1886,7 +1886,7 @@ const weaponsData = {
             "quality": "q2",
             "iLvl": 19,
             "reqLevel": 14,
-            "stats": "65"
+            "stats": ""
           },
           {
             "name": "Bronze Mace",
@@ -1899,14 +1899,14 @@ const weaponsData = {
             "quality": "q2",
             "iLvl": 22,
             "reqLevel": 17,
-            "stats": "75"
+            "stats": "+3 Stamina"
           }
         ],
         "faction": "alliance",
         "quality": "q3",
         "iLvl": 18,
         "reqLevel": 9,
-        "stats": "The Hall of Thanes dungeon quest, level 16"
+        "stats": ""
       },
       {
         "levelBracket": "15–16",
@@ -2009,7 +2009,7 @@ const weaponsData = {
             "quality": "q2",
             "iLvl": 25,
             "reqLevel": 20,
-            "stats": "90"
+            "stats": "+6 Strength, +6 Stamina"
           },
           {
             "name": "Sword of the Fallen",
@@ -2056,7 +2056,7 @@ const weaponsData = {
             "quality": "q2",
             "iLvl": 25,
             "reqLevel": 20,
-            "stats": "90"
+            "stats": "+6 Strength, +6 Stamina"
           },
           {
             "name": "Bronze Greatsword",
@@ -2069,7 +2069,7 @@ const weaponsData = {
             "quality": "q2",
             "iLvl": 26,
             "reqLevel": 21,
-            "stats": "105"
+            "stats": "+6 Stamina, +7 Spell Power"
           }
         ],
         "faction": "alliance",
@@ -2145,7 +2145,7 @@ const weaponsData = {
         "quality": "q3",
         "iLvl": 31,
         "reqLevel": 20,
-        "stats": "Exceptional stats carry through level 30"
+        "stats": "+5 Stamina, +10 Spirit"
       },
       {
         "levelBracket": "25–28",
@@ -2215,7 +2215,7 @@ const weaponsData = {
             "quality": "q2",
             "iLvl": 32,
             "reqLevel": 27,
-            "stats": "130"
+            "stats": ""
           },
           {
             "name": "Defender of Dalaran",
@@ -2358,7 +2358,7 @@ const weaponsData = {
         "faction": "alliance",
         "quality": "q3",
         "iLvl": 31,
-        "stats": "+10 Intellect, +9 Stamina, Chance on hit: Sear the target with a vortex of blazing wind, dealing 39 to 59 Holystorm damage. Deals 3 times as much damage to Wolves and Worgen.",
+        "stats": "+10 Int, +9 Sta, 3x dmg to Wolves/Worgen",
         "lines": [
           "Binds when picked up",
           "Two-Hand\tSword",
@@ -2396,7 +2396,7 @@ const weaponsData = {
             "quality": "q2",
             "iLvl": 36,
             "reqLevel": 31,
-            "stats": "160"
+            "stats": "+4 Strength, +12 Spell Power"
           },
           {
             "name": "Silver Spade",
@@ -2510,7 +2510,7 @@ const weaponsData = {
             "quality": "q3",
             "iLvl": 41,
             "reqLevel": 36,
-            "stats": ""
+            "stats": "+20 Strength, +8 Stamina"
           },
           {
             "name": "Grisly Sack of Skulls",
@@ -2625,7 +2625,7 @@ const weaponsData = {
             "quality": "q3",
             "iLvl": 56,
             "reqLevel": 51,
-            "stats": "280"
+            "stats": "+4 Arcane Resistance, +21 Parry Rating, +20 Hit Rating"
           }
         ],
         "faction": "both",
@@ -2671,7 +2671,7 @@ const weaponsData = {
             "quality": "q4",
             "iLvl": 60,
             "reqLevel": 55,
-            "stats": ""
+            "stats": "+18 Strength, +17 Stamina, +28 Critical Strike Rating"
           },
           {
             "name": "Dreadforge Retaliator",
@@ -2761,7 +2761,7 @@ const weaponsData = {
             "quality": "q2",
             "iLvl": 10,
             "reqLevel": 5,
-            "stats": "30"
+            "stats": "+1 Stamina"
           },
           {
             "name": "Kolkar Bow",
@@ -2828,7 +2828,7 @@ const weaponsData = {
         "quality": "q2",
         "iLvl": 10,
         "reqLevel": 5,
-        "stats": ""
+        "stats": "+1 Stamina"
       },
       {
         "levelBracket": "7–8",
@@ -2868,7 +2868,7 @@ const weaponsData = {
             "quality": "q2",
             "iLvl": 12,
             "reqLevel": 6,
-            "stats": ""
+            "stats": "+1 Agility"
           }
         ],
         "faction": "alliance",
@@ -2902,7 +2902,7 @@ const weaponsData = {
             "quality": "q2",
             "iLvl": 16,
             "reqLevel": 11,
-            "stats": ""
+            "stats": "+1 Agility"
           },
           {
             "name": "Rough Boomstick",
@@ -2915,7 +2915,7 @@ const weaponsData = {
             "quality": "q2",
             "iLvl": 10,
             "reqLevel": 5,
-            "stats": "30"
+            "stats": "+1 Stamina"
           },
           {
             "name": "Orcish Battle Bow",
@@ -2928,7 +2928,7 @@ const weaponsData = {
             "quality": "q2",
             "iLvl": 14,
             "reqLevel": 9,
-            "stats": ""
+            "stats": "+1 Strength"
           },
           {
             "name": "Snarlsnout Shooter",
@@ -2975,7 +2975,7 @@ const weaponsData = {
             "quality": "q2",
             "iLvl": 13,
             "reqLevel": 7,
-            "stats": ""
+            "stats": "+6 Spell Power"
           },
           {
             "name": "Deadly Blunderbuss",
@@ -2988,7 +2988,7 @@ const weaponsData = {
             "quality": "q2",
             "iLvl": 21,
             "reqLevel": 16,
-            "stats": "105"
+            "stats": "+2 Agility"
           },
           {
             "name": "Orcish Battle Bow",
@@ -3001,7 +3001,7 @@ const weaponsData = {
             "quality": "q2",
             "iLvl": 14,
             "reqLevel": 9,
-            "stats": ""
+            "stats": "+1 Strength"
           },
           {
             "name": "Bristlebark Bow",
@@ -3048,7 +3048,7 @@ const weaponsData = {
             "quality": "q2",
             "iLvl": 21,
             "reqLevel": 16,
-            "stats": "105"
+            "stats": "+2 Agility"
           },
           {
             "name": "Laminated Recurve Bow",
@@ -3108,7 +3108,7 @@ const weaponsData = {
             "quality": "q2",
             "iLvl": 24,
             "reqLevel": 19,
-            "stats": "120"
+            "stats": "+3 Spirit"
           },
           {
             "name": "Deadly Blunderbuss",
@@ -3121,7 +3121,7 @@ const weaponsData = {
             "quality": "q2",
             "iLvl": 21,
             "reqLevel": 16,
-            "stats": "105"
+            "stats": "+2 Agility"
           },
           {
             "name": "Barbaric Crossbow",
@@ -3168,7 +3168,7 @@ const weaponsData = {
             "quality": "q2",
             "iLvl": 26,
             "reqLevel": 21,
-            "stats": "125"
+            "stats": "+3 Stamina"
           },
           {
             "name": "Reinforced Bow",
@@ -3215,7 +3215,7 @@ const weaponsData = {
             "quality": "q2",
             "iLvl": 29,
             "reqLevel": 24,
-            "stats": "145"
+            "stats": "+3 Hit"
           },
           {
             "name": "Fallenroot Longbow",
@@ -3283,7 +3283,7 @@ const weaponsData = {
             "quality": "q3",
             "iLvl": 28,
             "reqLevel": 22,
-            "stats": "155"
+            "stats": ""
           },
           {
             "name": "Concealed Hand Crossbow",
@@ -3646,7 +3646,7 @@ const weaponsData = {
             "quality": "q3",
             "iLvl": 36,
             "reqLevel": 30,
-            "stats": "175"
+            "stats": ""
           }
         ],
         "faction": "both",
@@ -3718,7 +3718,7 @@ const weaponsData = {
             "quality": "q3",
             "iLvl": 40,
             "reqLevel": 34,
-            "stats": "175"
+            "stats": ""
           },
           {
             "name": "Siegebreaker's Blaster",
@@ -3893,7 +3893,7 @@ const weaponsData = {
             "quality": "q3",
             "iLvl": 52,
             "reqLevel": 46,
-            "stats": "235"
+            "stats": ""
           },
           {
             "name": "Dark Iron Rifle",
@@ -3906,7 +3906,7 @@ const weaponsData = {
             "quality": "q3",
             "iLvl": 55,
             "reqLevel": 50,
-            "stats": "255"
+            "stats": ""
           }
         ],
         "faction": "both",
@@ -3952,7 +3952,7 @@ const weaponsData = {
             "quality": "q3",
             "iLvl": 61,
             "reqLevel": 56,
-            "stats": "275"
+            "stats": "+9 Stamina"
           },
           {
             "name": "Core Marksman Rifle",
@@ -3965,7 +3965,7 @@ const weaponsData = {
             "quality": "q4",
             "iLvl": 65,
             "reqLevel": 60,
-            "stats": ""
+            "stats": "+10 Hit Rating"
           },
           {
             "name": "Reaver's Repeater",
@@ -4081,7 +4081,7 @@ const weaponsData = {
             "quality": "q2",
             "iLvl": 10,
             "reqLevel": 4,
-            "stats": "20"
+            "stats": "+1 Strength"
           },
           {
             "name": "Forsaken Shortsword",
@@ -4127,7 +4127,7 @@ const weaponsData = {
             "quality": "q2",
             "iLvl": 10,
             "reqLevel": 4,
-            "stats": "20"
+            "stats": "+1 Strength"
           },
           {
             "name": "Stiletto",
@@ -4158,7 +4158,7 @@ const weaponsData = {
         "quality": "q2",
         "iLvl": 11,
         "reqLevel": 6,
-        "stats": ""
+        "stats": "+1 Agility"
       },
       {
         "levelBracket": "7–8",
@@ -4243,7 +4243,7 @@ const weaponsData = {
             "quality": "q3",
             "iLvl": 22,
             "reqLevel": 17,
-            "stats": ""
+            "stats": "+4 Agility"
           },
           {
             "name": "Cutlass",
@@ -4457,7 +4457,7 @@ const weaponsData = {
             "quality": "q3",
             "iLvl": 21,
             "reqLevel": 16,
-            "stats": ""
+            "stats": "+3 Strength, +3 Agility"
           },
           {
             "name": "Big Bronze Knife",
@@ -4470,7 +4470,7 @@ const weaponsData = {
             "quality": "q2",
             "iLvl": 20,
             "reqLevel": 15,
-            "stats": "75"
+            "stats": ""
           },
           {
             "name": "Kris of Orgrimmar",
@@ -4658,7 +4658,7 @@ const weaponsData = {
             "quality": "q2",
             "iLvl": 24,
             "reqLevel": 19,
-            "stats": "105"
+            "stats": "+3 Agility"
           },
           {
             "name": "Blade of Silverlaine",
@@ -4739,7 +4739,7 @@ const weaponsData = {
             "quality": "q3",
             "iLvl": 26,
             "reqLevel": 21,
-            "stats": ""
+            "stats": "+2 Strength, +3 Stamina"
           },
           {
             "name": "Iridescent Hammer",
@@ -4772,7 +4772,7 @@ const weaponsData = {
         "quality": "q3",
         "iLvl": 28,
         "reqLevel": 23,
-        "stats": "35 Fire damage proc"
+        "stats": "+3 Fire Resistance"
       },
       {
         "levelBracket": "25–26",
@@ -4898,13 +4898,17 @@ const weaponsData = {
             "weaponType": "Dagger",
             "quality": "q3",
             "iLvl": 32,
-            "stats": "",
+            "stats": "Chance on hit: Deals 14 Nature damage every 3 sec to any enemy in an 8 yard radius around the caster for 12 sec.",
             "lines": [
               "Binds when picked up",
-              "Off hand\tOne-Hand",
-              "Requires Level 25"
+              "Unique-Equipped",
+              "One-Hand\tDagger",
+              "27 - 51 Damage\tSpeed 1.90",
+              "(20.5 damage per second)",
+              "Chance on hit: Deals 14 Nature damage every 3 sec to any enemy in an 8 yard radius around the caster for 12 sec.",
+              "Requires Level 27"
             ],
-            "reqLevel": 25
+            "reqLevel": 27
           },
           {
             "name": "Hardened Iron Shortsword",
@@ -4917,7 +4921,7 @@ const weaponsData = {
             "quality": "q2",
             "iLvl": 32,
             "reqLevel": 27,
-            "stats": "130"
+            "stats": ""
           }
         ],
         "faction": "both",
@@ -5057,7 +5061,7 @@ const weaponsData = {
         "faction": "both",
         "quality": "q3",
         "iLvl": 32,
-        "stats": "Chance on hit: Hurl spikes at the target, dealing 45 Physical damage and jumping to 1 additional nearby enemy. Each jump reduces the damage by 50%.",
+        "stats": "+8 Attack Power",
         "lines": [
           "Binds when picked up",
           "One-Hand\tDagger",
@@ -5201,7 +5205,7 @@ const weaponsData = {
             "quality": "q3",
             "iLvl": 40,
             "reqLevel": 34,
-            "stats": "170"
+            "stats": ""
           },
           {
             "name": "Sword of Omen",
@@ -5260,7 +5264,7 @@ const weaponsData = {
             "quality": "q3",
             "iLvl": 43,
             "reqLevel": 38,
-            "stats": ""
+            "stats": "+3 Frost Resistance"
           },
           {
             "name": "Vanquisher's Sword",
@@ -5273,7 +5277,7 @@ const weaponsData = {
             "quality": "q3",
             "iLvl": 44,
             "reqLevel": 39,
-            "stats": ""
+            "stats": "+22 Attack Power"
           },
           {
             "name": "Sword of Omen",
@@ -5355,7 +5359,7 @@ const weaponsData = {
         "quality": "q3",
         "iLvl": 53,
         "reqLevel": 45,
-        "stats": "Extra swing proc on hit"
+        "stats": ""
       },
       {
         "levelBracket": "51–56",
@@ -5382,7 +5386,7 @@ const weaponsData = {
             "quality": "q2",
             "iLvl": 57,
             "reqLevel": 52,
-            "stats": "270"
+            "stats": ""
           },
           {
             "name": "Julie's Dagger",
@@ -5440,7 +5444,7 @@ const weaponsData = {
             "quality": "q3",
             "iLvl": 62,
             "reqLevel": 56,
-            "stats": "3s 100% crit proc"
+            "stats": ""
           },
           {
             "name": "Mirah's Song",
@@ -5580,7 +5584,7 @@ const weaponsData = {
             "quality": "q1",
             "iLvl": 9,
             "reqLevel": 4,
-            "stats": "20"
+            "stats": ""
           }
         ],
         "faction": "both",
@@ -5614,7 +5618,7 @@ const weaponsData = {
             "quality": "q1",
             "iLvl": 9,
             "reqLevel": 4,
-            "stats": "15"
+            "stats": ""
           },
           {
             "name": "Large Club",
@@ -5647,7 +5651,7 @@ const weaponsData = {
         "quality": "q2",
         "iLvl": 13,
         "reqLevel": 8,
-        "stats": "Heavy slow 2H weapon for massive early Rockbiter bursts"
+        "stats": ""
       },
       {
         "levelBracket": "7–8",
@@ -5718,7 +5722,7 @@ const weaponsData = {
         "quality": "q2",
         "iLvl": 13,
         "reqLevel": 8,
-        "stats": "Slow 3.50s swing speed maximizes Rockbiter AP bonuses"
+        "stats": ""
       },
       {
         "levelBracket": "9–10",
@@ -5767,7 +5771,7 @@ const weaponsData = {
             "quality": "q2",
             "iLvl": 17,
             "reqLevel": 12,
-            "stats": "45"
+            "stats": ""
           },
           {
             "name": "Thun'grim's Axe",
@@ -5867,7 +5871,7 @@ const weaponsData = {
         "quality": "q2",
         "iLvl": 16,
         "reqLevel": 11,
-        "stats": "Guaranteed crafted spike, slow 3.30s"
+        "stats": "+4 Strength"
       },
       {
         "levelBracket": "13–14",
@@ -6165,7 +6169,7 @@ const weaponsData = {
             "quality": "q2",
             "iLvl": 25,
             "reqLevel": 20,
-            "stats": "90"
+            "stats": "+6 Strength, +6 Stamina"
           },
           {
             "name": "Bronze Battle Axe",
@@ -6178,7 +6182,7 @@ const weaponsData = {
             "quality": "q2",
             "iLvl": 27,
             "reqLevel": 22,
-            "stats": "105"
+            "stats": "+10 Strength"
           },
           {
             "name": "Kris of Orgrimmar",
@@ -6235,7 +6239,7 @@ const weaponsData = {
             "quality": "q2",
             "iLvl": 27,
             "reqLevel": 22,
-            "stats": "105"
+            "stats": "+10 Strength"
           },
           {
             "name": "Iridescent Hammer",
@@ -6371,7 +6375,7 @@ const weaponsData = {
             "quality": "q2",
             "iLvl": 30,
             "reqLevel": 25,
-            "stats": "145"
+            "stats": ""
           },
           {
             "name": "Dendweller's Hammer",
@@ -6709,7 +6713,7 @@ const weaponsData = {
             "quality": "q2",
             "iLvl": 37,
             "reqLevel": 32,
-            "stats": "185"
+            "stats": ""
           }
         ],
         "faction": "both",
@@ -6752,7 +6756,7 @@ const weaponsData = {
             "quality": "q3",
             "iLvl": 44,
             "reqLevel": 39,
-            "stats": ""
+            "stats": "+8 Strength, +14 Stamina, +16 Intellect"
           },
           {
             "name": "Illusionary Rod",
@@ -6812,7 +6816,7 @@ const weaponsData = {
             "quality": "q3",
             "iLvl": 48,
             "reqLevel": 43,
-            "stats": ""
+            "stats": "+10 Hit Rating"
           },
           {
             "name": "Gul'gash's Greathammer",
@@ -6871,7 +6875,7 @@ const weaponsData = {
             "quality": "q3",
             "iLvl": 56,
             "reqLevel": 51,
-            "stats": "280"
+            "stats": "+4 Arcane Resistance, +21 Parry Rating, +20 Hit Rating"
           }
         ],
         "faction": "both",
@@ -6905,7 +6909,7 @@ const weaponsData = {
             "quality": "q4",
             "iLvl": 60,
             "reqLevel": 55,
-            "stats": ""
+            "stats": "+18 Strength, +17 Stamina, +28 Critical Strike Rating"
           },
           {
             "name": "Wisepaw Totem",
@@ -6949,7 +6953,7 @@ const weaponsData = {
         "quality": "q3",
         "iLvl": 63,
         "reqLevel": 58,
-        "stats": "Slow 3.80s swing speed yields monster Windfury procs"
+        "stats": ""
       }
     ]
   },
@@ -7034,7 +7038,7 @@ const weaponsData = {
             "quality": "q1",
             "iLvl": 6,
             "reqLevel": 2,
-            "stats": "10"
+            "stats": ""
           }
         ],
         "faction": "both",
@@ -7075,7 +7079,7 @@ const weaponsData = {
         "quality": "q2",
         "iLvl": 15,
         "reqLevel": 5,
-        "stats": ""
+        "stats": "+1 Spell Power"
       },
       {
         "levelBracket": "7–8",
@@ -7113,7 +7117,7 @@ const weaponsData = {
             "quality": "q2",
             "iLvl": 15,
             "reqLevel": 5,
-            "stats": "10"
+            "stats": "+1 Spell Power"
           },
           {
             "name": "Riptear's Spare Arm",
@@ -7126,7 +7130,7 @@ const weaponsData = {
             "quality": "q2",
             "iLvl": 13,
             "reqLevel": 6,
-            "stats": "1.70s Wand"
+            "stats": ""
           },
           {
             "name": "Darkwood Staff",
@@ -7139,7 +7143,7 @@ const weaponsData = {
             "quality": "q2",
             "iLvl": 13,
             "reqLevel": 7,
-            "stats": ""
+            "stats": "+6 Spell Power"
           },
           {
             "name": "Wisesight Wand",
@@ -7222,7 +7226,7 @@ const weaponsData = {
             "quality": "q2",
             "iLvl": 16,
             "reqLevel": 9,
-            "stats": ""
+            "stats": "+1 Spell Power"
           },
           {
             "name": "Deepblaze",
@@ -7242,7 +7246,7 @@ const weaponsData = {
         "quality": "q2",
         "iLvl": 15,
         "reqLevel": 5,
-        "stats": ""
+        "stats": "+1 Spell Power"
       },
       {
         "levelBracket": "11–12",
@@ -7269,7 +7273,7 @@ const weaponsData = {
             "quality": "q2",
             "iLvl": 14,
             "reqLevel": 12,
-            "stats": ""
+            "stats": "+6 Spell Power"
           },
           {
             "name": "Pagan Rod",
@@ -7293,7 +7297,7 @@ const weaponsData = {
             "quality": "q2",
             "iLvl": 15,
             "reqLevel": 10,
-            "stats": ""
+            "stats": "+8 Spell Power"
           },
           {
             "name": "Cinder Wand",
@@ -7306,7 +7310,7 @@ const weaponsData = {
             "quality": "q2",
             "iLvl": 16,
             "reqLevel": 9,
-            "stats": ""
+            "stats": "+1 Spell Power"
           },
           {
             "name": "Spark of the People's Militia",
@@ -7319,14 +7323,14 @@ const weaponsData = {
             "quality": "q2",
             "iLvl": 17,
             "reqLevel": 9,
-            "stats": ""
+            "stats": "+1 Spell Power"
           }
         ],
         "faction": "both",
         "quality": "q2",
         "iLvl": 23,
         "reqLevel": 13,
-        "stats": ""
+        "stats": "+2 Spell Power"
       },
       {
         "levelBracket": "13–14",
@@ -7366,7 +7370,7 @@ const weaponsData = {
             "quality": "q2",
             "iLvl": 23,
             "reqLevel": 13,
-            "stats": "75"
+            "stats": "+2 Spell Power"
           },
           {
             "name": "Fang of Magmatus",
@@ -7537,7 +7541,7 @@ const weaponsData = {
             "weaponType": "Staff",
             "quality": "q3",
             "iLvl": 24,
-            "stats": "+5 Intellect, +6 Spirit, Equip: Increases healing done by up to 48 and damage done by up to 16 for all magical spells and effects., Equip: Movement speed increased by 2% in Elwynn Forest, Westfall, Redridge Mountains, and the Deadmines.",
+            "stats": "+5 Int, +11 Spi",
             "lines": [
               "Binds when picked up",
               "Two-Hand\tStaff",
@@ -7647,7 +7651,7 @@ const weaponsData = {
         "faction": "alliance",
         "quality": "q3",
         "iLvl": 24,
-        "stats": "+5 Intellect, +6 Spirit, Equip: Increases healing done by up to 48 and damage done by up to 16 for all magical spells and effects., Equip: Movement speed increased by 2% in Elwynn Forest, Westfall, Redridge Mountains, and the Deadmines.",
+        "stats": "+5 Int, +11 Spi",
         "lines": [
           "Binds when picked up",
           "Two-Hand\tStaff",
@@ -7698,7 +7702,7 @@ const weaponsData = {
             "quality": "q2",
             "iLvl": 31,
             "reqLevel": 26,
-            "stats": "155"
+            "stats": "+4 Intellect"
           },
           {
             "name": "Meteor Shard",
@@ -7711,7 +7715,7 @@ const weaponsData = {
             "quality": "q3",
             "iLvl": 28,
             "reqLevel": 23,
-            "stats": ""
+            "stats": "+3 Fire Resistance"
           },
           {
             "name": "Snapped Branch Wand",
@@ -8234,7 +8238,7 @@ const weaponsData = {
         "quality": "q3",
         "iLvl": 39,
         "reqLevel": 34,
-        "stats": "Strong stats carry through the late 30s"
+        "stats": "+10 Stamina, +6 Intellect, +7 Spirit, +14 Critical Strike Rating, +44 Spell Power"
       },
       {
         "levelBracket": "41–46",
@@ -8321,7 +8325,7 @@ const weaponsData = {
             "quality": "q2",
             "iLvl": 54,
             "reqLevel": 49,
-            "stats": "265"
+            "stats": ""
           },
           {
             "name": "Spire of the Stoneshaper",
@@ -8389,7 +8393,7 @@ const weaponsData = {
             "quality": "q2",
             "iLvl": 60,
             "reqLevel": 55,
-            "stats": "285"
+            "stats": ""
           },
           {
             "name": "Brilliant Wand",
@@ -8409,7 +8413,7 @@ const weaponsData = {
         "quality": "q3",
         "iLvl": 58,
         "reqLevel": 53,
-        "stats": "+Spell Power & Healing"
+        "stats": ""
       }
     ]
   },
@@ -8494,7 +8498,7 @@ const weaponsData = {
             "quality": "q1",
             "iLvl": 6,
             "reqLevel": 2,
-            "stats": "10"
+            "stats": ""
           }
         ],
         "faction": "both",
@@ -8535,7 +8539,7 @@ const weaponsData = {
         "quality": "q2",
         "iLvl": 15,
         "reqLevel": 5,
-        "stats": ""
+        "stats": "+1 Spell Power"
       },
       {
         "levelBracket": "7–8",
@@ -8573,7 +8577,7 @@ const weaponsData = {
             "quality": "q2",
             "iLvl": 15,
             "reqLevel": 5,
-            "stats": "10"
+            "stats": "+1 Spell Power"
           },
           {
             "name": "Riptear's Spare Arm",
@@ -8586,7 +8590,7 @@ const weaponsData = {
             "quality": "q2",
             "iLvl": 13,
             "reqLevel": 6,
-            "stats": "1.70s Wand"
+            "stats": ""
           },
           {
             "name": "Darkwood Staff",
@@ -8599,7 +8603,7 @@ const weaponsData = {
             "quality": "q2",
             "iLvl": 13,
             "reqLevel": 7,
-            "stats": ""
+            "stats": "+6 Spell Power"
           },
           {
             "name": "Wisesight Wand",
@@ -8682,7 +8686,7 @@ const weaponsData = {
             "quality": "q2",
             "iLvl": 16,
             "reqLevel": 9,
-            "stats": ""
+            "stats": "+1 Spell Power"
           },
           {
             "name": "Deepblaze",
@@ -8702,7 +8706,7 @@ const weaponsData = {
         "quality": "q2",
         "iLvl": 15,
         "reqLevel": 5,
-        "stats": ""
+        "stats": "+1 Spell Power"
       },
       {
         "levelBracket": "11–12",
@@ -8729,7 +8733,7 @@ const weaponsData = {
             "quality": "q2",
             "iLvl": 14,
             "reqLevel": 12,
-            "stats": ""
+            "stats": "+6 Spell Power"
           },
           {
             "name": "Pagan Rod",
@@ -8753,7 +8757,7 @@ const weaponsData = {
             "quality": "q2",
             "iLvl": 15,
             "reqLevel": 10,
-            "stats": ""
+            "stats": "+8 Spell Power"
           },
           {
             "name": "Cinder Wand",
@@ -8766,7 +8770,7 @@ const weaponsData = {
             "quality": "q2",
             "iLvl": 16,
             "reqLevel": 9,
-            "stats": ""
+            "stats": "+1 Spell Power"
           },
           {
             "name": "Spark of the People's Militia",
@@ -8779,14 +8783,14 @@ const weaponsData = {
             "quality": "q2",
             "iLvl": 17,
             "reqLevel": 9,
-            "stats": ""
+            "stats": "+1 Spell Power"
           }
         ],
         "faction": "both",
         "quality": "q2",
         "iLvl": 23,
         "reqLevel": 13,
-        "stats": ""
+        "stats": "+2 Spell Power"
       },
       {
         "levelBracket": "13–14",
@@ -8826,7 +8830,7 @@ const weaponsData = {
             "quality": "q2",
             "iLvl": 23,
             "reqLevel": 13,
-            "stats": "75"
+            "stats": "+2 Spell Power"
           },
           {
             "name": "Fang of Magmatus",
@@ -8997,7 +9001,7 @@ const weaponsData = {
             "weaponType": "Staff",
             "quality": "q3",
             "iLvl": 24,
-            "stats": "+5 Intellect, +6 Spirit, Equip: Increases healing done by up to 48 and damage done by up to 16 for all magical spells and effects., Equip: Movement speed increased by 2% in Elwynn Forest, Westfall, Redridge Mountains, and the Deadmines.",
+            "stats": "+5 Int, +11 Spi",
             "lines": [
               "Binds when picked up",
               "Two-Hand\tStaff",
@@ -9067,7 +9071,7 @@ const weaponsData = {
             "weaponType": "Staff",
             "quality": "q3",
             "iLvl": 24,
-            "stats": "+5 Intellect, +6 Spirit, Equip: Increases healing done by up to 48 and damage done by up to 16 for all magical spells and effects., Equip: Movement speed increased by 2% in Elwynn Forest, Westfall, Redridge Mountains, and the Deadmines.",
+            "stats": "+6 Spirit, +48 Healing, +16 Spell Damage",
             "lines": [
               "Binds when picked up",
               "Two-Hand\tStaff",
@@ -9158,7 +9162,7 @@ const weaponsData = {
             "quality": "q2",
             "iLvl": 31,
             "reqLevel": 26,
-            "stats": "155"
+            "stats": "+4 Intellect"
           },
           {
             "name": "Meteor Shard",
@@ -9171,7 +9175,7 @@ const weaponsData = {
             "quality": "q3",
             "iLvl": 28,
             "reqLevel": 23,
-            "stats": ""
+            "stats": "+3 Fire Resistance"
           },
           {
             "name": "Snapped Branch Wand",
@@ -9667,7 +9671,7 @@ const weaponsData = {
         "quality": "q3",
         "iLvl": 39,
         "reqLevel": 34,
-        "stats": "Outstanding caster stats carry through 40"
+        "stats": "+10 Stamina, +6 Intellect, +7 Spirit, +14 Critical Strike Rating, +44 Spell Power"
       },
       {
         "levelBracket": "41–46",
@@ -9754,7 +9758,7 @@ const weaponsData = {
             "quality": "q3",
             "iLvl": 53,
             "reqLevel": 48,
-            "stats": ""
+            "stats": "+14 Critical Strike Rating, +60 Spell Power"
           },
           {
             "name": "Lesser Eternal Wand",
@@ -9767,7 +9771,7 @@ const weaponsData = {
             "quality": "q2",
             "iLvl": 54,
             "reqLevel": 49,
-            "stats": "265"
+            "stats": ""
           }
         ],
         "faction": "both",
@@ -9837,7 +9841,7 @@ const weaponsData = {
             "quality": "q2",
             "iLvl": 60,
             "reqLevel": 55,
-            "stats": "285"
+            "stats": ""
           },
           {
             "name": "Brilliant Wand",
@@ -9857,7 +9861,7 @@ const weaponsData = {
         "quality": "q3",
         "iLvl": 52,
         "reqLevel": 50,
-        "stats": ""
+        "stats": "+19 Stamina, +16 Intellect, +10 Hit Rating, +73 Shadow Spell Power"
       }
     ]
   },
@@ -9970,7 +9974,7 @@ const weaponsData = {
         "quality": "q2",
         "iLvl": 15,
         "reqLevel": 5,
-        "stats": "25% extra damage"
+        "stats": "+1 Spell Power"
       },
       {
         "levelBracket": "7–8",
@@ -10008,7 +10012,7 @@ const weaponsData = {
             "quality": "q2",
             "iLvl": 15,
             "reqLevel": 5,
-            "stats": "10"
+            "stats": "+1 Spell Power"
           },
           {
             "name": "Riptear's Spare Arm",
@@ -10021,7 +10025,7 @@ const weaponsData = {
             "quality": "q2",
             "iLvl": 13,
             "reqLevel": 6,
-            "stats": "1.70s Wand"
+            "stats": ""
           },
           {
             "name": "Darkwood Staff",
@@ -10034,7 +10038,7 @@ const weaponsData = {
             "quality": "q2",
             "iLvl": 13,
             "reqLevel": 7,
-            "stats": ""
+            "stats": "+6 Spell Power"
           },
           {
             "name": "Wisesight Wand",
@@ -10117,7 +10121,7 @@ const weaponsData = {
             "quality": "q2",
             "iLvl": 16,
             "reqLevel": 9,
-            "stats": ""
+            "stats": "+1 Spell Power"
           },
           {
             "name": "Deepblaze",
@@ -10137,7 +10141,7 @@ const weaponsData = {
         "quality": "q2",
         "iLvl": 15,
         "reqLevel": 5,
-        "stats": "Enables high mana regeneration via the 5"
+        "stats": "+1 Spell Power"
       },
       {
         "levelBracket": "11–12",
@@ -10164,7 +10168,7 @@ const weaponsData = {
             "quality": "q2",
             "iLvl": 14,
             "reqLevel": 12,
-            "stats": ""
+            "stats": "+6 Spell Power"
           },
           {
             "name": "Pagan Rod",
@@ -10188,7 +10192,7 @@ const weaponsData = {
             "quality": "q2",
             "iLvl": 15,
             "reqLevel": 10,
-            "stats": ""
+            "stats": "+8 Spell Power"
           },
           {
             "name": "Cinder Wand",
@@ -10201,7 +10205,7 @@ const weaponsData = {
             "quality": "q2",
             "iLvl": 16,
             "reqLevel": 9,
-            "stats": ""
+            "stats": "+1 Spell Power"
           },
           {
             "name": "Spark of the People's Militia",
@@ -10214,14 +10218,14 @@ const weaponsData = {
             "quality": "q2",
             "iLvl": 17,
             "reqLevel": 9,
-            "stats": ""
+            "stats": "+1 Spell Power"
           }
         ],
         "faction": "both",
         "quality": "q2",
         "iLvl": 23,
         "reqLevel": 13,
-        "stats": ""
+        "stats": "+2 Spell Power"
       },
       {
         "levelBracket": "13–14",
@@ -10261,7 +10265,7 @@ const weaponsData = {
             "quality": "q2",
             "iLvl": 23,
             "reqLevel": 13,
-            "stats": "75"
+            "stats": "+2 Spell Power"
           },
           {
             "name": "Trogg Scepter",
@@ -10369,7 +10373,7 @@ const weaponsData = {
             "quality": "q3",
             "iLvl": 22,
             "reqLevel": 17,
-            "stats": ""
+            "stats": "+8 Stamina, +8 Fire Resistance, +24 Spell Power"
           },
           {
             "name": "Kris of Orgrimmar",
@@ -10441,7 +10445,7 @@ const weaponsData = {
             "weaponType": "Staff",
             "quality": "q3",
             "iLvl": 24,
-            "stats": "+5 Intellect, +6 Spirit, Equip: Increases healing done by up to 48 and damage done by up to 16 for all magical spells and effects., Equip: Movement speed increased by 2% in Elwynn Forest, Westfall, Redridge Mountains, and the Deadmines.",
+            "stats": "+5 Int, +11 Spi",
             "lines": [
               "Binds when picked up",
               "Two-Hand\tStaff",
@@ -10465,7 +10469,7 @@ const weaponsData = {
             "quality": "q3",
             "iLvl": 23,
             "reqLevel": 18,
-            "stats": ""
+            "stats": "+5 Spirit, +9 Nature Resistance, +45 Healing, +15 Spell Damage"
           },
           {
             "name": "Kris of Orgrimmar",
@@ -10577,7 +10581,7 @@ const weaponsData = {
         "faction": "alliance",
         "quality": "q3",
         "iLvl": 24,
-        "stats": "+5 Intellect, +6 Spirit, Equip: Increases healing done by up to 48 and damage done by up to 16 for all magical spells and effects., Equip: Movement speed increased by 2% in Elwynn Forest, Westfall, Redridge Mountains, and the Deadmines.",
+        "stats": "+5 Int, +11 Spi",
         "lines": [
           "Binds when picked up",
           "Two-Hand\tStaff",
@@ -10628,7 +10632,7 @@ const weaponsData = {
             "quality": "q2",
             "iLvl": 31,
             "reqLevel": 26,
-            "stats": "155"
+            "stats": "+4 Intellect"
           },
           {
             "name": "Snapped Branch Wand",
@@ -11134,7 +11138,7 @@ const weaponsData = {
         "quality": "q3",
         "iLvl": 39,
         "reqLevel": 34,
-        "stats": ""
+        "stats": "+10 Stamina, +6 Intellect, +7 Spirit, +14 Critical Strike Rating, +44 Spell Power"
       },
       {
         "levelBracket": "41–46",
@@ -11221,7 +11225,7 @@ const weaponsData = {
             "quality": "q2",
             "iLvl": 54,
             "reqLevel": 49,
-            "stats": "265"
+            "stats": ""
           },
           {
             "name": "Spire of the Stoneshaper",
@@ -11290,7 +11294,7 @@ const weaponsData = {
             "quality": "q2",
             "iLvl": 60,
             "reqLevel": 55,
-            "stats": "285"
+            "stats": ""
           },
           {
             "name": "Brilliant Wand",
@@ -11310,7 +11314,7 @@ const weaponsData = {
         "quality": "q3",
         "iLvl": 58,
         "reqLevel": 53,
-        "stats": "+Spell Power & Healing"
+        "stats": ""
       }
     ]
   },
@@ -11427,7 +11431,7 @@ const weaponsData = {
             "quality": "q1",
             "iLvl": 9,
             "reqLevel": 4,
-            "stats": "15"
+            "stats": ""
           },
           {
             "name": "Walking Stick",
@@ -11524,14 +11528,14 @@ const weaponsData = {
             "quality": "q2",
             "iLvl": 13,
             "reqLevel": 7,
-            "stats": ""
+            "stats": "+6 Spell Power"
           }
         ],
         "faction": "alliance",
         "quality": "q2",
         "iLvl": 10,
         "reqLevel": 4,
-        "stats": ""
+        "stats": "+2 Spell Power"
       },
       {
         "levelBracket": "9–10",
@@ -11591,7 +11595,7 @@ const weaponsData = {
             "quality": "q2",
             "iLvl": 15,
             "reqLevel": 10,
-            "stats": ""
+            "stats": "+8 Spell Power"
           },
           {
             "name": "Ironforge Greathammer",
@@ -11638,7 +11642,7 @@ const weaponsData = {
             "quality": "q2",
             "iLvl": 14,
             "reqLevel": 12,
-            "stats": ""
+            "stats": "+6 Spell Power"
           },
           {
             "name": "Trogg Scepter",
@@ -11693,7 +11697,7 @@ const weaponsData = {
         "quality": "q2",
         "iLvl": 16,
         "reqLevel": 11,
-        "stats": ""
+        "stats": "+4 Strength"
       },
       {
         "levelBracket": "13–14",
@@ -11746,7 +11750,7 @@ const weaponsData = {
             "quality": "q2",
             "iLvl": 14,
             "reqLevel": 12,
-            "stats": ""
+            "stats": "+6 Spell Power"
           },
           {
             "name": "Kris of Orgrimmar",
@@ -11917,7 +11921,7 @@ const weaponsData = {
             "weaponType": "Staff",
             "quality": "q3",
             "iLvl": 24,
-            "stats": "+5 Intellect, +6 Spirit, Equip: Increases healing done by up to 48 and damage done by up to 16 for all magical spells and effects., Equip: Movement speed increased by 2% in Elwynn Forest, Westfall, Redridge Mountains, and the Deadmines.",
+            "stats": "+6 Spirit, +48 Healing, +16 Spell Damage",
             "lines": [
               "Binds when picked up",
               "Two-Hand\tStaff",
@@ -11988,7 +11992,7 @@ const weaponsData = {
             "quality": "q2",
             "iLvl": 25,
             "reqLevel": 20,
-            "stats": "90"
+            "stats": "+6 Strength, +6 Stamina"
           },
           {
             "name": "Staff of Westfall",
@@ -12000,7 +12004,7 @@ const weaponsData = {
             "weaponType": "Staff",
             "quality": "q3",
             "iLvl": 24,
-            "stats": "+5 Intellect, +6 Spirit, Equip: Increases healing done by up to 48 and damage done by up to 16 for all magical spells and effects., Equip: Movement speed increased by 2% in Elwynn Forest, Westfall, Redridge Mountains, and the Deadmines.",
+            "stats": "+6 Spirit, +48 Healing, +16 Spell Damage",
             "lines": [
               "Binds when picked up",
               "Two-Hand\tStaff",
@@ -12704,7 +12708,7 @@ const weaponsData = {
             "quality": "q3",
             "iLvl": 48,
             "reqLevel": 40,
-            "stats": ""
+            "stats": "+9 Stamina, +23 Intellect, +54 Spell Power"
           },
           {
             "name": "Grisly Sack of Skulls",
@@ -12775,7 +12779,7 @@ const weaponsData = {
             "quality": "q3",
             "iLvl": 53,
             "reqLevel": 48,
-            "stats": ""
+            "stats": "+14 Critical Strike Rating, +60 Spell Power"
           },
           {
             "name": "Enchanted Battlehammer",
@@ -12788,7 +12792,7 @@ const weaponsData = {
             "quality": "q3",
             "iLvl": 56,
             "reqLevel": 51,
-            "stats": "280"
+            "stats": "+4 Arcane Resistance, +21 Parry Rating, +20 Hit Rating"
           }
         ],
         "faction": "both",
@@ -12857,11 +12861,10 @@ const weaponsData = {
   }
 };
 
-const outPath = path.join(ROOT, 'data', 'scraped', 'forever_weapons.json');
-fs.writeFileSync(outPath, JSON.stringify(weaponsData, null, 2), 'utf8');
+const outPath = path.join(ROOT, "data", "scraped", "forever_weapons.json");
+fs.writeFileSync(outPath, JSON.stringify(weaponsData, null, 2), "utf8");
 console.log(`[Generator] Wrote full 9-class weapon database to ${outPath}`);
 
-// Run compilation into class-progression-data.js
-import('./compile-progression-data.mjs').then(() => {
-  console.log('[Generator] Compiled into js/data/class-progression-data.js successfully.');
+import("./compile-progression-data.mjs").then(() => {
+  console.log("[Generator] Compiled into js/data/class-progression-data.js successfully.");
 });

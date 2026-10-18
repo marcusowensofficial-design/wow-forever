@@ -118,31 +118,95 @@
   }
 
   // Tooltip Helper Utilities for Weapon Progression
-  let bisLookupCache = null;
+  let weaponLookupCache = null;
 
-  function getBisItem(itemId, name) {
-    if (typeof window === 'undefined' || !window.WOW_BIS_DATA) return null;
-    if (!bisLookupCache) {
-      bisLookupCache = { byId: new Map(), byName: new Map() };
-      const classes = window.WOW_BIS_DATA.classes || [];
-      for (const cls of classes) {
-        const cd = window.WOW_BIS_DATA[cls.id];
-        if (!cd) continue;
-        for (const sp of cd.specs || []) {
-          for (const sl of sp.slots || []) {
-            for (const it of sl.items || []) {
-              if (it.itemId) bisLookupCache.byId.set(String(it.itemId), it);
-              if (it.name) bisLookupCache.byName.set(it.name.toLowerCase().trim(), it);
+  function isRealStatToken(tok) {
+    const s = String(tok ?? '').trim();
+    if (!s) return false;
+    if (/^(equip|use|chance on hit):/i.test(s)) return true;
+    if (/^[+-]\d+%?\s+(strength|agility|stamina|intellect|spirit|str|agi|sta|int|spi|spell power|sp|attack power|ap|healing|armor|crit|hit|defense|res|penetration|fire|frost|shadow|nature|arcane|holy|mana regeneration|health regeneration|spell damage|healing spells)/i.test(s)) return true;
+    if (/^\d+%?\s+(mp5|sp|ap|crit|hit|spell power|healing)/i.test(s)) return true;
+    if (/^(strength|agility|stamina|intellect|spirit|str|agi|sta|int|spi|spell power|sp|attack power|ap|defense|armor)\s+[+-]\d+/i.test(s)) return true;
+    if (/proc on hit|on hit/i.test(s) && /[+-]?\d+/.test(s)) return true;
+    return false;
+  }
+
+  function getProgressionOrBisItem(itemId, name) {
+    if (typeof window === 'undefined') return null;
+    if (!weaponLookupCache) {
+      weaponLookupCache = { byId: new Map(), byName: new Map() };
+
+      // 1. Populate from WOW_BIS_DATA
+      if (window.WOW_BIS_DATA) {
+        const classes = window.WOW_BIS_DATA.classes || [];
+        for (const cls of classes) {
+          const cd = window.WOW_BIS_DATA[cls.id];
+          if (!cd) continue;
+          for (const sp of cd.specs || []) {
+            for (const sl of sp.slots || []) {
+              for (const it of sl.items || []) {
+                if (it.itemId) {
+                  const ex = weaponLookupCache.byId.get(String(it.itemId));
+                  if (!ex || (!ex.lines && it.lines) || (!ex.stats && it.stats)) {
+                    weaponLookupCache.byId.set(String(it.itemId), it);
+                  }
+                }
+                if (it.name) {
+                  const k = it.name.toLowerCase().trim();
+                  const ex = weaponLookupCache.byName.get(k);
+                  if (!ex || (!ex.lines && it.lines) || (!ex.stats && it.stats)) {
+                    weaponLookupCache.byName.set(k, it);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      // 2. Populate from WOW_PROGRESSION_DATA.weapons
+      if (window.WOW_PROGRESSION_DATA?.weapons) {
+        for (const cKey of Object.keys(window.WOW_PROGRESSION_DATA.weapons)) {
+          const cData = window.WOW_PROGRESSION_DATA.weapons[cKey];
+          for (const step of cData.levels || []) {
+            if (step.itemId) {
+              const ex = weaponLookupCache.byId.get(String(step.itemId));
+              if (!ex || (!ex.lines && step.lines) || (!ex.stats && step.stats)) {
+                weaponLookupCache.byId.set(String(step.itemId), step);
+              }
+            }
+            if (step.name) {
+              const k = step.name.toLowerCase().trim();
+              const ex = weaponLookupCache.byName.get(k);
+              if (!ex || (!ex.lines && step.lines) || (!ex.stats && step.stats)) {
+                weaponLookupCache.byName.set(k, step);
+              }
+            }
+            for (const alt of step.alts || []) {
+              if (alt.itemId) {
+                const ex = weaponLookupCache.byId.get(String(alt.itemId));
+                if (!ex || (!ex.lines && alt.lines) || (!ex.stats && alt.stats)) {
+                  weaponLookupCache.byId.set(String(alt.itemId), alt);
+                }
+              }
+              if (alt.name) {
+                const k = alt.name.toLowerCase().trim();
+                const ex = weaponLookupCache.byName.get(k);
+                if (!ex || (!ex.lines && alt.lines) || (!ex.stats && alt.stats)) {
+                  weaponLookupCache.byName.set(k, alt);
+                }
+              }
             }
           }
         }
       }
     }
-    if (itemId && bisLookupCache.byId.has(String(itemId))) {
-      return bisLookupCache.byId.get(String(itemId));
+
+    if (itemId && weaponLookupCache.byId.has(String(itemId))) {
+      return weaponLookupCache.byId.get(String(itemId));
     }
-    if (name && bisLookupCache.byName.has(name.toLowerCase().trim())) {
-      return bisLookupCache.byName.get(name.toLowerCase().trim());
+    if (name && weaponLookupCache.byName.has(name.toLowerCase().trim())) {
+      return weaponLookupCache.byName.get(name.toLowerCase().trim());
     }
     return null;
   }
@@ -150,8 +214,9 @@
   function getWeaponSlotText(type) {
     const t = (type || '').toLowerCase();
     if (t.includes('two-hand') || t.includes('staff') || t.includes('polearm')) return 'Two-Hand';
-    if (t.includes('wand') || t.includes('bow') || t.includes('gun') || t.includes('crossbow')) return 'Ranged';
-    if (t.includes('dagger')) return 'Main Hand';
+    if (t.includes('wand') || t.includes('bow') || t.includes('gun') || t.includes('crossbow') || t.includes('ranged')) return 'Ranged';
+    if (t.includes('dagger') || t.includes('main hand')) return 'Main Hand';
+    if (t.includes('off hand') || t.includes('shield')) return 'Off Hand';
     return 'One-Hand';
   }
 
@@ -171,16 +236,8 @@
     if (/^(equip|use|chance on hit):/i.test(s)) {
       return `<div class="wow-tip-equip">${escapeHtml(s)}</div>`;
     }
-    const lower = s.toLowerCase();
-    if (lower.includes('spell power') || lower.includes('healing') || lower.includes('mp5') || lower.includes('hit') || lower.includes('crit') || lower.includes('attack power') || lower.includes('sp ')) {
-      let equipText = s;
-      if (!equipText.toLowerCase().startsWith('equip:')) {
-        if (equipText.startsWith('+')) {
-          equipText = `Equip: Increases ${equipText.substring(1)}.`;
-        } else {
-          equipText = `Equip: ${equipText}`;
-        }
-      }
+    if (/^\d+\s*mp5/i.test(s) || /mana regeneration/i.test(s)) {
+      const equipText = s.startsWith('Equip:') ? s : `Equip: +${s.replace(/^\+/, '')}`;
       return `<div class="wow-tip-equip">${escapeHtml(equipText)}</div>`;
     }
     return `<div class="wow-tip-stat" style="color: #fff;">${escapeHtml(s)}</div>`;
@@ -188,41 +245,51 @@
 
   function parseStatsTokens(statsStr, altValStr, detailStr) {
     if (statsStr) {
-      return statsStr.split(',').map(s => s.trim()).filter(Boolean);
+      const tokens = statsStr.split(/,(?=\s*(?:[+-]|\d+\s*(?:mp5|sp|ap|crit|hit)|equip|use|chance on hit|\b(?:strength|agility|stamina|intellect|spirit|str|agi|sta|int|spi)\b))/i)
+        .map(s => s.trim())
+        .filter(Boolean);
+      const valid = tokens.filter(isRealStatToken);
+      if (valid.length > 0) return valid;
     }
     const src = altValStr || detailStr || '';
     if (!src) return [];
     const paren = src.match(/\(([^)]+)\)/);
-    if (paren && /[+0-9]|\b(str|sta|agi|int|spi|sp|ap|crit|hit|healing|spell|defense|res|mp5)\b/i.test(paren[1])) {
-      return paren[1].split(',').map(s => s.trim()).filter(Boolean);
+    if (paren) {
+      const tokens = paren[1].split(/,(?=\s*(?:[+-]|\d+\s*(?:mp5|sp|ap|crit|hit)|equip|use|chance on hit|\b(?:strength|agility|stamina|intellect|spirit|str|agi|sta|int|spi)\b))/i)
+        .map(s => s.trim())
+        .filter(Boolean);
+      const valid = tokens.filter(isRealStatToken);
+      if (valid.length > 0) return valid;
     }
     const left = src.split(/\s*[-–—:]\s*/)[0] || '';
-    const tokens = left.split(',').map(s => s.trim());
-    return tokens.filter(t => !/dps$/i.test(t) && !/^\d+(\.\d+)?s$/i.test(t) && !/vendor/i.test(t) && /[+0-9]|\b(str|sta|agi|int|spi|sp|ap|mp5)\b/i.test(t));
+    const tokens = left.split(/,(?=\s*(?:[+-]|\d+\s*(?:mp5|sp|ap|crit|hit)|equip|use|chance on hit|\b(?:strength|agility|stamina|intellect|spirit|str|agi|sta|int|spi)\b))/i)
+      .map(s => s.trim())
+      .filter(Boolean);
+    return tokens.filter(isRealStatToken);
   }
 
   function renderWeaponTooltipHtml(target) {
     const name = target.getAttribute('data-item-name') || 'Weapon';
     const itemId = target.getAttribute('data-item-id') || '';
-    const quality = target.getAttribute('data-quality') || 'q2';
-    const ilvl = target.getAttribute('data-ilvl') || '';
-    const reqLevel = target.getAttribute('data-req-level') || '';
-    const weaponType = target.getAttribute('data-weapon-type') || 'Weapon';
-    const speed = target.getAttribute('data-speed') || '';
-    const dps = target.getAttribute('data-dps') || '';
-    const stats = target.getAttribute('data-stats') || '';
+    const fullItem = getProgressionOrBisItem(itemId, name);
+
+    const quality = target.getAttribute('data-quality') || fullItem?.quality || 'q2';
+    const ilvl = target.getAttribute('data-ilvl') || fullItem?.iLvl || fullItem?.ilvl || '';
+    const reqLevel = target.getAttribute('data-req-level') || fullItem?.reqLevel || '';
+    const weaponType = target.getAttribute('data-weapon-type') || fullItem?.weaponType || 'Weapon';
+    const speed = target.getAttribute('data-speed') || fullItem?.speed || '';
+    const dps = target.getAttribute('data-dps') || fullItem?.dps || '';
+    const stats = target.getAttribute('data-stats') || fullItem?.stats || '';
     const sourceTitle = target.getAttribute('data-source-title') || '';
     const sourceDetail = target.getAttribute('data-source-detail') || '';
     const altVal = target.getAttribute('data-alt-val') || '';
     const faction = target.getAttribute('data-faction') || 'both';
 
-    const fullItem = getBisItem(itemId, name);
-
     let html = '';
     const qualClass = fullItem?.quality || quality || 'q2';
     html += `<div class="wow-tip-name ${qualClass}">${escapeHtml(name)}</div>`;
 
-    const itemLevel = fullItem?.ilvl || ilvl;
+    const itemLevel = fullItem?.iLvl || fullItem?.ilvl || ilvl;
     if (itemLevel) {
       html += `<div class="wow-tip-ilvl">Item Level ${escapeHtml(itemLevel)}</div>`;
     }
@@ -234,7 +301,13 @@
         if (!trimmed || trimmed === name || trimmed.startsWith('Item Level')) return;
         if (trimmed.includes('\t')) {
           const [l, r] = trimmed.split('\t');
-          html += `<div class="wow-tip-type-row"><span>${escapeHtml(l)}</span><span>${escapeHtml(r)}</span></div>`;
+          if (trimmed.includes('Damage') || trimmed.includes('Speed')) {
+            html += `<div class="wow-tip-dmg-row"><span>${escapeHtml(l)}</span><span>${escapeHtml(r)}</span></div>`;
+          } else {
+            html += `<div class="wow-tip-type-row"><span>${escapeHtml(l)}</span><span>${escapeHtml(r)}</span></div>`;
+          }
+        } else if (trimmed.startsWith('(') && trimmed.endsWith(')') && trimmed.toLowerCase().includes('damage per second')) {
+          html += `<div class="wow-tip-dps">${escapeHtml(trimmed)}</div>`;
         } else if (trimmed.startsWith('Binds when')) {
           html += `<div class="wow-tip-bind">${escapeHtml(trimmed)}</div>`;
         } else if (trimmed.startsWith('Requires Level')) {
@@ -295,12 +368,15 @@
     }
 
     if (faction === 'alliance') {
-      html += `<div class="wow-tip-faction alliance" style="display: flex; align-items: center; gap: 0.35rem; color: #60a5fa; font-weight: 700; margin-top: 0.35rem;"><img src="https://render.worldofwarcraft.com/us/icons/56/achievement_pvp_a_a.jpg" width="14" height="14" style="border-radius: 2px;" alt="" /> Alliance Exclusive</div>`;
+      html += `<div class="wow-tip-faction alliance" style="display: flex; align-items: center; gap: 0.35rem; color: #60a5fa; font-weight: 700; margin-top: 0.35rem;"><img src="images/icons/faction-alliance.jpg" width="14" height="14" style="border-radius: 2px;" alt="" onerror="this.src='https://render.worldofwarcraft.com/us/icons/56/achievement_pvp_a_a.jpg'" /> Alliance Exclusive</div>`;
     } else if (faction === 'horde') {
-      html += `<div class="wow-tip-faction horde" style="display: flex; align-items: center; gap: 0.35rem; color: #f87171; font-weight: 700; margin-top: 0.35rem;"><img src="https://render.worldofwarcraft.com/us/icons/56/achievement_pvp_h_h.jpg" width="14" height="14" style="border-radius: 2px;" alt="" /> Horde Exclusive</div>`;
+      html += `<div class="wow-tip-faction horde" style="display: flex; align-items: center; gap: 0.35rem; color: #f87171; font-weight: 700; margin-top: 0.35rem;"><img src="images/icons/faction-horde.jpg" width="14" height="14" style="border-radius: 2px;" alt="" onerror="this.src='https://render.worldofwarcraft.com/us/icons/56/achievement_pvp_h_h.jpg'" /> Horde Exclusive</div>`;
     }
 
     let srcText = fullItem?.source || '';
+    if (typeof srcText === 'object' && srcText !== null) {
+      srcText = srcText.title ? `${srcText.title}${srcText.detail ? ' — ' + srcText.detail : ''}` : '';
+    }
     if (!srcText) {
       if (sourceTitle) {
         srcText = sourceTitle;
@@ -712,6 +788,7 @@
 
   // Master Subtab Dispatcher
   function renderProgressionSubtab(subtab, cData) {
+    hideWeaponTooltip();
     const classId = cData.id;
     if (subtab === 'spellbook') return renderSpellbook(classId);
     if (subtab === 'weapons') return renderWeapons(classId);
@@ -725,6 +802,7 @@
     // 1. Spellbook filters
     document.querySelectorAll('#spellbook-tier-chips .progression-chip').forEach(btn => {
       btn.addEventListener('click', () => {
+        hideWeaponTooltip();
         activeSpellFilterLevel = btn.getAttribute('data-tier');
         window.renderDeepDiveContent?.();
       });
@@ -733,6 +811,7 @@
     const spellSearchInput = document.getElementById('spellbook-search-input');
     if (spellSearchInput) {
       spellSearchInput.addEventListener('input', (e) => {
+        hideWeaponTooltip();
         activeSpellSearchQuery = e.target.value;
         window.renderDeepDiveContent?.();
       });
@@ -741,6 +820,7 @@
     const clearSpellSearch = document.getElementById('btn-clear-spell-search');
     if (clearSpellSearch) {
       clearSpellSearch.addEventListener('click', () => {
+        hideWeaponTooltip();
         activeSpellSearchQuery = '';
         window.renderDeepDiveContent?.();
       });
@@ -749,6 +829,7 @@
     // 2. Weapon controls (Faction filter & Track buttons)
     document.querySelectorAll('#weapon-faction-toggle .faction-chip').forEach(btn => {
       btn.addEventListener('click', () => {
+        hideWeaponTooltip();
         activeWeaponFaction = btn.getAttribute('data-faction') || 'all';
         window.renderDeepDiveContent?.();
       });
@@ -756,6 +837,7 @@
 
     document.querySelectorAll('.progression-track-btn').forEach(btn => {
       btn.addEventListener('click', () => {
+        hideWeaponTooltip();
         const track = btn.getAttribute('data-track');
         const cId = window.selectedDeepDiveClassId || 'hunter';
         activeWeaponTrack[cId] = track;
@@ -782,6 +864,7 @@
     // 3. Macro category filters & copy button
     document.querySelectorAll('#macro-category-chips .progression-chip').forEach(btn => {
       btn.addEventListener('click', () => {
+        hideWeaponTooltip();
         activeMacroCategory = btn.getAttribute('data-cat');
         window.renderDeepDiveContent?.();
       });
@@ -844,7 +927,8 @@
   // Export module
   window.WOW_DEEPDIVES_PROGRESSION = {
     renderProgressionSubtab,
-    setupEventListeners
+    setupEventListeners,
+    hideWeaponTooltip
   };
 
 })();
