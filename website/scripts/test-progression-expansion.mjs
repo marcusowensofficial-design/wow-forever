@@ -96,4 +96,51 @@ for (const cls of expectedClasses) {
 }
 console.log('✓ All 9 classes rendered all 4 progression subtabs with 100% valid HTML without undefined/NaN tokens');
 
+// 5. Test Kris of Orgrimmar in Priest, Shaman, Druid
+for (const cls of ['priest', 'shaman', 'druid']) {
+  const hasKris = progData.weapons[cls].levels.some(l => 
+    (l.alts || []).some(a => a.name === 'Kris of Orgrimmar') || l.name === 'Kris of Orgrimmar'
+  );
+  if (!hasKris) {
+    throw new Error(`Kris of Orgrimmar missing from ${cls} progression matrix!`);
+  }
+}
+console.log('✓ Kris of Orgrimmar successfully integrated in early brackets (13-20) for Priest, Shaman, and Druid');
+
+// 6. Test SM Quest Mirror Pairs (Sword of Omen, Sword of Serenity, Bonebiter)
+const warriorSM = progData.weapons.warrior.levels.find(l => l.levelBracket === '37–40');
+if (!warriorSM || !warriorSM.alts.some(a => a.name === 'Bonebiter') || !warriorSM.alts.some(a => a.name === 'Sword of Omen')) {
+  throw new Error('Warrior 37-40 bracket missing Bonebiter or Sword of Omen SM mirror pair!');
+}
+const rogueSM = progData.weapons.rogue.levels.find(l => l.levelBracket === '35–38');
+if (!rogueSM || !rogueSM.alts.some(a => a.name === 'Sword of Omen') || !rogueSM.alts.some(a => a.name === 'Sword of Serenity')) {
+  throw new Error('Rogue 35-38 bracket missing Sword of Omen or Sword of Serenity SM mirror pair!');
+}
+console.log('✓ Scarlet Monastery mirror pairs (Sword of Omen / Sword of Serenity / Bonebiter) verified');
+
+// 7. Test Horde Starter Quest Weapons in Brackets 1–12
+const hordeStarters = ["Riptear's Cleaver", "Riptear's Spare Arm", "Kolkar Bow", "Goblin Smasher", "Bonecracker", "Darkwood Staff", "Forsaken Shortsword", "Pristine Orcish Dagger", "Makeshift Stormcaller", "Thun'grim's Axe", "Axe of Orgrimmar"];
+let foundCount = 0;
+for (const cls of expectedClasses) {
+  progData.weapons[cls].levels.forEach(l => {
+    const nums = l.levelBracket.split('–').map(Number);
+    if (nums[0] <= 12) {
+      (l.alts || []).forEach(alt => {
+        if (hordeStarters.includes(alt.name)) foundCount++;
+      });
+    }
+  });
+}
+if (foundCount < 10) {
+  throw new Error(`Insufficient Horde starter quest weapons in brackets 1-12 (only found ${foundCount})`);
+}
+console.log(`✓ Verified ${foundCount} Horde starter quest weapon occurrences across brackets 1-12`);
+
+// 8. Test Faction Filter UI Markup
+const warriorHtml = mod.renderProgressionSubtab('weapons', { id: 'warrior', name: 'WARRIOR' });
+if (!warriorHtml.includes('id="weapon-faction-toggle"') || !warriorHtml.includes('data-faction="alliance"') || !warriorHtml.includes('data-faction="horde"')) {
+  throw new Error('Weapon progression UI missing faction filter toggle markup!');
+}
+console.log('✓ Weapon progression UI includes interactive Faction Filter toggle buttons');
+
 console.log('\n✓ ALL CLASS PROGRESSION INTEGRITY CHECKS PASSED PERFECTLY!\n');

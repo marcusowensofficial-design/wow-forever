@@ -699,7 +699,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             wowheadCalcUrl: "https://www.wowhead.com/forever/talent-calc/paladin/-05320033003101-",
             tagline: "Unshakable multi-target tanking with Reckoning banked weapon swings, Redoubt 20% block, Judgement of Fury ranged taunt, and block-based mana return.",
             statPriority: "Stamina > Armor > Shield Block > Strength > Intellect",
-            bestWeapon: "Arctic Buckler (BFD) / Commander's Crest + Outlaw Sabre",
+            bestWeapon: "Arctic Buckler (BFD) / Commander's Crest + Zealot Blade",
             talents: [
               { name: "Redoubt", points: "5/5", tree: "Protection (Tier 1)", desc: "Increases your chance to block attacks with a shield by 20% after being struck by a melee or ranged attack." },
               { name: "Precision", points: "3/3", tree: "Protection (Tier 2)", desc: "Increases your chance to hit with melee weapons and spells by 3%." },
@@ -720,7 +720,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             bisGear: [
               { slot: "Shield", item: "Arctic Buckler", source: "Blackfathom Deeps", stats: "620 Armor, 19 Block, +8 Sta" },
               { slot: "Shield (Alt)", item: "Commander's Crest", source: "Shadowfang Keep", stats: "542 Armor, 16 Block, +6 Str, +3 Sta" },
-              { slot: "One-Hand", item: "Outlaw Sabre", source: "Blackfathom Deeps Quest", stats: "+10 Agi, 21.8 DPS" },
+              { slot: "One-Hand", item: "Zealot Blade", source: "World Drop BoE", stats: "+4 Str, +5 Sta, 20.4 DPS" },
               { slot: "Relic / Libram", item: "Silver Hand Relic", source: "Ruins of Lordaeron", stats: "+8 Holy Strike Damage" },
               { slot: "Chest", item: "Ironspine's Ribcage", source: "Ruins of Lordaeron (Crypt)", stats: "+8 Str, +6 Sta" }
             ],

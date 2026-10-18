@@ -5542,6 +5542,109 @@ input:checked + .toggle-slider:before {
 }
 
 /* 2. Weapon Progression Styles */
+.weapon-controls-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.25rem;
+}
+
+.faction-filter-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.filter-toggle-label {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  font-weight: 600;
+}
+
+.faction-chip {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #cbd5e1;
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-sm, 4px);
+  font-size: 0.82rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: all 0.15s ease;
+}
+
+.faction-chip:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.faction-chip.active {
+  background: rgba(243, 192, 67, 0.2);
+  border-color: var(--border-gold, #f3c043);
+  color: var(--text-gold, #f3c043);
+  font-weight: 600;
+}
+
+.faction-chip.faction-alliance.active {
+  background: rgba(59, 130, 246, 0.22);
+  border-color: #3b82f6;
+  color: #60a5fa;
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.25);
+}
+
+.faction-chip.faction-horde.active {
+  background: rgba(239, 68, 68, 0.22);
+  border-color: #ef4444;
+  color: #f87171;
+  box-shadow: 0 0 10px rgba(239, 68, 68, 0.25);
+}
+
+.item-faction-badge {
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.1rem 0.45rem;
+  border-radius: 3px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.item-faction-badge.faction-alliance {
+  background: rgba(30, 58, 138, 0.4);
+  border: 1px solid rgba(59, 130, 246, 0.4);
+  color: #93c5fd;
+}
+
+.item-faction-badge.faction-horde {
+  background: rgba(127, 29, 29, 0.4);
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  color: #fca5a5;
+}
+
+.weapon-step-card.faction-alliance {
+  border-left: 3px solid #3b82f6;
+}
+
+.weapon-step-card.faction-horde {
+  border-left: 3px solid #ef4444;
+}
+
+.alt-tag.alt-faction-alliance {
+  border-color: rgba(59, 130, 246, 0.35);
+}
+
+.alt-tag.alt-faction-horde {
+  border-color: rgba(239, 68, 68, 0.35);
+}
+
 .progression-track-tabs {
   display: flex;
   align-items: center;

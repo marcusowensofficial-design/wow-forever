@@ -13,6 +13,7 @@
   let activeSpellFilterLevel = 'all';
   let activeSpellSearchQuery = '';
   let activeWeaponTrack = {};
+  let activeWeaponFaction = 'all'; // 'all' | 'alliance' | 'horde'
   let activeMacroCategory = 'all';
   let activeMacroSearchQuery = '';
 
@@ -129,6 +130,119 @@
 
     const currentTrack = activeWeaponTrack[classId] || data.tracks?.[0]?.id || 'primary';
 
+    // Build timeline items with faction awareness
+    let displayedCount = 0;
+    const stepCards = data.levels.map((step, idx) => {
+      let displayStep = { ...step };
+      let displayAlts = (step.alts || []).slice();
+
+      if (activeWeaponFaction !== 'all') {
+        const stepFaction = step.faction || 'both';
+        if (stepFaction !== 'both' && stepFaction !== activeWeaponFaction) {
+          // If primary does not match active faction, look for a matching alt to promote
+          const matchIdx = displayAlts.findIndex(a => (a.faction || 'both') === activeWeaponFaction);
+          if (matchIdx !== -1) {
+            const altMatch = displayAlts[matchIdx];
+            displayStep = {
+              ...step,
+              itemId: altMatch.itemId || null,
+              name: altMatch.name,
+              icon: altMatch.icon || step.icon,
+              weaponType: altMatch.weaponType || step.weaponType,
+              speed: altMatch.speed || step.speed,
+              dps: altMatch.dps || '',
+              source: altMatch.source || { kind: 'quest', title: altMatch.name, detail: altMatch.value || '' },
+              faction: altMatch.faction || activeWeaponFaction
+            };
+            displayAlts = displayAlts.filter((_, i) => i !== matchIdx);
+          } else {
+            return '';
+          }
+        }
+        // Filter alts to only show active faction or both
+        displayAlts = displayAlts.filter(alt => {
+          const f = alt.faction || 'both';
+          return f === 'both' || f === activeWeaponFaction;
+        });
+      }
+
+      displayedCount++;
+      const sourceKindClass = `source-${displayStep.source?.kind || 'drop'}`;
+      const wowheadUrl = displayStep.itemId ? `https://www.wowhead.com/forever/item=${displayStep.itemId}` : '#';
+      const primaryFaction = displayStep.faction || 'both';
+      const factionBadgeHtml = primaryFaction === 'alliance'
+        ? `<span class="item-faction-badge faction-alliance" title="Alliance Only">🦁 Alliance</span>`
+        : primaryFaction === 'horde'
+        ? `<span class="item-faction-badge faction-horde" title="Horde Only">⚔️ Horde</span>`
+        : '';
+
+      return `
+        <div class="weapon-step-card ${primaryFaction !== 'both' ? 'faction-' + primaryFaction : ''}">
+          <div class="weapon-step-bracket">
+            <span class="bracket-num">Lvl ${escapeHtml(displayStep.levelBracket)}</span>
+            <span class="step-seq">#${idx + 1}</span>
+          </div>
+
+          <div class="weapon-main-content">
+            <div class="weapon-item-hero">
+              <a href="${wowheadUrl}" target="_blank" rel="noopener noreferrer" class="weapon-icon-link">
+                <img src="${getIconUrl(displayStep.icon)}" alt="${escapeHtml(displayStep.name)}" class="weapon-icon" loading="lazy" />
+              </a>
+              <div class="weapon-item-info">
+                <div class="weapon-item-header">
+                  <a href="${wowheadUrl}" target="_blank" rel="noopener noreferrer" class="weapon-title-link">
+                    ${escapeHtml(displayStep.name)}
+                  </a>
+                  <span class="weapon-type-badge">${escapeHtml(displayStep.weaponType)}</span>
+                  ${factionBadgeHtml}
+                </div>
+                <div class="weapon-stats-row">
+                  ${displayStep.speed ? `<span class="stat-pill">Speed: ${escapeHtml(displayStep.speed)}</span>` : ''}
+                  ${displayStep.dps ? `<span class="stat-pill dps-pill">DPS: ${escapeHtml(displayStep.dps)}</span>` : ''}
+                </div>
+              </div>
+            </div>
+
+            <div class="weapon-source-block ${sourceKindClass}">
+              <span class="source-tag">${escapeHtml((displayStep.source?.kind || 'drop').toUpperCase())}</span>
+              <span class="source-title"><strong>${escapeHtml(displayStep.source?.title || 'Unknown Source')}</strong></span>
+              ${displayStep.source?.detail ? `<span class="source-detail">${escapeHtml(displayStep.source.detail)}</span>` : ''}
+            </div>
+
+            ${displayAlts && displayAlts.length > 0 ? `
+              <div class="weapon-alts-block">
+                <span class="alts-label">Alternative Upgrades:</span>
+                <div class="alts-tags">
+                  ${displayAlts.map(alt => {
+                    const altUrl = alt.itemId ? `https://www.wowhead.com/forever/item=${alt.itemId}` : null;
+                    const altFaction = alt.faction || 'both';
+                    const altBadge = altFaction === 'alliance'
+                      ? `<span class="item-faction-badge faction-alliance" title="Alliance Only">🦁</span>`
+                      : altFaction === 'horde'
+                      ? `<span class="item-faction-badge faction-horde" title="Horde Only">⚔️</span>`
+                      : '';
+                    return `
+                      <span class="alt-tag ${altFaction !== 'both' ? 'alt-faction-' + altFaction : ''}">
+                        ${altBadge}
+                        ${altUrl ? `
+                          <a href="${altUrl}" target="_blank" rel="noopener noreferrer" class="alt-link">
+                            ${escapeHtml(alt.name)}
+                          </a>
+                        ` : `
+                          <span class="alt-name">${escapeHtml(alt.name)}</span>
+                        `}
+                        ${alt.value ? `<span class="alt-val">(${escapeHtml(alt.value)})</span>` : ''}
+                      </span>
+                    `;
+                  }).join('')}
+                </div>
+              </div>
+            ` : ''}
+          </div>
+        </div>
+      `;
+    }).filter(Boolean).join('');
+
     return `
       <div class="progression-section-wrap">
         <div class="progression-header-banner">
@@ -136,84 +250,43 @@
             <h3><span>⚔️</span> Level 1 to 60 Weapon Upgrade Path</h3>
             <p>Optimal weapon progression every 2–4 levels: exact quest rewards, dungeon boss drops, vendor purchases, and craftable spikes.</p>
           </div>
-          <div class="progression-header-badge">${data.levels.length} Progression Steps</div>
+          <div class="progression-header-badge">${displayedCount} Progression Steps</div>
         </div>
 
-        ${data.tracks && data.tracks.length > 1 ? `
-          <div class="progression-track-tabs">
-            <span class="track-tab-label">Weapon Track:</span>
-            ${data.tracks.map(tr => `
-              <button type="button" class="progression-track-btn ${currentTrack === tr.id ? 'active' : ''}" data-track="${tr.id}">
-                ${escapeHtml(tr.name)}
-              </button>
-            `).join('')}
+        <!-- Controls Bar with Faction Filter & Track Selection -->
+        <div class="progression-controls-bar weapon-controls-bar">
+          <div class="faction-filter-toggle" id="weapon-faction-toggle">
+            <span class="filter-toggle-label">Faction:</span>
+            <button type="button" class="faction-chip ${activeWeaponFaction === 'all' ? 'active' : ''}" data-faction="all" aria-label="Show all weapons">
+              <span class="faction-icon">🌐</span> All
+            </button>
+            <button type="button" class="faction-chip faction-alliance ${activeWeaponFaction === 'alliance' ? 'active' : ''}" data-faction="alliance" aria-label="Filter to Alliance weapons">
+              <span class="faction-icon">🦁</span> Alliance
+            </button>
+            <button type="button" class="faction-chip faction-horde ${activeWeaponFaction === 'horde' ? 'active' : ''}" data-faction="horde" aria-label="Filter to Horde weapons">
+              <span class="faction-icon">⚔️</span> Horde
+            </button>
           </div>
-        ` : ''}
+
+          ${data.tracks && data.tracks.length > 1 ? `
+            <div class="progression-track-tabs">
+              <span class="track-tab-label">Track:</span>
+              ${data.tracks.map(tr => `
+                <button type="button" class="progression-track-btn ${currentTrack === tr.id ? 'active' : ''}" data-track="${tr.id}">
+                  ${escapeHtml(tr.name)}
+                </button>
+              `).join('')}
+            </div>
+          ` : ''}
+        </div>
 
         <!-- Weapon Timeline Grid -->
         <div class="weapon-timeline-container">
-          ${data.levels.map((step, idx) => {
-            const sourceKindClass = `source-${step.source?.kind || 'drop'}`;
-            const wowheadUrl = step.itemId ? `https://www.wowhead.com/forever/item=${step.itemId}` : '#';
-
-            return `
-              <div class="weapon-step-card">
-                <div class="weapon-step-bracket">
-                  <span class="bracket-num">Lvl ${escapeHtml(step.levelBracket)}</span>
-                  <span class="step-seq">#${idx + 1}</span>
-                </div>
-
-                <div class="weapon-main-content">
-                  <div class="weapon-item-hero">
-                    <a href="${wowheadUrl}" target="_blank" rel="noopener noreferrer" class="weapon-icon-link">
-                      <img src="${getIconUrl(step.icon)}" alt="${escapeHtml(step.name)}" class="weapon-icon" loading="lazy" />
-                    </a>
-                    <div class="weapon-item-info">
-                      <div class="weapon-item-header">
-                        <a href="${wowheadUrl}" target="_blank" rel="noopener noreferrer" class="weapon-title-link">
-                          ${escapeHtml(step.name)}
-                        </a>
-                        <span class="weapon-type-badge">${escapeHtml(step.weaponType)}</span>
-                      </div>
-                      <div class="weapon-stats-row">
-                        ${step.speed ? `<span class="stat-pill">Speed: ${escapeHtml(step.speed)}</span>` : ''}
-                        ${step.dps ? `<span class="stat-pill dps-pill">DPS: ${escapeHtml(step.dps)}</span>` : ''}
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="weapon-source-block ${sourceKindClass}">
-                    <span class="source-tag">${escapeHtml((step.source?.kind || 'drop').toUpperCase())}</span>
-                    <span class="source-title"><strong>${escapeHtml(step.source?.title || 'Unknown Source')}</strong></span>
-                    ${step.source?.detail ? `<span class="source-detail">${escapeHtml(step.source.detail)}</span>` : ''}
-                  </div>
-
-                  ${step.alts && step.alts.length > 0 ? `
-                    <div class="weapon-alts-block">
-                      <span class="alts-label">Alternative Upgrades:</span>
-                      <div class="alts-tags">
-                        ${step.alts.map(alt => {
-                          const altUrl = alt.itemId ? `https://www.wowhead.com/forever/item=${alt.itemId}` : null;
-                          return `
-                            <span class="alt-tag">
-                              ${altUrl ? `
-                                <a href="${altUrl}" target="_blank" rel="noopener noreferrer" class="alt-link">
-                                  ${escapeHtml(alt.name)}
-                                </a>
-                              ` : `
-                                <span class="alt-name">${escapeHtml(alt.name)}</span>
-                              `}
-                              ${alt.value ? `<span class="alt-val">(${escapeHtml(alt.value)})</span>` : ''}
-                            </span>
-                          `;
-                        }).join('')}
-                      </div>
-                    </div>
-                  ` : ''}
-                </div>
-              </div>
-            `;
-          }).join('')}
+          ${stepCards || `
+            <div class="progression-empty-state">
+              <p>No weapons found matching the selected faction filter.</p>
+            </div>
+          `}
         </div>
       </div>
     `;
@@ -378,7 +451,14 @@
       });
     }
 
-    // 2. Weapon track buttons
+    // 2. Weapon controls (Faction filter & Track buttons)
+    document.querySelectorAll('#weapon-faction-toggle .faction-chip').forEach(btn => {
+      btn.addEventListener('click', () => {
+        activeWeaponFaction = btn.getAttribute('data-faction') || 'all';
+        window.renderDeepDiveContent?.();
+      });
+    });
+
     document.querySelectorAll('.progression-track-btn').forEach(btn => {
       btn.addEventListener('click', () => {
         const track = btn.getAttribute('data-track');

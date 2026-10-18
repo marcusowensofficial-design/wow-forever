@@ -681,7 +681,7 @@
     "name": "City of Dalaran",
     "zone": "Alterac Mountains (Through Lordamere Lake Sewers)",
     "levelRange": "28–33",
-    "entrance": "Sewer pipe entrance beneath Dalaran purple dome in Alterac Mountains. Key required (Dalaran Sewer Key). Note: Members of the Horde are attacked on sight in Dalaran in the open world; the Sewer Key questline grants dungeon access only.",
+    "entrance": "Sewer pipe entrance beneath Dalaran purple dome in Alterac Mountains. Key required (Dalaran Sewer Key).",
     "bosses": [
       {
         "name": "Atrexis the Grave Knight",

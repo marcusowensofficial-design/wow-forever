@@ -570,7 +570,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             ],
             bisGear: [
               { slot: "Two-Hand Weapon", item: "Smite's Mighty Hammer", source: "Deadmines (Mr. Smite)", stats: "+11 Strength, 19.8 DPS" },
-              { slot: "Two-Hand (Horde)", item: "Axe of Orgrimmar (Rare Upgrade)", source: "Leaders of the Fang Quest", stats: "+9 Str, +3 Sta, 21.4 DPS" },
+              { slot: "Two-Hand (Horde)", item: "Axe of Orgrimmar (Rare Upgrade)", source: "Hidden Enemies Quest (RFC)", stats: "+9 Str, +3 Sta, 21.4 DPS" },
               { slot: "Shoulders", item: "Thane's Iron Pauldrons", source: "Hall of Thanes (Dungeon Boss)", stats: "+8 Str, +5 Sta, 114 Armor" },
               { slot: "Legs", item: "Chausses of Westfall", source: "Deadmines (Quest)", stats: "+11 Agi, +5 Sta, Mail" },
               { slot: "Chest", item: "Mutant Scale Breastplate", source: "Wailing Caverns", stats: "+9 Agi, +4 Sta" }

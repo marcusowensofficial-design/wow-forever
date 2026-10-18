@@ -578,7 +578,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           ],
           "bisGear": [
             { "slot": "Two-Hand Weapon", item: "Smite's Mighty Hammer", source: "Deadmines (Mr. Smite)", stats: "+11 Strength, 19.8 DPS" },
-            { "slot": "Two-Hand (Horde)", item: "Axe of Orgrimmar (Rare)", source: "Leaders of the Fang Quest", stats: "+9 Str, +3 Sta, 21.4 DPS" },
+            { "slot": "Two-Hand (Horde)", item: "Axe of Orgrimmar (Rare)", source: "Hidden Enemies Quest (RFC)", stats: "+9 Str, +3 Sta, 21.4 DPS" },
             { "slot": "Boots", item: "Thane's Mail Boots", source: "Hall of Thanes (Ironforge)", stats: "+6 Str, +5 Sta" },
             { "slot": "Gloves", item: "Cobrahn's Grasp", source: "Wailing Caverns", stats: "+6 Agi, +3 Sta" }
           ],

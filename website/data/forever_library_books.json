@@ -62,32 +62,6 @@
           "icon": "https://wow.zamimg.com/images/wow/icons/medium/inv_torch_lit.jpg"
         }
       ]
-    },
-    {
-      "threshold": 30,
-      "title": "Grand Bibliographer (Necklace Reward)",
-      "req": "30 Unique Books (Level 30+)",
-      "items": [
-        {
-          "name": "Tome-Studded Choker",
-          "slot": "Neck (iLvl 35)",
-          "stats": "+8 Stamina, +6 Intellect, +10 Spell Damage and Healing",
-          "icon": "https://wow.zamimg.com/images/wow/icons/medium/inv_jewelry_necklace_12.jpg"
-        }
-      ]
-    },
-    {
-      "threshold": 40,
-      "title": "Scholar of the First Realm (40/40 Completion)",
-      "req": "All 40 Unique Books",
-      "items": [
-        {
-          "name": "Lorekeeper's Binding",
-          "slot": "Unique Ring (iLvl 38)",
-          "stats": "+7 All Stats (+7 Str, +7 Agi, +7 Sta, +7 Int, +7 Spi)",
-          "icon": "https://wow.zamimg.com/images/wow/icons/medium/inv_jewelry_ring_35.jpg"
-        }
-      ]
     }
   ],
   "librarians": {
