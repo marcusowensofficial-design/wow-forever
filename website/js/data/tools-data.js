@@ -1056,44 +1056,132 @@ Attack speed determines the frequency of spell-casting pushback on opposing cast
       category: "Exploration & Secrets",
       source: "ForeverChanges.pro · Warcraft Tavern · Wowhead",
       icon: "https://render.worldofwarcraft.com/us/icons/56/inv_misc_book_12.jpg",
-      summary: "All 40 interactive ancient tomes hidden across Stormwind, Ironforge, Undercity, and Dalaran with milestone relic rewards.",
-      content: `### The Grand Library Questline & Milestone Achievements
-Scattered throughout the royal archives, secret crypts, and mage sanctuaries of Azeroth are **40 interactive ancient manuscripts**. Finding these tomes unlocks cumulative achievement milestones granting blue accessories.
+      summary: "All 40 interactive ancient tomes hidden across Azeroth's dungeons, ruins, and towers with milestone relic rewards for all classes.",
+      content: `### The Grand Library Questline & 40 Ancient Tomes
+In WoW Forever (Build 1.60.1), the ancient library book collection system is accessible to **all classes**. Scattered across the wilderness, crypts, and ruins of Azeroth are **40 interactive ancient tomes**. Collecting and turning these manuscripts in to your faction head librarian yields cumulative milestone rewards and blue dungeon-tier accessories.
 
-### Milestone Achievement Tiers & Rewards
+### Faction Librarians & Turn-In Locations
 
-| Milestone | Achievement Title | Guaranteed Reward | Item Stats |
-| **10 Books** | *Novice Archivist* | **Scholar's Sash** (Waist) | 28 Armor, +5 Int, +4 Spi, +6 Spell Dmg |
-| **20 Books** | *Keeper of the Tomes* | **Ancient Researcher's Band** (Ring) | +5 Stamina, +6 Intellect, +8 Spell Dmg |
-| **30 Books** | *Grand Bibliographer* | **Tome-Studded Choker** (Necklace) | +8 Stamina, +6 Intellect, +10 Spell Dmg |
-| **40 Books** | *Scholar of the First Realm* | **Lorekeeper's Binding** (Unique Ring) | **+7 All Stats** (+7 Str, Agi, Sta, Int, Spi) |
+• **Alliance Head Librarian:** **Garion Wendell** — Mage Quarter, Stormwind City (37.6, 80.8)
+• **Horde Head Librarian:** **Owen Thadd** — Magic Quarter, Undercity (73.4, 33.0)
 
 ---
 
-### Phase 2 Accessible Books by Region
+### Milestone Reward Tiers
 
-#### Region 1: Stormwind Royal Archives (10 Books)
-• **Book 1 — The Rise of the Defias:** Royal Library (\`75.2, 28.4\`) on the top mahogany shelf behind Master Mathias Shaw's emissary.
-• **Book 2 — Foundations of the Kingdom:** Cathedral of Light crypts (\`40.1, 26.8\`) behind Bishop Farthing.
-• **Book 3 — The First War Chronicles:** SI:7 Headquarters (\`77.6, 59.2\`) inside the locked desk drawer.
-• **Book 4 — Arcane Principles of Medivh:** Mage Quarter Tower (\`45.4, 88.0\`) on the spiraling ascending ramp.
+| Books Required | Milestone Title | Level Req | Item Rewards | Item Stats |
+|---|---|---|---|---|
+| **10 Books** | *Friend of the Library (Necklace Choice)* | 10 Unique Books | **Scholarly Pendant** (Neck (iLvl 23)) *or* **Erudite's Amulet** (Neck (iLvl 23)) | +3 Stamina, +2 Spirit *or* +2 Agility, +3 Stamina |
+| **20 Books** | *Greater Friend of the Library (Ring Choice)* | 20 Unique Books (Level 20+) | **Philanthropist's Ring** (Finger (iLvl 35)) *or* **Field Researcher's Loop** (Finger (iLvl 35)) | +5 Intellect, Equip: +10 Spell Damage and Healing *or* +7 Agility, +7 Stamina |
+| **25 Books** | *Master Scholar of Azeroth (Weapon Choice)* | 25 Unique Books (Level 30+ / Req Lvl 40) | **Truthseeker's Bow** (Ranged Bow (iLvl 45)) *or* **Crest of Elucidation** (Off-Hand Shield (iLvl 45)) *or* **Researcher's Night Light** (Off-Hand (iLvl 45)) | 23.8 DPS, +7 Agility, +3 Stamina (Req Level 40) *or* +12 Spirit, +11 Healing, +4 Spell Damage (Req Level 40) *or* +12 Stamina, +7 Fire Spell Damage (Req Level 40) |
+| **30 Books** | *Grand Bibliographer (Necklace Reward)* | 30 Unique Books (Level 30+) | **Tome-Studded Choker** (Neck (iLvl 35)) | +8 Stamina, +6 Intellect, +10 Spell Damage and Healing |
+| **40 Books** | *Scholar of the First Realm (40/40 Completion)* | All 40 Unique Books | **Lorekeeper's Binding** (Unique Ring (iLvl 38)) | +7 All Stats (+7 Str, +7 Agi, +7 Sta, +7 Int, +7 Spi) |
 
-#### Region 2: Ironforge Hall of Explorers (10 Books)
-• **Book 5 — Titan Foundations of Khaz Modan:** Hall of Explorers museum wing (\`72.4, 12.8\`) beneath the iron titan foot display.
-• **Book 6 — The War of the Three Hammers:** High Seat (\`40.0, 52.2\`) right of King Magni's throne.
-• **Book 7 — Ironband's Geological Compendium:** Tinkertown workshop (\`68.0, 50.4\`).
+---
 
-#### Region 3: Undercity Royal & Magic Quarters (10 Books)
-• **Book 8 — Forbidden Kirin Tor Necromancy:** Apothecarium lower laboratory (\`48.2, 69.4\`) beside Chief Plaguebringer Middleton.
-• **Book 9 — Fall of the Menethil Dynasty:** Royal Quarter throne platform (\`56.4, 91.8\`) behind Lady Sylvanas Windrunner.
-• **Book 10 — Shadow Weaving in Lordaeron:** Magic Quarter shadow sanctum (\`84.2, 18.0\`).
+### All 40 Ancient Tome Locations (Grouped by Discovery Zone)
 
-#### Region 4: Dalaran Dome & Contested Frontiers (10 Books)
-• **Book 11 — The Kirin Tor Schism:** Dalaran Underbelly sewer intake (\`52.1, 44.6\`).
-• **Book 12 — Tablets of Archeus:** Whelgar's Excavation Site, Wetlands (\`34.8, 47.2\`) inside the archaeological tent.
-• **Book 13 — Scythe of Elune Legend:** Twilight Grove, Duskwood (\`45.6, 45.0\`) beneath the corrupted world tree roots.
+#### Elwynn Forest (1 Book)
+• **Archmage Theocritus' Research Journal**: \\\`65.4, 70.1 (Tower of Azora)\\\` — Research notes from the Tower of Azora.
 
-💡 **Pro-Tip:** Target macros like \`/target Ancient Tome\` or \`/target Moldering Manuscript\` do not highlight static world game-objects. Enable **Interact Key** in Interface Options -> Controls to loot books through walls!`
+#### Ironforge (1 Book)
+• **Archmage Antonidas: The Unabridged Autobiography**: \\\`75.7, 10.5 (Hall of Explorers)\\\` — Somewhat self-indulgent autobiography. Horde players can loot it too.
+
+#### Westfall (1 Book)
+• **Bewitchments and Glamours**: \\\`45.4, 70.4 (Moonbrook Schoolhouse)\\\` — Spells for manipulation and deception.
+
+#### Westfall / Loch Modan (1 Book)
+• **Rumi of Gnomeregan: The Collected Works**: \\\`52.7, 53.8 (Sentinel Hill) or 35.6, 48.9\\\` — The writings of a notable Gnome mage.
+
+#### Duskwood (2 Books)
+• **Crimes Against Anatomy**: \\\`16.6, 28.5 (Darkened Bank Catacombs)\\\` — Written by Doctor Krastinov inside the catacomb end room.
+• **Legends of the Gurubashi**: \\\`78.4, 34.6 (Beggar's Haunt)\\\` — Chronicles of the ancient Jungle Troll empire and the avatar of Hakkar.
+
+#### Loch Modan (2 Books)
+• **Runes of the Sorcerer-Kings**: \\\`77.4, 14.0 (Mo'grosh Stronghold)\\\` — A relic of the mighty ogre empires of Draenor.
+• **The Founding of Ironforge**: \\\`46.2, 13.8 (Algaz Gate Library)\\\` — Architectural blueprints and clan pacts from the construction of Ironforge.
+
+#### Wetlands (1 Book)
+• **Goaz Scrolls**: \\\`33.6, 47.9 (Whelgar's Excavation Site)\\\` — Written in lost Titan script.
+
+#### Silverpine Forest (2 Books)
+• **The Dalaran Digest, Vol. 23**: \\\`63.5, 63.1 (Ambermill)\\\` — Arcane research of the Kirin Tor.
+• **The Scourge of Lordaeron**: \\\`43.8, 40.2 (Pyrewood Village Town Hall)\\\` — Eyewitness testimonies from the fall of Stratholme and the plague grain.
+
+#### Tirisfal Glades (1 Book)
+• **The Apothecary's Metaphysical Primer**: \\\`59.4, 52.3 (Brill Gallows)\\\` — Notes on arcane theory by Archmage Rotwick.
+
+#### Darkshore (2 Books)
+• **Nar'thalas Almanac, Vol. 74**: \\\`59.8, 22.3 (Ruins of Mathystra)\\\` — Arcane research of the ancient quel'dorei.
+• **War of the Ancients: The Well of Eternity**: \\\`37.2, 43.6 (Ruins of Mathystra)\\\` — Highborne scrolls describing the Burning Legion's first invasion ten thousand years ago.
+
+#### The Barrens (3 Books)
+• **Arcanic Systems Manual**: \\\`56.3, 8.8 (The Sludge Fen)\\\` — Poorly-organized troubleshooting tips for goblin technology.
+• **Baxtan: On Destructive Magics**: \\\`62.7, 36.3 (Ratchet)\\\` — The writings of a notable Goblin mage.
+• **Secrets of the Dreamers**: \\\`46.0, 36.5 (Lushwater Oasis / Cavern of Mists)\\\` — Observations on the Emerald Dream inside the Wailing Caverns cave.
+
+#### Stonetalon Mountains (2 Books)
+• **Fury of the Land**: \\\`74.4, 85.7 (Grimtotem Post)\\\` — Closely guarded shamanistic secrets of the Grimtotem clan.
+• **Rise of the Horde**: \\\`48.6, 61.2 (Sun Rock Retreat)\\\` — Firsthand orc accounts of the crossing through the Dark Portal.
+
+#### Orgrimmar (1 Book)
+• **The Lessons of Ta'zo**: \\\`38.7, 78.4 (Valley of Spirits Mural)\\\` — Etchings written by a great Troll mage.
+
+#### Stranglethorn Vale (1 Book)
+• **Basilisks: Should Petrification be Feared?**: \\\`41.4, 50.9 (Crystalvein Mine platform)\\\` — Research notes on basilisk reagents outside the mine mouth.
+
+#### Thousand Needles (2 Books)
+• **Geomancy: The Stone-Cold Truth**: \\\`34.4, 40.1 (Darkcloud Pinnacle hut)\\\` — Theories on the origin and usage of elemental magic.
+• **The Scepter of the Shifting Sands**: \\\`28.4, 76.2 (Mirage Raceway)\\\` — Bronze Dragonflight lore detailing the seal placed upon Ahn'Qiraj.
+
+#### Alterac Mountains (1 Book)
+• **Defensive Magics 101**: \\\`48.4, 57.6 (Gallows' Corner Tower)\\\` — Introductory guide to defensive barriers inside the ogre fortress tower.
+
+#### Dustwallow Marsh (1 Book)
+• **RwlRwlRwlRwl!**: \\\`57.2, 20.8 (Witch Hill murloc camp)\\\` — Waterlogged book on the ground at the eastern edge of the murloc camp.
+
+#### Arathi Highlands (1 Book)
+• **A Web of Lies: Debunking Myths and Legends**: \\\`73.6, 65.2 (Witherbark Village)\\\` — An incomplete thesis claiming spiders are harmless.
+
+#### Desolace (1 Book)
+• **Demons and You**: \\\`55.1, 26.2 (Thunder Axe Fortress)\\\` — Inside the large building on a bench against the wall.
+
+#### Badlands (1 Book)
+• **Mummies: A Guide to the Unsavory Undead**: \\\`56.7, 39.9 (Mirage Flats)\\\` — Tales frightening enough to scare hardy warriors.
+
+#### Swamp of Sorrows (2 Books)
+• **Sanguine Sorcery**: \\\`70.0, 51.0 (Pool of Tears / Sunken Temple roof)\\\` — Outlines powerful blood rituals on top of the Sunken Temple exterior.
+• **The Sunken Temple of Atal'Hakkar**: \\\`67.2, 48.4 (Sunken Temple Outer Balcony)\\\` — Warnings of the Green Dragonflight wardens containing Hakkar's nightmare.
+
+#### Tanaris (1 Book)
+• **Legends of the Tidesages**: \\\`72.7, 47.8 (Lost Rigger Cove)\\\` — Covered in notes scrawled by an unsteady hand.
+
+#### Burning Steppes (1 Book)
+• **Stonewrought Design**: \\\`29.0, 28.9 (Blackrock Mountain Tomb)\\\` — On the altar of Franclorn Forgewright's tomb in Blackrock Mountain.
+
+#### Felwood (1 Book)
+• **Northern Kalimdor - A Comprehensive Guide**: \\\`65.2, 3.3 (Timbermaw Hold Tunnel)\\\` — In the tunnel between Felwood and Winterspring.
+
+#### Western Plaguelands (1 Book)
+• **Necromancy 101**: \\\`69.4, 72.8 (Caer Darrow Scholomance keep)\\\` — On a table in the ruined keep of Caer Darrow outside the dungeon.
+
+#### Eastern Plaguelands (2 Books)
+• **A Study of the Light**: \\\`71.8, 48.2 (Light's Hope Chapel)\\\` — Teachings of the Light inside the chapel building.
+• **The Knight and the Lady**: \\\`54.4, 51.1 (Corin's Crossing)\\\` — In a small house by the lake.
+
+#### Winterspring (1 Book)
+• **Ka-Boom!**: \\\`60.7, 37.7 (Everlook Alchemy shop)\\\` — On a shelf behind the alchemy supplier in Everlook.
+
+#### Hillsbrad Foothills (1 Book)
+• **The Seven Kingdoms**: \\\`51.2, 58.6 (Southshore Town Hall)\\\` — Political history and diplomatic accords of Arathor's successor states.
+
+#### Ashenvale (1 Book)
+• **The Old Gods and the Ordering of Azeroth**: \\\`74.2, 60.8 (Forest Song Ruins)\\\` — Titan archives detailing the imprisonment of C'Thun and Yogg-Saron.
+
+#### Zephras Isle (1 Book)
+• **The World Tree and the Emerald Dream**: \\\`42.6, 58.2 (Windweaver Sanctum)\\\` — Sacred druidic tome gifted to the early Skyborne by the Green Flight.
+
+💡 **Pro-Tip:** Target macros like \\\`/target Ancient Tome\\\` do not target static world game-objects. Enable **Interact Key** in *Game Menu -> Options -> Controls -> Enable Interact Key* to easily highlight and loot books through terrain and bookshelf corners!`
     },
     {
       id: "guide-duel-tournament",
@@ -2586,6 +2674,333 @@ Because spell travel time exists in WoW Forever, casting an instant spell immedi
 ### 4. Phase 2 Mana & Consumable Engine
 • Always conjure **Mana Agate** (Restores 280–420 mana on use) before pulling.
 • Stack **Tier 2 Silk Tent Rested XP** and consume *Cooked Crab Claws* (+8 Spirit) to maximize passive mana regeneration between Blizzard sweeps.`
+    },
+    {
+      id: "guide-level30-druid",
+      title: "Druid Level 30 Guide: Feral Shifting Power, Bear Meatshield & Moonkin Burst",
+      category: "Classes & Specs",
+      source: "ForeverChanges.pro · Wowhead · Build 1.60.1.70425 Forensics",
+      icon: "https://render.worldofwarcraft.com/us/icons/56/classicon_druid.jpg",
+      summary: "Master the Level 30 Druid: smooth energy regen, Shifting Power keystone burst, Bear crit-rage scaling, Moonkin shatter armor, and Level 30 Pre-BiS.",
+      content: `### Master of the Wild at Level 30
+In WoW Forever, Level 30 brings monumental architectural modernization for Druids across Feral, Balance, and Restoration. With the permanent removal of rigid 2.0s energy ticks, the introduction of the **Shifting Power** keystone, and complete disarm immunity, Druids are premier dungeon tanks and versatile burst threats.
+
+### Core Build 1.60.1.70425 Innovations
+
+• **Smooth Energy Regeneration:** Cat Form energy now regenerates in a smooth, continuous flow rather than discrete 2-second ticks, providing fluid combat rhythm.
+• **Shifting Power (Feral Tier 3 Keystone):** In Cat Form, instantly converts 55% base mana into 40 Energy on a 45s cooldown. Provides immense sustained DPS during boss burn windows.
+• **100% Disarm Immunity:** All shapeshift forms (Cat, Bear, Dire Bear, Travel, Aquatic, Moonkin) are completely immune to Disarm mechanics.
+• **Baseline Quality of Life:**
+  - **Omen of Clarity:** Learned at Level 20 directly from trainers (costs 0 mana; Clearcasting is not consumed by zero-cost spells).
+  - **Nature's Grasp:** Learned at Level 10 baseline and usable reactively in all forms.
+  - **Revive:** Standard out-of-combat resurrection spell, permanently solving 5-man dungeon wipes.
+• **Faerie Fire (Feral):** Instant ranged armor reduction usable directly in form without resetting your melee swing timer.
+
+---
+
+### Level 30 Specialization Geometry (21 Talent Points)
+
+#### 1. Feral Cat DPS (0/21/0) · Bleed & Energy Engine
+• **Point Distribution:** 5/5 *Ferocity*, 5/5 *Feral Aggression*, 3/3 *Sharpened Claws*, 1/1 *Shifting Power*, 2/2 *Blood Frenzy*, 3/3 *Predatory Strikes*, 1/1 *Faerie Fire (Feral)*, 1/1 *Feral Charge*.
+• **Rotation & Priority:**
+  - **Opener:** Prowl -> Ravage / Shred from behind (Forms are 100% immune to Disarm).
+  - **Debuff:** Apply Faerie Fire (Feral) on pull without clipping swing timer -> Rake bleed.
+  - **Energy Engine:** Claw to 4–5 Combo Points. When energy dips below 20, trigger **Shifting Power** to gain +40 Energy immediately.
+  - **Finisher:** Ferocious Bite with maximum Attack Power scaling from Predatory Strikes.
+
+#### 2. Feral Bear Tank (0/21/0) · The Unstoppable Meatshield
+• **Mechanics:** Auto-attack crits generate **+75% Rage**; Swipe scales with **3% total AP**; Growl cooldown reduced to 8s.
+• **Defense-to-Armor Conversion:** Every point of Defense rating above defense cap converts directly into bonus Armor, multiplied by Dire Bear Form factor.
+
+#### 3. Balance Moonkin (21/0/0) · Nature & Arcane Weaver
+• **Moonkin Form:** Grants +306% armor, +3% spell crit to all party members, and allows casting Innervate/Gift of the Wild without leaving form.
+• **Keystones:** 5/5 *Moonglow* (-9% mana cost on Wrath & Starfire), 1/1 *Nature's Grace* (-0.5s casting time on spell crits).
+
+#### 4. Restoration (0/0/21) · Smart Triage
+• **Key Talents:** 1/1 *Swiftmend* (Tier 4), 1/1 *Wild Growth* (smart party HoT), 1/1 *Gift of the Earthmother* (reduces Rejuvenation & Swiftmend GCD by 0.5s down to 1.0s).
+
+---
+
+### Level 30 Pre-BiS Gearing Matrix
+
+| Slot | Best-in-Slot Item | Source | Key Stats |
+|---|---|---|---|
+| **Two-Hand Weapon** | **Manual Crowd Pummeler** | Gnomeregan (Crowd Pummeler 9-60) | 31.5 DPS, 3-charge +50% Attack Speed burst |
+| **Two-Hand (Alt)** | **Excavator's Heavy Mallet** | Excavation Site 4 (Wetlands) | 28.4 DPS, +12 Str, +6 Sta |
+| **Chest** | **Excavator's Tunic** | Excavation Site 4 (Foreman) | 168 Armor, +10 Agi, +8 Sta, +4 Str |
+| **Legs** | **Triprunner Dungarees** | Gnomeregan Quest (*The Grand Betrayal*) | 132 Armor, +18 Agi, +2 Str |
+| **Belt** | **Prowler's Leather Belt** | Camping Tanning Rack Craft (Skill 150) | 88 Armor, +8 Agi, +6 Sta, +1% Crit |
+| **One-Hand (Resto)** | **Gavel of the Crystal Lake** | Excavation Site 4 | 22.0 DPS, +14 Healing Power, +6 Int |
+| **Two-Hand (Boomkin)** | **Rod of the Sleepwalker** | Blackfathom Deeps (Twilight Lord Kelris) | +11 Spell Damage, +7 Int, +5 Spi |
+
+---
+
+### Essential Shifting & Power Macro
+
+\`\`\`lua
+#showtooltip Cat Form
+/cast [nostance:3] Cat Form
+/cast [form:3] Shifting Power
+\`\`\`
+
+💡 **Form Weaving Tip:** Furor retains 40 Energy when shifting into Cat Form. Pair this with *Shifting Power* to instantly dump 80 Energy into two rapid Shreds or Bites within 1.5 seconds!`
+    },
+    {
+      id: "guide-darkspear-islands-pvp",
+      title: "Darkspear Islands 15v15 Battleground Guide: Base Warfare & Decayless Honor",
+      category: "PvP & Tournaments",
+      source: "wowforeverguides.com · ForeverChanges.pro · Wowhead",
+      icon: "https://render.worldofwarcraft.com/us/icons/56/achievement_zone_dustwallowmarsh.jpg",
+      summary: "Master the new 15v15 coastal battleground in the Level 30 queue: 4 capture bases, central Idol carrying mechanics, coastal artillery guns, and decayless Rank 14 progression.",
+      content: `### The Premier 15v15 Battleground of WoW Forever
+**Darkspear Islands** is the flagship 15v15 objective-based battleground in WoW Forever. Situated in the tropical archipelago off the coast of Dustwallow Marsh and the Barrens, it pits the **Darkspear Raiders** (Horde) directly against the **Theramore Expeditionary Force** (Alliance) in a high-octane battle for 2,000 victory resources.
+
+### Battlefield Geography & 4 Coastal Strongholds
+
+Darkspear Islands features 4 fortress bases arranged in a diamond perimeter around a sunken coral sandbar:
+
+| Stronghold Base | Geographical Position | Tactical Role |
+|---|---|---|
+| **Ruins of Bal'lal** | Northwest Island | Open ruined ziggurat with wide line-of-sight for ranged casters |
+| **Spire of the Loa** | Northeast High Bluff | Elevated overlook controlling the eastern shipping lanes |
+| **Darkspear Hold** | Southwest Beachhead | Primary Horde landing dock with fortified stockade walls |
+| **Theramore Overlook** | Southeast Bastion | Primary Alliance forward outpost commanding southern artillery |
+
+#### Resource Accumulation Dynamics
+Resource points tick every 3 seconds based on total bases firmly controlled:
+• **1 Base Controlled:** +5 Resources per tick (~12 min to win)
+• **2 Bases Controlled:** +10 Resources per tick (~6 min to win)
+• **3 Bases Controlled:** +20 Resources per tick (~3 min to win)
+• **4 Bases Controlled (Dominance):** +40 Resources per tick (~90s to victory!)
+
+---
+
+### The Central Relic: Idol of the Wild Gods (+200 Instant Points)
+
+Every 3 minutes, the **Idol of the Wild Gods** manifests on the center sandbar between the islets:
+• **Weight of the Loa:** Picking up the Idol grants your character the *Carrying the Loa* aura, reducing movement speed by **15%** and increasing damage taken by **10%** (stacking every 30 seconds).
+• **Capture Delivery:** Delivering the Idol to any **fully captured friendly stronghold flag** awards **+200 Instant Victory Points** and grants all friendly players on the map a 45-second *Tidal Vigor* buff (+5% haste).
+• **Carrier Protection Protocol:** Feral Druids (immune to disarm and able to shift snares), Protection Paladins with Blessing of Freedom, and Mages with Ice Block make elite escort escorts.
+
+---
+
+### Controllable Coastal Artillery Batteries
+
+On the battlements of **Theramore Overlook** and **Darkspear Hold**, players can mount heavy brass shore cannons:
+• **Artillery Shells:** 45-yard trajectory range; deals **400–600 AoE physical damage** and knocks down charging enemy waves for 2 seconds (10s firing cooldown).
+• **Counter-Battery Tactic:** Rogues in Stealth and Cat Druids in Prowl can slip behind enemy battery parapets to assassinate gunners before team pushes.
+
+---
+
+### Faction Reputations & Level 30 PvP Rewards
+
+Participating in Darkspear Islands earns reputation with **Darkspear Raiders** (Horde) or **Theramore Expeditionary Force** (Alliance):
+
+| Reputation Standing | Required Points | Signature Level 30 Reward |
+|---|---|---|
+| **Friendly** | 3,000 Rep | **Darkspear / Theramore Soldier's Cloak** (+6 Stamina, +4 Agility/Intellect) |
+| **Honored** | 6,000 Rep | **Signet of the Reef Strider** (Ring: +7 Strength, +7 Stamina) *or* **Band of the Island Skirmisher** (+7 Agi, +7 Sta) |
+| **Revered** | 12,000 Rep | **Talisman of Tidal Wrath** (Trinket: +12 Spell Power, Use: Restores 300 Mana) |
+| **Exalted** | 21,000 Rep | **Faction Crested Battle-Tabard** + Level 30 Rare PvP Weapon Blueprint |
+
+---
+
+### The Decayless 14-Rank Seasonal Honor Track
+
+WoW Forever completely abolishes the unhealthy 18-hour-a-day bracket stacking and weekly rank decay of vanilla WoW:
+• **Milestone Progression:** Reaching Rank 1 (*Scout / Private*) through Rank 14 (*High Warlord / Grand Marshal*) is an objective seasonal progression track. Honor earned is banked permanently until you reach the next rank threshold.
+• **Phase 2 Cap (Level 30):** In Phase 2, players can reach up to **Rank 5 (First Sergeant / Master Sergeant)**, unlocking 12-slot PvP battle bags and +10 Stamina rare cloaks without losing a single point on weekly resets!`
+    },
+    {
+      id: "guide-camping-crafting-stations",
+      title: "Camping Crafting Stations: Tanning Rack, Spinning Wheel & 122 Outdoor Recipes",
+      category: "Economy & Professions",
+      source: "data/forever_camping_recipes.json · core-data.js · ForeverChanges.pro",
+      icon: "https://render.worldofwarcraft.com/us/icons/56/inv_misc_pelt_wolf_01.jpg",
+      summary: "Definitive field guide to deployable profession stations: 122 outdoor-locked Leatherworking and Tailoring recipes, rare dungeon blueprints, group party buffs, and Pristine Leather farming.",
+      content: `### The Revolution of Wilderness Crafting
+In WoW Forever, crafting is no longer confined to capital city anvils and looms. With the Phase 2 update to the Camping tradeskill, **122 signature high-tier recipes CANNOT be crafted indoors or inside major cities**. They strictly require deploying portable, physical field stations beside an outdoor player campfire!
+
+### 1. The Tanning Rack (Leatherworking Station)
+
+• **Profession Requirement:** Leatherworking (Skill 140+).
+• **Blueprint Source:** Rare drop from **Razorclaw the Butcher** in Shadowfang Keep (~1 in 900 drop rate).
+• **Deployment Reagents:** 5x Medium Leather, 3x Fine Thread, 2x Simple Wood.
+• **Field Duration:** Lasts **15 minutes** in the world (Replaces standard Camp Tent; grants standard tent rest bonuses + 1-hour cooldown).
+• **Exclusive Party Aura:** While deployed, all party members within 30 yards gain **+8% Physical Damage Reduction**!
+
+#### Top Tanning Rack Signature Recipes (48 Total)
+
+| Recipe Name | Skill Req | Key Reagents | Item Specification |
+|---|---|---|---|
+| **Defender's Leather Kilt** | Skill 125 | 12x Med Leather, 4x Cured Med Hide, 8x Pristine Leather, 8x Elixir of Minor Fortitude | 108 Armor, +8 Stamina, +6 Strength |
+| **Totemic Leather Leggings** | Skill 125 | 12x Med Leather, 4x Cured Med Hide, 8x Pristine Leather, 8x Sulfuric Acid | 108 Armor, +7 Int, +5 Spi, +6 Nature Spell Dmg |
+| **Brawler's Leather Legguards** | Skill 125 | 12x Med Leather, 4x Cured Med Hide, 8x Pristine Leather, 8x Shadowgem | 108 Armor, +8 Agility, +5 Stamina |
+| **Trapper's Leather Legguards** | Skill 125 | 12x Med Leather, 4x Cured Med Hide, 8x Pristine Leather, 8x Deviate Scale | 108 Armor, +6 Agi, +6 Sta, +4 Spirit |
+| **Prowler's Leather Belt** | Skill 150 | 8x Heavy Leather, 2x Cured Med Hide, 1x Jade | 82 Armor, +7 Agi, +5 Sta, +1% Melee Crit |
+| **Wolfshead Helm (Rework)** | Skill 165 | 18x Thick Leather, 2x Thick Wolfhide, 4x Heavy Thread | Reworked for smooth energy: Shifting restores 40 Energy and 15 Rage! |
+
+---
+
+### 2. The Field Spinning Wheel (Tailoring Station)
+
+• **Profession Requirement:** Tailoring (Skill 140+).
+• **Blueprint Source:** Dropped by **Unstable Sentinel** in City of Dalaran dungeon.
+• **Deployment Reagents:** 5x Bolt of Silk Cloth, 3x Fine Thread, 2x Simple Wood.
+• **Field Duration:** Lasts **15 minutes** (Replaces Faction Banner; grants standard rest bonuses + 1-hour cooldown).
+• **Exclusive Party Aura:** While deployed, all party members within 30 yards gain **+8% Spirit and +200% accelerated Rested XP gain**!
+
+#### Top Spinning Wheel Signature Recipes (74 Total)
+
+| Recipe Name | Skill Req | Key Reagents | Item Specification |
+|---|---|---|---|
+| **Pristine Leggings** | Skill 125 | 14x Bolt of Silk, 8x Cerulean Dye, 8x Pristine Leather, 2x Silver Bar, 3x Greater Astral Essence | 62 Armor, +9 Intellect, +7 Stamina, +11 Spell Power |
+| **Silky Leggings** | Skill 125 | 14x Bolt of Silk, 8x Cerulean Dye, 8x Spider's Silk, 2x Silver Bar, 3x Greater Astral Essence | 62 Armor, +10 Healing Power, +8 Spirit, +4 Int |
+| **Flame Leggings** | Skill 125 | 14x Bolt of Silk, 8x Cerulean Dye, 8x Fire Oil, 2x Silver Bar, 3x Greater Astral Essence | 62 Armor, +14 Fire Spell Damage, +5 Int |
+| **Gilded Slippers** | Skill 140 | 8x Bolt of Mageweave, 4x Heavy Silken Thread, 2x Magenta Dye, 2x Gold Bar | 48 Armor, +8 Int, +6 Sta, +7 Spell Power |
+| **Gilded Handwraps** | Skill 165 | 12x Bolt of Mageweave, 4x Heavy Silken Thread, 2x Magenta Dye, 4x Gold Bar | 42 Armor, +7 Int, +5 Sta, +9 Spell Power |
+| **Gilded Cord** | Skill 190 | 28x Bolt of Mageweave, 6x Magenta Dye, 4x Cerulean Dye, 12x Gold Bar | 52 Armor, +11 Int, +8 Sta, +12 Spell Power |
+| **Nethergeld Shoulders** | Skill 195 | 16x Bolt of Mageweave, 4x Magenta Dye, 8x Gold Bar, 2x Greater Nether Essence | 58 Armor, +10 Int, +7 Spi, +14 Spell Power |
+
+---
+
+### 3. Pristine Leather Harvest Mechanics
+
+Notice that many of the most powerful Tanning Rack and Spinning Wheel recipes require **Pristine Leather**:
+• **The Harvesting Rule:** Pristine Leather drops exclusively from beasts between **Levels 10 and 25** outside starter zones when skinned by a skinner who is **Level 25 or below**.
+• **Top Farming Spots:**
+  - *Mudrock Crocolisks & Snapjaws* in Wetlands (\`55.0, 68.0\`).
+  - *Ghostpaw Alphas & Stags* in Ashenvale (\`42.0, 60.0\`).
+  - *Savannah Patriarchs & Thunderhawks* in The Barrens (\`46.0, 50.0\`).
+• **Economic Value:** On the Auction House, a single Pristine Leather commands 35–50 silver due to constant demand from Level 30 BiS crafters!`
+    },
+    {
+      id: "guide-zephras-isle-zone",
+      title: "Zephras Isle Field Manual: Skyborne Starting Realm & Airship Transit",
+      category: "Leveling & Quests",
+      source: "core-data.js · Wowhead · Blizzplanet",
+      icon: "https://render.worldofwarcraft.com/us/icons/56/ability_hunter_pet_moth.jpg",
+      summary: "Master the Level 1–12 Skyborne starting experience in Skywall: floating settlement hubs, updraft thermal gliding, class trainers, and scheduled skyboat connections to Dalaran and Thunder Bluff.",
+      content: `### The Skywall Realm: Starting Realm of the Skyborne
+**Zephras Isle** is the breathtaking starting zone (Levels 1–12) for the **Skyborne** race in WoW Forever. Suspended in the upper atmospheric boundaries of Skywall high above Kalimdor, Zephras Isle features crystalline architecture, bioluminescent flora, and aerial navigation mechanics never before seen in Classic.
+
+### Unique Environmental Mechanic: Updraft Thermal Gliding
+
+Throughout the floating plateaus of Zephras Isle, natural elemental vents channel vertical updrafts:
+• **Launching Vents:** Stepping into an active cyan updraft launches your character high into the sky, granting a 12-second directional glide buff.
+• **Zero Fall Damage:** While traversing between the floating islands of Zephras Isle, fall damage is completely disabled—missed jumps catch updraft safety cushions that deposit you back onto the nearest ledge.
+• **Racial Synergy:** Skyborne characters utilize their active racial **Gale Step / Walk on Air** for 10-second directional boosts to access hidden treasure chests atop wind spires.
+
+---
+
+### Settlement Hubs & Leveling Flow (1–12)
+
+The quest flow follows a streamlined U-shaped path across the archipelagos:
+
+#### 1. Thendall Village (Levels 1–6)
+• **Arrival:** Awaken in the Celestial Nursery. Complete basic weapon training and unlock your two active racials (*Read Leyline* and *Gale Step*).
+• **Key Quest:** *An Echo in the Wind* — Attune with the Ancient Sky Conduit (\`48.2, 72.4\`) to receive your first 6-slot bag and racial crest.
+
+#### 2. Shen'dar Village (Levels 6–10)
+• **Settlement:** The agricultural and beast-training capital of the lower isles.
+• **Trainers:** Apprentice gathering and production trainers (Herbalism, Skinning, Mining, Alchemy, Tailoring, Leatherworking).
+• **Key Quest:** *The Great Outdoors* — Introduction to the secondary Camping tradeskill. Craft your first Lean-to shelter and learn to pitch rest areas.
+
+#### 3. Valanaar, Citadel of the Skies (Levels 10–12)
+• **The Capital:** Grand floating citadel housing the Skyborne High Council, Journeyman profession trainers, bank, and class trainers.
+• **Faction Alignment:** At Level 10, players complete the *Two Paths Above the Clouds* ceremony, selecting allegiance with **The High Order** (Alliance-aligned) or **The Windshapers** (Horde-aligned).
+• **Mount Vendor:** Stablemaster Kaelis teaches apprentice riding and sells the majestic *Galestrider* ground mounts.
+
+---
+
+### Scheduled Skyboat Flight Network (5-Minute Cadence)
+
+To travel between Zephras Isle and the surface continents of Azeroth, two massive arcane airships run scheduled passenger routes every 5 minutes:
+
+| Faction / Route | Zephras Isle Terminal | Continental Destination | Transit Notes |
+|---|---|---|---|
+| **Alliance (High Order)** | **Valanaar East Skyport** (\`65.9, 83.5\`) | **Dalaran North Dock** (\`12.5, 51.8\`, Hillsbrad/Alterac border) | Direct aerial connection to the Eastern Kingdoms and Dalaran perimeter |
+| **Horde (Windshapers)** | **Valanaar West Skyport** (\`57.9, 80.9\`) | **Thunder Bluff Skywatcher Plateau** (\`34.3, 25.8\`, Mulgore) | Direct landing pad beside the Great Lift in central Kalimdor |
+
+💡 **Pro-Tip:** If you miss an airship boarding gate, speak with **Skywarden Elidyr** at the Valanaar central landing. For 10 copper, he summons an elemental gust that launches you directly onto the departing skyboat's deck!`
+    },
+    {
+      id: "guide-dungeon-quests-master-tour",
+      title: "Master Dungeon Quest Tour (Levels 13–30): Pre-Quests & Single-Run Routing",
+      category: "Leveling & Quests",
+      source: "data/forever_dungeons.json · ForeverChanges.pro · Wowhead",
+      icon: "https://render.worldofwarcraft.com/us/icons/56/spell_holy_prayerofshadowprotection.jpg",
+      summary: "Complete quest directory, prerequisites, and single-run routing for all 12 Phase 2 dungeons. Maximize leveling speed following the Phase 2 dungeon mob XP rebalance.",
+      content: `### The Single-Run Questing Meta in WoW Forever
+In Phase 2 Beta of WoW Forever, grinding dungeon mobs repeatedly for experience was reduced by ~50% raw mob XP. In its place, Blizzard significantly increased dungeon quest turn-in experience and item rewards. 
+
+**The result is clear:** The most mathematically efficient leveling strategy is to gather every single quest for a dungeon beforehand, execute a single clean full-clear run, and turn in all quests at once!
+
+---
+
+### Master Dungeon Directory & Pre-Quest Map (Levels 13–30)
+
+#### 1. Ragefire Chasm (Levels 13–18) · Orgrimmar Chasm
+• **Quests (5 Total):** *Testing an Enemy's Strength* (Rahauro, Thunder Bluff), *Searching for the Lost Sack* (Durotar), *Hidden Enemies* (Thrall, Orgrimmar), *Slaying the Beast* (Neeru Fireblade), *The Power to Destroy* (Varimathras, Undercity).
+• **Single-Run Yield:** ~7,400 XP + *Girdle of the Beast* (Mail Belt).
+
+#### 2. Hall of Thanes (Levels 13–18) · Ironforge Mountain Vaults (NEW)
+• **Location:** Secret gateway carved into the Ironforge southern mountain wall (4 Bosses).
+• **Quests (4 Total):** *The Iron Thane's Mandate* (High Seat, Ironforge), *Excavation Troubles* (Hall of Explorers), *Relics of the First Dwarves*, *Culling the Dark Stone*.
+• **Single-Run Yield:** ~8,200 XP + *Thane's Heavy Battle-Plate* (iLvl 22).
+
+#### 3. Ruins of Lordaeron (Levels 15–20) · Tirisfal Crypts (NEW)
+• **Location:** Catacombs beneath the broken royal throne room of Lordaeron (7 Bosses).
+• **Quests (5 Total):** *Apothecary's Retribution* (Apothecarium, Undercity), *Echoes of the Fall* (Brill), *Purging the Royal Chambers*, *The Scourge Infiltration*.
+• **Single-Run Yield:** ~9,800 XP + *Lordaeron Royal Signet* (Ring: +4 Str, +4 Sta).
+
+#### 4. Wailing Caverns (Levels 17–24) · Northern Barrens
+• **Quests (6 Total):** *Leaders of the Fang* (Nara Wildmane, Thunder Bluff), *Deviate Hides* (Crossroads), *Smart Drinks* (Ratchet), *The Glowing Shard* (Turn-in at top of mountain eye).
+• **Single-Run Yield:** ~12,400 XP + *Leggings of the Fang* (BiS Agility legs).
+
+#### 5. The Deadmines (Levels 17–26) · Moonbrook, Westfall
+• **Quests (5 Total):** *The Defias Brotherhood* (Long chain starting in Sentinel Hill), *Red Silk Bandanas*, *Underground Assault* (Dwarf district), *The Unsent Letter* (Drops from VanCleef).
+• **Single-Run Yield:** ~14,200 XP + *Chausses of Westfall* / *Tunic of Westfall*.
+
+#### 6. Shadowfang Keep (Levels 22–30) · Silverpine Forest
+• **Quests (4 Total):** *Arugal Must Die* (Deth'ryll Terrace), *The Book of Ur* (Undercity Magic Quarter), *Deathstalkers in Shadowfang*.
+• **Bonus:** **Razorclaw the Butcher** drops the rare blueprint for the **Camping Tanning Rack** (~1:900).
+
+#### 7. Blackfathom Deeps (Levels 24–32) · Zoram Strand, Ashenvale
+• **Quests (6 Total):** *Researching the Corruption* (Auberdine / Sun Rock Retreat), *Blackfathom Villainy* (Bashana Runetotem), *Twilight Falls*, *The Essence of Aku'mai*.
+• **Single-Run Yield:** ~15,600 XP + *Rod of the Sleepwalker* / *Tortoise Armor*.
+
+#### 8. The Stockade (Levels 24–32) · Stormwind Canal
+• **Quests (6 Total):** *Quell The Uprising*, *The Color of Blood*, *Crime and Punishment*, *What Comes Around...* (All available in Stormwind City).
+• **Single-Run Yield:** ~13,500 XP + *Ironspine Ring*.
+
+#### 9. Excavation Site: Wetlands (Levels 26–31) · Dun Modr Outskirts (NEW)
+• **Location:** Deep Titan archaeological delve in northeastern Wetlands (4 Bosses).
+• **Quests (4 Total):** *Dark Iron Sabotage* (Dun Modr), *Titan Energy Cells* (Whelgar's Camp), *Foreman's Treachery*, *Recovering the Titan Keystone*.
+• **Single-Run Yield:** ~16,800 XP + *Excavator's Heavy Mallet* / *Heavehammer*.
+
+#### 10. City of Dalaran: Underbelly (Levels 28–33) · Violet Enclave (NEW)
+• **Location:** Underbelly sewer complex and hospital quarantine wing below Dalaran dome (6 Bosses).
+• **Quests (5 Total):** *Investigating the Shield* (Ambermill / Southshore), *Contaminated Leyline Residue*, *The Arcane Anomalies*, *The Violet Warden's Seal*.
+• **Single-Run Yield:** ~18,500 XP + *Dalaran Caretaker Robes* / *Kirin Tor Battle-Blade*.
+
+#### 11. Gnomeregan (Levels 28–30) · Dun Morogh
+• **Quests:** *The Grand Betrayal* (Cleanse Thermaplugg), *Data Rescue*, *Essential Artificials*.
+• **Must-Have Drops:** **Triprunner Dungarees** (+18 Agi, +2 Str) and **Manual Crowd Pummeler** (Feral Druid / Ret Paladin BiS weapon).
+
+#### 12. Razorfen Kraul (Levels 28–30) · Southern Barrens
+• **Quests (4 Total):** *Blueleaf Tubers* (Ratchet), *Going, Going, Guano* (Thousand Needles), *A Vengeful Fate* (Auld Stonespire).
+• **Key Drops:** **Corpsemaker** (Level 29 2H Axe: 28.9 DPS) and **Heart of Agamaggan**.
+
+---
+
+### Step-by-Step Level 25–30 Speedrun Itinerary
+
+1. **Level 25:** Clear Shadowfang Keep (SFK) and turn in all 4 Silverpine/Undercity quests.
+2. **Level 26–27:** Grab all 6 BFD quests in Ashenvale; run Blackfathom Deeps in a single clean sweep.
+3. **Level 28:** Complete Gnomeregan for *Triprunner Dungarees* and *Manual Crowd Pummeler*.
+4. **Level 29:** Clear Excavation Site 4 in Wetlands for weapons and high-armor pre-BiS.
+5. **Level 30:** Tackle City of Dalaran (Underbelly) for top-tier caster and melee dungeon loot!`
     }
   ]
 };

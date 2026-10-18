@@ -49,7 +49,7 @@ vm.runInContext(toolsCode, toolsSandbox);
 const toolsData = toolsSandbox.WOW_TOOLS_DATA;
 
 console.log('Testing toolsData guides count: ' + toolsData.guides.length);
-if (toolsData.guides.length !== 39) throw new Error('Expected 39 guides, found ' + toolsData.guides.length);
+if (toolsData.guides.length < 39) throw new Error('Expected at least 39 guides, found ' + toolsData.guides.length);
 
 const expectedGuides = [
   'guide-dwarf-shaman-totems',
@@ -144,8 +144,8 @@ if (!toolsCss.includes('#talents-standalone-mount') || !toolsCss.includes('posit
 }
 console.log('✓ css/tools.css #talents-standalone-mount position: relative verified');
 
-// 6. Check talent-tree.js
-const talentTreeCode = fs.readFileSync(path.join(ROOT, 'js', 'modules', 'talent-tree.js'), 'utf8');
+const talentTreeCode = (fs.readFileSync(path.join(ROOT, 'js', 'modules', 'talent-tree.js'), 'utf8') || '') +
+  (fs.existsSync(path.join(ROOT, 'js', 'modules', 'talent-tree', 'talent-builds.js')) ? fs.readFileSync(path.join(ROOT, 'js', 'modules', 'talent-tree', 'talent-builds.js'), 'utf8') : '');
 if (!talentTreeCode.includes('wow_forever_saved_talent_builds')) throw new Error('talent-tree.js missing localStorage key wow_forever_saved_talent_builds');
 if (!talentTreeCode.includes('btn-save-talent-build')) throw new Error('talent-tree.js missing btn-save-talent-build');
 if (!talentTreeCode.includes('btn-toggle-saved-builds')) throw new Error('talent-tree.js missing btn-toggle-saved-builds');

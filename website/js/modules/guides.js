@@ -319,6 +319,8 @@ function getClassSlugFromGuide(guideId) {
     'guide-hunter-pets': 'hunter',
     'guide-druid-forms': 'druid',
     'guide-druid-snake-form': 'druid',
+    'guide-level30-druid': 'druid',
+    'guide-class-druid': 'druid',
     'guide-battle-mage': 'mage',
     'guide-dwarf-shaman-totems': 'shaman',
     'guide-mage-comprehension-scrolls': 'mage',
