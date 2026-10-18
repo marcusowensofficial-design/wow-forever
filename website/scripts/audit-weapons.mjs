@@ -18,16 +18,21 @@ let errors = 0;
 
 for (const [cls, cData] of Object.entries(d)) {
   cData.levels.forEach(lvl => {
-    // Audit alts
-    (lvl.alts || []).forEach(alt => {
-      const aName = alt.name.toLowerCase();
-      const aVal = (alt.value || '').toLowerCase();
+    const itemsToCheck = [
+      { name: lvl.name, value: `${lvl.weaponType || ''} ${lvl.source?.detail || ''}`, isPrimary: true },
+      ...(lvl.alts || []).map(alt => ({ name: alt.name, value: alt.value || '', isPrimary: false }))
+    ];
+
+    itemsToCheck.forEach(item => {
+      const aName = item.name.toLowerCase();
+      const aVal = (item.value || '').toLowerCase();
+      const label = item.isPrimary ? `primary "${item.name}"` : `alt "${item.name}"`;
 
       // Hunter ranged track must be ranged weapon
       if (cls === 'hunter') {
         const isRanged = knownRangedNames.some(rn => aName.includes(rn) || rn.includes(aName)) || aVal.includes('bow') || aVal.includes('gun') || aVal.includes('crossbow') || aVal.includes('rifle') || aVal.includes('blaster') || aVal.includes('repeater') || aVal.includes('shotgun') || aVal.includes('boomstick');
         if (!isRanged) {
-          console.log(`FAIL: Hunter alt "${alt.name}" is not a ranged weapon!`);
+          console.log(`FAIL: Hunter ${label} is not a ranged weapon!`);
           errors++;
         }
       }
@@ -38,7 +43,7 @@ for (const [cls, cData] of Object.entries(d)) {
         const is2H = aVal.includes('2h') || aVal.includes('two-hand');
         const isStaff = knownStaffNames.some(sn => aName === sn) || aVal.includes('staff');
         if (isAxe || is2H || isStaff) {
-          console.log(`FAIL: Rogue cannot equip "${alt.name}"!`);
+          console.log(`FAIL: Rogue cannot equip ${label}!`);
           errors++;
         }
       }
@@ -48,7 +53,7 @@ for (const [cls, cData] of Object.entries(d)) {
         const isMace = knownMaceNames.some(mn => aName === mn) || aVal.includes('mace') || aVal.includes('hammer') || aVal.includes('maul');
         const isAxe = knownAxeNames.some(an => aName === an) || aVal.includes('axe');
         if (isMace || isAxe) {
-          console.log(`FAIL: ${cls} cannot equip mace/axe "${alt.name}"!`);
+          console.log(`FAIL: ${cls} cannot equip mace/axe ${label}!`);
           errors++;
         }
       }
@@ -59,7 +64,7 @@ for (const [cls, cData] of Object.entries(d)) {
         const isAxe = knownAxeNames.some(an => aName === an) || aVal.includes('axe');
         const is2HMace = (aVal.includes('2h') || aVal.includes('two-hand')) && (aVal.includes('mace') || aVal.includes('hammer'));
         if (isSword || isAxe || is2HMace) {
-          console.log(`FAIL: Priest cannot equip sword/axe/2H mace "${alt.name}"!`);
+          console.log(`FAIL: Priest cannot equip sword/axe/2H mace ${label}!`);
           errors++;
         }
       }
@@ -68,7 +73,7 @@ for (const [cls, cData] of Object.entries(d)) {
       if (cls === 'shaman') {
         const isSword = knownSwordNames.some(sn => aName === sn) || aVal.includes('sword');
         if (isSword) {
-          console.log(`FAIL: Shaman cannot equip sword "${alt.name}"!`);
+          console.log(`FAIL: Shaman cannot equip sword ${label}!`);
           errors++;
         }
       }
@@ -78,7 +83,7 @@ for (const [cls, cData] of Object.entries(d)) {
         const isSword = knownSwordNames.some(sn => aName === sn) || aVal.includes('sword');
         const isAxe = knownAxeNames.some(an => aName === an) || aVal.includes('axe');
         if (isSword || isAxe) {
-          console.log(`FAIL: Druid cannot equip sword/axe "${alt.name}"!`);
+          console.log(`FAIL: Druid cannot equip sword/axe ${label}!`);
           errors++;
         }
       }
@@ -88,7 +93,7 @@ for (const [cls, cData] of Object.entries(d)) {
         const isAxe = knownAxeNames.some(an => aName === an) || aVal.includes('axe');
         const isShield = aVal.includes('shield') || aVal.includes('deflector');
         if (isAxe || isShield) {
-          console.log(`FAIL: Paladin 2H track cannot have axe/shield "${alt.name}"!`);
+          console.log(`FAIL: Paladin 2H track cannot have axe/shield ${label}!`);
           errors++;
         }
       }

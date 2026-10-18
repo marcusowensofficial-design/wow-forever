@@ -578,7 +578,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             wowheadCalcUrl: "https://www.wowhead.com/forever/talent-calc/priest/--505001",
             tagline: "Relentless shadow DoT engine maintaining 100% mana uptime through 5/5 Spirit Tap resets.",
             statPriority: "Shadow Spell Power > Spirit > Intellect",
-            bestWeapon: "Shadow Wand + High Spirit Staff",
+            bestWeapon: "Shadow Wand + High Spirit / Spell Power Staff (Staff of Orgrimmar / Living Root)",
             talents: [
               { name: "Spirit Tap", points: "5/5", tree: "Shadow (Tier 1)", desc: "Gives a 100% chance to gain a 100% bonus to Spirit after killing an enemy, allowing 50% mana regen while casting for 15 sec." },
               { name: "Darkness", points: "5/5", tree: "Shadow (Tier 2)", desc: "Increases your Shadow spell damage by 10%." },
@@ -590,7 +590,8 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
               { label: "Execute", desc: "Switch to Wand at low health to ensure Spirit Tap kill trigger proc." }
             ],
             bisGear: [
-              { slot: "Two-Hand", item: "Living Root", source: "Wailing Caverns (Verdan)", stats: "+6 Spi, +5 Sta, 14.8 DPS" },
+              { slot: "Two-Hand / Staff (Horde)", item: "Staff of Orgrimmar", source: "Ragefire Chasm (Hidden Enemies)", stats: "+6 Int, +6 Agi, +18 Spell Dmg" },
+              { slot: "Two-Hand (Alliance)", item: "Living Root", source: "Wailing Caverns (Verdan)", stats: "+6 Spi, +5 Sta, 14.8 DPS" },
               { slot: "Wand", item: "Necromantic Wand", source: "Ruins of Lordaeron", stats: "+3 Shadow SP" }
             ],
             campingPerk: {
@@ -608,7 +609,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             wowheadCalcUrl: "https://www.wowhead.com/forever/talent-calc/priest/-505001",
             tagline: "Fast cast-time heals, high critical strike triage, and group preservation in low-level dungeons.",
             statPriority: "Healing Power > Spirit > Intellect > Stamina",
-            bestWeapon: "Staff with +Healing or One-Hand + Off-Hand",
+            bestWeapon: "Staff with +Healing / Spell Power (Staff of Orgrimmar / Emberstone Staff) or One-Hand + Off-Hand",
             talents: [
               { name: "Holy Specialization", points: "5/5", tree: "Holy (Tier 1)", desc: "Increases the critical effect chance of your Holy spells by 5%." },
               { name: "Divine Fury", points: "5/5", tree: "Holy (Tier 2)", desc: "Reduces the cast time of your Smite, Holy Fire, Heal, and Greater Heal spells by 0.5 sec." },
@@ -620,7 +621,8 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
               { label: "Emergency Save", desc: "Flash Heal -> Desperate Prayer if focused by dungeon adds." }
             ],
             bisGear: [
-              { slot: "Staff", item: "Emberstone Staff", source: "Deadmines (Greenskin)", stats: "+5 Int, +5 Spi, +5 Sta" },
+              { slot: "Staff (Horde)", item: "Staff of Orgrimmar", source: "Ragefire Chasm (Hidden Enemies)", stats: "+6 Int, +6 Agi, +18 Spell Dmg" },
+              { slot: "Staff (Alliance)", item: "Emberstone Staff", source: "Deadmines (Greenskin)", stats: "+5 Int, +5 Spi, +5 Sta" },
               { slot: "Ring", item: "Thane's Healing Band", source: "Hall of Thanes", stats: "+6 Healing, +4 Spirit" }
             ],
             campingPerk: {

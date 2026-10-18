@@ -541,7 +541,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           "wowheadCalcUrl": "https://www.wowhead.com/forever/talent-calc/mage/--50500101",
           "tagline": "Unmatched solo kiting, instant Ice Lance shatter combos, and dungeon AoE slow dominance.",
           "statPriority": "Spell Power > Spell Hit (to 3%) > Intellect > Spirit > Stamina",
-          "bestWeapon": "Staff / Wand (Wands scale with 30% Spell Power)",
+          "bestWeapon": "Staff / Wand (Staff of Orgrimmar / Emberstone Staff / Necromantic Wand)",
           "talents": [
             { "name": "Improved Frostbolt", "points": "5/5", "tree": "Frost (Tier 1)", "desc": "Reduces cast time of Frostbolt by 0.5 sec. Fundamental for weaving casts before mobs reach melee range." },
             { "name": "Frostbite", "points": "3/3", "tree": "Frost (Tier 2)", "desc": "Gives Chill effects a 15% chance to freeze targets for 5 sec. Triggers high-damage Shatter combos." },
@@ -557,7 +557,8 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             { "label": "Dungeon AoE", "desc": "Coordinate Blizzard rank 1 downranking for slows, letting tanks group mobs before casting max-rank Blizzard." }
           ],
           "bisGear": [
-            { "slot": "Two-Hand / Staff", "item": "Emberstone Staff", "source": "Deadmines (Captain Greenskin)", "stats": "+5 Int, +5 Spi, +5 Sta" },
+            { "slot": "Two-Hand / Staff (Horde)", "item": "Staff of Orgrimmar", "source": "Ragefire Chasm (Hidden Enemies Quest)", "stats": "+6 Int, +6 Agi, +18 Spell Dmg" },
+            { "slot": "Two-Hand / Staff (Alliance)", "item": "Emberstone Staff", "source": "Deadmines (Captain Greenskin)", "stats": "+5 Int, +5 Spi, +5 Sta" },
             { "slot": "Chest", "item": "Robe of Arugal", "source": "Shadowfang Keep (Arugal)", "stats": "+10 Int, +5 Spi, +3 Agi" },
             { "slot": "Chest (New)", "item": "Thane's Rune-Carved Robes", "source": "Hall of Thanes (Ironforge)", "stats": "+7 Frost SP, +6 Int" },
             { "slot": "Ranged / Wand", "item": "Necromantic Wand", "source": "Ruins of Lordaeron (Crypt)", "stats": "Shadow Wand, +3 Shadow/Frost SP" },
@@ -578,7 +579,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           "wowheadCalcUrl": "https://www.wowhead.com/forever/talent-calc/mage/-505001",
           "tagline": "Explosive single-target burst fueled by Ignite rolling DoTs and Hot Streak reduced-cast Pyroblasts.",
           "statPriority": "Spell Power > Spell Crit > Intellect > Stamina",
-          "bestWeapon": "Staff / Wand with Fire Spell Damage",
+          "bestWeapon": "Staff / Wand with Fire / Spell Damage (Staff of Orgrimmar / Emberstone Staff)",
           "talents": [
             { "name": "Improved Fireball", "points": "5/5", "tree": "Fire (Tier 1)", "desc": "Reduces Fireball cast time by 0.5 sec, bringing it to a crisp 3.0 sec cast." },
             { "name": "Ignite", "points": "5/5", "tree": "Fire (Tier 2)", "desc": "Critical strikes with Fire damage spells cause the target to burn for an additional 40% damage over 4 sec." },
@@ -591,7 +592,8 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             { "label": "Execute", "desc": "Fire Blast -> Wand attacks to maintain ignite while restoring mana." }
           ],
           "bisGear": [
-            { "slot": "Staff", "item": "Emberstone Staff", "source": "Deadmines (Greenskin)", "stats": "+5 Int, +5 Spi, +5 Sta" },
+            { "slot": "Staff (Horde)", "item": "Staff of Orgrimmar", "source": "Ragefire Chasm (Hidden Enemies Quest)", "stats": "+6 Int, +6 Agi, +18 Spell Dmg" },
+            { "slot": "Staff (Alliance)", "item": "Emberstone Staff", "source": "Deadmines (Greenskin)", "stats": "+5 Int, +5 Spi, +5 Sta" },
             { "slot": "Finger", "item": "Lavishly Jeweled Ring", "source": "Deadmines (Gilnid)", "stats": "+6 Agi, +2 Int" },
             { "slot": "Chest", "item": "Robes of Arcane Might", "source": "Level 20 Mage Class Quest", "stats": "+7 Fire/Frost SP, +5 Int" }
           ],

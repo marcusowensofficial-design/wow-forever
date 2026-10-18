@@ -1328,6 +1328,7 @@ const weaponsData = {
         dps: '20.5 DPS',
         source: { kind: 'quest', title: "The Wrath of Rath'mael", detail: 'Ruins of Lordaeron dungeon quest (+8 Str, +5 Sta)' },
         alts: [
+          { name: 'Staff of Orgrimmar', itemId: 15444, value: '11.8 DPS, +6 Int, +6 Agi, +18 Spell Dmg - RFC: Hidden Enemies (Horde)' },
           { name: 'Coldspire Staff', itemId: 271105, value: '16.8 DPS, +7 Int, +5 Spi - Ruins of Lordaeron: Rath\'mael' },
           { name: "Smite's Mighty Hammer", itemId: 7230, value: '19.7 DPS, 3.50s - The Deadmines: Mr. Smite' }
         ]
@@ -1342,6 +1343,7 @@ const weaponsData = {
         dps: '15.3 DPS',
         source: { kind: 'quest', title: 'Leaders of the Fang', detail: 'Wailing Caverns quest (+7 Int, +7 Spi, +7 Sta)' },
         alts: [
+          { name: 'Staff of Orgrimmar', itemId: 15444, value: '11.8 DPS, +6 Int, +6 Agi, +18 Spell Dmg - RFC: Hidden Enemies (Horde)' },
           { name: 'Bronze Warhammer', itemId: 7956, value: '17.4 DPS - Blacksmithing (90)' },
           { name: 'Bronze Battle Axe', itemId: 7958, value: '18.8 DPS - Blacksmithing (105)' }
         ]
@@ -1622,6 +1624,7 @@ const weaponsData = {
         dps: '16.8 DPS',
         source: { kind: 'dungeon', title: "Rath'mael", detail: 'Ruins of Lordaeron (+7 Int, +5 Spi, +6 Frost Spell Dmg)' },
         alts: [
+          { name: 'Staff of Orgrimmar', itemId: 15444, value: '11.8 DPS, +6 Int, +6 Agi, +18 Spell Dmg - RFC: Hidden Enemies (Horde)' },
           { name: 'Staff of Westfall', itemId: 2042, value: '15.2 DPS, +5 Int, +11 Spi - Deadmines Quest: The Defias Brotherhood' },
           { name: 'Vileblood Scimitar', itemId: 271106, value: '15.0 DPS, 2.20s - Ruins of Lordaeron: Viktor the Vile' }
         ]
@@ -1636,6 +1639,7 @@ const weaponsData = {
         dps: '15.2 DPS',
         source: { kind: 'quest', title: 'The Defias Brotherhood', detail: 'Deadmines quest reward (+5 Int, +11 Spi)' },
         alts: [
+          { name: 'Staff of Orgrimmar', itemId: 15444, value: '11.8 DPS, +6 Int, +6 Agi, +18 Spell Dmg - RFC: Hidden Enemies (Horde)' },
           { name: "Odo's Ley Staff", itemId: 6318, value: '16.0 DPS - SFK: Odo the Blindwatcher' },
           { name: 'Glimmering Staff', itemId: 249392, value: '18.4 DPS, 2.20s, Req Level 25 - Enchanting (140)' }
         ]
@@ -1904,6 +1908,7 @@ const weaponsData = {
         dps: '16.8 DPS',
         source: { kind: 'dungeon', title: "Rath'mael", detail: 'Ruins of Lordaeron (+7 Int, +5 Spi, +6 Frost Dmg)' },
         alts: [
+          { name: 'Staff of Orgrimmar', itemId: 15444, value: '11.8 DPS, +6 Int, +6 Agi, +18 Spell Dmg - RFC: Hidden Enemies (Horde)' },
           { name: 'Staff of Westfall', itemId: 2042, value: '15.2 DPS, +5 Int, +11 Spi - Deadmines Quest: The Defias Brotherhood' },
           { name: 'Vileblood Scimitar', itemId: 271106, value: '15.0 DPS, 2.20s - Ruins of Lordaeron: Viktor' }
         ]
@@ -1918,6 +1923,7 @@ const weaponsData = {
         dps: '16.0 DPS',
         source: { kind: 'dungeon', title: 'Odo the Blindwatcher', detail: 'Shadowfang Keep (+4 Int, +5 Spi)' },
         alts: [
+          { name: 'Staff of Orgrimmar', itemId: 15444, value: '11.8 DPS, +6 Int, +6 Agi, +18 Spell Dmg - RFC: Hidden Enemies (Horde)' },
           { name: 'Staff of Westfall', itemId: 2042, value: '15.2 DPS - Deadmines Quest' },
           { name: 'Glimmering Staff', itemId: 249392, value: '18.4 DPS, 2.20s, Req Level 25 - Enchanting (140)' }
         ]
@@ -2185,6 +2191,7 @@ const weaponsData = {
         dps: '16.8 DPS',
         source: { kind: 'dungeon', title: "Rath'mael", detail: 'Ruins of Lordaeron (+7 Int, +5 Spi, +6 Frost Dmg)' },
         alts: [
+          { name: 'Staff of Orgrimmar', itemId: 15444, value: '11.8 DPS, +6 Int, +6 Agi, +18 Spell Dmg - RFC: Hidden Enemies (Horde)' },
           { name: 'Staff of Westfall', itemId: 2042, value: '15.2 DPS, +5 Int, +11 Spi - Deadmines Quest: The Defias Brotherhood' },
           { name: 'Living Root', itemId: 6631, value: '14.7 DPS - WC: Verdan the Everliving' }
         ]
@@ -2199,6 +2206,7 @@ const weaponsData = {
         dps: '15.2 DPS',
         source: { kind: 'quest', title: 'The Defias Brotherhood', detail: 'Deadmines quest reward (+5 Int, +11 Spi)' },
         alts: [
+          { name: 'Staff of Orgrimmar', itemId: 15444, value: '11.8 DPS, +6 Int, +6 Agi, +18 Spell Dmg - RFC: Hidden Enemies (Horde)' },
           { name: "Odo's Ley Staff", itemId: 6318, value: '16.0 DPS - SFK: Odo the Blindwatcher' },
           { name: 'Glimmering Staff', itemId: 249392, value: '18.4 DPS, 2.20s, Req Level 25 - Enchanting (140)' }
         ]
@@ -2481,6 +2489,7 @@ const weaponsData = {
         dps: '15.3 DPS',
         source: { kind: 'quest', title: 'Leaders of the Fang', detail: 'Wailing Caverns quest (+7 Int, +7 Spi, +7 Sta)' },
         alts: [
+          { name: 'Staff of Orgrimmar', itemId: 15444, value: '11.8 DPS, +6 Int, +6 Agi, +18 Spell Dmg - RFC quest (great hybrid stats)' },
           { name: 'Bronze Warhammer', itemId: 7956, value: '17.4 DPS - Blacksmithing (90)' },
           { name: 'Staff of Westfall', itemId: 2042, value: '15.2 DPS - Deadmines quest' }
         ]

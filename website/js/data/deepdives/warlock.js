@@ -526,7 +526,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             wowheadCalcUrl: "https://www.wowhead.com/forever/talent-calc/warlock/500501",
             tagline: "Instant-cast Corruption, high spell hit, and endless sustain through Spirit Life Tap and Soul Harvesting.",
             statPriority: "Shadow Spell Power > Spell Hit (to 3%) > Stamina > Spirit",
-            bestWeapon: "Staff / Wand with Shadow Spell Damage (Necromantic Wand)",
+            bestWeapon: "Staff / Wand with Shadow / Spell Damage (Staff of Orgrimmar / Necromantic Wand)",
             talents: [
               { name: "Improved Corruption", points: "5/5", tree: "Affliction (Tier 1)", desc: "Reduces cast time of Corruption by 2.0 sec, transforming it into an instant-cast spell on the move." },
               { name: "Suppression", points: "5/5", tree: "Affliction (Tier 1)", desc: "Reduces the chance for enemies to resist your Affliction spells by 10%, essential against higher level dungeon mobs." },
@@ -592,7 +592,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             wowheadCalcUrl: "https://www.wowhead.com/forever/talent-calc/warlock/--505001",
             tagline: "Short-cast Shadow Bolts, Immolate crits, and rapid execution using Bane and Cataclysm.",
             statPriority: "Spell Power > Spell Crit > Intellect > Stamina",
-            bestWeapon: "Two-Handed Staff with Fire/Shadow Damage",
+            bestWeapon: "Two-Handed Staff with Fire/Shadow Spell Damage (Staff of Orgrimmar / Emberstone Staff)",
             talents: [
               { name: "Cataclysm", points: "5/5", tree: "Destruction (Tier 1)", desc: "Reduces the Mana cost of your Destruction spells by 5%." },
               { name: "Bane", points: "5/5", tree: "Destruction (Tier 2)", desc: "Reduces the casting time of your Shadow Bolt and Immolate spells by 0.5 sec." },
@@ -604,7 +604,8 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
               { label: "Execute", desc: "Shadowburn to instantly finish targets before they reach melee range." }
             ],
             bisGear: [
-              { slot: "Staff", item: "Emberstone Staff", source: "Deadmines (Greenskin)", stats: "+5 Int, +5 Spi, +5 Sta" },
+              { slot: "Staff (Horde)", item: "Staff of Orgrimmar", source: "Ragefire Chasm Quest", stats: "+6 Int, +6 Agi, +18 Spell Dmg" },
+              { slot: "Staff (Alliance)", item: "Emberstone Staff", source: "Deadmines (Greenskin)", stats: "+5 Int, +5 Spi, +5 Sta" },
               { slot: "Gloves", item: "Serpent Gloves", source: "Wailing Caverns (Pythas)", stats: "+4 Int, +4 Sta" }
             ],
             campingPerk: {

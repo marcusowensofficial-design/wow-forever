@@ -540,7 +540,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             wowheadCalcUrl: "https://www.wowhead.com/forever/talent-calc/druid/-505001",
             tagline: "Weapon DPS scaling, energy efficiency, and Ferocious Bite crits inside the new level-20 Cat Form.",
             statPriority: "Weapon DPS > Agility > Strength > Hit",
-            bestWeapon: "Two-Handed Mace / Staff with High Top-End (Smite's Mighty Hammer / Manual Crowd Pummeler prep)",
+            bestWeapon: "Two-Handed Mace / Staff (Smite's Mighty Hammer / Staff of Orgrimmar / Manual Crowd Pummeler prep)",
             talents: [
               { name: "Ferocity", points: "5/5", tree: "Feral (Tier 1)", desc: "Reduces the cost of your Maul, Swipe, Claw, and Rake abilities by 5 Rage or Energy." },
               { name: "Feral Aggression", points: "5/5", tree: "Feral (Tier 1)", desc: "Increases damage dealt by Ferocious Bite by 15% and Demoralizing Roar attack power reduction by 40%." },

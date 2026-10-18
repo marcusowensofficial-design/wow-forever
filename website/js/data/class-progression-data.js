@@ -5891,6 +5891,11 @@ if (typeof window !== 'undefined') {
           },
           "alts": [
             {
+              "name": "Staff of Orgrimmar",
+              "itemId": 15444,
+              "value": "11.8 DPS, +6 Int, +6 Agi, +18 Spell Dmg - RFC: Hidden Enemies (Horde)"
+            },
+            {
               "name": "Coldspire Staff",
               "itemId": 271105,
               "value": "16.8 DPS, +7 Int, +5 Spi - Ruins of Lordaeron: Rath'mael"
@@ -5916,6 +5921,11 @@ if (typeof window !== 'undefined') {
             "detail": "Wailing Caverns quest (+7 Int, +7 Spi, +7 Sta)"
           },
           "alts": [
+            {
+              "name": "Staff of Orgrimmar",
+              "itemId": 15444,
+              "value": "11.8 DPS, +6 Int, +6 Agi, +18 Spell Dmg - RFC: Hidden Enemies (Horde)"
+            },
             {
               "name": "Bronze Warhammer",
               "itemId": 7956,
@@ -6447,6 +6457,11 @@ if (typeof window !== 'undefined') {
           },
           "alts": [
             {
+              "name": "Staff of Orgrimmar",
+              "itemId": 15444,
+              "value": "11.8 DPS, +6 Int, +6 Agi, +18 Spell Dmg - RFC: Hidden Enemies (Horde)"
+            },
+            {
               "name": "Staff of Westfall",
               "itemId": 2042,
               "value": "15.2 DPS, +5 Int, +11 Spi - Deadmines Quest: The Defias Brotherhood"
@@ -6472,6 +6487,11 @@ if (typeof window !== 'undefined') {
             "detail": "Deadmines quest reward (+5 Int, +11 Spi)"
           },
           "alts": [
+            {
+              "name": "Staff of Orgrimmar",
+              "itemId": 15444,
+              "value": "11.8 DPS, +6 Int, +6 Agi, +18 Spell Dmg - RFC: Hidden Enemies (Horde)"
+            },
             {
               "name": "Odo's Ley Staff",
               "itemId": 6318,
@@ -6987,6 +7007,11 @@ if (typeof window !== 'undefined') {
           },
           "alts": [
             {
+              "name": "Staff of Orgrimmar",
+              "itemId": 15444,
+              "value": "11.8 DPS, +6 Int, +6 Agi, +18 Spell Dmg - RFC: Hidden Enemies (Horde)"
+            },
+            {
               "name": "Staff of Westfall",
               "itemId": 2042,
               "value": "15.2 DPS, +5 Int, +11 Spi - Deadmines Quest: The Defias Brotherhood"
@@ -7012,6 +7037,11 @@ if (typeof window !== 'undefined') {
             "detail": "Shadowfang Keep (+4 Int, +5 Spi)"
           },
           "alts": [
+            {
+              "name": "Staff of Orgrimmar",
+              "itemId": 15444,
+              "value": "11.8 DPS, +6 Int, +6 Agi, +18 Spell Dmg - RFC: Hidden Enemies (Horde)"
+            },
             {
               "name": "Staff of Westfall",
               "itemId": 2042,
@@ -7522,6 +7552,11 @@ if (typeof window !== 'undefined') {
           },
           "alts": [
             {
+              "name": "Staff of Orgrimmar",
+              "itemId": 15444,
+              "value": "11.8 DPS, +6 Int, +6 Agi, +18 Spell Dmg - RFC: Hidden Enemies (Horde)"
+            },
+            {
               "name": "Staff of Westfall",
               "itemId": 2042,
               "value": "15.2 DPS, +5 Int, +11 Spi - Deadmines Quest: The Defias Brotherhood"
@@ -7547,6 +7582,11 @@ if (typeof window !== 'undefined') {
             "detail": "Deadmines quest reward (+5 Int, +11 Spi)"
           },
           "alts": [
+            {
+              "name": "Staff of Orgrimmar",
+              "itemId": 15444,
+              "value": "11.8 DPS, +6 Int, +6 Agi, +18 Spell Dmg - RFC: Hidden Enemies (Horde)"
+            },
             {
               "name": "Odo's Ley Staff",
               "itemId": 6318,
@@ -8087,6 +8127,11 @@ if (typeof window !== 'undefined') {
             "detail": "Wailing Caverns quest (+7 Int, +7 Spi, +7 Sta)"
           },
           "alts": [
+            {
+              "name": "Staff of Orgrimmar",
+              "itemId": 15444,
+              "value": "11.8 DPS, +6 Int, +6 Agi, +18 Spell Dmg - RFC quest (great hybrid stats)"
+            },
             {
               "name": "Bronze Warhammer",
               "itemId": 7956,
