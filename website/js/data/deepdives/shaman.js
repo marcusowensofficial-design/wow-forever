@@ -626,7 +626,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           "wowheadCalcUrl": "https://www.wowhead.com/forever/talent-calc/shaman/505001",
           "tagline": "Long-range Lightning Bolts combined with low-cost shocks via Convection and Conduction.",
           "statPriority": "Spell Power > Nature Damage > Intellect > Spirit",
-          "bestWeapon": "Two-Handed Staff (Staff of Westfall / Emberstone Staff)",
+          "bestWeapon": "Two-Handed Staff (Staff of Orgrimmar / Emberstone Staff)",
           "talents": [
             { "name": "Convection", "points": "5/5", "tree": "Elemental (Tier 1)", "desc": "Reduces the Mana cost of your Shock, Lightning Bolt, and Chain Lightning spells by 10%." },
             { "name": "Conduction", "points": "5/5", "tree": "Elemental (Tier 2)", "desc": "Increases the damage done by your Lightning Bolt, Chain Lightning, and Shock spells by 5%." },
@@ -638,7 +638,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             { "label": "Burst", desc: "Lightning Bolt -> Earth Shock finisher on closing targets." }
           ],
           "bisGear": [
-            { "slot": "Staff", item: "Staff of Westfall", source: "Deadmines Quest", stats: "+11 Int, +5 Spi" },
+            { "slot": "Staff", item: "Staff of Orgrimmar", source: "Ragefire Chasm Quest", stats: "+6 Int, +6 Agi, +18 Spell Dmg" },
             { "slot": "Chest", item: "Robe of Arugal", source: "Shadowfang Keep", stats: "+10 Int, +5 Spi, +3 Agi" }
           ],
           "campingPerk": {
@@ -764,7 +764,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           "wowheadCalcUrl": "https://www.wowhead.com/forever/talent-calc/shaman/5505003100101--",
           "tagline": "Burst artillery combining 100% Clearcasting mana refunds, rapid 5s shocks, and the iconic Level 30 Lava Burst capstone.",
           "statPriority": "Spell Power > Nature Damage > Spell Crit > Intellect > MP5",
-          "bestWeapon": "Two-Handed Staff (Rod of the Sleepwalker / Staff of Westfall)",
+          "bestWeapon": "Two-Handed Staff (Rod of the Sleepwalker / Staff of Orgrimmar)",
           "talents": [
             { "name": "Convection", "points": "5/5", "tree": "Elemental (Tier 1)", "desc": "Reduces Mana cost of Shock, Lightning Bolt, and Chain Lightning spells by 10%." },
             { "name": "Concussion", "points": "5/5", "tree": "Elemental (Tier 1)", "desc": "Increases damage of Lightning Bolt, Chain Lightning, and Shock spells by 5%." },

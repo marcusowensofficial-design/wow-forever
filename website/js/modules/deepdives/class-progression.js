@@ -192,12 +192,21 @@
                     <div class="weapon-alts-block">
                       <span class="alts-label">Alternative Upgrades:</span>
                       <div class="alts-tags">
-                        ${step.alts.map(alt => `
-                          <span class="alt-tag">
-                            <span class="alt-name">${escapeHtml(alt.name)}</span>
-                            ${alt.value ? `<span class="alt-val">(${escapeHtml(alt.value)})</span>` : ''}
-                          </span>
-                        `).join('')}
+                        ${step.alts.map(alt => {
+                          const altUrl = alt.itemId ? `https://www.wowhead.com/forever/item=${alt.itemId}` : null;
+                          return `
+                            <span class="alt-tag">
+                              ${altUrl ? `
+                                <a href="${altUrl}" target="_blank" rel="noopener noreferrer" class="alt-link">
+                                  ${escapeHtml(alt.name)}
+                                </a>
+                              ` : `
+                                <span class="alt-name">${escapeHtml(alt.name)}</span>
+                              `}
+                              ${alt.value ? `<span class="alt-val">(${escapeHtml(alt.value)})</span>` : ''}
+                            </span>
+                          `;
+                        }).join('')}
                       </div>
                     </div>
                   ` : ''}

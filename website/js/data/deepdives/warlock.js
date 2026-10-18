@@ -561,7 +561,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             wowheadCalcUrl: "https://www.wowhead.com/forever/talent-calc/warlock/-503003",
             tagline: "Massive Stamina scaling and unbreakable Voidwalker aggro generation for fearless solo questing.",
             statPriority: "Stamina > Intellect > Spell Power",
-            bestWeapon: "Staff with High Stamina (Staff of Westfall / Emberstone Staff)",
+            bestWeapon: "Staff with High Spell Power / Stamina (Staff of Orgrimmar / Staff of Westfall / Emberstone Staff)",
             talents: [
               { name: "Demonic Embrace", points: "5/5", tree: "Demonology (Tier 1)", desc: "Increases your total Stamina by 15%, but reduces your total Spirit by 5%." },
               { name: "Improved Voidwalker", points: "3/3", tree: "Demonology (Tier 2)", desc: "Increases the effectiveness of your Voidwalker's Torment by 30%, locking threat firmly." },
@@ -574,7 +574,8 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             ],
             bisGear: [
               { slot: "Chest", item: "Robes of the Fang", source: "Wailing Caverns (Lord Cobrahn)", stats: "+5 Int, +5 Sta, +5 Spi" },
-              { slot: "Staff", item: "Emberstone Staff", source: "Deadmines (Greenskin)", stats: "+5 Int, +5 Spi, +5 Sta" }
+              { slot: "Staff (Horde)", item: "Staff of Orgrimmar", source: "Ragefire Chasm Quest", stats: "+6 Int, +6 Agi, +18 Spell Dmg" },
+              { slot: "Staff (Alliance)", item: "Emberstone Staff", source: "Deadmines (Greenskin)", stats: "+5 Int, +5 Spi, +5 Sta" }
             ],
             campingPerk: {
               name: "Demonic Resilience (+10% Pet Health)",

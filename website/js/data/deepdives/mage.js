@@ -610,7 +610,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           "wowheadCalcUrl": "https://www.wowhead.com/forever/talent-calc/mage/505001",
           "tagline": "Controlled threat and high-efficiency Arcane Missiles with Arcane Concentration Clearcasting loops.",
           "statPriority": "Intellect > Spirit > Spell Power",
-          "bestWeapon": "High-Spirit Staff (Living Root / Staff of Westfall)",
+          "bestWeapon": "High-Spirit / Spell Power Staff (Staff of Orgrimmar / Staff of Westfall / Living Root)",
           "talents": [
             { "name": "Arcane Subtlety", "points": "5/5", "tree": "Arcane (Tier 1)", "desc": "Reduces target magic resistance by 10 and reduces threat caused by Arcane spells by 40%." },
             { "name": "Arcane Focus", "points": "5/5", "tree": "Arcane (Tier 1)", "desc": "Reduces the chance that the opponent can resist or dodge your Arcane spells by 10%." },
@@ -622,7 +622,8 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             { "label": "Dungeon Clear", "desc": "Arcane Subtlety enables high burst without ripping threat from early tanks." }
           ],
           "bisGear": [
-            { "slot": "Two-Hand", "item": "Staff of Westfall", "source": "Deadmines (Defias Quest)", "stats": "+11 Int, +5 Spi" },
+            { "slot": "Two-Hand (Horde)", "item": "Staff of Orgrimmar", "source": "Ragefire Chasm (Hidden Enemies Quest)", "stats": "+6 Int, +6 Agi, +18 Spell Dmg" },
+            { "slot": "Two-Hand (Alliance)", "item": "Staff of Westfall", "source": "Deadmines (Defias Quest)", "stats": "+11 Int, +5 Spi" },
             { "slot": "Chest", "item": "Robe of Arugal", "source": "Shadowfang Keep", "stats": "+10 Int, +5 Spi" }
           ],
           "campingPerk": {
@@ -724,7 +725,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           "wowheadCalcUrl": "https://www.wowhead.com/forever/talent-calc/mage/0302205003100311--",
           "tagline": "Instant cast burst with Presence of Mind, rapid rotation with Row 1 Missile Barrage, Arcane Wrath amplification, and Clearcasting Arcane Missiles.",
           "statPriority": "Intellect > Spell Power > Spirit > Mp5",
-          "bestWeapon": "Staff of Westfall / Rod of the Sleepwalker",
+          "bestWeapon": "Staff of Orgrimmar (Horde) / Staff of Westfall (Alliance) / Rod of the Sleepwalker",
           "talents": [
             { "name": "Missile Barrage", "points": "2/2", "tree": "Arcane (Tier 1)", "desc": "Gives your Arcane spells a 100% chance to reduce the channeled duration of your next Arcane Missiles by 50% and reduce mana cost by 100%." },
             { "name": "Arcane Focus", "points": "3/5", "tree": "Arcane (Tier 1)", "desc": "Reduces the chance that the opponent can resist your Arcane spells by 6%." },
@@ -742,7 +743,8 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             { label: "Channel Missiles", desc: "Channel 100% pushback-immune Arcane Missiles; weave free spells on Clearcasting procs." }
           ],
           "bisGear": [
-            { "slot": "Two-Hand", "item": "Staff of Westfall", "source": "Deadmines Quest", "stats": "+11 Int, +5 Spi" },
+            { "slot": "Two-Hand (Horde)", "item": "Staff of Orgrimmar", "source": "Ragefire Chasm Quest", "stats": "+6 Int, +6 Agi, +18 Spell Dmg" },
+            { "slot": "Two-Hand (Alliance)", "item": "Staff of Westfall", "source": "Deadmines Quest", "stats": "+11 Int, +5 Spi" },
             { "slot": "Chest", "item": "Robes of the Kirin Tor", "source": "City of Dalaran", "stats": "+14 Spell Power, +10 Int, +6 Spi" }
           ],
           "campingPerk": {

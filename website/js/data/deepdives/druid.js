@@ -556,6 +556,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             bisGear: [
               { slot: "Two-Hand Weapon", item: "Smite's Mighty Hammer", source: "Deadmines (Mr. Smite)", stats: "+11 Strength, 19.8 DPS" },
               { slot: "Armor Set", item: "Embrace of the Viper (5-Piece)", source: "Wailing Caverns Leaders", stats: "+10 Agility, +5 Intellect, Serpent Form" },
+              { slot: "Staff (Horde Quest)", item: "Staff of Orgrimmar", source: "Ragefire Chasm (Hidden Enemies Quest)", stats: "+6 Agi, +6 Int, +18 Spell Dmg, 11.8 DPS" },
               { slot: "Staff (Alt)", item: "Wild Thane Staff", source: "Hall of Thanes (Dungeon Boss)", stats: "+6 Agi, +6 Str, 18.0 DPS" },
               { slot: "Ring", item: "Lavishly Jeweled Ring", source: "Deadmines (Gilnid)", stats: "+6 Agi, +2 Int" }
             ],
@@ -605,7 +606,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             wowheadCalcUrl: "https://www.wowhead.com/forever/talent-calc/druid/505001",
             tagline: "Rapid Wrath casting (-0.5s cast) and empowered Moonfire critical DoTs.",
             statPriority: "Spell Power > Nature Damage > Intellect > Spirit",
-            bestWeapon: "Two-Handed Staff (Emberstone Staff / Staff of Westfall)",
+            bestWeapon: "Two-Handed Staff (Staff of Orgrimmar / Staff of Westfall / Emberstone Staff)",
             talents: [
               { name: "Starlight Wrath", points: "5/5", tree: "Balance (Tier 1)", desc: "Reduces the cast time of your Wrath and Starfire spells by 0.5 sec." },
               { name: "Improved Moonfire", points: "5/5", tree: "Balance (Tier 1)", desc: "Increases the damage and critical strike chance of Moonfire by 10%." },
@@ -617,7 +618,8 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
               { label: "Outdoor Kite", desc: "Entangling Roots rank 1 to root melee mobs while casting Wrath at 33 yards." }
             ],
             bisGear: [
-              { slot: "Staff", item: "Staff of Westfall", source: "Deadmines Quest", stats: "+11 Int, +5 Spi" },
+              { slot: "Staff (Horde)", item: "Staff of Orgrimmar", source: "Ragefire Chasm (Hidden Enemies Quest)", stats: "+6 Int, +6 Agi, +18 Spell Dmg" },
+              { slot: "Staff (Alliance)", item: "Staff of Westfall", source: "Deadmines Quest", stats: "+11 Int, +5 Spi" },
               { slot: "Robe", item: "Robe of Arugal", source: "Shadowfang Keep", stats: "+10 Int, +5 Spi, +3 Agi" }
             ],
             campingPerk: {
@@ -720,7 +722,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             wowheadCalcUrl: "https://www.wowhead.com/forever/talent-calc/druid/505001",
             tagline: "Signature Moonkin Form (+306% Armor, +3% party spell crit), alternating Eclipse procs, and rapid-fire Starfire nukes.",
             statPriority: "Spell Power > Nature / Arcane Damage > Intellect > Spirit",
-            bestWeapon: "Rod of the Sleepwalker (BFD) / Staff of the Blessed Seer / Staff of Westfall",
+            bestWeapon: "Rod of the Sleepwalker (BFD) / Staff of the Blessed Seer / Staff of Westfall / Staff of Orgrimmar",
             talents: [
               { name: "Starlight Wrath", points: "5/5", tree: "Balance (Tier 1)", desc: "Reduces the cast time of your Wrath and Starfire spells by 0.5 sec." },
               { name: "Improved Moonfire", points: "5/5", tree: "Balance (Tier 1)", desc: "Increases the damage and critical strike chance of Moonfire by 10%." },

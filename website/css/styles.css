@@ -5738,16 +5738,36 @@ input:checked + .toggle-slider:before {
 }
 
 .alt-tag {
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  padding: 0.15rem 0.5rem;
-  border-radius: 3px;
-  color: #cbd5e1;
+  display: inline-flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.2rem 0.55rem;
+  border-radius: 4px;
+  color: #e2e8f0;
+  transition: all 0.15s ease;
+}
+
+.alt-tag:hover {
+  background: rgba(56, 189, 248, 0.1);
+  border-color: rgba(56, 189, 248, 0.3);
+}
+
+.alt-link {
+  color: #38bdf8;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.alt-link:hover {
+  text-decoration: underline;
+  color: #7dd3fc;
 }
 
 .alt-val {
-  color: #4ade80;
-  margin-left: 0.25rem;
+  color: #a3e635;
+  margin-left: 0.35rem;
+  font-size: 0.78rem;
 }
 
 /* 3. Macros Styles */

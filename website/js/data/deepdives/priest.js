@@ -558,7 +558,8 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             bisGear: [
               { slot: "Ranged / Wand", item: "Necromantic Wand", source: "Ruins of Lordaeron (Crypt)", stats: "Shadow Wand, +3 Shadow SP" },
               { slot: "Finger", item: "Thane's Healing Band", source: "Hall of Thanes (Ironforge)", stats: "+6 Healing, +4 Spirit" },
-              { slot: "Two-Hand / Staff", item: "Staff of Westfall", source: "Deadmines (Quest)", stats: "+11 Int, +5 Spi" },
+              { slot: "Two-Hand / Staff (Horde)", item: "Staff of Orgrimmar", source: "Ragefire Chasm (Hidden Enemies)", stats: "+6 Int, +6 Agi, +18 Spell Dmg" },
+              { slot: "Two-Hand / Staff (Alliance)", item: "Staff of Westfall", source: "Deadmines (Quest)", stats: "+11 Int, +5 Spi" },
               { slot: "Chest", item: "Robe of Arugal", source: "Shadowfang Keep (Arugal)", stats: "+10 Int, +5 Spi, +3 Agi" },
               { slot: "Back", item: "Mantle of the Penitent", source: "Ruins of Lordaeron", stats: "+4 Spi, +3 Sta" }
             ],
@@ -644,7 +645,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             wowheadCalcUrl: "https://www.wowhead.com/forever/talent-calc/priest/--005522012513",
             tagline: "Passive party healing from Vampiric Embrace, amplified Mind Blast and Shadow Word: Pain crits with Dark Inspiration, and critical-strike Devouring Plague.",
             statPriority: "Shadow Spell Power > Spell Hit (to 4%) > Spirit > Intellect",
-            bestWeapon: "Rod of the Sleepwalker (BFD) / Staff of Westfall / Necromantic Wand",
+            bestWeapon: "Rod of the Sleepwalker (BFD) / Staff of Orgrimmar (Horde) / Staff of Westfall / Necromantic Wand",
             talents: [
               { name: "Spirit Tap", points: "5/5", tree: "Shadow (Tier 1)", desc: "Gives a 100% chance to gain 100% bonus Spirit and 50% in-combat mana regen for 15 sec on mob kill." },
               { name: "Improved Mind Blast", points: "5/5", tree: "Shadow (Tier 2)", desc: "Reduces the cooldown of your Mind Blast spell by 2.5 sec." },
@@ -684,7 +685,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             wowheadCalcUrl: "https://www.wowhead.com/forever/talent-calc/priest/500050021330101--",
             tagline: "Unbreakable shielding with Soul Warding (cooldown-free Power Word: Shield), rapid Penance channeling, and 100% mana Inner Focus.",
             statPriority: "Intellect > Spirit > Spell Power > Healing Power",
-            bestWeapon: "Dalaran Caretaker Gavel / Staff of Westfall",
+            bestWeapon: "Dalaran Caretaker Gavel / Staff of Orgrimmar / Staff of Westfall",
             talents: [
               { name: "Power in Light", points: "5/5", tree: "Discipline (Tier 1)", desc: "Your Smite and Penance spells deal 10% increased damage to targets afflicted with your Holy Fire or Shadow Word: Pain." },
               { name: "Mental Strength", points: "5/5", tree: "Discipline (Tier 2)", desc: "Increases your maximum Mana by 10%." },
