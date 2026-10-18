@@ -72,6 +72,17 @@ const context = vm.createContext({
   clearTimeout
 });
 
+// Load reference datasets
+const refDataCode = fs.readFileSync('js/data/professions-reference-data.js', 'utf8');
+vm.runInContext(refDataCode, context);
+
+// Load professions submodules
+vm.runInContext(fs.readFileSync('js/modules/professions/professions-core.js', 'utf8'), context);
+vm.runInContext(fs.readFileSync('js/modules/professions/professions-modal.js', 'utf8'), context);
+vm.runInContext(fs.readFileSync('js/modules/professions/professions-routes.js', 'utf8'), context);
+vm.runInContext(fs.readFileSync('js/modules/professions/professions-leveling.js', 'utf8'), context);
+vm.runInContext(fs.readFileSync('js/modules/professions/professions-tabs.js', 'utf8'), context);
+
 // Run professions.js in context to verify syntax and initialization
 const code = fs.readFileSync('js/modules/professions.js', 'utf8');
 
