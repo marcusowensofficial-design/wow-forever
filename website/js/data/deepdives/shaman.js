@@ -655,7 +655,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
           "wowheadCalcUrl": "https://www.wowhead.com/forever/talent-calc/shaman/--50501",
           "tagline": "Mana-efficient healing via Tidal Focus and party totem mana reductions.",
           "statPriority": "Healing Power > MP5 > Intellect > Spirit",
-          "bestWeapon": "One-Hand Mace + Shield / Off-hand",
+          "bestWeapon": "One-Hand Dagger/Mace + Shield / Off-hand (Kris of Orgrimmar / Trogg Scepter / Kresh's Back)",
           "talents": [
             { "name": "Tidal Focus", "points": "5/5", "tree": "Restoration (Tier 1)", "desc": "Reduces the Mana cost of your healing spells by 5%." },
             { "name": "Totemic Focus", "points": "5/5", "tree": "Restoration (Tier 2)", "desc": "Reduces the Mana cost of your totems by 25%." },

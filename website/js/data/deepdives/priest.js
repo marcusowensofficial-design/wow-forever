@@ -609,7 +609,7 @@ if (typeof window !== 'undefined' && window.WOW_FOREVER_DATA) {
             wowheadCalcUrl: "https://www.wowhead.com/forever/talent-calc/priest/-505001",
             tagline: "Fast cast-time heals, high critical strike triage, and group preservation in low-level dungeons.",
             statPriority: "Healing Power > Spirit > Intellect > Stamina",
-            bestWeapon: "Staff with +Healing / Spell Power (Staff of Orgrimmar / Emberstone Staff) or One-Hand + Off-Hand",
+            bestWeapon: "Staff with +Healing / Spell Power (Staff of Orgrimmar / Emberstone Staff) or One-Hand + Off-Hand (Kris of Orgrimmar)",
             talents: [
               { name: "Holy Specialization", points: "5/5", tree: "Holy (Tier 1)", desc: "Increases the critical effect chance of your Holy spells by 5%." },
               { name: "Divine Fury", points: "5/5", tree: "Holy (Tier 2)", desc: "Reduces the cast time of your Smite, Holy Fire, Heal, and Greater Heal spells by 0.5 sec." },

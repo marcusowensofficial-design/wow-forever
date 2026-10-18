@@ -130,29 +130,46 @@
 
     const currentTrack = activeWeaponTrack[classId] || data.tracks?.[0]?.id || 'primary';
 
+    // Faction restrictions for faction-exclusive classes
+    const isPaladin = classId === 'paladin';
+    const isShaman = classId === 'shaman';
+    let effectiveFaction = activeWeaponFaction;
+    if (isPaladin && effectiveFaction === 'horde') effectiveFaction = 'alliance';
+    if (isShaman && effectiveFaction === 'alliance') effectiveFaction = 'horde';
+
     // Build timeline items with faction awareness
     let displayedCount = 0;
     const stepCards = data.levels.map((step, idx) => {
       let displayStep = { ...step };
       let displayAlts = (step.alts || []).slice();
 
-      if (activeWeaponFaction !== 'all') {
+      if (effectiveFaction !== 'all') {
         const stepFaction = step.faction || 'both';
-        if (stepFaction !== 'both' && stepFaction !== activeWeaponFaction) {
-          // If primary does not match active faction, look for a matching alt to promote
-          const matchIdx = displayAlts.findIndex(a => (a.faction || 'both') === activeWeaponFaction);
+        if (stepFaction !== 'both' && stepFaction !== effectiveFaction) {
+          // If primary does not match active faction, look for a matching alt to promote:
+          // 1. Prefer alt matching effectiveFaction
+          // 2. Fallback to neutral alt available to both factions
+          let matchIdx = displayAlts.findIndex(a => a.faction === effectiveFaction);
+          if (matchIdx === -1) {
+            matchIdx = displayAlts.findIndex(a => (a.faction || 'both') === 'both');
+          }
+
           if (matchIdx !== -1) {
             const altMatch = displayAlts[matchIdx];
+            const valStr = altMatch.value || '';
+            const dpsMatch = altMatch.dps || valStr.match(/([\d.]+\s*DPS)/i)?.[1] || '';
+            const spdMatch = altMatch.speed || valStr.match(/([\d.]+s)/i)?.[1]?.replace('s', '') || '';
+
             displayStep = {
               ...step,
               itemId: altMatch.itemId || null,
               name: altMatch.name,
               icon: altMatch.icon || step.icon,
               weaponType: altMatch.weaponType || step.weaponType,
-              speed: altMatch.speed || step.speed,
-              dps: altMatch.dps || '',
+              speed: spdMatch || altMatch.speed || step.speed,
+              dps: dpsMatch || (altMatch.dps ? `${altMatch.dps} DPS` : step.dps),
               source: altMatch.source || { kind: 'quest', title: altMatch.name, detail: altMatch.value || '' },
-              faction: altMatch.faction || activeWeaponFaction
+              faction: altMatch.faction || effectiveFaction
             };
             displayAlts = displayAlts.filter((_, i) => i !== matchIdx);
           } else {
@@ -162,7 +179,7 @@
         // Filter alts to only show active faction or both
         displayAlts = displayAlts.filter(alt => {
           const f = alt.faction || 'both';
-          return f === 'both' || f === activeWeaponFaction;
+          return f === 'both' || f === effectiveFaction;
         });
       }
 
@@ -257,13 +274,13 @@
         <div class="progression-controls-bar weapon-controls-bar">
           <div class="faction-filter-toggle" id="weapon-faction-toggle">
             <span class="filter-toggle-label">Faction:</span>
-            <button type="button" class="faction-chip ${activeWeaponFaction === 'all' ? 'active' : ''}" data-faction="all" aria-label="Show all weapons">
+            <button type="button" class="faction-chip ${effectiveFaction === 'all' ? 'active' : ''}" data-faction="all" aria-label="Show all weapons">
               <span class="faction-icon">🌐</span> All
             </button>
-            <button type="button" class="faction-chip faction-alliance ${activeWeaponFaction === 'alliance' ? 'active' : ''}" data-faction="alliance" aria-label="Filter to Alliance weapons">
+            <button type="button" class="faction-chip faction-alliance ${effectiveFaction === 'alliance' ? 'active' : ''}" data-faction="alliance" ${isShaman ? 'disabled style="opacity:0.35;cursor:not-allowed;" title="Shamans are exclusive to the Horde"' : 'aria-label="Filter to Alliance weapons"'}>
               <span class="faction-icon">🦁</span> Alliance
             </button>
-            <button type="button" class="faction-chip faction-horde ${activeWeaponFaction === 'horde' ? 'active' : ''}" data-faction="horde" aria-label="Filter to Horde weapons">
+            <button type="button" class="faction-chip faction-horde ${effectiveFaction === 'horde' ? 'active' : ''}" data-faction="horde" ${isPaladin ? 'disabled style="opacity:0.35;cursor:not-allowed;" title="Paladins are exclusive to the Alliance"' : 'aria-label="Filter to Horde weapons"'}>
               <span class="faction-icon">⚔️</span> Horde
             </button>
           </div>

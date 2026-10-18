@@ -34,13 +34,15 @@ const weaponsData = {
             "name": "Club",
             "itemId": 2491,
             "value": "1.8 DPS - Starter vendor mace",
-            "faction": "both"
+            "faction": "both",
+            "dps": "1.8 DPS"
           },
           {
             "name": "Worn Shortsword",
             "itemId": 25,
             "value": "1.7 DPS - Starter 1H sword",
-            "faction": "both"
+            "faction": "both",
+            "dps": "1.7 DPS"
           }
         ],
         "faction": "both"
@@ -63,16 +65,22 @@ const weaponsData = {
             "name": "Large Club",
             "itemId": 2492,
             "value": "3.8 DPS - Early vendor 2H mace",
-            "faction": "both"
+            "faction": "both",
+            "dps": "2.78 DPS",
+            "speed": "1.80",
+            "weaponType": "One-handed mace"
           },
           {
             "name": "Copper Axe",
             "itemId": 2845,
             "value": "3.8 DPS - Crafted Blacksmithing (skill 20)",
-            "faction": "both"
+            "faction": "both",
+            "dps": "3.75 DPS",
+            "speed": "2.40",
+            "weaponType": "One-handed axe"
           }
         ],
-        "faction": "horde"
+        "faction": "both"
       },
       {
         "levelBracket": "5–6",
@@ -92,19 +100,28 @@ const weaponsData = {
             "name": "Copper Battle Axe",
             "itemId": 3488,
             "value": "9.0 DPS, 3.50s - Crafted Blacksmithing (30)",
-            "faction": "both"
+            "faction": "both",
+            "dps": "9 DPS",
+            "speed": "3.50",
+            "weaponType": "Two-handed axe"
           },
           {
             "name": "Rough Boomstick",
             "itemId": 4362,
             "value": "4.1 DPS - Engineering ranged pulling gun",
-            "faction": "both"
+            "faction": "both",
+            "dps": "4.13 DPS",
+            "speed": "2.30",
+            "weaponType": "Gun"
           },
           {
             "name": "Goblin Smasher",
             "itemId": 4964,
             "value": "8.2 DPS, 3.10s - Mulgore Quest: Supervisor Fizsprocket",
-            "faction": "horde"
+            "faction": "horde",
+            "dps": "8.23 DPS",
+            "speed": "3.10",
+            "weaponType": "Two-handed mace"
           }
         ],
         "faction": "both"
@@ -127,25 +144,35 @@ const weaponsData = {
             "name": "Copper Battle Axe",
             "itemId": 3488,
             "value": "9.0 DPS, 3.50s - Heavy burst swing",
-            "faction": "both"
+            "faction": "both",
+            "dps": "9 DPS",
+            "speed": "3.50",
+            "weaponType": "Two-handed axe"
           },
           {
             "name": "Staff of the Dor'Danil",
             "itemId": 15396,
             "value": "8.5 DPS - Teldrassil quest reward",
-            "faction": "alliance"
+            "faction": "alliance",
+            "dps": "8.5 DPS"
           },
           {
             "name": "Riptear's Cleaver",
             "itemId": 286742,
             "value": "8.9 DPS, 3.30s - Durotar Quest: Rear Guard Patrol",
-            "faction": "horde"
+            "faction": "horde",
+            "dps": "8.94 DPS",
+            "speed": "3.30",
+            "weaponType": "Two-handed axe"
           },
           {
             "name": "Bonecracker",
             "itemId": 3440,
             "value": "9.1 DPS, 3.20s - Tirisfal Quest: The Family Crypt",
-            "faction": "horde"
+            "faction": "horde",
+            "dps": "9.06 DPS",
+            "speed": "3.20",
+            "weaponType": "Two-handed mace"
           }
         ],
         "faction": "alliance"
@@ -168,28 +195,48 @@ const weaponsData = {
             "name": "Trogg Scepter",
             "itemId": 272996,
             "value": "8.1 DPS, 2.40s - Ragefire Chasm: Oggleflint",
-            "faction": "both"
+            "faction": "both",
+            "dps": "8.13 DPS",
+            "speed": "2.40",
+            "weaponType": "One-handed mace"
           },
           {
             "name": "Thick War Axe",
             "itemId": 3489,
             "value": "8.6 DPS - 1H Axe from Blacksmithing (45)",
-            "faction": "both"
+            "faction": "both",
+            "dps": "8.6 DPS",
+            "speed": "2.50",
+            "weaponType": "One-handed axe"
           },
           {
             "name": "Thun'grim's Axe",
             "itemId": 7326,
             "value": "7.8 DPS, 2.70s - Horde Warrior Quest: Forged Steel",
-            "faction": "horde"
+            "faction": "horde",
+            "dps": "7.78 DPS",
+            "speed": "2.70",
+            "weaponType": "One-handed axe"
           },
           {
             "name": "Thun'grim's Sword",
             "itemId": 7329,
             "value": "7.8 DPS, 2.60s - Horde Warrior Quest: Forged Steel",
-            "faction": "horde"
+            "faction": "horde",
+            "dps": "7.8 DPS",
+            "speed": "2.60"
+          },
+          {
+            "name": "Ironforge Greathammer",
+            "itemId": 279895,
+            "weaponType": "Two-handed mace",
+            "speed": "3.30",
+            "dps": "16.0 DPS",
+            "value": "16.0 DPS, 3.30s - Ironforge Quest",
+            "faction": "alliance"
           }
         ],
-        "faction": "alliance"
+        "faction": "both"
       },
       {
         "levelBracket": "11–12",
@@ -209,19 +256,35 @@ const weaponsData = {
             "name": "Woodchopper",
             "itemId": 2520,
             "value": "10.5 DPS - Vendor 2H Axe",
-            "faction": "both"
+            "faction": "both",
+            "dps": "10.5 DPS"
           },
           {
             "name": "Trogg Scepter",
             "itemId": 272996,
             "value": "8.1 DPS - RFC: Oggleflint",
-            "faction": "both"
+            "faction": "both",
+            "dps": "8.13 DPS",
+            "speed": "2.40",
+            "weaponType": "One-handed mace"
           },
           {
             "name": "Axe of Orgrimmar",
             "itemId": 15424,
             "value": "16.1 DPS, 3.30s, +6 Sta, +6 Spi - RFC Quest: Hidden Enemies",
-            "faction": "horde"
+            "faction": "horde",
+            "dps": "16.06 DPS",
+            "speed": "3.30",
+            "weaponType": "Two-handed axe"
+          },
+          {
+            "name": "Ironforge Greathammer",
+            "itemId": 279895,
+            "weaponType": "Two-handed mace",
+            "speed": "3.30",
+            "dps": "16.0 DPS",
+            "value": "16.0 DPS, 3.30s - Ironforge Quest",
+            "faction": "alliance"
           }
         ],
         "faction": "both"
@@ -244,19 +307,37 @@ const weaponsData = {
             "name": "Durgen's Crescent Axe",
             "itemId": 270227,
             "value": "15.5 DPS, 2.40s, +5 Str, +2 Sta - Hall of Thanes: Durgen",
-            "faction": "both"
+            "faction": "both",
+            "dps": "12.29 DPS",
+            "speed": "2.40",
+            "weaponType": "One-handed axe"
           },
           {
             "name": "Heavy Copper Broadsword",
             "itemId": 3487,
             "value": "12.6 DPS - Crafted Blacksmithing (skill 65)",
-            "faction": "both"
+            "faction": "both",
+            "dps": "12.58 DPS",
+            "speed": "3.30",
+            "weaponType": "Two-handed sword"
           },
           {
             "name": "Axe of Orgrimmar",
             "itemId": 15424,
             "value": "16.1 DPS, 3.30s, +6 Sta, +6 Spi - RFC Quest: Hidden Enemies",
-            "faction": "horde"
+            "faction": "horde",
+            "dps": "16.06 DPS",
+            "speed": "3.30",
+            "weaponType": "Two-handed axe"
+          },
+          {
+            "name": "Bone Knuckles",
+            "itemId": 272998,
+            "weaponType": "Fist Weapon",
+            "speed": "2.00",
+            "dps": "12.3 DPS",
+            "value": "12.3 DPS, 2.00s - RFC Drop",
+            "faction": "both"
           }
         ],
         "faction": "alliance"
@@ -277,15 +358,21 @@ const weaponsData = {
         "alts": [
           {
             "name": "Monstrous Cleaver",
-            "itemId": 279890,
-            "value": "17.5 DPS, 3.20s - Ruins of Lordaeron Quest: Abominable Creatures",
-            "faction": "both"
+            "itemId": 279864,
+            "value": "15.2 DPS, 3.30s - Dalaran Dungeon",
+            "faction": "both",
+            "dps": "15.2 DPS",
+            "speed": "3.30",
+            "weaponType": "Two-handed sword"
           },
           {
             "name": "Meathook Slicer",
             "itemId": 271101,
             "value": "13.2 DPS - Ruins of Lordaeron: The Baron",
-            "faction": "both"
+            "faction": "both",
+            "dps": "13.61 DPS",
+            "speed": "1.80",
+            "weaponType": "Dagger"
           }
         ],
         "faction": "both"
@@ -308,18 +395,36 @@ const weaponsData = {
             "name": "Smite's Mighty Hammer",
             "itemId": 7230,
             "value": "19.7 DPS, 3.50s - The Deadmines: Mr. Smite",
-            "faction": "both"
+            "faction": "both",
+            "dps": "19.71 DPS",
+            "speed": "3.50",
+            "weaponType": "Two-handed mace"
           },
           {
             "name": "Haunting Blade",
             "itemId": 271107,
             "value": "18.2 DPS, 3.00s, +6 Str, +5 Sta - Ruins of Lordaeron: Captain",
-            "faction": "both"
+            "faction": "both",
+            "dps": "22.37 DPS",
+            "speed": "3.80",
+            "weaponType": "Two-handed sword"
           },
           {
             "name": "Vileblood Scimitar",
             "itemId": 271106,
             "value": "15.0 DPS, 2.20s - Ruins of Lordaeron: Viktor the Vile",
+            "faction": "both",
+            "dps": "14.62 DPS",
+            "speed": "2.60",
+            "weaponType": "One-handed sword"
+          },
+          {
+            "name": "Sword of the Fallen",
+            "itemId": 286977,
+            "weaponType": "Two-handed sword",
+            "speed": "3.50",
+            "dps": "19.7 DPS",
+            "value": "19.7 DPS, 3.50s - Rare Drop",
             "faction": "both"
           }
         ],
@@ -343,13 +448,19 @@ const weaponsData = {
             "name": "Bronze Warhammer",
             "itemId": 7956,
             "value": "17.4 DPS - Blacksmithing (90)",
-            "faction": "both"
+            "faction": "both",
+            "dps": "16.86 DPS",
+            "speed": "3.50",
+            "weaponType": "Two-handed mace"
           },
           {
             "name": "Taskmaster Axe",
             "itemId": 5194,
             "value": "17.3 DPS, 2.70s - The Deadmines: Sneed",
-            "faction": "both"
+            "faction": "both",
+            "dps": "14.63 DPS",
+            "speed": "2.70",
+            "weaponType": "Two-handed axe"
           }
         ],
         "faction": "both"
@@ -372,19 +483,37 @@ const weaponsData = {
             "name": "Strike of the Hydra",
             "itemId": 6909,
             "value": "25.6 DPS, 3.30s - BFD: Aku'mai",
-            "faction": "both"
+            "faction": "both",
+            "dps": "25.61 DPS",
+            "speed": "3.30",
+            "weaponType": "Two-handed sword"
           },
           {
             "name": "Taurenbane's Family Cleaver",
             "itemId": 285328,
             "value": "22.9 DPS, 3.40s, +9 Sta, +32 AP - Barrens Rare: Hagg Taurenbane",
-            "faction": "both"
+            "faction": "both",
+            "dps": "22.94 DPS",
+            "speed": "3.40",
+            "weaponType": "Two-handed axe"
           },
           {
             "name": "Bronze Battle Axe",
             "itemId": 7958,
             "value": "18.8 DPS - Crafted Blacksmithing (105)",
-            "faction": "both"
+            "faction": "both",
+            "dps": "18.33 DPS",
+            "speed": "3.30",
+            "weaponType": "Two-handed axe"
+          },
+          {
+            "name": "Alliance Outrunner's Sword",
+            "itemId": 285346,
+            "weaponType": "One-handed sword",
+            "speed": "2.10",
+            "dps": "17.1 DPS",
+            "value": "17.1 DPS, 2.10s - Alliance Outrunner Drop",
+            "faction": "alliance"
           }
         ],
         "faction": "both"
@@ -407,12 +536,27 @@ const weaponsData = {
             "name": "Strike of the Hydra",
             "itemId": 6909,
             "value": "25.6 DPS, 3.30s - BFD: Aku'mai",
-            "faction": "both"
+            "faction": "both",
+            "dps": "25.61 DPS",
+            "speed": "3.30",
+            "weaponType": "Two-handed sword"
           },
           {
             "name": "Heavy Mithril Axe",
             "itemId": 3854,
             "value": "20.5 DPS - Blacksmithing (130)",
+            "faction": "both",
+            "dps": "28.82 DPS",
+            "speed": "3.40",
+            "weaponType": "Two-handed sword"
+          },
+          {
+            "name": "The Skyblade",
+            "itemId": 286540,
+            "weaponType": "Two-handed sword",
+            "speed": "3.60",
+            "dps": "22.4 DPS",
+            "value": "22.4 DPS, 3.60s - Ashenvale Rare",
             "faction": "both"
           }
         ],
@@ -435,20 +579,29 @@ const weaponsData = {
           {
             "name": "Trusty Sword",
             "itemId": 281313,
-            "value": "26.7 DPS, 3.30s, +12 Sta, +12 Spi - Wetlands Quest: Stopping the Cycle",
-            "faction": "both"
+            "value": "26.7 DPS, 3.20s - Redridge Quest",
+            "faction": "both",
+            "dps": "26.7 DPS",
+            "speed": "3.20",
+            "weaponType": "Two-handed sword"
           },
           {
             "name": "Dendweller's Hammer",
             "itemId": 284459,
             "value": "25.6 DPS, 3.30s - Level 26 Mace",
-            "faction": "both"
+            "faction": "both",
+            "dps": "25.61 DPS",
+            "speed": "3.30",
+            "weaponType": "Two-handed mace"
           },
           {
             "name": "Solid Iron Maul",
             "itemId": 3851,
             "value": "22.8 DPS - Blacksmithing (135)",
-            "faction": "both"
+            "faction": "both",
+            "dps": "15.57 DPS",
+            "speed": "3.50",
+            "weaponType": "Two-handed mace"
           }
         ],
         "faction": "both"
@@ -471,13 +624,19 @@ const weaponsData = {
             "name": "Felbough Arm",
             "itemId": 273037,
             "value": "28.8 DPS, 3.00s, +10 Agi, +10 Hit - City of Dalaran: Fel Ancient",
-            "faction": "both"
+            "faction": "both",
+            "dps": "28.83 DPS",
+            "speed": "3.00",
+            "weaponType": "Polearm"
           },
           {
             "name": "Defender of Dalaran",
             "itemId": 279841,
             "value": "31.2 DPS, 3.30s - City of Dalaran Quest: Heart of Disruption",
-            "faction": "both"
+            "faction": "both",
+            "dps": "31.21 DPS",
+            "speed": "3.30",
+            "weaponType": "Two-handed mace"
           }
         ],
         "faction": "both"
@@ -500,30 +659,54 @@ const weaponsData = {
             "name": "Whirlwind Warhammer",
             "itemId": 6976,
             "value": "35.6 DPS, 3.60s - Mace alternative from class quest",
-            "faction": "both"
+            "faction": "both",
+            "dps": "35.74 DPS",
+            "speed": "3.40",
+            "weaponType": "Two-handed mace"
           },
           {
             "name": "Whirlwind Sword",
             "itemId": 6977,
             "value": "35.6 DPS, 3.60s - Sword alternative from class quest",
-            "faction": "both"
+            "faction": "both",
+            "dps": "35.52 DPS",
+            "speed": "2.90",
+            "weaponType": "Two-handed sword"
           },
           {
             "name": "Dark Hearted Hammer",
             "itemId": 270071,
             "value": "28.9 DPS, 3.80s, +12 Str, +8 Sta - STV Quest: Colonel Kurzen",
-            "faction": "both"
+            "faction": "both",
+            "dps": "28.95 DPS",
+            "speed": "3.80",
+            "weaponType": "Two-handed mace"
           },
           {
             "name": "Master Hunter's Spellsword",
             "itemId": 270085,
             "value": "32.5 DPS, 2.40s - STV Quest: Big Game Hunter",
-            "faction": "both"
+            "faction": "both",
+            "dps": "32.5 DPS",
+            "speed": "2.40",
+            "weaponType": "Two-handed sword"
           },
           {
             "name": "Corpsemaker",
             "itemId": 6687,
             "value": "28.9 DPS, 3.80s - RFK: Overlord Ramtusk",
+            "faction": "both",
+            "dps": "28.95 DPS",
+            "speed": "3.80",
+            "weaponType": "Two-handed axe"
+          },
+          {
+            "name": "Rage of the Storm",
+            "itemId": 280604,
+            "weaponType": "Two-handed mace",
+            "speed": "3.20",
+            "dps": "35.6 DPS",
+            "value": "35.6 DPS, 3.20s - Custom Boss Drop",
             "faction": "both"
           }
         ],
@@ -547,19 +730,28 @@ const weaponsData = {
             "name": "Whirlwind Axe",
             "itemId": 6975,
             "value": "35.6 DPS, 3.60s - Class quest spike remains dominant",
-            "faction": "both"
+            "faction": "both",
+            "dps": "35.56 DPS",
+            "speed": "3.60",
+            "weaponType": "Two-handed axe"
           },
           {
             "name": "Manual Crowd Pummeler",
             "itemId": 9449,
             "value": "31.5 DPS, 2.00s - Gnomeregan: Crowd Pummeler 9-60",
-            "faction": "both"
+            "faction": "both",
+            "dps": "29 DPS",
+            "speed": "2.00",
+            "weaponType": "Two-handed mace"
           },
           {
             "name": "Mighty Iron Hammer",
             "itemId": 3492,
             "value": "25.0 DPS - Blacksmithing (145)",
-            "faction": "both"
+            "faction": "both",
+            "dps": "15.54 DPS",
+            "speed": "2.80",
+            "weaponType": "One-handed mace"
           }
         ],
         "faction": "both"
@@ -582,25 +774,36 @@ const weaponsData = {
             "name": "Mograine's Might",
             "itemId": 7726,
             "value": "38.9 DPS, 3.50s, +16 Str, +17 Sta - SM Cath: Mograine",
-            "faction": "both"
+            "faction": "both",
+            "dps": "38.82 DPS",
+            "speed": "3.40",
+            "weaponType": "Two-handed mace"
           },
           {
             "name": "Bonebiter",
             "itemId": 6807,
             "value": "38.8 DPS, 3.40s - Alliance Quest: In the Name of the Light",
-            "faction": "alliance"
+            "faction": "alliance",
+            "dps": "38.82 DPS",
+            "speed": "3.40",
+            "weaponType": "Two-handed axe"
           },
           {
             "name": "Sword of Serenity",
             "itemId": 6829,
             "value": "30.0 DPS, 2.20s, +9 Sta, +4 Spi - Alliance SM Quest: In the Name of the Light",
-            "faction": "alliance"
+            "faction": "alliance",
+            "dps": "30 DPS",
+            "speed": "2.20",
+            "weaponType": "One-handed sword"
           },
           {
             "name": "Sword of Omen",
             "itemId": 6802,
             "value": "29.7 DPS, 2.20s, +9 Str, +4 Sta, +3 Agi - Horde SM Quest: Into The Scarlet Monastery",
-            "faction": "horde"
+            "faction": "horde",
+            "dps": "29.7 DPS",
+            "speed": "2.20"
           }
         ],
         "faction": "both"
@@ -623,12 +826,26 @@ const weaponsData = {
             "name": "Stoneslayer",
             "itemId": 9413,
             "value": "40.5 DPS, 3.90s - Uldaman: Archaedas",
-            "faction": "both"
+            "faction": "both",
+            "dps": "40.5 DPS",
+            "speed": "3.90"
           },
           {
             "name": "The Pacifier",
             "itemId": 13053,
             "value": "40.0 DPS - World Drop BoE Mace",
+            "faction": "both",
+            "dps": "36.63 DPS",
+            "speed": "4.00",
+            "weaponType": "Two-handed mace"
+          },
+          {
+            "name": "Gul'gash's Greathammer",
+            "itemId": 281648,
+            "weaponType": "Two-handed mace",
+            "speed": "3.60",
+            "dps": "42.8 DPS",
+            "value": "42.8 DPS, 3.60s - Feralas Drop",
             "faction": "both"
           }
         ],
@@ -652,13 +869,19 @@ const weaponsData = {
             "name": "Princess Theradras' Scepter",
             "itemId": 17780,
             "value": "47.1 DPS, 3.40s - Maraudon: Princess Theradras",
-            "faction": "both"
+            "faction": "both",
+            "dps": "46.47 DPS",
+            "speed": "3.40",
+            "weaponType": "Two-handed mace"
           },
           {
             "name": "Warmonger",
             "itemId": 13052,
             "value": "44.6 DPS, 3.50s, +3% Hit - World drop 2H sword",
-            "faction": "both"
+            "faction": "both",
+            "dps": "45 DPS",
+            "speed": "3.00",
+            "weaponType": "Two-handed sword"
           }
         ],
         "faction": "both"
@@ -681,13 +904,18 @@ const weaponsData = {
             "name": "Dreadforge Retaliator",
             "itemId": 11931,
             "value": "49.3 DPS, 3.70s - BRD: Emperor Dagran Thaurissan",
-            "faction": "both"
+            "faction": "both",
+            "dps": "49.3 DPS",
+            "speed": "3.70"
           },
           {
             "name": "Enchanted Battlehammer",
             "itemId": 12776,
             "value": "48.3 DPS, 3.50s - Crafted Blacksmithing (280)",
-            "faction": "both"
+            "faction": "both",
+            "dps": "48.29 DPS",
+            "speed": "3.50",
+            "weaponType": "Two-handed mace"
           }
         ],
         "faction": "both"
@@ -710,24 +938,41 @@ const weaponsData = {
             "name": "Blackhand Doomsaw",
             "itemId": 12583,
             "value": "55.4 DPS, 3.50s, 420 bleed proc - LBRS: Warmaster Voone",
-            "faction": "both"
+            "faction": "both",
+            "dps": "55.4 DPS",
+            "speed": "3.50"
           },
           {
             "name": "Blackblade of Shahram",
             "itemId": 12592,
             "value": "53.6 DPS, 3.50s - UBRS: General Drakkisath",
-            "faction": "both"
+            "faction": "both",
+            "dps": "53.6 DPS",
+            "speed": "3.50"
           },
           {
             "name": "The Unstoppable Force",
             "itemId": 18803,
             "value": "61.4 DPS, 3.80s, Stun proc - Alterac Valley Exalted",
-            "faction": "both"
+            "faction": "both",
+            "dps": "56.53 DPS",
+            "speed": "3.60",
+            "weaponType": "Two-handed mace"
           },
           {
             "name": "Dreadforge Retaliator",
             "itemId": 11931,
             "value": "49.3 DPS - BRD Emperor",
+            "faction": "both",
+            "dps": "49.3 DPS"
+          },
+          {
+            "name": "Icesworn Decapitator",
+            "itemId": 284257,
+            "weaponType": "Two-handed axe",
+            "speed": "3.60",
+            "dps": "50.6 DPS",
+            "value": "50.6 DPS, 3.60s - Winterspring Rare",
             "faction": "both"
           }
         ],
@@ -762,13 +1007,15 @@ const weaponsData = {
             "name": "Club",
             "itemId": 2491,
             "value": "1.8 DPS - Starter vendor mace",
-            "faction": "both"
+            "faction": "both",
+            "dps": "1.8 DPS"
           },
           {
             "name": "Worn Shortsword",
             "itemId": 25,
             "value": "1.7 DPS - Starter sword",
-            "faction": "both"
+            "faction": "both",
+            "dps": "1.7 DPS"
           }
         ],
         "faction": "alliance"
@@ -791,13 +1038,19 @@ const weaponsData = {
             "name": "Large Club",
             "itemId": 2492,
             "value": "3.8 DPS - Starter vendor 2H mace",
-            "faction": "both"
+            "faction": "both",
+            "dps": "2.78 DPS",
+            "speed": "1.80",
+            "weaponType": "One-handed mace"
           },
           {
             "name": "Copper Shortsword",
             "itemId": 2847,
             "value": "4.0 DPS - Blacksmithing (20)",
-            "faction": "both"
+            "faction": "both",
+            "dps": "5.4 DPS",
+            "speed": "2.50",
+            "weaponType": "One-handed sword"
           }
         ],
         "faction": "both"
@@ -820,13 +1073,19 @@ const weaponsData = {
             "name": "Large Club",
             "itemId": 2492,
             "value": "3.8 DPS - Vendor 2H mace",
-            "faction": "both"
+            "faction": "both",
+            "dps": "2.78 DPS",
+            "speed": "1.80",
+            "weaponType": "One-handed mace"
           },
           {
             "name": "Copper Mace",
             "itemId": 2844,
             "value": "3.8 DPS - Blacksmithing (15)",
-            "faction": "both"
+            "faction": "both",
+            "dps": "3.85 DPS",
+            "speed": "2.60",
+            "weaponType": "One-handed mace"
           }
         ],
         "faction": "both"
@@ -849,13 +1108,19 @@ const weaponsData = {
             "name": "Giant Mace",
             "itemId": 1197,
             "value": "9.0 DPS, 3.50s - Town vendor 2H mace",
-            "faction": "both"
+            "faction": "both",
+            "dps": "9 DPS",
+            "speed": "3.50",
+            "weaponType": "Two-handed mace"
           },
           {
             "name": "Copper Claymore",
             "itemId": 7955,
             "value": "7.7 DPS - Blacksmithing (25)",
-            "faction": "both"
+            "faction": "both",
+            "dps": "7.73 DPS",
+            "speed": "3.30",
+            "weaponType": "Two-handed sword"
           }
         ],
         "faction": "alliance"
@@ -878,16 +1143,31 @@ const weaponsData = {
             "name": "Trogg Scepter",
             "itemId": 272996,
             "value": "8.1 DPS, 2.40s - RFC: Oggleflint 1H mace",
-            "faction": "both"
+            "faction": "both",
+            "dps": "8.13 DPS",
+            "speed": "2.40",
+            "weaponType": "One-handed mace"
           },
           {
             "name": "Heavy Copper Broadsword",
             "itemId": 3487,
             "value": "12.6 DPS, 3.00s - Blacksmithing (65)",
-            "faction": "both"
+            "faction": "both",
+            "dps": "12.58 DPS",
+            "speed": "3.30",
+            "weaponType": "Two-handed sword"
+          },
+          {
+            "name": "Ironforge Greathammer",
+            "itemId": 279895,
+            "weaponType": "Two-handed mace",
+            "speed": "3.30",
+            "dps": "16.0 DPS",
+            "value": "16.0 DPS, 3.30s - Ironforge Quest",
+            "faction": "alliance"
           }
         ],
-        "faction": "alliance"
+        "faction": "both"
       },
       {
         "levelBracket": "11–12",
@@ -907,13 +1187,28 @@ const weaponsData = {
             "name": "Giant Mace",
             "itemId": 1197,
             "value": "9.0 DPS - Slow 3.50s swing",
-            "faction": "both"
+            "faction": "both",
+            "dps": "9 DPS",
+            "speed": "3.50",
+            "weaponType": "Two-handed mace"
           },
           {
             "name": "Heavy Copper Broadsword",
             "itemId": 3487,
             "value": "12.6 DPS - Blacksmithing (65)",
-            "faction": "both"
+            "faction": "both",
+            "dps": "12.58 DPS",
+            "speed": "3.30",
+            "weaponType": "Two-handed sword"
+          },
+          {
+            "name": "Ironforge Greathammer",
+            "itemId": 279895,
+            "weaponType": "Two-handed mace",
+            "speed": "3.30",
+            "dps": "16.0 DPS",
+            "value": "16.0 DPS, 3.30s - Ironforge Quest",
+            "faction": "alliance"
           }
         ],
         "faction": "both"
@@ -936,13 +1231,19 @@ const weaponsData = {
             "name": "Heavy Copper Broadsword",
             "itemId": 3487,
             "value": "12.6 DPS - Blacksmithing (65)",
-            "faction": "both"
+            "faction": "both",
+            "dps": "12.58 DPS",
+            "speed": "3.30",
+            "weaponType": "Two-handed sword"
           },
           {
             "name": "Bronze Mace",
             "itemId": 2848,
             "value": "10.5 DPS - Blacksmithing (75)",
-            "faction": "both"
+            "faction": "both",
+            "dps": "11.15 DPS",
+            "speed": "2.60",
+            "weaponType": "One-handed mace"
           }
         ],
         "faction": "alliance"
@@ -965,13 +1266,19 @@ const weaponsData = {
             "name": "Haunting Blade",
             "itemId": 271107,
             "value": "18.2 DPS, 3.00s, +6 Str, +5 Sta - Ruins of Lordaeron: Captain",
-            "faction": "both"
+            "faction": "both",
+            "dps": "22.37 DPS",
+            "speed": "3.80",
+            "weaponType": "Two-handed sword"
           },
           {
             "name": "Monstrous Cleaver",
-            "itemId": 279890,
-            "value": "17.5 DPS, 3.20s - Ruins of Lordaeron Quest: Abominable Creatures",
-            "faction": "both"
+            "itemId": 279864,
+            "value": "15.2 DPS, 3.30s - Dalaran Dungeon",
+            "faction": "both",
+            "dps": "15.2 DPS",
+            "speed": "3.30",
+            "weaponType": "Two-handed sword"
           }
         ],
         "faction": "both"
@@ -994,12 +1301,27 @@ const weaponsData = {
             "name": "Haunting Blade",
             "itemId": 271107,
             "value": "18.2 DPS, 3.00s - Ruins of Lordaeron: Captain",
-            "faction": "both"
+            "faction": "both",
+            "dps": "22.37 DPS",
+            "speed": "3.80",
+            "weaponType": "Two-handed sword"
           },
           {
             "name": "Bronze Warhammer",
             "itemId": 7956,
             "value": "17.4 DPS, 3.30s - Blacksmithing (90)",
+            "faction": "both",
+            "dps": "16.86 DPS",
+            "speed": "3.50",
+            "weaponType": "Two-handed mace"
+          },
+          {
+            "name": "Sword of the Fallen",
+            "itemId": 286977,
+            "weaponType": "Two-handed sword",
+            "speed": "3.50",
+            "dps": "19.7 DPS",
+            "value": "19.7 DPS, 3.50s - Rare Drop",
             "faction": "both"
           }
         ],
@@ -1023,13 +1345,19 @@ const weaponsData = {
             "name": "Bronze Warhammer",
             "itemId": 7956,
             "value": "17.4 DPS - Blacksmithing (90)",
-            "faction": "both"
+            "faction": "both",
+            "dps": "16.86 DPS",
+            "speed": "3.50",
+            "weaponType": "Two-handed mace"
           },
           {
             "name": "Bronze Greatsword",
             "itemId": 7957,
             "value": "18.8 DPS - Blacksmithing (105)",
-            "faction": "both"
+            "faction": "both",
+            "dps": "17.5 DPS",
+            "speed": "3.40",
+            "weaponType": "Two-handed sword"
           }
         ],
         "faction": "alliance"
@@ -1052,12 +1380,27 @@ const weaponsData = {
             "name": "Strike of the Hydra",
             "itemId": 6909,
             "value": "25.6 DPS, 3.30s - BFD: Aku'mai",
-            "faction": "both"
+            "faction": "both",
+            "dps": "25.61 DPS",
+            "speed": "3.30",
+            "weaponType": "Two-handed sword"
           },
           {
             "name": "Solid Iron Maul",
             "itemId": 3851,
             "value": "22.8 DPS - Blacksmithing (135)",
+            "faction": "both",
+            "dps": "15.57 DPS",
+            "speed": "3.50",
+            "weaponType": "Two-handed mace"
+          },
+          {
+            "name": "The Skyblade",
+            "itemId": 286540,
+            "weaponType": "Two-handed sword",
+            "speed": "3.60",
+            "dps": "22.4 DPS",
+            "value": "22.4 DPS, 3.60s - Ashenvale Rare",
             "faction": "both"
           }
         ],
@@ -1080,19 +1423,37 @@ const weaponsData = {
           {
             "name": "Trusty Sword",
             "itemId": 281313,
-            "value": "26.7 DPS, 3.30s, +12 Sta, +12 Spi - Wetlands Quest: Stopping the Cycle",
-            "faction": "both"
+            "value": "26.7 DPS, 3.20s - Redridge Quest",
+            "faction": "both",
+            "dps": "26.7 DPS",
+            "speed": "3.20",
+            "weaponType": "Two-handed sword"
           },
           {
             "name": "Dendweller's Hammer",
             "itemId": 284459,
             "value": "25.6 DPS, 3.30s - Level 26 Mace",
-            "faction": "both"
+            "faction": "both",
+            "dps": "25.61 DPS",
+            "speed": "3.30",
+            "weaponType": "Two-handed mace"
           },
           {
             "name": "Hardened Iron Shortsword",
             "itemId": 3849,
             "value": "19.5 DPS - Blacksmithing (130)",
+            "faction": "both",
+            "dps": "16.67 DPS",
+            "speed": "1.80",
+            "weaponType": "One-handed sword"
+          },
+          {
+            "name": "Defender of Dalaran",
+            "itemId": 279841,
+            "weaponType": "Two-handed mace",
+            "speed": "3.30",
+            "dps": "31.2 DPS",
+            "value": "31.2 DPS, 3.30s - Dalaran Dungeon",
             "faction": "both"
           }
         ],
@@ -1116,18 +1477,36 @@ const weaponsData = {
             "name": "Defender of Dalaran",
             "itemId": 279841,
             "value": "31.2 DPS, 3.30s, +9 Str, +13 Sta, +9 Int - City of Dalaran Quest: Heart of Disruption",
-            "faction": "both"
+            "faction": "both",
+            "dps": "31.21 DPS",
+            "speed": "3.30",
+            "weaponType": "Two-handed mace"
           },
           {
             "name": "Dark Hearted Hammer",
             "itemId": 270071,
             "value": "28.9 DPS, 3.80s, +12 Str, +8 Sta - STV Quest: Colonel Kurzen",
-            "faction": "both"
+            "faction": "both",
+            "dps": "28.95 DPS",
+            "speed": "3.80",
+            "weaponType": "Two-handed mace"
           },
           {
             "name": "Master Hunter's Spellsword",
             "itemId": 270085,
             "value": "32.5 DPS, 2.40s - STV Quest: Big Game Hunter",
+            "faction": "both",
+            "dps": "32.5 DPS",
+            "speed": "2.40",
+            "weaponType": "Two-handed sword"
+          },
+          {
+            "name": "Rage of the Storm",
+            "itemId": 280604,
+            "weaponType": "Two-handed mace",
+            "speed": "3.20",
+            "dps": "35.6 DPS",
+            "value": "35.6 DPS, 3.20s - Custom Boss Drop",
             "faction": "both"
           }
         ],
@@ -1151,13 +1530,19 @@ const weaponsData = {
             "name": "Moonsteel Broadsword",
             "itemId": 3853,
             "value": "27.8 DPS - Crafted Blacksmithing (160)",
-            "faction": "both"
+            "faction": "both",
+            "dps": "24.71 DPS",
+            "speed": "3.50",
+            "weaponType": "Two-handed sword"
           },
           {
             "name": "Silver Spade",
             "itemId": 4128,
             "value": "27.2 DPS - Redridge quest",
-            "faction": "alliance"
+            "faction": "alliance",
+            "dps": "30.14 DPS",
+            "speed": "3.70",
+            "weaponType": "Two-handed mace"
           }
         ],
         "faction": "both"
@@ -1180,13 +1565,19 @@ const weaponsData = {
             "name": "Sword of Serenity",
             "itemId": 6802,
             "value": "33.0 DPS, 2.80s, +9 Sta, +15 Spi - Alliance Quest: In the Name of the Light",
-            "faction": "alliance"
+            "faction": "alliance",
+            "dps": "30 DPS",
+            "speed": "2.20",
+            "weaponType": "One-handed sword"
           },
           {
             "name": "Archeus",
             "itemId": 2000,
             "value": "30.8 DPS, 3.40s - Duskwood Morbent Fel quest",
-            "faction": "alliance"
+            "faction": "alliance",
+            "dps": "23.94 DPS",
+            "speed": "3.30",
+            "weaponType": "Two-handed sword"
           }
         ],
         "faction": "both"
@@ -1209,12 +1600,25 @@ const weaponsData = {
             "name": "The Pacifier",
             "itemId": 13053,
             "value": "40.0 DPS - BoE 2H Mace",
-            "faction": "both"
+            "faction": "both",
+            "dps": "36.63 DPS",
+            "speed": "4.00",
+            "weaponType": "Two-handed mace"
           },
           {
             "name": "Grisly Sack of Skulls",
             "itemId": 1959,
             "value": "40.3 DPS - World Drop",
+            "faction": "both",
+            "dps": "40.3 DPS"
+          },
+          {
+            "name": "Gul'gash's Greathammer",
+            "itemId": 281648,
+            "weaponType": "Two-handed mace",
+            "speed": "3.60",
+            "dps": "42.8 DPS",
+            "value": "42.8 DPS, 3.60s - Feralas Drop",
             "faction": "both"
           }
         ],
@@ -1238,13 +1642,17 @@ const weaponsData = {
             "name": "Blade of the Titans",
             "itemId": 13035,
             "value": "44.6 DPS, +12 Str, +12 Sta - World Drop 2H sword",
-            "faction": "both"
+            "faction": "both",
+            "dps": "44.6 DPS"
           },
           {
             "name": "Warmonger",
             "itemId": 13052,
             "value": "44.6 DPS, 3.50s, +3% Hit - World drop 2H sword",
-            "faction": "both"
+            "faction": "both",
+            "dps": "45 DPS",
+            "speed": "3.00",
+            "weaponType": "Two-handed sword"
           }
         ],
         "faction": "both"
@@ -1267,13 +1675,18 @@ const weaponsData = {
             "name": "Dreadforge Retaliator",
             "itemId": 11931,
             "value": "49.3 DPS, 3.70s - BRD: Emperor Dagran Thaurissan",
-            "faction": "both"
+            "faction": "both",
+            "dps": "49.3 DPS",
+            "speed": "3.70"
           },
           {
             "name": "Enchanted Battlehammer",
             "itemId": 12776,
             "value": "48.3 DPS, 3.50s - Crafted Blacksmithing (280)",
-            "faction": "both"
+            "faction": "both",
+            "dps": "48.29 DPS",
+            "speed": "3.50",
+            "weaponType": "Two-handed mace"
           }
         ],
         "faction": "both"
@@ -1296,19 +1709,25 @@ const weaponsData = {
             "name": "Blackblade of Shahram",
             "itemId": 12592,
             "value": "53.6 DPS, 3.50s - UBRS: General Drakkisath",
-            "faction": "both"
+            "faction": "both",
+            "dps": "53.6 DPS",
+            "speed": "3.50"
           },
           {
             "name": "The Unstoppable Force",
             "itemId": 18803,
             "value": "61.4 DPS, 3.80s, Stun proc - Alterac Valley Exalted",
-            "faction": "both"
+            "faction": "both",
+            "dps": "56.53 DPS",
+            "speed": "3.60",
+            "weaponType": "Two-handed mace"
           },
           {
             "name": "Dreadforge Retaliator",
             "itemId": 11931,
             "value": "49.3 DPS - BRD Emperor",
-            "faction": "both"
+            "faction": "both",
+            "dps": "49.3 DPS"
           }
         ],
         "faction": "both"
@@ -1342,7 +1761,10 @@ const weaponsData = {
             "name": "Hornwood Recurve Bow",
             "itemId": 2506,
             "value": "2.4 DPS - Starter vendor",
-            "faction": "both"
+            "faction": "both",
+            "dps": "2.38 DPS",
+            "speed": "2.10",
+            "weaponType": "Bow"
           }
         ],
         "faction": "both"
@@ -1365,13 +1787,19 @@ const weaponsData = {
             "name": "Rough Boomstick",
             "itemId": 4362,
             "value": "4.1 DPS, 2.30s - Crafted Engineering (30)",
-            "faction": "both"
+            "faction": "both",
+            "dps": "4.13 DPS",
+            "speed": "2.30",
+            "weaponType": "Gun"
           },
           {
             "name": "Kolkar Bow",
             "itemId": 286729,
             "value": "2.7 DPS, 2.80s - Durotar Quest: Lost in the Shadows",
-            "faction": "horde"
+            "faction": "horde",
+            "dps": "2.68 DPS",
+            "speed": "2.80",
+            "weaponType": "Bow"
           }
         ],
         "faction": "both"
@@ -1394,13 +1822,19 @@ const weaponsData = {
             "name": "Hornwood Recurve Bow",
             "itemId": 2506,
             "value": "2.4 DPS - Vendor fallback",
-            "faction": "both"
+            "faction": "both",
+            "dps": "2.38 DPS",
+            "speed": "2.10",
+            "weaponType": "Bow"
           },
           {
             "name": "Kolkar Bow",
             "itemId": 286729,
             "value": "2.7 DPS - Durotar Quest: Lost in the Shadows",
-            "faction": "horde"
+            "faction": "horde",
+            "dps": "2.68 DPS",
+            "speed": "2.80",
+            "weaponType": "Bow"
           }
         ],
         "faction": "both"
@@ -1423,16 +1857,22 @@ const weaponsData = {
             "name": "Reinforced Bow",
             "itemId": 2507,
             "value": "4.4 DPS, 2.20s - Vendor bow",
-            "faction": "both"
+            "faction": "both",
+            "dps": "5.77 DPS",
+            "speed": "2.60",
+            "weaponType": "Bow"
           },
           {
             "name": "Skorn's Rifle",
             "itemId": 3079,
             "value": "5.0 DPS, 1.90s - Mulgore Quest: The Demon Scarred Cloak",
-            "faction": "horde"
+            "faction": "horde",
+            "dps": "5 DPS",
+            "speed": "1.90",
+            "weaponType": "Gun"
           }
         ],
-        "faction": "both"
+        "faction": "alliance"
       },
       {
         "levelBracket": "9–10",
@@ -1452,28 +1892,40 @@ const weaponsData = {
             "name": "Fine Shortbow",
             "itemId": 11303,
             "value": "6.2 DPS - Fast 1.70s swing",
-            "faction": "both"
+            "faction": "both",
+            "dps": "6.18 DPS",
+            "speed": "1.70",
+            "weaponType": "Bow"
           },
           {
             "name": "Rough Boomstick",
             "itemId": 4362,
             "value": "4.1 DPS - Engineering (30)",
-            "faction": "both"
+            "faction": "both",
+            "dps": "4.13 DPS",
+            "speed": "2.30",
+            "weaponType": "Gun"
           },
           {
             "name": "Orcish Battle Bow",
             "itemId": 5346,
             "value": "5.5 DPS, 1.90s - Durotar Quest: Centaur Bracers",
-            "faction": "horde"
+            "faction": "horde",
+            "dps": "5.53 DPS",
+            "speed": "1.90",
+            "weaponType": "Bow"
           },
           {
             "name": "Snarlsnout Shooter",
             "itemId": 286753,
             "value": "5.0 DPS, 2.50s - Barrens Rare",
-            "faction": "both"
+            "faction": "both",
+            "dps": "5 DPS",
+            "speed": "2.50",
+            "weaponType": "Gun"
           }
         ],
-        "faction": "alliance"
+        "faction": "both"
       },
       {
         "levelBracket": "11–12",
@@ -1493,28 +1945,40 @@ const weaponsData = {
             "name": "Hunter's Boomstick",
             "itemId": 3446,
             "value": "8.5 DPS, 2.10s - Dun Morogh quest reward",
-            "faction": "alliance"
+            "faction": "alliance",
+            "dps": "6.72 DPS",
+            "speed": "3.20",
+            "weaponType": "Staff"
           },
           {
             "name": "Deadly Blunderbuss",
             "itemId": 4369,
             "value": "8.3 DPS, 2.60s - Engineering (105)",
-            "faction": "both"
+            "faction": "both",
+            "dps": "8.27 DPS",
+            "speed": "2.60",
+            "weaponType": "Gun"
           },
           {
             "name": "Orcish Battle Bow",
             "itemId": 5346,
             "value": "5.5 DPS - Durotar Quest: Centaur Bracers",
-            "faction": "horde"
+            "faction": "horde",
+            "dps": "5.53 DPS",
+            "speed": "1.90",
+            "weaponType": "Bow"
           },
           {
             "name": "Bristlebark Bow",
             "itemId": 286748,
             "value": "5.0 DPS, 2.60s - Barrens Drop",
-            "faction": "both"
+            "faction": "both",
+            "dps": "5 DPS",
+            "speed": "2.60",
+            "weaponType": "Bow"
           }
         ],
-        "faction": "alliance"
+        "faction": "both"
       },
       {
         "levelBracket": "13–14",
@@ -1534,12 +1998,27 @@ const weaponsData = {
             "name": "Deadly Blunderbuss",
             "itemId": 4369,
             "value": "8.3 DPS, 2.60s - Engineering (105)",
-            "faction": "both"
+            "faction": "both",
+            "dps": "8.27 DPS",
+            "speed": "2.60",
+            "weaponType": "Gun"
           },
           {
             "name": "Laminated Recurve Bow",
             "itemId": 3027,
             "value": "7.8 DPS - Town vendor fallback",
+            "faction": "both",
+            "dps": "9.17 DPS",
+            "speed": "2.40",
+            "weaponType": "Bow"
+          },
+          {
+            "name": "Barbaric Crossbow",
+            "itemId": 272999,
+            "weaponType": "Crossbow",
+            "speed": "2.00",
+            "dps": "9.5 DPS",
+            "value": "9.5 DPS, 2.00s, +2 Agi - RFC Drop",
             "faction": "both"
           }
         ],
@@ -1563,12 +2042,27 @@ const weaponsData = {
             "name": "Lovingly Crafted Boomstick",
             "itemId": 4372,
             "value": "9.7 DPS, 1.80s - Engineering (120)",
-            "faction": "both"
+            "faction": "both",
+            "dps": "9.72 DPS",
+            "speed": "1.80",
+            "weaponType": "Gun"
           },
           {
             "name": "Deadly Blunderbuss",
             "itemId": 4369,
             "value": "8.3 DPS - Engineering (105)",
+            "faction": "both",
+            "dps": "8.27 DPS",
+            "speed": "2.60",
+            "weaponType": "Gun"
+          },
+          {
+            "name": "Barbaric Crossbow",
+            "itemId": 272999,
+            "weaponType": "Crossbow",
+            "speed": "2.00",
+            "dps": "9.5 DPS",
+            "value": "9.5 DPS, 2.00s - RFC Drop",
             "faction": "both"
           }
         ],
@@ -1592,13 +2086,19 @@ const weaponsData = {
             "name": "Silver-plated Shotgun",
             "itemId": 4379,
             "value": "10.4 DPS, 2.40s - Engineering (125)",
-            "faction": "both"
+            "faction": "both",
+            "dps": "10.37 DPS",
+            "speed": "2.70",
+            "weaponType": "Gun"
           },
           {
             "name": "Reinforced Bow",
             "itemId": 2507,
             "value": "4.4 DPS - Vendor fallback",
-            "faction": "both"
+            "faction": "both",
+            "dps": "5.77 DPS",
+            "speed": "2.60",
+            "weaponType": "Bow"
           }
         ],
         "faction": "both"
@@ -1621,13 +2121,28 @@ const weaponsData = {
             "name": "Moonsight Rifle",
             "itemId": 4383,
             "value": "13.8 DPS, 2.40s, +3 Hit - Engineering (145)",
-            "faction": "both"
+            "faction": "both",
+            "dps": "11.76 DPS",
+            "speed": "1.70",
+            "weaponType": "Gun"
           },
           {
             "name": "Fallenroot Longbow",
             "itemId": 273843,
             "value": "13.9 DPS, 2.20s - BFD: Lorgus Jett",
-            "faction": "both"
+            "faction": "both",
+            "dps": "13.86 DPS",
+            "speed": "2.20",
+            "weaponType": "Bow"
+          },
+          {
+            "name": "Alliance Outrunner Bow",
+            "itemId": 285347,
+            "weaponType": "Bow",
+            "speed": "2.40",
+            "dps": "13.3 DPS",
+            "value": "13.3 DPS, 2.40s - Alliance Outrunner Drop",
+            "faction": "alliance"
           }
         ],
         "faction": "both"
@@ -1650,13 +2165,18 @@ const weaponsData = {
             "name": "BKP 2700 \"Enforcer\"",
             "itemId": 4384,
             "value": "14.2 DPS, 2.70s - Engineering (155)",
-            "faction": "both"
+            "faction": "both",
+            "dps": "14.2 DPS",
+            "speed": "2.70"
           },
           {
             "name": "Concealed Hand Crossbow",
             "itemId": 273829,
             "value": "15.3 DPS - The Stockade: Bazil Thredd",
-            "faction": "both"
+            "faction": "both",
+            "dps": "15.25 DPS",
+            "speed": "2.00",
+            "weaponType": "Crossbow"
           }
         ],
         "faction": "both"
@@ -1679,12 +2199,27 @@ const weaponsData = {
             "name": "Concealed Hand Crossbow",
             "itemId": 273829,
             "value": "15.3 DPS - The Stockade: Bazil Thredd",
-            "faction": "both"
+            "faction": "both",
+            "dps": "15.25 DPS",
+            "speed": "2.00",
+            "weaponType": "Crossbow"
           },
           {
             "name": "Fallenroot Longbow",
             "itemId": 273843,
             "value": "13.9 DPS - Blackfathom Deeps",
+            "faction": "both",
+            "dps": "13.86 DPS",
+            "speed": "2.20",
+            "weaponType": "Bow"
+          },
+          {
+            "name": "Dun Garok Rifle",
+            "itemId": 282710,
+            "weaponType": "Gun",
+            "speed": "2.60",
+            "dps": "14.8 DPS",
+            "value": "14.8 DPS, 2.60s - Hillsbrad Drop",
             "faction": "both"
           }
         ],
@@ -1708,13 +2243,19 @@ const weaponsData = {
             "name": "Gravespike Repeater",
             "itemId": 273033,
             "value": "15.4 DPS, 2.30s - City of Dalaran: Atrexis",
-            "faction": "both"
+            "faction": "both",
+            "dps": "15.43 DPS",
+            "speed": "2.30",
+            "weaponType": "Crossbow"
           },
           {
             "name": "Glass Shooter",
             "itemId": 9456,
             "value": "18.5 DPS, 2.90s - Gnomeregan: Dark Iron Ambassador",
-            "faction": "both"
+            "faction": "both",
+            "dps": "17.93 DPS",
+            "speed": "2.90",
+            "weaponType": "Gun"
           }
         ],
         "faction": "both"
@@ -1737,25 +2278,37 @@ const weaponsData = {
             "name": "Master Hunter's Bow",
             "itemId": 17686,
             "value": "20.9 DPS - Bow reward choice from Big Game Hunter",
-            "faction": "both"
+            "faction": "both",
+            "dps": "19.38 DPS",
+            "speed": "2.40",
+            "weaponType": "Bow"
           },
           {
             "name": "Quilboar Blaster",
             "itemId": 274084,
             "value": "18.6 DPS, 2.80s, +4 Agi, +4 Spi - RFK Quest: The Crone of the Kraul",
-            "faction": "both"
+            "faction": "both",
+            "dps": "18.57 DPS",
+            "speed": "2.80",
+            "weaponType": "Gun"
           },
           {
             "name": "Booty Bay Bruiser's Buckshot",
             "itemId": 274748,
             "value": "18.0 DPS, 2.80s, +3 Sta, +9 AP - Booty Bay Honored vendor gun",
-            "faction": "both"
+            "faction": "both",
+            "dps": "18.04 DPS",
+            "speed": "2.80",
+            "weaponType": "Gun"
           },
           {
             "name": "Glass Shooter",
             "itemId": 9456,
             "value": "18.5 DPS - Gnomeregan: Dark Iron Ambassador",
-            "faction": "both"
+            "faction": "both",
+            "dps": "17.93 DPS",
+            "speed": "2.90",
+            "weaponType": "Gun"
           }
         ],
         "faction": "both"
@@ -1778,19 +2331,26 @@ const weaponsData = {
             "name": "Master Hunter's Rifle",
             "itemId": 17687,
             "value": "20.9 DPS - Big Game Hunter quest gun",
-            "faction": "both"
+            "faction": "both",
+            "dps": "19.42 DPS",
+            "speed": "2.60",
+            "weaponType": "Gun"
           },
           {
             "name": "Crystalpine Stinger",
             "itemId": 13037,
             "value": "21.0 DPS, 2.60s - World drop BoE bow",
-            "faction": "both"
+            "faction": "both",
+            "dps": "15.89 DPS",
+            "speed": "2.80",
+            "weaponType": "Crossbow"
           },
           {
             "name": "Mithril Blunderbuss",
             "itemId": 10508,
             "value": "17.9 DPS - Engineering (175)",
-            "faction": "both"
+            "faction": "both",
+            "dps": "17.9 DPS"
           }
         ],
         "faction": "both"
@@ -1813,18 +2373,32 @@ const weaponsData = {
             "name": "Chesterfall Musket",
             "itemId": 7729,
             "value": "20.9 DPS, 2.50s - SM Graveyard rare trash drop",
-            "faction": "both"
+            "faction": "both",
+            "dps": "16.52 DPS",
+            "speed": "2.30",
+            "weaponType": "Gun"
           },
           {
             "name": "Blasting Hackbut",
             "itemId": 6798,
             "value": "21.0 DPS - Horde Quest: Questioning Reethe",
-            "faction": "horde"
+            "faction": "horde",
+            "dps": "21.0 DPS"
           },
           {
             "name": "Mithril Blunderbuss",
             "itemId": 10508,
             "value": "17.9 DPS - Engineering (175)",
+            "faction": "both",
+            "dps": "17.9 DPS"
+          },
+          {
+            "name": "Siegebreaker's Blaster",
+            "itemId": 282561,
+            "weaponType": "Gun",
+            "speed": "2.60",
+            "dps": "22.3 DPS",
+            "value": "22.3 DPS, 2.60s - Custom Gun Drop",
             "faction": "both"
           }
         ],
@@ -1848,12 +2422,25 @@ const weaponsData = {
             "name": "Shrapnel Blaster",
             "itemId": 4127,
             "value": "22.8 DPS - Alliance Quest: Colonel Kurzen",
-            "faction": "alliance"
+            "faction": "alliance",
+            "dps": "22.8 DPS"
           },
           {
             "name": "Ironweaver",
             "itemId": 13137,
             "value": "23.2 DPS - World drop BoE crossbow",
+            "faction": "both",
+            "dps": "17.31 DPS",
+            "speed": "2.60",
+            "weaponType": "Gun"
+          },
+          {
+            "name": "Truthseeker's Bow",
+            "itemId": 277254,
+            "weaponType": "Bow",
+            "speed": "2.80",
+            "dps": "23.8 DPS",
+            "value": "23.8 DPS, 2.80s - Tanaris Quest",
             "faction": "both"
           }
         ],
@@ -1877,13 +2464,18 @@ const weaponsData = {
             "name": "Gryphonwing Bow",
             "itemId": 10633,
             "value": "24.5 DPS, 2.60s - Hinterlands quest reward",
-            "faction": "both"
+            "faction": "both",
+            "dps": "24.5 DPS",
+            "speed": "2.60"
           },
           {
             "name": "Riphook",
             "itemId": 13038,
             "value": "25.0 DPS - World drop BoE bow",
-            "faction": "both"
+            "faction": "both",
+            "dps": "21.25 DPS",
+            "speed": "2.00",
+            "weaponType": "Crossbow"
           }
         ],
         "faction": "both"
@@ -1906,13 +2498,18 @@ const weaponsData = {
             "name": "Thorium Rifle",
             "itemId": 15995,
             "value": "28.0 DPS, 2.50s, +17 RAP - Engineering (235)",
-            "faction": "both"
+            "faction": "both",
+            "dps": "28.0 DPS",
+            "speed": "2.50"
           },
           {
             "name": "Dark Iron Rifle",
             "itemId": 16004,
             "value": "29.5 DPS - Engineering (255)",
-            "faction": "both"
+            "faction": "both",
+            "dps": "28.33 DPS",
+            "speed": "2.70",
+            "weaponType": "Gun"
           }
         ],
         "faction": "both"
@@ -1935,18 +2532,35 @@ const weaponsData = {
             "name": "Ancient Bone Bow",
             "itemId": 18680,
             "value": "31.4 DPS, 2.80s, +11 Agi - Scholomance: Rattlegore",
-            "faction": "both"
+            "faction": "both",
+            "dps": "31.4 DPS",
+            "speed": "2.80"
           },
           {
             "name": "Flawless Arcanite Rifle",
             "itemId": 16007,
             "value": "31.0 DPS, +10 RAP - Engineering (275)",
-            "faction": "both"
+            "faction": "both",
+            "dps": "31.17 DPS",
+            "speed": "3.00",
+            "weaponType": "Gun"
           },
           {
             "name": "Core Marksman Rifle",
             "itemId": 18282,
             "value": "35.0 DPS - Molten Core",
+            "faction": "both",
+            "dps": "36.8 DPS",
+            "speed": "2.50",
+            "weaponType": "Gun"
+          },
+          {
+            "name": "Reaver's Repeater",
+            "itemId": 282029,
+            "weaponType": "Gun",
+            "speed": "2.70",
+            "dps": "27.0 DPS",
+            "value": "27.0 DPS, 2.70s - Custom Gun Drop",
             "faction": "both"
           }
         ],
@@ -1981,13 +2595,17 @@ const weaponsData = {
             "name": "Small Knife",
             "itemId": 2494,
             "value": "1.8 DPS - Starter vendor dagger",
-            "faction": "both"
+            "faction": "both",
+            "dps": "3.33 DPS",
+            "speed": "1.50",
+            "weaponType": "Dagger"
           },
           {
             "name": "Worn Shortsword",
             "itemId": 25,
             "value": "1.7 DPS - Starter sword",
-            "faction": "both"
+            "faction": "both",
+            "dps": "1.7 DPS"
           }
         ],
         "faction": "both"
@@ -2008,21 +2626,29 @@ const weaponsData = {
         "alts": [
           {
             "name": "Carving Knife",
-            "itemId": 2489,
-            "value": "3.1 DPS - Vendor fast dagger",
-            "faction": "both"
+            "itemId": 2494,
+            "value": "2.5 DPS, 1.70s - Starter Vendor Dagger",
+            "faction": "both",
+            "dps": "2.5 DPS",
+            "speed": "1.70",
+            "weaponType": "Dagger"
           },
           {
             "name": "Copper Shortsword",
             "itemId": 2847,
             "value": "4.0 DPS - Blacksmithing (20)",
-            "faction": "both"
+            "faction": "both",
+            "dps": "5.4 DPS",
+            "speed": "2.50",
+            "weaponType": "One-handed sword"
           },
           {
             "name": "Forsaken Shortsword",
             "itemId": 3267,
             "value": "3.0 DPS, 2.10s - Tirisfal Quest: The Scarlet Crusade",
-            "faction": "horde"
+            "faction": "horde",
+            "dps": "3.0 DPS",
+            "speed": "2.10"
           }
         ],
         "faction": "both"
@@ -2045,19 +2671,26 @@ const weaponsData = {
             "name": "Copper Shortsword",
             "itemId": 2847,
             "value": "4.0 DPS - Blacksmithing (20)",
-            "faction": "both"
+            "faction": "both",
+            "dps": "5.4 DPS",
+            "speed": "2.50",
+            "weaponType": "One-handed sword"
           },
           {
             "name": "Stiletto",
             "itemId": 2490,
             "value": "4.8 DPS - Fast 1.50s vendor dagger",
-            "faction": "both"
+            "faction": "both",
+            "dps": "3.33 DPS",
+            "speed": "1.50",
+            "weaponType": "Dagger"
           },
           {
             "name": "Forsaken Shortsword",
             "itemId": 3267,
             "value": "3.0 DPS - Tirisfal Quest: The Scarlet Crusade",
-            "faction": "horde"
+            "faction": "horde",
+            "dps": "3.0 DPS"
           }
         ],
         "faction": "both"
@@ -2080,22 +2713,29 @@ const weaponsData = {
             "name": "Scrappy Dagger",
             "itemId": 250601,
             "value": "5.5 DPS - Early quest",
-            "faction": "both"
+            "faction": "both",
+            "dps": "5.5 DPS"
           },
           {
             "name": "Stiletto",
             "itemId": 2490,
             "value": "4.8 DPS - Fast vendor dagger",
-            "faction": "both"
+            "faction": "both",
+            "dps": "3.33 DPS",
+            "speed": "1.50",
+            "weaponType": "Dagger"
           },
           {
             "name": "Pristine Orcish Dagger",
             "itemId": 286730,
             "value": "6.25 DPS, 2.40s - Durotar Quest: Threat from Below",
-            "faction": "horde"
+            "faction": "horde",
+            "dps": "6.25 DPS",
+            "speed": "2.40",
+            "weaponType": "Dagger"
           }
         ],
-        "faction": "both"
+        "faction": "alliance"
       },
       {
         "levelBracket": "9–10",
@@ -2115,19 +2755,28 @@ const weaponsData = {
             "name": "Thief's Blade",
             "itemId": 2226,
             "value": "7.2 DPS, 1.70s - Vendor dagger",
-            "faction": "both"
+            "faction": "both",
+            "dps": "14.41 DPS",
+            "speed": "1.70",
+            "weaponType": "One-handed sword"
           },
           {
             "name": "Cutlass",
             "itemId": 2524,
             "value": "7.7 DPS, 2.00s - 1H vendor sword",
-            "faction": "both"
+            "faction": "both",
+            "dps": "6.82 DPS",
+            "speed": "2.20",
+            "weaponType": "One-handed sword"
           },
           {
             "name": "Pristine Orcish Dagger",
             "itemId": 286730,
             "value": "6.25 DPS - Durotar Quest: Threat from Below",
-            "faction": "horde"
+            "faction": "horde",
+            "dps": "6.25 DPS",
+            "speed": "2.40",
+            "weaponType": "Dagger"
           }
         ],
         "faction": "both"
@@ -2150,22 +2799,30 @@ const weaponsData = {
             "name": "Cutlass",
             "itemId": 2524,
             "value": "7.7 DPS, 2.00s - 1H vendor sword",
-            "faction": "both"
+            "faction": "both",
+            "dps": "6.82 DPS",
+            "speed": "2.20",
+            "weaponType": "One-handed sword"
           },
           {
             "name": "Trogg Scepter",
             "itemId": 272996,
             "value": "8.1 DPS, 2.40s - RFC: Oggleflint 1H mace",
-            "faction": "both"
+            "faction": "both",
+            "dps": "8.13 DPS",
+            "speed": "2.40",
+            "weaponType": "One-handed mace"
           },
           {
             "name": "Deathstalker Shortsword",
             "itemId": 3455,
             "value": "7.5 DPS, 2.20s - Silverpine Quest: Escorting Erland",
-            "faction": "horde"
+            "faction": "horde",
+            "dps": "7.5 DPS",
+            "speed": "2.20"
           }
         ],
-        "faction": "alliance"
+        "faction": "both"
       },
       {
         "levelBracket": "13–14",
@@ -2185,19 +2842,46 @@ const weaponsData = {
             "name": "Poniard",
             "itemId": 2208,
             "value": "9.6 DPS - Vendor fast dagger",
-            "faction": "both"
-          },
-          {
-            "name": "Heavy Copper Broadsword",
-            "itemId": 3487,
-            "value": "12.6 DPS, 3.00s - Blacksmithing (65)",
-            "faction": "both"
+            "faction": "both",
+            "dps": "8.46 DPS",
+            "speed": "1.30",
+            "weaponType": "Dagger"
           },
           {
             "name": "Kris of Orgrimmar",
             "itemId": 15443,
             "value": "8.0 DPS, 1.50s, +4 Sta, +33 Healing, +11 Spell Damage - RFC Quest: Hidden Enemies",
-            "faction": "horde"
+            "faction": "horde",
+            "dps": "8 DPS",
+            "speed": "1.50",
+            "weaponType": "Dagger"
+          },
+          {
+            "name": "Fang of Magmatus",
+            "itemId": 271095,
+            "weaponType": "Dagger",
+            "speed": "1.70",
+            "dps": "7.9 DPS",
+            "value": "7.9 DPS, 1.70s, +2 Agi - RFC Drop",
+            "faction": "both"
+          },
+          {
+            "name": "Bone Knuckles",
+            "itemId": 272998,
+            "weaponType": "Fist Weapon",
+            "speed": "2.00",
+            "dps": "12.3 DPS",
+            "value": "12.3 DPS, 2.00s - RFC Drop",
+            "faction": "both"
+          },
+          {
+            "name": "Searing Dagger",
+            "itemId": 273003,
+            "weaponType": "Dagger",
+            "speed": "1.60",
+            "dps": "8.1 DPS",
+            "value": "8.1 DPS, 1.60s - RFC Drop",
+            "faction": "both"
           }
         ],
         "faction": "both"
@@ -2220,19 +2904,37 @@ const weaponsData = {
             "name": "Tail Spike",
             "itemId": 6448,
             "value": "11.9 DPS, 1.50s - Wailing Caverns: Skum",
-            "faction": "both"
+            "faction": "both",
+            "dps": "13.89 DPS",
+            "speed": "1.80",
+            "weaponType": "Dagger"
           },
           {
             "name": "Big Bronze Knife",
             "itemId": 3848,
             "value": "11.6 DPS - Blacksmithing (75)",
-            "faction": "both"
+            "faction": "both",
+            "dps": "10 DPS",
+            "speed": "1.90",
+            "weaponType": "Dagger"
           },
           {
             "name": "Kris of Orgrimmar",
             "itemId": 15443,
             "value": "8.0 DPS, +4 Sta, +33 Healing, +11 Spell Damage - RFC Quest",
-            "faction": "horde"
+            "faction": "horde",
+            "dps": "8 DPS",
+            "speed": "1.50",
+            "weaponType": "Dagger"
+          },
+          {
+            "name": "Plaguefang",
+            "itemId": 279876,
+            "weaponType": "One-handed sword",
+            "speed": "2.10",
+            "dps": "12.4 DPS",
+            "value": "12.4 DPS, 2.10s - Dalaran Dungeon",
+            "faction": "both"
           }
         ],
         "faction": "both"
@@ -2255,12 +2957,27 @@ const weaponsData = {
             "name": "Cruel Barb",
             "itemId": 5191,
             "value": "16.8 DPS, 2.80s - The Deadmines: Edwin VanCleef",
-            "faction": "both"
+            "faction": "both",
+            "dps": "15.54 DPS",
+            "speed": "2.80",
+            "weaponType": "One-handed sword"
           },
           {
             "name": "Pearl-handled Dagger",
             "itemId": 5540,
             "value": "14.2 DPS, 1.70s - BFD: Gelihast",
+            "faction": "both",
+            "dps": "11.47 DPS",
+            "speed": "1.70",
+            "weaponType": "Dagger"
+          },
+          {
+            "name": "Whipfang's Skinsearer",
+            "itemId": 284386,
+            "weaponType": "Dagger",
+            "speed": "1.70",
+            "dps": "15.6 DPS",
+            "value": "15.6 DPS, 1.70s - Barrens Rare",
             "faction": "both"
           }
         ],
@@ -2284,13 +3001,19 @@ const weaponsData = {
             "name": "Cruel Barb",
             "itemId": 5191,
             "value": "16.8 DPS, 2.80s - Deadmines: Edwin VanCleef",
-            "faction": "both"
+            "faction": "both",
+            "dps": "15.54 DPS",
+            "speed": "2.80",
+            "weaponType": "One-handed sword"
           },
           {
             "name": "Wingblade",
             "itemId": 6504,
             "value": "15.8 DPS, 2.20s - WC Quest: Leaders of the Fang",
-            "faction": "both"
+            "faction": "horde",
+            "dps": "15.68 DPS",
+            "speed": "2.20",
+            "weaponType": "One-handed sword"
           }
         ],
         "faction": "both"
@@ -2313,19 +3036,37 @@ const weaponsData = {
             "name": "Subdued Dragon's Fang",
             "itemId": 281314,
             "value": "20.6 DPS, 1.70s, +7 Agi - Wetlands Quest: Stopping the Cycle",
-            "faction": "both"
-          },
-          {
-            "name": "Butcher's Cleaver",
-            "itemId": 1292,
-            "value": "14.8 DPS - SFK: The Butcher",
-            "faction": "both"
+            "faction": "both",
+            "dps": "20.59 DPS",
+            "speed": "1.70",
+            "weaponType": "Dagger"
           },
           {
             "name": "Bronze Shortsword",
             "itemId": 2850,
             "value": "12.4 DPS - Blacksmithing (105)",
+            "faction": "both",
+            "dps": "12.2 DPS",
+            "speed": "2.50",
+            "weaponType": "One-handed sword"
+          },
+          {
+            "name": "Blade of Silverlaine",
+            "itemId": 273637,
+            "weaponType": "One-handed sword",
+            "speed": "2.30",
+            "dps": "10.9 DPS",
+            "value": "10.9 DPS, 2.30s - SFK Drop",
             "faction": "both"
+          },
+          {
+            "name": "Alliance Outrunner's Sword",
+            "itemId": 285346,
+            "weaponType": "One-handed sword",
+            "speed": "2.10",
+            "dps": "17.1 DPS",
+            "value": "17.1 DPS, 2.10s - Alliance Drop",
+            "faction": "alliance"
           }
         ],
         "faction": "both"
@@ -2348,18 +3089,36 @@ const weaponsData = {
             "name": "Subdued Dragon's Fang",
             "itemId": 281314,
             "value": "20.6 DPS, 1.70s, +7 Agi - Wetlands Quest: Stopping the Cycle",
-            "faction": "both"
+            "faction": "both",
+            "dps": "20.59 DPS",
+            "speed": "1.70",
+            "weaponType": "Dagger"
           },
           {
             "name": "Odo's Claw",
             "itemId": 6323,
             "value": "17.0 DPS, 1.50s - SFK: Odo the Blindwatcher",
-            "faction": "both"
+            "faction": "both",
+            "dps": "16.67 DPS",
+            "speed": "2.40",
+            "weaponType": "One-handed mace"
           },
           {
             "name": "Iridescent Hammer",
             "itemId": 5541,
             "value": "15.6 DPS - BFD: Lady Sarevess",
+            "faction": "both",
+            "dps": "14.58 DPS",
+            "speed": "2.40",
+            "weaponType": "One-handed mace"
+          },
+          {
+            "name": "Serrated Raptor Claw",
+            "itemId": 280805,
+            "weaponType": "Dagger",
+            "speed": "1.60",
+            "dps": "17.2 DPS",
+            "value": "17.2 DPS, 1.60s - Arathi Drop",
             "faction": "both"
           }
         ],
@@ -2382,20 +3141,29 @@ const weaponsData = {
           {
             "name": "Subdued Dragon's Fang",
             "itemId": 281314,
-            "value": "20.6 DPS, 1.70s, +7 Agi, +2 Sta - Wetlands Quest: Stopping the Cycle",
-            "faction": "both"
+            "value": "20.6 DPS, 1.70s - Redridge Quest",
+            "faction": "both",
+            "dps": "20.6 DPS",
+            "speed": "1.70",
+            "weaponType": "Dagger"
           },
           {
             "name": "Serrated Raptor Claw",
             "itemId": 271770,
             "value": "18.0 DPS, 1.60s - Quest: Changing Tastes",
-            "faction": "both"
+            "faction": "both",
+            "dps": "17.19 DPS",
+            "speed": "1.60",
+            "weaponType": "Dagger"
           },
           {
             "name": "Iron Fists",
             "itemId": 250604,
             "value": "17.5 DPS - Crafted fist weapon",
-            "faction": "both"
+            "faction": "both",
+            "dps": "16.25 DPS",
+            "speed": "2.40",
+            "weaponType": "Fist Weapon"
           }
         ],
         "faction": "both"
@@ -2418,19 +3186,28 @@ const weaponsData = {
             "name": "City Guard's Tarnished Blade",
             "itemId": 286996,
             "value": "22.4 DPS, 2.50s, Req Level 29 - City of Dalaran drop",
-            "faction": "both"
+            "faction": "both",
+            "dps": "22.4 DPS",
+            "speed": "2.50",
+            "weaponType": "One-handed sword"
           },
           {
             "name": "Toxic Revenger",
             "itemId": 9453,
             "value": "18.8 DPS, 2.20s - Gnomeregan: Viscous Fallout",
-            "faction": "both"
+            "faction": "both",
+            "dps": "20.53 DPS",
+            "speed": "1.90",
+            "weaponType": "Dagger"
           },
           {
             "name": "Hardened Iron Shortsword",
             "itemId": 3849,
             "value": "19.5 DPS - Blacksmithing (130)",
-            "faction": "both"
+            "faction": "both",
+            "dps": "16.67 DPS",
+            "speed": "1.80",
+            "weaponType": "One-handed sword"
           }
         ],
         "faction": "both"
@@ -2453,18 +3230,45 @@ const weaponsData = {
             "name": "Swinetusk Shank",
             "itemId": 6691,
             "value": "18.5 DPS, 1.50s - RFK: Agathelos",
-            "faction": "both"
-          },
-          {
-            "name": "Pronged Reaver",
-            "itemId": 6692,
-            "value": "20.3 DPS, 2.10s - RFK: Overlord Ramtusk",
-            "faction": "both"
+            "faction": "both",
+            "dps": "15.33 DPS",
+            "speed": "1.50",
+            "weaponType": "Dagger"
           },
           {
             "name": "Zealot Blade",
             "itemId": 13033,
             "value": "20.4 DPS, 1.90s - World drop BoE sword",
+            "faction": "both",
+            "dps": "22.14 DPS",
+            "speed": "2.80",
+            "weaponType": "One-handed sword"
+          },
+          {
+            "name": "Tidebringer's Claw",
+            "itemId": 280605,
+            "weaponType": "Fist Weapon",
+            "speed": "2.40",
+            "dps": "18.1 DPS",
+            "value": "18.1 DPS, 2.40s - Custom Boss Drop",
+            "faction": "both"
+          },
+          {
+            "name": "Lightning's Grasp",
+            "itemId": 280607,
+            "weaponType": "Fist Weapon",
+            "speed": "2.40",
+            "dps": "18.2 DPS",
+            "value": "18.2 DPS, 2.40s - Custom Boss Drop",
+            "faction": "both"
+          },
+          {
+            "name": "Swine Fists",
+            "itemId": 6693,
+            "weaponType": "Fist Weapon",
+            "speed": "2.10",
+            "dps": "20.3 DPS",
+            "value": "20.3 DPS, 2.10s - RFK Drop",
             "faction": "both"
           }
         ],
@@ -2488,13 +3292,19 @@ const weaponsData = {
             "name": "Ironspine's Fist",
             "itemId": 7687,
             "value": "24.7 DPS, 2.70s - SM Graveyard: Ironspine",
-            "faction": "both"
+            "faction": "both",
+            "dps": "22.92 DPS",
+            "speed": "2.40",
+            "weaponType": "One-handed mace"
           },
           {
             "name": "Bloody Brass Knuckles",
             "itemId": 7683,
             "value": "25.0 DPS, 2.30s - SM Graveyard: Azshir",
-            "faction": "both"
+            "faction": "both",
+            "dps": "21.88 DPS",
+            "speed": "1.60",
+            "weaponType": "Fist Weapon"
           }
         ],
         "faction": "alliance"
@@ -2517,31 +3327,43 @@ const weaponsData = {
             "name": "The Butcher",
             "itemId": 8226,
             "value": "28.6 DPS, 2.80s - World drop BoE sword",
-            "faction": "both"
+            "faction": "both",
+            "dps": "19.64 DPS",
+            "speed": "2.80",
+            "weaponType": "One-handed sword"
           },
           {
             "name": "Silent Hunter",
             "itemId": 9520,
             "value": "27.2 DPS, 1.70s - Maraudon/Quest",
-            "faction": "both"
+            "faction": "both",
+            "dps": "23.06 DPS",
+            "speed": "1.80",
+            "weaponType": "Dagger"
           },
           {
             "name": "Mithril Shortsword",
             "itemId": 250607,
             "value": "26.5 DPS - Blacksmithing (170)",
-            "faction": "both"
+            "faction": "both",
+            "dps": "26.5 DPS"
           },
           {
             "name": "Sword of Omen",
             "itemId": 6802,
             "value": "29.7 DPS, 2.20s, +9 Str, +4 Sta, +3 Agi - Horde SM Quest: Into The Scarlet Monastery",
-            "faction": "horde"
+            "faction": "horde",
+            "dps": "29.7 DPS",
+            "speed": "2.20"
           },
           {
             "name": "Sword of Serenity",
             "itemId": 6829,
             "value": "30.0 DPS, 2.20s, +9 Sta, +4 Spi - Alliance SM Quest: In the Name of the Light",
-            "faction": "alliance"
+            "faction": "alliance",
+            "dps": "30 DPS",
+            "speed": "2.20",
+            "weaponType": "One-handed sword"
           }
         ],
         "faction": "alliance"
@@ -2564,25 +3386,35 @@ const weaponsData = {
             "name": "Coldrage Dagger",
             "itemId": 10761,
             "value": "32.3 DPS, 1.50s - RFD: Amnennar",
-            "faction": "both"
+            "faction": "both",
+            "dps": "29 DPS",
+            "speed": "1.50",
+            "weaponType": "Dagger"
           },
           {
             "name": "Vanquisher's Sword",
             "itemId": 10823,
             "value": "30.4 DPS, 2.20s - RFD Quest: Bring the End",
-            "faction": "both"
+            "faction": "both",
+            "dps": "30 DPS",
+            "speed": "2.20",
+            "weaponType": "One-handed sword"
           },
           {
             "name": "Sword of Omen",
             "itemId": 6802,
             "value": "29.7 DPS - Horde SM Quest mirror",
-            "faction": "horde"
+            "faction": "horde",
+            "dps": "29.7 DPS"
           },
           {
             "name": "Sword of Serenity",
             "itemId": 6829,
             "value": "30.0 DPS - Alliance SM Quest mirror",
-            "faction": "alliance"
+            "faction": "alliance",
+            "dps": "30 DPS",
+            "speed": "2.20",
+            "weaponType": "One-handed sword"
           }
         ],
         "faction": "both"
@@ -2605,13 +3437,17 @@ const weaponsData = {
             "name": "Lifeforce Dirk",
             "itemId": 10750,
             "value": "35.9 DPS, 1.50s - Sunken Temple Quest: The God Hakkar",
-            "faction": "both"
+            "faction": "both",
+            "dps": "35.94 DPS",
+            "speed": "1.60",
+            "weaponType": "Dagger"
           },
           {
             "name": "Electro-Lantern",
             "itemId": 11855,
             "value": "34.0 DPS - BRD",
-            "faction": "both"
+            "faction": "both",
+            "dps": "34.0 DPS"
           }
         ],
         "faction": "both"
@@ -2634,19 +3470,27 @@ const weaponsData = {
             "name": "Bold Dirk",
             "itemId": 250616,
             "value": "35.3 DPS - Blacksmithing (270)",
-            "faction": "both"
+            "faction": "both",
+            "dps": "33.89 DPS",
+            "speed": "1.80",
+            "weaponType": "Dagger"
           },
           {
             "name": "Julie's Dagger",
             "itemId": 6660,
             "value": "35.3 DPS, 1.30s - World drop BoE",
-            "faction": "both"
+            "faction": "both",
+            "dps": "36.54 DPS",
+            "speed": "1.30",
+            "weaponType": "Dagger"
           },
           {
             "name": "Dal'Rend's Sacred Charge",
             "itemId": 12940,
             "value": "41.4 DPS, 2.80s - UBRS: Rend Blackhand",
-            "faction": "both"
+            "faction": "both",
+            "dps": "41.4 DPS",
+            "speed": "2.80"
           }
         ],
         "faction": "both"
@@ -2669,18 +3513,33 @@ const weaponsData = {
             "name": "Felstriker",
             "itemId": 12590,
             "value": "41.1 DPS, 1.70s, 3s 100% crit proc - UBRS: Rend Blackhand",
-            "faction": "both"
+            "faction": "both",
+            "dps": "41.1 DPS",
+            "speed": "1.70"
           },
           {
             "name": "Mirah's Song",
             "itemId": 15805,
             "value": "38.8 DPS, 1.80s, +9 Str, +9 Agi - Scholomance Quest: Kirtonos",
-            "faction": "both"
+            "faction": "both",
+            "dps": "40 DPS",
+            "speed": "1.80",
+            "weaponType": "One-handed sword"
           },
           {
             "name": "Dal'Rend's Tribal Guardian",
             "itemId": 12939,
             "value": "39.6 DPS - UBRS Rend",
+            "faction": "both",
+            "dps": "39.6 DPS"
+          },
+          {
+            "name": "Blade of Senseless Slaughter",
+            "itemId": 284101,
+            "weaponType": "One-handed sword",
+            "speed": "2.70",
+            "dps": "40.7 DPS",
+            "value": "40.7 DPS, 2.70s - Late Game Drop",
             "faction": "both"
           }
         ],
@@ -2715,16 +3574,20 @@ const weaponsData = {
             "name": "Club",
             "itemId": 2491,
             "value": "1.8 DPS - Starter vendor mace",
-            "faction": "both"
+            "faction": "both",
+            "dps": "1.8 DPS"
           },
           {
             "name": "Crude Battle Axe",
-            "itemId": 2488,
+            "itemId": 2490,
             "value": "2.0 DPS - Starter 2H axe",
-            "faction": "both"
+            "faction": "both",
+            "dps": "3.8 DPS",
+            "speed": "3.20",
+            "weaponType": "Two-handed axe"
           }
         ],
-        "faction": "horde"
+        "faction": "both"
       },
       {
         "levelBracket": "3–4",
@@ -2744,16 +3607,22 @@ const weaponsData = {
             "name": "Wooden Mallet",
             "itemId": 2493,
             "value": "5.0 DPS - Vendor 2H mace",
-            "faction": "both"
+            "faction": "both",
+            "dps": "5 DPS",
+            "speed": "2.60",
+            "weaponType": "Two-handed mace"
           },
           {
             "name": "Copper Axe",
             "itemId": 2845,
             "value": "3.8 DPS - Blacksmithing (20)",
-            "faction": "both"
+            "faction": "both",
+            "dps": "3.75 DPS",
+            "speed": "2.40",
+            "weaponType": "One-handed axe"
           }
         ],
-        "faction": "horde"
+        "faction": "both"
       },
       {
         "levelBracket": "5–6",
@@ -2773,19 +3642,28 @@ const weaponsData = {
             "name": "Copper Mace",
             "itemId": 2844,
             "value": "3.8 DPS - Blacksmithing (15)",
-            "faction": "both"
+            "faction": "both",
+            "dps": "3.85 DPS",
+            "speed": "2.60",
+            "weaponType": "One-handed mace"
           },
           {
             "name": "Large Club",
             "itemId": 2492,
             "value": "3.8 DPS - Vendor 2H mace",
-            "faction": "both"
+            "faction": "both",
+            "dps": "2.78 DPS",
+            "speed": "1.80",
+            "weaponType": "One-handed mace"
           },
           {
             "name": "Goblin Smasher",
             "itemId": 4964,
             "value": "8.2 DPS, 3.10s - Mulgore Quest: Supervisor Fizsprocket",
-            "faction": "horde"
+            "faction": "horde",
+            "dps": "8.23 DPS",
+            "speed": "3.10",
+            "weaponType": "Two-handed mace"
           }
         ],
         "faction": "both"
@@ -2808,25 +3686,35 @@ const weaponsData = {
             "name": "Staff of the Dor'Danil",
             "itemId": 15396,
             "value": "8.5 DPS - Early quest staff",
-            "faction": "both"
+            "faction": "both",
+            "dps": "8.5 DPS"
           },
           {
             "name": "Large Club",
             "itemId": 2492,
             "value": "3.8 DPS - Vendor 2H mace",
-            "faction": "both"
+            "faction": "both",
+            "dps": "2.78 DPS",
+            "speed": "1.80",
+            "weaponType": "One-handed mace"
           },
           {
             "name": "Makeshift Stormcaller",
             "itemId": 281274,
             "value": "5.8 DPS, 3.30s - Durotar Shaman Quest: Stormy Potential",
-            "faction": "horde"
+            "faction": "horde",
+            "dps": "5.76 DPS",
+            "speed": "3.30",
+            "weaponType": "Staff"
           },
           {
             "name": "Bonecracker",
             "itemId": 3440,
             "value": "9.1 DPS, 3.20s - Tirisfal Quest: The Family Crypt",
-            "faction": "horde"
+            "faction": "horde",
+            "dps": "9.06 DPS",
+            "speed": "3.20",
+            "weaponType": "Two-handed mace"
           }
         ],
         "faction": "both"
@@ -2848,23 +3736,32 @@ const weaponsData = {
           {
             "name": "Trogg Scepter",
             "itemId": 272996,
-            "value": "8.1 DPS, 2.40s - RFC: Oggleflint 1H mace",
-            "faction": "both"
+            "value": "8.1 DPS, 2.40s - RFC Oggleflint",
+            "faction": "both",
+            "dps": "8.1 DPS",
+            "speed": "2.40",
+            "weaponType": "One-handed mace"
           },
           {
             "name": "Thick War Axe",
             "itemId": 3489,
             "value": "8.6 DPS - Blacksmithing (45)",
-            "faction": "both"
+            "faction": "both",
+            "dps": "8.6 DPS",
+            "speed": "2.50",
+            "weaponType": "One-handed axe"
           },
           {
             "name": "Thun'grim's Axe",
             "itemId": 7326,
             "value": "7.8 DPS, 2.70s - Horde Quest: Forged Steel",
-            "faction": "horde"
+            "faction": "horde",
+            "dps": "7.78 DPS",
+            "speed": "2.70",
+            "weaponType": "One-handed axe"
           }
         ],
-        "faction": "horde"
+        "faction": "both"
       },
       {
         "levelBracket": "11–12",
@@ -2884,25 +3781,35 @@ const weaponsData = {
             "name": "Trogg Scepter",
             "itemId": 272996,
             "value": "8.1 DPS - RFC: Oggleflint",
-            "faction": "both"
+            "faction": "both",
+            "dps": "8.13 DPS",
+            "speed": "2.40",
+            "weaponType": "One-handed mace"
           },
           {
             "name": "Woodchopper",
             "itemId": 2520,
             "value": "10.5 DPS - Vendor 2H axe",
-            "faction": "both"
+            "faction": "both",
+            "dps": "10.5 DPS"
           },
           {
             "name": "Axe of Orgrimmar",
             "itemId": 15424,
             "value": "16.1 DPS, 3.30s, +6 Sta, +6 Spi - RFC Quest: Hidden Enemies",
-            "faction": "horde"
+            "faction": "horde",
+            "dps": "16.06 DPS",
+            "speed": "3.30",
+            "weaponType": "Two-handed axe"
           },
           {
             "name": "Hammer of Orgrimmar",
             "itemId": 15445,
             "value": "12.4 DPS, 2.90s, +3 Str, +3 Spi - RFC Quest: Hidden Enemies",
-            "faction": "horde"
+            "faction": "horde",
+            "dps": "12.41 DPS",
+            "speed": "2.90",
+            "weaponType": "One-handed mace"
           }
         ],
         "faction": "both"
@@ -2925,25 +3832,55 @@ const weaponsData = {
             "name": "Staff of Orgrimmar",
             "itemId": 15444,
             "value": "11.8 DPS, +6 Int, +6 Agi, +18 Spell Dmg - RFC: Hidden Enemies (Horde)",
-            "faction": "horde"
+            "faction": "horde",
+            "dps": "11.82 DPS",
+            "speed": "3.30",
+            "weaponType": "Staff"
           },
           {
             "name": "Durgen's Crescent Axe",
             "itemId": 270227,
             "value": "15.5 DPS, 2.40s, +5 Str, +2 Sta - Hall of Thanes: Durgen",
-            "faction": "both"
+            "faction": "both",
+            "dps": "12.29 DPS",
+            "speed": "2.40",
+            "weaponType": "One-handed axe"
           },
           {
             "name": "Ironforge Greathammer",
             "itemId": 279895,
             "value": "16.0 DPS - Hall of Thanes dungeon quest",
-            "faction": "alliance"
+            "faction": "alliance",
+            "dps": "15.97 DPS",
+            "speed": "3.10",
+            "weaponType": "Two-handed mace"
           },
           {
             "name": "Kris of Orgrimmar",
             "itemId": 15443,
             "value": "8.0 DPS, 1.50s, +4 Sta, +33 Healing, +11 Spell Damage - RFC Quest: Hidden Enemies",
-            "faction": "horde"
+            "faction": "horde",
+            "dps": "8 DPS",
+            "speed": "1.50",
+            "weaponType": "Dagger"
+          },
+          {
+            "name": "Fang of Magmatus",
+            "itemId": 271095,
+            "weaponType": "Dagger",
+            "speed": "1.70",
+            "dps": "7.9 DPS",
+            "value": "7.9 DPS, 1.70s - RFC Drop",
+            "faction": "both"
+          },
+          {
+            "name": "Bone Knuckles",
+            "itemId": 272998,
+            "weaponType": "Fist Weapon",
+            "speed": "2.00",
+            "dps": "12.3 DPS",
+            "value": "12.3 DPS, 2.00s - RFC Drop",
+            "faction": "both"
           }
         ],
         "faction": "both"
@@ -2966,25 +3903,46 @@ const weaponsData = {
             "name": "Staff of Orgrimmar",
             "itemId": 15444,
             "value": "11.8 DPS, +6 Int, +6 Agi, +18 Spell Dmg - RFC: Hidden Enemies (Horde)",
-            "faction": "horde"
+            "faction": "horde",
+            "dps": "11.82 DPS",
+            "speed": "3.30",
+            "weaponType": "Staff"
           },
           {
             "name": "Scepter of the Abandoned",
             "itemId": 271103,
             "value": "14.0 DPS, +4 Sta, +4 Int - Ruins of Lordaeron: The Abandoned",
-            "faction": "both"
+            "faction": "both",
+            "dps": "9.62 DPS",
+            "speed": "2.60",
+            "weaponType": "One-handed mace"
           },
           {
             "name": "Segmented Spider Leg",
             "itemId": 271102,
             "value": "14.8 DPS, +5 Int, +4 Sta - Ruins of Lordaeron: Witherfang",
-            "faction": "both"
+            "faction": "both",
+            "dps": "17.5 DPS",
+            "speed": "3.60",
+            "weaponType": "Staff"
           },
           {
             "name": "Kris of Orgrimmar",
             "itemId": 15443,
             "value": "8.0 DPS, 1.50s, +4 Sta, +33 Healing, +11 Spell Damage - RFC Quest: Hidden Enemies",
-            "faction": "horde"
+            "faction": "horde",
+            "dps": "8 DPS",
+            "speed": "1.50",
+            "weaponType": "Dagger"
+          },
+          {
+            "name": "The Stitcher",
+            "itemId": 279874,
+            "weaponType": "One-handed mace",
+            "speed": "2.40",
+            "dps": "8.1 DPS",
+            "value": "8.1 DPS, 2.40s - Dalaran Dungeon",
+            "faction": "both"
           }
         ],
         "faction": "both"
@@ -3007,25 +3965,37 @@ const weaponsData = {
             "name": "Staff of Orgrimmar",
             "itemId": 15444,
             "value": "11.8 DPS, +6 Int, +6 Agi, +18 Spell Dmg - RFC: Hidden Enemies (Horde)",
-            "faction": "horde"
+            "faction": "horde",
+            "dps": "11.82 DPS",
+            "speed": "3.30",
+            "weaponType": "Staff"
           },
           {
             "name": "Coldspire Staff",
             "itemId": 271105,
             "value": "16.8 DPS, +7 Int, +5 Spi - Ruins of Lordaeron: Rath'mael",
-            "faction": "both"
+            "faction": "both",
+            "dps": "15.14 DPS",
+            "speed": "3.60",
+            "weaponType": "Staff"
           },
           {
             "name": "Smite's Mighty Hammer",
             "itemId": 7230,
             "value": "19.7 DPS, 3.50s - The Deadmines: Mr. Smite",
-            "faction": "both"
+            "faction": "both",
+            "dps": "19.71 DPS",
+            "speed": "3.50",
+            "weaponType": "Two-handed mace"
           },
           {
             "name": "Kris of Orgrimmar",
             "itemId": 15443,
             "value": "8.0 DPS, 1.50s, +4 Sta, +33 Healing, +11 Spell Damage - RFC Quest: Hidden Enemies",
-            "faction": "horde"
+            "faction": "horde",
+            "dps": "8 DPS",
+            "speed": "1.50",
+            "weaponType": "Dagger"
           }
         ],
         "faction": "both"
@@ -3048,28 +4018,40 @@ const weaponsData = {
             "name": "Staff of Orgrimmar",
             "itemId": 15444,
             "value": "11.8 DPS, +6 Int, +6 Agi, +18 Spell Dmg - RFC: Hidden Enemies (Horde)",
-            "faction": "horde"
+            "faction": "horde",
+            "dps": "11.82 DPS",
+            "speed": "3.30",
+            "weaponType": "Staff"
           },
           {
             "name": "Bronze Warhammer",
             "itemId": 7956,
             "value": "17.4 DPS - Blacksmithing (90)",
-            "faction": "both"
+            "faction": "both",
+            "dps": "16.86 DPS",
+            "speed": "3.50",
+            "weaponType": "Two-handed mace"
           },
           {
             "name": "Bronze Battle Axe",
             "itemId": 7958,
             "value": "18.8 DPS - Blacksmithing (105)",
-            "faction": "both"
+            "faction": "both",
+            "dps": "18.33 DPS",
+            "speed": "3.30",
+            "weaponType": "Two-handed axe"
           },
           {
             "name": "Kris of Orgrimmar",
             "itemId": 15443,
             "value": "8.0 DPS, 1.50s, +4 Sta, +33 Healing, +11 Spell Damage - RFC Quest: Hidden Enemies",
-            "faction": "horde"
+            "faction": "horde",
+            "dps": "8 DPS",
+            "speed": "1.50",
+            "weaponType": "Dagger"
           }
         ],
-        "faction": "both"
+        "faction": "horde"
       },
       {
         "levelBracket": "21–22",
@@ -3089,13 +4071,19 @@ const weaponsData = {
             "name": "Bronze Battle Axe",
             "itemId": 7958,
             "value": "18.8 DPS - Blacksmithing (105)",
-            "faction": "both"
+            "faction": "both",
+            "dps": "18.33 DPS",
+            "speed": "3.30",
+            "weaponType": "Two-handed axe"
           },
           {
             "name": "Iridescent Hammer",
             "itemId": 5541,
             "value": "15.6 DPS - BFD: Lady Sarevess",
-            "faction": "both"
+            "faction": "both",
+            "dps": "14.58 DPS",
+            "speed": "2.40",
+            "weaponType": "One-handed mace"
           }
         ],
         "faction": "both"
@@ -3118,13 +4106,19 @@ const weaponsData = {
             "name": "Staff of the Friar",
             "itemId": 3415,
             "value": "17.5 DPS, +12 Int, +6 Spi - SM Graveyard: Interrogator Vishas",
-            "faction": "both"
+            "faction": "both",
+            "dps": "15.96 DPS",
+            "speed": "2.60",
+            "weaponType": "Staff"
           },
           {
             "name": "Rod of the Sleepwalker",
             "itemId": 1155,
             "value": "17.7 DPS, +11 Int, +10 Spi - BFD: Kelris",
-            "faction": "both"
+            "faction": "both",
+            "dps": "17.68 DPS",
+            "speed": "2.80",
+            "weaponType": "Staff"
           }
         ],
         "faction": "both"
@@ -3147,18 +4141,36 @@ const weaponsData = {
             "name": "Solid Iron Maul",
             "itemId": 3851,
             "value": "22.8 DPS - Blacksmithing (135)",
-            "faction": "both"
+            "faction": "both",
+            "dps": "15.57 DPS",
+            "speed": "3.50",
+            "weaponType": "Two-handed mace"
           },
           {
             "name": "Mighty Iron Hammer",
             "itemId": 3492,
             "value": "25.0 DPS - Blacksmithing (145)",
-            "faction": "both"
+            "faction": "both",
+            "dps": "15.54 DPS",
+            "speed": "2.80",
+            "weaponType": "One-handed mace"
           },
           {
             "name": "Dendweller's Hammer",
             "itemId": 284459,
             "value": "25.6 DPS, 3.30s - Level 26 Mace",
+            "faction": "both",
+            "dps": "25.61 DPS",
+            "speed": "3.30",
+            "weaponType": "Two-handed mace"
+          },
+          {
+            "name": "Defender of Dalaran",
+            "itemId": 279841,
+            "weaponType": "Two-handed mace",
+            "speed": "3.30",
+            "dps": "31.2 DPS",
+            "value": "31.2 DPS, 3.30s - Dalaran Dungeon",
             "faction": "both"
           }
         ],
@@ -3182,13 +4194,19 @@ const weaponsData = {
             "name": "Striking Staff",
             "itemId": 279844,
             "value": "31.3 DPS, 3.10s, +9 Str, +6 Sta, +14 Int - City of Dalaran Quest: Heart of Disruption",
-            "faction": "both"
+            "faction": "both",
+            "dps": "31.29 DPS",
+            "speed": "3.10",
+            "weaponType": "Staff"
           },
           {
             "name": "Healer's Staff",
             "itemId": 271767,
             "value": "20.8 DPS, +67 Healing, 5 MP5 - Excavation Site 4 quest",
-            "faction": "both"
+            "faction": "both",
+            "dps": "20.77 DPS",
+            "speed": "2.60",
+            "weaponType": "Staff"
           }
         ],
         "faction": "both"
@@ -3210,25 +4228,46 @@ const weaponsData = {
           {
             "name": "Lightning's Grasp",
             "itemId": 280607,
-            "value": "18.2 DPS, 2.20s, +6 Int, +46 SP, +1% LB crit - Elemental fist choice",
-            "faction": "both"
+            "value": "18.2 DPS, 2.40s - Custom Boss Drop",
+            "faction": "both",
+            "dps": "18.2 DPS",
+            "speed": "2.40",
+            "weaponType": "Fist Weapon"
           },
           {
             "name": "Tidebringer's Claw",
             "itemId": 280605,
-            "value": "18.1 DPS, 2.40s, +5 Sta, +86 Healing, +2% HW crit - Resto fist choice",
-            "faction": "both"
+            "value": "18.1 DPS, 2.40s - Custom Boss Drop",
+            "faction": "both",
+            "dps": "18.1 DPS",
+            "speed": "2.40",
+            "weaponType": "Fist Weapon"
           },
           {
             "name": "Corpsemaker",
             "itemId": 6687,
             "value": "28.9 DPS, 3.80s - RFK: Overlord Ramtusk",
-            "faction": "both"
+            "faction": "both",
+            "dps": "28.95 DPS",
+            "speed": "3.80",
+            "weaponType": "Two-handed axe"
           },
           {
             "name": "Striking Staff",
             "itemId": 279844,
             "value": "31.3 DPS - Dalaran quest",
+            "faction": "both",
+            "dps": "31.29 DPS",
+            "speed": "3.10",
+            "weaponType": "Staff"
+          },
+          {
+            "name": "Rage of the Storm",
+            "itemId": 280604,
+            "weaponType": "Two-handed mace",
+            "speed": "3.20",
+            "dps": "35.6 DPS",
+            "value": "35.6 DPS, 3.20s - Custom Boss Drop",
             "faction": "both"
           }
         ],
@@ -3252,19 +4291,28 @@ const weaponsData = {
             "name": "Rage of the Storm",
             "itemId": 280604,
             "value": "35.6 DPS - Tempest quest weapon dominates into late 30s",
-            "faction": "both"
+            "faction": "both",
+            "dps": "35.63 DPS",
+            "speed": "3.20",
+            "weaponType": "Two-handed mace"
           },
           {
             "name": "Manual Crowd Pummeler",
             "itemId": 9449,
             "value": "31.5 DPS, 2.00s - Gnomeregan",
-            "faction": "both"
+            "faction": "both",
+            "dps": "29 DPS",
+            "speed": "2.00",
+            "weaponType": "Two-handed mace"
           },
           {
             "name": "Massive Iron Axe",
             "itemId": 3855,
             "value": "31.4 DPS - Blacksmithing (185)",
-            "faction": "both"
+            "faction": "both",
+            "dps": "25.57 DPS",
+            "speed": "3.50",
+            "weaponType": "Two-handed axe"
           }
         ],
         "faction": "both"
@@ -3287,13 +4335,19 @@ const weaponsData = {
             "name": "Mograine's Might",
             "itemId": 7726,
             "value": "38.9 DPS, 3.50s - SM Cath: Mograine",
-            "faction": "both"
+            "faction": "both",
+            "dps": "38.82 DPS",
+            "speed": "3.40",
+            "weaponType": "Two-handed mace"
           },
           {
             "name": "Illusionary Rod",
             "itemId": 7713,
             "value": "25.7 DPS, +15 Int, +10 Spi - SM Library: Arcanist Doan",
-            "faction": "both"
+            "faction": "both",
+            "dps": "25.74 DPS",
+            "speed": "3.40",
+            "weaponType": "Staff"
           }
         ],
         "faction": "both"
@@ -3316,12 +4370,27 @@ const weaponsData = {
             "name": "Princess Theradras' Scepter",
             "itemId": 17780,
             "value": "47.1 DPS, 3.40s - Maraudon: Princess Theradras",
-            "faction": "both"
+            "faction": "both",
+            "dps": "46.47 DPS",
+            "speed": "3.40",
+            "weaponType": "Two-handed mace"
           },
           {
             "name": "Executioner's Cleaver",
             "itemId": 13018,
             "value": "42.5 DPS - BoE 2H Axe",
+            "faction": "both",
+            "dps": "41.84 DPS",
+            "speed": "3.80",
+            "weaponType": "Two-handed axe"
+          },
+          {
+            "name": "Gul'gash's Greathammer",
+            "itemId": 281648,
+            "weaponType": "Two-handed mace",
+            "speed": "3.60",
+            "dps": "42.8 DPS",
+            "value": "42.8 DPS, 3.60s - Feralas Drop",
             "faction": "both"
           }
         ],
@@ -3345,13 +4414,18 @@ const weaponsData = {
             "name": "Dreadforge Retaliator",
             "itemId": 11931,
             "value": "49.3 DPS, 3.70s - BRD: Emperor Dagran Thaurissan",
-            "faction": "both"
+            "faction": "both",
+            "dps": "49.3 DPS",
+            "speed": "3.70"
           },
           {
             "name": "Enchanted Battlehammer",
             "itemId": 12776,
             "value": "48.3 DPS - Blacksmithing (280)",
-            "faction": "both"
+            "faction": "both",
+            "dps": "48.29 DPS",
+            "speed": "3.50",
+            "weaponType": "Two-handed mace"
           }
         ],
         "faction": "both"
@@ -3374,18 +4448,34 @@ const weaponsData = {
             "name": "The Unstoppable Force",
             "itemId": 18803,
             "value": "61.4 DPS, 3.80s, Stun proc - Alterac Valley Exalted",
-            "faction": "both"
+            "faction": "both",
+            "dps": "56.53 DPS",
+            "speed": "3.60",
+            "weaponType": "Two-handed mace"
           },
           {
             "name": "Wisepaw Totem",
             "itemId": 274420,
             "value": "36.9 DPS - Mount Hyjal caster staff",
-            "faction": "both"
+            "faction": "both",
+            "dps": "36.88 DPS",
+            "speed": "3.20",
+            "weaponType": "Staff"
           },
           {
             "name": "Fist of the Damned",
             "itemId": 13399,
             "value": "39.4 DPS - Stratholme",
+            "faction": "both",
+            "dps": "39.4 DPS"
+          },
+          {
+            "name": "Icesworn Decapitator",
+            "itemId": 284257,
+            "weaponType": "Two-handed axe",
+            "speed": "3.60",
+            "dps": "50.6 DPS",
+            "value": "50.6 DPS, 3.60s - Winterspring Rare",
             "faction": "both"
           }
         ],
@@ -3420,13 +4510,19 @@ const weaponsData = {
             "name": "Walking Stick",
             "itemId": 2495,
             "value": "4.2 DPS - Starter vendor staff",
-            "faction": "both"
+            "faction": "both",
+            "dps": "4.2 DPS",
+            "speed": "2.50",
+            "weaponType": "Staff"
           },
           {
             "name": "Novice's Practice Wand",
             "itemId": 247789,
             "value": "4.0 DPS - Starter wand",
-            "faction": "both"
+            "faction": "both",
+            "dps": "4 DPS",
+            "speed": "1.50",
+            "weaponType": "Wand"
           }
         ],
         "faction": "alliance"
@@ -3449,7 +4545,10 @@ const weaponsData = {
             "name": "Novice's Practice Wand",
             "itemId": 247789,
             "value": "4.0 DPS - Enchanting (10)",
-            "faction": "both"
+            "faction": "both",
+            "dps": "4 DPS",
+            "speed": "1.50",
+            "weaponType": "Wand"
           }
         ],
         "faction": "both"
@@ -3472,7 +4571,10 @@ const weaponsData = {
             "name": "Walking Stick",
             "itemId": 2495,
             "value": "4.2 DPS - Vendor fallback",
-            "faction": "both"
+            "faction": "both",
+            "dps": "4.2 DPS",
+            "speed": "2.50",
+            "weaponType": "Staff"
           }
         ],
         "faction": "both"
@@ -3495,28 +4597,47 @@ const weaponsData = {
             "name": "Staff of the Dor'Danil",
             "itemId": 15396,
             "value": "8.5 DPS - Teldrassil quest",
-            "faction": "alliance"
+            "faction": "alliance",
+            "dps": "8.5 DPS"
           },
           {
             "name": "Lesser Magic Wand",
             "itemId": 11287,
             "value": "11.3 DPS - Enchanting (10)",
-            "faction": "both"
+            "faction": "both",
+            "dps": "11.33 DPS",
+            "speed": "1.50",
+            "weaponType": "Wand"
           },
           {
             "name": "Riptear's Spare Arm",
             "itemId": 286743,
             "value": "9.4 DPS, 1.70s Wand - Durotar Quest: Rear Guard Patrol",
-            "faction": "horde"
+            "faction": "horde",
+            "dps": "9.41 DPS",
+            "speed": "1.70",
+            "weaponType": "Wand"
           },
           {
             "name": "Darkwood Staff",
             "itemId": 3446,
             "value": "6.7 DPS, 3.20s - Tirisfal Quest: The Family Crypt",
-            "faction": "horde"
+            "faction": "horde",
+            "dps": "6.72 DPS",
+            "speed": "3.20",
+            "weaponType": "Staff"
+          },
+          {
+            "name": "Wisesight Wand",
+            "itemId": 286750,
+            "weaponType": "Wand",
+            "speed": "1.70",
+            "dps": "8.8 DPS",
+            "value": "8.8 DPS, 1.70s - Early Wand Drop",
+            "faction": "both"
           }
         ],
-        "faction": "both"
+        "faction": "alliance"
       },
       {
         "levelBracket": "9–10",
@@ -3536,25 +4657,43 @@ const weaponsData = {
             "name": "Pagan Rod",
             "itemId": 6449,
             "value": "8.6 DPS, 1.90s - Vendor wand",
-            "faction": "both"
+            "faction": "both",
+            "dps": "8.6 DPS",
+            "speed": "1.90"
           },
           {
             "name": "Staff of the Dor'Danil",
             "itemId": 15396,
             "value": "8.5 DPS - Early quest",
-            "faction": "both"
+            "faction": "both",
+            "dps": "8.5 DPS"
           },
           {
             "name": "Riptear's Spare Arm",
             "itemId": 286743,
             "value": "9.4 DPS - Durotar Quest: Rear Guard Patrol",
-            "faction": "horde"
+            "faction": "horde",
+            "dps": "9.41 DPS",
+            "speed": "1.70",
+            "weaponType": "Wand"
           },
           {
             "name": "Cinder Wand",
             "itemId": 5242,
             "value": "11.8 DPS, 1.40s - Silverpine Quest: Arugal's Folly",
-            "faction": "horde"
+            "faction": "horde",
+            "dps": "11.79 DPS",
+            "speed": "1.40",
+            "weaponType": "Wand"
+          },
+          {
+            "name": "Deepblaze",
+            "itemId": 279896,
+            "weaponType": "Wand",
+            "speed": "1.70",
+            "dps": "18.5 DPS",
+            "value": "18.5 DPS, 1.70s - Alliance Ironforge Quest",
+            "faction": "alliance"
           }
         ],
         "faction": "both"
@@ -3577,25 +4716,44 @@ const weaponsData = {
             "name": "Oakthrush Staff",
             "itemId": 15397,
             "value": "10.9 DPS - Ashenvale quest",
-            "faction": "both"
+            "faction": "both",
+            "dps": "7.14 DPS",
+            "speed": "2.80",
+            "weaponType": "Staff"
           },
           {
             "name": "Pagan Rod",
             "itemId": 6449,
             "value": "8.6 DPS - Vendor wand",
-            "faction": "both"
+            "faction": "both",
+            "dps": "8.6 DPS"
           },
           {
             "name": "Cauldron Stirrer",
             "itemId": 5340,
             "value": "7.4 DPS, 3.10s - Barrens Quest: Apothecary Zamah",
-            "faction": "horde"
+            "faction": "horde",
+            "dps": "7.42 DPS",
+            "speed": "3.10",
+            "weaponType": "Staff"
           },
           {
             "name": "Cinder Wand",
             "itemId": 5242,
             "value": "11.8 DPS - Silverpine Quest: Arugal's Folly",
-            "faction": "horde"
+            "faction": "horde",
+            "dps": "11.79 DPS",
+            "speed": "1.40",
+            "weaponType": "Wand"
+          },
+          {
+            "name": "Spark of the People's Militia",
+            "itemId": 12296,
+            "weaponType": "Wand",
+            "speed": "1.80",
+            "dps": "12.8 DPS",
+            "value": "12.8 DPS, 1.80s - Westfall Quest",
+            "faction": "alliance"
           }
         ],
         "faction": "both"
@@ -3618,25 +4776,55 @@ const weaponsData = {
             "name": "Staff of Orgrimmar",
             "itemId": 15444,
             "value": "11.8 DPS, +6 Int, +6 Agi, +18 Spell Dmg - RFC: Hidden Enemies (Horde)",
-            "faction": "horde"
+            "faction": "horde",
+            "dps": "11.82 DPS",
+            "speed": "3.30",
+            "weaponType": "Staff"
           },
           {
             "name": "Greater Magic Wand",
             "itemId": 11288,
             "value": "17.5 DPS - Enchanting (75)",
-            "faction": "both"
+            "faction": "both",
+            "dps": "17.5 DPS",
+            "speed": "1.80",
+            "weaponType": "Wand"
           },
           {
             "name": "Fang of Magmatus",
             "itemId": 270226,
             "value": "11.8 DPS, 1.60s, +2 Agi, +2 Fire SP - Hall of Thanes: Magmatus",
-            "faction": "both"
+            "faction": "both",
+            "dps": "7.94 DPS",
+            "speed": "1.70",
+            "weaponType": "Dagger"
           },
           {
             "name": "Kris of Orgrimmar",
             "itemId": 15443,
             "value": "8.0 DPS, 1.50s, +4 Sta, +33 Healing, +11 Spell Damage - RFC Quest",
-            "faction": "horde"
+            "faction": "horde",
+            "dps": "8 DPS",
+            "speed": "1.50",
+            "weaponType": "Dagger"
+          },
+          {
+            "name": "Searing Dagger",
+            "itemId": 273003,
+            "weaponType": "Dagger",
+            "speed": "1.60",
+            "dps": "8.1 DPS",
+            "value": "8.1 DPS, 1.60s - RFC Drop",
+            "faction": "both"
+          },
+          {
+            "name": "Moongazer's Wand",
+            "itemId": 284193,
+            "weaponType": "Wand",
+            "speed": "1.70",
+            "dps": "14.4 DPS",
+            "value": "14.4 DPS, 1.70s - Ashenvale Rare",
+            "faction": "both"
           }
         ],
         "faction": "both"
@@ -3659,18 +4847,36 @@ const weaponsData = {
             "name": "Staff of Orgrimmar",
             "itemId": 15444,
             "value": "11.8 DPS, +6 Int, +6 Agi, +18 Spell Dmg - RFC: Hidden Enemies (Horde)",
-            "faction": "horde"
+            "faction": "horde",
+            "dps": "11.82 DPS",
+            "speed": "3.30",
+            "weaponType": "Staff"
           },
           {
             "name": "Segmented Spider Leg",
             "itemId": 271102,
             "value": "14.8 DPS, +5 Int, +4 Sta - Ruins of Lordaeron: Witherfang",
-            "faction": "both"
+            "faction": "both",
+            "dps": "17.5 DPS",
+            "speed": "3.60",
+            "weaponType": "Staff"
           },
           {
             "name": "Meathook Slicer",
             "itemId": 271101,
             "value": "13.2 DPS - Ruins of Lordaeron: The Baron",
+            "faction": "both",
+            "dps": "13.61 DPS",
+            "speed": "1.80",
+            "weaponType": "Dagger"
+          },
+          {
+            "name": "Whelpfire Wand",
+            "itemId": 281925,
+            "weaponType": "Wand",
+            "speed": "1.90",
+            "dps": "15.3 DPS",
+            "value": "15.3 DPS, 1.90s - Wetlands Drop",
             "faction": "both"
           }
         ],
@@ -3694,19 +4900,28 @@ const weaponsData = {
             "name": "Staff of Orgrimmar",
             "itemId": 15444,
             "value": "11.8 DPS, +6 Int, +6 Agi, +18 Spell Dmg - RFC: Hidden Enemies (Horde)",
-            "faction": "horde"
+            "faction": "horde",
+            "dps": "11.82 DPS",
+            "speed": "3.30",
+            "weaponType": "Staff"
           },
           {
             "name": "Staff of Westfall",
             "itemId": 2042,
             "value": "15.2 DPS, +5 Int, +11 Spi - Deadmines Quest: The Defias Brotherhood",
-            "faction": "alliance"
+            "faction": "alliance",
+            "dps": "15.17 DPS",
+            "speed": "3.00",
+            "weaponType": "Staff"
           },
           {
             "name": "Vileblood Scimitar",
             "itemId": 271106,
             "value": "15.0 DPS, 2.20s - Ruins of Lordaeron: Viktor the Vile",
-            "faction": "both"
+            "faction": "both",
+            "dps": "14.62 DPS",
+            "speed": "2.60",
+            "weaponType": "One-handed sword"
           }
         ],
         "faction": "both"
@@ -3729,19 +4944,28 @@ const weaponsData = {
             "name": "Staff of Orgrimmar",
             "itemId": 15444,
             "value": "11.8 DPS, +6 Int, +6 Agi, +18 Spell Dmg - RFC: Hidden Enemies (Horde)",
-            "faction": "horde"
+            "faction": "horde",
+            "dps": "11.82 DPS",
+            "speed": "3.30",
+            "weaponType": "Staff"
           },
           {
             "name": "Odo's Ley Staff",
             "itemId": 6318,
             "value": "16.0 DPS - SFK: Odo the Blindwatcher",
-            "faction": "both"
+            "faction": "both",
+            "dps": "16.03 DPS",
+            "speed": "2.90",
+            "weaponType": "Staff"
           },
           {
             "name": "Glimmering Staff",
             "itemId": 249392,
             "value": "18.4 DPS, 2.20s, Req Level 25 - Enchanting (140)",
-            "faction": "both"
+            "faction": "both",
+            "dps": "18.41 DPS",
+            "speed": "2.20",
+            "weaponType": "Staff"
           }
         ],
         "faction": "alliance"
@@ -3764,19 +4988,46 @@ const weaponsData = {
             "name": "Rod of the Sleepwalker",
             "itemId": 1155,
             "value": "17.7 DPS, +11 Int, +10 Spi - BFD: Twilight Lord Kelris",
-            "faction": "both"
+            "faction": "both",
+            "dps": "17.68 DPS",
+            "speed": "2.80",
+            "weaponType": "Staff"
           },
           {
             "name": "Lesser Mystic Wand",
             "itemId": 11289,
             "value": "22.2 DPS - Enchanting (155)",
-            "faction": "both"
+            "faction": "both",
+            "dps": "25.38 DPS",
+            "speed": "1.30",
+            "weaponType": "Wand"
           },
           {
             "name": "Meteor Shard",
             "itemId": 6220,
             "value": "17.8 DPS, 1.80s - SFK: Archmage Arugal",
+            "faction": "both",
+            "dps": "17.78 DPS",
+            "speed": "1.80",
+            "weaponType": "Dagger"
+          },
+          {
+            "name": "Snapped Branch Wand",
+            "itemId": 284574,
+            "weaponType": "Wand",
+            "speed": "1.70",
+            "dps": "21.2 DPS",
+            "value": "21.2 DPS, 1.70s - Custom Wand Drop",
             "faction": "both"
+          },
+          {
+            "name": "Alliance Outrunner Staff",
+            "itemId": 285350,
+            "weaponType": "Staff",
+            "speed": "2.50",
+            "dps": "16.2 DPS",
+            "value": "16.2 DPS, 2.50s - Alliance Drop",
+            "faction": "alliance"
           }
         ],
         "faction": "both"
@@ -3799,18 +5050,54 @@ const weaponsData = {
             "name": "Coldflame Saber",
             "itemId": 276631,
             "value": "12.3 DPS, +32 SP, 98 Fire dmg proc - Custom Mage sword",
-            "faction": "both"
+            "faction": "both",
+            "dps": "12.25 DPS",
+            "speed": "2.00",
+            "weaponType": "One-handed sword"
           },
           {
             "name": "Death Prophet Spine",
             "itemId": 274158,
             "value": "18.9 DPS, 2.80s, +11 Sta, +34 SP, 5 MP5 - RFK: Aggem Thorncurse",
-            "faction": "both"
+            "faction": "both",
+            "dps": "18.93 DPS",
+            "speed": "2.80",
+            "weaponType": "Staff"
           },
           {
             "name": "Debt Collector",
             "itemId": 273827,
             "value": "13.0 DPS, 2.30s, +34 SP, Req Level 26 - Stockade: Bazil Thredd",
+            "faction": "both",
+            "dps": "13.04 DPS",
+            "speed": "2.30",
+            "weaponType": "One-handed sword"
+          },
+          {
+            "name": "Striking Staff",
+            "itemId": 279844,
+            "weaponType": "Staff",
+            "speed": "3.30",
+            "dps": "31.3 DPS",
+            "value": "31.3 DPS, 3.30s - Dalaran Dungeon",
+            "faction": "both"
+          },
+          {
+            "name": "Unstable Power Core",
+            "itemId": 279847,
+            "weaponType": "Wand",
+            "speed": "1.70",
+            "dps": "29.7 DPS",
+            "value": "29.7 DPS, 1.70s - Dalaran Dungeon",
+            "faction": "both"
+          },
+          {
+            "name": "Fallen Dragon's Scepter",
+            "itemId": 281312,
+            "weaponType": "Staff",
+            "speed": "3.00",
+            "dps": "19.9 DPS",
+            "value": "19.9 DPS, 3.00s - Redridge Quest",
             "faction": "both"
           }
         ],
@@ -3834,13 +5121,19 @@ const weaponsData = {
             "name": "Wand of Mana Concentration",
             "itemId": 273043,
             "value": "31.2 DPS, 1.70s, +4 Int, 2 MP5 - City of Dalaran: Arcanic Enigma",
-            "faction": "both"
+            "faction": "both",
+            "dps": "31.18 DPS",
+            "speed": "1.70",
+            "weaponType": "Wand"
           },
           {
             "name": "Tendonscraper Dagger",
             "itemId": 273053,
             "value": "14.4 DPS, +36 SP - City of Dalaran: Lyn the Ignored",
-            "faction": "both"
+            "faction": "both",
+            "dps": "14.38 DPS",
+            "speed": "1.60",
+            "weaponType": "Dagger"
           }
         ],
         "faction": "both"
@@ -3863,25 +5156,37 @@ const weaponsData = {
             "name": "Fallen Dragon's Scepter",
             "itemId": 281312,
             "value": "19.9 DPS, 3.40s, +11 Int, +13 Spi, +36 SP - Wetlands Quest: Stopping the Cycle",
-            "faction": "both"
+            "faction": "both",
+            "dps": "19.85 DPS",
+            "speed": "3.40",
+            "weaponType": "Staff"
           },
           {
             "name": "Mindslicer",
             "itemId": 270069,
             "value": "15.3 DPS, +7 Int, +34 SP - Arathi: Call to Arms",
-            "faction": "both"
+            "faction": "both",
+            "dps": "15.26 DPS",
+            "speed": "1.90",
+            "weaponType": "Dagger"
           },
           {
             "name": "Master Hunter's Wand",
             "itemId": 270084,
             "value": "34.7 DPS, 1.50s - STV Quest: Big Game Hunter",
-            "faction": "both"
+            "faction": "both",
+            "dps": "34.67 DPS",
+            "speed": "1.50",
+            "weaponType": "Wand"
           },
           {
             "name": "Icefury Wand",
             "itemId": 7514,
             "value": "25.3 DPS - Level 30 Mage class quest wand",
-            "faction": "both"
+            "faction": "both",
+            "dps": "37.19 DPS",
+            "speed": "1.60",
+            "weaponType": "Wand"
           }
         ],
         "faction": "both"
@@ -3904,13 +5209,19 @@ const weaponsData = {
             "name": "Hypnotic Blade",
             "itemId": 7714,
             "value": "26.8 DPS, +9 SP, +8 Int - SM Library: Arcanist Doan",
-            "faction": "both"
+            "faction": "both",
+            "dps": "17.5 DPS",
+            "speed": "1.40",
+            "weaponType": "Dagger"
           },
           {
             "name": "Twisted Nether Wand",
             "itemId": 249144,
             "value": "25.0 DPS - Craft/Drop",
-            "faction": "both"
+            "faction": "both",
+            "dps": "34 DPS",
+            "speed": "1.50",
+            "weaponType": "Wand"
           }
         ],
         "faction": "both"
@@ -3933,19 +5244,28 @@ const weaponsData = {
             "name": "Staff of Jordan",
             "itemId": 873,
             "value": "31.0 DPS, +26 Spell Power - World drop BoE staff",
-            "faction": "both"
+            "faction": "both",
+            "dps": "29.86 DPS",
+            "speed": "3.70",
+            "weaponType": "Staff"
           },
           {
             "name": "Dancing Flame",
             "itemId": 6806,
             "value": "29.2 DPS - World drop wand",
-            "faction": "both"
+            "faction": "both",
+            "dps": "31.07 DPS",
+            "speed": "1.40",
+            "weaponType": "Wand"
           },
           {
             "name": "Rod of Sorrow",
             "itemId": 5247,
             "value": "28.0 DPS - Quest",
-            "faction": "both"
+            "faction": "both",
+            "dps": "32.63 DPS",
+            "speed": "1.90",
+            "weaponType": "Wand"
           }
         ],
         "faction": "both"
@@ -3968,12 +5288,27 @@ const weaponsData = {
             "name": "Zum'rah's Vexing Cane",
             "itemId": 18082,
             "value": "32.3 DPS, +10 Int, +21 SP - ZF: Witch Doctor Zum'rah",
-            "faction": "both"
+            "faction": "both",
+            "dps": "31.11 DPS",
+            "speed": "2.70",
+            "weaponType": "Staff"
           },
           {
             "name": "Dreambough Wand",
             "itemId": 249234,
             "value": "31.0 DPS - World drop wand",
+            "faction": "both",
+            "dps": "39.17 DPS",
+            "speed": "1.80",
+            "weaponType": "Wand"
+          },
+          {
+            "name": "Emerald Watcher's Dreamstaff",
+            "itemId": 282007,
+            "weaponType": "Staff",
+            "speed": "3.00",
+            "dps": "31.7 DPS",
+            "value": "31.7 DPS, 3.00s - Custom Staff Drop",
             "faction": "both"
           }
         ],
@@ -3997,13 +5332,17 @@ const weaponsData = {
             "name": "Lesser Eternal Wand",
             "itemId": 249232,
             "value": "33.0 DPS - Enchanting (265)",
-            "faction": "both"
+            "faction": "both",
+            "dps": "45.75 DPS",
+            "speed": "2.00",
+            "weaponType": "Wand"
           },
           {
             "name": "Spire of the Stoneshaper",
             "itemId": 11802,
             "value": "33.8 DPS - BRD: Lord Incendius",
-            "faction": "both"
+            "faction": "both",
+            "dps": "33.8 DPS"
           }
         ],
         "faction": "both"
@@ -4026,25 +5365,34 @@ const weaponsData = {
             "name": "Rod of the Ogre Magi",
             "itemId": 18534,
             "value": "36.0 DPS, +14 Int, +11 Spi, +23 SP, 1% Spell Crit - DM North Tribute Run",
-            "faction": "both"
+            "faction": "both",
+            "dps": "36.0 DPS"
           },
           {
             "name": "Witchblade",
             "itemId": 13968,
             "value": "37.2 DPS, 1.80s, +14 SP - Scholomance: Darkmaster Gandling",
-            "faction": "both"
+            "faction": "both",
+            "dps": "37.2 DPS",
+            "speed": "1.80"
           },
           {
             "name": "Greater Eternal Wand",
             "itemId": 249237,
             "value": "36.0 DPS - Enchanting (285)",
-            "faction": "both"
+            "faction": "both",
+            "dps": "53.33 DPS",
+            "speed": "1.50",
+            "weaponType": "Wand"
           },
           {
             "name": "Brilliant Wand",
             "itemId": 249385,
             "value": "38.0 DPS - World drop wand",
-            "faction": "horde"
+            "faction": "both",
+            "dps": "59.58 DPS",
+            "speed": "1.20",
+            "weaponType": "Wand"
           }
         ],
         "faction": "both"
@@ -4078,13 +5426,19 @@ const weaponsData = {
             "name": "Walking Stick",
             "itemId": 2495,
             "value": "4.2 DPS - Starter vendor staff",
-            "faction": "both"
+            "faction": "both",
+            "dps": "4.2 DPS",
+            "speed": "2.50",
+            "weaponType": "Staff"
           },
           {
             "name": "Novice's Practice Wand",
             "itemId": 247789,
             "value": "4.0 DPS - Starter wand",
-            "faction": "both"
+            "faction": "both",
+            "dps": "4 DPS",
+            "speed": "1.50",
+            "weaponType": "Wand"
           }
         ],
         "faction": "alliance"
@@ -4107,7 +5461,10 @@ const weaponsData = {
             "name": "Novice's Practice Wand",
             "itemId": 247789,
             "value": "4.0 DPS - Enchanting (10)",
-            "faction": "both"
+            "faction": "both",
+            "dps": "4 DPS",
+            "speed": "1.50",
+            "weaponType": "Wand"
           }
         ],
         "faction": "both"
@@ -4130,7 +5487,10 @@ const weaponsData = {
             "name": "Walking Stick",
             "itemId": 2495,
             "value": "4.2 DPS - Vendor",
-            "faction": "both"
+            "faction": "both",
+            "dps": "4.2 DPS",
+            "speed": "2.50",
+            "weaponType": "Staff"
           }
         ],
         "faction": "both"
@@ -4153,28 +5513,47 @@ const weaponsData = {
             "name": "Staff of the Dor'Danil",
             "itemId": 15396,
             "value": "8.5 DPS - Early quest",
-            "faction": "both"
+            "faction": "both",
+            "dps": "8.5 DPS"
           },
           {
             "name": "Lesser Magic Wand",
             "itemId": 11287,
             "value": "11.3 DPS - Enchanting (10)",
-            "faction": "both"
+            "faction": "both",
+            "dps": "11.33 DPS",
+            "speed": "1.50",
+            "weaponType": "Wand"
           },
           {
             "name": "Riptear's Spare Arm",
             "itemId": 286743,
             "value": "9.4 DPS, 1.70s Wand - Durotar Quest: Rear Guard Patrol",
-            "faction": "horde"
+            "faction": "horde",
+            "dps": "9.41 DPS",
+            "speed": "1.70",
+            "weaponType": "Wand"
           },
           {
             "name": "Darkwood Staff",
             "itemId": 3446,
             "value": "6.7 DPS, 3.20s - Tirisfal Quest: The Family Crypt",
-            "faction": "horde"
+            "faction": "horde",
+            "dps": "6.72 DPS",
+            "speed": "3.20",
+            "weaponType": "Staff"
+          },
+          {
+            "name": "Wisesight Wand",
+            "itemId": 286750,
+            "weaponType": "Wand",
+            "speed": "1.70",
+            "dps": "8.8 DPS",
+            "value": "8.8 DPS, 1.70s - Early Wand Drop",
+            "faction": "both"
           }
         ],
-        "faction": "both"
+        "faction": "alliance"
       },
       {
         "levelBracket": "9–10",
@@ -4194,25 +5573,43 @@ const weaponsData = {
             "name": "Pagan Rod",
             "itemId": 6449,
             "value": "8.6 DPS, 1.90s - Vendor wand",
-            "faction": "both"
+            "faction": "both",
+            "dps": "8.6 DPS",
+            "speed": "1.90"
           },
           {
             "name": "Staff of the Dor'Danil",
             "itemId": 15396,
             "value": "8.5 DPS - Early quest",
-            "faction": "both"
+            "faction": "both",
+            "dps": "8.5 DPS"
           },
           {
             "name": "Riptear's Spare Arm",
             "itemId": 286743,
             "value": "9.4 DPS - Durotar Quest: Rear Guard Patrol",
-            "faction": "horde"
+            "faction": "horde",
+            "dps": "9.41 DPS",
+            "speed": "1.70",
+            "weaponType": "Wand"
           },
           {
             "name": "Cinder Wand",
             "itemId": 5242,
             "value": "11.8 DPS, 1.40s - Silverpine Quest: Arugal's Folly",
-            "faction": "horde"
+            "faction": "horde",
+            "dps": "11.79 DPS",
+            "speed": "1.40",
+            "weaponType": "Wand"
+          },
+          {
+            "name": "Deepblaze",
+            "itemId": 279896,
+            "weaponType": "Wand",
+            "speed": "1.70",
+            "dps": "18.5 DPS",
+            "value": "18.5 DPS, 1.70s - Alliance Ironforge Quest",
+            "faction": "alliance"
           }
         ],
         "faction": "both"
@@ -4235,25 +5632,44 @@ const weaponsData = {
             "name": "Oakthrush Staff",
             "itemId": 15397,
             "value": "10.9 DPS - Ashenvale quest",
-            "faction": "both"
+            "faction": "both",
+            "dps": "7.14 DPS",
+            "speed": "2.80",
+            "weaponType": "Staff"
           },
           {
             "name": "Pagan Rod",
             "itemId": 6449,
             "value": "8.6 DPS - Vendor wand",
-            "faction": "both"
+            "faction": "both",
+            "dps": "8.6 DPS"
           },
           {
             "name": "Cauldron Stirrer",
             "itemId": 5340,
             "value": "7.4 DPS, 3.10s - Barrens Quest: Apothecary Zamah",
-            "faction": "horde"
+            "faction": "horde",
+            "dps": "7.42 DPS",
+            "speed": "3.10",
+            "weaponType": "Staff"
           },
           {
             "name": "Cinder Wand",
             "itemId": 5242,
             "value": "11.8 DPS - Silverpine Quest: Arugal's Folly",
-            "faction": "horde"
+            "faction": "horde",
+            "dps": "11.79 DPS",
+            "speed": "1.40",
+            "weaponType": "Wand"
+          },
+          {
+            "name": "Spark of the People's Militia",
+            "itemId": 12296,
+            "weaponType": "Wand",
+            "speed": "1.80",
+            "dps": "12.8 DPS",
+            "value": "12.8 DPS, 1.80s - Westfall Quest",
+            "faction": "alliance"
           }
         ],
         "faction": "both"
@@ -4276,25 +5692,55 @@ const weaponsData = {
             "name": "Staff of Orgrimmar",
             "itemId": 15444,
             "value": "11.8 DPS, +6 Int, +6 Agi, +18 Spell Dmg - RFC: Hidden Enemies (Horde)",
-            "faction": "horde"
+            "faction": "horde",
+            "dps": "11.82 DPS",
+            "speed": "3.30",
+            "weaponType": "Staff"
           },
           {
             "name": "Greater Magic Wand",
             "itemId": 11288,
             "value": "17.5 DPS - Enchanting (75)",
-            "faction": "both"
+            "faction": "both",
+            "dps": "17.5 DPS",
+            "speed": "1.80",
+            "weaponType": "Wand"
           },
           {
             "name": "Fang of Magmatus",
             "itemId": 270226,
             "value": "11.8 DPS, 1.60s, +2 Agi, +2 Fire SP - Hall of Thanes: Magmatus",
-            "faction": "both"
+            "faction": "both",
+            "dps": "7.94 DPS",
+            "speed": "1.70",
+            "weaponType": "Dagger"
           },
           {
             "name": "Kris of Orgrimmar",
             "itemId": 15443,
             "value": "8.0 DPS, 1.50s, +4 Sta, +33 Healing, +11 Spell Damage - RFC Quest",
-            "faction": "horde"
+            "faction": "horde",
+            "dps": "8 DPS",
+            "speed": "1.50",
+            "weaponType": "Dagger"
+          },
+          {
+            "name": "Searing Dagger",
+            "itemId": 273003,
+            "weaponType": "Dagger",
+            "speed": "1.60",
+            "dps": "8.1 DPS",
+            "value": "8.1 DPS, 1.60s - RFC Drop",
+            "faction": "both"
+          },
+          {
+            "name": "Moongazer's Wand",
+            "itemId": 284193,
+            "weaponType": "Wand",
+            "speed": "1.70",
+            "dps": "14.4 DPS",
+            "value": "14.4 DPS, 1.70s - Ashenvale Rare",
+            "faction": "both"
           }
         ],
         "faction": "both"
@@ -4317,18 +5763,36 @@ const weaponsData = {
             "name": "Staff of Orgrimmar",
             "itemId": 15444,
             "value": "11.8 DPS, +6 Int, +6 Agi, +18 Spell Dmg - RFC: Hidden Enemies (Horde)",
-            "faction": "horde"
+            "faction": "horde",
+            "dps": "11.82 DPS",
+            "speed": "3.30",
+            "weaponType": "Staff"
           },
           {
             "name": "Emberstone Staff",
             "itemId": 5201,
             "value": "14.2 DPS, +5 Int, +5 Spi - Deadmines: Captain Greenskin",
-            "faction": "both"
+            "faction": "both",
+            "dps": "14.17 DPS",
+            "speed": "3.00",
+            "weaponType": "Staff"
           },
           {
             "name": "Meathook Slicer",
             "itemId": 271101,
             "value": "13.2 DPS - Ruins of Lordaeron: The Baron",
+            "faction": "both",
+            "dps": "13.61 DPS",
+            "speed": "1.80",
+            "weaponType": "Dagger"
+          },
+          {
+            "name": "Whelpfire Wand",
+            "itemId": 281925,
+            "weaponType": "Wand",
+            "speed": "1.90",
+            "dps": "15.3 DPS",
+            "value": "15.3 DPS, 1.90s - Wetlands Drop",
             "faction": "both"
           }
         ],
@@ -4352,19 +5816,28 @@ const weaponsData = {
             "name": "Staff of Orgrimmar",
             "itemId": 15444,
             "value": "11.8 DPS, +6 Int, +6 Agi, +18 Spell Dmg - RFC: Hidden Enemies (Horde)",
-            "faction": "horde"
+            "faction": "horde",
+            "dps": "11.82 DPS",
+            "speed": "3.30",
+            "weaponType": "Staff"
           },
           {
             "name": "Staff of Westfall",
             "itemId": 2042,
             "value": "15.2 DPS, +5 Int, +11 Spi - Deadmines Quest: The Defias Brotherhood",
-            "faction": "alliance"
+            "faction": "alliance",
+            "dps": "15.17 DPS",
+            "speed": "3.00",
+            "weaponType": "Staff"
           },
           {
             "name": "Vileblood Scimitar",
             "itemId": 271106,
             "value": "15.0 DPS, 2.20s - Ruins of Lordaeron: Viktor",
-            "faction": "both"
+            "faction": "both",
+            "dps": "14.62 DPS",
+            "speed": "2.60",
+            "weaponType": "One-handed sword"
           }
         ],
         "faction": "both"
@@ -4387,19 +5860,28 @@ const weaponsData = {
             "name": "Staff of Orgrimmar",
             "itemId": 15444,
             "value": "11.8 DPS, +6 Int, +6 Agi, +18 Spell Dmg - RFC: Hidden Enemies (Horde)",
-            "faction": "horde"
+            "faction": "horde",
+            "dps": "11.82 DPS",
+            "speed": "3.30",
+            "weaponType": "Staff"
           },
           {
             "name": "Staff of Westfall",
             "itemId": 2042,
             "value": "15.2 DPS - Deadmines Quest",
-            "faction": "alliance"
+            "faction": "alliance",
+            "dps": "15.17 DPS",
+            "speed": "3.00",
+            "weaponType": "Staff"
           },
           {
             "name": "Glimmering Staff",
             "itemId": 249392,
             "value": "18.4 DPS, 2.20s, Req Level 25 - Enchanting (140)",
-            "faction": "both"
+            "faction": "both",
+            "dps": "18.41 DPS",
+            "speed": "2.20",
+            "weaponType": "Staff"
           }
         ],
         "faction": "both"
@@ -4422,19 +5904,46 @@ const weaponsData = {
             "name": "Rod of the Sleepwalker",
             "itemId": 1155,
             "value": "17.7 DPS, +11 Int, +10 Spi - BFD: Twilight Lord Kelris",
-            "faction": "both"
+            "faction": "both",
+            "dps": "17.68 DPS",
+            "speed": "2.80",
+            "weaponType": "Staff"
           },
           {
             "name": "Lesser Mystic Wand",
             "itemId": 11289,
             "value": "22.2 DPS - Enchanting (155)",
-            "faction": "both"
+            "faction": "both",
+            "dps": "25.38 DPS",
+            "speed": "1.30",
+            "weaponType": "Wand"
           },
           {
             "name": "Meteor Shard",
             "itemId": 6220,
             "value": "17.8 DPS - SFK: Archmage Arugal",
+            "faction": "both",
+            "dps": "17.78 DPS",
+            "speed": "1.80",
+            "weaponType": "Dagger"
+          },
+          {
+            "name": "Snapped Branch Wand",
+            "itemId": 284574,
+            "weaponType": "Wand",
+            "speed": "1.70",
+            "dps": "21.2 DPS",
+            "value": "21.2 DPS, 1.70s - Custom Wand Drop",
             "faction": "both"
+          },
+          {
+            "name": "Alliance Outrunner Staff",
+            "itemId": 285350,
+            "weaponType": "Staff",
+            "speed": "2.50",
+            "dps": "16.2 DPS",
+            "value": "16.2 DPS, 2.50s - Alliance Drop",
+            "faction": "alliance"
           }
         ],
         "faction": "both"
@@ -4457,12 +5966,45 @@ const weaponsData = {
             "name": "Death Prophet Spine",
             "itemId": 274158,
             "value": "18.9 DPS, 2.80s, +11 Sta, +34 SP, 5 MP5 - RFK: Aggem Thorncurse",
-            "faction": "both"
+            "faction": "both",
+            "dps": "18.93 DPS",
+            "speed": "2.80",
+            "weaponType": "Staff"
           },
           {
             "name": "Debt Collector",
             "itemId": 273827,
             "value": "13.0 DPS, 2.30s, +34 SP, Req Level 26 - Stockade: Bazil Thredd",
+            "faction": "both",
+            "dps": "13.04 DPS",
+            "speed": "2.30",
+            "weaponType": "One-handed sword"
+          },
+          {
+            "name": "Striking Staff",
+            "itemId": 279844,
+            "weaponType": "Staff",
+            "speed": "3.30",
+            "dps": "31.3 DPS",
+            "value": "31.3 DPS, 3.30s - Dalaran Dungeon",
+            "faction": "both"
+          },
+          {
+            "name": "Unstable Power Core",
+            "itemId": 279847,
+            "weaponType": "Wand",
+            "speed": "1.70",
+            "dps": "29.7 DPS",
+            "value": "29.7 DPS, 1.70s - Dalaran Dungeon",
+            "faction": "both"
+          },
+          {
+            "name": "Fallen Dragon's Scepter",
+            "itemId": 281312,
+            "weaponType": "Staff",
+            "speed": "3.00",
+            "dps": "19.9 DPS",
+            "value": "19.9 DPS, 3.00s - Redridge Quest",
             "faction": "both"
           }
         ],
@@ -4486,13 +6028,19 @@ const weaponsData = {
             "name": "Wand of Mana Concentration",
             "itemId": 273043,
             "value": "31.2 DPS, 1.70s, +4 Int, 2 MP5 - City of Dalaran: Arcanic Enigma",
-            "faction": "both"
+            "faction": "both",
+            "dps": "31.18 DPS",
+            "speed": "1.70",
+            "weaponType": "Wand"
           },
           {
             "name": "Tendonscraper Dagger",
             "itemId": 273053,
             "value": "14.4 DPS, +36 SP - City of Dalaran: Lyn the Ignored",
-            "faction": "both"
+            "faction": "both",
+            "dps": "14.38 DPS",
+            "speed": "1.60",
+            "weaponType": "Dagger"
           }
         ],
         "faction": "both"
@@ -4515,25 +6063,37 @@ const weaponsData = {
             "name": "Fallen Dragon's Scepter",
             "itemId": 281312,
             "value": "19.9 DPS, 3.40s, +11 Int, +13 Spi, +36 SP - Wetlands Quest: Stopping the Cycle",
-            "faction": "both"
+            "faction": "both",
+            "dps": "19.85 DPS",
+            "speed": "3.40",
+            "weaponType": "Staff"
           },
           {
             "name": "Mindslicer",
             "itemId": 270069,
             "value": "15.3 DPS, +7 Int, +34 SP - Arathi: Call to Arms",
-            "faction": "both"
+            "faction": "both",
+            "dps": "15.26 DPS",
+            "speed": "1.90",
+            "weaponType": "Dagger"
           },
           {
             "name": "Master Hunter's Wand",
             "itemId": 270084,
             "value": "34.7 DPS, 1.50s - STV Quest: Big Game Hunter",
-            "faction": "both"
+            "faction": "both",
+            "dps": "34.67 DPS",
+            "speed": "1.50",
+            "weaponType": "Wand"
           },
           {
             "name": "Debt Collector",
             "itemId": 273827,
             "value": "13.0 DPS, 2.30s, +34 SP - Stockade: Bazil Thredd",
-            "faction": "both"
+            "faction": "both",
+            "dps": "13.04 DPS",
+            "speed": "2.30",
+            "weaponType": "One-handed sword"
           }
         ],
         "faction": "both"
@@ -4556,13 +6116,19 @@ const weaponsData = {
             "name": "Hypnotic Blade",
             "itemId": 7714,
             "value": "26.8 DPS, +9 SP, +8 Int - SM Library: Arcanist Doan",
-            "faction": "both"
+            "faction": "both",
+            "dps": "17.5 DPS",
+            "speed": "1.40",
+            "weaponType": "Dagger"
           },
           {
             "name": "Twisted Nether Wand",
             "itemId": 249144,
             "value": "25.0 DPS - Craft/Drop",
-            "faction": "both"
+            "faction": "both",
+            "dps": "34 DPS",
+            "speed": "1.50",
+            "weaponType": "Wand"
           }
         ],
         "faction": "both"
@@ -4585,19 +6151,28 @@ const weaponsData = {
             "name": "Staff of Jordan",
             "itemId": 873,
             "value": "31.0 DPS, +26 Spell Power - World drop BoE staff",
-            "faction": "both"
+            "faction": "both",
+            "dps": "29.86 DPS",
+            "speed": "3.70",
+            "weaponType": "Staff"
           },
           {
             "name": "Dancing Flame",
             "itemId": 6806,
             "value": "29.2 DPS - World drop wand",
-            "faction": "both"
+            "faction": "both",
+            "dps": "31.07 DPS",
+            "speed": "1.40",
+            "weaponType": "Wand"
           },
           {
             "name": "Rod of Sorrow",
             "itemId": 5247,
             "value": "28.0 DPS - Quest",
-            "faction": "both"
+            "faction": "both",
+            "dps": "32.63 DPS",
+            "speed": "1.90",
+            "weaponType": "Wand"
           }
         ],
         "faction": "both"
@@ -4620,12 +6195,27 @@ const weaponsData = {
             "name": "Zum'rah's Vexing Cane",
             "itemId": 18082,
             "value": "32.3 DPS, +10 Int, +21 SP - ZF: Witch Doctor Zum'rah",
-            "faction": "both"
+            "faction": "both",
+            "dps": "31.11 DPS",
+            "speed": "2.70",
+            "weaponType": "Staff"
           },
           {
             "name": "Dreambough Wand",
             "itemId": 249234,
             "value": "31.0 DPS - World drop wand",
+            "faction": "both",
+            "dps": "39.17 DPS",
+            "speed": "1.80",
+            "weaponType": "Wand"
+          },
+          {
+            "name": "Emerald Watcher's Dreamstaff",
+            "itemId": 282007,
+            "weaponType": "Staff",
+            "speed": "3.00",
+            "dps": "31.7 DPS",
+            "value": "31.7 DPS, 3.00s - Custom Staff Drop",
             "faction": "both"
           }
         ],
@@ -4649,13 +6239,19 @@ const weaponsData = {
             "name": "Kindling Stave",
             "itemId": 11750,
             "value": "34.1 DPS - BRD: Pyromancer Loregrain",
-            "faction": "both"
+            "faction": "both",
+            "dps": "34.14 DPS",
+            "speed": "2.90",
+            "weaponType": "Staff"
           },
           {
             "name": "Lesser Eternal Wand",
             "itemId": 249232,
             "value": "33.0 DPS - Enchanting (265)",
-            "faction": "both"
+            "faction": "both",
+            "dps": "45.75 DPS",
+            "speed": "2.00",
+            "weaponType": "Wand"
           }
         ],
         "faction": "both"
@@ -4678,31 +6274,43 @@ const weaponsData = {
             "name": "Wisepaw Totem",
             "itemId": 274420,
             "value": "36.9 DPS - Mount Hyjal vendor",
-            "faction": "both"
+            "faction": "both",
+            "dps": "36.88 DPS",
+            "speed": "3.20",
+            "weaponType": "Staff"
           },
           {
             "name": "Rod of the Ogre Magi",
             "itemId": 18534,
             "value": "36.0 DPS, +14 Int, +11 Spi, +23 SP, 1% Spell Crit - DM North Tribute Run",
-            "faction": "both"
+            "faction": "both",
+            "dps": "36.0 DPS"
           },
           {
             "name": "Witchblade",
             "itemId": 13968,
             "value": "37.2 DPS, 1.80s, +14 SP - Scholomance: Darkmaster Gandling",
-            "faction": "both"
+            "faction": "both",
+            "dps": "37.2 DPS",
+            "speed": "1.80"
           },
           {
             "name": "Greater Eternal Wand",
             "itemId": 249237,
             "value": "36.0 DPS - Enchanting (285)",
-            "faction": "both"
+            "faction": "both",
+            "dps": "53.33 DPS",
+            "speed": "1.50",
+            "weaponType": "Wand"
           },
           {
             "name": "Brilliant Wand",
             "itemId": 249385,
             "value": "38.0 DPS - World drop wand",
-            "faction": "horde"
+            "faction": "both",
+            "dps": "59.58 DPS",
+            "speed": "1.20",
+            "weaponType": "Wand"
           }
         ],
         "faction": "both"
@@ -4736,7 +6344,10 @@ const weaponsData = {
             "name": "Short Staff",
             "itemId": 2132,
             "value": "2.0 DPS - Starter vendor staff",
-            "faction": "both"
+            "faction": "both",
+            "dps": "2.03 DPS",
+            "speed": "3.20",
+            "weaponType": "Staff"
           }
         ],
         "faction": "both"
@@ -4759,7 +6370,10 @@ const weaponsData = {
             "name": "Novice's Practice Wand",
             "itemId": 247789,
             "value": "4.0 DPS - Starter wand",
-            "faction": "both"
+            "faction": "both",
+            "dps": "4 DPS",
+            "speed": "1.50",
+            "weaponType": "Wand"
           }
         ],
         "faction": "both"
@@ -4782,7 +6396,10 @@ const weaponsData = {
             "name": "Walking Stick",
             "itemId": 2495,
             "value": "4.2 DPS - Vendor",
-            "faction": "both"
+            "faction": "both",
+            "dps": "4.2 DPS",
+            "speed": "2.50",
+            "weaponType": "Staff"
           }
         ],
         "faction": "both"
@@ -4805,28 +6422,47 @@ const weaponsData = {
             "name": "Staff of the Dor'Danil",
             "itemId": 15396,
             "value": "8.5 DPS - Early quest",
-            "faction": "both"
+            "faction": "both",
+            "dps": "8.5 DPS"
           },
           {
             "name": "Lesser Magic Wand",
             "itemId": 11287,
             "value": "11.3 DPS - Enchanting (10)",
-            "faction": "both"
+            "faction": "both",
+            "dps": "11.33 DPS",
+            "speed": "1.50",
+            "weaponType": "Wand"
           },
           {
             "name": "Riptear's Spare Arm",
             "itemId": 286743,
             "value": "9.4 DPS, 1.70s Wand - Durotar Quest: Rear Guard Patrol",
-            "faction": "horde"
+            "faction": "horde",
+            "dps": "9.41 DPS",
+            "speed": "1.70",
+            "weaponType": "Wand"
           },
           {
             "name": "Darkwood Staff",
             "itemId": 3446,
             "value": "6.7 DPS, 3.20s - Tirisfal Quest: The Family Crypt",
-            "faction": "horde"
+            "faction": "horde",
+            "dps": "6.72 DPS",
+            "speed": "3.20",
+            "weaponType": "Staff"
+          },
+          {
+            "name": "Wisesight Wand",
+            "itemId": 286750,
+            "weaponType": "Wand",
+            "speed": "1.70",
+            "dps": "8.8 DPS",
+            "value": "8.8 DPS, 1.70s - Early Wand Drop",
+            "faction": "both"
           }
         ],
-        "faction": "both"
+        "faction": "alliance"
       },
       {
         "levelBracket": "9–10",
@@ -4846,25 +6482,43 @@ const weaponsData = {
             "name": "Pagan Rod",
             "itemId": 6449,
             "value": "8.6 DPS, 1.90s - Vendor wand",
-            "faction": "both"
+            "faction": "both",
+            "dps": "8.6 DPS",
+            "speed": "1.90"
           },
           {
             "name": "Staff of the Dor'Danil",
             "itemId": 15396,
             "value": "8.5 DPS - Early quest",
-            "faction": "both"
+            "faction": "both",
+            "dps": "8.5 DPS"
           },
           {
             "name": "Riptear's Spare Arm",
             "itemId": 286743,
             "value": "9.4 DPS - Durotar Quest: Rear Guard Patrol",
-            "faction": "horde"
+            "faction": "horde",
+            "dps": "9.41 DPS",
+            "speed": "1.70",
+            "weaponType": "Wand"
           },
           {
             "name": "Cinder Wand",
             "itemId": 5242,
             "value": "11.8 DPS, 1.40s - Silverpine Quest: Arugal's Folly",
-            "faction": "horde"
+            "faction": "horde",
+            "dps": "11.79 DPS",
+            "speed": "1.40",
+            "weaponType": "Wand"
+          },
+          {
+            "name": "Deepblaze",
+            "itemId": 279896,
+            "weaponType": "Wand",
+            "speed": "1.70",
+            "dps": "18.5 DPS",
+            "value": "18.5 DPS, 1.70s - Alliance Ironforge Quest",
+            "faction": "alliance"
           }
         ],
         "faction": "both"
@@ -4887,25 +6541,44 @@ const weaponsData = {
             "name": "Oakthrush Staff",
             "itemId": 15397,
             "value": "10.9 DPS - Ashenvale quest",
-            "faction": "both"
+            "faction": "both",
+            "dps": "7.14 DPS",
+            "speed": "2.80",
+            "weaponType": "Staff"
           },
           {
             "name": "Pagan Rod",
             "itemId": 6449,
             "value": "8.6 DPS - Vendor wand",
-            "faction": "both"
+            "faction": "both",
+            "dps": "8.6 DPS"
           },
           {
             "name": "Cauldron Stirrer",
             "itemId": 5340,
             "value": "7.4 DPS, 3.10s - Barrens Quest: Apothecary Zamah",
-            "faction": "horde"
+            "faction": "horde",
+            "dps": "7.42 DPS",
+            "speed": "3.10",
+            "weaponType": "Staff"
           },
           {
             "name": "Cinder Wand",
             "itemId": 5242,
             "value": "11.8 DPS - Silverpine Quest: Arugal's Folly",
-            "faction": "horde"
+            "faction": "horde",
+            "dps": "11.79 DPS",
+            "speed": "1.40",
+            "weaponType": "Wand"
+          },
+          {
+            "name": "Spark of the People's Militia",
+            "itemId": 12296,
+            "weaponType": "Wand",
+            "speed": "1.80",
+            "dps": "12.8 DPS",
+            "value": "12.8 DPS, 1.80s - Westfall Quest",
+            "faction": "alliance"
           }
         ],
         "faction": "both"
@@ -4928,25 +6601,46 @@ const weaponsData = {
             "name": "Staff of Orgrimmar",
             "itemId": 15444,
             "value": "11.8 DPS, +6 Int, +6 Agi, +18 Spell Dmg - RFC: Hidden Enemies (Horde)",
-            "faction": "horde"
+            "faction": "horde",
+            "dps": "11.82 DPS",
+            "speed": "3.30",
+            "weaponType": "Staff"
           },
           {
             "name": "Greater Magic Wand",
             "itemId": 11288,
             "value": "17.5 DPS - Enchanting (75)",
-            "faction": "both"
+            "faction": "both",
+            "dps": "17.5 DPS",
+            "speed": "1.80",
+            "weaponType": "Wand"
           },
           {
             "name": "Trogg Scepter",
             "itemId": 272996,
             "value": "8.1 DPS, 2.40s - RFC: Oggleflint 1H mace",
-            "faction": "both"
+            "faction": "both",
+            "dps": "8.13 DPS",
+            "speed": "2.40",
+            "weaponType": "One-handed mace"
           },
           {
             "name": "Kris of Orgrimmar",
             "itemId": 15443,
             "value": "8.0 DPS, 1.50s, +4 Sta, +33 Healing, +11 Spell Damage - RFC Quest: Hidden Enemies",
-            "faction": "horde"
+            "faction": "horde",
+            "dps": "8 DPS",
+            "speed": "1.50",
+            "weaponType": "Dagger"
+          },
+          {
+            "name": "Moongazer's Wand",
+            "itemId": 284193,
+            "weaponType": "Wand",
+            "speed": "1.70",
+            "dps": "14.4 DPS",
+            "value": "14.4 DPS, 1.70s - Ashenvale Rare",
+            "faction": "both"
           }
         ],
         "faction": "both"
@@ -4969,25 +6663,46 @@ const weaponsData = {
             "name": "Staff of Orgrimmar",
             "itemId": 15444,
             "value": "11.8 DPS, +6 Int, +6 Agi, +18 Spell Dmg - RFC: Hidden Enemies (Horde)",
-            "faction": "horde"
+            "faction": "horde",
+            "dps": "11.82 DPS",
+            "speed": "3.30",
+            "weaponType": "Staff"
           },
           {
             "name": "Segmented Spider Leg",
             "itemId": 271102,
             "value": "14.8 DPS, +5 Int, +4 Sta - Ruins of Lordaeron: Witherfang",
-            "faction": "both"
+            "faction": "both",
+            "dps": "17.5 DPS",
+            "speed": "3.60",
+            "weaponType": "Staff"
           },
           {
             "name": "Emberstone Staff",
             "itemId": 5201,
             "value": "14.2 DPS - Deadmines: Captain Greenskin",
-            "faction": "both"
+            "faction": "both",
+            "dps": "14.17 DPS",
+            "speed": "3.00",
+            "weaponType": "Staff"
           },
           {
             "name": "Kris of Orgrimmar",
             "itemId": 15443,
             "value": "8.0 DPS, 1.50s, +4 Sta, +33 Healing, +11 Spell Damage - RFC Quest: Hidden Enemies",
-            "faction": "horde"
+            "faction": "horde",
+            "dps": "8 DPS",
+            "speed": "1.50",
+            "weaponType": "Dagger"
+          },
+          {
+            "name": "Whelpfire Wand",
+            "itemId": 281925,
+            "weaponType": "Wand",
+            "speed": "1.90",
+            "dps": "15.3 DPS",
+            "value": "15.3 DPS, 1.90s - Wetlands Drop",
+            "faction": "both"
           }
         ],
         "faction": "both"
@@ -5010,25 +6725,37 @@ const weaponsData = {
             "name": "Staff of Orgrimmar",
             "itemId": 15444,
             "value": "11.8 DPS, +6 Int, +6 Agi, +18 Spell Dmg - RFC: Hidden Enemies (Horde)",
-            "faction": "horde"
+            "faction": "horde",
+            "dps": "11.82 DPS",
+            "speed": "3.30",
+            "weaponType": "Staff"
           },
           {
             "name": "Staff of Westfall",
             "itemId": 2042,
             "value": "15.2 DPS, +5 Int, +11 Spi - Deadmines Quest: The Defias Brotherhood",
-            "faction": "alliance"
+            "faction": "alliance",
+            "dps": "15.17 DPS",
+            "speed": "3.00",
+            "weaponType": "Staff"
           },
           {
             "name": "Living Root",
             "itemId": 6631,
             "value": "14.7 DPS - WC: Verdan the Everliving",
-            "faction": "both"
+            "faction": "both",
+            "dps": "14.66 DPS",
+            "speed": "2.90",
+            "weaponType": "Staff"
           },
           {
             "name": "Kris of Orgrimmar",
             "itemId": 15443,
             "value": "8.0 DPS, 1.50s, +4 Sta, +33 Healing, +11 Spell Damage - RFC Quest: Hidden Enemies",
-            "faction": "horde"
+            "faction": "horde",
+            "dps": "8 DPS",
+            "speed": "1.50",
+            "weaponType": "Dagger"
           }
         ],
         "faction": "both"
@@ -5051,25 +6778,37 @@ const weaponsData = {
             "name": "Staff of Orgrimmar",
             "itemId": 15444,
             "value": "11.8 DPS, +6 Int, +6 Agi, +18 Spell Dmg - RFC: Hidden Enemies (Horde)",
-            "faction": "horde"
+            "faction": "horde",
+            "dps": "11.82 DPS",
+            "speed": "3.30",
+            "weaponType": "Staff"
           },
           {
             "name": "Odo's Ley Staff",
             "itemId": 6318,
             "value": "16.0 DPS - SFK: Odo the Blindwatcher",
-            "faction": "both"
+            "faction": "both",
+            "dps": "16.03 DPS",
+            "speed": "2.90",
+            "weaponType": "Staff"
           },
           {
             "name": "Glimmering Staff",
             "itemId": 249392,
             "value": "18.4 DPS, 2.20s, Req Level 25 - Enchanting (140)",
-            "faction": "both"
+            "faction": "both",
+            "dps": "18.41 DPS",
+            "speed": "2.20",
+            "weaponType": "Staff"
           },
           {
             "name": "Kris of Orgrimmar",
             "itemId": 15443,
             "value": "8.0 DPS, 1.50s, +4 Sta, +33 Healing, +11 Spell Damage - RFC Quest: Hidden Enemies",
-            "faction": "horde"
+            "faction": "horde",
+            "dps": "8 DPS",
+            "speed": "1.50",
+            "weaponType": "Dagger"
           }
         ],
         "faction": "alliance"
@@ -5092,13 +6831,37 @@ const weaponsData = {
             "name": "Rod of the Sleepwalker",
             "itemId": 1155,
             "value": "17.7 DPS, +11 Int, +10 Spi - BFD: Twilight Lord Kelris",
-            "faction": "both"
+            "faction": "both",
+            "dps": "17.68 DPS",
+            "speed": "2.80",
+            "weaponType": "Staff"
           },
           {
             "name": "Lesser Mystic Wand",
             "itemId": 11289,
             "value": "22.2 DPS - Enchanting (155)",
+            "faction": "both",
+            "dps": "25.38 DPS",
+            "speed": "1.30",
+            "weaponType": "Wand"
+          },
+          {
+            "name": "Snapped Branch Wand",
+            "itemId": 284574,
+            "weaponType": "Wand",
+            "speed": "1.70",
+            "dps": "21.2 DPS",
+            "value": "21.2 DPS, 1.70s - Custom Wand Drop",
             "faction": "both"
+          },
+          {
+            "name": "Alliance Outrunner Staff",
+            "itemId": 285350,
+            "weaponType": "Staff",
+            "speed": "2.50",
+            "dps": "16.2 DPS",
+            "value": "16.2 DPS, 2.50s - Alliance Drop",
+            "faction": "alliance"
           }
         ],
         "faction": "both"
@@ -5121,12 +6884,45 @@ const weaponsData = {
             "name": "Death Prophet Spine",
             "itemId": 274158,
             "value": "18.9 DPS, 2.80s, +11 Sta, +34 SP, 5 MP5 - RFK: Aggem Thorncurse",
-            "faction": "both"
+            "faction": "both",
+            "dps": "18.93 DPS",
+            "speed": "2.80",
+            "weaponType": "Staff"
           },
           {
             "name": "Crested Scepter",
             "itemId": 3414,
             "value": "17.5 DPS - SM Graveyard: Fallen Champion",
+            "faction": "both",
+            "dps": "12.12 DPS",
+            "speed": "2.60",
+            "weaponType": "One-handed mace"
+          },
+          {
+            "name": "Striking Staff",
+            "itemId": 279844,
+            "weaponType": "Staff",
+            "speed": "3.30",
+            "dps": "31.3 DPS",
+            "value": "31.3 DPS, 3.30s - Dalaran Dungeon",
+            "faction": "both"
+          },
+          {
+            "name": "Unstable Power Core",
+            "itemId": 279847,
+            "weaponType": "Wand",
+            "speed": "1.70",
+            "dps": "29.7 DPS",
+            "value": "29.7 DPS, 1.70s - Dalaran Dungeon",
+            "faction": "both"
+          },
+          {
+            "name": "Fallen Dragon's Scepter",
+            "itemId": 281312,
+            "weaponType": "Staff",
+            "speed": "3.00",
+            "dps": "19.9 DPS",
+            "value": "19.9 DPS, 3.00s - Redridge Quest",
             "faction": "both"
           }
         ],
@@ -5150,13 +6946,19 @@ const weaponsData = {
             "name": "Spine of the Devourer",
             "itemId": 273040,
             "value": "20.7 DPS, +36 SP - City of Dalaran: Mana Devourer",
-            "faction": "both"
+            "faction": "both",
+            "dps": "20.69 DPS",
+            "speed": "3.60",
+            "weaponType": "Staff"
           },
           {
             "name": "Tendonscraper Dagger",
             "itemId": 273053,
             "value": "14.4 DPS, +36 SP - City of Dalaran: Lyn the Ignored",
-            "faction": "both"
+            "faction": "both",
+            "dps": "14.38 DPS",
+            "speed": "1.60",
+            "weaponType": "Dagger"
           }
         ],
         "faction": "both"
@@ -5179,25 +6981,36 @@ const weaponsData = {
             "name": "Fallen Dragon's Scepter",
             "itemId": 281312,
             "value": "19.9 DPS, 3.40s, +11 Int, +13 Spi, +36 SP - Wetlands Quest: Stopping the Cycle",
-            "faction": "both"
+            "faction": "both",
+            "dps": "19.85 DPS",
+            "speed": "3.40",
+            "weaponType": "Staff"
           },
           {
             "name": "Madman's Blade",
             "itemId": 270070,
             "value": "14.7 DPS, 1.90s, +7 Spi, +32 SP - STV Quest: Colonel Kurzen",
-            "faction": "both"
+            "faction": "both",
+            "dps": "14.7 DPS",
+            "speed": "1.90"
           },
           {
             "name": "Mindslicer",
             "itemId": 270069,
             "value": "15.3 DPS, +7 Int, +34 SP - Arathi: Call to Arms",
-            "faction": "both"
+            "faction": "both",
+            "dps": "15.26 DPS",
+            "speed": "1.90",
+            "weaponType": "Dagger"
           },
           {
             "name": "Master Hunter's Wand",
             "itemId": 270084,
             "value": "34.7 DPS, 1.50s - STV: Big Game Hunter",
-            "faction": "both"
+            "faction": "both",
+            "dps": "34.67 DPS",
+            "speed": "1.50",
+            "weaponType": "Wand"
           }
         ],
         "faction": "both"
@@ -5220,13 +7033,19 @@ const weaponsData = {
             "name": "Staff of the Friar",
             "itemId": 3415,
             "value": "17.5 DPS, +12 Int, +6 Spi - SM Graveyard: Interrogator Vishas",
-            "faction": "both"
+            "faction": "both",
+            "dps": "15.96 DPS",
+            "speed": "2.60",
+            "weaponType": "Staff"
           },
           {
             "name": "Twisted Nether Wand",
             "itemId": 249144,
             "value": "25.0 DPS - Craft/Drop",
-            "faction": "both"
+            "faction": "both",
+            "dps": "34 DPS",
+            "speed": "1.50",
+            "weaponType": "Wand"
           }
         ],
         "faction": "both"
@@ -5249,19 +7068,28 @@ const weaponsData = {
             "name": "Staff of Jordan",
             "itemId": 873,
             "value": "31.0 DPS, +26 Spell Power - World drop BoE staff",
-            "faction": "both"
+            "faction": "both",
+            "dps": "29.86 DPS",
+            "speed": "3.70",
+            "weaponType": "Staff"
           },
           {
             "name": "Dancing Flame",
             "itemId": 6806,
             "value": "29.2 DPS - World drop wand",
-            "faction": "both"
+            "faction": "both",
+            "dps": "31.07 DPS",
+            "speed": "1.40",
+            "weaponType": "Wand"
           },
           {
             "name": "Rod of Sorrow",
             "itemId": 5247,
             "value": "28.0 DPS - Quest",
-            "faction": "both"
+            "faction": "both",
+            "dps": "32.63 DPS",
+            "speed": "1.90",
+            "weaponType": "Wand"
           }
         ],
         "faction": "both"
@@ -5284,12 +7112,27 @@ const weaponsData = {
             "name": "Zum'rah's Vexing Cane",
             "itemId": 18082,
             "value": "32.3 DPS, +10 Int, +21 SP - ZF: Witch Doctor Zum'rah",
-            "faction": "both"
+            "faction": "both",
+            "dps": "31.11 DPS",
+            "speed": "2.70",
+            "weaponType": "Staff"
           },
           {
             "name": "Dreambough Wand",
             "itemId": 249234,
             "value": "31.0 DPS - World drop wand",
+            "faction": "both",
+            "dps": "39.17 DPS",
+            "speed": "1.80",
+            "weaponType": "Wand"
+          },
+          {
+            "name": "Emerald Watcher's Dreamstaff",
+            "itemId": 282007,
+            "weaponType": "Staff",
+            "speed": "3.00",
+            "dps": "31.7 DPS",
+            "value": "31.7 DPS, 3.00s - Custom Staff Drop",
             "faction": "both"
           }
         ],
@@ -5313,13 +7156,17 @@ const weaponsData = {
             "name": "Lesser Eternal Wand",
             "itemId": 249232,
             "value": "33.0 DPS - Enchanting (265)",
-            "faction": "both"
+            "faction": "both",
+            "dps": "45.75 DPS",
+            "speed": "2.00",
+            "weaponType": "Wand"
           },
           {
             "name": "Spire of the Stoneshaper",
             "itemId": 11802,
             "value": "33.8 DPS - BRD: Lord Incendius",
-            "faction": "both"
+            "faction": "both",
+            "dps": "33.8 DPS"
           }
         ],
         "faction": "both"
@@ -5342,25 +7189,35 @@ const weaponsData = {
             "name": "Benediction",
             "itemId": 18608,
             "value": "43.4 DPS, +31 Int, +12 Sta, +12 Spi, +106 Healing - Legendary Priest Quest Staff!",
-            "faction": "both"
+            "faction": "both",
+            "dps": "40.67 DPS",
+            "speed": "3.00",
+            "weaponType": "Staff"
           },
           {
             "name": "Rod of the Ogre Magi",
             "itemId": 18534,
             "value": "36.0 DPS, +14 Int, +11 Spi, +23 SP, 1% Spell Crit - DM North Tribute Run",
-            "faction": "both"
+            "faction": "both",
+            "dps": "36.0 DPS"
           },
           {
             "name": "Greater Eternal Wand",
             "itemId": 249237,
             "value": "36.0 DPS - Enchanting (285)",
-            "faction": "both"
+            "faction": "both",
+            "dps": "53.33 DPS",
+            "speed": "1.50",
+            "weaponType": "Wand"
           },
           {
             "name": "Brilliant Wand",
             "itemId": 249385,
             "value": "38.0 DPS - World drop wand",
-            "faction": "horde"
+            "faction": "both",
+            "dps": "59.58 DPS",
+            "speed": "1.20",
+            "weaponType": "Wand"
           }
         ],
         "faction": "both"
@@ -5394,10 +7251,11 @@ const weaponsData = {
             "name": "Club",
             "itemId": 2491,
             "value": "1.8 DPS - Starter vendor mace",
-            "faction": "both"
+            "faction": "both",
+            "dps": "1.8 DPS"
           }
         ],
-        "faction": "horde"
+        "faction": "both"
       },
       {
         "levelBracket": "3–4",
@@ -5417,16 +7275,22 @@ const weaponsData = {
             "name": "Walking Stick",
             "itemId": 2495,
             "value": "4.2 DPS - Vendor staff",
-            "faction": "both"
+            "faction": "both",
+            "dps": "4.2 DPS",
+            "speed": "2.50",
+            "weaponType": "Staff"
           },
           {
             "name": "Large Club",
             "itemId": 2492,
             "value": "3.8 DPS - Vendor 2H mace",
-            "faction": "both"
+            "faction": "both",
+            "dps": "2.78 DPS",
+            "speed": "1.80",
+            "weaponType": "One-handed mace"
           }
         ],
-        "faction": "horde"
+        "faction": "both"
       },
       {
         "levelBracket": "5–6",
@@ -5446,19 +7310,28 @@ const weaponsData = {
             "name": "Copper Mace",
             "itemId": 2844,
             "value": "3.8 DPS - Blacksmithing (15)",
-            "faction": "both"
+            "faction": "both",
+            "dps": "3.85 DPS",
+            "speed": "2.60",
+            "weaponType": "One-handed mace"
           },
           {
             "name": "Walking Stick",
             "itemId": 2495,
             "value": "4.2 DPS - Vendor staff",
-            "faction": "both"
+            "faction": "both",
+            "dps": "4.2 DPS",
+            "speed": "2.50",
+            "weaponType": "Staff"
           },
           {
             "name": "Goblin Smasher",
             "itemId": 4964,
             "value": "8.2 DPS, 3.10s - Mulgore Quest: Supervisor Fizsprocket",
-            "faction": "horde"
+            "faction": "horde",
+            "dps": "8.23 DPS",
+            "speed": "3.10",
+            "weaponType": "Two-handed mace"
           }
         ],
         "faction": "both"
@@ -5481,25 +7354,35 @@ const weaponsData = {
             "name": "Staff of the Dor'Danil",
             "itemId": 15396,
             "value": "8.5 DPS - Teldrassil quest",
-            "faction": "alliance"
+            "faction": "alliance",
+            "dps": "8.5 DPS"
           },
           {
             "name": "Apprentice's Spellstaff",
             "itemId": 248008,
             "value": "6.4 DPS - Early quest",
-            "faction": "both"
+            "faction": "both",
+            "dps": "6.36 DPS",
+            "speed": "2.20",
+            "weaponType": "Staff"
           },
           {
             "name": "Bonecracker",
             "itemId": 3440,
             "value": "9.1 DPS, 3.20s - Tirisfal Quest: The Family Crypt",
-            "faction": "horde"
+            "faction": "horde",
+            "dps": "9.06 DPS",
+            "speed": "3.20",
+            "weaponType": "Two-handed mace"
           },
           {
             "name": "Darkwood Staff",
             "itemId": 3446,
             "value": "6.7 DPS, 3.20s - Tirisfal Quest: The Family Crypt",
-            "faction": "horde"
+            "faction": "horde",
+            "dps": "6.72 DPS",
+            "speed": "3.20",
+            "weaponType": "Staff"
           }
         ],
         "faction": "alliance"
@@ -5522,22 +7405,38 @@ const weaponsData = {
             "name": "Staff of the Dor'Danil",
             "itemId": 15396,
             "value": "8.5 DPS - Early quest",
-            "faction": "both"
+            "faction": "both",
+            "dps": "8.5 DPS"
           },
           {
             "name": "Trogg Scepter",
             "itemId": 272996,
             "value": "8.1 DPS, 2.40s - RFC: Oggleflint 1H mace",
-            "faction": "both"
+            "faction": "both",
+            "dps": "8.13 DPS",
+            "speed": "2.40",
+            "weaponType": "One-handed mace"
           },
           {
             "name": "Cauldron Stirrer",
             "itemId": 5340,
             "value": "7.4 DPS, 3.10s - Barrens Quest: Apothecary Zamah",
-            "faction": "horde"
+            "faction": "horde",
+            "dps": "7.42 DPS",
+            "speed": "3.10",
+            "weaponType": "Staff"
+          },
+          {
+            "name": "Ironforge Greathammer",
+            "itemId": 279895,
+            "weaponType": "Two-handed mace",
+            "speed": "3.30",
+            "dps": "16.0 DPS",
+            "value": "16.0 DPS, 3.30s - Ironforge Quest",
+            "faction": "alliance"
           }
         ],
-        "faction": "horde"
+        "faction": "both"
       },
       {
         "levelBracket": "11–12",
@@ -5557,19 +7456,37 @@ const weaponsData = {
             "name": "Oakthrush Staff",
             "itemId": 15397,
             "value": "10.9 DPS - Ashenvale quest",
-            "faction": "both"
+            "faction": "both",
+            "dps": "7.14 DPS",
+            "speed": "2.80",
+            "weaponType": "Staff"
           },
           {
             "name": "Trogg Scepter",
             "itemId": 272996,
             "value": "8.1 DPS - RFC: Oggleflint",
-            "faction": "both"
+            "faction": "both",
+            "dps": "8.13 DPS",
+            "speed": "2.40",
+            "weaponType": "One-handed mace"
           },
           {
             "name": "Hammer of Orgrimmar",
             "itemId": 15445,
             "value": "12.4 DPS, 2.90s, +3 Str, +3 Spi - RFC Quest: Hidden Enemies",
-            "faction": "horde"
+            "faction": "horde",
+            "dps": "12.41 DPS",
+            "speed": "2.90",
+            "weaponType": "One-handed mace"
+          },
+          {
+            "name": "Ironforge Greathammer",
+            "itemId": 279895,
+            "weaponType": "Two-handed mace",
+            "speed": "3.30",
+            "dps": "16.0 DPS",
+            "value": "16.0 DPS, 3.30s - Ironforge Quest",
+            "faction": "alliance"
           }
         ],
         "faction": "both"
@@ -5592,25 +7509,46 @@ const weaponsData = {
             "name": "Staff of Orgrimmar",
             "itemId": 15444,
             "value": "11.8 DPS, +6 Int, +6 Agi, +18 Spell Dmg - RFC: Hidden Enemies (Horde Caster / Feral)",
-            "faction": "horde"
+            "faction": "horde",
+            "dps": "11.82 DPS",
+            "speed": "3.30",
+            "weaponType": "Staff"
           },
           {
             "name": "Ironforge Greathammer",
             "itemId": 279895,
             "value": "16.0 DPS - Hall of Thanes dungeon quest",
-            "faction": "alliance"
+            "faction": "alliance",
+            "dps": "15.97 DPS",
+            "speed": "3.10",
+            "weaponType": "Two-handed mace"
           },
           {
             "name": "Oakthrush Staff",
             "itemId": 15397,
             "value": "10.9 DPS - Ashenvale quest",
-            "faction": "both"
+            "faction": "both",
+            "dps": "7.14 DPS",
+            "speed": "2.80",
+            "weaponType": "Staff"
           },
           {
             "name": "Kris of Orgrimmar",
             "itemId": 15443,
             "value": "8.0 DPS, 1.50s, +4 Sta, +33 Healing, +11 Spell Damage - RFC Quest: Hidden Enemies",
-            "faction": "horde"
+            "faction": "horde",
+            "dps": "8 DPS",
+            "speed": "1.50",
+            "weaponType": "Dagger"
+          },
+          {
+            "name": "Fang of Magmatus",
+            "itemId": 271095,
+            "weaponType": "Dagger",
+            "speed": "1.70",
+            "dps": "7.9 DPS",
+            "value": "7.9 DPS, 1.70s - RFC Drop",
+            "faction": "both"
           }
         ],
         "faction": "both"
@@ -5633,25 +7571,46 @@ const weaponsData = {
             "name": "Staff of Orgrimmar",
             "itemId": 15444,
             "value": "11.8 DPS, +6 Int, +6 Agi, +18 Spell Dmg - RFC: Hidden Enemies (Horde Caster / Feral)",
-            "faction": "horde"
+            "faction": "horde",
+            "dps": "11.82 DPS",
+            "speed": "3.30",
+            "weaponType": "Staff"
           },
           {
             "name": "Segmented Spider Leg",
             "itemId": 271102,
             "value": "14.8 DPS, +5 Int, +4 Sta - Ruins of Lordaeron: Witherfang",
-            "faction": "both"
+            "faction": "both",
+            "dps": "17.5 DPS",
+            "speed": "3.60",
+            "weaponType": "Staff"
           },
           {
             "name": "Scepter of the Abandoned",
             "itemId": 271103,
             "value": "14.0 DPS - Ruins of Lordaeron: The Abandoned",
-            "faction": "both"
+            "faction": "both",
+            "dps": "9.62 DPS",
+            "speed": "2.60",
+            "weaponType": "One-handed mace"
           },
           {
             "name": "Kris of Orgrimmar",
             "itemId": 15443,
             "value": "8.0 DPS, 1.50s, +4 Sta, +33 Healing, +11 Spell Damage - RFC Quest: Hidden Enemies",
-            "faction": "horde"
+            "faction": "horde",
+            "dps": "8 DPS",
+            "speed": "1.50",
+            "weaponType": "Dagger"
+          },
+          {
+            "name": "The Stitcher",
+            "itemId": 279874,
+            "weaponType": "One-handed mace",
+            "speed": "2.40",
+            "dps": "8.1 DPS",
+            "value": "8.1 DPS, 2.40s - Dalaran Dungeon",
+            "faction": "both"
           }
         ],
         "faction": "both"
@@ -5674,25 +7633,37 @@ const weaponsData = {
             "name": "Staff of Orgrimmar",
             "itemId": 15444,
             "value": "11.8 DPS, +6 Int, +6 Agi, +18 Spell Dmg - RFC quest (great hybrid stats)",
-            "faction": "horde"
+            "faction": "horde",
+            "dps": "11.82 DPS",
+            "speed": "3.30",
+            "weaponType": "Staff"
           },
           {
             "name": "Coldspire Staff",
             "itemId": 271105,
             "value": "16.8 DPS, +7 Int, +5 Spi - Ruins of Lordaeron: Rath'mael",
-            "faction": "both"
+            "faction": "both",
+            "dps": "15.14 DPS",
+            "speed": "3.60",
+            "weaponType": "Staff"
           },
           {
             "name": "Staff of Westfall",
             "itemId": 2042,
             "value": "15.2 DPS - Deadmines quest",
-            "faction": "alliance"
+            "faction": "alliance",
+            "dps": "15.17 DPS",
+            "speed": "3.00",
+            "weaponType": "Staff"
           },
           {
             "name": "Kris of Orgrimmar",
             "itemId": 15443,
             "value": "8.0 DPS, 1.50s, +4 Sta, +33 Healing, +11 Spell Damage - RFC Quest: Hidden Enemies",
-            "faction": "horde"
+            "faction": "horde",
+            "dps": "8 DPS",
+            "speed": "1.50",
+            "weaponType": "Dagger"
           }
         ],
         "faction": "both"
@@ -5715,28 +7686,40 @@ const weaponsData = {
             "name": "Staff of Orgrimmar",
             "itemId": 15444,
             "value": "11.8 DPS, +6 Int, +6 Agi, +18 Spell Dmg - RFC quest (great hybrid stats)",
-            "faction": "horde"
+            "faction": "horde",
+            "dps": "11.82 DPS",
+            "speed": "3.30",
+            "weaponType": "Staff"
           },
           {
             "name": "Bronze Warhammer",
             "itemId": 7956,
             "value": "17.4 DPS - Blacksmithing (90)",
-            "faction": "both"
+            "faction": "both",
+            "dps": "16.86 DPS",
+            "speed": "3.50",
+            "weaponType": "Two-handed mace"
           },
           {
             "name": "Staff of Westfall",
             "itemId": 2042,
             "value": "15.2 DPS - Deadmines quest",
-            "faction": "alliance"
+            "faction": "alliance",
+            "dps": "15.17 DPS",
+            "speed": "3.00",
+            "weaponType": "Staff"
           },
           {
             "name": "Kris of Orgrimmar",
             "itemId": 15443,
             "value": "8.0 DPS, 1.50s, +4 Sta, +33 Healing, +11 Spell Damage - RFC Quest: Hidden Enemies",
-            "faction": "horde"
+            "faction": "horde",
+            "dps": "8 DPS",
+            "speed": "1.50",
+            "weaponType": "Dagger"
           }
         ],
-        "faction": "both"
+        "faction": "horde"
       },
       {
         "levelBracket": "21–22",
@@ -5756,13 +7739,28 @@ const weaponsData = {
             "name": "Glimmering Staff",
             "itemId": 249392,
             "value": "18.4 DPS, 2.20s, Req Level 25 - Enchanting (140)",
-            "faction": "both"
+            "faction": "both",
+            "dps": "18.41 DPS",
+            "speed": "2.20",
+            "weaponType": "Staff"
           },
           {
             "name": "Subdued Dragon's Fang",
             "itemId": 281314,
             "value": "20.6 DPS, 1.70s, +7 Agi - Wetlands: Stopping the Cycle",
-            "faction": "both"
+            "faction": "both",
+            "dps": "20.59 DPS",
+            "speed": "1.70",
+            "weaponType": "Dagger"
+          },
+          {
+            "name": "Alliance Outrunner Staff",
+            "itemId": 285350,
+            "weaponType": "Staff",
+            "speed": "2.50",
+            "dps": "16.2 DPS",
+            "value": "16.2 DPS, 2.50s - Alliance Drop",
+            "faction": "alliance"
           }
         ],
         "faction": "both"
@@ -5785,12 +7783,27 @@ const weaponsData = {
             "name": "Staff of the Friar",
             "itemId": 3415,
             "value": "17.5 DPS - SM Graveyard: Interrogator Vishas",
-            "faction": "both"
+            "faction": "both",
+            "dps": "15.96 DPS",
+            "speed": "2.60",
+            "weaponType": "Staff"
           },
           {
             "name": "Subdued Dragon's Fang",
             "itemId": 281314,
             "value": "20.6 DPS, 1.70s, +7 Agi - Wetlands: Stopping the Cycle",
+            "faction": "both",
+            "dps": "20.59 DPS",
+            "speed": "1.70",
+            "weaponType": "Dagger"
+          },
+          {
+            "name": "Striking Staff",
+            "itemId": 279844,
+            "weaponType": "Staff",
+            "speed": "3.30",
+            "dps": "31.3 DPS",
+            "value": "31.3 DPS, 3.30s - Dalaran Dungeon",
             "faction": "both"
           }
         ],
@@ -5814,18 +7827,36 @@ const weaponsData = {
             "name": "Dendweller's Hammer",
             "itemId": 284459,
             "value": "25.6 DPS, 3.30s - Level 26 Mace",
-            "faction": "both"
+            "faction": "both",
+            "dps": "25.61 DPS",
+            "speed": "3.30",
+            "weaponType": "Two-handed mace"
           },
           {
             "name": "Solid Iron Maul",
             "itemId": 3851,
             "value": "22.8 DPS - Blacksmithing (135)",
-            "faction": "both"
+            "faction": "both",
+            "dps": "15.57 DPS",
+            "speed": "3.50",
+            "weaponType": "Two-handed mace"
           },
           {
             "name": "Death Prophet Spine",
             "itemId": 274158,
             "value": "18.9 DPS, +34 SP, 5 MP5 - RFK: Aggem Thorncurse",
+            "faction": "both",
+            "dps": "18.93 DPS",
+            "speed": "2.80",
+            "weaponType": "Staff"
+          },
+          {
+            "name": "Defender of Dalaran",
+            "itemId": 279841,
+            "weaponType": "Two-handed mace",
+            "speed": "3.30",
+            "dps": "31.2 DPS",
+            "value": "31.2 DPS, 3.30s - Dalaran Dungeon",
             "faction": "both"
           }
         ],
@@ -5849,19 +7880,28 @@ const weaponsData = {
             "name": "Striking Staff",
             "itemId": 279844,
             "value": "31.3 DPS, 3.10s, +9 Str, +6 Sta, +14 Int - City of Dalaran Quest: Heart of Disruption",
-            "faction": "both"
+            "faction": "both",
+            "dps": "31.29 DPS",
+            "speed": "3.10",
+            "weaponType": "Staff"
           },
           {
             "name": "Spine of the Devourer",
             "itemId": 273040,
             "value": "20.7 DPS, +36 SP - City of Dalaran: Mana Devourer",
-            "faction": "both"
+            "faction": "both",
+            "dps": "20.69 DPS",
+            "speed": "3.60",
+            "weaponType": "Staff"
           },
           {
             "name": "Felbough Arm",
             "itemId": 273037,
             "value": "28.8 DPS, 3.00s, +10 Agi, +10 Hit - City of Dalaran: Fel Ancient",
-            "faction": "both"
+            "faction": "both",
+            "dps": "28.83 DPS",
+            "speed": "3.00",
+            "weaponType": "Polearm"
           }
         ],
         "faction": "both"
@@ -5884,18 +7924,36 @@ const weaponsData = {
             "name": "Healer's Staff",
             "itemId": 271767,
             "value": "20.8 DPS, 2.60s, +12 Sta, +67 Healing, 5 MP5 - Excavation Site 4 quest",
-            "faction": "both"
+            "faction": "both",
+            "dps": "20.77 DPS",
+            "speed": "2.60",
+            "weaponType": "Staff"
           },
           {
             "name": "Dark Hearted Hammer",
             "itemId": 270071,
             "value": "28.9 DPS, 3.80s, +12 Str, +8 Sta - STV Quest: Colonel Kurzen",
-            "faction": "both"
+            "faction": "both",
+            "dps": "28.95 DPS",
+            "speed": "3.80",
+            "weaponType": "Two-handed mace"
           },
           {
             "name": "Fallen Dragon's Scepter",
             "itemId": 281312,
             "value": "19.9 DPS, 3.40s, +11 Int, +13 Spi, +36 SP - Wetlands Quest: Stopping the Cycle",
+            "faction": "both",
+            "dps": "19.85 DPS",
+            "speed": "3.40",
+            "weaponType": "Staff"
+          },
+          {
+            "name": "Rage of the Storm",
+            "itemId": 280604,
+            "weaponType": "Two-handed mace",
+            "speed": "3.20",
+            "dps": "35.6 DPS",
+            "value": "35.6 DPS, 3.20s - Custom Boss Drop",
             "faction": "both"
           }
         ],
@@ -5919,13 +7977,19 @@ const weaponsData = {
             "name": "Illusionary Rod",
             "itemId": 7713,
             "value": "25.7 DPS, +15 Int, +10 Spi - SM Library: Arcanist Doan",
-            "faction": "both"
+            "faction": "both",
+            "dps": "25.74 DPS",
+            "speed": "3.40",
+            "weaponType": "Staff"
           },
           {
             "name": "Rock Pulverizer",
             "itemId": 4983,
             "value": "28.4 DPS, 3.20s - Badlands Quest: Murdaloc",
-            "faction": "both"
+            "faction": "both",
+            "dps": "31.22 DPS",
+            "speed": "3.70",
+            "weaponType": "Two-handed mace"
           }
         ],
         "faction": "both"
@@ -5948,13 +8012,19 @@ const weaponsData = {
             "name": "Staff of Jordan",
             "itemId": 873,
             "value": "31.0 DPS, +26 Spell Power - World drop BoE staff",
-            "faction": "both"
+            "faction": "both",
+            "dps": "29.86 DPS",
+            "speed": "3.70",
+            "weaponType": "Staff"
           },
           {
-            "name": "Archeus",
-            "itemId": 2000,
-            "value": "30.8 DPS - Duskwood quest",
-            "faction": "alliance"
+            "name": "Dendweller's Hammer",
+            "itemId": 284459,
+            "weaponType": "Two-handed mace",
+            "speed": "3.30",
+            "dps": "25.6 DPS",
+            "value": "25.6 DPS, 3.30s - Custom 2H Mace Drop",
+            "faction": "both"
           }
         ],
         "faction": "both"
@@ -5977,12 +8047,34 @@ const weaponsData = {
             "name": "Spellshifter Rod",
             "itemId": 9527,
             "value": "31.1 DPS - Quest: Tiara of the Deep",
-            "faction": "both"
+            "faction": "both",
+            "dps": "31.11 DPS",
+            "speed": "2.70",
+            "weaponType": "Staff"
           },
           {
             "name": "Grisly Sack of Skulls",
             "itemId": 1959,
             "value": "40.3 DPS - World Drop",
+            "faction": "both",
+            "dps": "40.3 DPS"
+          },
+          {
+            "name": "Gul'gash's Greathammer",
+            "itemId": 281648,
+            "weaponType": "Two-handed mace",
+            "speed": "3.60",
+            "dps": "42.8 DPS",
+            "value": "42.8 DPS, 3.60s - Feralas Drop",
+            "faction": "both"
+          },
+          {
+            "name": "Emerald Watcher's Dreamstaff",
+            "itemId": 282007,
+            "weaponType": "Staff",
+            "speed": "3.00",
+            "dps": "31.7 DPS",
+            "value": "31.7 DPS, 3.00s - Custom Staff Drop",
             "faction": "both"
           }
         ],
@@ -6006,13 +8098,19 @@ const weaponsData = {
             "name": "Kindling Stave",
             "itemId": 11750,
             "value": "34.1 DPS - BRD: Pyromancer Loregrain",
-            "faction": "both"
+            "faction": "both",
+            "dps": "34.14 DPS",
+            "speed": "2.90",
+            "weaponType": "Staff"
           },
           {
             "name": "Enchanted Battlehammer",
             "itemId": 12776,
             "value": "48.3 DPS - Blacksmithing (280)",
-            "faction": "both"
+            "faction": "both",
+            "dps": "48.29 DPS",
+            "speed": "3.50",
+            "weaponType": "Two-handed mace"
           }
         ],
         "faction": "both"
@@ -6035,19 +8133,24 @@ const weaponsData = {
             "name": "Wisepaw Totem",
             "itemId": 274420,
             "value": "36.9 DPS - Mount Hyjal caster staff",
-            "faction": "both"
+            "faction": "both",
+            "dps": "36.88 DPS",
+            "speed": "3.20",
+            "weaponType": "Staff"
           },
           {
             "name": "Hammer of the Grand Crusader",
             "itemId": 18717,
             "value": "53.9 DPS - Stratholme 2H Mace",
-            "faction": "both"
+            "faction": "both",
+            "dps": "53.9 DPS"
           },
           {
             "name": "Rod of the Ogre Magi",
             "itemId": 18534,
             "value": "36.0 DPS - DM North Tribute Run",
-            "faction": "both"
+            "faction": "both",
+            "dps": "36.0 DPS"
           }
         ],
         "faction": "both"

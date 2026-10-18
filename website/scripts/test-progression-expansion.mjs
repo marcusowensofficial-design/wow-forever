@@ -143,4 +143,100 @@ if (!warriorHtml.includes('id="weapon-faction-toggle"') || !warriorHtml.includes
 }
 console.log('✓ Weapon progression UI includes interactive Faction Filter toggle buttons');
 
+// 9. Test Faction Filtering Completeness (0 missing brackets & 0 broken stats across all classes)
+const factions = ['all', 'alliance', 'horde'];
+for (const cls of expectedClasses) {
+  const cData = progData.weapons[cls];
+  const total = cData.levels.length;
+  for (const f of factions) {
+    const isPaladin = cls === 'paladin';
+    const isShaman = cls === 'shaman';
+    let eff = f;
+    if (isPaladin && eff === 'horde') eff = 'alliance';
+    if (isShaman && eff === 'alliance') eff = 'horde';
+
+    let count = 0;
+    cData.levels.forEach(step => {
+      let displayStep = { ...step };
+      let displayAlts = (step.alts || []).slice();
+
+      if (eff !== 'all') {
+        const stepFaction = step.faction || 'both';
+        if (stepFaction !== 'both' && stepFaction !== eff) {
+          let matchIdx = displayAlts.findIndex(a => a.faction === eff);
+          if (matchIdx === -1) {
+            matchIdx = displayAlts.findIndex(a => (a.faction || 'both') === 'both');
+          }
+          if (matchIdx !== -1) {
+            const altMatch = displayAlts[matchIdx];
+            const valStr = altMatch.value || '';
+            const dpsMatch = altMatch.dps || valStr.match(/([\d.]+\s*DPS)/i)?.[1] || '';
+            const spdMatch = altMatch.speed || valStr.match(/([\d.]+s)/i)?.[1]?.replace('s', '') || '';
+            displayStep = {
+              ...step,
+              itemId: altMatch.itemId || null,
+              name: altMatch.name,
+              dps: dpsMatch || (altMatch.dps ? `${altMatch.dps} DPS` : step.dps),
+              speed: spdMatch || altMatch.speed || step.speed,
+              weaponType: altMatch.weaponType || step.weaponType
+            };
+          } else {
+            return;
+          }
+        }
+      }
+      if (!displayStep.dps || displayStep.dps === '') {
+        throw new Error(`Empty DPS on step ${step.levelBracket} for ${cls} under faction filter ${f}`);
+      }
+      count++;
+    });
+
+    if (count !== total) {
+      throw new Error(`Faction filter "${f}" on ${cls} dropped brackets! (expected ${total}, got ${count})`);
+    }
+  }
+}
+console.log('✓ 100% of progression steps remain visible with valid DPS across all 9 classes and all faction filters');
+
+// 10. Test Wowhead Forever Datamined Leveling Weapons Integration
+const dataminedWeapons = [
+  'Fang of Magmatus',
+  'Defender of Dalaran',
+  'Striking Staff',
+  'Blade of Silverlaine',
+  'Rage of the Storm',
+  'Icesworn Decapitator',
+  'Barbaric Crossbow',
+  'Dun Garok Rifle',
+  'Ironforge Greathammer',
+  'Deepblaze'
+];
+for (const wName of dataminedWeapons) {
+  let found = false;
+  for (const cls of expectedClasses) {
+    for (const lvl of progData.weapons[cls].levels) {
+      if (lvl.name === wName || (lvl.alts || []).some(a => a.name === wName)) {
+        found = true;
+        break;
+      }
+    }
+    if (found) break;
+  }
+  if (!found) {
+    throw new Error(`Missing datamined leveling weapon "${wName}" from weapon progression database!`);
+  }
+}
+console.log(`✓ All ${dataminedWeapons.length} checked Wowhead Forever datamined leveling weapons verified in dataset`);
+
+// 11. Test Faction-Exclusive Class Button Protection
+const paladinHtml = mod.renderProgressionSubtab('weapons', { id: 'paladin', name: 'PALADIN' });
+if (!paladinHtml.includes('disabled') || !paladinHtml.includes('Paladins are exclusive to the Alliance')) {
+  throw new Error('Paladin weapons UI failed to disable invalid Horde faction filter button');
+}
+const shamanHtml = mod.renderProgressionSubtab('weapons', { id: 'shaman', name: 'SHAMAN' });
+if (!shamanHtml.includes('disabled') || !shamanHtml.includes('Shamans are exclusive to the Horde')) {
+  throw new Error('Shaman weapons UI failed to disable invalid Alliance faction filter button');
+}
+console.log('✓ Faction-exclusive classes (Paladin/Shaman) correctly disable opposing faction filters');
+
 console.log('\n✓ ALL CLASS PROGRESSION INTEGRITY CHECKS PASSED PERFECTLY!\n');
