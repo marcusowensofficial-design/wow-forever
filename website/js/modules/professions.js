@@ -2652,6 +2652,48 @@
         "waypoint": "/way Mulgore 48.0 60.0",
         "description": "Ride the outer plateau wall from Bloodhoof Village south past Red Cloud Mesa, sweeping through the Palemane gnoll rocks, then north along the western cliffs past Windfury Crag and east past the Venture Co. Mine.",
         "tips": "Wide open fields make node spotting exceptionally easy. Check the Venture Co Mine entrance for bonus spawns."
+      },
+      {
+        "id": "copper_dun_morogh",
+        "name": "Dun Morogh Dual Quarry & Iceflow Circuit",
+        "faction": "Alliance",
+        "zone": "Dun Morogh",
+        "lapMinutes": "11–13 min",
+        "direction": "Clockwise",
+        "density": "Very High (~18–24 nodes/lap)",
+        "hostileLevel": "Lvl 4–10",
+        "bestFor": "Dwarf & Gnome 1–65 fast copper leveling",
+        "waypoint": "/way Dun Morogh 46.0 52.0",
+        "description": "From Kharanos, sweep west to the Grizzled Den and Brewnall Village, curve north past Iceflow Lake and the Ironforge mountain base, and loop east through Helm's Bed Lake and the Gol'Bolar Quarry rim before returning to Kharanos.",
+        "tips": "The fast respawn rate allows running two smaller sub-loops (Kharanos/Brewnall or Gol'Bolar/Helm's Bed) if competition is high."
+      },
+      {
+        "id": "copper_dun_morogh_quarry",
+        "name": "Dun Morogh Eastern Gol'Bolar & Helm's Bed Loop",
+        "faction": "Alliance",
+        "zone": "Dun Morogh",
+        "lapMinutes": "9–11 min",
+        "direction": "Clockwise",
+        "density": "Very High (~16–20 nodes/lap)",
+        "hostileLevel": "Lvl 6–11",
+        "bestFor": "Dedicated secondary route when western Dun Morogh is contested",
+        "waypoint": "/way Dun Morogh 69.0 57.0",
+        "description": "Dedicated secondary eastern Dun Morogh circuit: start at Gol'Bolar Quarry, skirt the eastern mountain crags past Amberstill Ranch, curve around the shores of Helm's Bed Lake, and sweep south past the South Gate outposts back to Gol'Bolar.",
+        "tips": "Gol'Bolar Quarry rim and Helm's Bed crags provide dense, rapid node respawns isolated from Brewnall."
+      },
+      {
+        "id": "copper_tirisfal",
+        "name": "Tirisfal Northern Bluffs & Agamand Mills Loop",
+        "faction": "Horde",
+        "zone": "Tirisfal Glades",
+        "lapMinutes": "9–12 min",
+        "direction": "Counter-Clockwise",
+        "density": "High (~14–18 nodes/lap)",
+        "hostileLevel": "Lvl 5–11",
+        "bestFor": "Undead 1–65 starter copper route",
+        "waypoint": "/way Tirisfal Glades 59.0 52.0",
+        "description": "Start at Brill, ride northeast along Stillwater Pond cliffs towards Gunther's Isle bluffs, trace the northern mountain ridge west past Agamand Mills, drop south along Solliden Farmstead and Nightmare Vale bluffs, and return east along the Undercity moat.",
+        "tips": "The rocky ridges directly north of Agamand Mills and Solliden Farmstead have rapid node respawns."
       }
     ]
   },
@@ -2721,6 +2763,48 @@
         "waypoint": "/way Hillsbrad Foothills 50.0 58.0",
         "description": "From Southshore, ride along the southern coastal cliffs east towards Dun Garok and Thoradin's Wall, turn north into the foothills encircling Durnholde Keep, sweep west across the hills north of Tarren Mill, and return south past Azurelode Mine.",
         "tips": "Rich in both Tin and early Iron spawns along the northern mountain ridge."
+      },
+      {
+        "id": "tin_barrens_south",
+        "name": "Southern Barrens Taurajo & Bael Modan Loop",
+        "faction": "Horde",
+        "zone": "The Barrens",
+        "lapMinutes": "14–17 min",
+        "direction": "Clockwise",
+        "density": "Very High (~22–28 nodes/lap)",
+        "hostileLevel": "Lvl 20–25",
+        "bestFor": "Secondary Barrens route with peak Tin & Silver density",
+        "waypoint": "/way The Barrens 44.5 59.0",
+        "description": "Starting from Camp Taurajo, ride south across the Field of Giants northern crags, trace the Bael Modan excavation rim down to the Razorfen Kraul and Downs exterior cliffs, and loop back north along the eastern mountain ridge past Northwatch foothills.",
+        "tips": "Provides a richer Tin yield than Northern Barrens; ideal alternative when Northern Barrens has heavy competition."
+      },
+      {
+        "id": "tin_redridge",
+        "name": "Redridge Canyons & Alther's Mill Circuit",
+        "faction": "Alliance",
+        "zone": "Redridge Mountains",
+        "lapMinutes": "12–15 min",
+        "direction": "Clockwise",
+        "density": "High (~16–22 nodes/lap)",
+        "hostileLevel": "Lvl 18–25",
+        "bestFor": "Alliance classic 65–125 Tin & Silver progression",
+        "waypoint": "/way Redridge Mountains 33.0 49.0",
+        "description": "Primary Alliance Tin route from wow-professions: start outside Lakeshire, trace the northern ridge through the Redridge Canyons, sweep east past Alther's Mill and Render's Rock foothills, curve south through Render's Valley, and loop west along the Three Corners bluffs.",
+        "tips": "Lower level players should avoid entering the gnoll caves; stick tightly to the eastern mountain ledges where Tin and Silver nodes spawn."
+      },
+      {
+        "id": "tin_ashenvale",
+        "name": "Ashenvale Silverwind & Mystral Lake Circuit",
+        "faction": "Contested",
+        "zone": "Ashenvale",
+        "lapMinutes": "14–17 min",
+        "direction": "Clockwise",
+        "density": "High (~16–20 nodes/lap)",
+        "hostileLevel": "Lvl 20–28",
+        "bestFor": "Contested Kalimdor 65–125 Tin & Silver farming",
+        "waypoint": "/way Ashenvale 35.0 52.0",
+        "description": "Core Kalimdor Tin & Silver route from wow-professions: start at Astranaar, ride southwest along the foothills to Mystral Lake, sweep east through Silverwind Refuge and Falfarren River gorge, curve north around Splintertree Post cliffs, and loop west past Night Run.",
+        "tips": "The small cave near Mystral Lake contains two guaranteed Tin nodes; high-level players should check inside while lower levels stick to the outer canyon ledges."
       }
     ]
   },
@@ -2790,6 +2874,20 @@
         "waypoint": "/way Wetlands 56.0 42.0",
         "description": "Follow the eastern and northern mountain crescent from Greenwarden's Grove up through Raptor Ridge and Direforge Hill, sweep west past Dun Modr and Ironbeard's Tomb to Whelgar's Excavation, and loop back east past Thelgen Rock.",
         "tips": "Wetland marsh water slows unmounted running; stick tightly to the rocky base along the foothills."
+      },
+      {
+        "id": "iron_desolace",
+        "name": "Desolace Valley of Bones & Centaur Ridge",
+        "faction": "Contested",
+        "zone": "Desolace",
+        "lapMinutes": "15–18 min",
+        "direction": "Clockwise",
+        "density": "High (~18–24 nodes/lap)",
+        "hostileLevel": "Lvl 32–38",
+        "bestFor": "Kalimdor Iron & Tin leveling alternative",
+        "waypoint": "/way Desolace 66.0 14.5",
+        "description": "From Nijel's Point foothills, trace the eastern mountain ridge south past Kolkar Village and Magram territory to the Valley of Bones cliffs, sweep west past Kormek's Hut, and loop north past Ghost Walker Post and Thunder Axe Fortress.",
+        "tips": "Avoid entering the center of Magram and Gelkis clan villages; stick tightly to the rocky canyon base where nodes spawn."
       }
     ]
   },
@@ -2929,6 +3027,48 @@
         "waypoint": "/way Silithus 51.0 38.0",
         "description": "From Cenarion Hold, trace the outside perimeter counter-clockwise around Hive'Ashi, Twilight Base Camp, Hive'Zora, and Hive'Regal, skirting the western and southern mountain rims before returning north past Staghelm Point.",
         "tips": "Rich Thorium veins spawn directly on the ramp entrances of the three major silithid hives."
+      },
+      {
+        "id": "thorium_burning_steppes",
+        "name": "Burning Steppes Blackrock & Dreadmaul Circuit",
+        "faction": "Contested",
+        "zone": "Burning Steppes",
+        "lapMinutes": "16–20 min",
+        "direction": "Clockwise",
+        "density": "Maximum (~24–32 nodes/lap)",
+        "hostileLevel": "Lvl 50–58",
+        "bestFor": "Rich Thorium Veins + Dark Iron Ore combo",
+        "waypoint": "/way Burning Steppes 84.0 68.0",
+        "description": "Start at Morgan's Vigil, ride northwest past Dreadmaul Rock and Altar of Storms, trace the northern rim across Ruins of Thaurissan to the Blackrock Mountain exterior, loop south through Pillar of Ash, and sweep east past Firegut Ogre Mound.",
+        "tips": "The caves near Dreadmaul Rock hold 3–4 Rich Thorium and Dark Iron nodes; lower level players should bypass deep caves."
+      },
+      {
+        "id": "thorium_blasted_lands",
+        "name": "Blasted Lands Red Swarm & Nethergarde Ridge",
+        "faction": "Contested",
+        "zone": "Blasted Lands",
+        "lapMinutes": "13–16 min",
+        "direction": "Counter-Clockwise",
+        "density": "High (~16–22 nodes/lap)",
+        "hostileLevel": "Lvl 48–55",
+        "bestFor": "Small Thorium & Mithril (Skill 245–275)",
+        "waypoint": "/way Blasted Lands 64.0 20.0",
+        "description": "From Nethergarde Keep, ride southwest past Dreadmaul Post and Garrison Armory cliffs, sweep south past Serpent's Coil along the red mountain rim, circle the Dark Portal basin, and return north along Kum'isha's foothills.",
+        "tips": "Garrison Armory cave holds multiple veins; Alliance miners should farm the outside ridges as inside mobs are dense."
+      },
+      {
+        "id": "thorium_felwood",
+        "name": "Felwood Corrupted Ridges & Jaedenar Run",
+        "faction": "Contested",
+        "zone": "Felwood",
+        "lapMinutes": "15–18 min",
+        "direction": "Counter-Clockwise",
+        "density": "High (~16–20 nodes/lap)",
+        "hostileLevel": "Lvl 48–55",
+        "bestFor": "Small Thorium & Mithril transition (Skill 245–275)",
+        "waypoint": "/way Felwood 51.0 82.0",
+        "description": "Start at Emerald Sanctuary, ride north along the western ridges past Jaedenar and Bloodvenom Post, sweep across Shatter Scar Vale and Irontree Woods, loop around Deadwood Village rim, and return south along the eastern mountain line.",
+        "tips": "Caves at Jaedenar contain 2 guaranteed nodes; pass through with stealth or high level to avoid pulling unnecessary aggro."
       }
     ]
   }
@@ -2998,6 +3138,34 @@
         "waypoint": "/way Teldrassil 56.0 58.0",
         "description": "From Dolanaar, ride south circling Lake Al'Ameth, cut northeast through Starbreeze Village ruins to the Wellspring River, and loop west past Ban'ethil Hollow and the Pools of Arlithrien.",
         "tips": "Silverleaf spawns heavily under tree canopies; check roots and stumps."
+      },
+      {
+        "id": "herb_dun_morogh",
+        "name": "Dun Morogh Brewnall & Lake Circuit",
+        "faction": "Alliance",
+        "zone": "Dun Morogh",
+        "lapMinutes": "10–12 min",
+        "direction": "Clockwise",
+        "density": "High (~16–20 nodes/lap)",
+        "hostileLevel": "Lvl 4–10",
+        "bestFor": "Dwarf & Gnome 1–70 Peacebloom & Earthroot",
+        "waypoint": "/way Dun Morogh 46.0 53.0",
+        "description": "From Kharanos, sweep northwest across Iceflow Lake shores to Brewnall Village, loop south through Shimmer Ridge foothills, head east across southern Kharanos woods to Gol'Bolar Quarry outskirts, and return via Helm's Bed Lake meadows.",
+        "tips": "Earthroot is concentrated around the rocky crags flanking Iceflow Lake and Helm's Bed Lake."
+      },
+      {
+        "id": "herb_mulgore",
+        "name": "Mulgore Golden Plains & Water Well Circuit",
+        "faction": "Horde",
+        "zone": "Mulgore",
+        "lapMinutes": "10–12 min",
+        "direction": "Clockwise",
+        "density": "Very High (~18–24 nodes/lap)",
+        "hostileLevel": "Lvl 4–10",
+        "bestFor": "Tauren 1–70 rapid herbalism skilling",
+        "waypoint": "/way Mulgore 48.0 60.0",
+        "description": "From Bloodhoof Village, head northeast towards Winterhoof Water Well, sweep around the southern bluffs of Thunder Bluff, circle west past Windfury Crag foothills, and loop south along the open dirt plains past Red Cloud Mesa approach.",
+        "tips": "Wide open sightlines make node spotting effortless; Earthroot spawns along the mesa foothills."
       }
     ]
   },
@@ -3066,6 +3234,34 @@
         "waypoint": "/way Silverpine Forest 46.0 42.0",
         "description": "From The Sepulcher, head northwest to North Tide's Hollow coast, ride south along the shoreline harvesting Stranglekelp to Shadowfang Keep bluff, sweep east to Ambermill foothills, and return north along Lordamere Lake.",
         "tips": "Watch out for Son of Arugal (Lvl 25 Elite) patrolling the central road."
+      },
+      {
+        "id": "herb_barrens_south",
+        "name": "Southern Barrens Taurajo & Savannah Loop",
+        "faction": "Horde",
+        "zone": "The Barrens",
+        "lapMinutes": "13–16 min",
+        "direction": "Clockwise",
+        "density": "Very High (~20–26 nodes/lap)",
+        "hostileLevel": "Lvl 18–24",
+        "bestFor": "Expansive 2nd Barrens route with heavy Briarthorn & Mageroyal",
+        "waypoint": "/way The Barrens 44.5 59.0",
+        "description": "From Camp Taurajo, ride south across the southern savannah plains, skirt the Brambles border and Field of Giants foothills down towards Razorfen outskirts, and loop northeast past Bael Modan riverbank and Northwatch foothills back to Taurajo.",
+        "tips": "Dense Briarthorn clusters around the base of trees across the southern plains."
+      },
+      {
+        "id": "herb_darkshore",
+        "name": "Darkshore Coastal Tree Line & Ruins Loop",
+        "faction": "Alliance",
+        "zone": "Darkshore",
+        "lapMinutes": "12–15 min",
+        "direction": "Counter-Clockwise",
+        "density": "High (~16–22 nodes/lap)",
+        "hostileLevel": "Lvl 12–18",
+        "bestFor": "Alliance Night Elves 70–115 progression + Stranglekelp",
+        "waypoint": "/way Darkshore 37.0 44.0",
+        "description": "From Auberdine, ride south along the coastal waters gathering Stranglekelp, sweep inland around Master's Glaive and Grove of the Ancients for Briarthorn, head north past Ameth'Aran and Bashal'Aran, and return via Cliffspring River banks.",
+        "tips": "Diving along the shallow coastal reef south of Auberdine provides reliable Stranglekelp (requires skill 85)."
       }
     ]
   },
@@ -3201,6 +3397,20 @@
         "waypoint": "/way Stranglethorn Vale 36.0 11.0",
         "description": "From Nesingwary's Expedition, ride west to the Ruins of Zul'Kunda, head south along the coast past Bal'lal and Kal'ai ruins, sweep east to Mizjah, and loop north along Lake Nazferiti and Kurzen's Compound back past Rebel Camp.",
         "tips": "Watch out for stealthed jungle panthers; gather while mounted if possible."
+      },
+      {
+        "id": "herb_stv_south",
+        "name": "Southern Stranglethorn Vale & Wild Shore Circuit",
+        "faction": "Contested",
+        "zone": "Stranglethorn Vale",
+        "lapMinutes": "16–19 min",
+        "direction": "Counter-Clockwise",
+        "density": "Very High (~22–28 nodes/lap)",
+        "hostileLevel": "Lvl 38–45",
+        "bestFor": "Full-zone STV coverage for Goldthorn & Fadeleaf",
+        "waypoint": "/way Stranglethorn Vale 32.0 28.0",
+        "description": "From Grom'gol Base Camp, ride south past Gurubashi Arena and Crystalvein Mine foothills, follow the southern jungle riverbed towards Booty Bay mountain ridges, sweep east past Jaguero Isle coastal glades, and loop north along the Wild Shore jungle edge.",
+        "tips": "Goldthorn spawns on the rocky promontories overlooking Booty Bay and near the ruins around Gurubashi Arena."
       }
     ]
   },
@@ -3405,6 +3615,20 @@
         "waypoint": "/way Western Plaguelands 43.0 84.0",
         "description": "From Chillwind Camp, ride northeast across Sorrow Hill and The Writhing Haunt to Gahrron's Withering, loop north to Northridge Lumber Camp, and sweep southwest through Dalson's Tears, Felstone Field, and Andorhal's western perimeter.",
         "tips": "Sorrow Hill and the four plagued farmsteads contain heavy Plaguebloom and Arthas' Tears spawns."
+      },
+      {
+        "id": "herb_felwood_endgame",
+        "name": "Felwood Northern Plaguebloom & Mountain Silversage Run",
+        "faction": "Contested",
+        "zone": "Felwood",
+        "lapMinutes": "16–19 min",
+        "direction": "Clockwise",
+        "density": "Maximum (~24–30 nodes/lap)",
+        "hostileLevel": "Lvl 50–55",
+        "bestFor": "World-class 270–300 Plaguebloom & Mountain Silversage run",
+        "waypoint": "/way Felwood 35.0 52.0",
+        "description": "Primary wow-professions 270–300 herbalism circuit: start at Bloodvenom Post, sweep north along the western cliffs past Shatter Scar Vale and Irontree Woods, loop around the Deadwood Village perimeter to the Timbermaw Hold approach, and trace the high eastern corrupted slopes south.",
+        "tips": "Plaguebloom carpets the corrupt soil around Shatter Scar Vale and Irontree Woods, while Mountain Silversage clings to the highest rock crags near Timbermaw Hold."
       }
     ]
   }
@@ -6471,11 +6695,16 @@
   'Stranglethorn Vale': 33,
   'Felwood': 361,
   'Feralas': 357,
+  'Dun Morogh': 1,
+  'Desolace': 405,
+  'Blasted Lands': 4,
+  'Burning Steppes': 46,
+  'Ashenvale': 331,
   'Western Plaguelands': 28
 };
 
 const CIRCUIT_ROUTE_PATHS = {
-  // === 20 MINING ROUTES ===
+  // === MINING ROUTES ===
   copper_durotar: [
     { x: 52.0, y: 43.0, label: 'Razor Hill (Start)' },
     { x: 56.5, y: 51.5, label: 'Tiragarde Keep Cliffs' },
@@ -6523,6 +6752,38 @@ const CIRCUIT_ROUTE_PATHS = {
     { x: 59.5, y: 61.5, label: 'Ravaged Caravan East Wall' },
     { x: 48.0, y: 60.0, label: 'Return to Bloodhoof' }
   ],
+  copper_dun_morogh: [
+    { x: 46.0, y: 52.0, label: 'Kharanos Outskirts (Start)' },
+    { x: 38.0, y: 46.0, label: 'The Grizzled Den Ridge' },
+    { x: 29.0, y: 48.5, label: 'Brewnall Village Cliffs' },
+    { x: 38.5, y: 36.5, label: 'Iceflow Lake Mountain Wall' },
+    { x: 53.5, y: 34.5, label: 'Ironforge Mountain Base' },
+    { x: 67.5, y: 48.0, label: "Helm's Bed Crags" },
+    { x: 69.0, y: 57.0, label: "Gol'Bolar Quarry Rim" },
+    { x: 58.0, y: 62.0, label: 'South Gate Foothills' },
+    { x: 46.0, y: 52.0, label: 'Return to Kharanos' }
+  ],
+  copper_dun_morogh_quarry: [
+    { x: 69.0, y: 57.0, label: "Gol'Bolar Quarry Rim (Start)" },
+    { x: 74.0, y: 51.0, label: 'Eastern Mountain Ridge' },
+    { x: 67.5, y: 44.0, label: "Helm's Bed Lake Shore" },
+    { x: 62.0, y: 39.0, label: 'Amberstill Ranch Foothills' },
+    { x: 55.0, y: 42.0, label: 'Ironforge Road Ledges' },
+    { x: 57.0, y: 56.0, label: 'South Gate Mountain Pass' },
+    { x: 64.0, y: 61.0, label: 'Southern Quarry Bluffs' },
+    { x: 69.0, y: 57.0, label: "Return to Gol'Bolar Quarry" }
+  ],
+  copper_tirisfal: [
+    { x: 59.0, y: 52.0, label: 'Brill Outskirts (Start)' },
+    { x: 67.5, y: 41.5, label: 'Stillwater Pond Cliffs' },
+    { x: 74.0, y: 48.0, label: 'Balnir Farmstead Ledges' },
+    { x: 68.0, y: 29.5, label: "Gunther's Isle Coastal Bluffs" },
+    { x: 52.5, y: 27.0, label: 'Agamand Mills North Ridge' },
+    { x: 36.0, y: 44.5, label: 'Solliden Farmstead Wall' },
+    { x: 43.5, y: 59.5, label: 'Nightmare Vale Cliffs' },
+    { x: 56.0, y: 62.0, label: 'Undercity Outer Moat' },
+    { x: 59.0, y: 52.0, label: 'Return to Brill' }
+  ],
   tin_barrens: [
     { x: 51.0, y: 30.0, label: 'The Crossroads (Start)' },
     { x: 45.0, y: 22.5, label: 'Forgotten Pools Ridge' },
@@ -6533,6 +6794,16 @@ const CIRCUIT_ROUTE_PATHS = {
     { x: 55.0, y: 42.0, label: 'Stagnant Oasis Bluffs' },
     { x: 47.5, y: 36.0, label: 'Dreadmist Peak Foothills' },
     { x: 51.0, y: 30.0, label: 'Return to Crossroads' }
+  ],
+  tin_barrens_south: [
+    { x: 44.5, y: 59.0, label: 'Camp Taurajo Ridge (Start)' },
+    { x: 46.0, y: 68.5, label: 'Field of Giants North Crags' },
+    { x: 48.5, y: 83.5, label: 'Bael Modan Excavation Rim' },
+    { x: 42.0, y: 89.0, label: 'Razorfen Kraul Exterior Ledges' },
+    { x: 48.0, y: 93.0, label: 'Razorfen Downs Western Wall' },
+    { x: 58.5, y: 81.0, label: 'Southern Mountain Pass' },
+    { x: 56.0, y: 69.5, label: 'Northwatch Foothills' },
+    { x: 44.5, y: 59.0, label: 'Return to Camp Taurajo' }
   ],
   tin_westfall: [
     { x: 53.0, y: 53.0, label: 'Sentinel Hill (Start)' },
@@ -6568,6 +6839,28 @@ const CIRCUIT_ROUTE_PATHS = {
     { x: 39.5, y: 64.0, label: 'Western Strand Coastal Cliffs' },
     { x: 50.0, y: 58.0, label: 'Return to Southshore' }
   ],
+  tin_redridge: [
+    { x: 33.0, y: 49.0, label: 'Lakeshire Bridge Outskirts (Start)' },
+    { x: 26.0, y: 41.0, label: 'Redridge Canyons Western Ledge' },
+    { x: 38.0, y: 28.0, label: 'Northern Ridge Gnoll Crags' },
+    { x: 52.0, y: 34.0, label: "Alther's Mill Valley Ridge" },
+    { x: 66.0, y: 42.0, label: "Render's Rock Foothills" },
+    { x: 76.0, y: 56.0, label: 'Tower of Ilgalar Mountain Wall' },
+    { x: 65.0, y: 70.0, label: "Render's Valley Southern Ledges" },
+    { x: 48.0, y: 62.0, label: 'Lake Everstill Southern Bank' },
+    { x: 33.0, y: 49.0, label: 'Return to Lakeshire' }
+  ],
+  tin_ashenvale: [
+    { x: 35.0, y: 52.0, label: 'Astranaar Foothills (Start)' },
+    { x: 42.0, y: 66.0, label: 'Mystral Lake Northern Rim' },
+    { x: 50.0, y: 68.0, label: 'Mystral Lake Cave Ridge' },
+    { x: 56.0, y: 61.0, label: 'Silverwind Refuge Bluffs' },
+    { x: 68.0, y: 58.0, label: 'Falfarren River Gorge' },
+    { x: 74.0, y: 52.0, label: 'Splintertree Post Mountain Base' },
+    { x: 66.0, y: 38.0, label: 'Night Run Shadow Ledges' },
+    { x: 50.0, y: 42.0, label: 'Iris Lake Southern Ridge' },
+    { x: 35.0, y: 52.0, label: 'Return to Astranaar' }
+  ],
   iron_arathi: [
     { x: 44.0, y: 32.0, label: 'Refuge Pointe North Ridge (Start)' },
     { x: 58.0, y: 27.5, label: 'Boulderfist Outpost Wall' },
@@ -6584,8 +6877,11 @@ const CIRCUIT_ROUTE_PATHS = {
     { x: 78.0, y: 75.0, label: 'Mirage Raceway (Start)' },
     { x: 80.5, y: 61.0, label: 'Shimmering Flats North Wall' },
     { x: 68.0, y: 58.5, label: 'Screeching Canyon Pass' },
-    { x: 53.5, y: 52.0, label: 'Splithoof Crag Exterior' },
-    { x: 49.0, y: 65.0, label: 'Freewind Post Pillar Base' },
+    { x: 49.0, y: 52.0, label: 'Splithoof Crag Footpaths' },
+    { x: 31.0, y: 38.0, label: 'Darkcloud Pinnacle Canyon' },
+    { x: 18.0, y: 36.0, label: 'Highperch Western Wall' },
+    { x: 26.0, y: 50.0, label: 'Whitereach Post Canyon' },
+    { x: 44.0, y: 62.0, label: 'Freewind Post Pillar Base' },
     { x: 64.5, y: 82.5, label: 'Tahonda Ruins Rim' },
     { x: 75.5, y: 90.5, label: 'Rustmaul Digsite Ledges' },
     { x: 86.0, y: 81.5, label: 'Eastern Salt Basin Cliffs' },
@@ -6612,6 +6908,16 @@ const CIRCUIT_ROUTE_PATHS = {
     { x: 50.0, y: 62.5, label: 'Thelgen Rock Spider Cave' },
     { x: 64.5, y: 57.5, label: 'Angerfang Encampment Foothills' },
     { x: 56.0, y: 42.0, label: "Return to Greenwarden's Grove" }
+  ],
+  iron_desolace: [
+    { x: 66.0, y: 14.5, label: "Nijel's Point Foothills (Start)" },
+    { x: 72.5, y: 29.0, label: 'Kolkar Village Mountain Ridge' },
+    { x: 71.0, y: 54.5, label: 'Magram Village Mountain Ridge' },
+    { x: 58.5, y: 76.0, label: 'Valley of Bones Southern Cliffs' },
+    { x: 48.0, y: 69.5, label: "Kormek's Hut Basin" },
+    { x: 56.0, y: 48.0, label: 'Ghost Walker Post Foothills' },
+    { x: 55.5, y: 30.5, label: 'Thunder Axe Fortress Exterior' },
+    { x: 66.0, y: 14.5, label: "Return to Nijel's Point" }
   ],
   mithril_badlands: [
     { x: 14.0, y: 48.0, label: 'Kargath Perimeter (Start)' },
@@ -6703,8 +7009,39 @@ const CIRCUIT_ROUTE_PATHS = {
     { x: 65.5, y: 42.0, label: 'Staghelm Point Eastern Wall' },
     { x: 51.0, y: 38.0, label: 'Return to Cenarion Hold' }
   ],
+  thorium_burning_steppes: [
+    { x: 84.0, y: 68.0, label: "Morgan's Vigil (Start)" },
+    { x: 78.0, y: 46.0, label: 'Dreadmaul Rock Foothills' },
+    { x: 67.0, y: 34.0, label: 'Altar of Storms Ridge' },
+    { x: 55.0, y: 38.0, label: 'Ruins of Thaurissan North' },
+    { x: 36.0, y: 38.0, label: 'Blackrock Mountain Rim' },
+    { x: 27.0, y: 56.0, label: 'Pillar of Ash Lava Ridge' },
+    { x: 44.0, y: 68.0, label: 'Firegut Ogre Mound Cliffs' },
+    { x: 62.0, y: 66.0, label: 'Slag Pit Southern Basin' },
+    { x: 84.0, y: 68.0, label: "Return to Morgan's Vigil" }
+  ],
+  thorium_blasted_lands: [
+    { x: 64.0, y: 20.0, label: 'Nethergarde Keep (Start)' },
+    { x: 51.0, y: 34.0, label: 'Dreadmaul Post Cliffs' },
+    { x: 42.0, y: 36.0, label: 'Garrison Armory Mountain Rim' },
+    { x: 40.0, y: 56.0, label: "Serpent's Coil Red Ridge" },
+    { x: 46.0, y: 75.0, label: 'The Tainted Scar Perimeter' },
+    { x: 61.0, y: 62.0, label: 'The Dark Portal Basin Ridge' },
+    { x: 56.0, y: 42.0, label: "Kum'isha's Foothills" },
+    { x: 64.0, y: 20.0, label: 'Return to Nethergarde Keep' }
+  ],
+  thorium_felwood: [
+    { x: 51.0, y: 82.0, label: 'Emerald Sanctuary (Start)' },
+    { x: 40.0, y: 64.0, label: 'Jaedenar Mountain Ridge' },
+    { x: 36.0, y: 50.0, label: 'Bloodvenom Post Cliffs' },
+    { x: 42.0, y: 36.0, label: 'Shatter Scar Vale Rim' },
+    { x: 54.0, y: 22.0, label: 'Irontree Woods Ledges' },
+    { x: 62.0, y: 18.0, label: 'Deadwood Village Perimeter' },
+    { x: 55.0, y: 46.0, label: 'Eastern Corrupted Woods' },
+    { x: 51.0, y: 82.0, label: 'Return to Emerald Sanctuary' }
+  ],
 
-  // === 28 HERBALISM ROUTES ===
+  // === HERBALISM ROUTES ===
   herb_durotar: [
     { x: 52.0, y: 43.0, label: 'Razor Hill (Start)' },
     { x: 54.5, y: 55.0, label: 'Tiragarde Keep Plains' },
@@ -6713,7 +7050,8 @@ const CIRCUIT_ROUTE_PATHS = {
     { x: 43.5, y: 68.0, label: 'Valley of Trials Hills' },
     { x: 41.0, y: 56.0, label: 'Southfury River Banks' },
     { x: 43.5, y: 45.0, label: 'Thunder Ridge Gullies' },
-    { x: 48.0, y: 40.0, label: 'Drygulch Ravine Crags' },
+    { x: 46.5, y: 32.0, label: 'Drygulch Ravine Foothills' },
+    { x: 50.0, y: 35.0, label: 'Razor Hill North Ridge' },
     { x: 52.0, y: 43.0, label: 'Return to Razor Hill' }
   ],
   herb_elwynn: [
@@ -6748,6 +7086,27 @@ const CIRCUIT_ROUTE_PATHS = {
     { x: 44.0, y: 56.0, label: 'Pools of Arlithrien' },
     { x: 49.5, y: 62.5, label: 'Oracle Glade Approach' },
     { x: 56.0, y: 58.0, label: 'Return to Dolanaar' }
+  ],
+  herb_dun_morogh: [
+    { x: 46.0, y: 53.0, label: 'Kharanos Outskirts (Start)' },
+    { x: 38.0, y: 41.0, label: 'Iceflow Lake Shoreline' },
+    { x: 29.0, y: 46.0, label: 'Brewnall Village Fields' },
+    { x: 32.0, y: 58.0, label: 'Shimmer Ridge Foothills' },
+    { x: 48.0, y: 61.0, label: 'Kharanos South Woods' },
+    { x: 66.0, y: 56.0, label: "Gol'Bolar Quarry Outskirts" },
+    { x: 65.0, y: 44.0, label: "Helm's Bed Lake Meadows" },
+    { x: 56.0, y: 40.0, label: 'Amberstill Ranch Plains' },
+    { x: 46.0, y: 53.0, label: 'Return to Kharanos' }
+  ],
+  herb_mulgore: [
+    { x: 48.0, y: 60.0, label: 'Bloodhoof Village (Start)' },
+    { x: 53.0, y: 48.0, label: 'Winterhoof Water Well' },
+    { x: 46.0, y: 42.0, label: 'Thunder Bluff Southern Bluffs' },
+    { x: 42.0, y: 32.0, label: 'Thunder Bluff Northern Base' },
+    { x: 34.0, y: 40.0, label: 'Windfury Crag Foothills' },
+    { x: 36.0, y: 58.0, label: 'Western Plains Tree Line' },
+    { x: 46.0, y: 72.0, label: 'Red Cloud Mesa Approach' },
+    { x: 48.0, y: 60.0, label: 'Return to Bloodhoof' }
   ],
   herb_barrens: [
     { x: 51.0, y: 30.0, label: 'The Crossroads (Start)' },
@@ -6790,6 +7149,26 @@ const CIRCUIT_ROUTE_PATHS = {
     { x: 58.0, y: 47.5, label: 'Shining Strand Lake Shore' },
     { x: 51.5, y: 36.0, label: "Olsen's Farthing Woods" },
     { x: 46.0, y: 42.0, label: 'Return to The Sepulcher' }
+  ],
+  herb_barrens_south: [
+    { x: 44.5, y: 59.0, label: 'Camp Taurajo (Start)' },
+    { x: 47.0, y: 68.0, label: 'Southern Savannah Plains' },
+    { x: 43.0, y: 78.0, label: 'Brambles Border' },
+    { x: 49.0, y: 82.0, label: 'Field of Giants Foothills' },
+    { x: 43.0, y: 90.0, label: 'Razorfen Outskirts' },
+    { x: 52.0, y: 85.0, label: 'Bael Modan Riverbank' },
+    { x: 56.0, y: 70.0, label: 'Northwatch Foothills' },
+    { x: 44.5, y: 59.0, label: 'Return to Camp Taurajo' }
+  ],
+  herb_darkshore: [
+    { x: 37.0, y: 44.0, label: 'Auberdine Outskirts (Start)' },
+    { x: 48.0, y: 36.0, label: 'Cliffspring River Banks' },
+    { x: 44.0, y: 48.0, label: "Bashal'Aran Woods" },
+    { x: 45.0, y: 62.0, label: "Ameth'Aran Tree Line" },
+    { x: 42.0, y: 74.0, label: 'Grove of the Ancients' },
+    { x: 36.0, y: 80.0, label: "Master's Glaive Shoreline" },
+    { x: 32.0, y: 62.0, label: 'Coastal Waters (Stranglekelp)' },
+    { x: 37.0, y: 44.0, label: 'Return to Auberdine' }
   ],
   herb_hillsbrad: [
     { x: 56.0, y: 46.0, label: 'Tarren Mill Outskirts (Start)' },
@@ -6872,6 +7251,16 @@ const CIRCUIT_ROUTE_PATHS = {
     { x: 45.0, y: 9.0, label: "Kurzen's Compound Jungle" },
     { x: 38.5, y: 5.5, label: 'Rebel Camp River Crossing' },
     { x: 36.0, y: 11.0, label: "Return to Nesingwary's" }
+  ],
+  herb_stv_south: [
+    { x: 32.0, y: 28.0, label: 'Gromgol Base Camp (Start)' },
+    { x: 33.0, y: 40.0, label: 'Gurubashi Arena Perimeter' },
+    { x: 37.0, y: 52.0, label: 'Crystalvein Mine Foothills' },
+    { x: 42.0, y: 66.0, label: 'Southern Jungle Riverbed' },
+    { x: 27.0, y: 77.0, label: 'Booty Bay Mountain Ridges' },
+    { x: 38.0, y: 82.0, label: 'Jaguero Isle Coastal Glades' },
+    { x: 46.0, y: 76.0, label: 'Wild Shore Jungle Edge' },
+    { x: 32.0, y: 28.0, label: 'Return to Gromgol Base Camp' }
   ],
   herb_tanaris: [
     { x: 51.0, y: 28.0, label: 'Gadgetzan Dunes (Start)' },
@@ -6997,6 +7386,17 @@ const CIRCUIT_ROUTE_PATHS = {
     { x: 36.5, y: 56.5, label: 'Felstone Field' },
     { x: 36.0, y: 70.0, label: 'Andorhal Western Perimeter' },
     { x: 43.0, y: 84.0, label: 'Return to Chillwind Camp' }
+  ],
+  herb_felwood_endgame: [
+    { x: 35.0, y: 52.0, label: 'Bloodvenom Post (Start)' },
+    { x: 40.0, y: 40.0, label: 'Shatter Scar Vale Crags' },
+    { x: 48.0, y: 28.0, label: 'Irontree Woods Corrupted Groves' },
+    { x: 60.0, y: 19.0, label: 'Timbermaw Hold High Ledges' },
+    { x: 65.0, y: 14.0, label: 'Deadwood Village Perimeter' },
+    { x: 58.0, y: 34.0, label: 'Eastern Mountain Ridgeline' },
+    { x: 54.0, y: 50.0, label: 'Corrupted Woods Plateau' },
+    { x: 44.0, y: 60.0, label: 'Jaedenar North Ridge' },
+    { x: 35.0, y: 52.0, label: 'Return to Bloodvenom Post' }
   ]
 };
 
@@ -7095,8 +7495,7 @@ const CIRCUIT_ROUTE_PATHS = {
           <circle cx="${p.x.toFixed(1)}" cy="${p.y.toFixed(1)}" r="1.25" fill="#ffffff" stroke="rgba(2, 6, 23, 0.9)" stroke-width="0.5" />
         `).join('')}
         
-        <!-- Start Point Marker with Pulsing Ring -->
-        <circle class="circuit-svg-pulse" cx="${startPt.x.toFixed(1)}" cy="${startPt.y.toFixed(1)}" r="${isEnlarged ? '3.4' : '3.8'}" fill="${mainStroke}" opacity="0.3" />
+        <!-- Start Point Marker -->
         <g transform="translate(${startPt.x.toFixed(1)}, ${startPt.y.toFixed(1)})">
           <circle cx="0" cy="0" r="${isEnlarged ? '2.2' : '2.0'}" fill="#ef4444" stroke="#ffffff" stroke-width="0.65">
             <title>Stop 1 (Start): ${escapeHtml(startPt.label || 'Start')} (${startPt.x.toFixed(1)}, ${startPt.y.toFixed(1)})</title>
