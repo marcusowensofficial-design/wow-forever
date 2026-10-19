@@ -418,15 +418,15 @@ function buildHealerWeaponPath(classId) {
             weaponType: "Main Hand Mace"
           },
           {
-            name: "Staff of the Dor'Danil",
-            itemId: 6543,
-            value: "+4 Intellect, +4 Spirit - Darkshore / Bloodmyst quest reward",
+            name: "Gritroot Staff",
+            itemId: 9603,
+            value: "+1 Stamina, +2 Spell Power - The Relics of Wakening (Teldrassil)",
             faction: "alliance",
             quality: "q2",
-            iLvl: 17,
-            reqLevel: 12,
-            stats: "+4 Intellect, +4 Spirit",
-            icon: "inv_staff_02",
+            iLvl: 10,
+            reqLevel: 4,
+            stats: "+1 Stamina, +2 Spell Power",
+            icon: "inv_staff_22",
             weaponType: "Staff"
           }
         ]

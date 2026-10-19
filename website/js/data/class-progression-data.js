@@ -4336,29 +4336,32 @@ if (typeof window !== 'undefined') {
               }
             },
             {
-              "name": "Staff of the Dor'Danil",
-              "itemId": 15396,
+              "name": "Gritroot Staff",
+              "itemId": 9603,
               "value": "8.5 DPS, 1.50s - +1 Stamina - Teldrassil quest reward",
               "faction": "alliance",
-              "dps": "8.5 DPS",
+              "dps": "5.4 DPS",
               "quality": "q2",
-              "iLvl": 14,
-              "reqLevel": 6,
-              "stats": "+1 Stamina",
-              "icon": "inv_staff_08",
-              "speed": "1.50",
+              "iLvl": 10,
+              "reqLevel": 4,
+              "stats": "+1 Stamina, +2 Spell Power",
+              "icon": "inv_staff_22",
+              "speed": "2.60",
               "lines": [
                 "Binds when picked up",
-                "One-Hand",
-                "7 - 14 Damage\tSpeed 1.50",
-                "(7.00 damage per second)",
-                "+1 Stamina"
+                "Two-Hand\tStaff",
+                "11 - 17 Damage\tSpeed 2.60",
+                "(5.38 damage per second)",
+                "+1 Stamina",
+                "+2 Spell Power",
+                "Requires Level 4"
               ],
               "source": {
                 "kind": "quest",
-                "title": "The Fragments Within",
-                "detail": "Leveling Quest Reward"
-              }
+                "title": "The Relics of Wakening",
+                "detail": "Quest reward from Teldrassil / Dolanaar."
+              },
+              "weaponType": "Staff"
             },
             {
               "name": "Riptear's Cleaver",
@@ -4875,27 +4878,31 @@ if (typeof window !== 'undefined') {
           "alts": [
             {
               "name": "Woodchopper",
-              "itemId": 2520,
+              "itemId": 2030,
               "value": "10.5 DPS - Vendor 2H Axe",
               "faction": "both",
-              "dps": "10.5 DPS",
-              "quality": "q1",
-              "iLvl": 36,
-              "reqLevel": 31,
-              "stats": "",
-              "icon": "inv_axe_02",
-              "speed": "2.30",
+              "dps": "11.5 DPS",
+              "quality": "q2",
+              "iLvl": 19,
+              "reqLevel": 14,
+              "stats": "+5 Strength, +3 Stamina",
+              "icon": "inv_axe_08",
+              "speed": "3.40",
               "lines": [
-                "Main Hand",
-                "28 - 53 Damage\tSpeed 2.30",
-                "(17.61 damage per second)",
-                "Requires Level 31"
+                "Binds when equipped",
+                "Two-Hand\tAxe",
+                "29 - 44 Damage\tSpeed 3.40",
+                "(10.74 damage per second)",
+                "+5 Strength",
+                "+3 Stamina",
+                "Requires Level 14"
               ],
               "source": {
-                "kind": "vendor",
-                "title": "Vendor 2H Axe",
-                "detail": "Vendor Purchase"
-              }
+                "kind": "drop",
+                "title": "World Drop BoE",
+                "detail": "Early leveling 2H axe"
+              },
+              "weaponType": "Two-Handed Axe"
             },
             {
               "name": "Trogg Scepter",
@@ -5722,28 +5729,30 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Cookie's Tenderizer",
-              "itemId": 5197,
-              "icon": "inv_fabric_silk_02",
-              "weaponType": "1H Mace",
-              "speed": "2.80",
-              "dps": "13.93 DPS",
+              "itemId": 5195,
+              "icon": "inv_hammer_07",
+              "weaponType": "One-Handed Mace",
+              "speed": "2.40",
+              "dps": "10.8 DPS",
               "value": "13.93 DPS, 2.80s - +4 Spirit - Cookie",
               "faction": "both",
               "quality": "q3",
               "iLvl": 21,
               "reqLevel": 16,
-              "stats": "+4 Spirit",
+              "stats": "+3 Strength, +2 Stamina",
               "lines": [
-                "1H Mace",
-                "Speed 2.80",
-                "(13.93 damage per second)",
-                "+4 Spirit",
+                "Binds when picked up",
+                "One-Hand\tMace",
+                "20 - 38 Damage\tSpeed 2.40",
+                "(12.08 damage per second)",
+                "+3 Strength",
+                "+2 Stamina",
                 "Requires Level 16"
               ],
               "source": {
                 "kind": "dungeon",
-                "title": "Cookie",
-                "detail": "Dungeon Boss Drop"
+                "title": "The Deadmines — Cookie",
+                "detail": "Deadmines rare drop"
               }
             },
             {
@@ -5920,9 +5929,9 @@ if (typeof window !== 'undefined') {
               "itemId": 7230,
               "value": "19.71 DPS, 3.50s - +11 Strength, +4 Agility - The Deadmines: Mr. Smite",
               "faction": "both",
-              "dps": "19.71 DPS",
+              "dps": "19.8 DPS",
               "speed": "3.50",
-              "weaponType": "Two-handed mace",
+              "weaponType": "Two-Handed Mace",
               "quality": "q3",
               "iLvl": 23,
               "reqLevel": 18,
@@ -5930,7 +5939,7 @@ if (typeof window !== 'undefined') {
               "icon": "inv_hammer_09",
               "lines": [
                 "Binds when picked up",
-                "Two-Hand",
+                "Two-Hand\tMace",
                 "55 - 83 Damage\tSpeed 3.50",
                 "(19.71 damage per second)",
                 "+11 Strength",
@@ -5939,8 +5948,8 @@ if (typeof window !== 'undefined') {
               ],
               "source": {
                 "kind": "dungeon",
-                "title": "The Deadmines: Mr. Smite",
-                "detail": "Dungeon Boss Drop"
+                "title": "The Deadmines — Mr. Smite",
+                "detail": "Iconic slow 2H leveling mace"
               }
             },
             {
@@ -6248,27 +6257,27 @@ if (typeof window !== 'undefined') {
               "itemId": 5195,
               "value": "13.7 DPS, 2.70s, +3 Str, +3 Sta - The Deadmines: Cookie",
               "faction": "both",
-              "dps": "13.70 DPS",
-              "quality": "q2",
-              "iLvl": 22,
-              "reqLevel": 17,
-              "stats": "+3 Strength, +3 Stamina",
-              "icon": "inv_mace_08",
+              "dps": "10.8 DPS",
+              "quality": "q3",
+              "iLvl": 21,
+              "reqLevel": 16,
+              "stats": "+3 Strength, +2 Stamina",
+              "icon": "inv_hammer_07",
               "weaponType": "One-Handed Mace",
-              "speed": "2.70",
+              "speed": "2.40",
               "lines": [
                 "Binds when picked up",
-                "One-Hand\tOne-Handed Mace",
-                "30 - 56 Damage\tSpeed 2.70",
-                "(13.70 damage per second)",
+                "One-Hand\tMace",
+                "20 - 38 Damage\tSpeed 2.40",
+                "(12.08 damage per second)",
                 "+3 Strength",
-                "+3 Stamina",
-                "Requires Level 17"
+                "+2 Stamina",
+                "Requires Level 16"
               ],
               "source": {
                 "kind": "dungeon",
-                "title": "Cookie",
-                "detail": "The Deadmines"
+                "title": "The Deadmines — Cookie",
+                "detail": "Deadmines rare drop"
               }
             },
             {
@@ -6604,57 +6613,57 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Smite's Mighty Hammer",
-              "itemId": 5196,
+              "itemId": 7230,
               "value": "20.0 DPS, 3.50s, +11 Str, +4 Agi - The Deadmines: Mr. Smite",
               "faction": "both",
-              "dps": "20.00 DPS",
+              "dps": "19.8 DPS",
               "quality": "q3",
               "iLvl": 23,
               "reqLevel": 18,
               "stats": "+11 Strength, +4 Agility",
-              "icon": "inv_hammer_08",
+              "icon": "inv_hammer_09",
               "weaponType": "Two-Handed Mace",
               "speed": "3.50",
               "lines": [
                 "Binds when picked up",
-                "Two-Hand\tTwo-Handed Mace",
-                "56 - 84 Damage\tSpeed 3.50",
-                "(20.00 damage per second)",
+                "Two-Hand\tMace",
+                "55 - 83 Damage\tSpeed 3.50",
+                "(19.71 damage per second)",
                 "+11 Strength",
                 "+4 Agility",
                 "Requires Level 18"
               ],
               "source": {
                 "kind": "dungeon",
-                "title": "Mr. Smite",
-                "detail": "The Deadmines"
+                "title": "The Deadmines — Mr. Smite",
+                "detail": "Iconic slow 2H leveling mace"
               }
             },
             {
               "name": "Cruel Barb",
-              "itemId": 5202,
+              "itemId": 5191,
               "value": "17.0 DPS, 2.80s, +12 AP - The Deadmines: Edwin VanCleef",
               "faction": "both",
-              "dps": "16.96 DPS",
+              "dps": "17.0 DPS",
               "quality": "q3",
               "iLvl": 24,
               "reqLevel": 19,
               "stats": "+12 Attack Power",
-              "icon": "inv_sword_23",
+              "icon": "inv_sword_26",
               "weaponType": "One-Handed Sword",
               "speed": "2.80",
               "lines": [
                 "Binds when picked up",
-                "One-Hand\tOne-Handed Sword",
-                "30 - 56 Damage\tSpeed 2.80",
-                "(16.96 damage per second)",
-                "Equip: +12 Attack Power",
+                "One-Hand\tSword",
+                "30 - 57 Damage\tSpeed 2.80",
+                "(15.54 damage per second)",
+                "+12 Attack Power",
                 "Requires Level 19"
               ],
               "source": {
                 "kind": "dungeon",
-                "title": "Edwin VanCleef",
-                "detail": "The Deadmines"
+                "title": "The Deadmines — Edwin VanCleef",
+                "detail": "Iconic rogue/warrior leveling sword"
               }
             },
             {
@@ -7978,29 +7987,31 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Burning War Axe",
-              "itemId": 2299,
-              "icon": "inv_axe_02",
-              "weaponType": "2H Axe",
-              "speed": "3.30",
-              "dps": "27.7 DPS",
+              "itemId": 811,
+              "icon": "inv_axe_09",
+              "weaponType": "Two-Handed Axe",
+              "speed": "3.50",
+              "dps": "29.7 DPS",
               "value": "27.7 DPS, 3.30s - Chance on hit: Hurls a fiery ball that causes 4 Fire damage and an additional 1 damage over 6 sec. - Rare World / Dungeon Drop",
               "faction": "both",
               "quality": "q3",
-              "iLvl": 33,
-              "reqLevel": 28,
-              "stats": "Chance on hit: Hurls a fiery ball that causes 4 Fire damage and an additional 1 damage over 6 sec.",
+              "iLvl": 40,
+              "reqLevel": 35,
+              "stats": "+14 Strength, +7 Agility, Chance on hit: Blasts a target for 60 Fire damage.",
               "lines": [
                 "Binds when equipped",
                 "Two-Hand\tAxe",
-                "5 - 11 Damage\tSpeed 3.60",
-                "(2.2 damage per second)",
-                "Chance on hit: Hurls a fiery ball that causes 4 Fire damage and an additional 1 damage over 6 sec.",
-                "Requires Level 12"
+                "88 - 133 Damage\tSpeed 3.50",
+                "(31.57 damage per second)",
+                "+14 Strength",
+                "+7 Agility",
+                "Requires Level 35",
+                "Chance on hit: Blasts a target for 60 Fire damage."
               ],
               "source": {
-                "kind": "dungeon",
-                "title": "Rare World / Dungeon Drop",
-                "detail": "Dungeon Drop"
+                "kind": "drop",
+                "title": "World Drop BoE",
+                "detail": "Iconic fire-proc leveling 2H axe"
               }
             },
             {
@@ -8392,30 +8403,30 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Cobalt Crusher",
-              "itemId": 7730,
-              "icon": "inv_hammer_04",
-              "weaponType": "2H Mace",
-              "speed": "3.20",
-              "dps": "28.91 DPS",
+              "itemId": 7957,
+              "icon": "inv_hammer_16",
+              "weaponType": "Two-Handed Mace",
+              "speed": "3.60",
+              "dps": "26.9 DPS",
               "value": "28.91 DPS, 3.20s - +9 Strength, Chance on hit: Blasts a target for 164 Frost damage. - Rare World / Dungeon Drop",
               "faction": "both",
               "quality": "q3",
-              "iLvl": 34,
-              "reqLevel": 29,
-              "stats": "+9 Strength, Chance on hit: Blasts a target for 164 Frost damage.",
+              "iLvl": 38,
+              "reqLevel": 33,
+              "stats": "+12 Strength, +11 Stamina",
               "lines": [
                 "Binds when equipped",
                 "Two-Hand\tMace",
-                "43 - 55 Damage\tSpeed 3.60",
-                "(13.6 damage per second)",
-                "+9 Strength",
-                "Chance on hit: Blasts a target for 164 Frost damage.",
-                "Requires Level 29"
+                "81 - 122 Damage\tSpeed 3.60",
+                "(28.19 damage per second)",
+                "+12 Strength",
+                "+11 Stamina",
+                "Requires Level 33"
               ],
               "source": {
-                "kind": "dungeon",
-                "title": "Rare World / Dungeon Drop",
-                "detail": "Dungeon Drop"
+                "kind": "drop",
+                "title": "World Drop BoE",
+                "detail": "High impact 2H leveling mace"
               }
             },
             {
@@ -9230,29 +9241,32 @@ if (typeof window !== 'undefined') {
           "alts": [
             {
               "name": "Stoneslayer",
-              "itemId": 9413,
+              "itemId": 9418,
               "value": "40.5 DPS, 3.90s - +5 Strength - Uldaman: Archaedas",
               "faction": "both",
-              "dps": "40.5 DPS",
+              "dps": "37.1 DPS",
               "speed": "3.90",
               "quality": "q3",
-              "iLvl": 46,
-              "reqLevel": 40,
-              "stats": "+5 Strength",
-              "icon": "inv_sword_04",
+              "iLvl": 49,
+              "reqLevel": 44,
+              "stats": "+10 Strength, +7 Agility, +15 Stamina",
+              "icon": "inv_sword_26",
               "source": {
                 "kind": "dungeon",
-                "title": "Uldaman: Archaedas",
-                "detail": "Dungeon Drop"
+                "title": "Uldaman — Archaedas",
+                "detail": "Massive slow two-handed sword"
               },
               "lines": [
                 "Binds when picked up",
-                "Two-Hand\tWeapon",
-                "126 - 190 Damage\tSpeed 3.70",
-                "(42.70 damage per second)",
-                "+5 Strength",
+                "Two-Hand\tSword",
+                "121 - 183 Damage\tSpeed 3.90",
+                "(38.97 damage per second)",
+                "+10 Strength",
+                "+7 Agility",
+                "+15 Stamina",
                 "Requires Level 44"
-              ]
+              ],
+              "weaponType": "Two-Handed Sword"
             },
             {
               "name": "The Pacifier",
@@ -9950,26 +9964,28 @@ if (typeof window !== 'undefined') {
               "itemId": 9418,
               "value": "42.7 DPS, 3.90s - Uldaman: Archaedas",
               "faction": "both",
-              "dps": "42.69 DPS",
+              "dps": "37.1 DPS",
               "quality": "q3",
               "iLvl": 49,
               "reqLevel": 44,
-              "stats": "Chance on hit: Reduces enemy armor by 100",
-              "icon": "inv_sword_47",
+              "stats": "+10 Strength, +7 Agility, +15 Stamina",
+              "icon": "inv_sword_26",
               "weaponType": "Two-Handed Sword",
               "speed": "3.90",
               "lines": [
                 "Binds when picked up",
-                "Two-Hand\tTwo-Handed Sword",
-                "131 - 197 Damage\tSpeed 3.90",
-                "(42.69 damage per second)",
-                "Chance on hit: Reduces enemy armor by 100",
+                "Two-Hand\tSword",
+                "121 - 183 Damage\tSpeed 3.90",
+                "(38.97 damage per second)",
+                "+10 Strength",
+                "+7 Agility",
+                "+15 Stamina",
                 "Requires Level 44"
               ],
               "source": {
                 "kind": "dungeon",
-                "title": "Archaedas",
-                "detail": "Uldaman"
+                "title": "Uldaman — Archaedas",
+                "detail": "Massive slow two-handed sword"
               }
             },
             {
@@ -11948,29 +11964,32 @@ if (typeof window !== 'undefined') {
                 }
               },
               {
-                "name": "Staff of the Dor'Danil",
-                "itemId": 15396,
+                "name": "Gritroot Staff",
+                "itemId": 9603,
                 "value": "8.5 DPS, 1.50s - +1 Stamina - Teldrassil quest reward",
                 "faction": "alliance",
-                "dps": "8.5 DPS",
+                "dps": "5.4 DPS",
                 "quality": "q2",
-                "iLvl": 14,
-                "reqLevel": 6,
-                "stats": "+1 Stamina",
-                "icon": "inv_staff_08",
-                "speed": "1.50",
+                "iLvl": 10,
+                "reqLevel": 4,
+                "stats": "+1 Stamina, +2 Spell Power",
+                "icon": "inv_staff_22",
+                "speed": "2.60",
                 "lines": [
                   "Binds when picked up",
-                  "One-Hand",
-                  "7 - 14 Damage\tSpeed 1.50",
-                  "(7.00 damage per second)",
-                  "+1 Stamina"
+                  "Two-Hand\tStaff",
+                  "11 - 17 Damage\tSpeed 2.60",
+                  "(5.38 damage per second)",
+                  "+1 Stamina",
+                  "+2 Spell Power",
+                  "Requires Level 4"
                 ],
                 "source": {
                   "kind": "quest",
-                  "title": "The Fragments Within",
-                  "detail": "Leveling Quest Reward"
-                }
+                  "title": "The Relics of Wakening",
+                  "detail": "Quest reward from Teldrassil / Dolanaar."
+                },
+                "weaponType": "Staff"
               },
               {
                 "name": "Riptear's Cleaver",
@@ -12487,27 +12506,31 @@ if (typeof window !== 'undefined') {
             "alts": [
               {
                 "name": "Woodchopper",
-                "itemId": 2520,
+                "itemId": 2030,
                 "value": "10.5 DPS - Vendor 2H Axe",
                 "faction": "both",
-                "dps": "10.5 DPS",
-                "quality": "q1",
-                "iLvl": 36,
-                "reqLevel": 31,
-                "stats": "",
-                "icon": "inv_axe_02",
-                "speed": "2.30",
+                "dps": "11.5 DPS",
+                "quality": "q2",
+                "iLvl": 19,
+                "reqLevel": 14,
+                "stats": "+5 Strength, +3 Stamina",
+                "icon": "inv_axe_08",
+                "speed": "3.40",
                 "lines": [
-                  "Main Hand",
-                  "28 - 53 Damage\tSpeed 2.30",
-                  "(17.61 damage per second)",
-                  "Requires Level 31"
+                  "Binds when equipped",
+                  "Two-Hand\tAxe",
+                  "29 - 44 Damage\tSpeed 3.40",
+                  "(10.74 damage per second)",
+                  "+5 Strength",
+                  "+3 Stamina",
+                  "Requires Level 14"
                 ],
                 "source": {
-                  "kind": "vendor",
-                  "title": "Vendor 2H Axe",
-                  "detail": "Vendor Purchase"
-                }
+                  "kind": "drop",
+                  "title": "World Drop BoE",
+                  "detail": "Early leveling 2H axe"
+                },
+                "weaponType": "Two-Handed Axe"
               },
               {
                 "name": "Trogg Scepter",
@@ -13334,28 +13357,30 @@ if (typeof window !== 'undefined') {
               },
               {
                 "name": "Cookie's Tenderizer",
-                "itemId": 5197,
-                "icon": "inv_fabric_silk_02",
-                "weaponType": "1H Mace",
-                "speed": "2.80",
-                "dps": "13.93 DPS",
+                "itemId": 5195,
+                "icon": "inv_hammer_07",
+                "weaponType": "One-Handed Mace",
+                "speed": "2.40",
+                "dps": "10.8 DPS",
                 "value": "13.93 DPS, 2.80s - +4 Spirit - Cookie",
                 "faction": "both",
                 "quality": "q3",
                 "iLvl": 21,
                 "reqLevel": 16,
-                "stats": "+4 Spirit",
+                "stats": "+3 Strength, +2 Stamina",
                 "lines": [
-                  "1H Mace",
-                  "Speed 2.80",
-                  "(13.93 damage per second)",
-                  "+4 Spirit",
+                  "Binds when picked up",
+                  "One-Hand\tMace",
+                  "20 - 38 Damage\tSpeed 2.40",
+                  "(12.08 damage per second)",
+                  "+3 Strength",
+                  "+2 Stamina",
                   "Requires Level 16"
                 ],
                 "source": {
                   "kind": "dungeon",
-                  "title": "Cookie",
-                  "detail": "Dungeon Boss Drop"
+                  "title": "The Deadmines — Cookie",
+                  "detail": "Deadmines rare drop"
                 }
               },
               {
@@ -13532,9 +13557,9 @@ if (typeof window !== 'undefined') {
                 "itemId": 7230,
                 "value": "19.71 DPS, 3.50s - +11 Strength, +4 Agility - The Deadmines: Mr. Smite",
                 "faction": "both",
-                "dps": "19.71 DPS",
+                "dps": "19.8 DPS",
                 "speed": "3.50",
-                "weaponType": "Two-handed mace",
+                "weaponType": "Two-Handed Mace",
                 "quality": "q3",
                 "iLvl": 23,
                 "reqLevel": 18,
@@ -13542,7 +13567,7 @@ if (typeof window !== 'undefined') {
                 "icon": "inv_hammer_09",
                 "lines": [
                   "Binds when picked up",
-                  "Two-Hand",
+                  "Two-Hand\tMace",
                   "55 - 83 Damage\tSpeed 3.50",
                   "(19.71 damage per second)",
                   "+11 Strength",
@@ -13551,8 +13576,8 @@ if (typeof window !== 'undefined') {
                 ],
                 "source": {
                   "kind": "dungeon",
-                  "title": "The Deadmines: Mr. Smite",
-                  "detail": "Dungeon Boss Drop"
+                  "title": "The Deadmines — Mr. Smite",
+                  "detail": "Iconic slow 2H leveling mace"
                 }
               },
               {
@@ -13860,27 +13885,27 @@ if (typeof window !== 'undefined') {
                 "itemId": 5195,
                 "value": "13.7 DPS, 2.70s, +3 Str, +3 Sta - The Deadmines: Cookie",
                 "faction": "both",
-                "dps": "13.70 DPS",
-                "quality": "q2",
-                "iLvl": 22,
-                "reqLevel": 17,
-                "stats": "+3 Strength, +3 Stamina",
-                "icon": "inv_mace_08",
+                "dps": "10.8 DPS",
+                "quality": "q3",
+                "iLvl": 21,
+                "reqLevel": 16,
+                "stats": "+3 Strength, +2 Stamina",
+                "icon": "inv_hammer_07",
                 "weaponType": "One-Handed Mace",
-                "speed": "2.70",
+                "speed": "2.40",
                 "lines": [
                   "Binds when picked up",
-                  "One-Hand\tOne-Handed Mace",
-                  "30 - 56 Damage\tSpeed 2.70",
-                  "(13.70 damage per second)",
+                  "One-Hand\tMace",
+                  "20 - 38 Damage\tSpeed 2.40",
+                  "(12.08 damage per second)",
                   "+3 Strength",
-                  "+3 Stamina",
-                  "Requires Level 17"
+                  "+2 Stamina",
+                  "Requires Level 16"
                 ],
                 "source": {
                   "kind": "dungeon",
-                  "title": "Cookie",
-                  "detail": "The Deadmines"
+                  "title": "The Deadmines — Cookie",
+                  "detail": "Deadmines rare drop"
                 }
               },
               {
@@ -14216,57 +14241,57 @@ if (typeof window !== 'undefined') {
               },
               {
                 "name": "Smite's Mighty Hammer",
-                "itemId": 5196,
+                "itemId": 7230,
                 "value": "20.0 DPS, 3.50s, +11 Str, +4 Agi - The Deadmines: Mr. Smite",
                 "faction": "both",
-                "dps": "20.00 DPS",
+                "dps": "19.8 DPS",
                 "quality": "q3",
                 "iLvl": 23,
                 "reqLevel": 18,
                 "stats": "+11 Strength, +4 Agility",
-                "icon": "inv_hammer_08",
+                "icon": "inv_hammer_09",
                 "weaponType": "Two-Handed Mace",
                 "speed": "3.50",
                 "lines": [
                   "Binds when picked up",
-                  "Two-Hand\tTwo-Handed Mace",
-                  "56 - 84 Damage\tSpeed 3.50",
-                  "(20.00 damage per second)",
+                  "Two-Hand\tMace",
+                  "55 - 83 Damage\tSpeed 3.50",
+                  "(19.71 damage per second)",
                   "+11 Strength",
                   "+4 Agility",
                   "Requires Level 18"
                 ],
                 "source": {
                   "kind": "dungeon",
-                  "title": "Mr. Smite",
-                  "detail": "The Deadmines"
+                  "title": "The Deadmines — Mr. Smite",
+                  "detail": "Iconic slow 2H leveling mace"
                 }
               },
               {
                 "name": "Cruel Barb",
-                "itemId": 5202,
+                "itemId": 5191,
                 "value": "17.0 DPS, 2.80s, +12 AP - The Deadmines: Edwin VanCleef",
                 "faction": "both",
-                "dps": "16.96 DPS",
+                "dps": "17.0 DPS",
                 "quality": "q3",
                 "iLvl": 24,
                 "reqLevel": 19,
                 "stats": "+12 Attack Power",
-                "icon": "inv_sword_23",
+                "icon": "inv_sword_26",
                 "weaponType": "One-Handed Sword",
                 "speed": "2.80",
                 "lines": [
                   "Binds when picked up",
-                  "One-Hand\tOne-Handed Sword",
-                  "30 - 56 Damage\tSpeed 2.80",
-                  "(16.96 damage per second)",
-                  "Equip: +12 Attack Power",
+                  "One-Hand\tSword",
+                  "30 - 57 Damage\tSpeed 2.80",
+                  "(15.54 damage per second)",
+                  "+12 Attack Power",
                   "Requires Level 19"
                 ],
                 "source": {
                   "kind": "dungeon",
-                  "title": "Edwin VanCleef",
-                  "detail": "The Deadmines"
+                  "title": "The Deadmines — Edwin VanCleef",
+                  "detail": "Iconic rogue/warrior leveling sword"
                 }
               },
               {
@@ -15563,29 +15588,31 @@ if (typeof window !== 'undefined') {
               },
               {
                 "name": "Burning War Axe",
-                "itemId": 2299,
-                "icon": "inv_axe_02",
-                "weaponType": "2H Axe",
-                "speed": "3.30",
-                "dps": "27.7 DPS",
+                "itemId": 811,
+                "icon": "inv_axe_09",
+                "weaponType": "Two-Handed Axe",
+                "speed": "3.50",
+                "dps": "29.7 DPS",
                 "value": "27.7 DPS, 3.30s - Chance on hit: Hurls a fiery ball that causes 4 Fire damage and an additional 1 damage over 6 sec. - Rare World / Dungeon Drop",
                 "faction": "both",
                 "quality": "q3",
-                "iLvl": 33,
-                "reqLevel": 28,
-                "stats": "Chance on hit: Hurls a fiery ball that causes 4 Fire damage and an additional 1 damage over 6 sec.",
+                "iLvl": 40,
+                "reqLevel": 35,
+                "stats": "+14 Strength, +7 Agility, Chance on hit: Blasts a target for 60 Fire damage.",
                 "lines": [
                   "Binds when equipped",
                   "Two-Hand\tAxe",
-                  "5 - 11 Damage\tSpeed 3.60",
-                  "(2.2 damage per second)",
-                  "Chance on hit: Hurls a fiery ball that causes 4 Fire damage and an additional 1 damage over 6 sec.",
-                  "Requires Level 12"
+                  "88 - 133 Damage\tSpeed 3.50",
+                  "(31.57 damage per second)",
+                  "+14 Strength",
+                  "+7 Agility",
+                  "Requires Level 35",
+                  "Chance on hit: Blasts a target for 60 Fire damage."
                 ],
                 "source": {
-                  "kind": "dungeon",
-                  "title": "Rare World / Dungeon Drop",
-                  "detail": "Dungeon Drop"
+                  "kind": "drop",
+                  "title": "World Drop BoE",
+                  "detail": "Iconic fire-proc leveling 2H axe"
                 }
               },
               {
@@ -15949,30 +15976,30 @@ if (typeof window !== 'undefined') {
               },
               {
                 "name": "Cobalt Crusher",
-                "itemId": 7730,
-                "icon": "inv_hammer_04",
-                "weaponType": "2H Mace",
-                "speed": "3.20",
-                "dps": "28.91 DPS",
+                "itemId": 7957,
+                "icon": "inv_hammer_16",
+                "weaponType": "Two-Handed Mace",
+                "speed": "3.60",
+                "dps": "26.9 DPS",
                 "value": "28.91 DPS, 3.20s - +9 Strength, Chance on hit: Blasts a target for 164 Frost damage. - Rare World / Dungeon Drop",
                 "faction": "both",
                 "quality": "q3",
-                "iLvl": 34,
-                "reqLevel": 29,
-                "stats": "+9 Strength, Chance on hit: Blasts a target for 164 Frost damage.",
+                "iLvl": 38,
+                "reqLevel": 33,
+                "stats": "+12 Strength, +11 Stamina",
                 "lines": [
                   "Binds when equipped",
                   "Two-Hand\tMace",
-                  "43 - 55 Damage\tSpeed 3.60",
-                  "(13.6 damage per second)",
-                  "+9 Strength",
-                  "Chance on hit: Blasts a target for 164 Frost damage.",
-                  "Requires Level 29"
+                  "81 - 122 Damage\tSpeed 3.60",
+                  "(28.19 damage per second)",
+                  "+12 Strength",
+                  "+11 Stamina",
+                  "Requires Level 33"
                 ],
                 "source": {
-                  "kind": "dungeon",
-                  "title": "Rare World / Dungeon Drop",
-                  "detail": "Dungeon Drop"
+                  "kind": "drop",
+                  "title": "World Drop BoE",
+                  "detail": "High impact 2H leveling mace"
                 }
               },
               {
@@ -16787,29 +16814,32 @@ if (typeof window !== 'undefined') {
             "alts": [
               {
                 "name": "Stoneslayer",
-                "itemId": 9413,
+                "itemId": 9418,
                 "value": "40.5 DPS, 3.90s - +5 Strength - Uldaman: Archaedas",
                 "faction": "both",
-                "dps": "40.5 DPS",
+                "dps": "37.1 DPS",
                 "speed": "3.90",
                 "quality": "q3",
-                "iLvl": 46,
-                "reqLevel": 40,
-                "stats": "+5 Strength",
-                "icon": "inv_sword_04",
+                "iLvl": 49,
+                "reqLevel": 44,
+                "stats": "+10 Strength, +7 Agility, +15 Stamina",
+                "icon": "inv_sword_26",
                 "source": {
                   "kind": "dungeon",
-                  "title": "Uldaman: Archaedas",
-                  "detail": "Dungeon Drop"
+                  "title": "Uldaman — Archaedas",
+                  "detail": "Massive slow two-handed sword"
                 },
                 "lines": [
                   "Binds when picked up",
-                  "Two-Hand\tWeapon",
-                  "126 - 190 Damage\tSpeed 3.70",
-                  "(42.70 damage per second)",
-                  "+5 Strength",
+                  "Two-Hand\tSword",
+                  "121 - 183 Damage\tSpeed 3.90",
+                  "(38.97 damage per second)",
+                  "+10 Strength",
+                  "+7 Agility",
+                  "+15 Stamina",
                   "Requires Level 44"
-                ]
+                ],
+                "weaponType": "Two-Handed Sword"
               },
               {
                 "name": "The Pacifier",
@@ -17507,26 +17537,28 @@ if (typeof window !== 'undefined') {
                 "itemId": 9418,
                 "value": "42.7 DPS, 3.90s - Uldaman: Archaedas",
                 "faction": "both",
-                "dps": "42.69 DPS",
+                "dps": "37.1 DPS",
                 "quality": "q3",
                 "iLvl": 49,
                 "reqLevel": 44,
-                "stats": "Chance on hit: Reduces enemy armor by 100",
-                "icon": "inv_sword_47",
+                "stats": "+10 Strength, +7 Agility, +15 Stamina",
+                "icon": "inv_sword_26",
                 "weaponType": "Two-Handed Sword",
                 "speed": "3.90",
                 "lines": [
                   "Binds when picked up",
-                  "Two-Hand\tTwo-Handed Sword",
-                  "131 - 197 Damage\tSpeed 3.90",
-                  "(42.69 damage per second)",
-                  "Chance on hit: Reduces enemy armor by 100",
+                  "Two-Hand\tSword",
+                  "121 - 183 Damage\tSpeed 3.90",
+                  "(38.97 damage per second)",
+                  "+10 Strength",
+                  "+7 Agility",
+                  "+15 Stamina",
                   "Requires Level 44"
                 ],
                 "source": {
                   "kind": "dungeon",
-                  "title": "Archaedas",
-                  "detail": "Uldaman"
+                  "title": "Uldaman — Archaedas",
+                  "detail": "Massive slow two-handed sword"
                 }
               },
               {
@@ -18706,26 +18738,26 @@ if (typeof window !== 'undefined') {
           },
           {
             "levelBracket": "15–18",
-            "itemId": 5193,
+            "itemId": 5191,
             "name": "Cruel Barb",
-            "weaponType": "1H Sword",
+            "weaponType": "One-Handed Sword",
             "speed": "2.80",
-            "dps": "12.3 DPS",
-            "stats": "+6 Attack Power, +3 Agility",
+            "dps": "17.0 DPS",
+            "stats": "+12 Attack Power",
             "quality": "q3",
             "iLvl": 24,
             "reqLevel": 19,
-            "icon": "inv_sword_23",
+            "icon": "inv_sword_26",
             "source": {
               "kind": "dungeon",
               "title": "The Deadmines — Edwin VanCleef",
-              "detail": "Iconic leveling sword for Devastate / Heroic Strike"
+              "detail": "Iconic rogue/warrior leveling sword"
             },
             "alts": [
               {
                 "name": "Cookie's Tenderizer",
                 "itemId": 5195,
-                "weaponType": "1H Mace",
+                "weaponType": "One-Handed Mace",
                 "quality": "q3",
                 "iLvl": 21,
                 "reqLevel": 16,
@@ -18736,17 +18768,17 @@ if (typeof window !== 'undefined') {
                 "value": "10.8 DPS, 2.40s - +3 Strength, +2 Stamina - Cookie",
                 "lines": [
                   "Binds when picked up",
-                  "Hands\t1H Mace",
-                  "Speed 2.40",
-                  "(NaN damage per second)",
-                  "+7 Strength",
-                  "+25 Armor",
-                  "Requires Level 17"
+                  "One-Hand\tMace",
+                  "20 - 38 Damage\tSpeed 2.40",
+                  "(12.08 damage per second)",
+                  "+3 Strength",
+                  "+2 Stamina",
+                  "Requires Level 16"
                 ],
                 "source": {
                   "kind": "dungeon",
-                  "title": "Cookie",
-                  "detail": "The Deadmines"
+                  "title": "The Deadmines — Cookie",
+                  "detail": "Deadmines rare drop"
                 }
               },
               {
@@ -18919,12 +18951,10 @@ if (typeof window !== 'undefined') {
             ],
             "lines": [
               "Binds when picked up",
-              "Back\t1H Sword",
-              "Speed 2.80",
-              "(NaN damage per second)",
-              "+5 Agility",
-              "+3 Stamina",
-              "+21 Armor",
+              "One-Hand\tSword",
+              "30 - 57 Damage\tSpeed 2.80",
+              "(15.54 damage per second)",
+              "+12 Attack Power",
               "Requires Level 19"
             ]
           },
@@ -18947,86 +18977,86 @@ if (typeof window !== 'undefined') {
             },
             "alts": [
               {
-                "name": "Silver-Thread Rod",
-                "itemId": 4045,
-                "weaponType": "1H Mace",
+                "name": "Scepter of the Unholy",
+                "itemId": 7714,
+                "weaponType": "One-Handed Mace",
                 "quality": "q2",
                 "iLvl": 25,
                 "reqLevel": 20,
                 "speed": "2.00",
-                "dps": "11.2 DPS",
-                "stats": "+3 Strength, +3 Stamina",
-                "icon": "inv_mace_04",
+                "dps": "14.2 DPS",
+                "stats": "+4 Spirit, +3 Stamina, Equip: Increases healing done by up to 11.",
+                "icon": "inv_mace_01",
                 "value": "11.2 DPS, 2.00s - +3 Strength, +3 Stamina - World Drop",
                 "lines": [
-                  "Binds when equipped",
-                  "Wrist\t1H Mace",
-                  "Speed 2.00",
-                  "(NaN damage per second)",
+                  "Binds when picked up",
+                  "One-Hand\tMace",
+                  "22 - 42 Damage\tSpeed 2.00",
+                  "(16.00 damage per second)",
+                  "+4 Spirit",
                   "+3 Stamina",
-                  "+8 Intellect",
-                  "+24 Armor",
-                  "Requires Level 37"
+                  "Requires Level 20",
+                  "Equip: Increases healing done by up to 11."
                 ],
                 "source": {
-                  "kind": "world",
-                  "title": "World Drop",
-                  "detail": "Zone Drop / Rare Mob"
+                  "kind": "drop",
+                  "title": "Dungeon Drop",
+                  "detail": "Leveling healer mace"
                 }
               },
               {
                 "name": "Smite's Mighty Hammer",
-                "itemId": 5196,
+                "itemId": 7230,
                 "value": "20.0 DPS, 3.50s, +11 Str, +4 Agi - The Deadmines: Mr. Smite",
                 "faction": "both",
-                "dps": "20.00 DPS",
+                "dps": "19.8 DPS",
                 "quality": "q3",
                 "iLvl": 23,
                 "reqLevel": 18,
                 "stats": "+11 Strength, +4 Agility",
-                "icon": "inv_hammer_08",
+                "icon": "inv_hammer_09",
                 "weaponType": "Two-Handed Mace",
                 "speed": "3.50",
                 "lines": [
                   "Binds when picked up",
-                  "Two-Hand\tTwo-Handed Mace",
-                  "56 - 84 Damage\tSpeed 3.50",
-                  "(20.00 damage per second)",
+                  "Two-Hand\tMace",
+                  "55 - 83 Damage\tSpeed 3.50",
+                  "(19.71 damage per second)",
                   "+11 Strength",
                   "+4 Agility",
                   "Requires Level 18"
                 ],
                 "source": {
                   "kind": "dungeon",
-                  "title": "Mr. Smite",
-                  "detail": "The Deadmines"
+                  "title": "The Deadmines — Mr. Smite",
+                  "detail": "Iconic slow 2H leveling mace"
                 }
               },
               {
                 "name": "Cruel Barb",
-                "itemId": 5202,
+                "itemId": 5191,
                 "value": "17.0 DPS, 2.80s, +12 AP - The Deadmines: Edwin VanCleef",
                 "faction": "both",
-                "dps": "16.96 DPS",
+                "dps": "17.0 DPS",
                 "quality": "q3",
                 "iLvl": 24,
                 "reqLevel": 19,
                 "stats": "+12 Attack Power",
-                "icon": "inv_sword_23",
+                "icon": "inv_sword_26",
                 "weaponType": "One-Handed Sword",
                 "speed": "2.80",
                 "lines": [
                   "Binds when picked up",
-                  "One-Hand\tOne-Handed Sword",
-                  "30 - 56 Damage\tSpeed 2.80",
-                  "(16.96 damage per second)",
-                  "Equip: +12 Attack Power",
+                  "One-Hand\tSword",
+                  "30 - 57 Damage\tSpeed 2.80",
+                  "(15.54 damage per second)",
+                  "+12 Attack Power",
                   "Requires Level 19"
                 ],
                 "source": {
                   "kind": "dungeon",
-                  "title": "Edwin VanCleef",
-                  "detail": "The Deadmines"
+                  "title": "The Deadmines — Edwin VanCleef",
+                  "detail": "Iconic rogue/warrior leveling sword"
                 }
               },
               {
@@ -19170,31 +19200,28 @@ if (typeof window !== 'undefined') {
             "alts": [
               {
                 "name": "Toxic Revenger",
-                "itemId": 9454,
-                "weaponType": "1H Sword",
+                "itemId": 9453,
+                "weaponType": "One-Handed Sword",
                 "quality": "q3",
                 "iLvl": 32,
                 "reqLevel": 27,
-                "speed": "2.20",
-                "dps": "18.4 DPS",
-                "stats": "Chance on Hit: 50 Nature DMG poison",
+                "speed": "2.70",
+                "dps": "18.3 DPS",
+                "stats": "Chance on hit: Poisons target for 15 Nature damage every 3 sec for 15 sec.",
                 "icon": "inv_sword_04",
                 "value": "18.4 DPS, 2.20s - Chance on Hit: 50 Nature DMG poison - Viscous Fallout",
                 "lines": [
                   "Binds when picked up",
-                  "Feet\t1H Sword",
-                  "Speed 2.20",
-                  "(NaN damage per second)",
-                  "+8 Intellect",
-                  "+4 Spirit",
-                  "+34 Armor",
-                  "+5 Spell Power",
-                  "Requires Level 27"
+                  "One-Hand\tSword",
+                  "37 - 69 Damage\tSpeed 2.70",
+                  "(19.63 damage per second)",
+                  "Requires Level 27",
+                  "Chance on hit: Poisons target for 15 Nature damage every 3 sec for 15 sec."
                 ],
                 "source": {
                   "kind": "dungeon",
-                  "title": "Viscous Fallout",
-                  "detail": "Dungeon Boss Drop"
+                  "title": "Gnomeregan — Viscous Fallout",
+                  "detail": "Proc sword with poison damage"
                 }
               },
               {
@@ -19840,26 +19867,28 @@ if (typeof window !== 'undefined') {
                 "itemId": 9418,
                 "value": "42.7 DPS, 3.90s - Uldaman: Archaedas",
                 "faction": "both",
-                "dps": "42.69 DPS",
+                "dps": "37.1 DPS",
                 "quality": "q3",
                 "iLvl": 49,
                 "reqLevel": 44,
-                "stats": "Chance on hit: Reduces enemy armor by 100",
-                "icon": "inv_sword_47",
+                "stats": "+10 Strength, +7 Agility, +15 Stamina",
+                "icon": "inv_sword_26",
                 "weaponType": "Two-Handed Sword",
                 "speed": "3.90",
                 "lines": [
                   "Binds when picked up",
-                  "Two-Hand\tTwo-Handed Sword",
-                  "131 - 197 Damage\tSpeed 3.90",
-                  "(42.69 damage per second)",
-                  "Chance on hit: Reduces enemy armor by 100",
+                  "Two-Hand\tSword",
+                  "121 - 183 Damage\tSpeed 3.90",
+                  "(38.97 damage per second)",
+                  "+10 Strength",
+                  "+7 Agility",
+                  "+15 Stamina",
                   "Requires Level 44"
                 ],
                 "source": {
                   "kind": "dungeon",
-                  "title": "Archaedas",
-                  "detail": "Uldaman"
+                  "title": "Uldaman — Archaedas",
+                  "detail": "Massive slow two-handed sword"
                 }
               },
               {
@@ -22665,28 +22694,30 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Cookie's Tenderizer",
-              "itemId": 5197,
-              "icon": "inv_fabric_silk_02",
-              "weaponType": "1H Mace",
-              "speed": "2.80",
-              "dps": "13.93 DPS",
+              "itemId": 5195,
+              "icon": "inv_hammer_07",
+              "weaponType": "One-Handed Mace",
+              "speed": "2.40",
+              "dps": "10.8 DPS",
               "value": "13.93 DPS, 2.80s - +4 Spirit - Cookie",
               "faction": "both",
               "quality": "q3",
               "iLvl": 21,
               "reqLevel": 16,
-              "stats": "+4 Spirit",
+              "stats": "+3 Strength, +2 Stamina",
               "lines": [
-                "1H Mace",
-                "Speed 2.80",
-                "(13.93 damage per second)",
-                "+4 Spirit",
+                "Binds when picked up",
+                "One-Hand\tMace",
+                "20 - 38 Damage\tSpeed 2.40",
+                "(12.08 damage per second)",
+                "+3 Strength",
+                "+2 Stamina",
                 "Requires Level 16"
               ],
               "source": {
                 "kind": "dungeon",
-                "title": "Cookie",
-                "detail": "Dungeon Boss Drop"
+                "title": "The Deadmines — Cookie",
+                "detail": "Deadmines rare drop"
               }
             },
             {
@@ -22846,13 +22877,13 @@ if (typeof window !== 'undefined') {
           "itemId": 7230,
           "name": "Smite's Mighty Hammer",
           "icon": "inv_hammer_09",
-          "weaponType": "Two-handed mace",
+          "weaponType": "Two-Handed Mace",
           "speed": "3.50",
-          "dps": "19.7 DPS",
+          "dps": "19.8 DPS",
           "source": {
             "kind": "dungeon",
-            "title": "Mr. Smite",
-            "detail": "The Deadmines (+11 Str, +4 Agi, slow 3.50s)"
+            "title": "The Deadmines — Mr. Smite",
+            "detail": "Iconic slow 2H leveling mace"
           },
           "alts": [
             {
@@ -23048,28 +23079,30 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Butcher's Slicer",
-              "itemId": 6633,
-              "icon": "inv_sword_16",
-              "weaponType": "1H Sword",
-              "speed": "2.90",
-              "dps": "15.00 DPS",
+              "itemId": 6631,
+              "icon": "inv_sword_18",
+              "weaponType": "One-Handed Sword",
+              "speed": "2.50",
+              "dps": "10.6 DPS",
               "value": "15.00 DPS, 2.90s - +3 Stamina - Razorclaw the Butcher",
               "faction": "both",
               "quality": "q3",
-              "iLvl": 23,
-              "reqLevel": 18,
-              "stats": "+3 Stamina",
+              "iLvl": 21,
+              "reqLevel": 16,
+              "stats": "+3 Strength, +2 Agility",
               "lines": [
-                "1H Sword",
-                "Speed 2.90",
-                "(15.00 damage per second)",
-                "+3 Stamina",
-                "Requires Level 18"
+                "Binds when picked up",
+                "One-Hand\tSword",
+                "21 - 40 Damage\tSpeed 2.50",
+                "(12.20 damage per second)",
+                "+3 Strength",
+                "+2 Agility",
+                "Requires Level 16"
               ],
               "source": {
-                "kind": "world",
-                "title": "Razorclaw the Butcher",
-                "detail": "World Drop / Quest"
+                "kind": "dungeon",
+                "title": "Shadowfang Keep — Razorclaw the Butcher",
+                "detail": "SFK weapon drop"
               }
             },
             {
@@ -23189,27 +23222,27 @@ if (typeof window !== 'undefined') {
               "itemId": 5195,
               "value": "13.7 DPS, 2.70s, +3 Str, +3 Sta - The Deadmines: Cookie",
               "faction": "both",
-              "dps": "13.70 DPS",
-              "quality": "q2",
-              "iLvl": 22,
-              "reqLevel": 17,
-              "stats": "+3 Strength, +3 Stamina",
-              "icon": "inv_mace_08",
+              "dps": "10.8 DPS",
+              "quality": "q3",
+              "iLvl": 21,
+              "reqLevel": 16,
+              "stats": "+3 Strength, +2 Stamina",
+              "icon": "inv_hammer_07",
               "weaponType": "One-Handed Mace",
-              "speed": "2.70",
+              "speed": "2.40",
               "lines": [
                 "Binds when picked up",
-                "One-Hand\tOne-Handed Mace",
-                "30 - 56 Damage\tSpeed 2.70",
-                "(13.70 damage per second)",
+                "One-Hand\tMace",
+                "20 - 38 Damage\tSpeed 2.40",
+                "(12.08 damage per second)",
                 "+3 Strength",
-                "+3 Stamina",
-                "Requires Level 17"
+                "+2 Stamina",
+                "Requires Level 16"
               ],
               "source": {
                 "kind": "dungeon",
-                "title": "Cookie",
-                "detail": "The Deadmines"
+                "title": "The Deadmines — Cookie",
+                "detail": "Deadmines rare drop"
               }
             }
           ],
@@ -23217,10 +23250,10 @@ if (typeof window !== 'undefined') {
           "quality": "q3",
           "iLvl": 23,
           "reqLevel": 18,
-          "stats": "+11 Str, +4 Agi, slow 3.50s",
+          "stats": "+11 Strength, +4 Agility",
           "lines": [
             "Binds when picked up",
-            "Two-Hand",
+            "Two-Hand\tMace",
             "55 - 83 Damage\tSpeed 3.50",
             "(19.71 damage per second)",
             "+11 Strength",
@@ -23489,57 +23522,57 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Cruel Barb",
-              "itemId": 5193,
-              "icon": "inv_sword_23",
-              "weaponType": "1H Sword",
+              "itemId": 5191,
+              "icon": "inv_sword_26",
+              "weaponType": "One-Handed Sword",
               "speed": "2.80",
-              "dps": "12.3 DPS",
+              "dps": "17.0 DPS",
               "value": "12.3 DPS, 2.80s - +6 Attack Power, +3 Agility - Edwin VanCleef",
               "faction": "both",
               "quality": "q3",
               "iLvl": 24,
               "reqLevel": 19,
-              "stats": "+6 Attack Power, +3 Agility",
+              "stats": "+12 Attack Power",
               "lines": [
                 "Binds when picked up",
-                "One-Hand",
+                "One-Hand\tSword",
                 "30 - 57 Damage\tSpeed 2.80",
                 "(15.54 damage per second)",
-                "Requires Level 19",
-                "Equip: +12 Attack Power."
+                "+12 Attack Power",
+                "Requires Level 19"
               ],
               "source": {
                 "kind": "dungeon",
-                "title": "Edwin VanCleef",
-                "detail": "The Deadmines"
+                "title": "The Deadmines — Edwin VanCleef",
+                "detail": "Iconic rogue/warrior leveling sword"
               }
             },
             {
               "name": "Smite's Mighty Hammer",
-              "itemId": 5196,
+              "itemId": 7230,
               "value": "20.0 DPS, 3.50s, +11 Str, +4 Agi - The Deadmines: Mr. Smite",
               "faction": "both",
-              "dps": "20.00 DPS",
+              "dps": "19.8 DPS",
               "quality": "q3",
               "iLvl": 23,
               "reqLevel": 18,
               "stats": "+11 Strength, +4 Agility",
-              "icon": "inv_hammer_08",
+              "icon": "inv_hammer_09",
               "weaponType": "Two-Handed Mace",
               "speed": "3.50",
               "lines": [
                 "Binds when picked up",
-                "Two-Hand\tTwo-Handed Mace",
-                "56 - 84 Damage\tSpeed 3.50",
-                "(20.00 damage per second)",
+                "Two-Hand\tMace",
+                "55 - 83 Damage\tSpeed 3.50",
+                "(19.71 damage per second)",
                 "+11 Strength",
                 "+4 Agility",
                 "Requires Level 18"
               ],
               "source": {
                 "kind": "dungeon",
-                "title": "Mr. Smite",
-                "detail": "The Deadmines"
+                "title": "The Deadmines — Mr. Smite",
+                "detail": "Iconic slow 2H leveling mace"
               }
             },
             {
@@ -24482,30 +24515,30 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Cobalt Crusher",
-              "itemId": 7730,
-              "icon": "inv_hammer_04",
-              "weaponType": "2H Mace",
-              "speed": "3.20",
-              "dps": "28.91 DPS",
+              "itemId": 7957,
+              "icon": "inv_hammer_16",
+              "weaponType": "Two-Handed Mace",
+              "speed": "3.60",
+              "dps": "26.9 DPS",
               "value": "28.91 DPS, 3.20s - +9 Strength, Chance on hit: Blasts a target for 164 Frost damage. - Rare World / Dungeon Drop",
               "faction": "both",
               "quality": "q3",
-              "iLvl": 34,
-              "reqLevel": 29,
-              "stats": "+9 Strength, Chance on hit: Blasts a target for 164 Frost damage.",
+              "iLvl": 38,
+              "reqLevel": 33,
+              "stats": "+12 Strength, +11 Stamina",
               "lines": [
                 "Binds when equipped",
                 "Two-Hand\tMace",
-                "43 - 55 Damage\tSpeed 3.60",
-                "(13.6 damage per second)",
-                "+9 Strength",
-                "Chance on hit: Blasts a target for 164 Frost damage.",
-                "Requires Level 29"
+                "81 - 122 Damage\tSpeed 3.60",
+                "(28.19 damage per second)",
+                "+12 Strength",
+                "+11 Stamina",
+                "Requires Level 33"
               ],
               "source": {
-                "kind": "dungeon",
-                "title": "Rare World / Dungeon Drop",
-                "detail": "Dungeon Drop"
+                "kind": "drop",
+                "title": "World Drop BoE",
+                "detail": "High impact 2H leveling mace"
               }
             },
             {
@@ -24651,27 +24684,28 @@ if (typeof window !== 'undefined') {
           "alts": [
             {
               "name": "Cobalt Crusher",
-              "itemId": 6741,
-              "weaponType": "Two-handed mace",
-              "quality": "q1",
-              "iLvl": 29,
-              "reqLevel": 32,
-              "dps": "27.4 DPS",
-              "speed": "3.40",
-              "stats": "+11 Strength, +10 Stamina",
-              "icon": "inv_hammer_04",
+              "itemId": 7957,
+              "weaponType": "Two-Handed Mace",
+              "quality": "q3",
+              "iLvl": 38,
+              "reqLevel": 33,
+              "dps": "26.9 DPS",
+              "speed": "3.60",
+              "stats": "+12 Strength, +11 Stamina",
+              "icon": "inv_hammer_16",
               "lines": [
-                "Binds when picked up",
-                "Two-Hand",
-                "45 - 68 Damage\tSpeed 3.10",
-                "(18.23 damage per second)",
-                "+11 Strength",
-                "+10 Stamina"
+                "Binds when equipped",
+                "Two-Hand\tMace",
+                "81 - 122 Damage\tSpeed 3.60",
+                "(28.19 damage per second)",
+                "+12 Strength",
+                "+11 Stamina",
+                "Requires Level 33"
               ],
               "source": {
-                "kind": "world",
-                "title": "Leveling Item",
-                "detail": "World Drop / Quest"
+                "kind": "drop",
+                "title": "World Drop BoE",
+                "detail": "High impact 2H leveling mace"
               }
             },
             {
@@ -25324,16 +25358,16 @@ if (typeof window !== 'undefined') {
         },
         {
           "levelBracket": "41–45",
-          "itemId": 9413,
+          "itemId": 9418,
           "name": "Stoneslayer",
-          "icon": "inv_sword_04",
-          "weaponType": "Two-handed sword",
+          "icon": "inv_sword_26",
+          "weaponType": "Two-Handed Sword",
           "speed": "3.90",
-          "dps": "40.5 DPS",
+          "dps": "37.1 DPS",
           "source": {
             "kind": "dungeon",
-            "title": "Archaedas",
-            "detail": "Uldaman boss (+5 Str, +13 Sta)"
+            "title": "Uldaman — Archaedas",
+            "detail": "Massive slow two-handed sword"
           },
           "alts": [
             {
@@ -25675,15 +25709,17 @@ if (typeof window !== 'undefined') {
           ],
           "faction": "both",
           "quality": "q3",
-          "iLvl": 46,
-          "reqLevel": 40,
-          "stats": "+5 Str, +13 Sta",
+          "iLvl": 49,
+          "reqLevel": 44,
+          "stats": "+10 Strength, +7 Agility, +15 Stamina",
           "lines": [
             "Binds when picked up",
-            "Two-Hand\tWeapon",
-            "126 - 190 Damage\tSpeed 3.70",
-            "(42.70 damage per second)",
-            "+5 Strength",
+            "Two-Hand\tSword",
+            "121 - 183 Damage\tSpeed 3.90",
+            "(38.97 damage per second)",
+            "+10 Strength",
+            "+7 Agility",
+            "+15 Stamina",
             "Requires Level 44"
           ]
         },
@@ -26010,26 +26046,28 @@ if (typeof window !== 'undefined') {
               "itemId": 9418,
               "value": "42.7 DPS, 3.90s - Uldaman: Archaedas",
               "faction": "both",
-              "dps": "42.69 DPS",
+              "dps": "37.1 DPS",
               "quality": "q3",
               "iLvl": 49,
               "reqLevel": 44,
-              "stats": "Chance on hit: Reduces enemy armor by 100",
-              "icon": "inv_sword_47",
+              "stats": "+10 Strength, +7 Agility, +15 Stamina",
+              "icon": "inv_sword_26",
               "weaponType": "Two-Handed Sword",
               "speed": "3.90",
               "lines": [
                 "Binds when picked up",
-                "Two-Hand\tTwo-Handed Sword",
-                "131 - 197 Damage\tSpeed 3.90",
-                "(42.69 damage per second)",
-                "Chance on hit: Reduces enemy armor by 100",
+                "Two-Hand\tSword",
+                "121 - 183 Damage\tSpeed 3.90",
+                "(38.97 damage per second)",
+                "+10 Strength",
+                "+7 Agility",
+                "+15 Stamina",
                 "Requires Level 44"
               ],
               "source": {
                 "kind": "dungeon",
-                "title": "Archaedas",
-                "detail": "Uldaman"
+                "title": "Uldaman — Archaedas",
+                "detail": "Massive slow two-handed sword"
               }
             },
             {
@@ -27118,7 +27156,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "13–17",
           "itemId": 5195,
           "name": "Cookie's Tenderizer",
-          "weaponType": "1H Mace",
+          "weaponType": "One-Handed Mace",
           "quality": "q3",
           "iLvl": 21,
           "reqLevel": 16,
@@ -27134,27 +27172,29 @@ if (typeof window !== 'undefined') {
           "alts": [
             {
               "name": "Smite's Mighty Hammer",
-              "itemId": 5191,
-              "weaponType": "2H Mace",
+              "itemId": 7230,
+              "weaponType": "Two-Handed Mace",
               "quality": "q3",
               "iLvl": 23,
               "reqLevel": 18,
               "speed": "3.50",
-              "dps": "13.1 DPS",
+              "dps": "19.8 DPS",
               "stats": "+11 Strength, +4 Agility",
               "icon": "inv_hammer_09",
               "value": "13.1 DPS, 3.50s - +11 Strength, +4 Agility - Mr. Smite",
               "lines": [
                 "Binds when picked up",
-                "One-Hand\t2H Mace",
-                "30 - 57 Damage\tSpeed 2.80",
-                "(15.54 damage per second)",
-                "Requires Level 19"
+                "Two-Hand\tMace",
+                "55 - 83 Damage\tSpeed 3.50",
+                "(19.71 damage per second)",
+                "+11 Strength",
+                "+4 Agility",
+                "Requires Level 18"
               ],
               "source": {
-                "kind": "world",
-                "title": "Leveling Item",
-                "detail": "World Drop / Quest"
+                "kind": "dungeon",
+                "title": "The Deadmines — Mr. Smite",
+                "detail": "Iconic slow 2H leveling mace"
               }
             },
             {
@@ -27187,30 +27227,30 @@ if (typeof window !== 'undefined') {
           ],
           "lines": [
             "Binds when picked up",
-            "Hands\t1H Mace",
-            "Speed 2.40",
-            "(NaN damage per second)",
-            "+7 Strength",
-            "+25 Armor",
-            "Requires Level 17"
+            "One-Hand\tMace",
+            "20 - 38 Damage\tSpeed 2.40",
+            "(12.08 damage per second)",
+            "+3 Strength",
+            "+2 Stamina",
+            "Requires Level 16"
           ]
         },
         {
           "levelBracket": "18–21",
-          "itemId": 4045,
-          "name": "Silver-Thread Rod",
-          "weaponType": "1H Mace",
+          "itemId": 7714,
+          "name": "Scepter of the Unholy",
+          "weaponType": "One-Handed Mace",
           "quality": "q2",
           "iLvl": 25,
           "reqLevel": 20,
           "speed": "2.00",
-          "dps": "11.2 DPS",
-          "stats": "+3 Intellect, +3 Spirit, +6 Healing",
-          "icon": "inv_mace_04",
+          "dps": "14.2 DPS",
+          "stats": "+4 Spirit, +3 Stamina, Equip: Increases healing done by up to 11.",
+          "icon": "inv_mace_01",
           "source": {
-            "kind": "world",
-            "title": "World Drop BoE",
-            "detail": "+3 Intellect, +3 Spirit, +6 Healing"
+            "kind": "drop",
+            "title": "Dungeon Drop",
+            "detail": "Leveling healer mace"
           },
           "alts": [
             {
@@ -27272,30 +27312,30 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Smite's Mighty Hammer",
-              "itemId": 5196,
+              "itemId": 7230,
               "value": "20.0 DPS, 3.50s, +11 Str, +4 Agi - The Deadmines: Mr. Smite",
               "faction": "both",
-              "dps": "20.00 DPS",
+              "dps": "19.8 DPS",
               "quality": "q3",
               "iLvl": 23,
               "reqLevel": 18,
               "stats": "+11 Strength, +4 Agility",
-              "icon": "inv_hammer_08",
+              "icon": "inv_hammer_09",
               "weaponType": "Two-Handed Mace",
               "speed": "3.50",
               "lines": [
                 "Binds when picked up",
-                "Two-Hand\tTwo-Handed Mace",
-                "56 - 84 Damage\tSpeed 3.50",
-                "(20.00 damage per second)",
+                "Two-Hand\tMace",
+                "55 - 83 Damage\tSpeed 3.50",
+                "(19.71 damage per second)",
                 "+11 Strength",
                 "+4 Agility",
                 "Requires Level 18"
               ],
               "source": {
                 "kind": "dungeon",
-                "title": "Mr. Smite",
-                "detail": "The Deadmines"
+                "title": "The Deadmines — Mr. Smite",
+                "detail": "Iconic slow 2H leveling mace"
               }
             },
             {
@@ -27331,54 +27371,54 @@ if (typeof window !== 'undefined') {
               "itemId": 5195,
               "value": "13.7 DPS, 2.70s, +3 Str, +3 Sta - The Deadmines: Cookie",
               "faction": "both",
-              "dps": "13.70 DPS",
-              "quality": "q2",
-              "iLvl": 22,
-              "reqLevel": 17,
-              "stats": "+3 Strength, +3 Stamina",
-              "icon": "inv_mace_08",
+              "dps": "10.8 DPS",
+              "quality": "q3",
+              "iLvl": 21,
+              "reqLevel": 16,
+              "stats": "+3 Strength, +2 Stamina",
+              "icon": "inv_hammer_07",
               "weaponType": "One-Handed Mace",
-              "speed": "2.70",
+              "speed": "2.40",
               "lines": [
                 "Binds when picked up",
-                "One-Hand\tOne-Handed Mace",
-                "30 - 56 Damage\tSpeed 2.70",
-                "(13.70 damage per second)",
+                "One-Hand\tMace",
+                "20 - 38 Damage\tSpeed 2.40",
+                "(12.08 damage per second)",
                 "+3 Strength",
-                "+3 Stamina",
-                "Requires Level 17"
+                "+2 Stamina",
+                "Requires Level 16"
               ],
               "source": {
                 "kind": "dungeon",
-                "title": "Cookie",
-                "detail": "The Deadmines"
+                "title": "The Deadmines — Cookie",
+                "detail": "Deadmines rare drop"
               }
             },
             {
               "name": "Cruel Barb",
-              "itemId": 5202,
+              "itemId": 5191,
               "value": "17.0 DPS, 2.80s, +12 AP - The Deadmines: Edwin VanCleef",
               "faction": "both",
-              "dps": "16.96 DPS",
+              "dps": "17.0 DPS",
               "quality": "q3",
               "iLvl": 24,
               "reqLevel": 19,
               "stats": "+12 Attack Power",
-              "icon": "inv_sword_23",
+              "icon": "inv_sword_26",
               "weaponType": "One-Handed Sword",
               "speed": "2.80",
               "lines": [
                 "Binds when picked up",
-                "One-Hand\tOne-Handed Sword",
-                "30 - 56 Damage\tSpeed 2.80",
-                "(16.96 damage per second)",
-                "Equip: +12 Attack Power",
+                "One-Hand\tSword",
+                "30 - 57 Damage\tSpeed 2.80",
+                "(15.54 damage per second)",
+                "+12 Attack Power",
                 "Requires Level 19"
               ],
               "source": {
                 "kind": "dungeon",
-                "title": "Edwin VanCleef",
-                "detail": "The Deadmines"
+                "title": "The Deadmines — Edwin VanCleef",
+                "detail": "Iconic rogue/warrior leveling sword"
               }
             },
             {
@@ -27410,14 +27450,14 @@ if (typeof window !== 'undefined') {
             }
           ],
           "lines": [
-            "Binds when equipped",
-            "Wrist\t1H Mace",
-            "Speed 2.00",
-            "(NaN damage per second)",
+            "Binds when picked up",
+            "One-Hand\tMace",
+            "22 - 42 Damage\tSpeed 2.00",
+            "(16.00 damage per second)",
+            "+4 Spirit",
             "+3 Stamina",
-            "+8 Intellect",
-            "+24 Armor",
-            "Requires Level 37"
+            "Requires Level 20",
+            "Equip: Increases healing done by up to 11."
           ]
         },
         {
@@ -28133,26 +28173,28 @@ if (typeof window !== 'undefined') {
               "itemId": 9418,
               "value": "42.7 DPS, 3.90s - Uldaman: Archaedas",
               "faction": "both",
-              "dps": "42.69 DPS",
+              "dps": "37.1 DPS",
               "quality": "q3",
               "iLvl": 49,
               "reqLevel": 44,
-              "stats": "Chance on hit: Reduces enemy armor by 100",
-              "icon": "inv_sword_47",
+              "stats": "+10 Strength, +7 Agility, +15 Stamina",
+              "icon": "inv_sword_26",
               "weaponType": "Two-Handed Sword",
               "speed": "3.90",
               "lines": [
                 "Binds when picked up",
-                "Two-Hand\tTwo-Handed Sword",
-                "131 - 197 Damage\tSpeed 3.90",
-                "(42.69 damage per second)",
-                "Chance on hit: Reduces enemy armor by 100",
+                "Two-Hand\tSword",
+                "121 - 183 Damage\tSpeed 3.90",
+                "(38.97 damage per second)",
+                "+10 Strength",
+                "+7 Agility",
+                "+15 Stamina",
                 "Requires Level 44"
               ],
               "source": {
                 "kind": "dungeon",
-                "title": "Archaedas",
-                "detail": "Uldaman"
+                "title": "Uldaman — Archaedas",
+                "detail": "Massive slow two-handed sword"
               }
             },
             {
@@ -30839,29 +30881,29 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Cruel Barb",
-              "itemId": 5202,
+              "itemId": 5191,
               "value": "17.0 DPS, 2.80s, +12 AP - The Deadmines: Edwin VanCleef",
               "faction": "both",
-              "dps": "16.96 DPS",
+              "dps": "17.0 DPS",
               "quality": "q3",
               "iLvl": 24,
               "reqLevel": 19,
               "stats": "+12 Attack Power",
-              "icon": "inv_sword_23",
+              "icon": "inv_sword_26",
               "weaponType": "One-Handed Sword",
               "speed": "2.80",
               "lines": [
                 "Binds when picked up",
-                "One-Hand\tOne-Handed Sword",
-                "30 - 56 Damage\tSpeed 2.80",
-                "(16.96 damage per second)",
-                "Equip: +12 Attack Power",
+                "One-Hand\tSword",
+                "30 - 57 Damage\tSpeed 2.80",
+                "(15.54 damage per second)",
+                "+12 Attack Power",
                 "Requires Level 19"
               ],
               "source": {
                 "kind": "dungeon",
-                "title": "Edwin VanCleef",
-                "detail": "The Deadmines"
+                "title": "The Deadmines — Edwin VanCleef",
+                "detail": "Iconic rogue/warrior leveling sword"
               }
             },
             {
@@ -34084,26 +34126,28 @@ if (typeof window !== 'undefined') {
               "itemId": 9418,
               "value": "42.7 DPS, 3.90s - Uldaman: Archaedas",
               "faction": "both",
-              "dps": "42.69 DPS",
+              "dps": "37.1 DPS",
               "quality": "q3",
               "iLvl": 49,
               "reqLevel": 44,
-              "stats": "Chance on hit: Reduces enemy armor by 100",
-              "icon": "inv_sword_47",
+              "stats": "+10 Strength, +7 Agility, +15 Stamina",
+              "icon": "inv_sword_26",
               "weaponType": "Two-Handed Sword",
               "speed": "3.90",
               "lines": [
                 "Binds when picked up",
-                "Two-Hand\tTwo-Handed Sword",
-                "131 - 197 Damage\tSpeed 3.90",
-                "(42.69 damage per second)",
-                "Chance on hit: Reduces enemy armor by 100",
+                "Two-Hand\tSword",
+                "121 - 183 Damage\tSpeed 3.90",
+                "(38.97 damage per second)",
+                "+10 Strength",
+                "+7 Agility",
+                "+15 Stamina",
                 "Requires Level 44"
               ],
               "source": {
                 "kind": "dungeon",
-                "title": "Archaedas",
-                "detail": "Uldaman"
+                "title": "Uldaman — Archaedas",
+                "detail": "Massive slow two-handed sword"
               }
             },
             {
@@ -36313,29 +36357,30 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Scrappy Dagger",
-              "itemId": 250601,
+              "itemId": 281722,
               "value": "5.5 DPS - 695 Armor, +14 Intellect, +33 Spirit, Equip: Increases healing done by up to 40 - Early quest",
               "faction": "both",
-              "dps": "5.5 DPS",
-              "quality": "q4",
-              "iLvl": 61,
-              "reqLevel": 56,
-              "stats": "695 Armor, +14 Intellect, +33 Spirit, Equip: Increases healing done by up to 40",
+              "dps": "4.5 DPS",
+              "quality": "q2",
+              "iLvl": 8,
+              "reqLevel": 4,
+              "stats": "+1 Agility",
               "icon": "inv_weapon_shortblade_05",
               "lines": [
-                "Binds when equipped",
-                "Chest",
-                "695 Armor",
-                "+14 Intellect",
-                "+33 Spirit",
-                "Requires Level 56",
-                "Equip: Increases healing done by up to 40"
+                "Binds when picked up",
+                "One-Hand\tDagger",
+                "5 - 10 Damage\tSpeed 1.50",
+                "(5.00 damage per second)",
+                "+1 Agility",
+                "Requires Level 4"
               ],
               "source": {
                 "kind": "quest",
-                "title": "Early quest",
-                "detail": "Leveling Quest Reward"
-              }
+                "title": "Starter Zone Quest",
+                "detail": "Early leveling dagger"
+              },
+              "weaponType": "Dagger",
+              "speed": "1.50"
             },
             {
               "name": "Stiletto",
@@ -37622,28 +37667,30 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Cookie's Tenderizer",
-              "itemId": 5197,
-              "icon": "inv_fabric_silk_02",
-              "weaponType": "1H Mace",
-              "speed": "2.80",
-              "dps": "13.93 DPS",
+              "itemId": 5195,
+              "icon": "inv_hammer_07",
+              "weaponType": "One-Handed Mace",
+              "speed": "2.40",
+              "dps": "10.8 DPS",
               "value": "13.93 DPS, 2.80s - +4 Spirit - Cookie",
               "faction": "both",
               "quality": "q3",
               "iLvl": 21,
               "reqLevel": 16,
-              "stats": "+4 Spirit",
+              "stats": "+3 Strength, +2 Stamina",
               "lines": [
-                "1H Mace",
-                "Speed 2.80",
-                "(13.93 damage per second)",
-                "+4 Spirit",
+                "Binds when picked up",
+                "One-Hand\tMace",
+                "20 - 38 Damage\tSpeed 2.40",
+                "(12.08 damage per second)",
+                "+3 Strength",
+                "+2 Stamina",
                 "Requires Level 16"
               ],
               "source": {
                 "kind": "dungeon",
-                "title": "Cookie",
-                "detail": "Dungeon Boss Drop"
+                "title": "The Deadmines — Cookie",
+                "detail": "Deadmines rare drop"
               }
             },
             {
@@ -37841,29 +37888,29 @@ if (typeof window !== 'undefined') {
           "alts": [
             {
               "name": "Cruel Barb",
-              "itemId": 5193,
+              "itemId": 5191,
               "value": "12.3 DPS, 2.80s - +6 Attack Power, +3 Agility - The Deadmines: Edwin VanCleef",
               "faction": "both",
-              "dps": "12.3 DPS",
+              "dps": "17.0 DPS",
               "speed": "2.80",
-              "weaponType": "1H Sword",
+              "weaponType": "One-Handed Sword",
               "quality": "q3",
               "iLvl": 24,
               "reqLevel": 19,
-              "stats": "+6 Attack Power, +3 Agility",
-              "icon": "inv_sword_23",
+              "stats": "+12 Attack Power",
+              "icon": "inv_sword_26",
               "lines": [
                 "Binds when picked up",
-                "One-Hand",
+                "One-Hand\tSword",
                 "30 - 57 Damage\tSpeed 2.80",
                 "(15.54 damage per second)",
-                "Requires Level 19",
-                "Equip: +12 Attack Power."
+                "+12 Attack Power",
+                "Requires Level 19"
               ],
               "source": {
                 "kind": "dungeon",
-                "title": "The Deadmines: Edwin VanCleef",
-                "detail": "Dungeon Drop"
+                "title": "The Deadmines — Edwin VanCleef",
+                "detail": "Iconic rogue/warrior leveling sword"
               }
             },
             {
@@ -38035,28 +38082,30 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Butcher's Slicer",
-              "itemId": 6633,
-              "icon": "inv_sword_16",
-              "weaponType": "1H Sword",
-              "speed": "2.90",
-              "dps": "15.00 DPS",
+              "itemId": 6631,
+              "icon": "inv_sword_18",
+              "weaponType": "One-Handed Sword",
+              "speed": "2.50",
+              "dps": "10.6 DPS",
               "value": "15.00 DPS, 2.90s - +3 Stamina - Razorclaw the Butcher",
               "faction": "both",
               "quality": "q3",
-              "iLvl": 23,
-              "reqLevel": 18,
-              "stats": "+3 Stamina",
+              "iLvl": 21,
+              "reqLevel": 16,
+              "stats": "+3 Strength, +2 Agility",
               "lines": [
-                "1H Sword",
-                "Speed 2.90",
-                "(15.00 damage per second)",
-                "+3 Stamina",
-                "Requires Level 18"
+                "Binds when picked up",
+                "One-Hand\tSword",
+                "21 - 40 Damage\tSpeed 2.50",
+                "(12.20 damage per second)",
+                "+3 Strength",
+                "+2 Agility",
+                "Requires Level 16"
               ],
               "source": {
                 "kind": "dungeon",
-                "title": "Skum",
-                "detail": "Wailing Caverns"
+                "title": "Shadowfang Keep — Razorclaw the Butcher",
+                "detail": "SFK weapon drop"
               }
             },
             {
@@ -38148,27 +38197,27 @@ if (typeof window !== 'undefined') {
               "itemId": 5195,
               "value": "13.7 DPS, 2.70s, +3 Str, +3 Sta - The Deadmines: Cookie",
               "faction": "both",
-              "dps": "13.70 DPS",
-              "quality": "q2",
-              "iLvl": 22,
-              "reqLevel": 17,
-              "stats": "+3 Strength, +3 Stamina",
-              "icon": "inv_mace_08",
+              "dps": "10.8 DPS",
+              "quality": "q3",
+              "iLvl": 21,
+              "reqLevel": 16,
+              "stats": "+3 Strength, +2 Stamina",
+              "icon": "inv_hammer_07",
               "weaponType": "One-Handed Mace",
-              "speed": "2.70",
+              "speed": "2.40",
               "lines": [
                 "Binds when picked up",
-                "One-Hand\tOne-Handed Mace",
-                "30 - 56 Damage\tSpeed 2.70",
-                "(13.70 damage per second)",
+                "One-Hand\tMace",
+                "20 - 38 Damage\tSpeed 2.40",
+                "(12.08 damage per second)",
                 "+3 Strength",
-                "+3 Stamina",
-                "Requires Level 17"
+                "+2 Stamina",
+                "Requires Level 16"
               ],
               "source": {
                 "kind": "dungeon",
-                "title": "Cookie",
-                "detail": "The Deadmines"
+                "title": "The Deadmines — Cookie",
+                "detail": "Deadmines rare drop"
               }
             }
           ],
@@ -38202,29 +38251,29 @@ if (typeof window !== 'undefined') {
           "alts": [
             {
               "name": "Cruel Barb",
-              "itemId": 5193,
+              "itemId": 5191,
               "value": "12.3 DPS, 2.80s - +6 Attack Power, +3 Agility - Deadmines: Edwin VanCleef",
               "faction": "both",
-              "dps": "12.3 DPS",
+              "dps": "17.0 DPS",
               "speed": "2.80",
-              "weaponType": "1H Sword",
+              "weaponType": "One-Handed Sword",
               "quality": "q3",
               "iLvl": 24,
               "reqLevel": 19,
-              "stats": "+6 Attack Power, +3 Agility",
-              "icon": "inv_sword_23",
+              "stats": "+12 Attack Power",
+              "icon": "inv_sword_26",
               "lines": [
                 "Binds when picked up",
-                "One-Hand",
+                "One-Hand\tSword",
                 "30 - 57 Damage\tSpeed 2.80",
                 "(15.54 damage per second)",
-                "Requires Level 19",
-                "Equip: +12 Attack Power."
+                "+12 Attack Power",
+                "Requires Level 19"
               ],
               "source": {
                 "kind": "dungeon",
-                "title": "Edwin VanCleef",
-                "detail": "The Deadmines"
+                "title": "The Deadmines — Edwin VanCleef",
+                "detail": "Iconic rogue/warrior leveling sword"
               }
             },
             {
@@ -39549,28 +39598,26 @@ if (typeof window !== 'undefined') {
               "itemId": 9453,
               "value": "20.53 DPS, 1.90s - Chance on hit: Deals 14 Nature damage every 3 sec to any enemy in an 8 yard radius around the caster for 12 sec. - Gnomeregan: Viscous Fallout",
               "faction": "both",
-              "dps": "20.53 DPS",
-              "speed": "1.90",
-              "weaponType": "Dagger",
+              "dps": "18.3 DPS",
+              "speed": "2.70",
+              "weaponType": "One-Handed Sword",
               "quality": "q3",
               "iLvl": 32,
-              "stats": "Chance on hit: Deals 14 Nature damage every 3 sec to any enemy in an 8 yard radius around the caster for 12 sec.",
+              "stats": "Chance on hit: Poisons target for 15 Nature damage every 3 sec for 15 sec.",
               "lines": [
                 "Binds when picked up",
-                "One-Hand",
-                "27 - 51 Damage\tSpeed 1.90",
-                "(20.53 damage per second)",
-                "Chance on hit: Deals 14 Nature damage every 3 sec to any enemy in an 8 yard radius around the caster for 12 sec.",
-                "Chance on hit: Deals 14 Nature damage every 3 sec to any enemy in an 8 yard radius around the caster for 12 sec.",
+                "One-Hand\tSword",
+                "37 - 69 Damage\tSpeed 2.70",
+                "(19.63 damage per second)",
                 "Requires Level 27",
-                "Chance on hit: Deals 14 Nature damage every 3 sec to any enemy in an 8 yard radius around the caster for 12 sec."
+                "Chance on hit: Poisons target for 15 Nature damage every 3 sec for 15 sec."
               ],
               "reqLevel": 27,
-              "icon": "inv_weapon_shortblade_02",
+              "icon": "inv_sword_04",
               "source": {
                 "kind": "dungeon",
-                "title": "Gnomeregan: Viscous Fallout",
-                "detail": "Dungeon Boss Drop"
+                "title": "Gnomeregan — Viscous Fallout",
+                "detail": "Proc sword with poison damage"
               }
             },
             {
@@ -39993,29 +40040,30 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Swine Fists",
-              "itemId": 6693,
+              "itemId": 10760,
               "weaponType": "Fist Weapon",
-              "speed": "2.10",
-              "dps": "20.3 DPS",
+              "speed": "2.40",
+              "dps": "23.8 DPS",
               "value": "20.3 DPS, 2.10s - +5 Stamina, +6 Spirit, Equip: Increases movement speed by 3% in The Barrens, Thousand Needles, Razorfen Kraul, and Razorfen Downs. - +5 Stamina, +6 Spirit, Equip: Increases movement speed by 3% in The Barrens, Thousand Needles, Razorfen Kraul, and Razorfen Downs. — RFK Drop",
               "faction": "both",
               "quality": "q3",
-              "iLvl": 35,
-              "reqLevel": 30,
-              "stats": "+5 Stamina, +6 Spirit, Equip: Increases movement speed by 3% in The Barrens, Thousand Needles, Razorfen Kraul, and Razorfen Downs.",
-              "icon": "inv_misc_monsterclaw_02",
+              "iLvl": 38,
+              "reqLevel": 33,
+              "stats": "+7 Strength, +6 Agility",
+              "icon": "inv_gauntlets_04",
               "lines": [
                 "Binds when picked up",
-                "Finger",
-                "+5 Stamina",
-                "+6 Spirit",
-                "Requires Level 30",
-                "Equip: Increases movement speed by 3% in The Barrens, Thousand Needles, Razorfen Kraul, and Razorfen Downs."
+                "Main Hand\tFist Weapon",
+                "47 - 88 Damage\tSpeed 2.40",
+                "(28.12 damage per second)",
+                "+7 Strength",
+                "+6 Agility",
+                "Requires Level 33"
               ],
               "source": {
                 "kind": "dungeon",
-                "title": "RFK Drop",
-                "detail": "Dungeon Boss Drop"
+                "title": "Razorfen Downs — Agathelos",
+                "detail": "Rare fist weapon drop"
               }
             },
             {
@@ -43229,29 +43277,32 @@ if (typeof window !== 'undefined') {
           },
           "alts": [
             {
-              "name": "Staff of the Dor'Danil",
-              "itemId": 15396,
+              "name": "Gritroot Staff",
+              "itemId": 9603,
               "value": "8.5 DPS, 1.50s - +1 Stamina - Early quest staff",
               "faction": "both",
-              "dps": "8.5 DPS",
+              "dps": "5.4 DPS",
               "quality": "q2",
-              "iLvl": 14,
-              "reqLevel": 6,
-              "stats": "+1 Stamina",
-              "icon": "inv_staff_08",
-              "speed": "1.50",
+              "iLvl": 10,
+              "reqLevel": 4,
+              "stats": "+1 Stamina, +2 Spell Power",
+              "icon": "inv_staff_22",
+              "speed": "2.60",
               "lines": [
                 "Binds when picked up",
-                "One-Hand",
-                "7 - 14 Damage\tSpeed 1.50",
-                "(7.00 damage per second)",
-                "+1 Stamina"
+                "Two-Hand\tStaff",
+                "11 - 17 Damage\tSpeed 2.60",
+                "(5.38 damage per second)",
+                "+1 Stamina",
+                "+2 Spell Power",
+                "Requires Level 4"
               ],
               "source": {
                 "kind": "quest",
-                "title": "The Fragments Within",
-                "detail": "Leveling Quest Reward"
-              }
+                "title": "The Relics of Wakening",
+                "detail": "Quest reward from Teldrassil / Dolanaar."
+              },
+              "weaponType": "Staff"
             },
             {
               "name": "Large Club",
@@ -43852,27 +43903,31 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Woodchopper",
-              "itemId": 2520,
+              "itemId": 2030,
               "value": "10.5 DPS - Vendor 2H axe",
               "faction": "both",
-              "dps": "10.5 DPS",
-              "quality": "q1",
-              "iLvl": 36,
-              "reqLevel": 31,
-              "stats": "",
-              "icon": "inv_axe_02",
-              "speed": "2.30",
+              "dps": "11.5 DPS",
+              "quality": "q2",
+              "iLvl": 19,
+              "reqLevel": 14,
+              "stats": "+5 Strength, +3 Stamina",
+              "icon": "inv_axe_08",
+              "speed": "3.40",
               "lines": [
-                "Main Hand",
-                "28 - 53 Damage\tSpeed 2.30",
-                "(17.61 damage per second)",
-                "Requires Level 31"
+                "Binds when equipped",
+                "Two-Hand\tAxe",
+                "29 - 44 Damage\tSpeed 3.40",
+                "(10.74 damage per second)",
+                "+5 Strength",
+                "+3 Stamina",
+                "Requires Level 14"
               ],
               "source": {
-                "kind": "vendor",
-                "title": "Vendor 2H axe",
-                "detail": "Vendor Purchase"
-              }
+                "kind": "drop",
+                "title": "World Drop BoE",
+                "detail": "Early leveling 2H axe"
+              },
+              "weaponType": "Two-Handed Axe"
             },
             {
               "name": "Axe of Orgrimmar",
@@ -44534,31 +44589,32 @@ if (typeof window !== 'undefined') {
               }
             },
             {
-              "name": "Scepter of the Abandoned",
-              "itemId": 271216,
+              "name": "Odo's Ley Staff",
+              "itemId": 6323,
               "value": "9.62 DPS, 2.60s - +5 Shadow Resistance, Equip: Increases damage and healing done by magical spells and effects by up to 24 - Ruins of Lordaeron: The Abandoned",
               "faction": "both",
-              "dps": "9.62 DPS",
-              "speed": "2.60",
-              "weaponType": "One-handed mace",
+              "dps": "16.1 DPS",
+              "speed": "2.70",
+              "weaponType": "Staff",
               "quality": "q3",
-              "iLvl": 22,
-              "reqLevel": 17,
-              "stats": "+5 Shadow Resistance, Equip: Increases damage and healing done by magical spells and effects by up to 24",
-              "icon": "inv_mace_01",
+              "iLvl": 26,
+              "reqLevel": 21,
+              "stats": "+5 Intellect, +6 Spirit, +5 Stamina",
+              "icon": "inv_staff_02",
               "lines": [
                 "Binds when picked up",
-                "Main Hand",
-                "17 - 33 Damage\tSpeed 2.60",
-                "(9.62 damage per second)",
-                "+5 Shadow Resistance",
-                "Requires Level 17",
-                "Equip: Increases damage and healing done by magical spells and effects by up to 24"
+                "Two-Hand\tStaff",
+                "36 - 55 Damage\tSpeed 2.70",
+                "(16.85 damage per second)",
+                "+5 Intellect",
+                "+6 Spirit",
+                "+5 Stamina",
+                "Requires Level 21"
               ],
               "source": {
                 "kind": "dungeon",
-                "title": "The Abandoned",
-                "detail": "Ruins of Lordaeron (Levels 15–20)"
+                "title": "Shadowfang Keep — Odo the Blindwatcher",
+                "detail": "Early caster dungeon staff"
               }
             },
             {
@@ -44869,31 +44925,31 @@ if (typeof window !== 'undefined') {
               }
             },
             {
-              "name": "Coldspire Staff",
-              "itemId": 271215,
+              "name": "Rod of the Sleepwalker",
+              "itemId": 6536,
               "value": "15.14 DPS, 3.60s - +13 Frost Resistance, Equip: Increases damage done by Frost spells and effects by up to 32. - Ruins of Lordaeron: Rath'mael",
               "faction": "both",
-              "dps": "15.14 DPS",
-              "speed": "3.60",
+              "dps": "17.8 DPS",
+              "speed": "3.20",
               "weaponType": "Staff",
               "quality": "q3",
-              "iLvl": 24,
-              "reqLevel": 19,
-              "stats": "+13 Frost Resistance, Equip: Increases damage done by Frost spells and effects by up to 32.",
-              "icon": "inv_staff_08",
+              "iLvl": 29,
+              "reqLevel": 24,
+              "stats": "+11 Intellect, +10 Spirit",
+              "icon": "inv_staff_21",
               "lines": [
                 "Binds when picked up",
-                "Two-Hand",
-                "43 - 66 Damage\tSpeed 3.60",
-                "(15.14 damage per second)",
-                "+13 Frost Resistance",
-                "Requires Level 19",
-                "Equip: Increases damage done by Frost spells and effects by up to 32."
+                "Two-Hand\tStaff",
+                "46 - 70 Damage\tSpeed 3.20",
+                "(18.12 damage per second)",
+                "+11 Intellect",
+                "+10 Spirit",
+                "Requires Level 24"
               ],
               "source": {
                 "kind": "dungeon",
-                "title": "Rath'mael",
-                "detail": "Ruins of Lordaeron (Levels 15–20)"
+                "title": "Blackfathom Deeps — Twilight Lord Kelris",
+                "detail": "Prime early healer staff"
               }
             },
             {
@@ -44901,9 +44957,9 @@ if (typeof window !== 'undefined') {
               "itemId": 7230,
               "value": "19.71 DPS, 3.50s - +11 Strength, +4 Agility - The Deadmines: Mr. Smite",
               "faction": "both",
-              "dps": "19.71 DPS",
+              "dps": "19.8 DPS",
               "speed": "3.50",
-              "weaponType": "Two-handed mace",
+              "weaponType": "Two-Handed Mace",
               "quality": "q3",
               "iLvl": 23,
               "reqLevel": 18,
@@ -44911,7 +44967,7 @@ if (typeof window !== 'undefined') {
               "icon": "inv_hammer_09",
               "lines": [
                 "Binds when picked up",
-                "Two-Hand",
+                "Two-Hand\tMace",
                 "55 - 83 Damage\tSpeed 3.50",
                 "(19.71 damage per second)",
                 "+11 Strength",
@@ -44920,8 +44976,8 @@ if (typeof window !== 'undefined') {
               ],
               "source": {
                 "kind": "dungeon",
-                "title": "The Deadmines: Mr. Smite",
-                "detail": "Dungeon Boss Drop"
+                "title": "The Deadmines — Mr. Smite",
+                "detail": "Iconic slow 2H leveling mace"
               }
             },
             {
@@ -45150,27 +45206,27 @@ if (typeof window !== 'undefined') {
               "itemId": 5195,
               "value": "13.7 DPS, 2.70s, +3 Str, +3 Sta - The Deadmines: Cookie",
               "faction": "both",
-              "dps": "13.70 DPS",
-              "quality": "q2",
-              "iLvl": 22,
-              "reqLevel": 17,
-              "stats": "+3 Strength, +3 Stamina",
-              "icon": "inv_mace_08",
+              "dps": "10.8 DPS",
+              "quality": "q3",
+              "iLvl": 21,
+              "reqLevel": 16,
+              "stats": "+3 Strength, +2 Stamina",
+              "icon": "inv_hammer_07",
               "weaponType": "One-Handed Mace",
-              "speed": "2.70",
+              "speed": "2.40",
               "lines": [
                 "Binds when picked up",
-                "One-Hand\tOne-Handed Mace",
-                "30 - 56 Damage\tSpeed 2.70",
-                "(13.70 damage per second)",
+                "One-Hand\tMace",
+                "20 - 38 Damage\tSpeed 2.40",
+                "(12.08 damage per second)",
                 "+3 Strength",
-                "+3 Stamina",
-                "Requires Level 17"
+                "+2 Stamina",
+                "Requires Level 16"
               ],
               "source": {
                 "kind": "dungeon",
-                "title": "Cookie",
-                "detail": "The Deadmines"
+                "title": "The Deadmines — Cookie",
+                "detail": "Deadmines rare drop"
               }
             },
             {
@@ -45510,30 +45566,30 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Smite's Mighty Hammer",
-              "itemId": 5196,
+              "itemId": 7230,
               "value": "20.0 DPS, 3.50s, +11 Str, +4 Agi - The Deadmines: Mr. Smite",
               "faction": "both",
-              "dps": "20.00 DPS",
+              "dps": "19.8 DPS",
               "quality": "q3",
               "iLvl": 23,
               "reqLevel": 18,
               "stats": "+11 Strength, +4 Agility",
-              "icon": "inv_hammer_08",
+              "icon": "inv_hammer_09",
               "weaponType": "Two-Handed Mace",
               "speed": "3.50",
               "lines": [
                 "Binds when picked up",
-                "Two-Hand\tTwo-Handed Mace",
-                "56 - 84 Damage\tSpeed 3.50",
-                "(20.00 damage per second)",
+                "Two-Hand\tMace",
+                "55 - 83 Damage\tSpeed 3.50",
+                "(19.71 damage per second)",
                 "+11 Strength",
                 "+4 Agility",
                 "Requires Level 18"
               ],
               "source": {
                 "kind": "dungeon",
-                "title": "Mr. Smite",
-                "detail": "The Deadmines"
+                "title": "The Deadmines — Mr. Smite",
+                "detail": "Iconic slow 2H leveling mace"
               }
             },
             {
@@ -47233,30 +47289,30 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Cobalt Crusher",
-              "itemId": 7730,
-              "icon": "inv_hammer_04",
-              "weaponType": "2H Mace",
-              "speed": "3.20",
-              "dps": "28.91 DPS",
+              "itemId": 7957,
+              "icon": "inv_hammer_16",
+              "weaponType": "Two-Handed Mace",
+              "speed": "3.60",
+              "dps": "26.9 DPS",
               "value": "28.91 DPS, 3.20s - +9 Strength, Chance on hit: Blasts a target for 164 Frost damage. - Rare World / Dungeon Drop",
               "faction": "both",
               "quality": "q3",
-              "iLvl": 34,
-              "reqLevel": 29,
-              "stats": "+9 Strength, Chance on hit: Blasts a target for 164 Frost damage.",
+              "iLvl": 38,
+              "reqLevel": 33,
+              "stats": "+12 Strength, +11 Stamina",
               "lines": [
                 "Binds when equipped",
                 "Two-Hand\tMace",
-                "43 - 55 Damage\tSpeed 3.60",
-                "(13.6 damage per second)",
-                "+9 Strength",
-                "Chance on hit: Blasts a target for 164 Frost damage.",
-                "Requires Level 29"
+                "81 - 122 Damage\tSpeed 3.60",
+                "(28.19 damage per second)",
+                "+12 Strength",
+                "+11 Stamina",
+                "Requires Level 33"
               ],
               "source": {
-                "kind": "dungeon",
-                "title": "Rare World / Dungeon Drop",
-                "detail": "Dungeon Drop"
+                "kind": "drop",
+                "title": "World Drop BoE",
+                "detail": "High impact 2H leveling mace"
               }
             },
             {
@@ -49392,30 +49448,31 @@ if (typeof window !== 'undefined') {
               }
             },
             {
-              "name": "Apprentice's Spellstaff",
-              "itemId": 248008,
-              "icon": "inv_staff_18",
+              "name": "Apprentice's Staff",
+              "itemId": 1412,
+              "icon": "inv_staff_08",
               "weaponType": "Staff",
-              "speed": "2.20",
-              "dps": "6.36 DPS",
+              "speed": "2.50",
+              "dps": "4.8 DPS",
               "value": "6.36 DPS, 2.20s - +2 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 4 - Rare Books",
               "faction": "alliance",
               "quality": "q2",
               "iLvl": 12,
-              "reqLevel": 1,
-              "stats": "+2 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 4",
+              "reqLevel": 7,
+              "stats": "+2 Intellect, +1 Spirit",
               "lines": [
-                "Binds when picked up",
-                "Two-Hand",
-                "11 - 17 Damage\tSpeed 2.20",
-                "(6.36 damage per second)",
+                "Binds when equipped",
+                "Two-Hand\tStaff",
+                "10 - 16 Damage\tSpeed 2.50",
+                "(5.20 damage per second)",
                 "+2 Intellect",
-                "Equip: Increases damage and healing done by magical spells and effects by up to 4"
+                "+1 Spirit",
+                "Requires Level 7"
               ],
               "source": {
-                "kind": "quest",
-                "title": "Rare Books",
-                "detail": "Leveling Quest Reward"
+                "kind": "vendor",
+                "title": "Staff Vendor",
+                "detail": "Early leveling caster staff"
               }
             },
             {
@@ -49552,29 +49609,32 @@ if (typeof window !== 'undefined') {
               ]
             },
             {
-              "name": "Apprentice's Spellstaff",
-              "itemId": 4835,
+              "name": "Apprentice's Staff",
+              "itemId": 1412,
               "value": "+3 Spirit, +2 Intellect - Darkshore / Silverpine drop",
               "faction": "both",
               "quality": "q2",
-              "iLvl": 13,
-              "reqLevel": 8,
-              "stats": "+3 Spirit, +2 Intellect",
-              "icon": "inv_staff_02",
+              "iLvl": 12,
+              "reqLevel": 7,
+              "stats": "+2 Intellect, +1 Spirit",
+              "icon": "inv_staff_08",
               "weaponType": "Staff",
               "source": {
-                "kind": "world",
-                "title": "Darkshore / Silverpine drop",
-                "detail": "World Drop / Quest"
+                "kind": "vendor",
+                "title": "Staff Vendor",
+                "detail": "Early leveling caster staff"
               },
               "lines": [
                 "Binds when equipped",
-                "Shoulder\tStaff",
-                "+6 Strength",
-                "+5 Stamina",
-                "+149 Armor",
-                "Requires Level 25"
-              ]
+                "Two-Hand\tStaff",
+                "10 - 16 Damage\tSpeed 2.50",
+                "(5.20 damage per second)",
+                "+2 Intellect",
+                "+1 Spirit",
+                "Requires Level 7"
+              ],
+              "speed": "2.50",
+              "dps": "4.8 DPS"
             },
             {
               "name": "Hammer of Orgrimmar",
@@ -49802,52 +49862,61 @@ if (typeof window !== 'undefined') {
               ]
             },
             {
-              "name": "Scepter of the Abandoned",
-              "itemId": 271207,
+              "name": "Odo's Ley Staff",
+              "itemId": 6323,
               "value": "+4 Stamina, +4 Intellect - The Abandoned (Ruins of Lordaeron)",
               "faction": "both",
-              "quality": "q2",
-              "iLvl": 18,
-              "reqLevel": 14,
-              "stats": "+4 Stamina, +4 Intellect",
-              "icon": "inv_mace_01",
-              "weaponType": "Main Hand Mace",
-              "source": {
-                "kind": "dungeon",
-                "title": "The Abandoned",
-                "detail": "Ruins of Lordaeron (Levels 15–20)"
-              },
-              "lines": [
-                "Binds when picked up",
-                "Legs\tMain Hand Mace",
-                "+5 Stamina",
-                "+35 Armor",
-                "+4 MP5",
-                "Requires Level 17"
-              ]
-            },
-            {
-              "name": "Staff of the Dor'Danil",
-              "itemId": 6543,
-              "value": "+4 Intellect, +4 Spirit - Darkshore / Bloodmyst quest reward",
-              "faction": "alliance",
-              "quality": "q2",
-              "iLvl": 17,
-              "reqLevel": 12,
-              "stats": "+4 Intellect, +4 Spirit",
+              "quality": "q3",
+              "iLvl": 26,
+              "reqLevel": 21,
+              "stats": "+5 Intellect, +6 Spirit, +5 Stamina",
               "icon": "inv_staff_02",
               "weaponType": "Staff",
               "source": {
-                "kind": "quest",
-                "title": "Darkshore / Bloodmyst quest reward",
-                "detail": "Leveling Quest Reward"
+                "kind": "dungeon",
+                "title": "Shadowfang Keep — Odo the Blindwatcher",
+                "detail": "Early caster dungeon staff"
               },
               "lines": [
-                "Binds when equipped",
-                "Wrist\tStaff",
-                "+12 Armor",
-                "Requires Level 10"
-              ]
+                "Binds when picked up",
+                "Two-Hand\tStaff",
+                "36 - 55 Damage\tSpeed 2.70",
+                "(16.85 damage per second)",
+                "+5 Intellect",
+                "+6 Spirit",
+                "+5 Stamina",
+                "Requires Level 21"
+              ],
+              "speed": "2.70",
+              "dps": "16.1 DPS"
+            },
+            {
+              "name": "Gritroot Staff",
+              "itemId": 9603,
+              "value": "+4 Intellect, +4 Spirit - Darkshore / Bloodmyst quest reward",
+              "faction": "alliance",
+              "quality": "q2",
+              "iLvl": 10,
+              "reqLevel": 4,
+              "stats": "+1 Stamina, +2 Spell Power",
+              "icon": "inv_staff_22",
+              "weaponType": "Staff",
+              "source": {
+                "kind": "quest",
+                "title": "The Relics of Wakening",
+                "detail": "Quest reward from Teldrassil / Dolanaar."
+              },
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand\tStaff",
+                "11 - 17 Damage\tSpeed 2.60",
+                "(5.38 damage per second)",
+                "+1 Stamina",
+                "+2 Spell Power",
+                "Requires Level 4"
+              ],
+              "speed": "2.60",
+              "dps": "5.4 DPS"
             },
             {
               "name": "Segmented Spider Leg",
@@ -50215,29 +50284,32 @@ if (typeof window !== 'undefined') {
               ]
             },
             {
-              "name": "Coldspire Staff",
-              "itemId": 271212,
+              "name": "Rod of the Sleepwalker",
+              "itemId": 6536,
               "value": "+7 Intellect, +5 Spirit, +6 Frost Dmg - Rath'mael (Ruins of Lordaeron)",
               "faction": "both",
-              "quality": "q2",
-              "iLvl": 22,
-              "reqLevel": 17,
-              "stats": "+7 Intellect, +5 Spirit, +6 Frost Dmg",
-              "icon": "inv_staff_08",
+              "quality": "q3",
+              "iLvl": 29,
+              "reqLevel": 24,
+              "stats": "+11 Intellect, +10 Spirit",
+              "icon": "inv_staff_21",
               "weaponType": "Staff",
               "source": {
                 "kind": "dungeon",
-                "title": "Rath'mael",
-                "detail": "Ruins of Lordaeron (Levels 15–20)"
+                "title": "Blackfathom Deeps — Twilight Lord Kelris",
+                "detail": "Prime early healer staff"
               },
               "lines": [
                 "Binds when picked up",
-                "Chest\tStaff",
-                "+7 Agility",
-                "+9 Spirit",
-                "+89 Armor",
-                "Requires Level 17"
-              ]
+                "Two-Hand\tStaff",
+                "46 - 70 Damage\tSpeed 3.20",
+                "(18.12 damage per second)",
+                "+11 Intellect",
+                "+10 Spirit",
+                "Requires Level 24"
+              ],
+              "speed": "3.20",
+              "dps": "17.8 DPS"
             },
             {
               "name": "Alliance Outrunner Staff",
@@ -50406,30 +50478,30 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Smite's Mighty Hammer",
-              "itemId": 5196,
+              "itemId": 7230,
               "value": "20.0 DPS, 3.50s, +11 Str, +4 Agi - The Deadmines: Mr. Smite",
               "faction": "both",
-              "dps": "20.00 DPS",
+              "dps": "19.8 DPS",
               "quality": "q3",
               "iLvl": 23,
               "reqLevel": 18,
               "stats": "+11 Strength, +4 Agility",
-              "icon": "inv_hammer_08",
+              "icon": "inv_hammer_09",
               "weaponType": "Two-Handed Mace",
               "speed": "3.50",
               "lines": [
                 "Binds when picked up",
-                "Two-Hand\tTwo-Handed Mace",
-                "56 - 84 Damage\tSpeed 3.50",
-                "(20.00 damage per second)",
+                "Two-Hand\tMace",
+                "55 - 83 Damage\tSpeed 3.50",
+                "(19.71 damage per second)",
                 "+11 Strength",
                 "+4 Agility",
                 "Requires Level 18"
               ],
               "source": {
                 "kind": "dungeon",
-                "title": "Mr. Smite",
-                "detail": "The Deadmines"
+                "title": "The Deadmines — Mr. Smite",
+                "detail": "Iconic slow 2H leveling mace"
               }
             },
             {
@@ -50437,27 +50509,27 @@ if (typeof window !== 'undefined') {
               "itemId": 5195,
               "value": "13.7 DPS, 2.70s, +3 Str, +3 Sta - The Deadmines: Cookie",
               "faction": "both",
-              "dps": "13.70 DPS",
-              "quality": "q2",
-              "iLvl": 22,
-              "reqLevel": 17,
-              "stats": "+3 Strength, +3 Stamina",
-              "icon": "inv_mace_08",
+              "dps": "10.8 DPS",
+              "quality": "q3",
+              "iLvl": 21,
+              "reqLevel": 16,
+              "stats": "+3 Strength, +2 Stamina",
+              "icon": "inv_hammer_07",
               "weaponType": "One-Handed Mace",
-              "speed": "2.70",
+              "speed": "2.40",
               "lines": [
                 "Binds when picked up",
-                "One-Hand\tOne-Handed Mace",
-                "30 - 56 Damage\tSpeed 2.70",
-                "(13.70 damage per second)",
+                "One-Hand\tMace",
+                "20 - 38 Damage\tSpeed 2.40",
+                "(12.08 damage per second)",
                 "+3 Strength",
-                "+3 Stamina",
-                "Requires Level 17"
+                "+2 Stamina",
+                "Requires Level 16"
               ],
               "source": {
                 "kind": "dungeon",
-                "title": "Cookie",
-                "detail": "The Deadmines"
+                "title": "The Deadmines — Cookie",
+                "detail": "Deadmines rare drop"
               }
             },
             {
@@ -54197,42 +54269,45 @@ if (typeof window !== 'undefined') {
         },
         {
           "levelBracket": "7–8",
-          "itemId": 248008,
-          "name": "Apprentice's Spellstaff",
-          "icon": "inv_staff_18",
+          "itemId": 1412,
+          "name": "Apprentice's Staff",
+          "icon": "inv_staff_08",
           "weaponType": "Staff",
-          "speed": "2.40",
-          "dps": "6.4 DPS",
+          "speed": "2.50",
+          "dps": "4.8 DPS",
           "source": {
-            "kind": "quest",
-            "title": "Rare Books / Kobold Camp",
-            "detail": "Early quest in starting zones"
+            "kind": "vendor",
+            "title": "Staff Vendor",
+            "detail": "Early leveling caster staff"
           },
           "alts": [
             {
-              "name": "Staff of the Dor'Danil",
-              "itemId": 15396,
+              "name": "Gritroot Staff",
+              "itemId": 9603,
               "value": "8.5 DPS, 1.50s - +1 Stamina - Teldrassil quest",
               "faction": "alliance",
-              "dps": "8.5 DPS",
+              "dps": "5.4 DPS",
               "quality": "q2",
-              "iLvl": 14,
-              "reqLevel": 6,
-              "stats": "+1 Stamina",
-              "icon": "inv_staff_08",
-              "speed": "1.50",
+              "iLvl": 10,
+              "reqLevel": 4,
+              "stats": "+1 Stamina, +2 Spell Power",
+              "icon": "inv_staff_22",
+              "speed": "2.60",
               "lines": [
                 "Binds when picked up",
-                "One-Hand",
-                "7 - 14 Damage\tSpeed 1.50",
-                "(7.00 damage per second)",
-                "+1 Stamina"
+                "Two-Hand\tStaff",
+                "11 - 17 Damage\tSpeed 2.60",
+                "(5.38 damage per second)",
+                "+1 Stamina",
+                "+2 Spell Power",
+                "Requires Level 4"
               ],
               "source": {
                 "kind": "quest",
-                "title": "The Fragments Within",
-                "detail": "Leveling Quest Reward"
-              }
+                "title": "The Relics of Wakening",
+                "detail": "Quest reward from Teldrassil / Dolanaar."
+              },
+              "weaponType": "Staff"
             },
             {
               "name": "Darkwood Staff",
@@ -54477,29 +54552,30 @@ if (typeof window !== 'undefined') {
           "faction": "alliance",
           "quality": "q2",
           "iLvl": 12,
-          "reqLevel": 1,
-          "stats": "+2 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 4",
+          "reqLevel": 7,
+          "stats": "+2 Intellect, +1 Spirit",
           "lines": [
-            "Binds when picked up",
-            "Two-Hand",
-            "11 - 17 Damage\tSpeed 2.20",
-            "(6.36 damage per second)",
+            "Binds when equipped",
+            "Two-Hand\tStaff",
+            "10 - 16 Damage\tSpeed 2.50",
+            "(5.20 damage per second)",
             "+2 Intellect",
-            "Equip: Increases damage and healing done by magical spells and effects by up to 4"
+            "+1 Spirit",
+            "Requires Level 7"
           ]
         },
         {
           "levelBracket": "9–10",
-          "itemId": 6682,
-          "name": "Staff of the Dor'Danil",
-          "icon": "inv_staff_08",
+          "itemId": 9603,
+          "name": "Gritroot Staff",
+          "icon": "inv_staff_22",
           "weaponType": "Staff",
-          "speed": "2.80",
-          "dps": "7.7 DPS",
+          "speed": "2.60",
+          "dps": "5.4 DPS",
           "source": {
             "kind": "quest",
             "title": "The Relics of Wakening",
-            "detail": "Quest reward from Teldrassil / Darkshore barrows."
+            "detail": "Quest reward from Teldrassil / Dolanaar."
           },
           "alts": [
             {
@@ -54770,18 +54846,18 @@ if (typeof window !== 'undefined') {
             }
           ],
           "faction": "both",
-          "quality": "q3",
-          "iLvl": 31,
-          "reqLevel": 26,
-          "stats": "48 Armor, +4 Stamina, +11 Intellect, Equip: Increases healing done by up to 20",
+          "quality": "q2",
+          "iLvl": 10,
+          "reqLevel": 4,
+          "stats": "+1 Stamina, +2 Spell Power",
           "lines": [
             "Binds when picked up",
-            "Chest",
-            "48 Armor",
-            "+4 Stamina",
-            "+11 Intellect",
-            "Requires Level 26",
-            "Equip: Increases healing done by up to 20"
+            "Two-Hand\tStaff",
+            "11 - 17 Damage\tSpeed 2.60",
+            "(5.38 damage per second)",
+            "+1 Stamina",
+            "+2 Spell Power",
+            "Requires Level 4"
           ]
         },
         {
@@ -55805,16 +55881,16 @@ if (typeof window !== 'undefined') {
         },
         {
           "levelBracket": "17–18",
-          "itemId": 271215,
-          "name": "Coldspire Staff",
-          "icon": "inv_staff_08",
+          "itemId": 6536,
+          "name": "Rod of the Sleepwalker",
+          "icon": "inv_staff_21",
           "weaponType": "Staff",
-          "speed": "2.80",
-          "dps": "16.8 DPS",
+          "speed": "3.20",
+          "dps": "17.8 DPS",
           "source": {
             "kind": "dungeon",
-            "title": "Rath'mael",
-            "detail": "Ruins of Lordaeron (Levels 15–20)"
+            "title": "Blackfathom Deeps — Twilight Lord Kelris",
+            "detail": "Prime early healer staff"
           },
           "alts": [
             {
@@ -56017,28 +56093,30 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Butcher's Slicer",
-              "itemId": 6633,
-              "icon": "inv_sword_16",
-              "weaponType": "1H Sword",
-              "speed": "2.90",
-              "dps": "15.00 DPS",
+              "itemId": 6631,
+              "icon": "inv_sword_18",
+              "weaponType": "One-Handed Sword",
+              "speed": "2.50",
+              "dps": "10.6 DPS",
               "value": "15.00 DPS, 2.90s - +3 Stamina - Razorclaw the Butcher",
               "faction": "both",
               "quality": "q3",
-              "iLvl": 23,
-              "reqLevel": 18,
-              "stats": "+3 Stamina",
+              "iLvl": 21,
+              "reqLevel": 16,
+              "stats": "+3 Strength, +2 Agility",
               "lines": [
-                "1H Sword",
-                "Speed 2.90",
-                "(15.00 damage per second)",
-                "+3 Stamina",
-                "Requires Level 18"
+                "Binds when picked up",
+                "One-Hand\tSword",
+                "21 - 40 Damage\tSpeed 2.50",
+                "(12.20 damage per second)",
+                "+3 Strength",
+                "+2 Agility",
+                "Requires Level 16"
               ],
               "source": {
                 "kind": "dungeon",
-                "title": "Skum",
-                "detail": "Wailing Caverns"
+                "title": "Shadowfang Keep — Razorclaw the Butcher",
+                "detail": "SFK weapon drop"
               }
             },
             {
@@ -56100,17 +56178,17 @@ if (typeof window !== 'undefined') {
           ],
           "faction": "both",
           "quality": "q3",
-          "iLvl": 24,
-          "reqLevel": 19,
-          "stats": "+13 Frost Resistance, Equip: Increases damage done by Frost spells and effects by up to 32.",
+          "iLvl": 29,
+          "reqLevel": 24,
+          "stats": "+11 Intellect, +10 Spirit",
           "lines": [
             "Binds when picked up",
-            "Two-Hand",
-            "43 - 66 Damage\tSpeed 3.60",
-            "(15.14 damage per second)",
-            "+13 Frost Resistance",
-            "Requires Level 19",
-            "Equip: Increases damage done by Frost spells and effects by up to 32."
+            "Two-Hand\tStaff",
+            "46 - 70 Damage\tSpeed 3.20",
+            "(18.12 damage per second)",
+            "+11 Intellect",
+            "+10 Spirit",
+            "Requires Level 24"
           ]
         },
         {
@@ -57455,30 +57533,28 @@ if (typeof window !== 'undefined') {
             {
               "name": "Toxic Revenger",
               "itemId": 9453,
-              "icon": "inv_weapon_shortblade_02",
-              "weaponType": "Dagger",
-              "speed": "1.90",
-              "dps": "20.53 DPS",
+              "icon": "inv_sword_04",
+              "weaponType": "One-Handed Sword",
+              "speed": "2.70",
+              "dps": "18.3 DPS",
               "value": "20.53 DPS, 1.90s - Chance on hit: Deals 14 Nature damage every 3 sec to any enemy in an 8 yard radius around the caster for 12 sec. - Viscous Fallout",
               "faction": "both",
               "quality": "q3",
               "iLvl": 32,
               "reqLevel": 27,
-              "stats": "Chance on hit: Deals 14 Nature damage every 3 sec to any enemy in an 8 yard radius around the caster for 12 sec.",
+              "stats": "Chance on hit: Poisons target for 15 Nature damage every 3 sec for 15 sec.",
               "lines": [
                 "Binds when picked up",
-                "One-Hand",
-                "27 - 51 Damage\tSpeed 1.90",
-                "(20.53 damage per second)",
-                "Chance on hit: Deals 14 Nature damage every 3 sec to any enemy in an 8 yard radius around the caster for 12 sec.",
-                "Chance on hit: Deals 14 Nature damage every 3 sec to any enemy in an 8 yard radius around the caster for 12 sec.",
+                "One-Hand\tSword",
+                "37 - 69 Damage\tSpeed 2.70",
+                "(19.63 damage per second)",
                 "Requires Level 27",
-                "Chance on hit: Deals 14 Nature damage every 3 sec to any enemy in an 8 yard radius around the caster for 12 sec."
+                "Chance on hit: Poisons target for 15 Nature damage every 3 sec for 15 sec."
               ],
               "source": {
                 "kind": "dungeon",
-                "title": "Viscous Fallout",
-                "detail": "Dungeon Boss Drop"
+                "title": "Gnomeregan — Viscous Fallout",
+                "detail": "Proc sword with poison damage"
               }
             }
           ],
@@ -58908,29 +58984,32 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Spire of the Stoneshaper",
-              "itemId": 11802,
+              "itemId": 11805,
               "value": "33.8 DPS - +28 Strength, +12 Stamina, +531 Armor - BRD: Lord Incendius",
               "faction": "both",
-              "dps": "33.8 DPS",
+              "dps": "36.2 DPS",
               "quality": "q3",
-              "iLvl": 52,
-              "reqLevel": 46,
-              "stats": "+28 Strength, +12 Stamina, +531 Armor",
+              "iLvl": 45,
+              "reqLevel": 40,
+              "stats": "+10 Intellect, +17 Spirit, +5 Stamina",
               "icon": "inv_staff_29",
               "source": {
                 "kind": "dungeon",
-                "title": "BRD: Lord Incendius",
-                "detail": "Dungeon Boss Drop"
+                "title": "Uldaman — Ironaya",
+                "detail": "Caster staff drop"
               },
               "lines": [
                 "Binds when picked up",
-                "Legs\tWeapon",
-                "(NaN damage per second)",
-                "+28 Strength",
-                "+12 Stamina",
-                "+531 Armor",
-                "Requires Level 53"
-              ]
+                "Two-Hand\tStaff",
+                "87 - 132 Damage\tSpeed 2.90",
+                "(37.76 damage per second)",
+                "+10 Intellect",
+                "+17 Spirit",
+                "+5 Stamina",
+                "Requires Level 40"
+              ],
+              "weaponType": "Staff",
+              "speed": "2.90"
             },
             {
               "name": "Spire of Hakkar",
@@ -59334,28 +59413,31 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Witchblade",
-              "itemId": 13968,
+              "itemId": 13984,
               "value": "37.2 DPS, 1.80s - +14 SP - Scholomance: Darkmaster Gandling",
               "faction": "both",
-              "dps": "37.2 DPS",
-              "speed": "1.80",
+              "dps": "40.3 DPS",
+              "speed": "1.50",
               "quality": "q3",
-              "iLvl": 58,
-              "reqLevel": 52,
-              "stats": "+14 SP",
+              "iLvl": 62,
+              "reqLevel": 57,
+              "stats": "+8 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 14.",
               "icon": "inv_weapon_shortblade_16",
               "source": {
                 "kind": "dungeon",
-                "title": "Scholomance: Darkmaster Gandling",
-                "detail": "Dungeon Drop"
+                "title": "Scholomance — Darkmaster Gandling",
+                "detail": "BiS caster dagger before raiding"
               },
               "lines": [
                 "Binds when picked up",
-                "Trinket\tWeapon",
-                "Speed 1.80",
-                "(NaN damage per second)",
-                "Requires Level 52"
-              ]
+                "One-Hand\tDagger",
+                "46 - 87 Damage\tSpeed 1.50",
+                "(44.33 damage per second)",
+                "+8 Intellect",
+                "Requires Level 57",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 14."
+              ],
+              "weaponType": "Dagger"
             },
             {
               "name": "Ironbark Staff",
@@ -60414,42 +60496,45 @@ if (typeof window !== 'undefined') {
         },
         {
           "levelBracket": "7–8",
-          "itemId": 248008,
-          "name": "Apprentice's Spellstaff",
-          "icon": "inv_staff_18",
+          "itemId": 1412,
+          "name": "Apprentice's Staff",
+          "icon": "inv_staff_08",
           "weaponType": "Staff",
-          "speed": "2.40",
-          "dps": "6.4 DPS",
+          "speed": "2.50",
+          "dps": "4.8 DPS",
           "source": {
-            "kind": "quest",
-            "title": "Rare Books / Kobold Camp",
-            "detail": "Starting zone quest reward"
+            "kind": "vendor",
+            "title": "Staff Vendor",
+            "detail": "Early leveling caster staff"
           },
           "alts": [
             {
-              "name": "Staff of the Dor'Danil",
-              "itemId": 15396,
+              "name": "Gritroot Staff",
+              "itemId": 9603,
               "value": "8.5 DPS, 1.50s - +1 Stamina - Early quest",
               "faction": "both",
-              "dps": "8.5 DPS",
+              "dps": "5.4 DPS",
               "quality": "q2",
-              "iLvl": 14,
-              "reqLevel": 6,
-              "stats": "+1 Stamina",
-              "icon": "inv_staff_08",
-              "speed": "1.50",
+              "iLvl": 10,
+              "reqLevel": 4,
+              "stats": "+1 Stamina, +2 Spell Power",
+              "icon": "inv_staff_22",
+              "speed": "2.60",
               "lines": [
                 "Binds when picked up",
-                "One-Hand",
-                "7 - 14 Damage\tSpeed 1.50",
-                "(7.00 damage per second)",
-                "+1 Stamina"
+                "Two-Hand\tStaff",
+                "11 - 17 Damage\tSpeed 2.60",
+                "(5.38 damage per second)",
+                "+1 Stamina",
+                "+2 Spell Power",
+                "Requires Level 4"
               ],
               "source": {
                 "kind": "quest",
-                "title": "The Fragments Within",
-                "detail": "Leveling Quest Reward"
-              }
+                "title": "The Relics of Wakening",
+                "detail": "Quest reward from Teldrassil / Dolanaar."
+              },
+              "weaponType": "Staff"
             },
             {
               "name": "Darkwood Staff",
@@ -60694,29 +60779,30 @@ if (typeof window !== 'undefined') {
           "faction": "alliance",
           "quality": "q2",
           "iLvl": 12,
-          "reqLevel": 1,
-          "stats": "+2 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 4",
+          "reqLevel": 7,
+          "stats": "+2 Intellect, +1 Spirit",
           "lines": [
-            "Binds when picked up",
-            "Two-Hand",
-            "11 - 17 Damage\tSpeed 2.20",
-            "(6.36 damage per second)",
+            "Binds when equipped",
+            "Two-Hand\tStaff",
+            "10 - 16 Damage\tSpeed 2.50",
+            "(5.20 damage per second)",
             "+2 Intellect",
-            "Equip: Increases damage and healing done by magical spells and effects by up to 4"
+            "+1 Spirit",
+            "Requires Level 7"
           ]
         },
         {
           "levelBracket": "9–10",
-          "itemId": 6682,
-          "name": "Staff of the Dor'Danil",
-          "icon": "inv_staff_08",
+          "itemId": 9603,
+          "name": "Gritroot Staff",
+          "icon": "inv_staff_22",
           "weaponType": "Staff",
-          "speed": "2.80",
-          "dps": "7.7 DPS",
+          "speed": "2.60",
+          "dps": "5.4 DPS",
           "source": {
             "kind": "quest",
             "title": "The Relics of Wakening",
-            "detail": "Early quest reward in Teldrassil / Darkshore."
+            "detail": "Quest reward from Teldrassil / Dolanaar."
           },
           "alts": [
             {
@@ -60982,18 +61068,18 @@ if (typeof window !== 'undefined') {
             }
           ],
           "faction": "both",
-          "quality": "q3",
-          "iLvl": 31,
-          "reqLevel": 26,
-          "stats": "48 Armor, +4 Stamina, +11 Intellect, Equip: Increases healing done by up to 20",
+          "quality": "q2",
+          "iLvl": 10,
+          "reqLevel": 4,
+          "stats": "+1 Stamina, +2 Spell Power",
           "lines": [
             "Binds when picked up",
-            "Chest",
-            "48 Armor",
-            "+4 Stamina",
-            "+11 Intellect",
-            "Requires Level 26",
-            "Equip: Increases healing done by up to 20"
+            "Two-Hand\tStaff",
+            "11 - 17 Damage\tSpeed 2.60",
+            "(5.38 damage per second)",
+            "+1 Stamina",
+            "+2 Spell Power",
+            "Requires Level 4"
           ]
         },
         {
@@ -62016,16 +62102,16 @@ if (typeof window !== 'undefined') {
         },
         {
           "levelBracket": "17–18",
-          "itemId": 271215,
-          "name": "Coldspire Staff",
-          "icon": "inv_staff_08",
+          "itemId": 6536,
+          "name": "Rod of the Sleepwalker",
+          "icon": "inv_staff_21",
           "weaponType": "Staff",
-          "speed": "2.80",
-          "dps": "16.8 DPS",
+          "speed": "3.20",
+          "dps": "17.8 DPS",
           "source": {
             "kind": "dungeon",
-            "title": "Rath'mael",
-            "detail": "Ruins of Lordaeron (Levels 15–20)"
+            "title": "Blackfathom Deeps — Twilight Lord Kelris",
+            "detail": "Prime early healer staff"
           },
           "alts": [
             {
@@ -62258,28 +62344,30 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Butcher's Slicer",
-              "itemId": 6633,
-              "icon": "inv_sword_16",
-              "weaponType": "1H Sword",
-              "speed": "2.90",
-              "dps": "15.00 DPS",
+              "itemId": 6631,
+              "icon": "inv_sword_18",
+              "weaponType": "One-Handed Sword",
+              "speed": "2.50",
+              "dps": "10.6 DPS",
               "value": "15.00 DPS, 2.90s - +3 Stamina - Razorclaw the Butcher",
               "faction": "both",
               "quality": "q3",
-              "iLvl": 23,
-              "reqLevel": 18,
-              "stats": "+3 Stamina",
+              "iLvl": 21,
+              "reqLevel": 16,
+              "stats": "+3 Strength, +2 Agility",
               "lines": [
-                "1H Sword",
-                "Speed 2.90",
-                "(15.00 damage per second)",
-                "+3 Stamina",
-                "Requires Level 18"
+                "Binds when picked up",
+                "One-Hand\tSword",
+                "21 - 40 Damage\tSpeed 2.50",
+                "(12.20 damage per second)",
+                "+3 Strength",
+                "+2 Agility",
+                "Requires Level 16"
               ],
               "source": {
                 "kind": "dungeon",
-                "title": "Skum",
-                "detail": "Wailing Caverns"
+                "title": "Shadowfang Keep — Razorclaw the Butcher",
+                "detail": "SFK weapon drop"
               }
             },
             {
@@ -62313,17 +62401,17 @@ if (typeof window !== 'undefined') {
           ],
           "faction": "both",
           "quality": "q3",
-          "iLvl": 24,
-          "reqLevel": 19,
-          "stats": "+13 Frost Resistance, Equip: Increases damage done by Frost spells and effects by up to 32.",
+          "iLvl": 29,
+          "reqLevel": 24,
+          "stats": "+11 Intellect, +10 Spirit",
           "lines": [
             "Binds when picked up",
-            "Two-Hand",
-            "43 - 66 Damage\tSpeed 3.60",
-            "(15.14 damage per second)",
-            "+13 Frost Resistance",
-            "Requires Level 19",
-            "Equip: Increases damage done by Frost spells and effects by up to 32."
+            "Two-Hand\tStaff",
+            "46 - 70 Damage\tSpeed 3.20",
+            "(18.12 damage per second)",
+            "+11 Intellect",
+            "+10 Spirit",
+            "Requires Level 24"
           ]
         },
         {
@@ -63658,30 +63746,28 @@ if (typeof window !== 'undefined') {
             {
               "name": "Toxic Revenger",
               "itemId": 9453,
-              "icon": "inv_weapon_shortblade_02",
-              "weaponType": "Dagger",
-              "speed": "1.90",
-              "dps": "20.53 DPS",
+              "icon": "inv_sword_04",
+              "weaponType": "One-Handed Sword",
+              "speed": "2.70",
+              "dps": "18.3 DPS",
               "value": "20.53 DPS, 1.90s - Chance on hit: Deals 14 Nature damage every 3 sec to any enemy in an 8 yard radius around the caster for 12 sec. - Viscous Fallout",
               "faction": "both",
               "quality": "q3",
               "iLvl": 32,
               "reqLevel": 27,
-              "stats": "Chance on hit: Deals 14 Nature damage every 3 sec to any enemy in an 8 yard radius around the caster for 12 sec.",
+              "stats": "Chance on hit: Poisons target for 15 Nature damage every 3 sec for 15 sec.",
               "lines": [
                 "Binds when picked up",
-                "One-Hand",
-                "27 - 51 Damage\tSpeed 1.90",
-                "(20.53 damage per second)",
-                "Chance on hit: Deals 14 Nature damage every 3 sec to any enemy in an 8 yard radius around the caster for 12 sec.",
-                "Chance on hit: Deals 14 Nature damage every 3 sec to any enemy in an 8 yard radius around the caster for 12 sec.",
+                "One-Hand\tSword",
+                "37 - 69 Damage\tSpeed 2.70",
+                "(19.63 damage per second)",
                 "Requires Level 27",
-                "Chance on hit: Deals 14 Nature damage every 3 sec to any enemy in an 8 yard radius around the caster for 12 sec."
+                "Chance on hit: Poisons target for 15 Nature damage every 3 sec for 15 sec."
               ],
               "source": {
                 "kind": "dungeon",
-                "title": "Viscous Fallout",
-                "detail": "Dungeon Boss Drop"
+                "title": "Gnomeregan — Viscous Fallout",
+                "detail": "Proc sword with poison damage"
               }
             }
           ],
@@ -65569,28 +65655,31 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Witchblade",
-              "itemId": 13968,
+              "itemId": 13984,
               "value": "37.2 DPS, 1.80s - +14 SP - Scholomance: Darkmaster Gandling",
               "faction": "both",
-              "dps": "37.2 DPS",
-              "speed": "1.80",
+              "dps": "40.3 DPS",
+              "speed": "1.50",
               "quality": "q3",
-              "iLvl": 56,
-              "reqLevel": 50,
-              "stats": "+14 SP",
+              "iLvl": 62,
+              "reqLevel": 57,
+              "stats": "+8 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 14.",
               "icon": "inv_weapon_shortblade_16",
               "source": {
                 "kind": "dungeon",
-                "title": "Scholomance: Darkmaster Gandling",
-                "detail": "Dungeon Drop"
+                "title": "Scholomance — Darkmaster Gandling",
+                "detail": "BiS caster dagger before raiding"
               },
               "lines": [
                 "Binds when picked up",
-                "Trinket\tWeapon",
-                "Speed 1.80",
-                "(NaN damage per second)",
-                "Requires Level 52"
-              ]
+                "One-Hand\tDagger",
+                "46 - 87 Damage\tSpeed 1.50",
+                "(44.33 damage per second)",
+                "+8 Intellect",
+                "Requires Level 57",
+                "Equip: Increases damage and healing done by magical spells and effects by up to 14."
+              ],
+              "weaponType": "Dagger"
             },
             {
               "name": "Ironbark Staff",
@@ -66629,42 +66718,45 @@ if (typeof window !== 'undefined') {
         },
         {
           "levelBracket": "7–8",
-          "itemId": 248008,
-          "name": "Apprentice's Spellstaff",
-          "icon": "inv_staff_18",
+          "itemId": 1412,
+          "name": "Apprentice's Staff",
+          "icon": "inv_staff_08",
           "weaponType": "Staff",
-          "speed": "2.40",
-          "dps": "6.4 DPS",
+          "speed": "2.50",
+          "dps": "4.8 DPS",
           "source": {
-            "kind": "quest",
-            "title": "Rare Books / Kobold Camp",
-            "detail": "Early starting quest reward"
+            "kind": "vendor",
+            "title": "Staff Vendor",
+            "detail": "Early leveling caster staff"
           },
           "alts": [
             {
-              "name": "Staff of the Dor'Danil",
-              "itemId": 15396,
+              "name": "Gritroot Staff",
+              "itemId": 9603,
               "value": "8.5 DPS, 1.50s - +1 Stamina - Early quest",
               "faction": "both",
-              "dps": "8.5 DPS",
+              "dps": "5.4 DPS",
               "quality": "q2",
-              "iLvl": 14,
-              "reqLevel": 6,
-              "stats": "+1 Stamina",
-              "icon": "inv_staff_08",
-              "speed": "1.50",
+              "iLvl": 10,
+              "reqLevel": 4,
+              "stats": "+1 Stamina, +2 Spell Power",
+              "icon": "inv_staff_22",
+              "speed": "2.60",
               "lines": [
                 "Binds when picked up",
-                "One-Hand",
-                "7 - 14 Damage\tSpeed 1.50",
-                "(7.00 damage per second)",
-                "+1 Stamina"
+                "Two-Hand\tStaff",
+                "11 - 17 Damage\tSpeed 2.60",
+                "(5.38 damage per second)",
+                "+1 Stamina",
+                "+2 Spell Power",
+                "Requires Level 4"
               ],
               "source": {
                 "kind": "quest",
-                "title": "The Fragments Within",
-                "detail": "Leveling Quest Reward"
-              }
+                "title": "The Relics of Wakening",
+                "detail": "Quest reward from Teldrassil / Dolanaar."
+              },
+              "weaponType": "Staff"
             },
             {
               "name": "Darkwood Staff",
@@ -66909,29 +67001,30 @@ if (typeof window !== 'undefined') {
           "faction": "alliance",
           "quality": "q2",
           "iLvl": 12,
-          "reqLevel": 1,
-          "stats": "+2 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 4",
+          "reqLevel": 7,
+          "stats": "+2 Intellect, +1 Spirit",
           "lines": [
-            "Binds when picked up",
-            "Two-Hand",
-            "11 - 17 Damage\tSpeed 2.20",
-            "(6.36 damage per second)",
+            "Binds when equipped",
+            "Two-Hand\tStaff",
+            "10 - 16 Damage\tSpeed 2.50",
+            "(5.20 damage per second)",
             "+2 Intellect",
-            "Equip: Increases damage and healing done by magical spells and effects by up to 4"
+            "+1 Spirit",
+            "Requires Level 7"
           ]
         },
         {
           "levelBracket": "9–10",
-          "itemId": 6682,
-          "name": "Staff of the Dor'Danil",
-          "icon": "inv_staff_08",
+          "itemId": 9603,
+          "name": "Gritroot Staff",
+          "icon": "inv_staff_22",
           "weaponType": "Staff",
-          "speed": "2.80",
-          "dps": "7.7 DPS",
+          "speed": "2.60",
+          "dps": "5.4 DPS",
           "source": {
             "kind": "quest",
             "title": "The Relics of Wakening",
-            "detail": "Quest reward from Teldrassil / Darkshore."
+            "detail": "Quest reward from Teldrassil / Dolanaar."
           },
           "alts": [
             {
@@ -67203,18 +67296,18 @@ if (typeof window !== 'undefined') {
             }
           ],
           "faction": "both",
-          "quality": "q3",
-          "iLvl": 31,
-          "reqLevel": 26,
-          "stats": "48 Armor, +4 Stamina, +11 Intellect, Equip: Increases healing done by up to 20",
+          "quality": "q2",
+          "iLvl": 10,
+          "reqLevel": 4,
+          "stats": "+1 Stamina, +2 Spell Power",
           "lines": [
             "Binds when picked up",
-            "Chest",
-            "48 Armor",
-            "+4 Stamina",
-            "+11 Intellect",
-            "Requires Level 26",
-            "Equip: Increases healing done by up to 20"
+            "Two-Hand\tStaff",
+            "11 - 17 Damage\tSpeed 2.60",
+            "(5.38 damage per second)",
+            "+1 Stamina",
+            "+2 Spell Power",
+            "Requires Level 4"
           ]
         },
         {
@@ -67852,16 +67945,16 @@ if (typeof window !== 'undefined') {
         },
         {
           "levelBracket": "15–16",
-          "itemId": 271216,
-          "name": "Scepter of the Abandoned",
-          "icon": "inv_mace_01",
-          "weaponType": "One-handed mace",
-          "speed": "2.20",
-          "dps": "14.0 DPS",
+          "itemId": 6323,
+          "name": "Odo's Ley Staff",
+          "icon": "inv_staff_02",
+          "weaponType": "Staff",
+          "speed": "2.70",
+          "dps": "16.1 DPS",
           "source": {
             "kind": "dungeon",
-            "title": "The Abandoned",
-            "detail": "Ruins of Lordaeron (Levels 15–20)"
+            "title": "Shadowfang Keep — Odo the Blindwatcher",
+            "detail": "Early caster dungeon staff"
           },
           "alts": [
             {
@@ -68062,28 +68155,30 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Cookie's Tenderizer",
-              "itemId": 5197,
-              "icon": "inv_fabric_silk_02",
-              "weaponType": "1H Mace",
-              "speed": "2.80",
-              "dps": "13.93 DPS",
+              "itemId": 5195,
+              "icon": "inv_hammer_07",
+              "weaponType": "One-Handed Mace",
+              "speed": "2.40",
+              "dps": "10.8 DPS",
               "value": "13.93 DPS, 2.80s - +4 Spirit - Cookie",
               "faction": "both",
               "quality": "q3",
               "iLvl": 21,
               "reqLevel": 16,
-              "stats": "+4 Spirit",
+              "stats": "+3 Strength, +2 Stamina",
               "lines": [
-                "1H Mace",
-                "Speed 2.80",
-                "(13.93 damage per second)",
-                "+4 Spirit",
+                "Binds when picked up",
+                "One-Hand\tMace",
+                "20 - 38 Damage\tSpeed 2.40",
+                "(12.08 damage per second)",
+                "+3 Strength",
+                "+2 Stamina",
                 "Requires Level 16"
               ],
               "source": {
                 "kind": "dungeon",
-                "title": "Cookie",
-                "detail": "Dungeon Boss Drop"
+                "title": "The Deadmines — Cookie",
+                "detail": "Deadmines rare drop"
               }
             },
             {
@@ -68226,31 +68321,32 @@ if (typeof window !== 'undefined') {
           ],
           "faction": "both",
           "quality": "q3",
-          "iLvl": 22,
-          "reqLevel": 17,
-          "stats": "+5 Shadow Resistance, Equip: Increases damage and healing done by magical spells and effects by up to 24",
+          "iLvl": 26,
+          "reqLevel": 21,
+          "stats": "+5 Intellect, +6 Spirit, +5 Stamina",
           "lines": [
             "Binds when picked up",
-            "Main Hand",
-            "17 - 33 Damage\tSpeed 2.60",
-            "(9.62 damage per second)",
-            "+5 Shadow Resistance",
-            "Requires Level 17",
-            "Equip: Increases damage and healing done by magical spells and effects by up to 24"
+            "Two-Hand\tStaff",
+            "36 - 55 Damage\tSpeed 2.70",
+            "(16.85 damage per second)",
+            "+5 Intellect",
+            "+6 Spirit",
+            "+5 Stamina",
+            "Requires Level 21"
           ]
         },
         {
           "levelBracket": "17–18",
-          "itemId": 271215,
-          "name": "Coldspire Staff",
-          "icon": "inv_staff_08",
+          "itemId": 6536,
+          "name": "Rod of the Sleepwalker",
+          "icon": "inv_staff_21",
           "weaponType": "Staff",
-          "speed": "2.80",
-          "dps": "16.8 DPS",
+          "speed": "3.20",
+          "dps": "17.8 DPS",
           "source": {
             "kind": "dungeon",
-            "title": "Rath'mael",
-            "detail": "Ruins of Lordaeron (Levels 15–20)"
+            "title": "Blackfathom Deeps — Twilight Lord Kelris",
+            "detail": "Prime early healer staff"
           },
           "alts": [
             {
@@ -68543,27 +68639,27 @@ if (typeof window !== 'undefined') {
               "itemId": 5195,
               "value": "13.7 DPS, 2.70s, +3 Str, +3 Sta - The Deadmines: Cookie",
               "faction": "both",
-              "dps": "13.70 DPS",
-              "quality": "q2",
-              "iLvl": 22,
-              "reqLevel": 17,
-              "stats": "+3 Strength, +3 Stamina",
-              "icon": "inv_mace_08",
+              "dps": "10.8 DPS",
+              "quality": "q3",
+              "iLvl": 21,
+              "reqLevel": 16,
+              "stats": "+3 Strength, +2 Stamina",
+              "icon": "inv_hammer_07",
               "weaponType": "One-Handed Mace",
-              "speed": "2.70",
+              "speed": "2.40",
               "lines": [
                 "Binds when picked up",
-                "One-Hand\tOne-Handed Mace",
-                "30 - 56 Damage\tSpeed 2.70",
-                "(13.70 damage per second)",
+                "One-Hand\tMace",
+                "20 - 38 Damage\tSpeed 2.40",
+                "(12.08 damage per second)",
                 "+3 Strength",
-                "+3 Stamina",
-                "Requires Level 17"
+                "+2 Stamina",
+                "Requires Level 16"
               ],
               "source": {
                 "kind": "dungeon",
-                "title": "Cookie",
-                "detail": "The Deadmines"
+                "title": "The Deadmines — Cookie",
+                "detail": "Deadmines rare drop"
               }
             },
             {
@@ -68597,17 +68693,17 @@ if (typeof window !== 'undefined') {
           ],
           "faction": "both",
           "quality": "q3",
-          "iLvl": 24,
-          "reqLevel": 19,
-          "stats": "+13 Frost Resistance, Equip: Increases damage done by Frost spells and effects by up to 32.",
+          "iLvl": 29,
+          "reqLevel": 24,
+          "stats": "+11 Intellect, +10 Spirit",
           "lines": [
             "Binds when picked up",
-            "Two-Hand",
-            "43 - 66 Damage\tSpeed 3.60",
-            "(15.14 damage per second)",
-            "+13 Frost Resistance",
-            "Requires Level 19",
-            "Equip: Increases damage done by Frost spells and effects by up to 32."
+            "Two-Hand\tStaff",
+            "46 - 70 Damage\tSpeed 3.20",
+            "(18.12 damage per second)",
+            "+11 Intellect",
+            "+10 Spirit",
+            "Requires Level 24"
           ]
         },
         {
@@ -71478,29 +71574,32 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Spire of the Stoneshaper",
-              "itemId": 11802,
+              "itemId": 11805,
               "value": "33.8 DPS - +28 Strength, +12 Stamina, +531 Armor - BRD: Lord Incendius",
               "faction": "both",
-              "dps": "33.8 DPS",
+              "dps": "36.2 DPS",
               "quality": "q3",
-              "iLvl": 52,
-              "reqLevel": 46,
-              "stats": "+28 Strength, +12 Stamina, +531 Armor",
+              "iLvl": 45,
+              "reqLevel": 40,
+              "stats": "+10 Intellect, +17 Spirit, +5 Stamina",
               "icon": "inv_staff_29",
               "source": {
                 "kind": "dungeon",
-                "title": "BRD: Lord Incendius",
-                "detail": "Dungeon Boss Drop"
+                "title": "Uldaman — Ironaya",
+                "detail": "Caster staff drop"
               },
               "lines": [
                 "Binds when picked up",
-                "Legs\tWeapon",
-                "(NaN damage per second)",
-                "+28 Strength",
-                "+12 Stamina",
-                "+531 Armor",
-                "Requires Level 53"
-              ]
+                "Two-Hand\tStaff",
+                "87 - 132 Damage\tSpeed 2.90",
+                "(37.76 damage per second)",
+                "+10 Intellect",
+                "+17 Spirit",
+                "+5 Stamina",
+                "Requires Level 40"
+              ],
+              "weaponType": "Staff",
+              "speed": "2.90"
             },
             {
               "name": "Spire of Hakkar",
@@ -72258,30 +72357,31 @@ if (typeof window !== 'undefined') {
               }
             },
             {
-              "name": "Apprentice's Spellstaff",
-              "itemId": 248008,
-              "icon": "inv_staff_18",
+              "name": "Apprentice's Staff",
+              "itemId": 1412,
+              "icon": "inv_staff_08",
               "weaponType": "Staff",
-              "speed": "2.20",
-              "dps": "6.36 DPS",
+              "speed": "2.50",
+              "dps": "4.8 DPS",
               "value": "6.36 DPS, 2.20s - +2 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 4 - Rare Books",
               "faction": "alliance",
               "quality": "q2",
               "iLvl": 12,
-              "reqLevel": 1,
-              "stats": "+2 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 4",
+              "reqLevel": 7,
+              "stats": "+2 Intellect, +1 Spirit",
               "lines": [
-                "Binds when picked up",
-                "Two-Hand",
-                "11 - 17 Damage\tSpeed 2.20",
-                "(6.36 damage per second)",
+                "Binds when equipped",
+                "Two-Hand\tStaff",
+                "10 - 16 Damage\tSpeed 2.50",
+                "(5.20 damage per second)",
                 "+2 Intellect",
-                "Equip: Increases damage and healing done by magical spells and effects by up to 4"
+                "+1 Spirit",
+                "Requires Level 7"
               ],
               "source": {
-                "kind": "quest",
-                "title": "Rare Books",
-                "detail": "Leveling Quest Reward"
+                "kind": "vendor",
+                "title": "Staff Vendor",
+                "detail": "Early leveling caster staff"
               }
             },
             {
@@ -72418,29 +72518,32 @@ if (typeof window !== 'undefined') {
               ]
             },
             {
-              "name": "Apprentice's Spellstaff",
-              "itemId": 4835,
+              "name": "Apprentice's Staff",
+              "itemId": 1412,
               "value": "+3 Spirit, +2 Intellect - Darkshore / Silverpine drop",
               "faction": "both",
               "quality": "q2",
-              "iLvl": 13,
-              "reqLevel": 8,
-              "stats": "+3 Spirit, +2 Intellect",
-              "icon": "inv_staff_02",
+              "iLvl": 12,
+              "reqLevel": 7,
+              "stats": "+2 Intellect, +1 Spirit",
+              "icon": "inv_staff_08",
               "weaponType": "Staff",
               "source": {
-                "kind": "world",
-                "title": "Darkshore / Silverpine drop",
-                "detail": "World Drop / Quest"
+                "kind": "vendor",
+                "title": "Staff Vendor",
+                "detail": "Early leveling caster staff"
               },
               "lines": [
                 "Binds when equipped",
-                "Shoulder\tStaff",
-                "+6 Strength",
-                "+5 Stamina",
-                "+149 Armor",
-                "Requires Level 25"
-              ]
+                "Two-Hand\tStaff",
+                "10 - 16 Damage\tSpeed 2.50",
+                "(5.20 damage per second)",
+                "+2 Intellect",
+                "+1 Spirit",
+                "Requires Level 7"
+              ],
+              "speed": "2.50",
+              "dps": "4.8 DPS"
             },
             {
               "name": "Hammer of Orgrimmar",
@@ -72668,52 +72771,61 @@ if (typeof window !== 'undefined') {
               ]
             },
             {
-              "name": "Scepter of the Abandoned",
-              "itemId": 271207,
+              "name": "Odo's Ley Staff",
+              "itemId": 6323,
               "value": "+4 Stamina, +4 Intellect - The Abandoned (Ruins of Lordaeron)",
               "faction": "both",
-              "quality": "q2",
-              "iLvl": 18,
-              "reqLevel": 14,
-              "stats": "+4 Stamina, +4 Intellect",
-              "icon": "inv_mace_01",
-              "weaponType": "Main Hand Mace",
-              "source": {
-                "kind": "dungeon",
-                "title": "The Abandoned",
-                "detail": "Ruins of Lordaeron (Levels 15–20)"
-              },
-              "lines": [
-                "Binds when picked up",
-                "Legs\tMain Hand Mace",
-                "+5 Stamina",
-                "+35 Armor",
-                "+4 MP5",
-                "Requires Level 17"
-              ]
-            },
-            {
-              "name": "Staff of the Dor'Danil",
-              "itemId": 6543,
-              "value": "+4 Intellect, +4 Spirit - Darkshore / Bloodmyst quest reward",
-              "faction": "alliance",
-              "quality": "q2",
-              "iLvl": 17,
-              "reqLevel": 12,
-              "stats": "+4 Intellect, +4 Spirit",
+              "quality": "q3",
+              "iLvl": 26,
+              "reqLevel": 21,
+              "stats": "+5 Intellect, +6 Spirit, +5 Stamina",
               "icon": "inv_staff_02",
               "weaponType": "Staff",
               "source": {
-                "kind": "quest",
-                "title": "Darkshore / Bloodmyst quest reward",
-                "detail": "Leveling Quest Reward"
+                "kind": "dungeon",
+                "title": "Shadowfang Keep — Odo the Blindwatcher",
+                "detail": "Early caster dungeon staff"
               },
               "lines": [
-                "Binds when equipped",
-                "Wrist\tStaff",
-                "+12 Armor",
-                "Requires Level 10"
-              ]
+                "Binds when picked up",
+                "Two-Hand\tStaff",
+                "36 - 55 Damage\tSpeed 2.70",
+                "(16.85 damage per second)",
+                "+5 Intellect",
+                "+6 Spirit",
+                "+5 Stamina",
+                "Requires Level 21"
+              ],
+              "speed": "2.70",
+              "dps": "16.1 DPS"
+            },
+            {
+              "name": "Gritroot Staff",
+              "itemId": 9603,
+              "value": "+4 Intellect, +4 Spirit - Darkshore / Bloodmyst quest reward",
+              "faction": "alliance",
+              "quality": "q2",
+              "iLvl": 10,
+              "reqLevel": 4,
+              "stats": "+1 Stamina, +2 Spell Power",
+              "icon": "inv_staff_22",
+              "weaponType": "Staff",
+              "source": {
+                "kind": "quest",
+                "title": "The Relics of Wakening",
+                "detail": "Quest reward from Teldrassil / Dolanaar."
+              },
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand\tStaff",
+                "11 - 17 Damage\tSpeed 2.60",
+                "(5.38 damage per second)",
+                "+1 Stamina",
+                "+2 Spell Power",
+                "Requires Level 4"
+              ],
+              "speed": "2.60",
+              "dps": "5.4 DPS"
             },
             {
               "name": "Segmented Spider Leg",
@@ -72833,28 +72945,30 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Cookie's Tenderizer",
-              "itemId": 5197,
-              "icon": "inv_fabric_silk_02",
-              "weaponType": "1H Mace",
-              "speed": "2.80",
-              "dps": "13.93 DPS",
+              "itemId": 5195,
+              "icon": "inv_hammer_07",
+              "weaponType": "One-Handed Mace",
+              "speed": "2.40",
+              "dps": "10.8 DPS",
               "value": "13.93 DPS, 2.80s - +4 Spirit - Cookie",
               "faction": "both",
               "quality": "q3",
               "iLvl": 21,
               "reqLevel": 16,
-              "stats": "+4 Spirit",
+              "stats": "+3 Strength, +2 Stamina",
               "lines": [
-                "1H Mace",
-                "Speed 2.80",
-                "(13.93 damage per second)",
-                "+4 Spirit",
+                "Binds when picked up",
+                "One-Hand\tMace",
+                "20 - 38 Damage\tSpeed 2.40",
+                "(12.08 damage per second)",
+                "+3 Strength",
+                "+2 Stamina",
                 "Requires Level 16"
               ],
               "source": {
                 "kind": "dungeon",
-                "title": "Cookie",
-                "detail": "Dungeon Boss Drop"
+                "title": "The Deadmines — Cookie",
+                "detail": "Deadmines rare drop"
               }
             },
             {
@@ -73077,29 +73191,32 @@ if (typeof window !== 'undefined') {
               ]
             },
             {
-              "name": "Coldspire Staff",
-              "itemId": 271212,
+              "name": "Rod of the Sleepwalker",
+              "itemId": 6536,
               "value": "+7 Intellect, +5 Spirit, +6 Frost Dmg - Rath'mael (Ruins of Lordaeron)",
               "faction": "both",
-              "quality": "q2",
-              "iLvl": 22,
-              "reqLevel": 17,
-              "stats": "+7 Intellect, +5 Spirit, +6 Frost Dmg",
-              "icon": "inv_staff_08",
+              "quality": "q3",
+              "iLvl": 29,
+              "reqLevel": 24,
+              "stats": "+11 Intellect, +10 Spirit",
+              "icon": "inv_staff_21",
               "weaponType": "Staff",
               "source": {
                 "kind": "dungeon",
-                "title": "Rath'mael",
-                "detail": "Ruins of Lordaeron (Levels 15–20)"
+                "title": "Blackfathom Deeps — Twilight Lord Kelris",
+                "detail": "Prime early healer staff"
               },
               "lines": [
                 "Binds when picked up",
-                "Chest\tStaff",
-                "+7 Agility",
-                "+9 Spirit",
-                "+89 Armor",
-                "Requires Level 17"
-              ]
+                "Two-Hand\tStaff",
+                "46 - 70 Damage\tSpeed 3.20",
+                "(18.12 damage per second)",
+                "+11 Intellect",
+                "+10 Spirit",
+                "Requires Level 24"
+              ],
+              "speed": "3.20",
+              "dps": "17.8 DPS"
             },
             {
               "name": "Alliance Outrunner Staff",
@@ -73243,27 +73360,27 @@ if (typeof window !== 'undefined') {
               "itemId": 5195,
               "value": "13.7 DPS, 2.70s, +3 Str, +3 Sta - The Deadmines: Cookie",
               "faction": "both",
-              "dps": "13.70 DPS",
-              "quality": "q2",
-              "iLvl": 22,
-              "reqLevel": 17,
-              "stats": "+3 Strength, +3 Stamina",
-              "icon": "inv_mace_08",
+              "dps": "10.8 DPS",
+              "quality": "q3",
+              "iLvl": 21,
+              "reqLevel": 16,
+              "stats": "+3 Strength, +2 Stamina",
+              "icon": "inv_hammer_07",
               "weaponType": "One-Handed Mace",
-              "speed": "2.70",
+              "speed": "2.40",
               "lines": [
                 "Binds when picked up",
-                "One-Hand\tOne-Handed Mace",
-                "30 - 56 Damage\tSpeed 2.70",
-                "(13.70 damage per second)",
+                "One-Hand\tMace",
+                "20 - 38 Damage\tSpeed 2.40",
+                "(12.08 damage per second)",
                 "+3 Strength",
-                "+3 Stamina",
-                "Requires Level 17"
+                "+2 Stamina",
+                "Requires Level 16"
               ],
               "source": {
                 "kind": "dungeon",
-                "title": "Cookie",
-                "detail": "The Deadmines"
+                "title": "The Deadmines — Cookie",
+                "detail": "Deadmines rare drop"
               }
             },
             {
@@ -76675,55 +76792,59 @@ if (typeof window !== 'undefined') {
           },
           "alts": [
             {
-              "name": "Staff of the Dor'Danil",
-              "itemId": 15396,
+              "name": "Gritroot Staff",
+              "itemId": 9603,
               "value": "8.5 DPS, 1.50s - +1 Stamina - Teldrassil quest",
               "faction": "alliance",
-              "dps": "8.5 DPS",
+              "dps": "5.4 DPS",
               "quality": "q2",
-              "iLvl": 14,
-              "reqLevel": 6,
-              "stats": "+1 Stamina",
-              "icon": "inv_staff_08",
-              "speed": "1.50",
+              "iLvl": 10,
+              "reqLevel": 4,
+              "stats": "+1 Stamina, +2 Spell Power",
+              "icon": "inv_staff_22",
+              "speed": "2.60",
               "lines": [
                 "Binds when picked up",
-                "One-Hand",
-                "7 - 14 Damage\tSpeed 1.50",
-                "(7.00 damage per second)",
-                "+1 Stamina"
+                "Two-Hand\tStaff",
+                "11 - 17 Damage\tSpeed 2.60",
+                "(5.38 damage per second)",
+                "+1 Stamina",
+                "+2 Spell Power",
+                "Requires Level 4"
               ],
               "source": {
                 "kind": "quest",
-                "title": "The Fragments Within",
-                "detail": "Leveling Quest Reward"
-              }
+                "title": "The Relics of Wakening",
+                "detail": "Quest reward from Teldrassil / Dolanaar."
+              },
+              "weaponType": "Staff"
             },
             {
-              "name": "Apprentice's Spellstaff",
-              "itemId": 248008,
+              "name": "Apprentice's Staff",
+              "itemId": 1412,
               "value": "6.36 DPS, 2.20s - +2 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 4 - Early quest",
               "faction": "both",
-              "dps": "6.36 DPS",
-              "speed": "2.20",
+              "dps": "4.8 DPS",
+              "speed": "2.50",
               "weaponType": "Staff",
               "quality": "q2",
               "iLvl": 12,
-              "reqLevel": 1,
-              "stats": "+2 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 4",
-              "icon": "inv_staff_18",
+              "reqLevel": 7,
+              "stats": "+2 Intellect, +1 Spirit",
+              "icon": "inv_staff_08",
               "lines": [
-                "Binds when picked up",
-                "Two-Hand",
-                "11 - 17 Damage\tSpeed 2.20",
-                "(6.36 damage per second)",
+                "Binds when equipped",
+                "Two-Hand\tStaff",
+                "10 - 16 Damage\tSpeed 2.50",
+                "(5.20 damage per second)",
                 "+2 Intellect",
-                "Equip: Increases damage and healing done by magical spells and effects by up to 4"
+                "+1 Spirit",
+                "Requires Level 7"
               ],
               "source": {
-                "kind": "quest",
-                "title": "Rare Books",
-                "detail": "Leveling Quest Reward"
+                "kind": "vendor",
+                "title": "Staff Vendor",
+                "detail": "Early leveling caster staff"
               }
             },
             {
@@ -76971,29 +77092,32 @@ if (typeof window !== 'undefined') {
           },
           "alts": [
             {
-              "name": "Staff of the Dor'Danil",
-              "itemId": 15396,
+              "name": "Gritroot Staff",
+              "itemId": 9603,
               "value": "8.5 DPS, 1.50s - +1 Stamina - Early quest",
               "faction": "both",
-              "dps": "8.5 DPS",
+              "dps": "5.4 DPS",
               "quality": "q2",
-              "iLvl": 14,
-              "reqLevel": 8,
-              "stats": "+1 Stamina",
-              "icon": "inv_staff_08",
-              "speed": "1.50",
+              "iLvl": 10,
+              "reqLevel": 4,
+              "stats": "+1 Stamina, +2 Spell Power",
+              "icon": "inv_staff_22",
+              "speed": "2.60",
               "lines": [
                 "Binds when picked up",
-                "One-Hand",
-                "7 - 14 Damage\tSpeed 1.50",
-                "(7.00 damage per second)",
-                "+1 Stamina"
+                "Two-Hand\tStaff",
+                "11 - 17 Damage\tSpeed 2.60",
+                "(5.38 damage per second)",
+                "+1 Stamina",
+                "+2 Spell Power",
+                "Requires Level 4"
               ],
               "source": {
                 "kind": "quest",
-                "title": "The Fragments Within",
-                "detail": "Leveling Quest Reward"
-              }
+                "title": "The Relics of Wakening",
+                "detail": "Quest reward from Teldrassil / Dolanaar."
+              },
+              "weaponType": "Staff"
             },
             {
               "name": "Trogg Scepter",
@@ -78012,31 +78136,32 @@ if (typeof window !== 'undefined') {
               }
             },
             {
-              "name": "Scepter of the Abandoned",
-              "itemId": 271216,
+              "name": "Odo's Ley Staff",
+              "itemId": 6323,
               "value": "9.62 DPS, 2.60s - +5 Shadow Resistance, Equip: Increases damage and healing done by magical spells and effects by up to 24 - Ruins of Lordaeron: The Abandoned",
               "faction": "both",
-              "dps": "9.62 DPS",
-              "speed": "2.60",
-              "weaponType": "One-handed mace",
+              "dps": "16.1 DPS",
+              "speed": "2.70",
+              "weaponType": "Staff",
               "quality": "q3",
-              "iLvl": 22,
-              "reqLevel": 17,
-              "stats": "+5 Shadow Resistance, Equip: Increases damage and healing done by magical spells and effects by up to 24",
-              "icon": "inv_mace_01",
+              "iLvl": 26,
+              "reqLevel": 21,
+              "stats": "+5 Intellect, +6 Spirit, +5 Stamina",
+              "icon": "inv_staff_02",
               "lines": [
                 "Binds when picked up",
-                "Main Hand",
-                "17 - 33 Damage\tSpeed 2.60",
-                "(9.62 damage per second)",
-                "+5 Shadow Resistance",
-                "Requires Level 17",
-                "Equip: Increases damage and healing done by magical spells and effects by up to 24"
+                "Two-Hand\tStaff",
+                "36 - 55 Damage\tSpeed 2.70",
+                "(16.85 damage per second)",
+                "+5 Intellect",
+                "+6 Spirit",
+                "+5 Stamina",
+                "Requires Level 21"
               ],
               "source": {
                 "kind": "dungeon",
-                "title": "The Abandoned",
-                "detail": "Ruins of Lordaeron (Levels 15–20)"
+                "title": "Shadowfang Keep — Odo the Blindwatcher",
+                "detail": "Early caster dungeon staff"
               }
             },
             {
@@ -78283,13 +78408,13 @@ if (typeof window !== 'undefined') {
           "itemId": 7230,
           "name": "Smite's Mighty Hammer",
           "icon": "inv_hammer_09",
-          "weaponType": "Two-handed mace",
+          "weaponType": "Two-Handed Mace",
           "speed": "3.50",
-          "dps": "19.7 DPS",
+          "dps": "19.8 DPS",
           "source": {
             "kind": "dungeon",
-            "title": "Mr. Smite",
-            "detail": "The Deadmines (+11 Str, +4 Agi)"
+            "title": "The Deadmines — Mr. Smite",
+            "detail": "Iconic slow 2H leveling mace"
           },
           "alts": [
             {
@@ -78321,31 +78446,31 @@ if (typeof window !== 'undefined') {
               }
             },
             {
-              "name": "Coldspire Staff",
-              "itemId": 271215,
+              "name": "Rod of the Sleepwalker",
+              "itemId": 6536,
               "value": "15.14 DPS, 3.60s - +13 Frost Resistance, Equip: Increases damage done by Frost spells and effects by up to 32. - Ruins of Lordaeron: Rath'mael",
               "faction": "both",
-              "dps": "15.14 DPS",
-              "speed": "3.60",
+              "dps": "17.8 DPS",
+              "speed": "3.20",
               "weaponType": "Staff",
               "quality": "q3",
-              "iLvl": 24,
-              "reqLevel": 19,
-              "stats": "+13 Frost Resistance, Equip: Increases damage done by Frost spells and effects by up to 32.",
-              "icon": "inv_staff_08",
+              "iLvl": 29,
+              "reqLevel": 24,
+              "stats": "+11 Intellect, +10 Spirit",
+              "icon": "inv_staff_21",
               "lines": [
                 "Binds when picked up",
-                "Two-Hand",
-                "43 - 66 Damage\tSpeed 3.60",
-                "(15.14 damage per second)",
-                "+13 Frost Resistance",
-                "Requires Level 19",
-                "Equip: Increases damage done by Frost spells and effects by up to 32."
+                "Two-Hand\tStaff",
+                "46 - 70 Damage\tSpeed 3.20",
+                "(18.12 damage per second)",
+                "+11 Intellect",
+                "+10 Spirit",
+                "Requires Level 24"
               ],
               "source": {
                 "kind": "dungeon",
-                "title": "Rath'mael",
-                "detail": "Ruins of Lordaeron (Levels 15–20)"
+                "title": "Blackfathom Deeps — Twilight Lord Kelris",
+                "detail": "Prime early healer staff"
               }
             },
             {
@@ -78605,27 +78730,27 @@ if (typeof window !== 'undefined') {
               "itemId": 5195,
               "value": "13.7 DPS, 2.70s, +3 Str, +3 Sta - The Deadmines: Cookie",
               "faction": "both",
-              "dps": "13.70 DPS",
-              "quality": "q2",
-              "iLvl": 22,
-              "reqLevel": 17,
-              "stats": "+3 Strength, +3 Stamina",
-              "icon": "inv_mace_08",
+              "dps": "10.8 DPS",
+              "quality": "q3",
+              "iLvl": 21,
+              "reqLevel": 16,
+              "stats": "+3 Strength, +2 Stamina",
+              "icon": "inv_hammer_07",
               "weaponType": "One-Handed Mace",
-              "speed": "2.70",
+              "speed": "2.40",
               "lines": [
                 "Binds when picked up",
-                "One-Hand\tOne-Handed Mace",
-                "30 - 56 Damage\tSpeed 2.70",
-                "(13.70 damage per second)",
+                "One-Hand\tMace",
+                "20 - 38 Damage\tSpeed 2.40",
+                "(12.08 damage per second)",
                 "+3 Strength",
-                "+3 Stamina",
-                "Requires Level 17"
+                "+2 Stamina",
+                "Requires Level 16"
               ],
               "source": {
                 "kind": "dungeon",
-                "title": "Cookie",
-                "detail": "The Deadmines"
+                "title": "The Deadmines — Cookie",
+                "detail": "Deadmines rare drop"
               }
             },
             {
@@ -78689,10 +78814,10 @@ if (typeof window !== 'undefined') {
           "quality": "q3",
           "iLvl": 23,
           "reqLevel": 18,
-          "stats": "+11 Str, +4 Agi",
+          "stats": "+11 Strength, +4 Agility",
           "lines": [
             "Binds when picked up",
-            "Two-Hand",
+            "Two-Hand\tMace",
             "55 - 83 Damage\tSpeed 3.50",
             "(19.71 damage per second)",
             "+11 Strength",
@@ -78993,30 +79118,30 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Smite's Mighty Hammer",
-              "itemId": 5196,
+              "itemId": 7230,
               "value": "20.0 DPS, 3.50s, +11 Str, +4 Agi - The Deadmines: Mr. Smite",
               "faction": "both",
-              "dps": "20.00 DPS",
+              "dps": "19.8 DPS",
               "quality": "q3",
               "iLvl": 23,
               "reqLevel": 18,
               "stats": "+11 Strength, +4 Agility",
-              "icon": "inv_hammer_08",
+              "icon": "inv_hammer_09",
               "weaponType": "Two-Handed Mace",
               "speed": "3.50",
               "lines": [
                 "Binds when picked up",
-                "Two-Hand\tTwo-Handed Mace",
-                "56 - 84 Damage\tSpeed 3.50",
-                "(20.00 damage per second)",
+                "Two-Hand\tMace",
+                "55 - 83 Damage\tSpeed 3.50",
+                "(19.71 damage per second)",
                 "+11 Strength",
                 "+4 Agility",
                 "Requires Level 18"
               ],
               "source": {
                 "kind": "dungeon",
-                "title": "Mr. Smite",
-                "detail": "The Deadmines"
+                "title": "The Deadmines — Mr. Smite",
+                "detail": "Iconic slow 2H leveling mace"
               }
             },
             {
@@ -80746,30 +80871,30 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Cobalt Crusher",
-              "itemId": 7730,
-              "icon": "inv_hammer_04",
-              "weaponType": "2H Mace",
-              "speed": "3.20",
-              "dps": "28.91 DPS",
+              "itemId": 7957,
+              "icon": "inv_hammer_16",
+              "weaponType": "Two-Handed Mace",
+              "speed": "3.60",
+              "dps": "26.9 DPS",
               "value": "28.91 DPS, 3.20s - +9 Strength, Chance on hit: Blasts a target for 164 Frost damage. - Rare World / Dungeon Drop",
               "faction": "both",
               "quality": "q3",
-              "iLvl": 34,
-              "reqLevel": 29,
-              "stats": "+9 Strength, Chance on hit: Blasts a target for 164 Frost damage.",
+              "iLvl": 38,
+              "reqLevel": 33,
+              "stats": "+12 Strength, +11 Stamina",
               "lines": [
                 "Binds when equipped",
                 "Two-Hand\tMace",
-                "43 - 55 Damage\tSpeed 3.60",
-                "(13.6 damage per second)",
-                "+9 Strength",
-                "Chance on hit: Blasts a target for 164 Frost damage.",
-                "Requires Level 29"
+                "81 - 122 Damage\tSpeed 3.60",
+                "(28.19 damage per second)",
+                "+12 Strength",
+                "+11 Stamina",
+                "Requires Level 33"
               ],
               "source": {
-                "kind": "dungeon",
-                "title": "Rare World / Dungeon Drop",
-                "detail": "Dungeon Drop"
+                "kind": "drop",
+                "title": "World Drop BoE",
+                "detail": "High impact 2H leveling mace"
               }
             },
             {
@@ -83010,30 +83135,31 @@ if (typeof window !== 'undefined') {
               }
             },
             {
-              "name": "Apprentice's Spellstaff",
-              "itemId": 248008,
-              "icon": "inv_staff_18",
+              "name": "Apprentice's Staff",
+              "itemId": 1412,
+              "icon": "inv_staff_08",
               "weaponType": "Staff",
-              "speed": "2.20",
-              "dps": "6.36 DPS",
+              "speed": "2.50",
+              "dps": "4.8 DPS",
               "value": "6.36 DPS, 2.20s - +2 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 4 - Rare Books",
               "faction": "alliance",
               "quality": "q2",
               "iLvl": 12,
-              "reqLevel": 1,
-              "stats": "+2 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 4",
+              "reqLevel": 7,
+              "stats": "+2 Intellect, +1 Spirit",
               "lines": [
-                "Binds when picked up",
-                "Two-Hand",
-                "11 - 17 Damage\tSpeed 2.20",
-                "(6.36 damage per second)",
+                "Binds when equipped",
+                "Two-Hand\tStaff",
+                "10 - 16 Damage\tSpeed 2.50",
+                "(5.20 damage per second)",
                 "+2 Intellect",
-                "Equip: Increases damage and healing done by magical spells and effects by up to 4"
+                "+1 Spirit",
+                "Requires Level 7"
               ],
               "source": {
-                "kind": "quest",
-                "title": "Rare Books",
-                "detail": "Leveling Quest Reward"
+                "kind": "vendor",
+                "title": "Staff Vendor",
+                "detail": "Early leveling caster staff"
               }
             },
             {
@@ -83142,29 +83268,32 @@ if (typeof window !== 'undefined') {
               ]
             },
             {
-              "name": "Apprentice's Spellstaff",
-              "itemId": 4835,
+              "name": "Apprentice's Staff",
+              "itemId": 1412,
               "value": "+3 Spirit, +2 Intellect - Darkshore / Silverpine drop",
               "faction": "both",
               "quality": "q2",
-              "iLvl": 13,
-              "reqLevel": 8,
-              "stats": "+3 Spirit, +2 Intellect",
-              "icon": "inv_staff_02",
+              "iLvl": 12,
+              "reqLevel": 7,
+              "stats": "+2 Intellect, +1 Spirit",
+              "icon": "inv_staff_08",
               "weaponType": "Staff",
               "source": {
-                "kind": "world",
-                "title": "Darkshore / Silverpine drop",
-                "detail": "World Drop / Quest"
+                "kind": "vendor",
+                "title": "Staff Vendor",
+                "detail": "Early leveling caster staff"
               },
               "lines": [
                 "Binds when equipped",
-                "Shoulder\tStaff",
-                "+6 Strength",
-                "+5 Stamina",
-                "+149 Armor",
-                "Requires Level 25"
-              ]
+                "Two-Hand\tStaff",
+                "10 - 16 Damage\tSpeed 2.50",
+                "(5.20 damage per second)",
+                "+2 Intellect",
+                "+1 Spirit",
+                "Requires Level 7"
+              ],
+              "speed": "2.50",
+              "dps": "4.8 DPS"
             },
             {
               "name": "Hammerbone",
@@ -83393,52 +83522,61 @@ if (typeof window !== 'undefined') {
               ]
             },
             {
-              "name": "Scepter of the Abandoned",
-              "itemId": 271207,
+              "name": "Odo's Ley Staff",
+              "itemId": 6323,
               "value": "+4 Stamina, +4 Intellect - The Abandoned (Ruins of Lordaeron)",
               "faction": "both",
-              "quality": "q2",
-              "iLvl": 18,
-              "reqLevel": 14,
-              "stats": "+4 Stamina, +4 Intellect",
-              "icon": "inv_mace_01",
-              "weaponType": "Main Hand Mace",
-              "source": {
-                "kind": "dungeon",
-                "title": "The Abandoned",
-                "detail": "Ruins of Lordaeron (Levels 15–20)"
-              },
-              "lines": [
-                "Binds when picked up",
-                "Legs\tMain Hand Mace",
-                "+5 Stamina",
-                "+35 Armor",
-                "+4 MP5",
-                "Requires Level 17"
-              ]
-            },
-            {
-              "name": "Staff of the Dor'Danil",
-              "itemId": 6543,
-              "value": "+4 Intellect, +4 Spirit - Darkshore / Bloodmyst quest reward",
-              "faction": "alliance",
-              "quality": "q2",
-              "iLvl": 17,
-              "reqLevel": 12,
-              "stats": "+4 Intellect, +4 Spirit",
+              "quality": "q3",
+              "iLvl": 26,
+              "reqLevel": 21,
+              "stats": "+5 Intellect, +6 Spirit, +5 Stamina",
               "icon": "inv_staff_02",
               "weaponType": "Staff",
               "source": {
-                "kind": "quest",
-                "title": "Darkshore / Bloodmyst quest reward",
-                "detail": "Leveling Quest Reward"
+                "kind": "dungeon",
+                "title": "Shadowfang Keep — Odo the Blindwatcher",
+                "detail": "Early caster dungeon staff"
               },
               "lines": [
-                "Binds when equipped",
-                "Wrist\tStaff",
-                "+12 Armor",
-                "Requires Level 10"
-              ]
+                "Binds when picked up",
+                "Two-Hand\tStaff",
+                "36 - 55 Damage\tSpeed 2.70",
+                "(16.85 damage per second)",
+                "+5 Intellect",
+                "+6 Spirit",
+                "+5 Stamina",
+                "Requires Level 21"
+              ],
+              "speed": "2.70",
+              "dps": "16.1 DPS"
+            },
+            {
+              "name": "Gritroot Staff",
+              "itemId": 9603,
+              "value": "+4 Intellect, +4 Spirit - Darkshore / Bloodmyst quest reward",
+              "faction": "alliance",
+              "quality": "q2",
+              "iLvl": 10,
+              "reqLevel": 4,
+              "stats": "+1 Stamina, +2 Spell Power",
+              "icon": "inv_staff_22",
+              "weaponType": "Staff",
+              "source": {
+                "kind": "quest",
+                "title": "The Relics of Wakening",
+                "detail": "Quest reward from Teldrassil / Dolanaar."
+              },
+              "lines": [
+                "Binds when picked up",
+                "Two-Hand\tStaff",
+                "11 - 17 Damage\tSpeed 2.60",
+                "(5.38 damage per second)",
+                "+1 Stamina",
+                "+2 Spell Power",
+                "Requires Level 4"
+              ],
+              "speed": "2.60",
+              "dps": "5.4 DPS"
             },
             {
               "name": "Rhahk'Zor's Hammer",
@@ -83804,29 +83942,32 @@ if (typeof window !== 'undefined') {
               ]
             },
             {
-              "name": "Coldspire Staff",
-              "itemId": 271212,
+              "name": "Rod of the Sleepwalker",
+              "itemId": 6536,
               "value": "+7 Intellect, +5 Spirit, +6 Frost Dmg - Rath'mael (Ruins of Lordaeron)",
               "faction": "both",
-              "quality": "q2",
-              "iLvl": 22,
-              "reqLevel": 17,
-              "stats": "+7 Intellect, +5 Spirit, +6 Frost Dmg",
-              "icon": "inv_staff_08",
+              "quality": "q3",
+              "iLvl": 29,
+              "reqLevel": 24,
+              "stats": "+11 Intellect, +10 Spirit",
+              "icon": "inv_staff_21",
               "weaponType": "Staff",
               "source": {
                 "kind": "dungeon",
-                "title": "Rath'mael",
-                "detail": "Ruins of Lordaeron (Levels 15–20)"
+                "title": "Blackfathom Deeps — Twilight Lord Kelris",
+                "detail": "Prime early healer staff"
               },
               "lines": [
                 "Binds when picked up",
-                "Chest\tStaff",
-                "+7 Agility",
-                "+9 Spirit",
-                "+89 Armor",
-                "Requires Level 17"
-              ]
+                "Two-Hand\tStaff",
+                "46 - 70 Damage\tSpeed 3.20",
+                "(18.12 damage per second)",
+                "+11 Intellect",
+                "+10 Spirit",
+                "Requires Level 24"
+              ],
+              "speed": "3.20",
+              "dps": "17.8 DPS"
             },
             {
               "name": "Verigan's Fist",
@@ -83999,30 +84140,30 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Smite's Mighty Hammer",
-              "itemId": 5196,
+              "itemId": 7230,
               "value": "20.0 DPS, 3.50s, +11 Str, +4 Agi - The Deadmines: Mr. Smite",
               "faction": "both",
-              "dps": "20.00 DPS",
+              "dps": "19.8 DPS",
               "quality": "q3",
               "iLvl": 23,
               "reqLevel": 18,
               "stats": "+11 Strength, +4 Agility",
-              "icon": "inv_hammer_08",
+              "icon": "inv_hammer_09",
               "weaponType": "Two-Handed Mace",
               "speed": "3.50",
               "lines": [
                 "Binds when picked up",
-                "Two-Hand\tTwo-Handed Mace",
-                "56 - 84 Damage\tSpeed 3.50",
-                "(20.00 damage per second)",
+                "Two-Hand\tMace",
+                "55 - 83 Damage\tSpeed 3.50",
+                "(19.71 damage per second)",
                 "+11 Strength",
                 "+4 Agility",
                 "Requires Level 18"
               ],
               "source": {
                 "kind": "dungeon",
-                "title": "Mr. Smite",
-                "detail": "The Deadmines"
+                "title": "The Deadmines — Mr. Smite",
+                "detail": "Iconic slow 2H leveling mace"
               }
             },
             {
@@ -84030,27 +84171,27 @@ if (typeof window !== 'undefined') {
               "itemId": 5195,
               "value": "13.7 DPS, 2.70s, +3 Str, +3 Sta - The Deadmines: Cookie",
               "faction": "both",
-              "dps": "13.70 DPS",
-              "quality": "q2",
-              "iLvl": 22,
-              "reqLevel": 17,
-              "stats": "+3 Strength, +3 Stamina",
-              "icon": "inv_mace_08",
+              "dps": "10.8 DPS",
+              "quality": "q3",
+              "iLvl": 21,
+              "reqLevel": 16,
+              "stats": "+3 Strength, +2 Stamina",
+              "icon": "inv_hammer_07",
               "weaponType": "One-Handed Mace",
-              "speed": "2.70",
+              "speed": "2.40",
               "lines": [
                 "Binds when picked up",
-                "One-Hand\tOne-Handed Mace",
-                "30 - 56 Damage\tSpeed 2.70",
-                "(13.70 damage per second)",
+                "One-Hand\tMace",
+                "20 - 38 Damage\tSpeed 2.40",
+                "(12.08 damage per second)",
                 "+3 Strength",
-                "+3 Stamina",
-                "Requires Level 17"
+                "+2 Stamina",
+                "Requires Level 16"
               ],
               "source": {
                 "kind": "dungeon",
-                "title": "Cookie",
-                "detail": "The Deadmines"
+                "title": "The Deadmines — Cookie",
+                "detail": "Deadmines rare drop"
               }
             },
             {
@@ -87229,28 +87370,28 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Blackbone Wand",
-              "itemId": 7514,
+              "itemId": 5239,
               "quality": "q2",
               "iLvl": 20,
               "reqLevel": 15,
               "dps": "15.3 DPS",
               "speed": "1.50",
-              "icon": "inv_wand_06",
+              "icon": "inv_wand_02",
               "value": "15.3 DPS, 1.50s - +3 Intellect - Duskwood Vendor (+15.3 DPS Shadow)",
-              "stats": "+3 Intellect",
+              "stats": "18 - 34 Shadow Damage",
               "lines": [
-                "Binds when picked up",
-                "Ranged\tWeapon",
-                "41 - 78 Damage\tSpeed 1.60",
-                "(37.19 damage per second)",
-                "+3 Intellect",
+                "Binds when equipped",
+                "Ranged\tWand",
+                "18 - 34 Shadow Damage\tSpeed 1.50",
+                "(17.33 damage per second)",
                 "Requires Level 15"
               ],
               "source": {
-                "kind": "quest",
-                "title": "Mage's Wand",
-                "detail": "Leveling Quest Reward"
-              }
+                "kind": "vendor",
+                "title": "Wand Vendor / Trade",
+                "detail": "Early Shadow wand"
+              },
+              "weaponType": "Wand"
             },
             {
               "name": "Snapped Branch Wand",
@@ -87863,28 +88004,28 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Wand of Biting Cold",
-              "itemId": 19130,
+              "itemId": 19108,
               "quality": "q3",
               "iLvl": 60,
               "reqLevel": 51,
-              "dps": "56.0 DPS",
-              "speed": "1.60",
-              "stats": "+16 Frost Spell Damage",
-              "icon": "inv_wand_09",
+              "dps": "52.5 DPS",
+              "speed": "1.40",
+              "stats": "59 - 110 Frost Damage",
+              "icon": "inv_wand_06",
               "value": "56.0 DPS, 1.60s - +16 Frost Spell Damage - Alterac Valley Quest Reward",
               "lines": [
                 "Binds when picked up",
-                "Ranged\tWeapon",
-                "Speed 1.70",
-                "(85.29 damage per second)",
-                "+7 Intellect",
-                "Requires Level 60"
+                "Ranged\tWand",
+                "59 - 110 Frost Damage\tSpeed 1.40",
+                "(60.36 damage per second)",
+                "Requires Level 51"
               ],
               "source": {
                 "kind": "quest",
-                "title": "Quest Reward",
-                "detail": "Leveling Quest Reward"
-              }
+                "title": "The Battle for Alterac",
+                "detail": "Alterac Valley quest reward wand"
+              },
+              "weaponType": "Wand"
             },
             {
               "name": "Noxious Shooter",
@@ -88052,27 +88193,28 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Crimson Shocker",
-              "itemId": 18338,
+              "itemId": 17077,
               "quality": "q3",
-              "iLvl": 61,
-              "reqLevel": 56,
-              "dps": "60.3 DPS",
-              "speed": "1.70",
-              "stats": "+9 Spell Power",
+              "iLvl": 62,
+              "reqLevel": 57,
+              "dps": "54.0 DPS",
+              "speed": "1.50",
+              "stats": "67 - 126 Fire Damage",
               "icon": "inv_wand_05",
               "value": "60.3 DPS, 1.70s - +9 Spell Power - Illyanna Ravenoak",
               "lines": [
                 "Binds when equipped",
-                "Ranged\tWeapon",
-                "Speed 1.60",
-                "(58.44 damage per second)",
-                "Requires Level 54"
+                "Ranged\tWand",
+                "67 - 126 Fire Damage\tSpeed 1.50",
+                "(64.33 damage per second)",
+                "Requires Level 57"
               ],
               "source": {
-                "kind": "world",
-                "title": "Leveling Item",
-                "detail": "World Drop / Quest"
-              }
+                "kind": "drop",
+                "title": "Molten Core / World Drop BoE",
+                "detail": "High fire damage raiding wand"
+              },
+              "weaponType": "Wand"
             },
             {
               "name": "Bonecreeper Stylus",
@@ -88475,28 +88617,28 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Blackbone Wand",
-              "itemId": 7514,
+              "itemId": 5239,
               "quality": "q2",
               "iLvl": 20,
               "reqLevel": 15,
               "dps": "15.3 DPS",
               "speed": "1.50",
-              "icon": "inv_wand_06",
+              "icon": "inv_wand_02",
               "value": "15.3 DPS, 1.50s - +3 Intellect - Duskwood Vendor (+15.3 DPS Shadow)",
-              "stats": "+3 Intellect",
+              "stats": "18 - 34 Shadow Damage",
               "lines": [
-                "Binds when picked up",
-                "Ranged\tWeapon",
-                "41 - 78 Damage\tSpeed 1.60",
-                "(37.19 damage per second)",
-                "+3 Intellect",
+                "Binds when equipped",
+                "Ranged\tWand",
+                "18 - 34 Shadow Damage\tSpeed 1.50",
+                "(17.33 damage per second)",
                 "Requires Level 15"
               ],
               "source": {
-                "kind": "quest",
-                "title": "Mage's Wand",
-                "detail": "Leveling Quest Reward"
-              }
+                "kind": "vendor",
+                "title": "Wand Vendor / Trade",
+                "detail": "Early Shadow wand"
+              },
+              "weaponType": "Wand"
             },
             {
               "name": "Snapped Branch Wand",
@@ -89109,28 +89251,28 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Wand of Biting Cold",
-              "itemId": 19130,
+              "itemId": 19108,
               "quality": "q3",
               "iLvl": 60,
               "reqLevel": 51,
-              "dps": "56.0 DPS",
-              "speed": "1.60",
-              "stats": "+16 Frost Spell Damage",
-              "icon": "inv_wand_09",
+              "dps": "52.5 DPS",
+              "speed": "1.40",
+              "stats": "59 - 110 Frost Damage",
+              "icon": "inv_wand_06",
               "value": "56.0 DPS, 1.60s - +16 Frost Spell Damage - Alterac Valley Quest Reward",
               "lines": [
                 "Binds when picked up",
-                "Ranged\tWeapon",
-                "Speed 1.70",
-                "(85.29 damage per second)",
-                "+7 Intellect",
-                "Requires Level 60"
+                "Ranged\tWand",
+                "59 - 110 Frost Damage\tSpeed 1.40",
+                "(60.36 damage per second)",
+                "Requires Level 51"
               ],
               "source": {
                 "kind": "quest",
-                "title": "Quest Reward",
-                "detail": "Leveling Quest Reward"
-              }
+                "title": "The Battle for Alterac",
+                "detail": "Alterac Valley quest reward wand"
+              },
+              "weaponType": "Wand"
             },
             {
               "name": "Noxious Shooter",
@@ -89298,27 +89440,28 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Crimson Shocker",
-              "itemId": 18338,
+              "itemId": 17077,
               "quality": "q3",
-              "iLvl": 61,
-              "reqLevel": 56,
-              "dps": "60.3 DPS",
-              "speed": "1.70",
-              "stats": "+9 Spell Power",
+              "iLvl": 62,
+              "reqLevel": 57,
+              "dps": "54.0 DPS",
+              "speed": "1.50",
+              "stats": "67 - 126 Fire Damage",
               "icon": "inv_wand_05",
               "value": "60.3 DPS, 1.70s - +9 Spell Power - Illyanna Ravenoak",
               "lines": [
                 "Binds when equipped",
-                "Ranged\tWeapon",
-                "Speed 1.60",
-                "(58.44 damage per second)",
-                "Requires Level 54"
+                "Ranged\tWand",
+                "67 - 126 Fire Damage\tSpeed 1.50",
+                "(64.33 damage per second)",
+                "Requires Level 57"
               ],
               "source": {
-                "kind": "world",
-                "title": "Leveling Item",
-                "detail": "World Drop / Quest"
-              }
+                "kind": "drop",
+                "title": "Molten Core / World Drop BoE",
+                "detail": "High fire damage raiding wand"
+              },
+              "weaponType": "Wand"
             },
             {
               "name": "Bonecreeper Stylus",
@@ -89721,28 +89864,28 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Blackbone Wand",
-              "itemId": 7514,
+              "itemId": 5239,
               "quality": "q2",
               "iLvl": 20,
               "reqLevel": 15,
               "dps": "15.3 DPS",
               "speed": "1.50",
-              "icon": "inv_wand_06",
+              "icon": "inv_wand_02",
               "value": "15.3 DPS, 1.50s - +3 Intellect - Duskwood Vendor (+15.3 DPS Shadow)",
-              "stats": "+3 Intellect",
+              "stats": "18 - 34 Shadow Damage",
               "lines": [
-                "Binds when picked up",
-                "Ranged\tWeapon",
-                "41 - 78 Damage\tSpeed 1.60",
-                "(37.19 damage per second)",
-                "+3 Intellect",
+                "Binds when equipped",
+                "Ranged\tWand",
+                "18 - 34 Shadow Damage\tSpeed 1.50",
+                "(17.33 damage per second)",
                 "Requires Level 15"
               ],
               "source": {
-                "kind": "quest",
-                "title": "Mage's Wand",
-                "detail": "Leveling Quest Reward"
-              }
+                "kind": "vendor",
+                "title": "Wand Vendor / Trade",
+                "detail": "Early Shadow wand"
+              },
+              "weaponType": "Wand"
             },
             {
               "name": "Snapped Branch Wand",
@@ -90355,28 +90498,28 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Wand of Biting Cold",
-              "itemId": 19130,
+              "itemId": 19108,
               "quality": "q3",
               "iLvl": 60,
               "reqLevel": 51,
-              "dps": "56.0 DPS",
-              "speed": "1.60",
-              "stats": "+16 Frost Spell Damage",
-              "icon": "inv_wand_09",
+              "dps": "52.5 DPS",
+              "speed": "1.40",
+              "stats": "59 - 110 Frost Damage",
+              "icon": "inv_wand_06",
               "value": "56.0 DPS, 1.60s - +16 Frost Spell Damage - Alterac Valley Quest Reward",
               "lines": [
                 "Binds when picked up",
-                "Ranged\tWeapon",
-                "Speed 1.70",
-                "(85.29 damage per second)",
-                "+7 Intellect",
-                "Requires Level 60"
+                "Ranged\tWand",
+                "59 - 110 Frost Damage\tSpeed 1.40",
+                "(60.36 damage per second)",
+                "Requires Level 51"
               ],
               "source": {
                 "kind": "quest",
-                "title": "Quest Reward",
-                "detail": "Leveling Quest Reward"
-              }
+                "title": "The Battle for Alterac",
+                "detail": "Alterac Valley quest reward wand"
+              },
+              "weaponType": "Wand"
             },
             {
               "name": "Noxious Shooter",
@@ -90544,27 +90687,28 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Crimson Shocker",
-              "itemId": 18338,
+              "itemId": 17077,
               "quality": "q3",
-              "iLvl": 61,
-              "reqLevel": 56,
-              "dps": "60.3 DPS",
-              "speed": "1.70",
-              "stats": "+9 Spell Power",
+              "iLvl": 62,
+              "reqLevel": 57,
+              "dps": "54.0 DPS",
+              "speed": "1.50",
+              "stats": "67 - 126 Fire Damage",
               "icon": "inv_wand_05",
               "value": "60.3 DPS, 1.70s - +9 Spell Power - Illyanna Ravenoak",
               "lines": [
                 "Binds when equipped",
-                "Ranged\tWeapon",
-                "Speed 1.60",
-                "(58.44 damage per second)",
-                "Requires Level 54"
+                "Ranged\tWand",
+                "67 - 126 Fire Damage\tSpeed 1.50",
+                "(64.33 damage per second)",
+                "Requires Level 57"
               ],
               "source": {
-                "kind": "world",
-                "title": "Leveling Item",
-                "detail": "World Drop / Quest"
-              }
+                "kind": "drop",
+                "title": "Molten Core / World Drop BoE",
+                "detail": "High fire damage raiding wand"
+              },
+              "weaponType": "Wand"
             },
             {
               "name": "Bonecreeper Stylus",
@@ -91661,26 +91805,28 @@ if (typeof window !== 'undefined') {
         },
         {
           "levelBracket": "35–38",
-          "itemId": 9449,
+          "itemId": 9401,
           "name": "Battered Viking Shield",
-          "icon": "inv_mace_14",
-          "weaponType": "Held In Off-hand",
-          "stats": "+16 Strength, +5 Agility, Use: Increases your attack speed by 50% for 30 sec. (3 Min Cooldown)",
+          "icon": "inv_shield_06",
+          "weaponType": "Shield",
+          "stats": "+9 Strength, +7 Stamina, 984 Armor, 22 Block",
           "source": {
-            "kind": "quest",
-            "title": "Drop / Quest",
-            "detail": "Uldaman: Eric 'The Swift'. Iconic heavy kite shield with massive armor."
+            "kind": "dungeon",
+            "title": "Uldaman — Olaf / Eric / Baelog",
+            "detail": "Uldaman Lost Vikings shield"
           },
           "faction": "both",
           "quality": "q3",
-          "iLvl": 34,
-          "reqLevel": 29,
+          "iLvl": 40,
+          "reqLevel": 35,
           "lines": [
-            "Held In Off-hand",
-            "+16 Strength",
-            "+5 Agility",
-            "Use: Increases your attack speed by 50% for 30 sec. (3 Min Cooldown)",
-            "Requires Level 29"
+            "Binds when picked up",
+            "Off Hand\tShield",
+            "984 Armor",
+            "22 Block",
+            "+9 Strength",
+            "+7 Stamina",
+            "Requires Level 35"
           ],
           "alts": [
             {
@@ -91809,7 +91955,9 @@ if (typeof window !== 'undefined') {
             }
           ],
           "speed": "2.00",
-          "dps": "29.00 DPS"
+          "dps": "29.00 DPS",
+          "armor": 984,
+          "block": 22
         },
         {
           "levelBracket": "39–42",
@@ -94119,26 +94267,28 @@ if (typeof window !== 'undefined') {
         },
         {
           "levelBracket": "35–38",
-          "itemId": 9449,
+          "itemId": 9401,
           "name": "Battered Viking Shield",
-          "icon": "inv_mace_14",
-          "weaponType": "Held In Off-hand",
-          "stats": "+16 Strength, +5 Agility, Use: Increases your attack speed by 50% for 30 sec. (3 Min Cooldown)",
+          "icon": "inv_shield_06",
+          "weaponType": "Shield",
+          "stats": "+9 Strength, +7 Stamina, 984 Armor, 22 Block",
           "source": {
-            "kind": "quest",
-            "title": "Drop / Quest",
-            "detail": "Uldaman: Eric 'The Swift'. Iconic heavy kite shield with massive armor."
+            "kind": "dungeon",
+            "title": "Uldaman — Olaf / Eric / Baelog",
+            "detail": "Uldaman Lost Vikings shield"
           },
           "faction": "both",
           "quality": "q3",
-          "iLvl": 34,
-          "reqLevel": 29,
+          "iLvl": 40,
+          "reqLevel": 35,
           "lines": [
-            "Held In Off-hand",
-            "+16 Strength",
-            "+5 Agility",
-            "Use: Increases your attack speed by 50% for 30 sec. (3 Min Cooldown)",
-            "Requires Level 29"
+            "Binds when picked up",
+            "Off Hand\tShield",
+            "984 Armor",
+            "22 Block",
+            "+9 Strength",
+            "+7 Stamina",
+            "Requires Level 35"
           ],
           "alts": [
             {
@@ -94267,7 +94417,9 @@ if (typeof window !== 'undefined') {
             }
           ],
           "speed": "2.00",
-          "dps": "29.00 DPS"
+          "dps": "29.00 DPS",
+          "armor": 984,
+          "block": 22
         },
         {
           "levelBracket": "39–42",
@@ -96576,27 +96728,30 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Thermaplugg's Central Core",
-              "itemId": 9458,
-              "icon": "inv_shield_10",
+              "itemId": 9456,
+              "icon": "inv_shield_11",
               "weaponType": "Shield",
               "value": "776 Armor, +17 Block, +3 Spirit - Mekgineer Thermaplugg",
               "faction": "both",
               "quality": "q3",
-              "iLvl": 36,
-              "reqLevel": 31,
-              "stats": "776 Armor, +17 Block, +3 Spirit",
+              "iLvl": 34,
+              "reqLevel": 29,
+              "stats": "721 Armor, 16 Block, Equip: When struck in combat has a 5% chance of inflicting 50 Nature damage to all nearby enemies.",
               "lines": [
-                "Shield",
-                "776 Armor",
-                "+17 Block",
-                "+3 Spirit",
-                "Requires Level 31"
+                "Binds when picked up",
+                "Off Hand\tShield",
+                "721 Armor",
+                "16 Block",
+                "Requires Level 29",
+                "Equip: When struck in combat has a 5% chance of inflicting 50 Nature damage to all nearby enemies."
               ],
               "source": {
                 "kind": "dungeon",
-                "title": "Mekgineer Thermaplugg",
-                "detail": "Dungeon Boss Drop"
-              }
+                "title": "Gnomeregan — Mekgineer Thermaplugg",
+                "detail": "Iconic Gnomeregan shield with AOE Nature retaliation"
+              },
+              "armor": 721,
+              "block": 16
             },
             {
               "name": "Grom'gol Buckler",
@@ -96653,26 +96808,28 @@ if (typeof window !== 'undefined') {
         },
         {
           "levelBracket": "35–38",
-          "itemId": 9403,
+          "itemId": 9401,
           "name": "Battered Viking Shield",
-          "icon": "inv_shield_07",
+          "icon": "inv_shield_06",
           "weaponType": "Shield",
-          "stats": "1287 Armor, +10 Spirit, Equip: Increases healing done by up to 13",
+          "stats": "+9 Strength, +7 Stamina, 984 Armor, 22 Block",
           "source": {
             "kind": "dungeon",
-            "title": "Olaf",
-            "detail": "Uldaman: Eric 'The Swift'. High mitigation shield with Spirit and dedicated +13 Healing equip."
+            "title": "Uldaman — Olaf / Eric / Baelog",
+            "detail": "Uldaman Lost Vikings shield"
           },
           "faction": "both",
           "quality": "q3",
-          "iLvl": 42,
-          "reqLevel": 37,
+          "iLvl": 40,
+          "reqLevel": 35,
           "lines": [
-            "Shield",
-            "1287 Armor",
-            "+10 Spirit",
-            "Equip: Increases healing done by up to 13",
-            "Requires Level 37"
+            "Binds when picked up",
+            "Off Hand\tShield",
+            "984 Armor",
+            "22 Block",
+            "+9 Strength",
+            "+7 Stamina",
+            "Requires Level 35"
           ],
           "alts": [
             {
@@ -96751,7 +96908,9 @@ if (typeof window !== 'undefined') {
                 "detail": "Leveling Quest Reward"
               }
             }
-          ]
+          ],
+          "armor": 984,
+          "block": 22
         },
         {
           "levelBracket": "39–42",
@@ -99032,26 +99191,28 @@ if (typeof window !== 'undefined') {
         },
         {
           "levelBracket": "35–38",
-          "itemId": 9449,
+          "itemId": 9401,
           "name": "Battered Viking Shield",
-          "icon": "inv_mace_14",
-          "weaponType": "Held In Off-hand",
-          "stats": "+16 Strength, +5 Agility, Use: Increases your attack speed by 50% for 30 sec. (3 Min Cooldown)",
+          "icon": "inv_shield_06",
+          "weaponType": "Shield",
+          "stats": "+9 Strength, +7 Stamina, 984 Armor, 22 Block",
           "source": {
-            "kind": "quest",
-            "title": "Drop / Quest",
-            "detail": "Uldaman: Eric 'The Swift'. Iconic heavy kite shield with massive armor."
+            "kind": "dungeon",
+            "title": "Uldaman — Olaf / Eric / Baelog",
+            "detail": "Uldaman Lost Vikings shield"
           },
           "faction": "both",
           "quality": "q3",
-          "iLvl": 34,
-          "reqLevel": 29,
+          "iLvl": 40,
+          "reqLevel": 35,
           "lines": [
-            "Held In Off-hand",
-            "+16 Strength",
-            "+5 Agility",
-            "Use: Increases your attack speed by 50% for 30 sec. (3 Min Cooldown)",
-            "Requires Level 29"
+            "Binds when picked up",
+            "Off Hand\tShield",
+            "984 Armor",
+            "22 Block",
+            "+9 Strength",
+            "+7 Stamina",
+            "Requires Level 35"
           ],
           "alts": [
             {
@@ -99180,7 +99341,9 @@ if (typeof window !== 'undefined') {
             }
           ],
           "speed": "2.00",
-          "dps": "29.00 DPS"
+          "dps": "29.00 DPS",
+          "armor": 984,
+          "block": 22
         },
         {
           "levelBracket": "39–42",
@@ -101489,27 +101652,30 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Thermaplugg's Central Core",
-              "itemId": 9458,
-              "icon": "inv_shield_10",
+              "itemId": 9456,
+              "icon": "inv_shield_11",
               "weaponType": "Shield",
               "value": "776 Armor, +17 Block, +3 Spirit - Mekgineer Thermaplugg",
               "faction": "both",
               "quality": "q3",
-              "iLvl": 36,
-              "reqLevel": 31,
-              "stats": "776 Armor, +17 Block, +3 Spirit",
+              "iLvl": 34,
+              "reqLevel": 29,
+              "stats": "721 Armor, 16 Block, Equip: When struck in combat has a 5% chance of inflicting 50 Nature damage to all nearby enemies.",
               "lines": [
-                "Shield",
-                "776 Armor",
-                "+17 Block",
-                "+3 Spirit",
-                "Requires Level 31"
+                "Binds when picked up",
+                "Off Hand\tShield",
+                "721 Armor",
+                "16 Block",
+                "Requires Level 29",
+                "Equip: When struck in combat has a 5% chance of inflicting 50 Nature damage to all nearby enemies."
               ],
               "source": {
                 "kind": "dungeon",
-                "title": "Mekgineer Thermaplugg",
-                "detail": "Dungeon Boss Drop"
-              }
+                "title": "Gnomeregan — Mekgineer Thermaplugg",
+                "detail": "Iconic Gnomeregan shield with AOE Nature retaliation"
+              },
+              "armor": 721,
+              "block": 16
             },
             {
               "name": "Grom'gol Buckler",
@@ -101566,26 +101732,28 @@ if (typeof window !== 'undefined') {
         },
         {
           "levelBracket": "35–38",
-          "itemId": 9403,
+          "itemId": 9401,
           "name": "Battered Viking Shield",
-          "icon": "inv_shield_07",
+          "icon": "inv_shield_06",
           "weaponType": "Shield",
-          "stats": "1287 Armor, +10 Spirit, Equip: Increases healing done by up to 13",
+          "stats": "+9 Strength, +7 Stamina, 984 Armor, 22 Block",
           "source": {
             "kind": "dungeon",
-            "title": "Olaf",
-            "detail": "Uldaman: Eric 'The Swift'. High mitigation shield with Spirit and dedicated +13 Healing equip."
+            "title": "Uldaman — Olaf / Eric / Baelog",
+            "detail": "Uldaman Lost Vikings shield"
           },
           "faction": "both",
           "quality": "q3",
-          "iLvl": 42,
-          "reqLevel": 37,
+          "iLvl": 40,
+          "reqLevel": 35,
           "lines": [
-            "Shield",
-            "1287 Armor",
-            "+10 Spirit",
-            "Equip: Increases healing done by up to 13",
-            "Requires Level 37"
+            "Binds when picked up",
+            "Off Hand\tShield",
+            "984 Armor",
+            "22 Block",
+            "+9 Strength",
+            "+7 Stamina",
+            "Requires Level 35"
           ],
           "alts": [
             {
@@ -101664,7 +101832,9 @@ if (typeof window !== 'undefined') {
                 "detail": "Leveling Quest Reward"
               }
             }
-          ]
+          ],
+          "armor": 984,
+          "block": 22
         },
         {
           "levelBracket": "39–42",
@@ -103289,28 +103459,32 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Thermaplugg's Central Core",
-              "itemId": 9513,
-              "icon": "inv_staff_21",
-              "weaponType": "Held In Off-hand",
+              "itemId": 9456,
+              "icon": "inv_shield_11",
+              "weaponType": "Shield",
               "value": "5.34 DPS, 2.90s - +1 Intellect, +1 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 2 - Gnomeregan",
               "faction": "both",
-              "quality": "q2",
-              "iLvl": 10,
-              "reqLevel": 10,
-              "stats": "+1 Intellect, +1 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 2",
+              "quality": "q3",
+              "iLvl": 34,
+              "reqLevel": 29,
+              "stats": "721 Armor, 16 Block, Equip: When struck in combat has a 5% chance of inflicting 50 Nature damage to all nearby enemies.",
               "lines": [
-                "Held In Off-hand",
-                "+1 Intellect",
-                "+1 Spirit",
-                "Equip: Increases damage and healing done by magical spells and effects by up to 2"
+                "Binds when picked up",
+                "Off Hand\tShield",
+                "721 Armor",
+                "16 Block",
+                "Requires Level 29",
+                "Equip: When struck in combat has a 5% chance of inflicting 50 Nature damage to all nearby enemies."
               ],
               "source": {
                 "kind": "dungeon",
-                "title": "Drop / Quest",
-                "detail": "Dungeon Drop"
+                "title": "Gnomeregan — Mekgineer Thermaplugg",
+                "detail": "Iconic Gnomeregan shield with AOE Nature retaliation"
               },
               "speed": "2.90",
-              "dps": "5.34 DPS"
+              "dps": "5.34 DPS",
+              "armor": 721,
+              "block": 16
             }
           ],
           "speed": "2.00"
@@ -103901,49 +104075,52 @@ if (typeof window !== 'undefined') {
           "alts": [
             {
               "name": "Tome of the Fiery Arcana",
-              "itemId": 19308,
-              "icon": "inv_misc_book_01",
-              "weaponType": "Held In Off-hand",
+              "itemId": 19310,
+              "icon": "inv_misc_book_06",
+              "weaponType": "Held in Off-Hand",
               "value": "+3 MP5 - Alterac Valley (Fire Mage BiS)",
               "faction": "both",
-              "quality": "q4",
+              "quality": "q3",
               "iLvl": 60,
               "reqLevel": 55,
-              "stats": "+3 MP5",
+              "stats": "+10 Intellect, +10 Spirit, Equip: Increases damage done by Fire spells and effects by up to 21.",
               "lines": [
+                "Binds when picked up",
                 "Held In Off-hand",
-                "+3 MP5",
-                "Requires Level 55"
+                "+10 Intellect",
+                "+10 Spirit",
+                "Requires Level 55",
+                "Equip: Increases damage done by Fire spells and effects by up to 21."
               ],
               "source": {
-                "kind": "world",
-                "title": "World Drop Epic / Raid",
-                "detail": "Zone Drop / Rare Mob"
+                "kind": "drop",
+                "title": "Blackwing Lair / World Drop",
+                "detail": "Fire caster off-hand"
               }
             },
             {
               "name": "Tome of Arcane Domination",
-              "itemId": 19312,
-              "icon": "inv_misc_flower_04",
-              "weaponType": "Held In Off-hand",
+              "itemId": 19308,
+              "icon": "inv_misc_book_07",
+              "weaponType": "Held in Off-Hand",
               "value": "+11 Stamina, +25 Healing, +12 Spell Power, +5 MP5 - Alterac Valley (Arcane BiS)",
               "faction": "both",
-              "quality": "q4",
+              "quality": "q3",
               "iLvl": 60,
               "reqLevel": 55,
-              "stats": "+11 Stamina, +25 Healing, +12 Spell Power, +5 MP5",
+              "stats": "+10 Intellect, +10 Spirit, Equip: Increases damage done by Arcane spells and effects by up to 21.",
               "lines": [
+                "Binds when picked up",
                 "Held In Off-hand",
-                "+11 Stamina",
-                "+25 Healing",
-                "+12 Spell Power",
-                "+5 MP5",
-                "Requires Level 55"
+                "+10 Intellect",
+                "+10 Spirit",
+                "Requires Level 55",
+                "Equip: Increases damage done by Arcane spells and effects by up to 21."
               ],
               "source": {
-                "kind": "world",
-                "title": "World Drop Epic / Raid",
-                "detail": "Zone Drop / Rare Mob"
+                "kind": "drop",
+                "title": "Blackwing Lair / World Drop",
+                "detail": "Arcane caster off-hand"
               }
             },
             {
@@ -104079,25 +104256,26 @@ if (typeof window !== 'undefined') {
         },
         {
           "levelBracket": "59–60",
-          "itemId": 19309,
+          "itemId": 19315,
           "name": "Master Dragonslayer's Orb",
-          "icon": "inv_misc_book_06",
-          "weaponType": "Held In Off-hand",
-          "stats": "+14 Intellect, +28 Spell Power",
+          "icon": "inv_misc_gem_pearl_01",
+          "weaponType": "Held in Off-Hand",
+          "stats": "+14 Stamina, Equip: Increases damage and healing done by magical spells and effects by up to 28.",
           "source": {
             "kind": "quest",
-            "title": "World Drop Epic / Raid",
-            "detail": "Onyxia Head quest turn-in reward. Top-tier endgame caster focus."
+            "title": "Head of Nefarian (Blackwing Lair)",
+            "detail": "Nefarian head quest reward caster off-hand"
           },
           "faction": "both",
           "quality": "q4",
-          "iLvl": 60,
-          "reqLevel": 55,
+          "iLvl": 83,
+          "reqLevel": 60,
           "lines": [
+            "Binds when picked up",
             "Held In Off-hand",
-            "+14 Intellect",
-            "+28 Spell Power",
-            "Requires Level 55"
+            "+14 Stamina",
+            "Requires Level 60",
+            "Equip: Increases damage and healing done by magical spells and effects by up to 28."
           ],
           "alts": [
             {
@@ -105135,24 +105313,27 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Tome of the Fiery Arcana",
-              "itemId": 19308,
-              "icon": "inv_misc_book_01",
-              "weaponType": "Held In Off-hand",
+              "itemId": 19310,
+              "icon": "inv_misc_book_06",
+              "weaponType": "Held in Off-Hand",
               "value": "+3 MP5 - Alterac Valley (Destro BiS)",
               "faction": "both",
-              "quality": "q4",
+              "quality": "q3",
               "iLvl": 60,
               "reqLevel": 55,
-              "stats": "+3 MP5",
+              "stats": "+10 Intellect, +10 Spirit, Equip: Increases damage done by Fire spells and effects by up to 21.",
               "lines": [
+                "Binds when picked up",
                 "Held In Off-hand",
-                "+3 MP5",
-                "Requires Level 55"
+                "+10 Intellect",
+                "+10 Spirit",
+                "Requires Level 55",
+                "Equip: Increases damage done by Fire spells and effects by up to 21."
               ],
               "source": {
-                "kind": "world",
-                "title": "World Drop Epic / Raid",
-                "detail": "Zone Drop / Rare Mob"
+                "kind": "drop",
+                "title": "Blackwing Lair / World Drop",
+                "detail": "Fire caster off-hand"
               }
             },
             {
@@ -105266,25 +105447,26 @@ if (typeof window !== 'undefined') {
         },
         {
           "levelBracket": "59–60",
-          "itemId": 19309,
+          "itemId": 19315,
           "name": "Master Dragonslayer's Orb",
-          "icon": "inv_misc_book_06",
-          "weaponType": "Held In Off-hand",
-          "stats": "+14 Intellect, +28 Spell Power",
+          "icon": "inv_misc_gem_pearl_01",
+          "weaponType": "Held in Off-Hand",
+          "stats": "+14 Stamina, Equip: Increases damage and healing done by magical spells and effects by up to 28.",
           "source": {
             "kind": "quest",
-            "title": "World Drop Epic / Raid",
-            "detail": "Onyxia Head quest turn-in reward. Top-tier endgame caster focus."
+            "title": "Head of Nefarian (Blackwing Lair)",
+            "detail": "Nefarian head quest reward caster off-hand"
           },
           "faction": "both",
           "quality": "q4",
-          "iLvl": 60,
-          "reqLevel": 55,
+          "iLvl": 83,
+          "reqLevel": 60,
           "lines": [
+            "Binds when picked up",
             "Held In Off-hand",
-            "+14 Intellect",
-            "+28 Spell Power",
-            "Requires Level 55"
+            "+14 Stamina",
+            "Requires Level 60",
+            "Equip: Increases damage and healing done by magical spells and effects by up to 28."
           ],
           "alts": [
             {
@@ -106328,24 +106510,27 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Tome of the Fiery Arcana",
-              "itemId": 19308,
-              "icon": "inv_misc_book_01",
-              "weaponType": "Held In Off-hand",
+              "itemId": 19310,
+              "icon": "inv_misc_book_06",
+              "weaponType": "Held in Off-Hand",
               "value": "+3 MP5 - Alterac Valley (Destro BiS)",
               "faction": "both",
-              "quality": "q4",
+              "quality": "q3",
               "iLvl": 60,
               "reqLevel": 55,
-              "stats": "+3 MP5",
+              "stats": "+10 Intellect, +10 Spirit, Equip: Increases damage done by Fire spells and effects by up to 21.",
               "lines": [
+                "Binds when picked up",
                 "Held In Off-hand",
-                "+3 MP5",
-                "Requires Level 55"
+                "+10 Intellect",
+                "+10 Spirit",
+                "Requires Level 55",
+                "Equip: Increases damage done by Fire spells and effects by up to 21."
               ],
               "source": {
-                "kind": "world",
-                "title": "World Drop Epic / Raid",
-                "detail": "Zone Drop / Rare Mob"
+                "kind": "drop",
+                "title": "Blackwing Lair / World Drop",
+                "detail": "Fire caster off-hand"
               }
             },
             {
@@ -106459,25 +106644,26 @@ if (typeof window !== 'undefined') {
         },
         {
           "levelBracket": "59–60",
-          "itemId": 19309,
+          "itemId": 19315,
           "name": "Master Dragonslayer's Orb",
-          "icon": "inv_misc_book_06",
-          "weaponType": "Held In Off-hand",
-          "stats": "+14 Intellect, +28 Spell Power",
+          "icon": "inv_misc_gem_pearl_01",
+          "weaponType": "Held in Off-Hand",
+          "stats": "+14 Stamina, Equip: Increases damage and healing done by magical spells and effects by up to 28.",
           "source": {
             "kind": "quest",
-            "title": "World Drop Epic / Raid",
-            "detail": "Onyxia Head quest turn-in reward. Top-tier endgame caster focus."
+            "title": "Head of Nefarian (Blackwing Lair)",
+            "detail": "Nefarian head quest reward caster off-hand"
           },
           "faction": "both",
           "quality": "q4",
-          "iLvl": 60,
-          "reqLevel": 55,
+          "iLvl": 83,
+          "reqLevel": 60,
           "lines": [
+            "Binds when picked up",
             "Held In Off-hand",
-            "+14 Intellect",
-            "+28 Spell Power",
-            "Requires Level 55"
+            "+14 Stamina",
+            "Requires Level 60",
+            "Equip: Increases damage and healing done by magical spells and effects by up to 28."
           ],
           "alts": [
             {
@@ -107851,28 +108037,32 @@ if (typeof window !== 'undefined') {
             },
             {
               "name": "Thermaplugg's Central Core",
-              "itemId": 9513,
-              "icon": "inv_staff_21",
-              "weaponType": "Held In Off-hand",
+              "itemId": 9456,
+              "icon": "inv_shield_11",
+              "weaponType": "Shield",
               "value": "5.34 DPS, 2.90s - +1 Intellect, +1 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 2 - Gnomeregan",
               "faction": "both",
-              "quality": "q2",
-              "iLvl": 10,
-              "reqLevel": 10,
-              "stats": "+1 Intellect, +1 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 2",
+              "quality": "q3",
+              "iLvl": 34,
+              "reqLevel": 29,
+              "stats": "721 Armor, 16 Block, Equip: When struck in combat has a 5% chance of inflicting 50 Nature damage to all nearby enemies.",
               "lines": [
-                "Held In Off-hand",
-                "+1 Intellect",
-                "+1 Spirit",
-                "Equip: Increases damage and healing done by magical spells and effects by up to 2"
+                "Binds when picked up",
+                "Off Hand\tShield",
+                "721 Armor",
+                "16 Block",
+                "Requires Level 29",
+                "Equip: When struck in combat has a 5% chance of inflicting 50 Nature damage to all nearby enemies."
               ],
               "source": {
                 "kind": "dungeon",
-                "title": "Drop / Quest",
-                "detail": "Dungeon Drop"
+                "title": "Gnomeregan — Mekgineer Thermaplugg",
+                "detail": "Iconic Gnomeregan shield with AOE Nature retaliation"
               },
               "speed": "2.90",
-              "dps": "5.34 DPS"
+              "dps": "5.34 DPS",
+              "armor": 721,
+              "block": 16
             }
           ],
           "speed": "2.00"
@@ -108463,49 +108653,52 @@ if (typeof window !== 'undefined') {
           "alts": [
             {
               "name": "Tome of the Fiery Arcana",
-              "itemId": 19308,
-              "icon": "inv_misc_book_01",
-              "weaponType": "Held In Off-hand",
+              "itemId": 19310,
+              "icon": "inv_misc_book_06",
+              "weaponType": "Held in Off-Hand",
               "value": "+3 MP5 - Alterac Valley (Fire Mage BiS)",
               "faction": "both",
-              "quality": "q4",
+              "quality": "q3",
               "iLvl": 60,
               "reqLevel": 55,
-              "stats": "+3 MP5",
+              "stats": "+10 Intellect, +10 Spirit, Equip: Increases damage done by Fire spells and effects by up to 21.",
               "lines": [
+                "Binds when picked up",
                 "Held In Off-hand",
-                "+3 MP5",
-                "Requires Level 55"
+                "+10 Intellect",
+                "+10 Spirit",
+                "Requires Level 55",
+                "Equip: Increases damage done by Fire spells and effects by up to 21."
               ],
               "source": {
-                "kind": "world",
-                "title": "World Drop Epic / Raid",
-                "detail": "Zone Drop / Rare Mob"
+                "kind": "drop",
+                "title": "Blackwing Lair / World Drop",
+                "detail": "Fire caster off-hand"
               }
             },
             {
               "name": "Tome of Arcane Domination",
-              "itemId": 19312,
-              "icon": "inv_misc_flower_04",
-              "weaponType": "Held In Off-hand",
+              "itemId": 19308,
+              "icon": "inv_misc_book_07",
+              "weaponType": "Held in Off-Hand",
               "value": "+11 Stamina, +25 Healing, +12 Spell Power, +5 MP5 - Alterac Valley (Arcane BiS)",
               "faction": "both",
-              "quality": "q4",
+              "quality": "q3",
               "iLvl": 60,
               "reqLevel": 55,
-              "stats": "+11 Stamina, +25 Healing, +12 Spell Power, +5 MP5",
+              "stats": "+10 Intellect, +10 Spirit, Equip: Increases damage done by Arcane spells and effects by up to 21.",
               "lines": [
+                "Binds when picked up",
                 "Held In Off-hand",
-                "+11 Stamina",
-                "+25 Healing",
-                "+12 Spell Power",
-                "+5 MP5",
-                "Requires Level 55"
+                "+10 Intellect",
+                "+10 Spirit",
+                "Requires Level 55",
+                "Equip: Increases damage done by Arcane spells and effects by up to 21."
               ],
               "source": {
-                "kind": "world",
-                "title": "World Drop Epic / Raid",
-                "detail": "Zone Drop / Rare Mob"
+                "kind": "drop",
+                "title": "Blackwing Lair / World Drop",
+                "detail": "Arcane caster off-hand"
               }
             },
             {
@@ -108641,25 +108834,26 @@ if (typeof window !== 'undefined') {
         },
         {
           "levelBracket": "59–60",
-          "itemId": 19309,
+          "itemId": 19315,
           "name": "Master Dragonslayer's Orb",
-          "icon": "inv_misc_book_06",
-          "weaponType": "Held In Off-hand",
-          "stats": "+14 Intellect, +28 Spell Power",
+          "icon": "inv_misc_gem_pearl_01",
+          "weaponType": "Held in Off-Hand",
+          "stats": "+14 Stamina, Equip: Increases damage and healing done by magical spells and effects by up to 28.",
           "source": {
             "kind": "quest",
-            "title": "World Drop Epic / Raid",
-            "detail": "Onyxia Head quest turn-in reward. Top-tier endgame caster focus."
+            "title": "Head of Nefarian (Blackwing Lair)",
+            "detail": "Nefarian head quest reward caster off-hand"
           },
           "faction": "both",
           "quality": "q4",
-          "iLvl": 60,
-          "reqLevel": 55,
+          "iLvl": 83,
+          "reqLevel": 60,
           "lines": [
+            "Binds when picked up",
             "Held In Off-hand",
-            "+14 Intellect",
-            "+28 Spell Power",
-            "Requires Level 55"
+            "+14 Stamina",
+            "Requires Level 60",
+            "Equip: Increases damage and healing done by magical spells and effects by up to 28."
           ],
           "alts": [
             {

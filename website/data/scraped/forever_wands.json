@@ -336,28 +336,28 @@
           },
           {
             "name": "Blackbone Wand",
-            "itemId": 7514,
+            "itemId": 5239,
             "quality": "q2",
             "iLvl": 20,
             "reqLevel": 15,
             "dps": "15.3 DPS",
             "speed": "1.50",
-            "icon": "inv_wand_06",
+            "icon": "inv_wand_02",
             "value": "15.3 DPS, 1.50s - +3 Intellect - Duskwood Vendor (+15.3 DPS Shadow)",
-            "stats": "+3 Intellect",
+            "stats": "18 - 34 Shadow Damage",
             "lines": [
-              "Binds when picked up",
-              "Ranged\tWeapon",
-              "41 - 78 Damage\tSpeed 1.60",
-              "(37.19 damage per second)",
-              "+3 Intellect",
+              "Binds when equipped",
+              "Ranged\tWand",
+              "18 - 34 Shadow Damage\tSpeed 1.50",
+              "(17.33 damage per second)",
               "Requires Level 15"
             ],
             "source": {
-              "kind": "quest",
-              "title": "Mage's Wand",
-              "detail": "Leveling Quest Reward"
-            }
+              "kind": "vendor",
+              "title": "Wand Vendor / Trade",
+              "detail": "Early Shadow wand"
+            },
+            "weaponType": "Wand"
           },
           {
             "name": "Snapped Branch Wand",
@@ -970,28 +970,28 @@
           },
           {
             "name": "Wand of Biting Cold",
-            "itemId": 19130,
+            "itemId": 19108,
             "quality": "q3",
             "iLvl": 60,
             "reqLevel": 51,
-            "dps": "56.0 DPS",
-            "speed": "1.60",
-            "stats": "+16 Frost Spell Damage",
-            "icon": "inv_wand_09",
+            "dps": "52.5 DPS",
+            "speed": "1.40",
+            "stats": "59 - 110 Frost Damage",
+            "icon": "inv_wand_06",
             "value": "56.0 DPS, 1.60s - +16 Frost Spell Damage - Alterac Valley Quest Reward",
             "lines": [
               "Binds when picked up",
-              "Ranged\tWeapon",
-              "Speed 1.70",
-              "(85.29 damage per second)",
-              "+7 Intellect",
-              "Requires Level 60"
+              "Ranged\tWand",
+              "59 - 110 Frost Damage\tSpeed 1.40",
+              "(60.36 damage per second)",
+              "Requires Level 51"
             ],
             "source": {
               "kind": "quest",
-              "title": "Quest Reward",
-              "detail": "Leveling Quest Reward"
-            }
+              "title": "The Battle for Alterac",
+              "detail": "Alterac Valley quest reward wand"
+            },
+            "weaponType": "Wand"
           },
           {
             "name": "Noxious Shooter",
@@ -1159,27 +1159,28 @@
           },
           {
             "name": "Crimson Shocker",
-            "itemId": 18338,
+            "itemId": 17077,
             "quality": "q3",
-            "iLvl": 61,
-            "reqLevel": 56,
-            "dps": "60.3 DPS",
-            "speed": "1.70",
-            "stats": "+9 Spell Power",
+            "iLvl": 62,
+            "reqLevel": 57,
+            "dps": "54.0 DPS",
+            "speed": "1.50",
+            "stats": "67 - 126 Fire Damage",
             "icon": "inv_wand_05",
             "value": "60.3 DPS, 1.70s - +9 Spell Power - Illyanna Ravenoak",
             "lines": [
               "Binds when equipped",
-              "Ranged\tWeapon",
-              "Speed 1.60",
-              "(58.44 damage per second)",
-              "Requires Level 54"
+              "Ranged\tWand",
+              "67 - 126 Fire Damage\tSpeed 1.50",
+              "(64.33 damage per second)",
+              "Requires Level 57"
             ],
             "source": {
-              "kind": "world",
-              "title": "Leveling Item",
-              "detail": "World Drop / Quest"
-            }
+              "kind": "drop",
+              "title": "Molten Core / World Drop BoE",
+              "detail": "High fire damage raiding wand"
+            },
+            "weaponType": "Wand"
           },
           {
             "name": "Bonecreeper Stylus",
@@ -1582,28 +1583,28 @@
           },
           {
             "name": "Blackbone Wand",
-            "itemId": 7514,
+            "itemId": 5239,
             "quality": "q2",
             "iLvl": 20,
             "reqLevel": 15,
             "dps": "15.3 DPS",
             "speed": "1.50",
-            "icon": "inv_wand_06",
+            "icon": "inv_wand_02",
             "value": "15.3 DPS, 1.50s - +3 Intellect - Duskwood Vendor (+15.3 DPS Shadow)",
-            "stats": "+3 Intellect",
+            "stats": "18 - 34 Shadow Damage",
             "lines": [
-              "Binds when picked up",
-              "Ranged\tWeapon",
-              "41 - 78 Damage\tSpeed 1.60",
-              "(37.19 damage per second)",
-              "+3 Intellect",
+              "Binds when equipped",
+              "Ranged\tWand",
+              "18 - 34 Shadow Damage\tSpeed 1.50",
+              "(17.33 damage per second)",
               "Requires Level 15"
             ],
             "source": {
-              "kind": "quest",
-              "title": "Mage's Wand",
-              "detail": "Leveling Quest Reward"
-            }
+              "kind": "vendor",
+              "title": "Wand Vendor / Trade",
+              "detail": "Early Shadow wand"
+            },
+            "weaponType": "Wand"
           },
           {
             "name": "Snapped Branch Wand",
@@ -2216,28 +2217,28 @@
           },
           {
             "name": "Wand of Biting Cold",
-            "itemId": 19130,
+            "itemId": 19108,
             "quality": "q3",
             "iLvl": 60,
             "reqLevel": 51,
-            "dps": "56.0 DPS",
-            "speed": "1.60",
-            "stats": "+16 Frost Spell Damage",
-            "icon": "inv_wand_09",
+            "dps": "52.5 DPS",
+            "speed": "1.40",
+            "stats": "59 - 110 Frost Damage",
+            "icon": "inv_wand_06",
             "value": "56.0 DPS, 1.60s - +16 Frost Spell Damage - Alterac Valley Quest Reward",
             "lines": [
               "Binds when picked up",
-              "Ranged\tWeapon",
-              "Speed 1.70",
-              "(85.29 damage per second)",
-              "+7 Intellect",
-              "Requires Level 60"
+              "Ranged\tWand",
+              "59 - 110 Frost Damage\tSpeed 1.40",
+              "(60.36 damage per second)",
+              "Requires Level 51"
             ],
             "source": {
               "kind": "quest",
-              "title": "Quest Reward",
-              "detail": "Leveling Quest Reward"
-            }
+              "title": "The Battle for Alterac",
+              "detail": "Alterac Valley quest reward wand"
+            },
+            "weaponType": "Wand"
           },
           {
             "name": "Noxious Shooter",
@@ -2405,27 +2406,28 @@
           },
           {
             "name": "Crimson Shocker",
-            "itemId": 18338,
+            "itemId": 17077,
             "quality": "q3",
-            "iLvl": 61,
-            "reqLevel": 56,
-            "dps": "60.3 DPS",
-            "speed": "1.70",
-            "stats": "+9 Spell Power",
+            "iLvl": 62,
+            "reqLevel": 57,
+            "dps": "54.0 DPS",
+            "speed": "1.50",
+            "stats": "67 - 126 Fire Damage",
             "icon": "inv_wand_05",
             "value": "60.3 DPS, 1.70s - +9 Spell Power - Illyanna Ravenoak",
             "lines": [
               "Binds when equipped",
-              "Ranged\tWeapon",
-              "Speed 1.60",
-              "(58.44 damage per second)",
-              "Requires Level 54"
+              "Ranged\tWand",
+              "67 - 126 Fire Damage\tSpeed 1.50",
+              "(64.33 damage per second)",
+              "Requires Level 57"
             ],
             "source": {
-              "kind": "world",
-              "title": "Leveling Item",
-              "detail": "World Drop / Quest"
-            }
+              "kind": "drop",
+              "title": "Molten Core / World Drop BoE",
+              "detail": "High fire damage raiding wand"
+            },
+            "weaponType": "Wand"
           },
           {
             "name": "Bonecreeper Stylus",
@@ -2828,28 +2830,28 @@
           },
           {
             "name": "Blackbone Wand",
-            "itemId": 7514,
+            "itemId": 5239,
             "quality": "q2",
             "iLvl": 20,
             "reqLevel": 15,
             "dps": "15.3 DPS",
             "speed": "1.50",
-            "icon": "inv_wand_06",
+            "icon": "inv_wand_02",
             "value": "15.3 DPS, 1.50s - +3 Intellect - Duskwood Vendor (+15.3 DPS Shadow)",
-            "stats": "+3 Intellect",
+            "stats": "18 - 34 Shadow Damage",
             "lines": [
-              "Binds when picked up",
-              "Ranged\tWeapon",
-              "41 - 78 Damage\tSpeed 1.60",
-              "(37.19 damage per second)",
-              "+3 Intellect",
+              "Binds when equipped",
+              "Ranged\tWand",
+              "18 - 34 Shadow Damage\tSpeed 1.50",
+              "(17.33 damage per second)",
               "Requires Level 15"
             ],
             "source": {
-              "kind": "quest",
-              "title": "Mage's Wand",
-              "detail": "Leveling Quest Reward"
-            }
+              "kind": "vendor",
+              "title": "Wand Vendor / Trade",
+              "detail": "Early Shadow wand"
+            },
+            "weaponType": "Wand"
           },
           {
             "name": "Snapped Branch Wand",
@@ -3462,28 +3464,28 @@
           },
           {
             "name": "Wand of Biting Cold",
-            "itemId": 19130,
+            "itemId": 19108,
             "quality": "q3",
             "iLvl": 60,
             "reqLevel": 51,
-            "dps": "56.0 DPS",
-            "speed": "1.60",
-            "stats": "+16 Frost Spell Damage",
-            "icon": "inv_wand_09",
+            "dps": "52.5 DPS",
+            "speed": "1.40",
+            "stats": "59 - 110 Frost Damage",
+            "icon": "inv_wand_06",
             "value": "56.0 DPS, 1.60s - +16 Frost Spell Damage - Alterac Valley Quest Reward",
             "lines": [
               "Binds when picked up",
-              "Ranged\tWeapon",
-              "Speed 1.70",
-              "(85.29 damage per second)",
-              "+7 Intellect",
-              "Requires Level 60"
+              "Ranged\tWand",
+              "59 - 110 Frost Damage\tSpeed 1.40",
+              "(60.36 damage per second)",
+              "Requires Level 51"
             ],
             "source": {
               "kind": "quest",
-              "title": "Quest Reward",
-              "detail": "Leveling Quest Reward"
-            }
+              "title": "The Battle for Alterac",
+              "detail": "Alterac Valley quest reward wand"
+            },
+            "weaponType": "Wand"
           },
           {
             "name": "Noxious Shooter",
@@ -3651,27 +3653,28 @@
           },
           {
             "name": "Crimson Shocker",
-            "itemId": 18338,
+            "itemId": 17077,
             "quality": "q3",
-            "iLvl": 61,
-            "reqLevel": 56,
-            "dps": "60.3 DPS",
-            "speed": "1.70",
-            "stats": "+9 Spell Power",
+            "iLvl": 62,
+            "reqLevel": 57,
+            "dps": "54.0 DPS",
+            "speed": "1.50",
+            "stats": "67 - 126 Fire Damage",
             "icon": "inv_wand_05",
             "value": "60.3 DPS, 1.70s - +9 Spell Power - Illyanna Ravenoak",
             "lines": [
               "Binds when equipped",
-              "Ranged\tWeapon",
-              "Speed 1.60",
-              "(58.44 damage per second)",
-              "Requires Level 54"
+              "Ranged\tWand",
+              "67 - 126 Fire Damage\tSpeed 1.50",
+              "(64.33 damage per second)",
+              "Requires Level 57"
             ],
             "source": {
-              "kind": "world",
-              "title": "Leveling Item",
-              "detail": "World Drop / Quest"
-            }
+              "kind": "drop",
+              "title": "Molten Core / World Drop BoE",
+              "detail": "High fire damage raiding wand"
+            },
+            "weaponType": "Wand"
           },
           {
             "name": "Bonecreeper Stylus",

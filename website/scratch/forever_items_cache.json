@@ -191,27 +191,26 @@
   },
   "811": {
     "id": 811,
-    "name": "Axe of the Deep Woods",
-    "icon": "inv_axe_07",
-    "iLvl": 57,
-    "reqLevel": 22,
-    "quality": "q4",
-    "speed": "2.60",
-    "dps": "1.9 DPS",
-    "dmgmin": 3,
-    "dmgmax": 7,
-    "stats": "Chance on hit: Blasts a target for 9 Nature damage.",
+    "name": "Burning War Axe",
+    "icon": "inv_axe_09",
+    "iLvl": 40,
+    "quality": "q3",
+    "reqLevel": 35,
+    "weaponType": "Two-Handed Axe",
+    "speed": "3.50",
+    "dps": "29.7 DPS",
+    "stats": "+14 Strength, +7 Agility, Chance on hit: Blasts a target for 60 Fire damage.",
     "lines": [
       "Binds when equipped",
-      "One-Hand\tAxe",
-      "3 - 7 Damage\tSpeed 2.60",
-      "(1.9 damage per second)",
-      "Chance on hit: Blasts a target for 9 Nature damage.",
-      "Requires Level 22"
+      "Two-Hand\tAxe",
+      "88 - 133 Damage\tSpeed 3.50",
+      "(31.57 damage per second)",
+      "+14 Strength",
+      "+7 Agility",
+      "Requires Level 35",
+      "Chance on hit: Blasts a target for 60 Fire damage."
     ],
-    "inventorySlot": "One-Hand",
-    "subclassName": "Axe",
-    "sourcemore": null
+    "inventorySlot": "Two-Hand"
   },
   "812": {
     "id": 812,
@@ -2879,6 +2878,28 @@
         "z": 10
       }
     ]
+  },
+  "2030": {
+    "id": 2030,
+    "name": "Woodchopper",
+    "icon": "inv_axe_08",
+    "iLvl": 19,
+    "quality": "q2",
+    "reqLevel": 14,
+    "weaponType": "Two-Handed Axe",
+    "speed": "3.40",
+    "dps": "11.5 DPS",
+    "stats": "+5 Strength, +3 Stamina",
+    "lines": [
+      "Binds when equipped",
+      "Two-Hand\tAxe",
+      "29 - 44 Damage\tSpeed 3.40",
+      "(10.74 damage per second)",
+      "+5 Strength",
+      "+3 Stamina",
+      "Requires Level 14"
+    ],
+    "inventorySlot": "Two-Hand"
   },
   "2035": {
     "id": 2035,
@@ -10808,24 +10829,24 @@
   },
   "5191": {
     "id": 5191,
-    "name": "Gilded Buckler",
-    "icon": "inv_shield_05",
-    "iLvl": 20,
-    "quality": "q2",
-    "reqLevel": 15,
-    "weaponType": "Shield",
-    "armor": 358,
-    "block": 11,
-    "stats": "+3 Stamina, +1 Spirit",
+    "name": "Cruel Barb",
+    "icon": "inv_sword_26",
+    "iLvl": 24,
+    "quality": "q3",
+    "reqLevel": 19,
+    "weaponType": "One-Handed Sword",
+    "speed": "2.80",
+    "dps": "17.0 DPS",
+    "stats": "+12 Attack Power",
     "lines": [
       "Binds when picked up",
-      "Off Hand\tShield",
-      "358 Armor",
-      "11 Block",
-      "+3 Stamina",
-      "+1 Spirit",
-      "Requires Level 15"
-    ]
+      "One-Hand\tSword",
+      "30 - 57 Damage\tSpeed 2.80",
+      "(15.54 damage per second)",
+      "+12 Attack Power",
+      "Requires Level 19"
+    ],
+    "inventorySlot": "Two-Hand"
   },
   "5192": {
     "id": 5192,
@@ -10903,23 +10924,24 @@
   "5195": {
     "id": 5195,
     "name": "Cookie's Tenderizer",
-    "icon": "inv_mace_08",
-    "iLvl": 22,
-    "quality": "q2",
-    "reqLevel": 17,
-    "speed": "2.70",
-    "dps": "13.70 DPS",
+    "icon": "inv_hammer_07",
+    "iLvl": 21,
+    "quality": "q3",
+    "reqLevel": 16,
     "weaponType": "One-Handed Mace",
-    "stats": "+3 Strength, +3 Stamina",
+    "speed": "2.40",
+    "dps": "10.8 DPS",
+    "stats": "+3 Strength, +2 Stamina",
     "lines": [
       "Binds when picked up",
-      "One-Hand\tOne-Handed Mace",
-      "30 - 56 Damage\tSpeed 2.70",
-      "(13.70 damage per second)",
+      "One-Hand\tMace",
+      "20 - 38 Damage\tSpeed 2.40",
+      "(12.08 damage per second)",
       "+3 Strength",
-      "+3 Stamina",
-      "Requires Level 17"
-    ]
+      "+2 Stamina",
+      "Requires Level 16"
+    ],
+    "inventorySlot": "Two-Hand"
   },
   "5196": {
     "id": 5196,
@@ -11119,6 +11141,26 @@
     "subclassName": "Wand",
     "side": "both",
     "sourcemore": null
+  },
+  "5239": {
+    "id": 5239,
+    "name": "Blackbone Wand",
+    "icon": "inv_wand_02",
+    "iLvl": 20,
+    "quality": "q2",
+    "reqLevel": 15,
+    "weaponType": "Wand",
+    "speed": "1.50",
+    "dps": "15.3 DPS",
+    "stats": "18 - 34 Shadow Damage",
+    "lines": [
+      "Binds when equipped",
+      "Ranged\tWand",
+      "18 - 34 Shadow Damage\tSpeed 1.50",
+      "(17.33 damage per second)",
+      "Requires Level 15"
+    ],
+    "inventorySlot": "Ranged"
   },
   "5240": {
     "id": 5240,
@@ -14042,24 +14084,25 @@
   },
   "6631": {
     "id": 6631,
-    "name": "Living Root",
-    "icon": "inv_staff_25",
-    "iLvl": 25,
+    "name": "Butcher's Slicer",
+    "icon": "inv_sword_18",
+    "iLvl": 21,
     "quality": "q3",
-    "reqLevel": 20,
-    "speed": "2.90",
-    "dps": "21.21 DPS",
-    "weaponType": "Staff",
-    "stats": "+5 Strength, +12 Stamina",
+    "reqLevel": 16,
+    "weaponType": "One-Handed Sword",
+    "speed": "2.50",
+    "dps": "10.6 DPS",
+    "stats": "+3 Strength, +2 Agility",
     "lines": [
       "Binds when picked up",
-      "Two-Hand\tStaff",
-      "49 - 74 Damage\tSpeed 2.90",
-      "(21.21 damage per second)",
-      "+5 Strength",
-      "+12 Stamina",
-      "Requires Level 20"
-    ]
+      "One-Hand\tSword",
+      "21 - 40 Damage\tSpeed 2.50",
+      "(12.20 damage per second)",
+      "+3 Strength",
+      "+2 Agility",
+      "Requires Level 16"
+    ],
+    "inventorySlot": "Two-Hand"
   },
   "6633": {
     "id": 6633,
@@ -15792,32 +15835,22 @@
     "name": "Smite's Mighty Hammer",
     "icon": "inv_hammer_09",
     "iLvl": 23,
-    "reqLevel": 18,
     "quality": "q3",
+    "reqLevel": 18,
+    "weaponType": "Two-Handed Mace",
     "speed": "3.50",
-    "dps": "19.71 DPS",
-    "dmgmin": 55,
-    "dmgmax": 83,
+    "dps": "19.8 DPS",
     "stats": "+11 Strength, +4 Agility",
     "lines": [
       "Binds when picked up",
-      "Two-Hand\tTwo-handed mace",
+      "Two-Hand\tMace",
       "55 - 83 Damage\tSpeed 3.50",
       "(19.71 damage per second)",
       "+11 Strength",
       "+4 Agility",
       "Requires Level 18"
     ],
-    "inventorySlot": "Two-Hand",
-    "subclassName": "Two-handed mace",
-    "sourcemore": [
-      {
-        "n": "Mr. Smite",
-        "t": 1,
-        "ti": 646,
-        "z": 1581
-      }
-    ]
+    "inventorySlot": "Two-Hand"
   },
   "7297": {
     "id": 7297,
@@ -17285,37 +17318,25 @@
   },
   "7957": {
     "id": 7957,
-    "name": "Bronze Greatsword",
-    "icon": "inv_sword_20",
-    "iLvl": 26,
-    "reqLevel": 21,
-    "quality": "q2",
-    "speed": "3.40",
-    "dps": "17.50 DPS",
-    "dmgmin": 47,
-    "dmgmax": 72,
-    "stats": "+6 Stamina, +7 Spell Power",
+    "name": "Cobalt Crusher",
+    "icon": "inv_hammer_16",
+    "iLvl": 38,
+    "quality": "q3",
+    "reqLevel": 33,
+    "weaponType": "Two-Handed Mace",
+    "speed": "3.60",
+    "dps": "26.9 DPS",
+    "stats": "+12 Strength, +11 Stamina",
     "lines": [
       "Binds when equipped",
-      "Two-Hand\tTwo-handed sword",
-      "47 - 72 Damage\tSpeed 3.40",
-      "(17.50 damage per second)",
-      "+6 Stamina",
-      "+7 Spell Power",
-      "Requires Level 21"
+      "Two-Hand\tMace",
+      "81 - 122 Damage\tSpeed 3.60",
+      "(28.19 damage per second)",
+      "+12 Strength",
+      "+11 Stamina",
+      "Requires Level 33"
     ],
-    "inventorySlot": "Two-Hand",
-    "subclassName": "Two-handed sword",
-    "sourcemore": [
-      {
-        "c": 11,
-        "icon": "inv_sword_20",
-        "n": "Bronze Greatsword",
-        "s": 164,
-        "t": 6,
-        "ti": 9986
-      }
-    ]
+    "inventorySlot": "Two-Hand"
   },
   "7958": {
     "id": 7958,
@@ -18226,36 +18247,25 @@
   },
   "9401": {
     "id": 9401,
-    "name": "Nordic Longshank",
-    "icon": "inv_sword_24",
-    "iLvl": 43,
-    "reqLevel": 38,
+    "name": "Battered Viking Shield",
+    "icon": "inv_shield_06",
+    "iLvl": 40,
     "quality": "q3",
-    "speed": "2.20",
-    "dps": "29.32 DPS",
-    "dmgmin": 45,
-    "dmgmax": 84,
-    "stats": "+8 Agility, +5 Stamina",
+    "reqLevel": 35,
+    "weaponType": "Shield",
+    "armor": 984,
+    "block": 22,
+    "stats": "+9 Strength, +7 Stamina, 984 Armor, 22 Block",
     "lines": [
       "Binds when picked up",
-      "One-Hand\t1H Sword",
-      "45 - 84 Damage\tSpeed 2.20",
-      "(29.32 damage per second)",
-      "+8 Agility",
-      "+5 Stamina",
-      "Requires Level 38"
+      "Off Hand\tShield",
+      "984 Armor",
+      "22 Block",
+      "+9 Strength",
+      "+7 Stamina",
+      "Requires Level 35"
     ],
-    "inventorySlot": "One-Hand",
-    "subclassName": "1H Sword",
-    "sourcemore": [
-      {
-        "bd": 1,
-        "n": "Baelog",
-        "t": 1,
-        "ti": 6906,
-        "z": 1337
-      }
-    ]
+    "inventorySlot": "Off Hand"
   },
   "9403": {
     "id": 9403,
@@ -18453,22 +18463,25 @@
   "9418": {
     "id": 9418,
     "name": "Stoneslayer",
-    "icon": "inv_sword_47",
+    "icon": "inv_sword_26",
     "iLvl": 49,
     "quality": "q3",
     "reqLevel": 44,
-    "speed": "3.90",
-    "dps": "42.69 DPS",
     "weaponType": "Two-Handed Sword",
-    "stats": "Chance on hit: Reduces enemy armor by 100",
+    "speed": "3.90",
+    "dps": "37.1 DPS",
+    "stats": "+10 Strength, +7 Agility, +15 Stamina",
     "lines": [
       "Binds when picked up",
-      "Two-Hand\tTwo-Handed Sword",
-      "131 - 197 Damage\tSpeed 3.90",
-      "(42.69 damage per second)",
-      "Chance on hit: Reduces enemy armor by 100",
+      "Two-Hand\tSword",
+      "121 - 183 Damage\tSpeed 3.90",
+      "(38.97 damage per second)",
+      "+10 Strength",
+      "+7 Agility",
+      "+15 Stamina",
       "Requires Level 44"
-    ]
+    ],
+    "inventorySlot": "Two-Hand"
   },
   "9419": {
     "id": 9419,
@@ -18708,34 +18721,24 @@
   },
   "9456": {
     "id": 9456,
-    "name": "Glass Shooter",
-    "icon": "inv_weapon_rifle_02",
-    "iLvl": 35,
-    "reqLevel": 30,
+    "name": "Thermaplugg's Central Core",
+    "icon": "inv_shield_11",
+    "iLvl": 34,
     "quality": "q3",
-    "speed": "2.90",
-    "dps": "17.93 DPS",
-    "dmgmin": 36,
-    "dmgmax": 68,
-    "stats": "",
+    "reqLevel": 29,
+    "weaponType": "Shield",
+    "armor": 721,
+    "block": 16,
+    "stats": "721 Armor, 16 Block, Equip: When struck in combat has a 5% chance of inflicting 50 Nature damage to all nearby enemies.",
     "lines": [
       "Binds when picked up",
-      "Ranged\tGun",
-      "36 - 68 Damage\tSpeed 2.90",
-      "(17.93 damage per second)",
-      "Requires Level 30"
+      "Off Hand\tShield",
+      "721 Armor",
+      "16 Block",
+      "Requires Level 29",
+      "Equip: When struck in combat has a 5% chance of inflicting 50 Nature damage to all nearby enemies."
     ],
-    "inventorySlot": "Ranged",
-    "subclassName": "Gun",
-    "sourcemore": [
-      {
-        "bd": 1,
-        "n": "Dark Iron Ambassador",
-        "t": 1,
-        "ti": 6228,
-        "z": 721
-      }
-    ]
+    "inventorySlot": "Off Hand"
   },
   "9457": {
     "id": 9457,
@@ -19317,12 +19320,11 @@
     "name": "Gritroot Staff",
     "icon": "inv_staff_22",
     "iLvl": 10,
-    "reqLevel": 4,
     "quality": "q2",
+    "reqLevel": 4,
+    "weaponType": "Staff",
     "speed": "2.60",
-    "dps": "5.38 DPS",
-    "dmgmin": 11,
-    "dmgmax": 17,
+    "dps": "5.4 DPS",
     "stats": "+1 Stamina, +2 Spell Power",
     "lines": [
       "Binds when picked up",
@@ -19333,17 +19335,7 @@
       "+2 Spell Power",
       "Requires Level 4"
     ],
-    "inventorySlot": "Two-Hand",
-    "subclassName": "Staff",
-    "sourcemore": [
-      {
-        "c": 141,
-        "c2": 1,
-        "n": "The Relics of Wakening",
-        "t": 5,
-        "ti": 483
-      }
-    ]
+    "inventorySlot": "Two-Hand"
   },
   "9604": {
     "id": 9604,
@@ -20560,6 +20552,28 @@
       }
     ]
   },
+  "10760": {
+    "id": 10760,
+    "name": "Swine Fists",
+    "icon": "inv_gauntlets_04",
+    "iLvl": 38,
+    "quality": "q3",
+    "reqLevel": 33,
+    "weaponType": "Fist Weapon",
+    "speed": "2.40",
+    "dps": "23.8 DPS",
+    "stats": "+7 Strength, +6 Agility",
+    "lines": [
+      "Binds when picked up",
+      "Main Hand\tFist Weapon",
+      "47 - 88 Damage\tSpeed 2.40",
+      "(28.12 damage per second)",
+      "+7 Strength",
+      "+6 Agility",
+      "Requires Level 33"
+    ],
+    "inventorySlot": "Two-Hand"
+  },
   "10761": {
     "id": 10761,
     "name": "Coldrage Dagger",
@@ -21626,6 +21640,29 @@
         "z": 1584
       }
     ]
+  },
+  "11805": {
+    "id": 11805,
+    "name": "Spire of the Stoneshaper",
+    "icon": "inv_staff_29",
+    "iLvl": 45,
+    "quality": "q3",
+    "reqLevel": 40,
+    "weaponType": "Staff",
+    "speed": "2.90",
+    "dps": "36.2 DPS",
+    "stats": "+10 Intellect, +17 Spirit, +5 Stamina",
+    "lines": [
+      "Binds when picked up",
+      "Two-Hand\tStaff",
+      "87 - 132 Damage\tSpeed 2.90",
+      "(37.76 damage per second)",
+      "+10 Intellect",
+      "+17 Spirit",
+      "+5 Stamina",
+      "Requires Level 40"
+    ],
+    "inventorySlot": "Two-Hand"
   },
   "11809": {
     "id": 11809,
@@ -25356,6 +25393,28 @@
         "z": 1583
       }
     ]
+  },
+  "13984": {
+    "id": 13984,
+    "name": "Witchblade",
+    "icon": "inv_weapon_shortblade_16",
+    "iLvl": 62,
+    "quality": "q3",
+    "reqLevel": 57,
+    "weaponType": "Dagger",
+    "speed": "1.50",
+    "dps": "40.3 DPS",
+    "stats": "+8 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 14.",
+    "lines": [
+      "Binds when picked up",
+      "One-Hand\tDagger",
+      "46 - 87 Damage\tSpeed 1.50",
+      "(44.33 damage per second)",
+      "+8 Intellect",
+      "Requires Level 57",
+      "Equip: Increases damage and healing done by magical spells and effects by up to 14."
+    ],
+    "inventorySlot": "Two-Hand"
   },
   "14002": {
     "id": 14002,
@@ -29465,6 +29524,26 @@
       }
     ]
   },
+  "17077": {
+    "id": 17077,
+    "name": "Crimson Shocker",
+    "icon": "inv_wand_05",
+    "iLvl": 62,
+    "quality": "q3",
+    "reqLevel": 57,
+    "weaponType": "Wand",
+    "speed": "1.50",
+    "dps": "54.0 DPS",
+    "stats": "67 - 126 Fire Damage",
+    "lines": [
+      "Binds when equipped",
+      "Ranged\tWand",
+      "67 - 126 Fire Damage\tSpeed 1.50",
+      "(64.33 damage per second)",
+      "Requires Level 57"
+    ],
+    "inventorySlot": "Ranged"
+  },
   "17105": {
     "id": 17105,
     "name": "Aurastone Hammer",
@@ -31685,6 +31764,26 @@
       }
     ]
   },
+  "19108": {
+    "id": 19108,
+    "name": "Wand of Biting Cold",
+    "icon": "inv_wand_06",
+    "iLvl": 60,
+    "quality": "q3",
+    "reqLevel": 51,
+    "weaponType": "Wand",
+    "speed": "1.40",
+    "dps": "52.5 DPS",
+    "stats": "59 - 110 Frost Damage",
+    "lines": [
+      "Binds when picked up",
+      "Ranged\tWand",
+      "59 - 110 Frost Damage\tSpeed 1.40",
+      "(60.36 damage per second)",
+      "Requires Level 51"
+    ],
+    "inventorySlot": "Ranged"
+  },
   "19114": {
     "id": 19114,
     "name": "Highland Bow",
@@ -31944,24 +32043,21 @@
   "19308": {
     "id": 19308,
     "name": "Tome of Arcane Domination",
-    "icon": "inv_misc_book_01",
+    "icon": "inv_misc_book_07",
     "iLvl": 60,
+    "quality": "q3",
     "reqLevel": 55,
-    "quality": "q4",
-    "speed": null,
-    "dps": null,
-    "dmgmin": null,
-    "dmgmax": null,
-    "stats": "+3 MP5",
+    "weaponType": "Held in Off-Hand",
+    "stats": "+10 Intellect, +10 Spirit, Equip: Increases damage done by Arcane spells and effects by up to 21.",
     "lines": [
       "Binds when picked up",
-      "Held In Off-hand\tHeld In Off-hand",
-      "+3 MP5",
-      "Requires Level 55"
+      "Held In Off-hand",
+      "+10 Intellect",
+      "+10 Spirit",
+      "Requires Level 55",
+      "Equip: Increases damage done by Arcane spells and effects by up to 21."
     ],
-    "inventorySlot": "Held In Off-hand",
-    "subclassName": "Held In Off-hand",
-    "sourcemore": null
+    "inventorySlot": "Held In Off-hand"
   },
   "19309": {
     "id": 19309,
@@ -31987,19 +32083,22 @@
   },
   "19310": {
     "id": 19310,
-    "name": "Tome of the Ice Lord",
-    "icon": "inv_misc_book_11",
+    "name": "Tome of the Fiery Arcana",
+    "icon": "inv_misc_book_06",
     "iLvl": 60,
+    "quality": "q3",
     "reqLevel": 55,
-    "quality": "q4",
-    "speed": null,
-    "dps": null,
-    "stats": "+8 Intellect",
-    "inventorySlot": "Held In Off-hand",
-    "subclass": -5,
-    "subclassName": "Weapon",
-    "side": "both",
-    "sourcemore": null
+    "weaponType": "Held in Off-Hand",
+    "stats": "+10 Intellect, +10 Spirit, Equip: Increases damage done by Fire spells and effects by up to 21.",
+    "lines": [
+      "Binds when picked up",
+      "Held In Off-hand",
+      "+10 Intellect",
+      "+10 Spirit",
+      "Requires Level 55",
+      "Equip: Increases damage done by Fire spells and effects by up to 21."
+    ],
+    "inventorySlot": "Held In Off-hand"
   },
   "19311": {
     "id": 19311,
@@ -32042,25 +32141,21 @@
   },
   "19315": {
     "id": 19315,
-    "name": "Therazane's Touch",
-    "icon": "inv_misc_branch_01",
-    "iLvl": 60,
-    "reqLevel": 55,
+    "name": "Master Dragonslayer's Orb",
+    "icon": "inv_misc_gem_pearl_01",
+    "iLvl": 83,
     "quality": "q4",
-    "speed": null,
-    "dps": null,
-    "dmgmin": null,
-    "dmgmax": null,
-    "stats": "+29 Spell Power",
+    "reqLevel": 60,
+    "weaponType": "Held in Off-Hand",
+    "stats": "+14 Stamina, Equip: Increases damage and healing done by magical spells and effects by up to 28.",
     "lines": [
       "Binds when picked up",
-      "Held In Off-hand\tHeld In Off-hand",
-      "+29 Spell Power",
-      "Requires Level 55"
+      "Held In Off-hand",
+      "+14 Stamina",
+      "Requires Level 60",
+      "Equip: Increases damage and healing done by magical spells and effects by up to 28."
     ],
-    "inventorySlot": "Held In Off-hand",
-    "subclassName": "Held In Off-hand",
-    "sourcemore": null
+    "inventorySlot": "Held In Off-hand"
   },
   "19321": {
     "id": 19321,
@@ -50400,25 +50495,24 @@
   },
   "281722": {
     "id": 281722,
-    "name": "Restored Dagger",
+    "name": "Scrappy Dagger",
     "icon": "inv_weapon_shortblade_05",
-    "iLvl": 1,
-    "reqLevel": 1,
+    "iLvl": 8,
     "quality": "q2",
-    "speed": "1.70",
-    "dps": "1.18 DPS",
-    "dmgmin": 1,
-    "dmgmax": 3,
-    "stats": "",
+    "reqLevel": 4,
+    "weaponType": "Dagger",
+    "speed": "1.50",
+    "dps": "4.5 DPS",
+    "stats": "+1 Agility",
     "lines": [
       "Binds when picked up",
       "One-Hand\tDagger",
-      "1 - 3 Damage\tSpeed 1.70",
-      "(1.18 damage per second)"
+      "5 - 10 Damage\tSpeed 1.50",
+      "(5.00 damage per second)",
+      "+1 Agility",
+      "Requires Level 4"
     ],
-    "inventorySlot": "One-Hand",
-    "subclassName": "Dagger",
-    "sourcemore": null
+    "inventorySlot": "Two-Hand"
   },
   "281723": {
     "id": 281723,

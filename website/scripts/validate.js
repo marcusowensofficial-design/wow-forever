@@ -722,6 +722,62 @@ check('Class weapon progression database coverage and pipeline integrity across 
   }
 });
 
+check('Progression items canonical database integrity and slot validity', () => {
+  const cachePath = path.join(ROOT, 'scratch', 'forever_items_cache.json');
+  if (!fs.existsSync(cachePath)) throw new Error('Missing forever_items_cache.json');
+  const cache = JSON.parse(fs.readFileSync(cachePath, 'utf8'));
+
+  const fwPath = path.join(ROOT, 'data', 'scraped', 'forever_weapons.json');
+  const foPath = path.join(ROOT, 'data', 'scraped', 'forever_offhands.json');
+  const fwanPath = path.join(ROOT, 'data', 'scraped', 'forever_wands.json');
+
+  const files = [
+    { name: 'weapons', data: JSON.parse(fs.readFileSync(fwPath, 'utf8')) },
+    { name: 'offhands', data: JSON.parse(fs.readFileSync(foPath, 'utf8')) },
+    { name: 'wands', data: JSON.parse(fs.readFileSync(fwanPath, 'utf8')) }
+  ];
+
+  const illegalSlots = new Set(['Chest', 'Head', 'Shoulder', 'Legs', 'Feet', 'Wrist', 'Hands', 'Waist', 'Finger', 'Trinket', 'Bag', 'Back']);
+  const violations = [];
+
+  function validate(item, pathStr) {
+    if (!item || typeof item !== 'object') return;
+    const id = item.itemId || item.id;
+    if (!id) return;
+
+    // 1. Must not have hallucinated or placeholder names
+    if (item.name && /dor'danil|placeholder|unknown item/i.test(item.name)) {
+      violations.push(`${pathStr}: Hallucinated/invalid item name "${item.name}"`);
+    }
+
+    // 2. Cache cross-examination
+    const c = cache[id];
+    if (c) {
+      if (c.inventorySlot && illegalSlots.has(c.inventorySlot)) {
+        violations.push(`${pathStr}: Item "${item.name}" (ID ${id}) is armor/accessory (${c.inventorySlot}) in weapon/off-hand path`);
+      }
+    }
+  }
+
+  function walk(obj, pathStr) {
+    if (!obj || typeof obj !== 'object') return;
+    if (obj.name && (obj.itemId || obj.id)) {
+      validate(obj, pathStr);
+    }
+    for (const [k, v] of Object.entries(obj)) {
+      walk(v, `${pathStr}.${k}`);
+    }
+  }
+
+  for (const f of files) {
+    walk(f.data, f.name);
+  }
+
+  if (violations.length > 0) {
+    throw new Error(`Integrity violations found in progression data:\n  ${violations.slice(0, 10).join('\n  ')}`);
+  }
+});
+
 
 console.log('\n=======================================');
 console.log(`Ran ${totalChecks} checks. Failures: ${errors.length}`);

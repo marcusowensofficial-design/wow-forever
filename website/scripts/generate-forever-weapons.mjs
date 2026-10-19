@@ -194,15 +194,15 @@ const weaponsData = {
             "stats": ""
           },
           {
-            "name": "Staff of the Dor'Danil",
+            "name": "Curvewood Dagger",
             "itemId": 15396,
-            "value": "8.5 DPS - Teldrassil quest reward",
+            "value": "7.0 DPS, 1.50s - +1 Stamina - Teldrassil quest: The Fragments Within",
             "faction": "alliance",
-            "dps": "8.5 DPS",
+            "dps": "7.0 DPS",
             "quality": "q2",
-            "iLvl": 12,
+            "iLvl": 14,
             "reqLevel": 6,
-            "stats": ""
+            "stats": "+1 Stamina"
           },
           {
             "name": "Riptear's Cleaver",
@@ -5668,15 +5668,15 @@ const weaponsData = {
         },
         "alts": [
           {
-            "name": "Staff of the Dor'Danil",
+            "name": "Curvewood Dagger",
             "itemId": 15396,
-            "value": "8.5 DPS - Early quest staff",
-            "faction": "both",
-            "dps": "8.5 DPS",
+            "value": "7.0 DPS, 1.50s - +1 Stamina - Teldrassil quest: The Fragments Within",
+            "faction": "alliance",
+            "dps": "7.0 DPS",
             "quality": "q2",
-            "iLvl": 12,
+            "iLvl": 14,
             "reqLevel": 6,
-            "stats": ""
+            "stats": "+1 Stamina"
           },
           {
             "name": "Large Club",
@@ -7096,15 +7096,15 @@ const weaponsData = {
         },
         "alts": [
           {
-            "name": "Staff of the Dor'Danil",
+            "name": "Curvewood Dagger",
             "itemId": 15396,
-            "value": "8.5 DPS - Teldrassil quest",
+            "value": "7.0 DPS, 1.50s - +1 Stamina - Teldrassil quest: The Fragments Within",
             "faction": "alliance",
-            "dps": "8.5 DPS",
+            "dps": "7.0 DPS",
             "quality": "q2",
-            "iLvl": 12,
+            "iLvl": 14,
             "reqLevel": 6,
-            "stats": ""
+            "stats": "+1 Stamina"
           },
           {
             "name": "Lesser Magic Wand",
@@ -7192,15 +7192,15 @@ const weaponsData = {
             "stats": ""
           },
           {
-            "name": "Staff of the Dor'Danil",
+            "name": "Curvewood Dagger",
             "itemId": 15396,
-            "value": "8.5 DPS - Early quest",
-            "faction": "both",
-            "dps": "8.5 DPS",
+            "value": "7.0 DPS, 1.50s - +1 Stamina - Teldrassil quest: The Fragments Within",
+            "faction": "alliance",
+            "dps": "7.0 DPS",
             "quality": "q2",
             "iLvl": 14,
-            "reqLevel": 8,
-            "stats": ""
+            "reqLevel": 6,
+            "stats": "+1 Stamina"
           },
           {
             "name": "Riptear's Spare Arm",
@@ -8556,15 +8556,15 @@ const weaponsData = {
         },
         "alts": [
           {
-            "name": "Staff of the Dor'Danil",
+            "name": "Curvewood Dagger",
             "itemId": 15396,
-            "value": "8.5 DPS - Early quest",
-            "faction": "both",
-            "dps": "8.5 DPS",
+            "value": "7.0 DPS, 1.50s - +1 Stamina - Teldrassil quest: The Fragments Within",
+            "faction": "alliance",
+            "dps": "7.0 DPS",
             "quality": "q2",
-            "iLvl": 12,
+            "iLvl": 14,
             "reqLevel": 6,
-            "stats": ""
+            "stats": "+1 Stamina"
           },
           {
             "name": "Lesser Magic Wand",
@@ -8652,15 +8652,15 @@ const weaponsData = {
             "stats": ""
           },
           {
-            "name": "Staff of the Dor'Danil",
+            "name": "Curvewood Dagger",
             "itemId": 15396,
-            "value": "8.5 DPS - Early quest",
-            "faction": "both",
-            "dps": "8.5 DPS",
+            "value": "7.0 DPS, 1.50s - +1 Stamina - Teldrassil quest: The Fragments Within",
+            "faction": "alliance",
+            "dps": "7.0 DPS",
             "quality": "q2",
             "iLvl": 14,
-            "reqLevel": 8,
-            "stats": ""
+            "reqLevel": 6,
+            "stats": "+1 Stamina"
           },
           {
             "name": "Riptear's Spare Arm",
@@ -9991,15 +9991,15 @@ const weaponsData = {
         },
         "alts": [
           {
-            "name": "Staff of the Dor'Danil",
+            "name": "Curvewood Dagger",
             "itemId": 15396,
-            "value": "8.5 DPS - Early quest",
-            "faction": "both",
-            "dps": "8.5 DPS",
+            "value": "7.0 DPS, 1.50s - +1 Stamina - Teldrassil quest: The Fragments Within",
+            "faction": "alliance",
+            "dps": "7.0 DPS",
             "quality": "q2",
-            "iLvl": 12,
+            "iLvl": 14,
             "reqLevel": 6,
-            "stats": ""
+            "stats": "+1 Stamina"
           },
           {
             "name": "Lesser Magic Wand",
@@ -10087,15 +10087,15 @@ const weaponsData = {
             "stats": ""
           },
           {
-            "name": "Staff of the Dor'Danil",
+            "name": "Curvewood Dagger",
             "itemId": 15396,
-            "value": "8.5 DPS - Early quest",
-            "faction": "both",
-            "dps": "8.5 DPS",
+            "value": "7.0 DPS, 1.50s - +1 Stamina - Teldrassil quest: The Fragments Within",
+            "faction": "alliance",
+            "dps": "7.0 DPS",
             "quality": "q2",
             "iLvl": 14,
-            "reqLevel": 8,
-            "stats": ""
+            "reqLevel": 6,
+            "stats": "+1 Stamina"
           },
           {
             "name": "Riptear's Spare Arm",
@@ -11481,15 +11481,15 @@ const weaponsData = {
         },
         "alts": [
           {
-            "name": "Staff of the Dor'Danil",
+            "name": "Curvewood Dagger",
             "itemId": 15396,
-            "value": "8.5 DPS - Teldrassil quest",
+            "value": "7.0 DPS, 1.50s - +1 Stamina - Teldrassil quest: The Fragments Within",
             "faction": "alliance",
-            "dps": "8.5 DPS",
+            "dps": "7.0 DPS",
             "quality": "q2",
-            "iLvl": 12,
+            "iLvl": 14,
             "reqLevel": 6,
-            "stats": ""
+            "stats": "+1 Stamina"
           },
           {
             "name": "Apprentice's Spellstaff",
@@ -11552,15 +11552,15 @@ const weaponsData = {
         },
         "alts": [
           {
-            "name": "Staff of the Dor'Danil",
+            "name": "Curvewood Dagger",
             "itemId": 15396,
-            "value": "8.5 DPS - Early quest",
-            "faction": "both",
-            "dps": "8.5 DPS",
+            "value": "7.0 DPS, 1.50s - +1 Stamina - Teldrassil quest: The Fragments Within",
+            "faction": "alliance",
+            "dps": "7.0 DPS",
             "quality": "q2",
             "iLvl": 14,
-            "reqLevel": 8,
-            "stats": ""
+            "reqLevel": 6,
+            "stats": "+1 Stamina"
           },
           {
             "name": "Trogg Scepter",

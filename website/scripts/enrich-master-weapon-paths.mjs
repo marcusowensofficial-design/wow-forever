@@ -287,7 +287,7 @@ function enrichClassWeapons() {
 
     // Remove self-referential alts and repetitive Kris of Orgrimmar
     for (const l of cLevels) {
-      l.alts = l.alts.filter(a => a.name !== l.name && a.name !== "Staff of the Dor'Danil" || l.name !== "Staff of the Dor'Danil");
+      l.alts = l.alts.filter(a => a.name !== l.name && a.name !== "Staff of the Dor'Danil");
       l.alts = cleanAlts(l.alts, l.name);
     }
 

@@ -1028,26 +1028,28 @@
       },
       {
         "levelBracket": "35–38",
-        "itemId": 9449,
+        "itemId": 9401,
         "name": "Battered Viking Shield",
-        "icon": "inv_mace_14",
-        "weaponType": "Held In Off-hand",
-        "stats": "+16 Strength, +5 Agility, Use: Increases your attack speed by 50% for 30 sec. (3 Min Cooldown)",
+        "icon": "inv_shield_06",
+        "weaponType": "Shield",
+        "stats": "+9 Strength, +7 Stamina, 984 Armor, 22 Block",
         "source": {
-          "kind": "quest",
-          "title": "Drop / Quest",
-          "detail": "Uldaman: Eric 'The Swift'. Iconic heavy kite shield with massive armor."
+          "kind": "dungeon",
+          "title": "Uldaman — Olaf / Eric / Baelog",
+          "detail": "Uldaman Lost Vikings shield"
         },
         "faction": "both",
         "quality": "q3",
-        "iLvl": 34,
-        "reqLevel": 29,
+        "iLvl": 40,
+        "reqLevel": 35,
         "lines": [
-          "Held In Off-hand",
-          "+16 Strength",
-          "+5 Agility",
-          "Use: Increases your attack speed by 50% for 30 sec. (3 Min Cooldown)",
-          "Requires Level 29"
+          "Binds when picked up",
+          "Off Hand\tShield",
+          "984 Armor",
+          "22 Block",
+          "+9 Strength",
+          "+7 Stamina",
+          "Requires Level 35"
         ],
         "alts": [
           {
@@ -1176,7 +1178,9 @@
           }
         ],
         "speed": "2.00",
-        "dps": "29.00 DPS"
+        "dps": "29.00 DPS",
+        "armor": 984,
+        "block": 22
       },
       {
         "levelBracket": "39–42",
@@ -3486,26 +3490,28 @@
       },
       {
         "levelBracket": "35–38",
-        "itemId": 9449,
+        "itemId": 9401,
         "name": "Battered Viking Shield",
-        "icon": "inv_mace_14",
-        "weaponType": "Held In Off-hand",
-        "stats": "+16 Strength, +5 Agility, Use: Increases your attack speed by 50% for 30 sec. (3 Min Cooldown)",
+        "icon": "inv_shield_06",
+        "weaponType": "Shield",
+        "stats": "+9 Strength, +7 Stamina, 984 Armor, 22 Block",
         "source": {
-          "kind": "quest",
-          "title": "Drop / Quest",
-          "detail": "Uldaman: Eric 'The Swift'. Iconic heavy kite shield with massive armor."
+          "kind": "dungeon",
+          "title": "Uldaman — Olaf / Eric / Baelog",
+          "detail": "Uldaman Lost Vikings shield"
         },
         "faction": "both",
         "quality": "q3",
-        "iLvl": 34,
-        "reqLevel": 29,
+        "iLvl": 40,
+        "reqLevel": 35,
         "lines": [
-          "Held In Off-hand",
-          "+16 Strength",
-          "+5 Agility",
-          "Use: Increases your attack speed by 50% for 30 sec. (3 Min Cooldown)",
-          "Requires Level 29"
+          "Binds when picked up",
+          "Off Hand\tShield",
+          "984 Armor",
+          "22 Block",
+          "+9 Strength",
+          "+7 Stamina",
+          "Requires Level 35"
         ],
         "alts": [
           {
@@ -3634,7 +3640,9 @@
           }
         ],
         "speed": "2.00",
-        "dps": "29.00 DPS"
+        "dps": "29.00 DPS",
+        "armor": 984,
+        "block": 22
       },
       {
         "levelBracket": "39–42",
@@ -5943,27 +5951,30 @@
           },
           {
             "name": "Thermaplugg's Central Core",
-            "itemId": 9458,
-            "icon": "inv_shield_10",
+            "itemId": 9456,
+            "icon": "inv_shield_11",
             "weaponType": "Shield",
             "value": "776 Armor, +17 Block, +3 Spirit - Mekgineer Thermaplugg",
             "faction": "both",
             "quality": "q3",
-            "iLvl": 36,
-            "reqLevel": 31,
-            "stats": "776 Armor, +17 Block, +3 Spirit",
+            "iLvl": 34,
+            "reqLevel": 29,
+            "stats": "721 Armor, 16 Block, Equip: When struck in combat has a 5% chance of inflicting 50 Nature damage to all nearby enemies.",
             "lines": [
-              "Shield",
-              "776 Armor",
-              "+17 Block",
-              "+3 Spirit",
-              "Requires Level 31"
+              "Binds when picked up",
+              "Off Hand\tShield",
+              "721 Armor",
+              "16 Block",
+              "Requires Level 29",
+              "Equip: When struck in combat has a 5% chance of inflicting 50 Nature damage to all nearby enemies."
             ],
             "source": {
               "kind": "dungeon",
-              "title": "Mekgineer Thermaplugg",
-              "detail": "Dungeon Boss Drop"
-            }
+              "title": "Gnomeregan — Mekgineer Thermaplugg",
+              "detail": "Iconic Gnomeregan shield with AOE Nature retaliation"
+            },
+            "armor": 721,
+            "block": 16
           },
           {
             "name": "Grom'gol Buckler",
@@ -6020,26 +6031,28 @@
       },
       {
         "levelBracket": "35–38",
-        "itemId": 9403,
+        "itemId": 9401,
         "name": "Battered Viking Shield",
-        "icon": "inv_shield_07",
+        "icon": "inv_shield_06",
         "weaponType": "Shield",
-        "stats": "1287 Armor, +10 Spirit, Equip: Increases healing done by up to 13",
+        "stats": "+9 Strength, +7 Stamina, 984 Armor, 22 Block",
         "source": {
           "kind": "dungeon",
-          "title": "Olaf",
-          "detail": "Uldaman: Eric 'The Swift'. High mitigation shield with Spirit and dedicated +13 Healing equip."
+          "title": "Uldaman — Olaf / Eric / Baelog",
+          "detail": "Uldaman Lost Vikings shield"
         },
         "faction": "both",
         "quality": "q3",
-        "iLvl": 42,
-        "reqLevel": 37,
+        "iLvl": 40,
+        "reqLevel": 35,
         "lines": [
-          "Shield",
-          "1287 Armor",
-          "+10 Spirit",
-          "Equip: Increases healing done by up to 13",
-          "Requires Level 37"
+          "Binds when picked up",
+          "Off Hand\tShield",
+          "984 Armor",
+          "22 Block",
+          "+9 Strength",
+          "+7 Stamina",
+          "Requires Level 35"
         ],
         "alts": [
           {
@@ -6118,7 +6131,9 @@
               "detail": "Leveling Quest Reward"
             }
           }
-        ]
+        ],
+        "armor": 984,
+        "block": 22
       },
       {
         "levelBracket": "39–42",
@@ -8399,26 +8414,28 @@
       },
       {
         "levelBracket": "35–38",
-        "itemId": 9449,
+        "itemId": 9401,
         "name": "Battered Viking Shield",
-        "icon": "inv_mace_14",
-        "weaponType": "Held In Off-hand",
-        "stats": "+16 Strength, +5 Agility, Use: Increases your attack speed by 50% for 30 sec. (3 Min Cooldown)",
+        "icon": "inv_shield_06",
+        "weaponType": "Shield",
+        "stats": "+9 Strength, +7 Stamina, 984 Armor, 22 Block",
         "source": {
-          "kind": "quest",
-          "title": "Drop / Quest",
-          "detail": "Uldaman: Eric 'The Swift'. Iconic heavy kite shield with massive armor."
+          "kind": "dungeon",
+          "title": "Uldaman — Olaf / Eric / Baelog",
+          "detail": "Uldaman Lost Vikings shield"
         },
         "faction": "both",
         "quality": "q3",
-        "iLvl": 34,
-        "reqLevel": 29,
+        "iLvl": 40,
+        "reqLevel": 35,
         "lines": [
-          "Held In Off-hand",
-          "+16 Strength",
-          "+5 Agility",
-          "Use: Increases your attack speed by 50% for 30 sec. (3 Min Cooldown)",
-          "Requires Level 29"
+          "Binds when picked up",
+          "Off Hand\tShield",
+          "984 Armor",
+          "22 Block",
+          "+9 Strength",
+          "+7 Stamina",
+          "Requires Level 35"
         ],
         "alts": [
           {
@@ -8547,7 +8564,9 @@
           }
         ],
         "speed": "2.00",
-        "dps": "29.00 DPS"
+        "dps": "29.00 DPS",
+        "armor": 984,
+        "block": 22
       },
       {
         "levelBracket": "39–42",
@@ -10856,27 +10875,30 @@
           },
           {
             "name": "Thermaplugg's Central Core",
-            "itemId": 9458,
-            "icon": "inv_shield_10",
+            "itemId": 9456,
+            "icon": "inv_shield_11",
             "weaponType": "Shield",
             "value": "776 Armor, +17 Block, +3 Spirit - Mekgineer Thermaplugg",
             "faction": "both",
             "quality": "q3",
-            "iLvl": 36,
-            "reqLevel": 31,
-            "stats": "776 Armor, +17 Block, +3 Spirit",
+            "iLvl": 34,
+            "reqLevel": 29,
+            "stats": "721 Armor, 16 Block, Equip: When struck in combat has a 5% chance of inflicting 50 Nature damage to all nearby enemies.",
             "lines": [
-              "Shield",
-              "776 Armor",
-              "+17 Block",
-              "+3 Spirit",
-              "Requires Level 31"
+              "Binds when picked up",
+              "Off Hand\tShield",
+              "721 Armor",
+              "16 Block",
+              "Requires Level 29",
+              "Equip: When struck in combat has a 5% chance of inflicting 50 Nature damage to all nearby enemies."
             ],
             "source": {
               "kind": "dungeon",
-              "title": "Mekgineer Thermaplugg",
-              "detail": "Dungeon Boss Drop"
-            }
+              "title": "Gnomeregan — Mekgineer Thermaplugg",
+              "detail": "Iconic Gnomeregan shield with AOE Nature retaliation"
+            },
+            "armor": 721,
+            "block": 16
           },
           {
             "name": "Grom'gol Buckler",
@@ -10933,26 +10955,28 @@
       },
       {
         "levelBracket": "35–38",
-        "itemId": 9403,
+        "itemId": 9401,
         "name": "Battered Viking Shield",
-        "icon": "inv_shield_07",
+        "icon": "inv_shield_06",
         "weaponType": "Shield",
-        "stats": "1287 Armor, +10 Spirit, Equip: Increases healing done by up to 13",
+        "stats": "+9 Strength, +7 Stamina, 984 Armor, 22 Block",
         "source": {
           "kind": "dungeon",
-          "title": "Olaf",
-          "detail": "Uldaman: Eric 'The Swift'. High mitigation shield with Spirit and dedicated +13 Healing equip."
+          "title": "Uldaman — Olaf / Eric / Baelog",
+          "detail": "Uldaman Lost Vikings shield"
         },
         "faction": "both",
         "quality": "q3",
-        "iLvl": 42,
-        "reqLevel": 37,
+        "iLvl": 40,
+        "reqLevel": 35,
         "lines": [
-          "Shield",
-          "1287 Armor",
-          "+10 Spirit",
-          "Equip: Increases healing done by up to 13",
-          "Requires Level 37"
+          "Binds when picked up",
+          "Off Hand\tShield",
+          "984 Armor",
+          "22 Block",
+          "+9 Strength",
+          "+7 Stamina",
+          "Requires Level 35"
         ],
         "alts": [
           {
@@ -11031,7 +11055,9 @@
               "detail": "Leveling Quest Reward"
             }
           }
-        ]
+        ],
+        "armor": 984,
+        "block": 22
       },
       {
         "levelBracket": "39–42",
@@ -12656,28 +12682,32 @@
           },
           {
             "name": "Thermaplugg's Central Core",
-            "itemId": 9513,
-            "icon": "inv_staff_21",
-            "weaponType": "Held In Off-hand",
+            "itemId": 9456,
+            "icon": "inv_shield_11",
+            "weaponType": "Shield",
             "value": "5.34 DPS, 2.90s - +1 Intellect, +1 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 2 - Gnomeregan",
             "faction": "both",
-            "quality": "q2",
-            "iLvl": 10,
-            "reqLevel": 10,
-            "stats": "+1 Intellect, +1 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 2",
+            "quality": "q3",
+            "iLvl": 34,
+            "reqLevel": 29,
+            "stats": "721 Armor, 16 Block, Equip: When struck in combat has a 5% chance of inflicting 50 Nature damage to all nearby enemies.",
             "lines": [
-              "Held In Off-hand",
-              "+1 Intellect",
-              "+1 Spirit",
-              "Equip: Increases damage and healing done by magical spells and effects by up to 2"
+              "Binds when picked up",
+              "Off Hand\tShield",
+              "721 Armor",
+              "16 Block",
+              "Requires Level 29",
+              "Equip: When struck in combat has a 5% chance of inflicting 50 Nature damage to all nearby enemies."
             ],
             "source": {
               "kind": "dungeon",
-              "title": "Drop / Quest",
-              "detail": "Dungeon Drop"
+              "title": "Gnomeregan — Mekgineer Thermaplugg",
+              "detail": "Iconic Gnomeregan shield with AOE Nature retaliation"
             },
             "speed": "2.90",
-            "dps": "5.34 DPS"
+            "dps": "5.34 DPS",
+            "armor": 721,
+            "block": 16
           }
         ],
         "speed": "2.00"
@@ -13268,49 +13298,52 @@
         "alts": [
           {
             "name": "Tome of the Fiery Arcana",
-            "itemId": 19308,
-            "icon": "inv_misc_book_01",
-            "weaponType": "Held In Off-hand",
+            "itemId": 19310,
+            "icon": "inv_misc_book_06",
+            "weaponType": "Held in Off-Hand",
             "value": "+3 MP5 - Alterac Valley (Fire Mage BiS)",
             "faction": "both",
-            "quality": "q4",
+            "quality": "q3",
             "iLvl": 60,
             "reqLevel": 55,
-            "stats": "+3 MP5",
+            "stats": "+10 Intellect, +10 Spirit, Equip: Increases damage done by Fire spells and effects by up to 21.",
             "lines": [
+              "Binds when picked up",
               "Held In Off-hand",
-              "+3 MP5",
-              "Requires Level 55"
+              "+10 Intellect",
+              "+10 Spirit",
+              "Requires Level 55",
+              "Equip: Increases damage done by Fire spells and effects by up to 21."
             ],
             "source": {
-              "kind": "world",
-              "title": "World Drop Epic / Raid",
-              "detail": "Zone Drop / Rare Mob"
+              "kind": "drop",
+              "title": "Blackwing Lair / World Drop",
+              "detail": "Fire caster off-hand"
             }
           },
           {
             "name": "Tome of Arcane Domination",
-            "itemId": 19312,
-            "icon": "inv_misc_flower_04",
-            "weaponType": "Held In Off-hand",
+            "itemId": 19308,
+            "icon": "inv_misc_book_07",
+            "weaponType": "Held in Off-Hand",
             "value": "+11 Stamina, +25 Healing, +12 Spell Power, +5 MP5 - Alterac Valley (Arcane BiS)",
             "faction": "both",
-            "quality": "q4",
+            "quality": "q3",
             "iLvl": 60,
             "reqLevel": 55,
-            "stats": "+11 Stamina, +25 Healing, +12 Spell Power, +5 MP5",
+            "stats": "+10 Intellect, +10 Spirit, Equip: Increases damage done by Arcane spells and effects by up to 21.",
             "lines": [
+              "Binds when picked up",
               "Held In Off-hand",
-              "+11 Stamina",
-              "+25 Healing",
-              "+12 Spell Power",
-              "+5 MP5",
-              "Requires Level 55"
+              "+10 Intellect",
+              "+10 Spirit",
+              "Requires Level 55",
+              "Equip: Increases damage done by Arcane spells and effects by up to 21."
             ],
             "source": {
-              "kind": "world",
-              "title": "World Drop Epic / Raid",
-              "detail": "Zone Drop / Rare Mob"
+              "kind": "drop",
+              "title": "Blackwing Lair / World Drop",
+              "detail": "Arcane caster off-hand"
             }
           },
           {
@@ -13446,25 +13479,26 @@
       },
       {
         "levelBracket": "59–60",
-        "itemId": 19309,
+        "itemId": 19315,
         "name": "Master Dragonslayer's Orb",
-        "icon": "inv_misc_book_06",
-        "weaponType": "Held In Off-hand",
-        "stats": "+14 Intellect, +28 Spell Power",
+        "icon": "inv_misc_gem_pearl_01",
+        "weaponType": "Held in Off-Hand",
+        "stats": "+14 Stamina, Equip: Increases damage and healing done by magical spells and effects by up to 28.",
         "source": {
           "kind": "quest",
-          "title": "World Drop Epic / Raid",
-          "detail": "Onyxia Head quest turn-in reward. Top-tier endgame caster focus."
+          "title": "Head of Nefarian (Blackwing Lair)",
+          "detail": "Nefarian head quest reward caster off-hand"
         },
         "faction": "both",
         "quality": "q4",
-        "iLvl": 60,
-        "reqLevel": 55,
+        "iLvl": 83,
+        "reqLevel": 60,
         "lines": [
+          "Binds when picked up",
           "Held In Off-hand",
-          "+14 Intellect",
-          "+28 Spell Power",
-          "Requires Level 55"
+          "+14 Stamina",
+          "Requires Level 60",
+          "Equip: Increases damage and healing done by magical spells and effects by up to 28."
         ],
         "alts": [
           {
@@ -14502,24 +14536,27 @@
           },
           {
             "name": "Tome of the Fiery Arcana",
-            "itemId": 19308,
-            "icon": "inv_misc_book_01",
-            "weaponType": "Held In Off-hand",
+            "itemId": 19310,
+            "icon": "inv_misc_book_06",
+            "weaponType": "Held in Off-Hand",
             "value": "+3 MP5 - Alterac Valley (Destro BiS)",
             "faction": "both",
-            "quality": "q4",
+            "quality": "q3",
             "iLvl": 60,
             "reqLevel": 55,
-            "stats": "+3 MP5",
+            "stats": "+10 Intellect, +10 Spirit, Equip: Increases damage done by Fire spells and effects by up to 21.",
             "lines": [
+              "Binds when picked up",
               "Held In Off-hand",
-              "+3 MP5",
-              "Requires Level 55"
+              "+10 Intellect",
+              "+10 Spirit",
+              "Requires Level 55",
+              "Equip: Increases damage done by Fire spells and effects by up to 21."
             ],
             "source": {
-              "kind": "world",
-              "title": "World Drop Epic / Raid",
-              "detail": "Zone Drop / Rare Mob"
+              "kind": "drop",
+              "title": "Blackwing Lair / World Drop",
+              "detail": "Fire caster off-hand"
             }
           },
           {
@@ -14633,25 +14670,26 @@
       },
       {
         "levelBracket": "59–60",
-        "itemId": 19309,
+        "itemId": 19315,
         "name": "Master Dragonslayer's Orb",
-        "icon": "inv_misc_book_06",
-        "weaponType": "Held In Off-hand",
-        "stats": "+14 Intellect, +28 Spell Power",
+        "icon": "inv_misc_gem_pearl_01",
+        "weaponType": "Held in Off-Hand",
+        "stats": "+14 Stamina, Equip: Increases damage and healing done by magical spells and effects by up to 28.",
         "source": {
           "kind": "quest",
-          "title": "World Drop Epic / Raid",
-          "detail": "Onyxia Head quest turn-in reward. Top-tier endgame caster focus."
+          "title": "Head of Nefarian (Blackwing Lair)",
+          "detail": "Nefarian head quest reward caster off-hand"
         },
         "faction": "both",
         "quality": "q4",
-        "iLvl": 60,
-        "reqLevel": 55,
+        "iLvl": 83,
+        "reqLevel": 60,
         "lines": [
+          "Binds when picked up",
           "Held In Off-hand",
-          "+14 Intellect",
-          "+28 Spell Power",
-          "Requires Level 55"
+          "+14 Stamina",
+          "Requires Level 60",
+          "Equip: Increases damage and healing done by magical spells and effects by up to 28."
         ],
         "alts": [
           {
@@ -15695,24 +15733,27 @@
           },
           {
             "name": "Tome of the Fiery Arcana",
-            "itemId": 19308,
-            "icon": "inv_misc_book_01",
-            "weaponType": "Held In Off-hand",
+            "itemId": 19310,
+            "icon": "inv_misc_book_06",
+            "weaponType": "Held in Off-Hand",
             "value": "+3 MP5 - Alterac Valley (Destro BiS)",
             "faction": "both",
-            "quality": "q4",
+            "quality": "q3",
             "iLvl": 60,
             "reqLevel": 55,
-            "stats": "+3 MP5",
+            "stats": "+10 Intellect, +10 Spirit, Equip: Increases damage done by Fire spells and effects by up to 21.",
             "lines": [
+              "Binds when picked up",
               "Held In Off-hand",
-              "+3 MP5",
-              "Requires Level 55"
+              "+10 Intellect",
+              "+10 Spirit",
+              "Requires Level 55",
+              "Equip: Increases damage done by Fire spells and effects by up to 21."
             ],
             "source": {
-              "kind": "world",
-              "title": "World Drop Epic / Raid",
-              "detail": "Zone Drop / Rare Mob"
+              "kind": "drop",
+              "title": "Blackwing Lair / World Drop",
+              "detail": "Fire caster off-hand"
             }
           },
           {
@@ -15826,25 +15867,26 @@
       },
       {
         "levelBracket": "59–60",
-        "itemId": 19309,
+        "itemId": 19315,
         "name": "Master Dragonslayer's Orb",
-        "icon": "inv_misc_book_06",
-        "weaponType": "Held In Off-hand",
-        "stats": "+14 Intellect, +28 Spell Power",
+        "icon": "inv_misc_gem_pearl_01",
+        "weaponType": "Held in Off-Hand",
+        "stats": "+14 Stamina, Equip: Increases damage and healing done by magical spells and effects by up to 28.",
         "source": {
           "kind": "quest",
-          "title": "World Drop Epic / Raid",
-          "detail": "Onyxia Head quest turn-in reward. Top-tier endgame caster focus."
+          "title": "Head of Nefarian (Blackwing Lair)",
+          "detail": "Nefarian head quest reward caster off-hand"
         },
         "faction": "both",
         "quality": "q4",
-        "iLvl": 60,
-        "reqLevel": 55,
+        "iLvl": 83,
+        "reqLevel": 60,
         "lines": [
+          "Binds when picked up",
           "Held In Off-hand",
-          "+14 Intellect",
-          "+28 Spell Power",
-          "Requires Level 55"
+          "+14 Stamina",
+          "Requires Level 60",
+          "Equip: Increases damage and healing done by magical spells and effects by up to 28."
         ],
         "alts": [
           {
@@ -17218,28 +17260,32 @@
           },
           {
             "name": "Thermaplugg's Central Core",
-            "itemId": 9513,
-            "icon": "inv_staff_21",
-            "weaponType": "Held In Off-hand",
+            "itemId": 9456,
+            "icon": "inv_shield_11",
+            "weaponType": "Shield",
             "value": "5.34 DPS, 2.90s - +1 Intellect, +1 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 2 - Gnomeregan",
             "faction": "both",
-            "quality": "q2",
-            "iLvl": 10,
-            "reqLevel": 10,
-            "stats": "+1 Intellect, +1 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 2",
+            "quality": "q3",
+            "iLvl": 34,
+            "reqLevel": 29,
+            "stats": "721 Armor, 16 Block, Equip: When struck in combat has a 5% chance of inflicting 50 Nature damage to all nearby enemies.",
             "lines": [
-              "Held In Off-hand",
-              "+1 Intellect",
-              "+1 Spirit",
-              "Equip: Increases damage and healing done by magical spells and effects by up to 2"
+              "Binds when picked up",
+              "Off Hand\tShield",
+              "721 Armor",
+              "16 Block",
+              "Requires Level 29",
+              "Equip: When struck in combat has a 5% chance of inflicting 50 Nature damage to all nearby enemies."
             ],
             "source": {
               "kind": "dungeon",
-              "title": "Drop / Quest",
-              "detail": "Dungeon Drop"
+              "title": "Gnomeregan — Mekgineer Thermaplugg",
+              "detail": "Iconic Gnomeregan shield with AOE Nature retaliation"
             },
             "speed": "2.90",
-            "dps": "5.34 DPS"
+            "dps": "5.34 DPS",
+            "armor": 721,
+            "block": 16
           }
         ],
         "speed": "2.00"
@@ -17830,49 +17876,52 @@
         "alts": [
           {
             "name": "Tome of the Fiery Arcana",
-            "itemId": 19308,
-            "icon": "inv_misc_book_01",
-            "weaponType": "Held In Off-hand",
+            "itemId": 19310,
+            "icon": "inv_misc_book_06",
+            "weaponType": "Held in Off-Hand",
             "value": "+3 MP5 - Alterac Valley (Fire Mage BiS)",
             "faction": "both",
-            "quality": "q4",
+            "quality": "q3",
             "iLvl": 60,
             "reqLevel": 55,
-            "stats": "+3 MP5",
+            "stats": "+10 Intellect, +10 Spirit, Equip: Increases damage done by Fire spells and effects by up to 21.",
             "lines": [
+              "Binds when picked up",
               "Held In Off-hand",
-              "+3 MP5",
-              "Requires Level 55"
+              "+10 Intellect",
+              "+10 Spirit",
+              "Requires Level 55",
+              "Equip: Increases damage done by Fire spells and effects by up to 21."
             ],
             "source": {
-              "kind": "world",
-              "title": "World Drop Epic / Raid",
-              "detail": "Zone Drop / Rare Mob"
+              "kind": "drop",
+              "title": "Blackwing Lair / World Drop",
+              "detail": "Fire caster off-hand"
             }
           },
           {
             "name": "Tome of Arcane Domination",
-            "itemId": 19312,
-            "icon": "inv_misc_flower_04",
-            "weaponType": "Held In Off-hand",
+            "itemId": 19308,
+            "icon": "inv_misc_book_07",
+            "weaponType": "Held in Off-Hand",
             "value": "+11 Stamina, +25 Healing, +12 Spell Power, +5 MP5 - Alterac Valley (Arcane BiS)",
             "faction": "both",
-            "quality": "q4",
+            "quality": "q3",
             "iLvl": 60,
             "reqLevel": 55,
-            "stats": "+11 Stamina, +25 Healing, +12 Spell Power, +5 MP5",
+            "stats": "+10 Intellect, +10 Spirit, Equip: Increases damage done by Arcane spells and effects by up to 21.",
             "lines": [
+              "Binds when picked up",
               "Held In Off-hand",
-              "+11 Stamina",
-              "+25 Healing",
-              "+12 Spell Power",
-              "+5 MP5",
-              "Requires Level 55"
+              "+10 Intellect",
+              "+10 Spirit",
+              "Requires Level 55",
+              "Equip: Increases damage done by Arcane spells and effects by up to 21."
             ],
             "source": {
-              "kind": "world",
-              "title": "World Drop Epic / Raid",
-              "detail": "Zone Drop / Rare Mob"
+              "kind": "drop",
+              "title": "Blackwing Lair / World Drop",
+              "detail": "Arcane caster off-hand"
             }
           },
           {
@@ -18008,25 +18057,26 @@
       },
       {
         "levelBracket": "59–60",
-        "itemId": 19309,
+        "itemId": 19315,
         "name": "Master Dragonslayer's Orb",
-        "icon": "inv_misc_book_06",
-        "weaponType": "Held In Off-hand",
-        "stats": "+14 Intellect, +28 Spell Power",
+        "icon": "inv_misc_gem_pearl_01",
+        "weaponType": "Held in Off-Hand",
+        "stats": "+14 Stamina, Equip: Increases damage and healing done by magical spells and effects by up to 28.",
         "source": {
           "kind": "quest",
-          "title": "World Drop Epic / Raid",
-          "detail": "Onyxia Head quest turn-in reward. Top-tier endgame caster focus."
+          "title": "Head of Nefarian (Blackwing Lair)",
+          "detail": "Nefarian head quest reward caster off-hand"
         },
         "faction": "both",
         "quality": "q4",
-        "iLvl": 60,
-        "reqLevel": 55,
+        "iLvl": 83,
+        "reqLevel": 60,
         "lines": [
+          "Binds when picked up",
           "Held In Off-hand",
-          "+14 Intellect",
-          "+28 Spell Power",
-          "Requires Level 55"
+          "+14 Stamina",
+          "Requires Level 60",
+          "Equip: Increases damage and healing done by magical spells and effects by up to 28."
         ],
         "alts": [
           {
