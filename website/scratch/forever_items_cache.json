@@ -1,0 +1,7817 @@
+{
+  "208222": {
+    "id": 208222,
+    "name": "Old Guard Retaliator",
+    "icon": "inv_axe_22",
+    "iLvl": 57,
+    "reqLevel": 1,
+    "quality": "q2",
+    "speed": "3.70",
+    "dps": "44.32 DPS",
+    "stats": "+5 Strength, +5 Agility, +8 Stamina",
+    "inventorySlot": "Two-Hand",
+    "subclass": 1,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Two-Handed Axe"
+  },
+  "211941": {
+    "id": 211941,
+    "name": "Windwalker's Yari",
+    "icon": "inv_weapon_halberd_04",
+    "iLvl": 66,
+    "reqLevel": 58,
+    "quality": "q3",
+    "speed": "3.60",
+    "dps": "56.67 DPS",
+    "stats": "",
+    "inventorySlot": "Two-Hand",
+    "subclass": 6,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Polearm"
+  },
+  "212581": {
+    "id": 212581,
+    "name": "Outrunner's Bow",
+    "icon": "inv_weapon_bow_02",
+    "iLvl": 30,
+    "reqLevel": 25,
+    "quality": "q3",
+    "speed": "2.40",
+    "dps": "14.58 DPS",
+    "stats": "",
+    "inventorySlot": "Ranged",
+    "subclass": 2,
+    "side": "both",
+    "sourcemore": [
+      {
+        "n": "Illiyana Moonblaze",
+        "t": 1,
+        "ti": 14753,
+        "z": 331
+      }
+    ],
+    "subclassName": "Bow"
+  },
+  "212583": {
+    "id": 212583,
+    "name": "Sentinel's Blade",
+    "icon": "inv_weapon_shortblade_14",
+    "iLvl": 30,
+    "reqLevel": 25,
+    "quality": "q3",
+    "speed": "1.70",
+    "dps": "18.82 DPS",
+    "stats": "+6 Agility, +3 Stamina",
+    "inventorySlot": "One-Hand",
+    "subclass": 15,
+    "side": "both",
+    "sourcemore": [
+      {
+        "n": "Illiyana Moonblaze",
+        "t": 1,
+        "ti": 14753,
+        "z": 331
+      }
+    ],
+    "subclassName": "Dagger"
+  },
+  "212585": {
+    "id": 212585,
+    "name": "Outrider's Bow",
+    "icon": "inv_weapon_bow_06",
+    "iLvl": 30,
+    "reqLevel": 25,
+    "quality": "q3",
+    "speed": "2.40",
+    "dps": "14.58 DPS",
+    "stats": "",
+    "inventorySlot": "Ranged",
+    "subclass": 2,
+    "side": "both",
+    "sourcemore": [
+      {
+        "n": "Kelm Hargunth",
+        "t": 1,
+        "ti": 14754,
+        "z": 17
+      }
+    ],
+    "subclassName": "Bow"
+  },
+  "213105": {
+    "id": 213105,
+    "name": "Shawarmageddon",
+    "icon": "inv_misc_food_13",
+    "iLvl": 40,
+    "reqLevel": 1,
+    "quality": "q2",
+    "speed": "2.60",
+    "dps": "22.12 DPS",
+    "stats": "",
+    "inventorySlot": "One-Hand",
+    "subclass": 4,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "One-Handed Mace"
+  },
+  "215373": {
+    "id": 215373,
+    "name": "Silver Hand Training Hammer",
+    "icon": "inv_hammer_05",
+    "iLvl": 31,
+    "reqLevel": 26,
+    "quality": "q1",
+    "speed": "3.40",
+    "dps": "19.71 DPS",
+    "stats": "",
+    "inventorySlot": "Two-Hand",
+    "subclass": 5,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Two-Handed Mace"
+  },
+  "215374": {
+    "id": 215374,
+    "name": "Ancestral Sword",
+    "icon": "inv_sword_20",
+    "iLvl": 31,
+    "reqLevel": 26,
+    "quality": "q1",
+    "speed": "3.10",
+    "dps": "19.84 DPS",
+    "stats": "",
+    "inventorySlot": "Two-Hand",
+    "subclass": 8,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Two-Handed Sword"
+  },
+  "215375": {
+    "id": 215375,
+    "name": "Tactician's Staff",
+    "icon": "inv_staff_38",
+    "iLvl": 31,
+    "reqLevel": 26,
+    "quality": "q1",
+    "speed": "3.50",
+    "dps": "19.71 DPS",
+    "stats": "",
+    "inventorySlot": "Two-Hand",
+    "subclass": 10,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Staff"
+  },
+  "215376": {
+    "id": 215376,
+    "name": "Crusader's Mace",
+    "icon": "inv_mace_03",
+    "iLvl": 31,
+    "reqLevel": 26,
+    "quality": "q1",
+    "speed": "2.90",
+    "dps": "15.00 DPS",
+    "stats": "",
+    "inventorySlot": "Main Hand",
+    "subclass": 4,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "One-Handed Mace"
+  },
+  "217287": {
+    "id": 217287,
+    "name": "Greater Mystic Wand",
+    "icon": "inv_wand_07",
+    "iLvl": 35,
+    "reqLevel": 30,
+    "quality": "q2",
+    "speed": "2.00",
+    "dps": "29.00 DPS",
+    "stats": "",
+    "inventorySlot": "Ranged",
+    "subclass": 19,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Wand"
+  },
+  "217315": {
+    "id": 217315,
+    "name": "Precision Bow",
+    "icon": "inv_weapon_bow_04",
+    "iLvl": 27,
+    "reqLevel": 23,
+    "quality": "q2",
+    "speed": "2.60",
+    "dps": "10.96 DPS",
+    "stats": "Improves your chance to hit by 0.3%.",
+    "inventorySlot": "Ranged",
+    "subclass": 2,
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": 406,
+        "c2": 1,
+        "n": "Scramble",
+        "t": 5,
+        "ti": 79980
+      }
+    ],
+    "subclassName": "Bow"
+  },
+  "217497": {
+    "id": 217497,
+    "name": "Narpas Sword",
+    "icon": "inv_weapon_shortblade_79",
+    "iLvl": 42,
+    "reqLevel": 34,
+    "quality": "q3",
+    "speed": "2.00",
+    "dps": "19.00 DPS",
+    "stats": "Improves your chance to hit by 1.0%.",
+    "inventorySlot": "Main Hand",
+    "subclass": 7,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "One-Handed Sword"
+  },
+  "221344": {
+    "id": 221344,
+    "name": "Personal Spellbook",
+    "icon": "inv_misc_book_11",
+    "iLvl": 55,
+    "reqLevel": 1,
+    "quality": "q3",
+    "speed": null,
+    "dps": null,
+    "stats": "+9 Intellect",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": -5,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Held in Off-hand"
+  },
+  "221518": {
+    "id": 221518,
+    "name": "Whisper",
+    "icon": "inv_hammer_05",
+    "iLvl": 53,
+    "reqLevel": 1,
+    "quality": "q3",
+    "speed": "3.40",
+    "dps": "45.74 DPS",
+    "stats": "+23 Strength, Improves your chance to get a critical strike by 0.5%.",
+    "inventorySlot": "Two-Hand",
+    "subclass": 5,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Two-Handed Mace"
+  },
+  "234542": {
+    "id": 234542,
+    "name": "High Warlord's Greatsword",
+    "icon": "inv_sword_48",
+    "iLvl": 80,
+    "reqLevel": 60,
+    "quality": "q4",
+    "speed": "3.90",
+    "dps": "80.26 DPS",
+    "stats": "+27 Strength, +61 Stamina, Improves your chance to get a critical strike by 1.0%.",
+    "inventorySlot": "Two-Hand",
+    "subclass": 8,
+    "side": "both",
+    "sourcemore": [
+      {
+        "n": "Sergeant Thunderhorn",
+        "t": 1,
+        "ti": 14581
+      }
+    ],
+    "subclassName": "Two-Handed Sword"
+  },
+  "234543": {
+    "id": 234543,
+    "name": "High Warlord's Battle Axe",
+    "icon": "inv_axe_21",
+    "iLvl": 80,
+    "reqLevel": 60,
+    "quality": "q4",
+    "speed": "3.90",
+    "dps": "80.26 DPS",
+    "stats": "+27 Strength, +61 Stamina, Improves your chance to get a critical strike by 1.0%.",
+    "inventorySlot": "Two-Hand",
+    "subclass": 1,
+    "side": "both",
+    "sourcemore": [
+      {
+        "n": "Sergeant Thunderhorn",
+        "t": 1,
+        "ti": 14581
+      }
+    ],
+    "subclassName": "Two-Handed Axe"
+  },
+  "234548": {
+    "id": 234548,
+    "name": "High Warlord's Pig Poker",
+    "icon": "inv_spear_01",
+    "iLvl": 80,
+    "reqLevel": 60,
+    "quality": "q4",
+    "speed": "3.40",
+    "dps": "80.29 DPS",
+    "stats": "+27 Agility, +47 Stamina, Improves your chance to get a critical strike by 2.0%.",
+    "inventorySlot": "Two-Hand",
+    "subclass": 6,
+    "side": "both",
+    "sourcemore": [
+      {
+        "n": "Sergeant Thunderhorn",
+        "t": 1,
+        "ti": 14581
+      }
+    ],
+    "subclassName": "Polearm"
+  },
+  "234554": {
+    "id": 234554,
+    "name": "High Warlord's Cleaver",
+    "icon": "inv_axe_02",
+    "iLvl": 80,
+    "reqLevel": 60,
+    "quality": "q4",
+    "speed": "2.90",
+    "dps": "61.72 DPS",
+    "stats": "+13 Stamina, Improves your chance to get a critical strike by 1.0%.",
+    "inventorySlot": "One-Hand",
+    "subclass": 0,
+    "side": "both",
+    "sourcemore": [
+      {
+        "n": "Sergeant Thunderhorn",
+        "t": 1,
+        "ti": 14581
+      }
+    ],
+    "subclassName": "One-Handed Axe"
+  },
+  "234559": {
+    "id": 234559,
+    "name": "High Warlord's Recurve",
+    "icon": "inv_weapon_bow_08",
+    "iLvl": 80,
+    "reqLevel": 60,
+    "quality": "q4",
+    "speed": "3.30",
+    "dps": "48.18 DPS",
+    "stats": "+11 Stamina",
+    "inventorySlot": "Ranged",
+    "subclass": 2,
+    "side": "both",
+    "sourcemore": [
+      {
+        "n": "Sergeant Thunderhorn",
+        "t": 1,
+        "ti": 14581
+      }
+    ],
+    "subclassName": "Bow"
+  },
+  "234563": {
+    "id": 234563,
+    "name": "High Warlord's Tome of Destruction",
+    "icon": "inv_misc_book_15",
+    "iLvl": 80,
+    "reqLevel": 60,
+    "quality": "q4",
+    "speed": null,
+    "dps": null,
+    "stats": "+24 Stamina, +13 Intellect",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": -5,
+    "side": "both",
+    "sourcemore": [
+      {
+        "n": "Sergeant Thunderhorn",
+        "t": 1,
+        "ti": 14581
+      }
+    ],
+    "subclassName": "Held in Off-hand"
+  },
+  "234564": {
+    "id": 234564,
+    "name": "High Warlord's Tome of Mending",
+    "icon": "inv_misc_book_14",
+    "iLvl": 80,
+    "reqLevel": 60,
+    "quality": "q4",
+    "speed": null,
+    "dps": null,
+    "stats": "+23 Stamina, +14 Intellect",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": -5,
+    "side": "both",
+    "sourcemore": [
+      {
+        "n": "Sergeant Thunderhorn",
+        "t": 1,
+        "ti": 14581
+      }
+    ],
+    "subclassName": "Held in Off-hand"
+  },
+  "234565": {
+    "id": 234565,
+    "name": "Grand Marshal's Claymore",
+    "icon": "inv_sword_39",
+    "iLvl": 80,
+    "reqLevel": 60,
+    "quality": "q4",
+    "speed": "3.90",
+    "dps": "80.26 DPS",
+    "stats": "+27 Strength, +61 Stamina, Improves your chance to get a critical strike by 1.0%.",
+    "inventorySlot": "Two-Hand",
+    "subclass": 8,
+    "side": "both",
+    "sourcemore": [
+      {
+        "n": "Captain O'Neal",
+        "t": 1,
+        "ti": 12782
+      }
+    ],
+    "subclassName": "Two-Handed Sword"
+  },
+  "234578": {
+    "id": 234578,
+    "name": "Grand Marshal's Longsword",
+    "icon": "inv_sword_11",
+    "iLvl": 80,
+    "reqLevel": 60,
+    "quality": "q4",
+    "speed": "2.90",
+    "dps": "61.72 DPS",
+    "stats": "+13 Stamina, Improves your chance to get a critical strike by 1.0%.",
+    "inventorySlot": "One-Hand",
+    "subclass": 7,
+    "side": "both",
+    "sourcemore": [
+      {
+        "n": "Captain O'Neal",
+        "t": 1,
+        "ti": 12782
+      }
+    ],
+    "subclassName": "One-Handed Sword"
+  },
+  "234582": {
+    "id": 234582,
+    "name": "Grand Marshal's Dirk",
+    "icon": "inv_weapon_shortblade_26",
+    "iLvl": 80,
+    "reqLevel": 60,
+    "quality": "q4",
+    "speed": "2.00",
+    "dps": "61.50 DPS",
+    "stats": "+13 Stamina, Improves your chance to get a critical strike by 1.0%.",
+    "inventorySlot": "One-Hand",
+    "subclass": 15,
+    "side": "both",
+    "sourcemore": [
+      {
+        "n": "Captain O'Neal",
+        "t": 1,
+        "ti": 12782
+      }
+    ],
+    "subclassName": "Dagger"
+  },
+  "234585": {
+    "id": 234585,
+    "name": "Grand Marshal's Bullseye",
+    "icon": "inv_weapon_bow_12",
+    "iLvl": 80,
+    "reqLevel": 60,
+    "quality": "q4",
+    "speed": "3.30",
+    "dps": "48.18 DPS",
+    "stats": "+11 Stamina",
+    "inventorySlot": "Ranged",
+    "subclass": 2,
+    "side": "both",
+    "sourcemore": [
+      {
+        "n": "Captain O'Neal",
+        "t": 1,
+        "ti": 12782
+      }
+    ],
+    "subclassName": "Bow"
+  },
+  "234589": {
+    "id": 234589,
+    "name": "Grand Marshal's Tome of Power",
+    "icon": "inv_misc_book_12",
+    "iLvl": 80,
+    "reqLevel": 60,
+    "quality": "q4",
+    "speed": null,
+    "dps": null,
+    "stats": "+24 Stamina, +13 Intellect",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": -5,
+    "side": "both",
+    "sourcemore": [
+      {
+        "n": "Captain O'Neal",
+        "t": 1,
+        "ti": 12782
+      }
+    ],
+    "subclassName": "Held in Off-hand"
+  },
+  "234590": {
+    "id": 234590,
+    "name": "Grand Marshal's Tome of Restoration",
+    "icon": "inv_misc_book_13",
+    "iLvl": 80,
+    "reqLevel": 60,
+    "quality": "q4",
+    "speed": null,
+    "dps": null,
+    "stats": "+23 Stamina, +14 Intellect",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": -5,
+    "side": "both",
+    "sourcemore": [
+      {
+        "n": "Captain O'Neal",
+        "t": 1,
+        "ti": 12782
+      }
+    ],
+    "subclassName": "Held in Off-hand"
+  },
+  "240993": {
+    "id": 240993,
+    "name": "Tim's Test Ranged Weapon",
+    "icon": "ability_hunter_rapidregeneration",
+    "iLvl": 76,
+    "reqLevel": 60,
+    "quality": "q4",
+    "speed": "2.00",
+    "dps": "44.75 DPS",
+    "stats": "+17 Strength, +18 Stamina, +23 Intellect, +6 Spirit, +10 Frost Resistance, +10 Shadow Resistance",
+    "inventorySlot": "Ranged",
+    "subclass": 3,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Gun"
+  },
+  "247789": {
+    "id": 247789,
+    "name": "Novice's Practice Wand",
+    "icon": "inv_weapon_shortblade_09",
+    "iLvl": 6,
+    "reqLevel": 1,
+    "quality": "q1",
+    "speed": "1.50",
+    "dps": "4.00 DPS",
+    "stats": "",
+    "inventorySlot": "Ranged",
+    "subclass": 19,
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": 11,
+        "icon": "inv_weapon_shortblade_09",
+        "n": "Novice's Practice Wand",
+        "s": 333,
+        "t": 6,
+        "ti": 1245321
+      }
+    ],
+    "subclassName": "Wand"
+  },
+  "248005": {
+    "id": 248005,
+    "name": "Northshire Hammer",
+    "icon": "inv_hammer_16",
+    "iLvl": 12,
+    "reqLevel": 1,
+    "quality": "q2",
+    "speed": "2.70",
+    "dps": "8.33 DPS",
+    "stats": "+2 Strength",
+    "inventorySlot": "Two-Hand",
+    "subclass": 5,
+    "side": "alliance",
+    "sourcemore": [
+      {
+        "c": 12,
+        "c2": 0,
+        "n": "Rare Books",
+        "t": 5,
+        "ti": 91777
+      }
+    ],
+    "subclassName": "Two-Handed Mace"
+  },
+  "248008": {
+    "id": 248008,
+    "name": "Apprentice's Spellstaff",
+    "icon": "inv_staff_18",
+    "iLvl": 12,
+    "reqLevel": 1,
+    "quality": "q2",
+    "speed": "2.20",
+    "dps": "6.36 DPS",
+    "stats": "+2 Intellect",
+    "inventorySlot": "Two-Hand",
+    "subclass": 10,
+    "side": "alliance",
+    "sourcemore": [
+      {
+        "c": 12,
+        "c2": 0,
+        "n": "Rare Books",
+        "t": 5,
+        "ti": 91777
+      }
+    ],
+    "subclassName": "Staff"
+  },
+  "249144": {
+    "id": 249144,
+    "name": "Twisted Nether Wand",
+    "icon": "inv_wand_03",
+    "iLvl": 42,
+    "reqLevel": 37,
+    "quality": "q2",
+    "speed": "1.50",
+    "dps": "34.00 DPS",
+    "stats": "",
+    "inventorySlot": "Ranged",
+    "subclass": 19,
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": 11,
+        "icon": "inv_wand_03",
+        "n": "Twisted Nether Wand",
+        "s": 333,
+        "t": 6,
+        "ti": 1248461
+      }
+    ],
+    "subclassName": "Wand"
+  },
+  "249232": {
+    "id": 249232,
+    "name": "Lesser Eternal Wand",
+    "icon": "inv_wand_05",
+    "iLvl": 54,
+    "reqLevel": 49,
+    "quality": "q2",
+    "speed": "2.00",
+    "dps": "45.75 DPS",
+    "stats": "",
+    "inventorySlot": "Ranged",
+    "subclass": 19,
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": 11,
+        "icon": "inv_wand_05",
+        "n": "Lesser Eternal Wand",
+        "s": 333,
+        "t": 6,
+        "ti": 1248505
+      }
+    ],
+    "subclassName": "Wand"
+  },
+  "249234": {
+    "id": 249234,
+    "name": "Dreambough Wand",
+    "icon": "inv_wand_04",
+    "iLvl": 48,
+    "reqLevel": 43,
+    "quality": "q2",
+    "speed": "1.80",
+    "dps": "39.17 DPS",
+    "stats": "",
+    "inventorySlot": "Ranged",
+    "subclass": 19,
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": 11,
+        "icon": "inv_wand_04",
+        "n": "Dreambough Wand",
+        "s": 333,
+        "t": 6,
+        "ti": 1248509
+      }
+    ],
+    "subclassName": "Wand"
+  },
+  "249237": {
+    "id": 249237,
+    "name": "Greater Eternal Wand",
+    "icon": "inv_wand_14",
+    "iLvl": 60,
+    "reqLevel": 55,
+    "quality": "q2",
+    "speed": "1.50",
+    "dps": "53.33 DPS",
+    "stats": "",
+    "inventorySlot": "Ranged",
+    "subclass": 19,
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": 11,
+        "icon": "inv_wand_14",
+        "n": "Greater Eternal Wand",
+        "s": 333,
+        "t": 6,
+        "ti": 1248515
+      }
+    ],
+    "subclassName": "Wand"
+  },
+  "249385": {
+    "id": 249385,
+    "name": "Brilliant Wand",
+    "icon": "inv_wand_07",
+    "iLvl": 60,
+    "reqLevel": 55,
+    "quality": "q3",
+    "speed": "1.20",
+    "dps": "59.58 DPS",
+    "stats": "+7 Intellect",
+    "inventorySlot": "Ranged",
+    "subclass": 19,
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": 11,
+        "icon": "inv_wand_07",
+        "n": "Brilliant Wand",
+        "s": 333,
+        "t": 6,
+        "ti": 1248650
+      }
+    ],
+    "subclassName": "Wand"
+  },
+  "249392": {
+    "id": 249392,
+    "name": "Glimmering Staff",
+    "icon": "inv_staff_19",
+    "iLvl": 30,
+    "reqLevel": 25,
+    "quality": "q3",
+    "speed": "2.20",
+    "dps": "18.41 DPS",
+    "stats": "+11 Stamina, +11 Intellect",
+    "inventorySlot": "Two-Hand",
+    "subclass": 10,
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": 11,
+        "icon": "inv_staff_19",
+        "n": "Glimmering Staff",
+        "s": 333,
+        "t": 6,
+        "ti": 1248703
+      }
+    ],
+    "subclassName": "Staff"
+  },
+  "249393": {
+    "id": 249393,
+    "name": "Soulstaff",
+    "icon": "inv_staff_31",
+    "iLvl": 30,
+    "reqLevel": 25,
+    "quality": "q3",
+    "speed": "1.80",
+    "dps": "18.33 DPS",
+    "stats": "+11 Stamina, +11 Spirit",
+    "inventorySlot": "Two-Hand",
+    "subclass": 10,
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": 11,
+        "icon": "inv_staff_31",
+        "n": "Soulstaff",
+        "s": 333,
+        "t": 6,
+        "ti": 1248739
+      }
+    ],
+    "subclassName": "Staff"
+  },
+  "249394": {
+    "id": 249394,
+    "name": "Orb of Mystic Insight",
+    "icon": "inv_misc_orb_blue",
+    "iLvl": 30,
+    "reqLevel": 25,
+    "quality": "q3",
+    "speed": null,
+    "dps": null,
+    "stats": "+6 Intellect",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": -5,
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": 11,
+        "icon": "inv_misc_orb_blue",
+        "n": "Orb of Mystic Insight",
+        "s": 333,
+        "t": 6,
+        "ti": 1248745
+      }
+    ],
+    "subclassName": "Held in Off-hand"
+  },
+  "249395": {
+    "id": 249395,
+    "name": "Orb of Souls",
+    "icon": "inv_misc_orb_04",
+    "iLvl": 30,
+    "reqLevel": 25,
+    "quality": "q3",
+    "speed": null,
+    "dps": null,
+    "stats": "+6 Spirit",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": -5,
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": 11,
+        "icon": "inv_misc_orb_04",
+        "n": "Orb of Souls",
+        "s": 333,
+        "t": 6,
+        "ti": 1248748
+      }
+    ],
+    "subclassName": "Held in Off-hand"
+  },
+  "249453": {
+    "id": 249453,
+    "name": "Radiant Staff",
+    "icon": "inv_staff_13",
+    "iLvl": 50,
+    "reqLevel": 45,
+    "quality": "q3",
+    "speed": "2.40",
+    "dps": "32.29 DPS",
+    "stats": "+19 Stamina, +19 Intellect",
+    "inventorySlot": "Two-Hand",
+    "subclass": 10,
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": 11,
+        "icon": "inv_staff_13",
+        "n": "Radiant Staff",
+        "s": 333,
+        "t": 6,
+        "ti": 1249061
+      }
+    ],
+    "subclassName": "Staff"
+  },
+  "249454": {
+    "id": 249454,
+    "name": "Dreamstaff",
+    "icon": "inv_staff_14",
+    "iLvl": 50,
+    "reqLevel": 45,
+    "quality": "q3",
+    "speed": "2.40",
+    "dps": "32.29 DPS",
+    "stats": "+19 Stamina, +19 Spirit",
+    "inventorySlot": "Two-Hand",
+    "subclass": 10,
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": 11,
+        "icon": "inv_staff_14",
+        "n": "Dreamstaff",
+        "s": 333,
+        "t": 6,
+        "ti": 1249064
+      }
+    ],
+    "subclassName": "Staff"
+  },
+  "249455": {
+    "id": 249455,
+    "name": "Truesilver Conduit",
+    "icon": "inv_rod_enchantedadamantite",
+    "iLvl": 50,
+    "reqLevel": 45,
+    "quality": "q3",
+    "speed": null,
+    "dps": null,
+    "stats": "+8 Stamina, +8 Intellect",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": -5,
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": 11,
+        "icon": "inv_rod_enchantedadamantite",
+        "n": "Truesilver Conduit",
+        "s": 333,
+        "t": 6,
+        "ti": 1249069
+      }
+    ],
+    "subclassName": "Held in Off-hand"
+  },
+  "249456": {
+    "id": 249456,
+    "name": "Twisting Essence Jar",
+    "icon": "inv_10_misc_dragonorb_color1",
+    "iLvl": 50,
+    "reqLevel": 45,
+    "quality": "q3",
+    "speed": null,
+    "dps": null,
+    "stats": "+8 Stamina, +8 Spirit",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": -5,
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": 11,
+        "icon": "inv_10_misc_dragonorb_color1",
+        "n": "Twisting Essence Jar",
+        "s": 333,
+        "t": 6,
+        "ti": 1249070
+      }
+    ],
+    "subclassName": "Held in Off-hand"
+  },
+  "250602": {
+    "id": 250602,
+    "name": "Brass Knuckles",
+    "icon": "inv_gauntlets_04",
+    "iLvl": 21,
+    "reqLevel": 16,
+    "quality": "q2",
+    "speed": "2.40",
+    "dps": "10.42 DPS",
+    "stats": "+2 Agility, +2 Stamina",
+    "inventorySlot": "One-Hand",
+    "subclass": 13,
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": 11,
+        "icon": "inv_gauntlets_04",
+        "n": "Brass Knuckles",
+        "s": 164,
+        "t": 6,
+        "ti": 1252351
+      }
+    ],
+    "subclassName": "Fist Weapon"
+  },
+  "250603": {
+    "id": 250603,
+    "name": "Bronze Dory",
+    "icon": "inv_spear_05",
+    "iLvl": 25,
+    "reqLevel": 20,
+    "quality": "q2",
+    "speed": "3.40",
+    "dps": "16.76 DPS",
+    "stats": "+8 Agility",
+    "inventorySlot": "Two-Hand",
+    "subclass": 6,
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": 11,
+        "icon": "inv_spear_05",
+        "n": "Bronze Dory",
+        "s": 164,
+        "t": 6,
+        "ti": 1252352
+      }
+    ],
+    "subclassName": "Polearm"
+  },
+  "250604": {
+    "id": 250604,
+    "name": "Iron Fists",
+    "icon": "inv_gauntlets_11",
+    "iLvl": 31,
+    "reqLevel": 26,
+    "quality": "q2",
+    "speed": "2.40",
+    "dps": "16.25 DPS",
+    "stats": "+5 Agility",
+    "inventorySlot": "One-Hand",
+    "subclass": 13,
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": 11,
+        "icon": "inv_gauntlets_11",
+        "n": "Iron Fists",
+        "s": 164,
+        "t": 6,
+        "ti": 1252353
+      }
+    ],
+    "subclassName": "Fist Weapon"
+  },
+  "250605": {
+    "id": 250605,
+    "name": "Steel Spear",
+    "icon": "inv_spear_08",
+    "iLvl": 37,
+    "reqLevel": 32,
+    "quality": "q2",
+    "speed": "3.30",
+    "dps": "25.61 DPS",
+    "stats": "+13 Agility",
+    "inventorySlot": "Two-Hand",
+    "subclass": 6,
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": 11,
+        "icon": "inv_spear_08",
+        "n": "Steel Spear",
+        "s": 164,
+        "t": 6,
+        "ti": 1252354
+      }
+    ],
+    "subclassName": "Polearm"
+  },
+  "250608": {
+    "id": 250608,
+    "name": "Mithril Warhammer",
+    "icon": "inv_hammer_03",
+    "iLvl": 43,
+    "reqLevel": 38,
+    "quality": "q2",
+    "speed": "3.50",
+    "dps": "32.57 DPS",
+    "stats": "+9 Strength, +14 Agility",
+    "inventorySlot": "Two-Hand",
+    "subclass": 5,
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": 11,
+        "icon": "inv_hammer_03",
+        "n": "Mithril Warhammer",
+        "s": 164,
+        "t": 6,
+        "ti": 1252357
+      }
+    ],
+    "subclassName": "Two-Handed Mace"
+  },
+  "250609": {
+    "id": 250609,
+    "name": "Mithril Claws",
+    "icon": "inv_misc_monsterclaw_02",
+    "iLvl": 45,
+    "reqLevel": 40,
+    "quality": "q2",
+    "speed": "2.60",
+    "dps": "26.54 DPS",
+    "stats": "+6 Strength, +5 Agility",
+    "inventorySlot": "One-Hand",
+    "subclass": 13,
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": 11,
+        "icon": "inv_misc_monsterclaw_02",
+        "n": "Mithril Claws",
+        "s": 164,
+        "t": 6,
+        "ti": 1252358
+      }
+    ],
+    "subclassName": "Fist Weapon"
+  },
+  "250610": {
+    "id": 250610,
+    "name": "Mithril Claymore",
+    "icon": "inv_sword_23",
+    "iLvl": 45,
+    "reqLevel": 40,
+    "quality": "q2",
+    "speed": "3.80",
+    "dps": "34.61 DPS",
+    "stats": "+9 Strength, +15 Stamina",
+    "inventorySlot": "Two-Hand",
+    "subclass": 8,
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": 11,
+        "icon": "inv_sword_23",
+        "n": "Mithril Claymore",
+        "s": 164,
+        "t": 6,
+        "ti": 1252359
+      }
+    ],
+    "subclassName": "Two-Handed Sword"
+  },
+  "250611": {
+    "id": 250611,
+    "name": "Mithril Stiletto",
+    "icon": "inv_weapon_shortblade_05",
+    "iLvl": 47,
+    "reqLevel": 42,
+    "quality": "q2",
+    "speed": "1.80",
+    "dps": "28.06 DPS",
+    "stats": "+8 Agility",
+    "inventorySlot": "One-Hand",
+    "subclass": 15,
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": 11,
+        "icon": "inv_weapon_shortblade_05",
+        "n": "Mithril Stiletto",
+        "s": 164,
+        "t": 6,
+        "ti": 1252360
+      }
+    ],
+    "subclassName": "Dagger"
+  },
+  "250612": {
+    "id": 250612,
+    "name": "Charged Mithril Battleaxe",
+    "icon": "inv_axe_09",
+    "iLvl": 48,
+    "reqLevel": 43,
+    "quality": "q2",
+    "speed": "3.30",
+    "dps": "37.27 DPS",
+    "stats": "+14 Strength",
+    "inventorySlot": "Two-Hand",
+    "subclass": 1,
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": 11,
+        "icon": "inv_axe_09",
+        "n": "Charged Mithril Battleaxe",
+        "s": 164,
+        "t": 6,
+        "ti": 1252361
+      }
+    ],
+    "subclassName": "Two-Handed Axe"
+  },
+  "250613": {
+    "id": 250613,
+    "name": "Thorium Greatmace",
+    "icon": "inv_hammer_10",
+    "iLvl": 55,
+    "reqLevel": 50,
+    "quality": "q3",
+    "speed": "3.60",
+    "dps": "47.36 DPS",
+    "stats": "+21 Strength",
+    "inventorySlot": "Two-Hand",
+    "subclass": 5,
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": 11,
+        "icon": "inv_hammer_10",
+        "n": "Thorium Greatmace",
+        "s": 164,
+        "t": 6,
+        "ti": 1252362
+      }
+    ],
+    "subclassName": "Two-Handed Mace"
+  },
+  "250614": {
+    "id": 250614,
+    "name": "Thorium Cestus",
+    "icon": "inv_gauntlets_11",
+    "iLvl": 55,
+    "reqLevel": 50,
+    "quality": "q3",
+    "speed": "2.40",
+    "dps": "36.46 DPS",
+    "stats": "+9 Stamina",
+    "inventorySlot": "One-Hand",
+    "subclass": 13,
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": 11,
+        "icon": "inv_gauntlets_11",
+        "n": "Thorium Cestus",
+        "s": 164,
+        "t": 6,
+        "ti": 1252363
+      }
+    ],
+    "subclassName": "Fist Weapon"
+  },
+  "250615": {
+    "id": 250615,
+    "name": "Thorium Poleaxe",
+    "icon": "inv_spear_05",
+    "iLvl": 57,
+    "reqLevel": 52,
+    "quality": "q3",
+    "speed": "3.40",
+    "dps": "48.97 DPS",
+    "stats": "+13 Strength, +25 Agility, +10 Stamina",
+    "inventorySlot": "Two-Hand",
+    "subclass": 6,
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": 11,
+        "icon": "inv_spear_05",
+        "n": "Thorium Poleaxe",
+        "s": 164,
+        "t": 6,
+        "ti": 1252364
+      }
+    ],
+    "subclassName": "Polearm"
+  },
+  "250616": {
+    "id": 250616,
+    "name": "Bold Dirk",
+    "icon": "inv_weapon_shortblade_01",
+    "iLvl": 57,
+    "reqLevel": 52,
+    "quality": "q2",
+    "speed": "1.80",
+    "dps": "33.89 DPS",
+    "stats": "+6 Agility",
+    "inventorySlot": "One-Hand",
+    "subclass": 15,
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": 11,
+        "icon": "inv_weapon_shortblade_01",
+        "n": "Bold Dirk",
+        "s": 164,
+        "t": 6,
+        "ti": 1252365
+      }
+    ],
+    "subclassName": "Dagger"
+  },
+  "250617": {
+    "id": 250617,
+    "name": "Stormcarver",
+    "icon": "inv_axe_04",
+    "iLvl": 63,
+    "reqLevel": 58,
+    "quality": "q3",
+    "speed": "3.60",
+    "dps": "53.89 DPS",
+    "stats": "+15 Strength, +11 Stamina",
+    "inventorySlot": "Two-Hand",
+    "subclass": 1,
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": 11,
+        "icon": "inv_axe_04",
+        "n": "Stormcarver",
+        "s": 164,
+        "t": 6,
+        "ti": 1252366
+      }
+    ],
+    "subclassName": "Two-Handed Axe"
+  },
+  "250618": {
+    "id": 250618,
+    "name": "Bagh Nakh",
+    "icon": "inv_misc_monsterclaw_03",
+    "iLvl": 63,
+    "reqLevel": 58,
+    "quality": "q3",
+    "speed": "2.70",
+    "dps": "41.48 DPS",
+    "stats": "+13 Agility, +5 Stamina",
+    "inventorySlot": "One-Hand",
+    "subclass": 13,
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": 11,
+        "icon": "inv_misc_monsterclaw_03",
+        "n": "Bagh Nakh",
+        "s": 164,
+        "t": 6,
+        "ti": 1252367
+      }
+    ],
+    "subclassName": "Fist Weapon"
+  },
+  "250619": {
+    "id": 250619,
+    "name": "Legionite Glaive",
+    "icon": "inv_spear_05",
+    "iLvl": 63,
+    "reqLevel": 58,
+    "quality": "q3",
+    "speed": "3.20",
+    "dps": "53.91 DPS",
+    "stats": "+16 Agility, Improves your chance to hit by 1.0%.",
+    "inventorySlot": "Two-Hand",
+    "subclass": 6,
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": 11,
+        "icon": "inv_spear_05",
+        "n": "Legionite Glaive",
+        "s": 164,
+        "t": 6,
+        "ti": 1252368
+      }
+    ],
+    "subclassName": "Polearm"
+  },
+  "251485": {
+    "id": 251485,
+    "name": "Edward's Knife",
+    "icon": "inv_weapon_shortblade_14",
+    "iLvl": 24,
+    "reqLevel": 15,
+    "quality": "q2",
+    "speed": "1.60",
+    "dps": "12.19 DPS",
+    "stats": "+2 Agility, +2 Stamina",
+    "inventorySlot": "One-Hand",
+    "subclass": 15,
+    "side": "horde",
+    "sourcemore": [
+      {
+        "c": 16611,
+        "c2": 2,
+        "n": "A Frightened Request",
+        "t": 5,
+        "ti": 92401
+      }
+    ],
+    "subclassName": "Dagger"
+  },
+  "251533": {
+    "id": 251533,
+    "name": "Forsaken Greataxe",
+    "icon": "inv_axe_18",
+    "iLvl": 24,
+    "reqLevel": 15,
+    "quality": "q3",
+    "speed": "3.00",
+    "dps": "20.50 DPS",
+    "stats": "+8 Strength, +4 Stamina",
+    "inventorySlot": "Two-Hand",
+    "subclass": 1,
+    "side": "horde",
+    "sourcemore": [
+      {
+        "c": 16611,
+        "c2": 2,
+        "n": "The Wrath of Rath'mael",
+        "t": 5,
+        "ti": 92422
+      }
+    ],
+    "subclassName": "Two-Handed Axe"
+  },
+  "251534": {
+    "id": 251534,
+    "name": "Gnarled Necromancer's Staff",
+    "icon": "inv_staff_16",
+    "iLvl": 24,
+    "reqLevel": 15,
+    "quality": "q3",
+    "speed": "2.80",
+    "dps": "15.18 DPS",
+    "stats": "+10 Spirit",
+    "inventorySlot": "Two-Hand",
+    "subclass": 10,
+    "side": "horde",
+    "sourcemore": [
+      {
+        "c": 16611,
+        "c2": 2,
+        "n": "The Wrath of Rath'mael",
+        "t": 5,
+        "ti": 92422
+      }
+    ],
+    "subclassName": "Staff"
+  },
+  "251960": {
+    "id": 251960,
+    "name": "Yngwe's Axe",
+    "icon": "inv_axe_1h_spring_c_01",
+    "iLvl": 10,
+    "reqLevel": 5,
+    "quality": "q2",
+    "speed": "3.30",
+    "dps": "6.97 DPS",
+    "stats": "+1 Agility",
+    "inventorySlot": "Two-Hand",
+    "subclass": 1,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Two-Handed Axe"
+  },
+  "257343": {
+    "id": 257343,
+    "name": "Balanced Quarterstaff",
+    "icon": "inv_staff_2h_skybornec60_b_01",
+    "iLvl": 13,
+    "reqLevel": 6,
+    "quality": "q2",
+    "speed": "2.20",
+    "dps": "8.86 DPS",
+    "stats": "+2 Stamina, +2 Spirit",
+    "inventorySlot": "Two-Hand",
+    "subclass": 10,
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": 16593,
+        "c2": -2,
+        "n": "Return to Valanaar",
+        "t": 5,
+        "ti": 92880
+      }
+    ],
+    "subclassName": "Staff"
+  },
+  "257345": {
+    "id": 257345,
+    "name": "Honed Greathammer",
+    "icon": "inv_mace_2h_skybornec60_b_01",
+    "iLvl": 13,
+    "reqLevel": 6,
+    "quality": "q2",
+    "speed": "3.20",
+    "dps": "9.06 DPS",
+    "stats": "+2 Strength, +2 Spirit",
+    "inventorySlot": "Two-Hand",
+    "subclass": 5,
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": 16593,
+        "c2": -2,
+        "n": "Return to Valanaar",
+        "t": 5,
+        "ti": 92880
+      }
+    ],
+    "subclassName": "Two-Handed Mace"
+  },
+  "257346": {
+    "id": 257346,
+    "name": "Quickblade's Dagger",
+    "icon": "inv_knife_1h_skybornec60_b_01",
+    "iLvl": 13,
+    "reqLevel": 6,
+    "quality": "q2",
+    "speed": "1.70",
+    "dps": "6.76 DPS",
+    "stats": "+1 Agility",
+    "inventorySlot": "One-Hand",
+    "subclass": 15,
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": 16593,
+        "c2": -2,
+        "n": "Return to Valanaar",
+        "t": 5,
+        "ti": 92880
+      }
+    ],
+    "subclassName": "Dagger"
+  },
+  "258882": {
+    "id": 258882,
+    "name": "Worn Greatsword",
+    "icon": "inv_sword_2h_blood_b_01",
+    "iLvl": 5,
+    "reqLevel": 2,
+    "quality": "q1",
+    "speed": "3.00",
+    "dps": "2.67 DPS",
+    "stats": "",
+    "inventorySlot": "Two-Hand",
+    "subclass": 8,
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": 16593,
+        "c2": -2,
+        "n": "Foul Matriarch",
+        "t": 5,
+        "ti": 92470
+      }
+    ],
+    "subclassName": "Two-Handed Sword"
+  },
+  "259891": {
+    "id": 259891,
+    "name": "Berdun's Trusty Rifle",
+    "icon": "inv_weapon_rifle_04",
+    "iLvl": 48,
+    "reqLevel": 1,
+    "quality": "q2",
+    "speed": "3.00",
+    "dps": "22.33 DPS",
+    "stats": "",
+    "inventorySlot": "Ranged",
+    "subclass": 3,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Gun"
+  },
+  "260172": {
+    "id": 260172,
+    "name": "Assassin's Dagger",
+    "icon": "inv_weapon_shortblade_12",
+    "iLvl": 52,
+    "reqLevel": 1,
+    "quality": "q2",
+    "speed": "1.80",
+    "dps": "31.11 DPS",
+    "stats": "+6 Strength, +6 Agility",
+    "inventorySlot": "One-Hand",
+    "subclass": 15,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Dagger"
+  },
+  "260180": {
+    "id": 260180,
+    "name": "Scout's Dagger",
+    "icon": "inv_weapon_shortblade_01",
+    "iLvl": 52,
+    "reqLevel": 1,
+    "quality": "q2",
+    "speed": "1.80",
+    "dps": "31.11 DPS",
+    "stats": "+6 Strength, +6 Agility",
+    "inventorySlot": "One-Hand",
+    "subclass": 15,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Dagger"
+  },
+  "260201": {
+    "id": 260201,
+    "name": "Highborne Memory Crystal",
+    "icon": "inv_chaos_orb",
+    "iLvl": 55,
+    "reqLevel": 1,
+    "quality": "q2",
+    "speed": null,
+    "dps": null,
+    "stats": "+9 Spirit",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": -5,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Held in Off-hand"
+  },
+  "260208": {
+    "id": 260208,
+    "name": "Prelate's Orb",
+    "icon": "inv_misc_orb_yellow",
+    "iLvl": 55,
+    "reqLevel": 1,
+    "quality": "q2",
+    "speed": null,
+    "dps": null,
+    "stats": "+13 Spirit",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": -5,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Held in Off-hand"
+  },
+  "263312": {
+    "id": 263312,
+    "name": "Planting Shovel",
+    "icon": "inv_misc_shovel_01",
+    "iLvl": 10,
+    "reqLevel": 5,
+    "quality": "q2",
+    "speed": "2.50",
+    "dps": "7.00 DPS",
+    "stats": "+1 Strength",
+    "inventorySlot": "Two-Hand",
+    "subclass": 5,
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": 16593,
+        "c2": -2,
+        "n": "Deliver the News",
+        "t": 5,
+        "ti": 92703
+      }
+    ],
+    "subclassName": "Two-Handed Mace"
+  },
+  "263313": {
+    "id": 263313,
+    "name": "Trusty Wrench",
+    "icon": "inv_misc_wrench_01",
+    "iLvl": 10,
+    "reqLevel": 5,
+    "quality": "q2",
+    "speed": "1.80",
+    "dps": "5.28 DPS",
+    "stats": "+1 Agility",
+    "inventorySlot": "One-Hand",
+    "subclass": 4,
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": 16593,
+        "c2": -2,
+        "n": "Deliver the News",
+        "t": 5,
+        "ti": 92703
+      }
+    ],
+    "subclassName": "One-Handed Mace"
+  },
+  "263329": {
+    "id": 263329,
+    "name": "Flutterfly Swatter",
+    "icon": "inv_mace_1h_skybornec60_b_01",
+    "iLvl": 9,
+    "reqLevel": 5,
+    "quality": "q2",
+    "speed": "2.00",
+    "dps": "4.75 DPS",
+    "stats": "",
+    "inventorySlot": "One-Hand",
+    "subclass": 4,
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": 16593,
+        "c2": -2,
+        "n": "Flutterfly Dust",
+        "t": 5,
+        "ti": 92683
+      }
+    ],
+    "subclassName": "One-Handed Mace"
+  },
+  "263404": {
+    "id": 263404,
+    "name": "Bow of Hours",
+    "icon": "inv_bow_1h_skybornec60_b_01",
+    "iLvl": 13,
+    "reqLevel": 5,
+    "quality": "q2",
+    "speed": "2.30",
+    "dps": "5.22 DPS",
+    "stats": "+1 Agility",
+    "inventorySlot": "Ranged",
+    "subclass": 2,
+    "side": "alliance",
+    "sourcemore": [
+      {
+        "c": 16593,
+        "c2": -2,
+        "n": "Catching Wind",
+        "t": 5,
+        "ti": 92840
+      }
+    ],
+    "subclassName": "Bow"
+  },
+  "263407": {
+    "id": 263407,
+    "name": "Empyrean Greatsword",
+    "icon": "inv_sword_2h_skybornec60_b_01_white",
+    "iLvl": 15,
+    "reqLevel": 7,
+    "quality": "q2",
+    "speed": "3.00",
+    "dps": "10.17 DPS",
+    "stats": "+4 Strength",
+    "inventorySlot": "Two-Hand",
+    "subclass": 8,
+    "side": "both",
+    "sourcemore": [
+      {
+        "z": 16593
+      }
+    ],
+    "subclassName": "Two-Handed Sword"
+  },
+  "263428": {
+    "id": 263428,
+    "name": "Dowsing Rod",
+    "icon": "inv_wand_05",
+    "iLvl": 6,
+    "reqLevel": 4,
+    "quality": "q1",
+    "speed": "1.20",
+    "dps": "4.17 DPS",
+    "stats": "",
+    "inventorySlot": "Ranged",
+    "subclass": 19,
+    "side": "alliance",
+    "sourcemore": [
+      {
+        "c": 16593,
+        "c2": -2,
+        "n": "A Magical Affront",
+        "t": 5,
+        "ti": 94413
+      }
+    ],
+    "subclassName": "Wand"
+  },
+  "263430": {
+    "id": 263430,
+    "name": "Windbough Wand",
+    "icon": "inv_wand_1h_skybornec60_b_01",
+    "iLvl": 10,
+    "reqLevel": 10,
+    "quality": "q2",
+    "speed": "1.60",
+    "dps": "7.19 DPS",
+    "stats": "+1 Intellect",
+    "inventorySlot": "Ranged",
+    "subclass": 19,
+    "side": "alliance",
+    "sourcemore": [
+      {
+        "c": -161,
+        "c2": 4,
+        "n": "Boughs in the Wind",
+        "t": 5,
+        "ti": 93797
+      }
+    ],
+    "subclassName": "Wand"
+  },
+  "263935": {
+    "id": 263935,
+    "name": "Elunar Longstaff",
+    "icon": "inv_staff_08",
+    "iLvl": 15,
+    "reqLevel": 10,
+    "quality": "q2",
+    "speed": "3.10",
+    "dps": "10.16 DPS",
+    "stats": "+3 Strength, +3 Agility",
+    "inventorySlot": "Two-Hand",
+    "subclass": 10,
+    "side": "both",
+    "sourcemore": [
+      {
+        "n": "Den'dralass",
+        "t": 1,
+        "ti": 250936,
+        "z": 16593
+      }
+    ],
+    "subclassName": "Staff"
+  },
+  "263936": {
+    "id": 263936,
+    "name": "Windforged Shortblade",
+    "icon": "inv_knife_1h_skybornec60_b_01",
+    "iLvl": 15,
+    "reqLevel": 10,
+    "quality": "q2",
+    "speed": "2.20",
+    "dps": "7.73 DPS",
+    "stats": "",
+    "inventorySlot": "One-Hand",
+    "subclass": 15,
+    "side": "both",
+    "sourcemore": [
+      {
+        "n": "Den'dralass",
+        "t": 1,
+        "ti": 250936,
+        "z": 16593
+      }
+    ],
+    "subclassName": "Dagger"
+  },
+  "263937": {
+    "id": 263937,
+    "name": "Skyseeker's Greatstaff",
+    "icon": "inv_staff_2h_skybornec60_b_01",
+    "iLvl": 15,
+    "reqLevel": 10,
+    "quality": "q2",
+    "speed": "2.00",
+    "dps": "7.50 DPS",
+    "stats": "+3 Intellect, +3 Spirit",
+    "inventorySlot": "Two-Hand",
+    "subclass": 10,
+    "side": "both",
+    "sourcemore": [
+      {
+        "n": "Den'dralass",
+        "t": 1,
+        "ti": 250936,
+        "z": 16593
+      }
+    ],
+    "subclassName": "Staff"
+  },
+  "267369": {
+    "id": 267369,
+    "name": "Wolfsbane",
+    "icon": "inv_sword_25",
+    "iLvl": 31,
+    "reqLevel": 20,
+    "quality": "q3",
+    "speed": "3.40",
+    "dps": "25.59 DPS",
+    "stats": "+9 Stamina, +10 Intellect",
+    "inventorySlot": "Two-Hand",
+    "subclass": 8,
+    "side": "horde",
+    "sourcemore": [
+      {
+        "c": -141,
+        "c2": 4,
+        "n": "Old Fire-Eye",
+        "t": 5,
+        "ti": 95140
+      }
+    ],
+    "subclassName": "Two-Handed Sword"
+  },
+  "268484": {
+    "id": 268484,
+    "name": "Moonsilver Blade",
+    "icon": "inv_sword_25",
+    "iLvl": 31,
+    "reqLevel": 20,
+    "quality": "q2",
+    "speed": "3.40",
+    "dps": "21.03 DPS",
+    "stats": "+7 Stamina, +7 Intellect",
+    "inventorySlot": "Two-Hand",
+    "subclass": 8,
+    "side": "horde",
+    "sourcemore": [
+      {
+        "c": -141,
+        "c2": 4,
+        "n": "The Moonsilver Blade",
+        "t": 5,
+        "ti": 95126
+      }
+    ],
+    "subclassName": "Two-Handed Sword"
+  },
+  "269716": {
+    "id": 269716,
+    "name": "Keen Skinning Knife",
+    "icon": "inv_weapon_shortblade_05",
+    "iLvl": 19,
+    "reqLevel": 14,
+    "quality": "q2",
+    "speed": "1.50",
+    "dps": "6.33 DPS",
+    "stats": "+2 Intellect",
+    "inventorySlot": "Main Hand",
+    "subclass": 15,
+    "side": "horde",
+    "sourcemore": [
+      {
+        "c": 17,
+        "c2": 1,
+        "n": "Unwelcome Guests",
+        "t": 5,
+        "ti": 95508
+      }
+    ],
+    "subclassName": "Dagger"
+  },
+  "269717": {
+    "id": 269717,
+    "name": "Wildgore Greatsword",
+    "icon": "inv_sword_40",
+    "iLvl": 19,
+    "reqLevel": 14,
+    "quality": "q2",
+    "speed": "3.10",
+    "dps": "12.58 DPS",
+    "stats": "+6 Strength",
+    "inventorySlot": "Two-Hand",
+    "subclass": 8,
+    "side": "horde",
+    "sourcemore": [
+      {
+        "c": 17,
+        "c2": 1,
+        "n": "Unwelcome Guests",
+        "t": 5,
+        "ti": 95508
+      }
+    ],
+    "subclassName": "Two-Handed Sword"
+  },
+  "269742": {
+    "id": 269742,
+    "name": "Walton's Second-Favorite Gun",
+    "icon": "inv_weapon_rifle_05",
+    "iLvl": 20,
+    "reqLevel": 14,
+    "quality": "q2",
+    "speed": "2.20",
+    "dps": "7.95 DPS",
+    "stats": "+2 Agility",
+    "inventorySlot": "Ranged",
+    "subclass": 3,
+    "side": "horde",
+    "sourcemore": [
+      {
+        "c": 17,
+        "c2": 1,
+        "n": "Unwelcome Guests",
+        "t": 5,
+        "ti": 95508
+      }
+    ],
+    "subclassName": "Gun"
+  },
+  "270018": {
+    "id": 270018,
+    "name": "Hammerbone",
+    "icon": "inv_hammer_15",
+    "iLvl": 24,
+    "reqLevel": 10,
+    "quality": "q3",
+    "speed": "3.40",
+    "dps": "20.44 DPS",
+    "stats": "+7 Strength, +10 Spirit",
+    "inventorySlot": "Two-Hand",
+    "subclass": 5,
+    "side": "horde",
+    "sourcemore": [
+      {
+        "c": 718,
+        "c2": 2,
+        "n": "Leaders of the Fang",
+        "t": 5,
+        "ti": 914
+      }
+    ],
+    "subclassName": "Two-Handed Mace"
+  },
+  "270027": {
+    "id": 270027,
+    "name": "Ursine Hammer",
+    "icon": "inv_hammer_16",
+    "iLvl": 27,
+    "reqLevel": 22,
+    "quality": "q2",
+    "speed": "3.20",
+    "dps": "18.44 DPS",
+    "stats": "+5 Agility, +5 Intellect, +5 Spirit",
+    "inventorySlot": "Two-Hand",
+    "subclass": 5,
+    "side": "alliance",
+    "sourcemore": [
+      {
+        "c": 717,
+        "c2": 2,
+        "n": "What Comes Around...",
+        "t": 5,
+        "ti": 386
+      }
+    ],
+    "subclassName": "Two-Handed Mace"
+  },
+  "270069": {
+    "id": 270069,
+    "name": "Mindslicer",
+    "icon": "inv_weapon_shortblade_15",
+    "iLvl": 41,
+    "reqLevel": 30,
+    "quality": "q2",
+    "speed": "1.90",
+    "dps": "15.26 DPS",
+    "stats": "+7 Intellect",
+    "inventorySlot": "Main Hand",
+    "subclass": 15,
+    "side": "horde",
+    "sourcemore": [
+      {
+        "c": 45,
+        "c2": 0,
+        "n": "Call to Arms",
+        "t": 5,
+        "ti": 679
+      }
+    ],
+    "subclassName": "Dagger"
+  },
+  "270071": {
+    "id": 270071,
+    "name": "Dark Hearted Hammer",
+    "icon": "inv_hammer_16",
+    "iLvl": 40,
+    "reqLevel": 30,
+    "quality": "q2",
+    "speed": "3.80",
+    "dps": "28.95 DPS",
+    "stats": "+12 Strength, +8 Stamina",
+    "inventorySlot": "Two-Hand",
+    "subclass": 5,
+    "side": "alliance",
+    "sourcemore": [
+      {
+        "c": 33,
+        "c2": 0,
+        "n": "Colonel Kurzen",
+        "t": 5,
+        "ti": 202
+      }
+    ],
+    "subclassName": "Two-Handed Mace"
+  },
+  "270078": {
+    "id": 270078,
+    "name": "Guardian Staff",
+    "icon": "inv_staff_08",
+    "iLvl": 42,
+    "reqLevel": 1,
+    "quality": "q3",
+    "speed": "2.40",
+    "dps": "37.29 DPS",
+    "stats": "+16 Agility, +16 Stamina",
+    "inventorySlot": "Two-Hand",
+    "subclass": 10,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Staff"
+  },
+  "270084": {
+    "id": 270084,
+    "name": "Master Hunter's Wand",
+    "icon": "inv_wand_03",
+    "iLvl": 43,
+    "reqLevel": 28,
+    "quality": "q2",
+    "speed": "1.50",
+    "dps": "34.67 DPS",
+    "stats": "",
+    "inventorySlot": "Ranged",
+    "subclass": 19,
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": 33,
+        "c2": 0,
+        "n": "Big Game Hunter",
+        "t": 5,
+        "ti": 208
+      }
+    ],
+    "subclassName": "Wand"
+  },
+  "270085": {
+    "id": 270085,
+    "name": "Master Hunter's Spellsword",
+    "icon": "inv_sword_42",
+    "iLvl": 43,
+    "reqLevel": 28,
+    "quality": "q2",
+    "speed": "2.40",
+    "dps": "32.50 DPS",
+    "stats": "+12 Strength",
+    "inventorySlot": "Two-Hand",
+    "subclass": 8,
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": 33,
+        "c2": 0,
+        "n": "Big Game Hunter",
+        "t": 5,
+        "ti": 208
+      }
+    ],
+    "subclassName": "Two-Handed Sword"
+  },
+  "270088": {
+    "id": 270088,
+    "name": "Thane's Hammer",
+    "icon": "inv_hammer_06",
+    "iLvl": 45,
+    "reqLevel": 1,
+    "quality": "q2",
+    "speed": "2.20",
+    "dps": "17.73 DPS",
+    "stats": "+8 Intellect",
+    "inventorySlot": "Main Hand",
+    "subclass": 4,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "One-Handed Mace"
+  },
+  "270092": {
+    "id": 270092,
+    "name": "Blackwater Scimitar",
+    "icon": "inv_sword_36",
+    "iLvl": 45,
+    "reqLevel": 1,
+    "quality": "q2",
+    "speed": "1.90",
+    "dps": "26.58 DPS",
+    "stats": "+5 Strength, +5 Agility",
+    "inventorySlot": "One-Hand",
+    "subclass": 7,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "One-Handed Sword"
+  },
+  "270106": {
+    "id": 270106,
+    "name": "Vicious Throwing Stars",
+    "icon": "inv_throwingknife_03",
+    "iLvl": 50,
+    "reqLevel": 1,
+    "quality": "q2",
+    "speed": "1.80",
+    "dps": "26.67 DPS",
+    "stats": "+5 Strength, +5 Agility",
+    "inventorySlot": "Thrown",
+    "subclass": 16,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Thrown"
+  },
+  "270107": {
+    "id": 270107,
+    "name": "Bloodstained Longbow",
+    "icon": "inv_weapon_bow_08",
+    "iLvl": 50,
+    "reqLevel": 1,
+    "quality": "q2",
+    "speed": "2.70",
+    "dps": "23.33 DPS",
+    "stats": "+6 Agility, +2 Stamina",
+    "inventorySlot": "Ranged",
+    "subclass": 2,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Bow"
+  },
+  "270112": {
+    "id": 270112,
+    "name": "Gryphon Rider's Crop",
+    "icon": "inv_staff_13",
+    "iLvl": 53,
+    "reqLevel": 1,
+    "quality": "q2",
+    "speed": null,
+    "dps": null,
+    "stats": "+7 Intellect",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": -5,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Held in Off-hand"
+  },
+  "270228": {
+    "id": 270228,
+    "name": "Golemheart Stave",
+    "icon": "inv_staff_18",
+    "iLvl": 18,
+    "reqLevel": 13,
+    "quality": "q3",
+    "speed": "3.20",
+    "dps": "11.88 DPS",
+    "stats": "+9 Fire Resistance",
+    "inventorySlot": "Two-Hand",
+    "subclass": 10,
+    "side": "both",
+    "sourcemore": [
+      {
+        "dd": -1,
+        "n": "Plunder",
+        "t": 1,
+        "ti": 261311,
+        "z": 16919
+      }
+    ],
+    "subclassName": "Staff"
+  },
+  "270256": {
+    "id": 270256,
+    "name": "Durgen's Crescent Axe",
+    "icon": "inv_axe_18",
+    "iLvl": 18,
+    "reqLevel": 13,
+    "quality": "q3",
+    "speed": "2.40",
+    "dps": "12.29 DPS",
+    "stats": "+4 Strength",
+    "inventorySlot": "Main Hand",
+    "subclass": 0,
+    "side": "both",
+    "sourcemore": [
+      {
+        "dd": -1,
+        "n": "Durgen Dirgehammer",
+        "t": 1,
+        "ti": 261319,
+        "z": 16919
+      }
+    ],
+    "subclassName": "One-Handed Axe"
+  },
+  "271095": {
+    "id": 271095,
+    "name": "Fang of Magmatus",
+    "icon": "inv_misc_bone_06",
+    "iLvl": 18,
+    "reqLevel": 13,
+    "quality": "q3",
+    "speed": "1.70",
+    "dps": "7.94 DPS",
+    "stats": "+4 Intellect",
+    "inventorySlot": "Main Hand",
+    "subclass": 15,
+    "side": "both",
+    "sourcemore": [
+      {
+        "dd": -1,
+        "n": "Magmatus",
+        "t": 1,
+        "ti": 261316,
+        "z": 16919
+      }
+    ],
+    "subclassName": "Dagger"
+  },
+  "271203": {
+    "id": 271203,
+    "name": "Segmented Spider Leg",
+    "icon": "inv_staff_09",
+    "iLvl": 20,
+    "reqLevel": 15,
+    "quality": "q3",
+    "speed": "3.60",
+    "dps": "17.50 DPS",
+    "stats": "+9 Agility, +5 Spirit",
+    "inventorySlot": "Two-Hand",
+    "subclass": 10,
+    "side": "both",
+    "sourcemore": [
+      {
+        "dd": -1,
+        "n": "Witherfang",
+        "t": 1,
+        "ti": 250483,
+        "z": 16611
+      }
+    ],
+    "subclassName": "Staff"
+  },
+  "271204": {
+    "id": 271204,
+    "name": "Meathook Slicer",
+    "icon": "inv_misc_monsterfang_01",
+    "iLvl": 20,
+    "reqLevel": 15,
+    "quality": "q3",
+    "speed": "1.80",
+    "dps": "13.61 DPS",
+    "stats": "+5 Stamina",
+    "inventorySlot": "One-Hand",
+    "subclass": 15,
+    "side": "both",
+    "sourcemore": [
+      {
+        "dd": -1,
+        "n": "The Baron",
+        "t": 1,
+        "ti": 250660,
+        "z": 16611
+      }
+    ],
+    "subclassName": "Dagger"
+  },
+  "271215": {
+    "id": 271215,
+    "name": "Coldspire Staff",
+    "icon": "inv_staff_07",
+    "iLvl": 24,
+    "reqLevel": 19,
+    "quality": "q3",
+    "speed": "3.60",
+    "dps": "15.14 DPS",
+    "stats": "+13 Frost Resistance",
+    "inventorySlot": "Two-Hand",
+    "subclass": 10,
+    "side": "both",
+    "sourcemore": [
+      {
+        "dd": -1,
+        "n": "Rath'mael",
+        "t": 1,
+        "ti": 250657,
+        "z": 16611
+      }
+    ],
+    "subclassName": "Staff"
+  },
+  "271216": {
+    "id": 271216,
+    "name": "Scepter of the Abandoned",
+    "icon": "inv_misc_bone_dwarfskull_01",
+    "iLvl": 22,
+    "reqLevel": 17,
+    "quality": "q3",
+    "speed": "2.60",
+    "dps": "9.62 DPS",
+    "stats": "+5 Shadow Resistance",
+    "inventorySlot": "Main Hand",
+    "subclass": 4,
+    "side": "both",
+    "sourcemore": [
+      {
+        "dd": -1,
+        "n": "The Abandoned",
+        "t": 1,
+        "ti": 250631,
+        "z": 16611
+      }
+    ],
+    "subclassName": "One-Handed Mace"
+  },
+  "271217": {
+    "id": 271217,
+    "name": "Corpse Chopper",
+    "icon": "inv_axe_21",
+    "iLvl": 21,
+    "reqLevel": 16,
+    "quality": "q3",
+    "speed": "3.60",
+    "dps": "18.19 DPS",
+    "stats": "",
+    "inventorySlot": "Two-Hand",
+    "subclass": 1,
+    "side": "both",
+    "sourcemore": [
+      {
+        "dd": -1,
+        "n": "Bjork",
+        "t": 1,
+        "ti": 256097,
+        "z": 16611
+      }
+    ],
+    "subclassName": "Two-Handed Axe"
+  },
+  "271218": {
+    "id": 271218,
+    "name": "Vileblood Scimitar",
+    "icon": "inv_sword_16",
+    "iLvl": 22,
+    "reqLevel": 17,
+    "quality": "q3",
+    "speed": "2.60",
+    "dps": "14.62 DPS",
+    "stats": "+5 Spirit",
+    "inventorySlot": "One-Hand",
+    "subclass": 7,
+    "side": "both",
+    "sourcemore": [
+      {
+        "dd": -1,
+        "n": "Viktor the Vile",
+        "t": 1,
+        "ti": 256035,
+        "z": 16611
+      }
+    ],
+    "subclassName": "One-Handed Sword"
+  },
+  "271618": {
+    "id": 271618,
+    "name": "Rejected Roses",
+    "icon": "inv_offhand_1h_creepybouquet_b_01",
+    "iLvl": 1,
+    "reqLevel": 1,
+    "quality": "q1",
+    "speed": null,
+    "dps": null,
+    "stats": "",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": -5,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Held in Off-hand"
+  },
+  "271664": {
+    "id": 271664,
+    "name": "Hornbeam Heft",
+    "icon": "inv_axe_01",
+    "iLvl": 33,
+    "reqLevel": 24,
+    "quality": "q2",
+    "speed": "2.40",
+    "dps": "11.46 DPS",
+    "stats": "+6 Strength",
+    "inventorySlot": "One-Hand",
+    "subclass": 0,
+    "side": "alliance",
+    "sourcemore": [
+      {
+        "c": 16732,
+        "c2": 2,
+        "n": "Horrors in the Highland",
+        "t": 5,
+        "ti": 95646
+      }
+    ],
+    "subclassName": "One-Handed Axe"
+  },
+  "271667": {
+    "id": 271667,
+    "name": "Ironwood Destroyer",
+    "icon": "inv_hammer_16",
+    "iLvl": 33,
+    "reqLevel": 24,
+    "quality": "q2",
+    "speed": "3.40",
+    "dps": "22.21 DPS",
+    "stats": "",
+    "inventorySlot": "Two-Hand",
+    "subclass": 5,
+    "side": "alliance",
+    "sourcemore": [
+      {
+        "c": 16732,
+        "c2": 2,
+        "n": "Horrors in the Highland",
+        "t": 5,
+        "ti": 95646
+      }
+    ],
+    "subclassName": "Two-Handed Mace"
+  },
+  "271766": {
+    "id": 271766,
+    "name": "Heavehammer",
+    "icon": "inv_hammer_09",
+    "iLvl": 33,
+    "reqLevel": 24,
+    "quality": "q3",
+    "speed": "3.30",
+    "dps": "27.73 DPS",
+    "stats": "+60 Armor",
+    "inventorySlot": "Two-Hand",
+    "subclass": 5,
+    "side": "both",
+    "sourcemore": [
+      {
+        "z": 16732
+      }
+    ],
+    "subclassName": "Two-Handed Mace"
+  },
+  "271767": {
+    "id": 271767,
+    "name": "Healer's Staff",
+    "icon": "inv_staff_10",
+    "iLvl": 33,
+    "reqLevel": 24,
+    "quality": "q3",
+    "speed": "2.60",
+    "dps": "20.77 DPS",
+    "stats": "+12 Stamina",
+    "inventorySlot": "Two-Hand",
+    "subclass": 10,
+    "side": "both",
+    "sourcemore": [
+      {
+        "z": 16732
+      }
+    ],
+    "subclassName": "Staff"
+  },
+  "271794": {
+    "id": 271794,
+    "name": "Centaur Spear",
+    "icon": "inv_weapon_halberd_04",
+    "iLvl": 38,
+    "reqLevel": 35,
+    "quality": "q2",
+    "speed": "2.80",
+    "dps": "26.61 DPS",
+    "stats": "+9 Strength, +11 Stamina",
+    "inventorySlot": "Two-Hand",
+    "subclass": 6,
+    "side": "horde",
+    "sourcemore": [
+      {
+        "c": 405,
+        "c2": 1,
+        "n": "Test Your Theory",
+        "t": 5,
+        "ti": 93045
+      }
+    ],
+    "subclassName": "Polearm"
+  },
+  "271795": {
+    "id": 271795,
+    "name": "Wanderer's Broadsword",
+    "icon": "inv_sword_35",
+    "iLvl": 38,
+    "reqLevel": 35,
+    "quality": "q2",
+    "speed": "2.40",
+    "dps": "26.67 DPS",
+    "stats": "+8 Stamina, Improves your chance to hit by 1.0%.",
+    "inventorySlot": "Two-Hand",
+    "subclass": 8,
+    "side": "horde",
+    "sourcemore": [
+      {
+        "c": 405,
+        "c2": 1,
+        "n": "Test Your Theory",
+        "t": 5,
+        "ti": 93045
+      }
+    ],
+    "subclassName": "Two-Handed Sword"
+  },
+  "271796": {
+    "id": 271796,
+    "name": "Blade of the Magram Clan",
+    "icon": "inv_sword_07",
+    "iLvl": 38,
+    "reqLevel": 35,
+    "quality": "q2",
+    "speed": "2.20",
+    "dps": "20.45 DPS",
+    "stats": "+3 Stamina",
+    "inventorySlot": "One-Hand",
+    "subclass": 7,
+    "side": "alliance",
+    "sourcemore": [
+      {
+        "c": 16651,
+        "c2": 1,
+        "n": "Proof of Concept",
+        "t": 5,
+        "ti": 92873
+      }
+    ],
+    "subclassName": "One-Handed Sword"
+  },
+  "271800": {
+    "id": 271800,
+    "name": "Scavenged Magram Armament",
+    "icon": "inv_spear_05",
+    "iLvl": 42,
+    "reqLevel": 35,
+    "quality": "q3",
+    "speed": "3.00",
+    "dps": "37.17 DPS",
+    "stats": "+5 Agility, +14 Stamina",
+    "inventorySlot": "Two-Hand",
+    "subclass": 6,
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": 405,
+        "c2": 1,
+        "n": "Khan Jehn",
+        "t": 5,
+        "ti": 93196
+      }
+    ],
+    "subclassName": "Polearm"
+  },
+  "271801": {
+    "id": 271801,
+    "name": "Abandoned Ferocity",
+    "icon": "inv_axe_17",
+    "iLvl": 42,
+    "reqLevel": 35,
+    "quality": "q3",
+    "speed": "3.20",
+    "dps": "37.19 DPS",
+    "stats": "+10 Strength, +4 Agility, +12 Stamina",
+    "inventorySlot": "Two-Hand",
+    "subclass": 1,
+    "side": "horde",
+    "sourcemore": [
+      {
+        "c": 405,
+        "c2": 1,
+        "n": "Khan Jehn",
+        "t": 5,
+        "ti": 93128
+      }
+    ],
+    "subclassName": "Two-Handed Axe"
+  },
+  "271802": {
+    "id": 271802,
+    "name": "Bludgeon of Betrayed Virtues",
+    "icon": "inv_hammer_08",
+    "iLvl": 42,
+    "reqLevel": 35,
+    "quality": "q3",
+    "speed": "2.20",
+    "dps": "28.64 DPS",
+    "stats": "+3 Strength, +2 Agility, +6 Stamina",
+    "inventorySlot": "One-Hand",
+    "subclass": 4,
+    "side": "horde",
+    "sourcemore": [
+      {
+        "c": 405,
+        "c2": 1,
+        "n": "Khan Jehn",
+        "t": 5,
+        "ti": 93128
+      }
+    ],
+    "subclassName": "One-Handed Mace"
+  },
+  "271803": {
+    "id": 271803,
+    "name": "Greatstaff of the Necrokhans",
+    "icon": "inv_staff_08",
+    "iLvl": 42,
+    "reqLevel": 35,
+    "quality": "q3",
+    "speed": "3.00",
+    "dps": "27.67 DPS",
+    "stats": "+16 Stamina, +12 Intellect, +6 Spirit",
+    "inventorySlot": "Two-Hand",
+    "subclass": 10,
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": 405,
+        "c2": 1,
+        "n": "Khan Jehn",
+        "t": 5,
+        "ti": 93196
+      }
+    ],
+    "subclassName": "Staff"
+  },
+  "271804": {
+    "id": 271804,
+    "name": "Soulsplatter Mace",
+    "icon": "inv_mace_01",
+    "iLvl": 42,
+    "reqLevel": 35,
+    "quality": "q3",
+    "speed": "1.80",
+    "dps": "18.89 DPS",
+    "stats": "+3 Stamina, +6 Intellect, +1 Spirit",
+    "inventorySlot": "Main Hand",
+    "subclass": 4,
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": 405,
+        "c2": 1,
+        "n": "Khan Jehn",
+        "t": 5,
+        "ti": 93196
+      }
+    ],
+    "subclassName": "One-Handed Mace"
+  },
+  "271805": {
+    "id": 271805,
+    "name": "Thrice-Damned Effigy",
+    "icon": "inv_misc_orb_01",
+    "iLvl": 42,
+    "reqLevel": 35,
+    "quality": "q3",
+    "speed": null,
+    "dps": null,
+    "stats": "+2 Stamina, +4 Intellect, +7 Spirit",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": -5,
+    "side": "horde",
+    "sourcemore": [
+      {
+        "c": 405,
+        "c2": 1,
+        "n": "Khan Jehn",
+        "t": 5,
+        "ti": 93128
+      }
+    ],
+    "subclassName": "Held in Off-hand"
+  },
+  "271927": {
+    "id": 271927,
+    "name": "Rebels' Rugged Reaper",
+    "icon": "inv_axe_18",
+    "iLvl": 33,
+    "reqLevel": 28,
+    "quality": "q3",
+    "speed": "3.10",
+    "dps": "27.90 DPS",
+    "stats": "+16 Strength, +4 Stamina",
+    "inventorySlot": "Two-Hand",
+    "subclass": 1,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Two-Handed Axe"
+  },
+  "271931": {
+    "id": 271931,
+    "name": "Clever Expeditionary's Spellblade",
+    "icon": "inv_weapon_shortblade_18",
+    "iLvl": 33,
+    "reqLevel": 28,
+    "quality": "q3",
+    "speed": "1.40",
+    "dps": "14.29 DPS",
+    "stats": "+4 Stamina, +6 Intellect, +3 Spirit",
+    "inventorySlot": "Main Hand",
+    "subclass": 15,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Dagger"
+  },
+  "271932": {
+    "id": 271932,
+    "name": "Insurgent's Manifesto",
+    "icon": "inv_misc_book_06",
+    "iLvl": 63,
+    "reqLevel": 58,
+    "quality": "q3",
+    "speed": null,
+    "dps": null,
+    "stats": "+17 Stamina, +7 Intellect",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": -5,
+    "side": "both",
+    "sourcemore": [
+      {
+        "n": "Bryanna Embreeze",
+        "t": 1,
+        "ti": 263569,
+        "z": 17
+      }
+    ],
+    "subclassName": "Held in Off-hand"
+  },
+  "271933": {
+    "id": 271933,
+    "name": "Insurgent's Manifesto",
+    "icon": "inv_misc_book_06",
+    "iLvl": 53,
+    "reqLevel": 48,
+    "quality": "q3",
+    "speed": null,
+    "dps": null,
+    "stats": "+14 Stamina, +6 Intellect",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": -5,
+    "side": "both",
+    "sourcemore": [
+      {
+        "n": "Bryanna Embreeze",
+        "t": 1,
+        "ti": 263569,
+        "z": 17
+      }
+    ],
+    "subclassName": "Held in Off-hand"
+  },
+  "271934": {
+    "id": 271934,
+    "name": "Insurgent's Manifesto",
+    "icon": "inv_misc_book_06",
+    "iLvl": 43,
+    "reqLevel": 38,
+    "quality": "q3",
+    "speed": null,
+    "dps": null,
+    "stats": "+12 Stamina, +5 Intellect",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": -5,
+    "side": "both",
+    "sourcemore": [
+      {
+        "n": "Bryanna Embreeze",
+        "t": 1,
+        "ti": 263569,
+        "z": 17
+      }
+    ],
+    "subclassName": "Held in Off-hand"
+  },
+  "271935": {
+    "id": 271935,
+    "name": "Insurgent's Manifesto",
+    "icon": "inv_misc_book_06",
+    "iLvl": 33,
+    "reqLevel": 28,
+    "quality": "q3",
+    "speed": null,
+    "dps": null,
+    "stats": "+8 Stamina, +4 Intellect",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": -5,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Held in Off-hand"
+  },
+  "271936": {
+    "id": 271936,
+    "name": "Guerrilla's Jagged Mace",
+    "icon": "inv_hammer_05",
+    "iLvl": 63,
+    "reqLevel": 58,
+    "quality": "q3",
+    "speed": "2.80",
+    "dps": "41.43 DPS",
+    "stats": "+13 Stamina",
+    "inventorySlot": "Main Hand",
+    "subclass": 4,
+    "side": "both",
+    "sourcemore": [
+      {
+        "n": "Bryanna Embreeze",
+        "t": 1,
+        "ti": 263569,
+        "z": 17
+      }
+    ],
+    "subclassName": "One-Handed Mace"
+  },
+  "271939": {
+    "id": 271939,
+    "name": "Guerrilla's Jagged Mace",
+    "icon": "inv_hammer_05",
+    "iLvl": 33,
+    "reqLevel": 28,
+    "quality": "q3",
+    "speed": "2.80",
+    "dps": "21.43 DPS",
+    "stats": "+7 Stamina",
+    "inventorySlot": "Main Hand",
+    "subclass": 4,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "One-Handed Mace"
+  },
+  "272082": {
+    "id": 272082,
+    "name": "Darkspear Raider's Reaper",
+    "icon": "inv_axe_18",
+    "iLvl": 33,
+    "reqLevel": 28,
+    "quality": "q3",
+    "speed": "3.10",
+    "dps": "27.90 DPS",
+    "stats": "+16 Strength, +4 Stamina",
+    "inventorySlot": "Two-Hand",
+    "subclass": 1,
+    "side": "both",
+    "sourcemore": [
+      {
+        "n": "Creeg Bothunk",
+        "t": 1,
+        "ti": 263570,
+        "z": 17
+      }
+    ],
+    "subclassName": "Two-Handed Axe"
+  },
+  "272083": {
+    "id": 272083,
+    "name": "Darkspear Insurgent's Spellblade",
+    "icon": "inv_weapon_shortblade_18",
+    "iLvl": 63,
+    "reqLevel": 58,
+    "quality": "q3",
+    "speed": "1.40",
+    "dps": "27.50 DPS",
+    "stats": "+8 Stamina, +11 Intellect, +5 Spirit",
+    "inventorySlot": "Main Hand",
+    "subclass": 15,
+    "side": "both",
+    "sourcemore": [
+      {
+        "n": "Creeg Bothunk",
+        "t": 1,
+        "ti": 263570,
+        "z": 17
+      }
+    ],
+    "subclassName": "Dagger"
+  },
+  "272086": {
+    "id": 272086,
+    "name": "Darkspear Insurgent's Spellblade",
+    "icon": "inv_weapon_shortblade_18",
+    "iLvl": 33,
+    "reqLevel": 28,
+    "quality": "q3",
+    "speed": "1.40",
+    "dps": "14.29 DPS",
+    "stats": "+4 Stamina, +6 Intellect, +3 Spirit",
+    "inventorySlot": "Main Hand",
+    "subclass": 15,
+    "side": "both",
+    "sourcemore": [
+      {
+        "n": "Creeg Bothunk",
+        "t": 1,
+        "ti": 263570,
+        "z": 17
+      }
+    ],
+    "subclassName": "Dagger"
+  },
+  "272087": {
+    "id": 272087,
+    "name": "Tome of the Darkspear Prophecy",
+    "icon": "inv_misc_book_06",
+    "iLvl": 63,
+    "reqLevel": 58,
+    "quality": "q3",
+    "speed": null,
+    "dps": null,
+    "stats": "+17 Stamina, +7 Intellect",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": -5,
+    "side": "both",
+    "sourcemore": [
+      {
+        "n": "Creeg Bothunk",
+        "t": 1,
+        "ti": 263570,
+        "z": 17
+      }
+    ],
+    "subclassName": "Held in Off-hand"
+  },
+  "272088": {
+    "id": 272088,
+    "name": "Tome of the Darkspear Prophecy",
+    "icon": "inv_misc_book_06",
+    "iLvl": 53,
+    "reqLevel": 48,
+    "quality": "q3",
+    "speed": null,
+    "dps": null,
+    "stats": "+14 Stamina, +6 Intellect",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": -5,
+    "side": "both",
+    "sourcemore": [
+      {
+        "n": "Creeg Bothunk",
+        "t": 1,
+        "ti": 263570,
+        "z": 17
+      }
+    ],
+    "subclassName": "Held in Off-hand"
+  },
+  "272089": {
+    "id": 272089,
+    "name": "Tome of the Darkspear Prophecy",
+    "icon": "inv_misc_book_06",
+    "iLvl": 43,
+    "reqLevel": 38,
+    "quality": "q3",
+    "speed": null,
+    "dps": null,
+    "stats": "+12 Stamina, +5 Intellect",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": -5,
+    "side": "both",
+    "sourcemore": [
+      {
+        "n": "Creeg Bothunk",
+        "t": 1,
+        "ti": 263570,
+        "z": 17
+      }
+    ],
+    "subclassName": "Held in Off-hand"
+  },
+  "272090": {
+    "id": 272090,
+    "name": "Tome of the Darkspear Prophecy",
+    "icon": "inv_misc_book_06",
+    "iLvl": 33,
+    "reqLevel": 28,
+    "quality": "q3",
+    "speed": null,
+    "dps": null,
+    "stats": "+8 Stamina, +4 Intellect",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": -5,
+    "side": "both",
+    "sourcemore": [
+      {
+        "n": "Creeg Bothunk",
+        "t": 1,
+        "ti": 263570,
+        "z": 17
+      }
+    ],
+    "subclassName": "Held in Off-hand"
+  },
+  "272091": {
+    "id": 272091,
+    "name": "Darkspear Skirmisher's Bludgeon",
+    "icon": "inv_hammer_16",
+    "iLvl": 63,
+    "reqLevel": 58,
+    "quality": "q3",
+    "speed": "2.80",
+    "dps": "41.43 DPS",
+    "stats": "+13 Stamina",
+    "inventorySlot": "Main Hand",
+    "subclass": 4,
+    "side": "both",
+    "sourcemore": [
+      {
+        "n": "Creeg Bothunk",
+        "t": 1,
+        "ti": 263570,
+        "z": 17
+      }
+    ],
+    "subclassName": "One-Handed Mace"
+  },
+  "272094": {
+    "id": 272094,
+    "name": "Darkspear Skirmisher's Bludgeon",
+    "icon": "inv_hammer_16",
+    "iLvl": 33,
+    "reqLevel": 28,
+    "quality": "q3",
+    "speed": "2.80",
+    "dps": "21.43 DPS",
+    "stats": "+7 Stamina",
+    "inventorySlot": "Main Hand",
+    "subclass": 4,
+    "side": "both",
+    "sourcemore": [
+      {
+        "n": "Creeg Bothunk",
+        "t": 1,
+        "ti": 263570,
+        "z": 17
+      }
+    ],
+    "subclassName": "One-Handed Mace"
+  },
+  "272179": {
+    "id": 272179,
+    "name": "Greatsword of Great Pasts",
+    "icon": "inv_sword_23",
+    "iLvl": 43,
+    "reqLevel": 1,
+    "quality": "q2",
+    "speed": "2.60",
+    "dps": "32.50 DPS",
+    "stats": "+14 Strength, +9 Intellect",
+    "inventorySlot": "Two-Hand",
+    "subclass": 8,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Two-Handed Sword"
+  },
+  "272604": {
+    "id": 272604,
+    "name": "Premier High Warlord's Greatsword",
+    "icon": "inv_sword_48",
+    "iLvl": 65,
+    "reqLevel": 60,
+    "quality": "q4",
+    "speed": "3.80",
+    "dps": "61.58 DPS",
+    "stats": "+23 Strength, +35 Stamina, Improves your chance to get a critical strike by 1.0%.",
+    "inventorySlot": "Two-Hand",
+    "subclass": 8,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Two-Handed Sword"
+  },
+  "272685": {
+    "id": 272685,
+    "name": "Premier High Warlord's Tome of Destruction",
+    "icon": "inv_misc_book_15",
+    "iLvl": 65,
+    "reqLevel": 60,
+    "quality": "q4",
+    "speed": null,
+    "dps": null,
+    "stats": "+15 Stamina, +14 Intellect",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": -5,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Held in Off-hand"
+  },
+  "272686": {
+    "id": 272686,
+    "name": "Premier High Warlord's Tome of Mending",
+    "icon": "inv_misc_book_14",
+    "iLvl": 65,
+    "reqLevel": 60,
+    "quality": "q4",
+    "speed": null,
+    "dps": null,
+    "stats": "+13 Stamina, +13 Intellect, +13 Spirit",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": -5,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Held in Off-hand"
+  },
+  "272693": {
+    "id": 272693,
+    "name": "Premier Grand Marshal's Longsword",
+    "icon": "inv_sword_11",
+    "iLvl": 65,
+    "reqLevel": 60,
+    "quality": "q4",
+    "speed": "2.90",
+    "dps": "47.24 DPS",
+    "stats": "+2 Stamina, Improves your chance to get a critical strike by 1.0%.",
+    "inventorySlot": "One-Hand",
+    "subclass": 7,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "One-Handed Sword"
+  },
+  "272840": {
+    "id": 272840,
+    "name": "Premier Grand Marshal's Sunderer",
+    "icon": "inv_axe_10",
+    "iLvl": 65,
+    "reqLevel": 60,
+    "quality": "q4",
+    "speed": "3.80",
+    "dps": "61.58 DPS",
+    "stats": "+23 Strength, +35 Stamina, Improves your chance to get a critical strike by 1.0%.",
+    "inventorySlot": "Two-Hand",
+    "subclass": 1,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Two-Handed Axe"
+  },
+  "272841": {
+    "id": 272841,
+    "name": "Premier Grand Marshal's Bullseye",
+    "icon": "inv_weapon_bow_12",
+    "iLvl": 65,
+    "reqLevel": 60,
+    "quality": "q4",
+    "speed": "1.80",
+    "dps": "36.94 DPS",
+    "stats": "+6 Stamina",
+    "inventorySlot": "Ranged",
+    "subclass": 2,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Bow"
+  },
+  "272849": {
+    "id": 272849,
+    "name": "Premier Grand Marshal's Glaive",
+    "icon": "inv_spear_08",
+    "iLvl": 65,
+    "reqLevel": 60,
+    "quality": "q4",
+    "speed": "3.80",
+    "dps": "61.58 DPS",
+    "stats": "+23 Strength, +35 Stamina, Improves your chance to get a critical strike by 1.0%.",
+    "inventorySlot": "Two-Hand",
+    "subclass": 6,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Polearm"
+  },
+  "272850": {
+    "id": 272850,
+    "name": "Premier Grand Marshal's Stave",
+    "icon": "inv_staff_14",
+    "iLvl": 65,
+    "reqLevel": 60,
+    "quality": "q4",
+    "speed": "3.00",
+    "dps": "45.67 DPS",
+    "stats": "+36 Stamina, +20 Intellect",
+    "inventorySlot": "Two-Hand",
+    "subclass": 10,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Staff"
+  },
+  "272851": {
+    "id": 272851,
+    "name": "Premier Grand Marshal's Claymore",
+    "icon": "inv_sword_39",
+    "iLvl": 65,
+    "reqLevel": 60,
+    "quality": "q4",
+    "speed": "3.80",
+    "dps": "61.58 DPS",
+    "stats": "+23 Strength, +35 Stamina, Improves your chance to get a critical strike by 1.0%.",
+    "inventorySlot": "Two-Hand",
+    "subclass": 8,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Two-Handed Sword"
+  },
+  "272857": {
+    "id": 272857,
+    "name": "Premier Grand Marshal's Warhammer",
+    "icon": "inv_hammer_02",
+    "iLvl": 65,
+    "reqLevel": 60,
+    "quality": "q4",
+    "speed": "2.90",
+    "dps": "31.55 DPS",
+    "stats": "+12 Stamina, +7 Intellect",
+    "inventorySlot": "Main Hand",
+    "subclass": 4,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "One-Handed Mace"
+  },
+  "272858": {
+    "id": 272858,
+    "name": "Premier Grand Marshal's Demolisher",
+    "icon": "inv_hammer_23",
+    "iLvl": 65,
+    "reqLevel": 60,
+    "quality": "q4",
+    "speed": "3.80",
+    "dps": "61.58 DPS",
+    "stats": "+15 Strength, +25 Stamina, +24 Intellect",
+    "inventorySlot": "Two-Hand",
+    "subclass": 5,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Two-Handed Mace"
+  },
+  "272996": {
+    "id": 272996,
+    "name": "Trogg Scepter",
+    "icon": "inv_misc_bone_10",
+    "iLvl": 18,
+    "reqLevel": 13,
+    "quality": "q3",
+    "speed": "2.40",
+    "dps": "8.13 DPS",
+    "stats": "+4 Spirit",
+    "inventorySlot": "Main Hand",
+    "subclass": 4,
+    "side": "both",
+    "sourcemore": [
+      {
+        "dd": -1,
+        "n": "Oggleflint",
+        "t": 1,
+        "ti": 11517,
+        "z": 2437
+      }
+    ],
+    "subclassName": "One-Handed Mace"
+  },
+  "272998": {
+    "id": 272998,
+    "name": "Bone Knuckles",
+    "icon": "ability_whirlwind",
+    "iLvl": 18,
+    "reqLevel": 13,
+    "quality": "q3",
+    "speed": "2.00",
+    "dps": "12.25 DPS",
+    "stats": "",
+    "inventorySlot": "Main Hand",
+    "subclass": 13,
+    "side": "both",
+    "sourcemore": [
+      {
+        "dd": -1,
+        "n": "Oggleflint",
+        "t": 1,
+        "ti": 11517,
+        "z": 2437
+      }
+    ],
+    "subclassName": "Fist Weapon"
+  },
+  "272999": {
+    "id": 272999,
+    "name": "Barbaric Crossbow",
+    "icon": "inv_weapon_crossbow_02",
+    "iLvl": 18,
+    "reqLevel": 13,
+    "quality": "q3",
+    "speed": "2.00",
+    "dps": "9.50 DPS",
+    "stats": "",
+    "inventorySlot": "Ranged",
+    "subclass": 18,
+    "side": "both",
+    "sourcemore": [
+      {
+        "dd": -1,
+        "n": "Oggleflint",
+        "t": 1,
+        "ti": 11517,
+        "z": 2437
+      }
+    ],
+    "subclassName": "Crossbow"
+  },
+  "273003": {
+    "id": 273003,
+    "name": "Searing Dagger",
+    "icon": "inv_weapon_shortblade_03",
+    "iLvl": 18,
+    "reqLevel": 13,
+    "quality": "q3",
+    "speed": "1.60",
+    "dps": "8.13 DPS",
+    "stats": "+4 Spirit",
+    "inventorySlot": "Main Hand",
+    "subclass": 15,
+    "side": "both",
+    "sourcemore": [
+      {
+        "dd": -1,
+        "n": "Bazzalan",
+        "t": 1,
+        "ti": 11519,
+        "z": 2437
+      }
+    ],
+    "subclassName": "Dagger"
+  },
+  "273027": {
+    "id": 273027,
+    "name": "Raptor's Gaze",
+    "icon": "spell_nature_crystalball",
+    "iLvl": 31,
+    "reqLevel": 26,
+    "quality": "q3",
+    "speed": null,
+    "dps": null,
+    "stats": "+4 Stamina, +4 Intellect",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": -5,
+    "side": "both",
+    "sourcemore": [
+      {
+        "dd": -1,
+        "n": "Shadetooth",
+        "t": 1,
+        "ti": 260325,
+        "z": 16732
+      }
+    ],
+    "subclassName": "Held in Off-hand"
+  },
+  "273029": {
+    "id": 273029,
+    "name": "Golemsight Long Gun",
+    "icon": "inv_musket_02",
+    "iLvl": 33,
+    "reqLevel": 28,
+    "quality": "q3",
+    "speed": "2.50",
+    "dps": "16.60 DPS",
+    "stats": "+6 Agility",
+    "inventorySlot": "Ranged",
+    "subclass": 3,
+    "side": "both",
+    "sourcemore": [
+      {
+        "dd": -1,
+        "n": "Relic Guardian",
+        "t": 1,
+        "ti": 260326,
+        "z": 16732
+      }
+    ],
+    "subclassName": "Gun"
+  },
+  "273033": {
+    "id": 273033,
+    "name": "Gravespike Repeater",
+    "icon": "inv_weapon_crossbow_06",
+    "iLvl": 31,
+    "reqLevel": 26,
+    "quality": "q3",
+    "speed": "2.30",
+    "dps": "15.43 DPS",
+    "stats": "",
+    "inventorySlot": "Ranged",
+    "subclass": 18,
+    "side": "both",
+    "sourcemore": [
+      {
+        "dd": -1,
+        "n": "Atrexis the Grave Knight",
+        "t": 1,
+        "ti": 247126,
+        "z": 36
+      }
+    ],
+    "subclassName": "Crossbow"
+  },
+  "273037": {
+    "id": 273037,
+    "name": "Felbough Arm",
+    "icon": "inv_spear_08",
+    "iLvl": 34,
+    "reqLevel": 29,
+    "quality": "q3",
+    "speed": "3.00",
+    "dps": "28.83 DPS",
+    "stats": "+10 Agility, Improves your chance to hit by 1.0%., +9 Nature Resistance",
+    "inventorySlot": "Two-Hand",
+    "subclass": 6,
+    "side": "both",
+    "sourcemore": [
+      {
+        "dd": -1,
+        "n": "Fel Ancient",
+        "t": 1,
+        "ti": 246003,
+        "z": 36
+      }
+    ],
+    "subclassName": "Polearm"
+  },
+  "273040": {
+    "id": 273040,
+    "name": "Spine of the Devourer",
+    "icon": "inv_staff_07",
+    "iLvl": 33,
+    "reqLevel": 28,
+    "quality": "q3",
+    "speed": "3.60",
+    "dps": "20.69 DPS",
+    "stats": "+14 Stamina",
+    "inventorySlot": "Two-Hand",
+    "subclass": 10,
+    "side": "both",
+    "sourcemore": [
+      {
+        "dd": -1,
+        "n": "Mana Devourer",
+        "t": 1,
+        "ti": 246008,
+        "z": 36
+      }
+    ],
+    "subclassName": "Staff"
+  },
+  "273043": {
+    "id": 273043,
+    "name": "Wand of Mana Concentration",
+    "icon": "inv_wand_06",
+    "iLvl": 32,
+    "reqLevel": 27,
+    "quality": "q3",
+    "speed": "1.70",
+    "dps": "31.18 DPS",
+    "stats": "+4 Intellect",
+    "inventorySlot": "Ranged",
+    "subclass": 19,
+    "side": "both",
+    "sourcemore": [
+      {
+        "dd": -1,
+        "n": "Arcanic Enigma",
+        "t": 1,
+        "ti": 246016,
+        "z": 36
+      }
+    ],
+    "subclassName": "Wand"
+  },
+  "273046": {
+    "id": 273046,
+    "name": "Guardian's Dualblade",
+    "icon": "inv_throwingaxe_05",
+    "iLvl": 33,
+    "reqLevel": 28,
+    "quality": "q3",
+    "speed": "3.50",
+    "dps": "27.86 DPS",
+    "stats": "",
+    "inventorySlot": "Two-Hand",
+    "subclass": 1,
+    "side": "both",
+    "sourcemore": [
+      {
+        "dd": -1,
+        "n": "Unstable Sentinel",
+        "t": 1,
+        "ti": 246017,
+        "z": 36
+      }
+    ],
+    "subclassName": "Two-Handed Axe"
+  },
+  "273052": {
+    "id": 273052,
+    "name": "Ponderous Orb",
+    "icon": "inv_misc_orb_04",
+    "iLvl": 35,
+    "reqLevel": 30,
+    "quality": "q3",
+    "speed": null,
+    "dps": null,
+    "stats": "+2 Intellect, +8 Spirit",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": -5,
+    "side": "both",
+    "sourcemore": [
+      {
+        "dd": -1,
+        "n": "Shade of the Archmage",
+        "t": 1,
+        "ti": 246020,
+        "z": 36
+      }
+    ],
+    "subclassName": "Held in Off-hand"
+  },
+  "273053": {
+    "id": 273053,
+    "name": "Tendonscraper Dagger",
+    "icon": "inv_misc_bone_06",
+    "iLvl": 33,
+    "reqLevel": 28,
+    "quality": "q3",
+    "speed": "1.60",
+    "dps": "14.38 DPS",
+    "stats": "+5 Stamina",
+    "inventorySlot": "Main Hand",
+    "subclass": 15,
+    "side": "both",
+    "sourcemore": [
+      {
+        "dd": -1,
+        "n": "Lyn the Ignored",
+        "t": 1,
+        "ti": 247032,
+        "z": 36
+      }
+    ],
+    "subclassName": "Dagger"
+  },
+  "273137": {
+    "id": 273137,
+    "name": "Skum's Bucket",
+    "icon": "inv_misc_1h_bucket_c_01",
+    "iLvl": 22,
+    "reqLevel": 17,
+    "quality": "q3",
+    "speed": null,
+    "dps": null,
+    "stats": "+3 Stamina",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": -5,
+    "side": "both",
+    "sourcemore": [
+      {
+        "bd": 1,
+        "dd": -1,
+        "n": "Skum",
+        "t": 1,
+        "ti": 3674,
+        "z": 718
+      }
+    ],
+    "subclassName": "Held in Off-hand"
+  },
+  "273297": {
+    "id": 273297,
+    "name": "Goblin Hammer",
+    "icon": "inv_mace_07",
+    "iLvl": 23,
+    "reqLevel": 18,
+    "quality": "q3",
+    "speed": "2.00",
+    "dps": "15.25 DPS",
+    "stats": "+4 Stamina, +20 Armor",
+    "inventorySlot": "Main Hand",
+    "subclass": 4,
+    "side": "both",
+    "sourcemore": [
+      {
+        "dd": -1,
+        "n": "Gilnid",
+        "t": 1,
+        "ti": 1763,
+        "z": 1581
+      }
+    ],
+    "subclassName": "One-Handed Mace"
+  },
+  "273456": {
+    "id": 273456,
+    "name": "Cell Keeper's Claws",
+    "icon": "inv_misc_monsterclaw_04",
+    "iLvl": 22,
+    "reqLevel": 17,
+    "quality": "q3",
+    "speed": "2.50",
+    "dps": "14.60 DPS",
+    "stats": "+2 Agility",
+    "inventorySlot": "Main Hand",
+    "subclass": 13,
+    "side": "both",
+    "sourcemore": [
+      {
+        "bd": 1,
+        "dd": -1,
+        "n": "Rethilgore",
+        "t": 1,
+        "ti": 3914,
+        "z": 209
+      }
+    ],
+    "subclassName": "Fist Weapon"
+  },
+  "273637": {
+    "id": 273637,
+    "name": "Blade of Silverlaine",
+    "icon": "inv_sword_05",
+    "iLvl": 26,
+    "reqLevel": 21,
+    "quality": "q3",
+    "speed": "2.30",
+    "dps": "10.87 DPS",
+    "stats": "+6 Shadow Resistance",
+    "inventorySlot": "Main Hand",
+    "subclass": 7,
+    "side": "both",
+    "sourcemore": [
+      {
+        "bd": 1,
+        "n": "Baron Silverlaine",
+        "t": 1,
+        "ti": 3887,
+        "z": 209
+      }
+    ],
+    "subclassName": "One-Handed Sword"
+  },
+  "273809": {
+    "id": 273809,
+    "name": "Hamhock's Cleaver",
+    "icon": "inv_axe_01",
+    "iLvl": 30,
+    "reqLevel": 25,
+    "quality": "q3",
+    "speed": "2.20",
+    "dps": "18.86 DPS",
+    "stats": "+4 Strength",
+    "inventorySlot": "Main Hand",
+    "subclass": 0,
+    "side": "both",
+    "sourcemore": [
+      {
+        "dd": -1,
+        "n": "Hamhock",
+        "t": 1,
+        "ti": 1717,
+        "z": 717
+      }
+    ],
+    "subclassName": "One-Handed Axe"
+  },
+  "273817": {
+    "id": 273817,
+    "name": "Graverobber's Shovel",
+    "icon": "inv_misc_shovel_01",
+    "iLvl": 28,
+    "reqLevel": 23,
+    "quality": "q3",
+    "speed": "3.70",
+    "dps": "22.97 DPS",
+    "stats": "+10 Stamina",
+    "inventorySlot": "Two-Hand",
+    "subclass": 5,
+    "side": "both",
+    "sourcemore": [
+      {
+        "dd": -1,
+        "n": "Dextren Ward",
+        "t": 1,
+        "ti": 1663,
+        "z": 717
+      }
+    ],
+    "subclassName": "Two-Handed Mace"
+  },
+  "273819": {
+    "id": 273819,
+    "name": "Boneslicer",
+    "icon": "inv_spear_05",
+    "iLvl": 28,
+    "reqLevel": 23,
+    "quality": "q3",
+    "speed": "2.00",
+    "dps": "22.75 DPS",
+    "stats": "",
+    "inventorySlot": "Two-Hand",
+    "subclass": 6,
+    "side": "both",
+    "sourcemore": [
+      {
+        "dd": -1,
+        "n": "Dextren Ward",
+        "t": 1,
+        "ti": 1663,
+        "z": 717
+      }
+    ],
+    "subclassName": "Polearm"
+  },
+  "273827": {
+    "id": 273827,
+    "name": "Debt Collector",
+    "icon": "inv_sword_24",
+    "iLvl": 31,
+    "reqLevel": 26,
+    "quality": "q3",
+    "speed": "2.30",
+    "dps": "13.04 DPS",
+    "stats": "",
+    "inventorySlot": "Main Hand",
+    "subclass": 7,
+    "side": "both",
+    "sourcemore": [
+      {
+        "dd": -1,
+        "n": "Bazil Thredd",
+        "t": 1,
+        "ti": 1716,
+        "z": 717
+      }
+    ],
+    "subclassName": "One-Handed Sword"
+  },
+  "273829": {
+    "id": 273829,
+    "name": "Concealed Hand Crossbow",
+    "icon": "inv_weapon_crossbow_02",
+    "iLvl": 31,
+    "reqLevel": 26,
+    "quality": "q3",
+    "speed": "2.00",
+    "dps": "15.25 DPS",
+    "stats": "",
+    "inventorySlot": "Ranged",
+    "subclass": 18,
+    "side": "both",
+    "sourcemore": [
+      {
+        "dd": -1,
+        "n": "Bazil Thredd",
+        "t": 1,
+        "ti": 1716,
+        "z": 717
+      }
+    ],
+    "subclassName": "Crossbow"
+  },
+  "273830": {
+    "id": 273830,
+    "name": "Blackthorne Maul",
+    "icon": "inv_hammer_16",
+    "iLvl": 57,
+    "reqLevel": 57,
+    "quality": "q1",
+    "speed": "3.60",
+    "dps": "42.78 DPS",
+    "stats": "",
+    "inventorySlot": "Two-Hand",
+    "subclass": 5,
+    "side": "both",
+    "sourcemore": [
+      {
+        "z": 616
+      }
+    ],
+    "subclassName": "Two-Handed Mace"
+  },
+  "273841": {
+    "id": 273841,
+    "name": "Twilight Maul",
+    "icon": "inv_hammer_09",
+    "iLvl": 28,
+    "reqLevel": 23,
+    "quality": "q3",
+    "speed": "3.30",
+    "dps": "22.88 DPS",
+    "stats": "",
+    "inventorySlot": "Two-Hand",
+    "subclass": 5,
+    "side": "both",
+    "sourcemore": [
+      {
+        "dd": -1,
+        "n": "Lorgus Jett",
+        "t": 1,
+        "ti": 12902,
+        "z": 719
+      }
+    ],
+    "subclassName": "Two-Handed Mace"
+  },
+  "273843": {
+    "id": 273843,
+    "name": "Fallenroot Longbow",
+    "icon": "inv_weapon_bow_03",
+    "iLvl": 28,
+    "reqLevel": 23,
+    "quality": "q3",
+    "speed": "2.20",
+    "dps": "13.86 DPS",
+    "stats": "+2 Agility, +4 Stamina",
+    "inventorySlot": "Ranged",
+    "subclass": 2,
+    "side": "both",
+    "sourcemore": [
+      {
+        "dd": -1,
+        "n": "Lorgus Jett",
+        "t": 1,
+        "ti": 12902,
+        "z": 719
+      }
+    ],
+    "subclassName": "Bow"
+  },
+  "273879": {
+    "id": 273879,
+    "name": "Refined Shortbow",
+    "icon": "inv_weapon_bow_15",
+    "iLvl": 5,
+    "reqLevel": 2,
+    "quality": "q1",
+    "speed": "2.40",
+    "dps": "2.08 DPS",
+    "stats": "",
+    "inventorySlot": "Ranged",
+    "subclass": 2,
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": 16593,
+        "c2": -2,
+        "n": "Foul Matriarch",
+        "t": 5,
+        "ti": 92470
+      }
+    ],
+    "subclassName": "Bow"
+  },
+  "274084": {
+    "id": 274084,
+    "name": "Quilboar Blaster",
+    "icon": "inv_weapon_rifle_05",
+    "iLvl": 36,
+    "reqLevel": 29,
+    "quality": "q3",
+    "speed": "2.80",
+    "dps": "18.57 DPS",
+    "stats": "+4 Agility, +4 Spirit",
+    "inventorySlot": "Ranged",
+    "subclass": 3,
+    "side": "both",
+    "sourcemore": [
+      {
+        "z": 491
+      }
+    ],
+    "subclassName": "Gun"
+  },
+  "274092": {
+    "id": 274092,
+    "name": "Sharpened Cutlery",
+    "icon": "inv_throwingknife_02",
+    "iLvl": 26,
+    "reqLevel": 19,
+    "quality": "q3",
+    "speed": "1.80",
+    "dps": "14.72 DPS",
+    "stats": "",
+    "inventorySlot": "Thrown",
+    "subclass": 16,
+    "side": "both",
+    "sourcemore": [
+      {
+        "dd": -1,
+        "z": 717
+      }
+    ],
+    "subclassName": "Thrown"
+  },
+  "274158": {
+    "id": 274158,
+    "name": "Death Prophet Spine",
+    "icon": "inv_staff_17",
+    "iLvl": 31,
+    "reqLevel": 26,
+    "quality": "q3",
+    "speed": "2.80",
+    "dps": "18.93 DPS",
+    "stats": "+11 Stamina",
+    "inventorySlot": "Two-Hand",
+    "subclass": 10,
+    "side": "both",
+    "sourcemore": [
+      {
+        "dd": -1,
+        "n": "Aggem Thorncurse",
+        "t": 1,
+        "ti": 4424,
+        "z": 491
+      }
+    ],
+    "subclassName": "Staff"
+  },
+  "274160": {
+    "id": 274160,
+    "name": "Quilrager Throwing Axe",
+    "icon": "inv_throwingaxe_03",
+    "iLvl": 36,
+    "reqLevel": 31,
+    "quality": "q3",
+    "speed": "1.80",
+    "dps": "21.67 DPS",
+    "stats": "+4 Strength, +40 Armor",
+    "inventorySlot": "Thrown",
+    "subclass": 16,
+    "side": "both",
+    "sourcemore": [
+      {
+        "dd": -1,
+        "n": "Agathelos the Raging",
+        "t": 1,
+        "ti": 4422,
+        "z": 491
+      }
+    ],
+    "subclassName": "Thrown"
+  },
+  "274271": {
+    "id": 274271,
+    "name": "Deadhead Blade",
+    "icon": "inv_weapon_shortblade_15",
+    "iLvl": 58,
+    "reqLevel": 1,
+    "quality": "q2",
+    "speed": "1.80",
+    "dps": "34.44 DPS",
+    "stats": "+5 Agility",
+    "inventorySlot": "One-Hand",
+    "subclass": 15,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Dagger"
+  },
+  "274292": {
+    "id": 274292,
+    "name": "Houndmaster Boomerang",
+    "icon": "inv_weapon_shortblade_10",
+    "iLvl": 36,
+    "reqLevel": 31,
+    "quality": "q3",
+    "speed": "1.80",
+    "dps": "21.67 DPS",
+    "stats": "+4 Stamina",
+    "inventorySlot": "Thrown",
+    "subclass": 16,
+    "side": "both",
+    "sourcemore": [
+      {
+        "dd": -1,
+        "n": "Houndmaster Loksey",
+        "t": 1,
+        "ti": 3974,
+        "z": 796
+      }
+    ],
+    "subclassName": "Thrown"
+  },
+  "274293": {
+    "id": 274293,
+    "name": "Spellsever Crossbow",
+    "icon": "inv_weapon_crossbow_07",
+    "iLvl": 39,
+    "reqLevel": 34,
+    "quality": "q3",
+    "speed": "2.40",
+    "dps": "20.83 DPS",
+    "stats": "",
+    "inventorySlot": "Ranged",
+    "subclass": 18,
+    "side": "both",
+    "sourcemore": [
+      {
+        "dd": -1,
+        "n": "Arcanist Doan",
+        "t": 1,
+        "ti": 6487,
+        "z": 796
+      }
+    ],
+    "subclassName": "Crossbow"
+  },
+  "274381": {
+    "id": 274381,
+    "name": "Coldbringer Spine",
+    "icon": "inv_skeletonspinepet_bone",
+    "iLvl": 43,
+    "reqLevel": 38,
+    "quality": "q3",
+    "speed": "2.80",
+    "dps": "28.21 DPS",
+    "stats": "+20 Spirit, Improves your chance to hit by 1.0%.",
+    "inventorySlot": "Two-Hand",
+    "subclass": 10,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Staff"
+  },
+  "274383": {
+    "id": 274383,
+    "name": "Kanai's Knife",
+    "icon": "inv_weapon_shortblade_15",
+    "iLvl": 58,
+    "reqLevel": 1,
+    "quality": "q2",
+    "speed": "1.70",
+    "dps": "34.71 DPS",
+    "stats": "+9 Agility",
+    "inventorySlot": "One-Hand",
+    "subclass": 15,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Dagger"
+  },
+  "274417": {
+    "id": 274417,
+    "name": "Barkskin Baubles",
+    "icon": "inv_misc_bag_10_black",
+    "iLvl": 58,
+    "reqLevel": 53,
+    "quality": "q3",
+    "speed": null,
+    "dps": null,
+    "stats": "+10 Stamina, +10 Spirit",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": -5,
+    "side": "both",
+    "sourcemore": [
+      {
+        "n": "Dala Fairmaw",
+        "t": 1,
+        "ti": 256629,
+        "z": 616
+      }
+    ],
+    "subclassName": "Held in Off-hand"
+  },
+  "274419": {
+    "id": 274419,
+    "name": "Bear Poking Stick",
+    "icon": "inv_staff_21",
+    "iLvl": 58,
+    "reqLevel": 53,
+    "quality": "q3",
+    "speed": "3.20",
+    "dps": "49.69 DPS",
+    "stats": "+24 Agility, +9 Stamina",
+    "inventorySlot": "Two-Hand",
+    "subclass": 6,
+    "side": "both",
+    "sourcemore": [
+      {
+        "n": "Dala Fairmaw",
+        "t": 1,
+        "ti": 256629,
+        "z": 616
+      }
+    ],
+    "subclassName": "Polearm"
+  },
+  "274420": {
+    "id": 274420,
+    "name": "Wisepaw Totem",
+    "icon": "inv_staff_51",
+    "iLvl": 58,
+    "reqLevel": 53,
+    "quality": "q3",
+    "speed": "3.20",
+    "dps": "36.88 DPS",
+    "stats": "+19 Stamina, +23 Intellect",
+    "inventorySlot": "Two-Hand",
+    "subclass": 10,
+    "side": "both",
+    "sourcemore": [
+      {
+        "n": "Dala Fairmaw",
+        "t": 1,
+        "ti": 256629,
+        "z": 616
+      }
+    ],
+    "subclassName": "Staff"
+  },
+  "274425": {
+    "id": 274425,
+    "name": "White Obsidian Wand",
+    "icon": "inv_wand_07",
+    "iLvl": 44,
+    "reqLevel": 39,
+    "quality": "q3",
+    "speed": "1.70",
+    "dps": "41.47 DPS",
+    "stats": "",
+    "inventorySlot": "Ranged",
+    "subclass": 19,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Wand"
+  },
+  "274430": {
+    "id": 274430,
+    "name": "Rock Sentinel Slicer",
+    "icon": "inv_axe_04",
+    "iLvl": 44,
+    "reqLevel": 39,
+    "quality": "q3",
+    "speed": "2.80",
+    "dps": "28.75 DPS",
+    "stats": "+12 Intellect",
+    "inventorySlot": "Two-Hand",
+    "subclass": 1,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Two-Handed Axe"
+  },
+  "274432": {
+    "id": 274432,
+    "name": "Stone Keeper Spire",
+    "icon": "inv_staff_11",
+    "iLvl": 49,
+    "reqLevel": 44,
+    "quality": "q3",
+    "speed": "3.20",
+    "dps": "31.72 DPS",
+    "stats": "+19 Stamina, +180 Armor",
+    "inventorySlot": "Two-Hand",
+    "subclass": 10,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Staff"
+  },
+  "274485": {
+    "id": 274485,
+    "name": "Axe of Lingering Dread",
+    "icon": "inv_axe_01",
+    "iLvl": 44,
+    "reqLevel": 39,
+    "quality": "q3",
+    "speed": "3.00",
+    "dps": "38.83 DPS",
+    "stats": "Increases your chance to Dodge an attack by 1.0%., Increases your chance to Parry an attack by 1.0%.",
+    "inventorySlot": "Two-Hand",
+    "subclass": 1,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Two-Handed Axe"
+  },
+  "274655": {
+    "id": 274655,
+    "name": "Peacekeeper Wand",
+    "icon": "inv_wand_14",
+    "iLvl": 48,
+    "reqLevel": 43,
+    "quality": "q3",
+    "speed": "1.90",
+    "dps": "45.53 DPS",
+    "stats": "",
+    "inventorySlot": "Ranged",
+    "subclass": 19,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Wand"
+  },
+  "274743": {
+    "id": 274743,
+    "name": "Defective Samophlange",
+    "icon": "inv_gizmo_06",
+    "iLvl": 25,
+    "reqLevel": 20,
+    "quality": "q3",
+    "speed": null,
+    "dps": null,
+    "stats": "+5 Intellect, +5 Spirit",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": -5,
+    "side": "both",
+    "sourcemore": [
+      {
+        "n": "Winklespark",
+        "t": 1,
+        "ti": 265574,
+        "z": 17
+      }
+    ],
+    "subclassName": "Held in Off-hand"
+  },
+  "274744": {
+    "id": 274744,
+    "name": "Barrens Basher",
+    "icon": "inv_hammer_09",
+    "iLvl": 25,
+    "reqLevel": 20,
+    "quality": "q3",
+    "speed": "2.10",
+    "dps": "15.95 DPS",
+    "stats": "+2 Strength, +5 Stamina",
+    "inventorySlot": "Main Hand",
+    "subclass": 4,
+    "side": "both",
+    "sourcemore": [
+      {
+        "n": "Winklespark",
+        "t": 1,
+        "ti": 265574,
+        "z": 17
+      }
+    ],
+    "subclassName": "One-Handed Mace"
+  },
+  "274748": {
+    "id": 274748,
+    "name": "Booty Bay Bruiser's Buckshot",
+    "icon": "inv_weapon_rifle_02",
+    "iLvl": 35,
+    "reqLevel": 30,
+    "quality": "q3",
+    "speed": "2.80",
+    "dps": "18.04 DPS",
+    "stats": "+3 Stamina",
+    "inventorySlot": "Ranged",
+    "subclass": 3,
+    "side": "both",
+    "sourcemore": [
+      {
+        "n": "Gezzy Gunkgear",
+        "t": 1,
+        "ti": 265575,
+        "z": 33
+      }
+    ],
+    "subclassName": "Gun"
+  },
+  "274753": {
+    "id": 274753,
+    "name": "Jhordy's Misplaced Screwdriver",
+    "icon": "inv_weapon_shortblade_14",
+    "iLvl": 45,
+    "reqLevel": 40,
+    "quality": "q3",
+    "speed": "1.90",
+    "dps": "30.26 DPS",
+    "stats": "+6 Strength, +9 Agility, -1 Intellect",
+    "inventorySlot": "One-Hand",
+    "subclass": 15,
+    "side": "both",
+    "sourcemore": [
+      {
+        "n": "Rettrick",
+        "t": 1,
+        "ti": 265576,
+        "z": 440
+      }
+    ],
+    "subclassName": "Dagger"
+  },
+  "274919": {
+    "id": 274919,
+    "name": "Neophyte's Wand",
+    "icon": "inv_wand_09",
+    "iLvl": 40,
+    "reqLevel": 1,
+    "quality": "q2",
+    "speed": "2.00",
+    "dps": "32.75 DPS",
+    "stats": "",
+    "inventorySlot": "Ranged",
+    "subclass": 19,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Wand"
+  },
+  "274920": {
+    "id": 274920,
+    "name": "Twilight Carver",
+    "icon": "inv_sword_18",
+    "iLvl": 40,
+    "reqLevel": 1,
+    "quality": "q2",
+    "speed": "2.50",
+    "dps": "22.40 DPS",
+    "stats": "+4 Stamina",
+    "inventorySlot": "One-Hand",
+    "subclass": 7,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "One-Handed Sword"
+  },
+  "274928": {
+    "id": 274928,
+    "name": "Curly's Chopper",
+    "icon": "inv_axe_14",
+    "iLvl": 39,
+    "reqLevel": 1,
+    "quality": "q2",
+    "speed": "2.00",
+    "dps": "21.50 DPS",
+    "stats": "+6 Stamina",
+    "inventorySlot": "One-Hand",
+    "subclass": 0,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "One-Handed Axe"
+  },
+  "274940": {
+    "id": 274940,
+    "name": "Unbalanced Fighting Stick",
+    "icon": "inv_spear_05",
+    "iLvl": 40,
+    "reqLevel": 1,
+    "quality": "q2",
+    "speed": "3.00",
+    "dps": "28.83 DPS",
+    "stats": "+13 Strength, +8 Stamina",
+    "inventorySlot": "Two-Hand",
+    "subclass": 6,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Polearm"
+  },
+  "274944": {
+    "id": 274944,
+    "name": "Bloodsnout Striker",
+    "icon": "inv_spear_05",
+    "iLvl": 40,
+    "reqLevel": 1,
+    "quality": "q2",
+    "speed": "3.20",
+    "dps": "28.91 DPS",
+    "stats": "+11 Stamina",
+    "inventorySlot": "Two-Hand",
+    "subclass": 6,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Polearm"
+  },
+  "274948": {
+    "id": 274948,
+    "name": "Bottle of Powderfuse Port",
+    "icon": "inv_drink_11",
+    "iLvl": 42,
+    "reqLevel": 1,
+    "quality": "q2",
+    "speed": "1.80",
+    "dps": "16.11 DPS",
+    "stats": "+7 Intellect",
+    "inventorySlot": "Main Hand",
+    "subclass": 15,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Dagger"
+  },
+  "274952": {
+    "id": 274952,
+    "name": "Jom-jom's Gabbar",
+    "icon": "inv_weapon_shortblade_25",
+    "iLvl": 43,
+    "reqLevel": 1,
+    "quality": "q2",
+    "speed": "1.90",
+    "dps": "25.00 DPS",
+    "stats": "",
+    "inventorySlot": "One-Hand",
+    "subclass": 15,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Dagger"
+  },
+  "274963": {
+    "id": 274963,
+    "name": "Rot-Covered Harpoon",
+    "icon": "inv_spear_06",
+    "iLvl": 42,
+    "reqLevel": 1,
+    "quality": "q2",
+    "speed": "2.50",
+    "dps": "31.20 DPS",
+    "stats": "",
+    "inventorySlot": "Two-Hand",
+    "subclass": 6,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Polearm"
+  },
+  "275025": {
+    "id": 275025,
+    "name": "Dunston's Ogre Duster",
+    "icon": "inv_hammer_08",
+    "iLvl": 44,
+    "reqLevel": 1,
+    "quality": "q3",
+    "speed": "2.60",
+    "dps": "29.81 DPS",
+    "stats": "+10 Strength, +4 Stamina",
+    "inventorySlot": "One-Hand",
+    "subclass": 4,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "One-Handed Mace"
+  },
+  "275052": {
+    "id": 275052,
+    "name": "Orc Bone Bow",
+    "icon": "inv_misc_bone_10",
+    "iLvl": 41,
+    "reqLevel": 1,
+    "quality": "q2",
+    "speed": "2.80",
+    "dps": "18.04 DPS",
+    "stats": "",
+    "inventorySlot": "Ranged",
+    "subclass": 2,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Bow"
+  },
+  "275291": {
+    "id": 275291,
+    "name": "Staff of the Deeproar",
+    "icon": "inv_staff_30",
+    "iLvl": 58,
+    "reqLevel": 1,
+    "quality": "q2",
+    "speed": "3.30",
+    "dps": "33.48 DPS",
+    "stats": "+13 Stamina, +12 Intellect, +14 Spirit",
+    "inventorySlot": "Two-Hand",
+    "subclass": 10,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Staff"
+  },
+  "275296": {
+    "id": 275296,
+    "name": "Deadwood Boomstick",
+    "icon": "inv_weapon_rifle_04",
+    "iLvl": 58,
+    "reqLevel": 1,
+    "quality": "q2",
+    "speed": "3.00",
+    "dps": "26.83 DPS",
+    "stats": "+6 Stamina",
+    "inventorySlot": "Ranged",
+    "subclass": 3,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Gun"
+  },
+  "275439": {
+    "id": 275439,
+    "name": "Blunderflame Bone Bow",
+    "icon": "inv_weapon_bow_08",
+    "iLvl": 57,
+    "reqLevel": 1,
+    "quality": "q2",
+    "speed": "2.80",
+    "dps": "26.61 DPS",
+    "stats": "",
+    "inventorySlot": "Ranged",
+    "subclass": 2,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Bow"
+  },
+  "275441": {
+    "id": 275441,
+    "name": "Cremation Longbow",
+    "icon": "inv_weapon_bow_08",
+    "iLvl": 57,
+    "reqLevel": 1,
+    "quality": "q2",
+    "speed": "2.80",
+    "dps": "26.61 DPS",
+    "stats": "",
+    "inventorySlot": "Ranged",
+    "subclass": 2,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Bow"
+  },
+  "275630": {
+    "id": 275630,
+    "name": "Depleted Eye of Influence",
+    "icon": "inv_misc_gem_sapphire_02",
+    "iLvl": 58,
+    "reqLevel": 1,
+    "quality": "q2",
+    "speed": null,
+    "dps": null,
+    "stats": "",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": -5,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Held in Off-hand"
+  },
+  "275648": {
+    "id": 275648,
+    "name": "Purified Gnarlybark Staff",
+    "icon": "inv_staff_02",
+    "iLvl": 59,
+    "reqLevel": 1,
+    "quality": "q2",
+    "speed": "3.10",
+    "dps": "34.03 DPS",
+    "stats": "+19 Spirit, Improves your chance to get a critical strike by 1.0%.",
+    "inventorySlot": "Two-Hand",
+    "subclass": 10,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Staff"
+  },
+  "275671": {
+    "id": 275671,
+    "name": "Field Agent Beverage",
+    "icon": "inv_potion_12",
+    "iLvl": 59,
+    "reqLevel": 1,
+    "quality": "q2",
+    "speed": null,
+    "dps": null,
+    "stats": "+4 Spirit",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": -5,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Held in Off-hand"
+  },
+  "275698": {
+    "id": 275698,
+    "name": "Yaely's Mending Tool",
+    "icon": "inv_misc_wrench_01",
+    "iLvl": 58,
+    "reqLevel": 1,
+    "quality": "q2",
+    "speed": "2.50",
+    "dps": "23.00 DPS",
+    "stats": "+11 Intellect",
+    "inventorySlot": "Main Hand",
+    "subclass": 4,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "One-Handed Mace"
+  },
+  "275729": {
+    "id": 275729,
+    "name": "Rusty Propeller Blade",
+    "icon": "inv_sword_45",
+    "iLvl": 57,
+    "reqLevel": 1,
+    "quality": "q2",
+    "speed": "3.60",
+    "dps": "44.17 DPS",
+    "stats": "+21 Strength, +5 Spirit",
+    "inventorySlot": "Two-Hand",
+    "subclass": 8,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Two-Handed Sword"
+  },
+  "275742": {
+    "id": 275742,
+    "name": "Demonbane Blade",
+    "icon": "inv_sword_07",
+    "iLvl": 59,
+    "reqLevel": 1,
+    "quality": "q2",
+    "speed": "3.40",
+    "dps": "45.74 DPS",
+    "stats": "",
+    "inventorySlot": "Two-Hand",
+    "subclass": 6,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Polearm"
+  },
+  "275824": {
+    "id": 275824,
+    "name": "Wardcleaver",
+    "icon": "inv_axe_66",
+    "iLvl": 48,
+    "reqLevel": 1,
+    "quality": "q3",
+    "speed": "3.50",
+    "dps": "41.86 DPS",
+    "stats": "",
+    "inventorySlot": "Two-Hand",
+    "subclass": 1,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Two-Handed Axe"
+  },
+  "275837": {
+    "id": 275837,
+    "name": "Felflick's Fire Flicker",
+    "icon": "inv_wand_11",
+    "iLvl": 58,
+    "reqLevel": 1,
+    "quality": "q2",
+    "speed": "2.40",
+    "dps": "51.25 DPS",
+    "stats": "",
+    "inventorySlot": "Ranged",
+    "subclass": 19,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Wand"
+  },
+  "276102": {
+    "id": 276102,
+    "name": "Bladewind",
+    "icon": "inv_sword_07",
+    "iLvl": 42,
+    "reqLevel": 1,
+    "quality": "q2",
+    "speed": "3.00",
+    "dps": "31.33 DPS",
+    "stats": "+10 Strength, +4 Stamina",
+    "inventorySlot": "Two-Hand",
+    "subclass": 8,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Two-Handed Sword"
+  },
+  "276203": {
+    "id": 276203,
+    "name": "Primitive Fishing Pole",
+    "icon": "inv_spear_06",
+    "iLvl": 45,
+    "reqLevel": 40,
+    "quality": "q3",
+    "speed": "3.30",
+    "dps": "39.55 DPS",
+    "stats": "+7 Strength, +10 Agility, +20 Stamina",
+    "inventorySlot": "Two-Hand",
+    "subclass": 6,
+    "side": "both",
+    "sourcemore": [
+      {
+        "n": "Friz Frazzlespark",
+        "t": 1,
+        "ti": 255897,
+        "z": 16591
+      }
+    ],
+    "subclassName": "Polearm"
+  },
+  "276273": {
+    "id": 276273,
+    "name": "Empty Fish Bucket",
+    "icon": "inv_misc_1h_bucket_b_01",
+    "iLvl": 1,
+    "reqLevel": 1,
+    "quality": "q3",
+    "speed": null,
+    "dps": null,
+    "stats": "",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": -5,
+    "side": "both",
+    "sourcemore": [
+      {
+        "n": "Jang",
+        "t": 1,
+        "ti": 15078,
+        "z": 33
+      }
+    ],
+    "subclassName": "Held in Off-hand"
+  },
+  "276332": {
+    "id": 276332,
+    "name": "Abigail's Hope",
+    "icon": "inv_weapon_crossbow_07",
+    "iLvl": 57,
+    "reqLevel": 1,
+    "quality": "q2",
+    "speed": "2.70",
+    "dps": "26.48 DPS",
+    "stats": "+5 Strength, +6 Stamina",
+    "inventorySlot": "Ranged",
+    "subclass": 18,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Crossbow"
+  },
+  "276335": {
+    "id": 276335,
+    "name": "Polished Doomguard Edge",
+    "icon": "inv_sword_35",
+    "iLvl": 60,
+    "reqLevel": 1,
+    "quality": "q2",
+    "speed": "3.40",
+    "dps": "46.47 DPS",
+    "stats": "+5 Stamina",
+    "inventorySlot": "Two-Hand",
+    "subclass": 8,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Two-Handed Sword"
+  },
+  "276336": {
+    "id": 276336,
+    "name": "Yashiro's Spirit Bead",
+    "icon": "inv_misc_orb_05",
+    "iLvl": 60,
+    "reqLevel": 1,
+    "quality": "q2",
+    "speed": null,
+    "dps": null,
+    "stats": "+12 Spirit",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": -5,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Held in Off-hand"
+  },
+  "276631": {
+    "id": 276631,
+    "name": "Coldflame Saber",
+    "icon": "inv_sword_05",
+    "iLvl": 29,
+    "reqLevel": 21,
+    "quality": "q3",
+    "speed": "2.00",
+    "dps": "12.25 DPS",
+    "stats": "+7 Intellect",
+    "inventorySlot": "Main Hand",
+    "subclass": 7,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "One-Handed Sword"
+  },
+  "276685": {
+    "id": 276685,
+    "name": "Militia Bow",
+    "icon": "inv_weapon_bow_02",
+    "iLvl": 14,
+    "reqLevel": 1,
+    "quality": "q2",
+    "speed": "2.10",
+    "dps": "5.71 DPS",
+    "stats": "+1 Agility",
+    "inventorySlot": "Ranged",
+    "subclass": 2,
+    "side": "alliance",
+    "sourcemore": [
+      {
+        "c": 12,
+        "c2": 0,
+        "n": "Rare Books",
+        "t": 5,
+        "ti": 91777
+      }
+    ],
+    "subclassName": "Bow"
+  },
+  "276694": {
+    "id": 276694,
+    "name": "Captain Sander's Lucky Shooter",
+    "icon": "inv_weapon_rifle_03",
+    "iLvl": 15,
+    "reqLevel": 1,
+    "quality": "q2",
+    "speed": "2.30",
+    "dps": "5.87 DPS",
+    "stats": "+1 Strength",
+    "inventorySlot": "Ranged",
+    "subclass": 3,
+    "side": "both",
+    "sourcemore": [
+      {
+        "icon": "inv_box_01",
+        "n": "Captain Sander's Locker",
+        "q": 2,
+        "t": 3,
+        "ti": 270257
+      }
+    ],
+    "subclassName": "Gun"
+  },
+  "276886": {
+    "id": 276886,
+    "name": "Chol'aruk's Trophy Sword",
+    "icon": "inv_sword_04",
+    "iLvl": 24,
+    "reqLevel": 15,
+    "quality": "q2",
+    "speed": "2.40",
+    "dps": "12.29 DPS",
+    "stats": "+2 Stamina",
+    "inventorySlot": "Main Hand",
+    "subclass": 7,
+    "side": "both",
+    "sourcemore": [
+      {
+        "z": 17
+      }
+    ],
+    "subclassName": "One-Handed Sword"
+  },
+  "276887": {
+    "id": 276887,
+    "name": "Big Bad Basher",
+    "icon": "inv_hammer_08",
+    "iLvl": 24,
+    "reqLevel": 15,
+    "quality": "q2",
+    "speed": "3.10",
+    "dps": "15.97 DPS",
+    "stats": "+4 Strength, +6 Stamina",
+    "inventorySlot": "Two-Hand",
+    "subclass": 5,
+    "side": "both",
+    "sourcemore": [
+      {
+        "z": 17
+      }
+    ],
+    "subclassName": "Two-Handed Mace"
+  },
+  "276888": {
+    "id": 276888,
+    "name": "Quilboar Toothpick",
+    "icon": "inv_weapon_shortblade_01",
+    "iLvl": 24,
+    "reqLevel": 15,
+    "quality": "q2",
+    "speed": "1.80",
+    "dps": "8.06 DPS",
+    "stats": "+2 Intellect, +2 Spirit",
+    "inventorySlot": "Main Hand",
+    "subclass": 15,
+    "side": "both",
+    "sourcemore": [
+      {
+        "z": 17
+      }
+    ],
+    "subclassName": "Dagger"
+  },
+  "276897": {
+    "id": 276897,
+    "name": "A Lesson in Destruction",
+    "icon": "inv_misc_book_06",
+    "iLvl": 38,
+    "reqLevel": 1,
+    "quality": "q3",
+    "speed": null,
+    "dps": null,
+    "stats": "+8 Stamina, +6 Spirit",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": -5,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Held in Off-hand"
+  },
+  "276898": {
+    "id": 276898,
+    "name": "Salve and Salvation",
+    "icon": "inv_misc_book_01",
+    "iLvl": 38,
+    "reqLevel": 30,
+    "quality": "q3",
+    "speed": null,
+    "dps": null,
+    "stats": "+9 Spirit, +50 Armor",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": -5,
+    "side": "alliance",
+    "sourcemore": [
+      {
+        "c": 796,
+        "c2": 2,
+        "n": "Past Due",
+        "t": 5,
+        "ti": 96800
+      }
+    ],
+    "subclassName": "Held in Off-hand"
+  },
+  "276902": {
+    "id": 276902,
+    "name": "Youngster's First Bow",
+    "icon": "inv_weapon_bow_05",
+    "iLvl": 54,
+    "reqLevel": 1,
+    "quality": "q2",
+    "speed": "2.80",
+    "dps": "25.18 DPS",
+    "stats": "+5 Stamina",
+    "inventorySlot": "Ranged",
+    "subclass": 2,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Bow"
+  },
+  "276903": {
+    "id": 276903,
+    "name": "Shimmerwine Shanker",
+    "icon": "inv_drink_11",
+    "iLvl": 52,
+    "reqLevel": 1,
+    "quality": "q2",
+    "speed": "1.70",
+    "dps": "31.18 DPS",
+    "stats": "+7 Agility, +4 Stamina",
+    "inventorySlot": "Main Hand",
+    "subclass": 15,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Dagger"
+  },
+  "276904": {
+    "id": 276904,
+    "name": "Shimmerwine Spirits",
+    "icon": "inv_cooking_100_foamybottle",
+    "iLvl": 52,
+    "reqLevel": 1,
+    "quality": "q2",
+    "speed": null,
+    "dps": null,
+    "stats": "+6 Intellect, +9 Spirit",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": -5,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Held in Off-hand"
+  },
+  "277104": {
+    "id": 277104,
+    "name": "Zephrali Greatsword",
+    "icon": "inv_sword_2h_skybornec60_b_01_white",
+    "iLvl": 14,
+    "reqLevel": 9,
+    "quality": "q1",
+    "speed": "3.10",
+    "dps": "8.23 DPS",
+    "stats": "",
+    "inventorySlot": "Two-Hand",
+    "subclass": 8,
+    "side": "both",
+    "sourcemore": [
+      {
+        "n": "Falfaan Halfwind",
+        "t": 1,
+        "ti": 271465,
+        "z": 16593
+      }
+    ],
+    "subclassName": "Two-Handed Sword"
+  },
+  "277105": {
+    "id": 277105,
+    "name": "Zephrali Blade",
+    "icon": "inv_sword_1h_skybornec60_b_01",
+    "iLvl": 14,
+    "reqLevel": 9,
+    "quality": "q1",
+    "speed": "2.40",
+    "dps": "6.25 DPS",
+    "stats": "",
+    "inventorySlot": "One-Hand",
+    "subclass": 7,
+    "side": "both",
+    "sourcemore": [
+      {
+        "n": "Falfaan Halfwind",
+        "t": 1,
+        "ti": 271465,
+        "z": 16593
+      }
+    ],
+    "subclassName": "One-Handed Sword"
+  },
+  "277109": {
+    "id": 277109,
+    "name": "Zephrali Greatstaff",
+    "icon": "inv_staff_2h_skybornec60_b_01",
+    "iLvl": 14,
+    "reqLevel": 9,
+    "quality": "q1",
+    "speed": "3.30",
+    "dps": "8.48 DPS",
+    "stats": "",
+    "inventorySlot": "Two-Hand",
+    "subclass": 10,
+    "side": "both",
+    "sourcemore": [
+      {
+        "n": "Falfaan Halfwind",
+        "t": 1,
+        "ti": 271465,
+        "z": 16593
+      }
+    ],
+    "subclassName": "Staff"
+  },
+  "277246": {
+    "id": 277246,
+    "name": "Ruby-Adorned Blade",
+    "icon": "inv_sword_07",
+    "iLvl": 36,
+    "reqLevel": 25,
+    "quality": "q3",
+    "speed": "2.30",
+    "dps": "23.91 DPS",
+    "stats": "+3 Agility, +8 Stamina",
+    "inventorySlot": "One-Hand",
+    "subclass": 7,
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": -162,
+        "c2": 4,
+        "n": "The Eye of Bhossca",
+        "t": 5,
+        "ti": 78699
+      }
+    ],
+    "subclassName": "One-Handed Sword"
+  },
+  "277247": {
+    "id": 277247,
+    "name": "Mug of Muddled Memories",
+    "icon": "inv_drink_03",
+    "iLvl": 12,
+    "reqLevel": 10,
+    "quality": "q2",
+    "speed": "2.80",
+    "dps": "4.29 DPS",
+    "stats": "+1 Intellect, +1 Spirit",
+    "inventorySlot": "Main Hand",
+    "subclass": 4,
+    "side": "horde",
+    "sourcemore": [
+      {
+        "c": 85,
+        "c2": 0,
+        "n": "Leonid's Letter",
+        "t": 5,
+        "ti": 98545
+      }
+    ],
+    "subclassName": "One-Handed Mace"
+  },
+  "277250": {
+    "id": 277250,
+    "name": "The Skullcracker",
+    "icon": "inv_hammer_03",
+    "iLvl": 45,
+    "reqLevel": 40,
+    "quality": "q3",
+    "speed": "3.30",
+    "dps": "39.55 DPS",
+    "stats": "+22 Spirit",
+    "inventorySlot": "Two-Hand",
+    "subclass": 5,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Two-Handed Mace"
+  },
+  "277254": {
+    "id": 277254,
+    "name": "Truthseeker's Bow",
+    "icon": "inv_weapon_bow_01",
+    "iLvl": 45,
+    "reqLevel": 40,
+    "quality": "q3",
+    "speed": "2.80",
+    "dps": "23.75 DPS",
+    "stats": "+7 Agility, +3 Stamina",
+    "inventorySlot": "Ranged",
+    "subclass": 2,
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": -284,
+        "c2": -2,
+        "n": "Greater Friend of the Library",
+        "t": 5,
+        "ti": 82208
+      }
+    ],
+    "subclassName": "Bow"
+  },
+  "277255": {
+    "id": 277255,
+    "name": "Misplaced Shooter",
+    "icon": "inv_weapon_rifle_07",
+    "iLvl": 12,
+    "reqLevel": 10,
+    "quality": "q2",
+    "speed": "2.80",
+    "dps": "4.82 DPS",
+    "stats": "+1 Strength, +1 Stamina",
+    "inventorySlot": "Ranged",
+    "subclass": 3,
+    "side": "horde",
+    "sourcemore": [
+      {
+        "c": 85,
+        "c2": 0,
+        "n": "Leonid's Letter",
+        "t": 5,
+        "ti": 98545
+      }
+    ],
+    "subclassName": "Gun"
+  },
+  "277256": {
+    "id": 277256,
+    "name": "Dudd's Second-Favorite Wand",
+    "icon": "inv_wand_01",
+    "iLvl": 45,
+    "reqLevel": 40,
+    "quality": "q2",
+    "speed": "1.50",
+    "dps": "35.67 DPS",
+    "stats": "+5 Intellect",
+    "inventorySlot": "Ranged",
+    "subclass": 19,
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": 33,
+        "c2": 0,
+        "n": "Partial Mystical Notes",
+        "t": 5,
+        "ti": 95384
+      }
+    ],
+    "subclassName": "Wand"
+  },
+  "277259": {
+    "id": 277259,
+    "name": "Fermented Restoration Potion",
+    "icon": "inv_potion_19",
+    "iLvl": 45,
+    "reqLevel": 40,
+    "quality": "q3",
+    "speed": null,
+    "dps": null,
+    "stats": "+12 Stamina, +5 Spirit",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": -5,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Held in Off-hand"
+  },
+  "277260": {
+    "id": 277260,
+    "name": "Researcher's Night Light",
+    "icon": "inv_torch_lit",
+    "iLvl": 45,
+    "reqLevel": 40,
+    "quality": "q3",
+    "speed": null,
+    "dps": null,
+    "stats": "+12 Stamina",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": -5,
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": -284,
+        "c2": -2,
+        "n": "Greater Friend of the Library",
+        "t": 5,
+        "ti": 82208
+      }
+    ],
+    "subclassName": "Held in Off-hand"
+  },
+  "277286": {
+    "id": 277286,
+    "name": "Encroacher's Claim",
+    "icon": "inv_axe_17",
+    "iLvl": 23,
+    "reqLevel": 18,
+    "quality": "q3",
+    "speed": "3.30",
+    "dps": "19.70 DPS",
+    "stats": "+6 Strength, +9 Spirit",
+    "inventorySlot": "Two-Hand",
+    "subclass": 1,
+    "side": "horde",
+    "sourcemore": [
+      {
+        "c": 17,
+        "c2": 1,
+        "n": "Wrongly Blamed, Justly Corrected",
+        "t": 5,
+        "ti": 97250
+      }
+    ],
+    "subclassName": "Two-Handed Axe"
+  },
+  "277288": {
+    "id": 277288,
+    "name": "Pathfinder's Clearway",
+    "icon": "inv_axe_01",
+    "iLvl": 23,
+    "reqLevel": 18,
+    "quality": "q3",
+    "speed": "2.30",
+    "dps": "10.00 DPS",
+    "stats": "+3 Stamina, +4 Intellect",
+    "inventorySlot": "Main Hand",
+    "subclass": 0,
+    "side": "horde",
+    "sourcemore": [
+      {
+        "c": 17,
+        "c2": 1,
+        "n": "Wrongly Blamed, Justly Corrected",
+        "t": 5,
+        "ti": 97250
+      }
+    ],
+    "subclassName": "One-Handed Axe"
+  },
+  "277515": {
+    "id": 277515,
+    "name": "Dagger of Deals",
+    "icon": "inv_weapon_shortblade_05",
+    "iLvl": 33,
+    "reqLevel": 28,
+    "quality": "q2",
+    "speed": "1.80",
+    "dps": "16.94 DPS",
+    "stats": "+4 Agility, +3 Stamina",
+    "inventorySlot": "One-Hand",
+    "subclass": 15,
+    "side": "horde",
+    "sourcemore": [
+      {
+        "c": 405,
+        "c2": 1,
+        "n": "Hate the Hatefury",
+        "t": 5,
+        "ti": 97265
+      }
+    ],
+    "subclassName": "Dagger"
+  },
+  "277980": {
+    "id": 277980,
+    "name": "Ogre Bone",
+    "icon": "inv_misc_bone_01",
+    "iLvl": 44,
+    "reqLevel": 1,
+    "quality": "q2",
+    "speed": null,
+    "dps": null,
+    "stats": "+8 Stamina, +4 Intellect",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": -5,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Held in Off-hand"
+  },
+  "278157": {
+    "id": 278157,
+    "name": "Premier Grand Marshal's Tome of Restoration",
+    "icon": "inv_misc_book_13",
+    "iLvl": 65,
+    "reqLevel": 60,
+    "quality": "q4",
+    "speed": null,
+    "dps": null,
+    "stats": "+13 Stamina, +13 Intellect, +13 Spirit",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": -5,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Held in Off-hand"
+  },
+  "278158": {
+    "id": 278158,
+    "name": "Premier Grand Marshal's Tome of Power",
+    "icon": "inv_misc_book_12",
+    "iLvl": 65,
+    "reqLevel": 60,
+    "quality": "q4",
+    "speed": null,
+    "dps": null,
+    "stats": "+15 Stamina, +14 Intellect",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": -5,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Held in Off-hand"
+  },
+  "279246": {
+    "id": 279246,
+    "name": "Torch of Light",
+    "icon": "inv_torch_lit",
+    "iLvl": 65,
+    "reqLevel": 60,
+    "quality": "q4",
+    "speed": "1.70",
+    "dps": "76.76 DPS",
+    "stats": "+11 Spirit",
+    "inventorySlot": "Ranged",
+    "subclass": 19,
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": 11,
+        "icon": "inv_torch_lit",
+        "n": "Torch of Light",
+        "s": 333,
+        "t": 6,
+        "ti": 1306520
+      }
+    ],
+    "subclassName": "Wand"
+  },
+  "279259": {
+    "id": 279259,
+    "name": "Ironwood Blade",
+    "icon": "inv_sword_07",
+    "iLvl": 65,
+    "reqLevel": 60,
+    "quality": "q4",
+    "speed": "2.40",
+    "dps": "47.29 DPS",
+    "stats": "+8 Strength, +12 Stamina, Improves your chance to hit by 1.0%.",
+    "inventorySlot": "One-Hand",
+    "subclass": 7,
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": 11,
+        "icon": "inv_sword_07",
+        "n": "Ironwood Blade",
+        "s": 164,
+        "t": 6,
+        "ti": 1306533
+      }
+    ],
+    "subclassName": "One-Handed Sword"
+  },
+  "279260": {
+    "id": 279260,
+    "name": "Forest Defender's Axe",
+    "icon": "inv_axe_2h_raidhyjalc60_d_01",
+    "iLvl": 65,
+    "reqLevel": 60,
+    "quality": "q4",
+    "speed": "3.30",
+    "dps": "61.52 DPS",
+    "stats": "+18 Strength, +27 Stamina",
+    "inventorySlot": "Two-Hand",
+    "subclass": 1,
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": 11,
+        "icon": "inv_axe_2h_raidhyjalc60_d_01",
+        "n": "Forest Defender's Axe",
+        "s": 164,
+        "t": 6,
+        "ti": 1306534
+      }
+    ],
+    "subclassName": "Two-Handed Axe"
+  },
+  "279261": {
+    "id": 279261,
+    "name": "Greenhammer",
+    "icon": "inv_mace_1h_raidhyjalc60_d_01",
+    "iLvl": 65,
+    "reqLevel": 60,
+    "quality": "q4",
+    "speed": "2.30",
+    "dps": "47.39 DPS",
+    "stats": "+8 Agility, +12 Stamina, Improves your chance to hit by 1.0%.",
+    "inventorySlot": "One-Hand",
+    "subclass": 4,
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": 11,
+        "icon": "inv_mace_1h_raidhyjalc60_d_01",
+        "n": "Greenhammer",
+        "s": 164,
+        "t": 6,
+        "ti": 1306535
+      }
+    ],
+    "subclassName": "One-Handed Mace"
+  },
+  "279273": {
+    "id": 279273,
+    "name": "Hyper Deluxe Sniper Rifle Mk XVII",
+    "icon": "inv_weapon_rifle_05",
+    "iLvl": 65,
+    "reqLevel": 60,
+    "quality": "q4",
+    "speed": "2.50",
+    "dps": "36.80 DPS",
+    "stats": "+8 Stamina, +6 Spirit",
+    "inventorySlot": "Ranged",
+    "subclass": 3,
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": 11,
+        "icon": "inv_weapon_rifle_05",
+        "n": "Hyper Deluxe Sniper Rifle Mk XVII",
+        "s": 202,
+        "t": 6,
+        "ti": 1306547
+      }
+    ],
+    "subclassName": "Gun"
+  },
+  "279392": {
+    "id": 279392,
+    "name": "Glimmer",
+    "icon": "inv_sword_24",
+    "iLvl": 30,
+    "reqLevel": 1,
+    "quality": "q3",
+    "speed": "2.00",
+    "dps": "18.75 DPS",
+    "stats": "",
+    "inventorySlot": "One-Hand",
+    "subclass": 7,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "One-Handed Sword"
+  },
+  "279393": {
+    "id": 279393,
+    "name": "Frostfall",
+    "icon": "inv_sword_24",
+    "iLvl": 30,
+    "reqLevel": 1,
+    "quality": "q3",
+    "speed": "2.90",
+    "dps": "18.97 DPS",
+    "stats": "",
+    "inventorySlot": "One-Hand",
+    "subclass": 7,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "One-Handed Sword"
+  },
+  "279838": {
+    "id": 279838,
+    "name": "Arcane Infused Rod",
+    "icon": "inv_wand_04",
+    "iLvl": 36,
+    "reqLevel": 24,
+    "quality": "q2",
+    "speed": null,
+    "dps": null,
+    "stats": "",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": -5,
+    "side": "alliance",
+    "sourcemore": [
+      {
+        "c": 16544,
+        "c2": 2,
+        "n": "Starving Arcane",
+        "t": 5,
+        "ti": 92457
+      }
+    ],
+    "subclassName": "Held in Off-hand"
+  },
+  "279841": {
+    "id": 279841,
+    "name": "Defender of Dalaran",
+    "icon": "inv_hammer_04",
+    "iLvl": 36,
+    "reqLevel": 24,
+    "quality": "q3",
+    "speed": "3.30",
+    "dps": "31.21 DPS",
+    "stats": "+9 Strength, +13 Stamina, +9 Intellect",
+    "inventorySlot": "Two-Hand",
+    "subclass": 5,
+    "side": "alliance",
+    "sourcemore": [
+      {
+        "c": 16544,
+        "c2": 2,
+        "n": "Heart of Disruption",
+        "t": 5,
+        "ti": 92458
+      }
+    ],
+    "subclassName": "Two-Handed Mace"
+  },
+  "279844": {
+    "id": 279844,
+    "name": "Striking Staff",
+    "icon": "inv_staff_28",
+    "iLvl": 36,
+    "reqLevel": 24,
+    "quality": "q3",
+    "speed": "3.10",
+    "dps": "31.29 DPS",
+    "stats": "+9 Strength, +6 Stamina, +14 Intellect",
+    "inventorySlot": "Two-Hand",
+    "subclass": 10,
+    "side": "horde",
+    "sourcemore": [
+      {
+        "c": 16544,
+        "c2": 2,
+        "n": "Heart of Disruption",
+        "t": 5,
+        "ti": 96984
+      }
+    ],
+    "subclassName": "Staff"
+  },
+  "279847": {
+    "id": 279847,
+    "name": "Unstable Power Core",
+    "icon": "inv_staff_06",
+    "iLvl": 36,
+    "reqLevel": 24,
+    "quality": "q2",
+    "speed": "1.70",
+    "dps": "29.71 DPS",
+    "stats": "+4 Stamina",
+    "inventorySlot": "Ranged",
+    "subclass": 19,
+    "side": "horde",
+    "sourcemore": [
+      {
+        "c": 16544,
+        "c2": 2,
+        "n": "Source of Power",
+        "t": 5,
+        "ti": 96988
+      }
+    ],
+    "subclassName": "Wand"
+  },
+  "279864": {
+    "id": 279864,
+    "name": "Monstrous Cleaver",
+    "icon": "inv_sword_23",
+    "iLvl": 23,
+    "reqLevel": 16,
+    "quality": "q2",
+    "speed": "3.30",
+    "dps": "15.15 DPS",
+    "stats": "+6 Stamina",
+    "inventorySlot": "Two-Hand",
+    "subclass": 8,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Two-Handed Sword"
+  },
+  "279874": {
+    "id": 279874,
+    "name": "The Stitcher",
+    "icon": "inv_mace_08",
+    "iLvl": 24,
+    "reqLevel": 15,
+    "quality": "q2",
+    "speed": "2.40",
+    "dps": "8.13 DPS",
+    "stats": "+3 Stamina",
+    "inventorySlot": "Main Hand",
+    "subclass": 4,
+    "side": "horde",
+    "sourcemore": [
+      {
+        "c": 16611,
+        "c2": 2,
+        "n": "Light's Justice",
+        "t": 5,
+        "ti": 92421
+      }
+    ],
+    "subclassName": "One-Handed Mace"
+  },
+  "279876": {
+    "id": 279876,
+    "name": "Plaguefang",
+    "icon": "inv_weapon_shortblade_54",
+    "iLvl": 24,
+    "reqLevel": 16,
+    "quality": "q2",
+    "speed": "2.10",
+    "dps": "12.38 DPS",
+    "stats": "",
+    "inventorySlot": "One-Hand",
+    "subclass": 7,
+    "side": "horde",
+    "sourcemore": [
+      {
+        "c": 16611,
+        "c2": 2,
+        "n": "The New Plague",
+        "t": 5,
+        "ti": 95216
+      }
+    ],
+    "subclassName": "One-Handed Sword"
+  },
+  "279894": {
+    "id": 279894,
+    "name": "Calibrated Blunderbuss",
+    "icon": "inv_weapon_rifle_01",
+    "iLvl": 18,
+    "reqLevel": 9,
+    "quality": "q3",
+    "speed": "2.30",
+    "dps": "9.57 DPS",
+    "stats": "+3 Stamina",
+    "inventorySlot": "Ranged",
+    "subclass": 3,
+    "side": "alliance",
+    "sourcemore": [
+      {
+        "c": 16919,
+        "c2": 2,
+        "n": "Old Ironforge Incursion",
+        "t": 5,
+        "ti": 96393
+      }
+    ],
+    "subclassName": "Gun"
+  },
+  "279895": {
+    "id": 279895,
+    "name": "Ironforge Greathammer",
+    "icon": "inv_hammer_21",
+    "iLvl": 18,
+    "reqLevel": 9,
+    "quality": "q3",
+    "speed": "3.10",
+    "dps": "15.97 DPS",
+    "stats": "",
+    "inventorySlot": "Two-Hand",
+    "subclass": 5,
+    "side": "alliance",
+    "sourcemore": [
+      {
+        "c": 16919,
+        "c2": 2,
+        "n": "Old Ironforge Incursion",
+        "t": 5,
+        "ti": 96393
+      }
+    ],
+    "subclassName": "Two-Handed Mace"
+  },
+  "279896": {
+    "id": 279896,
+    "name": "Deepblaze",
+    "icon": "inv_wand_11",
+    "iLvl": 18,
+    "reqLevel": 9,
+    "quality": "q3",
+    "speed": "1.70",
+    "dps": "18.53 DPS",
+    "stats": "+3 Fire Resistance",
+    "inventorySlot": "Ranged",
+    "subclass": 19,
+    "side": "alliance",
+    "sourcemore": [
+      {
+        "c": 16919,
+        "c2": 2,
+        "n": "Old Ironforge Incursion",
+        "t": 5,
+        "ti": 96393
+      }
+    ],
+    "subclassName": "Wand"
+  },
+  "279898": {
+    "id": 279898,
+    "name": "Dwarven Tome",
+    "icon": "inv_misc_book_07",
+    "iLvl": 17,
+    "reqLevel": 10,
+    "quality": "q2",
+    "speed": null,
+    "dps": null,
+    "stats": "+1 Spirit",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": -5,
+    "side": "alliance",
+    "sourcemore": [
+      {
+        "c": 16919,
+        "c2": 2,
+        "n": "Important Heirlooms",
+        "t": 5,
+        "ti": 96403
+      }
+    ],
+    "subclassName": "Held in Off-hand"
+  },
+  "280304": {
+    "id": 280304,
+    "name": "Invisible Dagger",
+    "icon": "inv_sword_50",
+    "iLvl": 1,
+    "reqLevel": 1,
+    "quality": "q4",
+    "speed": "2.00",
+    "dps": "6.75 DPS",
+    "stats": "",
+    "inventorySlot": "One-Hand",
+    "subclass": 15,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Dagger"
+  },
+  "280317": {
+    "id": 280317,
+    "name": "Frying Pan",
+    "icon": "archaeology_5_0_warlordsbrandingiron",
+    "iLvl": 5,
+    "reqLevel": 1,
+    "quality": "q1",
+    "speed": null,
+    "dps": null,
+    "stats": "",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": -5,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Held in Off-hand"
+  },
+  "280604": {
+    "id": 280604,
+    "name": "Rage of the Storm",
+    "icon": "inv_mace_42",
+    "iLvl": 40,
+    "reqLevel": 30,
+    "quality": "q3",
+    "speed": "3.20",
+    "dps": "35.63 DPS",
+    "stats": "+15 Stamina, +12 Intellect",
+    "inventorySlot": "Two-Hand",
+    "subclass": 5,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Two-Handed Mace"
+  },
+  "280605": {
+    "id": 280605,
+    "name": "Tidebringer's Claw",
+    "icon": "inv_weapon_hand_15",
+    "iLvl": 40,
+    "reqLevel": 30,
+    "quality": "q3",
+    "speed": "2.40",
+    "dps": "18.13 DPS",
+    "stats": "+5 Stamina",
+    "inventorySlot": "Main Hand",
+    "subclass": 13,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Fist Weapon"
+  },
+  "280607": {
+    "id": 280607,
+    "name": "Lightning's Grasp",
+    "icon": "inv_weapon_hand_09",
+    "iLvl": 40,
+    "reqLevel": 30,
+    "quality": "q3",
+    "speed": "2.20",
+    "dps": "18.18 DPS",
+    "stats": "+6 Intellect",
+    "inventorySlot": "Main Hand",
+    "subclass": 13,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Fist Weapon"
+  },
+  "280805": {
+    "id": 280805,
+    "name": "Serrated Raptor Claw",
+    "icon": "inv_weapon_shortblade_16",
+    "iLvl": 33,
+    "reqLevel": 24,
+    "quality": "q2",
+    "speed": "1.60",
+    "dps": "17.19 DPS",
+    "stats": "+3 Agility",
+    "inventorySlot": "One-Hand",
+    "subclass": 15,
+    "side": "horde",
+    "sourcemore": [
+      {
+        "c": 16732,
+        "c2": 2,
+        "n": "Changing Tastes",
+        "t": 5,
+        "ti": 95697
+      }
+    ],
+    "subclassName": "Dagger"
+  },
+  "281257": {
+    "id": 281257,
+    "name": "Daggerfang's Daggerfang",
+    "icon": "inv_weapon_shortblade_04",
+    "iLvl": 16,
+    "reqLevel": 12,
+    "quality": "q2",
+    "speed": "1.70",
+    "dps": "7.94 DPS",
+    "stats": "+2 Agility",
+    "inventorySlot": "One-Hand",
+    "subclass": 15,
+    "side": "alliance",
+    "sourcemore": [
+      {
+        "c": 38,
+        "c2": 0,
+        "n": "Twisting the Knife",
+        "t": 5,
+        "ti": 86758
+      }
+    ],
+    "subclassName": "Dagger"
+  },
+  "281274": {
+    "id": 281274,
+    "name": "Makeshift Stormcaller",
+    "icon": "inv_staff_14",
+    "iLvl": 11,
+    "reqLevel": 7,
+    "quality": "q2",
+    "speed": "3.30",
+    "dps": "5.76 DPS",
+    "stats": "+2 Intellect",
+    "inventorySlot": "Two-Hand",
+    "subclass": 10,
+    "side": "horde",
+    "sourcemore": [
+      {
+        "c": 14,
+        "c2": 1,
+        "n": "Stormy Potential",
+        "t": 5,
+        "ti": 97282
+      }
+    ],
+    "subclassName": "Staff"
+  },
+  "281291": {
+    "id": 281291,
+    "name": "Mathystra Channeling Orb",
+    "icon": "inv_misc_orb_01",
+    "iLvl": 21,
+    "reqLevel": 17,
+    "quality": "q3",
+    "speed": null,
+    "dps": null,
+    "stats": "+3 Stamina, +5 Intellect",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": -5,
+    "side": "alliance",
+    "sourcemore": [
+      {
+        "c": 148,
+        "c2": 1,
+        "n": "Baron Marinous",
+        "t": 5,
+        "ti": 98028
+      }
+    ],
+    "subclassName": "Held in Off-hand"
+  },
+  "281292": {
+    "id": 281292,
+    "name": "Onu's Patience",
+    "icon": "inv_jewelry_talisman_03",
+    "iLvl": 21,
+    "reqLevel": 17,
+    "quality": "q3",
+    "speed": null,
+    "dps": null,
+    "stats": "+3 Stamina, +5 Spirit",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": -5,
+    "side": "alliance",
+    "sourcemore": [
+      {
+        "c": 148,
+        "c2": 1,
+        "n": "Baron Marinous",
+        "t": 5,
+        "ti": 98028
+      }
+    ],
+    "subclassName": "Held in Off-hand"
+  },
+  "281293": {
+    "id": 281293,
+    "name": "Weathered Deathstalker's Blade",
+    "icon": "inv_sword_41",
+    "iLvl": 25,
+    "reqLevel": 19,
+    "quality": "q2",
+    "speed": "2.40",
+    "dps": "12.71 DPS",
+    "stats": "+4 Strength",
+    "inventorySlot": "One-Hand",
+    "subclass": 7,
+    "side": "horde",
+    "sourcemore": [
+      {
+        "c": 267,
+        "c2": 0,
+        "n": "Valuable Vantages",
+        "t": 5,
+        "ti": 98095
+      }
+    ],
+    "subclassName": "One-Handed Sword"
+  },
+  "281294": {
+    "id": 281294,
+    "name": "Expended Apothecary Vial",
+    "icon": "inv_potion_12",
+    "iLvl": 25,
+    "reqLevel": 19,
+    "quality": "q2",
+    "speed": null,
+    "dps": null,
+    "stats": "+3 Intellect, +3 Spirit",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": -5,
+    "side": "horde",
+    "sourcemore": [
+      {
+        "c": 267,
+        "c2": 0,
+        "n": "Valuable Vantages",
+        "t": 5,
+        "ti": 98095
+      }
+    ],
+    "subclassName": "Held in Off-hand"
+  },
+  "281296": {
+    "id": 281296,
+    "name": "Knight's Lance",
+    "icon": "inv_spear_08",
+    "iLvl": 25,
+    "reqLevel": 20,
+    "quality": "q2",
+    "speed": "3.30",
+    "dps": "16.82 DPS",
+    "stats": "+7 Agility, +5 Stamina",
+    "inventorySlot": "Two-Hand",
+    "subclass": 6,
+    "side": "alliance",
+    "sourcemore": [
+      {
+        "c": 1519,
+        "c2": 0,
+        "n": "A Friend of the Family",
+        "t": 5,
+        "ti": 98191
+      }
+    ],
+    "subclassName": "Polearm"
+  },
+  "281297": {
+    "id": 281297,
+    "name": "Royal Dagger",
+    "icon": "inv_weapon_shortblade_01",
+    "iLvl": 25,
+    "reqLevel": 20,
+    "quality": "q2",
+    "speed": "1.70",
+    "dps": "8.53 DPS",
+    "stats": "+4 Intellect",
+    "inventorySlot": "Main Hand",
+    "subclass": 15,
+    "side": "alliance",
+    "sourcemore": [
+      {
+        "c": 1519,
+        "c2": 0,
+        "n": "A Friend of the Family",
+        "t": 5,
+        "ti": 98191
+      }
+    ],
+    "subclassName": "Dagger"
+  },
+  "281306": {
+    "id": 281306,
+    "name": "Flamescarred Spellbook",
+    "icon": "inv_misc_book_01",
+    "iLvl": 31,
+    "reqLevel": 23,
+    "quality": "q2",
+    "speed": null,
+    "dps": null,
+    "stats": "+2 Stamina, +5 Spirit",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": -5,
+    "side": "alliance",
+    "sourcemore": [
+      {
+        "c": 11,
+        "c2": 0,
+        "n": "Old Habits",
+        "t": 5,
+        "ti": 98223
+      }
+    ],
+    "subclassName": "Held in Off-hand"
+  },
+  "281312": {
+    "id": 281312,
+    "name": "Fallen Dragon's Scepter",
+    "icon": "inv_staff_08",
+    "iLvl": 32,
+    "reqLevel": 24,
+    "quality": "q3",
+    "speed": "3.40",
+    "dps": "19.85 DPS",
+    "stats": "+11 Intellect, +13 Spirit",
+    "inventorySlot": "Two-Hand",
+    "subclass": 10,
+    "side": "alliance",
+    "sourcemore": [
+      {
+        "c": 11,
+        "c2": 0,
+        "n": "Stopping the Cycle",
+        "t": 5,
+        "ti": 98297
+      }
+    ],
+    "subclassName": "Staff"
+  },
+  "281313": {
+    "id": 281313,
+    "name": "Trusty Sword",
+    "icon": "inv_sword_04",
+    "iLvl": 32,
+    "reqLevel": 24,
+    "quality": "q3",
+    "speed": "3.30",
+    "dps": "26.67 DPS",
+    "stats": "+12 Stamina, +12 Spirit",
+    "inventorySlot": "Two-Hand",
+    "subclass": 8,
+    "side": "alliance",
+    "sourcemore": [
+      {
+        "c": 11,
+        "c2": 0,
+        "n": "Stopping the Cycle",
+        "t": 5,
+        "ti": 98297
+      }
+    ],
+    "subclassName": "Two-Handed Sword"
+  },
+  "281314": {
+    "id": 281314,
+    "name": "Subdued Dragon's Fang",
+    "icon": "inv_weapon_shortblade_01",
+    "iLvl": 32,
+    "reqLevel": 24,
+    "quality": "q3",
+    "speed": "1.70",
+    "dps": "20.59 DPS",
+    "stats": "+7 Agility, +2 Stamina",
+    "inventorySlot": "One-Hand",
+    "subclass": 15,
+    "side": "alliance",
+    "sourcemore": [
+      {
+        "c": 11,
+        "c2": 0,
+        "n": "Stopping the Cycle",
+        "t": 5,
+        "ti": 98297
+      }
+    ],
+    "subclassName": "Dagger"
+  },
+  "281318": {
+    "id": 281318,
+    "name": "Bouquet of Auberdine Flowers",
+    "icon": "inv_misc_flower_02",
+    "iLvl": 29,
+    "reqLevel": 22,
+    "quality": "q2",
+    "speed": null,
+    "dps": null,
+    "stats": "+4 Stamina, +4 Intellect",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": -5,
+    "side": "alliance",
+    "sourcemore": [
+      {
+        "c": 11,
+        "c2": 0,
+        "n": "Bloom of the Heavens",
+        "t": 5,
+        "ti": 98208
+      }
+    ],
+    "subclassName": "Held in Off-hand"
+  },
+  "281586": {
+    "id": 281586,
+    "name": "Elderwild Construction Hammer",
+    "icon": "inv_hammer_08",
+    "iLvl": 60,
+    "reqLevel": 1,
+    "quality": "q3",
+    "speed": "2.40",
+    "dps": "26.25 DPS",
+    "stats": "+8 Stamina, +10 Intellect, +4 Spirit",
+    "inventorySlot": "Main Hand",
+    "subclass": 4,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "One-Handed Mace"
+  },
+  "281587": {
+    "id": 281587,
+    "name": "Greatflank Flayer",
+    "icon": "inv_sword_36",
+    "iLvl": 60,
+    "reqLevel": 1,
+    "quality": "q3",
+    "speed": "2.30",
+    "dps": "39.35 DPS",
+    "stats": "+5 Strength, +11 Stamina",
+    "inventorySlot": "One-Hand",
+    "subclass": 7,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "One-Handed Sword"
+  },
+  "281588": {
+    "id": 281588,
+    "name": "Nature's Cull",
+    "icon": "inv_weapon_halberd_02",
+    "iLvl": 60,
+    "reqLevel": 1,
+    "quality": "q3",
+    "speed": "3.30",
+    "dps": "51.36 DPS",
+    "stats": "+26 Stamina, +115 Armor",
+    "inventorySlot": "Two-Hand",
+    "subclass": 6,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Polearm"
+  },
+  "281600": {
+    "id": 281600,
+    "name": "Wail of Death",
+    "icon": "inv_wand_12",
+    "iLvl": 61,
+    "reqLevel": 56,
+    "quality": "q2",
+    "speed": "1.80",
+    "dps": "54.17 DPS",
+    "stats": "+6 Stamina, +4 Spirit",
+    "inventorySlot": "Ranged",
+    "subclass": 19,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Wand"
+  },
+  "281628": {
+    "id": 281628,
+    "name": "Blade of Bandarion",
+    "icon": "inv_sword_39",
+    "iLvl": 52,
+    "reqLevel": 1,
+    "quality": "q3",
+    "speed": "2.00",
+    "dps": "34.50 DPS",
+    "stats": "+5 Strength, +11 Stamina",
+    "inventorySlot": "One-Hand",
+    "subclass": 7,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "One-Handed Sword"
+  },
+  "281648": {
+    "id": 281648,
+    "name": "Gul'gash's Greathammer",
+    "icon": "inv_hammer_16",
+    "iLvl": 49,
+    "reqLevel": 44,
+    "quality": "q3",
+    "speed": "3.60",
+    "dps": "42.78 DPS",
+    "stats": "+19 Strength",
+    "inventorySlot": "Two-Hand",
+    "subclass": 5,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Two-Handed Mace"
+  },
+  "281660": {
+    "id": 281660,
+    "name": "Iron Star",
+    "icon": "ability_upgrademoonglaive",
+    "iLvl": 27,
+    "reqLevel": 1,
+    "quality": "q2",
+    "speed": "2.00",
+    "dps": "12.50 DPS",
+    "stats": "+3 Agility",
+    "inventorySlot": "Thrown",
+    "subclass": 16,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Thrown"
+  },
+  "281661": {
+    "id": 281661,
+    "name": "Well-Worn Pitchfork",
+    "icon": "inv_misc_2h_farmpitchfork_a_01",
+    "iLvl": 38,
+    "reqLevel": 33,
+    "quality": "q2",
+    "speed": "3.60",
+    "dps": "26.81 DPS",
+    "stats": "+14 Strength, +3 Stamina",
+    "inventorySlot": "Two-Hand",
+    "subclass": 6,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Polearm"
+  },
+  "281665": {
+    "id": 281665,
+    "name": "Twilight Forgehammer",
+    "icon": "inv_hammer_20",
+    "iLvl": 46,
+    "reqLevel": 41,
+    "quality": "q3",
+    "speed": "2.50",
+    "dps": "31.00 DPS",
+    "stats": "",
+    "inventorySlot": "One-Hand",
+    "subclass": 4,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "One-Handed Mace"
+  },
+  "281730": {
+    "id": 281730,
+    "name": "Restored Bauble",
+    "icon": "inv_jewelry_talisman_01",
+    "iLvl": 1,
+    "reqLevel": 1,
+    "quality": "q2",
+    "speed": null,
+    "dps": null,
+    "stats": "",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": -5,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Held in Off-hand"
+  },
+  "281733": {
+    "id": 281733,
+    "name": "Restored Wand",
+    "icon": "inv_staff_02",
+    "iLvl": 1,
+    "reqLevel": 1,
+    "quality": "q2",
+    "speed": "1.70",
+    "dps": "2.65 DPS",
+    "stats": "",
+    "inventorySlot": "Ranged",
+    "subclass": 19,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Wand"
+  },
+  "281925": {
+    "id": 281925,
+    "name": "Whelpfire Wand",
+    "icon": "inv_wand_11",
+    "iLvl": 20,
+    "reqLevel": 15,
+    "quality": "q2",
+    "speed": "1.90",
+    "dps": "15.26 DPS",
+    "stats": "",
+    "inventorySlot": "Ranged",
+    "subclass": 19,
+    "side": "both",
+    "sourcemore": [
+      {
+        "n": "Snarlflare",
+        "t": 1,
+        "ti": 14272,
+        "z": 44
+      }
+    ],
+    "subclassName": "Wand"
+  },
+  "282007": {
+    "id": 282007,
+    "name": "Emerald Watcher's Dreamstaff",
+    "icon": "inv_staff_17",
+    "iLvl": 49,
+    "reqLevel": 44,
+    "quality": "q3",
+    "speed": "3.00",
+    "dps": "31.67 DPS",
+    "stats": "+19 Intellect, +19 Spirit",
+    "inventorySlot": "Two-Hand",
+    "subclass": 10,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Staff"
+  },
+  "282029": {
+    "id": 282029,
+    "name": "Reaver's Repeater",
+    "icon": "inv_weapon_rifle_07",
+    "iLvl": 58,
+    "reqLevel": 53,
+    "quality": "q2",
+    "speed": "2.70",
+    "dps": "27.04 DPS",
+    "stats": "+5 Stamina",
+    "inventorySlot": "Ranged",
+    "subclass": 3,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Gun"
+  },
+  "282088": {
+    "id": 282088,
+    "name": "Heart of Smoldar",
+    "icon": "inv_misc_orb_05",
+    "iLvl": 52,
+    "reqLevel": 47,
+    "quality": "q2",
+    "speed": null,
+    "dps": null,
+    "stats": "+8 Stamina",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": -5,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Held in Off-hand"
+  },
+  "282561": {
+    "id": 282561,
+    "name": "Siegebreaker's Blaster",
+    "icon": "inv_weapon_rifle_04",
+    "iLvl": 42,
+    "reqLevel": 37,
+    "quality": "q3",
+    "speed": "2.60",
+    "dps": "22.31 DPS",
+    "stats": "",
+    "inventorySlot": "Ranged",
+    "subclass": 3,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Gun"
+  },
+  "282639": {
+    "id": 282639,
+    "name": "Emogg's \"Crusher\"",
+    "icon": "inv_weapon_halberd_08",
+    "iLvl": 21,
+    "reqLevel": 16,
+    "quality": "q3",
+    "speed": "2.60",
+    "dps": "14.04 DPS",
+    "stats": "+4 Strength, +2 Stamina",
+    "inventorySlot": "One-Hand",
+    "subclass": 0,
+    "side": "both",
+    "sourcemore": [
+      {
+        "n": "Emogg the Crusher",
+        "t": 1,
+        "ti": 14267,
+        "z": 38
+      }
+    ],
+    "subclassName": "One-Handed Axe"
+  },
+  "282654": {
+    "id": 282654,
+    "name": "Gnawed Bone",
+    "icon": "inv_misc_bone_01",
+    "iLvl": 26,
+    "reqLevel": 21,
+    "quality": "q2",
+    "speed": null,
+    "dps": null,
+    "stats": "+3 Stamina, +3 Spirit",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": -5,
+    "side": "both",
+    "sourcemore": [
+      {
+        "n": "Gnawbone",
+        "t": 1,
+        "ti": 14425,
+        "z": 11
+      }
+    ],
+    "subclassName": "Held in Off-hand"
+  },
+  "282706": {
+    "id": 282706,
+    "name": "Rotting Meat",
+    "icon": "inv_misc_food_18",
+    "iLvl": 44,
+    "reqLevel": 39,
+    "quality": "q3",
+    "speed": null,
+    "dps": null,
+    "stats": "+12 Stamina",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": -5,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Held in Off-hand"
+  },
+  "282710": {
+    "id": 282710,
+    "name": "Dun Garok Rifle",
+    "icon": "inv_weapon_rifle_03",
+    "iLvl": 30,
+    "reqLevel": 25,
+    "quality": "q3",
+    "speed": "2.60",
+    "dps": "14.81 DPS",
+    "stats": "+3 Agility, +3 Spirit",
+    "inventorySlot": "Ranged",
+    "subclass": 3,
+    "side": "both",
+    "sourcemore": [
+      {
+        "n": "Tamra Stormpike",
+        "t": 1,
+        "ti": 14275,
+        "z": 267
+      }
+    ],
+    "subclassName": "Gun"
+  },
+  "283254": {
+    "id": 283254,
+    "name": "Heart of Alterac",
+    "icon": "inv_misc_orb_05",
+    "iLvl": 39,
+    "reqLevel": 34,
+    "quality": "q2",
+    "speed": null,
+    "dps": null,
+    "stats": "+7 Stamina, +5 Intellect",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": -5,
+    "side": "both",
+    "sourcemore": [
+      {
+        "n": "Stone Fury",
+        "t": 1,
+        "ti": 2258,
+        "z": 36
+      }
+    ],
+    "subclassName": "Held in Off-hand"
+  },
+  "284101": {
+    "id": 284101,
+    "name": "Blade of Senseless Slaughter",
+    "icon": "inv_sword_12",
+    "iLvl": 62,
+    "reqLevel": 57,
+    "quality": "q3",
+    "speed": "2.70",
+    "dps": "40.74 DPS",
+    "stats": "+11 Strength, +4 Agility, +5 Stamina",
+    "inventorySlot": "Main Hand",
+    "subclass": 7,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "One-Handed Sword"
+  },
+  "284174": {
+    "id": 284174,
+    "name": "Serrated Shadowclaw",
+    "icon": "inv_weapon_shortblade_15",
+    "iLvl": 15,
+    "reqLevel": 10,
+    "quality": "q2",
+    "speed": "1.70",
+    "dps": "7.65 DPS",
+    "stats": "+1 Agility",
+    "inventorySlot": "One-Hand",
+    "subclass": 15,
+    "side": "both",
+    "sourcemore": [
+      {
+        "n": "Shadowclaw",
+        "t": 1,
+        "ti": 2175,
+        "z": 148
+      }
+    ],
+    "subclassName": "Dagger"
+  },
+  "284193": {
+    "id": 284193,
+    "name": "Moongazer's Wand",
+    "icon": "inv_staff_06",
+    "iLvl": 19,
+    "reqLevel": 14,
+    "quality": "q2",
+    "speed": "1.70",
+    "dps": "14.41 DPS",
+    "stats": "",
+    "inventorySlot": "Ranged",
+    "subclass": 19,
+    "side": "both",
+    "sourcemore": [
+      {
+        "n": "Lady Moongazer",
+        "t": 1,
+        "ti": 2184,
+        "z": 148
+      }
+    ],
+    "subclassName": "Wand"
+  },
+  "284228": {
+    "id": 284228,
+    "name": "Vial of Vile Liquid",
+    "icon": "trade_archaeology_crackedcrystalvial",
+    "iLvl": 56,
+    "reqLevel": 51,
+    "quality": "q2",
+    "speed": null,
+    "dps": null,
+    "stats": "-10 Stamina, +13 Intellect, Improves your chance to get a critical strike by 0.5%.",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": -5,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Held in Off-hand"
+  },
+  "284257": {
+    "id": 284257,
+    "name": "Icesworn Decapitator",
+    "icon": "inv_axe_69",
+    "iLvl": 59,
+    "reqLevel": 54,
+    "quality": "q3",
+    "speed": "3.60",
+    "dps": "50.56 DPS",
+    "stats": "+17 Strength, +18 Stamina, +10 Frost Resistance",
+    "inventorySlot": "Two-Hand",
+    "subclass": 1,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Two-Handed Axe"
+  },
+  "284286": {
+    "id": 284286,
+    "name": "Battleguard Captain's Sticker",
+    "icon": "inv_axe_04",
+    "iLvl": 13,
+    "reqLevel": 8,
+    "quality": "q2",
+    "speed": "3.70",
+    "dps": "8.92 DPS",
+    "stats": "+3 Strength",
+    "inventorySlot": "Two-Hand",
+    "subclass": 1,
+    "side": "both",
+    "sourcemore": [
+      {
+        "n": "Captain Flat Tusk",
+        "t": 1,
+        "ti": 5824,
+        "z": 14
+      }
+    ],
+    "subclassName": "Two-Handed Axe"
+  },
+  "284386": {
+    "id": 284386,
+    "name": "Whipfang's Skinsearer",
+    "icon": "inv_weapon_shortblade_24",
+    "iLvl": 24,
+    "reqLevel": 19,
+    "quality": "q3",
+    "speed": "1.70",
+    "dps": "15.59 DPS",
+    "stats": "",
+    "inventorySlot": "One-Hand",
+    "subclass": 15,
+    "side": "both",
+    "sourcemore": [
+      {
+        "n": "Taskmaster Whipfang",
+        "t": 1,
+        "ti": 5932,
+        "z": 406
+      }
+    ],
+    "subclassName": "Dagger"
+  },
+  "284459": {
+    "id": 284459,
+    "name": "Dendweller's Hammer",
+    "icon": "inv_hammer_09",
+    "iLvl": 31,
+    "reqLevel": 26,
+    "quality": "q3",
+    "speed": "3.30",
+    "dps": "25.61 DPS",
+    "stats": "+12 Stamina, +100 Armor",
+    "inventorySlot": "Two-Hand",
+    "subclass": 5,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Two-Handed Mace"
+  },
+  "284574": {
+    "id": 284574,
+    "name": "Snapped Branch Wand",
+    "icon": "inv_staff_02",
+    "iLvl": 27,
+    "reqLevel": 22,
+    "quality": "q2",
+    "speed": "1.70",
+    "dps": "21.18 DPS",
+    "stats": "+3 Nature Resistance",
+    "inventorySlot": "Ranged",
+    "subclass": 19,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Wand"
+  },
+  "284667": {
+    "id": 284667,
+    "name": "Flame Seared Sword",
+    "icon": "inv_sword_14",
+    "iLvl": 28,
+    "reqLevel": 23,
+    "quality": "q3",
+    "speed": "2.60",
+    "dps": "17.69 DPS",
+    "stats": "",
+    "inventorySlot": "One-Hand",
+    "subclass": 7,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "One-Handed Sword"
+  },
+  "284668": {
+    "id": 284668,
+    "name": "Apothecary's Concoction",
+    "icon": "inv_potion_80",
+    "iLvl": 24,
+    "reqLevel": 19,
+    "quality": "q2",
+    "speed": null,
+    "dps": null,
+    "stats": "-5 Stamina",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": -5,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Held in Off-hand"
+  },
+  "285094": {
+    "id": 285094,
+    "name": "Ravaged Fishing Pole",
+    "icon": "inv_fishingpole_02",
+    "iLvl": 30,
+    "reqLevel": 20,
+    "quality": "q1",
+    "speed": "3.00",
+    "dps": "19.00 DPS",
+    "stats": "",
+    "inventorySlot": "Two-Hand",
+    "subclass": 20,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Fishing Pole"
+  },
+  "285192": {
+    "id": 285192,
+    "name": "Kobold Firestarter",
+    "icon": "inv_torch_lit",
+    "iLvl": 30,
+    "reqLevel": 25,
+    "quality": "q2",
+    "speed": null,
+    "dps": null,
+    "stats": "+4 Stamina",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": -5,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Held in Off-hand"
+  },
+  "285275": {
+    "id": 285275,
+    "name": "Satchel of Copper Bombs",
+    "icon": "inv_misc_bag_05",
+    "iLvl": 18,
+    "reqLevel": 13,
+    "quality": "q2",
+    "speed": "2.00",
+    "dps": "3.09 DPS",
+    "stats": "+2 Stamina",
+    "inventorySlot": "Thrown",
+    "subclass": 16,
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": 11,
+        "icon": "inv_misc_bag_05",
+        "n": "Satchel of Copper Bombs",
+        "s": 202,
+        "t": 6,
+        "ti": 1317958
+      }
+    ],
+    "subclassName": "Thrown"
+  },
+  "285276": {
+    "id": 285276,
+    "name": "Satchel of Bronze Bombs",
+    "icon": "inv_misc_bag_09_black",
+    "iLvl": 33,
+    "reqLevel": 28,
+    "quality": "q2",
+    "speed": "2.00",
+    "dps": "5.45 DPS",
+    "stats": "+4 Stamina",
+    "inventorySlot": "Thrown",
+    "subclass": 16,
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": 11,
+        "icon": "inv_misc_bag_09_black",
+        "n": "Satchel of Bronze Bombs",
+        "s": 202,
+        "t": 6,
+        "ti": 1317959
+      }
+    ],
+    "subclassName": "Thrown"
+  },
+  "285277": {
+    "id": 285277,
+    "name": "Satchel of Iron Bombs",
+    "icon": "inv_misc_bag_10_black",
+    "iLvl": 46,
+    "reqLevel": 41,
+    "quality": "q2",
+    "speed": "2.00",
+    "dps": "8.34 DPS",
+    "stats": "+6 Stamina",
+    "inventorySlot": "Thrown",
+    "subclass": 16,
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": 11,
+        "icon": "inv_misc_bag_10_black",
+        "n": "Satchel of Iron Bombs",
+        "s": 202,
+        "t": 6,
+        "ti": 1317960
+      }
+    ],
+    "subclassName": "Thrown"
+  },
+  "285278": {
+    "id": 285278,
+    "name": "Satchel of Dark Iron Bombs",
+    "icon": "inv_misc_bag_07_black",
+    "iLvl": 57,
+    "reqLevel": 52,
+    "quality": "q2",
+    "speed": "2.00",
+    "dps": "10.35 DPS",
+    "stats": "+8 Stamina",
+    "inventorySlot": "Thrown",
+    "subclass": 16,
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": 11,
+        "icon": "inv_misc_bag_07_black",
+        "n": "Satchel of Dark Iron Bombs",
+        "s": 202,
+        "t": 6,
+        "ti": 1317961
+      }
+    ],
+    "subclassName": "Thrown"
+  },
+  "285279": {
+    "id": 285279,
+    "name": "Cracked Blacksmith Hammer",
+    "icon": "inv_hammer_20",
+    "iLvl": 22,
+    "reqLevel": 17,
+    "quality": "q2",
+    "speed": "2.20",
+    "dps": "10.00 DPS",
+    "stats": "+2 Strength",
+    "inventorySlot": "Thrown",
+    "subclass": 16,
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": 11,
+        "icon": "inv_hammer_20",
+        "n": "Cracked Blacksmith Hammer",
+        "s": 164,
+        "t": 6,
+        "ti": 1317962
+      }
+    ],
+    "subclassName": "Thrown"
+  },
+  "285280": {
+    "id": 285280,
+    "name": "Mithril Blacksmith Hammer",
+    "icon": "inv_hammer_20",
+    "iLvl": 39,
+    "reqLevel": 34,
+    "quality": "q2",
+    "speed": "2.10",
+    "dps": "19.29 DPS",
+    "stats": "+5 Strength",
+    "inventorySlot": "Thrown",
+    "subclass": 16,
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": 11,
+        "icon": "inv_hammer_20",
+        "n": "Mithril Blacksmith Hammer",
+        "s": 164,
+        "t": 6,
+        "ti": 1317963
+      }
+    ],
+    "subclassName": "Thrown"
+  },
+  "285281": {
+    "id": 285281,
+    "name": "Arcanite Blacksmith Hammer",
+    "icon": "inv_hammer_20",
+    "iLvl": 54,
+    "reqLevel": 49,
+    "quality": "q3",
+    "speed": "2.20",
+    "dps": "32.05 DPS",
+    "stats": "+6 Strength, +4 Spirit",
+    "inventorySlot": "Thrown",
+    "subclass": 16,
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": 11,
+        "icon": "inv_hammer_20",
+        "n": "Arcanite Blacksmith Hammer",
+        "s": 164,
+        "t": 6,
+        "ti": 1317964
+      }
+    ],
+    "subclassName": "Thrown"
+  },
+  "285284": {
+    "id": 285284,
+    "name": "Balanced Knives",
+    "icon": "inv_weapon_shortblade_26",
+    "iLvl": 56,
+    "reqLevel": 51,
+    "quality": "q2",
+    "speed": "1.70",
+    "dps": "30.00 DPS",
+    "stats": "",
+    "inventorySlot": "Thrown",
+    "subclass": 16,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Thrown"
+  },
+  "285292": {
+    "id": 285292,
+    "name": "Dull Sawblade",
+    "icon": "inv_misc_sawblade_01",
+    "iLvl": 21,
+    "reqLevel": 16,
+    "quality": "q3",
+    "speed": "1.70",
+    "dps": "12.65 DPS",
+    "stats": "+2 Stamina",
+    "inventorySlot": "Thrown",
+    "subclass": 16,
+    "side": "both",
+    "sourcemore": [
+      {
+        "dd": -1,
+        "n": "Sneed's Shredder",
+        "t": 1,
+        "ti": 642,
+        "z": 1581
+      }
+    ],
+    "subclassName": "Thrown"
+  },
+  "285328": {
+    "id": 285328,
+    "name": "Taurenbane's Family Cleaver",
+    "icon": "inv_axe_04",
+    "iLvl": 28,
+    "reqLevel": 23,
+    "quality": "q3",
+    "speed": "3.40",
+    "dps": "22.94 DPS",
+    "stats": "+9 Stamina",
+    "inventorySlot": "Two-Hand",
+    "subclass": 1,
+    "side": "both",
+    "sourcemore": [
+      {
+        "n": "Hagg Taurenbane",
+        "t": 1,
+        "ti": 5859,
+        "z": 17
+      }
+    ],
+    "subclassName": "Two-Handed Axe"
+  },
+  "285332": {
+    "id": 285332,
+    "name": "Puncturing Spear",
+    "icon": "inv_spear_07",
+    "iLvl": 24,
+    "reqLevel": 19,
+    "quality": "q3",
+    "speed": "3.10",
+    "dps": "20.32 DPS",
+    "stats": "",
+    "inventorySlot": "Two-Hand",
+    "subclass": 6,
+    "side": "both",
+    "sourcemore": [
+      {
+        "n": "Swinegart Spearhide",
+        "t": 1,
+        "ti": 5864,
+        "z": 17
+      }
+    ],
+    "subclassName": "Polearm"
+  },
+  "285346": {
+    "id": 285346,
+    "name": "Alliance Outrunner's Sword",
+    "icon": "inv_sword_20",
+    "iLvl": 27,
+    "reqLevel": 22,
+    "quality": "q3",
+    "speed": "2.10",
+    "dps": "17.14 DPS",
+    "stats": "+5 Agility",
+    "inventorySlot": "One-Hand",
+    "subclass": 7,
+    "side": "both",
+    "sourcemore": [
+      {
+        "n": "Thora Feathermoon",
+        "t": 1,
+        "ti": 5798,
+        "z": 17
+      }
+    ],
+    "subclassName": "One-Handed Sword"
+  },
+  "285347": {
+    "id": 285347,
+    "name": "Alliance Outrunner Bow",
+    "icon": "inv_weapon_bow_05",
+    "iLvl": 27,
+    "reqLevel": 22,
+    "quality": "q3",
+    "speed": "2.40",
+    "dps": "13.33 DPS",
+    "stats": "+4 Agility, +3 Spirit",
+    "inventorySlot": "Ranged",
+    "subclass": 2,
+    "side": "both",
+    "sourcemore": [
+      {
+        "n": "Aean Swiftriver",
+        "t": 1,
+        "ti": 5797,
+        "z": 17
+      }
+    ],
+    "subclassName": "Bow"
+  },
+  "285348": {
+    "id": 285348,
+    "name": "Alliance Outrunner Healing Rod",
+    "icon": "inv_wand_04",
+    "iLvl": 26,
+    "reqLevel": 21,
+    "quality": "q3",
+    "speed": null,
+    "dps": null,
+    "stats": "",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": -5,
+    "side": "both",
+    "sourcemore": [
+      {
+        "n": "Hannah Bladeleaf",
+        "t": 1,
+        "ti": 5799,
+        "z": 17
+      }
+    ],
+    "subclassName": "Held in Off-hand"
+  },
+  "285350": {
+    "id": 285350,
+    "name": "Alliance Outrunner Staff",
+    "icon": "inv_staff_11",
+    "iLvl": 26,
+    "reqLevel": 21,
+    "quality": "q3",
+    "speed": "2.50",
+    "dps": "16.20 DPS",
+    "stats": "+9 Stamina, +9 Spirit",
+    "inventorySlot": "Two-Hand",
+    "subclass": 10,
+    "side": "both",
+    "sourcemore": [
+      {
+        "n": "Marcus Bel",
+        "t": 1,
+        "ti": 5800,
+        "z": 17
+      }
+    ],
+    "subclassName": "Staff"
+  },
+  "285362": {
+    "id": 285362,
+    "name": "Red Wine Glass",
+    "icon": "inv_drink_02",
+    "iLvl": 1,
+    "reqLevel": 1,
+    "quality": "q1",
+    "speed": null,
+    "dps": null,
+    "stats": "",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": -5,
+    "side": "both",
+    "sourcemore": [
+      {
+        "n": "Christi Stockton",
+        "t": 1,
+        "ti": 32337,
+        "z": 36
+      }
+    ],
+    "subclassName": "Held in Off-hand"
+  },
+  "286534": {
+    "id": 286534,
+    "name": "Silithid Piercer",
+    "icon": "inv_misc_monsterclaw_10",
+    "iLvl": 26,
+    "reqLevel": 21,
+    "quality": "q2",
+    "speed": "1.60",
+    "dps": "13.44 DPS",
+    "stats": "+3 Agility",
+    "inventorySlot": "One-Hand",
+    "subclass": 15,
+    "side": "both",
+    "sourcemore": [
+      {
+        "n": "Silithid Harvester",
+        "t": 1,
+        "ti": 3253,
+        "z": 17
+      }
+    ],
+    "subclassName": "Dagger"
+  },
+  "286537": {
+    "id": 286537,
+    "name": "Thunderstomp's Horn",
+    "icon": "inv_hammer_12",
+    "iLvl": 26,
+    "reqLevel": 21,
+    "quality": "q2",
+    "speed": "2.10",
+    "dps": "13.33 DPS",
+    "stats": "",
+    "inventorySlot": "One-Hand",
+    "subclass": 4,
+    "side": "both",
+    "sourcemore": [
+      {
+        "n": "Thunderstomp",
+        "t": 1,
+        "ti": 5832,
+        "z": 17
+      }
+    ],
+    "subclassName": "One-Handed Mace"
+  },
+  "286540": {
+    "id": 286540,
+    "name": "The Skyblade",
+    "icon": "inv_sword_20",
+    "iLvl": 27,
+    "reqLevel": 22,
+    "quality": "q3",
+    "speed": "3.60",
+    "dps": "22.36 DPS",
+    "stats": "+10 Strength, +8 Stamina",
+    "inventorySlot": "Two-Hand",
+    "subclass": 8,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Two-Handed Sword"
+  },
+  "286541": {
+    "id": 286541,
+    "name": "Bael'dun Tankard",
+    "icon": "inv_drink_04",
+    "iLvl": 27,
+    "reqLevel": 22,
+    "quality": "q2",
+    "speed": null,
+    "dps": null,
+    "stats": "+3 Stamina, +4 Spirit",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": -5,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Held in Off-hand"
+  },
+  "286729": {
+    "id": 286729,
+    "name": "Kolkar Bow",
+    "icon": "inv_weapon_bow_12",
+    "iLvl": 8,
+    "reqLevel": 4,
+    "quality": "q1",
+    "speed": "2.80",
+    "dps": "2.68 DPS",
+    "stats": "",
+    "inventorySlot": "Ranged",
+    "subclass": 2,
+    "side": "horde",
+    "sourcemore": [
+      {
+        "c": 14,
+        "c2": 1,
+        "n": "Lost in the Shadows",
+        "t": 5,
+        "ti": 99123
+      }
+    ],
+    "subclassName": "Bow"
+  },
+  "286730": {
+    "id": 286730,
+    "name": "Pristine Orcish Dagger",
+    "icon": "inv_weapon_shortblade_14",
+    "iLvl": 12,
+    "reqLevel": 10,
+    "quality": "q2",
+    "speed": "2.40",
+    "dps": "6.25 DPS",
+    "stats": "+1 Agility",
+    "inventorySlot": "One-Hand",
+    "subclass": 15,
+    "side": "horde",
+    "sourcemore": [
+      {
+        "c": 14,
+        "c2": 1,
+        "n": "Threat from Below",
+        "t": 5,
+        "ti": 99052
+      }
+    ],
+    "subclassName": "Dagger"
+  },
+  "286733": {
+    "id": 286733,
+    "name": "Fightin' Fish",
+    "icon": "inv_misc_fish_02",
+    "iLvl": 7,
+    "reqLevel": 4,
+    "quality": "q1",
+    "speed": "2.40",
+    "dps": "2.71 DPS",
+    "stats": "",
+    "inventorySlot": "One-Hand",
+    "subclass": 4,
+    "side": "alliance",
+    "sourcemore": [
+      {
+        "c": 12,
+        "c2": 0,
+        "n": "An Enticing Offer",
+        "t": 5,
+        "ti": 99130
+      }
+    ],
+    "subclassName": "One-Handed Mace"
+  },
+  "286742": {
+    "id": 286742,
+    "name": "Riptear's Cleaver",
+    "icon": "inv_throwingaxe_02",
+    "iLvl": 13,
+    "reqLevel": 6,
+    "quality": "q2",
+    "speed": "3.30",
+    "dps": "8.94 DPS",
+    "stats": "+3 Strength",
+    "inventorySlot": "Two-Hand",
+    "subclass": 1,
+    "side": "horde",
+    "sourcemore": [
+      {
+        "c": 85,
+        "c2": 0,
+        "n": "Rear Guard Patrol",
+        "t": 5,
+        "ti": 99156
+      }
+    ],
+    "subclassName": "Two-Handed Axe"
+  },
+  "286743": {
+    "id": 286743,
+    "name": "Riptear's Spare Arm",
+    "icon": "spell_shadow_fingerofdeath",
+    "iLvl": 13,
+    "reqLevel": 6,
+    "quality": "q2",
+    "speed": "1.70",
+    "dps": "9.41 DPS",
+    "stats": "",
+    "inventorySlot": "Ranged",
+    "subclass": 19,
+    "side": "horde",
+    "sourcemore": [
+      {
+        "c": 85,
+        "c2": 0,
+        "n": "Rear Guard Patrol",
+        "t": 5,
+        "ti": 99156
+      }
+    ],
+    "subclassName": "Wand"
+  },
+  "286748": {
+    "id": 286748,
+    "name": "Bristlebark Bow",
+    "icon": "inv_weapon_bow_03",
+    "iLvl": 12,
+    "reqLevel": 7,
+    "quality": "q2",
+    "speed": "2.60",
+    "dps": "5.00 DPS",
+    "stats": "+1 Agility",
+    "inventorySlot": "Ranged",
+    "subclass": 2,
+    "side": "both",
+    "sourcemore": [
+      {
+        "n": "Matriarch Bristlefur",
+        "t": 1,
+        "ti": 276189,
+        "z": 12
+      }
+    ],
+    "subclassName": "Bow"
+  },
+  "286750": {
+    "id": 286750,
+    "name": "Wisesight Wand",
+    "icon": "inv_wand_01",
+    "iLvl": 12,
+    "reqLevel": 7,
+    "quality": "q2",
+    "speed": "1.70",
+    "dps": "8.82 DPS",
+    "stats": "+1 Intellect",
+    "inventorySlot": "Ranged",
+    "subclass": 19,
+    "side": "both",
+    "sourcemore": [
+      {
+        "n": "Nightscreech",
+        "t": 1,
+        "ti": 276101,
+        "z": 141
+      }
+    ],
+    "subclassName": "Wand"
+  },
+  "286753": {
+    "id": 286753,
+    "name": "Snarlsnout Shooter",
+    "icon": "inv_weapon_rifle_05",
+    "iLvl": 12,
+    "reqLevel": 7,
+    "quality": "q2",
+    "speed": "2.50",
+    "dps": "5.00 DPS",
+    "stats": "+1 Strength",
+    "inventorySlot": "Ranged",
+    "subclass": 3,
+    "side": "both",
+    "sourcemore": [
+      {
+        "n": "Snarlsnout",
+        "t": 1,
+        "ti": 276109,
+        "z": 215
+      }
+    ],
+    "subclassName": "Gun"
+  },
+  "286755": {
+    "id": 286755,
+    "name": "Helm Splitter",
+    "icon": "inv_sword_04",
+    "iLvl": 13,
+    "reqLevel": 8,
+    "quality": "q2",
+    "speed": "2.40",
+    "dps": "6.88 DPS",
+    "stats": "+1 Strength",
+    "inventorySlot": "One-Hand",
+    "subclass": 7,
+    "side": "both",
+    "sourcemore": [
+      {
+        "n": "The Condemned One",
+        "t": 1,
+        "ti": 276089,
+        "z": 85
+      }
+    ],
+    "subclassName": "One-Handed Sword"
+  },
+  "286977": {
+    "id": 286977,
+    "name": "Sword of the Fallen",
+    "icon": "inv_sword_14",
+    "iLvl": 23,
+    "reqLevel": 18,
+    "quality": "q3",
+    "speed": "3.50",
+    "dps": "19.71 DPS",
+    "stats": "+6 Strength, +9 Intellect",
+    "inventorySlot": "Two-Hand",
+    "subclass": 8,
+    "side": "both",
+    "sourcemore": [
+      {
+        "dd": -1,
+        "z": 16611
+      }
+    ],
+    "subclassName": "Two-Handed Sword"
+  },
+  "286996": {
+    "id": 286996,
+    "name": "City Guard's Tarnished Blade",
+    "icon": "inv_sword_23",
+    "iLvl": 34,
+    "reqLevel": 29,
+    "quality": "q3",
+    "speed": "2.50",
+    "dps": "22.40 DPS",
+    "stats": "+6 Stamina",
+    "inventorySlot": "One-Hand",
+    "subclass": 7,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "One-Handed Sword"
+  },
+  "287059": {
+    "id": 287059,
+    "name": "Footman's Pocketknife",
+    "icon": "inv_weapon_shortblade_17",
+    "iLvl": 10,
+    "reqLevel": 6,
+    "quality": "q2",
+    "speed": "2.00",
+    "dps": "4.75 DPS",
+    "stats": "+1 Strength",
+    "inventorySlot": "Thrown",
+    "subclass": 16,
+    "side": "alliance",
+    "sourcemore": [
+      {
+        "c": 12,
+        "c2": 0,
+        "n": "Riverpaw Gnoll Bounty",
+        "t": 5,
+        "ti": 11
+      }
+    ],
+    "subclassName": "Thrown"
+  },
+  "287060": {
+    "id": 287060,
+    "name": "Rezlak's Spare Knife",
+    "icon": "inv_weapon_shortblade_05",
+    "iLvl": 11,
+    "reqLevel": 1,
+    "quality": "q2",
+    "speed": "1.80",
+    "dps": "5.28 DPS",
+    "stats": "",
+    "inventorySlot": "Thrown",
+    "subclass": 16,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Thrown"
+  },
+  "287061": {
+    "id": 287061,
+    "name": "Cheese Knife",
+    "icon": "inv_weapon_shortblade_14",
+    "iLvl": 12,
+    "reqLevel": 10,
+    "quality": "q2",
+    "speed": "1.90",
+    "dps": "5.79 DPS",
+    "stats": "+1 Stamina",
+    "inventorySlot": "Thrown",
+    "subclass": 16,
+    "side": "alliance",
+    "sourcemore": [
+      {
+        "c": 38,
+        "c2": 0,
+        "n": "In Defense of the King's Lands",
+        "t": 5,
+        "ti": 224
+      }
+    ],
+    "subclassName": "Thrown"
+  },
+  "287062": {
+    "id": 287062,
+    "name": "Darnassian Knife",
+    "icon": "inv_throwingknife_01",
+    "iLvl": 14,
+    "reqLevel": 10,
+    "quality": "q2",
+    "speed": "1.60",
+    "dps": "6.56 DPS",
+    "stats": "+1 Agility",
+    "inventorySlot": "Thrown",
+    "subclass": 16,
+    "side": "alliance",
+    "sourcemore": [
+      {
+        "c": 148,
+        "c2": 1,
+        "n": "WANTED: Jai'vhanel",
+        "t": 5,
+        "ti": 98025
+      }
+    ],
+    "subclassName": "Thrown"
+  },
+  "287063": {
+    "id": 287063,
+    "name": "Serrated Knife",
+    "icon": "inv_throwingknife_01",
+    "iLvl": 17,
+    "reqLevel": 12,
+    "quality": "q2",
+    "speed": "2.00",
+    "dps": "7.75 DPS",
+    "stats": "+1 Agility, +1 Spirit",
+    "inventorySlot": "Thrown",
+    "subclass": 16,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Thrown"
+  },
+  "287064": {
+    "id": 287064,
+    "name": "Beastculler's Knife",
+    "icon": "inv_weapon_shortblade_10",
+    "iLvl": 23,
+    "reqLevel": 18,
+    "quality": "q2",
+    "speed": "1.60",
+    "dps": "10.31 DPS",
+    "stats": "+1 Agility",
+    "inventorySlot": "Thrown",
+    "subclass": 16,
+    "side": "horde",
+    "sourcemore": [
+      {
+        "c": 17,
+        "c2": 1,
+        "n": "Field to Clear",
+        "t": 5,
+        "ti": 98093
+      }
+    ],
+    "subclassName": "Thrown"
+  },
+  "287066": {
+    "id": 287066,
+    "name": "Wizlo's Tuning Wrench",
+    "icon": "inv_misc_wrench_01",
+    "iLvl": 30,
+    "reqLevel": 24,
+    "quality": "q2",
+    "speed": "2.00",
+    "dps": "14.00 DPS",
+    "stats": "+2 Agility, +2 Spirit",
+    "inventorySlot": "Thrown",
+    "subclass": 16,
+    "side": "horde",
+    "sourcemore": [
+      {
+        "c": 400,
+        "c2": 1,
+        "n": "Hypercapacitor Gizmo",
+        "t": 5,
+        "ti": 5151
+      }
+    ],
+    "subclassName": "Thrown"
+  },
+  "287067": {
+    "id": 287067,
+    "name": "Dragonmaw Skinflayer",
+    "icon": "inv_throwingknife_02",
+    "iLvl": 32,
+    "reqLevel": 23,
+    "quality": "q2",
+    "speed": "1.80",
+    "dps": "15.00 DPS",
+    "stats": "+3 Strength, +3 Spirit",
+    "inventorySlot": "Thrown",
+    "subclass": 16,
+    "side": "alliance",
+    "sourcemore": [
+      {
+        "c": 11,
+        "c2": 0,
+        "n": "Defeat Nek'rosh",
+        "t": 5,
+        "ti": 474
+      }
+    ],
+    "subclassName": "Thrown"
+  },
+  "287068": {
+    "id": 287068,
+    "name": "Excavated Dagger",
+    "icon": "inv_weapon_shortblade_19",
+    "iLvl": 33,
+    "reqLevel": 28,
+    "quality": "q3",
+    "speed": "1.80",
+    "dps": "19.17 DPS",
+    "stats": "+4 Strength, +4 Agility",
+    "inventorySlot": "Thrown",
+    "subclass": 16,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Thrown"
+  },
+  "287069": {
+    "id": 287069,
+    "name": "Yeti Skinner",
+    "icon": "inv_throwingknife_01",
+    "iLvl": 34,
+    "reqLevel": 1,
+    "quality": "q2",
+    "speed": "1.90",
+    "dps": "15.79 DPS",
+    "stats": "",
+    "inventorySlot": "Thrown",
+    "subclass": 16,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Thrown"
+  },
+  "287070": {
+    "id": 287070,
+    "name": "Skypierce Javelin",
+    "icon": "inv_spear_05",
+    "iLvl": 45,
+    "reqLevel": 40,
+    "quality": "q3",
+    "speed": "2.90",
+    "dps": "27.41 DPS",
+    "stats": "+3 Strength, Improves your chance to get a critical strike by 0.5%.",
+    "inventorySlot": "Thrown",
+    "subclass": 16,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Thrown"
+  },
+  "287071": {
+    "id": 287071,
+    "name": "Goblin Switchblade",
+    "icon": "inv_weapon_shortblade_17",
+    "iLvl": 41,
+    "reqLevel": 1,
+    "quality": "q2",
+    "speed": "1.50",
+    "dps": "20.67 DPS",
+    "stats": "+3 Agility",
+    "inventorySlot": "Thrown",
+    "subclass": 16,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Thrown"
+  },
+  "287090": {
+    "id": 287090,
+    "name": "Letter Opener",
+    "icon": "inv_weapon_shortblade_20",
+    "iLvl": 17,
+    "reqLevel": 2,
+    "quality": "q1",
+    "speed": null,
+    "dps": null,
+    "stats": "",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": -5,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Held in Off-hand"
+  },
+  "287648": {
+    "id": 287648,
+    "name": "Gilded Blademaster's Greatsword",
+    "icon": "8422168",
+    "iLvl": 1,
+    "reqLevel": 1,
+    "quality": "q3",
+    "speed": "3.60",
+    "dps": "5.00 DPS",
+    "stats": "",
+    "inventorySlot": "Two-Hand",
+    "subclass": 8,
+    "side": "both",
+    "sourcemore": null,
+    "subclassName": "Two-Handed Sword"
+  }
+}

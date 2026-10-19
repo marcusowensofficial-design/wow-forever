@@ -180,6 +180,20 @@
         },
         "alts": [
           {
+            "name": "Battleguard Captain's Sticker",
+            "itemId": 284286,
+            "value": "8.92 DPS, 3.70s - Captain Flat Tusk in Barrens (+3 Str)",
+            "faction": "both",
+            "dps": "8.92 DPS",
+            "speed": "3.70",
+            "weaponType": "Two-Handed Axe",
+            "quality": "q2",
+            "iLvl": 13,
+            "reqLevel": 8,
+            "stats": "+3 Strength",
+            "icon": "inv_axe_04"
+          },
+          {
             "name": "Copper Battle Axe",
             "itemId": 3488,
             "value": "9.0 DPS, 3.50s - Heavy burst swing",
@@ -232,6 +246,20 @@
             "reqLevel": 7,
             "stats": "",
             "icon": "inv_mace_04"
+          },
+          {
+            "name": "Helm Splitter",
+            "itemId": 286755,
+            "value": "6.88 DPS, 2.40s - 1H Sword (+1 Str)",
+            "faction": "both",
+            "dps": "6.88 DPS",
+            "speed": "2.40",
+            "weaponType": "One-Handed Sword",
+            "quality": "q2",
+            "iLvl": 13,
+            "reqLevel": 8,
+            "stats": "+1 Strength",
+            "icon": "inv_sword_04"
           }
         ],
         "faction": "alliance",
@@ -254,6 +282,34 @@
           "detail": "Sold in Redridge, Loch Modan, Crossroads, and Auberdine"
         },
         "alts": [
+          {
+            "name": "Ironforge Greathammer",
+            "itemId": 279895,
+            "value": "15.97 DPS, 3.10s - Old Ironforge Incursion quest (Alliance)",
+            "faction": "alliance",
+            "dps": "15.97 DPS",
+            "speed": "3.10",
+            "weaponType": "Two-Handed Mace",
+            "quality": "q3",
+            "iLvl": 18,
+            "reqLevel": 9,
+            "stats": "",
+            "icon": "inv_hammer_21"
+          },
+          {
+            "name": "Hammerbone",
+            "itemId": 270018,
+            "value": "20.44 DPS, 3.40s - Leaders of the Fang quest in Wailing Caverns (Horde)",
+            "faction": "horde",
+            "dps": "20.44 DPS",
+            "speed": "3.40",
+            "weaponType": "Two-Handed Mace",
+            "quality": "q3",
+            "iLvl": 24,
+            "reqLevel": 10,
+            "stats": "+7 Strength, +10 Spirit",
+            "icon": "inv_hammer_15"
+          },
           {
             "name": "Trogg Scepter",
             "itemId": 272996,
@@ -317,20 +373,6 @@
             "reqLevel": 8,
             "stats": "",
             "icon": "inv_sword_04"
-          },
-          {
-            "name": "Ironforge Greathammer",
-            "itemId": 279895,
-            "weaponType": "Two-handed mace",
-            "speed": "3.30",
-            "dps": "16.0 DPS",
-            "value": "16.0 DPS, 3.30s - Ironforge Quest",
-            "faction": "alliance",
-            "quality": "q3",
-            "iLvl": 18,
-            "reqLevel": 9,
-            "stats": "",
-            "icon": "inv_hammer_21"
           }
         ],
         "faction": "both",
@@ -708,6 +750,34 @@
         },
         "alts": [
           {
+            "name": "Wolfsbane",
+            "itemId": 267369,
+            "value": "25.59 DPS, 3.40s - Old Fire-Eye in Hillsbrad (Horde)",
+            "faction": "horde",
+            "dps": "25.59 DPS",
+            "speed": "3.40",
+            "weaponType": "Two-Handed Sword",
+            "quality": "q3",
+            "iLvl": 31,
+            "reqLevel": 20,
+            "stats": "+9 Stamina, +10 Intellect",
+            "icon": "inv_sword_25"
+          },
+          {
+            "name": "The Skyblade",
+            "itemId": 286540,
+            "value": "22.36 DPS, 3.60s (56-105 dmg) (+10 Str, +8 Sta) - Rare 2H Sword",
+            "faction": "both",
+            "dps": "22.36 DPS",
+            "speed": "3.60",
+            "weaponType": "Two-Handed Sword",
+            "quality": "q3",
+            "iLvl": 27,
+            "reqLevel": 22,
+            "stats": "+10 Strength, +8 Stamina",
+            "icon": "inv_sword_20"
+          },
+          {
             "name": "Strike of the Hydra",
             "itemId": 6909,
             "value": "25.6 DPS, 3.30s - BFD: Aku'mai",
@@ -794,6 +864,20 @@
         },
         "alts": [
           {
+            "name": "Trusty Sword",
+            "itemId": 281313,
+            "value": "26.67 DPS, 3.30s (+12 Sta, +12 Spi) - Stopping the Cycle quest",
+            "faction": "alliance",
+            "dps": "26.67 DPS",
+            "speed": "3.30",
+            "weaponType": "Two-Handed Sword",
+            "quality": "q3",
+            "iLvl": 32,
+            "reqLevel": 24,
+            "stats": "+12 Stamina, +12 Spirit",
+            "icon": "inv_sword_04"
+          },
+          {
             "name": "Strike of the Hydra",
             "itemId": 6909,
             "value": "25.6 DPS, 3.30s - BFD: Aku'mai",
@@ -866,6 +950,20 @@
         },
         "alts": [
           {
+            "name": "Defender of Dalaran",
+            "itemId": 279841,
+            "value": "31.21 DPS, 3.30s - Heart of Disruption quest in City of Dalaran",
+            "faction": "alliance",
+            "dps": "31.21 DPS",
+            "speed": "3.30",
+            "weaponType": "Two-Handed Mace",
+            "quality": "q3",
+            "iLvl": 36,
+            "reqLevel": 24,
+            "stats": "+9 Strength, +13 Stamina, +9 Intellect",
+            "icon": "inv_hammer_04"
+          },
+          {
             "name": "Trusty Sword",
             "itemId": 281313,
             "value": "26.7 DPS, 3.20s - Redridge Quest",
@@ -932,6 +1030,20 @@
             ],
             "reqLevel": 26,
             "icon": "inv_hammer_07"
+          },
+          {
+            "name": "Ruby-Adorned Blade",
+            "itemId": 277246,
+            "value": "23.91 DPS, 2.30s - 1H Sword (The Eye of Bhossca quest)",
+            "faction": "both",
+            "dps": "23.91 DPS",
+            "speed": "2.30",
+            "weaponType": "One-Handed Sword",
+            "quality": "q3",
+            "iLvl": 36,
+            "reqLevel": 25,
+            "stats": "+3 Agility, +8 Stamina",
+            "icon": "inv_sword_07"
           }
         ],
         "faction": "both",
@@ -1031,25 +1143,6 @@
           "detail": "Level 30 Warrior class quest in Arathi Highlands (+14 Str, +15 Sta)"
         },
         "alts": [
-          {
-            "name": "Whirlwind Axe",
-            "itemId": 6975,
-            "value": "35.6 DPS, 3.60s (102–154 dmg) - Warrior Level 30 Class Quest (+16 Str, +15 Sta)",
-            "faction": "both",
-            "dps": "35.6 DPS",
-            "speed": "3.60",
-            "weaponType": "Two-handed axe",
-            "quality": "q3",
-            "iLvl": 40,
-            "reqLevel": 30,
-            "stats": "+16 Strength, +15 Stamina",
-            "icon": "inv_axe_12",
-            "source": {
-              "kind": "quest",
-              "title": "Whirlwind Weapon (Warrior Quest)",
-              "detail": "Warrior Level 30 class quest reward. Massive slow top-end damage that anchors Mortal Strike."
-            }
-          },
           {
             "name": "Whirlwind Warhammer",
             "itemId": 6976,
@@ -1297,6 +1390,34 @@
             "reqLevel": 25,
             "stats": "",
             "icon": "inv_hammer_04"
+          },
+          {
+            "name": "Abandoned Ferocity",
+            "itemId": 271801,
+            "value": "37.19 DPS, 3.20s - Khan Jehn in Maraudon (Horde)",
+            "faction": "horde",
+            "dps": "37.19 DPS",
+            "speed": "3.20",
+            "weaponType": "Two-Handed Axe",
+            "quality": "q3",
+            "iLvl": 42,
+            "reqLevel": 35,
+            "stats": "+10 Strength, +4 Agility, +12 Stamina",
+            "icon": "inv_axe_17"
+          },
+          {
+            "name": "Scavenged Magram Armament",
+            "itemId": 271800,
+            "value": "37.17 DPS, 3.00s - Polearm (Khan Jehn in Maraudon)",
+            "faction": "both",
+            "dps": "37.17 DPS",
+            "speed": "3.00",
+            "weaponType": "Polearm",
+            "quality": "q3",
+            "iLvl": 42,
+            "reqLevel": 35,
+            "stats": "+5 Agility, +14 Stamina",
+            "icon": "inv_spear_05"
           }
         ],
         "faction": "both",
@@ -1854,6 +1975,20 @@
         },
         "alts": [
           {
+            "name": "Ironforge Greathammer",
+            "itemId": 279895,
+            "value": "15.97 DPS, 3.10s - Old Ironforge Incursion quest",
+            "faction": "alliance",
+            "dps": "15.97 DPS",
+            "speed": "3.10",
+            "weaponType": "Two-Handed Mace",
+            "quality": "q3",
+            "iLvl": 18,
+            "reqLevel": 9,
+            "stats": "",
+            "icon": "inv_hammer_21"
+          },
+          {
             "name": "Trogg Scepter",
             "itemId": 272996,
             "value": "8.1 DPS, 2.40s - RFC: Oggleflint 1H mace",
@@ -1889,20 +2024,6 @@
             "reqLevel": 14,
             "stats": "",
             "icon": "inv_sword_14"
-          },
-          {
-            "name": "Ironforge Greathammer",
-            "itemId": 279895,
-            "weaponType": "Two-handed mace",
-            "speed": "3.30",
-            "dps": "16.0 DPS",
-            "value": "16.0 DPS, 3.30s - Ironforge Quest",
-            "faction": "alliance",
-            "quality": "q3",
-            "iLvl": 18,
-            "reqLevel": 9,
-            "stats": "",
-            "icon": "inv_hammer_21"
           }
         ],
         "faction": "both",
@@ -2165,25 +2286,6 @@
           "detail": "Iconic Paladin class quest (+6 Str, +12 Sta, +7 Int, +6 Spi)"
         },
         "alts": [
-          {
-            "name": "Verigan's Fist",
-            "itemId": 6953,
-            "value": "21.9 DPS, 3.20s - Paladin Level 20 Class Quest (+12 Sta, +6 Str, +6 Spi, +6 Int) (Alliance)",
-            "faction": "alliance",
-            "dps": "21.9 DPS",
-            "speed": "3.20",
-            "weaponType": "Two-handed mace",
-            "quality": "q3",
-            "iLvl": 31,
-            "reqLevel": 20,
-            "stats": "+12 Stamina, +6 Strength, +6 Spirit, +6 Intellect",
-            "icon": "inv_hammer_05",
-            "source": {
-              "kind": "quest",
-              "title": "The Test of Righteousness",
-              "detail": "Paladin Level 20 class quest in Stormwind/Ironforge. Colossal 2H mace power spike."
-            }
-          },
           {
             "name": "Bronze Warhammer",
             "itemId": 7956,
@@ -3035,6 +3137,34 @@
         },
         "alts": [
           {
+            "name": "Bristlebark Bow",
+            "itemId": 286748,
+            "value": "5.00 DPS, 2.60s (+1 Agi) - Uncommon Bow",
+            "faction": "both",
+            "dps": "5.00 DPS",
+            "speed": "2.60",
+            "weaponType": "Bow",
+            "quality": "q2",
+            "iLvl": 12,
+            "reqLevel": 7,
+            "stats": "+1 Agility",
+            "icon": "inv_weapon_bow_03"
+          },
+          {
+            "name": "Snarlsnout Shooter",
+            "itemId": 286753,
+            "value": "5.00 DPS, 2.50s (+1 Str) - Uncommon Gun",
+            "faction": "both",
+            "dps": "5.00 DPS",
+            "speed": "2.50",
+            "weaponType": "Gun",
+            "quality": "q2",
+            "iLvl": 12,
+            "reqLevel": 7,
+            "stats": "+1 Strength",
+            "icon": "inv_weapon_rifle_05"
+          },
+          {
             "name": "Reinforced Bow",
             "itemId": 2507,
             "value": "4.4 DPS, 2.20s - Vendor bow",
@@ -3083,6 +3213,34 @@
           "detail": "Sold in Stormwind, Ironforge, Orgrimmar, and Thunder Bluff"
         },
         "alts": [
+          {
+            "name": "Misplaced Shooter",
+            "itemId": 277255,
+            "value": "4.82 DPS, 2.80s (+1 Str, +1 Sta) - Leonid's Letter",
+            "faction": "horde",
+            "dps": "4.82 DPS",
+            "speed": "2.80",
+            "weaponType": "Gun",
+            "quality": "q2",
+            "iLvl": 12,
+            "reqLevel": 10,
+            "stats": "+1 Strength, +1 Stamina",
+            "icon": "inv_weapon_rifle_07"
+          },
+          {
+            "name": "Calibrated Blunderbuss",
+            "itemId": 279894,
+            "value": "9.57 DPS, 2.30s (+3 Sta) - Old Ironforge Incursion",
+            "faction": "alliance",
+            "dps": "9.57 DPS",
+            "speed": "2.30",
+            "weaponType": "Gun",
+            "quality": "q3",
+            "iLvl": 18,
+            "reqLevel": 9,
+            "stats": "+3 Stamina",
+            "icon": "inv_weapon_rifle_01"
+          },
           {
             "name": "Fine Shortbow",
             "itemId": 11303,
@@ -3238,6 +3396,20 @@
         },
         "alts": [
           {
+            "name": "Barbaric Crossbow",
+            "itemId": 272999,
+            "value": "9.50 DPS, 2.00s - Oggleflint in Ragefire Chasm",
+            "faction": "both",
+            "dps": "9.50 DPS",
+            "speed": "2.00",
+            "weaponType": "Crossbow",
+            "quality": "q3",
+            "iLvl": 18,
+            "reqLevel": 13,
+            "stats": "",
+            "icon": "inv_weapon_crossbow_02"
+          },
+          {
             "name": "Deadly Blunderbuss",
             "itemId": 4369,
             "value": "8.3 DPS, 2.60s - Engineering (105)",
@@ -3266,18 +3438,18 @@
             "icon": "inv_weapon_bow_01"
           },
           {
-            "name": "Barbaric Crossbow",
-            "itemId": 272999,
-            "weaponType": "Crossbow",
-            "speed": "2.00",
-            "dps": "9.5 DPS",
-            "value": "9.5 DPS, 2.00s, +2 Agi - RFC Drop",
-            "faction": "both",
-            "quality": "q3",
-            "iLvl": 18,
-            "reqLevel": 13,
-            "stats": "+2 Agi",
-            "icon": "inv_weapon_crossbow_02"
+            "name": "Walton's Second-Favorite Gun",
+            "itemId": 269742,
+            "value": "7.95 DPS, 2.20s (+2 Agi) - Unwelcome Guests",
+            "faction": "horde",
+            "dps": "7.95 DPS",
+            "speed": "2.20",
+            "weaponType": "Gun",
+            "quality": "q2",
+            "iLvl": 20,
+            "reqLevel": 14,
+            "stats": "+2 Agility",
+            "icon": "inv_weapon_rifle_05"
           }
         ],
         "faction": "alliance",
@@ -3451,6 +3623,34 @@
         },
         "alts": [
           {
+            "name": "Fallenroot Longbow",
+            "itemId": 273843,
+            "value": "13.86 DPS, 2.20s - Lorgus Jett in BFD",
+            "faction": "both",
+            "dps": "13.86 DPS",
+            "speed": "2.20",
+            "weaponType": "Bow",
+            "quality": "q3",
+            "iLvl": 28,
+            "reqLevel": 23,
+            "stats": "+2 Agility, +4 Stamina",
+            "icon": "inv_weapon_bow_03"
+          },
+          {
+            "name": "Alliance Outrunner Bow",
+            "itemId": 285347,
+            "value": "13.33 DPS, 2.40s - Outrunner Quest",
+            "faction": "alliance",
+            "dps": "13.33 DPS",
+            "speed": "2.40",
+            "weaponType": "Bow",
+            "quality": "q3",
+            "iLvl": 27,
+            "reqLevel": 22,
+            "stats": "+4 Agility, +3 Spirit",
+            "icon": "inv_weapon_bow_05"
+          },
+          {
             "name": "Moonsight Rifle",
             "itemId": 4383,
             "value": "13.8 DPS, 2.40s, +3 Hit - Engineering (145)",
@@ -3463,43 +3663,6 @@
             "reqLevel": 24,
             "stats": "+3 Hit",
             "icon": "inv_weapon_rifle_06"
-          },
-          {
-            "name": "Fallenroot Longbow",
-            "itemId": 273843,
-            "value": "13.9 DPS, 2.20s - BFD: Lorgus Jett",
-            "faction": "both",
-            "dps": "13.86 DPS",
-            "speed": "2.20",
-            "weaponType": "Bow",
-            "quality": "q3",
-            "iLvl": 28,
-            "stats": "+2 Agility, +4 Stamina",
-            "lines": [
-              "Binds when picked up",
-              "Ranged\tBow",
-              "21 - 40 Damage\tSpeed 2.20",
-              "(13.9 damage per second)",
-              "+2 Agility",
-              "+4 Stamina",
-              "Requires Level 23"
-            ],
-            "reqLevel": 23,
-            "icon": "inv_weapon_bow_03"
-          },
-          {
-            "name": "Alliance Outrunner Bow",
-            "itemId": 285347,
-            "weaponType": "Bow",
-            "speed": "2.40",
-            "dps": "13.3 DPS",
-            "value": "13.3 DPS, 2.40s - Alliance Outrunner Drop",
-            "faction": "alliance",
-            "quality": "q3",
-            "iLvl": 27,
-            "reqLevel": 22,
-            "stats": "",
-            "icon": "inv_weapon_bow_05"
           }
         ],
         "faction": "both",
@@ -3580,6 +3743,34 @@
         },
         "alts": [
           {
+            "name": "Golemsight Long Gun",
+            "itemId": 273029,
+            "value": "16.60 DPS, 2.50s (+6 Agi) - Relic Guardian in Excavation Site",
+            "faction": "both",
+            "dps": "16.60 DPS",
+            "speed": "2.50",
+            "weaponType": "Gun",
+            "quality": "q3",
+            "iLvl": 33,
+            "reqLevel": 28,
+            "stats": "+6 Agility",
+            "icon": "inv_musket_02"
+          },
+          {
+            "name": "Dun Garok Rifle",
+            "itemId": 282710,
+            "value": "14.81 DPS, 2.60s (+3 Agi, +3 Spi) - Hillsbrad",
+            "faction": "both",
+            "dps": "14.81 DPS",
+            "speed": "2.60",
+            "weaponType": "Gun",
+            "quality": "q3",
+            "iLvl": 30,
+            "reqLevel": 25,
+            "stats": "+3 Agility, +3 Spirit",
+            "icon": "inv_weapon_rifle_03"
+          },
+          {
             "name": "Concealed Hand Crossbow",
             "itemId": 273829,
             "value": "15.3 DPS - The Stockade: Bazil Thredd",
@@ -3615,20 +3806,6 @@
             ],
             "reqLevel": 23,
             "icon": "inv_weapon_bow_03"
-          },
-          {
-            "name": "Dun Garok Rifle",
-            "itemId": 282710,
-            "weaponType": "Gun",
-            "speed": "2.60",
-            "dps": "14.8 DPS",
-            "value": "14.8 DPS, 2.60s - Hillsbrad Drop",
-            "faction": "both",
-            "quality": "q3",
-            "iLvl": 30,
-            "reqLevel": 25,
-            "stats": "",
-            "icon": "inv_weapon_rifle_03"
           }
         ],
         "faction": "both",
@@ -4461,6 +4638,34 @@
         },
         "alts": [
           {
+            "name": "Pristine Orcish Dagger",
+            "itemId": 286730,
+            "value": "6.25 DPS, 2.40s - Horde Starter Dagger",
+            "faction": "horde",
+            "dps": "6.25 DPS",
+            "speed": "2.40",
+            "weaponType": "Dagger",
+            "quality": "q2",
+            "iLvl": 12,
+            "reqLevel": 10,
+            "stats": "+1 Agility",
+            "icon": "inv_weapon_shortblade_14"
+          },
+          {
+            "name": "Helm Splitter",
+            "itemId": 286755,
+            "value": "6.88 DPS, 2.40s (+1 Str) - Uncommon 1H Sword",
+            "faction": "both",
+            "dps": "6.88 DPS",
+            "speed": "2.40",
+            "weaponType": "One-Handed Sword",
+            "quality": "q2",
+            "iLvl": 13,
+            "reqLevel": 8,
+            "stats": "+1 Strength",
+            "icon": "inv_sword_04"
+          },
+          {
             "name": "Scrappy Dagger",
             "itemId": 250601,
             "value": "5.5 DPS - Early quest",
@@ -4485,20 +4690,6 @@
             "reqLevel": 3,
             "stats": "",
             "icon": "inv_throwingaxe_03"
-          },
-          {
-            "name": "Pristine Orcish Dagger",
-            "itemId": 286730,
-            "value": "6.25 DPS, 2.40s - Durotar Quest: Threat from Below",
-            "faction": "horde",
-            "dps": "6.25 DPS",
-            "speed": "2.40",
-            "weaponType": "Dagger",
-            "quality": "q2",
-            "iLvl": 12,
-            "reqLevel": 10,
-            "stats": "",
-            "icon": "inv_weapon_shortblade_14"
           }
         ],
         "faction": "alliance",
@@ -4684,20 +4875,6 @@
             "icon": "inv_weapon_shortblade_05"
           },
           {
-            "name": "Fang of Magmatus",
-            "itemId": 271095,
-            "weaponType": "Dagger",
-            "speed": "1.70",
-            "dps": "7.9 DPS",
-            "value": "7.9 DPS, 1.70s, +2 Agi - RFC Drop",
-            "faction": "both",
-            "quality": "q3",
-            "iLvl": 18,
-            "reqLevel": 13,
-            "stats": "+2 Agi",
-            "icon": "inv_misc_bone_06"
-          },
-          {
             "name": "Bone Knuckles",
             "itemId": 272998,
             "weaponType": "Fist Weapon",
@@ -4747,6 +4924,34 @@
         },
         "alts": [
           {
+            "name": "Vileblood Scimitar",
+            "itemId": 271218,
+            "value": "14.62 DPS, 2.60s - Viktor the Vile in Ruins of Lordaeron",
+            "faction": "both",
+            "dps": "14.62 DPS",
+            "speed": "2.60",
+            "weaponType": "One-Handed Sword",
+            "quality": "q3",
+            "iLvl": 22,
+            "reqLevel": 17,
+            "stats": "+5 Spirit",
+            "icon": "inv_sword_16"
+          },
+          {
+            "name": "Plaguefang",
+            "itemId": 279876,
+            "value": "12.38 DPS, 2.10s - The New Plague quest in Ruins of Lordaeron",
+            "faction": "horde",
+            "dps": "12.38 DPS",
+            "speed": "2.10",
+            "weaponType": "One-Handed Sword",
+            "quality": "q2",
+            "iLvl": 24,
+            "reqLevel": 16,
+            "stats": "",
+            "icon": "inv_weapon_shortblade_54"
+          },
+          {
             "name": "Tail Spike",
             "itemId": 6448,
             "value": "11.9 DPS, 1.50s - Wailing Caverns: Skum",
@@ -4787,20 +4992,6 @@
             "reqLevel": 9,
             "stats": "+4 Sta, +33 Healing, +11 Spell Damage",
             "icon": "inv_weapon_shortblade_05"
-          },
-          {
-            "name": "Plaguefang",
-            "itemId": 279876,
-            "weaponType": "One-handed sword",
-            "speed": "2.10",
-            "dps": "12.4 DPS",
-            "value": "12.4 DPS, 2.10s - Dalaran Dungeon",
-            "faction": "both",
-            "quality": "q2",
-            "iLvl": 24,
-            "reqLevel": 16,
-            "stats": "",
-            "icon": "inv_weapon_shortblade_54"
           }
         ],
         "faction": "both",
@@ -5021,25 +5212,45 @@
         },
         "alts": [
           {
+            "name": "Ruby-Adorned Blade",
+            "itemId": 277246,
+            "value": "23.91 DPS, 2.30s - The Eye of Bhossca quest",
+            "faction": "both",
+            "dps": "23.91 DPS",
+            "speed": "2.30",
+            "weaponType": "One-Handed Sword",
+            "quality": "q3",
+            "iLvl": 36,
+            "reqLevel": 25,
+            "stats": "+3 Agility, +8 Stamina",
+            "icon": "inv_sword_07"
+          },
+          {
+            "name": "Serrated Raptor Claw",
+            "itemId": 280805,
+            "value": "17.19 DPS, 1.60s (+3 Agi) - Changing Tastes quest",
+            "faction": "horde",
+            "dps": "17.19 DPS",
+            "speed": "1.60",
+            "weaponType": "Dagger",
+            "quality": "q2",
+            "iLvl": 33,
+            "reqLevel": 24,
+            "stats": "+3 Agility",
+            "icon": "inv_weapon_shortblade_16"
+          },
+          {
             "name": "Subdued Dragon's Fang",
             "itemId": 281314,
-            "value": "20.6 DPS, 1.70s, +7 Agi - Wetlands Quest: Stopping the Cycle",
-            "faction": "both",
+            "value": "20.59 DPS, 1.70s (+7 Agi, +2 Sta) - Stopping the Cycle quest",
+            "faction": "alliance",
             "dps": "20.59 DPS",
             "speed": "1.70",
             "weaponType": "Dagger",
             "quality": "q3",
             "iLvl": 32,
-            "stats": "+7 Agility, +2 Stamina",
-            "lines": [
-              "Binds when picked up",
-              "One-Hand\tDagger",
-              "24 - 46 Damage\tSpeed 1.70",
-              "(20.6 damage per second)",
-              "+7 Agility",
-              "+2 Stamina"
-            ],
             "reqLevel": 24,
+            "stats": "+7 Agility, +2 Stamina",
             "icon": "inv_weapon_shortblade_01"
           },
           {
@@ -5069,20 +5280,6 @@
             "reqLevel": 23,
             "stats": "",
             "icon": "inv_hammer_05"
-          },
-          {
-            "name": "Serrated Raptor Claw",
-            "itemId": 280805,
-            "weaponType": "Dagger",
-            "speed": "1.60",
-            "dps": "17.2 DPS",
-            "value": "17.2 DPS, 1.60s - Arathi Drop",
-            "faction": "both",
-            "quality": "q2",
-            "iLvl": 33,
-            "reqLevel": 24,
-            "stats": "",
-            "icon": "inv_weapon_shortblade_16"
           }
         ],
         "faction": "both",
@@ -5188,25 +5385,15 @@
           {
             "name": "City Guard's Tarnished Blade",
             "itemId": 286996,
-            "value": "22.4 DPS, 2.50s, Req Level 29 - City of Dalaran drop",
+            "value": "22.40 DPS, 2.50s - Level 29 1H Sword",
             "faction": "both",
-            "dps": "22.4 DPS",
+            "dps": "22.40 DPS",
             "speed": "2.50",
-            "weaponType": "One-handed sword",
+            "weaponType": "One-Handed Sword",
             "quality": "q3",
             "iLvl": 34,
-            "stats": "+6 Stamina, Equip: +5 Spell Power",
-            "lines": [
-              "Binds when equipped",
-              "One-Hand\tSword",
-              "39 - 73 Damage\tSpeed 2.50",
-              "(22.4 damage per second)",
-              "+6 Stamina",
-              "Requires Level 29",
-              "Equip: +5 Spell Power",
-              "Sell Price: 76s 95c"
-            ],
             "reqLevel": 29,
+            "stats": "+6 Stamina",
             "icon": "inv_sword_23"
           },
           {
@@ -6359,6 +6546,20 @@
         },
         "alts": [
           {
+            "name": "Gnarled Necromancer's Staff",
+            "itemId": 251534,
+            "value": "15.18 DPS, 2.80s (+12 Spell Power) - The Wrath of Rath'mael in Ruins of Lordaeron",
+            "faction": "horde",
+            "dps": "15.18 DPS",
+            "speed": "2.80",
+            "weaponType": "Staff",
+            "quality": "q3",
+            "iLvl": 24,
+            "reqLevel": 15,
+            "stats": "+10 Spirit",
+            "icon": "inv_staff_16"
+          },
+          {
             "name": "Staff of Orgrimmar",
             "itemId": 15444,
             "value": "11.8 DPS, +6 Int, +6 Agi, +18 Spell Dmg - RFC: Hidden Enemies (Horde)",
@@ -6732,6 +6933,34 @@
         },
         "alts": [
           {
+            "name": "Healer's Staff",
+            "itemId": 271767,
+            "value": "20.77 DPS, 2.60s (+16 Healing) - Excavation Site: Wetlands",
+            "faction": "both",
+            "dps": "20.77 DPS",
+            "speed": "2.60",
+            "weaponType": "Staff",
+            "quality": "q3",
+            "iLvl": 33,
+            "reqLevel": 24,
+            "stats": "+12 Stamina",
+            "icon": "inv_staff_10"
+          },
+          {
+            "name": "Striking Staff",
+            "itemId": 279844,
+            "value": "31.29 DPS, 3.10s (+14 Spell Power) - Heart of Disruption in City of Dalaran",
+            "faction": "horde",
+            "dps": "31.29 DPS",
+            "speed": "3.10",
+            "weaponType": "Staff",
+            "quality": "q3",
+            "iLvl": 36,
+            "reqLevel": 24,
+            "stats": "+9 Strength, +6 Stamina, +14 Intellect",
+            "icon": "inv_staff_28"
+          },
+          {
             "name": "Solid Iron Maul",
             "itemId": 3851,
             "value": "22.8 DPS - Blacksmithing (135)",
@@ -7020,29 +7249,6 @@
             ],
             "reqLevel": 24,
             "icon": "inv_staff_28"
-          },
-          {
-            "name": "Rage of the Storm",
-            "itemId": 280604,
-            "weaponType": "Two-handed mace",
-            "speed": "3.20",
-            "dps": "35.6 DPS",
-            "value": "35.6 DPS, 3.20s - Custom Boss Drop",
-            "faction": "both",
-            "quality": "q3",
-            "iLvl": 40,
-            "stats": "+12 Intellect, +15 Stamina, Equip: Increases the damage dealt by your Stormstrike ability by 10%.",
-            "lines": [
-              "Binds when picked up",
-              "Two-Hand\tMace",
-              "91 - 137 Damage\tSpeed 3.20",
-              "(35.6 damage per second)",
-              "+12 Intellect",
-              "+15 Stamina",
-              "Equip: Increases the damage dealt by your Stormstrike ability by 10%."
-            ],
-            "reqLevel": 30,
-            "icon": "inv_mace_42"
           }
         ],
         "faction": "both",
@@ -7534,20 +7740,7 @@
           "title": "The Relics of Wakening",
           "detail": "Quest reward from Teldrassil / Darkshore barrows."
         },
-        "alts": [
-          {
-            "name": "Staff of the Dor'Danil",
-            "itemId": 15396,
-            "value": "8.5 DPS - Early quest",
-            "faction": "both",
-            "dps": "8.5 DPS",
-            "quality": "q2",
-            "iLvl": 14,
-            "reqLevel": 8,
-            "stats": "",
-            "icon": "inv_weapon_shortblade_05"
-          }
-        ],
+        "alts": [],
         "faction": "both",
         "quality": "q2",
         "iLvl": 15,
@@ -7692,6 +7885,20 @@
           "detail": "The Deadmines (+5 Int, +5 Spi)"
         },
         "alts": [
+          {
+            "name": "Gnarled Necromancer's Staff",
+            "itemId": 251534,
+            "value": "15.18 DPS, 2.80s (+12 Spell Power) - The Wrath of Rath'mael in Ruins of Lordaeron",
+            "faction": "horde",
+            "dps": "15.18 DPS",
+            "speed": "2.80",
+            "weaponType": "Staff",
+            "quality": "q3",
+            "iLvl": 24,
+            "reqLevel": 15,
+            "stats": "+10 Spirit",
+            "icon": "inv_staff_16"
+          },
           {
             "name": "Staff of Orgrimmar",
             "itemId": 15444,
@@ -8028,6 +8235,34 @@
           "detail": "BFD quest reward (29.0 DPS melts level 20–35 mobs)"
         },
         "alts": [
+          {
+            "name": "Healer's Staff",
+            "itemId": 271767,
+            "value": "20.77 DPS, 2.60s (+16 Healing) - Excavation Site: Wetlands",
+            "faction": "both",
+            "dps": "20.77 DPS",
+            "speed": "2.60",
+            "weaponType": "Staff",
+            "quality": "q3",
+            "iLvl": 33,
+            "reqLevel": 24,
+            "stats": "+12 Stamina",
+            "icon": "inv_staff_10"
+          },
+          {
+            "name": "Striking Staff",
+            "itemId": 279844,
+            "value": "31.29 DPS, 3.10s (+14 Spell Power) - Heart of Disruption in City of Dalaran",
+            "faction": "horde",
+            "dps": "31.29 DPS",
+            "speed": "3.10",
+            "weaponType": "Staff",
+            "quality": "q3",
+            "iLvl": 36,
+            "reqLevel": 24,
+            "stats": "+9 Strength, +6 Stamina, +14 Intellect",
+            "icon": "inv_staff_28"
+          },
           {
             "name": "Death Prophet Spine",
             "itemId": 274158,
@@ -8645,20 +8880,7 @@
           "title": "The Relics of Wakening",
           "detail": "Early quest reward in Teldrassil / Darkshore."
         },
-        "alts": [
-          {
-            "name": "Staff of the Dor'Danil",
-            "itemId": 15396,
-            "value": "8.5 DPS - Early quest",
-            "faction": "both",
-            "dps": "8.5 DPS",
-            "quality": "q2",
-            "iLvl": 14,
-            "reqLevel": 8,
-            "stats": "",
-            "icon": "inv_weapon_shortblade_05"
-          }
-        ],
+        "alts": [],
         "faction": "both",
         "quality": "q2",
         "iLvl": 15,
@@ -8690,20 +8912,6 @@
             "reqLevel": 10,
             "stats": "",
             "icon": "inv_chest_cloth_15"
-          },
-          {
-            "name": "Cauldron Stirrer",
-            "itemId": 5340,
-            "value": "7.4 DPS, 3.10s - Barrens Quest: Apothecary Zamah",
-            "faction": "horde",
-            "dps": "7.42 DPS",
-            "speed": "3.10",
-            "weaponType": "Staff",
-            "quality": "q2",
-            "iLvl": 15,
-            "reqLevel": 10,
-            "stats": "+8 Spell Power",
-            "icon": "inv_staff_08"
           }
         ],
         "faction": "both",
@@ -8803,6 +9011,20 @@
           "detail": "Ruins of Lordaeron, levels 15–20 (+5 Int, +4 Sta)"
         },
         "alts": [
+          {
+            "name": "Gnarled Necromancer's Staff",
+            "itemId": 251534,
+            "value": "15.18 DPS, 2.80s (+12 Spell Power) - The Wrath of Rath'mael in Ruins of Lordaeron",
+            "faction": "horde",
+            "dps": "15.18 DPS",
+            "speed": "2.80",
+            "weaponType": "Staff",
+            "quality": "q3",
+            "iLvl": 24,
+            "reqLevel": 15,
+            "stats": "+10 Spirit",
+            "icon": "inv_staff_16"
+          },
           {
             "name": "Staff of Orgrimmar",
             "itemId": 15444,
@@ -9157,6 +9379,34 @@
           "detail": "Drop from Death Speaker Jargba in RFK."
         },
         "alts": [
+          {
+            "name": "Healer's Staff",
+            "itemId": 271767,
+            "value": "20.77 DPS, 2.60s (+16 Healing) - Excavation Site: Wetlands",
+            "faction": "both",
+            "dps": "20.77 DPS",
+            "speed": "2.60",
+            "weaponType": "Staff",
+            "quality": "q3",
+            "iLvl": 33,
+            "reqLevel": 24,
+            "stats": "+12 Stamina",
+            "icon": "inv_staff_10"
+          },
+          {
+            "name": "Striking Staff",
+            "itemId": 279844,
+            "value": "31.29 DPS, 3.10s (+14 Spell Power) - Heart of Disruption in City of Dalaran",
+            "faction": "horde",
+            "dps": "31.29 DPS",
+            "speed": "3.10",
+            "weaponType": "Staff",
+            "quality": "q3",
+            "iLvl": 36,
+            "reqLevel": 24,
+            "stats": "+9 Strength, +6 Stamina, +14 Intellect",
+            "icon": "inv_staff_28"
+          },
           {
             "name": "Debt Collector",
             "itemId": 273827,
@@ -9730,20 +9980,7 @@
           "title": "The Relics of Wakening",
           "detail": "Quest reward from Teldrassil / Darkshore."
         },
-        "alts": [
-          {
-            "name": "Staff of the Dor'Danil",
-            "itemId": 15396,
-            "value": "8.5 DPS - Early quest",
-            "faction": "both",
-            "dps": "8.5 DPS",
-            "quality": "q2",
-            "iLvl": 14,
-            "reqLevel": 8,
-            "stats": "",
-            "icon": "inv_weapon_shortblade_05"
-          }
-        ],
+        "alts": [],
         "faction": "both",
         "quality": "q2",
         "iLvl": 15,
@@ -9883,6 +10120,20 @@
           "detail": "Ruins of Lordaeron (+4 Sta, +4 Int)"
         },
         "alts": [
+          {
+            "name": "Gnarled Necromancer's Staff",
+            "itemId": 251534,
+            "value": "15.18 DPS, 2.80s (+12 Spell Power) - The Wrath of Rath'mael in Ruins of Lordaeron",
+            "faction": "horde",
+            "dps": "15.18 DPS",
+            "speed": "2.80",
+            "weaponType": "Staff",
+            "quality": "q3",
+            "iLvl": 24,
+            "reqLevel": 15,
+            "stats": "+10 Spirit",
+            "icon": "inv_staff_16"
+          },
           {
             "name": "Staff of Orgrimmar",
             "itemId": 15444,
@@ -10230,6 +10481,34 @@
           "detail": "Drop from Death Speaker Jargba in RFK."
         },
         "alts": [
+          {
+            "name": "Healer's Staff",
+            "itemId": 271767,
+            "value": "20.77 DPS, 2.60s (+16 Healing) - Excavation Site: Wetlands",
+            "faction": "both",
+            "dps": "20.77 DPS",
+            "speed": "2.60",
+            "weaponType": "Staff",
+            "quality": "q3",
+            "iLvl": 33,
+            "reqLevel": 24,
+            "stats": "+12 Stamina",
+            "icon": "inv_staff_10"
+          },
+          {
+            "name": "Striking Staff",
+            "itemId": 279844,
+            "value": "31.29 DPS, 3.10s (+14 Spell Power) - Heart of Disruption in City of Dalaran",
+            "faction": "horde",
+            "dps": "31.29 DPS",
+            "speed": "3.10",
+            "weaponType": "Staff",
+            "quality": "q3",
+            "iLvl": 36,
+            "reqLevel": 24,
+            "stats": "+9 Strength, +6 Stamina, +14 Intellect",
+            "icon": "inv_staff_28"
+          },
           {
             "name": "Crested Scepter",
             "itemId": 3414,
@@ -11236,6 +11515,20 @@
         },
         "alts": [
           {
+            "name": "Gnarled Necromancer's Staff",
+            "itemId": 251534,
+            "value": "15.18 DPS, 2.80s (+12 Spell Power) - The Wrath of Rath'mael in Ruins of Lordaeron",
+            "faction": "horde",
+            "dps": "15.18 DPS",
+            "speed": "2.80",
+            "weaponType": "Staff",
+            "quality": "q3",
+            "iLvl": 24,
+            "reqLevel": 15,
+            "stats": "+10 Spirit",
+            "icon": "inv_staff_16"
+          },
+          {
             "name": "Staff of Orgrimmar",
             "itemId": 15444,
             "value": "11.8 DPS, +6 Int, +6 Agi, +18 Spell Dmg - RFC: Hidden Enemies (Horde Caster / Feral)",
@@ -11692,6 +11985,34 @@
           "detail": "Excavation Site 4 dungeon quest (+60 Armor, +32 AP)"
         },
         "alts": [
+          {
+            "name": "Healer's Staff",
+            "itemId": 271767,
+            "value": "20.77 DPS, 2.60s (+16 Healing) - Excavation Site: Wetlands",
+            "faction": "both",
+            "dps": "20.77 DPS",
+            "speed": "2.60",
+            "weaponType": "Staff",
+            "quality": "q3",
+            "iLvl": 33,
+            "reqLevel": 24,
+            "stats": "+12 Stamina",
+            "icon": "inv_staff_10"
+          },
+          {
+            "name": "Striking Staff",
+            "itemId": 279844,
+            "value": "31.29 DPS, 3.10s (+14 Spell Power) - Heart of Disruption in City of Dalaran",
+            "faction": "horde",
+            "dps": "31.29 DPS",
+            "speed": "3.10",
+            "weaponType": "Staff",
+            "quality": "q3",
+            "iLvl": 36,
+            "reqLevel": 24,
+            "stats": "+9 Strength, +6 Stamina, +14 Intellect",
+            "icon": "inv_staff_28"
+          },
           {
             "name": "Dendweller's Hammer",
             "itemId": 284459,
