@@ -9955,6 +9955,20 @@ if (typeof window !== 'undefined') {
               "icon": "inv_staff_16"
             },
             {
+              "name": "Gnarled Necromancer's Staff",
+              "itemId": 251534,
+              "value": "15.18 DPS, 2.80s (+12 Spell Power) - The Wrath of Rath'mael in Ruins of Lordaeron",
+              "faction": "horde",
+              "dps": "15.18 DPS",
+              "speed": "2.80",
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 24,
+              "reqLevel": 15,
+              "stats": "+10 Spirit",
+              "icon": "inv_staff_16"
+            },
+            {
               "name": "Staff of Orgrimmar",
               "itemId": 15444,
               "value": "11.8 DPS, +6 Int, +6 Agi, +18 Spell Dmg - RFC: Hidden Enemies (Horde)",
@@ -10327,6 +10341,34 @@ if (typeof window !== 'undefined') {
             "detail": "Excavation Site 4 dungeon quest (+60 Armor, +32 AP)"
           },
           "alts": [
+            {
+              "name": "Healer's Staff",
+              "itemId": 271767,
+              "value": "20.77 DPS, 2.60s (+16 Healing) - Excavation Site: Wetlands",
+              "faction": "both",
+              "dps": "20.77 DPS",
+              "speed": "2.60",
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 33,
+              "reqLevel": 24,
+              "stats": "+12 Stamina",
+              "icon": "inv_staff_10"
+            },
+            {
+              "name": "Striking Staff",
+              "itemId": 279844,
+              "value": "31.29 DPS, 3.10s (+14 Spell Power) - Heart of Disruption in City of Dalaran",
+              "faction": "horde",
+              "dps": "31.29 DPS",
+              "speed": "3.10",
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 36,
+              "reqLevel": 24,
+              "stats": "+9 Strength, +6 Stamina, +14 Intellect",
+              "icon": "inv_staff_28"
+            },
             {
               "name": "Healer's Staff",
               "itemId": 271767,
@@ -11295,6 +11337,20 @@ if (typeof window !== 'undefined') {
               "icon": "inv_staff_16"
             },
             {
+              "name": "Gnarled Necromancer's Staff",
+              "itemId": 251534,
+              "value": "15.18 DPS, 2.80s (+12 Spell Power) - The Wrath of Rath'mael in Ruins of Lordaeron",
+              "faction": "horde",
+              "dps": "15.18 DPS",
+              "speed": "2.80",
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 24,
+              "reqLevel": 15,
+              "stats": "+10 Spirit",
+              "icon": "inv_staff_16"
+            },
+            {
               "name": "Staff of Orgrimmar",
               "itemId": 15444,
               "value": "11.8 DPS, +6 Int, +6 Agi, +18 Spell Dmg - RFC: Hidden Enemies (Horde)",
@@ -11659,6 +11715,34 @@ if (typeof window !== 'undefined') {
               "icon": "inv_staff_28"
             },
             {
+              "name": "Healer's Staff",
+              "itemId": 271767,
+              "value": "20.77 DPS, 2.60s (+16 Healing) - Excavation Site: Wetlands",
+              "faction": "both",
+              "dps": "20.77 DPS",
+              "speed": "2.60",
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 33,
+              "reqLevel": 24,
+              "stats": "+12 Stamina",
+              "icon": "inv_staff_10"
+            },
+            {
+              "name": "Striking Staff",
+              "itemId": 279844,
+              "value": "31.29 DPS, 3.10s (+14 Spell Power) - Heart of Disruption in City of Dalaran",
+              "faction": "horde",
+              "dps": "31.29 DPS",
+              "speed": "3.10",
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 36,
+              "reqLevel": 24,
+              "stats": "+9 Strength, +6 Stamina, +14 Intellect",
+              "icon": "inv_staff_28"
+            },
+            {
               "name": "Death Prophet Spine",
               "itemId": 274158,
               "value": "18.9 DPS, 2.80s, +11 Sta, +34 SP, 5 MP5 - RFK: Aggem Thorncurse",
@@ -11704,29 +11788,6 @@ if (typeof window !== 'undefined') {
               ],
               "reqLevel": 26,
               "icon": "inv_sword_24"
-            },
-            {
-              "name": "Striking Staff",
-              "itemId": 279844,
-              "weaponType": "Staff",
-              "speed": "3.30",
-              "dps": "31.3 DPS",
-              "value": "31.3 DPS, 3.30s - Dalaran Dungeon",
-              "faction": "both",
-              "quality": "q3",
-              "iLvl": 36,
-              "stats": "+9 Strength, +6 Stamina, +14 Intellect",
-              "lines": [
-                "Binds when picked up",
-                "Two-Hand\tStaff",
-                "77 - 117 Damage\tSpeed 3.10",
-                "(31.3 damage per second)",
-                "+9 Strength",
-                "+6 Stamina",
-                "+14 Intellect"
-              ],
-              "reqLevel": 24,
-              "icon": "inv_staff_28"
             },
             {
               "name": "Fallen Dragon's Scepter",
@@ -12421,6 +12482,20 @@ if (typeof window !== 'undefined') {
               "icon": "inv_staff_16"
             },
             {
+              "name": "Gnarled Necromancer's Staff",
+              "itemId": 251534,
+              "value": "15.18 DPS, 2.80s (+12 Spell Power) - The Wrath of Rath'mael in Ruins of Lordaeron",
+              "faction": "horde",
+              "dps": "15.18 DPS",
+              "speed": "2.80",
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 24,
+              "reqLevel": 15,
+              "stats": "+10 Spirit",
+              "icon": "inv_staff_16"
+            },
+            {
               "name": "Staff of Orgrimmar",
               "itemId": 15444,
               "value": "11.8 DPS, +6 Int, +6 Agi, +18 Spell Dmg - RFC: Hidden Enemies (Horde)",
@@ -12803,6 +12878,34 @@ if (typeof window !== 'undefined') {
               "icon": "inv_staff_28"
             },
             {
+              "name": "Healer's Staff",
+              "itemId": 271767,
+              "value": "20.77 DPS, 2.60s (+16 Healing) - Excavation Site: Wetlands",
+              "faction": "both",
+              "dps": "20.77 DPS",
+              "speed": "2.60",
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 33,
+              "reqLevel": 24,
+              "stats": "+12 Stamina",
+              "icon": "inv_staff_10"
+            },
+            {
+              "name": "Striking Staff",
+              "itemId": 279844,
+              "value": "31.29 DPS, 3.10s (+14 Spell Power) - Heart of Disruption in City of Dalaran",
+              "faction": "horde",
+              "dps": "31.29 DPS",
+              "speed": "3.10",
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 36,
+              "reqLevel": 24,
+              "stats": "+9 Strength, +6 Stamina, +14 Intellect",
+              "icon": "inv_staff_28"
+            },
+            {
               "name": "Debt Collector",
               "itemId": 273827,
               "value": "13.0 DPS, 2.30s, +34 SP, Req Level 26 - Stockade: Bazil Thredd",
@@ -12824,29 +12927,6 @@ if (typeof window !== 'undefined') {
               ],
               "reqLevel": 26,
               "icon": "inv_sword_24"
-            },
-            {
-              "name": "Striking Staff",
-              "itemId": 279844,
-              "weaponType": "Staff",
-              "speed": "3.30",
-              "dps": "31.3 DPS",
-              "value": "31.3 DPS, 3.30s - Dalaran Dungeon",
-              "faction": "both",
-              "quality": "q3",
-              "iLvl": 36,
-              "stats": "+9 Strength, +6 Stamina, +14 Intellect",
-              "lines": [
-                "Binds when picked up",
-                "Two-Hand\tStaff",
-                "77 - 117 Damage\tSpeed 3.10",
-                "(31.3 damage per second)",
-                "+9 Strength",
-                "+6 Stamina",
-                "+14 Intellect"
-              ],
-              "reqLevel": 24,
-              "icon": "inv_staff_28"
             },
             {
               "name": "Fallen Dragon's Scepter",
@@ -13530,6 +13610,20 @@ if (typeof window !== 'undefined') {
               "icon": "inv_staff_16"
             },
             {
+              "name": "Gnarled Necromancer's Staff",
+              "itemId": 251534,
+              "value": "15.18 DPS, 2.80s (+12 Spell Power) - The Wrath of Rath'mael in Ruins of Lordaeron",
+              "faction": "horde",
+              "dps": "15.18 DPS",
+              "speed": "2.80",
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 24,
+              "reqLevel": 15,
+              "stats": "+10 Spirit",
+              "icon": "inv_staff_16"
+            },
+            {
               "name": "Staff of Orgrimmar",
               "itemId": 15444,
               "value": "11.8 DPS, +6 Int, +6 Agi, +18 Spell Dmg - RFC: Hidden Enemies (Horde)",
@@ -13905,6 +13999,34 @@ if (typeof window !== 'undefined') {
               "icon": "inv_staff_28"
             },
             {
+              "name": "Healer's Staff",
+              "itemId": 271767,
+              "value": "20.77 DPS, 2.60s (+16 Healing) - Excavation Site: Wetlands",
+              "faction": "both",
+              "dps": "20.77 DPS",
+              "speed": "2.60",
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 33,
+              "reqLevel": 24,
+              "stats": "+12 Stamina",
+              "icon": "inv_staff_10"
+            },
+            {
+              "name": "Striking Staff",
+              "itemId": 279844,
+              "value": "31.29 DPS, 3.10s (+14 Spell Power) - Heart of Disruption in City of Dalaran",
+              "faction": "horde",
+              "dps": "31.29 DPS",
+              "speed": "3.10",
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 36,
+              "reqLevel": 24,
+              "stats": "+9 Strength, +6 Stamina, +14 Intellect",
+              "icon": "inv_staff_28"
+            },
+            {
               "name": "Crested Scepter",
               "itemId": 3414,
               "value": "17.5 DPS - SM Graveyard: Fallen Champion",
@@ -13927,29 +14049,6 @@ if (typeof window !== 'undefined') {
               ],
               "reqLevel": 24,
               "icon": "inv_mace_08"
-            },
-            {
-              "name": "Striking Staff",
-              "itemId": 279844,
-              "weaponType": "Staff",
-              "speed": "3.30",
-              "dps": "31.3 DPS",
-              "value": "31.3 DPS, 3.30s - Dalaran Dungeon",
-              "faction": "both",
-              "quality": "q3",
-              "iLvl": 36,
-              "stats": "+9 Strength, +6 Stamina, +14 Intellect",
-              "lines": [
-                "Binds when picked up",
-                "Two-Hand\tStaff",
-                "77 - 117 Damage\tSpeed 3.10",
-                "(31.3 damage per second)",
-                "+9 Strength",
-                "+6 Stamina",
-                "+14 Intellect"
-              ],
-              "reqLevel": 24,
-              "icon": "inv_staff_28"
             },
             {
               "name": "Fallen Dragon's Scepter",
@@ -14924,6 +15023,20 @@ if (typeof window !== 'undefined') {
               "icon": "inv_staff_16"
             },
             {
+              "name": "Gnarled Necromancer's Staff",
+              "itemId": 251534,
+              "value": "15.18 DPS, 2.80s (+12 Spell Power) - The Wrath of Rath'mael in Ruins of Lordaeron",
+              "faction": "horde",
+              "dps": "15.18 DPS",
+              "speed": "2.80",
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 24,
+              "reqLevel": 15,
+              "stats": "+10 Spirit",
+              "icon": "inv_staff_16"
+            },
+            {
               "name": "Staff of Orgrimmar",
               "itemId": 15444,
               "value": "11.8 DPS, +6 Int, +6 Agi, +18 Spell Dmg - RFC: Hidden Enemies (Horde Caster / Feral)",
@@ -15380,6 +15493,34 @@ if (typeof window !== 'undefined') {
             "detail": "Excavation Site 4 dungeon quest (+60 Armor, +32 AP)"
           },
           "alts": [
+            {
+              "name": "Healer's Staff",
+              "itemId": 271767,
+              "value": "20.77 DPS, 2.60s (+16 Healing) - Excavation Site: Wetlands",
+              "faction": "both",
+              "dps": "20.77 DPS",
+              "speed": "2.60",
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 33,
+              "reqLevel": 24,
+              "stats": "+12 Stamina",
+              "icon": "inv_staff_10"
+            },
+            {
+              "name": "Striking Staff",
+              "itemId": 279844,
+              "value": "31.29 DPS, 3.10s (+14 Spell Power) - Heart of Disruption in City of Dalaran",
+              "faction": "horde",
+              "dps": "31.29 DPS",
+              "speed": "3.10",
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 36,
+              "reqLevel": 24,
+              "stats": "+9 Strength, +6 Stamina, +14 Intellect",
+              "icon": "inv_staff_28"
+            },
             {
               "name": "Healer's Staff",
               "itemId": 271767,
