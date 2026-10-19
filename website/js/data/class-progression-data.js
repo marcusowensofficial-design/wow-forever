@@ -3434,7 +3434,8 @@ if (typeof window !== 'undefined') {
                 "One-Hand",
                 "1 - 3 Damage\tSpeed 1.90",
                 "(1.05 damage per second)"
-              ]
+              ],
+              "source": "Starter vendor mace"
             },
             {
               "name": "Worn Shortsword",
@@ -3453,7 +3454,8 @@ if (typeof window !== 'undefined') {
                 "Main Hand",
                 "1 - 3 Damage\tSpeed 1.90",
                 "(1.05 damage per second)"
-              ]
+              ],
+              "source": "Starter 1H sword"
             },
             {
               "name": "Invisible Dagger",
@@ -3472,7 +3474,8 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 2.00",
                 "(6.75 damage per second)"
-              ]
+              ],
+              "source": "World Drop Epic"
             },
             {
               "name": "Gilded Blademaster's Greatsword",
@@ -3491,7 +3494,8 @@ if (typeof window !== 'undefined') {
                 "2H Sword",
                 "Speed 3.60",
                 "(5.00 damage per second)"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Militia Shortblade",
@@ -3512,7 +3516,8 @@ if (typeof window !== 'undefined') {
                 "9 - 17 Damage\tSpeed 2.00",
                 "(6.50 damage per second)",
                 "+1 Agility"
-              ]
+              ],
+              "source": "Rare Books"
             },
             {
               "name": "Militia Sword",
@@ -3530,8 +3535,10 @@ if (typeof window !== 'undefined') {
               "lines": [
                 "1H Sword",
                 "Speed 2.50",
-                "(6.40 damage per second)"
-              ]
+                "(6.40 damage per second)",
+                "+1 Stamina"
+              ],
+              "source": "Rare Books"
             },
             {
               "name": "Restored Cleaver",
@@ -3550,7 +3557,8 @@ if (typeof window !== 'undefined') {
                 "2H Axe",
                 "Speed 3.10",
                 "(1.61 damage per second)"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Restored Longsword",
@@ -3569,7 +3577,8 @@ if (typeof window !== 'undefined') {
                 "2H Sword",
                 "Speed 3.10",
                 "(1.61 damage per second)"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Restored Smasher",
@@ -3588,7 +3597,8 @@ if (typeof window !== 'undefined') {
                 "2H Mace",
                 "Speed 3.10",
                 "(1.61 damage per second)"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Restored Spear",
@@ -3607,7 +3617,8 @@ if (typeof window !== 'undefined') {
                 "Polearm",
                 "Speed 3.10",
                 "(1.61 damage per second)"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             }
           ],
           "faction": "both",
@@ -3653,7 +3664,8 @@ if (typeof window !== 'undefined') {
                 "Two-Hand",
                 "4 - 6 Damage\tSpeed 3.20",
                 "(1.56 damage per second)"
-              ]
+              ],
+              "source": "Early vendor 2H mace"
             },
             {
               "name": "Copper Axe",
@@ -3673,7 +3685,8 @@ if (typeof window !== 'undefined') {
                 "6 - 12 Damage\tSpeed 2.40",
                 "(3.75 damage per second)",
                 "Requires Level 4"
-              ]
+              ],
+              "source": "Crafted Blacksmithing (skill 20)"
             },
             {
               "name": "Steady Bastard Sword",
@@ -3693,7 +3706,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.70",
                 "(7.6 damage per second)",
                 "Requires Level 4"
-              ]
+              ],
+              "source": "Skull Rock"
             },
             {
               "name": "Defender Axe",
@@ -3712,8 +3726,10 @@ if (typeof window !== 'undefined') {
                 "1H Axe",
                 "Speed 2.30",
                 "(6.96 damage per second)",
+                "+10 Armor",
                 "Requires Level 4"
-              ]
+              ],
+              "source": "Ursal the Mauler"
             },
             {
               "name": "Valley Cosh",
@@ -3732,8 +3748,10 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 1.90",
                 "(6.05 damage per second)",
+                "+1 Stamina",
                 "Requires Level 4"
-              ]
+              ],
+              "source": "Stalk With The Earthmother"
             },
             {
               "name": "Jagged Dagger",
@@ -3752,8 +3770,10 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.50",
                 "(6.00 damage per second)",
+                "+1 Strength",
                 "Requires Level 4"
-              ]
+              ],
+              "source": "Skull Rock"
             },
             {
               "name": "Stinging Mace",
@@ -3772,8 +3792,10 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 2.30",
                 "(5.87 damage per second)",
+                "+1 Strength",
                 "Requires Level 4"
-              ]
+              ],
+              "source": "Skull Rock"
             },
             {
               "name": "Hoof-Holstered Blade",
@@ -3792,8 +3814,10 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.40",
                 "(5.71 damage per second)",
+                "+1 Strength",
                 "Requires Level 4"
-              ]
+              ],
+              "source": "Stalk With The Earthmother"
             },
             {
               "name": "Copper Shortsword",
@@ -3815,7 +3839,8 @@ if (typeof window !== 'undefined') {
                 "(5.40 damage per second)",
                 "+1 Strength",
                 "Requires Level 4"
-              ]
+              ],
+              "source": "Copper Shortsword"
             },
             {
               "name": "Brushwood Blade",
@@ -3834,8 +3859,10 @@ if (typeof window !== 'undefined') {
                 "1H Sword",
                 "Speed 3.00",
                 "(5.33 damage per second)",
+                "+1 Stamina",
                 "Requires Level 3"
-              ]
+              ],
+              "source": "Druid of the Claw"
             }
           ],
           "faction": "both",
@@ -3884,7 +3911,8 @@ if (typeof window !== 'undefined') {
                 "(9.00 damage per second)",
                 "+3 Stamina",
                 "Requires Level 8"
-              ]
+              ],
+              "source": "Crafted Blacksmithing (30)"
             },
             {
               "name": "Rough Boomstick",
@@ -3906,7 +3934,8 @@ if (typeof window !== 'undefined') {
                 "(4.13 damage per second)",
                 "+1 Stamina",
                 "Requires Level 5"
-              ]
+              ],
+              "source": "Engineering ranged pulling gun"
             },
             {
               "name": "Goblin Smasher",
@@ -3927,7 +3956,8 @@ if (typeof window !== 'undefined') {
                 "20 - 31 Damage\tSpeed 3.10",
                 "(8.23 damage per second)",
                 "+2 Strength"
-              ]
+              ],
+              "source": "Mulgore Quest: Supervisor Fizsprocket"
             },
             {
               "name": "Honed Greathammer",
@@ -3946,8 +3976,11 @@ if (typeof window !== 'undefined') {
                 "2H Mace",
                 "Speed 3.20",
                 "(9.06 damage per second)",
+                "+2 Strength",
+                "+2 Spirit",
                 "Requires Level 6"
-              ]
+              ],
+              "source": "Return to Valanaar"
             },
             {
               "name": "Coldridge Hammer",
@@ -3966,8 +3999,11 @@ if (typeof window !== 'undefined') {
                 "2H Mace",
                 "Speed 2.70",
                 "(8.33 damage per second)",
+                "+1 Strength",
+                "+1 Spirit",
                 "Requires Level 6"
-              ]
+              ],
+              "source": "Protecting the Herd"
             },
             {
               "name": "Brushwood Blade",
@@ -3986,7 +4022,8 @@ if (typeof window !== 'undefined') {
                 "2H Sword",
                 "Speed 3.00",
                 "(7.2 damage per second)"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Farmer's Shovel",
@@ -4005,8 +4042,10 @@ if (typeof window !== 'undefined') {
                 "2H Mace",
                 "Speed 3.70",
                 "(7.16 damage per second)",
+                "+1 Strength",
                 "Requires Level 5"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Training Sword",
@@ -4026,7 +4065,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.50",
                 "(7.1 damage per second)",
                 "Requires Level 5"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Severing Axe",
@@ -4046,7 +4086,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.20",
                 "(7.0 damage per second)",
                 "Requires Level 5"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Planting Shovel",
@@ -4065,8 +4106,10 @@ if (typeof window !== 'undefined') {
                 "2H Mace",
                 "Speed 2.50",
                 "(7.00 damage per second)",
+                "+1 Strength",
                 "Requires Level 5"
-              ]
+              ],
+              "source": "Deliver the News"
             }
           ],
           "faction": "both",
@@ -4118,7 +4161,8 @@ if (typeof window !== 'undefined') {
                 "(8.92 damage per second)",
                 "+3 Strength",
                 "Requires Level 8"
-              ]
+              ],
+              "source": "Captain Flat Tusk in Barrens (+3 Str)"
             },
             {
               "name": "Copper Battle Axe",
@@ -4140,7 +4184,8 @@ if (typeof window !== 'undefined') {
                 "(9.00 damage per second)",
                 "+3 Stamina",
                 "Requires Level 8"
-              ]
+              ],
+              "source": "Heavy burst swing"
             },
             {
               "name": "Staff of the Dor'Danil",
@@ -4160,7 +4205,8 @@ if (typeof window !== 'undefined') {
                 "7 - 14 Damage\tSpeed 1.50",
                 "(7.00 damage per second)",
                 "+1 Stamina"
-              ]
+              ],
+              "source": "Teldrassil quest reward"
             },
             {
               "name": "Riptear's Cleaver",
@@ -4181,7 +4227,8 @@ if (typeof window !== 'undefined') {
                 "23 - 36 Damage\tSpeed 3.30",
                 "(8.94 damage per second)",
                 "+3 Strength"
-              ]
+              ],
+              "source": "Durotar Quest: Rear Guard Patrol"
             },
             {
               "name": "Bonecracker",
@@ -4202,7 +4249,8 @@ if (typeof window !== 'undefined') {
                 "23 - 35 Damage\tSpeed 3.20",
                 "(9.06 damage per second)",
                 "+3 Strength"
-              ]
+              ],
+              "source": "Tirisfal Quest: The Family Crypt"
             },
             {
               "name": "Helm Splitter",
@@ -4224,7 +4272,8 @@ if (typeof window !== 'undefined') {
                 "(6.88 damage per second)",
                 "+1 Strength",
                 "Requires Level 8"
-              ]
+              ],
+              "source": "1H Sword (+1 Str)"
             },
             {
               "name": "Empyrean Greatsword",
@@ -4243,8 +4292,10 @@ if (typeof window !== 'undefined') {
                 "2H Sword",
                 "Speed 3.00",
                 "(10.17 damage per second)",
+                "+4 Strength",
                 "Requires Level 7"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Spiked Club",
@@ -4264,7 +4315,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.10",
                 "(9.0 damage per second)",
                 "Requires Level 8"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Driftwood Smasher",
@@ -4283,8 +4335,10 @@ if (typeof window !== 'undefined') {
                 "2H Mace",
                 "Speed 3.30",
                 "(8.94 damage per second)",
+                "+2 Stamina",
                 "Requires Level 7"
-              ]
+              ],
+              "source": "Murlocs at the Gates"
             },
             {
               "name": "Icepane Warhammer",
@@ -4304,7 +4358,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.30",
                 "(8.5 damage per second)",
                 "Requires Level 7"
-              ]
+              ],
+              "source": "Hammerspine"
             }
           ],
           "faction": "alliance",
@@ -4352,8 +4407,10 @@ if (typeof window !== 'undefined') {
                 "Two-Hand",
                 "39 - 60 Damage\tSpeed 3.10",
                 "(15.97 damage per second)",
+                "Chance on hit: Blasts a target for 42 Fire damage.",
                 "Chance on hit: Blasts a target for 42 Fire damage."
-              ]
+              ],
+              "source": "Old Ironforge Incursion quest (Alliance)"
             },
             {
               "name": "Hammerbone",
@@ -4375,7 +4432,8 @@ if (typeof window !== 'undefined') {
                 "(20.44 damage per second)",
                 "+7 Strength",
                 "+10 Spirit"
-              ]
+              ],
+              "source": "Leaders of the Fang quest in Wailing Caverns (Horde)"
             },
             {
               "name": "Trogg Scepter",
@@ -4398,7 +4456,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases healing done by up to 33"
               ],
               "reqLevel": 13,
-              "icon": "inv_misc_bone_10"
+              "icon": "inv_misc_bone_10",
+              "source": "Ragefire Chasm: Oggleflint"
             },
             {
               "name": "Thick War Axe",
@@ -4421,7 +4480,8 @@ if (typeof window !== 'undefined') {
                 "+1 Strength",
                 "+1 Stamina",
                 "Requires Level 12"
-              ]
+              ],
+              "source": "1H Axe from Blacksmithing (45)"
             },
             {
               "name": "Thun'grim's Axe",
@@ -4442,7 +4502,8 @@ if (typeof window !== 'undefined') {
                 "14 - 28 Damage\tSpeed 2.70",
                 "(7.78 damage per second)",
                 "+1 Stamina"
-              ]
+              ],
+              "source": "Horde Warrior Quest: Forged Steel"
             },
             {
               "name": "Thun'grim's Sword",
@@ -4463,7 +4524,8 @@ if (typeof window !== 'undefined') {
                 "11 - 21 Damage\tSpeed 2.10",
                 "(7.62 damage per second)",
                 "+1 Stamina"
-              ]
+              ],
+              "source": "Horde Warrior Quest: Forged Steel"
             },
             {
               "name": "Wingblade",
@@ -4486,7 +4548,8 @@ if (typeof window !== 'undefined') {
                 "+5 Agility",
                 "+2 Stamina",
                 "Requires Level 10"
-              ]
+              ],
+              "source": "Leaders of the Fang"
             },
             {
               "name": "Hammer of Orgrimmar",
@@ -4509,7 +4572,8 @@ if (typeof window !== 'undefined') {
                 "+3 Strength",
                 "+3 Spirit",
                 "Requires Level 9"
-              ]
+              ],
+              "source": "Hidden Enemies"
             },
             {
               "name": "Samophlange Screwdriver",
@@ -4529,7 +4593,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.50",
                 "(12.6 damage per second)",
                 "Requires Level 10"
-              ]
+              ],
+              "source": "Samophlange Manual"
             },
             {
               "name": "Talonstrike",
@@ -4548,8 +4613,10 @@ if (typeof window !== 'undefined') {
                 "1H Sword",
                 "Speed 1.60",
                 "(12.19 damage per second)",
+                "+3 Agility",
                 "Requires Level 10"
-              ]
+              ],
+              "source": "Assault on Fenris Isle"
             }
           ],
           "faction": "both",
@@ -4595,7 +4662,8 @@ if (typeof window !== 'undefined') {
                 "28 - 53 Damage\tSpeed 2.30",
                 "(17.61 damage per second)",
                 "Requires Level 31"
-              ]
+              ],
+              "source": "Vendor 2H Axe"
             },
             {
               "name": "Trogg Scepter",
@@ -4618,7 +4686,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases healing done by up to 33"
               ],
               "reqLevel": 13,
-              "icon": "inv_misc_bone_10"
+              "icon": "inv_misc_bone_10",
+              "source": "RFC: Oggleflint"
             },
             {
               "name": "Axe of Orgrimmar",
@@ -4640,7 +4709,8 @@ if (typeof window !== 'undefined') {
                 "(16.06 damage per second)",
                 "+6 Stamina",
                 "+6 Spirit"
-              ]
+              ],
+              "source": "RFC Quest: Hidden Enemies"
             },
             {
               "name": "Ironforge Greathammer",
@@ -4660,8 +4730,10 @@ if (typeof window !== 'undefined') {
                 "Two-Hand",
                 "39 - 60 Damage\tSpeed 3.10",
                 "(15.97 damage per second)",
+                "Chance on hit: Blasts a target for 42 Fire damage.",
                 "Chance on hit: Blasts a target for 42 Fire damage."
-              ]
+              ],
+              "source": "Ironforge Quest"
             },
             {
               "name": "Zhovur Axe",
@@ -4681,7 +4753,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.10",
                 "(13.1 damage per second)",
                 "Requires Level 12"
-              ]
+              ],
+              "source": "Serena Bloodfeather"
             },
             {
               "name": "Woodsman Sword",
@@ -4701,7 +4774,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.30",
                 "(13.0 damage per second)",
                 "Requires Level 12"
-              ]
+              ],
+              "source": "Mathystra Relics"
             },
             {
               "name": "Burrowing Shovel",
@@ -4720,8 +4794,10 @@ if (typeof window !== 'undefined') {
                 "2H Mace",
                 "Speed 3.00",
                 "(11.33 damage per second)",
+                "+5 Strength",
                 "Requires Level 12"
-              ]
+              ],
+              "source": "Master Digger"
             },
             {
               "name": "Cold Iron Pick",
@@ -4744,7 +4820,8 @@ if (typeof window !== 'undefined') {
                 "+2 Stamina",
                 "+4 Spirit",
                 "Requires Level 12"
-              ]
+              ],
+              "source": "Skeletal Miner"
             },
             {
               "name": "Coral Claymore",
@@ -4763,8 +4840,11 @@ if (typeof window !== 'undefined') {
                 "2H Sword",
                 "Speed 3.10",
                 "(11.29 damage per second)",
+                "+3 Strength",
+                "+3 Stamina",
                 "Requires Level 12"
-              ]
+              ],
+              "source": "Slark"
             },
             {
               "name": "Twin-bladed Axe",
@@ -4784,7 +4864,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.70",
                 "(10.7 damage per second)",
                 "Requires Level 11"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             }
           ],
           "faction": "both",
@@ -4835,7 +4916,8 @@ if (typeof window !== 'undefined') {
                 "(12.29 damage per second)",
                 "+4 Strength",
                 "Requires Level 13"
-              ]
+              ],
+              "source": "Hall of Thanes: Durgen"
             },
             {
               "name": "Heavy Copper Broadsword",
@@ -4857,7 +4939,8 @@ if (typeof window !== 'undefined') {
                 "(12.58 damage per second)",
                 "+6 Stamina",
                 "Requires Level 14"
-              ]
+              ],
+              "source": "Crafted Blacksmithing (skill 65)"
             },
             {
               "name": "Axe of Orgrimmar",
@@ -4879,7 +4962,8 @@ if (typeof window !== 'undefined') {
                 "(16.06 damage per second)",
                 "+6 Stamina",
                 "+6 Spirit"
-              ]
+              ],
+              "source": "RFC Quest: Hidden Enemies"
             },
             {
               "name": "Bone Knuckles",
@@ -4902,7 +4986,8 @@ if (typeof window !== 'undefined') {
                 "Requires Level 13",
                 "Equip: +6 Attack Power.",
                 "Equip: +6 Attack Power against Beasts."
-              ]
+              ],
+              "source": "RFC Drop"
             },
             {
               "name": "Blackwater Cutlass",
@@ -4921,8 +5006,10 @@ if (typeof window !== 'undefined') {
                 "1H Sword",
                 "Speed 1.90",
                 "(12.89 damage per second)",
+                "+4 Agility",
                 "Requires Level 14"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Cursed Felblade",
@@ -4942,7 +5029,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.30",
                 "(12.17 damage per second)",
                 "Requires Level 13"
-              ]
+              ],
+              "source": "Taragaman the Hungerer"
             },
             {
               "name": "Goblin Screwdriver",
@@ -4961,8 +5049,10 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.40",
                 "(12.14 damage per second)",
+                "+4 Agility",
                 "Requires Level 13"
-              ]
+              ],
+              "source": "Goblin Engineer"
             },
             {
               "name": "Chanting Blade",
@@ -4981,8 +5071,11 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.50",
                 "(12.00 damage per second)",
+                "+2 Agility",
+                "+3 Stamina",
                 "Requires Level 13"
-              ]
+              ],
+              "source": "Jergosh the Invoker"
             },
             {
               "name": "Searing Dagger",
@@ -5005,7 +5098,8 @@ if (typeof window !== 'undefined') {
                 "+4 Spirit",
                 "Requires Level 13",
                 "Equip: Harmful spell casts sear the target for 7 Fire damage. (10ms cooldown)"
-              ]
+              ],
+              "source": "Bazzalan"
             },
             {
               "name": "Seraph's Strike",
@@ -5025,7 +5119,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.20",
                 "(21.1 damage per second)",
                 "Requires Level 13"
-              ]
+              ],
+              "source": "The Tower of Althalaxx"
             }
           ],
           "faction": "alliance",
@@ -5038,6 +5133,7 @@ if (typeof window !== 'undefined') {
             "Two-Hand",
             "39 - 60 Damage\tSpeed 3.10",
             "(15.97 damage per second)",
+            "Chance on hit: Blasts a target for 42 Fire damage.",
             "Chance on hit: Blasts a target for 42 Fire damage."
           ]
         },
@@ -5076,7 +5172,8 @@ if (typeof window !== 'undefined') {
                 "+6 Stamina",
                 "Equip: +4 Attack Power.",
                 "Equip: +6 Attack Power against Undead."
-              ]
+              ],
+              "source": "Dalaran Dungeon"
             },
             {
               "name": "Meathook Slicer",
@@ -5098,7 +5195,8 @@ if (typeof window !== 'undefined') {
                 "(13.61 damage per second)",
                 "+5 Stamina",
                 "Requires Level 15"
-              ]
+              ],
+              "source": "Ruins of Lordaeron: The Baron"
             },
             {
               "name": "Black Malice",
@@ -5117,8 +5215,10 @@ if (typeof window !== 'undefined') {
                 "2H Mace",
                 "Speed 3.30",
                 "(18.33 damage per second)",
+                "+2 Shadow Resistance",
                 "Requires Level 16"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Rakzur Club",
@@ -5138,7 +5238,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.60",
                 "(18.3 damage per second)",
                 "Requires Level 16"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Prospector Axe",
@@ -5158,7 +5259,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.40",
                 "(17.5 damage per second)",
                 "Requires Level 15"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Emogg's \"Crusher\"",
@@ -5177,8 +5279,11 @@ if (typeof window !== 'undefined') {
                 "1H Axe",
                 "Speed 2.60",
                 "(14.04 damage per second)",
+                "+4 Strength",
+                "+2 Stamina",
                 "Requires Level 16"
-              ]
+              ],
+              "source": "Emogg the Crusher"
             },
             {
               "name": "Face Smasher",
@@ -5198,7 +5303,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.60",
                 "(14.0 damage per second)",
                 "Requires Level 16"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Serpent's Kiss",
@@ -5218,7 +5324,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.50",
                 "(14.00 damage per second)",
                 "Requires Level 16"
-              ]
+              ],
+              "source": "Trigore the Lasher"
             },
             {
               "name": "Cookie's Tenderizer",
@@ -5237,8 +5344,10 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 2.80",
                 "(13.93 damage per second)",
+                "+4 Spirit",
                 "Requires Level 16"
-              ]
+              ],
+              "source": "Cookie"
             },
             {
               "name": "Tail Spike",
@@ -5261,7 +5370,8 @@ if (typeof window !== 'undefined') {
                 "+3 Strength",
                 "+3 Agility",
                 "Requires Level 16"
-              ]
+              ],
+              "source": "Skum"
             }
           ],
           "faction": "both",
@@ -5314,7 +5424,8 @@ if (typeof window !== 'undefined') {
                 "+11 Strength",
                 "+4 Agility",
                 "Requires Level 18"
-              ]
+              ],
+              "source": "The Deadmines: Mr. Smite"
             },
             {
               "name": "Haunting Blade",
@@ -5336,7 +5447,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases healing done by up to 33"
               ],
               "reqLevel": 22,
-              "icon": "inv_sword_27"
+              "icon": "inv_sword_27",
+              "source": "Ruins of Lordaeron: Captain"
             },
             {
               "name": "Vileblood Scimitar",
@@ -5358,7 +5470,8 @@ if (typeof window !== 'undefined') {
                 "(14.62 damage per second)",
                 "+5 Spirit",
                 "Requires Level 17"
-              ]
+              ],
+              "source": "Ruins of Lordaeron: Viktor the Vile"
             },
             {
               "name": "Sword of the Fallen",
@@ -5381,7 +5494,8 @@ if (typeof window !== 'undefined') {
                 "+6 Strength",
                 "+9 Intellect",
                 "Requires Level 18"
-              ]
+              ],
+              "source": "Rare Drop"
             },
             {
               "name": "Encroacher's Claim",
@@ -5400,8 +5514,11 @@ if (typeof window !== 'undefined') {
                 "2H Axe",
                 "Speed 3.30",
                 "(19.70 damage per second)",
+                "+6 Strength",
+                "+9 Spirit",
                 "Requires Level 18"
-              ]
+              ],
+              "source": "Wrongly Blamed, Justly Corrected"
             },
             {
               "name": "Night Reaver",
@@ -5421,7 +5538,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.30",
                 "(19.70 damage per second)",
                 "Requires Level 18"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Rockslicer",
@@ -5440,8 +5558,10 @@ if (typeof window !== 'undefined') {
                 "2H Axe",
                 "Speed 3.30",
                 "(19.70 damage per second)",
+                "+7 Strength",
                 "Requires Level 18"
-              ]
+              ],
+              "source": "Rhahk'Zor"
             },
             {
               "name": "Searing Blade",
@@ -5461,7 +5581,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.50",
                 "(19.60 damage per second)",
                 "Requires Level 18"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Boahn's Fang",
@@ -5480,8 +5601,11 @@ if (typeof window !== 'undefined') {
                 "2H Axe",
                 "Speed 2.50",
                 "(19.00 damage per second)",
+                "+10 Strength",
+                "+4 Spirit",
                 "Requires Level 17"
-              ]
+              ],
+              "source": "Boahn"
             },
             {
               "name": "Impaling Harpoon",
@@ -5500,8 +5624,11 @@ if (typeof window !== 'undefined') {
                 "Polearm",
                 "Speed 2.40",
                 "(18.96 damage per second)",
+                "+9 Agility",
+                "+5 Intellect",
                 "Requires Level 17"
-              ]
+              ],
+              "source": "Captain Greenskin"
             }
           ],
           "faction": "both",
@@ -5514,6 +5641,7 @@ if (typeof window !== 'undefined') {
             "Two-Hand",
             "52 - 79 Damage\tSpeed 3.60",
             "(18.19 damage per second)",
+            "Use: Chop nearby Humanoid or Undead corpse in two, restoring 150 Health, 150 Mana, and 15 Rage.",
             "Requires Level 16",
             "Use: Chop nearby Humanoid or Undead corpse in two, restoring 150 Health, 150 Mana, and 15 Rage."
           ]
@@ -5553,7 +5681,8 @@ if (typeof window !== 'undefined') {
                 "+6 Strength",
                 "+6 Stamina",
                 "Requires Level 20"
-              ]
+              ],
+              "source": "Blacksmithing (90)"
             },
             {
               "name": "Taskmaster Axe",
@@ -5577,7 +5706,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases healing done by up to 45"
               ],
               "reqLevel": 18,
-              "icon": "inv_throwingaxe_06"
+              "icon": "inv_throwingaxe_06",
+              "source": "The Deadmines: Sneed"
             },
             {
               "name": "Verigan's Fist",
@@ -5602,7 +5732,8 @@ if (typeof window !== 'undefined') {
                 "+10 Spirit",
                 "Chance on hit: Ignite the target in the flames of the Great Forge, dealing 39 to 59 Holyfire damage. Deals 3 times as much damage to Fire Elementals and Earth Elementals.",
                 "Requires Level 20"
-              ]
+              ],
+              "source": "The Test of Righteousness"
             },
             {
               "name": "Duskbringer",
@@ -5622,7 +5753,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.40",
                 "(21.03 damage per second)",
                 "Requires Level 20"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Puncturing Spear",
@@ -5642,7 +5774,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.10",
                 "(20.32 damage per second)",
                 "Requires Level 19"
-              ]
+              ],
+              "source": "Swinegart Spearhide"
             },
             {
               "name": "Gargoyle's Bite",
@@ -5661,8 +5794,10 @@ if (typeof window !== 'undefined') {
                 "Polearm",
                 "Speed 2.90",
                 "(18.97 damage per second)",
+                "+10 Strength",
                 "Requires Level 20"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Blackfang",
@@ -5682,7 +5817,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.50",
                 "(16.3 damage per second)",
                 "Requires Level 20"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Diamond Hammer",
@@ -5702,7 +5838,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.50",
                 "(16.2 damage per second)",
                 "Requires Level 20"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Butcher's Cleaver",
@@ -5721,8 +5858,11 @@ if (typeof window !== 'undefined') {
                 "1H Axe",
                 "Speed 1.70",
                 "(16.18 damage per second)",
+                "+5 Strength",
+                "+2 Agility",
                 "Requires Level 20"
-              ]
+              ],
+              "source": "Razorclaw the Butcher"
             },
             {
               "name": "Barrens Basher",
@@ -5741,8 +5881,11 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 2.10",
                 "(15.95 damage per second)",
+                "+2 Strength",
+                "+5 Stamina",
                 "Requires Level 20"
-              ]
+              ],
+              "source": "Winklespark"
             }
           ],
           "faction": "both",
@@ -5795,7 +5938,8 @@ if (typeof window !== 'undefined') {
                 "+9 Stamina",
                 "+10 Intellect",
                 "Chance on hit: Sear the target with a vortex of blazing wind, dealing 39 to 59 Holystorm damage. Deals 3 times as much damage to Wolves and Worgen."
-              ]
+              ],
+              "source": "Old Fire — Eye in Hillsbrad (Horde)"
             },
             {
               "name": "The Skyblade",
@@ -5819,7 +5963,8 @@ if (typeof window !== 'undefined') {
                 "+8 Stamina",
                 "Requires Level 22",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 6"
-              ]
+              ],
+              "source": "105 dmg) (+10 Str, +8 Sta) — Rare 2H Sword"
             },
             {
               "name": "Strike of the Hydra",
@@ -5841,7 +5986,8 @@ if (typeof window !== 'undefined') {
                 "(25.61 damage per second)",
                 "Requires Level 26",
                 "Chance on hit: Inflict 42 Fire and 14 Frost damage, slow the target by 50% for 5 sec, reduce armor by 50, and inflict 7 Nature damage every 3 sec for 12 sec."
-              ]
+              ],
+              "source": "BFD: Aku'mai"
             },
             {
               "name": "Taurenbane's Family Cleaver",
@@ -5864,7 +6010,8 @@ if (typeof window !== 'undefined') {
                 "Equip: +32 Attack Power against Humanoids."
               ],
               "reqLevel": 23,
-              "icon": "inv_axe_04"
+              "icon": "inv_axe_04",
+              "source": "Barrens Rare: Hagg Taurenbane"
             },
             {
               "name": "Bronze Battle Axe",
@@ -5886,7 +6033,8 @@ if (typeof window !== 'undefined') {
                 "(18.33 damage per second)",
                 "+10 Strength",
                 "Requires Level 22"
-              ]
+              ],
+              "source": "Crafted Blacksmithing (105)"
             },
             {
               "name": "Alliance Outrunner's Sword",
@@ -5909,7 +6057,8 @@ if (typeof window !== 'undefined') {
                 "+5 Agility",
                 "Requires Level 22",
                 "Equip: +6 Attack Power."
-              ]
+              ],
+              "source": "Alliance Outrunner Drop"
             },
             {
               "name": "Headbasher",
@@ -5928,8 +6077,12 @@ if (typeof window !== 'undefined') {
                 "2H Mace",
                 "Speed 2.30",
                 "(23.70 damage per second)",
+                "+9 Strength",
+                "+5 Stamina",
+                "+10 Intellect",
                 "Requires Level 22"
-              ]
+              ],
+              "source": "The Fury Runs Deep"
             },
             {
               "name": "Guardian Blade",
@@ -5948,8 +6101,10 @@ if (typeof window !== 'undefined') {
                 "2H Sword",
                 "Speed 2.90",
                 "(21.72 damage per second)",
+                "+40 Armor",
                 "Requires Level 21"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Killmaim",
@@ -5969,7 +6124,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.20",
                 "(21.7 damage per second)",
                 "Requires Level 21"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Arced War Axe",
@@ -5988,8 +6144,11 @@ if (typeof window !== 'undefined') {
                 "2H Axe",
                 "Speed 3.30",
                 "(21.67 damage per second)",
+                "+9 Strength",
+                "+9 Stamina",
                 "Requires Level 21"
-              ]
+              ],
+              "source": "Commander Springvale"
             }
           ],
           "faction": "both",
@@ -6041,7 +6200,8 @@ if (typeof window !== 'undefined') {
                 "(26.67 damage per second)",
                 "+12 Stamina",
                 "+12 Spirit"
-              ]
+              ],
+              "source": "Stopping the Cycle quest"
             },
             {
               "name": "Strike of the Hydra",
@@ -6063,7 +6223,8 @@ if (typeof window !== 'undefined') {
                 "(25.61 damage per second)",
                 "Requires Level 26",
                 "Chance on hit: Inflict 42 Fire and 14 Frost damage, slow the target by 50% for 5 sec, reduce armor by 50, and inflict 7 Nature damage every 3 sec for 12 sec."
-              ]
+              ],
+              "source": "BFD: Aku'mai"
             },
             {
               "name": "Heavy Mithril Axe",
@@ -6085,7 +6246,8 @@ if (typeof window !== 'undefined') {
                 "(24.07 damage per second)",
                 "+7 Stamina",
                 "Requires Level 37"
-              ]
+              ],
+              "source": "Blacksmithing (130)"
             },
             {
               "name": "The Skyblade",
@@ -6109,7 +6271,8 @@ if (typeof window !== 'undefined') {
                 "+8 Stamina",
                 "Requires Level 22",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 6"
-              ]
+              ],
+              "source": "Ashenvale Rare"
             },
             {
               "name": "Gizmotron Megachopper",
@@ -6129,7 +6292,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.20",
                 "(23.9 damage per second)",
                 "Requires Level 24"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Slaghammer",
@@ -6149,7 +6313,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.80",
                 "(23.8 damage per second)",
                 "Requires Level 24"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Bloodpike",
@@ -6169,7 +6334,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.20",
                 "(23.13 damage per second)",
                 "Requires Level 23"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Onyx Claymore",
@@ -6188,8 +6354,12 @@ if (typeof window !== 'undefined') {
                 "2H Sword",
                 "Speed 2.80",
                 "(23.04 damage per second)",
+                "+10 Strength",
+                "+5 Stamina",
+                "+6 Spirit",
                 "Requires Level 23"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Supercharger Battle Axe",
@@ -6209,7 +6379,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.80",
                 "(23.04 damage per second)",
                 "Requires Level 23"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Graverobber's Shovel",
@@ -6228,8 +6399,10 @@ if (typeof window !== 'undefined') {
                 "2H Mace",
                 "Speed 3.70",
                 "(22.97 damage per second)",
+                "+10 Stamina",
                 "Requires Level 23"
-              ]
+              ],
+              "source": "Dextren Ward"
             }
           ],
           "faction": "both",
@@ -6282,7 +6455,8 @@ if (typeof window !== 'undefined') {
                 "+9 Strength",
                 "+13 Stamina",
                 "+9 Intellect"
-              ]
+              ],
+              "source": "Heart of Disruption quest in City of Dalaran"
             },
             {
               "name": "Trusty Sword",
@@ -6304,7 +6478,8 @@ if (typeof window !== 'undefined') {
                 "+12 Spirit"
               ],
               "reqLevel": 24,
-              "icon": "inv_sword_04"
+              "icon": "inv_sword_04",
+              "source": "Redridge Quest"
             },
             {
               "name": "Dendweller's Hammer",
@@ -6327,7 +6502,8 @@ if (typeof window !== 'undefined') {
                 "Requires Level 26"
               ],
               "reqLevel": 26,
-              "icon": "inv_hammer_09"
+              "icon": "inv_hammer_09",
+              "source": "Level 26 Mace"
             },
             {
               "name": "Solid Iron Maul",
@@ -6350,7 +6526,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases damage and healing done by magical spells and effects by up to 24"
               ],
               "reqLevel": 26,
-              "icon": "inv_hammer_07"
+              "icon": "inv_hammer_07",
+              "source": "Blacksmithing (135)"
             },
             {
               "name": "Ruby-Adorned Blade",
@@ -6372,7 +6549,8 @@ if (typeof window !== 'undefined') {
                 "(23.91 damage per second)",
                 "+3 Agility",
                 "+8 Stamina"
-              ]
+              ],
+              "source": "1H Sword (The Eye of Bhossca quest)"
             },
             {
               "name": "Deanship Claymore",
@@ -6391,8 +6569,10 @@ if (typeof window !== 'undefined') {
                 "2H Sword",
                 "Speed 2.80",
                 "(23.75 damage per second)",
+                "+4 Spirit",
                 "Requires Level 26"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Outlaw Sabre",
@@ -6412,7 +6592,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.70",
                 "(20.37 damage per second)",
                 "Requires Level 25"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Looming Gavel",
@@ -6432,7 +6613,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.40",
                 "(19.8 damage per second)",
                 "Requires Level 26"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "The Black Knight",
@@ -6452,7 +6634,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.90",
                 "(19.7 damage per second)",
                 "Requires Level 26"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "The Butcher",
@@ -6475,7 +6658,8 @@ if (typeof window !== 'undefined') {
                 "+5 Agility",
                 "+4 Stamina",
                 "Requires Level 26"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             }
           ],
           "faction": "both",
@@ -6528,7 +6712,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Improves your chance to hit by 1.0%."
               ],
               "reqLevel": 29,
-              "icon": "inv_spear_08"
+              "icon": "inv_spear_08",
+              "source": "City of Dalaran: Fel Ancient"
             },
             {
               "name": "Defender of Dalaran",
@@ -6551,7 +6736,8 @@ if (typeof window !== 'undefined') {
                 "+9 Intellect"
               ],
               "reqLevel": 24,
-              "icon": "inv_hammer_20"
+              "icon": "inv_hammer_20",
+              "source": "City of Dalaran Quest: Heart of Disruption"
             },
             {
               "name": "Ironwood Destroyer",
@@ -6566,8 +6752,10 @@ if (typeof window !== 'undefined') {
               "icon": "inv_mace_05",
               "weaponType": "Two-Handed Mace",
               "lines": [
+                "Use: Use to sketch a location on the Shapers Terrace map.",
                 "Use: Use to sketch a location on the Shapers Terrace map."
-              ]
+              ],
+              "source": "2H Mace from Excavation Site: Wetlands quest (Horrors in the Highland)"
             },
             {
               "name": "Hornbeam Heft",
@@ -6580,7 +6768,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 28,
               "stats": "+6 Strength, +4 Agility",
               "icon": "inv_axe_02",
-              "weaponType": "One-Handed Axe"
+              "weaponType": "One-Handed Axe",
+              "source": "1H Axe from Excavation Site: Wetlands quest (Horrors in the Highland)"
             },
             {
               "name": "Darkspear Raider's Reaper",
@@ -6599,8 +6788,11 @@ if (typeof window !== 'undefined') {
                 "2H Axe",
                 "Speed 3.10",
                 "(27.90 damage per second)",
+                "+16 Strength",
+                "+4 Stamina",
                 "Requires Level 28"
-              ]
+              ],
+              "source": "Creeg Bothunk"
             },
             {
               "name": "Rebels' Rugged Reaper",
@@ -6619,8 +6811,11 @@ if (typeof window !== 'undefined') {
                 "2H Axe",
                 "Speed 3.10",
                 "(27.90 damage per second)",
+                "+16 Strength",
+                "+4 Stamina",
                 "Requires Level 28"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Ancient Cleaver",
@@ -6639,8 +6834,10 @@ if (typeof window !== 'undefined') {
                 "2H Axe",
                 "Speed 3.60",
                 "(27.78 damage per second)",
+                "+12 Strength",
                 "Requires Level 28"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Combatant Claymore",
@@ -6660,7 +6857,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.90",
                 "(27.8 damage per second)",
                 "Requires Level 28"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Burning War Axe",
@@ -6680,7 +6878,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.30",
                 "(27.7 damage per second)",
                 "Requires Level 28"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Bloodspiller",
@@ -6700,7 +6899,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.70",
                 "(26.67 damage per second)",
                 "Requires Level 27"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             }
           ],
           "faction": "both",
@@ -6752,7 +6952,8 @@ if (typeof window !== 'undefined') {
                 "+15 Stamina"
               ],
               "reqLevel": 30,
-              "icon": "inv_hammer_08"
+              "icon": "inv_hammer_08",
+              "source": "Mace alternative from class quest"
             },
             {
               "name": "Whirlwind Sword",
@@ -6774,7 +6975,8 @@ if (typeof window !== 'undefined') {
                 "+15 Stamina"
               ],
               "reqLevel": 30,
-              "icon": "inv_sword_15"
+              "icon": "inv_sword_15",
+              "source": "Sword alternative from class quest"
             },
             {
               "name": "Dark Hearted Hammer",
@@ -6796,7 +6998,8 @@ if (typeof window !== 'undefined') {
                 "+8 Stamina"
               ],
               "reqLevel": 30,
-              "icon": "inv_hammer_16"
+              "icon": "inv_hammer_16",
+              "source": "STV Quest: Colonel Kurzen"
             },
             {
               "name": "Master Hunter's Spellsword",
@@ -6818,7 +7021,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases damage and healing done by magical spells and effects by up to 14"
               ],
               "reqLevel": 28,
-              "icon": "inv_sword_42"
+              "icon": "inv_sword_42",
+              "source": "STV Quest: Big Game Hunter"
             },
             {
               "name": "Corpsemaker",
@@ -6841,7 +7045,8 @@ if (typeof window !== 'undefined') {
                 "Requires Level 29"
               ],
               "reqLevel": 29,
-              "icon": "inv_weapon_halbard_01"
+              "icon": "inv_weapon_halbard_01",
+              "source": "RFK: Overlord Ramtusk"
             },
             {
               "name": "Rage of the Storm",
@@ -6864,7 +7069,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases the damage dealt by your Stormstrike ability by 10%."
               ],
               "reqLevel": 30,
-              "icon": "inv_mace_42"
+              "icon": "inv_mace_42",
+              "source": "Custom Boss Drop"
             },
             {
               "name": "Bonebiter",
@@ -6911,7 +7117,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.90",
                 "(30.2 damage per second)",
                 "Requires Level 30"
-              ]
+              ],
+              "source": "Fallen Champion"
             },
             {
               "name": "Viscous Hammer",
@@ -6931,7 +7138,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.90",
                 "(30.2 damage per second)",
                 "Requires Level 30"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Cobalt Crusher",
@@ -6951,7 +7159,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.20",
                 "(28.91 damage per second)",
                 "Requires Level 29"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             }
           ],
           "faction": "both",
@@ -7002,7 +7211,8 @@ if (typeof window !== 'undefined') {
                 "+15 Stamina"
               ],
               "reqLevel": 30,
-              "icon": "inv_axe_12"
+              "icon": "inv_axe_12",
+              "source": "Class quest spike remains dominant"
             },
             {
               "name": "Manual Crowd Pummeler",
@@ -7026,7 +7236,8 @@ if (typeof window !== 'undefined') {
                 "Use: Increases your attack speed by 50% for 30 sec. (3 Min Cooldown)"
               ],
               "reqLevel": 29,
-              "icon": "inv_mace_14"
+              "icon": "inv_mace_14",
+              "source": "Gnomeregan: Crowd Pummeler 9 — 60"
             },
             {
               "name": "Mighty Iron Hammer",
@@ -7048,7 +7259,8 @@ if (typeof window !== 'undefined') {
                 "(15.54 damage per second)",
                 "+5 Strength",
                 "Requires Level 25"
-              ]
+              ],
+              "source": "Blacksmithing (145)"
             },
             {
               "name": "Abandoned Ferocity",
@@ -7072,7 +7284,8 @@ if (typeof window !== 'undefined') {
                 "+4 Agility",
                 "+12 Stamina",
                 "Requires Level 35"
-              ]
+              ],
+              "source": "Khan Jehn in Maraudon (Horde)"
             },
             {
               "name": "Scavenged Magram Armament",
@@ -7096,7 +7309,8 @@ if (typeof window !== 'undefined') {
                 "+14 Stamina",
                 "Requires Level 35",
                 "Equip: +12 Attack Power."
-              ]
+              ],
+              "source": "Polearm (Khan Jehn in Maraudon)"
             },
             {
               "name": "Fiery War Axe",
@@ -7115,8 +7329,10 @@ if (typeof window !== 'undefined') {
                 "2H Axe",
                 "Speed 3.60",
                 "(40.42 damage per second)",
+                "+15 Strength",
                 "Requires Level 35"
-              ]
+              ],
+              "source": "World Drop Epic"
             },
             {
               "name": "Dazzling Longsword",
@@ -7136,7 +7352,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.60",
                 "(31.5 damage per second)",
                 "Requires Level 36"
-              ]
+              ],
+              "source": "World Drop Epic"
             },
             {
               "name": "Sword of the Magistrate",
@@ -7156,7 +7373,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.30",
                 "(36.5 damage per second)",
                 "Requires Level 36"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Grim Reaper",
@@ -7176,7 +7394,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.10",
                 "(35.6 damage per second)",
                 "Requires Level 35"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Hellslayer Battle Axe",
@@ -7196,7 +7415,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.90",
                 "(35.52 damage per second)",
                 "Requires Level 35"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             }
           ],
           "faction": "both",
@@ -7250,7 +7470,8 @@ if (typeof window !== 'undefined') {
                 "+14 Stamina",
                 "+16 Intellect",
                 "Requires Level 39"
-              ]
+              ],
+              "source": "SM Cath: Mograine"
             },
             {
               "name": "Bonebiter",
@@ -7272,7 +7493,8 @@ if (typeof window !== 'undefined') {
                 "(38.82 damage per second)",
                 "+20 Strength",
                 "+10 Stamina"
-              ]
+              ],
+              "source": "Alliance Quest: In the Name of the Light"
             },
             {
               "name": "Sword of Serenity",
@@ -7294,7 +7516,8 @@ if (typeof window !== 'undefined') {
                 "(30.00 damage per second)",
                 "+9 Stamina",
                 "+4 Spirit"
-              ]
+              ],
+              "source": "Alliance SM Quest: In the Name of the Light"
             },
             {
               "name": "Sword of Omen",
@@ -7307,7 +7530,8 @@ if (typeof window !== 'undefined') {
               "iLvl": 42,
               "reqLevel": 36,
               "stats": "+9 Str, +4 Sta, +3 Agi",
-              "icon": "inv_sword_24"
+              "icon": "inv_sword_24",
+              "source": "Horde SM Quest: Into The Scarlet Monastery"
             },
             {
               "name": "Nightblade",
@@ -7327,7 +7551,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.50",
                 "(43.43 damage per second)",
                 "Requires Level 39"
-              ]
+              ],
+              "source": "World Drop Epic"
             },
             {
               "name": "Hammer of Expertise",
@@ -7347,7 +7572,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.10",
                 "(36.90 damage per second)",
                 "Requires Level 40"
-              ]
+              ],
+              "source": "World Drop Epic"
             },
             {
               "name": "Gut Ripper",
@@ -7367,7 +7593,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.80",
                 "(33.89 damage per second)",
                 "Requires Level 40"
-              ]
+              ],
+              "source": "World Drop Epic"
             },
             {
               "name": "Ardent Custodian",
@@ -7386,8 +7613,10 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 2.10",
                 "(32.86 damage per second)",
+                "+100 Armor",
                 "Requires Level 38"
-              ]
+              ],
+              "source": "World Drop Epic"
             },
             {
               "name": "Primitive Fishing Pole",
@@ -7406,8 +7635,12 @@ if (typeof window !== 'undefined') {
                 "Polearm",
                 "Speed 3.30",
                 "(39.55 damage per second)",
+                "+7 Strength",
+                "+10 Agility",
+                "+20 Stamina",
                 "Requires Level 40"
-              ]
+              ],
+              "source": "Friz Frazzlespark"
             },
             {
               "name": "The Skullcracker",
@@ -7426,8 +7659,10 @@ if (typeof window !== 'undefined') {
                 "2H Mace",
                 "Speed 3.30",
                 "(39.55 damage per second)",
+                "+22 Spirit",
                 "Requires Level 40"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             }
           ],
           "faction": "both",
@@ -7440,6 +7675,7 @@ if (typeof window !== 'undefined') {
             "Two-Hand",
             "104 - 157 Damage\tSpeed 3.50",
             "(37.29 damage per second)",
+            "Chance on hit: Attack all nearby enemies, dealing weapon damage plus 5 every 3 sec for 9 sec, and reducing your own movement speed by 80%.",
             "Requires Level 37",
             "Chance on hit: Attack all nearby enemies, dealing weapon damage plus 5 every 3 sec for 9 sec, and reducing your own movement speed by 80%."
           ]
@@ -7469,7 +7705,8 @@ if (typeof window !== 'undefined') {
               "iLvl": 46,
               "reqLevel": 40,
               "stats": "",
-              "icon": "inv_sword_04"
+              "icon": "inv_sword_04",
+              "source": "Uldaman: Archaedas"
             },
             {
               "name": "The Pacifier",
@@ -7492,7 +7729,8 @@ if (typeof window !== 'undefined') {
                 "+20 Strength",
                 "+8 Stamina",
                 "Requires Level 36"
-              ]
+              ],
+              "source": "World Drop BoE Mace"
             },
             {
               "name": "Gul'gash's Greathammer",
@@ -7515,7 +7753,8 @@ if (typeof window !== 'undefined') {
                 "+19 Strength",
                 "Requires Level 44",
                 "Equip: Increases damage done by magical spells and effects by up to 21"
-              ]
+              ],
+              "source": "Feralas Drop"
             },
             {
               "name": "Flurry Axe",
@@ -7535,7 +7774,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.50",
                 "(35.3 damage per second)",
                 "Requires Level 42"
-              ]
+              ],
+              "source": "World Drop Epic"
             },
             {
               "name": "Diabolic Skiver",
@@ -7555,7 +7795,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.90",
                 "(42.76 damage per second)",
                 "Requires Level 44"
-              ]
+              ],
+              "source": "Shadowpriest Sezz'ziz"
             },
             {
               "name": "Blade of the Titans",
@@ -7578,7 +7819,8 @@ if (typeof window !== 'undefined') {
                 "+10 Strength",
                 "+24 Stamina",
                 "Requires Level 44"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Bonechewer",
@@ -7598,7 +7840,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.80",
                 "(42.0 damage per second)",
                 "Requires Level 43"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Wardcleaver",
@@ -7617,7 +7860,8 @@ if (typeof window !== 'undefined') {
                 "2H Axe",
                 "Speed 3.50",
                 "(41.86 damage per second)"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Grimlok's Charge",
@@ -7637,7 +7881,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.70",
                 "(40.9 damage per second)",
                 "Requires Level 42"
-              ]
+              ],
+              "source": "Grimlok"
             },
             {
               "name": "Serpent Slicer",
@@ -7657,7 +7902,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.50",
                 "(32.8 damage per second)",
                 "Requires Level 44"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             }
           ],
           "faction": "both",
@@ -7709,7 +7955,8 @@ if (typeof window !== 'undefined') {
                 "(46.47 damage per second)",
                 "Requires Level 49",
                 "Chance on hit: Wounds the target for 168 damage and lowers their armor by 100."
-              ]
+              ],
+              "source": "Maraudon: Princess Theradras"
             },
             {
               "name": "Warmonger",
@@ -7732,7 +7979,8 @@ if (typeof window !== 'undefined') {
                 "+3 Strength",
                 "Requires Level 47",
                 "Equip: Improves your chance to hit by 3.0%."
-              ]
+              ],
+              "source": "World drop 2H sword"
             },
             {
               "name": "Sul'thraze the Lasher",
@@ -7752,7 +8000,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.60",
                 "(52.12 damage per second)",
                 "Requires Level 50"
-              ]
+              ],
+              "source": "World Drop Epic"
             },
             {
               "name": "Hammer of the Northern Wind",
@@ -7772,7 +8021,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.10",
                 "(39.52 damage per second)",
                 "Requires Level 49"
-              ]
+              ],
+              "source": "World Drop Epic"
             },
             {
               "name": "Limb Cleaver",
@@ -7791,8 +8041,11 @@ if (typeof window !== 'undefined') {
                 "2H Axe",
                 "Speed 2.40",
                 "(47.50 damage per second)",
+                "+27 Strength",
+                "+8 Stamina",
                 "Requires Level 50"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Thorium Greatmace",
@@ -7811,8 +8064,10 @@ if (typeof window !== 'undefined') {
                 "2H Mace",
                 "Speed 3.60",
                 "(47.36 damage per second)",
+                "+21 Strength",
                 "Requires Level 50"
-              ]
+              ],
+              "source": "Thorium Greatmace"
             },
             {
               "name": "Smoldering Claw",
@@ -7831,8 +8086,10 @@ if (typeof window !== 'undefined') {
                 "Polearm",
                 "Speed 2.90",
                 "(46.55 damage per second)",
+                "+10 Fire Resistance",
                 "Requires Level 49"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Bleakwood Hew",
@@ -7852,7 +8109,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.70",
                 "(46.5 damage per second)",
                 "Requires Level 49"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Darkspear Raider's Reaper",
@@ -7871,8 +8129,11 @@ if (typeof window !== 'undefined') {
                 "2H Axe",
                 "Speed 3.10",
                 "(45.81 damage per second)",
+                "+27 Strength",
+                "+7 Stamina",
                 "Requires Level 48"
-              ]
+              ],
+              "source": "Creeg Bothunk"
             },
             {
               "name": "Rebels' Rugged Reaper",
@@ -7891,8 +8152,11 @@ if (typeof window !== 'undefined') {
                 "2H Axe",
                 "Speed 3.10",
                 "(45.81 damage per second)",
+                "+27 Strength",
+                "+7 Stamina",
                 "Requires Level 48"
-              ]
+              ],
+              "source": "Bryanna Embreeze"
             }
           ],
           "faction": "both",
@@ -7905,6 +8169,7 @@ if (typeof window !== 'undefined') {
             "Two-Hand",
             "117 - 176 Damage\tSpeed 3.20",
             "(45.78 damage per second)",
+            "Chance on hit: Wounds the target causing them to bleed for 210 damage over 7 sec.",
             "Requires Level 48",
             "Chance on hit: Wounds the target causing them to bleed for 210 damage over 7 sec."
           ]
@@ -7934,7 +8199,8 @@ if (typeof window !== 'undefined') {
               "iLvl": 56,
               "reqLevel": 50,
               "stats": "",
-              "icon": "inv_axe_11"
+              "icon": "inv_axe_11",
+              "source": "BRD: Emperor Dagran Thaurissan"
             },
             {
               "name": "Enchanted Battlehammer",
@@ -7958,7 +8224,8 @@ if (typeof window !== 'undefined') {
                 "Requires Level 51",
                 "Equip: Increases your chance to Parry an attack by 1.4%.",
                 "Equip: Improves your chance to hit by 2.0%."
-              ]
+              ],
+              "source": "Crafted Blacksmithing (280)"
             },
             {
               "name": "Axe of the Deep Woods",
@@ -7978,7 +8245,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.70",
                 "(41.48 damage per second)",
                 "Requires Level 52"
-              ]
+              ],
+              "source": "World Drop Epic"
             },
             {
               "name": "Ice Barbed Spear",
@@ -7998,7 +8266,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.60",
                 "(53.9 damage per second)",
                 "Requires Level 51"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Twig of the World Tree",
@@ -8018,7 +8287,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.70",
                 "(49.7 damage per second)",
                 "Requires Level 53"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Corruption",
@@ -8037,8 +8307,11 @@ if (typeof window !== 'undefined') {
                 "2H Sword",
                 "Speed 3.30",
                 "(49.70 damage per second)",
+                "+30 Strength",
+                "+30 Stamina",
                 "Requires Level 53"
-              ]
+              ],
+              "source": "Corruption"
             },
             {
               "name": "Bear Poking Stick",
@@ -8057,8 +8330,11 @@ if (typeof window !== 'undefined') {
                 "Polearm",
                 "Speed 3.20",
                 "(49.69 damage per second)",
+                "+24 Agility",
+                "+9 Stamina",
                 "Requires Level 53"
-              ]
+              ],
+              "source": "Dala Fairmaw"
             },
             {
               "name": "Thorium Poleaxe",
@@ -8077,8 +8353,12 @@ if (typeof window !== 'undefined') {
                 "Polearm",
                 "Speed 3.40",
                 "(48.97 damage per second)",
+                "+13 Strength",
+                "+25 Agility",
+                "+10 Stamina",
                 "Requires Level 52"
-              ]
+              ],
+              "source": "Thorium Poleaxe"
             },
             {
               "name": "Demonslayer",
@@ -8098,7 +8378,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.10",
                 "(48.87 damage per second)",
                 "Requires Level 52"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Dark Iron Sunderer",
@@ -8118,7 +8399,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.60",
                 "(48.85 damage per second)",
                 "Requires Level 52"
-              ]
+              ],
+              "source": "Dark Iron Sunderer"
             }
           ],
           "faction": "both",
@@ -8131,6 +8413,7 @@ if (typeof window !== 'undefined') {
             "Two-Hand",
             "140 - 211 Damage\tSpeed 3.70",
             "(47.43 damage per second)",
+            "Chance on hit: Stuns target for 8 sec.",
             "Requires Level 50",
             "Chance on hit: Stuns target for 8 sec."
           ]
@@ -8160,7 +8443,8 @@ if (typeof window !== 'undefined') {
               "iLvl": 60,
               "reqLevel": 54,
               "stats": "",
-              "icon": "inv_weapon_halberd_01"
+              "icon": "inv_weapon_halberd_01",
+              "source": "LBRS: Warmaster Voone"
             },
             {
               "name": "Blackblade of Shahram",
@@ -8173,7 +8457,8 @@ if (typeof window !== 'undefined') {
               "iLvl": 60,
               "reqLevel": 54,
               "stats": "",
-              "icon": "inv_sword_34"
+              "icon": "inv_sword_34",
+              "source": "UBRS: General Drakkisath"
             },
             {
               "name": "The Unstoppable Force",
@@ -8198,7 +8483,8 @@ if (typeof window !== 'undefined') {
                 "Requires Level 55",
                 "Equip: Improves your chance to get a critical strike by 2.0%.",
                 "Chance on hit: Stuns target for 1 sec."
-              ]
+              ],
+              "source": "Alterac Valley Exalted"
             },
             {
               "name": "Dreadforge Retaliator",
@@ -8210,7 +8496,8 @@ if (typeof window !== 'undefined') {
               "iLvl": 60,
               "reqLevel": 54,
               "stats": "",
-              "icon": "inv_axe_11"
+              "icon": "inv_axe_11",
+              "source": "BRD Emperor"
             },
             {
               "name": "Icesworn Decapitator",
@@ -8235,7 +8522,8 @@ if (typeof window !== 'undefined') {
                 "+10 Frost Resistance",
                 "Requires Level 54",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 13"
-              ]
+              ],
+              "source": "Winterspring Rare"
             },
             {
               "name": "Sulfuras, Hand of Ragnaros",
@@ -8254,8 +8542,11 @@ if (typeof window !== 'undefined') {
                 "2H Mace",
                 "Speed 3.70",
                 "(80.41 damage per second)",
+                "+12 Strength",
+                "+12 Stamina",
                 "Requires Level 60"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Thunderfury, Blessed Blade of the Windseeker",
@@ -8274,8 +8565,11 @@ if (typeof window !== 'undefined') {
                 "1H Sword",
                 "Speed 1.90",
                 "(41.84 damage per second)",
+                "+5 Agility",
+                "+8 Stamina",
                 "Requires Level 60"
-              ]
+              ],
+              "source": "Rise, Thunderfury!"
             },
             {
               "name": "Dark Edge of Insanity",
@@ -8295,7 +8589,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.50",
                 "(86.6 damage per second)",
                 "Requires Level 60"
-              ]
+              ],
+              "source": "C'Thun"
             },
             {
               "name": "Grand Marshal's Polearm",
@@ -8314,8 +8609,11 @@ if (typeof window !== 'undefined') {
                 "Polearm",
                 "Speed 3.40",
                 "(80.29 damage per second)",
+                "+27 Agility",
+                "+47 Stamina, Improves your chance to get a critical strike by 2.0%.",
                 "Requires Level 60"
-              ]
+              ],
+              "source": "Captain O'Neal"
             },
             {
               "name": "High Warlord's Pig Poker",
@@ -8334,8 +8632,11 @@ if (typeof window !== 'undefined') {
                 "Polearm",
                 "Speed 3.40",
                 "(80.29 damage per second)",
+                "+27 Agility",
+                "+47 Stamina, Improves your chance to get a critical strike by 2.0%.",
                 "Requires Level 60"
-              ]
+              ],
+              "source": "Sergeant Thunderhorn"
             }
           ],
           "faction": "both",
@@ -8399,7 +8700,8 @@ if (typeof window !== 'undefined') {
                 "One-Hand",
                 "1 - 3 Damage\tSpeed 1.90",
                 "(1.05 damage per second)"
-              ]
+              ],
+              "source": "Starter vendor mace"
             },
             {
               "name": "Worn Shortsword",
@@ -8418,7 +8720,8 @@ if (typeof window !== 'undefined') {
                 "Main Hand",
                 "1 - 3 Damage\tSpeed 1.90",
                 "(1.05 damage per second)"
-              ]
+              ],
+              "source": "Starter sword"
             },
             {
               "name": "Gilded Blademaster's Greatsword",
@@ -8437,7 +8740,8 @@ if (typeof window !== 'undefined') {
                 "2H Sword",
                 "Speed 3.60",
                 "(5.00 damage per second)"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Militia Sword",
@@ -8455,8 +8759,10 @@ if (typeof window !== 'undefined') {
               "lines": [
                 "1H Sword",
                 "Speed 2.50",
-                "(6.40 damage per second)"
-              ]
+                "(6.40 damage per second)",
+                "+1 Stamina"
+              ],
+              "source": "Rare Books"
             },
             {
               "name": "Restored Longsword",
@@ -8475,7 +8781,8 @@ if (typeof window !== 'undefined') {
                 "2H Sword",
                 "Speed 3.10",
                 "(1.61 damage per second)"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Restored Smasher",
@@ -8494,7 +8801,8 @@ if (typeof window !== 'undefined') {
                 "2H Mace",
                 "Speed 3.10",
                 "(1.61 damage per second)"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Restored Spear",
@@ -8513,7 +8821,8 @@ if (typeof window !== 'undefined') {
                 "Polearm",
                 "Speed 3.10",
                 "(1.61 damage per second)"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Restored Basher",
@@ -8532,7 +8841,8 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 2.20",
                 "(1.14 damage per second)"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Restored Shortsword",
@@ -8551,7 +8861,8 @@ if (typeof window !== 'undefined') {
                 "1H Sword",
                 "Speed 2.20",
                 "(1.14 damage per second)"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Thicket Hammer",
@@ -8570,7 +8881,8 @@ if (typeof window !== 'undefined') {
                 "2H Mace",
                 "Speed 3.10",
                 "(6.45 damage per second)"
-              ]
+              ],
+              "source": "Crown of the Earth"
             }
           ],
           "faction": "alliance",
@@ -8616,7 +8928,8 @@ if (typeof window !== 'undefined') {
                 "Two-Hand",
                 "4 - 6 Damage\tSpeed 3.20",
                 "(1.56 damage per second)"
-              ]
+              ],
+              "source": "Starter vendor 2H mace"
             },
             {
               "name": "Copper Shortsword",
@@ -8638,7 +8951,8 @@ if (typeof window !== 'undefined') {
                 "(5.40 damage per second)",
                 "+1 Strength",
                 "Requires Level 4"
-              ]
+              ],
+              "source": "Blacksmithing (20)"
             },
             {
               "name": "Steady Bastard Sword",
@@ -8658,7 +8972,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.70",
                 "(7.6 damage per second)",
                 "Requires Level 4"
-              ]
+              ],
+              "source": "Skull Rock"
             },
             {
               "name": "Valley Cosh",
@@ -8677,8 +8992,10 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 1.90",
                 "(6.05 damage per second)",
+                "+1 Stamina",
                 "Requires Level 4"
-              ]
+              ],
+              "source": "Stalk With The Earthmother"
             },
             {
               "name": "Stinging Mace",
@@ -8697,8 +9014,10 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 2.30",
                 "(5.87 damage per second)",
+                "+1 Strength",
                 "Requires Level 4"
-              ]
+              ],
+              "source": "Skull Rock"
             },
             {
               "name": "Brushwood Blade",
@@ -8717,8 +9036,10 @@ if (typeof window !== 'undefined') {
                 "1H Sword",
                 "Speed 3.00",
                 "(5.33 damage per second)",
+                "+1 Stamina",
                 "Requires Level 3"
-              ]
+              ],
+              "source": "Druid of the Claw"
             },
             {
               "name": "Thornroot Club",
@@ -8737,8 +9058,11 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 2.10",
                 "(4.52 damage per second)",
+                "+1 Stamina",
+                "+6 Spell Power",
                 "Requires Level 4"
-              ]
+              ],
+              "source": "Ursal the Mauler"
             },
             {
               "name": "Explorer's Shortsword",
@@ -8757,8 +9081,10 @@ if (typeof window !== 'undefined') {
                 "1H Sword",
                 "Speed 2.60",
                 "(4.42 damage per second)",
+                "+1 Strength",
                 "Requires Level 3"
-              ]
+              ],
+              "source": "Slydris"
             },
             {
               "name": "Centaur Skull Basher",
@@ -8778,7 +9104,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.30",
                 "(5.00 damage per second)",
                 "Requires Level 4"
-              ]
+              ],
+              "source": "The High Chieftain"
             },
             {
               "name": "Rusted Claymore",
@@ -8798,7 +9125,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.10",
                 "(5.0 damage per second)",
                 "Requires Level 4"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             }
           ],
           "faction": "both",
@@ -8844,7 +9172,8 @@ if (typeof window !== 'undefined') {
                 "Two-Hand",
                 "4 - 6 Damage\tSpeed 3.20",
                 "(1.56 damage per second)"
-              ]
+              ],
+              "source": "Vendor 2H mace"
             },
             {
               "name": "Copper Mace",
@@ -8864,7 +9193,8 @@ if (typeof window !== 'undefined') {
                 "7 - 13 Damage\tSpeed 2.60",
                 "(3.85 damage per second)",
                 "Requires Level 4"
-              ]
+              ],
+              "source": "Blacksmithing (15)"
             },
             {
               "name": "Honed Greathammer",
@@ -8883,8 +9213,11 @@ if (typeof window !== 'undefined') {
                 "2H Mace",
                 "Speed 3.20",
                 "(9.06 damage per second)",
+                "+2 Strength",
+                "+2 Spirit",
                 "Requires Level 6"
-              ]
+              ],
+              "source": "Return to Valanaar"
             },
             {
               "name": "Coldridge Hammer",
@@ -8903,8 +9236,11 @@ if (typeof window !== 'undefined') {
                 "2H Mace",
                 "Speed 2.70",
                 "(8.33 damage per second)",
+                "+1 Strength",
+                "+1 Spirit",
                 "Requires Level 6"
-              ]
+              ],
+              "source": "Protecting the Herd"
             },
             {
               "name": "Goblin Smasher",
@@ -8926,7 +9262,8 @@ if (typeof window !== 'undefined') {
                 "(8.23 damage per second)",
                 "+2 Strength",
                 "Requires Level 5"
-              ]
+              ],
+              "source": "Supervisor Fizsprocket"
             },
             {
               "name": "Brushwood Blade",
@@ -8945,7 +9282,8 @@ if (typeof window !== 'undefined') {
                 "2H Sword",
                 "Speed 3.00",
                 "(7.2 damage per second)"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Farmer's Shovel",
@@ -8964,8 +9302,10 @@ if (typeof window !== 'undefined') {
                 "2H Mace",
                 "Speed 3.70",
                 "(7.16 damage per second)",
+                "+1 Strength",
                 "Requires Level 5"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Training Sword",
@@ -8985,7 +9325,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.50",
                 "(7.1 damage per second)",
                 "Requires Level 5"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Planting Shovel",
@@ -9004,8 +9345,10 @@ if (typeof window !== 'undefined') {
                 "2H Mace",
                 "Speed 2.50",
                 "(7.00 damage per second)",
+                "+1 Strength",
                 "Requires Level 5"
-              ]
+              ],
+              "source": "Deliver the News"
             },
             {
               "name": "Skorn's Hammer",
@@ -9024,8 +9367,10 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 2.70",
                 "(6.48 damage per second)",
+                "+1 Strength",
                 "Requires Level 6"
-              ]
+              ],
+              "source": "The Demon Scarred Cloak"
             }
           ],
           "faction": "both",
@@ -9075,7 +9420,8 @@ if (typeof window !== 'undefined') {
                 "25 - 38 Damage\tSpeed 3.50",
                 "(9.00 damage per second)",
                 "Requires Level 10"
-              ]
+              ],
+              "source": "Town vendor 2H mace"
             },
             {
               "name": "Copper Claymore",
@@ -9098,7 +9444,8 @@ if (typeof window !== 'undefined') {
                 "+1 Strength",
                 "+1 Stamina",
                 "Requires Level 6"
-              ]
+              ],
+              "source": "Blacksmithing (25)"
             },
             {
               "name": "Empyrean Greatsword",
@@ -9117,8 +9464,10 @@ if (typeof window !== 'undefined') {
                 "2H Sword",
                 "Speed 3.00",
                 "(10.17 damage per second)",
+                "+4 Strength",
                 "Requires Level 7"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Bonecracker",
@@ -9140,7 +9489,8 @@ if (typeof window !== 'undefined') {
                 "(9.06 damage per second)",
                 "+3 Strength",
                 "Requires Level 7"
-              ]
+              ],
+              "source": "The Family Crypt"
             },
             {
               "name": "Spiked Club",
@@ -9160,7 +9510,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.10",
                 "(9.0 damage per second)",
                 "Requires Level 8"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Driftwood Smasher",
@@ -9179,8 +9530,10 @@ if (typeof window !== 'undefined') {
                 "2H Mace",
                 "Speed 3.30",
                 "(8.94 damage per second)",
+                "+2 Stamina",
                 "Requires Level 7"
-              ]
+              ],
+              "source": "Murlocs at the Gates"
             },
             {
               "name": "Icepane Warhammer",
@@ -9200,7 +9553,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.30",
                 "(8.5 damage per second)",
                 "Requires Level 7"
-              ]
+              ],
+              "source": "Hammerspine"
             },
             {
               "name": "Short Bastard Sword",
@@ -9220,7 +9574,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.00",
                 "(8.3 damage per second)",
                 "Requires Level 7"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Skullthumper",
@@ -9240,7 +9595,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.50",
                 "(7.00 damage per second)",
                 "Requires Level 7"
-              ]
+              ],
+              "source": "Murlocs at the Gates"
             },
             {
               "name": "Ancient Skyborne Blade",
@@ -9260,7 +9616,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.50",
                 "(7.00 damage per second)",
                 "Requires Level 8"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             }
           ],
           "faction": "alliance",
@@ -9308,8 +9665,10 @@ if (typeof window !== 'undefined') {
                 "Two-Hand",
                 "39 - 60 Damage\tSpeed 3.10",
                 "(15.97 damage per second)",
+                "Chance on hit: Blasts a target for 42 Fire damage.",
                 "Chance on hit: Blasts a target for 42 Fire damage."
-              ]
+              ],
+              "source": "Old Ironforge Incursion quest"
             },
             {
               "name": "Trogg Scepter",
@@ -9332,7 +9691,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases healing done by up to 33"
               ],
               "reqLevel": 13,
-              "icon": "inv_misc_bone_10"
+              "icon": "inv_misc_bone_10",
+              "source": "RFC: Oggleflint 1H mace"
             },
             {
               "name": "Heavy Copper Broadsword",
@@ -9354,7 +9714,8 @@ if (typeof window !== 'undefined') {
                 "(12.58 damage per second)",
                 "+6 Stamina",
                 "Requires Level 14"
-              ]
+              ],
+              "source": "Blacksmithing (65)"
             },
             {
               "name": "Hammerbone",
@@ -9377,7 +9738,8 @@ if (typeof window !== 'undefined') {
                 "+7 Strength",
                 "+10 Spirit",
                 "Requires Level 10"
-              ]
+              ],
+              "source": "Leaders of the Fang"
             },
             {
               "name": "Wingblade",
@@ -9400,7 +9762,8 @@ if (typeof window !== 'undefined') {
                 "+5 Agility",
                 "+2 Stamina",
                 "Requires Level 10"
-              ]
+              ],
+              "source": "Leaders of the Fang"
             },
             {
               "name": "Hammer of Orgrimmar",
@@ -9423,7 +9786,8 @@ if (typeof window !== 'undefined') {
                 "+3 Strength",
                 "+3 Spirit",
                 "Requires Level 9"
-              ]
+              ],
+              "source": "Hidden Enemies"
             },
             {
               "name": "Samophlange Screwdriver",
@@ -9443,7 +9807,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.50",
                 "(12.6 damage per second)",
                 "Requires Level 10"
-              ]
+              ],
+              "source": "Samophlange Manual"
             },
             {
               "name": "Talonstrike",
@@ -9462,8 +9827,10 @@ if (typeof window !== 'undefined') {
                 "1H Sword",
                 "Speed 1.60",
                 "(12.19 damage per second)",
+                "+3 Agility",
                 "Requires Level 10"
-              ]
+              ],
+              "source": "Assault on Fenris Isle"
             },
             {
               "name": "Edge of the People's Militia",
@@ -9483,7 +9850,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.90",
                 "(11.2 damage per second)",
                 "Requires Level 9"
-              ]
+              ],
+              "source": "The People's Militia"
             },
             {
               "name": "Birchwood Maul",
@@ -9503,7 +9871,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.30",
                 "(10.0 damage per second)",
                 "Requires Level 10"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             }
           ],
           "faction": "both",
@@ -9550,7 +9919,8 @@ if (typeof window !== 'undefined') {
                 "25 - 38 Damage\tSpeed 3.50",
                 "(9.00 damage per second)",
                 "Requires Level 10"
-              ]
+              ],
+              "source": "Slow 3.50s swing"
             },
             {
               "name": "Heavy Copper Broadsword",
@@ -9572,7 +9942,8 @@ if (typeof window !== 'undefined') {
                 "(12.58 damage per second)",
                 "+6 Stamina",
                 "Requires Level 14"
-              ]
+              ],
+              "source": "Blacksmithing (65)"
             },
             {
               "name": "Ironforge Greathammer",
@@ -9592,8 +9963,10 @@ if (typeof window !== 'undefined') {
                 "Two-Hand",
                 "39 - 60 Damage\tSpeed 3.10",
                 "(15.97 damage per second)",
+                "Chance on hit: Blasts a target for 42 Fire damage.",
                 "Chance on hit: Blasts a target for 42 Fire damage."
-              ]
+              ],
+              "source": "Ironforge Quest"
             },
             {
               "name": "Woodsman Sword",
@@ -9613,7 +9986,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.30",
                 "(13.0 damage per second)",
                 "Requires Level 12"
-              ]
+              ],
+              "source": "Mathystra Relics"
             },
             {
               "name": "Burrowing Shovel",
@@ -9632,8 +10006,10 @@ if (typeof window !== 'undefined') {
                 "2H Mace",
                 "Speed 3.00",
                 "(11.33 damage per second)",
+                "+5 Strength",
                 "Requires Level 12"
-              ]
+              ],
+              "source": "Master Digger"
             },
             {
               "name": "Coral Claymore",
@@ -9652,8 +10028,11 @@ if (typeof window !== 'undefined') {
                 "2H Sword",
                 "Speed 3.10",
                 "(11.29 damage per second)",
+                "+3 Strength",
+                "+3 Stamina",
                 "Requires Level 12"
-              ]
+              ],
+              "source": "Slark"
             },
             {
               "name": "Merc Sword",
@@ -9673,7 +10052,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.80",
                 "(10.7 damage per second)",
                 "Requires Level 11"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Elegant Shortsword",
@@ -9692,8 +10072,10 @@ if (typeof window !== 'undefined') {
                 "1H Sword",
                 "Speed 2.00",
                 "(10.00 damage per second)",
+                "+3 Stamina",
                 "Requires Level 12"
-              ]
+              ],
+              "source": "Serena Bloodfeather"
             },
             {
               "name": "Hardwood Cudgel",
@@ -9712,8 +10094,11 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 2.60",
                 "(10.00 damage per second)",
+                "+2 Strength",
+                "+2 Stamina",
                 "Requires Level 12"
-              ]
+              ],
+              "source": "Mathystra Relics"
             },
             {
               "name": "Petrified Shinbone",
@@ -9733,7 +10118,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.00",
                 "(8.8 damage per second)",
                 "Requires Level 12"
-              ]
+              ],
+              "source": "Undead Dynamiter"
             }
           ],
           "faction": "both",
@@ -9784,7 +10170,8 @@ if (typeof window !== 'undefined') {
                 "(12.58 damage per second)",
                 "+6 Stamina",
                 "Requires Level 14"
-              ]
+              ],
+              "source": "Blacksmithing (65)"
             },
             {
               "name": "Bronze Mace",
@@ -9805,7 +10192,8 @@ if (typeof window !== 'undefined') {
                 "(11.15 damage per second)",
                 "+3 Stamina",
                 "Requires Level 17"
-              ]
+              ],
+              "source": "Blacksmithing (75)"
             },
             {
               "name": "Blackwater Cutlass",
@@ -9824,8 +10212,10 @@ if (typeof window !== 'undefined') {
                 "1H Sword",
                 "Speed 1.90",
                 "(12.89 damage per second)",
+                "+4 Agility",
                 "Requires Level 14"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Cursed Felblade",
@@ -9845,7 +10235,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.30",
                 "(12.17 damage per second)",
                 "Requires Level 13"
-              ]
+              ],
+              "source": "Taragaman the Hungerer"
             },
             {
               "name": "Seraph's Strike",
@@ -9865,7 +10256,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.20",
                 "(21.1 damage per second)",
                 "Requires Level 13"
-              ]
+              ],
+              "source": "The Tower of Althalaxx"
             },
             {
               "name": "Wildgore Greatsword",
@@ -9884,8 +10276,10 @@ if (typeof window !== 'undefined') {
                 "2H Sword",
                 "Speed 3.10",
                 "(12.58 damage per second)",
+                "+6 Strength",
                 "Requires Level 14"
-              ]
+              ],
+              "source": "Unwelcome Guests"
             },
             {
               "name": "Heavy Spiked Mace",
@@ -9905,7 +10299,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.40",
                 "(12.5 damage per second)",
                 "Requires Level 14"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Trogg Slicer",
@@ -9925,7 +10320,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.40",
                 "(11.9 damage per second)",
                 "Requires Level 13"
-              ]
+              ],
+              "source": "Gathering Idols"
             },
             {
               "name": "Ironwood Maul",
@@ -9945,7 +10341,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.80",
                 "(11.8 damage per second)",
                 "Requires Level 13"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Mo'grosh Toothpick",
@@ -9965,7 +10362,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.80",
                 "(11.8 damage per second)",
                 "Requires Level 13"
-              ]
+              ],
+              "source": "Mo'grosh Ogre"
             }
           ],
           "faction": "alliance",
@@ -9978,6 +10376,7 @@ if (typeof window !== 'undefined') {
             "Two-Hand",
             "39 - 60 Damage\tSpeed 3.10",
             "(15.97 damage per second)",
+            "Chance on hit: Blasts a target for 42 Fire damage.",
             "Chance on hit: Blasts a target for 42 Fire damage."
           ]
         },
@@ -10015,7 +10414,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases healing done by up to 33"
               ],
               "reqLevel": 22,
-              "icon": "inv_sword_27"
+              "icon": "inv_sword_27",
+              "source": "Ruins of Lordaeron: Captain"
             },
             {
               "name": "Monstrous Cleaver",
@@ -10038,7 +10438,8 @@ if (typeof window !== 'undefined') {
                 "+6 Stamina",
                 "Equip: +4 Attack Power.",
                 "Equip: +6 Attack Power against Undead."
-              ]
+              ],
+              "source": "Dalaran Dungeon"
             },
             {
               "name": "Black Malice",
@@ -10057,8 +10458,10 @@ if (typeof window !== 'undefined') {
                 "2H Mace",
                 "Speed 3.30",
                 "(18.33 damage per second)",
+                "+2 Shadow Resistance",
                 "Requires Level 16"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Rakzur Club",
@@ -10078,7 +10481,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.60",
                 "(18.3 damage per second)",
                 "Requires Level 16"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Face Smasher",
@@ -10098,7 +10502,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.60",
                 "(14.0 damage per second)",
                 "Requires Level 16"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Cookie's Tenderizer",
@@ -10117,8 +10522,10 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 2.80",
                 "(13.93 damage per second)",
+                "+4 Spirit",
                 "Requires Level 16"
-              ]
+              ],
+              "source": "Cookie"
             },
             {
               "name": "Ironpatch Blade",
@@ -10138,7 +10545,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.60",
                 "(13.5 damage per second)",
                 "Requires Level 15"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Night Watch Shortsword",
@@ -10158,7 +10566,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.60",
                 "(13.5 damage per second)",
                 "Requires Level 15"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Big Bad Basher",
@@ -10177,8 +10586,11 @@ if (typeof window !== 'undefined') {
                 "2H Mace",
                 "Speed 3.10",
                 "(15.97 damage per second)",
+                "+4 Strength",
+                "+6 Stamina",
                 "Requires Level 15"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Ghoulfang",
@@ -10198,7 +10610,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.60",
                 "(13.75 damage per second)",
                 "Requires Level 16"
-              ]
+              ],
+              "source": "Leprithus"
             }
           ],
           "faction": "both",
@@ -10250,7 +10663,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases healing done by up to 33"
               ],
               "reqLevel": 22,
-              "icon": "inv_sword_27"
+              "icon": "inv_sword_27",
+              "source": "Ruins of Lordaeron: Captain"
             },
             {
               "name": "Bronze Warhammer",
@@ -10273,7 +10687,8 @@ if (typeof window !== 'undefined') {
                 "+6 Strength",
                 "+6 Stamina",
                 "Requires Level 20"
-              ]
+              ],
+              "source": "Blacksmithing (90)"
             },
             {
               "name": "Sword of the Fallen",
@@ -10296,7 +10711,8 @@ if (typeof window !== 'undefined') {
                 "+6 Strength",
                 "+9 Intellect",
                 "Requires Level 18"
-              ]
+              ],
+              "source": "Rare Drop"
             },
             {
               "name": "Searing Blade",
@@ -10316,7 +10732,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.50",
                 "(19.60 damage per second)",
                 "Requires Level 18"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Impaling Harpoon",
@@ -10335,8 +10752,11 @@ if (typeof window !== 'undefined') {
                 "Polearm",
                 "Speed 2.40",
                 "(18.96 damage per second)",
+                "+9 Agility",
+                "+5 Intellect",
                 "Requires Level 17"
-              ]
+              ],
+              "source": "Captain Greenskin"
             },
             {
               "name": "Goblin Hammer",
@@ -10355,8 +10775,11 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 2.00",
                 "(15.25 damage per second)",
+                "+4 Stamina",
+                "+20 Armor",
                 "Requires Level 18"
-              ]
+              ],
+              "source": "Gilnid"
             },
             {
               "name": "Buzz Saw",
@@ -10375,8 +10798,11 @@ if (typeof window !== 'undefined') {
                 "1H Sword",
                 "Speed 2.30",
                 "(15.22 damage per second)",
+                "+3 Agility",
+                "+3 Stamina",
                 "Requires Level 18"
-              ]
+              ],
+              "source": "Sneed's Shredder"
             },
             {
               "name": "Butcher's Slicer",
@@ -10395,8 +10821,10 @@ if (typeof window !== 'undefined') {
                 "1H Sword",
                 "Speed 2.90",
                 "(15.00 damage per second)",
+                "+3 Stamina",
                 "Requires Level 18"
-              ]
+              ],
+              "source": "Razorclaw the Butcher"
             },
             {
               "name": "Legionnaire's Sword",
@@ -10416,7 +10844,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.70",
                 "(15.0 damage per second)",
                 "Requires Level 18"
-              ]
+              ],
+              "source": "Kelm Hargunth"
             },
             {
               "name": "Protector's Sword",
@@ -10436,7 +10865,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.70",
                 "(15.0 damage per second)",
                 "Requires Level 18"
-              ]
+              ],
+              "source": "Illiyana Moonblaze"
             }
           ],
           "faction": "both",
@@ -10489,7 +10919,8 @@ if (typeof window !== 'undefined') {
                 "+6 Strength",
                 "+6 Stamina",
                 "Requires Level 20"
-              ]
+              ],
+              "source": "Blacksmithing (90)"
             },
             {
               "name": "Bronze Greatsword",
@@ -10512,7 +10943,8 @@ if (typeof window !== 'undefined') {
                 "+6 Stamina",
                 "Requires Level 21",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 7"
-              ]
+              ],
+              "source": "Blacksmithing (105)"
             },
             {
               "name": "Duskbringer",
@@ -10532,7 +10964,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.40",
                 "(21.03 damage per second)",
                 "Requires Level 20"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Puncturing Spear",
@@ -10552,7 +10985,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.10",
                 "(20.32 damage per second)",
                 "Requires Level 19"
-              ]
+              ],
+              "source": "Swinegart Spearhide"
             },
             {
               "name": "Gargoyle's Bite",
@@ -10571,8 +11005,10 @@ if (typeof window !== 'undefined') {
                 "Polearm",
                 "Speed 2.90",
                 "(18.97 damage per second)",
+                "+10 Strength",
                 "Requires Level 20"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Diamond Hammer",
@@ -10592,7 +11028,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.50",
                 "(16.2 damage per second)",
                 "Requires Level 20"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Barrens Basher",
@@ -10611,8 +11048,11 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 2.10",
                 "(15.95 damage per second)",
+                "+2 Strength",
+                "+5 Stamina",
                 "Requires Level 20"
-              ]
+              ],
+              "source": "Winklespark"
             },
             {
               "name": "Skeletal Club",
@@ -10632,7 +11072,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.60",
                 "(15.6 damage per second)",
                 "Requires Level 19"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Shadowfang",
@@ -10652,7 +11093,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.70",
                 "(15.56 damage per second)",
                 "Requires Level 19"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Cruel Barb",
@@ -10674,7 +11116,8 @@ if (typeof window !== 'undefined') {
                 "(15.54 damage per second)",
                 "Requires Level 19",
                 "Equip: +12 Attack Power."
-              ]
+              ],
+              "source": "Edwin VanCleef"
             }
           ],
           "faction": "alliance",
@@ -10727,7 +11170,8 @@ if (typeof window !== 'undefined') {
                 "(25.61 damage per second)",
                 "Requires Level 26",
                 "Chance on hit: Inflict 42 Fire and 14 Frost damage, slow the target by 50% for 5 sec, reduce armor by 50, and inflict 7 Nature damage every 3 sec for 12 sec."
-              ]
+              ],
+              "source": "BFD: Aku'mai"
             },
             {
               "name": "Solid Iron Maul",
@@ -10750,7 +11194,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases damage and healing done by magical spells and effects by up to 24"
               ],
               "reqLevel": 26,
-              "icon": "inv_hammer_07"
+              "icon": "inv_hammer_07",
+              "source": "Blacksmithing (135)"
             },
             {
               "name": "The Skyblade",
@@ -10774,7 +11219,8 @@ if (typeof window !== 'undefined') {
                 "+8 Stamina",
                 "Requires Level 22",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 6"
-              ]
+              ],
+              "source": "Ashenvale Rare"
             },
             {
               "name": "Gizmotron Megachopper",
@@ -10794,7 +11240,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.20",
                 "(23.9 damage per second)",
                 "Requires Level 24"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Slaghammer",
@@ -10814,7 +11261,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.80",
                 "(23.8 damage per second)",
                 "Requires Level 24"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Headbasher",
@@ -10833,8 +11281,12 @@ if (typeof window !== 'undefined') {
                 "2H Mace",
                 "Speed 2.30",
                 "(23.70 damage per second)",
+                "+9 Strength",
+                "+5 Stamina",
+                "+10 Intellect",
                 "Requires Level 22"
-              ]
+              ],
+              "source": "The Fury Runs Deep"
             },
             {
               "name": "Bloodpike",
@@ -10854,7 +11306,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.20",
                 "(23.13 damage per second)",
                 "Requires Level 23"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Onyx Claymore",
@@ -10873,8 +11326,12 @@ if (typeof window !== 'undefined') {
                 "2H Sword",
                 "Speed 2.80",
                 "(23.04 damage per second)",
+                "+10 Strength",
+                "+5 Stamina",
+                "+6 Spirit",
                 "Requires Level 23"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Graverobber's Shovel",
@@ -10893,8 +11350,10 @@ if (typeof window !== 'undefined') {
                 "2H Mace",
                 "Speed 3.70",
                 "(22.97 damage per second)",
+                "+10 Stamina",
                 "Requires Level 23"
-              ]
+              ],
+              "source": "Dextren Ward"
             },
             {
               "name": "Dense Triangle Mace",
@@ -10914,7 +11373,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.40",
                 "(22.9 damage per second)",
                 "Requires Level 23"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             }
           ],
           "faction": "alliance",
@@ -10967,7 +11427,8 @@ if (typeof window !== 'undefined') {
                 "+12 Spirit"
               ],
               "reqLevel": 24,
-              "icon": "inv_sword_04"
+              "icon": "inv_sword_04",
+              "source": "Redridge Quest"
             },
             {
               "name": "Dendweller's Hammer",
@@ -10990,7 +11451,8 @@ if (typeof window !== 'undefined') {
                 "Requires Level 26"
               ],
               "reqLevel": 26,
-              "icon": "inv_hammer_09"
+              "icon": "inv_hammer_09",
+              "source": "Level 26 Mace"
             },
             {
               "name": "Hardened Iron Shortsword",
@@ -11012,7 +11474,8 @@ if (typeof window !== 'undefined') {
                 "(16.67 damage per second)",
                 "+5 Stamina",
                 "Requires Level 27"
-              ]
+              ],
+              "source": "Blacksmithing (130)"
             },
             {
               "name": "Defender of Dalaran",
@@ -11035,7 +11498,8 @@ if (typeof window !== 'undefined') {
                 "+9 Intellect"
               ],
               "reqLevel": 24,
-              "icon": "inv_hammer_20"
+              "icon": "inv_hammer_20",
+              "source": "Dalaran Dungeon"
             },
             {
               "name": "Combatant Claymore",
@@ -11055,7 +11519,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.90",
                 "(27.8 damage per second)",
                 "Requires Level 28"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Ruby-Adorned Blade",
@@ -11078,7 +11543,8 @@ if (typeof window !== 'undefined') {
                 "+3 Agility",
                 "+8 Stamina",
                 "Requires Level 25"
-              ]
+              ],
+              "source": "The Eye of Bhossca"
             },
             {
               "name": "Deanship Claymore",
@@ -11097,8 +11563,10 @@ if (typeof window !== 'undefined') {
                 "2H Sword",
                 "Speed 2.80",
                 "(23.75 damage per second)",
+                "+4 Spirit",
                 "Requires Level 26"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Darkspear Skirmisher's Bludgeon",
@@ -11117,8 +11585,10 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 2.80",
                 "(21.43 damage per second)",
+                "+7 Stamina",
                 "Requires Level 28"
-              ]
+              ],
+              "source": "Creeg Bothunk"
             },
             {
               "name": "Dreamslayer",
@@ -11138,7 +11608,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.10",
                 "(21.4 damage per second)",
                 "Requires Level 28"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Guerrilla's Jagged Mace",
@@ -11157,8 +11628,10 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 2.80",
                 "(21.43 damage per second)",
+                "+7 Stamina",
                 "Requires Level 28"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             }
           ],
           "faction": "both",
@@ -11210,7 +11683,8 @@ if (typeof window !== 'undefined') {
                 "+9 Intellect"
               ],
               "reqLevel": 24,
-              "icon": "inv_hammer_20"
+              "icon": "inv_hammer_20",
+              "source": "City of Dalaran Quest: Heart of Disruption"
             },
             {
               "name": "Dark Hearted Hammer",
@@ -11232,7 +11706,8 @@ if (typeof window !== 'undefined') {
                 "+8 Stamina"
               ],
               "reqLevel": 30,
-              "icon": "inv_hammer_16"
+              "icon": "inv_hammer_16",
+              "source": "STV Quest: Colonel Kurzen"
             },
             {
               "name": "Master Hunter's Spellsword",
@@ -11254,7 +11729,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases damage and healing done by magical spells and effects by up to 14"
               ],
               "reqLevel": 28,
-              "icon": "inv_sword_42"
+              "icon": "inv_sword_42",
+              "source": "STV Quest: Big Game Hunter"
             },
             {
               "name": "Rage of the Storm",
@@ -11277,7 +11753,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases the damage dealt by your Stormstrike ability by 10%."
               ],
               "reqLevel": 30,
-              "icon": "inv_mace_42"
+              "icon": "inv_mace_42",
+              "source": "Custom Boss Drop"
             },
             {
               "name": "Ironwood Destroyer",
@@ -11292,8 +11769,10 @@ if (typeof window !== 'undefined') {
               "icon": "inv_mace_05",
               "weaponType": "Two-Handed Mace",
               "lines": [
+                "Use: Use to sketch a location on the Shapers Terrace map.",
                 "Use: Use to sketch a location on the Shapers Terrace map."
-              ]
+              ],
+              "source": "2H Mace from Excavation Site: Wetlands quest (Horrors in the Highland)"
             },
             {
               "name": "Whirlwind Warhammer",
@@ -11316,7 +11795,8 @@ if (typeof window !== 'undefined') {
                 "+16 Strength",
                 "+15 Stamina",
                 "Requires Level 30"
-              ]
+              ],
+              "source": "Whirlwind Weapon"
             },
             {
               "name": "Whirlwind Sword",
@@ -11339,7 +11819,8 @@ if (typeof window !== 'undefined') {
                 "+16 Strength",
                 "+15 Stamina",
                 "Requires Level 30"
-              ]
+              ],
+              "source": "Whirlwind Weapon"
             },
             {
               "name": "Morbid Dawn",
@@ -11359,7 +11840,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.90",
                 "(30.2 damage per second)",
                 "Requires Level 30"
-              ]
+              ],
+              "source": "Fallen Champion"
             },
             {
               "name": "Viscous Hammer",
@@ -11379,7 +11861,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.90",
                 "(30.2 damage per second)",
                 "Requires Level 30"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Cobalt Crusher",
@@ -11399,7 +11882,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.20",
                 "(28.91 damage per second)",
                 "Requires Level 29"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             }
           ],
           "faction": "alliance",
@@ -11446,7 +11930,9 @@ if (typeof window !== 'undefined') {
                 "Binds when picked up",
                 "Two-Hand",
                 "45 - 68 Damage\tSpeed 3.10",
-                "(18.23 damage per second)"
+                "(18.23 damage per second)",
+                "+11 Strength",
+                "+10 Stamina"
               ]
             },
             {
@@ -11470,7 +11956,8 @@ if (typeof window !== 'undefined') {
                 "+4 Strength",
                 "Requires Level 31",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 12"
-              ]
+              ],
+              "source": "Crafted Blacksmithing (160)"
             },
             {
               "name": "Silver Spade",
@@ -11492,7 +11979,8 @@ if (typeof window !== 'undefined') {
                 "+15 Spirit"
               ],
               "reqLevel": 30,
-              "icon": "inv_misc_shovel_01"
+              "icon": "inv_misc_shovel_01",
+              "source": "Redridge quest"
             },
             {
               "name": "Scavenged Magram Armament",
@@ -11516,7 +12004,8 @@ if (typeof window !== 'undefined') {
                 "+14 Stamina",
                 "Requires Level 35",
                 "Equip: +12 Attack Power."
-              ]
+              ],
+              "source": "Khan Jehn"
             },
             {
               "name": "Grim Reaper",
@@ -11536,7 +12025,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.10",
                 "(35.6 damage per second)",
                 "Requires Level 35"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Boneslasher",
@@ -11555,8 +12045,11 @@ if (typeof window !== 'undefined') {
                 "2H Sword",
                 "Speed 2.70",
                 "(32.59 damage per second)",
+                "+16 Strength",
+                "+7 Stamina",
                 "Requires Level 32"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "The Shoveler",
@@ -11576,7 +12069,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.40",
                 "(32.5 damage per second)",
                 "Requires Level 32"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Poison-tipped Bone Spear",
@@ -11596,7 +12090,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.30",
                 "(31.3 damage per second)",
                 "Requires Level 31"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Archaic Defender",
@@ -11615,8 +12110,10 @@ if (typeof window !== 'undefined') {
                 "2H Sword",
                 "Speed 3.10",
                 "(31.29 damage per second)",
+                "+100 Armor",
                 "Requires Level 31"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Bludgeon of Betrayed Virtues",
@@ -11635,8 +12132,12 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 2.20",
                 "(28.64 damage per second)",
+                "+3 Strength",
+                "+2 Agility",
+                "+6 Stamina",
                 "Requires Level 35"
-              ]
+              ],
+              "source": "Khan Jehn"
             }
           ],
           "faction": "both",
@@ -11689,7 +12190,8 @@ if (typeof window !== 'undefined') {
                 "(30.00 damage per second)",
                 "+9 Stamina",
                 "+4 Spirit"
-              ]
+              ],
+              "source": "Alliance Quest: In the Name of the Light"
             },
             {
               "name": "Archeus",
@@ -11709,8 +12211,10 @@ if (typeof window !== 'undefined') {
                 "Two-Hand",
                 "63 - 95 Damage\tSpeed 3.30",
                 "(23.94 damage per second)",
+                "Chance on hit: Blasts a target for 85 Arcane damage.",
                 "Chance on hit: Blasts a target for 85 Arcane damage."
-              ]
+              ],
+              "source": "Duskwood Morbent Fel quest"
             },
             {
               "name": "Nightblade",
@@ -11730,7 +12234,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.50",
                 "(43.43 damage per second)",
                 "Requires Level 39"
-              ]
+              ],
+              "source": "World Drop Epic"
             },
             {
               "name": "Hammer of Expertise",
@@ -11750,7 +12255,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.10",
                 "(36.90 damage per second)",
                 "Requires Level 40"
-              ]
+              ],
+              "source": "World Drop Epic"
             },
             {
               "name": "Ardent Custodian",
@@ -11769,8 +12275,10 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 2.10",
                 "(32.86 damage per second)",
+                "+100 Armor",
                 "Requires Level 38"
-              ]
+              ],
+              "source": "World Drop Epic"
             },
             {
               "name": "Dazzling Longsword",
@@ -11790,7 +12298,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.60",
                 "(31.5 damage per second)",
                 "Requires Level 36"
-              ]
+              ],
+              "source": "World Drop Epic"
             },
             {
               "name": "Primitive Fishing Pole",
@@ -11809,8 +12318,12 @@ if (typeof window !== 'undefined') {
                 "Polearm",
                 "Speed 3.30",
                 "(39.55 damage per second)",
+                "+7 Strength",
+                "+10 Agility",
+                "+20 Stamina",
                 "Requires Level 40"
-              ]
+              ],
+              "source": "Friz Frazzlespark"
             },
             {
               "name": "The Skullcracker",
@@ -11829,8 +12342,10 @@ if (typeof window !== 'undefined') {
                 "2H Mace",
                 "Speed 3.30",
                 "(39.55 damage per second)",
+                "+22 Spirit",
                 "Requires Level 40"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Witchfury",
@@ -11850,7 +12365,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.80",
                 "(38.9 damage per second)",
                 "Requires Level 39"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Khoo's Point",
@@ -11870,7 +12386,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.50",
                 "(38.8 damage per second)",
                 "Requires Level 39"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             }
           ],
           "faction": "both",
@@ -11924,7 +12441,8 @@ if (typeof window !== 'undefined') {
                 "+20 Strength",
                 "+8 Stamina",
                 "Requires Level 36"
-              ]
+              ],
+              "source": "BoE 2H Mace"
             },
             {
               "name": "Grisly Sack of Skulls",
@@ -11946,7 +12464,8 @@ if (typeof window !== 'undefined') {
                 "+2 Stamina",
                 "+4 Spirit",
                 "Requires Level 12"
-              ]
+              ],
+              "source": "World Drop"
             },
             {
               "name": "Gul'gash's Greathammer",
@@ -11969,7 +12488,8 @@ if (typeof window !== 'undefined') {
                 "+19 Strength",
                 "Requires Level 44",
                 "Equip: Increases damage done by magical spells and effects by up to 21"
-              ]
+              ],
+              "source": "Feralas Drop"
             },
             {
               "name": "Blanchard's Stout",
@@ -11989,7 +12509,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.10",
                 "(43.4 damage per second)",
                 "Requires Level 45"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Blight",
@@ -12009,7 +12530,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.70",
                 "(43.38 damage per second)",
                 "Requires Level 45"
-              ]
+              ],
+              "source": "Blight"
             },
             {
               "name": "Diabolic Skiver",
@@ -12029,7 +12551,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.90",
                 "(42.76 damage per second)",
                 "Requires Level 44"
-              ]
+              ],
+              "source": "Shadowpriest Sezz'ziz"
             },
             {
               "name": "Bonechewer",
@@ -12049,7 +12572,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.80",
                 "(42.0 damage per second)",
                 "Requires Level 43"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Grimlok's Charge",
@@ -12069,7 +12593,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.70",
                 "(40.9 damage per second)",
                 "Requires Level 42"
-              ]
+              ],
+              "source": "Grimlok"
             },
             {
               "name": "Thrash Blade",
@@ -12090,8 +12615,10 @@ if (typeof window !== 'undefined') {
                 "66 - 124 Damage\tSpeed 2.70",
                 "(35.19 damage per second)",
                 "Chance on hit: Grants an extra attack on your next swing.",
+                "Chance on hit: Grants an extra attack on your next swing.",
                 "Requires Level 45"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Jang'thraze the Protector",
@@ -12111,7 +12638,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.90",
                 "(33.42 damage per second)",
                 "Requires Level 45"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             }
           ],
           "faction": "both",
@@ -12155,7 +12683,8 @@ if (typeof window !== 'undefined') {
                 "+10 Strength",
                 "+24 Stamina",
                 "Requires Level 44"
-              ]
+              ],
+              "source": "World Drop 2H sword"
             },
             {
               "name": "Warmonger",
@@ -12178,7 +12707,8 @@ if (typeof window !== 'undefined') {
                 "+3 Strength",
                 "Requires Level 47",
                 "Equip: Improves your chance to hit by 3.0%."
-              ]
+              ],
+              "source": "World drop 2H sword"
             },
             {
               "name": "Sul'thraze the Lasher",
@@ -12198,7 +12728,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.60",
                 "(52.12 damage per second)",
                 "Requires Level 50"
-              ]
+              ],
+              "source": "World Drop Epic"
             },
             {
               "name": "Hammer of the Northern Wind",
@@ -12218,7 +12749,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.10",
                 "(39.52 damage per second)",
                 "Requires Level 49"
-              ]
+              ],
+              "source": "World Drop Epic"
             },
             {
               "name": "Thorium Greatmace",
@@ -12237,8 +12769,10 @@ if (typeof window !== 'undefined') {
                 "2H Mace",
                 "Speed 3.60",
                 "(47.36 damage per second)",
+                "+21 Strength",
                 "Requires Level 50"
-              ]
+              ],
+              "source": "Thorium Greatmace"
             },
             {
               "name": "Smoldering Claw",
@@ -12257,8 +12791,10 @@ if (typeof window !== 'undefined') {
                 "Polearm",
                 "Speed 2.90",
                 "(46.55 damage per second)",
+                "+10 Fire Resistance",
                 "Requires Level 49"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Whisper",
@@ -12276,8 +12812,12 @@ if (typeof window !== 'undefined') {
               "lines": [
                 "2H Mace",
                 "Speed 3.40",
-                "(45.74 damage per second)"
-              ]
+                "(45.74 damage per second)",
+                "+23 Strength",
+                "+14 Spell Power",
+                "+7 Crit"
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Truesilver Champion",
@@ -12297,7 +12837,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.40",
                 "(45.00 damage per second)",
                 "Requires Level 47"
-              ]
+              ],
+              "source": "Truesilver Champion"
             },
             {
               "name": "Stoneraven",
@@ -12317,7 +12858,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.30",
                 "(44.9 damage per second)",
                 "Requires Level 47"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Headspike",
@@ -12336,8 +12878,11 @@ if (typeof window !== 'undefined') {
                 "Polearm",
                 "Speed 3.00",
                 "(44.17 damage per second)",
+                "+15 Strength",
+                "+18 Stamina",
                 "Requires Level 46"
-              ]
+              ],
+              "source": "Atal'alarion"
             }
           ],
           "faction": "both",
@@ -12379,7 +12924,8 @@ if (typeof window !== 'undefined') {
               "iLvl": 56,
               "reqLevel": 50,
               "stats": "",
-              "icon": "inv_axe_11"
+              "icon": "inv_axe_11",
+              "source": "BRD: Emperor Dagran Thaurissan"
             },
             {
               "name": "Enchanted Battlehammer",
@@ -12403,7 +12949,8 @@ if (typeof window !== 'undefined') {
                 "Requires Level 51",
                 "Equip: Increases your chance to Parry an attack by 1.4%.",
                 "Equip: Improves your chance to hit by 2.0%."
-              ]
+              ],
+              "source": "Crafted Blacksmithing (280)"
             },
             {
               "name": "Ice Barbed Spear",
@@ -12423,7 +12970,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.60",
                 "(53.9 damage per second)",
                 "Requires Level 51"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Doombringer",
@@ -12443,7 +12991,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.80",
                 "(51.43 damage per second)",
                 "Requires Level 55"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Nature's Cull",
@@ -12461,8 +13010,11 @@ if (typeof window !== 'undefined') {
               "lines": [
                 "Polearm",
                 "Speed 3.30",
-                "(51.36 damage per second)"
-              ]
+                "(51.36 damage per second)",
+                "+26 Stamina",
+                "+115 Armor"
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "The Needler",
@@ -12482,7 +13034,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.20",
                 "(51.4 damage per second)",
                 "Requires Level 55"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Darkspear",
@@ -12502,7 +13055,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.20",
                 "(51.25 damage per second)",
                 "Requires Level 55"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Twig of the World Tree",
@@ -12522,7 +13076,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.70",
                 "(49.7 damage per second)",
                 "Requires Level 53"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Corruption",
@@ -12541,8 +13096,11 @@ if (typeof window !== 'undefined') {
                 "2H Sword",
                 "Speed 3.30",
                 "(49.70 damage per second)",
+                "+30 Strength",
+                "+30 Stamina",
                 "Requires Level 53"
-              ]
+              ],
+              "source": "Corruption"
             },
             {
               "name": "Bear Poking Stick",
@@ -12561,8 +13119,11 @@ if (typeof window !== 'undefined') {
                 "Polearm",
                 "Speed 3.20",
                 "(49.69 damage per second)",
+                "+24 Agility",
+                "+9 Stamina",
                 "Requires Level 53"
-              ]
+              ],
+              "source": "Dala Fairmaw"
             }
           ],
           "faction": "both",
@@ -12575,6 +13136,7 @@ if (typeof window !== 'undefined') {
             "Two-Hand",
             "140 - 211 Damage\tSpeed 3.70",
             "(47.43 damage per second)",
+            "Chance on hit: Stuns target for 8 sec.",
             "Requires Level 50",
             "Chance on hit: Stuns target for 8 sec."
           ]
@@ -12604,7 +13166,8 @@ if (typeof window !== 'undefined') {
               "iLvl": 61,
               "reqLevel": 55,
               "stats": "",
-              "icon": "inv_sword_34"
+              "icon": "inv_sword_34",
+              "source": "UBRS: General Drakkisath"
             },
             {
               "name": "The Unstoppable Force",
@@ -12629,7 +13192,8 @@ if (typeof window !== 'undefined') {
                 "Requires Level 55",
                 "Equip: Improves your chance to get a critical strike by 2.0%.",
                 "Chance on hit: Stuns target for 1 sec."
-              ]
+              ],
+              "source": "Alterac Valley Exalted"
             },
             {
               "name": "Dreadforge Retaliator",
@@ -12641,7 +13205,8 @@ if (typeof window !== 'undefined') {
               "iLvl": 61,
               "reqLevel": 55,
               "stats": "",
-              "icon": "inv_axe_11"
+              "icon": "inv_axe_11",
+              "source": "BRD Emperor"
             },
             {
               "name": "Sulfuras, Hand of Ragnaros",
@@ -12660,8 +13225,11 @@ if (typeof window !== 'undefined') {
                 "2H Mace",
                 "Speed 3.70",
                 "(80.41 damage per second)",
+                "+12 Strength",
+                "+12 Stamina",
                 "Requires Level 60"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Thunderfury, Blessed Blade of the Windseeker",
@@ -12680,8 +13248,11 @@ if (typeof window !== 'undefined') {
                 "1H Sword",
                 "Speed 1.90",
                 "(41.84 damage per second)",
+                "+5 Agility",
+                "+8 Stamina",
                 "Requires Level 60"
-              ]
+              ],
+              "source": "Rise, Thunderfury!"
             },
             {
               "name": "Grand Marshal's Polearm",
@@ -12700,8 +13271,11 @@ if (typeof window !== 'undefined') {
                 "Polearm",
                 "Speed 3.40",
                 "(80.29 damage per second)",
+                "+27 Agility",
+                "+47 Stamina, Improves your chance to get a critical strike by 2.0%.",
                 "Requires Level 60"
-              ]
+              ],
+              "source": "Captain O'Neal"
             },
             {
               "name": "High Warlord's Pig Poker",
@@ -12720,8 +13294,11 @@ if (typeof window !== 'undefined') {
                 "Polearm",
                 "Speed 3.40",
                 "(80.29 damage per second)",
+                "+27 Agility",
+                "+47 Stamina, Improves your chance to get a critical strike by 2.0%.",
                 "Requires Level 60"
-              ]
+              ],
+              "source": "Sergeant Thunderhorn"
             },
             {
               "name": "Grand Marshal's Battle Hammer",
@@ -12740,8 +13317,11 @@ if (typeof window !== 'undefined') {
                 "2H Mace",
                 "Speed 3.90",
                 "(80.26 damage per second)",
+                "+27 Strength",
+                "+61 Stamina, Improves your chance to get a critical strike by 1.0%.",
                 "Requires Level 60"
-              ]
+              ],
+              "source": "Captain O'Neal"
             },
             {
               "name": "Grand Marshal's Claymore",
@@ -12760,8 +13340,11 @@ if (typeof window !== 'undefined') {
                 "2H Sword",
                 "Speed 3.90",
                 "(80.26 damage per second)",
+                "+27 Strength",
+                "+61 Stamina, Improves your chance to get a critical strike by 1.0%.",
                 "Requires Level 60"
-              ]
+              ],
+              "source": "Captain O'Neal"
             },
             {
               "name": "Grand Marshal's Demolisher",
@@ -12780,8 +13363,12 @@ if (typeof window !== 'undefined') {
                 "2H Mace",
                 "Speed 3.90",
                 "(80.26 damage per second)",
+                "+27 Strength",
+                "+42 Stamina",
+                "+20 Intellect, Improves your chance to get a critical strike by 1.0%.",
                 "Requires Level 60"
-              ]
+              ],
+              "source": "Captain O'Neal"
             }
           ],
           "faction": "both",
@@ -12821,7 +13408,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 1,
               "stats": "+1 Spirit",
               "icon": "inv_axe_10",
-              "weaponType": "One-Handed Mace"
+              "weaponType": "One-Handed Mace",
+              "source": "Starter vendor mace"
             },
             {
               "name": "Honed Greathammer",
@@ -12840,8 +13428,11 @@ if (typeof window !== 'undefined') {
                 "2H Mace",
                 "Speed 3.20",
                 "(9.06 damage per second)",
+                "+2 Strength",
+                "+2 Spirit",
                 "Requires Level 6"
-              ]
+              ],
+              "source": "Return to Valanaar"
             },
             {
               "name": "Balanced Quarterstaff",
@@ -12860,8 +13451,11 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.20",
                 "(8.86 damage per second)",
+                "+2 Stamina",
+                "+2 Spirit",
                 "Requires Level 6"
-              ]
+              ],
+              "source": "Return to Valanaar"
             },
             {
               "name": "Coldridge Hammer",
@@ -12880,8 +13474,11 @@ if (typeof window !== 'undefined') {
                 "2H Mace",
                 "Speed 2.70",
                 "(8.33 damage per second)",
+                "+1 Strength",
+                "+1 Spirit",
                 "Requires Level 6"
-              ]
+              ],
+              "source": "Protecting the Herd"
             },
             {
               "name": "Wrathroot",
@@ -12900,8 +13497,10 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 3.30",
                 "(7.12 damage per second)",
+                "+1 Intellect",
                 "Requires Level 5"
-              ]
+              ],
+              "source": "Wrathvine"
             },
             {
               "name": "Apprentice's Spellstaff",
@@ -12923,7 +13522,8 @@ if (typeof window !== 'undefined') {
                 "(6.36 damage per second)",
                 "+2 Intellect",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 4"
-              ]
+              ],
+              "source": "Rare Books"
             },
             {
               "name": "Roofing Hammer",
@@ -12942,8 +13542,10 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 2.40",
                 "(5.42 damage per second)",
+                "+1 Spirit",
                 "Requires Level 5"
-              ]
+              ],
+              "source": "Deliver the News"
             },
             {
               "name": "Gritroot Staff",
@@ -12966,7 +13568,8 @@ if (typeof window !== 'undefined') {
                 "+1 Stamina",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 2",
                 "Requires Level 4"
-              ]
+              ],
+              "source": "The Relics of Wakening"
             }
           ]
         },
@@ -12999,7 +13602,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 6,
               "stats": "+2 Strength, +2 Stamina",
               "icon": "inv_hammer_04",
-              "weaponType": "Two-Handed Mace"
+              "weaponType": "Two-Handed Mace",
+              "source": "Early Blacksmithing 2H Mace"
             },
             {
               "name": "Hammerbone",
@@ -13022,7 +13626,8 @@ if (typeof window !== 'undefined') {
                 "+7 Strength",
                 "+10 Spirit",
                 "Requires Level 10"
-              ]
+              ],
+              "source": "Leaders of the Fang"
             },
             {
               "name": "Crescent Staff",
@@ -13047,7 +13652,8 @@ if (typeof window !== 'undefined') {
                 "+7 Intellect",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 26",
                 "Requires Level 10"
-              ]
+              ],
+              "source": "Leaders of the Fang"
             },
             {
               "name": "Hammer of Orgrimmar",
@@ -13070,7 +13676,8 @@ if (typeof window !== 'undefined') {
                 "+3 Strength",
                 "+3 Spirit",
                 "Requires Level 9"
-              ]
+              ],
+              "source": "Hidden Enemies"
             },
             {
               "name": "Staff of Orgrimmar",
@@ -13094,7 +13701,8 @@ if (typeof window !== 'undefined') {
                 "+6 Intellect",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 18",
                 "Requires Level 9"
-              ]
+              ],
+              "source": "Hidden Enemies"
             },
             {
               "name": "Ceranium Rod",
@@ -13113,8 +13721,11 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.70",
                 "(10.74 damage per second)",
+                "+7 Stamina",
+                "+14 Spell Power",
                 "Requires Level 10"
-              ]
+              ],
+              "source": "The Weaver"
             },
             {
               "name": "Wind Rider Staff",
@@ -13133,8 +13744,11 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.80",
                 "(9.64 damage per second)",
+                "+6 Spirit",
+                "+12 Spell Power",
                 "Requires Level 10"
-              ]
+              ],
+              "source": "Cry of the Thunderhawk"
             },
             {
               "name": "Invader's Mace",
@@ -13153,8 +13767,11 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 2.40",
                 "(8.54 damage per second)",
+                "+2 Strength",
+                "+1 Spirit",
                 "Requires Level 10"
-              ]
+              ],
+              "source": "Banner of the Fallen"
             }
           ]
         },
@@ -13187,7 +13804,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 11,
               "stats": "+4 Spirit, Equip: Increases healing done by up to 33 and damage done by up to 11.",
               "icon": "inv_mace_01",
-              "weaponType": "One-Handed Mace"
+              "weaponType": "One-Handed Mace",
+              "source": "Oggleflint (Ragefire Chasm)"
             },
             {
               "name": "Smite's Mighty Hammer",
@@ -13199,7 +13817,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 18,
               "stats": "+11 Strength, +4 Agility",
               "icon": "inv_hammer_04",
-              "weaponType": "Two-Handed Mace"
+              "weaponType": "Two-Handed Mace",
+              "source": "Mr. Smite (The Deadmines)"
             },
             {
               "name": "Rhahk'Zor's Hammer",
@@ -13222,7 +13841,8 @@ if (typeof window !== 'undefined') {
                 "+8 Stamina",
                 "Requires Level 16",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 8"
-              ]
+              ],
+              "source": "Rhahk'Zor"
             },
             {
               "name": "Segmented Spider Leg",
@@ -13245,7 +13865,8 @@ if (typeof window !== 'undefined') {
                 "+9 Agility",
                 "+5 Spirit",
                 "Requires Level 15"
-              ]
+              ],
+              "source": "Witherfang"
             },
             {
               "name": "Gnarled Necromancer's Staff",
@@ -13269,7 +13890,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases damage and healing done by magical spells and effects by up to 26",
                 "Equip: Increases movement speed by 2% in Silverpine Forest and Hillsbrad Foothills.",
                 "Requires Level 15"
-              ]
+              ],
+              "source": "The Wrath of Rath'mael"
             },
             {
               "name": "Staff of Westfall",
@@ -13294,7 +13916,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases healing done by up to 48",
                 "Equip: Movement speed increased by 2% in Elwynn Forest, Westfall, Redridge Mountains, and the Deadmines.",
                 "Requires Level 14"
-              ]
+              ],
+              "source": "The Defias Brotherhood"
             },
             {
               "name": "Vileblood Scimitar",
@@ -13316,7 +13939,8 @@ if (typeof window !== 'undefined') {
                 "(14.62 damage per second)",
                 "+5 Spirit",
                 "Requires Level 17"
-              ]
+              ],
+              "source": "Viktor the Vile"
             },
             {
               "name": "Emberstone Staff",
@@ -13340,7 +13964,8 @@ if (typeof window !== 'undefined') {
                 "+8 Fire Resistance",
                 "Requires Level 17",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 24"
-              ]
+              ],
+              "source": "Captain Greenskin"
             }
           ]
         },
@@ -13373,7 +13998,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 20,
               "stats": "+6 Strength, +6 Stamina, +12 Intellect",
               "icon": "inv_hammer_04",
-              "weaponType": "Two-Handed Mace"
+              "weaponType": "Two-Handed Mace",
+              "source": "Paladin Class Quest"
             },
             {
               "name": "Scepter of the Abandoned",
@@ -13385,7 +14011,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 14,
               "stats": "+4 Stamina, +4 Intellect",
               "icon": "inv_mace_01",
-              "weaponType": "Main Hand Mace"
+              "weaponType": "Main Hand Mace",
+              "source": "The Abandoned (Ruins of Lordaeron)"
             },
             {
               "name": "Alliance Outrunner Staff",
@@ -13409,7 +14036,8 @@ if (typeof window !== 'undefined') {
                 "+9 Spirit",
                 "Requires Level 21",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 28"
-              ]
+              ],
+              "source": "Marcus Bel"
             },
             {
               "name": "Odo's Ley Staff",
@@ -13433,7 +14061,8 @@ if (typeof window !== 'undefined') {
                 "+12 Spirit",
                 "Requires Level 21",
                 "Equip: Increases healing done by up to 52"
-              ]
+              ],
+              "source": "Odo the Blindwatcher"
             },
             {
               "name": "Staff of the Friar",
@@ -13458,7 +14087,8 @@ if (typeof window !== 'undefined') {
                 "+12 Spirit",
                 "Requires Level 21",
                 "Equip: Increases healing done by up to 52"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Staff of the Blessed Seer",
@@ -13477,8 +14107,12 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 3.00",
                 "(15.67 damage per second)",
+                "+9 Stamina",
+                "+10 Spirit",
+                "+28 Spell Power",
                 "Requires Level 20"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Living Root",
@@ -13503,7 +14137,8 @@ if (typeof window !== 'undefined') {
                 "+9 Nature Resistance",
                 "Requires Level 18",
                 "Equip: Increases healing done by up to 45"
-              ]
+              ],
+              "source": "Verdan the Everliving"
             },
             {
               "name": "Coldflame Saber",
@@ -13527,7 +14162,8 @@ if (typeof window !== 'undefined') {
                 "Requires Level 21",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 32",
                 "Equip: Melee attacks deal 98 additional Fire damage against Frozen targets."
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             }
           ]
         },
@@ -13560,7 +14196,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 14,
               "stats": "+4 Stamina, +4 Intellect",
               "icon": "inv_mace_01",
-              "weaponType": "Main Hand Mace"
+              "weaponType": "Main Hand Mace",
+              "source": "The Abandoned (Ruins of Lordaeron)"
             },
             {
               "name": "Striking Staff",
@@ -13584,7 +14221,8 @@ if (typeof window !== 'undefined') {
                 "+6 Stamina",
                 "+14 Intellect",
                 "Requires Level 24"
-              ]
+              ],
+              "source": "Heart of Disruption"
             },
             {
               "name": "Defender of Dalaran",
@@ -13608,7 +14246,8 @@ if (typeof window !== 'undefined') {
                 "+13 Stamina",
                 "+9 Intellect",
                 "Requires Level 24"
-              ]
+              ],
+              "source": "Heart of Disruption"
             },
             {
               "name": "Advisor's Gnarled Staff",
@@ -13627,8 +14266,11 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.90",
                 "(24.66 damage per second)",
+                "+10 Stamina",
+                "+6 Intellect",
                 "Requires Level 25"
-              ]
+              ],
+              "source": "Kelm Hargunth"
             },
             {
               "name": "Lorekeeper's Staff",
@@ -13647,8 +14289,11 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.90",
                 "(24.66 damage per second)",
+                "+10 Stamina",
+                "+6 Intellect",
                 "Requires Level 25"
-              ]
+              ],
+              "source": "Illiyana Moonblaze"
             },
             {
               "name": "Headbasher",
@@ -13667,8 +14312,12 @@ if (typeof window !== 'undefined') {
                 "2H Mace",
                 "Speed 2.30",
                 "(23.70 damage per second)",
+                "+9 Strength",
+                "+5 Stamina",
+                "+10 Intellect",
                 "Requires Level 22"
-              ]
+              ],
+              "source": "The Fury Runs Deep"
             },
             {
               "name": "Twilight Maul",
@@ -13687,8 +14336,10 @@ if (typeof window !== 'undefined') {
                 "2H Mace",
                 "Speed 3.30",
                 "(22.88 damage per second)",
+                "+12 Spell Power",
                 "Requires Level 23"
-              ]
+              ],
+              "source": "Lorgus Jett"
             },
             {
               "name": "Healer's Staff",
@@ -13711,7 +14362,8 @@ if (typeof window !== 'undefined') {
                 "+12 Stamina",
                 "Equip: Increases healing done by up to 67",
                 "Requires Level 24"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             }
           ]
         },
@@ -13744,7 +14396,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 28,
               "stats": "Equip: Increases healing done by up to 68. Equip: Restores 12 Health per 5 sec.",
               "icon": "inv_mace_01",
-              "weaponType": "One-Handed Mace"
+              "weaponType": "One-Handed Mace",
+              "source": "Death Speaker Jargba (Razorfen Kraul)"
             },
             {
               "name": "Manual Crowd Pummeler",
@@ -13756,7 +14409,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 29,
               "stats": "+16 Strength, +5 Agility",
               "icon": "inv_mace_04",
-              "weaponType": "Two-Handed Mace"
+              "weaponType": "Two-Handed Mace",
+              "source": "Crowd Pummeler 9 — 60 (Gnomeregan)"
             },
             {
               "name": "City Guard's Tarnished Blade",
@@ -13779,7 +14433,8 @@ if (typeof window !== 'undefined') {
                 "+6 Stamina",
                 "Requires Level 29",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 5"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Zealot Blade",
@@ -13802,7 +14457,8 @@ if (typeof window !== 'undefined') {
                 "+5 Intellect",
                 "+6 Spirit",
                 "Requires Level 29"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Wind Spirit Staff",
@@ -13826,7 +14482,8 @@ if (typeof window !== 'undefined') {
                 "+16 Spirit",
                 "Requires Level 29",
                 "Equip: Increases healing done by up to 71"
-              ]
+              ],
+              "source": "Earthcaller Halmgar"
             },
             {
               "name": "Spine of the Devourer",
@@ -13849,7 +14506,8 @@ if (typeof window !== 'undefined') {
                 "+14 Stamina",
                 "Requires Level 28",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 36"
-              ]
+              ],
+              "source": "Mana Devourer"
             },
             {
               "name": "Hydrocane",
@@ -13868,8 +14526,10 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.80",
                 "(19.82 damage per second)",
+                "+36 Spell Power",
                 "Requires Level 27"
-              ]
+              ],
+              "source": "Viscous Fallout"
             },
             {
               "name": "Death Prophet Spine",
@@ -13892,7 +14552,8 @@ if (typeof window !== 'undefined') {
                 "+11 Stamina",
                 "Requires Level 26",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 34"
-              ]
+              ],
+              "source": "Aggem Thorncurse"
             }
           ]
         },
@@ -13925,7 +14586,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 34,
               "stats": "+4 Strength, +3 Spirit, Equip: Increases damage and healing by up to 16.",
               "icon": "inv_mace_01",
-              "weaponType": "One-Handed Mace"
+              "weaponType": "One-Handed Mace",
+              "source": "In the Name of the Light quest"
             },
             {
               "name": "Rage of the Storm",
@@ -13949,7 +14611,8 @@ if (typeof window !== 'undefined') {
                 "+12 Intellect",
                 "Equip: Increases the damage dealt by your Stormstrike ability by 10%.",
                 "Requires Level 30"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Sword of Serenity",
@@ -13972,7 +14635,8 @@ if (typeof window !== 'undefined') {
                 "+9 Stamina",
                 "+4 Spirit",
                 "Requires Level 34"
-              ]
+              ],
+              "source": "In the Name of the Light"
             },
             {
               "name": "Illusionary Rod",
@@ -13998,7 +14662,8 @@ if (typeof window !== 'undefined') {
                 "Requires Level 34",
                 "Equip: Improves your chance to get a critical strike by 1.0%.",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 44"
-              ]
+              ],
+              "source": "Arcanist Doan"
             },
             {
               "name": "Narpas Sword",
@@ -14021,7 +14686,8 @@ if (typeof window !== 'undefined') {
                 "Requires Level 34",
                 "Equip: Improves your chance to hit by 1.0%.",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 48"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Silver Spade",
@@ -14044,7 +14710,8 @@ if (typeof window !== 'undefined') {
                 "+4 Stamina",
                 "+15 Spirit",
                 "Requires Level 30"
-              ]
+              ],
+              "source": "Venture Company Mining"
             },
             {
               "name": "Nimboya's Mystical Staff",
@@ -14068,7 +14735,8 @@ if (typeof window !== 'undefined') {
                 "+15 Spirit",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 38",
                 "Requires Level 30"
-              ]
+              ],
+              "source": "Saving Yenniku"
             },
             {
               "name": "Bookmaker's Scepter",
@@ -14087,8 +14755,11 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 2.30",
                 "(13.04 damage per second)",
+                "+6 Intellect",
+                "+30 Spell Power",
                 "Requires Level 30"
-              ]
+              ],
+              "source": "The Hidden Key"
             }
           ]
         },
@@ -14121,7 +14792,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 34,
               "stats": "+4 Strength, +3 Spirit, Equip: Increases damage and healing by up to 16.",
               "icon": "inv_mace_01",
-              "weaponType": "One-Handed Mace"
+              "weaponType": "One-Handed Mace",
+              "source": "SM Quest (In the Name of the Light)"
             },
             {
               "name": "Galgann's Firehammer",
@@ -14133,7 +14805,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 38,
               "stats": "+8 Intellect, +6 Spirit",
               "icon": "inv_mace_08",
-              "weaponType": "One-Handed Mace"
+              "weaponType": "One-Handed Mace",
+              "source": "Galgann Firehammer (Uldaman)"
             },
             {
               "name": "Staff of Jordan",
@@ -14158,7 +14831,8 @@ if (typeof window !== 'undefined') {
                 "Requires Level 35",
                 "Equip: Improves your chance to hit by 1.5%.",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 60"
-              ]
+              ],
+              "source": "World Drop Epic"
             },
             {
               "name": "Mograine's Might",
@@ -14182,7 +14856,8 @@ if (typeof window !== 'undefined') {
                 "+14 Stamina",
                 "+16 Intellect",
                 "Requires Level 39"
-              ]
+              ],
+              "source": "Scarlet Commander Mograine"
             },
             {
               "name": "Coldbringer Spine",
@@ -14201,8 +14876,10 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.80",
                 "(28.21 damage per second)",
+                "+20 Spirit, Improves your chance to hit by 1.0%.",
                 "Requires Level 38"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Greatstaff of the Necrokhans",
@@ -14227,7 +14904,8 @@ if (typeof window !== 'undefined') {
                 "+6 Spirit",
                 "Requires Level 35",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 48"
-              ]
+              ],
+              "source": "Khan Jehn"
             },
             {
               "name": "Celestial Stave",
@@ -14250,7 +14928,8 @@ if (typeof window !== 'undefined') {
                 "+8 Intellect",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 46",
                 "Requires Level 35"
-              ]
+              ],
+              "source": "Celestial Power"
             },
             {
               "name": "Soulsplatter Mace",
@@ -14269,8 +14948,12 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 1.80",
                 "(18.89 damage per second)",
+                "+3 Stamina",
+                "+6 Intellect",
+                "+1 Spirit",
                 "Requires Level 35"
-              ]
+              ],
+              "source": "Khan Jehn"
             }
           ]
         },
@@ -14303,7 +14986,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 40,
               "stats": "+5 Intellect, +5 Spirit",
               "icon": "inv_mace_07",
-              "weaponType": "One-Handed Mace"
+              "weaponType": "One-Handed Mace",
+              "source": "Digmaster Shovelphlange (Uldaman)"
             },
             {
               "name": "The Skullcracker",
@@ -14322,8 +15006,10 @@ if (typeof window !== 'undefined') {
                 "2H Mace",
                 "Speed 3.30",
                 "(39.55 damage per second)",
+                "+22 Spirit",
                 "Requires Level 40"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Emerald Watcher's Dreamstaff",
@@ -14347,7 +15033,8 @@ if (typeof window !== 'undefined') {
                 "+19 Spirit",
                 "Requires Level 44",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 56"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Spellshifter Rod",
@@ -14371,7 +15058,8 @@ if (typeof window !== 'undefined') {
                 "+23 Intellect",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 54",
                 "Requires Level 40"
-              ]
+              ],
+              "source": "Tiara of the Deep"
             },
             {
               "name": "Zum'rah's Vexing Cane",
@@ -14396,7 +15084,8 @@ if (typeof window !== 'undefined') {
                 "Requires Level 43",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 54",
                 "Equip: Chance on harmful spell cast to summon a Zombie Troll of Zum'rah for 20 sec. (1m cooldown)"
-              ]
+              ],
+              "source": "Witch Doctor Zum'rah"
             },
             {
               "name": "Galgann's Firehammer",
@@ -14415,8 +15104,10 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 2.20",
                 "(20.91 damage per second)",
+                "+54 Spell Power",
                 "Requires Level 42"
-              ]
+              ],
+              "source": "Galgann Firehammer"
             },
             {
               "name": "Strength of the Treant",
@@ -14440,7 +15131,8 @@ if (typeof window !== 'undefined') {
                 "+18 Intellect",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 42",
                 "Requires Level 40"
-              ]
+              ],
+              "source": "Weapons of Spirit"
             },
             {
               "name": "Staff of Lore",
@@ -14464,7 +15156,8 @@ if (typeof window !== 'undefined') {
                 "+18 Spirit",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 40",
                 "Requires Level 43"
-              ]
+              ],
+              "source": "Gahz'ridian"
             }
           ]
         },
@@ -14497,7 +15190,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 39,
               "stats": "+7 Stamina, Equip: Increases healing done by up to 94 and damage done by up to 31.",
               "icon": "inv_mace_08",
-              "weaponType": "One-Handed Mace"
+              "weaponType": "One-Handed Mace",
+              "source": "Whitemane (SM Cath)"
             },
             {
               "name": "Whisper",
@@ -14515,8 +15209,12 @@ if (typeof window !== 'undefined') {
               "lines": [
                 "2H Mace",
                 "Speed 3.40",
-                "(45.74 damage per second)"
-              ]
+                "(45.74 damage per second)",
+                "+23 Strength",
+                "+14 Spell Power",
+                "+7 Crit"
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Might of Hakkar",
@@ -14535,8 +15233,12 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 2.40",
                 "(35.83 damage per second)",
+                "+11 Stamina",
+                "+3 Spirit",
+                "+5 Hit",
                 "Requires Level 49"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Fist of Stone",
@@ -14555,8 +15257,11 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 1.80",
                 "(35.28 damage per second)",
+                "+11 Stamina",
+                "+5 Spirit",
                 "Requires Level 48"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Spire of Hakkar",
@@ -14581,7 +15286,8 @@ if (typeof window !== 'undefined') {
                 "Requires Level 49",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 62",
                 "Equip: Harmful spell casts have a chance to steal 112 life from the target enemy over 8 sec. (10ms cooldown)"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Kindling Stave",
@@ -14608,7 +15314,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Improves your chance to get a critical strike by 1.0%.",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 60",
                 "Equip: Harmful spell casts have a chance to deal 60 to 81 Fire damage. Deals 3 times as much damage to Plants. (10ms cooldown)"
-              ]
+              ],
+              "source": "Pyromancer Loregrain"
             },
             {
               "name": "Dreamstaff",
@@ -14627,8 +15334,11 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.40",
                 "(32.29 damage per second)",
+                "+19 Stamina",
+                "+19 Spirit",
                 "Requires Level 45"
-              ]
+              ],
+              "source": "Dreamstaff"
             },
             {
               "name": "Radiant Staff",
@@ -14647,8 +15357,11 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.40",
                 "(32.29 damage per second)",
+                "+19 Stamina",
+                "+19 Intellect",
                 "Requires Level 45"
-              ]
+              ],
+              "source": "Radiant Staff"
             }
           ]
         },
@@ -14693,7 +15406,8 @@ if (typeof window !== 'undefined') {
                 "+23 Intellect",
                 "Requires Level 53",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 66"
-              ]
+              ],
+              "source": "Dala Fairmaw"
             },
             {
               "name": "Soul Harvester",
@@ -14718,7 +15432,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Improves your chance to hit by 1.0%.",
                 "Equip: Increases damage done by Shadow spells and effects by up to 73.",
                 "Requires Level 50"
-              ]
+              ],
+              "source": "Trolls of a Feather"
             },
             {
               "name": "Copper Plated Pipe",
@@ -14736,8 +15451,11 @@ if (typeof window !== 'undefined') {
               "lines": [
                 "Staff",
                 "Speed 3.20",
-                "(45.00 damage per second)"
-              ]
+                "(45.00 damage per second)",
+                "+20 Agility",
+                "+12 Intellect"
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "[TMP] Satyrbane",
@@ -14755,8 +15473,11 @@ if (typeof window !== 'undefined') {
               "lines": [
                 "1H Sword",
                 "Speed 2.60",
-                "(34.04 damage per second)"
-              ]
+                "(34.04 damage per second)",
+                "+8 Strength",
+                "+5 Spirit"
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Purified Gnarlybark Staff",
@@ -14774,8 +15495,10 @@ if (typeof window !== 'undefined') {
               "lines": [
                 "Staff",
                 "Speed 3.10",
-                "(34.03 damage per second)"
-              ]
+                "(34.03 damage per second)",
+                "+19 Spirit, Improves your chance to get a critical strike by 1.0%."
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Staff of the Deeproar",
@@ -14793,8 +15516,12 @@ if (typeof window !== 'undefined') {
               "lines": [
                 "Staff",
                 "Speed 3.30",
-                "(33.48 damage per second)"
-              ]
+                "(33.48 damage per second)",
+                "+13 Stamina",
+                "+12 Intellect",
+                "+14 Spirit"
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Staff of Archmage Selwyn",
@@ -14812,8 +15539,11 @@ if (typeof window !== 'undefined') {
               "lines": [
                 "Staff",
                 "Speed 2.50",
-                "(31.60 damage per second)"
-              ]
+                "(31.60 damage per second)",
+                "+16 Stamina",
+                "+16 Intellect"
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Barkskin Scepter",
@@ -14831,8 +15561,10 @@ if (typeof window !== 'undefined') {
               "lines": [
                 "1H Mace",
                 "Speed 2.00",
-                "(23.00 damage per second)"
-              ]
+                "(23.00 damage per second)",
+                "+13 Intellect"
+              ],
+              "source": "Leveling Drop / Vendor"
             }
           ]
         },
@@ -14865,7 +15597,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 60,
               "stats": "+19 Intellect, +10 Spirit, Equip: Increases healing done by up to 210 and damage done by up to 70.",
               "icon": "inv_mace_01",
-              "weaponType": "One-Handed Mace"
+              "weaponType": "One-Handed Mace",
+              "source": "C'Thun (Temple of Ahn'Qiraj)"
             },
             {
               "name": "Grand Marshal's Warhammer",
@@ -14877,7 +15610,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 60,
               "stats": "+11 Stamina, +7 Intellect, Equip: Increases healing done by up to 199 and damage done by up to 66.",
               "icon": "inv_mace_08",
-              "weaponType": "One-Handed Mace"
+              "weaponType": "One-Handed Mace",
+              "source": "PvP Rank 14 Officer's Lounge"
             },
             {
               "name": "Simone's Cultivating Hammer",
@@ -14889,7 +15623,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 60,
               "stats": "Equip: Increases healing done by up to 139 and damage done by up to 46.",
               "icon": "inv_mace_08",
-              "weaponType": "One-Handed Mace"
+              "weaponType": "One-Handed Mace",
+              "source": "High level world drop / quest"
             },
             {
               "name": "Atiesh, Greatstaff of the Guardian",
@@ -14908,8 +15643,14 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.90",
                 "(64.34 damage per second)",
+                "+31 Stamina",
+                "+32 Intellect",
+                "+24 Spirit",
+                "+150 Spell Power",
+                "+20 Hit",
                 "Requires Level 60"
-              ]
+              ],
+              "source": "Atiesh, Greatstaff of the Guardian"
             },
             {
               "name": "Atiesh, Greatstaff of the Guardian",
@@ -14928,8 +15669,13 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.90",
                 "(64.34 damage per second)",
+                "+30 Stamina",
+                "+29 Intellect",
+                "+183 Spell Power",
+                "+28 Crit",
                 "Requires Level 60"
-              ]
+              ],
+              "source": "Atiesh, Greatstaff of the Guardian"
             },
             {
               "name": "Atiesh, Greatstaff of the Guardian",
@@ -14948,8 +15694,14 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.90",
                 "(64.34 damage per second)",
+                "+28 Stamina",
+                "+28 Intellect",
+                "+27 Spirit",
+                "+242 Healing",
+                "+120 Spell Power",
                 "Requires Level 60"
-              ]
+              ],
+              "source": "Atiesh, Greatstaff of the Guardian"
             },
             {
               "name": "Atiesh, Greatstaff of the Guardian",
@@ -14968,8 +15720,14 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.90",
                 "(64.34 damage per second)",
+                "+28 Stamina",
+                "+28 Intellect",
+                "+27 Spirit",
+                "+300 Healing",
+                "+11 MP5",
                 "Requires Level 60"
-              ]
+              ],
+              "source": "Atiesh, Greatstaff of the Guardian"
             },
             {
               "name": "Grand Marshal's Demolisher",
@@ -14988,8 +15746,12 @@ if (typeof window !== 'undefined') {
                 "2H Mace",
                 "Speed 3.90",
                 "(80.26 damage per second)",
+                "+27 Strength",
+                "+42 Stamina",
+                "+20 Intellect, Improves your chance to get a critical strike by 1.0%.",
                 "Requires Level 60"
-              ]
+              ],
+              "source": "Captain O'Neal"
             }
           ]
         }
@@ -15555,6 +16317,7 @@ if (typeof window !== 'undefined') {
                 "Ranged",
                 "Speed 2.30",
                 "(5.22 damage per second)",
+                "+1 Agility",
                 "Requires Level 5"
               ]
             },
@@ -15766,6 +16529,7 @@ if (typeof window !== 'undefined') {
                 "Ranged",
                 "Speed 2.00",
                 "(5.25 damage per second)",
+                "+1 Stamina",
                 "Requires Level 8"
               ]
             },
@@ -15791,6 +16555,8 @@ if (typeof window !== 'undefined') {
                 "Ranged",
                 "Speed 2.40",
                 "(6.04 damage per second)",
+                "+1 Agility",
+                "+1 Stamina",
                 "Requires Level 8"
               ]
             },
@@ -16001,6 +16767,7 @@ if (typeof window !== 'undefined') {
                 "Ranged",
                 "Speed 2.50",
                 "(6.00 damage per second)",
+                "+1 Strength",
                 "Requires Level 10"
               ]
             },
@@ -16213,6 +16980,7 @@ if (typeof window !== 'undefined') {
                 "Ranged",
                 "Speed 2.50",
                 "(6.40 damage per second)",
+                "+1 Strength",
                 "Requires Level 11"
               ]
             },
@@ -16238,6 +17006,7 @@ if (typeof window !== 'undefined') {
                 "Ranged",
                 "Speed 2.30",
                 "(5.87 damage per second)",
+                "+1 Agility",
                 "Requires Level 11"
               ]
             },
@@ -16262,7 +17031,8 @@ if (typeof window !== 'undefined') {
               "lines": [
                 "Ranged",
                 "Speed 2.30",
-                "(5.87 damage per second)"
+                "(5.87 damage per second)",
+                "+1 Strength"
               ]
             },
             {
@@ -16286,7 +17056,8 @@ if (typeof window !== 'undefined') {
               "lines": [
                 "Ranged",
                 "Speed 1.90",
-                "(5.00 damage per second)"
+                "(5.00 damage per second)",
+                "+0 Agility"
               ]
             },
             {
@@ -16366,6 +17137,7 @@ if (typeof window !== 'undefined') {
             "Ranged",
             "15 - 23 Damage\tSpeed 2.00",
             "(9.50 damage per second)",
+            "Chance on hit: Wounds the target for 14 Physical damage.",
             "Requires Level 13",
             "Chance on hit: Wounds the target for 14 Physical damage."
           ],
@@ -16393,6 +17165,7 @@ if (typeof window !== 'undefined') {
                 "Ranged",
                 "Speed 2.30",
                 "(7.83 damage per second)",
+                "+2 Agility",
                 "Requires Level 13"
               ]
             },
@@ -16579,6 +17352,7 @@ if (typeof window !== 'undefined') {
                 "Ranged",
                 "Speed 2.60",
                 "(10.96 damage per second)",
+                "+4 Agility",
                 "Requires Level 16"
               ]
             },
@@ -16658,6 +17432,8 @@ if (typeof window !== 'undefined') {
                 "Ranged",
                 "Speed 2.40",
                 "(11.67 damage per second)",
+                "+2 Agility",
+                "+3 Stamina",
                 "Requires Level 18"
               ]
             },
@@ -16683,6 +17459,8 @@ if (typeof window !== 'undefined') {
                 "Ranged",
                 "Speed 2.40",
                 "(11.67 damage per second)",
+                "+2 Agility",
+                "+3 Stamina",
                 "Requires Level 18"
               ]
             },
@@ -16708,6 +17486,7 @@ if (typeof window !== 'undefined') {
                 "Ranged",
                 "Speed 1.70",
                 "(7.94 damage per second)",
+                "+2 Agility",
                 "Requires Level 16"
               ]
             },
@@ -16733,6 +17512,7 @@ if (typeof window !== 'undefined') {
                 "Ranged",
                 "Speed 2.60",
                 "(7.88 damage per second)",
+                "+2 Agility",
                 "Requires Level 17"
               ]
             },
@@ -16808,6 +17588,7 @@ if (typeof window !== 'undefined') {
                 "Ranged",
                 "Speed 1.90",
                 "(9.21 damage per second)",
+                "+2 Spirit",
                 "Requires Level 18"
               ]
             },
@@ -16834,6 +17615,7 @@ if (typeof window !== 'undefined') {
                 "Ranged",
                 "15 - 23 Damage\tSpeed 2.00",
                 "(9.50 damage per second)",
+                "Chance on hit: Wounds the target for 14 Physical damage.",
                 "Requires Level 13",
                 "Chance on hit: Wounds the target for 14 Physical damage."
               ]
@@ -16863,6 +17645,7 @@ if (typeof window !== 'undefined') {
             "Ranged",
             "20 - 38 Damage\tSpeed 2.40",
             "(12.08 damage per second)",
+            "Chance on hit: Venom Shot the target for 23 to 33 Nature damage.",
             "Requires Level 19",
             "Chance on hit: Venom Shot the target for 23 to 33 Nature damage."
           ],
@@ -16917,6 +17700,8 @@ if (typeof window !== 'undefined') {
                 "Ranged",
                 "Speed 2.60",
                 "(11.35 damage per second)",
+                "+2 Agility",
+                "+2 Stamina",
                 "Requires Level 19"
               ]
             },
@@ -16942,6 +17727,8 @@ if (typeof window !== 'undefined') {
                 "Ranged",
                 "Speed 2.30",
                 "(11.96 damage per second)",
+                "+2 Agility",
+                "+2 Intellect",
                 "Requires Level 20"
               ]
             },
@@ -16967,6 +17754,7 @@ if (typeof window !== 'undefined') {
                 "Ranged",
                 "Speed 1.90",
                 "(7.37 damage per second)",
+                "+2 Strength",
                 "Requires Level 20"
               ]
             },
@@ -17046,6 +17834,8 @@ if (typeof window !== 'undefined') {
             "Ranged",
             "Speed 2.30",
             "(13.26 damage per second)",
+            "+3 Strength",
+            "+3 Agility",
             "Requires Level 22"
           ],
           "levelBracket": "21–22",
@@ -17073,6 +17863,7 @@ if (typeof window !== 'undefined') {
                 "Ranged",
                 "22 - 42 Damage\tSpeed 2.40",
                 "(13.33 damage per second)",
+                "Chance on hit: Wounds the target for 42 damage. Naga are Stunned for 2 sec.",
                 "Requires Level 22",
                 "Chance on hit: Wounds the target for 42 damage. Naga are Stunned for 2 sec."
               ]
@@ -17099,6 +17890,8 @@ if (typeof window !== 'undefined') {
                 "Ranged",
                 "Speed 2.90",
                 "(12.07 damage per second)",
+                "+2 Agility",
+                "+2 Stamina",
                 "Requires Level 22"
               ]
             },
@@ -17180,6 +17973,7 @@ if (typeof window !== 'undefined') {
                 "Ranged",
                 "Speed 3.40",
                 "(10.88 damage per second)",
+                "+3 Agility",
                 "Requires Level 22"
               ]
             },
@@ -17205,6 +17999,7 @@ if (typeof window !== 'undefined') {
                 "Ranged",
                 "Speed 2.60",
                 "(10.96 damage per second)",
+                "+3 Hit",
                 "Requires Level 22"
               ]
             },
@@ -17231,6 +18026,7 @@ if (typeof window !== 'undefined') {
                 "Ranged",
                 "14 - 26 Damage\tSpeed 1.70",
                 "(11.76 damage per second)",
+                "Equip: Improves your chance to hit by 0.3%.",
                 "Requires Level 24",
                 "Equip: Improves your chance to hit by 0.3%."
               ]
@@ -17364,6 +18160,7 @@ if (typeof window !== 'undefined') {
                 "Ranged",
                 "Speed 2.20",
                 "(11.82 damage per second)",
+                "+3 Strength",
                 "Requires Level 24"
               ]
             },
@@ -17388,7 +18185,9 @@ if (typeof window !== 'undefined') {
               "lines": [
                 "Ranged",
                 "Speed 2.80",
-                "(11.79 damage per second)"
+                "(11.79 damage per second)",
+                "+2 Agility",
+                "+2 Spirit"
               ]
             },
             {
@@ -17549,6 +18348,8 @@ if (typeof window !== 'undefined') {
                 "Ranged",
                 "Speed 2.70",
                 "(12.22 damage per second)",
+                "+2 Agility",
+                "+2 Stamina",
                 "Requires Level 25"
               ]
             },
@@ -17574,6 +18375,7 @@ if (typeof window !== 'undefined') {
                 "Ranged",
                 "Speed 2.80",
                 "(12.50 damage per second)",
+                "+4 Agility",
                 "Requires Level 26"
               ]
             },
@@ -17705,6 +18507,7 @@ if (typeof window !== 'undefined') {
                 "Ranged",
                 "Speed 1.80",
                 "(16.11 damage per second)",
+                "+4 Intellect",
                 "Requires Level 27"
               ]
             },
@@ -17757,6 +18560,8 @@ if (typeof window !== 'undefined') {
                 "Ranged",
                 "Speed 2.40",
                 "(16.67 damage per second)",
+                "+2 Agility",
+                "+5 Stamina",
                 "Requires Level 28"
               ]
             },
@@ -17782,6 +18587,8 @@ if (typeof window !== 'undefined') {
                 "Ranged",
                 "Speed 2.40",
                 "(16.67 damage per second)",
+                "+2 Agility",
+                "+5 Stamina",
                 "Requires Level 28"
               ]
             },
@@ -17832,6 +18639,7 @@ if (typeof window !== 'undefined') {
                 "Ranged",
                 "Speed 2.20",
                 "(12.95 damage per second)",
+                "+4 Stamina",
                 "Requires Level 27"
               ]
             },
@@ -17857,6 +18665,7 @@ if (typeof window !== 'undefined') {
                 "Ranged",
                 "Speed 1.70",
                 "(13.24 damage per second)",
+                "+4 Agility",
                 "Requires Level 28"
               ]
             },
@@ -17882,6 +18691,8 @@ if (typeof window !== 'undefined') {
                 "Ranged",
                 "Speed 1.90",
                 "(16.05 damage per second)",
+                "+3 Strength",
+                "+4 Stamina",
                 "Requires Level 28"
               ]
             }
@@ -18021,6 +18832,7 @@ if (typeof window !== 'undefined') {
                 "Ranged",
                 "Speed 1.70",
                 "(17.06 damage per second)",
+                "+3 Agility",
                 "Requires Level 29"
               ]
             },
@@ -18073,6 +18885,8 @@ if (typeof window !== 'undefined') {
                 "Ranged",
                 "Speed 2.20",
                 "(13.86 damage per second)",
+                "+3 Agility",
+                "+3 Intellect",
                 "Requires Level 29"
               ]
             },
@@ -18098,6 +18912,7 @@ if (typeof window !== 'undefined') {
                 "Ranged",
                 "Speed 1.80",
                 "(13.61 damage per second)",
+                "+4 Stamina",
                 "Requires Level 29"
               ]
             },
@@ -18198,6 +19013,8 @@ if (typeof window !== 'undefined') {
                 "Ranged",
                 "Speed 1.80",
                 "(15.28 damage per second)",
+                "+4 Strength",
+                "+3 Stamina",
                 "Requires Level 30"
               ]
             },
@@ -18223,6 +19040,7 @@ if (typeof window !== 'undefined') {
                 "Ranged",
                 "Speed 2.80",
                 "(14.29 damage per second)",
+                "+4 Stamina",
                 "Requires Level 30"
               ]
             }
@@ -18279,6 +19097,8 @@ if (typeof window !== 'undefined') {
                 "Ranged",
                 "Speed 2.10",
                 "(20.71 damage per second)",
+                "+5 Agility",
+                "+5 Intellect",
                 "Requires Level 34"
               ]
             },
@@ -18332,6 +19152,7 @@ if (typeof window !== 'undefined') {
                 "Ranged",
                 "Speed 2.10",
                 "(15.24 damage per second)",
+                "+5 Strength",
                 "Requires Level 32"
               ]
             },
@@ -18357,6 +19178,8 @@ if (typeof window !== 'undefined') {
                 "Ranged",
                 "Speed 2.90",
                 "(16.03 damage per second)",
+                "+3 Strength",
+                "+3 Agility",
                 "Requires Level 32"
               ]
             },
@@ -18434,6 +19257,7 @@ if (typeof window !== 'undefined') {
                 "Ranged",
                 "Speed 2.50",
                 "(16.60 damage per second)",
+                "+5 Spirit",
                 "Requires Level 34"
               ]
             }
@@ -18542,6 +19366,8 @@ if (typeof window !== 'undefined') {
                 "Ranged",
                 "Speed 2.30",
                 "(22.61 damage per second)",
+                "+5 Strength",
+                "+5 Stamina",
                 "Requires Level 38"
               ]
             },
@@ -18679,6 +19505,7 @@ if (typeof window !== 'undefined') {
                 "Ranged",
                 "40 - 76 Damage\tSpeed 2.60",
                 "(22.31 damage per second)",
+                "Chance on hit: Strike the target with a Flaming Shell, inflicting 7 Fire damage every 3 sec for 9 sec.",
                 "Requires Level 37",
                 "Chance on hit: Strike the target with a Flaming Shell, inflicting 7 Fire damage every 3 sec for 9 sec."
               ]
@@ -18758,6 +19585,7 @@ if (typeof window !== 'undefined') {
             "Ranged",
             "44 - 84 Damage\tSpeed 2.60",
             "(24.62 damage per second)",
+            "Chance on hit: Strike your ranged target with a Fire Blast for 22 to 34 Fire damage.",
             "Chance on hit: Strike your ranged target with a Fire Blast for 22 to 34 Fire damage.",
             "Requires Level 42"
           ],
@@ -18976,6 +19804,7 @@ if (typeof window !== 'undefined') {
             "Ranged",
             "Speed 1.50",
             "(28.00 damage per second)",
+            "+14 Agility",
             "Requires Level 43"
           ],
           "levelBracket": "43–46",
@@ -19188,6 +20017,7 @@ if (typeof window !== 'undefined') {
                 "Ranged",
                 "Speed 2.00",
                 "(22.75 damage per second)",
+                "+6 Nature Resistance",
                 "Requires Level 44"
               ]
             },
@@ -19298,6 +20128,7 @@ if (typeof window !== 'undefined') {
                 "Ranged",
                 "Speed 1.80",
                 "(27.22 damage per second)",
+                "+3 Strength",
                 "Requires Level 48"
               ]
             },
@@ -19380,6 +20211,7 @@ if (typeof window !== 'undefined') {
                 "Ranged",
                 "Speed 1.90",
                 "(25.79 damage per second)",
+                "+8 Stamina",
                 "Requires Level 52"
               ]
             },
@@ -19515,6 +20347,7 @@ if (typeof window !== 'undefined') {
                 "Ranged",
                 "53 - 100 Damage\tSpeed 2.70",
                 "(28.33 damage per second)",
+                "Chance on hit: Fires a Shadow Shot at the target for 21 to 31 Shadow damage.",
                 "Requires Level 50",
                 "Chance on hit: Fires a Shadow Shot at the target for 21 to 31 Shadow damage."
               ]
@@ -19567,6 +20400,7 @@ if (typeof window !== 'undefined') {
                 "Ranged",
                 "Speed 2.80",
                 "(26.61 damage per second)",
+                "+8 Agility",
                 "Requires Level 52"
               ]
             },
@@ -19667,7 +20501,9 @@ if (typeof window !== 'undefined') {
               "lines": [
                 "Ranged",
                 "Speed 2.70",
-                "(23.33 damage per second)"
+                "(23.33 damage per second)",
+                "+6 Agility",
+                "+2 Stamina"
               ]
             },
             {
@@ -19691,7 +20527,8 @@ if (typeof window !== 'undefined') {
               "lines": [
                 "Ranged",
                 "Speed 2.80",
-                "(25.18 damage per second)"
+                "(25.18 damage per second)",
+                "+5 Stamina"
               ]
             }
           ]
@@ -19718,6 +20555,7 @@ if (typeof window !== 'undefined') {
             "Ranged",
             "Speed 2.90",
             "(43.97 damage per second)",
+            "+14 Crit",
             "Requires Level 60"
           ],
           "levelBracket": "53–60",
@@ -19801,6 +20639,7 @@ if (typeof window !== 'undefined') {
                 "Ranged",
                 "Speed 3.00",
                 "(33.83 damage per second)",
+                "+14 Crit",
                 "Requires Level 55"
               ]
             },
@@ -19879,6 +20718,7 @@ if (typeof window !== 'undefined') {
                 "Ranged",
                 "Speed 2.70",
                 "(27.78 damage per second)",
+                "+8 Fire Resistance",
                 "Requires Level 54"
               ]
             },
@@ -19932,6 +20772,7 @@ if (typeof window !== 'undefined') {
                 "Ranged",
                 "64 - 120 Damage\tSpeed 2.50",
                 "(36.80 damage per second)",
+                "Equip: Improves your chance to hit by 1.0%.",
                 "Requires Level 60",
                 "Equip: Improves your chance to hit by 1.0%."
               ]
@@ -19985,6 +20826,8 @@ if (typeof window !== 'undefined') {
                 "Ranged",
                 "Speed 3.20",
                 "(33.28 damage per second)",
+                "+4 Agility",
+                "+10 Hit",
                 "Requires Level 60"
               ]
             },
@@ -20283,6 +21126,7 @@ if (typeof window !== 'undefined') {
                 "Ranged",
                 "Speed 3.00",
                 "(49.17 damage per second)",
+                "+14 Crit",
                 "Requires Level 60"
               ]
             },
@@ -20308,6 +21152,8 @@ if (typeof window !== 'undefined') {
                 "Ranged",
                 "Speed 2.50",
                 "(36.80 damage per second)",
+                "+8 Stamina",
+                "+6 Spirit",
                 "Requires Level 60"
               ]
             },
@@ -20333,6 +21179,7 @@ if (typeof window !== 'undefined') {
                 "Ranged",
                 "Speed 2.90",
                 "(36.90 damage per second)",
+                "+6 Stamina",
                 "Requires Level 60"
               ]
             },
@@ -20358,6 +21205,7 @@ if (typeof window !== 'undefined') {
                 "Ranged",
                 "Speed 2.90",
                 "(36.90 damage per second)",
+                "+6 Stamina",
                 "Requires Level 60"
               ]
             },
@@ -20383,6 +21231,7 @@ if (typeof window !== 'undefined') {
                 "Ranged",
                 "Speed 1.80",
                 "(36.94 damage per second)",
+                "+6 Stamina",
                 "Requires Level 60"
               ]
             },
@@ -20408,6 +21257,7 @@ if (typeof window !== 'undefined') {
                 "Ranged",
                 "Speed 1.80",
                 "(36.94 damage per second)",
+                "+6 Stamina",
                 "Requires Level 60"
               ]
             },
@@ -20433,6 +21283,7 @@ if (typeof window !== 'undefined') {
                 "Ranged",
                 "Speed 2.90",
                 "(36.90 damage per second)",
+                "+6 Stamina",
                 "Requires Level 60"
               ]
             },
@@ -20458,6 +21309,7 @@ if (typeof window !== 'undefined') {
                 "Ranged",
                 "Speed 2.90",
                 "(36.90 damage per second)",
+                "+6 Stamina",
                 "Requires Level 60"
               ]
             },
@@ -20482,7 +21334,8 @@ if (typeof window !== 'undefined') {
               "lines": [
                 "Ranged",
                 "Speed 3.00",
-                "(26.83 damage per second)"
+                "(26.83 damage per second)",
+                "+6 Stamina"
               ]
             },
             {
@@ -20554,7 +21407,9 @@ if (typeof window !== 'undefined') {
               "lines": [
                 "Ranged",
                 "Speed 2.70",
-                "(26.48 damage per second)"
+                "(26.48 damage per second)",
+                "+5 Strength",
+                "+6 Stamina"
               ]
             },
             {
@@ -20732,7 +21587,8 @@ if (typeof window !== 'undefined') {
                 "One-Hand",
                 "1 - 3 Damage\tSpeed 1.40",
                 "(1.43 damage per second)"
-              ]
+              ],
+              "source": "Starter vendor dagger"
             },
             {
               "name": "Worn Shortsword",
@@ -20751,7 +21607,8 @@ if (typeof window !== 'undefined') {
                 "Main Hand",
                 "1 - 3 Damage\tSpeed 1.90",
                 "(1.05 damage per second)"
-              ]
+              ],
+              "source": "Starter sword"
             },
             {
               "name": "Invisible Dagger",
@@ -20770,7 +21627,8 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 2.00",
                 "(6.75 damage per second)"
-              ]
+              ],
+              "source": "World Drop Epic"
             },
             {
               "name": "Militia Sword",
@@ -20788,8 +21646,10 @@ if (typeof window !== 'undefined') {
               "lines": [
                 "1H Sword",
                 "Speed 2.50",
-                "(6.40 damage per second)"
-              ]
+                "(6.40 damage per second)",
+                "+1 Stamina"
+              ],
+              "source": "Rare Books"
             },
             {
               "name": "Restored Dagger",
@@ -20808,7 +21668,8 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.70",
                 "(1.18 damage per second)"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Restored Basher",
@@ -20827,7 +21688,8 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 2.20",
                 "(1.14 damage per second)"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Restored Shortsword",
@@ -20846,7 +21708,8 @@ if (typeof window !== 'undefined') {
                 "1H Sword",
                 "Speed 2.20",
                 "(1.14 damage per second)"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Camping Knife",
@@ -20866,7 +21729,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.40",
                 "(3.21 damage per second)",
                 "Requires Level 2"
-              ]
+              ],
+              "source": "Return to Bellowfiz"
             },
             {
               "name": "Flanged Mace",
@@ -20886,7 +21750,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.00",
                 "(3.0 damage per second)",
                 "Requires Level 2"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Scuffed Dagger",
@@ -20906,7 +21771,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.50",
                 "(3.0 damage per second)",
                 "Requires Level 2"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             }
           ],
           "faction": "both",
@@ -20953,7 +21819,8 @@ if (typeof window !== 'undefined') {
                 "6 - 13 Damage\tSpeed 1.60",
                 "(5.94 damage per second)",
                 "Requires Level 6"
-              ]
+              ],
+              "source": "Starter Vendor Dagger"
             },
             {
               "name": "Copper Shortsword",
@@ -20975,7 +21842,8 @@ if (typeof window !== 'undefined') {
                 "(5.40 damage per second)",
                 "+1 Strength",
                 "Requires Level 4"
-              ]
+              ],
+              "source": "Blacksmithing (20)"
             },
             {
               "name": "Forsaken Shortsword",
@@ -20995,7 +21863,8 @@ if (typeof window !== 'undefined') {
                 "Main Hand",
                 "3 - 6 Damage\tSpeed 2.10",
                 "(2.14 damage per second)"
-              ]
+              ],
+              "source": "Tirisfal Quest: The Scarlet Crusade"
             },
             {
               "name": "Valley Cosh",
@@ -21014,8 +21883,10 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 1.90",
                 "(6.05 damage per second)",
+                "+1 Stamina",
                 "Requires Level 4"
-              ]
+              ],
+              "source": "Stalk With The Earthmother"
             },
             {
               "name": "Jagged Dagger",
@@ -21034,8 +21905,10 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.50",
                 "(6.00 damage per second)",
+                "+1 Strength",
                 "Requires Level 4"
-              ]
+              ],
+              "source": "Skull Rock"
             },
             {
               "name": "Stinging Mace",
@@ -21054,8 +21927,10 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 2.30",
                 "(5.87 damage per second)",
+                "+1 Strength",
                 "Requires Level 4"
-              ]
+              ],
+              "source": "Skull Rock"
             },
             {
               "name": "Hoof-Holstered Blade",
@@ -21074,8 +21949,10 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.40",
                 "(5.71 damage per second)",
+                "+1 Strength",
                 "Requires Level 4"
-              ]
+              ],
+              "source": "Stalk With The Earthmother"
             },
             {
               "name": "Brushwood Blade",
@@ -21094,8 +21971,10 @@ if (typeof window !== 'undefined') {
                 "1H Sword",
                 "Speed 3.00",
                 "(5.33 damage per second)",
+                "+1 Stamina",
                 "Requires Level 3"
-              ]
+              ],
+              "source": "Druid of the Claw"
             },
             {
               "name": "Webwood Slicer",
@@ -21114,8 +21993,10 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.70",
                 "(5.29 damage per second)",
+                "+1 Agility",
                 "Requires Level 4"
-              ]
+              ],
+              "source": "Twisted Hatred"
             },
             {
               "name": "Explorer's Shortsword",
@@ -21134,8 +22015,10 @@ if (typeof window !== 'undefined') {
                 "1H Sword",
                 "Speed 2.60",
                 "(4.42 damage per second)",
+                "+1 Strength",
                 "Requires Level 3"
-              ]
+              ],
+              "source": "Slydris"
             }
           ],
           "faction": "both",
@@ -21183,7 +22066,8 @@ if (typeof window !== 'undefined') {
                 "(5.40 damage per second)",
                 "+1 Strength",
                 "Requires Level 4"
-              ]
+              ],
+              "source": "Blacksmithing (20)"
             },
             {
               "name": "Stiletto",
@@ -21203,7 +22087,8 @@ if (typeof window !== 'undefined') {
                 "3 - 7 Damage\tSpeed 1.50",
                 "(3.33 damage per second)",
                 "Requires Level 3"
-              ]
+              ],
+              "source": "Fast 1.50s vendor dagger"
             },
             {
               "name": "Forsaken Shortsword",
@@ -21223,7 +22108,8 @@ if (typeof window !== 'undefined') {
                 "Main Hand",
                 "3 - 6 Damage\tSpeed 2.10",
                 "(2.14 damage per second)"
-              ]
+              ],
+              "source": "Tirisfal Quest: The Scarlet Crusade"
             },
             {
               "name": "Quickblade's Dagger",
@@ -21242,8 +22128,10 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.70",
                 "(6.76 damage per second)",
+                "+1 Agility",
                 "Requires Level 6"
-              ]
+              ],
+              "source": "Return to Valanaar"
             },
             {
               "name": "Skorn's Hammer",
@@ -21262,8 +22150,10 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 2.70",
                 "(6.48 damage per second)",
+                "+1 Strength",
                 "Requires Level 6"
-              ]
+              ],
+              "source": "The Demon Scarred Cloak"
             },
             {
               "name": "Compact Fighting Knife",
@@ -21282,8 +22172,10 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.50",
                 "(6.33 damage per second)",
+                "+1 Agility",
                 "Requires Level 5"
-              ]
+              ],
+              "source": "Supervisor Fizsprocket"
             },
             {
               "name": "Small Hand Blade",
@@ -21303,7 +22195,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.50",
                 "(6.0 damage per second)",
                 "Requires Level 6"
-              ]
+              ],
+              "source": "Harvest Golem"
             },
             {
               "name": "Bloodstained Knife",
@@ -21322,8 +22215,10 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.70",
                 "(5.88 damage per second)",
+                "+1 Agility",
                 "Requires Level 6"
-              ]
+              ],
+              "source": "Edan the Howler"
             },
             {
               "name": "Notched Shortsword",
@@ -21343,7 +22238,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.10",
                 "(5.5 damage per second)",
                 "Requires Level 5"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Roofing Hammer",
@@ -21362,8 +22258,10 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 2.40",
                 "(5.42 damage per second)",
+                "+1 Spirit",
                 "Requires Level 5"
-              ]
+              ],
+              "source": "Deliver the News"
             }
           ],
           "faction": "both",
@@ -21413,7 +22311,8 @@ if (typeof window !== 'undefined') {
                 "10 - 20 Damage\tSpeed 2.40",
                 "(6.25 damage per second)",
                 "+1 Agility"
-              ]
+              ],
+              "source": "Horde Starter Dagger"
             },
             {
               "name": "Helm Splitter",
@@ -21435,7 +22334,8 @@ if (typeof window !== 'undefined') {
                 "(6.88 damage per second)",
                 "+1 Strength",
                 "Requires Level 8"
-              ]
+              ],
+              "source": "Uncommon 1H Sword"
             },
             {
               "name": "Scrappy Dagger",
@@ -21456,7 +22356,8 @@ if (typeof window !== 'undefined') {
                 "+33 Spirit",
                 "Requires Level 56",
                 "Equip: Increases healing done by up to 40"
-              ]
+              ],
+              "source": "Early quest"
             },
             {
               "name": "Stiletto",
@@ -21476,7 +22377,8 @@ if (typeof window !== 'undefined') {
                 "3 - 7 Damage\tSpeed 1.50",
                 "(3.33 damage per second)",
                 "Requires Level 3"
-              ]
+              ],
+              "source": "Fast vendor dagger"
             },
             {
               "name": "Skullthumper",
@@ -21496,7 +22398,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.50",
                 "(7.00 damage per second)",
                 "Requires Level 7"
-              ]
+              ],
+              "source": "Murlocs at the Gates"
             },
             {
               "name": "Ancient Skyborne Blade",
@@ -21516,7 +22419,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.50",
                 "(7.00 damage per second)",
                 "Requires Level 8"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Stonesplinter Dagger",
@@ -21536,7 +22440,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.50",
                 "(7.0 damage per second)",
                 "Requires Level 8"
-              ]
+              ],
+              "source": "Stonesplinter Seer"
             },
             {
               "name": "Compact Hammer",
@@ -21555,8 +22460,10 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 2.30",
                 "(6.96 damage per second)",
+                "+1 Stamina",
                 "Requires Level 8"
-              ]
+              ],
+              "source": "A Pilot's Revenge"
             },
             {
               "name": "Feral Blade",
@@ -21576,7 +22483,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.60",
                 "(6.9 damage per second)",
                 "Requires Level 8"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Frostmane Scepter",
@@ -21595,8 +22503,10 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 2.20",
                 "(6.82 damage per second)",
+                "+1 Stamina",
                 "Requires Level 8"
-              ]
+              ],
+              "source": "Great Father Arctikus"
             }
           ],
           "faction": "alliance",
@@ -21647,7 +22557,8 @@ if (typeof window !== 'undefined') {
                 "+4 Agility",
                 "Requires Level 17",
                 "Equip: Increases the chance your Pick Pocket and Distract abilities are successful by 1%"
-              ]
+              ],
+              "source": "Vendor dagger"
             },
             {
               "name": "Cutlass",
@@ -21667,7 +22578,8 @@ if (typeof window !== 'undefined') {
                 "10 - 20 Damage\tSpeed 2.20",
                 "(6.82 damage per second)",
                 "Requires Level 10"
-              ]
+              ],
+              "source": "1H vendor sword"
             },
             {
               "name": "Pristine Orcish Dagger",
@@ -21688,7 +22600,8 @@ if (typeof window !== 'undefined') {
                 "10 - 20 Damage\tSpeed 2.40",
                 "(6.25 damage per second)",
                 "+1 Agility"
-              ]
+              ],
+              "source": "Durotar Quest: Threat from Below"
             },
             {
               "name": "Hammer of Orgrimmar",
@@ -21711,7 +22624,8 @@ if (typeof window !== 'undefined') {
                 "+3 Strength",
                 "+3 Spirit",
                 "Requires Level 9"
-              ]
+              ],
+              "source": "Hidden Enemies"
             },
             {
               "name": "Talonstrike",
@@ -21730,8 +22644,10 @@ if (typeof window !== 'undefined') {
                 "1H Sword",
                 "Speed 1.60",
                 "(12.19 damage per second)",
+                "+3 Agility",
                 "Requires Level 10"
-              ]
+              ],
+              "source": "Assault on Fenris Isle"
             },
             {
               "name": "Invader's Mace",
@@ -21750,8 +22666,11 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 2.40",
                 "(8.54 damage per second)",
+                "+2 Strength",
+                "+1 Spirit",
                 "Requires Level 10"
-              ]
+              ],
+              "source": "Banner of the Fallen"
             },
             {
               "name": "Fist of the People's Militia",
@@ -21770,8 +22689,10 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 1.60",
                 "(8.44 damage per second)",
+                "+2 Strength",
                 "Requires Level 9"
-              ]
+              ],
+              "source": "The People's Militia"
             },
             {
               "name": "Bonegrinding Pestle",
@@ -21790,8 +22711,10 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 2.40",
                 "(8.13 damage per second)",
+                "+2 Strength",
                 "Requires Level 9"
-              ]
+              ],
+              "source": "Arugal's Folly"
             },
             {
               "name": "Engineer's Hammer",
@@ -21810,8 +22733,10 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 2.40",
                 "(8.13 damage per second)",
+                "+2 Stamina",
                 "Requires Level 10"
-              ]
+              ],
+              "source": "Samophlange"
             },
             {
               "name": "Weighted Sap",
@@ -21831,7 +22756,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.20",
                 "(7.7 damage per second)",
                 "Requires Level 10"
-              ]
+              ],
+              "source": "Defias Digger"
             }
           ],
           "faction": "both",
@@ -21879,7 +22805,8 @@ if (typeof window !== 'undefined') {
                 "10 - 20 Damage\tSpeed 2.20",
                 "(6.82 damage per second)",
                 "Requires Level 10"
-              ]
+              ],
+              "source": "1H vendor sword"
             },
             {
               "name": "Trogg Scepter",
@@ -21902,7 +22829,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases healing done by up to 33"
               ],
               "reqLevel": 13,
-              "icon": "inv_misc_bone_10"
+              "icon": "inv_misc_bone_10",
+              "source": "RFC: Oggleflint 1H mace"
             },
             {
               "name": "Deathstalker Shortsword",
@@ -21922,7 +22850,8 @@ if (typeof window !== 'undefined') {
                 "One-Hand",
                 "7 - 14 Damage\tSpeed 2.10",
                 "(5.00 damage per second)"
-              ]
+              ],
+              "source": "Silverpine Quest: Escorting Erland"
             },
             {
               "name": "Elegant Shortsword",
@@ -21941,8 +22870,10 @@ if (typeof window !== 'undefined') {
                 "1H Sword",
                 "Speed 2.00",
                 "(10.00 damage per second)",
+                "+3 Stamina",
                 "Requires Level 12"
-              ]
+              ],
+              "source": "Serena Bloodfeather"
             },
             {
               "name": "Hardwood Cudgel",
@@ -21961,8 +22892,11 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 2.60",
                 "(10.00 damage per second)",
+                "+2 Strength",
+                "+2 Stamina",
                 "Requires Level 12"
-              ]
+              ],
+              "source": "Mathystra Relics"
             },
             {
               "name": "Harpy Skinner",
@@ -21981,8 +22915,10 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.40",
                 "(9.64 damage per second)",
+                "+3 Agility",
                 "Requires Level 12"
-              ]
+              ],
+              "source": "Serena Bloodfeather"
             },
             {
               "name": "Serrated Knife",
@@ -22001,8 +22937,11 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.60",
                 "(9.06 damage per second)",
+                "+1 Agility",
+                "+1 Stamina",
                 "Requires Level 12"
-              ]
+              ],
+              "source": "Wand to Bethor"
             },
             {
               "name": "Petrified Shinbone",
@@ -22022,7 +22961,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.00",
                 "(8.8 damage per second)",
                 "Requires Level 12"
-              ]
+              ],
+              "source": "Undead Dynamiter"
             },
             {
               "name": "Daryl's Shortsword",
@@ -22041,8 +22981,10 @@ if (typeof window !== 'undefined') {
                 "1H Sword",
                 "Speed 2.30",
                 "(8.70 damage per second)",
+                "+2 Agility",
                 "Requires Level 11"
-              ]
+              ],
+              "source": "A Hunter's Challenge"
             },
             {
               "name": "Wicked Blackjack",
@@ -22062,7 +23004,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.30",
                 "(8.7 damage per second)",
                 "Requires Level 12"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             }
           ],
           "faction": "both",
@@ -22109,7 +23052,8 @@ if (typeof window !== 'undefined') {
                 "7 - 15 Damage\tSpeed 1.30",
                 "(8.46 damage per second)",
                 "Requires Level 14"
-              ]
+              ],
+              "source": "Vendor fast dagger"
             },
             {
               "name": "Kris of Orgrimmar",
@@ -22131,7 +23075,8 @@ if (typeof window !== 'undefined') {
                 "(8.00 damage per second)",
                 "+4 Stamina",
                 "Equip: Increases healing done by up to 33"
-              ]
+              ],
+              "source": "RFC Quest: Hidden Enemies"
             },
             {
               "name": "Bone Knuckles",
@@ -22154,7 +23099,8 @@ if (typeof window !== 'undefined') {
                 "Requires Level 13",
                 "Equip: +6 Attack Power.",
                 "Equip: +6 Attack Power against Beasts."
-              ]
+              ],
+              "source": "RFC Drop"
             },
             {
               "name": "Searing Dagger",
@@ -22177,7 +23123,8 @@ if (typeof window !== 'undefined') {
                 "+4 Spirit",
                 "Requires Level 13",
                 "Equip: Harmful spell casts sear the target for 7 Fire damage. (10ms cooldown)"
-              ]
+              ],
+              "source": "RFC Drop"
             },
             {
               "name": "Blackwater Cutlass",
@@ -22196,8 +23143,10 @@ if (typeof window !== 'undefined') {
                 "1H Sword",
                 "Speed 1.90",
                 "(12.89 damage per second)",
+                "+4 Agility",
                 "Requires Level 14"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Cursed Felblade",
@@ -22217,7 +23166,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.30",
                 "(12.17 damage per second)",
                 "Requires Level 13"
-              ]
+              ],
+              "source": "Taragaman the Hungerer"
             },
             {
               "name": "Goblin Screwdriver",
@@ -22236,8 +23186,10 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.40",
                 "(12.14 damage per second)",
+                "+4 Agility",
                 "Requires Level 13"
-              ]
+              ],
+              "source": "Goblin Engineer"
             },
             {
               "name": "Chanting Blade",
@@ -22256,8 +23208,11 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.50",
                 "(12.00 damage per second)",
+                "+2 Agility",
+                "+3 Stamina",
                 "Requires Level 13"
-              ]
+              ],
+              "source": "Jergosh the Invoker"
             },
             {
               "name": "Scrimshaw Dagger",
@@ -22276,8 +23231,10 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.80",
                 "(9.72 damage per second)",
+                "+2 Stamina",
                 "Requires Level 14"
-              ]
+              ],
+              "source": "Red Silk Bandanas"
             },
             {
               "name": "Venom Web Fang",
@@ -22297,7 +23254,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.50",
                 "(9.7 damage per second)",
                 "Requires Level 14"
-              ]
+              ],
+              "source": "Venom Web Spider"
             }
           ],
           "faction": "both",
@@ -22349,7 +23307,8 @@ if (typeof window !== 'undefined') {
                 "(14.62 damage per second)",
                 "+5 Spirit",
                 "Requires Level 17"
-              ]
+              ],
+              "source": "Viktor the Vile in Ruins of Lordaeron"
             },
             {
               "name": "Plaguefang",
@@ -22369,8 +23328,10 @@ if (typeof window !== 'undefined') {
                 "One-Hand",
                 "18 - 34 Damage\tSpeed 2.10",
                 "(12.38 damage per second)",
+                "Chance on hit: Poisons target for 2 Nature damage every 1 sec for 10 sec.",
                 "Chance on hit: Poisons target for 2 Nature damage every 1 sec for 10 sec."
-              ]
+              ],
+              "source": "The New Plague quest in Ruins of Lordaeron"
             },
             {
               "name": "Tail Spike",
@@ -22393,7 +23354,8 @@ if (typeof window !== 'undefined') {
                 "+3 Strength",
                 "+3 Agility",
                 "Requires Level 16"
-              ]
+              ],
+              "source": "Wailing Caverns: Skum"
             },
             {
               "name": "Big Bronze Knife",
@@ -22415,7 +23377,8 @@ if (typeof window !== 'undefined') {
                 "(10.00 damage per second)",
                 "+3 Stamina",
                 "Requires Level 15"
-              ]
+              ],
+              "source": "Blacksmithing (75)"
             },
             {
               "name": "Kris of Orgrimmar",
@@ -22437,7 +23400,8 @@ if (typeof window !== 'undefined') {
                 "(8.00 damage per second)",
                 "+4 Stamina",
                 "Equip: Increases healing done by up to 33"
-              ]
+              ],
+              "source": "RFC Quest"
             },
             {
               "name": "Face Smasher",
@@ -22457,7 +23421,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.60",
                 "(14.0 damage per second)",
                 "Requires Level 16"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Cookie's Tenderizer",
@@ -22476,8 +23441,10 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 2.80",
                 "(13.93 damage per second)",
+                "+4 Spirit",
                 "Requires Level 16"
-              ]
+              ],
+              "source": "Cookie"
             },
             {
               "name": "Ironpatch Blade",
@@ -22497,7 +23464,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.60",
                 "(13.5 damage per second)",
                 "Requires Level 15"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Night Watch Shortsword",
@@ -22517,7 +23485,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.60",
                 "(13.5 damage per second)",
                 "Requires Level 15"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Chol'aruk's Trophy Sword",
@@ -22536,8 +23505,10 @@ if (typeof window !== 'undefined') {
                 "1H Sword",
                 "Speed 2.40",
                 "(12.29 damage per second)",
+                "+2 Stamina",
                 "Requires Level 15"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             }
           ],
           "faction": "both",
@@ -22588,7 +23559,8 @@ if (typeof window !== 'undefined') {
                 "(15.54 damage per second)",
                 "Requires Level 19",
                 "Equip: +12 Attack Power."
-              ]
+              ],
+              "source": "The Deadmines: Edwin VanCleef"
             },
             {
               "name": "Pearl-handled Dagger",
@@ -22611,7 +23583,8 @@ if (typeof window !== 'undefined') {
                 "+2 Agility",
                 "+2 Stamina",
                 "Requires Level 18"
-              ]
+              ],
+              "source": "BFD: Gelihast"
             },
             {
               "name": "Whipfang's Skinsearer",
@@ -22631,9 +23604,11 @@ if (typeof window !== 'undefined') {
                 "One-Hand",
                 "18 - 35 Damage\tSpeed 1.70",
                 "(15.59 damage per second)",
+                "Chance on hit: Sear your target's flesh, dealing 67 to 101 Fire damage.",
                 "Requires Level 19",
                 "Chance on hit: Sear your target's flesh, dealing 67 to 101 Fire damage."
-              ]
+              ],
+              "source": "Barrens Rare"
             },
             {
               "name": "Scout's Blade",
@@ -22653,7 +23628,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.70",
                 "(15.3 damage per second)",
                 "Requires Level 18"
-              ]
+              ],
+              "source": "Kelm Hargunth"
             },
             {
               "name": "Sentinel's Blade",
@@ -22673,7 +23649,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.70",
                 "(15.3 damage per second)",
                 "Requires Level 18"
-              ]
+              ],
+              "source": "Illiyana Moonblaze"
             },
             {
               "name": "Goblin Hammer",
@@ -22692,8 +23669,11 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 2.00",
                 "(15.25 damage per second)",
+                "+4 Stamina",
+                "+20 Armor",
                 "Requires Level 18"
-              ]
+              ],
+              "source": "Gilnid"
             },
             {
               "name": "Buzz Saw",
@@ -22712,8 +23692,11 @@ if (typeof window !== 'undefined') {
                 "1H Sword",
                 "Speed 2.30",
                 "(15.22 damage per second)",
+                "+3 Agility",
+                "+3 Stamina",
                 "Requires Level 18"
-              ]
+              ],
+              "source": "Sneed's Shredder"
             },
             {
               "name": "Butcher's Slicer",
@@ -22732,8 +23715,10 @@ if (typeof window !== 'undefined') {
                 "1H Sword",
                 "Speed 2.90",
                 "(15.00 damage per second)",
+                "+3 Stamina",
                 "Requires Level 18"
-              ]
+              ],
+              "source": "Razorclaw the Butcher"
             },
             {
               "name": "Legionnaire's Sword",
@@ -22753,7 +23738,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.70",
                 "(15.0 damage per second)",
                 "Requires Level 18"
-              ]
+              ],
+              "source": "Kelm Hargunth"
             },
             {
               "name": "Protector's Sword",
@@ -22773,7 +23759,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.70",
                 "(15.0 damage per second)",
                 "Requires Level 18"
-              ]
+              ],
+              "source": "Illiyana Moonblaze"
             }
           ],
           "faction": "both",
@@ -22824,7 +23811,8 @@ if (typeof window !== 'undefined') {
                 "(15.54 damage per second)",
                 "Requires Level 19",
                 "Equip: +12 Attack Power."
-              ]
+              ],
+              "source": "Deadmines: Edwin VanCleef"
             },
             {
               "name": "Wingblade",
@@ -22846,7 +23834,8 @@ if (typeof window !== 'undefined') {
                 "(15.68 damage per second)",
                 "+5 Agility",
                 "+2 Stamina"
-              ]
+              ],
+              "source": "WC Quest: Leaders of the Fang"
             },
             {
               "name": "Blackfang",
@@ -22866,7 +23855,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.50",
                 "(16.3 damage per second)",
                 "Requires Level 20"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Diamond Hammer",
@@ -22886,7 +23876,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.50",
                 "(16.2 damage per second)",
                 "Requires Level 20"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Barrens Basher",
@@ -22905,8 +23896,11 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 2.10",
                 "(15.95 damage per second)",
+                "+2 Strength",
+                "+5 Stamina",
                 "Requires Level 20"
-              ]
+              ],
+              "source": "Winklespark"
             },
             {
               "name": "Skeletal Club",
@@ -22926,7 +23920,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.60",
                 "(15.6 damage per second)",
                 "Requires Level 19"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Shadowfang",
@@ -22946,7 +23941,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.70",
                 "(15.56 damage per second)",
                 "Requires Level 19"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Stinging Viper",
@@ -22966,7 +23962,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.80",
                 "(15.54 damage per second)",
                 "Requires Level 19"
-              ]
+              ],
+              "source": "Lord Pythas"
             },
             {
               "name": "Assassin's Blade",
@@ -22986,7 +23983,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.90",
                 "(15.5 damage per second)",
                 "Requires Level 19"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Phytoblade",
@@ -23005,7 +24003,8 @@ if (typeof window !== 'undefined') {
                 "1H Sword",
                 "Speed 2.80",
                 "(12.86 damage per second)"
-              ]
+              ],
+              "source": "Blisters on the Land"
             }
           ],
           "faction": "both",
@@ -23018,6 +24017,7 @@ if (typeof window !== 'undefined') {
             "One-Hand",
             "18 - 34 Damage\tSpeed 2.10",
             "(12.38 damage per second)",
+            "Chance on hit: Poisons target for 2 Nature damage every 1 sec for 10 sec.",
             "Chance on hit: Poisons target for 2 Nature damage every 1 sec for 10 sec."
           ]
         },
@@ -23055,7 +24055,8 @@ if (typeof window !== 'undefined') {
                 "+2 Stamina"
               ],
               "reqLevel": 24,
-              "icon": "inv_weapon_shortblade_01"
+              "icon": "inv_weapon_shortblade_01",
+              "source": "Wetlands Quest: Stopping the Cycle"
             },
             {
               "name": "Bronze Shortsword",
@@ -23077,7 +24078,8 @@ if (typeof window !== 'undefined') {
                 "(12.20 damage per second)",
                 "+3 Agility",
                 "Requires Level 19"
-              ]
+              ],
+              "source": "Blacksmithing (105)"
             },
             {
               "name": "Blade of Silverlaine",
@@ -23100,7 +24102,8 @@ if (typeof window !== 'undefined') {
                 "+6 Shadow Resistance",
                 "Requires Level 21",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 28"
-              ]
+              ],
+              "source": "SFK Drop"
             },
             {
               "name": "Alliance Outrunner's Sword",
@@ -23123,7 +24126,8 @@ if (typeof window !== 'undefined') {
                 "+5 Agility",
                 "Requires Level 22",
                 "Equip: +6 Attack Power."
-              ]
+              ],
+              "source": "Alliance Drop"
             },
             {
               "name": "Doomspike",
@@ -23142,8 +24146,11 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.50",
                 "(17.33 damage per second)",
+                "+3 Strength",
+                "+3 Stamina",
                 "Requires Level 22"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Sword of Corruption",
@@ -23163,7 +24170,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.10",
                 "(17.1 damage per second)",
                 "Requires Level 22"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Heavy Marauder Scimitar",
@@ -23183,7 +24191,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.40",
                 "(17.1 damage per second)",
                 "Requires Level 22"
-              ]
+              ],
+              "source": "Galak Marauder"
             },
             {
               "name": "Darkwater Talwar",
@@ -23203,7 +24212,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.20",
                 "(17.05 damage per second)",
                 "Requires Level 22"
-              ]
+              ],
+              "source": "Lady Sarevess"
             },
             {
               "name": "Twisted Sabre",
@@ -23223,7 +24233,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.80",
                 "(16.7 damage per second)",
                 "Requires Level 21"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Lucine Longsword",
@@ -23242,8 +24253,11 @@ if (typeof window !== 'undefined') {
                 "1H Sword",
                 "Speed 2.50",
                 "(14.00 damage per second)",
+                "+3 Stamina",
+                "+3 Spirit",
                 "Requires Level 22"
-              ]
+              ],
+              "source": "What Comes Around..."
             }
           ],
           "faction": "both",
@@ -23294,7 +24308,8 @@ if (typeof window !== 'undefined') {
                 "(23.91 damage per second)",
                 "+3 Agility",
                 "+8 Stamina"
-              ]
+              ],
+              "source": "The Eye of Bhossca quest"
             },
             {
               "name": "Serrated Raptor Claw",
@@ -23316,7 +24331,8 @@ if (typeof window !== 'undefined') {
                 "(17.19 damage per second)",
                 "+3 Agility",
                 "Equip: +6 Attack Power."
-              ]
+              ],
+              "source": "Changing Tastes quest"
             },
             {
               "name": "Subdued Dragon's Fang",
@@ -23338,7 +24354,8 @@ if (typeof window !== 'undefined') {
                 "(20.59 damage per second)",
                 "+7 Agility",
                 "+2 Stamina"
-              ]
+              ],
+              "source": "Stopping the Cycle quest"
             },
             {
               "name": "Odo's Claw",
@@ -23362,7 +24379,8 @@ if (typeof window !== 'undefined') {
                 "+3 Stamina",
                 "Requires Level 21",
                 "Equip: Cause party members within 30 yds to regenerate 4 health every 5 sec."
-              ]
+              ],
+              "source": "SFK: Odo the Blindwatcher"
             },
             {
               "name": "Iridescent Hammer",
@@ -23385,7 +24403,8 @@ if (typeof window !== 'undefined') {
                 "+3 Strength",
                 "+3 Stamina",
                 "Requires Level 23"
-              ]
+              ],
+              "source": "BFD: Lady Sarevess"
             },
             {
               "name": "Beazel's Basher",
@@ -23405,7 +24424,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.50",
                 "(18.4 damage per second)",
                 "Requires Level 24"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Blackvenom Blade",
@@ -23424,8 +24444,10 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.80",
                 "(17.78 damage per second)",
+                "+1 Agility",
                 "Requires Level 23"
-              ]
+              ],
+              "source": "Rohh the Silent"
             },
             {
               "name": "Prison Shank",
@@ -23444,8 +24466,11 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.80",
                 "(17.78 damage per second)",
+                "+6 Agility",
+                "+2 Stamina",
                 "Requires Level 23"
-              ]
+              ],
+              "source": "Bruegal Ironknuckle"
             },
             {
               "name": "Bite of Serra'kis",
@@ -23464,8 +24489,10 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.30",
                 "(17.69 damage per second)",
+                "+2 Nature Resistance",
                 "Requires Level 23"
-              ]
+              ],
+              "source": "Old Serra'kis"
             },
             {
               "name": "Flame Seared Sword",
@@ -23485,7 +24512,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.60",
                 "(17.69 damage per second)",
                 "Requires Level 23"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             }
           ],
           "faction": "both",
@@ -23537,7 +24565,8 @@ if (typeof window !== 'undefined') {
                 "+2 Stamina"
               ],
               "reqLevel": 24,
-              "icon": "inv_weapon_shortblade_01"
+              "icon": "inv_weapon_shortblade_01",
+              "source": "Redridge Quest"
             },
             {
               "name": "Serrated Raptor Claw",
@@ -23559,7 +24588,8 @@ if (typeof window !== 'undefined') {
                 "(17.19 damage per second)",
                 "+3 Agility",
                 "Equip: +6 Attack Power."
-              ]
+              ],
+              "source": "Quest: Changing Tastes"
             },
             {
               "name": "Iron Fists",
@@ -23581,7 +24611,8 @@ if (typeof window !== 'undefined') {
                 "(16.25 damage per second)",
                 "+5 Agility",
                 "Requires Level 26"
-              ]
+              ],
+              "source": "Crafted fist weapon"
             },
             {
               "name": "Outlaw Sabre",
@@ -23601,7 +24632,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.70",
                 "(20.37 damage per second)",
                 "Requires Level 25"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Looming Gavel",
@@ -23621,7 +24653,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.40",
                 "(19.8 damage per second)",
                 "Requires Level 26"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "The Black Knight",
@@ -23641,7 +24674,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.90",
                 "(19.7 damage per second)",
                 "Requires Level 26"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Vendetta",
@@ -23660,8 +24694,10 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.30",
                 "(19.23 damage per second)",
+                "+7 Agility",
                 "Requires Level 26"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Frostfall",
@@ -23680,7 +24716,8 @@ if (typeof window !== 'undefined') {
                 "1H Sword",
                 "Speed 2.90",
                 "(18.97 damage per second)"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Legionnaire's Sword",
@@ -23699,8 +24736,11 @@ if (typeof window !== 'undefined') {
                 "1H Sword",
                 "Speed 2.70",
                 "(18.89 damage per second)",
+                "+6 Strength",
+                "+3 Stamina",
                 "Requires Level 25"
-              ]
+              ],
+              "source": "Kelm Hargunth"
             },
             {
               "name": "Protector's Sword",
@@ -23719,8 +24759,11 @@ if (typeof window !== 'undefined') {
                 "1H Sword",
                 "Speed 2.70",
                 "(18.89 damage per second)",
+                "+6 Strength",
+                "+3 Stamina",
                 "Requires Level 25"
-              ]
+              ],
+              "source": "Illiyana Moonblaze"
             }
           ],
           "faction": "both",
@@ -23772,7 +24815,8 @@ if (typeof window !== 'undefined') {
                 "+6 Stamina",
                 "Requires Level 29",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 5"
-              ]
+              ],
+              "source": "Level 29 1H Sword"
             },
             {
               "name": "Toxic Revenger",
@@ -23790,11 +24834,13 @@ if (typeof window !== 'undefined') {
                 "One-Hand",
                 "27 - 51 Damage\tSpeed 1.90",
                 "(20.53 damage per second)",
+                "Chance on hit: Deals 14 Nature damage every 3 sec to any enemy in an 8 yard radius around the caster for 12 sec.",
                 "Requires Level 27",
                 "Chance on hit: Deals 14 Nature damage every 3 sec to any enemy in an 8 yard radius around the caster for 12 sec."
               ],
               "reqLevel": 27,
-              "icon": "inv_weapon_shortblade_02"
+              "icon": "inv_weapon_shortblade_02",
+              "source": "Gnomeregan: Viscous Fallout"
             },
             {
               "name": "Hardened Iron Shortsword",
@@ -23816,7 +24862,8 @@ if (typeof window !== 'undefined') {
                 "(16.67 damage per second)",
                 "+5 Stamina",
                 "Requires Level 27"
-              ]
+              ],
+              "source": "Blacksmithing (130)"
             },
             {
               "name": "Darkspear Skirmisher's Bludgeon",
@@ -23835,8 +24882,10 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 2.80",
                 "(21.43 damage per second)",
+                "+7 Stamina",
                 "Requires Level 28"
-              ]
+              ],
+              "source": "Creeg Bothunk"
             },
             {
               "name": "Dreamslayer",
@@ -23856,7 +24905,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.10",
                 "(21.4 damage per second)",
                 "Requires Level 28"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Guerrilla's Jagged Mace",
@@ -23875,8 +24925,10 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 2.80",
                 "(21.43 damage per second)",
+                "+7 Stamina",
                 "Requires Level 28"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Legionnaire's Sword",
@@ -23896,7 +24948,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.70",
                 "(21.3 damage per second)",
                 "Requires Level 28"
-              ]
+              ],
+              "source": "Kelm Hargunth"
             },
             {
               "name": "Protector's Sword",
@@ -23916,7 +24969,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.70",
                 "(21.3 damage per second)",
                 "Requires Level 28"
-              ]
+              ],
+              "source": "Illiyana Moonblaze"
             },
             {
               "name": "Scout's Blade",
@@ -23936,7 +24990,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.70",
                 "(21.2 damage per second)",
                 "Requires Level 28"
-              ]
+              ],
+              "source": "Kelm Hargunth"
             },
             {
               "name": "Sentinel's Blade",
@@ -23956,7 +25011,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.70",
                 "(21.2 damage per second)",
                 "Requires Level 28"
-              ]
+              ],
+              "source": "Illiyana Moonblaze"
             }
           ],
           "faction": "both",
@@ -24010,7 +25066,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases damage and healing done by magical spells and effects by up to 40"
               ],
               "reqLevel": 30,
-              "icon": "inv_misc_bone_06"
+              "icon": "inv_misc_bone_06",
+              "source": "RFK: Agathelos"
             },
             {
               "name": "Zealot Blade",
@@ -24033,7 +25090,8 @@ if (typeof window !== 'undefined') {
                 "Requires Level 29"
               ],
               "reqLevel": 29,
-              "icon": "inv_sword_15"
+              "icon": "inv_sword_15",
+              "source": "World drop BoE sword"
             },
             {
               "name": "Tidebringer's Claw",
@@ -24056,7 +25114,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases the critical strike chance of your Healing Wave and Lesser Healing Wave spells by 2%."
               ],
               "reqLevel": 30,
-              "icon": "inv_weapon_hand_15"
+              "icon": "inv_weapon_hand_15",
+              "source": "Custom Boss Drop"
             },
             {
               "name": "Lightning's Grasp",
@@ -24079,7 +25138,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases the critical strike chance of your Lightning Bolt spell by 1%."
               ],
               "reqLevel": 30,
-              "icon": "inv_weapon_hand_09"
+              "icon": "inv_weapon_hand_09",
+              "source": "Custom Boss Drop"
             },
             {
               "name": "Swine Fists",
@@ -24101,7 +25161,8 @@ if (typeof window !== 'undefined') {
                 "+6 Spirit",
                 "Requires Level 30",
                 "Equip: Increases movement speed by 3% in The Barrens, Thousand Needles, Razorfen Kraul, and Razorfen Downs."
-              ]
+              ],
+              "source": "RFK Drop"
             },
             {
               "name": "Electrocutioner Leg",
@@ -24121,7 +25182,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.70",
                 "(22.06 damage per second)",
                 "Requires Level 29"
-              ]
+              ],
+              "source": "Electrocutioner 6000"
             },
             {
               "name": "Torturing Poker",
@@ -24141,7 +25203,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.70",
                 "(19.63 damage per second)",
                 "Requires Level 29"
-              ]
+              ],
+              "source": "Interrogator Vishas"
             },
             {
               "name": "Jade Serpentblade",
@@ -24160,8 +25223,10 @@ if (typeof window !== 'undefined') {
                 "1H Sword",
                 "Speed 2.80",
                 "(18.21 damage per second)",
+                "+4 Agility",
                 "Requires Level 30"
-              ]
+              ],
+              "source": "Jade Serpentblade"
             },
             {
               "name": "Daring Dirk",
@@ -24181,7 +25246,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.60",
                 "(17.5 damage per second)",
                 "Requires Level 29"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Left-Handed Blades",
@@ -24201,7 +25267,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.50",
                 "(17.33 damage per second)",
                 "Requires Level 30"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             }
           ],
           "faction": "both",
@@ -24213,6 +25280,7 @@ if (typeof window !== 'undefined') {
             "One-Hand",
             "24 - 46 Damage\tSpeed 1.70",
             "(20.59 damage per second)",
+            "Chance on hit: Hurl spikes at the target, dealing 45 Physical damage and jumping to 1 additional nearby enemy. Each jump reduces the damage by 50%.",
             "Requires Level 27",
             "Chance on hit: Hurl spikes at the target, dealing 45 Physical damage and jumping to 1 additional nearby enemy. Each jump reduces the damage by 50%."
           ],
@@ -24252,7 +25320,8 @@ if (typeof window !== 'undefined') {
                 "Requires Level 30"
               ],
               "reqLevel": 30,
-              "icon": "inv_hammer_19"
+              "icon": "inv_hammer_19",
+              "source": "SM Graveyard: Ironspine"
             },
             {
               "name": "Bloody Brass Knuckles",
@@ -24275,7 +25344,8 @@ if (typeof window !== 'undefined') {
                 "Equip: +15 Attack Power against Humanoids."
               ],
               "reqLevel": 29,
-              "icon": "inv_gauntlets_11"
+              "icon": "inv_gauntlets_11",
+              "source": "SM Graveyard: Azshir"
             },
             {
               "name": "Fight Club",
@@ -24294,8 +25364,11 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 2.20",
                 "(26.59 damage per second)",
+                "+5 Strength",
+                "+4 Stamina",
                 "Requires Level 34"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Blade of the Basilisk",
@@ -24315,7 +25388,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.90",
                 "(26.58 damage per second)",
                 "Requires Level 34"
-              ]
+              ],
+              "source": "Ironeye the Invincible"
             },
             {
               "name": "The Ziggler",
@@ -24335,7 +25409,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.70",
                 "(26.5 damage per second)",
                 "Requires Level 34"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Scorpion Sting",
@@ -24355,7 +25430,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.40",
                 "(26.5 damage per second)",
                 "Requires Level 34"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Howling Blade",
@@ -24374,8 +25450,10 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.80",
                 "(25.83 damage per second)",
+                "+4 Agility",
                 "Requires Level 33"
-              ]
+              ],
+              "source": "Skhowl"
             },
             {
               "name": "Midnight Mace",
@@ -24394,8 +25472,10 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 2.50",
                 "(25.80 damage per second)",
+                "+10 Shadow Resistance",
                 "Requires Level 33"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Reforged Blade of Heroes",
@@ -24414,8 +25494,11 @@ if (typeof window !== 'undefined') {
                 "1H Sword",
                 "Speed 2.20",
                 "(25.68 damage per second)",
+                "+3 Strength",
+                "+8 Stamina",
                 "Requires Level 33"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Deadwood Sledge",
@@ -24435,7 +25518,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.90",
                 "(25.0 damage per second)",
                 "Requires Level 32"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             }
           ],
           "faction": "alliance",
@@ -24487,7 +25571,8 @@ if (typeof window !== 'undefined') {
                 "Requires Level 26"
               ],
               "reqLevel": 26,
-              "icon": "inv_sword_18"
+              "icon": "inv_sword_18",
+              "source": "World drop BoE sword"
             },
             {
               "name": "Silent Hunter",
@@ -24508,7 +25593,8 @@ if (typeof window !== 'undefined') {
                 "+7 Agility"
               ],
               "reqLevel": 30,
-              "icon": "inv_weapon_shortblade_18"
+              "icon": "inv_weapon_shortblade_18",
+              "source": "Maraudon/Quest"
             },
             {
               "name": "Mithril Shortsword",
@@ -24530,7 +25616,8 @@ if (typeof window !== 'undefined') {
                 "(22.94 damage per second)",
                 "Requires Level 36",
                 "Equip: +14 Attack Power."
-              ]
+              ],
+              "source": "Blacksmithing (170)"
             },
             {
               "name": "Sword of Omen",
@@ -24543,7 +25630,8 @@ if (typeof window !== 'undefined') {
               "iLvl": 40,
               "reqLevel": 34,
               "stats": "+9 Str, +4 Sta, +3 Agi",
-              "icon": "inv_sword_24"
+              "icon": "inv_sword_24",
+              "source": "Horde SM Quest: Into The Scarlet Monastery"
             },
             {
               "name": "Sword of Serenity",
@@ -24565,7 +25653,8 @@ if (typeof window !== 'undefined') {
                 "(30.00 damage per second)",
                 "+9 Stamina",
                 "+4 Spirit"
-              ]
+              ],
+              "source": "Alliance SM Quest: In the Name of the Light"
             },
             {
               "name": "Ardent Custodian",
@@ -24584,8 +25673,10 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 2.10",
                 "(32.86 damage per second)",
+                "+100 Armor",
                 "Requires Level 38"
-              ]
+              ],
+              "source": "World Drop Epic"
             },
             {
               "name": "Dazzling Longsword",
@@ -24605,7 +25696,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.60",
                 "(31.5 damage per second)",
                 "Requires Level 36"
-              ]
+              ],
+              "source": "World Drop Epic"
             },
             {
               "name": "Nordic Longshank",
@@ -24625,7 +25717,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.20",
                 "(29.3 damage per second)",
                 "Requires Level 38"
-              ]
+              ],
+              "source": "Baelog"
             },
             {
               "name": "Darkspear Skirmisher's Bludgeon",
@@ -24644,8 +25737,10 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 2.80",
                 "(29.29 damage per second)",
+                "+8 Stamina",
                 "Requires Level 38"
-              ]
+              ],
+              "source": "Creeg Bothunk"
             },
             {
               "name": "Guerrilla's Jagged Mace",
@@ -24664,8 +25759,10 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 2.80",
                 "(29.29 damage per second)",
+                "+8 Stamina",
                 "Requires Level 38"
-              ]
+              ],
+              "source": "Bryanna Embreeze"
             }
           ],
           "faction": "alliance",
@@ -24678,6 +25775,7 @@ if (typeof window !== 'undefined') {
             "One-Hand",
             "31 - 58 Damage\tSpeed 1.50",
             "(29.67 damage per second)",
+            "Chance on hit: Sends a shadowy bolt at the enemy causing 77 Shadow damage.",
             "Chance on hit: Sends a shadowy bolt at the enemy causing 77 Shadow damage."
           ]
         },
@@ -24716,7 +25814,8 @@ if (typeof window !== 'undefined') {
                 "+3 Frost Resistance",
                 "Requires Level 38",
                 "Chance on hit: Launches a bolt of frost at the enemy causing 34 to 50 Frost damage and slowing movement speed by 50% for 5 sec."
-              ]
+              ],
+              "source": "RFD: Amnennar"
             },
             {
               "name": "Vanquisher's Sword",
@@ -24737,7 +25836,8 @@ if (typeof window !== 'undefined') {
                 "46 - 86 Damage\tSpeed 2.20",
                 "(30.00 damage per second)",
                 "Equip: +22 Attack Power."
-              ]
+              ],
+              "source": "RFD Quest: Bring the End"
             },
             {
               "name": "Sword of Omen",
@@ -24749,7 +25849,8 @@ if (typeof window !== 'undefined') {
               "iLvl": 44,
               "reqLevel": 38,
               "stats": "",
-              "icon": "inv_sword_24"
+              "icon": "inv_sword_24",
+              "source": "Horde SM Quest mirror"
             },
             {
               "name": "Sword of Serenity",
@@ -24771,7 +25872,8 @@ if (typeof window !== 'undefined') {
                 "(30.00 damage per second)",
                 "+9 Stamina",
                 "+4 Spirit"
-              ]
+              ],
+              "source": "Alliance SM Quest mirror"
             },
             {
               "name": "Hammer of Expertise",
@@ -24791,7 +25893,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.10",
                 "(36.90 damage per second)",
                 "Requires Level 40"
-              ]
+              ],
+              "source": "World Drop Epic"
             },
             {
               "name": "Gut Ripper",
@@ -24811,7 +25914,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.80",
                 "(33.89 damage per second)",
                 "Requires Level 40"
-              ]
+              ],
+              "source": "World Drop Epic"
             },
             {
               "name": "Serpent Slicer",
@@ -24831,7 +25935,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.50",
                 "(32.8 damage per second)",
                 "Requires Level 44"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Phantom Blade",
@@ -24851,7 +25956,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.60",
                 "(32.50 damage per second)",
                 "Requires Level 44"
-              ]
+              ],
+              "source": "Phantom Blade"
             },
             {
               "name": "Shortsword of Vengeance",
@@ -24871,7 +25977,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.40",
                 "(31.7 damage per second)",
                 "Requires Level 42"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "The Shatterer",
@@ -24891,7 +25998,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.40",
                 "(31.67 damage per second)",
                 "Requires Level 42"
-              ]
+              ],
+              "source": "The Shatterer"
             }
           ],
           "faction": "both",
@@ -24904,6 +26012,8 @@ if (typeof window !== 'undefined') {
             "One-Hand",
             "40 - 76 Damage\tSpeed 1.80",
             "(32.22 damage per second)",
+            "Equip: Movement can generate Static Electricity.",
+            "Chance on hit: Deal 84 Nature damage, increased by 2% per stack of Static Electricity. Deals 2 times as much damage to Aquatic enemies.",
             "Requires Level 43",
             "Equip: Movement can generate Static Electricity.",
             "Chance on hit: Deal 84 Nature damage, increased by 2% per stack of Static Electricity. Deals 2 times as much damage to Aquatic enemies."
@@ -24943,7 +26053,8 @@ if (typeof window !== 'undefined') {
                 "(35.94 damage per second)",
                 "+11 Stamina",
                 "Chance on hit: Heals wielder of 42 damage."
-              ]
+              ],
+              "source": "Sunken Temple Quest: The God Hakkar"
             },
             {
               "name": "Electro-Lantern",
@@ -24961,7 +26072,8 @@ if (typeof window !== 'undefined') {
                 "+2 Intellect"
               ],
               "reqLevel": 44,
-              "icon": "inv_lantern_01"
+              "icon": "inv_lantern_01",
+              "source": "BRD"
             },
             {
               "name": "Hammer of the Northern Wind",
@@ -24981,7 +26093,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.10",
                 "(39.52 damage per second)",
                 "Requires Level 49"
-              ]
+              ],
+              "source": "World Drop Epic"
             },
             {
               "name": "Blade of Reckoning",
@@ -25000,8 +26113,10 @@ if (typeof window !== 'undefined') {
                 "1H Sword",
                 "Speed 2.40",
                 "(39.38 damage per second)",
+                "+8 Stamina",
                 "Requires Level 50"
-              ]
+              ],
+              "source": "Jail Break!"
             },
             {
               "name": "Skilled Fighting Blade",
@@ -25020,8 +26135,10 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.40",
                 "(39.29 damage per second)",
+                "+7 Stamina",
                 "Requires Level 50"
-              ]
+              ],
+              "source": "Jail Break!"
             },
             {
               "name": "Linken's Sword of Mastery",
@@ -25041,7 +26158,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.80",
                 "(36.94 damage per second)",
                 "Requires Level 47"
-              ]
+              ],
+              "source": "It's Dangerous to Go Alone"
             },
             {
               "name": "Test Dagger",
@@ -25061,7 +26179,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.00",
                 "(36.50 damage per second)",
                 "Requires Level 50"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Thorium Cestus",
@@ -25080,8 +26199,10 @@ if (typeof window !== 'undefined') {
                 "Fist Weapon",
                 "Speed 2.40",
                 "(36.46 damage per second)",
+                "+9 Stamina",
                 "Requires Level 50"
-              ]
+              ],
+              "source": "Thorium Cestus"
             },
             {
               "name": "Hanzo Sword",
@@ -25101,7 +26222,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.50",
                 "(36.3 damage per second)",
                 "Requires Level 50"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Swiftstrike Cudgel",
@@ -25120,8 +26242,11 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 1.60",
                 "(36.25 damage per second)",
+                "+7 Agility",
+                "+10 Hit",
                 "Requires Level 50"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             }
           ],
           "faction": "both",
@@ -25134,6 +26259,7 @@ if (typeof window !== 'undefined') {
             "One-Hand",
             "66 - 124 Damage\tSpeed 2.70",
             "(35.19 damage per second)",
+            "Chance on hit: Grants an extra attack on your next swing.",
             "Chance on hit: Grants an extra attack on your next swing."
           ]
         },
@@ -25172,7 +26298,8 @@ if (typeof window !== 'undefined') {
                 "+6 Agility",
                 "Requires Level 52",
                 "Equip: +16 Attack Power."
-              ]
+              ],
+              "source": "Blacksmithing (270)"
             },
             {
               "name": "Julie's Dagger",
@@ -25192,9 +26319,11 @@ if (typeof window !== 'undefined') {
                 "One-Hand",
                 "33 - 62 Damage\tSpeed 1.30",
                 "(36.54 damage per second)",
+                "Chance on hit: Heals wielder of 78 damage over 12 sec.",
                 "Requires Level 50",
                 "Chance on hit: Heals wielder of 78 damage over 12 sec."
-              ]
+              ],
+              "source": "World drop BoE"
             },
             {
               "name": "Dal'Rend's Sacred Charge",
@@ -25207,7 +26336,8 @@ if (typeof window !== 'undefined') {
               "iLvl": 56,
               "reqLevel": 50,
               "stats": "",
-              "icon": "inv_sword_43"
+              "icon": "inv_sword_43",
+              "source": "UBRS: Rend Blackhand"
             },
             {
               "name": "The Lobotomizer",
@@ -25227,7 +26357,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.80",
                 "(43.33 damage per second)",
                 "Requires Level 55"
-              ]
+              ],
+              "source": "World Drop Epic"
             },
             {
               "name": "Cold Forged Hammer",
@@ -25247,7 +26378,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.50",
                 "(41.4 damage per second)",
                 "Requires Level 51"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Bludstone Hammer",
@@ -25267,7 +26399,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.10",
                 "(40.2 damage per second)",
                 "Requires Level 56"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Baron Charr's Sceptre",
@@ -25286,8 +26419,10 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 2.60",
                 "(39.42 damage per second)",
+                "+5 Strength",
                 "Requires Level 55"
-              ]
+              ],
+              "source": "Baron Charr"
             },
             {
               "name": "Lightcrest Hammer",
@@ -25307,7 +26442,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.40",
                 "(39.38 damage per second)",
                 "Requires Level 55"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Greatflank Flayer",
@@ -25325,8 +26461,11 @@ if (typeof window !== 'undefined') {
               "lines": [
                 "1H Sword",
                 "Speed 2.30",
-                "(39.35 damage per second)"
-              ]
+                "(39.35 damage per second)",
+                "+5 Strength",
+                "+11 Stamina"
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Blood Talon",
@@ -25346,7 +26485,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.30",
                 "(39.23 damage per second)",
                 "Requires Level 55"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             }
           ],
           "faction": "both",
@@ -25359,6 +26499,7 @@ if (typeof window !== 'undefined') {
             "One-Hand",
             "66 - 124 Damage\tSpeed 2.70",
             "(35.19 damage per second)",
+            "Chance on hit: Grants an extra attack on your next swing.",
             "Chance on hit: Grants an extra attack on your next swing."
           ]
         },
@@ -25387,7 +26528,8 @@ if (typeof window !== 'undefined') {
               "iLvl": 62,
               "reqLevel": 56,
               "stats": "",
-              "icon": "inv_weapon_shortblade_25"
+              "icon": "inv_weapon_shortblade_25",
+              "source": "UBRS: Rend Blackhand"
             },
             {
               "name": "Mirah's Song",
@@ -25409,7 +26551,8 @@ if (typeof window !== 'undefined') {
                 "(40.00 damage per second)",
                 "+9 Strength",
                 "+9 Agility"
-              ]
+              ],
+              "source": "Scholomance Quest: Kirtonos"
             },
             {
               "name": "Dal'Rend's Tribal Guardian",
@@ -25421,7 +26564,8 @@ if (typeof window !== 'undefined') {
               "iLvl": 62,
               "reqLevel": 56,
               "stats": "",
-              "icon": "inv_sword_40"
+              "icon": "inv_sword_40",
+              "source": "UBRS Rend"
             },
             {
               "name": "Blade of Senseless Slaughter",
@@ -25445,7 +26589,8 @@ if (typeof window !== 'undefined') {
                 "+4 Agility",
                 "+5 Stamina",
                 "Requires Level 57"
-              ]
+              ],
+              "source": "Late Game Drop"
             },
             {
               "name": "Thunderfury, Blessed Blade of the Windseeker",
@@ -25464,8 +26609,11 @@ if (typeof window !== 'undefined') {
                 "1H Sword",
                 "Speed 1.90",
                 "(41.84 damage per second)",
+                "+5 Agility",
+                "+8 Stamina",
                 "Requires Level 60"
-              ]
+              ],
+              "source": "Rise, Thunderfury!"
             },
             {
               "name": "The Hungering Cold",
@@ -25484,8 +26632,10 @@ if (typeof window !== 'undefined') {
                 "1H Sword",
                 "Speed 1.50",
                 "(73.00 damage per second)",
+                "+14 Stamina",
                 "Requires Level 60"
-              ]
+              ],
+              "source": "Kel'Thuzad"
             },
             {
               "name": "Death's Sting",
@@ -25504,8 +26654,10 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.80",
                 "(66.39 damage per second)",
+                "+10 Stamina",
                 "Requires Level 60"
-              ]
+              ],
+              "source": "C'Thun"
             },
             {
               "name": "Grand Marshal's Bonecracker",
@@ -25524,8 +26676,10 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 1.80",
                 "(61.94 damage per second)",
+                "+13 Stamina, Improves your chance to get a critical strike by 1.0%.",
                 "Requires Level 60"
-              ]
+              ],
+              "source": "Captain O'Neal"
             },
             {
               "name": "Grand Marshal's Swiftblade",
@@ -25544,8 +26698,10 @@ if (typeof window !== 'undefined') {
                 "1H Sword",
                 "Speed 1.80",
                 "(61.94 damage per second)",
+                "+13 Stamina, Improves your chance to get a critical strike by 1.0%.",
                 "Requires Level 60"
-              ]
+              ],
+              "source": "Captain O'Neal"
             },
             {
               "name": "High Warlord's Bonecracker",
@@ -25564,8 +26720,10 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 1.80",
                 "(61.94 damage per second)",
+                "+13 Stamina, Improves your chance to get a critical strike by 1.0%.",
                 "Requires Level 60"
-              ]
+              ],
+              "source": "Sergeant Thunderhorn"
             }
           ],
           "faction": "both",
@@ -25629,7 +26787,8 @@ if (typeof window !== 'undefined') {
                 "One-Hand",
                 "1 - 3 Damage\tSpeed 1.90",
                 "(1.05 damage per second)"
-              ]
+              ],
+              "source": "Starter vendor mace"
             },
             {
               "name": "Crude Battle Axe",
@@ -25649,7 +26808,8 @@ if (typeof window !== 'undefined') {
                 "12 - 18 Damage\tSpeed 3.00",
                 "(5.00 damage per second)",
                 "Requires Level 7"
-              ]
+              ],
+              "source": "Starter 2H axe"
             },
             {
               "name": "Invisible Dagger",
@@ -25668,7 +26828,8 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 2.00",
                 "(6.75 damage per second)"
-              ]
+              ],
+              "source": "World Drop Epic"
             },
             {
               "name": "Northshire Hammer",
@@ -25689,7 +26850,8 @@ if (typeof window !== 'undefined') {
                 "18 - 27 Damage\tSpeed 2.70",
                 "(8.33 damage per second)",
                 "+2 Strength"
-              ]
+              ],
+              "source": "Rare Books"
             },
             {
               "name": "Militia Shortblade",
@@ -25710,7 +26872,8 @@ if (typeof window !== 'undefined') {
                 "9 - 17 Damage\tSpeed 2.00",
                 "(6.50 damage per second)",
                 "+1 Agility"
-              ]
+              ],
+              "source": "Rare Books"
             },
             {
               "name": "Restored Cleaver",
@@ -25729,7 +26892,8 @@ if (typeof window !== 'undefined') {
                 "2H Axe",
                 "Speed 3.10",
                 "(1.61 damage per second)"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Restored Greatstaff",
@@ -25748,7 +26912,8 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 3.10",
                 "(1.61 damage per second)"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Restored Smasher",
@@ -25767,7 +26932,8 @@ if (typeof window !== 'undefined') {
                 "2H Mace",
                 "Speed 3.10",
                 "(1.61 damage per second)"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Restored Dagger",
@@ -25786,7 +26952,8 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.70",
                 "(1.18 damage per second)"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Restored Basher",
@@ -25805,7 +26972,8 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 2.20",
                 "(1.14 damage per second)"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             }
           ],
           "faction": "both",
@@ -25851,7 +27019,8 @@ if (typeof window !== 'undefined') {
                 "10 - 16 Damage\tSpeed 2.60",
                 "(5.00 damage per second)",
                 "Requires Level 4"
-              ]
+              ],
+              "source": "Vendor 2H mace"
             },
             {
               "name": "Copper Axe",
@@ -25871,7 +27040,8 @@ if (typeof window !== 'undefined') {
                 "6 - 12 Damage\tSpeed 2.40",
                 "(3.75 damage per second)",
                 "Requires Level 4"
-              ]
+              ],
+              "source": "Blacksmithing (20)"
             },
             {
               "name": "Defender Axe",
@@ -25890,8 +27060,10 @@ if (typeof window !== 'undefined') {
                 "1H Axe",
                 "Speed 2.30",
                 "(6.96 damage per second)",
+                "+10 Armor",
                 "Requires Level 4"
-              ]
+              ],
+              "source": "Ursal the Mauler"
             },
             {
               "name": "Valley Cosh",
@@ -25910,8 +27082,10 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 1.90",
                 "(6.05 damage per second)",
+                "+1 Stamina",
                 "Requires Level 4"
-              ]
+              ],
+              "source": "Stalk With The Earthmother"
             },
             {
               "name": "Jagged Dagger",
@@ -25930,8 +27104,10 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.50",
                 "(6.00 damage per second)",
+                "+1 Strength",
                 "Requires Level 4"
-              ]
+              ],
+              "source": "Skull Rock"
             },
             {
               "name": "Stinging Mace",
@@ -25950,8 +27126,10 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 2.30",
                 "(5.87 damage per second)",
+                "+1 Strength",
                 "Requires Level 4"
-              ]
+              ],
+              "source": "Skull Rock"
             },
             {
               "name": "Hoof-Holstered Blade",
@@ -25970,8 +27148,10 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.40",
                 "(5.71 damage per second)",
+                "+1 Strength",
                 "Requires Level 4"
-              ]
+              ],
+              "source": "Stalk With The Earthmother"
             },
             {
               "name": "Webwood Slicer",
@@ -25990,8 +27170,10 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.70",
                 "(5.29 damage per second)",
+                "+1 Agility",
                 "Requires Level 4"
-              ]
+              ],
+              "source": "Twisted Hatred"
             },
             {
               "name": "Thornroot Club",
@@ -26010,8 +27192,11 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 2.10",
                 "(4.52 damage per second)",
+                "+1 Stamina",
+                "+6 Spell Power",
                 "Requires Level 4"
-              ]
+              ],
+              "source": "Ursal the Mauler"
             },
             {
               "name": "Worn Ranger's Dagger",
@@ -26031,7 +27216,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.70",
                 "(4.41 damage per second)",
                 "Requires Level 3"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             }
           ],
           "faction": "both",
@@ -26078,7 +27264,8 @@ if (typeof window !== 'undefined') {
                 "7 - 13 Damage\tSpeed 2.60",
                 "(3.85 damage per second)",
                 "Requires Level 4"
-              ]
+              ],
+              "source": "Blacksmithing (15)"
             },
             {
               "name": "Large Club",
@@ -26097,7 +27284,8 @@ if (typeof window !== 'undefined') {
                 "Two-Hand",
                 "4 - 6 Damage\tSpeed 3.20",
                 "(1.56 damage per second)"
-              ]
+              ],
+              "source": "Vendor 2H mace"
             },
             {
               "name": "Goblin Smasher",
@@ -26118,7 +27306,8 @@ if (typeof window !== 'undefined') {
                 "20 - 31 Damage\tSpeed 3.10",
                 "(8.23 damage per second)",
                 "+2 Strength"
-              ]
+              ],
+              "source": "Mulgore Quest: Supervisor Fizsprocket"
             },
             {
               "name": "Honed Greathammer",
@@ -26137,8 +27326,11 @@ if (typeof window !== 'undefined') {
                 "2H Mace",
                 "Speed 3.20",
                 "(9.06 damage per second)",
+                "+2 Strength",
+                "+2 Spirit",
                 "Requires Level 6"
-              ]
+              ],
+              "source": "Return to Valanaar"
             },
             {
               "name": "Riptear's Cleaver",
@@ -26160,7 +27352,8 @@ if (typeof window !== 'undefined') {
                 "(8.94 damage per second)",
                 "+3 Strength",
                 "Requires Level 6"
-              ]
+              ],
+              "source": "Rear Guard Patrol"
             },
             {
               "name": "Balanced Fighting Stick",
@@ -26179,8 +27372,11 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.20",
                 "(8.86 damage per second)",
+                "+2 Agility",
+                "+2 Stamina",
                 "Requires Level 5"
-              ]
+              ],
+              "source": "WANTED: \"Hogger\""
             },
             {
               "name": "Balanced Quarterstaff",
@@ -26199,8 +27395,11 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.20",
                 "(8.86 damage per second)",
+                "+2 Stamina",
+                "+2 Spirit",
                 "Requires Level 6"
-              ]
+              ],
+              "source": "Return to Valanaar"
             },
             {
               "name": "Coldridge Hammer",
@@ -26219,8 +27418,11 @@ if (typeof window !== 'undefined') {
                 "2H Mace",
                 "Speed 2.70",
                 "(8.33 damage per second)",
+                "+1 Strength",
+                "+1 Spirit",
                 "Requires Level 6"
-              ]
+              ],
+              "source": "Protecting the Herd"
             },
             {
               "name": "Farmer's Shovel",
@@ -26239,8 +27441,10 @@ if (typeof window !== 'undefined') {
                 "2H Mace",
                 "Speed 3.70",
                 "(7.16 damage per second)",
+                "+1 Strength",
                 "Requires Level 5"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Winged Beast Staff",
@@ -26258,8 +27462,10 @@ if (typeof window !== 'undefined') {
               "lines": [
                 "Staff",
                 "Speed 2.80",
-                "(7.14 damage per second)"
-              ]
+                "(7.14 damage per second)",
+                "+1 Agility"
+              ],
+              "source": "Leveling Drop / Vendor"
             }
           ],
           "faction": "both",
@@ -26308,7 +27514,8 @@ if (typeof window !== 'undefined') {
                 "7 - 14 Damage\tSpeed 1.50",
                 "(7.00 damage per second)",
                 "+1 Stamina"
-              ]
+              ],
+              "source": "Early quest staff"
             },
             {
               "name": "Large Club",
@@ -26327,7 +27534,8 @@ if (typeof window !== 'undefined') {
                 "Two-Hand",
                 "4 - 6 Damage\tSpeed 3.20",
                 "(1.56 damage per second)"
-              ]
+              ],
+              "source": "Vendor 2H mace"
             },
             {
               "name": "Makeshift Stormcaller",
@@ -26349,7 +27557,8 @@ if (typeof window !== 'undefined') {
                 "(5.76 damage per second)",
                 "+2 Intellect",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 4"
-              ]
+              ],
+              "source": "Durotar Shaman Quest: Stormy Potential"
             },
             {
               "name": "Bonecracker",
@@ -26370,7 +27579,8 @@ if (typeof window !== 'undefined') {
                 "23 - 35 Damage\tSpeed 3.20",
                 "(9.06 damage per second)",
                 "+3 Strength"
-              ]
+              ],
+              "source": "Tirisfal Quest: The Family Crypt"
             },
             {
               "name": "Spiked Club",
@@ -26390,7 +27600,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.10",
                 "(9.0 damage per second)",
                 "Requires Level 8"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Driftwood Smasher",
@@ -26409,8 +27620,10 @@ if (typeof window !== 'undefined') {
                 "2H Mace",
                 "Speed 3.30",
                 "(8.94 damage per second)",
+                "+2 Stamina",
                 "Requires Level 7"
-              ]
+              ],
+              "source": "Murlocs at the Gates"
             },
             {
               "name": "Gnarlpine War Staff",
@@ -26429,8 +27642,10 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 3.30",
                 "(8.94 damage per second)",
+                "+3 Strength",
                 "Requires Level 8"
-              ]
+              ],
+              "source": "Grimmaw"
             },
             {
               "name": "Sturdy Quarterstaff",
@@ -26450,7 +27665,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.80",
                 "(8.9 damage per second)",
                 "Requires Level 8"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Battleguard Captain's Sticker",
@@ -26472,7 +27688,8 @@ if (typeof window !== 'undefined') {
                 "(8.92 damage per second)",
                 "+3 Strength",
                 "Requires Level 8"
-              ]
+              ],
+              "source": "Captain Flat Tusk"
             },
             {
               "name": "Icepane Warhammer",
@@ -26492,7 +27709,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.30",
                 "(8.5 damage per second)",
                 "Requires Level 7"
-              ]
+              ],
+              "source": "Hammerspine"
             }
           ],
           "faction": "both",
@@ -26544,7 +27762,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases healing done by up to 33"
               ],
               "reqLevel": 13,
-              "icon": "inv_misc_bone_10"
+              "icon": "inv_misc_bone_10",
+              "source": "RFC Oggleflint"
             },
             {
               "name": "Thick War Axe",
@@ -26567,7 +27786,8 @@ if (typeof window !== 'undefined') {
                 "+1 Strength",
                 "+1 Stamina",
                 "Requires Level 12"
-              ]
+              ],
+              "source": "Blacksmithing (45)"
             },
             {
               "name": "Thun'grim's Axe",
@@ -26588,7 +27808,8 @@ if (typeof window !== 'undefined') {
                 "14 - 28 Damage\tSpeed 2.70",
                 "(7.78 damage per second)",
                 "+1 Stamina"
-              ]
+              ],
+              "source": "Horde Quest: Forged Steel"
             },
             {
               "name": "Hammerbone",
@@ -26611,7 +27832,8 @@ if (typeof window !== 'undefined') {
                 "+7 Strength",
                 "+10 Spirit",
                 "Requires Level 10"
-              ]
+              ],
+              "source": "Leaders of the Fang"
             },
             {
               "name": "Mountaineer's Greataxe",
@@ -26630,8 +27852,11 @@ if (typeof window !== 'undefined') {
                 "2H Axe",
                 "Speed 3.30",
                 "(11.21 damage per second)",
+                "+3 Strength",
+                "+4 Stamina",
                 "Requires Level 10"
-              ]
+              ],
+              "source": "Banner of the Fallen"
             },
             {
               "name": "Logsplitter",
@@ -26651,7 +27876,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.60",
                 "(10.8 damage per second)",
                 "Requires Level 9"
-              ]
+              ],
+              "source": "Arugal's Folly"
             },
             {
               "name": "Ceranium Rod",
@@ -26670,8 +27896,11 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.70",
                 "(10.74 damage per second)",
+                "+7 Stamina",
+                "+14 Spell Power",
                 "Requires Level 10"
-              ]
+              ],
+              "source": "The Weaver"
             },
             {
               "name": "Elunar Longstaff",
@@ -26690,8 +27919,11 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 3.10",
                 "(10.16 damage per second)",
+                "+3 Strength",
+                "+3 Agility",
                 "Requires Level 10"
-              ]
+              ],
+              "source": "Den'dralass"
             },
             {
               "name": "Birchwood Maul",
@@ -26711,7 +27943,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.30",
                 "(10.0 damage per second)",
                 "Requires Level 10"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Wind Rider Staff",
@@ -26730,8 +27963,11 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.80",
                 "(9.64 damage per second)",
+                "+6 Spirit",
+                "+12 Spell Power",
                 "Requires Level 10"
-              ]
+              ],
+              "source": "Cry of the Thunderhawk"
             }
           ],
           "faction": "both",
@@ -26781,7 +28017,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases healing done by up to 33"
               ],
               "reqLevel": 13,
-              "icon": "inv_misc_bone_10"
+              "icon": "inv_misc_bone_10",
+              "source": "RFC: Oggleflint"
             },
             {
               "name": "Woodchopper",
@@ -26800,7 +28037,8 @@ if (typeof window !== 'undefined') {
                 "28 - 53 Damage\tSpeed 2.30",
                 "(17.61 damage per second)",
                 "Requires Level 31"
-              ]
+              ],
+              "source": "Vendor 2H axe"
             },
             {
               "name": "Axe of Orgrimmar",
@@ -26822,7 +28060,8 @@ if (typeof window !== 'undefined') {
                 "(16.06 damage per second)",
                 "+6 Stamina",
                 "+6 Spirit"
-              ]
+              ],
+              "source": "RFC Quest: Hidden Enemies"
             },
             {
               "name": "Hammer of Orgrimmar",
@@ -26844,7 +28083,8 @@ if (typeof window !== 'undefined') {
                 "(12.41 damage per second)",
                 "+3 Strength",
                 "+3 Spirit"
-              ]
+              ],
+              "source": "RFC Quest: Hidden Enemies"
             },
             {
               "name": "Zhovur Axe",
@@ -26864,7 +28104,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.10",
                 "(13.1 damage per second)",
                 "Requires Level 12"
-              ]
+              ],
+              "source": "Serena Bloodfeather"
             },
             {
               "name": "Foamspittle Staff",
@@ -26884,7 +28125,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.20",
                 "(11.4 damage per second)",
                 "Requires Level 12"
-              ]
+              ],
+              "source": "Murloc Oracle"
             },
             {
               "name": "Burrowing Shovel",
@@ -26903,8 +28145,10 @@ if (typeof window !== 'undefined') {
                 "2H Mace",
                 "Speed 3.00",
                 "(11.33 damage per second)",
+                "+5 Strength",
                 "Requires Level 12"
-              ]
+              ],
+              "source": "Master Digger"
             },
             {
               "name": "Cold Iron Pick",
@@ -26927,7 +28171,8 @@ if (typeof window !== 'undefined') {
                 "+2 Stamina",
                 "+4 Spirit",
                 "Requires Level 12"
-              ]
+              ],
+              "source": "Skeletal Miner"
             },
             {
               "name": "Twin-bladed Axe",
@@ -26947,7 +28192,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.70",
                 "(10.7 damage per second)",
                 "Requires Level 11"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Hardwood Cudgel",
@@ -26966,8 +28212,11 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 2.60",
                 "(10.00 damage per second)",
+                "+2 Strength",
+                "+2 Stamina",
                 "Requires Level 12"
-              ]
+              ],
+              "source": "Mathystra Relics"
             }
           ],
           "faction": "both",
@@ -27019,7 +28268,8 @@ if (typeof window !== 'undefined') {
                 "+9 Fire Resistance",
                 "Requires Level 13",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 18"
-              ]
+              ],
+              "source": "Plunder"
             },
             {
               "name": "Durgen's Crescent Axe",
@@ -27041,7 +28291,8 @@ if (typeof window !== 'undefined') {
                 "(12.29 damage per second)",
                 "+4 Strength",
                 "Requires Level 13"
-              ]
+              ],
+              "source": "Hall of Thanes: Durgen"
             },
             {
               "name": "Ironforge Greathammer",
@@ -27061,8 +28312,10 @@ if (typeof window !== 'undefined') {
                 "Two-Hand",
                 "39 - 60 Damage\tSpeed 3.10",
                 "(15.97 damage per second)",
+                "Chance on hit: Blasts a target for 42 Fire damage.",
                 "Chance on hit: Blasts a target for 42 Fire damage."
-              ]
+              ],
+              "source": "Hall of Thanes dungeon quest"
             },
             {
               "name": "Kris of Orgrimmar",
@@ -27084,7 +28337,8 @@ if (typeof window !== 'undefined') {
                 "(8.00 damage per second)",
                 "+4 Stamina",
                 "Equip: Increases healing done by up to 33"
-              ]
+              ],
+              "source": "RFC Quest: Hidden Enemies"
             },
             {
               "name": "Fang of Magmatus",
@@ -27107,7 +28361,8 @@ if (typeof window !== 'undefined') {
                 "+4 Intellect",
                 "Requires Level 13",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 18"
-              ]
+              ],
+              "source": "RFC Drop"
             },
             {
               "name": "Bone Knuckles",
@@ -27130,7 +28385,8 @@ if (typeof window !== 'undefined') {
                 "Requires Level 13",
                 "Equip: +6 Attack Power.",
                 "Equip: +6 Attack Power against Beasts."
-              ]
+              ],
+              "source": "RFC Drop"
             },
             {
               "name": "Goblin Screwdriver",
@@ -27149,8 +28405,10 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.40",
                 "(12.14 damage per second)",
+                "+4 Agility",
                 "Requires Level 13"
-              ]
+              ],
+              "source": "Goblin Engineer"
             },
             {
               "name": "Chanting Blade",
@@ -27169,8 +28427,11 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.50",
                 "(12.00 damage per second)",
+                "+2 Agility",
+                "+3 Stamina",
                 "Requires Level 13"
-              ]
+              ],
+              "source": "Jergosh the Invoker"
             },
             {
               "name": "Searing Dagger",
@@ -27193,7 +28454,8 @@ if (typeof window !== 'undefined') {
                 "+4 Spirit",
                 "Requires Level 13",
                 "Equip: Harmful spell casts sear the target for 7 Fire damage. (10ms cooldown)"
-              ]
+              ],
+              "source": "Bazzalan"
             },
             {
               "name": "Medicine Staff",
@@ -27213,7 +28475,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.50",
                 "(12.6 damage per second)",
                 "Requires Level 14"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             }
           ],
           "faction": "horde",
@@ -27263,9 +28526,11 @@ if (typeof window !== 'undefined') {
                 "Two-Hand",
                 "52 - 79 Damage\tSpeed 3.60",
                 "(18.19 damage per second)",
+                "Use: Chop nearby Humanoid or Undead corpse in two, restoring 150 Health, 150 Mana, and 15 Rage.",
                 "Requires Level 16",
                 "Use: Chop nearby Humanoid or Undead corpse in two, restoring 150 Health, 150 Mana, and 15 Rage."
-              ]
+              ],
+              "source": "Bjork"
             },
             {
               "name": "Gnarled Necromancer's Staff",
@@ -27288,7 +28553,8 @@ if (typeof window !== 'undefined') {
                 "+10 Spirit",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 26",
                 "Equip: Increases movement speed by 2% in Silverpine Forest and Hillsbrad Foothills."
-              ]
+              ],
+              "source": "Ruins of Lordaeron: Rath'mael"
             },
             {
               "name": "Clear Crystal Rod",
@@ -27311,7 +28577,8 @@ if (typeof window !== 'undefined') {
                 "+4 Stamina",
                 "+5 Intellect",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 14"
-              ]
+              ],
+              "source": "Arachnophobia quest in Stonetalon"
             },
             {
               "name": "Scepter of the Abandoned",
@@ -27334,7 +28601,8 @@ if (typeof window !== 'undefined') {
                 "+5 Shadow Resistance",
                 "Requires Level 17",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 24"
-              ]
+              ],
+              "source": "Ruins of Lordaeron: The Abandoned"
             },
             {
               "name": "Segmented Spider Leg",
@@ -27357,7 +28625,8 @@ if (typeof window !== 'undefined') {
                 "+9 Agility",
                 "+5 Spirit",
                 "Requires Level 15"
-              ]
+              ],
+              "source": "Ruins of Lordaeron: Witherfang"
             },
             {
               "name": "Kris of Orgrimmar",
@@ -27379,7 +28648,8 @@ if (typeof window !== 'undefined') {
                 "(8.00 damage per second)",
                 "+4 Stamina",
                 "Equip: Increases healing done by up to 33"
-              ]
+              ],
+              "source": "RFC Quest: Hidden Enemies"
             },
             {
               "name": "The Stitcher",
@@ -27401,7 +28671,8 @@ if (typeof window !== 'undefined') {
                 "(8.13 damage per second)",
                 "+3 Stamina",
                 "Equip: Increases healing done by up to 30"
-              ]
+              ],
+              "source": "Dalaran Dungeon"
             },
             {
               "name": "Black Malice",
@@ -27420,8 +28691,10 @@ if (typeof window !== 'undefined') {
                 "2H Mace",
                 "Speed 3.30",
                 "(18.33 damage per second)",
+                "+2 Shadow Resistance",
                 "Requires Level 16"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Rakzur Club",
@@ -27441,7 +28714,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.60",
                 "(18.3 damage per second)",
                 "Requires Level 16"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Prospector Axe",
@@ -27461,7 +28735,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.40",
                 "(17.5 damage per second)",
                 "Requires Level 15"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             }
           ],
           "faction": "horde",
@@ -27514,7 +28789,8 @@ if (typeof window !== 'undefined') {
                 "+8 Strength",
                 "+4 Stamina",
                 "Equip: Increases movement speed by 2% in Silverpine Forest and Hillsbrad Foothills."
-              ]
+              ],
+              "source": "The Wrath of Rath'mael"
             },
             {
               "name": "Coldspire Staff",
@@ -27537,7 +28813,8 @@ if (typeof window !== 'undefined') {
                 "+13 Frost Resistance",
                 "Requires Level 19",
                 "Equip: Increases damage done by Frost spells and effects by up to 32."
-              ]
+              ],
+              "source": "Ruins of Lordaeron: Rath'mael"
             },
             {
               "name": "Smite's Mighty Hammer",
@@ -27560,7 +28837,8 @@ if (typeof window !== 'undefined') {
                 "+11 Strength",
                 "+4 Agility",
                 "Requires Level 18"
-              ]
+              ],
+              "source": "The Deadmines: Mr. Smite"
             },
             {
               "name": "Kris of Orgrimmar",
@@ -27582,7 +28860,8 @@ if (typeof window !== 'undefined') {
                 "(8.00 damage per second)",
                 "+4 Stamina",
                 "Equip: Increases healing done by up to 33"
-              ]
+              ],
+              "source": "RFC Quest: Hidden Enemies"
             },
             {
               "name": "Encroacher's Claim",
@@ -27601,8 +28880,11 @@ if (typeof window !== 'undefined') {
                 "2H Axe",
                 "Speed 3.30",
                 "(19.70 damage per second)",
+                "+6 Strength",
+                "+9 Spirit",
                 "Requires Level 18"
-              ]
+              ],
+              "source": "Wrongly Blamed, Justly Corrected"
             },
             {
               "name": "Night Reaver",
@@ -27622,7 +28904,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.30",
                 "(19.70 damage per second)",
                 "Requires Level 18"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Rockslicer",
@@ -27641,8 +28924,10 @@ if (typeof window !== 'undefined') {
                 "2H Axe",
                 "Speed 3.30",
                 "(19.70 damage per second)",
+                "+7 Strength",
                 "Requires Level 18"
-              ]
+              ],
+              "source": "Rhahk'Zor"
             },
             {
               "name": "Advisor's Gnarled Staff",
@@ -27662,7 +28947,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.90",
                 "(19.7 damage per second)",
                 "Requires Level 18"
-              ]
+              ],
+              "source": "Kelm Hargunth"
             },
             {
               "name": "Lorekeeper's Staff",
@@ -27682,7 +28968,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.90",
                 "(19.7 damage per second)",
                 "Requires Level 18"
-              ]
+              ],
+              "source": "Illiyana Moonblaze"
             },
             {
               "name": "Boahn's Fang",
@@ -27701,8 +28988,11 @@ if (typeof window !== 'undefined') {
                 "2H Axe",
                 "Speed 2.50",
                 "(19.00 damage per second)",
+                "+10 Strength",
+                "+4 Spirit",
                 "Requires Level 17"
-              ]
+              ],
+              "source": "Boahn"
             }
           ],
           "faction": "horde",
@@ -27755,7 +29045,8 @@ if (typeof window !== 'undefined') {
                 "+6 Agility",
                 "+6 Intellect",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 18"
-              ]
+              ],
+              "source": "RFC: Hidden Enemies (Horde BiS)"
             },
             {
               "name": "Bronze Warhammer",
@@ -27778,7 +29069,8 @@ if (typeof window !== 'undefined') {
                 "+6 Strength",
                 "+6 Stamina",
                 "Requires Level 20"
-              ]
+              ],
+              "source": "Blacksmithing (90)"
             },
             {
               "name": "Bronze Battle Axe",
@@ -27800,7 +29092,8 @@ if (typeof window !== 'undefined') {
                 "(18.33 damage per second)",
                 "+10 Strength",
                 "Requires Level 22"
-              ]
+              ],
+              "source": "Blacksmithing (105)"
             },
             {
               "name": "Kris of Orgrimmar",
@@ -27822,7 +29115,8 @@ if (typeof window !== 'undefined') {
                 "(8.00 damage per second)",
                 "+4 Stamina",
                 "Equip: Increases healing done by up to 33"
-              ]
+              ],
+              "source": "RFC Quest: Hidden Enemies"
             },
             {
               "name": "Verigan's Fist",
@@ -27847,7 +29141,8 @@ if (typeof window !== 'undefined') {
                 "+10 Spirit",
                 "Chance on hit: Ignite the target in the flames of the Great Forge, dealing 39 to 59 Holyfire damage. Deals 3 times as much damage to Fire Elementals and Earth Elementals.",
                 "Requires Level 20"
-              ]
+              ],
+              "source": "The Test of Righteousness"
             },
             {
               "name": "Twisted Chanter's Staff",
@@ -27867,7 +29162,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.40",
                 "(20.4 damage per second)",
                 "Requires Level 19"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Blackfang",
@@ -27887,7 +29183,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.50",
                 "(16.3 damage per second)",
                 "Requires Level 20"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Diamond Hammer",
@@ -27907,7 +29204,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.50",
                 "(16.2 damage per second)",
                 "Requires Level 20"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Butcher's Cleaver",
@@ -27926,8 +29224,11 @@ if (typeof window !== 'undefined') {
                 "1H Axe",
                 "Speed 1.70",
                 "(16.18 damage per second)",
+                "+5 Strength",
+                "+2 Agility",
                 "Requires Level 20"
-              ]
+              ],
+              "source": "Razorclaw the Butcher"
             },
             {
               "name": "Barrens Basher",
@@ -27946,8 +29247,11 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 2.10",
                 "(15.95 damage per second)",
+                "+2 Strength",
+                "+5 Stamina",
                 "Requires Level 20"
-              ]
+              ],
+              "source": "Winklespark"
             }
           ],
           "faction": "horde",
@@ -28000,7 +29304,8 @@ if (typeof window !== 'undefined') {
                 "(18.33 damage per second)",
                 "+10 Strength",
                 "Requires Level 22"
-              ]
+              ],
+              "source": "Blacksmithing (105)"
             },
             {
               "name": "Iridescent Hammer",
@@ -28023,7 +29328,8 @@ if (typeof window !== 'undefined') {
                 "+3 Strength",
                 "+3 Stamina",
                 "Requires Level 23"
-              ]
+              ],
+              "source": "BFD: Lady Sarevess"
             },
             {
               "name": "Headbasher",
@@ -28042,8 +29348,12 @@ if (typeof window !== 'undefined') {
                 "2H Mace",
                 "Speed 2.30",
                 "(23.70 damage per second)",
+                "+9 Strength",
+                "+5 Stamina",
+                "+10 Intellect",
                 "Requires Level 22"
-              ]
+              ],
+              "source": "The Fury Runs Deep"
             },
             {
               "name": "Killmaim",
@@ -28063,7 +29373,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.20",
                 "(21.7 damage per second)",
                 "Requires Level 21"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Arced War Axe",
@@ -28082,8 +29393,11 @@ if (typeof window !== 'undefined') {
                 "2H Axe",
                 "Speed 3.30",
                 "(21.67 damage per second)",
+                "+9 Strength",
+                "+9 Stamina",
                 "Requires Level 21"
-              ]
+              ],
+              "source": "Commander Springvale"
             },
             {
               "name": "Doomspike",
@@ -28102,8 +29416,11 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.50",
                 "(17.33 damage per second)",
+                "+3 Strength",
+                "+3 Stamina",
                 "Requires Level 22"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Grimclaw",
@@ -28123,7 +29440,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.00",
                 "(17.25 damage per second)",
                 "Requires Level 22"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Baron's Scepter",
@@ -28147,7 +29465,8 @@ if (typeof window !== 'undefined') {
                 "+3 Stamina",
                 "Requires Level 21",
                 "Equip: Cause party members within 30 yds to regenerate 4 health every 5 sec."
-              ]
+              ],
+              "source": "Baron Silverlaine"
             },
             {
               "name": "Staff of the Shade",
@@ -28166,8 +29485,10 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.60",
                 "(16.54 damage per second)",
+                "+15 Stamina",
                 "Requires Level 22"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Ursine Hammer",
@@ -28186,8 +29507,12 @@ if (typeof window !== 'undefined') {
                 "2H Mace",
                 "Speed 3.20",
                 "(18.44 damage per second)",
+                "+5 Agility",
+                "+5 Intellect",
+                "+5 Spirit",
                 "Requires Level 22"
-              ]
+              ],
+              "source": "What Comes Around..."
             }
           ],
           "faction": "both",
@@ -28242,7 +29567,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases healing done by up to 52"
               ],
               "reqLevel": 21,
-              "icon": "inv_staff_32"
+              "icon": "inv_staff_32",
+              "source": "SM Graveyard: Interrogator Vishas"
             },
             {
               "name": "Rod of the Sleepwalker",
@@ -28266,7 +29592,8 @@ if (typeof window !== 'undefined') {
                 "Requires Level 24",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 32",
                 "Equip: Reduces the hit chance of Sleep effects against you by 5%."
-              ]
+              ],
+              "source": "BFD: Kelris"
             },
             {
               "name": "Slaghammer",
@@ -28286,7 +29613,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.80",
                 "(23.8 damage per second)",
                 "Requires Level 24"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Supercharger Battle Axe",
@@ -28306,7 +29634,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.80",
                 "(23.04 damage per second)",
                 "Requires Level 23"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Graverobber's Shovel",
@@ -28325,8 +29654,10 @@ if (typeof window !== 'undefined') {
                 "2H Mace",
                 "Speed 3.70",
                 "(22.97 damage per second)",
+                "+10 Stamina",
                 "Requires Level 23"
-              ]
+              ],
+              "source": "Dextren Ward"
             },
             {
               "name": "Dense Triangle Mace",
@@ -28346,7 +29677,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.40",
                 "(22.9 damage per second)",
                 "Requires Level 23"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Twilight Maul",
@@ -28365,8 +29697,10 @@ if (typeof window !== 'undefined') {
                 "2H Mace",
                 "Speed 3.30",
                 "(22.88 damage per second)",
+                "+12 Spell Power",
                 "Requires Level 23"
-              ]
+              ],
+              "source": "Lorgus Jett"
             },
             {
               "name": "Subdued Dragon's Fang",
@@ -28389,7 +29723,8 @@ if (typeof window !== 'undefined') {
                 "+7 Agility",
                 "+2 Stamina",
                 "Requires Level 24"
-              ]
+              ],
+              "source": "Stopping the Cycle"
             },
             {
               "name": "Beazel's Basher",
@@ -28409,7 +29744,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.50",
                 "(18.4 damage per second)",
                 "Requires Level 24"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Axe of the Enforcer",
@@ -28428,8 +29764,11 @@ if (typeof window !== 'undefined') {
                 "1H Axe",
                 "Speed 2.60",
                 "(18.27 damage per second)",
+                "+5 Strength",
+                "+4 Stamina",
                 "Requires Level 24"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             }
           ],
           "faction": "both",
@@ -28481,7 +29820,8 @@ if (typeof window !== 'undefined') {
                 "(20.77 damage per second)",
                 "+12 Stamina",
                 "Equip: Increases healing done by up to 67"
-              ]
+              ],
+              "source": "Excavation Site: Wetlands"
             },
             {
               "name": "Striking Staff",
@@ -28504,7 +29844,8 @@ if (typeof window !== 'undefined') {
                 "+9 Strength",
                 "+6 Stamina",
                 "+14 Intellect"
-              ]
+              ],
+              "source": "Heart of Disruption in City of Dalaran"
             },
             {
               "name": "Solid Iron Maul",
@@ -28527,7 +29868,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases damage and healing done by magical spells and effects by up to 24"
               ],
               "reqLevel": 26,
-              "icon": "inv_hammer_07"
+              "icon": "inv_hammer_07",
+              "source": "Blacksmithing (135)"
             },
             {
               "name": "Mighty Iron Hammer",
@@ -28549,7 +29891,8 @@ if (typeof window !== 'undefined') {
                 "(15.54 damage per second)",
                 "+5 Strength",
                 "Requires Level 25"
-              ]
+              ],
+              "source": "Blacksmithing (145)"
             },
             {
               "name": "Dendweller's Hammer",
@@ -28572,7 +29915,8 @@ if (typeof window !== 'undefined') {
                 "Requires Level 26"
               ],
               "reqLevel": 26,
-              "icon": "inv_hammer_09"
+              "icon": "inv_hammer_09",
+              "source": "Level 26 Mace"
             },
             {
               "name": "Defender of Dalaran",
@@ -28595,7 +29939,8 @@ if (typeof window !== 'undefined') {
                 "+9 Intellect"
               ],
               "reqLevel": 24,
-              "icon": "inv_hammer_20"
+              "icon": "inv_hammer_20",
+              "source": "Dalaran Dungeon"
             },
             {
               "name": "Gnarled Ash Staff",
@@ -28615,7 +29960,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.20",
                 "(25.6 damage per second)",
                 "Requires Level 26"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Advisor's Gnarled Staff",
@@ -28634,8 +29980,11 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.90",
                 "(24.66 damage per second)",
+                "+10 Stamina",
+                "+6 Intellect",
                 "Requires Level 25"
-              ]
+              ],
+              "source": "Kelm Hargunth"
             },
             {
               "name": "Lorekeeper's Staff",
@@ -28654,8 +30003,11 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.90",
                 "(24.66 damage per second)",
+                "+10 Stamina",
+                "+6 Intellect",
                 "Requires Level 25"
-              ]
+              ],
+              "source": "Illiyana Moonblaze"
             },
             {
               "name": "Looming Gavel",
@@ -28675,7 +30027,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.40",
                 "(19.8 damage per second)",
                 "Requires Level 26"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             }
           ],
           "faction": "both",
@@ -28727,7 +30080,8 @@ if (typeof window !== 'undefined') {
                 "Requires Level 28",
                 "Equip: Increases healing done by magical spells and effects by up to 68",
                 "Equip: Increases damage done by Shadow spells and effects by up to 28."
-              ]
+              ],
+              "source": "RFK: Death Speaker Jargba (1H Mace)"
             },
             {
               "name": "Striking Staff",
@@ -28750,7 +30104,8 @@ if (typeof window !== 'undefined') {
                 "+14 Intellect"
               ],
               "reqLevel": 24,
-              "icon": "inv_staff_10"
+              "icon": "inv_staff_10",
+              "source": "City of Dalaran Quest: Heart of Disruption"
             },
             {
               "name": "Healer's Staff",
@@ -28772,7 +30127,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases healing done by up to 67"
               ],
               "reqLevel": 24,
-              "icon": "inv_staff_10"
+              "icon": "inv_staff_10",
+              "source": "Excavation Site 4 quest"
             },
             {
               "name": "Ironwood Destroyer",
@@ -28787,8 +30143,10 @@ if (typeof window !== 'undefined') {
               "icon": "inv_mace_05",
               "weaponType": "Two-Handed Mace",
               "lines": [
+                "Use: Use to sketch a location on the Shapers Terrace map.",
                 "Use: Use to sketch a location on the Shapers Terrace map."
-              ]
+              ],
+              "source": "2H Mace from Excavation Site: Wetlands quest (Horrors in the Highland)"
             },
             {
               "name": "Hornbeam Heft",
@@ -28801,7 +30159,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 28,
               "stats": "+6 Strength, +4 Agility",
               "icon": "inv_axe_02",
-              "weaponType": "One-Handed Axe"
+              "weaponType": "One-Handed Axe",
+              "source": "1H Axe from Excavation Site: Wetlands quest (Horrors in the Highland)"
             },
             {
               "name": "Darkspear Raider's Reaper",
@@ -28820,8 +30179,11 @@ if (typeof window !== 'undefined') {
                 "2H Axe",
                 "Speed 3.10",
                 "(27.90 damage per second)",
+                "+16 Strength",
+                "+4 Stamina",
                 "Requires Level 28"
-              ]
+              ],
+              "source": "Creeg Bothunk"
             },
             {
               "name": "Rebels' Rugged Reaper",
@@ -28840,8 +30202,11 @@ if (typeof window !== 'undefined') {
                 "2H Axe",
                 "Speed 3.10",
                 "(27.90 damage per second)",
+                "+16 Strength",
+                "+4 Stamina",
                 "Requires Level 28"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Ancient Cleaver",
@@ -28860,8 +30225,10 @@ if (typeof window !== 'undefined') {
                 "2H Axe",
                 "Speed 3.60",
                 "(27.78 damage per second)",
+                "+12 Strength",
                 "Requires Level 28"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Advisor's Gnarled Staff",
@@ -28881,7 +30248,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.90",
                 "(27.8 damage per second)",
                 "Requires Level 28"
-              ]
+              ],
+              "source": "Kelm Hargunth"
             },
             {
               "name": "Lorekeeper's Staff",
@@ -28901,7 +30269,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.90",
                 "(27.8 damage per second)",
                 "Requires Level 28"
-              ]
+              ],
+              "source": "Illiyana Moonblaze"
             }
           ],
           "faction": "both",
@@ -28954,7 +30323,8 @@ if (typeof window !== 'undefined') {
                 "+8 Intellect",
                 "+15 Spirit",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 38"
-              ]
+              ],
+              "source": "Saving Yenniku quest in STV"
             },
             {
               "name": "Wind Spirit Staff",
@@ -28978,7 +30348,8 @@ if (typeof window !== 'undefined') {
                 "+16 Spirit",
                 "Requires Level 29",
                 "Equip: Increases healing done by up to 71"
-              ]
+              ],
+              "source": "RFK: Earthcaller Halmgar"
             },
             {
               "name": "Lightning's Grasp",
@@ -29001,7 +30372,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases the critical strike chance of your Lightning Bolt spell by 1%."
               ],
               "reqLevel": 30,
-              "icon": "inv_weapon_hand_09"
+              "icon": "inv_weapon_hand_09",
+              "source": "Custom Boss Drop"
             },
             {
               "name": "Tidebringer's Claw",
@@ -29024,7 +30396,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases the critical strike chance of your Healing Wave and Lesser Healing Wave spells by 2%."
               ],
               "reqLevel": 30,
-              "icon": "inv_weapon_hand_15"
+              "icon": "inv_weapon_hand_15",
+              "source": "Custom Boss Drop"
             },
             {
               "name": "Corpsemaker",
@@ -29047,7 +30420,8 @@ if (typeof window !== 'undefined') {
                 "Requires Level 29"
               ],
               "reqLevel": 29,
-              "icon": "inv_weapon_halbard_01"
+              "icon": "inv_weapon_halbard_01",
+              "source": "RFK: Overlord Ramtusk"
             },
             {
               "name": "Striking Staff",
@@ -29070,7 +30444,8 @@ if (typeof window !== 'undefined') {
                 "+14 Intellect"
               ],
               "reqLevel": 24,
-              "icon": "inv_staff_10"
+              "icon": "inv_staff_10",
+              "source": "Dalaran quest"
             },
             {
               "name": "Whirlwind Warhammer",
@@ -29093,7 +30468,8 @@ if (typeof window !== 'undefined') {
                 "+16 Strength",
                 "+15 Stamina",
                 "Requires Level 30"
-              ]
+              ],
+              "source": "Whirlwind Weapon"
             },
             {
               "name": "Whirlwind Axe",
@@ -29116,7 +30492,8 @@ if (typeof window !== 'undefined') {
                 "+16 Strength",
                 "+15 Stamina",
                 "Requires Level 30"
-              ]
+              ],
+              "source": "Whirlwind Weapon"
             },
             {
               "name": "Viscous Hammer",
@@ -29136,7 +30513,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.90",
                 "(30.2 damage per second)",
                 "Requires Level 30"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Cobalt Crusher",
@@ -29156,7 +30534,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.20",
                 "(28.91 damage per second)",
                 "Requires Level 29"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             }
           ],
           "faction": "both",
@@ -29211,7 +30590,8 @@ if (typeof window !== 'undefined') {
                 "+6 Spirit",
                 "Requires Level 35",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 48"
-              ]
+              ],
+              "source": "Maraudon: Khan Jehn"
             },
             {
               "name": "Rage of the Storm",
@@ -29234,7 +30614,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases the damage dealt by your Stormstrike ability by 10%."
               ],
               "reqLevel": 30,
-              "icon": "inv_mace_42"
+              "icon": "inv_mace_42",
+              "source": "Tempest quest weapon dominates into late 30s"
             },
             {
               "name": "Manual Crowd Pummeler",
@@ -29258,7 +30639,8 @@ if (typeof window !== 'undefined') {
                 "Use: Increases your attack speed by 50% for 30 sec. (3 Min Cooldown)"
               ],
               "reqLevel": 29,
-              "icon": "inv_mace_14"
+              "icon": "inv_mace_14",
+              "source": "Gnomeregan"
             },
             {
               "name": "Massive Iron Axe",
@@ -29281,7 +30663,8 @@ if (typeof window !== 'undefined') {
                 "+11 Strength",
                 "+7 Stamina",
                 "Requires Level 32"
-              ]
+              ],
+              "source": "Blacksmithing (185)"
             },
             {
               "name": "Fiery War Axe",
@@ -29300,8 +30683,10 @@ if (typeof window !== 'undefined') {
                 "2H Axe",
                 "Speed 3.60",
                 "(40.42 damage per second)",
+                "+15 Strength",
                 "Requires Level 35"
-              ]
+              ],
+              "source": "World Drop Epic"
             },
             {
               "name": "Bonebiter",
@@ -29324,7 +30709,8 @@ if (typeof window !== 'undefined') {
                 "+20 Strength",
                 "+10 Stamina",
                 "Requires Level 34"
-              ]
+              ],
+              "source": "In the Name of the Light"
             },
             {
               "name": "Abandoned Ferocity",
@@ -29348,7 +30734,8 @@ if (typeof window !== 'undefined') {
                 "+4 Agility",
                 "+12 Stamina",
                 "Requires Level 35"
-              ]
+              ],
+              "source": "Khan Jehn"
             },
             {
               "name": "The Pacifier",
@@ -29371,7 +30758,8 @@ if (typeof window !== 'undefined') {
                 "+20 Strength",
                 "+8 Stamina",
                 "Requires Level 36"
-              ]
+              ],
+              "source": "Lo'Grosh"
             },
             {
               "name": "Hellslayer Battle Axe",
@@ -29391,7 +30779,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.90",
                 "(35.52 damage per second)",
                 "Requires Level 35"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Black Duskwood Staff",
@@ -29411,7 +30800,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.80",
                 "(33.6 damage per second)",
                 "Requires Level 33"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             }
           ],
           "faction": "both",
@@ -29465,7 +30855,8 @@ if (typeof window !== 'undefined') {
                 "+14 Stamina",
                 "+16 Intellect",
                 "Requires Level 39"
-              ]
+              ],
+              "source": "SM Cath: Mograine"
             },
             {
               "name": "Illusionary Rod",
@@ -29491,7 +30882,8 @@ if (typeof window !== 'undefined') {
                 "Requires Level 34",
                 "Equip: Improves your chance to get a critical strike by 1.0%.",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 44"
-              ]
+              ],
+              "source": "SM Library: Arcanist Doan"
             },
             {
               "name": "Hammer of Expertise",
@@ -29511,7 +30903,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.10",
                 "(36.90 damage per second)",
                 "Requires Level 40"
-              ]
+              ],
+              "source": "World Drop Epic"
             },
             {
               "name": "Gut Ripper",
@@ -29531,7 +30924,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.80",
                 "(33.89 damage per second)",
                 "Requires Level 40"
-              ]
+              ],
+              "source": "World Drop Epic"
             },
             {
               "name": "Ardent Custodian",
@@ -29550,8 +30944,10 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 2.10",
                 "(32.86 damage per second)",
+                "+100 Armor",
                 "Requires Level 38"
-              ]
+              ],
+              "source": "World Drop Epic"
             },
             {
               "name": "The Skullcracker",
@@ -29570,8 +30966,10 @@ if (typeof window !== 'undefined') {
                 "2H Mace",
                 "Speed 3.30",
                 "(39.55 damage per second)",
+                "+22 Spirit",
                 "Requires Level 40"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Axe of Lingering Dread",
@@ -29591,7 +30989,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.00",
                 "(38.83 damage per second)",
                 "Requires Level 39"
-              ]
+              ],
+              "source": "Increases your chance to Dodge an attack by 1.0%., Increases your chance to Parry an attack by 1.0%. — Rare World / Dungeon Drop"
             },
             {
               "name": "Advisor's Gnarled Staff",
@@ -29611,7 +31010,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.90",
                 "(38.1 damage per second)",
                 "Requires Level 38"
-              ]
+              ],
+              "source": "Kelm Hargunth"
             },
             {
               "name": "Lorekeeper's Staff",
@@ -29631,7 +31031,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.90",
                 "(38.1 damage per second)",
                 "Requires Level 38"
-              ]
+              ],
+              "source": "Illiyana Moonblaze"
             },
             {
               "name": "Darkspear Raider's Reaper",
@@ -29650,8 +31051,11 @@ if (typeof window !== 'undefined') {
                 "2H Axe",
                 "Speed 3.10",
                 "(38.06 damage per second)",
+                "+22 Strength",
+                "+5 Stamina",
                 "Requires Level 38"
-              ]
+              ],
+              "source": "Creeg Bothunk"
             }
           ],
           "faction": "both",
@@ -29664,6 +31068,7 @@ if (typeof window !== 'undefined') {
             "Two-Hand",
             "104 - 157 Damage\tSpeed 3.50",
             "(37.29 damage per second)",
+            "Chance on hit: Attack all nearby enemies, dealing weapon damage plus 5 every 3 sec for 9 sec, and reducing your own movement speed by 80%.",
             "Requires Level 37",
             "Chance on hit: Attack all nearby enemies, dealing weapon damage plus 5 every 3 sec for 9 sec, and reducing your own movement speed by 80%."
           ]
@@ -29703,7 +31108,8 @@ if (typeof window !== 'undefined') {
                 "+4 Stamina",
                 "+17 Spirit",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 38"
-              ]
+              ],
+              "source": "A Hero's Welcome quest in Feralas"
             },
             {
               "name": "Strength of the Treant",
@@ -29726,7 +31132,8 @@ if (typeof window !== 'undefined') {
                 "+7 Stamina",
                 "+18 Intellect",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 42"
-              ]
+              ],
+              "source": "Weapons of Spirit quest in Feralas"
             },
             {
               "name": "Princess Theradras' Scepter",
@@ -29748,7 +31155,8 @@ if (typeof window !== 'undefined') {
                 "(46.47 damage per second)",
                 "Requires Level 49",
                 "Chance on hit: Wounds the target for 168 damage and lowers their armor by 100."
-              ]
+              ],
+              "source": "Maraudon: Princess Theradras"
             },
             {
               "name": "Executioner's Cleaver",
@@ -29771,7 +31179,8 @@ if (typeof window !== 'undefined') {
                 "+23 Strength",
                 "Requires Level 43",
                 "Equip: Improves your chance to hit by 1.0%."
-              ]
+              ],
+              "source": "BoE 2H Axe"
             },
             {
               "name": "Gul'gash's Greathammer",
@@ -29794,7 +31203,8 @@ if (typeof window !== 'undefined') {
                 "+19 Strength",
                 "Requires Level 44",
                 "Equip: Increases damage done by magical spells and effects by up to 21"
-              ]
+              ],
+              "source": "Feralas Drop"
             },
             {
               "name": "Staff of Lore",
@@ -29817,7 +31227,8 @@ if (typeof window !== 'undefined') {
                 "+5 Intellect",
                 "+18 Spirit",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 40"
-              ]
+              ],
+              "source": "Gahz'ridian quest in Tanaris"
             },
             {
               "name": "Flurry Axe",
@@ -29837,7 +31248,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.50",
                 "(35.3 damage per second)",
                 "Requires Level 42"
-              ]
+              ],
+              "source": "World Drop Epic"
             },
             {
               "name": "The Chief's Enforcer",
@@ -29857,7 +31269,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.40",
                 "(43.53 damage per second)",
                 "Requires Level 45"
-              ]
+              ],
+              "source": "Chief Ukorz Sandscalp"
             },
             {
               "name": "Blanchard's Stout",
@@ -29877,7 +31290,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.10",
                 "(43.4 damage per second)",
                 "Requires Level 45"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Wardcleaver",
@@ -29896,7 +31310,8 @@ if (typeof window !== 'undefined') {
                 "2H Axe",
                 "Speed 3.50",
                 "(41.86 damage per second)"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             }
           ],
           "faction": "both",
@@ -29909,6 +31324,7 @@ if (typeof window !== 'undefined') {
             "Two-Hand",
             "117 - 176 Damage\tSpeed 3.20",
             "(45.78 damage per second)",
+            "Chance on hit: Wounds the target causing them to bleed for 210 damage over 7 sec.",
             "Requires Level 48",
             "Chance on hit: Wounds the target causing them to bleed for 210 damage over 7 sec."
           ]
@@ -29946,7 +31362,8 @@ if (typeof window !== 'undefined') {
                 "103 - 156 Damage\tSpeed 3.80",
                 "(34.08 damage per second)",
                 "Equip: Increases healing done by up to 112"
-              ]
+              ],
+              "source": "Corruption of Earth and Seed quest in Maraudon"
             },
             {
               "name": "Dreadforge Retaliator",
@@ -29959,7 +31376,8 @@ if (typeof window !== 'undefined') {
               "iLvl": 52,
               "reqLevel": 46,
               "stats": "",
-              "icon": "inv_axe_11"
+              "icon": "inv_axe_11",
+              "source": "BRD: Emperor Dagran Thaurissan"
             },
             {
               "name": "Enchanted Battlehammer",
@@ -29983,7 +31401,8 @@ if (typeof window !== 'undefined') {
                 "Requires Level 51",
                 "Equip: Increases your chance to Parry an attack by 1.4%.",
                 "Equip: Improves your chance to hit by 2.0%."
-              ]
+              ],
+              "source": "Blacksmithing (280)"
             },
             {
               "name": "Spire of Hakkar",
@@ -30008,7 +31427,8 @@ if (typeof window !== 'undefined') {
                 "Requires Level 49",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 62",
                 "Equip: Harmful spell casts have a chance to steal 112 life from the target enemy over 8 sec. (10ms cooldown)"
-              ]
+              ],
+              "source": "Sunken Temple"
             },
             {
               "name": "Axe of the Deep Woods",
@@ -30028,7 +31448,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.70",
                 "(41.48 damage per second)",
                 "Requires Level 52"
-              ]
+              ],
+              "source": "World Drop Epic"
             },
             {
               "name": "Hammer of the Northern Wind",
@@ -30048,7 +31469,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.10",
                 "(39.52 damage per second)",
                 "Requires Level 49"
-              ]
+              ],
+              "source": "World Drop Epic"
             },
             {
               "name": "Glowing Brightwood Staff",
@@ -30068,7 +31490,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.10",
                 "(38.1 damage per second)",
                 "Requires Level 49"
-              ]
+              ],
+              "source": "World Drop Epic"
             },
             {
               "name": "Dark Iron Sunderer",
@@ -30088,7 +31511,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.60",
                 "(48.85 damage per second)",
                 "Requires Level 52"
-              ]
+              ],
+              "source": "Dark Iron Sunderer"
             },
             {
               "name": "Lord Alexander's Battle Axe",
@@ -30108,7 +31532,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.20",
                 "(48.1 damage per second)",
                 "Requires Level 51"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Limb Cleaver",
@@ -30127,8 +31552,11 @@ if (typeof window !== 'undefined') {
                 "2H Axe",
                 "Speed 2.40",
                 "(47.50 damage per second)",
+                "+27 Strength",
+                "+8 Stamina",
                 "Requires Level 50"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             }
           ],
           "faction": "both",
@@ -30141,6 +31569,7 @@ if (typeof window !== 'undefined') {
             "Two-Hand",
             "140 - 211 Damage\tSpeed 3.70",
             "(47.43 damage per second)",
+            "Chance on hit: Stuns target for 8 sec.",
             "Requires Level 50",
             "Chance on hit: Stuns target for 8 sec."
           ]
@@ -30180,7 +31609,8 @@ if (typeof window !== 'undefined') {
                 "+20 Stamina",
                 "+15 Intellect",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 54"
-              ]
+              ],
+              "source": "The Corpulent One quest in EPL"
             },
             {
               "name": "Corrupted Blackwood Staff",
@@ -30203,7 +31633,8 @@ if (typeof window !== 'undefined') {
                 "+11 Stamina",
                 "+22 Intellect",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 54"
-              ]
+              ],
+              "source": "Into The Maw of Madness quest in Silithus"
             },
             {
               "name": "The Unstoppable Force",
@@ -30228,7 +31659,8 @@ if (typeof window !== 'undefined') {
                 "Requires Level 55",
                 "Equip: Improves your chance to get a critical strike by 2.0%.",
                 "Chance on hit: Stuns target for 1 sec."
-              ]
+              ],
+              "source": "Alterac Valley Exalted"
             },
             {
               "name": "Wisepaw Totem",
@@ -30252,7 +31684,8 @@ if (typeof window !== 'undefined') {
                 "+23 Intellect",
                 "Requires Level 53",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 66"
-              ]
+              ],
+              "source": "Mount Hyjal caster staff"
             },
             {
               "name": "Fist of the Damned",
@@ -30272,10 +31705,13 @@ if (typeof window !== 'undefined') {
                 "One-Hand",
                 "47 - 89 Damage\tSpeed 1.90",
                 "(35.79 damage per second)",
+                "Equip: Increased Defense +2.",
+                "Chance on hit: Steals 56 life from target enemy.",
                 "Requires Level 49",
                 "Equip: Increased Defense +2.",
                 "Chance on hit: Steals 56 life from target enemy."
-              ]
+              ],
+              "source": "Stratholme"
             },
             {
               "name": "Icesworn Decapitator",
@@ -30300,7 +31736,8 @@ if (typeof window !== 'undefined') {
                 "+10 Frost Resistance",
                 "Requires Level 54",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 13"
-              ]
+              ],
+              "source": "Winterspring Rare"
             },
             {
               "name": "Ironbark Staff",
@@ -30326,7 +31763,8 @@ if (typeof window !== 'undefined') {
                 "Requires Level 55",
                 "Equip: Improves your chance to get a critical strike by 2.0%.",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 88"
-              ]
+              ],
+              "source": "Alterac Valley (Revered)"
             },
             {
               "name": "Sulfuras, Hand of Ragnaros",
@@ -30345,8 +31783,11 @@ if (typeof window !== 'undefined') {
                 "2H Mace",
                 "Speed 3.70",
                 "(80.41 damage per second)",
+                "+12 Strength",
+                "+12 Stamina",
                 "Requires Level 60"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Atiesh, Greatstaff of the Guardian",
@@ -30365,8 +31806,14 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.90",
                 "(64.34 damage per second)",
+                "+31 Stamina",
+                "+32 Intellect",
+                "+24 Spirit",
+                "+150 Spell Power",
+                "+20 Hit",
                 "Requires Level 60"
-              ]
+              ],
+              "source": "Atiesh, Greatstaff of the Guardian"
             },
             {
               "name": "Atiesh, Greatstaff of the Guardian",
@@ -30385,8 +31832,13 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.90",
                 "(64.34 damage per second)",
+                "+30 Stamina",
+                "+29 Intellect",
+                "+183 Spell Power",
+                "+28 Crit",
                 "Requires Level 60"
-              ]
+              ],
+              "source": "Atiesh, Greatstaff of the Guardian"
             }
           ],
           "faction": "both",
@@ -30435,7 +31887,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 1,
               "stats": "+1 Spirit",
               "icon": "inv_axe_10",
-              "weaponType": "One-Handed Mace"
+              "weaponType": "One-Handed Mace",
+              "source": "Starter vendor mace"
             },
             {
               "name": "Balanced Quarterstaff",
@@ -30454,8 +31907,11 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.20",
                 "(8.86 damage per second)",
+                "+2 Stamina",
+                "+2 Spirit",
                 "Requires Level 6"
-              ]
+              ],
+              "source": "Return to Valanaar"
             },
             {
               "name": "Wrathroot",
@@ -30474,8 +31930,10 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 3.30",
                 "(7.12 damage per second)",
+                "+1 Intellect",
                 "Requires Level 5"
-              ]
+              ],
+              "source": "Wrathvine"
             },
             {
               "name": "Apprentice's Spellstaff",
@@ -30497,7 +31955,8 @@ if (typeof window !== 'undefined') {
                 "(6.36 damage per second)",
                 "+2 Intellect",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 4"
-              ]
+              ],
+              "source": "Rare Books"
             },
             {
               "name": "Roofing Hammer",
@@ -30516,8 +31975,10 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 2.40",
                 "(5.42 damage per second)",
+                "+1 Spirit",
                 "Requires Level 5"
-              ]
+              ],
+              "source": "Deliver the News"
             },
             {
               "name": "Gritroot Staff",
@@ -30540,7 +32001,8 @@ if (typeof window !== 'undefined') {
                 "+1 Stamina",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 2",
                 "Requires Level 4"
-              ]
+              ],
+              "source": "The Relics of Wakening"
             },
             {
               "name": "Thornroot Club",
@@ -30559,8 +32021,11 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 2.10",
                 "(4.52 damage per second)",
+                "+1 Stamina",
+                "+6 Spell Power",
                 "Requires Level 4"
-              ]
+              ],
+              "source": "Ursal the Mauler"
             }
           ]
         },
@@ -30593,7 +32058,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 6,
               "stats": "+2 Spirit",
               "icon": "inv_hammer_01",
-              "weaponType": "One-Handed Mace"
+              "weaponType": "One-Handed Mace",
+              "source": "Starter vendor mace"
             },
             {
               "name": "Apprentice's Spellstaff",
@@ -30605,7 +32071,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 8,
               "stats": "+3 Spirit, +2 Intellect",
               "icon": "inv_staff_02",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "source": "Darkshore / Silverpine drop"
             },
             {
               "name": "Hammer of Orgrimmar",
@@ -30628,7 +32095,8 @@ if (typeof window !== 'undefined') {
                 "+3 Strength",
                 "+3 Spirit",
                 "Requires Level 9"
-              ]
+              ],
+              "source": "Hidden Enemies"
             },
             {
               "name": "Staff of Orgrimmar",
@@ -30652,7 +32120,8 @@ if (typeof window !== 'undefined') {
                 "+6 Intellect",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 18",
                 "Requires Level 9"
-              ]
+              ],
+              "source": "Hidden Enemies"
             },
             {
               "name": "Kris of Orgrimmar",
@@ -30675,7 +32144,8 @@ if (typeof window !== 'undefined') {
                 "+4 Stamina",
                 "Equip: Increases healing done by up to 33",
                 "Requires Level 9"
-              ]
+              ],
+              "source": "Hidden Enemies"
             },
             {
               "name": "Ceranium Rod",
@@ -30694,8 +32164,11 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.70",
                 "(10.74 damage per second)",
+                "+7 Stamina",
+                "+14 Spell Power",
                 "Requires Level 10"
-              ]
+              ],
+              "source": "The Weaver"
             },
             {
               "name": "Wind Rider Staff",
@@ -30714,8 +32187,11 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.80",
                 "(9.64 damage per second)",
+                "+6 Spirit",
+                "+12 Spell Power",
                 "Requires Level 10"
-              ]
+              ],
+              "source": "Cry of the Thunderhawk"
             },
             {
               "name": "Invader's Mace",
@@ -30734,8 +32210,11 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 2.40",
                 "(8.54 damage per second)",
+                "+2 Strength",
+                "+1 Spirit",
                 "Requires Level 10"
-              ]
+              ],
+              "source": "Banner of the Fallen"
             }
           ]
         },
@@ -30768,7 +32247,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 11,
               "stats": "+4 Spirit, Equip: Increases healing done by up to 33 and damage done by up to 11.",
               "icon": "inv_mace_01",
-              "weaponType": "One-Handed Mace"
+              "weaponType": "One-Handed Mace",
+              "source": "Oggleflint (Ragefire Chasm)"
             },
             {
               "name": "Scepter of the Abandoned",
@@ -30780,7 +32260,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 14,
               "stats": "+4 Stamina, +4 Intellect",
               "icon": "inv_mace_01",
-              "weaponType": "Main Hand Mace"
+              "weaponType": "Main Hand Mace",
+              "source": "The Abandoned (Ruins of Lordaeron)"
             },
             {
               "name": "Staff of the Dor'Danil",
@@ -30792,7 +32273,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 12,
               "stats": "+4 Intellect, +4 Spirit",
               "icon": "inv_staff_02",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "source": "Darkshore / Bloodmyst quest reward"
             },
             {
               "name": "Segmented Spider Leg",
@@ -30815,7 +32297,8 @@ if (typeof window !== 'undefined') {
                 "+9 Agility",
                 "+5 Spirit",
                 "Requires Level 15"
-              ]
+              ],
+              "source": "Witherfang"
             },
             {
               "name": "Gnarled Necromancer's Staff",
@@ -30839,7 +32322,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases damage and healing done by magical spells and effects by up to 26",
                 "Equip: Increases movement speed by 2% in Silverpine Forest and Hillsbrad Foothills.",
                 "Requires Level 15"
-              ]
+              ],
+              "source": "The Wrath of Rath'mael"
             },
             {
               "name": "Staff of Westfall",
@@ -30864,7 +32348,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases healing done by up to 48",
                 "Equip: Movement speed increased by 2% in Elwynn Forest, Westfall, Redridge Mountains, and the Deadmines.",
                 "Requires Level 14"
-              ]
+              ],
+              "source": "The Defias Brotherhood"
             },
             {
               "name": "Emberstone Staff",
@@ -30888,7 +32373,8 @@ if (typeof window !== 'undefined') {
                 "+8 Fire Resistance",
                 "Requires Level 17",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 24"
-              ]
+              ],
+              "source": "Captain Greenskin"
             },
             {
               "name": "Witching Stave",
@@ -30913,7 +32399,8 @@ if (typeof window !== 'undefined') {
                 "+8 Shadow Resistance",
                 "Requires Level 17",
                 "Equip: Increases damage done by Shadow spells and effects by up to 27."
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             }
           ]
         },
@@ -30946,7 +32433,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 18,
               "stats": "+7 Spirit, Equip: Increases healing done by up to 45 and damage done by up to 15.",
               "icon": "inv_staff_08",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "source": "Verdan the Everliving (Wailing Caverns)"
             },
             {
               "name": "Crescent Staff",
@@ -30958,7 +32446,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 15,
               "stats": "+7 Intellect, +7 Spirit, +7 Stamina",
               "icon": "inv_staff_02",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "source": "Leaders of the Fang quest (Wailing Caverns)"
             },
             {
               "name": "Coldspire Staff",
@@ -30970,7 +32459,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 17,
               "stats": "+7 Intellect, +5 Spirit, +6 Frost Dmg",
               "icon": "inv_staff_08",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "source": "Rath'mael (Ruins of Lordaeron)"
             },
             {
               "name": "Alliance Outrunner Staff",
@@ -30994,7 +32484,8 @@ if (typeof window !== 'undefined') {
                 "+9 Spirit",
                 "Requires Level 21",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 28"
-              ]
+              ],
+              "source": "Marcus Bel"
             },
             {
               "name": "Staff of the Blessed Seer",
@@ -31013,8 +32504,12 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 3.00",
                 "(15.67 damage per second)",
+                "+9 Stamina",
+                "+10 Spirit",
+                "+28 Spell Power",
                 "Requires Level 20"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Evocator's Blade",
@@ -31033,8 +32528,12 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.60",
                 "(10.94 damage per second)",
+                "+2 Intellect",
+                "+5 Spirit",
+                "+28 Spell Power",
                 "Requires Level 20"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Frostbitten Staff",
@@ -31053,8 +32552,10 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.40",
                 "(15.83 damage per second)",
+                "+6 Spirit",
                 "Requires Level 19"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Channeler's Staff",
@@ -31073,8 +32574,10 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 3.40",
                 "(15.15 damage per second)",
+                "+8 Intellect",
                 "Requires Level 18"
-              ]
+              ],
+              "source": "Dalaran Spellscribe"
             }
           ]
         },
@@ -31107,7 +32610,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 21,
               "stats": "+5 Stamina, +12 Spirit, Equip: Increases healing done by up to 52 and damage done by up to 17.",
               "icon": "inv_staff_12",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "source": "Odo the Blindwatcher (SFK)"
             },
             {
               "name": "Rod of the Sleepwalker",
@@ -31119,7 +32623,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 24,
               "stats": "+11 Intellect, +10 Spirit",
               "icon": "inv_staff_08",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "source": "Twilight Lord Kelris (Blackfathom Deeps)"
             },
             {
               "name": "Striking Staff",
@@ -31143,7 +32648,8 @@ if (typeof window !== 'undefined') {
                 "+6 Stamina",
                 "+14 Intellect",
                 "Requires Level 24"
-              ]
+              ],
+              "source": "Heart of Disruption"
             },
             {
               "name": "Advisor's Gnarled Staff",
@@ -31162,8 +32668,11 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.90",
                 "(24.66 damage per second)",
+                "+10 Stamina",
+                "+6 Intellect",
                 "Requires Level 25"
-              ]
+              ],
+              "source": "Kelm Hargunth"
             },
             {
               "name": "Lorekeeper's Staff",
@@ -31182,8 +32691,11 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.90",
                 "(24.66 damage per second)",
+                "+10 Stamina",
+                "+6 Intellect",
                 "Requires Level 25"
-              ]
+              ],
+              "source": "Illiyana Moonblaze"
             },
             {
               "name": "Fallen Dragon's Scepter",
@@ -31207,7 +32719,8 @@ if (typeof window !== 'undefined') {
                 "+13 Spirit",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 36",
                 "Requires Level 24"
-              ]
+              ],
+              "source": "Stopping the Cycle"
             },
             {
               "name": "Glimmering Staff",
@@ -31231,7 +32744,8 @@ if (typeof window !== 'undefined') {
                 "+11 Intellect",
                 "Requires Level 25",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 34"
-              ]
+              ],
+              "source": "Glimmering Staff"
             },
             {
               "name": "Soulstaff",
@@ -31250,8 +32764,11 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 1.80",
                 "(18.33 damage per second)",
+                "+11 Stamina",
+                "+11 Spirit",
                 "Requires Level 25"
-              ]
+              ],
+              "source": "Soulstaff"
             }
           ]
         },
@@ -31284,7 +32801,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 30,
               "stats": "+3 Stamina, +7 Spirit, Equip: Increases healing done by up to 75 and damage done by up to 25.",
               "icon": "inv_mace_01",
-              "weaponType": "Main Hand Mace"
+              "weaponType": "Main Hand Mace",
+              "source": "Dark Iron Ambassador (Gnomeregan)"
             },
             {
               "name": "Death Speaker Scepter",
@@ -31296,7 +32814,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 28,
               "stats": "Equip: Increases healing done by up to 68. Equip: Restores 12 Health per 5 sec.",
               "icon": "inv_mace_01",
-              "weaponType": "One-Handed Mace"
+              "weaponType": "One-Handed Mace",
+              "source": "Death Speaker Jargba (Razorfen Kraul)"
             },
             {
               "name": "Wind Spirit Staff",
@@ -31308,7 +32827,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 29,
               "stats": "+6 Stamina, +16 Spirit, Equip: Increases healing done by up to 71 and damage done by up to 23.",
               "icon": "inv_staff_08",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "source": "Earthcaller Halmgar (Razorfen Kraul)"
             },
             {
               "name": "Spine of the Devourer",
@@ -31331,7 +32851,8 @@ if (typeof window !== 'undefined') {
                 "+14 Stamina",
                 "Requires Level 28",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 36"
-              ]
+              ],
+              "source": "Mana Devourer"
             },
             {
               "name": "Hydrocane",
@@ -31350,8 +32871,10 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.80",
                 "(19.82 damage per second)",
+                "+36 Spell Power",
                 "Requires Level 27"
-              ]
+              ],
+              "source": "Viscous Fallout"
             },
             {
               "name": "Death Prophet Spine",
@@ -31374,7 +32897,8 @@ if (typeof window !== 'undefined') {
                 "+11 Stamina",
                 "Requires Level 26",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 34"
-              ]
+              ],
+              "source": "Aggem Thorncurse"
             },
             {
               "name": "Tendonscraper Dagger",
@@ -31397,7 +32921,8 @@ if (typeof window !== 'undefined') {
                 "+5 Stamina",
                 "Requires Level 28",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 36"
-              ]
+              ],
+              "source": "Lyn the Ignored"
             },
             {
               "name": "Clever Expeditionary's Spellblade",
@@ -31416,8 +32941,12 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.40",
                 "(14.29 damage per second)",
+                "+4 Stamina",
+                "+6 Intellect",
+                "+3 Spirit",
                 "Requires Level 28"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             }
           ]
         },
@@ -31450,7 +32979,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 30,
               "stats": "+3 Stamina, +7 Spirit, Equip: Increases healing done by up to 75 and damage done by up to 25.",
               "icon": "inv_mace_01",
-              "weaponType": "Main Hand Mace"
+              "weaponType": "Main Hand Mace",
+              "source": "Dark Iron Ambassador (Gnomeregan)"
             },
             {
               "name": "Illusionary Rod",
@@ -31462,7 +32992,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 34,
               "stats": "+15 Intellect, +10 Spirit, +7 Stamina",
               "icon": "inv_staff_02",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "source": "Arcanist Doan (SM Library)"
             },
             {
               "name": "Hypnotic Blade",
@@ -31486,7 +33017,8 @@ if (typeof window !== 'undefined') {
                 "+3 Spirit",
                 "Requires Level 34",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 44"
-              ]
+              ],
+              "source": "Arcanist Doan"
             },
             {
               "name": "Swinetusk Shank",
@@ -31510,7 +33042,8 @@ if (typeof window !== 'undefined') {
                 "+4 Spirit",
                 "Requires Level 30",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 40"
-              ]
+              ],
+              "source": "Agathelos the Raging"
             },
             {
               "name": "Nimboya's Mystical Staff",
@@ -31534,7 +33067,8 @@ if (typeof window !== 'undefined') {
                 "+15 Spirit",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 38",
                 "Requires Level 30"
-              ]
+              ],
+              "source": "Saving Yenniku"
             },
             {
               "name": "Mindslicer",
@@ -31557,7 +33091,8 @@ if (typeof window !== 'undefined') {
                 "+7 Intellect",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 34",
                 "Requires Level 30"
-              ]
+              ],
+              "source": "Call to Arms"
             },
             {
               "name": "Madman's Blade",
@@ -31580,7 +33115,8 @@ if (typeof window !== 'undefined') {
                 "+7 Spirit",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 32",
                 "Requires Level 30"
-              ]
+              ],
+              "source": "Colonel Kurzen"
             },
             {
               "name": "Searing Golden Blade",
@@ -31599,8 +33135,10 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.40",
                 "(14.29 damage per second)",
+                "+7 Intellect",
                 "Requires Level 34"
-              ]
+              ],
+              "source": "Searing Golden Blade"
             }
           ]
         },
@@ -31633,7 +33171,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 34,
               "stats": "+4 Strength, +3 Spirit, Equip: Increases damage and healing by up to 16.",
               "icon": "inv_mace_01",
-              "weaponType": "One-Handed Mace"
+              "weaponType": "One-Handed Mace",
+              "source": "SM Quest (In the Name of the Light)"
             },
             {
               "name": "Galgann's Firehammer",
@@ -31645,7 +33184,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 38,
               "stats": "+8 Intellect, +6 Spirit",
               "icon": "inv_mace_08",
-              "weaponType": "One-Handed Mace"
+              "weaponType": "One-Handed Mace",
+              "source": "Galgann Firehammer (Uldaman)"
             },
             {
               "name": "Staff of Jordan",
@@ -31670,7 +33210,8 @@ if (typeof window !== 'undefined') {
                 "Requires Level 35",
                 "Equip: Improves your chance to hit by 1.5%.",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 60"
-              ]
+              ],
+              "source": "World Drop Epic"
             },
             {
               "name": "Coldbringer Spine",
@@ -31689,8 +33230,10 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.80",
                 "(28.21 damage per second)",
+                "+20 Spirit, Improves your chance to hit by 1.0%.",
                 "Requires Level 38"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Greatstaff of the Necrokhans",
@@ -31715,7 +33258,8 @@ if (typeof window !== 'undefined') {
                 "+6 Spirit",
                 "Requires Level 35",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 48"
-              ]
+              ],
+              "source": "Khan Jehn"
             },
             {
               "name": "Celestial Stave",
@@ -31738,7 +33282,8 @@ if (typeof window !== 'undefined') {
                 "+8 Intellect",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 46",
                 "Requires Level 35"
-              ]
+              ],
+              "source": "Celestial Power"
             },
             {
               "name": "Clever Expeditionary's Spellblade",
@@ -31757,8 +33302,12 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.40",
                 "(19.64 damage per second)",
+                "+5 Stamina",
+                "+8 Intellect",
+                "+3 Spirit",
                 "Requires Level 38"
-              ]
+              ],
+              "source": "Bryanna Embreeze"
             },
             {
               "name": "Darkspear Insurgent's Spellblade",
@@ -31777,8 +33326,12 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.40",
                 "(19.64 damage per second)",
+                "+5 Stamina",
+                "+8 Intellect",
+                "+3 Spirit",
                 "Requires Level 38"
-              ]
+              ],
+              "source": "Creeg Bothunk"
             }
           ]
         },
@@ -31811,7 +33364,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 40,
               "stats": "+5 Intellect, +5 Spirit",
               "icon": "inv_mace_07",
-              "weaponType": "One-Handed Mace"
+              "weaponType": "One-Handed Mace",
+              "source": "Digmaster Shovelphlange (Uldaman)"
             },
             {
               "name": "Emerald Watcher's Dreamstaff",
@@ -31835,7 +33389,8 @@ if (typeof window !== 'undefined') {
                 "+19 Spirit",
                 "Requires Level 44",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 56"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Spellshifter Rod",
@@ -31859,7 +33414,8 @@ if (typeof window !== 'undefined') {
                 "+23 Intellect",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 54",
                 "Requires Level 40"
-              ]
+              ],
+              "source": "Tiara of the Deep"
             },
             {
               "name": "Jhordy's Misplaced Screwdriver",
@@ -31878,8 +33434,12 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.90",
                 "(30.26 damage per second)",
+                "+6 Strength",
+                "+9 Agility",
+                "-1 Intellect",
                 "Requires Level 40"
-              ]
+              ],
+              "source": "1 Intellect — Rettrick"
             },
             {
               "name": "Farraki Kris",
@@ -31898,8 +33458,10 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.60",
                 "(20.94 damage per second)",
+                "+54 Spell Power",
                 "Requires Level 42"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Galgann's Firehammer",
@@ -31918,8 +33480,10 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 2.20",
                 "(20.91 damage per second)",
+                "+54 Spell Power",
                 "Requires Level 42"
-              ]
+              ],
+              "source": "Galgann Firehammer"
             },
             {
               "name": "Notched Ritual Rib",
@@ -31938,8 +33502,11 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.70",
                 "(20.29 damage per second)",
+                "+4 Stamina",
+                "+9 Intellect",
                 "Requires Level 40"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Strength of the Treant",
@@ -31963,7 +33530,8 @@ if (typeof window !== 'undefined') {
                 "+18 Intellect",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 42",
                 "Requires Level 40"
-              ]
+              ],
+              "source": "Weapons of Spirit"
             }
           ]
         },
@@ -31996,7 +33564,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 49,
               "stats": "Equip: Increases healing done by up to 116 and damage done by up to 38.",
               "icon": "inv_knife_01",
-              "weaponType": "Dagger"
+              "weaponType": "Dagger",
+              "source": "Maraudon trash drop"
             },
             {
               "name": "Spire of Hakkar",
@@ -32008,7 +33577,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 48,
               "stats": "+16 Spirit, +14 Intellect, Equip: Increases damage and healing by up to 18.",
               "icon": "inv_staff_08",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "source": "Avatar of Hakkar (Sunken Temple)"
             },
             {
               "name": "Might of Hakkar",
@@ -32027,8 +33597,12 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 2.40",
                 "(35.83 damage per second)",
+                "+11 Stamina",
+                "+3 Spirit",
+                "+5 Hit",
                 "Requires Level 49"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Fist of Stone",
@@ -32047,8 +33621,11 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 1.80",
                 "(35.28 damage per second)",
+                "+11 Stamina",
+                "+5 Spirit",
                 "Requires Level 48"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Kindling Stave",
@@ -32075,7 +33652,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Improves your chance to get a critical strike by 1.0%.",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 60",
                 "Equip: Harmful spell casts have a chance to deal 60 to 81 Fire damage. Deals 3 times as much damage to Plants. (10ms cooldown)"
-              ]
+              ],
+              "source": "Pyromancer Loregrain"
             },
             {
               "name": "Dreamstaff",
@@ -32094,8 +33672,11 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.40",
                 "(32.29 damage per second)",
+                "+19 Stamina",
+                "+19 Spirit",
                 "Requires Level 45"
-              ]
+              ],
+              "source": "Dreamstaff"
             },
             {
               "name": "Radiant Staff",
@@ -32114,8 +33695,11 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.40",
                 "(32.29 damage per second)",
+                "+19 Stamina",
+                "+19 Intellect",
                 "Requires Level 45"
-              ]
+              ],
+              "source": "Radiant Staff"
             },
             {
               "name": "Clever Expeditionary's Spellblade",
@@ -32134,8 +33718,12 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.40",
                 "(23.57 damage per second)",
+                "+7 Stamina",
+                "+10 Intellect",
+                "+4 Spirit",
                 "Requires Level 48"
-              ]
+              ],
+              "source": "Bryanna Embreeze"
             }
           ]
         },
@@ -32168,7 +33756,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 53,
               "stats": "+12 Intellect, Equip: Increases healing done by up to 28.",
               "icon": "inv_staff_08",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "source": "Emperor Dagran Thaurissan (BRD)"
             },
             {
               "name": "Wisepaw Totem",
@@ -32192,7 +33781,8 @@ if (typeof window !== 'undefined') {
                 "+23 Intellect",
                 "Requires Level 53",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 66"
-              ]
+              ],
+              "source": "Dala Fairmaw"
             },
             {
               "name": "Soul Harvester",
@@ -32217,7 +33807,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Improves your chance to hit by 1.0%.",
                 "Equip: Increases damage done by Shadow spells and effects by up to 73.",
                 "Requires Level 50"
-              ]
+              ],
+              "source": "Trolls of a Feather"
             },
             {
               "name": "Copper Plated Pipe",
@@ -32235,8 +33826,11 @@ if (typeof window !== 'undefined') {
               "lines": [
                 "Staff",
                 "Speed 3.20",
-                "(45.00 damage per second)"
-              ]
+                "(45.00 damage per second)",
+                "+20 Agility",
+                "+12 Intellect"
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Purified Gnarlybark Staff",
@@ -32254,8 +33848,10 @@ if (typeof window !== 'undefined') {
               "lines": [
                 "Staff",
                 "Speed 3.10",
-                "(34.03 damage per second)"
-              ]
+                "(34.03 damage per second)",
+                "+19 Spirit, Improves your chance to get a critical strike by 1.0%."
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Staff of the Deeproar",
@@ -32273,8 +33869,12 @@ if (typeof window !== 'undefined') {
               "lines": [
                 "Staff",
                 "Speed 3.30",
-                "(33.48 damage per second)"
-              ]
+                "(33.48 damage per second)",
+                "+13 Stamina",
+                "+12 Intellect",
+                "+14 Spirit"
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Staff of Archmage Selwyn",
@@ -32292,8 +33892,11 @@ if (typeof window !== 'undefined') {
               "lines": [
                 "Staff",
                 "Speed 2.50",
-                "(31.60 damage per second)"
-              ]
+                "(31.60 damage per second)",
+                "+16 Stamina",
+                "+16 Intellect"
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Cleansed Ritual Kris",
@@ -32311,8 +33914,10 @@ if (typeof window !== 'undefined') {
               "lines": [
                 "Dagger",
                 "Speed 1.60",
-                "(23.44 damage per second)"
-              ]
+                "(23.44 damage per second)",
+                "+4 Spirit"
+              ],
+              "source": "Leveling Drop / Vendor"
             }
           ]
         },
@@ -32345,7 +33950,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 60,
               "stats": "+19 Intellect, +10 Spirit, Equip: Increases healing done by up to 210 and damage done by up to 70.",
               "icon": "inv_mace_01",
-              "weaponType": "One-Handed Mace"
+              "weaponType": "One-Handed Mace",
+              "source": "C'Thun (Temple of Ahn'Qiraj)"
             },
             {
               "name": "Gavel of Infinite Wisdom",
@@ -32357,7 +33963,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 60,
               "stats": "+14 Intellect, +8 Spirit, Equip: Increases healing done by up to 184 and damage done by up to 61.",
               "icon": "inv_mace_08",
-              "weaponType": "One-Handed Mace"
+              "weaponType": "One-Handed Mace",
+              "source": "AQ20"
             },
             {
               "name": "Blessed Qiraji Augur Staff",
@@ -32369,7 +33976,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 60,
               "stats": "+31 Stamina, +20 Intellect, +14 Spirit, Equip: Increases healing done by up to 203 and damage done by up to 67.",
               "icon": "inv_staff_08",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "source": "Imperial Qiraji Regalia (AQ40)"
             },
             {
               "name": "Atiesh, Greatstaff of the Guardian",
@@ -32388,8 +33996,14 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.90",
                 "(64.34 damage per second)",
+                "+31 Stamina",
+                "+32 Intellect",
+                "+24 Spirit",
+                "+150 Spell Power",
+                "+20 Hit",
                 "Requires Level 60"
-              ]
+              ],
+              "source": "Atiesh, Greatstaff of the Guardian"
             },
             {
               "name": "Atiesh, Greatstaff of the Guardian",
@@ -32408,8 +34022,13 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.90",
                 "(64.34 damage per second)",
+                "+30 Stamina",
+                "+29 Intellect",
+                "+183 Spell Power",
+                "+28 Crit",
                 "Requires Level 60"
-              ]
+              ],
+              "source": "Atiesh, Greatstaff of the Guardian"
             },
             {
               "name": "Atiesh, Greatstaff of the Guardian",
@@ -32428,8 +34047,14 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.90",
                 "(64.34 damage per second)",
+                "+28 Stamina",
+                "+28 Intellect",
+                "+27 Spirit",
+                "+242 Healing",
+                "+120 Spell Power",
                 "Requires Level 60"
-              ]
+              ],
+              "source": "Atiesh, Greatstaff of the Guardian"
             },
             {
               "name": "Atiesh, Greatstaff of the Guardian",
@@ -32448,8 +34073,14 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.90",
                 "(64.34 damage per second)",
+                "+28 Stamina",
+                "+28 Intellect",
+                "+27 Spirit",
+                "+300 Healing",
+                "+11 MP5",
                 "Requires Level 60"
-              ]
+              ],
+              "source": "Atiesh, Greatstaff of the Guardian"
             },
             {
               "name": "Lok'delar, Stave of the Ancient Keepers",
@@ -32468,8 +34099,12 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 3.20",
                 "(73.28 damage per second)",
+                "+26 Stamina",
+                "+15 Intellect",
+                "+28 Crit",
                 "Requires Level 60"
-              ]
+              ],
+              "source": "World Drop Epic"
             }
           ]
         }
@@ -32516,7 +34151,8 @@ if (typeof window !== 'undefined') {
                 "8 - 13 Damage\tSpeed 2.50",
                 "(4.20 damage per second)",
                 "Requires Level 3"
-              ]
+              ],
+              "source": "Starter vendor staff"
             },
             {
               "name": "Invisible Dagger",
@@ -32535,7 +34171,8 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 2.00",
                 "(6.75 damage per second)"
-              ]
+              ],
+              "source": "World Drop Epic"
             },
             {
               "name": "Militia Sword",
@@ -32553,8 +34190,10 @@ if (typeof window !== 'undefined') {
               "lines": [
                 "1H Sword",
                 "Speed 2.50",
-                "(6.40 damage per second)"
-              ]
+                "(6.40 damage per second)",
+                "+1 Stamina"
+              ],
+              "source": "Rare Books"
             },
             {
               "name": "Restored Greatstaff",
@@ -32573,7 +34212,8 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 3.10",
                 "(1.61 damage per second)"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Restored Dagger",
@@ -32592,7 +34232,8 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.70",
                 "(1.18 damage per second)"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Restored Shortsword",
@@ -32611,7 +34252,8 @@ if (typeof window !== 'undefined') {
                 "1H Sword",
                 "Speed 2.20",
                 "(1.14 damage per second)"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Gnarled Short Staff",
@@ -32631,7 +34273,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.80",
                 "(4.29 damage per second)",
                 "Requires Level 2"
-              ]
+              ],
+              "source": "Return to Bellowfiz"
             },
             {
               "name": "Camping Knife",
@@ -32651,7 +34294,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.40",
                 "(3.21 damage per second)",
                 "Requires Level 2"
-              ]
+              ],
+              "source": "Return to Bellowfiz"
             },
             {
               "name": "Scuffed Dagger",
@@ -32671,7 +34315,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.50",
                 "(3.0 damage per second)",
                 "Requires Level 2"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Smooth Walking Staff",
@@ -32690,7 +34335,8 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 3.30",
                 "(2.73 damage per second)"
-              ]
+              ],
+              "source": "The Stolen Journal"
             }
           ],
           "faction": "both",
@@ -32740,7 +34386,8 @@ if (typeof window !== 'undefined') {
                 "+1 Stamina",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 2",
                 "Requires Level 4"
-              ]
+              ],
+              "source": "The Relics of Wakening"
             },
             {
               "name": "Brushwood Blade",
@@ -32759,8 +34406,10 @@ if (typeof window !== 'undefined') {
                 "1H Sword",
                 "Speed 3.00",
                 "(5.33 damage per second)",
+                "+1 Stamina",
                 "Requires Level 3"
-              ]
+              ],
+              "source": "Druid of the Claw"
             },
             {
               "name": "Worn Ranger's Dagger",
@@ -32780,7 +34429,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.70",
                 "(4.41 damage per second)",
                 "Requires Level 3"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Chipped Spellstaff",
@@ -32799,8 +34449,10 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.80",
                 "(4.11 damage per second)",
+                "+1 Stamina",
                 "Requires Level 3"
-              ]
+              ],
+              "source": "Slydris"
             },
             {
               "name": "Dreamwatcher Staff",
@@ -32820,7 +34472,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.20",
                 "(5.6 damage per second)",
                 "Requires Level 4"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Vile Fin Oracle Staff",
@@ -32840,7 +34493,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.90",
                 "(5.0 damage per second)",
                 "Requires Level 4"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Sentinel's Slasher",
@@ -32860,7 +34514,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.40",
                 "(4.38 damage per second)",
                 "Requires Level 4"
-              ]
+              ],
+              "source": "Escaping Ban'ethil"
             },
             {
               "name": "Adept Short Staff",
@@ -32880,7 +34535,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.40",
                 "(4.4 damage per second)",
                 "Requires Level 3"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Long Bo Staff",
@@ -32900,7 +34556,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.50",
                 "(4.2 damage per second)",
                 "Requires Level 3"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Pruning Knife",
@@ -32920,7 +34577,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.60",
                 "(4.06 damage per second)",
                 "Requires Level 4"
-              ]
+              ],
+              "source": "Tumors"
             }
           ],
           "faction": "both",
@@ -32966,8 +34624,11 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.20",
                 "(8.86 damage per second)",
+                "+2 Stamina",
+                "+2 Spirit",
                 "Requires Level 6"
-              ]
+              ],
+              "source": "Return to Valanaar"
             },
             {
               "name": "Wrathroot",
@@ -32986,8 +34647,10 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 3.30",
                 "(7.12 damage per second)",
+                "+1 Intellect",
                 "Requires Level 5"
-              ]
+              ],
+              "source": "Wrathvine"
             },
             {
               "name": "Small Hand Blade",
@@ -33007,7 +34670,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.50",
                 "(6.0 damage per second)",
                 "Requires Level 6"
-              ]
+              ],
+              "source": "Harvest Golem"
             },
             {
               "name": "Carving Knife",
@@ -33028,7 +34692,8 @@ if (typeof window !== 'undefined') {
                 "6 - 13 Damage\tSpeed 1.60",
                 "(5.94 damage per second)",
                 "Requires Level 6"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Notched Shortsword",
@@ -33048,7 +34713,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.10",
                 "(5.5 damage per second)",
                 "Requires Level 5"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Scarlet Dagger",
@@ -33067,8 +34733,10 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.60",
                 "(5.31 damage per second)",
+                "+1 Stamina",
                 "Requires Level 5"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Driftwood Branch",
@@ -33088,7 +34756,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.40",
                 "(5.7 damage per second)",
                 "Requires Level 5"
-              ]
+              ],
+              "source": "Elder Timberling"
             },
             {
               "name": "Frostbit Staff",
@@ -33108,7 +34777,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.70",
                 "(5.7 damage per second)",
                 "Requires Level 5"
-              ]
+              ],
+              "source": "Rockjaw Bonesnapper"
             },
             {
               "name": "Frostmane Staff",
@@ -33128,7 +34798,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.10",
                 "(5.7 damage per second)",
                 "Requires Level 5"
-              ]
+              ],
+              "source": "Frostmane Shadowcaster"
             },
             {
               "name": "Ceremonial Knife",
@@ -33148,7 +34819,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.40",
                 "(5.36 damage per second)",
                 "Requires Level 5"
-              ]
+              ],
+              "source": "At War With The Scarlet Crusade"
             }
           ],
           "faction": "both",
@@ -33197,7 +34869,8 @@ if (typeof window !== 'undefined') {
                 "7 - 14 Damage\tSpeed 1.50",
                 "(7.00 damage per second)",
                 "+1 Stamina"
-              ]
+              ],
+              "source": "Teldrassil quest"
             },
             {
               "name": "Darkwood Staff",
@@ -33219,7 +34892,8 @@ if (typeof window !== 'undefined') {
                 "(6.72 damage per second)",
                 "+3 Stamina",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 6"
-              ]
+              ],
+              "source": "Tirisfal Quest: The Family Crypt"
             },
             {
               "name": "Makeshift Stormcaller",
@@ -33241,7 +34915,8 @@ if (typeof window !== 'undefined') {
                 "(5.76 damage per second)",
                 "+2 Intellect",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 4"
-              ]
+              ],
+              "source": "Durotar Shaman/Caster Quest: Stormy Potential"
             },
             {
               "name": "Sturdy Quarterstaff",
@@ -33261,7 +34936,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.80",
                 "(8.9 damage per second)",
                 "Requires Level 8"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Ancient Skyborne Blade",
@@ -33281,7 +34957,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.50",
                 "(7.00 damage per second)",
                 "Requires Level 8"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Stonesplinter Dagger",
@@ -33301,7 +34978,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.50",
                 "(7.0 damage per second)",
                 "Requires Level 8"
-              ]
+              ],
+              "source": "Stonesplinter Seer"
             },
             {
               "name": "Feral Blade",
@@ -33321,7 +34999,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.60",
                 "(6.9 damage per second)",
                 "Requires Level 8"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Jeweled Dagger",
@@ -33340,8 +35019,10 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.60",
                 "(6.56 damage per second)",
+                "+1 Stamina",
                 "Requires Level 7"
-              ]
+              ],
+              "source": "Morgaine the Sly"
             },
             {
               "name": "Felweaver's Staff",
@@ -33360,8 +35041,10 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.60",
                 "(6.54 damage per second)",
+                "+3 Intellect",
                 "Requires Level 8"
-              ]
+              ],
+              "source": "Felweaver Scornn"
             },
             {
               "name": "A'sharahm, the Roiling Tempest",
@@ -33379,8 +35062,10 @@ if (typeof window !== 'undefined') {
               "lines": [
                 "1H Sword",
                 "Speed 2.40",
-                "(6.25 damage per second)"
-              ]
+                "(6.25 damage per second)",
+                "+1 Stamina"
+              ],
+              "source": "Leveling Drop / Vendor"
             }
           ],
           "faction": "alliance",
@@ -33432,7 +35117,8 @@ if (typeof window !== 'undefined') {
                 "+1 Intellect",
                 "+1 Spirit",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 2"
-              ]
+              ],
+              "source": "Mage Level 10 Quest: The Mind's Eye (Horde)"
             },
             {
               "name": "Ley Staff",
@@ -33455,7 +35141,8 @@ if (typeof window !== 'undefined') {
                 "+1 Intellect",
                 "+1 Spirit",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 2"
-              ]
+              ],
+              "source": "Mage Level 10 Quest: The Mind's Eye (Alliance)"
             },
             {
               "name": "Ceranium Rod",
@@ -33474,8 +35161,11 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.70",
                 "(10.74 damage per second)",
+                "+7 Stamina",
+                "+14 Spell Power",
                 "Requires Level 10"
-              ]
+              ],
+              "source": "The Weaver"
             },
             {
               "name": "Wind Rider Staff",
@@ -33494,8 +35184,11 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.80",
                 "(9.64 damage per second)",
+                "+6 Spirit",
+                "+12 Spell Power",
                 "Requires Level 10"
-              ]
+              ],
+              "source": "Cry of the Thunderhawk"
             },
             {
               "name": "Ukta's Conduit",
@@ -33514,8 +35207,10 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 3.30",
                 "(9.55 damage per second)",
+                "+3 Stamina",
                 "Requires Level 9"
-              ]
+              ],
+              "source": "Stormherald Ukta"
             },
             {
               "name": "Windforged Shortblade",
@@ -33535,7 +35230,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.20",
                 "(7.73 damage per second)",
                 "Requires Level 10"
-              ]
+              ],
+              "source": "Den'dralass"
             },
             {
               "name": "Elunite Dagger",
@@ -33554,8 +35250,10 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.70",
                 "(7.65 damage per second)",
+                "+1 Stamina",
                 "Requires Level 10"
-              ]
+              ],
+              "source": "Weapons of Elunite"
             },
             {
               "name": "Haggard's Dagger",
@@ -33574,8 +35272,10 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.70",
                 "(7.65 damage per second)",
+                "+1 Stamina",
                 "Requires Level 10"
-              ]
+              ],
+              "source": "Dead — tooth Jack"
             },
             {
               "name": "Heirloom Dagger",
@@ -33594,8 +35294,10 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.70",
                 "(7.65 damage per second)",
+                "+1 Stamina",
                 "Requires Level 10"
-              ]
+              ],
+              "source": "Heirloom Weapon"
             },
             {
               "name": "Thun'grim's Dagger",
@@ -33614,8 +35316,10 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.70",
                 "(7.65 damage per second)",
+                "+1 Stamina",
                 "Requires Level 10"
-              ]
+              ],
+              "source": "Forged Steel"
             }
           ],
           "faction": "both",
@@ -33663,7 +35367,8 @@ if (typeof window !== 'undefined') {
                 "Binds when equipped",
                 "Held In Off-hand",
                 "Requires Level 21"
-              ]
+              ],
+              "source": "Vendor wand"
             },
             {
               "name": "Cauldron Stirrer",
@@ -33685,7 +35390,8 @@ if (typeof window !== 'undefined') {
                 "(7.42 damage per second)",
                 "+4 Stamina",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 8"
-              ]
+              ],
+              "source": "Barrens Quest: Apothecary Zamah"
             },
             {
               "name": "Foamspittle Staff",
@@ -33705,7 +35411,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.20",
                 "(11.4 damage per second)",
                 "Requires Level 12"
-              ]
+              ],
+              "source": "Murloc Oracle"
             },
             {
               "name": "Elegant Shortsword",
@@ -33724,8 +35431,10 @@ if (typeof window !== 'undefined') {
                 "1H Sword",
                 "Speed 2.00",
                 "(10.00 damage per second)",
+                "+3 Stamina",
                 "Requires Level 12"
-              ]
+              ],
+              "source": "Serena Bloodfeather"
             },
             {
               "name": "Slicer Blade",
@@ -33745,7 +35454,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.50",
                 "(8.7 damage per second)",
                 "Requires Level 12"
-              ]
+              ],
+              "source": "Harvest Reaper"
             },
             {
               "name": "War Knife",
@@ -33765,7 +35475,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.70",
                 "(8.5 damage per second)",
                 "Requires Level 12"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Redridge Machete",
@@ -33785,7 +35496,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.30",
                 "(8.3 damage per second)",
                 "Requires Level 11"
-              ]
+              ],
+              "source": "Redridge Poacher"
             },
             {
               "name": "Raider Shortsword",
@@ -33805,7 +35517,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.90",
                 "(8.2 damage per second)",
                 "Requires Level 11"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Defias Rapier",
@@ -33825,7 +35538,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.60",
                 "(8.1 damage per second)",
                 "Requires Level 11"
-              ]
+              ],
+              "source": "Defias Watchman"
             },
             {
               "name": "Impcaster's Staff",
@@ -33844,8 +35558,10 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.50",
                 "(8.00 damage per second)",
+                "+4 Spirit",
                 "Requires Level 11"
-              ]
+              ],
+              "source": "Licillin"
             }
           ],
           "faction": "both",
@@ -33898,7 +35614,8 @@ if (typeof window !== 'undefined') {
                 "+6 Agility",
                 "+6 Intellect",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 18"
-              ]
+              ],
+              "source": "RFC: Hidden Enemies (Horde BiS)"
             },
             {
               "name": "Fang of Magmatus",
@@ -33921,7 +35638,8 @@ if (typeof window !== 'undefined') {
                 "+4 Intellect",
                 "Requires Level 13",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 18"
-              ]
+              ],
+              "source": "Hall of Thanes: Magmatus"
             },
             {
               "name": "Kris of Orgrimmar",
@@ -33943,7 +35661,8 @@ if (typeof window !== 'undefined') {
                 "(8.00 damage per second)",
                 "+4 Stamina",
                 "Equip: Increases healing done by up to 33"
-              ]
+              ],
+              "source": "RFC Quest"
             },
             {
               "name": "Searing Dagger",
@@ -33966,7 +35685,8 @@ if (typeof window !== 'undefined') {
                 "+4 Spirit",
                 "Requires Level 13",
                 "Equip: Harmful spell casts sear the target for 7 Fire damage. (10ms cooldown)"
-              ]
+              ],
+              "source": "RFC Drop"
             },
             {
               "name": "Cursed Felblade",
@@ -33986,7 +35706,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.30",
                 "(12.17 damage per second)",
                 "Requires Level 13"
-              ]
+              ],
+              "source": "Taragaman the Hungerer"
             },
             {
               "name": "Medicine Staff",
@@ -34006,7 +35727,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.50",
                 "(12.6 damage per second)",
                 "Requires Level 14"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Riverside Staff",
@@ -34026,7 +35748,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.10",
                 "(12.6 damage per second)",
                 "Requires Level 14"
-              ]
+              ],
+              "source": "Murloc Tidecaller"
             },
             {
               "name": "Riverpaw Mystic Staff",
@@ -34046,7 +35769,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.00",
                 "(11.8 damage per second)",
                 "Requires Level 13"
-              ]
+              ],
+              "source": "Riverpaw Mystic"
             },
             {
               "name": "Staff of the Purifier",
@@ -34065,8 +35789,11 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 3.70",
                 "(11.22 damage per second)",
+                "+8 Spirit",
+                "+16 Spell Power",
                 "Requires Level 13"
-              ]
+              ],
+              "source": "The Tower of Althalaxx"
             },
             {
               "name": "Scrimshaw Dagger",
@@ -34085,8 +35812,10 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.80",
                 "(9.72 damage per second)",
+                "+2 Stamina",
                 "Requires Level 14"
-              ]
+              ],
+              "source": "Red Silk Bandanas"
             }
           ],
           "faction": "both",
@@ -34139,7 +35868,8 @@ if (typeof window !== 'undefined') {
                 "+10 Spirit",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 26",
                 "Equip: Increases movement speed by 2% in Silverpine Forest and Hillsbrad Foothills."
-              ]
+              ],
+              "source": "Ruins of Lordaeron: Rath'mael"
             },
             {
               "name": "Clear Crystal Rod",
@@ -34162,7 +35892,8 @@ if (typeof window !== 'undefined') {
                 "+4 Stamina",
                 "+5 Intellect",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 14"
-              ]
+              ],
+              "source": "Arachnophobia quest in Stonetalon"
             },
             {
               "name": "Staff of Orgrimmar",
@@ -34185,7 +35916,8 @@ if (typeof window !== 'undefined') {
                 "+6 Agility",
                 "+6 Intellect",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 18"
-              ]
+              ],
+              "source": "RFC: Hidden Enemies (Horde BiS)"
             },
             {
               "name": "Segmented Spider Leg",
@@ -34208,7 +35940,8 @@ if (typeof window !== 'undefined') {
                 "+9 Agility",
                 "+5 Spirit",
                 "Requires Level 15"
-              ]
+              ],
+              "source": "Ruins of Lordaeron: Witherfang"
             },
             {
               "name": "Meathook Slicer",
@@ -34230,7 +35963,8 @@ if (typeof window !== 'undefined') {
                 "(13.61 damage per second)",
                 "+5 Stamina",
                 "Requires Level 15"
-              ]
+              ],
+              "source": "Ruins of Lordaeron: The Baron"
             },
             {
               "name": "Ironpatch Blade",
@@ -34250,7 +35984,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.60",
                 "(13.5 damage per second)",
                 "Requires Level 15"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Night Watch Shortsword",
@@ -34270,7 +36005,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.60",
                 "(13.5 damage per second)",
                 "Requires Level 15"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Buzzer Blade",
@@ -34289,8 +36025,10 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.50",
                 "(9.00 damage per second)",
+                "+22 Spell Power",
                 "Requires Level 16"
-              ]
+              ],
+              "source": "Sneed's Shredder"
             },
             {
               "name": "Gnarled Hermit's Staff",
@@ -34309,8 +36047,10 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.80",
                 "(13.57 damage per second)",
+                "+7 Spirit",
                 "Requires Level 16"
-              ]
+              ],
+              "source": "Geopriest Gukk'rok"
             },
             {
               "name": "Lesser Staff of the Spire",
@@ -34330,7 +36070,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.40",
                 "(13.1 damage per second)",
                 "Requires Level 15"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             }
           ],
           "faction": "both",
@@ -34384,7 +36125,8 @@ if (typeof window !== 'undefined') {
                 "+6 Agility",
                 "+6 Intellect",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 18"
-              ]
+              ],
+              "source": "RFC: Hidden Enemies (Horde BiS)"
             },
             {
               "name": "Staff of Westfall",
@@ -34408,7 +36150,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Movement speed increased by 2% in Elwynn Forest, Westfall, Redridge Mountains, and the Deadmines."
               ],
               "reqLevel": 14,
-              "icon": "inv_staff_10"
+              "icon": "inv_staff_10",
+              "source": "Deadmines Quest: The Defias Brotherhood"
             },
             {
               "name": "Vileblood Scimitar",
@@ -34430,7 +36173,8 @@ if (typeof window !== 'undefined') {
                 "(14.62 damage per second)",
                 "+5 Spirit",
                 "Requires Level 17"
-              ]
+              ],
+              "source": "Ruins of Lordaeron: Viktor the Vile"
             },
             {
               "name": "Advisor's Gnarled Staff",
@@ -34450,7 +36194,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.90",
                 "(19.7 damage per second)",
                 "Requires Level 18"
-              ]
+              ],
+              "source": "Kelm Hargunth"
             },
             {
               "name": "Lorekeeper's Staff",
@@ -34470,7 +36215,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.90",
                 "(19.7 damage per second)",
                 "Requires Level 18"
-              ]
+              ],
+              "source": "Illiyana Moonblaze"
             },
             {
               "name": "Scout's Blade",
@@ -34490,7 +36236,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.70",
                 "(15.3 damage per second)",
                 "Requires Level 18"
-              ]
+              ],
+              "source": "Kelm Hargunth"
             },
             {
               "name": "Sentinel's Blade",
@@ -34510,7 +36257,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.70",
                 "(15.3 damage per second)",
                 "Requires Level 18"
-              ]
+              ],
+              "source": "Illiyana Moonblaze"
             },
             {
               "name": "Butcher's Slicer",
@@ -34529,8 +36277,10 @@ if (typeof window !== 'undefined') {
                 "1H Sword",
                 "Speed 2.90",
                 "(15.00 damage per second)",
+                "+3 Stamina",
                 "Requires Level 18"
-              ]
+              ],
+              "source": "Razorclaw the Butcher"
             },
             {
               "name": "Legionnaire's Sword",
@@ -34550,7 +36300,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.70",
                 "(15.0 damage per second)",
                 "Requires Level 18"
-              ]
+              ],
+              "source": "Kelm Hargunth"
             },
             {
               "name": "Protector's Sword",
@@ -34570,7 +36321,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.70",
                 "(15.0 damage per second)",
                 "Requires Level 18"
-              ]
+              ],
+              "source": "Illiyana Moonblaze"
             }
           ],
           "faction": "both",
@@ -34652,7 +36404,8 @@ if (typeof window !== 'undefined') {
                 "+6 Agility",
                 "+6 Intellect",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 18"
-              ]
+              ],
+              "source": "RFC: Hidden Enemies (Horde BiS)"
             },
             {
               "name": "Odo's Ley Staff",
@@ -34676,7 +36429,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases healing done by up to 52"
               ],
               "reqLevel": 21,
-              "icon": "inv_staff_27"
+              "icon": "inv_staff_27",
+              "source": "SFK: Odo the Blindwatcher"
             },
             {
               "name": "Glimmering Staff",
@@ -34700,7 +36454,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases damage and healing done by magical spells and effects by up to 34"
               ],
               "reqLevel": 25,
-              "icon": "inv_staff_19"
+              "icon": "inv_staff_19",
+              "source": "Enchanting (140)"
             },
             {
               "name": "Witching Stave",
@@ -34725,7 +36480,8 @@ if (typeof window !== 'undefined') {
                 "+8 Shadow Resistance",
                 "Requires Level 17",
                 "Equip: Increases damage done by Shadow spells and effects by up to 27."
-              ]
+              ],
+              "source": "Level 17 Rare Drop"
             },
             {
               "name": "Twisted Chanter's Staff",
@@ -34745,7 +36501,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.40",
                 "(20.4 damage per second)",
                 "Requires Level 19"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Blackfang",
@@ -34765,7 +36522,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.50",
                 "(16.3 damage per second)",
                 "Requires Level 20"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Staff of Soran'ruk",
@@ -34789,7 +36547,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases damage done by Fire spells and effects by up to 34.",
                 "Equip: Increases damage done by Shadow spells and effects by up to 34.",
                 "Requires Level 20"
-              ]
+              ],
+              "source": "The Orb of Soran'ruk"
             },
             {
               "name": "Staff of the Blessed Seer",
@@ -34808,8 +36567,12 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 3.00",
                 "(15.67 damage per second)",
+                "+9 Stamina",
+                "+10 Spirit",
+                "+28 Spell Power",
                 "Requires Level 20"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Whipfang's Skinsearer",
@@ -34829,9 +36592,11 @@ if (typeof window !== 'undefined') {
                 "One-Hand",
                 "18 - 35 Damage\tSpeed 1.70",
                 "(15.59 damage per second)",
+                "Chance on hit: Sear your target's flesh, dealing 67 to 101 Fire damage.",
                 "Requires Level 19",
                 "Chance on hit: Sear your target's flesh, dealing 67 to 101 Fire damage."
-              ]
+              ],
+              "source": "Taskmaster Whipfang"
             }
           ],
           "faction": "alliance",
@@ -34886,7 +36651,8 @@ if (typeof window !== 'undefined') {
                 "Requires Level 24",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 32",
                 "Equip: Reduces the hit chance of Sleep effects against you by 5%."
-              ]
+              ],
+              "source": "BFD: Twilight Lord Kelris"
             },
             {
               "name": "Meteor Shard",
@@ -34909,7 +36675,8 @@ if (typeof window !== 'undefined') {
                 "+3 Fire Resistance",
                 "Requires Level 23",
                 "Chance on hit: Blasts a target for 42 Fire damage."
-              ]
+              ],
+              "source": "SFK: Archmage Arugal"
             },
             {
               "name": "Alliance Outrunner Staff",
@@ -34933,7 +36700,8 @@ if (typeof window !== 'undefined') {
                 "+9 Spirit",
                 "Requires Level 21",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 28"
-              ]
+              ],
+              "source": "Alliance Drop"
             },
             {
               "name": "Bite of Serra'kis",
@@ -34952,8 +36720,10 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.30",
                 "(17.69 damage per second)",
+                "+2 Nature Resistance",
                 "Requires Level 23"
-              ]
+              ],
+              "source": "Old Serra'kis"
             },
             {
               "name": "Flame Seared Sword",
@@ -34973,7 +36743,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.60",
                 "(17.69 damage per second)",
                 "Requires Level 23"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Kam's Walking Stick",
@@ -34992,8 +36763,12 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.80",
                 "(17.68 damage per second)",
+                "+10 Agility",
+                "+3 Intellect",
+                "+32 Spell Power",
                 "Requires Level 24"
-              ]
+              ],
+              "source": "Kam Deepfury"
             },
             {
               "name": "Sword of Decay",
@@ -35013,7 +36788,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.70",
                 "(17.6 damage per second)",
                 "Requires Level 23"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Talon of Vultros",
@@ -35032,8 +36808,11 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 2.00",
                 "(17.50 damage per second)",
+                "+6 Agility",
+                "+3 Spirit",
                 "Requires Level 23"
-              ]
+              ],
+              "source": "Vultros"
             },
             {
               "name": "Sword of Corruption",
@@ -35053,7 +36832,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.10",
                 "(17.1 damage per second)",
                 "Requires Level 22"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Heavy Marauder Scimitar",
@@ -35073,7 +36853,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.40",
                 "(17.1 damage per second)",
                 "Requires Level 22"
-              ]
+              ],
+              "source": "Galak Marauder"
             }
           ],
           "faction": "both",
@@ -35128,7 +36909,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases damage and healing done by magical spells and effects by up to 32",
                 "Equip: Melee attacks deal 98 additional Fire damage against Frozen targets."
               ],
-              "icon": "inv_sword_05"
+              "icon": "inv_sword_05",
+              "source": "Mage Quest"
             },
             {
               "name": "Healer's Staff",
@@ -35150,7 +36932,8 @@ if (typeof window !== 'undefined') {
                 "(20.77 damage per second)",
                 "+12 Stamina",
                 "Equip: Increases healing done by up to 67"
-              ]
+              ],
+              "source": "Excavation Site: Wetlands"
             },
             {
               "name": "Striking Staff",
@@ -35173,7 +36956,8 @@ if (typeof window !== 'undefined') {
                 "+9 Strength",
                 "+6 Stamina",
                 "+14 Intellect"
-              ]
+              ],
+              "source": "Heart of Disruption in City of Dalaran"
             },
             {
               "name": "Death Prophet Spine",
@@ -35196,7 +36980,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases damage and healing done by magical spells and effects by up to 34"
               ],
               "reqLevel": 26,
-              "icon": "inv_staff_17"
+              "icon": "inv_staff_17",
+              "source": "RFK: Aggem Thorncurse"
             },
             {
               "name": "Debt Collector",
@@ -35219,7 +37004,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Grants 6 health and 2 mana every 5 sec for 15 sec when one of your spells is resisted."
               ],
               "reqLevel": 26,
-              "icon": "inv_sword_24"
+              "icon": "inv_sword_24",
+              "source": "Stockade: Bazil Thredd (Alliance)"
             },
             {
               "name": "Fallen Dragon's Scepter",
@@ -35242,7 +37028,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases damage and healing done by magical spells and effects by up to 36"
               ],
               "reqLevel": 24,
-              "icon": "inv_staff_08"
+              "icon": "inv_staff_08",
+              "source": "Redridge Quest"
             },
             {
               "name": "Gnarled Ash Staff",
@@ -35262,7 +37049,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.20",
                 "(25.6 damage per second)",
                 "Requires Level 26"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Advisor's Gnarled Staff",
@@ -35281,8 +37069,11 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.90",
                 "(24.66 damage per second)",
+                "+10 Stamina",
+                "+6 Intellect",
                 "Requires Level 25"
-              ]
+              ],
+              "source": "Kelm Hargunth"
             },
             {
               "name": "Lorekeeper's Staff",
@@ -35301,8 +37092,11 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.90",
                 "(24.66 damage per second)",
+                "+10 Stamina",
+                "+6 Intellect",
                 "Requires Level 25"
-              ]
+              ],
+              "source": "Illiyana Moonblaze"
             },
             {
               "name": "Outlaw Sabre",
@@ -35322,7 +37116,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.70",
                 "(20.37 damage per second)",
                 "Requires Level 25"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             }
           ],
           "faction": "both",
@@ -35376,7 +37171,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases damage and healing done by magical spells and effects by up to 36"
               ],
               "reqLevel": 28,
-              "icon": "inv_misc_bone_06"
+              "icon": "inv_misc_bone_06",
+              "source": "City of Dalaran: Lyn the Ignored"
             },
             {
               "name": "Advisor's Gnarled Staff",
@@ -35396,7 +37192,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.90",
                 "(27.8 damage per second)",
                 "Requires Level 28"
-              ]
+              ],
+              "source": "Kelm Hargunth"
             },
             {
               "name": "Lorekeeper's Staff",
@@ -35416,7 +37213,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.90",
                 "(27.8 damage per second)",
                 "Requires Level 28"
-              ]
+              ],
+              "source": "Illiyana Moonblaze"
             },
             {
               "name": "Legionnaire's Sword",
@@ -35436,7 +37234,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.70",
                 "(21.3 damage per second)",
                 "Requires Level 28"
-              ]
+              ],
+              "source": "Kelm Hargunth"
             },
             {
               "name": "Protector's Sword",
@@ -35456,7 +37255,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.70",
                 "(21.3 damage per second)",
                 "Requires Level 28"
-              ]
+              ],
+              "source": "Illiyana Moonblaze"
             },
             {
               "name": "Scout's Blade",
@@ -35476,7 +37276,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.70",
                 "(21.2 damage per second)",
                 "Requires Level 28"
-              ]
+              ],
+              "source": "Kelm Hargunth"
             },
             {
               "name": "Sentinel's Blade",
@@ -35496,7 +37297,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.70",
                 "(21.2 damage per second)",
                 "Requires Level 28"
-              ]
+              ],
+              "source": "Illiyana Moonblaze"
             },
             {
               "name": "Thornspike",
@@ -35516,9 +37318,11 @@ if (typeof window !== 'undefined') {
                 "One-Hand",
                 "24 - 46 Damage\tSpeed 1.70",
                 "(20.59 damage per second)",
+                "Chance on hit: Hurl spikes at the target, dealing 45 Physical damage and jumping to 1 additional nearby enemy. Each jump reduces the damage by 50%.",
                 "Requires Level 27",
                 "Chance on hit: Hurl spikes at the target, dealing 45 Physical damage and jumping to 1 additional nearby enemy. Each jump reduces the damage by 50%."
-              ]
+              ],
+              "source": "Aggem Thorncurse"
             },
             {
               "name": "Claw of the Shadowmancer",
@@ -35538,7 +37342,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.90",
                 "(20.5 damage per second)",
                 "Requires Level 27"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Toxic Revenger",
@@ -35558,9 +37363,11 @@ if (typeof window !== 'undefined') {
                 "One-Hand",
                 "27 - 51 Damage\tSpeed 1.90",
                 "(20.53 damage per second)",
+                "Chance on hit: Deals 14 Nature damage every 3 sec to any enemy in an 8 yard radius around the caster for 12 sec.",
                 "Requires Level 27",
                 "Chance on hit: Deals 14 Nature damage every 3 sec to any enemy in an 8 yard radius around the caster for 12 sec."
-              ]
+              ],
+              "source": "Viscous Fallout"
             }
           ],
           "faction": "both",
@@ -35613,7 +37420,8 @@ if (typeof window !== 'undefined') {
                 "+8 Intellect",
                 "+15 Spirit",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 38"
-              ]
+              ],
+              "source": "Saving Yenniku quest in STV"
             },
             {
               "name": "Wind Spirit Staff",
@@ -35637,7 +37445,8 @@ if (typeof window !== 'undefined') {
                 "+16 Spirit",
                 "Requires Level 29",
                 "Equip: Increases healing done by up to 71"
-              ]
+              ],
+              "source": "RFK: Earthcaller Halmgar"
             },
             {
               "name": "Fallen Dragon's Scepter",
@@ -35660,7 +37469,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases damage and healing done by magical spells and effects by up to 36"
               ],
               "reqLevel": 24,
-              "icon": "inv_staff_08"
+              "icon": "inv_staff_08",
+              "source": "Wetlands Quest: Stopping the Cycle"
             },
             {
               "name": "Mindslicer",
@@ -35682,7 +37492,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases damage and healing done by magical spells and effects by up to 34"
               ],
               "reqLevel": 30,
-              "icon": "inv_weapon_shortblade_15"
+              "icon": "inv_weapon_shortblade_15",
+              "source": "Arathi: Call to Arms"
             },
             {
               "name": "City Guard's Tarnished Blade",
@@ -35705,7 +37516,8 @@ if (typeof window !== 'undefined') {
                 "+6 Stamina",
                 "Requires Level 29",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 5"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Zealot Blade",
@@ -35728,7 +37540,8 @@ if (typeof window !== 'undefined') {
                 "+5 Intellect",
                 "+6 Spirit",
                 "Requires Level 29"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Electrocutioner Leg",
@@ -35748,7 +37561,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.70",
                 "(22.06 damage per second)",
                 "Requires Level 29"
-              ]
+              ],
+              "source": "Electrocutioner 6000"
             },
             {
               "name": "Torturing Poker",
@@ -35768,7 +37582,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.70",
                 "(19.63 damage per second)",
                 "Requires Level 29"
-              ]
+              ],
+              "source": "Interrogator Vishas"
             },
             {
               "name": "Swinetusk Shank",
@@ -35792,7 +37607,8 @@ if (typeof window !== 'undefined') {
                 "+4 Spirit",
                 "Requires Level 30",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 40"
-              ]
+              ],
+              "source": "Agathelos the Raging"
             },
             {
               "name": "Acrobatic Staff",
@@ -35812,7 +37628,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.20",
                 "(22.9 damage per second)",
                 "Requires Level 29"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             }
           ],
           "faction": "both",
@@ -35864,7 +37681,8 @@ if (typeof window !== 'undefined') {
                 "(26.50 damage per second)",
                 "+8 Intellect",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 46"
-              ]
+              ],
+              "source": "Mage Level 35 Quest: Celestial Power (Tethis in STV)"
             },
             {
               "name": "Greatstaff of the Necrokhans",
@@ -35889,7 +37707,8 @@ if (typeof window !== 'undefined') {
                 "+6 Spirit",
                 "Requires Level 35",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 48"
-              ]
+              ],
+              "source": "Maraudon: Khan Jehn"
             },
             {
               "name": "Hypnotic Blade",
@@ -35913,7 +37732,8 @@ if (typeof window !== 'undefined') {
                 "+3 Spirit",
                 "Requires Level 34",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 44"
-              ]
+              ],
+              "source": "SM Library: Arcanist Doan"
             },
             {
               "name": "Narpas Sword",
@@ -35966,7 +37786,8 @@ if (typeof window !== 'undefined') {
                 "Requires Level 35",
                 "Equip: Improves your chance to hit by 1.5%.",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 60"
-              ]
+              ],
+              "source": "Level 35 Epic World Drop"
             },
             {
               "name": "Black Duskwood Staff",
@@ -35986,7 +37807,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.80",
                 "(33.6 damage per second)",
                 "Requires Level 33"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Loksey's Training Stick",
@@ -36006,7 +37828,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.10",
                 "(31.29 damage per second)",
                 "Requires Level 31"
-              ]
+              ],
+              "source": "Houndmaster Loksey"
             },
             {
               "name": "Sword of Serenity",
@@ -36029,7 +37852,8 @@ if (typeof window !== 'undefined') {
                 "+9 Stamina",
                 "+4 Spirit",
                 "Requires Level 34"
-              ]
+              ],
+              "source": "In the Name of the Light"
             },
             {
               "name": "Black Menace",
@@ -36050,8 +37874,10 @@ if (typeof window !== 'undefined') {
                 "31 - 58 Damage\tSpeed 1.50",
                 "(29.67 damage per second)",
                 "Chance on hit: Sends a shadowy bolt at the enemy causing 77 Shadow damage.",
+                "Chance on hit: Sends a shadowy bolt at the enemy causing 77 Shadow damage.",
                 "Requires Level 34"
-              ]
+              ],
+              "source": "In the Name of the Light"
             },
             {
               "name": "Blade of the Basilisk",
@@ -36071,7 +37897,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.90",
                 "(26.58 damage per second)",
                 "Requires Level 34"
-              ]
+              ],
+              "source": "Ironeye the Invincible"
             }
           ],
           "faction": "both",
@@ -36129,7 +37956,8 @@ if (typeof window !== 'undefined') {
                 "Requires Level 35",
                 "Equip: Improves your chance to hit by 1.5%.",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 60"
-              ]
+              ],
+              "source": "World drop BoE staff"
             },
             {
               "name": "Gut Ripper",
@@ -36149,7 +37977,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.80",
                 "(33.89 damage per second)",
                 "Requires Level 40"
-              ]
+              ],
+              "source": "World Drop Epic"
             },
             {
               "name": "Dazzling Longsword",
@@ -36169,7 +37998,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.60",
                 "(31.5 damage per second)",
                 "Requires Level 36"
-              ]
+              ],
+              "source": "World Drop Epic"
             },
             {
               "name": "Advisor's Gnarled Staff",
@@ -36189,7 +38019,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.90",
                 "(38.1 damage per second)",
                 "Requires Level 38"
-              ]
+              ],
+              "source": "Kelm Hargunth"
             },
             {
               "name": "Lorekeeper's Staff",
@@ -36209,7 +38040,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.90",
                 "(38.1 damage per second)",
                 "Requires Level 38"
-              ]
+              ],
+              "source": "Illiyana Moonblaze"
             },
             {
               "name": "Ironshod Bludgeon",
@@ -36229,7 +38061,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.50",
                 "(37.2 damage per second)",
                 "Requires Level 37"
-              ]
+              ],
+              "source": "Ironaya"
             },
             {
               "name": "Lifeforce Dirk",
@@ -36252,7 +38085,8 @@ if (typeof window !== 'undefined') {
                 "+11 Stamina",
                 "Chance on hit: Heals wielder of 42 damage.",
                 "Requires Level 40"
-              ]
+              ],
+              "source": "The God Hakkar"
             },
             {
               "name": "Jhordy's Misplaced Screwdriver",
@@ -36271,8 +38105,12 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.90",
                 "(30.26 damage per second)",
+                "+6 Strength",
+                "+9 Agility",
+                "-1 Intellect",
                 "Requires Level 40"
-              ]
+              ],
+              "source": "1 Intellect — Rettrick"
             },
             {
               "name": "Nordic Longshank",
@@ -36292,7 +38130,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.20",
                 "(29.3 damage per second)",
                 "Requires Level 38"
-              ]
+              ],
+              "source": "Baelog"
             },
             {
               "name": "Legionnaire's Sword",
@@ -36312,7 +38151,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.70",
                 "(29.3 damage per second)",
                 "Requires Level 38"
-              ]
+              ],
+              "source": "Kelm Hargunth"
             }
           ],
           "faction": "both",
@@ -36368,7 +38208,8 @@ if (typeof window !== 'undefined') {
                 "+4 Stamina",
                 "+17 Spirit",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 38"
-              ]
+              ],
+              "source": "A Hero's Welcome quest in Feralas"
             },
             {
               "name": "Strength of the Treant",
@@ -36391,7 +38232,8 @@ if (typeof window !== 'undefined') {
                 "+7 Stamina",
                 "+18 Intellect",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 42"
-              ]
+              ],
+              "source": "Weapons of Spirit quest in Feralas"
             },
             {
               "name": "Zum'rah's Vexing Cane",
@@ -36416,7 +38258,8 @@ if (typeof window !== 'undefined') {
                 "Requires Level 43",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 54",
                 "Equip: Chance on harmful spell cast to summon a Zombie Troll of Zum'rah for 20 sec. (1m cooldown)"
-              ]
+              ],
+              "source": "ZF: Witch Doctor Zum'rah"
             },
             {
               "name": "Emerald Watcher's Dreamstaff",
@@ -36440,7 +38283,8 @@ if (typeof window !== 'undefined') {
                 "+19 Spirit",
                 "Requires Level 44",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 56"
-              ]
+              ],
+              "source": "Custom Staff Drop"
             },
             {
               "name": "Staff of Lore",
@@ -36463,7 +38307,8 @@ if (typeof window !== 'undefined') {
                 "+5 Intellect",
                 "+18 Spirit",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 40"
-              ]
+              ],
+              "source": "Gahz'ridian quest in Tanaris"
             },
             {
               "name": "The Chief's Enforcer",
@@ -36483,7 +38328,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.40",
                 "(43.53 damage per second)",
                 "Requires Level 45"
-              ]
+              ],
+              "source": "Chief Ukorz Sandscalp"
             },
             {
               "name": "Tanglewood Staff",
@@ -36503,7 +38349,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.40",
                 "(40.3 damage per second)",
                 "Requires Level 41"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Thrash Blade",
@@ -36524,8 +38371,10 @@ if (typeof window !== 'undefined') {
                 "66 - 124 Damage\tSpeed 2.70",
                 "(35.19 damage per second)",
                 "Chance on hit: Grants an extra attack on your next swing.",
+                "Chance on hit: Grants an extra attack on your next swing.",
                 "Requires Level 45"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Jang'thraze the Protector",
@@ -36545,7 +38394,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.90",
                 "(33.42 damage per second)",
                 "Requires Level 45"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Jang'thraze the Protector",
@@ -36565,7 +38415,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.90",
                 "(33.42 damage per second)",
                 "Requires Level 45"
-              ]
+              ],
+              "source": "Chief Ukorz Sandscalp"
             }
           ],
           "faction": "both",
@@ -36616,7 +38467,8 @@ if (typeof window !== 'undefined') {
                 "103 - 156 Damage\tSpeed 3.80",
                 "(34.08 damage per second)",
                 "Equip: Increases healing done by up to 112"
-              ]
+              ],
+              "source": "Corruption of Earth and Seed quest in Maraudon"
             },
             {
               "name": "Spire of the Stoneshaper",
@@ -36628,7 +38480,8 @@ if (typeof window !== 'undefined') {
               "iLvl": 52,
               "reqLevel": 46,
               "stats": "",
-              "icon": "inv_staff_29"
+              "icon": "inv_staff_29",
+              "source": "BRD: Lord Incendius"
             },
             {
               "name": "Spire of Hakkar",
@@ -36653,7 +38506,8 @@ if (typeof window !== 'undefined') {
                 "Requires Level 49",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 62",
                 "Equip: Harmful spell casts have a chance to steal 112 life from the target enemy over 8 sec. (10ms cooldown)"
-              ]
+              ],
+              "source": "Sunken Temple"
             },
             {
               "name": "Glowing Brightwood Staff",
@@ -36673,7 +38527,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.10",
                 "(38.1 damage per second)",
                 "Requires Level 49"
-              ]
+              ],
+              "source": "World Drop Epic"
             },
             {
               "name": "Soulkeeper",
@@ -36693,7 +38548,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.80",
                 "(46.6 damage per second)",
                 "Requires Level 49"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Advisor's Gnarled Staff",
@@ -36713,7 +38569,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.90",
                 "(45.9 damage per second)",
                 "Requires Level 48"
-              ]
+              ],
+              "source": "Kelm Hargunth"
             },
             {
               "name": "Lorekeeper's Staff",
@@ -36733,7 +38590,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.90",
                 "(45.9 damage per second)",
                 "Requires Level 48"
-              ]
+              ],
+              "source": "Illiyana Moonblaze"
             },
             {
               "name": "Blade of Reckoning",
@@ -36752,8 +38610,10 @@ if (typeof window !== 'undefined') {
                 "1H Sword",
                 "Speed 2.40",
                 "(39.38 damage per second)",
+                "+8 Stamina",
                 "Requires Level 50"
-              ]
+              ],
+              "source": "Jail Break!"
             },
             {
               "name": "Skilled Fighting Blade",
@@ -36772,8 +38632,10 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.40",
                 "(39.29 damage per second)",
+                "+7 Stamina",
                 "Requires Level 50"
-              ]
+              ],
+              "source": "Jail Break!"
             },
             {
               "name": "The Shadowfoot Stabber",
@@ -36793,7 +38655,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.80",
                 "(37.5 damage per second)",
                 "Requires Level 52"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             }
           ],
           "faction": "both",
@@ -36850,7 +38713,8 @@ if (typeof window !== 'undefined') {
                 "+20 Stamina",
                 "+15 Intellect",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 54"
-              ]
+              ],
+              "source": "The Corpulent One quest in EPL"
             },
             {
               "name": "Corrupted Blackwood Staff",
@@ -36873,7 +38737,8 @@ if (typeof window !== 'undefined') {
                 "+11 Stamina",
                 "+22 Intellect",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 54"
-              ]
+              ],
+              "source": "Into The Maw of Madness quest in Silithus"
             },
             {
               "name": "Rod of the Ogre Magi",
@@ -36885,7 +38750,8 @@ if (typeof window !== 'undefined') {
               "iLvl": 58,
               "reqLevel": 52,
               "stats": "+14 Int, +11 Spi, +23 SP, 1% Spell Crit",
-              "icon": "inv_staff_13"
+              "icon": "inv_staff_13",
+              "source": "DM North Tribute Run"
             },
             {
               "name": "Witchblade",
@@ -36898,7 +38764,8 @@ if (typeof window !== 'undefined') {
               "iLvl": 58,
               "reqLevel": 52,
               "stats": "+14 SP",
-              "icon": "inv_weapon_shortblade_16"
+              "icon": "inv_weapon_shortblade_16",
+              "source": "Scholomance: Darkmaster Gandling"
             },
             {
               "name": "Ironbark Staff",
@@ -36924,7 +38791,8 @@ if (typeof window !== 'undefined') {
                 "Requires Level 55",
                 "Equip: Improves your chance to get a critical strike by 2.0%.",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 88"
-              ]
+              ],
+              "source": "Alterac Valley (Revered)"
             },
             {
               "name": "Atiesh, Greatstaff of the Guardian",
@@ -36943,8 +38811,14 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.90",
                 "(64.34 damage per second)",
+                "+31 Stamina",
+                "+32 Intellect",
+                "+24 Spirit",
+                "+150 Spell Power",
+                "+20 Hit",
                 "Requires Level 60"
-              ]
+              ],
+              "source": "Atiesh, Greatstaff of the Guardian"
             },
             {
               "name": "Atiesh, Greatstaff of the Guardian",
@@ -36963,8 +38837,13 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.90",
                 "(64.34 damage per second)",
+                "+30 Stamina",
+                "+29 Intellect",
+                "+183 Spell Power",
+                "+28 Crit",
                 "Requires Level 60"
-              ]
+              ],
+              "source": "Atiesh, Greatstaff of the Guardian"
             },
             {
               "name": "Atiesh, Greatstaff of the Guardian",
@@ -36983,8 +38862,14 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.90",
                 "(64.34 damage per second)",
+                "+28 Stamina",
+                "+28 Intellect",
+                "+27 Spirit",
+                "+242 Healing",
+                "+120 Spell Power",
                 "Requires Level 60"
-              ]
+              ],
+              "source": "Atiesh, Greatstaff of the Guardian"
             },
             {
               "name": "Atiesh, Greatstaff of the Guardian",
@@ -37003,8 +38888,14 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.90",
                 "(64.34 damage per second)",
+                "+28 Stamina",
+                "+28 Intellect",
+                "+27 Spirit",
+                "+300 Healing",
+                "+11 MP5",
                 "Requires Level 60"
-              ]
+              ],
+              "source": "Atiesh, Greatstaff of the Guardian"
             },
             {
               "name": "Ahn'Qiraj Staff [PH]",
@@ -37024,7 +38915,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.90",
                 "(73.3 damage per second)",
                 "Requires Level 60"
-              ]
+              ],
+              "source": "World Drop Epic"
             }
           ],
           "faction": "both",
@@ -37086,7 +38978,8 @@ if (typeof window !== 'undefined') {
                 "8 - 13 Damage\tSpeed 2.50",
                 "(4.20 damage per second)",
                 "Requires Level 3"
-              ]
+              ],
+              "source": "Starter vendor staff"
             },
             {
               "name": "Invisible Dagger",
@@ -37105,7 +38998,8 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 2.00",
                 "(6.75 damage per second)"
-              ]
+              ],
+              "source": "World Drop Epic"
             },
             {
               "name": "Militia Sword",
@@ -37123,8 +39017,10 @@ if (typeof window !== 'undefined') {
               "lines": [
                 "1H Sword",
                 "Speed 2.50",
-                "(6.40 damage per second)"
-              ]
+                "(6.40 damage per second)",
+                "+1 Stamina"
+              ],
+              "source": "Rare Books"
             },
             {
               "name": "Restored Greatstaff",
@@ -37143,7 +39039,8 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 3.10",
                 "(1.61 damage per second)"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Restored Dagger",
@@ -37162,7 +39059,8 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.70",
                 "(1.18 damage per second)"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Restored Shortsword",
@@ -37181,7 +39079,8 @@ if (typeof window !== 'undefined') {
                 "1H Sword",
                 "Speed 2.20",
                 "(1.14 damage per second)"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Gnarled Short Staff",
@@ -37201,7 +39100,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.80",
                 "(4.29 damage per second)",
                 "Requires Level 2"
-              ]
+              ],
+              "source": "Return to Bellowfiz"
             },
             {
               "name": "Camping Knife",
@@ -37221,7 +39121,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.40",
                 "(3.21 damage per second)",
                 "Requires Level 2"
-              ]
+              ],
+              "source": "Return to Bellowfiz"
             },
             {
               "name": "Scuffed Dagger",
@@ -37241,7 +39142,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.50",
                 "(3.0 damage per second)",
                 "Requires Level 2"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Smooth Walking Staff",
@@ -37260,7 +39162,8 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 3.30",
                 "(2.73 damage per second)"
-              ]
+              ],
+              "source": "The Stolen Journal"
             }
           ],
           "faction": "alliance",
@@ -37310,7 +39213,8 @@ if (typeof window !== 'undefined') {
                 "+1 Stamina",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 2",
                 "Requires Level 4"
-              ]
+              ],
+              "source": "The Relics of Wakening"
             },
             {
               "name": "Brushwood Blade",
@@ -37329,8 +39233,10 @@ if (typeof window !== 'undefined') {
                 "1H Sword",
                 "Speed 3.00",
                 "(5.33 damage per second)",
+                "+1 Stamina",
                 "Requires Level 3"
-              ]
+              ],
+              "source": "Druid of the Claw"
             },
             {
               "name": "Worn Ranger's Dagger",
@@ -37350,7 +39256,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.70",
                 "(4.41 damage per second)",
                 "Requires Level 3"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Chipped Spellstaff",
@@ -37369,8 +39276,10 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.80",
                 "(4.11 damage per second)",
+                "+1 Stamina",
                 "Requires Level 3"
-              ]
+              ],
+              "source": "Slydris"
             },
             {
               "name": "Dreamwatcher Staff",
@@ -37390,7 +39299,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.20",
                 "(5.6 damage per second)",
                 "Requires Level 4"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Vile Fin Oracle Staff",
@@ -37410,7 +39320,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.90",
                 "(5.0 damage per second)",
                 "Requires Level 4"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Sentinel's Slasher",
@@ -37430,7 +39341,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.40",
                 "(4.38 damage per second)",
                 "Requires Level 4"
-              ]
+              ],
+              "source": "Escaping Ban'ethil"
             },
             {
               "name": "Adept Short Staff",
@@ -37450,7 +39362,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.40",
                 "(4.4 damage per second)",
                 "Requires Level 3"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Long Bo Staff",
@@ -37470,7 +39383,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.50",
                 "(4.2 damage per second)",
                 "Requires Level 3"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Pruning Knife",
@@ -37490,7 +39404,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.60",
                 "(4.06 damage per second)",
                 "Requires Level 4"
-              ]
+              ],
+              "source": "Tumors"
             }
           ],
           "faction": "both",
@@ -37536,8 +39451,11 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.20",
                 "(8.86 damage per second)",
+                "+2 Stamina",
+                "+2 Spirit",
                 "Requires Level 6"
-              ]
+              ],
+              "source": "Return to Valanaar"
             },
             {
               "name": "Wrathroot",
@@ -37556,8 +39474,10 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 3.30",
                 "(7.12 damage per second)",
+                "+1 Intellect",
                 "Requires Level 5"
-              ]
+              ],
+              "source": "Wrathvine"
             },
             {
               "name": "Small Hand Blade",
@@ -37577,7 +39497,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.50",
                 "(6.0 damage per second)",
                 "Requires Level 6"
-              ]
+              ],
+              "source": "Harvest Golem"
             },
             {
               "name": "Carving Knife",
@@ -37598,7 +39519,8 @@ if (typeof window !== 'undefined') {
                 "6 - 13 Damage\tSpeed 1.60",
                 "(5.94 damage per second)",
                 "Requires Level 6"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Notched Shortsword",
@@ -37618,7 +39540,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.10",
                 "(5.5 damage per second)",
                 "Requires Level 5"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Scarlet Dagger",
@@ -37637,8 +39560,10 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.60",
                 "(5.31 damage per second)",
+                "+1 Stamina",
                 "Requires Level 5"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Driftwood Branch",
@@ -37658,7 +39583,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.40",
                 "(5.7 damage per second)",
                 "Requires Level 5"
-              ]
+              ],
+              "source": "Elder Timberling"
             },
             {
               "name": "Frostbit Staff",
@@ -37678,7 +39604,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.70",
                 "(5.7 damage per second)",
                 "Requires Level 5"
-              ]
+              ],
+              "source": "Rockjaw Bonesnapper"
             },
             {
               "name": "Frostmane Staff",
@@ -37698,7 +39625,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.10",
                 "(5.7 damage per second)",
                 "Requires Level 5"
-              ]
+              ],
+              "source": "Frostmane Shadowcaster"
             },
             {
               "name": "Ceremonial Knife",
@@ -37718,7 +39646,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.40",
                 "(5.36 damage per second)",
                 "Requires Level 5"
-              ]
+              ],
+              "source": "At War With The Scarlet Crusade"
             }
           ],
           "faction": "both",
@@ -37767,7 +39696,8 @@ if (typeof window !== 'undefined') {
                 "7 - 14 Damage\tSpeed 1.50",
                 "(7.00 damage per second)",
                 "+1 Stamina"
-              ]
+              ],
+              "source": "Early quest"
             },
             {
               "name": "Darkwood Staff",
@@ -37789,7 +39719,8 @@ if (typeof window !== 'undefined') {
                 "(6.72 damage per second)",
                 "+3 Stamina",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 6"
-              ]
+              ],
+              "source": "Tirisfal Quest: The Family Crypt"
             },
             {
               "name": "Makeshift Stormcaller",
@@ -37811,7 +39742,8 @@ if (typeof window !== 'undefined') {
                 "(5.76 damage per second)",
                 "+2 Intellect",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 4"
-              ]
+              ],
+              "source": "Durotar Shaman/Caster Quest: Stormy Potential"
             },
             {
               "name": "Sturdy Quarterstaff",
@@ -37831,7 +39763,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.80",
                 "(8.9 damage per second)",
                 "Requires Level 8"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Ancient Skyborne Blade",
@@ -37851,7 +39784,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.50",
                 "(7.00 damage per second)",
                 "Requires Level 8"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Stonesplinter Dagger",
@@ -37871,7 +39805,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.50",
                 "(7.0 damage per second)",
                 "Requires Level 8"
-              ]
+              ],
+              "source": "Stonesplinter Seer"
             },
             {
               "name": "Feral Blade",
@@ -37891,7 +39826,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.60",
                 "(6.9 damage per second)",
                 "Requires Level 8"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Jeweled Dagger",
@@ -37910,8 +39846,10 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.60",
                 "(6.56 damage per second)",
+                "+1 Stamina",
                 "Requires Level 7"
-              ]
+              ],
+              "source": "Morgaine the Sly"
             },
             {
               "name": "Felweaver's Staff",
@@ -37930,8 +39868,10 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.60",
                 "(6.54 damage per second)",
+                "+3 Intellect",
                 "Requires Level 8"
-              ]
+              ],
+              "source": "Felweaver Scornn"
             },
             {
               "name": "A'sharahm, the Roiling Tempest",
@@ -37949,8 +39889,10 @@ if (typeof window !== 'undefined') {
               "lines": [
                 "1H Sword",
                 "Speed 2.40",
-                "(6.25 damage per second)"
-              ]
+                "(6.25 damage per second)",
+                "+1 Stamina"
+              ],
+              "source": "Leveling Drop / Vendor"
             }
           ],
           "faction": "alliance",
@@ -37998,8 +39940,11 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.70",
                 "(10.74 damage per second)",
+                "+7 Stamina",
+                "+14 Spell Power",
                 "Requires Level 10"
-              ]
+              ],
+              "source": "The Weaver"
             },
             {
               "name": "Wind Rider Staff",
@@ -38018,8 +39963,11 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.80",
                 "(9.64 damage per second)",
+                "+6 Spirit",
+                "+12 Spell Power",
                 "Requires Level 10"
-              ]
+              ],
+              "source": "Cry of the Thunderhawk"
             },
             {
               "name": "Ukta's Conduit",
@@ -38038,8 +39986,10 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 3.30",
                 "(9.55 damage per second)",
+                "+3 Stamina",
                 "Requires Level 9"
-              ]
+              ],
+              "source": "Stormherald Ukta"
             },
             {
               "name": "Windforged Shortblade",
@@ -38059,7 +40009,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.20",
                 "(7.73 damage per second)",
                 "Requires Level 10"
-              ]
+              ],
+              "source": "Den'dralass"
             },
             {
               "name": "Elunite Dagger",
@@ -38078,8 +40029,10 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.70",
                 "(7.65 damage per second)",
+                "+1 Stamina",
                 "Requires Level 10"
-              ]
+              ],
+              "source": "Weapons of Elunite"
             },
             {
               "name": "Haggard's Dagger",
@@ -38098,8 +40051,10 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.70",
                 "(7.65 damage per second)",
+                "+1 Stamina",
                 "Requires Level 10"
-              ]
+              ],
+              "source": "Dead — tooth Jack"
             },
             {
               "name": "Heirloom Dagger",
@@ -38118,8 +40073,10 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.70",
                 "(7.65 damage per second)",
+                "+1 Stamina",
                 "Requires Level 10"
-              ]
+              ],
+              "source": "Heirloom Weapon"
             },
             {
               "name": "Thun'grim's Dagger",
@@ -38138,8 +40095,10 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.70",
                 "(7.65 damage per second)",
+                "+1 Stamina",
                 "Requires Level 10"
-              ]
+              ],
+              "source": "Forged Steel"
             },
             {
               "name": "Umbral Dagger",
@@ -38158,8 +40117,10 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.70",
                 "(7.65 damage per second)",
+                "+1 Stamina",
                 "Requires Level 10"
-              ]
+              ],
+              "source": "Grey Iron Weapons"
             },
             {
               "name": "Rusty Cutlass",
@@ -38177,8 +40138,10 @@ if (typeof window !== 'undefined') {
               "lines": [
                 "1H Sword",
                 "Speed 1.90",
-                "(7.63 damage per second)"
-              ]
+                "(7.63 damage per second)",
+                "+1 Stamina"
+              ],
+              "source": "Captain Sander's Locker"
             }
           ],
           "faction": "both",
@@ -38226,7 +40189,8 @@ if (typeof window !== 'undefined') {
                 "Binds when equipped",
                 "Held In Off-hand",
                 "Requires Level 21"
-              ]
+              ],
+              "source": "Vendor wand"
             },
             {
               "name": "Foamspittle Staff",
@@ -38246,7 +40210,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.20",
                 "(11.4 damage per second)",
                 "Requires Level 12"
-              ]
+              ],
+              "source": "Murloc Oracle"
             },
             {
               "name": "Elegant Shortsword",
@@ -38265,8 +40230,10 @@ if (typeof window !== 'undefined') {
                 "1H Sword",
                 "Speed 2.00",
                 "(10.00 damage per second)",
+                "+3 Stamina",
                 "Requires Level 12"
-              ]
+              ],
+              "source": "Serena Bloodfeather"
             },
             {
               "name": "Slicer Blade",
@@ -38286,7 +40253,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.50",
                 "(8.7 damage per second)",
                 "Requires Level 12"
-              ]
+              ],
+              "source": "Harvest Reaper"
             },
             {
               "name": "War Knife",
@@ -38306,7 +40274,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.70",
                 "(8.5 damage per second)",
                 "Requires Level 12"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Redridge Machete",
@@ -38326,7 +40295,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.30",
                 "(8.3 damage per second)",
                 "Requires Level 11"
-              ]
+              ],
+              "source": "Redridge Poacher"
             },
             {
               "name": "Raider Shortsword",
@@ -38346,7 +40316,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.90",
                 "(8.2 damage per second)",
                 "Requires Level 11"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Defias Rapier",
@@ -38366,7 +40337,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.60",
                 "(8.1 damage per second)",
                 "Requires Level 11"
-              ]
+              ],
+              "source": "Defias Watchman"
             },
             {
               "name": "Impcaster's Staff",
@@ -38385,8 +40357,10 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.50",
                 "(8.00 damage per second)",
+                "+4 Spirit",
                 "Requires Level 11"
-              ]
+              ],
+              "source": "Licillin"
             },
             {
               "name": "Defias Mage Staff",
@@ -38405,8 +40379,11 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.80",
                 "(7.86 damage per second)",
+                "+4 Intellect",
+                "+8 Spell Power",
                 "Requires Level 11"
-              ]
+              ],
+              "source": "Defias Magician"
             }
           ],
           "faction": "both",
@@ -38458,7 +40435,8 @@ if (typeof window !== 'undefined') {
                 "+6 Agility",
                 "+6 Intellect",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 18"
-              ]
+              ],
+              "source": "RFC: Hidden Enemies (Horde BiS)"
             },
             {
               "name": "Fang of Magmatus",
@@ -38481,7 +40459,8 @@ if (typeof window !== 'undefined') {
                 "+4 Intellect",
                 "Requires Level 13",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 18"
-              ]
+              ],
+              "source": "Hall of Thanes: Magmatus"
             },
             {
               "name": "Kris of Orgrimmar",
@@ -38503,7 +40482,8 @@ if (typeof window !== 'undefined') {
                 "(8.00 damage per second)",
                 "+4 Stamina",
                 "Equip: Increases healing done by up to 33"
-              ]
+              ],
+              "source": "RFC Quest"
             },
             {
               "name": "Searing Dagger",
@@ -38526,7 +40506,8 @@ if (typeof window !== 'undefined') {
                 "+4 Spirit",
                 "Requires Level 13",
                 "Equip: Harmful spell casts sear the target for 7 Fire damage. (10ms cooldown)"
-              ]
+              ],
+              "source": "RFC Drop"
             },
             {
               "name": "Cursed Felblade",
@@ -38546,7 +40527,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.30",
                 "(12.17 damage per second)",
                 "Requires Level 13"
-              ]
+              ],
+              "source": "Taragaman the Hungerer"
             },
             {
               "name": "Medicine Staff",
@@ -38566,7 +40548,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.50",
                 "(12.6 damage per second)",
                 "Requires Level 14"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Riverside Staff",
@@ -38586,7 +40569,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.10",
                 "(12.6 damage per second)",
                 "Requires Level 14"
-              ]
+              ],
+              "source": "Murloc Tidecaller"
             },
             {
               "name": "Riverpaw Mystic Staff",
@@ -38606,7 +40590,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.00",
                 "(11.8 damage per second)",
                 "Requires Level 13"
-              ]
+              ],
+              "source": "Riverpaw Mystic"
             },
             {
               "name": "Staff of the Purifier",
@@ -38625,8 +40610,11 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 3.70",
                 "(11.22 damage per second)",
+                "+8 Spirit",
+                "+16 Spell Power",
                 "Requires Level 13"
-              ]
+              ],
+              "source": "The Tower of Althalaxx"
             },
             {
               "name": "Scrimshaw Dagger",
@@ -38645,8 +40633,10 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.80",
                 "(9.72 damage per second)",
+                "+2 Stamina",
                 "Requires Level 14"
-              ]
+              ],
+              "source": "Red Silk Bandanas"
             }
           ],
           "faction": "both",
@@ -38699,7 +40689,8 @@ if (typeof window !== 'undefined') {
                 "+10 Spirit",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 26",
                 "Equip: Increases movement speed by 2% in Silverpine Forest and Hillsbrad Foothills."
-              ]
+              ],
+              "source": "Ruins of Lordaeron: Rath'mael"
             },
             {
               "name": "Clear Crystal Rod",
@@ -38722,7 +40713,8 @@ if (typeof window !== 'undefined') {
                 "+4 Stamina",
                 "+5 Intellect",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 14"
-              ]
+              ],
+              "source": "Arachnophobia quest in Stonetalon"
             },
             {
               "name": "Staff of Orgrimmar",
@@ -38745,7 +40737,8 @@ if (typeof window !== 'undefined') {
                 "+6 Agility",
                 "+6 Intellect",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 18"
-              ]
+              ],
+              "source": "RFC: Hidden Enemies (Horde BiS)"
             },
             {
               "name": "Emberstone Staff",
@@ -38769,7 +40762,8 @@ if (typeof window !== 'undefined') {
                 "+8 Fire Resistance",
                 "Requires Level 17",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 24"
-              ]
+              ],
+              "source": "Deadmines: Captain Greenskin"
             },
             {
               "name": "Meathook Slicer",
@@ -38791,7 +40785,8 @@ if (typeof window !== 'undefined') {
                 "(13.61 damage per second)",
                 "+5 Stamina",
                 "Requires Level 15"
-              ]
+              ],
+              "source": "Ruins of Lordaeron: The Baron"
             },
             {
               "name": "Ironpatch Blade",
@@ -38811,7 +40806,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.60",
                 "(13.5 damage per second)",
                 "Requires Level 15"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Night Watch Shortsword",
@@ -38831,7 +40827,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.60",
                 "(13.5 damage per second)",
                 "Requires Level 15"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Buzzer Blade",
@@ -38850,8 +40847,10 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.50",
                 "(9.00 damage per second)",
+                "+22 Spell Power",
                 "Requires Level 16"
-              ]
+              ],
+              "source": "Sneed's Shredder"
             },
             {
               "name": "Gnarled Hermit's Staff",
@@ -38870,8 +40869,10 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.80",
                 "(13.57 damage per second)",
+                "+7 Spirit",
                 "Requires Level 16"
-              ]
+              ],
+              "source": "Geopriest Gukk'rok"
             },
             {
               "name": "Lesser Staff of the Spire",
@@ -38891,7 +40892,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.40",
                 "(13.1 damage per second)",
                 "Requires Level 15"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             }
           ],
           "faction": "both",
@@ -38944,7 +40946,8 @@ if (typeof window !== 'undefined') {
                 "+6 Agility",
                 "+6 Intellect",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 18"
-              ]
+              ],
+              "source": "RFC: Hidden Enemies (Horde BiS)"
             },
             {
               "name": "Staff of Westfall",
@@ -38968,7 +40971,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Movement speed increased by 2% in Elwynn Forest, Westfall, Redridge Mountains, and the Deadmines."
               ],
               "reqLevel": 14,
-              "icon": "inv_staff_10"
+              "icon": "inv_staff_10",
+              "source": "Deadmines Quest: The Defias Brotherhood"
             },
             {
               "name": "Vileblood Scimitar",
@@ -38990,7 +40994,8 @@ if (typeof window !== 'undefined') {
                 "(14.62 damage per second)",
                 "+5 Spirit",
                 "Requires Level 17"
-              ]
+              ],
+              "source": "Ruins of Lordaeron: Viktor"
             },
             {
               "name": "Witching Stave",
@@ -39015,7 +41020,8 @@ if (typeof window !== 'undefined') {
                 "+8 Shadow Resistance",
                 "Requires Level 17",
                 "Equip: Increases damage done by Shadow spells and effects by up to 27."
-              ]
+              ],
+              "source": "Level 17 Rare Drop"
             },
             {
               "name": "Advisor's Gnarled Staff",
@@ -39035,7 +41041,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.90",
                 "(19.7 damage per second)",
                 "Requires Level 18"
-              ]
+              ],
+              "source": "Kelm Hargunth"
             },
             {
               "name": "Lorekeeper's Staff",
@@ -39055,7 +41062,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.90",
                 "(19.7 damage per second)",
                 "Requires Level 18"
-              ]
+              ],
+              "source": "Illiyana Moonblaze"
             },
             {
               "name": "Scout's Blade",
@@ -39075,7 +41083,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.70",
                 "(15.3 damage per second)",
                 "Requires Level 18"
-              ]
+              ],
+              "source": "Kelm Hargunth"
             },
             {
               "name": "Sentinel's Blade",
@@ -39095,7 +41104,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.70",
                 "(15.3 damage per second)",
                 "Requires Level 18"
-              ]
+              ],
+              "source": "Illiyana Moonblaze"
             },
             {
               "name": "Butcher's Slicer",
@@ -39114,8 +41124,10 @@ if (typeof window !== 'undefined') {
                 "1H Sword",
                 "Speed 2.90",
                 "(15.00 damage per second)",
+                "+3 Stamina",
                 "Requires Level 18"
-              ]
+              ],
+              "source": "Razorclaw the Butcher"
             },
             {
               "name": "Legionnaire's Sword",
@@ -39135,7 +41147,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.70",
                 "(15.0 damage per second)",
                 "Requires Level 18"
-              ]
+              ],
+              "source": "Kelm Hargunth"
             }
           ],
           "faction": "both",
@@ -39217,7 +41230,8 @@ if (typeof window !== 'undefined') {
                 "+6 Agility",
                 "+6 Intellect",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 18"
-              ]
+              ],
+              "source": "RFC: Hidden Enemies (Horde BiS)"
             },
             {
               "name": "Staff of Westfall",
@@ -39241,7 +41255,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Movement speed increased by 2% in Elwynn Forest, Westfall, Redridge Mountains, and the Deadmines."
               ],
               "reqLevel": 14,
-              "icon": "inv_staff_10"
+              "icon": "inv_staff_10",
+              "source": "Deadmines Quest"
             },
             {
               "name": "Glimmering Staff",
@@ -39265,7 +41280,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases damage and healing done by magical spells and effects by up to 34"
               ],
               "reqLevel": 25,
-              "icon": "inv_staff_19"
+              "icon": "inv_staff_19",
+              "source": "Enchanting (140)"
             },
             {
               "name": "Staff of Soran'ruk",
@@ -39313,7 +41329,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.40",
                 "(20.4 damage per second)",
                 "Requires Level 19"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Blackfang",
@@ -39333,7 +41350,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.50",
                 "(16.3 damage per second)",
                 "Requires Level 20"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Staff of the Blessed Seer",
@@ -39352,8 +41370,12 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 3.00",
                 "(15.67 damage per second)",
+                "+9 Stamina",
+                "+10 Spirit",
+                "+28 Spell Power",
                 "Requires Level 20"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Whipfang's Skinsearer",
@@ -39373,9 +41395,11 @@ if (typeof window !== 'undefined') {
                 "One-Hand",
                 "18 - 35 Damage\tSpeed 1.70",
                 "(15.59 damage per second)",
+                "Chance on hit: Sear your target's flesh, dealing 67 to 101 Fire damage.",
                 "Requires Level 19",
                 "Chance on hit: Sear your target's flesh, dealing 67 to 101 Fire damage."
-              ]
+              ],
+              "source": "Taskmaster Whipfang"
             },
             {
               "name": "Shadowfang",
@@ -39395,7 +41419,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.70",
                 "(15.56 damage per second)",
                 "Requires Level 19"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             }
           ],
           "faction": "both",
@@ -39450,7 +41475,8 @@ if (typeof window !== 'undefined') {
                 "Requires Level 24",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 32",
                 "Equip: Reduces the hit chance of Sleep effects against you by 5%."
-              ]
+              ],
+              "source": "BFD: Twilight Lord Kelris"
             },
             {
               "name": "Meteor Shard",
@@ -39473,7 +41499,8 @@ if (typeof window !== 'undefined') {
                 "+3 Fire Resistance",
                 "Requires Level 23",
                 "Chance on hit: Blasts a target for 42 Fire damage."
-              ]
+              ],
+              "source": "SFK: Archmage Arugal"
             },
             {
               "name": "Alliance Outrunner Staff",
@@ -39497,7 +41524,8 @@ if (typeof window !== 'undefined') {
                 "+9 Spirit",
                 "Requires Level 21",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 28"
-              ]
+              ],
+              "source": "Alliance Drop"
             },
             {
               "name": "Bite of Serra'kis",
@@ -39516,8 +41544,10 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.30",
                 "(17.69 damage per second)",
+                "+2 Nature Resistance",
                 "Requires Level 23"
-              ]
+              ],
+              "source": "Old Serra'kis"
             },
             {
               "name": "Flame Seared Sword",
@@ -39537,7 +41567,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.60",
                 "(17.69 damage per second)",
                 "Requires Level 23"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Kam's Walking Stick",
@@ -39556,8 +41587,12 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.80",
                 "(17.68 damage per second)",
+                "+10 Agility",
+                "+3 Intellect",
+                "+32 Spell Power",
                 "Requires Level 24"
-              ]
+              ],
+              "source": "Kam Deepfury"
             },
             {
               "name": "Sword of Decay",
@@ -39577,7 +41612,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.70",
                 "(17.6 damage per second)",
                 "Requires Level 23"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Talon of Vultros",
@@ -39596,8 +41632,11 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 2.00",
                 "(17.50 damage per second)",
+                "+6 Agility",
+                "+3 Spirit",
                 "Requires Level 23"
-              ]
+              ],
+              "source": "Vultros"
             },
             {
               "name": "Sword of Corruption",
@@ -39617,7 +41656,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.10",
                 "(17.1 damage per second)",
                 "Requires Level 22"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Heavy Marauder Scimitar",
@@ -39637,7 +41677,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.40",
                 "(17.1 damage per second)",
                 "Requires Level 22"
-              ]
+              ],
+              "source": "Galak Marauder"
             }
           ],
           "faction": "both",
@@ -39689,7 +41730,8 @@ if (typeof window !== 'undefined') {
                 "(20.77 damage per second)",
                 "+12 Stamina",
                 "Equip: Increases healing done by up to 67"
-              ]
+              ],
+              "source": "Excavation Site: Wetlands"
             },
             {
               "name": "Striking Staff",
@@ -39712,7 +41754,8 @@ if (typeof window !== 'undefined') {
                 "+9 Strength",
                 "+6 Stamina",
                 "+14 Intellect"
-              ]
+              ],
+              "source": "Heart of Disruption in City of Dalaran"
             },
             {
               "name": "Debt Collector",
@@ -39735,7 +41778,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Grants 6 health and 2 mana every 5 sec for 15 sec when one of your spells is resisted."
               ],
               "reqLevel": 26,
-              "icon": "inv_sword_24"
+              "icon": "inv_sword_24",
+              "source": "Stockade: Bazil Thredd (Alliance)"
             },
             {
               "name": "Fallen Dragon's Scepter",
@@ -39758,7 +41802,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases damage and healing done by magical spells and effects by up to 36"
               ],
               "reqLevel": 24,
-              "icon": "inv_staff_08"
+              "icon": "inv_staff_08",
+              "source": "Redridge Quest"
             },
             {
               "name": "Gnarled Ash Staff",
@@ -39778,7 +41823,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.20",
                 "(25.6 damage per second)",
                 "Requires Level 26"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Advisor's Gnarled Staff",
@@ -39797,8 +41843,11 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.90",
                 "(24.66 damage per second)",
+                "+10 Stamina",
+                "+6 Intellect",
                 "Requires Level 25"
-              ]
+              ],
+              "source": "Kelm Hargunth"
             },
             {
               "name": "Lorekeeper's Staff",
@@ -39817,8 +41866,11 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.90",
                 "(24.66 damage per second)",
+                "+10 Stamina",
+                "+6 Intellect",
                 "Requires Level 25"
-              ]
+              ],
+              "source": "Illiyana Moonblaze"
             },
             {
               "name": "Outlaw Sabre",
@@ -39838,7 +41890,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.70",
                 "(20.37 damage per second)",
                 "Requires Level 25"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "The Black Knight",
@@ -39858,7 +41911,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.90",
                 "(19.7 damage per second)",
                 "Requires Level 26"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Frostfall",
@@ -39877,7 +41931,8 @@ if (typeof window !== 'undefined') {
                 "1H Sword",
                 "Speed 2.90",
                 "(18.97 damage per second)"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             }
           ],
           "faction": "both",
@@ -39930,7 +41985,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases damage and healing done by magical spells and effects by up to 36"
               ],
               "reqLevel": 28,
-              "icon": "inv_misc_bone_06"
+              "icon": "inv_misc_bone_06",
+              "source": "City of Dalaran: Lyn the Ignored"
             },
             {
               "name": "Advisor's Gnarled Staff",
@@ -39950,7 +42006,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.90",
                 "(27.8 damage per second)",
                 "Requires Level 28"
-              ]
+              ],
+              "source": "Kelm Hargunth"
             },
             {
               "name": "Lorekeeper's Staff",
@@ -39970,7 +42027,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.90",
                 "(27.8 damage per second)",
                 "Requires Level 28"
-              ]
+              ],
+              "source": "Illiyana Moonblaze"
             },
             {
               "name": "Legionnaire's Sword",
@@ -39990,7 +42048,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.70",
                 "(21.3 damage per second)",
                 "Requires Level 28"
-              ]
+              ],
+              "source": "Kelm Hargunth"
             },
             {
               "name": "Protector's Sword",
@@ -40010,7 +42069,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.70",
                 "(21.3 damage per second)",
                 "Requires Level 28"
-              ]
+              ],
+              "source": "Illiyana Moonblaze"
             },
             {
               "name": "Scout's Blade",
@@ -40030,7 +42090,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.70",
                 "(21.2 damage per second)",
                 "Requires Level 28"
-              ]
+              ],
+              "source": "Kelm Hargunth"
             },
             {
               "name": "Sentinel's Blade",
@@ -40050,7 +42111,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.70",
                 "(21.2 damage per second)",
                 "Requires Level 28"
-              ]
+              ],
+              "source": "Illiyana Moonblaze"
             },
             {
               "name": "Thornspike",
@@ -40070,9 +42132,11 @@ if (typeof window !== 'undefined') {
                 "One-Hand",
                 "24 - 46 Damage\tSpeed 1.70",
                 "(20.59 damage per second)",
+                "Chance on hit: Hurl spikes at the target, dealing 45 Physical damage and jumping to 1 additional nearby enemy. Each jump reduces the damage by 50%.",
                 "Requires Level 27",
                 "Chance on hit: Hurl spikes at the target, dealing 45 Physical damage and jumping to 1 additional nearby enemy. Each jump reduces the damage by 50%."
-              ]
+              ],
+              "source": "Aggem Thorncurse"
             },
             {
               "name": "Claw of the Shadowmancer",
@@ -40092,7 +42156,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.90",
                 "(20.5 damage per second)",
                 "Requires Level 27"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Toxic Revenger",
@@ -40112,9 +42177,11 @@ if (typeof window !== 'undefined') {
                 "One-Hand",
                 "27 - 51 Damage\tSpeed 1.90",
                 "(20.53 damage per second)",
+                "Chance on hit: Deals 14 Nature damage every 3 sec to any enemy in an 8 yard radius around the caster for 12 sec.",
                 "Requires Level 27",
                 "Chance on hit: Deals 14 Nature damage every 3 sec to any enemy in an 8 yard radius around the caster for 12 sec."
-              ]
+              ],
+              "source": "Viscous Fallout"
             }
           ],
           "faction": "both",
@@ -40167,7 +42234,8 @@ if (typeof window !== 'undefined') {
                 "+8 Intellect",
                 "+15 Spirit",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 38"
-              ]
+              ],
+              "source": "Saving Yenniku quest in STV"
             },
             {
               "name": "Wind Spirit Staff",
@@ -40191,7 +42259,8 @@ if (typeof window !== 'undefined') {
                 "+16 Spirit",
                 "Requires Level 29",
                 "Equip: Increases healing done by up to 71"
-              ]
+              ],
+              "source": "RFK: Earthcaller Halmgar"
             },
             {
               "name": "Mindslicer",
@@ -40213,7 +42282,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases damage and healing done by magical spells and effects by up to 34"
               ],
               "reqLevel": 30,
-              "icon": "inv_weapon_shortblade_15"
+              "icon": "inv_weapon_shortblade_15",
+              "source": "Arathi: Call to Arms"
             },
             {
               "name": "Debt Collector",
@@ -40236,7 +42306,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Grants 6 health and 2 mana every 5 sec for 15 sec when one of your spells is resisted."
               ],
               "reqLevel": 26,
-              "icon": "inv_sword_24"
+              "icon": "inv_sword_24",
+              "source": "Stockade: Bazil Thredd (Alliance)"
             },
             {
               "name": "City Guard's Tarnished Blade",
@@ -40259,7 +42330,8 @@ if (typeof window !== 'undefined') {
                 "+6 Stamina",
                 "Requires Level 29",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 5"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Zealot Blade",
@@ -40282,7 +42354,8 @@ if (typeof window !== 'undefined') {
                 "+5 Intellect",
                 "+6 Spirit",
                 "Requires Level 29"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Electrocutioner Leg",
@@ -40302,7 +42375,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.70",
                 "(22.06 damage per second)",
                 "Requires Level 29"
-              ]
+              ],
+              "source": "Electrocutioner 6000"
             },
             {
               "name": "Torturing Poker",
@@ -40322,7 +42396,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.70",
                 "(19.63 damage per second)",
                 "Requires Level 29"
-              ]
+              ],
+              "source": "Interrogator Vishas"
             },
             {
               "name": "Swinetusk Shank",
@@ -40346,7 +42421,8 @@ if (typeof window !== 'undefined') {
                 "+4 Spirit",
                 "Requires Level 30",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 40"
-              ]
+              ],
+              "source": "Agathelos the Raging"
             },
             {
               "name": "Acrobatic Staff",
@@ -40366,7 +42442,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.20",
                 "(22.9 damage per second)",
                 "Requires Level 29"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             }
           ],
           "faction": "both",
@@ -40421,7 +42498,8 @@ if (typeof window !== 'undefined') {
                 "+6 Spirit",
                 "Requires Level 35",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 48"
-              ]
+              ],
+              "source": "Maraudon: Khan Jehn"
             },
             {
               "name": "Hypnotic Blade",
@@ -40445,7 +42523,8 @@ if (typeof window !== 'undefined') {
                 "+3 Spirit",
                 "Requires Level 34",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 44"
-              ]
+              ],
+              "source": "SM Library: Arcanist Doan"
             },
             {
               "name": "Staff of Jordan",
@@ -40470,7 +42549,8 @@ if (typeof window !== 'undefined') {
                 "Requires Level 35",
                 "Equip: Improves your chance to hit by 1.5%.",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 60"
-              ]
+              ],
+              "source": "Level 35 Epic World Drop"
             },
             {
               "name": "Black Duskwood Staff",
@@ -40490,7 +42570,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.80",
                 "(33.6 damage per second)",
                 "Requires Level 33"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Loksey's Training Stick",
@@ -40510,7 +42591,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.10",
                 "(31.29 damage per second)",
                 "Requires Level 31"
-              ]
+              ],
+              "source": "Houndmaster Loksey"
             },
             {
               "name": "Sword of Serenity",
@@ -40533,7 +42615,8 @@ if (typeof window !== 'undefined') {
                 "+9 Stamina",
                 "+4 Spirit",
                 "Requires Level 34"
-              ]
+              ],
+              "source": "In the Name of the Light"
             },
             {
               "name": "Black Menace",
@@ -40554,8 +42637,10 @@ if (typeof window !== 'undefined') {
                 "31 - 58 Damage\tSpeed 1.50",
                 "(29.67 damage per second)",
                 "Chance on hit: Sends a shadowy bolt at the enemy causing 77 Shadow damage.",
+                "Chance on hit: Sends a shadowy bolt at the enemy causing 77 Shadow damage.",
                 "Requires Level 34"
-              ]
+              ],
+              "source": "In the Name of the Light"
             },
             {
               "name": "Blade of the Basilisk",
@@ -40575,7 +42660,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.90",
                 "(26.58 damage per second)",
                 "Requires Level 34"
-              ]
+              ],
+              "source": "Ironeye the Invincible"
             },
             {
               "name": "Celestial Stave",
@@ -40598,7 +42684,8 @@ if (typeof window !== 'undefined') {
                 "+8 Intellect",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 46",
                 "Requires Level 35"
-              ]
+              ],
+              "source": "Celestial Power"
             },
             {
               "name": "The Ziggler",
@@ -40618,7 +42705,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.70",
                 "(26.5 damage per second)",
                 "Requires Level 34"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             }
           ],
           "faction": "both",
@@ -40676,7 +42764,8 @@ if (typeof window !== 'undefined') {
                 "Requires Level 35",
                 "Equip: Improves your chance to hit by 1.5%.",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 60"
-              ]
+              ],
+              "source": "World drop BoE staff"
             },
             {
               "name": "Gut Ripper",
@@ -40696,7 +42785,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.80",
                 "(33.89 damage per second)",
                 "Requires Level 40"
-              ]
+              ],
+              "source": "World Drop Epic"
             },
             {
               "name": "Dazzling Longsword",
@@ -40716,7 +42806,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.60",
                 "(31.5 damage per second)",
                 "Requires Level 36"
-              ]
+              ],
+              "source": "World Drop Epic"
             },
             {
               "name": "Advisor's Gnarled Staff",
@@ -40736,7 +42827,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.90",
                 "(38.1 damage per second)",
                 "Requires Level 38"
-              ]
+              ],
+              "source": "Kelm Hargunth"
             },
             {
               "name": "Lorekeeper's Staff",
@@ -40756,7 +42848,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.90",
                 "(38.1 damage per second)",
                 "Requires Level 38"
-              ]
+              ],
+              "source": "Illiyana Moonblaze"
             },
             {
               "name": "Ironshod Bludgeon",
@@ -40776,7 +42869,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.50",
                 "(37.2 damage per second)",
                 "Requires Level 37"
-              ]
+              ],
+              "source": "Ironaya"
             },
             {
               "name": "Lifeforce Dirk",
@@ -40799,7 +42893,8 @@ if (typeof window !== 'undefined') {
                 "+11 Stamina",
                 "Chance on hit: Heals wielder of 42 damage.",
                 "Requires Level 40"
-              ]
+              ],
+              "source": "The God Hakkar"
             },
             {
               "name": "Jhordy's Misplaced Screwdriver",
@@ -40818,8 +42913,12 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.90",
                 "(30.26 damage per second)",
+                "+6 Strength",
+                "+9 Agility",
+                "-1 Intellect",
                 "Requires Level 40"
-              ]
+              ],
+              "source": "1 Intellect — Rettrick"
             },
             {
               "name": "Nordic Longshank",
@@ -40839,7 +42938,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.20",
                 "(29.3 damage per second)",
                 "Requires Level 38"
-              ]
+              ],
+              "source": "Baelog"
             },
             {
               "name": "Legionnaire's Sword",
@@ -40859,7 +42959,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.70",
                 "(29.3 damage per second)",
                 "Requires Level 38"
-              ]
+              ],
+              "source": "Kelm Hargunth"
             }
           ],
           "faction": "both",
@@ -40915,7 +43016,8 @@ if (typeof window !== 'undefined') {
                 "+4 Stamina",
                 "+17 Spirit",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 38"
-              ]
+              ],
+              "source": "A Hero's Welcome quest in Feralas"
             },
             {
               "name": "Strength of the Treant",
@@ -40938,7 +43040,8 @@ if (typeof window !== 'undefined') {
                 "+7 Stamina",
                 "+18 Intellect",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 42"
-              ]
+              ],
+              "source": "Weapons of Spirit quest in Feralas"
             },
             {
               "name": "Zum'rah's Vexing Cane",
@@ -40963,7 +43066,8 @@ if (typeof window !== 'undefined') {
                 "Requires Level 43",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 54",
                 "Equip: Chance on harmful spell cast to summon a Zombie Troll of Zum'rah for 20 sec. (1m cooldown)"
-              ]
+              ],
+              "source": "ZF: Witch Doctor Zum'rah"
             },
             {
               "name": "Emerald Watcher's Dreamstaff",
@@ -40987,7 +43091,8 @@ if (typeof window !== 'undefined') {
                 "+19 Spirit",
                 "Requires Level 44",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 56"
-              ]
+              ],
+              "source": "Custom Staff Drop"
             },
             {
               "name": "Staff of Lore",
@@ -41010,7 +43115,8 @@ if (typeof window !== 'undefined') {
                 "+5 Intellect",
                 "+18 Spirit",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 40"
-              ]
+              ],
+              "source": "Gahz'ridian quest in Tanaris"
             },
             {
               "name": "The Chief's Enforcer",
@@ -41030,7 +43136,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.40",
                 "(43.53 damage per second)",
                 "Requires Level 45"
-              ]
+              ],
+              "source": "Chief Ukorz Sandscalp"
             },
             {
               "name": "Tanglewood Staff",
@@ -41050,7 +43157,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.40",
                 "(40.3 damage per second)",
                 "Requires Level 41"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Thrash Blade",
@@ -41071,8 +43179,10 @@ if (typeof window !== 'undefined') {
                 "66 - 124 Damage\tSpeed 2.70",
                 "(35.19 damage per second)",
                 "Chance on hit: Grants an extra attack on your next swing.",
+                "Chance on hit: Grants an extra attack on your next swing.",
                 "Requires Level 45"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Jang'thraze the Protector",
@@ -41092,7 +43202,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.90",
                 "(33.42 damage per second)",
                 "Requires Level 45"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Jang'thraze the Protector",
@@ -41112,7 +43223,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.90",
                 "(33.42 damage per second)",
                 "Requires Level 45"
-              ]
+              ],
+              "source": "Chief Ukorz Sandscalp"
             }
           ],
           "faction": "both",
@@ -41163,7 +43275,8 @@ if (typeof window !== 'undefined') {
                 "103 - 156 Damage\tSpeed 3.80",
                 "(34.08 damage per second)",
                 "Equip: Increases healing done by up to 112"
-              ]
+              ],
+              "source": "Corruption of Earth and Seed quest in Maraudon"
             },
             {
               "name": "Kindling Stave",
@@ -41190,7 +43303,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Improves your chance to get a critical strike by 1.0%.",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 60",
                 "Equip: Harmful spell casts have a chance to deal 60 to 81 Fire damage. Deals 3 times as much damage to Plants. (10ms cooldown)"
-              ]
+              ],
+              "source": "BRD: Pyromancer Loregrain"
             },
             {
               "name": "Spire of Hakkar",
@@ -41215,7 +43329,8 @@ if (typeof window !== 'undefined') {
                 "Requires Level 49",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 62",
                 "Equip: Harmful spell casts have a chance to steal 112 life from the target enemy over 8 sec. (10ms cooldown)"
-              ]
+              ],
+              "source": "Sunken Temple"
             },
             {
               "name": "Glowing Brightwood Staff",
@@ -41235,7 +43350,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.10",
                 "(38.1 damage per second)",
                 "Requires Level 49"
-              ]
+              ],
+              "source": "World Drop Epic"
             },
             {
               "name": "Soulkeeper",
@@ -41255,7 +43371,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.80",
                 "(46.6 damage per second)",
                 "Requires Level 49"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Advisor's Gnarled Staff",
@@ -41275,7 +43392,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.90",
                 "(45.9 damage per second)",
                 "Requires Level 48"
-              ]
+              ],
+              "source": "Kelm Hargunth"
             },
             {
               "name": "Lorekeeper's Staff",
@@ -41295,7 +43413,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.90",
                 "(45.9 damage per second)",
                 "Requires Level 48"
-              ]
+              ],
+              "source": "Illiyana Moonblaze"
             },
             {
               "name": "Blade of Reckoning",
@@ -41314,8 +43433,10 @@ if (typeof window !== 'undefined') {
                 "1H Sword",
                 "Speed 2.40",
                 "(39.38 damage per second)",
+                "+8 Stamina",
                 "Requires Level 50"
-              ]
+              ],
+              "source": "Jail Break!"
             },
             {
               "name": "Skilled Fighting Blade",
@@ -41334,8 +43455,10 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.40",
                 "(39.29 damage per second)",
+                "+7 Stamina",
                 "Requires Level 50"
-              ]
+              ],
+              "source": "Jail Break!"
             },
             {
               "name": "Linken's Sword of Mastery",
@@ -41355,7 +43478,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.80",
                 "(36.94 damage per second)",
                 "Requires Level 47"
-              ]
+              ],
+              "source": "It's Dangerous to Go Alone"
             }
           ],
           "faction": "both",
@@ -41409,7 +43533,8 @@ if (typeof window !== 'undefined') {
                 "+20 Stamina",
                 "+15 Intellect",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 54"
-              ]
+              ],
+              "source": "The Corpulent One quest in EPL"
             },
             {
               "name": "Corrupted Blackwood Staff",
@@ -41432,7 +43557,8 @@ if (typeof window !== 'undefined') {
                 "+11 Stamina",
                 "+22 Intellect",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 54"
-              ]
+              ],
+              "source": "Into The Maw of Madness quest in Silithus"
             },
             {
               "name": "Wisepaw Totem",
@@ -41456,7 +43582,8 @@ if (typeof window !== 'undefined') {
                 "+23 Intellect",
                 "Requires Level 53",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 66"
-              ]
+              ],
+              "source": "Mount Hyjal vendor"
             },
             {
               "name": "Rod of the Ogre Magi",
@@ -41468,7 +43595,8 @@ if (typeof window !== 'undefined') {
               "iLvl": 56,
               "reqLevel": 50,
               "stats": "+14 Int, +11 Spi, +23 SP, 1% Spell Crit",
-              "icon": "inv_staff_13"
+              "icon": "inv_staff_13",
+              "source": "DM North Tribute Run"
             },
             {
               "name": "Witchblade",
@@ -41481,7 +43609,8 @@ if (typeof window !== 'undefined') {
               "iLvl": 56,
               "reqLevel": 50,
               "stats": "+14 SP",
-              "icon": "inv_weapon_shortblade_16"
+              "icon": "inv_weapon_shortblade_16",
+              "source": "Scholomance: Darkmaster Gandling"
             },
             {
               "name": "Ironbark Staff",
@@ -41507,7 +43636,8 @@ if (typeof window !== 'undefined') {
                 "Requires Level 55",
                 "Equip: Improves your chance to get a critical strike by 2.0%.",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 88"
-              ]
+              ],
+              "source": "Alterac Valley (Revered)"
             },
             {
               "name": "Atiesh, Greatstaff of the Guardian",
@@ -41526,8 +43656,14 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.90",
                 "(64.34 damage per second)",
+                "+31 Stamina",
+                "+32 Intellect",
+                "+24 Spirit",
+                "+150 Spell Power",
+                "+20 Hit",
                 "Requires Level 60"
-              ]
+              ],
+              "source": "Atiesh, Greatstaff of the Guardian"
             },
             {
               "name": "Atiesh, Greatstaff of the Guardian",
@@ -41546,8 +43682,13 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.90",
                 "(64.34 damage per second)",
+                "+30 Stamina",
+                "+29 Intellect",
+                "+183 Spell Power",
+                "+28 Crit",
                 "Requires Level 60"
-              ]
+              ],
+              "source": "Atiesh, Greatstaff of the Guardian"
             },
             {
               "name": "Atiesh, Greatstaff of the Guardian",
@@ -41566,8 +43707,14 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.90",
                 "(64.34 damage per second)",
+                "+28 Stamina",
+                "+28 Intellect",
+                "+27 Spirit",
+                "+242 Healing",
+                "+120 Spell Power",
                 "Requires Level 60"
-              ]
+              ],
+              "source": "Atiesh, Greatstaff of the Guardian"
             },
             {
               "name": "Atiesh, Greatstaff of the Guardian",
@@ -41586,8 +43733,14 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.90",
                 "(64.34 damage per second)",
+                "+28 Stamina",
+                "+28 Intellect",
+                "+27 Spirit",
+                "+300 Healing",
+                "+11 MP5",
                 "Requires Level 60"
-              ]
+              ],
+              "source": "Atiesh, Greatstaff of the Guardian"
             }
           ],
           "faction": "both",
@@ -41652,7 +43805,8 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 2.00",
                 "(6.75 damage per second)"
-              ]
+              ],
+              "source": "World Drop Epic"
             },
             {
               "name": "Restored Greatstaff",
@@ -41671,7 +43825,8 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 3.10",
                 "(1.61 damage per second)"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Restored Dagger",
@@ -41690,7 +43845,8 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.70",
                 "(1.18 damage per second)"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Restored Basher",
@@ -41709,7 +43865,8 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 2.20",
                 "(1.14 damage per second)"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Gnarled Short Staff",
@@ -41729,7 +43886,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.80",
                 "(4.29 damage per second)",
                 "Requires Level 2"
-              ]
+              ],
+              "source": "Return to Bellowfiz"
             },
             {
               "name": "Camping Knife",
@@ -41749,7 +43907,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.40",
                 "(3.21 damage per second)",
                 "Requires Level 2"
-              ]
+              ],
+              "source": "Return to Bellowfiz"
             },
             {
               "name": "Flanged Mace",
@@ -41769,7 +43928,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.00",
                 "(3.0 damage per second)",
                 "Requires Level 2"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Scuffed Dagger",
@@ -41789,7 +43949,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.50",
                 "(3.0 damage per second)",
                 "Requires Level 2"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Kobold Mining Mallet",
@@ -41809,7 +43970,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.30",
                 "(2.8 damage per second)",
                 "Requires Level 2"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Cudgel",
@@ -41829,7 +43991,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.80",
                 "(2.8 damage per second)",
                 "Requires Level 2"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             }
           ],
           "faction": "both",
@@ -41875,8 +44038,10 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 1.90",
                 "(6.05 damage per second)",
+                "+1 Stamina",
                 "Requires Level 4"
-              ]
+              ],
+              "source": "Stalk With The Earthmother"
             },
             {
               "name": "Gritroot Staff",
@@ -41899,7 +44064,8 @@ if (typeof window !== 'undefined') {
                 "+1 Stamina",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 2",
                 "Requires Level 4"
-              ]
+              ],
+              "source": "The Relics of Wakening"
             },
             {
               "name": "Thornroot Club",
@@ -41918,8 +44084,11 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 2.10",
                 "(4.52 damage per second)",
+                "+1 Stamina",
+                "+6 Spell Power",
                 "Requires Level 4"
-              ]
+              ],
+              "source": "Ursal the Mauler"
             },
             {
               "name": "Worn Ranger's Dagger",
@@ -41939,7 +44108,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.70",
                 "(4.41 damage per second)",
                 "Requires Level 3"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Chipped Spellstaff",
@@ -41958,8 +44128,10 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.80",
                 "(4.11 damage per second)",
+                "+1 Stamina",
                 "Requires Level 3"
-              ]
+              ],
+              "source": "Slydris"
             },
             {
               "name": "Dreamwatcher Staff",
@@ -41979,7 +44151,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.20",
                 "(5.6 damage per second)",
                 "Requires Level 4"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Vile Fin Oracle Staff",
@@ -41999,7 +44172,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.90",
                 "(5.0 damage per second)",
                 "Requires Level 4"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Adept Short Staff",
@@ -42019,7 +44193,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.40",
                 "(4.4 damage per second)",
                 "Requires Level 3"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Long Bo Staff",
@@ -42039,7 +44214,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.50",
                 "(4.2 damage per second)",
                 "Requires Level 3"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Pruning Knife",
@@ -42059,7 +44235,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.60",
                 "(4.06 damage per second)",
                 "Requires Level 4"
-              ]
+              ],
+              "source": "Tumors"
             }
           ],
           "faction": "both",
@@ -42105,8 +44282,11 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.20",
                 "(8.86 damage per second)",
+                "+2 Stamina",
+                "+2 Spirit",
                 "Requires Level 6"
-              ]
+              ],
+              "source": "Return to Valanaar"
             },
             {
               "name": "Wrathroot",
@@ -42125,8 +44305,10 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 3.30",
                 "(7.12 damage per second)",
+                "+1 Intellect",
                 "Requires Level 5"
-              ]
+              ],
+              "source": "Wrathvine"
             },
             {
               "name": "Small Hand Blade",
@@ -42146,7 +44328,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.50",
                 "(6.0 damage per second)",
                 "Requires Level 6"
-              ]
+              ],
+              "source": "Harvest Golem"
             },
             {
               "name": "Carving Knife",
@@ -42167,7 +44350,8 @@ if (typeof window !== 'undefined') {
                 "6 - 13 Damage\tSpeed 1.60",
                 "(5.94 damage per second)",
                 "Requires Level 6"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Roofing Hammer",
@@ -42186,8 +44370,10 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 2.40",
                 "(5.42 damage per second)",
+                "+1 Spirit",
                 "Requires Level 5"
-              ]
+              ],
+              "source": "Deliver the News"
             },
             {
               "name": "Scarlet Dagger",
@@ -42206,8 +44392,10 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.60",
                 "(5.31 damage per second)",
+                "+1 Stamina",
                 "Requires Level 5"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Flutterfly Swatter",
@@ -42227,7 +44415,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.00",
                 "(4.75 damage per second)",
                 "Requires Level 5"
-              ]
+              ],
+              "source": "Flutterfly Dust"
             },
             {
               "name": "Driftwood Branch",
@@ -42247,7 +44436,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.40",
                 "(5.7 damage per second)",
                 "Requires Level 5"
-              ]
+              ],
+              "source": "Elder Timberling"
             },
             {
               "name": "Frostbit Staff",
@@ -42267,7 +44457,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.70",
                 "(5.7 damage per second)",
                 "Requires Level 5"
-              ]
+              ],
+              "source": "Rockjaw Bonesnapper"
             },
             {
               "name": "Frostmane Staff",
@@ -42287,7 +44478,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.10",
                 "(5.7 damage per second)",
                 "Requires Level 5"
-              ]
+              ],
+              "source": "Frostmane Shadowcaster"
             }
           ],
           "faction": "both",
@@ -42336,7 +44528,8 @@ if (typeof window !== 'undefined') {
                 "7 - 14 Damage\tSpeed 1.50",
                 "(7.00 damage per second)",
                 "+1 Stamina"
-              ]
+              ],
+              "source": "Early quest"
             },
             {
               "name": "Darkwood Staff",
@@ -42358,7 +44551,8 @@ if (typeof window !== 'undefined') {
                 "(6.72 damage per second)",
                 "+3 Stamina",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 6"
-              ]
+              ],
+              "source": "Tirisfal Quest: The Family Crypt"
             },
             {
               "name": "Makeshift Stormcaller",
@@ -42380,7 +44574,8 @@ if (typeof window !== 'undefined') {
                 "(5.76 damage per second)",
                 "+2 Intellect",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 4"
-              ]
+              ],
+              "source": "Durotar Shaman/Caster Quest: Stormy Potential"
             },
             {
               "name": "Sturdy Quarterstaff",
@@ -42400,7 +44595,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.80",
                 "(8.9 damage per second)",
                 "Requires Level 8"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Skullthumper",
@@ -42420,7 +44616,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.50",
                 "(7.00 damage per second)",
                 "Requires Level 7"
-              ]
+              ],
+              "source": "Murlocs at the Gates"
             },
             {
               "name": "Stonesplinter Dagger",
@@ -42440,7 +44637,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.50",
                 "(7.0 damage per second)",
                 "Requires Level 8"
-              ]
+              ],
+              "source": "Stonesplinter Seer"
             },
             {
               "name": "Compact Hammer",
@@ -42459,8 +44657,10 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 2.30",
                 "(6.96 damage per second)",
+                "+1 Stamina",
                 "Requires Level 8"
-              ]
+              ],
+              "source": "A Pilot's Revenge"
             },
             {
               "name": "Frostmane Scepter",
@@ -42479,8 +44679,10 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 2.20",
                 "(6.82 damage per second)",
+                "+1 Stamina",
                 "Requires Level 8"
-              ]
+              ],
+              "source": "Great Father Arctikus"
             },
             {
               "name": "Jeweled Dagger",
@@ -42499,8 +44701,10 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.60",
                 "(6.56 damage per second)",
+                "+1 Stamina",
                 "Requires Level 7"
-              ]
+              ],
+              "source": "Morgaine the Sly"
             },
             {
               "name": "Felweaver's Staff",
@@ -42519,8 +44723,10 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.60",
                 "(6.54 damage per second)",
+                "+3 Intellect",
                 "Requires Level 8"
-              ]
+              ],
+              "source": "Felweaver Scornn"
             }
           ],
           "faction": "alliance",
@@ -42572,7 +44778,8 @@ if (typeof window !== 'undefined') {
                 "+3 Strength",
                 "+3 Spirit",
                 "Requires Level 9"
-              ]
+              ],
+              "source": "Hidden Enemies"
             },
             {
               "name": "Ceranium Rod",
@@ -42591,8 +44798,11 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.70",
                 "(10.74 damage per second)",
+                "+7 Stamina",
+                "+14 Spell Power",
                 "Requires Level 10"
-              ]
+              ],
+              "source": "The Weaver"
             },
             {
               "name": "Wind Rider Staff",
@@ -42611,8 +44821,11 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.80",
                 "(9.64 damage per second)",
+                "+6 Spirit",
+                "+12 Spell Power",
                 "Requires Level 10"
-              ]
+              ],
+              "source": "Cry of the Thunderhawk"
             },
             {
               "name": "Ukta's Conduit",
@@ -42631,8 +44844,10 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 3.30",
                 "(9.55 damage per second)",
+                "+3 Stamina",
                 "Requires Level 9"
-              ]
+              ],
+              "source": "Stormherald Ukta"
             },
             {
               "name": "Invader's Mace",
@@ -42651,8 +44866,11 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 2.40",
                 "(8.54 damage per second)",
+                "+2 Strength",
+                "+1 Spirit",
                 "Requires Level 10"
-              ]
+              ],
+              "source": "Banner of the Fallen"
             },
             {
               "name": "Engineer's Hammer",
@@ -42671,8 +44889,10 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 2.40",
                 "(8.13 damage per second)",
+                "+2 Stamina",
                 "Requires Level 10"
-              ]
+              ],
+              "source": "Samophlange"
             },
             {
               "name": "Weighted Sap",
@@ -42692,7 +44912,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.20",
                 "(7.7 damage per second)",
                 "Requires Level 10"
-              ]
+              ],
+              "source": "Defias Digger"
             },
             {
               "name": "Windforged Shortblade",
@@ -42712,7 +44933,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.20",
                 "(7.73 damage per second)",
                 "Requires Level 10"
-              ]
+              ],
+              "source": "Den'dralass"
             },
             {
               "name": "Driftwood Club",
@@ -42732,7 +44954,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.70",
                 "(7.7 damage per second)",
                 "Requires Level 10"
-              ]
+              ],
+              "source": "Murloc Warrior"
             },
             {
               "name": "Elunite Dagger",
@@ -42751,8 +44974,10 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.70",
                 "(7.65 damage per second)",
+                "+1 Stamina",
                 "Requires Level 10"
-              ]
+              ],
+              "source": "Weapons of Elunite"
             }
           ],
           "faction": "both",
@@ -42800,7 +45025,8 @@ if (typeof window !== 'undefined') {
                 "Binds when equipped",
                 "Held In Off-hand",
                 "Requires Level 21"
-              ]
+              ],
+              "source": "Vendor wand"
             },
             {
               "name": "Cauldron Stirrer",
@@ -42822,7 +45048,8 @@ if (typeof window !== 'undefined') {
                 "(7.42 damage per second)",
                 "+4 Stamina",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 8"
-              ]
+              ],
+              "source": "Barrens Quest: Apothecary Zamah"
             },
             {
               "name": "Foamspittle Staff",
@@ -42842,7 +45069,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.20",
                 "(11.4 damage per second)",
                 "Requires Level 12"
-              ]
+              ],
+              "source": "Murloc Oracle"
             },
             {
               "name": "Petrified Shinbone",
@@ -42862,7 +45090,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.00",
                 "(8.8 damage per second)",
                 "Requires Level 12"
-              ]
+              ],
+              "source": "Undead Dynamiter"
             },
             {
               "name": "Wicked Blackjack",
@@ -42882,7 +45111,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.30",
                 "(8.7 damage per second)",
                 "Requires Level 12"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Slicer Blade",
@@ -42902,7 +45132,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.50",
                 "(8.7 damage per second)",
                 "Requires Level 12"
-              ]
+              ],
+              "source": "Harvest Reaper"
             },
             {
               "name": "Sergeant's Warhammer",
@@ -42922,7 +45153,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.10",
                 "(8.6 damage per second)",
                 "Requires Level 12"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "War Knife",
@@ -42942,7 +45174,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.70",
                 "(8.5 damage per second)",
                 "Requires Level 12"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Impcaster's Staff",
@@ -42961,8 +45194,10 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.50",
                 "(8.00 damage per second)",
+                "+4 Spirit",
                 "Requires Level 11"
-              ]
+              ],
+              "source": "Licillin"
             },
             {
               "name": "Defias Mage Staff",
@@ -42981,8 +45216,11 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.80",
                 "(7.86 damage per second)",
+                "+4 Intellect",
+                "+8 Spell Power",
                 "Requires Level 11"
-              ]
+              ],
+              "source": "Defias Magician"
             }
           ],
           "faction": "both",
@@ -43035,7 +45273,8 @@ if (typeof window !== 'undefined') {
                 "+6 Agility",
                 "+6 Intellect",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 18"
-              ]
+              ],
+              "source": "RFC: Hidden Enemies (Horde BiS)"
             },
             {
               "name": "Trogg Scepter",
@@ -43058,7 +45297,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases healing done by up to 33"
               ],
               "reqLevel": 13,
-              "icon": "inv_misc_bone_10"
+              "icon": "inv_misc_bone_10",
+              "source": "RFC: Oggleflint 1H mace"
             },
             {
               "name": "Kris of Orgrimmar",
@@ -43080,7 +45320,8 @@ if (typeof window !== 'undefined') {
                 "(8.00 damage per second)",
                 "+4 Stamina",
                 "Equip: Increases healing done by up to 33"
-              ]
+              ],
+              "source": "RFC Quest: Hidden Enemies"
             },
             {
               "name": "Searing Dagger",
@@ -43103,7 +45344,8 @@ if (typeof window !== 'undefined') {
                 "+4 Spirit",
                 "Requires Level 13",
                 "Equip: Harmful spell casts sear the target for 7 Fire damage. (10ms cooldown)"
-              ]
+              ],
+              "source": "Bazzalan"
             },
             {
               "name": "Fang of Magmatus",
@@ -43126,7 +45368,8 @@ if (typeof window !== 'undefined') {
                 "+4 Intellect",
                 "Requires Level 13",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 18"
-              ]
+              ],
+              "source": "Magmatus"
             },
             {
               "name": "Medicine Staff",
@@ -43146,7 +45389,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.50",
                 "(12.6 damage per second)",
                 "Requires Level 14"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Riverside Staff",
@@ -43166,7 +45410,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.10",
                 "(12.6 damage per second)",
                 "Requires Level 14"
-              ]
+              ],
+              "source": "Murloc Tidecaller"
             },
             {
               "name": "Riverpaw Mystic Staff",
@@ -43186,7 +45431,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.00",
                 "(11.8 damage per second)",
                 "Requires Level 13"
-              ]
+              ],
+              "source": "Riverpaw Mystic"
             },
             {
               "name": "Staff of the Purifier",
@@ -43205,8 +45451,11 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 3.70",
                 "(11.22 damage per second)",
+                "+8 Spirit",
+                "+16 Spell Power",
                 "Requires Level 13"
-              ]
+              ],
+              "source": "The Tower of Althalaxx"
             },
             {
               "name": "Scrimshaw Dagger",
@@ -43225,8 +45474,10 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.80",
                 "(9.72 damage per second)",
+                "+2 Stamina",
                 "Requires Level 14"
-              ]
+              ],
+              "source": "Red Silk Bandanas"
             }
           ],
           "faction": "both",
@@ -43279,7 +45530,8 @@ if (typeof window !== 'undefined') {
                 "+10 Spirit",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 26",
                 "Equip: Increases movement speed by 2% in Silverpine Forest and Hillsbrad Foothills."
-              ]
+              ],
+              "source": "Ruins of Lordaeron: Rath'mael"
             },
             {
               "name": "Clear Crystal Rod",
@@ -43302,7 +45554,8 @@ if (typeof window !== 'undefined') {
                 "+4 Stamina",
                 "+5 Intellect",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 14"
-              ]
+              ],
+              "source": "Arachnophobia quest in Stonetalon"
             },
             {
               "name": "Staff of Orgrimmar",
@@ -43325,7 +45578,8 @@ if (typeof window !== 'undefined') {
                 "+6 Agility",
                 "+6 Intellect",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 18"
-              ]
+              ],
+              "source": "RFC: Hidden Enemies (Horde BiS)"
             },
             {
               "name": "Segmented Spider Leg",
@@ -43348,7 +45602,8 @@ if (typeof window !== 'undefined') {
                 "+9 Agility",
                 "+5 Spirit",
                 "Requires Level 15"
-              ]
+              ],
+              "source": "Ruins of Lordaeron: Witherfang"
             },
             {
               "name": "Emberstone Staff",
@@ -43372,7 +45627,8 @@ if (typeof window !== 'undefined') {
                 "+8 Fire Resistance",
                 "Requires Level 17",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 24"
-              ]
+              ],
+              "source": "Deadmines: Captain Greenskin"
             },
             {
               "name": "Kris of Orgrimmar",
@@ -43394,7 +45650,8 @@ if (typeof window !== 'undefined') {
                 "(8.00 damage per second)",
                 "+4 Stamina",
                 "Equip: Increases healing done by up to 33"
-              ]
+              ],
+              "source": "RFC Quest: Hidden Enemies"
             },
             {
               "name": "Face Smasher",
@@ -43414,7 +45671,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.60",
                 "(14.0 damage per second)",
                 "Requires Level 16"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Cookie's Tenderizer",
@@ -43433,8 +45691,10 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 2.80",
                 "(13.93 damage per second)",
+                "+4 Spirit",
                 "Requires Level 16"
-              ]
+              ],
+              "source": "Cookie"
             },
             {
               "name": "Meathook Slicer",
@@ -43456,7 +45716,8 @@ if (typeof window !== 'undefined') {
                 "(13.61 damage per second)",
                 "+5 Stamina",
                 "Requires Level 15"
-              ]
+              ],
+              "source": "The Baron"
             },
             {
               "name": "Buzzer Blade",
@@ -43475,8 +45736,10 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.50",
                 "(9.00 damage per second)",
+                "+22 Spell Power",
                 "Requires Level 16"
-              ]
+              ],
+              "source": "Sneed's Shredder"
             }
           ],
           "faction": "both",
@@ -43529,7 +45792,8 @@ if (typeof window !== 'undefined') {
                 "+6 Agility",
                 "+6 Intellect",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 18"
-              ]
+              ],
+              "source": "RFC: Hidden Enemies (Horde BiS)"
             },
             {
               "name": "Staff of Westfall",
@@ -43553,7 +45817,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Movement speed increased by 2% in Elwynn Forest, Westfall, Redridge Mountains, and the Deadmines."
               ],
               "reqLevel": 14,
-              "icon": "inv_staff_10"
+              "icon": "inv_staff_10",
+              "source": "Deadmines Quest: The Defias Brotherhood"
             },
             {
               "name": "Living Root",
@@ -43578,7 +45843,8 @@ if (typeof window !== 'undefined') {
                 "+9 Nature Resistance",
                 "Requires Level 18",
                 "Equip: Increases healing done by up to 45"
-              ]
+              ],
+              "source": "WC: Verdan the Everliving"
             },
             {
               "name": "Kris of Orgrimmar",
@@ -43600,7 +45866,8 @@ if (typeof window !== 'undefined') {
                 "(8.00 damage per second)",
                 "+4 Stamina",
                 "Equip: Increases healing done by up to 33"
-              ]
+              ],
+              "source": "RFC Quest: Hidden Enemies"
             },
             {
               "name": "Witching Stave",
@@ -43625,7 +45892,8 @@ if (typeof window !== 'undefined') {
                 "+8 Shadow Resistance",
                 "Requires Level 17",
                 "Equip: Increases damage done by Shadow spells and effects by up to 27."
-              ]
+              ],
+              "source": "Level 17 Rare Drop"
             },
             {
               "name": "Advisor's Gnarled Staff",
@@ -43645,7 +45913,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.90",
                 "(19.7 damage per second)",
                 "Requires Level 18"
-              ]
+              ],
+              "source": "Kelm Hargunth"
             },
             {
               "name": "Lorekeeper's Staff",
@@ -43665,7 +45934,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.90",
                 "(19.7 damage per second)",
                 "Requires Level 18"
-              ]
+              ],
+              "source": "Illiyana Moonblaze"
             },
             {
               "name": "Scout's Blade",
@@ -43685,7 +45955,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.70",
                 "(15.3 damage per second)",
                 "Requires Level 18"
-              ]
+              ],
+              "source": "Kelm Hargunth"
             },
             {
               "name": "Sentinel's Blade",
@@ -43705,7 +45976,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.70",
                 "(15.3 damage per second)",
                 "Requires Level 18"
-              ]
+              ],
+              "source": "Illiyana Moonblaze"
             },
             {
               "name": "Goblin Hammer",
@@ -43724,8 +45996,11 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 2.00",
                 "(15.25 damage per second)",
+                "+4 Stamina",
+                "+20 Armor",
                 "Requires Level 18"
-              ]
+              ],
+              "source": "Gilnid"
             }
           ],
           "faction": "both",
@@ -43807,7 +46082,8 @@ if (typeof window !== 'undefined') {
                 "+6 Agility",
                 "+6 Intellect",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 18"
-              ]
+              ],
+              "source": "RFC: Hidden Enemies (Horde BiS)"
             },
             {
               "name": "Odo's Ley Staff",
@@ -43831,7 +46107,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases healing done by up to 52"
               ],
               "reqLevel": 21,
-              "icon": "inv_staff_27"
+              "icon": "inv_staff_27",
+              "source": "SFK: Odo the Blindwatcher"
             },
             {
               "name": "Glimmering Staff",
@@ -43855,7 +46132,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases damage and healing done by magical spells and effects by up to 34"
               ],
               "reqLevel": 25,
-              "icon": "inv_staff_19"
+              "icon": "inv_staff_19",
+              "source": "Enchanting (140)"
             },
             {
               "name": "Kris of Orgrimmar",
@@ -43877,7 +46155,8 @@ if (typeof window !== 'undefined') {
                 "(8.00 damage per second)",
                 "+4 Stamina",
                 "Equip: Increases healing done by up to 33"
-              ]
+              ],
+              "source": "RFC Quest: Hidden Enemies"
             },
             {
               "name": "Twisted Chanter's Staff",
@@ -43897,7 +46176,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.40",
                 "(20.4 damage per second)",
                 "Requires Level 19"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Blackfang",
@@ -43917,7 +46197,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.50",
                 "(16.3 damage per second)",
                 "Requires Level 20"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Diamond Hammer",
@@ -43937,7 +46218,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.50",
                 "(16.2 damage per second)",
                 "Requires Level 20"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Staff of Soran'ruk",
@@ -43961,7 +46243,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases damage done by Fire spells and effects by up to 34.",
                 "Equip: Increases damage done by Shadow spells and effects by up to 34.",
                 "Requires Level 20"
-              ]
+              ],
+              "source": "The Orb of Soran'ruk"
             },
             {
               "name": "Staff of the Blessed Seer",
@@ -43980,8 +46263,12 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 3.00",
                 "(15.67 damage per second)",
+                "+9 Stamina",
+                "+10 Spirit",
+                "+28 Spell Power",
                 "Requires Level 20"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             }
           ],
           "faction": "alliance",
@@ -44036,7 +46323,8 @@ if (typeof window !== 'undefined') {
                 "+9 Spirit",
                 "Requires Level 21",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 28"
-              ]
+              ],
+              "source": "Alliance Drop"
             },
             {
               "name": "Beazel's Basher",
@@ -44056,7 +46344,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.50",
                 "(18.4 damage per second)",
                 "Requires Level 24"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Meteor Shard",
@@ -44079,7 +46368,8 @@ if (typeof window !== 'undefined') {
                 "+3 Fire Resistance",
                 "Requires Level 23",
                 "Chance on hit: Blasts a target for 42 Fire damage."
-              ]
+              ],
+              "source": "Archmage Arugal"
             },
             {
               "name": "Bite of Serra'kis",
@@ -44098,8 +46388,10 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.30",
                 "(17.69 damage per second)",
+                "+2 Nature Resistance",
                 "Requires Level 23"
-              ]
+              ],
+              "source": "Old Serra'kis"
             },
             {
               "name": "Kam's Walking Stick",
@@ -44118,8 +46410,12 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.80",
                 "(17.68 damage per second)",
+                "+10 Agility",
+                "+3 Intellect",
+                "+32 Spell Power",
                 "Requires Level 24"
-              ]
+              ],
+              "source": "Kam Deepfury"
             },
             {
               "name": "Oscillating Power Hammer",
@@ -44139,7 +46435,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.00",
                 "(17.5 damage per second)",
                 "Requires Level 23"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Talon of Vultros",
@@ -44158,8 +46455,11 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 2.00",
                 "(17.50 damage per second)",
+                "+6 Agility",
+                "+3 Spirit",
                 "Requires Level 23"
-              ]
+              ],
+              "source": "Vultros"
             },
             {
               "name": "Staff of the Shade",
@@ -44178,8 +46478,10 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.60",
                 "(16.54 damage per second)",
+                "+15 Stamina",
                 "Requires Level 22"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Magician Staff",
@@ -44199,7 +46501,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.00",
                 "(19.7 damage per second)",
                 "Requires Level 24"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Dwarven Magestaff",
@@ -44219,7 +46522,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.80",
                 "(18.4 damage per second)",
                 "Requires Level 22"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             }
           ],
           "faction": "both",
@@ -44272,7 +46576,8 @@ if (typeof window !== 'undefined') {
                 "(20.77 damage per second)",
                 "+12 Stamina",
                 "Equip: Increases healing done by up to 67"
-              ]
+              ],
+              "source": "Excavation Site: Wetlands"
             },
             {
               "name": "Striking Staff",
@@ -44295,7 +46600,8 @@ if (typeof window !== 'undefined') {
                 "+9 Strength",
                 "+6 Stamina",
                 "+14 Intellect"
-              ]
+              ],
+              "source": "Heart of Disruption in City of Dalaran"
             },
             {
               "name": "Crested Scepter",
@@ -44319,7 +46625,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases damage and healing done by magical spells and effects by up to 32"
               ],
               "reqLevel": 24,
-              "icon": "inv_mace_08"
+              "icon": "inv_mace_08",
+              "source": "SM Graveyard: Fallen Champion"
             },
             {
               "name": "Fallen Dragon's Scepter",
@@ -44342,7 +46649,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases damage and healing done by magical spells and effects by up to 36"
               ],
               "reqLevel": 24,
-              "icon": "inv_staff_08"
+              "icon": "inv_staff_08",
+              "source": "Redridge Quest"
             },
             {
               "name": "Gnarled Ash Staff",
@@ -44362,7 +46670,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.20",
                 "(25.6 damage per second)",
                 "Requires Level 26"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Advisor's Gnarled Staff",
@@ -44381,8 +46690,11 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.90",
                 "(24.66 damage per second)",
+                "+10 Stamina",
+                "+6 Intellect",
                 "Requires Level 25"
-              ]
+              ],
+              "source": "Kelm Hargunth"
             },
             {
               "name": "Lorekeeper's Staff",
@@ -44401,8 +46713,11 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.90",
                 "(24.66 damage per second)",
+                "+10 Stamina",
+                "+6 Intellect",
                 "Requires Level 25"
-              ]
+              ],
+              "source": "Illiyana Moonblaze"
             },
             {
               "name": "Looming Gavel",
@@ -44422,7 +46737,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.40",
                 "(19.8 damage per second)",
                 "Requires Level 26"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Soulstaff",
@@ -44441,8 +46757,11 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 1.80",
                 "(18.33 damage per second)",
+                "+11 Stamina",
+                "+11 Spirit",
                 "Requires Level 25"
-              ]
+              ],
+              "source": "Soulstaff"
             },
             {
               "name": "Leaden Mace",
@@ -44462,7 +46781,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.90",
                 "(16.0 damage per second)",
                 "Requires Level 26"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             }
           ],
           "faction": "both",
@@ -44515,7 +46835,8 @@ if (typeof window !== 'undefined') {
                 "Requires Level 28",
                 "Equip: Increases healing done by magical spells and effects by up to 68",
                 "Equip: Increases damage done by Shadow spells and effects by up to 28."
-              ]
+              ],
+              "source": "RFK: Death Speaker Jargba (1H Mace)"
             },
             {
               "name": "Tendonscraper Dagger",
@@ -44538,7 +46859,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases damage and healing done by magical spells and effects by up to 36"
               ],
               "reqLevel": 28,
-              "icon": "inv_misc_bone_06"
+              "icon": "inv_misc_bone_06",
+              "source": "City of Dalaran: Lyn the Ignored"
             },
             {
               "name": "Advisor's Gnarled Staff",
@@ -44558,7 +46880,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.90",
                 "(27.8 damage per second)",
                 "Requires Level 28"
-              ]
+              ],
+              "source": "Kelm Hargunth"
             },
             {
               "name": "Lorekeeper's Staff",
@@ -44578,7 +46901,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.90",
                 "(27.8 damage per second)",
                 "Requires Level 28"
-              ]
+              ],
+              "source": "Illiyana Moonblaze"
             },
             {
               "name": "Darkspear Skirmisher's Bludgeon",
@@ -44597,8 +46921,10 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 2.80",
                 "(21.43 damage per second)",
+                "+7 Stamina",
                 "Requires Level 28"
-              ]
+              ],
+              "source": "Creeg Bothunk"
             },
             {
               "name": "Dreamslayer",
@@ -44618,7 +46944,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.10",
                 "(21.4 damage per second)",
                 "Requires Level 28"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Guerrilla's Jagged Mace",
@@ -44637,8 +46964,10 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 2.80",
                 "(21.43 damage per second)",
+                "+7 Stamina",
                 "Requires Level 28"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Scout's Blade",
@@ -44658,7 +46987,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.70",
                 "(21.2 damage per second)",
                 "Requires Level 28"
-              ]
+              ],
+              "source": "Kelm Hargunth"
             },
             {
               "name": "Sentinel's Blade",
@@ -44678,7 +47008,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.70",
                 "(21.2 damage per second)",
                 "Requires Level 28"
-              ]
+              ],
+              "source": "Illiyana Moonblaze"
             },
             {
               "name": "Thornspike",
@@ -44698,9 +47029,11 @@ if (typeof window !== 'undefined') {
                 "One-Hand",
                 "24 - 46 Damage\tSpeed 1.70",
                 "(20.59 damage per second)",
+                "Chance on hit: Hurl spikes at the target, dealing 45 Physical damage and jumping to 1 additional nearby enemy. Each jump reduces the damage by 50%.",
                 "Requires Level 27",
                 "Chance on hit: Hurl spikes at the target, dealing 45 Physical damage and jumping to 1 additional nearby enemy. Each jump reduces the damage by 50%."
-              ]
+              ],
+              "source": "Aggem Thorncurse"
             }
           ],
           "faction": "both",
@@ -44753,7 +47086,8 @@ if (typeof window !== 'undefined') {
                 "+8 Intellect",
                 "+15 Spirit",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 38"
-              ]
+              ],
+              "source": "Saving Yenniku quest in STV"
             },
             {
               "name": "Wind Spirit Staff",
@@ -44777,7 +47111,8 @@ if (typeof window !== 'undefined') {
                 "+16 Spirit",
                 "Requires Level 29",
                 "Equip: Increases healing done by up to 71"
-              ]
+              ],
+              "source": "RFK: Earthcaller Halmgar"
             },
             {
               "name": "Fallen Dragon's Scepter",
@@ -44800,7 +47135,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases damage and healing done by magical spells and effects by up to 36"
               ],
               "reqLevel": 24,
-              "icon": "inv_staff_08"
+              "icon": "inv_staff_08",
+              "source": "Wetlands Quest: Stopping the Cycle"
             },
             {
               "name": "Madman's Blade",
@@ -44822,7 +47158,8 @@ if (typeof window !== 'undefined') {
               ],
               "reqLevel": 28,
               "icon": "inv_weapon_shortblade_15",
-              "weaponType": "Dagger"
+              "weaponType": "Dagger",
+              "source": "STV Quest: Colonel Kurzen"
             },
             {
               "name": "Mindslicer",
@@ -44844,7 +47181,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases damage and healing done by magical spells and effects by up to 34"
               ],
               "reqLevel": 30,
-              "icon": "inv_weapon_shortblade_15"
+              "icon": "inv_weapon_shortblade_15",
+              "source": "Arathi: Call to Arms"
             },
             {
               "name": "Torturing Poker",
@@ -44864,7 +47202,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.70",
                 "(19.63 damage per second)",
                 "Requires Level 29"
-              ]
+              ],
+              "source": "Interrogator Vishas"
             },
             {
               "name": "Swinetusk Shank",
@@ -44888,7 +47227,8 @@ if (typeof window !== 'undefined') {
                 "+4 Spirit",
                 "Requires Level 30",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 40"
-              ]
+              ],
+              "source": "Agathelos the Raging"
             },
             {
               "name": "Royal Diplomatic Scepter",
@@ -44907,8 +47247,13 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 2.30",
                 "(15.22 damage per second)",
+                "+3 Stamina",
+                "+7 Spirit",
+                "+75 Healing",
+                "+25 Spell Damage",
                 "Requires Level 30"
-              ]
+              ],
+              "source": "Dark Iron Ambassador"
             },
             {
               "name": "Acrobatic Staff",
@@ -44928,7 +47273,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.20",
                 "(22.9 damage per second)",
                 "Requires Level 29"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Daring Dirk",
@@ -44948,7 +47294,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.60",
                 "(17.5 damage per second)",
                 "Requires Level 29"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             }
           ],
           "faction": "both",
@@ -45002,7 +47349,8 @@ if (typeof window !== 'undefined') {
                 "+6 Spirit",
                 "Requires Level 35",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 48"
-              ]
+              ],
+              "source": "Maraudon: Khan Jehn"
             },
             {
               "name": "Staff of the Friar",
@@ -45027,7 +47375,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases healing done by up to 52"
               ],
               "reqLevel": 21,
-              "icon": "inv_staff_32"
+              "icon": "inv_staff_32",
+              "source": "SM Graveyard: Interrogator Vishas"
             },
             {
               "name": "Hypnotic Blade",
@@ -45081,7 +47430,8 @@ if (typeof window !== 'undefined') {
                 "Requires Level 35",
                 "Equip: Improves your chance to hit by 1.5%.",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 60"
-              ]
+              ],
+              "source": "Level 35 Epic World Drop"
             },
             {
               "name": "Black Duskwood Staff",
@@ -45101,7 +47451,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.80",
                 "(33.6 damage per second)",
                 "Requires Level 33"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Loksey's Training Stick",
@@ -45121,7 +47472,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.10",
                 "(31.29 damage per second)",
                 "Requires Level 31"
-              ]
+              ],
+              "source": "Houndmaster Loksey"
             },
             {
               "name": "Black Menace",
@@ -45142,8 +47494,10 @@ if (typeof window !== 'undefined') {
                 "31 - 58 Damage\tSpeed 1.50",
                 "(29.67 damage per second)",
                 "Chance on hit: Sends a shadowy bolt at the enemy causing 77 Shadow damage.",
+                "Chance on hit: Sends a shadowy bolt at the enemy causing 77 Shadow damage.",
                 "Requires Level 34"
-              ]
+              ],
+              "source": "In the Name of the Light"
             },
             {
               "name": "Celestial Stave",
@@ -45166,7 +47520,8 @@ if (typeof window !== 'undefined') {
                 "+8 Intellect",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 46",
                 "Requires Level 35"
-              ]
+              ],
+              "source": "Celestial Power"
             },
             {
               "name": "The Ziggler",
@@ -45186,7 +47541,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.70",
                 "(26.5 damage per second)",
                 "Requires Level 34"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Midnight Mace",
@@ -45205,8 +47561,10 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 2.50",
                 "(25.80 damage per second)",
+                "+10 Shadow Resistance",
                 "Requires Level 33"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             }
           ],
           "faction": "both",
@@ -45263,7 +47621,8 @@ if (typeof window !== 'undefined') {
                 "+8 Spirit",
                 "Requires Level 39",
                 "Equip: Increases healing done by up to 94"
-              ]
+              ],
+              "source": "SM Cath: High Inquisitor Whitemane (1H Mace)"
             },
             {
               "name": "Staff of Jordan",
@@ -45288,7 +47647,8 @@ if (typeof window !== 'undefined') {
                 "Requires Level 35",
                 "Equip: Improves your chance to hit by 1.5%.",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 60"
-              ]
+              ],
+              "source": "World drop BoE staff"
             },
             {
               "name": "Hammer of Expertise",
@@ -45308,7 +47668,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.10",
                 "(36.90 damage per second)",
                 "Requires Level 40"
-              ]
+              ],
+              "source": "World Drop Epic"
             },
             {
               "name": "Gut Ripper",
@@ -45328,7 +47689,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.80",
                 "(33.89 damage per second)",
                 "Requires Level 40"
-              ]
+              ],
+              "source": "World Drop Epic"
             },
             {
               "name": "Ardent Custodian",
@@ -45347,8 +47709,10 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 2.10",
                 "(32.86 damage per second)",
+                "+100 Armor",
                 "Requires Level 38"
-              ]
+              ],
+              "source": "World Drop Epic"
             },
             {
               "name": "Advisor's Gnarled Staff",
@@ -45368,7 +47732,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.90",
                 "(38.1 damage per second)",
                 "Requires Level 38"
-              ]
+              ],
+              "source": "Kelm Hargunth"
             },
             {
               "name": "Lorekeeper's Staff",
@@ -45388,7 +47753,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.90",
                 "(38.1 damage per second)",
                 "Requires Level 38"
-              ]
+              ],
+              "source": "Illiyana Moonblaze"
             },
             {
               "name": "Ironshod Bludgeon",
@@ -45408,7 +47774,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.50",
                 "(37.2 damage per second)",
                 "Requires Level 37"
-              ]
+              ],
+              "source": "Ironaya"
             },
             {
               "name": "Lifeforce Dirk",
@@ -45431,7 +47798,8 @@ if (typeof window !== 'undefined') {
                 "+11 Stamina",
                 "Chance on hit: Heals wielder of 42 damage.",
                 "Requires Level 40"
-              ]
+              ],
+              "source": "The God Hakkar"
             },
             {
               "name": "Southsea Lamp",
@@ -45451,7 +47819,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.30",
                 "(30.4 damage per second)",
                 "Requires Level 40"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             }
           ],
           "faction": "both",
@@ -45507,7 +47876,8 @@ if (typeof window !== 'undefined') {
                 "+4 Stamina",
                 "+17 Spirit",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 38"
-              ]
+              ],
+              "source": "A Hero's Welcome quest in Feralas"
             },
             {
               "name": "Strength of the Treant",
@@ -45530,7 +47900,8 @@ if (typeof window !== 'undefined') {
                 "+7 Stamina",
                 "+18 Intellect",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 42"
-              ]
+              ],
+              "source": "Weapons of Spirit quest in Feralas"
             },
             {
               "name": "Zum'rah's Vexing Cane",
@@ -45555,7 +47926,8 @@ if (typeof window !== 'undefined') {
                 "Requires Level 43",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 54",
                 "Equip: Chance on harmful spell cast to summon a Zombie Troll of Zum'rah for 20 sec. (1m cooldown)"
-              ]
+              ],
+              "source": "ZF: Witch Doctor Zum'rah"
             },
             {
               "name": "Emerald Watcher's Dreamstaff",
@@ -45579,7 +47951,8 @@ if (typeof window !== 'undefined') {
                 "+19 Spirit",
                 "Requires Level 44",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 56"
-              ]
+              ],
+              "source": "Custom Staff Drop"
             },
             {
               "name": "Staff of Lore",
@@ -45602,7 +47975,8 @@ if (typeof window !== 'undefined') {
                 "+5 Intellect",
                 "+18 Spirit",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 40"
-              ]
+              ],
+              "source": "Gahz'ridian quest in Tanaris"
             },
             {
               "name": "The Chief's Enforcer",
@@ -45622,7 +47996,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.40",
                 "(43.53 damage per second)",
                 "Requires Level 45"
-              ]
+              ],
+              "source": "Chief Ukorz Sandscalp"
             },
             {
               "name": "Tanglewood Staff",
@@ -45642,7 +48017,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.40",
                 "(40.3 damage per second)",
                 "Requires Level 41"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "The Hand of Antu'sul",
@@ -45662,7 +48038,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.70",
                 "(33.33 damage per second)",
                 "Requires Level 45"
-              ]
+              ],
+              "source": "Antu'sul"
             },
             {
               "name": "Dreamstaff",
@@ -45681,8 +48058,11 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.40",
                 "(32.29 damage per second)",
+                "+19 Stamina",
+                "+19 Spirit",
                 "Requires Level 45"
-              ]
+              ],
+              "source": "Dreamstaff"
             },
             {
               "name": "Radiant Staff",
@@ -45701,8 +48081,11 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.40",
                 "(32.29 damage per second)",
+                "+19 Stamina",
+                "+19 Intellect",
                 "Requires Level 45"
-              ]
+              ],
+              "source": "Radiant Staff"
             }
           ],
           "faction": "both",
@@ -45753,7 +48136,8 @@ if (typeof window !== 'undefined') {
                 "103 - 156 Damage\tSpeed 3.80",
                 "(34.08 damage per second)",
                 "Equip: Increases healing done by up to 112"
-              ]
+              ],
+              "source": "Corruption of Earth and Seed quest in Maraudon"
             },
             {
               "name": "Spire of the Stoneshaper",
@@ -45765,7 +48149,8 @@ if (typeof window !== 'undefined') {
               "iLvl": 52,
               "reqLevel": 46,
               "stats": "",
-              "icon": "inv_staff_29"
+              "icon": "inv_staff_29",
+              "source": "BRD: Lord Incendius"
             },
             {
               "name": "Spire of Hakkar",
@@ -45790,7 +48175,8 @@ if (typeof window !== 'undefined') {
                 "Requires Level 49",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 62",
                 "Equip: Harmful spell casts have a chance to steal 112 life from the target enemy over 8 sec. (10ms cooldown)"
-              ]
+              ],
+              "source": "Sunken Temple"
             },
             {
               "name": "Hammer of the Northern Wind",
@@ -45810,7 +48196,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.10",
                 "(39.52 damage per second)",
                 "Requires Level 49"
-              ]
+              ],
+              "source": "World Drop Epic"
             },
             {
               "name": "Glowing Brightwood Staff",
@@ -45830,7 +48217,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.10",
                 "(38.1 damage per second)",
                 "Requires Level 49"
-              ]
+              ],
+              "source": "World Drop Epic"
             },
             {
               "name": "Soulkeeper",
@@ -45850,7 +48238,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.80",
                 "(46.6 damage per second)",
                 "Requires Level 49"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Advisor's Gnarled Staff",
@@ -45870,7 +48259,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.90",
                 "(45.9 damage per second)",
                 "Requires Level 48"
-              ]
+              ],
+              "source": "Kelm Hargunth"
             },
             {
               "name": "Lorekeeper's Staff",
@@ -45890,7 +48280,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.90",
                 "(45.9 damage per second)",
                 "Requires Level 48"
-              ]
+              ],
+              "source": "Illiyana Moonblaze"
             },
             {
               "name": "Cold Forged Hammer",
@@ -45910,7 +48301,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.50",
                 "(41.4 damage per second)",
                 "Requires Level 51"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Skilled Fighting Blade",
@@ -45929,8 +48321,10 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.40",
                 "(39.29 damage per second)",
+                "+7 Stamina",
                 "Requires Level 50"
-              ]
+              ],
+              "source": "Jail Break!"
             }
           ],
           "faction": "both",
@@ -45987,7 +48381,8 @@ if (typeof window !== 'undefined') {
                 "+20 Stamina",
                 "+15 Intellect",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 54"
-              ]
+              ],
+              "source": "The Corpulent One quest in EPL"
             },
             {
               "name": "Corrupted Blackwood Staff",
@@ -46010,7 +48405,8 @@ if (typeof window !== 'undefined') {
                 "+11 Stamina",
                 "+22 Intellect",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 54"
-              ]
+              ],
+              "source": "Into The Maw of Madness quest in Silithus"
             },
             {
               "name": "Benediction",
@@ -46038,7 +48434,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases healing done by up to 195",
                 "Use: Calls forth Anathema. (30 Min Cooldown)",
                 "Equip: Increases the critical effect chance of your Holy spells by 2%."
-              ]
+              ],
+              "source": "Legendary Priest Quest Staff!"
             },
             {
               "name": "Rod of the Ogre Magi",
@@ -46050,7 +48447,8 @@ if (typeof window !== 'undefined') {
               "iLvl": 58,
               "reqLevel": 52,
               "stats": "+14 Int, +11 Spi, +23 SP, 1% Spell Crit",
-              "icon": "inv_staff_13"
+              "icon": "inv_staff_13",
+              "source": "DM North Tribute Run"
             },
             {
               "name": "Ironbark Staff",
@@ -46076,7 +48474,8 @@ if (typeof window !== 'undefined') {
                 "Requires Level 55",
                 "Equip: Improves your chance to get a critical strike by 2.0%.",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 88"
-              ]
+              ],
+              "source": "Alterac Valley (Revered)"
             },
             {
               "name": "Atiesh, Greatstaff of the Guardian",
@@ -46095,8 +48494,14 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.90",
                 "(64.34 damage per second)",
+                "+31 Stamina",
+                "+32 Intellect",
+                "+24 Spirit",
+                "+150 Spell Power",
+                "+20 Hit",
                 "Requires Level 60"
-              ]
+              ],
+              "source": "Atiesh, Greatstaff of the Guardian"
             },
             {
               "name": "Atiesh, Greatstaff of the Guardian",
@@ -46115,8 +48520,13 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.90",
                 "(64.34 damage per second)",
+                "+30 Stamina",
+                "+29 Intellect",
+                "+183 Spell Power",
+                "+28 Crit",
                 "Requires Level 60"
-              ]
+              ],
+              "source": "Atiesh, Greatstaff of the Guardian"
             },
             {
               "name": "Atiesh, Greatstaff of the Guardian",
@@ -46135,8 +48545,14 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.90",
                 "(64.34 damage per second)",
+                "+28 Stamina",
+                "+28 Intellect",
+                "+27 Spirit",
+                "+242 Healing",
+                "+120 Spell Power",
                 "Requires Level 60"
-              ]
+              ],
+              "source": "Atiesh, Greatstaff of the Guardian"
             },
             {
               "name": "Atiesh, Greatstaff of the Guardian",
@@ -46155,8 +48571,14 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.90",
                 "(64.34 damage per second)",
+                "+28 Stamina",
+                "+28 Intellect",
+                "+27 Spirit",
+                "+300 Healing",
+                "+11 MP5",
                 "Requires Level 60"
-              ]
+              ],
+              "source": "Atiesh, Greatstaff of the Guardian"
             },
             {
               "name": "Ahn'Qiraj Staff [PH]",
@@ -46176,7 +48598,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.90",
                 "(73.3 damage per second)",
                 "Requires Level 60"
-              ]
+              ],
+              "source": "World Drop Epic"
             }
           ],
           "faction": "both",
@@ -46226,7 +48649,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 1,
               "stats": "+1 Spirit",
               "icon": "inv_axe_10",
-              "weaponType": "One-Handed Mace"
+              "weaponType": "One-Handed Mace",
+              "source": "Starter vendor mace"
             },
             {
               "name": "Balanced Quarterstaff",
@@ -46245,8 +48669,11 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.20",
                 "(8.86 damage per second)",
+                "+2 Stamina",
+                "+2 Spirit",
                 "Requires Level 6"
-              ]
+              ],
+              "source": "Return to Valanaar"
             },
             {
               "name": "Wrathroot",
@@ -46265,8 +48692,10 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 3.30",
                 "(7.12 damage per second)",
+                "+1 Intellect",
                 "Requires Level 5"
-              ]
+              ],
+              "source": "Wrathvine"
             },
             {
               "name": "Apprentice's Spellstaff",
@@ -46288,7 +48717,8 @@ if (typeof window !== 'undefined') {
                 "(6.36 damage per second)",
                 "+2 Intellect",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 4"
-              ]
+              ],
+              "source": "Rare Books"
             },
             {
               "name": "Roofing Hammer",
@@ -46307,8 +48737,10 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 2.40",
                 "(5.42 damage per second)",
+                "+1 Spirit",
                 "Requires Level 5"
-              ]
+              ],
+              "source": "Deliver the News"
             },
             {
               "name": "Gritroot Staff",
@@ -46331,7 +48763,8 @@ if (typeof window !== 'undefined') {
                 "+1 Stamina",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 2",
                 "Requires Level 4"
-              ]
+              ],
+              "source": "The Relics of Wakening"
             },
             {
               "name": "Thornroot Club",
@@ -46350,8 +48783,11 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 2.10",
                 "(4.52 damage per second)",
+                "+1 Stamina",
+                "+6 Spell Power",
                 "Requires Level 4"
-              ]
+              ],
+              "source": "Ursal the Mauler"
             }
           ]
         },
@@ -46384,7 +48820,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 6,
               "stats": "+2 Spirit",
               "icon": "inv_hammer_01",
-              "weaponType": "One-Handed Mace"
+              "weaponType": "One-Handed Mace",
+              "source": "Starter vendor mace"
             },
             {
               "name": "Apprentice's Spellstaff",
@@ -46396,7 +48833,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 8,
               "stats": "+3 Spirit, +2 Intellect",
               "icon": "inv_staff_02",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "source": "Darkshore / Silverpine drop"
             },
             {
               "name": "Hammer of Orgrimmar",
@@ -46419,7 +48857,8 @@ if (typeof window !== 'undefined') {
                 "+3 Strength",
                 "+3 Spirit",
                 "Requires Level 9"
-              ]
+              ],
+              "source": "Hidden Enemies"
             },
             {
               "name": "Staff of Orgrimmar",
@@ -46443,7 +48882,8 @@ if (typeof window !== 'undefined') {
                 "+6 Intellect",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 18",
                 "Requires Level 9"
-              ]
+              ],
+              "source": "Hidden Enemies"
             },
             {
               "name": "Kris of Orgrimmar",
@@ -46466,7 +48906,8 @@ if (typeof window !== 'undefined') {
                 "+4 Stamina",
                 "Equip: Increases healing done by up to 33",
                 "Requires Level 9"
-              ]
+              ],
+              "source": "Hidden Enemies"
             },
             {
               "name": "Ceranium Rod",
@@ -46485,8 +48926,11 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.70",
                 "(10.74 damage per second)",
+                "+7 Stamina",
+                "+14 Spell Power",
                 "Requires Level 10"
-              ]
+              ],
+              "source": "The Weaver"
             },
             {
               "name": "Wind Rider Staff",
@@ -46505,8 +48949,11 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.80",
                 "(9.64 damage per second)",
+                "+6 Spirit",
+                "+12 Spell Power",
                 "Requires Level 10"
-              ]
+              ],
+              "source": "Cry of the Thunderhawk"
             },
             {
               "name": "Invader's Mace",
@@ -46525,8 +48972,11 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 2.40",
                 "(8.54 damage per second)",
+                "+2 Strength",
+                "+1 Spirit",
                 "Requires Level 10"
-              ]
+              ],
+              "source": "Banner of the Fallen"
             }
           ]
         },
@@ -46559,7 +49009,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 11,
               "stats": "+4 Spirit, Equip: Increases healing done by up to 33 and damage done by up to 11.",
               "icon": "inv_mace_01",
-              "weaponType": "One-Handed Mace"
+              "weaponType": "One-Handed Mace",
+              "source": "Oggleflint (Ragefire Chasm)"
             },
             {
               "name": "Scepter of the Abandoned",
@@ -46571,7 +49022,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 14,
               "stats": "+4 Stamina, +4 Intellect",
               "icon": "inv_mace_01",
-              "weaponType": "Main Hand Mace"
+              "weaponType": "Main Hand Mace",
+              "source": "The Abandoned (Ruins of Lordaeron)"
             },
             {
               "name": "Staff of the Dor'Danil",
@@ -46583,7 +49035,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 12,
               "stats": "+4 Intellect, +4 Spirit",
               "icon": "inv_staff_02",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "source": "Darkshore / Bloodmyst quest reward"
             },
             {
               "name": "Segmented Spider Leg",
@@ -46606,7 +49059,8 @@ if (typeof window !== 'undefined') {
                 "+9 Agility",
                 "+5 Spirit",
                 "Requires Level 15"
-              ]
+              ],
+              "source": "Witherfang"
             },
             {
               "name": "Gnarled Necromancer's Staff",
@@ -46630,7 +49084,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases damage and healing done by magical spells and effects by up to 26",
                 "Equip: Increases movement speed by 2% in Silverpine Forest and Hillsbrad Foothills.",
                 "Requires Level 15"
-              ]
+              ],
+              "source": "The Wrath of Rath'mael"
             },
             {
               "name": "Emberstone Staff",
@@ -46654,7 +49109,8 @@ if (typeof window !== 'undefined') {
                 "+8 Fire Resistance",
                 "Requires Level 17",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 24"
-              ]
+              ],
+              "source": "Captain Greenskin"
             },
             {
               "name": "Witching Stave",
@@ -46679,7 +49135,8 @@ if (typeof window !== 'undefined') {
                 "+8 Shadow Resistance",
                 "Requires Level 17",
                 "Equip: Increases damage done by Shadow spells and effects by up to 27."
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Cookie's Tenderizer",
@@ -46698,8 +49155,10 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 2.80",
                 "(13.93 damage per second)",
+                "+4 Spirit",
                 "Requires Level 16"
-              ]
+              ],
+              "source": "Cookie"
             }
           ]
         },
@@ -46732,7 +49191,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 18,
               "stats": "+7 Spirit, Equip: Increases healing done by up to 45 and damage done by up to 15.",
               "icon": "inv_staff_08",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "source": "Verdan the Everliving (Wailing Caverns)"
             },
             {
               "name": "Crescent Staff",
@@ -46744,7 +49204,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 15,
               "stats": "+7 Intellect, +7 Spirit, +7 Stamina",
               "icon": "inv_staff_02",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "source": "Leaders of the Fang quest (Wailing Caverns)"
             },
             {
               "name": "Coldspire Staff",
@@ -46756,7 +49217,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 17,
               "stats": "+7 Intellect, +5 Spirit, +6 Frost Dmg",
               "icon": "inv_staff_08",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "source": "Rath'mael (Ruins of Lordaeron)"
             },
             {
               "name": "Alliance Outrunner Staff",
@@ -46780,7 +49242,8 @@ if (typeof window !== 'undefined') {
                 "+9 Spirit",
                 "Requires Level 21",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 28"
-              ]
+              ],
+              "source": "Marcus Bel"
             },
             {
               "name": "Staff of the Blessed Seer",
@@ -46799,8 +49262,12 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 3.00",
                 "(15.67 damage per second)",
+                "+9 Stamina",
+                "+10 Spirit",
+                "+28 Spell Power",
                 "Requires Level 20"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Evocator's Blade",
@@ -46819,8 +49286,12 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.60",
                 "(10.94 damage per second)",
+                "+2 Intellect",
+                "+5 Spirit",
+                "+28 Spell Power",
                 "Requires Level 20"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Frostbitten Staff",
@@ -46839,8 +49310,10 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.40",
                 "(15.83 damage per second)",
+                "+6 Spirit",
                 "Requires Level 19"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Channeler's Staff",
@@ -46859,8 +49332,10 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 3.40",
                 "(15.15 damage per second)",
+                "+8 Intellect",
                 "Requires Level 18"
-              ]
+              ],
+              "source": "Dalaran Spellscribe"
             }
           ]
         },
@@ -46893,7 +49368,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 21,
               "stats": "+5 Stamina, +12 Spirit, Equip: Increases healing done by up to 52 and damage done by up to 17.",
               "icon": "inv_staff_12",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "source": "Odo the Blindwatcher (SFK)"
             },
             {
               "name": "Rod of the Sleepwalker",
@@ -46905,7 +49381,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 24,
               "stats": "+11 Intellect, +10 Spirit",
               "icon": "inv_staff_08",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "source": "Twilight Lord Kelris (Blackfathom Deeps)"
             },
             {
               "name": "Striking Staff",
@@ -46929,7 +49406,8 @@ if (typeof window !== 'undefined') {
                 "+6 Stamina",
                 "+14 Intellect",
                 "Requires Level 24"
-              ]
+              ],
+              "source": "Heart of Disruption"
             },
             {
               "name": "Advisor's Gnarled Staff",
@@ -46948,8 +49426,11 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.90",
                 "(24.66 damage per second)",
+                "+10 Stamina",
+                "+6 Intellect",
                 "Requires Level 25"
-              ]
+              ],
+              "source": "Kelm Hargunth"
             },
             {
               "name": "Lorekeeper's Staff",
@@ -46968,8 +49449,11 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.90",
                 "(24.66 damage per second)",
+                "+10 Stamina",
+                "+6 Intellect",
                 "Requires Level 25"
-              ]
+              ],
+              "source": "Illiyana Moonblaze"
             },
             {
               "name": "Fallen Dragon's Scepter",
@@ -46993,7 +49477,8 @@ if (typeof window !== 'undefined') {
                 "+13 Spirit",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 36",
                 "Requires Level 24"
-              ]
+              ],
+              "source": "Stopping the Cycle"
             },
             {
               "name": "Glimmering Staff",
@@ -47017,7 +49502,8 @@ if (typeof window !== 'undefined') {
                 "+11 Intellect",
                 "Requires Level 25",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 34"
-              ]
+              ],
+              "source": "Glimmering Staff"
             },
             {
               "name": "Soulstaff",
@@ -47036,8 +49522,11 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 1.80",
                 "(18.33 damage per second)",
+                "+11 Stamina",
+                "+11 Spirit",
                 "Requires Level 25"
-              ]
+              ],
+              "source": "Soulstaff"
             }
           ]
         },
@@ -47070,7 +49559,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 30,
               "stats": "+3 Stamina, +7 Spirit, Equip: Increases healing done by up to 75 and damage done by up to 25.",
               "icon": "inv_mace_01",
-              "weaponType": "Main Hand Mace"
+              "weaponType": "Main Hand Mace",
+              "source": "Dark Iron Ambassador (Gnomeregan)"
             },
             {
               "name": "Death Speaker Scepter",
@@ -47082,7 +49572,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 28,
               "stats": "Equip: Increases healing done by up to 68. Equip: Restores 12 Health per 5 sec.",
               "icon": "inv_mace_01",
-              "weaponType": "One-Handed Mace"
+              "weaponType": "One-Handed Mace",
+              "source": "Death Speaker Jargba (Razorfen Kraul)"
             },
             {
               "name": "Wind Spirit Staff",
@@ -47094,7 +49585,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 29,
               "stats": "+6 Stamina, +16 Spirit, Equip: Increases healing done by up to 71 and damage done by up to 23.",
               "icon": "inv_staff_08",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "source": "Earthcaller Halmgar (Razorfen Kraul)"
             },
             {
               "name": "Spine of the Devourer",
@@ -47117,7 +49609,8 @@ if (typeof window !== 'undefined') {
                 "+14 Stamina",
                 "Requires Level 28",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 36"
-              ]
+              ],
+              "source": "Mana Devourer"
             },
             {
               "name": "Hydrocane",
@@ -47136,8 +49629,10 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.80",
                 "(19.82 damage per second)",
+                "+36 Spell Power",
                 "Requires Level 27"
-              ]
+              ],
+              "source": "Viscous Fallout"
             },
             {
               "name": "Death Prophet Spine",
@@ -47160,7 +49655,8 @@ if (typeof window !== 'undefined') {
                 "+11 Stamina",
                 "Requires Level 26",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 34"
-              ]
+              ],
+              "source": "Aggem Thorncurse"
             },
             {
               "name": "Tendonscraper Dagger",
@@ -47183,7 +49679,8 @@ if (typeof window !== 'undefined') {
                 "+5 Stamina",
                 "Requires Level 28",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 36"
-              ]
+              ],
+              "source": "Lyn the Ignored"
             },
             {
               "name": "Clever Expeditionary's Spellblade",
@@ -47202,8 +49699,12 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.40",
                 "(14.29 damage per second)",
+                "+4 Stamina",
+                "+6 Intellect",
+                "+3 Spirit",
                 "Requires Level 28"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             }
           ]
         },
@@ -47236,7 +49737,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 34,
               "stats": "+15 Intellect, +10 Spirit, +7 Stamina",
               "icon": "inv_staff_02",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "source": "Arcanist Doan (SM Library)"
             },
             {
               "name": "Hypnotic Blade",
@@ -47260,7 +49762,8 @@ if (typeof window !== 'undefined') {
                 "+3 Spirit",
                 "Requires Level 34",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 44"
-              ]
+              ],
+              "source": "Arcanist Doan"
             },
             {
               "name": "Swinetusk Shank",
@@ -47284,7 +49787,8 @@ if (typeof window !== 'undefined') {
                 "+4 Spirit",
                 "Requires Level 30",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 40"
-              ]
+              ],
+              "source": "Agathelos the Raging"
             },
             {
               "name": "Nimboya's Mystical Staff",
@@ -47308,7 +49812,8 @@ if (typeof window !== 'undefined') {
                 "+15 Spirit",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 38",
                 "Requires Level 30"
-              ]
+              ],
+              "source": "Saving Yenniku"
             },
             {
               "name": "Mindslicer",
@@ -47331,7 +49836,8 @@ if (typeof window !== 'undefined') {
                 "+7 Intellect",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 34",
                 "Requires Level 30"
-              ]
+              ],
+              "source": "Call to Arms"
             },
             {
               "name": "Madman's Blade",
@@ -47354,7 +49860,8 @@ if (typeof window !== 'undefined') {
                 "+7 Spirit",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 32",
                 "Requires Level 30"
-              ]
+              ],
+              "source": "Colonel Kurzen"
             },
             {
               "name": "Searing Golden Blade",
@@ -47373,8 +49880,10 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.40",
                 "(14.29 damage per second)",
+                "+7 Intellect",
                 "Requires Level 34"
-              ]
+              ],
+              "source": "Searing Golden Blade"
             },
             {
               "name": "Murloc Oracle's Dagger",
@@ -47393,8 +49902,11 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.80",
                 "(13.06 damage per second)",
+                "+3 Stamina",
+                "+5 Spirit",
                 "Requires Level 32"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             }
           ]
         },
@@ -47427,7 +49939,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 34,
               "stats": "+4 Strength, +3 Spirit, Equip: Increases damage and healing by up to 16.",
               "icon": "inv_mace_01",
-              "weaponType": "One-Handed Mace"
+              "weaponType": "One-Handed Mace",
+              "source": "SM Quest (In the Name of the Light)"
             },
             {
               "name": "Galgann's Firehammer",
@@ -47439,7 +49952,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 38,
               "stats": "+8 Intellect, +6 Spirit",
               "icon": "inv_mace_08",
-              "weaponType": "One-Handed Mace"
+              "weaponType": "One-Handed Mace",
+              "source": "Galgann Firehammer (Uldaman)"
             },
             {
               "name": "Staff of Jordan",
@@ -47464,7 +49978,8 @@ if (typeof window !== 'undefined') {
                 "Requires Level 35",
                 "Equip: Improves your chance to hit by 1.5%.",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 60"
-              ]
+              ],
+              "source": "World Drop Epic"
             },
             {
               "name": "Coldbringer Spine",
@@ -47483,8 +49998,10 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.80",
                 "(28.21 damage per second)",
+                "+20 Spirit, Improves your chance to hit by 1.0%.",
                 "Requires Level 38"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Greatstaff of the Necrokhans",
@@ -47509,7 +50026,8 @@ if (typeof window !== 'undefined') {
                 "+6 Spirit",
                 "Requires Level 35",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 48"
-              ]
+              ],
+              "source": "Khan Jehn"
             },
             {
               "name": "Celestial Stave",
@@ -47532,7 +50050,8 @@ if (typeof window !== 'undefined') {
                 "+8 Intellect",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 46",
                 "Requires Level 35"
-              ]
+              ],
+              "source": "Celestial Power"
             },
             {
               "name": "Clever Expeditionary's Spellblade",
@@ -47551,8 +50070,12 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.40",
                 "(19.64 damage per second)",
+                "+5 Stamina",
+                "+8 Intellect",
+                "+3 Spirit",
                 "Requires Level 38"
-              ]
+              ],
+              "source": "Bryanna Embreeze"
             },
             {
               "name": "Darkspear Insurgent's Spellblade",
@@ -47571,8 +50094,12 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.40",
                 "(19.64 damage per second)",
+                "+5 Stamina",
+                "+8 Intellect",
+                "+3 Spirit",
                 "Requires Level 38"
-              ]
+              ],
+              "source": "Creeg Bothunk"
             }
           ]
         },
@@ -47605,7 +50132,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 40,
               "stats": "+5 Intellect, +5 Spirit",
               "icon": "inv_mace_07",
-              "weaponType": "One-Handed Mace"
+              "weaponType": "One-Handed Mace",
+              "source": "Digmaster Shovelphlange (Uldaman)"
             },
             {
               "name": "Emerald Watcher's Dreamstaff",
@@ -47629,7 +50157,8 @@ if (typeof window !== 'undefined') {
                 "+19 Spirit",
                 "Requires Level 44",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 56"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Spellshifter Rod",
@@ -47653,7 +50182,8 @@ if (typeof window !== 'undefined') {
                 "+23 Intellect",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 54",
                 "Requires Level 40"
-              ]
+              ],
+              "source": "Tiara of the Deep"
             },
             {
               "name": "Jhordy's Misplaced Screwdriver",
@@ -47672,8 +50202,12 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.90",
                 "(30.26 damage per second)",
+                "+6 Strength",
+                "+9 Agility",
+                "-1 Intellect",
                 "Requires Level 40"
-              ]
+              ],
+              "source": "1 Intellect — Rettrick"
             },
             {
               "name": "Farraki Kris",
@@ -47692,8 +50226,10 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.60",
                 "(20.94 damage per second)",
+                "+54 Spell Power",
                 "Requires Level 42"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Galgann's Firehammer",
@@ -47712,8 +50248,10 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 2.20",
                 "(20.91 damage per second)",
+                "+54 Spell Power",
                 "Requires Level 42"
-              ]
+              ],
+              "source": "Galgann Firehammer"
             },
             {
               "name": "Notched Ritual Rib",
@@ -47732,8 +50270,11 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.70",
                 "(20.29 damage per second)",
+                "+4 Stamina",
+                "+9 Intellect",
                 "Requires Level 40"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Strength of the Treant",
@@ -47757,7 +50298,8 @@ if (typeof window !== 'undefined') {
                 "+18 Intellect",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 42",
                 "Requires Level 40"
-              ]
+              ],
+              "source": "Weapons of Spirit"
             }
           ]
         },
@@ -47790,7 +50332,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 49,
               "stats": "Equip: Increases healing done by up to 116 and damage done by up to 38.",
               "icon": "inv_knife_01",
-              "weaponType": "Dagger"
+              "weaponType": "Dagger",
+              "source": "Maraudon trash drop"
             },
             {
               "name": "Spire of Hakkar",
@@ -47802,7 +50345,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 48,
               "stats": "+16 Spirit, +14 Intellect, Equip: Increases damage and healing by up to 18.",
               "icon": "inv_staff_08",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "source": "Avatar of Hakkar (Sunken Temple)"
             },
             {
               "name": "Might of Hakkar",
@@ -47821,8 +50365,12 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 2.40",
                 "(35.83 damage per second)",
+                "+11 Stamina",
+                "+3 Spirit",
+                "+5 Hit",
                 "Requires Level 49"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Fist of Stone",
@@ -47841,8 +50389,11 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 1.80",
                 "(35.28 damage per second)",
+                "+11 Stamina",
+                "+5 Spirit",
                 "Requires Level 48"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Kindling Stave",
@@ -47869,7 +50420,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Improves your chance to get a critical strike by 1.0%.",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 60",
                 "Equip: Harmful spell casts have a chance to deal 60 to 81 Fire damage. Deals 3 times as much damage to Plants. (10ms cooldown)"
-              ]
+              ],
+              "source": "Pyromancer Loregrain"
             },
             {
               "name": "Dreamstaff",
@@ -47888,8 +50440,11 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.40",
                 "(32.29 damage per second)",
+                "+19 Stamina",
+                "+19 Spirit",
                 "Requires Level 45"
-              ]
+              ],
+              "source": "Dreamstaff"
             },
             {
               "name": "Radiant Staff",
@@ -47908,8 +50463,11 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.40",
                 "(32.29 damage per second)",
+                "+19 Stamina",
+                "+19 Intellect",
                 "Requires Level 45"
-              ]
+              ],
+              "source": "Radiant Staff"
             },
             {
               "name": "Clever Expeditionary's Spellblade",
@@ -47928,8 +50486,12 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.40",
                 "(23.57 damage per second)",
+                "+7 Stamina",
+                "+10 Intellect",
+                "+4 Spirit",
                 "Requires Level 48"
-              ]
+              ],
+              "source": "Bryanna Embreeze"
             }
           ]
         },
@@ -47962,7 +50524,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 53,
               "stats": "+12 Intellect, Equip: Increases healing done by up to 28.",
               "icon": "inv_staff_08",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "source": "Emperor Dagran Thaurissan (BRD)"
             },
             {
               "name": "Wisepaw Totem",
@@ -47986,7 +50549,8 @@ if (typeof window !== 'undefined') {
                 "+23 Intellect",
                 "Requires Level 53",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 66"
-              ]
+              ],
+              "source": "Dala Fairmaw"
             },
             {
               "name": "Soul Harvester",
@@ -48011,7 +50575,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Improves your chance to hit by 1.0%.",
                 "Equip: Increases damage done by Shadow spells and effects by up to 73.",
                 "Requires Level 50"
-              ]
+              ],
+              "source": "Trolls of a Feather"
             },
             {
               "name": "Copper Plated Pipe",
@@ -48029,8 +50594,11 @@ if (typeof window !== 'undefined') {
               "lines": [
                 "Staff",
                 "Speed 3.20",
-                "(45.00 damage per second)"
-              ]
+                "(45.00 damage per second)",
+                "+20 Agility",
+                "+12 Intellect"
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Purified Gnarlybark Staff",
@@ -48048,8 +50616,10 @@ if (typeof window !== 'undefined') {
               "lines": [
                 "Staff",
                 "Speed 3.10",
-                "(34.03 damage per second)"
-              ]
+                "(34.03 damage per second)",
+                "+19 Spirit, Improves your chance to get a critical strike by 1.0%."
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Staff of the Deeproar",
@@ -48067,8 +50637,12 @@ if (typeof window !== 'undefined') {
               "lines": [
                 "Staff",
                 "Speed 3.30",
-                "(33.48 damage per second)"
-              ]
+                "(33.48 damage per second)",
+                "+13 Stamina",
+                "+12 Intellect",
+                "+14 Spirit"
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Staff of Archmage Selwyn",
@@ -48086,8 +50660,11 @@ if (typeof window !== 'undefined') {
               "lines": [
                 "Staff",
                 "Speed 2.50",
-                "(31.60 damage per second)"
-              ]
+                "(31.60 damage per second)",
+                "+16 Stamina",
+                "+16 Intellect"
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Cleansed Ritual Kris",
@@ -48105,8 +50682,10 @@ if (typeof window !== 'undefined') {
               "lines": [
                 "Dagger",
                 "Speed 1.60",
-                "(23.44 damage per second)"
-              ]
+                "(23.44 damage per second)",
+                "+4 Spirit"
+              ],
+              "source": "Leveling Drop / Vendor"
             }
           ]
         },
@@ -48139,7 +50718,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 60,
               "stats": "+19 Intellect, +10 Spirit, Equip: Increases healing done by up to 210 and damage done by up to 70.",
               "icon": "inv_mace_01",
-              "weaponType": "One-Handed Mace"
+              "weaponType": "One-Handed Mace",
+              "source": "C'Thun (Temple of Ahn'Qiraj)"
             },
             {
               "name": "Grand Marshal's Warhammer",
@@ -48151,7 +50731,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 60,
               "stats": "+11 Stamina, +7 Intellect, Equip: Increases healing done by up to 199 and damage done by up to 66.",
               "icon": "inv_mace_08",
-              "weaponType": "One-Handed Mace"
+              "weaponType": "One-Handed Mace",
+              "source": "PvP Rank 14 Officer's Lounge"
             },
             {
               "name": "Blessed Qiraji Augur Staff",
@@ -48163,7 +50744,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 60,
               "stats": "+31 Stamina, +20 Intellect, +14 Spirit, Equip: Increases healing done by up to 203 and damage done by up to 67.",
               "icon": "inv_staff_08",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "source": "Imperial Qiraji Regalia (AQ40)"
             },
             {
               "name": "Atiesh, Greatstaff of the Guardian",
@@ -48175,7 +50757,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 60,
               "stats": "+28 Intellect, +28 Spirit, Equip: Increases healing done by up to 242 and damage done by up to 120.",
               "icon": "inv_staff_30",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "source": "Naxxramas 40 splinter quest"
             },
             {
               "name": "Atiesh, Greatstaff of the Guardian",
@@ -48194,8 +50777,14 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.90",
                 "(64.34 damage per second)",
+                "+31 Stamina",
+                "+32 Intellect",
+                "+24 Spirit",
+                "+150 Spell Power",
+                "+20 Hit",
                 "Requires Level 60"
-              ]
+              ],
+              "source": "Atiesh, Greatstaff of the Guardian"
             },
             {
               "name": "Atiesh, Greatstaff of the Guardian",
@@ -48214,8 +50803,13 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.90",
                 "(64.34 damage per second)",
+                "+30 Stamina",
+                "+29 Intellect",
+                "+183 Spell Power",
+                "+28 Crit",
                 "Requires Level 60"
-              ]
+              ],
+              "source": "Atiesh, Greatstaff of the Guardian"
             },
             {
               "name": "Atiesh, Greatstaff of the Guardian",
@@ -48234,8 +50828,14 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.90",
                 "(64.34 damage per second)",
+                "+28 Stamina",
+                "+28 Intellect",
+                "+27 Spirit",
+                "+300 Healing",
+                "+11 MP5",
                 "Requires Level 60"
-              ]
+              ],
+              "source": "Atiesh, Greatstaff of the Guardian"
             },
             {
               "name": "Lok'delar, Stave of the Ancient Keepers",
@@ -48254,8 +50854,12 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 3.20",
                 "(73.28 damage per second)",
+                "+26 Stamina",
+                "+15 Intellect",
+                "+28 Crit",
                 "Requires Level 60"
-              ]
+              ],
+              "source": "World Drop Epic"
             }
           ]
         }
@@ -48305,7 +50909,8 @@ if (typeof window !== 'undefined') {
                 "One-Hand",
                 "1 - 3 Damage\tSpeed 1.90",
                 "(1.05 damage per second)"
-              ]
+              ],
+              "source": "Starter vendor mace"
             },
             {
               "name": "Invisible Dagger",
@@ -48324,7 +50929,8 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 2.00",
                 "(6.75 damage per second)"
-              ]
+              ],
+              "source": "World Drop Epic"
             },
             {
               "name": "Northshire Hammer",
@@ -48345,7 +50951,8 @@ if (typeof window !== 'undefined') {
                 "18 - 27 Damage\tSpeed 2.70",
                 "(8.33 damage per second)",
                 "+2 Strength"
-              ]
+              ],
+              "source": "Rare Books"
             },
             {
               "name": "Militia Shortblade",
@@ -48366,7 +50973,8 @@ if (typeof window !== 'undefined') {
                 "9 - 17 Damage\tSpeed 2.00",
                 "(6.50 damage per second)",
                 "+1 Agility"
-              ]
+              ],
+              "source": "Rare Books"
             },
             {
               "name": "Restored Greatstaff",
@@ -48385,7 +50993,8 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 3.10",
                 "(1.61 damage per second)"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Restored Smasher",
@@ -48404,7 +51013,8 @@ if (typeof window !== 'undefined') {
                 "2H Mace",
                 "Speed 3.10",
                 "(1.61 damage per second)"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Restored Spear",
@@ -48423,7 +51033,8 @@ if (typeof window !== 'undefined') {
                 "Polearm",
                 "Speed 3.10",
                 "(1.61 damage per second)"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Restored Dagger",
@@ -48442,7 +51053,8 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.70",
                 "(1.18 damage per second)"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Restored Basher",
@@ -48461,7 +51073,8 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 2.20",
                 "(1.14 damage per second)"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Thicket Hammer",
@@ -48480,7 +51093,8 @@ if (typeof window !== 'undefined') {
                 "2H Mace",
                 "Speed 3.10",
                 "(6.45 damage per second)"
-              ]
+              ],
+              "source": "Crown of the Earth"
             }
           ],
           "faction": "both",
@@ -48526,7 +51140,8 @@ if (typeof window !== 'undefined') {
                 "8 - 13 Damage\tSpeed 2.50",
                 "(4.20 damage per second)",
                 "Requires Level 3"
-              ]
+              ],
+              "source": "Vendor staff"
             },
             {
               "name": "Large Club",
@@ -48545,7 +51160,8 @@ if (typeof window !== 'undefined') {
                 "Two-Hand",
                 "4 - 6 Damage\tSpeed 3.20",
                 "(1.56 damage per second)"
-              ]
+              ],
+              "source": "Vendor 2H mace"
             },
             {
               "name": "Valley Cosh",
@@ -48564,8 +51180,10 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 1.90",
                 "(6.05 damage per second)",
+                "+1 Stamina",
                 "Requires Level 4"
-              ]
+              ],
+              "source": "Stalk With The Earthmother"
             },
             {
               "name": "Jagged Dagger",
@@ -48584,8 +51202,10 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.50",
                 "(6.00 damage per second)",
+                "+1 Strength",
                 "Requires Level 4"
-              ]
+              ],
+              "source": "Skull Rock"
             },
             {
               "name": "Stinging Mace",
@@ -48604,8 +51224,10 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 2.30",
                 "(5.87 damage per second)",
+                "+1 Strength",
                 "Requires Level 4"
-              ]
+              ],
+              "source": "Skull Rock"
             },
             {
               "name": "Hoof-Holstered Blade",
@@ -48624,8 +51246,10 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.40",
                 "(5.71 damage per second)",
+                "+1 Strength",
                 "Requires Level 4"
-              ]
+              ],
+              "source": "Stalk With The Earthmother"
             },
             {
               "name": "Webwood Slicer",
@@ -48644,8 +51268,10 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.70",
                 "(5.29 damage per second)",
+                "+1 Agility",
                 "Requires Level 4"
-              ]
+              ],
+              "source": "Twisted Hatred"
             },
             {
               "name": "Thornroot Club",
@@ -48664,8 +51290,11 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 2.10",
                 "(4.52 damage per second)",
+                "+1 Stamina",
+                "+6 Spell Power",
                 "Requires Level 4"
-              ]
+              ],
+              "source": "Ursal the Mauler"
             },
             {
               "name": "Worn Ranger's Dagger",
@@ -48685,7 +51314,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.70",
                 "(4.41 damage per second)",
                 "Requires Level 3"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Chipped Spellstaff",
@@ -48704,8 +51334,10 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.80",
                 "(4.11 damage per second)",
+                "+1 Stamina",
                 "Requires Level 3"
-              ]
+              ],
+              "source": "Slydris"
             }
           ],
           "faction": "both",
@@ -48752,7 +51384,8 @@ if (typeof window !== 'undefined') {
                 "7 - 13 Damage\tSpeed 2.60",
                 "(3.85 damage per second)",
                 "Requires Level 4"
-              ]
+              ],
+              "source": "Blacksmithing (15)"
             },
             {
               "name": "Walking Stick",
@@ -48772,7 +51405,8 @@ if (typeof window !== 'undefined') {
                 "8 - 13 Damage\tSpeed 2.50",
                 "(4.20 damage per second)",
                 "Requires Level 3"
-              ]
+              ],
+              "source": "Vendor staff"
             },
             {
               "name": "Goblin Smasher",
@@ -48793,7 +51427,8 @@ if (typeof window !== 'undefined') {
                 "20 - 31 Damage\tSpeed 3.10",
                 "(8.23 damage per second)",
                 "+2 Strength"
-              ]
+              ],
+              "source": "Mulgore Quest: Supervisor Fizsprocket"
             },
             {
               "name": "Honed Greathammer",
@@ -48812,8 +51447,11 @@ if (typeof window !== 'undefined') {
                 "2H Mace",
                 "Speed 3.20",
                 "(9.06 damage per second)",
+                "+2 Strength",
+                "+2 Spirit",
                 "Requires Level 6"
-              ]
+              ],
+              "source": "Return to Valanaar"
             },
             {
               "name": "Balanced Fighting Stick",
@@ -48832,8 +51470,11 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.20",
                 "(8.86 damage per second)",
+                "+2 Agility",
+                "+2 Stamina",
                 "Requires Level 5"
-              ]
+              ],
+              "source": "WANTED: \"Hogger\""
             },
             {
               "name": "Balanced Quarterstaff",
@@ -48852,8 +51493,11 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.20",
                 "(8.86 damage per second)",
+                "+2 Stamina",
+                "+2 Spirit",
                 "Requires Level 6"
-              ]
+              ],
+              "source": "Return to Valanaar"
             },
             {
               "name": "Coldridge Hammer",
@@ -48872,8 +51516,11 @@ if (typeof window !== 'undefined') {
                 "2H Mace",
                 "Speed 2.70",
                 "(8.33 damage per second)",
+                "+1 Strength",
+                "+1 Spirit",
                 "Requires Level 6"
-              ]
+              ],
+              "source": "Protecting the Herd"
             },
             {
               "name": "Farmer's Shovel",
@@ -48892,8 +51539,10 @@ if (typeof window !== 'undefined') {
                 "2H Mace",
                 "Speed 3.70",
                 "(7.16 damage per second)",
+                "+1 Strength",
                 "Requires Level 5"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Winged Beast Staff",
@@ -48911,8 +51560,10 @@ if (typeof window !== 'undefined') {
               "lines": [
                 "Staff",
                 "Speed 2.80",
-                "(7.14 damage per second)"
-              ]
+                "(7.14 damage per second)",
+                "+1 Agility"
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Wrathroot",
@@ -48931,8 +51582,10 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 3.30",
                 "(7.12 damage per second)",
+                "+1 Intellect",
                 "Requires Level 5"
-              ]
+              ],
+              "source": "Wrathvine"
             }
           ],
           "faction": "both",
@@ -48978,7 +51631,8 @@ if (typeof window !== 'undefined') {
                 "7 - 14 Damage\tSpeed 1.50",
                 "(7.00 damage per second)",
                 "+1 Stamina"
-              ]
+              ],
+              "source": "Teldrassil quest"
             },
             {
               "name": "Apprentice's Spellstaff",
@@ -49000,7 +51654,8 @@ if (typeof window !== 'undefined') {
                 "(6.36 damage per second)",
                 "+2 Intellect",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 4"
-              ]
+              ],
+              "source": "Early quest"
             },
             {
               "name": "Bonecracker",
@@ -49021,7 +51676,8 @@ if (typeof window !== 'undefined') {
                 "23 - 35 Damage\tSpeed 3.20",
                 "(9.06 damage per second)",
                 "+3 Strength"
-              ]
+              ],
+              "source": "Tirisfal Quest: The Family Crypt"
             },
             {
               "name": "Darkwood Staff",
@@ -49043,7 +51699,8 @@ if (typeof window !== 'undefined') {
                 "(6.72 damage per second)",
                 "+3 Stamina",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 6"
-              ]
+              ],
+              "source": "Tirisfal Quest: The Family Crypt"
             },
             {
               "name": "Makeshift Stormcaller",
@@ -49065,7 +51722,8 @@ if (typeof window !== 'undefined') {
                 "(5.76 damage per second)",
                 "+2 Intellect",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 4"
-              ]
+              ],
+              "source": "Durotar Shaman/Caster Quest: Stormy Potential"
             },
             {
               "name": "Spiked Club",
@@ -49085,7 +51743,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.10",
                 "(9.0 damage per second)",
                 "Requires Level 8"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Driftwood Smasher",
@@ -49104,8 +51763,10 @@ if (typeof window !== 'undefined') {
                 "2H Mace",
                 "Speed 3.30",
                 "(8.94 damage per second)",
+                "+2 Stamina",
                 "Requires Level 7"
-              ]
+              ],
+              "source": "Murlocs at the Gates"
             },
             {
               "name": "Gnarlpine War Staff",
@@ -49124,8 +51785,10 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 3.30",
                 "(8.94 damage per second)",
+                "+3 Strength",
                 "Requires Level 8"
-              ]
+              ],
+              "source": "Grimmaw"
             },
             {
               "name": "Sturdy Quarterstaff",
@@ -49145,7 +51808,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.80",
                 "(8.9 damage per second)",
                 "Requires Level 8"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Icepane Warhammer",
@@ -49165,7 +51829,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.30",
                 "(8.5 damage per second)",
                 "Requires Level 7"
-              ]
+              ],
+              "source": "Hammerspine"
             }
           ],
           "faction": "alliance",
@@ -49214,7 +51879,8 @@ if (typeof window !== 'undefined') {
                 "7 - 14 Damage\tSpeed 1.50",
                 "(7.00 damage per second)",
                 "+1 Stamina"
-              ]
+              ],
+              "source": "Early quest"
             },
             {
               "name": "Trogg Scepter",
@@ -49237,7 +51903,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases healing done by up to 33"
               ],
               "reqLevel": 13,
-              "icon": "inv_misc_bone_10"
+              "icon": "inv_misc_bone_10",
+              "source": "RFC: Oggleflint 1H mace"
             },
             {
               "name": "Cauldron Stirrer",
@@ -49259,7 +51926,8 @@ if (typeof window !== 'undefined') {
                 "(7.42 damage per second)",
                 "+4 Stamina",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 8"
-              ]
+              ],
+              "source": "Barrens Quest: Apothecary Zamah"
             },
             {
               "name": "Ironforge Greathammer",
@@ -49279,8 +51947,10 @@ if (typeof window !== 'undefined') {
                 "Two-Hand",
                 "39 - 60 Damage\tSpeed 3.10",
                 "(15.97 damage per second)",
+                "Chance on hit: Blasts a target for 42 Fire damage.",
                 "Chance on hit: Blasts a target for 42 Fire damage."
-              ]
+              ],
+              "source": "Ironforge Quest"
             },
             {
               "name": "Hammerbone",
@@ -49303,7 +51973,8 @@ if (typeof window !== 'undefined') {
                 "+7 Strength",
                 "+10 Spirit",
                 "Requires Level 10"
-              ]
+              ],
+              "source": "Leaders of the Fang"
             },
             {
               "name": "Ceranium Rod",
@@ -49322,8 +51993,11 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.70",
                 "(10.74 damage per second)",
+                "+7 Stamina",
+                "+14 Spell Power",
                 "Requires Level 10"
-              ]
+              ],
+              "source": "The Weaver"
             },
             {
               "name": "Elunar Longstaff",
@@ -49342,8 +52016,11 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 3.10",
                 "(10.16 damage per second)",
+                "+3 Strength",
+                "+3 Agility",
                 "Requires Level 10"
-              ]
+              ],
+              "source": "Den'dralass"
             },
             {
               "name": "Birchwood Maul",
@@ -49363,7 +52040,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.30",
                 "(10.0 damage per second)",
                 "Requires Level 10"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Wind Rider Staff",
@@ -49382,8 +52060,11 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.80",
                 "(9.64 damage per second)",
+                "+6 Spirit",
+                "+12 Spell Power",
                 "Requires Level 10"
-              ]
+              ],
+              "source": "Cry of the Thunderhawk"
             },
             {
               "name": "Ukta's Conduit",
@@ -49402,8 +52083,10 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 3.30",
                 "(9.55 damage per second)",
+                "+3 Stamina",
                 "Requires Level 9"
-              ]
+              ],
+              "source": "Stormherald Ukta"
             }
           ],
           "faction": "both",
@@ -49453,7 +52136,8 @@ if (typeof window !== 'undefined') {
                 "+2 Stamina",
                 "+2 Intellect",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 6"
-              ]
+              ],
+              "source": "Ashenvale quest"
             },
             {
               "name": "Trogg Scepter",
@@ -49476,7 +52160,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases healing done by up to 33"
               ],
               "reqLevel": 13,
-              "icon": "inv_misc_bone_10"
+              "icon": "inv_misc_bone_10",
+              "source": "RFC: Oggleflint"
             },
             {
               "name": "Hammer of Orgrimmar",
@@ -49498,7 +52183,8 @@ if (typeof window !== 'undefined') {
                 "(12.41 damage per second)",
                 "+3 Strength",
                 "+3 Spirit"
-              ]
+              ],
+              "source": "RFC Quest: Hidden Enemies"
             },
             {
               "name": "Ironforge Greathammer",
@@ -49518,8 +52204,10 @@ if (typeof window !== 'undefined') {
                 "Two-Hand",
                 "39 - 60 Damage\tSpeed 3.10",
                 "(15.97 damage per second)",
+                "Chance on hit: Blasts a target for 42 Fire damage.",
                 "Chance on hit: Blasts a target for 42 Fire damage."
-              ]
+              ],
+              "source": "Ironforge Quest"
             },
             {
               "name": "Foamspittle Staff",
@@ -49539,7 +52227,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.20",
                 "(11.4 damage per second)",
                 "Requires Level 12"
-              ]
+              ],
+              "source": "Murloc Oracle"
             },
             {
               "name": "Burrowing Shovel",
@@ -49558,8 +52247,10 @@ if (typeof window !== 'undefined') {
                 "2H Mace",
                 "Speed 3.00",
                 "(11.33 damage per second)",
+                "+5 Strength",
                 "Requires Level 12"
-              ]
+              ],
+              "source": "Master Digger"
             },
             {
               "name": "Hardwood Cudgel",
@@ -49578,8 +52269,11 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 2.60",
                 "(10.00 damage per second)",
+                "+2 Strength",
+                "+2 Stamina",
                 "Requires Level 12"
-              ]
+              ],
+              "source": "Mathystra Relics"
             },
             {
               "name": "Harpy Skinner",
@@ -49598,8 +52292,10 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.40",
                 "(9.64 damage per second)",
+                "+3 Agility",
                 "Requires Level 12"
-              ]
+              ],
+              "source": "Serena Bloodfeather"
             },
             {
               "name": "Serrated Knife",
@@ -49618,8 +52314,11 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.60",
                 "(9.06 damage per second)",
+                "+1 Agility",
+                "+1 Stamina",
                 "Requires Level 12"
-              ]
+              ],
+              "source": "Wand to Bethor"
             },
             {
               "name": "Petrified Shinbone",
@@ -49639,7 +52338,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.00",
                 "(8.8 damage per second)",
                 "Requires Level 12"
-              ]
+              ],
+              "source": "Undead Dynamiter"
             }
           ],
           "faction": "both",
@@ -49691,7 +52391,8 @@ if (typeof window !== 'undefined') {
                 "+6 Agility",
                 "+6 Intellect",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 18"
-              ]
+              ],
+              "source": "RFC: Hidden Enemies (Horde BiS)"
             },
             {
               "name": "Ironforge Greathammer",
@@ -49711,8 +52412,10 @@ if (typeof window !== 'undefined') {
                 "Two-Hand",
                 "39 - 60 Damage\tSpeed 3.10",
                 "(15.97 damage per second)",
+                "Chance on hit: Blasts a target for 42 Fire damage.",
                 "Chance on hit: Blasts a target for 42 Fire damage."
-              ]
+              ],
+              "source": "Hall of Thanes dungeon quest"
             },
             {
               "name": "Oakthrush Staff",
@@ -49735,7 +52438,8 @@ if (typeof window !== 'undefined') {
                 "+2 Stamina",
                 "+2 Intellect",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 6"
-              ]
+              ],
+              "source": "Ashenvale quest"
             },
             {
               "name": "Kris of Orgrimmar",
@@ -49757,7 +52461,8 @@ if (typeof window !== 'undefined') {
                 "(8.00 damage per second)",
                 "+4 Stamina",
                 "Equip: Increases healing done by up to 33"
-              ]
+              ],
+              "source": "RFC Quest: Hidden Enemies"
             },
             {
               "name": "Fang of Magmatus",
@@ -49780,7 +52485,8 @@ if (typeof window !== 'undefined') {
                 "+4 Intellect",
                 "Requires Level 13",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 18"
-              ]
+              ],
+              "source": "RFC Drop"
             },
             {
               "name": "Goblin Screwdriver",
@@ -49799,8 +52505,10 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.40",
                 "(12.14 damage per second)",
+                "+4 Agility",
                 "Requires Level 13"
-              ]
+              ],
+              "source": "Goblin Engineer"
             },
             {
               "name": "Chanting Blade",
@@ -49819,8 +52527,11 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.50",
                 "(12.00 damage per second)",
+                "+2 Agility",
+                "+3 Stamina",
                 "Requires Level 13"
-              ]
+              ],
+              "source": "Jergosh the Invoker"
             },
             {
               "name": "Searing Dagger",
@@ -49843,7 +52554,8 @@ if (typeof window !== 'undefined') {
                 "+4 Spirit",
                 "Requires Level 13",
                 "Equip: Harmful spell casts sear the target for 7 Fire damage. (10ms cooldown)"
-              ]
+              ],
+              "source": "Bazzalan"
             },
             {
               "name": "Medicine Staff",
@@ -49863,7 +52575,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.50",
                 "(12.6 damage per second)",
                 "Requires Level 14"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Riverside Staff",
@@ -49883,7 +52596,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.10",
                 "(12.6 damage per second)",
                 "Requires Level 14"
-              ]
+              ],
+              "source": "Murloc Tidecaller"
             }
           ],
           "faction": "both",
@@ -49936,7 +52650,8 @@ if (typeof window !== 'undefined') {
                 "+10 Spirit",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 26",
                 "Equip: Increases movement speed by 2% in Silverpine Forest and Hillsbrad Foothills."
-              ]
+              ],
+              "source": "Ruins of Lordaeron: Rath'mael"
             },
             {
               "name": "Clear Crystal Rod",
@@ -49959,7 +52674,8 @@ if (typeof window !== 'undefined') {
                 "+4 Stamina",
                 "+5 Intellect",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 14"
-              ]
+              ],
+              "source": "Arachnophobia quest in Stonetalon"
             },
             {
               "name": "Staff of Orgrimmar",
@@ -49982,7 +52698,8 @@ if (typeof window !== 'undefined') {
                 "+6 Agility",
                 "+6 Intellect",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 18"
-              ]
+              ],
+              "source": "RFC: Hidden Enemies (Horde BiS)"
             },
             {
               "name": "Segmented Spider Leg",
@@ -50005,7 +52722,8 @@ if (typeof window !== 'undefined') {
                 "+9 Agility",
                 "+5 Spirit",
                 "Requires Level 15"
-              ]
+              ],
+              "source": "Ruins of Lordaeron: Witherfang"
             },
             {
               "name": "Scepter of the Abandoned",
@@ -50028,7 +52746,8 @@ if (typeof window !== 'undefined') {
                 "+5 Shadow Resistance",
                 "Requires Level 17",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 24"
-              ]
+              ],
+              "source": "Ruins of Lordaeron: The Abandoned"
             },
             {
               "name": "Kris of Orgrimmar",
@@ -50050,7 +52769,8 @@ if (typeof window !== 'undefined') {
                 "(8.00 damage per second)",
                 "+4 Stamina",
                 "Equip: Increases healing done by up to 33"
-              ]
+              ],
+              "source": "RFC Quest: Hidden Enemies"
             },
             {
               "name": "The Stitcher",
@@ -50072,7 +52792,8 @@ if (typeof window !== 'undefined') {
                 "(8.13 damage per second)",
                 "+3 Stamina",
                 "Equip: Increases healing done by up to 30"
-              ]
+              ],
+              "source": "Dalaran Dungeon"
             },
             {
               "name": "Black Malice",
@@ -50091,8 +52812,10 @@ if (typeof window !== 'undefined') {
                 "2H Mace",
                 "Speed 3.30",
                 "(18.33 damage per second)",
+                "+2 Shadow Resistance",
                 "Requires Level 16"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Rakzur Club",
@@ -50112,7 +52835,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.60",
                 "(18.3 damage per second)",
                 "Requires Level 16"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Face Smasher",
@@ -50132,7 +52856,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.60",
                 "(14.0 damage per second)",
                 "Requires Level 16"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             }
           ],
           "faction": "both",
@@ -50187,7 +52912,8 @@ if (typeof window !== 'undefined') {
                 "+6 Agility",
                 "+6 Intellect",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 18"
-              ]
+              ],
+              "source": "RFC: Hidden Enemies (Horde BiS)"
             },
             {
               "name": "Coldspire Staff",
@@ -50210,7 +52936,8 @@ if (typeof window !== 'undefined') {
                 "+13 Frost Resistance",
                 "Requires Level 19",
                 "Equip: Increases damage done by Frost spells and effects by up to 32."
-              ]
+              ],
+              "source": "Ruins of Lordaeron: Rath'mael"
             },
             {
               "name": "Staff of Westfall",
@@ -50234,7 +52961,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Movement speed increased by 2% in Elwynn Forest, Westfall, Redridge Mountains, and the Deadmines."
               ],
               "reqLevel": 14,
-              "icon": "inv_staff_10"
+              "icon": "inv_staff_10",
+              "source": "Deadmines quest"
             },
             {
               "name": "Kris of Orgrimmar",
@@ -50256,7 +52984,8 @@ if (typeof window !== 'undefined') {
                 "(8.00 damage per second)",
                 "+4 Stamina",
                 "Equip: Increases healing done by up to 33"
-              ]
+              ],
+              "source": "RFC Quest: Hidden Enemies"
             },
             {
               "name": "Advisor's Gnarled Staff",
@@ -50276,7 +53005,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.90",
                 "(19.7 damage per second)",
                 "Requires Level 18"
-              ]
+              ],
+              "source": "Kelm Hargunth"
             },
             {
               "name": "Lorekeeper's Staff",
@@ -50296,7 +53026,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.90",
                 "(19.7 damage per second)",
                 "Requires Level 18"
-              ]
+              ],
+              "source": "Illiyana Moonblaze"
             },
             {
               "name": "Impaling Harpoon",
@@ -50315,8 +53046,11 @@ if (typeof window !== 'undefined') {
                 "Polearm",
                 "Speed 2.40",
                 "(18.96 damage per second)",
+                "+9 Agility",
+                "+5 Intellect",
                 "Requires Level 17"
-              ]
+              ],
+              "source": "Captain Greenskin"
             },
             {
               "name": "Scout's Blade",
@@ -50336,7 +53070,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.70",
                 "(15.3 damage per second)",
                 "Requires Level 18"
-              ]
+              ],
+              "source": "Kelm Hargunth"
             },
             {
               "name": "Sentinel's Blade",
@@ -50356,7 +53091,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.70",
                 "(15.3 damage per second)",
                 "Requires Level 18"
-              ]
+              ],
+              "source": "Illiyana Moonblaze"
             },
             {
               "name": "Goblin Hammer",
@@ -50375,8 +53111,11 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 2.00",
                 "(15.25 damage per second)",
+                "+4 Stamina",
+                "+20 Armor",
                 "Requires Level 18"
-              ]
+              ],
+              "source": "Gilnid"
             }
           ],
           "faction": "both",
@@ -50429,7 +53168,8 @@ if (typeof window !== 'undefined') {
                 "+6 Agility",
                 "+6 Intellect",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 18"
-              ]
+              ],
+              "source": "RFC: Hidden Enemies (Horde BiS)"
             },
             {
               "name": "Bronze Warhammer",
@@ -50452,7 +53192,8 @@ if (typeof window !== 'undefined') {
                 "+6 Strength",
                 "+6 Stamina",
                 "Requires Level 20"
-              ]
+              ],
+              "source": "Blacksmithing (90)"
             },
             {
               "name": "Staff of Westfall",
@@ -50476,7 +53217,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Movement speed increased by 2% in Elwynn Forest, Westfall, Redridge Mountains, and the Deadmines."
               ],
               "reqLevel": 14,
-              "icon": "inv_staff_10"
+              "icon": "inv_staff_10",
+              "source": "Deadmines quest"
             },
             {
               "name": "Kris of Orgrimmar",
@@ -50498,7 +53240,8 @@ if (typeof window !== 'undefined') {
                 "(8.00 damage per second)",
                 "+4 Stamina",
                 "Equip: Increases healing done by up to 33"
-              ]
+              ],
+              "source": "RFC Quest: Hidden Enemies"
             },
             {
               "name": "Verigan's Fist",
@@ -50523,7 +53266,8 @@ if (typeof window !== 'undefined') {
                 "+10 Spirit",
                 "Chance on hit: Ignite the target in the flames of the Great Forge, dealing 39 to 59 Holyfire damage. Deals 3 times as much damage to Fire Elementals and Earth Elementals.",
                 "Requires Level 20"
-              ]
+              ],
+              "source": "The Test of Righteousness"
             },
             {
               "name": "Twisted Chanter's Staff",
@@ -50543,7 +53287,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.40",
                 "(20.4 damage per second)",
                 "Requires Level 19"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Puncturing Spear",
@@ -50563,7 +53308,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.10",
                 "(20.32 damage per second)",
                 "Requires Level 19"
-              ]
+              ],
+              "source": "Swinegart Spearhide"
             },
             {
               "name": "Gargoyle's Bite",
@@ -50582,8 +53328,10 @@ if (typeof window !== 'undefined') {
                 "Polearm",
                 "Speed 2.90",
                 "(18.97 damage per second)",
+                "+10 Strength",
                 "Requires Level 20"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Blackfang",
@@ -50603,7 +53351,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.50",
                 "(16.3 damage per second)",
                 "Requires Level 20"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Diamond Hammer",
@@ -50623,7 +53372,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.50",
                 "(16.2 damage per second)",
                 "Requires Level 20"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             }
           ],
           "faction": "horde",
@@ -50678,7 +53428,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases damage and healing done by magical spells and effects by up to 34"
               ],
               "reqLevel": 25,
-              "icon": "inv_staff_19"
+              "icon": "inv_staff_19",
+              "source": "Enchanting (140)"
             },
             {
               "name": "Subdued Dragon's Fang",
@@ -50700,7 +53451,8 @@ if (typeof window !== 'undefined') {
                 "+2 Stamina"
               ],
               "reqLevel": 24,
-              "icon": "inv_weapon_shortblade_01"
+              "icon": "inv_weapon_shortblade_01",
+              "source": "Wetlands: Stopping the Cycle"
             },
             {
               "name": "Alliance Outrunner Staff",
@@ -50724,7 +53476,8 @@ if (typeof window !== 'undefined') {
                 "+9 Spirit",
                 "Requires Level 21",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 28"
-              ]
+              ],
+              "source": "Alliance Drop"
             },
             {
               "name": "Headbasher",
@@ -50743,8 +53496,12 @@ if (typeof window !== 'undefined') {
                 "2H Mace",
                 "Speed 2.30",
                 "(23.70 damage per second)",
+                "+9 Strength",
+                "+5 Stamina",
+                "+10 Intellect",
                 "Requires Level 22"
-              ]
+              ],
+              "source": "The Fury Runs Deep"
             },
             {
               "name": "Doomspike",
@@ -50763,8 +53520,11 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.50",
                 "(17.33 damage per second)",
+                "+3 Strength",
+                "+3 Stamina",
                 "Requires Level 22"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Baron's Scepter",
@@ -50788,7 +53548,8 @@ if (typeof window !== 'undefined') {
                 "+3 Stamina",
                 "Requires Level 21",
                 "Equip: Cause party members within 30 yds to regenerate 4 health every 5 sec."
-              ]
+              ],
+              "source": "Baron Silverlaine"
             },
             {
               "name": "Staff of the Shade",
@@ -50807,8 +53568,10 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.60",
                 "(16.54 damage per second)",
+                "+15 Stamina",
                 "Requires Level 22"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Ursine Hammer",
@@ -50827,8 +53590,12 @@ if (typeof window !== 'undefined') {
                 "2H Mace",
                 "Speed 3.20",
                 "(18.44 damage per second)",
+                "+5 Agility",
+                "+5 Intellect",
+                "+5 Spirit",
                 "Requires Level 22"
-              ]
+              ],
+              "source": "What Comes Around..."
             },
             {
               "name": "Dwarven Magestaff",
@@ -50848,7 +53615,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.80",
                 "(18.4 damage per second)",
                 "Requires Level 22"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Den Guardian's Crusher",
@@ -50868,7 +53636,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.90",
                 "(18.28 damage per second)",
                 "Requires Level 22"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             }
           ],
           "faction": "both",
@@ -50924,7 +53693,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases healing done by up to 52"
               ],
               "reqLevel": 21,
-              "icon": "inv_staff_32"
+              "icon": "inv_staff_32",
+              "source": "SM Graveyard: Interrogator Vishas"
             },
             {
               "name": "Subdued Dragon's Fang",
@@ -50946,7 +53716,8 @@ if (typeof window !== 'undefined') {
                 "+2 Stamina"
               ],
               "reqLevel": 24,
-              "icon": "inv_weapon_shortblade_01"
+              "icon": "inv_weapon_shortblade_01",
+              "source": "Wetlands: Stopping the Cycle"
             },
             {
               "name": "Striking Staff",
@@ -50969,7 +53740,8 @@ if (typeof window !== 'undefined') {
                 "+14 Intellect"
               ],
               "reqLevel": 24,
-              "icon": "inv_staff_10"
+              "icon": "inv_staff_10",
+              "source": "Dalaran Dungeon"
             },
             {
               "name": "Slaghammer",
@@ -50989,7 +53761,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.80",
                 "(23.8 damage per second)",
                 "Requires Level 24"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Bloodpike",
@@ -51009,7 +53782,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.20",
                 "(23.13 damage per second)",
                 "Requires Level 23"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Graverobber's Shovel",
@@ -51028,8 +53802,10 @@ if (typeof window !== 'undefined') {
                 "2H Mace",
                 "Speed 3.70",
                 "(22.97 damage per second)",
+                "+10 Stamina",
                 "Requires Level 23"
-              ]
+              ],
+              "source": "Dextren Ward"
             },
             {
               "name": "Dense Triangle Mace",
@@ -51049,7 +53825,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.40",
                 "(22.9 damage per second)",
                 "Requires Level 23"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Twilight Maul",
@@ -51068,8 +53845,10 @@ if (typeof window !== 'undefined') {
                 "2H Mace",
                 "Speed 3.30",
                 "(22.88 damage per second)",
+                "+12 Spell Power",
                 "Requires Level 23"
-              ]
+              ],
+              "source": "Lorgus Jett"
             },
             {
               "name": "Boneslicer",
@@ -51089,7 +53868,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.00",
                 "(22.75 damage per second)",
                 "Requires Level 23"
-              ]
+              ],
+              "source": "Dextren Ward"
             },
             {
               "name": "Beazel's Basher",
@@ -51109,7 +53889,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.50",
                 "(18.4 damage per second)",
                 "Requires Level 24"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             }
           ],
           "faction": "both",
@@ -51162,7 +53943,8 @@ if (typeof window !== 'undefined') {
                 "(20.77 damage per second)",
                 "+12 Stamina",
                 "Equip: Increases healing done by up to 67"
-              ]
+              ],
+              "source": "Excavation Site: Wetlands"
             },
             {
               "name": "Striking Staff",
@@ -51185,7 +53967,8 @@ if (typeof window !== 'undefined') {
                 "+9 Strength",
                 "+6 Stamina",
                 "+14 Intellect"
-              ]
+              ],
+              "source": "Heart of Disruption in City of Dalaran"
             },
             {
               "name": "Dendweller's Hammer",
@@ -51208,7 +53991,8 @@ if (typeof window !== 'undefined') {
                 "Requires Level 26"
               ],
               "reqLevel": 26,
-              "icon": "inv_hammer_09"
+              "icon": "inv_hammer_09",
+              "source": "Level 26 Mace"
             },
             {
               "name": "Solid Iron Maul",
@@ -51231,7 +54015,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases damage and healing done by magical spells and effects by up to 24"
               ],
               "reqLevel": 26,
-              "icon": "inv_hammer_07"
+              "icon": "inv_hammer_07",
+              "source": "Blacksmithing (135)"
             },
             {
               "name": "Death Prophet Spine",
@@ -51254,7 +54039,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases damage and healing done by magical spells and effects by up to 34"
               ],
               "reqLevel": 26,
-              "icon": "inv_staff_17"
+              "icon": "inv_staff_17",
+              "source": "RFK: Aggem Thorncurse"
             },
             {
               "name": "Defender of Dalaran",
@@ -51277,7 +54063,8 @@ if (typeof window !== 'undefined') {
                 "+9 Intellect"
               ],
               "reqLevel": 24,
-              "icon": "inv_hammer_20"
+              "icon": "inv_hammer_20",
+              "source": "Dalaran Dungeon"
             },
             {
               "name": "Gnarled Ash Staff",
@@ -51297,7 +54084,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.20",
                 "(25.6 damage per second)",
                 "Requires Level 26"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Advisor's Gnarled Staff",
@@ -51316,8 +54104,11 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.90",
                 "(24.66 damage per second)",
+                "+10 Stamina",
+                "+6 Intellect",
                 "Requires Level 25"
-              ]
+              ],
+              "source": "Kelm Hargunth"
             },
             {
               "name": "Lorekeeper's Staff",
@@ -51336,8 +54127,11 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.90",
                 "(24.66 damage per second)",
+                "+10 Stamina",
+                "+6 Intellect",
                 "Requires Level 25"
-              ]
+              ],
+              "source": "Illiyana Moonblaze"
             },
             {
               "name": "Looming Gavel",
@@ -51357,7 +54151,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.40",
                 "(19.8 damage per second)",
                 "Requires Level 26"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             }
           ],
           "faction": "both",
@@ -51409,7 +54204,8 @@ if (typeof window !== 'undefined') {
                 "+14 Intellect"
               ],
               "reqLevel": 24,
-              "icon": "inv_staff_10"
+              "icon": "inv_staff_10",
+              "source": "City of Dalaran Quest: Heart of Disruption"
             },
             {
               "name": "Spine of the Devourer",
@@ -51432,7 +54228,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases damage and healing done by magical spells and effects by up to 36"
               ],
               "reqLevel": 28,
-              "icon": "inv_staff_07"
+              "icon": "inv_staff_07",
+              "source": "City of Dalaran: Mana Devourer"
             },
             {
               "name": "Felbough Arm",
@@ -51456,7 +54253,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Improves your chance to hit by 1.0%."
               ],
               "reqLevel": 29,
-              "icon": "inv_spear_08"
+              "icon": "inv_spear_08",
+              "source": "City of Dalaran: Fel Ancient"
             },
             {
               "name": "Ironwood Destroyer",
@@ -51471,8 +54269,10 @@ if (typeof window !== 'undefined') {
               "icon": "inv_mace_05",
               "weaponType": "Two-Handed Mace",
               "lines": [
+                "Use: Use to sketch a location on the Shapers Terrace map.",
                 "Use: Use to sketch a location on the Shapers Terrace map."
-              ]
+              ],
+              "source": "2H Mace from Excavation Site: Wetlands quest (Horrors in the Highland)"
             },
             {
               "name": "Advisor's Gnarled Staff",
@@ -51492,7 +54292,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.90",
                 "(27.8 damage per second)",
                 "Requires Level 28"
-              ]
+              ],
+              "source": "Kelm Hargunth"
             },
             {
               "name": "Lorekeeper's Staff",
@@ -51512,7 +54313,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.90",
                 "(27.8 damage per second)",
                 "Requires Level 28"
-              ]
+              ],
+              "source": "Illiyana Moonblaze"
             },
             {
               "name": "Darkspear Skirmisher's Bludgeon",
@@ -51531,8 +54333,10 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 2.80",
                 "(21.43 damage per second)",
+                "+7 Stamina",
                 "Requires Level 28"
-              ]
+              ],
+              "source": "Creeg Bothunk"
             },
             {
               "name": "Dreamslayer",
@@ -51552,7 +54356,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.10",
                 "(21.4 damage per second)",
                 "Requires Level 28"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Guerrilla's Jagged Mace",
@@ -51571,8 +54376,10 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 2.80",
                 "(21.43 damage per second)",
+                "+7 Stamina",
                 "Requires Level 28"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Scout's Blade",
@@ -51592,7 +54399,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.70",
                 "(21.2 damage per second)",
                 "Requires Level 28"
-              ]
+              ],
+              "source": "Kelm Hargunth"
             }
           ],
           "faction": "both",
@@ -51646,7 +54454,8 @@ if (typeof window !== 'undefined') {
                 "+16 Spirit",
                 "Requires Level 29",
                 "Equip: Increases healing done by up to 71"
-              ]
+              ],
+              "source": "RFK: Earthcaller Halmgar"
             },
             {
               "name": "Nimboya's Mystical Staff",
@@ -51669,7 +54478,8 @@ if (typeof window !== 'undefined') {
                 "+8 Intellect",
                 "+15 Spirit",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 38"
-              ]
+              ],
+              "source": "Saving Yenniku quest in STV"
             },
             {
               "name": "Healer's Staff",
@@ -51691,7 +54501,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases healing done by up to 67"
               ],
               "reqLevel": 24,
-              "icon": "inv_staff_10"
+              "icon": "inv_staff_10",
+              "source": "Excavation Site 4 quest"
             },
             {
               "name": "Dark Hearted Hammer",
@@ -51713,7 +54524,8 @@ if (typeof window !== 'undefined') {
                 "+8 Stamina"
               ],
               "reqLevel": 30,
-              "icon": "inv_hammer_16"
+              "icon": "inv_hammer_16",
+              "source": "STV Quest: Colonel Kurzen"
             },
             {
               "name": "Fallen Dragon's Scepter",
@@ -51736,7 +54548,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases damage and healing done by magical spells and effects by up to 36"
               ],
               "reqLevel": 24,
-              "icon": "inv_staff_08"
+              "icon": "inv_staff_08",
+              "source": "Wetlands Quest: Stopping the Cycle"
             },
             {
               "name": "Rage of the Storm",
@@ -51759,7 +54572,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases the damage dealt by your Stormstrike ability by 10%."
               ],
               "reqLevel": 30,
-              "icon": "inv_mace_42"
+              "icon": "inv_mace_42",
+              "source": "Custom Boss Drop"
             },
             {
               "name": "Whirlwind Warhammer",
@@ -51782,7 +54596,8 @@ if (typeof window !== 'undefined') {
                 "+16 Strength",
                 "+15 Stamina",
                 "Requires Level 30"
-              ]
+              ],
+              "source": "Whirlwind Weapon"
             },
             {
               "name": "Viscous Hammer",
@@ -51802,7 +54617,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.90",
                 "(30.2 damage per second)",
                 "Requires Level 30"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Cobalt Crusher",
@@ -51822,7 +54638,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.20",
                 "(28.91 damage per second)",
                 "Requires Level 29"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Ironspine's Fist",
@@ -51844,7 +54661,8 @@ if (typeof window !== 'undefined') {
                 "(22.92 damage per second)",
                 "+7 Strength",
                 "Requires Level 30"
-              ]
+              ],
+              "source": "Ironspine"
             }
           ],
           "faction": "both",
@@ -51900,7 +54718,8 @@ if (typeof window !== 'undefined') {
                 "+6 Spirit",
                 "Requires Level 35",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 48"
-              ]
+              ],
+              "source": "Maraudon: Khan Jehn"
             },
             {
               "name": "Illusionary Rod",
@@ -51926,7 +54745,8 @@ if (typeof window !== 'undefined') {
                 "Requires Level 34",
                 "Equip: Improves your chance to get a critical strike by 1.0%.",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 44"
-              ]
+              ],
+              "source": "SM Library: Arcanist Doan"
             },
             {
               "name": "Rock Pulverizer",
@@ -51947,7 +54767,8 @@ if (typeof window !== 'undefined') {
                 "Equip: +34 Attack Power."
               ],
               "reqLevel": 30,
-              "icon": "inv_hammer_17"
+              "icon": "inv_hammer_17",
+              "source": "Badlands Quest: Murdaloc"
             },
             {
               "name": "Scavenged Magram Armament",
@@ -51971,7 +54792,8 @@ if (typeof window !== 'undefined') {
                 "+14 Stamina",
                 "Requires Level 35",
                 "Equip: +12 Attack Power."
-              ]
+              ],
+              "source": "Khan Jehn"
             },
             {
               "name": "Grim Reaper",
@@ -51991,7 +54813,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.10",
                 "(35.6 damage per second)",
                 "Requires Level 35"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Black Duskwood Staff",
@@ -52011,7 +54834,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.80",
                 "(33.6 damage per second)",
                 "Requires Level 33"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "The Shoveler",
@@ -52031,7 +54855,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.40",
                 "(32.5 damage per second)",
                 "Requires Level 32"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Poison-tipped Bone Spear",
@@ -52051,7 +54876,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.30",
                 "(31.3 damage per second)",
                 "Requires Level 31"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Loksey's Training Stick",
@@ -52071,7 +54897,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.10",
                 "(31.29 damage per second)",
                 "Requires Level 31"
-              ]
+              ],
+              "source": "Houndmaster Loksey"
             },
             {
               "name": "Black Menace",
@@ -52092,8 +54919,10 @@ if (typeof window !== 'undefined') {
                 "31 - 58 Damage\tSpeed 1.50",
                 "(29.67 damage per second)",
                 "Chance on hit: Sends a shadowy bolt at the enemy causing 77 Shadow damage.",
+                "Chance on hit: Sends a shadowy bolt at the enemy causing 77 Shadow damage.",
                 "Requires Level 34"
-              ]
+              ],
+              "source": "In the Name of the Light"
             }
           ],
           "faction": "both",
@@ -52149,7 +54978,8 @@ if (typeof window !== 'undefined') {
                 "Requires Level 35",
                 "Equip: Improves your chance to hit by 1.5%.",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 60"
-              ]
+              ],
+              "source": "World drop BoE staff"
             },
             {
               "name": "Dendweller's Hammer",
@@ -52172,7 +55002,8 @@ if (typeof window !== 'undefined') {
                 "Requires Level 26"
               ],
               "reqLevel": 26,
-              "icon": "inv_hammer_09"
+              "icon": "inv_hammer_09",
+              "source": "Custom 2H Mace Drop"
             },
             {
               "name": "Hammer of Expertise",
@@ -52192,7 +55023,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.10",
                 "(36.90 damage per second)",
                 "Requires Level 40"
-              ]
+              ],
+              "source": "World Drop Epic"
             },
             {
               "name": "Gut Ripper",
@@ -52212,7 +55044,8 @@ if (typeof window !== 'undefined') {
                 "Speed 1.80",
                 "(33.89 damage per second)",
                 "Requires Level 40"
-              ]
+              ],
+              "source": "World Drop Epic"
             },
             {
               "name": "Ardent Custodian",
@@ -52231,8 +55064,10 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 2.10",
                 "(32.86 damage per second)",
+                "+100 Armor",
                 "Requires Level 38"
-              ]
+              ],
+              "source": "World Drop Epic"
             },
             {
               "name": "Primitive Fishing Pole",
@@ -52251,8 +55086,12 @@ if (typeof window !== 'undefined') {
                 "Polearm",
                 "Speed 3.30",
                 "(39.55 damage per second)",
+                "+7 Strength",
+                "+10 Agility",
+                "+20 Stamina",
                 "Requires Level 40"
-              ]
+              ],
+              "source": "Friz Frazzlespark"
             },
             {
               "name": "The Skullcracker",
@@ -52271,8 +55110,10 @@ if (typeof window !== 'undefined') {
                 "2H Mace",
                 "Speed 3.30",
                 "(39.55 damage per second)",
+                "+22 Spirit",
                 "Requires Level 40"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Khoo's Point",
@@ -52292,7 +55133,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.50",
                 "(38.8 damage per second)",
                 "Requires Level 39"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Advisor's Gnarled Staff",
@@ -52312,7 +55154,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.90",
                 "(38.1 damage per second)",
                 "Requires Level 38"
-              ]
+              ],
+              "source": "Kelm Hargunth"
             },
             {
               "name": "Lorekeeper's Staff",
@@ -52332,7 +55175,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.90",
                 "(38.1 damage per second)",
                 "Requires Level 38"
-              ]
+              ],
+              "source": "Illiyana Moonblaze"
             }
           ],
           "faction": "both",
@@ -52386,7 +55230,8 @@ if (typeof window !== 'undefined') {
                 "+4 Stamina",
                 "+17 Spirit",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 38"
-              ]
+              ],
+              "source": "A Hero's Welcome quest in Feralas"
             },
             {
               "name": "Strength of the Treant",
@@ -52409,7 +55254,8 @@ if (typeof window !== 'undefined') {
                 "+7 Stamina",
                 "+18 Intellect",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 42"
-              ]
+              ],
+              "source": "Weapons of Spirit quest in Feralas"
             },
             {
               "name": "Spellshifter Rod",
@@ -52432,7 +55278,8 @@ if (typeof window !== 'undefined') {
                 "+9 Stamina",
                 "+23 Intellect",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 54"
-              ]
+              ],
+              "source": "Quest: Tiara of the Deep"
             },
             {
               "name": "Grisly Sack of Skulls",
@@ -52454,7 +55301,8 @@ if (typeof window !== 'undefined') {
                 "+2 Stamina",
                 "+4 Spirit",
                 "Requires Level 12"
-              ]
+              ],
+              "source": "World Drop"
             },
             {
               "name": "Gul'gash's Greathammer",
@@ -52477,7 +55325,8 @@ if (typeof window !== 'undefined') {
                 "+19 Strength",
                 "Requires Level 44",
                 "Equip: Increases damage done by magical spells and effects by up to 21"
-              ]
+              ],
+              "source": "Feralas Drop"
             },
             {
               "name": "Emerald Watcher's Dreamstaff",
@@ -52501,7 +55350,8 @@ if (typeof window !== 'undefined') {
                 "+19 Spirit",
                 "Requires Level 44",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 56"
-              ]
+              ],
+              "source": "Custom Staff Drop"
             },
             {
               "name": "Staff of Lore",
@@ -52524,7 +55374,8 @@ if (typeof window !== 'undefined') {
                 "+5 Intellect",
                 "+18 Spirit",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 40"
-              ]
+              ],
+              "source": "Gahz'ridian quest in Tanaris"
             },
             {
               "name": "Headspike",
@@ -52543,8 +55394,11 @@ if (typeof window !== 'undefined') {
                 "Polearm",
                 "Speed 3.00",
                 "(44.17 damage per second)",
+                "+15 Strength",
+                "+18 Stamina",
                 "Requires Level 46"
-              ]
+              ],
+              "source": "Atal'alarion"
             },
             {
               "name": "The Chief's Enforcer",
@@ -52564,7 +55418,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.40",
                 "(43.53 damage per second)",
                 "Requires Level 45"
-              ]
+              ],
+              "source": "Chief Ukorz Sandscalp"
             },
             {
               "name": "Blanchard's Stout",
@@ -52584,7 +55439,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.10",
                 "(43.4 damage per second)",
                 "Requires Level 45"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             }
           ],
           "faction": "both",
@@ -52634,7 +55490,8 @@ if (typeof window !== 'undefined') {
                 "103 - 156 Damage\tSpeed 3.80",
                 "(34.08 damage per second)",
                 "Equip: Increases healing done by up to 112"
-              ]
+              ],
+              "source": "Corruption of Earth and Seed quest in Maraudon"
             },
             {
               "name": "Kindling Stave",
@@ -52661,7 +55518,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Improves your chance to get a critical strike by 1.0%.",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 60",
                 "Equip: Harmful spell casts have a chance to deal 60 to 81 Fire damage. Deals 3 times as much damage to Plants. (10ms cooldown)"
-              ]
+              ],
+              "source": "BRD: Pyromancer Loregrain"
             },
             {
               "name": "Enchanted Battlehammer",
@@ -52685,7 +55543,8 @@ if (typeof window !== 'undefined') {
                 "Requires Level 51",
                 "Equip: Increases your chance to Parry an attack by 1.4%.",
                 "Equip: Improves your chance to hit by 2.0%."
-              ]
+              ],
+              "source": "Blacksmithing (280)"
             },
             {
               "name": "Spire of Hakkar",
@@ -52710,7 +55569,8 @@ if (typeof window !== 'undefined') {
                 "Requires Level 49",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 62",
                 "Equip: Harmful spell casts have a chance to steal 112 life from the target enemy over 8 sec. (10ms cooldown)"
-              ]
+              ],
+              "source": "Sunken Temple"
             },
             {
               "name": "Hammer of the Northern Wind",
@@ -52730,7 +55590,8 @@ if (typeof window !== 'undefined') {
                 "Speed 2.10",
                 "(39.52 damage per second)",
                 "Requires Level 49"
-              ]
+              ],
+              "source": "World Drop Epic"
             },
             {
               "name": "Glowing Brightwood Staff",
@@ -52750,7 +55611,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.10",
                 "(38.1 damage per second)",
                 "Requires Level 49"
-              ]
+              ],
+              "source": "World Drop Epic"
             },
             {
               "name": "Ice Barbed Spear",
@@ -52770,7 +55632,8 @@ if (typeof window !== 'undefined') {
                 "Speed 3.60",
                 "(53.9 damage per second)",
                 "Requires Level 51"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Thorium Poleaxe",
@@ -52789,8 +55652,12 @@ if (typeof window !== 'undefined') {
                 "Polearm",
                 "Speed 3.40",
                 "(48.97 damage per second)",
+                "+13 Strength",
+                "+25 Agility",
+                "+10 Stamina",
                 "Requires Level 52"
-              ]
+              ],
+              "source": "Thorium Poleaxe"
             },
             {
               "name": "Frenzied Striker",
@@ -52809,8 +55676,10 @@ if (typeof window !== 'undefined') {
                 "Polearm",
                 "Speed 2.80",
                 "(48.21 damage per second)",
+                "+20 Hit",
                 "Requires Level 51"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Thorium Greatmace",
@@ -52829,8 +55698,10 @@ if (typeof window !== 'undefined') {
                 "2H Mace",
                 "Speed 3.60",
                 "(47.36 damage per second)",
+                "+21 Strength",
                 "Requires Level 50"
-              ]
+              ],
+              "source": "Thorium Greatmace"
             }
           ],
           "faction": "both",
@@ -52843,6 +55714,7 @@ if (typeof window !== 'undefined') {
             "Two-Hand",
             "140 - 211 Damage\tSpeed 3.70",
             "(47.43 damage per second)",
+            "Chance on hit: Stuns target for 8 sec.",
             "Requires Level 50",
             "Chance on hit: Stuns target for 8 sec."
           ]
@@ -52882,7 +55754,8 @@ if (typeof window !== 'undefined') {
                 "+20 Stamina",
                 "+15 Intellect",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 54"
-              ]
+              ],
+              "source": "The Corpulent One quest in EPL"
             },
             {
               "name": "Corrupted Blackwood Staff",
@@ -52905,7 +55778,8 @@ if (typeof window !== 'undefined') {
                 "+11 Stamina",
                 "+22 Intellect",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 54"
-              ]
+              ],
+              "source": "Into The Maw of Madness quest in Silithus"
             },
             {
               "name": "Wisepaw Totem",
@@ -52929,7 +55803,8 @@ if (typeof window !== 'undefined') {
                 "+23 Intellect",
                 "Requires Level 53",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 66"
-              ]
+              ],
+              "source": "Mount Hyjal caster staff"
             },
             {
               "name": "Hammer of the Grand Crusader",
@@ -52941,7 +55816,8 @@ if (typeof window !== 'undefined') {
               "iLvl": 58,
               "reqLevel": 52,
               "stats": "",
-              "icon": "inv_hammer_04"
+              "icon": "inv_hammer_04",
+              "source": "Stratholme 2H Mace"
             },
             {
               "name": "Rod of the Ogre Magi",
@@ -52953,7 +55829,8 @@ if (typeof window !== 'undefined') {
               "iLvl": 58,
               "reqLevel": 52,
               "stats": "",
-              "icon": "inv_staff_13"
+              "icon": "inv_staff_13",
+              "source": "DM North Tribute Run"
             },
             {
               "name": "Ironbark Staff",
@@ -52979,7 +55856,8 @@ if (typeof window !== 'undefined') {
                 "Requires Level 55",
                 "Equip: Improves your chance to get a critical strike by 2.0%.",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 88"
-              ]
+              ],
+              "source": "Alterac Valley (Revered)"
             },
             {
               "name": "Sulfuras, Hand of Ragnaros",
@@ -52998,8 +55876,11 @@ if (typeof window !== 'undefined') {
                 "2H Mace",
                 "Speed 3.70",
                 "(80.41 damage per second)",
+                "+12 Strength",
+                "+12 Stamina",
                 "Requires Level 60"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Atiesh, Greatstaff of the Guardian",
@@ -53018,8 +55899,14 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.90",
                 "(64.34 damage per second)",
+                "+31 Stamina",
+                "+32 Intellect",
+                "+24 Spirit",
+                "+150 Spell Power",
+                "+20 Hit",
                 "Requires Level 60"
-              ]
+              ],
+              "source": "Atiesh, Greatstaff of the Guardian"
             },
             {
               "name": "Atiesh, Greatstaff of the Guardian",
@@ -53038,8 +55925,13 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.90",
                 "(64.34 damage per second)",
+                "+30 Stamina",
+                "+29 Intellect",
+                "+183 Spell Power",
+                "+28 Crit",
                 "Requires Level 60"
-              ]
+              ],
+              "source": "Atiesh, Greatstaff of the Guardian"
             },
             {
               "name": "Grand Marshal's Polearm",
@@ -53058,8 +55950,11 @@ if (typeof window !== 'undefined') {
                 "Polearm",
                 "Speed 3.40",
                 "(80.29 damage per second)",
+                "+27 Agility",
+                "+47 Stamina, Improves your chance to get a critical strike by 2.0%.",
                 "Requires Level 60"
-              ]
+              ],
+              "source": "Captain O'Neal"
             }
           ],
           "faction": "both",
@@ -53099,7 +55994,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 1,
               "stats": "+1 Spirit",
               "icon": "inv_axe_10",
-              "weaponType": "One-Handed Mace"
+              "weaponType": "One-Handed Mace",
+              "source": "Starter vendor mace"
             },
             {
               "name": "Honed Greathammer",
@@ -53118,8 +56014,11 @@ if (typeof window !== 'undefined') {
                 "2H Mace",
                 "Speed 3.20",
                 "(9.06 damage per second)",
+                "+2 Strength",
+                "+2 Spirit",
                 "Requires Level 6"
-              ]
+              ],
+              "source": "Return to Valanaar"
             },
             {
               "name": "Balanced Quarterstaff",
@@ -53138,8 +56037,11 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.20",
                 "(8.86 damage per second)",
+                "+2 Stamina",
+                "+2 Spirit",
                 "Requires Level 6"
-              ]
+              ],
+              "source": "Return to Valanaar"
             },
             {
               "name": "Coldridge Hammer",
@@ -53158,8 +56060,11 @@ if (typeof window !== 'undefined') {
                 "2H Mace",
                 "Speed 2.70",
                 "(8.33 damage per second)",
+                "+1 Strength",
+                "+1 Spirit",
                 "Requires Level 6"
-              ]
+              ],
+              "source": "Protecting the Herd"
             },
             {
               "name": "Wrathroot",
@@ -53178,8 +56083,10 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 3.30",
                 "(7.12 damage per second)",
+                "+1 Intellect",
                 "Requires Level 5"
-              ]
+              ],
+              "source": "Wrathvine"
             },
             {
               "name": "Apprentice's Spellstaff",
@@ -53201,7 +56108,8 @@ if (typeof window !== 'undefined') {
                 "(6.36 damage per second)",
                 "+2 Intellect",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 4"
-              ]
+              ],
+              "source": "Rare Books"
             },
             {
               "name": "Roofing Hammer",
@@ -53220,8 +56128,10 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 2.40",
                 "(5.42 damage per second)",
+                "+1 Spirit",
                 "Requires Level 5"
-              ]
+              ],
+              "source": "Deliver the News"
             },
             {
               "name": "Gritroot Staff",
@@ -53244,7 +56154,8 @@ if (typeof window !== 'undefined') {
                 "+1 Stamina",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 2",
                 "Requires Level 4"
-              ]
+              ],
+              "source": "The Relics of Wakening"
             }
           ]
         },
@@ -53277,7 +56188,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 6,
               "stats": "+2 Spirit",
               "icon": "inv_hammer_01",
-              "weaponType": "One-Handed Mace"
+              "weaponType": "One-Handed Mace",
+              "source": "Starter vendor mace"
             },
             {
               "name": "Apprentice's Spellstaff",
@@ -53289,7 +56201,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 8,
               "stats": "+3 Spirit, +2 Intellect",
               "icon": "inv_staff_02",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "source": "Darkshore / Silverpine drop"
             },
             {
               "name": "Hammerbone",
@@ -53312,7 +56225,8 @@ if (typeof window !== 'undefined') {
                 "+7 Strength",
                 "+10 Spirit",
                 "Requires Level 10"
-              ]
+              ],
+              "source": "Leaders of the Fang"
             },
             {
               "name": "Hammer of Orgrimmar",
@@ -53335,7 +56249,8 @@ if (typeof window !== 'undefined') {
                 "+3 Strength",
                 "+3 Spirit",
                 "Requires Level 9"
-              ]
+              ],
+              "source": "Hidden Enemies"
             },
             {
               "name": "Staff of Orgrimmar",
@@ -53359,7 +56274,8 @@ if (typeof window !== 'undefined') {
                 "+6 Intellect",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 18",
                 "Requires Level 9"
-              ]
+              ],
+              "source": "Hidden Enemies"
             },
             {
               "name": "Kris of Orgrimmar",
@@ -53382,7 +56298,8 @@ if (typeof window !== 'undefined') {
                 "+4 Stamina",
                 "Equip: Increases healing done by up to 33",
                 "Requires Level 9"
-              ]
+              ],
+              "source": "Hidden Enemies"
             },
             {
               "name": "Ceranium Rod",
@@ -53401,8 +56318,11 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.70",
                 "(10.74 damage per second)",
+                "+7 Stamina",
+                "+14 Spell Power",
                 "Requires Level 10"
-              ]
+              ],
+              "source": "The Weaver"
             },
             {
               "name": "Wind Rider Staff",
@@ -53421,8 +56341,11 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.80",
                 "(9.64 damage per second)",
+                "+6 Spirit",
+                "+12 Spell Power",
                 "Requires Level 10"
-              ]
+              ],
+              "source": "Cry of the Thunderhawk"
             }
           ]
         },
@@ -53455,7 +56378,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 11,
               "stats": "+4 Spirit, Equip: Increases healing done by up to 33 and damage done by up to 11.",
               "icon": "inv_mace_01",
-              "weaponType": "One-Handed Mace"
+              "weaponType": "One-Handed Mace",
+              "source": "Oggleflint (Ragefire Chasm)"
             },
             {
               "name": "Scepter of the Abandoned",
@@ -53467,7 +56391,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 14,
               "stats": "+4 Stamina, +4 Intellect",
               "icon": "inv_mace_01",
-              "weaponType": "Main Hand Mace"
+              "weaponType": "Main Hand Mace",
+              "source": "The Abandoned (Ruins of Lordaeron)"
             },
             {
               "name": "Staff of the Dor'Danil",
@@ -53479,7 +56404,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 12,
               "stats": "+4 Intellect, +4 Spirit",
               "icon": "inv_staff_02",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "source": "Darkshore / Bloodmyst quest reward"
             },
             {
               "name": "Rhahk'Zor's Hammer",
@@ -53502,7 +56428,8 @@ if (typeof window !== 'undefined') {
                 "+8 Stamina",
                 "Requires Level 16",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 8"
-              ]
+              ],
+              "source": "Rhahk'Zor"
             },
             {
               "name": "Segmented Spider Leg",
@@ -53525,7 +56452,8 @@ if (typeof window !== 'undefined') {
                 "+9 Agility",
                 "+5 Spirit",
                 "Requires Level 15"
-              ]
+              ],
+              "source": "Witherfang"
             },
             {
               "name": "Gnarled Necromancer's Staff",
@@ -53549,7 +56477,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases damage and healing done by magical spells and effects by up to 26",
                 "Equip: Increases movement speed by 2% in Silverpine Forest and Hillsbrad Foothills.",
                 "Requires Level 15"
-              ]
+              ],
+              "source": "The Wrath of Rath'mael"
             },
             {
               "name": "Staff of Westfall",
@@ -53574,7 +56503,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases healing done by up to 48",
                 "Equip: Movement speed increased by 2% in Elwynn Forest, Westfall, Redridge Mountains, and the Deadmines.",
                 "Requires Level 14"
-              ]
+              ],
+              "source": "The Defias Brotherhood"
             },
             {
               "name": "Emberstone Staff",
@@ -53598,7 +56528,8 @@ if (typeof window !== 'undefined') {
                 "+8 Fire Resistance",
                 "Requires Level 17",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 24"
-              ]
+              ],
+              "source": "Captain Greenskin"
             }
           ]
         },
@@ -53631,7 +56562,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 18,
               "stats": "+7 Spirit, Equip: Increases healing done by up to 45 and damage done by up to 15.",
               "icon": "inv_staff_08",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "source": "Verdan the Everliving (Wailing Caverns)"
             },
             {
               "name": "Crescent Staff",
@@ -53643,7 +56575,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 15,
               "stats": "+7 Intellect, +7 Spirit, +7 Stamina",
               "icon": "inv_staff_02",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "source": "Leaders of the Fang quest (Wailing Caverns)"
             },
             {
               "name": "Coldspire Staff",
@@ -53655,7 +56588,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 17,
               "stats": "+7 Intellect, +5 Spirit, +6 Frost Dmg",
               "icon": "inv_staff_08",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "source": "Rath'mael (Ruins of Lordaeron)"
             },
             {
               "name": "Verigan's Fist",
@@ -53680,7 +56614,8 @@ if (typeof window !== 'undefined') {
                 "+10 Spirit",
                 "Chance on hit: Ignite the target in the flames of the Great Forge, dealing 39 to 59 Holyfire damage. Deals 3 times as much damage to Fire Elementals and Earth Elementals.",
                 "Requires Level 20"
-              ]
+              ],
+              "source": "The Test of Righteousness"
             },
             {
               "name": "Alliance Outrunner Staff",
@@ -53704,7 +56639,8 @@ if (typeof window !== 'undefined') {
                 "+9 Spirit",
                 "Requires Level 21",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 28"
-              ]
+              ],
+              "source": "Marcus Bel"
             },
             {
               "name": "Staff of the Blessed Seer",
@@ -53723,8 +56659,12 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 3.00",
                 "(15.67 damage per second)",
+                "+9 Stamina",
+                "+10 Spirit",
+                "+28 Spell Power",
                 "Requires Level 20"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Evocator's Blade",
@@ -53743,8 +56683,12 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.60",
                 "(10.94 damage per second)",
+                "+2 Intellect",
+                "+5 Spirit",
+                "+28 Spell Power",
                 "Requires Level 20"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Frostbitten Staff",
@@ -53763,8 +56707,10 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.40",
                 "(15.83 damage per second)",
+                "+6 Spirit",
                 "Requires Level 19"
-              ]
+              ],
+              "source": "Leveling Drop / Vendor"
             }
           ]
         },
@@ -53797,7 +56743,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 21,
               "stats": "+5 Stamina, +12 Spirit, Equip: Increases healing done by up to 52 and damage done by up to 17.",
               "icon": "inv_staff_12",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "source": "Odo the Blindwatcher (SFK)"
             },
             {
               "name": "Rod of the Sleepwalker",
@@ -53809,7 +56756,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 24,
               "stats": "+11 Intellect, +10 Spirit",
               "icon": "inv_staff_08",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "source": "Twilight Lord Kelris (Blackfathom Deeps)"
             },
             {
               "name": "Striking Staff",
@@ -53833,7 +56781,8 @@ if (typeof window !== 'undefined') {
                 "+6 Stamina",
                 "+14 Intellect",
                 "Requires Level 24"
-              ]
+              ],
+              "source": "Heart of Disruption"
             },
             {
               "name": "Defender of Dalaran",
@@ -53857,7 +56806,8 @@ if (typeof window !== 'undefined') {
                 "+13 Stamina",
                 "+9 Intellect",
                 "Requires Level 24"
-              ]
+              ],
+              "source": "Heart of Disruption"
             },
             {
               "name": "Advisor's Gnarled Staff",
@@ -53876,8 +56826,11 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.90",
                 "(24.66 damage per second)",
+                "+10 Stamina",
+                "+6 Intellect",
                 "Requires Level 25"
-              ]
+              ],
+              "source": "Kelm Hargunth"
             },
             {
               "name": "Lorekeeper's Staff",
@@ -53896,8 +56849,11 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.90",
                 "(24.66 damage per second)",
+                "+10 Stamina",
+                "+6 Intellect",
                 "Requires Level 25"
-              ]
+              ],
+              "source": "Illiyana Moonblaze"
             },
             {
               "name": "Headbasher",
@@ -53916,8 +56872,12 @@ if (typeof window !== 'undefined') {
                 "2H Mace",
                 "Speed 2.30",
                 "(23.70 damage per second)",
+                "+9 Strength",
+                "+5 Stamina",
+                "+10 Intellect",
                 "Requires Level 22"
-              ]
+              ],
+              "source": "The Fury Runs Deep"
             },
             {
               "name": "Twilight Maul",
@@ -53936,8 +56896,10 @@ if (typeof window !== 'undefined') {
                 "2H Mace",
                 "Speed 3.30",
                 "(22.88 damage per second)",
+                "+12 Spell Power",
                 "Requires Level 23"
-              ]
+              ],
+              "source": "Lorgus Jett"
             }
           ]
         },
@@ -53970,7 +56932,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 30,
               "stats": "+3 Stamina, +7 Spirit, Equip: Increases healing done by up to 75 and damage done by up to 25.",
               "icon": "inv_mace_01",
-              "weaponType": "Main Hand Mace"
+              "weaponType": "Main Hand Mace",
+              "source": "Dark Iron Ambassador (Gnomeregan)"
             },
             {
               "name": "Death Speaker Scepter",
@@ -53982,7 +56945,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 28,
               "stats": "Equip: Increases healing done by up to 68. Equip: Restores 12 Health per 5 sec.",
               "icon": "inv_mace_01",
-              "weaponType": "One-Handed Mace"
+              "weaponType": "One-Handed Mace",
+              "source": "Death Speaker Jargba (Razorfen Kraul)"
             },
             {
               "name": "Wind Spirit Staff",
@@ -53994,7 +56958,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 29,
               "stats": "+6 Stamina, +16 Spirit, Equip: Increases healing done by up to 71 and damage done by up to 23.",
               "icon": "inv_staff_08",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "source": "Earthcaller Halmgar (Razorfen Kraul)"
             },
             {
               "name": "Spine of the Devourer",
@@ -54017,7 +56982,8 @@ if (typeof window !== 'undefined') {
                 "+14 Stamina",
                 "Requires Level 28",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 36"
-              ]
+              ],
+              "source": "Mana Devourer"
             },
             {
               "name": "Hydrocane",
@@ -54036,8 +57002,10 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.80",
                 "(19.82 damage per second)",
+                "+36 Spell Power",
                 "Requires Level 27"
-              ]
+              ],
+              "source": "Viscous Fallout"
             },
             {
               "name": "Death Prophet Spine",
@@ -54060,7 +57028,8 @@ if (typeof window !== 'undefined') {
                 "+11 Stamina",
                 "Requires Level 26",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 34"
-              ]
+              ],
+              "source": "Aggem Thorncurse"
             },
             {
               "name": "Tendonscraper Dagger",
@@ -54083,7 +57052,8 @@ if (typeof window !== 'undefined') {
                 "+5 Stamina",
                 "Requires Level 28",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 36"
-              ]
+              ],
+              "source": "Lyn the Ignored"
             },
             {
               "name": "Clever Expeditionary's Spellblade",
@@ -54102,8 +57072,12 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.40",
                 "(14.29 damage per second)",
+                "+4 Stamina",
+                "+6 Intellect",
+                "+3 Spirit",
                 "Requires Level 28"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             }
           ]
         },
@@ -54136,7 +57110,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 34,
               "stats": "+15 Intellect, +10 Spirit, +7 Stamina",
               "icon": "inv_staff_02",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "source": "Arcanist Doan (SM Library)"
             },
             {
               "name": "Rage of the Storm",
@@ -54160,7 +57135,8 @@ if (typeof window !== 'undefined') {
                 "+12 Intellect",
                 "Equip: Increases the damage dealt by your Stormstrike ability by 10%.",
                 "Requires Level 30"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Hypnotic Blade",
@@ -54184,7 +57160,8 @@ if (typeof window !== 'undefined') {
                 "+3 Spirit",
                 "Requires Level 34",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 44"
-              ]
+              ],
+              "source": "Arcanist Doan"
             },
             {
               "name": "Swinetusk Shank",
@@ -54208,7 +57185,8 @@ if (typeof window !== 'undefined') {
                 "+4 Spirit",
                 "Requires Level 30",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 40"
-              ]
+              ],
+              "source": "Agathelos the Raging"
             },
             {
               "name": "Silver Spade",
@@ -54231,7 +57209,8 @@ if (typeof window !== 'undefined') {
                 "+4 Stamina",
                 "+15 Spirit",
                 "Requires Level 30"
-              ]
+              ],
+              "source": "Venture Company Mining"
             },
             {
               "name": "Nimboya's Mystical Staff",
@@ -54255,7 +57234,8 @@ if (typeof window !== 'undefined') {
                 "+15 Spirit",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 38",
                 "Requires Level 30"
-              ]
+              ],
+              "source": "Saving Yenniku"
             },
             {
               "name": "Mindslicer",
@@ -54278,7 +57258,8 @@ if (typeof window !== 'undefined') {
                 "+7 Intellect",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 34",
                 "Requires Level 30"
-              ]
+              ],
+              "source": "Call to Arms"
             },
             {
               "name": "Madman's Blade",
@@ -54301,7 +57282,8 @@ if (typeof window !== 'undefined') {
                 "+7 Spirit",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 32",
                 "Requires Level 30"
-              ]
+              ],
+              "source": "Colonel Kurzen"
             }
           ]
         },
@@ -54334,7 +57316,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 34,
               "stats": "+4 Strength, +3 Spirit, Equip: Increases damage and healing by up to 16.",
               "icon": "inv_mace_01",
-              "weaponType": "One-Handed Mace"
+              "weaponType": "One-Handed Mace",
+              "source": "SM Quest (In the Name of the Light)"
             },
             {
               "name": "Galgann's Firehammer",
@@ -54346,7 +57329,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 38,
               "stats": "+8 Intellect, +6 Spirit",
               "icon": "inv_mace_08",
-              "weaponType": "One-Handed Mace"
+              "weaponType": "One-Handed Mace",
+              "source": "Galgann Firehammer (Uldaman)"
             },
             {
               "name": "Staff of Jordan",
@@ -54371,7 +57355,8 @@ if (typeof window !== 'undefined') {
                 "Requires Level 35",
                 "Equip: Improves your chance to hit by 1.5%.",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 60"
-              ]
+              ],
+              "source": "World Drop Epic"
             },
             {
               "name": "Mograine's Might",
@@ -54395,7 +57380,8 @@ if (typeof window !== 'undefined') {
                 "+14 Stamina",
                 "+16 Intellect",
                 "Requires Level 39"
-              ]
+              ],
+              "source": "Scarlet Commander Mograine"
             },
             {
               "name": "Coldbringer Spine",
@@ -54414,8 +57400,10 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.80",
                 "(28.21 damage per second)",
+                "+20 Spirit, Improves your chance to hit by 1.0%.",
                 "Requires Level 38"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Greatstaff of the Necrokhans",
@@ -54440,7 +57428,8 @@ if (typeof window !== 'undefined') {
                 "+6 Spirit",
                 "Requires Level 35",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 48"
-              ]
+              ],
+              "source": "Khan Jehn"
             },
             {
               "name": "Celestial Stave",
@@ -54463,7 +57452,8 @@ if (typeof window !== 'undefined') {
                 "+8 Intellect",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 46",
                 "Requires Level 35"
-              ]
+              ],
+              "source": "Celestial Power"
             },
             {
               "name": "Clever Expeditionary's Spellblade",
@@ -54482,8 +57472,12 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.40",
                 "(19.64 damage per second)",
+                "+5 Stamina",
+                "+8 Intellect",
+                "+3 Spirit",
                 "Requires Level 38"
-              ]
+              ],
+              "source": "Bryanna Embreeze"
             }
           ]
         },
@@ -54516,7 +57510,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 40,
               "stats": "+5 Intellect, +5 Spirit",
               "icon": "inv_mace_07",
-              "weaponType": "One-Handed Mace"
+              "weaponType": "One-Handed Mace",
+              "source": "Digmaster Shovelphlange (Uldaman)"
             },
             {
               "name": "The Skullcracker",
@@ -54535,8 +57530,10 @@ if (typeof window !== 'undefined') {
                 "2H Mace",
                 "Speed 3.30",
                 "(39.55 damage per second)",
+                "+22 Spirit",
                 "Requires Level 40"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Emerald Watcher's Dreamstaff",
@@ -54560,7 +57557,8 @@ if (typeof window !== 'undefined') {
                 "+19 Spirit",
                 "Requires Level 44",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 56"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Spellshifter Rod",
@@ -54584,7 +57582,8 @@ if (typeof window !== 'undefined') {
                 "+23 Intellect",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 54",
                 "Requires Level 40"
-              ]
+              ],
+              "source": "Tiara of the Deep"
             },
             {
               "name": "Jhordy's Misplaced Screwdriver",
@@ -54603,8 +57602,12 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.90",
                 "(30.26 damage per second)",
+                "+6 Strength",
+                "+9 Agility",
+                "-1 Intellect",
                 "Requires Level 40"
-              ]
+              ],
+              "source": "1 Intellect — Rettrick"
             },
             {
               "name": "Farraki Kris",
@@ -54623,8 +57626,10 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.60",
                 "(20.94 damage per second)",
+                "+54 Spell Power",
                 "Requires Level 42"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Galgann's Firehammer",
@@ -54643,8 +57648,10 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 2.20",
                 "(20.91 damage per second)",
+                "+54 Spell Power",
                 "Requires Level 42"
-              ]
+              ],
+              "source": "Galgann Firehammer"
             },
             {
               "name": "Notched Ritual Rib",
@@ -54663,8 +57670,11 @@ if (typeof window !== 'undefined') {
                 "Dagger",
                 "Speed 1.70",
                 "(20.29 damage per second)",
+                "+4 Stamina",
+                "+9 Intellect",
                 "Requires Level 40"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             }
           ]
         },
@@ -54697,7 +57707,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 49,
               "stats": "Equip: Increases healing done by up to 116 and damage done by up to 38.",
               "icon": "inv_knife_01",
-              "weaponType": "Dagger"
+              "weaponType": "Dagger",
+              "source": "Maraudon trash drop"
             },
             {
               "name": "Spire of Hakkar",
@@ -54709,7 +57720,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 48,
               "stats": "+16 Spirit, +14 Intellect, Equip: Increases damage and healing by up to 18.",
               "icon": "inv_staff_08",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "source": "Avatar of Hakkar (Sunken Temple)"
             },
             {
               "name": "Whisper",
@@ -54727,8 +57739,12 @@ if (typeof window !== 'undefined') {
               "lines": [
                 "2H Mace",
                 "Speed 3.40",
-                "(45.74 damage per second)"
-              ]
+                "(45.74 damage per second)",
+                "+23 Strength",
+                "+14 Spell Power",
+                "+7 Crit"
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Might of Hakkar",
@@ -54747,8 +57763,12 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 2.40",
                 "(35.83 damage per second)",
+                "+11 Stamina",
+                "+3 Spirit",
+                "+5 Hit",
                 "Requires Level 49"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Fist of Stone",
@@ -54767,8 +57787,11 @@ if (typeof window !== 'undefined') {
                 "1H Mace",
                 "Speed 1.80",
                 "(35.28 damage per second)",
+                "+11 Stamina",
+                "+5 Spirit",
                 "Requires Level 48"
-              ]
+              ],
+              "source": "Rare World / Dungeon Drop"
             },
             {
               "name": "Kindling Stave",
@@ -54795,7 +57818,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Improves your chance to get a critical strike by 1.0%.",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 60",
                 "Equip: Harmful spell casts have a chance to deal 60 to 81 Fire damage. Deals 3 times as much damage to Plants. (10ms cooldown)"
-              ]
+              ],
+              "source": "Pyromancer Loregrain"
             },
             {
               "name": "Dreamstaff",
@@ -54814,8 +57838,11 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.40",
                 "(32.29 damage per second)",
+                "+19 Stamina",
+                "+19 Spirit",
                 "Requires Level 45"
-              ]
+              ],
+              "source": "Dreamstaff"
             },
             {
               "name": "Radiant Staff",
@@ -54834,8 +57861,11 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.40",
                 "(32.29 damage per second)",
+                "+19 Stamina",
+                "+19 Intellect",
                 "Requires Level 45"
-              ]
+              ],
+              "source": "Radiant Staff"
             }
           ]
         },
@@ -54868,7 +57898,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 53,
               "stats": "+12 Intellect, Equip: Increases healing done by up to 28.",
               "icon": "inv_staff_08",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "source": "Emperor Dagran Thaurissan (BRD)"
             },
             {
               "name": "Wisepaw Totem",
@@ -54892,7 +57923,8 @@ if (typeof window !== 'undefined') {
                 "+23 Intellect",
                 "Requires Level 53",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 66"
-              ]
+              ],
+              "source": "Dala Fairmaw"
             },
             {
               "name": "Soul Harvester",
@@ -54917,7 +57949,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Improves your chance to hit by 1.0%.",
                 "Equip: Increases damage done by Shadow spells and effects by up to 73.",
                 "Requires Level 50"
-              ]
+              ],
+              "source": "Trolls of a Feather"
             },
             {
               "name": "Copper Plated Pipe",
@@ -54935,8 +57968,11 @@ if (typeof window !== 'undefined') {
               "lines": [
                 "Staff",
                 "Speed 3.20",
-                "(45.00 damage per second)"
-              ]
+                "(45.00 damage per second)",
+                "+20 Agility",
+                "+12 Intellect"
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Purified Gnarlybark Staff",
@@ -54954,8 +57990,10 @@ if (typeof window !== 'undefined') {
               "lines": [
                 "Staff",
                 "Speed 3.10",
-                "(34.03 damage per second)"
-              ]
+                "(34.03 damage per second)",
+                "+19 Spirit, Improves your chance to get a critical strike by 1.0%."
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Staff of the Deeproar",
@@ -54973,8 +58011,12 @@ if (typeof window !== 'undefined') {
               "lines": [
                 "Staff",
                 "Speed 3.30",
-                "(33.48 damage per second)"
-              ]
+                "(33.48 damage per second)",
+                "+13 Stamina",
+                "+12 Intellect",
+                "+14 Spirit"
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Staff of Archmage Selwyn",
@@ -54992,8 +58034,11 @@ if (typeof window !== 'undefined') {
               "lines": [
                 "Staff",
                 "Speed 2.50",
-                "(31.60 damage per second)"
-              ]
+                "(31.60 damage per second)",
+                "+16 Stamina",
+                "+16 Intellect"
+              ],
+              "source": "Leveling Drop / Vendor"
             },
             {
               "name": "Cleansed Ritual Kris",
@@ -55011,8 +58056,10 @@ if (typeof window !== 'undefined') {
               "lines": [
                 "Dagger",
                 "Speed 1.60",
-                "(23.44 damage per second)"
-              ]
+                "(23.44 damage per second)",
+                "+4 Spirit"
+              ],
+              "source": "Leveling Drop / Vendor"
             }
           ]
         },
@@ -55045,7 +58092,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 60,
               "stats": "+19 Intellect, +10 Spirit, Equip: Increases healing done by up to 210 and damage done by up to 70.",
               "icon": "inv_mace_01",
-              "weaponType": "One-Handed Mace"
+              "weaponType": "One-Handed Mace",
+              "source": "C'Thun (Temple of Ahn'Qiraj)"
             },
             {
               "name": "Blessed Qiraji Augur Staff",
@@ -55057,7 +58105,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 60,
               "stats": "+31 Stamina, +20 Intellect, +14 Spirit, Equip: Increases healing done by up to 203 and damage done by up to 67.",
               "icon": "inv_staff_08",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "source": "Imperial Qiraji Regalia (AQ40)"
             },
             {
               "name": "Atiesh, Greatstaff of the Guardian",
@@ -55069,7 +58118,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 60,
               "stats": "+28 Intellect, +28 Spirit, Equip: Increases healing done by up to 242 and damage done by up to 120.",
               "icon": "inv_staff_30",
-              "weaponType": "Staff"
+              "weaponType": "Staff",
+              "source": "Naxxramas 40 splinter quest"
             },
             {
               "name": "Atiesh, Greatstaff of the Guardian",
@@ -55088,8 +58138,14 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.90",
                 "(64.34 damage per second)",
+                "+31 Stamina",
+                "+32 Intellect",
+                "+24 Spirit",
+                "+150 Spell Power",
+                "+20 Hit",
                 "Requires Level 60"
-              ]
+              ],
+              "source": "Atiesh, Greatstaff of the Guardian"
             },
             {
               "name": "Atiesh, Greatstaff of the Guardian",
@@ -55108,8 +58164,13 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.90",
                 "(64.34 damage per second)",
+                "+30 Stamina",
+                "+29 Intellect",
+                "+183 Spell Power",
+                "+28 Crit",
                 "Requires Level 60"
-              ]
+              ],
+              "source": "Atiesh, Greatstaff of the Guardian"
             },
             {
               "name": "Atiesh, Greatstaff of the Guardian",
@@ -55128,8 +58189,14 @@ if (typeof window !== 'undefined') {
                 "Staff",
                 "Speed 2.90",
                 "(64.34 damage per second)",
+                "+28 Stamina",
+                "+28 Intellect",
+                "+27 Spirit",
+                "+300 Healing",
+                "+11 MP5",
                 "Requires Level 60"
-              ]
+              ],
+              "source": "Atiesh, Greatstaff of the Guardian"
             },
             {
               "name": "Grand Marshal's Demolisher",
@@ -55148,8 +58215,12 @@ if (typeof window !== 'undefined') {
                 "2H Mace",
                 "Speed 3.90",
                 "(80.26 damage per second)",
+                "+27 Strength",
+                "+42 Stamina",
+                "+20 Intellect, Improves your chance to get a critical strike by 1.0%.",
                 "Requires Level 60"
-              ]
+              ],
+              "source": "Captain O'Neal"
             },
             {
               "name": "High Warlord's Destroyer",
@@ -55168,8 +58239,12 @@ if (typeof window !== 'undefined') {
                 "2H Mace",
                 "Speed 3.90",
                 "(80.26 damage per second)",
+                "+27 Strength",
+                "+42 Stamina",
+                "+20 Intellect, Improves your chance to get a critical strike by 1.0%.",
                 "Requires Level 60"
-              ]
+              ],
+              "source": "Sergeant Thunderhorn"
             }
           ]
         }
@@ -55216,7 +58291,8 @@ if (typeof window !== 'undefined') {
                 "Binds when picked up",
                 "Ranged",
                 "(4.17 damage per second)"
-              ]
+              ],
+              "source": "A Magical Affront quest (Alliance)"
             }
           ],
           "lines": [
@@ -55263,7 +58339,8 @@ if (typeof window !== 'undefined') {
                 "(11.33 damage per second)",
                 "Requires Level 5",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 1"
-              ]
+              ],
+              "source": "Crafted by Enchanters (Skill 10)"
             },
             {
               "name": "Wisesight Wand",
@@ -55284,7 +58361,8 @@ if (typeof window !== 'undefined') {
                 "(8.82 damage per second)",
                 "+1 Intellect",
                 "Requires Level 7"
-              ]
+              ],
+              "source": "Nightscreech drop"
             }
           ],
           "lines": [
@@ -55331,7 +58409,8 @@ if (typeof window !== 'undefined') {
                 "(8.82 damage per second)",
                 "+1 Intellect",
                 "Requires Level 7"
-              ]
+              ],
+              "source": "Matriarch / drop"
             },
             {
               "name": "Windbough Wand",
@@ -55351,7 +58430,8 @@ if (typeof window !== 'undefined') {
                 "Ranged",
                 "(7.19 damage per second)",
                 "+1 Intellect"
-              ]
+              ],
+              "source": "Boughs in the Wind quest"
             }
           ],
           "lines": [
@@ -55399,7 +58479,8 @@ if (typeof window !== 'undefined') {
                 "(14.41 damage per second)",
                 "Requires Level 14",
                 "Equip: Increases intellect by 5 at night."
-              ]
+              ],
+              "source": "Lady Moongazer drop"
             },
             {
               "name": "Whelpfire Wand",
@@ -55418,9 +58499,11 @@ if (typeof window !== 'undefined') {
                 "Binds when equipped",
                 "Ranged",
                 "(15.26 damage per second)",
+                "Equip: Increases damage done by Fire spells and effects by up to 3.",
                 "Requires Level 15",
                 "Equip: Increases damage done by Fire spells and effects by up to 3."
-              ]
+              ],
+              "source": "Snarlflare in Redridge"
             }
           ],
           "lines": [
@@ -55469,7 +58552,8 @@ if (typeof window !== 'undefined') {
                 "(21.18 damage per second)",
                 "+3 Nature Resistance",
                 "Requires Level 22"
-              ]
+              ],
+              "source": "Level 22 World Drop"
             },
             {
               "name": "Greater Magic Wand",
@@ -55490,7 +58574,8 @@ if (typeof window !== 'undefined') {
                 "(17.50 damage per second)",
                 "Requires Level 13",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 2"
-              ]
+              ],
+              "source": "Continue using if unavailable"
             },
             {
               "name": "Cookie's Stirring Rod",
@@ -55509,15 +58594,18 @@ if (typeof window !== 'undefined') {
                 "Binds when picked up",
                 "Ranged",
                 "(22.31 damage per second)",
+                "Equip: Increases your Cooking speed by 25%.",
                 "Requires Level 17",
                 "Equip: Increases your Cooking speed by 25%."
-              ]
+              ],
+              "source": "Arcane Wand from Cookie in The Deadmines"
             }
           ],
           "lines": [
             "Binds when equipped",
             "Ranged",
             "(15.26 damage per second)",
+            "Equip: Increases damage done by Fire spells and effects by up to 3.",
             "Requires Level 15",
             "Equip: Increases damage done by Fire spells and effects by up to 3."
           ]
@@ -55560,7 +58648,8 @@ if (typeof window !== 'undefined') {
                 "(25.38 damage per second)",
                 "+4 Intellect",
                 "Requires Level 26"
-              ]
+              ],
+              "source": "Crafted by Enchanters (Skill 155)"
             },
             {
               "name": "Wand of Mana Concentration",
@@ -55581,7 +58670,8 @@ if (typeof window !== 'undefined') {
                 "(31.18 damage per second)",
                 "+4 Intellect",
                 "Requires Level 27"
-              ]
+              ],
+              "source": "Arcanic Enigma in City of Dalaran"
             },
             {
               "name": "Snapped Branch Wand",
@@ -55602,7 +58692,8 @@ if (typeof window !== 'undefined') {
                 "(21.18 damage per second)",
                 "+3 Nature Resistance",
                 "Requires Level 22"
-              ]
+              ],
+              "source": "Level 22 World Drop"
             }
           ],
           "lines": [
@@ -55649,7 +58740,8 @@ if (typeof window !== 'undefined') {
                 "Ranged",
                 "(34.67 damage per second)",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 7"
-              ]
+              ],
+              "source": "Big Game Hunter quest in STV"
             },
             {
               "name": "Greater Mystic Wand",
@@ -55670,7 +58762,8 @@ if (typeof window !== 'undefined') {
                 "(29.00 damage per second)",
                 "Requires Level 30",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 5"
-              ]
+              ],
+              "source": "Crafted by Enchanters (Skill 175)"
             }
           ],
           "lines": [
@@ -55719,7 +58812,8 @@ if (typeof window !== 'undefined') {
                 "(29.00 damage per second)",
                 "Requires Level 30",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 5"
-              ]
+              ],
+              "source": "Enchanter crafted (Req lvl 30)"
             },
             {
               "name": "Twisted Nether Wand",
@@ -55740,7 +58834,8 @@ if (typeof window !== 'undefined') {
                 "(34.00 damage per second)",
                 "Requires Level 37",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 6"
-              ]
+              ],
+              "source": "Crafted by Enchanters (Req lvl 37)"
             }
           ],
           "lines": [
@@ -55788,7 +58883,8 @@ if (typeof window !== 'undefined') {
                 "(35.67 damage per second)",
                 "+5 Intellect",
                 "Requires Level 40"
-              ]
+              ],
+              "source": "Partial Mystical Notes quest"
             },
             {
               "name": "Twisted Nether Wand",
@@ -55809,7 +58905,8 @@ if (typeof window !== 'undefined') {
                 "(34.00 damage per second)",
                 "Requires Level 37",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 6"
-              ]
+              ],
+              "source": "Crafted by Enchanters (Req lvl 37)"
             }
           ],
           "lines": [
@@ -55859,7 +58956,8 @@ if (typeof window !== 'undefined') {
                 "(39.17 damage per second)",
                 "Requires Level 43",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 7"
-              ]
+              ],
+              "source": "Crafted by Enchanters (Skill 225)"
             },
             {
               "name": "Lesser Eternal Wand",
@@ -55880,7 +58978,8 @@ if (typeof window !== 'undefined') {
                 "(45.75 damage per second)",
                 "Requires Level 49",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 8"
-              ]
+              ],
+              "source": "Crafted by Enchanters (Req lvl 49)"
             }
           ],
           "lines": [
@@ -55930,7 +59029,8 @@ if (typeof window !== 'undefined') {
                 "+6 Stamina",
                 "+4 Spirit",
                 "Requires Level 56"
-              ]
+              ],
+              "source": "Rare World Drop (Req lvl 56)"
             }
           ],
           "lines": [
@@ -55980,7 +59080,8 @@ if (typeof window !== 'undefined') {
                 "+7 Intellect",
                 "Requires Level 55",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 9"
-              ]
+              ],
+              "source": "Fast high — DPS wand"
             },
             {
               "name": "Greater Eternal Wand",
@@ -56001,7 +59102,8 @@ if (typeof window !== 'undefined') {
                 "(53.33 damage per second)",
                 "Requires Level 55",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 9"
-              ]
+              ],
+              "source": "Crafted by Enchanters (Skill 285)"
             },
             {
               "name": "Torch of Light",
@@ -56023,7 +59125,8 @@ if (typeof window !== 'undefined') {
                 "+11 Spirit",
                 "Requires Level 60",
                 "Equip: Increases healing done by up to 17"
-              ]
+              ],
+              "source": "Best — in — Slot Level 60 Wand"
             }
           ],
           "lines": [
@@ -56076,7 +59179,8 @@ if (typeof window !== 'undefined') {
                 "Binds when picked up",
                 "Ranged",
                 "(4.17 damage per second)"
-              ]
+              ],
+              "source": "A Magical Affront quest (Alliance)"
             }
           ],
           "lines": [
@@ -56123,7 +59227,8 @@ if (typeof window !== 'undefined') {
                 "(11.33 damage per second)",
                 "Requires Level 5",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 1"
-              ]
+              ],
+              "source": "Crafted by Enchanters (Skill 10)"
             },
             {
               "name": "Wisesight Wand",
@@ -56144,7 +59249,8 @@ if (typeof window !== 'undefined') {
                 "(8.82 damage per second)",
                 "+1 Intellect",
                 "Requires Level 7"
-              ]
+              ],
+              "source": "Nightscreech drop"
             }
           ],
           "lines": [
@@ -56191,7 +59297,8 @@ if (typeof window !== 'undefined') {
                 "(8.82 damage per second)",
                 "+1 Intellect",
                 "Requires Level 7"
-              ]
+              ],
+              "source": "Matriarch / drop"
             },
             {
               "name": "Windbough Wand",
@@ -56211,7 +59318,8 @@ if (typeof window !== 'undefined') {
                 "Ranged",
                 "(7.19 damage per second)",
                 "+1 Intellect"
-              ]
+              ],
+              "source": "Boughs in the Wind quest"
             }
           ],
           "lines": [
@@ -56259,7 +59367,8 @@ if (typeof window !== 'undefined') {
                 "(14.41 damage per second)",
                 "Requires Level 14",
                 "Equip: Increases intellect by 5 at night."
-              ]
+              ],
+              "source": "Lady Moongazer drop"
             },
             {
               "name": "Whelpfire Wand",
@@ -56278,9 +59387,11 @@ if (typeof window !== 'undefined') {
                 "Binds when equipped",
                 "Ranged",
                 "(15.26 damage per second)",
+                "Equip: Increases damage done by Fire spells and effects by up to 3.",
                 "Requires Level 15",
                 "Equip: Increases damage done by Fire spells and effects by up to 3."
-              ]
+              ],
+              "source": "Snarlflare in Redridge"
             }
           ],
           "lines": [
@@ -56329,7 +59440,8 @@ if (typeof window !== 'undefined') {
                 "(21.18 damage per second)",
                 "+3 Nature Resistance",
                 "Requires Level 22"
-              ]
+              ],
+              "source": "Level 22 World Drop"
             },
             {
               "name": "Greater Magic Wand",
@@ -56350,13 +59462,15 @@ if (typeof window !== 'undefined') {
                 "(17.50 damage per second)",
                 "Requires Level 13",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 2"
-              ]
+              ],
+              "source": "Continue using if unavailable"
             }
           ],
           "lines": [
             "Binds when equipped",
             "Ranged",
             "(15.26 damage per second)",
+            "Equip: Increases damage done by Fire spells and effects by up to 3.",
             "Requires Level 15",
             "Equip: Increases damage done by Fire spells and effects by up to 3."
           ]
@@ -56399,7 +59513,8 @@ if (typeof window !== 'undefined') {
                 "(25.38 damage per second)",
                 "+4 Intellect",
                 "Requires Level 26"
-              ]
+              ],
+              "source": "Crafted by Enchanters (Skill 155)"
             },
             {
               "name": "Wand of Mana Concentration",
@@ -56420,7 +59535,8 @@ if (typeof window !== 'undefined') {
                 "(31.18 damage per second)",
                 "+4 Intellect",
                 "Requires Level 27"
-              ]
+              ],
+              "source": "Arcanic Enigma in City of Dalaran"
             },
             {
               "name": "Snapped Branch Wand",
@@ -56441,7 +59557,8 @@ if (typeof window !== 'undefined') {
                 "(21.18 damage per second)",
                 "+3 Nature Resistance",
                 "Requires Level 22"
-              ]
+              ],
+              "source": "Level 22 World Drop"
             }
           ],
           "lines": [
@@ -56488,7 +59605,8 @@ if (typeof window !== 'undefined') {
                 "Ranged",
                 "(34.67 damage per second)",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 7"
-              ]
+              ],
+              "source": "Big Game Hunter quest in STV"
             },
             {
               "name": "Greater Mystic Wand",
@@ -56509,7 +59627,8 @@ if (typeof window !== 'undefined') {
                 "(29.00 damage per second)",
                 "Requires Level 30",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 5"
-              ]
+              ],
+              "source": "Crafted by Enchanters (Skill 175)"
             }
           ],
           "lines": [
@@ -56558,7 +59677,8 @@ if (typeof window !== 'undefined') {
                 "(29.00 damage per second)",
                 "Requires Level 30",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 5"
-              ]
+              ],
+              "source": "Enchanter crafted (Req lvl 30)"
             },
             {
               "name": "Twisted Nether Wand",
@@ -56579,7 +59699,8 @@ if (typeof window !== 'undefined') {
                 "(34.00 damage per second)",
                 "Requires Level 37",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 6"
-              ]
+              ],
+              "source": "Crafted by Enchanters (Req lvl 37)"
             }
           ],
           "lines": [
@@ -56627,7 +59748,8 @@ if (typeof window !== 'undefined') {
                 "(35.67 damage per second)",
                 "+5 Intellect",
                 "Requires Level 40"
-              ]
+              ],
+              "source": "Partial Mystical Notes quest"
             },
             {
               "name": "Twisted Nether Wand",
@@ -56648,7 +59770,8 @@ if (typeof window !== 'undefined') {
                 "(34.00 damage per second)",
                 "Requires Level 37",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 6"
-              ]
+              ],
+              "source": "Crafted by Enchanters (Req lvl 37)"
             }
           ],
           "lines": [
@@ -56698,7 +59821,8 @@ if (typeof window !== 'undefined') {
                 "(39.17 damage per second)",
                 "Requires Level 43",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 7"
-              ]
+              ],
+              "source": "Crafted by Enchanters (Skill 225)"
             },
             {
               "name": "Lesser Eternal Wand",
@@ -56719,7 +59843,8 @@ if (typeof window !== 'undefined') {
                 "(45.75 damage per second)",
                 "Requires Level 49",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 8"
-              ]
+              ],
+              "source": "Crafted by Enchanters (Req lvl 49)"
             }
           ],
           "lines": [
@@ -56769,7 +59894,8 @@ if (typeof window !== 'undefined') {
                 "+6 Stamina",
                 "+4 Spirit",
                 "Requires Level 56"
-              ]
+              ],
+              "source": "Rare World Drop (Req lvl 56)"
             }
           ],
           "lines": [
@@ -56819,7 +59945,8 @@ if (typeof window !== 'undefined') {
                 "+7 Intellect",
                 "Requires Level 55",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 9"
-              ]
+              ],
+              "source": "Fast high — DPS wand"
             },
             {
               "name": "Greater Eternal Wand",
@@ -56840,7 +59967,8 @@ if (typeof window !== 'undefined') {
                 "(53.33 damage per second)",
                 "Requires Level 55",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 9"
-              ]
+              ],
+              "source": "Crafted by Enchanters (Skill 285)"
             },
             {
               "name": "Torch of Light",
@@ -56862,7 +59990,8 @@ if (typeof window !== 'undefined') {
                 "+11 Spirit",
                 "Requires Level 60",
                 "Equip: Increases healing done by up to 17"
-              ]
+              ],
+              "source": "Best — in — Slot Level 60 Wand"
             }
           ],
           "lines": [
@@ -56915,7 +60044,8 @@ if (typeof window !== 'undefined') {
                 "Binds when picked up",
                 "Ranged",
                 "(4.17 damage per second)"
-              ]
+              ],
+              "source": "A Magical Affront quest (Alliance)"
             }
           ],
           "lines": [
@@ -56962,7 +60092,8 @@ if (typeof window !== 'undefined') {
                 "(11.33 damage per second)",
                 "Requires Level 5",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 1"
-              ]
+              ],
+              "source": "Crafted by Enchanters (Skill 10)"
             },
             {
               "name": "Wisesight Wand",
@@ -56983,7 +60114,8 @@ if (typeof window !== 'undefined') {
                 "(8.82 damage per second)",
                 "+1 Intellect",
                 "Requires Level 7"
-              ]
+              ],
+              "source": "Nightscreech drop"
             }
           ],
           "lines": [
@@ -57030,7 +60162,8 @@ if (typeof window !== 'undefined') {
                 "(8.82 damage per second)",
                 "+1 Intellect",
                 "Requires Level 7"
-              ]
+              ],
+              "source": "Matriarch / drop"
             },
             {
               "name": "Windbough Wand",
@@ -57050,7 +60183,8 @@ if (typeof window !== 'undefined') {
                 "Ranged",
                 "(7.19 damage per second)",
                 "+1 Intellect"
-              ]
+              ],
+              "source": "Boughs in the Wind quest"
             }
           ],
           "lines": [
@@ -57098,7 +60232,8 @@ if (typeof window !== 'undefined') {
                 "(14.41 damage per second)",
                 "Requires Level 14",
                 "Equip: Increases intellect by 5 at night."
-              ]
+              ],
+              "source": "Lady Moongazer drop"
             },
             {
               "name": "Whelpfire Wand",
@@ -57117,9 +60252,11 @@ if (typeof window !== 'undefined') {
                 "Binds when equipped",
                 "Ranged",
                 "(15.26 damage per second)",
+                "Equip: Increases damage done by Fire spells and effects by up to 3.",
                 "Requires Level 15",
                 "Equip: Increases damage done by Fire spells and effects by up to 3."
-              ]
+              ],
+              "source": "Snarlflare in Redridge"
             }
           ],
           "lines": [
@@ -57168,7 +60305,8 @@ if (typeof window !== 'undefined') {
                 "(21.18 damage per second)",
                 "+3 Nature Resistance",
                 "Requires Level 22"
-              ]
+              ],
+              "source": "Level 22 World Drop"
             },
             {
               "name": "Greater Magic Wand",
@@ -57189,13 +60327,15 @@ if (typeof window !== 'undefined') {
                 "(17.50 damage per second)",
                 "Requires Level 13",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 2"
-              ]
+              ],
+              "source": "Continue using if unavailable"
             }
           ],
           "lines": [
             "Binds when equipped",
             "Ranged",
             "(15.26 damage per second)",
+            "Equip: Increases damage done by Fire spells and effects by up to 3.",
             "Requires Level 15",
             "Equip: Increases damage done by Fire spells and effects by up to 3."
           ]
@@ -57238,7 +60378,8 @@ if (typeof window !== 'undefined') {
                 "(25.38 damage per second)",
                 "+4 Intellect",
                 "Requires Level 26"
-              ]
+              ],
+              "source": "Crafted by Enchanters (Skill 155)"
             },
             {
               "name": "Wand of Mana Concentration",
@@ -57259,7 +60400,8 @@ if (typeof window !== 'undefined') {
                 "(31.18 damage per second)",
                 "+4 Intellect",
                 "Requires Level 27"
-              ]
+              ],
+              "source": "Arcanic Enigma in City of Dalaran"
             },
             {
               "name": "Snapped Branch Wand",
@@ -57280,7 +60422,8 @@ if (typeof window !== 'undefined') {
                 "(21.18 damage per second)",
                 "+3 Nature Resistance",
                 "Requires Level 22"
-              ]
+              ],
+              "source": "Level 22 World Drop"
             }
           ],
           "lines": [
@@ -57327,7 +60470,8 @@ if (typeof window !== 'undefined') {
                 "Ranged",
                 "(34.67 damage per second)",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 7"
-              ]
+              ],
+              "source": "Big Game Hunter quest in STV"
             },
             {
               "name": "Greater Mystic Wand",
@@ -57348,7 +60492,8 @@ if (typeof window !== 'undefined') {
                 "(29.00 damage per second)",
                 "Requires Level 30",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 5"
-              ]
+              ],
+              "source": "Crafted by Enchanters (Skill 175)"
             }
           ],
           "lines": [
@@ -57397,7 +60542,8 @@ if (typeof window !== 'undefined') {
                 "(29.00 damage per second)",
                 "Requires Level 30",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 5"
-              ]
+              ],
+              "source": "Enchanter crafted (Req lvl 30)"
             },
             {
               "name": "Twisted Nether Wand",
@@ -57418,7 +60564,8 @@ if (typeof window !== 'undefined') {
                 "(34.00 damage per second)",
                 "Requires Level 37",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 6"
-              ]
+              ],
+              "source": "Crafted by Enchanters (Req lvl 37)"
             }
           ],
           "lines": [
@@ -57466,7 +60613,8 @@ if (typeof window !== 'undefined') {
                 "(35.67 damage per second)",
                 "+5 Intellect",
                 "Requires Level 40"
-              ]
+              ],
+              "source": "Partial Mystical Notes quest"
             },
             {
               "name": "Twisted Nether Wand",
@@ -57487,7 +60635,8 @@ if (typeof window !== 'undefined') {
                 "(34.00 damage per second)",
                 "Requires Level 37",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 6"
-              ]
+              ],
+              "source": "Crafted by Enchanters (Req lvl 37)"
             }
           ],
           "lines": [
@@ -57537,7 +60686,8 @@ if (typeof window !== 'undefined') {
                 "(39.17 damage per second)",
                 "Requires Level 43",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 7"
-              ]
+              ],
+              "source": "Crafted by Enchanters (Skill 225)"
             },
             {
               "name": "Lesser Eternal Wand",
@@ -57558,7 +60708,8 @@ if (typeof window !== 'undefined') {
                 "(45.75 damage per second)",
                 "Requires Level 49",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 8"
-              ]
+              ],
+              "source": "Crafted by Enchanters (Req lvl 49)"
             }
           ],
           "lines": [
@@ -57608,7 +60759,8 @@ if (typeof window !== 'undefined') {
                 "+6 Stamina",
                 "+4 Spirit",
                 "Requires Level 56"
-              ]
+              ],
+              "source": "Rare World Drop (Req lvl 56)"
             }
           ],
           "lines": [
@@ -57658,7 +60810,8 @@ if (typeof window !== 'undefined') {
                 "+7 Intellect",
                 "Requires Level 55",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 9"
-              ]
+              ],
+              "source": "Fast high — DPS wand"
             },
             {
               "name": "Greater Eternal Wand",
@@ -57679,7 +60832,8 @@ if (typeof window !== 'undefined') {
                 "(53.33 damage per second)",
                 "Requires Level 55",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 9"
-              ]
+              ],
+              "source": "Crafted by Enchanters (Skill 285)"
             },
             {
               "name": "Torch of Light",
@@ -57701,7 +60855,8 @@ if (typeof window !== 'undefined') {
                 "+11 Spirit",
                 "Requires Level 60",
                 "Equip: Increases healing done by up to 17"
-              ]
+              ],
+              "source": "Best — in — Slot Level 60 Wand"
             }
           ],
           "lines": [
@@ -57780,7 +60935,8 @@ if (typeof window !== 'undefined') {
                 "Held In Off-hand",
                 "+5 Intellect",
                 "-3 Spirit"
-              ]
+              ],
+              "source": "Horde Quest"
             },
             {
               "name": "Disciple's Stein",
@@ -57797,7 +60953,8 @@ if (typeof window !== 'undefined') {
                 "Binds when equipped",
                 "Held In Off-hand",
                 "Requires Level 7"
-              ]
+              ],
+              "source": "Level 7 Drop"
             }
           ],
           "lines": [
@@ -57842,7 +60999,8 @@ if (typeof window !== 'undefined') {
                 "Held In Off-hand",
                 "+3 Intellect",
                 "+3 Spirit"
-              ]
+              ],
+              "source": "Valuable Vantages quest"
             },
             {
               "name": "Mathystra Channeling Orb",
@@ -57860,7 +61018,8 @@ if (typeof window !== 'undefined') {
                 "Held In Off-hand",
                 "+3 Stamina",
                 "+5 Intellect"
-              ]
+              ],
+              "source": "Baron Marinous"
             },
             {
               "name": "Defective Samophlange",
@@ -57879,7 +61038,8 @@ if (typeof window !== 'undefined') {
                 "+5 Intellect",
                 "+5 Spirit",
                 "Requires Level 20"
-              ]
+              ],
+              "source": "Winklespark in Barrens"
             }
           ],
           "lines": [
@@ -57926,7 +61086,8 @@ if (typeof window !== 'undefined') {
                 "Held In Off-hand",
                 "Requires Level 21",
                 "Equip: Increases healing done by up to 12"
-              ]
+              ],
+              "source": "Hannah Bladeleaf"
             },
             {
               "name": "Orb of Mystic Insight",
@@ -57945,7 +61106,8 @@ if (typeof window !== 'undefined') {
                 "+6 Intellect",
                 "Requires Level 25",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 7"
-              ]
+              ],
+              "source": "Crafted / Enchanting"
             },
             {
               "name": "Orb of Souls",
@@ -57964,7 +61126,8 @@ if (typeof window !== 'undefined') {
                 "+6 Spirit",
                 "Requires Level 25",
                 "Equip: Increases healing done by up to 13"
-              ]
+              ],
+              "source": "Crafted / Enchanting"
             }
           ],
           "lines": [
@@ -58007,8 +61170,10 @@ if (typeof window !== 'undefined') {
               "lines": [
                 "Binds when picked up",
                 "Held In Off-hand",
+                "Equip: Increases damage done by Arcane spells and effects by up to 11.",
                 "Equip: Increases damage done by Arcane spells and effects by up to 11."
-              ]
+              ],
+              "source": "Starving Arcane quest"
             },
             {
               "name": "Insurgent's Manifesto",
@@ -58028,7 +61193,8 @@ if (typeof window !== 'undefined') {
                 "+4 Intellect",
                 "Requires Level 28",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 2"
-              ]
+              ],
+              "source": "+8 Stamina, +4 Intellect, +8 Spell Power"
             },
             {
               "name": "Tome of the Darkspear Prophecy",
@@ -58048,7 +61214,8 @@ if (typeof window !== 'undefined') {
                 "+4 Intellect",
                 "Requires Level 28",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 2"
-              ]
+              ],
+              "source": "Creeg Bothunk"
             }
           ],
           "lines": [
@@ -58096,7 +61263,8 @@ if (typeof window !== 'undefined') {
                 "+9 Spirit",
                 "+50 Armor",
                 "Equip: Increases healing done by up to 9"
-              ]
+              ],
+              "source": "Past Due quest"
             },
             {
               "name": "Heart of Alterac",
@@ -58115,7 +61283,8 @@ if (typeof window !== 'undefined') {
                 "+7 Stamina",
                 "+5 Intellect",
                 "Requires Level 34"
-              ]
+              ],
+              "source": "Stone Fury in Alterac"
             }
           ],
           "lines": [
@@ -58164,7 +61333,8 @@ if (typeof window !== 'undefined') {
                 "+5 Intellect",
                 "Requires Level 38",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 4"
-              ]
+              ],
+              "source": "+12 Stamina, +5 Intellect, +12 Spell Power"
             },
             {
               "name": "Tome of the Darkspear Prophecy",
@@ -58184,7 +61354,8 @@ if (typeof window !== 'undefined') {
                 "+5 Intellect",
                 "Requires Level 38",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 4"
-              ]
+              ],
+              "source": "+12 Stamina, +5 Intellect, +12 Spell Power"
             },
             {
               "name": "Orb of the Forgotten Seer",
@@ -58202,7 +61373,8 @@ if (typeof window !== 'undefined') {
                 "Held In Off-hand",
                 "Requires Level 32",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 14"
-              ]
+              ],
+              "source": "Scarlet Monastery Library"
             }
           ],
           "lines": [
@@ -58250,7 +61422,8 @@ if (typeof window !== 'undefined') {
                 "+12 Stamina",
                 "+5 Spirit",
                 "Requires Level 40"
-              ]
+              ],
+              "source": "+12 Stamina, +5 Spirit, +16 Healing"
             },
             {
               "name": "Spirit of Aquementas",
@@ -58267,7 +61440,8 @@ if (typeof window !== 'undefined') {
                 "Binds when picked up",
                 "Held In Off-hand",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 21"
-              ]
+              ],
+              "source": "Un'Goro Crater quest chain"
             }
           ],
           "lines": [
@@ -58315,7 +61489,8 @@ if (typeof window !== 'undefined') {
                 "+8 Spirit",
                 "Requires Level 45",
                 "Equip: Increases healing done by up to 19"
-              ]
+              ],
+              "source": "+8 Stamina, +8 Spirit, +18 Healing"
             },
             {
               "name": "Insurgent's Manifesto",
@@ -58335,7 +61510,8 @@ if (typeof window !== 'undefined') {
                 "+6 Intellect",
                 "Requires Level 48",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 5"
-              ]
+              ],
+              "source": "+14 Stamina, +6 Intellect, +14 Spell Power"
             },
             {
               "name": "Heart of Smoldar",
@@ -58354,7 +61530,8 @@ if (typeof window !== 'undefined') {
                 "+8 Stamina",
                 "Requires Level 47",
                 "Equip: Increases healing done by up to 16"
-              ]
+              ],
+              "source": "+8 Stamina, +14 Fire Spell Power"
             }
           ],
           "lines": [
@@ -58403,7 +61580,8 @@ if (typeof window !== 'undefined') {
                 "+7 Intellect",
                 "Requires Level 58",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 8"
-              ]
+              ],
+              "source": "+17 Stamina, +7 Intellect, +16 Spell Power"
             },
             {
               "name": "Tome of the Darkspear Prophecy",
@@ -58423,7 +61601,8 @@ if (typeof window !== 'undefined') {
                 "+7 Intellect",
                 "Requires Level 58",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 8"
-              ]
+              ],
+              "source": "+17 Stamina, +7 Intellect, +16 Spell Power"
             },
             {
               "name": "High Warlord's Tome of Destruction",
@@ -58444,7 +61623,8 @@ if (typeof window !== 'undefined') {
                 "Requires Level 60",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 25",
                 "Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources."
-              ]
+              ],
+              "source": "+24 Stamina, +13 Intellect, +23 Spell Power"
             },
             {
               "name": "Grand Marshal's Tome of Power",
@@ -58465,7 +61645,8 @@ if (typeof window !== 'undefined') {
                 "Requires Level 60",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 25",
                 "Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources."
-              ]
+              ],
+              "source": "+24 Stamina, +13 Intellect, +23 Spell Power"
             },
             {
               "name": "High Warlord's Tome of Mending",
@@ -58486,7 +61667,8 @@ if (typeof window !== 'undefined') {
                 "Requires Level 60",
                 "Equip: Increases healing done by up to 44",
                 "Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources."
-              ]
+              ],
+              "source": "+23 Stamina, +14 Intellect, +35 Healing"
             },
             {
               "name": "Grand Marshal's Tome of Restoration",
@@ -58507,7 +61689,8 @@ if (typeof window !== 'undefined') {
                 "Requires Level 60",
                 "Equip: Increases healing done by up to 44",
                 "Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources."
-              ]
+              ],
+              "source": "+23 Stamina, +14 Intellect, +35 Healing"
             }
           ],
           "lines": [
@@ -58584,7 +61767,8 @@ if (typeof window !== 'undefined') {
                 "Held In Off-hand",
                 "+5 Intellect",
                 "-3 Spirit"
-              ]
+              ],
+              "source": "Horde Quest"
             },
             {
               "name": "Disciple's Stein",
@@ -58601,7 +61785,8 @@ if (typeof window !== 'undefined') {
                 "Binds when equipped",
                 "Held In Off-hand",
                 "Requires Level 7"
-              ]
+              ],
+              "source": "Level 7 Drop"
             }
           ],
           "lines": [
@@ -58646,7 +61831,8 @@ if (typeof window !== 'undefined') {
                 "Held In Off-hand",
                 "+3 Intellect",
                 "+3 Spirit"
-              ]
+              ],
+              "source": "Valuable Vantages quest"
             },
             {
               "name": "Mathystra Channeling Orb",
@@ -58664,7 +61850,8 @@ if (typeof window !== 'undefined') {
                 "Held In Off-hand",
                 "+3 Stamina",
                 "+5 Intellect"
-              ]
+              ],
+              "source": "Baron Marinous"
             },
             {
               "name": "Defective Samophlange",
@@ -58683,7 +61870,8 @@ if (typeof window !== 'undefined') {
                 "+5 Intellect",
                 "+5 Spirit",
                 "Requires Level 20"
-              ]
+              ],
+              "source": "Winklespark in Barrens"
             }
           ],
           "lines": [
@@ -58730,7 +61918,8 @@ if (typeof window !== 'undefined') {
                 "Held In Off-hand",
                 "Requires Level 21",
                 "Equip: Increases healing done by up to 12"
-              ]
+              ],
+              "source": "Hannah Bladeleaf"
             },
             {
               "name": "Orb of Mystic Insight",
@@ -58749,7 +61938,8 @@ if (typeof window !== 'undefined') {
                 "+6 Intellect",
                 "Requires Level 25",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 7"
-              ]
+              ],
+              "source": "Crafted / Enchanting"
             },
             {
               "name": "Orb of Souls",
@@ -58768,7 +61958,8 @@ if (typeof window !== 'undefined') {
                 "+6 Spirit",
                 "Requires Level 25",
                 "Equip: Increases healing done by up to 13"
-              ]
+              ],
+              "source": "Crafted / Enchanting"
             }
           ],
           "lines": [
@@ -58811,8 +62002,10 @@ if (typeof window !== 'undefined') {
               "lines": [
                 "Binds when picked up",
                 "Held In Off-hand",
+                "Equip: Increases damage done by Arcane spells and effects by up to 11.",
                 "Equip: Increases damage done by Arcane spells and effects by up to 11."
-              ]
+              ],
+              "source": "Starving Arcane quest"
             },
             {
               "name": "Insurgent's Manifesto",
@@ -58832,7 +62025,8 @@ if (typeof window !== 'undefined') {
                 "+4 Intellect",
                 "Requires Level 28",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 2"
-              ]
+              ],
+              "source": "+8 Stamina, +4 Intellect, +8 Spell Power"
             },
             {
               "name": "Tome of the Darkspear Prophecy",
@@ -58852,7 +62046,8 @@ if (typeof window !== 'undefined') {
                 "+4 Intellect",
                 "Requires Level 28",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 2"
-              ]
+              ],
+              "source": "Creeg Bothunk"
             }
           ],
           "lines": [
@@ -58900,7 +62095,8 @@ if (typeof window !== 'undefined') {
                 "+9 Spirit",
                 "+50 Armor",
                 "Equip: Increases healing done by up to 9"
-              ]
+              ],
+              "source": "Past Due quest"
             },
             {
               "name": "Heart of Alterac",
@@ -58919,7 +62115,8 @@ if (typeof window !== 'undefined') {
                 "+7 Stamina",
                 "+5 Intellect",
                 "Requires Level 34"
-              ]
+              ],
+              "source": "Stone Fury in Alterac"
             }
           ],
           "lines": [
@@ -58968,7 +62165,8 @@ if (typeof window !== 'undefined') {
                 "+5 Intellect",
                 "Requires Level 38",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 4"
-              ]
+              ],
+              "source": "+12 Stamina, +5 Intellect, +12 Spell Power"
             },
             {
               "name": "Tome of the Darkspear Prophecy",
@@ -58988,7 +62186,8 @@ if (typeof window !== 'undefined') {
                 "+5 Intellect",
                 "Requires Level 38",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 4"
-              ]
+              ],
+              "source": "+12 Stamina, +5 Intellect, +12 Spell Power"
             },
             {
               "name": "Orb of the Forgotten Seer",
@@ -59006,7 +62205,8 @@ if (typeof window !== 'undefined') {
                 "Held In Off-hand",
                 "Requires Level 32",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 14"
-              ]
+              ],
+              "source": "Scarlet Monastery Library"
             }
           ],
           "lines": [
@@ -59054,7 +62254,8 @@ if (typeof window !== 'undefined') {
                 "+12 Stamina",
                 "+5 Spirit",
                 "Requires Level 40"
-              ]
+              ],
+              "source": "+12 Stamina, +5 Spirit, +16 Healing"
             },
             {
               "name": "Spirit of Aquementas",
@@ -59071,7 +62272,8 @@ if (typeof window !== 'undefined') {
                 "Binds when picked up",
                 "Held In Off-hand",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 21"
-              ]
+              ],
+              "source": "Un'Goro Crater quest chain"
             }
           ],
           "lines": [
@@ -59119,7 +62321,8 @@ if (typeof window !== 'undefined') {
                 "+8 Spirit",
                 "Requires Level 45",
                 "Equip: Increases healing done by up to 19"
-              ]
+              ],
+              "source": "+8 Stamina, +8 Spirit, +18 Healing"
             },
             {
               "name": "Insurgent's Manifesto",
@@ -59139,7 +62342,8 @@ if (typeof window !== 'undefined') {
                 "+6 Intellect",
                 "Requires Level 48",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 5"
-              ]
+              ],
+              "source": "+14 Stamina, +6 Intellect, +14 Spell Power"
             },
             {
               "name": "Heart of Smoldar",
@@ -59158,7 +62362,8 @@ if (typeof window !== 'undefined') {
                 "+8 Stamina",
                 "Requires Level 47",
                 "Equip: Increases healing done by up to 16"
-              ]
+              ],
+              "source": "+8 Stamina, +14 Fire Spell Power"
             }
           ],
           "lines": [
@@ -59207,7 +62412,8 @@ if (typeof window !== 'undefined') {
                 "+7 Intellect",
                 "Requires Level 58",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 8"
-              ]
+              ],
+              "source": "+17 Stamina, +7 Intellect, +16 Spell Power"
             },
             {
               "name": "Tome of the Darkspear Prophecy",
@@ -59227,7 +62433,8 @@ if (typeof window !== 'undefined') {
                 "+7 Intellect",
                 "Requires Level 58",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 8"
-              ]
+              ],
+              "source": "+17 Stamina, +7 Intellect, +16 Spell Power"
             },
             {
               "name": "High Warlord's Tome of Destruction",
@@ -59248,7 +62455,8 @@ if (typeof window !== 'undefined') {
                 "Requires Level 60",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 25",
                 "Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources."
-              ]
+              ],
+              "source": "+24 Stamina, +13 Intellect, +23 Spell Power"
             },
             {
               "name": "Grand Marshal's Tome of Power",
@@ -59269,7 +62477,8 @@ if (typeof window !== 'undefined') {
                 "Requires Level 60",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 25",
                 "Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources."
-              ]
+              ],
+              "source": "+24 Stamina, +13 Intellect, +23 Spell Power"
             },
             {
               "name": "High Warlord's Tome of Mending",
@@ -59290,7 +62499,8 @@ if (typeof window !== 'undefined') {
                 "Requires Level 60",
                 "Equip: Increases healing done by up to 44",
                 "Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources."
-              ]
+              ],
+              "source": "+23 Stamina, +14 Intellect, +35 Healing"
             },
             {
               "name": "Grand Marshal's Tome of Restoration",
@@ -59311,7 +62521,8 @@ if (typeof window !== 'undefined') {
                 "Requires Level 60",
                 "Equip: Increases healing done by up to 44",
                 "Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources."
-              ]
+              ],
+              "source": "+23 Stamina, +14 Intellect, +35 Healing"
             }
           ],
           "lines": [
@@ -59362,7 +62573,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 9,
               "stats": "+4 Spirit",
               "icon": "inv_drink_06",
-              "weaponType": "Held in Off-hand"
+              "weaponType": "Held in Off-hand",
+              "source": "Silverpine / Barrens quest"
             }
           ]
         },
@@ -59393,7 +62605,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 18,
               "stats": "+6 Spirit, Equip: Increases healing by up to 13 and damage by up to 4.",
               "icon": "inv_misc_gem_pearl_04",
-              "weaponType": "Held in Off-hand"
+              "weaponType": "Held in Off-hand",
+              "source": "Enchanting craftable"
             }
           ]
         },
@@ -59424,7 +62637,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 30,
               "stats": "+8 Spirit, +2 Intellect, Equip: Increases healing by up to 11 and damage by up to 4.",
               "icon": "inv_misc_gem_pearl_04",
-              "weaponType": "Held in Off-hand"
+              "weaponType": "Held in Off-hand",
+              "source": "Shade of Archmage (Dalaran)"
             },
             {
               "name": "Raptor's Gaze",
@@ -59436,7 +62650,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 28,
               "stats": "+4 Intellect, +4 Stamina, Equip: Increases damage and healing by up to 8.",
               "icon": "inv_misc_gem_pearl_02",
-              "weaponType": "Held in Off-hand"
+              "weaponType": "Held in Off-hand",
+              "source": "Shadetooth (Excavation Site)"
             }
           ]
         },
@@ -59503,7 +62718,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 60,
               "stats": "Equip: Increases healing done by up to 29 and damage done by up to 15.",
               "icon": "inv_misc_book_09",
-              "weaponType": "Held in Off-hand"
+              "weaponType": "Held in Off-hand",
+              "source": "PvP Rank 14 Officer's Lounge"
             },
             {
               "name": "High Warlord's Tome of Mending",
@@ -59515,7 +62731,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 60,
               "stats": "Equip: Increases healing done by up to 29 and damage done by up to 15.",
               "icon": "inv_misc_book_09",
-              "weaponType": "Held in Off-hand"
+              "weaponType": "Held in Off-hand",
+              "source": "PvP Rank 14 Champion's Hall"
             }
           ]
         }
@@ -59584,7 +62801,8 @@ if (typeof window !== 'undefined') {
                 "Held In Off-hand",
                 "+5 Intellect",
                 "-3 Spirit"
-              ]
+              ],
+              "source": "Horde Quest"
             },
             {
               "name": "Disciple's Stein",
@@ -59601,7 +62819,8 @@ if (typeof window !== 'undefined') {
                 "Binds when equipped",
                 "Held In Off-hand",
                 "Requires Level 7"
-              ]
+              ],
+              "source": "Level 7 Drop"
             }
           ],
           "lines": [
@@ -59646,7 +62865,8 @@ if (typeof window !== 'undefined') {
                 "Held In Off-hand",
                 "+3 Intellect",
                 "+3 Spirit"
-              ]
+              ],
+              "source": "Valuable Vantages quest"
             },
             {
               "name": "Mathystra Channeling Orb",
@@ -59664,7 +62884,8 @@ if (typeof window !== 'undefined') {
                 "Held In Off-hand",
                 "+3 Stamina",
                 "+5 Intellect"
-              ]
+              ],
+              "source": "Baron Marinous"
             },
             {
               "name": "Defective Samophlange",
@@ -59683,7 +62904,8 @@ if (typeof window !== 'undefined') {
                 "+5 Intellect",
                 "+5 Spirit",
                 "Requires Level 20"
-              ]
+              ],
+              "source": "Winklespark in Barrens"
             }
           ],
           "lines": [
@@ -59730,7 +62952,8 @@ if (typeof window !== 'undefined') {
                 "Held In Off-hand",
                 "Requires Level 21",
                 "Equip: Increases healing done by up to 12"
-              ]
+              ],
+              "source": "Hannah Bladeleaf"
             },
             {
               "name": "Orb of Mystic Insight",
@@ -59749,7 +62972,8 @@ if (typeof window !== 'undefined') {
                 "+6 Intellect",
                 "Requires Level 25",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 7"
-              ]
+              ],
+              "source": "Crafted / Enchanting"
             },
             {
               "name": "Orb of Souls",
@@ -59768,7 +62992,8 @@ if (typeof window !== 'undefined') {
                 "+6 Spirit",
                 "Requires Level 25",
                 "Equip: Increases healing done by up to 13"
-              ]
+              ],
+              "source": "Crafted / Enchanting"
             }
           ],
           "lines": [
@@ -59811,8 +63036,10 @@ if (typeof window !== 'undefined') {
               "lines": [
                 "Binds when picked up",
                 "Held In Off-hand",
+                "Equip: Increases damage done by Arcane spells and effects by up to 11.",
                 "Equip: Increases damage done by Arcane spells and effects by up to 11."
-              ]
+              ],
+              "source": "Starving Arcane quest"
             },
             {
               "name": "Insurgent's Manifesto",
@@ -59832,7 +63059,8 @@ if (typeof window !== 'undefined') {
                 "+4 Intellect",
                 "Requires Level 28",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 2"
-              ]
+              ],
+              "source": "+8 Stamina, +4 Intellect, +8 Spell Power"
             },
             {
               "name": "Tome of the Darkspear Prophecy",
@@ -59852,7 +63080,8 @@ if (typeof window !== 'undefined') {
                 "+4 Intellect",
                 "Requires Level 28",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 2"
-              ]
+              ],
+              "source": "Creeg Bothunk"
             }
           ],
           "lines": [
@@ -59900,7 +63129,8 @@ if (typeof window !== 'undefined') {
                 "+9 Spirit",
                 "+50 Armor",
                 "Equip: Increases healing done by up to 9"
-              ]
+              ],
+              "source": "Past Due quest"
             },
             {
               "name": "Heart of Alterac",
@@ -59919,7 +63149,8 @@ if (typeof window !== 'undefined') {
                 "+7 Stamina",
                 "+5 Intellect",
                 "Requires Level 34"
-              ]
+              ],
+              "source": "Stone Fury in Alterac"
             }
           ],
           "lines": [
@@ -59968,7 +63199,8 @@ if (typeof window !== 'undefined') {
                 "+5 Intellect",
                 "Requires Level 38",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 4"
-              ]
+              ],
+              "source": "+12 Stamina, +5 Intellect, +12 Spell Power"
             },
             {
               "name": "Tome of the Darkspear Prophecy",
@@ -59988,7 +63220,8 @@ if (typeof window !== 'undefined') {
                 "+5 Intellect",
                 "Requires Level 38",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 4"
-              ]
+              ],
+              "source": "+12 Stamina, +5 Intellect, +12 Spell Power"
             },
             {
               "name": "Orb of the Forgotten Seer",
@@ -60006,7 +63239,8 @@ if (typeof window !== 'undefined') {
                 "Held In Off-hand",
                 "Requires Level 32",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 14"
-              ]
+              ],
+              "source": "Scarlet Monastery Library"
             }
           ],
           "lines": [
@@ -60054,7 +63288,8 @@ if (typeof window !== 'undefined') {
                 "+12 Stamina",
                 "+5 Spirit",
                 "Requires Level 40"
-              ]
+              ],
+              "source": "+12 Stamina, +5 Spirit, +16 Healing"
             },
             {
               "name": "Spirit of Aquementas",
@@ -60071,7 +63306,8 @@ if (typeof window !== 'undefined') {
                 "Binds when picked up",
                 "Held In Off-hand",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 21"
-              ]
+              ],
+              "source": "Un'Goro Crater quest chain"
             }
           ],
           "lines": [
@@ -60119,7 +63355,8 @@ if (typeof window !== 'undefined') {
                 "+8 Spirit",
                 "Requires Level 45",
                 "Equip: Increases healing done by up to 19"
-              ]
+              ],
+              "source": "+8 Stamina, +8 Spirit, +18 Healing"
             },
             {
               "name": "Insurgent's Manifesto",
@@ -60139,7 +63376,8 @@ if (typeof window !== 'undefined') {
                 "+6 Intellect",
                 "Requires Level 48",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 5"
-              ]
+              ],
+              "source": "+14 Stamina, +6 Intellect, +14 Spell Power"
             },
             {
               "name": "Heart of Smoldar",
@@ -60158,7 +63396,8 @@ if (typeof window !== 'undefined') {
                 "+8 Stamina",
                 "Requires Level 47",
                 "Equip: Increases healing done by up to 16"
-              ]
+              ],
+              "source": "+8 Stamina, +14 Fire Spell Power"
             }
           ],
           "lines": [
@@ -60207,7 +63446,8 @@ if (typeof window !== 'undefined') {
                 "+7 Intellect",
                 "Requires Level 58",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 8"
-              ]
+              ],
+              "source": "+17 Stamina, +7 Intellect, +16 Spell Power"
             },
             {
               "name": "Tome of the Darkspear Prophecy",
@@ -60227,7 +63467,8 @@ if (typeof window !== 'undefined') {
                 "+7 Intellect",
                 "Requires Level 58",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 8"
-              ]
+              ],
+              "source": "+17 Stamina, +7 Intellect, +16 Spell Power"
             },
             {
               "name": "High Warlord's Tome of Destruction",
@@ -60248,7 +63489,8 @@ if (typeof window !== 'undefined') {
                 "Requires Level 60",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 25",
                 "Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources."
-              ]
+              ],
+              "source": "+24 Stamina, +13 Intellect, +23 Spell Power"
             },
             {
               "name": "Grand Marshal's Tome of Power",
@@ -60269,7 +63511,8 @@ if (typeof window !== 'undefined') {
                 "Requires Level 60",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 25",
                 "Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources."
-              ]
+              ],
+              "source": "+24 Stamina, +13 Intellect, +23 Spell Power"
             },
             {
               "name": "High Warlord's Tome of Mending",
@@ -60290,7 +63533,8 @@ if (typeof window !== 'undefined') {
                 "Requires Level 60",
                 "Equip: Increases healing done by up to 44",
                 "Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources."
-              ]
+              ],
+              "source": "+23 Stamina, +14 Intellect, +35 Healing"
             },
             {
               "name": "Grand Marshal's Tome of Restoration",
@@ -60311,7 +63555,8 @@ if (typeof window !== 'undefined') {
                 "Requires Level 60",
                 "Equip: Increases healing done by up to 44",
                 "Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources."
-              ]
+              ],
+              "source": "+23 Stamina, +14 Intellect, +35 Healing"
             }
           ],
           "lines": [
@@ -60388,7 +63633,8 @@ if (typeof window !== 'undefined') {
                 "Held In Off-hand",
                 "+5 Intellect",
                 "-3 Spirit"
-              ]
+              ],
+              "source": "Horde Quest"
             },
             {
               "name": "Disciple's Stein",
@@ -60405,7 +63651,8 @@ if (typeof window !== 'undefined') {
                 "Binds when equipped",
                 "Held In Off-hand",
                 "Requires Level 7"
-              ]
+              ],
+              "source": "Level 7 Drop"
             }
           ],
           "lines": [
@@ -60450,7 +63697,8 @@ if (typeof window !== 'undefined') {
                 "Held In Off-hand",
                 "+3 Intellect",
                 "+3 Spirit"
-              ]
+              ],
+              "source": "Valuable Vantages quest"
             },
             {
               "name": "Mathystra Channeling Orb",
@@ -60468,7 +63716,8 @@ if (typeof window !== 'undefined') {
                 "Held In Off-hand",
                 "+3 Stamina",
                 "+5 Intellect"
-              ]
+              ],
+              "source": "Baron Marinous"
             },
             {
               "name": "Defective Samophlange",
@@ -60487,7 +63736,8 @@ if (typeof window !== 'undefined') {
                 "+5 Intellect",
                 "+5 Spirit",
                 "Requires Level 20"
-              ]
+              ],
+              "source": "Winklespark in Barrens"
             }
           ],
           "lines": [
@@ -60534,7 +63784,8 @@ if (typeof window !== 'undefined') {
                 "Held In Off-hand",
                 "Requires Level 21",
                 "Equip: Increases healing done by up to 12"
-              ]
+              ],
+              "source": "Hannah Bladeleaf"
             },
             {
               "name": "Orb of Mystic Insight",
@@ -60553,7 +63804,8 @@ if (typeof window !== 'undefined') {
                 "+6 Intellect",
                 "Requires Level 25",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 7"
-              ]
+              ],
+              "source": "Crafted / Enchanting"
             },
             {
               "name": "Orb of Souls",
@@ -60572,7 +63824,8 @@ if (typeof window !== 'undefined') {
                 "+6 Spirit",
                 "Requires Level 25",
                 "Equip: Increases healing done by up to 13"
-              ]
+              ],
+              "source": "Crafted / Enchanting"
             }
           ],
           "lines": [
@@ -60615,8 +63868,10 @@ if (typeof window !== 'undefined') {
               "lines": [
                 "Binds when picked up",
                 "Held In Off-hand",
+                "Equip: Increases damage done by Arcane spells and effects by up to 11.",
                 "Equip: Increases damage done by Arcane spells and effects by up to 11."
-              ]
+              ],
+              "source": "Starving Arcane quest"
             },
             {
               "name": "Insurgent's Manifesto",
@@ -60636,7 +63891,8 @@ if (typeof window !== 'undefined') {
                 "+4 Intellect",
                 "Requires Level 28",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 2"
-              ]
+              ],
+              "source": "+8 Stamina, +4 Intellect, +8 Spell Power"
             },
             {
               "name": "Tome of the Darkspear Prophecy",
@@ -60656,7 +63912,8 @@ if (typeof window !== 'undefined') {
                 "+4 Intellect",
                 "Requires Level 28",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 2"
-              ]
+              ],
+              "source": "Creeg Bothunk"
             }
           ],
           "lines": [
@@ -60704,7 +63961,8 @@ if (typeof window !== 'undefined') {
                 "+9 Spirit",
                 "+50 Armor",
                 "Equip: Increases healing done by up to 9"
-              ]
+              ],
+              "source": "Past Due quest"
             },
             {
               "name": "Heart of Alterac",
@@ -60723,7 +63981,8 @@ if (typeof window !== 'undefined') {
                 "+7 Stamina",
                 "+5 Intellect",
                 "Requires Level 34"
-              ]
+              ],
+              "source": "Stone Fury in Alterac"
             }
           ],
           "lines": [
@@ -60772,7 +64031,8 @@ if (typeof window !== 'undefined') {
                 "+5 Intellect",
                 "Requires Level 38",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 4"
-              ]
+              ],
+              "source": "+12 Stamina, +5 Intellect, +12 Spell Power"
             },
             {
               "name": "Tome of the Darkspear Prophecy",
@@ -60792,7 +64052,8 @@ if (typeof window !== 'undefined') {
                 "+5 Intellect",
                 "Requires Level 38",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 4"
-              ]
+              ],
+              "source": "+12 Stamina, +5 Intellect, +12 Spell Power"
             },
             {
               "name": "Orb of the Forgotten Seer",
@@ -60810,7 +64071,8 @@ if (typeof window !== 'undefined') {
                 "Held In Off-hand",
                 "Requires Level 32",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 14"
-              ]
+              ],
+              "source": "Scarlet Monastery Library"
             }
           ],
           "lines": [
@@ -60858,7 +64120,8 @@ if (typeof window !== 'undefined') {
                 "+12 Stamina",
                 "+5 Spirit",
                 "Requires Level 40"
-              ]
+              ],
+              "source": "+12 Stamina, +5 Spirit, +16 Healing"
             },
             {
               "name": "Spirit of Aquementas",
@@ -60875,7 +64138,8 @@ if (typeof window !== 'undefined') {
                 "Binds when picked up",
                 "Held In Off-hand",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 21"
-              ]
+              ],
+              "source": "Un'Goro Crater quest chain"
             }
           ],
           "lines": [
@@ -60923,7 +64187,8 @@ if (typeof window !== 'undefined') {
                 "+8 Spirit",
                 "Requires Level 45",
                 "Equip: Increases healing done by up to 19"
-              ]
+              ],
+              "source": "+8 Stamina, +8 Spirit, +18 Healing"
             },
             {
               "name": "Insurgent's Manifesto",
@@ -60943,7 +64208,8 @@ if (typeof window !== 'undefined') {
                 "+6 Intellect",
                 "Requires Level 48",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 5"
-              ]
+              ],
+              "source": "+14 Stamina, +6 Intellect, +14 Spell Power"
             },
             {
               "name": "Heart of Smoldar",
@@ -60962,7 +64228,8 @@ if (typeof window !== 'undefined') {
                 "+8 Stamina",
                 "Requires Level 47",
                 "Equip: Increases healing done by up to 16"
-              ]
+              ],
+              "source": "+8 Stamina, +14 Fire Spell Power"
             }
           ],
           "lines": [
@@ -61011,7 +64278,8 @@ if (typeof window !== 'undefined') {
                 "+7 Intellect",
                 "Requires Level 58",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 8"
-              ]
+              ],
+              "source": "+17 Stamina, +7 Intellect, +16 Spell Power"
             },
             {
               "name": "Tome of the Darkspear Prophecy",
@@ -61031,7 +64299,8 @@ if (typeof window !== 'undefined') {
                 "+7 Intellect",
                 "Requires Level 58",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 8"
-              ]
+              ],
+              "source": "+17 Stamina, +7 Intellect, +16 Spell Power"
             },
             {
               "name": "High Warlord's Tome of Destruction",
@@ -61052,7 +64321,8 @@ if (typeof window !== 'undefined') {
                 "Requires Level 60",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 25",
                 "Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources."
-              ]
+              ],
+              "source": "+24 Stamina, +13 Intellect, +23 Spell Power"
             },
             {
               "name": "Grand Marshal's Tome of Power",
@@ -61073,7 +64343,8 @@ if (typeof window !== 'undefined') {
                 "Requires Level 60",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 25",
                 "Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources."
-              ]
+              ],
+              "source": "+24 Stamina, +13 Intellect, +23 Spell Power"
             },
             {
               "name": "High Warlord's Tome of Mending",
@@ -61094,7 +64365,8 @@ if (typeof window !== 'undefined') {
                 "Requires Level 60",
                 "Equip: Increases healing done by up to 44",
                 "Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources."
-              ]
+              ],
+              "source": "+23 Stamina, +14 Intellect, +35 Healing"
             },
             {
               "name": "Grand Marshal's Tome of Restoration",
@@ -61115,7 +64387,8 @@ if (typeof window !== 'undefined') {
                 "Requires Level 60",
                 "Equip: Increases healing done by up to 44",
                 "Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources."
-              ]
+              ],
+              "source": "+23 Stamina, +14 Intellect, +35 Healing"
             }
           ],
           "lines": [
@@ -61166,7 +64439,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 9,
               "stats": "+4 Spirit",
               "icon": "inv_drink_06",
-              "weaponType": "Held in Off-hand"
+              "weaponType": "Held in Off-hand",
+              "source": "Silverpine / Barrens quest"
             }
           ]
         },
@@ -61197,7 +64471,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 18,
               "stats": "+6 Spirit, Equip: Increases healing by up to 13 and damage by up to 4.",
               "icon": "inv_misc_gem_pearl_04",
-              "weaponType": "Held in Off-hand"
+              "weaponType": "Held in Off-hand",
+              "source": "Enchanting craftable"
             }
           ]
         },
@@ -61228,7 +64503,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 30,
               "stats": "+8 Spirit, +2 Intellect, Equip: Increases healing by up to 11 and damage by up to 4.",
               "icon": "inv_misc_gem_pearl_04",
-              "weaponType": "Held in Off-hand"
+              "weaponType": "Held in Off-hand",
+              "source": "Shade of Archmage (Dalaran)"
             },
             {
               "name": "Raptor's Gaze",
@@ -61240,7 +64516,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 28,
               "stats": "+4 Intellect, +4 Stamina, Equip: Increases damage and healing by up to 8.",
               "icon": "inv_misc_gem_pearl_02",
-              "weaponType": "Held in Off-hand"
+              "weaponType": "Held in Off-hand",
+              "source": "Shadetooth (Excavation Site)"
             }
           ]
         },
@@ -61307,7 +64584,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 60,
               "stats": "Equip: Increases healing done by up to 29 and damage done by up to 15.",
               "icon": "inv_misc_book_09",
-              "weaponType": "Held in Off-hand"
+              "weaponType": "Held in Off-hand",
+              "source": "PvP Rank 14 Officer's Lounge"
             },
             {
               "name": "High Warlord's Tome of Mending",
@@ -61319,7 +64597,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 60,
               "stats": "Equip: Increases healing done by up to 29 and damage done by up to 15.",
               "icon": "inv_misc_book_09",
-              "weaponType": "Held in Off-hand"
+              "weaponType": "Held in Off-hand",
+              "source": "PvP Rank 14 Champion's Hall"
             }
           ]
         }
@@ -61371,7 +64650,8 @@ if (typeof window !== 'undefined') {
                 "Off Hand",
                 "177 Armor",
                 "+1 Strength"
-              ]
+              ],
+              "source": "Early quest shield"
             }
           ],
           "lines": [
@@ -61414,7 +64694,8 @@ if (typeof window !== 'undefined') {
                 "+5 Strength",
                 "+3 Stamina",
                 "Requires Level 21"
-              ]
+              ],
+              "source": "Commander Springvale (Shadowfang Keep)"
             },
             {
               "name": "Repurposed Rack",
@@ -61426,7 +64707,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 18,
               "stats": "+6 Strength",
               "icon": "inv_shield_04",
-              "weaponType": "Shield"
+              "weaponType": "Shield",
+              "source": "Hamhock (The Stockade)"
             }
           ],
           "lines": [
@@ -61471,7 +64753,8 @@ if (typeof window !== 'undefined') {
                 "+5 Arcane Resistance",
                 "+5 Nature Resistance",
                 "Requires Level 31"
-              ]
+              ],
+              "source": "Thermaplugg (Gnomeregan)"
             },
             {
               "name": "Mirror of Rath'mael",
@@ -61491,7 +64774,8 @@ if (typeof window !== 'undefined') {
                 "+5 Strength",
                 "Requires Level 19",
                 "Equip: Increases your chance to Block attacks with a shield by 1.0%."
-              ]
+              ],
+              "source": "Rath'mael (Ruins of Lordaeron)"
             }
           ],
           "lines": [
@@ -61538,7 +64822,8 @@ if (typeof window !== 'undefined') {
                 "+7 Stamina",
                 "Requires Level 30",
                 "Equip: Increases healing done by up to 15"
-              ]
+              ],
+              "source": "Charlga Razorflank (RFK)"
             }
           ],
           "lines": [
@@ -61585,7 +64870,8 @@ if (typeof window !== 'undefined') {
                 "+10 Spirit",
                 "Requires Level 37",
                 "Equip: Increases healing done by up to 13"
-              ]
+              ],
+              "source": "Eric The Swift (Uldaman)"
             }
           ],
           "lines": [
@@ -61633,7 +64919,8 @@ if (typeof window !== 'undefined') {
                 "+6 Strength",
                 "+15 Stamina",
                 "Requires Level 49"
-              ]
+              ],
+              "source": "World drop"
             }
           ],
           "lines": [
@@ -61680,7 +64967,8 @@ if (typeof window !== 'undefined') {
                 "2291 Armor",
                 "+14 Stamina",
                 "Requires Level 60"
-              ]
+              ],
+              "source": "Alterac Valley Exalted"
             },
             {
               "name": "Grand Marshal's Aegis",
@@ -61701,7 +64989,8 @@ if (typeof window !== 'undefined') {
                 "+23 Stamina",
                 "Requires Level 60",
                 "Equip: When struck in combat has a 5% chance of inflicting 35 to 65 Nature damage to the attacker. (Proc chance: 5%)"
-              ]
+              ],
+              "source": "PvP Rank 14"
             },
             {
               "name": "High Warlord's Shield Wall",
@@ -61722,7 +65011,8 @@ if (typeof window !== 'undefined') {
                 "+23 Stamina",
                 "Requires Level 60",
                 "Equip: When struck in combat has a 5% chance of inflicting 35 to 65 Nature damage to the attacker. (Proc chance: 5%)"
-              ]
+              ],
+              "source": "PvP Rank 14"
             }
           ],
           "lines": [
@@ -61782,7 +65072,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 18,
               "stats": "+5 Intellect, Equip: Increases damage and healing by up to 5.",
               "icon": "inv_shield_04",
-              "weaponType": "Shield"
+              "weaponType": "Shield",
+              "source": "Verdan the Everliving (WC)"
             }
           ]
         },
@@ -61813,7 +65104,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 28,
               "stats": "+4 Stamina, Equip: Increases healing by up to 18 and damage by up to 6.",
               "icon": "inv_shield_04",
-              "weaponType": "Shield"
+              "weaponType": "Shield",
+              "source": "Compendium quest"
             },
             {
               "name": "Energized Stone Circle",
@@ -61825,7 +65117,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 30,
               "stats": "+4 Stamina, Equip: Increases healing by up to 7 and damage by up to 3.",
               "icon": "inv_shield_04",
-              "weaponType": "Shield"
+              "weaponType": "Shield",
+              "source": "Power Stones"
             }
           ]
         },
@@ -61856,7 +65149,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 39,
               "stats": "+8 Strength, +7 Stamina",
               "icon": "inv_shield_06",
-              "weaponType": "Shield"
+              "weaponType": "Shield",
+              "source": "SM Cathedral"
             }
           ]
         },
@@ -61905,7 +65199,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 60,
               "stats": "+15 Stamina, +15 Intellect, Equip: Increases healing done by up to 20 and damage by up to 24.",
               "icon": "inv_shield_08",
-              "weaponType": "Shield"
+              "weaponType": "Shield",
+              "source": "PvP Rank 14"
             },
             {
               "name": "Wormscale Blocker",
@@ -61917,7 +65212,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 60,
               "stats": "+14 Stamina, +14 Intellect, Equip: Increases healing done by up to 23 and damage by up to 12.",
               "icon": "inv_shield_11",
-              "weaponType": "Shield"
+              "weaponType": "Shield",
+              "source": "AQ40 Ouro"
             }
           ]
         }
@@ -61969,7 +65265,8 @@ if (typeof window !== 'undefined') {
                 "Off Hand",
                 "177 Armor",
                 "+1 Strength"
-              ]
+              ],
+              "source": "Early quest shield"
             }
           ],
           "lines": [
@@ -62012,7 +65309,8 @@ if (typeof window !== 'undefined') {
                 "+5 Strength",
                 "+3 Stamina",
                 "Requires Level 21"
-              ]
+              ],
+              "source": "Commander Springvale (Shadowfang Keep)"
             },
             {
               "name": "Repurposed Rack",
@@ -62024,7 +65322,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 18,
               "stats": "+6 Strength",
               "icon": "inv_shield_04",
-              "weaponType": "Shield"
+              "weaponType": "Shield",
+              "source": "Hamhock (The Stockade)"
             }
           ],
           "lines": [
@@ -62069,7 +65368,8 @@ if (typeof window !== 'undefined') {
                 "+5 Arcane Resistance",
                 "+5 Nature Resistance",
                 "Requires Level 31"
-              ]
+              ],
+              "source": "Thermaplugg (Gnomeregan)"
             },
             {
               "name": "Mirror of Rath'mael",
@@ -62089,7 +65389,8 @@ if (typeof window !== 'undefined') {
                 "+5 Strength",
                 "Requires Level 19",
                 "Equip: Increases your chance to Block attacks with a shield by 1.0%."
-              ]
+              ],
+              "source": "Rath'mael (Ruins of Lordaeron)"
             }
           ],
           "lines": [
@@ -62136,7 +65437,8 @@ if (typeof window !== 'undefined') {
                 "+7 Stamina",
                 "Requires Level 30",
                 "Equip: Increases healing done by up to 15"
-              ]
+              ],
+              "source": "Charlga Razorflank (RFK)"
             }
           ],
           "lines": [
@@ -62183,7 +65485,8 @@ if (typeof window !== 'undefined') {
                 "+10 Spirit",
                 "Requires Level 37",
                 "Equip: Increases healing done by up to 13"
-              ]
+              ],
+              "source": "Eric The Swift (Uldaman)"
             }
           ],
           "lines": [
@@ -62231,7 +65534,8 @@ if (typeof window !== 'undefined') {
                 "+6 Strength",
                 "+15 Stamina",
                 "Requires Level 49"
-              ]
+              ],
+              "source": "World drop"
             }
           ],
           "lines": [
@@ -62278,7 +65582,8 @@ if (typeof window !== 'undefined') {
                 "2291 Armor",
                 "+14 Stamina",
                 "Requires Level 60"
-              ]
+              ],
+              "source": "Alterac Valley Exalted"
             },
             {
               "name": "Grand Marshal's Aegis",
@@ -62299,7 +65604,8 @@ if (typeof window !== 'undefined') {
                 "+23 Stamina",
                 "Requires Level 60",
                 "Equip: When struck in combat has a 5% chance of inflicting 35 to 65 Nature damage to the attacker. (Proc chance: 5%)"
-              ]
+              ],
+              "source": "PvP Rank 14"
             },
             {
               "name": "High Warlord's Shield Wall",
@@ -62320,7 +65626,8 @@ if (typeof window !== 'undefined') {
                 "+23 Stamina",
                 "Requires Level 60",
                 "Equip: When struck in combat has a 5% chance of inflicting 35 to 65 Nature damage to the attacker. (Proc chance: 5%)"
-              ]
+              ],
+              "source": "PvP Rank 14"
             }
           ],
           "lines": [
@@ -62380,7 +65687,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 18,
               "stats": "+5 Intellect, Equip: Increases damage and healing by up to 5.",
               "icon": "inv_shield_04",
-              "weaponType": "Shield"
+              "weaponType": "Shield",
+              "source": "Verdan the Everliving (WC)"
             }
           ]
         },
@@ -62411,7 +65719,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 28,
               "stats": "+4 Stamina, Equip: Increases healing by up to 18 and damage by up to 6.",
               "icon": "inv_shield_04",
-              "weaponType": "Shield"
+              "weaponType": "Shield",
+              "source": "Compendium quest"
             },
             {
               "name": "Energized Stone Circle",
@@ -62423,7 +65732,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 30,
               "stats": "+4 Stamina, Equip: Increases healing by up to 7 and damage by up to 3.",
               "icon": "inv_shield_04",
-              "weaponType": "Shield"
+              "weaponType": "Shield",
+              "source": "Power Stones"
             }
           ]
         },
@@ -62454,7 +65764,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 39,
               "stats": "+8 Strength, +7 Stamina",
               "icon": "inv_shield_06",
-              "weaponType": "Shield"
+              "weaponType": "Shield",
+              "source": "SM Cathedral"
             }
           ]
         },
@@ -62503,7 +65814,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 60,
               "stats": "+15 Stamina, +15 Intellect, Equip: Increases healing done by up to 20 and damage by up to 24.",
               "icon": "inv_shield_08",
-              "weaponType": "Shield"
+              "weaponType": "Shield",
+              "source": "PvP Rank 14"
             },
             {
               "name": "Wormscale Blocker",
@@ -62515,7 +65827,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 60,
               "stats": "+14 Stamina, +14 Intellect, Equip: Increases healing done by up to 23 and damage by up to 12.",
               "icon": "inv_shield_11",
-              "weaponType": "Shield"
+              "weaponType": "Shield",
+              "source": "AQ40 Ouro"
             }
           ]
         }
@@ -62563,7 +65876,8 @@ if (typeof window !== 'undefined') {
                 "Off Hand",
                 "177 Armor",
                 "+1 Strength"
-              ]
+              ],
+              "source": "Early quest shield"
             }
           ],
           "lines": [
@@ -62606,7 +65920,8 @@ if (typeof window !== 'undefined') {
                 "+5 Strength",
                 "+3 Stamina",
                 "Requires Level 21"
-              ]
+              ],
+              "source": "Commander Springvale (Shadowfang Keep)"
             },
             {
               "name": "Repurposed Rack",
@@ -62618,7 +65933,8 @@ if (typeof window !== 'undefined') {
               "reqLevel": 18,
               "stats": "+6 Strength",
               "icon": "inv_shield_04",
-              "weaponType": "Shield"
+              "weaponType": "Shield",
+              "source": "Hamhock (The Stockade)"
             }
           ],
           "lines": [
@@ -62663,7 +65979,8 @@ if (typeof window !== 'undefined') {
                 "+5 Arcane Resistance",
                 "+5 Nature Resistance",
                 "Requires Level 31"
-              ]
+              ],
+              "source": "Thermaplugg (Gnomeregan)"
             },
             {
               "name": "Mirror of Rath'mael",
@@ -62683,7 +66000,8 @@ if (typeof window !== 'undefined') {
                 "+5 Strength",
                 "Requires Level 19",
                 "Equip: Increases your chance to Block attacks with a shield by 1.0%."
-              ]
+              ],
+              "source": "Rath'mael (Ruins of Lordaeron)"
             }
           ],
           "lines": [
@@ -62730,7 +66048,8 @@ if (typeof window !== 'undefined') {
                 "+7 Stamina",
                 "Requires Level 30",
                 "Equip: Increases healing done by up to 15"
-              ]
+              ],
+              "source": "Charlga Razorflank (RFK)"
             }
           ],
           "lines": [
@@ -62777,7 +66096,8 @@ if (typeof window !== 'undefined') {
                 "+10 Spirit",
                 "Requires Level 37",
                 "Equip: Increases healing done by up to 13"
-              ]
+              ],
+              "source": "Eric The Swift (Uldaman)"
             }
           ],
           "lines": [
@@ -62825,7 +66145,8 @@ if (typeof window !== 'undefined') {
                 "+6 Strength",
                 "+15 Stamina",
                 "Requires Level 49"
-              ]
+              ],
+              "source": "World drop"
             }
           ],
           "lines": [
@@ -62872,7 +66193,8 @@ if (typeof window !== 'undefined') {
                 "2291 Armor",
                 "+14 Stamina",
                 "Requires Level 60"
-              ]
+              ],
+              "source": "Alterac Valley Exalted"
             },
             {
               "name": "Grand Marshal's Aegis",
@@ -62893,7 +66215,8 @@ if (typeof window !== 'undefined') {
                 "+23 Stamina",
                 "Requires Level 60",
                 "Equip: When struck in combat has a 5% chance of inflicting 35 to 65 Nature damage to the attacker. (Proc chance: 5%)"
-              ]
+              ],
+              "source": "PvP Rank 14"
             },
             {
               "name": "High Warlord's Shield Wall",
@@ -62914,7 +66237,8 @@ if (typeof window !== 'undefined') {
                 "+23 Stamina",
                 "Requires Level 60",
                 "Equip: When struck in combat has a 5% chance of inflicting 35 to 65 Nature damage to the attacker. (Proc chance: 5%)"
-              ]
+              ],
+              "source": "PvP Rank 14"
             }
           ],
           "lines": [

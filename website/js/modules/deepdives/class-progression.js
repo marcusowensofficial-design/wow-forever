@@ -264,6 +264,35 @@
     return tokens.filter(isRealStatToken);
   }
 
+  function extractSourceAndStats(valStr) {
+    if (!valStr) return { stats: [], source: '' };
+    const parts = valStr.split(/\s*[-–—]\s*/);
+    if (parts.length <= 1) return { stats: [], source: valStr };
+    
+    const rest = parts.slice(1);
+    const statParts = [];
+    const sourceParts = [];
+
+    for (const p of rest) {
+      const trimmed = p.trim();
+      if (!trimmed) continue;
+      const subTokens = trimmed.split(/,(?=\s*(?:[+-]|\d+\s*(?:mp5|sp|ap|crit|hit)|equip|use|chance on hit|\b(?:strength|agility|stamina|intellect|spirit|str|agi|sta|int|spi)\b))/i)
+        .map(s => s.trim())
+        .filter(Boolean);
+      const allStats = subTokens.length > 0 && subTokens.every(isRealStatToken);
+      if (allStats) {
+        statParts.push(...subTokens);
+      } else {
+        sourceParts.push(trimmed);
+      }
+    }
+
+    return {
+      stats: statParts,
+      source: sourceParts.join(' — ')
+    };
+  }
+
   function renderWeaponTooltipHtml(target) {
     const name = target.getAttribute('data-item-name') || 'Weapon';
     const itemId = target.getAttribute('data-item-id') || '';
@@ -281,6 +310,12 @@
     const altVal = target.getAttribute('data-alt-val') || '';
     const faction = target.getAttribute('data-faction') || 'both';
 
+    const parsedFromAlt = extractSourceAndStats(altVal);
+    let statTokens = parseStatsTokens(stats, altVal, sourceDetail);
+    if (statTokens.length === 0 && parsedFromAlt.stats.length > 0) {
+      statTokens = parsedFromAlt.stats;
+    }
+
     let html = '';
     const qualClass = fullItem?.quality || quality || 'q2';
     html += `<div class="wow-tip-name ${qualClass}">${escapeHtml(name)}</div>`;
@@ -291,6 +326,12 @@
     }
 
     if (fullItem && fullItem.lines && fullItem.lines.length > 0) {
+      const linesHasStats = fullItem.lines.some(line => {
+        const trimmed = line.trim();
+        return trimmed.startsWith('+') || /Strength|Agility|Stamina|Intellect|Spirit|Armor|Spell Damage|Healing|Attack Power|\bAP\b|\bSP\b/i.test(trimmed);
+      });
+      let statsInjected = false;
+
       html += `<div class="wow-tip-lines">`;
       fullItem.lines.forEach(line => {
         const trimmed = line.trim();
@@ -304,11 +345,29 @@
           }
         } else if (trimmed.startsWith('(') && trimmed.endsWith(')') && trimmed.toLowerCase().includes('damage per second')) {
           html += `<div class="wow-tip-dps">${escapeHtml(trimmed)}</div>`;
+          if (!linesHasStats && !statsInjected && statTokens.length > 0) {
+            statTokens.forEach(st => {
+              html += formatStatLine(st);
+            });
+            statsInjected = true;
+          }
         } else if (trimmed.startsWith('Binds when')) {
           html += `<div class="wow-tip-bind">${escapeHtml(trimmed)}</div>`;
         } else if (trimmed.startsWith('Requires Level')) {
+          if (!linesHasStats && !statsInjected && statTokens.length > 0) {
+            statTokens.forEach(st => {
+              html += formatStatLine(st);
+            });
+            statsInjected = true;
+          }
           html += `<div class="wow-tip-req" style="color: #fff; font-size: 0.8rem; margin: 0.2rem 0;">${escapeHtml(trimmed)}</div>`;
         } else if (trimmed.startsWith('Equip:') || trimmed.startsWith('Chance on hit:') || trimmed.startsWith('Use:')) {
+          if (!linesHasStats && !statsInjected && statTokens.length > 0) {
+            statTokens.forEach(st => {
+              html += formatStatLine(st);
+            });
+            statsInjected = true;
+          }
           html += `<div class="wow-tip-equip">${escapeHtml(trimmed)}</div>`;
         } else if (trimmed.startsWith('Sell Price:')) {
           html += `<div class="wow-tip-price" style="color: #94a3b8; font-size: 0.75rem; margin-top: 0.25rem;">${escapeHtml(trimmed)}</div>`;
@@ -318,6 +377,12 @@
           html += `<div class="wow-tip-generic" style="color: #cbd5e1;">${escapeHtml(trimmed)}</div>`;
         }
       });
+      if (!linesHasStats && !statsInjected && statTokens.length > 0) {
+        statTokens.forEach(st => {
+          html += formatStatLine(st);
+        });
+        statsInjected = true;
+      }
       html += `</div>`;
     } else {
       const isVendorOrCraft = (sourceTitle + ' ' + sourceDetail + ' ' + altVal).toLowerCase();
@@ -348,7 +413,6 @@
         }
       }
 
-      const statTokens = parseStatsTokens(stats, altVal, sourceDetail);
       if (statTokens.length > 0) {
         html += `<div class="wow-tip-stats">`;
         statTokens.forEach(st => {
@@ -381,9 +445,13 @@
           if (cleanDetail) srcText += ` — ${cleanDetail}`;
         }
       } else if (altVal) {
-        const parts = altVal.split(/\s*[-–—]\s*/);
-        if (parts.length > 1) srcText = parts.slice(1).join(' — ').trim();
+        srcText = parsedFromAlt.source;
       }
+    }
+    if (srcText) {
+      const parts = srcText.split(/\s*[-–—]\s*/);
+      const cleanParts = parts.filter(p => !isRealStatToken(p.trim()));
+      srcText = cleanParts.join(' — ').trim();
     }
     if (srcText.trim()) {
       html += `<div class="wow-tip-source">📍 Source: ${escapeHtml(srcText.trim())}</div>`;

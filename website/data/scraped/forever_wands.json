@@ -38,7 +38,8 @@
               "Binds when picked up",
               "Ranged",
               "(4.17 damage per second)"
-            ]
+            ],
+            "source": "A Magical Affront quest (Alliance)"
           }
         ],
         "lines": [
@@ -85,7 +86,8 @@
               "(11.33 damage per second)",
               "Requires Level 5",
               "Equip: Increases damage and healing done by magical spells and effects by up to 1"
-            ]
+            ],
+            "source": "Crafted by Enchanters (Skill 10)"
           },
           {
             "name": "Wisesight Wand",
@@ -106,7 +108,8 @@
               "(8.82 damage per second)",
               "+1 Intellect",
               "Requires Level 7"
-            ]
+            ],
+            "source": "Nightscreech drop"
           }
         ],
         "lines": [
@@ -153,7 +156,8 @@
               "(8.82 damage per second)",
               "+1 Intellect",
               "Requires Level 7"
-            ]
+            ],
+            "source": "Matriarch / drop"
           },
           {
             "name": "Windbough Wand",
@@ -173,7 +177,8 @@
               "Ranged",
               "(7.19 damage per second)",
               "+1 Intellect"
-            ]
+            ],
+            "source": "Boughs in the Wind quest"
           }
         ],
         "lines": [
@@ -221,7 +226,8 @@
               "(14.41 damage per second)",
               "Requires Level 14",
               "Equip: Increases intellect by 5 at night."
-            ]
+            ],
+            "source": "Lady Moongazer drop"
           },
           {
             "name": "Whelpfire Wand",
@@ -240,9 +246,11 @@
               "Binds when equipped",
               "Ranged",
               "(15.26 damage per second)",
+              "Equip: Increases damage done by Fire spells and effects by up to 3.",
               "Requires Level 15",
               "Equip: Increases damage done by Fire spells and effects by up to 3."
-            ]
+            ],
+            "source": "Snarlflare in Redridge"
           }
         ],
         "lines": [
@@ -291,7 +299,8 @@
               "(21.18 damage per second)",
               "+3 Nature Resistance",
               "Requires Level 22"
-            ]
+            ],
+            "source": "Level 22 World Drop"
           },
           {
             "name": "Greater Magic Wand",
@@ -312,7 +321,8 @@
               "(17.50 damage per second)",
               "Requires Level 13",
               "Equip: Increases damage and healing done by magical spells and effects by up to 2"
-            ]
+            ],
+            "source": "Continue using if unavailable"
           },
           {
             "name": "Cookie's Stirring Rod",
@@ -331,15 +341,18 @@
               "Binds when picked up",
               "Ranged",
               "(22.31 damage per second)",
+              "Equip: Increases your Cooking speed by 25%.",
               "Requires Level 17",
               "Equip: Increases your Cooking speed by 25%."
-            ]
+            ],
+            "source": "Arcane Wand from Cookie in The Deadmines"
           }
         ],
         "lines": [
           "Binds when equipped",
           "Ranged",
           "(15.26 damage per second)",
+          "Equip: Increases damage done by Fire spells and effects by up to 3.",
           "Requires Level 15",
           "Equip: Increases damage done by Fire spells and effects by up to 3."
         ]
@@ -382,7 +395,8 @@
               "(25.38 damage per second)",
               "+4 Intellect",
               "Requires Level 26"
-            ]
+            ],
+            "source": "Crafted by Enchanters (Skill 155)"
           },
           {
             "name": "Wand of Mana Concentration",
@@ -403,7 +417,8 @@
               "(31.18 damage per second)",
               "+4 Intellect",
               "Requires Level 27"
-            ]
+            ],
+            "source": "Arcanic Enigma in City of Dalaran"
           },
           {
             "name": "Snapped Branch Wand",
@@ -424,7 +439,8 @@
               "(21.18 damage per second)",
               "+3 Nature Resistance",
               "Requires Level 22"
-            ]
+            ],
+            "source": "Level 22 World Drop"
           }
         ],
         "lines": [
@@ -471,7 +487,8 @@
               "Ranged",
               "(34.67 damage per second)",
               "Equip: Increases damage and healing done by magical spells and effects by up to 7"
-            ]
+            ],
+            "source": "Big Game Hunter quest in STV"
           },
           {
             "name": "Greater Mystic Wand",
@@ -492,7 +509,8 @@
               "(29.00 damage per second)",
               "Requires Level 30",
               "Equip: Increases damage and healing done by magical spells and effects by up to 5"
-            ]
+            ],
+            "source": "Crafted by Enchanters (Skill 175)"
           }
         ],
         "lines": [
@@ -541,7 +559,8 @@
               "(29.00 damage per second)",
               "Requires Level 30",
               "Equip: Increases damage and healing done by magical spells and effects by up to 5"
-            ]
+            ],
+            "source": "Enchanter crafted (Req lvl 30)"
           },
           {
             "name": "Twisted Nether Wand",
@@ -562,7 +581,8 @@
               "(34.00 damage per second)",
               "Requires Level 37",
               "Equip: Increases damage and healing done by magical spells and effects by up to 6"
-            ]
+            ],
+            "source": "Crafted by Enchanters (Req lvl 37)"
           }
         ],
         "lines": [
@@ -610,7 +630,8 @@
               "(35.67 damage per second)",
               "+5 Intellect",
               "Requires Level 40"
-            ]
+            ],
+            "source": "Partial Mystical Notes quest"
           },
           {
             "name": "Twisted Nether Wand",
@@ -631,7 +652,8 @@
               "(34.00 damage per second)",
               "Requires Level 37",
               "Equip: Increases damage and healing done by magical spells and effects by up to 6"
-            ]
+            ],
+            "source": "Crafted by Enchanters (Req lvl 37)"
           }
         ],
         "lines": [
@@ -681,7 +703,8 @@
               "(39.17 damage per second)",
               "Requires Level 43",
               "Equip: Increases damage and healing done by magical spells and effects by up to 7"
-            ]
+            ],
+            "source": "Crafted by Enchanters (Skill 225)"
           },
           {
             "name": "Lesser Eternal Wand",
@@ -702,7 +725,8 @@
               "(45.75 damage per second)",
               "Requires Level 49",
               "Equip: Increases damage and healing done by magical spells and effects by up to 8"
-            ]
+            ],
+            "source": "Crafted by Enchanters (Req lvl 49)"
           }
         ],
         "lines": [
@@ -752,7 +776,8 @@
               "+6 Stamina",
               "+4 Spirit",
               "Requires Level 56"
-            ]
+            ],
+            "source": "Rare World Drop (Req lvl 56)"
           }
         ],
         "lines": [
@@ -802,7 +827,8 @@
               "+7 Intellect",
               "Requires Level 55",
               "Equip: Increases damage and healing done by magical spells and effects by up to 9"
-            ]
+            ],
+            "source": "Fast high — DPS wand"
           },
           {
             "name": "Greater Eternal Wand",
@@ -823,7 +849,8 @@
               "(53.33 damage per second)",
               "Requires Level 55",
               "Equip: Increases damage and healing done by magical spells and effects by up to 9"
-            ]
+            ],
+            "source": "Crafted by Enchanters (Skill 285)"
           },
           {
             "name": "Torch of Light",
@@ -845,7 +872,8 @@
               "+11 Spirit",
               "Requires Level 60",
               "Equip: Increases healing done by up to 17"
-            ]
+            ],
+            "source": "Best — in — Slot Level 60 Wand"
           }
         ],
         "lines": [
@@ -898,7 +926,8 @@
               "Binds when picked up",
               "Ranged",
               "(4.17 damage per second)"
-            ]
+            ],
+            "source": "A Magical Affront quest (Alliance)"
           }
         ],
         "lines": [
@@ -945,7 +974,8 @@
               "(11.33 damage per second)",
               "Requires Level 5",
               "Equip: Increases damage and healing done by magical spells and effects by up to 1"
-            ]
+            ],
+            "source": "Crafted by Enchanters (Skill 10)"
           },
           {
             "name": "Wisesight Wand",
@@ -966,7 +996,8 @@
               "(8.82 damage per second)",
               "+1 Intellect",
               "Requires Level 7"
-            ]
+            ],
+            "source": "Nightscreech drop"
           }
         ],
         "lines": [
@@ -1013,7 +1044,8 @@
               "(8.82 damage per second)",
               "+1 Intellect",
               "Requires Level 7"
-            ]
+            ],
+            "source": "Matriarch / drop"
           },
           {
             "name": "Windbough Wand",
@@ -1033,7 +1065,8 @@
               "Ranged",
               "(7.19 damage per second)",
               "+1 Intellect"
-            ]
+            ],
+            "source": "Boughs in the Wind quest"
           }
         ],
         "lines": [
@@ -1081,7 +1114,8 @@
               "(14.41 damage per second)",
               "Requires Level 14",
               "Equip: Increases intellect by 5 at night."
-            ]
+            ],
+            "source": "Lady Moongazer drop"
           },
           {
             "name": "Whelpfire Wand",
@@ -1100,9 +1134,11 @@
               "Binds when equipped",
               "Ranged",
               "(15.26 damage per second)",
+              "Equip: Increases damage done by Fire spells and effects by up to 3.",
               "Requires Level 15",
               "Equip: Increases damage done by Fire spells and effects by up to 3."
-            ]
+            ],
+            "source": "Snarlflare in Redridge"
           }
         ],
         "lines": [
@@ -1151,7 +1187,8 @@
               "(21.18 damage per second)",
               "+3 Nature Resistance",
               "Requires Level 22"
-            ]
+            ],
+            "source": "Level 22 World Drop"
           },
           {
             "name": "Greater Magic Wand",
@@ -1172,13 +1209,15 @@
               "(17.50 damage per second)",
               "Requires Level 13",
               "Equip: Increases damage and healing done by magical spells and effects by up to 2"
-            ]
+            ],
+            "source": "Continue using if unavailable"
           }
         ],
         "lines": [
           "Binds when equipped",
           "Ranged",
           "(15.26 damage per second)",
+          "Equip: Increases damage done by Fire spells and effects by up to 3.",
           "Requires Level 15",
           "Equip: Increases damage done by Fire spells and effects by up to 3."
         ]
@@ -1221,7 +1260,8 @@
               "(25.38 damage per second)",
               "+4 Intellect",
               "Requires Level 26"
-            ]
+            ],
+            "source": "Crafted by Enchanters (Skill 155)"
           },
           {
             "name": "Wand of Mana Concentration",
@@ -1242,7 +1282,8 @@
               "(31.18 damage per second)",
               "+4 Intellect",
               "Requires Level 27"
-            ]
+            ],
+            "source": "Arcanic Enigma in City of Dalaran"
           },
           {
             "name": "Snapped Branch Wand",
@@ -1263,7 +1304,8 @@
               "(21.18 damage per second)",
               "+3 Nature Resistance",
               "Requires Level 22"
-            ]
+            ],
+            "source": "Level 22 World Drop"
           }
         ],
         "lines": [
@@ -1310,7 +1352,8 @@
               "Ranged",
               "(34.67 damage per second)",
               "Equip: Increases damage and healing done by magical spells and effects by up to 7"
-            ]
+            ],
+            "source": "Big Game Hunter quest in STV"
           },
           {
             "name": "Greater Mystic Wand",
@@ -1331,7 +1374,8 @@
               "(29.00 damage per second)",
               "Requires Level 30",
               "Equip: Increases damage and healing done by magical spells and effects by up to 5"
-            ]
+            ],
+            "source": "Crafted by Enchanters (Skill 175)"
           }
         ],
         "lines": [
@@ -1380,7 +1424,8 @@
               "(29.00 damage per second)",
               "Requires Level 30",
               "Equip: Increases damage and healing done by magical spells and effects by up to 5"
-            ]
+            ],
+            "source": "Enchanter crafted (Req lvl 30)"
           },
           {
             "name": "Twisted Nether Wand",
@@ -1401,7 +1446,8 @@
               "(34.00 damage per second)",
               "Requires Level 37",
               "Equip: Increases damage and healing done by magical spells and effects by up to 6"
-            ]
+            ],
+            "source": "Crafted by Enchanters (Req lvl 37)"
           }
         ],
         "lines": [
@@ -1449,7 +1495,8 @@
               "(35.67 damage per second)",
               "+5 Intellect",
               "Requires Level 40"
-            ]
+            ],
+            "source": "Partial Mystical Notes quest"
           },
           {
             "name": "Twisted Nether Wand",
@@ -1470,7 +1517,8 @@
               "(34.00 damage per second)",
               "Requires Level 37",
               "Equip: Increases damage and healing done by magical spells and effects by up to 6"
-            ]
+            ],
+            "source": "Crafted by Enchanters (Req lvl 37)"
           }
         ],
         "lines": [
@@ -1520,7 +1568,8 @@
               "(39.17 damage per second)",
               "Requires Level 43",
               "Equip: Increases damage and healing done by magical spells and effects by up to 7"
-            ]
+            ],
+            "source": "Crafted by Enchanters (Skill 225)"
           },
           {
             "name": "Lesser Eternal Wand",
@@ -1541,7 +1590,8 @@
               "(45.75 damage per second)",
               "Requires Level 49",
               "Equip: Increases damage and healing done by magical spells and effects by up to 8"
-            ]
+            ],
+            "source": "Crafted by Enchanters (Req lvl 49)"
           }
         ],
         "lines": [
@@ -1591,7 +1641,8 @@
               "+6 Stamina",
               "+4 Spirit",
               "Requires Level 56"
-            ]
+            ],
+            "source": "Rare World Drop (Req lvl 56)"
           }
         ],
         "lines": [
@@ -1641,7 +1692,8 @@
               "+7 Intellect",
               "Requires Level 55",
               "Equip: Increases damage and healing done by magical spells and effects by up to 9"
-            ]
+            ],
+            "source": "Fast high — DPS wand"
           },
           {
             "name": "Greater Eternal Wand",
@@ -1662,7 +1714,8 @@
               "(53.33 damage per second)",
               "Requires Level 55",
               "Equip: Increases damage and healing done by magical spells and effects by up to 9"
-            ]
+            ],
+            "source": "Crafted by Enchanters (Skill 285)"
           },
           {
             "name": "Torch of Light",
@@ -1684,7 +1737,8 @@
               "+11 Spirit",
               "Requires Level 60",
               "Equip: Increases healing done by up to 17"
-            ]
+            ],
+            "source": "Best — in — Slot Level 60 Wand"
           }
         ],
         "lines": [
@@ -1737,7 +1791,8 @@
               "Binds when picked up",
               "Ranged",
               "(4.17 damage per second)"
-            ]
+            ],
+            "source": "A Magical Affront quest (Alliance)"
           }
         ],
         "lines": [
@@ -1784,7 +1839,8 @@
               "(11.33 damage per second)",
               "Requires Level 5",
               "Equip: Increases damage and healing done by magical spells and effects by up to 1"
-            ]
+            ],
+            "source": "Crafted by Enchanters (Skill 10)"
           },
           {
             "name": "Wisesight Wand",
@@ -1805,7 +1861,8 @@
               "(8.82 damage per second)",
               "+1 Intellect",
               "Requires Level 7"
-            ]
+            ],
+            "source": "Nightscreech drop"
           }
         ],
         "lines": [
@@ -1852,7 +1909,8 @@
               "(8.82 damage per second)",
               "+1 Intellect",
               "Requires Level 7"
-            ]
+            ],
+            "source": "Matriarch / drop"
           },
           {
             "name": "Windbough Wand",
@@ -1872,7 +1930,8 @@
               "Ranged",
               "(7.19 damage per second)",
               "+1 Intellect"
-            ]
+            ],
+            "source": "Boughs in the Wind quest"
           }
         ],
         "lines": [
@@ -1920,7 +1979,8 @@
               "(14.41 damage per second)",
               "Requires Level 14",
               "Equip: Increases intellect by 5 at night."
-            ]
+            ],
+            "source": "Lady Moongazer drop"
           },
           {
             "name": "Whelpfire Wand",
@@ -1939,9 +1999,11 @@
               "Binds when equipped",
               "Ranged",
               "(15.26 damage per second)",
+              "Equip: Increases damage done by Fire spells and effects by up to 3.",
               "Requires Level 15",
               "Equip: Increases damage done by Fire spells and effects by up to 3."
-            ]
+            ],
+            "source": "Snarlflare in Redridge"
           }
         ],
         "lines": [
@@ -1990,7 +2052,8 @@
               "(21.18 damage per second)",
               "+3 Nature Resistance",
               "Requires Level 22"
-            ]
+            ],
+            "source": "Level 22 World Drop"
           },
           {
             "name": "Greater Magic Wand",
@@ -2011,13 +2074,15 @@
               "(17.50 damage per second)",
               "Requires Level 13",
               "Equip: Increases damage and healing done by magical spells and effects by up to 2"
-            ]
+            ],
+            "source": "Continue using if unavailable"
           }
         ],
         "lines": [
           "Binds when equipped",
           "Ranged",
           "(15.26 damage per second)",
+          "Equip: Increases damage done by Fire spells and effects by up to 3.",
           "Requires Level 15",
           "Equip: Increases damage done by Fire spells and effects by up to 3."
         ]
@@ -2060,7 +2125,8 @@
               "(25.38 damage per second)",
               "+4 Intellect",
               "Requires Level 26"
-            ]
+            ],
+            "source": "Crafted by Enchanters (Skill 155)"
           },
           {
             "name": "Wand of Mana Concentration",
@@ -2081,7 +2147,8 @@
               "(31.18 damage per second)",
               "+4 Intellect",
               "Requires Level 27"
-            ]
+            ],
+            "source": "Arcanic Enigma in City of Dalaran"
           },
           {
             "name": "Snapped Branch Wand",
@@ -2102,7 +2169,8 @@
               "(21.18 damage per second)",
               "+3 Nature Resistance",
               "Requires Level 22"
-            ]
+            ],
+            "source": "Level 22 World Drop"
           }
         ],
         "lines": [
@@ -2149,7 +2217,8 @@
               "Ranged",
               "(34.67 damage per second)",
               "Equip: Increases damage and healing done by magical spells and effects by up to 7"
-            ]
+            ],
+            "source": "Big Game Hunter quest in STV"
           },
           {
             "name": "Greater Mystic Wand",
@@ -2170,7 +2239,8 @@
               "(29.00 damage per second)",
               "Requires Level 30",
               "Equip: Increases damage and healing done by magical spells and effects by up to 5"
-            ]
+            ],
+            "source": "Crafted by Enchanters (Skill 175)"
           }
         ],
         "lines": [
@@ -2219,7 +2289,8 @@
               "(29.00 damage per second)",
               "Requires Level 30",
               "Equip: Increases damage and healing done by magical spells and effects by up to 5"
-            ]
+            ],
+            "source": "Enchanter crafted (Req lvl 30)"
           },
           {
             "name": "Twisted Nether Wand",
@@ -2240,7 +2311,8 @@
               "(34.00 damage per second)",
               "Requires Level 37",
               "Equip: Increases damage and healing done by magical spells and effects by up to 6"
-            ]
+            ],
+            "source": "Crafted by Enchanters (Req lvl 37)"
           }
         ],
         "lines": [
@@ -2288,7 +2360,8 @@
               "(35.67 damage per second)",
               "+5 Intellect",
               "Requires Level 40"
-            ]
+            ],
+            "source": "Partial Mystical Notes quest"
           },
           {
             "name": "Twisted Nether Wand",
@@ -2309,7 +2382,8 @@
               "(34.00 damage per second)",
               "Requires Level 37",
               "Equip: Increases damage and healing done by magical spells and effects by up to 6"
-            ]
+            ],
+            "source": "Crafted by Enchanters (Req lvl 37)"
           }
         ],
         "lines": [
@@ -2359,7 +2433,8 @@
               "(39.17 damage per second)",
               "Requires Level 43",
               "Equip: Increases damage and healing done by magical spells and effects by up to 7"
-            ]
+            ],
+            "source": "Crafted by Enchanters (Skill 225)"
           },
           {
             "name": "Lesser Eternal Wand",
@@ -2380,7 +2455,8 @@
               "(45.75 damage per second)",
               "Requires Level 49",
               "Equip: Increases damage and healing done by magical spells and effects by up to 8"
-            ]
+            ],
+            "source": "Crafted by Enchanters (Req lvl 49)"
           }
         ],
         "lines": [
@@ -2430,7 +2506,8 @@
               "+6 Stamina",
               "+4 Spirit",
               "Requires Level 56"
-            ]
+            ],
+            "source": "Rare World Drop (Req lvl 56)"
           }
         ],
         "lines": [
@@ -2480,7 +2557,8 @@
               "+7 Intellect",
               "Requires Level 55",
               "Equip: Increases damage and healing done by magical spells and effects by up to 9"
-            ]
+            ],
+            "source": "Fast high — DPS wand"
           },
           {
             "name": "Greater Eternal Wand",
@@ -2501,7 +2579,8 @@
               "(53.33 damage per second)",
               "Requires Level 55",
               "Equip: Increases damage and healing done by magical spells and effects by up to 9"
-            ]
+            ],
+            "source": "Crafted by Enchanters (Skill 285)"
           },
           {
             "name": "Torch of Light",
@@ -2523,7 +2602,8 @@
               "+11 Spirit",
               "Requires Level 60",
               "Equip: Increases healing done by up to 17"
-            ]
+            ],
+            "source": "Best — in — Slot Level 60 Wand"
           }
         ],
         "lines": [

@@ -62,7 +62,8 @@
               "Held In Off-hand",
               "+5 Intellect",
               "-3 Spirit"
-            ]
+            ],
+            "source": "Horde Quest"
           },
           {
             "name": "Disciple's Stein",
@@ -79,7 +80,8 @@
               "Binds when equipped",
               "Held In Off-hand",
               "Requires Level 7"
-            ]
+            ],
+            "source": "Level 7 Drop"
           }
         ],
         "lines": [
@@ -124,7 +126,8 @@
               "Held In Off-hand",
               "+3 Intellect",
               "+3 Spirit"
-            ]
+            ],
+            "source": "Valuable Vantages quest"
           },
           {
             "name": "Mathystra Channeling Orb",
@@ -142,7 +145,8 @@
               "Held In Off-hand",
               "+3 Stamina",
               "+5 Intellect"
-            ]
+            ],
+            "source": "Baron Marinous"
           },
           {
             "name": "Defective Samophlange",
@@ -161,7 +165,8 @@
               "+5 Intellect",
               "+5 Spirit",
               "Requires Level 20"
-            ]
+            ],
+            "source": "Winklespark in Barrens"
           }
         ],
         "lines": [
@@ -208,7 +213,8 @@
               "Held In Off-hand",
               "Requires Level 21",
               "Equip: Increases healing done by up to 12"
-            ]
+            ],
+            "source": "Hannah Bladeleaf"
           },
           {
             "name": "Orb of Mystic Insight",
@@ -227,7 +233,8 @@
               "+6 Intellect",
               "Requires Level 25",
               "Equip: Increases damage and healing done by magical spells and effects by up to 7"
-            ]
+            ],
+            "source": "Crafted / Enchanting"
           },
           {
             "name": "Orb of Souls",
@@ -246,7 +253,8 @@
               "+6 Spirit",
               "Requires Level 25",
               "Equip: Increases healing done by up to 13"
-            ]
+            ],
+            "source": "Crafted / Enchanting"
           }
         ],
         "lines": [
@@ -289,8 +297,10 @@
             "lines": [
               "Binds when picked up",
               "Held In Off-hand",
+              "Equip: Increases damage done by Arcane spells and effects by up to 11.",
               "Equip: Increases damage done by Arcane spells and effects by up to 11."
-            ]
+            ],
+            "source": "Starving Arcane quest"
           },
           {
             "name": "Insurgent's Manifesto",
@@ -310,7 +320,8 @@
               "+4 Intellect",
               "Requires Level 28",
               "Equip: Increases damage and healing done by magical spells and effects by up to 2"
-            ]
+            ],
+            "source": "+8 Stamina, +4 Intellect, +8 Spell Power"
           },
           {
             "name": "Tome of the Darkspear Prophecy",
@@ -330,7 +341,8 @@
               "+4 Intellect",
               "Requires Level 28",
               "Equip: Increases damage and healing done by magical spells and effects by up to 2"
-            ]
+            ],
+            "source": "Creeg Bothunk"
           }
         ],
         "lines": [
@@ -378,7 +390,8 @@
               "+9 Spirit",
               "+50 Armor",
               "Equip: Increases healing done by up to 9"
-            ]
+            ],
+            "source": "Past Due quest"
           },
           {
             "name": "Heart of Alterac",
@@ -397,7 +410,8 @@
               "+7 Stamina",
               "+5 Intellect",
               "Requires Level 34"
-            ]
+            ],
+            "source": "Stone Fury in Alterac"
           }
         ],
         "lines": [
@@ -446,7 +460,8 @@
               "+5 Intellect",
               "Requires Level 38",
               "Equip: Increases damage and healing done by magical spells and effects by up to 4"
-            ]
+            ],
+            "source": "+12 Stamina, +5 Intellect, +12 Spell Power"
           },
           {
             "name": "Tome of the Darkspear Prophecy",
@@ -466,7 +481,8 @@
               "+5 Intellect",
               "Requires Level 38",
               "Equip: Increases damage and healing done by magical spells and effects by up to 4"
-            ]
+            ],
+            "source": "+12 Stamina, +5 Intellect, +12 Spell Power"
           },
           {
             "name": "Orb of the Forgotten Seer",
@@ -484,7 +500,8 @@
               "Held In Off-hand",
               "Requires Level 32",
               "Equip: Increases damage and healing done by magical spells and effects by up to 14"
-            ]
+            ],
+            "source": "Scarlet Monastery Library"
           }
         ],
         "lines": [
@@ -532,7 +549,8 @@
               "+12 Stamina",
               "+5 Spirit",
               "Requires Level 40"
-            ]
+            ],
+            "source": "+12 Stamina, +5 Spirit, +16 Healing"
           },
           {
             "name": "Spirit of Aquementas",
@@ -549,7 +567,8 @@
               "Binds when picked up",
               "Held In Off-hand",
               "Equip: Increases damage and healing done by magical spells and effects by up to 21"
-            ]
+            ],
+            "source": "Un'Goro Crater quest chain"
           }
         ],
         "lines": [
@@ -597,7 +616,8 @@
               "+8 Spirit",
               "Requires Level 45",
               "Equip: Increases healing done by up to 19"
-            ]
+            ],
+            "source": "+8 Stamina, +8 Spirit, +18 Healing"
           },
           {
             "name": "Insurgent's Manifesto",
@@ -617,7 +637,8 @@
               "+6 Intellect",
               "Requires Level 48",
               "Equip: Increases damage and healing done by magical spells and effects by up to 5"
-            ]
+            ],
+            "source": "+14 Stamina, +6 Intellect, +14 Spell Power"
           },
           {
             "name": "Heart of Smoldar",
@@ -636,7 +657,8 @@
               "+8 Stamina",
               "Requires Level 47",
               "Equip: Increases healing done by up to 16"
-            ]
+            ],
+            "source": "+8 Stamina, +14 Fire Spell Power"
           }
         ],
         "lines": [
@@ -685,7 +707,8 @@
               "+7 Intellect",
               "Requires Level 58",
               "Equip: Increases damage and healing done by magical spells and effects by up to 8"
-            ]
+            ],
+            "source": "+17 Stamina, +7 Intellect, +16 Spell Power"
           },
           {
             "name": "Tome of the Darkspear Prophecy",
@@ -705,7 +728,8 @@
               "+7 Intellect",
               "Requires Level 58",
               "Equip: Increases damage and healing done by magical spells and effects by up to 8"
-            ]
+            ],
+            "source": "+17 Stamina, +7 Intellect, +16 Spell Power"
           },
           {
             "name": "High Warlord's Tome of Destruction",
@@ -726,7 +750,8 @@
               "Requires Level 60",
               "Equip: Increases damage and healing done by magical spells and effects by up to 25",
               "Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources."
-            ]
+            ],
+            "source": "+24 Stamina, +13 Intellect, +23 Spell Power"
           },
           {
             "name": "Grand Marshal's Tome of Power",
@@ -747,7 +772,8 @@
               "Requires Level 60",
               "Equip: Increases damage and healing done by magical spells and effects by up to 25",
               "Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources."
-            ]
+            ],
+            "source": "+24 Stamina, +13 Intellect, +23 Spell Power"
           },
           {
             "name": "High Warlord's Tome of Mending",
@@ -768,7 +794,8 @@
               "Requires Level 60",
               "Equip: Increases healing done by up to 44",
               "Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources."
-            ]
+            ],
+            "source": "+23 Stamina, +14 Intellect, +35 Healing"
           },
           {
             "name": "Grand Marshal's Tome of Restoration",
@@ -789,7 +816,8 @@
               "Requires Level 60",
               "Equip: Increases healing done by up to 44",
               "Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources."
-            ]
+            ],
+            "source": "+23 Stamina, +14 Intellect, +35 Healing"
           }
         ],
         "lines": [
@@ -866,7 +894,8 @@
               "Held In Off-hand",
               "+5 Intellect",
               "-3 Spirit"
-            ]
+            ],
+            "source": "Horde Quest"
           },
           {
             "name": "Disciple's Stein",
@@ -883,7 +912,8 @@
               "Binds when equipped",
               "Held In Off-hand",
               "Requires Level 7"
-            ]
+            ],
+            "source": "Level 7 Drop"
           }
         ],
         "lines": [
@@ -928,7 +958,8 @@
               "Held In Off-hand",
               "+3 Intellect",
               "+3 Spirit"
-            ]
+            ],
+            "source": "Valuable Vantages quest"
           },
           {
             "name": "Mathystra Channeling Orb",
@@ -946,7 +977,8 @@
               "Held In Off-hand",
               "+3 Stamina",
               "+5 Intellect"
-            ]
+            ],
+            "source": "Baron Marinous"
           },
           {
             "name": "Defective Samophlange",
@@ -965,7 +997,8 @@
               "+5 Intellect",
               "+5 Spirit",
               "Requires Level 20"
-            ]
+            ],
+            "source": "Winklespark in Barrens"
           }
         ],
         "lines": [
@@ -1012,7 +1045,8 @@
               "Held In Off-hand",
               "Requires Level 21",
               "Equip: Increases healing done by up to 12"
-            ]
+            ],
+            "source": "Hannah Bladeleaf"
           },
           {
             "name": "Orb of Mystic Insight",
@@ -1031,7 +1065,8 @@
               "+6 Intellect",
               "Requires Level 25",
               "Equip: Increases damage and healing done by magical spells and effects by up to 7"
-            ]
+            ],
+            "source": "Crafted / Enchanting"
           },
           {
             "name": "Orb of Souls",
@@ -1050,7 +1085,8 @@
               "+6 Spirit",
               "Requires Level 25",
               "Equip: Increases healing done by up to 13"
-            ]
+            ],
+            "source": "Crafted / Enchanting"
           }
         ],
         "lines": [
@@ -1093,8 +1129,10 @@
             "lines": [
               "Binds when picked up",
               "Held In Off-hand",
+              "Equip: Increases damage done by Arcane spells and effects by up to 11.",
               "Equip: Increases damage done by Arcane spells and effects by up to 11."
-            ]
+            ],
+            "source": "Starving Arcane quest"
           },
           {
             "name": "Insurgent's Manifesto",
@@ -1114,7 +1152,8 @@
               "+4 Intellect",
               "Requires Level 28",
               "Equip: Increases damage and healing done by magical spells and effects by up to 2"
-            ]
+            ],
+            "source": "+8 Stamina, +4 Intellect, +8 Spell Power"
           },
           {
             "name": "Tome of the Darkspear Prophecy",
@@ -1134,7 +1173,8 @@
               "+4 Intellect",
               "Requires Level 28",
               "Equip: Increases damage and healing done by magical spells and effects by up to 2"
-            ]
+            ],
+            "source": "Creeg Bothunk"
           }
         ],
         "lines": [
@@ -1182,7 +1222,8 @@
               "+9 Spirit",
               "+50 Armor",
               "Equip: Increases healing done by up to 9"
-            ]
+            ],
+            "source": "Past Due quest"
           },
           {
             "name": "Heart of Alterac",
@@ -1201,7 +1242,8 @@
               "+7 Stamina",
               "+5 Intellect",
               "Requires Level 34"
-            ]
+            ],
+            "source": "Stone Fury in Alterac"
           }
         ],
         "lines": [
@@ -1250,7 +1292,8 @@
               "+5 Intellect",
               "Requires Level 38",
               "Equip: Increases damage and healing done by magical spells and effects by up to 4"
-            ]
+            ],
+            "source": "+12 Stamina, +5 Intellect, +12 Spell Power"
           },
           {
             "name": "Tome of the Darkspear Prophecy",
@@ -1270,7 +1313,8 @@
               "+5 Intellect",
               "Requires Level 38",
               "Equip: Increases damage and healing done by magical spells and effects by up to 4"
-            ]
+            ],
+            "source": "+12 Stamina, +5 Intellect, +12 Spell Power"
           },
           {
             "name": "Orb of the Forgotten Seer",
@@ -1288,7 +1332,8 @@
               "Held In Off-hand",
               "Requires Level 32",
               "Equip: Increases damage and healing done by magical spells and effects by up to 14"
-            ]
+            ],
+            "source": "Scarlet Monastery Library"
           }
         ],
         "lines": [
@@ -1336,7 +1381,8 @@
               "+12 Stamina",
               "+5 Spirit",
               "Requires Level 40"
-            ]
+            ],
+            "source": "+12 Stamina, +5 Spirit, +16 Healing"
           },
           {
             "name": "Spirit of Aquementas",
@@ -1353,7 +1399,8 @@
               "Binds when picked up",
               "Held In Off-hand",
               "Equip: Increases damage and healing done by magical spells and effects by up to 21"
-            ]
+            ],
+            "source": "Un'Goro Crater quest chain"
           }
         ],
         "lines": [
@@ -1401,7 +1448,8 @@
               "+8 Spirit",
               "Requires Level 45",
               "Equip: Increases healing done by up to 19"
-            ]
+            ],
+            "source": "+8 Stamina, +8 Spirit, +18 Healing"
           },
           {
             "name": "Insurgent's Manifesto",
@@ -1421,7 +1469,8 @@
               "+6 Intellect",
               "Requires Level 48",
               "Equip: Increases damage and healing done by magical spells and effects by up to 5"
-            ]
+            ],
+            "source": "+14 Stamina, +6 Intellect, +14 Spell Power"
           },
           {
             "name": "Heart of Smoldar",
@@ -1440,7 +1489,8 @@
               "+8 Stamina",
               "Requires Level 47",
               "Equip: Increases healing done by up to 16"
-            ]
+            ],
+            "source": "+8 Stamina, +14 Fire Spell Power"
           }
         ],
         "lines": [
@@ -1489,7 +1539,8 @@
               "+7 Intellect",
               "Requires Level 58",
               "Equip: Increases damage and healing done by magical spells and effects by up to 8"
-            ]
+            ],
+            "source": "+17 Stamina, +7 Intellect, +16 Spell Power"
           },
           {
             "name": "Tome of the Darkspear Prophecy",
@@ -1509,7 +1560,8 @@
               "+7 Intellect",
               "Requires Level 58",
               "Equip: Increases damage and healing done by magical spells and effects by up to 8"
-            ]
+            ],
+            "source": "+17 Stamina, +7 Intellect, +16 Spell Power"
           },
           {
             "name": "High Warlord's Tome of Destruction",
@@ -1530,7 +1582,8 @@
               "Requires Level 60",
               "Equip: Increases damage and healing done by magical spells and effects by up to 25",
               "Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources."
-            ]
+            ],
+            "source": "+24 Stamina, +13 Intellect, +23 Spell Power"
           },
           {
             "name": "Grand Marshal's Tome of Power",
@@ -1551,7 +1604,8 @@
               "Requires Level 60",
               "Equip: Increases damage and healing done by magical spells and effects by up to 25",
               "Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources."
-            ]
+            ],
+            "source": "+24 Stamina, +13 Intellect, +23 Spell Power"
           },
           {
             "name": "High Warlord's Tome of Mending",
@@ -1572,7 +1626,8 @@
               "Requires Level 60",
               "Equip: Increases healing done by up to 44",
               "Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources."
-            ]
+            ],
+            "source": "+23 Stamina, +14 Intellect, +35 Healing"
           },
           {
             "name": "Grand Marshal's Tome of Restoration",
@@ -1593,7 +1648,8 @@
               "Requires Level 60",
               "Equip: Increases healing done by up to 44",
               "Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources."
-            ]
+            ],
+            "source": "+23 Stamina, +14 Intellect, +35 Healing"
           }
         ],
         "lines": [
@@ -1644,7 +1700,8 @@
             "reqLevel": 9,
             "stats": "+4 Spirit",
             "icon": "inv_drink_06",
-            "weaponType": "Held in Off-hand"
+            "weaponType": "Held in Off-hand",
+            "source": "Silverpine / Barrens quest"
           }
         ]
       },
@@ -1675,7 +1732,8 @@
             "reqLevel": 18,
             "stats": "+6 Spirit, Equip: Increases healing by up to 13 and damage by up to 4.",
             "icon": "inv_misc_gem_pearl_04",
-            "weaponType": "Held in Off-hand"
+            "weaponType": "Held in Off-hand",
+            "source": "Enchanting craftable"
           }
         ]
       },
@@ -1706,7 +1764,8 @@
             "reqLevel": 30,
             "stats": "+8 Spirit, +2 Intellect, Equip: Increases healing by up to 11 and damage by up to 4.",
             "icon": "inv_misc_gem_pearl_04",
-            "weaponType": "Held in Off-hand"
+            "weaponType": "Held in Off-hand",
+            "source": "Shade of Archmage (Dalaran)"
           },
           {
             "name": "Raptor's Gaze",
@@ -1718,7 +1777,8 @@
             "reqLevel": 28,
             "stats": "+4 Intellect, +4 Stamina, Equip: Increases damage and healing by up to 8.",
             "icon": "inv_misc_gem_pearl_02",
-            "weaponType": "Held in Off-hand"
+            "weaponType": "Held in Off-hand",
+            "source": "Shadetooth (Excavation Site)"
           }
         ]
       },
@@ -1785,7 +1845,8 @@
             "reqLevel": 60,
             "stats": "Equip: Increases healing done by up to 29 and damage done by up to 15.",
             "icon": "inv_misc_book_09",
-            "weaponType": "Held in Off-hand"
+            "weaponType": "Held in Off-hand",
+            "source": "PvP Rank 14 Officer's Lounge"
           },
           {
             "name": "High Warlord's Tome of Mending",
@@ -1797,7 +1858,8 @@
             "reqLevel": 60,
             "stats": "Equip: Increases healing done by up to 29 and damage done by up to 15.",
             "icon": "inv_misc_book_09",
-            "weaponType": "Held in Off-hand"
+            "weaponType": "Held in Off-hand",
+            "source": "PvP Rank 14 Champion's Hall"
           }
         ]
       }
@@ -1866,7 +1928,8 @@
               "Held In Off-hand",
               "+5 Intellect",
               "-3 Spirit"
-            ]
+            ],
+            "source": "Horde Quest"
           },
           {
             "name": "Disciple's Stein",
@@ -1883,7 +1946,8 @@
               "Binds when equipped",
               "Held In Off-hand",
               "Requires Level 7"
-            ]
+            ],
+            "source": "Level 7 Drop"
           }
         ],
         "lines": [
@@ -1928,7 +1992,8 @@
               "Held In Off-hand",
               "+3 Intellect",
               "+3 Spirit"
-            ]
+            ],
+            "source": "Valuable Vantages quest"
           },
           {
             "name": "Mathystra Channeling Orb",
@@ -1946,7 +2011,8 @@
               "Held In Off-hand",
               "+3 Stamina",
               "+5 Intellect"
-            ]
+            ],
+            "source": "Baron Marinous"
           },
           {
             "name": "Defective Samophlange",
@@ -1965,7 +2031,8 @@
               "+5 Intellect",
               "+5 Spirit",
               "Requires Level 20"
-            ]
+            ],
+            "source": "Winklespark in Barrens"
           }
         ],
         "lines": [
@@ -2012,7 +2079,8 @@
               "Held In Off-hand",
               "Requires Level 21",
               "Equip: Increases healing done by up to 12"
-            ]
+            ],
+            "source": "Hannah Bladeleaf"
           },
           {
             "name": "Orb of Mystic Insight",
@@ -2031,7 +2099,8 @@
               "+6 Intellect",
               "Requires Level 25",
               "Equip: Increases damage and healing done by magical spells and effects by up to 7"
-            ]
+            ],
+            "source": "Crafted / Enchanting"
           },
           {
             "name": "Orb of Souls",
@@ -2050,7 +2119,8 @@
               "+6 Spirit",
               "Requires Level 25",
               "Equip: Increases healing done by up to 13"
-            ]
+            ],
+            "source": "Crafted / Enchanting"
           }
         ],
         "lines": [
@@ -2093,8 +2163,10 @@
             "lines": [
               "Binds when picked up",
               "Held In Off-hand",
+              "Equip: Increases damage done by Arcane spells and effects by up to 11.",
               "Equip: Increases damage done by Arcane spells and effects by up to 11."
-            ]
+            ],
+            "source": "Starving Arcane quest"
           },
           {
             "name": "Insurgent's Manifesto",
@@ -2114,7 +2186,8 @@
               "+4 Intellect",
               "Requires Level 28",
               "Equip: Increases damage and healing done by magical spells and effects by up to 2"
-            ]
+            ],
+            "source": "+8 Stamina, +4 Intellect, +8 Spell Power"
           },
           {
             "name": "Tome of the Darkspear Prophecy",
@@ -2134,7 +2207,8 @@
               "+4 Intellect",
               "Requires Level 28",
               "Equip: Increases damage and healing done by magical spells and effects by up to 2"
-            ]
+            ],
+            "source": "Creeg Bothunk"
           }
         ],
         "lines": [
@@ -2182,7 +2256,8 @@
               "+9 Spirit",
               "+50 Armor",
               "Equip: Increases healing done by up to 9"
-            ]
+            ],
+            "source": "Past Due quest"
           },
           {
             "name": "Heart of Alterac",
@@ -2201,7 +2276,8 @@
               "+7 Stamina",
               "+5 Intellect",
               "Requires Level 34"
-            ]
+            ],
+            "source": "Stone Fury in Alterac"
           }
         ],
         "lines": [
@@ -2250,7 +2326,8 @@
               "+5 Intellect",
               "Requires Level 38",
               "Equip: Increases damage and healing done by magical spells and effects by up to 4"
-            ]
+            ],
+            "source": "+12 Stamina, +5 Intellect, +12 Spell Power"
           },
           {
             "name": "Tome of the Darkspear Prophecy",
@@ -2270,7 +2347,8 @@
               "+5 Intellect",
               "Requires Level 38",
               "Equip: Increases damage and healing done by magical spells and effects by up to 4"
-            ]
+            ],
+            "source": "+12 Stamina, +5 Intellect, +12 Spell Power"
           },
           {
             "name": "Orb of the Forgotten Seer",
@@ -2288,7 +2366,8 @@
               "Held In Off-hand",
               "Requires Level 32",
               "Equip: Increases damage and healing done by magical spells and effects by up to 14"
-            ]
+            ],
+            "source": "Scarlet Monastery Library"
           }
         ],
         "lines": [
@@ -2336,7 +2415,8 @@
               "+12 Stamina",
               "+5 Spirit",
               "Requires Level 40"
-            ]
+            ],
+            "source": "+12 Stamina, +5 Spirit, +16 Healing"
           },
           {
             "name": "Spirit of Aquementas",
@@ -2353,7 +2433,8 @@
               "Binds when picked up",
               "Held In Off-hand",
               "Equip: Increases damage and healing done by magical spells and effects by up to 21"
-            ]
+            ],
+            "source": "Un'Goro Crater quest chain"
           }
         ],
         "lines": [
@@ -2401,7 +2482,8 @@
               "+8 Spirit",
               "Requires Level 45",
               "Equip: Increases healing done by up to 19"
-            ]
+            ],
+            "source": "+8 Stamina, +8 Spirit, +18 Healing"
           },
           {
             "name": "Insurgent's Manifesto",
@@ -2421,7 +2503,8 @@
               "+6 Intellect",
               "Requires Level 48",
               "Equip: Increases damage and healing done by magical spells and effects by up to 5"
-            ]
+            ],
+            "source": "+14 Stamina, +6 Intellect, +14 Spell Power"
           },
           {
             "name": "Heart of Smoldar",
@@ -2440,7 +2523,8 @@
               "+8 Stamina",
               "Requires Level 47",
               "Equip: Increases healing done by up to 16"
-            ]
+            ],
+            "source": "+8 Stamina, +14 Fire Spell Power"
           }
         ],
         "lines": [
@@ -2489,7 +2573,8 @@
               "+7 Intellect",
               "Requires Level 58",
               "Equip: Increases damage and healing done by magical spells and effects by up to 8"
-            ]
+            ],
+            "source": "+17 Stamina, +7 Intellect, +16 Spell Power"
           },
           {
             "name": "Tome of the Darkspear Prophecy",
@@ -2509,7 +2594,8 @@
               "+7 Intellect",
               "Requires Level 58",
               "Equip: Increases damage and healing done by magical spells and effects by up to 8"
-            ]
+            ],
+            "source": "+17 Stamina, +7 Intellect, +16 Spell Power"
           },
           {
             "name": "High Warlord's Tome of Destruction",
@@ -2530,7 +2616,8 @@
               "Requires Level 60",
               "Equip: Increases damage and healing done by magical spells and effects by up to 25",
               "Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources."
-            ]
+            ],
+            "source": "+24 Stamina, +13 Intellect, +23 Spell Power"
           },
           {
             "name": "Grand Marshal's Tome of Power",
@@ -2551,7 +2638,8 @@
               "Requires Level 60",
               "Equip: Increases damage and healing done by magical spells and effects by up to 25",
               "Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources."
-            ]
+            ],
+            "source": "+24 Stamina, +13 Intellect, +23 Spell Power"
           },
           {
             "name": "High Warlord's Tome of Mending",
@@ -2572,7 +2660,8 @@
               "Requires Level 60",
               "Equip: Increases healing done by up to 44",
               "Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources."
-            ]
+            ],
+            "source": "+23 Stamina, +14 Intellect, +35 Healing"
           },
           {
             "name": "Grand Marshal's Tome of Restoration",
@@ -2593,7 +2682,8 @@
               "Requires Level 60",
               "Equip: Increases healing done by up to 44",
               "Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources."
-            ]
+            ],
+            "source": "+23 Stamina, +14 Intellect, +35 Healing"
           }
         ],
         "lines": [
@@ -2670,7 +2760,8 @@
               "Held In Off-hand",
               "+5 Intellect",
               "-3 Spirit"
-            ]
+            ],
+            "source": "Horde Quest"
           },
           {
             "name": "Disciple's Stein",
@@ -2687,7 +2778,8 @@
               "Binds when equipped",
               "Held In Off-hand",
               "Requires Level 7"
-            ]
+            ],
+            "source": "Level 7 Drop"
           }
         ],
         "lines": [
@@ -2732,7 +2824,8 @@
               "Held In Off-hand",
               "+3 Intellect",
               "+3 Spirit"
-            ]
+            ],
+            "source": "Valuable Vantages quest"
           },
           {
             "name": "Mathystra Channeling Orb",
@@ -2750,7 +2843,8 @@
               "Held In Off-hand",
               "+3 Stamina",
               "+5 Intellect"
-            ]
+            ],
+            "source": "Baron Marinous"
           },
           {
             "name": "Defective Samophlange",
@@ -2769,7 +2863,8 @@
               "+5 Intellect",
               "+5 Spirit",
               "Requires Level 20"
-            ]
+            ],
+            "source": "Winklespark in Barrens"
           }
         ],
         "lines": [
@@ -2816,7 +2911,8 @@
               "Held In Off-hand",
               "Requires Level 21",
               "Equip: Increases healing done by up to 12"
-            ]
+            ],
+            "source": "Hannah Bladeleaf"
           },
           {
             "name": "Orb of Mystic Insight",
@@ -2835,7 +2931,8 @@
               "+6 Intellect",
               "Requires Level 25",
               "Equip: Increases damage and healing done by magical spells and effects by up to 7"
-            ]
+            ],
+            "source": "Crafted / Enchanting"
           },
           {
             "name": "Orb of Souls",
@@ -2854,7 +2951,8 @@
               "+6 Spirit",
               "Requires Level 25",
               "Equip: Increases healing done by up to 13"
-            ]
+            ],
+            "source": "Crafted / Enchanting"
           }
         ],
         "lines": [
@@ -2897,8 +2995,10 @@
             "lines": [
               "Binds when picked up",
               "Held In Off-hand",
+              "Equip: Increases damage done by Arcane spells and effects by up to 11.",
               "Equip: Increases damage done by Arcane spells and effects by up to 11."
-            ]
+            ],
+            "source": "Starving Arcane quest"
           },
           {
             "name": "Insurgent's Manifesto",
@@ -2918,7 +3018,8 @@
               "+4 Intellect",
               "Requires Level 28",
               "Equip: Increases damage and healing done by magical spells and effects by up to 2"
-            ]
+            ],
+            "source": "+8 Stamina, +4 Intellect, +8 Spell Power"
           },
           {
             "name": "Tome of the Darkspear Prophecy",
@@ -2938,7 +3039,8 @@
               "+4 Intellect",
               "Requires Level 28",
               "Equip: Increases damage and healing done by magical spells and effects by up to 2"
-            ]
+            ],
+            "source": "Creeg Bothunk"
           }
         ],
         "lines": [
@@ -2986,7 +3088,8 @@
               "+9 Spirit",
               "+50 Armor",
               "Equip: Increases healing done by up to 9"
-            ]
+            ],
+            "source": "Past Due quest"
           },
           {
             "name": "Heart of Alterac",
@@ -3005,7 +3108,8 @@
               "+7 Stamina",
               "+5 Intellect",
               "Requires Level 34"
-            ]
+            ],
+            "source": "Stone Fury in Alterac"
           }
         ],
         "lines": [
@@ -3054,7 +3158,8 @@
               "+5 Intellect",
               "Requires Level 38",
               "Equip: Increases damage and healing done by magical spells and effects by up to 4"
-            ]
+            ],
+            "source": "+12 Stamina, +5 Intellect, +12 Spell Power"
           },
           {
             "name": "Tome of the Darkspear Prophecy",
@@ -3074,7 +3179,8 @@
               "+5 Intellect",
               "Requires Level 38",
               "Equip: Increases damage and healing done by magical spells and effects by up to 4"
-            ]
+            ],
+            "source": "+12 Stamina, +5 Intellect, +12 Spell Power"
           },
           {
             "name": "Orb of the Forgotten Seer",
@@ -3092,7 +3198,8 @@
               "Held In Off-hand",
               "Requires Level 32",
               "Equip: Increases damage and healing done by magical spells and effects by up to 14"
-            ]
+            ],
+            "source": "Scarlet Monastery Library"
           }
         ],
         "lines": [
@@ -3140,7 +3247,8 @@
               "+12 Stamina",
               "+5 Spirit",
               "Requires Level 40"
-            ]
+            ],
+            "source": "+12 Stamina, +5 Spirit, +16 Healing"
           },
           {
             "name": "Spirit of Aquementas",
@@ -3157,7 +3265,8 @@
               "Binds when picked up",
               "Held In Off-hand",
               "Equip: Increases damage and healing done by magical spells and effects by up to 21"
-            ]
+            ],
+            "source": "Un'Goro Crater quest chain"
           }
         ],
         "lines": [
@@ -3205,7 +3314,8 @@
               "+8 Spirit",
               "Requires Level 45",
               "Equip: Increases healing done by up to 19"
-            ]
+            ],
+            "source": "+8 Stamina, +8 Spirit, +18 Healing"
           },
           {
             "name": "Insurgent's Manifesto",
@@ -3225,7 +3335,8 @@
               "+6 Intellect",
               "Requires Level 48",
               "Equip: Increases damage and healing done by magical spells and effects by up to 5"
-            ]
+            ],
+            "source": "+14 Stamina, +6 Intellect, +14 Spell Power"
           },
           {
             "name": "Heart of Smoldar",
@@ -3244,7 +3355,8 @@
               "+8 Stamina",
               "Requires Level 47",
               "Equip: Increases healing done by up to 16"
-            ]
+            ],
+            "source": "+8 Stamina, +14 Fire Spell Power"
           }
         ],
         "lines": [
@@ -3293,7 +3405,8 @@
               "+7 Intellect",
               "Requires Level 58",
               "Equip: Increases damage and healing done by magical spells and effects by up to 8"
-            ]
+            ],
+            "source": "+17 Stamina, +7 Intellect, +16 Spell Power"
           },
           {
             "name": "Tome of the Darkspear Prophecy",
@@ -3313,7 +3426,8 @@
               "+7 Intellect",
               "Requires Level 58",
               "Equip: Increases damage and healing done by magical spells and effects by up to 8"
-            ]
+            ],
+            "source": "+17 Stamina, +7 Intellect, +16 Spell Power"
           },
           {
             "name": "High Warlord's Tome of Destruction",
@@ -3334,7 +3448,8 @@
               "Requires Level 60",
               "Equip: Increases damage and healing done by magical spells and effects by up to 25",
               "Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources."
-            ]
+            ],
+            "source": "+24 Stamina, +13 Intellect, +23 Spell Power"
           },
           {
             "name": "Grand Marshal's Tome of Power",
@@ -3355,7 +3470,8 @@
               "Requires Level 60",
               "Equip: Increases damage and healing done by magical spells and effects by up to 25",
               "Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources."
-            ]
+            ],
+            "source": "+24 Stamina, +13 Intellect, +23 Spell Power"
           },
           {
             "name": "High Warlord's Tome of Mending",
@@ -3376,7 +3492,8 @@
               "Requires Level 60",
               "Equip: Increases healing done by up to 44",
               "Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources."
-            ]
+            ],
+            "source": "+23 Stamina, +14 Intellect, +35 Healing"
           },
           {
             "name": "Grand Marshal's Tome of Restoration",
@@ -3397,7 +3514,8 @@
               "Requires Level 60",
               "Equip: Increases healing done by up to 44",
               "Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources."
-            ]
+            ],
+            "source": "+23 Stamina, +14 Intellect, +35 Healing"
           }
         ],
         "lines": [
@@ -3448,7 +3566,8 @@
             "reqLevel": 9,
             "stats": "+4 Spirit",
             "icon": "inv_drink_06",
-            "weaponType": "Held in Off-hand"
+            "weaponType": "Held in Off-hand",
+            "source": "Silverpine / Barrens quest"
           }
         ]
       },
@@ -3479,7 +3598,8 @@
             "reqLevel": 18,
             "stats": "+6 Spirit, Equip: Increases healing by up to 13 and damage by up to 4.",
             "icon": "inv_misc_gem_pearl_04",
-            "weaponType": "Held in Off-hand"
+            "weaponType": "Held in Off-hand",
+            "source": "Enchanting craftable"
           }
         ]
       },
@@ -3510,7 +3630,8 @@
             "reqLevel": 30,
             "stats": "+8 Spirit, +2 Intellect, Equip: Increases healing by up to 11 and damage by up to 4.",
             "icon": "inv_misc_gem_pearl_04",
-            "weaponType": "Held in Off-hand"
+            "weaponType": "Held in Off-hand",
+            "source": "Shade of Archmage (Dalaran)"
           },
           {
             "name": "Raptor's Gaze",
@@ -3522,7 +3643,8 @@
             "reqLevel": 28,
             "stats": "+4 Intellect, +4 Stamina, Equip: Increases damage and healing by up to 8.",
             "icon": "inv_misc_gem_pearl_02",
-            "weaponType": "Held in Off-hand"
+            "weaponType": "Held in Off-hand",
+            "source": "Shadetooth (Excavation Site)"
           }
         ]
       },
@@ -3589,7 +3711,8 @@
             "reqLevel": 60,
             "stats": "Equip: Increases healing done by up to 29 and damage done by up to 15.",
             "icon": "inv_misc_book_09",
-            "weaponType": "Held in Off-hand"
+            "weaponType": "Held in Off-hand",
+            "source": "PvP Rank 14 Officer's Lounge"
           },
           {
             "name": "High Warlord's Tome of Mending",
@@ -3601,7 +3724,8 @@
             "reqLevel": 60,
             "stats": "Equip: Increases healing done by up to 29 and damage done by up to 15.",
             "icon": "inv_misc_book_09",
-            "weaponType": "Held in Off-hand"
+            "weaponType": "Held in Off-hand",
+            "source": "PvP Rank 14 Champion's Hall"
           }
         ]
       }
@@ -3653,7 +3777,8 @@
               "Off Hand",
               "177 Armor",
               "+1 Strength"
-            ]
+            ],
+            "source": "Early quest shield"
           }
         ],
         "lines": [
@@ -3696,7 +3821,8 @@
               "+5 Strength",
               "+3 Stamina",
               "Requires Level 21"
-            ]
+            ],
+            "source": "Commander Springvale (Shadowfang Keep)"
           },
           {
             "name": "Repurposed Rack",
@@ -3708,7 +3834,8 @@
             "reqLevel": 18,
             "stats": "+6 Strength",
             "icon": "inv_shield_04",
-            "weaponType": "Shield"
+            "weaponType": "Shield",
+            "source": "Hamhock (The Stockade)"
           }
         ],
         "lines": [
@@ -3753,7 +3880,8 @@
               "+5 Arcane Resistance",
               "+5 Nature Resistance",
               "Requires Level 31"
-            ]
+            ],
+            "source": "Thermaplugg (Gnomeregan)"
           },
           {
             "name": "Mirror of Rath'mael",
@@ -3773,7 +3901,8 @@
               "+5 Strength",
               "Requires Level 19",
               "Equip: Increases your chance to Block attacks with a shield by 1.0%."
-            ]
+            ],
+            "source": "Rath'mael (Ruins of Lordaeron)"
           }
         ],
         "lines": [
@@ -3820,7 +3949,8 @@
               "+7 Stamina",
               "Requires Level 30",
               "Equip: Increases healing done by up to 15"
-            ]
+            ],
+            "source": "Charlga Razorflank (RFK)"
           }
         ],
         "lines": [
@@ -3867,7 +3997,8 @@
               "+10 Spirit",
               "Requires Level 37",
               "Equip: Increases healing done by up to 13"
-            ]
+            ],
+            "source": "Eric The Swift (Uldaman)"
           }
         ],
         "lines": [
@@ -3915,7 +4046,8 @@
               "+6 Strength",
               "+15 Stamina",
               "Requires Level 49"
-            ]
+            ],
+            "source": "World drop"
           }
         ],
         "lines": [
@@ -3962,7 +4094,8 @@
               "2291 Armor",
               "+14 Stamina",
               "Requires Level 60"
-            ]
+            ],
+            "source": "Alterac Valley Exalted"
           },
           {
             "name": "Grand Marshal's Aegis",
@@ -3983,7 +4116,8 @@
               "+23 Stamina",
               "Requires Level 60",
               "Equip: When struck in combat has a 5% chance of inflicting 35 to 65 Nature damage to the attacker. (Proc chance: 5%)"
-            ]
+            ],
+            "source": "PvP Rank 14"
           },
           {
             "name": "High Warlord's Shield Wall",
@@ -4004,7 +4138,8 @@
               "+23 Stamina",
               "Requires Level 60",
               "Equip: When struck in combat has a 5% chance of inflicting 35 to 65 Nature damage to the attacker. (Proc chance: 5%)"
-            ]
+            ],
+            "source": "PvP Rank 14"
           }
         ],
         "lines": [
@@ -4064,7 +4199,8 @@
             "reqLevel": 18,
             "stats": "+5 Intellect, Equip: Increases damage and healing by up to 5.",
             "icon": "inv_shield_04",
-            "weaponType": "Shield"
+            "weaponType": "Shield",
+            "source": "Verdan the Everliving (WC)"
           }
         ]
       },
@@ -4095,7 +4231,8 @@
             "reqLevel": 28,
             "stats": "+4 Stamina, Equip: Increases healing by up to 18 and damage by up to 6.",
             "icon": "inv_shield_04",
-            "weaponType": "Shield"
+            "weaponType": "Shield",
+            "source": "Compendium quest"
           },
           {
             "name": "Energized Stone Circle",
@@ -4107,7 +4244,8 @@
             "reqLevel": 30,
             "stats": "+4 Stamina, Equip: Increases healing by up to 7 and damage by up to 3.",
             "icon": "inv_shield_04",
-            "weaponType": "Shield"
+            "weaponType": "Shield",
+            "source": "Power Stones"
           }
         ]
       },
@@ -4138,7 +4276,8 @@
             "reqLevel": 39,
             "stats": "+8 Strength, +7 Stamina",
             "icon": "inv_shield_06",
-            "weaponType": "Shield"
+            "weaponType": "Shield",
+            "source": "SM Cathedral"
           }
         ]
       },
@@ -4187,7 +4326,8 @@
             "reqLevel": 60,
             "stats": "+15 Stamina, +15 Intellect, Equip: Increases healing done by up to 20 and damage by up to 24.",
             "icon": "inv_shield_08",
-            "weaponType": "Shield"
+            "weaponType": "Shield",
+            "source": "PvP Rank 14"
           },
           {
             "name": "Wormscale Blocker",
@@ -4199,7 +4339,8 @@
             "reqLevel": 60,
             "stats": "+14 Stamina, +14 Intellect, Equip: Increases healing done by up to 23 and damage by up to 12.",
             "icon": "inv_shield_11",
-            "weaponType": "Shield"
+            "weaponType": "Shield",
+            "source": "AQ40 Ouro"
           }
         ]
       }
@@ -4251,7 +4392,8 @@
               "Off Hand",
               "177 Armor",
               "+1 Strength"
-            ]
+            ],
+            "source": "Early quest shield"
           }
         ],
         "lines": [
@@ -4294,7 +4436,8 @@
               "+5 Strength",
               "+3 Stamina",
               "Requires Level 21"
-            ]
+            ],
+            "source": "Commander Springvale (Shadowfang Keep)"
           },
           {
             "name": "Repurposed Rack",
@@ -4306,7 +4449,8 @@
             "reqLevel": 18,
             "stats": "+6 Strength",
             "icon": "inv_shield_04",
-            "weaponType": "Shield"
+            "weaponType": "Shield",
+            "source": "Hamhock (The Stockade)"
           }
         ],
         "lines": [
@@ -4351,7 +4495,8 @@
               "+5 Arcane Resistance",
               "+5 Nature Resistance",
               "Requires Level 31"
-            ]
+            ],
+            "source": "Thermaplugg (Gnomeregan)"
           },
           {
             "name": "Mirror of Rath'mael",
@@ -4371,7 +4516,8 @@
               "+5 Strength",
               "Requires Level 19",
               "Equip: Increases your chance to Block attacks with a shield by 1.0%."
-            ]
+            ],
+            "source": "Rath'mael (Ruins of Lordaeron)"
           }
         ],
         "lines": [
@@ -4418,7 +4564,8 @@
               "+7 Stamina",
               "Requires Level 30",
               "Equip: Increases healing done by up to 15"
-            ]
+            ],
+            "source": "Charlga Razorflank (RFK)"
           }
         ],
         "lines": [
@@ -4465,7 +4612,8 @@
               "+10 Spirit",
               "Requires Level 37",
               "Equip: Increases healing done by up to 13"
-            ]
+            ],
+            "source": "Eric The Swift (Uldaman)"
           }
         ],
         "lines": [
@@ -4513,7 +4661,8 @@
               "+6 Strength",
               "+15 Stamina",
               "Requires Level 49"
-            ]
+            ],
+            "source": "World drop"
           }
         ],
         "lines": [
@@ -4560,7 +4709,8 @@
               "2291 Armor",
               "+14 Stamina",
               "Requires Level 60"
-            ]
+            ],
+            "source": "Alterac Valley Exalted"
           },
           {
             "name": "Grand Marshal's Aegis",
@@ -4581,7 +4731,8 @@
               "+23 Stamina",
               "Requires Level 60",
               "Equip: When struck in combat has a 5% chance of inflicting 35 to 65 Nature damage to the attacker. (Proc chance: 5%)"
-            ]
+            ],
+            "source": "PvP Rank 14"
           },
           {
             "name": "High Warlord's Shield Wall",
@@ -4602,7 +4753,8 @@
               "+23 Stamina",
               "Requires Level 60",
               "Equip: When struck in combat has a 5% chance of inflicting 35 to 65 Nature damage to the attacker. (Proc chance: 5%)"
-            ]
+            ],
+            "source": "PvP Rank 14"
           }
         ],
         "lines": [
@@ -4662,7 +4814,8 @@
             "reqLevel": 18,
             "stats": "+5 Intellect, Equip: Increases damage and healing by up to 5.",
             "icon": "inv_shield_04",
-            "weaponType": "Shield"
+            "weaponType": "Shield",
+            "source": "Verdan the Everliving (WC)"
           }
         ]
       },
@@ -4693,7 +4846,8 @@
             "reqLevel": 28,
             "stats": "+4 Stamina, Equip: Increases healing by up to 18 and damage by up to 6.",
             "icon": "inv_shield_04",
-            "weaponType": "Shield"
+            "weaponType": "Shield",
+            "source": "Compendium quest"
           },
           {
             "name": "Energized Stone Circle",
@@ -4705,7 +4859,8 @@
             "reqLevel": 30,
             "stats": "+4 Stamina, Equip: Increases healing by up to 7 and damage by up to 3.",
             "icon": "inv_shield_04",
-            "weaponType": "Shield"
+            "weaponType": "Shield",
+            "source": "Power Stones"
           }
         ]
       },
@@ -4736,7 +4891,8 @@
             "reqLevel": 39,
             "stats": "+8 Strength, +7 Stamina",
             "icon": "inv_shield_06",
-            "weaponType": "Shield"
+            "weaponType": "Shield",
+            "source": "SM Cathedral"
           }
         ]
       },
@@ -4785,7 +4941,8 @@
             "reqLevel": 60,
             "stats": "+15 Stamina, +15 Intellect, Equip: Increases healing done by up to 20 and damage by up to 24.",
             "icon": "inv_shield_08",
-            "weaponType": "Shield"
+            "weaponType": "Shield",
+            "source": "PvP Rank 14"
           },
           {
             "name": "Wormscale Blocker",
@@ -4797,7 +4954,8 @@
             "reqLevel": 60,
             "stats": "+14 Stamina, +14 Intellect, Equip: Increases healing done by up to 23 and damage by up to 12.",
             "icon": "inv_shield_11",
-            "weaponType": "Shield"
+            "weaponType": "Shield",
+            "source": "AQ40 Ouro"
           }
         ]
       }
@@ -4845,7 +5003,8 @@
               "Off Hand",
               "177 Armor",
               "+1 Strength"
-            ]
+            ],
+            "source": "Early quest shield"
           }
         ],
         "lines": [
@@ -4888,7 +5047,8 @@
               "+5 Strength",
               "+3 Stamina",
               "Requires Level 21"
-            ]
+            ],
+            "source": "Commander Springvale (Shadowfang Keep)"
           },
           {
             "name": "Repurposed Rack",
@@ -4900,7 +5060,8 @@
             "reqLevel": 18,
             "stats": "+6 Strength",
             "icon": "inv_shield_04",
-            "weaponType": "Shield"
+            "weaponType": "Shield",
+            "source": "Hamhock (The Stockade)"
           }
         ],
         "lines": [
@@ -4945,7 +5106,8 @@
               "+5 Arcane Resistance",
               "+5 Nature Resistance",
               "Requires Level 31"
-            ]
+            ],
+            "source": "Thermaplugg (Gnomeregan)"
           },
           {
             "name": "Mirror of Rath'mael",
@@ -4965,7 +5127,8 @@
               "+5 Strength",
               "Requires Level 19",
               "Equip: Increases your chance to Block attacks with a shield by 1.0%."
-            ]
+            ],
+            "source": "Rath'mael (Ruins of Lordaeron)"
           }
         ],
         "lines": [
@@ -5012,7 +5175,8 @@
               "+7 Stamina",
               "Requires Level 30",
               "Equip: Increases healing done by up to 15"
-            ]
+            ],
+            "source": "Charlga Razorflank (RFK)"
           }
         ],
         "lines": [
@@ -5059,7 +5223,8 @@
               "+10 Spirit",
               "Requires Level 37",
               "Equip: Increases healing done by up to 13"
-            ]
+            ],
+            "source": "Eric The Swift (Uldaman)"
           }
         ],
         "lines": [
@@ -5107,7 +5272,8 @@
               "+6 Strength",
               "+15 Stamina",
               "Requires Level 49"
-            ]
+            ],
+            "source": "World drop"
           }
         ],
         "lines": [
@@ -5154,7 +5320,8 @@
               "2291 Armor",
               "+14 Stamina",
               "Requires Level 60"
-            ]
+            ],
+            "source": "Alterac Valley Exalted"
           },
           {
             "name": "Grand Marshal's Aegis",
@@ -5175,7 +5342,8 @@
               "+23 Stamina",
               "Requires Level 60",
               "Equip: When struck in combat has a 5% chance of inflicting 35 to 65 Nature damage to the attacker. (Proc chance: 5%)"
-            ]
+            ],
+            "source": "PvP Rank 14"
           },
           {
             "name": "High Warlord's Shield Wall",
@@ -5196,7 +5364,8 @@
               "+23 Stamina",
               "Requires Level 60",
               "Equip: When struck in combat has a 5% chance of inflicting 35 to 65 Nature damage to the attacker. (Proc chance: 5%)"
-            ]
+            ],
+            "source": "PvP Rank 14"
           }
         ],
         "lines": [

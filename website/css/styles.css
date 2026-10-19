@@ -455,11 +455,11 @@ h1, h2, h3, h4, .font-heading {
 .frame-gem-top { top: -3px; }
 .frame-gem-bottom { bottom: -3px; }
 
-/* Main Navigation Container & Rows */
+/* Main Navigation Container - Unified Responsive Grid */
 .nav-tab-bar {
-  display: flex;
-  flex-direction: column;
-  gap: 0.65rem;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 0.45rem;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -470,21 +470,6 @@ h1, h2, h3, h4, .font-heading {
   backdrop-filter: none;
 }
 
-.wow-nav-row {
-  display: grid;
-  gap: 0.65rem;
-  width: 100%;
-}
-
-.wow-nav-row.row-1 {
-  grid-template-columns: repeat(7, 1fr);
-}
-
-.wow-nav-row.row-2,
-.wow-nav-row.row-3 {
-  grid-template-columns: repeat(6, 1fr);
-}
-
 /* Navigation Tile Button */
 .nav-tab-btn {
   position: relative;
@@ -492,12 +477,12 @@ h1, h2, h3, h4, .font-heading {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0.4rem;
-  padding: 0.75rem 0.4rem 0.65rem;
-  min-height: 86px;
+  gap: 0.35rem;
+  padding: 0.55rem 0.25rem 0.45rem;
+  min-height: 74px;
   background: linear-gradient(180deg, rgba(23, 32, 48, 0.85) 0%, rgba(13, 18, 28, 0.95) 100%);
   border: 1px solid rgba(148, 163, 184, 0.2);
-  border-radius: 10px;
+  border-radius: 9px;
   box-shadow: 
     inset 0 1px 0 rgba(255, 255, 255, 0.08),
     inset 0 -1px 0 rgba(0, 0, 0, 0.6),
@@ -579,14 +564,14 @@ h1, h2, h3, h4, .font-heading {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 36px;
-  height: 36px;
+  width: 30px;
+  height: 30px;
   flex-shrink: 0;
 }
 
 .nav-tile-icon svg {
-  width: 34px;
-  height: 34px;
+  width: 28px;
+  height: 28px;
   transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1),
               filter 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -594,7 +579,7 @@ h1, h2, h3, h4, .font-heading {
 /* Nav Tile Label */
 .nav-tile-label {
   font-family: var(--font-heading);
-  font-size: 0.78rem;
+  font-size: 0.72rem;
   font-weight: 600;
   line-height: 1.15;
   text-align: center;
@@ -609,16 +594,21 @@ h1, h2, h3, h4, .font-heading {
   .wow-nav-frame {
     padding: 0.9rem 0.8rem;
   }
-  .wow-nav-row.row-1 {
-    grid-template-columns: repeat(4, 1fr);
-  }
-  .wow-nav-row.row-2,
-  .wow-nav-row.row-3 {
-    grid-template-columns: repeat(3, 1fr);
+  .nav-tab-bar {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.55rem;
   }
   .nav-tab-btn {
-    min-height: 78px;
-    padding: 0.6rem 0.3rem 0.5rem;
+    min-height: 76px;
+    padding: 0.65rem 0.35rem 0.55rem;
+  }
+  .nav-tile-icon {
+    width: 32px;
+    height: 32px;
+  }
+  .nav-tile-icon svg {
+    width: 30px;
+    height: 30px;
   }
   .nav-tile-label {
     font-size: 0.74rem;
@@ -635,30 +625,50 @@ h1, h2, h3, h4, .font-heading {
     width: 24px;
     height: 24px;
   }
-  .wow-nav-row.row-1,
-  .wow-nav-row.row-2,
-  .wow-nav-row.row-3 {
-    grid-template-columns: repeat(3, 1fr);
+  .nav-tab-bar {
+    grid-template-columns: repeat(4, 1fr);
     gap: 0.45rem;
   }
   .nav-tab-btn {
     min-height: 72px;
-    padding: 0.5rem 0.25rem;
+    padding: 0.55rem 0.25rem 0.45rem;
+  }
+  .nav-tile-icon {
+    width: 30px;
+    height: 30px;
   }
   .nav-tile-icon svg {
     width: 28px;
     height: 28px;
   }
   .nav-tile-label {
-    font-size: 0.68rem;
+    font-size: 0.70rem;
   }
 }
 
-@media (max-width: 480px) {
-  .wow-nav-row.row-1,
-  .wow-nav-row.row-2,
-  .wow-nav-row.row-3 {
+@media (max-width: 540px) {
+  .wow-nav-frame {
+    padding: 0.6rem 0.45rem;
+  }
+  .nav-tab-bar {
     grid-template-columns: repeat(2, 1fr);
+    gap: 0.4rem;
+  }
+  .nav-tab-btn {
+    min-height: 64px;
+    padding: 0.45rem 0.25rem 0.4rem;
+    border-radius: 8px;
+  }
+  .nav-tile-icon {
+    width: 28px;
+    height: 28px;
+  }
+  .nav-tile-icon svg {
+    width: 26px;
+    height: 26px;
+  }
+  .nav-tile-label {
+    font-size: 0.70rem;
   }
 }
 
@@ -5634,6 +5644,7 @@ input:checked + .toggle-slider:before {
 
 .alt-tag .item-faction-badge {
   padding: 0.05rem 0.2rem;
+  margin-right: 0.45rem;
 }
 
 .alt-tag .item-faction-badge .progression-faction-crest {
