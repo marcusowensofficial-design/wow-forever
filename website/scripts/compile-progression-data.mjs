@@ -16,12 +16,16 @@ const OUT_FILE = path.join(ROOT, 'js', 'data', 'class-progression-data.js');
 
 const macros = JSON.parse(fs.readFileSync(path.join(SCRAPED_DIR, 'forever_macros.json'), 'utf8'));
 const weapons = JSON.parse(fs.readFileSync(path.join(SCRAPED_DIR, 'forever_weapons.json'), 'utf8'));
+const wands = JSON.parse(fs.readFileSync(path.join(SCRAPED_DIR, 'forever_wands.json'), 'utf8'));
+const offhands = JSON.parse(fs.readFileSync(path.join(SCRAPED_DIR, 'forever_offhands.json'), 'utf8'));
 const spellbooks = JSON.parse(fs.readFileSync(path.join(SCRAPED_DIR, 'forever_spellbooks.json'), 'utf8'));
 const milestones = JSON.parse(fs.readFileSync(path.join(SCRAPED_DIR, 'forever_milestones.json'), 'utf8'));
 
 const bundle = {
   macros,
   weapons,
+  wands,
+  offhands,
   spellbooks,
   milestones
 };

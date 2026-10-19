@@ -14,6 +14,8 @@
   let activeSpellSearchQuery = '';
   let activeWeaponTrack = {};
   let activeWeaponFaction = 'all'; // 'all' | 'alliance' | 'horde'
+  let activeWandFaction = 'all';
+  let activeOffhandFaction = 'all';
   let activeMacroCategory = 'all';
   let activeMacroSearchQuery = '';
 
@@ -445,23 +447,23 @@
     }
   }
 
-  // 2. Weapon Progression Renderer
-  function renderWeapons(classId) {
-    const data = window.WOW_PROGRESSION_DATA?.weapons?.[classId];
+  // 2. Generic Item Timeline Renderer (Weapons, Wands, Off-Hands)
+  function renderItemTimeline(classId, datasetKey, cfg) {
+    const data = window.WOW_PROGRESSION_DATA?.[datasetKey]?.[classId];
     if (!data || !data.levels || data.levels.length === 0) {
       return `
         <div class="progression-empty-state">
-          <p>⚠️ No weapon progression roadmap recorded for this class yet.</p>
+          <p>${escapeHtml(cfg.emptyMsg || '⚠️ No progression roadmap recorded for this class yet.')}</p>
         </div>
       `;
     }
 
-    const currentTrack = activeWeaponTrack[classId] || data.tracks?.[0]?.id || 'primary';
+    const currentTrack = activeWeaponTrack[`${classId}_${datasetKey}`] || data.tracks?.[0]?.id || 'primary';
 
     // Faction restrictions for faction-exclusive classes
     const isPaladin = classId === 'paladin';
     const isShaman = classId === 'shaman';
-    let effectiveFaction = activeWeaponFaction;
+    let effectiveFaction = cfg.getFaction ? cfg.getFaction() : 'all';
     if (isPaladin && effectiveFaction === 'horde') effectiveFaction = 'alliance';
     if (isShaman && effectiveFaction === 'alliance') effectiveFaction = 'horde';
 
@@ -496,6 +498,7 @@
               weaponType: altMatch.weaponType || step.weaponType,
               speed: spdMatch || altMatch.speed || step.speed,
               dps: dpsMatch || (altMatch.dps ? `${altMatch.dps} DPS` : step.dps),
+              stats: altMatch.stats || step.stats,
               source: altMatch.source || { kind: 'quest', title: altMatch.name, detail: altMatch.value || '' },
               faction: altMatch.faction || effectiveFaction
             };
@@ -558,6 +561,7 @@
                 <div class="weapon-stats-row">
                   ${displayStep.speed ? `<span class="stat-pill">Speed: ${escapeHtml(displayStep.speed)}</span>` : ''}
                   ${displayStep.dps ? `<span class="stat-pill dps-pill">DPS: ${escapeHtml(displayStep.dps)}</span>` : ''}
+                  ${displayStep.stats ? `<span class="stat-pill stats-pill">${escapeHtml(displayStep.stats)}</span>` : ''}
                 </div>
               </div>
             </div>
@@ -618,23 +622,23 @@
       <div class="progression-section-wrap">
         <div class="progression-header-banner">
           <div class="progression-header-info">
-            <h3><span>⚔️</span> Level 1 to 60 Weapon Upgrade Path</h3>
-            <p>Optimal weapon progression every 2–4 levels: exact quest rewards, dungeon boss drops, vendor purchases, and craftable spikes.</p>
+            <h3><span>${cfg.icon}</span> ${escapeHtml(cfg.title)}</h3>
+            <p>${escapeHtml(cfg.desc)}</p>
           </div>
           <div class="progression-header-badge">${displayedCount} Progression Steps</div>
         </div>
 
         <!-- Controls Bar with Faction Filter & Track Selection -->
         <div class="progression-controls-bar weapon-controls-bar">
-          <div class="faction-filter-toggle" id="weapon-faction-toggle">
+          <div class="faction-filter-toggle" id="${cfg.filterId}">
             <span class="filter-toggle-label">Faction:</span>
-            <button type="button" class="faction-chip ${effectiveFaction === 'all' ? 'active' : ''}" data-faction="all" aria-label="Show all weapons">
+            <button type="button" class="faction-chip ${effectiveFaction === 'all' ? 'active' : ''}" data-faction="all" aria-label="Show all items">
               <span class="faction-icon">🌐</span> All
             </button>
-            <button type="button" class="faction-chip faction-alliance ${effectiveFaction === 'alliance' ? 'active' : ''}" data-faction="alliance" ${isShaman ? 'disabled style="opacity:0.35;cursor:not-allowed;" title="Shamans are exclusive to the Horde"' : 'aria-label="Filter to Alliance weapons"'}>
+            <button type="button" class="faction-chip faction-alliance ${effectiveFaction === 'alliance' ? 'active' : ''}" data-faction="alliance" ${isShaman ? 'disabled style="opacity:0.35;cursor:not-allowed;" title="Shamans are exclusive to the Horde"' : 'aria-label="Filter to Alliance items"'}>
               <span class="faction-icon">🦁</span> Alliance
             </button>
-            <button type="button" class="faction-chip faction-horde ${effectiveFaction === 'horde' ? 'active' : ''}" data-faction="horde" ${isPaladin ? 'disabled style="opacity:0.35;cursor:not-allowed;" title="Paladins are exclusive to the Alliance"' : 'aria-label="Filter to Horde weapons"'}>
+            <button type="button" class="faction-chip faction-horde ${effectiveFaction === 'horde' ? 'active' : ''}" data-faction="horde" ${isPaladin ? 'disabled style="opacity:0.35;cursor:not-allowed;" title="Paladins are exclusive to the Alliance"' : 'aria-label="Filter to Horde items"'}>
               <span class="faction-icon">⚔️</span> Horde
             </button>
           </div>
@@ -643,7 +647,7 @@
             <div class="progression-track-tabs">
               <span class="track-tab-label">Track:</span>
               ${data.tracks.map(tr => `
-                <button type="button" class="progression-track-btn ${currentTrack === tr.id ? 'active' : ''}" data-track="${tr.id}">
+                <button type="button" class="progression-track-btn ${currentTrack === tr.id ? 'active' : ''}" data-track="${tr.id}" data-key="${datasetKey}">
                   ${escapeHtml(tr.name)}
                 </button>
               `).join('')}
@@ -651,16 +655,52 @@
           ` : ''}
         </div>
 
-        <!-- Weapon Timeline Grid -->
+        <!-- Timeline Grid -->
         <div class="weapon-timeline-container">
           ${stepCards || `
             <div class="progression-empty-state">
-              <p>No weapons found matching the selected faction filter.</p>
+              <p>No items found matching the selected faction filter.</p>
             </div>
           `}
         </div>
       </div>
     `;
+  }
+
+  // Weapon Progression Renderer
+  function renderWeapons(classId) {
+    return renderItemTimeline(classId, 'weapons', {
+      title: 'Level 1 to 60 Weapon Upgrade Path',
+      icon: '⚔️',
+      desc: 'Optimal weapon progression every 2–4 levels: exact quest rewards, dungeon boss drops, vendor purchases, and craftable spikes.',
+      emptyMsg: '⚠️ No weapon progression roadmap recorded for this class yet.',
+      filterId: 'weapon-faction-toggle',
+      getFaction: () => activeWeaponFaction
+    });
+  }
+
+  // Wand Progression Renderer
+  function renderWands(classId) {
+    return renderItemTimeline(classId, 'wands', {
+      title: 'Level 1 to 60 Wand Upgrade Path',
+      icon: '🪄',
+      desc: 'Dedicated wand progression for spellcasters: optimal wand spikes every bracket, fast shoot speeds, quest rewards, and high-DPS crafting.',
+      emptyMsg: '⚠️ No wand progression recorded for this class in current Beta Build.',
+      filterId: 'wand-faction-toggle',
+      getFaction: () => activeWandFaction
+    });
+  }
+
+  // Off-Hand Progression Renderer
+  function renderOffhands(classId) {
+    return renderItemTimeline(classId, 'offhands', {
+      title: 'Level 1 to 60 Caster Off-Hand Progression',
+      icon: '🔮',
+      desc: 'Best-in-slot held in off-hand frills, grimoires, orbs, and tomes for leveling casters: spell power, intellect, spirit, and mana regeneration.',
+      emptyMsg: '⚠️ No off-hand progression recorded for this class in current Beta Build.',
+      filterId: 'offhand-faction-toggle',
+      getFaction: () => activeOffhandFaction
+    });
   }
 
   // 3. Macros Renderer
@@ -792,6 +832,8 @@
     const classId = cData.id;
     if (subtab === 'spellbook') return renderSpellbook(classId);
     if (subtab === 'weapons') return renderWeapons(classId);
+    if (subtab === 'wands') return renderWands(classId);
+    if (subtab === 'offhands') return renderOffhands(classId);
     if (subtab === 'macros') return renderMacros(classId);
     if (subtab === 'milestones') return renderMilestones(classId);
     return '';
@@ -826,7 +868,7 @@
       });
     }
 
-    // 2. Weapon controls (Faction filter & Track buttons)
+    // 2. Weapon & Item controls (Faction filter & Track buttons)
     document.querySelectorAll('#weapon-faction-toggle .faction-chip').forEach(btn => {
       btn.addEventListener('click', () => {
         hideWeaponTooltip();
@@ -835,12 +877,29 @@
       });
     });
 
+    document.querySelectorAll('#wand-faction-toggle .faction-chip').forEach(btn => {
+      btn.addEventListener('click', () => {
+        hideWeaponTooltip();
+        activeWandFaction = btn.getAttribute('data-faction') || 'all';
+        window.renderDeepDiveContent?.();
+      });
+    });
+
+    document.querySelectorAll('#offhand-faction-toggle .faction-chip').forEach(btn => {
+      btn.addEventListener('click', () => {
+        hideWeaponTooltip();
+        activeOffhandFaction = btn.getAttribute('data-faction') || 'all';
+        window.renderDeepDiveContent?.();
+      });
+    });
+
     document.querySelectorAll('.progression-track-btn').forEach(btn => {
       btn.addEventListener('click', () => {
         hideWeaponTooltip();
         const track = btn.getAttribute('data-track');
+        const key = btn.getAttribute('data-key') || 'weapons';
         const cId = window.selectedDeepDiveClassId || 'hunter';
-        activeWeaponTrack[cId] = track;
+        activeWeaponTrack[`${cId}_${key}`] = track;
         window.renderDeepDiveContent?.();
       });
     });
@@ -927,6 +986,9 @@
   // Export module
   window.WOW_DEEPDIVES_PROGRESSION = {
     renderProgressionSubtab,
+    renderWeapons,
+    renderWands,
+    renderOffhands,
     setupEventListeners,
     hideWeaponTooltip
   };

@@ -3407,7 +3407,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "1–2",
           "itemId": 2488,
           "name": "Crude Battle Axe",
-          "icon": "inv_axe_04",
+          "icon": "inv_sword_20",
           "weaponType": "Two-handed axe",
           "speed": "2.80",
           "dps": "2.0 DPS",
@@ -3426,7 +3426,8 @@ if (typeof window !== 'undefined') {
               "quality": "q1",
               "iLvl": 6,
               "reqLevel": 1,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_axe_10"
             },
             {
               "name": "Worn Shortsword",
@@ -3437,7 +3438,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 6,
               "reqLevel": 1,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_sword_04"
             }
           ],
           "faction": "both",
@@ -3450,7 +3452,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "3–4",
           "itemId": 2493,
           "name": "Wooden Mallet",
-          "icon": "inv_hammer_18",
+          "icon": "inv_hammer_16",
           "weaponType": "Two-handed mace",
           "speed": "2.60",
           "dps": "5.0 DPS",
@@ -3471,7 +3473,8 @@ if (typeof window !== 'undefined') {
               "quality": "q1",
               "iLvl": 7,
               "reqLevel": 2,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_torch_unlit"
             },
             {
               "name": "Copper Axe",
@@ -3484,7 +3487,8 @@ if (typeof window !== 'undefined') {
               "quality": "q1",
               "iLvl": 9,
               "reqLevel": 4,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_axe_23"
             }
           ],
           "faction": "both",
@@ -3497,7 +3501,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "5–6",
           "itemId": 7955,
           "name": "Copper Claymore",
-          "icon": "inv_sword_24",
+          "icon": "inv_sword_21",
           "weaponType": "Two-handed sword",
           "speed": "3.30",
           "dps": "7.7 DPS",
@@ -3518,7 +3522,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 13,
               "reqLevel": 8,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_throwingaxe_02"
             },
             {
               "name": "Rough Boomstick",
@@ -3531,7 +3536,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 10,
               "reqLevel": 5,
-              "stats": "+1 Stamina"
+              "stats": "+1 Stamina",
+              "icon": "inv_weapon_rifle_03"
             },
             {
               "name": "Goblin Smasher",
@@ -3544,7 +3550,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 12,
               "reqLevel": 5,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_hammer_15"
             }
           ],
           "faction": "both",
@@ -3557,7 +3564,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "7–8",
           "itemId": 248005,
           "name": "Northshire Hammer",
-          "icon": "inv_hammer_20",
+          "icon": "inv_hammer_16",
           "weaponType": "Two-handed mace",
           "speed": "2.70",
           "dps": "8.3 DPS",
@@ -3578,7 +3585,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 13,
               "reqLevel": 8,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_throwingaxe_02"
             },
             {
               "name": "Staff of the Dor'Danil",
@@ -3589,7 +3597,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 12,
               "reqLevel": 6,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_weapon_shortblade_05"
             },
             {
               "name": "Riptear's Cleaver",
@@ -3602,7 +3611,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 13,
               "reqLevel": 6,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_throwingaxe_02"
             },
             {
               "name": "Bonecracker",
@@ -3615,7 +3625,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 13,
               "reqLevel": 7,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_mace_04"
             }
           ],
           "faction": "alliance",
@@ -3628,7 +3639,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "9–10",
           "itemId": 1197,
           "name": "Giant Mace",
-          "icon": "inv_mace_01",
+          "icon": "inv_mace_02",
           "weaponType": "Two-handed mace",
           "speed": "3.50",
           "dps": "9.0 DPS",
@@ -3658,7 +3669,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases healing done by up to 33 and damage done by up to 11 for all magical spells and effects.",
                 "Requires Level 13"
               ],
-              "reqLevel": 13
+              "reqLevel": 13,
+              "icon": "inv_misc_bone_10"
             },
             {
               "name": "Thick War Axe",
@@ -3671,7 +3683,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 17,
               "reqLevel": 12,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_throwingaxe_01"
             },
             {
               "name": "Thun'grim's Axe",
@@ -3684,7 +3697,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 15,
               "reqLevel": 10,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_axe_01"
             },
             {
               "name": "Thun'grim's Sword",
@@ -3696,7 +3710,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 14,
               "reqLevel": 8,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_sword_04"
             },
             {
               "name": "Ironforge Greathammer",
@@ -3709,7 +3724,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 9,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_hammer_21"
             }
           ],
           "faction": "both",
@@ -3722,7 +3738,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "11–12",
           "itemId": 6214,
           "name": "Heavy Copper Maul",
-          "icon": "inv_hammer_14",
+          "icon": "inv_hammer_18",
           "weaponType": "Two-handed mace",
           "speed": "3.30",
           "dps": "10.8 DPS",
@@ -3741,7 +3757,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 16,
               "reqLevel": 10,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_sword_05"
             },
             {
               "name": "Trogg Scepter",
@@ -3763,7 +3780,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases healing done by up to 33 and damage done by up to 11 for all magical spells and effects.",
                 "Requires Level 13"
               ],
-              "reqLevel": 13
+              "reqLevel": 13,
+              "icon": "inv_misc_bone_10"
             },
             {
               "name": "Axe of Orgrimmar",
@@ -3776,7 +3794,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 9,
-              "stats": "+6 Sta, +6 Spi"
+              "stats": "+6 Sta, +6 Spi",
+              "icon": "inv_axe_04"
             },
             {
               "name": "Ironforge Greathammer",
@@ -3789,7 +3808,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 9,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_hammer_21"
             }
           ],
           "faction": "both",
@@ -3802,7 +3822,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "13–14",
           "itemId": 279895,
           "name": "Ironforge Greathammer",
-          "icon": "inv_hammer_04",
+          "icon": "inv_hammer_21",
           "weaponType": "Two-handed mace",
           "speed": "3.10",
           "dps": "16.0 DPS",
@@ -3823,7 +3843,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 13,
-              "stats": "+5 Str, +2 Sta"
+              "stats": "+5 Str, +2 Sta",
+              "icon": "inv_misc_necklacea8"
             },
             {
               "name": "Heavy Copper Broadsword",
@@ -3836,7 +3857,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 19,
               "reqLevel": 14,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_sword_14"
             },
             {
               "name": "Axe of Orgrimmar",
@@ -3849,7 +3871,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 9,
-              "stats": "+6 Sta, +6 Spi"
+              "stats": "+6 Sta, +6 Spi",
+              "icon": "inv_axe_04"
             },
             {
               "name": "Bone Knuckles",
@@ -3862,7 +3885,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 13,
-              "stats": ""
+              "stats": "",
+              "icon": "ability_whirlwind"
             }
           ],
           "faction": "alliance",
@@ -3875,7 +3899,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "15–16",
           "itemId": 5187,
           "name": "Rhahk'Zor's Hammer",
-          "icon": "inv_hammer_20",
+          "icon": "inv_hammer_09",
           "weaponType": "Two-handed mace",
           "speed": "3.20",
           "dps": "18.4 DPS",
@@ -3896,7 +3920,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 23,
               "reqLevel": 16,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_sword_23"
             },
             {
               "name": "Meathook Slicer",
@@ -3909,7 +3934,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 20,
               "reqLevel": 15,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_misc_questionmark"
             }
           ],
           "faction": "both",
@@ -3922,7 +3948,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "17–18",
           "itemId": 271104,
           "name": "Corpse Chopper",
-          "icon": "inv_axe_19",
+          "icon": "inv_misc_questionmark",
           "weaponType": "Two-handed axe",
           "speed": "3.20",
           "dps": "17.4 DPS",
@@ -3943,7 +3969,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 23,
               "reqLevel": 18,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_hammer_09"
             },
             {
               "name": "Haunting Blade",
@@ -3964,7 +3991,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases healing done by up to 33 and damage done by up to 11 for all magical spells and effects.",
                 "Requires Level 22"
               ],
-              "reqLevel": 22
+              "reqLevel": 22,
+              "icon": "inv_misc_questionmark"
             },
             {
               "name": "Vileblood Scimitar",
@@ -3977,7 +4005,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 22,
               "reqLevel": 17,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_misc_questionmark"
             },
             {
               "name": "Sword of the Fallen",
@@ -3990,7 +4019,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 23,
               "reqLevel": 18,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_sword_14"
             }
           ],
           "faction": "both",
@@ -4003,7 +4033,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "19–20",
           "itemId": 279891,
           "name": "Forsaken Greataxe",
-          "icon": "inv_axe_11",
+          "icon": "inv_misc_cape_08",
           "weaponType": "Two-handed axe",
           "speed": "3.40",
           "dps": "20.5 DPS",
@@ -4024,7 +4054,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 25,
               "reqLevel": 20,
-              "stats": "+6 Strength, +6 Stamina"
+              "stats": "+6 Strength, +6 Stamina",
+              "icon": "inv_hammer_18"
             },
             {
               "name": "Taskmaster Axe",
@@ -4047,7 +4078,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases healing done by up to 45 and damage done by up to 15 for all magical spells and effects.",
                 "Requires Level 18"
               ],
-              "reqLevel": 18
+              "reqLevel": 18,
+              "icon": "inv_throwingaxe_06"
             }
           ],
           "faction": "both",
@@ -4060,7 +4092,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "21–22",
           "itemId": 6905,
           "name": "Reef Axe",
-          "icon": "inv_axe_08",
+          "icon": "inv_weapon_halberd_06",
           "weaponType": "Two-handed axe",
           "speed": "3.30",
           "dps": "22.4 DPS",
@@ -4081,7 +4113,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 31,
               "reqLevel": 26,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_sword_42"
             },
             {
               "name": "Taurenbane's Family Cleaver",
@@ -4103,7 +4136,8 @@ if (typeof window !== 'undefined') {
                 "Equip: +32 Attack Power against Humanoids.",
                 "Requires Level 23"
               ],
-              "reqLevel": 23
+              "reqLevel": 23,
+              "icon": "inv_axe_04"
             },
             {
               "name": "Bronze Battle Axe",
@@ -4116,7 +4150,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 27,
               "reqLevel": 22,
-              "stats": "+10 Strength"
+              "stats": "+10 Strength",
+              "icon": "inv_axe_21"
             },
             {
               "name": "Alliance Outrunner's Sword",
@@ -4129,7 +4164,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 27,
               "reqLevel": 22,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_sword_20"
             }
           ],
           "faction": "both",
@@ -4142,7 +4178,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "23–24",
           "itemId": 285328,
           "name": "Taurenbane's Family Cleaver",
-          "icon": "inv_axe_16",
+          "icon": "inv_axe_04",
           "weaponType": "Two-handed axe",
           "speed": "3.40",
           "dps": "22.9 DPS",
@@ -4163,7 +4199,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 31,
               "reqLevel": 26,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_sword_42"
             },
             {
               "name": "Heavy Mithril Axe",
@@ -4176,7 +4213,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 40,
               "reqLevel": 35,
-              "stats": "+14 Critical Strike Rating"
+              "stats": "+14 Critical Strike Rating",
+              "icon": "inv_sword_05"
             },
             {
               "name": "The Skyblade",
@@ -4189,7 +4227,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 27,
               "reqLevel": 22,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_sword_20"
             }
           ],
           "faction": "both",
@@ -4211,7 +4250,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "25–26",
           "itemId": 271766,
           "name": "Heavehammer",
-          "icon": "inv_hammer_15",
+          "icon": "inv_hammer_09",
           "weaponType": "Two-handed mace",
           "speed": "3.30",
           "dps": "27.7 DPS",
@@ -4240,7 +4279,8 @@ if (typeof window !== 'undefined') {
                 "+12 Stamina",
                 "+12 Spirit"
               ],
-              "reqLevel": 24
+              "reqLevel": 24,
+              "icon": "inv_sword_04"
             },
             {
               "name": "Dendweller's Hammer",
@@ -4262,7 +4302,8 @@ if (typeof window !== 'undefined') {
                 "+100 Armor",
                 "Requires Level 26"
               ],
-              "reqLevel": 26
+              "reqLevel": 26,
+              "icon": "inv_hammer_09"
             },
             {
               "name": "Solid Iron Maul",
@@ -4284,7 +4325,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases damage and healing done by magical spells and effects by up to 24.",
                 "Requires Level 26"
               ],
-              "reqLevel": 26
+              "reqLevel": 26,
+              "icon": "inv_hammer_07"
             }
           ],
           "faction": "both",
@@ -4305,7 +4347,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "27–28",
           "itemId": 273046,
           "name": "Guardian's Dualblade",
-          "icon": "inv_axe_06",
+          "icon": "inv_throwingaxe_05",
           "weaponType": "Two-handed axe",
           "speed": "3.40",
           "dps": "24.6 DPS",
@@ -4337,7 +4379,8 @@ if (typeof window !== 'undefined') {
                 "Equip: +10 Hit Rating",
                 "Sell Price: 1g 2s 92c"
               ],
-              "reqLevel": 29
+              "reqLevel": 29,
+              "icon": "inv_spear_08"
             },
             {
               "name": "Defender of Dalaran",
@@ -4359,7 +4402,8 @@ if (typeof window !== 'undefined') {
                 "+13 Stamina",
                 "+9 Intellect"
               ],
-              "reqLevel": 24
+              "reqLevel": 24,
+              "icon": "inv_hammer_04"
             }
           ],
           "faction": "both",
@@ -4383,6 +4427,25 @@ if (typeof window !== 'undefined') {
           },
           "alts": [
             {
+              "name": "Whirlwind Axe",
+              "itemId": 6975,
+              "value": "35.6 DPS, 3.60s (102–154 dmg) - Warrior Level 30 Class Quest (+16 Str, +15 Sta)",
+              "faction": "both",
+              "dps": "35.6 DPS",
+              "speed": "3.60",
+              "weaponType": "Two-handed axe",
+              "quality": "q3",
+              "iLvl": 40,
+              "reqLevel": 30,
+              "stats": "+16 Strength, +15 Stamina",
+              "icon": "inv_axe_12",
+              "source": {
+                "kind": "quest",
+                "title": "Whirlwind Weapon (Warrior Quest)",
+                "detail": "Warrior Level 30 class quest reward. Massive slow top-end damage that anchors Mortal Strike."
+              }
+            },
+            {
               "name": "Whirlwind Warhammer",
               "itemId": 6976,
               "value": "35.6 DPS, 3.60s - Mace alternative from class quest",
@@ -4402,7 +4465,8 @@ if (typeof window !== 'undefined') {
                 "+15 Stamina",
                 "Classes: Warrior"
               ],
-              "reqLevel": 30
+              "reqLevel": 30,
+              "icon": "inv_hammer_08"
             },
             {
               "name": "Whirlwind Sword",
@@ -4424,7 +4488,8 @@ if (typeof window !== 'undefined') {
                 "+15 Stamina",
                 "Classes: Warrior"
               ],
-              "reqLevel": 30
+              "reqLevel": 30,
+              "icon": "inv_sword_15"
             },
             {
               "name": "Dark Hearted Hammer",
@@ -4445,7 +4510,8 @@ if (typeof window !== 'undefined') {
                 "+12 Strength",
                 "+8 Stamina"
               ],
-              "reqLevel": 30
+              "reqLevel": 30,
+              "icon": "inv_hammer_16"
             },
             {
               "name": "Master Hunter's Spellsword",
@@ -4466,7 +4532,8 @@ if (typeof window !== 'undefined') {
                 "+12 Strength",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 14."
               ],
-              "reqLevel": 28
+              "reqLevel": 28,
+              "icon": "inv_sword_42"
             },
             {
               "name": "Corpsemaker",
@@ -4488,7 +4555,8 @@ if (typeof window !== 'undefined') {
                 "+8 Stamina",
                 "Requires Level 29"
               ],
-              "reqLevel": 29
+              "reqLevel": 29,
+              "icon": "inv_weapon_halbard_01"
             },
             {
               "name": "Rage of the Storm",
@@ -4510,7 +4578,27 @@ if (typeof window !== 'undefined') {
                 "+15 Stamina",
                 "Equip: Increases the damage dealt by your Stormstrike ability by 10%."
               ],
-              "reqLevel": 30
+              "reqLevel": 30,
+              "icon": "inv_mace_42"
+            },
+            {
+              "name": "Bonebiter",
+              "itemId": 6830,
+              "value": "38.8 DPS, 3.40s (105–159 dmg) - In the Name of the Light quest (+10 Str, +10 Sta, +5 Agi) (Alliance)",
+              "faction": "alliance",
+              "dps": "38.8 DPS",
+              "speed": "3.40",
+              "weaponType": "Two-handed axe",
+              "quality": "q3",
+              "iLvl": 44,
+              "reqLevel": 34,
+              "stats": "+10 Strength, +10 Stamina, +5 Agility",
+              "icon": "inv_axe_04",
+              "source": {
+                "kind": "quest",
+                "title": "In the Name of the Light",
+                "detail": "Scarlet Monastery dungeon quest reward for Alliance. Highest physical top-end weapon until Maraudon."
+              }
             }
           ],
           "faction": "both",
@@ -4562,7 +4650,8 @@ if (typeof window !== 'undefined') {
                 "+15 Stamina",
                 "Classes: Warrior"
               ],
-              "reqLevel": 30
+              "reqLevel": 30,
+              "icon": "inv_axe_12"
             },
             {
               "name": "Manual Crowd Pummeler",
@@ -4587,7 +4676,8 @@ if (typeof window !== 'undefined') {
                 "3 Charges",
                 "Requires Level 29"
               ],
-              "reqLevel": 29
+              "reqLevel": 29,
+              "icon": "inv_mace_14"
             },
             {
               "name": "Mighty Iron Hammer",
@@ -4600,7 +4690,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 30,
               "reqLevel": 25,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_hammer_04"
             }
           ],
           "faction": "both",
@@ -4622,7 +4713,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "37–40",
           "itemId": 7717,
           "name": "Ravager",
-          "icon": "inv_axe_10",
+          "icon": "inv_weapon_halberd_05",
           "weaponType": "Two-handed axe",
           "speed": "3.50",
           "dps": "37.3 DPS",
@@ -4643,7 +4734,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 44,
               "reqLevel": 39,
-              "stats": "+16 Str, +17 Sta"
+              "stats": "+16 Str, +17 Sta",
+              "icon": "inv_shield_05"
             },
             {
               "name": "Bonebiter",
@@ -4656,7 +4748,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 44,
               "reqLevel": 34,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_misc_bowl_01"
             },
             {
               "name": "Sword of Serenity",
@@ -4669,7 +4762,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 44,
               "reqLevel": 34,
-              "stats": "+9 Sta, +4 Spi"
+              "stats": "+9 Sta, +4 Spi",
+              "icon": "inv_sword_27"
             },
             {
               "name": "Sword of Omen",
@@ -4681,7 +4775,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 42,
               "reqLevel": 36,
-              "stats": "+9 Str, +4 Sta, +3 Agi"
+              "stats": "+9 Str, +4 Sta, +3 Agi",
+              "icon": "inv_misc_questionmark"
             }
           ],
           "faction": "both",
@@ -4694,7 +4789,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "41–44",
           "itemId": 13018,
           "name": "Executioner's Cleaver",
-          "icon": "inv_axe_23",
+          "icon": "inv_axe_24",
           "weaponType": "Two-handed axe",
           "speed": "3.80",
           "dps": "42.5 DPS",
@@ -4714,7 +4809,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 46,
               "reqLevel": 40,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_misc_questionmark"
             },
             {
               "name": "The Pacifier",
@@ -4727,7 +4823,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 41,
               "reqLevel": 36,
-              "stats": "+20 Strength, +8 Stamina"
+              "stats": "+20 Strength, +8 Stamina",
+              "icon": "inv_sword_01"
             },
             {
               "name": "Gul'gash's Greathammer",
@@ -4740,7 +4837,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 49,
               "reqLevel": 44,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_hammer_16"
             }
           ],
           "faction": "both",
@@ -4753,7 +4851,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "45–50",
           "itemId": 17730,
           "name": "Gatorbite Axe",
-          "icon": "inv_axe_22",
+          "icon": "inv_axe_04",
           "weaponType": "Two-handed axe",
           "speed": "3.40",
           "dps": "45.8 DPS",
@@ -4774,7 +4872,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 54,
               "reqLevel": 49,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_misc_questionmark"
             },
             {
               "name": "Warmonger",
@@ -4787,7 +4886,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 52,
               "reqLevel": 47,
-              "stats": "+3% Hit"
+              "stats": "+3% Hit",
+              "icon": "inv_sword_46"
             }
           ],
           "faction": "both",
@@ -4800,7 +4900,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "51–54",
           "itemId": 11608,
           "name": "Dark Iron Pulverizer",
-          "icon": "inv_hammer_16",
+          "icon": "inv_hammer_09",
           "weaponType": "Two-handed mace",
           "speed": "3.70",
           "dps": "47.4 DPS",
@@ -4820,7 +4920,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 56,
               "reqLevel": 50,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_misc_questionmark"
             },
             {
               "name": "Enchanted Battlehammer",
@@ -4833,7 +4934,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 56,
               "reqLevel": 51,
-              "stats": "+4 Arcane Resistance, +21 Parry Rating, +20 Hit Rating"
+              "stats": "+4 Arcane Resistance, +21 Parry Rating, +20 Hit Rating",
+              "icon": "inv_hammer_05"
             }
           ],
           "faction": "both",
@@ -4866,7 +4968,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 60,
               "reqLevel": 54,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_misc_questionmark"
             },
             {
               "name": "Blackblade of Shahram",
@@ -4878,7 +4981,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 60,
               "reqLevel": 54,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_misc_questionmark"
             },
             {
               "name": "The Unstoppable Force",
@@ -4891,7 +4995,8 @@ if (typeof window !== 'undefined') {
               "quality": "q4",
               "iLvl": 60,
               "reqLevel": 55,
-              "stats": "+18 Strength, +17 Stamina, +28 Critical Strike Rating"
+              "stats": "+18 Strength, +17 Stamina, +28 Critical Strike Rating",
+              "icon": "inv_misc_questionmark"
             },
             {
               "name": "Dreadforge Retaliator",
@@ -4902,7 +5007,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 60,
               "reqLevel": 54,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_misc_questionmark"
             },
             {
               "name": "Icesworn Decapitator",
@@ -4915,7 +5021,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 59,
               "reqLevel": 54,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_axe_69"
             }
           ],
           "faction": "both",
@@ -4939,7 +5046,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "1–2",
           "itemId": 5579,
           "name": "Militia Warhammer",
-          "icon": "inv_hammer_18",
+          "icon": "inv_hammer_15",
           "weaponType": "Two-handed mace",
           "speed": "2.70",
           "dps": "2.6 DPS",
@@ -4958,7 +5065,8 @@ if (typeof window !== 'undefined') {
               "quality": "q1",
               "iLvl": 6,
               "reqLevel": 1,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_axe_10"
             },
             {
               "name": "Worn Shortsword",
@@ -4969,7 +5077,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 6,
               "reqLevel": 1,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_sword_04"
             }
           ],
           "faction": "alliance",
@@ -4982,7 +5091,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "3–4",
           "itemId": 2493,
           "name": "Wooden Mallet",
-          "icon": "inv_hammer_18",
+          "icon": "inv_hammer_16",
           "weaponType": "Two-handed mace",
           "speed": "2.60",
           "dps": "5.0 DPS",
@@ -5003,7 +5112,8 @@ if (typeof window !== 'undefined') {
               "quality": "q1",
               "iLvl": 7,
               "reqLevel": 2,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_torch_unlit"
             },
             {
               "name": "Copper Shortsword",
@@ -5016,7 +5126,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 10,
               "reqLevel": 4,
-              "stats": "+1 Strength"
+              "stats": "+1 Strength",
+              "icon": "inv_sword_26"
             }
           ],
           "faction": "both",
@@ -5029,7 +5140,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "5–6",
           "itemId": 7955,
           "name": "Copper Claymore",
-          "icon": "inv_sword_24",
+          "icon": "inv_sword_21",
           "weaponType": "Two-handed sword",
           "speed": "3.30",
           "dps": "7.7 DPS",
@@ -5050,7 +5161,8 @@ if (typeof window !== 'undefined') {
               "quality": "q1",
               "iLvl": 7,
               "reqLevel": 2,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_torch_unlit"
             },
             {
               "name": "Copper Mace",
@@ -5063,7 +5175,8 @@ if (typeof window !== 'undefined') {
               "quality": "q1",
               "iLvl": 9,
               "reqLevel": 4,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_mace_01"
             }
           ],
           "faction": "both",
@@ -5076,7 +5189,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "7–8",
           "itemId": 248005,
           "name": "Northshire Hammer",
-          "icon": "inv_hammer_20",
+          "icon": "inv_hammer_16",
           "weaponType": "Two-handed mace",
           "speed": "2.70",
           "dps": "8.3 DPS",
@@ -5097,7 +5210,8 @@ if (typeof window !== 'undefined') {
               "quality": "q1",
               "iLvl": 15,
               "reqLevel": 10,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_mace_02"
             },
             {
               "name": "Copper Claymore",
@@ -5110,7 +5224,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 11,
               "reqLevel": 6,
-              "stats": "+1 Strength, +1 Stamina"
+              "stats": "+1 Strength, +1 Stamina",
+              "icon": "inv_sword_21"
             }
           ],
           "faction": "alliance",
@@ -5123,7 +5238,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "9–10",
           "itemId": 1197,
           "name": "Giant Mace",
-          "icon": "inv_mace_01",
+          "icon": "inv_mace_02",
           "weaponType": "Two-handed mace",
           "speed": "3.50",
           "dps": "9.0 DPS",
@@ -5153,7 +5268,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases healing done by up to 33 and damage done by up to 11 for all magical spells and effects.",
                 "Requires Level 13"
               ],
-              "reqLevel": 13
+              "reqLevel": 13,
+              "icon": "inv_misc_bone_10"
             },
             {
               "name": "Heavy Copper Broadsword",
@@ -5166,7 +5282,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 19,
               "reqLevel": 14,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_sword_14"
             },
             {
               "name": "Ironforge Greathammer",
@@ -5179,7 +5296,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 9,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_hammer_21"
             }
           ],
           "faction": "both",
@@ -5192,7 +5310,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "11–12",
           "itemId": 6214,
           "name": "Heavy Copper Maul",
-          "icon": "inv_hammer_14",
+          "icon": "inv_hammer_18",
           "weaponType": "Two-handed mace",
           "speed": "3.30",
           "dps": "10.8 DPS",
@@ -5213,7 +5331,8 @@ if (typeof window !== 'undefined') {
               "quality": "q1",
               "iLvl": 15,
               "reqLevel": 10,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_mace_02"
             },
             {
               "name": "Heavy Copper Broadsword",
@@ -5226,7 +5345,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 19,
               "reqLevel": 14,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_sword_14"
             },
             {
               "name": "Ironforge Greathammer",
@@ -5239,7 +5359,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 9,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_hammer_21"
             }
           ],
           "faction": "both",
@@ -5252,7 +5373,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "13–14",
           "itemId": 279895,
           "name": "Ironforge Greathammer",
-          "icon": "inv_hammer_04",
+          "icon": "inv_hammer_21",
           "weaponType": "Two-handed mace",
           "speed": "3.10",
           "dps": "16.0 DPS",
@@ -5273,7 +5394,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 19,
               "reqLevel": 14,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_sword_14"
             },
             {
               "name": "Bronze Mace",
@@ -5286,7 +5408,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 22,
               "reqLevel": 17,
-              "stats": "+3 Stamina"
+              "stats": "+3 Stamina",
+              "icon": "inv_mace_08"
             }
           ],
           "faction": "alliance",
@@ -5299,7 +5422,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "15–16",
           "itemId": 5187,
           "name": "Rhahk'Zor's Hammer",
-          "icon": "inv_hammer_20",
+          "icon": "inv_hammer_09",
           "weaponType": "Two-handed mace",
           "speed": "3.20",
           "dps": "18.4 DPS",
@@ -5328,7 +5451,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases healing done by up to 33 and damage done by up to 11 for all magical spells and effects.",
                 "Requires Level 22"
               ],
-              "reqLevel": 22
+              "reqLevel": 22,
+              "icon": "inv_misc_questionmark"
             },
             {
               "name": "Monstrous Cleaver",
@@ -5341,7 +5465,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 23,
               "reqLevel": 16,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_sword_23"
             }
           ],
           "faction": "both",
@@ -5354,7 +5479,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "17–18",
           "itemId": 7230,
           "name": "Smite's Mighty Hammer",
-          "icon": "inv_hammer_18",
+          "icon": "inv_hammer_09",
           "weaponType": "Two-handed mace",
           "speed": "3.50",
           "dps": "19.7 DPS",
@@ -5383,7 +5508,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases healing done by up to 33 and damage done by up to 11 for all magical spells and effects.",
                 "Requires Level 22"
               ],
-              "reqLevel": 22
+              "reqLevel": 22,
+              "icon": "inv_misc_questionmark"
             },
             {
               "name": "Bronze Warhammer",
@@ -5396,7 +5522,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 25,
               "reqLevel": 20,
-              "stats": "+6 Strength, +6 Stamina"
+              "stats": "+6 Strength, +6 Stamina",
+              "icon": "inv_hammer_18"
             },
             {
               "name": "Sword of the Fallen",
@@ -5409,7 +5536,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 23,
               "reqLevel": 18,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_sword_14"
             }
           ],
           "faction": "both",
@@ -5422,7 +5550,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "19–20",
           "itemId": 6953,
           "name": "Verigan's Fist",
-          "icon": "inv_hammer_04",
+          "icon": "inv_hammer_05",
           "weaponType": "Two-handed mace",
           "speed": "3.20",
           "dps": "25.6 DPS",
@@ -5432,6 +5560,25 @@ if (typeof window !== 'undefined') {
             "detail": "Iconic Paladin class quest (+6 Str, +12 Sta, +7 Int, +6 Spi)"
           },
           "alts": [
+            {
+              "name": "Verigan's Fist",
+              "itemId": 6953,
+              "value": "21.9 DPS, 3.20s - Paladin Level 20 Class Quest (+12 Sta, +6 Str, +6 Spi, +6 Int) (Alliance)",
+              "faction": "alliance",
+              "dps": "21.9 DPS",
+              "speed": "3.20",
+              "weaponType": "Two-handed mace",
+              "quality": "q3",
+              "iLvl": 31,
+              "reqLevel": 20,
+              "stats": "+12 Stamina, +6 Strength, +6 Spirit, +6 Intellect",
+              "icon": "inv_hammer_05",
+              "source": {
+                "kind": "quest",
+                "title": "The Test of Righteousness",
+                "detail": "Paladin Level 20 class quest in Stormwind/Ironforge. Colossal 2H mace power spike."
+              }
+            },
             {
               "name": "Bronze Warhammer",
               "itemId": 7956,
@@ -5443,7 +5590,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 25,
               "reqLevel": 20,
-              "stats": "+6 Strength, +6 Stamina"
+              "stats": "+6 Strength, +6 Stamina",
+              "icon": "inv_hammer_18"
             },
             {
               "name": "Bronze Greatsword",
@@ -5456,7 +5604,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 26,
               "reqLevel": 21,
-              "stats": "+6 Stamina, +7 Spell Power"
+              "stats": "+6 Stamina, +7 Spell Power",
+              "icon": "inv_sword_20"
             }
           ],
           "faction": "alliance",
@@ -5469,7 +5618,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "21–24",
           "itemId": 6953,
           "name": "Verigan's Fist",
-          "icon": "inv_hammer_04",
+          "icon": "inv_hammer_05",
           "weaponType": "Two-handed mace",
           "speed": "3.20",
           "dps": "25.6 DPS",
@@ -5490,7 +5639,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 31,
               "reqLevel": 26,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_sword_42"
             },
             {
               "name": "Solid Iron Maul",
@@ -5512,7 +5662,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases damage and healing done by magical spells and effects by up to 24.",
                 "Requires Level 26"
               ],
-              "reqLevel": 26
+              "reqLevel": 26,
+              "icon": "inv_hammer_07"
             },
             {
               "name": "The Skyblade",
@@ -5525,7 +5676,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 27,
               "reqLevel": 22,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_sword_20"
             }
           ],
           "faction": "alliance",
@@ -5538,7 +5690,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "25–28",
           "itemId": 271766,
           "name": "Heavehammer",
-          "icon": "inv_hammer_15",
+          "icon": "inv_hammer_09",
           "weaponType": "Two-handed mace",
           "speed": "3.30",
           "dps": "27.7 DPS",
@@ -5567,7 +5719,8 @@ if (typeof window !== 'undefined') {
                 "+12 Stamina",
                 "+12 Spirit"
               ],
-              "reqLevel": 24
+              "reqLevel": 24,
+              "icon": "inv_sword_04"
             },
             {
               "name": "Dendweller's Hammer",
@@ -5589,7 +5742,8 @@ if (typeof window !== 'undefined') {
                 "+100 Armor",
                 "Requires Level 26"
               ],
-              "reqLevel": 26
+              "reqLevel": 26,
+              "icon": "inv_hammer_09"
             },
             {
               "name": "Hardened Iron Shortsword",
@@ -5602,7 +5756,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 32,
               "reqLevel": 27,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_sword_20"
             },
             {
               "name": "Defender of Dalaran",
@@ -5624,7 +5779,8 @@ if (typeof window !== 'undefined') {
                 "+13 Stamina",
                 "+9 Intellect"
               ],
-              "reqLevel": 24
+              "reqLevel": 24,
+              "icon": "inv_hammer_04"
             }
           ],
           "faction": "both",
@@ -5645,7 +5801,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "29–30",
           "itemId": 267369,
           "name": "Wolfsbane",
-          "icon": "inv_sword_26",
+          "icon": "inv_sword_25",
           "weaponType": "Two-handed sword",
           "speed": "3.40",
           "dps": "25.6 DPS",
@@ -5675,7 +5831,8 @@ if (typeof window !== 'undefined') {
                 "+13 Stamina",
                 "+9 Intellect"
               ],
-              "reqLevel": 24
+              "reqLevel": 24,
+              "icon": "inv_hammer_04"
             },
             {
               "name": "Dark Hearted Hammer",
@@ -5696,7 +5853,8 @@ if (typeof window !== 'undefined') {
                 "+12 Strength",
                 "+8 Stamina"
               ],
-              "reqLevel": 30
+              "reqLevel": 30,
+              "icon": "inv_hammer_16"
             },
             {
               "name": "Master Hunter's Spellsword",
@@ -5717,7 +5875,8 @@ if (typeof window !== 'undefined') {
                 "+12 Strength",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 14."
               ],
-              "reqLevel": 28
+              "reqLevel": 28,
+              "icon": "inv_sword_42"
             },
             {
               "name": "Rage of the Storm",
@@ -5739,7 +5898,8 @@ if (typeof window !== 'undefined') {
                 "+15 Stamina",
                 "Equip: Increases the damage dealt by your Stormstrike ability by 10%."
               ],
-              "reqLevel": 30
+              "reqLevel": 30,
+              "icon": "inv_mace_42"
             }
           ],
           "faction": "alliance",
@@ -5762,7 +5922,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "31–35",
           "itemId": 9449,
           "name": "Manual Crowd Pummeler",
-          "icon": "inv_hammer_16",
+          "icon": "inv_mace_14",
           "weaponType": "Two-handed mace",
           "speed": "2.00",
           "dps": "31.5 DPS",
@@ -5772,6 +5932,25 @@ if (typeof window !== 'undefined') {
             "detail": "Gnomeregan (+50% attack speed on-use for 30 sec)"
           },
           "alts": [
+            {
+              "name": "Bonebiter",
+              "itemId": 6830,
+              "value": "38.8 DPS, 3.40s (105–159 dmg) - In the Name of the Light quest (+10 Str, +10 Sta, +5 Agi) (Alliance)",
+              "faction": "alliance",
+              "dps": "38.8 DPS",
+              "speed": "3.40",
+              "weaponType": "Two-handed axe",
+              "quality": "q3",
+              "iLvl": 44,
+              "reqLevel": 34,
+              "stats": "+10 Strength, +10 Stamina, +5 Agility",
+              "icon": "inv_axe_04",
+              "source": {
+                "kind": "quest",
+                "title": "In the Name of the Light",
+                "detail": "Scarlet Monastery dungeon quest reward for Alliance. Highest physical top-end weapon until Maraudon."
+              }
+            },
             {
               "name": "Moonsteel Broadsword",
               "itemId": 3853,
@@ -5783,7 +5962,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 36,
               "reqLevel": 31,
-              "stats": "+4 Strength, +12 Spell Power"
+              "stats": "+4 Strength, +12 Spell Power",
+              "icon": "inv_sword_25"
             },
             {
               "name": "Silver Spade",
@@ -5804,7 +5984,8 @@ if (typeof window !== 'undefined') {
                 "+4 Stamina",
                 "+15 Spirit"
               ],
-              "reqLevel": 30
+              "reqLevel": 30,
+              "icon": "inv_misc_shovel_02"
             }
           ],
           "faction": "both",
@@ -5829,7 +6010,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "36–40",
           "itemId": 7726,
           "name": "Mograine's Might",
-          "icon": "inv_hammer_08",
+          "icon": "inv_shield_05",
           "weaponType": "Two-handed mace",
           "speed": "3.50",
           "dps": "38.9 DPS",
@@ -5850,7 +6031,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 44,
               "reqLevel": 34,
-              "stats": "+9 Sta, +15 Spi"
+              "stats": "+9 Sta, +15 Spi",
+              "icon": "inv_misc_questionmark"
             },
             {
               "name": "Archeus",
@@ -5863,7 +6045,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 35,
               "reqLevel": 28,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_sword_08"
             }
           ],
           "faction": "both",
@@ -5876,7 +6059,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "41–45",
           "itemId": 9413,
           "name": "Stoneslayer",
-          "icon": "inv_sword_04",
+          "icon": "inv_misc_questionmark",
           "weaponType": "Two-handed sword",
           "speed": "3.90",
           "dps": "40.5 DPS",
@@ -5897,7 +6080,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 41,
               "reqLevel": 36,
-              "stats": "+20 Strength, +8 Stamina"
+              "stats": "+20 Strength, +8 Stamina",
+              "icon": "inv_sword_01"
             },
             {
               "name": "Grisly Sack of Skulls",
@@ -5908,7 +6092,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 46,
               "reqLevel": 40,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_pick_01"
             },
             {
               "name": "Gul'gash's Greathammer",
@@ -5921,7 +6106,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 49,
               "reqLevel": 44,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_hammer_16"
             }
           ],
           "faction": "both",
@@ -5934,7 +6120,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "46–50",
           "itemId": 17780,
           "name": "Princess Theradras' Scepter",
-          "icon": "inv_hammer_04",
+          "icon": "inv_misc_questionmark",
           "weaponType": "Two-handed mace",
           "speed": "3.40",
           "dps": "47.1 DPS",
@@ -5953,7 +6139,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 51,
               "reqLevel": 45,
-              "stats": "+12 Str, +12 Sta"
+              "stats": "+12 Str, +12 Sta",
+              "icon": "inv_sword_33"
             },
             {
               "name": "Warmonger",
@@ -5966,7 +6153,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 52,
               "reqLevel": 47,
-              "stats": "+3% Hit"
+              "stats": "+3% Hit",
+              "icon": "inv_sword_46"
             }
           ],
           "faction": "both",
@@ -5979,7 +6167,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "51–55",
           "itemId": 11608,
           "name": "Dark Iron Pulverizer",
-          "icon": "inv_hammer_16",
+          "icon": "inv_hammer_09",
           "weaponType": "Two-handed mace",
           "speed": "3.70",
           "dps": "47.4 DPS",
@@ -5999,7 +6187,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 56,
               "reqLevel": 50,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_misc_questionmark"
             },
             {
               "name": "Enchanted Battlehammer",
@@ -6012,7 +6201,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 56,
               "reqLevel": 51,
-              "stats": "+4 Arcane Resistance, +21 Parry Rating, +20 Hit Rating"
+              "stats": "+4 Arcane Resistance, +21 Parry Rating, +20 Hit Rating",
+              "icon": "inv_hammer_05"
             }
           ],
           "faction": "both",
@@ -6025,7 +6215,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "56–60",
           "itemId": 18717,
           "name": "Hammer of the Grand Crusader",
-          "icon": "inv_hammer_04",
+          "icon": "inv_misc_questionmark",
           "weaponType": "Two-handed mace",
           "speed": "3.10",
           "dps": "53.9 DPS",
@@ -6045,7 +6235,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 61,
               "reqLevel": 55,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_misc_questionmark"
             },
             {
               "name": "The Unstoppable Force",
@@ -6058,7 +6249,8 @@ if (typeof window !== 'undefined') {
               "quality": "q4",
               "iLvl": 60,
               "reqLevel": 55,
-              "stats": "+18 Strength, +17 Stamina, +28 Critical Strike Rating"
+              "stats": "+18 Strength, +17 Stamina, +28 Critical Strike Rating",
+              "icon": "inv_misc_questionmark"
             },
             {
               "name": "Dreadforge Retaliator",
@@ -6069,7 +6261,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 61,
               "reqLevel": 55,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_misc_questionmark"
             }
           ],
           "faction": "both",
@@ -6093,7 +6286,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "1–2",
           "itemId": 2505,
           "name": "Polished Shortbow",
-          "icon": "inv_weapon_bow_08",
+          "icon": "inv_weapon_bow_02",
           "weaponType": "Bow",
           "speed": "1.80",
           "dps": "1.8 DPS",
@@ -6114,7 +6307,8 @@ if (typeof window !== 'undefined') {
               "quality": "q1",
               "iLvl": 8,
               "reqLevel": 3,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_weapon_bow_11"
             }
           ],
           "faction": "both",
@@ -6127,7 +6321,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "3–4",
           "itemId": 2506,
           "name": "Hornwood Recurve Bow",
-          "icon": "inv_weapon_bow_08",
+          "icon": "inv_weapon_bow_11",
           "weaponType": "Bow",
           "speed": "2.00",
           "dps": "2.4 DPS",
@@ -6148,7 +6342,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 10,
               "reqLevel": 5,
-              "stats": "+1 Stamina"
+              "stats": "+1 Stamina",
+              "icon": "inv_weapon_rifle_03"
             },
             {
               "name": "Kolkar Bow",
@@ -6161,7 +6356,8 @@ if (typeof window !== 'undefined') {
               "quality": "q1",
               "iLvl": 8,
               "reqLevel": 4,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_weapon_bow_12"
             }
           ],
           "faction": "both",
@@ -6174,7 +6370,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "5–6",
           "itemId": 4362,
           "name": "Rough Boomstick",
-          "icon": "inv_weapon_rifle_01",
+          "icon": "inv_weapon_rifle_03",
           "weaponType": "Gun",
           "speed": "2.30",
           "dps": "4.1 DPS",
@@ -6195,7 +6391,8 @@ if (typeof window !== 'undefined') {
               "quality": "q1",
               "iLvl": 8,
               "reqLevel": 3,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_weapon_bow_11"
             },
             {
               "name": "Kolkar Bow",
@@ -6208,7 +6405,8 @@ if (typeof window !== 'undefined') {
               "quality": "q1",
               "iLvl": 8,
               "reqLevel": 4,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_weapon_bow_12"
             }
           ],
           "faction": "both",
@@ -6221,7 +6419,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "7–8",
           "itemId": 276685,
           "name": "Militia Bow",
-          "icon": "inv_weapon_bow_03",
+          "icon": "inv_weapon_bow_02",
           "weaponType": "Bow",
           "speed": "2.10",
           "dps": "5.7 DPS",
@@ -6242,7 +6440,8 @@ if (typeof window !== 'undefined') {
               "quality": "q1",
               "iLvl": 16,
               "reqLevel": 11,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_weapon_bow_01"
             },
             {
               "name": "Skorn's Rifle",
@@ -6255,7 +6454,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 12,
               "reqLevel": 6,
-              "stats": "+1 Agility"
+              "stats": "+1 Agility",
+              "icon": "inv_weapon_rifle_01"
             }
           ],
           "faction": "alliance",
@@ -6268,7 +6468,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "9–10",
           "itemId": 3026,
           "name": "Heavy Recurve Bow",
-          "icon": "inv_weapon_bow_07",
+          "icon": "inv_weapon_bow_02",
           "weaponType": "Bow",
           "speed": "2.20",
           "dps": "6.7 DPS",
@@ -6289,7 +6489,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 16,
               "reqLevel": 11,
-              "stats": "+1 Agility"
+              "stats": "+1 Agility",
+              "icon": "inv_weapon_bow_07"
             },
             {
               "name": "Rough Boomstick",
@@ -6302,7 +6503,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 10,
               "reqLevel": 5,
-              "stats": "+1 Stamina"
+              "stats": "+1 Stamina",
+              "icon": "inv_weapon_rifle_03"
             },
             {
               "name": "Orcish Battle Bow",
@@ -6315,7 +6517,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 14,
               "reqLevel": 9,
-              "stats": "+1 Strength"
+              "stats": "+1 Strength",
+              "icon": "inv_weapon_bow_08"
             },
             {
               "name": "Snarlsnout Shooter",
@@ -6328,7 +6531,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 12,
               "reqLevel": 7,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_weapon_rifle_05"
             }
           ],
           "faction": "both",
@@ -6341,7 +6545,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "11–12",
           "itemId": 3027,
           "name": "Laminated Recurve Bow",
-          "icon": "inv_weapon_bow_07",
+          "icon": "inv_weapon_bow_01",
           "weaponType": "Bow",
           "speed": "2.30",
           "dps": "7.8 DPS",
@@ -6362,7 +6566,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 13,
               "reqLevel": 7,
-              "stats": "+6 Spell Power"
+              "stats": "+6 Spell Power",
+              "icon": "inv_staff_16"
             },
             {
               "name": "Deadly Blunderbuss",
@@ -6375,7 +6580,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 21,
               "reqLevel": 16,
-              "stats": "+2 Agility"
+              "stats": "+2 Agility",
+              "icon": "inv_weapon_rifle_07"
             },
             {
               "name": "Orcish Battle Bow",
@@ -6388,7 +6594,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 14,
               "reqLevel": 9,
-              "stats": "+1 Strength"
+              "stats": "+1 Strength",
+              "icon": "inv_weapon_bow_08"
             },
             {
               "name": "Bristlebark Bow",
@@ -6401,7 +6608,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 12,
               "reqLevel": 7,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_weapon_bow_03"
             }
           ],
           "faction": "both",
@@ -6414,7 +6622,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "13–14",
           "itemId": 279894,
           "name": "Calibrated Blunderbuss",
-          "icon": "inv_weapon_rifle_03",
+          "icon": "inv_weapon_rifle_01",
           "weaponType": "Gun",
           "speed": "2.40",
           "dps": "9.6 DPS",
@@ -6435,7 +6643,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 21,
               "reqLevel": 16,
-              "stats": "+2 Agility"
+              "stats": "+2 Agility",
+              "icon": "inv_weapon_rifle_07"
             },
             {
               "name": "Laminated Recurve Bow",
@@ -6448,7 +6657,8 @@ if (typeof window !== 'undefined') {
               "quality": "q1",
               "iLvl": 25,
               "reqLevel": 20,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_weapon_bow_01"
             },
             {
               "name": "Barbaric Crossbow",
@@ -6461,7 +6671,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 13,
-              "stats": "+2 Agi"
+              "stats": "+2 Agi",
+              "icon": "inv_weapon_crossbow_02"
             }
           ],
           "faction": "alliance",
@@ -6474,7 +6685,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "15–18",
           "itemId": 6469,
           "name": "Venomstrike",
-          "icon": "inv_weapon_bow_04",
+          "icon": "inv_weapon_bow_10",
           "weaponType": "Bow",
           "speed": "2.40",
           "dps": "12.1 DPS",
@@ -6495,7 +6706,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 24,
               "reqLevel": 19,
-              "stats": "+3 Spirit"
+              "stats": "+3 Spirit",
+              "icon": "inv_weapon_rifle_07"
             },
             {
               "name": "Deadly Blunderbuss",
@@ -6508,7 +6720,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 21,
               "reqLevel": 16,
-              "stats": "+2 Agility"
+              "stats": "+2 Agility",
+              "icon": "inv_weapon_rifle_07"
             },
             {
               "name": "Barbaric Crossbow",
@@ -6521,7 +6734,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 13,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_weapon_crossbow_02"
             }
           ],
           "faction": "both",
@@ -6534,7 +6748,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "19–20",
           "itemId": 6469,
           "name": "Venomstrike",
-          "icon": "inv_weapon_bow_04",
+          "icon": "inv_weapon_bow_10",
           "weaponType": "Bow",
           "speed": "2.40",
           "dps": "12.1 DPS",
@@ -6555,7 +6769,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 26,
               "reqLevel": 21,
-              "stats": "+3 Stamina"
+              "stats": "+3 Stamina",
+              "icon": "inv_weapon_rifle_07"
             },
             {
               "name": "Reinforced Bow",
@@ -6568,7 +6783,46 @@ if (typeof window !== 'undefined') {
               "quality": "q1",
               "iLvl": 16,
               "reqLevel": 11,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_weapon_bow_01"
+            },
+            {
+              "name": "Wingblade",
+              "itemId": 6504,
+              "value": "15.7 DPS, 2.20s - Leaders of the Fang quest in Wailing Caverns (+5 Agi, +2 Sta) (Horde)",
+              "faction": "horde",
+              "dps": "15.7 DPS",
+              "speed": "2.20",
+              "weaponType": "One-handed sword",
+              "quality": "q3",
+              "iLvl": 24,
+              "reqLevel": 10,
+              "stats": "+5 Agility, +2 Stamina",
+              "icon": "inv_sword_16",
+              "source": {
+                "kind": "quest",
+                "title": "Leaders of the Fang",
+                "detail": "Dungeon quest reward in Wailing Caverns (Horde). Outstanding fast/balanced sword."
+              }
+            },
+            {
+              "name": "Crescent Staff",
+              "itemId": 6505,
+              "value": "+26 Spell Power, +7 Agi, +7 Sta - Leaders of the Fang quest in Wailing Caverns (Horde)",
+              "faction": "horde",
+              "dps": "15.2 DPS",
+              "speed": "2.90",
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 24,
+              "reqLevel": 10,
+              "stats": "+26 Spell Power, +7 Agility, +7 Stamina",
+              "icon": "inv_staff_04",
+              "source": {
+                "kind": "quest",
+                "title": "Leaders of the Fang",
+                "detail": "Major dungeon quest reward in Wailing Caverns (Horde). Elite spell power boost."
+              }
             }
           ],
           "faction": "both",
@@ -6581,7 +6835,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "21–22",
           "itemId": 3078,
           "name": "Naga Heartpiercer",
-          "icon": "inv_weapon_bow_03",
+          "icon": "inv_weapon_bow_04",
           "weaponType": "Bow",
           "speed": "2.40",
           "dps": "13.3 DPS",
@@ -6602,7 +6856,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 29,
               "reqLevel": 24,
-              "stats": "+3 Hit"
+              "stats": "+3 Hit",
+              "icon": "inv_weapon_rifle_06"
             },
             {
               "name": "Fallenroot Longbow",
@@ -6624,7 +6879,8 @@ if (typeof window !== 'undefined') {
                 "+4 Stamina",
                 "Requires Level 23"
               ],
-              "reqLevel": 23
+              "reqLevel": 23,
+              "icon": "inv_weapon_bow_03"
             },
             {
               "name": "Alliance Outrunner Bow",
@@ -6637,7 +6893,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 27,
               "reqLevel": 22,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_weapon_bow_05"
             }
           ],
           "faction": "both",
@@ -6650,7 +6907,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "23–24",
           "itemId": 273843,
           "name": "Fallenroot Longbow",
-          "icon": "inv_weapon_bow_05",
+          "icon": "inv_weapon_bow_03",
           "weaponType": "Bow",
           "speed": "2.20",
           "dps": "13.9 DPS",
@@ -6670,7 +6927,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 28,
               "reqLevel": 22,
-              "stats": ""
+              "stats": "",
+              "icon": "spell_nature_polymorph"
             },
             {
               "name": "Concealed Hand Crossbow",
@@ -6683,7 +6941,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 31,
               "reqLevel": 26,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_weapon_crossbow_02"
             }
           ],
           "faction": "both",
@@ -6705,7 +6964,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "25–26",
           "itemId": 273033,
           "name": "Gravespike Repeater",
-          "icon": "inv_weapon_crossbow_01",
+          "icon": "inv_weapon_crossbow_06",
           "weaponType": "Crossbow",
           "speed": "2.30",
           "dps": "15.4 DPS",
@@ -6726,7 +6985,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 31,
               "reqLevel": 26,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_weapon_crossbow_02"
             },
             {
               "name": "Fallenroot Longbow",
@@ -6748,7 +7008,8 @@ if (typeof window !== 'undefined') {
                 "+4 Stamina",
                 "Requires Level 23"
               ],
-              "reqLevel": 23
+              "reqLevel": 23,
+              "icon": "inv_weapon_bow_03"
             },
             {
               "name": "Dun Garok Rifle",
@@ -6761,7 +7022,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 30,
               "reqLevel": 25,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_weapon_rifle_03"
             }
           ],
           "faction": "both",
@@ -6784,7 +7046,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "27–28",
           "itemId": 273029,
           "name": "Golemsight Long Gun",
-          "icon": "inv_weapon_rifle_07",
+          "icon": "inv_musket_02",
           "weaponType": "Gun",
           "speed": "2.50",
           "dps": "16.6 DPS",
@@ -6815,7 +7077,8 @@ if (typeof window !== 'undefined') {
                 "Equip: +9 Attack Power Vs Humanoids",
                 "Sell Price: 45s 74c"
               ],
-              "reqLevel": 26
+              "reqLevel": 26,
+              "icon": "inv_weapon_crossbow_06"
             },
             {
               "name": "Glass Shooter",
@@ -6836,7 +7099,8 @@ if (typeof window !== 'undefined') {
                 "Equip: +12 Attack Power.",
                 "Requires Level 30"
               ],
-              "reqLevel": 30
+              "reqLevel": 30,
+              "icon": "inv_weapon_rifle_02"
             }
           ],
           "faction": "both",
@@ -6885,7 +7149,8 @@ if (typeof window !== 'undefined') {
                 "(19.4 damage per second)",
                 "+6 Agility"
               ],
-              "reqLevel": 28
+              "reqLevel": 28,
+              "icon": "inv_weapon_bow_11"
             },
             {
               "name": "Quilboar Blaster",
@@ -6906,7 +7171,8 @@ if (typeof window !== 'undefined') {
                 "+4 Agility",
                 "+4 Spirit"
               ],
-              "reqLevel": 29
+              "reqLevel": 29,
+              "icon": "inv_weapon_rifle_05"
             },
             {
               "name": "Booty Bay Bruiser's Buckshot",
@@ -6929,7 +7195,8 @@ if (typeof window !== 'undefined') {
                 "Requires Level 30",
                 "Requires Booty Bay - Honored"
               ],
-              "reqLevel": 30
+              "reqLevel": 30,
+              "icon": "inv_weapon_rifle_02"
             },
             {
               "name": "Glass Shooter",
@@ -6950,7 +7217,8 @@ if (typeof window !== 'undefined') {
                 "Equip: +12 Attack Power.",
                 "Requires Level 30"
               ],
-              "reqLevel": 30
+              "reqLevel": 30,
+              "icon": "inv_weapon_rifle_02"
             }
           ],
           "faction": "both",
@@ -6971,7 +7239,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "31–34",
           "itemId": 274293,
           "name": "Spellsever Crossbow",
-          "icon": "inv_weapon_crossbow_02",
+          "icon": "inv_weapon_crossbow_07",
           "weaponType": "Crossbow",
           "speed": "2.40",
           "dps": "20.8 DPS",
@@ -7000,7 +7268,8 @@ if (typeof window !== 'undefined') {
                 "+4 Strength",
                 "+4 Agility"
               ],
-              "reqLevel": 28
+              "reqLevel": 28,
+              "icon": "inv_weapon_rifle_05"
             },
             {
               "name": "Crystalpine Stinger",
@@ -7022,7 +7291,8 @@ if (typeof window !== 'undefined') {
                 "+4 Intellect",
                 "Requires Level 27"
               ],
-              "reqLevel": 27
+              "reqLevel": 27,
+              "icon": "inv_weapon_crossbow_04"
             },
             {
               "name": "Mithril Blunderbuss",
@@ -7033,7 +7303,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 36,
               "reqLevel": 30,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_weapon_rifle_07"
             }
           ],
           "faction": "both",
@@ -7075,7 +7346,8 @@ if (typeof window !== 'undefined') {
                 "+6 Stamina",
                 "Requires Level 28"
               ],
-              "reqLevel": 28
+              "reqLevel": 28,
+              "icon": "inv_weapon_rifle_06"
             },
             {
               "name": "Blasting Hackbut",
@@ -7094,7 +7366,8 @@ if (typeof window !== 'undefined') {
                 "+3 Agility",
                 "+4 Stamina"
               ],
-              "reqLevel": 34
+              "reqLevel": 34,
+              "icon": "inv_weapon_rifle_04"
             },
             {
               "name": "Mithril Blunderbuss",
@@ -7105,7 +7378,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 40,
               "reqLevel": 34,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_weapon_rifle_07"
             },
             {
               "name": "Siegebreaker's Blaster",
@@ -7118,7 +7392,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 42,
               "reqLevel": 37,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_weapon_rifle_04"
             }
           ],
           "faction": "both",
@@ -7139,7 +7414,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "39–42",
           "itemId": 10510,
           "name": "Mithril Heavy-bore Rifle",
-          "icon": "inv_weapon_rifle_03",
+          "icon": "inv_weapon_rifle_07",
           "weaponType": "Gun",
           "speed": "2.90",
           "dps": "23.4 DPS",
@@ -7166,7 +7441,8 @@ if (typeof window !== 'undefined') {
                 "+4 Agility",
                 "+3 Intellect"
               ],
-              "reqLevel": 38
+              "reqLevel": 38,
+              "icon": "inv_weapon_rifle_02"
             },
             {
               "name": "Ironweaver",
@@ -7188,7 +7464,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increased Defense +3.",
                 "Requires Level 29"
               ],
-              "reqLevel": 29
+              "reqLevel": 29,
+              "icon": "inv_weapon_rifle_08"
             },
             {
               "name": "Truthseeker's Bow",
@@ -7201,7 +7478,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 45,
               "reqLevel": 40,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_weapon_bow_01"
             }
           ],
           "faction": "both",
@@ -7214,7 +7492,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "43–46",
           "itemId": 277254,
           "name": "Truthseeker's Bow",
-          "icon": "inv_weapon_bow_08",
+          "icon": "inv_weapon_bow_01",
           "weaponType": "Bow",
           "speed": "2.50",
           "dps": "23.8 DPS",
@@ -7234,7 +7512,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 48,
               "reqLevel": 42,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_misc_questionmark"
             },
             {
               "name": "Riphook",
@@ -7247,7 +7526,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 40,
               "reqLevel": 35,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_weapon_crossbow_04"
             }
           ],
           "faction": "both",
@@ -7260,7 +7540,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "47–52",
           "itemId": 17717,
           "name": "Megashot Rifle",
-          "icon": "inv_weapon_rifle_08",
+          "icon": "inv_weapon_rifle_05",
           "weaponType": "Gun",
           "speed": "2.90",
           "dps": "27.4 DPS",
@@ -7280,7 +7560,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 52,
               "reqLevel": 46,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_weapon_rifle_07"
             },
             {
               "name": "Dark Iron Rifle",
@@ -7293,7 +7574,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 55,
               "reqLevel": 50,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_weapon_rifle_08"
             }
           ],
           "faction": "both",
@@ -7306,7 +7588,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "53–60",
           "itemId": 12651,
           "name": "Blackcrow",
-          "icon": "inv_weapon_crossbow_02",
+          "icon": "inv_weapon_crossbow_04",
           "weaponType": "Crossbow",
           "speed": "3.20",
           "dps": "30.3 DPS",
@@ -7326,7 +7608,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 58,
               "reqLevel": 52,
-              "stats": "+11 Agi"
+              "stats": "+11 Agi",
+              "icon": "inv_misc_questionmark"
             },
             {
               "name": "Flawless Arcanite Rifle",
@@ -7339,7 +7622,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 61,
               "reqLevel": 56,
-              "stats": "+9 Stamina"
+              "stats": "+9 Stamina",
+              "icon": "inv_weapon_rifle_03"
             },
             {
               "name": "Core Marksman Rifle",
@@ -7352,7 +7636,8 @@ if (typeof window !== 'undefined') {
               "quality": "q4",
               "iLvl": 65,
               "reqLevel": 60,
-              "stats": "+10 Hit Rating"
+              "stats": "+10 Hit Rating",
+              "icon": "inv_weapon_rifle_05"
             },
             {
               "name": "Reaver's Repeater",
@@ -7365,7 +7650,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 58,
               "reqLevel": 53,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_weapon_rifle_07"
             }
           ],
           "faction": "both",
@@ -7410,7 +7696,8 @@ if (typeof window !== 'undefined') {
               "quality": "q1",
               "iLvl": 8,
               "reqLevel": 3,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_weapon_shortblade_05"
             },
             {
               "name": "Worn Shortsword",
@@ -7421,7 +7708,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 6,
               "reqLevel": 1,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_sword_04"
             }
           ],
           "faction": "both",
@@ -7455,7 +7743,8 @@ if (typeof window !== 'undefined') {
               "quality": "q1",
               "iLvl": 8,
               "reqLevel": 3,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_weapon_shortblade_05"
             },
             {
               "name": "Copper Shortsword",
@@ -7468,7 +7757,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 10,
               "reqLevel": 4,
-              "stats": "+1 Strength"
+              "stats": "+1 Strength",
+              "icon": "inv_sword_26"
             },
             {
               "name": "Forsaken Shortsword",
@@ -7480,7 +7770,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 8,
               "reqLevel": 2,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_sword_04"
             }
           ],
           "faction": "both",
@@ -7493,7 +7784,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "5–6",
           "itemId": 7166,
           "name": "Copper Dagger",
-          "icon": "inv_weapon_shortblade_01",
+          "icon": "inv_weapon_shortblade_14",
           "weaponType": "Dagger",
           "speed": "1.60",
           "dps": "5.9 DPS",
@@ -7514,7 +7805,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 10,
               "reqLevel": 4,
-              "stats": "+1 Strength"
+              "stats": "+1 Strength",
+              "icon": "inv_sword_26"
             },
             {
               "name": "Stiletto",
@@ -7527,7 +7819,8 @@ if (typeof window !== 'undefined') {
               "quality": "q1",
               "iLvl": 8,
               "reqLevel": 3,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_throwingaxe_03"
             },
             {
               "name": "Forsaken Shortsword",
@@ -7538,7 +7831,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 10,
               "reqLevel": 4,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_sword_04"
             }
           ],
           "faction": "both",
@@ -7551,7 +7845,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "7–8",
           "itemId": 248007,
           "name": "Militia Shortblade",
-          "icon": "inv_sword_04",
+          "icon": "inv_weapon_shortblade_15",
           "weaponType": "One-handed sword",
           "speed": "1.80",
           "dps": "6.5 DPS",
@@ -7570,7 +7864,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 12,
               "reqLevel": 6,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_chest_plate09"
             },
             {
               "name": "Stiletto",
@@ -7583,7 +7878,8 @@ if (typeof window !== 'undefined') {
               "quality": "q1",
               "iLvl": 8,
               "reqLevel": 3,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_throwingaxe_03"
             },
             {
               "name": "Pristine Orcish Dagger",
@@ -7596,7 +7892,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 12,
               "reqLevel": 10,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_weapon_shortblade_14"
             }
           ],
           "faction": "alliance",
@@ -7609,7 +7906,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "9–10",
           "itemId": 7298,
           "name": "Blade of Cunning",
-          "icon": "inv_weapon_shortblade_04",
+          "icon": "inv_weapon_shortblade_26",
           "weaponType": "Dagger",
           "speed": "1.60",
           "dps": "6.8 DPS",
@@ -7630,7 +7927,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 22,
               "reqLevel": 17,
-              "stats": "+4 Agility"
+              "stats": "+4 Agility",
+              "icon": "inv_wand_06"
             },
             {
               "name": "Cutlass",
@@ -7643,7 +7941,8 @@ if (typeof window !== 'undefined') {
               "quality": "q1",
               "iLvl": 15,
               "reqLevel": 10,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_mace_11"
             },
             {
               "name": "Pristine Orcish Dagger",
@@ -7656,7 +7955,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 12,
               "reqLevel": 10,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_weapon_shortblade_14"
             }
           ],
           "faction": "both",
@@ -7669,7 +7969,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "11–12",
           "itemId": 2209,
           "name": "Jambiya",
-          "icon": "inv_weapon_shortblade_01",
+          "icon": "inv_sword_32",
           "weaponType": "Dagger",
           "speed": "1.60",
           "dps": "8.4 DPS",
@@ -7690,7 +7990,8 @@ if (typeof window !== 'undefined') {
               "quality": "q1",
               "iLvl": 15,
               "reqLevel": 10,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_mace_11"
             },
             {
               "name": "Trogg Scepter",
@@ -7712,7 +8013,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases healing done by up to 33 and damage done by up to 11 for all magical spells and effects.",
                 "Requires Level 13"
               ],
-              "reqLevel": 13
+              "reqLevel": 13,
+              "icon": "inv_misc_bone_10"
             },
             {
               "name": "Deathstalker Shortsword",
@@ -7724,7 +8026,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 16,
               "reqLevel": 10,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_sword_15"
             }
           ],
           "faction": "both",
@@ -7737,7 +8040,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "13–14",
           "itemId": 270226,
           "name": "Fang of Magmatus",
-          "icon": "inv_weapon_shortblade_05",
+          "icon": "inv_misc_food_24",
           "weaponType": "Main Hand Dagger",
           "speed": "1.60",
           "dps": "11.8 DPS",
@@ -7758,7 +8061,8 @@ if (typeof window !== 'undefined') {
               "quality": "q1",
               "iLvl": 19,
               "reqLevel": 14,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_sword_12"
             },
             {
               "name": "Kris of Orgrimmar",
@@ -7771,7 +8075,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 9,
-              "stats": "+4 Sta, +33 Healing, +11 Spell Damage"
+              "stats": "+4 Sta, +33 Healing, +11 Spell Damage",
+              "icon": "inv_weapon_shortblade_05"
             },
             {
               "name": "Fang of Magmatus",
@@ -7784,7 +8089,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 13,
-              "stats": "+2 Agi"
+              "stats": "+2 Agi",
+              "icon": "inv_misc_bone_06"
             },
             {
               "name": "Bone Knuckles",
@@ -7797,7 +8103,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 13,
-              "stats": ""
+              "stats": "",
+              "icon": "ability_whirlwind"
             },
             {
               "name": "Searing Dagger",
@@ -7810,7 +8117,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 13,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_weapon_shortblade_03"
             }
           ],
           "faction": "both",
@@ -7823,7 +8131,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "15–16",
           "itemId": 271101,
           "name": "Meathook Slicer",
-          "icon": "inv_weapon_shortblade_06",
+          "icon": "inv_misc_questionmark",
           "weaponType": "Dagger",
           "speed": "1.50",
           "dps": "13.2 DPS",
@@ -7844,7 +8152,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 21,
               "reqLevel": 16,
-              "stats": "+3 Strength, +3 Agility"
+              "stats": "+3 Strength, +3 Agility",
+              "icon": "inv_weapon_shortblade_10"
             },
             {
               "name": "Big Bronze Knife",
@@ -7857,7 +8166,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 20,
               "reqLevel": 15,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_weapon_shortblade_04"
             },
             {
               "name": "Kris of Orgrimmar",
@@ -7870,7 +8180,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 9,
-              "stats": "+4 Sta, +33 Healing, +11 Spell Damage"
+              "stats": "+4 Sta, +33 Healing, +11 Spell Damage",
+              "icon": "inv_weapon_shortblade_05"
             },
             {
               "name": "Plaguefang",
@@ -7883,7 +8194,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 24,
               "reqLevel": 16,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_weapon_shortblade_54"
             }
           ],
           "faction": "both",
@@ -7896,7 +8208,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "17–18",
           "itemId": 271106,
           "name": "Vileblood Scimitar",
-          "icon": "inv_sword_21",
+          "icon": "inv_misc_questionmark",
           "weaponType": "One-handed sword",
           "speed": "2.20",
           "dps": "15.0 DPS",
@@ -7917,7 +8229,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 24,
               "reqLevel": 19,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_sword_24"
             },
             {
               "name": "Pearl-handled Dagger",
@@ -7930,7 +8243,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 23,
               "reqLevel": 18,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_weapon_shortblade_05"
             },
             {
               "name": "Whipfang's Skinsearer",
@@ -7943,7 +8257,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 24,
               "reqLevel": 19,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_weapon_shortblade_24"
             }
           ],
           "faction": "both",
@@ -7956,7 +8271,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "19–20",
           "itemId": 279892,
           "name": "Plaguefang",
-          "icon": "inv_sword_24",
+          "icon": "inv_misc_cape_05",
           "weaponType": "One-handed sword",
           "speed": "1.60",
           "dps": "16.2 DPS",
@@ -7977,7 +8292,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 24,
               "reqLevel": 19,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_sword_24"
             },
             {
               "name": "Wingblade",
@@ -7990,7 +8306,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 24,
               "reqLevel": 10,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_sword_16"
             }
           ],
           "faction": "both",
@@ -8003,7 +8320,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "21–22",
           "itemId": 3490,
           "name": "Deadly Bronze Poniard",
-          "icon": "inv_weapon_shortblade_12",
+          "icon": "inv_weapon_shortblade_05",
           "weaponType": "Dagger",
           "speed": "1.60",
           "dps": "12.8 DPS",
@@ -8032,7 +8349,8 @@ if (typeof window !== 'undefined') {
                 "+7 Agility",
                 "+2 Stamina"
               ],
-              "reqLevel": 24
+              "reqLevel": 24,
+              "icon": "inv_weapon_shortblade_01"
             },
             {
               "name": "Bronze Shortsword",
@@ -8045,7 +8363,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 24,
               "reqLevel": 19,
-              "stats": "+3 Agility"
+              "stats": "+3 Agility",
+              "icon": "inv_sword_04"
             },
             {
               "name": "Blade of Silverlaine",
@@ -8058,7 +8377,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 26,
               "reqLevel": 21,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_sword_05"
             },
             {
               "name": "Alliance Outrunner's Sword",
@@ -8071,7 +8391,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 27,
               "reqLevel": 22,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_sword_20"
             }
           ],
           "faction": "both",
@@ -8084,7 +8405,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "23–24",
           "itemId": 6220,
           "name": "Meteor Shard",
-          "icon": "inv_weapon_shortblade_02",
+          "icon": "inv_weapon_shortblade_25",
           "weaponType": "Dagger",
           "speed": "1.80",
           "dps": "17.8 DPS",
@@ -8113,7 +8434,8 @@ if (typeof window !== 'undefined') {
                 "+7 Agility",
                 "+2 Stamina"
               ],
-              "reqLevel": 24
+              "reqLevel": 24,
+              "icon": "inv_weapon_shortblade_01"
             },
             {
               "name": "Odo's Claw",
@@ -8126,7 +8448,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 26,
               "reqLevel": 21,
-              "stats": "+2 Strength, +3 Stamina"
+              "stats": "+2 Strength, +3 Stamina",
+              "icon": "inv_mace_02"
             },
             {
               "name": "Iridescent Hammer",
@@ -8139,7 +8462,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 28,
               "reqLevel": 23,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_hammer_05"
             },
             {
               "name": "Serrated Raptor Claw",
@@ -8152,7 +8476,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 33,
               "reqLevel": 24,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_weapon_shortblade_16"
             }
           ],
           "faction": "both",
@@ -8165,7 +8490,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "25–26",
           "itemId": 277246,
           "name": "Ruby-Adorned Blade",
-          "icon": "inv_sword_15",
+          "icon": "inv_sword_07",
           "weaponType": "One-handed sword",
           "speed": "2.30",
           "dps": "23.9 DPS",
@@ -8194,7 +8519,8 @@ if (typeof window !== 'undefined') {
                 "+7 Agility",
                 "+2 Stamina"
               ],
-              "reqLevel": 24
+              "reqLevel": 24,
+              "icon": "inv_weapon_shortblade_01"
             },
             {
               "name": "Serrated Raptor Claw",
@@ -8207,7 +8533,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 33,
               "reqLevel": 24,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_misc_map07"
             },
             {
               "name": "Iron Fists",
@@ -8220,7 +8547,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 31,
               "reqLevel": 26,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_gauntlets_11"
             }
           ],
           "faction": "both",
@@ -8242,7 +8570,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "27–28",
           "itemId": 273053,
           "name": "Tendonscraper Dagger",
-          "icon": "inv_weapon_shortblade_15",
+          "icon": "inv_misc_bone_06",
           "weaponType": "Main Hand Dagger",
           "speed": "1.60",
           "dps": "14.4 DPS",
@@ -8273,7 +8601,8 @@ if (typeof window !== 'undefined') {
                 "Equip: +5 Spell Power",
                 "Sell Price: 76s 95c"
               ],
-              "reqLevel": 29
+              "reqLevel": 29,
+              "icon": "inv_sword_23"
             },
             {
               "name": "Toxic Revenger",
@@ -8295,7 +8624,8 @@ if (typeof window !== 'undefined') {
                 "Chance on hit: Deals 14 Nature damage every 3 sec to any enemy in an 8 yard radius around the caster for 12 sec.",
                 "Requires Level 27"
               ],
-              "reqLevel": 27
+              "reqLevel": 27,
+              "icon": "inv_weapon_shortblade_02"
             },
             {
               "name": "Hardened Iron Shortsword",
@@ -8308,7 +8638,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 32,
               "reqLevel": 27,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_sword_20"
             }
           ],
           "faction": "both",
@@ -8332,7 +8663,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "29–30",
           "itemId": 6681,
           "name": "Thornspike",
-          "icon": "inv_weapon_shortblade_01",
+          "icon": "inv_weapon_shortblade_10",
           "weaponType": "Dagger",
           "speed": "2.00",
           "dps": "20.2 DPS",
@@ -8363,7 +8694,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases damage and healing done by magical spells and effects by up to 40.",
                 "Requires Level 30"
               ],
-              "reqLevel": 30
+              "reqLevel": 30,
+              "icon": "inv_misc_bone_06"
             },
             {
               "name": "Zealot Blade",
@@ -8385,7 +8717,8 @@ if (typeof window !== 'undefined') {
                 "+6 Spirit",
                 "Requires Level 29"
               ],
-              "reqLevel": 29
+              "reqLevel": 29,
+              "icon": "inv_sword_15"
             },
             {
               "name": "Tidebringer's Claw",
@@ -8407,7 +8740,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases healing done by up to 86 and damage done by up to 28 for all magical spells and effects.",
                 "Equip: Increases the critical strike chance of your Healing Wave and Lesser Healing Wave spells by 2%."
               ],
-              "reqLevel": 30
+              "reqLevel": 30,
+              "icon": "inv_weapon_hand_15"
             },
             {
               "name": "Lightning's Grasp",
@@ -8429,7 +8763,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases damage and healing done by magical spells and effects by up to 46.",
                 "Equip: Increases the critical strike chance of your Lightning Bolt spell by 1%."
               ],
-              "reqLevel": 30
+              "reqLevel": 30,
+              "icon": "inv_weapon_hand_09"
             },
             {
               "name": "Swine Fists",
@@ -8442,7 +8777,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 34,
               "reqLevel": 28,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_misc_bone_05"
             }
           ],
           "faction": "both",
@@ -8463,7 +8799,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "31–34",
           "itemId": 4977,
           "name": "Sword of Hammerfall",
-          "icon": "inv_sword_27",
+          "icon": "inv_sword_40",
           "weaponType": "One-handed sword",
           "speed": "2.60",
           "dps": "28.5 DPS",
@@ -8492,7 +8828,8 @@ if (typeof window !== 'undefined') {
                 "+7 Strength",
                 "Requires Level 30"
               ],
-              "reqLevel": 30
+              "reqLevel": 30,
+              "icon": "inv_hammer_19"
             },
             {
               "name": "Bloody Brass Knuckles",
@@ -8514,7 +8851,8 @@ if (typeof window !== 'undefined') {
                 "Equip: +15 Attack Power against Humanoids.",
                 "Requires Level 29"
               ],
-              "reqLevel": 29
+              "reqLevel": 29,
+              "icon": "inv_gauntlets_11"
             }
           ],
           "faction": "alliance",
@@ -8535,7 +8873,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "35–38",
           "itemId": 6831,
           "name": "Black Menace",
-          "icon": "inv_weapon_shortblade_05",
+          "icon": "inv_sword_13",
           "weaponType": "Dagger",
           "speed": "2.40",
           "dps": "29.7 DPS",
@@ -8561,7 +8899,8 @@ if (typeof window !== 'undefined') {
                 "Main hand\tOne-Hand",
                 "Requires Level 25"
               ],
-              "reqLevel": 25
+              "reqLevel": 25,
+              "icon": "inv_sword_18"
             },
             {
               "name": "Silent Hunter",
@@ -8581,7 +8920,8 @@ if (typeof window !== 'undefined') {
                 "(23.1 damage per second)",
                 "+7 Agility"
               ],
-              "reqLevel": 30
+              "reqLevel": 30,
+              "icon": "inv_weapon_shortblade_18"
             },
             {
               "name": "Mithril Shortsword",
@@ -8592,7 +8932,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 40,
               "reqLevel": 34,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_weapon_shortblade_05"
             },
             {
               "name": "Sword of Omen",
@@ -8604,7 +8945,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 40,
               "reqLevel": 34,
-              "stats": "+9 Str, +4 Sta, +3 Agi"
+              "stats": "+9 Str, +4 Sta, +3 Agi",
+              "icon": "inv_misc_questionmark"
             },
             {
               "name": "Sword of Serenity",
@@ -8617,7 +8959,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 44,
               "reqLevel": 34,
-              "stats": "+9 Sta, +4 Spi"
+              "stats": "+9 Sta, +4 Spi",
+              "icon": "inv_sword_27"
             }
           ],
           "faction": "alliance",
@@ -8630,7 +8973,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "39–44",
           "itemId": 9467,
           "name": "Gahz'rilla Fang",
-          "icon": "inv_weapon_shortblade_12",
+          "icon": "inv_misc_monsterfang_01",
           "weaponType": "Dagger",
           "speed": "1.90",
           "dps": "32.2 DPS",
@@ -8651,7 +8994,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 43,
               "reqLevel": 38,
-              "stats": "+3 Frost Resistance"
+              "stats": "+3 Frost Resistance",
+              "icon": "inv_sword_34"
             },
             {
               "name": "Vanquisher's Sword",
@@ -8664,7 +9008,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 44,
               "reqLevel": 39,
-              "stats": "+22 Attack Power"
+              "stats": "+22 Attack Power",
+              "icon": "inv_sword_35"
             },
             {
               "name": "Sword of Omen",
@@ -8675,7 +9020,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 44,
               "reqLevel": 38,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_misc_questionmark"
             },
             {
               "name": "Sword of Serenity",
@@ -8688,7 +9034,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 44,
               "reqLevel": 34,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_sword_27"
             }
           ],
           "faction": "both",
@@ -8701,7 +9048,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "45–50",
           "itemId": 17705,
           "name": "Thrash Blade",
-          "icon": "inv_sword_23",
+          "icon": "inv_sword_36",
           "weaponType": "One-handed sword",
           "speed": "2.70",
           "dps": "35.9 DPS",
@@ -8722,7 +9069,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 54,
               "reqLevel": 40,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_sword_21"
             },
             {
               "name": "Electro-Lantern",
@@ -8739,7 +9087,8 @@ if (typeof window !== 'undefined') {
                 "+2 Strength",
                 "+2 Intellect"
               ],
-              "reqLevel": 44
+              "reqLevel": 44,
+              "icon": "inv_misc_wrench_01"
             }
           ],
           "faction": "both",
@@ -8752,7 +9101,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "51–56",
           "itemId": 17705,
           "name": "Thrash Blade",
-          "icon": "inv_sword_23",
+          "icon": "inv_sword_36",
           "weaponType": "One-handed sword",
           "speed": "2.70",
           "dps": "35.9 DPS",
@@ -8773,7 +9122,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 57,
               "reqLevel": 52,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_weapon_shortblade_01"
             },
             {
               "name": "Julie's Dagger",
@@ -8786,7 +9136,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 55,
               "reqLevel": 50,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_weapon_shortblade_07"
             },
             {
               "name": "Dal'Rend's Sacred Charge",
@@ -8798,7 +9149,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 56,
               "reqLevel": 50,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_misc_questionmark"
             }
           ],
           "faction": "both",
@@ -8811,7 +9163,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "57–60",
           "itemId": 12783,
           "name": "Heartseeker",
-          "icon": "inv_weapon_shortblade_12",
+          "icon": "inv_sword_17",
           "weaponType": "Dagger",
           "speed": "1.70",
           "dps": "41.3 DPS",
@@ -8831,7 +9183,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 62,
               "reqLevel": 56,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_misc_questionmark"
             },
             {
               "name": "Mirah's Song",
@@ -8844,7 +9197,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 61,
               "reqLevel": 55,
-              "stats": "+9 Str, +9 Agi"
+              "stats": "+9 Str, +9 Agi",
+              "icon": "inv_misc_questionmark"
             },
             {
               "name": "Dal'Rend's Tribal Guardian",
@@ -8855,7 +9209,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 62,
               "reqLevel": 56,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_misc_questionmark"
             },
             {
               "name": "Blade of Senseless Slaughter",
@@ -8868,7 +9223,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 62,
               "reqLevel": 57,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_sword_12"
             }
           ],
           "faction": "both",
@@ -8892,7 +9248,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "1–2",
           "itemId": 2132,
           "name": "Short Staff",
-          "icon": "inv_staff_08",
+          "icon": "inv_staff_02",
           "weaponType": "Staff",
           "speed": "2.20",
           "dps": "2.0 DPS",
@@ -8911,7 +9267,8 @@ if (typeof window !== 'undefined') {
               "quality": "q1",
               "iLvl": 6,
               "reqLevel": 1,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_axe_10"
             },
             {
               "name": "Crude Battle Axe",
@@ -8924,7 +9281,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 6,
               "reqLevel": 1,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_throwingaxe_03"
             }
           ],
           "faction": "both",
@@ -8958,7 +9316,8 @@ if (typeof window !== 'undefined') {
               "quality": "q1",
               "iLvl": 9,
               "reqLevel": 4,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_hammer_16"
             },
             {
               "name": "Copper Axe",
@@ -8971,7 +9330,8 @@ if (typeof window !== 'undefined') {
               "quality": "q1",
               "iLvl": 9,
               "reqLevel": 4,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_axe_23"
             }
           ],
           "faction": "both",
@@ -8984,7 +9344,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "5–6",
           "itemId": 3488,
           "name": "Copper Battle Axe",
-          "icon": "inv_axe_06",
+          "icon": "inv_throwingaxe_02",
           "weaponType": "Two-handed axe",
           "speed": "3.50",
           "dps": "9.0 DPS",
@@ -9005,7 +9365,8 @@ if (typeof window !== 'undefined') {
               "quality": "q1",
               "iLvl": 9,
               "reqLevel": 4,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_mace_01"
             },
             {
               "name": "Large Club",
@@ -9018,7 +9379,8 @@ if (typeof window !== 'undefined') {
               "quality": "q1",
               "iLvl": 7,
               "reqLevel": 2,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_torch_unlit"
             },
             {
               "name": "Goblin Smasher",
@@ -9031,7 +9393,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 12,
               "reqLevel": 5,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_hammer_15"
             }
           ],
           "faction": "both",
@@ -9044,7 +9407,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "7–8",
           "itemId": 3488,
           "name": "Copper Battle Axe",
-          "icon": "inv_axe_06",
+          "icon": "inv_throwingaxe_02",
           "weaponType": "Two-handed axe",
           "speed": "3.50",
           "dps": "9.0 DPS",
@@ -9063,7 +9426,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 12,
               "reqLevel": 6,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_weapon_shortblade_05"
             },
             {
               "name": "Large Club",
@@ -9076,7 +9440,8 @@ if (typeof window !== 'undefined') {
               "quality": "q1",
               "iLvl": 7,
               "reqLevel": 2,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_torch_unlit"
             },
             {
               "name": "Makeshift Stormcaller",
@@ -9089,7 +9454,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 11,
               "reqLevel": 7,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_staff_14"
             },
             {
               "name": "Bonecracker",
@@ -9102,7 +9468,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 13,
               "reqLevel": 7,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_mace_04"
             }
           ],
           "faction": "both",
@@ -9115,7 +9482,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "9–10",
           "itemId": 1197,
           "name": "Giant Mace",
-          "icon": "inv_mace_01",
+          "icon": "inv_mace_02",
           "weaponType": "Two-handed mace",
           "speed": "3.50",
           "dps": "9.0 DPS",
@@ -9145,7 +9512,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases healing done by up to 33 and damage done by up to 11 for all magical spells and effects.",
                 "Requires Level 13"
               ],
-              "reqLevel": 13
+              "reqLevel": 13,
+              "icon": "inv_misc_bone_10"
             },
             {
               "name": "Thick War Axe",
@@ -9158,7 +9526,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 17,
               "reqLevel": 12,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_throwingaxe_01"
             },
             {
               "name": "Thun'grim's Axe",
@@ -9171,7 +9540,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 15,
               "reqLevel": 10,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_axe_01"
             }
           ],
           "faction": "both",
@@ -9184,7 +9554,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "11–12",
           "itemId": 6214,
           "name": "Heavy Copper Maul",
-          "icon": "inv_hammer_14",
+          "icon": "inv_hammer_18",
           "weaponType": "Two-handed mace",
           "speed": "3.30",
           "dps": "10.8 DPS",
@@ -9214,7 +9584,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases healing done by up to 33 and damage done by up to 11 for all magical spells and effects.",
                 "Requires Level 13"
               ],
-              "reqLevel": 13
+              "reqLevel": 13,
+              "icon": "inv_misc_bone_10"
             },
             {
               "name": "Woodchopper",
@@ -9225,7 +9596,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 16,
               "reqLevel": 10,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_sword_05"
             },
             {
               "name": "Axe of Orgrimmar",
@@ -9238,7 +9610,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 9,
-              "stats": "+6 Sta, +6 Spi"
+              "stats": "+6 Sta, +6 Spi",
+              "icon": "inv_axe_04"
             },
             {
               "name": "Hammer of Orgrimmar",
@@ -9251,7 +9624,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 9,
-              "stats": "+3 Str, +3 Spi"
+              "stats": "+3 Str, +3 Spi",
+              "icon": "inv_hammer_23"
             }
           ],
           "faction": "both",
@@ -9264,7 +9638,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "13–14",
           "itemId": 270228,
           "name": "Golemheart Stave",
-          "icon": "inv_staff_20",
+          "icon": "inv_staff_18",
           "weaponType": "Staff",
           "speed": "2.60",
           "dps": "14.2 DPS",
@@ -9285,7 +9659,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 9,
-              "stats": "+6 Int, +6 Agi, +18 Spell Dmg"
+              "stats": "+6 Int, +6 Agi, +18 Spell Dmg",
+              "icon": "inv_staff_goldfeathered_01"
             },
             {
               "name": "Durgen's Crescent Axe",
@@ -9298,7 +9673,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 13,
-              "stats": "+5 Str, +2 Sta"
+              "stats": "+5 Str, +2 Sta",
+              "icon": "inv_misc_necklacea8"
             },
             {
               "name": "Ironforge Greathammer",
@@ -9311,7 +9687,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 9,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_hammer_21"
             },
             {
               "name": "Kris of Orgrimmar",
@@ -9324,7 +9701,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 9,
-              "stats": "+4 Sta, +33 Healing, +11 Spell Damage"
+              "stats": "+4 Sta, +33 Healing, +11 Spell Damage",
+              "icon": "inv_weapon_shortblade_05"
             },
             {
               "name": "Fang of Magmatus",
@@ -9337,7 +9715,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 13,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_misc_bone_06"
             },
             {
               "name": "Bone Knuckles",
@@ -9350,7 +9729,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 13,
-              "stats": ""
+              "stats": "",
+              "icon": "ability_whirlwind"
             }
           ],
           "faction": "both",
@@ -9363,7 +9743,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "15–16",
           "itemId": 271104,
           "name": "Corpse Chopper",
-          "icon": "inv_axe_19",
+          "icon": "inv_misc_questionmark",
           "weaponType": "Two-handed axe",
           "speed": "3.20",
           "dps": "17.4 DPS",
@@ -9384,7 +9764,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 9,
-              "stats": "+6 Int, +6 Agi, +18 Spell Dmg"
+              "stats": "+6 Int, +6 Agi, +18 Spell Dmg",
+              "icon": "inv_staff_goldfeathered_01"
             },
             {
               "name": "Scepter of the Abandoned",
@@ -9397,7 +9778,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 22,
               "reqLevel": 17,
-              "stats": "+4 Sta, +4 Int"
+              "stats": "+4 Sta, +4 Int",
+              "icon": "inv_misc_questionmark"
             },
             {
               "name": "Segmented Spider Leg",
@@ -9410,7 +9792,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 20,
               "reqLevel": 15,
-              "stats": "+5 Int, +4 Sta"
+              "stats": "+5 Int, +4 Sta",
+              "icon": "inv_misc_questionmark"
             },
             {
               "name": "Kris of Orgrimmar",
@@ -9423,7 +9806,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 9,
-              "stats": "+4 Sta, +33 Healing, +11 Spell Damage"
+              "stats": "+4 Sta, +33 Healing, +11 Spell Damage",
+              "icon": "inv_weapon_shortblade_05"
             },
             {
               "name": "The Stitcher",
@@ -9436,7 +9820,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 24,
               "reqLevel": 15,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_mace_08"
             }
           ],
           "faction": "both",
@@ -9449,7 +9834,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "17–18",
           "itemId": 279891,
           "name": "Forsaken Greataxe",
-          "icon": "inv_axe_11",
+          "icon": "inv_misc_cape_08",
           "weaponType": "Two-handed axe",
           "speed": "3.40",
           "dps": "20.5 DPS",
@@ -9470,7 +9855,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 9,
-              "stats": "+6 Int, +6 Agi, +18 Spell Dmg"
+              "stats": "+6 Int, +6 Agi, +18 Spell Dmg",
+              "icon": "inv_staff_goldfeathered_01"
             },
             {
               "name": "Coldspire Staff",
@@ -9483,7 +9869,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 24,
               "reqLevel": 19,
-              "stats": "+7 Int, +5 Spi"
+              "stats": "+7 Int, +5 Spi",
+              "icon": "inv_misc_questionmark"
             },
             {
               "name": "Smite's Mighty Hammer",
@@ -9496,7 +9883,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 23,
               "reqLevel": 18,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_hammer_09"
             },
             {
               "name": "Kris of Orgrimmar",
@@ -9509,7 +9897,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 9,
-              "stats": "+4 Sta, +33 Healing, +11 Spell Damage"
+              "stats": "+4 Sta, +33 Healing, +11 Spell Damage",
+              "icon": "inv_weapon_shortblade_05"
             }
           ],
           "faction": "both",
@@ -9522,14 +9911,14 @@ if (typeof window !== 'undefined') {
           "levelBracket": "19–20",
           "itemId": 6505,
           "name": "Crescent Staff",
-          "icon": "inv_staff_20",
+          "icon": "inv_staff_04",
           "weaponType": "Staff",
           "speed": "2.90",
           "dps": "15.3 DPS",
           "source": {
             "kind": "quest",
             "title": "Leaders of the Fang",
-            "detail": "Wailing Caverns quest (+7 Int, +7 Spi, +7 Sta)"
+            "detail": "Leaders of the Fang quest reward in Wailing Caverns. Outstanding early 2H weapon for melee or casting."
           },
           "alts": [
             {
@@ -9543,7 +9932,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 9,
-              "stats": "+6 Int, +6 Agi, +18 Spell Dmg"
+              "stats": "+6 Int, +6 Agi, +18 Spell Dmg",
+              "icon": "inv_staff_goldfeathered_01"
             },
             {
               "name": "Bronze Warhammer",
@@ -9556,7 +9946,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 25,
               "reqLevel": 20,
-              "stats": "+6 Strength, +6 Stamina"
+              "stats": "+6 Strength, +6 Stamina",
+              "icon": "inv_hammer_18"
             },
             {
               "name": "Bronze Battle Axe",
@@ -9569,7 +9960,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 27,
               "reqLevel": 22,
-              "stats": "+10 Strength"
+              "stats": "+10 Strength",
+              "icon": "inv_axe_21"
             },
             {
               "name": "Kris of Orgrimmar",
@@ -9582,13 +9974,14 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 9,
-              "stats": "+4 Sta, +33 Healing, +11 Spell Damage"
+              "stats": "+4 Sta, +33 Healing, +11 Spell Damage",
+              "icon": "inv_weapon_shortblade_05"
             }
           ],
           "faction": "horde",
           "quality": "q3",
           "iLvl": 24,
-          "stats": "+7 Agility, +7 Stamina, +7 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 26.",
+          "stats": "+26 Spell Power, +7 Agility, +7 Stamina",
           "lines": [
             "Binds when picked up",
             "Two-Hand\tStaff",
@@ -9605,7 +9998,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "21–22",
           "itemId": 6905,
           "name": "Reef Axe",
-          "icon": "inv_axe_08",
+          "icon": "inv_weapon_halberd_06",
           "weaponType": "Two-handed axe",
           "speed": "3.30",
           "dps": "22.4 DPS",
@@ -9626,7 +10019,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 27,
               "reqLevel": 22,
-              "stats": "+10 Strength"
+              "stats": "+10 Strength",
+              "icon": "inv_axe_21"
             },
             {
               "name": "Iridescent Hammer",
@@ -9639,7 +10033,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 28,
               "reqLevel": 23,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_hammer_05"
             }
           ],
           "faction": "both",
@@ -9652,7 +10047,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "23–24",
           "itemId": 285328,
           "name": "Taurenbane's Family Cleaver",
-          "icon": "inv_axe_16",
+          "icon": "inv_axe_04",
           "weaponType": "Two-handed axe",
           "speed": "3.40",
           "dps": "22.9 DPS",
@@ -9684,7 +10079,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases healing done by up to 52 and damage done by up to 17 for all magical spells and effects.",
                 "Requires Level 21"
               ],
-              "reqLevel": 21
+              "reqLevel": 21,
+              "icon": "inv_staff_32"
             },
             {
               "name": "Rod of the Sleepwalker",
@@ -9697,7 +10093,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 29,
               "reqLevel": 24,
-              "stats": "+11 Int, +10 Spi"
+              "stats": "+11 Int, +10 Spi",
+              "icon": "inv_staff_06"
             }
           ],
           "faction": "both",
@@ -9719,7 +10116,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "25–26",
           "itemId": 271766,
           "name": "Heavehammer",
-          "icon": "inv_hammer_15",
+          "icon": "inv_hammer_09",
           "weaponType": "Two-handed mace",
           "speed": "3.30",
           "dps": "27.7 DPS",
@@ -9749,7 +10146,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases damage and healing done by magical spells and effects by up to 24.",
                 "Requires Level 26"
               ],
-              "reqLevel": 26
+              "reqLevel": 26,
+              "icon": "inv_hammer_07"
             },
             {
               "name": "Mighty Iron Hammer",
@@ -9762,7 +10160,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 30,
               "reqLevel": 25,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_hammer_04"
             },
             {
               "name": "Dendweller's Hammer",
@@ -9784,7 +10183,8 @@ if (typeof window !== 'undefined') {
                 "+100 Armor",
                 "Requires Level 26"
               ],
-              "reqLevel": 26
+              "reqLevel": 26,
+              "icon": "inv_hammer_09"
             },
             {
               "name": "Defender of Dalaran",
@@ -9806,7 +10206,8 @@ if (typeof window !== 'undefined') {
                 "+13 Stamina",
                 "+9 Intellect"
               ],
-              "reqLevel": 24
+              "reqLevel": 24,
+              "icon": "inv_hammer_04"
             }
           ],
           "faction": "both",
@@ -9827,7 +10228,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "27–28",
           "itemId": 273046,
           "name": "Guardian's Dualblade",
-          "icon": "inv_axe_06",
+          "icon": "inv_throwingaxe_05",
           "weaponType": "Two-handed axe",
           "speed": "3.40",
           "dps": "24.6 DPS",
@@ -9857,7 +10258,8 @@ if (typeof window !== 'undefined') {
                 "+6 Stamina",
                 "+14 Intellect"
               ],
-              "reqLevel": 24
+              "reqLevel": 24,
+              "icon": "inv_staff_28"
             },
             {
               "name": "Healer's Staff",
@@ -9879,7 +10281,27 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases healing done by up to 67 and damage done by up to 22 for all magical spells and effects.",
                 "Equip: Restores 5 Mana per 5 sec."
               ],
-              "reqLevel": 24
+              "reqLevel": 24,
+              "icon": "inv_staff_10"
+            },
+            {
+              "name": "Death Speaker Scepter",
+              "itemId": 2816,
+              "value": "+68 Healing, +28 Shadow SP, 12 HP5 - Razorfen Kraul (Death Speaker Jargba)",
+              "faction": "both",
+              "dps": "18.5 DPS",
+              "speed": "2.20",
+              "weaponType": "One-handed mace",
+              "quality": "q3",
+              "iLvl": 33,
+              "reqLevel": 28,
+              "stats": "+68 Healing, +28 Shadow Spell Power, 12 Health per 5 sec",
+              "icon": "inv_mace_07",
+              "source": {
+                "kind": "dungeon",
+                "title": "Razorfen Kraul",
+                "detail": "Dropped by Death Speaker Jargba. Invaluable 1H mace for Priests, Shamans, and Paladins."
+              }
             }
           ],
           "faction": "both",
@@ -9892,7 +10314,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "29–30",
           "itemId": 280604,
           "name": "Rage of the Storm",
-          "icon": "inv_hammer_08",
+          "icon": "inv_mace_42",
           "weaponType": "Two-handed mace",
           "speed": "3.20",
           "dps": "35.6 DPS",
@@ -9922,7 +10344,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases damage and healing done by magical spells and effects by up to 46.",
                 "Equip: Increases the critical strike chance of your Lightning Bolt spell by 1%."
               ],
-              "reqLevel": 30
+              "reqLevel": 30,
+              "icon": "inv_weapon_hand_09"
             },
             {
               "name": "Tidebringer's Claw",
@@ -9944,7 +10367,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases healing done by up to 86 and damage done by up to 28 for all magical spells and effects.",
                 "Equip: Increases the critical strike chance of your Healing Wave and Lesser Healing Wave spells by 2%."
               ],
-              "reqLevel": 30
+              "reqLevel": 30,
+              "icon": "inv_weapon_hand_15"
             },
             {
               "name": "Corpsemaker",
@@ -9966,7 +10390,8 @@ if (typeof window !== 'undefined') {
                 "+8 Stamina",
                 "Requires Level 29"
               ],
-              "reqLevel": 29
+              "reqLevel": 29,
+              "icon": "inv_weapon_halbard_01"
             },
             {
               "name": "Striking Staff",
@@ -9988,7 +10413,8 @@ if (typeof window !== 'undefined') {
                 "+6 Stamina",
                 "+14 Intellect"
               ],
-              "reqLevel": 24
+              "reqLevel": 24,
+              "icon": "inv_staff_28"
             },
             {
               "name": "Rage of the Storm",
@@ -10010,7 +10436,8 @@ if (typeof window !== 'undefined') {
                 "+15 Stamina",
                 "Equip: Increases the damage dealt by your Stormstrike ability by 10%."
               ],
-              "reqLevel": 30
+              "reqLevel": 30,
+              "icon": "inv_mace_42"
             }
           ],
           "faction": "both",
@@ -10062,7 +10489,8 @@ if (typeof window !== 'undefined') {
                 "+15 Stamina",
                 "Equip: Increases the damage dealt by your Stormstrike ability by 10%."
               ],
-              "reqLevel": 30
+              "reqLevel": 30,
+              "icon": "inv_mace_42"
             },
             {
               "name": "Manual Crowd Pummeler",
@@ -10087,7 +10515,8 @@ if (typeof window !== 'undefined') {
                 "3 Charges",
                 "Requires Level 29"
               ],
-              "reqLevel": 29
+              "reqLevel": 29,
+              "icon": "inv_mace_14"
             },
             {
               "name": "Massive Iron Axe",
@@ -10100,7 +10529,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 37,
               "reqLevel": 32,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_throwingaxe_05"
             }
           ],
           "faction": "both",
@@ -10122,7 +10552,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "37–40",
           "itemId": 7717,
           "name": "Ravager",
-          "icon": "inv_axe_10",
+          "icon": "inv_weapon_halberd_05",
           "weaponType": "Two-handed axe",
           "speed": "3.50",
           "dps": "37.3 DPS",
@@ -10143,7 +10573,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 44,
               "reqLevel": 39,
-              "stats": "+8 Strength, +14 Stamina, +16 Intellect"
+              "stats": "+8 Strength, +14 Stamina, +16 Intellect",
+              "icon": "inv_shield_05"
             },
             {
               "name": "Illusionary Rod",
@@ -10156,7 +10587,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 39,
               "reqLevel": 34,
-              "stats": "+15 Int, +10 Spi"
+              "stats": "+15 Int, +10 Spi",
+              "icon": "inv_wand_04"
             }
           ],
           "faction": "both",
@@ -10169,7 +10601,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "41–46",
           "itemId": 17730,
           "name": "Gatorbite Axe",
-          "icon": "inv_axe_22",
+          "icon": "inv_axe_04",
           "weaponType": "Two-handed axe",
           "speed": "3.40",
           "dps": "45.8 DPS",
@@ -10190,7 +10622,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 54,
               "reqLevel": 49,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_misc_questionmark"
             },
             {
               "name": "Executioner's Cleaver",
@@ -10203,7 +10636,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 48,
               "reqLevel": 43,
-              "stats": "+10 Hit Rating"
+              "stats": "+10 Hit Rating",
+              "icon": "inv_axe_24"
             },
             {
               "name": "Gul'gash's Greathammer",
@@ -10216,7 +10650,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 49,
               "reqLevel": 44,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_hammer_16"
             }
           ],
           "faction": "both",
@@ -10229,7 +10664,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "47–52",
           "itemId": 11608,
           "name": "Dark Iron Pulverizer",
-          "icon": "inv_hammer_16",
+          "icon": "inv_hammer_09",
           "weaponType": "Two-handed mace",
           "speed": "3.70",
           "dps": "47.4 DPS",
@@ -10249,7 +10684,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 52,
               "reqLevel": 46,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_misc_questionmark"
             },
             {
               "name": "Enchanted Battlehammer",
@@ -10262,7 +10698,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 56,
               "reqLevel": 51,
-              "stats": "+4 Arcane Resistance, +21 Parry Rating, +20 Hit Rating"
+              "stats": "+4 Arcane Resistance, +21 Parry Rating, +20 Hit Rating",
+              "icon": "inv_hammer_05"
             }
           ],
           "faction": "both",
@@ -10296,7 +10733,8 @@ if (typeof window !== 'undefined') {
               "quality": "q4",
               "iLvl": 60,
               "reqLevel": 55,
-              "stats": "+18 Strength, +17 Stamina, +28 Critical Strike Rating"
+              "stats": "+18 Strength, +17 Stamina, +28 Critical Strike Rating",
+              "icon": "inv_misc_questionmark"
             },
             {
               "name": "Wisepaw Totem",
@@ -10309,7 +10747,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 58,
               "reqLevel": 53,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_staff_51"
             },
             {
               "name": "Fist of the Damned",
@@ -10320,7 +10759,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 58,
               "reqLevel": 52,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_misc_questionmark"
             },
             {
               "name": "Icesworn Decapitator",
@@ -10333,7 +10773,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 59,
               "reqLevel": 54,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_axe_69"
             }
           ],
           "faction": "both",
@@ -10349,22 +10790,22 @@ if (typeof window !== 'undefined') {
       "tracks": [
         {
           "id": "primary",
-          "name": "Wand & Staff Weaving (Frost / Fire)"
+          "name": "Staves & Spellblades (Frost / Fire / Arcane)"
         }
       ],
       "levels": [
         {
           "levelBracket": "1–2",
-          "itemId": 1159,
+          "itemId": 2495,
           "name": "Militia Quarterstaff",
           "icon": "inv_staff_08",
           "weaponType": "Staff",
-          "speed": "2.60",
-          "dps": "2.7 DPS",
+          "speed": "2.80",
+          "dps": "2.0 DPS",
           "source": {
-            "kind": "quest",
-            "title": "Brotherhood of Thieves",
-            "detail": "Northshire starter quest reward"
+            "kind": "vendor",
+            "title": "Starter Weapon Vendor",
+            "detail": "Sold by starter vendors in Northshire, Coldridge, and Valley of Trials."
           },
           "alts": [
             {
@@ -10378,25 +10819,13 @@ if (typeof window !== 'undefined') {
               "quality": "q1",
               "iLvl": 8,
               "reqLevel": 3,
-              "stats": ""
-            },
-            {
-              "name": "Novice's Practice Wand",
-              "itemId": 247789,
-              "value": "4.0 DPS - Starter wand",
-              "faction": "both",
-              "dps": "4 DPS",
-              "speed": "1.50",
-              "weaponType": "Wand",
-              "quality": "q1",
-              "iLvl": 6,
-              "reqLevel": 1,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_staff_08"
             }
           ],
-          "faction": "alliance",
-          "quality": "q2",
-          "iLvl": 6,
+          "faction": "both",
+          "quality": "q1",
+          "iLvl": 4,
           "reqLevel": 1,
           "stats": ""
         },
@@ -10413,21 +10842,7 @@ if (typeof window !== 'undefined') {
             "title": "Weapon Vendor",
             "detail": "Purchased in starter hub towns"
           },
-          "alts": [
-            {
-              "name": "Novice's Practice Wand",
-              "itemId": 247789,
-              "value": "4.0 DPS - Enchanting (10)",
-              "faction": "both",
-              "dps": "4 DPS",
-              "speed": "1.50",
-              "weaponType": "Wand",
-              "quality": "q1",
-              "iLvl": 6,
-              "reqLevel": 2,
-              "stats": ""
-            }
-          ],
+          "alts": [],
           "faction": "both",
           "quality": "q1",
           "iLvl": 8,
@@ -10436,43 +10851,29 @@ if (typeof window !== 'undefined') {
         },
         {
           "levelBracket": "5–6",
-          "itemId": 11287,
-          "name": "Lesser Magic Wand",
-          "icon": "inv_wand_01",
-          "weaponType": "Wand",
-          "speed": "1.50",
-          "dps": "11.3 DPS",
+          "itemId": 6534,
+          "name": "Darkwood Staff",
+          "icon": "inv_ingot_mithril",
+          "weaponType": "Staff",
+          "speed": "2.90",
+          "dps": "4.8 DPS",
           "source": {
-            "kind": "craft",
-            "title": "Enchanting (10)",
-            "detail": "Crafted wand, triple player DPS with zero mana cost!"
+            "kind": "drop",
+            "title": "Darkwood Staff",
+            "detail": "World drop in Level 8-15 zones (Westfall, Darkshore, Silverpine)."
           },
-          "alts": [
-            {
-              "name": "Walking Stick",
-              "itemId": 2495,
-              "value": "4.2 DPS - Vendor fallback",
-              "faction": "both",
-              "dps": "4.2 DPS",
-              "speed": "2.50",
-              "weaponType": "Staff",
-              "quality": "q1",
-              "iLvl": 8,
-              "reqLevel": 3,
-              "stats": ""
-            }
-          ],
+          "alts": [],
           "faction": "both",
           "quality": "q2",
-          "iLvl": 15,
-          "reqLevel": 5,
-          "stats": "+1 Spell Power"
+          "iLvl": 11,
+          "reqLevel": 6,
+          "stats": "+2 Intellect"
         },
         {
           "levelBracket": "7–8",
           "itemId": 248008,
           "name": "Apprentice's Spellstaff",
-          "icon": "inv_staff_10",
+          "icon": "inv_staff_18",
           "weaponType": "Staff",
           "speed": "2.40",
           "dps": "6.4 DPS",
@@ -10491,33 +10892,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 12,
               "reqLevel": 6,
-              "stats": ""
-            },
-            {
-              "name": "Lesser Magic Wand",
-              "itemId": 11287,
-              "value": "11.3 DPS - Enchanting (10)",
-              "faction": "both",
-              "dps": "11.33 DPS",
-              "speed": "1.50",
-              "weaponType": "Wand",
-              "quality": "q2",
-              "iLvl": 15,
-              "reqLevel": 5,
-              "stats": "+1 Spell Power"
-            },
-            {
-              "name": "Riptear's Spare Arm",
-              "itemId": 286743,
-              "value": "9.4 DPS, 1.70s Wand - Durotar Quest: Rear Guard Patrol",
-              "faction": "horde",
-              "dps": "9.41 DPS",
-              "speed": "1.70",
-              "weaponType": "Wand",
-              "quality": "q2",
-              "iLvl": 13,
-              "reqLevel": 6,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_weapon_shortblade_05"
             },
             {
               "name": "Darkwood Staff",
@@ -10530,20 +10906,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 13,
               "reqLevel": 7,
-              "stats": "+6 Spell Power"
-            },
-            {
-              "name": "Wisesight Wand",
-              "itemId": 286750,
-              "weaponType": "Wand",
-              "speed": "1.70",
-              "dps": "8.8 DPS",
-              "value": "8.8 DPS, 1.70s - Early Wand Drop",
-              "faction": "both",
-              "quality": "q2",
-              "iLvl": 12,
-              "reqLevel": 7,
-              "stats": ""
+              "stats": "+6 Spell Power",
+              "icon": "inv_staff_16"
             }
           ],
           "faction": "alliance",
@@ -10554,30 +10918,18 @@ if (typeof window !== 'undefined') {
         },
         {
           "levelBracket": "9–10",
-          "itemId": 11287,
-          "name": "Lesser Magic Wand",
-          "icon": "inv_wand_01",
-          "weaponType": "Wand",
-          "speed": "1.50",
-          "dps": "11.3 DPS",
+          "itemId": 6682,
+          "name": "Staff of the Dor'Danil",
+          "icon": "inv_chest_cloth_20",
+          "weaponType": "Staff",
+          "speed": "2.80",
+          "dps": "7.7 DPS",
           "source": {
-            "kind": "craft",
-            "title": "Enchanting (10)",
-            "detail": "Primary leveling damage source while drinking less"
+            "kind": "quest",
+            "title": "The Relics of Wakening",
+            "detail": "Quest reward from Teldrassil / Darkshore barrows."
           },
           "alts": [
-            {
-              "name": "Pagan Rod",
-              "itemId": 6449,
-              "value": "8.6 DPS, 1.90s - Vendor wand",
-              "faction": "both",
-              "dps": "8.6 DPS",
-              "speed": "1.90",
-              "quality": "q2",
-              "iLvl": 14,
-              "reqLevel": 8,
-              "stats": ""
-            },
             {
               "name": "Staff of the Dor'Danil",
               "itemId": 15396,
@@ -10587,81 +10939,30 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 14,
               "reqLevel": 8,
-              "stats": ""
-            },
-            {
-              "name": "Riptear's Spare Arm",
-              "itemId": 286743,
-              "value": "9.4 DPS - Durotar Quest: Rear Guard Patrol",
-              "faction": "horde",
-              "dps": "9.41 DPS",
-              "speed": "1.70",
-              "weaponType": "Wand",
-              "quality": "q2",
-              "iLvl": 13,
-              "reqLevel": 6,
-              "stats": ""
-            },
-            {
-              "name": "Cinder Wand",
-              "itemId": 5242,
-              "value": "11.8 DPS, 1.40s - Silverpine Quest: Arugal's Folly",
-              "faction": "horde",
-              "dps": "11.79 DPS",
-              "speed": "1.40",
-              "weaponType": "Wand",
-              "quality": "q2",
-              "iLvl": 16,
-              "reqLevel": 9,
-              "stats": "+1 Spell Power"
-            },
-            {
-              "name": "Deepblaze",
-              "itemId": 279896,
-              "weaponType": "Wand",
-              "speed": "1.70",
-              "dps": "18.5 DPS",
-              "value": "18.5 DPS, 1.70s - Alliance Ironforge Quest",
-              "faction": "alliance",
-              "quality": "q3",
-              "iLvl": 18,
-              "reqLevel": 9,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_weapon_shortblade_05"
             }
           ],
           "faction": "both",
           "quality": "q2",
           "iLvl": 15,
-          "reqLevel": 5,
-          "stats": "+1 Spell Power"
+          "reqLevel": 10,
+          "stats": "+2 Intellect, +2 Spirit"
         },
         {
           "levelBracket": "11–12",
-          "itemId": 11288,
-          "name": "Greater Magic Wand",
-          "icon": "inv_wand_02",
-          "weaponType": "Wand",
-          "speed": "1.70",
-          "dps": "17.5 DPS",
+          "itemId": 5351,
+          "name": "Oakthrush Staff",
+          "icon": "inv_jewelry_ring_01",
+          "weaponType": "Staff",
+          "speed": "2.70",
+          "dps": "9.6 DPS",
           "source": {
-            "kind": "craft",
-            "title": "Enchanting (75)",
-            "detail": "Legendary early wand upgrade, out-damages Rank 1 Fireball"
+            "kind": "quest",
+            "title": "The Fate of Oakthrush",
+            "detail": "Quest reward in Darkshore / Silverpine Forest."
           },
           "alts": [
-            {
-              "name": "Oakthrush Staff",
-              "itemId": 15397,
-              "value": "10.9 DPS - Ashenvale quest",
-              "faction": "both",
-              "dps": "7.14 DPS",
-              "speed": "2.80",
-              "weaponType": "Staff",
-              "quality": "q2",
-              "iLvl": 14,
-              "reqLevel": 12,
-              "stats": "+6 Spell Power"
-            },
             {
               "name": "Pagan Rod",
               "itemId": 6449,
@@ -10671,7 +10972,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 16,
               "reqLevel": 10,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_chest_cloth_15"
             },
             {
               "name": "Cauldron Stirrer",
@@ -10684,46 +10986,21 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 15,
               "reqLevel": 10,
-              "stats": "+8 Spell Power"
-            },
-            {
-              "name": "Cinder Wand",
-              "itemId": 5242,
-              "value": "11.8 DPS - Silverpine Quest: Arugal's Folly",
-              "faction": "horde",
-              "dps": "11.79 DPS",
-              "speed": "1.40",
-              "weaponType": "Wand",
-              "quality": "q2",
-              "iLvl": 16,
-              "reqLevel": 9,
-              "stats": "+1 Spell Power"
-            },
-            {
-              "name": "Spark of the People's Militia",
-              "itemId": 12296,
-              "weaponType": "Wand",
-              "speed": "1.80",
-              "dps": "12.8 DPS",
-              "value": "12.8 DPS, 1.80s - Westfall Quest",
-              "faction": "alliance",
-              "quality": "q2",
-              "iLvl": 17,
-              "reqLevel": 9,
-              "stats": "+1 Spell Power"
+              "stats": "+8 Spell Power",
+              "icon": "inv_staff_08"
             }
           ],
           "faction": "both",
           "quality": "q2",
-          "iLvl": 23,
-          "reqLevel": 13,
-          "stats": "+2 Spell Power"
+          "iLvl": 17,
+          "reqLevel": 12,
+          "stats": "+3 Intellect, +3 Spirit"
         },
         {
           "levelBracket": "13–14",
           "itemId": 270228,
           "name": "Golemheart Stave",
-          "icon": "inv_staff_20",
+          "icon": "inv_staff_18",
           "weaponType": "Staff",
           "speed": "2.60",
           "dps": "14.2 DPS",
@@ -10744,20 +11021,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 9,
-              "stats": "+6 Int, +6 Agi, +18 Spell Dmg"
-            },
-            {
-              "name": "Greater Magic Wand",
-              "itemId": 11288,
-              "value": "17.5 DPS - Enchanting (75)",
-              "faction": "both",
-              "dps": "17.5 DPS",
-              "speed": "1.80",
-              "weaponType": "Wand",
-              "quality": "q2",
-              "iLvl": 23,
-              "reqLevel": 13,
-              "stats": "+2 Spell Power"
+              "stats": "+6 Int, +6 Agi, +18 Spell Dmg",
+              "icon": "inv_staff_goldfeathered_01"
             },
             {
               "name": "Fang of Magmatus",
@@ -10770,7 +11035,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 13,
-              "stats": "+2 Agi, +2 Fire SP"
+              "stats": "+2 Agi, +2 Fire SP",
+              "icon": "inv_misc_food_24"
             },
             {
               "name": "Kris of Orgrimmar",
@@ -10783,7 +11049,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 9,
-              "stats": "+4 Sta, +33 Healing, +11 Spell Damage"
+              "stats": "+4 Sta, +33 Healing, +11 Spell Damage",
+              "icon": "inv_weapon_shortblade_05"
             },
             {
               "name": "Searing Dagger",
@@ -10796,20 +11063,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 13,
-              "stats": ""
-            },
-            {
-              "name": "Moongazer's Wand",
-              "itemId": 284193,
-              "weaponType": "Wand",
-              "speed": "1.70",
-              "dps": "14.4 DPS",
-              "value": "14.4 DPS, 1.70s - Ashenvale Rare",
-              "faction": "both",
-              "quality": "q2",
-              "iLvl": 19,
-              "reqLevel": 14,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_weapon_shortblade_03"
             }
           ],
           "faction": "both",
@@ -10843,7 +11098,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 9,
-              "stats": "+6 Int, +6 Agi, +18 Spell Dmg"
+              "stats": "+6 Int, +6 Agi, +18 Spell Dmg",
+              "icon": "inv_staff_goldfeathered_01"
             },
             {
               "name": "Segmented Spider Leg",
@@ -10856,7 +11112,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 20,
               "reqLevel": 15,
-              "stats": "+5 Int, +4 Sta"
+              "stats": "+5 Int, +4 Sta",
+              "icon": "inv_misc_questionmark"
             },
             {
               "name": "Meathook Slicer",
@@ -10869,20 +11126,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 20,
               "reqLevel": 15,
-              "stats": ""
-            },
-            {
-              "name": "Whelpfire Wand",
-              "itemId": 281925,
-              "weaponType": "Wand",
-              "speed": "1.90",
-              "dps": "15.3 DPS",
-              "value": "15.3 DPS, 1.90s - Wetlands Drop",
-              "faction": "both",
-              "quality": "q2",
-              "iLvl": 20,
-              "reqLevel": 15,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_misc_questionmark"
             }
           ],
           "faction": "both",
@@ -10895,7 +11140,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "17–18",
           "itemId": 271105,
           "name": "Coldspire Staff",
-          "icon": "inv_staff_08",
+          "icon": "inv_misc_questionmark",
           "weaponType": "Staff",
           "speed": "2.80",
           "dps": "16.8 DPS",
@@ -10916,7 +11161,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 9,
-              "stats": "+6 Int, +6 Agi, +18 Spell Dmg"
+              "stats": "+6 Int, +6 Agi, +18 Spell Dmg",
+              "icon": "inv_staff_goldfeathered_01"
             },
             {
               "name": "Staff of Westfall",
@@ -10939,7 +11185,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases healing done by up to 48 and damage done by up to 16 for all magical spells and effects.",
                 "Equip: Movement speed increased by 2% in Elwynn Forest, Westfall, Redridge Mountains, and the Deadmines."
               ],
-              "reqLevel": 14
+              "reqLevel": 14,
+              "icon": "inv_staff_10"
             },
             {
               "name": "Vileblood Scimitar",
@@ -10952,7 +11199,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 22,
               "reqLevel": 17,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_misc_questionmark"
             }
           ],
           "faction": "both",
@@ -10965,7 +11213,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "19–20",
           "itemId": 2042,
           "name": "Staff of Westfall",
-          "icon": "inv_staff_08",
+          "icon": "inv_staff_10",
           "weaponType": "Staff",
           "speed": "2.90",
           "dps": "15.2 DPS",
@@ -10975,6 +11223,25 @@ if (typeof window !== 'undefined') {
             "detail": "Deadmines quest reward (+5 Int, +11 Spi)"
           },
           "alts": [
+            {
+              "name": "Crescent Staff",
+              "itemId": 6505,
+              "value": "+26 Spell Power, +7 Agi, +7 Sta - Leaders of the Fang quest in Wailing Caverns (Horde)",
+              "faction": "horde",
+              "dps": "15.2 DPS",
+              "speed": "2.90",
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 24,
+              "reqLevel": 10,
+              "stats": "+26 Spell Power, +7 Agility, +7 Stamina",
+              "icon": "inv_staff_04",
+              "source": {
+                "kind": "quest",
+                "title": "Leaders of the Fang",
+                "detail": "Major dungeon quest reward in Wailing Caverns (Horde). Elite spell power boost."
+              }
+            },
             {
               "name": "Staff of Orgrimmar",
               "itemId": 15444,
@@ -10986,7 +11253,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 9,
-              "stats": "+6 Int, +6 Agi, +18 Spell Dmg"
+              "stats": "+6 Int, +6 Agi, +18 Spell Dmg",
+              "icon": "inv_staff_goldfeathered_01"
             },
             {
               "name": "Odo's Ley Staff",
@@ -11009,7 +11277,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases healing done by up to 52 and damage done by up to 17 for all magical spells and effects.",
                 "Requires Level 21"
               ],
-              "reqLevel": 21
+              "reqLevel": 21,
+              "icon": "inv_staff_27"
             },
             {
               "name": "Glimmering Staff",
@@ -11032,7 +11301,22 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases damage and healing done by magical spells and effects by up to 34.",
                 "Requires Level 25"
               ],
-              "reqLevel": 25
+              "reqLevel": 25,
+              "icon": "inv_staff_19"
+            },
+            {
+              "name": "Witching Stave",
+              "itemId": 1484,
+              "value": "+27 Shadow Spell Power, +6 Sta, +5 Int - Level 17 Rare Drop",
+              "faction": "both",
+              "dps": "14.0 DPS",
+              "speed": "3.60",
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 22,
+              "reqLevel": 17,
+              "stats": "+27 Shadow Spell Power, +6 Stamina, +5 Intellect",
+              "icon": "inv_wand_04"
             }
           ],
           "faction": "alliance",
@@ -11055,7 +11339,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "21–24",
           "itemId": 276631,
           "name": "Coldflame Saber",
-          "icon": "inv_sword_24",
+          "icon": "inv_sword_05",
           "weaponType": "Main Hand Sword",
           "speed": "2.00",
           "dps": "12.3 DPS",
@@ -11076,20 +11360,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 29,
               "reqLevel": 24,
-              "stats": "+11 Int, +10 Spi"
-            },
-            {
-              "name": "Lesser Mystic Wand",
-              "itemId": 11289,
-              "value": "22.2 DPS - Enchanting (155)",
-              "faction": "both",
-              "dps": "25.38 DPS",
-              "speed": "1.30",
-              "weaponType": "Wand",
-              "quality": "q2",
-              "iLvl": 31,
-              "reqLevel": 26,
-              "stats": "+4 Intellect"
+              "stats": "+11 Int, +10 Spi",
+              "icon": "inv_staff_06"
             },
             {
               "name": "Meteor Shard",
@@ -11102,20 +11374,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 28,
               "reqLevel": 23,
-              "stats": "+3 Fire Resistance"
-            },
-            {
-              "name": "Snapped Branch Wand",
-              "itemId": 284574,
-              "weaponType": "Wand",
-              "speed": "1.70",
-              "dps": "21.2 DPS",
-              "value": "21.2 DPS, 1.70s - Custom Wand Drop",
-              "faction": "both",
-              "quality": "q2",
-              "iLvl": 27,
-              "reqLevel": 22,
-              "stats": ""
+              "stats": "+3 Fire Resistance",
+              "icon": "inv_weapon_shortblade_25"
             },
             {
               "name": "Alliance Outrunner Staff",
@@ -11128,7 +11388,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 26,
               "reqLevel": 21,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_staff_11"
             }
           ],
           "faction": "both",
@@ -11150,42 +11411,18 @@ if (typeof window !== 'undefined') {
         },
         {
           "levelBracket": "25–26",
-          "itemId": 7001,
-          "name": "Gravestone Scepter",
-          "icon": "inv_wand_02",
-          "weaponType": "Wand",
-          "speed": "1.50",
-          "dps": "29.0 DPS",
+          "itemId": 276631,
+          "name": "Coldflame Saber",
+          "icon": "inv_sword_05",
+          "weaponType": "One-handed sword",
+          "speed": "2.00",
+          "dps": "12.25 DPS",
           "source": {
             "kind": "quest",
             "title": "Blackfathom Villainy",
             "detail": "BFD quest reward (29.0 DPS melts level 20–35 mobs)"
           },
           "alts": [
-            {
-              "name": "Coldflame Saber",
-              "itemId": 276631,
-              "value": "12.3 DPS, +32 SP, 98 Fire dmg proc - Custom Mage sword",
-              "faction": "both",
-              "dps": "12.25 DPS",
-              "speed": "2.00",
-              "weaponType": "One-handed sword",
-              "quality": "q3",
-              "iLvl": 29,
-              "stats": "+7 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 32., Equip: Melee attacks deal 98 additional Fire damage against Frozen targets.",
-              "lines": [
-                "Binds when picked up",
-                "Main Hand\tSword",
-                "17 - 32 Damage\tSpeed 2.00",
-                "(12.3 damage per second)",
-                "+7 Intellect",
-                "Equip: Increases damage and healing done by magical spells and effects by up to 32.",
-                "Equip: Melee attacks deal 98 additional Fire damage against Frozen targets.",
-                "Classes: Mage",
-                "Requires Level 21"
-              ],
-              "reqLevel": 21
-            },
             {
               "name": "Death Prophet Spine",
               "itemId": 274158,
@@ -11207,7 +11444,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Restores 5 Mana per 5 sec.",
                 "Requires Level 26"
               ],
-              "reqLevel": 26
+              "reqLevel": 26,
+              "icon": "inv_staff_17"
             },
             {
               "name": "Debt Collector",
@@ -11229,7 +11467,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Grants 6 health and 2 mana every 5 sec for 15 sec when one of your spells is resisted.",
                 "Requires Level 26"
               ],
-              "reqLevel": 26
+              "reqLevel": 26,
+              "icon": "inv_sword_24"
             },
             {
               "name": "Striking Staff",
@@ -11251,27 +11490,8 @@ if (typeof window !== 'undefined') {
                 "+6 Stamina",
                 "+14 Intellect"
               ],
-              "reqLevel": 24
-            },
-            {
-              "name": "Unstable Power Core",
-              "itemId": 279847,
-              "weaponType": "Wand",
-              "speed": "1.70",
-              "dps": "29.7 DPS",
-              "value": "29.7 DPS, 1.70s - Dalaran Dungeon",
-              "faction": "both",
-              "quality": "q2",
-              "iLvl": 36,
-              "stats": "+4 Stamina",
-              "lines": [
-                "Binds when picked up",
-                "Ranged\tWand",
-                "35 - 66 Arcane Damage\tSpeed 1.70",
-                "(29.7 damage per second)",
-                "+4 Stamina"
-              ],
-              "reqLevel": 24
+              "reqLevel": 24,
+              "icon": "inv_staff_28"
             },
             {
               "name": "Fallen Dragon's Scepter",
@@ -11293,13 +11513,14 @@ if (typeof window !== 'undefined') {
                 "+13 Spirit",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 36."
               ],
-              "reqLevel": 24
+              "reqLevel": 24,
+              "icon": "inv_staff_08"
             }
           ],
           "faction": "both",
           "quality": "q3",
           "iLvl": 29,
-          "stats": "+3 Spirit, Equip: Increases damage done by Shadow spells and effects by up to 6.",
+          "stats": "+7 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 32., Equip: Melee attacks deal 98 additional Fire damage against Frozen targets.",
           "lines": [
             "Binds when picked up",
             "Ranged\tWand",
@@ -11308,13 +11529,13 @@ if (typeof window !== 'undefined') {
             "+3 Spirit",
             "Equip: Increases damage done by Shadow spells and effects by up to 6."
           ],
-          "reqLevel": 18
+          "reqLevel": 21
         },
         {
           "levelBracket": "27–28",
           "itemId": 273040,
           "name": "Spine of the Devourer",
-          "icon": "inv_staff_13",
+          "icon": "inv_staff_07",
           "weaponType": "Staff",
           "speed": "3.60",
           "dps": "20.7 DPS",
@@ -11324,29 +11545,6 @@ if (typeof window !== 'undefined') {
             "detail": "City of Dalaran (+14 Sta, +36 Spell Power)"
           },
           "alts": [
-            {
-              "name": "Wand of Mana Concentration",
-              "itemId": 273043,
-              "value": "31.2 DPS, 1.70s, +4 Int, 2 MP5 - City of Dalaran: Arcanic Enigma",
-              "faction": "both",
-              "dps": "31.18 DPS",
-              "speed": "1.70",
-              "weaponType": "Wand",
-              "quality": "q3",
-              "iLvl": 32,
-              "stats": "+4 Intellect, Equip: +2 Mana Regeneration",
-              "lines": [
-                "Binds when picked up",
-                "Ranged\tWand",
-                "37 - 69 Arcane Damage\tSpeed 1.70",
-                "(31.2 damage per second)",
-                "+4 Intellect",
-                "Requires Level 27",
-                "Equip: +2 Mana Regeneration",
-                "Sell Price: 47s 22c"
-              ],
-              "reqLevel": 27
-            },
             {
               "name": "Tendonscraper Dagger",
               "itemId": 273053,
@@ -11369,7 +11567,8 @@ if (typeof window !== 'undefined') {
                 "Equip: +36 Spell Power",
                 "Sell Price: 73s 79c"
               ],
-              "reqLevel": 28
+              "reqLevel": 28,
+              "icon": "inv_misc_bone_06"
             }
           ],
           "faction": "both",
@@ -11393,7 +11592,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "29–30",
           "itemId": 279844,
           "name": "Striking Staff",
-          "icon": "inv_staff_20",
+          "icon": "inv_staff_28",
           "weaponType": "Staff",
           "speed": "3.10",
           "dps": "31.3 DPS",
@@ -11423,7 +11622,8 @@ if (typeof window !== 'undefined') {
                 "+13 Spirit",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 36."
               ],
-              "reqLevel": 24
+              "reqLevel": 24,
+              "icon": "inv_staff_08"
             },
             {
               "name": "Mindslicer",
@@ -11444,49 +11644,8 @@ if (typeof window !== 'undefined') {
                 "+7 Intellect",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 34."
               ],
-              "reqLevel": 30
-            },
-            {
-              "name": "Master Hunter's Wand",
-              "itemId": 270084,
-              "value": "34.7 DPS, 1.50s - STV Quest: Big Game Hunter",
-              "faction": "both",
-              "dps": "34.67 DPS",
-              "speed": "1.50",
-              "weaponType": "Wand",
-              "quality": "q2",
-              "iLvl": 43,
-              "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 7.",
-              "lines": [
-                "Binds when picked up",
-                "Ranged\tWand",
-                "36 - 68 Shadow Damage\tSpeed 1.50",
-                "(34.7 damage per second)",
-                "Equip: Increases damage and healing done by magical spells and effects by up to 7."
-              ],
-              "reqLevel": 28
-            },
-            {
-              "name": "Icefury Wand",
-              "itemId": 7514,
-              "value": "25.3 DPS - Level 30 Mage class quest wand",
-              "faction": "both",
-              "dps": "37.19 DPS",
-              "speed": "1.60",
-              "weaponType": "Wand",
-              "quality": "q3",
-              "iLvl": 40,
-              "stats": "+3 Intellect, Equip: Increases damage done by Frost spells and effects by up to 9.",
-              "lines": [
-                "Binds when picked up",
-                "Ranged\tWand",
-                "41 - 78 Frost Damage\tSpeed 1.60",
-                "(37.2 damage per second)",
-                "+3 Intellect",
-                "Equip: Increases damage done by Frost spells and effects by up to 9.",
-                "Classes: Mage"
-              ],
-              "reqLevel": 30
+              "reqLevel": 30,
+              "icon": "inv_weapon_shortblade_15"
             }
           ],
           "faction": "both",
@@ -11508,7 +11667,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "31–35",
           "itemId": 7713,
           "name": "Illusionary Rod",
-          "icon": "inv_staff_13",
+          "icon": "inv_wand_04",
           "weaponType": "Staff",
           "speed": "2.90",
           "dps": "25.7 DPS",
@@ -11529,20 +11688,41 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 39,
               "reqLevel": 34,
-              "stats": "+9 SP, +8 Int"
+              "stats": "+9 SP, +8 Int",
+              "icon": "inv_weapon_shortblade_07"
             },
             {
-              "name": "Twisted Nether Wand",
-              "itemId": 249144,
-              "value": "25.0 DPS - Craft/Drop",
+              "name": "Narpas Sword",
+              "itemId": 217497,
+              "value": "+48 Spell Power, +10 Hit Rating - Level 34 Mage 1H Sword",
               "faction": "both",
-              "dps": "34 DPS",
-              "speed": "1.50",
-              "weaponType": "Wand",
-              "quality": "q2",
+              "dps": "26.5 DPS",
+              "speed": "2.10",
+              "weaponType": "One-handed sword",
+              "quality": "q3",
               "iLvl": 42,
-              "reqLevel": 37,
-              "stats": ""
+              "reqLevel": 34,
+              "stats": "+48 Spell Power, +10 Hit Rating",
+              "icon": "inv_weapon_shortblade_79",
+              "source": {
+                "kind": "dungeon",
+                "title": "Dungeon Drop",
+                "detail": "Specialized caster 1H sword for Mages."
+              }
+            },
+            {
+              "name": "Staff of Jordan",
+              "itemId": 873,
+              "value": "+60 Spell Power, +11 Int, +11 Spi - Level 35 Epic World Drop",
+              "faction": "both",
+              "dps": "29.9 DPS",
+              "speed": "3.70",
+              "weaponType": "Staff",
+              "quality": "q4",
+              "iLvl": 40,
+              "reqLevel": 35,
+              "stats": "+60 Spell Power, +11 Intellect, +11 Spirit",
+              "icon": "inv_staff_13"
             }
           ],
           "faction": "both",
@@ -11555,14 +11735,14 @@ if (typeof window !== 'undefined') {
           "levelBracket": "36–40",
           "itemId": 7713,
           "name": "Illusionary Rod",
-          "icon": "inv_staff_13",
+          "icon": "inv_wand_04",
           "weaponType": "Staff",
           "speed": "2.90",
           "dps": "25.7 DPS",
           "source": {
             "kind": "dungeon",
             "title": "Arcanist Doan",
-            "detail": "Strong stats carry through the late 30s"
+            "detail": "Strong stats carry through the late 30s (Continue wielding Illusionary Rod / Hypnotic Blade / Narpas Sword: spell power out-scales late 30s quest rewards)"
           },
           "alts": [
             {
@@ -11576,49 +11756,8 @@ if (typeof window !== 'undefined') {
               "quality": "q4",
               "iLvl": 40,
               "reqLevel": 35,
-              "stats": "+26 Spell Power"
-            },
-            {
-              "name": "Dancing Flame",
-              "itemId": 6806,
-              "value": "29.2 DPS - World drop wand",
-              "faction": "both",
-              "dps": "31.07 DPS",
-              "speed": "1.40",
-              "weaponType": "Wand",
-              "quality": "q2",
-              "iLvl": 38,
-              "stats": "+4 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 4.",
-              "lines": [
-                "Binds when picked up",
-                "Ranged\tWand",
-                "30 - 57 Fire Damage\tSpeed 1.40",
-                "(31.1 damage per second)",
-                "+4 Intellect",
-                "Equip: Increases damage and healing done by magical spells and effects by up to 4."
-              ],
-              "reqLevel": 26
-            },
-            {
-              "name": "Rod of Sorrow",
-              "itemId": 5247,
-              "value": "28.0 DPS - Quest",
-              "faction": "both",
-              "dps": "32.63 DPS",
-              "speed": "1.90",
-              "weaponType": "Wand",
-              "quality": "q2",
-              "iLvl": 40,
-              "stats": "+4 Stamina, +3 Spirit",
-              "lines": [
-                "Binds when picked up",
-                "Ranged\tWand",
-                "43 - 81 Shadow Damage\tSpeed 1.90",
-                "(32.6 damage per second)",
-                "+4 Stamina",
-                "+3 Spirit"
-              ],
-              "reqLevel": 30
+              "stats": "+26 Spell Power",
+              "icon": "inv_staff_13"
             }
           ],
           "faction": "both",
@@ -11631,7 +11770,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "41–46",
           "itemId": 9527,
           "name": "Spellshifter Rod",
-          "icon": "inv_staff_10",
+          "icon": "inv_wand_11",
           "weaponType": "Staff",
           "speed": "3.00",
           "dps": "31.1 DPS",
@@ -11652,20 +11791,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 48,
               "reqLevel": 43,
-              "stats": "+10 Int, +21 SP"
-            },
-            {
-              "name": "Dreambough Wand",
-              "itemId": 249234,
-              "value": "31.0 DPS - World drop wand",
-              "faction": "both",
-              "dps": "39.17 DPS",
-              "speed": "1.80",
-              "weaponType": "Wand",
-              "quality": "q2",
-              "iLvl": 48,
-              "reqLevel": 43,
-              "stats": ""
+              "stats": "+10 Int, +21 SP",
+              "icon": "inv_staff_10"
             },
             {
               "name": "Emerald Watcher's Dreamstaff",
@@ -11678,7 +11805,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 49,
               "reqLevel": 44,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_staff_17"
             }
           ],
           "faction": "both",
@@ -11702,19 +11830,6 @@ if (typeof window !== 'undefined') {
           },
           "alts": [
             {
-              "name": "Lesser Eternal Wand",
-              "itemId": 249232,
-              "value": "33.0 DPS - Enchanting (265)",
-              "faction": "both",
-              "dps": "45.75 DPS",
-              "speed": "2.00",
-              "weaponType": "Wand",
-              "quality": "q2",
-              "iLvl": 54,
-              "reqLevel": 49,
-              "stats": ""
-            },
-            {
               "name": "Spire of the Stoneshaper",
               "itemId": 11802,
               "value": "33.8 DPS - BRD: Lord Incendius",
@@ -11723,7 +11838,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 52,
               "reqLevel": 46,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_misc_questionmark"
             }
           ],
           "faction": "both",
@@ -11736,7 +11852,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "53–60",
           "itemId": 274420,
           "name": "Wisepaw Totem",
-          "icon": "inv_staff_04",
+          "icon": "inv_staff_51",
           "weaponType": "Staff",
           "speed": "3.20",
           "dps": "36.9 DPS",
@@ -11755,7 +11871,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 58,
               "reqLevel": 52,
-              "stats": "+14 Int, +11 Spi, +23 SP, 1% Spell Crit"
+              "stats": "+14 Int, +11 Spi, +23 SP, 1% Spell Crit",
+              "icon": "inv_misc_questionmark"
             },
             {
               "name": "Witchblade",
@@ -11767,33 +11884,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 58,
               "reqLevel": 52,
-              "stats": "+14 SP"
-            },
-            {
-              "name": "Greater Eternal Wand",
-              "itemId": 249237,
-              "value": "36.0 DPS - Enchanting (285)",
-              "faction": "both",
-              "dps": "53.33 DPS",
-              "speed": "1.50",
-              "weaponType": "Wand",
-              "quality": "q2",
-              "iLvl": 60,
-              "reqLevel": 55,
-              "stats": ""
-            },
-            {
-              "name": "Brilliant Wand",
-              "itemId": 249385,
-              "value": "38.0 DPS - World drop wand",
-              "faction": "both",
-              "dps": "59.58 DPS",
-              "speed": "1.20",
-              "weaponType": "Wand",
-              "quality": "q3",
-              "iLvl": 60,
-              "reqLevel": 55,
-              "stats": ""
+              "stats": "+14 SP",
+              "icon": "inv_misc_questionmark"
             }
           ],
           "faction": "both",
@@ -11809,7 +11901,7 @@ if (typeof window !== 'undefined') {
       "tracks": [
         {
           "id": "primary",
-          "name": "Wand & Staff Progression (Affliction / Demonology)"
+          "name": "Staves & Spellblades (Affliction / Demonology / Destruction)"
         }
       ],
       "levels": [
@@ -11838,20 +11930,8 @@ if (typeof window !== 'undefined') {
               "quality": "q1",
               "iLvl": 8,
               "reqLevel": 3,
-              "stats": ""
-            },
-            {
-              "name": "Novice's Practice Wand",
-              "itemId": 247789,
-              "value": "4.0 DPS - Starter wand",
-              "faction": "both",
-              "dps": "4 DPS",
-              "speed": "1.50",
-              "weaponType": "Wand",
-              "quality": "q1",
-              "iLvl": 6,
-              "reqLevel": 1,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_staff_08"
             }
           ],
           "faction": "alliance",
@@ -11873,21 +11953,7 @@ if (typeof window !== 'undefined') {
             "title": "Weapon Vendor",
             "detail": "Sold in starter hub towns"
           },
-          "alts": [
-            {
-              "name": "Novice's Practice Wand",
-              "itemId": 247789,
-              "value": "4.0 DPS - Enchanting (10)",
-              "faction": "both",
-              "dps": "4 DPS",
-              "speed": "1.50",
-              "weaponType": "Wand",
-              "quality": "q1",
-              "iLvl": 6,
-              "reqLevel": 2,
-              "stats": ""
-            }
-          ],
+          "alts": [],
           "faction": "both",
           "quality": "q1",
           "iLvl": 8,
@@ -11896,43 +11962,29 @@ if (typeof window !== 'undefined') {
         },
         {
           "levelBracket": "5–6",
-          "itemId": 11287,
-          "name": "Lesser Magic Wand",
-          "icon": "inv_wand_01",
-          "weaponType": "Wand",
-          "speed": "1.50",
-          "dps": "11.3 DPS",
+          "itemId": 6534,
+          "name": "Darkwood Staff",
+          "icon": "inv_ingot_mithril",
+          "weaponType": "Staff",
+          "speed": "2.90",
+          "dps": "4.8 DPS",
           "source": {
-            "kind": "craft",
-            "title": "Enchanting (10)",
-            "detail": "Massive damage jump; wanding while DoTs tick saves full mana pools"
+            "kind": "drop",
+            "title": "Darkwood Staff",
+            "detail": "World drop in Level 8-15 zones."
           },
-          "alts": [
-            {
-              "name": "Walking Stick",
-              "itemId": 2495,
-              "value": "4.2 DPS - Vendor",
-              "faction": "both",
-              "dps": "4.2 DPS",
-              "speed": "2.50",
-              "weaponType": "Staff",
-              "quality": "q1",
-              "iLvl": 8,
-              "reqLevel": 3,
-              "stats": ""
-            }
-          ],
+          "alts": [],
           "faction": "both",
           "quality": "q2",
-          "iLvl": 15,
-          "reqLevel": 5,
-          "stats": "+1 Spell Power"
+          "iLvl": 11,
+          "reqLevel": 6,
+          "stats": "+2 Stamina, +1 Intellect"
         },
         {
           "levelBracket": "7–8",
           "itemId": 248008,
           "name": "Apprentice's Spellstaff",
-          "icon": "inv_staff_10",
+          "icon": "inv_staff_18",
           "weaponType": "Staff",
           "speed": "2.40",
           "dps": "6.4 DPS",
@@ -11951,33 +12003,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 12,
               "reqLevel": 6,
-              "stats": ""
-            },
-            {
-              "name": "Lesser Magic Wand",
-              "itemId": 11287,
-              "value": "11.3 DPS - Enchanting (10)",
-              "faction": "both",
-              "dps": "11.33 DPS",
-              "speed": "1.50",
-              "weaponType": "Wand",
-              "quality": "q2",
-              "iLvl": 15,
-              "reqLevel": 5,
-              "stats": "+1 Spell Power"
-            },
-            {
-              "name": "Riptear's Spare Arm",
-              "itemId": 286743,
-              "value": "9.4 DPS, 1.70s Wand - Durotar Quest: Rear Guard Patrol",
-              "faction": "horde",
-              "dps": "9.41 DPS",
-              "speed": "1.70",
-              "weaponType": "Wand",
-              "quality": "q2",
-              "iLvl": 13,
-              "reqLevel": 6,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_weapon_shortblade_05"
             },
             {
               "name": "Darkwood Staff",
@@ -11990,20 +12017,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 13,
               "reqLevel": 7,
-              "stats": "+6 Spell Power"
-            },
-            {
-              "name": "Wisesight Wand",
-              "itemId": 286750,
-              "weaponType": "Wand",
-              "speed": "1.70",
-              "dps": "8.8 DPS",
-              "value": "8.8 DPS, 1.70s - Early Wand Drop",
-              "faction": "both",
-              "quality": "q2",
-              "iLvl": 12,
-              "reqLevel": 7,
-              "stats": ""
+              "stats": "+6 Spell Power",
+              "icon": "inv_staff_16"
             }
           ],
           "faction": "alliance",
@@ -12014,30 +12029,18 @@ if (typeof window !== 'undefined') {
         },
         {
           "levelBracket": "9–10",
-          "itemId": 11287,
-          "name": "Lesser Magic Wand",
-          "icon": "inv_wand_01",
-          "weaponType": "Wand",
-          "speed": "1.50",
-          "dps": "11.3 DPS",
+          "itemId": 6682,
+          "name": "Staff of the Dor'Danil",
+          "icon": "inv_chest_cloth_20",
+          "weaponType": "Staff",
+          "speed": "2.80",
+          "dps": "7.7 DPS",
           "source": {
-            "kind": "craft",
-            "title": "Enchanting (10)",
-            "detail": "Primary leveling weapon"
+            "kind": "quest",
+            "title": "The Relics of Wakening",
+            "detail": "Early quest reward in Teldrassil / Darkshore."
           },
           "alts": [
-            {
-              "name": "Pagan Rod",
-              "itemId": 6449,
-              "value": "8.6 DPS, 1.90s - Vendor wand",
-              "faction": "both",
-              "dps": "8.6 DPS",
-              "speed": "1.90",
-              "quality": "q2",
-              "iLvl": 14,
-              "reqLevel": 8,
-              "stats": ""
-            },
             {
               "name": "Staff of the Dor'Danil",
               "itemId": 15396,
@@ -12047,81 +12050,30 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 14,
               "reqLevel": 8,
-              "stats": ""
-            },
-            {
-              "name": "Riptear's Spare Arm",
-              "itemId": 286743,
-              "value": "9.4 DPS - Durotar Quest: Rear Guard Patrol",
-              "faction": "horde",
-              "dps": "9.41 DPS",
-              "speed": "1.70",
-              "weaponType": "Wand",
-              "quality": "q2",
-              "iLvl": 13,
-              "reqLevel": 6,
-              "stats": ""
-            },
-            {
-              "name": "Cinder Wand",
-              "itemId": 5242,
-              "value": "11.8 DPS, 1.40s - Silverpine Quest: Arugal's Folly",
-              "faction": "horde",
-              "dps": "11.79 DPS",
-              "speed": "1.40",
-              "weaponType": "Wand",
-              "quality": "q2",
-              "iLvl": 16,
-              "reqLevel": 9,
-              "stats": "+1 Spell Power"
-            },
-            {
-              "name": "Deepblaze",
-              "itemId": 279896,
-              "weaponType": "Wand",
-              "speed": "1.70",
-              "dps": "18.5 DPS",
-              "value": "18.5 DPS, 1.70s - Alliance Ironforge Quest",
-              "faction": "alliance",
-              "quality": "q3",
-              "iLvl": 18,
-              "reqLevel": 9,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_weapon_shortblade_05"
             }
           ],
           "faction": "both",
           "quality": "q2",
           "iLvl": 15,
-          "reqLevel": 5,
-          "stats": "+1 Spell Power"
+          "reqLevel": 10,
+          "stats": "+2 Intellect, +2 Spirit"
         },
         {
           "levelBracket": "11–12",
-          "itemId": 11288,
-          "name": "Greater Magic Wand",
-          "icon": "inv_wand_02",
-          "weaponType": "Wand",
-          "speed": "1.70",
-          "dps": "17.5 DPS",
+          "itemId": 3336,
+          "name": "Cauldron Stirrer",
+          "icon": "inv_weapon_shortblade_10",
+          "weaponType": "Staff",
+          "speed": "2.60",
+          "dps": "8.8 DPS",
           "source": {
-            "kind": "craft",
-            "title": "Enchanting (75)",
-            "detail": "Finishes off mobs swiftly while Spirit recovers mana"
+            "kind": "quest",
+            "title": "The Decisive Action",
+            "detail": "Quest reward in Westfall / Silverpine."
           },
           "alts": [
-            {
-              "name": "Oakthrush Staff",
-              "itemId": 15397,
-              "value": "10.9 DPS - Ashenvale quest",
-              "faction": "both",
-              "dps": "7.14 DPS",
-              "speed": "2.80",
-              "weaponType": "Staff",
-              "quality": "q2",
-              "iLvl": 14,
-              "reqLevel": 12,
-              "stats": "+6 Spell Power"
-            },
             {
               "name": "Pagan Rod",
               "itemId": 6449,
@@ -12131,7 +12083,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 16,
               "reqLevel": 10,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_chest_cloth_15"
             },
             {
               "name": "Cauldron Stirrer",
@@ -12144,46 +12097,21 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 15,
               "reqLevel": 10,
-              "stats": "+8 Spell Power"
-            },
-            {
-              "name": "Cinder Wand",
-              "itemId": 5242,
-              "value": "11.8 DPS - Silverpine Quest: Arugal's Folly",
-              "faction": "horde",
-              "dps": "11.79 DPS",
-              "speed": "1.40",
-              "weaponType": "Wand",
-              "quality": "q2",
-              "iLvl": 16,
-              "reqLevel": 9,
-              "stats": "+1 Spell Power"
-            },
-            {
-              "name": "Spark of the People's Militia",
-              "itemId": 12296,
-              "weaponType": "Wand",
-              "speed": "1.80",
-              "dps": "12.8 DPS",
-              "value": "12.8 DPS, 1.80s - Westfall Quest",
-              "faction": "alliance",
-              "quality": "q2",
-              "iLvl": 17,
-              "reqLevel": 9,
-              "stats": "+1 Spell Power"
+              "stats": "+8 Spell Power",
+              "icon": "inv_staff_08"
             }
           ],
           "faction": "both",
           "quality": "q2",
-          "iLvl": 23,
-          "reqLevel": 13,
-          "stats": "+2 Spell Power"
+          "iLvl": 16,
+          "reqLevel": 11,
+          "stats": "+3 Stamina, +2 Intellect"
         },
         {
           "levelBracket": "13–14",
           "itemId": 270228,
           "name": "Golemheart Stave",
-          "icon": "inv_staff_20",
+          "icon": "inv_staff_18",
           "weaponType": "Staff",
           "speed": "2.60",
           "dps": "14.2 DPS",
@@ -12204,20 +12132,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 9,
-              "stats": "+6 Int, +6 Agi, +18 Spell Dmg"
-            },
-            {
-              "name": "Greater Magic Wand",
-              "itemId": 11288,
-              "value": "17.5 DPS - Enchanting (75)",
-              "faction": "both",
-              "dps": "17.5 DPS",
-              "speed": "1.80",
-              "weaponType": "Wand",
-              "quality": "q2",
-              "iLvl": 23,
-              "reqLevel": 13,
-              "stats": "+2 Spell Power"
+              "stats": "+6 Int, +6 Agi, +18 Spell Dmg",
+              "icon": "inv_staff_goldfeathered_01"
             },
             {
               "name": "Fang of Magmatus",
@@ -12230,7 +12146,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 13,
-              "stats": "+2 Agi, +2 Fire SP"
+              "stats": "+2 Agi, +2 Fire SP",
+              "icon": "inv_misc_food_24"
             },
             {
               "name": "Kris of Orgrimmar",
@@ -12243,7 +12160,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 9,
-              "stats": "+4 Sta, +33 Healing, +11 Spell Damage"
+              "stats": "+4 Sta, +33 Healing, +11 Spell Damage",
+              "icon": "inv_weapon_shortblade_05"
             },
             {
               "name": "Searing Dagger",
@@ -12256,20 +12174,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 13,
-              "stats": ""
-            },
-            {
-              "name": "Moongazer's Wand",
-              "itemId": 284193,
-              "weaponType": "Wand",
-              "speed": "1.70",
-              "dps": "14.4 DPS",
-              "value": "14.4 DPS, 1.70s - Ashenvale Rare",
-              "faction": "both",
-              "quality": "q2",
-              "iLvl": 19,
-              "reqLevel": 14,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_weapon_shortblade_03"
             }
           ],
           "faction": "both",
@@ -12282,7 +12188,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "15–16",
           "itemId": 271102,
           "name": "Segmented Spider Leg",
-          "icon": "inv_staff_12",
+          "icon": "inv_misc_questionmark",
           "weaponType": "Staff",
           "speed": "2.70",
           "dps": "14.8 DPS",
@@ -12303,7 +12209,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 9,
-              "stats": "+6 Int, +6 Agi, +18 Spell Dmg"
+              "stats": "+6 Int, +6 Agi, +18 Spell Dmg",
+              "icon": "inv_staff_goldfeathered_01"
             },
             {
               "name": "Emberstone Staff",
@@ -12316,7 +12223,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 22,
               "reqLevel": 17,
-              "stats": "+5 Int, +5 Spi"
+              "stats": "+5 Int, +5 Spi",
+              "icon": "inv_staff_13"
             },
             {
               "name": "Meathook Slicer",
@@ -12329,20 +12237,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 20,
               "reqLevel": 15,
-              "stats": ""
-            },
-            {
-              "name": "Whelpfire Wand",
-              "itemId": 281925,
-              "weaponType": "Wand",
-              "speed": "1.90",
-              "dps": "15.3 DPS",
-              "value": "15.3 DPS, 1.90s - Wetlands Drop",
-              "faction": "both",
-              "quality": "q2",
-              "iLvl": 20,
-              "reqLevel": 15,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_misc_questionmark"
             }
           ],
           "faction": "both",
@@ -12355,7 +12251,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "17–18",
           "itemId": 271105,
           "name": "Coldspire Staff",
-          "icon": "inv_staff_08",
+          "icon": "inv_misc_questionmark",
           "weaponType": "Staff",
           "speed": "2.80",
           "dps": "16.8 DPS",
@@ -12376,7 +12272,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 9,
-              "stats": "+6 Int, +6 Agi, +18 Spell Dmg"
+              "stats": "+6 Int, +6 Agi, +18 Spell Dmg",
+              "icon": "inv_staff_goldfeathered_01"
             },
             {
               "name": "Staff of Westfall",
@@ -12399,7 +12296,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases healing done by up to 48 and damage done by up to 16 for all magical spells and effects.",
                 "Equip: Movement speed increased by 2% in Elwynn Forest, Westfall, Redridge Mountains, and the Deadmines."
               ],
-              "reqLevel": 14
+              "reqLevel": 14,
+              "icon": "inv_staff_10"
             },
             {
               "name": "Vileblood Scimitar",
@@ -12412,7 +12310,22 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 22,
               "reqLevel": 17,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_misc_questionmark"
+            },
+            {
+              "name": "Witching Stave",
+              "itemId": 1484,
+              "value": "+27 Shadow Spell Power, +6 Sta, +5 Int - Level 17 Rare Drop",
+              "faction": "both",
+              "dps": "14.0 DPS",
+              "speed": "3.60",
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 22,
+              "reqLevel": 17,
+              "stats": "+27 Shadow Spell Power, +6 Stamina, +5 Intellect",
+              "icon": "inv_wand_04"
             }
           ],
           "faction": "both",
@@ -12425,7 +12338,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "19–20",
           "itemId": 6318,
           "name": "Odo's Ley Staff",
-          "icon": "inv_staff_08",
+          "icon": "inv_staff_27",
           "weaponType": "Staff",
           "speed": "2.70",
           "dps": "16.0 DPS",
@@ -12435,6 +12348,25 @@ if (typeof window !== 'undefined') {
             "detail": "Shadowfang Keep (+4 Int, +5 Spi)"
           },
           "alts": [
+            {
+              "name": "Crescent Staff",
+              "itemId": 6505,
+              "value": "+26 Spell Power, +7 Agi, +7 Sta - Leaders of the Fang quest in Wailing Caverns (Horde)",
+              "faction": "horde",
+              "dps": "15.2 DPS",
+              "speed": "2.90",
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 24,
+              "reqLevel": 10,
+              "stats": "+26 Spell Power, +7 Agility, +7 Stamina",
+              "icon": "inv_staff_04",
+              "source": {
+                "kind": "quest",
+                "title": "Leaders of the Fang",
+                "detail": "Major dungeon quest reward in Wailing Caverns (Horde). Elite spell power boost."
+              }
+            },
             {
               "name": "Staff of Orgrimmar",
               "itemId": 15444,
@@ -12446,7 +12378,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 9,
-              "stats": "+6 Int, +6 Agi, +18 Spell Dmg"
+              "stats": "+6 Int, +6 Agi, +18 Spell Dmg",
+              "icon": "inv_staff_goldfeathered_01"
             },
             {
               "name": "Staff of Westfall",
@@ -12469,7 +12402,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases healing done by up to 48 and damage done by up to 16 for all magical spells and effects.",
                 "Equip: Movement speed increased by 2% in Elwynn Forest, Westfall, Redridge Mountains, and the Deadmines."
               ],
-              "reqLevel": 14
+              "reqLevel": 14,
+              "icon": "inv_staff_10"
             },
             {
               "name": "Glimmering Staff",
@@ -12492,7 +12426,27 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases damage and healing done by magical spells and effects by up to 34.",
                 "Requires Level 25"
               ],
-              "reqLevel": 25
+              "reqLevel": 25,
+              "icon": "inv_staff_19"
+            },
+            {
+              "name": "Staff of Soran'ruk",
+              "itemId": 15109,
+              "value": "+34 Fire/Shadow Spell Power, +14 Sta - Warlock Quest",
+              "faction": "both",
+              "dps": "15.7 DPS",
+              "speed": "2.90",
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 25,
+              "reqLevel": 20,
+              "stats": "+34 Fire/Shadow Spell Power, +14 Stamina",
+              "icon": "inv_staff_09",
+              "source": {
+                "kind": "quest",
+                "title": "The Staff of Soran'ruk",
+                "detail": "Warlock level 20 class quest reward from BFD / Shadowfang Keep."
+              }
             }
           ],
           "faction": "both",
@@ -12515,14 +12469,14 @@ if (typeof window !== 'undefined') {
           "levelBracket": "21–24",
           "itemId": 15109,
           "name": "Staff of Soran'ruk",
-          "icon": "inv_staff_13",
+          "icon": "inv_staff_09",
           "weaponType": "Staff",
           "speed": "2.90",
           "dps": "15.7 DPS",
           "source": {
             "kind": "quest",
-            "title": "The Orb of Soran'ruk",
-            "detail": "Warlock class quest weapon (+16 Shadow Spell Damage)"
+            "title": "The Staff of Soran'ruk",
+            "detail": "Warlock level 20 class quest in BFD/SFK. Game-changing +34 spell power spike."
           },
           "alts": [
             {
@@ -12536,20 +12490,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 29,
               "reqLevel": 24,
-              "stats": "+11 Int, +10 Spi"
-            },
-            {
-              "name": "Lesser Mystic Wand",
-              "itemId": 11289,
-              "value": "22.2 DPS - Enchanting (155)",
-              "faction": "both",
-              "dps": "25.38 DPS",
-              "speed": "1.30",
-              "weaponType": "Wand",
-              "quality": "q2",
-              "iLvl": 31,
-              "reqLevel": 26,
-              "stats": "+4 Intellect"
+              "stats": "+11 Int, +10 Spi",
+              "icon": "inv_staff_06"
             },
             {
               "name": "Meteor Shard",
@@ -12562,20 +12504,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 28,
               "reqLevel": 23,
-              "stats": "+3 Fire Resistance"
-            },
-            {
-              "name": "Snapped Branch Wand",
-              "itemId": 284574,
-              "weaponType": "Wand",
-              "speed": "1.70",
-              "dps": "21.2 DPS",
-              "value": "21.2 DPS, 1.70s - Custom Wand Drop",
-              "faction": "both",
-              "quality": "q2",
-              "iLvl": 27,
-              "reqLevel": 22,
-              "stats": ""
+              "stats": "+3 Fire Resistance",
+              "icon": "inv_weapon_shortblade_25"
             },
             {
               "name": "Alliance Outrunner Staff",
@@ -12588,13 +12518,14 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 26,
               "reqLevel": 21,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_staff_11"
             }
           ],
           "faction": "both",
           "quality": "q3",
           "iLvl": 25,
-          "stats": "+14 Stamina, Equip: Increases damage done by Fire spells and effects by up to 34., Equip: Increases damage done by Shadow spells and effects by up to 34.",
+          "stats": "+34 Fire/Shadow Spell Power, +14 Stamina",
           "lines": [
             "Binds when picked up",
             "Two-Hand\tStaff",
@@ -12609,41 +12540,18 @@ if (typeof window !== 'undefined') {
         },
         {
           "levelBracket": "25–26",
-          "itemId": 7001,
-          "name": "Gravestone Scepter",
-          "icon": "inv_wand_02",
-          "weaponType": "Wand",
-          "speed": "1.50",
-          "dps": "29.0 DPS",
+          "itemId": 6631,
+          "name": "Death Prophet Spine",
+          "icon": "inv_staff_25",
+          "weaponType": "Staff",
+          "speed": "2.90",
+          "dps": "19.3 DPS",
           "source": {
-            "kind": "quest",
-            "title": "Blackfathom Villainy",
-            "detail": "BFD quest reward (29.0 DPS melts level 20–35 mobs)"
+            "kind": "dungeon",
+            "title": "Razorfen Kraul",
+            "detail": "Drop from Death Speaker Jargba in RFK."
           },
           "alts": [
-            {
-              "name": "Death Prophet Spine",
-              "itemId": 274158,
-              "value": "18.9 DPS, 2.80s, +11 Sta, +34 SP, 5 MP5 - RFK: Aggem Thorncurse",
-              "faction": "both",
-              "dps": "18.93 DPS",
-              "speed": "2.80",
-              "weaponType": "Staff",
-              "quality": "q3",
-              "iLvl": 31,
-              "stats": "+11 Stamina, Equip: Increases damage and healing done by magical spells and effects by up to 34., Equip: Restores 5 Mana per 5 sec.",
-              "lines": [
-                "Binds when picked up",
-                "Two-Hand\tStaff",
-                "42 - 64 Damage\tSpeed 2.80",
-                "(18.9 damage per second)",
-                "+11 Stamina",
-                "Equip: Increases damage and healing done by magical spells and effects by up to 34.",
-                "Equip: Restores 5 Mana per 5 sec.",
-                "Requires Level 26"
-              ],
-              "reqLevel": 26
-            },
             {
               "name": "Debt Collector",
               "itemId": 273827,
@@ -12664,7 +12572,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Grants 6 health and 2 mana every 5 sec for 15 sec when one of your spells is resisted.",
                 "Requires Level 26"
               ],
-              "reqLevel": 26
+              "reqLevel": 26,
+              "icon": "inv_sword_24"
             },
             {
               "name": "Striking Staff",
@@ -12686,27 +12595,8 @@ if (typeof window !== 'undefined') {
                 "+6 Stamina",
                 "+14 Intellect"
               ],
-              "reqLevel": 24
-            },
-            {
-              "name": "Unstable Power Core",
-              "itemId": 279847,
-              "weaponType": "Wand",
-              "speed": "1.70",
-              "dps": "29.7 DPS",
-              "value": "29.7 DPS, 1.70s - Dalaran Dungeon",
-              "faction": "both",
-              "quality": "q2",
-              "iLvl": 36,
-              "stats": "+4 Stamina",
-              "lines": [
-                "Binds when picked up",
-                "Ranged\tWand",
-                "35 - 66 Arcane Damage\tSpeed 1.70",
-                "(29.7 damage per second)",
-                "+4 Stamina"
-              ],
-              "reqLevel": 24
+              "reqLevel": 24,
+              "icon": "inv_staff_28"
             },
             {
               "name": "Fallen Dragon's Scepter",
@@ -12728,13 +12618,14 @@ if (typeof window !== 'undefined') {
                 "+13 Spirit",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 36."
               ],
-              "reqLevel": 24
+              "reqLevel": 24,
+              "icon": "inv_staff_08"
             }
           ],
           "faction": "both",
-          "quality": "q3",
-          "iLvl": 29,
-          "stats": "+3 Spirit, Equip: Increases damage done by Shadow spells and effects by up to 6.",
+          "quality": "q2",
+          "iLvl": 30,
+          "stats": "+6 Intellect, +6 Stamina",
           "lines": [
             "Binds when picked up",
             "Ranged\tWand",
@@ -12743,13 +12634,13 @@ if (typeof window !== 'undefined') {
             "+3 Spirit",
             "Equip: Increases damage done by Shadow spells and effects by up to 6."
           ],
-          "reqLevel": 18
+          "reqLevel": 25
         },
         {
           "levelBracket": "27–28",
           "itemId": 273040,
           "name": "Spine of the Devourer",
-          "icon": "inv_staff_13",
+          "icon": "inv_staff_07",
           "weaponType": "Staff",
           "speed": "3.60",
           "dps": "20.7 DPS",
@@ -12759,29 +12650,6 @@ if (typeof window !== 'undefined') {
             "detail": "City of Dalaran (+14 Sta, +36 Spell Power)"
           },
           "alts": [
-            {
-              "name": "Wand of Mana Concentration",
-              "itemId": 273043,
-              "value": "31.2 DPS, 1.70s, +4 Int, 2 MP5 - City of Dalaran: Arcanic Enigma",
-              "faction": "both",
-              "dps": "31.18 DPS",
-              "speed": "1.70",
-              "weaponType": "Wand",
-              "quality": "q3",
-              "iLvl": 32,
-              "stats": "+4 Intellect, Equip: +2 Mana Regeneration",
-              "lines": [
-                "Binds when picked up",
-                "Ranged\tWand",
-                "37 - 69 Arcane Damage\tSpeed 1.70",
-                "(31.2 damage per second)",
-                "+4 Intellect",
-                "Requires Level 27",
-                "Equip: +2 Mana Regeneration",
-                "Sell Price: 47s 22c"
-              ],
-              "reqLevel": 27
-            },
             {
               "name": "Tendonscraper Dagger",
               "itemId": 273053,
@@ -12804,7 +12672,8 @@ if (typeof window !== 'undefined') {
                 "Equip: +36 Spell Power",
                 "Sell Price: 73s 79c"
               ],
-              "reqLevel": 28
+              "reqLevel": 28,
+              "icon": "inv_misc_bone_06"
             }
           ],
           "faction": "both",
@@ -12826,40 +12695,18 @@ if (typeof window !== 'undefined') {
         },
         {
           "levelBracket": "29–30",
-          "itemId": 279847,
-          "name": "Unstable Power Core",
-          "icon": "inv_wand_04",
-          "weaponType": "Wand",
-          "speed": "1.70",
-          "dps": "29.7 DPS",
+          "itemId": 6536,
+          "name": "Fallen Dragon's Scepter",
+          "icon": "inv_shirt_green_01",
+          "weaponType": "Staff",
+          "speed": "3.00",
+          "dps": "22.5 DPS",
           "source": {
-            "kind": "quest",
-            "title": "Source of Power",
-            "detail": "City of Dalaran quest reward (+4 Sta, 29.7 DPS)"
+            "kind": "dungeon",
+            "title": "Gnomeregan / RFK",
+            "detail": "Dungeon boss drop."
           },
           "alts": [
-            {
-              "name": "Fallen Dragon's Scepter",
-              "itemId": 281312,
-              "value": "19.9 DPS, 3.40s, +11 Int, +13 Spi, +36 SP - Wetlands Quest: Stopping the Cycle",
-              "faction": "both",
-              "dps": "19.85 DPS",
-              "speed": "3.40",
-              "weaponType": "Staff",
-              "quality": "q3",
-              "iLvl": 32,
-              "stats": "+11 Intellect, +13 Spirit, Equip: Increases damage and healing done by magical spells and effects by up to 36.",
-              "lines": [
-                "Binds when picked up",
-                "Two-Hand\tStaff",
-                "54 - 81 Damage\tSpeed 3.40",
-                "(19.9 damage per second)",
-                "+11 Intellect",
-                "+13 Spirit",
-                "Equip: Increases damage and healing done by magical spells and effects by up to 36."
-              ],
-              "reqLevel": 24
-            },
             {
               "name": "Mindslicer",
               "itemId": 270069,
@@ -12879,27 +12726,8 @@ if (typeof window !== 'undefined') {
                 "+7 Intellect",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 34."
               ],
-              "reqLevel": 30
-            },
-            {
-              "name": "Master Hunter's Wand",
-              "itemId": 270084,
-              "value": "34.7 DPS, 1.50s - STV Quest: Big Game Hunter",
-              "faction": "both",
-              "dps": "34.67 DPS",
-              "speed": "1.50",
-              "weaponType": "Wand",
-              "quality": "q2",
-              "iLvl": 43,
-              "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 7.",
-              "lines": [
-                "Binds when picked up",
-                "Ranged\tWand",
-                "36 - 68 Shadow Damage\tSpeed 1.50",
-                "(34.7 damage per second)",
-                "Equip: Increases damage and healing done by magical spells and effects by up to 7."
-              ],
-              "reqLevel": 28
+              "reqLevel": 30,
+              "icon": "inv_weapon_shortblade_15"
             },
             {
               "name": "Debt Collector",
@@ -12921,13 +12749,14 @@ if (typeof window !== 'undefined') {
                 "Equip: Grants 6 health and 2 mana every 5 sec for 15 sec when one of your spells is resisted.",
                 "Requires Level 26"
               ],
-              "reqLevel": 26
+              "reqLevel": 26,
+              "icon": "inv_sword_24"
             }
           ],
           "faction": "both",
-          "quality": "q2",
-          "iLvl": 36,
-          "stats": "+4 Stamina",
+          "quality": "q3",
+          "iLvl": 35,
+          "stats": "+10 Stamina, +9 Intellect",
           "lines": [
             "Binds when picked up",
             "Ranged\tWand",
@@ -12935,13 +12764,13 @@ if (typeof window !== 'undefined') {
             "(29.7 damage per second)",
             "+4 Stamina"
           ],
-          "reqLevel": 24
+          "reqLevel": 30
         },
         {
           "levelBracket": "31–35",
           "itemId": 7713,
           "name": "Illusionary Rod",
-          "icon": "inv_staff_13",
+          "icon": "inv_wand_04",
           "weaponType": "Staff",
           "speed": "2.90",
           "dps": "25.7 DPS",
@@ -12962,20 +12791,22 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 39,
               "reqLevel": 34,
-              "stats": "+9 SP, +8 Int"
+              "stats": "+9 SP, +8 Int",
+              "icon": "inv_weapon_shortblade_07"
             },
             {
-              "name": "Twisted Nether Wand",
-              "itemId": 249144,
-              "value": "25.0 DPS - Craft/Drop",
+              "name": "Staff of Jordan",
+              "itemId": 873,
+              "value": "+60 Spell Power, +11 Int, +11 Spi - Level 35 Epic World Drop",
               "faction": "both",
-              "dps": "34 DPS",
-              "speed": "1.50",
-              "weaponType": "Wand",
-              "quality": "q2",
-              "iLvl": 42,
-              "reqLevel": 37,
-              "stats": ""
+              "dps": "29.9 DPS",
+              "speed": "3.70",
+              "weaponType": "Staff",
+              "quality": "q4",
+              "iLvl": 40,
+              "reqLevel": 35,
+              "stats": "+60 Spell Power, +11 Intellect, +11 Spirit",
+              "icon": "inv_staff_13"
             }
           ],
           "faction": "both",
@@ -12988,7 +12819,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "36–40",
           "itemId": 7713,
           "name": "Illusionary Rod",
-          "icon": "inv_staff_13",
+          "icon": "inv_wand_04",
           "weaponType": "Staff",
           "speed": "2.90",
           "dps": "25.7 DPS",
@@ -13009,49 +12840,8 @@ if (typeof window !== 'undefined') {
               "quality": "q4",
               "iLvl": 40,
               "reqLevel": 35,
-              "stats": "+26 Spell Power"
-            },
-            {
-              "name": "Dancing Flame",
-              "itemId": 6806,
-              "value": "29.2 DPS - World drop wand",
-              "faction": "both",
-              "dps": "31.07 DPS",
-              "speed": "1.40",
-              "weaponType": "Wand",
-              "quality": "q2",
-              "iLvl": 38,
-              "stats": "+4 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 4.",
-              "lines": [
-                "Binds when picked up",
-                "Ranged\tWand",
-                "30 - 57 Fire Damage\tSpeed 1.40",
-                "(31.1 damage per second)",
-                "+4 Intellect",
-                "Equip: Increases damage and healing done by magical spells and effects by up to 4."
-              ],
-              "reqLevel": 26
-            },
-            {
-              "name": "Rod of Sorrow",
-              "itemId": 5247,
-              "value": "28.0 DPS - Quest",
-              "faction": "both",
-              "dps": "32.63 DPS",
-              "speed": "1.90",
-              "weaponType": "Wand",
-              "quality": "q2",
-              "iLvl": 40,
-              "stats": "+4 Stamina, +3 Spirit",
-              "lines": [
-                "Binds when picked up",
-                "Ranged\tWand",
-                "43 - 81 Shadow Damage\tSpeed 1.90",
-                "(32.6 damage per second)",
-                "+4 Stamina",
-                "+3 Spirit"
-              ],
-              "reqLevel": 30
+              "stats": "+26 Spell Power",
+              "icon": "inv_staff_13"
             }
           ],
           "faction": "both",
@@ -13064,7 +12854,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "41–46",
           "itemId": 9527,
           "name": "Spellshifter Rod",
-          "icon": "inv_staff_10",
+          "icon": "inv_wand_11",
           "weaponType": "Staff",
           "speed": "3.00",
           "dps": "31.1 DPS",
@@ -13085,20 +12875,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 48,
               "reqLevel": 43,
-              "stats": "+10 Int, +21 SP"
-            },
-            {
-              "name": "Dreambough Wand",
-              "itemId": 249234,
-              "value": "31.0 DPS - World drop wand",
-              "faction": "both",
-              "dps": "39.17 DPS",
-              "speed": "1.80",
-              "weaponType": "Wand",
-              "quality": "q2",
-              "iLvl": 48,
-              "reqLevel": 43,
-              "stats": ""
+              "stats": "+10 Int, +21 SP",
+              "icon": "inv_staff_10"
             },
             {
               "name": "Emerald Watcher's Dreamstaff",
@@ -13111,7 +12889,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 49,
               "reqLevel": 44,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_staff_17"
             }
           ],
           "faction": "both",
@@ -13124,14 +12903,14 @@ if (typeof window !== 'undefined') {
           "levelBracket": "47–50",
           "itemId": 20536,
           "name": "Soul Harvester",
-          "icon": "inv_weapon_halberd_01",
+          "icon": "inv_sword_48",
           "weaponType": "Staff",
           "speed": "3.30",
           "dps": "33.5 DPS",
           "source": {
             "kind": "quest",
-            "title": "Trolls of a Feather",
-            "detail": "Level 50 Warlock class quest in Sunken Temple (+16 Sta, +24 Shadow SP, Drain Life proc)"
+            "title": "The Temple of Atal'Hakkar (Warlock Quest)",
+            "detail": "Class quest in Sunken Temple. Best-in-slot leveling staff in the game for Warlocks."
           },
           "alts": [
             {
@@ -13145,33 +12924,21 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 53,
               "reqLevel": 48,
-              "stats": "+14 Critical Strike Rating, +60 Spell Power"
-            },
-            {
-              "name": "Lesser Eternal Wand",
-              "itemId": 249232,
-              "value": "33.0 DPS - Enchanting (265)",
-              "faction": "both",
-              "dps": "45.75 DPS",
-              "speed": "2.00",
-              "weaponType": "Wand",
-              "quality": "q2",
-              "iLvl": 54,
-              "reqLevel": 49,
-              "stats": ""
+              "stats": "+14 Critical Strike Rating, +60 Spell Power",
+              "icon": "inv_staff_18"
             }
           ],
           "faction": "both",
           "quality": "q3",
           "iLvl": 52,
           "reqLevel": 50,
-          "stats": "+16 Sta, +24 Shadow SP, Drain Life proc"
+          "stats": "+73 Shadow Spell Power, +19 Stamina, +16 Intellect, +10 Hit Rating"
         },
         {
           "levelBracket": "51–60",
           "itemId": 20536,
           "name": "Soul Harvester",
-          "icon": "inv_weapon_halberd_01",
+          "icon": "inv_sword_48",
           "weaponType": "Staff",
           "speed": "3.30",
           "dps": "33.5 DPS",
@@ -13192,7 +12959,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 58,
               "reqLevel": 53,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_staff_51"
             },
             {
               "name": "Rod of the Ogre Magi",
@@ -13203,7 +12971,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 56,
               "reqLevel": 50,
-              "stats": "+14 Int, +11 Spi, +23 SP, 1% Spell Crit"
+              "stats": "+14 Int, +11 Spi, +23 SP, 1% Spell Crit",
+              "icon": "inv_misc_questionmark"
             },
             {
               "name": "Witchblade",
@@ -13215,33 +12984,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 56,
               "reqLevel": 50,
-              "stats": "+14 SP"
-            },
-            {
-              "name": "Greater Eternal Wand",
-              "itemId": 249237,
-              "value": "36.0 DPS - Enchanting (285)",
-              "faction": "both",
-              "dps": "53.33 DPS",
-              "speed": "1.50",
-              "weaponType": "Wand",
-              "quality": "q2",
-              "iLvl": 60,
-              "reqLevel": 55,
-              "stats": ""
-            },
-            {
-              "name": "Brilliant Wand",
-              "itemId": 249385,
-              "value": "38.0 DPS - World drop wand",
-              "faction": "both",
-              "dps": "59.58 DPS",
-              "speed": "1.20",
-              "weaponType": "Wand",
-              "quality": "q3",
-              "iLvl": 60,
-              "reqLevel": 55,
-              "stats": ""
+              "stats": "+14 SP",
+              "icon": "inv_misc_questionmark"
             }
           ],
           "faction": "both",
@@ -13257,41 +13001,27 @@ if (typeof window !== 'undefined') {
       "tracks": [
         {
           "id": "primary",
-          "name": "Wand & Staff Mastery (Discipline / Shadow)"
+          "name": "Staves & Maces (Discipline / Holy / Shadow)"
         }
       ],
       "levels": [
         {
           "levelBracket": "1–2",
-          "itemId": 247789,
-          "name": "Novice's Practice Wand",
-          "icon": "inv_wand_01",
-          "weaponType": "Wand",
-          "speed": "1.50",
-          "dps": "4.0 DPS",
+          "itemId": 2495,
+          "name": "Acolyte's Staff",
+          "icon": "inv_staff_08",
+          "weaponType": "Staff",
+          "speed": "2.80",
+          "dps": "2.0 DPS",
           "source": {
-            "kind": "craft",
-            "title": "Enchanting (10)",
-            "detail": "Priest wanding engine starts here"
+            "kind": "vendor",
+            "title": "Starter Weapon Vendor",
+            "detail": "Purchased from starter weapon vendors."
           },
-          "alts": [
-            {
-              "name": "Short Staff",
-              "itemId": 2132,
-              "value": "2.0 DPS - Starter vendor staff",
-              "faction": "both",
-              "dps": "2.03 DPS",
-              "speed": "3.20",
-              "weaponType": "Staff",
-              "quality": "q1",
-              "iLvl": 4,
-              "reqLevel": 1,
-              "stats": ""
-            }
-          ],
+          "alts": [],
           "faction": "both",
           "quality": "q1",
-          "iLvl": 6,
+          "iLvl": 4,
           "reqLevel": 1,
           "stats": ""
         },
@@ -13308,21 +13038,7 @@ if (typeof window !== 'undefined') {
             "title": "Weapon Vendor",
             "detail": "Purchased in starter hub towns"
           },
-          "alts": [
-            {
-              "name": "Novice's Practice Wand",
-              "itemId": 247789,
-              "value": "4.0 DPS - Starter wand",
-              "faction": "both",
-              "dps": "4 DPS",
-              "speed": "1.50",
-              "weaponType": "Wand",
-              "quality": "q1",
-              "iLvl": 6,
-              "reqLevel": 2,
-              "stats": ""
-            }
-          ],
+          "alts": [],
           "faction": "both",
           "quality": "q1",
           "iLvl": 8,
@@ -13331,43 +13047,29 @@ if (typeof window !== 'undefined') {
         },
         {
           "levelBracket": "5–6",
-          "itemId": 11287,
-          "name": "Lesser Magic Wand",
-          "icon": "inv_wand_01",
-          "weaponType": "Wand",
-          "speed": "1.50",
-          "dps": "11.3 DPS",
+          "itemId": 6534,
+          "name": "Darkwood Staff",
+          "icon": "inv_ingot_mithril",
+          "weaponType": "Staff",
+          "speed": "2.90",
+          "dps": "4.8 DPS",
           "source": {
-            "kind": "craft",
-            "title": "Enchanting (10)",
-            "detail": "Massive early damage surge with Wand Specialization (25% extra damage)"
+            "kind": "drop",
+            "title": "Darkwood Staff",
+            "detail": "Level 8-15 zone drops across Eastern Kingdoms & Kalimdor."
           },
-          "alts": [
-            {
-              "name": "Walking Stick",
-              "itemId": 2495,
-              "value": "4.2 DPS - Vendor",
-              "faction": "both",
-              "dps": "4.2 DPS",
-              "speed": "2.50",
-              "weaponType": "Staff",
-              "quality": "q1",
-              "iLvl": 8,
-              "reqLevel": 3,
-              "stats": ""
-            }
-          ],
+          "alts": [],
           "faction": "both",
           "quality": "q2",
-          "iLvl": 15,
-          "reqLevel": 5,
-          "stats": "+1 Spell Power"
+          "iLvl": 11,
+          "reqLevel": 6,
+          "stats": "+2 Spirit, +1 Intellect"
         },
         {
           "levelBracket": "7–8",
           "itemId": 248008,
           "name": "Apprentice's Spellstaff",
-          "icon": "inv_staff_10",
+          "icon": "inv_staff_18",
           "weaponType": "Staff",
           "speed": "2.40",
           "dps": "6.4 DPS",
@@ -13386,33 +13088,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 12,
               "reqLevel": 6,
-              "stats": ""
-            },
-            {
-              "name": "Lesser Magic Wand",
-              "itemId": 11287,
-              "value": "11.3 DPS - Enchanting (10)",
-              "faction": "both",
-              "dps": "11.33 DPS",
-              "speed": "1.50",
-              "weaponType": "Wand",
-              "quality": "q2",
-              "iLvl": 15,
-              "reqLevel": 5,
-              "stats": "+1 Spell Power"
-            },
-            {
-              "name": "Riptear's Spare Arm",
-              "itemId": 286743,
-              "value": "9.4 DPS, 1.70s Wand - Durotar Quest: Rear Guard Patrol",
-              "faction": "horde",
-              "dps": "9.41 DPS",
-              "speed": "1.70",
-              "weaponType": "Wand",
-              "quality": "q2",
-              "iLvl": 13,
-              "reqLevel": 6,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_weapon_shortblade_05"
             },
             {
               "name": "Darkwood Staff",
@@ -13425,20 +13102,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 13,
               "reqLevel": 7,
-              "stats": "+6 Spell Power"
-            },
-            {
-              "name": "Wisesight Wand",
-              "itemId": 286750,
-              "weaponType": "Wand",
-              "speed": "1.70",
-              "dps": "8.8 DPS",
-              "value": "8.8 DPS, 1.70s - Early Wand Drop",
-              "faction": "both",
-              "quality": "q2",
-              "iLvl": 12,
-              "reqLevel": 7,
-              "stats": ""
+              "stats": "+6 Spell Power",
+              "icon": "inv_staff_16"
             }
           ],
           "faction": "alliance",
@@ -13449,30 +13114,18 @@ if (typeof window !== 'undefined') {
         },
         {
           "levelBracket": "9–10",
-          "itemId": 11287,
-          "name": "Lesser Magic Wand",
-          "icon": "inv_wand_01",
-          "weaponType": "Wand",
-          "speed": "1.50",
-          "dps": "11.3 DPS",
+          "itemId": 6682,
+          "name": "Staff of the Dor'Danil",
+          "icon": "inv_chest_cloth_20",
+          "weaponType": "Staff",
+          "speed": "2.80",
+          "dps": "7.7 DPS",
           "source": {
-            "kind": "craft",
-            "title": "Enchanting (10)",
-            "detail": "Enables high mana regeneration via the 5-second rule while wanding"
+            "kind": "quest",
+            "title": "The Relics of Wakening",
+            "detail": "Quest reward from Teldrassil / Darkshore."
           },
           "alts": [
-            {
-              "name": "Pagan Rod",
-              "itemId": 6449,
-              "value": "8.6 DPS, 1.90s - Vendor wand",
-              "faction": "both",
-              "dps": "8.6 DPS",
-              "speed": "1.90",
-              "quality": "q2",
-              "iLvl": 14,
-              "reqLevel": 8,
-              "stats": ""
-            },
             {
               "name": "Staff of the Dor'Danil",
               "itemId": 15396,
@@ -13482,81 +13135,30 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 14,
               "reqLevel": 8,
-              "stats": ""
-            },
-            {
-              "name": "Riptear's Spare Arm",
-              "itemId": 286743,
-              "value": "9.4 DPS - Durotar Quest: Rear Guard Patrol",
-              "faction": "horde",
-              "dps": "9.41 DPS",
-              "speed": "1.70",
-              "weaponType": "Wand",
-              "quality": "q2",
-              "iLvl": 13,
-              "reqLevel": 6,
-              "stats": ""
-            },
-            {
-              "name": "Cinder Wand",
-              "itemId": 5242,
-              "value": "11.8 DPS, 1.40s - Silverpine Quest: Arugal's Folly",
-              "faction": "horde",
-              "dps": "11.79 DPS",
-              "speed": "1.40",
-              "weaponType": "Wand",
-              "quality": "q2",
-              "iLvl": 16,
-              "reqLevel": 9,
-              "stats": "+1 Spell Power"
-            },
-            {
-              "name": "Deepblaze",
-              "itemId": 279896,
-              "weaponType": "Wand",
-              "speed": "1.70",
-              "dps": "18.5 DPS",
-              "value": "18.5 DPS, 1.70s - Alliance Ironforge Quest",
-              "faction": "alliance",
-              "quality": "q3",
-              "iLvl": 18,
-              "reqLevel": 9,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_weapon_shortblade_05"
             }
           ],
           "faction": "both",
           "quality": "q2",
           "iLvl": 15,
-          "reqLevel": 5,
-          "stats": "+1 Spell Power"
+          "reqLevel": 10,
+          "stats": "+2 Intellect, +2 Spirit"
         },
         {
           "levelBracket": "11–12",
-          "itemId": 11288,
-          "name": "Greater Magic Wand",
-          "icon": "inv_wand_02",
-          "weaponType": "Wand",
-          "speed": "1.70",
-          "dps": "17.5 DPS",
+          "itemId": 2026,
+          "name": "Trogg Scepter",
+          "icon": "inv_hammer_09",
+          "weaponType": "One-handed mace",
+          "speed": "2.10",
+          "dps": "8.6 DPS",
           "source": {
-            "kind": "craft",
-            "title": "Enchanting (75)",
-            "detail": "Kills mobs with almost zero mana consumption"
+            "kind": "drop",
+            "title": "Loch Modan / Barrens Drops",
+            "detail": "Drop from Troggs in Loch Modan or Quillboars in the Barrens."
           },
           "alts": [
-            {
-              "name": "Oakthrush Staff",
-              "itemId": 15397,
-              "value": "10.9 DPS - Ashenvale quest",
-              "faction": "both",
-              "dps": "7.14 DPS",
-              "speed": "2.80",
-              "weaponType": "Staff",
-              "quality": "q2",
-              "iLvl": 14,
-              "reqLevel": 12,
-              "stats": "+6 Spell Power"
-            },
             {
               "name": "Pagan Rod",
               "itemId": 6449,
@@ -13566,7 +13168,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 16,
               "reqLevel": 10,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_chest_cloth_15"
             },
             {
               "name": "Cauldron Stirrer",
@@ -13579,46 +13182,21 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 15,
               "reqLevel": 10,
-              "stats": "+8 Spell Power"
-            },
-            {
-              "name": "Cinder Wand",
-              "itemId": 5242,
-              "value": "11.8 DPS - Silverpine Quest: Arugal's Folly",
-              "faction": "horde",
-              "dps": "11.79 DPS",
-              "speed": "1.40",
-              "weaponType": "Wand",
-              "quality": "q2",
-              "iLvl": 16,
-              "reqLevel": 9,
-              "stats": "+1 Spell Power"
-            },
-            {
-              "name": "Spark of the People's Militia",
-              "itemId": 12296,
-              "weaponType": "Wand",
-              "speed": "1.80",
-              "dps": "12.8 DPS",
-              "value": "12.8 DPS, 1.80s - Westfall Quest",
-              "faction": "alliance",
-              "quality": "q2",
-              "iLvl": 17,
-              "reqLevel": 9,
-              "stats": "+1 Spell Power"
+              "stats": "+8 Spell Power",
+              "icon": "inv_staff_08"
             }
           ],
           "faction": "both",
           "quality": "q2",
-          "iLvl": 23,
-          "reqLevel": 13,
-          "stats": "+2 Spell Power"
+          "iLvl": 17,
+          "reqLevel": 12,
+          "stats": "+2 Spirit, +2 Stamina"
         },
         {
           "levelBracket": "13–14",
           "itemId": 270228,
           "name": "Golemheart Stave",
-          "icon": "inv_staff_20",
+          "icon": "inv_staff_18",
           "weaponType": "Staff",
           "speed": "2.60",
           "dps": "14.2 DPS",
@@ -13639,20 +13217,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 9,
-              "stats": "+6 Int, +6 Agi, +18 Spell Dmg"
-            },
-            {
-              "name": "Greater Magic Wand",
-              "itemId": 11288,
-              "value": "17.5 DPS - Enchanting (75)",
-              "faction": "both",
-              "dps": "17.5 DPS",
-              "speed": "1.80",
-              "weaponType": "Wand",
-              "quality": "q2",
-              "iLvl": 23,
-              "reqLevel": 13,
-              "stats": "+2 Spell Power"
+              "stats": "+6 Int, +6 Agi, +18 Spell Dmg",
+              "icon": "inv_staff_goldfeathered_01"
             },
             {
               "name": "Trogg Scepter",
@@ -13674,7 +13240,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases healing done by up to 33 and damage done by up to 11 for all magical spells and effects.",
                 "Requires Level 13"
               ],
-              "reqLevel": 13
+              "reqLevel": 13,
+              "icon": "inv_misc_bone_10"
             },
             {
               "name": "Kris of Orgrimmar",
@@ -13687,20 +13254,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 9,
-              "stats": "+4 Sta, +33 Healing, +11 Spell Damage"
-            },
-            {
-              "name": "Moongazer's Wand",
-              "itemId": 284193,
-              "weaponType": "Wand",
-              "speed": "1.70",
-              "dps": "14.4 DPS",
-              "value": "14.4 DPS, 1.70s - Ashenvale Rare",
-              "faction": "both",
-              "quality": "q2",
-              "iLvl": 19,
-              "reqLevel": 14,
-              "stats": ""
+              "stats": "+4 Sta, +33 Healing, +11 Spell Damage",
+              "icon": "inv_weapon_shortblade_05"
             }
           ],
           "faction": "both",
@@ -13713,7 +13268,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "15–16",
           "itemId": 271103,
           "name": "Scepter of the Abandoned",
-          "icon": "inv_mace_01",
+          "icon": "inv_misc_questionmark",
           "weaponType": "One-handed mace",
           "speed": "2.20",
           "dps": "14.0 DPS",
@@ -13734,7 +13289,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 9,
-              "stats": "+6 Int, +6 Agi, +18 Spell Dmg"
+              "stats": "+6 Int, +6 Agi, +18 Spell Dmg",
+              "icon": "inv_staff_goldfeathered_01"
             },
             {
               "name": "Segmented Spider Leg",
@@ -13747,7 +13303,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 20,
               "reqLevel": 15,
-              "stats": "+5 Int, +4 Sta"
+              "stats": "+5 Int, +4 Sta",
+              "icon": "inv_misc_questionmark"
             },
             {
               "name": "Emberstone Staff",
@@ -13760,7 +13317,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 22,
               "reqLevel": 17,
-              "stats": "+8 Stamina, +8 Fire Resistance, +24 Spell Power"
+              "stats": "+8 Stamina, +8 Fire Resistance, +24 Spell Power",
+              "icon": "inv_staff_13"
             },
             {
               "name": "Kris of Orgrimmar",
@@ -13773,20 +13331,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 9,
-              "stats": "+4 Sta, +33 Healing, +11 Spell Damage"
-            },
-            {
-              "name": "Whelpfire Wand",
-              "itemId": 281925,
-              "weaponType": "Wand",
-              "speed": "1.90",
-              "dps": "15.3 DPS",
-              "value": "15.3 DPS, 1.90s - Wetlands Drop",
-              "faction": "both",
-              "quality": "q2",
-              "iLvl": 20,
-              "reqLevel": 15,
-              "stats": ""
+              "stats": "+4 Sta, +33 Healing, +11 Spell Damage",
+              "icon": "inv_weapon_shortblade_05"
             }
           ],
           "faction": "both",
@@ -13799,7 +13345,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "17–18",
           "itemId": 271105,
           "name": "Coldspire Staff",
-          "icon": "inv_staff_08",
+          "icon": "inv_misc_questionmark",
           "weaponType": "Staff",
           "speed": "2.80",
           "dps": "16.8 DPS",
@@ -13820,7 +13366,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 9,
-              "stats": "+6 Int, +6 Agi, +18 Spell Dmg"
+              "stats": "+6 Int, +6 Agi, +18 Spell Dmg",
+              "icon": "inv_staff_goldfeathered_01"
             },
             {
               "name": "Staff of Westfall",
@@ -13843,7 +13390,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases healing done by up to 48 and damage done by up to 16 for all magical spells and effects.",
                 "Equip: Movement speed increased by 2% in Elwynn Forest, Westfall, Redridge Mountains, and the Deadmines."
               ],
-              "reqLevel": 14
+              "reqLevel": 14,
+              "icon": "inv_staff_10"
             },
             {
               "name": "Living Root",
@@ -13856,7 +13404,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 23,
               "reqLevel": 18,
-              "stats": "+5 Spirit, +9 Nature Resistance, +45 Healing, +15 Spell Damage"
+              "stats": "+5 Spirit, +9 Nature Resistance, +45 Healing, +15 Spell Damage",
+              "icon": "inv_staff_25"
             },
             {
               "name": "Kris of Orgrimmar",
@@ -13869,7 +13418,22 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 9,
-              "stats": "+4 Sta, +33 Healing, +11 Spell Damage"
+              "stats": "+4 Sta, +33 Healing, +11 Spell Damage",
+              "icon": "inv_weapon_shortblade_05"
+            },
+            {
+              "name": "Witching Stave",
+              "itemId": 1484,
+              "value": "+27 Shadow Spell Power, +6 Sta, +5 Int - Level 17 Rare Drop",
+              "faction": "both",
+              "dps": "14.0 DPS",
+              "speed": "3.60",
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 22,
+              "reqLevel": 17,
+              "stats": "+27 Shadow Spell Power, +6 Stamina, +5 Intellect",
+              "icon": "inv_wand_04"
             }
           ],
           "faction": "both",
@@ -13882,7 +13446,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "19–20",
           "itemId": 2042,
           "name": "Staff of Westfall",
-          "icon": "inv_staff_08",
+          "icon": "inv_staff_10",
           "weaponType": "Staff",
           "speed": "2.90",
           "dps": "15.2 DPS",
@@ -13892,6 +13456,25 @@ if (typeof window !== 'undefined') {
             "detail": "Deadmines quest reward (+5 Int, +11 Spi)"
           },
           "alts": [
+            {
+              "name": "Crescent Staff",
+              "itemId": 6505,
+              "value": "+26 Spell Power, +7 Agi, +7 Sta - Leaders of the Fang quest in Wailing Caverns (Horde)",
+              "faction": "horde",
+              "dps": "15.2 DPS",
+              "speed": "2.90",
+              "weaponType": "Staff",
+              "quality": "q3",
+              "iLvl": 24,
+              "reqLevel": 10,
+              "stats": "+26 Spell Power, +7 Agility, +7 Stamina",
+              "icon": "inv_staff_04",
+              "source": {
+                "kind": "quest",
+                "title": "Leaders of the Fang",
+                "detail": "Major dungeon quest reward in Wailing Caverns (Horde). Elite spell power boost."
+              }
+            },
             {
               "name": "Staff of Orgrimmar",
               "itemId": 15444,
@@ -13903,7 +13486,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 9,
-              "stats": "+6 Int, +6 Agi, +18 Spell Dmg"
+              "stats": "+6 Int, +6 Agi, +18 Spell Dmg",
+              "icon": "inv_staff_goldfeathered_01"
             },
             {
               "name": "Odo's Ley Staff",
@@ -13926,7 +13510,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases healing done by up to 52 and damage done by up to 17 for all magical spells and effects.",
                 "Requires Level 21"
               ],
-              "reqLevel": 21
+              "reqLevel": 21,
+              "icon": "inv_staff_27"
             },
             {
               "name": "Glimmering Staff",
@@ -13949,7 +13534,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases damage and healing done by magical spells and effects by up to 34.",
                 "Requires Level 25"
               ],
-              "reqLevel": 25
+              "reqLevel": 25,
+              "icon": "inv_staff_19"
             },
             {
               "name": "Kris of Orgrimmar",
@@ -13962,7 +13548,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 9,
-              "stats": "+4 Sta, +33 Healing, +11 Spell Damage"
+              "stats": "+4 Sta, +33 Healing, +11 Spell Damage",
+              "icon": "inv_weapon_shortblade_05"
             }
           ],
           "faction": "alliance",
@@ -13983,57 +13570,18 @@ if (typeof window !== 'undefined') {
         },
         {
           "levelBracket": "21–24",
-          "itemId": 7001,
-          "name": "Gravestone Scepter",
-          "icon": "inv_wand_02",
-          "weaponType": "Wand",
-          "speed": "1.50",
-          "dps": "29.0 DPS",
+          "itemId": 6536,
+          "name": "Rod of the Sleepwalker",
+          "icon": "inv_shirt_green_01",
+          "weaponType": "Staff",
+          "speed": "3.20",
+          "dps": "17.8 DPS",
           "source": {
-            "kind": "quest",
-            "title": "Blackfathom Villainy",
-            "detail": "BFD quest reward (God-tier 29.0 DPS wand)"
+            "kind": "dungeon",
+            "title": "Blackfathom Deeps",
+            "detail": "Drop from Twilight Lord Kelris in BFD."
           },
           "alts": [
-            {
-              "name": "Rod of the Sleepwalker",
-              "itemId": 1155,
-              "value": "17.7 DPS, +11 Int, +10 Spi - BFD: Twilight Lord Kelris",
-              "faction": "both",
-              "dps": "17.68 DPS",
-              "speed": "2.80",
-              "weaponType": "Staff",
-              "quality": "q3",
-              "iLvl": 29,
-              "reqLevel": 24,
-              "stats": "+11 Int, +10 Spi"
-            },
-            {
-              "name": "Lesser Mystic Wand",
-              "itemId": 11289,
-              "value": "22.2 DPS - Enchanting (155)",
-              "faction": "both",
-              "dps": "25.38 DPS",
-              "speed": "1.30",
-              "weaponType": "Wand",
-              "quality": "q2",
-              "iLvl": 31,
-              "reqLevel": 26,
-              "stats": "+4 Intellect"
-            },
-            {
-              "name": "Snapped Branch Wand",
-              "itemId": 284574,
-              "weaponType": "Wand",
-              "speed": "1.70",
-              "dps": "21.2 DPS",
-              "value": "21.2 DPS, 1.70s - Custom Wand Drop",
-              "faction": "both",
-              "quality": "q2",
-              "iLvl": 27,
-              "reqLevel": 22,
-              "stats": ""
-            },
             {
               "name": "Alliance Outrunner Staff",
               "itemId": 285350,
@@ -14045,13 +13593,14 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 26,
               "reqLevel": 21,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_staff_11"
             }
           ],
           "faction": "both",
           "quality": "q3",
           "iLvl": 29,
-          "stats": "+3 Spirit, Equip: Increases damage done by Shadow spells and effects by up to 6.",
+          "stats": "+11 Intellect, +10 Spirit",
           "lines": [
             "Binds when picked up",
             "Ranged\tWand",
@@ -14060,45 +13609,22 @@ if (typeof window !== 'undefined') {
             "+3 Spirit",
             "Equip: Increases damage done by Shadow spells and effects by up to 6."
           ],
-          "reqLevel": 18
+          "reqLevel": 24
         },
         {
           "levelBracket": "25–26",
-          "itemId": 7001,
-          "name": "Gravestone Scepter",
-          "icon": "inv_wand_02",
-          "weaponType": "Wand",
-          "speed": "1.50",
-          "dps": "29.0 DPS",
+          "itemId": 6631,
+          "name": "Death Prophet Spine",
+          "icon": "inv_staff_25",
+          "weaponType": "Staff",
+          "speed": "2.90",
+          "dps": "19.3 DPS",
           "source": {
-            "kind": "quest",
-            "title": "Blackfathom Villainy",
-            "detail": "Remains top-tier through level 35"
+            "kind": "dungeon",
+            "title": "Razorfen Kraul",
+            "detail": "Drop from Death Speaker Jargba in RFK."
           },
           "alts": [
-            {
-              "name": "Death Prophet Spine",
-              "itemId": 274158,
-              "value": "18.9 DPS, 2.80s, +11 Sta, +34 SP, 5 MP5 - RFK: Aggem Thorncurse",
-              "faction": "both",
-              "dps": "18.93 DPS",
-              "speed": "2.80",
-              "weaponType": "Staff",
-              "quality": "q3",
-              "iLvl": 31,
-              "stats": "+11 Stamina, Equip: Increases damage and healing done by magical spells and effects by up to 34., Equip: Restores 5 Mana per 5 sec.",
-              "lines": [
-                "Binds when picked up",
-                "Two-Hand\tStaff",
-                "42 - 64 Damage\tSpeed 2.80",
-                "(18.9 damage per second)",
-                "+11 Stamina",
-                "Equip: Increases damage and healing done by magical spells and effects by up to 34.",
-                "Equip: Restores 5 Mana per 5 sec.",
-                "Requires Level 26"
-              ],
-              "reqLevel": 26
-            },
             {
               "name": "Crested Scepter",
               "itemId": 3414,
@@ -14120,7 +13646,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases damage and healing done by magical spells and effects by up to 32.",
                 "Requires Level 24"
               ],
-              "reqLevel": 24
+              "reqLevel": 24,
+              "icon": "inv_mace_08"
             },
             {
               "name": "Striking Staff",
@@ -14142,27 +13669,8 @@ if (typeof window !== 'undefined') {
                 "+6 Stamina",
                 "+14 Intellect"
               ],
-              "reqLevel": 24
-            },
-            {
-              "name": "Unstable Power Core",
-              "itemId": 279847,
-              "weaponType": "Wand",
-              "speed": "1.70",
-              "dps": "29.7 DPS",
-              "value": "29.7 DPS, 1.70s - Dalaran Dungeon",
-              "faction": "both",
-              "quality": "q2",
-              "iLvl": 36,
-              "stats": "+4 Stamina",
-              "lines": [
-                "Binds when picked up",
-                "Ranged\tWand",
-                "35 - 66 Arcane Damage\tSpeed 1.70",
-                "(29.7 damage per second)",
-                "+4 Stamina"
-              ],
-              "reqLevel": 24
+              "reqLevel": 24,
+              "icon": "inv_staff_28"
             },
             {
               "name": "Fallen Dragon's Scepter",
@@ -14184,13 +13692,14 @@ if (typeof window !== 'undefined') {
                 "+13 Spirit",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 36."
               ],
-              "reqLevel": 24
+              "reqLevel": 24,
+              "icon": "inv_staff_08"
             }
           ],
           "faction": "both",
-          "quality": "q3",
-          "iLvl": 29,
-          "stats": "+3 Spirit, Equip: Increases damage done by Shadow spells and effects by up to 6.",
+          "quality": "q2",
+          "iLvl": 30,
+          "stats": "+6 Intellect, +6 Spirit",
           "lines": [
             "Binds when picked up",
             "Ranged\tWand",
@@ -14199,45 +13708,40 @@ if (typeof window !== 'undefined') {
             "+3 Spirit",
             "Equip: Increases damage done by Shadow spells and effects by up to 6."
           ],
-          "reqLevel": 18
+          "reqLevel": 25
         },
         {
           "levelBracket": "27–28",
-          "itemId": 273043,
-          "name": "Wand of Mana Concentration",
-          "icon": "inv_wand_04",
-          "weaponType": "Wand",
-          "speed": "1.70",
-          "dps": "31.2 DPS",
+          "itemId": 6631,
+          "name": "Spine of the Devourer",
+          "icon": "inv_staff_25",
+          "weaponType": "Staff",
+          "speed": "2.90",
+          "dps": "20.1 DPS",
           "source": {
             "kind": "dungeon",
-            "title": "Arcanic Enigma",
-            "detail": "City of Dalaran (+4 Int, 2 MP5, Req Level 27)"
+            "title": "Razorfen Kraul",
+            "detail": "Drop from boss encounters in Razorfen Kraul."
           },
           "alts": [
             {
-              "name": "Spine of the Devourer",
-              "itemId": 273040,
-              "value": "20.7 DPS, +36 SP - City of Dalaran: Mana Devourer",
+              "name": "Death Speaker Scepter",
+              "itemId": 2816,
+              "value": "+68 Healing, +28 Shadow SP, 12 HP5 - Razorfen Kraul (Death Speaker Jargba)",
               "faction": "both",
-              "dps": "20.69 DPS",
-              "speed": "3.60",
-              "weaponType": "Staff",
+              "dps": "18.5 DPS",
+              "speed": "2.20",
+              "weaponType": "One-handed mace",
               "quality": "q3",
               "iLvl": 33,
-              "stats": "+14 Stamina, Equip: +3 Spell Penetration, Equip: +36 Spell Power",
-              "lines": [
-                "Binds when picked up",
-                "Two-Hand\tStaff",
-                "59 - 90 Damage\tSpeed 3.60",
-                "(20.7 damage per second)",
-                "+14 Stamina",
-                "Requires Level 28",
-                "Equip: +3 Spell Penetration",
-                "Equip: +36 Spell Power",
-                "Sell Price: 85s 58c"
-              ],
-              "reqLevel": 28
+              "reqLevel": 28,
+              "stats": "+68 Healing, +28 Shadow Spell Power, 12 Health per 5 sec",
+              "icon": "inv_mace_07",
+              "source": {
+                "kind": "dungeon",
+                "title": "Razorfen Kraul",
+                "detail": "Dropped by Death Speaker Jargba. Invaluable 1H mace for Priests, Shamans, and Paladins."
+              }
             },
             {
               "name": "Tendonscraper Dagger",
@@ -14261,13 +13765,14 @@ if (typeof window !== 'undefined') {
                 "Equip: +36 Spell Power",
                 "Sell Price: 73s 79c"
               ],
-              "reqLevel": 28
+              "reqLevel": 28,
+              "icon": "inv_misc_bone_06"
             }
           ],
           "faction": "both",
-          "quality": "q3",
+          "quality": "q2",
           "iLvl": 32,
-          "stats": "+4 Intellect, Equip: +2 Mana Regeneration",
+          "stats": "+7 Intellect, +5 Spirit",
           "lines": [
             "Binds when picked up",
             "Ranged\tWand",
@@ -14284,7 +13789,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "29–30",
           "itemId": 271767,
           "name": "Healer's Staff",
-          "icon": "inv_staff_13",
+          "icon": "inv_staff_10",
           "weaponType": "Staff",
           "speed": "2.60",
           "dps": "20.8 DPS",
@@ -14314,7 +13819,8 @@ if (typeof window !== 'undefined') {
                 "+13 Spirit",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 36."
               ],
-              "reqLevel": 24
+              "reqLevel": 24,
+              "icon": "inv_staff_08"
             },
             {
               "name": "Madman's Blade",
@@ -14334,7 +13840,8 @@ if (typeof window !== 'undefined') {
                 "+7 Spirit",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 32."
               ],
-              "reqLevel": 28
+              "reqLevel": 28,
+              "icon": "inv_weapon_shortblade_15"
             },
             {
               "name": "Mindslicer",
@@ -14355,27 +13862,8 @@ if (typeof window !== 'undefined') {
                 "+7 Intellect",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 34."
               ],
-              "reqLevel": 30
-            },
-            {
-              "name": "Master Hunter's Wand",
-              "itemId": 270084,
-              "value": "34.7 DPS, 1.50s - STV: Big Game Hunter",
-              "faction": "both",
-              "dps": "34.67 DPS",
-              "speed": "1.50",
-              "weaponType": "Wand",
-              "quality": "q2",
-              "iLvl": 43,
-              "stats": "Equip: Increases damage and healing done by magical spells and effects by up to 7.",
-              "lines": [
-                "Binds when picked up",
-                "Ranged\tWand",
-                "36 - 68 Shadow Damage\tSpeed 1.50",
-                "(34.7 damage per second)",
-                "Equip: Increases damage and healing done by magical spells and effects by up to 7."
-              ],
-              "reqLevel": 28
+              "reqLevel": 30,
+              "icon": "inv_weapon_shortblade_15"
             }
           ],
           "faction": "both",
@@ -14397,7 +13885,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "31–35",
           "itemId": 7713,
           "name": "Illusionary Rod",
-          "icon": "inv_staff_13",
+          "icon": "inv_wand_04",
           "weaponType": "Staff",
           "speed": "2.90",
           "dps": "25.7 DPS",
@@ -14429,20 +13917,41 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases healing done by up to 52 and damage done by up to 17 for all magical spells and effects.",
                 "Requires Level 21"
               ],
-              "reqLevel": 21
+              "reqLevel": 21,
+              "icon": "inv_staff_32"
             },
             {
-              "name": "Twisted Nether Wand",
-              "itemId": 249144,
-              "value": "25.0 DPS - Craft/Drop",
+              "name": "Hypnotic Blade",
+              "itemId": 7714,
+              "value": "17.5 DPS, 1.40s - Arcanist Doan in SM Library (+44 Spell Power, +8 Int, +3 Spi)",
               "faction": "both",
-              "dps": "34 DPS",
-              "speed": "1.50",
-              "weaponType": "Wand",
-              "quality": "q2",
-              "iLvl": 42,
-              "reqLevel": 37,
-              "stats": ""
+              "dps": "17.5 DPS",
+              "speed": "1.40",
+              "weaponType": "Dagger",
+              "quality": "q3",
+              "iLvl": 39,
+              "reqLevel": 34,
+              "stats": "+44 Spell Power, +8 Intellect, +3 Spirit",
+              "icon": "inv_weapon_shortblade_07",
+              "source": {
+                "kind": "dungeon",
+                "title": "Scarlet Monastery (Library)",
+                "detail": "Dropped by Arcanist Doan in SM Library. Best 1H spell dagger in Phase 2."
+              }
+            },
+            {
+              "name": "Staff of Jordan",
+              "itemId": 873,
+              "value": "+60 Spell Power, +11 Int, +11 Spi - Level 35 Epic World Drop",
+              "faction": "both",
+              "dps": "29.9 DPS",
+              "speed": "3.70",
+              "weaponType": "Staff",
+              "quality": "q4",
+              "iLvl": 40,
+              "reqLevel": 35,
+              "stats": "+60 Spell Power, +11 Intellect, +11 Spirit",
+              "icon": "inv_staff_13"
             }
           ],
           "faction": "both",
@@ -14455,7 +13964,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "36–40",
           "itemId": 7713,
           "name": "Illusionary Rod",
-          "icon": "inv_staff_13",
+          "icon": "inv_wand_04",
           "weaponType": "Staff",
           "speed": "2.90",
           "dps": "25.7 DPS",
@@ -14476,49 +13985,8 @@ if (typeof window !== 'undefined') {
               "quality": "q4",
               "iLvl": 40,
               "reqLevel": 35,
-              "stats": "+26 Spell Power"
-            },
-            {
-              "name": "Dancing Flame",
-              "itemId": 6806,
-              "value": "29.2 DPS - World drop wand",
-              "faction": "both",
-              "dps": "31.07 DPS",
-              "speed": "1.40",
-              "weaponType": "Wand",
-              "quality": "q2",
-              "iLvl": 38,
-              "stats": "+4 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 4.",
-              "lines": [
-                "Binds when picked up",
-                "Ranged\tWand",
-                "30 - 57 Fire Damage\tSpeed 1.40",
-                "(31.1 damage per second)",
-                "+4 Intellect",
-                "Equip: Increases damage and healing done by magical spells and effects by up to 4."
-              ],
-              "reqLevel": 26
-            },
-            {
-              "name": "Rod of Sorrow",
-              "itemId": 5247,
-              "value": "28.0 DPS - Quest",
-              "faction": "both",
-              "dps": "32.63 DPS",
-              "speed": "1.90",
-              "weaponType": "Wand",
-              "quality": "q2",
-              "iLvl": 40,
-              "stats": "+4 Stamina, +3 Spirit",
-              "lines": [
-                "Binds when picked up",
-                "Ranged\tWand",
-                "43 - 81 Shadow Damage\tSpeed 1.90",
-                "(32.6 damage per second)",
-                "+4 Stamina",
-                "+3 Spirit"
-              ],
-              "reqLevel": 30
+              "stats": "+26 Spell Power",
+              "icon": "inv_staff_13"
             }
           ],
           "faction": "both",
@@ -14531,7 +13999,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "41–46",
           "itemId": 9527,
           "name": "Spellshifter Rod",
-          "icon": "inv_staff_10",
+          "icon": "inv_wand_11",
           "weaponType": "Staff",
           "speed": "3.00",
           "dps": "31.1 DPS",
@@ -14552,20 +14020,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 48,
               "reqLevel": 43,
-              "stats": "+10 Int, +21 SP"
-            },
-            {
-              "name": "Dreambough Wand",
-              "itemId": 249234,
-              "value": "31.0 DPS - World drop wand",
-              "faction": "both",
-              "dps": "39.17 DPS",
-              "speed": "1.80",
-              "weaponType": "Wand",
-              "quality": "q2",
-              "iLvl": 48,
-              "reqLevel": 43,
-              "stats": ""
+              "stats": "+10 Int, +21 SP",
+              "icon": "inv_staff_10"
             },
             {
               "name": "Emerald Watcher's Dreamstaff",
@@ -14578,7 +14034,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 49,
               "reqLevel": 44,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_staff_17"
             }
           ],
           "faction": "both",
@@ -14602,19 +14059,6 @@ if (typeof window !== 'undefined') {
           },
           "alts": [
             {
-              "name": "Lesser Eternal Wand",
-              "itemId": 249232,
-              "value": "33.0 DPS - Enchanting (265)",
-              "faction": "both",
-              "dps": "45.75 DPS",
-              "speed": "2.00",
-              "weaponType": "Wand",
-              "quality": "q2",
-              "iLvl": 54,
-              "reqLevel": 49,
-              "stats": ""
-            },
-            {
               "name": "Spire of the Stoneshaper",
               "itemId": 11802,
               "value": "33.8 DPS - BRD: Lord Incendius",
@@ -14623,7 +14067,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 52,
               "reqLevel": 46,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_misc_questionmark"
             }
           ],
           "faction": "both",
@@ -14636,7 +14081,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "53–60",
           "itemId": 274420,
           "name": "Wisepaw Totem",
-          "icon": "inv_staff_04",
+          "icon": "inv_staff_51",
           "weaponType": "Staff",
           "speed": "3.20",
           "dps": "36.9 DPS",
@@ -14657,7 +14102,8 @@ if (typeof window !== 'undefined') {
               "quality": "q4",
               "iLvl": 75,
               "reqLevel": 60,
-              "stats": "+31 Int, +12 Sta, +12 Spi, +106 Healing"
+              "stats": "+31 Int, +12 Sta, +12 Spi, +106 Healing",
+              "icon": "inv_staff_30"
             },
             {
               "name": "Rod of the Ogre Magi",
@@ -14668,33 +14114,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 58,
               "reqLevel": 52,
-              "stats": "+14 Int, +11 Spi, +23 SP, 1% Spell Crit"
-            },
-            {
-              "name": "Greater Eternal Wand",
-              "itemId": 249237,
-              "value": "36.0 DPS - Enchanting (285)",
-              "faction": "both",
-              "dps": "53.33 DPS",
-              "speed": "1.50",
-              "weaponType": "Wand",
-              "quality": "q2",
-              "iLvl": 60,
-              "reqLevel": 55,
-              "stats": ""
-            },
-            {
-              "name": "Brilliant Wand",
-              "itemId": 249385,
-              "value": "38.0 DPS - World drop wand",
-              "faction": "both",
-              "dps": "59.58 DPS",
-              "speed": "1.20",
-              "weaponType": "Wand",
-              "quality": "q3",
-              "iLvl": 60,
-              "reqLevel": 55,
-              "stats": ""
+              "stats": "+14 Int, +11 Spi, +23 SP, 1% Spell Crit",
+              "icon": "inv_misc_questionmark"
             }
           ],
           "faction": "both",
@@ -14718,7 +14139,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "1–2",
           "itemId": 2132,
           "name": "Short Staff",
-          "icon": "inv_staff_08",
+          "icon": "inv_staff_02",
           "weaponType": "Staff",
           "speed": "2.20",
           "dps": "2.0 DPS",
@@ -14737,7 +14158,8 @@ if (typeof window !== 'undefined') {
               "quality": "q1",
               "iLvl": 6,
               "reqLevel": 1,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_axe_10"
             }
           ],
           "faction": "both",
@@ -14750,7 +14172,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "3–4",
           "itemId": 2493,
           "name": "Wooden Mallet",
-          "icon": "inv_hammer_18",
+          "icon": "inv_hammer_16",
           "weaponType": "Two-handed mace",
           "speed": "2.60",
           "dps": "5.0 DPS",
@@ -14771,7 +14193,8 @@ if (typeof window !== 'undefined') {
               "quality": "q1",
               "iLvl": 8,
               "reqLevel": 3,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_staff_08"
             },
             {
               "name": "Large Club",
@@ -14784,7 +14207,8 @@ if (typeof window !== 'undefined') {
               "quality": "q1",
               "iLvl": 7,
               "reqLevel": 2,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_torch_unlit"
             }
           ],
           "faction": "both",
@@ -14797,7 +14221,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "5–6",
           "itemId": 2492,
           "name": "Large Club",
-          "icon": "inv_mace_04",
+          "icon": "inv_torch_unlit",
           "weaponType": "Two-handed mace",
           "speed": "2.70",
           "dps": "3.8 DPS",
@@ -14818,7 +14242,8 @@ if (typeof window !== 'undefined') {
               "quality": "q1",
               "iLvl": 9,
               "reqLevel": 4,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_mace_01"
             },
             {
               "name": "Walking Stick",
@@ -14831,7 +14256,8 @@ if (typeof window !== 'undefined') {
               "quality": "q1",
               "iLvl": 8,
               "reqLevel": 3,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_staff_08"
             },
             {
               "name": "Goblin Smasher",
@@ -14844,7 +14270,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 12,
               "reqLevel": 5,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_hammer_15"
             }
           ],
           "faction": "both",
@@ -14857,7 +14284,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "7–8",
           "itemId": 9603,
           "name": "Gritroot Staff",
-          "icon": "inv_staff_08",
+          "icon": "inv_staff_22",
           "weaponType": "Staff",
           "speed": "2.50",
           "dps": "5.4 DPS",
@@ -14876,7 +14303,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 12,
               "reqLevel": 6,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_weapon_shortblade_05"
             },
             {
               "name": "Apprentice's Spellstaff",
@@ -14889,7 +14317,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 12,
               "reqLevel": 1,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_staff_18"
             },
             {
               "name": "Bonecracker",
@@ -14902,7 +14331,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 13,
               "reqLevel": 7,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_mace_04"
             },
             {
               "name": "Darkwood Staff",
@@ -14915,7 +14345,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 13,
               "reqLevel": 7,
-              "stats": "+6 Spell Power"
+              "stats": "+6 Spell Power",
+              "icon": "inv_staff_16"
             }
           ],
           "faction": "alliance",
@@ -14928,7 +14359,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "9–10",
           "itemId": 1197,
           "name": "Giant Mace",
-          "icon": "inv_mace_01",
+          "icon": "inv_mace_02",
           "weaponType": "Two-handed mace",
           "speed": "3.50",
           "dps": "9.0 DPS",
@@ -14947,7 +14378,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 14,
               "reqLevel": 8,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_weapon_shortblade_05"
             },
             {
               "name": "Trogg Scepter",
@@ -14969,7 +14401,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases healing done by up to 33 and damage done by up to 11 for all magical spells and effects.",
                 "Requires Level 13"
               ],
-              "reqLevel": 13
+              "reqLevel": 13,
+              "icon": "inv_misc_bone_10"
             },
             {
               "name": "Cauldron Stirrer",
@@ -14982,7 +14415,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 15,
               "reqLevel": 10,
-              "stats": "+8 Spell Power"
+              "stats": "+8 Spell Power",
+              "icon": "inv_staff_08"
             },
             {
               "name": "Ironforge Greathammer",
@@ -14995,7 +14429,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 9,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_hammer_21"
             }
           ],
           "faction": "both",
@@ -15008,7 +14443,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "11–12",
           "itemId": 6214,
           "name": "Heavy Copper Maul",
-          "icon": "inv_hammer_14",
+          "icon": "inv_hammer_18",
           "weaponType": "Two-handed mace",
           "speed": "3.30",
           "dps": "10.8 DPS",
@@ -15029,7 +14464,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 14,
               "reqLevel": 12,
-              "stats": "+6 Spell Power"
+              "stats": "+6 Spell Power",
+              "icon": "inv_staff_08"
             },
             {
               "name": "Trogg Scepter",
@@ -15051,7 +14487,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases healing done by up to 33 and damage done by up to 11 for all magical spells and effects.",
                 "Requires Level 13"
               ],
-              "reqLevel": 13
+              "reqLevel": 13,
+              "icon": "inv_misc_bone_10"
             },
             {
               "name": "Hammer of Orgrimmar",
@@ -15064,7 +14501,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 9,
-              "stats": "+3 Str, +3 Spi"
+              "stats": "+3 Str, +3 Spi",
+              "icon": "inv_hammer_23"
             },
             {
               "name": "Ironforge Greathammer",
@@ -15077,7 +14515,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 9,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_hammer_21"
             }
           ],
           "faction": "both",
@@ -15090,7 +14529,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "13–14",
           "itemId": 270228,
           "name": "Golemheart Stave",
-          "icon": "inv_staff_20",
+          "icon": "inv_staff_18",
           "weaponType": "Staff",
           "speed": "2.60",
           "dps": "14.2 DPS",
@@ -15111,7 +14550,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 9,
-              "stats": "+6 Int, +6 Agi, +18 Spell Dmg"
+              "stats": "+6 Int, +6 Agi, +18 Spell Dmg",
+              "icon": "inv_staff_goldfeathered_01"
             },
             {
               "name": "Ironforge Greathammer",
@@ -15124,7 +14564,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 9,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_hammer_21"
             },
             {
               "name": "Oakthrush Staff",
@@ -15137,7 +14578,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 14,
               "reqLevel": 12,
-              "stats": "+6 Spell Power"
+              "stats": "+6 Spell Power",
+              "icon": "inv_staff_08"
             },
             {
               "name": "Kris of Orgrimmar",
@@ -15150,7 +14592,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 9,
-              "stats": "+4 Sta, +33 Healing, +11 Spell Damage"
+              "stats": "+4 Sta, +33 Healing, +11 Spell Damage",
+              "icon": "inv_weapon_shortblade_05"
             },
             {
               "name": "Fang of Magmatus",
@@ -15163,7 +14606,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 13,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_misc_bone_06"
             }
           ],
           "faction": "both",
@@ -15176,7 +14620,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "15–16",
           "itemId": 6631,
           "name": "Living Root",
-          "icon": "inv_staff_12",
+          "icon": "inv_staff_25",
           "weaponType": "Staff",
           "speed": "2.90",
           "dps": "14.7 DPS",
@@ -15197,7 +14641,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 9,
-              "stats": "+6 Int, +6 Agi, +18 Spell Dmg"
+              "stats": "+6 Int, +6 Agi, +18 Spell Dmg",
+              "icon": "inv_staff_goldfeathered_01"
             },
             {
               "name": "Segmented Spider Leg",
@@ -15210,7 +14655,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 20,
               "reqLevel": 15,
-              "stats": "+5 Int, +4 Sta"
+              "stats": "+5 Int, +4 Sta",
+              "icon": "inv_misc_questionmark"
             },
             {
               "name": "Scepter of the Abandoned",
@@ -15223,7 +14669,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 22,
               "reqLevel": 17,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_misc_questionmark"
             },
             {
               "name": "Kris of Orgrimmar",
@@ -15236,7 +14683,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 9,
-              "stats": "+4 Sta, +33 Healing, +11 Spell Damage"
+              "stats": "+4 Sta, +33 Healing, +11 Spell Damage",
+              "icon": "inv_weapon_shortblade_05"
             },
             {
               "name": "The Stitcher",
@@ -15249,7 +14697,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 24,
               "reqLevel": 15,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_mace_08"
             }
           ],
           "faction": "both",
@@ -15262,7 +14711,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "17–18",
           "itemId": 7230,
           "name": "Smite's Mighty Hammer",
-          "icon": "inv_hammer_18",
+          "icon": "inv_hammer_09",
           "weaponType": "Two-handed mace",
           "speed": "3.50",
           "dps": "19.7 DPS",
@@ -15283,7 +14732,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 9,
-              "stats": "+6 Int, +6 Agi, +18 Spell Dmg"
+              "stats": "+6 Int, +6 Agi, +18 Spell Dmg",
+              "icon": "inv_staff_goldfeathered_01"
             },
             {
               "name": "Coldspire Staff",
@@ -15296,7 +14746,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 24,
               "reqLevel": 19,
-              "stats": "+7 Int, +5 Spi"
+              "stats": "+7 Int, +5 Spi",
+              "icon": "inv_misc_questionmark"
             },
             {
               "name": "Staff of Westfall",
@@ -15319,7 +14770,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases healing done by up to 48 and damage done by up to 16 for all magical spells and effects.",
                 "Equip: Movement speed increased by 2% in Elwynn Forest, Westfall, Redridge Mountains, and the Deadmines."
               ],
-              "reqLevel": 14
+              "reqLevel": 14,
+              "icon": "inv_staff_10"
             },
             {
               "name": "Kris of Orgrimmar",
@@ -15332,7 +14784,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 9,
-              "stats": "+4 Sta, +33 Healing, +11 Spell Damage"
+              "stats": "+4 Sta, +33 Healing, +11 Spell Damage",
+              "icon": "inv_weapon_shortblade_05"
             }
           ],
           "faction": "both",
@@ -15345,14 +14798,14 @@ if (typeof window !== 'undefined') {
           "levelBracket": "19–20",
           "itemId": 6505,
           "name": "Crescent Staff",
-          "icon": "inv_staff_20",
+          "icon": "inv_staff_04",
           "weaponType": "Staff",
           "speed": "2.90",
           "dps": "15.3 DPS",
           "source": {
             "kind": "quest",
             "title": "Leaders of the Fang",
-            "detail": "Wailing Caverns quest (+7 Int, +7 Spi, +7 Sta)"
+            "detail": "Major quest reward from Leaders of the Fang in Wailing Caverns (Horde). Elite stat stick for both Feral and Balance."
           },
           "alts": [
             {
@@ -15366,7 +14819,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 9,
-              "stats": "+6 Int, +6 Agi, +18 Spell Dmg"
+              "stats": "+6 Int, +6 Agi, +18 Spell Dmg",
+              "icon": "inv_staff_goldfeathered_01"
             },
             {
               "name": "Bronze Warhammer",
@@ -15379,7 +14833,8 @@ if (typeof window !== 'undefined') {
               "quality": "q2",
               "iLvl": 25,
               "reqLevel": 20,
-              "stats": "+6 Strength, +6 Stamina"
+              "stats": "+6 Strength, +6 Stamina",
+              "icon": "inv_hammer_18"
             },
             {
               "name": "Staff of Westfall",
@@ -15402,7 +14857,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases healing done by up to 48 and damage done by up to 16 for all magical spells and effects.",
                 "Equip: Movement speed increased by 2% in Elwynn Forest, Westfall, Redridge Mountains, and the Deadmines."
               ],
-              "reqLevel": 14
+              "reqLevel": 14,
+              "icon": "inv_staff_10"
             },
             {
               "name": "Kris of Orgrimmar",
@@ -15415,13 +14871,14 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 18,
               "reqLevel": 9,
-              "stats": "+4 Sta, +33 Healing, +11 Spell Damage"
+              "stats": "+4 Sta, +33 Healing, +11 Spell Damage",
+              "icon": "inv_weapon_shortblade_05"
             }
           ],
           "faction": "horde",
           "quality": "q3",
           "iLvl": 24,
-          "stats": "+7 Agility, +7 Stamina, +7 Intellect, Equip: Increases damage and healing done by magical spells and effects by up to 26.",
+          "stats": "+26 Spell Power, +7 Agility, +7 Stamina",
           "lines": [
             "Binds when picked up",
             "Two-Hand\tStaff",
@@ -15438,7 +14895,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "21–22",
           "itemId": 6318,
           "name": "Odo's Ley Staff",
-          "icon": "inv_staff_08",
+          "icon": "inv_staff_27",
           "weaponType": "Staff",
           "speed": "2.70",
           "dps": "16.0 DPS",
@@ -15469,7 +14926,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases damage and healing done by magical spells and effects by up to 34.",
                 "Requires Level 25"
               ],
-              "reqLevel": 25
+              "reqLevel": 25,
+              "icon": "inv_staff_19"
             },
             {
               "name": "Subdued Dragon's Fang",
@@ -15490,7 +14948,8 @@ if (typeof window !== 'undefined') {
                 "+7 Agility",
                 "+2 Stamina"
               ],
-              "reqLevel": 24
+              "reqLevel": 24,
+              "icon": "inv_weapon_shortblade_01"
             },
             {
               "name": "Alliance Outrunner Staff",
@@ -15503,7 +14962,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 26,
               "reqLevel": 21,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_staff_11"
             }
           ],
           "faction": "both",
@@ -15526,7 +14986,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "23–24",
           "itemId": 1155,
           "name": "Rod of the Sleepwalker",
-          "icon": "inv_staff_13",
+          "icon": "inv_staff_06",
           "weaponType": "Staff",
           "speed": "2.70",
           "dps": "17.7 DPS",
@@ -15558,7 +15018,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases healing done by up to 52 and damage done by up to 17 for all magical spells and effects.",
                 "Requires Level 21"
               ],
-              "reqLevel": 21
+              "reqLevel": 21,
+              "icon": "inv_staff_32"
             },
             {
               "name": "Subdued Dragon's Fang",
@@ -15579,7 +15040,8 @@ if (typeof window !== 'undefined') {
                 "+7 Agility",
                 "+2 Stamina"
               ],
-              "reqLevel": 24
+              "reqLevel": 24,
+              "icon": "inv_weapon_shortblade_01"
             },
             {
               "name": "Striking Staff",
@@ -15601,7 +15063,8 @@ if (typeof window !== 'undefined') {
                 "+6 Stamina",
                 "+14 Intellect"
               ],
-              "reqLevel": 24
+              "reqLevel": 24,
+              "icon": "inv_staff_28"
             }
           ],
           "faction": "both",
@@ -15614,7 +15077,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "25–26",
           "itemId": 271766,
           "name": "Heavehammer",
-          "icon": "inv_hammer_15",
+          "icon": "inv_hammer_09",
           "weaponType": "Two-handed mace",
           "speed": "3.30",
           "dps": "27.7 DPS",
@@ -15644,7 +15107,8 @@ if (typeof window !== 'undefined') {
                 "+100 Armor",
                 "Requires Level 26"
               ],
-              "reqLevel": 26
+              "reqLevel": 26,
+              "icon": "inv_hammer_09"
             },
             {
               "name": "Solid Iron Maul",
@@ -15666,7 +15130,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases damage and healing done by magical spells and effects by up to 24.",
                 "Requires Level 26"
               ],
-              "reqLevel": 26
+              "reqLevel": 26,
+              "icon": "inv_hammer_07"
             },
             {
               "name": "Death Prophet Spine",
@@ -15689,7 +15154,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Restores 5 Mana per 5 sec.",
                 "Requires Level 26"
               ],
-              "reqLevel": 26
+              "reqLevel": 26,
+              "icon": "inv_staff_17"
             },
             {
               "name": "Defender of Dalaran",
@@ -15711,7 +15177,8 @@ if (typeof window !== 'undefined') {
                 "+13 Stamina",
                 "+9 Intellect"
               ],
-              "reqLevel": 24
+              "reqLevel": 24,
+              "icon": "inv_hammer_04"
             }
           ],
           "faction": "both",
@@ -15732,7 +15199,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "27–28",
           "itemId": 279841,
           "name": "Defender of Dalaran",
-          "icon": "inv_hammer_08",
+          "icon": "inv_hammer_04",
           "weaponType": "Two-handed mace",
           "speed": "3.30",
           "dps": "31.2 DPS",
@@ -15762,7 +15229,8 @@ if (typeof window !== 'undefined') {
                 "+6 Stamina",
                 "+14 Intellect"
               ],
-              "reqLevel": 24
+              "reqLevel": 24,
+              "icon": "inv_staff_28"
             },
             {
               "name": "Spine of the Devourer",
@@ -15786,7 +15254,8 @@ if (typeof window !== 'undefined') {
                 "Equip: +36 Spell Power",
                 "Sell Price: 85s 58c"
               ],
-              "reqLevel": 28
+              "reqLevel": 28,
+              "icon": "inv_staff_07"
             },
             {
               "name": "Felbough Arm",
@@ -15810,7 +15279,8 @@ if (typeof window !== 'undefined') {
                 "Equip: +10 Hit Rating",
                 "Sell Price: 1g 2s 92c"
               ],
-              "reqLevel": 29
+              "reqLevel": 29,
+              "icon": "inv_spear_08"
             }
           ],
           "faction": "both",
@@ -15832,7 +15302,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "29–30",
           "itemId": 9449,
           "name": "Manual Crowd Pummeler",
-          "icon": "inv_hammer_16",
+          "icon": "inv_mace_14",
           "weaponType": "Two-handed mace",
           "speed": "2.00",
           "dps": "31.5 DPS",
@@ -15862,7 +15332,8 @@ if (typeof window !== 'undefined') {
                 "Equip: Increases healing done by up to 67 and damage done by up to 22 for all magical spells and effects.",
                 "Equip: Restores 5 Mana per 5 sec."
               ],
-              "reqLevel": 24
+              "reqLevel": 24,
+              "icon": "inv_staff_10"
             },
             {
               "name": "Dark Hearted Hammer",
@@ -15883,7 +15354,8 @@ if (typeof window !== 'undefined') {
                 "+12 Strength",
                 "+8 Stamina"
               ],
-              "reqLevel": 30
+              "reqLevel": 30,
+              "icon": "inv_hammer_16"
             },
             {
               "name": "Fallen Dragon's Scepter",
@@ -15905,7 +15377,8 @@ if (typeof window !== 'undefined') {
                 "+13 Spirit",
                 "Equip: Increases damage and healing done by magical spells and effects by up to 36."
               ],
-              "reqLevel": 24
+              "reqLevel": 24,
+              "icon": "inv_staff_08"
             },
             {
               "name": "Rage of the Storm",
@@ -15927,7 +15400,8 @@ if (typeof window !== 'undefined') {
                 "+15 Stamina",
                 "Equip: Increases the damage dealt by your Stormstrike ability by 10%."
               ],
-              "reqLevel": 30
+              "reqLevel": 30,
+              "icon": "inv_mace_42"
             }
           ],
           "faction": "both",
@@ -15952,7 +15426,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "31–35",
           "itemId": 9449,
           "name": "Manual Crowd Pummeler",
-          "icon": "inv_hammer_16",
+          "icon": "inv_mace_14",
           "weaponType": "Two-handed mace",
           "speed": "2.00",
           "dps": "31.5 DPS",
@@ -15973,7 +15447,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 39,
               "reqLevel": 34,
-              "stats": "+15 Int, +10 Spi"
+              "stats": "+15 Int, +10 Spi",
+              "icon": "inv_wand_04"
             },
             {
               "name": "Rock Pulverizer",
@@ -15993,7 +15468,8 @@ if (typeof window !== 'undefined') {
                 "(31.2 damage per second)",
                 "Equip: +34 Attack Power."
               ],
-              "reqLevel": 30
+              "reqLevel": 30,
+              "icon": "inv_hammer_17"
             }
           ],
           "faction": "both",
@@ -16018,7 +15494,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "36–40",
           "itemId": 7726,
           "name": "Mograine's Might",
-          "icon": "inv_hammer_08",
+          "icon": "inv_shield_05",
           "weaponType": "Two-handed mace",
           "speed": "3.50",
           "dps": "38.9 DPS",
@@ -16039,7 +15515,8 @@ if (typeof window !== 'undefined') {
               "quality": "q4",
               "iLvl": 40,
               "reqLevel": 35,
-              "stats": "+26 Spell Power"
+              "stats": "+26 Spell Power",
+              "icon": "inv_staff_13"
             },
             {
               "name": "Dendweller's Hammer",
@@ -16061,7 +15538,8 @@ if (typeof window !== 'undefined') {
                 "+100 Armor",
                 "Requires Level 26"
               ],
-              "reqLevel": 26
+              "reqLevel": 26,
+              "icon": "inv_hammer_09"
             }
           ],
           "faction": "both",
@@ -16074,7 +15552,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "41–46",
           "itemId": 17780,
           "name": "Princess Theradras' Scepter",
-          "icon": "inv_hammer_04",
+          "icon": "inv_misc_questionmark",
           "weaponType": "Two-handed mace",
           "speed": "3.40",
           "dps": "47.1 DPS",
@@ -16095,7 +15573,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 48,
               "reqLevel": 40,
-              "stats": "+9 Stamina, +23 Intellect, +54 Spell Power"
+              "stats": "+9 Stamina, +23 Intellect, +54 Spell Power",
+              "icon": "inv_wand_11"
             },
             {
               "name": "Grisly Sack of Skulls",
@@ -16106,7 +15585,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 46,
               "reqLevel": 40,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_pick_01"
             },
             {
               "name": "Gul'gash's Greathammer",
@@ -16119,7 +15599,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 49,
               "reqLevel": 44,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_hammer_16"
             },
             {
               "name": "Emerald Watcher's Dreamstaff",
@@ -16132,7 +15613,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 49,
               "reqLevel": 44,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_staff_17"
             }
           ],
           "faction": "both",
@@ -16145,7 +15627,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "47–52",
           "itemId": 11608,
           "name": "Dark Iron Pulverizer",
-          "icon": "inv_hammer_16",
+          "icon": "inv_hammer_09",
           "weaponType": "Two-handed mace",
           "speed": "3.70",
           "dps": "47.4 DPS",
@@ -16166,7 +15648,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 53,
               "reqLevel": 48,
-              "stats": "+14 Critical Strike Rating, +60 Spell Power"
+              "stats": "+14 Critical Strike Rating, +60 Spell Power",
+              "icon": "inv_staff_18"
             },
             {
               "name": "Enchanted Battlehammer",
@@ -16179,7 +15662,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 56,
               "reqLevel": 51,
-              "stats": "+4 Arcane Resistance, +21 Parry Rating, +20 Hit Rating"
+              "stats": "+4 Arcane Resistance, +21 Parry Rating, +20 Hit Rating",
+              "icon": "inv_hammer_05"
             }
           ],
           "faction": "both",
@@ -16192,7 +15676,7 @@ if (typeof window !== 'undefined') {
           "levelBracket": "53–60",
           "itemId": 943,
           "name": "Warden Staff",
-          "icon": "inv_staff_13",
+          "icon": "inv_misc_questionmark",
           "weaponType": "Staff",
           "speed": "2.40",
           "dps": "38.3 DPS",
@@ -16213,7 +15697,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 58,
               "reqLevel": 53,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_staff_51"
             },
             {
               "name": "Hammer of the Grand Crusader",
@@ -16224,7 +15709,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 58,
               "reqLevel": 52,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_misc_questionmark"
             },
             {
               "name": "Rod of the Ogre Magi",
@@ -16235,7 +15721,8 @@ if (typeof window !== 'undefined') {
               "quality": "q3",
               "iLvl": 58,
               "reqLevel": 52,
-              "stats": ""
+              "stats": "",
+              "icon": "inv_misc_questionmark"
             }
           ],
           "faction": "both",
@@ -16243,6 +15730,5809 @@ if (typeof window !== 'undefined') {
           "iLvl": 58,
           "reqLevel": 52,
           "stats": "+260 Armor, +10 Defense"
+        }
+      ]
+    }
+  },
+  "wands": {
+    "mage": {
+      "classId": "mage",
+      "tracks": [
+        {
+          "id": "primary",
+          "name": "Level 1–60 Wand Upgrade Path"
+        }
+      ],
+      "levels": [
+        {
+          "levelBracket": "1–4",
+          "itemId": 247789,
+          "name": "Novice's Practice Wand",
+          "icon": "inv_weapon_shortblade_09",
+          "weaponType": "Wand",
+          "speed": "1.50",
+          "dps": "4.0 DPS",
+          "source": {
+            "kind": "quest",
+            "title": "Starting Zone Class Quest",
+            "detail": "Awarded from initial Level 1–4 Class Trainer quest in starting zones."
+          },
+          "faction": "both",
+          "quality": "q1",
+          "iLvl": 6,
+          "reqLevel": 1,
+          "stats": "Auto-Shoot Baseline",
+          "alts": [
+            {
+              "name": "Alchemist's Wand",
+              "itemId": 5235,
+              "value": "4.4 DPS - Early starting zone drop",
+              "faction": "both",
+              "dps": "4.4 DPS",
+              "speed": "1.80",
+              "weaponType": "Wand",
+              "quality": "q1",
+              "iLvl": 7,
+              "reqLevel": 1,
+              "stats": "",
+              "icon": "inv_staff_02"
+            },
+            {
+              "name": "Dowsing Rod",
+              "itemId": 263428,
+              "value": "4.2 DPS - Level 4 quest reward",
+              "faction": "alliance",
+              "dps": "4.2 DPS",
+              "speed": "1.20",
+              "weaponType": "Wand",
+              "quality": "q1",
+              "iLvl": 6,
+              "reqLevel": 4,
+              "stats": "",
+              "icon": "inv_wand_05"
+            }
+          ]
+        },
+        {
+          "levelBracket": "5–8",
+          "itemId": 11287,
+          "name": "Lesser Magic Wand",
+          "icon": "inv_staff_02",
+          "weaponType": "Wand",
+          "speed": "1.50",
+          "dps": "11.3 DPS",
+          "source": {
+            "kind": "craft",
+            "title": "Enchanting (Skill 10)",
+            "detail": "Craftable by Enchanters or purchased cheaply from the Auction House; massive DPS spike for early leveling."
+          },
+          "faction": "both",
+          "quality": "q2",
+          "iLvl": 15,
+          "reqLevel": 5,
+          "stats": "+1 Arcane Spell Power",
+          "alts": [
+            {
+              "name": "Fire Wand",
+              "itemId": 5069,
+              "value": "8.7 DPS - Level 7 drop",
+              "faction": "both",
+              "dps": "8.7 DPS",
+              "speed": "1.50",
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 12,
+              "reqLevel": 7,
+              "stats": "+1 Fire Spell Power",
+              "icon": "inv_staff_02"
+            },
+            {
+              "name": "Elven Wand",
+              "itemId": 5604,
+              "value": "9.4 DPS - Darkshore quest 'Bashal'Aran'",
+              "faction": "alliance",
+              "dps": "9.4 DPS",
+              "speed": "1.60",
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 13,
+              "reqLevel": 7,
+              "stats": "+1 Nature Spell Power",
+              "icon": "inv_staff_02"
+            },
+            {
+              "name": "Riptear's Spare Arm",
+              "itemId": 286743,
+              "value": "9.4 DPS - Barrens quest 'Rear Guard Patrol'",
+              "faction": "horde",
+              "dps": "9.4 DPS",
+              "speed": "1.70",
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 13,
+              "reqLevel": 6,
+              "stats": "+2 Shadow Spell Power",
+              "icon": "spell_shadow_fingerofdeath"
+            }
+          ]
+        },
+        {
+          "levelBracket": "9–12",
+          "itemId": 12296,
+          "name": "Spark of the People's Militia",
+          "icon": "inv_staff_02",
+          "weaponType": "Wand",
+          "speed": "1.80",
+          "dps": "12.8 DPS",
+          "source": {
+            "kind": "quest",
+            "title": "The People's Militia",
+            "detail": "Quest reward from Westfall (Sentinel Hill). Elite upgrade for Alliance casters."
+          },
+          "faction": "alliance",
+          "quality": "q2",
+          "iLvl": 17,
+          "reqLevel": 9,
+          "stats": "+2 Arcane Spell Power",
+          "alts": [
+            {
+              "name": "Cinder Wand",
+              "itemId": 5242,
+              "value": "11.8 DPS - Silverpine Forest quest 'Arugal's Folly'",
+              "faction": "horde",
+              "dps": "11.8 DPS",
+              "speed": "1.40",
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 16,
+              "reqLevel": 9,
+              "stats": "+2 Fire Spell Power",
+              "icon": "inv_staff_02"
+            },
+            {
+              "name": "Shadow Wand",
+              "itemId": 5071,
+              "value": "10.4 DPS - World drop",
+              "faction": "both",
+              "dps": "10.4 DPS",
+              "speed": "1.40",
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 14,
+              "reqLevel": 9,
+              "stats": "+1 Shadow Spell Power",
+              "icon": "inv_weapon_shortblade_09"
+            },
+            {
+              "name": "Blazing Wand",
+              "itemId": 5073,
+              "value": "12.7 DPS - Level 12 drop",
+              "faction": "both",
+              "dps": "12.7 DPS",
+              "speed": "1.50",
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 17,
+              "reqLevel": 12,
+              "stats": "+2 Fire Spell Power",
+              "icon": "inv_misc_bone_taurenskull_01"
+            }
+          ]
+        },
+        {
+          "levelBracket": "13–16",
+          "itemId": 11288,
+          "name": "Greater Magic Wand",
+          "icon": "inv_staff_07",
+          "weaponType": "Wand",
+          "speed": "1.80",
+          "dps": "17.5 DPS",
+          "source": {
+            "kind": "craft",
+            "title": "Enchanting (Skill 75)",
+            "detail": "Craftable by Enchanters (Simple Wood + Greater Magic Essence). Huge power leap across levels 13–18."
+          },
+          "faction": "both",
+          "quality": "q2",
+          "iLvl": 20,
+          "reqLevel": 13,
+          "stats": "+2 Arcane Spell Power",
+          "alts": [
+            {
+              "name": "Moongazer's Wand",
+              "itemId": 284193,
+              "value": "14.5 DPS - Darkshore / Silverpine quest",
+              "faction": "both",
+              "dps": "14.5 DPS",
+              "speed": "1.60",
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 18,
+              "reqLevel": 13,
+              "stats": "+3 Nature Spell Power",
+              "icon": "inv_staff_06"
+            },
+            {
+              "name": "Opaque Wand",
+              "itemId": 5075,
+              "value": "15.0 DPS - Level 15 drop",
+              "faction": "both",
+              "dps": "15.0 DPS",
+              "speed": "1.40",
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 20,
+              "reqLevel": 15,
+              "stats": "+2 Frost Spell Power",
+              "icon": "inv_misc_gem_ruby_01"
+            },
+            {
+              "name": "Whelpfire Wand",
+              "itemId": 281925,
+              "value": "16.1 DPS - Redridge Mountains quest",
+              "faction": "alliance",
+              "dps": "16.1 DPS",
+              "speed": "1.70",
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 21,
+              "reqLevel": 14,
+              "stats": "+3 Fire Spell Power",
+              "icon": "inv_wand_11"
+            }
+          ]
+        },
+        {
+          "levelBracket": "17–20",
+          "itemId": 5198,
+          "name": "Cookie's Stirring Rod",
+          "icon": "inv_staff_02",
+          "weaponType": "Wand",
+          "speed": "1.30",
+          "dps": "22.3 DPS",
+          "source": {
+            "kind": "dungeon",
+            "title": "The Deadmines",
+            "detail": "Dropped by Cookie (The Ship's Cook) in Deadmines. Super fast 1.30s attack speed."
+          },
+          "faction": "both",
+          "quality": "q2",
+          "iLvl": 22,
+          "reqLevel": 17,
+          "stats": "+2 Nature Spell Power",
+          "alts": [
+            {
+              "name": "Charred Razormane Wand",
+              "itemId": 284195,
+              "value": "15.7 DPS - Barrens quest",
+              "faction": "horde",
+              "dps": "15.7 DPS",
+              "speed": "1.50",
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 20,
+              "reqLevel": 18,
+              "stats": "+2 Fire Spell Power",
+              "icon": "inv_misc_questionmark"
+            },
+            {
+              "name": "Burning Wand",
+              "itemId": 5079,
+              "value": "17.5 DPS - World drop",
+              "faction": "both",
+              "dps": "17.5 DPS",
+              "speed": "1.40",
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 23,
+              "reqLevel": 20,
+              "stats": "+3 Fire Spell Power",
+              "icon": "inv_misc_eye_01"
+            }
+          ]
+        },
+        {
+          "levelBracket": "21–24",
+          "itemId": 7001,
+          "name": "Gravestone Scepter",
+          "icon": "inv_wand_04",
+          "weaponType": "Wand",
+          "speed": "1.50",
+          "dps": "29.0 DPS",
+          "source": {
+            "kind": "quest",
+            "title": "Blackfathom Villainy",
+            "detail": "Reward for completing Blackfathom Deeps questline (Darnassus for Alliance / Thunder Bluff for Horde). Arguably the strongest leveling wand in the game."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 29,
+          "reqLevel": 18,
+          "stats": "+5 Shadow Spell Power",
+          "alts": [
+            {
+              "name": "Excavation Rod",
+              "itemId": 285350,
+              "value": "24.2 DPS - Wetlands / Hillsbrad quest",
+              "faction": "both",
+              "dps": "24.2 DPS",
+              "speed": "1.90",
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 27,
+              "reqLevel": 22,
+              "stats": "+3 Arcane Spell Power",
+              "icon": "inv_staff_11"
+            },
+            {
+              "name": "Consecrated Wand",
+              "itemId": 279844,
+              "value": "24.2 DPS - Level 23 drop",
+              "faction": "both",
+              "dps": "24.2 DPS",
+              "speed": "1.20",
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 28,
+              "reqLevel": 23,
+              "stats": "+4 Holy Spell Power",
+              "icon": "inv_staff_28"
+            },
+            {
+              "name": "Firestarter",
+              "itemId": 5081,
+              "value": "23.3 DPS - Level 24 drop",
+              "faction": "both",
+              "dps": "23.3 DPS",
+              "speed": "1.50",
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 27,
+              "reqLevel": 24,
+              "stats": "+4 Fire Spell Power",
+              "icon": "inv_misc_bag_10"
+            }
+          ]
+        },
+        {
+          "levelBracket": "25–28",
+          "itemId": 273043,
+          "name": "Wand of Mana Concentration",
+          "icon": "inv_wand_06",
+          "weaponType": "Wand",
+          "speed": "1.40",
+          "dps": "28.5 DPS",
+          "source": {
+            "kind": "dungeon",
+            "title": "Razorfen Kraul",
+            "detail": "Dropped in Razorfen Kraul. High burst speed and Arcane synergy."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 32,
+          "reqLevel": 27,
+          "stats": "+4 Intellect, +3 Arcane Spell Power",
+          "alts": [
+            {
+              "name": "Fizzle's Zippy Lighter",
+              "itemId": 279846,
+              "value": "31.0 DPS - Gnomeregan dungeon quest",
+              "faction": "both",
+              "dps": "31.0 DPS",
+              "speed": "1.50",
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 33,
+              "reqLevel": 28,
+              "stats": "+5 Fire Spell Power",
+              "icon": "inv_belt_04"
+            },
+            {
+              "name": "Wand of Eventide",
+              "itemId": 5084,
+              "value": "25.8 DPS - Level 27 drop",
+              "faction": "both",
+              "dps": "25.8 DPS",
+              "speed": "1.30",
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 31,
+              "reqLevel": 27,
+              "stats": "+4 Shadow Spell Power",
+              "icon": "inv_misc_head_human_01"
+            }
+          ]
+        },
+        {
+          "levelBracket": "29–34",
+          "itemId": 7514,
+          "name": "Icefury Wand",
+          "icon": "inv_wand_05",
+          "weaponType": "Wand",
+          "speed": "1.90",
+          "dps": "33.2 DPS",
+          "source": {
+            "kind": "quest",
+            "title": "Mage / Caster Class Mastery",
+            "detail": "Class quest in Dustwallow Marsh / Thousand Needles with devastating frost impact."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 35,
+          "reqLevel": 30,
+          "stats": "+5 Frost Spell Power, +3 Intellect",
+          "alts": [
+            {
+              "name": "Blackbone Wand",
+              "itemId": 286745,
+              "value": "35.3 DPS - Sold by wand vendors in Ironforge, Undercity, Ratchet",
+              "faction": "both",
+              "dps": "35.3 DPS",
+              "speed": "1.60",
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 38,
+              "reqLevel": 31,
+              "stats": "+5 Shadow Spell Power",
+              "icon": "inv_jewelry_ring_12"
+            },
+            {
+              "name": "Unstable Power Core",
+              "itemId": 279847,
+              "value": "30.0 DPS - Gnomeregan drop",
+              "faction": "both",
+              "dps": "30.0 DPS",
+              "speed": "1.50",
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 34,
+              "reqLevel": 29,
+              "stats": "+4 Fire Spell Power",
+              "icon": "inv_staff_06"
+            },
+            {
+              "name": "Master Hunter's Wand",
+              "itemId": 270084,
+              "value": "31.5 DPS - Stranglethorn Vale quest",
+              "faction": "both",
+              "dps": "31.5 DPS",
+              "speed": "1.70",
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 35,
+              "reqLevel": 30,
+              "stats": "+5 Nature Spell Power",
+              "icon": "inv_wand_03"
+            }
+          ]
+        },
+        {
+          "levelBracket": "35–40",
+          "itemId": 6806,
+          "name": "Dancing Flame",
+          "icon": "inv_wand_04",
+          "weaponType": "Wand",
+          "speed": "1.60",
+          "dps": "38.5 DPS",
+          "source": {
+            "kind": "dungeon",
+            "title": "Scarlet Monastery (Armory/Cathedral)",
+            "detail": "Dungeon boss drop in Scarlet Monastery."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 41,
+          "reqLevel": 36,
+          "stats": "+7 Fire Spell Power",
+          "alts": [
+            {
+              "name": "Twisted Nether Wand",
+              "itemId": 249144,
+              "value": "34.0 DPS - Desolace / Alterac quest",
+              "faction": "both",
+              "dps": "34.0 DPS",
+              "speed": "1.50",
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 38,
+              "reqLevel": 33,
+              "stats": "+5 Shadow Spell Power",
+              "icon": "inv_wand_03"
+            },
+            {
+              "name": "Gnomish Zapper",
+              "itemId": 4547,
+              "value": "32.7 DPS - Sunken Treasure quest in Arathi",
+              "faction": "both",
+              "dps": "32.7 DPS",
+              "speed": "1.30",
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 40,
+              "reqLevel": 35,
+              "stats": "+4 Stamina, +3 Spell Power",
+              "icon": "inv_wand_02"
+            },
+            {
+              "name": "Umbral Wand",
+              "itemId": 5090,
+              "value": "35.7 DPS - Level 40 drop",
+              "faction": "both",
+              "dps": "35.7 DPS",
+              "speed": "1.50",
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 45,
+              "reqLevel": 40,
+              "stats": "+5 Shadow Spell Power",
+              "icon": "inv_shirt_12"
+            }
+          ]
+        },
+        {
+          "levelBracket": "41–46",
+          "itemId": 249234,
+          "name": "Dreambough Wand",
+          "icon": "inv_wand_04",
+          "weaponType": "Wand",
+          "speed": "1.70",
+          "dps": "43.5 DPS",
+          "source": {
+            "kind": "quest",
+            "title": "Feralas / Hinterlands Questline",
+            "detail": "Long questline reward in Feralas / Hinterlands with immense nature burst."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 47,
+          "reqLevel": 42,
+          "stats": "+8 Nature Spell Power, +4 Spirit",
+          "alts": [
+            {
+              "name": "Cairnstone Sliver",
+              "itemId": 286747,
+              "value": "41.4 DPS - Uldaman dungeon drop",
+              "faction": "both",
+              "dps": "41.4 DPS",
+              "speed": "1.80",
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 46,
+              "reqLevel": 42,
+              "stats": "+6 Nature Spell Power",
+              "icon": "inv_misc_questionmark"
+            },
+            {
+              "name": "Charged Lightning Rod",
+              "itemId": 279849,
+              "value": "37.3 DPS - Tanaris / Zul'Farrak quest",
+              "faction": "both",
+              "dps": "37.3 DPS",
+              "speed": "1.50",
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 48,
+              "reqLevel": 43,
+              "stats": "+6 Nature Spell Power",
+              "icon": "inv_gauntlets_15"
+            },
+            {
+              "name": "Nature's Breath",
+              "itemId": 19118,
+              "value": "41.1 DPS - Dark Vessels quest",
+              "faction": "both",
+              "dps": "41.1 DPS",
+              "speed": "1.40",
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 50,
+              "reqLevel": 46,
+              "stats": "+7 Nature Spell Power",
+              "icon": "inv_wand_12"
+            }
+          ]
+        },
+        {
+          "levelBracket": "47–52",
+          "itemId": 11748,
+          "name": "Pyric Caduceus",
+          "icon": "inv_staff_13",
+          "weaponType": "Wand",
+          "speed": "1.80",
+          "dps": "52.5 DPS",
+          "source": {
+            "kind": "dungeon",
+            "title": "Blackrock Depths",
+            "detail": "Dropped by Pyromancer Loregrain in Blackrock Depths."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 53,
+          "reqLevel": 48,
+          "stats": "+10 Fire Spell Power",
+          "alts": [
+            {
+              "name": "Lesser Eternal Wand",
+              "itemId": 249232,
+              "value": "45.8 DPS - Enchanting skill 260 craft",
+              "faction": "both",
+              "dps": "45.8 DPS",
+              "speed": "2.00",
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 54,
+              "reqLevel": 49,
+              "stats": "+7 Arcane Spell Power",
+              "icon": "inv_wand_05"
+            },
+            {
+              "name": "Wizard's Hand",
+              "itemId": 15280,
+              "value": "44.4 DPS - Level 48 drop",
+              "faction": "both",
+              "dps": "44.4 DPS",
+              "speed": "1.80",
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 53,
+              "reqLevel": 48,
+              "stats": "+7 Arcane Spell Power",
+              "icon": "inv_wand_06"
+            },
+            {
+              "name": "Glowstar Rod",
+              "itemId": 15281,
+              "value": "50.0 DPS - Level 52 drop",
+              "faction": "both",
+              "dps": "50.0 DPS",
+              "speed": "1.50",
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 57,
+              "reqLevel": 52,
+              "stats": "+8 Holy Spell Power",
+              "icon": "inv_staff_10"
+            }
+          ]
+        },
+        {
+          "levelBracket": "53–60",
+          "itemId": 16997,
+          "name": "Stormrager",
+          "icon": "inv_wand_05",
+          "weaponType": "Wand",
+          "speed": "1.30",
+          "dps": "62.7 DPS",
+          "source": {
+            "kind": "quest",
+            "title": "Eastern Plaguelands / Scholomance Quest",
+            "detail": "Top-tier quest reward in Eastern Plaguelands. High DPS with ultra fast 1.30 attack speed."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 62,
+          "reqLevel": 56,
+          "stats": "+5 Intellect, +9 Spell Power",
+          "alts": [
+            {
+              "name": "Brilliant Wand",
+              "itemId": 249385,
+              "value": "59.6 DPS - Crafted Enchanting (Skill 300)",
+              "faction": "both",
+              "dps": "59.6 DPS",
+              "speed": "1.20",
+              "weaponType": "Wand",
+              "quality": "q3",
+              "iLvl": 60,
+              "reqLevel": 55,
+              "stats": "+6 Intellect, +8 Spell Power",
+              "icon": "inv_wand_07"
+            },
+            {
+              "name": "Greater Eternal Wand",
+              "itemId": 249237,
+              "value": "53.3 DPS - Crafted Enchanting",
+              "faction": "both",
+              "dps": "53.3 DPS",
+              "speed": "1.50",
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 60,
+              "reqLevel": 55,
+              "stats": "+8 Arcane Spell Power",
+              "icon": "inv_wand_14"
+            },
+            {
+              "name": "Torch of Austen",
+              "itemId": 13004,
+              "value": "56.8 DPS - Level 53 world drop",
+              "faction": "both",
+              "dps": "56.8 DPS",
+              "speed": "1.40",
+              "weaponType": "Wand",
+              "quality": "q3",
+              "iLvl": 58,
+              "reqLevel": 53,
+              "stats": "+8 Fire Spell Power",
+              "icon": "inv_wand_11"
+            },
+            {
+              "name": "Wand of Biting Cold",
+              "itemId": 19108,
+              "value": "64.0 DPS - Alterac Valley quest reward",
+              "faction": "both",
+              "dps": "64.0 DPS",
+              "speed": "1.50",
+              "weaponType": "Wand",
+              "quality": "q3",
+              "iLvl": 63,
+              "reqLevel": 51,
+              "stats": "+16 Frost Spell Power",
+              "icon": "inv_wand_01"
+            }
+          ]
+        }
+      ]
+    },
+    "priest": {
+      "classId": "priest",
+      "tracks": [
+        {
+          "id": "primary",
+          "name": "Level 1–60 Wand Upgrade Path"
+        }
+      ],
+      "levels": [
+        {
+          "levelBracket": "1–4",
+          "itemId": 247789,
+          "name": "Novice's Practice Wand",
+          "icon": "inv_weapon_shortblade_09",
+          "weaponType": "Wand",
+          "speed": "1.50",
+          "dps": "4.0 DPS",
+          "source": {
+            "kind": "quest",
+            "title": "Starting Zone Class Quest",
+            "detail": "Awarded from initial Level 1–4 Class Trainer quest in starting zones."
+          },
+          "faction": "both",
+          "quality": "q1",
+          "iLvl": 6,
+          "reqLevel": 1,
+          "stats": "Auto-Shoot Baseline",
+          "alts": [
+            {
+              "name": "Alchemist's Wand",
+              "itemId": 5235,
+              "value": "4.4 DPS - Early starting zone drop",
+              "faction": "both",
+              "dps": "4.4 DPS",
+              "speed": "1.80",
+              "weaponType": "Wand",
+              "quality": "q1",
+              "iLvl": 7,
+              "reqLevel": 1,
+              "stats": "",
+              "icon": "inv_staff_02"
+            },
+            {
+              "name": "Dowsing Rod",
+              "itemId": 263428,
+              "value": "4.2 DPS - Level 4 quest reward",
+              "faction": "alliance",
+              "dps": "4.2 DPS",
+              "speed": "1.20",
+              "weaponType": "Wand",
+              "quality": "q1",
+              "iLvl": 6,
+              "reqLevel": 4,
+              "stats": "",
+              "icon": "inv_wand_05"
+            }
+          ]
+        },
+        {
+          "levelBracket": "5–8",
+          "itemId": 11287,
+          "name": "Lesser Magic Wand",
+          "icon": "inv_staff_02",
+          "weaponType": "Wand",
+          "speed": "1.50",
+          "dps": "11.3 DPS",
+          "source": {
+            "kind": "craft",
+            "title": "Enchanting (Skill 10)",
+            "detail": "Craftable by Enchanters or purchased cheaply from the Auction House; massive DPS spike for early leveling."
+          },
+          "faction": "both",
+          "quality": "q2",
+          "iLvl": 15,
+          "reqLevel": 5,
+          "stats": "+1 Arcane Spell Power",
+          "alts": [
+            {
+              "name": "Fire Wand",
+              "itemId": 5069,
+              "value": "8.7 DPS - Level 7 drop",
+              "faction": "both",
+              "dps": "8.7 DPS",
+              "speed": "1.50",
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 12,
+              "reqLevel": 7,
+              "stats": "+1 Fire Spell Power",
+              "icon": "inv_staff_02"
+            },
+            {
+              "name": "Elven Wand",
+              "itemId": 5604,
+              "value": "9.4 DPS - Darkshore quest 'Bashal'Aran'",
+              "faction": "alliance",
+              "dps": "9.4 DPS",
+              "speed": "1.60",
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 13,
+              "reqLevel": 7,
+              "stats": "+1 Nature Spell Power",
+              "icon": "inv_staff_02"
+            },
+            {
+              "name": "Riptear's Spare Arm",
+              "itemId": 286743,
+              "value": "9.4 DPS - Barrens quest 'Rear Guard Patrol'",
+              "faction": "horde",
+              "dps": "9.4 DPS",
+              "speed": "1.70",
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 13,
+              "reqLevel": 6,
+              "stats": "+2 Shadow Spell Power",
+              "icon": "spell_shadow_fingerofdeath"
+            }
+          ]
+        },
+        {
+          "levelBracket": "9–12",
+          "itemId": 12296,
+          "name": "Spark of the People's Militia",
+          "icon": "inv_staff_02",
+          "weaponType": "Wand",
+          "speed": "1.80",
+          "dps": "12.8 DPS",
+          "source": {
+            "kind": "quest",
+            "title": "The People's Militia",
+            "detail": "Quest reward from Westfall (Sentinel Hill). Elite upgrade for Alliance casters."
+          },
+          "faction": "alliance",
+          "quality": "q2",
+          "iLvl": 17,
+          "reqLevel": 9,
+          "stats": "+2 Arcane Spell Power",
+          "alts": [
+            {
+              "name": "Cinder Wand",
+              "itemId": 5242,
+              "value": "11.8 DPS - Silverpine Forest quest 'Arugal's Folly'",
+              "faction": "horde",
+              "dps": "11.8 DPS",
+              "speed": "1.40",
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 16,
+              "reqLevel": 9,
+              "stats": "+2 Fire Spell Power",
+              "icon": "inv_staff_02"
+            },
+            {
+              "name": "Shadow Wand",
+              "itemId": 5071,
+              "value": "10.4 DPS - World drop",
+              "faction": "both",
+              "dps": "10.4 DPS",
+              "speed": "1.40",
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 14,
+              "reqLevel": 9,
+              "stats": "+1 Shadow Spell Power",
+              "icon": "inv_weapon_shortblade_09"
+            },
+            {
+              "name": "Blazing Wand",
+              "itemId": 5073,
+              "value": "12.7 DPS - Level 12 drop",
+              "faction": "both",
+              "dps": "12.7 DPS",
+              "speed": "1.50",
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 17,
+              "reqLevel": 12,
+              "stats": "+2 Fire Spell Power",
+              "icon": "inv_misc_bone_taurenskull_01"
+            }
+          ]
+        },
+        {
+          "levelBracket": "13–16",
+          "itemId": 11288,
+          "name": "Greater Magic Wand",
+          "icon": "inv_staff_07",
+          "weaponType": "Wand",
+          "speed": "1.80",
+          "dps": "17.5 DPS",
+          "source": {
+            "kind": "craft",
+            "title": "Enchanting (Skill 75)",
+            "detail": "Craftable by Enchanters (Simple Wood + Greater Magic Essence). Huge power leap across levels 13–18."
+          },
+          "faction": "both",
+          "quality": "q2",
+          "iLvl": 20,
+          "reqLevel": 13,
+          "stats": "+2 Arcane Spell Power",
+          "alts": [
+            {
+              "name": "Moongazer's Wand",
+              "itemId": 284193,
+              "value": "14.5 DPS - Darkshore / Silverpine quest",
+              "faction": "both",
+              "dps": "14.5 DPS",
+              "speed": "1.60",
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 18,
+              "reqLevel": 13,
+              "stats": "+3 Nature Spell Power",
+              "icon": "inv_staff_06"
+            },
+            {
+              "name": "Opaque Wand",
+              "itemId": 5075,
+              "value": "15.0 DPS - Level 15 drop",
+              "faction": "both",
+              "dps": "15.0 DPS",
+              "speed": "1.40",
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 20,
+              "reqLevel": 15,
+              "stats": "+2 Frost Spell Power",
+              "icon": "inv_misc_gem_ruby_01"
+            },
+            {
+              "name": "Whelpfire Wand",
+              "itemId": 281925,
+              "value": "16.1 DPS - Redridge Mountains quest",
+              "faction": "alliance",
+              "dps": "16.1 DPS",
+              "speed": "1.70",
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 21,
+              "reqLevel": 14,
+              "stats": "+3 Fire Spell Power",
+              "icon": "inv_wand_11"
+            }
+          ]
+        },
+        {
+          "levelBracket": "17–20",
+          "itemId": 5198,
+          "name": "Cookie's Stirring Rod",
+          "icon": "inv_staff_02",
+          "weaponType": "Wand",
+          "speed": "1.30",
+          "dps": "22.3 DPS",
+          "source": {
+            "kind": "dungeon",
+            "title": "The Deadmines",
+            "detail": "Dropped by Cookie (The Ship's Cook) in Deadmines. Super fast 1.30s attack speed."
+          },
+          "faction": "both",
+          "quality": "q2",
+          "iLvl": 22,
+          "reqLevel": 17,
+          "stats": "+2 Nature Spell Power",
+          "alts": [
+            {
+              "name": "Charred Razormane Wand",
+              "itemId": 284195,
+              "value": "15.7 DPS - Barrens quest",
+              "faction": "horde",
+              "dps": "15.7 DPS",
+              "speed": "1.50",
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 20,
+              "reqLevel": 18,
+              "stats": "+2 Fire Spell Power",
+              "icon": "inv_misc_questionmark"
+            },
+            {
+              "name": "Burning Wand",
+              "itemId": 5079,
+              "value": "17.5 DPS - World drop",
+              "faction": "both",
+              "dps": "17.5 DPS",
+              "speed": "1.40",
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 23,
+              "reqLevel": 20,
+              "stats": "+3 Fire Spell Power",
+              "icon": "inv_misc_eye_01"
+            }
+          ]
+        },
+        {
+          "levelBracket": "21–24",
+          "itemId": 7001,
+          "name": "Gravestone Scepter",
+          "icon": "inv_wand_04",
+          "weaponType": "Wand",
+          "speed": "1.50",
+          "dps": "29.0 DPS",
+          "source": {
+            "kind": "quest",
+            "title": "Blackfathom Villainy",
+            "detail": "Reward for completing Blackfathom Deeps questline (Darnassus for Alliance / Thunder Bluff for Horde). Arguably the strongest leveling wand in the game."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 29,
+          "reqLevel": 18,
+          "stats": "+5 Shadow Spell Power",
+          "alts": [
+            {
+              "name": "Excavation Rod",
+              "itemId": 285350,
+              "value": "24.2 DPS - Wetlands / Hillsbrad quest",
+              "faction": "both",
+              "dps": "24.2 DPS",
+              "speed": "1.90",
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 27,
+              "reqLevel": 22,
+              "stats": "+3 Arcane Spell Power",
+              "icon": "inv_staff_11"
+            },
+            {
+              "name": "Consecrated Wand",
+              "itemId": 279844,
+              "value": "24.2 DPS - Level 23 drop",
+              "faction": "both",
+              "dps": "24.2 DPS",
+              "speed": "1.20",
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 28,
+              "reqLevel": 23,
+              "stats": "+4 Holy Spell Power",
+              "icon": "inv_staff_28"
+            },
+            {
+              "name": "Firestarter",
+              "itemId": 5081,
+              "value": "23.3 DPS - Level 24 drop",
+              "faction": "both",
+              "dps": "23.3 DPS",
+              "speed": "1.50",
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 27,
+              "reqLevel": 24,
+              "stats": "+4 Fire Spell Power",
+              "icon": "inv_misc_bag_10"
+            }
+          ]
+        },
+        {
+          "levelBracket": "25–28",
+          "itemId": 273043,
+          "name": "Wand of Mana Concentration",
+          "icon": "inv_wand_06",
+          "weaponType": "Wand",
+          "speed": "1.40",
+          "dps": "28.5 DPS",
+          "source": {
+            "kind": "dungeon",
+            "title": "Razorfen Kraul",
+            "detail": "Dropped in Razorfen Kraul. High burst speed and Arcane synergy."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 32,
+          "reqLevel": 27,
+          "stats": "+4 Intellect, +3 Arcane Spell Power",
+          "alts": [
+            {
+              "name": "Fizzle's Zippy Lighter",
+              "itemId": 279846,
+              "value": "31.0 DPS - Gnomeregan dungeon quest",
+              "faction": "both",
+              "dps": "31.0 DPS",
+              "speed": "1.50",
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 33,
+              "reqLevel": 28,
+              "stats": "+5 Fire Spell Power",
+              "icon": "inv_belt_04"
+            },
+            {
+              "name": "Wand of Eventide",
+              "itemId": 5084,
+              "value": "25.8 DPS - Level 27 drop",
+              "faction": "both",
+              "dps": "25.8 DPS",
+              "speed": "1.30",
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 31,
+              "reqLevel": 27,
+              "stats": "+4 Shadow Spell Power",
+              "icon": "inv_misc_head_human_01"
+            }
+          ]
+        },
+        {
+          "levelBracket": "29–34",
+          "itemId": 7514,
+          "name": "Icefury Wand",
+          "icon": "inv_wand_05",
+          "weaponType": "Wand",
+          "speed": "1.90",
+          "dps": "33.2 DPS",
+          "source": {
+            "kind": "quest",
+            "title": "Mage / Caster Class Mastery",
+            "detail": "Class quest in Dustwallow Marsh / Thousand Needles with devastating frost impact."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 35,
+          "reqLevel": 30,
+          "stats": "+5 Frost Spell Power, +3 Intellect",
+          "alts": [
+            {
+              "name": "Blackbone Wand",
+              "itemId": 286745,
+              "value": "35.3 DPS - Sold by wand vendors in Ironforge, Undercity, Ratchet",
+              "faction": "both",
+              "dps": "35.3 DPS",
+              "speed": "1.60",
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 38,
+              "reqLevel": 31,
+              "stats": "+5 Shadow Spell Power",
+              "icon": "inv_jewelry_ring_12"
+            },
+            {
+              "name": "Unstable Power Core",
+              "itemId": 279847,
+              "value": "30.0 DPS - Gnomeregan drop",
+              "faction": "both",
+              "dps": "30.0 DPS",
+              "speed": "1.50",
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 34,
+              "reqLevel": 29,
+              "stats": "+4 Fire Spell Power",
+              "icon": "inv_staff_06"
+            },
+            {
+              "name": "Master Hunter's Wand",
+              "itemId": 270084,
+              "value": "31.5 DPS - Stranglethorn Vale quest",
+              "faction": "both",
+              "dps": "31.5 DPS",
+              "speed": "1.70",
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 35,
+              "reqLevel": 30,
+              "stats": "+5 Nature Spell Power",
+              "icon": "inv_wand_03"
+            }
+          ]
+        },
+        {
+          "levelBracket": "35–40",
+          "itemId": 6806,
+          "name": "Dancing Flame",
+          "icon": "inv_wand_04",
+          "weaponType": "Wand",
+          "speed": "1.60",
+          "dps": "38.5 DPS",
+          "source": {
+            "kind": "dungeon",
+            "title": "Scarlet Monastery (Armory/Cathedral)",
+            "detail": "Dungeon boss drop in Scarlet Monastery."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 41,
+          "reqLevel": 36,
+          "stats": "+7 Fire Spell Power",
+          "alts": [
+            {
+              "name": "Twisted Nether Wand",
+              "itemId": 249144,
+              "value": "34.0 DPS - Desolace / Alterac quest",
+              "faction": "both",
+              "dps": "34.0 DPS",
+              "speed": "1.50",
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 38,
+              "reqLevel": 33,
+              "stats": "+5 Shadow Spell Power",
+              "icon": "inv_wand_03"
+            },
+            {
+              "name": "Gnomish Zapper",
+              "itemId": 4547,
+              "value": "32.7 DPS - Sunken Treasure quest in Arathi",
+              "faction": "both",
+              "dps": "32.7 DPS",
+              "speed": "1.30",
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 40,
+              "reqLevel": 35,
+              "stats": "+4 Stamina, +3 Spell Power",
+              "icon": "inv_wand_02"
+            },
+            {
+              "name": "Umbral Wand",
+              "itemId": 5090,
+              "value": "35.7 DPS - Level 40 drop",
+              "faction": "both",
+              "dps": "35.7 DPS",
+              "speed": "1.50",
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 45,
+              "reqLevel": 40,
+              "stats": "+5 Shadow Spell Power",
+              "icon": "inv_shirt_12"
+            }
+          ]
+        },
+        {
+          "levelBracket": "41–46",
+          "itemId": 249234,
+          "name": "Dreambough Wand",
+          "icon": "inv_wand_04",
+          "weaponType": "Wand",
+          "speed": "1.70",
+          "dps": "43.5 DPS",
+          "source": {
+            "kind": "quest",
+            "title": "Feralas / Hinterlands Questline",
+            "detail": "Long questline reward in Feralas / Hinterlands with immense nature burst."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 47,
+          "reqLevel": 42,
+          "stats": "+8 Nature Spell Power, +4 Spirit",
+          "alts": [
+            {
+              "name": "Cairnstone Sliver",
+              "itemId": 286747,
+              "value": "41.4 DPS - Uldaman dungeon drop",
+              "faction": "both",
+              "dps": "41.4 DPS",
+              "speed": "1.80",
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 46,
+              "reqLevel": 42,
+              "stats": "+6 Nature Spell Power",
+              "icon": "inv_misc_questionmark"
+            },
+            {
+              "name": "Charged Lightning Rod",
+              "itemId": 279849,
+              "value": "37.3 DPS - Tanaris / Zul'Farrak quest",
+              "faction": "both",
+              "dps": "37.3 DPS",
+              "speed": "1.50",
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 48,
+              "reqLevel": 43,
+              "stats": "+6 Nature Spell Power",
+              "icon": "inv_gauntlets_15"
+            },
+            {
+              "name": "Nature's Breath",
+              "itemId": 19118,
+              "value": "41.1 DPS - Dark Vessels quest",
+              "faction": "both",
+              "dps": "41.1 DPS",
+              "speed": "1.40",
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 50,
+              "reqLevel": 46,
+              "stats": "+7 Nature Spell Power",
+              "icon": "inv_wand_12"
+            }
+          ]
+        },
+        {
+          "levelBracket": "47–52",
+          "itemId": 11748,
+          "name": "Pyric Caduceus",
+          "icon": "inv_staff_13",
+          "weaponType": "Wand",
+          "speed": "1.80",
+          "dps": "52.5 DPS",
+          "source": {
+            "kind": "dungeon",
+            "title": "Blackrock Depths",
+            "detail": "Dropped by Pyromancer Loregrain in Blackrock Depths."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 53,
+          "reqLevel": 48,
+          "stats": "+10 Fire Spell Power",
+          "alts": [
+            {
+              "name": "Lesser Eternal Wand",
+              "itemId": 249232,
+              "value": "45.8 DPS - Enchanting skill 260 craft",
+              "faction": "both",
+              "dps": "45.8 DPS",
+              "speed": "2.00",
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 54,
+              "reqLevel": 49,
+              "stats": "+7 Arcane Spell Power",
+              "icon": "inv_wand_05"
+            },
+            {
+              "name": "Wizard's Hand",
+              "itemId": 15280,
+              "value": "44.4 DPS - Level 48 drop",
+              "faction": "both",
+              "dps": "44.4 DPS",
+              "speed": "1.80",
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 53,
+              "reqLevel": 48,
+              "stats": "+7 Arcane Spell Power",
+              "icon": "inv_wand_06"
+            },
+            {
+              "name": "Glowstar Rod",
+              "itemId": 15281,
+              "value": "50.0 DPS - Level 52 drop",
+              "faction": "both",
+              "dps": "50.0 DPS",
+              "speed": "1.50",
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 57,
+              "reqLevel": 52,
+              "stats": "+8 Holy Spell Power",
+              "icon": "inv_staff_10"
+            }
+          ]
+        },
+        {
+          "levelBracket": "53–60",
+          "itemId": 16997,
+          "name": "Stormrager",
+          "icon": "inv_wand_05",
+          "weaponType": "Wand",
+          "speed": "1.30",
+          "dps": "62.7 DPS",
+          "source": {
+            "kind": "quest",
+            "title": "Eastern Plaguelands / Scholomance Quest",
+            "detail": "Top-tier quest reward in Eastern Plaguelands. High DPS with ultra fast 1.30 attack speed."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 62,
+          "reqLevel": 56,
+          "stats": "+5 Intellect, +9 Spell Power",
+          "alts": [
+            {
+              "name": "Brilliant Wand",
+              "itemId": 249385,
+              "value": "59.6 DPS - Crafted Enchanting (Skill 300)",
+              "faction": "both",
+              "dps": "59.6 DPS",
+              "speed": "1.20",
+              "weaponType": "Wand",
+              "quality": "q3",
+              "iLvl": 60,
+              "reqLevel": 55,
+              "stats": "+6 Intellect, +8 Spell Power",
+              "icon": "inv_wand_07"
+            },
+            {
+              "name": "Greater Eternal Wand",
+              "itemId": 249237,
+              "value": "53.3 DPS - Crafted Enchanting",
+              "faction": "both",
+              "dps": "53.3 DPS",
+              "speed": "1.50",
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 60,
+              "reqLevel": 55,
+              "stats": "+8 Arcane Spell Power",
+              "icon": "inv_wand_14"
+            },
+            {
+              "name": "Torch of Austen",
+              "itemId": 13004,
+              "value": "56.8 DPS - Level 53 world drop",
+              "faction": "both",
+              "dps": "56.8 DPS",
+              "speed": "1.40",
+              "weaponType": "Wand",
+              "quality": "q3",
+              "iLvl": 58,
+              "reqLevel": 53,
+              "stats": "+8 Fire Spell Power",
+              "icon": "inv_wand_11"
+            },
+            {
+              "name": "Wand of Biting Cold",
+              "itemId": 19108,
+              "value": "64.0 DPS - Alterac Valley quest reward",
+              "faction": "both",
+              "dps": "64.0 DPS",
+              "speed": "1.50",
+              "weaponType": "Wand",
+              "quality": "q3",
+              "iLvl": 63,
+              "reqLevel": 51,
+              "stats": "+16 Frost Spell Power",
+              "icon": "inv_wand_01"
+            }
+          ]
+        }
+      ]
+    },
+    "warlock": {
+      "classId": "warlock",
+      "tracks": [
+        {
+          "id": "primary",
+          "name": "Level 1–60 Wand Upgrade Path"
+        }
+      ],
+      "levels": [
+        {
+          "levelBracket": "1–4",
+          "itemId": 247789,
+          "name": "Novice's Practice Wand",
+          "icon": "inv_weapon_shortblade_09",
+          "weaponType": "Wand",
+          "speed": "1.50",
+          "dps": "4.0 DPS",
+          "source": {
+            "kind": "quest",
+            "title": "Starting Zone Class Quest",
+            "detail": "Awarded from initial Level 1–4 Class Trainer quest in starting zones."
+          },
+          "faction": "both",
+          "quality": "q1",
+          "iLvl": 6,
+          "reqLevel": 1,
+          "stats": "Auto-Shoot Baseline",
+          "alts": [
+            {
+              "name": "Alchemist's Wand",
+              "itemId": 5235,
+              "value": "4.4 DPS - Early starting zone drop",
+              "faction": "both",
+              "dps": "4.4 DPS",
+              "speed": "1.80",
+              "weaponType": "Wand",
+              "quality": "q1",
+              "iLvl": 7,
+              "reqLevel": 1,
+              "stats": "",
+              "icon": "inv_staff_02"
+            },
+            {
+              "name": "Dowsing Rod",
+              "itemId": 263428,
+              "value": "4.2 DPS - Level 4 quest reward",
+              "faction": "alliance",
+              "dps": "4.2 DPS",
+              "speed": "1.20",
+              "weaponType": "Wand",
+              "quality": "q1",
+              "iLvl": 6,
+              "reqLevel": 4,
+              "stats": "",
+              "icon": "inv_wand_05"
+            }
+          ]
+        },
+        {
+          "levelBracket": "5–8",
+          "itemId": 11287,
+          "name": "Lesser Magic Wand",
+          "icon": "inv_staff_02",
+          "weaponType": "Wand",
+          "speed": "1.50",
+          "dps": "11.3 DPS",
+          "source": {
+            "kind": "craft",
+            "title": "Enchanting (Skill 10)",
+            "detail": "Craftable by Enchanters or purchased cheaply from the Auction House; massive DPS spike for early leveling."
+          },
+          "faction": "both",
+          "quality": "q2",
+          "iLvl": 15,
+          "reqLevel": 5,
+          "stats": "+1 Arcane Spell Power",
+          "alts": [
+            {
+              "name": "Fire Wand",
+              "itemId": 5069,
+              "value": "8.7 DPS - Level 7 drop",
+              "faction": "both",
+              "dps": "8.7 DPS",
+              "speed": "1.50",
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 12,
+              "reqLevel": 7,
+              "stats": "+1 Fire Spell Power",
+              "icon": "inv_staff_02"
+            },
+            {
+              "name": "Elven Wand",
+              "itemId": 5604,
+              "value": "9.4 DPS - Darkshore quest 'Bashal'Aran'",
+              "faction": "alliance",
+              "dps": "9.4 DPS",
+              "speed": "1.60",
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 13,
+              "reqLevel": 7,
+              "stats": "+1 Nature Spell Power",
+              "icon": "inv_staff_02"
+            },
+            {
+              "name": "Riptear's Spare Arm",
+              "itemId": 286743,
+              "value": "9.4 DPS - Barrens quest 'Rear Guard Patrol'",
+              "faction": "horde",
+              "dps": "9.4 DPS",
+              "speed": "1.70",
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 13,
+              "reqLevel": 6,
+              "stats": "+2 Shadow Spell Power",
+              "icon": "spell_shadow_fingerofdeath"
+            }
+          ]
+        },
+        {
+          "levelBracket": "9–12",
+          "itemId": 12296,
+          "name": "Spark of the People's Militia",
+          "icon": "inv_staff_02",
+          "weaponType": "Wand",
+          "speed": "1.80",
+          "dps": "12.8 DPS",
+          "source": {
+            "kind": "quest",
+            "title": "The People's Militia",
+            "detail": "Quest reward from Westfall (Sentinel Hill). Elite upgrade for Alliance casters."
+          },
+          "faction": "alliance",
+          "quality": "q2",
+          "iLvl": 17,
+          "reqLevel": 9,
+          "stats": "+2 Arcane Spell Power",
+          "alts": [
+            {
+              "name": "Cinder Wand",
+              "itemId": 5242,
+              "value": "11.8 DPS - Silverpine Forest quest 'Arugal's Folly'",
+              "faction": "horde",
+              "dps": "11.8 DPS",
+              "speed": "1.40",
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 16,
+              "reqLevel": 9,
+              "stats": "+2 Fire Spell Power",
+              "icon": "inv_staff_02"
+            },
+            {
+              "name": "Shadow Wand",
+              "itemId": 5071,
+              "value": "10.4 DPS - World drop",
+              "faction": "both",
+              "dps": "10.4 DPS",
+              "speed": "1.40",
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 14,
+              "reqLevel": 9,
+              "stats": "+1 Shadow Spell Power",
+              "icon": "inv_weapon_shortblade_09"
+            },
+            {
+              "name": "Blazing Wand",
+              "itemId": 5073,
+              "value": "12.7 DPS - Level 12 drop",
+              "faction": "both",
+              "dps": "12.7 DPS",
+              "speed": "1.50",
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 17,
+              "reqLevel": 12,
+              "stats": "+2 Fire Spell Power",
+              "icon": "inv_misc_bone_taurenskull_01"
+            }
+          ]
+        },
+        {
+          "levelBracket": "13–16",
+          "itemId": 11288,
+          "name": "Greater Magic Wand",
+          "icon": "inv_staff_07",
+          "weaponType": "Wand",
+          "speed": "1.80",
+          "dps": "17.5 DPS",
+          "source": {
+            "kind": "craft",
+            "title": "Enchanting (Skill 75)",
+            "detail": "Craftable by Enchanters (Simple Wood + Greater Magic Essence). Huge power leap across levels 13–18."
+          },
+          "faction": "both",
+          "quality": "q2",
+          "iLvl": 20,
+          "reqLevel": 13,
+          "stats": "+2 Arcane Spell Power",
+          "alts": [
+            {
+              "name": "Moongazer's Wand",
+              "itemId": 284193,
+              "value": "14.5 DPS - Darkshore / Silverpine quest",
+              "faction": "both",
+              "dps": "14.5 DPS",
+              "speed": "1.60",
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 18,
+              "reqLevel": 13,
+              "stats": "+3 Nature Spell Power",
+              "icon": "inv_staff_06"
+            },
+            {
+              "name": "Opaque Wand",
+              "itemId": 5075,
+              "value": "15.0 DPS - Level 15 drop",
+              "faction": "both",
+              "dps": "15.0 DPS",
+              "speed": "1.40",
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 20,
+              "reqLevel": 15,
+              "stats": "+2 Frost Spell Power",
+              "icon": "inv_misc_gem_ruby_01"
+            },
+            {
+              "name": "Whelpfire Wand",
+              "itemId": 281925,
+              "value": "16.1 DPS - Redridge Mountains quest",
+              "faction": "alliance",
+              "dps": "16.1 DPS",
+              "speed": "1.70",
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 21,
+              "reqLevel": 14,
+              "stats": "+3 Fire Spell Power",
+              "icon": "inv_wand_11"
+            }
+          ]
+        },
+        {
+          "levelBracket": "17–20",
+          "itemId": 5198,
+          "name": "Cookie's Stirring Rod",
+          "icon": "inv_staff_02",
+          "weaponType": "Wand",
+          "speed": "1.30",
+          "dps": "22.3 DPS",
+          "source": {
+            "kind": "dungeon",
+            "title": "The Deadmines",
+            "detail": "Dropped by Cookie (The Ship's Cook) in Deadmines. Super fast 1.30s attack speed."
+          },
+          "faction": "both",
+          "quality": "q2",
+          "iLvl": 22,
+          "reqLevel": 17,
+          "stats": "+2 Nature Spell Power",
+          "alts": [
+            {
+              "name": "Charred Razormane Wand",
+              "itemId": 284195,
+              "value": "15.7 DPS - Barrens quest",
+              "faction": "horde",
+              "dps": "15.7 DPS",
+              "speed": "1.50",
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 20,
+              "reqLevel": 18,
+              "stats": "+2 Fire Spell Power",
+              "icon": "inv_misc_questionmark"
+            },
+            {
+              "name": "Burning Wand",
+              "itemId": 5079,
+              "value": "17.5 DPS - World drop",
+              "faction": "both",
+              "dps": "17.5 DPS",
+              "speed": "1.40",
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 23,
+              "reqLevel": 20,
+              "stats": "+3 Fire Spell Power",
+              "icon": "inv_misc_eye_01"
+            }
+          ]
+        },
+        {
+          "levelBracket": "21–24",
+          "itemId": 7001,
+          "name": "Gravestone Scepter",
+          "icon": "inv_wand_04",
+          "weaponType": "Wand",
+          "speed": "1.50",
+          "dps": "29.0 DPS",
+          "source": {
+            "kind": "quest",
+            "title": "Blackfathom Villainy",
+            "detail": "Reward for completing Blackfathom Deeps questline (Darnassus for Alliance / Thunder Bluff for Horde). Arguably the strongest leveling wand in the game."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 29,
+          "reqLevel": 18,
+          "stats": "+5 Shadow Spell Power",
+          "alts": [
+            {
+              "name": "Excavation Rod",
+              "itemId": 285350,
+              "value": "24.2 DPS - Wetlands / Hillsbrad quest",
+              "faction": "both",
+              "dps": "24.2 DPS",
+              "speed": "1.90",
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 27,
+              "reqLevel": 22,
+              "stats": "+3 Arcane Spell Power",
+              "icon": "inv_staff_11"
+            },
+            {
+              "name": "Consecrated Wand",
+              "itemId": 279844,
+              "value": "24.2 DPS - Level 23 drop",
+              "faction": "both",
+              "dps": "24.2 DPS",
+              "speed": "1.20",
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 28,
+              "reqLevel": 23,
+              "stats": "+4 Holy Spell Power",
+              "icon": "inv_staff_28"
+            },
+            {
+              "name": "Firestarter",
+              "itemId": 5081,
+              "value": "23.3 DPS - Level 24 drop",
+              "faction": "both",
+              "dps": "23.3 DPS",
+              "speed": "1.50",
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 27,
+              "reqLevel": 24,
+              "stats": "+4 Fire Spell Power",
+              "icon": "inv_misc_bag_10"
+            }
+          ]
+        },
+        {
+          "levelBracket": "25–28",
+          "itemId": 273043,
+          "name": "Wand of Mana Concentration",
+          "icon": "inv_wand_06",
+          "weaponType": "Wand",
+          "speed": "1.40",
+          "dps": "28.5 DPS",
+          "source": {
+            "kind": "dungeon",
+            "title": "Razorfen Kraul",
+            "detail": "Dropped in Razorfen Kraul. High burst speed and Arcane synergy."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 32,
+          "reqLevel": 27,
+          "stats": "+4 Intellect, +3 Arcane Spell Power",
+          "alts": [
+            {
+              "name": "Fizzle's Zippy Lighter",
+              "itemId": 279846,
+              "value": "31.0 DPS - Gnomeregan dungeon quest",
+              "faction": "both",
+              "dps": "31.0 DPS",
+              "speed": "1.50",
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 33,
+              "reqLevel": 28,
+              "stats": "+5 Fire Spell Power",
+              "icon": "inv_belt_04"
+            },
+            {
+              "name": "Wand of Eventide",
+              "itemId": 5084,
+              "value": "25.8 DPS - Level 27 drop",
+              "faction": "both",
+              "dps": "25.8 DPS",
+              "speed": "1.30",
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 31,
+              "reqLevel": 27,
+              "stats": "+4 Shadow Spell Power",
+              "icon": "inv_misc_head_human_01"
+            }
+          ]
+        },
+        {
+          "levelBracket": "29–34",
+          "itemId": 7514,
+          "name": "Icefury Wand",
+          "icon": "inv_wand_05",
+          "weaponType": "Wand",
+          "speed": "1.90",
+          "dps": "33.2 DPS",
+          "source": {
+            "kind": "quest",
+            "title": "Mage / Caster Class Mastery",
+            "detail": "Class quest in Dustwallow Marsh / Thousand Needles with devastating frost impact."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 35,
+          "reqLevel": 30,
+          "stats": "+5 Frost Spell Power, +3 Intellect",
+          "alts": [
+            {
+              "name": "Blackbone Wand",
+              "itemId": 286745,
+              "value": "35.3 DPS - Sold by wand vendors in Ironforge, Undercity, Ratchet",
+              "faction": "both",
+              "dps": "35.3 DPS",
+              "speed": "1.60",
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 38,
+              "reqLevel": 31,
+              "stats": "+5 Shadow Spell Power",
+              "icon": "inv_jewelry_ring_12"
+            },
+            {
+              "name": "Unstable Power Core",
+              "itemId": 279847,
+              "value": "30.0 DPS - Gnomeregan drop",
+              "faction": "both",
+              "dps": "30.0 DPS",
+              "speed": "1.50",
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 34,
+              "reqLevel": 29,
+              "stats": "+4 Fire Spell Power",
+              "icon": "inv_staff_06"
+            },
+            {
+              "name": "Master Hunter's Wand",
+              "itemId": 270084,
+              "value": "31.5 DPS - Stranglethorn Vale quest",
+              "faction": "both",
+              "dps": "31.5 DPS",
+              "speed": "1.70",
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 35,
+              "reqLevel": 30,
+              "stats": "+5 Nature Spell Power",
+              "icon": "inv_wand_03"
+            }
+          ]
+        },
+        {
+          "levelBracket": "35–40",
+          "itemId": 6806,
+          "name": "Dancing Flame",
+          "icon": "inv_wand_04",
+          "weaponType": "Wand",
+          "speed": "1.60",
+          "dps": "38.5 DPS",
+          "source": {
+            "kind": "dungeon",
+            "title": "Scarlet Monastery (Armory/Cathedral)",
+            "detail": "Dungeon boss drop in Scarlet Monastery."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 41,
+          "reqLevel": 36,
+          "stats": "+7 Fire Spell Power",
+          "alts": [
+            {
+              "name": "Twisted Nether Wand",
+              "itemId": 249144,
+              "value": "34.0 DPS - Desolace / Alterac quest",
+              "faction": "both",
+              "dps": "34.0 DPS",
+              "speed": "1.50",
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 38,
+              "reqLevel": 33,
+              "stats": "+5 Shadow Spell Power",
+              "icon": "inv_wand_03"
+            },
+            {
+              "name": "Gnomish Zapper",
+              "itemId": 4547,
+              "value": "32.7 DPS - Sunken Treasure quest in Arathi",
+              "faction": "both",
+              "dps": "32.7 DPS",
+              "speed": "1.30",
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 40,
+              "reqLevel": 35,
+              "stats": "+4 Stamina, +3 Spell Power",
+              "icon": "inv_wand_02"
+            },
+            {
+              "name": "Umbral Wand",
+              "itemId": 5090,
+              "value": "35.7 DPS - Level 40 drop",
+              "faction": "both",
+              "dps": "35.7 DPS",
+              "speed": "1.50",
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 45,
+              "reqLevel": 40,
+              "stats": "+5 Shadow Spell Power",
+              "icon": "inv_shirt_12"
+            }
+          ]
+        },
+        {
+          "levelBracket": "41–46",
+          "itemId": 249234,
+          "name": "Dreambough Wand",
+          "icon": "inv_wand_04",
+          "weaponType": "Wand",
+          "speed": "1.70",
+          "dps": "43.5 DPS",
+          "source": {
+            "kind": "quest",
+            "title": "Feralas / Hinterlands Questline",
+            "detail": "Long questline reward in Feralas / Hinterlands with immense nature burst."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 47,
+          "reqLevel": 42,
+          "stats": "+8 Nature Spell Power, +4 Spirit",
+          "alts": [
+            {
+              "name": "Cairnstone Sliver",
+              "itemId": 286747,
+              "value": "41.4 DPS - Uldaman dungeon drop",
+              "faction": "both",
+              "dps": "41.4 DPS",
+              "speed": "1.80",
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 46,
+              "reqLevel": 42,
+              "stats": "+6 Nature Spell Power",
+              "icon": "inv_misc_questionmark"
+            },
+            {
+              "name": "Charged Lightning Rod",
+              "itemId": 279849,
+              "value": "37.3 DPS - Tanaris / Zul'Farrak quest",
+              "faction": "both",
+              "dps": "37.3 DPS",
+              "speed": "1.50",
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 48,
+              "reqLevel": 43,
+              "stats": "+6 Nature Spell Power",
+              "icon": "inv_gauntlets_15"
+            },
+            {
+              "name": "Nature's Breath",
+              "itemId": 19118,
+              "value": "41.1 DPS - Dark Vessels quest",
+              "faction": "both",
+              "dps": "41.1 DPS",
+              "speed": "1.40",
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 50,
+              "reqLevel": 46,
+              "stats": "+7 Nature Spell Power",
+              "icon": "inv_wand_12"
+            }
+          ]
+        },
+        {
+          "levelBracket": "47–52",
+          "itemId": 11748,
+          "name": "Pyric Caduceus",
+          "icon": "inv_staff_13",
+          "weaponType": "Wand",
+          "speed": "1.80",
+          "dps": "52.5 DPS",
+          "source": {
+            "kind": "dungeon",
+            "title": "Blackrock Depths",
+            "detail": "Dropped by Pyromancer Loregrain in Blackrock Depths."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 53,
+          "reqLevel": 48,
+          "stats": "+10 Fire Spell Power",
+          "alts": [
+            {
+              "name": "Lesser Eternal Wand",
+              "itemId": 249232,
+              "value": "45.8 DPS - Enchanting skill 260 craft",
+              "faction": "both",
+              "dps": "45.8 DPS",
+              "speed": "2.00",
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 54,
+              "reqLevel": 49,
+              "stats": "+7 Arcane Spell Power",
+              "icon": "inv_wand_05"
+            },
+            {
+              "name": "Wizard's Hand",
+              "itemId": 15280,
+              "value": "44.4 DPS - Level 48 drop",
+              "faction": "both",
+              "dps": "44.4 DPS",
+              "speed": "1.80",
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 53,
+              "reqLevel": 48,
+              "stats": "+7 Arcane Spell Power",
+              "icon": "inv_wand_06"
+            },
+            {
+              "name": "Glowstar Rod",
+              "itemId": 15281,
+              "value": "50.0 DPS - Level 52 drop",
+              "faction": "both",
+              "dps": "50.0 DPS",
+              "speed": "1.50",
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 57,
+              "reqLevel": 52,
+              "stats": "+8 Holy Spell Power",
+              "icon": "inv_staff_10"
+            }
+          ]
+        },
+        {
+          "levelBracket": "53–60",
+          "itemId": 16997,
+          "name": "Stormrager",
+          "icon": "inv_wand_05",
+          "weaponType": "Wand",
+          "speed": "1.30",
+          "dps": "62.7 DPS",
+          "source": {
+            "kind": "quest",
+            "title": "Eastern Plaguelands / Scholomance Quest",
+            "detail": "Top-tier quest reward in Eastern Plaguelands. High DPS with ultra fast 1.30 attack speed."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 62,
+          "reqLevel": 56,
+          "stats": "+5 Intellect, +9 Spell Power",
+          "alts": [
+            {
+              "name": "Brilliant Wand",
+              "itemId": 249385,
+              "value": "59.6 DPS - Crafted Enchanting (Skill 300)",
+              "faction": "both",
+              "dps": "59.6 DPS",
+              "speed": "1.20",
+              "weaponType": "Wand",
+              "quality": "q3",
+              "iLvl": 60,
+              "reqLevel": 55,
+              "stats": "+6 Intellect, +8 Spell Power",
+              "icon": "inv_wand_07"
+            },
+            {
+              "name": "Greater Eternal Wand",
+              "itemId": 249237,
+              "value": "53.3 DPS - Crafted Enchanting",
+              "faction": "both",
+              "dps": "53.3 DPS",
+              "speed": "1.50",
+              "weaponType": "Wand",
+              "quality": "q2",
+              "iLvl": 60,
+              "reqLevel": 55,
+              "stats": "+8 Arcane Spell Power",
+              "icon": "inv_wand_14"
+            },
+            {
+              "name": "Torch of Austen",
+              "itemId": 13004,
+              "value": "56.8 DPS - Level 53 world drop",
+              "faction": "both",
+              "dps": "56.8 DPS",
+              "speed": "1.40",
+              "weaponType": "Wand",
+              "quality": "q3",
+              "iLvl": 58,
+              "reqLevel": 53,
+              "stats": "+8 Fire Spell Power",
+              "icon": "inv_wand_11"
+            },
+            {
+              "name": "Wand of Biting Cold",
+              "itemId": 19108,
+              "value": "64.0 DPS - Alterac Valley quest reward",
+              "faction": "both",
+              "dps": "64.0 DPS",
+              "speed": "1.50",
+              "weaponType": "Wand",
+              "quality": "q3",
+              "iLvl": 63,
+              "reqLevel": 51,
+              "stats": "+16 Frost Spell Power",
+              "icon": "inv_wand_01"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "offhands": {
+    "mage": {
+      "classId": "mage",
+      "tracks": [
+        {
+          "id": "primary",
+          "name": "Level 1–60 Off-Hand Progression"
+        }
+      ],
+      "levels": [
+        {
+          "levelBracket": "1–14",
+          "itemId": 1172,
+          "name": "Grayson's Torch",
+          "icon": "inv_torch_lit",
+          "weaponType": "Held in Off-hand",
+          "stats": "+4 Spirit",
+          "source": {
+            "kind": "quest",
+            "title": "The Westfall Lighthouse",
+            "detail": "Quest reward from Captain Grayson at the Westfall Lighthouse."
+          },
+          "faction": "alliance",
+          "quality": "q2",
+          "iLvl": 21,
+          "reqLevel": 10,
+          "alts": [
+            {
+              "name": "Tear of Grief",
+              "itemId": 284196,
+              "value": "+3 Intellect - Early Darkshore / Westfall quest",
+              "faction": "alliance",
+              "weaponType": "Held in Off-hand",
+              "quality": "q2",
+              "iLvl": 16,
+              "reqLevel": 11,
+              "stats": "+3 Intellect",
+              "icon": "inv_misc_questionmark"
+            },
+            {
+              "name": "Nightglow Concoction",
+              "itemId": 284197,
+              "value": "+4 Spirit - Silverpine / Barrens quest",
+              "faction": "horde",
+              "weaponType": "Held in Off-hand",
+              "quality": "q2",
+              "iLvl": 18,
+              "reqLevel": 9,
+              "stats": "+4 Spirit",
+              "icon": "inv_misc_questionmark"
+            },
+            {
+              "name": "Arcane Orb",
+              "itemId": 4838,
+              "value": "+2 Intellect, +1 Spirit - Early vendor/world drop",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q2",
+              "iLvl": 15,
+              "reqLevel": 10,
+              "stats": "+2 Intellect, +1 Spirit",
+              "icon": "inv_ore_arcanite_02"
+            }
+          ]
+        },
+        {
+          "levelBracket": "15–18",
+          "itemId": 1131,
+          "name": "Totem of Infliction",
+          "icon": "inv_misc_bone_elfskull_01",
+          "weaponType": "Held in Off-hand",
+          "stats": "+4 Intellect, Shadow Strike Proc (75–125 damage)",
+          "source": {
+            "kind": "quest",
+            "title": "The Totem of Infliction",
+            "detail": "Quest in Loch Modan (Valley of Kings). Offers defensive retaliation shadow damage."
+          },
+          "faction": "alliance",
+          "quality": "q2",
+          "iLvl": 25,
+          "reqLevel": 18,
+          "alts": [
+            {
+              "name": "Antipodean Rod",
+              "itemId": 285346,
+              "value": "+5 Intellect, +4 Spirit - Ashenvale quest",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 22,
+              "reqLevel": 17,
+              "stats": "+5 Intellect, +4 Spirit",
+              "icon": "inv_sword_20"
+            },
+            {
+              "name": "Everglow Lantern",
+              "itemId": 285347,
+              "value": "+4 Stamina, +3 Intellect - Silverpine / Barrens quest",
+              "faction": "horde",
+              "weaponType": "Held in Off-hand",
+              "quality": "q2",
+              "iLvl": 25,
+              "reqLevel": 19,
+              "stats": "+4 Stamina, +3 Intellect",
+              "icon": "inv_weapon_bow_05"
+            }
+          ]
+        },
+        {
+          "levelBracket": "19–22",
+          "itemId": 2943,
+          "name": "Eye of Paleth",
+          "icon": "inv_misc_orb_03",
+          "weaponType": "Held in Off-hand",
+          "stats": "+6 Spirit, +4 Intellect",
+          "source": {
+            "kind": "quest",
+            "title": "Cleansing the Eye",
+            "detail": "Long questline reward in the Wetlands."
+          },
+          "faction": "alliance",
+          "quality": "q2",
+          "iLvl": 31,
+          "reqLevel": 22,
+          "alts": [
+            {
+              "name": "Flamescarred Spellbook",
+              "itemId": 281306,
+              "value": "+5 Intellect, +5 Fire Spell Power - Darkshore quest",
+              "faction": "alliance",
+              "weaponType": "Held in Off-hand",
+              "quality": "q2",
+              "iLvl": 31,
+              "reqLevel": 23,
+              "stats": "+5 Intellect, +5 Fire Spell Power",
+              "icon": "inv_misc_book_01"
+            },
+            {
+              "name": "Orb of Power",
+              "itemId": 4838,
+              "value": "+5 Intellect, +5 Spirit - World drop",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q2",
+              "iLvl": 26,
+              "reqLevel": 21,
+              "stats": "+5 Intellect, +5 Spirit",
+              "icon": "inv_ore_arcanite_02"
+            },
+            {
+              "name": "Alliance Outrunner Healing Rod",
+              "itemId": 285348,
+              "value": "+9 Healing, +4 Spirit - Ashenvale quest",
+              "faction": "alliance",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 26,
+              "reqLevel": 21,
+              "stats": "+9 Healing, +4 Spirit",
+              "icon": "inv_wand_04"
+            }
+          ]
+        },
+        {
+          "levelBracket": "23–26",
+          "itemId": 249394,
+          "name": "Orb of Mystic Insight",
+          "icon": "inv_misc_orb_blue",
+          "weaponType": "Held in Off-hand",
+          "stats": "+7 Intellect, +6 Spirit",
+          "source": {
+            "kind": "craft",
+            "title": "Enchanting / Alchemy Discovery",
+            "detail": "Crafted caster focus providing substantial mana pool and regeneration."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 30,
+          "reqLevel": 25,
+          "alts": [
+            {
+              "name": "Witch's Finger",
+              "itemId": 16887,
+              "value": "+7 Shadow Spell Power, +4 Stamina - Hillsbrad quest",
+              "faction": "horde",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 32,
+              "reqLevel": 25,
+              "stats": "+7 Shadow Spell Power, +4 Stamina",
+              "icon": "inv_wand_12"
+            },
+            {
+              "name": "Fireproof Orb",
+              "itemId": 4836,
+              "value": "+6 Stamina, +5 Fire Resistance - World drop",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q2",
+              "iLvl": 28,
+              "reqLevel": 23,
+              "stats": "+6 Stamina, +5 Fire Resistance",
+              "icon": "inv_jewelry_talisman_01"
+            },
+            {
+              "name": "Orb of Souls",
+              "itemId": 249395,
+              "value": "+7 Stamina, +6 Spirit - Dungeon craft",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 30,
+              "reqLevel": 25,
+              "stats": "+7 Stamina, +6 Spirit",
+              "icon": "inv_misc_orb_04"
+            }
+          ]
+        },
+        {
+          "levelBracket": "27–30",
+          "itemId": 273052,
+          "name": "Ponderous Orb",
+          "icon": "inv_misc_orb_04",
+          "weaponType": "Held in Off-hand",
+          "stats": "+8 Intellect, +6 Spirit, +11 Spell Power",
+          "source": {
+            "kind": "dungeon",
+            "title": "Razorfen Kraul / Shadowfang Keep",
+            "detail": "Dropped by Shade of the Archmage. One of the greatest caster offhands in early Phase 2."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 35,
+          "reqLevel": 30,
+          "alts": [
+            {
+              "name": "Skull of Impending Doom",
+              "itemId": 4984,
+              "value": "+7 Intellect, +5 Spirit, Use: Sprint speed boost - Badlands quest 'Forbidden Knowledge'",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q2",
+              "iLvl": 41,
+              "reqLevel": 30,
+              "stats": "+7 Intellect, +5 Spirit, Sprint Proc",
+              "icon": "inv_misc_bone_elfskull_01"
+            },
+            {
+              "name": "Rod of Molten Fire",
+              "itemId": 2565,
+              "value": "+10 Fire Spell Power - Rare world drop",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 35,
+              "reqLevel": 30,
+              "stats": "+10 Fire Spell Power",
+              "icon": "inv_spear_01"
+            },
+            {
+              "name": "Salve and Salvation",
+              "itemId": 276898,
+              "value": "+14 Healing, +6 Spirit - Duskwood / Wetlands quest",
+              "faction": "alliance",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 38,
+              "reqLevel": 30,
+              "stats": "+14 Healing, +6 Spirit",
+              "icon": "inv_misc_book_01"
+            },
+            {
+              "name": "Omega Orb",
+              "itemId": 7749,
+              "value": "+8 Intellect, +6 Spirit - Horde quest 'Compendium of the Fallen'",
+              "faction": "horde",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 40,
+              "reqLevel": 28,
+              "stats": "+8 Intellect, +6 Spirit",
+              "icon": "inv_misc_orb_03"
+            }
+          ]
+        },
+        {
+          "levelBracket": "31–35",
+          "itemId": 7685,
+          "name": "Orb of the Forgotten Seer",
+          "icon": "inv_misc_orb_02",
+          "weaponType": "Held in Off-hand",
+          "stats": "+14 Spell Power",
+          "source": {
+            "kind": "dungeon",
+            "title": "Scarlet Monastery (Library)",
+            "detail": "Dropped by Bloodmage Thalnos in Scarlet Monastery Library."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 37,
+          "reqLevel": 32,
+          "alts": [
+            {
+              "name": "Celestial Orb",
+              "itemId": 7515,
+              "value": "+13 Spell Power, +3 Intellect - Mage quest 'Celestial Power'",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 40,
+              "reqLevel": 35,
+              "stats": "+13 Spell Power, +3 Intellect",
+              "icon": "inv_misc_orb_03"
+            },
+            {
+              "name": "Orb of Noh'Orahil",
+              "itemId": 15107,
+              "value": "+5 Intellect, +14 Fire Spell Power - Warlock quest",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 40,
+              "reqLevel": 35,
+              "stats": "+5 Intellect, +14 Fire Spell Power",
+              "icon": "inv_misc_orb_03"
+            },
+            {
+              "name": "Beacon of Hope",
+              "itemId": 9393,
+              "value": "+18 Healing, +5 Spirit - World drop",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 38,
+              "reqLevel": 33,
+              "stats": "+18 Healing, +5 Spirit",
+              "icon": "inv_misc_lantern_01"
+            },
+            {
+              "name": "Thrice-Damned Effigy",
+              "itemId": 271805,
+              "value": "+12 Spell Power, +6 Stamina - Desolace quest",
+              "faction": "horde",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 42,
+              "reqLevel": 35,
+              "stats": "+12 Spell Power, +6 Stamina",
+              "icon": "inv_misc_orb_01"
+            }
+          ]
+        },
+        {
+          "levelBracket": "36–40",
+          "itemId": 10770,
+          "name": "Mordresh's Lifeless Skull",
+          "icon": "inv_misc_bone_elfskull_01",
+          "weaponType": "Held in Off-hand",
+          "stats": "+7 Intellect, +11 Shadow Spell Power",
+          "source": {
+            "kind": "dungeon",
+            "title": "Razorfen Downs",
+            "detail": "Dropped by Mordresh Fire Eye in Razorfen Downs."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 41,
+          "reqLevel": 36,
+          "alts": [
+            {
+              "name": "Researcher's Night Light",
+              "itemId": 277260,
+              "value": "+15 Spell Power, +5 Intellect - Greater Friend of the Library quest",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 45,
+              "reqLevel": 40,
+              "stats": "+15 Spell Power, +5 Intellect",
+              "icon": "inv_torch_lit"
+            },
+            {
+              "name": "Umbral Crystal",
+              "itemId": 13029,
+              "value": "+11 Shadow Spell Power, +6 Intellect - Rare world drop",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 43,
+              "reqLevel": 38,
+              "stats": "+11 Shadow Spell Power, +6 Intellect",
+              "icon": "inv_misc_orb_04"
+            },
+            {
+              "name": "Aurora Sphere",
+              "itemId": 7610,
+              "value": "+8 Intellect, +8 Spirit - Level 36 drop",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q2",
+              "iLvl": 41,
+              "reqLevel": 36,
+              "stats": "+8 Intellect, +8 Spirit",
+              "icon": "inv_misc_gem_pearl_02"
+            }
+          ]
+        },
+        {
+          "levelBracket": "41–46",
+          "itemId": 249455,
+          "name": "Truesilver Conduit",
+          "icon": "inv_rod_enchantedadamantite",
+          "weaponType": "Held in Off-hand",
+          "stats": "+9 Intellect, +16 Healing, +6 Spell Power",
+          "source": {
+            "kind": "craft",
+            "title": "Blacksmithing / Engineering",
+            "detail": "Crafted magical conduit with exceptional healing and spell stats."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 50,
+          "reqLevel": 45,
+          "alts": [
+            {
+              "name": "Lord Sakrasis' Scepter",
+              "itemId": 5028,
+              "value": "+9 Intellect, +9 Spirit - Desolace quest",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q2",
+              "iLvl": 47,
+              "reqLevel": 42,
+              "stats": "+9 Intellect, +9 Spirit",
+              "icon": "inv_wand_10"
+            },
+            {
+              "name": "Skullspell Orb",
+              "itemId": 10708,
+              "value": "+14 Spell Power, +6 Intellect - Alliance quest 'Return to Tymor'",
+              "faction": "alliance",
+              "weaponType": "Held in Off-hand",
+              "quality": "q2",
+              "iLvl": 52,
+              "reqLevel": 45,
+              "stats": "+14 Spell Power, +6 Intellect",
+              "icon": "inv_misc_bone_elfskull_01"
+            },
+            {
+              "name": "Pyrestone Orb",
+              "itemId": 10709,
+              "value": "+16 Fire Spell Power - Horde quest 'Betrayed'",
+              "faction": "horde",
+              "weaponType": "Held in Off-hand",
+              "quality": "q2",
+              "iLvl": 55,
+              "reqLevel": 44,
+              "stats": "+16 Fire Spell Power",
+              "icon": "inv_misc_orb_05"
+            }
+          ]
+        },
+        {
+          "levelBracket": "47–52",
+          "itemId": 11904,
+          "name": "Spirit of Aquementas",
+          "icon": "inv_ore_arcanite_02",
+          "weaponType": "Held in Off-hand",
+          "stats": "+21 Spell Power",
+          "source": {
+            "kind": "quest",
+            "title": "It's Dangerous to Go Alone",
+            "detail": "Questline reward from Linken in Un'Goro Crater. Unmatched spell power throughout the 40s and 50s."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 56,
+          "reqLevel": 47,
+          "alts": [
+            {
+              "name": "Insurgent's Manifesto",
+              "itemId": 271933,
+              "value": "+16 Spell Power, +8 Stamina - Western Plaguelands quest",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 53,
+              "reqLevel": 48,
+              "stats": "+16 Spell Power, +8 Stamina",
+              "icon": "inv_misc_book_06"
+            },
+            {
+              "name": "Tome of the Darkspear Prophecy",
+              "itemId": 272088,
+              "value": "+16 Spell Power, +8 Spirit - Western Plaguelands quest",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 53,
+              "reqLevel": 48,
+              "stats": "+16 Spell Power, +8 Spirit",
+              "icon": "inv_misc_book_06"
+            },
+            {
+              "name": "Magebane Scion",
+              "itemId": 15857,
+              "value": "+18 Spell Power - Blasted Lands quest 'Hidden Treasures'",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 60,
+              "reqLevel": 50,
+              "stats": "+18 Spell Power",
+              "icon": "inv_staff_11"
+            }
+          ]
+        },
+        {
+          "levelBracket": "53–60",
+          "itemId": 19308,
+          "name": "Tome of Arcane Domination",
+          "icon": "inv_misc_book_01",
+          "weaponType": "Held in Off-hand",
+          "stats": "+31 Arcane Spell Power, +3 MP5",
+          "source": {
+            "kind": "dungeon",
+            "title": "Scholomance / Stratholme Bosses",
+            "detail": "Top-tier end-game caster offhand for mages and spellcasters."
+          },
+          "faction": "both",
+          "quality": "q4",
+          "iLvl": 60,
+          "reqLevel": 55,
+          "alts": [
+            {
+              "name": "Tome of Shadow Force",
+              "itemId": 19309,
+              "value": "+34 Shadow Spell Power - Stratholme drop",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q4",
+              "iLvl": 60,
+              "reqLevel": 55,
+              "stats": "+34 Shadow Spell Power",
+              "icon": "inv_misc_book_06"
+            },
+            {
+              "name": "Tome of the Ice Lord",
+              "itemId": 19310,
+              "value": "+34 Frost Spell Power - Alterac Valley / Scholomance",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q4",
+              "iLvl": 60,
+              "reqLevel": 55,
+              "stats": "+34 Frost Spell Power",
+              "icon": "inv_misc_book_11"
+            },
+            {
+              "name": "Tome of Fiery Arcana",
+              "itemId": 19311,
+              "value": "+34 Fire Spell Power - Stratholme drop",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q4",
+              "iLvl": 60,
+              "reqLevel": 55,
+              "stats": "+34 Fire Spell Power",
+              "icon": "inv_misc_book_09"
+            },
+            {
+              "name": "Lei of the Lifegiver",
+              "itemId": 19312,
+              "value": "+53 Healing, +4 MP5 - Alterac Valley Exalted reward",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q4",
+              "iLvl": 60,
+              "reqLevel": 55,
+              "stats": "+53 Healing, +4 MP5",
+              "icon": "inv_misc_flower_04"
+            },
+            {
+              "name": "Barkskin Baubles",
+              "itemId": 274417,
+              "value": "+22 Healing, +7 Intellect - Felwood quest",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 58,
+              "reqLevel": 53,
+              "stats": "+22 Healing, +7 Intellect",
+              "icon": "inv_misc_bag_10_black"
+            }
+          ]
+        }
+      ]
+    },
+    "priest": {
+      "classId": "priest",
+      "tracks": [
+        {
+          "id": "primary",
+          "name": "Level 1–60 Off-Hand Progression"
+        }
+      ],
+      "levels": [
+        {
+          "levelBracket": "1–14",
+          "itemId": 1172,
+          "name": "Grayson's Torch",
+          "icon": "inv_torch_lit",
+          "weaponType": "Held in Off-hand",
+          "stats": "+4 Spirit",
+          "source": {
+            "kind": "quest",
+            "title": "The Westfall Lighthouse",
+            "detail": "Quest reward from Captain Grayson at the Westfall Lighthouse."
+          },
+          "faction": "alliance",
+          "quality": "q2",
+          "iLvl": 21,
+          "reqLevel": 10,
+          "alts": [
+            {
+              "name": "Tear of Grief",
+              "itemId": 284196,
+              "value": "+3 Intellect - Early Darkshore / Westfall quest",
+              "faction": "alliance",
+              "weaponType": "Held in Off-hand",
+              "quality": "q2",
+              "iLvl": 16,
+              "reqLevel": 11,
+              "stats": "+3 Intellect",
+              "icon": "inv_misc_questionmark"
+            },
+            {
+              "name": "Nightglow Concoction",
+              "itemId": 284197,
+              "value": "+4 Spirit - Silverpine / Barrens quest",
+              "faction": "horde",
+              "weaponType": "Held in Off-hand",
+              "quality": "q2",
+              "iLvl": 18,
+              "reqLevel": 9,
+              "stats": "+4 Spirit",
+              "icon": "inv_misc_questionmark"
+            },
+            {
+              "name": "Arcane Orb",
+              "itemId": 4838,
+              "value": "+2 Intellect, +1 Spirit - Early vendor/world drop",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q2",
+              "iLvl": 15,
+              "reqLevel": 10,
+              "stats": "+2 Intellect, +1 Spirit",
+              "icon": "inv_ore_arcanite_02"
+            }
+          ]
+        },
+        {
+          "levelBracket": "15–18",
+          "itemId": 1131,
+          "name": "Totem of Infliction",
+          "icon": "inv_misc_bone_elfskull_01",
+          "weaponType": "Held in Off-hand",
+          "stats": "+4 Intellect, Shadow Strike Proc (75–125 damage)",
+          "source": {
+            "kind": "quest",
+            "title": "The Totem of Infliction",
+            "detail": "Quest in Loch Modan (Valley of Kings). Offers defensive retaliation shadow damage."
+          },
+          "faction": "alliance",
+          "quality": "q2",
+          "iLvl": 25,
+          "reqLevel": 18,
+          "alts": [
+            {
+              "name": "Antipodean Rod",
+              "itemId": 285346,
+              "value": "+5 Intellect, +4 Spirit - Ashenvale quest",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 22,
+              "reqLevel": 17,
+              "stats": "+5 Intellect, +4 Spirit",
+              "icon": "inv_sword_20"
+            },
+            {
+              "name": "Everglow Lantern",
+              "itemId": 285347,
+              "value": "+4 Stamina, +3 Intellect - Silverpine / Barrens quest",
+              "faction": "horde",
+              "weaponType": "Held in Off-hand",
+              "quality": "q2",
+              "iLvl": 25,
+              "reqLevel": 19,
+              "stats": "+4 Stamina, +3 Intellect",
+              "icon": "inv_weapon_bow_05"
+            }
+          ]
+        },
+        {
+          "levelBracket": "19–22",
+          "itemId": 2943,
+          "name": "Eye of Paleth",
+          "icon": "inv_misc_orb_03",
+          "weaponType": "Held in Off-hand",
+          "stats": "+6 Spirit, +4 Intellect",
+          "source": {
+            "kind": "quest",
+            "title": "Cleansing the Eye",
+            "detail": "Long questline reward in the Wetlands."
+          },
+          "faction": "alliance",
+          "quality": "q2",
+          "iLvl": 31,
+          "reqLevel": 22,
+          "alts": [
+            {
+              "name": "Flamescarred Spellbook",
+              "itemId": 281306,
+              "value": "+5 Intellect, +5 Fire Spell Power - Darkshore quest",
+              "faction": "alliance",
+              "weaponType": "Held in Off-hand",
+              "quality": "q2",
+              "iLvl": 31,
+              "reqLevel": 23,
+              "stats": "+5 Intellect, +5 Fire Spell Power",
+              "icon": "inv_misc_book_01"
+            },
+            {
+              "name": "Orb of Power",
+              "itemId": 4838,
+              "value": "+5 Intellect, +5 Spirit - World drop",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q2",
+              "iLvl": 26,
+              "reqLevel": 21,
+              "stats": "+5 Intellect, +5 Spirit",
+              "icon": "inv_ore_arcanite_02"
+            },
+            {
+              "name": "Alliance Outrunner Healing Rod",
+              "itemId": 285348,
+              "value": "+9 Healing, +4 Spirit - Ashenvale quest",
+              "faction": "alliance",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 26,
+              "reqLevel": 21,
+              "stats": "+9 Healing, +4 Spirit",
+              "icon": "inv_wand_04"
+            }
+          ]
+        },
+        {
+          "levelBracket": "23–26",
+          "itemId": 249394,
+          "name": "Orb of Mystic Insight",
+          "icon": "inv_misc_orb_blue",
+          "weaponType": "Held in Off-hand",
+          "stats": "+7 Intellect, +6 Spirit",
+          "source": {
+            "kind": "craft",
+            "title": "Enchanting / Alchemy Discovery",
+            "detail": "Crafted caster focus providing substantial mana pool and regeneration."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 30,
+          "reqLevel": 25,
+          "alts": [
+            {
+              "name": "Witch's Finger",
+              "itemId": 16887,
+              "value": "+7 Shadow Spell Power, +4 Stamina - Hillsbrad quest",
+              "faction": "horde",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 32,
+              "reqLevel": 25,
+              "stats": "+7 Shadow Spell Power, +4 Stamina",
+              "icon": "inv_wand_12"
+            },
+            {
+              "name": "Fireproof Orb",
+              "itemId": 4836,
+              "value": "+6 Stamina, +5 Fire Resistance - World drop",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q2",
+              "iLvl": 28,
+              "reqLevel": 23,
+              "stats": "+6 Stamina, +5 Fire Resistance",
+              "icon": "inv_jewelry_talisman_01"
+            },
+            {
+              "name": "Orb of Souls",
+              "itemId": 249395,
+              "value": "+7 Stamina, +6 Spirit - Dungeon craft",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 30,
+              "reqLevel": 25,
+              "stats": "+7 Stamina, +6 Spirit",
+              "icon": "inv_misc_orb_04"
+            }
+          ]
+        },
+        {
+          "levelBracket": "27–30",
+          "itemId": 273052,
+          "name": "Ponderous Orb",
+          "icon": "inv_misc_orb_04",
+          "weaponType": "Held in Off-hand",
+          "stats": "+8 Intellect, +6 Spirit, +11 Spell Power",
+          "source": {
+            "kind": "dungeon",
+            "title": "Razorfen Kraul / Shadowfang Keep",
+            "detail": "Dropped by Shade of the Archmage. One of the greatest caster offhands in early Phase 2."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 35,
+          "reqLevel": 30,
+          "alts": [
+            {
+              "name": "Skull of Impending Doom",
+              "itemId": 4984,
+              "value": "+7 Intellect, +5 Spirit, Use: Sprint speed boost - Badlands quest 'Forbidden Knowledge'",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q2",
+              "iLvl": 41,
+              "reqLevel": 30,
+              "stats": "+7 Intellect, +5 Spirit, Sprint Proc",
+              "icon": "inv_misc_bone_elfskull_01"
+            },
+            {
+              "name": "Rod of Molten Fire",
+              "itemId": 2565,
+              "value": "+10 Fire Spell Power - Rare world drop",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 35,
+              "reqLevel": 30,
+              "stats": "+10 Fire Spell Power",
+              "icon": "inv_spear_01"
+            },
+            {
+              "name": "Salve and Salvation",
+              "itemId": 276898,
+              "value": "+14 Healing, +6 Spirit - Duskwood / Wetlands quest",
+              "faction": "alliance",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 38,
+              "reqLevel": 30,
+              "stats": "+14 Healing, +6 Spirit",
+              "icon": "inv_misc_book_01"
+            },
+            {
+              "name": "Omega Orb",
+              "itemId": 7749,
+              "value": "+8 Intellect, +6 Spirit - Horde quest 'Compendium of the Fallen'",
+              "faction": "horde",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 40,
+              "reqLevel": 28,
+              "stats": "+8 Intellect, +6 Spirit",
+              "icon": "inv_misc_orb_03"
+            }
+          ]
+        },
+        {
+          "levelBracket": "31–35",
+          "itemId": 7685,
+          "name": "Orb of the Forgotten Seer",
+          "icon": "inv_misc_orb_02",
+          "weaponType": "Held in Off-hand",
+          "stats": "+14 Spell Power",
+          "source": {
+            "kind": "dungeon",
+            "title": "Scarlet Monastery (Library)",
+            "detail": "Dropped by Bloodmage Thalnos in Scarlet Monastery Library."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 37,
+          "reqLevel": 32,
+          "alts": [
+            {
+              "name": "Celestial Orb",
+              "itemId": 7515,
+              "value": "+13 Spell Power, +3 Intellect - Mage quest 'Celestial Power'",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 40,
+              "reqLevel": 35,
+              "stats": "+13 Spell Power, +3 Intellect",
+              "icon": "inv_misc_orb_03"
+            },
+            {
+              "name": "Orb of Noh'Orahil",
+              "itemId": 15107,
+              "value": "+5 Intellect, +14 Fire Spell Power - Warlock quest",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 40,
+              "reqLevel": 35,
+              "stats": "+5 Intellect, +14 Fire Spell Power",
+              "icon": "inv_misc_orb_03"
+            },
+            {
+              "name": "Beacon of Hope",
+              "itemId": 9393,
+              "value": "+18 Healing, +5 Spirit - World drop",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 38,
+              "reqLevel": 33,
+              "stats": "+18 Healing, +5 Spirit",
+              "icon": "inv_misc_lantern_01"
+            },
+            {
+              "name": "Thrice-Damned Effigy",
+              "itemId": 271805,
+              "value": "+12 Spell Power, +6 Stamina - Desolace quest",
+              "faction": "horde",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 42,
+              "reqLevel": 35,
+              "stats": "+12 Spell Power, +6 Stamina",
+              "icon": "inv_misc_orb_01"
+            }
+          ]
+        },
+        {
+          "levelBracket": "36–40",
+          "itemId": 10770,
+          "name": "Mordresh's Lifeless Skull",
+          "icon": "inv_misc_bone_elfskull_01",
+          "weaponType": "Held in Off-hand",
+          "stats": "+7 Intellect, +11 Shadow Spell Power",
+          "source": {
+            "kind": "dungeon",
+            "title": "Razorfen Downs",
+            "detail": "Dropped by Mordresh Fire Eye in Razorfen Downs."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 41,
+          "reqLevel": 36,
+          "alts": [
+            {
+              "name": "Researcher's Night Light",
+              "itemId": 277260,
+              "value": "+15 Spell Power, +5 Intellect - Greater Friend of the Library quest",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 45,
+              "reqLevel": 40,
+              "stats": "+15 Spell Power, +5 Intellect",
+              "icon": "inv_torch_lit"
+            },
+            {
+              "name": "Umbral Crystal",
+              "itemId": 13029,
+              "value": "+11 Shadow Spell Power, +6 Intellect - Rare world drop",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 43,
+              "reqLevel": 38,
+              "stats": "+11 Shadow Spell Power, +6 Intellect",
+              "icon": "inv_misc_orb_04"
+            },
+            {
+              "name": "Aurora Sphere",
+              "itemId": 7610,
+              "value": "+8 Intellect, +8 Spirit - Level 36 drop",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q2",
+              "iLvl": 41,
+              "reqLevel": 36,
+              "stats": "+8 Intellect, +8 Spirit",
+              "icon": "inv_misc_gem_pearl_02"
+            }
+          ]
+        },
+        {
+          "levelBracket": "41–46",
+          "itemId": 249455,
+          "name": "Truesilver Conduit",
+          "icon": "inv_rod_enchantedadamantite",
+          "weaponType": "Held in Off-hand",
+          "stats": "+9 Intellect, +16 Healing, +6 Spell Power",
+          "source": {
+            "kind": "craft",
+            "title": "Blacksmithing / Engineering",
+            "detail": "Crafted magical conduit with exceptional healing and spell stats."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 50,
+          "reqLevel": 45,
+          "alts": [
+            {
+              "name": "Lord Sakrasis' Scepter",
+              "itemId": 5028,
+              "value": "+9 Intellect, +9 Spirit - Desolace quest",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q2",
+              "iLvl": 47,
+              "reqLevel": 42,
+              "stats": "+9 Intellect, +9 Spirit",
+              "icon": "inv_wand_10"
+            },
+            {
+              "name": "Skullspell Orb",
+              "itemId": 10708,
+              "value": "+14 Spell Power, +6 Intellect - Alliance quest 'Return to Tymor'",
+              "faction": "alliance",
+              "weaponType": "Held in Off-hand",
+              "quality": "q2",
+              "iLvl": 52,
+              "reqLevel": 45,
+              "stats": "+14 Spell Power, +6 Intellect",
+              "icon": "inv_misc_bone_elfskull_01"
+            },
+            {
+              "name": "Pyrestone Orb",
+              "itemId": 10709,
+              "value": "+16 Fire Spell Power - Horde quest 'Betrayed'",
+              "faction": "horde",
+              "weaponType": "Held in Off-hand",
+              "quality": "q2",
+              "iLvl": 55,
+              "reqLevel": 44,
+              "stats": "+16 Fire Spell Power",
+              "icon": "inv_misc_orb_05"
+            }
+          ]
+        },
+        {
+          "levelBracket": "47–52",
+          "itemId": 11904,
+          "name": "Spirit of Aquementas",
+          "icon": "inv_ore_arcanite_02",
+          "weaponType": "Held in Off-hand",
+          "stats": "+21 Spell Power",
+          "source": {
+            "kind": "quest",
+            "title": "It's Dangerous to Go Alone",
+            "detail": "Questline reward from Linken in Un'Goro Crater. Unmatched spell power throughout the 40s and 50s."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 56,
+          "reqLevel": 47,
+          "alts": [
+            {
+              "name": "Insurgent's Manifesto",
+              "itemId": 271933,
+              "value": "+16 Spell Power, +8 Stamina - Western Plaguelands quest",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 53,
+              "reqLevel": 48,
+              "stats": "+16 Spell Power, +8 Stamina",
+              "icon": "inv_misc_book_06"
+            },
+            {
+              "name": "Tome of the Darkspear Prophecy",
+              "itemId": 272088,
+              "value": "+16 Spell Power, +8 Spirit - Western Plaguelands quest",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 53,
+              "reqLevel": 48,
+              "stats": "+16 Spell Power, +8 Spirit",
+              "icon": "inv_misc_book_06"
+            },
+            {
+              "name": "Magebane Scion",
+              "itemId": 15857,
+              "value": "+18 Spell Power - Blasted Lands quest 'Hidden Treasures'",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 60,
+              "reqLevel": 50,
+              "stats": "+18 Spell Power",
+              "icon": "inv_staff_11"
+            }
+          ]
+        },
+        {
+          "levelBracket": "53–60",
+          "itemId": 19312,
+          "name": "Lei of the Lifegiver",
+          "icon": "inv_misc_flower_04",
+          "weaponType": "Held in Off-hand",
+          "stats": "+53 Healing, +4 MP5",
+          "source": {
+            "kind": "quest",
+            "title": "Alterac Valley (Stormpike / Frostwolf)",
+            "detail": "Exalted faction reward with unparalleled healing power and mana regeneration."
+          },
+          "faction": "both",
+          "quality": "q4",
+          "iLvl": 60,
+          "reqLevel": 55,
+          "alts": [
+            {
+              "name": "Tome of Shadow Force",
+              "itemId": 19309,
+              "value": "+34 Shadow Spell Power - Stratholme drop",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q4",
+              "iLvl": 60,
+              "reqLevel": 55,
+              "stats": "+34 Shadow Spell Power",
+              "icon": "inv_misc_book_06"
+            },
+            {
+              "name": "Tome of the Ice Lord",
+              "itemId": 19310,
+              "value": "+34 Frost Spell Power - Alterac Valley / Scholomance",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q4",
+              "iLvl": 60,
+              "reqLevel": 55,
+              "stats": "+34 Frost Spell Power",
+              "icon": "inv_misc_book_11"
+            },
+            {
+              "name": "Tome of Fiery Arcana",
+              "itemId": 19311,
+              "value": "+34 Fire Spell Power - Stratholme drop",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q4",
+              "iLvl": 60,
+              "reqLevel": 55,
+              "stats": "+34 Fire Spell Power",
+              "icon": "inv_misc_book_09"
+            },
+            {
+              "name": "Tome of Arcane Domination",
+              "itemId": 19308,
+              "value": "+31 Arcane Spell Power, +3 MP5 - Scholomance drop",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q4",
+              "iLvl": 60,
+              "reqLevel": 55,
+              "stats": "+31 Arcane Spell Power, +3 MP5",
+              "icon": "inv_misc_book_01"
+            },
+            {
+              "name": "Barkskin Baubles",
+              "itemId": 274417,
+              "value": "+22 Healing, +7 Intellect - Felwood quest",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 58,
+              "reqLevel": 53,
+              "stats": "+22 Healing, +7 Intellect",
+              "icon": "inv_misc_bag_10_black"
+            }
+          ]
+        }
+      ]
+    },
+    "warlock": {
+      "classId": "warlock",
+      "tracks": [
+        {
+          "id": "primary",
+          "name": "Level 1–60 Off-Hand Progression"
+        }
+      ],
+      "levels": [
+        {
+          "levelBracket": "1–14",
+          "itemId": 1172,
+          "name": "Grayson's Torch",
+          "icon": "inv_torch_lit",
+          "weaponType": "Held in Off-hand",
+          "stats": "+4 Spirit",
+          "source": {
+            "kind": "quest",
+            "title": "The Westfall Lighthouse",
+            "detail": "Quest reward from Captain Grayson at the Westfall Lighthouse."
+          },
+          "faction": "alliance",
+          "quality": "q2",
+          "iLvl": 21,
+          "reqLevel": 10,
+          "alts": [
+            {
+              "name": "Tear of Grief",
+              "itemId": 284196,
+              "value": "+3 Intellect - Early Darkshore / Westfall quest",
+              "faction": "alliance",
+              "weaponType": "Held in Off-hand",
+              "quality": "q2",
+              "iLvl": 16,
+              "reqLevel": 11,
+              "stats": "+3 Intellect",
+              "icon": "inv_misc_questionmark"
+            },
+            {
+              "name": "Nightglow Concoction",
+              "itemId": 284197,
+              "value": "+4 Spirit - Silverpine / Barrens quest",
+              "faction": "horde",
+              "weaponType": "Held in Off-hand",
+              "quality": "q2",
+              "iLvl": 18,
+              "reqLevel": 9,
+              "stats": "+4 Spirit",
+              "icon": "inv_misc_questionmark"
+            },
+            {
+              "name": "Arcane Orb",
+              "itemId": 4838,
+              "value": "+2 Intellect, +1 Spirit - Early vendor/world drop",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q2",
+              "iLvl": 15,
+              "reqLevel": 10,
+              "stats": "+2 Intellect, +1 Spirit",
+              "icon": "inv_ore_arcanite_02"
+            }
+          ]
+        },
+        {
+          "levelBracket": "15–18",
+          "itemId": 1131,
+          "name": "Totem of Infliction",
+          "icon": "inv_misc_bone_elfskull_01",
+          "weaponType": "Held in Off-hand",
+          "stats": "+4 Intellect, Shadow Strike Proc (75–125 damage)",
+          "source": {
+            "kind": "quest",
+            "title": "The Totem of Infliction",
+            "detail": "Quest in Loch Modan (Valley of Kings). Offers defensive retaliation shadow damage."
+          },
+          "faction": "alliance",
+          "quality": "q2",
+          "iLvl": 25,
+          "reqLevel": 18,
+          "alts": [
+            {
+              "name": "Antipodean Rod",
+              "itemId": 285346,
+              "value": "+5 Intellect, +4 Spirit - Ashenvale quest",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 22,
+              "reqLevel": 17,
+              "stats": "+5 Intellect, +4 Spirit",
+              "icon": "inv_sword_20"
+            },
+            {
+              "name": "Everglow Lantern",
+              "itemId": 285347,
+              "value": "+4 Stamina, +3 Intellect - Silverpine / Barrens quest",
+              "faction": "horde",
+              "weaponType": "Held in Off-hand",
+              "quality": "q2",
+              "iLvl": 25,
+              "reqLevel": 19,
+              "stats": "+4 Stamina, +3 Intellect",
+              "icon": "inv_weapon_bow_05"
+            }
+          ]
+        },
+        {
+          "levelBracket": "19–22",
+          "itemId": 2943,
+          "name": "Eye of Paleth",
+          "icon": "inv_misc_orb_03",
+          "weaponType": "Held in Off-hand",
+          "stats": "+6 Spirit, +4 Intellect",
+          "source": {
+            "kind": "quest",
+            "title": "Cleansing the Eye",
+            "detail": "Long questline reward in the Wetlands."
+          },
+          "faction": "alliance",
+          "quality": "q2",
+          "iLvl": 31,
+          "reqLevel": 22,
+          "alts": [
+            {
+              "name": "Flamescarred Spellbook",
+              "itemId": 281306,
+              "value": "+5 Intellect, +5 Fire Spell Power - Darkshore quest",
+              "faction": "alliance",
+              "weaponType": "Held in Off-hand",
+              "quality": "q2",
+              "iLvl": 31,
+              "reqLevel": 23,
+              "stats": "+5 Intellect, +5 Fire Spell Power",
+              "icon": "inv_misc_book_01"
+            },
+            {
+              "name": "Orb of Power",
+              "itemId": 4838,
+              "value": "+5 Intellect, +5 Spirit - World drop",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q2",
+              "iLvl": 26,
+              "reqLevel": 21,
+              "stats": "+5 Intellect, +5 Spirit",
+              "icon": "inv_ore_arcanite_02"
+            },
+            {
+              "name": "Alliance Outrunner Healing Rod",
+              "itemId": 285348,
+              "value": "+9 Healing, +4 Spirit - Ashenvale quest",
+              "faction": "alliance",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 26,
+              "reqLevel": 21,
+              "stats": "+9 Healing, +4 Spirit",
+              "icon": "inv_wand_04"
+            }
+          ]
+        },
+        {
+          "levelBracket": "23–26",
+          "itemId": 249394,
+          "name": "Orb of Mystic Insight",
+          "icon": "inv_misc_orb_blue",
+          "weaponType": "Held in Off-hand",
+          "stats": "+7 Intellect, +6 Spirit",
+          "source": {
+            "kind": "craft",
+            "title": "Enchanting / Alchemy Discovery",
+            "detail": "Crafted caster focus providing substantial mana pool and regeneration."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 30,
+          "reqLevel": 25,
+          "alts": [
+            {
+              "name": "Witch's Finger",
+              "itemId": 16887,
+              "value": "+7 Shadow Spell Power, +4 Stamina - Hillsbrad quest",
+              "faction": "horde",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 32,
+              "reqLevel": 25,
+              "stats": "+7 Shadow Spell Power, +4 Stamina",
+              "icon": "inv_wand_12"
+            },
+            {
+              "name": "Fireproof Orb",
+              "itemId": 4836,
+              "value": "+6 Stamina, +5 Fire Resistance - World drop",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q2",
+              "iLvl": 28,
+              "reqLevel": 23,
+              "stats": "+6 Stamina, +5 Fire Resistance",
+              "icon": "inv_jewelry_talisman_01"
+            },
+            {
+              "name": "Orb of Souls",
+              "itemId": 249395,
+              "value": "+7 Stamina, +6 Spirit - Dungeon craft",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 30,
+              "reqLevel": 25,
+              "stats": "+7 Stamina, +6 Spirit",
+              "icon": "inv_misc_orb_04"
+            }
+          ]
+        },
+        {
+          "levelBracket": "27–30",
+          "itemId": 273052,
+          "name": "Ponderous Orb",
+          "icon": "inv_misc_orb_04",
+          "weaponType": "Held in Off-hand",
+          "stats": "+8 Intellect, +6 Spirit, +11 Spell Power",
+          "source": {
+            "kind": "dungeon",
+            "title": "Razorfen Kraul / Shadowfang Keep",
+            "detail": "Dropped by Shade of the Archmage. One of the greatest caster offhands in early Phase 2."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 35,
+          "reqLevel": 30,
+          "alts": [
+            {
+              "name": "Skull of Impending Doom",
+              "itemId": 4984,
+              "value": "+7 Intellect, +5 Spirit, Use: Sprint speed boost - Badlands quest 'Forbidden Knowledge'",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q2",
+              "iLvl": 41,
+              "reqLevel": 30,
+              "stats": "+7 Intellect, +5 Spirit, Sprint Proc",
+              "icon": "inv_misc_bone_elfskull_01"
+            },
+            {
+              "name": "Rod of Molten Fire",
+              "itemId": 2565,
+              "value": "+10 Fire Spell Power - Rare world drop",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 35,
+              "reqLevel": 30,
+              "stats": "+10 Fire Spell Power",
+              "icon": "inv_spear_01"
+            },
+            {
+              "name": "Salve and Salvation",
+              "itemId": 276898,
+              "value": "+14 Healing, +6 Spirit - Duskwood / Wetlands quest",
+              "faction": "alliance",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 38,
+              "reqLevel": 30,
+              "stats": "+14 Healing, +6 Spirit",
+              "icon": "inv_misc_book_01"
+            },
+            {
+              "name": "Omega Orb",
+              "itemId": 7749,
+              "value": "+8 Intellect, +6 Spirit - Horde quest 'Compendium of the Fallen'",
+              "faction": "horde",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 40,
+              "reqLevel": 28,
+              "stats": "+8 Intellect, +6 Spirit",
+              "icon": "inv_misc_orb_03"
+            }
+          ]
+        },
+        {
+          "levelBracket": "31–35",
+          "itemId": 7685,
+          "name": "Orb of the Forgotten Seer",
+          "icon": "inv_misc_orb_02",
+          "weaponType": "Held in Off-hand",
+          "stats": "+14 Spell Power",
+          "source": {
+            "kind": "dungeon",
+            "title": "Scarlet Monastery (Library)",
+            "detail": "Dropped by Bloodmage Thalnos in Scarlet Monastery Library."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 37,
+          "reqLevel": 32,
+          "alts": [
+            {
+              "name": "Celestial Orb",
+              "itemId": 7515,
+              "value": "+13 Spell Power, +3 Intellect - Mage quest 'Celestial Power'",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 40,
+              "reqLevel": 35,
+              "stats": "+13 Spell Power, +3 Intellect",
+              "icon": "inv_misc_orb_03"
+            },
+            {
+              "name": "Orb of Noh'Orahil",
+              "itemId": 15107,
+              "value": "+5 Intellect, +14 Fire Spell Power - Warlock quest",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 40,
+              "reqLevel": 35,
+              "stats": "+5 Intellect, +14 Fire Spell Power",
+              "icon": "inv_misc_orb_03"
+            },
+            {
+              "name": "Beacon of Hope",
+              "itemId": 9393,
+              "value": "+18 Healing, +5 Spirit - World drop",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 38,
+              "reqLevel": 33,
+              "stats": "+18 Healing, +5 Spirit",
+              "icon": "inv_misc_lantern_01"
+            },
+            {
+              "name": "Thrice-Damned Effigy",
+              "itemId": 271805,
+              "value": "+12 Spell Power, +6 Stamina - Desolace quest",
+              "faction": "horde",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 42,
+              "reqLevel": 35,
+              "stats": "+12 Spell Power, +6 Stamina",
+              "icon": "inv_misc_orb_01"
+            }
+          ]
+        },
+        {
+          "levelBracket": "36–40",
+          "itemId": 10770,
+          "name": "Mordresh's Lifeless Skull",
+          "icon": "inv_misc_bone_elfskull_01",
+          "weaponType": "Held in Off-hand",
+          "stats": "+7 Intellect, +11 Shadow Spell Power",
+          "source": {
+            "kind": "dungeon",
+            "title": "Razorfen Downs",
+            "detail": "Dropped by Mordresh Fire Eye in Razorfen Downs."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 41,
+          "reqLevel": 36,
+          "alts": [
+            {
+              "name": "Researcher's Night Light",
+              "itemId": 277260,
+              "value": "+15 Spell Power, +5 Intellect - Greater Friend of the Library quest",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 45,
+              "reqLevel": 40,
+              "stats": "+15 Spell Power, +5 Intellect",
+              "icon": "inv_torch_lit"
+            },
+            {
+              "name": "Umbral Crystal",
+              "itemId": 13029,
+              "value": "+11 Shadow Spell Power, +6 Intellect - Rare world drop",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 43,
+              "reqLevel": 38,
+              "stats": "+11 Shadow Spell Power, +6 Intellect",
+              "icon": "inv_misc_orb_04"
+            },
+            {
+              "name": "Aurora Sphere",
+              "itemId": 7610,
+              "value": "+8 Intellect, +8 Spirit - Level 36 drop",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q2",
+              "iLvl": 41,
+              "reqLevel": 36,
+              "stats": "+8 Intellect, +8 Spirit",
+              "icon": "inv_misc_gem_pearl_02"
+            }
+          ]
+        },
+        {
+          "levelBracket": "41–46",
+          "itemId": 249455,
+          "name": "Truesilver Conduit",
+          "icon": "inv_rod_enchantedadamantite",
+          "weaponType": "Held in Off-hand",
+          "stats": "+9 Intellect, +16 Healing, +6 Spell Power",
+          "source": {
+            "kind": "craft",
+            "title": "Blacksmithing / Engineering",
+            "detail": "Crafted magical conduit with exceptional healing and spell stats."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 50,
+          "reqLevel": 45,
+          "alts": [
+            {
+              "name": "Lord Sakrasis' Scepter",
+              "itemId": 5028,
+              "value": "+9 Intellect, +9 Spirit - Desolace quest",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q2",
+              "iLvl": 47,
+              "reqLevel": 42,
+              "stats": "+9 Intellect, +9 Spirit",
+              "icon": "inv_wand_10"
+            },
+            {
+              "name": "Skullspell Orb",
+              "itemId": 10708,
+              "value": "+14 Spell Power, +6 Intellect - Alliance quest 'Return to Tymor'",
+              "faction": "alliance",
+              "weaponType": "Held in Off-hand",
+              "quality": "q2",
+              "iLvl": 52,
+              "reqLevel": 45,
+              "stats": "+14 Spell Power, +6 Intellect",
+              "icon": "inv_misc_bone_elfskull_01"
+            },
+            {
+              "name": "Pyrestone Orb",
+              "itemId": 10709,
+              "value": "+16 Fire Spell Power - Horde quest 'Betrayed'",
+              "faction": "horde",
+              "weaponType": "Held in Off-hand",
+              "quality": "q2",
+              "iLvl": 55,
+              "reqLevel": 44,
+              "stats": "+16 Fire Spell Power",
+              "icon": "inv_misc_orb_05"
+            }
+          ]
+        },
+        {
+          "levelBracket": "47–52",
+          "itemId": 11904,
+          "name": "Spirit of Aquementas",
+          "icon": "inv_ore_arcanite_02",
+          "weaponType": "Held in Off-hand",
+          "stats": "+21 Spell Power",
+          "source": {
+            "kind": "quest",
+            "title": "It's Dangerous to Go Alone",
+            "detail": "Questline reward from Linken in Un'Goro Crater. Unmatched spell power throughout the 40s and 50s."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 56,
+          "reqLevel": 47,
+          "alts": [
+            {
+              "name": "Insurgent's Manifesto",
+              "itemId": 271933,
+              "value": "+16 Spell Power, +8 Stamina - Western Plaguelands quest",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 53,
+              "reqLevel": 48,
+              "stats": "+16 Spell Power, +8 Stamina",
+              "icon": "inv_misc_book_06"
+            },
+            {
+              "name": "Tome of the Darkspear Prophecy",
+              "itemId": 272088,
+              "value": "+16 Spell Power, +8 Spirit - Western Plaguelands quest",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 53,
+              "reqLevel": 48,
+              "stats": "+16 Spell Power, +8 Spirit",
+              "icon": "inv_misc_book_06"
+            },
+            {
+              "name": "Magebane Scion",
+              "itemId": 15857,
+              "value": "+18 Spell Power - Blasted Lands quest 'Hidden Treasures'",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 60,
+              "reqLevel": 50,
+              "stats": "+18 Spell Power",
+              "icon": "inv_staff_11"
+            }
+          ]
+        },
+        {
+          "levelBracket": "53–60",
+          "itemId": 19309,
+          "name": "Tome of Shadow Force",
+          "icon": "inv_misc_book_06",
+          "weaponType": "Held in Off-hand",
+          "stats": "+34 Shadow Spell Power",
+          "source": {
+            "kind": "dungeon",
+            "title": "Stratholme / Scholomance",
+            "detail": "High-end shadow specialization grimoire for Affliction and Demonology warlocks."
+          },
+          "faction": "both",
+          "quality": "q4",
+          "iLvl": 60,
+          "reqLevel": 55,
+          "alts": [
+            {
+              "name": "Tome of Arcane Domination",
+              "itemId": 19308,
+              "value": "+31 Arcane Spell Power, +3 MP5 - Scholomance drop",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q4",
+              "iLvl": 60,
+              "reqLevel": 55,
+              "stats": "+31 Arcane Spell Power, +3 MP5",
+              "icon": "inv_misc_book_01"
+            },
+            {
+              "name": "Tome of the Ice Lord",
+              "itemId": 19310,
+              "value": "+34 Frost Spell Power - Alterac Valley / Scholomance",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q4",
+              "iLvl": 60,
+              "reqLevel": 55,
+              "stats": "+34 Frost Spell Power",
+              "icon": "inv_misc_book_11"
+            },
+            {
+              "name": "Tome of Fiery Arcana",
+              "itemId": 19311,
+              "value": "+34 Fire Spell Power - Stratholme drop",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q4",
+              "iLvl": 60,
+              "reqLevel": 55,
+              "stats": "+34 Fire Spell Power",
+              "icon": "inv_misc_book_09"
+            },
+            {
+              "name": "Lei of the Lifegiver",
+              "itemId": 19312,
+              "value": "+53 Healing, +4 MP5 - Alterac Valley Exalted reward",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q4",
+              "iLvl": 60,
+              "reqLevel": 55,
+              "stats": "+53 Healing, +4 MP5",
+              "icon": "inv_misc_flower_04"
+            },
+            {
+              "name": "Barkskin Baubles",
+              "itemId": 274417,
+              "value": "+22 Healing, +7 Intellect - Felwood quest",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 58,
+              "reqLevel": 53,
+              "stats": "+22 Healing, +7 Intellect",
+              "icon": "inv_misc_bag_10_black"
+            }
+          ]
+        }
+      ]
+    },
+    "druid": {
+      "classId": "druid",
+      "tracks": [
+        {
+          "id": "primary",
+          "name": "Level 1–60 Off-Hand Progression"
+        }
+      ],
+      "levels": [
+        {
+          "levelBracket": "1–14",
+          "itemId": 1172,
+          "name": "Grayson's Torch",
+          "icon": "inv_torch_lit",
+          "weaponType": "Held in Off-hand",
+          "stats": "+4 Spirit",
+          "source": {
+            "kind": "quest",
+            "title": "The Westfall Lighthouse",
+            "detail": "Quest reward from Captain Grayson at the Westfall Lighthouse."
+          },
+          "faction": "alliance",
+          "quality": "q2",
+          "iLvl": 21,
+          "reqLevel": 10,
+          "alts": [
+            {
+              "name": "Tear of Grief",
+              "itemId": 284196,
+              "value": "+3 Intellect - Early Darkshore / Westfall quest",
+              "faction": "alliance",
+              "weaponType": "Held in Off-hand",
+              "quality": "q2",
+              "iLvl": 16,
+              "reqLevel": 11,
+              "stats": "+3 Intellect",
+              "icon": "inv_misc_questionmark"
+            },
+            {
+              "name": "Nightglow Concoction",
+              "itemId": 284197,
+              "value": "+4 Spirit - Silverpine / Barrens quest",
+              "faction": "horde",
+              "weaponType": "Held in Off-hand",
+              "quality": "q2",
+              "iLvl": 18,
+              "reqLevel": 9,
+              "stats": "+4 Spirit",
+              "icon": "inv_misc_questionmark"
+            },
+            {
+              "name": "Arcane Orb",
+              "itemId": 4838,
+              "value": "+2 Intellect, +1 Spirit - Early vendor/world drop",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q2",
+              "iLvl": 15,
+              "reqLevel": 10,
+              "stats": "+2 Intellect, +1 Spirit",
+              "icon": "inv_ore_arcanite_02"
+            }
+          ]
+        },
+        {
+          "levelBracket": "15–18",
+          "itemId": 1131,
+          "name": "Totem of Infliction",
+          "icon": "inv_misc_bone_elfskull_01",
+          "weaponType": "Held in Off-hand",
+          "stats": "+4 Intellect, Shadow Strike Proc (75–125 damage)",
+          "source": {
+            "kind": "quest",
+            "title": "The Totem of Infliction",
+            "detail": "Quest in Loch Modan (Valley of Kings). Offers defensive retaliation shadow damage."
+          },
+          "faction": "alliance",
+          "quality": "q2",
+          "iLvl": 25,
+          "reqLevel": 18,
+          "alts": [
+            {
+              "name": "Antipodean Rod",
+              "itemId": 285346,
+              "value": "+5 Intellect, +4 Spirit - Ashenvale quest",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 22,
+              "reqLevel": 17,
+              "stats": "+5 Intellect, +4 Spirit",
+              "icon": "inv_sword_20"
+            },
+            {
+              "name": "Everglow Lantern",
+              "itemId": 285347,
+              "value": "+4 Stamina, +3 Intellect - Silverpine / Barrens quest",
+              "faction": "horde",
+              "weaponType": "Held in Off-hand",
+              "quality": "q2",
+              "iLvl": 25,
+              "reqLevel": 19,
+              "stats": "+4 Stamina, +3 Intellect",
+              "icon": "inv_weapon_bow_05"
+            }
+          ]
+        },
+        {
+          "levelBracket": "19–22",
+          "itemId": 2943,
+          "name": "Eye of Paleth",
+          "icon": "inv_misc_orb_03",
+          "weaponType": "Held in Off-hand",
+          "stats": "+6 Spirit, +4 Intellect",
+          "source": {
+            "kind": "quest",
+            "title": "Cleansing the Eye",
+            "detail": "Long questline reward in the Wetlands."
+          },
+          "faction": "alliance",
+          "quality": "q2",
+          "iLvl": 31,
+          "reqLevel": 22,
+          "alts": [
+            {
+              "name": "Flamescarred Spellbook",
+              "itemId": 281306,
+              "value": "+5 Intellect, +5 Fire Spell Power - Darkshore quest",
+              "faction": "alliance",
+              "weaponType": "Held in Off-hand",
+              "quality": "q2",
+              "iLvl": 31,
+              "reqLevel": 23,
+              "stats": "+5 Intellect, +5 Fire Spell Power",
+              "icon": "inv_misc_book_01"
+            },
+            {
+              "name": "Orb of Power",
+              "itemId": 4838,
+              "value": "+5 Intellect, +5 Spirit - World drop",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q2",
+              "iLvl": 26,
+              "reqLevel": 21,
+              "stats": "+5 Intellect, +5 Spirit",
+              "icon": "inv_ore_arcanite_02"
+            },
+            {
+              "name": "Alliance Outrunner Healing Rod",
+              "itemId": 285348,
+              "value": "+9 Healing, +4 Spirit - Ashenvale quest",
+              "faction": "alliance",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 26,
+              "reqLevel": 21,
+              "stats": "+9 Healing, +4 Spirit",
+              "icon": "inv_wand_04"
+            }
+          ]
+        },
+        {
+          "levelBracket": "23–26",
+          "itemId": 249394,
+          "name": "Orb of Mystic Insight",
+          "icon": "inv_misc_orb_blue",
+          "weaponType": "Held in Off-hand",
+          "stats": "+7 Intellect, +6 Spirit",
+          "source": {
+            "kind": "craft",
+            "title": "Enchanting / Alchemy Discovery",
+            "detail": "Crafted caster focus providing substantial mana pool and regeneration."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 30,
+          "reqLevel": 25,
+          "alts": [
+            {
+              "name": "Witch's Finger",
+              "itemId": 16887,
+              "value": "+7 Shadow Spell Power, +4 Stamina - Hillsbrad quest",
+              "faction": "horde",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 32,
+              "reqLevel": 25,
+              "stats": "+7 Shadow Spell Power, +4 Stamina",
+              "icon": "inv_wand_12"
+            },
+            {
+              "name": "Fireproof Orb",
+              "itemId": 4836,
+              "value": "+6 Stamina, +5 Fire Resistance - World drop",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q2",
+              "iLvl": 28,
+              "reqLevel": 23,
+              "stats": "+6 Stamina, +5 Fire Resistance",
+              "icon": "inv_jewelry_talisman_01"
+            },
+            {
+              "name": "Orb of Souls",
+              "itemId": 249395,
+              "value": "+7 Stamina, +6 Spirit - Dungeon craft",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 30,
+              "reqLevel": 25,
+              "stats": "+7 Stamina, +6 Spirit",
+              "icon": "inv_misc_orb_04"
+            }
+          ]
+        },
+        {
+          "levelBracket": "27–30",
+          "itemId": 273052,
+          "name": "Ponderous Orb",
+          "icon": "inv_misc_orb_04",
+          "weaponType": "Held in Off-hand",
+          "stats": "+8 Intellect, +6 Spirit, +11 Spell Power",
+          "source": {
+            "kind": "dungeon",
+            "title": "Razorfen Kraul / Shadowfang Keep",
+            "detail": "Dropped by Shade of the Archmage. One of the greatest caster offhands in early Phase 2."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 35,
+          "reqLevel": 30,
+          "alts": [
+            {
+              "name": "Skull of Impending Doom",
+              "itemId": 4984,
+              "value": "+7 Intellect, +5 Spirit, Use: Sprint speed boost - Badlands quest 'Forbidden Knowledge'",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q2",
+              "iLvl": 41,
+              "reqLevel": 30,
+              "stats": "+7 Intellect, +5 Spirit, Sprint Proc",
+              "icon": "inv_misc_bone_elfskull_01"
+            },
+            {
+              "name": "Rod of Molten Fire",
+              "itemId": 2565,
+              "value": "+10 Fire Spell Power - Rare world drop",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 35,
+              "reqLevel": 30,
+              "stats": "+10 Fire Spell Power",
+              "icon": "inv_spear_01"
+            },
+            {
+              "name": "Salve and Salvation",
+              "itemId": 276898,
+              "value": "+14 Healing, +6 Spirit - Duskwood / Wetlands quest",
+              "faction": "alliance",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 38,
+              "reqLevel": 30,
+              "stats": "+14 Healing, +6 Spirit",
+              "icon": "inv_misc_book_01"
+            },
+            {
+              "name": "Omega Orb",
+              "itemId": 7749,
+              "value": "+8 Intellect, +6 Spirit - Horde quest 'Compendium of the Fallen'",
+              "faction": "horde",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 40,
+              "reqLevel": 28,
+              "stats": "+8 Intellect, +6 Spirit",
+              "icon": "inv_misc_orb_03"
+            }
+          ]
+        },
+        {
+          "levelBracket": "31–35",
+          "itemId": 7685,
+          "name": "Orb of the Forgotten Seer",
+          "icon": "inv_misc_orb_02",
+          "weaponType": "Held in Off-hand",
+          "stats": "+14 Spell Power",
+          "source": {
+            "kind": "dungeon",
+            "title": "Scarlet Monastery (Library)",
+            "detail": "Dropped by Bloodmage Thalnos in Scarlet Monastery Library."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 37,
+          "reqLevel": 32,
+          "alts": [
+            {
+              "name": "Celestial Orb",
+              "itemId": 7515,
+              "value": "+13 Spell Power, +3 Intellect - Mage quest 'Celestial Power'",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 40,
+              "reqLevel": 35,
+              "stats": "+13 Spell Power, +3 Intellect",
+              "icon": "inv_misc_orb_03"
+            },
+            {
+              "name": "Orb of Noh'Orahil",
+              "itemId": 15107,
+              "value": "+5 Intellect, +14 Fire Spell Power - Warlock quest",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 40,
+              "reqLevel": 35,
+              "stats": "+5 Intellect, +14 Fire Spell Power",
+              "icon": "inv_misc_orb_03"
+            },
+            {
+              "name": "Beacon of Hope",
+              "itemId": 9393,
+              "value": "+18 Healing, +5 Spirit - World drop",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 38,
+              "reqLevel": 33,
+              "stats": "+18 Healing, +5 Spirit",
+              "icon": "inv_misc_lantern_01"
+            },
+            {
+              "name": "Thrice-Damned Effigy",
+              "itemId": 271805,
+              "value": "+12 Spell Power, +6 Stamina - Desolace quest",
+              "faction": "horde",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 42,
+              "reqLevel": 35,
+              "stats": "+12 Spell Power, +6 Stamina",
+              "icon": "inv_misc_orb_01"
+            }
+          ]
+        },
+        {
+          "levelBracket": "36–40",
+          "itemId": 10770,
+          "name": "Mordresh's Lifeless Skull",
+          "icon": "inv_misc_bone_elfskull_01",
+          "weaponType": "Held in Off-hand",
+          "stats": "+7 Intellect, +11 Shadow Spell Power",
+          "source": {
+            "kind": "dungeon",
+            "title": "Razorfen Downs",
+            "detail": "Dropped by Mordresh Fire Eye in Razorfen Downs."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 41,
+          "reqLevel": 36,
+          "alts": [
+            {
+              "name": "Researcher's Night Light",
+              "itemId": 277260,
+              "value": "+15 Spell Power, +5 Intellect - Greater Friend of the Library quest",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 45,
+              "reqLevel": 40,
+              "stats": "+15 Spell Power, +5 Intellect",
+              "icon": "inv_torch_lit"
+            },
+            {
+              "name": "Umbral Crystal",
+              "itemId": 13029,
+              "value": "+11 Shadow Spell Power, +6 Intellect - Rare world drop",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 43,
+              "reqLevel": 38,
+              "stats": "+11 Shadow Spell Power, +6 Intellect",
+              "icon": "inv_misc_orb_04"
+            },
+            {
+              "name": "Aurora Sphere",
+              "itemId": 7610,
+              "value": "+8 Intellect, +8 Spirit - Level 36 drop",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q2",
+              "iLvl": 41,
+              "reqLevel": 36,
+              "stats": "+8 Intellect, +8 Spirit",
+              "icon": "inv_misc_gem_pearl_02"
+            }
+          ]
+        },
+        {
+          "levelBracket": "41–46",
+          "itemId": 249455,
+          "name": "Truesilver Conduit",
+          "icon": "inv_rod_enchantedadamantite",
+          "weaponType": "Held in Off-hand",
+          "stats": "+9 Intellect, +16 Healing, +6 Spell Power",
+          "source": {
+            "kind": "craft",
+            "title": "Blacksmithing / Engineering",
+            "detail": "Crafted magical conduit with exceptional healing and spell stats."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 50,
+          "reqLevel": 45,
+          "alts": [
+            {
+              "name": "Lord Sakrasis' Scepter",
+              "itemId": 5028,
+              "value": "+9 Intellect, +9 Spirit - Desolace quest",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q2",
+              "iLvl": 47,
+              "reqLevel": 42,
+              "stats": "+9 Intellect, +9 Spirit",
+              "icon": "inv_wand_10"
+            },
+            {
+              "name": "Skullspell Orb",
+              "itemId": 10708,
+              "value": "+14 Spell Power, +6 Intellect - Alliance quest 'Return to Tymor'",
+              "faction": "alliance",
+              "weaponType": "Held in Off-hand",
+              "quality": "q2",
+              "iLvl": 52,
+              "reqLevel": 45,
+              "stats": "+14 Spell Power, +6 Intellect",
+              "icon": "inv_misc_bone_elfskull_01"
+            },
+            {
+              "name": "Pyrestone Orb",
+              "itemId": 10709,
+              "value": "+16 Fire Spell Power - Horde quest 'Betrayed'",
+              "faction": "horde",
+              "weaponType": "Held in Off-hand",
+              "quality": "q2",
+              "iLvl": 55,
+              "reqLevel": 44,
+              "stats": "+16 Fire Spell Power",
+              "icon": "inv_misc_orb_05"
+            }
+          ]
+        },
+        {
+          "levelBracket": "47–52",
+          "itemId": 11904,
+          "name": "Spirit of Aquementas",
+          "icon": "inv_ore_arcanite_02",
+          "weaponType": "Held in Off-hand",
+          "stats": "+21 Spell Power",
+          "source": {
+            "kind": "quest",
+            "title": "It's Dangerous to Go Alone",
+            "detail": "Questline reward from Linken in Un'Goro Crater. Unmatched spell power throughout the 40s and 50s."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 56,
+          "reqLevel": 47,
+          "alts": [
+            {
+              "name": "Insurgent's Manifesto",
+              "itemId": 271933,
+              "value": "+16 Spell Power, +8 Stamina - Western Plaguelands quest",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 53,
+              "reqLevel": 48,
+              "stats": "+16 Spell Power, +8 Stamina",
+              "icon": "inv_misc_book_06"
+            },
+            {
+              "name": "Tome of the Darkspear Prophecy",
+              "itemId": 272088,
+              "value": "+16 Spell Power, +8 Spirit - Western Plaguelands quest",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 53,
+              "reqLevel": 48,
+              "stats": "+16 Spell Power, +8 Spirit",
+              "icon": "inv_misc_book_06"
+            },
+            {
+              "name": "Magebane Scion",
+              "itemId": 15857,
+              "value": "+18 Spell Power - Blasted Lands quest 'Hidden Treasures'",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 60,
+              "reqLevel": 50,
+              "stats": "+18 Spell Power",
+              "icon": "inv_staff_11"
+            }
+          ]
+        },
+        {
+          "levelBracket": "53–60",
+          "itemId": 19308,
+          "name": "Tome of Arcane Domination",
+          "icon": "inv_misc_book_01",
+          "weaponType": "Held in Off-hand",
+          "stats": "+31 Arcane Spell Power, +3 MP5",
+          "source": {
+            "kind": "dungeon",
+            "title": "Scholomance / Stratholme Bosses",
+            "detail": "Top-tier end-game caster offhand for mages and spellcasters."
+          },
+          "faction": "both",
+          "quality": "q4",
+          "iLvl": 60,
+          "reqLevel": 55,
+          "alts": [
+            {
+              "name": "Tome of Shadow Force",
+              "itemId": 19309,
+              "value": "+34 Shadow Spell Power - Stratholme drop",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q4",
+              "iLvl": 60,
+              "reqLevel": 55,
+              "stats": "+34 Shadow Spell Power",
+              "icon": "inv_misc_book_06"
+            },
+            {
+              "name": "Tome of the Ice Lord",
+              "itemId": 19310,
+              "value": "+34 Frost Spell Power - Alterac Valley / Scholomance",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q4",
+              "iLvl": 60,
+              "reqLevel": 55,
+              "stats": "+34 Frost Spell Power",
+              "icon": "inv_misc_book_11"
+            },
+            {
+              "name": "Tome of Fiery Arcana",
+              "itemId": 19311,
+              "value": "+34 Fire Spell Power - Stratholme drop",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q4",
+              "iLvl": 60,
+              "reqLevel": 55,
+              "stats": "+34 Fire Spell Power",
+              "icon": "inv_misc_book_09"
+            },
+            {
+              "name": "Lei of the Lifegiver",
+              "itemId": 19312,
+              "value": "+53 Healing, +4 MP5 - Alterac Valley Exalted reward",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q4",
+              "iLvl": 60,
+              "reqLevel": 55,
+              "stats": "+53 Healing, +4 MP5",
+              "icon": "inv_misc_flower_04"
+            },
+            {
+              "name": "Barkskin Baubles",
+              "itemId": 274417,
+              "value": "+22 Healing, +7 Intellect - Felwood quest",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 58,
+              "reqLevel": 53,
+              "stats": "+22 Healing, +7 Intellect",
+              "icon": "inv_misc_bag_10_black"
+            }
+          ]
+        }
+      ]
+    },
+    "shaman": {
+      "classId": "shaman",
+      "tracks": [
+        {
+          "id": "primary",
+          "name": "Level 1–60 Off-Hand Progression"
+        }
+      ],
+      "levels": [
+        {
+          "levelBracket": "1–14",
+          "itemId": 1172,
+          "name": "Grayson's Torch",
+          "icon": "inv_torch_lit",
+          "weaponType": "Held in Off-hand",
+          "stats": "+4 Spirit",
+          "source": {
+            "kind": "quest",
+            "title": "The Westfall Lighthouse",
+            "detail": "Quest reward from Captain Grayson at the Westfall Lighthouse."
+          },
+          "faction": "alliance",
+          "quality": "q2",
+          "iLvl": 21,
+          "reqLevel": 10,
+          "alts": [
+            {
+              "name": "Tear of Grief",
+              "itemId": 284196,
+              "value": "+3 Intellect - Early Darkshore / Westfall quest",
+              "faction": "alliance",
+              "weaponType": "Held in Off-hand",
+              "quality": "q2",
+              "iLvl": 16,
+              "reqLevel": 11,
+              "stats": "+3 Intellect",
+              "icon": "inv_misc_questionmark"
+            },
+            {
+              "name": "Nightglow Concoction",
+              "itemId": 284197,
+              "value": "+4 Spirit - Silverpine / Barrens quest",
+              "faction": "horde",
+              "weaponType": "Held in Off-hand",
+              "quality": "q2",
+              "iLvl": 18,
+              "reqLevel": 9,
+              "stats": "+4 Spirit",
+              "icon": "inv_misc_questionmark"
+            },
+            {
+              "name": "Arcane Orb",
+              "itemId": 4838,
+              "value": "+2 Intellect, +1 Spirit - Early vendor/world drop",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q2",
+              "iLvl": 15,
+              "reqLevel": 10,
+              "stats": "+2 Intellect, +1 Spirit",
+              "icon": "inv_ore_arcanite_02"
+            }
+          ]
+        },
+        {
+          "levelBracket": "15–18",
+          "itemId": 1131,
+          "name": "Totem of Infliction",
+          "icon": "inv_misc_bone_elfskull_01",
+          "weaponType": "Held in Off-hand",
+          "stats": "+4 Intellect, Shadow Strike Proc (75–125 damage)",
+          "source": {
+            "kind": "quest",
+            "title": "The Totem of Infliction",
+            "detail": "Quest in Loch Modan (Valley of Kings). Offers defensive retaliation shadow damage."
+          },
+          "faction": "alliance",
+          "quality": "q2",
+          "iLvl": 25,
+          "reqLevel": 18,
+          "alts": [
+            {
+              "name": "Antipodean Rod",
+              "itemId": 285346,
+              "value": "+5 Intellect, +4 Spirit - Ashenvale quest",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 22,
+              "reqLevel": 17,
+              "stats": "+5 Intellect, +4 Spirit",
+              "icon": "inv_sword_20"
+            },
+            {
+              "name": "Everglow Lantern",
+              "itemId": 285347,
+              "value": "+4 Stamina, +3 Intellect - Silverpine / Barrens quest",
+              "faction": "horde",
+              "weaponType": "Held in Off-hand",
+              "quality": "q2",
+              "iLvl": 25,
+              "reqLevel": 19,
+              "stats": "+4 Stamina, +3 Intellect",
+              "icon": "inv_weapon_bow_05"
+            }
+          ]
+        },
+        {
+          "levelBracket": "19–22",
+          "itemId": 2943,
+          "name": "Eye of Paleth",
+          "icon": "inv_misc_orb_03",
+          "weaponType": "Held in Off-hand",
+          "stats": "+6 Spirit, +4 Intellect",
+          "source": {
+            "kind": "quest",
+            "title": "Cleansing the Eye",
+            "detail": "Long questline reward in the Wetlands."
+          },
+          "faction": "alliance",
+          "quality": "q2",
+          "iLvl": 31,
+          "reqLevel": 22,
+          "alts": [
+            {
+              "name": "Flamescarred Spellbook",
+              "itemId": 281306,
+              "value": "+5 Intellect, +5 Fire Spell Power - Darkshore quest",
+              "faction": "alliance",
+              "weaponType": "Held in Off-hand",
+              "quality": "q2",
+              "iLvl": 31,
+              "reqLevel": 23,
+              "stats": "+5 Intellect, +5 Fire Spell Power",
+              "icon": "inv_misc_book_01"
+            },
+            {
+              "name": "Orb of Power",
+              "itemId": 4838,
+              "value": "+5 Intellect, +5 Spirit - World drop",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q2",
+              "iLvl": 26,
+              "reqLevel": 21,
+              "stats": "+5 Intellect, +5 Spirit",
+              "icon": "inv_ore_arcanite_02"
+            },
+            {
+              "name": "Alliance Outrunner Healing Rod",
+              "itemId": 285348,
+              "value": "+9 Healing, +4 Spirit - Ashenvale quest",
+              "faction": "alliance",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 26,
+              "reqLevel": 21,
+              "stats": "+9 Healing, +4 Spirit",
+              "icon": "inv_wand_04"
+            }
+          ]
+        },
+        {
+          "levelBracket": "23–26",
+          "itemId": 249394,
+          "name": "Orb of Mystic Insight",
+          "icon": "inv_misc_orb_blue",
+          "weaponType": "Held in Off-hand",
+          "stats": "+7 Intellect, +6 Spirit",
+          "source": {
+            "kind": "craft",
+            "title": "Enchanting / Alchemy Discovery",
+            "detail": "Crafted caster focus providing substantial mana pool and regeneration."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 30,
+          "reqLevel": 25,
+          "alts": [
+            {
+              "name": "Witch's Finger",
+              "itemId": 16887,
+              "value": "+7 Shadow Spell Power, +4 Stamina - Hillsbrad quest",
+              "faction": "horde",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 32,
+              "reqLevel": 25,
+              "stats": "+7 Shadow Spell Power, +4 Stamina",
+              "icon": "inv_wand_12"
+            },
+            {
+              "name": "Fireproof Orb",
+              "itemId": 4836,
+              "value": "+6 Stamina, +5 Fire Resistance - World drop",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q2",
+              "iLvl": 28,
+              "reqLevel": 23,
+              "stats": "+6 Stamina, +5 Fire Resistance",
+              "icon": "inv_jewelry_talisman_01"
+            },
+            {
+              "name": "Orb of Souls",
+              "itemId": 249395,
+              "value": "+7 Stamina, +6 Spirit - Dungeon craft",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 30,
+              "reqLevel": 25,
+              "stats": "+7 Stamina, +6 Spirit",
+              "icon": "inv_misc_orb_04"
+            }
+          ]
+        },
+        {
+          "levelBracket": "27–30",
+          "itemId": 273052,
+          "name": "Ponderous Orb",
+          "icon": "inv_misc_orb_04",
+          "weaponType": "Held in Off-hand",
+          "stats": "+8 Intellect, +6 Spirit, +11 Spell Power",
+          "source": {
+            "kind": "dungeon",
+            "title": "Razorfen Kraul / Shadowfang Keep",
+            "detail": "Dropped by Shade of the Archmage. One of the greatest caster offhands in early Phase 2."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 35,
+          "reqLevel": 30,
+          "alts": [
+            {
+              "name": "Skull of Impending Doom",
+              "itemId": 4984,
+              "value": "+7 Intellect, +5 Spirit, Use: Sprint speed boost - Badlands quest 'Forbidden Knowledge'",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q2",
+              "iLvl": 41,
+              "reqLevel": 30,
+              "stats": "+7 Intellect, +5 Spirit, Sprint Proc",
+              "icon": "inv_misc_bone_elfskull_01"
+            },
+            {
+              "name": "Rod of Molten Fire",
+              "itemId": 2565,
+              "value": "+10 Fire Spell Power - Rare world drop",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 35,
+              "reqLevel": 30,
+              "stats": "+10 Fire Spell Power",
+              "icon": "inv_spear_01"
+            },
+            {
+              "name": "Salve and Salvation",
+              "itemId": 276898,
+              "value": "+14 Healing, +6 Spirit - Duskwood / Wetlands quest",
+              "faction": "alliance",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 38,
+              "reqLevel": 30,
+              "stats": "+14 Healing, +6 Spirit",
+              "icon": "inv_misc_book_01"
+            },
+            {
+              "name": "Omega Orb",
+              "itemId": 7749,
+              "value": "+8 Intellect, +6 Spirit - Horde quest 'Compendium of the Fallen'",
+              "faction": "horde",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 40,
+              "reqLevel": 28,
+              "stats": "+8 Intellect, +6 Spirit",
+              "icon": "inv_misc_orb_03"
+            }
+          ]
+        },
+        {
+          "levelBracket": "31–35",
+          "itemId": 7685,
+          "name": "Orb of the Forgotten Seer",
+          "icon": "inv_misc_orb_02",
+          "weaponType": "Held in Off-hand",
+          "stats": "+14 Spell Power",
+          "source": {
+            "kind": "dungeon",
+            "title": "Scarlet Monastery (Library)",
+            "detail": "Dropped by Bloodmage Thalnos in Scarlet Monastery Library."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 37,
+          "reqLevel": 32,
+          "alts": [
+            {
+              "name": "Celestial Orb",
+              "itemId": 7515,
+              "value": "+13 Spell Power, +3 Intellect - Mage quest 'Celestial Power'",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 40,
+              "reqLevel": 35,
+              "stats": "+13 Spell Power, +3 Intellect",
+              "icon": "inv_misc_orb_03"
+            },
+            {
+              "name": "Orb of Noh'Orahil",
+              "itemId": 15107,
+              "value": "+5 Intellect, +14 Fire Spell Power - Warlock quest",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 40,
+              "reqLevel": 35,
+              "stats": "+5 Intellect, +14 Fire Spell Power",
+              "icon": "inv_misc_orb_03"
+            },
+            {
+              "name": "Beacon of Hope",
+              "itemId": 9393,
+              "value": "+18 Healing, +5 Spirit - World drop",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 38,
+              "reqLevel": 33,
+              "stats": "+18 Healing, +5 Spirit",
+              "icon": "inv_misc_lantern_01"
+            },
+            {
+              "name": "Thrice-Damned Effigy",
+              "itemId": 271805,
+              "value": "+12 Spell Power, +6 Stamina - Desolace quest",
+              "faction": "horde",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 42,
+              "reqLevel": 35,
+              "stats": "+12 Spell Power, +6 Stamina",
+              "icon": "inv_misc_orb_01"
+            }
+          ]
+        },
+        {
+          "levelBracket": "36–40",
+          "itemId": 10770,
+          "name": "Mordresh's Lifeless Skull",
+          "icon": "inv_misc_bone_elfskull_01",
+          "weaponType": "Held in Off-hand",
+          "stats": "+7 Intellect, +11 Shadow Spell Power",
+          "source": {
+            "kind": "dungeon",
+            "title": "Razorfen Downs",
+            "detail": "Dropped by Mordresh Fire Eye in Razorfen Downs."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 41,
+          "reqLevel": 36,
+          "alts": [
+            {
+              "name": "Researcher's Night Light",
+              "itemId": 277260,
+              "value": "+15 Spell Power, +5 Intellect - Greater Friend of the Library quest",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 45,
+              "reqLevel": 40,
+              "stats": "+15 Spell Power, +5 Intellect",
+              "icon": "inv_torch_lit"
+            },
+            {
+              "name": "Umbral Crystal",
+              "itemId": 13029,
+              "value": "+11 Shadow Spell Power, +6 Intellect - Rare world drop",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 43,
+              "reqLevel": 38,
+              "stats": "+11 Shadow Spell Power, +6 Intellect",
+              "icon": "inv_misc_orb_04"
+            },
+            {
+              "name": "Aurora Sphere",
+              "itemId": 7610,
+              "value": "+8 Intellect, +8 Spirit - Level 36 drop",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q2",
+              "iLvl": 41,
+              "reqLevel": 36,
+              "stats": "+8 Intellect, +8 Spirit",
+              "icon": "inv_misc_gem_pearl_02"
+            }
+          ]
+        },
+        {
+          "levelBracket": "41–46",
+          "itemId": 249455,
+          "name": "Truesilver Conduit",
+          "icon": "inv_rod_enchantedadamantite",
+          "weaponType": "Held in Off-hand",
+          "stats": "+9 Intellect, +16 Healing, +6 Spell Power",
+          "source": {
+            "kind": "craft",
+            "title": "Blacksmithing / Engineering",
+            "detail": "Crafted magical conduit with exceptional healing and spell stats."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 50,
+          "reqLevel": 45,
+          "alts": [
+            {
+              "name": "Lord Sakrasis' Scepter",
+              "itemId": 5028,
+              "value": "+9 Intellect, +9 Spirit - Desolace quest",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q2",
+              "iLvl": 47,
+              "reqLevel": 42,
+              "stats": "+9 Intellect, +9 Spirit",
+              "icon": "inv_wand_10"
+            },
+            {
+              "name": "Skullspell Orb",
+              "itemId": 10708,
+              "value": "+14 Spell Power, +6 Intellect - Alliance quest 'Return to Tymor'",
+              "faction": "alliance",
+              "weaponType": "Held in Off-hand",
+              "quality": "q2",
+              "iLvl": 52,
+              "reqLevel": 45,
+              "stats": "+14 Spell Power, +6 Intellect",
+              "icon": "inv_misc_bone_elfskull_01"
+            },
+            {
+              "name": "Pyrestone Orb",
+              "itemId": 10709,
+              "value": "+16 Fire Spell Power - Horde quest 'Betrayed'",
+              "faction": "horde",
+              "weaponType": "Held in Off-hand",
+              "quality": "q2",
+              "iLvl": 55,
+              "reqLevel": 44,
+              "stats": "+16 Fire Spell Power",
+              "icon": "inv_misc_orb_05"
+            }
+          ]
+        },
+        {
+          "levelBracket": "47–52",
+          "itemId": 11904,
+          "name": "Spirit of Aquementas",
+          "icon": "inv_ore_arcanite_02",
+          "weaponType": "Held in Off-hand",
+          "stats": "+21 Spell Power",
+          "source": {
+            "kind": "quest",
+            "title": "It's Dangerous to Go Alone",
+            "detail": "Questline reward from Linken in Un'Goro Crater. Unmatched spell power throughout the 40s and 50s."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 56,
+          "reqLevel": 47,
+          "alts": [
+            {
+              "name": "Insurgent's Manifesto",
+              "itemId": 271933,
+              "value": "+16 Spell Power, +8 Stamina - Western Plaguelands quest",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 53,
+              "reqLevel": 48,
+              "stats": "+16 Spell Power, +8 Stamina",
+              "icon": "inv_misc_book_06"
+            },
+            {
+              "name": "Tome of the Darkspear Prophecy",
+              "itemId": 272088,
+              "value": "+16 Spell Power, +8 Spirit - Western Plaguelands quest",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 53,
+              "reqLevel": 48,
+              "stats": "+16 Spell Power, +8 Spirit",
+              "icon": "inv_misc_book_06"
+            },
+            {
+              "name": "Magebane Scion",
+              "itemId": 15857,
+              "value": "+18 Spell Power - Blasted Lands quest 'Hidden Treasures'",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 60,
+              "reqLevel": 50,
+              "stats": "+18 Spell Power",
+              "icon": "inv_staff_11"
+            }
+          ]
+        },
+        {
+          "levelBracket": "53–60",
+          "itemId": 19308,
+          "name": "Tome of Arcane Domination",
+          "icon": "inv_misc_book_01",
+          "weaponType": "Held in Off-hand",
+          "stats": "+31 Arcane Spell Power, +3 MP5",
+          "source": {
+            "kind": "dungeon",
+            "title": "Scholomance / Stratholme Bosses",
+            "detail": "Top-tier end-game caster offhand for mages and spellcasters."
+          },
+          "faction": "both",
+          "quality": "q4",
+          "iLvl": 60,
+          "reqLevel": 55,
+          "alts": [
+            {
+              "name": "Tome of Shadow Force",
+              "itemId": 19309,
+              "value": "+34 Shadow Spell Power - Stratholme drop",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q4",
+              "iLvl": 60,
+              "reqLevel": 55,
+              "stats": "+34 Shadow Spell Power",
+              "icon": "inv_misc_book_06"
+            },
+            {
+              "name": "Tome of the Ice Lord",
+              "itemId": 19310,
+              "value": "+34 Frost Spell Power - Alterac Valley / Scholomance",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q4",
+              "iLvl": 60,
+              "reqLevel": 55,
+              "stats": "+34 Frost Spell Power",
+              "icon": "inv_misc_book_11"
+            },
+            {
+              "name": "Tome of Fiery Arcana",
+              "itemId": 19311,
+              "value": "+34 Fire Spell Power - Stratholme drop",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q4",
+              "iLvl": 60,
+              "reqLevel": 55,
+              "stats": "+34 Fire Spell Power",
+              "icon": "inv_misc_book_09"
+            },
+            {
+              "name": "Lei of the Lifegiver",
+              "itemId": 19312,
+              "value": "+53 Healing, +4 MP5 - Alterac Valley Exalted reward",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q4",
+              "iLvl": 60,
+              "reqLevel": 55,
+              "stats": "+53 Healing, +4 MP5",
+              "icon": "inv_misc_flower_04"
+            },
+            {
+              "name": "Barkskin Baubles",
+              "itemId": 274417,
+              "value": "+22 Healing, +7 Intellect - Felwood quest",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 58,
+              "reqLevel": 53,
+              "stats": "+22 Healing, +7 Intellect",
+              "icon": "inv_misc_bag_10_black"
+            }
+          ]
+        }
+      ]
+    },
+    "paladin": {
+      "classId": "paladin",
+      "tracks": [
+        {
+          "id": "primary",
+          "name": "Level 1–60 Off-Hand Progression"
+        }
+      ],
+      "levels": [
+        {
+          "levelBracket": "1–14",
+          "itemId": 1172,
+          "name": "Grayson's Torch",
+          "icon": "inv_torch_lit",
+          "weaponType": "Held in Off-hand",
+          "stats": "+4 Spirit",
+          "source": {
+            "kind": "quest",
+            "title": "The Westfall Lighthouse",
+            "detail": "Quest reward from Captain Grayson at the Westfall Lighthouse."
+          },
+          "faction": "alliance",
+          "quality": "q2",
+          "iLvl": 21,
+          "reqLevel": 10,
+          "alts": [
+            {
+              "name": "Tear of Grief",
+              "itemId": 284196,
+              "value": "+3 Intellect - Early Darkshore / Westfall quest",
+              "faction": "alliance",
+              "weaponType": "Held in Off-hand",
+              "quality": "q2",
+              "iLvl": 16,
+              "reqLevel": 11,
+              "stats": "+3 Intellect",
+              "icon": "inv_misc_questionmark"
+            },
+            {
+              "name": "Nightglow Concoction",
+              "itemId": 284197,
+              "value": "+4 Spirit - Silverpine / Barrens quest",
+              "faction": "horde",
+              "weaponType": "Held in Off-hand",
+              "quality": "q2",
+              "iLvl": 18,
+              "reqLevel": 9,
+              "stats": "+4 Spirit",
+              "icon": "inv_misc_questionmark"
+            },
+            {
+              "name": "Arcane Orb",
+              "itemId": 4838,
+              "value": "+2 Intellect, +1 Spirit - Early vendor/world drop",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q2",
+              "iLvl": 15,
+              "reqLevel": 10,
+              "stats": "+2 Intellect, +1 Spirit",
+              "icon": "inv_ore_arcanite_02"
+            }
+          ]
+        },
+        {
+          "levelBracket": "15–18",
+          "itemId": 1131,
+          "name": "Totem of Infliction",
+          "icon": "inv_misc_bone_elfskull_01",
+          "weaponType": "Held in Off-hand",
+          "stats": "+4 Intellect, Shadow Strike Proc (75–125 damage)",
+          "source": {
+            "kind": "quest",
+            "title": "The Totem of Infliction",
+            "detail": "Quest in Loch Modan (Valley of Kings). Offers defensive retaliation shadow damage."
+          },
+          "faction": "alliance",
+          "quality": "q2",
+          "iLvl": 25,
+          "reqLevel": 18,
+          "alts": [
+            {
+              "name": "Antipodean Rod",
+              "itemId": 285346,
+              "value": "+5 Intellect, +4 Spirit - Ashenvale quest",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 22,
+              "reqLevel": 17,
+              "stats": "+5 Intellect, +4 Spirit",
+              "icon": "inv_sword_20"
+            },
+            {
+              "name": "Everglow Lantern",
+              "itemId": 285347,
+              "value": "+4 Stamina, +3 Intellect - Silverpine / Barrens quest",
+              "faction": "horde",
+              "weaponType": "Held in Off-hand",
+              "quality": "q2",
+              "iLvl": 25,
+              "reqLevel": 19,
+              "stats": "+4 Stamina, +3 Intellect",
+              "icon": "inv_weapon_bow_05"
+            }
+          ]
+        },
+        {
+          "levelBracket": "19–22",
+          "itemId": 2943,
+          "name": "Eye of Paleth",
+          "icon": "inv_misc_orb_03",
+          "weaponType": "Held in Off-hand",
+          "stats": "+6 Spirit, +4 Intellect",
+          "source": {
+            "kind": "quest",
+            "title": "Cleansing the Eye",
+            "detail": "Long questline reward in the Wetlands."
+          },
+          "faction": "alliance",
+          "quality": "q2",
+          "iLvl": 31,
+          "reqLevel": 22,
+          "alts": [
+            {
+              "name": "Flamescarred Spellbook",
+              "itemId": 281306,
+              "value": "+5 Intellect, +5 Fire Spell Power - Darkshore quest",
+              "faction": "alliance",
+              "weaponType": "Held in Off-hand",
+              "quality": "q2",
+              "iLvl": 31,
+              "reqLevel": 23,
+              "stats": "+5 Intellect, +5 Fire Spell Power",
+              "icon": "inv_misc_book_01"
+            },
+            {
+              "name": "Orb of Power",
+              "itemId": 4838,
+              "value": "+5 Intellect, +5 Spirit - World drop",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q2",
+              "iLvl": 26,
+              "reqLevel": 21,
+              "stats": "+5 Intellect, +5 Spirit",
+              "icon": "inv_ore_arcanite_02"
+            },
+            {
+              "name": "Alliance Outrunner Healing Rod",
+              "itemId": 285348,
+              "value": "+9 Healing, +4 Spirit - Ashenvale quest",
+              "faction": "alliance",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 26,
+              "reqLevel": 21,
+              "stats": "+9 Healing, +4 Spirit",
+              "icon": "inv_wand_04"
+            }
+          ]
+        },
+        {
+          "levelBracket": "23–26",
+          "itemId": 249394,
+          "name": "Orb of Mystic Insight",
+          "icon": "inv_misc_orb_blue",
+          "weaponType": "Held in Off-hand",
+          "stats": "+7 Intellect, +6 Spirit",
+          "source": {
+            "kind": "craft",
+            "title": "Enchanting / Alchemy Discovery",
+            "detail": "Crafted caster focus providing substantial mana pool and regeneration."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 30,
+          "reqLevel": 25,
+          "alts": [
+            {
+              "name": "Witch's Finger",
+              "itemId": 16887,
+              "value": "+7 Shadow Spell Power, +4 Stamina - Hillsbrad quest",
+              "faction": "horde",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 32,
+              "reqLevel": 25,
+              "stats": "+7 Shadow Spell Power, +4 Stamina",
+              "icon": "inv_wand_12"
+            },
+            {
+              "name": "Fireproof Orb",
+              "itemId": 4836,
+              "value": "+6 Stamina, +5 Fire Resistance - World drop",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q2",
+              "iLvl": 28,
+              "reqLevel": 23,
+              "stats": "+6 Stamina, +5 Fire Resistance",
+              "icon": "inv_jewelry_talisman_01"
+            },
+            {
+              "name": "Orb of Souls",
+              "itemId": 249395,
+              "value": "+7 Stamina, +6 Spirit - Dungeon craft",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 30,
+              "reqLevel": 25,
+              "stats": "+7 Stamina, +6 Spirit",
+              "icon": "inv_misc_orb_04"
+            }
+          ]
+        },
+        {
+          "levelBracket": "27–30",
+          "itemId": 273052,
+          "name": "Ponderous Orb",
+          "icon": "inv_misc_orb_04",
+          "weaponType": "Held in Off-hand",
+          "stats": "+8 Intellect, +6 Spirit, +11 Spell Power",
+          "source": {
+            "kind": "dungeon",
+            "title": "Razorfen Kraul / Shadowfang Keep",
+            "detail": "Dropped by Shade of the Archmage. One of the greatest caster offhands in early Phase 2."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 35,
+          "reqLevel": 30,
+          "alts": [
+            {
+              "name": "Skull of Impending Doom",
+              "itemId": 4984,
+              "value": "+7 Intellect, +5 Spirit, Use: Sprint speed boost - Badlands quest 'Forbidden Knowledge'",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q2",
+              "iLvl": 41,
+              "reqLevel": 30,
+              "stats": "+7 Intellect, +5 Spirit, Sprint Proc",
+              "icon": "inv_misc_bone_elfskull_01"
+            },
+            {
+              "name": "Rod of Molten Fire",
+              "itemId": 2565,
+              "value": "+10 Fire Spell Power - Rare world drop",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 35,
+              "reqLevel": 30,
+              "stats": "+10 Fire Spell Power",
+              "icon": "inv_spear_01"
+            },
+            {
+              "name": "Salve and Salvation",
+              "itemId": 276898,
+              "value": "+14 Healing, +6 Spirit - Duskwood / Wetlands quest",
+              "faction": "alliance",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 38,
+              "reqLevel": 30,
+              "stats": "+14 Healing, +6 Spirit",
+              "icon": "inv_misc_book_01"
+            },
+            {
+              "name": "Omega Orb",
+              "itemId": 7749,
+              "value": "+8 Intellect, +6 Spirit - Horde quest 'Compendium of the Fallen'",
+              "faction": "horde",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 40,
+              "reqLevel": 28,
+              "stats": "+8 Intellect, +6 Spirit",
+              "icon": "inv_misc_orb_03"
+            }
+          ]
+        },
+        {
+          "levelBracket": "31–35",
+          "itemId": 7685,
+          "name": "Orb of the Forgotten Seer",
+          "icon": "inv_misc_orb_02",
+          "weaponType": "Held in Off-hand",
+          "stats": "+14 Spell Power",
+          "source": {
+            "kind": "dungeon",
+            "title": "Scarlet Monastery (Library)",
+            "detail": "Dropped by Bloodmage Thalnos in Scarlet Monastery Library."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 37,
+          "reqLevel": 32,
+          "alts": [
+            {
+              "name": "Celestial Orb",
+              "itemId": 7515,
+              "value": "+13 Spell Power, +3 Intellect - Mage quest 'Celestial Power'",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 40,
+              "reqLevel": 35,
+              "stats": "+13 Spell Power, +3 Intellect",
+              "icon": "inv_misc_orb_03"
+            },
+            {
+              "name": "Orb of Noh'Orahil",
+              "itemId": 15107,
+              "value": "+5 Intellect, +14 Fire Spell Power - Warlock quest",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 40,
+              "reqLevel": 35,
+              "stats": "+5 Intellect, +14 Fire Spell Power",
+              "icon": "inv_misc_orb_03"
+            },
+            {
+              "name": "Beacon of Hope",
+              "itemId": 9393,
+              "value": "+18 Healing, +5 Spirit - World drop",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 38,
+              "reqLevel": 33,
+              "stats": "+18 Healing, +5 Spirit",
+              "icon": "inv_misc_lantern_01"
+            },
+            {
+              "name": "Thrice-Damned Effigy",
+              "itemId": 271805,
+              "value": "+12 Spell Power, +6 Stamina - Desolace quest",
+              "faction": "horde",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 42,
+              "reqLevel": 35,
+              "stats": "+12 Spell Power, +6 Stamina",
+              "icon": "inv_misc_orb_01"
+            }
+          ]
+        },
+        {
+          "levelBracket": "36–40",
+          "itemId": 10770,
+          "name": "Mordresh's Lifeless Skull",
+          "icon": "inv_misc_bone_elfskull_01",
+          "weaponType": "Held in Off-hand",
+          "stats": "+7 Intellect, +11 Shadow Spell Power",
+          "source": {
+            "kind": "dungeon",
+            "title": "Razorfen Downs",
+            "detail": "Dropped by Mordresh Fire Eye in Razorfen Downs."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 41,
+          "reqLevel": 36,
+          "alts": [
+            {
+              "name": "Researcher's Night Light",
+              "itemId": 277260,
+              "value": "+15 Spell Power, +5 Intellect - Greater Friend of the Library quest",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 45,
+              "reqLevel": 40,
+              "stats": "+15 Spell Power, +5 Intellect",
+              "icon": "inv_torch_lit"
+            },
+            {
+              "name": "Umbral Crystal",
+              "itemId": 13029,
+              "value": "+11 Shadow Spell Power, +6 Intellect - Rare world drop",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 43,
+              "reqLevel": 38,
+              "stats": "+11 Shadow Spell Power, +6 Intellect",
+              "icon": "inv_misc_orb_04"
+            },
+            {
+              "name": "Aurora Sphere",
+              "itemId": 7610,
+              "value": "+8 Intellect, +8 Spirit - Level 36 drop",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q2",
+              "iLvl": 41,
+              "reqLevel": 36,
+              "stats": "+8 Intellect, +8 Spirit",
+              "icon": "inv_misc_gem_pearl_02"
+            }
+          ]
+        },
+        {
+          "levelBracket": "41–46",
+          "itemId": 249455,
+          "name": "Truesilver Conduit",
+          "icon": "inv_rod_enchantedadamantite",
+          "weaponType": "Held in Off-hand",
+          "stats": "+9 Intellect, +16 Healing, +6 Spell Power",
+          "source": {
+            "kind": "craft",
+            "title": "Blacksmithing / Engineering",
+            "detail": "Crafted magical conduit with exceptional healing and spell stats."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 50,
+          "reqLevel": 45,
+          "alts": [
+            {
+              "name": "Lord Sakrasis' Scepter",
+              "itemId": 5028,
+              "value": "+9 Intellect, +9 Spirit - Desolace quest",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q2",
+              "iLvl": 47,
+              "reqLevel": 42,
+              "stats": "+9 Intellect, +9 Spirit",
+              "icon": "inv_wand_10"
+            },
+            {
+              "name": "Skullspell Orb",
+              "itemId": 10708,
+              "value": "+14 Spell Power, +6 Intellect - Alliance quest 'Return to Tymor'",
+              "faction": "alliance",
+              "weaponType": "Held in Off-hand",
+              "quality": "q2",
+              "iLvl": 52,
+              "reqLevel": 45,
+              "stats": "+14 Spell Power, +6 Intellect",
+              "icon": "inv_misc_bone_elfskull_01"
+            },
+            {
+              "name": "Pyrestone Orb",
+              "itemId": 10709,
+              "value": "+16 Fire Spell Power - Horde quest 'Betrayed'",
+              "faction": "horde",
+              "weaponType": "Held in Off-hand",
+              "quality": "q2",
+              "iLvl": 55,
+              "reqLevel": 44,
+              "stats": "+16 Fire Spell Power",
+              "icon": "inv_misc_orb_05"
+            }
+          ]
+        },
+        {
+          "levelBracket": "47–52",
+          "itemId": 11904,
+          "name": "Spirit of Aquementas",
+          "icon": "inv_ore_arcanite_02",
+          "weaponType": "Held in Off-hand",
+          "stats": "+21 Spell Power",
+          "source": {
+            "kind": "quest",
+            "title": "It's Dangerous to Go Alone",
+            "detail": "Questline reward from Linken in Un'Goro Crater. Unmatched spell power throughout the 40s and 50s."
+          },
+          "faction": "both",
+          "quality": "q3",
+          "iLvl": 56,
+          "reqLevel": 47,
+          "alts": [
+            {
+              "name": "Insurgent's Manifesto",
+              "itemId": 271933,
+              "value": "+16 Spell Power, +8 Stamina - Western Plaguelands quest",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 53,
+              "reqLevel": 48,
+              "stats": "+16 Spell Power, +8 Stamina",
+              "icon": "inv_misc_book_06"
+            },
+            {
+              "name": "Tome of the Darkspear Prophecy",
+              "itemId": 272088,
+              "value": "+16 Spell Power, +8 Spirit - Western Plaguelands quest",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 53,
+              "reqLevel": 48,
+              "stats": "+16 Spell Power, +8 Spirit",
+              "icon": "inv_misc_book_06"
+            },
+            {
+              "name": "Magebane Scion",
+              "itemId": 15857,
+              "value": "+18 Spell Power - Blasted Lands quest 'Hidden Treasures'",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 60,
+              "reqLevel": 50,
+              "stats": "+18 Spell Power",
+              "icon": "inv_staff_11"
+            }
+          ]
+        },
+        {
+          "levelBracket": "53–60",
+          "itemId": 19312,
+          "name": "Lei of the Lifegiver",
+          "icon": "inv_misc_flower_04",
+          "weaponType": "Held in Off-hand",
+          "stats": "+53 Healing, +4 MP5",
+          "source": {
+            "kind": "quest",
+            "title": "Alterac Valley (Stormpike / Frostwolf)",
+            "detail": "Exalted faction reward with unparalleled healing power and mana regeneration."
+          },
+          "faction": "both",
+          "quality": "q4",
+          "iLvl": 60,
+          "reqLevel": 55,
+          "alts": [
+            {
+              "name": "Tome of Shadow Force",
+              "itemId": 19309,
+              "value": "+34 Shadow Spell Power - Stratholme drop",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q4",
+              "iLvl": 60,
+              "reqLevel": 55,
+              "stats": "+34 Shadow Spell Power",
+              "icon": "inv_misc_book_06"
+            },
+            {
+              "name": "Tome of the Ice Lord",
+              "itemId": 19310,
+              "value": "+34 Frost Spell Power - Alterac Valley / Scholomance",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q4",
+              "iLvl": 60,
+              "reqLevel": 55,
+              "stats": "+34 Frost Spell Power",
+              "icon": "inv_misc_book_11"
+            },
+            {
+              "name": "Tome of Fiery Arcana",
+              "itemId": 19311,
+              "value": "+34 Fire Spell Power - Stratholme drop",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q4",
+              "iLvl": 60,
+              "reqLevel": 55,
+              "stats": "+34 Fire Spell Power",
+              "icon": "inv_misc_book_09"
+            },
+            {
+              "name": "Tome of Arcane Domination",
+              "itemId": 19308,
+              "value": "+31 Arcane Spell Power, +3 MP5 - Scholomance drop",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q4",
+              "iLvl": 60,
+              "reqLevel": 55,
+              "stats": "+31 Arcane Spell Power, +3 MP5",
+              "icon": "inv_misc_book_01"
+            },
+            {
+              "name": "Barkskin Baubles",
+              "itemId": 274417,
+              "value": "+22 Healing, +7 Intellect - Felwood quest",
+              "faction": "both",
+              "weaponType": "Held in Off-hand",
+              "quality": "q3",
+              "iLvl": 58,
+              "reqLevel": 53,
+              "stats": "+22 Healing, +7 Intellect",
+              "icon": "inv_misc_bag_10_black"
+            }
+          ]
         }
       ]
     }

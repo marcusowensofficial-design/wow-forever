@@ -1,0 +1,2219 @@
+{
+  "mage": {
+    "classId": "mage",
+    "tracks": [
+      {
+        "id": "primary",
+        "name": "Level 1–60 Wand Upgrade Path"
+      }
+    ],
+    "levels": [
+      {
+        "levelBracket": "1–4",
+        "itemId": 247789,
+        "name": "Novice's Practice Wand",
+        "icon": "inv_weapon_shortblade_09",
+        "weaponType": "Wand",
+        "speed": "1.50",
+        "dps": "4.0 DPS",
+        "source": {
+          "kind": "quest",
+          "title": "Starting Zone Class Quest",
+          "detail": "Awarded from initial Level 1–4 Class Trainer quest in starting zones."
+        },
+        "faction": "both",
+        "quality": "q1",
+        "iLvl": 6,
+        "reqLevel": 1,
+        "stats": "Auto-Shoot Baseline",
+        "alts": [
+          {
+            "name": "Alchemist's Wand",
+            "itemId": 5235,
+            "value": "4.4 DPS - Early starting zone drop",
+            "faction": "both",
+            "dps": "4.4 DPS",
+            "speed": "1.80",
+            "weaponType": "Wand",
+            "quality": "q1",
+            "iLvl": 7,
+            "reqLevel": 1,
+            "stats": "",
+            "icon": "inv_staff_02"
+          },
+          {
+            "name": "Dowsing Rod",
+            "itemId": 263428,
+            "value": "4.2 DPS - Level 4 quest reward",
+            "faction": "alliance",
+            "dps": "4.2 DPS",
+            "speed": "1.20",
+            "weaponType": "Wand",
+            "quality": "q1",
+            "iLvl": 6,
+            "reqLevel": 4,
+            "stats": "",
+            "icon": "inv_wand_05"
+          }
+        ]
+      },
+      {
+        "levelBracket": "5–8",
+        "itemId": 11287,
+        "name": "Lesser Magic Wand",
+        "icon": "inv_staff_02",
+        "weaponType": "Wand",
+        "speed": "1.50",
+        "dps": "11.3 DPS",
+        "source": {
+          "kind": "craft",
+          "title": "Enchanting (Skill 10)",
+          "detail": "Craftable by Enchanters or purchased cheaply from the Auction House; massive DPS spike for early leveling."
+        },
+        "faction": "both",
+        "quality": "q2",
+        "iLvl": 15,
+        "reqLevel": 5,
+        "stats": "+1 Arcane Spell Power",
+        "alts": [
+          {
+            "name": "Fire Wand",
+            "itemId": 5069,
+            "value": "8.7 DPS - Level 7 drop",
+            "faction": "both",
+            "dps": "8.7 DPS",
+            "speed": "1.50",
+            "weaponType": "Wand",
+            "quality": "q2",
+            "iLvl": 12,
+            "reqLevel": 7,
+            "stats": "+1 Fire Spell Power",
+            "icon": "inv_staff_02"
+          },
+          {
+            "name": "Elven Wand",
+            "itemId": 5604,
+            "value": "9.4 DPS - Darkshore quest 'Bashal'Aran'",
+            "faction": "alliance",
+            "dps": "9.4 DPS",
+            "speed": "1.60",
+            "weaponType": "Wand",
+            "quality": "q2",
+            "iLvl": 13,
+            "reqLevel": 7,
+            "stats": "+1 Nature Spell Power",
+            "icon": "inv_staff_02"
+          },
+          {
+            "name": "Riptear's Spare Arm",
+            "itemId": 286743,
+            "value": "9.4 DPS - Barrens quest 'Rear Guard Patrol'",
+            "faction": "horde",
+            "dps": "9.4 DPS",
+            "speed": "1.70",
+            "weaponType": "Wand",
+            "quality": "q2",
+            "iLvl": 13,
+            "reqLevel": 6,
+            "stats": "+2 Shadow Spell Power",
+            "icon": "spell_shadow_fingerofdeath"
+          }
+        ]
+      },
+      {
+        "levelBracket": "9–12",
+        "itemId": 12296,
+        "name": "Spark of the People's Militia",
+        "icon": "inv_staff_02",
+        "weaponType": "Wand",
+        "speed": "1.80",
+        "dps": "12.8 DPS",
+        "source": {
+          "kind": "quest",
+          "title": "The People's Militia",
+          "detail": "Quest reward from Westfall (Sentinel Hill). Elite upgrade for Alliance casters."
+        },
+        "faction": "alliance",
+        "quality": "q2",
+        "iLvl": 17,
+        "reqLevel": 9,
+        "stats": "+2 Arcane Spell Power",
+        "alts": [
+          {
+            "name": "Cinder Wand",
+            "itemId": 5242,
+            "value": "11.8 DPS - Silverpine Forest quest 'Arugal's Folly'",
+            "faction": "horde",
+            "dps": "11.8 DPS",
+            "speed": "1.40",
+            "weaponType": "Wand",
+            "quality": "q2",
+            "iLvl": 16,
+            "reqLevel": 9,
+            "stats": "+2 Fire Spell Power",
+            "icon": "inv_staff_02"
+          },
+          {
+            "name": "Shadow Wand",
+            "itemId": 5071,
+            "value": "10.4 DPS - World drop",
+            "faction": "both",
+            "dps": "10.4 DPS",
+            "speed": "1.40",
+            "weaponType": "Wand",
+            "quality": "q2",
+            "iLvl": 14,
+            "reqLevel": 9,
+            "stats": "+1 Shadow Spell Power",
+            "icon": "inv_weapon_shortblade_09"
+          },
+          {
+            "name": "Blazing Wand",
+            "itemId": 5073,
+            "value": "12.7 DPS - Level 12 drop",
+            "faction": "both",
+            "dps": "12.7 DPS",
+            "speed": "1.50",
+            "weaponType": "Wand",
+            "quality": "q2",
+            "iLvl": 17,
+            "reqLevel": 12,
+            "stats": "+2 Fire Spell Power",
+            "icon": "inv_misc_bone_taurenskull_01"
+          }
+        ]
+      },
+      {
+        "levelBracket": "13–16",
+        "itemId": 11288,
+        "name": "Greater Magic Wand",
+        "icon": "inv_staff_07",
+        "weaponType": "Wand",
+        "speed": "1.80",
+        "dps": "17.5 DPS",
+        "source": {
+          "kind": "craft",
+          "title": "Enchanting (Skill 75)",
+          "detail": "Craftable by Enchanters (Simple Wood + Greater Magic Essence). Huge power leap across levels 13–18."
+        },
+        "faction": "both",
+        "quality": "q2",
+        "iLvl": 20,
+        "reqLevel": 13,
+        "stats": "+2 Arcane Spell Power",
+        "alts": [
+          {
+            "name": "Moongazer's Wand",
+            "itemId": 284193,
+            "value": "14.5 DPS - Darkshore / Silverpine quest",
+            "faction": "both",
+            "dps": "14.5 DPS",
+            "speed": "1.60",
+            "weaponType": "Wand",
+            "quality": "q2",
+            "iLvl": 18,
+            "reqLevel": 13,
+            "stats": "+3 Nature Spell Power",
+            "icon": "inv_staff_06"
+          },
+          {
+            "name": "Opaque Wand",
+            "itemId": 5075,
+            "value": "15.0 DPS - Level 15 drop",
+            "faction": "both",
+            "dps": "15.0 DPS",
+            "speed": "1.40",
+            "weaponType": "Wand",
+            "quality": "q2",
+            "iLvl": 20,
+            "reqLevel": 15,
+            "stats": "+2 Frost Spell Power",
+            "icon": "inv_misc_gem_ruby_01"
+          },
+          {
+            "name": "Whelpfire Wand",
+            "itemId": 281925,
+            "value": "16.1 DPS - Redridge Mountains quest",
+            "faction": "alliance",
+            "dps": "16.1 DPS",
+            "speed": "1.70",
+            "weaponType": "Wand",
+            "quality": "q2",
+            "iLvl": 21,
+            "reqLevel": 14,
+            "stats": "+3 Fire Spell Power",
+            "icon": "inv_wand_11"
+          }
+        ]
+      },
+      {
+        "levelBracket": "17–20",
+        "itemId": 5198,
+        "name": "Cookie's Stirring Rod",
+        "icon": "inv_staff_02",
+        "weaponType": "Wand",
+        "speed": "1.30",
+        "dps": "22.3 DPS",
+        "source": {
+          "kind": "dungeon",
+          "title": "The Deadmines",
+          "detail": "Dropped by Cookie (The Ship's Cook) in Deadmines. Super fast 1.30s attack speed."
+        },
+        "faction": "both",
+        "quality": "q2",
+        "iLvl": 22,
+        "reqLevel": 17,
+        "stats": "+2 Nature Spell Power",
+        "alts": [
+          {
+            "name": "Charred Razormane Wand",
+            "itemId": 284195,
+            "value": "15.7 DPS - Barrens quest",
+            "faction": "horde",
+            "dps": "15.7 DPS",
+            "speed": "1.50",
+            "weaponType": "Wand",
+            "quality": "q2",
+            "iLvl": 20,
+            "reqLevel": 18,
+            "stats": "+2 Fire Spell Power",
+            "icon": "inv_misc_questionmark"
+          },
+          {
+            "name": "Burning Wand",
+            "itemId": 5079,
+            "value": "17.5 DPS - World drop",
+            "faction": "both",
+            "dps": "17.5 DPS",
+            "speed": "1.40",
+            "weaponType": "Wand",
+            "quality": "q2",
+            "iLvl": 23,
+            "reqLevel": 20,
+            "stats": "+3 Fire Spell Power",
+            "icon": "inv_misc_eye_01"
+          }
+        ]
+      },
+      {
+        "levelBracket": "21–24",
+        "itemId": 7001,
+        "name": "Gravestone Scepter",
+        "icon": "inv_wand_04",
+        "weaponType": "Wand",
+        "speed": "1.50",
+        "dps": "29.0 DPS",
+        "source": {
+          "kind": "quest",
+          "title": "Blackfathom Villainy",
+          "detail": "Reward for completing Blackfathom Deeps questline (Darnassus for Alliance / Thunder Bluff for Horde). Arguably the strongest leveling wand in the game."
+        },
+        "faction": "both",
+        "quality": "q3",
+        "iLvl": 29,
+        "reqLevel": 18,
+        "stats": "+5 Shadow Spell Power",
+        "alts": [
+          {
+            "name": "Excavation Rod",
+            "itemId": 285350,
+            "value": "24.2 DPS - Wetlands / Hillsbrad quest",
+            "faction": "both",
+            "dps": "24.2 DPS",
+            "speed": "1.90",
+            "weaponType": "Wand",
+            "quality": "q2",
+            "iLvl": 27,
+            "reqLevel": 22,
+            "stats": "+3 Arcane Spell Power",
+            "icon": "inv_staff_11"
+          },
+          {
+            "name": "Consecrated Wand",
+            "itemId": 279844,
+            "value": "24.2 DPS - Level 23 drop",
+            "faction": "both",
+            "dps": "24.2 DPS",
+            "speed": "1.20",
+            "weaponType": "Wand",
+            "quality": "q2",
+            "iLvl": 28,
+            "reqLevel": 23,
+            "stats": "+4 Holy Spell Power",
+            "icon": "inv_staff_28"
+          },
+          {
+            "name": "Firestarter",
+            "itemId": 5081,
+            "value": "23.3 DPS - Level 24 drop",
+            "faction": "both",
+            "dps": "23.3 DPS",
+            "speed": "1.50",
+            "weaponType": "Wand",
+            "quality": "q2",
+            "iLvl": 27,
+            "reqLevel": 24,
+            "stats": "+4 Fire Spell Power",
+            "icon": "inv_misc_bag_10"
+          }
+        ]
+      },
+      {
+        "levelBracket": "25–28",
+        "itemId": 273043,
+        "name": "Wand of Mana Concentration",
+        "icon": "inv_wand_06",
+        "weaponType": "Wand",
+        "speed": "1.40",
+        "dps": "28.5 DPS",
+        "source": {
+          "kind": "dungeon",
+          "title": "Razorfen Kraul",
+          "detail": "Dropped in Razorfen Kraul. High burst speed and Arcane synergy."
+        },
+        "faction": "both",
+        "quality": "q3",
+        "iLvl": 32,
+        "reqLevel": 27,
+        "stats": "+4 Intellect, +3 Arcane Spell Power",
+        "alts": [
+          {
+            "name": "Fizzle's Zippy Lighter",
+            "itemId": 279846,
+            "value": "31.0 DPS - Gnomeregan dungeon quest",
+            "faction": "both",
+            "dps": "31.0 DPS",
+            "speed": "1.50",
+            "weaponType": "Wand",
+            "quality": "q2",
+            "iLvl": 33,
+            "reqLevel": 28,
+            "stats": "+5 Fire Spell Power",
+            "icon": "inv_belt_04"
+          },
+          {
+            "name": "Wand of Eventide",
+            "itemId": 5084,
+            "value": "25.8 DPS - Level 27 drop",
+            "faction": "both",
+            "dps": "25.8 DPS",
+            "speed": "1.30",
+            "weaponType": "Wand",
+            "quality": "q2",
+            "iLvl": 31,
+            "reqLevel": 27,
+            "stats": "+4 Shadow Spell Power",
+            "icon": "inv_misc_head_human_01"
+          }
+        ]
+      },
+      {
+        "levelBracket": "29–34",
+        "itemId": 7514,
+        "name": "Icefury Wand",
+        "icon": "inv_wand_05",
+        "weaponType": "Wand",
+        "speed": "1.90",
+        "dps": "33.2 DPS",
+        "source": {
+          "kind": "quest",
+          "title": "Mage / Caster Class Mastery",
+          "detail": "Class quest in Dustwallow Marsh / Thousand Needles with devastating frost impact."
+        },
+        "faction": "both",
+        "quality": "q3",
+        "iLvl": 35,
+        "reqLevel": 30,
+        "stats": "+5 Frost Spell Power, +3 Intellect",
+        "alts": [
+          {
+            "name": "Blackbone Wand",
+            "itemId": 286745,
+            "value": "35.3 DPS - Sold by wand vendors in Ironforge, Undercity, Ratchet",
+            "faction": "both",
+            "dps": "35.3 DPS",
+            "speed": "1.60",
+            "weaponType": "Wand",
+            "quality": "q2",
+            "iLvl": 38,
+            "reqLevel": 31,
+            "stats": "+5 Shadow Spell Power",
+            "icon": "inv_jewelry_ring_12"
+          },
+          {
+            "name": "Unstable Power Core",
+            "itemId": 279847,
+            "value": "30.0 DPS - Gnomeregan drop",
+            "faction": "both",
+            "dps": "30.0 DPS",
+            "speed": "1.50",
+            "weaponType": "Wand",
+            "quality": "q2",
+            "iLvl": 34,
+            "reqLevel": 29,
+            "stats": "+4 Fire Spell Power",
+            "icon": "inv_staff_06"
+          },
+          {
+            "name": "Master Hunter's Wand",
+            "itemId": 270084,
+            "value": "31.5 DPS - Stranglethorn Vale quest",
+            "faction": "both",
+            "dps": "31.5 DPS",
+            "speed": "1.70",
+            "weaponType": "Wand",
+            "quality": "q2",
+            "iLvl": 35,
+            "reqLevel": 30,
+            "stats": "+5 Nature Spell Power",
+            "icon": "inv_wand_03"
+          }
+        ]
+      },
+      {
+        "levelBracket": "35–40",
+        "itemId": 6806,
+        "name": "Dancing Flame",
+        "icon": "inv_wand_04",
+        "weaponType": "Wand",
+        "speed": "1.60",
+        "dps": "38.5 DPS",
+        "source": {
+          "kind": "dungeon",
+          "title": "Scarlet Monastery (Armory/Cathedral)",
+          "detail": "Dungeon boss drop in Scarlet Monastery."
+        },
+        "faction": "both",
+        "quality": "q3",
+        "iLvl": 41,
+        "reqLevel": 36,
+        "stats": "+7 Fire Spell Power",
+        "alts": [
+          {
+            "name": "Twisted Nether Wand",
+            "itemId": 249144,
+            "value": "34.0 DPS - Desolace / Alterac quest",
+            "faction": "both",
+            "dps": "34.0 DPS",
+            "speed": "1.50",
+            "weaponType": "Wand",
+            "quality": "q2",
+            "iLvl": 38,
+            "reqLevel": 33,
+            "stats": "+5 Shadow Spell Power",
+            "icon": "inv_wand_03"
+          },
+          {
+            "name": "Gnomish Zapper",
+            "itemId": 4547,
+            "value": "32.7 DPS - Sunken Treasure quest in Arathi",
+            "faction": "both",
+            "dps": "32.7 DPS",
+            "speed": "1.30",
+            "weaponType": "Wand",
+            "quality": "q2",
+            "iLvl": 40,
+            "reqLevel": 35,
+            "stats": "+4 Stamina, +3 Spell Power",
+            "icon": "inv_wand_02"
+          },
+          {
+            "name": "Umbral Wand",
+            "itemId": 5090,
+            "value": "35.7 DPS - Level 40 drop",
+            "faction": "both",
+            "dps": "35.7 DPS",
+            "speed": "1.50",
+            "weaponType": "Wand",
+            "quality": "q2",
+            "iLvl": 45,
+            "reqLevel": 40,
+            "stats": "+5 Shadow Spell Power",
+            "icon": "inv_shirt_12"
+          }
+        ]
+      },
+      {
+        "levelBracket": "41–46",
+        "itemId": 249234,
+        "name": "Dreambough Wand",
+        "icon": "inv_wand_04",
+        "weaponType": "Wand",
+        "speed": "1.70",
+        "dps": "43.5 DPS",
+        "source": {
+          "kind": "quest",
+          "title": "Feralas / Hinterlands Questline",
+          "detail": "Long questline reward in Feralas / Hinterlands with immense nature burst."
+        },
+        "faction": "both",
+        "quality": "q3",
+        "iLvl": 47,
+        "reqLevel": 42,
+        "stats": "+8 Nature Spell Power, +4 Spirit",
+        "alts": [
+          {
+            "name": "Cairnstone Sliver",
+            "itemId": 286747,
+            "value": "41.4 DPS - Uldaman dungeon drop",
+            "faction": "both",
+            "dps": "41.4 DPS",
+            "speed": "1.80",
+            "weaponType": "Wand",
+            "quality": "q2",
+            "iLvl": 46,
+            "reqLevel": 42,
+            "stats": "+6 Nature Spell Power",
+            "icon": "inv_misc_questionmark"
+          },
+          {
+            "name": "Charged Lightning Rod",
+            "itemId": 279849,
+            "value": "37.3 DPS - Tanaris / Zul'Farrak quest",
+            "faction": "both",
+            "dps": "37.3 DPS",
+            "speed": "1.50",
+            "weaponType": "Wand",
+            "quality": "q2",
+            "iLvl": 48,
+            "reqLevel": 43,
+            "stats": "+6 Nature Spell Power",
+            "icon": "inv_gauntlets_15"
+          },
+          {
+            "name": "Nature's Breath",
+            "itemId": 19118,
+            "value": "41.1 DPS - Dark Vessels quest",
+            "faction": "both",
+            "dps": "41.1 DPS",
+            "speed": "1.40",
+            "weaponType": "Wand",
+            "quality": "q2",
+            "iLvl": 50,
+            "reqLevel": 46,
+            "stats": "+7 Nature Spell Power",
+            "icon": "inv_wand_12"
+          }
+        ]
+      },
+      {
+        "levelBracket": "47–52",
+        "itemId": 11748,
+        "name": "Pyric Caduceus",
+        "icon": "inv_staff_13",
+        "weaponType": "Wand",
+        "speed": "1.80",
+        "dps": "52.5 DPS",
+        "source": {
+          "kind": "dungeon",
+          "title": "Blackrock Depths",
+          "detail": "Dropped by Pyromancer Loregrain in Blackrock Depths."
+        },
+        "faction": "both",
+        "quality": "q3",
+        "iLvl": 53,
+        "reqLevel": 48,
+        "stats": "+10 Fire Spell Power",
+        "alts": [
+          {
+            "name": "Lesser Eternal Wand",
+            "itemId": 249232,
+            "value": "45.8 DPS - Enchanting skill 260 craft",
+            "faction": "both",
+            "dps": "45.8 DPS",
+            "speed": "2.00",
+            "weaponType": "Wand",
+            "quality": "q2",
+            "iLvl": 54,
+            "reqLevel": 49,
+            "stats": "+7 Arcane Spell Power",
+            "icon": "inv_wand_05"
+          },
+          {
+            "name": "Wizard's Hand",
+            "itemId": 15280,
+            "value": "44.4 DPS - Level 48 drop",
+            "faction": "both",
+            "dps": "44.4 DPS",
+            "speed": "1.80",
+            "weaponType": "Wand",
+            "quality": "q2",
+            "iLvl": 53,
+            "reqLevel": 48,
+            "stats": "+7 Arcane Spell Power",
+            "icon": "inv_wand_06"
+          },
+          {
+            "name": "Glowstar Rod",
+            "itemId": 15281,
+            "value": "50.0 DPS - Level 52 drop",
+            "faction": "both",
+            "dps": "50.0 DPS",
+            "speed": "1.50",
+            "weaponType": "Wand",
+            "quality": "q2",
+            "iLvl": 57,
+            "reqLevel": 52,
+            "stats": "+8 Holy Spell Power",
+            "icon": "inv_staff_10"
+          }
+        ]
+      },
+      {
+        "levelBracket": "53–60",
+        "itemId": 16997,
+        "name": "Stormrager",
+        "icon": "inv_wand_05",
+        "weaponType": "Wand",
+        "speed": "1.30",
+        "dps": "62.7 DPS",
+        "source": {
+          "kind": "quest",
+          "title": "Eastern Plaguelands / Scholomance Quest",
+          "detail": "Top-tier quest reward in Eastern Plaguelands. High DPS with ultra fast 1.30 attack speed."
+        },
+        "faction": "both",
+        "quality": "q3",
+        "iLvl": 62,
+        "reqLevel": 56,
+        "stats": "+5 Intellect, +9 Spell Power",
+        "alts": [
+          {
+            "name": "Brilliant Wand",
+            "itemId": 249385,
+            "value": "59.6 DPS - Crafted Enchanting (Skill 300)",
+            "faction": "both",
+            "dps": "59.6 DPS",
+            "speed": "1.20",
+            "weaponType": "Wand",
+            "quality": "q3",
+            "iLvl": 60,
+            "reqLevel": 55,
+            "stats": "+6 Intellect, +8 Spell Power",
+            "icon": "inv_wand_07"
+          },
+          {
+            "name": "Greater Eternal Wand",
+            "itemId": 249237,
+            "value": "53.3 DPS - Crafted Enchanting",
+            "faction": "both",
+            "dps": "53.3 DPS",
+            "speed": "1.50",
+            "weaponType": "Wand",
+            "quality": "q2",
+            "iLvl": 60,
+            "reqLevel": 55,
+            "stats": "+8 Arcane Spell Power",
+            "icon": "inv_wand_14"
+          },
+          {
+            "name": "Torch of Austen",
+            "itemId": 13004,
+            "value": "56.8 DPS - Level 53 world drop",
+            "faction": "both",
+            "dps": "56.8 DPS",
+            "speed": "1.40",
+            "weaponType": "Wand",
+            "quality": "q3",
+            "iLvl": 58,
+            "reqLevel": 53,
+            "stats": "+8 Fire Spell Power",
+            "icon": "inv_wand_11"
+          },
+          {
+            "name": "Wand of Biting Cold",
+            "itemId": 19108,
+            "value": "64.0 DPS - Alterac Valley quest reward",
+            "faction": "both",
+            "dps": "64.0 DPS",
+            "speed": "1.50",
+            "weaponType": "Wand",
+            "quality": "q3",
+            "iLvl": 63,
+            "reqLevel": 51,
+            "stats": "+16 Frost Spell Power",
+            "icon": "inv_wand_01"
+          }
+        ]
+      }
+    ]
+  },
+  "priest": {
+    "classId": "priest",
+    "tracks": [
+      {
+        "id": "primary",
+        "name": "Level 1–60 Wand Upgrade Path"
+      }
+    ],
+    "levels": [
+      {
+        "levelBracket": "1–4",
+        "itemId": 247789,
+        "name": "Novice's Practice Wand",
+        "icon": "inv_weapon_shortblade_09",
+        "weaponType": "Wand",
+        "speed": "1.50",
+        "dps": "4.0 DPS",
+        "source": {
+          "kind": "quest",
+          "title": "Starting Zone Class Quest",
+          "detail": "Awarded from initial Level 1–4 Class Trainer quest in starting zones."
+        },
+        "faction": "both",
+        "quality": "q1",
+        "iLvl": 6,
+        "reqLevel": 1,
+        "stats": "Auto-Shoot Baseline",
+        "alts": [
+          {
+            "name": "Alchemist's Wand",
+            "itemId": 5235,
+            "value": "4.4 DPS - Early starting zone drop",
+            "faction": "both",
+            "dps": "4.4 DPS",
+            "speed": "1.80",
+            "weaponType": "Wand",
+            "quality": "q1",
+            "iLvl": 7,
+            "reqLevel": 1,
+            "stats": "",
+            "icon": "inv_staff_02"
+          },
+          {
+            "name": "Dowsing Rod",
+            "itemId": 263428,
+            "value": "4.2 DPS - Level 4 quest reward",
+            "faction": "alliance",
+            "dps": "4.2 DPS",
+            "speed": "1.20",
+            "weaponType": "Wand",
+            "quality": "q1",
+            "iLvl": 6,
+            "reqLevel": 4,
+            "stats": "",
+            "icon": "inv_wand_05"
+          }
+        ]
+      },
+      {
+        "levelBracket": "5–8",
+        "itemId": 11287,
+        "name": "Lesser Magic Wand",
+        "icon": "inv_staff_02",
+        "weaponType": "Wand",
+        "speed": "1.50",
+        "dps": "11.3 DPS",
+        "source": {
+          "kind": "craft",
+          "title": "Enchanting (Skill 10)",
+          "detail": "Craftable by Enchanters or purchased cheaply from the Auction House; massive DPS spike for early leveling."
+        },
+        "faction": "both",
+        "quality": "q2",
+        "iLvl": 15,
+        "reqLevel": 5,
+        "stats": "+1 Arcane Spell Power",
+        "alts": [
+          {
+            "name": "Fire Wand",
+            "itemId": 5069,
+            "value": "8.7 DPS - Level 7 drop",
+            "faction": "both",
+            "dps": "8.7 DPS",
+            "speed": "1.50",
+            "weaponType": "Wand",
+            "quality": "q2",
+            "iLvl": 12,
+            "reqLevel": 7,
+            "stats": "+1 Fire Spell Power",
+            "icon": "inv_staff_02"
+          },
+          {
+            "name": "Elven Wand",
+            "itemId": 5604,
+            "value": "9.4 DPS - Darkshore quest 'Bashal'Aran'",
+            "faction": "alliance",
+            "dps": "9.4 DPS",
+            "speed": "1.60",
+            "weaponType": "Wand",
+            "quality": "q2",
+            "iLvl": 13,
+            "reqLevel": 7,
+            "stats": "+1 Nature Spell Power",
+            "icon": "inv_staff_02"
+          },
+          {
+            "name": "Riptear's Spare Arm",
+            "itemId": 286743,
+            "value": "9.4 DPS - Barrens quest 'Rear Guard Patrol'",
+            "faction": "horde",
+            "dps": "9.4 DPS",
+            "speed": "1.70",
+            "weaponType": "Wand",
+            "quality": "q2",
+            "iLvl": 13,
+            "reqLevel": 6,
+            "stats": "+2 Shadow Spell Power",
+            "icon": "spell_shadow_fingerofdeath"
+          }
+        ]
+      },
+      {
+        "levelBracket": "9–12",
+        "itemId": 12296,
+        "name": "Spark of the People's Militia",
+        "icon": "inv_staff_02",
+        "weaponType": "Wand",
+        "speed": "1.80",
+        "dps": "12.8 DPS",
+        "source": {
+          "kind": "quest",
+          "title": "The People's Militia",
+          "detail": "Quest reward from Westfall (Sentinel Hill). Elite upgrade for Alliance casters."
+        },
+        "faction": "alliance",
+        "quality": "q2",
+        "iLvl": 17,
+        "reqLevel": 9,
+        "stats": "+2 Arcane Spell Power",
+        "alts": [
+          {
+            "name": "Cinder Wand",
+            "itemId": 5242,
+            "value": "11.8 DPS - Silverpine Forest quest 'Arugal's Folly'",
+            "faction": "horde",
+            "dps": "11.8 DPS",
+            "speed": "1.40",
+            "weaponType": "Wand",
+            "quality": "q2",
+            "iLvl": 16,
+            "reqLevel": 9,
+            "stats": "+2 Fire Spell Power",
+            "icon": "inv_staff_02"
+          },
+          {
+            "name": "Shadow Wand",
+            "itemId": 5071,
+            "value": "10.4 DPS - World drop",
+            "faction": "both",
+            "dps": "10.4 DPS",
+            "speed": "1.40",
+            "weaponType": "Wand",
+            "quality": "q2",
+            "iLvl": 14,
+            "reqLevel": 9,
+            "stats": "+1 Shadow Spell Power",
+            "icon": "inv_weapon_shortblade_09"
+          },
+          {
+            "name": "Blazing Wand",
+            "itemId": 5073,
+            "value": "12.7 DPS - Level 12 drop",
+            "faction": "both",
+            "dps": "12.7 DPS",
+            "speed": "1.50",
+            "weaponType": "Wand",
+            "quality": "q2",
+            "iLvl": 17,
+            "reqLevel": 12,
+            "stats": "+2 Fire Spell Power",
+            "icon": "inv_misc_bone_taurenskull_01"
+          }
+        ]
+      },
+      {
+        "levelBracket": "13–16",
+        "itemId": 11288,
+        "name": "Greater Magic Wand",
+        "icon": "inv_staff_07",
+        "weaponType": "Wand",
+        "speed": "1.80",
+        "dps": "17.5 DPS",
+        "source": {
+          "kind": "craft",
+          "title": "Enchanting (Skill 75)",
+          "detail": "Craftable by Enchanters (Simple Wood + Greater Magic Essence). Huge power leap across levels 13–18."
+        },
+        "faction": "both",
+        "quality": "q2",
+        "iLvl": 20,
+        "reqLevel": 13,
+        "stats": "+2 Arcane Spell Power",
+        "alts": [
+          {
+            "name": "Moongazer's Wand",
+            "itemId": 284193,
+            "value": "14.5 DPS - Darkshore / Silverpine quest",
+            "faction": "both",
+            "dps": "14.5 DPS",
+            "speed": "1.60",
+            "weaponType": "Wand",
+            "quality": "q2",
+            "iLvl": 18,
+            "reqLevel": 13,
+            "stats": "+3 Nature Spell Power",
+            "icon": "inv_staff_06"
+          },
+          {
+            "name": "Opaque Wand",
+            "itemId": 5075,
+            "value": "15.0 DPS - Level 15 drop",
+            "faction": "both",
+            "dps": "15.0 DPS",
+            "speed": "1.40",
+            "weaponType": "Wand",
+            "quality": "q2",
+            "iLvl": 20,
+            "reqLevel": 15,
+            "stats": "+2 Frost Spell Power",
+            "icon": "inv_misc_gem_ruby_01"
+          },
+          {
+            "name": "Whelpfire Wand",
+            "itemId": 281925,
+            "value": "16.1 DPS - Redridge Mountains quest",
+            "faction": "alliance",
+            "dps": "16.1 DPS",
+            "speed": "1.70",
+            "weaponType": "Wand",
+            "quality": "q2",
+            "iLvl": 21,
+            "reqLevel": 14,
+            "stats": "+3 Fire Spell Power",
+            "icon": "inv_wand_11"
+          }
+        ]
+      },
+      {
+        "levelBracket": "17–20",
+        "itemId": 5198,
+        "name": "Cookie's Stirring Rod",
+        "icon": "inv_staff_02",
+        "weaponType": "Wand",
+        "speed": "1.30",
+        "dps": "22.3 DPS",
+        "source": {
+          "kind": "dungeon",
+          "title": "The Deadmines",
+          "detail": "Dropped by Cookie (The Ship's Cook) in Deadmines. Super fast 1.30s attack speed."
+        },
+        "faction": "both",
+        "quality": "q2",
+        "iLvl": 22,
+        "reqLevel": 17,
+        "stats": "+2 Nature Spell Power",
+        "alts": [
+          {
+            "name": "Charred Razormane Wand",
+            "itemId": 284195,
+            "value": "15.7 DPS - Barrens quest",
+            "faction": "horde",
+            "dps": "15.7 DPS",
+            "speed": "1.50",
+            "weaponType": "Wand",
+            "quality": "q2",
+            "iLvl": 20,
+            "reqLevel": 18,
+            "stats": "+2 Fire Spell Power",
+            "icon": "inv_misc_questionmark"
+          },
+          {
+            "name": "Burning Wand",
+            "itemId": 5079,
+            "value": "17.5 DPS - World drop",
+            "faction": "both",
+            "dps": "17.5 DPS",
+            "speed": "1.40",
+            "weaponType": "Wand",
+            "quality": "q2",
+            "iLvl": 23,
+            "reqLevel": 20,
+            "stats": "+3 Fire Spell Power",
+            "icon": "inv_misc_eye_01"
+          }
+        ]
+      },
+      {
+        "levelBracket": "21–24",
+        "itemId": 7001,
+        "name": "Gravestone Scepter",
+        "icon": "inv_wand_04",
+        "weaponType": "Wand",
+        "speed": "1.50",
+        "dps": "29.0 DPS",
+        "source": {
+          "kind": "quest",
+          "title": "Blackfathom Villainy",
+          "detail": "Reward for completing Blackfathom Deeps questline (Darnassus for Alliance / Thunder Bluff for Horde). Arguably the strongest leveling wand in the game."
+        },
+        "faction": "both",
+        "quality": "q3",
+        "iLvl": 29,
+        "reqLevel": 18,
+        "stats": "+5 Shadow Spell Power",
+        "alts": [
+          {
+            "name": "Excavation Rod",
+            "itemId": 285350,
+            "value": "24.2 DPS - Wetlands / Hillsbrad quest",
+            "faction": "both",
+            "dps": "24.2 DPS",
+            "speed": "1.90",
+            "weaponType": "Wand",
+            "quality": "q2",
+            "iLvl": 27,
+            "reqLevel": 22,
+            "stats": "+3 Arcane Spell Power",
+            "icon": "inv_staff_11"
+          },
+          {
+            "name": "Consecrated Wand",
+            "itemId": 279844,
+            "value": "24.2 DPS - Level 23 drop",
+            "faction": "both",
+            "dps": "24.2 DPS",
+            "speed": "1.20",
+            "weaponType": "Wand",
+            "quality": "q2",
+            "iLvl": 28,
+            "reqLevel": 23,
+            "stats": "+4 Holy Spell Power",
+            "icon": "inv_staff_28"
+          },
+          {
+            "name": "Firestarter",
+            "itemId": 5081,
+            "value": "23.3 DPS - Level 24 drop",
+            "faction": "both",
+            "dps": "23.3 DPS",
+            "speed": "1.50",
+            "weaponType": "Wand",
+            "quality": "q2",
+            "iLvl": 27,
+            "reqLevel": 24,
+            "stats": "+4 Fire Spell Power",
+            "icon": "inv_misc_bag_10"
+          }
+        ]
+      },
+      {
+        "levelBracket": "25–28",
+        "itemId": 273043,
+        "name": "Wand of Mana Concentration",
+        "icon": "inv_wand_06",
+        "weaponType": "Wand",
+        "speed": "1.40",
+        "dps": "28.5 DPS",
+        "source": {
+          "kind": "dungeon",
+          "title": "Razorfen Kraul",
+          "detail": "Dropped in Razorfen Kraul. High burst speed and Arcane synergy."
+        },
+        "faction": "both",
+        "quality": "q3",
+        "iLvl": 32,
+        "reqLevel": 27,
+        "stats": "+4 Intellect, +3 Arcane Spell Power",
+        "alts": [
+          {
+            "name": "Fizzle's Zippy Lighter",
+            "itemId": 279846,
+            "value": "31.0 DPS - Gnomeregan dungeon quest",
+            "faction": "both",
+            "dps": "31.0 DPS",
+            "speed": "1.50",
+            "weaponType": "Wand",
+            "quality": "q2",
+            "iLvl": 33,
+            "reqLevel": 28,
+            "stats": "+5 Fire Spell Power",
+            "icon": "inv_belt_04"
+          },
+          {
+            "name": "Wand of Eventide",
+            "itemId": 5084,
+            "value": "25.8 DPS - Level 27 drop",
+            "faction": "both",
+            "dps": "25.8 DPS",
+            "speed": "1.30",
+            "weaponType": "Wand",
+            "quality": "q2",
+            "iLvl": 31,
+            "reqLevel": 27,
+            "stats": "+4 Shadow Spell Power",
+            "icon": "inv_misc_head_human_01"
+          }
+        ]
+      },
+      {
+        "levelBracket": "29–34",
+        "itemId": 7514,
+        "name": "Icefury Wand",
+        "icon": "inv_wand_05",
+        "weaponType": "Wand",
+        "speed": "1.90",
+        "dps": "33.2 DPS",
+        "source": {
+          "kind": "quest",
+          "title": "Mage / Caster Class Mastery",
+          "detail": "Class quest in Dustwallow Marsh / Thousand Needles with devastating frost impact."
+        },
+        "faction": "both",
+        "quality": "q3",
+        "iLvl": 35,
+        "reqLevel": 30,
+        "stats": "+5 Frost Spell Power, +3 Intellect",
+        "alts": [
+          {
+            "name": "Blackbone Wand",
+            "itemId": 286745,
+            "value": "35.3 DPS - Sold by wand vendors in Ironforge, Undercity, Ratchet",
+            "faction": "both",
+            "dps": "35.3 DPS",
+            "speed": "1.60",
+            "weaponType": "Wand",
+            "quality": "q2",
+            "iLvl": 38,
+            "reqLevel": 31,
+            "stats": "+5 Shadow Spell Power",
+            "icon": "inv_jewelry_ring_12"
+          },
+          {
+            "name": "Unstable Power Core",
+            "itemId": 279847,
+            "value": "30.0 DPS - Gnomeregan drop",
+            "faction": "both",
+            "dps": "30.0 DPS",
+            "speed": "1.50",
+            "weaponType": "Wand",
+            "quality": "q2",
+            "iLvl": 34,
+            "reqLevel": 29,
+            "stats": "+4 Fire Spell Power",
+            "icon": "inv_staff_06"
+          },
+          {
+            "name": "Master Hunter's Wand",
+            "itemId": 270084,
+            "value": "31.5 DPS - Stranglethorn Vale quest",
+            "faction": "both",
+            "dps": "31.5 DPS",
+            "speed": "1.70",
+            "weaponType": "Wand",
+            "quality": "q2",
+            "iLvl": 35,
+            "reqLevel": 30,
+            "stats": "+5 Nature Spell Power",
+            "icon": "inv_wand_03"
+          }
+        ]
+      },
+      {
+        "levelBracket": "35–40",
+        "itemId": 6806,
+        "name": "Dancing Flame",
+        "icon": "inv_wand_04",
+        "weaponType": "Wand",
+        "speed": "1.60",
+        "dps": "38.5 DPS",
+        "source": {
+          "kind": "dungeon",
+          "title": "Scarlet Monastery (Armory/Cathedral)",
+          "detail": "Dungeon boss drop in Scarlet Monastery."
+        },
+        "faction": "both",
+        "quality": "q3",
+        "iLvl": 41,
+        "reqLevel": 36,
+        "stats": "+7 Fire Spell Power",
+        "alts": [
+          {
+            "name": "Twisted Nether Wand",
+            "itemId": 249144,
+            "value": "34.0 DPS - Desolace / Alterac quest",
+            "faction": "both",
+            "dps": "34.0 DPS",
+            "speed": "1.50",
+            "weaponType": "Wand",
+            "quality": "q2",
+            "iLvl": 38,
+            "reqLevel": 33,
+            "stats": "+5 Shadow Spell Power",
+            "icon": "inv_wand_03"
+          },
+          {
+            "name": "Gnomish Zapper",
+            "itemId": 4547,
+            "value": "32.7 DPS - Sunken Treasure quest in Arathi",
+            "faction": "both",
+            "dps": "32.7 DPS",
+            "speed": "1.30",
+            "weaponType": "Wand",
+            "quality": "q2",
+            "iLvl": 40,
+            "reqLevel": 35,
+            "stats": "+4 Stamina, +3 Spell Power",
+            "icon": "inv_wand_02"
+          },
+          {
+            "name": "Umbral Wand",
+            "itemId": 5090,
+            "value": "35.7 DPS - Level 40 drop",
+            "faction": "both",
+            "dps": "35.7 DPS",
+            "speed": "1.50",
+            "weaponType": "Wand",
+            "quality": "q2",
+            "iLvl": 45,
+            "reqLevel": 40,
+            "stats": "+5 Shadow Spell Power",
+            "icon": "inv_shirt_12"
+          }
+        ]
+      },
+      {
+        "levelBracket": "41–46",
+        "itemId": 249234,
+        "name": "Dreambough Wand",
+        "icon": "inv_wand_04",
+        "weaponType": "Wand",
+        "speed": "1.70",
+        "dps": "43.5 DPS",
+        "source": {
+          "kind": "quest",
+          "title": "Feralas / Hinterlands Questline",
+          "detail": "Long questline reward in Feralas / Hinterlands with immense nature burst."
+        },
+        "faction": "both",
+        "quality": "q3",
+        "iLvl": 47,
+        "reqLevel": 42,
+        "stats": "+8 Nature Spell Power, +4 Spirit",
+        "alts": [
+          {
+            "name": "Cairnstone Sliver",
+            "itemId": 286747,
+            "value": "41.4 DPS - Uldaman dungeon drop",
+            "faction": "both",
+            "dps": "41.4 DPS",
+            "speed": "1.80",
+            "weaponType": "Wand",
+            "quality": "q2",
+            "iLvl": 46,
+            "reqLevel": 42,
+            "stats": "+6 Nature Spell Power",
+            "icon": "inv_misc_questionmark"
+          },
+          {
+            "name": "Charged Lightning Rod",
+            "itemId": 279849,
+            "value": "37.3 DPS - Tanaris / Zul'Farrak quest",
+            "faction": "both",
+            "dps": "37.3 DPS",
+            "speed": "1.50",
+            "weaponType": "Wand",
+            "quality": "q2",
+            "iLvl": 48,
+            "reqLevel": 43,
+            "stats": "+6 Nature Spell Power",
+            "icon": "inv_gauntlets_15"
+          },
+          {
+            "name": "Nature's Breath",
+            "itemId": 19118,
+            "value": "41.1 DPS - Dark Vessels quest",
+            "faction": "both",
+            "dps": "41.1 DPS",
+            "speed": "1.40",
+            "weaponType": "Wand",
+            "quality": "q2",
+            "iLvl": 50,
+            "reqLevel": 46,
+            "stats": "+7 Nature Spell Power",
+            "icon": "inv_wand_12"
+          }
+        ]
+      },
+      {
+        "levelBracket": "47–52",
+        "itemId": 11748,
+        "name": "Pyric Caduceus",
+        "icon": "inv_staff_13",
+        "weaponType": "Wand",
+        "speed": "1.80",
+        "dps": "52.5 DPS",
+        "source": {
+          "kind": "dungeon",
+          "title": "Blackrock Depths",
+          "detail": "Dropped by Pyromancer Loregrain in Blackrock Depths."
+        },
+        "faction": "both",
+        "quality": "q3",
+        "iLvl": 53,
+        "reqLevel": 48,
+        "stats": "+10 Fire Spell Power",
+        "alts": [
+          {
+            "name": "Lesser Eternal Wand",
+            "itemId": 249232,
+            "value": "45.8 DPS - Enchanting skill 260 craft",
+            "faction": "both",
+            "dps": "45.8 DPS",
+            "speed": "2.00",
+            "weaponType": "Wand",
+            "quality": "q2",
+            "iLvl": 54,
+            "reqLevel": 49,
+            "stats": "+7 Arcane Spell Power",
+            "icon": "inv_wand_05"
+          },
+          {
+            "name": "Wizard's Hand",
+            "itemId": 15280,
+            "value": "44.4 DPS - Level 48 drop",
+            "faction": "both",
+            "dps": "44.4 DPS",
+            "speed": "1.80",
+            "weaponType": "Wand",
+            "quality": "q2",
+            "iLvl": 53,
+            "reqLevel": 48,
+            "stats": "+7 Arcane Spell Power",
+            "icon": "inv_wand_06"
+          },
+          {
+            "name": "Glowstar Rod",
+            "itemId": 15281,
+            "value": "50.0 DPS - Level 52 drop",
+            "faction": "both",
+            "dps": "50.0 DPS",
+            "speed": "1.50",
+            "weaponType": "Wand",
+            "quality": "q2",
+            "iLvl": 57,
+            "reqLevel": 52,
+            "stats": "+8 Holy Spell Power",
+            "icon": "inv_staff_10"
+          }
+        ]
+      },
+      {
+        "levelBracket": "53–60",
+        "itemId": 16997,
+        "name": "Stormrager",
+        "icon": "inv_wand_05",
+        "weaponType": "Wand",
+        "speed": "1.30",
+        "dps": "62.7 DPS",
+        "source": {
+          "kind": "quest",
+          "title": "Eastern Plaguelands / Scholomance Quest",
+          "detail": "Top-tier quest reward in Eastern Plaguelands. High DPS with ultra fast 1.30 attack speed."
+        },
+        "faction": "both",
+        "quality": "q3",
+        "iLvl": 62,
+        "reqLevel": 56,
+        "stats": "+5 Intellect, +9 Spell Power",
+        "alts": [
+          {
+            "name": "Brilliant Wand",
+            "itemId": 249385,
+            "value": "59.6 DPS - Crafted Enchanting (Skill 300)",
+            "faction": "both",
+            "dps": "59.6 DPS",
+            "speed": "1.20",
+            "weaponType": "Wand",
+            "quality": "q3",
+            "iLvl": 60,
+            "reqLevel": 55,
+            "stats": "+6 Intellect, +8 Spell Power",
+            "icon": "inv_wand_07"
+          },
+          {
+            "name": "Greater Eternal Wand",
+            "itemId": 249237,
+            "value": "53.3 DPS - Crafted Enchanting",
+            "faction": "both",
+            "dps": "53.3 DPS",
+            "speed": "1.50",
+            "weaponType": "Wand",
+            "quality": "q2",
+            "iLvl": 60,
+            "reqLevel": 55,
+            "stats": "+8 Arcane Spell Power",
+            "icon": "inv_wand_14"
+          },
+          {
+            "name": "Torch of Austen",
+            "itemId": 13004,
+            "value": "56.8 DPS - Level 53 world drop",
+            "faction": "both",
+            "dps": "56.8 DPS",
+            "speed": "1.40",
+            "weaponType": "Wand",
+            "quality": "q3",
+            "iLvl": 58,
+            "reqLevel": 53,
+            "stats": "+8 Fire Spell Power",
+            "icon": "inv_wand_11"
+          },
+          {
+            "name": "Wand of Biting Cold",
+            "itemId": 19108,
+            "value": "64.0 DPS - Alterac Valley quest reward",
+            "faction": "both",
+            "dps": "64.0 DPS",
+            "speed": "1.50",
+            "weaponType": "Wand",
+            "quality": "q3",
+            "iLvl": 63,
+            "reqLevel": 51,
+            "stats": "+16 Frost Spell Power",
+            "icon": "inv_wand_01"
+          }
+        ]
+      }
+    ]
+  },
+  "warlock": {
+    "classId": "warlock",
+    "tracks": [
+      {
+        "id": "primary",
+        "name": "Level 1–60 Wand Upgrade Path"
+      }
+    ],
+    "levels": [
+      {
+        "levelBracket": "1–4",
+        "itemId": 247789,
+        "name": "Novice's Practice Wand",
+        "icon": "inv_weapon_shortblade_09",
+        "weaponType": "Wand",
+        "speed": "1.50",
+        "dps": "4.0 DPS",
+        "source": {
+          "kind": "quest",
+          "title": "Starting Zone Class Quest",
+          "detail": "Awarded from initial Level 1–4 Class Trainer quest in starting zones."
+        },
+        "faction": "both",
+        "quality": "q1",
+        "iLvl": 6,
+        "reqLevel": 1,
+        "stats": "Auto-Shoot Baseline",
+        "alts": [
+          {
+            "name": "Alchemist's Wand",
+            "itemId": 5235,
+            "value": "4.4 DPS - Early starting zone drop",
+            "faction": "both",
+            "dps": "4.4 DPS",
+            "speed": "1.80",
+            "weaponType": "Wand",
+            "quality": "q1",
+            "iLvl": 7,
+            "reqLevel": 1,
+            "stats": "",
+            "icon": "inv_staff_02"
+          },
+          {
+            "name": "Dowsing Rod",
+            "itemId": 263428,
+            "value": "4.2 DPS - Level 4 quest reward",
+            "faction": "alliance",
+            "dps": "4.2 DPS",
+            "speed": "1.20",
+            "weaponType": "Wand",
+            "quality": "q1",
+            "iLvl": 6,
+            "reqLevel": 4,
+            "stats": "",
+            "icon": "inv_wand_05"
+          }
+        ]
+      },
+      {
+        "levelBracket": "5–8",
+        "itemId": 11287,
+        "name": "Lesser Magic Wand",
+        "icon": "inv_staff_02",
+        "weaponType": "Wand",
+        "speed": "1.50",
+        "dps": "11.3 DPS",
+        "source": {
+          "kind": "craft",
+          "title": "Enchanting (Skill 10)",
+          "detail": "Craftable by Enchanters or purchased cheaply from the Auction House; massive DPS spike for early leveling."
+        },
+        "faction": "both",
+        "quality": "q2",
+        "iLvl": 15,
+        "reqLevel": 5,
+        "stats": "+1 Arcane Spell Power",
+        "alts": [
+          {
+            "name": "Fire Wand",
+            "itemId": 5069,
+            "value": "8.7 DPS - Level 7 drop",
+            "faction": "both",
+            "dps": "8.7 DPS",
+            "speed": "1.50",
+            "weaponType": "Wand",
+            "quality": "q2",
+            "iLvl": 12,
+            "reqLevel": 7,
+            "stats": "+1 Fire Spell Power",
+            "icon": "inv_staff_02"
+          },
+          {
+            "name": "Elven Wand",
+            "itemId": 5604,
+            "value": "9.4 DPS - Darkshore quest 'Bashal'Aran'",
+            "faction": "alliance",
+            "dps": "9.4 DPS",
+            "speed": "1.60",
+            "weaponType": "Wand",
+            "quality": "q2",
+            "iLvl": 13,
+            "reqLevel": 7,
+            "stats": "+1 Nature Spell Power",
+            "icon": "inv_staff_02"
+          },
+          {
+            "name": "Riptear's Spare Arm",
+            "itemId": 286743,
+            "value": "9.4 DPS - Barrens quest 'Rear Guard Patrol'",
+            "faction": "horde",
+            "dps": "9.4 DPS",
+            "speed": "1.70",
+            "weaponType": "Wand",
+            "quality": "q2",
+            "iLvl": 13,
+            "reqLevel": 6,
+            "stats": "+2 Shadow Spell Power",
+            "icon": "spell_shadow_fingerofdeath"
+          }
+        ]
+      },
+      {
+        "levelBracket": "9–12",
+        "itemId": 12296,
+        "name": "Spark of the People's Militia",
+        "icon": "inv_staff_02",
+        "weaponType": "Wand",
+        "speed": "1.80",
+        "dps": "12.8 DPS",
+        "source": {
+          "kind": "quest",
+          "title": "The People's Militia",
+          "detail": "Quest reward from Westfall (Sentinel Hill). Elite upgrade for Alliance casters."
+        },
+        "faction": "alliance",
+        "quality": "q2",
+        "iLvl": 17,
+        "reqLevel": 9,
+        "stats": "+2 Arcane Spell Power",
+        "alts": [
+          {
+            "name": "Cinder Wand",
+            "itemId": 5242,
+            "value": "11.8 DPS - Silverpine Forest quest 'Arugal's Folly'",
+            "faction": "horde",
+            "dps": "11.8 DPS",
+            "speed": "1.40",
+            "weaponType": "Wand",
+            "quality": "q2",
+            "iLvl": 16,
+            "reqLevel": 9,
+            "stats": "+2 Fire Spell Power",
+            "icon": "inv_staff_02"
+          },
+          {
+            "name": "Shadow Wand",
+            "itemId": 5071,
+            "value": "10.4 DPS - World drop",
+            "faction": "both",
+            "dps": "10.4 DPS",
+            "speed": "1.40",
+            "weaponType": "Wand",
+            "quality": "q2",
+            "iLvl": 14,
+            "reqLevel": 9,
+            "stats": "+1 Shadow Spell Power",
+            "icon": "inv_weapon_shortblade_09"
+          },
+          {
+            "name": "Blazing Wand",
+            "itemId": 5073,
+            "value": "12.7 DPS - Level 12 drop",
+            "faction": "both",
+            "dps": "12.7 DPS",
+            "speed": "1.50",
+            "weaponType": "Wand",
+            "quality": "q2",
+            "iLvl": 17,
+            "reqLevel": 12,
+            "stats": "+2 Fire Spell Power",
+            "icon": "inv_misc_bone_taurenskull_01"
+          }
+        ]
+      },
+      {
+        "levelBracket": "13–16",
+        "itemId": 11288,
+        "name": "Greater Magic Wand",
+        "icon": "inv_staff_07",
+        "weaponType": "Wand",
+        "speed": "1.80",
+        "dps": "17.5 DPS",
+        "source": {
+          "kind": "craft",
+          "title": "Enchanting (Skill 75)",
+          "detail": "Craftable by Enchanters (Simple Wood + Greater Magic Essence). Huge power leap across levels 13–18."
+        },
+        "faction": "both",
+        "quality": "q2",
+        "iLvl": 20,
+        "reqLevel": 13,
+        "stats": "+2 Arcane Spell Power",
+        "alts": [
+          {
+            "name": "Moongazer's Wand",
+            "itemId": 284193,
+            "value": "14.5 DPS - Darkshore / Silverpine quest",
+            "faction": "both",
+            "dps": "14.5 DPS",
+            "speed": "1.60",
+            "weaponType": "Wand",
+            "quality": "q2",
+            "iLvl": 18,
+            "reqLevel": 13,
+            "stats": "+3 Nature Spell Power",
+            "icon": "inv_staff_06"
+          },
+          {
+            "name": "Opaque Wand",
+            "itemId": 5075,
+            "value": "15.0 DPS - Level 15 drop",
+            "faction": "both",
+            "dps": "15.0 DPS",
+            "speed": "1.40",
+            "weaponType": "Wand",
+            "quality": "q2",
+            "iLvl": 20,
+            "reqLevel": 15,
+            "stats": "+2 Frost Spell Power",
+            "icon": "inv_misc_gem_ruby_01"
+          },
+          {
+            "name": "Whelpfire Wand",
+            "itemId": 281925,
+            "value": "16.1 DPS - Redridge Mountains quest",
+            "faction": "alliance",
+            "dps": "16.1 DPS",
+            "speed": "1.70",
+            "weaponType": "Wand",
+            "quality": "q2",
+            "iLvl": 21,
+            "reqLevel": 14,
+            "stats": "+3 Fire Spell Power",
+            "icon": "inv_wand_11"
+          }
+        ]
+      },
+      {
+        "levelBracket": "17–20",
+        "itemId": 5198,
+        "name": "Cookie's Stirring Rod",
+        "icon": "inv_staff_02",
+        "weaponType": "Wand",
+        "speed": "1.30",
+        "dps": "22.3 DPS",
+        "source": {
+          "kind": "dungeon",
+          "title": "The Deadmines",
+          "detail": "Dropped by Cookie (The Ship's Cook) in Deadmines. Super fast 1.30s attack speed."
+        },
+        "faction": "both",
+        "quality": "q2",
+        "iLvl": 22,
+        "reqLevel": 17,
+        "stats": "+2 Nature Spell Power",
+        "alts": [
+          {
+            "name": "Charred Razormane Wand",
+            "itemId": 284195,
+            "value": "15.7 DPS - Barrens quest",
+            "faction": "horde",
+            "dps": "15.7 DPS",
+            "speed": "1.50",
+            "weaponType": "Wand",
+            "quality": "q2",
+            "iLvl": 20,
+            "reqLevel": 18,
+            "stats": "+2 Fire Spell Power",
+            "icon": "inv_misc_questionmark"
+          },
+          {
+            "name": "Burning Wand",
+            "itemId": 5079,
+            "value": "17.5 DPS - World drop",
+            "faction": "both",
+            "dps": "17.5 DPS",
+            "speed": "1.40",
+            "weaponType": "Wand",
+            "quality": "q2",
+            "iLvl": 23,
+            "reqLevel": 20,
+            "stats": "+3 Fire Spell Power",
+            "icon": "inv_misc_eye_01"
+          }
+        ]
+      },
+      {
+        "levelBracket": "21–24",
+        "itemId": 7001,
+        "name": "Gravestone Scepter",
+        "icon": "inv_wand_04",
+        "weaponType": "Wand",
+        "speed": "1.50",
+        "dps": "29.0 DPS",
+        "source": {
+          "kind": "quest",
+          "title": "Blackfathom Villainy",
+          "detail": "Reward for completing Blackfathom Deeps questline (Darnassus for Alliance / Thunder Bluff for Horde). Arguably the strongest leveling wand in the game."
+        },
+        "faction": "both",
+        "quality": "q3",
+        "iLvl": 29,
+        "reqLevel": 18,
+        "stats": "+5 Shadow Spell Power",
+        "alts": [
+          {
+            "name": "Excavation Rod",
+            "itemId": 285350,
+            "value": "24.2 DPS - Wetlands / Hillsbrad quest",
+            "faction": "both",
+            "dps": "24.2 DPS",
+            "speed": "1.90",
+            "weaponType": "Wand",
+            "quality": "q2",
+            "iLvl": 27,
+            "reqLevel": 22,
+            "stats": "+3 Arcane Spell Power",
+            "icon": "inv_staff_11"
+          },
+          {
+            "name": "Consecrated Wand",
+            "itemId": 279844,
+            "value": "24.2 DPS - Level 23 drop",
+            "faction": "both",
+            "dps": "24.2 DPS",
+            "speed": "1.20",
+            "weaponType": "Wand",
+            "quality": "q2",
+            "iLvl": 28,
+            "reqLevel": 23,
+            "stats": "+4 Holy Spell Power",
+            "icon": "inv_staff_28"
+          },
+          {
+            "name": "Firestarter",
+            "itemId": 5081,
+            "value": "23.3 DPS - Level 24 drop",
+            "faction": "both",
+            "dps": "23.3 DPS",
+            "speed": "1.50",
+            "weaponType": "Wand",
+            "quality": "q2",
+            "iLvl": 27,
+            "reqLevel": 24,
+            "stats": "+4 Fire Spell Power",
+            "icon": "inv_misc_bag_10"
+          }
+        ]
+      },
+      {
+        "levelBracket": "25–28",
+        "itemId": 273043,
+        "name": "Wand of Mana Concentration",
+        "icon": "inv_wand_06",
+        "weaponType": "Wand",
+        "speed": "1.40",
+        "dps": "28.5 DPS",
+        "source": {
+          "kind": "dungeon",
+          "title": "Razorfen Kraul",
+          "detail": "Dropped in Razorfen Kraul. High burst speed and Arcane synergy."
+        },
+        "faction": "both",
+        "quality": "q3",
+        "iLvl": 32,
+        "reqLevel": 27,
+        "stats": "+4 Intellect, +3 Arcane Spell Power",
+        "alts": [
+          {
+            "name": "Fizzle's Zippy Lighter",
+            "itemId": 279846,
+            "value": "31.0 DPS - Gnomeregan dungeon quest",
+            "faction": "both",
+            "dps": "31.0 DPS",
+            "speed": "1.50",
+            "weaponType": "Wand",
+            "quality": "q2",
+            "iLvl": 33,
+            "reqLevel": 28,
+            "stats": "+5 Fire Spell Power",
+            "icon": "inv_belt_04"
+          },
+          {
+            "name": "Wand of Eventide",
+            "itemId": 5084,
+            "value": "25.8 DPS - Level 27 drop",
+            "faction": "both",
+            "dps": "25.8 DPS",
+            "speed": "1.30",
+            "weaponType": "Wand",
+            "quality": "q2",
+            "iLvl": 31,
+            "reqLevel": 27,
+            "stats": "+4 Shadow Spell Power",
+            "icon": "inv_misc_head_human_01"
+          }
+        ]
+      },
+      {
+        "levelBracket": "29–34",
+        "itemId": 7514,
+        "name": "Icefury Wand",
+        "icon": "inv_wand_05",
+        "weaponType": "Wand",
+        "speed": "1.90",
+        "dps": "33.2 DPS",
+        "source": {
+          "kind": "quest",
+          "title": "Mage / Caster Class Mastery",
+          "detail": "Class quest in Dustwallow Marsh / Thousand Needles with devastating frost impact."
+        },
+        "faction": "both",
+        "quality": "q3",
+        "iLvl": 35,
+        "reqLevel": 30,
+        "stats": "+5 Frost Spell Power, +3 Intellect",
+        "alts": [
+          {
+            "name": "Blackbone Wand",
+            "itemId": 286745,
+            "value": "35.3 DPS - Sold by wand vendors in Ironforge, Undercity, Ratchet",
+            "faction": "both",
+            "dps": "35.3 DPS",
+            "speed": "1.60",
+            "weaponType": "Wand",
+            "quality": "q2",
+            "iLvl": 38,
+            "reqLevel": 31,
+            "stats": "+5 Shadow Spell Power",
+            "icon": "inv_jewelry_ring_12"
+          },
+          {
+            "name": "Unstable Power Core",
+            "itemId": 279847,
+            "value": "30.0 DPS - Gnomeregan drop",
+            "faction": "both",
+            "dps": "30.0 DPS",
+            "speed": "1.50",
+            "weaponType": "Wand",
+            "quality": "q2",
+            "iLvl": 34,
+            "reqLevel": 29,
+            "stats": "+4 Fire Spell Power",
+            "icon": "inv_staff_06"
+          },
+          {
+            "name": "Master Hunter's Wand",
+            "itemId": 270084,
+            "value": "31.5 DPS - Stranglethorn Vale quest",
+            "faction": "both",
+            "dps": "31.5 DPS",
+            "speed": "1.70",
+            "weaponType": "Wand",
+            "quality": "q2",
+            "iLvl": 35,
+            "reqLevel": 30,
+            "stats": "+5 Nature Spell Power",
+            "icon": "inv_wand_03"
+          }
+        ]
+      },
+      {
+        "levelBracket": "35–40",
+        "itemId": 6806,
+        "name": "Dancing Flame",
+        "icon": "inv_wand_04",
+        "weaponType": "Wand",
+        "speed": "1.60",
+        "dps": "38.5 DPS",
+        "source": {
+          "kind": "dungeon",
+          "title": "Scarlet Monastery (Armory/Cathedral)",
+          "detail": "Dungeon boss drop in Scarlet Monastery."
+        },
+        "faction": "both",
+        "quality": "q3",
+        "iLvl": 41,
+        "reqLevel": 36,
+        "stats": "+7 Fire Spell Power",
+        "alts": [
+          {
+            "name": "Twisted Nether Wand",
+            "itemId": 249144,
+            "value": "34.0 DPS - Desolace / Alterac quest",
+            "faction": "both",
+            "dps": "34.0 DPS",
+            "speed": "1.50",
+            "weaponType": "Wand",
+            "quality": "q2",
+            "iLvl": 38,
+            "reqLevel": 33,
+            "stats": "+5 Shadow Spell Power",
+            "icon": "inv_wand_03"
+          },
+          {
+            "name": "Gnomish Zapper",
+            "itemId": 4547,
+            "value": "32.7 DPS - Sunken Treasure quest in Arathi",
+            "faction": "both",
+            "dps": "32.7 DPS",
+            "speed": "1.30",
+            "weaponType": "Wand",
+            "quality": "q2",
+            "iLvl": 40,
+            "reqLevel": 35,
+            "stats": "+4 Stamina, +3 Spell Power",
+            "icon": "inv_wand_02"
+          },
+          {
+            "name": "Umbral Wand",
+            "itemId": 5090,
+            "value": "35.7 DPS - Level 40 drop",
+            "faction": "both",
+            "dps": "35.7 DPS",
+            "speed": "1.50",
+            "weaponType": "Wand",
+            "quality": "q2",
+            "iLvl": 45,
+            "reqLevel": 40,
+            "stats": "+5 Shadow Spell Power",
+            "icon": "inv_shirt_12"
+          }
+        ]
+      },
+      {
+        "levelBracket": "41–46",
+        "itemId": 249234,
+        "name": "Dreambough Wand",
+        "icon": "inv_wand_04",
+        "weaponType": "Wand",
+        "speed": "1.70",
+        "dps": "43.5 DPS",
+        "source": {
+          "kind": "quest",
+          "title": "Feralas / Hinterlands Questline",
+          "detail": "Long questline reward in Feralas / Hinterlands with immense nature burst."
+        },
+        "faction": "both",
+        "quality": "q3",
+        "iLvl": 47,
+        "reqLevel": 42,
+        "stats": "+8 Nature Spell Power, +4 Spirit",
+        "alts": [
+          {
+            "name": "Cairnstone Sliver",
+            "itemId": 286747,
+            "value": "41.4 DPS - Uldaman dungeon drop",
+            "faction": "both",
+            "dps": "41.4 DPS",
+            "speed": "1.80",
+            "weaponType": "Wand",
+            "quality": "q2",
+            "iLvl": 46,
+            "reqLevel": 42,
+            "stats": "+6 Nature Spell Power",
+            "icon": "inv_misc_questionmark"
+          },
+          {
+            "name": "Charged Lightning Rod",
+            "itemId": 279849,
+            "value": "37.3 DPS - Tanaris / Zul'Farrak quest",
+            "faction": "both",
+            "dps": "37.3 DPS",
+            "speed": "1.50",
+            "weaponType": "Wand",
+            "quality": "q2",
+            "iLvl": 48,
+            "reqLevel": 43,
+            "stats": "+6 Nature Spell Power",
+            "icon": "inv_gauntlets_15"
+          },
+          {
+            "name": "Nature's Breath",
+            "itemId": 19118,
+            "value": "41.1 DPS - Dark Vessels quest",
+            "faction": "both",
+            "dps": "41.1 DPS",
+            "speed": "1.40",
+            "weaponType": "Wand",
+            "quality": "q2",
+            "iLvl": 50,
+            "reqLevel": 46,
+            "stats": "+7 Nature Spell Power",
+            "icon": "inv_wand_12"
+          }
+        ]
+      },
+      {
+        "levelBracket": "47–52",
+        "itemId": 11748,
+        "name": "Pyric Caduceus",
+        "icon": "inv_staff_13",
+        "weaponType": "Wand",
+        "speed": "1.80",
+        "dps": "52.5 DPS",
+        "source": {
+          "kind": "dungeon",
+          "title": "Blackrock Depths",
+          "detail": "Dropped by Pyromancer Loregrain in Blackrock Depths."
+        },
+        "faction": "both",
+        "quality": "q3",
+        "iLvl": 53,
+        "reqLevel": 48,
+        "stats": "+10 Fire Spell Power",
+        "alts": [
+          {
+            "name": "Lesser Eternal Wand",
+            "itemId": 249232,
+            "value": "45.8 DPS - Enchanting skill 260 craft",
+            "faction": "both",
+            "dps": "45.8 DPS",
+            "speed": "2.00",
+            "weaponType": "Wand",
+            "quality": "q2",
+            "iLvl": 54,
+            "reqLevel": 49,
+            "stats": "+7 Arcane Spell Power",
+            "icon": "inv_wand_05"
+          },
+          {
+            "name": "Wizard's Hand",
+            "itemId": 15280,
+            "value": "44.4 DPS - Level 48 drop",
+            "faction": "both",
+            "dps": "44.4 DPS",
+            "speed": "1.80",
+            "weaponType": "Wand",
+            "quality": "q2",
+            "iLvl": 53,
+            "reqLevel": 48,
+            "stats": "+7 Arcane Spell Power",
+            "icon": "inv_wand_06"
+          },
+          {
+            "name": "Glowstar Rod",
+            "itemId": 15281,
+            "value": "50.0 DPS - Level 52 drop",
+            "faction": "both",
+            "dps": "50.0 DPS",
+            "speed": "1.50",
+            "weaponType": "Wand",
+            "quality": "q2",
+            "iLvl": 57,
+            "reqLevel": 52,
+            "stats": "+8 Holy Spell Power",
+            "icon": "inv_staff_10"
+          }
+        ]
+      },
+      {
+        "levelBracket": "53–60",
+        "itemId": 16997,
+        "name": "Stormrager",
+        "icon": "inv_wand_05",
+        "weaponType": "Wand",
+        "speed": "1.30",
+        "dps": "62.7 DPS",
+        "source": {
+          "kind": "quest",
+          "title": "Eastern Plaguelands / Scholomance Quest",
+          "detail": "Top-tier quest reward in Eastern Plaguelands. High DPS with ultra fast 1.30 attack speed."
+        },
+        "faction": "both",
+        "quality": "q3",
+        "iLvl": 62,
+        "reqLevel": 56,
+        "stats": "+5 Intellect, +9 Spell Power",
+        "alts": [
+          {
+            "name": "Brilliant Wand",
+            "itemId": 249385,
+            "value": "59.6 DPS - Crafted Enchanting (Skill 300)",
+            "faction": "both",
+            "dps": "59.6 DPS",
+            "speed": "1.20",
+            "weaponType": "Wand",
+            "quality": "q3",
+            "iLvl": 60,
+            "reqLevel": 55,
+            "stats": "+6 Intellect, +8 Spell Power",
+            "icon": "inv_wand_07"
+          },
+          {
+            "name": "Greater Eternal Wand",
+            "itemId": 249237,
+            "value": "53.3 DPS - Crafted Enchanting",
+            "faction": "both",
+            "dps": "53.3 DPS",
+            "speed": "1.50",
+            "weaponType": "Wand",
+            "quality": "q2",
+            "iLvl": 60,
+            "reqLevel": 55,
+            "stats": "+8 Arcane Spell Power",
+            "icon": "inv_wand_14"
+          },
+          {
+            "name": "Torch of Austen",
+            "itemId": 13004,
+            "value": "56.8 DPS - Level 53 world drop",
+            "faction": "both",
+            "dps": "56.8 DPS",
+            "speed": "1.40",
+            "weaponType": "Wand",
+            "quality": "q3",
+            "iLvl": 58,
+            "reqLevel": 53,
+            "stats": "+8 Fire Spell Power",
+            "icon": "inv_wand_11"
+          },
+          {
+            "name": "Wand of Biting Cold",
+            "itemId": 19108,
+            "value": "64.0 DPS - Alterac Valley quest reward",
+            "faction": "both",
+            "dps": "64.0 DPS",
+            "speed": "1.50",
+            "weaponType": "Wand",
+            "quality": "q3",
+            "iLvl": 63,
+            "reqLevel": 51,
+            "stats": "+16 Frost Spell Power",
+            "icon": "inv_wand_01"
+          }
+        ]
+      }
+    ]
+  }
+}

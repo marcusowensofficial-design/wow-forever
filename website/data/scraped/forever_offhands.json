@@ -1,0 +1,3584 @@
+{
+  "mage": {
+    "classId": "mage",
+    "tracks": [
+      {
+        "id": "primary",
+        "name": "Level 1–60 Off-Hand Progression"
+      }
+    ],
+    "levels": [
+      {
+        "levelBracket": "1–14",
+        "itemId": 1172,
+        "name": "Grayson's Torch",
+        "icon": "inv_torch_lit",
+        "weaponType": "Held in Off-hand",
+        "stats": "+4 Spirit",
+        "source": {
+          "kind": "quest",
+          "title": "The Westfall Lighthouse",
+          "detail": "Quest reward from Captain Grayson at the Westfall Lighthouse."
+        },
+        "faction": "alliance",
+        "quality": "q2",
+        "iLvl": 21,
+        "reqLevel": 10,
+        "alts": [
+          {
+            "name": "Tear of Grief",
+            "itemId": 284196,
+            "value": "+3 Intellect - Early Darkshore / Westfall quest",
+            "faction": "alliance",
+            "weaponType": "Held in Off-hand",
+            "quality": "q2",
+            "iLvl": 16,
+            "reqLevel": 11,
+            "stats": "+3 Intellect",
+            "icon": "inv_misc_questionmark"
+          },
+          {
+            "name": "Nightglow Concoction",
+            "itemId": 284197,
+            "value": "+4 Spirit - Silverpine / Barrens quest",
+            "faction": "horde",
+            "weaponType": "Held in Off-hand",
+            "quality": "q2",
+            "iLvl": 18,
+            "reqLevel": 9,
+            "stats": "+4 Spirit",
+            "icon": "inv_misc_questionmark"
+          },
+          {
+            "name": "Arcane Orb",
+            "itemId": 4838,
+            "value": "+2 Intellect, +1 Spirit - Early vendor/world drop",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q2",
+            "iLvl": 15,
+            "reqLevel": 10,
+            "stats": "+2 Intellect, +1 Spirit",
+            "icon": "inv_ore_arcanite_02"
+          }
+        ]
+      },
+      {
+        "levelBracket": "15–18",
+        "itemId": 1131,
+        "name": "Totem of Infliction",
+        "icon": "inv_misc_bone_elfskull_01",
+        "weaponType": "Held in Off-hand",
+        "stats": "+4 Intellect, Shadow Strike Proc (75–125 damage)",
+        "source": {
+          "kind": "quest",
+          "title": "The Totem of Infliction",
+          "detail": "Quest in Loch Modan (Valley of Kings). Offers defensive retaliation shadow damage."
+        },
+        "faction": "alliance",
+        "quality": "q2",
+        "iLvl": 25,
+        "reqLevel": 18,
+        "alts": [
+          {
+            "name": "Antipodean Rod",
+            "itemId": 285346,
+            "value": "+5 Intellect, +4 Spirit - Ashenvale quest",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 22,
+            "reqLevel": 17,
+            "stats": "+5 Intellect, +4 Spirit",
+            "icon": "inv_sword_20"
+          },
+          {
+            "name": "Everglow Lantern",
+            "itemId": 285347,
+            "value": "+4 Stamina, +3 Intellect - Silverpine / Barrens quest",
+            "faction": "horde",
+            "weaponType": "Held in Off-hand",
+            "quality": "q2",
+            "iLvl": 25,
+            "reqLevel": 19,
+            "stats": "+4 Stamina, +3 Intellect",
+            "icon": "inv_weapon_bow_05"
+          }
+        ]
+      },
+      {
+        "levelBracket": "19–22",
+        "itemId": 2943,
+        "name": "Eye of Paleth",
+        "icon": "inv_misc_orb_03",
+        "weaponType": "Held in Off-hand",
+        "stats": "+6 Spirit, +4 Intellect",
+        "source": {
+          "kind": "quest",
+          "title": "Cleansing the Eye",
+          "detail": "Long questline reward in the Wetlands."
+        },
+        "faction": "alliance",
+        "quality": "q2",
+        "iLvl": 31,
+        "reqLevel": 22,
+        "alts": [
+          {
+            "name": "Flamescarred Spellbook",
+            "itemId": 281306,
+            "value": "+5 Intellect, +5 Fire Spell Power - Darkshore quest",
+            "faction": "alliance",
+            "weaponType": "Held in Off-hand",
+            "quality": "q2",
+            "iLvl": 31,
+            "reqLevel": 23,
+            "stats": "+5 Intellect, +5 Fire Spell Power",
+            "icon": "inv_misc_book_01"
+          },
+          {
+            "name": "Orb of Power",
+            "itemId": 4838,
+            "value": "+5 Intellect, +5 Spirit - World drop",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q2",
+            "iLvl": 26,
+            "reqLevel": 21,
+            "stats": "+5 Intellect, +5 Spirit",
+            "icon": "inv_ore_arcanite_02"
+          },
+          {
+            "name": "Alliance Outrunner Healing Rod",
+            "itemId": 285348,
+            "value": "+9 Healing, +4 Spirit - Ashenvale quest",
+            "faction": "alliance",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 26,
+            "reqLevel": 21,
+            "stats": "+9 Healing, +4 Spirit",
+            "icon": "inv_wand_04"
+          }
+        ]
+      },
+      {
+        "levelBracket": "23–26",
+        "itemId": 249394,
+        "name": "Orb of Mystic Insight",
+        "icon": "inv_misc_orb_blue",
+        "weaponType": "Held in Off-hand",
+        "stats": "+7 Intellect, +6 Spirit",
+        "source": {
+          "kind": "craft",
+          "title": "Enchanting / Alchemy Discovery",
+          "detail": "Crafted caster focus providing substantial mana pool and regeneration."
+        },
+        "faction": "both",
+        "quality": "q3",
+        "iLvl": 30,
+        "reqLevel": 25,
+        "alts": [
+          {
+            "name": "Witch's Finger",
+            "itemId": 16887,
+            "value": "+7 Shadow Spell Power, +4 Stamina - Hillsbrad quest",
+            "faction": "horde",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 32,
+            "reqLevel": 25,
+            "stats": "+7 Shadow Spell Power, +4 Stamina",
+            "icon": "inv_wand_12"
+          },
+          {
+            "name": "Fireproof Orb",
+            "itemId": 4836,
+            "value": "+6 Stamina, +5 Fire Resistance - World drop",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q2",
+            "iLvl": 28,
+            "reqLevel": 23,
+            "stats": "+6 Stamina, +5 Fire Resistance",
+            "icon": "inv_jewelry_talisman_01"
+          },
+          {
+            "name": "Orb of Souls",
+            "itemId": 249395,
+            "value": "+7 Stamina, +6 Spirit - Dungeon craft",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 30,
+            "reqLevel": 25,
+            "stats": "+7 Stamina, +6 Spirit",
+            "icon": "inv_misc_orb_04"
+          }
+        ]
+      },
+      {
+        "levelBracket": "27–30",
+        "itemId": 273052,
+        "name": "Ponderous Orb",
+        "icon": "inv_misc_orb_04",
+        "weaponType": "Held in Off-hand",
+        "stats": "+8 Intellect, +6 Spirit, +11 Spell Power",
+        "source": {
+          "kind": "dungeon",
+          "title": "Razorfen Kraul / Shadowfang Keep",
+          "detail": "Dropped by Shade of the Archmage. One of the greatest caster offhands in early Phase 2."
+        },
+        "faction": "both",
+        "quality": "q3",
+        "iLvl": 35,
+        "reqLevel": 30,
+        "alts": [
+          {
+            "name": "Skull of Impending Doom",
+            "itemId": 4984,
+            "value": "+7 Intellect, +5 Spirit, Use: Sprint speed boost - Badlands quest 'Forbidden Knowledge'",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q2",
+            "iLvl": 41,
+            "reqLevel": 30,
+            "stats": "+7 Intellect, +5 Spirit, Sprint Proc",
+            "icon": "inv_misc_bone_elfskull_01"
+          },
+          {
+            "name": "Rod of Molten Fire",
+            "itemId": 2565,
+            "value": "+10 Fire Spell Power - Rare world drop",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 35,
+            "reqLevel": 30,
+            "stats": "+10 Fire Spell Power",
+            "icon": "inv_spear_01"
+          },
+          {
+            "name": "Salve and Salvation",
+            "itemId": 276898,
+            "value": "+14 Healing, +6 Spirit - Duskwood / Wetlands quest",
+            "faction": "alliance",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 38,
+            "reqLevel": 30,
+            "stats": "+14 Healing, +6 Spirit",
+            "icon": "inv_misc_book_01"
+          },
+          {
+            "name": "Omega Orb",
+            "itemId": 7749,
+            "value": "+8 Intellect, +6 Spirit - Horde quest 'Compendium of the Fallen'",
+            "faction": "horde",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 40,
+            "reqLevel": 28,
+            "stats": "+8 Intellect, +6 Spirit",
+            "icon": "inv_misc_orb_03"
+          }
+        ]
+      },
+      {
+        "levelBracket": "31–35",
+        "itemId": 7685,
+        "name": "Orb of the Forgotten Seer",
+        "icon": "inv_misc_orb_02",
+        "weaponType": "Held in Off-hand",
+        "stats": "+14 Spell Power",
+        "source": {
+          "kind": "dungeon",
+          "title": "Scarlet Monastery (Library)",
+          "detail": "Dropped by Bloodmage Thalnos in Scarlet Monastery Library."
+        },
+        "faction": "both",
+        "quality": "q3",
+        "iLvl": 37,
+        "reqLevel": 32,
+        "alts": [
+          {
+            "name": "Celestial Orb",
+            "itemId": 7515,
+            "value": "+13 Spell Power, +3 Intellect - Mage quest 'Celestial Power'",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 40,
+            "reqLevel": 35,
+            "stats": "+13 Spell Power, +3 Intellect",
+            "icon": "inv_misc_orb_03"
+          },
+          {
+            "name": "Orb of Noh'Orahil",
+            "itemId": 15107,
+            "value": "+5 Intellect, +14 Fire Spell Power - Warlock quest",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 40,
+            "reqLevel": 35,
+            "stats": "+5 Intellect, +14 Fire Spell Power",
+            "icon": "inv_misc_orb_03"
+          },
+          {
+            "name": "Beacon of Hope",
+            "itemId": 9393,
+            "value": "+18 Healing, +5 Spirit - World drop",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 38,
+            "reqLevel": 33,
+            "stats": "+18 Healing, +5 Spirit",
+            "icon": "inv_misc_lantern_01"
+          },
+          {
+            "name": "Thrice-Damned Effigy",
+            "itemId": 271805,
+            "value": "+12 Spell Power, +6 Stamina - Desolace quest",
+            "faction": "horde",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 42,
+            "reqLevel": 35,
+            "stats": "+12 Spell Power, +6 Stamina",
+            "icon": "inv_misc_orb_01"
+          }
+        ]
+      },
+      {
+        "levelBracket": "36–40",
+        "itemId": 10770,
+        "name": "Mordresh's Lifeless Skull",
+        "icon": "inv_misc_bone_elfskull_01",
+        "weaponType": "Held in Off-hand",
+        "stats": "+7 Intellect, +11 Shadow Spell Power",
+        "source": {
+          "kind": "dungeon",
+          "title": "Razorfen Downs",
+          "detail": "Dropped by Mordresh Fire Eye in Razorfen Downs."
+        },
+        "faction": "both",
+        "quality": "q3",
+        "iLvl": 41,
+        "reqLevel": 36,
+        "alts": [
+          {
+            "name": "Researcher's Night Light",
+            "itemId": 277260,
+            "value": "+15 Spell Power, +5 Intellect - Greater Friend of the Library quest",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 45,
+            "reqLevel": 40,
+            "stats": "+15 Spell Power, +5 Intellect",
+            "icon": "inv_torch_lit"
+          },
+          {
+            "name": "Umbral Crystal",
+            "itemId": 13029,
+            "value": "+11 Shadow Spell Power, +6 Intellect - Rare world drop",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 43,
+            "reqLevel": 38,
+            "stats": "+11 Shadow Spell Power, +6 Intellect",
+            "icon": "inv_misc_orb_04"
+          },
+          {
+            "name": "Aurora Sphere",
+            "itemId": 7610,
+            "value": "+8 Intellect, +8 Spirit - Level 36 drop",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q2",
+            "iLvl": 41,
+            "reqLevel": 36,
+            "stats": "+8 Intellect, +8 Spirit",
+            "icon": "inv_misc_gem_pearl_02"
+          }
+        ]
+      },
+      {
+        "levelBracket": "41–46",
+        "itemId": 249455,
+        "name": "Truesilver Conduit",
+        "icon": "inv_rod_enchantedadamantite",
+        "weaponType": "Held in Off-hand",
+        "stats": "+9 Intellect, +16 Healing, +6 Spell Power",
+        "source": {
+          "kind": "craft",
+          "title": "Blacksmithing / Engineering",
+          "detail": "Crafted magical conduit with exceptional healing and spell stats."
+        },
+        "faction": "both",
+        "quality": "q3",
+        "iLvl": 50,
+        "reqLevel": 45,
+        "alts": [
+          {
+            "name": "Lord Sakrasis' Scepter",
+            "itemId": 5028,
+            "value": "+9 Intellect, +9 Spirit - Desolace quest",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q2",
+            "iLvl": 47,
+            "reqLevel": 42,
+            "stats": "+9 Intellect, +9 Spirit",
+            "icon": "inv_wand_10"
+          },
+          {
+            "name": "Skullspell Orb",
+            "itemId": 10708,
+            "value": "+14 Spell Power, +6 Intellect - Alliance quest 'Return to Tymor'",
+            "faction": "alliance",
+            "weaponType": "Held in Off-hand",
+            "quality": "q2",
+            "iLvl": 52,
+            "reqLevel": 45,
+            "stats": "+14 Spell Power, +6 Intellect",
+            "icon": "inv_misc_bone_elfskull_01"
+          },
+          {
+            "name": "Pyrestone Orb",
+            "itemId": 10709,
+            "value": "+16 Fire Spell Power - Horde quest 'Betrayed'",
+            "faction": "horde",
+            "weaponType": "Held in Off-hand",
+            "quality": "q2",
+            "iLvl": 55,
+            "reqLevel": 44,
+            "stats": "+16 Fire Spell Power",
+            "icon": "inv_misc_orb_05"
+          }
+        ]
+      },
+      {
+        "levelBracket": "47–52",
+        "itemId": 11904,
+        "name": "Spirit of Aquementas",
+        "icon": "inv_ore_arcanite_02",
+        "weaponType": "Held in Off-hand",
+        "stats": "+21 Spell Power",
+        "source": {
+          "kind": "quest",
+          "title": "It's Dangerous to Go Alone",
+          "detail": "Questline reward from Linken in Un'Goro Crater. Unmatched spell power throughout the 40s and 50s."
+        },
+        "faction": "both",
+        "quality": "q3",
+        "iLvl": 56,
+        "reqLevel": 47,
+        "alts": [
+          {
+            "name": "Insurgent's Manifesto",
+            "itemId": 271933,
+            "value": "+16 Spell Power, +8 Stamina - Western Plaguelands quest",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 53,
+            "reqLevel": 48,
+            "stats": "+16 Spell Power, +8 Stamina",
+            "icon": "inv_misc_book_06"
+          },
+          {
+            "name": "Tome of the Darkspear Prophecy",
+            "itemId": 272088,
+            "value": "+16 Spell Power, +8 Spirit - Western Plaguelands quest",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 53,
+            "reqLevel": 48,
+            "stats": "+16 Spell Power, +8 Spirit",
+            "icon": "inv_misc_book_06"
+          },
+          {
+            "name": "Magebane Scion",
+            "itemId": 15857,
+            "value": "+18 Spell Power - Blasted Lands quest 'Hidden Treasures'",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 60,
+            "reqLevel": 50,
+            "stats": "+18 Spell Power",
+            "icon": "inv_staff_11"
+          }
+        ]
+      },
+      {
+        "levelBracket": "53–60",
+        "itemId": 19308,
+        "name": "Tome of Arcane Domination",
+        "icon": "inv_misc_book_01",
+        "weaponType": "Held in Off-hand",
+        "stats": "+31 Arcane Spell Power, +3 MP5",
+        "source": {
+          "kind": "dungeon",
+          "title": "Scholomance / Stratholme Bosses",
+          "detail": "Top-tier end-game caster offhand for mages and spellcasters."
+        },
+        "faction": "both",
+        "quality": "q4",
+        "iLvl": 60,
+        "reqLevel": 55,
+        "alts": [
+          {
+            "name": "Tome of Shadow Force",
+            "itemId": 19309,
+            "value": "+34 Shadow Spell Power - Stratholme drop",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q4",
+            "iLvl": 60,
+            "reqLevel": 55,
+            "stats": "+34 Shadow Spell Power",
+            "icon": "inv_misc_book_06"
+          },
+          {
+            "name": "Tome of the Ice Lord",
+            "itemId": 19310,
+            "value": "+34 Frost Spell Power - Alterac Valley / Scholomance",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q4",
+            "iLvl": 60,
+            "reqLevel": 55,
+            "stats": "+34 Frost Spell Power",
+            "icon": "inv_misc_book_11"
+          },
+          {
+            "name": "Tome of Fiery Arcana",
+            "itemId": 19311,
+            "value": "+34 Fire Spell Power - Stratholme drop",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q4",
+            "iLvl": 60,
+            "reqLevel": 55,
+            "stats": "+34 Fire Spell Power",
+            "icon": "inv_misc_book_09"
+          },
+          {
+            "name": "Lei of the Lifegiver",
+            "itemId": 19312,
+            "value": "+53 Healing, +4 MP5 - Alterac Valley Exalted reward",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q4",
+            "iLvl": 60,
+            "reqLevel": 55,
+            "stats": "+53 Healing, +4 MP5",
+            "icon": "inv_misc_flower_04"
+          },
+          {
+            "name": "Barkskin Baubles",
+            "itemId": 274417,
+            "value": "+22 Healing, +7 Intellect - Felwood quest",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 58,
+            "reqLevel": 53,
+            "stats": "+22 Healing, +7 Intellect",
+            "icon": "inv_misc_bag_10_black"
+          }
+        ]
+      }
+    ]
+  },
+  "priest": {
+    "classId": "priest",
+    "tracks": [
+      {
+        "id": "primary",
+        "name": "Level 1–60 Off-Hand Progression"
+      }
+    ],
+    "levels": [
+      {
+        "levelBracket": "1–14",
+        "itemId": 1172,
+        "name": "Grayson's Torch",
+        "icon": "inv_torch_lit",
+        "weaponType": "Held in Off-hand",
+        "stats": "+4 Spirit",
+        "source": {
+          "kind": "quest",
+          "title": "The Westfall Lighthouse",
+          "detail": "Quest reward from Captain Grayson at the Westfall Lighthouse."
+        },
+        "faction": "alliance",
+        "quality": "q2",
+        "iLvl": 21,
+        "reqLevel": 10,
+        "alts": [
+          {
+            "name": "Tear of Grief",
+            "itemId": 284196,
+            "value": "+3 Intellect - Early Darkshore / Westfall quest",
+            "faction": "alliance",
+            "weaponType": "Held in Off-hand",
+            "quality": "q2",
+            "iLvl": 16,
+            "reqLevel": 11,
+            "stats": "+3 Intellect",
+            "icon": "inv_misc_questionmark"
+          },
+          {
+            "name": "Nightglow Concoction",
+            "itemId": 284197,
+            "value": "+4 Spirit - Silverpine / Barrens quest",
+            "faction": "horde",
+            "weaponType": "Held in Off-hand",
+            "quality": "q2",
+            "iLvl": 18,
+            "reqLevel": 9,
+            "stats": "+4 Spirit",
+            "icon": "inv_misc_questionmark"
+          },
+          {
+            "name": "Arcane Orb",
+            "itemId": 4838,
+            "value": "+2 Intellect, +1 Spirit - Early vendor/world drop",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q2",
+            "iLvl": 15,
+            "reqLevel": 10,
+            "stats": "+2 Intellect, +1 Spirit",
+            "icon": "inv_ore_arcanite_02"
+          }
+        ]
+      },
+      {
+        "levelBracket": "15–18",
+        "itemId": 1131,
+        "name": "Totem of Infliction",
+        "icon": "inv_misc_bone_elfskull_01",
+        "weaponType": "Held in Off-hand",
+        "stats": "+4 Intellect, Shadow Strike Proc (75–125 damage)",
+        "source": {
+          "kind": "quest",
+          "title": "The Totem of Infliction",
+          "detail": "Quest in Loch Modan (Valley of Kings). Offers defensive retaliation shadow damage."
+        },
+        "faction": "alliance",
+        "quality": "q2",
+        "iLvl": 25,
+        "reqLevel": 18,
+        "alts": [
+          {
+            "name": "Antipodean Rod",
+            "itemId": 285346,
+            "value": "+5 Intellect, +4 Spirit - Ashenvale quest",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 22,
+            "reqLevel": 17,
+            "stats": "+5 Intellect, +4 Spirit",
+            "icon": "inv_sword_20"
+          },
+          {
+            "name": "Everglow Lantern",
+            "itemId": 285347,
+            "value": "+4 Stamina, +3 Intellect - Silverpine / Barrens quest",
+            "faction": "horde",
+            "weaponType": "Held in Off-hand",
+            "quality": "q2",
+            "iLvl": 25,
+            "reqLevel": 19,
+            "stats": "+4 Stamina, +3 Intellect",
+            "icon": "inv_weapon_bow_05"
+          }
+        ]
+      },
+      {
+        "levelBracket": "19–22",
+        "itemId": 2943,
+        "name": "Eye of Paleth",
+        "icon": "inv_misc_orb_03",
+        "weaponType": "Held in Off-hand",
+        "stats": "+6 Spirit, +4 Intellect",
+        "source": {
+          "kind": "quest",
+          "title": "Cleansing the Eye",
+          "detail": "Long questline reward in the Wetlands."
+        },
+        "faction": "alliance",
+        "quality": "q2",
+        "iLvl": 31,
+        "reqLevel": 22,
+        "alts": [
+          {
+            "name": "Flamescarred Spellbook",
+            "itemId": 281306,
+            "value": "+5 Intellect, +5 Fire Spell Power - Darkshore quest",
+            "faction": "alliance",
+            "weaponType": "Held in Off-hand",
+            "quality": "q2",
+            "iLvl": 31,
+            "reqLevel": 23,
+            "stats": "+5 Intellect, +5 Fire Spell Power",
+            "icon": "inv_misc_book_01"
+          },
+          {
+            "name": "Orb of Power",
+            "itemId": 4838,
+            "value": "+5 Intellect, +5 Spirit - World drop",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q2",
+            "iLvl": 26,
+            "reqLevel": 21,
+            "stats": "+5 Intellect, +5 Spirit",
+            "icon": "inv_ore_arcanite_02"
+          },
+          {
+            "name": "Alliance Outrunner Healing Rod",
+            "itemId": 285348,
+            "value": "+9 Healing, +4 Spirit - Ashenvale quest",
+            "faction": "alliance",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 26,
+            "reqLevel": 21,
+            "stats": "+9 Healing, +4 Spirit",
+            "icon": "inv_wand_04"
+          }
+        ]
+      },
+      {
+        "levelBracket": "23–26",
+        "itemId": 249394,
+        "name": "Orb of Mystic Insight",
+        "icon": "inv_misc_orb_blue",
+        "weaponType": "Held in Off-hand",
+        "stats": "+7 Intellect, +6 Spirit",
+        "source": {
+          "kind": "craft",
+          "title": "Enchanting / Alchemy Discovery",
+          "detail": "Crafted caster focus providing substantial mana pool and regeneration."
+        },
+        "faction": "both",
+        "quality": "q3",
+        "iLvl": 30,
+        "reqLevel": 25,
+        "alts": [
+          {
+            "name": "Witch's Finger",
+            "itemId": 16887,
+            "value": "+7 Shadow Spell Power, +4 Stamina - Hillsbrad quest",
+            "faction": "horde",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 32,
+            "reqLevel": 25,
+            "stats": "+7 Shadow Spell Power, +4 Stamina",
+            "icon": "inv_wand_12"
+          },
+          {
+            "name": "Fireproof Orb",
+            "itemId": 4836,
+            "value": "+6 Stamina, +5 Fire Resistance - World drop",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q2",
+            "iLvl": 28,
+            "reqLevel": 23,
+            "stats": "+6 Stamina, +5 Fire Resistance",
+            "icon": "inv_jewelry_talisman_01"
+          },
+          {
+            "name": "Orb of Souls",
+            "itemId": 249395,
+            "value": "+7 Stamina, +6 Spirit - Dungeon craft",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 30,
+            "reqLevel": 25,
+            "stats": "+7 Stamina, +6 Spirit",
+            "icon": "inv_misc_orb_04"
+          }
+        ]
+      },
+      {
+        "levelBracket": "27–30",
+        "itemId": 273052,
+        "name": "Ponderous Orb",
+        "icon": "inv_misc_orb_04",
+        "weaponType": "Held in Off-hand",
+        "stats": "+8 Intellect, +6 Spirit, +11 Spell Power",
+        "source": {
+          "kind": "dungeon",
+          "title": "Razorfen Kraul / Shadowfang Keep",
+          "detail": "Dropped by Shade of the Archmage. One of the greatest caster offhands in early Phase 2."
+        },
+        "faction": "both",
+        "quality": "q3",
+        "iLvl": 35,
+        "reqLevel": 30,
+        "alts": [
+          {
+            "name": "Skull of Impending Doom",
+            "itemId": 4984,
+            "value": "+7 Intellect, +5 Spirit, Use: Sprint speed boost - Badlands quest 'Forbidden Knowledge'",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q2",
+            "iLvl": 41,
+            "reqLevel": 30,
+            "stats": "+7 Intellect, +5 Spirit, Sprint Proc",
+            "icon": "inv_misc_bone_elfskull_01"
+          },
+          {
+            "name": "Rod of Molten Fire",
+            "itemId": 2565,
+            "value": "+10 Fire Spell Power - Rare world drop",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 35,
+            "reqLevel": 30,
+            "stats": "+10 Fire Spell Power",
+            "icon": "inv_spear_01"
+          },
+          {
+            "name": "Salve and Salvation",
+            "itemId": 276898,
+            "value": "+14 Healing, +6 Spirit - Duskwood / Wetlands quest",
+            "faction": "alliance",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 38,
+            "reqLevel": 30,
+            "stats": "+14 Healing, +6 Spirit",
+            "icon": "inv_misc_book_01"
+          },
+          {
+            "name": "Omega Orb",
+            "itemId": 7749,
+            "value": "+8 Intellect, +6 Spirit - Horde quest 'Compendium of the Fallen'",
+            "faction": "horde",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 40,
+            "reqLevel": 28,
+            "stats": "+8 Intellect, +6 Spirit",
+            "icon": "inv_misc_orb_03"
+          }
+        ]
+      },
+      {
+        "levelBracket": "31–35",
+        "itemId": 7685,
+        "name": "Orb of the Forgotten Seer",
+        "icon": "inv_misc_orb_02",
+        "weaponType": "Held in Off-hand",
+        "stats": "+14 Spell Power",
+        "source": {
+          "kind": "dungeon",
+          "title": "Scarlet Monastery (Library)",
+          "detail": "Dropped by Bloodmage Thalnos in Scarlet Monastery Library."
+        },
+        "faction": "both",
+        "quality": "q3",
+        "iLvl": 37,
+        "reqLevel": 32,
+        "alts": [
+          {
+            "name": "Celestial Orb",
+            "itemId": 7515,
+            "value": "+13 Spell Power, +3 Intellect - Mage quest 'Celestial Power'",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 40,
+            "reqLevel": 35,
+            "stats": "+13 Spell Power, +3 Intellect",
+            "icon": "inv_misc_orb_03"
+          },
+          {
+            "name": "Orb of Noh'Orahil",
+            "itemId": 15107,
+            "value": "+5 Intellect, +14 Fire Spell Power - Warlock quest",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 40,
+            "reqLevel": 35,
+            "stats": "+5 Intellect, +14 Fire Spell Power",
+            "icon": "inv_misc_orb_03"
+          },
+          {
+            "name": "Beacon of Hope",
+            "itemId": 9393,
+            "value": "+18 Healing, +5 Spirit - World drop",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 38,
+            "reqLevel": 33,
+            "stats": "+18 Healing, +5 Spirit",
+            "icon": "inv_misc_lantern_01"
+          },
+          {
+            "name": "Thrice-Damned Effigy",
+            "itemId": 271805,
+            "value": "+12 Spell Power, +6 Stamina - Desolace quest",
+            "faction": "horde",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 42,
+            "reqLevel": 35,
+            "stats": "+12 Spell Power, +6 Stamina",
+            "icon": "inv_misc_orb_01"
+          }
+        ]
+      },
+      {
+        "levelBracket": "36–40",
+        "itemId": 10770,
+        "name": "Mordresh's Lifeless Skull",
+        "icon": "inv_misc_bone_elfskull_01",
+        "weaponType": "Held in Off-hand",
+        "stats": "+7 Intellect, +11 Shadow Spell Power",
+        "source": {
+          "kind": "dungeon",
+          "title": "Razorfen Downs",
+          "detail": "Dropped by Mordresh Fire Eye in Razorfen Downs."
+        },
+        "faction": "both",
+        "quality": "q3",
+        "iLvl": 41,
+        "reqLevel": 36,
+        "alts": [
+          {
+            "name": "Researcher's Night Light",
+            "itemId": 277260,
+            "value": "+15 Spell Power, +5 Intellect - Greater Friend of the Library quest",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 45,
+            "reqLevel": 40,
+            "stats": "+15 Spell Power, +5 Intellect",
+            "icon": "inv_torch_lit"
+          },
+          {
+            "name": "Umbral Crystal",
+            "itemId": 13029,
+            "value": "+11 Shadow Spell Power, +6 Intellect - Rare world drop",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 43,
+            "reqLevel": 38,
+            "stats": "+11 Shadow Spell Power, +6 Intellect",
+            "icon": "inv_misc_orb_04"
+          },
+          {
+            "name": "Aurora Sphere",
+            "itemId": 7610,
+            "value": "+8 Intellect, +8 Spirit - Level 36 drop",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q2",
+            "iLvl": 41,
+            "reqLevel": 36,
+            "stats": "+8 Intellect, +8 Spirit",
+            "icon": "inv_misc_gem_pearl_02"
+          }
+        ]
+      },
+      {
+        "levelBracket": "41–46",
+        "itemId": 249455,
+        "name": "Truesilver Conduit",
+        "icon": "inv_rod_enchantedadamantite",
+        "weaponType": "Held in Off-hand",
+        "stats": "+9 Intellect, +16 Healing, +6 Spell Power",
+        "source": {
+          "kind": "craft",
+          "title": "Blacksmithing / Engineering",
+          "detail": "Crafted magical conduit with exceptional healing and spell stats."
+        },
+        "faction": "both",
+        "quality": "q3",
+        "iLvl": 50,
+        "reqLevel": 45,
+        "alts": [
+          {
+            "name": "Lord Sakrasis' Scepter",
+            "itemId": 5028,
+            "value": "+9 Intellect, +9 Spirit - Desolace quest",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q2",
+            "iLvl": 47,
+            "reqLevel": 42,
+            "stats": "+9 Intellect, +9 Spirit",
+            "icon": "inv_wand_10"
+          },
+          {
+            "name": "Skullspell Orb",
+            "itemId": 10708,
+            "value": "+14 Spell Power, +6 Intellect - Alliance quest 'Return to Tymor'",
+            "faction": "alliance",
+            "weaponType": "Held in Off-hand",
+            "quality": "q2",
+            "iLvl": 52,
+            "reqLevel": 45,
+            "stats": "+14 Spell Power, +6 Intellect",
+            "icon": "inv_misc_bone_elfskull_01"
+          },
+          {
+            "name": "Pyrestone Orb",
+            "itemId": 10709,
+            "value": "+16 Fire Spell Power - Horde quest 'Betrayed'",
+            "faction": "horde",
+            "weaponType": "Held in Off-hand",
+            "quality": "q2",
+            "iLvl": 55,
+            "reqLevel": 44,
+            "stats": "+16 Fire Spell Power",
+            "icon": "inv_misc_orb_05"
+          }
+        ]
+      },
+      {
+        "levelBracket": "47–52",
+        "itemId": 11904,
+        "name": "Spirit of Aquementas",
+        "icon": "inv_ore_arcanite_02",
+        "weaponType": "Held in Off-hand",
+        "stats": "+21 Spell Power",
+        "source": {
+          "kind": "quest",
+          "title": "It's Dangerous to Go Alone",
+          "detail": "Questline reward from Linken in Un'Goro Crater. Unmatched spell power throughout the 40s and 50s."
+        },
+        "faction": "both",
+        "quality": "q3",
+        "iLvl": 56,
+        "reqLevel": 47,
+        "alts": [
+          {
+            "name": "Insurgent's Manifesto",
+            "itemId": 271933,
+            "value": "+16 Spell Power, +8 Stamina - Western Plaguelands quest",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 53,
+            "reqLevel": 48,
+            "stats": "+16 Spell Power, +8 Stamina",
+            "icon": "inv_misc_book_06"
+          },
+          {
+            "name": "Tome of the Darkspear Prophecy",
+            "itemId": 272088,
+            "value": "+16 Spell Power, +8 Spirit - Western Plaguelands quest",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 53,
+            "reqLevel": 48,
+            "stats": "+16 Spell Power, +8 Spirit",
+            "icon": "inv_misc_book_06"
+          },
+          {
+            "name": "Magebane Scion",
+            "itemId": 15857,
+            "value": "+18 Spell Power - Blasted Lands quest 'Hidden Treasures'",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 60,
+            "reqLevel": 50,
+            "stats": "+18 Spell Power",
+            "icon": "inv_staff_11"
+          }
+        ]
+      },
+      {
+        "levelBracket": "53–60",
+        "itemId": 19312,
+        "name": "Lei of the Lifegiver",
+        "icon": "inv_misc_flower_04",
+        "weaponType": "Held in Off-hand",
+        "stats": "+53 Healing, +4 MP5",
+        "source": {
+          "kind": "quest",
+          "title": "Alterac Valley (Stormpike / Frostwolf)",
+          "detail": "Exalted faction reward with unparalleled healing power and mana regeneration."
+        },
+        "faction": "both",
+        "quality": "q4",
+        "iLvl": 60,
+        "reqLevel": 55,
+        "alts": [
+          {
+            "name": "Tome of Shadow Force",
+            "itemId": 19309,
+            "value": "+34 Shadow Spell Power - Stratholme drop",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q4",
+            "iLvl": 60,
+            "reqLevel": 55,
+            "stats": "+34 Shadow Spell Power",
+            "icon": "inv_misc_book_06"
+          },
+          {
+            "name": "Tome of the Ice Lord",
+            "itemId": 19310,
+            "value": "+34 Frost Spell Power - Alterac Valley / Scholomance",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q4",
+            "iLvl": 60,
+            "reqLevel": 55,
+            "stats": "+34 Frost Spell Power",
+            "icon": "inv_misc_book_11"
+          },
+          {
+            "name": "Tome of Fiery Arcana",
+            "itemId": 19311,
+            "value": "+34 Fire Spell Power - Stratholme drop",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q4",
+            "iLvl": 60,
+            "reqLevel": 55,
+            "stats": "+34 Fire Spell Power",
+            "icon": "inv_misc_book_09"
+          },
+          {
+            "name": "Tome of Arcane Domination",
+            "itemId": 19308,
+            "value": "+31 Arcane Spell Power, +3 MP5 - Scholomance drop",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q4",
+            "iLvl": 60,
+            "reqLevel": 55,
+            "stats": "+31 Arcane Spell Power, +3 MP5",
+            "icon": "inv_misc_book_01"
+          },
+          {
+            "name": "Barkskin Baubles",
+            "itemId": 274417,
+            "value": "+22 Healing, +7 Intellect - Felwood quest",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 58,
+            "reqLevel": 53,
+            "stats": "+22 Healing, +7 Intellect",
+            "icon": "inv_misc_bag_10_black"
+          }
+        ]
+      }
+    ]
+  },
+  "warlock": {
+    "classId": "warlock",
+    "tracks": [
+      {
+        "id": "primary",
+        "name": "Level 1–60 Off-Hand Progression"
+      }
+    ],
+    "levels": [
+      {
+        "levelBracket": "1–14",
+        "itemId": 1172,
+        "name": "Grayson's Torch",
+        "icon": "inv_torch_lit",
+        "weaponType": "Held in Off-hand",
+        "stats": "+4 Spirit",
+        "source": {
+          "kind": "quest",
+          "title": "The Westfall Lighthouse",
+          "detail": "Quest reward from Captain Grayson at the Westfall Lighthouse."
+        },
+        "faction": "alliance",
+        "quality": "q2",
+        "iLvl": 21,
+        "reqLevel": 10,
+        "alts": [
+          {
+            "name": "Tear of Grief",
+            "itemId": 284196,
+            "value": "+3 Intellect - Early Darkshore / Westfall quest",
+            "faction": "alliance",
+            "weaponType": "Held in Off-hand",
+            "quality": "q2",
+            "iLvl": 16,
+            "reqLevel": 11,
+            "stats": "+3 Intellect",
+            "icon": "inv_misc_questionmark"
+          },
+          {
+            "name": "Nightglow Concoction",
+            "itemId": 284197,
+            "value": "+4 Spirit - Silverpine / Barrens quest",
+            "faction": "horde",
+            "weaponType": "Held in Off-hand",
+            "quality": "q2",
+            "iLvl": 18,
+            "reqLevel": 9,
+            "stats": "+4 Spirit",
+            "icon": "inv_misc_questionmark"
+          },
+          {
+            "name": "Arcane Orb",
+            "itemId": 4838,
+            "value": "+2 Intellect, +1 Spirit - Early vendor/world drop",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q2",
+            "iLvl": 15,
+            "reqLevel": 10,
+            "stats": "+2 Intellect, +1 Spirit",
+            "icon": "inv_ore_arcanite_02"
+          }
+        ]
+      },
+      {
+        "levelBracket": "15–18",
+        "itemId": 1131,
+        "name": "Totem of Infliction",
+        "icon": "inv_misc_bone_elfskull_01",
+        "weaponType": "Held in Off-hand",
+        "stats": "+4 Intellect, Shadow Strike Proc (75–125 damage)",
+        "source": {
+          "kind": "quest",
+          "title": "The Totem of Infliction",
+          "detail": "Quest in Loch Modan (Valley of Kings). Offers defensive retaliation shadow damage."
+        },
+        "faction": "alliance",
+        "quality": "q2",
+        "iLvl": 25,
+        "reqLevel": 18,
+        "alts": [
+          {
+            "name": "Antipodean Rod",
+            "itemId": 285346,
+            "value": "+5 Intellect, +4 Spirit - Ashenvale quest",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 22,
+            "reqLevel": 17,
+            "stats": "+5 Intellect, +4 Spirit",
+            "icon": "inv_sword_20"
+          },
+          {
+            "name": "Everglow Lantern",
+            "itemId": 285347,
+            "value": "+4 Stamina, +3 Intellect - Silverpine / Barrens quest",
+            "faction": "horde",
+            "weaponType": "Held in Off-hand",
+            "quality": "q2",
+            "iLvl": 25,
+            "reqLevel": 19,
+            "stats": "+4 Stamina, +3 Intellect",
+            "icon": "inv_weapon_bow_05"
+          }
+        ]
+      },
+      {
+        "levelBracket": "19–22",
+        "itemId": 2943,
+        "name": "Eye of Paleth",
+        "icon": "inv_misc_orb_03",
+        "weaponType": "Held in Off-hand",
+        "stats": "+6 Spirit, +4 Intellect",
+        "source": {
+          "kind": "quest",
+          "title": "Cleansing the Eye",
+          "detail": "Long questline reward in the Wetlands."
+        },
+        "faction": "alliance",
+        "quality": "q2",
+        "iLvl": 31,
+        "reqLevel": 22,
+        "alts": [
+          {
+            "name": "Flamescarred Spellbook",
+            "itemId": 281306,
+            "value": "+5 Intellect, +5 Fire Spell Power - Darkshore quest",
+            "faction": "alliance",
+            "weaponType": "Held in Off-hand",
+            "quality": "q2",
+            "iLvl": 31,
+            "reqLevel": 23,
+            "stats": "+5 Intellect, +5 Fire Spell Power",
+            "icon": "inv_misc_book_01"
+          },
+          {
+            "name": "Orb of Power",
+            "itemId": 4838,
+            "value": "+5 Intellect, +5 Spirit - World drop",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q2",
+            "iLvl": 26,
+            "reqLevel": 21,
+            "stats": "+5 Intellect, +5 Spirit",
+            "icon": "inv_ore_arcanite_02"
+          },
+          {
+            "name": "Alliance Outrunner Healing Rod",
+            "itemId": 285348,
+            "value": "+9 Healing, +4 Spirit - Ashenvale quest",
+            "faction": "alliance",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 26,
+            "reqLevel": 21,
+            "stats": "+9 Healing, +4 Spirit",
+            "icon": "inv_wand_04"
+          }
+        ]
+      },
+      {
+        "levelBracket": "23–26",
+        "itemId": 249394,
+        "name": "Orb of Mystic Insight",
+        "icon": "inv_misc_orb_blue",
+        "weaponType": "Held in Off-hand",
+        "stats": "+7 Intellect, +6 Spirit",
+        "source": {
+          "kind": "craft",
+          "title": "Enchanting / Alchemy Discovery",
+          "detail": "Crafted caster focus providing substantial mana pool and regeneration."
+        },
+        "faction": "both",
+        "quality": "q3",
+        "iLvl": 30,
+        "reqLevel": 25,
+        "alts": [
+          {
+            "name": "Witch's Finger",
+            "itemId": 16887,
+            "value": "+7 Shadow Spell Power, +4 Stamina - Hillsbrad quest",
+            "faction": "horde",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 32,
+            "reqLevel": 25,
+            "stats": "+7 Shadow Spell Power, +4 Stamina",
+            "icon": "inv_wand_12"
+          },
+          {
+            "name": "Fireproof Orb",
+            "itemId": 4836,
+            "value": "+6 Stamina, +5 Fire Resistance - World drop",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q2",
+            "iLvl": 28,
+            "reqLevel": 23,
+            "stats": "+6 Stamina, +5 Fire Resistance",
+            "icon": "inv_jewelry_talisman_01"
+          },
+          {
+            "name": "Orb of Souls",
+            "itemId": 249395,
+            "value": "+7 Stamina, +6 Spirit - Dungeon craft",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 30,
+            "reqLevel": 25,
+            "stats": "+7 Stamina, +6 Spirit",
+            "icon": "inv_misc_orb_04"
+          }
+        ]
+      },
+      {
+        "levelBracket": "27–30",
+        "itemId": 273052,
+        "name": "Ponderous Orb",
+        "icon": "inv_misc_orb_04",
+        "weaponType": "Held in Off-hand",
+        "stats": "+8 Intellect, +6 Spirit, +11 Spell Power",
+        "source": {
+          "kind": "dungeon",
+          "title": "Razorfen Kraul / Shadowfang Keep",
+          "detail": "Dropped by Shade of the Archmage. One of the greatest caster offhands in early Phase 2."
+        },
+        "faction": "both",
+        "quality": "q3",
+        "iLvl": 35,
+        "reqLevel": 30,
+        "alts": [
+          {
+            "name": "Skull of Impending Doom",
+            "itemId": 4984,
+            "value": "+7 Intellect, +5 Spirit, Use: Sprint speed boost - Badlands quest 'Forbidden Knowledge'",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q2",
+            "iLvl": 41,
+            "reqLevel": 30,
+            "stats": "+7 Intellect, +5 Spirit, Sprint Proc",
+            "icon": "inv_misc_bone_elfskull_01"
+          },
+          {
+            "name": "Rod of Molten Fire",
+            "itemId": 2565,
+            "value": "+10 Fire Spell Power - Rare world drop",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 35,
+            "reqLevel": 30,
+            "stats": "+10 Fire Spell Power",
+            "icon": "inv_spear_01"
+          },
+          {
+            "name": "Salve and Salvation",
+            "itemId": 276898,
+            "value": "+14 Healing, +6 Spirit - Duskwood / Wetlands quest",
+            "faction": "alliance",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 38,
+            "reqLevel": 30,
+            "stats": "+14 Healing, +6 Spirit",
+            "icon": "inv_misc_book_01"
+          },
+          {
+            "name": "Omega Orb",
+            "itemId": 7749,
+            "value": "+8 Intellect, +6 Spirit - Horde quest 'Compendium of the Fallen'",
+            "faction": "horde",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 40,
+            "reqLevel": 28,
+            "stats": "+8 Intellect, +6 Spirit",
+            "icon": "inv_misc_orb_03"
+          }
+        ]
+      },
+      {
+        "levelBracket": "31–35",
+        "itemId": 7685,
+        "name": "Orb of the Forgotten Seer",
+        "icon": "inv_misc_orb_02",
+        "weaponType": "Held in Off-hand",
+        "stats": "+14 Spell Power",
+        "source": {
+          "kind": "dungeon",
+          "title": "Scarlet Monastery (Library)",
+          "detail": "Dropped by Bloodmage Thalnos in Scarlet Monastery Library."
+        },
+        "faction": "both",
+        "quality": "q3",
+        "iLvl": 37,
+        "reqLevel": 32,
+        "alts": [
+          {
+            "name": "Celestial Orb",
+            "itemId": 7515,
+            "value": "+13 Spell Power, +3 Intellect - Mage quest 'Celestial Power'",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 40,
+            "reqLevel": 35,
+            "stats": "+13 Spell Power, +3 Intellect",
+            "icon": "inv_misc_orb_03"
+          },
+          {
+            "name": "Orb of Noh'Orahil",
+            "itemId": 15107,
+            "value": "+5 Intellect, +14 Fire Spell Power - Warlock quest",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 40,
+            "reqLevel": 35,
+            "stats": "+5 Intellect, +14 Fire Spell Power",
+            "icon": "inv_misc_orb_03"
+          },
+          {
+            "name": "Beacon of Hope",
+            "itemId": 9393,
+            "value": "+18 Healing, +5 Spirit - World drop",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 38,
+            "reqLevel": 33,
+            "stats": "+18 Healing, +5 Spirit",
+            "icon": "inv_misc_lantern_01"
+          },
+          {
+            "name": "Thrice-Damned Effigy",
+            "itemId": 271805,
+            "value": "+12 Spell Power, +6 Stamina - Desolace quest",
+            "faction": "horde",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 42,
+            "reqLevel": 35,
+            "stats": "+12 Spell Power, +6 Stamina",
+            "icon": "inv_misc_orb_01"
+          }
+        ]
+      },
+      {
+        "levelBracket": "36–40",
+        "itemId": 10770,
+        "name": "Mordresh's Lifeless Skull",
+        "icon": "inv_misc_bone_elfskull_01",
+        "weaponType": "Held in Off-hand",
+        "stats": "+7 Intellect, +11 Shadow Spell Power",
+        "source": {
+          "kind": "dungeon",
+          "title": "Razorfen Downs",
+          "detail": "Dropped by Mordresh Fire Eye in Razorfen Downs."
+        },
+        "faction": "both",
+        "quality": "q3",
+        "iLvl": 41,
+        "reqLevel": 36,
+        "alts": [
+          {
+            "name": "Researcher's Night Light",
+            "itemId": 277260,
+            "value": "+15 Spell Power, +5 Intellect - Greater Friend of the Library quest",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 45,
+            "reqLevel": 40,
+            "stats": "+15 Spell Power, +5 Intellect",
+            "icon": "inv_torch_lit"
+          },
+          {
+            "name": "Umbral Crystal",
+            "itemId": 13029,
+            "value": "+11 Shadow Spell Power, +6 Intellect - Rare world drop",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 43,
+            "reqLevel": 38,
+            "stats": "+11 Shadow Spell Power, +6 Intellect",
+            "icon": "inv_misc_orb_04"
+          },
+          {
+            "name": "Aurora Sphere",
+            "itemId": 7610,
+            "value": "+8 Intellect, +8 Spirit - Level 36 drop",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q2",
+            "iLvl": 41,
+            "reqLevel": 36,
+            "stats": "+8 Intellect, +8 Spirit",
+            "icon": "inv_misc_gem_pearl_02"
+          }
+        ]
+      },
+      {
+        "levelBracket": "41–46",
+        "itemId": 249455,
+        "name": "Truesilver Conduit",
+        "icon": "inv_rod_enchantedadamantite",
+        "weaponType": "Held in Off-hand",
+        "stats": "+9 Intellect, +16 Healing, +6 Spell Power",
+        "source": {
+          "kind": "craft",
+          "title": "Blacksmithing / Engineering",
+          "detail": "Crafted magical conduit with exceptional healing and spell stats."
+        },
+        "faction": "both",
+        "quality": "q3",
+        "iLvl": 50,
+        "reqLevel": 45,
+        "alts": [
+          {
+            "name": "Lord Sakrasis' Scepter",
+            "itemId": 5028,
+            "value": "+9 Intellect, +9 Spirit - Desolace quest",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q2",
+            "iLvl": 47,
+            "reqLevel": 42,
+            "stats": "+9 Intellect, +9 Spirit",
+            "icon": "inv_wand_10"
+          },
+          {
+            "name": "Skullspell Orb",
+            "itemId": 10708,
+            "value": "+14 Spell Power, +6 Intellect - Alliance quest 'Return to Tymor'",
+            "faction": "alliance",
+            "weaponType": "Held in Off-hand",
+            "quality": "q2",
+            "iLvl": 52,
+            "reqLevel": 45,
+            "stats": "+14 Spell Power, +6 Intellect",
+            "icon": "inv_misc_bone_elfskull_01"
+          },
+          {
+            "name": "Pyrestone Orb",
+            "itemId": 10709,
+            "value": "+16 Fire Spell Power - Horde quest 'Betrayed'",
+            "faction": "horde",
+            "weaponType": "Held in Off-hand",
+            "quality": "q2",
+            "iLvl": 55,
+            "reqLevel": 44,
+            "stats": "+16 Fire Spell Power",
+            "icon": "inv_misc_orb_05"
+          }
+        ]
+      },
+      {
+        "levelBracket": "47–52",
+        "itemId": 11904,
+        "name": "Spirit of Aquementas",
+        "icon": "inv_ore_arcanite_02",
+        "weaponType": "Held in Off-hand",
+        "stats": "+21 Spell Power",
+        "source": {
+          "kind": "quest",
+          "title": "It's Dangerous to Go Alone",
+          "detail": "Questline reward from Linken in Un'Goro Crater. Unmatched spell power throughout the 40s and 50s."
+        },
+        "faction": "both",
+        "quality": "q3",
+        "iLvl": 56,
+        "reqLevel": 47,
+        "alts": [
+          {
+            "name": "Insurgent's Manifesto",
+            "itemId": 271933,
+            "value": "+16 Spell Power, +8 Stamina - Western Plaguelands quest",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 53,
+            "reqLevel": 48,
+            "stats": "+16 Spell Power, +8 Stamina",
+            "icon": "inv_misc_book_06"
+          },
+          {
+            "name": "Tome of the Darkspear Prophecy",
+            "itemId": 272088,
+            "value": "+16 Spell Power, +8 Spirit - Western Plaguelands quest",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 53,
+            "reqLevel": 48,
+            "stats": "+16 Spell Power, +8 Spirit",
+            "icon": "inv_misc_book_06"
+          },
+          {
+            "name": "Magebane Scion",
+            "itemId": 15857,
+            "value": "+18 Spell Power - Blasted Lands quest 'Hidden Treasures'",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 60,
+            "reqLevel": 50,
+            "stats": "+18 Spell Power",
+            "icon": "inv_staff_11"
+          }
+        ]
+      },
+      {
+        "levelBracket": "53–60",
+        "itemId": 19309,
+        "name": "Tome of Shadow Force",
+        "icon": "inv_misc_book_06",
+        "weaponType": "Held in Off-hand",
+        "stats": "+34 Shadow Spell Power",
+        "source": {
+          "kind": "dungeon",
+          "title": "Stratholme / Scholomance",
+          "detail": "High-end shadow specialization grimoire for Affliction and Demonology warlocks."
+        },
+        "faction": "both",
+        "quality": "q4",
+        "iLvl": 60,
+        "reqLevel": 55,
+        "alts": [
+          {
+            "name": "Tome of Arcane Domination",
+            "itemId": 19308,
+            "value": "+31 Arcane Spell Power, +3 MP5 - Scholomance drop",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q4",
+            "iLvl": 60,
+            "reqLevel": 55,
+            "stats": "+31 Arcane Spell Power, +3 MP5",
+            "icon": "inv_misc_book_01"
+          },
+          {
+            "name": "Tome of the Ice Lord",
+            "itemId": 19310,
+            "value": "+34 Frost Spell Power - Alterac Valley / Scholomance",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q4",
+            "iLvl": 60,
+            "reqLevel": 55,
+            "stats": "+34 Frost Spell Power",
+            "icon": "inv_misc_book_11"
+          },
+          {
+            "name": "Tome of Fiery Arcana",
+            "itemId": 19311,
+            "value": "+34 Fire Spell Power - Stratholme drop",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q4",
+            "iLvl": 60,
+            "reqLevel": 55,
+            "stats": "+34 Fire Spell Power",
+            "icon": "inv_misc_book_09"
+          },
+          {
+            "name": "Lei of the Lifegiver",
+            "itemId": 19312,
+            "value": "+53 Healing, +4 MP5 - Alterac Valley Exalted reward",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q4",
+            "iLvl": 60,
+            "reqLevel": 55,
+            "stats": "+53 Healing, +4 MP5",
+            "icon": "inv_misc_flower_04"
+          },
+          {
+            "name": "Barkskin Baubles",
+            "itemId": 274417,
+            "value": "+22 Healing, +7 Intellect - Felwood quest",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 58,
+            "reqLevel": 53,
+            "stats": "+22 Healing, +7 Intellect",
+            "icon": "inv_misc_bag_10_black"
+          }
+        ]
+      }
+    ]
+  },
+  "druid": {
+    "classId": "druid",
+    "tracks": [
+      {
+        "id": "primary",
+        "name": "Level 1–60 Off-Hand Progression"
+      }
+    ],
+    "levels": [
+      {
+        "levelBracket": "1–14",
+        "itemId": 1172,
+        "name": "Grayson's Torch",
+        "icon": "inv_torch_lit",
+        "weaponType": "Held in Off-hand",
+        "stats": "+4 Spirit",
+        "source": {
+          "kind": "quest",
+          "title": "The Westfall Lighthouse",
+          "detail": "Quest reward from Captain Grayson at the Westfall Lighthouse."
+        },
+        "faction": "alliance",
+        "quality": "q2",
+        "iLvl": 21,
+        "reqLevel": 10,
+        "alts": [
+          {
+            "name": "Tear of Grief",
+            "itemId": 284196,
+            "value": "+3 Intellect - Early Darkshore / Westfall quest",
+            "faction": "alliance",
+            "weaponType": "Held in Off-hand",
+            "quality": "q2",
+            "iLvl": 16,
+            "reqLevel": 11,
+            "stats": "+3 Intellect",
+            "icon": "inv_misc_questionmark"
+          },
+          {
+            "name": "Nightglow Concoction",
+            "itemId": 284197,
+            "value": "+4 Spirit - Silverpine / Barrens quest",
+            "faction": "horde",
+            "weaponType": "Held in Off-hand",
+            "quality": "q2",
+            "iLvl": 18,
+            "reqLevel": 9,
+            "stats": "+4 Spirit",
+            "icon": "inv_misc_questionmark"
+          },
+          {
+            "name": "Arcane Orb",
+            "itemId": 4838,
+            "value": "+2 Intellect, +1 Spirit - Early vendor/world drop",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q2",
+            "iLvl": 15,
+            "reqLevel": 10,
+            "stats": "+2 Intellect, +1 Spirit",
+            "icon": "inv_ore_arcanite_02"
+          }
+        ]
+      },
+      {
+        "levelBracket": "15–18",
+        "itemId": 1131,
+        "name": "Totem of Infliction",
+        "icon": "inv_misc_bone_elfskull_01",
+        "weaponType": "Held in Off-hand",
+        "stats": "+4 Intellect, Shadow Strike Proc (75–125 damage)",
+        "source": {
+          "kind": "quest",
+          "title": "The Totem of Infliction",
+          "detail": "Quest in Loch Modan (Valley of Kings). Offers defensive retaliation shadow damage."
+        },
+        "faction": "alliance",
+        "quality": "q2",
+        "iLvl": 25,
+        "reqLevel": 18,
+        "alts": [
+          {
+            "name": "Antipodean Rod",
+            "itemId": 285346,
+            "value": "+5 Intellect, +4 Spirit - Ashenvale quest",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 22,
+            "reqLevel": 17,
+            "stats": "+5 Intellect, +4 Spirit",
+            "icon": "inv_sword_20"
+          },
+          {
+            "name": "Everglow Lantern",
+            "itemId": 285347,
+            "value": "+4 Stamina, +3 Intellect - Silverpine / Barrens quest",
+            "faction": "horde",
+            "weaponType": "Held in Off-hand",
+            "quality": "q2",
+            "iLvl": 25,
+            "reqLevel": 19,
+            "stats": "+4 Stamina, +3 Intellect",
+            "icon": "inv_weapon_bow_05"
+          }
+        ]
+      },
+      {
+        "levelBracket": "19–22",
+        "itemId": 2943,
+        "name": "Eye of Paleth",
+        "icon": "inv_misc_orb_03",
+        "weaponType": "Held in Off-hand",
+        "stats": "+6 Spirit, +4 Intellect",
+        "source": {
+          "kind": "quest",
+          "title": "Cleansing the Eye",
+          "detail": "Long questline reward in the Wetlands."
+        },
+        "faction": "alliance",
+        "quality": "q2",
+        "iLvl": 31,
+        "reqLevel": 22,
+        "alts": [
+          {
+            "name": "Flamescarred Spellbook",
+            "itemId": 281306,
+            "value": "+5 Intellect, +5 Fire Spell Power - Darkshore quest",
+            "faction": "alliance",
+            "weaponType": "Held in Off-hand",
+            "quality": "q2",
+            "iLvl": 31,
+            "reqLevel": 23,
+            "stats": "+5 Intellect, +5 Fire Spell Power",
+            "icon": "inv_misc_book_01"
+          },
+          {
+            "name": "Orb of Power",
+            "itemId": 4838,
+            "value": "+5 Intellect, +5 Spirit - World drop",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q2",
+            "iLvl": 26,
+            "reqLevel": 21,
+            "stats": "+5 Intellect, +5 Spirit",
+            "icon": "inv_ore_arcanite_02"
+          },
+          {
+            "name": "Alliance Outrunner Healing Rod",
+            "itemId": 285348,
+            "value": "+9 Healing, +4 Spirit - Ashenvale quest",
+            "faction": "alliance",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 26,
+            "reqLevel": 21,
+            "stats": "+9 Healing, +4 Spirit",
+            "icon": "inv_wand_04"
+          }
+        ]
+      },
+      {
+        "levelBracket": "23–26",
+        "itemId": 249394,
+        "name": "Orb of Mystic Insight",
+        "icon": "inv_misc_orb_blue",
+        "weaponType": "Held in Off-hand",
+        "stats": "+7 Intellect, +6 Spirit",
+        "source": {
+          "kind": "craft",
+          "title": "Enchanting / Alchemy Discovery",
+          "detail": "Crafted caster focus providing substantial mana pool and regeneration."
+        },
+        "faction": "both",
+        "quality": "q3",
+        "iLvl": 30,
+        "reqLevel": 25,
+        "alts": [
+          {
+            "name": "Witch's Finger",
+            "itemId": 16887,
+            "value": "+7 Shadow Spell Power, +4 Stamina - Hillsbrad quest",
+            "faction": "horde",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 32,
+            "reqLevel": 25,
+            "stats": "+7 Shadow Spell Power, +4 Stamina",
+            "icon": "inv_wand_12"
+          },
+          {
+            "name": "Fireproof Orb",
+            "itemId": 4836,
+            "value": "+6 Stamina, +5 Fire Resistance - World drop",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q2",
+            "iLvl": 28,
+            "reqLevel": 23,
+            "stats": "+6 Stamina, +5 Fire Resistance",
+            "icon": "inv_jewelry_talisman_01"
+          },
+          {
+            "name": "Orb of Souls",
+            "itemId": 249395,
+            "value": "+7 Stamina, +6 Spirit - Dungeon craft",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 30,
+            "reqLevel": 25,
+            "stats": "+7 Stamina, +6 Spirit",
+            "icon": "inv_misc_orb_04"
+          }
+        ]
+      },
+      {
+        "levelBracket": "27–30",
+        "itemId": 273052,
+        "name": "Ponderous Orb",
+        "icon": "inv_misc_orb_04",
+        "weaponType": "Held in Off-hand",
+        "stats": "+8 Intellect, +6 Spirit, +11 Spell Power",
+        "source": {
+          "kind": "dungeon",
+          "title": "Razorfen Kraul / Shadowfang Keep",
+          "detail": "Dropped by Shade of the Archmage. One of the greatest caster offhands in early Phase 2."
+        },
+        "faction": "both",
+        "quality": "q3",
+        "iLvl": 35,
+        "reqLevel": 30,
+        "alts": [
+          {
+            "name": "Skull of Impending Doom",
+            "itemId": 4984,
+            "value": "+7 Intellect, +5 Spirit, Use: Sprint speed boost - Badlands quest 'Forbidden Knowledge'",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q2",
+            "iLvl": 41,
+            "reqLevel": 30,
+            "stats": "+7 Intellect, +5 Spirit, Sprint Proc",
+            "icon": "inv_misc_bone_elfskull_01"
+          },
+          {
+            "name": "Rod of Molten Fire",
+            "itemId": 2565,
+            "value": "+10 Fire Spell Power - Rare world drop",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 35,
+            "reqLevel": 30,
+            "stats": "+10 Fire Spell Power",
+            "icon": "inv_spear_01"
+          },
+          {
+            "name": "Salve and Salvation",
+            "itemId": 276898,
+            "value": "+14 Healing, +6 Spirit - Duskwood / Wetlands quest",
+            "faction": "alliance",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 38,
+            "reqLevel": 30,
+            "stats": "+14 Healing, +6 Spirit",
+            "icon": "inv_misc_book_01"
+          },
+          {
+            "name": "Omega Orb",
+            "itemId": 7749,
+            "value": "+8 Intellect, +6 Spirit - Horde quest 'Compendium of the Fallen'",
+            "faction": "horde",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 40,
+            "reqLevel": 28,
+            "stats": "+8 Intellect, +6 Spirit",
+            "icon": "inv_misc_orb_03"
+          }
+        ]
+      },
+      {
+        "levelBracket": "31–35",
+        "itemId": 7685,
+        "name": "Orb of the Forgotten Seer",
+        "icon": "inv_misc_orb_02",
+        "weaponType": "Held in Off-hand",
+        "stats": "+14 Spell Power",
+        "source": {
+          "kind": "dungeon",
+          "title": "Scarlet Monastery (Library)",
+          "detail": "Dropped by Bloodmage Thalnos in Scarlet Monastery Library."
+        },
+        "faction": "both",
+        "quality": "q3",
+        "iLvl": 37,
+        "reqLevel": 32,
+        "alts": [
+          {
+            "name": "Celestial Orb",
+            "itemId": 7515,
+            "value": "+13 Spell Power, +3 Intellect - Mage quest 'Celestial Power'",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 40,
+            "reqLevel": 35,
+            "stats": "+13 Spell Power, +3 Intellect",
+            "icon": "inv_misc_orb_03"
+          },
+          {
+            "name": "Orb of Noh'Orahil",
+            "itemId": 15107,
+            "value": "+5 Intellect, +14 Fire Spell Power - Warlock quest",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 40,
+            "reqLevel": 35,
+            "stats": "+5 Intellect, +14 Fire Spell Power",
+            "icon": "inv_misc_orb_03"
+          },
+          {
+            "name": "Beacon of Hope",
+            "itemId": 9393,
+            "value": "+18 Healing, +5 Spirit - World drop",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 38,
+            "reqLevel": 33,
+            "stats": "+18 Healing, +5 Spirit",
+            "icon": "inv_misc_lantern_01"
+          },
+          {
+            "name": "Thrice-Damned Effigy",
+            "itemId": 271805,
+            "value": "+12 Spell Power, +6 Stamina - Desolace quest",
+            "faction": "horde",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 42,
+            "reqLevel": 35,
+            "stats": "+12 Spell Power, +6 Stamina",
+            "icon": "inv_misc_orb_01"
+          }
+        ]
+      },
+      {
+        "levelBracket": "36–40",
+        "itemId": 10770,
+        "name": "Mordresh's Lifeless Skull",
+        "icon": "inv_misc_bone_elfskull_01",
+        "weaponType": "Held in Off-hand",
+        "stats": "+7 Intellect, +11 Shadow Spell Power",
+        "source": {
+          "kind": "dungeon",
+          "title": "Razorfen Downs",
+          "detail": "Dropped by Mordresh Fire Eye in Razorfen Downs."
+        },
+        "faction": "both",
+        "quality": "q3",
+        "iLvl": 41,
+        "reqLevel": 36,
+        "alts": [
+          {
+            "name": "Researcher's Night Light",
+            "itemId": 277260,
+            "value": "+15 Spell Power, +5 Intellect - Greater Friend of the Library quest",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 45,
+            "reqLevel": 40,
+            "stats": "+15 Spell Power, +5 Intellect",
+            "icon": "inv_torch_lit"
+          },
+          {
+            "name": "Umbral Crystal",
+            "itemId": 13029,
+            "value": "+11 Shadow Spell Power, +6 Intellect - Rare world drop",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 43,
+            "reqLevel": 38,
+            "stats": "+11 Shadow Spell Power, +6 Intellect",
+            "icon": "inv_misc_orb_04"
+          },
+          {
+            "name": "Aurora Sphere",
+            "itemId": 7610,
+            "value": "+8 Intellect, +8 Spirit - Level 36 drop",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q2",
+            "iLvl": 41,
+            "reqLevel": 36,
+            "stats": "+8 Intellect, +8 Spirit",
+            "icon": "inv_misc_gem_pearl_02"
+          }
+        ]
+      },
+      {
+        "levelBracket": "41–46",
+        "itemId": 249455,
+        "name": "Truesilver Conduit",
+        "icon": "inv_rod_enchantedadamantite",
+        "weaponType": "Held in Off-hand",
+        "stats": "+9 Intellect, +16 Healing, +6 Spell Power",
+        "source": {
+          "kind": "craft",
+          "title": "Blacksmithing / Engineering",
+          "detail": "Crafted magical conduit with exceptional healing and spell stats."
+        },
+        "faction": "both",
+        "quality": "q3",
+        "iLvl": 50,
+        "reqLevel": 45,
+        "alts": [
+          {
+            "name": "Lord Sakrasis' Scepter",
+            "itemId": 5028,
+            "value": "+9 Intellect, +9 Spirit - Desolace quest",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q2",
+            "iLvl": 47,
+            "reqLevel": 42,
+            "stats": "+9 Intellect, +9 Spirit",
+            "icon": "inv_wand_10"
+          },
+          {
+            "name": "Skullspell Orb",
+            "itemId": 10708,
+            "value": "+14 Spell Power, +6 Intellect - Alliance quest 'Return to Tymor'",
+            "faction": "alliance",
+            "weaponType": "Held in Off-hand",
+            "quality": "q2",
+            "iLvl": 52,
+            "reqLevel": 45,
+            "stats": "+14 Spell Power, +6 Intellect",
+            "icon": "inv_misc_bone_elfskull_01"
+          },
+          {
+            "name": "Pyrestone Orb",
+            "itemId": 10709,
+            "value": "+16 Fire Spell Power - Horde quest 'Betrayed'",
+            "faction": "horde",
+            "weaponType": "Held in Off-hand",
+            "quality": "q2",
+            "iLvl": 55,
+            "reqLevel": 44,
+            "stats": "+16 Fire Spell Power",
+            "icon": "inv_misc_orb_05"
+          }
+        ]
+      },
+      {
+        "levelBracket": "47–52",
+        "itemId": 11904,
+        "name": "Spirit of Aquementas",
+        "icon": "inv_ore_arcanite_02",
+        "weaponType": "Held in Off-hand",
+        "stats": "+21 Spell Power",
+        "source": {
+          "kind": "quest",
+          "title": "It's Dangerous to Go Alone",
+          "detail": "Questline reward from Linken in Un'Goro Crater. Unmatched spell power throughout the 40s and 50s."
+        },
+        "faction": "both",
+        "quality": "q3",
+        "iLvl": 56,
+        "reqLevel": 47,
+        "alts": [
+          {
+            "name": "Insurgent's Manifesto",
+            "itemId": 271933,
+            "value": "+16 Spell Power, +8 Stamina - Western Plaguelands quest",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 53,
+            "reqLevel": 48,
+            "stats": "+16 Spell Power, +8 Stamina",
+            "icon": "inv_misc_book_06"
+          },
+          {
+            "name": "Tome of the Darkspear Prophecy",
+            "itemId": 272088,
+            "value": "+16 Spell Power, +8 Spirit - Western Plaguelands quest",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 53,
+            "reqLevel": 48,
+            "stats": "+16 Spell Power, +8 Spirit",
+            "icon": "inv_misc_book_06"
+          },
+          {
+            "name": "Magebane Scion",
+            "itemId": 15857,
+            "value": "+18 Spell Power - Blasted Lands quest 'Hidden Treasures'",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 60,
+            "reqLevel": 50,
+            "stats": "+18 Spell Power",
+            "icon": "inv_staff_11"
+          }
+        ]
+      },
+      {
+        "levelBracket": "53–60",
+        "itemId": 19308,
+        "name": "Tome of Arcane Domination",
+        "icon": "inv_misc_book_01",
+        "weaponType": "Held in Off-hand",
+        "stats": "+31 Arcane Spell Power, +3 MP5",
+        "source": {
+          "kind": "dungeon",
+          "title": "Scholomance / Stratholme Bosses",
+          "detail": "Top-tier end-game caster offhand for mages and spellcasters."
+        },
+        "faction": "both",
+        "quality": "q4",
+        "iLvl": 60,
+        "reqLevel": 55,
+        "alts": [
+          {
+            "name": "Tome of Shadow Force",
+            "itemId": 19309,
+            "value": "+34 Shadow Spell Power - Stratholme drop",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q4",
+            "iLvl": 60,
+            "reqLevel": 55,
+            "stats": "+34 Shadow Spell Power",
+            "icon": "inv_misc_book_06"
+          },
+          {
+            "name": "Tome of the Ice Lord",
+            "itemId": 19310,
+            "value": "+34 Frost Spell Power - Alterac Valley / Scholomance",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q4",
+            "iLvl": 60,
+            "reqLevel": 55,
+            "stats": "+34 Frost Spell Power",
+            "icon": "inv_misc_book_11"
+          },
+          {
+            "name": "Tome of Fiery Arcana",
+            "itemId": 19311,
+            "value": "+34 Fire Spell Power - Stratholme drop",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q4",
+            "iLvl": 60,
+            "reqLevel": 55,
+            "stats": "+34 Fire Spell Power",
+            "icon": "inv_misc_book_09"
+          },
+          {
+            "name": "Lei of the Lifegiver",
+            "itemId": 19312,
+            "value": "+53 Healing, +4 MP5 - Alterac Valley Exalted reward",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q4",
+            "iLvl": 60,
+            "reqLevel": 55,
+            "stats": "+53 Healing, +4 MP5",
+            "icon": "inv_misc_flower_04"
+          },
+          {
+            "name": "Barkskin Baubles",
+            "itemId": 274417,
+            "value": "+22 Healing, +7 Intellect - Felwood quest",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 58,
+            "reqLevel": 53,
+            "stats": "+22 Healing, +7 Intellect",
+            "icon": "inv_misc_bag_10_black"
+          }
+        ]
+      }
+    ]
+  },
+  "shaman": {
+    "classId": "shaman",
+    "tracks": [
+      {
+        "id": "primary",
+        "name": "Level 1–60 Off-Hand Progression"
+      }
+    ],
+    "levels": [
+      {
+        "levelBracket": "1–14",
+        "itemId": 1172,
+        "name": "Grayson's Torch",
+        "icon": "inv_torch_lit",
+        "weaponType": "Held in Off-hand",
+        "stats": "+4 Spirit",
+        "source": {
+          "kind": "quest",
+          "title": "The Westfall Lighthouse",
+          "detail": "Quest reward from Captain Grayson at the Westfall Lighthouse."
+        },
+        "faction": "alliance",
+        "quality": "q2",
+        "iLvl": 21,
+        "reqLevel": 10,
+        "alts": [
+          {
+            "name": "Tear of Grief",
+            "itemId": 284196,
+            "value": "+3 Intellect - Early Darkshore / Westfall quest",
+            "faction": "alliance",
+            "weaponType": "Held in Off-hand",
+            "quality": "q2",
+            "iLvl": 16,
+            "reqLevel": 11,
+            "stats": "+3 Intellect",
+            "icon": "inv_misc_questionmark"
+          },
+          {
+            "name": "Nightglow Concoction",
+            "itemId": 284197,
+            "value": "+4 Spirit - Silverpine / Barrens quest",
+            "faction": "horde",
+            "weaponType": "Held in Off-hand",
+            "quality": "q2",
+            "iLvl": 18,
+            "reqLevel": 9,
+            "stats": "+4 Spirit",
+            "icon": "inv_misc_questionmark"
+          },
+          {
+            "name": "Arcane Orb",
+            "itemId": 4838,
+            "value": "+2 Intellect, +1 Spirit - Early vendor/world drop",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q2",
+            "iLvl": 15,
+            "reqLevel": 10,
+            "stats": "+2 Intellect, +1 Spirit",
+            "icon": "inv_ore_arcanite_02"
+          }
+        ]
+      },
+      {
+        "levelBracket": "15–18",
+        "itemId": 1131,
+        "name": "Totem of Infliction",
+        "icon": "inv_misc_bone_elfskull_01",
+        "weaponType": "Held in Off-hand",
+        "stats": "+4 Intellect, Shadow Strike Proc (75–125 damage)",
+        "source": {
+          "kind": "quest",
+          "title": "The Totem of Infliction",
+          "detail": "Quest in Loch Modan (Valley of Kings). Offers defensive retaliation shadow damage."
+        },
+        "faction": "alliance",
+        "quality": "q2",
+        "iLvl": 25,
+        "reqLevel": 18,
+        "alts": [
+          {
+            "name": "Antipodean Rod",
+            "itemId": 285346,
+            "value": "+5 Intellect, +4 Spirit - Ashenvale quest",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 22,
+            "reqLevel": 17,
+            "stats": "+5 Intellect, +4 Spirit",
+            "icon": "inv_sword_20"
+          },
+          {
+            "name": "Everglow Lantern",
+            "itemId": 285347,
+            "value": "+4 Stamina, +3 Intellect - Silverpine / Barrens quest",
+            "faction": "horde",
+            "weaponType": "Held in Off-hand",
+            "quality": "q2",
+            "iLvl": 25,
+            "reqLevel": 19,
+            "stats": "+4 Stamina, +3 Intellect",
+            "icon": "inv_weapon_bow_05"
+          }
+        ]
+      },
+      {
+        "levelBracket": "19–22",
+        "itemId": 2943,
+        "name": "Eye of Paleth",
+        "icon": "inv_misc_orb_03",
+        "weaponType": "Held in Off-hand",
+        "stats": "+6 Spirit, +4 Intellect",
+        "source": {
+          "kind": "quest",
+          "title": "Cleansing the Eye",
+          "detail": "Long questline reward in the Wetlands."
+        },
+        "faction": "alliance",
+        "quality": "q2",
+        "iLvl": 31,
+        "reqLevel": 22,
+        "alts": [
+          {
+            "name": "Flamescarred Spellbook",
+            "itemId": 281306,
+            "value": "+5 Intellect, +5 Fire Spell Power - Darkshore quest",
+            "faction": "alliance",
+            "weaponType": "Held in Off-hand",
+            "quality": "q2",
+            "iLvl": 31,
+            "reqLevel": 23,
+            "stats": "+5 Intellect, +5 Fire Spell Power",
+            "icon": "inv_misc_book_01"
+          },
+          {
+            "name": "Orb of Power",
+            "itemId": 4838,
+            "value": "+5 Intellect, +5 Spirit - World drop",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q2",
+            "iLvl": 26,
+            "reqLevel": 21,
+            "stats": "+5 Intellect, +5 Spirit",
+            "icon": "inv_ore_arcanite_02"
+          },
+          {
+            "name": "Alliance Outrunner Healing Rod",
+            "itemId": 285348,
+            "value": "+9 Healing, +4 Spirit - Ashenvale quest",
+            "faction": "alliance",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 26,
+            "reqLevel": 21,
+            "stats": "+9 Healing, +4 Spirit",
+            "icon": "inv_wand_04"
+          }
+        ]
+      },
+      {
+        "levelBracket": "23–26",
+        "itemId": 249394,
+        "name": "Orb of Mystic Insight",
+        "icon": "inv_misc_orb_blue",
+        "weaponType": "Held in Off-hand",
+        "stats": "+7 Intellect, +6 Spirit",
+        "source": {
+          "kind": "craft",
+          "title": "Enchanting / Alchemy Discovery",
+          "detail": "Crafted caster focus providing substantial mana pool and regeneration."
+        },
+        "faction": "both",
+        "quality": "q3",
+        "iLvl": 30,
+        "reqLevel": 25,
+        "alts": [
+          {
+            "name": "Witch's Finger",
+            "itemId": 16887,
+            "value": "+7 Shadow Spell Power, +4 Stamina - Hillsbrad quest",
+            "faction": "horde",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 32,
+            "reqLevel": 25,
+            "stats": "+7 Shadow Spell Power, +4 Stamina",
+            "icon": "inv_wand_12"
+          },
+          {
+            "name": "Fireproof Orb",
+            "itemId": 4836,
+            "value": "+6 Stamina, +5 Fire Resistance - World drop",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q2",
+            "iLvl": 28,
+            "reqLevel": 23,
+            "stats": "+6 Stamina, +5 Fire Resistance",
+            "icon": "inv_jewelry_talisman_01"
+          },
+          {
+            "name": "Orb of Souls",
+            "itemId": 249395,
+            "value": "+7 Stamina, +6 Spirit - Dungeon craft",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 30,
+            "reqLevel": 25,
+            "stats": "+7 Stamina, +6 Spirit",
+            "icon": "inv_misc_orb_04"
+          }
+        ]
+      },
+      {
+        "levelBracket": "27–30",
+        "itemId": 273052,
+        "name": "Ponderous Orb",
+        "icon": "inv_misc_orb_04",
+        "weaponType": "Held in Off-hand",
+        "stats": "+8 Intellect, +6 Spirit, +11 Spell Power",
+        "source": {
+          "kind": "dungeon",
+          "title": "Razorfen Kraul / Shadowfang Keep",
+          "detail": "Dropped by Shade of the Archmage. One of the greatest caster offhands in early Phase 2."
+        },
+        "faction": "both",
+        "quality": "q3",
+        "iLvl": 35,
+        "reqLevel": 30,
+        "alts": [
+          {
+            "name": "Skull of Impending Doom",
+            "itemId": 4984,
+            "value": "+7 Intellect, +5 Spirit, Use: Sprint speed boost - Badlands quest 'Forbidden Knowledge'",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q2",
+            "iLvl": 41,
+            "reqLevel": 30,
+            "stats": "+7 Intellect, +5 Spirit, Sprint Proc",
+            "icon": "inv_misc_bone_elfskull_01"
+          },
+          {
+            "name": "Rod of Molten Fire",
+            "itemId": 2565,
+            "value": "+10 Fire Spell Power - Rare world drop",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 35,
+            "reqLevel": 30,
+            "stats": "+10 Fire Spell Power",
+            "icon": "inv_spear_01"
+          },
+          {
+            "name": "Salve and Salvation",
+            "itemId": 276898,
+            "value": "+14 Healing, +6 Spirit - Duskwood / Wetlands quest",
+            "faction": "alliance",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 38,
+            "reqLevel": 30,
+            "stats": "+14 Healing, +6 Spirit",
+            "icon": "inv_misc_book_01"
+          },
+          {
+            "name": "Omega Orb",
+            "itemId": 7749,
+            "value": "+8 Intellect, +6 Spirit - Horde quest 'Compendium of the Fallen'",
+            "faction": "horde",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 40,
+            "reqLevel": 28,
+            "stats": "+8 Intellect, +6 Spirit",
+            "icon": "inv_misc_orb_03"
+          }
+        ]
+      },
+      {
+        "levelBracket": "31–35",
+        "itemId": 7685,
+        "name": "Orb of the Forgotten Seer",
+        "icon": "inv_misc_orb_02",
+        "weaponType": "Held in Off-hand",
+        "stats": "+14 Spell Power",
+        "source": {
+          "kind": "dungeon",
+          "title": "Scarlet Monastery (Library)",
+          "detail": "Dropped by Bloodmage Thalnos in Scarlet Monastery Library."
+        },
+        "faction": "both",
+        "quality": "q3",
+        "iLvl": 37,
+        "reqLevel": 32,
+        "alts": [
+          {
+            "name": "Celestial Orb",
+            "itemId": 7515,
+            "value": "+13 Spell Power, +3 Intellect - Mage quest 'Celestial Power'",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 40,
+            "reqLevel": 35,
+            "stats": "+13 Spell Power, +3 Intellect",
+            "icon": "inv_misc_orb_03"
+          },
+          {
+            "name": "Orb of Noh'Orahil",
+            "itemId": 15107,
+            "value": "+5 Intellect, +14 Fire Spell Power - Warlock quest",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 40,
+            "reqLevel": 35,
+            "stats": "+5 Intellect, +14 Fire Spell Power",
+            "icon": "inv_misc_orb_03"
+          },
+          {
+            "name": "Beacon of Hope",
+            "itemId": 9393,
+            "value": "+18 Healing, +5 Spirit - World drop",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 38,
+            "reqLevel": 33,
+            "stats": "+18 Healing, +5 Spirit",
+            "icon": "inv_misc_lantern_01"
+          },
+          {
+            "name": "Thrice-Damned Effigy",
+            "itemId": 271805,
+            "value": "+12 Spell Power, +6 Stamina - Desolace quest",
+            "faction": "horde",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 42,
+            "reqLevel": 35,
+            "stats": "+12 Spell Power, +6 Stamina",
+            "icon": "inv_misc_orb_01"
+          }
+        ]
+      },
+      {
+        "levelBracket": "36–40",
+        "itemId": 10770,
+        "name": "Mordresh's Lifeless Skull",
+        "icon": "inv_misc_bone_elfskull_01",
+        "weaponType": "Held in Off-hand",
+        "stats": "+7 Intellect, +11 Shadow Spell Power",
+        "source": {
+          "kind": "dungeon",
+          "title": "Razorfen Downs",
+          "detail": "Dropped by Mordresh Fire Eye in Razorfen Downs."
+        },
+        "faction": "both",
+        "quality": "q3",
+        "iLvl": 41,
+        "reqLevel": 36,
+        "alts": [
+          {
+            "name": "Researcher's Night Light",
+            "itemId": 277260,
+            "value": "+15 Spell Power, +5 Intellect - Greater Friend of the Library quest",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 45,
+            "reqLevel": 40,
+            "stats": "+15 Spell Power, +5 Intellect",
+            "icon": "inv_torch_lit"
+          },
+          {
+            "name": "Umbral Crystal",
+            "itemId": 13029,
+            "value": "+11 Shadow Spell Power, +6 Intellect - Rare world drop",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 43,
+            "reqLevel": 38,
+            "stats": "+11 Shadow Spell Power, +6 Intellect",
+            "icon": "inv_misc_orb_04"
+          },
+          {
+            "name": "Aurora Sphere",
+            "itemId": 7610,
+            "value": "+8 Intellect, +8 Spirit - Level 36 drop",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q2",
+            "iLvl": 41,
+            "reqLevel": 36,
+            "stats": "+8 Intellect, +8 Spirit",
+            "icon": "inv_misc_gem_pearl_02"
+          }
+        ]
+      },
+      {
+        "levelBracket": "41–46",
+        "itemId": 249455,
+        "name": "Truesilver Conduit",
+        "icon": "inv_rod_enchantedadamantite",
+        "weaponType": "Held in Off-hand",
+        "stats": "+9 Intellect, +16 Healing, +6 Spell Power",
+        "source": {
+          "kind": "craft",
+          "title": "Blacksmithing / Engineering",
+          "detail": "Crafted magical conduit with exceptional healing and spell stats."
+        },
+        "faction": "both",
+        "quality": "q3",
+        "iLvl": 50,
+        "reqLevel": 45,
+        "alts": [
+          {
+            "name": "Lord Sakrasis' Scepter",
+            "itemId": 5028,
+            "value": "+9 Intellect, +9 Spirit - Desolace quest",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q2",
+            "iLvl": 47,
+            "reqLevel": 42,
+            "stats": "+9 Intellect, +9 Spirit",
+            "icon": "inv_wand_10"
+          },
+          {
+            "name": "Skullspell Orb",
+            "itemId": 10708,
+            "value": "+14 Spell Power, +6 Intellect - Alliance quest 'Return to Tymor'",
+            "faction": "alliance",
+            "weaponType": "Held in Off-hand",
+            "quality": "q2",
+            "iLvl": 52,
+            "reqLevel": 45,
+            "stats": "+14 Spell Power, +6 Intellect",
+            "icon": "inv_misc_bone_elfskull_01"
+          },
+          {
+            "name": "Pyrestone Orb",
+            "itemId": 10709,
+            "value": "+16 Fire Spell Power - Horde quest 'Betrayed'",
+            "faction": "horde",
+            "weaponType": "Held in Off-hand",
+            "quality": "q2",
+            "iLvl": 55,
+            "reqLevel": 44,
+            "stats": "+16 Fire Spell Power",
+            "icon": "inv_misc_orb_05"
+          }
+        ]
+      },
+      {
+        "levelBracket": "47–52",
+        "itemId": 11904,
+        "name": "Spirit of Aquementas",
+        "icon": "inv_ore_arcanite_02",
+        "weaponType": "Held in Off-hand",
+        "stats": "+21 Spell Power",
+        "source": {
+          "kind": "quest",
+          "title": "It's Dangerous to Go Alone",
+          "detail": "Questline reward from Linken in Un'Goro Crater. Unmatched spell power throughout the 40s and 50s."
+        },
+        "faction": "both",
+        "quality": "q3",
+        "iLvl": 56,
+        "reqLevel": 47,
+        "alts": [
+          {
+            "name": "Insurgent's Manifesto",
+            "itemId": 271933,
+            "value": "+16 Spell Power, +8 Stamina - Western Plaguelands quest",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 53,
+            "reqLevel": 48,
+            "stats": "+16 Spell Power, +8 Stamina",
+            "icon": "inv_misc_book_06"
+          },
+          {
+            "name": "Tome of the Darkspear Prophecy",
+            "itemId": 272088,
+            "value": "+16 Spell Power, +8 Spirit - Western Plaguelands quest",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 53,
+            "reqLevel": 48,
+            "stats": "+16 Spell Power, +8 Spirit",
+            "icon": "inv_misc_book_06"
+          },
+          {
+            "name": "Magebane Scion",
+            "itemId": 15857,
+            "value": "+18 Spell Power - Blasted Lands quest 'Hidden Treasures'",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 60,
+            "reqLevel": 50,
+            "stats": "+18 Spell Power",
+            "icon": "inv_staff_11"
+          }
+        ]
+      },
+      {
+        "levelBracket": "53–60",
+        "itemId": 19308,
+        "name": "Tome of Arcane Domination",
+        "icon": "inv_misc_book_01",
+        "weaponType": "Held in Off-hand",
+        "stats": "+31 Arcane Spell Power, +3 MP5",
+        "source": {
+          "kind": "dungeon",
+          "title": "Scholomance / Stratholme Bosses",
+          "detail": "Top-tier end-game caster offhand for mages and spellcasters."
+        },
+        "faction": "both",
+        "quality": "q4",
+        "iLvl": 60,
+        "reqLevel": 55,
+        "alts": [
+          {
+            "name": "Tome of Shadow Force",
+            "itemId": 19309,
+            "value": "+34 Shadow Spell Power - Stratholme drop",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q4",
+            "iLvl": 60,
+            "reqLevel": 55,
+            "stats": "+34 Shadow Spell Power",
+            "icon": "inv_misc_book_06"
+          },
+          {
+            "name": "Tome of the Ice Lord",
+            "itemId": 19310,
+            "value": "+34 Frost Spell Power - Alterac Valley / Scholomance",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q4",
+            "iLvl": 60,
+            "reqLevel": 55,
+            "stats": "+34 Frost Spell Power",
+            "icon": "inv_misc_book_11"
+          },
+          {
+            "name": "Tome of Fiery Arcana",
+            "itemId": 19311,
+            "value": "+34 Fire Spell Power - Stratholme drop",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q4",
+            "iLvl": 60,
+            "reqLevel": 55,
+            "stats": "+34 Fire Spell Power",
+            "icon": "inv_misc_book_09"
+          },
+          {
+            "name": "Lei of the Lifegiver",
+            "itemId": 19312,
+            "value": "+53 Healing, +4 MP5 - Alterac Valley Exalted reward",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q4",
+            "iLvl": 60,
+            "reqLevel": 55,
+            "stats": "+53 Healing, +4 MP5",
+            "icon": "inv_misc_flower_04"
+          },
+          {
+            "name": "Barkskin Baubles",
+            "itemId": 274417,
+            "value": "+22 Healing, +7 Intellect - Felwood quest",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 58,
+            "reqLevel": 53,
+            "stats": "+22 Healing, +7 Intellect",
+            "icon": "inv_misc_bag_10_black"
+          }
+        ]
+      }
+    ]
+  },
+  "paladin": {
+    "classId": "paladin",
+    "tracks": [
+      {
+        "id": "primary",
+        "name": "Level 1–60 Off-Hand Progression"
+      }
+    ],
+    "levels": [
+      {
+        "levelBracket": "1–14",
+        "itemId": 1172,
+        "name": "Grayson's Torch",
+        "icon": "inv_torch_lit",
+        "weaponType": "Held in Off-hand",
+        "stats": "+4 Spirit",
+        "source": {
+          "kind": "quest",
+          "title": "The Westfall Lighthouse",
+          "detail": "Quest reward from Captain Grayson at the Westfall Lighthouse."
+        },
+        "faction": "alliance",
+        "quality": "q2",
+        "iLvl": 21,
+        "reqLevel": 10,
+        "alts": [
+          {
+            "name": "Tear of Grief",
+            "itemId": 284196,
+            "value": "+3 Intellect - Early Darkshore / Westfall quest",
+            "faction": "alliance",
+            "weaponType": "Held in Off-hand",
+            "quality": "q2",
+            "iLvl": 16,
+            "reqLevel": 11,
+            "stats": "+3 Intellect",
+            "icon": "inv_misc_questionmark"
+          },
+          {
+            "name": "Nightglow Concoction",
+            "itemId": 284197,
+            "value": "+4 Spirit - Silverpine / Barrens quest",
+            "faction": "horde",
+            "weaponType": "Held in Off-hand",
+            "quality": "q2",
+            "iLvl": 18,
+            "reqLevel": 9,
+            "stats": "+4 Spirit",
+            "icon": "inv_misc_questionmark"
+          },
+          {
+            "name": "Arcane Orb",
+            "itemId": 4838,
+            "value": "+2 Intellect, +1 Spirit - Early vendor/world drop",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q2",
+            "iLvl": 15,
+            "reqLevel": 10,
+            "stats": "+2 Intellect, +1 Spirit",
+            "icon": "inv_ore_arcanite_02"
+          }
+        ]
+      },
+      {
+        "levelBracket": "15–18",
+        "itemId": 1131,
+        "name": "Totem of Infliction",
+        "icon": "inv_misc_bone_elfskull_01",
+        "weaponType": "Held in Off-hand",
+        "stats": "+4 Intellect, Shadow Strike Proc (75–125 damage)",
+        "source": {
+          "kind": "quest",
+          "title": "The Totem of Infliction",
+          "detail": "Quest in Loch Modan (Valley of Kings). Offers defensive retaliation shadow damage."
+        },
+        "faction": "alliance",
+        "quality": "q2",
+        "iLvl": 25,
+        "reqLevel": 18,
+        "alts": [
+          {
+            "name": "Antipodean Rod",
+            "itemId": 285346,
+            "value": "+5 Intellect, +4 Spirit - Ashenvale quest",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 22,
+            "reqLevel": 17,
+            "stats": "+5 Intellect, +4 Spirit",
+            "icon": "inv_sword_20"
+          },
+          {
+            "name": "Everglow Lantern",
+            "itemId": 285347,
+            "value": "+4 Stamina, +3 Intellect - Silverpine / Barrens quest",
+            "faction": "horde",
+            "weaponType": "Held in Off-hand",
+            "quality": "q2",
+            "iLvl": 25,
+            "reqLevel": 19,
+            "stats": "+4 Stamina, +3 Intellect",
+            "icon": "inv_weapon_bow_05"
+          }
+        ]
+      },
+      {
+        "levelBracket": "19–22",
+        "itemId": 2943,
+        "name": "Eye of Paleth",
+        "icon": "inv_misc_orb_03",
+        "weaponType": "Held in Off-hand",
+        "stats": "+6 Spirit, +4 Intellect",
+        "source": {
+          "kind": "quest",
+          "title": "Cleansing the Eye",
+          "detail": "Long questline reward in the Wetlands."
+        },
+        "faction": "alliance",
+        "quality": "q2",
+        "iLvl": 31,
+        "reqLevel": 22,
+        "alts": [
+          {
+            "name": "Flamescarred Spellbook",
+            "itemId": 281306,
+            "value": "+5 Intellect, +5 Fire Spell Power - Darkshore quest",
+            "faction": "alliance",
+            "weaponType": "Held in Off-hand",
+            "quality": "q2",
+            "iLvl": 31,
+            "reqLevel": 23,
+            "stats": "+5 Intellect, +5 Fire Spell Power",
+            "icon": "inv_misc_book_01"
+          },
+          {
+            "name": "Orb of Power",
+            "itemId": 4838,
+            "value": "+5 Intellect, +5 Spirit - World drop",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q2",
+            "iLvl": 26,
+            "reqLevel": 21,
+            "stats": "+5 Intellect, +5 Spirit",
+            "icon": "inv_ore_arcanite_02"
+          },
+          {
+            "name": "Alliance Outrunner Healing Rod",
+            "itemId": 285348,
+            "value": "+9 Healing, +4 Spirit - Ashenvale quest",
+            "faction": "alliance",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 26,
+            "reqLevel": 21,
+            "stats": "+9 Healing, +4 Spirit",
+            "icon": "inv_wand_04"
+          }
+        ]
+      },
+      {
+        "levelBracket": "23–26",
+        "itemId": 249394,
+        "name": "Orb of Mystic Insight",
+        "icon": "inv_misc_orb_blue",
+        "weaponType": "Held in Off-hand",
+        "stats": "+7 Intellect, +6 Spirit",
+        "source": {
+          "kind": "craft",
+          "title": "Enchanting / Alchemy Discovery",
+          "detail": "Crafted caster focus providing substantial mana pool and regeneration."
+        },
+        "faction": "both",
+        "quality": "q3",
+        "iLvl": 30,
+        "reqLevel": 25,
+        "alts": [
+          {
+            "name": "Witch's Finger",
+            "itemId": 16887,
+            "value": "+7 Shadow Spell Power, +4 Stamina - Hillsbrad quest",
+            "faction": "horde",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 32,
+            "reqLevel": 25,
+            "stats": "+7 Shadow Spell Power, +4 Stamina",
+            "icon": "inv_wand_12"
+          },
+          {
+            "name": "Fireproof Orb",
+            "itemId": 4836,
+            "value": "+6 Stamina, +5 Fire Resistance - World drop",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q2",
+            "iLvl": 28,
+            "reqLevel": 23,
+            "stats": "+6 Stamina, +5 Fire Resistance",
+            "icon": "inv_jewelry_talisman_01"
+          },
+          {
+            "name": "Orb of Souls",
+            "itemId": 249395,
+            "value": "+7 Stamina, +6 Spirit - Dungeon craft",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 30,
+            "reqLevel": 25,
+            "stats": "+7 Stamina, +6 Spirit",
+            "icon": "inv_misc_orb_04"
+          }
+        ]
+      },
+      {
+        "levelBracket": "27–30",
+        "itemId": 273052,
+        "name": "Ponderous Orb",
+        "icon": "inv_misc_orb_04",
+        "weaponType": "Held in Off-hand",
+        "stats": "+8 Intellect, +6 Spirit, +11 Spell Power",
+        "source": {
+          "kind": "dungeon",
+          "title": "Razorfen Kraul / Shadowfang Keep",
+          "detail": "Dropped by Shade of the Archmage. One of the greatest caster offhands in early Phase 2."
+        },
+        "faction": "both",
+        "quality": "q3",
+        "iLvl": 35,
+        "reqLevel": 30,
+        "alts": [
+          {
+            "name": "Skull of Impending Doom",
+            "itemId": 4984,
+            "value": "+7 Intellect, +5 Spirit, Use: Sprint speed boost - Badlands quest 'Forbidden Knowledge'",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q2",
+            "iLvl": 41,
+            "reqLevel": 30,
+            "stats": "+7 Intellect, +5 Spirit, Sprint Proc",
+            "icon": "inv_misc_bone_elfskull_01"
+          },
+          {
+            "name": "Rod of Molten Fire",
+            "itemId": 2565,
+            "value": "+10 Fire Spell Power - Rare world drop",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 35,
+            "reqLevel": 30,
+            "stats": "+10 Fire Spell Power",
+            "icon": "inv_spear_01"
+          },
+          {
+            "name": "Salve and Salvation",
+            "itemId": 276898,
+            "value": "+14 Healing, +6 Spirit - Duskwood / Wetlands quest",
+            "faction": "alliance",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 38,
+            "reqLevel": 30,
+            "stats": "+14 Healing, +6 Spirit",
+            "icon": "inv_misc_book_01"
+          },
+          {
+            "name": "Omega Orb",
+            "itemId": 7749,
+            "value": "+8 Intellect, +6 Spirit - Horde quest 'Compendium of the Fallen'",
+            "faction": "horde",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 40,
+            "reqLevel": 28,
+            "stats": "+8 Intellect, +6 Spirit",
+            "icon": "inv_misc_orb_03"
+          }
+        ]
+      },
+      {
+        "levelBracket": "31–35",
+        "itemId": 7685,
+        "name": "Orb of the Forgotten Seer",
+        "icon": "inv_misc_orb_02",
+        "weaponType": "Held in Off-hand",
+        "stats": "+14 Spell Power",
+        "source": {
+          "kind": "dungeon",
+          "title": "Scarlet Monastery (Library)",
+          "detail": "Dropped by Bloodmage Thalnos in Scarlet Monastery Library."
+        },
+        "faction": "both",
+        "quality": "q3",
+        "iLvl": 37,
+        "reqLevel": 32,
+        "alts": [
+          {
+            "name": "Celestial Orb",
+            "itemId": 7515,
+            "value": "+13 Spell Power, +3 Intellect - Mage quest 'Celestial Power'",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 40,
+            "reqLevel": 35,
+            "stats": "+13 Spell Power, +3 Intellect",
+            "icon": "inv_misc_orb_03"
+          },
+          {
+            "name": "Orb of Noh'Orahil",
+            "itemId": 15107,
+            "value": "+5 Intellect, +14 Fire Spell Power - Warlock quest",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 40,
+            "reqLevel": 35,
+            "stats": "+5 Intellect, +14 Fire Spell Power",
+            "icon": "inv_misc_orb_03"
+          },
+          {
+            "name": "Beacon of Hope",
+            "itemId": 9393,
+            "value": "+18 Healing, +5 Spirit - World drop",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 38,
+            "reqLevel": 33,
+            "stats": "+18 Healing, +5 Spirit",
+            "icon": "inv_misc_lantern_01"
+          },
+          {
+            "name": "Thrice-Damned Effigy",
+            "itemId": 271805,
+            "value": "+12 Spell Power, +6 Stamina - Desolace quest",
+            "faction": "horde",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 42,
+            "reqLevel": 35,
+            "stats": "+12 Spell Power, +6 Stamina",
+            "icon": "inv_misc_orb_01"
+          }
+        ]
+      },
+      {
+        "levelBracket": "36–40",
+        "itemId": 10770,
+        "name": "Mordresh's Lifeless Skull",
+        "icon": "inv_misc_bone_elfskull_01",
+        "weaponType": "Held in Off-hand",
+        "stats": "+7 Intellect, +11 Shadow Spell Power",
+        "source": {
+          "kind": "dungeon",
+          "title": "Razorfen Downs",
+          "detail": "Dropped by Mordresh Fire Eye in Razorfen Downs."
+        },
+        "faction": "both",
+        "quality": "q3",
+        "iLvl": 41,
+        "reqLevel": 36,
+        "alts": [
+          {
+            "name": "Researcher's Night Light",
+            "itemId": 277260,
+            "value": "+15 Spell Power, +5 Intellect - Greater Friend of the Library quest",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 45,
+            "reqLevel": 40,
+            "stats": "+15 Spell Power, +5 Intellect",
+            "icon": "inv_torch_lit"
+          },
+          {
+            "name": "Umbral Crystal",
+            "itemId": 13029,
+            "value": "+11 Shadow Spell Power, +6 Intellect - Rare world drop",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 43,
+            "reqLevel": 38,
+            "stats": "+11 Shadow Spell Power, +6 Intellect",
+            "icon": "inv_misc_orb_04"
+          },
+          {
+            "name": "Aurora Sphere",
+            "itemId": 7610,
+            "value": "+8 Intellect, +8 Spirit - Level 36 drop",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q2",
+            "iLvl": 41,
+            "reqLevel": 36,
+            "stats": "+8 Intellect, +8 Spirit",
+            "icon": "inv_misc_gem_pearl_02"
+          }
+        ]
+      },
+      {
+        "levelBracket": "41–46",
+        "itemId": 249455,
+        "name": "Truesilver Conduit",
+        "icon": "inv_rod_enchantedadamantite",
+        "weaponType": "Held in Off-hand",
+        "stats": "+9 Intellect, +16 Healing, +6 Spell Power",
+        "source": {
+          "kind": "craft",
+          "title": "Blacksmithing / Engineering",
+          "detail": "Crafted magical conduit with exceptional healing and spell stats."
+        },
+        "faction": "both",
+        "quality": "q3",
+        "iLvl": 50,
+        "reqLevel": 45,
+        "alts": [
+          {
+            "name": "Lord Sakrasis' Scepter",
+            "itemId": 5028,
+            "value": "+9 Intellect, +9 Spirit - Desolace quest",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q2",
+            "iLvl": 47,
+            "reqLevel": 42,
+            "stats": "+9 Intellect, +9 Spirit",
+            "icon": "inv_wand_10"
+          },
+          {
+            "name": "Skullspell Orb",
+            "itemId": 10708,
+            "value": "+14 Spell Power, +6 Intellect - Alliance quest 'Return to Tymor'",
+            "faction": "alliance",
+            "weaponType": "Held in Off-hand",
+            "quality": "q2",
+            "iLvl": 52,
+            "reqLevel": 45,
+            "stats": "+14 Spell Power, +6 Intellect",
+            "icon": "inv_misc_bone_elfskull_01"
+          },
+          {
+            "name": "Pyrestone Orb",
+            "itemId": 10709,
+            "value": "+16 Fire Spell Power - Horde quest 'Betrayed'",
+            "faction": "horde",
+            "weaponType": "Held in Off-hand",
+            "quality": "q2",
+            "iLvl": 55,
+            "reqLevel": 44,
+            "stats": "+16 Fire Spell Power",
+            "icon": "inv_misc_orb_05"
+          }
+        ]
+      },
+      {
+        "levelBracket": "47–52",
+        "itemId": 11904,
+        "name": "Spirit of Aquementas",
+        "icon": "inv_ore_arcanite_02",
+        "weaponType": "Held in Off-hand",
+        "stats": "+21 Spell Power",
+        "source": {
+          "kind": "quest",
+          "title": "It's Dangerous to Go Alone",
+          "detail": "Questline reward from Linken in Un'Goro Crater. Unmatched spell power throughout the 40s and 50s."
+        },
+        "faction": "both",
+        "quality": "q3",
+        "iLvl": 56,
+        "reqLevel": 47,
+        "alts": [
+          {
+            "name": "Insurgent's Manifesto",
+            "itemId": 271933,
+            "value": "+16 Spell Power, +8 Stamina - Western Plaguelands quest",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 53,
+            "reqLevel": 48,
+            "stats": "+16 Spell Power, +8 Stamina",
+            "icon": "inv_misc_book_06"
+          },
+          {
+            "name": "Tome of the Darkspear Prophecy",
+            "itemId": 272088,
+            "value": "+16 Spell Power, +8 Spirit - Western Plaguelands quest",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 53,
+            "reqLevel": 48,
+            "stats": "+16 Spell Power, +8 Spirit",
+            "icon": "inv_misc_book_06"
+          },
+          {
+            "name": "Magebane Scion",
+            "itemId": 15857,
+            "value": "+18 Spell Power - Blasted Lands quest 'Hidden Treasures'",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 60,
+            "reqLevel": 50,
+            "stats": "+18 Spell Power",
+            "icon": "inv_staff_11"
+          }
+        ]
+      },
+      {
+        "levelBracket": "53–60",
+        "itemId": 19312,
+        "name": "Lei of the Lifegiver",
+        "icon": "inv_misc_flower_04",
+        "weaponType": "Held in Off-hand",
+        "stats": "+53 Healing, +4 MP5",
+        "source": {
+          "kind": "quest",
+          "title": "Alterac Valley (Stormpike / Frostwolf)",
+          "detail": "Exalted faction reward with unparalleled healing power and mana regeneration."
+        },
+        "faction": "both",
+        "quality": "q4",
+        "iLvl": 60,
+        "reqLevel": 55,
+        "alts": [
+          {
+            "name": "Tome of Shadow Force",
+            "itemId": 19309,
+            "value": "+34 Shadow Spell Power - Stratholme drop",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q4",
+            "iLvl": 60,
+            "reqLevel": 55,
+            "stats": "+34 Shadow Spell Power",
+            "icon": "inv_misc_book_06"
+          },
+          {
+            "name": "Tome of the Ice Lord",
+            "itemId": 19310,
+            "value": "+34 Frost Spell Power - Alterac Valley / Scholomance",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q4",
+            "iLvl": 60,
+            "reqLevel": 55,
+            "stats": "+34 Frost Spell Power",
+            "icon": "inv_misc_book_11"
+          },
+          {
+            "name": "Tome of Fiery Arcana",
+            "itemId": 19311,
+            "value": "+34 Fire Spell Power - Stratholme drop",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q4",
+            "iLvl": 60,
+            "reqLevel": 55,
+            "stats": "+34 Fire Spell Power",
+            "icon": "inv_misc_book_09"
+          },
+          {
+            "name": "Tome of Arcane Domination",
+            "itemId": 19308,
+            "value": "+31 Arcane Spell Power, +3 MP5 - Scholomance drop",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q4",
+            "iLvl": 60,
+            "reqLevel": 55,
+            "stats": "+31 Arcane Spell Power, +3 MP5",
+            "icon": "inv_misc_book_01"
+          },
+          {
+            "name": "Barkskin Baubles",
+            "itemId": 274417,
+            "value": "+22 Healing, +7 Intellect - Felwood quest",
+            "faction": "both",
+            "weaponType": "Held in Off-hand",
+            "quality": "q3",
+            "iLvl": 58,
+            "reqLevel": 53,
+            "stats": "+22 Healing, +7 Intellect",
+            "icon": "inv_misc_bag_10_black"
+          }
+        ]
+      }
+    ]
+  }
+}

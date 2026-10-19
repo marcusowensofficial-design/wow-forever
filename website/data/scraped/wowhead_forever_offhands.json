@@ -1,0 +1,8708 @@
+[
+  {
+    "appearances": {
+      "0": [
+        7469,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Totem of Infliction",
+    "displayid": 7469,
+    "flags2": 24576,
+    "id": 1131,
+    "level": 25,
+    "name": "Totem of Infliction",
+    "quality": 2,
+    "reqlevel": 18,
+    "side": 1,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      4
+    ],
+    "sourcemore": [
+      {
+        "c": 10,
+        "c2": 0,
+        "n": "The Totem of Infliction",
+        "t": 5,
+        "ti": 101
+      }
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "updated",
+      "labels": [
+        "stats_changed"
+      ],
+      "lines": [
+        "Armor 50 removed"
+      ],
+      "notShown": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 38
+  },
+  {
+    "appearances": {
+      "0": [
+        6520,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Grayson's Torch",
+    "displayid": 6520,
+    "flags2": 24576,
+    "id": 1172,
+    "level": 21,
+    "name": "Grayson's Torch",
+    "quality": 2,
+    "reqlevel": 15,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      4
+    ],
+    "sourcemore": [
+      {
+        "c": 40,
+        "c2": 0,
+        "n": "The Coastal Menace",
+        "t": 5,
+        "ti": 104
+      }
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "updated",
+      "labels": [
+        "stats_changed"
+      ],
+      "lines": [
+        "Armor 15 removed"
+      ],
+      "notShown": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 101
+  },
+  {
+    "appearances": {
+      "0": [
+        21609,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Swampchill Fetish",
+    "displayid": 21609,
+    "id": 1992,
+    "level": 38,
+    "name": "Swampchill Fetish",
+    "quality": 3,
+    "reqlevel": 33,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      2
+    ],
+    "sourcemore": [
+      {
+        "dd": -1,
+        "z": 796
+      }
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 57
+  },
+  {
+    "appearances": {
+      "0": [
+        6520,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Smoky Torch",
+    "displayid": 6520,
+    "flags2": 24580,
+    "id": 2410,
+    "level": 1,
+    "name": "Smoky Torch",
+    "quality": 1,
+    "slot": 23,
+    "slotbak": 23,
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 25
+  },
+  {
+    "appearances": {
+      "0": [
+        752961,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Bouquet of Scarlet Begonias",
+    "displayid": 752961,
+    "flags2": 24580,
+    "id": 2562,
+    "level": 23,
+    "name": "Bouquet of Scarlet Begonias",
+    "quality": 1,
+    "reqlevel": 18,
+    "side": 1,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      4
+    ],
+    "sourcemore": [
+      {
+        "c": 44,
+        "c2": 0,
+        "n": "An Unwelcome Guest",
+        "t": 5,
+        "ti": 34
+      }
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "updated",
+      "labels": [
+        "new_icon"
+      ],
+      "lines": [
+        "New icon"
+      ],
+      "notShown": [
+        "New icon"
+      ]
+    },
+    "firstseenpatch": 0,
+    "popularity": 34
+  },
+  {
+    "appearances": {
+      "0": [
+        6555,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Rod of Molten Fire",
+    "displayid": 6555,
+    "flags2": 16388,
+    "id": 2565,
+    "level": 35,
+    "name": "Rod of Molten Fire",
+    "quality": 3,
+    "reqlevel": 30,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      2
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 50
+  },
+  {
+    "appearances": {
+      "0": [
+        13109,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Antipodean Rod",
+    "displayid": 13109,
+    "flags2": 16388,
+    "id": 2879,
+    "level": 22,
+    "name": "Antipodean Rod",
+    "quality": 3,
+    "reqlevel": 17,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      2
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 41
+  },
+  {
+    "appearances": {
+      "0": [
+        21596,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Eye of Paleth",
+    "displayid": 21596,
+    "flags2": 24580,
+    "id": 2943,
+    "level": 31,
+    "name": "Eye of Paleth",
+    "quality": 2,
+    "reqlevel": 22,
+    "side": 1,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      4
+    ],
+    "sourcemore": [
+      {
+        "c": 11,
+        "c2": 0,
+        "n": "Cleansing the Eye",
+        "t": 5,
+        "ti": 293
+      }
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "updated",
+      "labels": [
+        "stats_changed"
+      ],
+      "lines": [
+        "Spell Power 4 added",
+        "Healing 9 instead of 13"
+      ],
+      "notShown": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 33
+  },
+  {
+    "appearances": {
+      "0": [
+        21597,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Cursed Eye of Paleth",
+    "displayid": 21597,
+    "flags2": 24580,
+    "id": 2944,
+    "level": 31,
+    "name": "Cursed Eye of Paleth",
+    "quality": 2,
+    "reqlevel": 26,
+    "side": 1,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      4
+    ],
+    "sourcemore": [
+      {
+        "z": 11
+      }
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "updated",
+      "labels": [
+        "stats_changed",
+        "details_changed"
+      ],
+      "lines": [
+        "Quest item instead of Binds when picked up",
+        "Stamina -3 removed"
+      ],
+      "notShown": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 44
+  },
+  {
+    "appearances": {
+      "0": [
+        3573,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Stitches' Femur",
+    "displayid": 3573,
+    "flags2": 24580,
+    "id": 3360,
+    "level": 30,
+    "name": "Stitches' Femur",
+    "quality": 1,
+    "reqlevel": 25,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      2
+    ],
+    "sourcemore": [
+      {
+        "n": "Stitches",
+        "t": 1,
+        "ti": 412
+      }
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "updated",
+      "labels": [
+        "stats_changed"
+      ],
+      "lines": [
+        "Armor 50 removed"
+      ],
+      "notShown": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 105
+  },
+  {
+    "appearances": {
+      "0": [
+        6549,
+        "inv_misc_flower_04"
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "commondrop": true,
+    "displayName": "Red Rose",
+    "displayid": 6549,
+    "flags2": 24580,
+    "id": 3419,
+    "level": 20,
+    "name": "Red Rose",
+    "quality": 1,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      2,
+      5,
+      21
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 22
+  },
+  {
+    "appearances": {
+      "0": [
+        6483,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Black Rose",
+    "displayid": 6483,
+    "flags2": 24580,
+    "id": 3420,
+    "level": 40,
+    "name": "Black Rose",
+    "quality": 1,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      5
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 13
+  },
+  {
+    "appearances": {
+      "0": [
+        6560,
+        "inv_misc_flower_04"
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Simple Wildflowers",
+    "displayid": 6560,
+    "flags2": 24580,
+    "id": 3421,
+    "level": 10,
+    "name": "Simple Wildflowers",
+    "quality": 1,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      2,
+      5,
+      21
+    ],
+    "sourcemore": [
+      {
+        "n": "Forest Ooze",
+        "t": 1,
+        "ti": 8766,
+        "z": 16
+      },
+      {
+        "n": "Forest Ooze",
+        "t": 1,
+        "ti": 8766,
+        "z": 16
+      }
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 147
+  },
+  {
+    "appearances": {
+      "0": [
+        6479,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Beautiful Wildflowers",
+    "displayid": 6479,
+    "flags2": 24580,
+    "id": 3422,
+    "level": 30,
+    "name": "Beautiful Wildflowers",
+    "quality": 1,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      5
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 19
+  },
+  {
+    "appearances": {
+      "0": [
+        6489,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Bouquet of White Roses",
+    "displayid": 6489,
+    "flags2": 24580,
+    "id": 3423,
+    "level": 50,
+    "name": "Bouquet of White Roses",
+    "quality": 1,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      5
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 16
+  },
+  {
+    "appearances": {
+      "0": [
+        6487,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Bouquet of Black Roses",
+    "displayid": 6487,
+    "flags2": 24580,
+    "id": 3424,
+    "level": 60,
+    "name": "Bouquet of Black Roses",
+    "quality": 1,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      5
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 15
+  },
+  {
+    "appearances": {
+      "0": [
+        752962,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Nightglow Concoction",
+    "displayid": 752962,
+    "flags2": 24580,
+    "id": 3451,
+    "level": 18,
+    "name": "Nightglow Concoction",
+    "quality": 2,
+    "reqlevel": 9,
+    "side": 2,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      4
+    ],
+    "sourcemore": [
+      {
+        "c": 130,
+        "c2": 0,
+        "n": "A Recipe For Death",
+        "t": 5,
+        "ti": 451
+      }
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "updated",
+      "labels": [
+        "new_icon"
+      ],
+      "lines": [
+        "New icon"
+      ],
+      "notShown": [
+        "New icon"
+      ]
+    },
+    "firstseenpatch": 0,
+    "popularity": 18
+  },
+  {
+    "armor": 0,
+    "classs": 4,
+    "commondrop": true,
+    "displayName": "Burnt Out Torch",
+    "flags2": 24580,
+    "id": 3675,
+    "level": 1,
+    "name": "Burnt Out Torch",
+    "quality": 0,
+    "slot": 23,
+    "slotbak": 23,
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 14
+  },
+  {
+    "appearances": {
+      "0": [
+        21605,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Tranquil Orb",
+    "displayid": 21605,
+    "flags2": 24580,
+    "id": 4125,
+    "level": 46,
+    "name": "Tranquil Orb",
+    "quality": 2,
+    "reqlevel": 30,
+    "side": 1,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      4
+    ],
+    "sourcemore": [
+      {
+        "c": 33,
+        "c2": 0,
+        "n": "Mai'Zoth",
+        "t": 5,
+        "ti": 206
+      }
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "updated",
+      "labels": [
+        "stats_changed",
+        "level_changed"
+      ],
+      "lines": [
+        "Item level 46 instead of 43",
+        "Spirit 9 instead of 8"
+      ],
+      "notShown": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 29
+  },
+  {
+    "appearances": {
+      "0": [
+        753043,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "commondrop": true,
+    "displayName": "Lapidis Tankard of Tidesippe",
+    "displayid": 753043,
+    "flags2": 16388,
+    "id": 4696,
+    "level": 59,
+    "name": "Lapidis Tankard of Tidesippe",
+    "quality": 3,
+    "reqlevel": 54,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      2
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "updated",
+      "labels": [
+        "stats_changed",
+        "new_icon"
+      ],
+      "lines": [
+        "Agility -15 removed",
+        "New icon"
+      ],
+      "notShown": [
+        "New icon"
+      ]
+    },
+    "firstseenpatch": 0,
+    "popularity": 27
+  },
+  {
+    "appearances": {
+      "0": [
+        21601,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Fireproof Orb",
+    "displayid": 21601,
+    "flags2": 24580,
+    "id": 4836,
+    "level": 28,
+    "name": "Fireproof Orb",
+    "quality": 2,
+    "reqlevel": 23,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      5
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 35
+  },
+  {
+    "appearances": {
+      "0": [
+        8043,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Strength of Will",
+    "displayid": 8043,
+    "flags2": 24580,
+    "id": 4837,
+    "level": 30,
+    "name": "Strength of Will",
+    "quality": 2,
+    "reqlevel": 25,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      5
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 21
+  },
+  {
+    "appearances": {
+      "0": [
+        8043,
+        "inv_jewelry_talisman_05"
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Orb of Power",
+    "displayid": 8043,
+    "flags2": 24580,
+    "id": 4838,
+    "level": 26,
+    "name": "Orb of Power",
+    "quality": 2,
+    "reqlevel": 21,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      5
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 20
+  },
+  {
+    "appearances": {
+      "0": [
+        21609,
+        "inv_misc_bone_orcskull_01"
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Skull of Impending Doom",
+    "displayid": 21609,
+    "flags2": 24580,
+    "id": 4984,
+    "level": 41,
+    "name": "Skull of Impending Doom",
+    "quality": 2,
+    "reqlevel": 30,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      4,
+      5
+    ],
+    "sourcemore": [
+      {
+        "c": 3,
+        "c2": 0,
+        "n": "Forbidden Knowledge",
+        "t": 5,
+        "ti": 737
+      }
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 394
+  },
+  {
+    "appearances": {
+      "0": [
+        11958,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Lord Sakrasis' Scepter",
+    "displayid": 11958,
+    "flags2": 4,
+    "id": 5028,
+    "level": 47,
+    "name": "Lord Sakrasis' Scepter",
+    "quality": 2,
+    "reqlevel": 42,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      2
+    ],
+    "sourcemore": [
+      {
+        "dd": -1,
+        "n": "Lord Sakrasis",
+        "t": 1,
+        "ti": 2541,
+        "z": 33
+      }
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "updated",
+      "labels": [
+        "stats_changed",
+        "effects_changed",
+        "text_changed"
+      ],
+      "lines": [
+        "Spirit 8 removed",
+        "Effects added",
+        "Flavor text added"
+      ],
+      "notShown": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 28
+  },
+  {
+    "appearances": {
+      "0": [
+        21601,
+        "inv_jewelry_talisman_01"
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Pulsating Hydra Heart",
+    "displayid": 21601,
+    "flags2": 16388,
+    "id": 5183,
+    "level": 22,
+    "name": "Pulsating Hydra Heart",
+    "quality": 3,
+    "reqlevel": 17,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      2
+    ],
+    "sourcemore": [
+      {
+        "dd": -1,
+        "n": "Gesharahan",
+        "t": 1,
+        "ti": 3398,
+        "z": 17
+      }
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "updated",
+      "labels": [
+        "stats_changed",
+        "level_changed",
+        "required_level_changed",
+        "details_changed"
+      ],
+      "lines": [
+        "Item level 22 instead of 20",
+        "Binds when picked up instead of Binds when equipped",
+        "Fire Spell Power 8 instead of 7",
+        "Requires level 17 instead of 15"
+      ],
+      "notShown": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 27
+  },
+  {
+    "appearances": {
+      "0": [
+        753033,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Everglow Lantern",
+    "displayid": 753033,
+    "flags2": 24580,
+    "id": 5323,
+    "level": 25,
+    "name": "Everglow Lantern",
+    "quality": 2,
+    "reqlevel": 19,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      4
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "updated",
+      "labels": [
+        "new_icon"
+      ],
+      "lines": [
+        "New icon"
+      ],
+      "notShown": [
+        "New icon"
+      ]
+    },
+    "firstseenpatch": 0,
+    "popularity": 41
+  },
+  {
+    "appearances": {
+      "0": [
+        752963,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Tear of Grief",
+    "displayid": 752963,
+    "flags2": 24580,
+    "id": 5611,
+    "level": 16,
+    "name": "Tear of Grief",
+    "quality": 2,
+    "reqlevel": 11,
+    "side": 1,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      4
+    ],
+    "sourcemore": [
+      {
+        "c": 148,
+        "c2": 1,
+        "n": "For Love Eternal",
+        "t": 5,
+        "ti": 963
+      }
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "updated",
+      "labels": [
+        "stats_changed",
+        "new_icon"
+      ],
+      "lines": [
+        "Spirit -3 removed",
+        "New icon"
+      ],
+      "notShown": [
+        "New icon"
+      ]
+    },
+    "firstseenpatch": 0,
+    "popularity": 35
+  },
+  {
+    "appearances": {
+      "0": [
+        6520,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Dim Torch",
+    "displayid": 6520,
+    "flags2": 24580,
+    "id": 6182,
+    "level": 10,
+    "name": "Dim Torch",
+    "quality": 1,
+    "reqlevel": 5,
+    "slot": 23,
+    "slotbak": 23,
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 19
+  },
+  {
+    "appearances": {
+      "0": [
+        10816,
+        "inv_misc_fish_02"
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "10 Pound Mud Snapper",
+    "displayid": 10816,
+    "flags2": 24580,
+    "id": 6292,
+    "level": 15,
+    "name": "10 Pound Mud Snapper",
+    "quality": 1,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      16
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 94
+  },
+  {
+    "appearances": {
+      "0": [
+        10816,
+        "inv_misc_fish_02"
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "12 Pound Mud Snapper",
+    "displayid": 10816,
+    "flags2": 24580,
+    "id": 6294,
+    "level": 15,
+    "name": "12 Pound Mud Snapper",
+    "quality": 1,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      16
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 63
+  },
+  {
+    "appearances": {
+      "0": [
+        10816,
+        "inv_misc_fish_02"
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "15 Pound Mud Snapper",
+    "displayid": 10816,
+    "flags2": 24580,
+    "id": 6295,
+    "level": 15,
+    "name": "15 Pound Mud Snapper",
+    "quality": 1,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      16
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 57
+  },
+  {
+    "appearances": {
+      "0": [
+        10814,
+        "inv_misc_fish_02"
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "17 Pound Catfish",
+    "displayid": 10814,
+    "flags2": 24580,
+    "id": 6309,
+    "level": 15,
+    "name": "17 Pound Catfish",
+    "quality": 1,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      16
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 69
+  },
+  {
+    "appearances": {
+      "0": [
+        10814,
+        "inv_misc_fish_02"
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "19 Pound Catfish",
+    "displayid": 10814,
+    "flags2": 24580,
+    "id": 6310,
+    "level": 15,
+    "name": "19 Pound Catfish",
+    "quality": 1,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      16
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 46
+  },
+  {
+    "appearances": {
+      "0": [
+        10814,
+        "inv_misc_fish_02"
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "22 Pound Catfish",
+    "displayid": 10814,
+    "flags2": 24580,
+    "id": 6311,
+    "level": 15,
+    "name": "22 Pound Catfish",
+    "quality": 1,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      16
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 28
+  },
+  {
+    "appearances": {
+      "0": [
+        753032,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Eerie Stable Lantern",
+    "displayid": 753032,
+    "flags2": 4,
+    "id": 6341,
+    "level": 21,
+    "name": "Eerie Stable Lantern",
+    "quality": 3,
+    "reqlevel": 19,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      2
+    ],
+    "sourcemore": [
+      {
+        "z": 209
+      }
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "updated",
+      "labels": [
+        "stats_changed",
+        "level_changed",
+        "required_level_changed",
+        "quality_changed",
+        "new_icon"
+      ],
+      "lines": [
+        "Rare instead of Uncommon",
+        "Item level 21 instead of 19",
+        "Stamina 4 instead of 3",
+        "Shadow Resistance 4 added",
+        "Requires level 19 instead of 14",
+        "New icon"
+      ],
+      "notShown": [
+        "New icon"
+      ]
+    },
+    "firstseenpatch": 0,
+    "popularity": 64
+  },
+  {
+    "appearances": {
+      "0": [
+        10814,
+        "inv_misc_fish_02"
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "26 Pound Catfish",
+    "displayid": 10814,
+    "flags2": 24580,
+    "id": 6363,
+    "level": 25,
+    "name": "26 Pound Catfish",
+    "quality": 1,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      16
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 19
+  },
+  {
+    "appearances": {
+      "0": [
+        10814,
+        "inv_misc_fish_02"
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "32 Pound Catfish",
+    "displayid": 10814,
+    "flags2": 24580,
+    "id": 6364,
+    "level": 25,
+    "name": "32 Pound Catfish",
+    "quality": 1,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      16
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 33
+  },
+  {
+    "appearances": {
+      "0": [
+        12992,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Torch of the Dormant Flame",
+    "displayid": 12992,
+    "flags2": 24580,
+    "id": 6653,
+    "level": 1,
+    "name": "Torch of the Dormant Flame",
+    "quality": 1,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      4
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 33
+  },
+  {
+    "appearances": {
+      "0": [
+        6520,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Torch of the Eternal Flame",
+    "displayid": 6520,
+    "flags2": 24580,
+    "id": 6654,
+    "level": 1,
+    "name": "Torch of the Eternal Flame",
+    "quality": 1,
+    "reqlevel": 10,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      4
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 47
+  },
+  {
+    "appearances": {
+      "0": [
+        752974,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Traitor's Finger",
+    "displayid": 752974,
+    "flags2": 24580,
+    "id": 6774,
+    "level": 42,
+    "name": "Traitor's Finger",
+    "quality": 2,
+    "reqlevel": 35,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      4
+    ],
+    "sourcemore": [
+      {
+        "z": 405
+      }
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "updated",
+      "labels": [
+        "required_level_changed",
+        "new_icon",
+        "renamed"
+      ],
+      "lines": [
+        "Renamed from Uthek's Finger",
+        "Requires level 35 instead of 30",
+        "New icon"
+      ],
+      "notShown": [
+        "New icon"
+      ]
+    },
+    "firstseenpatch": 0,
+    "popularity": 21
+  },
+  {
+    "appearances": {
+      "0": [
+        21597,
+        "inv_misc_orb_04"
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Orb of Soran'ruk",
+    "displayid": 21597,
+    "flags2": 8196,
+    "id": 6898,
+    "level": 25,
+    "name": "Orb of Soran'ruk",
+    "quality": 3,
+    "reqclass": 2816,
+    "reqlevel": 20,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      4
+    ],
+    "sourcemore": [
+      {
+        "c": -61,
+        "c2": 4,
+        "n": "The Orb of Soran'ruk",
+        "t": 5,
+        "ti": 1740
+      }
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "updated",
+      "labels": [
+        "stats_changed",
+        "effects_changed",
+        "quality_changed"
+      ],
+      "lines": [
+        "Rare instead of Uncommon",
+        "Fire Spell Power 9 instead of 4",
+        "Shadow Spell Power 9 instead of 4",
+        "Effects: 48 instead of 25"
+      ],
+      "notShown": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 105
+  },
+  {
+    "armor": 0,
+    "classs": 4,
+    "commondrop": true,
+    "displayName": "Warlock Orb 35",
+    "flags2": 24580,
+    "id": 6899,
+    "level": 35,
+    "name": "Warlock Orb 35",
+    "quality": 0,
+    "reqclass": 2816,
+    "slot": 23,
+    "slotbak": 23,
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 9
+  },
+  {
+    "appearances": {
+      "0": [
+        3947,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Morbent's Bane",
+    "displayid": 3947,
+    "flags2": 24580,
+    "id": 7297,
+    "level": 33,
+    "name": "Morbent's Bane",
+    "quality": 1,
+    "side": 1,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      4
+    ],
+    "sourcemore": [
+      {
+        "z": 10
+      }
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 38
+  },
+  {
+    "appearances": {
+      "0": [
+        3947,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Torch of Holy Flame",
+    "displayid": 3947,
+    "flags2": 24580,
+    "id": 7344,
+    "level": 33,
+    "name": "Torch of Holy Flame",
+    "quality": 2,
+    "reqlevel": 20,
+    "side": 1,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      4
+    ],
+    "sourcemore": [
+      {
+        "c": 10,
+        "c2": 0,
+        "n": "Morbent Fel",
+        "t": 5,
+        "ti": 55
+      }
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "updated",
+      "labels": [
+        "effects_changed"
+      ],
+      "lines": [
+        "Effects added"
+      ],
+      "notShown": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 45
+  },
+  {
+    "appearances": {
+      "0": [
+        22923,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Arcane Orb",
+    "displayid": 22923,
+    "flags2": 24580,
+    "id": 7507,
+    "level": 10,
+    "name": "Arcane Orb",
+    "quality": 2,
+    "reqclass": 128,
+    "reqlevel": 10,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      4
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 33
+  },
+  {
+    "appearances": {
+      "0": [
+        22923,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Ley Orb",
+    "displayid": 22923,
+    "flags2": 24580,
+    "id": 7508,
+    "level": 10,
+    "name": "Ley Orb",
+    "quality": 2,
+    "reqclass": 128,
+    "reqlevel": 10,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      4
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 13
+  },
+  {
+    "appearances": {
+      "0": [
+        25072,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Celestial Orb",
+    "displayid": 25072,
+    "flags2": 24580,
+    "id": 7515,
+    "level": 40,
+    "name": "Celestial Orb",
+    "quality": 3,
+    "reqclass": 2688,
+    "reqlevel": 35,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      4
+    ],
+    "sourcemore": [
+      {
+        "c": -161,
+        "c2": 4,
+        "n": "Celestial Power",
+        "t": 5,
+        "ti": 1958
+      }
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 30
+  },
+  {
+    "appearances": {
+      "0": [
+        752973,
+        ""
+      ]
+    },
+    "armor": 0,
+    "bonustrees": [
+      6337
+    ],
+    "classs": 4,
+    "commondrop": true,
+    "displayName": "Willow Branch",
+    "displayid": 752973,
+    "flags2": 24580,
+    "id": 7554,
+    "level": 19,
+    "name": "Willow Branch",
+    "quality": 2,
+    "reqlevel": 14,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      2
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "updated",
+      "labels": [
+        "new_icon"
+      ],
+      "lines": [
+        "New icon"
+      ],
+      "notShown": [
+        "New icon"
+      ]
+    },
+    "firstseenpatch": 0,
+    "popularity": 32
+  },
+  {
+    "appearances": {
+      "0": [
+        752313,
+        ""
+      ]
+    },
+    "armor": 0,
+    "bonustrees": [
+      5661
+    ],
+    "classs": 4,
+    "displayName": "Regal Star",
+    "displayid": 752313,
+    "flags2": 24580,
+    "id": 7555,
+    "level": 45,
+    "name": "Regal Star",
+    "quality": 2,
+    "reqlevel": 40,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      2
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "updated",
+      "labels": [
+        "new_icon"
+      ],
+      "lines": [
+        "New icon"
+      ],
+      "notShown": [
+        "New icon"
+      ]
+    },
+    "firstseenpatch": 0,
+    "popularity": 29
+  },
+  {
+    "appearances": {
+      "0": [
+        21597,
+        ""
+      ]
+    },
+    "armor": 0,
+    "bonustrees": [
+      5661
+    ],
+    "classs": 4,
+    "commondrop": true,
+    "displayName": "Twilight Orb",
+    "displayid": 21597,
+    "flags2": 24580,
+    "id": 7556,
+    "level": 40,
+    "name": "Twilight Orb",
+    "quality": 2,
+    "reqlevel": 35,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      2
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 23
+  },
+  {
+    "appearances": {
+      "0": [
+        15427,
+        ""
+      ]
+    },
+    "armor": 0,
+    "bonustrees": [
+      5661
+    ],
+    "classs": 4,
+    "commondrop": true,
+    "displayName": "Gossamer Rod",
+    "displayid": 15427,
+    "flags2": 16388,
+    "id": 7557,
+    "level": 50,
+    "name": "Gossamer Rod",
+    "quality": 2,
+    "reqlevel": 45,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      2
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 18
+  },
+  {
+    "appearances": {
+      "0": [
+        15428,
+        ""
+      ]
+    },
+    "armor": 0,
+    "bonustrees": [
+      6337
+    ],
+    "classs": 4,
+    "commondrop": true,
+    "displayName": "Shimmering Stave",
+    "displayid": 15428,
+    "flags2": 24580,
+    "id": 7558,
+    "level": 25,
+    "name": "Shimmering Stave",
+    "quality": 2,
+    "reqlevel": 20,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      2,
+      16
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 34
+  },
+  {
+    "appearances": {
+      "0": [
+        11919,
+        "inv_staff_16"
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Runic Cane",
+    "displayid": 11919,
+    "flags2": 16388,
+    "id": 7559,
+    "level": 19,
+    "name": "Runic Cane",
+    "quality": 2,
+    "reqlevel": 14,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      2
+    ],
+    "sourcemore": [
+      {
+        "dd": -1,
+        "n": "Brokespear",
+        "t": 1,
+        "ti": 5838,
+        "z": 17
+      }
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "updated",
+      "labels": [
+        "level_changed",
+        "required_level_changed"
+      ],
+      "lines": [
+        "Item level 19 instead of 17",
+        "Requires level 14 instead of 12"
+      ],
+      "notShown": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 33
+  },
+  {
+    "appearances": {
+      "0": [
+        753048,
+        "inv_drink_08"
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "commondrop": true,
+    "displayName": "Seer's Fine Stein",
+    "displayid": 753048,
+    "flags2": 24580,
+    "id": 7608,
+    "level": 21,
+    "name": "Seer's Fine Stein",
+    "quality": 2,
+    "reqlevel": 16,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      2
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "updated",
+      "labels": [
+        "new_icon"
+      ],
+      "lines": [
+        "New icon"
+      ],
+      "notShown": [
+        "New icon"
+      ]
+    },
+    "firstseenpatch": 0,
+    "popularity": 18
+  },
+  {
+    "appearances": {
+      "0": [
+        5050,
+        ""
+      ]
+    },
+    "armor": 0,
+    "bonustrees": [
+      5661
+    ],
+    "classs": 4,
+    "commondrop": true,
+    "displayName": "Elder's Amber Stave",
+    "displayid": 5050,
+    "flags2": 24580,
+    "id": 7609,
+    "level": 35,
+    "name": "Elder's Amber Stave",
+    "quality": 2,
+    "reqlevel": 30,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      2
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 63
+  },
+  {
+    "appearances": {
+      "0": [
+        21596,
+        "inv_misc_orb_03"
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "commondrop": true,
+    "displayName": "Aurora Sphere",
+    "displayid": 21596,
+    "flags2": 24580,
+    "id": 7610,
+    "level": 41,
+    "name": "Aurora Sphere",
+    "quality": 2,
+    "reqlevel": 36,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      2
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 17
+  },
+  {
+    "appearances": {
+      "0": [
+        2509,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Mistscape Stave",
+    "displayid": 2509,
+    "flags2": 16388,
+    "id": 7611,
+    "level": 46,
+    "name": "Mistscape Stave",
+    "quality": 2,
+    "reqlevel": 41,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      2
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 9
+  },
+  {
+    "appearances": {
+      "0": [
+        15725,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Orb of the Forgotten Seer",
+    "displayid": 15725,
+    "flags2": 4,
+    "id": 7685,
+    "level": 37,
+    "name": "Orb of the Forgotten Seer",
+    "quality": 3,
+    "reqlevel": 32,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      2
+    ],
+    "sourcemore": [
+      {
+        "n": "Bloodmage Thalnos",
+        "t": 1,
+        "ti": 4543,
+        "z": 796
+      }
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "updated",
+      "labels": [
+        "stats_changed",
+        "level_changed",
+        "required_level_changed"
+      ],
+      "lines": [
+        "Item level 37 instead of 38",
+        "Spell Power 14 instead of 12",
+        "Requires level 32 instead of 33"
+      ],
+      "notShown": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 65
+  },
+  {
+    "appearances": {
+      "0": [
+        15884,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Omega Orb",
+    "displayid": 15884,
+    "flags2": 4,
+    "id": 7749,
+    "level": 40,
+    "name": "Omega Orb",
+    "quality": 3,
+    "reqlevel": 28,
+    "side": 2,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      4
+    ],
+    "sourcemore": [
+      {
+        "c": 796,
+        "c2": 2,
+        "n": "Compendium of the Fallen",
+        "t": 5,
+        "ti": 1049
+      }
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "updated",
+      "labels": [
+        "stats_changed",
+        "level_changed",
+        "quality_changed"
+      ],
+      "lines": [
+        "Rare instead of Uncommon",
+        "Item level 40 instead of 41",
+        "Spell Power 9 instead of 11",
+        "Mana per 5 sec 3 added"
+      ],
+      "notShown": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 70
+  },
+  {
+    "appearances": {
+      "0": [
+        17599,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Red Sparkler",
+    "displayid": 17599,
+    "flags2": 24580,
+    "id": 8624,
+    "level": 10,
+    "name": "Red Sparkler",
+    "quality": 1,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      5
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 13
+  },
+  {
+    "appearances": {
+      "0": [
+        17600,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "White Sparkler",
+    "displayid": 17600,
+    "flags2": 24580,
+    "id": 8625,
+    "level": 10,
+    "name": "White Sparkler",
+    "quality": 1,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      5
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 13
+  },
+  {
+    "appearances": {
+      "0": [
+        17602,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Blue Sparkler",
+    "displayid": 17602,
+    "flags2": 24580,
+    "id": 8626,
+    "level": 10,
+    "name": "Blue Sparkler",
+    "quality": 1,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      5
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 9
+  },
+  {
+    "appearances": {
+      "0": [
+        753032,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Beacon of Hope",
+    "displayid": 753032,
+    "flags2": 4,
+    "id": 9393,
+    "level": 38,
+    "name": "Beacon of Hope",
+    "quality": 3,
+    "reqlevel": 33,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      2
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "updated",
+      "labels": [
+        "stats_changed",
+        "new_icon"
+      ],
+      "lines": [
+        "Spell Power 8 added",
+        "Healing 14 instead of 22",
+        "New icon"
+      ],
+      "notShown": [
+        "New icon"
+      ]
+    },
+    "firstseenpatch": 0,
+    "popularity": 33
+  },
+  {
+    "appearances": {
+      "0": [
+        18575,
+        "inv_misc_bomb_06"
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Thermotastic Egg Timer",
+    "displayid": 18575,
+    "flags2": 24580,
+    "id": 9644,
+    "level": 51,
+    "name": "Thermotastic Egg Timer",
+    "quality": 2,
+    "reqlevel": 43,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      4
+    ],
+    "sourcemore": [
+      {
+        "c": 440,
+        "c2": 1,
+        "n": "Rescue OOX-17/TN!",
+        "t": 5,
+        "ti": 648
+      }
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 9
+  },
+  {
+    "appearances": {
+      "0": [
+        28023,
+        ""
+      ]
+    },
+    "armor": 0,
+    "bonustrees": [
+      5661
+    ],
+    "classs": 4,
+    "commondrop": true,
+    "displayName": "Greenweave Branch",
+    "displayid": 28023,
+    "flags2": 24580,
+    "id": 9769,
+    "level": 27,
+    "name": "Greenweave Branch",
+    "quality": 2,
+    "reqlevel": 22,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      2
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 23
+  },
+  {
+    "appearances": {
+      "0": [
+        27756,
+        ""
+      ]
+    },
+    "armor": 0,
+    "bonustrees": [
+      5661
+    ],
+    "classs": 4,
+    "commondrop": true,
+    "displayName": "Ivy Orb",
+    "displayid": 27756,
+    "flags2": 24580,
+    "id": 9800,
+    "level": 29,
+    "name": "Ivy Orb",
+    "quality": 2,
+    "reqlevel": 24,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      2,
+      16
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 29
+  },
+  {
+    "appearances": {
+      "0": [
+        21603,
+        ""
+      ]
+    },
+    "armor": 0,
+    "bonustrees": [
+      5661
+    ],
+    "classs": 4,
+    "displayName": "Sorcerer Sphere",
+    "displayid": 21603,
+    "flags2": 24580,
+    "id": 9882,
+    "level": 43,
+    "name": "Sorcerer Sphere",
+    "quality": 2,
+    "reqlevel": 38,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      2
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 12
+  },
+  {
+    "appearances": {
+      "0": [
+        18373,
+        ""
+      ]
+    },
+    "armor": 0,
+    "bonustrees": [
+      5661
+    ],
+    "classs": 4,
+    "displayName": "Royal Scepter",
+    "displayid": 18373,
+    "flags2": 24580,
+    "id": 9914,
+    "level": 48,
+    "name": "Royal Scepter",
+    "quality": 2,
+    "reqlevel": 43,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      2
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 10
+  },
+  {
+    "appearances": {
+      "0": [
+        27801,
+        ""
+      ]
+    },
+    "armor": 0,
+    "bonustrees": [
+      5661
+    ],
+    "classs": 4,
+    "commondrop": true,
+    "displayName": "Abjurer's Crystal",
+    "displayid": 27801,
+    "flags2": 16388,
+    "id": 9944,
+    "level": 53,
+    "name": "Abjurer's Crystal",
+    "quality": 2,
+    "reqlevel": 48,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      2
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 12
+  },
+  {
+    "appearances": {
+      "0": [
+        19786,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Skullspell Orb",
+    "displayid": 19786,
+    "flags2": 24580,
+    "id": 10708,
+    "level": 52,
+    "name": "Skullspell Orb",
+    "quality": 2,
+    "reqlevel": 45,
+    "side": 1,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      4
+    ],
+    "sourcemore": [
+      {
+        "c": 1537,
+        "c2": 0,
+        "n": "Return to Tymor",
+        "t": 5,
+        "ti": 3461
+      }
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 10
+  },
+  {
+    "appearances": {
+      "0": [
+        15725,
+        "inv_misc_orb_02"
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Pyrestone Orb",
+    "displayid": 15725,
+    "flags2": 24580,
+    "id": 10709,
+    "level": 55,
+    "name": "Pyrestone Orb",
+    "quality": 2,
+    "reqlevel": 44,
+    "side": 2,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      4
+    ],
+    "sourcemore": [
+      {
+        "c": 1637,
+        "c2": 1,
+        "n": "Betrayed",
+        "t": 5,
+        "ti": 3507
+      }
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 9
+  },
+  {
+    "appearances": {
+      "0": [
+        19786,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Mordresh's Lifeless Skull",
+    "displayid": 19786,
+    "flags2": 4,
+    "id": 10770,
+    "level": 41,
+    "name": "Mordresh's Lifeless Skull",
+    "quality": 3,
+    "reqlevel": 36,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      2
+    ],
+    "sourcemore": [
+      {
+        "n": "Mordresh Fire Eye",
+        "t": 1,
+        "ti": 7357,
+        "z": 722
+      }
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "updated",
+      "labels": [
+        "stats_changed"
+      ],
+      "lines": [
+        "Spirit 5 instead of 11",
+        "Shadow Spell Power 16 added",
+        "Stamina 5 removed"
+      ],
+      "notShown": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 35
+  },
+  {
+    "appearances": {
+      "0": [
+        27556,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Orb of Lorica",
+    "displayid": 27556,
+    "flags2": 4,
+    "id": 11262,
+    "level": 44,
+    "name": "Orb of Lorica",
+    "quality": 3,
+    "reqlevel": 34,
+    "side": 1,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      4
+    ],
+    "sourcemore": [
+      {
+        "c": 796,
+        "c2": 2,
+        "n": "In the Name of the Light",
+        "t": 5,
+        "ti": 1053
+      }
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "updated",
+      "labels": [
+        "stats_changed"
+      ],
+      "lines": [
+        "Intellect 10 instead of 6",
+        "Spell Power 6 added",
+        "Healing 12 added",
+        "Spirit 11 removed"
+      ],
+      "notShown": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 56
+  },
+  {
+    "appearances": {
+      "0": [
+        21373,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Silver Totem of Aquementas",
+    "displayid": 21373,
+    "flags2": 24580,
+    "id": 11522,
+    "level": 1,
+    "name": "Silver Totem of Aquementas",
+    "quality": 1,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      4
+    ],
+    "sourcemore": [
+      {
+        "z": 490
+      }
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 12
+  },
+  {
+    "appearances": {
+      "0": [
+        7494,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Tork Wrench",
+    "displayid": 7494,
+    "flags2": 24580,
+    "id": 11855,
+    "level": 19,
+    "name": "Tork Wrench",
+    "quality": 2,
+    "reqlevel": 10,
+    "side": 2,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      4
+    ],
+    "sourcemore": [
+      {
+        "c": 17,
+        "c2": 1,
+        "n": "Samophlange Manual",
+        "t": 5,
+        "ti": 3924
+      }
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "updated",
+      "labels": [
+        "stats_changed"
+      ],
+      "lines": [
+        "Armor 30 removed"
+      ],
+      "notShown": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 18
+  },
+  {
+    "appearances": {
+      "0": [
+        21603,
+        "inv_misc_orb_01"
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Jademoon Orb",
+    "displayid": 21603,
+    "flags2": 24580,
+    "id": 11859,
+    "level": 45,
+    "name": "Jademoon Orb",
+    "quality": 2,
+    "reqlevel": 37,
+    "side": 2,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      4
+    ],
+    "sourcemore": [
+      {
+        "c": 357,
+        "c2": 1,
+        "n": "A Grim Discovery",
+        "t": 5,
+        "ti": 2976
+      }
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 12
+  },
+  {
+    "appearances": {
+      "0": [
+        28226,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Oblivion Orb",
+    "displayid": 28226,
+    "flags2": 24580,
+    "id": 11870,
+    "level": 54,
+    "name": "Oblivion Orb",
+    "quality": 2,
+    "reqlevel": 50,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      4
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 10
+  },
+  {
+    "appearances": {
+      "0": [
+        21373,
+        "inv_wand_05"
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Spirit of Aquementas",
+    "displayid": 21373,
+    "flags2": 4,
+    "id": 11904,
+    "level": 56,
+    "name": "Spirit of Aquementas",
+    "quality": 3,
+    "reqlevel": 47,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      4,
+      5
+    ],
+    "sourcemore": [
+      {
+        "c": 490,
+        "c2": 1,
+        "n": "It's Dangerous to Go Alone",
+        "t": 5,
+        "ti": 3962
+      },
+      {
+        "n": "Linken",
+        "t": 1,
+        "ti": 8737,
+        "z": 490
+      }
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "updated",
+      "labels": [
+        "stats_changed",
+        "quality_changed"
+      ],
+      "lines": [
+        "Rare instead of Uncommon",
+        "Spell Power 21 instead of 20"
+      ],
+      "notShown": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 46
+  },
+  {
+    "appearances": {
+      "0": [
+        24122,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Umbral Crystal",
+    "displayid": 24122,
+    "flags2": 16388,
+    "id": 13029,
+    "level": 43,
+    "name": "Umbral Crystal",
+    "quality": 3,
+    "reqlevel": 38,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      2
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 26
+  },
+  {
+    "appearances": {
+      "0": [
+        3573,
+        "inv_misc_bone_01"
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Basilisk Bone",
+    "displayid": 3573,
+    "flags2": 16388,
+    "id": 13030,
+    "level": 51,
+    "name": "Basilisk Bone",
+    "quality": 3,
+    "reqlevel": 46,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      2
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 16
+  },
+  {
+    "appearances": {
+      "0": [
+        28803,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Orb of Mistmantle",
+    "displayid": 28803,
+    "flags2": 16388,
+    "id": 13031,
+    "level": 28,
+    "name": "Orb of Mistmantle",
+    "quality": 3,
+    "reqlevel": 23,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      2
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 52
+  },
+  {
+    "appearances": {
+      "0": [
+        24061,
+        "inv_misc_gem_bloodstone_02"
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Father Flame",
+    "displayid": 24061,
+    "flags2": 24580,
+    "id": 13371,
+    "level": 58,
+    "name": "Father Flame",
+    "quality": 2,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      2
+    ],
+    "sourcemore": [
+      {
+        "n": "Father Flame",
+        "t": 2,
+        "ti": 175245,
+        "z": 1583
+      }
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 14
+  },
+  {
+    "appearances": {
+      "0": [
+        10816,
+        "inv_misc_fish_02"
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "42 Pound Redgill",
+    "displayid": 10816,
+    "flags2": 24580,
+    "id": 13882,
+    "level": 45,
+    "name": "42 Pound Redgill",
+    "quality": 1,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      16
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 19
+  },
+  {
+    "appearances": {
+      "0": [
+        10816,
+        "inv_misc_fish_02"
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "45 Pound Redgill",
+    "displayid": 10816,
+    "flags2": 24580,
+    "id": 13883,
+    "level": 45,
+    "name": "45 Pound Redgill",
+    "quality": 1,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      16
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 17
+  },
+  {
+    "appearances": {
+      "0": [
+        10816,
+        "inv_misc_fish_02"
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "49 Pound Redgill",
+    "displayid": 10816,
+    "flags2": 24580,
+    "id": 13884,
+    "level": 45,
+    "name": "49 Pound Redgill",
+    "quality": 1,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      16
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 23
+  },
+  {
+    "appearances": {
+      "0": [
+        10816,
+        "inv_misc_fish_02"
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "34 Pound Redgill",
+    "displayid": 10816,
+    "flags2": 24580,
+    "id": 13885,
+    "level": 45,
+    "name": "34 Pound Redgill",
+    "quality": 1,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      16
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 18
+  },
+  {
+    "appearances": {
+      "0": [
+        10816,
+        "inv_misc_fish_02"
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "37 Pound Redgill",
+    "displayid": 10816,
+    "flags2": 24580,
+    "id": 13886,
+    "level": 45,
+    "name": "37 Pound Redgill",
+    "quality": 1,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      16
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 16
+  },
+  {
+    "appearances": {
+      "0": [
+        10816,
+        "inv_misc_fish_02"
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "52 Pound Redgill",
+    "displayid": 10816,
+    "flags2": 24580,
+    "id": 13887,
+    "level": 45,
+    "name": "52 Pound Redgill",
+    "quality": 1,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      16
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 15
+  },
+  {
+    "appearances": {
+      "0": [
+        10814,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "15 Pound Salmon",
+    "displayid": 10814,
+    "flags2": 24580,
+    "id": 13901,
+    "level": 55,
+    "name": "15 Pound Salmon",
+    "quality": 1,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      16
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 20
+  },
+  {
+    "appearances": {
+      "0": [
+        10814,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "18 Pound Salmon",
+    "displayid": 10814,
+    "flags2": 24580,
+    "id": 13902,
+    "level": 55,
+    "name": "18 Pound Salmon",
+    "quality": 1,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      16
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 18
+  },
+  {
+    "appearances": {
+      "0": [
+        10814,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "22 Pound Salmon",
+    "displayid": 10814,
+    "flags2": 24580,
+    "id": 13903,
+    "level": 55,
+    "name": "22 Pound Salmon",
+    "quality": 1,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      16
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 16
+  },
+  {
+    "appearances": {
+      "0": [
+        10814,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "25 Pound Salmon",
+    "displayid": 10814,
+    "flags2": 24580,
+    "id": 13904,
+    "level": 55,
+    "name": "25 Pound Salmon",
+    "quality": 1,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      16
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 23
+  },
+  {
+    "appearances": {
+      "0": [
+        10814,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "29 Pound Salmon",
+    "displayid": 10814,
+    "flags2": 24580,
+    "id": 13905,
+    "level": 55,
+    "name": "29 Pound Salmon",
+    "quality": 1,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      16
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 23
+  },
+  {
+    "appearances": {
+      "0": [
+        10814,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "32 Pound Salmon",
+    "displayid": 10814,
+    "flags2": 24580,
+    "id": 13906,
+    "level": 55,
+    "name": "32 Pound Salmon",
+    "quality": 1,
+    "slot": 23,
+    "slotbak": 23,
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 15
+  },
+  {
+    "appearances": {
+      "0": [
+        712462,
+        "inv_misc_fish_02"
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "70 Pound Mightfish",
+    "displayid": 712462,
+    "flags2": 24580,
+    "id": 13914,
+    "level": 55,
+    "name": "70 Pound Mightfish",
+    "quality": 1,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      16
+    ],
+    "sourcemore": [
+      {
+        "n": "Azshara",
+        "t": 7,
+        "ti": 16
+      }
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "updated",
+      "labels": [
+        "new_icon"
+      ],
+      "lines": [
+        "New icon"
+      ],
+      "notShown": [
+        "New icon"
+      ]
+    },
+    "firstseenpatch": 0,
+    "popularity": 14
+  },
+  {
+    "appearances": {
+      "0": [
+        712462,
+        "inv_misc_fish_02"
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "85 Pound Mightfish",
+    "displayid": 712462,
+    "flags2": 24580,
+    "id": 13915,
+    "level": 55,
+    "name": "85 Pound Mightfish",
+    "quality": 1,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      16
+    ],
+    "sourcemore": [
+      {
+        "n": "Azshara",
+        "t": 7,
+        "ti": 16
+      }
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "updated",
+      "labels": [
+        "new_icon"
+      ],
+      "lines": [
+        "New icon"
+      ],
+      "notShown": [
+        "New icon"
+      ]
+    },
+    "firstseenpatch": 0,
+    "popularity": 13
+  },
+  {
+    "appearances": {
+      "0": [
+        712462,
+        "inv_misc_fish_02"
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "92 Pound Mightfish",
+    "displayid": 712462,
+    "flags2": 24580,
+    "id": 13916,
+    "level": 55,
+    "name": "92 Pound Mightfish",
+    "quality": 1,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      16
+    ],
+    "sourcemore": [
+      {
+        "n": "Azshara",
+        "t": 7,
+        "ti": 16
+      }
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "updated",
+      "labels": [
+        "new_icon"
+      ],
+      "lines": [
+        "New icon"
+      ],
+      "notShown": [
+        "New icon"
+      ]
+    },
+    "firstseenpatch": 0,
+    "popularity": 10
+  },
+  {
+    "appearances": {
+      "0": [
+        712462,
+        "inv_misc_fish_02"
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "103 Pound Mightfish",
+    "displayid": 712462,
+    "flags2": 24580,
+    "id": 13917,
+    "level": 55,
+    "name": "103 Pound Mightfish",
+    "quality": 1,
+    "slot": 23,
+    "slotbak": 23,
+    "subclass": -5,
+    "envChange": {
+      "status": "updated",
+      "labels": [
+        "new_icon"
+      ],
+      "lines": [
+        "New icon"
+      ],
+      "notShown": [
+        "New icon"
+      ]
+    },
+    "firstseenpatch": 0,
+    "popularity": 16
+  },
+  {
+    "appearances": {
+      "0": [
+        25072,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Orb of Noh'Orahil",
+    "displayid": 25072,
+    "flags2": 24580,
+    "id": 15107,
+    "level": 40,
+    "name": "Orb of Noh'Orahil",
+    "quality": 3,
+    "reqclass": 2816,
+    "reqlevel": 35,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      4
+    ],
+    "sourcemore": [
+      {
+        "c": -61,
+        "c2": 4,
+        "n": "The Completed Orb of Noh'Orahil",
+        "t": 5,
+        "ti": 4975
+      }
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 17
+  },
+  {
+    "appearances": {
+      "0": [
+        25072,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Orb of Dar'Orahil",
+    "displayid": 25072,
+    "flags2": 24580,
+    "id": 15108,
+    "level": 40,
+    "name": "Orb of Dar'Orahil",
+    "quality": 3,
+    "reqclass": 2816,
+    "reqlevel": 35,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      4
+    ],
+    "sourcemore": [
+      {
+        "c": -61,
+        "c2": 4,
+        "n": "The Completed Orb of Dar'Orahil",
+        "t": 5,
+        "ti": 4964
+      }
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 20
+  },
+  {
+    "appearances": {
+      "0": [
+        28023,
+        "inv_staff_16"
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Jadefinger Baton",
+    "displayid": 28023,
+    "flags2": 24580,
+    "id": 15206,
+    "level": 20,
+    "name": "Jadefinger Baton",
+    "quality": 2,
+    "reqlevel": 17,
+    "side": 1,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      4
+    ],
+    "sourcemore": [
+      {
+        "c": 148,
+        "c2": 1,
+        "n": "The Sleeper Has Awakened",
+        "t": 5,
+        "ti": 5321
+      }
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 13
+  },
+  {
+    "appearances": {
+      "0": [
+        26539,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Magebane Scion",
+    "displayid": 26539,
+    "flags2": 24580,
+    "id": 15857,
+    "level": 60,
+    "name": "Magebane Scion",
+    "quality": 3,
+    "reqlevel": 50,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      4
+    ],
+    "sourcemore": [
+      {
+        "c": 139,
+        "c2": 0,
+        "n": "Hidden Treasures",
+        "t": 5,
+        "ti": 5942
+      }
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 16
+  },
+  {
+    "appearances": {
+      "0": [
+        753031,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Veildust Medicine Bag",
+    "displayid": 753031,
+    "flags2": 24580,
+    "id": 15866,
+    "level": 15,
+    "name": "Veildust Medicine Bag",
+    "quality": 2,
+    "reqclass": 1024,
+    "reqlevel": 14,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      4
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "updated",
+      "labels": [
+        "new_icon"
+      ],
+      "lines": [
+        "New icon"
+      ],
+      "notShown": [
+        "New icon"
+      ]
+    },
+    "firstseenpatch": 0,
+    "popularity": 34
+  },
+  {
+    "appearances": {
+      "0": [
+        28471,
+        ""
+      ]
+    },
+    "armor": 0,
+    "bonustrees": [
+      6337
+    ],
+    "classs": 4,
+    "commondrop": true,
+    "displayName": "Buccaneer's Orb",
+    "displayid": 28471,
+    "flags2": 24580,
+    "id": 15912,
+    "level": 23,
+    "name": "Buccaneer's Orb",
+    "quality": 2,
+    "reqlevel": 18,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      2
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 32
+  },
+  {
+    "appearances": {
+      "0": [
+        28472,
+        ""
+      ]
+    },
+    "armor": 0,
+    "bonustrees": [
+      5661
+    ],
+    "classs": 4,
+    "commondrop": true,
+    "displayName": "Conjurer's Sphere",
+    "displayid": 28472,
+    "flags2": 24580,
+    "id": 15918,
+    "level": 38,
+    "name": "Conjurer's Sphere",
+    "quality": 2,
+    "reqlevel": 33,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      2
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 16
+  },
+  {
+    "appearances": {
+      "0": [
+        28462,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "commondrop": true,
+    "displayName": "Journeyman's Stave",
+    "displayid": 28462,
+    "flags2": 24580,
+    "id": 15925,
+    "level": 10,
+    "name": "Journeyman's Stave",
+    "quality": 2,
+    "reqlevel": 5,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      2
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 31
+  },
+  {
+    "appearances": {
+      "0": [
+        27556,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "commondrop": true,
+    "displayName": "Spellbinder Orb",
+    "displayid": 27556,
+    "flags2": 24580,
+    "id": 15926,
+    "level": 17,
+    "name": "Spellbinder Orb",
+    "quality": 2,
+    "reqlevel": 12,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      2,
+      16
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 18
+  },
+  {
+    "appearances": {
+      "0": [
+        27556,
+        "inv_misc_orb_01"
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "commondrop": true,
+    "displayName": "Bright Sphere",
+    "displayid": 27556,
+    "flags2": 24580,
+    "id": 15927,
+    "level": 27,
+    "name": "Bright Sphere",
+    "quality": 2,
+    "reqlevel": 22,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      2
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 18
+  },
+  {
+    "appearances": {
+      "0": [
+        4995,
+        "inv_staff_11"
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "commondrop": true,
+    "displayName": "Silver-thread Rod",
+    "displayid": 4995,
+    "flags2": 24580,
+    "id": 15928,
+    "level": 31,
+    "name": "Silver-thread Rod",
+    "quality": 2,
+    "reqlevel": 26,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      2,
+      16
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 21
+  },
+  {
+    "appearances": {
+      "0": [
+        24122,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "commondrop": true,
+    "displayName": "Nightsky Orb",
+    "displayid": 24122,
+    "flags2": 24580,
+    "id": 15929,
+    "level": 37,
+    "name": "Nightsky Orb",
+    "quality": 2,
+    "reqlevel": 32,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      2
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 11
+  },
+  {
+    "appearances": {
+      "0": [
+        27563,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "commondrop": true,
+    "displayName": "Imperial Red Scepter",
+    "displayid": 27563,
+    "flags2": 24580,
+    "id": 15930,
+    "level": 56,
+    "name": "Imperial Red Scepter",
+    "quality": 2,
+    "reqlevel": 51,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      2
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 9
+  },
+  {
+    "appearances": {
+      "0": [
+        23174,
+        "inv_wand_09"
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "commondrop": true,
+    "displayName": "Arcane Star",
+    "displayid": 23174,
+    "flags2": 24580,
+    "id": 15931,
+    "level": 61,
+    "name": "Arcane Star",
+    "quality": 2,
+    "reqlevel": 56,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      2
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 11
+  },
+  {
+    "appearances": {
+      "0": [
+        753043,
+        ""
+      ]
+    },
+    "armor": 0,
+    "bonustrees": [
+      6337
+    ],
+    "classs": 4,
+    "commondrop": true,
+    "displayName": "Disciple's Stein",
+    "displayid": 753043,
+    "flags2": 24580,
+    "id": 15932,
+    "level": 12,
+    "name": "Disciple's Stein",
+    "quality": 2,
+    "reqlevel": 7,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      2,
+      16
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "updated",
+      "labels": [
+        "new_icon"
+      ],
+      "lines": [
+        "New icon"
+      ],
+      "notShown": [
+        "New icon"
+      ]
+    },
+    "firstseenpatch": 0,
+    "popularity": 43
+  },
+  {
+    "appearances": {
+      "0": [
+        752974,
+        "inv_wand_03"
+      ]
+    },
+    "armor": 0,
+    "bonustrees": [
+      6337
+    ],
+    "classs": 4,
+    "commondrop": true,
+    "displayName": "Simple Branch",
+    "displayid": 752974,
+    "flags2": 24580,
+    "id": 15933,
+    "level": 15,
+    "name": "Simple Branch",
+    "quality": 2,
+    "reqlevel": 10,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      2,
+      16
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "updated",
+      "labels": [
+        "new_icon"
+      ],
+      "lines": [
+        "New icon"
+      ],
+      "notShown": [
+        "New icon"
+      ]
+    },
+    "firstseenpatch": 0,
+    "popularity": 28
+  },
+  {
+    "appearances": {
+      "0": [
+        9122,
+        "inv_wand_04"
+      ]
+    },
+    "armor": 0,
+    "bonustrees": [
+      5661
+    ],
+    "classs": 4,
+    "commondrop": true,
+    "displayName": "Sage's Stave",
+    "displayid": 9122,
+    "flags2": 24580,
+    "id": 15934,
+    "level": 32,
+    "name": "Sage's Stave",
+    "quality": 2,
+    "reqlevel": 27,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      2
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 28
+  },
+  {
+    "appearances": {
+      "0": [
+        752975,
+        ""
+      ]
+    },
+    "armor": 0,
+    "bonustrees": [
+      5661
+    ],
+    "classs": 4,
+    "commondrop": true,
+    "displayName": "Durable Rod",
+    "displayid": 752975,
+    "flags2": 24580,
+    "id": 15935,
+    "level": 34,
+    "name": "Durable Rod",
+    "quality": 2,
+    "reqlevel": 29,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      2
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "updated",
+      "labels": [
+        "new_icon"
+      ],
+      "lines": [
+        "New icon"
+      ],
+      "notShown": [
+        "New icon"
+      ]
+    },
+    "firstseenpatch": 0,
+    "popularity": 24
+  },
+  {
+    "appearances": {
+      "0": [
+        752976,
+        ""
+      ]
+    },
+    "armor": 0,
+    "bonustrees": [
+      5661
+    ],
+    "classs": 4,
+    "commondrop": true,
+    "displayName": "Duskwoven Branch",
+    "displayid": 752976,
+    "flags2": 24580,
+    "id": 15936,
+    "level": 55,
+    "name": "Duskwoven Branch",
+    "quality": 2,
+    "reqlevel": 50,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      2
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "updated",
+      "labels": [
+        "new_icon"
+      ],
+      "lines": [
+        "New icon"
+      ],
+      "notShown": [
+        "New icon"
+      ]
+    },
+    "firstseenpatch": 0,
+    "popularity": 9
+  },
+  {
+    "appearances": {
+      "0": [
+        27874,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "commondrop": true,
+    "displayName": "Hibernal Sphere",
+    "displayid": 27874,
+    "flags2": 24580,
+    "id": 15937,
+    "level": 51,
+    "name": "Hibernal Sphere",
+    "quality": 2,
+    "reqlevel": 46,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      2
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 13
+  },
+  {
+    "appearances": {
+      "0": [
+        28480,
+        ""
+      ]
+    },
+    "armor": 0,
+    "bonustrees": [
+      5661
+    ],
+    "classs": 4,
+    "commondrop": true,
+    "displayName": "Mystical Orb",
+    "displayid": 28480,
+    "flags2": 24580,
+    "id": 15938,
+    "level": 58,
+    "name": "Mystical Orb",
+    "quality": 2,
+    "reqlevel": 53,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      2,
+      16
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 18
+  },
+  {
+    "appearances": {
+      "0": [
+        27612,
+        ""
+      ]
+    },
+    "armor": 0,
+    "bonustrees": [
+      5661
+    ],
+    "classs": 4,
+    "commondrop": true,
+    "displayName": "Councillor's Scepter",
+    "displayid": 27612,
+    "flags2": 24580,
+    "id": 15939,
+    "level": 59,
+    "name": "Councillor's Scepter",
+    "quality": 2,
+    "reqlevel": 54,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      2,
+      16
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 14
+  },
+  {
+    "appearances": {
+      "0": [
+        28476,
+        ""
+      ]
+    },
+    "armor": 0,
+    "bonustrees": [
+      5661
+    ],
+    "classs": 4,
+    "commondrop": true,
+    "displayName": "Elegant Scepter",
+    "displayid": 28476,
+    "flags2": 24580,
+    "id": 15940,
+    "level": 62,
+    "name": "Elegant Scepter",
+    "quality": 2,
+    "reqlevel": 57,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      2
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 12
+  },
+  {
+    "appearances": {
+      "0": [
+        27650,
+        ""
+      ]
+    },
+    "armor": 0,
+    "bonustrees": [
+      5661
+    ],
+    "classs": 4,
+    "displayName": "High Councillor's Scepter",
+    "displayid": 27650,
+    "flags2": 24580,
+    "id": 15941,
+    "level": 64,
+    "name": "High Councillor's Scepter",
+    "quality": 2,
+    "reqlevel": 59,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      2
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 14
+  },
+  {
+    "appearances": {
+      "0": [
+        3727,
+        "inv_staff_10"
+      ]
+    },
+    "armor": 0,
+    "bonustrees": [
+      5661
+    ],
+    "classs": 4,
+    "commondrop": true,
+    "displayName": "Master's Rod",
+    "displayid": 3727,
+    "flags2": 24580,
+    "id": 15942,
+    "level": 65,
+    "name": "Master's Rod",
+    "quality": 2,
+    "reqlevel": 60,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      2
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 23
+  },
+  {
+    "appearances": {
+      "0": [
+        24061,
+        "inv_misc_gem_bloodstone_02"
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "commondrop": true,
+    "displayName": "Ancestral Orb",
+    "displayid": 24061,
+    "flags2": 24580,
+    "id": 15944,
+    "level": 12,
+    "name": "Ancestral Orb",
+    "quality": 2,
+    "reqlevel": 7,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      2
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 18
+  },
+  {
+    "appearances": {
+      "0": [
+        18630,
+        "inv_staff_17"
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "commondrop": true,
+    "displayName": "Runic Stave",
+    "displayid": 18630,
+    "flags2": 24580,
+    "id": 15945,
+    "level": 18,
+    "name": "Runic Stave",
+    "quality": 2,
+    "reqlevel": 13,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      2
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 21
+  },
+  {
+    "appearances": {
+      "0": [
+        28487,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "commondrop": true,
+    "displayName": "Mystic's Sphere",
+    "displayid": 28487,
+    "flags2": 24580,
+    "id": 15946,
+    "level": 23,
+    "name": "Mystic's Sphere",
+    "quality": 2,
+    "reqlevel": 18,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      2
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 18
+  },
+  {
+    "appearances": {
+      "0": [
+        1926,
+        "inv_staff_08"
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Sanguine Star",
+    "displayid": 1926,
+    "flags2": 24580,
+    "id": 15947,
+    "level": 28,
+    "name": "Sanguine Star",
+    "quality": 2,
+    "reqlevel": 23,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      2
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 33
+  },
+  {
+    "appearances": {
+      "0": [
+        28492,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Satyr's Rod",
+    "displayid": 28492,
+    "flags2": 24580,
+    "id": 15962,
+    "level": 33,
+    "name": "Satyr's Rod",
+    "quality": 2,
+    "reqlevel": 28,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      2
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 29
+  },
+  {
+    "appearances": {
+      "0": [
+        28491,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Stonecloth Branch",
+    "displayid": 28491,
+    "flags2": 24580,
+    "id": 15963,
+    "level": 39,
+    "name": "Stonecloth Branch",
+    "quality": 2,
+    "reqlevel": 34,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      2
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 26
+  },
+  {
+    "appearances": {
+      "0": [
+        28493,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "commondrop": true,
+    "displayName": "Silksand Star",
+    "displayid": 28493,
+    "flags2": 24580,
+    "id": 15964,
+    "level": 44,
+    "name": "Silksand Star",
+    "quality": 2,
+    "reqlevel": 39,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      2
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 10
+  },
+  {
+    "appearances": {
+      "0": [
+        21605,
+        "inv_misc_orb_01"
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Windchaser Orb",
+    "displayid": 21605,
+    "flags2": 16388,
+    "id": 15965,
+    "level": 49,
+    "name": "Windchaser Orb",
+    "quality": 2,
+    "reqlevel": 44,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      2
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 16
+  },
+  {
+    "appearances": {
+      "0": [
+        27874,
+        "inv_misc_orb_01"
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Venomshroud Orb",
+    "displayid": 27874,
+    "flags2": 24580,
+    "id": 15966,
+    "level": 54,
+    "name": "Venomshroud Orb",
+    "quality": 2,
+    "reqlevel": 49,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      2
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 10
+  },
+  {
+    "appearances": {
+      "0": [
+        28486,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "commondrop": true,
+    "displayName": "Highborne Star",
+    "displayid": 28486,
+    "flags2": 24580,
+    "id": 15967,
+    "level": 59,
+    "name": "Highborne Star",
+    "quality": 2,
+    "reqlevel": 54,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      2
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 17
+  },
+  {
+    "appearances": {
+      "0": [
+        15725,
+        "inv_misc_orb_02"
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Elunarian Sphere",
+    "displayid": 15725,
+    "flags2": 24580,
+    "id": 15968,
+    "level": 64,
+    "name": "Elunarian Sphere",
+    "quality": 2,
+    "reqlevel": 59,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      2
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 8
+  },
+  {
+    "appearances": {
+      "0": [
+        24061,
+        "inv_misc_gem_bloodstone_02"
+      ]
+    },
+    "armor": 0,
+    "bonustrees": [
+      6337
+    ],
+    "classs": 4,
+    "commondrop": true,
+    "displayName": "Beaded Orb",
+    "displayid": 24061,
+    "flags2": 24580,
+    "id": 15969,
+    "level": 10,
+    "name": "Beaded Orb",
+    "quality": 2,
+    "reqlevel": 5,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      2
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 27
+  },
+  {
+    "appearances": {
+      "0": [
+        752974,
+        ""
+      ]
+    },
+    "armor": 0,
+    "bonustrees": [
+      6337
+    ],
+    "classs": 4,
+    "commondrop": true,
+    "displayName": "Native Branch",
+    "displayid": 752974,
+    "flags2": 24580,
+    "id": 15970,
+    "level": 15,
+    "name": "Native Branch",
+    "quality": 2,
+    "reqlevel": 10,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      2
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "updated",
+      "labels": [
+        "new_icon"
+      ],
+      "lines": [
+        "New icon"
+      ],
+      "notShown": [
+        "New icon"
+      ]
+    },
+    "firstseenpatch": 0,
+    "popularity": 46
+  },
+  {
+    "appearances": {
+      "0": [
+        24014,
+        ""
+      ]
+    },
+    "armor": 0,
+    "bonustrees": [
+      6337
+    ],
+    "classs": 4,
+    "commondrop": true,
+    "displayName": "Aboriginal Rod",
+    "displayid": 24014,
+    "flags2": 24580,
+    "id": 15971,
+    "level": 20,
+    "name": "Aboriginal Rod",
+    "quality": 2,
+    "reqlevel": 15,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      2
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 30
+  },
+  {
+    "appearances": {
+      "0": [
+        753048,
+        ""
+      ]
+    },
+    "armor": 0,
+    "bonustrees": [
+      6337
+    ],
+    "classs": 4,
+    "commondrop": true,
+    "displayName": "Ritual Stein",
+    "displayid": 753048,
+    "flags2": 24580,
+    "id": 15972,
+    "level": 24,
+    "name": "Ritual Stein",
+    "quality": 2,
+    "reqlevel": 19,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      2
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "updated",
+      "labels": [
+        "new_icon"
+      ],
+      "lines": [
+        "New icon"
+      ],
+      "notShown": [
+        "New icon"
+      ]
+    },
+    "firstseenpatch": 0,
+    "popularity": 18
+  },
+  {
+    "appearances": {
+      "0": [
+        15427,
+        ""
+      ]
+    },
+    "armor": 0,
+    "bonustrees": [
+      5661
+    ],
+    "classs": 4,
+    "commondrop": true,
+    "displayName": "Watcher's Star",
+    "displayid": 15427,
+    "flags2": 24580,
+    "id": 15973,
+    "level": 30,
+    "name": "Watcher's Star",
+    "quality": 2,
+    "reqlevel": 25,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      2
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 26
+  },
+  {
+    "appearances": {
+      "0": [
+        5072,
+        "inv_staff_11"
+      ]
+    },
+    "armor": 0,
+    "bonustrees": [
+      5661
+    ],
+    "classs": 4,
+    "commondrop": true,
+    "displayName": "Pagan Rod",
+    "displayid": 5072,
+    "flags2": 24580,
+    "id": 15974,
+    "level": 26,
+    "name": "Pagan Rod",
+    "quality": 2,
+    "reqlevel": 21,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      2
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 29
+  },
+  {
+    "appearances": {
+      "0": [
+        28514,
+        ""
+      ]
+    },
+    "armor": 0,
+    "bonustrees": [
+      5661
+    ],
+    "classs": 4,
+    "displayName": "Raincaller Scepter",
+    "displayid": 28514,
+    "flags2": 24580,
+    "id": 15975,
+    "level": 31,
+    "name": "Raincaller Scepter",
+    "quality": 2,
+    "reqlevel": 26,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      2
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 27
+  },
+  {
+    "appearances": {
+      "0": [
+        752977,
+        ""
+      ]
+    },
+    "armor": 0,
+    "bonustrees": [
+      5661
+    ],
+    "classs": 4,
+    "displayName": "Thistlefur Branch",
+    "displayid": 752977,
+    "flags2": 24580,
+    "id": 15976,
+    "level": 36,
+    "name": "Thistlefur Branch",
+    "quality": 2,
+    "reqlevel": 31,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      2
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "updated",
+      "labels": [
+        "new_icon"
+      ],
+      "lines": [
+        "New icon"
+      ],
+      "notShown": [
+        "New icon"
+      ]
+    },
+    "firstseenpatch": 0,
+    "popularity": 14
+  },
+  {
+    "appearances": {
+      "0": [
+        27874,
+        ""
+      ]
+    },
+    "armor": 0,
+    "bonustrees": [
+      5661
+    ],
+    "classs": 4,
+    "displayName": "Vital Orb",
+    "displayid": 27874,
+    "flags2": 24580,
+    "id": 15977,
+    "level": 37,
+    "name": "Vital Orb",
+    "quality": 2,
+    "reqlevel": 32,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      2
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 13
+  },
+  {
+    "appearances": {
+      "0": [
+        2509,
+        "inv_staff_03"
+      ]
+    },
+    "armor": 0,
+    "bonustrees": [
+      5661
+    ],
+    "classs": 4,
+    "displayName": "Geomancer's Rod",
+    "displayid": 2509,
+    "flags2": 24580,
+    "id": 15978,
+    "level": 41,
+    "name": "Geomancer's Rod",
+    "quality": 2,
+    "reqlevel": 36,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      2
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 12
+  },
+  {
+    "appearances": {
+      "0": [
+        18289,
+        ""
+      ]
+    },
+    "armor": 0,
+    "bonustrees": [
+      5661
+    ],
+    "classs": 4,
+    "displayName": "Embersilk Stave",
+    "displayid": 18289,
+    "flags2": 24580,
+    "id": 15979,
+    "level": 42,
+    "name": "Embersilk Stave",
+    "quality": 2,
+    "reqlevel": 37,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      2
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 15
+  },
+  {
+    "appearances": {
+      "0": [
+        28505,
+        ""
+      ]
+    },
+    "armor": 0,
+    "bonustrees": [
+      5661
+    ],
+    "classs": 4,
+    "displayName": "Darkmist Orb",
+    "displayid": 28505,
+    "flags2": 24580,
+    "id": 15980,
+    "level": 46,
+    "name": "Darkmist Orb",
+    "quality": 2,
+    "reqlevel": 41,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      2
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 8
+  },
+  {
+    "appearances": {
+      "0": [
+        28553,
+        ""
+      ]
+    },
+    "armor": 0,
+    "bonustrees": [
+      5661
+    ],
+    "classs": 4,
+    "displayName": "Lunar Sphere",
+    "displayid": 28553,
+    "flags2": 24580,
+    "id": 15981,
+    "level": 47,
+    "name": "Lunar Sphere",
+    "quality": 2,
+    "reqlevel": 42,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      2
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 19
+  },
+  {
+    "appearances": {
+      "0": [
+        28510,
+        ""
+      ]
+    },
+    "armor": 0,
+    "bonustrees": [
+      5661
+    ],
+    "classs": 4,
+    "displayName": "Bloodwoven Rod",
+    "displayid": 28510,
+    "flags2": 24580,
+    "id": 15982,
+    "level": 51,
+    "name": "Bloodwoven Rod",
+    "quality": 2,
+    "reqlevel": 46,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      2
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 14
+  },
+  {
+    "appearances": {
+      "0": [
+        28516,
+        ""
+      ]
+    },
+    "armor": 0,
+    "bonustrees": [
+      5661
+    ],
+    "classs": 4,
+    "displayName": "Gaea's Scepter",
+    "displayid": 28516,
+    "flags2": 24580,
+    "id": 15983,
+    "level": 52,
+    "name": "Gaea's Scepter",
+    "quality": 2,
+    "reqlevel": 47,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      2
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 12
+  },
+  {
+    "appearances": {
+      "0": [
+        27929,
+        ""
+      ]
+    },
+    "armor": 0,
+    "bonustrees": [
+      5661
+    ],
+    "classs": 4,
+    "displayName": "Opulent Scepter",
+    "displayid": 27929,
+    "flags2": 24580,
+    "id": 15984,
+    "level": 56,
+    "name": "Opulent Scepter",
+    "quality": 2,
+    "reqlevel": 51,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      2
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 12
+  },
+  {
+    "appearances": {
+      "0": [
+        752973,
+        "inv_staff_02"
+      ]
+    },
+    "armor": 0,
+    "bonustrees": [
+      5661
+    ],
+    "classs": 4,
+    "displayName": "Arachnidian Branch",
+    "displayid": 752973,
+    "flags2": 24580,
+    "id": 15985,
+    "level": 57,
+    "name": "Arachnidian Branch",
+    "quality": 2,
+    "reqlevel": 52,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      2
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "updated",
+      "labels": [
+        "new_icon"
+      ],
+      "lines": [
+        "New icon"
+      ],
+      "notShown": [
+        "New icon"
+      ]
+    },
+    "firstseenpatch": 0,
+    "popularity": 10
+  },
+  {
+    "appearances": {
+      "0": [
+        20384,
+        ""
+      ]
+    },
+    "armor": 0,
+    "bonustrees": [
+      5661
+    ],
+    "classs": 4,
+    "commondrop": true,
+    "displayName": "Bonecaster's Star",
+    "displayid": 20384,
+    "flags2": 24580,
+    "id": 15986,
+    "level": 60,
+    "name": "Bonecaster's Star",
+    "quality": 2,
+    "reqlevel": 55,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      2
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 10
+  },
+  {
+    "appearances": {
+      "0": [
+        27756,
+        ""
+      ]
+    },
+    "armor": 0,
+    "bonustrees": [
+      5661
+    ],
+    "classs": 4,
+    "displayName": "Astral Orb",
+    "displayid": 27756,
+    "flags2": 24580,
+    "id": 15987,
+    "level": 61,
+    "name": "Astral Orb",
+    "quality": 2,
+    "reqlevel": 56,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      2
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 9
+  },
+  {
+    "appearances": {
+      "0": [
+        15884,
+        ""
+      ]
+    },
+    "armor": 0,
+    "bonustrees": [
+      5661
+    ],
+    "classs": 4,
+    "displayName": "Resplendent Orb",
+    "displayid": 15884,
+    "flags2": 24580,
+    "id": 15988,
+    "level": 63,
+    "name": "Resplendent Orb",
+    "quality": 2,
+    "reqlevel": 58,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      2
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 13
+  },
+  {
+    "appearances": {
+      "0": [
+        1927,
+        "inv_staff_08"
+      ]
+    },
+    "armor": 0,
+    "bonustrees": [
+      5661
+    ],
+    "classs": 4,
+    "displayName": "Eternal Rod",
+    "displayid": 1927,
+    "flags2": 24580,
+    "id": 15989,
+    "level": 65,
+    "name": "Eternal Rod",
+    "quality": 2,
+    "reqlevel": 60,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      2
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 7
+  },
+  {
+    "appearances": {
+      "0": [
+        753010,
+        "inv_misc_bag_10"
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Furbolg Medicine Pouch",
+    "displayid": 753010,
+    "flags2": 24580,
+    "id": 16768,
+    "level": 52,
+    "name": "Furbolg Medicine Pouch",
+    "quality": 2,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      5
+    ],
+    "sourcemore": [
+      {
+        "n": "Gorn One Eye",
+        "t": 1,
+        "ti": 11555,
+        "z": 361
+      }
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "updated",
+      "labels": [
+        "new_icon"
+      ],
+      "lines": [
+        "New icon"
+      ],
+      "notShown": [
+        "New icon"
+      ]
+    },
+    "firstseenpatch": 0,
+    "popularity": 64
+  },
+  {
+    "appearances": {
+      "0": [
+        28588,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Witch's Finger",
+    "displayid": 28588,
+    "flags2": 4,
+    "id": 16887,
+    "level": 32,
+    "name": "Witch's Finger",
+    "quality": 3,
+    "reqlevel": 25,
+    "side": 2,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      4
+    ],
+    "sourcemore": [
+      {
+        "z": 331
+      }
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "updated",
+      "labels": [
+        "stats_changed",
+        "level_changed"
+      ],
+      "lines": [
+        "Item level 32 instead of 30",
+        "Intellect 8 instead of 7"
+      ],
+      "notShown": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 77
+  },
+  {
+    "appearances": {
+      "0": [
+        712462,
+        "inv_misc_fish_02"
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Feralas Ahi",
+    "displayid": 712462,
+    "flags2": 24580,
+    "id": 16967,
+    "level": 40,
+    "name": "Feralas Ahi",
+    "quality": 1,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      16
+    ],
+    "sourcemore": [
+      {
+        "n": "Feralas",
+        "t": 7,
+        "ti": 357
+      }
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "updated",
+      "labels": [
+        "new_icon"
+      ],
+      "lines": [
+        "New icon"
+      ],
+      "notShown": [
+        "New icon"
+      ]
+    },
+    "firstseenpatch": 0,
+    "popularity": 35
+  },
+  {
+    "appearances": {
+      "0": [
+        753024,
+        "inv_misc_book_09"
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Tome of Sacrifice",
+    "displayid": 753024,
+    "flags2": 24580,
+    "id": 18602,
+    "level": 60,
+    "name": "Tome of Sacrifice",
+    "quality": 3,
+    "reqclass": 256,
+    "reqlevel": 60,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      4
+    ],
+    "sourcemore": [
+      {
+        "c": -61,
+        "c2": 4,
+        "n": "Suppression",
+        "t": 5,
+        "ti": 7583
+      }
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "updated",
+      "labels": [
+        "stats_changed",
+        "new_icon"
+      ],
+      "lines": [
+        "Stamina 12 instead of 8",
+        "Shadow Spell Power 13 added",
+        "Health per 5 sec 12 instead of 6",
+        "New icon"
+      ],
+      "notShown": [
+        "New icon"
+      ]
+    },
+    "firstseenpatch": 0,
+    "popularity": 35
+  },
+  {
+    "appearances": {
+      "0": [
+        27756,
+        "inv_misc_orb_01"
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Shard of the Green Flame",
+    "displayid": 27756,
+    "flags2": 24580,
+    "id": 18762,
+    "level": 54,
+    "name": "Shard of the Green Flame",
+    "quality": 3,
+    "reqlevel": 50,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      4
+    ],
+    "sourcemore": [
+      {
+        "c": -61,
+        "c2": 4,
+        "n": "Kroshius' Infernal Core",
+        "t": 5,
+        "ti": 7603
+      }
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 24
+  },
+  {
+    "appearances": {
+      "0": [
+        753030,
+        "inv_potion_06"
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Flask of Forest Mojo",
+    "displayid": 753030,
+    "flags2": 24580,
+    "id": 19115,
+    "level": 51,
+    "name": "Flask of Forest Mojo",
+    "quality": 2,
+    "reqlevel": 46,
+    "side": 2,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      4
+    ],
+    "sourcemore": [
+      {
+        "c": 47,
+        "c2": 0,
+        "n": "Return to Primal Torntusk",
+        "t": 5,
+        "ti": 7847
+      }
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "updated",
+      "labels": [
+        "new_icon"
+      ],
+      "lines": [
+        "New icon"
+      ],
+      "notShown": [
+        "New icon"
+      ]
+    },
+    "firstseenpatch": 0,
+    "popularity": 15
+  },
+  {
+    "appearances": {
+      "0": [
+        7454,
+        "inv_misc_flower_04"
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Darkmoon Flower",
+    "displayid": 7454,
+    "flags2": 6316032,
+    "id": 19295,
+    "level": 20,
+    "name": "Darkmoon Flower",
+    "quality": 1,
+    "reqlevel": 6,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      4
+    ],
+    "sourcemore": [
+      {
+        "c": -364,
+        "c2": 9,
+        "n": "5 Tickets - Darkmoon Flower",
+        "t": 5,
+        "ti": 7930
+      }
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 8
+  },
+  {
+    "appearances": {
+      "0": [
+        753026,
+        "inv_misc_book_09"
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Tome of Arcane Domination",
+    "displayid": 753026,
+    "flags2": 24580,
+    "id": 19308,
+    "level": 60,
+    "name": "Tome of Arcane Domination",
+    "quality": 4,
+    "reqlevel": 55,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      5
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "updated",
+      "labels": [
+        "stats_changed",
+        "level_changed",
+        "required_level_changed",
+        "new_icon"
+      ],
+      "lines": [
+        "Item level 60 instead of 65",
+        "Arcane Spell Power 31 instead of 34",
+        "Requires level 55 instead of 60",
+        "New icon"
+      ],
+      "notShown": [
+        "New icon"
+      ]
+    },
+    "firstseenpatch": 0,
+    "popularity": 14
+  },
+  {
+    "appearances": {
+      "0": [
+        753022,
+        "inv_misc_book_09"
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Tome of Shadow Force",
+    "displayid": 753022,
+    "flags2": 24580,
+    "id": 19309,
+    "level": 60,
+    "name": "Tome of Shadow Force",
+    "quality": 4,
+    "reqlevel": 55,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      5
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "updated",
+      "labels": [
+        "stats_changed",
+        "level_changed",
+        "required_level_changed",
+        "new_icon"
+      ],
+      "lines": [
+        "Item level 60 instead of 65",
+        "Stamina 7 instead of 8",
+        "Shadow Spell Power 31 instead of 34",
+        "Requires level 55 instead of 60",
+        "New icon"
+      ],
+      "notShown": [
+        "New icon"
+      ]
+    },
+    "firstseenpatch": 0,
+    "popularity": 40
+  },
+  {
+    "appearances": {
+      "0": [
+        753025,
+        "inv_misc_book_09"
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Tome of the Ice Lord",
+    "displayid": 753025,
+    "flags2": 24580,
+    "id": 19310,
+    "level": 60,
+    "name": "Tome of the Ice Lord",
+    "quality": 4,
+    "reqlevel": 55,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      5
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "updated",
+      "labels": [
+        "stats_changed",
+        "level_changed",
+        "required_level_changed",
+        "new_icon"
+      ],
+      "lines": [
+        "Item level 60 instead of 65",
+        "Intellect 8 instead of 9",
+        "Frost Spell Power 31 instead of 34",
+        "Requires level 55 instead of 60",
+        "New icon"
+      ],
+      "notShown": [
+        "New icon"
+      ]
+    },
+    "firstseenpatch": 0,
+    "popularity": 10
+  },
+  {
+    "appearances": {
+      "0": [
+        753024,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Tome of Fiery Arcana",
+    "displayid": 753024,
+    "flags2": 24580,
+    "id": 19311,
+    "level": 60,
+    "name": "Tome of Fiery Arcana",
+    "quality": 4,
+    "reqlevel": 55,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      5
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "updated",
+      "labels": [
+        "stats_changed",
+        "level_changed",
+        "required_level_changed",
+        "new_icon"
+      ],
+      "lines": [
+        "Item level 60 instead of 65",
+        "Fire Spell Power 37 instead of 40",
+        "Requires level 55 instead of 60",
+        "New icon"
+      ],
+      "notShown": [
+        "New icon"
+      ]
+    },
+    "firstseenpatch": 0,
+    "popularity": 17
+  },
+  {
+    "appearances": {
+      "0": [
+        6479,
+        "inv_misc_flower_02"
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Lei of the Lifegiver",
+    "displayid": 6479,
+    "flags2": 24580,
+    "id": 19312,
+    "level": 60,
+    "name": "Lei of the Lifegiver",
+    "quality": 4,
+    "reqlevel": 55,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      5
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "updated",
+      "labels": [
+        "stats_changed",
+        "level_changed",
+        "required_level_changed"
+      ],
+      "lines": [
+        "Item level 60 instead of 65",
+        "Stamina 11 added",
+        "Spell Power 12 added",
+        "Healing 25 instead of 53",
+        "Mana per 5 sec 5 instead of 3",
+        "Requires level 55 instead of 60"
+      ],
+      "notShown": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 25
+  },
+  {
+    "appearances": {
+      "0": [
+        31809,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Therazane's Touch",
+    "displayid": 31809,
+    "flags2": 24580,
+    "id": 19315,
+    "level": 60,
+    "name": "Therazane's Touch",
+    "quality": 4,
+    "reqlevel": 55,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      5
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "updated",
+      "labels": [
+        "stats_changed",
+        "level_changed",
+        "required_level_changed"
+      ],
+      "lines": [
+        "Item level 60 instead of 65",
+        "Spell Power 29 instead of 33",
+        "Requires level 55 instead of 60"
+      ],
+      "notShown": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 35
+  },
+  {
+    "appearances": {
+      "0": [
+        31953,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Master Dragonslayer's Orb",
+    "displayid": 31953,
+    "flags2": 24580,
+    "id": 19366,
+    "level": 83,
+    "name": "Master Dragonslayer's Orb",
+    "quality": 4,
+    "reqlevel": 60,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      4
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "unchanged",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 25
+  },
+  {
+    "appearances": {
+      "0": [
+        33529,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Earthcalm Orb",
+    "displayid": 33529,
+    "flags2": 24580,
+    "id": 21185,
+    "level": 62,
+    "name": "Earthcalm Orb",
+    "quality": 4,
+    "reqlevel": 60,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      4
+    ],
+    "sourcemore": [
+      {
+        "c": 1377,
+        "c2": 1,
+        "n": "Stalwart's Battlegear",
+        "t": 5,
+        "ti": 8574
+      }
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "updated",
+      "labels": [
+        "stats_changed"
+      ],
+      "lines": [
+        "Spell Power 6 added",
+        "Healing 12 instead of 18"
+      ],
+      "notShown": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 10
+  },
+  {
+    "appearances": {
+      "0": [
+        34190,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Royal Scepter of Vek'lor",
+    "displayid": 34190,
+    "flags2": 24580,
+    "id": 21597,
+    "level": 81,
+    "name": "Royal Scepter of Vek'lor",
+    "quality": 4,
+    "reqlevel": 60,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      2
+    ],
+    "sourcemore": [
+      {
+        "bd": 1,
+        "n": "Emperor Vek'lor",
+        "t": 1,
+        "ti": 15276,
+        "z": 3428
+      }
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "updated",
+      "labels": [
+        "stats_changed",
+        "effects_changed"
+      ],
+      "lines": [
+        "Critical Strike Rating 14 added",
+        "Hit Rating 10 added",
+        "Spell Critical Strike % 1 removed",
+        "Spell Hit % 1 removed",
+        "Effects removed"
+      ],
+      "notShown": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 29
+  },
+  {
+    "appearances": {
+      "0": [
+        752961,
+        "inv_misc_flower_04"
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Bouquet of Red Roses",
+    "displayid": 752961,
+    "flags2": 24580,
+    "id": 22206,
+    "level": 1,
+    "name": "Bouquet of Red Roses",
+    "quality": 2,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      2
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "updated",
+      "labels": [
+        "new_icon"
+      ],
+      "lines": [
+        "New icon"
+      ],
+      "notShown": [
+        "New icon"
+      ]
+    },
+    "firstseenpatch": 0,
+    "popularity": 13
+  },
+  {
+    "appearances": {
+      "0": [
+        752985,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Grand Marshal's Tome of Power",
+    "displayid": 752985,
+    "flags2": 24580,
+    "id": 23452,
+    "level": 78,
+    "name": "Grand Marshal's Tome of Power",
+    "quality": 4,
+    "reqlevel": 60,
+    "side": 1,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      5
+    ],
+    "sourcemore": [
+      {
+        "n": "Captain O'Neal",
+        "t": 1,
+        "ti": 12782
+      }
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "updated",
+      "labels": [
+        "new_icon"
+      ],
+      "lines": [
+        "New icon"
+      ],
+      "notShown": [
+        "New icon"
+      ]
+    },
+    "firstseenpatch": 0,
+    "popularity": 13
+  },
+  {
+    "appearances": {
+      "0": [
+        752986,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Grand Marshal's Tome of Restoration",
+    "displayid": 752986,
+    "flags2": 24580,
+    "id": 23453,
+    "level": 78,
+    "name": "Grand Marshal's Tome of Restoration",
+    "quality": 4,
+    "reqlevel": 60,
+    "side": 1,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      5
+    ],
+    "sourcemore": [
+      {
+        "n": "Captain O'Neal",
+        "t": 1,
+        "ti": 12782
+      }
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "updated",
+      "labels": [
+        "new_icon"
+      ],
+      "lines": [
+        "New icon"
+      ],
+      "notShown": [
+        "New icon"
+      ]
+    },
+    "firstseenpatch": 0,
+    "popularity": 11
+  },
+  {
+    "appearances": {
+      "0": [
+        752987,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "High Warlord's Tome of Destruction",
+    "displayid": 752987,
+    "flags2": 24580,
+    "id": 23468,
+    "level": 78,
+    "name": "High Warlord's Tome of Destruction",
+    "quality": 4,
+    "reqlevel": 60,
+    "side": 2,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      5
+    ],
+    "sourcemore": [
+      {
+        "n": "Sergeant Thunderhorn",
+        "t": 1,
+        "ti": 14581
+      }
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "updated",
+      "labels": [
+        "new_icon"
+      ],
+      "lines": [
+        "New icon"
+      ],
+      "notShown": [
+        "New icon"
+      ]
+    },
+    "firstseenpatch": 0,
+    "popularity": 8
+  },
+  {
+    "appearances": {
+      "0": [
+        752988,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "High Warlord's Tome of Mending",
+    "displayid": 752988,
+    "flags2": 24580,
+    "id": 23469,
+    "level": 78,
+    "name": "High Warlord's Tome of Mending",
+    "quality": 4,
+    "reqlevel": 60,
+    "side": 2,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      5
+    ],
+    "sourcemore": [
+      {
+        "n": "Sergeant Thunderhorn",
+        "t": 1,
+        "ti": 14581
+      }
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "updated",
+      "labels": [
+        "new_icon"
+      ],
+      "lines": [
+        "New icon"
+      ],
+      "notShown": [
+        "New icon"
+      ]
+    },
+    "firstseenpatch": 0,
+    "popularity": 6
+  },
+  {
+    "appearances": {
+      "0": [
+        752978,
+        "inv_misc_book_07"
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Personal Spellbook",
+    "displayid": 752978,
+    "flags2": 24580,
+    "id": 221344,
+    "level": 55,
+    "name": "Personal Spellbook",
+    "quality": 3,
+    "reqclass": 128,
+    "slot": 23,
+    "slotbak": 23,
+    "subclass": -5,
+    "envChange": {
+      "status": "updated",
+      "labels": [
+        "stats_changed",
+        "effects_changed",
+        "required_level_changed",
+        "new_icon"
+      ],
+      "lines": [
+        "Intellect 9 added",
+        "Spell Power 16 instead of 21",
+        "Effects removed",
+        "Requires level none instead of 42",
+        "New icon"
+      ],
+      "notShown": [
+        "New icon"
+      ]
+    },
+    "firstseenpatch": 0,
+    "popularity": 17
+  },
+  {
+    "appearances": {
+      "0": [
+        752987,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "High Warlord's Tome of Destruction",
+    "displayid": 752987,
+    "flags2": 16388,
+    "id": 234563,
+    "level": 80,
+    "name": "High Warlord's Tome of Destruction",
+    "quality": 4,
+    "reqlevel": 60,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      5
+    ],
+    "sourcemore": [
+      {
+        "n": "Sergeant Thunderhorn",
+        "t": 1,
+        "ti": 14581
+      }
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "updated",
+      "labels": [
+        "new_icon"
+      ],
+      "lines": [
+        "New icon"
+      ],
+      "notShown": [
+        "New icon"
+      ]
+    },
+    "firstseenpatch": 0,
+    "popularity": 9
+  },
+  {
+    "appearances": {
+      "0": [
+        752988,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "High Warlord's Tome of Mending",
+    "displayid": 752988,
+    "flags2": 16388,
+    "id": 234564,
+    "level": 80,
+    "name": "High Warlord's Tome of Mending",
+    "quality": 4,
+    "reqlevel": 60,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      5
+    ],
+    "sourcemore": [
+      {
+        "n": "Sergeant Thunderhorn",
+        "t": 1,
+        "ti": 14581
+      }
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "updated",
+      "labels": [
+        "stats_changed",
+        "new_icon"
+      ],
+      "lines": [
+        "Spell Power 15 added",
+        "Healing 29 instead of 44",
+        "Spell Damage 15 removed",
+        "New icon"
+      ],
+      "notShown": [
+        "New icon"
+      ]
+    },
+    "firstseenpatch": 0,
+    "popularity": 11
+  },
+  {
+    "appearances": {
+      "0": [
+        752985,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Grand Marshal's Tome of Power",
+    "displayid": 752985,
+    "flags2": 16388,
+    "id": 234589,
+    "level": 80,
+    "name": "Grand Marshal's Tome of Power",
+    "quality": 4,
+    "reqlevel": 60,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      5
+    ],
+    "sourcemore": [
+      {
+        "n": "Captain O'Neal",
+        "t": 1,
+        "ti": 12782
+      }
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "updated",
+      "labels": [
+        "new_icon"
+      ],
+      "lines": [
+        "New icon"
+      ],
+      "notShown": [
+        "New icon"
+      ]
+    },
+    "firstseenpatch": 0,
+    "popularity": 12
+  },
+  {
+    "appearances": {
+      "0": [
+        752986,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Grand Marshal's Tome of Restoration",
+    "displayid": 752986,
+    "flags2": 16388,
+    "id": 234590,
+    "level": 80,
+    "name": "Grand Marshal's Tome of Restoration",
+    "quality": 4,
+    "reqlevel": 60,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      5
+    ],
+    "sourcemore": [
+      {
+        "n": "Captain O'Neal",
+        "t": 1,
+        "ti": 12782
+      }
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "updated",
+      "labels": [
+        "stats_changed",
+        "new_icon"
+      ],
+      "lines": [
+        "Spell Power 15 added",
+        "Healing 29 instead of 44",
+        "Spell Damage 15 removed",
+        "New icon"
+      ],
+      "notShown": [
+        "New icon"
+      ]
+    },
+    "firstseenpatch": 0,
+    "popularity": 13
+  },
+  {
+    "appearances": {
+      "0": [
+        27801,
+        "inv_misc_gem_pearl_06"
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Orb of Mystic Insight",
+    "displayid": 27801,
+    "flags2": 24580,
+    "id": 249394,
+    "level": 30,
+    "name": "Orb of Mystic Insight",
+    "quality": 3,
+    "reqlevel": 25,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      1
+    ],
+    "sourcemore": [
+      {
+        "c": 11,
+        "icon": "inv_misc_orb_blue",
+        "n": "Orb of Mystic Insight",
+        "s": 333,
+        "t": 6,
+        "ti": 1248745
+      }
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "new",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 163
+  },
+  {
+    "appearances": {
+      "0": [
+        21597,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Orb of Souls",
+    "displayid": 21597,
+    "flags2": 24580,
+    "id": 249395,
+    "level": 30,
+    "name": "Orb of Souls",
+    "quality": 3,
+    "reqlevel": 25,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      1
+    ],
+    "sourcemore": [
+      {
+        "c": 11,
+        "icon": "inv_misc_orb_04",
+        "n": "Orb of Souls",
+        "s": 333,
+        "t": 6,
+        "ti": 1248748
+      }
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "new",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 113
+  },
+  {
+    "appearances": {
+      "0": [
+        27929,
+        "inv_staff_07"
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Truesilver Conduit",
+    "displayid": 27929,
+    "flags2": 8196,
+    "id": 249455,
+    "level": 50,
+    "name": "Truesilver Conduit",
+    "quality": 3,
+    "reqlevel": 45,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      1
+    ],
+    "sourcemore": [
+      {
+        "c": 11,
+        "icon": "inv_rod_enchantedadamantite",
+        "n": "Truesilver Conduit",
+        "s": 333,
+        "t": 6,
+        "ti": 1249069
+      }
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "new",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 43
+  },
+  {
+    "appearances": {
+      "0": [
+        21373,
+        "inv_wand_05"
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Twisting Essence Jar",
+    "displayid": 21373,
+    "flags2": 8196,
+    "id": 249456,
+    "level": 50,
+    "name": "Twisting Essence Jar",
+    "quality": 3,
+    "reqlevel": 45,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      1
+    ],
+    "sourcemore": [
+      {
+        "c": 11,
+        "icon": "inv_10_misc_dragonorb_color1",
+        "n": "Twisting Essence Jar",
+        "s": 333,
+        "t": 6,
+        "ti": 1249070
+      }
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "new",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 44
+  },
+  {
+    "appearances": {
+      "0": [
+        718091,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Highborne Memory Crystal",
+    "displayid": 718091,
+    "flags2": 8196,
+    "id": 260201,
+    "level": 55,
+    "name": "Highborne Memory Crystal",
+    "quality": 2,
+    "slot": 23,
+    "slotbak": 23,
+    "subclass": -5,
+    "envChange": {
+      "status": "new",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 23
+  },
+  {
+    "appearances": {
+      "0": [
+        718107,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Prelate's Orb",
+    "displayid": 718107,
+    "flags2": 8196,
+    "id": 260208,
+    "level": 55,
+    "name": "Prelate's Orb",
+    "quality": 2,
+    "slot": 23,
+    "slotbak": 23,
+    "subclass": -5,
+    "envChange": {
+      "status": "new",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 24
+  },
+  {
+    "appearances": {
+      "0": [
+        28510,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Gryphon Rider's Crop",
+    "displayid": 28510,
+    "flags2": 8196,
+    "id": 270112,
+    "level": 53,
+    "name": "Gryphon Rider's Crop",
+    "quality": 2,
+    "slot": 23,
+    "slotbak": 23,
+    "subclass": -5,
+    "envChange": {
+      "status": "new",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 13
+  },
+  {
+    "appearances": {
+      "0": [
+        6487,
+        "inv_jewelry_talisman_03"
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Rejected Roses",
+    "displayid": 6487,
+    "flags2": 24580,
+    "id": 271618,
+    "level": 1,
+    "name": "Rejected Roses",
+    "quality": 1,
+    "slot": 23,
+    "slotbak": 23,
+    "subclass": -5,
+    "envChange": {
+      "status": "new",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 6
+  },
+  {
+    "appearances": {
+      "0": [
+        27874,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Thrice-Damned Effigy",
+    "displayid": 27874,
+    "flags2": 8192,
+    "id": 271805,
+    "level": 42,
+    "name": "Thrice-Damned Effigy",
+    "quality": 3,
+    "reqlevel": 35,
+    "side": 2,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      4
+    ],
+    "sourcemore": [
+      {
+        "c": 405,
+        "c2": 1,
+        "n": "Khan Jehn",
+        "t": 5,
+        "ti": 93128
+      }
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "new",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 36
+  },
+  {
+    "appearances": {
+      "0": [
+        753021,
+        "inv_misc_book_09"
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Insurgent's Manifesto",
+    "displayid": 753021,
+    "flags2": 4,
+    "id": 271932,
+    "level": 63,
+    "name": "Insurgent's Manifesto",
+    "quality": 3,
+    "reqlevel": 58,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      5
+    ],
+    "sourcemore": [
+      {
+        "n": "Bryanna Embreeze",
+        "t": 1,
+        "ti": 263569,
+        "z": 17
+      }
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "new",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 14
+  },
+  {
+    "appearances": {
+      "0": [
+        753021,
+        "inv_misc_book_09"
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Insurgent's Manifesto",
+    "displayid": 753021,
+    "flags2": 4,
+    "id": 271933,
+    "level": 53,
+    "name": "Insurgent's Manifesto",
+    "quality": 3,
+    "reqlevel": 48,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      5
+    ],
+    "sourcemore": [
+      {
+        "n": "Bryanna Embreeze",
+        "t": 1,
+        "ti": 263569,
+        "z": 17
+      }
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "new",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 27
+  },
+  {
+    "appearances": {
+      "0": [
+        753021,
+        "inv_misc_book_09"
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Insurgent's Manifesto",
+    "displayid": 753021,
+    "flags2": 4,
+    "id": 271934,
+    "level": 43,
+    "name": "Insurgent's Manifesto",
+    "quality": 3,
+    "reqlevel": 38,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      5
+    ],
+    "sourcemore": [
+      {
+        "n": "Bryanna Embreeze",
+        "t": 1,
+        "ti": 263569,
+        "z": 17
+      }
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "new",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 21
+  },
+  {
+    "appearances": {
+      "0": [
+        753021,
+        "inv_misc_book_09"
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Insurgent's Manifesto",
+    "displayid": 753021,
+    "flags2": 4,
+    "id": 271935,
+    "level": 33,
+    "name": "Insurgent's Manifesto",
+    "quality": 3,
+    "reqlevel": 28,
+    "slot": 23,
+    "slotbak": 23,
+    "subclass": -5,
+    "envChange": {
+      "status": "new",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 29
+  },
+  {
+    "appearances": {
+      "0": [
+        753021,
+        "inv_misc_book_09"
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Tome of the Darkspear Prophecy",
+    "displayid": 753021,
+    "flags2": 4,
+    "id": 272087,
+    "level": 63,
+    "name": "Tome of the Darkspear Prophecy",
+    "quality": 3,
+    "reqlevel": 58,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      5
+    ],
+    "sourcemore": [
+      {
+        "n": "Creeg Bothunk",
+        "t": 1,
+        "ti": 263570,
+        "z": 17
+      }
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "new",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 14
+  },
+  {
+    "appearances": {
+      "0": [
+        753021,
+        "inv_misc_book_09"
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Tome of the Darkspear Prophecy",
+    "displayid": 753021,
+    "flags2": 4,
+    "id": 272088,
+    "level": 53,
+    "name": "Tome of the Darkspear Prophecy",
+    "quality": 3,
+    "reqlevel": 48,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      5
+    ],
+    "sourcemore": [
+      {
+        "n": "Creeg Bothunk",
+        "t": 1,
+        "ti": 263570,
+        "z": 17
+      }
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "new",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 15
+  },
+  {
+    "appearances": {
+      "0": [
+        753021,
+        "inv_misc_book_09"
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Tome of the Darkspear Prophecy",
+    "displayid": 753021,
+    "flags2": 4,
+    "id": 272089,
+    "level": 43,
+    "name": "Tome of the Darkspear Prophecy",
+    "quality": 3,
+    "reqlevel": 38,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      5
+    ],
+    "sourcemore": [
+      {
+        "n": "Creeg Bothunk",
+        "t": 1,
+        "ti": 263570,
+        "z": 17
+      }
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "new",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 20
+  },
+  {
+    "appearances": {
+      "0": [
+        753021,
+        "inv_misc_book_09"
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Tome of the Darkspear Prophecy",
+    "displayid": 753021,
+    "flags2": 4,
+    "id": 272090,
+    "level": 33,
+    "name": "Tome of the Darkspear Prophecy",
+    "quality": 3,
+    "reqlevel": 28,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      5
+    ],
+    "sourcemore": [
+      {
+        "n": "Creeg Bothunk",
+        "t": 1,
+        "ti": 263570,
+        "z": 17
+      }
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "new",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 40
+  },
+  {
+    "appearances": {
+      "0": [
+        752987,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Premier High Warlord's Tome of Destruction",
+    "displayid": 752987,
+    "flags2": 24580,
+    "id": 272685,
+    "level": 65,
+    "name": "Premier High Warlord's Tome of Destruction",
+    "quality": 4,
+    "reqlevel": 60,
+    "slot": 23,
+    "slotbak": 23,
+    "subclass": -5,
+    "envChange": {
+      "status": "new",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 13
+  },
+  {
+    "appearances": {
+      "0": [
+        752988,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Premier High Warlord's Tome of Mending",
+    "displayid": 752988,
+    "flags2": 24580,
+    "id": 272686,
+    "level": 65,
+    "name": "Premier High Warlord's Tome of Mending",
+    "quality": 4,
+    "reqlevel": 60,
+    "slot": 23,
+    "slotbak": 23,
+    "subclass": -5,
+    "envChange": {
+      "status": "new",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 13
+  },
+  {
+    "appearances": {
+      "0": [
+        21603,
+        "inv_misc_orb_01"
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Raptor's Gaze",
+    "displayid": 21603,
+    "flags2": 4,
+    "id": 273027,
+    "level": 31,
+    "name": "Raptor's Gaze",
+    "quality": 3,
+    "reqlevel": 26,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      2
+    ],
+    "sourcemore": [
+      {
+        "dd": -1,
+        "n": "Shadetooth",
+        "t": 1,
+        "ti": 260325,
+        "z": 16732
+      }
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "new",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 251
+  },
+  {
+    "appearances": {
+      "0": [
+        737809,
+        "inv_misc_orb_yellow"
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Ponderous Orb",
+    "displayid": 737809,
+    "flags2": 4,
+    "id": 273052,
+    "level": 35,
+    "name": "Ponderous Orb",
+    "quality": 3,
+    "reqlevel": 30,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      2
+    ],
+    "sourcemore": [
+      {
+        "dd": -1,
+        "n": "Shade of the Archmage",
+        "t": 1,
+        "ti": 246020,
+        "z": 36
+      }
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "new",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 133
+  },
+  {
+    "appearances": {
+      "0": [
+        753020,
+        "inv_misc_flute_01"
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Skum's Bucket",
+    "displayid": 753020,
+    "flags2": 4,
+    "id": 273137,
+    "level": 22,
+    "name": "Skum's Bucket",
+    "quality": 3,
+    "reqlevel": 17,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      2
+    ],
+    "sourcemore": [
+      {
+        "bd": 1,
+        "dd": -1,
+        "n": "Skum",
+        "t": 1,
+        "ti": 3674,
+        "z": 718
+      }
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "new",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 102
+  },
+  {
+    "appearances": {
+      "0": [
+        752994,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Barkskin Baubles",
+    "displayid": 752994,
+    "flags2": 24576,
+    "id": 274417,
+    "level": 58,
+    "name": "Barkskin Baubles",
+    "quality": 3,
+    "reqlevel": 53,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      5
+    ],
+    "sourcemore": [
+      {
+        "n": "Dala Fairmaw",
+        "t": 1,
+        "ti": 256629,
+        "z": 616
+      }
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "new",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 36
+  },
+  {
+    "appearances": {
+      "0": [
+        753007,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Defective Samophlange",
+    "displayid": 753007,
+    "flags2": 8192,
+    "id": 274743,
+    "level": 25,
+    "name": "Defective Samophlange",
+    "quality": 3,
+    "reqlevel": 20,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      5
+    ],
+    "sourcemore": [
+      {
+        "n": "Winklespark",
+        "t": 1,
+        "ti": 265574,
+        "z": 17
+      }
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "new",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 34
+  },
+  {
+    "appearances": {
+      "0": [
+        739868,
+        "inv_misc_orb_03"
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Depleted Eye of Influence",
+    "displayid": 739868,
+    "flags2": 8196,
+    "id": 275630,
+    "level": 58,
+    "name": "Depleted Eye of Influence",
+    "quality": 2,
+    "slot": 23,
+    "slotbak": 23,
+    "subclass": -5,
+    "envChange": {
+      "status": "new",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 21
+  },
+  {
+    "appearances": {
+      "0": [
+        753019,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Field Agent Beverage",
+    "displayid": 753019,
+    "flags2": 8196,
+    "id": 275671,
+    "level": 59,
+    "name": "Field Agent Beverage",
+    "quality": 2,
+    "slot": 23,
+    "slotbak": 23,
+    "subclass": -5,
+    "envChange": {
+      "status": "new",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 21
+  },
+  {
+    "appearances": {
+      "0": [
+        752967,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Empty Fish Bucket",
+    "displayid": 752967,
+    "flags2": 8192,
+    "id": 276273,
+    "level": 1,
+    "name": "Empty Fish Bucket",
+    "quality": 3,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      5
+    ],
+    "sourcemore": [
+      {
+        "n": "Jang",
+        "t": 1,
+        "ti": 15078,
+        "z": 33
+      }
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "new",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 84
+  },
+  {
+    "appearances": {
+      "0": [
+        739867,
+        "inv_misc_orb_03"
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Yashiro's Spirit Bead",
+    "displayid": 739867,
+    "flags2": 8196,
+    "id": 276336,
+    "level": 60,
+    "name": "Yashiro's Spirit Bead",
+    "quality": 2,
+    "slot": 23,
+    "slotbak": 23,
+    "subclass": -5,
+    "envChange": {
+      "status": "new",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 36
+  },
+  {
+    "appearances": {
+      "0": [
+        752991,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "A Lesson in Destruction",
+    "displayid": 752991,
+    "flags2": 8192,
+    "id": 276897,
+    "level": 38,
+    "name": "A Lesson in Destruction",
+    "quality": 3,
+    "slot": 23,
+    "slotbak": 23,
+    "subclass": -5,
+    "envChange": {
+      "status": "new",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 65
+  },
+  {
+    "appearances": {
+      "0": [
+        752990,
+        ""
+      ]
+    },
+    "armor": 0,
+    "armorbonus": 50,
+    "classs": 4,
+    "displayName": "Salve and Salvation",
+    "displayid": 752990,
+    "flags2": 8192,
+    "id": 276898,
+    "level": 38,
+    "name": "Salve and Salvation",
+    "quality": 3,
+    "reqlevel": 30,
+    "side": 1,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      4
+    ],
+    "sourcemore": [
+      {
+        "c": 796,
+        "c2": 2,
+        "n": "Past Due",
+        "t": 5,
+        "ti": 96800
+      }
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "new",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 59
+  },
+  {
+    "appearances": {
+      "0": [
+        752999,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Shimmerwine Spirits",
+    "displayid": 752999,
+    "flags2": 8192,
+    "id": 276904,
+    "level": 52,
+    "name": "Shimmerwine Spirits",
+    "quality": 2,
+    "slot": 23,
+    "slotbak": 23,
+    "subclass": -5,
+    "envChange": {
+      "status": "new",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 136
+  },
+  {
+    "appearances": {
+      "0": [
+        753004,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Fermented Restoration Potion",
+    "displayid": 753004,
+    "flags2": 8192,
+    "id": 277259,
+    "level": 45,
+    "name": "Fermented Restoration Potion",
+    "quality": 3,
+    "reqlevel": 40,
+    "slot": 23,
+    "slotbak": 23,
+    "subclass": -5,
+    "envChange": {
+      "status": "new",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 17
+  },
+  {
+    "appearances": {
+      "0": [
+        6520,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Researcher's Night Light",
+    "displayid": 6520,
+    "flags2": 8192,
+    "id": 277260,
+    "level": 45,
+    "name": "Researcher's Night Light",
+    "quality": 3,
+    "reqlevel": 40,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      4
+    ],
+    "sourcemore": [
+      {
+        "c": -284,
+        "c2": -2,
+        "n": "Greater Friend of the Library",
+        "t": 5,
+        "ti": 82208
+      }
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "new",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 128
+  },
+  {
+    "appearances": {
+      "0": [
+        743801,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Ogre Bone",
+    "displayid": 743801,
+    "flags2": 8192,
+    "id": 277980,
+    "level": 44,
+    "name": "Ogre Bone",
+    "quality": 2,
+    "slot": 23,
+    "slotbak": 23,
+    "subclass": -5,
+    "envChange": {
+      "status": "new",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 17
+  },
+  {
+    "appearances": {
+      "0": [
+        752986,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Premier Grand Marshal's Tome of Restoration",
+    "displayid": 752986,
+    "flags2": 24580,
+    "id": 278157,
+    "level": 65,
+    "name": "Premier Grand Marshal's Tome of Restoration",
+    "quality": 4,
+    "reqlevel": 60,
+    "slot": 23,
+    "slotbak": 23,
+    "subclass": -5,
+    "envChange": {
+      "status": "new",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 15
+  },
+  {
+    "appearances": {
+      "0": [
+        752985,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Premier Grand Marshal's Tome of Power",
+    "displayid": 752985,
+    "flags2": 24580,
+    "id": 278158,
+    "level": 65,
+    "name": "Premier Grand Marshal's Tome of Power",
+    "quality": 4,
+    "reqlevel": 60,
+    "slot": 23,
+    "slotbak": 23,
+    "subclass": -5,
+    "envChange": {
+      "status": "new",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 15
+  },
+  {
+    "appearances": {
+      "0": [
+        15428,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Arcane Infused Rod",
+    "displayid": 15428,
+    "id": 279838,
+    "level": 36,
+    "name": "Arcane Infused Rod",
+    "quality": 2,
+    "reqlevel": 24,
+    "side": 1,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      4
+    ],
+    "sourcemore": [
+      {
+        "c": 16544,
+        "c2": 2,
+        "n": "Starving Arcane",
+        "t": 5,
+        "ti": 92457
+      }
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "new",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 102
+  },
+  {
+    "appearances": {
+      "0": [
+        752992,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Dwarven Tome",
+    "displayid": 752992,
+    "id": 279898,
+    "level": 17,
+    "name": "Dwarven Tome",
+    "quality": 2,
+    "reqlevel": 10,
+    "side": 1,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      4
+    ],
+    "sourcemore": [
+      {
+        "c": 16919,
+        "c2": 2,
+        "n": "Important Heirlooms",
+        "t": 5,
+        "ti": 96403
+      }
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "new",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 159
+  },
+  {
+    "appearances": {
+      "0": [
+        745525,
+        "inv_shield_04"
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Frying Pan",
+    "displayid": 745525,
+    "flags2": 24580,
+    "id": 280317,
+    "level": 5,
+    "name": "Frying Pan",
+    "quality": 1,
+    "slot": 23,
+    "slotbak": 23,
+    "subclass": -5,
+    "envChange": {
+      "status": "new",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 22
+  },
+  {
+    "appearances": {
+      "0": [
+        28803,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Mathystra Channeling Orb",
+    "displayid": 28803,
+    "flags2": 8192,
+    "id": 281291,
+    "level": 21,
+    "name": "Mathystra Channeling Orb",
+    "quality": 3,
+    "reqlevel": 17,
+    "side": 1,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      4
+    ],
+    "sourcemore": [
+      {
+        "c": 148,
+        "c2": 1,
+        "n": "Baron Marinous",
+        "t": 5,
+        "ti": 98028
+      }
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "new",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 55
+  },
+  {
+    "appearances": {
+      "0": [
+        6487,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Onu's Patience",
+    "displayid": 6487,
+    "flags2": 8192,
+    "id": 281292,
+    "level": 21,
+    "name": "Onu's Patience",
+    "quality": 3,
+    "reqlevel": 17,
+    "side": 1,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      4
+    ],
+    "sourcemore": [
+      {
+        "c": 148,
+        "c2": 1,
+        "n": "Baron Marinous",
+        "t": 5,
+        "ti": 98028
+      }
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "new",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 36
+  },
+  {
+    "appearances": {
+      "0": [
+        752963,
+        "inv_potion_17"
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Expended Apothecary Vial",
+    "displayid": 752963,
+    "flags2": 8192,
+    "id": 281294,
+    "level": 25,
+    "name": "Expended Apothecary Vial",
+    "quality": 2,
+    "reqlevel": 19,
+    "side": 2,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      4
+    ],
+    "sourcemore": [
+      {
+        "c": 267,
+        "c2": 0,
+        "n": "Valuable Vantages",
+        "t": 5,
+        "ti": 98095
+      }
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "new",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 21
+  },
+  {
+    "appearances": {
+      "0": [
+        752982,
+        "inv_misc_book_07"
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Flamescarred Spellbook",
+    "displayid": 752982,
+    "flags2": 8192,
+    "id": 281306,
+    "level": 31,
+    "name": "Flamescarred Spellbook",
+    "quality": 2,
+    "reqlevel": 23,
+    "side": 1,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      4
+    ],
+    "sourcemore": [
+      {
+        "c": 11,
+        "c2": 0,
+        "n": "Old Habits",
+        "t": 5,
+        "ti": 98223
+      }
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "new",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 23
+  },
+  {
+    "appearances": {
+      "0": [
+        6479,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Bouquet of Auberdine Flowers",
+    "displayid": 6479,
+    "flags2": 8192,
+    "id": 281318,
+    "level": 29,
+    "name": "Bouquet of Auberdine Flowers",
+    "quality": 2,
+    "reqlevel": 22,
+    "side": 1,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      4
+    ],
+    "sourcemore": [
+      {
+        "c": 11,
+        "c2": 0,
+        "n": "Bloom of the Heavens",
+        "t": 5,
+        "ti": 98208
+      }
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "new",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 25
+  },
+  {
+    "appearances": {
+      "0": [
+        21601,
+        ""
+      ]
+    },
+    "armor": 0,
+    "bonustrees": [
+      6138
+    ],
+    "classs": 4,
+    "displayName": "Restored Bauble",
+    "displayid": 21601,
+    "flags2": 6316032,
+    "id": 281730,
+    "level": 1,
+    "name": "Restored Bauble",
+    "quality": 2,
+    "slot": 23,
+    "slotbak": 23,
+    "subclass": -5,
+    "envChange": {
+      "status": "new",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 16
+  },
+  {
+    "appearances": {
+      "0": [
+        21597,
+        "inv_misc_orb_04"
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Heart of Smoldar",
+    "displayid": 21597,
+    "flags2": 4,
+    "id": 282088,
+    "level": 52,
+    "name": "Heart of Smoldar",
+    "quality": 2,
+    "reqlevel": 47,
+    "slot": 23,
+    "slotbak": 23,
+    "subclass": -5,
+    "envChange": {
+      "status": "new",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 20
+  },
+  {
+    "appearances": {
+      "0": [
+        3573,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Gnawed Bone",
+    "displayid": 3573,
+    "flags2": 4,
+    "id": 282654,
+    "level": 26,
+    "name": "Gnawed Bone",
+    "quality": 2,
+    "reqlevel": 21,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      2
+    ],
+    "sourcemore": [
+      {
+        "n": "Gnawbone",
+        "t": 1,
+        "ti": 14425,
+        "z": 11
+      }
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "new",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 29
+  },
+  {
+    "appearances": {
+      "0": [
+        748656,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Rotting Meat",
+    "displayid": 748656,
+    "flags2": 4,
+    "id": 282706,
+    "level": 44,
+    "name": "Rotting Meat",
+    "quality": 3,
+    "reqlevel": 39,
+    "slot": 23,
+    "slotbak": 23,
+    "subclass": -5,
+    "envChange": {
+      "status": "new",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 48
+  },
+  {
+    "appearances": {
+      "0": [
+        28472,
+        "inv_misc_orb_04"
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Heart of Alterac",
+    "displayid": 28472,
+    "flags2": 4,
+    "id": 283254,
+    "level": 39,
+    "name": "Heart of Alterac",
+    "quality": 2,
+    "reqlevel": 34,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      2
+    ],
+    "sourcemore": [
+      {
+        "n": "Stone Fury",
+        "t": 1,
+        "ti": 2258,
+        "z": 36
+      }
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "new",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 21
+  },
+  {
+    "appearances": {
+      "0": [
+        753004,
+        "inv_potion_19"
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Vial of Vile Liquid",
+    "displayid": 753004,
+    "flags2": 16388,
+    "id": 284228,
+    "level": 56,
+    "name": "Vial of Vile Liquid",
+    "quality": 2,
+    "reqlevel": 51,
+    "slot": 23,
+    "slotbak": 23,
+    "subclass": -5,
+    "envChange": {
+      "status": "new",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 24
+  },
+  {
+    "appearances": {
+      "0": [
+        752962,
+        "inv_potion_19"
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Apothecary's Concoction",
+    "displayid": 752962,
+    "flags2": 4,
+    "id": 284668,
+    "level": 24,
+    "name": "Apothecary's Concoction",
+    "quality": 2,
+    "reqlevel": 19,
+    "slot": 23,
+    "slotbak": 23,
+    "subclass": -5,
+    "envChange": {
+      "status": "new",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 58
+  },
+  {
+    "appearances": {
+      "0": [
+        6520,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Kobold Firestarter",
+    "displayid": 6520,
+    "flags2": 4,
+    "id": 285192,
+    "level": 30,
+    "name": "Kobold Firestarter",
+    "quality": 2,
+    "reqlevel": 25,
+    "slot": 23,
+    "slotbak": 23,
+    "subclass": -5,
+    "envChange": {
+      "status": "new",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 22
+  },
+  {
+    "appearances": {
+      "0": [
+        13109,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Alliance Outrunner Healing Rod",
+    "displayid": 13109,
+    "flags2": 4,
+    "id": 285348,
+    "level": 26,
+    "name": "Alliance Outrunner Healing Rod",
+    "quality": 3,
+    "reqlevel": 21,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      2
+    ],
+    "sourcemore": [
+      {
+        "n": "Hannah Bladeleaf",
+        "t": 1,
+        "ti": 5799,
+        "z": 17
+      }
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "new",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 123
+  },
+  {
+    "appearances": {
+      "0": [
+        753017,
+        "inv_drink_09"
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Red Wine Glass",
+    "displayid": 753017,
+    "flags2": 16388,
+    "id": 285362,
+    "level": 1,
+    "name": "Red Wine Glass",
+    "quality": 1,
+    "slot": 23,
+    "slotbak": 23,
+    "source": [
+      5
+    ],
+    "sourcemore": [
+      {
+        "n": "Christi Stockton",
+        "t": 1,
+        "ti": 32337,
+        "z": 36
+      }
+    ],
+    "subclass": -5,
+    "envChange": {
+      "status": "new",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 17
+  },
+  {
+    "appearances": {
+      "0": [
+        753047,
+        ""
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Bael'dun Tankard",
+    "displayid": 753047,
+    "flags2": 4,
+    "id": 286541,
+    "level": 27,
+    "name": "Bael'dun Tankard",
+    "quality": 2,
+    "reqlevel": 22,
+    "slot": 23,
+    "slotbak": 23,
+    "subclass": -5,
+    "envChange": {
+      "status": "new",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 39
+  },
+  {
+    "appearances": {
+      "0": [
+        2717,
+        "inv_weapon_shortblade_05"
+      ]
+    },
+    "armor": 0,
+    "classs": 4,
+    "displayName": "Letter Opener",
+    "displayid": 2717,
+    "flags2": 28672,
+    "id": 287090,
+    "level": 17,
+    "name": "Letter Opener",
+    "quality": 1,
+    "reqlevel": 2,
+    "slot": 23,
+    "slotbak": 23,
+    "subclass": -5,
+    "envChange": {
+      "status": "new",
+      "labels": [],
+      "lines": []
+    },
+    "firstseenpatch": 0,
+    "popularity": 26
+  }
+]

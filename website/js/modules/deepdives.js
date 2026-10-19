@@ -174,10 +174,21 @@ function initClassDeepDives() {
 
             const progTabs = [
               { id: "spellbook", label: "1–60 Spellbook", icon: "📖" },
-              { id: "weapons", label: "Weapon Path", icon: "⚔️" },
+              { id: "weapons", label: "Weapon Path", icon: "⚔️" }
+            ];
+
+            if (['mage', 'priest', 'warlock'].includes(cData.id)) {
+              progTabs.push({ id: "wands", label: "Wand Path", icon: "🪄" });
+            }
+
+            if (['mage', 'priest', 'warlock', 'druid', 'shaman', 'paladin'].includes(cData.id)) {
+              progTabs.push({ id: "offhands", label: "Off-Hand Path", icon: "🔮" });
+            }
+
+            progTabs.push(
               { id: "macros", label: "Macros", icon: "📜" },
               { id: "milestones", label: "Leveling Milestones", icon: "🗺️" }
-            ];
+            );
             for (const pt of progTabs) {
               if (!tabs.some(t => t.id === pt.id)) tabs.push(pt);
             }
@@ -562,7 +573,7 @@ function initClassDeepDives() {
   window.renderDeepDiveContent = renderDeepDiveContent;
 
   function renderDeepDiveSubTabBody(cData, subtab) {
-    if (['spellbook', 'weapons', 'macros', 'milestones'].includes(subtab)) {
+    if (['spellbook', 'weapons', 'wands', 'offhands', 'macros', 'milestones'].includes(subtab)) {
       return window.WOW_DEEPDIVES_PROGRESSION?.renderProgressionSubtab(subtab, cData) || '<div class="deepdive-loading">Loading progression...</div>';
     } else if (subtab === 'betaBuilds' && cData.betaBuilds) {
       return (window.WOW_DEEPDIVES_BUILDS?.renderBetaBuildsSection || renderBetaBuildsSection)(cData);
