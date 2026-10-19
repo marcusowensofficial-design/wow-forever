@@ -203,6 +203,27 @@
       "Equip: Increases damage and healing done by magical spells and effects by up to 60"
     ]
   },
+  "876": {
+    "id": 876,
+    "name": "Worn Wooden Buckler",
+    "icon": "inv_shield_09",
+    "iLvl": 1,
+    "reqLevel": 1,
+    "quality": "q1",
+    "stats": "10 Armor, +1 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "n": "Brammold Deepmine",
+        "t": 1,
+        "ti": 252000,
+        "z": 36
+      }
+    ]
+  },
   "936": {
     "id": 936,
     "name": "Midnight Mace",
@@ -298,12 +319,10 @@
     "iLvl": 25,
     "reqLevel": 18,
     "quality": "q2",
-    "speed": null,
-    "dps": null,
     "stats": "",
     "inventorySlot": "Held In Off-hand",
-    "subclass": -5,
-    "subclassName": "Weapon",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
     "side": "alliance",
     "sourcemore": [
       {
@@ -435,6 +454,20 @@
       "55 Armor"
     ]
   },
+  "1167": {
+    "id": 1167,
+    "name": "Small Targe",
+    "icon": "inv_shield_09",
+    "iLvl": 10,
+    "reqLevel": 5,
+    "quality": "q1",
+    "stats": "161 Armor, +3 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
   "1172": {
     "id": 1172,
     "name": "Grayson's Torch",
@@ -459,6 +492,20 @@
       }
     ]
   },
+  "1193": {
+    "id": 1193,
+    "name": "Banded Buckler",
+    "icon": "inv_shield_03",
+    "iLvl": 17,
+    "reqLevel": 12,
+    "quality": "q1",
+    "stats": "336 Armor, +5 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
   "1197": {
     "id": 1197,
     "name": "Giant Mace",
@@ -479,6 +526,48 @@
       "(9.00 damage per second)",
       "Requires Level 10"
     ]
+  },
+  "1200": {
+    "id": 1200,
+    "name": "Large Wooden Shield",
+    "icon": "inv_shield_09",
+    "iLvl": 5,
+    "reqLevel": 1,
+    "quality": "q1",
+    "stats": "55 Armor, +1 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "1201": {
+    "id": 1201,
+    "name": "Dull Heater Shield",
+    "icon": "inv_shield_04",
+    "iLvl": 10,
+    "reqLevel": 5,
+    "quality": "q1",
+    "stats": "161 Armor, +3 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "alliance",
+    "sourcemore": null
+  },
+  "1202": {
+    "id": 1202,
+    "name": "Wall Shield",
+    "icon": "inv_shield_03",
+    "iLvl": 17,
+    "reqLevel": 12,
+    "quality": "q1",
+    "stats": "336 Armor, +5 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
   },
   "1203": {
     "id": 1203,
@@ -506,6 +595,20 @@
       "+15 Stamina",
       "Requires Level 49"
     ]
+  },
+  "1204": {
+    "id": 1204,
+    "name": "The Green Tower",
+    "icon": "inv_shield_06",
+    "iLvl": 41,
+    "reqLevel": 36,
+    "quality": "q4",
+    "stats": "1308 Armor, +25 Block, +7 Strength, +7 Stamina",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
   },
   "1214": {
     "id": 1214,
@@ -571,6 +674,28 @@
         "n": "The Fury Runs Deep",
         "t": 5,
         "ti": 378
+      }
+    ]
+  },
+  "1276": {
+    "id": 1276,
+    "name": "Fire Hardened Buckler",
+    "icon": "inv_shield_09",
+    "iLvl": 27,
+    "reqLevel": 18,
+    "quality": "q2",
+    "stats": "528 Armor, +10 Block, +5 Spirit",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "alliance",
+    "sourcemore": [
+      {
+        "c": 44,
+        "c2": 0,
+        "n": "Tharil'zun",
+        "t": 5,
+        "ti": 19
       }
     ]
   },
@@ -689,6 +814,20 @@
         "z": 40
       }
     ]
+  },
+  "1438": {
+    "id": 1438,
+    "name": "Warrior's Shield",
+    "icon": "inv_shield_03",
+    "iLvl": 9,
+    "reqLevel": 4,
+    "quality": "q1",
+    "stats": "135 Armor, +3 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
   },
   "1454": {
     "id": 1454,
@@ -899,6 +1038,50 @@
         "t": 1,
         "ti": 5863,
         "z": 17
+      }
+    ]
+  },
+  "1547": {
+    "id": 1547,
+    "name": "Shield of the Faith",
+    "icon": "spell_holy_powerwordshield",
+    "iLvl": 30,
+    "reqLevel": 23,
+    "quality": "q2",
+    "stats": "578 Armor, +11 Block, +6 Spirit",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "alliance",
+    "sourcemore": [
+      {
+        "c": 10,
+        "c2": 0,
+        "n": "Worgen in the Woods",
+        "t": 5,
+        "ti": 223
+      }
+    ]
+  },
+  "1557": {
+    "id": 1557,
+    "name": "Buckler of the Seas",
+    "icon": "inv_shield_09",
+    "iLvl": 20,
+    "reqLevel": 15,
+    "quality": "q2",
+    "stats": "411 Armor, +7 Block, +2 Spirit, +2 Spell Power",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": 40,
+        "c2": 0,
+        "n": "The Coastal Menace",
+        "t": 5,
+        "ti": 104
       }
     ]
   },
@@ -1202,6 +1385,25 @@
     "side": "both",
     "sourcemore": null
   },
+  "1992": {
+    "id": 1992,
+    "name": "Swampchill Fetish",
+    "icon": "inv_misc_bone_orcskull_01",
+    "iLvl": 38,
+    "reqLevel": 33,
+    "quality": "q3",
+    "stats": "+5 Frost Resistance, +5 Shadow Resistance",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": [
+      {
+        "dd": -1,
+        "z": 796
+      }
+    ]
+  },
   "2000": {
     "id": 2000,
     "name": "Archeus",
@@ -1224,6 +1426,27 @@
       "63 - 95 Damage\tSpeed 3.30",
       "(23.94 damage per second)",
       "Chance on hit: Blasts a target for 85 Arcane damage."
+    ]
+  },
+  "2021": {
+    "id": 2021,
+    "name": "Green Carapace Shield",
+    "icon": "inv_misc_monsterspidercarapace_01",
+    "iLvl": 21,
+    "reqLevel": 16,
+    "quality": "q2",
+    "stats": "428 Armor, +7 Block, +4 Nature Resistance",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "n": "Green Recluse",
+        "t": 1,
+        "ti": 569,
+        "z": 10
+      }
     ]
   },
   "2035": {
@@ -1428,6 +1651,20 @@
     "side": "both",
     "sourcemore": null
   },
+  "2129": {
+    "id": 2129,
+    "name": "Large Round Shield",
+    "icon": "inv_shield_09",
+    "iLvl": 5,
+    "reqLevel": 1,
+    "quality": "q1",
+    "stats": "55 Armor, +1 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
   "2130": {
     "id": 2130,
     "name": "Club",
@@ -1467,6 +1704,20 @@
       "5 - 8 Damage\tSpeed 3.20",
       "(2.03 damage per second)"
     ]
+  },
+  "2133": {
+    "id": 2133,
+    "name": "Small Shield",
+    "icon": "inv_shield_09",
+    "iLvl": 5,
+    "reqLevel": 1,
+    "quality": "q1",
+    "stats": "55 Armor, +1 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
   },
   "2137": {
     "id": 2137,
@@ -1688,6 +1939,118 @@
       "Requires Level 14"
     ]
   },
+  "2210": {
+    "id": 2210,
+    "name": "Battered Buckler",
+    "icon": "inv_shield_09",
+    "iLvl": 2,
+    "reqLevel": 1,
+    "quality": "q0",
+    "stats": "12 Armor, +1 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "2211": {
+    "id": 2211,
+    "name": "Bent Large Shield",
+    "icon": "inv_shield_09",
+    "iLvl": 4,
+    "reqLevel": 1,
+    "quality": "q0",
+    "stats": "32 Armor, +1 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "2212": {
+    "id": 2212,
+    "name": "Cracked Buckler",
+    "icon": "inv_shield_09",
+    "iLvl": 6,
+    "reqLevel": 1,
+    "quality": "q0",
+    "stats": "61 Armor, +1 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "2213": {
+    "id": 2213,
+    "name": "Worn Large Shield",
+    "icon": "inv_shield_09",
+    "iLvl": 7,
+    "reqLevel": 2,
+    "quality": "q0",
+    "stats": "79 Armor, +1 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "2214": {
+    "id": 2214,
+    "name": "Wooden Buckler",
+    "icon": "inv_shield_09",
+    "iLvl": 15,
+    "reqLevel": 10,
+    "quality": "q0",
+    "stats": "282 Armor, +3 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "2215": {
+    "id": 2215,
+    "name": "Wooden Shield",
+    "icon": "inv_shield_09",
+    "iLvl": 11,
+    "reqLevel": 6,
+    "quality": "q0",
+    "stats": "172 Armor, +2 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "2216": {
+    "id": 2216,
+    "name": "Simple Buckler",
+    "icon": "inv_shield_09",
+    "iLvl": 16,
+    "reqLevel": 11,
+    "quality": "q0",
+    "stats": "297 Armor, +3 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "2217": {
+    "id": 2217,
+    "name": "Rectangular Shield",
+    "icon": "inv_shield_03",
+    "iLvl": 17,
+    "reqLevel": 12,
+    "quality": "q0",
+    "stats": "311 Armor, +4 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
   "2218": {
     "id": 2218,
     "name": "Craftsman's Dagger",
@@ -1711,6 +2074,62 @@
         "ti": 417
       }
     ]
+  },
+  "2219": {
+    "id": 2219,
+    "name": "Small Round Shield",
+    "icon": "inv_shield_09",
+    "iLvl": 22,
+    "reqLevel": 17,
+    "quality": "q0",
+    "stats": "383 Armor, +5 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "2220": {
+    "id": 2220,
+    "name": "Box Shield",
+    "icon": "inv_shield_03",
+    "iLvl": 23,
+    "reqLevel": 18,
+    "quality": "q0",
+    "stats": "397 Armor, +6 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "2221": {
+    "id": 2221,
+    "name": "Targe Shield",
+    "icon": "inv_shield_09",
+    "iLvl": 28,
+    "reqLevel": 23,
+    "quality": "q0",
+    "stats": "469 Armor, +7 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "2222": {
+    "id": 2222,
+    "name": "Tower Shield",
+    "icon": "inv_shield_11",
+    "iLvl": 29,
+    "reqLevel": 24,
+    "quality": "q0",
+    "stats": "483 Armor, +8 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
   },
   "2224": {
     "id": 2224,
@@ -1803,6 +2222,28 @@
       }
     ]
   },
+  "2249": {
+    "id": 2249,
+    "name": "Militia Buckler",
+    "icon": "inv_shield_09",
+    "iLvl": 10,
+    "reqLevel": 6,
+    "quality": "q1",
+    "stats": "161 Armor, +3 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "alliance",
+    "sourcemore": [
+      {
+        "c": 12,
+        "c2": 0,
+        "n": "Riverpaw Gnoll Bounty",
+        "t": 5,
+        "ti": 11
+      }
+    ]
+  },
   "2263": {
     "id": 2263,
     "name": "Phytoblade",
@@ -1866,6 +2307,181 @@
         "z": 717
       }
     ]
+  },
+  "2362": {
+    "id": 2362,
+    "name": "Worn Wooden Shield",
+    "icon": "inv_shield_09",
+    "iLvl": 1,
+    "reqLevel": 1,
+    "quality": "q1",
+    "stats": "10 Armor, +1 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "n": "Brammold Deepmine",
+        "t": 1,
+        "ti": 252000,
+        "z": 36
+      }
+    ]
+  },
+  "2376": {
+    "id": 2376,
+    "name": "Worn Heater Shield",
+    "icon": "inv_shield_04",
+    "iLvl": 10,
+    "reqLevel": 5,
+    "quality": "q1",
+    "stats": "161 Armor, +3 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "horde",
+    "sourcemore": null
+  },
+  "2377": {
+    "id": 2377,
+    "name": "Round Buckler",
+    "icon": "inv_shield_09",
+    "iLvl": 10,
+    "reqLevel": 5,
+    "quality": "q1",
+    "stats": "161 Armor, +3 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "2410": {
+    "id": 2410,
+    "name": "Smoky Torch",
+    "icon": "inv_torch_lit",
+    "iLvl": 1,
+    "reqLevel": 1,
+    "quality": "q1",
+    "stats": "",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
+  "2441": {
+    "id": 2441,
+    "name": "Ringed Buckler",
+    "icon": "inv_shield_10",
+    "iLvl": 22,
+    "reqLevel": 17,
+    "quality": "q1",
+    "stats": "413 Armor, +7 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "2442": {
+    "id": 2442,
+    "name": "Reinforced Targe",
+    "icon": "inv_shield_10",
+    "iLvl": 27,
+    "reqLevel": 22,
+    "quality": "q1",
+    "stats": "491 Armor, +9 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "2443": {
+    "id": 2443,
+    "name": "Metal Buckler",
+    "icon": "inv_shield_10",
+    "iLvl": 37,
+    "reqLevel": 32,
+    "quality": "q1",
+    "stats": "646 Armor, +14 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "2444": {
+    "id": 2444,
+    "name": "Ornate Buckler",
+    "icon": "inv_shield_10",
+    "iLvl": 50,
+    "reqLevel": 45,
+    "quality": "q1",
+    "stats": "1457 Armor, +23 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "2445": {
+    "id": 2445,
+    "name": "Large Metal Shield",
+    "icon": "inv_shield_03",
+    "iLvl": 22,
+    "reqLevel": 17,
+    "quality": "q1",
+    "stats": "413 Armor, +7 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "2446": {
+    "id": 2446,
+    "name": "Kite Shield",
+    "icon": "inv_shield_06",
+    "iLvl": 27,
+    "reqLevel": 22,
+    "quality": "q1",
+    "stats": "491 Armor, +9 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "2448": {
+    "id": 2448,
+    "name": "Heavy Pavise",
+    "icon": "inv_shield_03",
+    "iLvl": 37,
+    "reqLevel": 32,
+    "quality": "q1",
+    "stats": "646 Armor, +14 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "2451": {
+    "id": 2451,
+    "name": "Crested Heater Shield",
+    "icon": "inv_shield_06",
+    "iLvl": 50,
+    "reqLevel": 45,
+    "quality": "q1",
+    "stats": "1457 Armor, +23 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
   },
   "2480": {
     "id": 2480,
@@ -2182,12 +2798,10 @@
     "iLvl": 23,
     "reqLevel": 18,
     "quality": "q1",
-    "speed": null,
-    "dps": null,
     "stats": "",
     "inventorySlot": "Held In Off-hand",
-    "subclass": -5,
-    "subclassName": "Weapon",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
     "side": "alliance",
     "sourcemore": [
       {
@@ -2198,6 +2812,20 @@
         "ti": 34
       }
     ]
+  },
+  "2565": {
+    "id": 2565,
+    "name": "Rod of Molten Fire",
+    "icon": "inv_spear_01",
+    "iLvl": 35,
+    "reqLevel": 30,
+    "quality": "q3",
+    "stats": "+6 Fire Resistance",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
   },
   "2567": {
     "id": 2567,
@@ -2641,6 +3269,42 @@
       "Requires Level 19"
     ]
   },
+  "2879": {
+    "id": 2879,
+    "name": "Antipodean Rod",
+    "icon": "inv_wand_04",
+    "iLvl": 22,
+    "reqLevel": 17,
+    "quality": "q3",
+    "stats": "",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
+  "2900": {
+    "id": 2900,
+    "name": "Stone Buckler",
+    "icon": "inv_shield_09",
+    "iLvl": 10,
+    "reqLevel": 7,
+    "quality": "q1",
+    "stats": "161 Armor, +3 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "alliance",
+    "sourcemore": [
+      {
+        "c": 1,
+        "c2": 0,
+        "n": "Frostmane Hold",
+        "t": 5,
+        "ti": 287
+      }
+    ]
+  },
   "2903": {
     "id": 2903,
     "name": "Daryl's Hunting Bow",
@@ -2734,6 +3398,28 @@
         "n": "A Dark Threat Looms",
         "t": 5,
         "ti": 283
+      }
+    ]
+  },
+  "2916": {
+    "id": 2916,
+    "name": "Gold Lion Shield",
+    "icon": "inv_shield_02",
+    "iLvl": 34,
+    "reqLevel": 26,
+    "quality": "q2",
+    "stats": "645 Armor, +13 Block, +2 Strength, +5 Stamina, +3 Spirit",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "alliance",
+    "sourcemore": [
+      {
+        "c": 11,
+        "c2": 0,
+        "n": "A Grim Task",
+        "t": 5,
+        "ti": 304
       }
     ]
   },
@@ -3368,6 +4054,28 @@
     "side": "both",
     "sourcemore": null
   },
+  "3160": {
+    "id": 3160,
+    "name": "Ironplate Buckler",
+    "icon": "inv_shield_10",
+    "iLvl": 15,
+    "reqLevel": 9,
+    "quality": "q2",
+    "stats": "328 Armor, +5 Block, +2 Spell Power",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "alliance",
+    "sourcemore": [
+      {
+        "c": 38,
+        "c2": 0,
+        "n": "Filthy Paws",
+        "t": 5,
+        "ti": 307
+      }
+    ]
+  },
   "3188": {
     "id": 3188,
     "name": "Coral Claymore",
@@ -3573,6 +4281,28 @@
       }
     ]
   },
+  "3276": {
+    "id": 3276,
+    "name": "Deathguard Buckler",
+    "icon": "inv_shield_09",
+    "iLvl": 5,
+    "reqLevel": 2,
+    "quality": "q1",
+    "stats": "55 Armor, +1 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "horde",
+    "sourcemore": [
+      {
+        "c": 85,
+        "c2": 0,
+        "n": "The Red Messenger",
+        "t": 5,
+        "ti": 382
+      }
+    ]
+  },
   "3277": {
     "id": 3277,
     "name": "Executor Staff",
@@ -3647,12 +4377,10 @@
     "iLvl": 30,
     "reqLevel": 25,
     "quality": "q1",
-    "speed": null,
-    "dps": null,
     "stats": "",
     "inventorySlot": "Held In Off-hand",
-    "subclass": -5,
-    "subclassName": "Weapon",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
     "side": "both",
     "sourcemore": [
       {
@@ -3780,6 +4508,103 @@
     "side": "both",
     "sourcemore": null
   },
+  "3419": {
+    "id": 3419,
+    "name": "Red Rose",
+    "icon": "inv_jewelry_talisman_03",
+    "iLvl": 20,
+    "reqLevel": 1,
+    "quality": "q1",
+    "stats": "",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
+  "3420": {
+    "id": 3420,
+    "name": "Black Rose",
+    "icon": "inv_jewelry_talisman_03",
+    "iLvl": 40,
+    "reqLevel": 1,
+    "quality": "q1",
+    "stats": "",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
+  "3421": {
+    "id": 3421,
+    "name": "Simple Wildflowers",
+    "icon": "inv_misc_flower_02",
+    "iLvl": 10,
+    "reqLevel": 1,
+    "quality": "q1",
+    "stats": "",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": [
+      {
+        "n": "Forest Ooze",
+        "t": 1,
+        "ti": 8766,
+        "z": 16
+      },
+      {
+        "n": "Forest Ooze",
+        "t": 1,
+        "ti": 8766,
+        "z": 16
+      }
+    ]
+  },
+  "3422": {
+    "id": 3422,
+    "name": "Beautiful Wildflowers",
+    "icon": "inv_misc_flower_02",
+    "iLvl": 30,
+    "reqLevel": 1,
+    "quality": "q1",
+    "stats": "",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
+  "3423": {
+    "id": 3423,
+    "name": "Bouquet of White Roses",
+    "icon": "inv_misc_flower_02",
+    "iLvl": 50,
+    "reqLevel": 1,
+    "quality": "q1",
+    "stats": "",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
+  "3424": {
+    "id": 3424,
+    "name": "Bouquet of Black Roses",
+    "icon": "inv_jewelry_talisman_03",
+    "iLvl": 60,
+    "reqLevel": 1,
+    "quality": "q1",
+    "stats": "",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
   "3430": {
     "id": 3430,
     "name": "Sniper Rifle",
@@ -3869,6 +4694,28 @@
       "(6.72 damage per second)",
       "+3 Stamina",
       "Equip: Increases damage and healing done by magical spells and effects by up to 6"
+    ]
+  },
+  "3450": {
+    "id": 3450,
+    "name": "Faerleia's Shield",
+    "icon": "inv_shield_04",
+    "iLvl": 15,
+    "reqLevel": 12,
+    "quality": "q2",
+    "stats": "328 Armor, +5 Block, +2 Strength",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "horde",
+    "sourcemore": [
+      {
+        "c": 130,
+        "c2": 0,
+        "n": "Pyrewood Ambush",
+        "t": 5,
+        "ti": 452
+      }
     ]
   },
   "3451": {
@@ -4276,6 +5123,146 @@
       }
     ]
   },
+  "3648": {
+    "id": 3648,
+    "name": "Warrior's Buckler",
+    "icon": "inv_shield_09",
+    "iLvl": 9,
+    "reqLevel": 4,
+    "quality": "q1",
+    "stats": "135 Armor, +3 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "3649": {
+    "id": 3649,
+    "name": "Tribal Buckler",
+    "icon": "inv_shield_09",
+    "iLvl": 11,
+    "reqLevel": 6,
+    "quality": "q1",
+    "stats": "189 Armor, +3 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "3650": {
+    "id": 3650,
+    "name": "Battle Shield",
+    "icon": "inv_shield_09",
+    "iLvl": 9,
+    "reqLevel": 4,
+    "quality": "q1",
+    "stats": "135 Armor, +3 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "3651": {
+    "id": 3651,
+    "name": "Veteran Shield",
+    "icon": "inv_shield_09",
+    "iLvl": 15,
+    "reqLevel": 10,
+    "quality": "q2",
+    "stats": "328 Armor, +5 Block, +2 Strength",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "3652": {
+    "id": 3652,
+    "name": "Hunting Buckler",
+    "icon": "inv_shield_09",
+    "iLvl": 14,
+    "reqLevel": 9,
+    "quality": "q2",
+    "stats": "311 Armor, +5 Block, +1 Stamina, +1 Intellect",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "3653": {
+    "id": 3653,
+    "name": "Ceremonial Buckler",
+    "icon": "inv_shield_09",
+    "iLvl": 15,
+    "reqLevel": 10,
+    "quality": "q2",
+    "stats": "328 Armor, +5 Block, +2 Spirit",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "3654": {
+    "id": 3654,
+    "name": "Brackwater Shield",
+    "icon": "inv_shield_09",
+    "iLvl": 14,
+    "reqLevel": 9,
+    "quality": "q2",
+    "stats": "311 Armor, +5 Block, +1 Agility, +1 Stamina",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "3655": {
+    "id": 3655,
+    "name": "Burnished Shield",
+    "icon": "inv_shield_03",
+    "iLvl": 21,
+    "reqLevel": 16,
+    "quality": "q2",
+    "stats": "428 Armor, +7 Block, +2 Strength, +3 Stamina",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "3656": {
+    "id": 3656,
+    "name": "Lambent Scale Shield",
+    "icon": "inv_shield_03",
+    "iLvl": 27,
+    "reqLevel": 22,
+    "quality": "q2",
+    "stats": "528 Armor, +10 Block, +4 Strength, +2 Stamina",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "3675": {
+    "id": 3675,
+    "name": "Burnt Out Torch",
+    "icon": "inv_torch_unlit",
+    "iLvl": 1,
+    "reqLevel": 1,
+    "quality": "q0",
+    "stats": "",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
   "3742": {
     "id": 3742,
     "name": "Bow of Plunder",
@@ -4297,6 +5284,72 @@
         "n": "Dangerous!",
         "t": 5,
         "ti": 567
+      }
+    ]
+  },
+  "3743": {
+    "id": 3743,
+    "name": "Sentry Buckler",
+    "icon": "inv_shield_09",
+    "iLvl": 28,
+    "reqLevel": 19,
+    "quality": "q2",
+    "stats": "545 Armor, +10 Block, +1 Intellect, +5 Spirit",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "horde",
+    "sourcemore": [
+      {
+        "c": 267,
+        "c2": 0,
+        "n": "Dangerous!",
+        "t": 5,
+        "ti": 567
+      }
+    ]
+  },
+  "3761": {
+    "id": 3761,
+    "name": "Deadskull Shield",
+    "icon": "inv_shield_01",
+    "iLvl": 32,
+    "reqLevel": 19,
+    "quality": "q2",
+    "stats": "611 Armor, +12 Block, +1 Strength, +7 Stamina",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "horde",
+    "sourcemore": [
+      {
+        "c": 267,
+        "c2": 0,
+        "n": "Battle of Hillsbrad",
+        "t": 5,
+        "ti": 550
+      }
+    ]
+  },
+  "3763": {
+    "id": 3763,
+    "name": "Lunar Buckler",
+    "icon": "inv_shield_10",
+    "iLvl": 40,
+    "reqLevel": 30,
+    "quality": "q2",
+    "stats": "963 Armor, +17 Block, +3 Strength, +8 Spirit",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "alliance",
+    "sourcemore": [
+      {
+        "c": 36,
+        "c2": 0,
+        "n": "Crushridge Warmongers",
+        "t": 5,
+        "ti": 504
       }
     ]
   },
@@ -4341,6 +5394,34 @@
       "(7.88 damage per second)",
       "Requires Level 28"
     ]
+  },
+  "3816": {
+    "id": 3816,
+    "name": "Reflective Heater",
+    "icon": "inv_shield_04",
+    "iLvl": 36,
+    "reqLevel": 31,
+    "quality": "q0",
+    "stats": "583 Armor, +11 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "3817": {
+    "id": 3817,
+    "name": "Reinforced Buckler",
+    "icon": "inv_shield_09",
+    "iLvl": 33,
+    "reqLevel": 28,
+    "quality": "q0",
+    "stats": "540 Armor, +9 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
   },
   "3848": {
     "id": 3848,
@@ -4597,6 +5678,90 @@
       }
     ]
   },
+  "3986": {
+    "id": 3986,
+    "name": "Protective Pavise",
+    "icon": "inv_shield_06",
+    "iLvl": 48,
+    "reqLevel": 43,
+    "quality": "q0",
+    "stats": "1317 Armor, +17 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "3987": {
+    "id": 3987,
+    "name": "Deflecting Tower",
+    "icon": "inv_shield_11",
+    "iLvl": 53,
+    "reqLevel": 48,
+    "quality": "q0",
+    "stats": "1442 Armor, +21 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "3988": {
+    "id": 3988,
+    "name": "Plate Wall Shield",
+    "icon": "inv_shield_03",
+    "iLvl": 65,
+    "reqLevel": 60,
+    "quality": "q0",
+    "stats": "1742 Armor, +32 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "3989": {
+    "id": 3989,
+    "name": "Blocking Targe",
+    "icon": "inv_shield_09",
+    "iLvl": 42,
+    "reqLevel": 37,
+    "quality": "q0",
+    "stats": "1015 Armor, +14 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "3990": {
+    "id": 3990,
+    "name": "Crested Buckler",
+    "icon": "inv_shield_10",
+    "iLvl": 56,
+    "reqLevel": 51,
+    "quality": "q0",
+    "stats": "1517 Armor, +23 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "3991": {
+    "id": 3991,
+    "name": "Plated Buckler",
+    "icon": "inv_shield_09",
+    "iLvl": 68,
+    "reqLevel": 63,
+    "quality": "q0",
+    "stats": "1817 Armor, +35 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
   "4025": {
     "id": 4025,
     "name": "Balanced Long Bow",
@@ -4638,6 +5803,104 @@
       "(11.61 damage per second)",
       "Requires Level 38"
     ]
+  },
+  "4064": {
+    "id": 4064,
+    "name": "Emblazoned Buckler",
+    "icon": "inv_shield_09",
+    "iLvl": 30,
+    "reqLevel": 25,
+    "quality": "q2",
+    "stats": "578 Armor, +11 Block, +2 Stamina, +5 Spirit",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "4065": {
+    "id": 4065,
+    "name": "Combat Shield",
+    "icon": "inv_shield_05",
+    "iLvl": 36,
+    "reqLevel": 31,
+    "quality": "q2",
+    "stats": "678 Armor, +14 Block, +7 Strength, +2 Stamina",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "4066": {
+    "id": 4066,
+    "name": "Insignia Buckler",
+    "icon": "inv_shield_10",
+    "iLvl": 35,
+    "reqLevel": 30,
+    "quality": "q2",
+    "stats": "661 Armor, +14 Block, +3 Stamina, +7 Spirit",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "4067": {
+    "id": 4067,
+    "name": "Glyphed Buckler",
+    "icon": "inv_shield_10",
+    "iLvl": 39,
+    "reqLevel": 34,
+    "quality": "q2",
+    "stats": "728 Armor, +16 Block, +4 Stamina, +7 Spirit",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "4068": {
+    "id": 4068,
+    "name": "Chief Brigadier Shield",
+    "icon": "inv_shield_06",
+    "iLvl": 40,
+    "reqLevel": 35,
+    "quality": "q2",
+    "stats": "963 Armor, +17 Block, +9 Stamina",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "4069": {
+    "id": 4069,
+    "name": "Blackforge Buckler",
+    "icon": "inv_shield_10",
+    "iLvl": 47,
+    "reqLevel": 42,
+    "quality": "q2",
+    "stats": "1465 Armor, +22 Block, +3 Stamina, +10 Spirit",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "4070": {
+    "id": 4070,
+    "name": "Jouster's Crest",
+    "icon": "inv_shield_02",
+    "iLvl": 41,
+    "reqLevel": 36,
+    "quality": "q2",
+    "stats": "1051 Armor, +17 Block, +9 Stamina",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
   },
   "4086": {
     "id": 4086,
@@ -4765,6 +6028,28 @@
       "(20.58 damage per second)"
     ]
   },
+  "4115": {
+    "id": 4115,
+    "name": "Grom'gol Buckler",
+    "icon": "inv_shield_02",
+    "iLvl": 37,
+    "reqLevel": 33,
+    "quality": "q2",
+    "stats": "695 Armor, +15 Block, +2 Strength, +3 Stamina, +7 Spirit",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "horde",
+    "sourcemore": [
+      {
+        "c": 33,
+        "c2": 0,
+        "n": "The Defense of Grom'gol",
+        "t": 5,
+        "ti": 569
+      }
+    ]
+  },
   "4122": {
     "id": 4122,
     "name": "Bookmaker's Scepter",
@@ -4865,6 +6150,28 @@
       "+15 Spirit"
     ]
   },
+  "4129": {
+    "id": 4129,
+    "name": "Collection Plate",
+    "icon": "inv_shield_06",
+    "iLvl": 44,
+    "reqLevel": 30,
+    "quality": "q2",
+    "stats": "1380 Armor, +20 Block, +2 Strength, +9 Stamina",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": 33,
+        "c2": 0,
+        "n": "Cracking Maury's Foot",
+        "t": 5,
+        "ti": 613
+      }
+    ]
+  },
   "4134": {
     "id": 4134,
     "name": "Nimboya's Mystical Staff",
@@ -4892,6 +6199,48 @@
       "+8 Intellect",
       "+15 Spirit",
       "Equip: Increases damage and healing done by magical spells and effects by up to 38"
+    ]
+  },
+  "4263": {
+    "id": 4263,
+    "name": "Standard Issue Shield",
+    "icon": "inv_shield_06",
+    "iLvl": 10,
+    "reqLevel": 5,
+    "quality": "q1",
+    "stats": "161 Armor, +3 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "n": "Scarlet Bodyguard",
+        "t": 1,
+        "ti": 1660,
+        "z": 85
+      }
+    ]
+  },
+  "4290": {
+    "id": 4290,
+    "name": "Dust Bowl",
+    "icon": "inv_shield_09",
+    "iLvl": 18,
+    "reqLevel": 13,
+    "quality": "q2",
+    "stats": "378 Armor, +6 Block, +2 Strength, +2 Spirit",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "n": "Dust Devil",
+        "t": 1,
+        "ti": 832,
+        "z": 40
+      }
     ]
   },
   "4302": {
@@ -5109,6 +6458,28 @@
       }
     ]
   },
+  "4444": {
+    "id": 4444,
+    "name": "Black Husk Shield",
+    "icon": "inv_misc_monsterspidercarapace_01",
+    "iLvl": 26,
+    "reqLevel": 21,
+    "quality": "q2",
+    "stats": "511 Armor, +9 Block, +3 Stamina, +4 Spirit",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "dd": -1,
+        "n": "Leech Widow",
+        "t": 1,
+        "ti": 1112,
+        "z": 11
+      }
+    ]
+  },
   "4445": {
     "id": 4445,
     "name": "Flesh Carver",
@@ -5223,6 +6594,49 @@
         "t": 1,
         "ti": 507,
         "z": 10
+      }
+    ]
+  },
+  "4477": {
+    "id": 4477,
+    "name": "Nefarious Buckler",
+    "icon": "inv_shield_02",
+    "iLvl": 36,
+    "reqLevel": 31,
+    "quality": "q2",
+    "stats": "678 Armor, +14 Block, +3 Strength, +7 Stamina",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "n": "Nefaru",
+        "t": 1,
+        "ti": 534,
+        "z": 10
+      }
+    ]
+  },
+  "4507": {
+    "id": 4507,
+    "name": "Pit Fighter's Shield",
+    "icon": "inv_shield_07",
+    "iLvl": 42,
+    "reqLevel": 32,
+    "quality": "q2",
+    "stats": "1148 Armor, +18 Block, +8 Strength, +3 Stamina",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "horde",
+    "sourcemore": [
+      {
+        "c": 45,
+        "c2": 0,
+        "n": "Trol'kalar",
+        "t": 5,
+        "ti": 646
       }
     ]
   },
@@ -5351,6 +6765,28 @@
       }
     ]
   },
+  "4652": {
+    "id": 4652,
+    "name": "Salbac Shield",
+    "icon": "inv_shield_11",
+    "iLvl": 45,
+    "reqLevel": 35,
+    "quality": "q2",
+    "stats": "1408 Armor, +20 Block, +9 Strength, +3 Spirit",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "alliance",
+    "sourcemore": [
+      {
+        "c": 3,
+        "c2": 0,
+        "n": "Scrounging",
+        "t": 5,
+        "ti": 733
+      }
+    ]
+  },
   "4696": {
     "id": 4696,
     "name": "Lapidis Tankard of Tidesippe",
@@ -5389,6 +6825,90 @@
       "Requires Level 4"
     ]
   },
+  "4820": {
+    "id": 4820,
+    "name": "Guardian Buckler",
+    "icon": "inv_shield_10",
+    "iLvl": 25,
+    "reqLevel": 20,
+    "quality": "q2",
+    "stats": "495 Armor, +9 Block, +3 Stamina, +3 Spirit",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "4821": {
+    "id": 4821,
+    "name": "Bear Buckler",
+    "icon": "inv_shield_09",
+    "iLvl": 23,
+    "reqLevel": 18,
+    "quality": "q2",
+    "stats": "461 Armor, +8 Block, +3 Strength, +3 Stamina",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "4822": {
+    "id": 4822,
+    "name": "Owl's Disk",
+    "icon": "inv_shield_09",
+    "iLvl": 23,
+    "reqLevel": 18,
+    "quality": "q2",
+    "stats": "461 Armor, +8 Block, +4 Intellect",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "4836": {
+    "id": 4836,
+    "name": "Fireproof Orb",
+    "icon": "inv_jewelry_talisman_01",
+    "iLvl": 28,
+    "reqLevel": 23,
+    "quality": "q2",
+    "stats": "+6 Fire Resistance",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
+  "4837": {
+    "id": 4837,
+    "name": "Strength of Will",
+    "icon": "inv_jewelry_talisman_05",
+    "iLvl": 30,
+    "reqLevel": 25,
+    "quality": "q2",
+    "stats": "+6 Spirit",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
+  "4838": {
+    "id": 4838,
+    "name": "Orb of Power",
+    "icon": "inv_ore_arcanite_02",
+    "iLvl": 26,
+    "reqLevel": 21,
+    "quality": "q2",
+    "stats": "+2 Stamina, +4 Intellect",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
   "4840": {
     "id": 4840,
     "name": "Long Bayonet",
@@ -5410,6 +6930,28 @@
         "n": "Bounty on Murlocs",
         "t": 5,
         "ti": 46
+      }
+    ]
+  },
+  "4911": {
+    "id": 4911,
+    "name": "Thick Bark Buckler",
+    "icon": "inv_shield_09",
+    "iLvl": 5,
+    "reqLevel": 1,
+    "quality": "q1",
+    "stats": "55 Armor, +1 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "horde",
+    "sourcemore": [
+      {
+        "c": 215,
+        "c2": 1,
+        "n": "Attack on Camp Narache",
+        "t": 5,
+        "ti": 781
       }
     ]
   },
@@ -5479,6 +7021,28 @@
         "n": "Securing the Lines",
         "t": 5,
         "ti": 835
+      }
+    ]
+  },
+  "4937": {
+    "id": 4937,
+    "name": "Charging Buckler",
+    "icon": "inv_shield_09",
+    "iLvl": 9,
+    "reqLevel": 7,
+    "quality": "q1",
+    "stats": "135 Armor, +3 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "horde",
+    "sourcemore": [
+      {
+        "c": 14,
+        "c2": 1,
+        "n": "Need for a Cure",
+        "t": 5,
+        "ti": 812
       }
     ]
   },
@@ -5594,6 +7158,28 @@
       "+2 Strength"
     ]
   },
+  "4967": {
+    "id": 4967,
+    "name": "Tribal Warrior's Shield",
+    "icon": "inv_shield_11",
+    "iLvl": 11,
+    "reqLevel": 7,
+    "quality": "q1",
+    "stats": "189 Armor, +3 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "horde",
+    "sourcemore": [
+      {
+        "c": 1638,
+        "c2": 1,
+        "n": "Preparation for Ceremony",
+        "t": 5,
+        "ti": 744
+      }
+    ]
+  },
   "4971": {
     "id": 4971,
     "name": "Skorn's Hammer",
@@ -5639,6 +7225,28 @@
         "n": "Supervisor Fizsprocket",
         "t": 5,
         "ti": 765
+      }
+    ]
+  },
+  "4975": {
+    "id": 4975,
+    "name": "Vigilant Buckler",
+    "icon": "inv_shield_10",
+    "iLvl": 39,
+    "reqLevel": 30,
+    "quality": "q2",
+    "stats": "728 Armor, +16 Block, +7 Stamina, Equip: Increases your chance to Block attacks with a shield by 1.0%.",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "alliance",
+    "sourcemore": [
+      {
+        "c": 45,
+        "c2": 0,
+        "n": "Malin's Request",
+        "t": 5,
+        "ti": 697
       }
     ]
   },
@@ -5714,6 +7322,28 @@
       "92 - 139 Damage\tSpeed 3.70",
       "(31.22 damage per second)",
       "Equip: +34 Attack Power."
+    ]
+  },
+  "4984": {
+    "id": 4984,
+    "name": "Skull of Impending Doom",
+    "icon": "inv_misc_bone_elfskull_01",
+    "iLvl": 41,
+    "reqLevel": 30,
+    "quality": "q2",
+    "stats": "+7 Intellect",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": 3,
+        "c2": 0,
+        "n": "Forbidden Knowledge",
+        "t": 5,
+        "ti": 737
+      }
     ]
   },
   "4987": {
@@ -5795,6 +7425,27 @@
     "subclassName": "Wand",
     "side": "both",
     "sourcemore": null
+  },
+  "5094": {
+    "id": 5094,
+    "name": "Razormane War Shield",
+    "icon": "inv_shield_09",
+    "iLvl": 24,
+    "reqLevel": 19,
+    "quality": "q1",
+    "stats": "444 Armor, +8 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "n": "Razormane Warfrenzy",
+        "t": 1,
+        "ti": 3459,
+        "z": 17
+      }
+    ]
   },
   "5112": {
     "id": 5112,
@@ -6524,6 +8175,28 @@
       }
     ]
   },
+  "5302": {
+    "id": 5302,
+    "name": "Cobalt Buckler",
+    "icon": "inv_shield_10",
+    "iLvl": 20,
+    "reqLevel": 10,
+    "quality": "q2",
+    "stats": "411 Armor, +7 Block, +3 Stamina",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "horde",
+    "sourcemore": [
+      {
+        "c": 17,
+        "c2": 1,
+        "n": "Cry of the Thunderhawk",
+        "t": 5,
+        "ti": 913
+      }
+    ]
+  },
   "5306": {
     "id": 5306,
     "name": "Wind Rider Staff",
@@ -6660,6 +8333,28 @@
       }
     ]
   },
+  "5325": {
+    "id": 5325,
+    "name": "Welding Shield",
+    "icon": "inv_shield_06",
+    "iLvl": 16,
+    "reqLevel": 10,
+    "quality": "q2",
+    "stats": "345 Armor, +6 Block, +2 Stamina",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": 17,
+        "c2": 1,
+        "n": "Samophlange",
+        "t": 5,
+        "ti": 902
+      }
+    ]
+  },
   "5326": {
     "id": 5326,
     "name": "Flaring Baton",
@@ -6783,6 +8478,28 @@
       }
     ]
   },
+  "5357": {
+    "id": 5357,
+    "name": "Ward of the Vale",
+    "icon": "inv_shield_09",
+    "iLvl": 27,
+    "reqLevel": 10,
+    "quality": "q2",
+    "stats": "528 Armor, +10 Block, +1 Intellect, +5 Spirit",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "horde",
+    "sourcemore": [
+      {
+        "c": 17,
+        "c2": 1,
+        "n": "Isha Awak",
+        "t": 5,
+        "ti": 873
+      }
+    ]
+  },
   "5379": {
     "id": 5379,
     "name": "Boot Knife",
@@ -6847,6 +8564,28 @@
       }
     ]
   },
+  "5395": {
+    "id": 5395,
+    "name": "Woodland Shield",
+    "icon": "inv_shield_03",
+    "iLvl": 5,
+    "reqLevel": 1,
+    "quality": "q1",
+    "stats": "55 Armor, +1 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "alliance",
+    "sourcemore": [
+      {
+        "c": 141,
+        "c2": 1,
+        "n": "Webwood Egg",
+        "t": 5,
+        "ti": 917
+      }
+    ]
+  },
   "5423": {
     "id": 5423,
     "name": "Boahn's Fang",
@@ -6888,6 +8627,28 @@
         "n": "Trigore the Lasher",
         "t": 1,
         "ti": 3652
+      }
+    ]
+  },
+  "5443": {
+    "id": 5443,
+    "name": "Gold-plated Buckler",
+    "icon": "inv_shield_02",
+    "iLvl": 22,
+    "reqLevel": 17,
+    "quality": "q3",
+    "stats": "509 Armor, +10 Block, +2 Agility, +5 Stamina",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "bd": 1,
+        "n": "Miner Johnson",
+        "t": 1,
+        "ti": 3586,
+        "z": 1581
       }
     ]
   },
@@ -7083,6 +8844,28 @@
         "n": "Ursal the Mauler",
         "t": 5,
         "ti": 486
+      }
+    ]
+  },
+  "5593": {
+    "id": 5593,
+    "name": "Crag Buckler",
+    "icon": "inv_shield_09",
+    "iLvl": 11,
+    "reqLevel": 7,
+    "quality": "q1",
+    "stats": "189 Armor, +3 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "alliance",
+    "sourcemore": [
+      {
+        "c": 141,
+        "c2": 1,
+        "n": "Mist",
+        "t": 5,
+        "ti": 938
       }
     ]
   },
@@ -7517,6 +9300,28 @@
     "side": "both",
     "sourcemore": null
   },
+  "5940": {
+    "id": 5940,
+    "name": "Bone Buckler",
+    "icon": "inv_shield_09",
+    "iLvl": 12,
+    "reqLevel": 5,
+    "quality": "q1",
+    "stats": "220 Armor, +4 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "horde",
+    "sourcemore": [
+      {
+        "c": 85,
+        "c2": 0,
+        "n": "The Prodigal Lich Returns",
+        "t": 5,
+        "ti": 411
+      }
+    ]
+  },
   "5956": {
     "id": 5956,
     "name": "Blacksmith Hammer",
@@ -7532,6 +9337,28 @@
     "subclassName": "Weapon",
     "side": "both",
     "sourcemore": null
+  },
+  "6078": {
+    "id": 6078,
+    "name": "Pikeman Shield",
+    "icon": "inv_shield_03",
+    "iLvl": 5,
+    "reqLevel": 1,
+    "quality": "q1",
+    "stats": "55 Armor, +1 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "alliance",
+    "sourcemore": [
+      {
+        "c": 12,
+        "c2": 0,
+        "n": "Report to Goldshire",
+        "t": 5,
+        "ti": 54
+      }
+    ]
   },
   "6088": {
     "id": 6088,
@@ -7612,6 +9439,85 @@
     "subclassName": "Weapon",
     "side": "both",
     "sourcemore": null
+  },
+  "6176": {
+    "id": 6176,
+    "name": "Dwarven Kite Shield",
+    "icon": "inv_shield_04",
+    "iLvl": 5,
+    "reqLevel": 1,
+    "quality": "q1",
+    "stats": "55 Armor, +1 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "alliance",
+    "sourcemore": [
+      {
+        "c": 1,
+        "c2": 0,
+        "n": "The Stolen Journal",
+        "t": 5,
+        "ti": 218
+      }
+    ]
+  },
+  "6182": {
+    "id": 6182,
+    "name": "Dim Torch",
+    "icon": "inv_torch_lit",
+    "iLvl": 10,
+    "reqLevel": 5,
+    "quality": "q1",
+    "stats": "+4 Spirit",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
+  "6187": {
+    "id": 6187,
+    "name": "Dwarven Defender",
+    "icon": "inv_shield_05",
+    "iLvl": 17,
+    "reqLevel": 10,
+    "quality": "q2",
+    "stats": "361 Armor, +6 Block, +3 Stamina",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "alliance",
+    "sourcemore": [
+      {
+        "c": 38,
+        "c2": 0,
+        "n": "In Defense of the King's Lands",
+        "t": 5,
+        "ti": 217
+      }
+    ]
+  },
+  "6203": {
+    "id": 6203,
+    "name": "Thuggish Shield",
+    "icon": "inv_shield_09",
+    "iLvl": 13,
+    "reqLevel": 8,
+    "quality": "q2",
+    "stats": "274 Armor, +5 Block, +1 Strength",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "n": "Thuros Lightfingers",
+        "t": 1,
+        "ti": 61,
+        "z": 12
+      }
+    ]
   },
   "6205": {
     "id": 6205,
@@ -7760,6 +9666,112 @@
       "Requires Level 23",
       "Chance on hit: Blasts a target for 42 Fire damage."
     ]
+  },
+  "6223": {
+    "id": 6223,
+    "name": "Crest of Darkshire",
+    "icon": "inv_shield_05",
+    "iLvl": 35,
+    "reqLevel": 20,
+    "quality": "q2",
+    "stats": "661 Armor, +14 Block, +2 Strength, +7 Stamina",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "alliance",
+    "sourcemore": [
+      {
+        "c": 10,
+        "c2": 0,
+        "n": "Bride of the Embalmer",
+        "t": 5,
+        "ti": 253
+      }
+    ]
+  },
+  "6292": {
+    "id": 6292,
+    "name": "10 Pound Mud Snapper",
+    "icon": "inv_misc_fish_33",
+    "iLvl": 15,
+    "reqLevel": 1,
+    "quality": "q1",
+    "stats": "",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
+  "6294": {
+    "id": 6294,
+    "name": "12 Pound Mud Snapper",
+    "icon": "inv_misc_fish_33",
+    "iLvl": 15,
+    "reqLevel": 1,
+    "quality": "q1",
+    "stats": "",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
+  "6295": {
+    "id": 6295,
+    "name": "15 Pound Mud Snapper",
+    "icon": "inv_misc_fish_33",
+    "iLvl": 15,
+    "reqLevel": 1,
+    "quality": "q1",
+    "stats": "",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
+  "6309": {
+    "id": 6309,
+    "name": "17 Pound Catfish",
+    "icon": "inv_misc_fish_30",
+    "iLvl": 15,
+    "reqLevel": 1,
+    "quality": "q1",
+    "stats": "",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
+  "6310": {
+    "id": 6310,
+    "name": "19 Pound Catfish",
+    "icon": "inv_misc_fish_30",
+    "iLvl": 15,
+    "reqLevel": 1,
+    "quality": "q1",
+    "stats": "",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
+  "6311": {
+    "id": 6311,
+    "name": "22 Pound Catfish",
+    "icon": "inv_misc_fish_30",
+    "iLvl": 15,
+    "reqLevel": 1,
+    "quality": "q1",
+    "stats": "",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
   },
   "6315": {
     "id": 6315,
@@ -7965,6 +9977,98 @@
       }
     ]
   },
+  "6363": {
+    "id": 6363,
+    "name": "26 Pound Catfish",
+    "icon": "inv_misc_fish_30",
+    "iLvl": 25,
+    "reqLevel": 1,
+    "quality": "q1",
+    "stats": "",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
+  "6364": {
+    "id": 6364,
+    "name": "32 Pound Catfish",
+    "icon": "inv_misc_fish_30",
+    "iLvl": 25,
+    "reqLevel": 1,
+    "quality": "q1",
+    "stats": "",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
+  "6380": {
+    "id": 6380,
+    "name": "Inscribed Buckler",
+    "icon": "inv_shield_09",
+    "iLvl": 18,
+    "reqLevel": 13,
+    "quality": "q2",
+    "stats": "378 Armor, +6 Block, +2 Intellect, +2 Spirit",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "6383": {
+    "id": 6383,
+    "name": "Forest Buckler",
+    "icon": "inv_shield_09",
+    "iLvl": 24,
+    "reqLevel": 19,
+    "quality": "q2",
+    "stats": "478 Armor, +9 Block, +2 Stamina, +4 Intellect",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "6400": {
+    "id": 6400,
+    "name": "Glimmering Shield",
+    "icon": "inv_shield_05",
+    "iLvl": 31,
+    "reqLevel": 26,
+    "quality": "q2",
+    "stats": "595 Armor, +12 Block, +4 Strength, +3 Stamina",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "6447": {
+    "id": 6447,
+    "name": "Worn Turtle Shell Shield",
+    "icon": "inv_shield_21",
+    "iLvl": 21,
+    "reqLevel": 16,
+    "quality": "q3",
+    "stats": "490 Armor, +9 Block, +2 MP5",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "bd": 1,
+        "n": "Kresh",
+        "t": 1,
+        "ti": 3653,
+        "z": 718
+      }
+    ]
+  },
   "6448": {
     "id": 6448,
     "name": "Tail Spike",
@@ -8098,6 +10202,90 @@
       "Equip: Increases damage and healing done by magical spells and effects by up to 26"
     ]
   },
+  "6559": {
+    "id": 6559,
+    "name": "Bard's Buckler",
+    "icon": "inv_shield_09",
+    "iLvl": 16,
+    "reqLevel": 11,
+    "quality": "q2",
+    "stats": "345 Armor, +6 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "6560": {
+    "id": 6560,
+    "name": "Soldier's Shield",
+    "icon": "inv_shield_10",
+    "iLvl": 17,
+    "reqLevel": 12,
+    "quality": "q2",
+    "stats": "361 Armor, +6 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "6571": {
+    "id": 6571,
+    "name": "Scouting Buckler",
+    "icon": "inv_shield_02",
+    "iLvl": 22,
+    "reqLevel": 17,
+    "quality": "q2",
+    "stats": "445 Armor, +8 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "6572": {
+    "id": 6572,
+    "name": "Defender Shield",
+    "icon": "inv_shield_06",
+    "iLvl": 23,
+    "reqLevel": 18,
+    "quality": "q2",
+    "stats": "461 Armor, +8 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "6598": {
+    "id": 6598,
+    "name": "Dervish Buckler",
+    "icon": "inv_shield_10",
+    "iLvl": 28,
+    "reqLevel": 23,
+    "quality": "q2",
+    "stats": "545 Armor, +10 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "6599": {
+    "id": 6599,
+    "name": "Battleforge Shield",
+    "icon": "inv_shield_05",
+    "iLvl": 29,
+    "reqLevel": 24,
+    "quality": "q2",
+    "stats": "561 Armor, +11 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
   "6622": {
     "id": 6622,
     "name": "Sword of Zeal",
@@ -8113,6 +10301,28 @@
     "subclassName": "One-handed sword",
     "side": "both",
     "sourcemore": null
+  },
+  "6630": {
+    "id": 6630,
+    "name": "Seedcloud Buckler",
+    "icon": "inv_shield_10",
+    "iLvl": 24,
+    "reqLevel": 19,
+    "quality": "q3",
+    "stats": "547 Armor, +11 Block, +5 Intellect, +5 Spell Power",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "bd": 1,
+        "n": "Verdan the Everliving",
+        "t": 1,
+        "ti": 5775,
+        "z": 718
+      }
+    ]
   },
   "6631": {
     "id": 6631,
@@ -8195,6 +10405,34 @@
       "Equip: Increases healing done by up to 33"
     ]
   },
+  "6653": {
+    "id": 6653,
+    "name": "Torch of the Dormant Flame",
+    "icon": "inv_torch_unlit",
+    "iLvl": 1,
+    "reqLevel": 1,
+    "quality": "q1",
+    "stats": "",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
+  "6654": {
+    "id": 6654,
+    "name": "Torch of the Eternal Flame",
+    "icon": "inv_torch_lit",
+    "iLvl": 1,
+    "reqLevel": 10,
+    "quality": "q1",
+    "stats": "",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
   "6660": {
     "id": 6660,
     "name": "Julie's Dagger",
@@ -8218,6 +10456,28 @@
       "(36.54 damage per second)",
       "Requires Level 50",
       "Chance on hit: Heals wielder of 78 damage over 12 sec."
+    ]
+  },
+  "6676": {
+    "id": 6676,
+    "name": "Constable Buckler",
+    "icon": "inv_shield_09",
+    "iLvl": 27,
+    "reqLevel": 20,
+    "quality": "q2",
+    "stats": "528 Armor, +10 Block, +4 Stamina, +3 Spirit",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "alliance",
+    "sourcemore": [
+      {
+        "c": 406,
+        "c2": 1,
+        "n": "Reclaiming the Charred Vale",
+        "t": 5,
+        "ti": 1059
+      }
     ]
   },
   "6677": {
@@ -8488,6 +10748,24 @@
       }
     ]
   },
+  "6725": {
+    "id": 6725,
+    "name": "Marbled Buckler",
+    "icon": "inv_shield_10",
+    "iLvl": 36,
+    "reqLevel": 29,
+    "quality": "q3",
+    "stats": "776 Armor, +17 Block, +5 Strength, +5 Agility, +5 Stamina, +5 Spirit",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "z": 491
+      }
+    ]
+  },
   "6729": {
     "id": 6729,
     "name": "Fizzle's Zippy Lighter",
@@ -8579,6 +10857,28 @@
       "Two-Hand",
       "45 - 68 Damage\tSpeed 3.10",
       "(18.23 damage per second)"
+    ]
+  },
+  "6746": {
+    "id": 6746,
+    "name": "Basalt Buckler",
+    "icon": "inv_shield_10",
+    "iLvl": 40,
+    "reqLevel": 26,
+    "quality": "q2",
+    "stats": "963 Armor, +17 Block, +2 Stamina, +8 Intellect",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "horde",
+    "sourcemore": [
+      {
+        "c": 405,
+        "c2": 1,
+        "n": "The Corrupter",
+        "t": 5,
+        "ti": 1488
+      }
     ]
   },
   "6774": {
@@ -8699,6 +10999,28 @@
       }
     ]
   },
+  "6828": {
+    "id": 6828,
+    "name": "Visionary Buckler",
+    "icon": "inv_shield_10",
+    "iLvl": 38,
+    "reqLevel": 30,
+    "quality": "q2",
+    "stats": "711 Armor, +15 Block, +4 Stamina, +7 Spirit",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": 8,
+        "c2": 0,
+        "n": "Galen's Escape",
+        "t": 5,
+        "ti": 1393
+      }
+    ]
+  },
   "6829": {
     "id": 6829,
     "name": "Sword of Serenity",
@@ -8798,12 +11120,10 @@
     "iLvl": 25,
     "reqLevel": 20,
     "quality": "q3",
-    "speed": null,
-    "dps": null,
     "stats": "",
     "inventorySlot": "Held In Off-hand",
-    "subclass": -5,
-    "subclassName": "Weapon",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
     "side": "both",
     "sourcemore": [
       {
@@ -8814,6 +11134,20 @@
         "ti": 1740
       }
     ]
+  },
+  "6899": {
+    "id": 6899,
+    "name": "Warlock Orb 35",
+    "icon": "inv_misc_orb_03",
+    "iLvl": 35,
+    "reqLevel": 1,
+    "quality": "q0",
+    "stats": "",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
   },
   "6904": {
     "id": 6904,
@@ -8991,6 +11325,28 @@
         "n": "Weapons of Elunite",
         "t": 5,
         "ti": 1693
+      }
+    ]
+  },
+  "6970": {
+    "id": 6970,
+    "name": "Furen's Favor",
+    "icon": "inv_shield_05",
+    "iLvl": 20,
+    "reqLevel": 20,
+    "quality": "q2",
+    "stats": "411 Armor, +7 Block, +3 Strength",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "alliance",
+    "sourcemore": [
+      {
+        "c": -81,
+        "c2": 4,
+        "n": "The Shieldsmith",
+        "t": 5,
+        "ti": 1702
       }
     ]
   },
@@ -9236,6 +11592,24 @@
       }
     ]
   },
+  "7002": {
+    "id": 7002,
+    "name": "Arctic Buckler",
+    "icon": "inv_shield_02",
+    "iLvl": 29,
+    "reqLevel": 18,
+    "quality": "q3",
+    "stats": "642 Armor, +13 Block, +8 Stamina, +3 Spirit, +5 Frost Resistance",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "z": 719
+      }
+    ]
+  },
   "7005": {
     "id": 7005,
     "name": "Skinning Knife",
@@ -9249,6 +11623,34 @@
     "inventorySlot": "One-Hand",
     "subclass": 14,
     "subclassName": "Weapon",
+    "side": "both",
+    "sourcemore": null
+  },
+  "7108": {
+    "id": 7108,
+    "name": "Infantry Shield",
+    "icon": "inv_shield_09",
+    "iLvl": 11,
+    "reqLevel": 6,
+    "quality": "q2",
+    "stats": "207 Armor, +4 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "7109": {
+    "id": 7109,
+    "name": "Pioneer Buckler",
+    "icon": "inv_shield_09",
+    "iLvl": 9,
+    "reqLevel": 4,
+    "quality": "q1",
+    "stats": "135 Armor, +3 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
     "side": "both",
     "sourcemore": null
   },
@@ -9324,6 +11726,28 @@
       }
     ]
   },
+  "7120": {
+    "id": 7120,
+    "name": "Ruga's Bulwark",
+    "icon": "inv_shield_14",
+    "iLvl": 20,
+    "reqLevel": 20,
+    "quality": "q2",
+    "stats": "411 Armor, +7 Block, +3 Strength",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "horde",
+    "sourcemore": [
+      {
+        "c": -81,
+        "c2": 4,
+        "n": "Trial at the Field of Giants",
+        "t": 5,
+        "ti": 1824
+      }
+    ]
+  },
   "7166": {
     "id": 7166,
     "name": "Copper Dagger",
@@ -9390,6 +11814,24 @@
       "+11 Strength",
       "+4 Agility",
       "Requires Level 18"
+    ]
+  },
+  "7297": {
+    "id": 7297,
+    "name": "Morbent's Bane",
+    "icon": "inv_staff_05",
+    "iLvl": 33,
+    "reqLevel": 1,
+    "quality": "q1",
+    "stats": "",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "alliance",
+    "sourcemore": [
+      {
+        "z": 10
+      }
     ]
   },
   "7298": {
@@ -9512,6 +11954,34 @@
       "+1 Stamina"
     ]
   },
+  "7330": {
+    "id": 7330,
+    "name": "Infiltrator Buckler",
+    "icon": "inv_shield_09",
+    "iLvl": 33,
+    "reqLevel": 28,
+    "quality": "q2",
+    "stats": "628 Armor, +13 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "7331": {
+    "id": 7331,
+    "name": "Phalanx Shield",
+    "icon": "inv_shield_07",
+    "iLvl": 34,
+    "reqLevel": 29,
+    "quality": "q2",
+    "stats": "645 Armor, +13 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
   "7344": {
     "id": 7344,
     "name": "Torch of Holy Flame",
@@ -9535,6 +12005,90 @@
         "ti": 55
       }
     ]
+  },
+  "7463": {
+    "id": 7463,
+    "name": "Sentinel Buckler",
+    "icon": "inv_shield_10",
+    "iLvl": 38,
+    "reqLevel": 33,
+    "quality": "q2",
+    "stats": "711 Armor, +15 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "7465": {
+    "id": 7465,
+    "name": "Knight's Crest",
+    "icon": "inv_shield_06",
+    "iLvl": 39,
+    "reqLevel": 34,
+    "quality": "q2",
+    "stats": "728 Armor, +16 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "7495": {
+    "id": 7495,
+    "name": "Captain's Buckler",
+    "icon": "inv_shield_10",
+    "iLvl": 44,
+    "reqLevel": 39,
+    "quality": "q2",
+    "stats": "1380 Armor, +20 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "7496": {
+    "id": 7496,
+    "name": "Field Plate Shield",
+    "icon": "inv_shield_05",
+    "iLvl": 43,
+    "reqLevel": 38,
+    "quality": "q2",
+    "stats": "1257 Armor, +19 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "7507": {
+    "id": 7507,
+    "name": "Arcane Orb",
+    "icon": "inv_misc_orb_01",
+    "iLvl": 10,
+    "reqLevel": 10,
+    "quality": "q2",
+    "stats": "+1 Spirit",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
+  "7508": {
+    "id": 7508,
+    "name": "Ley Orb",
+    "icon": "inv_misc_orb_01",
+    "iLvl": 10,
+    "reqLevel": 10,
+    "quality": "q2",
+    "stats": "+1 Spirit",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
   },
   "7513": {
     "id": 7513,
@@ -9584,6 +12138,56 @@
       }
     ]
   },
+  "7515": {
+    "id": 7515,
+    "name": "Celestial Orb",
+    "icon": "inv_misc_orb_03",
+    "iLvl": 40,
+    "reqLevel": 35,
+    "quality": "q3",
+    "stats": "+3 Intellect, +13 Spell Power",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": -161,
+        "c2": 4,
+        "n": "Celestial Power",
+        "t": 5,
+        "ti": 1958
+      }
+    ]
+  },
+  "7536": {
+    "id": 7536,
+    "name": "Champion's Wall Shield",
+    "icon": "inv_shield_03",
+    "iLvl": 48,
+    "reqLevel": 43,
+    "quality": "q2",
+    "stats": "1493 Armor, +23 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "7537": {
+    "id": 7537,
+    "name": "Gothic Shield",
+    "icon": "inv_shield_07",
+    "iLvl": 49,
+    "reqLevel": 44,
+    "quality": "q2",
+    "stats": "1521 Armor, +23 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
   "7554": {
     "id": 7554,
     "name": "Willow Branch",
@@ -9591,12 +12195,10 @@
     "iLvl": 19,
     "reqLevel": 14,
     "quality": "q2",
-    "speed": null,
-    "dps": null,
     "stats": "",
     "inventorySlot": "Held In Off-hand",
-    "subclass": -5,
-    "subclassName": "Weapon",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
     "side": "both",
     "sourcemore": null
   },
@@ -9607,12 +12209,52 @@
     "iLvl": 45,
     "reqLevel": 40,
     "quality": "q2",
-    "speed": null,
-    "dps": null,
     "stats": "",
     "inventorySlot": "Held In Off-hand",
-    "subclass": -5,
-    "subclassName": "Weapon",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
+  "7556": {
+    "id": 7556,
+    "name": "Twilight Orb",
+    "icon": "inv_misc_orb_04",
+    "iLvl": 40,
+    "reqLevel": 35,
+    "quality": "q2",
+    "stats": "",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
+  "7557": {
+    "id": 7557,
+    "name": "Gossamer Rod",
+    "icon": "inv_wand_02",
+    "iLvl": 50,
+    "reqLevel": 45,
+    "quality": "q2",
+    "stats": "",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
+  "7558": {
+    "id": 7558,
+    "name": "Shimmering Stave",
+    "icon": "inv_wand_04",
+    "iLvl": 25,
+    "reqLevel": 20,
+    "quality": "q2",
+    "stats": "",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
     "side": "both",
     "sourcemore": null
   },
@@ -9677,6 +12319,48 @@
     "inventorySlot": "Held In Off-hand",
     "subclass": -5,
     "subclassName": "Weapon",
+    "side": "both",
+    "sourcemore": null
+  },
+  "7609": {
+    "id": 7609,
+    "name": "Elder's Amber Stave",
+    "icon": "inv_staff_07",
+    "iLvl": 35,
+    "reqLevel": 30,
+    "quality": "q2",
+    "stats": "",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
+  "7610": {
+    "id": 7610,
+    "name": "Aurora Sphere",
+    "icon": "inv_misc_gem_pearl_02",
+    "iLvl": 41,
+    "reqLevel": 36,
+    "quality": "q2",
+    "stats": "+7 Intellect, +4 Spirit",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
+  "7611": {
+    "id": 7611,
+    "name": "Mistscape Stave",
+    "icon": "inv_staff_03",
+    "iLvl": 46,
+    "reqLevel": 41,
+    "quality": "q2",
+    "stats": "+3 Stamina, +9 Intellect",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
     "side": "both",
     "sourcemore": null
   },
@@ -10068,6 +12752,42 @@
       }
     ]
   },
+  "7747": {
+    "id": 7747,
+    "name": "Vile Protector",
+    "icon": "inv_shield_02",
+    "iLvl": 40,
+    "reqLevel": 28,
+    "quality": "q3",
+    "stats": "1078 Armor, +20 Block, +6 Strength",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "horde",
+    "sourcemore": [
+      {
+        "c": 796,
+        "c2": 2,
+        "n": "Compendium of the Fallen",
+        "t": 5,
+        "ti": 1049
+      }
+    ]
+  },
+  "7748": {
+    "id": 7748,
+    "name": "Forcestone Buckler",
+    "icon": "inv_shield_02",
+    "iLvl": 45,
+    "reqLevel": 1,
+    "quality": "q2",
+    "stats": "1408 Armor, +20 Block, +3 Stamina, +9 Spirit",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
   "7749": {
     "id": 7749,
     "name": "Omega Orb",
@@ -10127,6 +12847,20 @@
         "z": 796
       }
     ]
+  },
+  "7787": {
+    "id": 7787,
+    "name": "Resplendent Guardian",
+    "icon": "inv_shield_02",
+    "iLvl": 31,
+    "reqLevel": 26,
+    "quality": "q3",
+    "stats": "680 Armor, +14 Block, +7 Stamina, Equip: Increases your chance to Block attacks with a shield by 1.0%.",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
   },
   "7941": {
     "id": 7941,
@@ -10534,6 +13268,34 @@
       }
     ]
   },
+  "8134": {
+    "id": 8134,
+    "name": "Myrmidon's Defender",
+    "icon": "inv_shield_02",
+    "iLvl": 51,
+    "reqLevel": 46,
+    "quality": "q2",
+    "stats": "1578 Armor, +25 Block, +2 Agility, +2 Stamina, +11 Spirit",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "8135": {
+    "id": 8135,
+    "name": "Chromite Shield",
+    "icon": "inv_shield_04",
+    "iLvl": 46,
+    "reqLevel": 41,
+    "quality": "q2",
+    "stats": "1436 Armor, +21 Block, +3 Strength, +10 Stamina",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
   "8179": {
     "id": 8179,
     "name": "Cadet's Bow",
@@ -10780,6 +13542,104 @@
       "Requires Level 26"
     ]
   },
+  "8275": {
+    "id": 8275,
+    "name": "Ebonhold Buckler",
+    "icon": "inv_shield_04",
+    "iLvl": 56,
+    "reqLevel": 51,
+    "quality": "q2",
+    "stats": "1720 Armor, +30 Block, +4 Stamina, +12 Spirit",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "8282": {
+    "id": 8282,
+    "name": "Valorous Shield",
+    "icon": "inv_shield_02",
+    "iLvl": 51,
+    "reqLevel": 46,
+    "quality": "q2",
+    "stats": "1578 Armor, +25 Block, +6 Strength, +9 Stamina",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "8313": {
+    "id": 8313,
+    "name": "Hero's Buckler",
+    "icon": "inv_shield_07",
+    "iLvl": 62,
+    "reqLevel": 57,
+    "quality": "q2",
+    "stats": "1890 Armor, +36 Block, +7 Strength, +12 Intellect",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "8320": {
+    "id": 8320,
+    "name": "Alabaster Shield",
+    "icon": "inv_shield_04",
+    "iLvl": 57,
+    "reqLevel": 52,
+    "quality": "q2",
+    "stats": "1748 Armor, +31 Block, +3 Strength, +13 Stamina",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "8624": {
+    "id": 8624,
+    "name": "Red Sparkler",
+    "icon": "inv_wand_06",
+    "iLvl": 10,
+    "reqLevel": 1,
+    "quality": "q1",
+    "stats": "",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
+  "8625": {
+    "id": 8625,
+    "name": "White Sparkler",
+    "icon": "inv_wand_07",
+    "iLvl": 10,
+    "reqLevel": 1,
+    "quality": "q1",
+    "stats": "",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
+  "8626": {
+    "id": 8626,
+    "name": "Blue Sparkler",
+    "icon": "inv_wand_05",
+    "iLvl": 10,
+    "reqLevel": 1,
+    "quality": "q1",
+    "stats": "",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
   "8708": {
     "id": 8708,
     "name": "Hammer of Expertise",
@@ -11008,6 +13868,28 @@
       "Equip: Increases healing done by up to 13"
     ]
   },
+  "9404": {
+    "id": 9404,
+    "name": "Olaf's All Purpose Shield",
+    "icon": "inv_shield_02",
+    "iLvl": 42,
+    "reqLevel": 37,
+    "quality": "q3",
+    "stats": "1287 Armor, +22 Block, +11 Stamina",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "bd": 1,
+        "n": "Olaf",
+        "t": 1,
+        "ti": 6908,
+        "z": 1337
+      }
+    ]
+  },
   "9412": {
     "id": 9412,
     "name": "Galgann's Fireblaster",
@@ -11083,6 +13965,20 @@
       "+3 Agility",
       "Requires Level 36"
     ]
+  },
+  "9444": {
+    "id": 9444,
+    "name": "Techbot CPU Shell",
+    "icon": "inv_shield_09",
+    "iLvl": 26,
+    "reqLevel": 21,
+    "quality": "q1",
+    "stats": "475 Armor, +9 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
   },
   "9446": {
     "id": 9446,
@@ -11232,6 +14128,28 @@
         "n": "Dark Iron Ambassador",
         "t": 1,
         "ti": 6228,
+        "z": 721
+      }
+    ]
+  },
+  "9458": {
+    "id": 9458,
+    "name": "Thermaplugg's Central Core",
+    "icon": "inv_shield_10",
+    "iLvl": 36,
+    "reqLevel": 31,
+    "quality": "q3",
+    "stats": "776 Armor, +17 Block, +3 Spirit",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "bd": 1,
+        "n": "Mekgineer Thermaplugg",
+        "t": 1,
+        "ti": 7800,
         "z": 721
       }
     ]
@@ -11549,6 +14467,28 @@
       "+7 Agility"
     ]
   },
+  "9522": {
+    "id": 9522,
+    "name": "Energized Stone Circle",
+    "icon": "inv_shield_10",
+    "iLvl": 38,
+    "reqLevel": 30,
+    "quality": "q2",
+    "stats": "711 Armor, +15 Block, +4 Stamina, +7 Healing, +3 Spell Power",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": 1337,
+        "c2": 2,
+        "n": "Power Stones",
+        "t": 5,
+        "ti": 2418
+      }
+    ]
+  },
   "9527": {
     "id": 9527,
     "name": "Spellshifter Rod",
@@ -11629,6 +14569,28 @@
       }
     ]
   },
+  "9607": {
+    "id": 9607,
+    "name": "Bastion of Stormwind",
+    "icon": "inv_shield_06",
+    "iLvl": 25,
+    "reqLevel": 20,
+    "quality": "q2",
+    "stats": "495 Armor, +9 Block, +3 Defense",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "alliance",
+    "sourcemore": [
+      {
+        "c": -141,
+        "c2": 4,
+        "n": "The Tome of Valor",
+        "t": 5,
+        "ti": 1652
+      }
+    ]
+  },
   "9608": {
     "id": 9608,
     "name": "Shoni's Disarming Tool",
@@ -11677,6 +14639,50 @@
       }
     ]
   },
+  "9643": {
+    "id": 9643,
+    "name": "Optomatic Deflector",
+    "icon": "inv_shield_02",
+    "iLvl": 51,
+    "reqLevel": 43,
+    "quality": "q2",
+    "stats": "1578 Armor, +25 Block, +5 Strength, Equip: Increases your chance to Block attacks with a shield by 2.0%.",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": 440,
+        "c2": 1,
+        "n": "Rescue OOX-17/TN!",
+        "t": 5,
+        "ti": 648
+      }
+    ]
+  },
+  "9644": {
+    "id": 9644,
+    "name": "Thermotastic Egg Timer",
+    "icon": "inv_misc_bomb_03",
+    "iLvl": 51,
+    "reqLevel": 43,
+    "quality": "q2",
+    "stats": "+3 Agility, +11 Spirit",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": 440,
+        "c2": 1,
+        "n": "Rescue OOX-17/TN!",
+        "t": 5,
+        "ti": 648
+      }
+    ]
+  },
   "9651": {
     "id": 9651,
     "name": "Gryphon Rider's Stormhammer",
@@ -11722,6 +14728,28 @@
         "n": "The Morrow Stone",
         "t": 5,
         "ti": 2942
+      }
+    ]
+  },
+  "9661": {
+    "id": 9661,
+    "name": "Earthclasp Barrier",
+    "icon": "inv_shield_13",
+    "iLvl": 43,
+    "reqLevel": 39,
+    "quality": "q2",
+    "stats": "1257 Armor, +19 Block, +1 Stamina, +9 Spirit",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "horde",
+    "sourcemore": [
+      {
+        "c": 357,
+        "c2": 1,
+        "n": "The Battle Plans",
+        "t": 5,
+        "ti": 2903
       }
     ]
   },
@@ -11826,6 +14854,28 @@
       }
     ]
   },
+  "9706": {
+    "id": 9706,
+    "name": "Tharg's Disk",
+    "icon": "inv_shield_15",
+    "iLvl": 43,
+    "reqLevel": 38,
+    "quality": "q2",
+    "stats": "1257 Armor, +19 Block, +10 Stamina",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "horde",
+    "sourcemore": [
+      {
+        "c": 15,
+        "c2": 1,
+        "n": "Army of the Black Dragon",
+        "t": 5,
+        "ti": 1168
+      }
+    ]
+  },
   "9718": {
     "id": 9718,
     "name": "Reforged Blade of Heroes",
@@ -11839,6 +14889,454 @@
     "inventorySlot": "One-Hand",
     "subclass": 7,
     "subclassName": "One-handed sword",
+    "side": "both",
+    "sourcemore": null
+  },
+  "9753": {
+    "id": 9753,
+    "name": "Nomad Buckler",
+    "icon": "inv_shield_10",
+    "iLvl": 12,
+    "reqLevel": 7,
+    "quality": "q2",
+    "stats": "239 Armor, +4 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "9764": {
+    "id": 9764,
+    "name": "Cadet Shield",
+    "icon": "inv_shield_09",
+    "iLvl": 13,
+    "reqLevel": 8,
+    "quality": "q2",
+    "stats": "274 Armor, +5 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "9769": {
+    "id": 9769,
+    "name": "Greenweave Branch",
+    "icon": "inv_staff_16",
+    "iLvl": 27,
+    "reqLevel": 22,
+    "quality": "q2",
+    "stats": "",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
+  "9778": {
+    "id": 9778,
+    "name": "Bandit Buckler",
+    "icon": "inv_shield_09",
+    "iLvl": 20,
+    "reqLevel": 15,
+    "quality": "q2",
+    "stats": "411 Armor, +7 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "9790": {
+    "id": 9790,
+    "name": "Raider's Shield",
+    "icon": "inv_shield_09",
+    "iLvl": 19,
+    "reqLevel": 14,
+    "quality": "q2",
+    "stats": "395 Armor, +7 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "9800": {
+    "id": 9800,
+    "name": "Ivy Orb",
+    "icon": "inv_misc_orb_01",
+    "iLvl": 29,
+    "reqLevel": 24,
+    "quality": "q2",
+    "stats": "",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
+  "9804": {
+    "id": 9804,
+    "name": "Superior Buckler",
+    "icon": "inv_shield_09",
+    "iLvl": 26,
+    "reqLevel": 21,
+    "quality": "q2",
+    "stats": "511 Armor, +9 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "9816": {
+    "id": 9816,
+    "name": "Fortified Shield",
+    "icon": "inv_shield_07",
+    "iLvl": 25,
+    "reqLevel": 20,
+    "quality": "q2",
+    "stats": "495 Armor, +9 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "9830": {
+    "id": 9830,
+    "name": "Scaled Shield",
+    "icon": "inv_shield_10",
+    "iLvl": 32,
+    "reqLevel": 27,
+    "quality": "q2",
+    "stats": "611 Armor, +12 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "9843": {
+    "id": 9843,
+    "name": "Banded Shield",
+    "icon": "inv_shield_09",
+    "iLvl": 33,
+    "reqLevel": 28,
+    "quality": "q2",
+    "stats": "628 Armor, +13 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "9858": {
+    "id": 9858,
+    "name": "Archer's Buckler",
+    "icon": "inv_shield_09",
+    "iLvl": 36,
+    "reqLevel": 31,
+    "quality": "q2",
+    "stats": "678 Armor, +14 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "9873": {
+    "id": 9873,
+    "name": "Renegade Shield",
+    "icon": "inv_shield_07",
+    "iLvl": 37,
+    "reqLevel": 32,
+    "quality": "q2",
+    "stats": "695 Armor, +15 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "9882": {
+    "id": 9882,
+    "name": "Sorcerer Sphere",
+    "icon": "inv_misc_orb_01",
+    "iLvl": 43,
+    "reqLevel": 38,
+    "quality": "q2",
+    "stats": "",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
+  "9899": {
+    "id": 9899,
+    "name": "Jazeraint Shield",
+    "icon": "inv_shield_05",
+    "iLvl": 42,
+    "reqLevel": 37,
+    "quality": "q2",
+    "stats": "1148 Armor, +18 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "9914": {
+    "id": 9914,
+    "name": "Royal Scepter",
+    "icon": "inv_mace_08",
+    "iLvl": 48,
+    "reqLevel": 43,
+    "quality": "q2",
+    "stats": "",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
+  "9918": {
+    "id": 9918,
+    "name": "Brigade Defender",
+    "icon": "inv_shield_03",
+    "iLvl": 45,
+    "reqLevel": 40,
+    "quality": "q2",
+    "stats": "1408 Armor, +20 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "9935": {
+    "id": 9935,
+    "name": "Embossed Plate Shield",
+    "icon": "inv_shield_05",
+    "iLvl": 45,
+    "reqLevel": 40,
+    "quality": "q2",
+    "stats": "1408 Armor, +20 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "9944": {
+    "id": 9944,
+    "name": "Abjurer's Crystal",
+    "icon": "inv_misc_gem_pearl_06",
+    "iLvl": 53,
+    "reqLevel": 48,
+    "quality": "q2",
+    "stats": "",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
+  "9958": {
+    "id": 9958,
+    "name": "Warmonger's Buckler",
+    "icon": "inv_shield_02",
+    "iLvl": 50,
+    "reqLevel": 45,
+    "quality": "q2",
+    "stats": "1550 Armor, +24 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "9974": {
+    "id": 9974,
+    "name": "Overlord's Shield",
+    "icon": "spell_holy_sealofwrath",
+    "iLvl": 52,
+    "reqLevel": 47,
+    "quality": "q2",
+    "stats": "1606 Armor, +26 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "10078": {
+    "id": 10078,
+    "name": "Lord's Crest",
+    "icon": "spell_holy_sealofprotection",
+    "iLvl": 53,
+    "reqLevel": 48,
+    "quality": "q2",
+    "stats": "1635 Armor, +27 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "10093": {
+    "id": 10093,
+    "name": "Revenant Deflector",
+    "icon": "inv_shield_06",
+    "iLvl": 54,
+    "reqLevel": 49,
+    "quality": "q2",
+    "stats": "1663 Armor, +28 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "10158": {
+    "id": 10158,
+    "name": "Mercurial Guard",
+    "icon": "inv_shield_05",
+    "iLvl": 64,
+    "reqLevel": 59,
+    "quality": "q2",
+    "stats": "1946 Armor, +37 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "10195": {
+    "id": 10195,
+    "name": "Crusader's Shield",
+    "icon": "inv_shield_10",
+    "iLvl": 55,
+    "reqLevel": 50,
+    "quality": "q2",
+    "stats": "1691 Armor, +29 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "10204": {
+    "id": 10204,
+    "name": "Heavy Lamellar Shield",
+    "icon": "inv_shield_09",
+    "iLvl": 55,
+    "reqLevel": 50,
+    "quality": "q2",
+    "stats": "1691 Armor, +29 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "10271": {
+    "id": 10271,
+    "name": "Masterwork Shield",
+    "icon": "inv_shield_02",
+    "iLvl": 65,
+    "reqLevel": 60,
+    "quality": "q2",
+    "stats": "1975 Armor, +38 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "10362": {
+    "id": 10362,
+    "name": "Ornate Shield",
+    "icon": "spell_holy_powerwordshield",
+    "iLvl": 58,
+    "reqLevel": 53,
+    "quality": "q2",
+    "stats": "1776 Armor, +32 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "10363": {
+    "id": 10363,
+    "name": "Engraved Wall",
+    "icon": "inv_shield_03",
+    "iLvl": 60,
+    "reqLevel": 55,
+    "quality": "q2",
+    "stats": "1833 Armor, +34 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "10364": {
+    "id": 10364,
+    "name": "Templar Shield",
+    "icon": "inv_shield_05",
+    "iLvl": 58,
+    "reqLevel": 53,
+    "quality": "q2",
+    "stats": "1776 Armor, +32 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "10365": {
+    "id": 10365,
+    "name": "Emerald Shield",
+    "icon": "inv_shield_04",
+    "iLvl": 59,
+    "reqLevel": 54,
+    "quality": "q2",
+    "stats": "1805 Armor, +33 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "10366": {
+    "id": 10366,
+    "name": "Demon Guard",
+    "icon": "spell_shadow_ragingscream",
+    "iLvl": 63,
+    "reqLevel": 58,
+    "quality": "q2",
+    "stats": "1918 Armor, +36 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "10367": {
+    "id": 10367,
+    "name": "Hyperion Shield",
+    "icon": "spell_holy_powerwordshield",
+    "iLvl": 65,
+    "reqLevel": 60,
+    "quality": "q2",
+    "stats": "1975 Armor, +38 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
     "side": "both",
     "sourcemore": null
   },
@@ -11973,6 +15471,28 @@
     "side": "both",
     "sourcemore": null
   },
+  "10686": {
+    "id": 10686,
+    "name": "Aegis of Battle",
+    "icon": "inv_shield_02",
+    "iLvl": 55,
+    "reqLevel": 40,
+    "quality": "q2",
+    "stats": "1691 Armor, +29 Block, +6 Agility, +10 Stamina",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "horde",
+    "sourcemore": [
+      {
+        "c": 47,
+        "c2": 0,
+        "n": "Venom to the Undercity",
+        "t": 5,
+        "ti": 2938
+      }
+    ]
+  },
   "10696": {
     "id": 10696,
     "name": "Enchanted Azsharite Felbane Sword",
@@ -12090,6 +15610,50 @@
         "n": "Challenge Overlord Mok'Morokk",
         "t": 5,
         "ti": 1173
+      }
+    ]
+  },
+  "10708": {
+    "id": 10708,
+    "name": "Skullspell Orb",
+    "icon": "inv_misc_bone_elfskull_01",
+    "iLvl": 52,
+    "reqLevel": 45,
+    "quality": "q2",
+    "stats": "+12 Intellect",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "alliance",
+    "sourcemore": [
+      {
+        "c": 1537,
+        "c2": 0,
+        "n": "Return to Tymor",
+        "t": 5,
+        "ti": 3461
+      }
+    ]
+  },
+  "10709": {
+    "id": 10709,
+    "name": "Pyrestone Orb",
+    "icon": "inv_misc_orb_05",
+    "iLvl": 55,
+    "reqLevel": 44,
+    "quality": "q2",
+    "stats": "+13 Spirit",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "horde",
+    "sourcemore": [
+      {
+        "c": 1637,
+        "c2": 1,
+        "n": "Betrayed",
+        "t": 5,
+        "ti": 3507
       }
     ]
   },
@@ -12420,6 +15984,48 @@
       }
     ]
   },
+  "11199": {
+    "id": 11199,
+    "name": "Engineer's Shield 1",
+    "icon": "inv_shield_08",
+    "iLvl": 1,
+    "reqLevel": 1,
+    "quality": "q1",
+    "stats": "10 Armor, +1 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "11200": {
+    "id": 11200,
+    "name": "Engineer's Shield 2",
+    "icon": "inv_shield_08",
+    "iLvl": 1,
+    "reqLevel": 1,
+    "quality": "q1",
+    "stats": "10 Armor, +1 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "11201": {
+    "id": 11201,
+    "name": "Engineer's Shield 3",
+    "icon": "inv_shield_08",
+    "iLvl": 1,
+    "reqLevel": 1,
+    "quality": "q1",
+    "stats": "10 Armor, +1 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
   "11262": {
     "id": 11262,
     "name": "Orb of Lorica",
@@ -12675,6 +16281,24 @@
     "side": "both",
     "sourcemore": null
   },
+  "11522": {
+    "id": 11522,
+    "name": "Silver Totem of Aquementas",
+    "icon": "inv_wand_05",
+    "iLvl": 1,
+    "reqLevel": 1,
+    "quality": "q1",
+    "stats": "",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": [
+      {
+        "z": 490
+      }
+    ]
+  },
   "11607": {
     "id": 11607,
     "name": "Dark Iron Sunderer",
@@ -12915,6 +16539,28 @@
       "Equip: Increases damage and healing done by magical spells and effects by up to 38"
     ]
   },
+  "11859": {
+    "id": 11859,
+    "name": "Jademoon Orb",
+    "icon": "inv_misc_gem_emerald_01",
+    "iLvl": 45,
+    "reqLevel": 37,
+    "quality": "q2",
+    "stats": "+3 Stamina, +4 Intellect, +8 Spirit",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "horde",
+    "sourcemore": [
+      {
+        "c": 357,
+        "c2": 1,
+        "n": "A Grim Discovery",
+        "t": 5,
+        "ti": 2976
+      }
+    ]
+  },
   "11860": {
     "id": 11860,
     "name": "Charged Lightning Rod",
@@ -12962,6 +16608,20 @@
         "ti": 4300
       }
     ]
+  },
+  "11870": {
+    "id": 11870,
+    "name": "Oblivion Orb",
+    "icon": "inv_misc_bone_orcskull_01",
+    "iLvl": 54,
+    "reqLevel": 50,
+    "quality": "q2",
+    "stats": "+4 Stamina, +11 Spirit",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
   },
   "11902": {
     "id": 11902,
@@ -13060,6 +16720,28 @@
         "n": "The Mighty U'cha",
         "t": 5,
         "ti": 4301
+      }
+    ]
+  },
+  "11915": {
+    "id": 11915,
+    "name": "Shizzle's Drizzle Blocker",
+    "icon": "inv_shield_07",
+    "iLvl": 55,
+    "reqLevel": 49,
+    "quality": "q2",
+    "stats": "1691 Armor, +29 Block, +13 Strength, +1 Stamina",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": 490,
+        "c2": 1,
+        "n": "Shizzle's Flyer",
+        "t": 5,
+        "ti": 4503
       }
     ]
   },
@@ -13874,6 +17556,20 @@
     "side": "both",
     "sourcemore": null
   },
+  "12997": {
+    "id": 12997,
+    "name": "Redbeard Crest",
+    "icon": "inv_shield_02",
+    "iLvl": 24,
+    "reqLevel": 19,
+    "quality": "q3",
+    "stats": "547 Armor, +11 Block, +6 Strength, +3 Stamina",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
   "13015": {
     "id": 13015,
     "name": "Serathil",
@@ -14046,6 +17742,48 @@
       "+4 Stamina",
       "Requires Level 58"
     ]
+  },
+  "13029": {
+    "id": 13029,
+    "name": "Umbral Crystal",
+    "icon": "inv_misc_orb_04",
+    "iLvl": 43,
+    "reqLevel": 38,
+    "quality": "q3",
+    "stats": "+5 Stamina",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
+  "13030": {
+    "id": 13030,
+    "name": "Basilisk Bone",
+    "icon": "inv_misc_bone_10",
+    "iLvl": 51,
+    "reqLevel": 46,
+    "quality": "q3",
+    "stats": "+6 Arcane Resistance, +6 Fire Resistance, +6 Nature Resistance, +6 Frost Resistance, +6 Shadow Resistance",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
+  "13031": {
+    "id": 13031,
+    "name": "Orb of Mistmantle",
+    "icon": "inv_misc_orb_01",
+    "iLvl": 28,
+    "reqLevel": 23,
+    "quality": "q3",
+    "stats": "+4 Spirit, +9 Healing",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
   },
   "13033": {
     "id": 13033,
@@ -14383,6 +18121,62 @@
     "side": "both",
     "sourcemore": null
   },
+  "13079": {
+    "id": 13079,
+    "name": "Shield of Thorsen",
+    "icon": "inv_shield_10",
+    "iLvl": 30,
+    "reqLevel": 25,
+    "quality": "q3",
+    "stats": "661 Armor, +14 Block, +7 Strength",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "13081": {
+    "id": 13081,
+    "name": "Skullance Shield",
+    "icon": "inv_shield_02",
+    "iLvl": 38,
+    "reqLevel": 33,
+    "quality": "q3",
+    "stats": "814 Armor, +19 Block, +8 Strength, +4 Agility, +5 Stamina",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "13082": {
+    "id": 13082,
+    "name": "Mountainside Buckler",
+    "icon": "inv_shield_15",
+    "iLvl": 46,
+    "reqLevel": 41,
+    "quality": "q3",
+    "stats": "1612 Armor, +25 Block, +5 Intellect, +12 Spirit",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "13083": {
+    "id": 13083,
+    "name": "Garrett Family Crest",
+    "icon": "inv_shield_05",
+    "iLvl": 62,
+    "reqLevel": 57,
+    "quality": "q3",
+    "stats": "2121 Armor, +39 Block, +5 Agility, +4 Intellect, +17 Spirit",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
   "13136": {
     "id": 13136,
     "name": "Lil Timmy's Peashooter",
@@ -14521,6 +18315,27 @@
       "Equip: Increased Defense +5."
     ]
   },
+  "13371": {
+    "id": 13371,
+    "name": "Father Flame",
+    "icon": "inv_misc_orb_05",
+    "iLvl": 58,
+    "reqLevel": 1,
+    "quality": "q2",
+    "stats": "+10 Fire Resistance",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": [
+      {
+        "n": "Father Flame",
+        "t": 2,
+        "ti": 175245,
+        "z": 1583
+      }
+    ]
+  },
   "13474": {
     "id": 13474,
     "name": "Farmer Dalson's Shotgun",
@@ -14587,6 +18402,174 @@
       "Requires Level 52"
     ]
   },
+  "13882": {
+    "id": 13882,
+    "name": "42 Pound Redgill",
+    "icon": "inv_misc_fish_06",
+    "iLvl": 45,
+    "reqLevel": 1,
+    "quality": "q1",
+    "stats": "",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
+  "13883": {
+    "id": 13883,
+    "name": "45 Pound Redgill",
+    "icon": "inv_misc_fish_06",
+    "iLvl": 45,
+    "reqLevel": 1,
+    "quality": "q1",
+    "stats": "",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
+  "13884": {
+    "id": 13884,
+    "name": "49 Pound Redgill",
+    "icon": "inv_misc_fish_06",
+    "iLvl": 45,
+    "reqLevel": 1,
+    "quality": "q1",
+    "stats": "",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
+  "13885": {
+    "id": 13885,
+    "name": "34 Pound Redgill",
+    "icon": "inv_misc_fish_06",
+    "iLvl": 45,
+    "reqLevel": 1,
+    "quality": "q1",
+    "stats": "",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
+  "13886": {
+    "id": 13886,
+    "name": "37 Pound Redgill",
+    "icon": "inv_misc_fish_06",
+    "iLvl": 45,
+    "reqLevel": 1,
+    "quality": "q1",
+    "stats": "",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
+  "13887": {
+    "id": 13887,
+    "name": "52 Pound Redgill",
+    "icon": "inv_misc_fish_06",
+    "iLvl": 45,
+    "reqLevel": 1,
+    "quality": "q1",
+    "stats": "",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
+  "13901": {
+    "id": 13901,
+    "name": "15 Pound Salmon",
+    "icon": "inv_misc_fish_02",
+    "iLvl": 55,
+    "reqLevel": 1,
+    "quality": "q1",
+    "stats": "",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
+  "13902": {
+    "id": 13902,
+    "name": "18 Pound Salmon",
+    "icon": "inv_misc_fish_02",
+    "iLvl": 55,
+    "reqLevel": 1,
+    "quality": "q1",
+    "stats": "",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
+  "13903": {
+    "id": 13903,
+    "name": "22 Pound Salmon",
+    "icon": "inv_misc_fish_02",
+    "iLvl": 55,
+    "reqLevel": 1,
+    "quality": "q1",
+    "stats": "",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
+  "13904": {
+    "id": 13904,
+    "name": "25 Pound Salmon",
+    "icon": "inv_misc_fish_02",
+    "iLvl": 55,
+    "reqLevel": 1,
+    "quality": "q1",
+    "stats": "",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
+  "13905": {
+    "id": 13905,
+    "name": "29 Pound Salmon",
+    "icon": "inv_misc_fish_02",
+    "iLvl": 55,
+    "reqLevel": 1,
+    "quality": "q1",
+    "stats": "",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
+  "13906": {
+    "id": 13906,
+    "name": "32 Pound Salmon",
+    "icon": "inv_misc_fish_02",
+    "iLvl": 55,
+    "reqLevel": 1,
+    "quality": "q1",
+    "stats": "",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
   "13914": {
     "id": 13914,
     "name": "70 Pound Mightfish",
@@ -14594,12 +18577,10 @@
     "iLvl": 55,
     "reqLevel": 1,
     "quality": "q1",
-    "speed": null,
-    "dps": null,
     "stats": "",
     "inventorySlot": "Held In Off-hand",
-    "subclass": -5,
-    "subclassName": "Weapon",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
     "side": "both",
     "sourcemore": [
       {
@@ -14616,12 +18597,10 @@
     "iLvl": 55,
     "reqLevel": 1,
     "quality": "q1",
-    "speed": null,
-    "dps": null,
     "stats": "",
     "inventorySlot": "Held In Off-hand",
-    "subclass": -5,
-    "subclassName": "Weapon",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
     "side": "both",
     "sourcemore": [
       {
@@ -14638,12 +18617,10 @@
     "iLvl": 55,
     "reqLevel": 1,
     "quality": "q1",
-    "speed": null,
-    "dps": null,
     "stats": "",
     "inventorySlot": "Held In Off-hand",
-    "subclass": -5,
-    "subclassName": "Weapon",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
     "side": "both",
     "sourcemore": [
       {
@@ -14660,12 +18637,10 @@
     "iLvl": 55,
     "reqLevel": 1,
     "quality": "q1",
-    "speed": null,
-    "dps": null,
     "stats": "",
     "inventorySlot": "Held In Off-hand",
-    "subclass": -5,
-    "subclassName": "Weapon",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
     "side": "both",
     "sourcemore": null
   },
@@ -14715,6 +18690,20 @@
       }
     ]
   },
+  "14393": {
+    "id": 14393,
+    "name": "Durability Shield",
+    "icon": "inv_shield_09",
+    "iLvl": 1,
+    "reqLevel": 1,
+    "quality": "q1",
+    "stats": "10 Armor, +1 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
   "14394": {
     "id": 14394,
     "name": "Durability Bow",
@@ -14734,6 +18723,314 @@
       "1 - 3 Damage\tSpeed 1.80",
       "(1.11 damage per second)"
     ]
+  },
+  "14607": {
+    "id": 14607,
+    "name": "Hawkeye's Buckler",
+    "icon": "inv_shield_10",
+    "iLvl": 37,
+    "reqLevel": 32,
+    "quality": "q2",
+    "stats": "695 Armor, +15 Block, +5 Strength, +6 Intellect",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "14608": {
+    "id": 14608,
+    "name": "Dokebi Buckler",
+    "icon": "inv_shield_09",
+    "iLvl": 31,
+    "reqLevel": 26,
+    "quality": "q2",
+    "stats": "595 Armor, +12 Block, +3 Stamina, +5 Intellect",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "14729": {
+    "id": 14729,
+    "name": "War Paint Shield",
+    "icon": "inv_shield_18",
+    "iLvl": 20,
+    "reqLevel": 15,
+    "quality": "q2",
+    "stats": "411 Armor, +7 Block, +2 Strength, +2 Spirit",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "14777": {
+    "id": 14777,
+    "name": "Ravager's Shield",
+    "icon": "inv_shield_02",
+    "iLvl": 44,
+    "reqLevel": 39,
+    "quality": "q2",
+    "stats": "1380 Armor, +20 Block, +3 Strength, +7 Intellect, +6 Spirit",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "14780": {
+    "id": 14780,
+    "name": "Khan's Buckler",
+    "icon": "inv_shield_05",
+    "iLvl": 49,
+    "reqLevel": 44,
+    "quality": "q2",
+    "stats": "1521 Armor, +23 Block, +3 Agility, +5 Stamina, +9 Intellect",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "14790": {
+    "id": 14790,
+    "name": "Protector Buckler",
+    "icon": "inv_shield_02",
+    "iLvl": 54,
+    "reqLevel": 49,
+    "quality": "q2",
+    "stats": "1663 Armor, +28 Block, +3 Agility, +10 Intellect, +5 Spirit",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "14800": {
+    "id": 14800,
+    "name": "Bloodlust Buckler",
+    "icon": "inv_shield_09",
+    "iLvl": 59,
+    "reqLevel": 54,
+    "quality": "q2",
+    "stats": "1805 Armor, +33 Block, +7 Intellect, +11 Spirit",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "14812": {
+    "id": 14812,
+    "name": "Warstrike Buckler",
+    "icon": "inv_shield_20",
+    "iLvl": 64,
+    "reqLevel": 59,
+    "quality": "q2",
+    "stats": "1946 Armor, +37 Block, +3 Stamina, +15 Spirit",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "14825": {
+    "id": 14825,
+    "name": "Symbolic Crest",
+    "icon": "inv_shield_15",
+    "iLvl": 43,
+    "reqLevel": 38,
+    "quality": "q2",
+    "stats": "1257 Armor, +19 Block, +4 Strength, +7 Stamina, +4 Spirit",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "14842": {
+    "id": 14842,
+    "name": "Tyrant's Shield",
+    "icon": "inv_shield_17",
+    "iLvl": 48,
+    "reqLevel": 43,
+    "quality": "q2",
+    "stats": "1493 Armor, +23 Block, +9 Strength, +5 Stamina",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "14852": {
+    "id": 14852,
+    "name": "Sunscale Shield",
+    "icon": "inv_shield_02",
+    "iLvl": 54,
+    "reqLevel": 49,
+    "quality": "q2",
+    "stats": "1663 Armor, +28 Block, +5 Strength, +10 Stamina, +3 Spirit",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "14902": {
+    "id": 14902,
+    "name": "Saltstone Shield",
+    "icon": "inv_shield_12",
+    "iLvl": 41,
+    "reqLevel": 36,
+    "quality": "q2",
+    "stats": "1051 Armor, +17 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "14912": {
+    "id": 14912,
+    "name": "Brutish Shield",
+    "icon": "inv_shield_02",
+    "iLvl": 50,
+    "reqLevel": 45,
+    "quality": "q2",
+    "stats": "1550 Armor, +24 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "14916": {
+    "id": 14916,
+    "name": "Jade Deflector",
+    "icon": "inv_shield_21",
+    "iLvl": 53,
+    "reqLevel": 48,
+    "quality": "q2",
+    "stats": "1635 Armor, +27 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "14930": {
+    "id": 14930,
+    "name": "Lofty Shield",
+    "icon": "inv_shield_17",
+    "iLvl": 57,
+    "reqLevel": 52,
+    "quality": "q2",
+    "stats": "1748 Armor, +31 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "14947": {
+    "id": 14947,
+    "name": "Warbringer's Shield",
+    "icon": "inv_shield_19",
+    "iLvl": 46,
+    "reqLevel": 41,
+    "quality": "q2",
+    "stats": "1436 Armor, +21 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "14954": {
+    "id": 14954,
+    "name": "Bloodforged Shield",
+    "icon": "inv_shield_05",
+    "iLvl": 51,
+    "reqLevel": 46,
+    "quality": "q2",
+    "stats": "1578 Armor, +25 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "14964": {
+    "id": 14964,
+    "name": "High Chief's Shield",
+    "icon": "inv_shield_20",
+    "iLvl": 56,
+    "reqLevel": 51,
+    "quality": "q2",
+    "stats": "1720 Armor, +30 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "14973": {
+    "id": 14973,
+    "name": "Glorious Shield",
+    "icon": "inv_shield_15",
+    "iLvl": 60,
+    "reqLevel": 55,
+    "quality": "q2",
+    "stats": "1833 Armor, +34 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "14982": {
+    "id": 14982,
+    "name": "Exalted Shield",
+    "icon": "inv_shield_02",
+    "iLvl": 65,
+    "reqLevel": 60,
+    "quality": "q2",
+    "stats": "1975 Armor, +38 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "15006": {
+    "id": 15006,
+    "name": "Primal Buckler",
+    "icon": "inv_shield_09",
+    "iLvl": 9,
+    "reqLevel": 4,
+    "quality": "q1",
+    "stats": "135 Armor, +3 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "15014": {
+    "id": 15014,
+    "name": "Lupine Buckler",
+    "icon": "inv_shield_09",
+    "iLvl": 17,
+    "reqLevel": 12,
+    "quality": "q2",
+    "stats": "361 Armor, +6 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
   },
   "15105": {
     "id": 15105,
@@ -14783,6 +19080,50 @@
       }
     ]
   },
+  "15107": {
+    "id": 15107,
+    "name": "Orb of Noh'Orahil",
+    "icon": "inv_misc_orb_03",
+    "iLvl": 40,
+    "reqLevel": 35,
+    "quality": "q3",
+    "stats": "+5 Intellect",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": -61,
+        "c2": 4,
+        "n": "The Completed Orb of Noh'Orahil",
+        "t": 5,
+        "ti": 4975
+      }
+    ]
+  },
+  "15108": {
+    "id": 15108,
+    "name": "Orb of Dar'Orahil",
+    "icon": "inv_misc_orb_03",
+    "iLvl": 40,
+    "reqLevel": 35,
+    "quality": "q3",
+    "stats": "+5 Intellect",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": -61,
+        "c2": 4,
+        "n": "The Completed Orb of Dar'Orahil",
+        "t": 5,
+        "ti": 4964
+      }
+    ]
+  },
   "15109": {
     "id": 15109,
     "name": "Staff of Soran'ruk",
@@ -14811,6 +19152,62 @@
       "Equip: Increases damage done by Fire spells and effects by up to 34.",
       "Equip: Increases damage done by Shadow spells and effects by up to 34."
     ]
+  },
+  "15113": {
+    "id": 15113,
+    "name": "Rigid Buckler",
+    "icon": "inv_shield_09",
+    "iLvl": 23,
+    "reqLevel": 18,
+    "quality": "q2",
+    "stats": "461 Armor, +8 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "15123": {
+    "id": 15123,
+    "name": "Robust Buckler",
+    "icon": "inv_shield_10",
+    "iLvl": 28,
+    "reqLevel": 23,
+    "quality": "q2",
+    "stats": "545 Armor, +10 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "15133": {
+    "id": 15133,
+    "name": "Cutthroat's Buckler",
+    "icon": "inv_shield_09",
+    "iLvl": 33,
+    "reqLevel": 28,
+    "quality": "q2",
+    "stats": "628 Armor, +13 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "15145": {
+    "id": 15145,
+    "name": "Ghostwalker Buckler",
+    "icon": "inv_shield_10",
+    "iLvl": 36,
+    "reqLevel": 31,
+    "quality": "q2",
+    "stats": "678 Armor, +14 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
   },
   "15204": {
     "id": 15204,
@@ -14849,6 +19246,50 @@
     "inventorySlot": "Ranged",
     "subclass": 3,
     "subclassName": "Weapon",
+    "side": "alliance",
+    "sourcemore": [
+      {
+        "c": 148,
+        "c2": 1,
+        "n": "The Sleeper Has Awakened",
+        "t": 5,
+        "ti": 5321
+      }
+    ]
+  },
+  "15206": {
+    "id": 15206,
+    "name": "Jadefinger Baton",
+    "icon": "inv_wand_04",
+    "iLvl": 20,
+    "reqLevel": 17,
+    "quality": "q2",
+    "stats": "+2 Stamina, +2 Spirit",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "alliance",
+    "sourcemore": [
+      {
+        "c": 148,
+        "c2": 1,
+        "n": "The Sleeper Has Awakened",
+        "t": 5,
+        "ti": 5321
+      }
+    ]
+  },
+  "15207": {
+    "id": 15207,
+    "name": "Steelcap Shield",
+    "icon": "inv_shield_11",
+    "iLvl": 20,
+    "reqLevel": 17,
+    "quality": "q2",
+    "stats": "411 Armor, +7 Block, +2 Strength, +2 Stamina",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
     "side": "alliance",
     "sourcemore": [
       {
@@ -15062,6 +19503,34 @@
       "Requires Level 58"
     ]
   },
+  "15298": {
+    "id": 15298,
+    "name": "Grizzly Buckler",
+    "icon": "inv_shield_10",
+    "iLvl": 13,
+    "reqLevel": 8,
+    "quality": "q2",
+    "stats": "274 Armor, +5 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "15307": {
+    "id": 15307,
+    "name": "Feral Buckler",
+    "icon": "inv_shield_09",
+    "iLvl": 19,
+    "reqLevel": 14,
+    "quality": "q2",
+    "stats": "395 Armor, +7 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
   "15322": {
     "id": 15322,
     "name": "Smoothbore Gun",
@@ -15176,6 +19645,20 @@
     "side": "both",
     "sourcemore": null
   },
+  "15332": {
+    "id": 15332,
+    "name": "Wrangler's Buckler",
+    "icon": "inv_shield_02",
+    "iLvl": 27,
+    "reqLevel": 22,
+    "quality": "q2",
+    "stats": "528 Armor, +10 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
   "15335": {
     "id": 15335,
     "name": "Briarsteel Shortsword",
@@ -15199,6 +19682,48 @@
         "ti": 4813
       }
     ]
+  },
+  "15342": {
+    "id": 15342,
+    "name": "Pathfinder Guard",
+    "icon": "inv_shield_21",
+    "iLvl": 30,
+    "reqLevel": 25,
+    "quality": "q2",
+    "stats": "578 Armor, +11 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "15352": {
+    "id": 15352,
+    "name": "Headhunter's Buckler",
+    "icon": "inv_shield_21",
+    "iLvl": 34,
+    "reqLevel": 29,
+    "quality": "q2",
+    "stats": "645 Armor, +13 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "15367": {
+    "id": 15367,
+    "name": "Trickster's Protector",
+    "icon": "inv_shield_16",
+    "iLvl": 39,
+    "reqLevel": 34,
+    "quality": "q2",
+    "stats": "728 Armor, +16 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
   },
   "15396": {
     "id": 15396,
@@ -15409,6 +19934,336 @@
       }
     ]
   },
+  "15466": {
+    "id": 15466,
+    "name": "Clink Shield",
+    "icon": "inv_shield_21",
+    "iLvl": 28,
+    "reqLevel": 24,
+    "quality": "q2",
+    "stats": "545 Armor, +10 Block, +3 Strength, +2 Agility, +4 Stamina",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "horde",
+    "sourcemore": [
+      {
+        "c": 400,
+        "c2": 1,
+        "n": "Arikara",
+        "t": 5,
+        "ti": 5088
+      }
+    ]
+  },
+  "15478": {
+    "id": 15478,
+    "name": "Charger's Shield",
+    "icon": "inv_shield_09",
+    "iLvl": 8,
+    "reqLevel": 3,
+    "quality": "q1",
+    "stats": "112 Armor, +2 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "15486": {
+    "id": 15486,
+    "name": "War Torn Shield",
+    "icon": "inv_shield_08",
+    "iLvl": 12,
+    "reqLevel": 7,
+    "quality": "q2",
+    "stats": "239 Armor, +4 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "15494": {
+    "id": 15494,
+    "name": "Bloodspattered Shield",
+    "icon": "inv_shield_14",
+    "iLvl": 18,
+    "reqLevel": 13,
+    "quality": "q2",
+    "stats": "378 Armor, +6 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "15504": {
+    "id": 15504,
+    "name": "Outrunner's Shield",
+    "icon": "inv_shield_10",
+    "iLvl": 22,
+    "reqLevel": 17,
+    "quality": "q2",
+    "stats": "445 Armor, +8 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "15512": {
+    "id": 15512,
+    "name": "Grunt's Shield",
+    "icon": "inv_shield_11",
+    "iLvl": 24,
+    "reqLevel": 19,
+    "quality": "q2",
+    "stats": "478 Armor, +9 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "15522": {
+    "id": 15522,
+    "name": "Spiked Chain Shield",
+    "icon": "inv_shield_07",
+    "iLvl": 29,
+    "reqLevel": 24,
+    "quality": "q2",
+    "stats": "561 Armor, +11 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "15530": {
+    "id": 15530,
+    "name": "Sentry's Shield",
+    "icon": "inv_shield_09",
+    "iLvl": 31,
+    "reqLevel": 26,
+    "quality": "q2",
+    "stats": "595 Armor, +12 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "15543": {
+    "id": 15543,
+    "name": "Wicked Chain Shield",
+    "icon": "inv_shield_09",
+    "iLvl": 34,
+    "reqLevel": 29,
+    "quality": "q2",
+    "stats": "645 Armor, +13 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "15552": {
+    "id": 15552,
+    "name": "Thick Scale Shield",
+    "icon": "inv_shield_07",
+    "iLvl": 36,
+    "reqLevel": 31,
+    "quality": "q2",
+    "stats": "678 Armor, +14 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "15563": {
+    "id": 15563,
+    "name": "Pillager's Shield",
+    "icon": "inv_shield_07",
+    "iLvl": 37,
+    "reqLevel": 32,
+    "quality": "q2",
+    "stats": "695 Armor, +15 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "15569": {
+    "id": 15569,
+    "name": "Marauder's Crest",
+    "icon": "inv_shield_06",
+    "iLvl": 40,
+    "reqLevel": 35,
+    "quality": "q2",
+    "stats": "963 Armor, +17 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "15584": {
+    "id": 15584,
+    "name": "Sparkleshell Shield",
+    "icon": "inv_shield_05",
+    "iLvl": 41,
+    "reqLevel": 36,
+    "quality": "q2",
+    "stats": "1051 Armor, +17 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "15592": {
+    "id": 15592,
+    "name": "Steadfast Buckler",
+    "icon": "inv_shield_11",
+    "iLvl": 43,
+    "reqLevel": 38,
+    "quality": "q2",
+    "stats": "1257 Armor, +19 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "15604": {
+    "id": 15604,
+    "name": "Ancient Defender",
+    "icon": "inv_shield_03",
+    "iLvl": 46,
+    "reqLevel": 41,
+    "quality": "q2",
+    "stats": "1436 Armor, +21 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "15618": {
+    "id": 15618,
+    "name": "Bonelink Wall Shield",
+    "icon": "inv_shield_03",
+    "iLvl": 47,
+    "reqLevel": 42,
+    "quality": "q2",
+    "stats": "1465 Armor, +22 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "15621": {
+    "id": 15621,
+    "name": "Gryphon Mail Buckler",
+    "icon": "inv_shield_02",
+    "iLvl": 51,
+    "reqLevel": 46,
+    "quality": "q2",
+    "stats": "1578 Armor, +25 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "15633": {
+    "id": 15633,
+    "name": "Formidable Crest",
+    "icon": "inv_shield_04",
+    "iLvl": 52,
+    "reqLevel": 47,
+    "quality": "q2",
+    "stats": "1606 Armor, +26 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "15648": {
+    "id": 15648,
+    "name": "Ironhide Shield",
+    "icon": "inv_shield_19",
+    "iLvl": 56,
+    "reqLevel": 51,
+    "quality": "q2",
+    "stats": "1720 Armor, +30 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "15657": {
+    "id": 15657,
+    "name": "Merciless Shield",
+    "icon": "inv_shield_02",
+    "iLvl": 57,
+    "reqLevel": 52,
+    "quality": "q2",
+    "stats": "1748 Armor, +31 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "15667": {
+    "id": 15667,
+    "name": "Impenetrable Wall",
+    "icon": "inv_shield_03",
+    "iLvl": 61,
+    "reqLevel": 56,
+    "quality": "q2",
+    "stats": "1861 Armor, +35 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "15675": {
+    "id": 15675,
+    "name": "Magnificent Guard",
+    "icon": "inv_shield_05",
+    "iLvl": 62,
+    "reqLevel": 57,
+    "quality": "q2",
+    "stats": "1890 Armor, +36 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "15687": {
+    "id": 15687,
+    "name": "Triumphant Shield",
+    "icon": "inv_shield_02",
+    "iLvl": 65,
+    "reqLevel": 60,
+    "quality": "q2",
+    "stats": "1975 Armor, +38 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
   "15691": {
     "id": 15691,
     "name": "Sidegunner Shottie",
@@ -15446,6 +20301,28 @@
     "inventorySlot": "Ranged",
     "subclass": 19,
     "subclassName": "Wand",
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": 405,
+        "c2": 1,
+        "n": "Gizelton Caravan",
+        "t": 5,
+        "ti": 5943
+      }
+    ]
+  },
+  "15695": {
+    "id": 15695,
+    "name": "Studded Ring Shield",
+    "icon": "inv_shield_07",
+    "iLvl": 38,
+    "reqLevel": 32,
+    "quality": "q2",
+    "stats": "711 Armor, +15 Block, +6 Strength, +4 Stamina",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
     "side": "both",
     "sourcemore": [
       {
@@ -15671,6 +20548,28 @@
       }
     ]
   },
+  "15857": {
+    "id": 15857,
+    "name": "Magebane Scion",
+    "icon": "inv_staff_11",
+    "iLvl": 60,
+    "reqLevel": 50,
+    "quality": "q3",
+    "stats": "+10 Arcane Resistance, +10 Fire Resistance, +10 Frost Resistance",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": 139,
+        "c2": 0,
+        "n": "Hidden Treasures",
+        "t": 5,
+        "ti": 5942
+      }
+    ]
+  },
   "15863": {
     "id": 15863,
     "name": "Grave Scepter",
@@ -15695,6 +20594,28 @@
       }
     ]
   },
+  "15865": {
+    "id": 15865,
+    "name": "Anchorhold Buckler",
+    "icon": "inv_shield_10",
+    "iLvl": 39,
+    "reqLevel": 34,
+    "quality": "q2",
+    "stats": "728 Armor, +16 Block, +6 Intellect, +5 Spell Power",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": 405,
+        "c2": 1,
+        "n": "Ghost-o-plasm Round Up",
+        "t": 5,
+        "ti": 6134
+      }
+    ]
+  },
   "15866": {
     "id": 15866,
     "name": "Veildust Medicine Bag",
@@ -15708,6 +20629,104 @@
     "inventorySlot": "Held In Off-hand",
     "subclass": -5,
     "subclassName": "Weapon",
+    "side": "both",
+    "sourcemore": null
+  },
+  "15887": {
+    "id": 15887,
+    "name": "Heroic Guard",
+    "icon": "inv_shield_04",
+    "iLvl": 62,
+    "reqLevel": 57,
+    "quality": "q2",
+    "stats": "1890 Armor, +36 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "15890": {
+    "id": 15890,
+    "name": "Vanguard Shield",
+    "icon": "inv_shield_10",
+    "iLvl": 59,
+    "reqLevel": 54,
+    "quality": "q2",
+    "stats": "1805 Armor, +33 Block, +12 Stamina, +5 Spirit",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "15891": {
+    "id": 15891,
+    "name": "Hulking Shield",
+    "icon": "inv_shield_19",
+    "iLvl": 26,
+    "reqLevel": 21,
+    "quality": "q2",
+    "stats": "511 Armor, +9 Block, +5 Stamina",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "15892": {
+    "id": 15892,
+    "name": "Slayer's Shield",
+    "icon": "inv_shield_15",
+    "iLvl": 32,
+    "reqLevel": 27,
+    "quality": "q2",
+    "stats": "611 Armor, +12 Block, +6 Strength, +3 Agility",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "15893": {
+    "id": 15893,
+    "name": "Prospector's Buckler",
+    "icon": "inv_shield_09",
+    "iLvl": 21,
+    "reqLevel": 16,
+    "quality": "q2",
+    "stats": "428 Armor, +7 Block, +1 Stamina, +3 Intellect",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "15894": {
+    "id": 15894,
+    "name": "Bristlebark Buckler",
+    "icon": "inv_shield_09",
+    "iLvl": 25,
+    "reqLevel": 20,
+    "quality": "q2",
+    "stats": "495 Armor, +9 Block, +2 Agility, +4 Intellect",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "15895": {
+    "id": 15895,
+    "name": "Burnt Buckler",
+    "icon": "inv_shield_09",
+    "iLvl": 8,
+    "reqLevel": 3,
+    "quality": "q1",
+    "stats": "112 Armor, +2 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
     "side": "both",
     "sourcemore": null
   },
@@ -15775,25 +20794,145 @@
     "side": "both",
     "sourcemore": null
   },
+  "15912": {
+    "id": 15912,
+    "name": "Buccaneer's Orb",
+    "icon": "inv_wand_05",
+    "iLvl": 23,
+    "reqLevel": 18,
+    "quality": "q2",
+    "stats": "",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
+  "15918": {
+    "id": 15918,
+    "name": "Conjurer's Sphere",
+    "icon": "inv_misc_orb_04",
+    "iLvl": 38,
+    "reqLevel": 33,
+    "quality": "q2",
+    "stats": "",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
+  "15925": {
+    "id": 15925,
+    "name": "Journeyman's Stave",
+    "icon": "inv_staff_20",
+    "iLvl": 10,
+    "reqLevel": 5,
+    "quality": "q2",
+    "stats": "+1 Stamina",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
+  "15926": {
+    "id": 15926,
+    "name": "Spellbinder Orb",
+    "icon": "inv_misc_orb_01",
+    "iLvl": 17,
+    "reqLevel": 12,
+    "quality": "q2",
+    "stats": "+3 Intellect",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
+  "15927": {
+    "id": 15927,
+    "name": "Bright Sphere",
+    "icon": "inv_misc_gem_pearl_04",
+    "iLvl": 27,
+    "reqLevel": 22,
+    "quality": "q2",
+    "stats": "+4 Intellect, +2 Spirit",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
+  "15928": {
+    "id": 15928,
+    "name": "Silver-thread Rod",
+    "icon": "inv_wand_07",
+    "iLvl": 31,
+    "reqLevel": 26,
+    "quality": "q2",
+    "stats": "+3 Stamina, +5 Spirit",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
+  "15929": {
+    "id": 15929,
+    "name": "Nightsky Orb",
+    "icon": "inv_misc_orb_04",
+    "iLvl": 37,
+    "reqLevel": 32,
+    "quality": "q2",
+    "stats": "+2 Stamina, +6 Intellect, +3 Spirit",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
+  "15930": {
+    "id": 15930,
+    "name": "Imperial Red Scepter",
+    "icon": "inv_wand_06",
+    "iLvl": 56,
+    "reqLevel": 51,
+    "quality": "q2",
+    "stats": "+2 Agility, +4 Stamina, +12 Intellect",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
+  "15931": {
+    "id": 15931,
+    "name": "Arcane Star",
+    "icon": "inv_staff_03",
+    "iLvl": 61,
+    "reqLevel": 56,
+    "quality": "q2",
+    "stats": "+5 Stamina, +10 Intellect, +8 Spirit",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
   "15932": {
     "id": 15932,
     "name": "Disciple's Stein",
     "icon": "inv_drink_03",
     "iLvl": 12,
-    "quality": "q2",
     "reqLevel": 7,
-    "speed": null,
-    "dps": null,
-    "weaponType": "Held In Off-hand",
-    "inventorySlot": "Held In Off-hand",
+    "quality": "q2",
     "stats": "",
-    "equips": [],
-    "baseStats": [],
-    "lines": [
-      "Binds when equipped",
-      "Held In Off-hand",
-      "Requires Level 7"
-    ]
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
   },
   "15933": {
     "id": 15933,
@@ -15802,12 +20941,24 @@
     "iLvl": 15,
     "reqLevel": 10,
     "quality": "q2",
-    "speed": null,
-    "dps": null,
     "stats": "",
     "inventorySlot": "Held In Off-hand",
-    "subclass": -5,
-    "subclassName": "Weapon",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
+  "15934": {
+    "id": 15934,
+    "name": "Sage's Stave",
+    "icon": "inv_staff_17",
+    "iLvl": 32,
+    "reqLevel": 27,
+    "quality": "q2",
+    "stats": "",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
     "side": "both",
     "sourcemore": null
   },
@@ -15818,12 +20969,10 @@
     "iLvl": 34,
     "reqLevel": 29,
     "quality": "q2",
-    "speed": null,
-    "dps": null,
     "stats": "",
     "inventorySlot": "Held In Off-hand",
-    "subclass": -5,
-    "subclassName": "Weapon",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
     "side": "both",
     "sourcemore": null
   },
@@ -15834,12 +20983,276 @@
     "iLvl": 55,
     "reqLevel": 50,
     "quality": "q2",
-    "speed": null,
-    "dps": null,
     "stats": "",
     "inventorySlot": "Held In Off-hand",
-    "subclass": -5,
-    "subclassName": "Weapon",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
+  "15937": {
+    "id": 15937,
+    "name": "Hibernal Sphere",
+    "icon": "inv_misc_orb_01",
+    "iLvl": 51,
+    "reqLevel": 46,
+    "quality": "q2",
+    "stats": "+12 Spirit",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
+  "15938": {
+    "id": 15938,
+    "name": "Mystical Orb",
+    "icon": "inv_misc_orb_02",
+    "iLvl": 58,
+    "reqLevel": 53,
+    "quality": "q2",
+    "stats": "",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
+  "15939": {
+    "id": 15939,
+    "name": "Councillor's Scepter",
+    "icon": "inv_wand_04",
+    "iLvl": 59,
+    "reqLevel": 54,
+    "quality": "q2",
+    "stats": "",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
+  "15940": {
+    "id": 15940,
+    "name": "Elegant Scepter",
+    "icon": "inv_wand_11",
+    "iLvl": 62,
+    "reqLevel": 57,
+    "quality": "q2",
+    "stats": "",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
+  "15941": {
+    "id": 15941,
+    "name": "High Councillor's Scepter",
+    "icon": "inv_wand_05",
+    "iLvl": 64,
+    "reqLevel": 59,
+    "quality": "q2",
+    "stats": "",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
+  "15942": {
+    "id": 15942,
+    "name": "Master's Rod",
+    "icon": "inv_staff_07",
+    "iLvl": 65,
+    "reqLevel": 60,
+    "quality": "q2",
+    "stats": "",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
+  "15943": {
+    "id": 15943,
+    "name": "Imbued Shield",
+    "icon": "inv_shield_10",
+    "iLvl": 61,
+    "reqLevel": 56,
+    "quality": "q2",
+    "stats": "1861 Armor, +35 Block, +3 Strength, +14 Stamina",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "15944": {
+    "id": 15944,
+    "name": "Ancestral Orb",
+    "icon": "inv_misc_orb_03",
+    "iLvl": 12,
+    "reqLevel": 7,
+    "quality": "q2",
+    "stats": "+1 Intellect",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
+  "15945": {
+    "id": 15945,
+    "name": "Runic Stave",
+    "icon": "inv_staff_16",
+    "iLvl": 18,
+    "reqLevel": 13,
+    "quality": "q2",
+    "stats": "+2 Stamina, +2 Spirit",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
+  "15946": {
+    "id": 15946,
+    "name": "Mystic's Sphere",
+    "icon": "inv_misc_gem_pearl_02",
+    "iLvl": 23,
+    "reqLevel": 18,
+    "quality": "q2",
+    "stats": "+2 Stamina, +3 Spirit",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
+  "15947": {
+    "id": 15947,
+    "name": "Sanguine Star",
+    "icon": "inv_staff_23",
+    "iLvl": 28,
+    "reqLevel": 23,
+    "quality": "q2",
+    "stats": "+4 Stamina, +4 Spirit",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
+  "15962": {
+    "id": 15962,
+    "name": "Satyr's Rod",
+    "icon": "inv_staff_08",
+    "iLvl": 33,
+    "reqLevel": 28,
+    "quality": "q2",
+    "stats": "+1 Agility, +6 Intellect, +2 Spirit",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
+  "15963": {
+    "id": 15963,
+    "name": "Stonecloth Branch",
+    "icon": "inv_staff_20",
+    "iLvl": 39,
+    "reqLevel": 34,
+    "quality": "q2",
+    "stats": "+3 Strength, +8 Stamina",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
+  "15964": {
+    "id": 15964,
+    "name": "Silksand Star",
+    "icon": "inv_misc_orb_02",
+    "iLvl": 44,
+    "reqLevel": 39,
+    "quality": "q2",
+    "stats": "+2 Stamina, +9 Spirit",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
+  "15965": {
+    "id": 15965,
+    "name": "Windchaser Orb",
+    "icon": "inv_staff_03",
+    "iLvl": 49,
+    "reqLevel": 44,
+    "quality": "q2",
+    "stats": "+1 Agility, +2 Stamina, +11 Spirit",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
+  "15966": {
+    "id": 15966,
+    "name": "Venomshroud Orb",
+    "icon": "inv_misc_gem_pearl_06",
+    "iLvl": 54,
+    "reqLevel": 49,
+    "quality": "q2",
+    "stats": "+5 Stamina, +10 Spirit, +3 Nature Resistance",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
+  "15967": {
+    "id": 15967,
+    "name": "Highborne Star",
+    "icon": "inv_wand_02",
+    "iLvl": 59,
+    "reqLevel": 54,
+    "quality": "q2",
+    "stats": "+3 Agility, +6 Stamina, +11 Intellect",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
+  "15968": {
+    "id": 15968,
+    "name": "Elunarian Sphere",
+    "icon": "inv_misc_orb_05",
+    "iLvl": 64,
+    "reqLevel": 59,
+    "quality": "q2",
+    "stats": "+2 Agility, +3 Stamina, +14 Intellect",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
+  "15969": {
+    "id": 15969,
+    "name": "Beaded Orb",
+    "icon": "inv_misc_orb_05",
+    "iLvl": 10,
+    "reqLevel": 5,
+    "quality": "q2",
+    "stats": "",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
     "side": "both",
     "sourcemore": null
   },
@@ -15850,12 +21263,24 @@
     "iLvl": 15,
     "reqLevel": 10,
     "quality": "q2",
-    "speed": null,
-    "dps": null,
     "stats": "",
     "inventorySlot": "Held In Off-hand",
-    "subclass": -5,
-    "subclassName": "Weapon",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
+  "15971": {
+    "id": 15971,
+    "name": "Aboriginal Rod",
+    "icon": "inv_staff_goldfeathered_01",
+    "iLvl": 20,
+    "reqLevel": 15,
+    "quality": "q2",
+    "stats": "",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
     "side": "both",
     "sourcemore": null
   },
@@ -15866,12 +21291,24 @@
     "iLvl": 24,
     "reqLevel": 19,
     "quality": "q2",
-    "speed": null,
-    "dps": null,
     "stats": "",
     "inventorySlot": "Held In Off-hand",
-    "subclass": -5,
-    "subclassName": "Weapon",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
+  "15973": {
+    "id": 15973,
+    "name": "Watcher's Star",
+    "icon": "inv_wand_02",
+    "iLvl": 30,
+    "reqLevel": 25,
+    "quality": "q2",
+    "stats": "",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
     "side": "both",
     "sourcemore": null
   },
@@ -15880,20 +21317,28 @@
     "name": "Pagan Rod",
     "icon": "inv_staff_07",
     "iLvl": 26,
-    "quality": "q2",
     "reqLevel": 21,
-    "speed": null,
-    "dps": null,
-    "weaponType": "Held In Off-hand",
-    "inventorySlot": "Held In Off-hand",
+    "quality": "q2",
     "stats": "",
-    "equips": [],
-    "baseStats": [],
-    "lines": [
-      "Binds when equipped",
-      "Held In Off-hand",
-      "Requires Level 21"
-    ]
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
+  "15975": {
+    "id": 15975,
+    "name": "Raincaller Scepter",
+    "icon": "inv_wand_05",
+    "iLvl": 31,
+    "reqLevel": 26,
+    "quality": "q2",
+    "stats": "",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
   },
   "15976": {
     "id": 15976,
@@ -15902,12 +21347,122 @@
     "iLvl": 36,
     "reqLevel": 31,
     "quality": "q2",
-    "speed": null,
-    "dps": null,
     "stats": "",
     "inventorySlot": "Held In Off-hand",
-    "subclass": -5,
-    "subclassName": "Weapon",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
+  "15977": {
+    "id": 15977,
+    "name": "Vital Orb",
+    "icon": "inv_misc_orb_01",
+    "iLvl": 37,
+    "reqLevel": 32,
+    "quality": "q2",
+    "stats": "",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
+  "15978": {
+    "id": 15978,
+    "name": "Geomancer's Rod",
+    "icon": "inv_staff_32",
+    "iLvl": 41,
+    "reqLevel": 36,
+    "quality": "q2",
+    "stats": "",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
+  "15979": {
+    "id": 15979,
+    "name": "Embersilk Stave",
+    "icon": "inv_staff_28",
+    "iLvl": 42,
+    "reqLevel": 37,
+    "quality": "q2",
+    "stats": "",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
+  "15980": {
+    "id": 15980,
+    "name": "Darkmist Orb",
+    "icon": "inv_misc_orb_05",
+    "iLvl": 46,
+    "reqLevel": 41,
+    "quality": "q2",
+    "stats": "",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
+  "15981": {
+    "id": 15981,
+    "name": "Lunar Sphere",
+    "icon": "inv_misc_gem_pearl_03",
+    "iLvl": 47,
+    "reqLevel": 42,
+    "quality": "q2",
+    "stats": "",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
+  "15982": {
+    "id": 15982,
+    "name": "Bloodwoven Rod",
+    "icon": "inv_staff_13",
+    "iLvl": 51,
+    "reqLevel": 46,
+    "quality": "q2",
+    "stats": "",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
+  "15983": {
+    "id": 15983,
+    "name": "Gaea's Scepter",
+    "icon": "inv_wand_04",
+    "iLvl": 52,
+    "reqLevel": 47,
+    "quality": "q2",
+    "stats": "",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
+  "15984": {
+    "id": 15984,
+    "name": "Opulent Scepter",
+    "icon": "inv_staff_07",
+    "iLvl": 56,
+    "reqLevel": 51,
+    "quality": "q2",
+    "stats": "",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
     "side": "both",
     "sourcemore": null
   },
@@ -15918,12 +21473,94 @@
     "iLvl": 57,
     "reqLevel": 52,
     "quality": "q2",
-    "speed": null,
-    "dps": null,
     "stats": "",
     "inventorySlot": "Held In Off-hand",
-    "subclass": -5,
-    "subclassName": "Weapon",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
+  "15986": {
+    "id": 15986,
+    "name": "Bonecaster's Star",
+    "icon": "inv_staff_23",
+    "iLvl": 60,
+    "reqLevel": 55,
+    "quality": "q2",
+    "stats": "",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
+  "15987": {
+    "id": 15987,
+    "name": "Astral Orb",
+    "icon": "inv_misc_orb_01",
+    "iLvl": 61,
+    "reqLevel": 56,
+    "quality": "q2",
+    "stats": "",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
+  "15988": {
+    "id": 15988,
+    "name": "Resplendent Orb",
+    "icon": "inv_misc_orb_03",
+    "iLvl": 63,
+    "reqLevel": 58,
+    "quality": "q2",
+    "stats": "",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
+  "15989": {
+    "id": 15989,
+    "name": "Eternal Rod",
+    "icon": "inv_staff_14",
+    "iLvl": 65,
+    "reqLevel": 60,
+    "quality": "q2",
+    "stats": "",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
+  "15990": {
+    "id": 15990,
+    "name": "Enduring Shield",
+    "icon": "inv_shield_05",
+    "iLvl": 39,
+    "reqLevel": 34,
+    "quality": "q2",
+    "stats": "728 Armor, +16 Block, +6 Strength, +3 Agility, +4 Stamina",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "15991": {
+    "id": 15991,
+    "name": "Warleader's Shield",
+    "icon": "inv_shield_07",
+    "iLvl": 63,
+    "reqLevel": 58,
+    "quality": "q2",
+    "stats": "1918 Armor, +36 Block, +4 Agility, +14 Stamina",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
     "side": "both",
     "sourcemore": null
   },
@@ -16045,6 +21682,28 @@
       }
     ]
   },
+  "16660": {
+    "id": 16660,
+    "name": "Driftmire Shield",
+    "icon": "inv_shield_16",
+    "iLvl": 27,
+    "reqLevel": 23,
+    "quality": "q2",
+    "stats": "528 Armor, +10 Block, +2 Strength, +3 Stamina, +3 Intellect",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "horde",
+    "sourcemore": [
+      {
+        "c": 331,
+        "c2": 1,
+        "n": "Je'neu of the Earthen Ring",
+        "t": 5,
+        "ti": 824
+      }
+    ]
+  },
   "16768": {
     "id": 16768,
     "name": "Furbolg Medicine Pouch",
@@ -16065,6 +21724,28 @@
         "t": 1,
         "ti": 11555,
         "z": 361
+      }
+    ]
+  },
+  "16788": {
+    "id": 16788,
+    "name": "Captain Rackmore's Wheel",
+    "icon": "inv_shield_10",
+    "iLvl": 36,
+    "reqLevel": 30,
+    "quality": "q2",
+    "stats": "678 Armor, +14 Block, +8 Stamina",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": 405,
+        "c2": 1,
+        "n": "Claim Rackmore's Treasure!",
+        "t": 5,
+        "ti": 6161
       }
     ]
   },
@@ -16240,12 +21921,10 @@
     "iLvl": 40,
     "reqLevel": 1,
     "quality": "q1",
-    "speed": null,
-    "dps": null,
     "stats": "",
     "inventorySlot": "Held In Off-hand",
-    "subclass": -5,
-    "subclassName": "Weapon",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
     "side": "both",
     "sourcemore": [
       {
@@ -16329,6 +22008,24 @@
       "+2 Strength",
       "+3 Agility",
       "+9 Stamina"
+    ]
+  },
+  "16998": {
+    "id": 16998,
+    "name": "Sacred Protector",
+    "icon": "inv_shield_06",
+    "iLvl": 62,
+    "reqLevel": 56,
+    "quality": "q3",
+    "stats": "2121 Armor, +39 Block, +15 Stamina, +10 Intellect",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "z": 139
+      }
     ]
   },
   "17003": {
@@ -16498,6 +22195,132 @@
     "side": "both",
     "sourcemore": null
   },
+  "17183": {
+    "id": 17183,
+    "name": "Dented Buckler",
+    "icon": "inv_shield_09",
+    "iLvl": 3,
+    "reqLevel": 1,
+    "quality": "q1",
+    "stats": "29 Armor, +1 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "17184": {
+    "id": 17184,
+    "name": "Small Shield",
+    "icon": "inv_shield_09",
+    "iLvl": 3,
+    "reqLevel": 1,
+    "quality": "q1",
+    "stats": "29 Armor, +1 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "17185": {
+    "id": 17185,
+    "name": "Round Buckler",
+    "icon": "inv_shield_09",
+    "iLvl": 8,
+    "reqLevel": 3,
+    "quality": "q1",
+    "stats": "112 Armor, +2 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "horde",
+    "sourcemore": null
+  },
+  "17186": {
+    "id": 17186,
+    "name": "Small Targe",
+    "icon": "inv_shield_09",
+    "iLvl": 8,
+    "reqLevel": 3,
+    "quality": "q1",
+    "stats": "112 Armor, +2 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "alliance",
+    "sourcemore": null
+  },
+  "17187": {
+    "id": 17187,
+    "name": "Banded Buckler",
+    "icon": "inv_shield_03",
+    "iLvl": 14,
+    "reqLevel": 9,
+    "quality": "q1",
+    "stats": "289 Armor, +4 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "17188": {
+    "id": 17188,
+    "name": "Ringed Buckler",
+    "icon": "inv_shield_10",
+    "iLvl": 19,
+    "reqLevel": 14,
+    "quality": "q1",
+    "stats": "367 Armor, +6 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "17189": {
+    "id": 17189,
+    "name": "Metal Buckler",
+    "icon": "inv_shield_10",
+    "iLvl": 34,
+    "reqLevel": 29,
+    "quality": "q1",
+    "stats": "599 Armor, +12 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "17190": {
+    "id": 17190,
+    "name": "Ornate Buckler",
+    "icon": "inv_shield_10",
+    "iLvl": 47,
+    "reqLevel": 42,
+    "quality": "q1",
+    "stats": "1377 Armor, +20 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "17192": {
+    "id": 17192,
+    "name": "Reinforced Targe",
+    "icon": "inv_shield_10",
+    "iLvl": 24,
+    "reqLevel": 19,
+    "quality": "q1",
+    "stats": "444 Armor, +8 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
   "17193": {
     "id": 17193,
     "name": "Sulfuron Hammer",
@@ -16520,6 +22343,28 @@
         "s": 164,
         "t": 6,
         "ti": 21161
+      }
+    ]
+  },
+  "17508": {
+    "id": 17508,
+    "name": "Forcestone Buckler",
+    "icon": "inv_shield_02",
+    "iLvl": 40,
+    "reqLevel": 28,
+    "quality": "q3",
+    "stats": "1078 Armor, +20 Block, +4 Stamina, +8 Spirit, +12 Healing, +6 Spell Power",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "horde",
+    "sourcemore": [
+      {
+        "c": 796,
+        "c2": 2,
+        "n": "Compendium of the Fallen",
+        "t": 5,
+        "ti": 1049
       }
     ]
   },
@@ -16912,6 +22757,29 @@
       "Equip: Chance on harmful spell cast to summon a Zombie Troll of Zum'rah for 20 sec. (1m cooldown)"
     ]
   },
+  "18168": {
+    "id": 18168,
+    "name": "Force Reactive Disk",
+    "icon": "spell_arcane_portaldarnassus",
+    "iLvl": 65,
+    "reqLevel": 60,
+    "quality": "q4",
+    "stats": "2468 Armor, +44 Block, +11 Stamina",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": 11,
+        "icon": "spell_arcane_portaldarnassus",
+        "n": "Force Reactive Disk",
+        "s": 202,
+        "t": 6,
+        "ti": 22797
+      }
+    ]
+  },
   "18282": {
     "id": 18282,
     "name": "Core Marksman Rifle",
@@ -17074,6 +22942,28 @@
     "subclassName": "Staff",
     "side": "both",
     "sourcemore": null
+  },
+  "18762": {
+    "id": 18762,
+    "name": "Shard of the Green Flame",
+    "icon": "inv_misc_shadowegg",
+    "iLvl": 54,
+    "reqLevel": 50,
+    "quality": "q3",
+    "stats": "+12 Stamina",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": -61,
+        "c2": 4,
+        "n": "Kroshius' Infernal Core",
+        "t": 5,
+        "ti": 7603
+      }
+    ]
   },
   "18825": {
     "id": 18825,
@@ -18030,6 +23920,28 @@
       }
     ]
   },
+  "19295": {
+    "id": 19295,
+    "name": "Darkmoon Flower",
+    "icon": "inv_misc_herb_19",
+    "iLvl": 20,
+    "reqLevel": 6,
+    "quality": "q1",
+    "stats": "",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": -364,
+        "c2": 9,
+        "n": "5 Tickets - Darkmoon Flower",
+        "t": 5,
+        "ti": 7930
+      }
+    ]
+  },
   "19308": {
     "id": 19308,
     "name": "Tome of Arcane Domination",
@@ -18085,12 +23997,10 @@
     "iLvl": 60,
     "reqLevel": 55,
     "quality": "q4",
-    "speed": null,
-    "dps": null,
     "stats": "",
     "inventorySlot": "Held In Off-hand",
-    "subclass": -5,
-    "subclassName": "Weapon",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
     "side": "both",
     "sourcemore": null
   },
@@ -18196,6 +24106,20 @@
     "inventorySlot": "One-Hand",
     "subclass": 15,
     "subclassName": "Dagger",
+    "side": "both",
+    "sourcemore": null
+  },
+  "19366": {
+    "id": 19366,
+    "name": "Master Dragonslayer's Orb",
+    "icon": "inv_misc_orb_03",
+    "iLvl": 83,
+    "reqLevel": 60,
+    "quality": "q4",
+    "stats": "+10 Stamina, +14 Intellect, +28 Spell Power",
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
     "side": "both",
     "sourcemore": null
   },
@@ -18958,6 +24882,28 @@
       }
     ]
   },
+  "21269": {
+    "id": 21269,
+    "name": "Blessed Qiraji Bulwark",
+    "icon": "inv_shield_23",
+    "iLvl": 79,
+    "reqLevel": 60,
+    "quality": "q4",
+    "stats": "2964 Armor, +70 Block, +20 Stamina, +8 Defense, Equip: Increases your chance to Block attacks with a shield by 3.0%.",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": 3428,
+        "c2": 3,
+        "n": "Imperial Qiraji Armaments",
+        "t": 5,
+        "ti": 8789
+      }
+    ]
+  },
   "21272": {
     "id": 21272,
     "name": "Blessed Qiraji Musket",
@@ -19344,6 +25290,28 @@
       }
     ]
   },
+  "21610": {
+    "id": 21610,
+    "name": "Wormscale Blocker",
+    "icon": "inv_shield_24",
+    "iLvl": 81,
+    "reqLevel": 60,
+    "quality": "q4",
+    "stats": "3035 Armor, +57 Block, +10 Stamina, +13 Intellect, +23 Healing, +12 Spell Power, +6 MP5",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "bd": 1,
+        "n": "Ouro",
+        "t": 1,
+        "ti": 15517,
+        "z": 3428
+      }
+    ]
+  },
   "21616": {
     "id": 21616,
     "name": "Huhuran's Stinger",
@@ -19441,6 +25409,29 @@
       }
     ]
   },
+  "22198": {
+    "id": 22198,
+    "name": "Jagged Obsidian Shield",
+    "icon": "inv_shield_22",
+    "iLvl": 70,
+    "reqLevel": 60,
+    "quality": "q4",
+    "stats": "2645 Armor, +48 Block, Equip: Increases your chance to Block attacks with a shield by 2.0%.",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": 11,
+        "icon": "inv_shield_22",
+        "n": "Jagged Obsidian Shield",
+        "s": 164,
+        "t": 6,
+        "ti": 27586
+      }
+    ]
+  },
   "22206": {
     "id": 22206,
     "name": "Bouquet of Red Roses",
@@ -19448,12 +25439,10 @@
     "iLvl": 1,
     "reqLevel": 1,
     "quality": "q2",
-    "speed": null,
-    "dps": null,
     "stats": "",
     "inventorySlot": "Held In Off-hand",
-    "subclass": -5,
-    "subclassName": "Weapon",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
     "side": "both",
     "sourcemore": null
   },
@@ -21028,6 +27017,26 @@
     ],
     "subclassName": "Gun"
   },
+  "234562": {
+    "id": 234562,
+    "name": "High Warlord's Shield Wall",
+    "icon": "inv_shield_19",
+    "iLvl": 80,
+    "reqLevel": 60,
+    "quality": "q4",
+    "stats": "3000 Armor, +56 Block, +10 Strength, +35 Stamina",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "n": "Sergeant Thunderhorn",
+        "t": 1,
+        "ti": 14581
+      }
+    ]
+  },
   "234563": {
     "id": 234563,
     "name": "High Warlord's Tome of Destruction",
@@ -21506,6 +27515,26 @@
     ],
     "subclassName": "Gun"
   },
+  "234588": {
+    "id": 234588,
+    "name": "Grand Marshal's Aegis",
+    "icon": "inv_shield_05",
+    "iLvl": 80,
+    "reqLevel": 60,
+    "quality": "q4",
+    "stats": "3000 Armor, +56 Block, +10 Strength, +35 Stamina",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "n": "Captain O'Neal",
+        "t": 1,
+        "ti": 12782
+      }
+    ]
+  },
   "234589": {
     "id": 234589,
     "name": "Grand Marshal's Tome of Power",
@@ -21564,6 +27593,46 @@
       "Requires Level 60",
       "Equip: Increases healing done by up to 44",
       "Equip: Reduces all damage taken from players and their pets by 5%. This effect cannot be combined from multiple sources."
+    ]
+  },
+  "235473": {
+    "id": 235473,
+    "name": "Grand Marshal's Barricade",
+    "icon": "inv_shield_05",
+    "iLvl": 80,
+    "reqLevel": 60,
+    "quality": "q4",
+    "stats": "3000 Armor, +56 Block, +26 Stamina, +10 Intellect, +20 Healing, +24 Spell Power",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "n": "Captain O'Neal",
+        "t": 1,
+        "ti": 12782
+      }
+    ]
+  },
+  "235474": {
+    "id": 235474,
+    "name": "High Warlord's Barricade",
+    "icon": "inv_shield_19",
+    "iLvl": 80,
+    "reqLevel": 60,
+    "quality": "q4",
+    "stats": "3000 Armor, +56 Block, +26 Stamina, +10 Intellect, +20 Healing, +24 Spell Power",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "n": "Sergeant Thunderhorn",
+        "t": 1,
+        "ti": 14581
+      }
     ]
   },
   "235476": {
@@ -21842,6 +27911,20 @@
     "side": "both",
     "sourcemore": null
   },
+  "241086": {
+    "id": 241086,
+    "name": "Scarlet Tower Shield",
+    "icon": "inv_shield_05",
+    "iLvl": 5,
+    "reqLevel": 1,
+    "quality": "q1",
+    "stats": "55 Armor, +1 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
   "241087": {
     "id": 241087,
     "name": "Scarlet Staff",
@@ -21969,6 +28052,28 @@
       }
     ],
     "subclassName": "Two-Handed Mace"
+  },
+  "246265": {
+    "id": 246265,
+    "name": "Salvaged Wooden Tower Shield",
+    "icon": "inv_shield_11",
+    "iLvl": 14,
+    "reqLevel": 8,
+    "quality": "q2",
+    "stats": "311 Armor, +5 Block, +2 Stamina",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "horde",
+    "sourcemore": [
+      {
+        "c": -141,
+        "c2": 4,
+        "n": "Making Repairs",
+        "t": 5,
+        "ti": 91316
+      }
+    ]
   },
   "246377": {
     "id": 246377,
@@ -23205,6 +29310,42 @@
     "sourcemore": null,
     "subclassName": "Fist Weapon"
   },
+  "257135": {
+    "id": 257135,
+    "name": "Huntress' Kite Shield",
+    "icon": "inv_shield_04",
+    "iLvl": 1,
+    "reqLevel": 1,
+    "quality": "q0",
+    "stats": "5 Armor, +1 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "257255": {
+    "id": 257255,
+    "name": "Highlands Defender's Shield",
+    "icon": "inv_shield_1h_skybornec60_b_01",
+    "iLvl": 8,
+    "reqLevel": 4,
+    "quality": "q2",
+    "stats": "126 Armor, +3 Block, +1 Strength",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": 16593,
+        "c2": -2,
+        "n": "WANTED: Vulgara the Insatiable",
+        "t": 5,
+        "ti": 93318
+      }
+    ]
+  },
   "257273": {
     "id": 257273,
     "name": "Worn Greatblade",
@@ -23341,6 +29482,20 @@
       }
     ]
   },
+  "257336": {
+    "id": 257336,
+    "name": "Peacekeeper's Buckler",
+    "icon": "inv_shield_09",
+    "iLvl": 10,
+    "reqLevel": 1,
+    "quality": "q1",
+    "stats": "161 Armor, +3 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
   "257337": {
     "id": 257337,
     "name": "Solid Copper Club",
@@ -23452,6 +29607,20 @@
         "ti": 92470
       }
     ]
+  },
+  "259460": {
+    "id": 259460,
+    "name": "Shield, Lordaeron Guard",
+    "icon": "inv_shield_05",
+    "iLvl": 1,
+    "reqLevel": 1,
+    "quality": "q0",
+    "stats": "5 Armor, +1 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
   },
   "259891": {
     "id": 259891,
@@ -23597,6 +29766,20 @@
     "sourcemore": null,
     "subclassName": "One-Handed Mace"
   },
+  "260210": {
+    "id": 260210,
+    "name": "A Bigger Shield",
+    "icon": "inv_shield_11",
+    "iLvl": 56,
+    "reqLevel": 1,
+    "quality": "q3",
+    "stats": "1930 Armor, +35 Block, +7 Agility, +7 Stamina, +4 Defense",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
   "260897": {
     "id": 260897,
     "name": "(DNT) Moonglaive",
@@ -23612,6 +29795,28 @@
     "subclassName": "One-handed sword",
     "side": "both",
     "sourcemore": null
+  },
+  "263305": {
+    "id": 263305,
+    "name": "Windshaped Shield",
+    "icon": "inv_shield_1h_skybornec60_b_01",
+    "iLvl": 10,
+    "reqLevel": 4,
+    "quality": "q2",
+    "stats": "177 Armor, +4 Block, +1 Strength",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "horde",
+    "sourcemore": [
+      {
+        "c": 16593,
+        "c2": -2,
+        "n": "A Firm Response",
+        "t": 5,
+        "ti": 93746
+      }
+    ]
   },
   "263312": {
     "id": 263312,
@@ -24256,6 +30461,28 @@
     ],
     "subclassName": "Staff"
   },
+  "270065": {
+    "id": 270065,
+    "name": "Farseer's Forgotten Shield",
+    "icon": "inv_shield_10",
+    "iLvl": 38,
+    "reqLevel": 32,
+    "quality": "q2",
+    "stats": "711 Armor, +15 Block, +4 Stamina, +7 Spell Power",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": 405,
+        "c2": 1,
+        "n": "Gizelton Caravan",
+        "t": 5,
+        "ti": 5943
+      }
+    ]
+  },
   "270069": {
     "id": 270069,
     "name": "Mindslicer",
@@ -24551,6 +30778,20 @@
       "Requires Level 13"
     ]
   },
+  "270270": {
+    "id": 270270,
+    "name": "Scale of the Tidebender",
+    "icon": "inv_shield_zulgurub_d_02",
+    "iLvl": 38,
+    "reqLevel": 1,
+    "quality": "q2",
+    "stats": "711 Armor, +15 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
   "270303": {
     "id": 270303,
     "name": "Monster - Trident, Naga (Brass)",
@@ -24820,12 +31061,10 @@
     "iLvl": 1,
     "reqLevel": 1,
     "quality": "q1",
-    "speed": null,
-    "dps": null,
     "stats": "",
     "inventorySlot": "Held In Off-hand",
-    "subclass": -5,
-    "subclassName": "Weapon",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
     "side": "both",
     "sourcemore": null
   },
@@ -25046,6 +31285,28 @@
       }
     ],
     "subclassName": "Staff"
+  },
+  "271798": {
+    "id": 271798,
+    "name": "Desperate Barrier",
+    "icon": "inv_shield_05",
+    "iLvl": 38,
+    "reqLevel": 35,
+    "quality": "q2",
+    "stats": "711 Armor, +15 Block, +4 Strength, +6 Stamina",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "alliance",
+    "sourcemore": [
+      {
+        "c": 16651,
+        "c2": 1,
+        "n": "Proof of Concept",
+        "t": 5,
+        "ti": 92873
+      }
+    ]
   },
   "271799": {
     "id": 271799,
@@ -26355,6 +32616,20 @@
     "sourcemore": null,
     "subclassName": "One-Handed Sword"
   },
+  "272591": {
+    "id": 272591,
+    "name": "Premier High Warlord's Shield Wall",
+    "icon": "inv_shield_19",
+    "iLvl": 65,
+    "reqLevel": 60,
+    "quality": "q4",
+    "stats": "2468 Armor, +44 Block, +9 Strength, +21 Stamina",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
   "272592": {
     "id": 272592,
     "name": "Premier High Warlord's Cleaver",
@@ -26674,6 +32949,20 @@
     "side": "both",
     "sourcemore": null,
     "subclassName": "One-Handed Sword"
+  },
+  "272838": {
+    "id": 272838,
+    "name": "Premier Grand Marshal's Aegis",
+    "icon": "inv_shield_05",
+    "iLvl": 65,
+    "reqLevel": 60,
+    "quality": "q4",
+    "stats": "2468 Armor, +44 Block, +9 Strength, +21 Stamina",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
   },
   "272839": {
     "id": 272839,
@@ -27489,6 +33778,28 @@
     ],
     "subclassName": "One-Handed Axe"
   },
+  "273811": {
+    "id": 273811,
+    "name": "Repurposed Rack",
+    "icon": "inv_shield_11",
+    "iLvl": 30,
+    "reqLevel": 25,
+    "quality": "q3",
+    "stats": "661 Armor, +14 Block, +6 Strength, +7 Spell Power",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "dd": -1,
+        "n": "Hamhock",
+        "t": 1,
+        "ti": 1717,
+        "z": 717
+      }
+    ]
+  },
   "273817": {
     "id": 273817,
     "name": "Graverobber's Shovel",
@@ -27761,6 +34072,29 @@
       }
     ]
   },
+  "274043": {
+    "id": 274043,
+    "name": "Irradiated Shield",
+    "icon": "inv_shield_03",
+    "iLvl": 34,
+    "reqLevel": 29,
+    "quality": "q3",
+    "stats": "738 Armor, +16 Block, +9 Spirit",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "bd": 1,
+        "dd": -1,
+        "n": "Grubbis",
+        "t": 1,
+        "ti": 7361,
+        "z": 721
+      }
+    ]
+  },
   "274084": {
     "id": 274084,
     "name": "Quilboar Blaster",
@@ -27908,6 +34242,28 @@
     "sourcemore": null,
     "subclassName": "Dagger"
   },
+  "274290": {
+    "id": 274290,
+    "name": "Painwalker Buckler",
+    "icon": "inv_shield_07",
+    "iLvl": 34,
+    "reqLevel": 29,
+    "quality": "q3",
+    "stats": "738 Armor, +16 Block, +6 Stamina, +8 Healing, +5 Spell Power",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "dd": -1,
+        "n": "Interrogator Vishas",
+        "t": 1,
+        "ti": 3983,
+        "z": 796
+      }
+    ]
+  },
   "274292": {
     "id": 274292,
     "name": "Houndmaster Boomerang",
@@ -28017,6 +34373,27 @@
       "+10 Spirit",
       "Requires Level 53",
       "Equip: Increases healing done by up to 22"
+    ]
+  },
+  "274418": {
+    "id": 274418,
+    "name": "Burrow Barricade",
+    "icon": "inv_shield_16",
+    "iLvl": 58,
+    "reqLevel": 53,
+    "quality": "q3",
+    "stats": "1994 Armor, +36 Block, +15 Stamina",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "n": "Dala Fairmaw",
+        "t": 1,
+        "ti": 256629,
+        "z": 616
+      }
     ]
   },
   "274419": {
@@ -28145,6 +34522,20 @@
     "side": "both",
     "sourcemore": null,
     "subclassName": "Staff"
+  },
+  "274460": {
+    "id": 274460,
+    "name": "Monster - Shield, Night Elf Huntress",
+    "icon": "inv_shield_09",
+    "iLvl": 1,
+    "reqLevel": 1,
+    "quality": "q0",
+    "stats": "5 Armor, +1 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
   },
   "274461": {
     "id": 274461,
@@ -28287,6 +34678,20 @@
     "inventorySlot": "Main Hand",
     "subclass": 15,
     "subclassName": "Dagger",
+    "side": "both",
+    "sourcemore": null
+  },
+  "274652": {
+    "id": 274652,
+    "name": "Wall of Water",
+    "icon": "inv_shield_16",
+    "iLvl": 48,
+    "reqLevel": 43,
+    "quality": "q3",
+    "stats": "1676 Armor, +27 Block, +14 Spell Power, +3 MP5",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
     "side": "both",
     "sourcemore": null
   },
@@ -28605,6 +35010,34 @@
     "sourcemore": null,
     "subclassName": "One-Handed Mace"
   },
+  "275049": {
+    "id": 275049,
+    "name": "Farholde Bastion",
+    "icon": "inv_shield_03",
+    "iLvl": 46,
+    "reqLevel": 1,
+    "quality": "q2",
+    "stats": "1436 Armor, +21 Block, +9 Strength, +5 Stamina",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "275051": {
+    "id": 275051,
+    "name": "Twilight Barrier",
+    "icon": "inv_shield_03",
+    "iLvl": 46,
+    "reqLevel": 1,
+    "quality": "q2",
+    "stats": "1436 Armor, +21 Block, +9 Strength, +5 Stamina",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
   "275052": {
     "id": 275052,
     "name": "Orc Bone Bow",
@@ -28620,6 +35053,28 @@
     "subclassName": "Weapon",
     "side": "both",
     "sourcemore": null
+  },
+  "275290": {
+    "id": 275290,
+    "name": "Stormforged Protector",
+    "icon": "inv_shield_1h_skybornec60_b_01",
+    "iLvl": 14,
+    "reqLevel": 10,
+    "quality": "q2",
+    "stats": "311 Armor, +5 Block, +1 Strength, +1 Stamina",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": -81,
+        "c2": 4,
+        "n": "The Skybreaker Bulwark",
+        "t": 5,
+        "ti": 94003
+      }
+    ]
   },
   "275291": {
     "id": 275291,
@@ -28781,6 +35236,20 @@
     "sourcemore": null,
     "subclassName": "Staff"
   },
+  "275649": {
+    "id": 275649,
+    "name": "Bramblebark Barrier",
+    "icon": "inv_shield_09",
+    "iLvl": 59,
+    "reqLevel": 1,
+    "quality": "q2",
+    "stats": "1805 Armor, +33 Block, +6 Strength, +7 Stamina",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
   "275671": {
     "id": 275671,
     "name": "Field Agent Beverage",
@@ -28925,6 +35394,20 @@
     "side": "both",
     "sourcemore": null
   },
+  "275864": {
+    "id": 275864,
+    "name": "Putridus Wall",
+    "icon": "inv_shield_13",
+    "iLvl": 50,
+    "reqLevel": 45,
+    "quality": "q3",
+    "stats": "1739 Armor, +29 Block, +10 Stamina, +5 Defense, +8 Nature Resistance",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
   "275916": {
     "id": 275916,
     "name": "Glaive",
@@ -28980,6 +35463,27 @@
     ],
     "subclassName": "Shield"
   },
+  "276204": {
+    "id": 276204,
+    "name": "Thrash's Trash",
+    "icon": "inv_shield_02",
+    "iLvl": 45,
+    "reqLevel": 40,
+    "quality": "q3",
+    "stats": "1580 Armor, +24 Block, +5 Stamina, +9 Spell Damage, +5 Spell Power",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "n": "Friz Frazzlespark",
+        "t": 1,
+        "ti": 255897,
+        "z": 16591
+      }
+    ]
+  },
   "276271": {
     "id": 276271,
     "name": "Monster - Staff, Skyborne (White)",
@@ -29003,12 +35507,10 @@
     "iLvl": 1,
     "reqLevel": 1,
     "quality": "q3",
-    "speed": null,
-    "dps": null,
     "stats": "",
     "inventorySlot": "Held In Off-hand",
-    "subclass": -5,
-    "subclassName": "Weapon",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
     "side": "both",
     "sourcemore": [
       {
@@ -29034,6 +35536,20 @@
     "side": "both",
     "sourcemore": null,
     "subclassName": "Crossbow"
+  },
+  "276334": {
+    "id": 276334,
+    "name": "Hand-Hewn Buckler",
+    "icon": "inv_shield_09",
+    "iLvl": 57,
+    "reqLevel": 1,
+    "quality": "q2",
+    "stats": "1748 Armor, +31 Block, +9 Stamina, +11 Spell Power",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
   },
   "276335": {
     "id": 276335,
@@ -29241,6 +35757,20 @@
     ],
     "subclassName": "Bow"
   },
+  "276754": {
+    "id": 276754,
+    "name": "Sunderbark Vigil",
+    "icon": "inv_shield_13",
+    "iLvl": 55,
+    "reqLevel": 1,
+    "quality": "q3",
+    "stats": "1898 Armor, +34 Block, +12 Stamina, +12 Healing, +6 Spell Power, +3 MP5",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
   "276782": {
     "id": 276782,
     "name": "Distant Communication Device",
@@ -29316,6 +35846,24 @@
       }
     ],
     "subclassName": "Dagger"
+  },
+  "276889": {
+    "id": 276889,
+    "name": "Thornwoven Shield",
+    "icon": "inv_shield_14",
+    "iLvl": 24,
+    "reqLevel": 15,
+    "quality": "q2",
+    "stats": "478 Armor, +9 Block, +4 Stamina, +2 Spirit",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "z": 17
+      }
+    ]
   },
   "276897": {
     "id": 276897,
@@ -29815,6 +36363,42 @@
       "Requires Level 40"
     ]
   },
+  "277257": {
+    "id": 277257,
+    "name": "Raven Hill Crest",
+    "icon": "inv_shield_06",
+    "iLvl": 29,
+    "reqLevel": 1,
+    "quality": "q3",
+    "stats": "642 Armor, +13 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "277258": {
+    "id": 277258,
+    "name": "Crest of Elucidation",
+    "icon": "spell_holy_powerwordshield",
+    "iLvl": 45,
+    "reqLevel": 40,
+    "quality": "q3",
+    "stats": "1580 Armor, +24 Block, +12 Spirit, +7 Healing, +4 Spell Power",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": -284,
+        "c2": -2,
+        "n": "Greater Friend of the Library",
+        "t": 5,
+        "ti": 82208
+      }
+    ]
+  },
   "277259": {
     "id": 277259,
     "name": "Fermented Restoration Potion",
@@ -29954,6 +36538,20 @@
     "side": "both",
     "sourcemore": null
   },
+  "277555": {
+    "id": 277555,
+    "name": "Monster - Shield, Skyborne (Gray)",
+    "icon": "inv_shield_1h_skybornec60_b_01",
+    "iLvl": 8,
+    "reqLevel": 1,
+    "quality": "q2",
+    "stats": "126 Armor, +3 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
   "277979": {
     "id": 277979,
     "name": "Mauler's Mutton",
@@ -30082,6 +36680,34 @@
     "side": "both",
     "sourcemore": null
   },
+  "278468": {
+    "id": 278468,
+    "name": "Premier Grand Marshal's Barricade",
+    "icon": "inv_shield_05",
+    "iLvl": 65,
+    "reqLevel": 60,
+    "quality": "q4",
+    "stats": "2468 Armor, +44 Block, +21 Stamina, +9 Intellect, +12 Healing, +6 Spell Power",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
+  "278469": {
+    "id": 278469,
+    "name": "Premier High Warlord's Barricade",
+    "icon": "inv_shield_19",
+    "iLvl": 65,
+    "reqLevel": 60,
+    "quality": "q4",
+    "stats": "2468 Armor, +44 Block, +21 Stamina, +9 Intellect, +12 Healing, +6 Spell Power",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
   "279215": {
     "id": 279215,
     "name": "Monster - Bow, Skyborne",
@@ -30199,6 +36825,29 @@
       }
     ],
     "subclassName": "One-Handed Mace"
+  },
+  "279262": {
+    "id": 279262,
+    "name": "Evergreen Shield",
+    "icon": "inv_shield_1h_raidhyjalc60_d_01",
+    "iLvl": 65,
+    "reqLevel": 60,
+    "quality": "q4",
+    "stats": "2468 Armor, +44 Block, +16 Stamina, +15 Healing, +8 Spell Power, +14 Crit, Equip: Improves your chance to get a critical strike by 1.0%.",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "c": 11,
+        "icon": "inv_shield_1h_raidhyjalc60_d_01",
+        "n": "Evergreen Shield",
+        "s": 164,
+        "t": 6,
+        "ti": 1306536
+      }
+    ]
   },
   "279273": {
     "id": 279273,
@@ -30603,12 +37252,10 @@
     "iLvl": 5,
     "reqLevel": 1,
     "quality": "q1",
-    "speed": null,
-    "dps": null,
     "stats": "",
     "inventorySlot": "Held In Off-hand",
-    "subclass": -5,
-    "subclassName": "Weapon",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
     "side": "both",
     "sourcemore": null
   },
@@ -30747,6 +37394,28 @@
       "Equip: Increases the critical strike chance of your Lightning Bolt spell by 1%."
     ]
   },
+  "280696": {
+    "id": 280696,
+    "name": "Elementalist's Guard",
+    "icon": "inv_shield_09",
+    "iLvl": 40,
+    "reqLevel": 30,
+    "quality": "q3",
+    "stats": "1078 Armor, +20 Block, +9 Stamina, +6 Intellect, +2 MP5",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "alliance",
+    "sourcemore": [
+      {
+        "c": -82,
+        "c2": 4,
+        "n": "The Tempest's Weapons",
+        "t": 5,
+        "ti": 96016
+      }
+    ]
+  },
   "280805": {
     "id": 280805,
     "name": "Serrated Raptor Claw",
@@ -30787,6 +37456,20 @@
     "inventorySlot": "Main Hand",
     "subclass": 7,
     "subclassName": "One-handed sword",
+    "side": "both",
+    "sourcemore": null
+  },
+  "281020": {
+    "id": 281020,
+    "name": "Monster - Shield, Skyborne (White)",
+    "icon": "inv_shield_1h_skybornec60_b_01",
+    "iLvl": 8,
+    "reqLevel": 1,
+    "quality": "q2",
+    "stats": "126 Armor, +3 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
     "side": "both",
     "sourcemore": null
   },
@@ -31089,6 +37772,28 @@
       "+5 Spirit"
     ]
   },
+  "281307": {
+    "id": 281307,
+    "name": "Dragonmaw Buckler",
+    "icon": "inv_shield_02",
+    "iLvl": 31,
+    "reqLevel": 23,
+    "quality": "q2",
+    "stats": "595 Armor, +12 Block, +3 Strength, +5 Stamina",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "alliance",
+    "sourcemore": [
+      {
+        "c": 11,
+        "c2": 0,
+        "n": "Old Habits",
+        "t": 5,
+        "ti": 98223
+      }
+    ]
+  },
   "281308": {
     "id": 281308,
     "name": "Jameson's Backup Sword",
@@ -31299,6 +38004,20 @@
     "side": "both",
     "sourcemore": null,
     "subclassName": "One-Handed Sword"
+  },
+  "281637": {
+    "id": 281637,
+    "name": "Antique Bulwark",
+    "icon": "inv_shield_02",
+    "iLvl": 58,
+    "reqLevel": 1,
+    "quality": "q3",
+    "stats": "1994 Armor, +36 Block, +13 Stamina, +8 Defense",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
   },
   "281648": {
     "id": 281648,
@@ -31527,12 +38246,24 @@
     "iLvl": 1,
     "reqLevel": 1,
     "quality": "q2",
-    "speed": null,
-    "dps": null,
     "stats": "",
     "inventorySlot": "Held In Off-hand",
-    "subclass": -5,
-    "subclassName": "Weapon",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
+  },
+  "281731": {
+    "id": 281731,
+    "name": "Restored Buckler",
+    "icon": "inv_shield_09",
+    "iLvl": 1,
+    "reqLevel": 1,
+    "quality": "q2",
+    "stats": "16 Armor, +1 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
     "side": "both",
     "sourcemore": null
   },
@@ -31821,6 +38552,20 @@
     "inventorySlot": "One-Hand",
     "subclass": 13,
     "subclassName": "Weapon",
+    "side": "both",
+    "sourcemore": null
+  },
+  "282555": {
+    "id": 282555,
+    "name": "Shadowforge Shield",
+    "icon": "inv_shield_03",
+    "iLvl": 42,
+    "reqLevel": 37,
+    "quality": "q2",
+    "stats": "1148 Armor, +18 Block, +7 Stamina, +8 Spell Power",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
     "side": "both",
     "sourcemore": null
   },
@@ -32368,6 +39113,27 @@
       }
     ],
     "subclassName": "One-Handed Axe"
+  },
+  "284322": {
+    "id": 284322,
+    "name": "Invading Marine's Shield",
+    "icon": "inv_shield_09",
+    "iLvl": 11,
+    "reqLevel": 6,
+    "quality": "q2",
+    "stats": "207 Armor, +4 Block, +1 Spirit",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": [
+      {
+        "n": "Watch Commander Zalaphil",
+        "t": 1,
+        "ti": 5809,
+        "z": 14
+      }
+    ]
   },
   "284386": {
     "id": 284386,
@@ -33086,6 +39852,20 @@
       }
     ]
   },
+  "285344": {
+    "id": 285344,
+    "name": "Guard Captain's Barrier",
+    "icon": "inv_shield_04",
+    "iLvl": 29,
+    "reqLevel": 24,
+    "quality": "q3",
+    "stats": "642 Armor, +13 Block, +6 Strength, +4 Defense",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
+  },
   "285346": {
     "id": 285346,
     "name": "Alliance Outrunner's Sword",
@@ -33201,12 +39981,10 @@
     "iLvl": 1,
     "reqLevel": 1,
     "quality": "q1",
-    "speed": null,
-    "dps": null,
     "stats": "",
     "inventorySlot": "Held In Off-hand",
-    "subclass": -5,
-    "subclassName": "Weapon",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
     "side": "both",
     "sourcemore": [
       {
@@ -33230,6 +40008,20 @@
     "inventorySlot": "Main Hand",
     "subclass": 4,
     "subclassName": "One-handed mace",
+    "side": "both",
+    "sourcemore": null
+  },
+  "286140": {
+    "id": 286140,
+    "name": "Monster - Shield, Paladin",
+    "icon": "inv_shield_05",
+    "iLvl": 1,
+    "reqLevel": 1,
+    "quality": "q0",
+    "stats": "5 Armor, +1 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
     "side": "both",
     "sourcemore": null
   },
@@ -33474,6 +40266,28 @@
       }
     ]
   },
+  "286740": {
+    "id": 286740,
+    "name": "Proud Brave's Guard",
+    "icon": "inv_shield_09",
+    "iLvl": 9,
+    "reqLevel": 4,
+    "quality": "q1",
+    "stats": "135 Armor, +3 Block",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "horde",
+    "sourcemore": [
+      {
+        "c": 215,
+        "c2": 1,
+        "n": "The High Chieftain",
+        "t": 5,
+        "ti": 99082
+      }
+    ]
+  },
   "286741": {
     "id": 286741,
     "name": "Centaur Skull Basher",
@@ -33713,6 +40527,20 @@
       "+9 Intellect",
       "Requires Level 18"
     ]
+  },
+  "286982": {
+    "id": 286982,
+    "name": "Unearthed Barrier",
+    "icon": "inv_shield_02",
+    "iLvl": 32,
+    "reqLevel": 27,
+    "quality": "q3",
+    "stats": "699 Armor, +15 Block, +8 Stamina",
+    "inventorySlot": "Off Hand",
+    "subclass": "Shields",
+    "subclassName": "Shield",
+    "side": "both",
+    "sourcemore": null
   },
   "286983": {
     "id": 286983,
@@ -34003,20 +40831,14 @@
     "name": "Letter Opener",
     "icon": "inv_weapon_shortblade_20",
     "iLvl": 17,
-    "quality": "q1",
     "reqLevel": 2,
-    "speed": null,
-    "dps": null,
-    "weaponType": "Held In Off-hand",
-    "inventorySlot": "Held In Off-hand",
+    "quality": "q1",
     "stats": "",
-    "equips": [],
-    "baseStats": [],
-    "lines": [
-      "Binds when picked up",
-      "Held In Off-hand",
-      "Requires Level 2"
-    ]
+    "inventorySlot": "Held In Off-hand",
+    "subclass": "Miscellaneous",
+    "subclassName": "Held In Off-hand",
+    "side": "both",
+    "sourcemore": null
   },
   "287648": {
     "id": 287648,

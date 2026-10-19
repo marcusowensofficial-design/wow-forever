@@ -1013,6 +1013,7 @@
               "39 - 60 Damage\tSpeed 3.10",
               "(15.97 damage per second)",
               "Chance on hit: Blasts a target for 42 Fire damage.",
+              "Chance on hit: Blasts a target for 42 Fire damage.",
               "Chance on hit: Blasts a target for 42 Fire damage."
             ],
             "source": "Old Ironforge Incursion quest (Alliance)"
@@ -1335,6 +1336,7 @@
               "Two-Hand",
               "39 - 60 Damage\tSpeed 3.10",
               "(15.97 damage per second)",
+              "Chance on hit: Blasts a target for 42 Fire damage.",
               "Chance on hit: Blasts a target for 42 Fire damage.",
               "Chance on hit: Blasts a target for 42 Fire damage."
             ],
@@ -1738,6 +1740,7 @@
           "Two-Hand",
           "39 - 60 Damage\tSpeed 3.10",
           "(15.97 damage per second)",
+          "Chance on hit: Blasts a target for 42 Fire damage.",
           "Chance on hit: Blasts a target for 42 Fire damage.",
           "Chance on hit: Blasts a target for 42 Fire damage."
         ]
@@ -2246,6 +2249,7 @@
           "Two-Hand",
           "52 - 79 Damage\tSpeed 3.60",
           "(18.19 damage per second)",
+          "Use: Chop nearby Humanoid or Undead corpse in two, restoring 150 Health, 150 Mana, and 15 Rage.",
           "Use: Chop nearby Humanoid or Undead corpse in two, restoring 150 Health, 150 Mana, and 15 Rage.",
           "Requires Level 16",
           "Use: Chop nearby Humanoid or Undead corpse in two, restoring 150 Health, 150 Mana, and 15 Rage."
@@ -3358,6 +3362,7 @@
             "weaponType": "Two-Handed Mace",
             "lines": [
               "Use: Use to sketch a location on the Shapers Terrace map.",
+              "Use: Use to sketch a location on the Shapers Terrace map.",
               "Use: Use to sketch a location on the Shapers Terrace map."
             ],
             "source": "2H Mace from Excavation Site: Wetlands quest (Horrors in the Highland)"
@@ -4281,6 +4286,7 @@
           "104 - 157 Damage\tSpeed 3.50",
           "(37.29 damage per second)",
           "Chance on hit: Attack all nearby enemies, dealing weapon damage plus 5 every 3 sec for 9 sec, and reducing your own movement speed by 80%.",
+          "Chance on hit: Attack all nearby enemies, dealing weapon damage plus 5 every 3 sec for 9 sec, and reducing your own movement speed by 80%.",
           "Requires Level 37",
           "Chance on hit: Attack all nearby enemies, dealing weapon damage plus 5 every 3 sec for 9 sec, and reducing your own movement speed by 80%."
         ]
@@ -4775,6 +4781,7 @@
           "117 - 176 Damage\tSpeed 3.20",
           "(45.78 damage per second)",
           "Chance on hit: Wounds the target causing them to bleed for 210 damage over 7 sec.",
+          "Chance on hit: Wounds the target causing them to bleed for 210 damage over 7 sec.",
           "Requires Level 48",
           "Chance on hit: Wounds the target causing them to bleed for 210 damage over 7 sec."
         ]
@@ -5018,6 +5025,7 @@
           "Two-Hand",
           "140 - 211 Damage\tSpeed 3.70",
           "(47.43 damage per second)",
+          "Chance on hit: Stuns target for 8 sec.",
           "Chance on hit: Stuns target for 8 sec.",
           "Requires Level 50",
           "Chance on hit: Stuns target for 8 sec."
@@ -6271,6 +6279,7 @@
               "39 - 60 Damage\tSpeed 3.10",
               "(15.97 damage per second)",
               "Chance on hit: Blasts a target for 42 Fire damage.",
+              "Chance on hit: Blasts a target for 42 Fire damage.",
               "Chance on hit: Blasts a target for 42 Fire damage."
             ],
             "source": "Old Ironforge Incursion quest"
@@ -6568,6 +6577,7 @@
               "Two-Hand",
               "39 - 60 Damage\tSpeed 3.10",
               "(15.97 damage per second)",
+              "Chance on hit: Blasts a target for 42 Fire damage.",
               "Chance on hit: Blasts a target for 42 Fire damage.",
               "Chance on hit: Blasts a target for 42 Fire damage."
             ],
@@ -6981,6 +6991,7 @@
           "Two-Hand",
           "39 - 60 Damage\tSpeed 3.10",
           "(15.97 damage per second)",
+          "Chance on hit: Blasts a target for 42 Fire damage.",
           "Chance on hit: Blasts a target for 42 Fire damage.",
           "Chance on hit: Blasts a target for 42 Fire damage."
         ]
@@ -8375,6 +8386,7 @@
             "weaponType": "Two-Handed Mace",
             "lines": [
               "Use: Use to sketch a location on the Shapers Terrace map.",
+              "Use: Use to sketch a location on the Shapers Terrace map.",
               "Use: Use to sketch a location on the Shapers Terrace map."
             ],
             "source": "2H Mace from Excavation Site: Wetlands quest (Horrors in the Highland)"
@@ -8817,6 +8829,7 @@
               "63 - 95 Damage\tSpeed 3.30",
               "(23.94 damage per second)",
               "Chance on hit: Blasts a target for 85 Arcane damage.",
+              "Chance on hit: Blasts a target for 85 Arcane damage.",
               "Chance on hit: Blasts a target for 85 Arcane damage."
             ],
             "source": "Duskwood Morbent Fel quest"
@@ -9219,6 +9232,7 @@
               "One-Hand",
               "66 - 124 Damage\tSpeed 2.70",
               "(35.19 damage per second)",
+              "Chance on hit: Grants an extra attack on your next swing.",
               "Chance on hit: Grants an extra attack on your next swing.",
               "Chance on hit: Grants an extra attack on your next swing.",
               "Requires Level 45"
@@ -9741,6 +9755,7 @@
           "Two-Hand",
           "140 - 211 Damage\tSpeed 3.70",
           "(47.43 damage per second)",
+          "Chance on hit: Stuns target for 8 sec.",
           "Chance on hit: Stuns target for 8 sec.",
           "Requires Level 50",
           "Chance on hit: Stuns target for 8 sec."
@@ -13743,6 +13758,7 @@
           "15 - 23 Damage\tSpeed 2.00",
           "(9.50 damage per second)",
           "Chance on hit: Wounds the target for 14 Physical damage.",
+          "Chance on hit: Wounds the target for 14 Physical damage.",
           "Requires Level 13",
           "Chance on hit: Wounds the target for 14 Physical damage."
         ],
@@ -14221,6 +14237,7 @@
               "15 - 23 Damage\tSpeed 2.00",
               "(9.50 damage per second)",
               "Chance on hit: Wounds the target for 14 Physical damage.",
+              "Chance on hit: Wounds the target for 14 Physical damage.",
               "Requires Level 13",
               "Chance on hit: Wounds the target for 14 Physical damage."
             ]
@@ -14250,6 +14267,7 @@
           "Ranged",
           "20 - 38 Damage\tSpeed 2.40",
           "(12.08 damage per second)",
+          "Chance on hit: Venom Shot the target for 23 to 33 Nature damage.",
           "Chance on hit: Venom Shot the target for 23 to 33 Nature damage.",
           "Requires Level 19",
           "Chance on hit: Venom Shot the target for 23 to 33 Nature damage."
@@ -14469,6 +14487,7 @@
               "22 - 42 Damage\tSpeed 2.40",
               "(13.33 damage per second)",
               "Chance on hit: Wounds the target for 42 damage. Naga are Stunned for 2 sec.",
+              "Chance on hit: Wounds the target for 42 damage. Naga are Stunned for 2 sec.",
               "Requires Level 22",
               "Chance on hit: Wounds the target for 42 damage. Naga are Stunned for 2 sec."
             ]
@@ -14631,6 +14650,7 @@
               "Ranged",
               "14 - 26 Damage\tSpeed 1.70",
               "(11.76 damage per second)",
+              "Equip: Improves your chance to hit by 0.3%.",
               "Equip: Improves your chance to hit by 0.3%.",
               "Requires Level 24",
               "Equip: Improves your chance to hit by 0.3%."
@@ -16111,6 +16131,7 @@
               "40 - 76 Damage\tSpeed 2.60",
               "(22.31 damage per second)",
               "Chance on hit: Strike the target with a Flaming Shell, inflicting 7 Fire damage every 3 sec for 9 sec.",
+              "Chance on hit: Strike the target with a Flaming Shell, inflicting 7 Fire damage every 3 sec for 9 sec.",
               "Requires Level 37",
               "Chance on hit: Strike the target with a Flaming Shell, inflicting 7 Fire damage every 3 sec for 9 sec."
             ]
@@ -16190,6 +16211,7 @@
           "Ranged",
           "44 - 84 Damage\tSpeed 2.60",
           "(24.62 damage per second)",
+          "Chance on hit: Strike your ranged target with a Fire Blast for 22 to 34 Fire damage.",
           "Chance on hit: Strike your ranged target with a Fire Blast for 22 to 34 Fire damage.",
           "Chance on hit: Strike your ranged target with a Fire Blast for 22 to 34 Fire damage.",
           "Requires Level 42"
@@ -16953,6 +16975,7 @@
               "53 - 100 Damage\tSpeed 2.70",
               "(28.33 damage per second)",
               "Chance on hit: Fires a Shadow Shot at the target for 21 to 31 Shadow damage.",
+              "Chance on hit: Fires a Shadow Shot at the target for 21 to 31 Shadow damage.",
               "Requires Level 50",
               "Chance on hit: Fires a Shadow Shot at the target for 21 to 31 Shadow damage."
             ]
@@ -17377,6 +17400,7 @@
               "Ranged",
               "64 - 120 Damage\tSpeed 2.50",
               "(36.80 damage per second)",
+              "Equip: Improves your chance to hit by 1.0%.",
               "Equip: Improves your chance to hit by 1.0%.",
               "Requires Level 60",
               "Equip: Improves your chance to hit by 1.0%."
@@ -19934,6 +19958,7 @@
               "18 - 34 Damage\tSpeed 2.10",
               "(12.38 damage per second)",
               "Chance on hit: Poisons target for 2 Nature damage every 1 sec for 10 sec.",
+              "Chance on hit: Poisons target for 2 Nature damage every 1 sec for 10 sec.",
               "Chance on hit: Poisons target for 2 Nature damage every 1 sec for 10 sec."
             ],
             "source": "The New Plague quest in Ruins of Lordaeron"
@@ -20209,6 +20234,7 @@
               "One-Hand",
               "18 - 35 Damage\tSpeed 1.70",
               "(15.59 damage per second)",
+              "Chance on hit: Sear your target's flesh, dealing 67 to 101 Fire damage.",
               "Chance on hit: Sear your target's flesh, dealing 67 to 101 Fire damage.",
               "Requires Level 19",
               "Chance on hit: Sear your target's flesh, dealing 67 to 101 Fire damage."
@@ -20622,6 +20648,7 @@
           "One-Hand",
           "18 - 34 Damage\tSpeed 2.10",
           "(12.38 damage per second)",
+          "Chance on hit: Poisons target for 2 Nature damage every 1 sec for 10 sec.",
           "Chance on hit: Poisons target for 2 Nature damage every 1 sec for 10 sec.",
           "Chance on hit: Poisons target for 2 Nature damage every 1 sec for 10 sec."
         ]
@@ -21440,6 +21467,7 @@
               "27 - 51 Damage\tSpeed 1.90",
               "(20.53 damage per second)",
               "Chance on hit: Deals 14 Nature damage every 3 sec to any enemy in an 8 yard radius around the caster for 12 sec.",
+              "Chance on hit: Deals 14 Nature damage every 3 sec to any enemy in an 8 yard radius around the caster for 12 sec.",
               "Requires Level 27",
               "Chance on hit: Deals 14 Nature damage every 3 sec to any enemy in an 8 yard radius around the caster for 12 sec."
             ],
@@ -21885,6 +21913,7 @@
           "One-Hand",
           "24 - 46 Damage\tSpeed 1.70",
           "(20.59 damage per second)",
+          "Chance on hit: Hurl spikes at the target, dealing 45 Physical damage and jumping to 1 additional nearby enemy. Each jump reduces the damage by 50%.",
           "Chance on hit: Hurl spikes at the target, dealing 45 Physical damage and jumping to 1 additional nearby enemy. Each jump reduces the damage by 50%.",
           "Requires Level 27",
           "Chance on hit: Hurl spikes at the target, dealing 45 Physical damage and jumping to 1 additional nearby enemy. Each jump reduces the damage by 50%."
@@ -22381,6 +22410,7 @@
           "31 - 58 Damage\tSpeed 1.50",
           "(29.67 damage per second)",
           "Chance on hit: Sends a shadowy bolt at the enemy causing 77 Shadow damage.",
+          "Chance on hit: Sends a shadowy bolt at the enemy causing 77 Shadow damage.",
           "Chance on hit: Sends a shadowy bolt at the enemy causing 77 Shadow damage."
         ]
       },
@@ -22617,6 +22647,8 @@
           "One-Hand",
           "40 - 76 Damage\tSpeed 1.80",
           "(32.22 damage per second)",
+          "Equip: Movement can generate Static Electricity.",
+          "Chance on hit: Deal 84 Nature damage, increased by 2% per stack of Static Electricity. Deals 2 times as much damage to Aquatic enemies.",
           "Equip: Movement can generate Static Electricity.",
           "Chance on hit: Deal 84 Nature damage, increased by 2% per stack of Static Electricity. Deals 2 times as much damage to Aquatic enemies.",
           "Requires Level 43",
@@ -22865,6 +22897,7 @@
           "66 - 124 Damage\tSpeed 2.70",
           "(35.19 damage per second)",
           "Chance on hit: Grants an extra attack on your next swing.",
+          "Chance on hit: Grants an extra attack on your next swing.",
           "Chance on hit: Grants an extra attack on your next swing."
         ]
       },
@@ -22924,6 +22957,7 @@
               "One-Hand",
               "33 - 62 Damage\tSpeed 1.30",
               "(36.54 damage per second)",
+              "Chance on hit: Heals wielder of 78 damage over 12 sec.",
               "Chance on hit: Heals wielder of 78 damage over 12 sec.",
               "Requires Level 50",
               "Chance on hit: Heals wielder of 78 damage over 12 sec."
@@ -23104,6 +23138,7 @@
           "One-Hand",
           "66 - 124 Damage\tSpeed 2.70",
           "(35.19 damage per second)",
+          "Chance on hit: Grants an extra attack on your next swing.",
           "Chance on hit: Grants an extra attack on your next swing.",
           "Chance on hit: Grants an extra attack on your next swing."
         ]
@@ -24918,6 +24953,7 @@
               "39 - 60 Damage\tSpeed 3.10",
               "(15.97 damage per second)",
               "Chance on hit: Blasts a target for 42 Fire damage.",
+              "Chance on hit: Blasts a target for 42 Fire damage.",
               "Chance on hit: Blasts a target for 42 Fire damage."
             ],
             "source": "Hall of Thanes dungeon quest"
@@ -25131,6 +25167,7 @@
               "Two-Hand",
               "52 - 79 Damage\tSpeed 3.60",
               "(18.19 damage per second)",
+              "Use: Chop nearby Humanoid or Undead corpse in two, restoring 150 Health, 150 Mana, and 15 Rage.",
               "Use: Chop nearby Humanoid or Undead corpse in two, restoring 150 Health, 150 Mana, and 15 Rage.",
               "Requires Level 16",
               "Use: Chop nearby Humanoid or Undead corpse in two, restoring 150 Health, 150 Mana, and 15 Rage."
@@ -26749,6 +26786,7 @@
             "weaponType": "Two-Handed Mace",
             "lines": [
               "Use: Use to sketch a location on the Shapers Terrace map.",
+              "Use: Use to sketch a location on the Shapers Terrace map.",
               "Use: Use to sketch a location on the Shapers Terrace map."
             ],
             "source": "2H Mace from Excavation Site: Wetlands quest (Horrors in the Highland)"
@@ -27674,6 +27712,7 @@
           "104 - 157 Damage\tSpeed 3.50",
           "(37.29 damage per second)",
           "Chance on hit: Attack all nearby enemies, dealing weapon damage plus 5 every 3 sec for 9 sec, and reducing your own movement speed by 80%.",
+          "Chance on hit: Attack all nearby enemies, dealing weapon damage plus 5 every 3 sec for 9 sec, and reducing your own movement speed by 80%.",
           "Requires Level 37",
           "Chance on hit: Attack all nearby enemies, dealing weapon damage plus 5 every 3 sec for 9 sec, and reducing your own movement speed by 80%."
         ]
@@ -27930,6 +27969,7 @@
           "117 - 176 Damage\tSpeed 3.20",
           "(45.78 damage per second)",
           "Chance on hit: Wounds the target causing them to bleed for 210 damage over 7 sec.",
+          "Chance on hit: Wounds the target causing them to bleed for 210 damage over 7 sec.",
           "Requires Level 48",
           "Chance on hit: Wounds the target causing them to bleed for 210 damage over 7 sec."
         ]
@@ -28175,6 +28215,7 @@
           "140 - 211 Damage\tSpeed 3.70",
           "(47.43 damage per second)",
           "Chance on hit: Stuns target for 8 sec.",
+          "Chance on hit: Stuns target for 8 sec.",
           "Requires Level 50",
           "Chance on hit: Stuns target for 8 sec."
         ]
@@ -28310,6 +28351,8 @@
               "One-Hand",
               "47 - 89 Damage\tSpeed 1.90",
               "(35.79 damage per second)",
+              "Equip: Increased Defense +2.",
+              "Chance on hit: Steals 56 life from target enemy.",
               "Equip: Increased Defense +2.",
               "Chance on hit: Steals 56 life from target enemy.",
               "Requires Level 49",
@@ -33198,6 +33241,7 @@
               "18 - 35 Damage\tSpeed 1.70",
               "(15.59 damage per second)",
               "Chance on hit: Sear your target's flesh, dealing 67 to 101 Fire damage.",
+              "Chance on hit: Sear your target's flesh, dealing 67 to 101 Fire damage.",
               "Requires Level 19",
               "Chance on hit: Sear your target's flesh, dealing 67 to 101 Fire damage."
             ],
@@ -33924,6 +33968,7 @@
               "24 - 46 Damage\tSpeed 1.70",
               "(20.59 damage per second)",
               "Chance on hit: Hurl spikes at the target, dealing 45 Physical damage and jumping to 1 additional nearby enemy. Each jump reduces the damage by 50%.",
+              "Chance on hit: Hurl spikes at the target, dealing 45 Physical damage and jumping to 1 additional nearby enemy. Each jump reduces the damage by 50%.",
               "Requires Level 27",
               "Chance on hit: Hurl spikes at the target, dealing 45 Physical damage and jumping to 1 additional nearby enemy. Each jump reduces the damage by 50%."
             ],
@@ -33968,6 +34013,7 @@
               "One-Hand",
               "27 - 51 Damage\tSpeed 1.90",
               "(20.53 damage per second)",
+              "Chance on hit: Deals 14 Nature damage every 3 sec to any enemy in an 8 yard radius around the caster for 12 sec.",
               "Chance on hit: Deals 14 Nature damage every 3 sec to any enemy in an 8 yard radius around the caster for 12 sec.",
               "Requires Level 27",
               "Chance on hit: Deals 14 Nature damage every 3 sec to any enemy in an 8 yard radius around the caster for 12 sec."
@@ -34480,6 +34526,7 @@
               "(29.67 damage per second)",
               "Chance on hit: Sends a shadowy bolt at the enemy causing 77 Shadow damage.",
               "Chance on hit: Sends a shadowy bolt at the enemy causing 77 Shadow damage.",
+              "Chance on hit: Sends a shadowy bolt at the enemy causing 77 Shadow damage.",
               "Requires Level 34"
             ],
             "source": "In the Name of the Light"
@@ -34975,6 +35022,7 @@
               "One-Hand",
               "66 - 124 Damage\tSpeed 2.70",
               "(35.19 damage per second)",
+              "Chance on hit: Grants an extra attack on your next swing.",
               "Chance on hit: Grants an extra attack on your next swing.",
               "Chance on hit: Grants an extra attack on your next swing.",
               "Requires Level 45"
@@ -38001,6 +38049,7 @@
               "18 - 35 Damage\tSpeed 1.70",
               "(15.59 damage per second)",
               "Chance on hit: Sear your target's flesh, dealing 67 to 101 Fire damage.",
+              "Chance on hit: Sear your target's flesh, dealing 67 to 101 Fire damage.",
               "Requires Level 19",
               "Chance on hit: Sear your target's flesh, dealing 67 to 101 Fire damage."
             ],
@@ -38738,6 +38787,7 @@
               "24 - 46 Damage\tSpeed 1.70",
               "(20.59 damage per second)",
               "Chance on hit: Hurl spikes at the target, dealing 45 Physical damage and jumping to 1 additional nearby enemy. Each jump reduces the damage by 50%.",
+              "Chance on hit: Hurl spikes at the target, dealing 45 Physical damage and jumping to 1 additional nearby enemy. Each jump reduces the damage by 50%.",
               "Requires Level 27",
               "Chance on hit: Hurl spikes at the target, dealing 45 Physical damage and jumping to 1 additional nearby enemy. Each jump reduces the damage by 50%."
             ],
@@ -38782,6 +38832,7 @@
               "One-Hand",
               "27 - 51 Damage\tSpeed 1.90",
               "(20.53 damage per second)",
+              "Chance on hit: Deals 14 Nature damage every 3 sec to any enemy in an 8 yard radius around the caster for 12 sec.",
               "Chance on hit: Deals 14 Nature damage every 3 sec to any enemy in an 8 yard radius around the caster for 12 sec.",
               "Requires Level 27",
               "Chance on hit: Deals 14 Nature damage every 3 sec to any enemy in an 8 yard radius around the caster for 12 sec."
@@ -39241,6 +39292,7 @@
               "One-Hand",
               "31 - 58 Damage\tSpeed 1.50",
               "(29.67 damage per second)",
+              "Chance on hit: Sends a shadowy bolt at the enemy causing 77 Shadow damage.",
               "Chance on hit: Sends a shadowy bolt at the enemy causing 77 Shadow damage.",
               "Chance on hit: Sends a shadowy bolt at the enemy causing 77 Shadow damage.",
               "Requires Level 34"
@@ -39783,6 +39835,7 @@
               "One-Hand",
               "66 - 124 Damage\tSpeed 2.70",
               "(35.19 damage per second)",
+              "Chance on hit: Grants an extra attack on your next swing.",
               "Chance on hit: Grants an extra attack on your next swing.",
               "Chance on hit: Grants an extra attack on your next swing.",
               "Requires Level 45"
@@ -43635,6 +43688,7 @@
               "24 - 46 Damage\tSpeed 1.70",
               "(20.59 damage per second)",
               "Chance on hit: Hurl spikes at the target, dealing 45 Physical damage and jumping to 1 additional nearby enemy. Each jump reduces the damage by 50%.",
+              "Chance on hit: Hurl spikes at the target, dealing 45 Physical damage and jumping to 1 additional nearby enemy. Each jump reduces the damage by 50%.",
               "Requires Level 27",
               "Chance on hit: Hurl spikes at the target, dealing 45 Physical damage and jumping to 1 additional nearby enemy. Each jump reduces the damage by 50%."
             ],
@@ -44098,6 +44152,7 @@
               "One-Hand",
               "31 - 58 Damage\tSpeed 1.50",
               "(29.67 damage per second)",
+              "Chance on hit: Sends a shadowy bolt at the enemy causing 77 Shadow damage.",
               "Chance on hit: Sends a shadowy bolt at the enemy causing 77 Shadow damage.",
               "Chance on hit: Sends a shadowy bolt at the enemy causing 77 Shadow damage.",
               "Requires Level 34"
@@ -48553,6 +48608,7 @@
               "39 - 60 Damage\tSpeed 3.10",
               "(15.97 damage per second)",
               "Chance on hit: Blasts a target for 42 Fire damage.",
+              "Chance on hit: Blasts a target for 42 Fire damage.",
               "Chance on hit: Blasts a target for 42 Fire damage."
             ],
             "source": "Ironforge Quest"
@@ -48810,6 +48866,7 @@
               "39 - 60 Damage\tSpeed 3.10",
               "(15.97 damage per second)",
               "Chance on hit: Blasts a target for 42 Fire damage.",
+              "Chance on hit: Blasts a target for 42 Fire damage.",
               "Chance on hit: Blasts a target for 42 Fire damage."
             ],
             "source": "Ironforge Quest"
@@ -49017,6 +49074,7 @@
               "Two-Hand",
               "39 - 60 Damage\tSpeed 3.10",
               "(15.97 damage per second)",
+              "Chance on hit: Blasts a target for 42 Fire damage.",
               "Chance on hit: Blasts a target for 42 Fire damage.",
               "Chance on hit: Blasts a target for 42 Fire damage."
             ],
@@ -50875,6 +50933,7 @@
             "weaponType": "Two-Handed Mace",
             "lines": [
               "Use: Use to sketch a location on the Shapers Terrace map.",
+              "Use: Use to sketch a location on the Shapers Terrace map.",
               "Use: Use to sketch a location on the Shapers Terrace map."
             ],
             "source": "2H Mace from Excavation Site: Wetlands quest (Horrors in the Highland)"
@@ -51523,6 +51582,7 @@
               "One-Hand",
               "31 - 58 Damage\tSpeed 1.50",
               "(29.67 damage per second)",
+              "Chance on hit: Sends a shadowy bolt at the enemy causing 77 Shadow damage.",
               "Chance on hit: Sends a shadowy bolt at the enemy causing 77 Shadow damage.",
               "Chance on hit: Sends a shadowy bolt at the enemy causing 77 Shadow damage.",
               "Requires Level 34"
@@ -52319,6 +52379,7 @@
           "Two-Hand",
           "140 - 211 Damage\tSpeed 3.70",
           "(47.43 damage per second)",
+          "Chance on hit: Stuns target for 8 sec.",
           "Chance on hit: Stuns target for 8 sec.",
           "Requires Level 50",
           "Chance on hit: Stuns target for 8 sec."
